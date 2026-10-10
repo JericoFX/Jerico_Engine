@@ -7,6 +7,7 @@
 | [GOAL](../GOAL.md) | Última decisión del propietario, capacidades y exclusiones |
 | [AGENTS](../AGENTS.md) | Roles, Git, método y evidencia |
 | [CODEX_START](../CODEX_START.md) | Inicio seguro y prioridad visible |
+| [Motor ligero y PWAS/EPLS](JE_LEAN_ENGINE_AND_AUTHORING.md) | Reducir peso sin recortar herramientas; Studio/PWAS/EPLS, cook y demos integradas |
 | [Contrato JE](architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) | Namespace real, CMake/codegen/UUID, Gems dentro del engine |
 | [Arquitectura](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners y disposición de capacidades |
 | [Auditoría de dependencias](research/JE_DEPENDENCY_AUDIT_2026_10_10.md) | Hallazgos DEP-01..12 con source/blobs y límites |

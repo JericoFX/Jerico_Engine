@@ -21,3 +21,9 @@ Ejecutar N0 con dependencias permitidas y locales. No usar endpoints de .lfsconf
 Luego N1: UI Jerico con BSP real dentro del editor existente; construir habitación/corredor/apertura de puerta/ventana, UV/material, Undo/Save/reopen. Migración de ese owner a JE y composición nativa. No empezar por un panel sin consumidor ni por renombrar todo el engine. La nueva geología se integra como productor del mismo Geometry/Asset/Material pipeline, con checkpoints de roca/cliff/cueva, no un engine/playground separado.
 
 Todo resultado visible debe incluir build/backend/escena/settings y evidencia real. Lo no ejecutado se marca NOT TESTED; pruebas de Cry o una captura inventada no acreditan esta base.
+
+## Ampliación obligatoria — reducir peso e integrar PWAS/EPLS
+
+Leer `docs/JE_LEAN_ENGINE_AND_AUTHORING.md`. N0 registra source/SDK/runtime/cache/símbolos/build/idle/CPU/GPU/RAM/VRAM por separado; no dice cuánto ahorra hasta medir. N1/N2/N4/N8 incorporan una primera escena conjunta BSP + Procedural Studio + PWAS + EPLS con locks/Undo/save/cook y rendimiento visible. EPLS/ELSP es un solo sistema; Studio fabrica, PWAS coloca, EPLS aplica historia ambiental.
+
+Achicar significa retirar dependencias/costes no necesarios, no nuestras herramientas. Separar lo que el editor/cooker necesita de lo que se distribuye/carga en el juego. No evaluator de recipes PWAS/EPLS por frame, no previews de panel oculto continuos, no recook de todo por cambiar una capa; conservar tipos/serializers y gameplay. No nuevo engine/profile manager/asset graph. Las demos/gates LEAN y PWE complementan ROADMAP y JER existentes sin sustituirlos.

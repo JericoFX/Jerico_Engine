@@ -23,3 +23,13 @@ No redescubrir cada vez el roadmap ni bloquear por un tipo abstracto. Publicar r
 ## Pendientes que no se ocultan
 
 Build/Editor/Asset Processor/runtime y métricas reales, cierre completo offline/transitivo/licencias/SBOM, refactor IPC/red, identidad JE y migración UUID/codegen/cache, absorción de Gem resources/builders, conservación UV/material de CSG, Jolt/physics/nav y geología GPU/mesher/cook. Default branch administrativo no se afirma cambiado por este conector; development explícito es la rama de trabajo. Ningún otro repositorio o rama fue borrado.
+
+## Ampliación posterior a 54a6c98 — engine ligero con herramientas propias
+
+El propietario pidió achicar/optimizar el motor y confirmó PWAS, EPLS (también escrito ELSP) y nuestras herramientas. Se añade `docs/JE_LEAN_ENGINE_AND_AUTHORING.md` y se enlaza desde GOAL/CODEX_START/índice. Procedural Studio fabrica, PWAS distribuye, EPLS aplica capas ambientales; Geometry/Jolt/Material siguen sus owners. Se conservan todas las capacidades y formatos comprometidos, sin añadir plataforma externa.
+
+Lecturas nuevas: CMake raíz (rango de composición/dependencies/runtime generation), Code/CMakeLists y contratos originales PWAS/EPLS y Procedural Studio por secciones. La documentación oficial Asset Bundler confirma selección por dependencias de seeds; no se da por completa en JE ni por equivalente a .epak. No se afirma auditoría íntegra de todos los módulos ni de anexos originales.
+
+N0 debe medir tamaños source/SDK/runtime/símbolos/cache y build/idle/CPU/GPU/RAM/VRAM por separado. Demo siguiente: BSP+pieza Studio+placement PWAS+capas EPLS, con locks/Apply/Cancel/Undo/save/reopen/cook/source-free. No regeneración global por capa ni recipes de autoría en el juego. LEAN-01..04/PWE-01..04 complementan JER existentes.
+
+Esta ampliación es sólo Markdown: no recortó binarios/dependencias/source, no midió ahorros ni implementó PWAS/EPLS. Preservar source y evidencia; publicar cifras únicamente cuando existan mediciones reproducibles.
