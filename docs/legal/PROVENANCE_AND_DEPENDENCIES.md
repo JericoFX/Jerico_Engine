@@ -20,7 +20,7 @@ Ideas de otros motores y publicaciones SIGGRAPH/GDC están permitidas. Por candi
 
 Por dependencia: owner JE, fuente/artefacto, commit/versión/hash, licencia efectiva y avisos, transitivas, uso tool/build/runtime, linking estático/dinámico, descarga efectiva, servidor/fallback, exposición a APIs/ABI, deployment y prueba offline. Distinguir catálogo disponible, target configurado, objeto enlazado y módulo realmente cargado. No afirmar ausente por leer gem.json ni presente en runtime solo por hallarla en un catálogo.
 
-La revisión de fuente encontró:
+La revisión de fuente de la base, antes del patch N0, encontró (estado ejecutado posterior en [expediente N0](../evidence/n0/N0_EXECUTION_2026_10_10.md)):
 - `.lfsconfig` apunta a CloudFront; no enviar tokens/contenido privado a ese destino.
 - `cmake/3rdPartyPackages.cmake` añade variables de entorno antes del default CloudFront e incluye S3. Hay que reemplazar el conjunto efectivo y su fallback, no solo anteponer un mirror.
 - AzFramework depende públicamente de AzNetworking; éste menciona OpenSSL/RapidXML/codegen. Clasificar IPC de tools y transporte de juego antes de retirar.

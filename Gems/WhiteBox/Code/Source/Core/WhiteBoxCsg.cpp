@@ -10,6 +10,7 @@
 
 #include "WhiteBoxCsgCore.h"
 
+#include <AzCore/Debug/Trace.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/std/algorithm.h>
@@ -41,11 +42,11 @@ namespace WhiteBox
         {
             // convert a white box mesh to an indexed triangle mesh, transforming all
             // positions by the given transform
-            Csg::TriangleMesh ToTriangleMesh(const WhiteBoxMesh& whiteBox, const AZ::Transform& transform)
+            JE::BSP::Csg::TriangleMesh ToTriangleMesh(const WhiteBoxMesh& whiteBox, const AZ::Transform& transform)
             {
                 const Faces faces = MeshFaces(whiteBox);
 
-                Csg::TriangleMesh triangleMesh;
+                JE::BSP::Csg::TriangleMesh triangleMesh;
                 triangleMesh.m_positions.reserve(faces.size() * 9);
                 triangleMesh.m_indices.reserve(faces.size() * 3);
 
@@ -63,12 +64,12 @@ namespace WhiteBox
                 }
 
                 // index the triangle soup so shared vertices are welded
-                Csg::WeldVertices(triangleMesh, WeldTolerance);
+                JE::BSP::Csg::WeldVertices(triangleMesh, WeldTolerance);
 
                 return triangleMesh;
             }
 
-            AZ::Vector3 TriangleMeshPosition(const Csg::TriangleMesh& triangleMesh, const uint32_t vertexIndex)
+            AZ::Vector3 TriangleMeshPosition(const JE::BSP::Csg::TriangleMesh& triangleMesh, const uint32_t vertexIndex)
             {
                 return AZ::Vector3(
                     static_cast<float>(triangleMesh.m_positions[vertexIndex * 3 + 0]),
@@ -76,7 +77,7 @@ namespace WhiteBox
                     static_cast<float>(triangleMesh.m_positions[vertexIndex * 3 + 2]));
             }
 
-            AZ::Vector3 TriangleNormal(const Csg::TriangleMesh& triangleMesh, const size_t triangleIndex)
+            AZ::Vector3 TriangleNormal(const JE::BSP::Csg::TriangleMesh& triangleMesh, const size_t triangleIndex)
             {
                 const AZ::Vector3 a = TriangleMeshPosition(triangleMesh, triangleMesh.m_indices[triangleIndex * 3 + 0]);
                 const AZ::Vector3 b = TriangleMeshPosition(triangleMesh, triangleMesh.m_indices[triangleIndex * 3 + 1]);
@@ -87,7 +88,7 @@ namespace WhiteBox
             // group triangles into connected coplanar regions - each region becomes
             // one white box polygon (interior edges hidden, matching how the white box
             // tool represents quads and n-gons as groups of triangles)
-            AZStd::vector<AZStd::vector<size_t>> GroupCoplanarTriangles(const Csg::TriangleMesh& triangleMesh)
+            AZStd::vector<AZStd::vector<size_t>> GroupCoplanarTriangles(const JE::BSP::Csg::TriangleMesh& triangleMesh)
             {
                 const size_t triangleCount = triangleMesh.TriangleCount();
 
@@ -383,7 +384,7 @@ namespace WhiteBox
             // different coplanar groups) and they are collinear through it. Such a vertex
             // is redundant on both adjacent faces, so dropping it never opens a crack.
             AZStd::unordered_set<uint32_t> ComputeRemovableVertices(
-                const Csg::TriangleMesh& mesh, const AZStd::vector<AZStd::vector<size_t>>& groups)
+                const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<AZStd::vector<size_t>>& groups)
             {
                 AZStd::vector<int> triGroup(mesh.TriangleCount(), -1);
                 for (int gi = 0; gi < static_cast<int>(groups.size()); ++gi)
@@ -462,7 +463,7 @@ namespace WhiteBox
             // redundant collinear vertices removed. Returns false (caller falls back to
             // the original triangles) for anything it can't safely simplify.
             bool CleanCoplanarGroup(
-                const Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group, const AZ::Vector3& groupNormal,
+                const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group, const AZ::Vector3& groupNormal,
                 const AZStd::unordered_set<uint32_t>& removable,
                 AZStd::vector<AZStd::array<uint32_t, 3>>& outTris)
             {
@@ -708,7 +709,7 @@ namespace WhiteBox
             }
 
             // average (area-weighted) normal of a coplanar triangle group
-            AZ::Vector3 GroupNormal(const Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group)
+            AZ::Vector3 GroupNormal(const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group)
             {
                 AZ::Vector3 n = AZ::Vector3::CreateZero();
                 for (const size_t t : group)
@@ -719,7 +720,7 @@ namespace WhiteBox
             }
 
             // replace the contents of the white box mesh with the given triangle mesh
-            void RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const Csg::TriangleMesh& triangleMesh)
+            void RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const JE::BSP::Csg::TriangleMesh& triangleMesh)
             {
                 Clear(whiteBox);
 
@@ -802,27 +803,40 @@ namespace WhiteBox
             WhiteBoxMesh& whiteBox, const WhiteBoxMesh& operand, const AZ::Transform& operandTransform,
             const BooleanOperation operation)
         {
-            const auto csgOperation = [operation]
+            JE::BSP::Csg::BooleanOperation csgOperation;
+            switch (operation)
             {
-                switch (operation)
-                {
-                case BooleanOperation::Union:
-                    return Csg::BooleanOperation::Union;
-                case BooleanOperation::Intersection:
-                    return Csg::BooleanOperation::Intersection;
-                case BooleanOperation::Subtraction:
-                default:
-                    return Csg::BooleanOperation::Subtraction;
-                }
-            }();
+            case BooleanOperation::Union:
+                csgOperation = JE::BSP::Csg::BooleanOperation::Union;
+                break;
+            case BooleanOperation::Intersection:
+                csgOperation = JE::BSP::Csg::BooleanOperation::Intersection;
+                break;
+            case BooleanOperation::Subtraction:
+                csgOperation = JE::BSP::Csg::BooleanOperation::Subtraction;
+                break;
+            default:
+                return false;
+            }
 
-            const Csg::TriangleMesh meshA = Detail::ToTriangleMesh(whiteBox, AZ::Transform::CreateIdentity());
-            const Csg::TriangleMesh meshB = Detail::ToTriangleMesh(operand, operandTransform);
+            const JE::BSP::Csg::TriangleMesh meshA = Detail::ToTriangleMesh(whiteBox, AZ::Transform::CreateIdentity());
+            const JE::BSP::Csg::TriangleMesh meshB = Detail::ToTriangleMesh(operand, operandTransform);
 
-            Csg::TriangleMesh result;
+            JE::BSP::Csg::TriangleMesh result;
 
-            if (!Csg::MeshBoolean(meshA, meshB, csgOperation, result))
+            if (!JE::BSP::Csg::MeshBoolean(meshA, meshB, csgOperation, result))
             {
+                return false;
+            }
+            if (result.TriangleCount() == 0)
+            {
+                // TODO: [shortcut] Empty results are valid in the JE kernel, but the editor
+                // currently retains the previous render mesh and cooked collider. Remove
+                // this guard after empty teardown, Undo/Save/reopen and runtime have RED/GREEN
+                // coverage using the compiled consumers.
+                AZ_Warning("JE BSP", false,
+                    "CSG produced a valid empty result. The editor cannot apply empty geometry yet; "
+                    "the current mesh is preserved.");
                 return false;
             }
             Detail::RebuildFromTriangleMesh(whiteBox, result);

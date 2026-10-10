@@ -224,7 +224,7 @@ namespace WhiteBox
         {
             AZ_Warning(
                 "EditorWhiteBoxComponent", false,
-                "White Box boolean produced no result (the meshes may not overlap, or are not closed).");
+                "White Box boolean result was not applied; the current mesh is preserved.");
             return;
         }
 

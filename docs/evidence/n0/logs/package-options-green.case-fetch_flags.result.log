@@ -1,0 +1,14 @@
+exit=0
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Using package JEFixture
+-- Configuring done (6.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/package-options-green/20261010-172944-187a51eb with spaces/fetch_flags/build
+
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    JE_REMOTE
+
+

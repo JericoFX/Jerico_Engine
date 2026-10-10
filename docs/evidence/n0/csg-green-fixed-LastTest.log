@@ -1,0 +1,51 @@
+Start testing: Oct 10 17:25 Hora estándar de Montevideo
+----------------------------------------------------------
+1/1 Testing: JE.BSP.CsgCore
+1/1 Test: JE.BSP.CsgCore
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/csg/Debug/JE_BspCsgTests.exe"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/csg
+"JE.BSP.CsgCore" start time: Oct 10 17:25 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS A-A is successful
+PASS A-A publishes empty geometry
+PASS disjoint intersection is successful
+PASS disjoint intersection publishes empty geometry
+PASS open operand fails
+PASS failed operation preserves previous output
+PASS incomplete vertex is rejected
+PASS incomplete vertex preserves previous output
+PASS incomplete triangle is rejected
+PASS incomplete triangle preserves previous output
+PASS unknown operation is rejected
+PASS unknown operation preserves previous output
+PASS submicrometer cleanup failure preserves previous output
+PASS nonempty submicrometer union is never published as empty success
+PASS overlapping union succeeds
+PASS overlapping union publishes geometry
+PASS room shell is constructed
+PASS room shell has authored volume
+PASS corridor shell is constructed
+PASS corridor shell has authored volume
+PASS room and corridor are united in place
+PASS shared wall is counted once
+PASS doorway is cut through the shared wall
+PASS doorway removes the authored wall volume
+PASS window is cut through the room wall
+PASS window removes the authored wall volume
+PASS room corridor openings retain closed oriented topology
+PASS layout retains authored bounds
+PASS room interior remains clear
+PASS corridor interior remains clear
+PASS doorway remains clear
+PASS window remains clear
+PASS uncut wall remains solid
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"JE.BSP.CsgCore" end time: Oct 10 17:25 Hora estándar de Montevideo
+"JE.BSP.CsgCore" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 17:25 Hora estándar de Montevideo

@@ -1,0 +1,24 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/csg
+    Start 1: JE.BSP.CsgCore
+1/1 Test #1: JE.BSP.CsgCore ...................***Failed    0.05 sec
+FAIL A-A is successful
+FAIL A-A publishes empty geometry
+FAIL disjoint intersection is successful
+FAIL disjoint intersection publishes empty geometry
+PASS open operand fails
+PASS failed operation preserves previous output
+FAIL incomplete vertex is rejected
+FAIL incomplete vertex preserves previous output
+FAIL incomplete triangle is rejected
+FAIL incomplete triangle preserves previous output
+PASS overlapping union succeeds
+PASS overlapping union publishes geometry
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.08 sec
+
+The following tests FAILED:
+	  1 - JE.BSP.CsgCore (Failed)
+Errors while running CTest

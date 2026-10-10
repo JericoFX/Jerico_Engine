@@ -1,6 +1,6 @@
 # Matriz JE de requisitos y exclusiones
 
-**Actualización del propietario 2026-10-10, posterior a a536fb7.** IDs existentes conservados; semánticas que cambiaron se corrigen aquí. Estado de las filas activas: CONTRACT ADOPTED / IMPLEMENTATION NOT VERIFIED. Esta matriz no acredita source/runtime. EXCLUDED no significa DEFERRED.
+**Actualización del propietario 2026-10-10, posterior a a536fb7.** IDs existentes conservados; semánticas que cambiaron se corrigen aquí. Estado global de filas activas: CONTRACT ADOPTED / IMPLEMENTATION NOT VERIFIED; evidencia parcial ejecutada al final. Ninguna fila completa se cierra por un test focal. EXCLUDED no significa DEFERRED.
 
 | ID | Contrato | Owner/etapa | Evidencia mínima |
 |---|---|---|---|
@@ -109,3 +109,16 @@
 | JER-103 | Seguimiento de hallazgos DEP-01..12 y aliases/UUID | Core/Build/Geometry | Source audit llevado a grafo/link/runtime sin falsos PASS |
 
 Al cerrar una fila, enlazar commit y evidencia de todos sus casos relevantes. No dar por completada una familia por un fixture; no recuperar exclusiones de documentos antiguos. Números N son owners/etapas, no secuencia numérica obligatoria: manda ROADMAP revisado. Las políticas materiales/cripto restantes son diseños y se implementan con necesidad real, sin añadir plataforma externa.
+
+## Evidencia parcial de ejecución N0
+
+Ver [expediente 2026-10-10](evidence/n0/N0_EXECUTION_2026_10_10.md), source/log hashes y publicación development. **No son cierres de filas.**
+
+| IDs | Estado ejecutado | Aceptación pendiente |
+|---|---|---|
+| JER-002 | Clone/rama/sync y checkout único comprobados | Ref de publicación verificada en cierre Git |
+| JER-071/098 | Resolver local y rechazos/fallback CMake focal verificados; LFS excluido, sin payload fetch | Grafo/link/deploy/runtime, otras rutas CMake/pip/PATCH_FILES y offline completo |
+| JER-076/094 | Núcleo productivo real JE::BSP::Csg std+Manifold compilado, sin alias; adapters migrados por fuente | Resto del engine, UUID/codegen/export/serialización y consumers reales |
+| JER-099 | Habitación/corredor/puerta/ventana CSG: 33 checks de kernel GREEN | Editor real, UV/material por cara, Undo/save/reopen/cook/runtime e imagen |
+| JER-005/097 | Configure Windows protegido BLOCKED por zlib; GPU/Vulkan enumerados | Windows-DX12, Windows-Vulkan y Linux-Vulkan render reales |
+| JER-101 | Bytes source/LFS y tiempos focales medidos | Métricas/coste/calidad comparables del producto, sin ahorro afirmado |

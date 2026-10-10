@@ -1,0 +1,122 @@
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:52 (message):
+  JE FAIL default: exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/default/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:63 (JE_run_case)
+
+
+-- JE PASS local
+-- JE PASS cached
+-- JE PASS corrupt
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL missing: expected JE package unavailable offline: JEFixture, exit
+  1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/missing/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:67 (JE_run_case)
+
+
+-- JE PASS missing_hash (rejected before remote I/O)
+-- JE PASS source_override
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL git: expected JE FetchContent unavailable offline: JEFixture, exit
+  1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/git/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:70 (JE_run_case)
+
+
+-- JE PASS fetch_local
+-- JE PASS fetch_cached
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:49 (message):
+  JE FAIL fetch_missing: attempted remote I/O (intercepted), log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/fetch_missing/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:73 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL cache_https: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/cache_https/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:75 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL cache_cloudfront: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/cache_cloudfront/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:76 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL cache_s3: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/cache_s3/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:77 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL cache_filehost: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/cache_filehost/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:78 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL env_https: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/env_https/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:75 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL env_cloudfront: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/env_cloudfront/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:76 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL env_s3: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/env_s3/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:77 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL env_filehost: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/env_filehost/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:78 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:57 (message):
+  JE FAIL direct: expected JE package source rejected, exit 1, log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/direct/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:80 (JE_run_case)
+
+
+CMake Error at cmake/tests/JEPackageOfflineTests.cmake:49 (message):
+  JE FAIL internal: attempted remote I/O (intercepted), log
+  F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab
+  with spaces/internal/result.log
+Call Stack (most recent call first):
+  cmake/tests/JEPackageOfflineTests.cmake:81 (JE_run_case)
+
+
+-- JE package policy evidence: F:/JericoEngine/JericoEngine/build/n0-validation/package-red-project/20261010-171500-adc9b3ab with spaces

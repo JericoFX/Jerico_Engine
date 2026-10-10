@@ -1,0 +1,13 @@
+exit=1
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Configuring incomplete, errors occurred!
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/3rdPartyPackages.cmake:828 (message):
+  JE FetchContent arguments rejected: JEFixture.  Unsupported arguments or
+  missing values; use local sources and the explicit PATCH_FILES path.
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/tests/JEPackageOfflineCase.cmake:92 (o3de_fetch_content)
+  CMakeLists.txt:3 (include)
+
+

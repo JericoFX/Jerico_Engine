@@ -675,8 +675,9 @@ namespace WhiteBox
         //! @param operandTransform Transform positioning operand in the local space of whiteBox
         //! (for two entities, worldFromLocalA.GetInverse() * worldFromLocalB).
         //! @param operation Which boolean operation to apply.
-        //! @return True if the operation succeeded, false otherwise (e.g. the meshes do not
-        //! intersect, or one of them is not a closed manifold). whiteBox is unmodified on failure.
+        //! @return True if a non-empty result was applied. False for invalid input or an
+        //! unsupported operation, or when a valid empty result cannot yet be applied by the
+        //! editor's render/collider consumers. whiteBox is unmodified when returning false.
         //! @note Both meshes must be closed (watertight). Coplanar faces in the result are merged
         //! into white box polygons, but UVs are recalculated so custom UVs are not preserved.
         bool ApplyMeshBoolean(

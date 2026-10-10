@@ -9,16 +9,15 @@
 #include "WhiteBoxCsgCore.h"
 
 #include <algorithm>
-#include <AzCore/Debug/Trace.h>
-#include <AzCore/std/containers/map.h>
 #include <cmath>
 #include <map>
 #include <tuple>
+#include <utility>
 
 // manifold (Apache-2.0) - see 3rdParty/FindManifold.cmake
 #include <manifold/manifold.h>
 
-namespace WhiteBox
+namespace JE::BSP
 {
     namespace Csg
     {
@@ -100,92 +99,84 @@ namespace WhiteBox
             const TriangleMesh& meshA, const TriangleMesh& meshB, const BooleanOperation operation,
             TriangleMesh& result)
         {
-            if (meshA.TriangleCount() == 0 || meshB.TriangleCount() == 0)
+            if (meshA.TriangleCount() == 0 || meshB.TriangleCount() == 0 ||
+                meshA.m_positions.size() % 3 != 0 || meshB.m_positions.size() % 3 != 0 ||
+                meshA.m_indices.size() % 3 != 0 || meshB.m_indices.size() % 3 != 0)
             {
                 return false;
             }
 
-            AZ_Warning("WhiteBox", false,
-                "MeshBoolean: meshA verts=%zu tris=%zu | meshB verts=%zu tris=%zu",
-                meshA.VertexCount(), meshA.TriangleCount(),
-                meshB.VertexCount(), meshB.TriangleCount());
-
             const manifold::Manifold manifoldA = ToManifold(meshA);
             if (manifoldA.Status() != manifold::Manifold::Error::NoError)
             {
-                AZ_Warning("WhiteBox", false,
-                    "MeshBoolean: mesh A is not a valid manifold (manifold error %d)",
-                    static_cast<int>(manifoldA.Status()));
                 return false;
             }
 
             const manifold::Manifold manifoldB = ToManifold(meshB);
             if (manifoldB.Status() != manifold::Manifold::Error::NoError)
             {
-                AZ_Warning("WhiteBox", false,
-                    "MeshBoolean: mesh B is not a valid manifold (manifold error %d)",
-                    static_cast<int>(manifoldB.Status()));
                 return false;
             }
 
-            const auto opType = [operation]
+            manifold::OpType opType;
+            switch (operation)
             {
-                switch (operation)
-                {
-                case BooleanOperation::Union:
-                    return manifold::OpType::Add;
-                case BooleanOperation::Intersection:
-                    return manifold::OpType::Intersect;
-                case BooleanOperation::Subtraction:
-                default:
-                    return manifold::OpType::Subtract;
-                }
-            }();
+            case BooleanOperation::Union:
+                opType = manifold::OpType::Add;
+                break;
+            case BooleanOperation::Intersection:
+                opType = manifold::OpType::Intersect;
+                break;
+            case BooleanOperation::Subtraction:
+                opType = manifold::OpType::Subtract;
+                break;
+            default:
+                return false;
+            }
 
             const manifold::Manifold booleanResult = manifoldA.Boolean(manifoldB, opType);
             if (booleanResult.Status() != manifold::Manifold::Error::NoError)
             {
-                AZ_Warning("WhiteBox", false,
-                    "MeshBoolean: boolean operation failed (manifold error %d)",
-                    static_cast<int>(booleanResult.Status()));
                 return false;
             }
 
             if (booleanResult.IsEmpty())
             {
-                AZ_Warning("WhiteBox", false,
-                    "MeshBoolean: boolean operation produced an empty mesh "
-                    "(meshes may not intersect, or A is completely inside B)");
-                return false;
+                result = {};
+                return true;
             }
 
             const manifold::MeshGL64 outputMesh = booleanResult.GetMeshGL64();
+            TriangleMesh candidate;
 
             // copy vertex positions (vertProperties is interleaved with stride numProp,
             // the first three properties are always the position)
             const size_t outputVertexCount = outputMesh.NumVert();
             const auto numProp = static_cast<size_t>(outputMesh.numProp);
-            result.m_positions.clear();
-            result.m_positions.reserve(outputVertexCount * 3);
+            candidate.m_positions.reserve(outputVertexCount * 3);
             for (size_t vertexIndex = 0; vertexIndex < outputVertexCount; ++vertexIndex)
             {
-                result.m_positions.push_back(outputMesh.vertProperties[vertexIndex * numProp + 0]);
-                result.m_positions.push_back(outputMesh.vertProperties[vertexIndex * numProp + 1]);
-                result.m_positions.push_back(outputMesh.vertProperties[vertexIndex * numProp + 2]);
+                candidate.m_positions.push_back(outputMesh.vertProperties[vertexIndex * numProp + 0]);
+                candidate.m_positions.push_back(outputMesh.vertProperties[vertexIndex * numProp + 1]);
+                candidate.m_positions.push_back(outputMesh.vertProperties[vertexIndex * numProp + 2]);
             }
 
             // copy triangle indices (narrowing from MeshGL64's uint64_t)
-            result.m_indices.clear();
-            result.m_indices.reserve(outputMesh.triVerts.size());
+            candidate.m_indices.reserve(outputMesh.triVerts.size());
             for (const uint64_t index : outputMesh.triVerts)
             {
-                result.m_indices.push_back(static_cast<uint32_t>(index));
+                candidate.m_indices.push_back(static_cast<uint32_t>(index));
             }
 
             // compact any duplicate vertices so the rebuilt mesh is a closed two-manifold
-            WeldVertices(result, 1e-6);
+            WeldVertices(candidate, 1e-6);
+            if (candidate.TriangleCount() == 0)
+            {
+                return false;
+            }
 
-            return result.TriangleCount() > 0;
+            result = std::move(candidate);
+            return true;
         }
     } // namespace Csg
-} // namespace WhiteBox
+} // namespace JE::BSP

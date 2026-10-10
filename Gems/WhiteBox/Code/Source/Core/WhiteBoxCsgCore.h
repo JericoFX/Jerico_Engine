@@ -12,7 +12,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace WhiteBox
+namespace JE::BSP
 {
     namespace Csg
     {
@@ -25,8 +25,8 @@ namespace WhiteBox
         };
 
         //! An indexed triangle mesh using only std types.
-        //! @note This intentionally has no AZ/O3DE dependencies so the CSG core can be
-        //! compiled and tested in isolation from the engine (see Tests/WhiteBoxCsgCoreTest).
+        //! @note This has no engine dependencies so the production CSG core can be
+        //! compiled and tested in isolation (see Tests/CSG).
         struct TriangleMesh
         {
             std::vector<double> m_positions; //!< Flattened vertex positions (x0, y0, z0, x1, y1, z1, ...).
@@ -49,16 +49,17 @@ namespace WhiteBox
         //! and to clean up the output of a boolean operation before rebuilding a mesh.
         void WeldVertices(TriangleMesh& mesh, double tolerance);
 
-        //! Perform a CSG boolean operation between two closed (watertight) triangle meshes
+        //! Perform a CSG boolean operation between two non-empty, closed (watertight) triangle meshes
         //! using the Manifold library (https://github.com/elalish/manifold).
         //! @param meshA The first operand (the mesh being modified).
         //! @param meshB The second operand (the 'tool' mesh).
         //! @param operation Which boolean operation to apply.
-        //! @param result The resulting triangle mesh (only valid when returning true).
-        //! @return True if the operation succeeded and produced a non-empty mesh. Fails if
-        //! either mesh is not a closed two-manifold or if the result is empty (e.g. an
-        //! intersection of non-overlapping meshes, or A completely inside B for subtraction).
+        //! @param result The resulting triangle mesh; unchanged when returning false.
+        //! @return True on success, including a valid empty result (A-A or a disjoint
+        //! intersection). False for malformed/non-manifold input, an unsupported operation,
+        //! or a non-empty result collapsed by vertex cleanup. Successful empty results clear
+        //! both buffers; a failure never publishes a partial result.
         bool MeshBoolean(
             const TriangleMesh& meshA, const TriangleMesh& meshB, BooleanOperation operation, TriangleMesh& result);
     } // namespace Csg
-} // namespace WhiteBox
+} // namespace JE::BSP

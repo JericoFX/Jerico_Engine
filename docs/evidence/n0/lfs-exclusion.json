@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-10-10T20:32:58.7279786Z",
+  "owner": "parent integration/Git check; CMake validation paused",
+  "pointer_path": "Assets/Editor/Fonts/Open_Sans/OpenSans-Bold.ttf",
+  "command": "git -c lfs.url=file:///F:/JericoEngine/JericoEngine/build/n0-validation/nonexistent-lfs-origin lfs smudge -- Assets/Editor/Fonts/Open_Sans/OpenSans-Bold.ttf",
+  "forced_origin": "local nonexistent path; no remote fallback permitted",
+  "skip_smudge_environment": false,
+  "fetchexclude": "*",
+  "exit_code": 0,
+  "elapsed_seconds": 0.246,
+  "input_bytes": 131,
+  "output_bytes": 131,
+  "input_sha256": "468099A7EBA9FA49F02B08052EA3513E632FBFB716B55962600A324FD3772306",
+  "output_sha256": "468099A7EBA9FA49F02B08052EA3513E632FBFB716B55962600A324FD3772306",
+  "output_matches_input": true,
+  "hook_and_git_config_state_unchanged": true,
+  "state_before": [
+    {
+      "path": ".git/hooks/pre-push",
+      "sha256": "A52D0510D0F8C75E27852156EC6F7791F0D8ED65FC58FCC368DD1DE0A60A1D74",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/hooks/post-checkout",
+      "sha256": "8D606E58CCE98604696A4ABCF3AE1EBDE6F9F31AC72BB0D44E2444CC39F26030",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/hooks/post-commit",
+      "sha256": "F3EB4D1F62924C09D481A0563A84B158C66EB2FEB3431CFDB3E6760AAB4D661D",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/hooks/post-merge",
+      "sha256": "CECB594E8FA65831654FC95E96DB9F1249E09C52810C6FBB2B428280AAC22158",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/config",
+      "sha256": "750F43F9D0BAD3B367453D74C87FBF6C039448F35CD962AE863BB44CB3C5C972",
+      "last_write_utc": "2026-10-10T20:05:04.5998374Z"
+    },
+    {
+      "path": ".lfsconfig",
+      "sha256": "12C368B579E4DE964BB07A6E6BEE8E4F90D7C27943B3AED051042BDF05FEF501",
+      "last_write_utc": "2026-10-10T20:12:06.3863859Z"
+    }
+  ],
+  "state_after": [
+    {
+      "path": ".git/hooks/pre-push",
+      "sha256": "A52D0510D0F8C75E27852156EC6F7791F0D8ED65FC58FCC368DD1DE0A60A1D74",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/hooks/post-checkout",
+      "sha256": "8D606E58CCE98604696A4ABCF3AE1EBDE6F9F31AC72BB0D44E2444CC39F26030",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/hooks/post-commit",
+      "sha256": "F3EB4D1F62924C09D481A0563A84B158C66EB2FEB3431CFDB3E6760AAB4D661D",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/hooks/post-merge",
+      "sha256": "CECB594E8FA65831654FC95E96DB9F1249E09C52810C6FBB2B428280AAC22158",
+      "last_write_utc": "2026-10-10T20:05:04.6447604Z"
+    },
+    {
+      "path": ".git/config",
+      "sha256": "750F43F9D0BAD3B367453D74C87FBF6C039448F35CD962AE863BB44CB3C5C972",
+      "last_write_utc": "2026-10-10T20:05:04.5998374Z"
+    },
+    {
+      "path": ".lfsconfig",
+      "sha256": "12C368B579E4DE964BB07A6E6BEE8E4F90D7C27943B3AED051042BDF05FEF501",
+      "last_write_utc": "2026-10-10T20:12:06.3863859Z"
+    }
+  ],
+  "scope": "LFS exclusion on one tracked pointer; not full engine offline/network acceptance"
+}

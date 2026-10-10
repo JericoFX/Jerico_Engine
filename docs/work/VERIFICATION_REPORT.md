@@ -1,4 +1,14 @@
-# Verificación de revisión JE — 2026-10-10
+# Verificación JE — 2026-10-10
+
+## Ejecución local posterior a la revisión documental
+
+Base local `35e413726655b13e9523bd478e7de3e55d21bc92`, development. [Expediente N0](../evidence/n0/N0_EXECUTION_2026_10_10.md) e inventarios/logs/hashes asociados sustituyen el estado de «no ejecución» para sus scopes concretos.
+
+Clone/sync/preservación comprobados. Configure original protegido ejecutado, exit 1 por primer zlib ausente, luego Freetype; no engine build. Resolver package/fallback local implementado con 24/24 regressions CMake GREEN; configure final exit 1 específico en zlib, sin fallback/cascada. LFS exclusion check devuelve 131 bytes/SHA idénticos y preserva hooks/config. Núcleo productivo JE::BSP::Csg compilado con Manifold local y 33 checks GREEN de errores/output/room-corridor-aperturas. Inputs congelados y revisados por el padre. Adapters/editor integrados por fuente sin compilación ni aceptación runtime.
+
+Windows-DX12 y Windows-Vulkan BLOCKED por dependencias antes de targets; Linux-Vulkan NOT TESTED. No Editor/Asset Processor/launcher/frame/Undo/save/reopen/cook ni métricas RAM/VRAM/CPU/GPU; no cierre AWS/multiplayer/grafo/deploy/SBOM/source-free. N0/GOAL permanecen activos. Publicación local requiere diff/status/input hashes/evidencia, fetch/sync seguro, commit development/push normal y SHA remoto coincidente.
+
+## Registro histórico de la revisión documental
 
 **Tipo: documentación y auditoría remota de source. No engine build ni ejecución.**
 

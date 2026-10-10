@@ -1,6 +1,6 @@
 # Libro de errores y aprendizaje de JericoEngine
 
-Estado inicial O3DE: todavía sin ejecución local acreditada por este paquete. Las entradas heredadas son **lecciones**, no diagnósticos del nuevo Atom. Fuente histórica fijada: JericoEngine2@304d9d2e13704e4967e82a8d5a13a5a506be01d4, `docs/ENGINE_DEBUGGING_BOOK.md` y `docs/work/ACTIVE_SLICE.md`.
+Estado inicial O3DE conservado como histórico; ejecución local N0/CSG registrada en entradas O-02/O-03 y su expediente. Las entradas heredadas son **lecciones**, no diagnósticos del nuevo Atom. Fuente histórica fijada: JericoEngine2@304d9d2e13704e4967e82a8d5a13a5a506be01d4, `docs/ENGINE_DEBUGGING_BOOK.md` y `docs/work/ACTIVE_SLICE.md`.
 
 ## Método obligatorio
 
@@ -39,6 +39,16 @@ Snapshots, cache generations y times deben representar al productor real. Un fla
 ## O-01 — bootstrap y rama única (auditoría documental)
 
 Observado: 23 ramas; default inicial optimize_scriptcanvas_1, 453 commits de development ausentes y un cambio propio. Decisión: development único; alternativas lectura selectiva. Esto resuelve el criterio de trabajo en documentos, no acredita cambio administrativo de default. Verificarlo al arrancar conforme CODEX_START.
+
+## O-02 — CSG vacío válido y salida modificada al fallar
+
+2026-10-10, base35e4137. Repro: production WhiteBoxCsgCore con Manifold3.5.1 local, VS17/2022 MSVC19.44 Debug. A-A/disjoint intersection devolvían false; buffers con triples incompletos se aceptaban; enum desconocido caía a Subtract; cleanup1e-6 de unión submicrométrica mutaba salida previa antes de false. Causas demostradas por RED original de comportamiento y RED suplementario, no por imagen ni hipótesis de renderer. El setup eliminó previamente sólo dependencia de logging AZ para compilar; warning header Manifold tratado como dependencia SYSTEM sin bajar /W4/WX de JE.
+
+Fix: vacío válido true+buffers vacíos, shape/enum validation, candidato privado hasta éxito; namespace owner real JE::BSP::Csg. GREEN1/1 CTest, 33 checks sin cambiar tolerancia; room/corridor/openings verifica volúmenes/topología/aire/sólido. [Expediente y logs](evidence/n0/N0_EXECUTION_2026_10_10.md). Límites: editor render/collider retienen datos con cero caras y no están compilados, por lo que adapter conserva guard de vacío/TODO y rollback. UV/material lineage/Undo/save/reopen/runtime pendientes. Prevención: nunca publicar salida parcial ni activar empty editor antes de comprobar sus consumidores.
+
+## O-03 — FetchContent local Windows convertido a /F:/...
+
+2026-10-10, CMake4.3.4/Windows, fixtures con espacios. GREEN intermedio resolver19/21: transfer/local-cache correctos, fetch_local y fetch_cached fallaban con archivo no encontrado en `/F:/...`. Causa verificada en ExternalProject instalado: quitar `file://` de `file:///F:/...` conserva slash anterior al drive. No atribuir a red/hash ni retirar cobertura de espacios. Fix: URL de ExternalProject recibe path absoluto del archivo ya verificado; transfers locales siguen file:///. GREEN21/21, exit0/18,429s, hashes antes/después iguales, no remote marker. La revisión posterior añadió RED de PATCH_COMMAND forwarded y DOWNLOAD_DIR no previsto; allowlist sólo opciones reales, con resultado final en expediente. Límites: upstream CMake/pip/PATCH_FILES no equivalen a cierre offline transitivo.
 
 ## Límites de seguridad y recursos
 

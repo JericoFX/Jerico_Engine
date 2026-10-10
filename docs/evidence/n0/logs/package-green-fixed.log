@@ -1,0 +1,22 @@
+-- JE PASS default
+-- JE PASS local
+-- JE PASS cached
+-- JE PASS corrupt
+-- JE PASS missing (rejected before remote I/O)
+-- JE PASS missing_hash (rejected before remote I/O)
+-- JE PASS source_override
+-- JE PASS git (rejected before remote I/O)
+-- JE PASS fetch_local
+-- JE PASS fetch_cached
+-- JE PASS fetch_missing (rejected before remote I/O)
+-- JE PASS cache_https (rejected before remote I/O)
+-- JE PASS cache_cloudfront (rejected before remote I/O)
+-- JE PASS cache_s3 (rejected before remote I/O)
+-- JE PASS cache_filehost (rejected before remote I/O)
+-- JE PASS env_https (rejected before remote I/O)
+-- JE PASS env_cloudfront (rejected before remote I/O)
+-- JE PASS env_s3 (rejected before remote I/O)
+-- JE PASS env_filehost (rejected before remote I/O)
+-- JE PASS direct (rejected before remote I/O)
+-- JE PASS internal (rejected before remote I/O)
+-- JE package policy evidence: F:/JericoEngine/JericoEngine/build/n0-validation/package-green-fixed/20261010-172413-82a570e0 with spaces

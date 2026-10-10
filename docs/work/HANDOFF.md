@@ -1,6 +1,22 @@
 # Handoff — última directiva JE/BSP/geología
 
-Fecha 2026-10-10. Rama única development. Nueva implementación **NOT VERIFIED**.
+Fecha 2026-10-10. Rama única development. **N0 IN PROGRESS; build original BLOCKED; núcleo CSG VERIFIED con alcance focal, editor/runtime NOT TESTED.**
+
+## Handoff de ejecución local
+
+Checkout único `F:\JericoEngine\JericoEngine`, origin JericoFX/Jerico_Engine, base `35e413726655b13e9523bd478e7de3e55d21bc92`. Clone LFS skip, fetch/pull ff-only sin cambio y estado inicial limpio comprobados. Lecturas obligatorias y masters realizadas. No tocar repos históricos ni crear otra rama/worktree/owner. Padre integra/acepta/publica; dos writers dependency/BSP; Luna único owner CMake/build/tests, sólo evidencia.
+
+[N0_EXECUTION_2026_10_10](../evidence/n0/N0_EXECUTION_2026_10_10.md) contiene comandos, logs/hashes RED/GREEN, inventarios y bloqueos. La evidencia se publica con source; builds/cache/source terceros quedan locales. No había builds viejos en el checkout; fixture propio accidental eliminado sin recursión. No limpiar otros repositorios.
+
+Hecho: resolver package local con cache/hash y rechazo de destinos remotos/fallback, 24/24 casos GREEN; exclusión LFS verificada en un puntero raw sin materializar payload/hook/config cambiado; inventario hardware/source/deps. Núcleo CSG productivo real `JE::BSP::Csg` std+Manifold 3.5.1 Apache-2.0; vacío válido, errores/output atómico, 33 checks GREEN incluyendo habitación/corredor/aperturas. Adapter integrado por fuente conserva vacío rechazado hasta reparar consumidores render/collider; sin UUID/formato cambiado. No se ha absorbido WhiteBox Gem completo.
+
+Bloqueo original demostrado: configure exit 1 / 11,839 s por zlib-1.2.11-rev5-windows, luego Freetype. Python privado 3.10.13 ausente, Python host 3.14.6 no sustituye el pin. Qt/PySide 6.11.2 del fork no cuentan con receta coincidente en el snapshot público revisado. Aprovisionamiento/SHA/rutas permitidas exactas en expediente y package-catalog.csv; no CloudFront/S3, lfs pull ni instalación automática.
+
+Configure final del patch (mismo setup protegido, cache de compiler existente): exit 1 / 0,160 s, fatal específico primer zlib/SHA/rutas, sin cascada/fallback y sin build. No medir mejora cold/steady comparando esos dos intentos. Goal persistente creado en este chat por petición explícita del propietario; permanece ACTIVE con todos los pendientes de GOAL/ROADMAP.
+
+Siguiente acción: obtener los paquetes coincidentes locales o auditar/reconstruir recetas con nuevo pin revisado; repetir configure protegido sólo al cambiar esos inputs, generar grafo y compilar Editor/Asset Processor/launcher. Probar Windows DX12 y Vulkan, guardar/abrir escena y registrar imagen/métricas reales. Linux Vulkan NOT TESTED por plataforma ausente. Después N1 material por cara/UV/lineage, grid/snap/selección/Inspector, Undo/Redo/Save/reopen/cook/runtime, teardown vacío; Procedural Studio/PWAS/EPLS y geología siguen el roadmap sobre esa escena.
+
+No afirmar N0/N1 completos, engine ligero ni ausencia AWS/multiplayer por estos tests. Todavía existen composition/targets/red de juego heredados; clasificar consumidores/IPC, link/deploy/runtime antes de retirarlos. CMake upstream/pip/PATCH_FILES y licencias/SBOM siguen abiertos para cierre transitivo. Los apartados siguientes registran la revisión documental anterior y no sustituyen este estado ejecutado.
 
 ## Cambio del propietario incorporado
 

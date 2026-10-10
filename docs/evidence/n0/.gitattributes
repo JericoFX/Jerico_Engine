@@ -1,0 +1,5 @@
+# Preserve measured evidence bytes and SHA256 values across Git checkouts.
+* -text whitespace=cr-at-eol
+# Captured tool output retains its original spacing; integrity is checked by SHA.
+*.log -whitespace
+*.md text

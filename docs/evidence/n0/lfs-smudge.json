@@ -1,0 +1,16 @@
+{
+  "generated_utc": "2026-10-10T20:20:53Z",
+  "command": "git -c lfs.url=file:///F:/JericoEngine/JericoEngine/build/n0-validation/nonexistent-lfs-origin lfs smudge -- Assets/Editor/Fonts/Open_Sans/OpenSans-Bold.ttf",
+  "git_lfs_version": "git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)",
+  "fetchexclude": null,
+  "exit_code": 0,
+  "elapsed_seconds": 0.281,
+  "input_path": "Assets/Editor/Fonts/Open_Sans/OpenSans-Bold.ttf",
+  "input_bytes": 131,
+  "input_sha256": "468099A7EBA9FA49F02B08052EA3513E632FBFB716B55962600A324FD3772306",
+  "output_bytes": 0,
+  "output_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "output_matches_input": false,
+  "trace": "docs/evidence/n0/lfs-smudge.trace.log",
+  "output": "build/n0-validation/lfs-smudge.stdout"
+}

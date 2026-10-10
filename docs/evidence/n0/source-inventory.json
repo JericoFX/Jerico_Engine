@@ -1,0 +1,56 @@
+{
+  "generated_utc": "2026-10-10T20:35:37Z",
+  "repository": "F:\\JericoEngine\\JericoEngine",
+  "head": "35e413726655b13e9523bd478e7de3e55d21bc92",
+  "tracked_blob_count": 31082,
+  "tracked_blob_bytes": 312477625.0,
+  "tracked_source_candidate_count": 21261,
+  "tracked_source_candidate_bytes": 151524116.0,
+  "tracked_document_count": 36,
+  "tracked_document_bytes": 245103.0,
+  "lfs_pointer_count": 2906,
+  "lfs_pointer_blob_bytes": 376501.0,
+  "lfs_declared_payload_count": 2906,
+  "lfs_declared_payload_bytes": 2513790779.0,
+  "lfs_materialized_working_files": 0,
+  "lfs_materialized_working_file_bytes": 0,
+  "lfs_local_objects": 0,
+  "lfs_local_object_bytes": 0,
+  "git_directory_bytes": 261183257.0,
+  "git_file_count": 319,
+  "git_count_objects_summary": [
+    "count: 0",
+    "size: 0 bytes",
+    "in-pack: 541036",
+    "packs: 1",
+    "size-pack: 241.17 MiB",
+    "prune-packable: 0",
+    "garbage: 0",
+    "size-garbage: 0 bytes"
+  ],
+  "tracked_binary_candidate_count": 0,
+  "tracked_binary_candidate_bytes": 0,
+  "recognized_build_cache_symbol_dirs": [
+    "F:\\JericoEngine\\JericoEngine\\build"
+  ],
+  "configured_build_cache_present": true,
+  "limitations": [
+    "Static tracked tree and local-path inventory only; no effective CMake graph, linker map, runtime or SDK size census.",
+    "Tracked source/doc byte classes are heuristic path/extension groups.",
+    "Git LFS pointer OIDs and working-file hashes were checked; all 2,906 tracked working files remain pointer text, no LFS payload objects or materialized payloads were found.",
+    "No build/cache/symbol directories were present before assigned N0 validation; current build/n0-validation outputs were created by assigned validation runs and are inventoried separately."
+  ],
+  "initial_preexisting_build_cache_symbol_dirs": [],
+  "current_owned_validation_output": {
+    "file_count": 2013,
+    "bytes": 132420086,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation"
+  },
+  "incidental_root_fixture_output": {
+    "exists": false,
+    "path": "F:\\JericoEngine\\JericoEngine\\$outdir",
+    "parent_cleanup_verified": true,
+    "created_by": "first package-green invocation with incorrect variable quoting"
+  },
+  "working_tree_status_note": "Not refreshed during final evidence-only pass; Git was not run by this agent."
+}

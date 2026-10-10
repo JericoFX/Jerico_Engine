@@ -23,7 +23,7 @@ namespace WhiteBox
     namespace Api
     {
         //! Internal helpers backing the CSG integration layer (see WhiteBoxCsg.cpp).
-        //! These convert between white box meshes and the engine-agnostic Csg::TriangleMesh,
+        //! These convert between white box meshes and the engine-agnostic JE::BSP::Csg::TriangleMesh,
         //! group/clean the coplanar regions a boolean leaves behind, and rebuild a white box
         //! mesh from a triangulated result. Declared here so they can be unit tested and so
         //! the implementation file stays focused on definitions.
@@ -38,17 +38,17 @@ namespace WhiteBox
 
             //! Convert a white box mesh to an indexed triangle mesh, transforming all
             //! positions by the given transform. Shared vertices are welded.
-            Csg::TriangleMesh ToTriangleMesh(const WhiteBoxMesh& whiteBox, const AZ::Transform& transform);
+            JE::BSP::Csg::TriangleMesh ToTriangleMesh(const WhiteBoxMesh& whiteBox, const AZ::Transform& transform);
 
             //! Reconstruct the world-space position of a triangle-mesh vertex.
-            AZ::Vector3 TriangleMeshPosition(const Csg::TriangleMesh& triangleMesh, uint32_t vertexIndex);
+            AZ::Vector3 TriangleMeshPosition(const JE::BSP::Csg::TriangleMesh& triangleMesh, uint32_t vertexIndex);
 
             //! Compute the (safe-normalized) normal of the given triangle.
-            AZ::Vector3 TriangleNormal(const Csg::TriangleMesh& triangleMesh, size_t triangleIndex);
+            AZ::Vector3 TriangleNormal(const JE::BSP::Csg::TriangleMesh& triangleMesh, size_t triangleIndex);
 
             //! Group triangles into connected coplanar regions; each region becomes one
             //! white box polygon (interior edges hidden).
-            AZStd::vector<AZStd::vector<size_t>> GroupCoplanarTriangles(const Csg::TriangleMesh& triangleMesh);
+            AZStd::vector<AZStd::vector<size_t>> GroupCoplanarTriangles(const JE::BSP::Csg::TriangleMesh& triangleMesh);
 
             //! Twice the signed area of triangle (a, b, c); > 0 when CCW.
             double Cross2(const V2& a, const V2& b, const V2& c);
@@ -69,20 +69,20 @@ namespace WhiteBox
             //! Find vertices that sit mid-way along a straight visible edge and are therefore
             //! redundant; removing them never opens a crack.
             AZStd::unordered_set<uint32_t> ComputeRemovableVertices(
-                const Csg::TriangleMesh& mesh, const AZStd::vector<AZStd::vector<size_t>>& groups);
+                const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<AZStd::vector<size_t>>& groups);
 
             //! Rebuild one coplanar group as clean triangles (global vertex indices) with
             //! redundant collinear vertices removed. Returns false for anything it can't
             //! safely simplify (the caller then keeps the original triangles).
             bool CleanCoplanarGroup(
-                const Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group, const AZ::Vector3& groupNormal,
+                const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group, const AZ::Vector3& groupNormal,
                 const AZStd::unordered_set<uint32_t>& removable, AZStd::vector<AZStd::array<uint32_t, 3>>& outTris);
 
             //! Average (area-weighted) normal of a coplanar triangle group.
-            AZ::Vector3 GroupNormal(const Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group);
+            AZ::Vector3 GroupNormal(const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group);
 
             //! Replace the contents of the white box mesh with the given triangle mesh.
-            void RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const Csg::TriangleMesh& triangleMesh);
+            void RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const JE::BSP::Csg::TriangleMesh& triangleMesh);
         } // namespace Detail
     } // namespace Api
 } // namespace WhiteBox

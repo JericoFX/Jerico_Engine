@@ -1,0 +1,53 @@
+{
+  "ninja": "1.13.2",
+  "branch": "development",
+  "generated_utc": "2026-10-10T20:18:59Z",
+  "visual_studio": {
+    "installation_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+    "vswhere": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe",
+    "product_display_version": "17.14.35"
+  },
+  "vulkan_sdk": {
+    "vulkaninfo": "C:\\Windows\\system32\\vulkaninfo.exe",
+    "summary_exit": 0,
+    "path": "C:\\VulkanSDK\\1.4.350.0",
+    "version": "1.4.350.0"
+  },
+  "notes": [
+    "Toolchain is inventoried; no builds/installations were performed by this inventory.",
+    "Vulkan summary enumerated one NVIDIA physical GPU. Loader logged two missing third-party layer JSON files; command exit was 0. GPU query is hardware inventory, not renderer acceptance.",
+    "No license clearance inferred from package manifests."
+  ],
+  "python": "Python 3.14.6",
+  "msvc": {
+    "cl_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+    "compiler_version": "19.44.35228",
+    "version": "14.44.35207"
+  },
+  "powershell": "7.6.5",
+  "git": "git version 2.55.0.windows.2",
+  "cmake": "cmake version 4.3.4",
+  "windows_sdk": {
+    "library_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0",
+    "include_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0",
+    "version": "10.0.26100.0"
+  },
+  "head": "35e413726655b13e9523bd478e7de3e55d21bc92",
+  "git_lfs": "git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)",
+  "repository": "F:\\JericoEngine\\JericoEngine",
+  "gpu": {
+    "memory_mib": 24576,
+    "evidence": "nvidia-smi.log; vulkaninfo-summary.log",
+    "name": "NVIDIA GeForce RTX 3090",
+    "nvidia_smi_exit": 0,
+    "driver_version": "616.92"
+  },
+  "expected_python": {
+    "sha256": "a6f1fd50552c8780852b75186a97469f77d55d06a01de73e5ca601e4a12be232",
+    "system_python": "3.14.6",
+    "version": "3.10.13",
+    "root_configure_reached_python": false,
+    "local_package": "missing in inspected controlled roots",
+    "package": "python-3.10.13-rev1-windows"
+  }
+}

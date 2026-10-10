@@ -10,8 +10,8 @@ include_guard()
 include(${LY_ROOT_FOLDER}/cmake/LySet.cmake)
 
 # OVERVIEW:
-# this is the Open 3D Engine Package system.
-# It allows you to host a package on a server and download it as needed when a target
+# This is the JE local package resolver, adapted from the Open 3D Engine Package system.
+# It allows you to provision a package locally and copy it as needed when a target
 # requests that specific package, or manually whenever you want to do so.
 # Most users will just call ly_associate_package(...) to associate a package with a target
 # and the system will automatically get that package when a target asks for it as a 
@@ -23,18 +23,45 @@ include(${LY_ROOT_FOLDER}/cmake/LySet.cmake)
 # cache variables:
 
 # LY_PACKAGE_SERVER_URLS:
-# missing packages are downloaded from this list of URLS, first one to match wins.
-# Besides normal http and https URLs, you can also use FILE urls,
+# Missing packages are resolved only from explicitly provisioned local FILE URLs.
 # for example "file:///mnt/d/lyengine/packageSource/packages;file:///d:/lyengine/packageSource/packages"
-# also allowed:
-# "s3://bucketname" (it will use LYPackage_S3Downloader.cmake to download it from a s3 bucket)
 
-set(LY_PACKAGE_SERVER_URLS "https://d3t6xeg4fgfoum.cloudfront.net" CACHE STRING "Server URLS to fetch packages from")
+function(JE_require_local_package_url JE_URL JE_CONTEXT)
+    # An empty authority and an absolute path are required. Reject UNC and encoded
+    # separators too: libcurl must never interpret a local fixture as a remote share.
+    string(TOLOWER "${JE_URL}" JE_URL_LOWER)
+    if(NOT JE_URL MATCHES "^file:///[^/]" OR JE_URL MATCHES "[\\\\?#]"
+        OR JE_URL_LOWER MATCHES "%2f|%5c")
+        message(FATAL_ERROR "JE package source rejected: ${JE_CONTEXT}. Use an absolute local file:/// URL; remote sources are disabled.")
+    endif()
+endfunction()
+
+function(JE_require_local_package_path JE_PATH JE_CONTEXT)
+    file(TO_CMAKE_PATH "${JE_PATH}" JE_NORMAL_PATH)
+    if(NOT IS_ABSOLUTE "${JE_NORMAL_PATH}" OR JE_NORMAL_PATH MATCHES "^//|://")
+        message(FATAL_ERROR "JE package path rejected: ${JE_CONTEXT}. Set an absolute local directory.")
+    endif()
+endfunction()
+
+function(JE_validate_package_sources)
+    foreach(JE_SOURCE IN LISTS LY_PACKAGE_SERVER_URLS)
+        if(NOT JE_SOURCE STREQUAL "")
+            JE_require_local_package_url("${JE_SOURCE}" "LY_PACKAGE_SERVER_URLS")
+        endif()
+    endforeach()
+endfunction()
+
+set(LY_PACKAGE_SERVER_URLS "" CACHE STRING "Local file:/// roots for provisioned packages; no remote fallback")
 # Note: if you define the "LY_PACKAGE_SERVER_URLS" environment variable
 # it will be added to this value in the front, so that users can set
 # an env var and use that as an "additional" set of servers beyond the default set.
+JE_validate_package_sources()
 if (DEFINED ENV{LY_PACKAGE_SERVER_URLS})
-    set(LY_PACKAGE_SERVER_URLS $ENV{LY_PACKAGE_SERVER_URLS} ${LY_PACKAGE_SERVER_URLS})
+    set(JE_ENV_PACKAGE_SOURCES "$ENV{LY_PACKAGE_SERVER_URLS}")
+    foreach(JE_SOURCE IN LISTS JE_ENV_PACKAGE_SOURCES)
+        JE_require_local_package_url("${JE_SOURCE}" "LY_PACKAGE_SERVER_URLS environment")
+    endforeach()
+    set(LY_PACKAGE_SERVER_URLS "$ENV{LY_PACKAGE_SERVER_URLS};${LY_PACKAGE_SERVER_URLS}")
 endif()
 
 # If you keep packages after downloading, then they can be moved to a network share
@@ -44,14 +71,16 @@ set(LY_PACKAGE_DOWNLOAD_CACHE_LOCATION @LY_3RDPARTY_PATH@/downloaded_packages CA
 if (DEFINED ENV{LY_PACKAGE_DOWNLOAD_CACHE_LOCATION})
     set(LY_PACKAGE_DOWNLOAD_CACHE_LOCATION $ENV{LY_PACKAGE_DOWNLOAD_CACHE_LOCATION})
 endif()
-string(CONFIGURE ${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION} LY_PACKAGE_DOWNLOAD_CACHE_LOCATION @ONLY)
+string(CONFIGURE "${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION}" LY_PACKAGE_DOWNLOAD_CACHE_LOCATION @ONLY)
+JE_require_local_package_path("${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION}" "LY_PACKAGE_DOWNLOAD_CACHE_LOCATION")
 
 # LY_PACKAGE_UNPACK_LOCATION - you can change this to any path reachable.
 set(LY_PACKAGE_UNPACK_LOCATION @LY_3RDPARTY_PATH@/packages CACHE PATH "Unpack location of downloaded packages (Defaults to @LY_3RDPARTY_PATH@/packages)")
 if (DEFINED ENV{LY_PACKAGE_UNPACK_LOCATION})
     set(LY_PACKAGE_UNPACK_LOCATION $ENV{LY_PACKAGE_UNPACK_LOCATION})
 endif()
-string(CONFIGURE ${LY_PACKAGE_UNPACK_LOCATION} LY_PACKAGE_UNPACK_LOCATION @ONLY)
+string(CONFIGURE "${LY_PACKAGE_UNPACK_LOCATION}" LY_PACKAGE_UNPACK_LOCATION @ONLY)
+JE_require_local_package_path("${LY_PACKAGE_UNPACK_LOCATION}" "LY_PACKAGE_UNPACK_LOCATION")
 
 # while developing you can set one or both to true to force auto downloads from your local cache
 set(LY_PACKAGE_VALIDATE_CONTENTS FALSE CACHE BOOL "If enabled, will fully validate every file in every package based on the SHA256SUMS file from the package")
@@ -79,8 +108,6 @@ macro(ly_package_message)
         message(${ARGN})
     endif()
 endmacro()
-
-include(${LY_ROOT_FOLDER}/cmake/LYPackage_S3Downloader.cmake)
 
 # Attempts one time to download a file.
 # sets should_retry to true if the caller should retry due to an intermittent problem
@@ -110,18 +137,14 @@ function(download_file_internal)
         message(FATAL_ERROR "no SHOULD_RETRY arg passed into download_file_internal, it is required.")
     endif()
 
+    JE_require_local_package_url("${download_file_internal_URL}" "download_file_internal URL")
+    JE_require_local_package_path("${download_file_internal_TARGET_FILE}" "download_file_internal TARGET_FILE")
     set(${download_file_internal_RESULTS} "-1;unknown_error" PARENT_SCOPE)
     unset(${download_file_internal_SHOULD_RETRY} PARENT_SCOPE)
     
     # note that below "results" is a local variable and download_file_internal_RESULTS will be set to it before exit.
-    ly_is_s3_url(${download_file_internal_URL} result_is_s3_bucket)
-
-    if (result_is_s3_bucket)
-        ly_s3_download("${download_file_internal_URL}" ${download_file_internal_TARGET_FILE} results)
-    else()
-        file(DOWNLOAD "${download_file_internal_URL}" ${download_file_internal_TARGET_FILE} STATUS results TLS_VERIFY ON LOG logic)
-        list(APPEND results ${log})
-    endif()
+    file(DOWNLOAD "${download_file_internal_URL}" "${download_file_internal_TARGET_FILE}" STATUS results TLS_VERIFY ON LOG logic)
+    list(APPEND results "${logic}")
 
     list(GET results 0 code_returned)
 
@@ -192,8 +215,7 @@ endfunction()
 
 # Downloads a file with the ability to retry.
 # uses download_file_internal to actually download the file.
-# currently works on file://, s3://, ftp://, http://, https:// ... and whatever
-# else the file(DOWNLOAD ..) function supports.
+# Only absolute local file:/// URLs are allowed.
 # if you add another downloader, see that it returns a list, where the first element
 # in the list is the error code, and then the rest of the list is the error(s), just like
 # the file(DOWNLOAD ... ) function does.
@@ -218,6 +240,8 @@ function(download_file)
         message(FATAL_ERROR "no RESULTS arg passed into download_file, it is required.")
     endif()
 
+    JE_require_local_package_url("${download_file_URL}" "download_file URL")
+    JE_require_local_package_path("${download_file_TARGET_FILE}" "download_file TARGET_FILE")
     set(${download_file_RESULTS} "-1;unknown_error" PARENT_SCOPE)
 
     # Use a lock file to prevent concurrent configurations from clobbering the same download.
@@ -257,14 +281,14 @@ function(ly_package_internal_download_package package_name url_variable)
 
     unset(error_messages)
     
-    # to avoid spamming with useless repeated warnings, we save
-    # a global that indicates we already failed to find it
-    if (NOT LY_PACKAGE_SERVER_URLS)
-        message(SEND_ERROR "ly_package:     - LY_PACKAGE_SERVER_URLS is empty, cannot download packages.  enable LY_PACKAGE_DEBUG for details")
-        return()
-    endif()
-
+    JE_validate_package_sources()
     ly_get_package_expected_hash(${package_name} package_expected_hash)
+    ly_package_get_target_cache(${package_name} package_download_cache_location)
+    ly_package_get_target_folder(${package_name} package_unpack_location)
+    set(JE_missing_package "JE package unavailable offline: ${package_name}\nSHA256: ${package_expected_hash}\nArchive: ${package_download_cache_location}/${package_name}${LY_PACKAGE_EXT}\nUnpack: ${package_unpack_location}/${package_name}\nLocal roots: ${LY_PACKAGE_SERVER_URLS}\nProvision the pinned package independently in the local cache or a local file:/// root; remote fallback is disabled.")
+    if (NOT LY_PACKAGE_SERVER_URLS)
+        message(FATAL_ERROR "${JE_missing_package}")
+    endif()
 
     foreach(server_url ${LY_PACKAGE_SERVER_URLS})
         set(download_url ${server_url}/${package_name}${LY_PACKAGE_EXT})
@@ -300,7 +324,7 @@ function(ly_package_internal_download_package package_name url_variable)
     # and use unknown versions possibly present somewhere in the user's system - but if we wanted that to happen
     # we wouldn't have used a ly-package-association in the first place!  Continuing from there would just cause
     # a cascade of errors even harder to track down.
-    set(final_error_message "ly_package:     - Unable to get package ${package_name} from any download server.  Enable LY_PACKAGE_DEBUG to debug.")
+    set(final_error_message "${JE_missing_package}")
     foreach(error_message ${error_messages})
         set(final_error_message "${final_error_message}\n${error_message}")
     endforeach()
@@ -402,10 +426,12 @@ function(ly_package_get_target_folder package_name output_variable_name)
     elseif(NOT "${LY_PACKAGE_UNPACK_LOCATION}" STREQUAL "")
         set(${output_variable_name} ${LY_PACKAGE_UNPACK_LOCATION} PARENT_SCOPE)
     else()
-        message(WARNING "ly_package: Could not locate the LY_PACKAGE_UNPACK_LOCATION variable"
-                    "'${LY_PACKAGE_UNPACK_LOCATION}' please fill it in!"
-                    " To compensate, this script will unpack into the build folder")
-        set(${output_variable_name} ${CMAKE_BINARY_DIR} PARENT_SCOPE)
+        message(FATAL_ERROR "JE package path missing: LY_PACKAGE_UNPACK_LOCATION for ${package_name}")
+    endif()
+    if(overridden_location)
+        JE_require_local_package_path("${overridden_location}" "unpack location for ${package_name}")
+    else()
+        JE_require_local_package_path("${LY_PACKAGE_UNPACK_LOCATION}" "LY_PACKAGE_UNPACK_LOCATION")
     endif()
 endfunction()
 
@@ -416,6 +442,11 @@ function(ly_package_get_target_cache package_name output_variable_name)
         set(${output_variable_name} ${overridden_location} PARENT_SCOPE)
     else()
         set(${output_variable_name} ${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION} PARENT_SCOPE)
+    endif()
+    if(overridden_location)
+        JE_require_local_package_path("${overridden_location}" "cache location for ${package_name}")
+    else()
+        JE_require_local_package_path("${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION}" "LY_PACKAGE_DOWNLOAD_CACHE_LOCATION")
     endif()
 endfunction()
 
@@ -597,6 +628,9 @@ endfunction()
 # so that findxxxxx works
 # note that package_name here is the actual package name, not the association name.
 function(ly_enable_package package_name)
+    JE_validate_package_sources()
+    # Require the association pin even when the extracted cache is already present.
+    ly_get_package_expected_hash(${package_name} JE_expected_hash)
     # you can call this function as many times as you want, it will only try to validate the property once.
     
     # is it grafted onto the tree elsewhere?
@@ -763,25 +797,24 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS AND NOT O3DE_SCRIPT_ONLY)
     ly_parse_third_party_dependencies(3rdParty::Qt)
 endif()
 
-# Wrapper around FetchContent_Declare that tries url-based download first, and falls back to git clone if all urls fail.
-#
-# At least one of URL or GIT must be provided.
-# If URL is provided, each URL is attempted with retries.
-# If all URLs fail and GIT is also provided, it will fall back to a git clone.
-# Downloads are cached in LY_PACKAGE_DOWNLOAD_CACHE_LOCATION/<name>/
+# Local-only wrapper around FetchContent_Declare. Historical URL/GIT values identify
+# pinned inputs; they never authorize a remote fetch or Git fallback. Provision an
+# archive in LY_PACKAGE_DOWNLOAD_CACHE_LOCATION/<name>/ or explicitly set the
+# standard FETCHCONTENT_SOURCE_DIR_<UPPERCASE_NAME> to audited local sources.
 # NO_ADD_SUBDIR populates sources without configuring the upstream CMakeLists.txt.
 # It cannot be combined with an explicit SOURCE_SUBDIR.
 #
 # NOTE: This function only calls FetchContent_Declare.
 # The caller must call FetchContent_MakeAvailable(<name>) after setting any desired build options.
 function(o3de_fetch_content arg_NAME)
-    set(options NO_ADD_SUBDIR)
+    set(options NO_ADD_SUBDIR EXCLUDE_FROM_ALL SYSTEM)
     set(oneValueArgs
         VERSION # Human-readable version string (e.g. "v1.15.2")
         LICENSE # License identifier (e.g. "BSD-3-Clause", "MIT")
         URL_HASH # SHA256 hash of the archive (required if url is specified)
         GIT # Git repository url as fallback
         GIT_HASH # Git tag, branch, or commit hash
+        SOURCE_SUBDIR # Audited upstream subdirectory, relative to its local sources
     )
     set(multiValueArgs
         URL # One or more archive urls to try in order
@@ -789,8 +822,10 @@ function(o3de_fetch_content arg_NAME)
     )
     cmake_parse_arguments(PARSE_ARGV 1 arg "${options}" "${oneValueArgs}" "${multiValueArgs}")
 
-    if(NOT arg_URL AND NOT arg_GIT)
-        message(FATAL_ERROR "At least one of URL or GIT is required.")
+    # Only options used by audited JE callers are forwarded. Arbitrary commands
+    # and ExternalProject directory/VCS options would reopen implicit I/O paths.
+    if(arg_UNPARSED_ARGUMENTS OR arg_KEYWORDS_MISSING_VALUES)
+        message(FATAL_ERROR "JE FetchContent arguments rejected: ${arg_NAME}. Unsupported arguments or missing values; use local sources and the explicit PATCH_FILES path.")
     endif()
 
     if(arg_URL AND NOT arg_URL_HASH)
@@ -799,16 +834,18 @@ function(o3de_fetch_content arg_NAME)
 
     include(FetchContent)
 
-    # Common args shared by both URL and GIT paths
+    # Common args shared by local archive and source-directory paths
     # Note: do NOT initialize to "" - that creates an empty list element which
     # would insert a spurious empty argument into FetchContent_Declare.
     set(fc_args)
 
     if(arg_NO_ADD_SUBDIR)
-        if("SOURCE_SUBDIR" IN_LIST arg_UNPARSED_ARGUMENTS)
+        if(arg_SOURCE_SUBDIR)
             message(FATAL_ERROR "NO_ADD_SUBDIR and SOURCE_SUBDIR cannot both be specified.")
         endif()
         list(APPEND fc_args SOURCE_SUBDIR "no-add-subdir")
+    elseif(arg_SOURCE_SUBDIR)
+        list(APPEND fc_args SOURCE_SUBDIR "${arg_SOURCE_SUBDIR}")
     endif()
 
     # Stamp extracted files with the extraction time, matching CMP0135 NEW (see cmake/Policy.cmake).
@@ -817,15 +854,15 @@ function(o3de_fetch_content arg_NAME)
     # against the new headers instead of recompiling.
     list(APPEND fc_args DOWNLOAD_EXTRACT_TIMESTAMP FALSE)
 
-    # Forward any extra arguments we don't explicitly handle
-    if(arg_UNPARSED_ARGUMENTS)
-        list(APPEND fc_args ${arg_UNPARSED_ARGUMENTS})
-    endif()
+    foreach(JE_OPTION IN ITEMS EXCLUDE_FROM_ALL SYSTEM)
+        if(arg_${JE_OPTION})
+            list(APPEND fc_args ${JE_OPTION})
+        endif()
+    endforeach()
 
     if(arg_PATCH_FILES)
-        list(FIND arg_UNPARSED_ARGUMENTS "PATCH_COMMAND" patch_command_index)
         list(FIND arg_PATCH_FILES "PATCH_COMMAND" patch_command_in_files_index)
-        if(NOT patch_command_index EQUAL -1 OR NOT patch_command_in_files_index EQUAL -1)
+        if(NOT patch_command_in_files_index EQUAL -1)
             message(FATAL_ERROR "PATCH_FILES and PATCH_COMMAND cannot both be specified.")
         endif()
 
@@ -838,9 +875,19 @@ function(o3de_fetch_content arg_NAME)
         set(download_cache_dir "${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION}/${arg_NAME}")
     endif()
 
-    # Try URL-based download first
+    string(TOUPPER "${arg_NAME}" JE_UPPER_NAME)
+    set(JE_SOURCE_VARIABLE "FETCHCONTENT_SOURCE_DIR_${JE_UPPER_NAME}")
+    set(JE_LOCAL_SOURCE "${${JE_SOURCE_VARIABLE}}")
+    if(JE_LOCAL_SOURCE)
+        JE_require_local_package_path("${JE_LOCAL_SOURCE}" "${JE_SOURCE_VARIABLE}")
+        if(NOT IS_DIRECTORY "${JE_LOCAL_SOURCE}")
+            message(FATAL_ERROR "JE FetchContent local source missing: ${arg_NAME}\n${JE_SOURCE_VARIABLE}: ${JE_LOCAL_SOURCE}\nPin: ${arg_URL_HASH} ${arg_GIT_HASH}")
+        endif()
+    endif()
+
+    # Check pinned archives before considering any explicit local transfer.
     set(url_download_succeeded FALSE)
-    if(arg_URL AND NOT O3DE_FETCHCONTENT_FORCE_GIT)
+    if(arg_URL AND NOT JE_LOCAL_SOURCE)
         foreach(current_url IN LISTS arg_URL)
             get_filename_component(url_filename "${current_url}" NAME)
             if(download_cache_dir)
@@ -858,13 +905,13 @@ function(o3de_fetch_content arg_NAME)
                     set(need_download FALSE)
                     set(url_download_succeeded TRUE)
                 else()
-                    ly_package_message(STATUS "Cached archive hash mismatch, re-downloading from ${current_url}")
-                    file(REMOVE "${target_file}")
+                    ly_package_message(STATUS "Cached archive hash mismatch: ${target_file}")
                 endif()
             endif()
 
-            if(need_download)
-                message(VERBOSE "Attempting URL download from ${current_url}")
+            if(need_download AND current_url MATCHES "^file:///")
+                JE_require_local_package_url("${current_url}" "FetchContent ${arg_NAME}")
+                message(VERBOSE "Resolving local archive for ${arg_NAME}")
                 get_filename_component(target_dir "${target_file}" DIRECTORY)
                 file(MAKE_DIRECTORY "${target_dir}")
 
@@ -891,26 +938,18 @@ function(o3de_fetch_content arg_NAME)
         endforeach()
     endif()
 
-    if(url_download_succeeded)
-        # Use the successfully downloaded/cached archive via url.
-        # The archive is already in the cache at target_file, so we hand FetchContent
-        # a file:// path directly - no DOWNLOAD_DIR is needed for a local file.
+    if(JE_LOCAL_SOURCE)
+        list(APPEND fc_args SOURCE_DIR "${JE_LOCAL_SOURCE}" DOWNLOAD_COMMAND "" UPDATE_COMMAND "")
+    elseif(url_download_succeeded)
+        # ExternalProject accepts a local absolute path for URL. Pass the path
+        # directly: its file:// stripping would retain / before a Windows drive.
+        JE_require_local_package_path("${target_file}" "FetchContent ${arg_NAME} cached archive")
         list(APPEND fc_args
-            URL "file://${target_file}"
+            URL "${target_file}"
             URL_HASH "SHA256=${arg_URL_HASH}"
         )
-    elseif(arg_GIT)
-        list(APPEND fc_args
-            GIT_REPOSITORY "${arg_GIT}"
-            GIT_TAG "${arg_GIT_HASH}"
-        )
-
-        # Warn only if url downloads actually failed (not if intentionally skipped)
-        if(arg_URL AND NOT O3DE_FETCHCONTENT_FORCE_GIT)
-            message(WARNING "All url downloads failed, falling back to git clone from ${arg_GIT}")
-        endif()
     else()
-        message(FATAL_ERROR "All URL downloads failed and no GIT was provided as fallback.")
+        message(FATAL_ERROR "JE FetchContent unavailable offline: ${arg_NAME}\nPin: ${arg_URL_HASH} ${arg_GIT_HASH}\nArchive cache: ${download_cache_dir}\nProvision a pinned local archive or set ${JE_SOURCE_VARIABLE} to audited local sources; remote and Git fallback are disabled.")
     endif()
 
     FetchContent_Declare(${arg_NAME} ${fc_args})

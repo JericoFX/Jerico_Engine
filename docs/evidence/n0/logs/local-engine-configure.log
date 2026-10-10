@@ -1,0 +1,38 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+--   Downloading package into F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-rev5-windows
+CMake Error at cmake/3rdPartyPackages.cmake:290 (message):
+  JE package unavailable offline: zlib-1.2.11-rev5-windows
+
+  SHA256: 8847112429744eb11d92c44026fc5fc53caa4a06709382b5f13978f3c26c4cbd
+
+  Archive:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/downloaded_packages/zlib-1.2.11-rev5-windows.tar.xz
+
+  Unpack:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-rev5-windows
+
+  Local roots:
+
+  Provision the pinned package independently in the local cache or a local
+  file:/// root; remote fallback is disabled.
+Call Stack (most recent call first):
+  cmake/3rdPartyPackages.cmake:562 (ly_package_internal_download_package)
+  cmake/3rdPartyPackages.cmake:655 (ly_force_download_package)
+  cmake/3rdPartyPackages.cmake:767 (ly_enable_package)
+  cmake/3rdParty/BuiltInPackages.cmake:29 (ly_download_associated_package)
+  cmake/3rdPartyPackages.cmake:788 (include)
+  cmake/LYPython.cmake:12 (include)
+  CMakeLists.txt:93 (include)
+
+
+-- Configuring incomplete, errors occurred!

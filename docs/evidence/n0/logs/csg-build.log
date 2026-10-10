@@ -1,0 +1,37 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/Dependencies/manifold-3.5.1/src/CMakeLists.txt
+  Compilador de optimización de C/C++ de Microsoft (R) versión 19.44.35228 para x64
+  (C) Microsoft Corporation. Todos los derechos reservados.
+  cl /c /I"F:\JericoEngine\Dependencies\manifold-3.5.1\include" /I"F:\JericoEngine\JericoEngine\build\n0-validation\csg\manifold\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D NOMINMAX /D "MANIFOLD_PAR=-1" /D "CMAKE_INTDIR=\"Debug\"" /EHsc /RTC1 /MDd /fp:precise /std:c++17 /Fo"manifold.dir\Debug\\" /Fd"F:\JericoEngine\JericoEngine\build\n0-validation\csg\manifold\lib\Debug\manifold.pdb" /external:W1 /TP /errorReport:queue  /bigobj "F:\JericoEngine\Dependencies\manifold-3.5.1\src\boolean3.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\boolean_result.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\constructors.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\csg_tree.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\edge_op.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\execution_impl.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\face_op.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\impl.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\manifold.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\minkowski.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\polygon.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\properties.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\quickhull.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\sdf.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\smoothing.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\sort.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\subdivision.cpp" "F:\JericoEngine\Dependencies\manifold-3.5.1\src\tree2d.cpp"
+  boolean3.cpp
+  boolean_result.cpp
+  constructors.cpp
+  csg_tree.cpp
+  edge_op.cpp
+  execution_impl.cpp
+  face_op.cpp
+  impl.cpp
+  manifold.cpp
+  minkowski.cpp
+  polygon.cpp
+  properties.cpp
+  quickhull.cpp
+  sdf.cpp
+  smoothing.cpp
+  sort.cpp
+  subdivision.cpp
+  tree2d.cpp
+  Generando código...
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\csg\manifold\lib\Debug\manifold.lib
+  Building Custom Rule F:/JericoEngine/JericoEngine/Gems/WhiteBox/Code/Tests/CSG/CMakeLists.txt
+  WhiteBoxCsgCoreTest.cpp
+  WhiteBoxCsgCore.cpp
+  Generando código...
+F:\JericoEngine\Dependencies\manifold-3.5.1\include\manifold\math.h(173,10): error C2220: la siguiente advertencia se trata como un error [F:\JericoEngine\JericoEngine\build\n0-validation\csg\JE_BspCsgTests.vcxproj]
+  (compilando archivo de origen "../../../Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.cpp")
+  
+F:\JericoEngine\Dependencies\manifold-3.5.1\include\manifold\math.h(173,10): warning C4244: '=': conversión de 'uint64_t' a 'uint32_t'; posible pérdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\csg\JE_BspCsgTests.vcxproj]
+  (compilando archivo de origen "../../../Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.cpp")
+  
