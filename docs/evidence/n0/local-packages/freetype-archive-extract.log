@@ -1,0 +1,4 @@
+COMMAND: tar.exe -xf F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-rev1\packages\freetype-2.11.1-je-rev1-windows.tar.xz -C F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-rev1\extracted\freetype-2.11.1-je-rev1-windows
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.063
+OUTPUT:

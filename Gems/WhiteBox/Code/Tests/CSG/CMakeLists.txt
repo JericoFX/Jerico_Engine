@@ -41,3 +41,4 @@ endif()
 
 enable_testing()
 add_test(NAME JE.BSP.CsgCore COMMAND JE_BspCsgTests)
+add_test(NAME JE.BSP.CsgCore.InvalidIndex COMMAND JE_BspCsgTests --invalid-index)

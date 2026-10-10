@@ -1,0 +1,12 @@
+{
+  "WorkingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "ArgumentCount": 6,
+  "Arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/csg",
+    "--config",
+    "Release",
+    "--target",
+    "JE_BspCsgTests"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "started": "2026-10-10T18:48:16.4222208-03:00",
+  "finished": "2026-10-10T18:48:19.0059645-03:00",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0915911,
+  "before": {
+    "stage": {
+      "files": 3281,
+      "bytes": 104627044.0,
+      "snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-package-retry-negative-argvfix-stage-before.json"
+    },
+    "freeze_sha256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+    "helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+    "cmake_sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+    "cmake_version": "cmake version 4.3.4"
+  },
+  "after": {
+    "stage": {
+      "files": 3281,
+      "bytes": 104627044.0,
+      "snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-package-retry-negative-argvfix-stage-after.json"
+    },
+    "freeze_sha256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+    "helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+    "cmake_sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+    "cmake_version": "cmake version 4.3.4"
+  },
+  "old_contents_sha256_before": "80B0DA1226FEA00B39E625F9AF38C84C515D3EFD470FDB3C80AFEF8A06A834F0",
+  "old_contents_sha256_after": "80B0DA1226FEA00B39E625F9AF38C84C515D3EFD470FDB3C80AFEF8A06A834F0",
+  "output_changed": false
+}

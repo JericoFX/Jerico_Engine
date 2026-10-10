@@ -1,0 +1,86 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# For complete copyright and license terms please see the LICENSE at the root of this distribution.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+
+# Adapted from o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18,
+# package-system/zlib/{build_zlib_windows.cmd,install_zlib_windows.cmd,build_config.json}.
+# SOURCE_WORK must be a dedicated writable copy prepared under this checkout's build/:
+# upstream configure renames zconf.h. The audited source snapshot is never an input here.
+cmake_minimum_required(VERSION 3.24)
+if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
+    message(FATAL_ERROR "JE local zlib recipe requires Windows x64 and Visual Studio 2022")
+endif()
+foreach(JE_ARGUMENT IN ITEMS SOURCE_WORK OUTPUT SOURCE_SHA256 SOURCE_URL LICENSE_FILE)
+    if(NOT DEFINED JE_ZLIB_${JE_ARGUMENT} OR "${JE_ZLIB_${JE_ARGUMENT}}" STREQUAL "")
+        message(FATAL_ERROR "JE local zlib recipe: JE_ZLIB_${JE_ARGUMENT} is required")
+    endif()
+endforeach()
+foreach(JE_PATH IN ITEMS "${JE_ZLIB_SOURCE_WORK}" "${JE_ZLIB_OUTPUT}" "${JE_ZLIB_LICENSE_FILE}")
+    file(TO_CMAKE_PATH "${JE_PATH}" JE_LOCAL_PATH)
+    if(NOT IS_ABSOLUTE "${JE_LOCAL_PATH}" OR JE_LOCAL_PATH MATCHES "^//|://" OR IS_SYMLINK "${JE_PATH}")
+        message(FATAL_ERROR "JE local zlib recipe: paths must be absolute, local and not symlinks")
+    endif()
+    set(JE_ANCESTOR "${JE_LOCAL_PATH}")
+    while(NOT JE_ANCESTOR STREQUAL "")
+        if(IS_SYMLINK "${JE_ANCESTOR}")
+            message(FATAL_ERROR "JE local zlib recipe: symlink ancestor rejected")
+        endif()
+        get_filename_component(JE_PARENT "${JE_ANCESTOR}" DIRECTORY)
+        if(JE_PARENT STREQUAL JE_ANCESTOR)
+            break()
+        endif()
+        set(JE_ANCESTOR "${JE_PARENT}")
+    endwhile()
+endforeach()
+get_filename_component(JE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
+cmake_path(SET JE_BUILD_ROOT NORMALIZE "${JE_ROOT}/build")
+cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_ZLIB_SOURCE_WORK}" NORMALIZE JE_SOURCE_IN_BUILD)
+cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_ZLIB_OUTPUT}" NORMALIZE JE_OUTPUT_IN_BUILD)
+if(NOT JE_SOURCE_IN_BUILD OR NOT JE_OUTPUT_IN_BUILD)
+    message(FATAL_ERROR "JE local zlib recipe: source work and outputs must be under this checkout's build/")
+endif()
+if(NOT EXISTS "${JE_ZLIB_SOURCE_WORK}/CMakeLists.txt" OR NOT EXISTS "${JE_ZLIB_SOURCE_WORK}/zlib.h"
+    OR NOT EXISTS "${JE_ZLIB_LICENSE_FILE}")
+    message(FATAL_ERROR "JE local zlib recipe: prepared source or audited license is missing")
+endif()
+file(STRINGS "${JE_ZLIB_SOURCE_WORK}/zlib.h" JE_VERSION_LINE REGEX "^#define ZLIB_VERSION ")
+if(NOT JE_VERSION_LINE STREQUAL "#define ZLIB_VERSION \"1.2.11\"")
+    message(FATAL_ERROR "JE local zlib recipe: source is not zlib 1.2.11")
+endif()
+
+set(JE_BUILD "${JE_ZLIB_OUTPUT}/build")
+set(JE_STAGE "${JE_ZLIB_OUTPUT}/stage")
+foreach(JE_DESTINATION IN ITEMS "${JE_BUILD}" "${JE_STAGE}")
+    if(EXISTS "${JE_DESTINATION}" OR IS_SYMLINK "${JE_DESTINATION}")
+        message(FATAL_ERROR "JE local zlib recipe: output already exists: ${JE_DESTINATION}")
+    endif()
+endforeach()
+execute_process(COMMAND "${CMAKE_COMMAND}" -S "${JE_ZLIB_SOURCE_WORK}" -B "${JE_BUILD}"
+    -G "Visual Studio 17 2022" -A x64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    -DBUILD_SHARED_LIBS=OFF -DSKIP_INSTALL_FILES=YES RESULT_VARIABLE JE_CONFIGURE_RESULT)
+if(NOT JE_CONFIGURE_RESULT EQUAL 0)
+    message(FATAL_ERROR "JE local zlib configure failed (${JE_CONFIGURE_RESULT}); outputs retained")
+endif()
+execute_process(COMMAND "${CMAKE_COMMAND}" --build "${JE_BUILD}" --target zlibstatic --config Release
+    RESULT_VARIABLE JE_BUILD_RESULT)
+if(NOT JE_BUILD_RESULT EQUAL 0)
+    message(FATAL_ERROR "JE local zlib build failed (${JE_BUILD_RESULT}); outputs retained")
+endif()
+
+file(MAKE_DIRECTORY "${JE_STAGE}/zlib/include" "${JE_STAGE}/zlib/lib")
+file(COPY "${JE_BUILD}/zconf.h" "${JE_ZLIB_SOURCE_WORK}/zlib.h" DESTINATION "${JE_STAGE}/zlib/include")
+file(COPY "${JE_BUILD}/Release/zlibstatic.lib" DESTINATION "${JE_STAGE}/zlib/lib")
+configure_file("${JE_ZLIB_LICENSE_FILE}" "${JE_STAGE}/zlib/LICENSE" COPYONLY)
+configure_file("${CMAKE_CURRENT_LIST_DIR}/FindZLIB.cmake" "${JE_STAGE}/FindZLIB.cmake" COPYONLY)
+file(COPY "${JE_ROOT}/LICENSE.txt" "${JE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ROOT}/LICENSE_MIT.TXT"
+    DESTINATION "${JE_STAGE}")
+
+set(JE_PACKAGE_STAGE "${JE_STAGE}")
+set(JE_PACKAGE_NAME "zlib-1.2.11-je-rev1-windows")
+set(JE_PACKAGE_OUTPUT "${JE_ZLIB_OUTPUT}/packages")
+set(JE_PACKAGE_VERSION "1.2.11-je-rev1")
+set(JE_PACKAGE_SOURCE_COMMIT "cacf7f1d4e3d44d871b605da3b647f07d718623f")
+set(JE_PACKAGE_LICENSE "Zlib")
+set(JE_PACKAGE_SOURCE_SHA256 "${JE_ZLIB_SOURCE_SHA256}")
+set(JE_PACKAGE_SOURCE_URL "${JE_ZLIB_SOURCE_URL}")
+include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")

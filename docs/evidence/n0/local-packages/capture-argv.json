@@ -1,0 +1,18 @@
+{
+    "script_path":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\capture-argv.ps1",
+    "broken_count":  1,
+    "broken_arguments":  [
+                             "-DJE_PACKAGE_STAGE=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\negative\\metadata-stage -DJE_PACKAGE_NAME=probe-metadata -DJE_PACKAGE_OUTPUT=F:\\tmp -DJE_PACKAGE_VERSION=1 -P F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake"
+                         ],
+    "corrected_count":  6,
+    "corrected_arguments":  [
+                                "-DJE_PACKAGE_STAGE=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\negative\\metadata-stage",
+                                "-DJE_PACKAGE_NAME=probe-metadata",
+                                "-DJE_PACKAGE_OUTPUT=F:\\tmp",
+                                "-DJE_PACKAGE_VERSION=1",
+                                "-P",
+                                "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake"
+                            ],
+    "expected_cmake_mode":  "script (-P) only after splatting corrected vector",
+    "cmake_invoked":  false
+}

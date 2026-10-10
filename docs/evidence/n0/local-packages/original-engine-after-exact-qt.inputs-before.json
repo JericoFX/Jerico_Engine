@@ -1,0 +1,56 @@
+[
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\CMakeLists.txt",
+    "Exists": true,
+    "Bytes": 9700,
+    "SHA256": "0463623551DED5FD210F5389503995CEF633F95EEB054CF41296A7B1381E1616"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdPartyPackages.cmake",
+    "Exists": true,
+    "Bytes": 50533,
+    "SHA256": "B5893A9216005EC9E186C09134996B586ADAECDC9CDC5A185D9553F114883AAC"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\BuiltInPackages.cmake",
+    "Exists": true,
+    "Bytes": 1534,
+    "SHA256": "063552FFB31F78927816CFEC45725292E026FF6326360B61CA5B9F42DF00FE9F"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+    "Exists": true,
+    "Bytes": 6786,
+    "SHA256": "674A73102AA2BE595A26A5F83BC4627CFF4AB9057F8B7C27F8FDD77073A71D7D"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\Python_windows.cmake",
+    "Exists": true,
+    "Bytes": 1073,
+    "SHA256": "0EBDFB7981D19A1B0501AF0D9D58EEDBD265F972E211ECEE5F5307B101C21960"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPython.cmake",
+    "Exists": true,
+    "Bytes": 18516,
+    "SHA256": "1DCC285687048842C64B4CEE472806F758EC69F74E588E871C5D96EC75E90C23"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPackage_S3Downloader.cmake",
+    "Exists": true,
+    "Bytes": 5737,
+    "SHA256": "5D75F081B9F903F9785AD4B1DF1EC56637FFD5436BD2B31D0B09C679452ADA66"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zlib\\FindZLIB.cmake",
+    "Exists": true,
+    "Bytes": 2084,
+    "SHA256": "B2662EB8469BAD3C2CF93E3EA797E3DF53C49AB4A9A1CE4C2AC119F7EF19BBD0"
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Freetype\\FindFreetype.cmake",
+    "Exists": true,
+    "Bytes": 4479,
+    "SHA256": "67CDB1EFDFD6D56A88C553548E9DA7B1956ABD78E86B2805C4B76D9E4762BDBF"
+  }
+]

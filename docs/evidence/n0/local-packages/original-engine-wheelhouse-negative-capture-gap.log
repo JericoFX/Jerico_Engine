@@ -1,0 +1,5 @@
+Observed CMake stderr fragment:
+CMake Error at cmake/LYPython.cmake:136 (message):
+PowerShell wrapper terminated during native stderr conversion; complete CMake output/exit/elapsed were not captured.
+Source fatal message: JE Python wheelhouse missing: ${JE_PYTHON_WHEELHOUSE}. Provision the audited pinned packages locally.
+CMakeCache confirms JE_PYTHON_WHEELHOUSE points to the absent root-package-cache/python-wheelhouse-missing-validation path.

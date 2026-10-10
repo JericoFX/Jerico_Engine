@@ -1,0 +1,38 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\python-3.10.13-je-rev1-windows.tar.xz",
+    "sha256": "4370B5870C6B4DA65206F6C8E82CA5540F0F2C60FE4CB2BBBD34DBF1CC7DD2D9",
+    "bytes": 22341204
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+    "sha256": "C468957F63BC9AECC776D8ED123FD0B061823E1C51625F34BE8A5627FA70F283",
+    "bytes": 105
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz",
+    "sha256": "4370B5870C6B4DA65206F6C8E82CA5540F0F2C60FE4CB2BBBD34DBF1CC7DD2D9",
+    "bytes": 22341204
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+    "sha256": "C468957F63BC9AECC776D8ED123FD0B061823E1C51625F34BE8A5627FA70F283",
+    "bytes": 105
+  },
+  {
+    "source": "F:\\JericoEngine\\Dependencies\\archives\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+    "sha256": "CD0272EB5CE46A3437132344A4A6B7022E3AEE152DA888963CDD9D025CBDF506",
+    "bytes": 22663592
+  },
+  {
+    "source": "F:\\JericoEngine\\Dependencies\\archives\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS",
+    "sha256": "6BEBD651D19A6397EA3ABC8E28D9D6467010456085FA7E12B9FE7ECB6C937966",
+    "bytes": 108
+  }
+]

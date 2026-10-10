@@ -1,0 +1,9 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/csg
+    Start 1: JE.BSP.CsgCore
+1/2 Test #1: JE.BSP.CsgCore ...................   Passed    0.03 sec
+    Start 2: JE.BSP.CsgCore.InvalidIndex
+2/2 Test #2: JE.BSP.CsgCore.InvalidIndex ......   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.08 sec

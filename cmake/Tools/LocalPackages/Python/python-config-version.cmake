@@ -1,0 +1,27 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+# Adapted from o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18,
+# package-system/python/win_x64/python-config-version.cmake.
+
+set(PACKAGE_VERSION 3.10.13)
+set(PACKAGE_VERSION_EXACT FALSE)
+set(PACKAGE_VERSION_COMPATIBLE FALSE)
+if(NOT PACKAGE_FIND_NAME STREQUAL "Python")
+    return()
+endif()
+if(PACKAGE_FIND_VERSION_COUNT GREATER 0 AND NOT PACKAGE_FIND_VERSION_MAJOR EQUAL 3)
+    return()
+endif()
+if(PACKAGE_FIND_VERSION_COUNT GREATER 1 AND NOT PACKAGE_FIND_VERSION_MINOR EQUAL 10)
+    return()
+endif()
+if(PACKAGE_FIND_VERSION_COUNT GREATER 2 AND NOT PACKAGE_FIND_VERSION_PATCH EQUAL 13)
+    return()
+endif()
+if(PACKAGE_FIND_VERSION_COUNT GREATER 3)
+    return()
+endif()
+if(PACKAGE_FIND_VERSION VERSION_EQUAL PACKAGE_VERSION)
+    set(PACKAGE_VERSION_EXACT TRUE)
+endif()
+set(PACKAGE_VERSION_COMPATIBLE TRUE)

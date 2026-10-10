@@ -1,0 +1,78 @@
+[
+  {
+    "name": "qt-6.11.2-rev1-windows",
+    "archive_sha256": "f09edc180df0ded92827279c475167be13cbb517de182a5b10ec1337e68dd834",
+    "files": 4799,
+    "entries": 4799,
+    "payload_bytes": 1353891811,
+    "manifest_entries_verified": 4798,
+    "regular_payload_and_internal_file_hardlinks_only": true,
+    "hardlinks": [
+      {
+        "name": "qt/bin/wasmdeployqt.exe",
+        "kind": "hardlink",
+        "bytes": 0,
+        "target": "qt/bin/wasmdeployqt6.exe",
+        "sha256": "3c27f514f95866ebbc23aa6c16d269a9b3b2a56c86037212a72708d372aed640"
+      },
+      {
+        "name": "qt/bin/windeployqt6.exe",
+        "kind": "hardlink",
+        "bytes": 0,
+        "target": "qt/bin/windeployqt.exe",
+        "sha256": "b58a3684c9aa1438950cccd104b430728efda7bbaf547cb1ddd8fee18266ec0a"
+      },
+      {
+        "name": "qt/bin/qmake6.exe",
+        "kind": "hardlink",
+        "bytes": 0,
+        "target": "qt/bin/qmake.exe",
+        "sha256": "a730e6c61e86dec5169d9f4140f71cffaa6e710f46aad5a2518a87fdde9bd1ad"
+      },
+      {
+        "name": "qt/bin/qtpaths6.exe",
+        "kind": "hardlink",
+        "bytes": 0,
+        "target": "qt/bin/qtpaths.exe",
+        "sha256": "87409be7957aa1a1a35ee097dcf15a7324ed39ff82884d719bdc308bc8c2f59b"
+      },
+      {
+        "name": "qt/bin/androiddeployqt6.exe",
+        "kind": "hardlink",
+        "bytes": 0,
+        "target": "qt/bin/androiddeployqt.exe",
+        "sha256": "e05b838b8b82350fac515abdb4ff1d1e97464160715e932e53670482f340f5fa"
+      }
+    ],
+    "package_info": {
+      "PackageName": "qt-6.11.2-rev1-windows",
+      "URL": "https://www.qt.io/",
+      "License": "LGPL-3.0",
+      "LicenseFile": "qt/LGPL-3.0-only.txt"
+    },
+    "selected_text_files": 890,
+    "inspection_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\exact-package-inspection-rev2\\qt-6.11.2-rev1-windows",
+    "elapsed_seconds": 16.407,
+    "code_executed_from_package": false
+  },
+  {
+    "name": "pyside6-6.11.2-py3.10-rev1-windows",
+    "archive_sha256": "cd0272eb5ce46a3437132344a4a6b7022e3aee152da888963cdd9d025cbdf506",
+    "files": 306,
+    "entries": 306,
+    "payload_bytes": 97601231,
+    "manifest_entries_verified": 305,
+    "regular_payload_and_internal_file_hardlinks_only": true,
+    "hardlinks": [],
+    "package_info": {
+      "PackageName": "pyside6-6.11.2-py3.10-rev1-windows",
+      "URL": "https://code.qt.io/pyside/pyside-setup.git",
+      "License": "custom",
+      "LicenseFile": "pyside6/LGPL-3.0-only.txt"
+    },
+    "selected_text_files": 27,
+    "inspection_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\exact-package-inspection-rev2\\pyside6-6.11.2-py3.10-rev1-windows",
+    "elapsed_seconds": 1.512,
+    "code_executed_from_package": false
+  }
+]

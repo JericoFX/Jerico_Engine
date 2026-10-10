@@ -1,0 +1,69 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\consumer-retry",
+    "-C",
+    "Release",
+    "--output-on-failure"
+  ],
+  "argv_count": 5,
+  "mode": "CTest Release all",
+  "started": "2026-10-10T18:51:31.7968001-03:00",
+  "inputs_before": {
+    "freeze_sha256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+    "source": [
+      {
+        "path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+        "sha256": "FEF6FAC410F861E0A077B40FCE797B30CD35AF4A55FB3C95CBBB3675EBE0FD28"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+        "sha256": "389832D7441AFAD6296BA6E50FF021654D28979E70F955D0EDDAD05993DA6684"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+        "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+        "sha256": "0B71C6F50E71544B668D924DC08E43E7CD32ACF37CE99DC404A524A6BCE6270C"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+        "sha256": "18FF68CB13D64E2ABE13EBA169A45422F1FF59A6751F4CF3F20F51A4FD5FFD4D"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+        "sha256": "AFCEB472FB29B7D56D65C69869EAB14ED86615F1CA7146FA255BBBA672FA45B1"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+        "sha256": "00F50E86D2896F33A81FB5D11326DD482BFB3C63C98997390E36E7DCAAD5150A"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+        "sha256": "857120754727AA796614541C17ACDB4CA32620C74DEDE63A8FE9C153669C68E2"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+        "sha256": "8EF2416167827149A0D66F258E3B831D9C2C5D8DE0E9F71FB9B39F7FECF1347A"
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+        "sha256": "2342712F86A64C4F041F2AA6AD0C1255917056E838911DE739B40D43B8FD7A3C"
+      }
+    ],
+    "package_files": 3283,
+    "package_bytes": 104981177.0,
+    "package_snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-consumer-retry-ctest-release-package-before.json",
+    "archive_sha256": "4370B5870C6B4DA65206F6C8E82CA5540F0F2C60FE4CB2BBBD34DBF1CC7DD2D9",
+    "ctest_sha256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB",
+    "cmake_sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64"
+  },
+  "venv_paths": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\consumer-retry\\venv-Debug",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\consumer-retry\\venv-Release"
+  ]
+}

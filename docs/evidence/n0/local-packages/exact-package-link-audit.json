@@ -1,0 +1,41 @@
+[
+  {
+    "package": "qt-6.11.2-rev1-windows",
+    "links": [
+      {
+        "name": "qt/bin/wasmdeployqt.exe",
+        "type": "1",
+        "target": "qt/bin/wasmdeployqt6.exe",
+        "bytes": 0
+      },
+      {
+        "name": "qt/bin/windeployqt6.exe",
+        "type": "1",
+        "target": "qt/bin/windeployqt.exe",
+        "bytes": 0
+      },
+      {
+        "name": "qt/bin/qmake6.exe",
+        "type": "1",
+        "target": "qt/bin/qmake.exe",
+        "bytes": 0
+      },
+      {
+        "name": "qt/bin/qtpaths6.exe",
+        "type": "1",
+        "target": "qt/bin/qtpaths.exe",
+        "bytes": 0
+      },
+      {
+        "name": "qt/bin/androiddeployqt6.exe",
+        "type": "1",
+        "target": "qt/bin/androiddeployqt.exe",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "package": "pyside6-6.11.2-py3.10-rev1-windows",
+    "links": []
+  }
+]

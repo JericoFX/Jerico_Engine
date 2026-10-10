@@ -1,0 +1,250 @@
+{
+  "SourceManifestSHA256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+  "SourceInputs": [
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+      "Expected": "fef6fac410f861e0a077b40fce797b30cd35af4a55fb3c95cbbb3675ebe0fd28",
+      "Actual": "FEF6FAC410F861E0A077B40FCE797B30CD35AF4A55FB3C95CBBB3675EBE0FD28",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+      "Expected": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684",
+      "Actual": "389832D7441AFAD6296BA6E50FF021654D28979E70F955D0EDDAD05993DA6684",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "Expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "Actual": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+      "Expected": "0b71c6f50e71544b668d924dc08e43e7cd32acf37ce99dc404a524a6bce6270c",
+      "Actual": "0B71C6F50E71544B668D924DC08E43E7CD32ACF37CE99DC404A524A6BCE6270C",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+      "Expected": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d",
+      "Actual": "18FF68CB13D64E2ABE13EBA169A45422F1FF59A6751F4CF3F20F51A4FD5FFD4D",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+      "Expected": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1",
+      "Actual": "AFCEB472FB29B7D56D65C69869EAB14ED86615F1CA7146FA255BBBA672FA45B1",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+      "Expected": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a",
+      "Actual": "00F50E86D2896F33A81FB5D11326DD482BFB3C63C98997390E36E7DCAAD5150A",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+      "Expected": "857120754727aa796614541c17acdb4ca32620c74dede63a8fe9c153669c68e2",
+      "Actual": "857120754727AA796614541C17ACDB4CA32620C74DEDE63A8FE9C153669C68E2",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+      "Expected": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a",
+      "Actual": "8EF2416167827149A0D66F258E3B831D9C2C5D8DE0E9F71FB9B39F7FECF1347A",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+      "Expected": "2342712f86a64c4f041f2aa6ad0c1255917056e838911de739b40d43b8fd7a3c",
+      "Actual": "2342712F86A64C4F041F2AA6AD0C1255917056E838911DE739B40D43B8FD7A3C",
+      "Match": true
+    }
+  ],
+  "HelperSHA256": "AB1C32742EA8885CAFA3AA2EE134A252DE86B030D47382D6A4DAEE7DC17604FD",
+  "HelperMatches": true,
+  "Snapshots": [
+    {
+      "Snapshot": "cpython-python-input-snapshot-rev2.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2",
+      "ExpectedFiles": 4437,
+      "ActualFiles": 4437,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "bzip2-1.0.8-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\bzip2-1.0.8",
+      "ExpectedFiles": 56,
+      "ActualFiles": 56,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "expat-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\expat-65a21f2b2a306d29b44e70264aca948aa0454219",
+      "ExpectedFiles": 153,
+      "ActualFiles": 153,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "libffi-3.3.0-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\libffi-3.3.0",
+      "ExpectedFiles": 22,
+      "ActualFiles": 22,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "openssl-bin-1.1.1u-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\openssl-bin-1.1.1u",
+      "ExpectedFiles": 346,
+      "ActualFiles": 346,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "sqlite-3.40.1.0-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\sqlite-3.40.1.0",
+      "ExpectedFiles": 5,
+      "ActualFiles": 5,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "tcltk-8.6.12.0-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\tcltk-8.6.12.0",
+      "ExpectedFiles": 2593,
+      "ActualFiles": 2593,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "xz-5.2.5-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\xz-5.2.5",
+      "ExpectedFiles": 480,
+      "ActualFiles": 480,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "zlib-1.2.13-python-input-snapshot.json",
+      "Work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\zlib-1.2.13",
+      "ExpectedFiles": 243,
+      "ActualFiles": 243,
+      "MissingOrMismatch": 0,
+      "Unexpected": 0,
+      "Match": true
+    }
+  ],
+  "Archives": [
+    {
+      "Name": "cpython",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\cpython-49965601d6afedafe47cc85556d99b7a24981051.tar.gz",
+      "Expected": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+      "Actual": "12C564214C8A3B109D294143CB439E8BCCB1CF6BE677B52E98C5E2C41941EA44",
+      "Bytes": 26359731,
+      "ExpectedBytes": 26359731,
+      "Match": true
+    },
+    {
+      "Name": "expat",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\expat-65a21f2b2a306d29b44e70264aca948aa0454219.tar.gz",
+      "Expected": "54fd00059462c81e8e3c8eef7e90169fca1b48d89122fbc97039d7007190d9c8",
+      "Actual": "54FD00059462C81E8E3C8EEF7E90169FCA1B48D89122FBC97039D7007190D9C8",
+      "Bytes": 8314214,
+      "ExpectedBytes": 8314214,
+      "Match": true
+    },
+    {
+      "Name": "bzip2-1.0.8",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\bzip2-1.0.8-05301997b2f9590f49c672cf3dfd3d3dfa7ad521.tar.gz",
+      "Expected": "ab14accac86cdd92021d50465deeb221b476d6675bd1383d3c7fb83751c2e0a3",
+      "Actual": "AB14ACCAC86CDD92021D50465DEEB221B476D6675BD1383D3C7FB83751C2E0A3",
+      "Bytes": 819016,
+      "ExpectedBytes": 819016,
+      "Match": true
+    },
+    {
+      "Name": "sqlite-3.40.1.0",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\sqlite-3.40.1.0-db4ca556b25787c263ee72a4b764c4be474c322f.tar.gz",
+      "Expected": "61a33a1f61b30617564ae869296339b19dfd30b9b32a0e1b3493d8b93b23b54c",
+      "Actual": "61A33A1F61B30617564AE869296339B19DFD30B9B32A0E1B3493D8B93B23B54C",
+      "Bytes": 2595070,
+      "ExpectedBytes": 2595070,
+      "Match": true
+    },
+    {
+      "Name": "xz-5.2.5",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\xz-5.2.5-c6bc0c612605622aaef101a33a751f9de2ecc193.tar.gz",
+      "Expected": "115433c946ee069e857fd04cf41b38a4a74ed45d868a3b2e08ccd4a1f04f39d0",
+      "Actual": "115433C946EE069E857FD04CF41B38A4A74ED45D868A3B2E08CCD4A1F04F39D0",
+      "Bytes": 1745919,
+      "ExpectedBytes": 1745919,
+      "Match": true
+    },
+    {
+      "Name": "zlib-1.2.13",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\zlib-1.2.13-9071e5ae1bd90c30518404b95ec0be0d4cf6cf84.tar.gz",
+      "Expected": "0200469024cfc47334c7f6a28855a54d33740a7207d1b9e860fbbaf0bebfca63",
+      "Actual": "0200469024CFC47334C7F6A28855A54D33740A7207D1B9E860FBBAF0BEBFCA63",
+      "Bytes": 1554772,
+      "ExpectedBytes": 1554772,
+      "Match": true
+    },
+    {
+      "Name": "libffi-3.3.0",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\libffi-3.3.0-1cf06233e3ceb49dc0a73c55e04b1174b436b632.tar.gz",
+      "Expected": "1041268a6a068f69d5fa2fb053dab6b11c25789e0a5fb2be4b505eba16620d3c",
+      "Actual": "1041268A6A068F69D5FA2FB053DAB6B11C25789E0A5FB2BE4B505EBA16620D3C",
+      "Bytes": 99305,
+      "ExpectedBytes": 99305,
+      "Match": true
+    },
+    {
+      "Name": "openssl-bin-1.1.1u",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\openssl-bin-1.1.1u-bbd07240c6414fa314ca606b73247054eb81b59c.tar.gz",
+      "Expected": "4dc3c79ed427b93fb2d435aeb4916c27d77d99044c6384a068ee537f39a75dd3",
+      "Actual": "4DC3C79ED427B93FB2D435AEB4916C27D77D99044C6384A068EE537F39A75DD3",
+      "Bytes": 16816392,
+      "ExpectedBytes": 16816392,
+      "Match": true
+    },
+    {
+      "Name": "tcltk-8.6.12.0",
+      "Path": "F:\\JericoEngine\\Dependencies\\archives\\tcltk-8.6.12.0-e3c3e9a2856124aa32b608632a52742d479eb7a9.tar.gz",
+      "Expected": "01ad9c663659224e075d487cbc33ea2fed7a225593965b79bed92ca7f79b676f",
+      "Actual": "01AD9C663659224E075D487CBC33EA2FED7A225593965B79BED92CA7F79B676F",
+      "Bytes": 6787654,
+      "ExpectedBytes": 6787654,
+      "Match": true
+    }
+  ],
+  "Tools": [
+    {
+      "Name": "bootstrap",
+      "Path": "C:\\Users\\Jerico\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "Expected": "805fd29612c221ebea570d372ec5ed46093c25a1033f1765de9b2f8103868886",
+      "Actual": "805FD29612C221EBEA570D372EC5ED46093C25A1033F1765DE9B2F8103868886",
+      "Match": true
+    },
+    {
+      "Name": "msbuild",
+      "Path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+      "Expected": "0f7daba445ba37b652ae4180270ab3eff27acbbe5d411d3b05dad51aab16404c",
+      "Actual": "0F7DABA445BA37B652AE4180270AB3EFF27ACBBE5D411D3B05DAD51AAB16404C",
+      "Match": true
+    }
+  ],
+  "OutputAlreadyExists": false
+}

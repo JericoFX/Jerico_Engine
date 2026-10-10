@@ -1,0 +1,85 @@
+{
+  "package_name": "zlib-1.2.11-je-rev1-windows",
+  "version": "1.2.11-je-rev1",
+  "license": "Zlib",
+  "source": {
+    "commit": "cacf7f1d4e3d44d871b605da3b647f07d718623f",
+    "sha256": "6d4d6640ca3121620995ee255945161821218752b551a1a180f4215f7d124d45",
+    "url": "https://codeload.github.com/madler/zlib/tar.gz/cacf7f1d4e3d44d871b605da3b647f07d718623f"
+  },
+  "package_sha256": "4ff69c9c7f99c917afce6d04cdf3fc6f2a65c0038abf2c677ef418182851bef7",
+  "package_bytes": 92556,
+  "entry_count": 10,
+  "manifest_count": 9,
+  "all_manifest_entries_match": true,
+  "extra_files": [],
+  "library": {
+    "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\extracted\\zlib-1.2.11-je-rev1-windows\\zlib\\lib\\zlibstatic.lib",
+    "Length": 188206
+  },
+  "records": [
+    {
+      "match": true,
+      "path": "FindZLIB.cmake",
+      "expected": "b2662eb8469bad3c2cf93e3ea797e3df53c49ab4a9a1ce4c2ac119f7ef19bbd0",
+      "actual": "b2662eb8469bad3c2cf93e3ea797e3df53c49ab4a9a1ce4c2ac119f7ef19bbd0",
+      "bytes": 2084
+    },
+    {
+      "match": true,
+      "path": "LICENSE.txt",
+      "expected": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "actual": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "bytes": 1502
+    },
+    {
+      "match": true,
+      "path": "LICENSE_APACHE2.TXT",
+      "expected": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "actual": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "bytes": 11557
+    },
+    {
+      "match": true,
+      "path": "LICENSE_MIT.TXT",
+      "expected": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "actual": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "bytes": 1074
+    },
+    {
+      "match": true,
+      "path": "PackageInfo.json",
+      "expected": "097f7459a283eff744bc375fa8e6b07f9c155335a7eb1dae175d63a0a18a0764",
+      "actual": "097f7459a283eff744bc375fa8e6b07f9c155335a7eb1dae175d63a0a18a0764",
+      "bytes": 401
+    },
+    {
+      "match": true,
+      "path": "zlib/LICENSE",
+      "expected": "464352f7afcece608041241e20b28e8006ae170446898e9713fb076323d1487d",
+      "actual": "464352f7afcece608041241e20b28e8006ae170446898e9713fb076323d1487d",
+      "bytes": 1531
+    },
+    {
+      "match": true,
+      "path": "zlib/include/zconf.h",
+      "expected": "7f4e7f02c4c1b7ef830a8b4331e1ba04f34e97f2c0dcdd81f967ff16fd5ee6d0",
+      "actual": "7f4e7f02c4c1b7ef830a8b4331e1ba04f34e97f2c0dcdd81f967ff16fd5ee6d0",
+      "bytes": 16885
+    },
+    {
+      "match": true,
+      "path": "zlib/include/zlib.h",
+      "expected": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8",
+      "actual": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8",
+      "bytes": 96239
+    },
+    {
+      "match": true,
+      "path": "zlib/lib/zlibstatic.lib",
+      "expected": "00842f0c5be67674da3a0c1369da818ffeff1dea4f805beb06dd50f84d5a4fc1",
+      "actual": "00842f0c5be67674da3a0c1369da818ffeff1dea4f805beb06dd50f84d5a4fc1",
+      "bytes": 188206
+    }
+  ]
+}

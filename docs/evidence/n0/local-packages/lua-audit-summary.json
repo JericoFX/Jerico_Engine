@@ -1,0 +1,319 @@
+{
+  "schema": "JE_lua_reconstruction_audit_v1",
+  "utc": "2026-10-10T22:12:54.0466882Z",
+  "scope": "Read-only static original recipe/source texts, metadata/HEAD and local consumers. Writes only this evidence directory; no source/config/docs/Git/build/test/install/binary download.",
+  "blocker": {
+    "original_package": "Lua-5.4.4-rev1-windows",
+    "original_archive_sha256": "8ac853288712267ec9763be152a9274ce87b54728b8add97e2ba73c0fd5a0345",
+    "root_result": {
+      "exitcode": 1,
+      "elapsed_seconds": 9.5247611,
+      "argv_count": 18,
+      "freeze_match_before": true,
+      "freeze_match_after": true,
+      "mimalloc_source_match_before": true,
+      "mimalloc_source_match_after": true,
+      "cache_files_before": 54,
+      "cache_files_after": 54,
+      "cache_bytes_before": 307886048.0,
+      "cache_bytes_after": 307886048.0,
+      "cache_identical": true
+    },
+    "message": "Mimalloc source override resolves prior package failure, then Lua package unavailable offline."
+  },
+  "recipe": {
+    "snapshot": "o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "path": "package-system/Lua",
+    "current_revision": "5.4.4-rev2",
+    "historical_rev1_commit": "f218e0a04d160b0617c44228c51cc1dcd555b7f5",
+    "historical_rev1": "5.4.4-rev1",
+    "revision_bump": "4595fcd1c7177015ea52ca35ed9d34c080eea537: Mac ARM64 revision bump",
+    "cmake_find_patch_license_equal_to_historical": [
+      {
+        "file": "CMakeLists.txt",
+        "snapshot_sha256": "5bd5423c7af3794d388550737d45b8565a98c9119ae9a5167a3c8862dd7ff320",
+        "historical_rev1_sha256": "5bd5423c7af3794d388550737d45b8565a98c9119ae9a5167a3c8862dd7ff320",
+        "match": true
+      },
+      {
+        "file": "FindLua.cmake",
+        "snapshot_sha256": "556b58dff119a5c13ae40dd929e7ef14c2704dc8ac7d495b74516371037fb5ee",
+        "historical_rev1_sha256": "556b58dff119a5c13ae40dd929e7ef14c2704dc8ac7d495b74516371037fb5ee",
+        "match": true
+      },
+      {
+        "file": "lua_5.4.4_o3de.patch",
+        "snapshot_sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+        "historical_rev1_sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+        "match": true
+      },
+      {
+        "file": "LICENSE.txt",
+        "snapshot_sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+        "historical_rev1_sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+        "match": true
+      }
+    ],
+    "windows_config_unchanged": true,
+    "original_windows_generator": "Visual Studio 16 2019",
+    "original_windows_flags": "_CRT_SECURE_NO_WARNINGS",
+    "build_configs": [
+      "Release"
+    ],
+    "source": "https://github.com/lua/lua.git tag v5.4.4",
+    "source_archive_hash_in_original_recipe": null,
+    "target": "lualib STATIC onelua.c; PRIVATE MAKE_LIB",
+    "language": "C",
+    "dll_or_debug_package": false,
+    "executables_lua_luac": false
+  },
+  "source": {
+    "repository": "https://github.com/lua/lua",
+    "tag": "v5.4.4",
+    "commit": "5d708c3f9cae12820e415d4f89c9eacbe2ab964b",
+    "preferred_acquisition": "https://codeload.github.com/lua/lua/tar.gz/5d708c3f9cae12820e415d4f89c9eacbe2ab964b",
+    "preferred_head_status": 200,
+    "auth_sent": false,
+    "redirects": 0,
+    "measured_archive_sha256": null,
+    "tag_archive": "https://codeload.github.com/lua/lua/tar.gz/refs/tags/v5.4.4",
+    "tag_archive_head_status": 200,
+    "closure": {
+      "tree_truncated": false,
+      "gitlinks": 0,
+      "upstream_CMakeLists": false,
+      "gitmodules": false,
+      "onelua_present": true,
+      "MAKE_LIB": "Amalgamation includes core and all standard libraries, excludes lua.c interpreter and luac.c compiler.",
+      "luac_c_present": false,
+      "headers": [
+        "lapi.h",
+        "lauxlib.h",
+        "lcode.h",
+        "lctype.h",
+        "ldebug.h",
+        "ldo.h",
+        "lfunc.h",
+        "lgc.h",
+        "ljumptab.h",
+        "llex.h",
+        "llimits.h",
+        "lmem.h",
+        "lobject.h",
+        "lopcodes.h",
+        "lopnames.h",
+        "lparser.h",
+        "lprefix.h",
+        "lstate.h",
+        "lstring.h",
+        "ltable.h",
+        "ltests.h",
+        "ltm.h",
+        "lua.h",
+        "luaconf.h",
+        "lualib.h",
+        "lundump.h",
+        "lvm.h",
+        "lzio.h"
+      ]
+    },
+    "alternative_official_release": {
+      "url": "https://www.lua.org/ftp/lua-5.4.4.tar.gz",
+      "official_sha256": "164c7849653b80ae67bec4b7473b884bf5cc8d2dca05653475ec2ed27b9ebf61",
+      "official_bytes": 360876,
+      "head_status": 200,
+      "checksum_source": "https://www.lua.org/ftp/",
+      "note": "Official release distribution is a different layout/content from original recipe Git source. Do not silently substitute or assume equal archive hash; original recipe requires Git-tree onelua.c."
+    }
+  },
+  "exact_artifact": {
+    "api": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts?name=Lua-5.4.4-rev1-windows&per_page=100",
+    "result_total_count": 0,
+    "meaning": "No current exact Actions artifact returned; no claim that historical binary never existed or no other allowed acquisition is possible."
+  },
+  "patch": {
+    "name": "lua_5.4.4_o3de.patch",
+    "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+    "bytes": 1958,
+    "files": [
+      "loadlib.c",
+      "loslib.c"
+    ],
+    "windows_behavior": "loadlib pusherror skips FormatMessageA when LUMBERYARD_DISABLED is undefined/0, preserving numeric system error fallback.",
+    "other_platform_behavior": "Apple TargetConditionals include; iPhone/Android guards for os_execute/rename/tmpname. Preserve baseline patch without broad behavior changes.",
+    "application": "Parent must acquire/audit immutable source, make fresh work copy, and apply audited patch strictly there; no source snapshot mutation or Git invocation."
+  },
+  "consumer": {
+    "FindLua": "FindLua.cmake at package root",
+    "target": "3rdParty::Lua STATIC IMPORTED GLOBAL",
+    "library": "Lua/lib/release/lualib.lib",
+    "imported_configs": "One generic IMPORTED_LOCATION, Release used for all consumer configurations",
+    "include_root": "Lua/include",
+    "header_layout": "Lua/include/Lua/*.h (matches <Lua/lua.h>, <Lua/lauxlib.h>, <Lua/lualib.h>)",
+    "link_interface": "CMAKE_DL_LIBS; empty on Windows",
+    "other_vars": [
+      "Lua_INCLUDE_DIR",
+      "Lua_LIBS_DIR",
+      "Lua_LIBRARY",
+      "Lua_FOUND"
+    ],
+    "azcore": "PUBLIC 3rdParty::Lua dependency; existing ScriptContext/script cache/debugger use Lua 5.4 C API",
+    "bytecode": "LmbrCentral LuaBuilder uses LuaDumpToStream -> lua_dump in process; .luac is output extension, not a luac.exe dependency.",
+    "numeric_abi": "Default LUA_32BITS=0, LUA_INT_TYPE=LUA_INT_LONGLONG, LUA_FLOAT_TYPE=LUA_FLOAT_DOUBLE; preserve 64-bit integer/double ABI and patched headers.",
+    "dll_flags": "Do not define LUA_BUILD_AS_DLL. Windows luaconf enables LUA_USE_WINDOWS/LUA_DL_DLL automatically (dynamic module loading capability, not a shared library build).",
+    "security_limit": "MAKE_LIB includes IO/OS/package standard libraries; this audit does not establish a runtime sandbox or remove engine consumers."
+  },
+  "proposal": {
+    "identity": "Lua-5.4.4-je-rev1-windows",
+    "hash": "New actually measured tar.xz hash only; never reuse original 8ac853... hash.",
+    "producer": "Explicit source root/archive/SHA and audited recipe/patch inputs; local fresh source-work; target lualib STATIC onelua.c with MAKE_LIB and _CRT_SECURE_NO_WARNINGS; x64 Release, installed v143/VS2022 is an explicit toolchain adaptation.",
+    "runtime_library": "Expected CMake/MSVC Release default is dynamic CRT /MD, inferred from absence of a runtime override in the recipe; historical binary CRT flags are not verified. Keep this baseline for the new package and verify actual compile arguments; do not introduce Debug library/DLL/executables absent from the recipe.",
+    "layout": "Payload root FindLua.cmake, PackageInfo.json, SHA256SUMS; Lua/include/Lua/*.h, Lua/lib/release/lualib.lib, original licensing/notice files.",
+    "helper": "Reuse existing JECreateLocalPackage.cmake without edits, pass actual source URL/hash/commit and new identity.",
+    "focused_consumer": "Link imported 3rdParty::Lua, check version and integer/number sizes; run a real Lua chunk with tables/functions and arithmetic, protected syntax/runtime errors, custom allocator callbacks and bytecode lua_dump/loadbuffer roundtrip. No engine PASS inferred.",
+    "next_action": "Parent manually acquires preferred commit archive, measures SHA, audits/extracts archive and supplies immutable root plus fresh work copy; then assigns producer implementation and Luna exclusive validation."
+  },
+  "legal": {
+    "lua": "MIT; preserve actual source lua.h complete Copyright (C) 1994-2022 Lua.org, PUC-Rio notice.",
+    "recipe_notice": "Original LICENSE.txt says 1994-2019; retain as original and include actual 2022 source license notice separately, not overwrite attribution.",
+    "o3de_glue": "Apache-2.0 OR MIT notices on recipe CMake/Find/patch ownership context.",
+    "limit": "No publication, redistribution completeness, security/performance or cross-configuration ABI acceptance decided by this audit."
+  },
+  "evidence_inputs": [
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "sha256": "674a73102aa2be595a26a5f83bc4627cff4ab9057f8b7c27f8fdd77073a71d7d"
+    },
+    {
+      "path": "Code/Framework/AzCore/CMakeLists.txt",
+      "sha256": "6cb60077df8f93b5bbf88eb8d5d3f459c771a3693812caaab7d3477e39a76a53"
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Script/lua/lua.h",
+      "sha256": "fd7821b9525b32d6c42bb73380a0656735e8b2e0464d08f82c8b99d3afb0f03f"
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Script/ScriptContext.cpp",
+      "sha256": "eb6c95e8f3ff2a03f2461761f8de6a63ad5c7c30ce75fb5509ec10cadacb27b5"
+    },
+    {
+      "path": "Gems/LmbrCentral/Code/Source/Builders/LuaBuilder/LuaHelpers.cpp",
+      "sha256": "d90cafe2fb13826ed408b69177fb576448756d91d8891ac2e9b9e998ff301263"
+    },
+    {
+      "path": "Gems/LmbrCentral/Code/Source/Builders/LuaBuilder/LuaBuilderWorker.cpp",
+      "sha256": "ad3835ee4075cce37eb08cb3e904e7988fed78f6d87711c339f4c25567be758d"
+    },
+    {
+      "path": "build/n0-validation/local-packages/original-engine-mimalloc-configure-result.json",
+      "sha256": "5522624f86cc7b21a3d71ed859dd46302f9da80c119022758ccffb65667e1e10"
+    }
+  ],
+  "receipts": [
+    {
+      "name": "build_config.json",
+      "sha256": "977813a89b26a3540da302dc0aedc85d9c17af2c059505a6e153bac9c722939a",
+      "bytes": 2887
+    },
+    {
+      "name": "CMakeLists.txt",
+      "sha256": "5bd5423c7af3794d388550737d45b8565a98c9119ae9a5167a3c8862dd7ff320",
+      "bytes": 993
+    },
+    {
+      "name": "commit-source-head.json",
+      "sha256": "d22d08eaf5da812b5a6748f430f5ed84024afbf3dd7bfc2097819de81c298bd3",
+      "bytes": 342
+    },
+    {
+      "name": "exact-actions-artifacts.json",
+      "sha256": "244563f989470892c537c9a4622920af0d228ee4528f7d00c64a06d6cd95856c",
+      "bytes": 32
+    },
+    {
+      "name": "FindLua.cmake",
+      "sha256": "556b58dff119a5c13ae40dd929e7ef14c2704dc8ac7d495b74516371037fb5ee",
+      "bytes": 1026
+    },
+    {
+      "name": "git-source-head.json",
+      "sha256": "be968b305d7780ba8a3069444fc0946f8576e99c1d23e8d29af8c7fd90dfcd5d",
+      "bytes": 260
+    },
+    {
+      "name": "LICENSE.txt",
+      "sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+      "bytes": 1066
+    },
+    {
+      "name": "lua_5.4.4_o3de.patch",
+      "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+      "bytes": 1958
+    },
+    {
+      "name": "lua-source-tree.json",
+      "sha256": "b5294ae84c0c179d4933f6cbb0a04895074c5f76c1eea49624df1843eed0e8b7",
+      "bytes": 24116
+    },
+    {
+      "name": "lua-tag.json",
+      "sha256": "49b433678ef9b54e1d05d98376fc2859716b1ca3839b56eb96966124f3fee40e",
+      "bytes": 319
+    },
+    {
+      "name": "original-rev1-build_config.json",
+      "sha256": "57c1801d851a107acda3f4d916b2b8a02c976339f94d014a76563e141c4ea357",
+      "bytes": 2249
+    },
+    {
+      "name": "original-rev1-CMakeLists.txt",
+      "sha256": "5bd5423c7af3794d388550737d45b8565a98c9119ae9a5167a3c8862dd7ff320",
+      "bytes": 993
+    },
+    {
+      "name": "original-rev1-FindLua.cmake",
+      "sha256": "556b58dff119a5c13ae40dd929e7ef14c2704dc8ac7d495b74516371037fb5ee",
+      "bytes": 1026
+    },
+    {
+      "name": "original-rev1-LICENSE.txt",
+      "sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+      "bytes": 1066
+    },
+    {
+      "name": "original-rev1-lua_5.4.4_o3de.patch",
+      "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+      "bytes": 1958
+    },
+    {
+      "name": "recipe-history.json",
+      "sha256": "33122e3773d27173a8b18411204359cb4b91bed8e639b83ed70bb741f0591384",
+      "bytes": 37700
+    },
+    {
+      "name": "recipe-tree.json",
+      "sha256": "1d2b69295afe769ebe42c4aa4ea150c3f789f0aa1b25d546cb1d20c24b61d4b4",
+      "bytes": 171528
+    },
+    {
+      "name": "source-head.json",
+      "sha256": "38f3aa281cb738f0195204fa49d6b422cf7aed6da681e137ab66f87fcc582b0a",
+      "bytes": 255
+    },
+    {
+      "name": "source-lua.h",
+      "sha256": "b808392a1d692b255bb6006f1b2c75a42d2e298a49cdcc096b49e86c88450a36",
+      "bytes": 15818
+    },
+    {
+      "name": "source-luaconf.h",
+      "sha256": "f72390263d3e227fb783d6a31887c0e7cd786df59f0fa39a6e45117fe7819899",
+      "bytes": 21389
+    },
+    {
+      "name": "source-onelua.c",
+      "sha256": "990630e764defe59e200b91c09b5ddf953294d4c3f412919a1b73f523b8d3259",
+      "bytes": 1993
+    }
+  ]
+}

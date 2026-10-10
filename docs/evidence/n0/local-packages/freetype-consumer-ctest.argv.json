@@ -1,0 +1,15 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "ctest",
+  "mode": "test",
+  "argument_count": 6,
+  "arguments": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\freetype-consumer",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "-V"
+  ],
+  "configuration": "Release"
+}

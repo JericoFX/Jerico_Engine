@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cpython",
+    "non_regular": []
+  },
+  {
+    "name": "expat",
+    "non_regular": [
+      {
+        "name": "libexpat-65a21f2b2a306d29b44e70264aca948aa0454219/README.md",
+        "type": "2",
+        "link": "expat/README.md"
+      }
+    ]
+  },
+  {
+    "name": "bzip2-1.0.8",
+    "non_regular": []
+  },
+  {
+    "name": "sqlite-3.40.1.0",
+    "non_regular": []
+  },
+  {
+    "name": "xz-5.2.5",
+    "non_regular": []
+  },
+  {
+    "name": "zlib-1.2.13",
+    "non_regular": []
+  },
+  {
+    "name": "libffi-3.3.0",
+    "non_regular": []
+  },
+  {
+    "name": "openssl-bin-1.1.1u",
+    "non_regular": []
+  },
+  {
+    "name": "tcltk-8.6.12.0",
+    "non_regular": []
+  }
+]

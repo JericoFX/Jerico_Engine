@@ -1,0 +1,15 @@
+{
+  "WorkingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "ArgumentCount": 9,
+  "Arguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/Gems/WhiteBox/Code/Tests/CSG",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/csg",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DJE_MANIFOLD_SOURCE_DIR=F:/JericoEngine/Dependencies/manifold-3.5.1"
+  ]
+}

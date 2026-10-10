@@ -1,0 +1,76 @@
+CWD: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+MODE: install
+ARGV_COUNT: 4
+ARGV_JSON: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-install.argv.json
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.096
+OUTPUT:
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/lib/freetype.lib
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/ftheader.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/ftmodule.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/ftstdlib.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/integer-types.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/mac-support.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/public-macros.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/freetype.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftadvanc.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftbbox.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftbdf.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftbitmap.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftbzip2.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftcache.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftchapters.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftcid.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftcolor.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftdriver.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/fterrdef.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/fterrors.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftfntfmt.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftgasp.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftglyph.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftgxval.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftgzip.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftimage.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftincrem.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftlcdfil.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftlist.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftlogging.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftlzw.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftmac.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftmm.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftmodapi.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftmoderr.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftotval.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftoutln.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftparams.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftpfr.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftrender.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftsizes.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftsnames.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftstroke.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftsynth.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftsystem.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/fttrigon.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/fttypes.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ftwinfnt.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/t1tables.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/ttnameid.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/tttables.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/tttags.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/ft2build.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/ftconfig.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/freetype/include/freetype2/freetype/config/ftoption.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/./FindFreetype.cmake
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/LICENSE.TXT
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/FTL.TXT
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/GPLv2.TXT
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/NOTICE.txt
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/BDF-README.txt
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/PCF-README.txt
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/fthash/fthash.c
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/Freetype/fthash/fthash.h
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/O3DE/LICENSE_APACHE2.TXT
+-- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/stage/LICENSES/O3DE/LICENSE_MIT.TXT

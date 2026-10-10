@@ -1,0 +1,80 @@
+{
+  "helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+  "python_source_freeze_sha256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+  "negative": {
+    "exit": 1,
+    "elapsed_seconds": 0.092,
+    "already_existing_contents_sha256_before": "80B0DA1226FEA00B39E625F9AF38C84C515D3EFD470FDB3C80AFEF8A06A834F0",
+    "already_existing_contents_sha256_after": "80B0DA1226FEA00B39E625F9AF38C84C515D3EFD470FDB3C80AFEF8A06A834F0"
+  },
+  "package": {
+    "exit": 0,
+    "elapsed_seconds": 42.303,
+    "name": "python-3.10.13-je-rev1-windows",
+    "version": "3.10.13-je-rev1",
+    "license": "PSF-2.0",
+    "archive_sha256": "4370b5870c6b4da65206f6c8e82ca5540f0f2c60fe4cb2bbbd34dbf1cc7dd2d9",
+    "archive_bytes": 22341204,
+    "archive_members": 3283,
+    "manifest_members": 3282,
+    "archive_externals": 7
+  },
+  "extraction": {
+    "exit": 0,
+    "elapsed_seconds": 1.621,
+    "initial_archive_files": 3283,
+    "initial_bytes": 104981177,
+    "manifest_files_intact_after_tests": true,
+    "manifest_hash_failures": 0,
+    "generated_unmanifested_pyc_files": 191,
+    "other_unmanifested_files": 0,
+    "root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\extracted\\python-3.10.13-je-rev1-windows"
+  },
+  "consumer": {
+    "configure_exit": 0,
+    "build_release_exit": 0,
+    "build_debug_exit": 0,
+    "ctest_release_exit": 0,
+    "ctest_release_passed": 3,
+    "ctest_release_failed": 0,
+    "ctest_debug_embed_exit": 0,
+    "ctest_debug_embed_passed": 1,
+    "ctest_debug_embed_failed": 0,
+    "cmake_version": "4.3.4",
+    "msvc": "19.44.35228.0",
+    "windows_sdk": "10.0.26100.0",
+    "pe_runtime_binaries": [
+      {
+        "path": "build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.contents\\python\\python.exe",
+        "bytes": 91648,
+        "sha256": "C363814616999CFA0B6A142C9DFC7F41E4AA3575D9675C5F9FC151BA1E0A2F7B"
+      },
+      {
+        "path": "build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.contents\\python\\python_d.exe",
+        "bytes": 138752,
+        "sha256": "D01460D64335D5D381C5399B861EF1003220B030FC9A5EC22DC5CFC1722855EF"
+      },
+      {
+        "path": "build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.contents\\python\\python310.dll",
+        "bytes": 4982784,
+        "sha256": "F5AF0FD2AC189B327D24115DB38DE346B9D98BBE66C4C4FBF42C8F47A805E924"
+      },
+      {
+        "path": "build\\n0-validation\\local-packages\\python-v143-rev2\\package-retry\\python-3.10.13-je-rev1-windows.contents\\python\\python310_d.dll",
+        "bytes": 10184192,
+        "sha256": "87A1761E65197049DA38156E20A0DF7121394001542BEDEB6B7BC770B6F1CEAB"
+      },
+      {
+        "path": "build\\n0-validation\\local-packages\\python-v143-rev2\\consumer-retry\\Release\\JEPythonEmbed.exe",
+        "bytes": 34816,
+        "sha256": "CA748381BAACF9DE4A13B749F15531DB6E2BF4CBC406F82633C53BC56825923F"
+      },
+      {
+        "path": "build\\n0-validation\\local-packages\\python-v143-rev2\\consumer-retry\\Debug\\JEPythonEmbed.exe",
+        "bytes": 572928,
+        "sha256": "452B79148177D04F3F17FF95647E23699A5AAA935D15CF6279B9DEEA8DF3AE59"
+      }
+    ]
+  },
+  "evidence_directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages"
+}

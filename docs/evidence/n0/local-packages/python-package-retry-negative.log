@@ -1,0 +1,9 @@
+CMake Warning:
+  No source or binary directory provided.  Both will be assumed to be the
+  same as the current working directory, but note that this warning will
+  become a fatal error in future CMake releases.
+
+
+CMake Error: The source directory "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+

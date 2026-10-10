@@ -1,0 +1,46 @@
+{
+  "WorkingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "ArgumentCount": 14,
+  "Arguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DLY_PACKAGE_SERVER_URLS:STRING=",
+    "-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps",
+    "-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+    "-DLY_PACKAGE_VALIDATE_CONTENTS=ON",
+    "-DLY_PACKAGE_VALIDATE_PACKAGE=ON",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON"
+  ],
+  "CacheFiles": [
+    {
+      "Name": "freetype-2.11.1-je-rev1-windows.tar.xz",
+      "Length": 712192
+    },
+    {
+      "Name": "freetype-2.11.1-je-rev1-windows.tar.xz.SHA256SUMS",
+      "Length": 106
+    },
+    {
+      "Name": "qt-6.11.2-rev1-windows.tar.xz",
+      "Length": 201790724
+    },
+    {
+      "Name": "qt-6.11.2-rev1-windows.tar.xz.SHA256SUMS",
+      "Length": 96
+    },
+    {
+      "Name": "zlib-1.2.11-je-rev1-windows.tar.xz",
+      "Length": 92556
+    },
+    {
+      "Name": "zlib-1.2.11-je-rev1-windows.tar.xz.SHA256SUMS",
+      "Length": 102
+    }
+  ]
+}

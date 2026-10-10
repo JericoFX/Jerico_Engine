@@ -1,6 +1,6 @@
 # Documentación vigente — JericoEngine / JE
 
-**2026-10-10: una rama development; JE::; sin AWS/multiplayer; DX12 y Vulkan; BSP/UI primero y geología activa.** Esta revisión es auditoría/planificación, no motor ya convertido.
+**2026-10-10: una rama development; JE::; sin AWS/multiplayer; DX12 y Vulkan; BSP/UI primero y geología activa.** [N0 ejecutado](evidence/n0/N0_EXECUTION_2026_10_10.md) incluye resolver offline, paquetes locales/consumers y núcleo BSP con UV/superficies verificados. Baseline completo, editor visible y runtime siguen pendientes.
 
 | Documento | Uso |
 |---|---|

@@ -1,0 +1,175 @@
+{
+  "schema": "JE_python_git_provenance_audit_v1",
+  "utc": "2026-10-10T22:09:04.4697412Z",
+  "scope": "Static file/log inspection only; no Git command, build, test, interpreter import, source/config/docs edit or binary change.",
+  "source": {
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2",
+    "snapshot": "F:\\JericoEngine\\Dependencies\\cpython-49965601d6afedafe47cc85556d99b7a24981051",
+    "work_git_exists": false,
+    "engine_ancestor_git_exists": true,
+    "commit": "49965601d6afedafe47cc85556d99b7a24981051",
+    "archive_sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+    "runtime_version": "3.10.13",
+    "relevant_work_files_match_snapshot": [
+      {
+        "path": "PCbuild/pythoncore.vcxproj",
+        "work_sha256": "e7ff6ea2427ffe0c24605b5fa46cd09af5d55e536c47187c8dcc803dd5178b2a",
+        "snapshot_sha256": "e7ff6ea2427ffe0c24605b5fa46cd09af5d55e536c47187c8dcc803dd5178b2a",
+        "match": true
+      },
+      {
+        "path": "Modules/getbuildinfo.c",
+        "work_sha256": "e0c19474eb385f0f67166ae3402af75db3b684a95b6c055ac4ec1f2364d8e62d",
+        "snapshot_sha256": "e0c19474eb385f0f67166ae3402af75db3b684a95b6c055ac4ec1f2364d8e62d",
+        "match": true
+      },
+      {
+        "path": "Python/getversion.c",
+        "work_sha256": "89d53ec7eeeb436ca9677612f5cd4413f19d520a85faae5193ba72672d65622c",
+        "snapshot_sha256": "89d53ec7eeeb436ca9677612f5cd4413f19d520a85faae5193ba72672d65622c",
+        "match": true
+      },
+      {
+        "path": "Python/sysmodule.c",
+        "work_sha256": "798216813784c0af67b9c7f9a1974939ed4daa94bf9a66fa0253e1083bd612a8",
+        "snapshot_sha256": "798216813784c0af67b9c7f9a1974939ed4daa94bf9a66fa0253e1083bd612a8",
+        "match": true
+      },
+      {
+        "path": "Include/patchlevel.h",
+        "work_sha256": "dc5e6435a177c9a6dbf2b3bf6b7c67d5e73c881bcffb61a9cf96db2232ca80e6",
+        "snapshot_sha256": "dc5e6435a177c9a6dbf2b3bf6b7c67d5e73c881bcffb61a9cf96db2232ca80e6",
+        "match": true
+      }
+    ]
+  },
+  "observed": {
+    "sys_version": "3.10.13 (heads/development-dirty:b54a874e3d, Oct 10 2026, 18:41:34) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\Scripts\\python.exe",
+    "generated_debug_release_files": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2\\PCbuild\\obj\\310amd64_Debug\\pythoncore\\gitbranch.txt",
+        "sha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be",
+        "content": "development"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2\\PCbuild\\obj\\310amd64_Debug\\pythoncore\\gittag.txt",
+        "sha256": "6c74f5233091c13c359864a3ac80adb2d67a796e79f079bdd9d49a118f2ff7e7",
+        "content": "heads/development-dirty"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2\\PCbuild\\obj\\310amd64_Debug\\pythoncore\\gitversion.txt",
+        "sha256": "49b326177f2234fcde132cff5648981cbc4e5a507327be9d64e62c45613ead3a",
+        "content": "b54a874e3d"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gitbranch.txt",
+        "sha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be",
+        "content": "development"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gittag.txt",
+        "sha256": "6c74f5233091c13c359864a3ac80adb2d67a796e79f079bdd9d49a118f2ff7e7",
+        "content": "heads/development-dirty"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gitversion.txt",
+        "sha256": "49b326177f2234fcde132cff5648981cbc4e5a507327be9d64e62c45613ead3a",
+        "content": "b54a874e3d"
+      }
+    ],
+    "producer_log_messages": [
+      "Getting build info from git",
+      "Building heads/development-dirty:b54a874e3d development",
+      "Getting build info from git",
+      "Building heads/development-dirty:b54a874e3d development"
+    ]
+  },
+  "cause": {
+    "file": "PCbuild/pythoncore.vcxproj",
+    "target": "_GetBuildInfo",
+    "line": 524,
+    "condition": "Unconditional target BeforeTargets=PrepareForBuild; no local .git check",
+    "gitversion_props": "No PCbuild/gitversion.props in this pinned source; metadata target is inline in pythoncore.vcxproj.",
+    "git_executable_property": "GIT defaults to git; _GIT adds quotes for paths containing spaces",
+    "commands": [
+      "git name-rev --name-only HEAD",
+      "git rev-parse --short HEAD",
+      "git describe --all --always --dirty"
+    ],
+    "exec_context": "Exec has no -C or explicit WorkingDirectory. The project/source directories are below the authoritative engine Git worktree; no CPython .git exists. Ancestor engine metadata was written to IntDir git*.txt.",
+    "output_handling": "ContinueOnError=true; ReadAllText(...).Trim() sets GitBranch/GitVersion/GitTag from each existing generated file.",
+    "definitions": "Modules/getbuildinfo.c receives GITVERSION, GITTAG, GITBRANCH as string-valued compile definitions.",
+    "target_excerpt": "  <Target Name=\"_GetBuildInfo\" BeforeTargets=\"PrepareForBuild\">\n    <PropertyGroup>\n      <GIT Condition=\"$(GIT) == ''\">git</GIT>\n      <_GIT>$(GIT)</_GIT>\n      <_GIT Condition=\"$(GIT.Contains(` `))\">\"$(GIT)\"</_GIT>\n    </PropertyGroup>\n    <Message Text=\"Getting build info from $(_GIT)\" Importance=\"high\" />\n    <MakeDir Directories=\"$(IntDir)\" Condition=\"!Exists($(IntDir))\" />\n    <Exec Command=\"$(_GIT) name-rev --name-only HEAD &gt; &quot;$(IntDir)gitbranch.txt&quot;\" ContinueOnError=\"true\" />\n    <Exec Command=\"$(_GIT) rev-parse --short HEAD &gt; &quot;$(IntDir)gitversion.txt&quot;\" ContinueOnError=\"true\" />\n    <Exec Command=\"$(_GIT) describe --all --always --dirty &gt; &quot;$(IntDir)gittag.txt&quot;\" ContinueOnError=\"true\" />\n    <PropertyGroup>\n      <GitBranch Condition=\"Exists('$(IntDir)gitbranch.txt')\">$([System.IO.File]::ReadAllText('$(IntDir)gitbranch.txt').Trim())</GitBranch>\n      <GitVersion Condition=\"Exists('$(IntDir)gitversion.txt')\">$([System.IO.File]::ReadAllText('$(IntDir)gitversion.txt').Trim())</GitVersion>\n      <GitTag Condition=\"Exists('$(IntDir)gittag.txt')\">$([System.IO.File]::ReadAllText('$(IntDir)gittag.txt').Trim())</GitTag>\n    </PropertyGroup>\n    <Message Text=\"Building $(GitTag):$(GitVersion) $(GitBranch)\" Importance=\"high\" />\n    <ItemGroup>\n      <ClCompile Include=\"..\\Modules\\getbuildinfo.c\">\n        <PreprocessorDefinitions>GITVERSION=\"$(GitVersion)\";GITTAG=\"$(GitTag)\";GITBRANCH=\"$(GitBranch)\";%(PreprocessorDefinitions)</PreprocessorDefinitions>\n      </ClCompile>\n    </ItemGroup>\n  </Target>\n  <Target Name=\"_WarnAboutToolset\" BeforeTargets=\"PrepareForBuild\" Condition=\"$(PlatformToolset) != 'v140' and $(PlatformToolset) != 'v141' and $(PlatformToolset) != 'v142' and $(PlatformToolset) != 'v143'\">"
+  },
+  "supported_options": {
+    "correct_visible_provenance": {
+      "msbuild_global_arguments": [
+        "/p:GitVersion=49965601d6afedafe47cc85556d99b7a24981051",
+        "/p:GitTag=cpython-3.10.13-archive",
+        "/p:GitBranch=archive"
+      ],
+      "meaning": "Use a literal archive identifier and verified source commit, not an invented CPython Git checkout branch. Expat/local adaptations remain documented separately by PackageInfo.",
+      "precedence": "MSBuild command-line global properties override assignments inside the project/target and are forwarded to child projects. PCbuild does not TreatAsLocalProperty these names or RemoveProperties them.",
+      "expected_banner_component": "cpython-3.10.13-archive:49965601d6afedafe47cc85556d99b7a24981051",
+      "validated_by_rebuild": false
+    },
+    "omit_visible_git_fields": {
+      "msbuild_global_arguments": [
+        "/p:GitVersion=",
+        "/p:GitTag=",
+        "/p:GitBranch="
+      ],
+      "expected": "Empty metadata selects main fallback and no :revision in Py_GetBuildInfo; source provenance stays in PackageInfo.",
+      "validated_by_rebuild": false
+    },
+    "limitation": "Neither set of global values skips the three Git Exec tasks; it only prevents their output replacing visible fields. No upstream SkipGit/GetBuildInfo switch is present in this pinned project. Preventing Git execution requires a separately approved change to the source-work target or equivalent supported hook, not an invented /p:SkipGit property.",
+    "source": "https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-properties?view=vs-2022#global-properties"
+  },
+  "impact": {
+    "visible": [
+      "Py_GetBuildInfo",
+      "Py_GetVersion / startup banner",
+      "sys.version",
+      "sys._git"
+    ],
+    "unchanged_version_logic": [
+      "Include/patchlevel.h PY_VERSION 3.10.13",
+      "PY_MAJOR_VERSION/PY_MINOR_VERSION/PY_MICRO_VERSION",
+      "PY_VERSION_HEX / sys.hexversion",
+      "sys.version_info",
+      "Python API/ABI version declarations",
+      "PC/python_nt.rc resource versions derived from patchlevel/version headers"
+    ],
+    "consumer_tests": "RuntimeTest.py checks sys.version_info[:3] == (3,10,13), plus debug gettotalrefcount; it only displays sys.version on failure. No banner provenance assertion exists in that consumer.",
+    "classification": "Incorrect visible build provenance, not evidence that CPython source pin is wrong or ABI has changed. Relevant source files match the audited snapshot; generated metadata demonstrably describes ancestor engine checkout.",
+    "repair_artifacts": "A metadata repair recompiles getbuildinfo.c in pythoncore Debug/Release and changes python310 DLL/PDB content and package hashes/manifest. Existing artifacts must not be edited in place or re-labelled with old hash; focal consumers/package/root acceptance require revalidation for new inputs."
+  },
+  "evidence_inputs": [
+    {
+      "path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+      "sha256": "fef6fac410f861e0a077b40fce797b30cd35af4a55fb3c95cbbb3675ebe0fd28"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+      "sha256": "2342712f86a64c4f041f2aa6ad0c1255917056e838911de739b40d43b8fd7a3c"
+    },
+    {
+      "path": "build/n0-validation/local-packages/python-producer-rev2.log",
+      "sha256": "e161dbf22aff6d5e3cb2e4eece8d7402cd743fe08d3772f1933dd91f369f445a"
+    },
+    {
+      "path": "build/n0-validation/local-packages/original-engine-python-venv-audit-imports.json",
+      "sha256": "d06532768d6d737d245101058060460c4b460cb365b035eae16c1a5c9bc8345a"
+    },
+    {
+      "path": "build/n0-validation/local-packages/python-input-acquisition.json",
+      "sha256": "f397a49cfadcb8f6afb4d0bec60a3f5e04ba84e4061c438f7182ec5a3270854d"
+    }
+  ],
+  "limitations": [
+    "No candidate global property command was executed; predicted behavior follows audited upstream source and official MSBuild semantics.",
+    "No complete source-to-binary reproducibility or ABI/security certification inferred.",
+    "No active frozen source or validation process modified."
+  ]
+}

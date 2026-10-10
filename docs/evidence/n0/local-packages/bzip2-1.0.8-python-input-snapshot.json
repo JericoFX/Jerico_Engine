@@ -1,0 +1,295 @@
+{
+  "name": "bzip2-1.0.8",
+  "commit": "05301997b2f9590f49c672cf3dfd3d3dfa7ad521",
+  "archive_sha256": "ab14accac86cdd92021d50465deeb221b476d6675bd1383d3c7fb83751c2e0a3",
+  "source": "F:\\JericoEngine\\Dependencies\\bzip2-1.0.8-05301997b2f9590f49c672cf3dfd3d3dfa7ad521",
+  "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\bzip2-1.0.8",
+  "files": [
+    {
+      "path": "CHANGES",
+      "bytes": 12256,
+      "sha256": "67d96e05c081c0784abbb566a70a36bc856cb5f913d52b96832d1d35c4f68eaf"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1896,
+      "sha256": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3"
+    },
+    {
+      "path": "Makefile",
+      "bytes": 6297,
+      "sha256": "7e7cf0f050748c29caa9cb6abd30639d46d3b9c7880562f2834f9b908ac97f80"
+    },
+    {
+      "path": "Makefile-libbz2_so",
+      "bytes": 1729,
+      "sha256": "0c3c80f466d648432a5e11f0dd188dc86de273476726283cc35a38e39a6d3960"
+    },
+    {
+      "path": "README",
+      "bytes": 7451,
+      "sha256": "152f0da2867a1160a8f956628296ff45e766e492ad0d7054ffb8d981f7518782"
+    },
+    {
+      "path": "README.COMPILATION.PROBLEMS",
+      "bytes": 2500,
+      "sha256": "8d19a9e83b36016aa55d7e4014da04ef0def40b43b34f40a370f7f8ff582939e"
+    },
+    {
+      "path": "README.XML.STUFF",
+      "bytes": 1359,
+      "sha256": "5c0bc2b3a1ed9103dcf65d0aa23d3082318ab99fb96d862eb63f5e37537e5d8d"
+    },
+    {
+      "path": "blocksort.c",
+      "bytes": 30713,
+      "sha256": "4e48cd2ccff44699e67a7c949b0e9576c05b8dcbe20f863475c4fcc8db11a409"
+    },
+    {
+      "path": "bz-common.xsl",
+      "bytes": 1057,
+      "sha256": "cceeb48f5ddf2bcac9cd196f67413466e70c9f801e1c508aaa1de574cbe71cbc"
+    },
+    {
+      "path": "bz-fo.xsl",
+      "bytes": 10585,
+      "sha256": "a25683b9893709d92ab61fb91c3bc6b1892498d9f43fd0c22b3917a3789cdc2d"
+    },
+    {
+      "path": "bz-html.xsl",
+      "bytes": 777,
+      "sha256": "351f5730e016ebe1757b028de19837545caea286c995c3077c1dcdfe13e4e5dc"
+    },
+    {
+      "path": "bzdiff",
+      "bytes": 2140,
+      "sha256": "1c1f96193cdf14b85ea65f140a7557a07ece8783a53ec5ba6b5c30644a9d3012"
+    },
+    {
+      "path": "bzdiff.1",
+      "bytes": 897,
+      "sha256": "32d1a7cd115430398e58537532584ef2ab76343c9f094dcd1253d9c4c0f705bf"
+    },
+    {
+      "path": "bzgrep",
+      "bytes": 2054,
+      "sha256": "a8e368a31766c7862b8d0feeffe274c3bb43b969e3ccb4f9e77d13bfa447a5c9"
+    },
+    {
+      "path": "bzgrep.1",
+      "bytes": 1297,
+      "sha256": "924aa4a7c7c1467400181e4c0ee1b527db142b6399a717171f2351b72b5899df"
+    },
+    {
+      "path": "bzip.css",
+      "bytes": 1750,
+      "sha256": "8a48849a905066534deb41630cf94b4540c269491f7b028c4510d0bc9c1c4f5c"
+    },
+    {
+      "path": "bzip2.1",
+      "bytes": 16266,
+      "sha256": "27b984bb2e8bbee2651d11cda87449cfc4138d2e479b9eaa77b8f60fa5d0bf5d"
+    },
+    {
+      "path": "bzip2.1.preformatted",
+      "bytes": 20945,
+      "sha256": "e1a5e610dc52c49b4fc479c12320d07db329d06fb20f90564d300108c434d491"
+    },
+    {
+      "path": "bzip2.c",
+      "bytes": 58576,
+      "sha256": "1e83a6afe1018600208d97b80351fa951689204f3fad508bd99ca36dc7e32e88"
+    },
+    {
+      "path": "bzip2.txt",
+      "bytes": 18997,
+      "sha256": "4e25ed103828141f371ffa4ed0446d139e2c3626517e6f4335855bdad021afcd"
+    },
+    {
+      "path": "bzip2recover.c",
+      "bytes": 15003,
+      "sha256": "36c0cb1ced40d5c62d02fda48f0bd717d1acfeb19b5f4f997b1ac9921f56a790"
+    },
+    {
+      "path": "bzlib.c",
+      "bytes": 45960,
+      "sha256": "d06cf1bd991df1f2dc8ef4f7713d186eb636767111cbd4807ef5fc4a54ca6838"
+    },
+    {
+      "path": "bzlib.h",
+      "bytes": 6240,
+      "sha256": "6ac62e811669598ee30c9e1c379b9e627f6ff17a5a3dc1e0b4fa8b8ea75e580d"
+    },
+    {
+      "path": "bzlib_private.h",
+      "bytes": 13239,
+      "sha256": "c0cda4f35ee1f2d54c9beacd524f8d28e0dbf8494aca30d854af3f143af4341b"
+    },
+    {
+      "path": "bzmore",
+      "bytes": 1259,
+      "sha256": "836536d4c7469788c730355d59f8ae8d16ba07cb0754174878d99ed90f04448d"
+    },
+    {
+      "path": "bzmore.1",
+      "bytes": 4310,
+      "sha256": "ccfcf3f995e11adae3035e287252091bb72d165da21e0c385a4965d17c9051c7"
+    },
+    {
+      "path": "compress.c",
+      "bytes": 20546,
+      "sha256": "75995bd6e8c5f1e1dad05178f3cf53137df99ce860a1984324f78591f28deed3"
+    },
+    {
+      "path": "crctable.c",
+      "bytes": 4813,
+      "sha256": "2fb7a564629386456e731f431a5cf4f5026747bace4cd10be8f5ecf082066a92"
+    },
+    {
+      "path": "decompress.c",
+      "bytes": 21258,
+      "sha256": "31a89f8bf408ef0e4acae83e8be60a8eb4edece6c866d6e32b8f7e557ca54bc6"
+    },
+    {
+      "path": "dlltest.c",
+      "bytes": 4227,
+      "sha256": "77b2e58ca53bef82222d045498e290d4f15780ca9c2aa62b9d8e603bc48faae8"
+    },
+    {
+      "path": "dlltest.dsp",
+      "bytes": 3423,
+      "sha256": "e40576f947e6bfbccaff5098e16ab1507acbead678c25647b59b19959e657ddd"
+    },
+    {
+      "path": "entities.xml",
+      "bytes": 294,
+      "sha256": "d8abc241dfd1fb2e4350b47f00fed992b2a8b68c9759a58155797989fcd91826"
+    },
+    {
+      "path": "format.pl",
+      "bytes": 1684,
+      "sha256": "6d858d3285fc89610dd8d67ee1e37590afa6e2058693c718bb2202b6b270afe1"
+    },
+    {
+      "path": "huffman.c",
+      "bytes": 6986,
+      "sha256": "bdeb45f3f535546a672811b68aa87cc58fd395b28ecebc34fa3566a656a4d1d1"
+    },
+    {
+      "path": "libbz2.def",
+      "bytes": 490,
+      "sha256": "fce0006720a9b001e636a86baa67ddb1379cbb799f2bc4bafa34e4baea7cc1a4"
+    },
+    {
+      "path": "libbz2.dsp",
+      "bytes": 4124,
+      "sha256": "b00c8d4b462994d84b17bcaafa421c3d8cce0d2fe5908c19f4ce7ef3d40af432"
+    },
+    {
+      "path": "makefile.msc",
+      "bytes": 1552,
+      "sha256": "819416a0aa69f98ae54298c8322fa60b69eb2dfa4cbc28f11d601e56eb73bcb4"
+    },
+    {
+      "path": "manual.html",
+      "bytes": 126958,
+      "sha256": "34f5eaeb37488b51662316b8d9f54228c96f72b54aec3bfc17cd731e3ce9bbd2"
+    },
+    {
+      "path": "manual.pdf",
+      "bytes": 183803,
+      "sha256": "1dd1f12b3dcb0894481708881ed8d052c769f3820c06839c702c8cfad973d7d3"
+    },
+    {
+      "path": "manual.ps",
+      "bytes": 1766625,
+      "sha256": "18d0971311ef13e62463acb888435bade35748523341d45a26ec6fcad5c1c69b"
+    },
+    {
+      "path": "manual.xml",
+      "bytes": 111313,
+      "sha256": "f333eb33556218995a79870a1d2c01a06bdaa9994549142cfbeb0c8b96425234"
+    },
+    {
+      "path": "mk251.c",
+      "bytes": 914,
+      "sha256": "12a3031e2b1f2bd98a0b4e70669bfee81864304e43b696951f18120d39d1bdd9"
+    },
+    {
+      "path": "randtable.c",
+      "bytes": 3855,
+      "sha256": "407054ca6f54cd737dbc26ceb6b7874b55a0fcff86c2eb23cbec2fbdbb884815"
+    },
+    {
+      "path": "sample1.bz2",
+      "bytes": 32348,
+      "sha256": "d4b442283e085497c528c0122c7ec64bf12aac422b3faff57b97de3378b7a7a4"
+    },
+    {
+      "path": "sample1.ref",
+      "bytes": 98696,
+      "sha256": "af423164ec87f495f7d450fee9bdd418c12114cd305de2384fd20b91ba7994c2"
+    },
+    {
+      "path": "sample2.bz2",
+      "bytes": 73732,
+      "sha256": "c74d44033766ea66171f51bd2ce6e3ad9ce4e0749e03ee4bee3074ab2a4b9c7f"
+    },
+    {
+      "path": "sample2.ref",
+      "bytes": 212340,
+      "sha256": "316ad6713f2c05413e0b9eac132840d092674e7de4138251d3552f98671fcf9a"
+    },
+    {
+      "path": "sample3.bz2",
+      "bytes": 235,
+      "sha256": "fc60721da6329daa4bfe5ef3b32d2de0bebac626ce8522ae033dc3a9296c7779"
+    },
+    {
+      "path": "sample3.ref",
+      "bytes": 120244,
+      "sha256": "6be9c2bd214924b18db0d57b9a14d6f4eeb0b276cd3a980aed91521cca3199dd"
+    },
+    {
+      "path": "spewG.c",
+      "bytes": 1725,
+      "sha256": "14aed503d0e03b32a5393eb033f4cd39d40af154b431b2f888ff6d1639816a87"
+    },
+    {
+      "path": "unzcrash.c",
+      "bytes": 3646,
+      "sha256": "d166748e4f8842b5aaaafc13dd7362fdbf67f01ef9e7ba438579ca8a83da0879"
+    },
+    {
+      "path": "words0",
+      "bytes": 376,
+      "sha256": "cb3ad1756ad30df2b53e4abc0cc5fa19f120de5582bee32481460cb6991d4b24"
+    },
+    {
+      "path": "words1",
+      "bytes": 103,
+      "sha256": "199303545d9a074b351c9d58fe41032a65840eb9638a8a1be9aea6b63ce55a19"
+    },
+    {
+      "path": "words2",
+      "bytes": 185,
+      "sha256": "dbc836878df8abee6f509bb60665fa75e783d654f1a55dd4bd5d9c430009cb41"
+    },
+    {
+      "path": "words3",
+      "bytes": 945,
+      "sha256": "6c9b45d0f7a9d5a1aee52016b48bef8171be2cda23cf18144ef1d5d36eceb260"
+    },
+    {
+      "path": "xmlproc.sh",
+      "bytes": 2911,
+      "sha256": "f965a7fd70dcc92ed168b650162acb2163f1b76dffbd47e59a315430acbe9830"
+    }
+  ],
+  "licenses": [
+    "LICENSE"
+  ],
+  "pe_files_not_executed": [],
+  "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+  "elapsed_seconds": 0.383
+}

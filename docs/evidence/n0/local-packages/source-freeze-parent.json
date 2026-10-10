@@ -1,0 +1,50 @@
+[
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/CMakeLists.txt",
+    "sha256": "6ec094833f4e70bfaf31ed34894bad51a4a910130d5bbc878823a53319408fb5"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/Consumer/CMakeLists.txt",
+    "sha256": "5372a7c8fa9f0d0a44a93291a0b7623610cc2ec854a0d6673f48f62b6fb1d6c0"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/Consumer/FreetypeGlyphTest.cpp",
+    "sha256": "6476be25737aa34b8bf64991748fa4ac71b04285a75472ad1da98c834ec499e8"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/Consumer/RunGlyphTest.cmake",
+    "sha256": "91fd0c9145a90b6611ec3b0d97ccb546f7483acad2a92ca6dd485c27ad0b60ab"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/Consumer/VerifyFont.cmake",
+    "sha256": "56a89691938c917d59c6c07032de574c86102a71c37c0942ae9b07e923fbba14"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/FindFreetype.cmake",
+    "sha256": "67cdb1efdfd6d56a88c553548e9da7b1956abd78e86b2805c4b76d9e4762bdbf"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Freetype/NOTICE.txt",
+    "sha256": "eed4f2677d27b17617ce4134da78e809689771248e23cdfebdcd665836a52e70"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+    "sha256": "ab1c32742ea8885cafa3aa2ee134a252de86b030d47382d6a4daee7dc17604fd"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Zlib/BuildZlibPackage.cmake",
+    "sha256": "66ebf4100274103e0d4629479cb1b66b11531dec85890782c57f9c8b3a9cc122"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Zlib/FindZLIB.cmake",
+    "sha256": "b2662eb8469bad3c2cf93e3ea797e3df53c49ab4a9a1ce4c2ac119f7ef19bbd0"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Zlib/tests/CMakeLists.txt",
+    "sha256": "ce2b32301ebb11d09f6f2074936689794b4bcf63cf3c9302498c7a14f33d6f13"
+  },
+  {
+    "file": "cmake/Tools/LocalPackages/Zlib/tests/ZlibRoundtrip.cpp",
+    "sha256": "19341fb8b438fe38f83b4ec2f7e980a4fd5b8e04e9bfc9cf238a4514ec3efdc1"
+  }
+]

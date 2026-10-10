@@ -1,0 +1,52 @@
+[
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\CMakeLists.txt",
+    "SHA256": "0463623551DED5FD210F5389503995CEF633F95EEB054CF41296A7B1381E1616",
+    "Bytes": 9700
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdPartyPackages.cmake",
+    "SHA256": "B5893A9216005EC9E186C09134996B586ADAECDC9CDC5A185D9553F114883AAC",
+    "Bytes": 50533
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\BuiltInPackages.cmake",
+    "SHA256": "063552FFB31F78927816CFEC45725292E026FF6326360B61CA5B9F42DF00FE9F",
+    "Bytes": 1534
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+    "SHA256": "674A73102AA2BE595A26A5F83BC4627CFF4AB9057F8B7C27F8FDD77073A71D7D",
+    "Bytes": 6786
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\Python_windows.cmake",
+    "SHA256": "0EBDFB7981D19A1B0501AF0D9D58EEDBD265F972E211ECEE5F5307B101C21960",
+    "Bytes": 1073
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPython.cmake",
+    "SHA256": "A2843FB110A4FF5163FB661A491C997289334FC1365662B3C48CC2378BAE7F52",
+    "Bytes": 18727
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYWrappers.cmake",
+    "SHA256": "1C4BB16955E9A4E8BC00306E8F30E267F69EBB57E4CD5A818A6E82EA9486233A",
+    "Bytes": 43177
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPackage_S3Downloader.cmake",
+    "SHA256": "5D75F081B9F903F9785AD4B1DF1EC56637FFD5436BD2B31D0B09C679452ADA66",
+    "Bytes": 5737
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\FindPython.cmake",
+    "SHA256": "389832D7441AFAD6296BA6E50FF021654D28979E70F955D0EDDAD05993DA6684",
+    "Bytes": 363
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\python-config.cmake",
+    "SHA256": "AFCEB472FB29B7D56D65C69869EAB14ED86615F1CA7146FA255BBBA672FA45B1",
+    "Bytes": 2918
+  }
+]

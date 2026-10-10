@@ -1,0 +1,44 @@
+{
+  "WorkingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "Manifest": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-freeze-csg-attributes-red.json",
+  "ManifestSHA256": "81D3AA6ABC77FC68C94F3F6C1690A964F662018A3FB6A427814D17304AAE7653",
+  "InputCount": 4,
+  "InputsMatch": true,
+  "Inputs": [
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.h",
+      "Expected": "5c603eb09bff2ea51e1565186a90b90b4258e702b30d5525ae44c0a4c1f052c7",
+      "Actual": "5C603EB09BFF2EA51E1565186A90B90B4258E702B30D5525AE44C0A4C1F052C7",
+      "Bytes": 3918,
+      "Match": true
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.cpp",
+      "Expected": "bbfb0dc5e2c79de3a60eb8c4f5980c27050b3d6a3941acb17dbb38f480f6e2da",
+      "Actual": "BBFB0DC5E2C79DE3A60EB8C4F5980C27050B3D6A3941ACB17DBB38F480F6E2DA",
+      "Bytes": 7288,
+      "Match": true
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\CSG\\WhiteBoxCsgCoreTest.cpp",
+      "Expected": "3e0c8bd358ae0805db50b1dac36dc9e2141655896393a8fd7afcd27986e94a47",
+      "Actual": "3E0C8BD358AE0805DB50B1DAC36DC9E2141655896393A8FD7AFCD27986E94A47",
+      "Bytes": 26648,
+      "Match": true
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\CSG\\CMakeLists.txt",
+      "Expected": "3b85decd6b7c451f333167b8830643e3c966a00ea4f861da7daa2584d6d46e07",
+      "Actual": "3B85DECD6B7C451F333167B8830643E3C966A00EA4F861DA7DAA2584D6D46E07",
+      "Bytes": 2075,
+      "Match": true
+    }
+  ],
+  "Cache": [
+    "CMAKE_BUILD_TYPE:BOOL=OFF",
+    "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+    "JE_MANIFOLD_SOURCE_DIR:PATH=F:/JericoEngine/Dependencies/manifold-3.5.1",
+    "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022"
+  ],
+  "ManifoldSourcePresent": true
+}

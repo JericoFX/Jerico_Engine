@@ -2,4 +2,10 @@
 * -text whitespace=cr-at-eol
 # Captured tool output retains its original spacing; integrity is checked by SHA.
 *.log -whitespace
+# Preserve final newlines in these native captures and executed harness copies.
+local-packages/original-engine-mimalloc-configure.ps1 whitespace=cr-at-eol,-blank-at-eof
+local-packages/original-engine-mimalloc-encoding-configure.ps1 whitespace=cr-at-eol,-blank-at-eof
+local-packages/original-engine-python-venv-audit-imports.json whitespace=cr-at-eol,-blank-at-eof
+local-packages/original-engine-python-venv-audit-pip-list.json whitespace=cr-at-eol,-blank-at-eof
+local-packages/python-package-retry-archive-listing.txt whitespace=cr-at-eol,-blank-at-eof
 *.md text

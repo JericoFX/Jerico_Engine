@@ -1,0 +1,265 @@
+{
+  "pe_files": [
+    {
+      "component": "libffi-3.3.0",
+      "path": "amd64/libffi-7.dll",
+      "sha256": "f60dd9f2fcbd495674dfc1555effb710eb081fc7d4cae5fa58c438ab50405081",
+      "architecture": "amd64",
+      "bytes": 32792,
+      "code_executed": false
+    },
+    {
+      "component": "libffi-3.3.0",
+      "path": "arm32/libffi-7.dll",
+      "sha256": "389786891940903b6605334f9e158b0bb7f24979bbb8a832f7dcc09120532c9d",
+      "architecture": "arm32",
+      "bytes": 20504,
+      "code_executed": false
+    },
+    {
+      "component": "libffi-3.3.0",
+      "path": "arm64/libffi-7.dll",
+      "sha256": "b39ece255620847736fa75d6d9e983812bf9ee1850b290a05e49b035ed1a3261",
+      "architecture": "arm64",
+      "bytes": 34328,
+      "code_executed": false
+    },
+    {
+      "component": "libffi-3.3.0",
+      "path": "win32/libffi-7.dll",
+      "sha256": "0c7ec6de19c246a23756b8550e6178ac2394b1093e96d0f43789124149486f57",
+      "architecture": "win32",
+      "bytes": 29208,
+      "code_executed": false
+    },
+    {
+      "component": "openssl-bin-1.1.1u",
+      "path": "amd64/libcrypto-1_1.dll",
+      "sha256": "f20eb4efd8647b5273fdaafceb8ccb2b8ba5329665878e01986cbfc1e6832c44",
+      "architecture": "amd64",
+      "bytes": 3445016,
+      "code_executed": false
+    },
+    {
+      "component": "openssl-bin-1.1.1u",
+      "path": "amd64/libssl-1_1.dll",
+      "sha256": "c8f7237e7040a73c2bea567acc9cec373aadd48654aaac6122416e160f08ca13",
+      "architecture": "amd64",
+      "bytes": 704792,
+      "code_executed": false
+    },
+    {
+      "component": "openssl-bin-1.1.1u",
+      "path": "arm64/libcrypto-1_1-arm64.dll",
+      "sha256": "817dec8e3422d82c4bf9688da2d7d0862d71e241a404a908016005d2b830bafa",
+      "architecture": "arm64",
+      "bytes": 3419928,
+      "code_executed": false
+    },
+    {
+      "component": "openssl-bin-1.1.1u",
+      "path": "arm64/libssl-1_1-arm64.dll",
+      "sha256": "e2c311ec1e56d3b0fc1a472288066ee4d35681e2dbfeb37a35e96d388f451fda",
+      "architecture": "arm64",
+      "bytes": 832792,
+      "code_executed": false
+    },
+    {
+      "component": "openssl-bin-1.1.1u",
+      "path": "win32/libcrypto-1_1.dll",
+      "sha256": "037d54d692d6b003b272f990fd25fcf8a462dd83d3693d3384af28ae41519d9d",
+      "architecture": "win32",
+      "bytes": 2272024,
+      "code_executed": false
+    },
+    {
+      "component": "openssl-bin-1.1.1u",
+      "path": "win32/libssl-1_1.dll",
+      "sha256": "ce48d4e55fad09ae5dfe6caedde57bbd04a1012f0f526e3705528ac1e2ba0268",
+      "architecture": "win32",
+      "bytes": 552216,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/bin/tcl86t.dll",
+      "sha256": "fbfd065f861ec0a90dd513bc209c56bbc23c54d2839964a0ec2df95848af7860",
+      "architecture": "amd64",
+      "bytes": 1866480,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/bin/tclsh86t.exe",
+      "sha256": "b0cdcae58e1f25d6636ee47661b8286cdf6ab9d75573c54323ae8704d2bfa547",
+      "architecture": "amd64",
+      "bytes": 78064,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/bin/tk86t.dll",
+      "sha256": "cd2f60075064dfc2e65c88b239a970cb4bd07cb3eec7cc26fb1bf978d4356b08",
+      "architecture": "amd64",
+      "bytes": 1541872,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/bin/wish86t.exe",
+      "sha256": "596419214c17967e9467e604f074732e9365d21d3c832a9874931f99ad56201a",
+      "architecture": "amd64",
+      "bytes": 65776,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/lib/dde1.4/tcldde14.dll",
+      "sha256": "6b88f753d65c1beb29e681608b49febda726090c5a5d3aa87afa15a002678d3b",
+      "architecture": "amd64",
+      "bytes": 25088,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/lib/reg1.3/tclreg13.dll",
+      "sha256": "92ffeefcea9bc3c14e9bc3c09c57b9299d7ffbcad2e9da2ed9f9ca9d0e72255e",
+      "architecture": "amd64",
+      "bytes": 22016,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "amd64/lib/tix8.4.3/tix84.dll",
+      "sha256": "d41c638ec51487341b9be21f4d9372424c073106f226330e90c05536de416dbe",
+      "architecture": "amd64",
+      "bytes": 370688,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/bin/tcl86t.dll",
+      "sha256": "6e976f42e4fc77b13e2a2caf8abe1a2c359b5db93cf2ac7b34befa8abbcb8824",
+      "architecture": "win32",
+      "bytes": 1474800,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/bin/tclsh86t.exe",
+      "sha256": "67adfafbd1a0fbb0e35c982e5d44b3feb57ea395906eaf2c8a9503a6952bc7bd",
+      "architecture": "win32",
+      "bytes": 76528,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/bin/tk86t.dll",
+      "sha256": "e775538b0e7d5a197bdca3ec295610b8ca7b636ffa1f887f6e5d2c1e0bc88748",
+      "architecture": "win32",
+      "bytes": 1244912,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/bin/wish86t.exe",
+      "sha256": "21dc59c3d759e8540c9946caa06a53b560022fca7a71e2d741c4cef2e2e31d17",
+      "architecture": "win32",
+      "bytes": 63216,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/lib/dde1.4/tcldde14.dll",
+      "sha256": "c48a218592bd0badf5b4eb05bc809720e101ade7caca5d4d248bc228d6303012",
+      "architecture": "win32",
+      "bytes": 22528,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/lib/reg1.3/tclreg13.dll",
+      "sha256": "dd5a2b7256c7912ecd8592d6b86ae764f24b2318a3ba75a15a5b3823365e43be",
+      "architecture": "win32",
+      "bytes": 18432,
+      "code_executed": false
+    },
+    {
+      "component": "tcltk-8.6.12.0",
+      "path": "win32/lib/tix8.4.3/tix84.dll",
+      "sha256": "177b2f0fd85366af0ae76c7d260f2a4b84b535d2a8a06a16e2b6eb895810fbb7",
+      "architecture": "win32",
+      "bytes": 282624,
+      "code_executed": false
+    }
+  ],
+  "tools": [
+    {
+      "name": "bootstrap",
+      "path": "C:\\Users\\Jerico\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "sha256": "805fd29612c221ebea570d372ec5ed46093c25a1033f1765de9b2f8103868886",
+      "bytes": 105832
+    },
+    {
+      "name": "msbuild",
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+      "sha256": "0f7daba445ba37b652ae4180270ab3eff27acbbe5d411d3b05dad51aab16404c",
+      "bytes": 437048
+    }
+  ],
+  "provenance_is_commit_and_hash_receipt_not_signature": true,
+  "allowed_code_source": "Official python/cpython-bin-deps commits; execution remains assigned to Luna",
+  "license_files": {
+    "cpython": [
+      "Doc/copyright.rst",
+      "Doc/license.rst",
+      "LICENSE",
+      "Mac/BuildScript/resources/License.rtf",
+      "Modules/_ctypes/darwin/LICENSE",
+      "Modules/_ctypes/libffi_osx/LICENSE",
+      "Modules/expat/COPYING",
+      "PC/crtlicense.txt",
+      "Python/getcopyright.c",
+      "Tools/msi/bundle/bootstrap/LICENSE.txt",
+      "Tools/pynche/X/xlicense.txt",
+      "Tools/scripts/fixnotice.py"
+    ],
+    "expat": [
+      "expat/COPYING"
+    ],
+    "bzip2-1.0.8": [
+      "LICENSE"
+    ],
+    "sqlite-3.40.1.0": [],
+    "xz-5.2.5": [
+      "COPYING",
+      "COPYING.GPLv2",
+      "COPYING.GPLv3",
+      "COPYING.LGPLv2.1"
+    ],
+    "zlib-1.2.13": [
+      "LICENSE",
+      "contrib/dotzlib/LICENSE_1_0.txt"
+    ],
+    "libffi-3.3.0": [
+      "LICENSE"
+    ],
+    "openssl-bin-1.1.1u": [
+      "amd64/LICENSE",
+      "arm64/LICENSE",
+      "win32/LICENSE"
+    ],
+    "tcltk-8.6.12.0": [
+      "amd64/lib/tk8.6/demos/license.terms",
+      "amd64/lib/tk8.6/license.terms",
+      "amd64/tcllicense.terms",
+      "amd64/tixlicense.terms",
+      "amd64/tklicense.terms",
+      "win32/lib/tk8.6/demos/license.terms",
+      "win32/lib/tk8.6/license.terms",
+      "win32/tcllicense.terms",
+      "win32/tixlicense.terms",
+      "win32/tklicense.terms"
+    ]
+  }
+}

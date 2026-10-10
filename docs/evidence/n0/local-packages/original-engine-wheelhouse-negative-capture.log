@@ -1,0 +1,80 @@
+﻿-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- The CXX compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+'C:/Program Files/CMake/bin/cmake.exe' '-E' 'tar' 'xf' 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/zlib-1.2.11-je-rev1-windows.tar.xz'
+--   Checking downloaded package zlib-1.2.11-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Installed And Validated package at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/zlib-1.2.11-je-rev1-windows - OK
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/zlib-1.2.11-je-rev1-windows/zlib/lib/zlibstatic.lib (found version "1.2.11")
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/zlib-1.2.11-je-rev1-windows
+'C:/Program Files/CMake/bin/cmake.exe' '-E' 'tar' 'xf' 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/freetype-2.11.1-je-rev1-windows.tar.xz'
+--   Checking downloaded package freetype-2.11.1-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Installed And Validated package at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/freetype-2.11.1-je-rev1-windows - OK
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Found Freetype: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/freetype-2.11.1-je-rev1-windows/freetype/lib/freetype.lib (found version "2.11.1")
+'C:/Program Files/CMake/bin/cmake.exe' '-E' 'tar' 'xf' 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/qt-6.11.2-rev1-windows.tar.xz'
+--   Checking downloaded package qt-6.11.2-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Installed And Validated package at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/qt-6.11.2-rev1-windows - OK
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/packages/qt-6.11.2-rev1-windows
+--   Performing Test CMAKE_HAVE_LIBC_PTHREAD
+--   Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+--   Looking for pthread_create in pthreads
+--   Looking for pthread_create in pthreads - not found
+--   Looking for pthread_create in pthread
+--   Looking for pthread_create in pthread - not found
+--   Found Threads: TRUE
+--   Performing Test HAVE_STDATOMIC
+--   Performing Test HAVE_STDATOMIC - Success
+--   Found WrapAtomic: TRUE
+'C:/Program Files/CMake/bin/cmake.exe' '-E' 'tar' 'xf' 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-3.10.13-je-rev1-windows.tar.xz'
+--   Checking downloaded package python-3.10.13-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Installed And Validated package at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/packages/python-3.10.13-je-rev1-windows - OK
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/packages/python-3.10.13-je-rev1-windows
+--   Creating Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/venv/31e81382
+'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/packages/python-3.10.13-je-rev1-windows/python/python.exe' '-m' 'venv' 'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/venv/31e81382' '--without-pip' '--clear'
+--   Installing pip into venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/venv/31e81382 (F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/venv/31e81382/python)
+'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-wheelhouse-negative-capture-deps/Python/venv/31e81382/Scripts/python.exe' '-m' 'ensurepip' '--upgrade' '--default-pip' '-v'
+Using pip 23.0.1 from C:\Users\Jerico\AppData\Local\Temp\tmpxwenz0b5\pip-23.0.1-py3-none-any.whl\pip (python 3.10)
+Looking in links: c:\Users\Jerico\AppData\Local\Temp\tmpxwenz0b5
+Processing c:\users\jerico\appdata\local\temp\tmpxwenz0b5\setuptools-65.5.0-py3-none-any.whl
+Processing c:\users\jerico\appdata\local\temp\tmpxwenz0b5\pip-23.0.1-py3-none-any.whl
+Installing collected packages: setuptools, pip
+Successfully installed pip-23.0.1 setuptools-65.5.0
+cmake.exe : CMake Error at cmake/LYPython.cmake:136 (message):
+En F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\original-engine-wheelhouse-negative-capture.ps1: 9 
+Carácter: 49
++ ... iagnostics.Stopwatch]::StartNew();$output=& $cmake @argv 2>&1;$exit=$ ...
++                                               ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Error at ...:136 (message)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  JE Python wheelhouse missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse-missing-capture.
+  Provision the audited pinned packages locally.
+Call Stack (most recent call first):
+  cmake/LYPython.cmake:384 (update_pip_requirements)
+  CMakeLists.txt:93 (include)
+
+
+-- Configuring incomplete, errors occurred!
+

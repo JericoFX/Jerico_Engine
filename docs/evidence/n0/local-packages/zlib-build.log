@@ -1,0 +1,71 @@
+CWD: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+MODE: script
+ARGV_COUNT: 7
+ARGV_JSON: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-build.argv.json
+EXIT_CODE: 0
+ELAPSED_SECONDS: 21.362
+OUTPUT:
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of off64_t
+-- Check size of off64_t - failed
+-- Looking for fseeko
+-- Looking for fseeko - not found
+-- Looking for unistd.h
+-- Looking for unistd.h - not found
+-- Renaming
+--     F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f/zconf.h
+-- to 'zconf.h.included' because this file is included with zlib
+-- but CMake generates it automatically in the build directory.
+-- Configuring done (17.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/build
+Versi├│n de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f/CMakeLists.txt
+  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  gzclose.c
+  gzlib.c
+  gzread.c
+  gzwrite.c
+  inflate.c
+  infback.c
+  inftrees.c
+  inffast.c
+  trees.c
+  uncompr.c
+  zutil.c
+  Generando c├│digo...
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f\gzread.c(319,17): warning C4267: '=': conversi├│n de 'size_t' a 'unsigned int'; posible p├®rdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\zlibstatic.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f\gzread.c(400,11): warning C4267: '=': conversi├│n de 'size_t' a 'unsigned int'; posible p├®rdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\zlibstatic.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f\gzread.c(472,11): warning C4267: '=': conversi├│n de 'size_t' a 'int'; posible p├®rdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\zlibstatic.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f\gzwrite.c(212,24): warning C4267: '=': conversi├│n de 'size_t' a 'unsigned int'; posible p├®rdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\zlibstatic.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f\gzwrite.c(232,21): warning C4267: '=': conversi├│n de 'size_t' a 'unsigned int'; posible p├®rdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\zlibstatic.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f\gzwrite.c(371,11): warning C4267: '=': conversi├│n de 'size_t' a 'int'; posible p├®rdida de datos [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\zlibstatic.vcxproj]
+  zlibstatic.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\build\Release\zlibstatic.lib
+-- JE local package archive: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.tar.xz
+-- JE local package SHA256: 4ff69c9c7f99c917afce6d04cdf3fc6f2a65c0038abf2c677ef418182851bef7

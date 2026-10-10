@@ -1,0 +1,266 @@
+[
+  {
+    "name": "cpython",
+    "commit": "49965601d6afedafe47cc85556d99b7a24981051",
+    "archive_sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+    "source": "F:\\JericoEngine\\Dependencies\\cpython-49965601d6afedafe47cc85556d99b7a24981051",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051",
+    "licenses": [
+      "Doc/copyright.rst",
+      "Doc/license.rst",
+      "LICENSE",
+      "Mac/BuildScript/resources/License.rtf",
+      "Modules/_ctypes/darwin/LICENSE",
+      "Modules/_ctypes/libffi_osx/LICENSE",
+      "Modules/expat/COPYING",
+      "PC/crtlicense.txt",
+      "Python/getcopyright.c",
+      "Tools/msi/bundle/bootstrap/LICENSE.txt",
+      "Tools/pynche/X/xlicense.txt",
+      "Tools/scripts/fixnotice.py"
+    ],
+    "pe_files_not_executed": [],
+    "only_regular_files_and_directories": true,
+    "elapsed_seconds": 32.249
+  },
+  {
+    "name": "expat",
+    "commit": "65a21f2b2a306d29b44e70264aca948aa0454219",
+    "archive_sha256": "54fd00059462c81e8e3c8eef7e90169fca1b48d89122fbc97039d7007190d9c8",
+    "source": "F:\\JericoEngine\\Dependencies\\expat-65a21f2b2a306d29b44e70264aca948aa0454219",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\expat-65a21f2b2a306d29b44e70264aca948aa0454219",
+    "licenses": [
+      "expat/COPYING"
+    ],
+    "pe_files_not_executed": [],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 1.404
+  },
+  {
+    "name": "bzip2-1.0.8",
+    "commit": "05301997b2f9590f49c672cf3dfd3d3dfa7ad521",
+    "archive_sha256": "ab14accac86cdd92021d50465deeb221b476d6675bd1383d3c7fb83751c2e0a3",
+    "source": "F:\\JericoEngine\\Dependencies\\bzip2-1.0.8-05301997b2f9590f49c672cf3dfd3d3dfa7ad521",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\bzip2-1.0.8",
+    "licenses": [
+      "LICENSE"
+    ],
+    "pe_files_not_executed": [],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 0.383
+  },
+  {
+    "name": "sqlite-3.40.1.0",
+    "commit": "db4ca556b25787c263ee72a4b764c4be474c322f",
+    "archive_sha256": "61a33a1f61b30617564ae869296339b19dfd30b9b32a0e1b3493d8b93b23b54c",
+    "source": "F:\\JericoEngine\\Dependencies\\sqlite-3.40.1.0-db4ca556b25787c263ee72a4b764c4be474c322f",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\sqlite-3.40.1.0",
+    "licenses": [],
+    "pe_files_not_executed": [],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 0.091
+  },
+  {
+    "name": "xz-5.2.5",
+    "commit": "c6bc0c612605622aaef101a33a751f9de2ecc193",
+    "archive_sha256": "115433c946ee069e857fd04cf41b38a4a74ed45d868a3b2e08ccd4a1f04f39d0",
+    "source": "F:\\JericoEngine\\Dependencies\\xz-5.2.5-c6bc0c612605622aaef101a33a751f9de2ecc193",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\xz-5.2.5",
+    "licenses": [
+      "COPYING",
+      "COPYING.GPLv2",
+      "COPYING.GPLv3",
+      "COPYING.LGPLv2.1"
+    ],
+    "pe_files_not_executed": [],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 3.041
+  },
+  {
+    "name": "zlib-1.2.13",
+    "commit": "9071e5ae1bd90c30518404b95ec0be0d4cf6cf84",
+    "archive_sha256": "0200469024cfc47334c7f6a28855a54d33740a7207d1b9e860fbbaf0bebfca63",
+    "source": "F:\\JericoEngine\\Dependencies\\zlib-1.2.13-9071e5ae1bd90c30518404b95ec0be0d4cf6cf84",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\zlib-1.2.13",
+    "licenses": [
+      "LICENSE",
+      "contrib/dotzlib/LICENSE_1_0.txt"
+    ],
+    "pe_files_not_executed": [],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 1.616
+  },
+  {
+    "name": "libffi-3.3.0",
+    "commit": "1cf06233e3ceb49dc0a73c55e04b1174b436b632",
+    "archive_sha256": "1041268a6a068f69d5fa2fb053dab6b11c25789e0a5fb2be4b505eba16620d3c",
+    "source": "F:\\JericoEngine\\Dependencies\\libffi-3.3.0-1cf06233e3ceb49dc0a73c55e04b1174b436b632",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\libffi-3.3.0",
+    "licenses": [
+      "LICENSE"
+    ],
+    "pe_files_not_executed": [
+      {
+        "path": "amd64/libffi-7.dll",
+        "bytes": 32792,
+        "sha256": "f60dd9f2fcbd495674dfc1555effb710eb081fc7d4cae5fa58c438ab50405081"
+      },
+      {
+        "path": "arm32/libffi-7.dll",
+        "bytes": 20504,
+        "sha256": "389786891940903b6605334f9e158b0bb7f24979bbb8a832f7dcc09120532c9d"
+      },
+      {
+        "path": "arm64/libffi-7.dll",
+        "bytes": 34328,
+        "sha256": "b39ece255620847736fa75d6d9e983812bf9ee1850b290a05e49b035ed1a3261"
+      },
+      {
+        "path": "win32/libffi-7.dll",
+        "bytes": 29208,
+        "sha256": "0c7ec6de19c246a23756b8550e6178ac2394b1093e96d0f43789124149486f57"
+      }
+    ],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 0.174
+  },
+  {
+    "name": "openssl-bin-1.1.1u",
+    "commit": "bbd07240c6414fa314ca606b73247054eb81b59c",
+    "archive_sha256": "4dc3c79ed427b93fb2d435aeb4916c27d77d99044c6384a068ee537f39a75dd3",
+    "source": "F:\\JericoEngine\\Dependencies\\openssl-bin-1.1.1u-bbd07240c6414fa314ca606b73247054eb81b59c",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\openssl-bin-1.1.1u",
+    "licenses": [
+      "amd64/LICENSE",
+      "arm64/LICENSE",
+      "win32/LICENSE"
+    ],
+    "pe_files_not_executed": [
+      {
+        "path": "amd64/libcrypto-1_1.dll",
+        "bytes": 3445016,
+        "sha256": "f20eb4efd8647b5273fdaafceb8ccb2b8ba5329665878e01986cbfc1e6832c44"
+      },
+      {
+        "path": "amd64/libssl-1_1.dll",
+        "bytes": 704792,
+        "sha256": "c8f7237e7040a73c2bea567acc9cec373aadd48654aaac6122416e160f08ca13"
+      },
+      {
+        "path": "arm64/libcrypto-1_1-arm64.dll",
+        "bytes": 3419928,
+        "sha256": "817dec8e3422d82c4bf9688da2d7d0862d71e241a404a908016005d2b830bafa"
+      },
+      {
+        "path": "arm64/libssl-1_1-arm64.dll",
+        "bytes": 832792,
+        "sha256": "e2c311ec1e56d3b0fc1a472288066ee4d35681e2dbfeb37a35e96d388f451fda"
+      },
+      {
+        "path": "win32/libcrypto-1_1.dll",
+        "bytes": 2272024,
+        "sha256": "037d54d692d6b003b272f990fd25fcf8a462dd83d3693d3384af28ae41519d9d"
+      },
+      {
+        "path": "win32/libssl-1_1.dll",
+        "bytes": 552216,
+        "sha256": "ce48d4e55fad09ae5dfe6caedde57bbd04a1012f0f526e3705528ac1e2ba0268"
+      }
+    ],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 2.227
+  },
+  {
+    "name": "tcltk-8.6.12.0",
+    "commit": "e3c3e9a2856124aa32b608632a52742d479eb7a9",
+    "archive_sha256": "01ad9c663659224e075d487cbc33ea2fed7a225593965b79bed92ca7f79b676f",
+    "source": "F:\\JericoEngine\\Dependencies\\tcltk-8.6.12.0-e3c3e9a2856124aa32b608632a52742d479eb7a9",
+    "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\tcltk-8.6.12.0",
+    "licenses": [
+      "amd64/lib/tk8.6/demos/license.terms",
+      "amd64/lib/tk8.6/license.terms",
+      "amd64/tcllicense.terms",
+      "amd64/tixlicense.terms",
+      "amd64/tklicense.terms",
+      "win32/lib/tk8.6/demos/license.terms",
+      "win32/lib/tk8.6/license.terms",
+      "win32/tcllicense.terms",
+      "win32/tixlicense.terms",
+      "win32/tklicense.terms"
+    ],
+    "pe_files_not_executed": [
+      {
+        "path": "amd64/bin/tcl86t.dll",
+        "bytes": 1866480,
+        "sha256": "fbfd065f861ec0a90dd513bc209c56bbc23c54d2839964a0ec2df95848af7860"
+      },
+      {
+        "path": "amd64/bin/tclsh86t.exe",
+        "bytes": 78064,
+        "sha256": "b0cdcae58e1f25d6636ee47661b8286cdf6ab9d75573c54323ae8704d2bfa547"
+      },
+      {
+        "path": "amd64/bin/tk86t.dll",
+        "bytes": 1541872,
+        "sha256": "cd2f60075064dfc2e65c88b239a970cb4bd07cb3eec7cc26fb1bf978d4356b08"
+      },
+      {
+        "path": "amd64/bin/wish86t.exe",
+        "bytes": 65776,
+        "sha256": "596419214c17967e9467e604f074732e9365d21d3c832a9874931f99ad56201a"
+      },
+      {
+        "path": "amd64/lib/dde1.4/tcldde14.dll",
+        "bytes": 25088,
+        "sha256": "6b88f753d65c1beb29e681608b49febda726090c5a5d3aa87afa15a002678d3b"
+      },
+      {
+        "path": "amd64/lib/reg1.3/tclreg13.dll",
+        "bytes": 22016,
+        "sha256": "92ffeefcea9bc3c14e9bc3c09c57b9299d7ffbcad2e9da2ed9f9ca9d0e72255e"
+      },
+      {
+        "path": "amd64/lib/tix8.4.3/tix84.dll",
+        "bytes": 370688,
+        "sha256": "d41c638ec51487341b9be21f4d9372424c073106f226330e90c05536de416dbe"
+      },
+      {
+        "path": "win32/bin/tcl86t.dll",
+        "bytes": 1474800,
+        "sha256": "6e976f42e4fc77b13e2a2caf8abe1a2c359b5db93cf2ac7b34befa8abbcb8824"
+      },
+      {
+        "path": "win32/bin/tclsh86t.exe",
+        "bytes": 76528,
+        "sha256": "67adfafbd1a0fbb0e35c982e5d44b3feb57ea395906eaf2c8a9503a6952bc7bd"
+      },
+      {
+        "path": "win32/bin/tk86t.dll",
+        "bytes": 1244912,
+        "sha256": "e775538b0e7d5a197bdca3ec295610b8ca7b636ffa1f887f6e5d2c1e0bc88748"
+      },
+      {
+        "path": "win32/bin/wish86t.exe",
+        "bytes": 63216,
+        "sha256": "21dc59c3d759e8540c9946caa06a53b560022fca7a71e2d741c4cef2e2e31d17"
+      },
+      {
+        "path": "win32/lib/dde1.4/tcldde14.dll",
+        "bytes": 22528,
+        "sha256": "c48a218592bd0badf5b4eb05bc809720e101ade7caca5d4d248bc228d6303012"
+      },
+      {
+        "path": "win32/lib/reg1.3/tclreg13.dll",
+        "bytes": 18432,
+        "sha256": "dd5a2b7256c7912ecd8592d6b86ae764f24b2318a3ba75a15a5b3823365e43be"
+      },
+      {
+        "path": "win32/lib/tix8.4.3/tix84.dll",
+        "bytes": 282624,
+        "sha256": "177b2f0fd85366af0ae76c7d260f2a4b84b535d2a8a06a16e2b6eb895810fbb7"
+      }
+    ],
+    "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+    "elapsed_seconds": 11.989
+  }
+]

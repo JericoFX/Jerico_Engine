@@ -1,0 +1,340 @@
+{
+  "kind": "read-only source and file audit; not configure/build/runtime acceptance",
+  "date": "2026-10-10",
+  "checkout": "F:\\JericoEngine\\JericoEngine",
+  "root_binary_directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+  "root_no_project_targets": [
+    "Editor",
+    "AssetProcessor",
+    "AssetProcessorBatch",
+    "O3DE.GameLauncher"
+  ],
+  "generic_launcher_condition": "no LY_PROJECTS and LY_MONOLITHIC_GAME=FALSE; generic does not process project assets",
+  "existing_project": "AutomatedTesting",
+  "project_selection": "-DLY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/AutomatedTesting",
+  "project_targets": [
+    "AutomatedTesting.GameLauncher",
+    "AutomatedTesting.Assets"
+  ],
+  "project_registration": "root Projects.cmake accepts explicit path to existing project.json; engine.json projects list alone does not set LY_PROJECTS",
+  "project_generated_outputs": [
+    "AutomatedTesting/user/Registry/Platform/Windows/build_path.setreg",
+    "AutomatedTesting/user/cmake/engine/CMakePresets.json"
+  ],
+  "runtime_flags": [
+    "--project-path=F:/JericoEngine/JericoEngine/AutomatedTesting",
+    "--rhi=Vulkan"
+  ],
+  "rhi_flag_limit": "FactoryManager warns/ignores unavailable requested RHI; verify Registering Vulkan RHI in real log",
+  "engine_active_gems": [
+    "Atom_Bootstrap",
+    "AtomShader",
+    "AtomViewportDisplayInfo",
+    "Camera",
+    "CommonFeaturesAtom",
+    "EditorModeFeedback",
+    "Maestro",
+    "PrefabBuilder",
+    "SceneProcessing"
+  ],
+  "project_active_gems": [
+    "Archive",
+    "Atom",
+    "AtomTressFX",
+    "Atom_TestData",
+    "AudioSystem",
+    "AutomatedTesting",
+    "Camera",
+    "CameraFramework",
+    "CertificateManager",
+    "Compression",
+    "DebugDraw",
+    "DevTextures",
+    "DiffuseProbeGrid",
+    "EMotionFX",
+    "EditorModeFeedback",
+    "EditorPythonBindings",
+    "ExpressionEvaluation",
+    "FastNoise",
+    "Gestures",
+    "GradientSignal",
+    "GraphCanvas",
+    "GraphModel",
+    "ImGui",
+    "InAppPurchases",
+    "LandscapeCanvas",
+    "LmbrCentral",
+    "LyShine",
+    "LyShineExamples",
+    "Maestro",
+    "Multiplayer",
+    "NvCloth",
+    "OpenParticleSystem",
+    "PhysX5",
+    "PhysX5Debug",
+    "PrefabBuilder",
+    "PrimitiveAssets",
+    "Profiler",
+    "PythonAssetBuilder",
+    "PythonCoverage",
+    "QtForPython",
+    "RecastNavigation",
+    "RemoteTools",
+    "SceneProcessing",
+    "ScriptAutomation",
+    "ScriptCanvas",
+    "ScriptCanvasPhysics",
+    "ScriptCanvasTesting",
+    "ScriptEvents",
+    "SkyAtmosphere",
+    "Stars",
+    "StartingPointCamera",
+    "StartingPointInput",
+    "StartingPointMovement",
+    "SurfaceData",
+    "Terrain",
+    "TestAssetBuilder",
+    "TextureAtlas",
+    "Vegetation",
+    "WhiteBox"
+  ],
+  "whitebox_modules": [
+    "WhiteBox",
+    "WhiteBox.Editor",
+    "WhiteBox.Editor.Static"
+  ],
+  "rhi_modules": [
+    "Atom_RHI.Private",
+    "Atom_RHI_DX12.Private",
+    "Atom_RHI_Vulkan.Private",
+    "Atom_RHI_DX12.Builders",
+    "Atom_RHI_Vulkan.Builders"
+  ],
+  "existing_fixture": "AutomatedTesting/Gem/PythonTests/WhiteBox/TestSuite_Main.py windows_editor project AutomatedTesting; hydra.open_base_level opens Levels/Base/Base.prefab",
+  "existing_visible_csg": "EditorWhiteBoxComponent Reflect: Boolean Source; Apply Boolean; Subtract/Union/Intersect; Non-Destructive (Live). Source registered; not runtime verified",
+  "blockers": [
+    "Latest protected root configure did not generate: missing pinned mimalloc; local source is now present but no new configure executed by this audit",
+    "OpenMesh11.0 source not present in dependency directories inspected; WhiteBox.Editor requires it; Manifold3.5.1 source is present but root source override/options closure not verified",
+    "Atom default grid texture sources and WhiteBox UV debug sources remain LFS pointers; AssetProcessor products/cache have not been proven",
+    "AutomatedTesting composition is broad and includes Multiplayer/PhysX5/QtForPython; existing project is not a newly created minimal fixture"
+  ],
+  "executables": [
+    {
+      "expected_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "exists": false
+    },
+    {
+      "expected_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "exists": false
+    },
+    {
+      "expected_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "exists": false
+    },
+    {
+      "expected_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\O3DE.GameLauncher.exe",
+      "exists": false
+    },
+    {
+      "expected_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AutomatedTesting.GameLauncher.exe",
+      "exists": false
+    }
+  ],
+  "assets": [
+    {
+      "path": "AutomatedTesting/Levels/Base/Base.prefab",
+      "bytes": 2109,
+      "source_sha256": "1C7BF46662F161643F32DE1E3E7B4AC2C376677A1E46BDF72433433F8BB44A4E",
+      "lfs_pointer": false,
+      "lfs_payload_sha256": null,
+      "lfs_payload_bytes": null
+    },
+    {
+      "path": "AutomatedTesting/Levels/Graphics/base_empty/base_empty.prefab",
+      "bytes": 2113,
+      "source_sha256": "1341ADB01CEE6E6EFAFC692C7DCEF641C2B04A43FAC1BEA3DBAC4A2E182A96DC",
+      "lfs_pointer": false,
+      "lfs_payload_sha256": null,
+      "lfs_payload_bytes": null
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/materials/WhiteBoxDefault.material",
+      "bytes": 243,
+      "source_sha256": "2BB09139205A12F2B1CD99CDCADEC728D0599BC5D50FFA06CF2DB914BAB3652B",
+      "lfs_pointer": false,
+      "lfs_payload_sha256": null,
+      "lfs_payload_bytes": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/StandardPBR.materialtype",
+      "bytes": 2586,
+      "source_sha256": "4F2F1CBA8F28E6335959CEAF310E0622D65E4533F68562C5600B7779995CF7F1",
+      "lfs_pointer": false,
+      "lfs_payload_sha256": null,
+      "lfs_payload_bytes": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Presets/PBR/default_grid.material",
+      "bytes": 373,
+      "source_sha256": "875CA04257574B310FE657DD2BCAD9760A514DF19EE29416B0CD3A53A5CBE956",
+      "lfs_pointer": false,
+      "lfs_payload_sha256": null,
+      "lfs_payload_bytes": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+      "bytes": 131,
+      "source_sha256": "05DFDE566DC8D6779E1EF15E843545949A0F8F1D87D2A0BF86C90D218D915F53",
+      "lfs_pointer": true,
+      "lfs_payload_sha256": "5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7",
+      "lfs_payload_bytes": "793918"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_normal.tif",
+      "bytes": 131,
+      "source_sha256": "50F03A45AD0687D356A762CA3C8A2D0960FDF5853920AD8EB3AAD0003EA239E7",
+      "lfs_pointer": true,
+      "lfs_payload_sha256": "1b56097f0df01da7ed49311462002f5e1a61b8496306c7ab3b12e17c27afb28a",
+      "lfs_payload_bytes": "793918"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_roughness.tif",
+      "bytes": 131,
+      "source_sha256": "9428BA47DD6C00F0CC40D8A75A36CFA83F771336817821C19567ACA04814E37C",
+      "lfs_pointer": true,
+      "lfs_payload_sha256": "ba52ff6d59f50b4b5dea6e266572c9e7feb92d5fd85bd0738e0d07d42d234bf7",
+      "lfs_payload_bytes": "810996"
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_diff.tif",
+      "bytes": 131,
+      "source_sha256": "37411C6C9FDA664F5C03AF20D88625159759A4922B13B06303060F55AAE6D68F",
+      "lfs_pointer": true,
+      "lfs_payload_sha256": "166003bfebd724d8155b7fa7469d567cc904a32bb2bc1334de98fa316db3cc1b",
+      "lfs_payload_bytes": "820716"
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_ddn.tif",
+      "bytes": 132,
+      "source_sha256": "D6FCD8B8E99347E508C1396366C0BD8DBEBDDFD3A6564E9EE1D17D420E2FEF05",
+      "lfs_pointer": true,
+      "lfs_payload_sha256": "5c89b51ee9e71c0b89aed4102f73779a270fb7313c3439f1252a2ac9958e1951",
+      "lfs_payload_bytes": "3168096"
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+      "bytes": 131,
+      "source_sha256": "9E2C71147B44A94B53BFED80CE57EAE4804177C3EF6EBB5BE275BA771FE7F2AE",
+      "lfs_pointer": true,
+      "lfs_payload_sha256": "2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f",
+      "lfs_payload_bytes": "818744"
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/Editor/Icons/Components/WhiteBox.svg",
+      "bytes": 2373,
+      "source_sha256": "01D08161D904011FDD0AA96C79BE3442BC4EDE52B04C8B9CB0D248E763C141A7",
+      "lfs_pointer": false,
+      "lfs_payload_sha256": null,
+      "lfs_payload_bytes": null
+    }
+  ],
+  "root_freeze_file_sha256": "46CEF54D8347052E21C4090C685ECDDDF0D0447C7E7D5400631290DD0573F143",
+  "root_freeze_checks": [
+    {
+      "path": "CMakeLists.txt",
+      "expected": "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616",
+      "actual": "0463623551DED5FD210F5389503995CEF633F95EEB054CF41296A7B1381E1616",
+      "match": true
+    },
+    {
+      "path": "engine.json",
+      "expected": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+      "actual": "E1B8302687385076CDA9F20660A4958DBB919AF3C3A1630B8B796A6127AE824D",
+      "match": true
+    },
+    {
+      "path": "cmake/3rdPartyPackages.cmake",
+      "expected": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac",
+      "actual": "B5893A9216005EC9E186C09134996B586ADAECDC9CDC5A185D9553F114883AAC",
+      "match": true
+    },
+    {
+      "path": "cmake/LYPython.cmake",
+      "expected": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705",
+      "actual": "C2D2E3B228BC6E695FFF953EE3C6D453DDB8865C7575DE7F861A9FE1239E3705",
+      "match": true
+    },
+    {
+      "path": "cmake/CalculateEnginePathId.cmake",
+      "expected": "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d",
+      "actual": "FB6ED16EA11D0215FD1D5B114A0AE4733B701CC84A6572F6B9E7C1CFE867604D",
+      "match": true
+    },
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "expected": "674a73102aa2be595a26a5f83bc4627cff4ab9057f8b7c27f8fdd77073a71d7d",
+      "actual": "674A73102AA2BE595A26A5F83BC4627CFF4AB9057F8B7C27F8FDD77073A71D7D",
+      "match": true
+    },
+    {
+      "path": "cmake/3rdParty/Platform/Windows/Python_windows.cmake",
+      "expected": "9fbe44944f2c00ff6fd56eab61b4bc37cb7dea046ebced742e158e1c0223e439",
+      "actual": "9FBE44944F2C00FF6FD56EAB61B4BC37CB7DEA046EBCED742E158E1C0223E439",
+      "match": true
+    },
+    {
+      "path": "python/python.cmd",
+      "expected": "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f",
+      "actual": "067B593BE7E2B28919302230382B13A71EB566BCED0294A991CC6113ADB3123F",
+      "match": true
+    },
+    {
+      "path": "python/python.sh",
+      "expected": "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f",
+      "actual": "15E35908D6638B38F2FD53C168324DEA3A9177B0235AC954EEF7AFA2FDA5DA7F",
+      "match": true
+    },
+    {
+      "path": "python/requirements.txt",
+      "expected": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+      "actual": "22F69D842F651CCE2738FF5E31A302BD5F1923C5FDC2B9167A897E13BC20C5A2",
+      "match": true
+    },
+    {
+      "path": "python/requirements-build.txt",
+      "expected": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6",
+      "actual": "B94DFF298C27659DBC486D62109F34795BD4A4DBE8EAD3CD44D9044FBE6FFAD6",
+      "match": true
+    },
+    {
+      "path": "Tools/LyTestTools/setup.py",
+      "expected": "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5",
+      "actual": "58CBFFE0D1301358CB1D712D6FC234B0C431035506149A53E7FFE464045754E5",
+      "match": true
+    },
+    {
+      "path": "Tools/RemoteConsole/ly_remote_console/setup.py",
+      "expected": "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1",
+      "actual": "5EDFD21099D6DA870DAED538C9E2EF26213BA8CE618A34DB772CB7341A0AD5E1",
+      "match": true
+    },
+    {
+      "path": "scripts/o3de/setup.py",
+      "expected": "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912",
+      "actual": "6F72B0B20C8CE607F6E630AF3362C381E3D7056DE710FEEAB79786EBE1658912",
+      "match": true
+    },
+    {
+      "path": "AutomatedTesting/Gem/PythonTests/EditorPythonTestTools/setup.py",
+      "expected": "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd",
+      "actual": "CE710D28A0D3F09D0FB548CCD34AF91D9C59DC41F43A5C392EFE94EDEB211DBD",
+      "match": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Tools/setup.py",
+      "expected": "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262",
+      "actual": "4FF0D3DB0C4AEE6839D8A44A2A90AAEDB0E47D54C52CF2893BFACD26846F9262",
+      "match": true
+    }
+  ]
+}

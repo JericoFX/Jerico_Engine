@@ -1,0 +1,51 @@
+[
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\AttributeDiagnostic.cpp",
+    "Expected": "BE6AEE825B4649BA4A55720091519C124068ECDFA878794168437AA9D58F0847",
+    "Actual": "BE6AEE825B4649BA4A55720091519C124068ECDFA878794168437AA9D58F0847",
+    "Bytes": 5318,
+    "Match": true
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.h",
+    "Expected": "3A3A024F9314C0A95401B73810C5CED2C7A53B75F2AE3DEF020A4D84CC9FD101",
+    "Actual": "3A3A024F9314C0A95401B73810C5CED2C7A53B75F2AE3DEF020A4D84CC9FD101",
+    "Bytes": 4101,
+    "Match": true
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.cpp",
+    "Expected": "1AC88FCB64D02FF8C40AA0C30E248A2700231AC851D809D48183122CD068F387",
+    "Actual": "1AC88FCB64D02FF8C40AA0C30E248A2700231AC851D809D48183122CD068F387",
+    "Bytes": 16046,
+    "Match": true
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\CSG\\WhiteBoxCsgCoreTest.cpp",
+    "Expected": "3e0c8bd358ae0805db50b1dac36dc9e2141655896393a8fd7afcd27986e94a47",
+    "Actual": "3E0C8BD358AE0805DB50B1DAC36DC9E2141655896393A8FD7AFCD27986E94A47",
+    "Bytes": 26648,
+    "Match": true
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\CSG\\CMakeLists.txt",
+    "Expected": "3b85decd6b7c451f333167b8830643e3c966a00ea4f861da7daa2584d6d46e07",
+    "Actual": "3B85DECD6B7C451F333167B8830643E3C966A00EA4F861DA7DAA2584D6D46E07",
+    "Bytes": 2075,
+    "Match": true
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\JE_BspCsgTests.dir\\Release\\WhiteBoxCsgCore.obj",
+    "Expected": null,
+    "Actual": "906762AB87CD330DFE3FE5497F04F3F13FF669ADB47E039E39CA3FD7D4609E95",
+    "Bytes": 362512,
+    "Match": true
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\manifold\\lib\\Release\\manifold.lib",
+    "Expected": null,
+    "Actual": "3F37B6BAF23CA67889F70DB7319E2B3778A7B9B2BA93B45325214C94C7933154",
+    "Bytes": 17081570,
+    "Match": true
+  }
+]

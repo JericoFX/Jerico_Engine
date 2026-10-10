@@ -117,8 +117,8 @@ Ver [expediente 2026-10-10](evidence/n0/N0_EXECUTION_2026_10_10.md), source/log 
 | IDs | Estado ejecutado | Aceptación pendiente |
 |---|---|---|
 | JER-002 | Clone/rama/sync y checkout único comprobados | Ref de publicación verificada en cierre Git |
-| JER-071/098 | Resolver local y rechazos/fallback CMake focal verificados; LFS excluido, sin payload fetch | Grafo/link/deploy/runtime, otras rutas CMake/pip/PATCH_FILES y offline completo |
+| JER-071/098 | Resolver 24/24 y LFS focal; zlib/FT/Python consumers PASS, Qt/PySide exactos auditados; root instala Python/requisitos/cuatro editables sin índices, pip check/imports y ausencia boto3/botocore/s3transfer PASS | Grafo/link/deploy/runtime, rutas transitivas CMake/pip/PATCH_FILES, licencias/SBOM y offline completo |
 | JER-076/094 | Núcleo productivo real JE::BSP::Csg std+Manifold compilado, sin alias; adapters migrados por fuente | Resto del engine, UUID/codegen/export/serialización y consumers reales |
-| JER-099 | Habitación/corredor/puerta/ventana CSG: 33 checks de kernel GREEN | Editor real, UV/material por cara, Undo/save/reopen/cook/runtime e imagen |
-| JER-005/097 | Configure Windows protegido BLOCKED por zlib; GPU/Vulkan enumerados | Windows-DX12, Windows-Vulkan y Linux-Vulkan render reales |
+| JER-099 | Kernel real: cuarto/corredor/aperturas, UV/costuras e identidad de superficies, 117 checks GREEN | Adapters/serialización/material Atom por cara, Editor real, Undo/save/reopen/cook/runtime e imagen |
+| JER-005/097 | Configure aceptó Python/requisitos locales/mimalloc y falla en Lua 5.4.4; sin targets/build; GPU/Vulkan enumerados | Windows-DX12, Windows-Vulkan y Linux-Vulkan render reales |
 | JER-101 | Bytes source/LFS y tiempos focales medidos | Métricas/coste/calidad comparables del producto, sin ahorro afirmado |

@@ -1,0 +1,13 @@
+COMMAND: tar.exe -tf F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\packages\zlib-1.2.11-je-rev1-windows.tar.xz
+EXIT_CODE: 0
+ENTRIES:
+FindZLIB.cmake
+LICENSE.txt
+LICENSE_APACHE2.TXT
+LICENSE_MIT.TXT
+PackageInfo.json
+zlib/LICENSE
+zlib/include/zconf.h
+zlib/include/zlib.h
+zlib/lib/zlibstatic.lib
+SHA256SUMS

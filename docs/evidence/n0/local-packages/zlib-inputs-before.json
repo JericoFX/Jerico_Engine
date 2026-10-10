@@ -1,0 +1,12 @@
+{
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f.tar.gz",
+  "archive_bytes": 645528,
+  "archive_expected_sha256": "6d4d6640ca3121620995ee255945161821218752b551a1a180f4215f7d124d45",
+  "archive_actual_sha256": "6d4d6640ca3121620995ee255945161821218752b551a1a180f4215f7d124d45",
+  "archive_matches": true,
+  "source_work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\zlib-cacf7f1d4e3d44d871b605da3b647f07d718623f",
+  "source_work_items": 58,
+  "license_path": "F:\\JericoEngine\\Dependencies\\recipes\\o3de-3p-70f0b7b5\\zlib\\LICENSE",
+  "license_sha256": "464352f7afcece608041241e20b28e8006ae170446898e9713fb076323d1487d",
+  "output_preexists": false
+}

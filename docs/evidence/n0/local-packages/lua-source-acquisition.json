@@ -1,0 +1,15 @@
+{
+  "url": "https://codeload.github.com/lua/lua/tar.gz/refs/tags/v5.4.4",
+  "head_status": 200,
+  "get_status": 200,
+  "redirects_followed_automatically": false,
+  "authentication_sent": false,
+  "sha256": "2ff89bbea22a7c8b910d6b006f5ba4559edcf468a25537cedf9988ed90f6b450",
+  "archive": "F:/JericoEngine/Dependencies/archives/lua-5.4.4-source.tar.gz",
+  "bytes": 455973,
+  "elapsed_seconds": 0.7868491,
+  "source_commit": "5d708c3f9cae12820e415d4f89c9eacbe2ab964b",
+  "tag": "v5.4.4",
+  "executed": false,
+  "matches_original_binary_package": false
+}

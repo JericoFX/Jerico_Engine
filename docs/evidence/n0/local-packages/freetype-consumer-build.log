@@ -1,0 +1,14 @@
+CWD: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+MODE: build
+ARGV_COUNT: 4
+ARGV_JSON: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-consumer-build.argv.json
+EXIT_CODE: 0
+ELAPSED_SECONDS: 2.855
+OUTPUT:
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Freetype/Consumer/CMakeLists.txt
+  FreetypeGlyphTest.cpp
+  JE_FreetypeGlyphTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-consumer\Release\JE_FreetypeGlyphTest.exe
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Freetype/Consumer/CMakeLists.txt

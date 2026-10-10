@@ -1,0 +1,25 @@
+CPython 3.10.13 - reconstructed local Windows x64 package
+
+CPython source commit: 49965601d6afedafe47cc85556d99b7a24981051.
+Original O3DE Windows recipe: o3de/3p-package-source at
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/python/win_x64.
+
+This recipe preserves the original Expat 2.4.6 source overlay,
+commit 65a21f2b2a306d29b44e70264aca948aa0454219. This is a downgrade
+from the Expat 2.5.0 bundled in upstream CPython 3.10.13.
+The runtime remains CPython 3.10.13. The explicitly audited Python 3.12
+bootstrap is used only for source generation during the build.
+
+This local artifact uses the installed Visual Studio 2022 v143 toolset,
+instead of the original recipe's v141. Both x64 Debug and Release are built.
+SSL, ctypes, Tcl/Tk, bzip2, LZMA, SQLite and CPython's zlib 1.2.13 are retained.
+CPython's zlib dependency is separate from the engine's zlib 1.2.11 package.
+The original optional layout features and CMake target 3rdParty::Python remain.
+The bundled pip 23.0.1 and setuptools 65.5.0 are installed from local wheels;
+the original unpinned remote pip upgrade is omitted.
+
+Artifact identity: python-3.10.13-je-rev1-windows, with its own measured SHA256.
+This artifact does not claim the hash or binary identity of the legacy package.
+Source archive receipts and external component pins are in JEProvenance.json.
+The generated python/LICENSE.txt and original component notices are preserved
+under LICENSES. Adapted O3DE glue retains Apache-2.0 OR MIT notices and texts.

@@ -1,0 +1,1774 @@
+{
+  "schema": "JE.PythonWheelhouseAudit.v1",
+  "review_date": "2026-10-10",
+  "repository": "F:/JericoEngine/JericoEngine",
+  "target": {
+    "os": "Windows",
+    "architecture": "x64",
+    "implementation": "CPython",
+    "version": "3.10.13",
+    "wheel_target": "Release interpreter; Debug native extension loading is not proved by tag/metadata review.",
+    "classification": "Editor/authoring/test Python environment; not a replacement for the CPython runtime package or native game runtime."
+  },
+  "constraints": {
+    "no_aws_provisioning": true,
+    "no_binary_downloads_performed": true,
+    "no_install_build_test_or_interpreter_execution_performed": true,
+    "read_only_metadata_sources": [
+      "https://pypi.org/pypi/<project>/<version>/json",
+      "https://files.pythonhosted.org/packages/<path>/<filename>.metadata",
+      "https://raw.githubusercontent.com/untitaker/python-atomicwrites/1.4.1/setup.py",
+      "https://raw.githubusercontent.com/untitaker/python-atomicwrites/1.4.1/setup.cfg",
+      "https://raw.githubusercontent.com/mikeorr/Unipath/00a6093d1dfea60c00be955e27dab62e67350323/setup.py"
+    ],
+    "all_artifact_destinations": "Stable files.pythonhosted.org URLs provided by official PyPI release JSON; no signed/temporary URLs or alternate index."
+  },
+  "locks": {
+    "base": {
+      "path": "python/requirements.txt",
+      "before_sha256": "3519d2c73f2ad3eb26e60b41d7c31364252c799646bcf604493b813326ab2077",
+      "after_sha256": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+      "pins": 43,
+      "markers": [],
+      "includes_or_constraints": [],
+      "direct_urls": [],
+      "edit": "Parent-directed removal of only boto3/botocore/s3transfer pin/hash/comment blocks; remaining exact pins and hashes preserved, UTF-8 no BOM and CRLF retained."
+    },
+    "dcc": {
+      "path": "Gems/AtomLyIntegration/TechnicalArt/DccScriptingInterface/requirements.txt",
+      "sha256": "4630abbc79bcdeaabc35fce4370db4815799bf765723c1fc68ab260a2c88b155",
+      "pins": 8,
+      "shared_with_base": [
+        "certifi==2024.07.04"
+      ],
+      "markers": [],
+      "includes_or_constraints": [],
+      "direct_urls": [],
+      "activation": "Only when DccScriptingInterface gem is included; not in base proposal."
+    }
+  },
+  "base_artifacts": [
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "filename": "pluggy-1.6.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl",
+      "sha256": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.9",
+        "requires_dist": [
+          "pre-commit; extra == \"dev\"",
+          "tox; extra == \"dev\"",
+          "pytest; extra == \"testing\"",
+          "pytest-benchmark; extra == \"testing\"",
+          "coverage; extra == \"testing\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pluggy/1.6.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "atomicwrites",
+      "version": "1.4.1",
+      "filename": "atomicwrites-1.4.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/87/c6/53da25344e3e3a9c01095a89f16dbcda021c609ddb42dd6d7c0528236fb2/atomicwrites-1.4.1.tar.gz",
+      "sha256": "81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11",
+      "format": "sdist",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "Only sdist is published. Official 1.4.1 setup.py uses setuptools, with no install_requires or setup_requires; no pyproject.toml at the reviewed tag. Audit acquired sdist/setup before execution; build locally without build isolation/index using separately pinned wheel 0.38.4 and bundled setuptools 65.5.0. Keep the original sdist hash; do not substitute an unrecorded derived wheel hash.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/atomicwrites/1.4.1/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "attrs",
+      "version": "20.1.0",
+      "filename": "attrs-20.1.0-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/d6/e1/3aa3b03e7643ffd6e499b203fd2a44f79893443e8b0b520d05d3e5c638d5/attrs-20.1.0-py2.py3-none-any.whl",
+      "sha256": "2867b7b9f8326499ab5b0e2d12801fa5c98842d2cbd22b35112ae04bf85b4dff",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
+        "requires_dist": [
+          "coverage[toml] (>=5.0.2) ; extra == 'dev'",
+          "hypothesis ; extra == 'dev'",
+          "pympler ; extra == 'dev'",
+          "pytest (>=4.3.0) ; extra == 'dev'",
+          "six ; extra == 'dev'",
+          "zope.interface ; extra == 'dev'",
+          "sphinx ; extra == 'dev'",
+          "sphinx-rtd-theme ; extra == 'dev'",
+          "pre-commit ; extra == 'dev'",
+          "sphinx ; extra == 'docs'",
+          "sphinx-rtd-theme ; extra == 'docs'",
+          "zope.interface ; extra == 'docs'",
+          "coverage[toml] (>=5.0.2) ; extra == 'tests'",
+          "hypothesis ; extra == 'tests'",
+          "pympler ; extra == 'tests'",
+          "pytest (>=4.3.0) ; extra == 'tests'",
+          "six ; extra == 'tests'",
+          "zope.interface ; extra == 'tests'"
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/attrs/20.1.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "certifi",
+      "version": "2024.07.04",
+      "filename": "certifi-2024.7.4-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/1c/d5/c84e1a17bf61d4df64ca866a1c9a913874b4e9bdc131ec689a0ad013fb36/certifi-2024.7.4-py3-none-any.whl",
+      "sha256": "c198e21b1289c2ab85ee4e67bb4b4ef3ead0892059901a8d5b622f24a1101e90",
+      "format": "wheel",
+      "license": "MPL-2.0",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.6",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/certifi/2024.07.04/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/1c/d5/c84e1a17bf61d4df64ca866a1c9a913874b4e9bdc131ec689a0ad013fb36/certifi-2024.7.4-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "2.0.10",
+      "filename": "charset_normalizer-2.0.10-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/84/3e/1037abe6498e65d645ce7a22d3402605d49a3b2c7f20c3abb027760da4f0/charset_normalizer-2.0.10-py3-none-any.whl",
+      "sha256": "cb957888737fc0bbcd78e3df769addb41fd1ff8cf950dc9e7ad7793f1bf44455",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.5.0",
+        "requires_dist": [
+          "unicodedata2 ; extra == 'unicode_backport'"
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/charset-normalizer/2.0.10/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.3",
+      "filename": "colorama-0.4.3-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/c9/dc/45cdef1b4d119eb96316b3117e6d5708a08029992b2fee2c143c7a0a5cc5/colorama-0.4.3-py2.py3-none-any.whl",
+      "sha256": "7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/colorama/0.4.3/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/c9/dc/45cdef1b4d119eb96316b3117e6d5708a08029992b2fee2c143c7a0a5cc5/colorama-0.4.3-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "docutils",
+      "version": "0.15.2",
+      "filename": "docutils-0.15.2-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl",
+      "sha256": "6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0",
+      "format": "wheel",
+      "license": "Public-domain / PSF / BSD-2-Clause / GPL-3.0 (per-file; inspect COPYING.txt)",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/docutils/0.15.2/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "easyprocess",
+      "version": "0.2.8",
+      "filename": "EasyProcess-0.2.8-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/7e/63/57755fadd28c989d578862f1ed7995348ed666333e03cdab6f6ea3f26ab0/EasyProcess-0.2.8-py2.py3-none-any.whl",
+      "sha256": "e8258e8fafddc97a9780bafa83a0b7a7223e3679478ebc7a64cb320d434354e5",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/easyprocess/0.2.8/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/7e/63/57755fadd28c989d578862f1ed7995348ed666333e03cdab6f6ea3f26ab0/EasyProcess-0.2.8-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "exceptiongroup",
+      "version": "1.0.4",
+      "filename": "exceptiongroup-1.0.4-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/ce/2e/9a327cc0d2d674ee2d570ee30119755af772094edba86d721dda94404d1a/exceptiongroup-1.0.4-py3-none-any.whl",
+      "sha256": "542adf9dea4055530d6e1279602fa5cb11dab2395fa650b8674eaec35fc4a828",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "pytest >= 6 ; extra == \"test\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/exceptiongroup/1.0.4/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "gitdb",
+      "version": "4.0.10",
+      "filename": "gitdb-4.0.10-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/21/a6/35f83efec687615c711fe0a09b67e58f6d1254db27b1013119de46f450bd/gitdb-4.0.10-py3-none-any.whl",
+      "sha256": "c286cf298426064079ed96a9e4a9d39e7f3e9bf15ba60701e95f5492f28415c7",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "smmap (<6,>=3.0.1)"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "smmap>=3.0.1,<6"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/gitdb/4.0.10/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "smmap",
+      "version": "5.0.0",
+      "filename": "smmap-5.0.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/6d/01/7caa71608bc29952ae09b0be63a539e50d2484bc37747797a66a60679856/smmap-5.0.0-py3-none-any.whl",
+      "sha256": "2aba19d6a040e78d8b09de5c57e96207b09ed71d8e55ce0959eeee6c8e190d94",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.6",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/smmap/5.0.0/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/6d/01/7caa71608bc29952ae09b0be63a539e50d2484bc37747797a66a60679856/smmap-5.0.0-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "gitpython",
+      "version": "3.1.44",
+      "filename": "GitPython-3.1.44-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/1d/9a/4114a9057db2f1462d5c8f8390ab7383925fe1ac012eaa42402ad65c2963/GitPython-3.1.44-py3-none-any.whl",
+      "sha256": "9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110",
+      "format": "wheel",
+      "license": "BSD-3-Clause",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "gitdb<5,>=4.0.1",
+          "typing-extensions>=3.7.4.3; python_version < \"3.8\"",
+          "coverage[toml]; extra == \"test\"",
+          "ddt!=1.4.3,>=1.1.1; extra == \"test\"",
+          "mock; python_version < \"3.8\" and extra == \"test\"",
+          "mypy; extra == \"test\"",
+          "pre-commit; extra == \"test\"",
+          "pytest>=7.3.1; extra == \"test\"",
+          "pytest-cov; extra == \"test\"",
+          "pytest-instafail; extra == \"test\"",
+          "pytest-mock; extra == \"test\"",
+          "pytest-sugar; extra == \"test\"",
+          "typing-extensions; python_version < \"3.11\" and extra == \"test\"",
+          "sphinx<7.2,>=7.1.2; extra == \"doc\"",
+          "sphinx_rtd_theme; extra == \"doc\"",
+          "sphinx-autodoc-typehints; extra == \"doc\""
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "gitdb>=4.0.1,<5"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/gitpython/3.1.44/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "idna",
+      "version": "3.7",
+      "filename": "idna-3.7-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+      "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.5",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/idna/3.7/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "imageio",
+      "version": "2.8.0",
+      "filename": "imageio-2.8.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/4c/2b/9dd19644f871b10f7e32eb2dbd6b45149c350b4d5f2893e091b882e03ab7/imageio-2.8.0-py3-none-any.whl",
+      "sha256": "1e4ab29b3775bb093c7a35854a0412857145450183344678829b30e72263b001",
+      "format": "wheel",
+      "license": "BSD-2-Clause",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.5",
+        "requires_dist": [
+          "numpy",
+          "pillow",
+          "imageio-ffmpeg ; extra == 'ffmpeg'",
+          "astropy ; extra == 'fits'",
+          "astropy ; extra == 'full'",
+          "gdal ; extra == 'full'",
+          "imageio-ffmpeg ; extra == 'full'",
+          "itk ; extra == 'full'",
+          "gdal ; extra == 'gdal'",
+          "itk ; extra == 'itk'"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "numpy",
+          "pillow"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/imageio/2.8.0/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/4c/2b/9dd19644f871b10f7e32eb2dbd6b45149c350b4d5f2893e091b882e03ab7/imageio-2.8.0-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "importlib-metadata",
+      "version": "1.6.1",
+      "filename": "importlib_metadata-1.6.1-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/98/13/a1d703ec396ade42c1d33df0e1cb691a28b7c08b336a5683912c87e04cd7/importlib_metadata-1.6.1-py2.py3-none-any.whl",
+      "sha256": "15ec6c0fd909e893e3a08b3a7c76ecb149122fb14b7efe1199ddd4c7c57ea958",
+      "format": "wheel",
+      "license": "Apache-2.0",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7",
+        "requires_dist": [
+          "zipp (>=0.5)",
+          "pathlib2 ; python_version < \"3\"",
+          "contextlib2 ; python_version < \"3\"",
+          "configparser (>=3.5) ; python_version < \"3\"",
+          "sphinx ; extra == 'docs'",
+          "rst.linker ; extra == 'docs'",
+          "packaging ; extra == 'testing'",
+          "pep517 ; extra == 'testing'",
+          "importlib-resources (>=1.3) ; (python_version < \"3.9\") and extra == 'testing'"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "zipp>=0.5"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/importlib-metadata/1.6.1/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "filename": "jinja2-3.1.6-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl",
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "MarkupSafe>=2.0",
+          "Babel>=2.7; extra == \"i18n\""
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "MarkupSafe>=2.0"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/Jinja2/3.1.6/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "jmespath",
+      "version": "0.9.5",
+      "filename": "jmespath-0.9.5-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/a3/43/1e939e1fcd87b827fe192d0c9fc25b48c5b3368902bfb913de7754b0dc03/jmespath-0.9.5-py2.py3-none-any.whl",
+      "sha256": "695cb76fa78a10663425d5b73ddc5714eb711157e52704d69be03b1a02ba4fec",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/jmespath/0.9.5/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/a3/43/1e939e1fcd87b827fe192d0c9fc25b48c5b3368902bfb913de7754b0dc03/jmespath-0.9.5-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.2",
+      "filename": "MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/44/06/e7175d06dd6e9172d4a69a72592cb3f7a996a9c396eee29082826449bbc3/MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl",
+      "sha256": "6af100e168aa82a50e186c82875a5893c5597a0c1ccdb0d8b40240b1f28b969a",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.9",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/MarkupSafe/3.0.2/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/44/06/e7175d06dd6e9172d4a69a72592cb3f7a996a9c396eee29082826449bbc3/MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl.metadata"
+      }
+    },
+    {
+      "name": "more-itertools",
+      "version": "8.4.0",
+      "filename": "more_itertools-8.4.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/ef/9b/6c35ec5483710492e21252465160ee508170159f7e0e2d6cd769022f52f6/more_itertools-8.4.0-py3-none-any.whl",
+      "sha256": "b78134b2063dd214000685165d81c154522c3ee0a1c0d4d113c80361c234c5a2",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.5",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/more-itertools/8.4.0/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/ef/9b/6c35ec5483710492e21252465160ee508170159f7e0e2d6cd769022f52f6/more_itertools-8.4.0-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "numpy",
+      "version": "1.23.0",
+      "filename": "numpy-1.23.0-cp310-cp310-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/34/1c/1c9ec57f522822e7507fb5cf69b153f857405518d8f50fa4ff94f43385be/numpy-1.23.0-cp310-cp310-win_amd64.whl",
+      "sha256": "97a76604d9b0e79f59baeca16593c711fddb44936e40310f78bfef79ee9a835f",
+      "format": "wheel",
+      "license": "BSD plus bundled component licenses",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.8",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/numpy/1.23.0/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/34/1c/1c9ec57f522822e7507fb5cf69b153f857405518d8f50fa4ff94f43385be/numpy-1.23.0-cp310-cp310-win_amd64.whl.metadata"
+      }
+    },
+    {
+      "name": "packaging",
+      "version": "20.4",
+      "filename": "packaging-20.4-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/46/19/c5ab91b1b05cfe63cccd5cfc971db9214c6dd6ced54e33c30d5af1d2bc43/packaging-20.4-py2.py3-none-any.whl",
+      "sha256": "998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181",
+      "format": "wheel",
+      "license": "BSD-2-Clause OR Apache-2.0",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
+        "requires_dist": [
+          "pyparsing (>=2.0.2)",
+          "six"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "pyparsing>=2.0.2",
+          "six"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/packaging/20.4/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "patch-ng",
+      "version": "1.19.1",
+      "filename": "patch_ng-1.19.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/2c/ef/c60c07b2f9d973672608815e4c176943146c353d3b60fdab914a6dcd44e8/patch_ng-1.19.1-py3-none-any.whl",
+      "sha256": "d45fd47b3f74b48c3e336690341876bb26244a077a06f5f7e6e47c19c15c1ca4",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.6",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/patch-ng/1.19.1/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/2c/ef/c60c07b2f9d973672608815e4c176943146c353d3b60fdab914a6dcd44e8/patch_ng-1.19.1-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "pillow",
+      "version": "10.3.0",
+      "filename": "pillow-10.3.0-cp310-cp310-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/75/4c/2a850f886a2de7fbd25eedd2c40afec56db872b3e52491d8953698080505/pillow-10.3.0-cp310-cp310-win_amd64.whl",
+      "sha256": "f0d0591a0aeaefdaf9a5e545e7485f89910c977087e7de2b6c388aec32011e9f",
+      "format": "wheel",
+      "license": "HPND plus bundled component licenses",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.8",
+        "requires_dist": [
+          "furo; extra == \"docs\"",
+          "olefile; extra == \"docs\"",
+          "sphinx>=2.4; extra == \"docs\"",
+          "sphinx-copybutton; extra == \"docs\"",
+          "sphinx-inline-tabs; extra == \"docs\"",
+          "sphinx-removed-in; extra == \"docs\"",
+          "sphinxext-opengraph; extra == \"docs\"",
+          "olefile; extra == \"fpx\"",
+          "olefile; extra == \"mic\"",
+          "check-manifest; extra == \"tests\"",
+          "coverage; extra == \"tests\"",
+          "defusedxml; extra == \"tests\"",
+          "markdown2; extra == \"tests\"",
+          "olefile; extra == \"tests\"",
+          "packaging; extra == \"tests\"",
+          "pyroma; extra == \"tests\"",
+          "pytest; extra == \"tests\"",
+          "pytest-cov; extra == \"tests\"",
+          "pytest-timeout; extra == \"tests\"",
+          "typing-extensions; python_version < \"3.10\" and extra == \"typing\"",
+          "defusedxml; extra == \"xmp\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pillow/10.3.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "progressbar2",
+      "version": "3.53.1",
+      "filename": "progressbar2-3.53.1-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/25/8c/d28cd70b6e0b870a2d2a151bdbecf4c678199d31731edb44fc8035d3bb6d/progressbar2-3.53.1-py2.py3-none-any.whl",
+      "sha256": "fe2738e7ecb7df52ad76307fe610c460c52b50f5335fd26c3ab80ff7655ba1e0",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [
+          "python-utils (>=2.3.0)",
+          "six",
+          "sphinx (>=1.7.4) ; extra == 'docs'",
+          "flake8 (>=3.7.7) ; extra == 'tests'",
+          "pytest (>=4.6.9) ; extra == 'tests'",
+          "pytest-cov (>=2.6.1) ; extra == 'tests'",
+          "pytest-flakes (>=4.0.0) ; extra == 'tests'",
+          "pytest-pep8 (>=1.0.6) ; extra == 'tests'",
+          "freezegun (>=0.3.11) ; extra == 'tests'",
+          "sphinx (>=1.8.5) ; extra == 'tests'"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "python-utils>=2.3.0",
+          "six"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/progressbar2/3.53.1/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/25/8c/d28cd70b6e0b870a2d2a151bdbecf4c678199d31731edb44fc8035d3bb6d/progressbar2-3.53.1-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "psutil",
+      "version": "5.9.8",
+      "filename": "psutil-5.9.8-cp37-abi3-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/93/52/3e39d26feae7df0aa0fd510b14012c3678b36ed068f7d78b8d8784d61f0e/psutil-5.9.8-cp37-abi3-win_amd64.whl",
+      "sha256": "8db4c1b57507eef143a15a6884ca10f7c73876cdf5d51e713151c1236a0e68cf",
+      "format": "wheel",
+      "license": "BSD-3-Clause",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*",
+        "requires_dist": [
+          "enum34; python_version <= \"3.4\" and extra == \"test\"",
+          "ipaddress; python_version < \"3.0\" and extra == \"test\"",
+          "mock; python_version < \"3.0\" and extra == \"test\"",
+          "pywin32; sys_platform == \"win32\" and extra == \"test\"",
+          "wmi; sys_platform == \"win32\" and extra == \"test\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/psutil/5.9.8/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "pyparsing",
+      "version": "2.4.7",
+      "filename": "pyparsing-2.4.7-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl",
+      "sha256": "ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pyparsing/2.4.7/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "pyscreenshot",
+      "version": "0.6",
+      "filename": "pyscreenshot-0.6-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/fe/27/50ab425789118be0ea390cf2b5e6dc65bafe2b5a9a2efb1db8426836124b/pyscreenshot-0.6-py2.py3-none-any.whl",
+      "sha256": "1af20739c754f7fa1e7f792c0c682fd89e30c9db4004252792830cc538727235",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+        "requires_dist": [
+          "EasyProcess"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "EasyProcess"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pyscreenshot/0.6/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "pytest-mock",
+      "version": "3.8.2",
+      "filename": "pytest_mock-3.8.2-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/64/ec/e21d6a5c31df566847de2dc7e7c1870c67cf10cb97cb0a1ea0e389446e60/pytest_mock-3.8.2-py3-none-any.whl",
+      "sha256": "8a9e226d6c0ef09fcf20c94eb3405c388af438a90f3e39687f84166da82d5948",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "pytest (>=5.0)",
+          "pre-commit ; extra == 'dev'",
+          "tox ; extra == 'dev'",
+          "pytest-asyncio ; extra == 'dev'"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "pytest>=5.0"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pytest-mock/3.8.2/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "pytest-timeout",
+      "version": "2.1.0",
+      "filename": "pytest_timeout-2.1.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/23/02/c85ca1e18e0c00d5ee45f4012f241098c8995294e1178367cb638a26b6c8/pytest_timeout-2.1.0-py3-none-any.whl",
+      "sha256": "f6f50101443ce70ad325ceb4473c4255e9d74e3c7cd0ef827309dfa4c0d975c6",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.6",
+        "requires_dist": [
+          "pytest (>=5.0.0)"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "pytest>=5.0.0"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pytest-timeout/2.1.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "pytest",
+      "version": "7.2.0",
+      "filename": "pytest-7.2.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/67/68/a5eb36c3a8540594b6035e6cdae40c1ef1b6a2bfacbecc3d1a544583c078/pytest-7.2.0-py3-none-any.whl",
+      "sha256": "892f933d339f068883b6fd5a459f03d85bfcb355e4981e146d2c7616c21fef71",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "attrs (>=19.2.0)",
+          "iniconfig",
+          "packaging",
+          "pluggy (<2.0,>=0.12)",
+          "exceptiongroup (>=1.0.0rc8) ; python_version < \"3.11\"",
+          "tomli (>=1.0.0) ; python_version < \"3.11\"",
+          "importlib-metadata (>=0.12) ; python_version < \"3.8\"",
+          "colorama ; sys_platform == \"win32\"",
+          "argcomplete ; extra == 'testing'",
+          "hypothesis (>=3.56) ; extra == 'testing'",
+          "mock ; extra == 'testing'",
+          "nose ; extra == 'testing'",
+          "pygments (>=2.7.2) ; extra == 'testing'",
+          "requests ; extra == 'testing'",
+          "xmlschema ; extra == 'testing'"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "attrs>=19.2.0",
+          "iniconfig",
+          "packaging",
+          "pluggy>=0.12,<2.0",
+          "exceptiongroup>=1.0.0rc8; python_version < 3.11",
+          "tomli>=1.0.0; python_version < 3.11",
+          "colorama; sys_platform == win32"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/pytest/7.2.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.8.1",
+      "filename": "python_dateutil-2.8.1-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl",
+      "sha256": "75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a",
+      "format": "wheel",
+      "license": "BSD OR Apache-2.0",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+        "requires_dist": [
+          "six (>=1.5)"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "six>=1.5"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/python-dateutil/2.8.1/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "python-utils",
+      "version": "2.5.6",
+      "filename": "python_utils-2.5.6-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/62/47/974eb168d5012bc8841d4b5be10e345f3e706e25fa1661b68f193e16ca67/python_utils-2.5.6-py2.py3-none-any.whl",
+      "sha256": "18fbc1a1df9a9061e3059a48ebe5c8a66b654d688b0e3ecca8b339a7f168f208",
+      "format": "wheel",
+      "license": "BSD",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [
+          "six"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "six"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/python-utils/2.5.6/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/62/47/974eb168d5012bc8841d4b5be10e345f3e706e25fa1661b68f193e16ca67/python_utils-2.5.6-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "requests",
+      "version": "2.32.0",
+      "filename": "requests-2.32.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/24/e8/09e8d662a9675a4e4f5dd7a8e6127b463a091d2703ed931a64aa66d00065/requests-2.32.0-py3-none-any.whl",
+      "sha256": "f2c3881dddb70d056c5bd7600a4fae312b2a300e39be6a118d30b90bd27262b5",
+      "format": "wheel",
+      "license": "Apache-2.0",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.8",
+        "requires_dist": [
+          "charset-normalizer<4,>=2",
+          "idna<4,>=2.5",
+          "urllib3<3,>=1.21.1",
+          "certifi>=2017.4.17",
+          "PySocks!=1.5.7,>=1.5.6; extra == \"socks\"",
+          "chardet<6,>=3.0.2; extra == \"use-chardet-on-py3\""
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "charset-normalizer>=2,<4",
+          "idna>=2.5,<4",
+          "urllib3>=1.21.1,<3",
+          "certifi>=2017.4.17"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": true,
+      "yanked_reason": "Yanked due to conflicts with CVE-2024-35195 mitigation",
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/requests/2.32.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "scipy",
+      "version": "1.8.1",
+      "filename": "scipy-1.8.1-cp310-cp310-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/31/c2/0b8758ebaeb43e089eb56168390824a830f9f419ae07d755d99a46e5a937/scipy-1.8.1-cp310-cp310-win_amd64.whl",
+      "sha256": "4e53a55f6a4f22de01ffe1d2f016e30adedb67a699a310cdcac312806807ca81",
+      "format": "wheel",
+      "license": "BSD plus bundled component licenses",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.8,<3.11",
+        "requires_dist": [
+          "numpy (<1.25.0,>=1.17.3)"
+        ],
+        "active_dependencies_for_windows_cpython310": [
+          "numpy>=1.17.3,<1.25.0"
+        ],
+        "extras_selected": []
+      },
+      "transitive_notes": "All active dependency names and version ranges are covered by the retained base lock.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/scipy/1.8.1/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "six",
+      "version": "1.13.0",
+      "filename": "six-1.13.0-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl",
+      "sha256": "1f1b7d42e254082a9db6279deae68afb421ceba6158efa6131de7b3003ee93fd",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.6, !=3.0.*, !=3.1.*",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/six/1.13.0/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "urllib3",
+      "version": "1.26.19",
+      "filename": "urllib3-1.26.19-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/ae/6a/99eaaeae8becaa17a29aeb334a18e5d582d873b6f084c11f02581b8d7f7f/urllib3-1.26.19-py2.py3-none-any.whl",
+      "sha256": "37a0344459b199fce0e80b0d3569837ec6b6937435c5244e7fd73fa6006830f3",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7",
+        "requires_dist": [
+          "brotlicffi>=0.8.0; ((os_name != \"nt\" or python_version >= \"3\") and platform_python_implementation != \"CPython\") and extra == \"brotli\"",
+          "brotli==1.0.9; (os_name != \"nt\" and python_version < \"3\" and platform_python_implementation == \"CPython\") and extra == \"brotli\"",
+          "brotlipy>=0.6.0; (os_name == \"nt\" and python_version < \"3\") and extra == \"brotli\"",
+          "brotli>=1.0.9; (python_version >= \"3\" and platform_python_implementation == \"CPython\") and extra == \"brotli\"",
+          "pyOpenSSL>=0.14; extra == \"secure\"",
+          "cryptography>=1.3.4; extra == \"secure\"",
+          "idna>=2.0.0; extra == \"secure\"",
+          "certifi; extra == \"secure\"",
+          "urllib3-secure-extra; extra == \"secure\"",
+          "ipaddress; python_version == \"2.7\" and extra == \"secure\"",
+          "PySocks!=1.5.7,<2.0,>=1.5.6; extra == \"socks\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/urllib3/1.26.19/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.2.5",
+      "filename": "wcwidth-0.2.5-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl",
+      "sha256": "beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [
+          "backports.functools-lru-cache (>=1.2.1) ; python_version < \"3.2\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/wcwidth/0.2.5/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "zipp",
+      "version": "3.19.1",
+      "filename": "zipp-3.19.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/82/1a/ac67760425f2477b1da593b347db66d474130747e6e5285d08c7f2d5884a/zipp-3.19.1-py3-none-any.whl",
+      "sha256": "2828e64edb5386ea6a52e7ba7cdb17bb30a73a858f5eb6eb93d8d36f5ea26091",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.8",
+        "requires_dist": [
+          "sphinx>=3.5; extra == \"doc\"",
+          "jaraco.packaging>=9.3; extra == \"doc\"",
+          "rst.linker>=1.9; extra == \"doc\"",
+          "furo; extra == \"doc\"",
+          "sphinx-lint; extra == \"doc\"",
+          "jaraco.tidelift>=1.4; extra == \"doc\"",
+          "pytest!=8.1.*,>=6; extra == \"test\"",
+          "pytest-checkdocs>=2.4; extra == \"test\"",
+          "pytest-cov; extra == \"test\"",
+          "pytest-mypy; extra == \"test\"",
+          "pytest-enabler>=2.2; extra == \"test\"",
+          "pytest-ruff>=0.2.1; extra == \"test\"",
+          "jaraco.itertools; extra == \"test\"",
+          "jaraco.functools; extra == \"test\"",
+          "more-itertools; extra == \"test\"",
+          "big-O; extra == \"test\"",
+          "pytest-ignore-flaky; extra == \"test\"",
+          "jaraco.test; extra == \"test\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/zipp/3.19.1/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "tomli",
+      "version": "2.0.1",
+      "filename": "tomli-2.0.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
+      "sha256": "939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.7",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/tomli/2.0.1/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "iniconfig",
+      "version": "1.1.1",
+      "filename": "iniconfig-1.1.1-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/9b/dd/b3c12c6d707058fa947864b67f0c4e0c39ef8610988d7baea9578f3c48f3/iniconfig-1.1.1-py2.py3-none-any.whl",
+      "sha256": "011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/iniconfig/1.1.1/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/9b/dd/b3c12c6d707058fa947864b67f0c4e0c39ef8610988d7baea9578f3c48f3/iniconfig-1.1.1-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "toml",
+      "version": "0.10.2",
+      "filename": "toml-0.10.2-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl",
+      "sha256": "806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/toml/0.10.2/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "resolvelib",
+      "version": "0.9.0",
+      "filename": "resolvelib-0.9.0-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/67/b4/4f785cf7ac402e84acef7f450912cc673f0862839196832342be97869d87/resolvelib-0.9.0-py2.py3-none-any.whl",
+      "sha256": "597adcbdf81d62d0cde55d90faa8e79187ec0f18e5012df30bd7a751b26343ae",
+      "format": "wheel",
+      "license": "ISC",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [
+          "html5lib ; extra == 'examples'",
+          "packaging ; extra == 'examples'",
+          "pygraphviz ; extra == 'examples'",
+          "requests ; extra == 'examples'",
+          "black ; extra == 'lint'",
+          "flake8 ; extra == 'lint'",
+          "mypy ; extra == 'lint'",
+          "isort ; extra == 'lint'",
+          "types-requests ; extra == 'lint'",
+          "build ; extra == 'release'",
+          "towncrier ; extra == 'release'",
+          "twine ; extra == 'release'",
+          "commentjson ; extra == 'test'",
+          "packaging ; extra == 'test'",
+          "pytest ; extra == 'test'"
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/resolvelib/0.9.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "puremagic",
+      "version": "1.28",
+      "filename": "puremagic-1.28-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/c5/53/200a97332d10ed3edd7afcbc5f5543920ac59badfe5762598327999f012e/puremagic-1.28-py3-none-any.whl",
+      "sha256": "e16cb9708ee2007142c37931c58f07f7eca956b3472489106a7245e5c3aa1241",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active install dependency is declared for this target; extras and incompatible Python-version markers are inactive.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/puremagic/1.28/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/c5/53/200a97332d10ed3edd7afcbc5f5543920ac59badfe5762598327999f012e/puremagic-1.28-py3-none-any.whl.metadata"
+      }
+    }
+  ],
+  "build_tools": [
+    {
+      "name": "wheel",
+      "version": "0.38.4",
+      "filename": "wheel-0.38.4-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/bd/7c/d38a0b30ce22fc26ed7dbc087c6d00851fb3395e9d0dac40bec1f905030c/wheel-0.38.4-py3-none-any.whl",
+      "sha256": "b60533f3f5d530e971d6737ca6d58681ee434818fab630c83a734bb10c083ce8",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": false,
+      "markers": {
+        "requires_python": ">=3.7",
+        "requires_dist": [
+          "pytest>=3.0.0; extra == test"
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "Explicitly separate local-build tool proposal, not a pin from either requirements lock. No runtime dependencies for normal installation; use bundled pip 23.0.1/setuptools 65.5.0, no automatic upgrades.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/wheel/0.38.4/json"
+      }
+    }
+  ],
+  "dcc_optional_artifacts": [
+    {
+      "name": "cachetools",
+      "version": "4.2.1",
+      "filename": "cachetools-4.2.1-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/bb/72/8df2e0dc991f1a1d2c6869404e7622e8ee50d80bff357dbb57c3df70305b/cachetools-4.2.1-py3-none-any.whl",
+      "sha256": "1d9d5f567be80f7c07d765e21b814326d78c61eb0c3a637dffc0e5d1796cb2e2",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": "~=3.5",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active normal-install dependency for Windows CPython 3.10; unrequested extras remain excluded.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/cachetools/4.2.1/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/bb/72/8df2e0dc991f1a1d2c6869404e7622e8ee50d80bff357dbb57c3df70305b/cachetools-4.2.1-py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "click",
+      "version": "7.1.2",
+      "filename": "click-7.1.2-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl",
+      "sha256": "dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc",
+      "format": "wheel",
+      "license": "BSD-3-Clause",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active normal-install dependency for Windows CPython 3.10; unrequested extras remain excluded.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/click/7.1.2/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "dynaconf",
+      "version": "3.1.4",
+      "filename": "dynaconf-3.1.4-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/88/0f/bee11fe921f0d542b5cd64ed4fbc3621148298f573f865a66ee7078c34be/dynaconf-3.1.4-py2.py3-none-any.whl",
+      "sha256": "e6f383b84150b70fc439c8b2757581a38a58d07962aa14517292dcce1a77e160",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [
+          "typing ; python_version < \"3.5\"",
+          "redis ; extra == 'all'",
+          "ruamel.yaml ; extra == 'all'",
+          "configobj ; extra == 'all'",
+          "hvac ; extra == 'all'",
+          "configobj ; extra == 'configobj'",
+          "configobj ; extra == 'ini'",
+          "redis ; extra == 'redis'",
+          "toml ; extra == 'toml'",
+          "hvac ; extra == 'vault'",
+          "ruamel.yaml ; extra == 'yaml'"
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active normal-install dependency for Windows CPython 3.10; unrequested extras remain excluded.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/dynaconf/3.1.4/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "hashids",
+      "version": "1.3.1",
+      "filename": "hashids-1.3.1-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/6e/46/ffdf25b1f6dbb1ce588ccb818e983df9e3d30594679f5a08c865a59cead7/hashids-1.3.1-py2.py3-none-any.whl",
+      "sha256": "8bddd1acba501bfc9306e7e5a99a1667f4f2cacdc20cbd70bcc5ddfa5147c94c",
+      "format": "wheel",
+      "license": "MIT (classifier; License field UNKNOWN)",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=2.7",
+        "requires_dist": [
+          "pytest >=2.1.0 ; extra == \"test\""
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active normal-install dependency for Windows CPython 3.10; unrequested extras remain excluded.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/hashids/1.3.1/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/6e/46/ffdf25b1f6dbb1ce588ccb818e983df9e3d30594679f5a08c865a59cead7/hashids-1.3.1-py2.py3-none-any.whl.metadata"
+      }
+    },
+    {
+      "name": "python-box",
+      "version": "5.3.0",
+      "filename": "python_box-5.3.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/ae/55/b81be1c1456d93db93905b364d19cac5dde22fb8f442b42d41087c2fe28f/python_box-5.3.0-py3-none-any.whl",
+      "sha256": "f2a531f9f5bbef078c175fad6abb31e9b59d40d121ea79993197e6bb221c6be6",
+      "format": "wheel",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": ">=3.6",
+        "requires_dist": [
+          "PyYAML ; extra == 'pyyaml'",
+          "ruamel.yaml ; extra == 'all'",
+          "toml ; extra == 'all'",
+          "msgpack ; extra == 'all'",
+          "msgpack ; extra == 'msgpack'",
+          "ruamel.yaml ; extra == 'ruamel.yaml'",
+          "toml ; extra == 'toml'"
+        ],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active normal-install dependency for Windows CPython 3.10; unrequested extras remain excluded.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/python-box/5.3.0/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "unipath",
+      "version": "1.1",
+      "filename": "Unipath-1.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/8c/56/de14fb87407047321dad378cb403c6a9adfb7ba394a6f0e9d8839b8b0ef3/Unipath-1.1.tar.gz",
+      "sha256": "09839adcc72e8a24d4f76d63656f30b5a1f721fc40c9bcd79d8c67bdd8b47dae",
+      "format": "sdist",
+      "license": "MIT",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "Only the py2-none-any wheel is published, incompatible with CPython 3.10. Keep the original hashed sdist. Official v1.1 setup.py has no install_requires/setup_requires/use_2to3; audit acquired payload before offline wheel build.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/unipath/1.1/json",
+        "wheel_core_metadata": null
+      }
+    },
+    {
+      "name": "wincertstore",
+      "version": "0.2",
+      "filename": "wincertstore-0.2-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/d1/67/12f477fa1cc8cbcdc78027c9fb0933ad41daf2e95a29d1cc8f34fe80c692/wincertstore-0.2-py2.py3-none-any.whl",
+      "sha256": "22d5eebb52df88a8d4014d5cf6d1b6c3a5d469e6c3b2e2854f3a003e48872356",
+      "format": "wheel",
+      "license": "PSF",
+      "lock_sha_match": true,
+      "markers": {
+        "top_level_requirement": null,
+        "requires_python": null,
+        "requires_dist": [],
+        "active_dependencies_for_windows_cpython310": [],
+        "extras_selected": []
+      },
+      "transitive_notes": "No active normal-install dependency for Windows CPython 3.10; unrequested extras remain excluded.",
+      "yanked": false,
+      "yanked_reason": null,
+      "metadata_source": {
+        "release_json": "https://pypi.org/pypi/wincertstore/0.2/json",
+        "wheel_core_metadata": "https://files.pythonhosted.org/packages/d1/67/12f477fa1cc8cbcdc78027c9fb0933ad41daf2e95a29d1cc8f34fe80c692/wincertstore-0.2-py2.py3-none-any.whl.metadata"
+      }
+    }
+  ],
+  "excluded_aws": {
+    "provision": false,
+    "parent_decision": "Do not acquire or install boto3/botocore/s3transfer; removed only their three base lock blocks. No AWS/CI source edits.",
+    "original_pins": [
+      {
+        "name": "boto3",
+        "version": "1.20.44",
+        "license": "Apache-2.0",
+        "original_lock_hashes": [
+          "26f18ca7411615f33d8d1bf60cc8efe5b331a57b3013d5f8f3587cd5350c27cb",
+          "4470f64e4af609ff678055338c96a6f7cbe601d1fb06a4ea7dc8d9223c2e527a"
+        ],
+        "active_dependencies": [
+          "botocore>=1.23.44,<1.24.0",
+          "jmespath>=0.7.1,<1.0.0",
+          "s3transfer>=0.5.0,<0.6.0"
+        ],
+        "metadata_source": "https://pypi.org/pypi/boto3/1.20.44/json"
+      },
+      {
+        "name": "botocore",
+        "version": "1.23.44",
+        "license": "Apache-2.0",
+        "original_lock_hashes": [
+          "11483a493de4a76ef218d8cd3980c63550d006a0d082c10d53c0954184ca542a",
+          "8e5317f84fc1118bff58fa6fa79a9b62083e75a2a9c62feb3ea73694c550b99d"
+        ],
+        "active_dependencies": [
+          "jmespath>=0.7.1,<1.0.0",
+          "python-dateutil>=2.1,<3.0.0",
+          "urllib3>=1.25.4,<1.27"
+        ],
+        "metadata_source": "https://pypi.org/pypi/botocore/1.23.44/json"
+      },
+      {
+        "name": "s3transfer",
+        "version": "0.5.0",
+        "license": "Apache-2.0",
+        "original_lock_hashes": [
+          "50ed823e1dc5868ad40c8dc92072f757aa0e653a192845c94a3b676f4a62da4c",
+          "9c1dc369814391a6bda20ebbf4b70a0f34630592c9aa520856bf384916af2803"
+        ],
+        "active_dependencies": [
+          "botocore>=1.12.36,<2.0a0"
+        ],
+        "metadata_source": "https://pypi.org/pypi/s3transfer/0.5.0/json"
+      }
+    ],
+    "consumers": [
+      {
+        "path": "scripts/build/bootstrap/incremental_build_util.py",
+        "imports": [
+          "boto3",
+          "botocore"
+        ],
+        "purpose": "EC2/EBS and instance metadata"
+      },
+      {
+        "path": "scripts/build/tools/upload_to_s3.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "S3 upload"
+      },
+      {
+        "path": "scripts/build/tools/download_from_s3.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "S3 download"
+      },
+      {
+        "path": "scripts/build/tools/sync_repo.py",
+        "imports": [
+          "boto3",
+          "botocore"
+        ],
+        "purpose": "SSM remote build synchronization"
+      },
+      {
+        "path": "scripts/build/tools/ebs_snapshot.py",
+        "imports": [
+          "boto3",
+          "botocore"
+        ],
+        "purpose": "EC2/EBS snapshots"
+      },
+      {
+        "path": "scripts/build/tools/delete_stale_ebs.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "Lambda/EBS administration"
+      },
+      {
+        "path": "scripts/build/tools/delete_inactive_ebs.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "EC2 resource administration"
+      },
+      {
+        "path": "scripts/build/lambda/trigger_first_build.py",
+        "imports": [
+          "boto3",
+          "botocore"
+        ],
+        "purpose": "Secrets Manager/build trigger"
+      },
+      {
+        "path": "scripts/build/lambda/delete_github_branch_ebs.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "Lambda/Secrets Manager/EBS administration"
+      },
+      {
+        "path": "scripts/build/lambda/delete_branch_ebs.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "EC2/EBS administration"
+      },
+      {
+        "path": "scripts/build/TestImpactAnalysis/storage_query_tool/s3_storage_query_tool.py",
+        "imports": [
+          "boto3",
+          "botocore"
+        ],
+        "purpose": "S3 TIA storage query"
+      },
+      {
+        "path": "scripts/build/TestImpactAnalysis/persistent_storage/tiaf_persistent_storage_s3.py",
+        "imports": [
+          "boto3",
+          "botocore"
+        ],
+        "purpose": "S3 TIA persistence"
+      },
+      {
+        "path": "scripts/metrics/common/query_metrics.py",
+        "imports": [
+          "boto3"
+        ],
+        "purpose": "AWS/S3 build metrics"
+      }
+    ],
+    "notes": [
+      "No active AWS imports were found in the five installed local setup packages or audited local Editor/test tooling. The search covered Python sources in Tools, scripts, Gems, AutomatedTesting and python.",
+      "s3transfer has no direct repository import in that scope; it is a boto3 transitive dependency.",
+      "scripts/build/TestImpactAnalysis/persistent_storage/__init__.py eagerly imports PersistentStorageS3. Local TIA imports can therefore fail without boto3 even when no S3 bucket is selected; CI/TIA remain excluded and unverified.",
+      "AutomatedTesting/Gem/PythonTests/automatedtesting_shared/screenshot_utils.py mentions an unresolved boto3/s3_utils dependency in a comment, not an active AWS import."
+    ]
+  },
+  "local_setups": [
+    {
+      "path": "Tools/LyTestTools/setup.py",
+      "name": "ly_test_tools",
+      "version": "1.0.0",
+      "install_requires": [
+        "imageio",
+        "numpy",
+        "pluggy",
+        "psutil",
+        "pyscreenshot",
+        "pytest>=7.2.0",
+        "pytest-mock",
+        "pytest-timeout",
+        "six",
+        "scipy"
+      ],
+      "notes": "All covered by retained base lock; 64-bit guard; pytest plugin entry points."
+    },
+    {
+      "path": "Tools/RemoteConsole/ly_remote_console/setup.py",
+      "name": "ly_remote_console",
+      "version": "1.0.0",
+      "install_requires": [],
+      "notes": "tests_require mock is not a normal-install dependency; tests extra is not selected."
+    },
+    {
+      "path": "AutomatedTesting/Gem/PythonTests/EditorPythonTestTools/setup.py",
+      "name": "editor_python_test_tools",
+      "version": "1.0.0",
+      "install_requires": [
+        "ly_test_tools"
+      ],
+      "notes": "Local dependency; installed when tests are supported and engine is not INSTALLED_ENGINE."
+    },
+    {
+      "path": "scripts/o3de/setup.py",
+      "name": "o3de",
+      "version": "1.0.0",
+      "install_requires": [],
+      "notes": "No external install dependency declared."
+    },
+    {
+      "path": "Gems/Atom/RPI/Tools/setup.py",
+      "name": "atom_rpi_tools",
+      "version": "1.0.0",
+      "install_requires": [],
+      "notes": "Installed by Atom/RPI/Tools/CMakeLists.txt when PAL_TRAIT_BUILD_HOST_TOOLS."
+    }
+  ],
+  "installation_semantics": {
+    "requirements": "cmake/LYPython.cmake:162 installs the lock with pip install -r. Despite its preceding comment, this command does not pass --no-deps; active dependency closure must therefore be complete.",
+    "local_packages": "cmake/LYPython.cmake:300 uses local editable installs with --no-deps. INSTALLED_ENGINE may use local source/archive fallback. No setup_requires or pyproject/setup.cfg were found in the five local setup package roots.",
+    "pip_check": "Current LYPython pip check failure is a warning, not a fatal gate; acceptance must explicitly require its success.",
+    "closure": "Metadata-level closure for Windows CPython 3.10 with no extras is covered by retained 43 exact base pins. Markers active for pytest: exceptiongroup/tomli (Python<3.11) and colorama (win32). Inactive extras are not provisioned.",
+    "bundled_tools": {
+      "pip": "23.0.1",
+      "setuptools": "65.5.0",
+      "source": "CPython 3.10.13 ensurepip bundled wheels; no upgrades proposed."
+    },
+    "offline_proposal": "After audited manual acquisition and receipt/hash verification, use the local Release CPython 3.10.13 virtual environment with PIP_NO_INDEX=1, PIP_CONFIG_FILE=NUL, PIP_DISABLE_PIP_VERSION_CHECK=1 and only absolute local find-links. Install the separately pinned wheel build tool with its own hashed requirement, then install original base requirements with --require-hashes --no-build-isolation --no-cache-dir. Atomicwrites is built from its original hashed local sdist. No PEP517 automatic build dependency acquisition. Local repo packages use --no-deps. DCC is separately opt-in; Unipath likewise uses original local hashed sdist.",
+    "derived_wheels": "Locally built wheels are new artifacts with new genuine hashes. Do not claim their hashes match original sdist locks; record provenance and hash separately before preferring a derived wheel.",
+    "not_a_minimum_proof": "43 pins are a conservative retained base after excluding the three AWS pins, not a demonstrated mathematically minimal set of Editor imports."
+  },
+  "legal_and_validation_limits": [
+    "License fields/classifiers are metadata-level evidence, not complete redistributable payload review. Preserve each wheel's license/NOTICE/license-file records before redistribution.",
+    "NumPy/SciPy/Pillow wheels bundle native components whose individual licenses/notices require inspection after approved acquisition; JSON project license alone is insufficient.",
+    "Docutils reports public domain, PSF, BSD-2 and GPL-3 material. Inspect COPYING.txt and per-file scope; do not simplify it to BSD or decide legal acceptance here.",
+    "Certifi uses MPL-2.0; retain LICENSE. Packaging/python-dateutil dual license notices and O3DE local package Apache-2.0 OR MIT notices remain required.",
+    "requests 2.32.0 is yanked: 'Yanked due to conflicts with CVE-2024-35195 mitigation'. Exact original pin/hash retained by scope; no version bump or acceptance decision made.",
+    "Atomicwrites/Unipath source setup scripts were reviewed at official GitHub tags/commit; the actual acquired sdists still require member/path and setup/license audit before execution.",
+    "Wheel tags/Requires-Python support the Release CPython3.10 Windowsx64 selection; imports/ABI behavior, native wheels, Debug interpreter, offline install and pip check remain unexecuted.",
+    "Imageio and other tools can perform optional media/plugin/network operations at runtime; dependency acquisition closure does not prove every tool runtime is network-free.",
+    "This evidence does not establish full engine configure/build, product/runtime acceptance, complete SBOM or transitive filesystem/network isolation."
+  ]
+}

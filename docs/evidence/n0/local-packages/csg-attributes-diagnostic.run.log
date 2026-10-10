@@ -1,0 +1,20 @@
+inputA SUMMARY triangles=12 KEY=0 PLANE=0 BOUNDS=0 UV=0 CHART_CROSSINGS=0
+inputB SUMMARY triangles=12 KEY=0 PLANE=0 BOUNDS=0 UV=0 CHART_CROSSINGS=0
+union UV tri=4 corner=0 channel=0 key=4294967297:4294967297 xyz=-1,-1,1 actual=15 expected=515 delta=-500 chartSide=0.5
+union UV tri=4 corner=0 channel=1 key=4294967297:4294967297 xyz=-1,-1,1 actual=32 expected=732 delta=-700 chartSide=0.5
+union UV tri=4 corner=1 channel=0 key=4294967297:4294967297 xyz=0,-0.5,1 actual=18.5 expected=518.5 delta=-500 chartSide=0.5
+union UV tri=4 corner=1 channel=1 key=4294967297:4294967297 xyz=0,-0.5,1 actual=31 expected=731 delta=-700 chartSide=0.5
+union SUMMARY triangles=36 KEY=0 PLANE=0 BOUNDS=0 UV=4 CHART_CROSSINGS=1
+subtraction UV tri=2 corner=0 channel=0 key=4294967297:4294967297 xyz=-1,-1,1 actual=15 expected=515 delta=-500 chartSide=0.5
+subtraction UV tri=2 corner=0 channel=1 key=4294967297:4294967297 xyz=-1,-1,1 actual=32 expected=732 delta=-700 chartSide=0.5
+subtraction UV tri=2 corner=1 channel=0 key=4294967297:4294967297 xyz=0,-0.5,1 actual=18.5 expected=518.5 delta=-500 chartSide=0.5
+subtraction UV tri=2 corner=1 channel=1 key=4294967297:4294967297 xyz=0,-0.5,1 actual=31 expected=731 delta=-700 chartSide=0.5
+subtraction SUMMARY triangles=24 KEY=0 PLANE=0 BOUNDS=0 UV=4 CHART_CROSSINGS=1
+intersection UV tri=1 corner=2 channel=0 key=4294967297:4294967297 xyz=0,-0.5,1 actual=18.5 expected=518.5 delta=-500 chartSide=0.5
+intersection UV tri=1 corner=2 channel=1 key=4294967297:4294967297 xyz=0,-0.5,1 actual=31 expected=731 delta=-700 chartSide=0.5
+intersection SUMMARY triangles=12 KEY=0 PLANE=0 BOUNDS=0 UV=2 CHART_CROSSINGS=1
+chain UV tri=4 corner=0 channel=0 key=4294967297:4294967297 xyz=-1,-1,1 actual=15 expected=515 delta=-500 chartSide=0.5
+chain UV tri=4 corner=0 channel=1 key=4294967297:4294967297 xyz=-1,-1,1 actual=32 expected=732 delta=-700 chartSide=0.5
+chain UV tri=4 corner=1 channel=0 key=4294967297:4294967297 xyz=0,-0.5,1 actual=18.5 expected=518.5 delta=-500 chartSide=0.5
+chain UV tri=4 corner=1 channel=1 key=4294967297:4294967297 xyz=0,-0.5,1 actual=31 expected=731 delta=-700 chartSide=0.5
+chain SUMMARY triangles=48 KEY=0 PLANE=0 BOUNDS=0 UV=4 CHART_CROSSINGS=1

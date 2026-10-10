@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.h",
+    "sha256": "5c603eb09bff2ea51e1565186a90b90b4258e702b30d5525ae44c0a4c1f052c7"
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.cpp",
+    "sha256": "bbfb0dc5e2c79de3a60eb8c4f5980c27050b3d6a3941acb17dbb38f480f6e2da"
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Tests/CSG/WhiteBoxCsgCoreTest.cpp",
+    "sha256": "3e0c8bd358ae0805db50b1dac36dc9e2141655896393a8fd7afcd27986e94a47"
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Tests/CSG/CMakeLists.txt",
+    "sha256": "3b85decd6b7c451f333167b8830643e3c966a00ea4f861da7daa2584d6d46e07"
+  }
+]

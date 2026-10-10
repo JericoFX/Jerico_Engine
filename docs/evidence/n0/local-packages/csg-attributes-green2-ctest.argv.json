@@ -1,0 +1,11 @@
+{
+  "WorkingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "ArgumentCount": 5,
+  "Arguments": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/csg",
+    "-C",
+    "Release",
+    "--output-on-failure"
+  ]
+}

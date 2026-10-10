@@ -1,0 +1,88 @@
+﻿{
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\Scripts\\python.exe",
+  "version": "3.10.13 (heads/development-dirty:b54a874e3d, Oct 10 2026, 18:41:34) [MSC v.1944 64 bit (AMD64)]",
+  "prefix": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382",
+  "base_prefix": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\packages\\python-3.10.13-je-rev1-windows\\python",
+  "modules": {
+    "numpy": {
+      "ok": true,
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\lib\\site-packages\\numpy\\__init__.py",
+      "version": "1.23.0"
+    },
+    "scipy": {
+      "ok": true,
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\lib\\site-packages\\scipy\\__init__.py",
+      "version": "1.8.1"
+    },
+    "PIL": {
+      "ok": true,
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\lib\\site-packages\\PIL\\__init__.py",
+      "version": "10.3.0"
+    },
+    "pytest": {
+      "ok": true,
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\lib\\site-packages\\pytest\\__init__.py",
+      "version": "7.2.0"
+    },
+    "requests": {
+      "ok": true,
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\lib\\site-packages\\requests\\__init__.py",
+      "version": "2.32.0"
+    },
+    "git": {
+      "ok": true,
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python\\venv\\31e81382\\lib\\site-packages\\git\\__init__.py",
+      "version": "3.1.44"
+    },
+    "ly_test_tools": {
+      "ok": true,
+      "file": "f:\\jericoengine\\jericoengine\\tools\\lytesttools\\ly_test_tools\\__init__.py",
+      "version": null
+    },
+    "ly_remote_console": {
+      "ok": true,
+      "file": "f:\\jericoengine\\jericoengine\\tools\\remoteconsole\\ly_remote_console\\ly_remote_console\\__init__.py",
+      "version": null
+    },
+    "editor_python_test_tools": {
+      "ok": true,
+      "file": "f:\\jericoengine\\jericoengine\\automatedtesting\\gem\\pythontests\\editorpythontesttools\\editor_python_test_tools\\__init__.py",
+      "version": null
+    },
+    "o3de": {
+      "ok": true,
+      "file": "f:\\jericoengine\\jericoengine\\scripts\\o3de\\o3de\\__init__.py",
+      "version": null
+    }
+  },
+  "aws_distributions": {
+    "boto3": {
+      "installed": false,
+      "module_spec": false
+    },
+    "botocore": {
+      "installed": false,
+      "module_spec": false
+    },
+    "s3transfer": {
+      "installed": false,
+      "module_spec": false
+    }
+  },
+  "pyside_distributions": {
+    "PySide6": {
+      "installed": false
+    },
+    "shiboken6": {
+      "installed": false
+    },
+    "PySide6_Addons": {
+      "installed": false
+    },
+    "PySide6_Essentials": {
+      "installed": false
+    }
+  },
+  "pyside_import_performed": false
+}
+

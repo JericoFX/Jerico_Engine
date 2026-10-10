@@ -1,0 +1,23 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051",
+    "exists": true,
+    "files": 5286,
+    "bytes": 275774746.0,
+    "outcome": "Recursive cleanup retained after automatic policy rejection; no alternative deletion attempted"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143",
+    "exists": false,
+    "files": 0,
+    "bytes": null,
+    "outcome": "Removed empty owned output directory"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\exact-package-inspection",
+    "exists": true,
+    "files": 520,
+    "bytes": 4431533.0,
+    "outcome": "Recursive cleanup retained after automatic policy rejection; no alternative deletion attempted"
+  }
+]

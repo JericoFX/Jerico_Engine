@@ -1,0 +1,148 @@
+﻿{
+    "cwd":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "expected_cwd":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable":  "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "argv":  [
+                 "-S",
+                 "F:/JericoEngine/JericoEngine",
+                 "-B",
+                 "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+                 "-G",
+                 "Visual Studio 17 2022",
+                 "-A",
+                 "x64",
+                 "-DLY_PACKAGE_SERVER_URLS:STRING=",
+                 "-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps",
+                 "-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+                 "-DLY_PACKAGE_VALIDATE_CONTENTS=ON",
+                 "-DLY_PACKAGE_VALIDATE_PACKAGE=ON",
+                 "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+                 "-DJE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python",
+                 "-DJE_PYTHON_WHEELHOUSE:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-wheelhouse",
+                 "-DCMAKE_MESSAGE_LOG_LEVEL:STRING=VERBOSE"
+             ],
+    "argv_count":  17,
+    "mode":  "protected root positive configure",
+    "started":  "2026-10-10T19:00:02.1923462-03:00",
+    "inputs_before":  {
+                          "freeze_sha256":  "46CEF54D8347052E21C4090C685ECDDDF0D0447C7E7D5400631290DD0573F143",
+                          "source_files":  [
+                                               {
+                                                   "path":  "CMakeLists.txt",
+                                                   "sha256":  "0463623551DED5FD210F5389503995CEF633F95EEB054CF41296A7B1381E1616",
+                                                   "expected":  "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "engine.json",
+                                                   "sha256":  "E1B8302687385076CDA9F20660A4958DBB919AF3C3A1630B8B796A6127AE824D",
+                                                   "expected":  "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "cmake/3rdPartyPackages.cmake",
+                                                   "sha256":  "B5893A9216005EC9E186C09134996B586ADAECDC9CDC5A185D9553F114883AAC",
+                                                   "expected":  "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "cmake/LYPython.cmake",
+                                                   "sha256":  "C2D2E3B228BC6E695FFF953EE3C6D453DDB8865C7575DE7F861A9FE1239E3705",
+                                                   "expected":  "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "cmake/CalculateEnginePathId.cmake",
+                                                   "sha256":  "FB6ED16EA11D0215FD1D5B114A0AE4733B701CC84A6572F6B9E7C1CFE867604D",
+                                                   "expected":  "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+                                                   "sha256":  "674A73102AA2BE595A26A5F83BC4627CFF4AB9057F8B7C27F8FDD77073A71D7D",
+                                                   "expected":  "674a73102aa2be595a26a5f83bc4627cff4ab9057f8b7c27f8fdd77073a71d7d",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "cmake/3rdParty/Platform/Windows/Python_windows.cmake",
+                                                   "sha256":  "9FBE44944F2C00FF6FD56EAB61B4BC37CB7DEA046EBCED742E158E1C0223E439",
+                                                   "expected":  "9fbe44944f2c00ff6fd56eab61b4bc37cb7dea046ebced742e158e1c0223e439",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "python/python.cmd",
+                                                   "sha256":  "067B593BE7E2B28919302230382B13A71EB566BCED0294A991CC6113ADB3123F",
+                                                   "expected":  "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "python/python.sh",
+                                                   "sha256":  "15E35908D6638B38F2FD53C168324DEA3A9177B0235AC954EEF7AFA2FDA5DA7F",
+                                                   "expected":  "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "python/requirements.txt",
+                                                   "sha256":  "22F69D842F651CCE2738FF5E31A302BD5F1923C5FDC2B9167A897E13BC20C5A2",
+                                                   "expected":  "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "python/requirements-build.txt",
+                                                   "sha256":  "B94DFF298C27659DBC486D62109F34795BD4A4DBE8EAD3CD44D9044FBE6FFAD6",
+                                                   "expected":  "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "Tools/LyTestTools/setup.py",
+                                                   "sha256":  "58CBFFE0D1301358CB1D712D6FC234B0C431035506149A53E7FFE464045754E5",
+                                                   "expected":  "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "Tools/RemoteConsole/ly_remote_console/setup.py",
+                                                   "sha256":  "5EDFD21099D6DA870DAED538C9E2EF26213BA8CE618A34DB772CB7341A0AD5E1",
+                                                   "expected":  "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "scripts/o3de/setup.py",
+                                                   "sha256":  "6F72B0B20C8CE607F6E630AF3362C381E3D7056DE710FEEAB79786EBE1658912",
+                                                   "expected":  "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "AutomatedTesting/Gem/PythonTests/EditorPythonTestTools/setup.py",
+                                                   "sha256":  "CE710D28A0D3F09D0FB548CCD34AF91D9C59DC41F43A5C392EFE94EDEB211DBD",
+                                                   "expected":  "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd",
+                                                   "match":  true
+                                               },
+                                               {
+                                                   "path":  "Gems/Atom/RPI/Tools/setup.py",
+                                                   "sha256":  "4FF0D3DB0C4AEE6839D8A44A2A90AAEDB0E47D54C52CF2893BFACD26846F9262",
+                                                   "expected":  "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262",
+                                                   "match":  true
+                                               }
+                                           ],
+                          "cache_files":  54,
+                          "cache_bytes":  307886048,
+                          "cache_snapshot":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-wheelhouse-positive-cache-before.json",
+                          "venv_exists":  false,
+                          "requirement_stamps":  [
+
+                                                 ],
+                          "cmake_cache_sha256":  "9B8AEB10269BD3A372121AB432B6D8363FF2FBCE256A2E0001D1966C49B414AF",
+                          "cmake_cache_relevant":  [
+                                                       "JE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python",
+                                                       "JE_PYTHON_WHEELHOUSE:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse-missing-validation",
+                                                       "LY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+                                                       "LY_PACKAGE_SERVER_URLS:STRING="
+                                                   ],
+                          "cmake_sha256":  "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+                          "cmake_version":  "cmake version 4.3.4"
+                      },
+    "wheelhouse":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-wheelhouse",
+    "wheelhouse_file_count":  44,
+    "wheelhouse_preexisting":  true,
+    "process_environment_protection":  "PIP_NO_INDEX, PIP_CONFIG_FILE=NUL, PIP_DISABLE_PIP_VERSION_CHECK, PYTHONNOUSERSITE; inherited package servers and pip indexes cleared"
+}

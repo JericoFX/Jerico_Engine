@@ -1,0 +1,146 @@
+{
+  "name": "libffi-3.3.0",
+  "commit": "1cf06233e3ceb49dc0a73c55e04b1174b436b632",
+  "archive_sha256": "1041268a6a068f69d5fa2fb053dab6b11c25789e0a5fb2be4b505eba16620d3c",
+  "source": "F:\\JericoEngine\\Dependencies\\libffi-3.3.0-1cf06233e3ceb49dc0a73c55e04b1174b436b632",
+  "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\libffi-3.3.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1132,
+      "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 239,
+      "sha256": "ef194f7294867f6cdcaea5e169bca1a5f202fa1dc327001faddd2cacee0e8aa2"
+    },
+    {
+      "path": "amd64/include/ffi.h",
+      "bytes": 13770,
+      "sha256": "f44ccffd61b55c9a705af5630818c8537735ebcbcce725568405c2f0ae085208"
+    },
+    {
+      "path": "amd64/include/fficonfig.h",
+      "bytes": 6297,
+      "sha256": "8b38b730a9ae5fac5b39c229592650c9f1ff735b05486d9713b27014d3f37ff5"
+    },
+    {
+      "path": "amd64/include/ffitarget.h",
+      "bytes": 4343,
+      "sha256": "ce9a87677a9b9af9dcc6f8f632b62948214824174b65fe4361d3b662cc72aec0"
+    },
+    {
+      "path": "amd64/libffi-7.dll",
+      "bytes": 32792,
+      "sha256": "f60dd9f2fcbd495674dfc1555effb710eb081fc7d4cae5fa58c438ab50405081"
+    },
+    {
+      "path": "amd64/libffi-7.lib",
+      "bytes": 8276,
+      "sha256": "c741b087aea9b2bb3df146b940e07383f5ff93737a77dc75f0b632752f04dc75"
+    },
+    {
+      "path": "arm32/include/ffi.h",
+      "bytes": 13770,
+      "sha256": "f82d9922659539b89c44d695a6d420803100f04ac9a0eb8072818577633e35fe"
+    },
+    {
+      "path": "arm32/include/fficonfig.h",
+      "bytes": 6300,
+      "sha256": "d4ae6455a97b16f279a25f45dc44e8d71423cfea9df262f7226b8f60997cb914"
+    },
+    {
+      "path": "arm32/include/ffitarget.h",
+      "bytes": 2731,
+      "sha256": "54ee4410927bd70bd19349dae9a566b181c0dd3212bed10c53f3d1e3a3a38b85"
+    },
+    {
+      "path": "arm32/libffi-7.dll",
+      "bytes": 20504,
+      "sha256": "389786891940903b6605334f9e158b0bb7f24979bbb8a832f7dcc09120532c9d"
+    },
+    {
+      "path": "arm32/libffi-7.lib",
+      "bytes": 8268,
+      "sha256": "eb8a773bd258460d2e9c7bc36af8d5431501e21d7d081d23d5417ec69bb246f7"
+    },
+    {
+      "path": "arm64/include/ffi.h",
+      "bytes": 13770,
+      "sha256": "e339a7ae260717acdca3e9d6a91ed57879014f6124a28861efa9880f184ace65"
+    },
+    {
+      "path": "arm64/include/fficonfig.h",
+      "bytes": 6300,
+      "sha256": "174108ecda10fc659551e78a9e4bb10be41d2dc70fd1954026c960cbed230703"
+    },
+    {
+      "path": "arm64/include/ffitarget.h",
+      "bytes": 2676,
+      "sha256": "ee109c2bc130655caedd91d71543428fb133146c3a0a33c51bffcfbfdacfa2f7"
+    },
+    {
+      "path": "arm64/libffi-7.dll",
+      "bytes": 34328,
+      "sha256": "b39ece255620847736fa75d6d9e983812bf9ee1850b290a05e49b035ed1a3261"
+    },
+    {
+      "path": "arm64/libffi-7.lib",
+      "bytes": 7872,
+      "sha256": "bdd07f2be8e39195c0a2971ce15f84342318c11f273f6267694e9a704e999afd"
+    },
+    {
+      "path": "win32/include/ffi.h",
+      "bytes": 13770,
+      "sha256": "913e2d00d5e0dabd261983d4ab4bff85c4f6a903379e4efd552a952ed6effff7"
+    },
+    {
+      "path": "win32/include/fficonfig.h",
+      "bytes": 6294,
+      "sha256": "3fcf3616622260a4189d1da7776394de02a8c570bcb0bbe8468fe28dcd86d2e2"
+    },
+    {
+      "path": "win32/include/ffitarget.h",
+      "bytes": 4343,
+      "sha256": "ce9a87677a9b9af9dcc6f8f632b62948214824174b65fe4361d3b662cc72aec0"
+    },
+    {
+      "path": "win32/libffi-7.dll",
+      "bytes": 29208,
+      "sha256": "0c7ec6de19c246a23756b8550e6178ac2394b1093e96d0f43789124149486f57"
+    },
+    {
+      "path": "win32/libffi-7.lib",
+      "bytes": 7666,
+      "sha256": "101bd727549e403d3050c2b4f95d10bf1f361f628780597a7f4988394ae7a8c1"
+    }
+  ],
+  "licenses": [
+    "LICENSE"
+  ],
+  "pe_files_not_executed": [
+    {
+      "path": "amd64/libffi-7.dll",
+      "bytes": 32792,
+      "sha256": "f60dd9f2fcbd495674dfc1555effb710eb081fc7d4cae5fa58c438ab50405081"
+    },
+    {
+      "path": "arm32/libffi-7.dll",
+      "bytes": 20504,
+      "sha256": "389786891940903b6605334f9e158b0bb7f24979bbb8a832f7dcc09120532c9d"
+    },
+    {
+      "path": "arm64/libffi-7.dll",
+      "bytes": 34328,
+      "sha256": "b39ece255620847736fa75d6d9e983812bf9ee1850b290a05e49b035ed1a3261"
+    },
+    {
+      "path": "win32/libffi-7.dll",
+      "bytes": 29208,
+      "sha256": "0c7ec6de19c246a23756b8550e6178ac2394b1093e96d0f43789124149486f57"
+    }
+  ],
+  "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+  "elapsed_seconds": 0.174
+}

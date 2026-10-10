@@ -1,0 +1,22 @@
+FreeType 2.11.1 — reconstructed local Windows x64 static package
+
+Portions of this software are copyright (c) 2021 The FreeType Project
+(www.freetype.org). All rights reserved.
+This software is based in part on the work of the FreeType Team.
+The complete FreeType License is preserved in LICENSES/Freetype/FTL.TXT.
+This package selects the FreeType License (FTL);
+the upstream alternative GPLv2 text and LICENSE.TXT are also included.
+Separate BDF/PCF notices and the original fthash source/header with their
+copyright and permission notices are retained under LICENSES/Freetype.
+
+Source: official freetype/freetype mirror, VER-2-11-1,
+commit 3f83daeecb1a78d851b660eed025eeba362c0e4a.
+Recipe: o3de/3p-package-source at
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/freetype.
+The adapted Find module retains its Apache-2.0 OR MIT notices and license texts.
+
+Artifact: freetype-2.11.1-je-rev1-windows. Built with Visual Studio 2022 x64,
+Release, static linking and PIC. External zlib 1.2.11 is required; BZip2,
+PNG, HarfBuzz and BrotliDec remain disabled as in the original Windows recipe.
+This artifact has its own measured hash; it does not reuse the legacy package hash.
+The local glyph test font is neither copied nor redistributed in this package.

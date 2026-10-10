@@ -1,0 +1,268 @@
+{
+  "ManifestSHA256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+  "FrozenFiles": [
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+      "Expected": "fef6fac410f861e0a077b40fce797b30cd35af4a55fb3c95cbbb3675ebe0fd28",
+      "Actual": "FEF6FAC410F861E0A077B40FCE797B30CD35AF4A55FB3C95CBBB3675EBE0FD28",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+      "Expected": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684",
+      "Actual": "389832D7441AFAD6296BA6E50FF021654D28979E70F955D0EDDAD05993DA6684",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "Expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "Actual": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+      "Expected": "0b71c6f50e71544b668d924dc08e43e7cd32acf37ce99dc404a524a6bce6270c",
+      "Actual": "0B71C6F50E71544B668D924DC08E43E7CD32ACF37CE99DC404A524A6BCE6270C",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+      "Expected": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d",
+      "Actual": "18FF68CB13D64E2ABE13EBA169A45422F1FF59A6751F4CF3F20F51A4FD5FFD4D",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+      "Expected": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1",
+      "Actual": "AFCEB472FB29B7D56D65C69869EAB14ED86615F1CA7146FA255BBBA672FA45B1",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+      "Expected": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a",
+      "Actual": "00F50E86D2896F33A81FB5D11326DD482BFB3C63C98997390E36E7DCAAD5150A",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+      "Expected": "857120754727aa796614541c17acdb4ca32620c74dede63a8fe9c153669c68e2",
+      "Actual": "857120754727AA796614541C17ACDB4CA32620C74DEDE63A8FE9C153669C68E2",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+      "Expected": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a",
+      "Actual": "8EF2416167827149A0D66F258E3B831D9C2C5D8DE0E9F71FB9B39F7FECF1347A",
+      "Match": true
+    },
+    {
+      "Path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+      "Expected": "2342712f86a64c4f041f2aa6ad0c1255917056e838911de739b40d43b8fd7a3c",
+      "Actual": "2342712F86A64C4F041F2AA6AD0C1255917056E838911DE739B40D43B8FD7A3C",
+      "Match": true
+    }
+  ],
+  "HelperSHA256": "AB1C32742EA8885CAFA3AA2EE134A252DE86B030D47382D6A4DAEE7DC17604FD",
+  "Archives": [
+    {
+      "Name": "cpython",
+      "Match": true,
+      "SHA256": "12C564214C8A3B109D294143CB439E8BCCB1CF6BE677B52E98C5E2C41941EA44",
+      "Bytes": 26359731
+    },
+    {
+      "Name": "expat",
+      "Match": true,
+      "SHA256": "54FD00059462C81E8E3C8EEF7E90169FCA1B48D89122FBC97039D7007190D9C8",
+      "Bytes": 8314214
+    },
+    {
+      "Name": "bzip2-1.0.8",
+      "Match": true,
+      "SHA256": "AB14ACCAC86CDD92021D50465DEEB221B476D6675BD1383D3C7FB83751C2E0A3",
+      "Bytes": 819016
+    },
+    {
+      "Name": "sqlite-3.40.1.0",
+      "Match": true,
+      "SHA256": "61A33A1F61B30617564AE869296339B19DFD30B9B32A0E1B3493D8B93B23B54C",
+      "Bytes": 2595070
+    },
+    {
+      "Name": "xz-5.2.5",
+      "Match": true,
+      "SHA256": "115433C946EE069E857FD04CF41B38A4A74ED45D868A3B2E08CCD4A1F04F39D0",
+      "Bytes": 1745919
+    },
+    {
+      "Name": "zlib-1.2.13",
+      "Match": true,
+      "SHA256": "0200469024CFC47334C7F6A28855A54D33740A7207D1B9E860FBBAF0BEBFCA63",
+      "Bytes": 1554772
+    },
+    {
+      "Name": "libffi-3.3.0",
+      "Match": true,
+      "SHA256": "1041268A6A068F69D5FA2FB053DAB6B11C25789E0A5FB2BE4B505EBA16620D3C",
+      "Bytes": 99305
+    },
+    {
+      "Name": "openssl-bin-1.1.1u",
+      "Match": true,
+      "SHA256": "4DC3C79ED427B93FB2D435AEB4916C27D77D99044C6384A068EE537F39A75DD3",
+      "Bytes": 16816392
+    },
+    {
+      "Name": "tcltk-8.6.12.0",
+      "Match": true,
+      "SHA256": "01AD9C663659224E075D487CBC33EA2FED7A225593965B79BED92CA7F79B676F",
+      "Bytes": 6787654
+    }
+  ],
+  "ExternalSnapshots": [
+    {
+      "Snapshot": "bzip2-1.0.8-python-input-snapshot.json",
+      "Expected": 56,
+      "Actual": 56,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "expat-python-input-snapshot.json",
+      "Expected": 153,
+      "Actual": 153,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "libffi-3.3.0-python-input-snapshot.json",
+      "Expected": 22,
+      "Actual": 22,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "openssl-bin-1.1.1u-python-input-snapshot.json",
+      "Expected": 346,
+      "Actual": 346,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "sqlite-3.40.1.0-python-input-snapshot.json",
+      "Expected": 5,
+      "Actual": 5,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "tcltk-8.6.12.0-python-input-snapshot.json",
+      "Expected": 2593,
+      "Actual": 2593,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "xz-5.2.5-python-input-snapshot.json",
+      "Expected": 480,
+      "Actual": 480,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "zlib-1.2.13-python-input-snapshot.json",
+      "Expected": 243,
+      "Actual": 243,
+      "Bad": 0,
+      "Match": true
+    }
+  ],
+  "Tools": [
+    {
+      "Path": "C:\\Users\\Jerico\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "Match": true,
+      "SHA256": "805FD29612C221EBEA570D372EC5ED46093C25A1033F1765DE9B2F8103868886"
+    },
+    {
+      "Path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+      "Match": true,
+      "SHA256": "0F7DABA445BA37B652AE4180270AB3EFF27ACBBE5D411D3B05DAD51AAB16404C"
+    }
+  ],
+  "OutputRootExists": true,
+  "StageFileCount": 3281,
+  "LongestStagePaths": [
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py",
+      "Relative": "python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py",
+      "FullLength": 179,
+      "RelativeLength": 93
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py",
+      "Relative": "python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py",
+      "FullLength": 178,
+      "RelativeLength": 92
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py",
+      "Relative": "python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py",
+      "FullLength": 170,
+      "RelativeLength": 84
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\low_level.py",
+      "Relative": "python\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\low_level.py",
+      "FullLength": 169,
+      "RelativeLength": 83
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\__init__.py",
+      "Relative": "python\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\__init__.py",
+      "FullLength": 168,
+      "RelativeLength": 82
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\bindings.py",
+      "Relative": "python\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\bindings.py",
+      "FullLength": 168,
+      "RelativeLength": 82
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py",
+      "Relative": "python\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py",
+      "FullLength": 168,
+      "RelativeLength": 82
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\pip\\_internal\\resolution\\resolvelib\\found_candidates.py",
+      "Relative": "python\\Lib\\site-packages\\pip\\_internal\\resolution\\resolvelib\\found_candidates.py",
+      "FullLength": 167,
+      "RelativeLength": 81
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_itertools.py",
+      "Relative": "python\\Lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_itertools.py",
+      "FullLength": 167,
+      "RelativeLength": 81
+    },
+    {
+      "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage\\python\\Lib\\site-packages\\pip\\_vendor\\pyproject_hooks\\_in_process\\_in_process.py",
+      "Relative": "python\\Lib\\site-packages\\pip\\_vendor\\pyproject_hooks\\_in_process\\_in_process.py",
+      "FullLength": 166,
+      "RelativeLength": 80
+    }
+  ],
+  "PackageDirectory": [
+    {
+      "Name": "python-3.10.13-je-rev1-windows.contents",
+      "Length": null,
+      "Mode": "d----"
+    }
+  ],
+  "ExpatWorkSnapshot": "See frozen snapshot file",
+  "CPythonBuildOutputs": {
+    "DebugAndReleasePythonExe": true,
+    "DebugAndReleasePythonDLL": true
+  }
+}

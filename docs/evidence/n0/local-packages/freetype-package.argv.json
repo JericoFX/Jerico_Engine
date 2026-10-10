@@ -1,0 +1,18 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake",
+  "mode": "script",
+  "argument_count": 10,
+  "arguments": [
+    "-DJE_PACKAGE_STAGE=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\freetype-rev1\\stage",
+    "-DJE_PACKAGE_NAME=freetype-2.11.1-je-rev1-windows",
+    "-DJE_PACKAGE_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\freetype-rev1\\packages",
+    "-DJE_PACKAGE_VERSION=2.11.1-je-rev1",
+    "-DJE_PACKAGE_SOURCE_COMMIT=3f83daeecb1a78d851b660eed025eeba362c0e4a",
+    "-DJE_PACKAGE_LICENSE=FTL",
+    "-DJE_PACKAGE_SOURCE_SHA256=e01c4b6eef4b6896d3e4822c5a8d7871dd5dcc39d25103ed3b338914ca7af69d",
+    "-DJE_PACKAGE_SOURCE_URL=https://codeload.github.com/freetype/freetype/tar.gz/3f83daeecb1a78d851b660eed025eeba362c0e4a",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake"
+  ]
+}

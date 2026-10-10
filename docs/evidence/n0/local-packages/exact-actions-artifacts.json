@@ -1,0 +1,50 @@
+[
+  {
+    "artifact_id": "9829252229",
+    "name": "qt-6.11.2-rev1-windows",
+    "api_origin": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts/9829252229/zip",
+    "binary_host": "productionresultssa1.blob.core.windows.net",
+    "redirects_followed_automatically": false,
+    "signed_query_retained": false,
+    "auth_sent_to_binary_host": false,
+    "zip_path": "F:\\JericoEngine\\Dependencies\\archives\\qt-6.11.2-rev1-windows.actions.zip",
+    "zip_sha256": "a1813d9686c2627f985caace768cf584c82c7e1503164229818aa78f7ba764e8",
+    "zip_bytes": 202076292,
+    "zip_members": [
+      "qt-6.11.2-rev1-windows.PackageInfo.json",
+      "qt-6.11.2-rev1-windows.tar.xz",
+      "qt-6.11.2-rev1-windows.tar.xz.content.SHA256SUMS",
+      "qt-6.11.2-rev1-windows.tar.xz.SHA256SUMS"
+    ],
+    "package_archive": "F:\\JericoEngine\\Dependencies\\archives\\qt-6.11.2-rev1-windows.tar.xz",
+    "package_sha256": "f09edc180df0ded92827279c475167be13cbb517de182a5b10ec1337e68dd834",
+    "matches_original_catalog_pin": true,
+    "package_bytes": 201790724,
+    "elapsed_seconds": 76.6821261,
+    "installed": false
+  },
+  {
+    "artifact_id": "9917233169",
+    "name": "pyside6-6.11.2-py3.10-rev1-windows",
+    "api_origin": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts/9917233169/zip",
+    "binary_host": "productionresultssa11.blob.core.windows.net",
+    "redirects_followed_automatically": false,
+    "signed_query_retained": false,
+    "auth_sent_to_binary_host": false,
+    "zip_path": "F:\\JericoEngine\\Dependencies\\archives\\pyside6-6.11.2-py3.10-rev1-windows.actions.zip",
+    "zip_sha256": "ad2c8835e5fb619958d265b789912b1ae10df9a07cee06e80c8b0cbd7cbed360",
+    "zip_bytes": 22685705,
+    "zip_members": [
+      "pyside6-6.11.2-py3.10-rev1-windows.PackageInfo.json",
+      "pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+      "pyside6-6.11.2-py3.10-rev1-windows.tar.xz.content.SHA256SUMS",
+      "pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS"
+    ],
+    "package_archive": "F:\\JericoEngine\\Dependencies\\archives\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+    "package_sha256": "cd0272eb5ce46a3437132344a4a6b7022e3aee152da888963cdd9d025cbdf506",
+    "matches_original_catalog_pin": true,
+    "package_bytes": 22663592,
+    "elapsed_seconds": 9.3377885,
+    "installed": false
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake",
+  "mode": "build",
+  "argument_count": 6,
+  "arguments": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\freetype-rev1\\build",
+    "--target",
+    "freetype",
+    "--config",
+    "Release"
+  ],
+  "configuration": "Release",
+  "target": "freetype"
+}

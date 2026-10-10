@@ -26,6 +26,7 @@ include(${LY_PAL_PYTHON_PACKAGE_FILE_NAME})
 
 # settings and globals
 ly_set(LY_PYTHON_DEFAULT_REQUIREMENTS_TXT "${LY_ROOT_FOLDER}/python/requirements.txt")
+ly_set(LY_PYTHON_BUILD_REQUIREMENTS_TXT "${LY_ROOT_FOLDER}/python/requirements-build.txt")
 
 # The expected venv for python is based on an ID generated based on the path of the current
 # engine using the logic in cmake/CalculateEnginePathId.cmake. 
@@ -33,19 +34,23 @@ execute_process(COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Ca
                 OUTPUT_VARIABLE ENGINE_SOURCE_PATH_ID
                 OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-# Normalize the expected location of the Python venv and set its path globally
-# The root Python folder is based off of the same folder as the manifest file
-if(DEFINED ENV{USERPROFILE} AND EXISTS $ENV{USERPROFILE})
-    set(PYTHON_ROOT_PATH "$ENV{USERPROFILE}/.o3de/Python") # Windows
-else()
-    set(PYTHON_ROOT_PATH "$ENV{HOME}/.o3de/Python") # Unix
-endif()
+# Keep Python packages and venvs within the configured local dependency root.
+# The wrappers receive this exact root, including when used by generated build rules.
+set(JE_PYTHON_ROOT "${LY_3RDPARTY_PATH}/Python" CACHE PATH "Local Python package and venv root")
+JE_require_local_package_path("${JE_PYTHON_ROOT}" "JE_PYTHON_ROOT")
+set(PYTHON_ROOT_PATH "${JE_PYTHON_ROOT}")
+cmake_path(NORMAL_PATH PYTHON_ROOT_PATH)
 
 set(PYTHON_PACKAGES_ROOT_PATH "${PYTHON_ROOT_PATH}/packages")
 cmake_path(NORMAL_PATH PYTHON_PACKAGES_ROOT_PATH )
 
-set(PYTHON_PACKAGE_CACHE_ROOT_PATH "${PYTHON_ROOT_PATH}/downloaded_packages")
+set(PYTHON_PACKAGE_CACHE_ROOT_PATH "${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION}")
 cmake_path(NORMAL_PATH PYTHON_PACKAGE_CACHE_ROOT_PATH )
+
+set(JE_PYTHON_WHEELHOUSE "${LY_PACKAGE_DOWNLOAD_CACHE_LOCATION}/python-wheelhouse" CACHE PATH
+    "Audited local Python wheels and source packages; no index fallback")
+JE_require_local_package_path("${JE_PYTHON_WHEELHOUSE}" "JE_PYTHON_WHEELHOUSE")
+cmake_path(NORMAL_PATH JE_PYTHON_WHEELHOUSE)
 
 set(PYTHON_VENV_PATH "${PYTHON_ROOT_PATH}/venv/${ENGINE_SOURCE_PATH_ID}")
 cmake_path(NORMAL_PATH PYTHON_VENV_PATH )
@@ -127,6 +132,10 @@ endfunction()
 # used as a file name, so avoid special characters that would fail as a file name.
 function(update_pip_requirements requirements_file_path unique_name)
 
+    if(NOT IS_DIRECTORY "${JE_PYTHON_WHEELHOUSE}")
+        message(FATAL_ERROR "JE Python wheelhouse missing: ${JE_PYTHON_WHEELHOUSE}. Provision the audited pinned packages locally.")
+    endif()
+
     # we run with --no-deps to prevent it from cascading to child dependencies 
     # and getting more than we expect.
     # to produce a new requirements.txt use pip-compile from pip-tools alongside pip freeze
@@ -160,7 +169,8 @@ function(update_pip_requirements requirements_file_path unique_name)
     set(ENV{PYTHONNOUSERSITE} 1)
 
     execute_process(COMMAND 
-        ${LY_PYTHON_CMD} -m pip install -r "${requirements_file_path}" --disable-pip-version-check --no-warn-script-location
+        ${LY_PYTHON_CMD} -m pip install -r "${requirements_file_path}" --no-deps --no-index
+        --find-links "${JE_PYTHON_WHEELHOUSE}" --no-build-isolation --no-cache-dir --disable-pip-version-check --no-warn-script-location
         WORKING_DIRECTORY ${LY_ROOT_FOLDER}/python
         RESULT_VARIABLE PIP_RESULT
         OUTPUT_VARIABLE PIP_OUT 
@@ -185,9 +195,6 @@ function(update_pip_requirements requirements_file_path unique_name)
             message(CHECK_PASS "Already up to date.")
         endif()
 
-        # since we're in a success state, stamp the stampfile so we don't run this rule again 
-        # unless someone updates the requirements.txt file.
-        file(TOUCH ${stamp_file})
     endif()
 
     # finally, verify that all packages are OK.  This runs locally and does not
@@ -204,8 +211,11 @@ function(update_pip_requirements requirements_file_path unique_name)
     message(VERBOSE "Results from pip check: ${PIP_OUT}")
 
     if (NOT ${PIP_RESULT} EQUAL 0)
-        message(WARNING "PIP reports unmet dependencies: ${PIP_OUT}")
+        message(FATAL_ERROR "JE Python local package dependencies are incomplete: ${PIP_OUT}")
     endif()
+
+    # Record success only after checking the complete local dependency closure.
+    file(TOUCH ${stamp_file})
 
     if (REMOVE_USERSITE)
         unset(ENV{PYTHONNOUSERSITE})
@@ -219,6 +229,9 @@ endfunction()
 # the pip_package_name should be the name given to the package in setup.py so that
 # any old versions may be uninstalled using setuptools before we install the new one.
 function(ly_pip_install_local_package_editable package_folder_path pip_package_name)
+    if(NOT IS_DIRECTORY "${JE_PYTHON_WHEELHOUSE}")
+        message(FATAL_ERROR "JE Python wheelhouse missing: ${JE_PYTHON_WHEELHOUSE}. Provision the audited pinned packages locally.")
+    endif()
     set(stamp_file ${LY_PYTHON_VENV_PATH}/packages/pip_installs/${pip_package_name}.stamp)
     get_filename_component(stamp_file_directory ${stamp_file} DIRECTORY)
     file(MAKE_DIRECTORY ${stamp_file_directory})
@@ -298,7 +311,8 @@ function(ly_pip_install_local_package_editable package_folder_path pip_package_n
     endif()
 
     execute_process(COMMAND 
-        ${LY_PYTHON_CMD} -m pip install ${_pip_install_mode_args} ${_pip_install_target} --no-deps --disable-pip-version-check  --no-warn-script-location 
+        ${LY_PYTHON_CMD} -m pip install ${_pip_install_mode_args} ${_pip_install_target} --no-deps --no-index
+        --find-links "${JE_PYTHON_WHEELHOUSE}" --no-build-isolation --no-cache-dir --disable-pip-version-check --no-warn-script-location
         WORKING_DIRECTORY ${LY_ROOT_FOLDER}/python
         RESULT_VARIABLE PIP_RESULT
         OUTPUT_VARIABLE PIP_OUT 
@@ -358,11 +372,16 @@ if (NOT CMAKE_SCRIPT_MODE_FILE)
         # pip installation modules and lead to machine-specific config problems
         # it also uses our wrapper python, which can add additional paths to the python path
         if (${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
-            set(LY_PYTHON_CMD "${LY_ROOT_FOLDER}/python/python.cmd" "-s")
+            set(LY_PYTHON_CMD "${CMAKE_COMMAND}" -E env "JE_PYTHON_ROOT=${PYTHON_ROOT_PATH}"
+                "PIP_NO_INDEX=1" "PIP_FIND_LINKS=" "PIP_CONFIG_FILE=NUL" "PIP_DISABLE_PIP_VERSION_CHECK=1"
+                "${LY_ROOT_FOLDER}/python/python.cmd" "-s")
         else()
-            set(LY_PYTHON_CMD "${LY_ROOT_FOLDER}/python/python.sh" "-s")
+            set(LY_PYTHON_CMD "${CMAKE_COMMAND}" -E env "JE_PYTHON_ROOT=${PYTHON_ROOT_PATH}"
+                "PIP_NO_INDEX=1" "PIP_FIND_LINKS=" "PIP_CONFIG_FILE=/dev/null" "PIP_DISABLE_PIP_VERSION_CHECK=1"
+                "${LY_ROOT_FOLDER}/python/python.sh" "-s")
         endif()
 
+        update_pip_requirements(${LY_PYTHON_BUILD_REQUIREMENTS_TXT} build_requirements)
         update_pip_requirements(${LY_PYTHON_DEFAULT_REQUIREMENTS_TXT} default_requirements)
 
         # we also need to make sure any custom packages are installed.

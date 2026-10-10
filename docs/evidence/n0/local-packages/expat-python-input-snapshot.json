@@ -1,0 +1,781 @@
+{
+  "name": "expat",
+  "commit": "65a21f2b2a306d29b44e70264aca948aa0454219",
+  "archive_sha256": "54fd00059462c81e8e3c8eef7e90169fca1b48d89122fbc97039d7007190d9c8",
+  "source": "F:\\JericoEngine\\Dependencies\\expat-65a21f2b2a306d29b44e70264aca948aa0454219",
+  "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\expat-65a21f2b2a306d29b44e70264aca948aa0454219",
+  "files": [
+    {
+      "path": ".github/dependabot.yml",
+      "bytes": 1728,
+      "sha256": "51715200bebc6c624a67cf7595b754814c0b4697fe49cf164c4238c78f8cbef3"
+    },
+    {
+      "path": ".github/workflows/autotools-cmake.yml",
+      "bytes": 6096,
+      "sha256": "3963cbe4265812aaac750d6299302bf9a57fcc56d89c713eb163a2c04fa357b0"
+    },
+    {
+      "path": ".github/workflows/cmake-required-version.yml",
+      "bytes": 2876,
+      "sha256": "2191426d09e099f63d90133e7006696d99c7c7fcf9d267cb09b3a430de5653ae"
+    },
+    {
+      "path": ".github/workflows/coverage.yml",
+      "bytes": 3121,
+      "sha256": "79dc11e9241defa9f0c6f9c5556805639843849ef4c533cccb96dae6499cedda"
+    },
+    {
+      "path": ".github/workflows/cppcheck.yml",
+      "bytes": 1943,
+      "sha256": "ad5e78aa6069ad9f99eb7ccc4b86d0e16059c2f9574b1d1ef28e38728c854b6d"
+    },
+    {
+      "path": ".github/workflows/data/expat_config_h_cmake__expected.txt",
+      "bytes": 495,
+      "sha256": "8385d637f3c280ce1a38dde52165420f9cee7b9a0b449418412f136690b75878"
+    },
+    {
+      "path": ".github/workflows/data/expat_config_h_in__expected.txt",
+      "bytes": 552,
+      "sha256": "cf2b77587cd22d26eeced9f2fc58f4fbe6aa349c87efdfa400c51a4624430a2d"
+    },
+    {
+      "path": ".github/workflows/data/exported-symbols.txt",
+      "bytes": 1624,
+      "sha256": "9e57fd81a88659b4e49f9c2a2f9208da660dabd44fb1ac9583d160d0dd2427e1"
+    },
+    {
+      "path": ".github/workflows/expat_config_h.yml",
+      "bytes": 2745,
+      "sha256": "6eefc9e582125d2745b482bd76d38ed12ca3ff6e37c80b1398677f178dbaba22"
+    },
+    {
+      "path": ".github/workflows/linux.yml",
+      "bytes": 5244,
+      "sha256": "058a867f9eeb3f086b2c76b744e47b6d30f8fd62852b26a665c3be784fe8ca41"
+    },
+    {
+      "path": ".github/workflows/macos.yml",
+      "bytes": 2537,
+      "sha256": "f1efca52c0c3b22c852181bfc54ee99829e0e9d32de72fe6561773c1e892f775"
+    },
+    {
+      "path": ".github/workflows/scripts/list-shared-library-symbols.sh",
+      "bytes": 1703,
+      "sha256": "c7e01e6f0d5729faab5fecf6d8c18c08506289000825f2a2d6433ee2753ff914"
+    },
+    {
+      "path": ".github/workflows/scripts/list_exported_macros.sh",
+      "bytes": 1610,
+      "sha256": "cf3f584723b7ab67553bd7df404501ed0cf69795cd6ce88f4dc8351497cca18b"
+    },
+    {
+      "path": ".github/workflows/scripts/mass-cppcheck.sh",
+      "bytes": 2141,
+      "sha256": "3b9abd3862017843afd8287238780cca78a4c72ce56b0a9274d3480f2f71befd"
+    },
+    {
+      "path": ".github/workflows/valid-xml.yml",
+      "bytes": 2144,
+      "sha256": "82392c18b3c7e1fad54362909605c4b39c73ca2e0d41e7f6d8a00668bddeb25a"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 368,
+      "sha256": "8b7e8d7ba5bde98574fa3ca561faddc31324df976c883721b762f64f5c02e481"
+    },
+    {
+      "path": ".mailmap",
+      "bytes": 907,
+      "sha256": "00e9a4577b18657466bc3719c6bf64e0fa1d177c0fbd1f10f622ee9480947d41"
+    },
+    {
+      "path": ".travis.sh",
+      "bytes": 2780,
+      "sha256": "9fa8265ec4857d4e35e46cfff66b46ee837fc0b786e3dc19a6381d16d8086684"
+    },
+    {
+      "path": "Brewfile",
+      "bytes": 208,
+      "sha256": "494c9a40f3905ed2761ec7f967f95d781b6b2dede5336512946dd980e4b1015a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8794,
+      "sha256": "28d6294d0b6d82a2349c40f64ba9b2434218577be6121584a8a1ff875573e715",
+      "archive_symlink_materialized_as_regular_copy": "expat/README.md"
+    },
+    {
+      "path": "appveyor.yml",
+      "bytes": 4444,
+      "sha256": "f65ec8d1a188f49170ec67be98121ea9ea3c3306324dd90bd71ef61f93ad2e05"
+    },
+    {
+      "path": "expat/.clang-format",
+      "bytes": 5217,
+      "sha256": "c6e017277a89b696405de6dd509a518dbe55f6cdd91a736f79f31dec7bea01e9"
+    },
+    {
+      "path": "expat/.gitignore",
+      "bytes": 476,
+      "sha256": "080943eb9ad4e82319b8002c99051fb22e26140c9c09ff5d92ca8c5ec3aba172"
+    },
+    {
+      "path": "expat/AUTHORS",
+      "bytes": 142,
+      "sha256": "59f14371c6b75912cfebb46e6247ee5146766e803a0365b124e5d3011e7d0877"
+    },
+    {
+      "path": "expat/CMake.README",
+      "bytes": 1723,
+      "sha256": "74ceeb198448afd4a087c29171eec0f2823503ca676c89b2d221c2055f377a12"
+    },
+    {
+      "path": "expat/CMakeLists.txt",
+      "bytes": 31293,
+      "sha256": "ca691cdadff678b9d616edb6085c7db8646f0bbb72c8ec817201a8c49c6a8a73"
+    },
+    {
+      "path": "expat/COPYING",
+      "bytes": 1144,
+      "sha256": "8c6b5b6de8fae20b317f4992729abc0e520bfba4c7606cd1e9eeb87418eebdec"
+    },
+    {
+      "path": "expat/Changes",
+      "bytes": 57467,
+      "sha256": "689a094e6bfe1af8f9baa0b70af51fb30d674d87a77630a1330010d418a786d3"
+    },
+    {
+      "path": "expat/ConfigureChecks.cmake",
+      "bytes": 2244,
+      "sha256": "f78709ec4c24402838681ee6ad5bc72944d7fb2f7fdc05bb81e8e19211cb9005"
+    },
+    {
+      "path": "expat/Makefile.am",
+      "bytes": 5364,
+      "sha256": "164696b38d091d9ad382ddc9d7340ee394b3b1616fcd791eb7e449a31e30ac0a"
+    },
+    {
+      "path": "expat/README.md",
+      "bytes": 8794,
+      "sha256": "28d6294d0b6d82a2349c40f64ba9b2434218577be6121584a8a1ff875573e715"
+    },
+    {
+      "path": "expat/acinclude.m4",
+      "bytes": 371,
+      "sha256": "011cd4d5332e7ac2448ad4ed99d74d06af314b9b287fc69b9cbae6b301f78d4e"
+    },
+    {
+      "path": "expat/apply-clang-format.sh",
+      "bytes": 2100,
+      "sha256": "aed6523723bdfbba864989cd2e729b4c5e3bdc16d8cef5bd9abf3f2bb63c3683"
+    },
+    {
+      "path": "expat/buildconf.sh",
+      "bytes": 2764,
+      "sha256": "60384d57b3d1421f8e1d2148d212c2c7f2af37345e95fe75cbaf40db981ea1e5"
+    },
+    {
+      "path": "expat/clean_coverage.sh",
+      "bytes": 1776,
+      "sha256": "3662caf7ed16b54b11db3ae799f700b3b63edd3789e6e5b45eb55a55ca0b2def"
+    },
+    {
+      "path": "expat/cmake/.gitignore",
+      "bytes": 69,
+      "sha256": "b59f62ed0a2a9e7ad14abfd3aa41cf4b2d1d63918a31bba80b58e1752ba9e1ea"
+    },
+    {
+      "path": "expat/cmake/autotools/.gitignore",
+      "bytes": 50,
+      "sha256": "9d98eaea3e2dfc91e46b81793bc752d4070a2956f2945a6d94d1ea2a8ee255af"
+    },
+    {
+      "path": "expat/cmake/autotools/expat-config-version.cmake.in",
+      "bytes": 2974,
+      "sha256": "0e154831e95837511af2674baf8076b17c38be667dc4c31cada98ee4a82e1b4b"
+    },
+    {
+      "path": "expat/cmake/autotools/expat-noconfig__linux.cmake.in",
+      "bytes": 921,
+      "sha256": "d055ae09c21d3617626f92246356b6e46d81f57bbf1f115ebe03fa141a0ce2bc"
+    },
+    {
+      "path": "expat/cmake/autotools/expat-noconfig__macos.cmake.in",
+      "bytes": 937,
+      "sha256": "0ec7b5d5eebc66e7f49c33ca2017fecc68b83ed41b9bac27850644689b42a878"
+    },
+    {
+      "path": "expat/cmake/autotools/expat-noconfig__windows.cmake.in",
+      "bytes": 984,
+      "sha256": "a28e560e870ce17ec73e2326b8e31cb3cd0cbaf4dc6fc2b2539fa3ad92c9f5b0"
+    },
+    {
+      "path": "expat/cmake/autotools/expat-package-init.cmake",
+      "bytes": 879,
+      "sha256": "2b4ffc7c625b15268bb3961b2752950120c713b5d811a40845bf9f2a87b8eaa0"
+    },
+    {
+      "path": "expat/cmake/autotools/expat.cmake",
+      "bytes": 3406,
+      "sha256": "33f6a2347cbd45ba317bfe5c2d2c434cfd55624a96eb118797a4afbb8fb43edc"
+    },
+    {
+      "path": "expat/cmake/expat-config.cmake.in",
+      "bytes": 2888,
+      "sha256": "737c28c075eab9fd576ad22a68c8d880281d83240d6e08372afda2cf3acac733"
+    },
+    {
+      "path": "expat/cmake/mingw-toolchain.cmake",
+      "bytes": 1638,
+      "sha256": "ed6e9d048d90d72209cc760f1dda9948e9f6f7b72353db1dcaafbb57096668e5"
+    },
+    {
+      "path": "expat/configure-ac-style.md",
+      "bytes": 1571,
+      "sha256": "ddc33ba384570215427ed52664d3f38a0823dd799ab8066ebea18d88220a73fc"
+    },
+    {
+      "path": "expat/configure.ac",
+      "bytes": 16966,
+      "sha256": "d1dd04bcdbd620e42af83f67c10839df707899c9aa51a4be814a2bfa2b8ae474"
+    },
+    {
+      "path": "expat/conftools/.gitignore",
+      "bytes": 108,
+      "sha256": "36aa1949c2b223e6c1a2bb594a72279ec0fcba7e886c0b755408efb9b708fc31"
+    },
+    {
+      "path": "expat/conftools/ax-append-compile-flags.m4",
+      "bytes": 1765,
+      "sha256": "ecbcac20f9872c57e7615d57874b3798b809288a48602b790b2977446e272323"
+    },
+    {
+      "path": "expat/conftools/ax-append-flag.m4",
+      "bytes": 1552,
+      "sha256": "392cb0e965351b1d6a9847cf165dc4092fb1853fd63dbe010ac8b21c286f5e16"
+    },
+    {
+      "path": "expat/conftools/ax-append-link-flags.m4",
+      "bytes": 1711,
+      "sha256": "087c9c6fc74fa72c3cb77a21de75b6488cd3f360ae4771056dacdf7b66cc0eca"
+    },
+    {
+      "path": "expat/conftools/ax-check-compile-flag.m4",
+      "bytes": 3499,
+      "sha256": "35905eea68500c1cb91e089e017868ef63720ba3fa522aa32e9266749952f89c"
+    },
+    {
+      "path": "expat/conftools/ax-check-link-flag.m4",
+      "bytes": 1956,
+      "sha256": "c335b90e218fdc064e67003706c9192ca779c83720c4b369254caad6c5a78be3"
+    },
+    {
+      "path": "expat/conftools/ax-require-defined.m4",
+      "bytes": 1218,
+      "sha256": "d870b21e817747c6a61a9dd72e06ea45f87e012c7a1a9aa5ff90cd3af89b3774"
+    },
+    {
+      "path": "expat/conftools/expat.m4",
+      "bytes": 1442,
+      "sha256": "5067500c6315a078c38008d7a9ca667dd4c24ede5415d14f0da43dd12ff1a3e1"
+    },
+    {
+      "path": "expat/conftools/expatcfg-compiler-supports-visibility.m4",
+      "bytes": 1456,
+      "sha256": "3b2120f3a155c544347dad20af9167558ce3fc3639a16966163e5f3aeb76b791"
+    },
+    {
+      "path": "expat/conftools/get-version.sh",
+      "bytes": 2381,
+      "sha256": "78aa7ce4329e456db6a4ad4f2a9992afb8abfdb947d756cdd9b97bc57a4d6171"
+    },
+    {
+      "path": "expat/coverage.sh",
+      "bytes": 8943,
+      "sha256": "1f390f1b37ddf993818b627f216a3bb66ba8cb3a781e079278e659937df2a7eb"
+    },
+    {
+      "path": "expat/distribute.sh",
+      "bytes": 1955,
+      "sha256": "838190961bdcfdc65f98bdcbc06859c959087965306da81ee4c18ece788742a1"
+    },
+    {
+      "path": "expat/doc/.gitignore",
+      "bytes": 18,
+      "sha256": "8272913e96b4c4e61b329664f9717176efa0255731fae32ab7dd670cf2d048fe"
+    },
+    {
+      "path": "expat/doc/Makefile.am",
+      "bytes": 2197,
+      "sha256": "ecbb1f7eb20ebabb7cf2a0480ed326d6844173024831e5a0f36526ee3b776129"
+    },
+    {
+      "path": "expat/doc/ok.min.css",
+      "bytes": 15844,
+      "sha256": "56a38492f2b1f6b5cff0c2abba99262fd3790dfa27f5dc5ffc24781a44260eb1"
+    },
+    {
+      "path": "expat/doc/reference.html",
+      "bytes": 103458,
+      "sha256": "27009ffb740d2634f9c1746e91ebf622716b856a7b71c01b13b32066a1adc4df"
+    },
+    {
+      "path": "expat/doc/style.css",
+      "bytes": 1952,
+      "sha256": "f406460bc73980118d8d15186daa51918d52752562641e27d19eb453c0c0817e"
+    },
+    {
+      "path": "expat/doc/xmlwf.xml",
+      "bytes": 17714,
+      "sha256": "c4564d1a60bd62b09c083d5e4307da2c6ff1606d5fb3e64a57ac4c4f56bfc0ec"
+    },
+    {
+      "path": "expat/examples/.gitignore",
+      "bytes": 71,
+      "sha256": "e816551333b9e6153b52659c9b91bb7112e5297a59b070cfaab96267c00d78a0"
+    },
+    {
+      "path": "expat/examples/Makefile.am",
+      "bytes": 1781,
+      "sha256": "569f33c131894cf30df8935e9dc9343986e2802f75309c08479da85ff155d8d8"
+    },
+    {
+      "path": "expat/examples/elements.c",
+      "bytes": 3610,
+      "sha256": "d24dafed8f20a295f9da90b802c3a2099268e757bdc63fc104fc7287eebaf23b"
+    },
+    {
+      "path": "expat/examples/outline.c",
+      "bytes": 3526,
+      "sha256": "a6c2dcb1f18af93ea28ca7bcebe0b84769045b0babfe49577dccbe68e7a8a7ba"
+    },
+    {
+      "path": "expat/expat.pc.cmake",
+      "bytes": 548,
+      "sha256": "45700a393fd9935a6992dcf35b98a246215454609fd14658590b45be9e929fd1"
+    },
+    {
+      "path": "expat/expat.pc.in",
+      "bytes": 260,
+      "sha256": "2fa04ee46c105ded2c814f67f705e4afe4e9684c8ce850ff3bc9bfb810208ac8"
+    },
+    {
+      "path": "expat/expat_config.h.cmake",
+      "bytes": 3399,
+      "sha256": "adde3e2bc48d6593b3ff8949dc200f141b8c3b8f105b9c8c0a6dde1cc6544f0d"
+    },
+    {
+      "path": "expat/fix-xmltest-log.sh",
+      "bytes": 2192,
+      "sha256": "ef0022521358afd8d21e77c055200896a4ae31b71fc9e75f62d2d2485f9b2311"
+    },
+    {
+      "path": "expat/fuzz/.gitignore",
+      "bytes": 12,
+      "sha256": "b14122d2b7159d0d65c04aa99a1089c887ad7e616f22a039c536249679b2a315"
+    },
+    {
+      "path": "expat/fuzz/xml_parse_fuzzer.c",
+      "bytes": 1975,
+      "sha256": "cf401a09d7281a3a173a6cbbf3a9df5b81c1a648ad36cec9f4d4b9c60da24b3e"
+    },
+    {
+      "path": "expat/fuzz/xml_parsebuffer_fuzzer.c",
+      "bytes": 2049,
+      "sha256": "80c56ac96beb531769ef0f60ee5304e2aba3c29cf28d05c463491c63ceff9574"
+    },
+    {
+      "path": "expat/gennmtab/.gitignore",
+      "bytes": 27,
+      "sha256": "61548ae4af97cbbeb338325d3bd1c223fc28db78dae3fb9c1c3fdb59755c2f39"
+    },
+    {
+      "path": "expat/gennmtab/gennmtab.c",
+      "bytes": 10398,
+      "sha256": "09b6c9d87f5f85ee6b82dd5fcbd9b4e5393ceff0eee87d5767b894aa3354ea1a"
+    },
+    {
+      "path": "expat/lib/.gitignore",
+      "bytes": 188,
+      "sha256": "b907f24d7726d2b5228ff00807cd8545a32e17f3378b3e98feacc227acf667c4"
+    },
+    {
+      "path": "expat/lib/Makefile.am",
+      "bytes": 2710,
+      "sha256": "434420fb16c6c2d545741eb8a1f67d9ca1352a79fccbf8c665f978d70361afbe"
+    },
+    {
+      "path": "expat/lib/ascii.h",
+      "bytes": 3682,
+      "sha256": "42f8b392c70366743eacbc60ce021389ccaa333598dd49eef6ee5c93698ca205"
+    },
+    {
+      "path": "expat/lib/asciitab.h",
+      "bytes": 3520,
+      "sha256": "1cc0ae749019fc0e488cd1cf245f6beaa6d4f7c55a1fc797e5aa40a408bc266b"
+    },
+    {
+      "path": "expat/lib/expat.h",
+      "bytes": 42636,
+      "sha256": "cabaab6c0330893e4fff25f54a00ca1b8e369e06fc359d78f19d84f11c91cf5c"
+    },
+    {
+      "path": "expat/lib/expat_external.h",
+      "bytes": 6029,
+      "sha256": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3"
+    },
+    {
+      "path": "expat/lib/iasciitab.h",
+      "bytes": 3590,
+      "sha256": "ad8b01e9f323cc4208bcd22241df383d7e8641fe3c8b3415aa513de82531f89f"
+    },
+    {
+      "path": "expat/lib/internal.h",
+      "bytes": 5808,
+      "sha256": "0f621aec813b3521114a34588ce2bca8ade58301c790fcc3ef246c2ccf1dca4e"
+    },
+    {
+      "path": "expat/lib/latin1tab.h",
+      "bytes": 3573,
+      "sha256": "eab66226da100372e01e42e1cbcd8ac2bbbb5c1b5f95d735289cc85c7a8fc2ba"
+    },
+    {
+      "path": "expat/lib/libexpat.def",
+      "bytes": 2298,
+      "sha256": "2ae4dfe52f759bd2e667fa8bb050ba3a7368e2c503965189d928296a8cc2a724"
+    },
+    {
+      "path": "expat/lib/libexpatw.def",
+      "bytes": 2298,
+      "sha256": "2ae4dfe52f759bd2e667fa8bb050ba3a7368e2c503965189d928296a8cc2a724"
+    },
+    {
+      "path": "expat/lib/nametab.h",
+      "bytes": 9044,
+      "sha256": "67dcf415d37a4b692a6a8bb46f990c02d83f2ef3d01a65cd61c8594a084246f2"
+    },
+    {
+      "path": "expat/lib/siphash.h",
+      "bytes": 13072,
+      "sha256": "95172f931786521478afeef8acdd921ef712300600450207b17332cf494bf92e"
+    },
+    {
+      "path": "expat/lib/utf8tab.h",
+      "bytes": 3522,
+      "sha256": "8cd26bd461d334d5e1caedb3af4518d401749f2fc66d56208542b29085159c18"
+    },
+    {
+      "path": "expat/lib/winconfig.h",
+      "bytes": 1931,
+      "sha256": "3c71cea9a6174718542331971a35db317902b2433be9d8dd1cb24239b635c0cc"
+    },
+    {
+      "path": "expat/lib/xmlparse.c",
+      "bytes": 276997,
+      "sha256": "2df154c8bc82ccfba809f7303aa02f7626dc5f06ac9f9eb0b22a3e3f5a1603ae"
+    },
+    {
+      "path": "expat/lib/xmlrole.c",
+      "bytes": 35476,
+      "sha256": "6fcf8c72ac0112c1b98bd2039c632a66b4c3dc516ce7c1f981390951121ef3c0"
+    },
+    {
+      "path": "expat/lib/xmlrole.h",
+      "bytes": 4669,
+      "sha256": "2b5d674be6ef20c7e3f69295176d75e68c5616e4dfce0a186fdd5e2ed8315f7a"
+    },
+    {
+      "path": "expat/lib/xmltok.c",
+      "bytes": 54526,
+      "sha256": "bcf324f17a469abb934b08415226a9f8b09f1c25def2a0ddb6e2f5832ad445e7"
+    },
+    {
+      "path": "expat/lib/xmltok.h",
+      "bytes": 12838,
+      "sha256": "4299a03828b98bfe47ec6809f6e279252954a9a911dc7e0f19551bd74e3af971"
+    },
+    {
+      "path": "expat/lib/xmltok_impl.c",
+      "bytes": 53599,
+      "sha256": "3e13e257f612fbcec7eebee2a5b8a5b44d80ed8be57bc0103c62a2f6a0faae35"
+    },
+    {
+      "path": "expat/lib/xmltok_impl.h",
+      "bytes": 3431,
+      "sha256": "97ee5d2a120aa096fdc7efd701384ba956de3a38a05a16fc8a66f8537e10d263"
+    },
+    {
+      "path": "expat/lib/xmltok_ns.c",
+      "bytes": 4640,
+      "sha256": "6ce6d03193279078d55280150fe91e7370370b504a6c123a79182f28341f3e90"
+    },
+    {
+      "path": "expat/memory-sanitizer-blacklist.txt",
+      "bytes": 310,
+      "sha256": "7a92d097fa822a1b95051c346756f961b49dfcadbf0af6dbc5c2e11e474a49c8"
+    },
+    {
+      "path": "expat/qa.sh",
+      "bytes": 8074,
+      "sha256": "dc2c731756b2ab870ac44252dba24f0fa0292e302ad40fc77b94af6f0c0d9e35"
+    },
+    {
+      "path": "expat/run.sh.in",
+      "bytes": 1805,
+      "sha256": "c8ccc736ced4f348b8bbb09752977038bf00893f94d52c96c873638ac1f8cefc"
+    },
+    {
+      "path": "expat/test-driver-wrapper.sh",
+      "bytes": 1937,
+      "sha256": "12920081aa7372a0c8e1e23e69daa570239e8412b318a971ec70fb63a3c478f8"
+    },
+    {
+      "path": "expat/tests/.gitignore",
+      "bytes": 111,
+      "sha256": "d641e927f623412f9bb32d88d7d428d613976514efe81f51fcafc8bfa5087ac8"
+    },
+    {
+      "path": "expat/tests/Makefile.am",
+      "bytes": 2453,
+      "sha256": "746f23d874ccb626a55c832fcc704dcf6ae226c7f811791c02657f0fe7d7b293"
+    },
+    {
+      "path": "expat/tests/README.txt",
+      "bytes": 570,
+      "sha256": "9ac098806529277219a29870ed2ef979d340f24e781cfe72dde9bce9c1d5d691"
+    },
+    {
+      "path": "expat/tests/benchmark/.gitignore",
+      "bytes": 11,
+      "sha256": "8741ed039254170eea89f755874eba5c1444e473ee370834a47dcede9fa4963d"
+    },
+    {
+      "path": "expat/tests/benchmark/Makefile.am",
+      "bytes": 1751,
+      "sha256": "6fb985f9fec190a56d174c7bc6c771204329986505b3a4c76753d56db49c69ba"
+    },
+    {
+      "path": "expat/tests/benchmark/README.txt",
+      "bytes": 548,
+      "sha256": "2880002b547c1af1d51c8bb86dc80ed0dc4c61b3e05e6a37266f54c1a48380bf"
+    },
+    {
+      "path": "expat/tests/benchmark/benchmark.c",
+      "bytes": 4448,
+      "sha256": "6837c382b27ded7834d2f8be2dc4cc490f9d0cdaf9187fb2fb4d7e69001b9f1d"
+    },
+    {
+      "path": "expat/tests/chardata.c",
+      "bytes": 3299,
+      "sha256": "36c72eb41e2cc1641bbe4b720758d6be1d78f637ce15d893c173a11e071edf40"
+    },
+    {
+      "path": "expat/tests/chardata.h",
+      "bytes": 2284,
+      "sha256": "20c193c884f40c6f8c7214b26607256285f24378bc3559418d84ee7abf238b29"
+    },
+    {
+      "path": "expat/tests/memcheck.c",
+      "bytes": 5394,
+      "sha256": "431ab1280e92752bb7fffb611ccd6ced22f9e6ce4660dacd703996590e1c7d87"
+    },
+    {
+      "path": "expat/tests/memcheck.h",
+      "bytes": 2189,
+      "sha256": "5171b2636033997305bc6950be6f5a83178062537c8546879ed154818270b9b0"
+    },
+    {
+      "path": "expat/tests/minicheck.c",
+      "bytes": 6525,
+      "sha256": "0cb3097787bdee8463f474a39e355d73385770eaa7a570497a96f3c8dd82711f"
+    },
+    {
+      "path": "expat/tests/minicheck.h",
+      "bytes": 4237,
+      "sha256": "add7a34626eaeb2a7f23ef4618891d8f15a0c1937c179b25b9c966e406ec27d0"
+    },
+    {
+      "path": "expat/tests/runtests.c",
+      "bytes": 486315,
+      "sha256": "f05e877c54021648eacbd3b1d706a3201aa834f9854921d8a6eee35a4298f373"
+    },
+    {
+      "path": "expat/tests/runtestspp.cpp",
+      "bytes": 1783,
+      "sha256": "28764377925b13cb22aacb1da83e301d8d7362a55776349d16f7867b85acb677"
+    },
+    {
+      "path": "expat/tests/structdata.c",
+      "bytes": 4624,
+      "sha256": "d82a8d0a828f79d2c80fa2a5c827f595c556ef3bc950418eab8437322b85d691"
+    },
+    {
+      "path": "expat/tests/structdata.h",
+      "bytes": 2402,
+      "sha256": "a4a8bca984139e456153ea1755050d9d38b0e79c23a45d0387161d2dfe401216"
+    },
+    {
+      "path": "expat/tests/udiffer.py",
+      "bytes": 2370,
+      "sha256": "4f6b61e2e5042652358797d7682f9bfbbf4727698d6d7c3b5bbdfd8aa45d5f43"
+    },
+    {
+      "path": "expat/tests/xmltest.log.expected",
+      "bytes": 398,
+      "sha256": "89393e902b1df423c067691b6bea1e06483a68bb5926be83bcf075eca61e2b1e"
+    },
+    {
+      "path": "expat/tests/xmltest.sh",
+      "bytes": 5279,
+      "sha256": "3ff29bdff19a792cfb1f02ba344532700f74c455b14f395c220995806ec8cb01"
+    },
+    {
+      "path": "expat/win32/.gitignore",
+      "bytes": 97,
+      "sha256": "2dd1c83c2bf2c5fc79f0c0f10d4b53794ddb7ee8fc319c50472202c33d8d3e02"
+    },
+    {
+      "path": "expat/win32/MANIFEST.txt",
+      "bytes": 1120,
+      "sha256": "cfb4be675979c27dc2fd68f20b17c3c91ef07a86ef2ab03d0e2259ce74518947"
+    },
+    {
+      "path": "expat/win32/README.txt",
+      "bytes": 1899,
+      "sha256": "29daf510684cc1774cf6beddfcecad81bad84894c6c0edb9fe7e24dd9b018d30"
+    },
+    {
+      "path": "expat/win32/build_expat_iss.bat",
+      "bytes": 3980,
+      "sha256": "9f302ee46dc15ba60c824f2fdab4d7a4c93bb705225cf090787b4b2b23cacea4"
+    },
+    {
+      "path": "expat/win32/expat.iss",
+      "bytes": 6221,
+      "sha256": "bb55001110f0ac79ccd0d02e99275d0392b3463e1d4ca38adec421bbeaf90861"
+    },
+    {
+      "path": "expat/xmlwf/.gitignore",
+      "bytes": 55,
+      "sha256": "153804bf0c21f853bbe5a2e280c821030b1c5308bb9826bf63723881a5bfed39"
+    },
+    {
+      "path": "expat/xmlwf/Makefile.am",
+      "bytes": 2010,
+      "sha256": "9bad46ca7af79cb640275871baefecdb0b94b2136b6b2d9c678652646bb4e102"
+    },
+    {
+      "path": "expat/xmlwf/codepage.c",
+      "bytes": 3180,
+      "sha256": "48496fb3a226701a1b7c1295a3394ae580a1f254f57f0973278fb401fc73d84e"
+    },
+    {
+      "path": "expat/xmlwf/codepage.h",
+      "bytes": 1832,
+      "sha256": "fa862dd29ae33acd54a71edb4f1c7ee2836d7fcddde11f5949630533bb0ad8d3"
+    },
+    {
+      "path": "expat/xmlwf/ct.c",
+      "bytes": 4583,
+      "sha256": "fb223fd0493c481879fcf855fd6fdf1edf2956cb520cd534bd5b2f95450e7860"
+    },
+    {
+      "path": "expat/xmlwf/filemap.h",
+      "bytes": 2378,
+      "sha256": "46c4905001f8257851ffb03b8731a1e71882b0d081f04605d9c751f39615e55a"
+    },
+    {
+      "path": "expat/xmlwf/readfilemap.c",
+      "bytes": 4278,
+      "sha256": "1a4c07d61a5129607b0c8fd4a5c64fe1901f9cb08187bb80fbbcafd4994c345f"
+    },
+    {
+      "path": "expat/xmlwf/unixfilemap.c",
+      "bytes": 3296,
+      "sha256": "0a9fa12030848c854e3c766f5505a901c4bccd46437d1b1af881373934a65f5c"
+    },
+    {
+      "path": "expat/xmlwf/win32filemap.c",
+      "bytes": 3756,
+      "sha256": "b9f8b04eb88cbd85cc38dae9ba63ed5654056b8f124d4011d48f3b67361a4c0c"
+    },
+    {
+      "path": "expat/xmlwf/xmlfile.c",
+      "bytes": 8282,
+      "sha256": "268987ae366af6932e30392e5e127d3695ea198729c255bc6030826dd21efa53"
+    },
+    {
+      "path": "expat/xmlwf/xmlfile.h",
+      "bytes": 2085,
+      "sha256": "b7992041cff83f6ab2cace4d607c52d7f11759fe7207c82a7db6b57bce1a434c"
+    },
+    {
+      "path": "expat/xmlwf/xmlmime.c",
+      "bytes": 5019,
+      "sha256": "a369d434714863e4cab18b1b5696bd381e144f0fc204fba01ff23100b9c24232"
+    },
+    {
+      "path": "expat/xmlwf/xmlmime.h",
+      "bytes": 2173,
+      "sha256": "1e786f9316329ca95d5330dd1716eab361ccd9a2c9726747db357c5e2f83efd8"
+    },
+    {
+      "path": "expat/xmlwf/xmltchar.h",
+      "bytes": 2836,
+      "sha256": "6b8c6deee065850997ba7b60fb8be76661e4d55e4bf723064f1c2066bd5ea288"
+    },
+    {
+      "path": "expat/xmlwf/xmlwf.c",
+      "bytes": 36880,
+      "sha256": "89a7d2c98485c4d6afc3c2ade65b36fd0ae8f80a0d629b8641d00544d7a078c8"
+    },
+    {
+      "path": "expat/xmlwf/xmlwf_helpgen.py",
+      "bytes": 5283,
+      "sha256": "bb570e38f0b0f99c6686c74e07dc273efa78e0c8e794b2615896746dd4300ec7"
+    },
+    {
+      "path": "expat/xmlwf/xmlwf_helpgen.sh",
+      "bytes": 1717,
+      "sha256": "480ebbb48a38d8f553882c0ac9b4000b44e9c836e3477ef2aff09aaa07bc04f2"
+    },
+    {
+      "path": "testdata/README.txt",
+      "bytes": 254,
+      "sha256": "4c3dcce234da09a9acca32d041b24c2822d004a3b81ec1fa8f82fdf94aa49cb2"
+    },
+    {
+      "path": "testdata/largefiles/README.txt",
+      "bytes": 1403,
+      "sha256": "a9b585e30cba971ddac06bb5ad98d92a49d6b32ee93fda2fdd42f9b07938766f"
+    },
+    {
+      "path": "testdata/largefiles/nes96.xml",
+      "bytes": 2961535,
+      "sha256": "ad5d5a8569d4dbd43b733e2195b5f79d9f4321fc83f3768e98183a572278ed27"
+    },
+    {
+      "path": "testdata/largefiles/ns_att_test.xml",
+      "bytes": 35651895,
+      "sha256": "faf73117317879c60b1cb7dbe4552aeb4139eef2fe9fd9dfafa3a00f16ce1862"
+    },
+    {
+      "path": "testdata/largefiles/recset.xml",
+      "bytes": 30326041,
+      "sha256": "54375b15ec21cf5402cc1fa0d8a8813807fba6ef1f5dad2c7b9da6794a1edae5"
+    },
+    {
+      "path": "testdata/largefiles/wordnet_glossary-20010201.rdf",
+      "bytes": 15161489,
+      "sha256": "7298a749b13a21e2045d575f4a5625de47850ff1c13e9a6670de9680052daae2"
+    }
+  ],
+  "licenses": [
+    "expat/COPYING"
+  ],
+  "pe_files_not_executed": [],
+  "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+  "elapsed_seconds": 1.404
+}

@@ -1,0 +1,272 @@
+﻿[
+    {
+        "path":  "freetype-2.11.1-je-rev1-windows.tar.xz",
+        "bytes":  712192,
+        "sha256":  "A6999AA779CD5E37E415EB784188F73763D396EAACA58F5B9485E2A5568B9802"
+    },
+    {
+        "path":  "freetype-2.11.1-je-rev1-windows.tar.xz.SHA256SUMS",
+        "bytes":  106,
+        "sha256":  "6D6FF27FDEFA48E7AF3BBCDA4ED503208118E8ECA5958B460F81DF520B7E3C9A"
+    },
+    {
+        "path":  "pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+        "bytes":  22663592,
+        "sha256":  "CD0272EB5CE46A3437132344A4A6B7022E3AEE152DA888963CDD9D025CBDF506"
+    },
+    {
+        "path":  "pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS",
+        "bytes":  108,
+        "sha256":  "6BEBD651D19A6397EA3ABC8E28D9D6467010456085FA7E12B9FE7ECB6C937966"
+    },
+    {
+        "path":  "python-3.10.13-je-rev1-windows.tar.xz",
+        "bytes":  22341204,
+        "sha256":  "4370B5870C6B4DA65206F6C8E82CA5540F0F2C60FE4CB2BBBD34DBF1CC7DD2D9"
+    },
+    {
+        "path":  "python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+        "bytes":  105,
+        "sha256":  "C468957F63BC9AECC776D8ED123FD0B061823E1C51625F34BE8A5627FA70F283"
+    },
+    {
+        "path":  "python-wheelhouse/atomicwrites-1.4.1.tar.gz",
+        "bytes":  14227,
+        "sha256":  "81B2C9071A49367A7F770170E5EEC8CB66567CFBBC8C73D20CE5CA4A8D71CF11"
+    },
+    {
+        "path":  "python-wheelhouse/attrs-20.1.0-py2.py3-none-any.whl",
+        "bytes":  49020,
+        "sha256":  "2867B7B9F8326499AB5B0E2D12801FA5C98842D2CBD22B35112AE04BF85B4DFF"
+    },
+    {
+        "path":  "python-wheelhouse/certifi-2024.7.4-py3-none-any.whl",
+        "bytes":  162960,
+        "sha256":  "C198E21B1289C2AB85EE4E67BB4B4EF3EAD0892059901A8D5B622F24A1101E90"
+    },
+    {
+        "path":  "python-wheelhouse/charset_normalizer-2.0.10-py3-none-any.whl",
+        "bytes":  39377,
+        "sha256":  "CB957888737FC0BBCD78E3DF769ADDB41FD1FF8CF950DC9E7AD7793F1BF44455"
+    },
+    {
+        "path":  "python-wheelhouse/colorama-0.4.3-py2.py3-none-any.whl",
+        "bytes":  15931,
+        "sha256":  "7D73D2A99753107A36AC6B455EE49046802E59D9D076EF8E47B61499FA29AFFF"
+    },
+    {
+        "path":  "python-wheelhouse/docutils-0.15.2-py3-none-any.whl",
+        "bytes":  547604,
+        "sha256":  "6C4F696463B79F1FB8BA0C594B63840EBD41F059E92B31957C46B74A4599B6D0"
+    },
+    {
+        "path":  "python-wheelhouse/EasyProcess-0.2.8-py2.py3-none-any.whl",
+        "bytes":  10342,
+        "sha256":  "E8258E8FAFDDC97A9780BAFA83A0B7A7223E3679478EBC7A64CB320D434354E5"
+    },
+    {
+        "path":  "python-wheelhouse/exceptiongroup-1.0.4-py3-none-any.whl",
+        "bytes":  14280,
+        "sha256":  "542ADF9DEA4055530D6E1279602FA5CB11DAB2395FA650B8674EAEC35FC4A828"
+    },
+    {
+        "path":  "python-wheelhouse/gitdb-4.0.10-py3-none-any.whl",
+        "bytes":  62735,
+        "sha256":  "C286CF298426064079ED96A9E4A9D39E7F3E9BF15BA60701E95F5492F28415C7"
+    },
+    {
+        "path":  "python-wheelhouse/GitPython-3.1.44-py3-none-any.whl",
+        "bytes":  207599,
+        "sha256":  "9E0E10CDA9BED1EE64BC9A6DE50E7E38A9C9943241CD7F585F6DF3ED28011110"
+    },
+    {
+        "path":  "python-wheelhouse/idna-3.7-py3-none-any.whl",
+        "bytes":  66836,
+        "sha256":  "82FEE1FC78ADD43492D3A1898BFA6D8A904CC97D8427F683ED8E798D07761AA0"
+    },
+    {
+        "path":  "python-wheelhouse/imageio-2.8.0-py3-none-any.whl",
+        "bytes":  3307383,
+        "sha256":  "1E4AB29B3775BB093C7A35854A0412857145450183344678829B30E72263B001"
+    },
+    {
+        "path":  "python-wheelhouse/importlib_metadata-1.6.1-py2.py3-none-any.whl",
+        "bytes":  31413,
+        "sha256":  "15EC6C0FD909E893E3A08B3A7C76ECB149122FB14B7EFE1199DDD4C7C57EA958"
+    },
+    {
+        "path":  "python-wheelhouse/iniconfig-1.1.1-py2.py3-none-any.whl",
+        "bytes":  4990,
+        "sha256":  "011E24C64B7F47F6EBD835BB12A743F2FBE9A26D4CECAA7F53BC4F35EE9DA8B3"
+    },
+    {
+        "path":  "python-wheelhouse/jinja2-3.1.6-py3-none-any.whl",
+        "bytes":  134899,
+        "sha256":  "85ECE4451F492D0C13C5DD7C13A64681A86AFAE63A5F347908DAF103CE6D2F67"
+    },
+    {
+        "path":  "python-wheelhouse/jmespath-0.9.5-py2.py3-none-any.whl",
+        "bytes":  24149,
+        "sha256":  "695CB76FA78A10663425D5B73DDC5714EB711157E52704D69BE03B1A02BA4FEC"
+    },
+    {
+        "path":  "python-wheelhouse/MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl",
+        "bytes":  15514,
+        "sha256":  "6AF100E168AA82A50E186C82875A5893C5597A0C1CCDB0D8B40240B1F28B969A"
+    },
+    {
+        "path":  "python-wheelhouse/more_itertools-8.4.0-py3-none-any.whl",
+        "bytes":  43054,
+        "sha256":  "B78134B2063DD214000685165D81C154522C3EE0A1C0D4D113C80361C234C5A2"
+    },
+    {
+        "path":  "python-wheelhouse/numpy-1.23.0-cp310-cp310-win_amd64.whl",
+        "bytes":  14636971,
+        "sha256":  "97A76604D9B0E79F59BAECA16593C711FDDB44936E40310F78BFEF79EE9A835F"
+    },
+    {
+        "path":  "python-wheelhouse/packaging-20.4-py2.py3-none-any.whl",
+        "bytes":  37620,
+        "sha256":  "998416BA6962AE7FBD6596850B80E17859A5753BA17C32284F67BFFF33784181"
+    },
+    {
+        "path":  "python-wheelhouse/patch_ng-1.19.1-py3-none-any.whl",
+        "bytes":  17601,
+        "sha256":  "D45FD47B3F74B48C3E336690341876BB26244A077A06F5F7E6E47C19C15C1CA4"
+    },
+    {
+        "path":  "python-wheelhouse/pillow-10.3.0-cp310-cp310-win_amd64.whl",
+        "bytes":  2531321,
+        "sha256":  "F0D0591A0AEAEFDAF9A5E545E7485F89910C977087E7DE2B6C388AEC32011E9F"
+    },
+    {
+        "path":  "python-wheelhouse/pluggy-1.6.0-py3-none-any.whl",
+        "bytes":  20538,
+        "sha256":  "E920276DD6813095E9377C0BC5566D94C932C33B27A3E3945D8389C374DD4746"
+    },
+    {
+        "path":  "python-wheelhouse/progressbar2-3.53.1-py2.py3-none-any.whl",
+        "bytes":  25786,
+        "sha256":  "FE2738E7ECB7DF52AD76307FE610C460C52B50F5335FD26C3AB80FF7655BA1E0"
+    },
+    {
+        "path":  "python-wheelhouse/psutil-5.9.8-cp37-abi3-win_amd64.whl",
+        "bytes":  255090,
+        "sha256":  "8DB4C1B57507EEF143A15A6884CA10F7C73876CDF5D51E713151C1236A0E68CF"
+    },
+    {
+        "path":  "python-wheelhouse/puremagic-1.28-py3-none-any.whl",
+        "bytes":  43241,
+        "sha256":  "E16CB9708EE2007142C37931C58F07F7ECA956B3472489106A7245E5C3AA1241"
+    },
+    {
+        "path":  "python-wheelhouse/pyparsing-2.4.7-py2.py3-none-any.whl",
+        "bytes":  67842,
+        "sha256":  "EF9D7589EF3C200ABE66653D3F1AB1033C3C419AE9B9BDB1240A85B024EFC88B"
+    },
+    {
+        "path":  "python-wheelhouse/pyscreenshot-0.6-py2.py3-none-any.whl",
+        "bytes":  23229,
+        "sha256":  "1AF20739C754F7FA1E7F792C0C682FD89E30C9DB4004252792830CC538727235"
+    },
+    {
+        "path":  "python-wheelhouse/pytest_mock-3.8.2-py3-none-any.whl",
+        "bytes":  9102,
+        "sha256":  "8A9E226D6C0EF09FCF20C94EB3405C388AF438A90F3E39687F84166DA82D5948"
+    },
+    {
+        "path":  "python-wheelhouse/pytest_timeout-2.1.0-py3-none-any.whl",
+        "bytes":  12701,
+        "sha256":  "F6F50101443CE70AD325CEB4473C4255E9D74E3C7CD0EF827309DFA4C0D975C6"
+    },
+    {
+        "path":  "python-wheelhouse/pytest-7.2.0-py3-none-any.whl",
+        "bytes":  316791,
+        "sha256":  "892F933D339F068883B6FD5A459F03D85BFCB355E4981E146D2C7616C21FEF71"
+    },
+    {
+        "path":  "python-wheelhouse/python_dateutil-2.8.1-py2.py3-none-any.whl",
+        "bytes":  227183,
+        "sha256":  "75BB3F31EA686F1197762692A9EE6A7550B59FC6CA3A1F4B5D7E32FB98E2DA2A"
+    },
+    {
+        "path":  "python-wheelhouse/python_utils-2.5.6-py2.py3-none-any.whl",
+        "bytes":  12527,
+        "sha256":  "18FBC1A1DF9A9061E3059A48EBE5C8A66B654D688B0E3ECCA8B339A7F168F208"
+    },
+    {
+        "path":  "python-wheelhouse/requests-2.32.0-py3-none-any.whl",
+        "bytes":  63695,
+        "sha256":  "F2C3881DDDB70D056C5BD7600A4FAE312B2A300E39BE6A118D30B90BD27262B5"
+    },
+    {
+        "path":  "python-wheelhouse/resolvelib-0.9.0-py2.py3-none-any.whl",
+        "bytes":  16901,
+        "sha256":  "597ADCBDF81D62D0CDE55D90FAA8E79187EC0F18E5012DF30BD7A751B26343AE"
+    },
+    {
+        "path":  "python-wheelhouse/scipy-1.8.1-cp310-cp310-win_amd64.whl",
+        "bytes":  36930750,
+        "sha256":  "4E53A55F6A4F22DE01FFE1D2F016E30ADEDB67A699A310CDCAC312806807CA81"
+    },
+    {
+        "path":  "python-wheelhouse/six-1.13.0-py2.py3-none-any.whl",
+        "bytes":  10747,
+        "sha256":  "1F1B7D42E254082A9DB6279DEAE68AFB421CEBA6158EFA6131DE7B3003EE93FD"
+    },
+    {
+        "path":  "python-wheelhouse/smmap-5.0.0-py3-none-any.whl",
+        "bytes":  24271,
+        "sha256":  "2ABA19D6A040E78D8B09DE5C57E96207B09ED71D8E55CE0959EEEE6C8E190D94"
+    },
+    {
+        "path":  "python-wheelhouse/toml-0.10.2-py2.py3-none-any.whl",
+        "bytes":  16588,
+        "sha256":  "806143AE5BFB6A3C6E736A764057DB0E6A0E05E338B5630894A5F779CABB4F9B"
+    },
+    {
+        "path":  "python-wheelhouse/tomli-2.0.1-py3-none-any.whl",
+        "bytes":  12757,
+        "sha256":  "939DE3E7A6161AF0C887EF91B7D41A53E7C5A1CA976325F429CB46EA9BC30ECC"
+    },
+    {
+        "path":  "python-wheelhouse/urllib3-1.26.19-py2.py3-none-any.whl",
+        "bytes":  143933,
+        "sha256":  "37A0344459B199FCE0E80B0D3569837EC6B6937435C5244E7FD73FA6006830F3"
+    },
+    {
+        "path":  "python-wheelhouse/wcwidth-0.2.5-py2.py3-none-any.whl",
+        "bytes":  30763,
+        "sha256":  "BEB4802A9CEBB9144E99086EFF703A642A13D6A0052920003A230F3294BBE784"
+    },
+    {
+        "path":  "python-wheelhouse/wheel-0.38.4-py3-none-any.whl",
+        "bytes":  36051,
+        "sha256":  "B60533F3F5D530E971D6737CA6D58681EE434818FAB630C83A734BB10C083CE8"
+    },
+    {
+        "path":  "python-wheelhouse/zipp-3.19.1-py3-none-any.whl",
+        "bytes":  8951,
+        "sha256":  "2828E64EDB5386EA6A52E7BA7CDB17BB30A73A858F5EB6EB93D8D36F5EA26091"
+    },
+    {
+        "path":  "qt-6.11.2-rev1-windows.tar.xz",
+        "bytes":  201790724,
+        "sha256":  "F09EDC180DF0DED92827279C475167BE13CBB517DE182A5B10EC1337E68DD834"
+    },
+    {
+        "path":  "qt-6.11.2-rev1-windows.tar.xz.SHA256SUMS",
+        "bytes":  96,
+        "sha256":  "DFAEA866C559A9C679D8686887A72D764FBE9D9AA45CE67C2BF410C97FEF4E76"
+    },
+    {
+        "path":  "zlib-1.2.11-je-rev1-windows.tar.xz",
+        "bytes":  92556,
+        "sha256":  "4FF69C9C7F99C917AFCE6D04CDF3FC6F2A65C0038ABF2C677EF418182851BEF7"
+    },
+    {
+        "path":  "zlib-1.2.11-je-rev1-windows.tar.xz.SHA256SUMS",
+        "bytes":  102,
+        "sha256":  "DF554AA6E6CFE58EC7700D21C69B0F513951B05B2E8D0D6369500EF29BF4BEBF"
+    }
+]

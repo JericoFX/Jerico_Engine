@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: Python 3.12 bootstrap SHA256 mismatch:
+  C:/Users/Jerico/AppData/Local/Programs/Python/Python312/python.exe
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake:51 (JE_python_verify_file)
+
+

@@ -1,0 +1,30 @@
+CWD: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+MODE: configure
+ARGV_COUNT: 12
+ARGV_JSON: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-configure.argv.json
+EXIT_CODE: 0
+ELAPSED_SECONDS: 5.854
+OUTPUT:
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/extracted/zlib-1.2.11-je-rev1-windows/zlib/lib/zlibstatic.lib (found suitable exact version "1.2.11")
+-- Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/extracted/zlib-1.2.11-je-rev1-windows
+CMake Deprecation Warning at F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/freetype-3f83daeecb1a78d851b660eed025eeba362c0e4a/CMakeLists.txt:112 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/extracted/zlib-1.2.11-je-rev1-windows/zlib/lib/zlibstatic.lib (found version "1.2.11")
+-- Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/extracted/zlib-1.2.11-je-rev1-windows
+-- Configuring done (5.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-rev1/build

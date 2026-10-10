@@ -1,0 +1,146 @@
+Start testing: Oct 10 18:24 Hora estándar de Montevideo
+----------------------------------------------------------
+1/2 Testing: JE.BSP.CsgCore
+1/2 Test: JE.BSP.CsgCore
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/csg/Release/JE_BspCsgTests.exe"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/csg
+"JE.BSP.CsgCore" start time: Oct 10 18:24 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS A-A is successful
+PASS A-A publishes empty geometry
+PASS disjoint intersection is successful
+PASS disjoint intersection publishes empty geometry
+PASS open operand fails
+PASS failed operation preserves previous output
+PASS incomplete vertex is rejected
+PASS incomplete vertex preserves previous output
+PASS incomplete triangle is rejected
+PASS incomplete triangle preserves previous output
+PASS unknown operation is rejected
+PASS unknown operation preserves previous output
+PASS submicrometer cleanup failure preserves previous output
+PASS nonempty submicrometer union is never published as empty success
+PASS overlapping union succeeds
+PASS overlapping union publishes geometry
+PASS room shell is constructed
+PASS room shell has authored volume
+PASS corridor shell is constructed
+PASS corridor shell has authored volume
+PASS room and corridor are united in place
+PASS shared wall is counted once
+PASS doorway is cut through the shared wall
+PASS doorway removes the authored wall volume
+PASS window is cut through the room wall
+PASS window removes the authored wall volume
+PASS room corridor openings retain closed oriented topology
+PASS layout retains authored bounds
+PASS room interior remains clear
+PASS corridor interior remains clear
+PASS doorway remains clear
+PASS window remains clear
+PASS uncut wall remains solid
+PASS authored input has UV seams within one surface key
+PASS attributed union succeeds
+PASS attributed union retains authored volume and topology
+FAIL attributed union retains discrete source faces and affine corner UVs
+FAIL attributed union retains both caller namespaces without collisions
+PASS attributed union creates intersection vertices
+FAIL attributed union retains UV seams on welded geometry
+FAIL attributed union retains the seam within one surface key
+PASS attributed subtraction succeeds
+PASS attributed subtraction retains authored volume and topology
+FAIL attributed subtraction retains discrete source faces and affine corner UVs
+FAIL attributed subtraction retains both caller namespaces without collisions
+PASS attributed subtraction creates intersection vertices
+FAIL attributed subtraction retains UV seams on welded geometry
+FAIL attributed subtraction retains the seam within one surface key
+PASS attributed intersection succeeds
+PASS attributed intersection retains authored volume and topology
+FAIL attributed intersection retains discrete source faces and affine corner UVs
+FAIL attributed intersection retains both caller namespaces without collisions
+PASS attributed intersection creates intersection vertices
+FAIL attributed intersection retains UV seams on welded geometry
+FAIL attributed intersection retains the seam within one surface key
+PASS attributed chain union succeeds
+PASS attributed chain subtraction supports input/output aliasing
+PASS attributed chain retains authored volume and topology
+FAIL attributed chain retains original UV charts and source faces
+FAIL attributed chain retains all three caller namespaces
+PASS attributed A-A succeeds
+PASS attributed empty result clears geometry and attributes
+PASS attributed disjoint intersection succeeds
+PASS attributed disjoint intersection clears all buffers
+PASS attributed cleanup failure preserves all output buffers
+PASS attributed cleanup success retains complete attributes
+FAIL missing UV channel in first operand is rejected
+FAIL missing UV channel in first operand preserves all output buffers
+FAIL missing UV channel in second operand is rejected
+FAIL missing UV channel in second operand preserves all output buffers
+FAIL missing surface channel in first operand is rejected
+FAIL missing surface channel in first operand preserves all output buffers
+FAIL missing surface channel in second operand is rejected
+FAIL missing surface channel in second operand preserves all output buffers
+FAIL incomplete corner UV in first operand is rejected
+FAIL incomplete corner UV in first operand preserves all output buffers
+FAIL incomplete corner UV in second operand is rejected
+FAIL incomplete corner UV in second operand preserves all output buffers
+FAIL extra corner UV in first operand is rejected
+FAIL extra corner UV in first operand preserves all output buffers
+FAIL extra corner UV in second operand is rejected
+FAIL extra corner UV in second operand preserves all output buffers
+FAIL missing triangle surface in first operand is rejected
+FAIL missing triangle surface in first operand preserves all output buffers
+FAIL missing triangle surface in second operand is rejected
+FAIL missing triangle surface in second operand preserves all output buffers
+FAIL extra triangle surface in first operand is rejected
+FAIL extra triangle surface in first operand preserves all output buffers
+FAIL extra triangle surface in second operand is rejected
+FAIL extra triangle surface in second operand preserves all output buffers
+FAIL mixed legacy and attributed operands in first operand is rejected
+FAIL mixed legacy and attributed operands in first operand preserves all output buffers
+FAIL mixed legacy and attributed operands in second operand is rejected
+FAIL mixed legacy and attributed operands in second operand preserves all output buffers
+FAIL NaN UV in first operand is rejected
+FAIL NaN UV in first operand preserves all output buffers
+FAIL NaN UV in second operand is rejected
+FAIL NaN UV in second operand preserves all output buffers
+FAIL infinite UV in first operand is rejected
+FAIL infinite UV in first operand preserves all output buffers
+FAIL infinite UV in second operand is rejected
+FAIL infinite UV in second operand preserves all output buffers
+PASS NaN position in first operand is rejected
+PASS NaN position in first operand preserves all output buffers
+PASS NaN position in second operand is rejected
+PASS NaN position in second operand preserves all output buffers
+PASS infinite position in first operand is rejected
+PASS infinite position in first operand preserves all output buffers
+PASS infinite position in second operand is rejected
+PASS infinite position in second operand preserves all output buffers
+PASS cleanup drops only the geometrically collapsed triangle
+FAIL cleanup compacts corner UVs with the surviving triangle
+FAIL cleanup compacts surface lineage with the surviving triangle
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"JE.BSP.CsgCore" end time: Oct 10 18:24 Hora estándar de Montevideo
+"JE.BSP.CsgCore" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: JE.BSP.CsgCore.InvalidIndex
+2/2 Test: JE.BSP.CsgCore.InvalidIndex
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/csg/Release/JE_BspCsgTests.exe" "--invalid-index"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/csg
+"JE.BSP.CsgCore.InvalidIndex" start time: Oct 10 18:24 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.38 sec
+----------------------------------------------------------
+Test Failed.
+"JE.BSP.CsgCore.InvalidIndex" end time: Oct 10 18:24 Hora estándar de Montevideo
+"JE.BSP.CsgCore.InvalidIndex" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 18:24 Hora estándar de Montevideo

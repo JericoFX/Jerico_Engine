@@ -1,0 +1,61 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+--   CompilerLauncher: Not configured
+--   No restricted path found in engine.json, using default: F:/JericoEngine/JericoEngine/restricted
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS=PUBLIC;/EHsc
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_EXPORT_SYMBOLS=
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_WARNINGS=PRIVATE;/W0
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_DEPRECATED_ENUM_ENUM_CONVERSION=PRIVATE;/Wv:18
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_FAST_MATH=/fp:fast
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_ENABLE_FAST_MATH=PRIVATE;/fp:fast
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_FAST_MATH=/fp:precise
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_DISABLE_FAST_MATH=PRIVATE;/fp:precise
+--   Checking downloaded package zlib-1.2.11-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Checking downloaded package freetype-2.11.1-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Checking downloaded package qt-6.11.2-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+--   Checking downloaded package python-3.10.13-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python/packages/python-3.10.13-je-rev1-windows
+--   Using Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python/venv/31e81382
+-- Executing CMake scripts...
+--   Using package mimalloc 3.5.2 (MIT)
+--   Downloading package into F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-rev1-windows
+CMake Error at cmake/3rdPartyPackages.cmake:290 (message):
+  JE package unavailable offline: Lua-5.4.4-rev1-windows
+
+  SHA256: 8ac853288712267ec9763be152a9274ce87b54728b8add97e2ba73c0fd5a0345
+
+  Archive:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/Lua-5.4.4-rev1-windows.tar.xz
+
+  Unpack:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-rev1-windows
+
+  Local roots:
+
+  Provision the pinned package independently in the local cache or a local
+  file:/// root; remote fallback is disabled.
+Call Stack (most recent call first):
+  cmake/3rdPartyPackages.cmake:562 (ly_package_internal_download_package)
+  cmake/3rdPartyPackages.cmake:655 (ly_force_download_package)
+  cmake/3rdPartyPackages.cmake:767 (ly_enable_package)
+  cmake/3rdParty.cmake:73 (ly_download_associated_package)
+  cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  Code/Framework/AzCore/CMakeLists.txt:63 (ly_add_target)
+
+
+-- Configuring incomplete, errors occurred!

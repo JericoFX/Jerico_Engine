@@ -1,0 +1,68 @@
+{
+  "Snapshots": [
+    {
+      "Snapshot": "bzip2-1.0.8-python-input-snapshot.json",
+      "Expected": 56,
+      "Actual": 56,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "cpython-python-input-snapshot.json",
+      "Expected": 4437,
+      "Actual": 4437,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "expat-python-input-snapshot.json",
+      "Expected": 153,
+      "Actual": 153,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "libffi-3.3.0-python-input-snapshot.json",
+      "Expected": 22,
+      "Actual": 22,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "openssl-bin-1.1.1u-python-input-snapshot.json",
+      "Expected": 346,
+      "Actual": 346,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "sqlite-3.40.1.0-python-input-snapshot.json",
+      "Expected": 5,
+      "Actual": 5,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "tcltk-8.6.12.0-python-input-snapshot.json",
+      "Expected": 2593,
+      "Actual": 2593,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "xz-5.2.5-python-input-snapshot.json",
+      "Expected": 480,
+      "Actual": 480,
+      "Bad": 0,
+      "Match": true
+    },
+    {
+      "Snapshot": "zlib-1.2.13-python-input-snapshot.json",
+      "Expected": 243,
+      "Actual": 243,
+      "Bad": 0,
+      "Match": true
+    }
+  ],
+  "AllMatch": true
+}

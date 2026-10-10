@@ -1,0 +1,9 @@
+CWD: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+MODE: script
+ARGV_COUNT: 10
+ARGV_JSON: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-package.argv.json
+EXIT_CODE: 0
+ELAPSED_SECONDS: 1.242
+OUTPUT:
+-- JE local package archive: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-rev1\packages/freetype-2.11.1-je-rev1-windows.tar.xz
+-- JE local package SHA256: a6999aa779cd5e37e415eb784188f73763d396eaaca58f5b9485e2a5568b9802

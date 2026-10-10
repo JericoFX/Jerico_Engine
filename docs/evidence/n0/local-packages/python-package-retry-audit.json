@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "4370b5870c6b4da65206f6c8e82ca5540f0f2c60fe4cb2bbbd34dbf1cc7dd2d9",
+  "archive_members": 3283,
+  "manifest_entries": 3282,
+  "metadata_name": "python-3.10.13-je-rev1-windows",
+  "metadata_version": "3.10.13-je-rev1",
+  "metadata_license": "PSF-2.0",
+  "metadata_source_commit": "49965601d6afedafe47cc85556d99b7a24981051",
+  "metadata_source_sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+  "externals": 7,
+  "extracted_files": 3283,
+  "extracted_bytes": 104981177.0,
+  "extraction": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\extracted\\python-3.10.13-je-rev1-windows",
+  "extraction_exit": 0,
+  "extraction_seconds": 1.6210729
+}

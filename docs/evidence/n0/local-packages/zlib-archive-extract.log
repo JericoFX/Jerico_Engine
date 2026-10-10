@@ -1,0 +1,4 @@
+COMMAND: tar.exe -xf F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zlib-rev1\packages\zlib-1.2.11-je-rev1-windows.tar.xz -C F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\extracted\zlib-1.2.11-je-rev1-windows
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.02
+OUTPUT:

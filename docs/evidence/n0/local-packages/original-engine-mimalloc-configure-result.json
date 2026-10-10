@@ -1,0 +1,14 @@
+{
+  "exitcode": 1,
+  "elapsed_seconds": 9.5247611,
+  "argv_count": 18,
+  "freeze_match_before": true,
+  "freeze_match_after": true,
+  "mimalloc_source_match_before": true,
+  "mimalloc_source_match_after": true,
+  "cache_files_before": 54,
+  "cache_files_after": 54,
+  "cache_bytes_before": 307886048.0,
+  "cache_bytes_after": 307886048.0,
+  "cache_identical": true
+}

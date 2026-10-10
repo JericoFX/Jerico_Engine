@@ -1,0 +1,27 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake",
+  "mode": "configure",
+  "argument_count": 12,
+  "arguments": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Freetype\\Consumer",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\freetype-consumer",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DJE_FREETYPE_PACKAGE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\freetype-rev1\\extracted\\freetype-2.11.1-je-rev1-windows",
+    "-DJE_ZLIB_PACKAGE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\extracted\\zlib-1.2.11-je-rev1-windows",
+    "-DJE_FONT_FILE=C:\\Windows\\Fonts\\arial.ttf",
+    "-DJE_FONT_SHA256=b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a"
+  ],
+  "font_sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+  "offline_environment": {
+    "FETCHCONTENT_FULLY_DISCONNECTED": "ON",
+    "LY_PACKAGE_SERVER_URLS": "unset",
+    "PIP_DISABLE_PIP_VERSION_CHECK": "1",
+    "PIP_NO_INDEX": "1"
+  }
+}

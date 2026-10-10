@@ -1,0 +1,242 @@
+{
+  "schema": "JE_mimalloc_source_audit_v1",
+  "scope": "Static local consumer and official text/tree/HEAD audit only. No archive or binary GET, source changes, builds, tests, install, or Git execution.",
+  "timestamp_utc": "2026-10-10T22:03:42.4548905Z",
+  "acquisition": {
+    "repository": "https://github.com/microsoft/mimalloc",
+    "declared_url": "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.5.2.tar.gz",
+    "direct_destination": "https://codeload.github.com/microsoft/mimalloc/tar.gz/refs/tags/v3.5.2",
+    "direct_head_status": 200,
+    "direct_redirects": 0,
+    "direct_authentication": "none",
+    "declared_head_status": 302,
+    "declared_location": "https://codeload.github.com/microsoft/mimalloc/tar.gz/refs/tags/v3.5.2",
+    "expected_archive_sha256": "db5c4aaaf356edfeb1aa236b3a052fe3c67d01419db36613f783999341ed5619",
+    "measured_archive_sha256": null,
+    "archive_bytes": null,
+    "requirement": "Parent must manually GET the tag archive without following redirects, verify exact expected SHA256, and audit members before extracting. A commit archive may produce different bytes and must not be assumed to match this tag archive pin.",
+    "version": "3.5.2",
+    "header_version": 30502,
+    "tag_object": "4e3a61669be12515da74a0208d4f58bd920931ab",
+    "commit": "636510a36ab743f76a582067142f29d15b024c90",
+    "tag_signature": "unsigned (GitHub API)",
+    "archive_root_expected": "mimalloc-3.5.2",
+    "override": "-DFETCHCONTENT_SOURCE_DIR_MIMALLOC:PATH=<audited absolute local extracted root>"
+  },
+  "consumer": {
+    "target": "3rdParty::mimalloc (underlying mimalloc STATIC)",
+    "source_count": 21,
+    "sources": [
+      "src/alloc.c",
+      "src/alloc-aligned.c",
+      "src/alloc-posix.c",
+      "src/arena.c",
+      "src/bitmap.c",
+      "src/heap.c",
+      "src/init.c",
+      "src/libc.c",
+      "src/options.c",
+      "src/os.c",
+      "src/page.c",
+      "src/page-map.c",
+      "src/random.c",
+      "src/sample-guarded.c",
+      "src/sample-profile.c",
+      "src/stats.c",
+      "src/subproc.c",
+      "src/theap.c",
+      "src/threadlocal.c",
+      "src/prim/prim.c",
+      "src/prim/prim-tls.c"
+    ],
+    "language": "CXX for all 21 .c source units",
+    "compile_definitions": [
+      "MI_OPT_SIMD=1",
+      "MI_SKIP_COLLECT_ON_EXIT=1"
+    ],
+    "additional_compile_options": "O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS; non-MSVC only -ftls-model=initial-exec",
+    "windows_link_libraries": [
+      "advapi32"
+    ],
+    "include_copy": "Source include/ copied into current module binary directory /Include; public SYSTEM include path",
+    "no_add_subdir": true,
+    "patch_files": [],
+    "upstream_cmake_executed": false,
+    "upstream_build_options_applied": false,
+    "windows_redirect_binaries_consumed": false,
+    "consumer_runtime_calls": [
+      "mi_malloc_aligned",
+      "mi_usable_size",
+      "mi_free",
+      "mi_realloc_aligned",
+      "mi_collect"
+    ],
+    "azcore_default": "O3DE_SYSTEM_ALLOCATOR_USE_MALLOC=OFF; AzCore privately links 3rdParty::mimalloc",
+    "install": "Existing engine ly_install_files installs its own LICENSE.txt and PackageInfo.json to Code/3rdParty/mimalloc; no upstream cmake --install invoked by this consumer."
+  },
+  "closure": {
+    "official_tree_truncated": false,
+    "gitlinks": 0,
+    "gitmodules": "not present in tree; raw URL 404",
+    "missing_consumed_sources": [],
+    "upstream_includes": [
+      "CMake CheckLinkerFlag",
+      "CMake CheckIncludeFiles",
+      "CMake GNUInstallDirs",
+      "cmake/mimalloc-config-version.cmake",
+      "cmake/JoinPaths.cmake"
+    ],
+    "upstream_acquisition": "No active file(DOWNLOAD), FetchContent, ExternalProject or included subproject acquisition found in root CMake and its included local helpers.",
+    "upstream_execute_process": "git describe only when CMAKE_SOURCE_DIR/.git/index exists and Git is found; unreachable through engine NO_ADD_SUBDIR.",
+    "upstream_defaults": [
+      "MI_BUILD_SHARED=ON",
+      "MI_BUILD_STATIC=ON",
+      "MI_BUILD_OBJECT=ON",
+      "MI_BUILD_TESTS=ON",
+      "MI_WIN_REDIRECT=ON",
+      "MI_OVERRIDE=ON",
+      "MI_SECURE=OFF"
+    ],
+    "upstream_windows_inactive": "Shared target can link/copy bundled redirect .lib/.dll; mingw dynamic test can execute bundled minject. None of these targets/commands are configured in engine path.",
+    "bundle_script_inactive": "bin/bundle.bat runs git describe/rev-parse, builds Debug/Release/secure variants x64/x86/arm64/arm64ec, tests x64/x86, installs under out/bundle/prefix, copies minject, makes archives. Its curl line is commented; script is not called by consumer.",
+    "bundled_binary_paths": [
+      "bin/mimalloc-redirect-arm64.dll",
+      "bin/mimalloc-redirect-arm64.lib",
+      "bin/mimalloc-redirect-arm64ec.dll",
+      "bin/mimalloc-redirect-arm64ec.lib",
+      "bin/mimalloc-redirect.dll",
+      "bin/mimalloc-redirect.lib",
+      "bin/mimalloc-redirect32.dll",
+      "bin/mimalloc-redirect32.lib",
+      "bin/minject-arm64.exe",
+      "bin/minject.exe",
+      "bin/minject32.exe"
+    ],
+    "windows_primitive_dependencies": "Windows SDK/CRT APIs; dynamic system modules kernel32/ntdll/kernelbase/psapi/bcrypt; no acquired external package indicated in reviewed primitive.",
+    "alternate_recipe": "No mimalloc path found in currently provisioned local recipes. Exact source override already meets consumer; no new binary Actions artifact acquisition needed for this blocker."
+  },
+  "legal": {
+    "license": "MIT",
+    "copyright_license": "2018-2025 Microsoft Corporation, Daan Leijen (original LICENSE)",
+    "copyright_source_headers": "2018-2026 Microsoft Research, Daan Leijen",
+    "retain": "Keep original LICENSE and source notices. Do not invent updated license text.",
+    "local_license_text_equal_after_crlf_normalization": true,
+    "cmake_JoinPaths_license": "MIT OR CC0-1.0, Copyright 2020 Jan Tojnar",
+    "metadata_debt": "Existing Code/3rdParty/mimalloc/PackageInfo.json declares 3.5.1, v3.5.1 URL and SHA2602daad..., while live CMake pins 3.5.2. No correction made in read-only scope.",
+    "limits": "Audit does not certify bundled binary provenance, redistribution completeness, allocator ABI/thread behavior, performance, security or product acceptance."
+  },
+  "local_inputs": [
+    {
+      "path": "Code/3rdParty/mimalloc/CMakeLists.txt",
+      "bytes": 1560,
+      "sha256": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec"
+    },
+    {
+      "path": "Code/3rdParty/mimalloc/files.cmake",
+      "bytes": 1232,
+      "sha256": "5becde081df1b3ccf0c2e44c065e48b5c702e14c6b83a8302a0f9b6bb56e1d0b"
+    },
+    {
+      "path": "Code/3rdParty/mimalloc/PackageInfo.json",
+      "bytes": 404,
+      "sha256": "b16acbe98640d70b8b108a686dec312233cc940f17532f4b99a6e6f469221ee3"
+    },
+    {
+      "path": "Code/3rdParty/mimalloc/LICENSE.txt",
+      "bytes": 1117,
+      "sha256": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4"
+    },
+    {
+      "path": "cmake/3rdPartyPackages.cmake",
+      "bytes": 50533,
+      "sha256": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac"
+    },
+    {
+      "path": "Code/Framework/AzCore/CMakeLists.txt",
+      "bytes": 9558,
+      "sha256": "6cb60077df8f93b5bbf88eb8d5d3f459c771a3693812caaab7d3477e39a76a53"
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Memory/MimallocAllocator.cpp",
+      "bytes": 2469,
+      "sha256": "e926d923fe9eebddd281e30544aa7a2a3a44bd3a7a76a4d94b10b151aa4a7d9b"
+    }
+  ],
+  "receipts": [
+    {
+      "filename": "annotated-tag.json",
+      "bytes": 686,
+      "sha256": "f89cda8fc8f897a72067b6b09a1ff9bbdba58ae7cf14b929b594c2279453d29c"
+    },
+    {
+      "filename": "bin__bundle.bat",
+      "bytes": 2921,
+      "sha256": "a9953f0844526160941911bcc5b0e34a9dd033db5a85a18870f83bf7871b747f"
+    },
+    {
+      "filename": "bin__readme.md",
+      "bytes": 6262,
+      "sha256": "db8da2118e524388fdb26bc0591464dc28c191ae28d61fe31fb3dc9ccc02b72d"
+    },
+    {
+      "filename": "cmake__JoinPaths.cmake",
+      "bytes": 817,
+      "sha256": "794b0d8fa62a3b798c7df12d50114580d1a47a234bfb6b4d83092eb646a6ecc4"
+    },
+    {
+      "filename": "cmake__mimalloc-config-version.cmake",
+      "bytes": 660,
+      "sha256": "b49f3331d5de4d49435d49cbb262802ea79ae00b50f3bd13125466187241cced"
+    },
+    {
+      "filename": "cmake__mimalloc-config.cmake",
+      "bytes": 833,
+      "sha256": "68c82ea18f0c0408b4ecded6c6519945bad5b9bde580fb01644edff9f0130505"
+    },
+    {
+      "filename": "CMakeLists.txt",
+      "bytes": 53086,
+      "sha256": "4a3cdeea703b02736c037e97e89d433f78fe51e816712561ae4e121de6d1eacd"
+    },
+    {
+      "filename": "destination-head.jsonl",
+      "bytes": 519,
+      "sha256": "253b5bb1649e31776a11eb201d92004c44c8da19d37d2e01a35a33e1bd7dba12"
+    },
+    {
+      "filename": "include__mimalloc.h",
+      "bytes": 50805,
+      "sha256": "1e8a7fadc892634843e6496c47d0ae0d96ed1be5b3d4fbb38b8c11259100ee6a"
+    },
+    {
+      "filename": "LICENSE",
+      "bytes": 1096,
+      "sha256": "82ade5d7d9b029044b5fbbc326207fc47c2d44ee4dd71e8a559c36d728217de9"
+    },
+    {
+      "filename": "src__prim__prim.c",
+      "bytes": 2595,
+      "sha256": "44419a450e742812d8f3c881d957bdd6cf18f40b90dfe1153084d2b64666f12d"
+    },
+    {
+      "filename": "src__prim__windows__prim.c",
+      "bytes": 48256,
+      "sha256": "41d96c081cbda6bcad0e8270eab7c3d69f94dfe3d3dcd8a9567569c595984cb0"
+    },
+    {
+      "filename": "tag.json",
+      "bytes": 339,
+      "sha256": "9a76bcd3cfb604af91d13350ee6775a30e5af208893584c3d6af6770c3cfc07d"
+    },
+    {
+      "filename": "test__CMakeLists.txt",
+      "bytes": 2182,
+      "sha256": "50b19c62f11f9cda88d1434bbd412c3948aff5ee439ff6e2ca4f8d77e8e8826d"
+    },
+    {
+      "filename": "tree.json",
+      "bytes": 95040,
+      "sha256": "a89a7cb4c110cd6ad15532876c1ac54b6265ab6e8a731769ebd303ab7357c288"
+    }
+  ]
+}

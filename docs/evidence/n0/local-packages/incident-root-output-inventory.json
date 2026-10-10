@@ -1,0 +1,317 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeCache.txt",
+    "bytes": 24393,
+    "created_utc": "2026-10-10T21:01:30.7777051Z",
+    "modified_utc": "2026-10-10T21:01:30.7788156Z",
+    "sha256": "ac077f92dcd2d94e2ee34d5e5dc1b8c9305f54ff1bc5a42f61b3e9869c3e6500"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CMakeCCompiler.cmake",
+    "bytes": 3306,
+    "created_utc": "2026-10-10T21:01:28.5868004Z",
+    "modified_utc": "2026-10-10T21:01:28.5877978Z",
+    "sha256": "7a3a3564deaa0a16d9dffe0629dfa10f7b1d9af2ee1171b6bcde7111e7fc3d6d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CMakeCXXCompiler.cmake",
+    "bytes": 6525,
+    "created_utc": "2026-10-10T21:01:30.6350293Z",
+    "modified_utc": "2026-10-10T21:01:30.6350293Z",
+    "sha256": "f39056ecb464edbcf859f739aea4f68b16ddb21c4a962059eea143ccf68c0bf2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CMakeDetermineCompilerABI_C.bin",
+    "bytes": 53248,
+    "created_utc": "2026-10-10T21:01:28.5538884Z",
+    "modified_utc": "2026-10-10T21:01:28.5538884Z",
+    "sha256": "b5cb45d2489ff7fc4dfcf5176e403c3e1b915079ed9cb301b6b30937a408d9b3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CMakeDetermineCompilerABI_CXX.bin",
+    "bytes": 53248,
+    "created_utc": "2026-10-10T21:01:30.6014488Z",
+    "modified_utc": "2026-10-10T21:01:30.6014488Z",
+    "sha256": "a679994bf924f1e45ce2245fefcb35d980112189cf5b7d95fd0fc0d7c4f51008"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CMakeRCCompiler.cmake",
+    "bytes": 212,
+    "created_utc": "2026-10-10T21:01:26.4625177Z",
+    "modified_utc": "2026-10-10T21:01:26.4625177Z",
+    "sha256": "85223e3627ab66035651f1bc87d7ab01c67bccd4c1132ea0ebcf6fd87de0c7d1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CMakeSystem.cmake",
+    "bytes": 395,
+    "created_utc": "2026-10-10T21:01:20.2883991Z",
+    "modified_utc": "2026-10-10T21:01:20.2883991Z",
+    "sha256": "cf05e982232c22b6fe58288ef10f11c1d5ba2af1e7e050ea9d8037095b59d948"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\CMakeCCompilerId.c",
+    "bytes": 29602,
+    "created_utc": "2026-10-10T21:01:21.9775146Z",
+    "modified_utc": "2026-10-10T21:01:21.9775146Z",
+    "sha256": "ddc1eeeda601167929842285dfefa77b95ee0d116782a3227f17e7e18fbe90eb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\CompilerIdC.exe",
+    "bytes": 14848,
+    "created_utc": "2026-10-10T21:01:24.1140151Z",
+    "modified_utc": "2026-10-10T21:01:24.1876935Z",
+    "sha256": "7c81dda2655d60e0ebd56e815a7b1b23c5056e81c2ce80b319b109979c770172"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\CompilerIdC.vcxproj",
+    "bytes": 2798,
+    "created_utc": "2026-10-10T21:01:21.9775146Z",
+    "modified_utc": "2026-10-10T21:01:21.9785122Z",
+    "sha256": "af8bc7c7d110cbd801baf170898c4eb9021e0272d6e7c0092478ef9a634df7ec"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CMakeCCompilerId.obj",
+    "bytes": 2294,
+    "created_utc": "2026-10-10T21:01:23.9955904Z",
+    "modified_utc": "2026-10-10T21:01:23.996613Z",
+    "sha256": "c11555ec347e973eefee8f90c974615efd9d94e83725121854cac8de2821aa65"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.exe.recipe",
+    "bytes": 316,
+    "created_utc": "2026-10-10T21:01:24.2327304Z",
+    "modified_utc": "2026-10-10T21:01:24.2456957Z",
+    "sha256": "77c43843e650a57acac61d3a3e6a483b2a713773ce6d62ce1e8e835422e07d3e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.command.1.tlog",
+    "bytes": 688,
+    "created_utc": "2026-10-10T21:01:24.0420895Z",
+    "modified_utc": "2026-10-10T21:01:24.0465455Z",
+    "sha256": "5d0268c37447125fd3308a1b363a5e4188e0785486c6c2dcd827ea38c8ab966e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\Cl.items.tlog",
+    "bytes": 163,
+    "created_utc": "2026-10-10T21:01:24.3158883Z",
+    "modified_utc": "2026-10-10T21:01:24.3158883Z",
+    "sha256": "4880418434e6bb9b2bb20932135b72b04c6f5a0635d31925c78ff9b16a9c4430"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.read.1.tlog",
+    "bytes": 562,
+    "created_utc": "2026-10-10T21:01:23.9987316Z",
+    "modified_utc": "2026-10-10T21:01:24.0410203Z",
+    "sha256": "c2f7631a75bb2d55e03dd0af09b5f853e1bd9d6197ebab9e071fb5cd10885a85"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.write.1.tlog",
+    "bytes": 332,
+    "created_utc": "2026-10-10T21:01:23.9997357Z",
+    "modified_utc": "2026-10-10T21:01:24.0387635Z",
+    "sha256": "ad86aff5b7f5f5093d49bfda09e7398e6a1bc345f415e087d0d5c4b366479a17"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate",
+    "bytes": 187,
+    "created_utc": "2026-10-10T21:01:23.4533052Z",
+    "modified_utc": "2026-10-10T21:01:24.3205676Z",
+    "sha256": "d5bf671ab96d736976380db3d18e64e9a91d0c6185da87e450d80a55b3d27456"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.command.1.tlog",
+    "bytes": 998,
+    "created_utc": "2026-10-10T21:01:24.2123625Z",
+    "modified_utc": "2026-10-10T21:01:24.2133643Z",
+    "sha256": "c1ac5e412f273376102789943a5c9d10d89ef866ed4e72e731a4c7516551fdb4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.read.1.tlog",
+    "bytes": 3382,
+    "created_utc": "2026-10-10T21:01:24.1971002Z",
+    "modified_utc": "2026-10-10T21:01:24.2123625Z",
+    "sha256": "07d6343316eb8a842ce44355a61390ba791438d43a388c015d7271dae9aa19b3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.secondary.1.tlog",
+    "bytes": 87,
+    "created_utc": "2026-10-10T21:01:24.2078332Z",
+    "modified_utc": "2026-10-10T21:01:24.2078332Z",
+    "sha256": "3bafefff7f8e886e7451786484dfaf1ba9d74f8ac1b1fb7e68fe23e618db5f18"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.write.1.tlog",
+    "bytes": 326,
+    "created_utc": "2026-10-10T21:01:24.1981583Z",
+    "modified_utc": "2026-10-10T21:01:24.2091235Z",
+    "sha256": "45c8df06ba25a6cccba9f7b230da090422192e4fe982fd1d523d5f6169be6cb1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\CMakeCXXCompilerId.cpp",
+    "bytes": 30429,
+    "created_utc": "2026-10-10T21:01:24.4378938Z",
+    "modified_utc": "2026-10-10T21:01:24.4378938Z",
+    "sha256": "9e26b0f20786a2d59935f5dddb7dbeceb54e40f39ffd6996b2fc0e339431808d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\CompilerIdCXX.exe",
+    "bytes": 15360,
+    "created_utc": "2026-10-10T21:01:26.195419Z",
+    "modified_utc": "2026-10-10T21:01:26.2356427Z",
+    "sha256": "d90a4bd3ab64ad3d0e71fcdf27e2bc6650405573308e691db66f3654b661414f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj",
+    "bytes": 2806,
+    "created_utc": "2026-10-10T21:01:24.4378938Z",
+    "modified_utc": "2026-10-10T21:01:24.4378938Z",
+    "sha256": "21fc02677b659ade12a520b7b4b7adf6f15e1c4be0f1f6d6371cc636682dc3ba"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CMakeCXXCompilerId.obj",
+    "bytes": 2361,
+    "created_utc": "2026-10-10T21:01:26.0779154Z",
+    "modified_utc": "2026-10-10T21:01:26.080114Z",
+    "sha256": "9f36e4eb7cfd6a1804049eaa13ac50263a30345e2ecb8f3186143302962ec104"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.exe.recipe",
+    "bytes": 320,
+    "created_utc": "2026-10-10T21:01:26.280652Z",
+    "modified_utc": "2026-10-10T21:01:26.2939844Z",
+    "sha256": "ebf278cf8b75796478085907d063a503ce1f5ebdf1031e2092f74395dd426e51"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.command.1.tlog",
+    "bytes": 712,
+    "created_utc": "2026-10-10T21:01:26.1257336Z",
+    "modified_utc": "2026-10-10T21:01:26.1298637Z",
+    "sha256": "2005a9af749ea091f95edd524e2d5b923ad3ef65b1b7465d3dc4578b032d9dc5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\Cl.items.tlog",
+    "bytes": 173,
+    "created_utc": "2026-10-10T21:01:26.3585867Z",
+    "modified_utc": "2026-10-10T21:01:26.3585867Z",
+    "sha256": "02a8e1ba79b6e8c69b0aa2bf930b2300fa9a3098ad0dcc63e2b02c4f9387529f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.read.1.tlog",
+    "bytes": 574,
+    "created_utc": "2026-10-10T21:01:26.0821929Z",
+    "modified_utc": "2026-10-10T21:01:26.123739Z",
+    "sha256": "c0d823d5759f174035aa81b429db1d4e57def105114f16576607ad207950bd37"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.write.1.tlog",
+    "bytes": 352,
+    "created_utc": "2026-10-10T21:01:26.0832238Z",
+    "modified_utc": "2026-10-10T21:01:26.1217444Z",
+    "sha256": "cd15722f7c3f6461b550dd2f2f0eb2354531fb8571d3cd4429e0bf30f620f17b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate",
+    "bytes": 189,
+    "created_utc": "2026-10-10T21:01:25.9115349Z",
+    "modified_utc": "2026-10-10T21:01:26.3631439Z",
+    "sha256": "ff6e5117a64e11b6961371f7a8b9cfc96f2336d8a21b306833751dd77e961e63"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.command.1.tlog",
+    "bytes": 1022,
+    "created_utc": "2026-10-10T21:01:26.2600257Z",
+    "modified_utc": "2026-10-10T21:01:26.261049Z",
+    "sha256": "734b974482f62dd1c82c200206f51fc8a564ab94a9011e937673ddbf836c137c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.read.1.tlog",
+    "bytes": 3398,
+    "created_utc": "2026-10-10T21:01:26.2455063Z",
+    "modified_utc": "2026-10-10T21:01:26.2600257Z",
+    "sha256": "f3b050fb5b245713c96bbe318ed61f4348491dc5263d6047e9e60f108ac4a6a8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.secondary.1.tlog",
+    "bytes": 91,
+    "created_utc": "2026-10-10T21:01:26.2562684Z",
+    "modified_utc": "2026-10-10T21:01:26.2562684Z",
+    "sha256": "9bf2073dda022202aa4fed0a684f2fcfbfdef7f7b089c0a6fa63791edc6f345a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.write.1.tlog",
+    "bytes": 342,
+    "created_utc": "2026-10-10T21:01:26.2465216Z",
+    "modified_utc": "2026-10-10T21:01:26.2576868Z",
+    "sha256": "5ac0f0db0dee3bf14188b021d1ad0d9a80705c4b1f9a59ca476d9070873377af"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\VCTargetsPath.txt",
+    "bytes": 90,
+    "created_utc": "2026-10-10T21:01:21.9602321Z",
+    "modified_utc": "2026-10-10T21:01:21.9602321Z",
+    "sha256": "7bf0943f47fd89ddf6e8623056ed4afa49693bcc8c6885ea90d889dbbc3cad9c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\VCTargetsPath.vcxproj",
+    "bytes": 1255,
+    "created_utc": "2026-10-10T21:01:20.297314Z",
+    "modified_utc": "2026-10-10T21:01:20.297314Z",
+    "sha256": "e4b780fa88a782f3788553546ae6bab68373ae8378266ce7570a7dbeb1120d3d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\VCTargetsPath\\x64\\Debug\\VCTargetsPath.recipe",
+    "bytes": 312,
+    "created_utc": "2026-10-10T21:01:21.8088425Z",
+    "modified_utc": "2026-10-10T21:01:21.8220812Z",
+    "sha256": "00b2e742a6a17d1e86e5ac15c7623cd3ecf71cb33390969d184b8d9f4e5b1844"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\4.3.4\\VCTargetsPath\\x64\\Debug\\VCTargetsPath.tlog\\VCTargetsPath.lastbuildstate",
+    "bytes": 175,
+    "created_utc": "2026-10-10T21:01:21.7559316Z",
+    "modified_utc": "2026-10-10T21:01:21.9022865Z",
+    "sha256": "5fed4aa4a6b5afc37cff51448db94ba0c3c4e36848b8ce268830e93989a3f4a8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\cmake.check_cache",
+    "bytes": 86,
+    "created_utc": "2026-10-10T21:01:30.7788156Z",
+    "modified_utc": "2026-10-10T21:01:30.7865493Z",
+    "sha256": "95079b44bcef481d601432c2fd3c654d7fe85b9c8386c355f2874502b47441d7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\CMakeConfigureLog.yaml",
+    "bytes": 288517,
+    "created_utc": "2026-10-10T21:01:20.2883991Z",
+    "modified_utc": "2026-10-10T21:01:30.7777051Z",
+    "sha256": "78e7cb63202648a4d2f98df5a8812c5e558583fee50316067861b7f8f47ebe30"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CMakeFiles\\CTestScript.cmake",
+    "bytes": 4713,
+    "created_utc": "2026-10-10T21:01:30.7455711Z",
+    "modified_utc": "2026-10-10T21:01:30.7455711Z",
+    "sha256": "6cdb8e8212f0ff10e9d794de172d654295994dbd1693f4ce776235554993935f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\CodeAnalysis.ruleset",
+    "bytes": 454,
+    "created_utc": "2026-10-10T20:05:11.648969Z",
+    "modified_utc": "2026-10-10T20:05:11.648969Z",
+    "sha256": "4471f84cd6513f051af1fdac889222e6a724a788093b27cab9b7f50593ae95ab"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\DartConfiguration.tcl",
+    "bytes": 2969,
+    "created_utc": "2026-10-10T21:01:30.7445737Z",
+    "modified_utc": "2026-10-10T21:01:30.7445737Z",
+    "sha256": "1c04bd534f2e9694a584488139cd9eb9f34380b07da65daeb5050703a09d99cd"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Directory.Build.props",
+    "bytes": 1886,
+    "created_utc": "2026-10-10T21:01:30.7655175Z",
+    "modified_utc": "2026-10-10T21:01:30.7665149Z",
+    "sha256": "432eb7ee7a105d44a55de5bb47b61c2325f81f97a062a6e2282551091c5a510b"
+  }
+]

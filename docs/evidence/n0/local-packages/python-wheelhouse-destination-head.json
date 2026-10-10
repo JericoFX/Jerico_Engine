@@ -1,0 +1,310 @@
+[
+  {
+    "filename": "pluggy-1.6.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 20538,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "atomicwrites-1.4.1.tar.gz",
+    "url": "https://files.pythonhosted.org/packages/87/c6/53da25344e3e3a9c01095a89f16dbcda021c609ddb42dd6d7c0528236fb2/atomicwrites-1.4.1.tar.gz",
+    "status": 200,
+    "bytes": 14227,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "attrs-20.1.0-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/d6/e1/3aa3b03e7643ffd6e499b203fd2a44f79893443e8b0b520d05d3e5c638d5/attrs-20.1.0-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 49020,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "certifi-2024.7.4-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/1c/d5/c84e1a17bf61d4df64ca866a1c9a913874b4e9bdc131ec689a0ad013fb36/certifi-2024.7.4-py3-none-any.whl",
+    "status": 200,
+    "bytes": 162960,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "charset_normalizer-2.0.10-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/84/3e/1037abe6498e65d645ce7a22d3402605d49a3b2c7f20c3abb027760da4f0/charset_normalizer-2.0.10-py3-none-any.whl",
+    "status": 200,
+    "bytes": 39377,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "colorama-0.4.3-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/c9/dc/45cdef1b4d119eb96316b3117e6d5708a08029992b2fee2c143c7a0a5cc5/colorama-0.4.3-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 15931,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "docutils-0.15.2-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl",
+    "status": 200,
+    "bytes": 547604,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "EasyProcess-0.2.8-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/7e/63/57755fadd28c989d578862f1ed7995348ed666333e03cdab6f6ea3f26ab0/EasyProcess-0.2.8-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 10342,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "exceptiongroup-1.0.4-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/ce/2e/9a327cc0d2d674ee2d570ee30119755af772094edba86d721dda94404d1a/exceptiongroup-1.0.4-py3-none-any.whl",
+    "status": 200,
+    "bytes": 14280,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "gitdb-4.0.10-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/21/a6/35f83efec687615c711fe0a09b67e58f6d1254db27b1013119de46f450bd/gitdb-4.0.10-py3-none-any.whl",
+    "status": 200,
+    "bytes": 62735,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "smmap-5.0.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/6d/01/7caa71608bc29952ae09b0be63a539e50d2484bc37747797a66a60679856/smmap-5.0.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 24271,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "GitPython-3.1.44-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/1d/9a/4114a9057db2f1462d5c8f8390ab7383925fe1ac012eaa42402ad65c2963/GitPython-3.1.44-py3-none-any.whl",
+    "status": 200,
+    "bytes": 207599,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "idna-3.7-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+    "status": 200,
+    "bytes": 66836,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "imageio-2.8.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/4c/2b/9dd19644f871b10f7e32eb2dbd6b45149c350b4d5f2893e091b882e03ab7/imageio-2.8.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 3307383,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "importlib_metadata-1.6.1-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/98/13/a1d703ec396ade42c1d33df0e1cb691a28b7c08b336a5683912c87e04cd7/importlib_metadata-1.6.1-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 31413,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "jinja2-3.1.6-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl",
+    "status": 200,
+    "bytes": 134899,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "jmespath-0.9.5-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/a3/43/1e939e1fcd87b827fe192d0c9fc25b48c5b3368902bfb913de7754b0dc03/jmespath-0.9.5-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 24149,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/44/06/e7175d06dd6e9172d4a69a72592cb3f7a996a9c396eee29082826449bbc3/MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl",
+    "status": 200,
+    "bytes": 15514,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "more_itertools-8.4.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/ef/9b/6c35ec5483710492e21252465160ee508170159f7e0e2d6cd769022f52f6/more_itertools-8.4.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 43054,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "numpy-1.23.0-cp310-cp310-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/34/1c/1c9ec57f522822e7507fb5cf69b153f857405518d8f50fa4ff94f43385be/numpy-1.23.0-cp310-cp310-win_amd64.whl",
+    "status": 200,
+    "bytes": 14636971,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "packaging-20.4-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/46/19/c5ab91b1b05cfe63cccd5cfc971db9214c6dd6ced54e33c30d5af1d2bc43/packaging-20.4-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 37620,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "patch_ng-1.19.1-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/2c/ef/c60c07b2f9d973672608815e4c176943146c353d3b60fdab914a6dcd44e8/patch_ng-1.19.1-py3-none-any.whl",
+    "status": 200,
+    "bytes": 17601,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "pillow-10.3.0-cp310-cp310-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/75/4c/2a850f886a2de7fbd25eedd2c40afec56db872b3e52491d8953698080505/pillow-10.3.0-cp310-cp310-win_amd64.whl",
+    "status": 200,
+    "bytes": 2531321,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "progressbar2-3.53.1-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/25/8c/d28cd70b6e0b870a2d2a151bdbecf4c678199d31731edb44fc8035d3bb6d/progressbar2-3.53.1-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 25786,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "psutil-5.9.8-cp37-abi3-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/93/52/3e39d26feae7df0aa0fd510b14012c3678b36ed068f7d78b8d8784d61f0e/psutil-5.9.8-cp37-abi3-win_amd64.whl",
+    "status": 200,
+    "bytes": 255090,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "pyparsing-2.4.7-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 67842,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "pyscreenshot-0.6-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/fe/27/50ab425789118be0ea390cf2b5e6dc65bafe2b5a9a2efb1db8426836124b/pyscreenshot-0.6-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 23229,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "pytest_mock-3.8.2-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/64/ec/e21d6a5c31df566847de2dc7e7c1870c67cf10cb97cb0a1ea0e389446e60/pytest_mock-3.8.2-py3-none-any.whl",
+    "status": 200,
+    "bytes": 9102,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "pytest_timeout-2.1.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/23/02/c85ca1e18e0c00d5ee45f4012f241098c8995294e1178367cb638a26b6c8/pytest_timeout-2.1.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 12701,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "pytest-7.2.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/67/68/a5eb36c3a8540594b6035e6cdae40c1ef1b6a2bfacbecc3d1a544583c078/pytest-7.2.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 316791,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "python_dateutil-2.8.1-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 227183,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "python_utils-2.5.6-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/62/47/974eb168d5012bc8841d4b5be10e345f3e706e25fa1661b68f193e16ca67/python_utils-2.5.6-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 12527,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "requests-2.32.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/24/e8/09e8d662a9675a4e4f5dd7a8e6127b463a091d2703ed931a64aa66d00065/requests-2.32.0-py3-none-any.whl",
+    "status": 200,
+    "bytes": 63695,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "scipy-1.8.1-cp310-cp310-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/31/c2/0b8758ebaeb43e089eb56168390824a830f9f419ae07d755d99a46e5a937/scipy-1.8.1-cp310-cp310-win_amd64.whl",
+    "status": 200,
+    "bytes": 36930750,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "six-1.13.0-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 10747,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "urllib3-1.26.19-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/ae/6a/99eaaeae8becaa17a29aeb334a18e5d582d873b6f084c11f02581b8d7f7f/urllib3-1.26.19-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 143933,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "wcwidth-0.2.5-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 30763,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "zipp-3.19.1-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/82/1a/ac67760425f2477b1da593b347db66d474130747e6e5285d08c7f2d5884a/zipp-3.19.1-py3-none-any.whl",
+    "status": 200,
+    "bytes": 8951,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "tomli-2.0.1-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
+    "status": 200,
+    "bytes": 12757,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "iniconfig-1.1.1-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/9b/dd/b3c12c6d707058fa947864b67f0c4e0c39ef8610988d7baea9578f3c48f3/iniconfig-1.1.1-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 4990,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "toml-0.10.2-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 16588,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "resolvelib-0.9.0-py2.py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/67/b4/4f785cf7ac402e84acef7f450912cc673f0862839196832342be97869d87/resolvelib-0.9.0-py2.py3-none-any.whl",
+    "status": 200,
+    "bytes": 16901,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "puremagic-1.28-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/c5/53/200a97332d10ed3edd7afcbc5f5543920ac59badfe5762598327999f012e/puremagic-1.28-py3-none-any.whl",
+    "status": 200,
+    "bytes": 43241,
+    "redirects_followed": 0
+  },
+  {
+    "filename": "wheel-0.38.4-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/bd/7c/d38a0b30ce22fc26ed7dbc087c6d00851fb3395e9d0dac40bec1f905030c/wheel-0.38.4-py3-none-any.whl",
+    "status": 200,
+    "bytes": 36051,
+    "redirects_followed": 0
+  }
+]

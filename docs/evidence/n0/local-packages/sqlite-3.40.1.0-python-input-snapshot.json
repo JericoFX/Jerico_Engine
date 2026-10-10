@@ -1,0 +1,38 @@
+{
+  "name": "sqlite-3.40.1.0",
+  "commit": "db4ca556b25787c263ee72a4b764c4be474c322f",
+  "archive_sha256": "61a33a1f61b30617564ae869296339b19dfd30b9b32a0e1b3493d8b93b23b54c",
+  "source": "F:\\JericoEngine\\Dependencies\\sqlite-3.40.1.0-db4ca556b25787c263ee72a4b764c4be474c322f",
+  "work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals\\sqlite-3.40.1.0",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 84,
+      "sha256": "a18c9107bc820a8339353364568175faea755cf9c8ef695592af66b3fcc08248"
+    },
+    {
+      "path": "shell.c",
+      "bytes": 819978,
+      "sha256": "222fd79d4caa32c6673d3040c6e0d99a72dd22119d510f37bc4e6217b77a6ffc"
+    },
+    {
+      "path": "sqlite3.c",
+      "bytes": 8614007,
+      "sha256": "b919a49fac461984e93808c21755b678622f2a94903455270d097e856a792a62"
+    },
+    {
+      "path": "sqlite3.h",
+      "bytes": 616357,
+      "sha256": "dc419c400665bd43b335d04d7562d78e1d5dcd464fa0d6150c9d5c3bc5d705f4"
+    },
+    {
+      "path": "sqlite3ext.h",
+      "bytes": 37494,
+      "sha256": "9caf6631f26c5464e90ade7ba54397febeea2c8bbc7c23fa8a890753bf55ea2a"
+    }
+  ],
+  "licenses": [],
+  "pe_files_not_executed": [],
+  "only_regular_files_and_directories_after_explicit_readme_link_materialization": true,
+  "elapsed_seconds": 0.091
+}

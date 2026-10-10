@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.h",
+    "SHA256": "5C603EB09BFF2EA51E1565186A90B90B4258E702B30D5525AE44C0A4C1F052C7",
+    "Bytes": 3918
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.cpp",
+    "SHA256": "BBFB0DC5E2C79DE3A60EB8C4F5980C27050B3D6A3941ACB17DBB38F480F6E2DA",
+    "Bytes": 7288
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\CSG\\WhiteBoxCsgCoreTest.cpp",
+    "SHA256": "3E0C8BD358AE0805DB50B1DAC36DC9E2141655896393A8FD7AFCD27986E94A47",
+    "Bytes": 26648
+  },
+  {
+    "Path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\CSG\\CMakeLists.txt",
+    "SHA256": "3B85DECD6B7C451F333167B8830643E3C966A00EA4F861DA7DAA2584D6D46E07",
+    "Bytes": 2075
+  }
+]

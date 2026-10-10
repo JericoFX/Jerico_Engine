@@ -28,7 +28,7 @@ Verificación: fuente/configuración/outputs del grafo, sin build declarado aún
 
 No cambiar todas las bibliotecas/Qt de rama sin fallo reproductible. Si se necesita corrección mínima de baseline, registrar RED/fix/GREEN y mantener source origin. No comenzar un rename general del engine para resolver un error local.
 
-Resultado parcial Task 2: configure original exit 1 / 11,839 s, primer zlib-1.2.11-rev5-windows ausente; no build del engine. Inventarios existen, pero roles/licencias/grafo efectivos siguen pendientes. Sólo núcleo CSG std+Manifold local compilado/probado; no confundirlo con original engine.
+Resultado parcial Task 2: cinco paquetes zlib/FT/Python/Qt/PySide aprovisionados/auditados; reconstruidos con identidades JE/consumers PASS. Root instaló requisitos/cuatro editables sin índices, pip check/imports/ausencia AWS PASS; negativo missing-wheelhouse probado. Mimalloc aceptado y último configure con encoding final exit 1 / 9,528 s por Lua 5.4.4 ausente, fuente/receta luego auditadas. PySide aún no instalado; banner Git Python con ancestor engine requiere corrección/rebuild. No engine build ni grafo/link/deploy completos; medidas focales no son aceptación del producto.
 
 ## Task 3 — escena/editor/cook/runtime visibles
 
@@ -52,4 +52,4 @@ Este baseline no acredita que todo AZ ya migró ni que todas las capabilities Ge
 
 Paquete faltante debe fallar offline; entrada corrompida no cambia asset activo; scene/reference identities sobreviven rename; teardown limpia listeners/jobs/resources; backend selector no cae a Null/otro. Cada uno se verifica en el task que lo produce. Docs/source inspection no cuentan como ejecución de esas verificaciones.
 
-Preparación Task 4 ejecutada con alcance focal: revisión productores/consumidores CSG y migración real de núcleo a JE::BSP; regressions RED/GREEN y fixture habitación/corredor/puerta/ventana. Sigue pendiente aceptación de editor, UV/material/region IDs, teardown vacío/Undo/save/reopen/cook/runtime, absorción completa de Gem y evidencia visual/costes. No marcar esos checks completos por geometría aislada.
+Preparación Task 4 ejecutada con alcance focal: revisión productores/consumidores y núcleo real JE::BSP; RED/diagnóstico/GREEN, fixture cuarto/corredor/aperturas y conservación UV/costuras/identidad de superficies, 117 checks PASS en dos CTests Release. Sigue pendiente llevar atributos a adapters/halfedges/serialización/material Atom y aceptar editor, teardown vacío/Undo/save/reopen/cook/runtime, absorción del Gem e imagen/costes. No marcar esos checks completos por kernel aislado.

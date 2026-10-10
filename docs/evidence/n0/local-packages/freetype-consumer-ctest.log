@@ -1,0 +1,28 @@
+CWD: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+MODE: ctest
+ARGV_COUNT: 6
+ARGV_JSON: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\freetype-consumer-ctest.argv.json
+EXIT_CODE: 0
+ELAPSED_SECONDS: 0.091
+OUTPUT:
+UpdateCTestConfiguration  from :F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-consumer/DartConfiguration.tcl
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-consumer
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: JE.Freetype.LocalGlyph
+
+1: Test command: "C:\Program Files\CMake\bin\cmake.exe" "-DJE_FONT_FILE=C:/Windows/Fonts/arial.ttf" "-DJE_FONT_SHA256=b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a" "-DJE_GLYPH_CONSUMER=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-consumer/Release/JE_FreetypeGlyphTest.exe" "-P" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Freetype/Consumer/RunGlyphTest.cmake"
+1: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/freetype-consumer
+1: Test timeout computed to be: 10000000
+1: -- Local font fixture SHA256: b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a
+1: PASS Freetype 2.11.1 / zlib 1.2.11; Unicode A at 48px; width=34; rows=35; advance26.6=2048; nonzero=447; coverage=93295; pixelFNV1a64=c2fede9f900d13a4
+1/1 Test #1: JE.Freetype.LocalGlyph ...........   Passed    0.05 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.06 sec

@@ -1,0 +1,13 @@
+{
+  "source_work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\freetype-3f83daeecb1a78d851b660eed025eeba362c0e4a",
+  "snapshot_entries": 717,
+  "mismatches": 0,
+  "details": [],
+  "archive_path": "F:\\JericoEngine\\Dependencies\\archives\\freetype-3f83daeecb1a78d851b660eed025eeba362c0e4a.tar.gz",
+  "archive_bytes": 2189273,
+  "archive_expected_sha256": "e01c4b6eef4b6896d3e4822c5a8d7871dd5dcc39d25103ed3b338914ca7af69d",
+  "archive_actual_sha256": "e01c4b6eef4b6896d3e4822c5a8d7871dd5dcc39d25103ed3b338914ca7af69d",
+  "archive_match": true,
+  "build_dir_preexists": false,
+  "stage_preexists": false
+}

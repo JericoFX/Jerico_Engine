@@ -1,0 +1,24 @@
+{
+  "WorkingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg",
+  "Mode": "cl compile",
+  "Compiler": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe",
+  "VSHostArch": "x64",
+  "VSTargetArch": "x64",
+  "ArgumentCount": 14,
+  "Arguments": [
+    "/nologo",
+    "/EHsc",
+    "/std:c++17",
+    "/O2",
+    "/MD",
+    "/W4",
+    "/WX",
+    "/I",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core",
+    "/FoF:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\AttributeDiagnostic.obj",
+    "/FeF:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\AttributeDiagnostic.exe",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\AttributeDiagnostic.cpp",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\JE_BspCsgTests.dir\\Release\\WhiteBoxCsgCore.obj",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\csg\\manifold\\lib\\Release\\manifold.lib"
+  ]
+}

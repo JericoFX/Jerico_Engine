@@ -1,0 +1,13 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake",
+  "mode": "build",
+  "argument_count": 4,
+  "arguments": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-consumer",
+    "--config",
+    "Release"
+  ],
+  "configuration": "Release"
+}

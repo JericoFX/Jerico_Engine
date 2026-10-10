@@ -1,0 +1,36 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+cmake_minimum_required(VERSION 3.24)
+include("${CMAKE_CURRENT_LIST_DIR}/../JERequireLocalPath.cmake")
+JE_python_require_local_path(JE_PYTHON_PACKAGE_ROOT)
+JE_python_require_local_path(JE_VENV_OUTPUT)
+get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
+set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
+cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_VENV_OUTPUT}" NORMALIZE JE_IN_BUILD)
+if(NOT JE_IN_BUILD OR JE_VENV_OUTPUT STREQUAL JE_BUILD_ROOT)
+    message(FATAL_ERROR "JE local Python test venv must be beneath this checkout/build")
+endif()
+set(JE_DEBUG_FLAG "")
+if(JE_RUNTIME_CONFIGURATION STREQUAL "Debug")
+    set(JE_RUNTIME "${JE_PYTHON_PACKAGE_ROOT}/python/python_d.exe")
+    set(JE_DEBUG_FLAG --debug)
+elseif(JE_RUNTIME_CONFIGURATION STREQUAL "Release")
+    set(JE_RUNTIME "${JE_PYTHON_PACKAGE_ROOT}/python/python.exe")
+else()
+    message(FATAL_ERROR "JE runtime configuration must be Debug or Release")
+endif()
+JE_python_require_local_path(JE_RUNTIME)
+if(NOT EXISTS "${JE_RUNTIME}")
+    message(FATAL_ERROR "JE local Python package runtime is missing: ${JE_RUNTIME}")
+endif()
+if(EXISTS "${JE_VENV_OUTPUT}")
+    message(FATAL_ERROR "JE local Python test venv output already exists; retain it and choose new consumer outputs")
+endif()
+execute_process(COMMAND "${CMAKE_COMMAND}" -E env PIP_NO_INDEX=1 PIP_CONFIG_FILE=NUL
+    PIP_DISABLE_PIP_VERSION_CHECK=1 PYTHONNOUSERSITE=1 PYTHONPATH= PYTHONHOME=
+    "${JE_RUNTIME}" -I -B "${CMAKE_CURRENT_LIST_DIR}/RuntimeTest.py"
+    --package-root "${JE_PYTHON_PACKAGE_ROOT}" --venv-output "${JE_VENV_OUTPUT}" ${JE_DEBUG_FLAG}
+    RESULT_VARIABLE JE_RUNTIME_RESULT)
+if(NOT JE_RUNTIME_RESULT EQUAL 0)
+    message(FATAL_ERROR "JE local Python ${JE_RUNTIME_CONFIGURATION} runtime test failed (${JE_RUNTIME_RESULT})")
+endif()

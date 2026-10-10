@@ -1,0 +1,21 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_PACKAGE_STAGE=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\stage -DJE_PACKAGE_NAME=python-3.10.13-je-rev1-windows -DJE_PACKAGE_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\packages -DJE_PACKAGE_VERSION=3.10.13-je-rev1 -DJE_PACKAGE_SOURCE_COMMIT=49965601d6afedafe47cc85556d99b7a24981051 -DJE_PACKAGE_SOURCE_SHA256=12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44 -DJE_PACKAGE_LICENSE=PSF-2.0 -DJE_PACKAGE_SOURCE_URL=https://codeload.github.com/python/cpython/tar.gz/49965601d6afedafe47cc85556d99b7a24981051 -P F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake"
+  ],
+  "mode": "-P",
+  "started": "2026-10-10T18:47:49.5896162-03:00",
+  "before": {
+    "stage": {
+      "files": 3281,
+      "bytes": 104627044.0,
+      "snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-package-retry-negative-stage-before.json"
+    },
+    "freeze_sha256": "04A28D1633E03F16CE09A6F111D4BD2ED5CF88AAED88579CF2A48E9AB8659C29",
+    "helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+    "cmake_sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+    "cmake_version": "cmake version 4.3.4"
+  },
+  "old_contents_sha256": "80B0DA1226FEA00B39E625F9AF38C84C515D3EFD470FDB3C80AFEF8A06A834F0"
+}
