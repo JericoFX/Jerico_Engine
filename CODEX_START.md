@@ -4,7 +4,7 @@ Trabajar exclusivamente en **JericoFX/Jerico_Engine / development**. Transformar
 
 ## Lectura obligatoria
 
-Leer, en orden: `AGENTS.md`, `GOAL.md`, `docs/README.md`, `docs/ROADMAP.md`, `docs/work/ACTIVE_SLICE.md`, `docs/work/HANDOFF.md` y `docs/DEFINITION_OF_DONE.md`. Para el primer trabajo seguir `docs/work/N0_FOUNDATION_PLAN.md`. Antes de un subsistema, leer su master y la entrada correspondiente de `docs/migration/LEGACY_REQUIREMENT_MAP.md`.
+Leer, en orden: `AGENTS.md`, `GOAL.md`, `docs/README.md`, `docs/ROADMAP.md`, `docs/work/ACTIVE_SLICE.md`, `docs/work/HANDOFF.md` y `docs/DEFINITION_OF_DONE.md`. Para el primer trabajo seguir `docs/work/N0_FOUNDATION_PLAN.md`. Antes de un subsistema, leer su master (para materials/import/cook/formatos/paquetes: `docs/ASSET_MATERIALS_FORMATS_EPAK_MASTER.md` obligatorio) y la entrada correspondiente de `docs/migration/LEGACY_REQUIREMENT_MAP.md`.
 
 La instrucción del propietario de trabajar solo en una rama está resuelta: development. El valor default de GitHub puede seguir mostrando optimize_scriptcanvas_1 hasta corregirlo. No deducir la base desde ese valor.
 

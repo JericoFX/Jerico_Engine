@@ -88,4 +88,15 @@ Fecha 2026-10-10. Todos los requisitos activos están **CONTRACT ADOPTED / IMPLE
 | JER-082 | DX12/Metal/WebGPU/móvil y render RT | D: fuera de fase | No se activan por Gems/baking/auto-select |
 | JER-083 | Motion matching/facial/neural/full per-finger/multiplayer sessions | D: no foundation | No bloquear interacción básica |
 
+| JER-084 | JericoMaterial Graph e instancias sobre Atom, shader cook/source-free | Materials N2/N11 | Fuente/graph editable, .rmat cooked en runtime y variante correcta sin compilador fuente |
+| JER-085 | ORM R/AO G/Roughness B/Metallic y mapas separados, color linear/sRGB/normal Y | Materials N2 | A/B valores equivalentes; cambios de canal/convención/reimport conservan overrides |
+| JER-086 | Textura .rtext mips/BC4-5-7 por semántica, budget real y datos sin fuente | Assets N2/N11 | Mips impares, normal vector, normal variance separado y reload seguro |
+| JER-087 | Codificadores r* con magic/version/chunks/endian/bounds/hash/validator | Formats N2→N11 | Roundtrip y negativos corrupción/overflow/migración + consumidor real |
+| JER-088 | .epak indexed streaming y compresión Zstd, hashes BLAKE3 por políticas fijadas | Packaging N11 | Chunk random access y límites de descompresión; pin/ABI/provenance de dependencias |
+| JER-089 | Firma autenticada de paquetes/releases y separación de cifrado/integridad | Security N11/N12 | Signature failure rejects; key policy/revocation, no bypass Shipping |
+| JER-090 | Base+delta .epak, overlay precedence, atomic publication y rollback | Packaging N11 | Actualización interrumpida mantiene último contenido válido |
+| JER-091 | ContentPack/DLC, CampaignRegistry, CampaignId y saves aislados | Game/Packaging N6/N11 | Dos campañas comparten assets y ejecutable, dependencia/compatibilidad probada |
+| JER-092 | Hot reload/incremental cook de material/texture por revisión/dep exacta | Assets/Render N2 | Texture-only reimport no recook todo; cancel/unload/fences seguros |
+| JER-093 | Source import/cook con pruebas multi-slot/skin/UV/alpha y fixture corrupta | Import N2 | Casos de producto y negativos: sin aceptar por extensión o único GLB |
+
 Para cerrar una fila: enlazar commit, evidencia de consumidor/editor/cook/runtime aplicable, resultado negativo y límites. Si una fila agrupa formatos/variantes, desglosar cobertura antes de marcar VERIFIED; un solo caso no los acredita a todos. Las filas D/H no son permisos de implementación ni features eliminadas silenciosamente.

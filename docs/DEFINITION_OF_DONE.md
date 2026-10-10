@@ -36,3 +36,9 @@ No crear contadores de millones de checks repetitivos para reemplazar coverage. 
 Windows Vulkan no demuestra Linux Vulkan. Mock/stereo desktop no demuestra OpenXR hardware. Una configuración editada no cambia modelo de agentes ni demuestra ejecución. Un build source-free de O3DE temprano no acredita `.epak`/ABI final Jerico.
 
 GOAL final: matriz obligatoria cerrada, formatos/packaging reales, distribución reproducible/source-free, notices/licencias/SBOM revisados, independencia de servicios/build-hosting según contrato, UX y rendimiento admitidos, cero doble owner sobre sistemas migrados y ningún subsystem parcial oculto. Los diferidos explícitos siguen visibles; solo el propietario puede cambiar su alcance.
+
+## Gate especial de materiales, formatos y paquetes
+
+- `.rmat/.rtext/.rmesh` y cada formato que se marque VERIFIED poseen reader/writer/version/validator, pruebas negativas y consumidor real; nombres de extensión no equivalen a codecs.
+- Materiales ORM y mapas separados dan comportamiento equivalente cuando los datos son equivalentes; se prueban color-space, normal-map convention, canales, alpha, reimport/Undo/Save, cooked display y memoria.
+- `.epak` Shipping no lee fuentes ni compiladores; índice/chunks/dependency closure/delta/overlay/rollback y ContentPack/Campaign se prueban cuando se incorporan. Firma oficial fail-closed y política de cifrado se auditan criptográfica/legalmente; jamás declarar seguridad mediante hash solamente.

@@ -85,3 +85,7 @@ Los reportes previos de import/LOD/cook y shaders son evidencia del producto pre
 ## Antes de cualquier eliminación histórica
 
 Esta tarea NO elimina el checkout/repo Cry. Antes de que el propietario retire archivos locales: verificar commits y objetos necesarios, preservar evidencia/documentos/artefactos no versionados con permiso y licencia, identificar cambios sin publicar, y distinguir borrar copia local de borrar repositorio GitHub/historial. No borrar el repositorio de evidencia porque otro checkout ya compile.
+
+## Precisión obligatoria — materiales, formatos, deltas y DLC
+
+El master `docs/ASSET_MATERIALS_FORMATS_EPAK_MASTER.md` conserva como requisitos activos: semánticas PBR/ORM y mapas separados, `.rmat/.rtext/.rmesh` con metadata explícita, conversión source→Canonical IR→Asset Processor/cook, streaming source-free, `.epak` por chunks y overlays delta con rollback, políticas de hash/firma/cifrado y DLC ContentPacks/CampaignRegistry/saves por CampaignId. Leer antes de cualquier sustitución de Material Editor, Asset Bundler o VFS. La selección de bibliotecas Zstd/BLAKE3/libsodium necesita auditoría legal y test, no copia automática de código histórico.

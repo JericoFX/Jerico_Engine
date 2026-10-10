@@ -14,7 +14,8 @@ Nueva base: O3DE. Rama única: **development**. Publicación de 2026-10-10: docu
 | [Auditoría de ramas](research/BRANCH_AUDIT_2026_10_10.md) | Las 23 refs y selección sin merges masivos |
 | [Rescate histórico](migration/LEGACY_REQUIREMENT_MAP.md) | Qué conservar/sustituir y qué sigue como historia |
 | [Legal/dependencias](legal/PROVENANCE_AND_DEPENDENCIES.md) | Código permitido, transitivas, Qt, AWS/LFS |
-| [Editor/assets/world](EDITOR_ASSET_WORLD_MASTER.md) | UX, identidad, import/cook, formatos y packaging |
+| [Editor/assets/world](EDITOR_ASSET_WORLD_MASTER.md) | UX, identidad e import/cook |
+| [Materiales, formatos y .epak](ASSET_MATERIALS_FORMATS_EPAK_MASTER.md) | PBR, ORM, compresión, r* y paquetes/deltas firmados |
 | [Luau/gameplay/AI](SCRIPTING_AI_GAMEPLAY_MASTER.md) | Referencias, Store, save, input, inventario y HTN |
 | [Motion/UI/audio/XR](ANIMATION_UI_AUDIO_XR_MASTER.md) | Rigs/IK/fitting, UI, secuencias, sonido y XR |
 | [Procedural/physics/environment](PROCEDURAL_PHYSICS_ENVIRONMENT_MASTER.md) | RMod, RBrush, PWAS/EPLS, Jolt y entorno |

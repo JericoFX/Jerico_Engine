@@ -34,3 +34,7 @@ CMake configure/build; tests C++/Python del engine; Editor/launcher/Asset Proces
 Leer el commit frente a su padre O3DE: solo Markdown nuevo y README de navegación/documentación; no cambios en Code, Gems, Engine assets, CMake, engine.json, `.lfsconfig` o LICENSEs. Confirmar ref development y mismo SHA; si el remoto avanzó, reconciliar sin fuerza y revisar nuevo diff.
 
 Codex debe sustituir las filas pendientes de N0 con evidencia real en `docs/work/evidence/N0/`, conservando los límites. Un paquete documental completo no equivale a un motor completo.
+
+## Enmienda de alcance documental
+
+Añadido master específico de materiales, formatos r* y empaquetado incremental, más JER-084..JER-093. Fuente histórica de políticas `.epak`, DLC y protección revisada como diseño de JericoEngine1; algoritmos/licencias de zstd/BLAKE3/libsodium aún requieren pins y pruebas antes de usar. No se fabricaron resultados de validación de formatos, shader cook ni firmas reales.

@@ -63,7 +63,7 @@ Herramientas de geometría con workflow de brushes estilo Hammer 2, identidad pr
 
 GLB/glTF 2.0, FBX mediante `ufbx` de tools, OBJ/MTL; texturas PNG/JPEG/TGA/TIFF/HDR/EXR/DDS y KTX2/Basis; heightmaps PNG16/RAW16/32/EXR/TIFF; audio WAV/FLAC/OGG. Sin Autodesk FBX SDK ni ATL/MFC como nuevos requisitos impuestos al propietario. Los formatos se incorporan por verticales, no se declaran disponibles por listarlos.
 
-Nombres libres de texturas; semánticas Base Color, Normal, Roughness, Metallic, AO, Emission y Opacity explícitas. Admitir ORM empaquetado y mapas separados, convenciones normal/color-space/mips editables. Reimport no pisa overrides ni fuentes. Una Canonical IR y un cook determinista conectado al Asset Processor existente.
+Nombres libres de texturas; semánticas Base Color, Normal, Roughness, Metallic, AO, Emission y Opacity explícitas. Admitir ORM empaquetado y mapas separados, convenciones normal/color-space/mips editables. Reimport no pisa overrides ni fuentes. Una Canonical IR y un cook determinista conectado al Asset Processor existente. **Binding:** `docs/ASSET_MATERIALS_FORMATS_EPAK_MASTER.md` detalla los materiales, los formatos propietarios de Jerico, el tratamiento de mapas y el pipeline único; no basta adoptar formatos O3DE renombrados.
 
 ### Gameplay, referencias y guardado
 
@@ -107,7 +107,7 @@ La aceptación de agua de Cry se cerró por decisión del propietario el 2026-10
 
 ## 8. Packaging y cierre
 
-Distribución final en un directorio de producto con ejecutable, `.epak` y bibliotecas necesarias; los recursos/licencias de terceros pueden conservar subdirectorios técnicamente requeridos. Sin checkout de desarrollo, compiladores fuente, credenciales ni formatos originales como requisito de ejecución.
+Distribución final en un directorio de producto con ejecutable, `.epak` y bibliotecas necesarias; los recursos/licencias de terceros pueden conservar subdirectorios técnicamente requeridos. Sin checkout de desarrollo, compiladores fuente, credenciales ni formatos originales como requisito de ejecución. `.epak` debe evolucionar hacia chunks streaming, delta/overlay y rollback transaccional. Compresión Zstd, hash BLAKE3, firma autenticada para releases oficiales y política de cifrado de Shipping quedan como **destino de diseño pendiente de auditoría e integración**, sin declarar criptografía implementada. ContentPacks/DLC y CampaignRegistry comparten assets por GUID sin duplicar el runtime.
 
 Los formatos finales son binarios validados, versionados y de ABI independiente. No crear XML propio; metadata de tools y formatos internos temporales se migran con sus consumidores, no mediante una purga global. El catálogo está en `docs/EDITOR_ASSET_WORLD_MASTER.md`.
 

@@ -28,7 +28,7 @@ Probar init/use/shutdown una vez, selección, Undo/Redo, save/reopen, prefab ins
 
 **Depende:** N1/builders originales. **Resultado:** GLB/materiales → modelo canónico → cook → revisión correcta en Atom/runtime.
 
-Asset Processor único; ORM/separados, normal/color-space, nombres libres, mips/tangentes, slots/instancias y reimport con overrides. Ufbx/otros formatos entran como subverticales probados. No dar todos por soportados tras un GLB simple.
+Asset Processor único; ORM/separados, normal/color-space, nombres libres, mips/tangentes, slots/instancias y reimport con overrides. **Leer el master ASSET_MATERIALS_FORMATS_EPAK:** material graph/instancias sobre Atom, conversiones color/normal/canales, semantic slots, importer negative cases y gestión del ciclo de vida de texturas; `.rmat/.rtext/.rmesh` son contratos finales, no renombres de productos O3DE. Ufbx/otros formatos entran como subverticales probados. No dar todos por soportados tras un GLB simple.
 
 Observabilidad dentro de Atom: pass inputs/outputs, timings CPU/GPU y memoria; diagnóstico apagado sin readbacks. Primer pass propio solo con consumidor real. Controles de PBR/shadows/reflections/fallback y material replacement. Diseñar cámaras/motion vectors/histories por vista, no un buffer global que impida XR.
 
@@ -104,7 +104,7 @@ OpenXR presente como contrato desde N0; aquí cerrar sessions/views/swapchains/a
 
 **Depende:** suficientes consumidores reales N1-N10. **Resultado:** distribución Jerico source-free y reproducible con cierre de dependencias.
 
-Migrar nombres/targets/paths y consumidores juntos; no simple CryAction→JericoAction ni replace global AZ. Consolidar por ownership, conservar bibliotecas privadas útiles y avisos legales. Retirar archivos/rutas redundantes solo tras prueba y manifest. Formatos r* y epak versionados, bounded, deterministic, ABI independiente; no renombrar archivos O3DE para simularlos.
+Migrar nombres/targets/paths y consumidores juntos; no simple CryAction→JericoAction ni replace global AZ. Consolidar por ownership, conservar bibliotecas privadas útiles y avisos legales. Retirar archivos/rutas redundantes solo tras prueba y manifest. Formatos r* y epak versionados, bounded, deterministic, ABI independiente; validar writer/reader/validator y consumidor real de cada uno. `.epak` requiere estudiar index/chunks y streaming, Zstd/BLAKE3 como candidatos pinneados, firma autenticada de release, política explícita de cifrado, delta overlays/rollback, ContentPack/DLC/CampaignRegistry y compatibilidad de saves; nunca atribuir soporte por renombrar un paquete.  no renombrar archivos O3DE para simularlos.
 
 Packaging en directorio final; no checkout/compiladores/source/XML propio/AWS account/servicios. Resolver LFS/3P hosting controlado, licencias Qt/transitivas y SBOM; offline real. Retirar PhysX y Lua/ScriptCanvas gameplay solo cuando no queden consumidores. Herramientas privadas y third-party notices se clasifican, no se borran por nombres.
 

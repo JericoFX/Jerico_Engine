@@ -4,7 +4,7 @@ Fecha: 2026-10-10. Única rama: development. Estado de implementación nuevo: **
 
 ## Hecho en esta publicación
 
-Auditoría remota de las 23 ramas, sus HEADs y comparaciones; comprobación del SHA/tree base contra o3de/o3de; lectura del GOAL/AGENTS y contratos relevantes de JericoEngine2, atlas/idTech6/PWAS de JericoEngine1 y manifests/configuración O3DE. Redacción de objetivo, roles, arquitectura, masters, mapa de rescate, 83 requisitos, SIGGRAPH y plan N0.
+Auditoría remota de las 23 ramas, sus HEADs y comparaciones; comprobación del SHA/tree base contra o3de/o3de; lectura del GOAL/AGENTS y contratos relevantes de JericoEngine2, atlas/idTech6/PWAS de JericoEngine1 y manifests/configuración O3DE. Redacción de objetivo, roles, arquitectura, masters, mapa de rescate, 93 requisitos, SIGGRAPH y plan N0.
 
 El commit es documental: no contiene engine implementation, shaders, Gems migrados, dependencias instaladas ni pruebas de runtime. Sus documentos se autoidentifican como diseño o instrucciones de futura ejecución. Consultar VERIFICATION_REPORT para cobertura/limitaciones.
 
@@ -29,3 +29,7 @@ Crear evidencia real del baseline, elegir plataforma disponible y medir. No cont
 ## Riesgos abiertos
 
 Dependencias/transitivas y Qt/linking; AWS build-hosting; baseline development no estable probado; Preview OPS; RT oculto en probes; navegación/provider de física; UI migration/formatos; CMake/README de épocas distintas; coste de sustitución de PhysX y Lua gameplay. Cada riesgo tiene owner/etapa en masters y matriz, no se trata como hecho resuelto.
+
+## Enmienda materiales y formatos — mismo día
+
+Se amplía la especificación con `docs/ASSET_MATERIALS_FORMATS_EPAK_MASTER.md`: pipelines de Asset Processor/Atom, materiales ORM y separados con semánticas explícitas, `.rmat/.rtext/.rmesh` y demás formatos Jerico, delta `.epak`, ContentPacks/campañas y firma/cifrado con política de diseño. La matriz pasa de 83 a 93 requisitos para dar pruebas independientes a estos elementos. **Solo documentación: codecs, Material Graph Jerico, firmas, cifrado, DLC y paquetes no se declaran implementados.**
