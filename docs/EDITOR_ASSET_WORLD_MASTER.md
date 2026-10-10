@@ -1,88 +1,55 @@
-# Editor, assets, mundo y formatos Jerico
+# JE Editor, Assets y World — BSP como primer flujo
 
-Estado: contrato de destino, no implementación acreditada. Owners y etapas: N1-N3, N11-N12 de ROADMAP. Fuente histórica: GOAL, RUNTIME_FORMATS, JERICOEDITOR_MASTER y JERICOENGINE1_TRANSFER_MAP de JericoEngine2 en el SHA fijado en GOAL.
+**Vigente 2026-10-10.** Contrato de destino; implementación no acreditada. GOAL y contrato JE superiores. Fuente O3DE/Atom se reutiliza y migra a nombres/owners JE, no API pública AZ ni facade perpetua. Renders permitidos DX12/Vulkan, AWS/multiplayer excluidos.
 
-## 1. Editor real y experiencia de autoría
+## 1. UI Jerico y authoring nativo
 
-Reutilizar `Code/Editor`, AzToolsFramework/AzQtComponents y Atom Tools. Un shell Qt 6 Widgets, un viewport/contexto de escena compartido y paneles según tarea. No generar diferentes aplicaciones demo para Assets, Física o Scripts.
+Qt6 Widgets sobre editor/AzToolsFramework/AzQtComponents actuales adaptados. Viewport central grande compartido por workspaces, Outliner/paletas izquierda, Inspector derecho, logs/curvas/timelines/profiler abajo. Grafito/navy con cian y ámbar de selección; tipografía legible, DPI, iconos/texto además de color, shortcuts y docking persistentes. World/Geometry-BSP/Materiales primero; Assets/Import/Procedural-Geology/Physics/Motion/AI/Audio/VFX/Sequencer/UI/Luau/XR/Profiler según consumidor.
 
-Dirección visual conservada: grafito/navy oscuro, cian/teal para identidad, ámbar/naranja para herramienta/selección; información legible, escalado DPI, icono/texto además de color. Workspaces: World, Assets, Import, Geometry/BSP, Procedural, Terrain, Materials, Physics, Rig/Motion, AI/Nav, Audio, VFX, Sequencer, UI, Luau IDE, XR, Profiler e Item/Narrative cuando se incorporen. Docking restaurable; no reconstruir viewport al cambiar tab ni perder selección/historial.
+No un editor nuevo aislado ni pantallas mock para demostrar productividad. Cambiar tab mantiene scene/selection/viewport. Edit/Simulate/Play usa runtime systems reales. Diálogos de importar/guardar/cancelar/overwrite/progreso/error/renderer/device/cierre con cambios/recovery están incluidos, no esconderlos tras screenshot bonito.
 
-Cada acción de edición sigue: selección/contexto → propuesta/preview → validación → transacción → modelo canónico → invalidación derivada → notificación a paneles. Cancel no deja productos activos huérfanos. Undo/Redo, save/reopen, prefab overrides y revisiones se prueban en la ruta real. Nada de modificar archivos de escena directamente desde un panel evitando las transacciones.
+Primera prueba: cuarto+corredor, cut de puerta/ventana, caras/UV/material, Undo/Redo/Save/reopen y mesh runtime. WhiteBox/Manifold CSG es base real a probar; modelar un cubo no acredita BSP completo. Herramientas avanzadas entran por operación persistente, no todo el algoritmo de golpe.
 
-Los diálogos heredados forman parte de la migración: errores, import, guardar, overwrite, selección de assets, progreso/cancel, renderer/device, navegación entre escenas, cierre con cambios. No ocultarlos ni aceptar una captura del viewport como prueba de toda la experiencia.
+## 2. Transacciones y automatización
 
-## 2. Integración nativa y automatización
+Selection/context→preview/diff→validate→transaction→modelo canónico→invalidation→notificación. Cancel/fallo no publican mitad de scene. Undo/Redo y overrides en instancias/prefabs respetan ownership. No escribir scene file a escondidas desde un panel.
 
-Una plantilla/proyecto limpio debe recibir los subsistemas Jerico de la distribución del motor, sin instalar/habilitar Gems Jerico. Se puede utilizar registro interno de O3DE; queda fijado y administrado por el producto, no por cada diseñador.
+UI, Automation Bridge/MCP local y comandos tools autorizados usan un registro tipado JE; queries no mutan, writes acotados/preview/cancel/Undo, validación de permisos/contexto. No arbitrary code desde un asset ni puertos públicos. IPC local Editor/AssetProcessor/debug no exige transporte de multiplayer; extraerlo como tool privado cuando corresponda. Shipping no incluye esas tools.
 
-Editor UI, Luau tools permitidos y Automation Bridge usan el mismo registro tipado de comandos/propiedades. MCP es adaptador local, con capabilities, validación, límites de alcance y respuestas trazables. Queries no mutan. Mutaciones soportan preview/diff/Apply/Cancel y Undo. No ejecutar código arbitrario obtenido de un asset/documento. No inventar tools de Blender o de cualquier MCP: descubrir schemas reales.
+## 3. Identidad/World y transición JE
 
-Ejemplo de aceptación: seleccionar una puerta, añadir hinge, mover el pivot, cambiar el límite y deshacer; el mismo comando desde la automatización debe producir igual modelo y persistencia. La captura del viewport confirma resultado, no la intención de un comando enviado.
+Una implementación de identity/revision/world, no otra tabla escribible para conciliar AZ IDs y GUID Jerico. Mapear source GUID/product ID/entity lifetime y scope Scene/PrefabInternal con claridad. Migrar types/names/UUIDs/reflection/codegen con writers/readers y converters: no renombre global que rompa datos ni alias JE=AZ como destino.
 
-## 3. Una identidad persistente, un mundo
+Refs persistentes incluyen identidad/scope/capability esperado; runtime handles incluyen contexto/generación y validación, nunca pointers serializados. Outliner→IDE crea/reutiliza self.references tipada; nombre de entidad sólo display, no identidad. Duplicate/instantiate/reparent/scene unload/remap preservan significado o reportan missing type/reference; no resolver silenciosamente por nombre.
 
-Conservar la infraestructura de entidades/componentes, prefab y asset IDs de O3DE mientras se integra el contrato Jerico. Diseñar un único mapeo de identidad persistente si AZ EntityId, asset IDs y GUID Jerico tienen semánticas diferentes; no añadir dos tablas escribibles de autoridad.
+World conserva hierarchy/prefabs/variants/layers/cells/HLOD/residency. Unload invalida jobs/callbacks/render/physics/nav de forma segura. No reescribir ECS por dogma o crear World paralelo para geología. Fields/meshes/instances que produce authoring se publican en el mismo sistema.
 
-Referencia persistente = identidad estable + ámbito + capacidad/tipo esperado. Handle runtime = identidad validada/generación/contexto de mundo, no puntero serializado. Resolver Scene versus PrefabInternal, instancias, duplicación y remap. Una referencia ausente informa error/contexto; no cae silenciosamente en la primera entidad de igual nombre.
+## 4. Import/cook y materiales
 
-World conserva jerarquías, parent transforms, layers, prefabs/variantes, streaming de celdas, HLOD y residencia. Mover, duplicar y reimportar no cambia identidades aceptadas arbitrariamente. Unload invalida handles/callbacks/physics/nav/render de forma coordinada; volver a cargar usa el modelo persistente.
+Inputs originales inmutables + settings→snapshot→Canonical IR→builders/Asset Processor→products/deps→cache→package. Adaptar pipeline existente a JE. Importadores tool-only ufbx/glTF/OBJ, texturas/heightmaps/audio según master material; un suffix no decide semántica. No Autodesk FBX SDK ni ATL/MFC impuestos.
 
-No reescribir ECS para pasar una prueba aislada. Auditar las rutas reales de AZ::Entity/AzFramework y medir antes de sustituir almacenamiento, reflection o eventos.
+Nombres libres de texturas, BaseColor/Normal/Roughness/Metallic/AO/Emission/Opacity explícitos, ORM R/AO G/roughness B/metal y mapas separados, color-space/normal-Y/UV/scalars editables. Source case/path traversal/symlink/size/external dependencies validados antes de reservar o publicar. Modelo pesado con progreso/cancel, no congelar escritorio.
 
-## 4. Importación y cook
+Material por cara de BSP/UV/region IDs debe sobrevivir CSG, reimport y Undo. Geología reutiliza campos semánticos en triplanar/strata/erosión/interior; no otra representación de material. MaterialGraph/instances/variants y SRGs sobre Atom adaptado, no segundo shader VM. Physics material separado de apariencia.
 
-Una sola ruta: fuente inmutable + metadata/recipe → Canonical IR → builders del Asset Processor → productos versionados/dependencias → cache → paquete/runtime. No mantener un segundo cooker/asset database en paralelo porque ya exista código antiguo de Jerico.
+Detalles obligatorios están en `ASSET_MATERIALS_FORMATS_EPAK_MASTER.md`: tangentes/handedness, mips/odd dimensions/normal filter/alpha, fuentes/formats, readers/crypto/package. No sustituirlos por extensión de archivo reconocida.
 
-Inputs de destino: glTF 2.0/GLB, FBX por ufbx tool-only y OBJ/MTL; PNG/JPEG/TGA/TIFF/HDR/EXR/DDS/KTX2/Basis; heightmaps PNG16/RAW16/32/EXR/TIFF/GeoTIFF; WAV/FLAC/OGG. Incorporar capacidades por pruebas específicas de formato y no declarar cobertura total tras un GLB sencillo. El engine Shipping no analiza fuentes glTF, FBX, KTX2 o recipes.
+## 5. Reimport/hot reload
 
-Escenas con jerarquías/submeshes/material slots/instancias, skins, clips, morph targets y extensiones glTF requieren estado individual de soporte. Extensión desconocida requerida: rechazo con mensaje; opcional: política explícita. Materiales y texturas externos: normalizar paths, rechazar escapes/links/collisiones de case y respetar presupuesto. Un modelo válido pero enorme debe cargar con progreso/cancel, sin congelar el escritorio.
+GUID estable, recipe/importer/version/seed/hash de fuente+deps y overrides. Candidate-first con validación del cierre, publicación del selector al final, recursos anteriores vivos mientras haya GPU/audio/physics readers. Cancel/invalid no activa partially built scene. Invalidation por dependencias/revisión, no timestamp global; texture-only no recook geometry/physics sin relación real.
 
-No exigir FBX SDK de Autodesk ni ATL/MFC nuevos. Comprobar los targets heredados antes de declarar eliminada esa dependencia. ufbx y otros imports no entran al ABI público ni al runtime.
+Hot reload necesita fences/deferred retirement/suscripciones correctas; no liberar porque gameplay ya soltó el pointer. Repetir reload/unload/cancel y medir RAM pico/VRAM/latencia. No segundo VFS/cache/cooker independiente para formatos JE.
 
-## 5. Semánticas de material y textura
+## 6. Formatos y distribución
 
-El nombre de archivo solo puede sugerir mapping. La autoridad es metadata editable: BaseColor(sRGB), normal(linear + convención), roughness/metallic/AO(linear), emissive/color-space, opacity y channels. Aceptar ORM R=AO/G=roughness/B=metallic y mapas separados equivalentes. El cooker empaqueta sin exigir al autor rehacer texturas.
+Catálogo `.rproject/.rlevel/.rpref/.rmesh/.rmat/.rtext/.rcoll/.rnav/.rskel/.rrig/.ranim/.rgraph/.rseq/.rscript/.rinput/.rui/.rloc/.rfont/.raudio/.rsound/.rsoundsurface/.rpart/.rsave/.epak`. `.rpart` es VFX, `.rtext` textura. `.rmod.toml/.rbrush/.rui2d/.rui3d/.rlang` son autoría según su contrato. Sin extensión nueva por cada editor tab.
 
-Un usuario puede cambiar de ORM a fuentes separadas y conservar apariencia, scalars y overrides. Reimport cambia únicamente lo derivado de la fuente modificada. Tests: nombres arbitrarios, textura compartida con semánticas incompatibles, UV set distinto, missing map, normal Y flip y materiales múltiples.
+Magic/version/chunks/endian/flags/bounds/hash/deps/finite values/validator; no ABI C++/thirdparty structs/pointers ni paths de fuente. Writer/reader/negative tests+consumer real antes de VERIFIED. No adoptar wire limits experimentales de Cry ni renombrar `.pak`/material O3DE como supuesta implementación JE.
 
-Transformación geométrica debe tratar normales por inverse-transpose y tangentes/handedness de forma coherente, incluyendo escalas negativas. Generación tangente usa implementación admitida/MikkTSpace cuando corresponda. UV degenerada con normal map debe diagnosticarse, no inventar un tangente silencioso aceptado.
+N2 incorpora primeros productos usados por BSP/material/geología, N11 completa source-free distribution. Un baseline cooked O3DE temprano no es final-format PASS. Paquetes .epak locales con revision closure/streaming/delta/rollback y políticas de protección verificadas por separado, sin plataformas de comercio/cuentas/AWS.
 
-Mips completos incluyendo dimensiones impares; normals en espacio vectorial y renormalización; datos sin sRGB; alpha policy explícita. Compresión/transcoding según plataforma y formato real soportado. Normal variance/specular AA se evalúa aparte, no se acredita con renormalizar. Budget de archivo no equivale a RAM pico: registrar copias temporales y la residencia GPU efectiva.
+## 7. Aceptación
 
-## 6. Reimport, caché y hot reload
+Fixture: BSP cuarto/apertura+GLB multislots/normal/ORM vs separados→editar material→instanciar prefab→reimport una textura→Undo/Save/reopen→cook→launcher aislado sin fuentes. Agregar cliff/cueva con campos materiales y collider/nav cuando entre Geology. Corrupt/missing/source cancel/unload/reload probados.
 
-GUID estable, recipe version, seed, importer version, hashes de fuente y dependencias, overrides de autoría. Build candidato sin cambiar selección activa. Publicación válida al final; error/cancel mantiene el producto anterior. Invalidación por dependencias/revisión, no recook de todo por cada propiedad.
-
-Hot reload retira recursos tras el fence/lifetime seguro, no porque nadie en gameplay los use. GPU y tareas asíncronas pueden conservar referencias. Material/texture/mesh reload y scene unload tienen tests de repetición y memoria. Decidir slots de buffer, frame arenas y deferred release desde Atom/AzCore existentes, no copiar pooling de UE4.
-
-## 7. Catálogo de formatos finales
-
-| Formato | Responsabilidad |
-|---|---|
-| .rproject | Arranque/proyecto resuelto |
-| .rlevel / .rpref | World/celdas y composición prefab |
-| .rmesh / .rtext / .rmat | Geometría/LOD/streams, texturas/mips, material/producto de graph |
-| .rcoll / .rnav | Colisión y navegación cocinadas |
-| .rskel / .rrig / .ranim / .rgraph | Skeleton, rig, clip y graph de animación |
-| .rseq | Secuencia reusable con ciclo de vida propio |
-| .rscript / .rinput | Módulo Luau validado y perfil de input |
-| .rui / .rloc / .rfont | UI runtime, textos y fuente/metrics/fallbacks |
-| .raudio / .rsound / .rsoundsurface | Audio, SoundEvents y respuesta de superficie física |
-| .rpart | Partículas/VFX; NO piezas modulares |
-| .rsave | Snapshot de proveedores de save |
-| .epak | Paquete y delta con cierre de dependencias |
-
-Autoría: `.rui2d/.rui3d`, `.rlang`, `.rbrush`, `.rmod.toml` y documentos de graph/recipe. No inventar `.rfoo` por panel: nueva extensión exige owner, lifecycle y justificación.
-
-Estos nombres conservan intención de producto, **no congelan el wire layout limitado del prototipo Cry**. Revisar límites/chunks y diseñar migración explícita antes de reutilizar codecs. No renombrar un `.pak` o asset O3DE para afirmar que se implementó `.epak/.rmesh`.
-
-Cada reader verifica magic/version, endian, file size, chunks, counts/offsets/overflow antes de reservar, dependencias/hash y flags requeridos. Formatos independientes de ABI C++/punteros/tipos de tercero. Versiones viejas se migran o rechazan claramente. Hash != firma/autenticación.
-
-## 8. Packaging, seguridad y aceptación
-
-Aprovechar Asset Bundler y VFS existentes. La distribución final no depende de paths del checkout, fuentes, XML propio, process de Asset Processor ni compiladores. Executable, `.epak` y librerías de producto en un directorio; recursos de terceros conservan su layout exigido.
-
-Fases tempranas pueden verificar runtime cocinado original O3DE; etiquetar BASELINE O3DE, no FINAL JERICO FORMAT PASS. N11 cierra los formatos/instalación finales y source-free.
-
-Prueba vertical representativa: importar GLB con varios materiales y normales → ORM/separados equivalentes → prefab instanciado → cambio de una textura → reimport → Undo/Redo → Save → cerrar todo → reopen → cook → ejecutar desde carpeta aislada sin fuentes. Medir tiempo de respuesta, RAM pico y errores. Añadir corruptos/cancel/asset missing/unload/reload. Windows y Linux por separado.
+Capturas reales/timings/memoria/cook/UI responsiveness en Windows-DX12, Windows-Vulkan y Linux-Vulkan por separado. Un screenshot/render API no acredita los otros. Config/targets/generated/exports JE y dependencias privadas/no-AWS/no-multiplayer se validan conjuntamente con comportamiento.

@@ -1,64 +1,53 @@
-# Contrato de agentes — JericoEngine sobre O3DE
+# Agentes — JericoEngine / JE
 
-Vigente desde 2026-10-10. Leer `GOAL.md`, `CODEX_START.md`, `docs/ROADMAP.md` y `docs/work/ACTIVE_SLICE.md` antes de editar. Este contrato rige también dentro de Gems y subdirectorios; las reglas locales de build/estilo se conservan mientras no contradigan seguridad, procedencia o el objetivo nuevo.
+**Directiva vigente 2026-10-10, posterior a a536fb7.** Leer GOAL, CODEX_START, contrato JE, ROADMAP y ACTIVE_SLICE antes de editar. Todo scope local, incluidos Gems, respeta este contrato. Los requisitos concretos del propietario prevalecen sobre skills y defaults de agentes.
 
-## Una rama, un integrador, un motor
+## Un checkout, una rama, un integrador
 
-Única rama de trabajo y publicación: **development** en **JericoFX/Jerico_Engine**. Prohibido crear ramas de feature/research, worktrees, forks de trabajo o una segunda línea Jerico. Las ramas existentes distintas de development son referencias de lectura. No fusionarlas todas ni borrarlas. La opción default de GitHub no decide el branch: usar siempre development explícitamente.
+Única rama de escritura/publicación: `development`, repo `JericoFX/Jerico_Engine`. No nuevos branches/worktrees/forks/engines; otras ramas solo lectura, sin merge masivo ni borrado. No modificar JericoEngine2/JericoEngine/Playground históricos. Un writer por archivo y un owner por build compartido; congelar entradas durante pruebas.
 
-No modificar JericoFX/JericoEngine2, JericoEngine ni JericoGeologyPlayground; son fuentes de lectura/procedencia. No importar su historia con merge/cherry-pick ni copiar sus árboles. No reactivar la transformación Cry, el backend Diligent obligatorio, MNM ni el port de SVOGI.
+Conservar la última topología documentada en Git: padre Sol high, hasta dos hijos Sol high con scopes disjuntos, Luna de investigación/verificación solo al padre. El padre revisa diffs reales, integra, verifica y publica; hijos no delegan ni mutan Git. Luna puede escribir outputs de builds/logs expresamente asignados, no fuente/docs/config ni aceptación. Si el entorno no ofrece esos agentes/modelos, declarar la limitación y usar un único escritor efectivo; no fingir ejecución ni cambiar configuración global. La instrucción presente no cambia modelos realmente ejecutándose.
 
-## Coordinación conservada de la última directiva comprobada en Git
+## Reglas de producto que sustituyen las anteriores
 
-El AGENTS histórico, en `JericoEngine2@304d9d2e13704e4967e82a8d5a13a5a506be01d4`, registra el 2026-10-09: Sol padre con razonamiento alto, dos Sol hijos escritores con scopes disjuntos y una Luna de apoyo solo al padre. Se conserva esa política de roles; no se reinstala la directiva Astra-único-escritor que el mismo archivo marca histórica.
+- JE es la nomenclatura propia: C++ `JE::` con subnamespaces, CMake `JE::`, macros `JE_`, rutas/targets/diagnósticos propios coherentes. Migrar también internals adaptados de O3DE; no dejar `AZ` para siempre detrás de alias/fachada. Preservar nombres genuinos de SDKs/bibliotecas privadas y avisos. Detalles en contrato JE.
+- Solo DX12 y Vulkan: Windows ambos, Linux Vulkan. No llamar DX12 diferido. Rendering RT, Metal/WebGPU/DX11/OpenGL/móvil siguen fuera. Null tests/headless no es renderer permitido de producto.
+- AWS y multiplayer EXCLUIDOS, no opcionales ni deferred. No server/matchmaking/replication/cloud identity/telemetry/services. Auditar bootstrap/cook/deployment y no solo lista de Gems.
+- Geología REACTIVADA. No obedecer cancelación integral anterior. BSP→OpenVDB sigue cancelado; no confundir reactivar herramientas con reactivar backend descartado.
+- BSP/UI/materiales visibles son el primer camino. No postergar geometría hasta terminar audio/IA/packaging avanzado. Resto de capacidades existentes se conserva sin añadir plataforma online.
+- Integración de Gems dentro del engine con implementación real, fuentes/builders/resources/registro y todos los consumidores; no renombre de directorios ni mega-Gem que oculta O3DE. Registro heredado solo temporal y con retiro medible.
+- Ideas de otros motores permitidas. Fuente/código/asset/licencia por separado; prohibido trasladar Cry/UE propietario sin permiso o llamarlo clean-room sin evidencia. Conservar atribuciones.
 
-El padre posee arquitectura, asignación, integración, revisión, build compartido, aceptación y publicación. Hasta dos hijos escriben únicamente archivos asignados y reportan al padre; no delegan, cambian Git ni ejecutan builds sobre entradas mutando. Luna investiga y ejecuta compilaciones/pruebas expresamente asignadas, pudiendo escribir sus outputs/logs; no modifica fuente/docs/config, no publica ni decide PASS.
+## Método
 
-No afirmar que editar un documento cambia el modelo real de un agente. Si el entorno no ofrece esos modelos/subagentes, declararlo y mantener un único escritor efectivo. No instalar configuraciones globales ni inventar agentes para satisfacer un nombre. Preservar trabajo inactivo y cambios del usuario.
+Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution, Integration Before Abstraction. Leer implementación/pins/producers/consumers primero. Un World/identity/dependency graph/transaction stack/physics owner/VM de gameplay/render scheduler; no duplicar para satisfacer un diseño nominal.
 
-## Método de trabajo
+Hacer verticales con resultado observable: editar BSP → aplicar material → Undo/Save/reopen → cook → runtime, por ejemplo. Los ajustes mínimos de dependencias necesarios se incluyen en el mismo vertical, con explicación; no bloquear por Float32/registry/header sin consumidor. No convertir cada private struct en milestone. Tras un vertical verificado, publicar y continuar con el siguiente no bloqueado.
 
-Think Before Coding; Simplicity First; Surgical Changes; Goal-Driven Execution. Cada vertical empieza localizando productores, consumidores, lifetimes, identidad, editor, guardado, cook y runtime existentes. Reutilizar el owner real de O3DE antes de introducir una abstracción.
+Namespace migration es semántica, no replace global: inventario de namespace/type collisions/macros/CMake/codegen/UUID/reflection/serialización/ABI, migración conjunta de escritores/lectores y bridge temporal con owner/removal test. Una fachada `namespace JE = AZ` no es trabajo terminado. No renombrar Vulkan/DirectX/Qt/Jolt/Luau para ocultar dependencias legítimas. APIs del juego/formatos no exponen tipos internos de esas bibliotecas.
 
-Un único World, asset graph, registro de identidad, timeline/clock por dominio, physics world, gameplay VM y scheduler gráfico. Jerico nativo no es un megabinario obligatorio: pueden existir bibliotecas y módulos privados. Tampoco es un plugin Jerico que oculta otro motor completo o un wrapper permanente que conserva dos autoridades.
+Geología debe respetar espacio jugable, planos analíticos, material lineage y datos de geometría compartidos con shading. No aceptar una textura de roca como prueba de topología, ni un campo SDF como prueba de collision/nav/cook.
 
-No empezar cambiando miles de nombres. No reemplazar AZStd/reflection/EBus globalmente; evitar nuevos locators/broadcasts para peticiones normales cuando haya una dependencia tipada adecuada. Migrar junto con consumidores y medir.
+## Dependencias y operación offline
 
-## Integración vertical sin bloqueos artificiales
+Inventario con uso source/tool/build/runtime, SHA/hash/license, transitive graph, locations/URLs, downloads y owner. Usar código/paquetes locales controlados; no descargar desde AWS/S3/CloudFront ni catálogos Gem. Configuración faltante falla explícitamente. No mandar tokens o contenido privado a endpoints heredados. Sin secretos en logs/docs.
 
-Trabajar sobre un resultado observable y persistente, no un header, Float32, registry o codec sin consumidor. El padre puede incluir las dependencias mínimas necesarias para cerrar ese resultado, documentando el ajuste en ACTIVE_SLICE. No detener toda la aplicación porque falte una abstracción sin consumidor. Un bloqueo verdadero debe nombrar archivo/API/permiso/insumo, reproducción y tareas independientes aún viables.
+Comunicación IPC local de herramientas no equivale a multiplayer: seguir consumidores de AzNetworking, extraer el mínimo a JE Tools/IPC o reutilizar IPC adecuado existente. No conservar OpenSSL/RapidXML/network stack productivo por comodidad; tampoco eliminarlos sin rastrear otros usuarios legítimos. Shipping no lleva listeners/remote asset IO salvo necesidad local expresamente documentada; no abrir servicios públicos.
 
-No activar implementaciones explícitamente DESIGN ONLY, especialmente flotabilidad. No abrir RT, DX12, geología procedural integral ni nuevas plataformas por iniciativa del agente. La prioridad actual es el N0 definido, no todas las ideas del catálogo.
+Qt y otras bibliotecas requieren licencia/linking/redistribución propios. Integrado no exige static link de todo. Sin Autodesk FBX SDK/ATL/MFC impuestos. No auto-instalar software privilegiado ni cambiar seguridad de driver. No certificar dependencia ausente por grep de nombres ni legalidad por README.
 
-Después de un vertical verificado: revisar diff, publicar, actualizar HANDOFF/ACTIVE_SLICE y continuar con el siguiente objetivo no bloqueado mientras el entorno permita trabajar. El objetivo global sigue ACTIVE. Si falta hardware, conservar el estado NOT TESTED; nunca fabricar captura, ejecución, subagente o resultado.
+## Git y publicación
 
-## Git obligatorio y seguro
+Antes de trabajar y antes de publicar: confirmar repo/remotos/rama/HEAD, `git status --short`, `git fetch origin`. En árbol limpio usar `git pull --ff-only origin development`; preservar trabajo ajeno y reconciliar movimiento remoto, sin auto-stash/reset/force. Staging por rutas propias y diff revisado. Cada push acompañado de sincronización previa y comprobación remota posterior. Nunca `push --force`, mirror, `git clean` ni borrados indiscriminados.
 
-1. Verificar directorio, `git remote -v`, `git branch --show-current`, `git status --short`, HEAD y cambios preexistentes. No descartar cambios ajenos ni auto-stash.
-2. `git fetch origin` antes de trabajar y antes de publicar. Con árbol limpio, `git pull --ff-only origin development`. Si hay divergencia, detener la publicación y reconciliar explícitamente; no reset/force/rebase automático.
-3. Asignar ownership de archivos. Un único owner por build/test compartido; congelar entradas durante la verificación. No crear copias de engine para eludir esta regla.
-4. Ejecutar pruebas pertinentes, revisar archivos exactos y `git diff --check`; staging por rutas, no `git add .` indiscriminado.
-5. Commit descriptivo. Publicar solo en `origin development`. Comprobar la ref remota después con fetch/ls-remote y registrar el SHA confirmado.
-6. Cada push va acompañado de sincronización: fetch/pull seguro previo y comprobación posterior. Pull no significa sobrescribir trabajo concurrente; pull tras commit local divergente puede fallar y requiere reconciliación, nunca fuerza.
+Al publicar mediante API Git, leer HEAD nuevo, crear commit con parent correcto y mover solo development con `force=false` y expected SHA; rechazar/reconciliar carrera, no sobrescribir. No afirmar que se ejecutó git pull local al usar API.
 
-Prohibidos: `git reset --hard`, `git clean`, `push --force`, mirror push, borrar ramas/remotos, limpiar SDK/assets/cachés sin manifest y alcance aprobado, publicar código privado o cambiar visibilidad. No enviar credenciales a LFS heredado ni introducir secretos en logs/docs.
+## Evidencia útil, continua y proporcionada
 
-## Procedencia y AWS
+Antes de diagnóstico consultar ENGINE_DEBUGGING_BOOK y volver al primer output defectuoso con inputs reales. Captura original del viewport/render; UI mock no prueba producto. RED/GREEN discriminante, sin tolerancias relajadas para salvar fallo. No miles de checks triviales en lugar de pruebas de material, BSP, interacción y runtime.
 
-Aplicar `docs/legal/PROVENANCE_AND_DEPENDENCIES.md`. O3DE Apache/MIT no relicencia CryEngine 5.7 ni todo Lumberyard. Archivos provenientes de O3DE con nombres Cry/Amazon pueden ser legítimos; clasificarlos por licencia, no por texto. No suprimir LICENSE/NOTICE/SPDX/créditos necesarios.
+En cada checkpoint visible: escena/cámara/settings/build/backend, captura antes/después, tiempos CPU/GPU p50/p95/p99, memoria y alcance. Instrumentación apagada no añade readback por frame. Windows DX12, Windows Vulkan y Linux Vulkan son estados separados. Headless no acredita render y desktop stereo no acredita headset. No reclamar velocidad a partir de menos código o de un paper.
 
-Antes de incorporar código/test/asset antiguo: origen exacto, licencia, autoría, derivados/transitivas, aprobaciones y destino. Si es incierto, conservar como requisito/observación y hacer implementación independiente desde fuentes permitidas. No llamar clean-room a un proceso que no lo demuestra.
+Después: actualizar HANDOFF/ACTIVE_SLICE y el requisito probado. Evidencia detallada por vertical, lecciones en error book; no diarios repetidos en todos los masters. Docs-only puede verificarse como documentación sin compilar el engine; jamás PRODUCT PASS. Bloqueo nombra fallo/permiso/paquete y próximos trabajos independientes.
 
-Separar cuatro cuestiones AWS: servicios en runtime, SDK enlazado, herramientas de build y hosting de LFS/paquetes. Un `AWSNativeSDK` en un catálogo no prueba que esté enlazado; una URL CloudFront sí demuestra dependencia de distribución mientras se utilice. Auditar ambas sin inferir una de otra. No exigir cuenta AWS ni desplegar servicios.
-
-## Rendering, errores y evidencia
-
-Atom es la autoridad gráfica; no agregar otro RenderGraph, device ni exposure. Antes de corregir, buscar `docs/ENGINE_DEBUGGING_BOOK.md`, inspeccionar captura original y distinguir primer output defectuoso de efectos posteriores. Hipótesis no es causa demostrada.
-
-Para regresiones escribibles: prueba RED que distingue el fallo, cambio mínimo y GREEN sin relajar tolerancias. Para visuales: escena/cámara/settings fijos, outputs reales, comparaciones ON/OFF/ON y restauración, además de revisión visual. Instrumentación desactivada no debe añadir readbacks por frame. No cambiar seguridad del driver ni configurar contadores globales sin permiso.
-
-Pruebas completas incluyen configuración, comandos, código de salida, hash de entradas/productos, logs y límites. No repetir journaling inmenso en todos los masters: resultado actual en HANDOFF, evidencia en el directorio del vertical, lección reusable en el error book. No miles de checks redundantes como sustituto de un caso de uso real.
-
-## Definición de publicación
-
-Distinguir `docs:`, `test:`, `fix:` y `feat:`. Un commit documental puede estar verificado como documentación sin exigir compilar el engine; no debe decir producto PASS. Un commit de implementación parcial se marca explícitamente y no desplaza el baseline aceptado sin rollback. No copiar PASS anteriores a O3DE. Leer `docs/DEFINITION_OF_DONE.md`.
+Buoyancy continúa DESIGN ONLY. Rendering RT/underwater y capacidades históricas diferidas no se activan por reordenar el roadmap. Multiplayer es excluido incluso si un master anterior decía deferred. No borrar evidencia anterior ni acreditar O3DE con PASS de Cry.

@@ -1,153 +1,23 @@
-# JericoEngine — base O3DE
+# JericoEngine — JE
 
-**Única rama de trabajo: `development`.** Repositorio de producto: `JericoFX/Jerico_Engine`.
+Base de desarrollo O3DE adaptada hacia JericoEngine. **Rama única de trabajo: `development`.**
 
-Empezar por [CODEX_START.md](CODEX_START.md), [GOAL.md](GOAL.md), [AGENTS.md](AGENTS.md) y el [índice de documentación](docs/README.md). El [roadmap](docs/ROADMAP.md), la [auditoría de las 23 ramas](docs/research/BRANCH_AUDIT_2026_10_10.md) y el [mapa de rescate de JericoEngine2](docs/migration/LEGACY_REQUIREMENT_MAP.md) definen esta transformación.
+## Dirección vigente
 
-Esta incorporación del 2026-10-10 es **documentación y planificación**, no evidencia de que el motor ya esté modificado, compilado o validado. Se conservaron código, Gems, assets, configuración y licencias upstream. El antiguo CryEngine2 no es la base de implementación ni una fuente de código automáticamente admitida. La integración será nativa, con Atom/Vulkan, Jolt, Luau y los contratos Jerico; sin un segundo motor ni instalación manual de Gems Jerico.
+Código propio/adaptado con nomenclatura `JE::`; subsistemas necesarios integrados dentro del engine a partir de sus implementaciones Gem. Sin AWS, multiplayer ni plataformas online. Sólo DirectX 12 y Vulkan como backends gráficos: Windows ambos, Linux Vulkan.
 
-La licencia de O3DE y las condiciones de terceros siguen aplicando: consultar [procedencia y dependencias](docs/legal/PROVENANCE_AND_DEPENDENCIES.md). La rama predeterminada de GitHub puede necesitar el ajuste descrito en CODEX_START; seleccionar development explícitamente.
+Prioridad: editor/UI Jerico y BSP útil, materiales/formatos propios, colisión, geología nativa y herramientas modulares, con resultados visibles y optimización SIGGRAPH desde las primeras escenas. Luau/Jolt/animación/UI/audio/VFX/IA/OpenXR y demás capacidades locales existentes se conservan. Ideas de otros engines permitidas con procedencia/licencia y prueba de utilidad.
 
----
+**Estado actual: auditoría y planificación; no se afirma migración de source, build, rendimiento ni independencia de dependencias ya completados.**
 
-## README upstream conservado
+## Entradas
 
-El contenido siguiente pertenece al snapshot O3DE de origen. Sus instrucciones de herramientas pueden ser anteriores al CMake/configuración del árbol actual; el plan N0 exige verificarlas. No sustituye el objetivo ni la política legal de Jerico.
+[CODEX_START](CODEX_START.md) · [GOAL](GOAL.md) · [AGENTS](AGENTS.md) · [Documentación](docs/README.md) · [Roadmap](docs/ROADMAP.md) · [Contrato JE](docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) · [Auditoría de dependencias](docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md).
 
-# O3DE (Open 3D Engine)
+El default administrativo de GitHub puede diferir; trabajar explícitamente en development. No crear ramas adicionales ni borrar las históricas. No ejecutar instrucciones de descarga upstream sin revisar endpoints/cache/licencias: .lfsconfig y package defaults heredados requieren adaptación, no uso ciego.
 
-O3DE (Open 3D Engine) is an open-source, real-time, multi-platform 3D engine that enables developers and content creators to build AAA games, cinema-quality 3D worlds, and high-fidelity simulations without any fees or commercial obligations.
+## Procedencia y licencias
 
-## Contribute
-For information about contributing to Open 3D Engine, visit [https://o3de.org/docs/contributing/](https://o3de.org/docs/contributing/).
+El source inicial corresponde a O3DE commit `241c78b8064898a709cf1c5dd3535c6406763ef3`. Copyright de sus contribuidores y condiciones originales se conservan en [LICENSE.txt](LICENSE.txt), [LICENSE_APACHE2.TXT](LICENSE_APACHE2.TXT), [LICENSE_MIT.TXT](LICENSE_MIT.TXT) y avisos de terceros. Jerico no se atribuye autoría exclusiva del código O3DE. La migración a JE no cambia por sí misma obligaciones legales ni relicencia CryEngine 5.7.
 
-## Roadmap
-For information about upcoming work and features, please visit [https://o3de.org/roadmap](https://o3de.org/roadmap). Progress against the roadmap is tracked [here](https://github.com/orgs/o3de/projects/56/views/2).
-
-## Download and Install
-
-This repository uses Git LFS for storing large binary files.  
-
-Verify you have Git LFS installed by running the following command to print the version number.
-```
-git lfs --version 
-```
-
-If Git LFS is not installed, download and run the installer from: [https://git-lfs.github.com/](https://git-lfs.github.com/).
-
-### Install Git LFS hooks 
-```
-git lfs install
-```
-
-
-### Clone the repository 
-
-```shell
-git clone https://github.com/o3de/o3de.git
-```
-
-## Building the Engine
-
-### Build requirements and redistributables
-
-For the latest details and system requirements, refer to [System Requirements](https://o3de.org/docs/welcome-guide/requirements/) in the documentation.
-
-#### Windows
-
-*   Visual Studio 2019 16.9.2 minimum (All editions supported, including Community): [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/)
-    *   Check [System Requirements](https://o3de.org/docs/welcome-guide/requirements/) for other supported versions.
-    *   Install the following workloads:
-        *   Game Development with C++
-        *   MSVC v142 - VS 2019 C++ x64/x86
-        *   C++ 2019 redistributable update
-*   CMake 3.25.0 minimum: [https://cmake.org/download/#latest](https://cmake.org/download/#latest) (Release Candidate versions are not supported)
-
-#### Optional
-
-*   Wwise audio SDK
-    *   For the latest version requirements and setup instructions, refer to the [Wwise Audio Engine Gem](https://o3de.org/docs/user-guide/gems/reference/audio/wwise/audio-engine-wwise/) reference in the documentation.
-
-### Quick start engine setup
-
-To set up a project-centric source engine, complete the following steps. For other build options, refer to [Setting up O3DE from GitHub](https://o3de.org/docs/welcome-guide/setup/setup-from-github/) in the documentation.
-
-1.  Create a writable folder to cache downloadable third-party packages. You can also use this to store other redistributable SDKs.
-    
-1.  Install the following redistributables:
-    - Visual Studio and VC++ redistributable can be installed to any location.
-    - CMake can be installed to any location, as long as it's available in the system path.
-
-1.  Configure the engine source into a solution using this command line, replacing `<your build path>`, `<your source path>`, and `<3rdParty package path>` with the paths you've created:
-    ```
-    cmake -B <your build path> -S <your source path> -G "Visual Studio 16" -DLY_3RDPARTY_PATH=<3rdParty package path>
-    ```
-    
-    Example:
-    ```
-    cmake -B C:\o3de\build\windows -S C:\o3de -G "Visual Studio 16" -DLY_3RDPARTY_PATH=C:\o3de-packages
-    ```
-    
-    > Note:  Do not use trailing slashes for the <3rdParty package path>.
-
-1.  Alternatively, you can do this through the CMake GUI:
-    
-    1.  Start `cmake-gui.exe`.
-    1.  Select the local path of the repo under "Where is the source code".
-    1.  Select a path where to build binaries under "Where to build the binaries".
-    1.  Click **Add Entry** and add a cache entry for the <3rdParty package path> folder you created, using the following values:
-        1.  **Name:** LY_3RDPARTY_PATH
-        1.  **Type:** STRING
-        1.  **Value:** `<3rdParty package path>`
-    1.  Click **Configure**.
-    1.  Wait for the key values to populate. Update or add any additional fields that are needed for your project.
-    1.  Click **Generate**.
-    
-1.  Register the engine with this command:
-    ```
-    scripts\o3de.bat register --this-engine
-    ```
-
-1.  The configuration of the solution is complete. You are now ready to create a project and build the engine.
-
-For more details on the steps above, refer to [Setting up O3DE from GitHub](https://o3de.org/docs/welcome-guide/setup/setup-from-github/) in the documentation.
-
-### Setting up new projects and building the engine
-
-1. From the O3DE repo folder, set up a new project using the `o3de create-project` command.
-    ```
-    scripts\o3de.bat create-project --project-path <your new project path>
-    ```
-
-1. Configure a solution for your project.
-    ```
-    cmake -B <your project build path> -S <your new project source path> -G "Visual Studio 16"
-    ```
-
-    Example:
-    ```
-    cmake -B C:\my-project\build\windows -S C:\my-project -G "Visual Studio 16"
-    ```
-    
-    > Note:  Do not use trailing slashes for the <3rdParty cache path>.
-
-1. Build the project, Asset Processor, and Editor to binaries by running this command inside your project:
-    ```
-    cmake --build <your project build path> --target <New Project Name>.GameLauncher Editor --config profile -- /m
-    ```
-    
-    > Note: Your project name used in the build target is the same as the directory name of your project.
-
-This will compile after some time and binaries will be available in the project build path you've specified, under `bin/profile`.
-
-For a complete tutorial on project configuration, see [Creating Projects Using the Command Line Interface](https://o3de.org/docs/welcome-guide/create/creating-projects-using-cli/) in the documentation.
-
-## Code Contributors
-
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-
-<a href="https://github.com/o3de/o3de/graphs/contributors"><img src="https://contrib.rocks/image?repo=o3de/o3de&max=200&columns=24" width=850px /></a>
-
-## License
-
-For terms please see the LICENSE*.TXT files at the root of this distribution.
+Las instrucciones/documentación originales permanecen en el historial de esa base y en el upstream oficial `o3de/o3de`. Los requisitos efectivos del build, toolchain y bibliotecas se inspeccionan según N0; no se reutilizan comandos de un README antiguo como prueba de compatibilidad actual.

@@ -1,116 +1,96 @@
-# JericoEngine — objetivo persistente sobre O3DE
+# JericoEngine — objetivo vigente: JE, BSP y motor integrado
 
-Fecha de decisión: 2026-10-10. Estado de producto: **ACTIVE / IMPLEMENTACIÓN O3DE NO VERIFICADA**.
-Repositorio de producto: `JericoFX/Jerico_Engine`. Única rama de trabajo: **`development`**.
+**Directiva del propietario: 2026-10-10, posterior a a536fb7. Estado: ACTIVE / IMPLEMENTACIÓN NO VERIFICADA.**
+Repositorio único: `JericoFX/Jerico_Engine`. Rama única de trabajo/publicación: `development`.
 
-## 1. Decisión del propietario y precedencia
+## 1. Decisiones obligatorias, no opciones futuras
 
-Joan decidió abandonar CryEngine 5.7 como base de desarrollo y transformar esta base O3DE en **JericoEngine**, priorizando la procedencia legal y la integración directa de capacidades. Esta decisión sustituye las instrucciones de volver a Cry, incorporar Diligent obligatoriamente, derivar navegación de MNM o portar SVOGI desde Cry. No convierte esas implementaciones en código permisivo.
+1. **Sin AWS ni multiplayer.** No plataforma AWS, servicios/cuentas/SDKs, GameLift, matchmaking, sesiones de red, replicación, servidores de juego, comercio ni backend online. No quedan como extras opcionales o fases diferidas. No se añade infraestructura para soportarlos.
+2. **Nomenclatura JE.** Todo código propiedad/adaptación del motor converge a `JE::`, con subnamespaces por responsabilidad. Targets propios `JE::Core`, `JE::Render`, etc.; macros propias `JE_`. No `AZ::`, `AZStd`, `AzFramework`, `Gem::` o nombres Cry como identidad técnica propia final. No basta un alias `namespace JE = AZ` ni una fachada que oculte para siempre las autoridades antiguas. Avisos legales y APIs genuinas de dependencias se preservan; ver contrato de identidad.
+3. **Solo DirectX 12 y Vulkan como backends gráficos.** Windows: DX12 y Vulkan; Linux: Vulkan. Los tres pares son gates distintos. No DX11/OpenGL/Metal/WebGPU ni móvil. Null puede existir únicamente como dispositivo de tests/headless, nunca como tercer renderer de producto ni prueba gráfica.
+4. **Gems necesarios dentro del engine.** Reutilizar su implementación e integrar sus módulos, assets, builders, registro y ciclos de vida. El producto final no instala ni activa Gems por proyecto ni depende de catálogos remotos. No es borrar todos los Gems ni crear Jerico como un Gem gigante junto a O3DE.
+5. **BSP/UI primero y resultados visibles continuos.** La primera transformación debe permitir construir/editar una habitación, puerta, ventana y corredor en el viewport Jerico, con materiales y persistencia. No aplazar el editor útil hasta terminar todos los subsistemas.
+6. **Geología reactivada expresamente.** Roca/familia de rocas/cliff/overhang/cueva, capas/estratos/erosión/fracturas y materiales geológicos vuelven al alcance junto a BSP, RMod, PWAS/EPLS y daño. Se conserva la cancelación específica de BSP→OpenVDB como base general; no se revive ese backend por inferencia.
+7. **Optimización SIGGRAPH integrada y medible.** Reutilizar primero lo que Atom resuelve y aplicar mejoras a escenas BSP/geología/materiales reales. Cada mejora muestra resultado visual, coste CPU/GPU, memoria y límites. Se permiten ideas de otros motores y código solo cuando su licencia/procedencia permitan reutilizarlo.
 
-«Sin Gems» significa que las capacidades Jerico son subsistemas nativos del producto: no se instalan ni se habilitan manualmente como una colección de extensiones por proyecto. **No significa borrar `Gems/`, eliminar sus implementaciones útiles ni reescribir el mecanismo de módulos antes de tener una base funcionando.** Se permiten bibliotecas privadas, targets separados y los mecanismos internos de registro que realmente necesite O3DE. La selección y la composición son responsabilidad del motor.
+Esta directiva **sustituye** Vulkan-only, DX12 diferido, geología no activa, multiplayer opcional/diferido y permiso para conservar nomenclatura AZ indefinidamente. La prioridad no se deduce de documentos anteriores. Autoridad: última instrucción del propietario > GOAL > AGENTS > contrato JE > masters > ROADMAP/ACTIVE_SLICE.
 
-Orden de autoridad: última decisión explícita del propietario > este GOAL > AGENTS > decisiones de arquitectura y contratos de familia > ROADMAP > ACTIVE_SLICE. Los documentos de los repositorios anteriores son fuentes de requisitos e historia, no instrucciones ejecutables que puedan reinstalar decisiones sustituidas.
+## 2. Qué significa independencia
 
-Esta publicación es documental. No borra repositorios, ramas, código, assets, cachés ni trabajo ajeno. No inicia automáticamente la implementación de todas las familias.
+Sin plataformas externas, cuentas, marketplace, servicios obligatorios ni descarga implícita de Gems/dependencias para usar el motor. Bibliotecas elegidas (Qt, Jolt, Luau, ufbx, Manifold/OpenMesh, Recast, audio y codecs admitidos) se integran como dependencias privadas con versión/hash/licencia y obtención reproducible bajo control del proyecto. No se reemplazan por motores remotos ni se exponen como contratos públicos del juego.
 
-## 2. Base exacta y fuente histórica
+No se afirma que podamos eliminar el sistema operativo, drivers, SDKs gráficos o toolchain. El producto debe arrancar y funcionar offline. El build reproducible debe usar fuentes/paquetes locales auditados, sin fallback AWS/S3/CloudFront ni descarga silenciosa. Si falta un paquete, informar cuál falta: no buscarlo en Amazon por detrás.
 
-- O3DE admitido para arrancar: `241c78b8064898a709cf1c5dd3535c6406763ef3`, árbol `db4b7d4a5d784d2283c95903f461e311d69704c8`. Ambos coinciden con el objeto del upstream oficial `o3de/o3de` inspeccionado.
-- `development` declara versión interna `2.8.0`. No se la declara versión estable ni base compilada por esta auditoría.
-- Fuente histórica Cry: `JericoFX/JericoEngine2` en `304d9d2e13704e4967e82a8d5a13a5a506be01d4`. No se importa su historial, fuente, shaders, binarios ni paquetes.
-- Las otras 22 ramas del nuevo repositorio son referencias inactivas. No hay líneas de desarrollo Jerico paralelas ni fusiones masivas. Véase `docs/research/BRANCH_AUDIT_2026_10_10.md`.
+La comunicación local Editor↔Asset Processor/MCP/debug no es multiplayer. Auditar y extraer solo el IPC local necesario, sin conservar el stack completo de transporte/replicación por comodidad. Shipping no carga los servicios de desarrollo.
 
-## 3. Producto final
+## 3. Base y método
 
-Motor generalista para una persona o equipo pequeño, con editor real y runtime real: importar, preparar materiales, construir arquitectura, configurar física, crear rigs/animación, programar, montar UI/sonido/VFX, simular, guardar, cocinar y empaquetar desde herramientas nativas.
+Base O3DE: `241c78b8064898a709cf1c5dd3535c6406763ef3`, tree `db4b7d4a5d784d2283c95903f461e311d69704c8`; snapshot inspeccionado antes de esta edición: `a536fb78c6195c3edf10afa34bfdf65c6f841ee5`. Los dos commits intermedios cambian solo Markdown. Este encargo actual también es auditoría y planificación, no una conversión ya compilada.
 
-Familia de producto: JericoEngine, JericoEditor, JericoRuntime, JericoLauncher, JericoCooker/AssetProcessor, JericoShaderCook, JericoPackageTool, JericoProfiler/Doctor/RuntimeQA, UI Studio, Motion Studio, Procedural Studio, Item/Narrative Studio, JericoAudio, JericoParticles y JericoXR. No crear un ejecutable ni una biblioteca por cada nombre sin justificar su ciclo de vida.
+No borrar repositorios, ramas, código, licencias, assets ni evidencias con esta publicación. No importar fuente/shaders/historial de CryEngine2. Las otras ramas siguen como referencias inactivas; no merge masivo. Migrar código real posteriormente en development, por verticales con resultado observable y rollback por commit, no worktrees ni motores paralelos.
 
-La identidad visible, APIs públicas propias, configuración de proyecto y contratos finales son Jerico. Los nombres y avisos de terceros se conservan donde correspondan. Un reemplazo global de `AZ`, `Atom`, `Cry` o `Amazon` no es una migración ni una prueba legal.
+Para cada subsistema: localizar productores/consumidores y dependencias reales → elegir un owner JE → integrar código/registro/datos/builders → migrar consumidores → demostrar editor/runtime/cook y APIs gráficas aplicables → retirar ruta antigua y aliases temporales. No rechazar tecnología útil por su nombre ni mantener dos autoridades por evitar cambiar consumidores.
 
-## 4. Decisiones tecnológicas vigentes
+## 4. Stack y owners finales
 
-| Área | Destino y límite |
+| Área | Destino |
 |---|---|
-| Base | Transformación del O3DE existente; no segundo motor al lado |
-| Gráficos | Atom RPI/Pass System/RHI como una única ruta, backend Vulkan |
-| Plataformas activas | Windows y Linux; cada una exige pruebas propias |
-| DX12/Metal/WebGPU/móvil | No son gates actuales; fuentes preservadas, trabajo diferido |
-| Ray tracing | Sin RT de render en esta fase; no dependencia de BLAS/TLAS/ray queries para las funciones admitidas |
-| Diligent | Referencia/playground o reutilización puntual legalmente auditada; no RHI obligatorio ni segunda capa bajo Atom |
-| Editor | Qt 6 Widgets, aprovechando el editor y AzToolsFramework existentes; no reescritura QML por defecto |
-| Física | Jolt como destino único; PhysX transitorio hasta migrar consumidores y probar equivalencia relevante |
-| Scripts de juego y UI Jerico | Luau `--!strict`, API tipada y validación nativa de referencias |
-| Scripts internos de herramientas | Python y Lua de herramientas/materiales pueden sobrevivir acotadamente; no constituyen una segunda VM de gameplay Jerico |
-| Navegación | Auditar Recast/Detour y su integración O3DE; no copiar MNM de Cry |
-| IA | HTN explicable, percepción/memoria/relaciones y acciones nativas; un único planificador de alto nivel |
-| Animación | Auditar/reutilizar EMotionFX y sus herramientas; extender hacia Motion Studio, IK/FK y formatos Jerico |
-| Audio | JericoAudio; backend abierto de bajo nivel privado, MiniAudio candidato; no Wwise/FMOD obligatorios |
-| UI | JericoUI nativa, Luau, `.rui2d/.rui3d` de autoría y `.rui` cocinado; auditar LyShine y `shine` |
-| XR | OpenXR como capacidad oficial integrada, no plugin externo que el usuario deba instalar |
-| Assets | Una identidad persistente, un grafo de dependencias/cook, lectores cocinados; formatos Jerico versionados |
-| AWS | Sin cuenta, servicio ni SDK AWS obligatorio en producto; independizar también LFS/paquetes de distribución cuando se cierre esa fase |
+| Core/World/Assets | O3DE adaptado a JE; una identidad, un World, un asset graph y un registro de revisión |
+| Render | Implementación Atom adaptada dentro de `JE::Render`; un FrameGraph/scheduler/device por contexto, DX12/Vulkan |
+| Editor | Qt6 Widgets, workflow Jerico; viewport compartido, herramientas BSP prioritarias |
+| Geometry/Geology | `JE::Geometry`, `JE::BSP`, `JE::Geology`; White Box/Manifold como base auditada y matemáticas originales permitidas |
+| Physics | `JE::Physics` con Jolt privado; PhysX solo transición identificada, nunca doble simulación del mismo body |
+| Script | `JE::Script` con Luau strict; una VM de gameplay/UI |
+| Animation/Sequencer | EMotionFX/Maestro auditados e integrados en Motion Studio y Sequencer JE |
+| UI/Audio/VFX | JericoUI/Luau, JericoAudio backend privado y JericoParticles; no middleware/servicios obligatorios |
+| Navigation/AI | Recast/Detour privado, HTN explicable con memoria/relaciones; grupos de NPC no son multiplayer |
+| XR | OpenXR nativo, mismo World/input/interaction/audio; bindings de DX12/Vulkan según plataforma probada |
+| Packaging | Formatos `.r*` y `.epak` propios, readers/bounds/versiones, cook y ejecución sin fuentes |
 
-## 5. Requisitos que no se pueden perder
+Diligent queda como referencia o reutilización puntual permitida, no capa obligatoria debajo de Atom. Rendering ray tracing sigue fuera de esta fase: admitir DX12 no autoriza RT. Las bibliotecas externas no se renombrarán fraudulentamente; sus tipos se encapsulan y su procedencia se conserva.
 
-### Editor y mundo
+## 5. Requisitos conservados
 
-Viewport compartido entre workspaces; jerarquía izquierda, Inspector contextual derecho y timelines/logs abajo. Conservar selección, gizmos, docking, prefabs/variantes, layers, Undo/Redo, guardado y recuperación. Edit/Simulate/Play usan los sistemas reales. No duplicar World, Scene, registro GUID, asset database, undo stack o reloj para introducir una feature.
+### Editor, BSP y materiales
 
-Herramientas de geometría con workflow de brushes estilo Hammer 2, identidad propia y White Box como candidato, no como supuesto BSP/CSG completo. Modelado de caras/extrusión/inset/bevel/cortes con UV y colisión; producto runtime mallas/colliders modernos, no obligación de un árbol BSP histórico.
+JericoEditor conserva la dirección grafito/navy, acento cian y herramienta/selección ámbar; tipografía legible, DPI, atajos, docking y accesibilidad. Viewport principal compartido; Outliner/paletas a la izquierda, Inspector a la derecha, logs/curvas/timeline abajo. Edit/Simulate/Play usan el engine real. Cambiar tab no destruye escena ni selección.
 
-### Assets y materiales
+BSP de autoría: brushes, caras/aristas/vértices, grid/snap, extrude/inset/bevel, slice/hollow/union/subtract/intersect, UV/material por cara, salas/corredores/puertas/ventanas/escaleras/arcos/columnas. White Box ya declara Manifold y contiene código CSG; probar antes de reescribir. Mantener semántica de superficies/regiones y GUID al editar. Runtime consume mallas/colliders/nav, no necesita brush tree espacial histórico.
 
-GLB/glTF 2.0, FBX mediante `ufbx` de tools, OBJ/MTL; texturas PNG/JPEG/TGA/TIFF/HDR/EXR/DDS y KTX2/Basis; heightmaps PNG16/RAW16/32/EXR/TIFF; audio WAV/FLAC/OGG. Sin Autodesk FBX SDK ni ATL/MFC como nuevos requisitos impuestos al propietario. Los formatos se incorporan por verticales, no se declaran disponibles por listarlos.
+Materiales PBR propios sobre Atom: BaseColor, Normal, Roughness, Metallic, AO, Emission, Opacity, material instances/graph/layers y Physical Material separado. Nombres de texturas libres. ORM y mapas separados obligatorios, metadata color-space/canales/normal Y/UV explícita, mips completos y tangentes correctas. Reimport mantiene overrides y no reescribe fuentes. `.rmat/.rtext/.rmesh` son contratos reales, no extensiones renombradas.
 
-Nombres libres de texturas; semánticas Base Color, Normal, Roughness, Metallic, AO, Emission y Opacity explícitas. Admitir ORM empaquetado y mapas separados, convenciones normal/color-space/mips editables. Reimport no pisa overrides ni fuentes. Una Canonical IR y un cook determinista conectado al Asset Processor existente. **Binding:** `docs/ASSET_MATERIALS_FORMATS_EPAK_MASTER.md` detalla los materiales, los formatos propietarios de Jerico, el tratamiento de mapas y el pipeline único; no basta adoptar formatos O3DE renombrados.
+### Assets y persistencia
 
-### Gameplay, referencias y guardado
+GLB/glTF2, FBX por ufbx Tool-only, OBJ/MTL; PNG/JPEG/TGA/TIFF/HDR/EXR/DDS/KTX2/Basis; heightmaps PNG16/RAW16/32/EXR/TIFF/GeoTIFF; WAV/FLAC/OGG por admisión y pruebas. No Autodesk FBX SDK ni ATL/MFC impuestos. Source snapshot→Canonical IR→Asset Processor/builders integrados→productos→paquete; una dependencia/revisión canónica, invalidación incremental y publicación candidate-first.
 
-Drag desde Outliner al IDE crea o reutiliza referencia tipada en `self.references`, preservando GUID, capacidades, ámbito Scene/PrefabInternal y Undo/Redo. `self` se enlaza nativamente a una instancia válida; nunca se guarda un puntero. Commands piden, el subsistema decide, Events informan. Store rastrea cambios confirmados de propiedades opt-in; no obliga a repetir `Store.set` después de cada mutación nativa.
+GUID persistente, handles runtime seguros; ámbito Scene/PrefabInternal y remap de instancias. Outliner→IDE crea/reutiliza referencia tipada en `self.references`; self se enlaza nativamente. Commands solicitan, owners deciden, Events informan. Store opt-in registra cambios confirmados sin repetir Store.set. Save/Load por providers/versiones con restore transaccional, corrupción/rollback y sin punteros/closures.
 
-Triggers de volumen, proximidad, click, input, evento o condición; filtros, activador, receptor, Once y cooldown. Input semántico con perfiles, contextos, rebinding, gamepad/XR, desconexión y pérdida de foco. Inventory es autoridad de items/contenedores; UI solo presentación. Save/Load transaccional por proveedores/esquemas; corrupción, migraciones, guardado atómico y recuperación. Dialogue/Quest/Journal y replay de QA son capacidades distintas, no tablas arbitrarias de VM.
+### Geología, procedural y física
 
-### Animación, interacción, UI, audio y XR
+Masa/BSP y espacio jugable manual son la base; forma Rock/RockFamily/Cliff/Overhang/Cave independiente de material. Operation stack reversible: ruido/warp/estratos/juntas/erosión térmica o hidráulica admitida/sedimentación/fracturas/daño. SDF/campos dispersos y Surface Nets+Hermite+QEF QR/SVD son candidatos propios auditados; preservar cortes analíticos y no redondear planos por forzar todo al muestreo.
 
-`.rskel` estructura, `.rrig` controles/roles/constraints, `.ranim` clips; edición de huesos, pesos, FK/IK, retargeting y corrección pausada de clips en el editor. Sockets, GripPoints/GrabPoints, MatePoints y FitProfiles; un InteractionSession bimanual y un solver de ajuste reutilizable para llaves, pilas, tapas e insertos. Jolt manda sobre cuerpos; IK muestra contacto, no teletransporta el objeto.
+Materiales triplanares/world-space reutilizan los campos de geología: capas, pendiente, curvatura, cavidad, erosión, sedimentos y FreshInterior; no ruido independiente que contradiga la forma. Dirty regions/voxels, preview/cancel, límites de trabajo/readback, bake/LOD/collision/nav y publicación única. Prueba visible de roca, cliff estratificado con undercut y cueva jugable; no ruido genérico como supuesto sistema geológico.
 
-Sequencer `.rseq` con cámaras, keyframes, curvas, eventos y restauración al salir; no toma control total del movimiento del jugador por defecto. UI con grid/hover/drag/preview de inventario, tweens y timeline; UI 2D, world-space, render-target y contenido 3D. Localización `.rlang` de autoría y `.rloc` de runtime; fuentes `.rfont` con dependencias de atlas `.rtext`.
+RMod con piezas/ports/sockets y fitting de redes, intersecciones manuales, flanges, soportes suelo/pared/techo, snap con histéresis, UV por longitud de arco/RMF; cables y cadenas catenarias con Jolt. PWAS/EPLS proponen con locks/masks/seed/overrides sin romper layout manual. RBrush separa BRUSH/PAYLOAD/TARGET: vertex/material/mask/decal/daño tienen outputs distintos.
 
-Sonido 2D/3D/ambient/attached, SoundEvents compartidos por editor y Luau, mixer, zonas/portales/oclusión/reverb; HRTF opcional. VFX económicos primero, flipbooks EmberGen, viento compartido cuando exista consumidor. OpenXR reutiliza input, interaction, UI y audio de desktop.
+Jolt posee body/collider/constraints/COM/inertia, queries/trigger/character/ragdoll/vehicle, materiales físicos y fragmentos. Destrucción prefracture/bonds/local activation antes de fractura arbitraria costosa. Viento físico opt-in por body independiente de bending visual; fans son emisores del Environment compartido. **Flotabilidad y Enable Buoyancy por WaterVolume siguen DESIGN ONLY** hasta permiso específico; reactivar geología no los activa.
 
-### Procedural, entorno, física y perfiles
+### Animación, scripting, UI, sonido e IA
 
-PWAS/EPLS siguen siendo requisitos de autoría no destructiva: propuestas, máscaras, locks, overrides, seeds y publicación transaccional. No inventar un segundo sistema por la variante escrita ELSP. Priorizar assets modulares, puertas/cajones, tuberías, conductos, cables, soportes y barandas. `.rmod.toml` es autoría; `.rpart` queda reservado para partículas.
+Motion Studio: `.rskel` estructura, `.rrig` controles/IK/FK, `.ranim` clips, `.rgraph` evaluación; huesos/pesos/retarget/pausar-corregir-guardar. GripPoints/GrabPoints, SceneSockets/MatePoints/FitProfiles; una InteractionSession bimanual, fitting por etapas/tolerancias/simetrías, Jolt manda e IK representa. Llaves/pilas/tapas no crean solvers físicos separados.
 
-Una librería de splines/RMF/longitud de arco, ports orientados, sockets, snap con histéresis, fittings e intersecciones manuales, flanges/uniones, soportes mediante queries de suelo/pared/techo. Catenaria y cadenas con Jolt, daño/bake/proyección y edge chains reutilizables.
+Luau strict, input semántico teclado/mouse/gamepad/XR, contexts/rebinding/focus loss/haptics; triggers de shape/proximidad/click/input/evento/condición con activador/filtro/Once/cooldown. Inventory/Items/Item Studio separados de presentación; Dialogue/Quest/Journal y replay local QA conservados, no red de juego.
 
-**Geología procedural integral no es un frente activo.** Conservar matemáticas y evidencia históricas como referencia; no resucitar el pipeline de rocas/cuevas ni BSP→VDB. Esto no prohíbe un importador VDB offline para VFX si se admite separadamente.
+Sequencer `.rseq` con cámaras/curvas/eventos/audio/UI y restauración al stop/skip/cancel; no control total del player por defecto. UI `.rui2d/.rui3d`→`.rui`, grid/hover/drag/preview3D/tweens, world-space/render-target; `.rlang/.rloc/.rfont` y accesibilidad. Audio espacial/SoundEvents/mixer/zonas/portales/oclusión/reverb, backend abierto privado; VFX/flipbooks/culling/overdraw, `.rpart` reservado a partículas.
 
-Physical Material es la autoridad física; destrucción prepara chunks/bonds/anchors, activa Jolt solo cuando corresponde, microescombros como VFX. No duplicar materiales ni solver físico. Un Environment compartido contiene tiempo, iluminación, viento y clima. Viento visual y participación física por cuerpo son cosas distintas.
+Navigation separado de HTN; sensores, memoria, relaciones/especies/grupos/territorio, reservas y acciones cancelables. Bait/manada/colonia explicables y guardables. GraphCore visual común con evaluadores de dominio, no otra VM. 2D/2.5D/pixel/isométrico/vehículos y VR comparten el motor; son objetivos existentes secundarios al BSP/geología visible.
 
-Flotabilidad permanece **DESIGN ONLY** hasta autorización específica: conservar `Enable Buoyancy` por WaterVolume, proveedor físico consultable sin renderer, fuerzas/torques en Jolt y pruebas previstas. El cambio de base no activa esa implementación.
+## 6. Calidad, cierre y límites
 
-Perfiles 2D, 2.5D, Pixel2D, isométrico e híbrido/vehículos comparten el motor. Sprites con normales/iluminación, tilemaps, snapping y restricciones de plano; no resolverlos con un engine o VM alternativos.
+Cada checkpoint enseña escena real y cambios aplicados, no solo mocks/headers/conteos de checks. Métricas comparables por escena/cámara/resolución/hardware/backend, p50/p95/p99 CPU/GPU, RAM/VRAM, carga/recook y UI responsiveness. Una mejora puede aceptarse para un par de plataforma/backend y quedar NOT TESTED en otro; no acredita el gate completo.
 
-## 6. Rendering y SIGGRAPH
+SIGGRAPH/idTech6: decals/stamps/clustered, PBR, shadow cache, GPU visibility/HZB, rough glass, partículas/volumétricos/atmósfera y frecuencia de costes; optimización por problemas medidos, no listado infinito de papers. Ideas de otros engines permitidas con ficha fuente/licencia/porción útil/no copiar/experimento/fallback. No clonar arquitecturas ni incorporar código propietario por traducirlo.
 
-Consultar `docs/RENDERING_RASTER_SIGGRAPH_MASTER.md` antes de sustituir un pass. Atom existente primero; fuente pública y contrato Jerico después; cambio mínimo con imagen/timing/memoria/fallback.
+Cierre global requiere `JE::` real en código propio, módulos integrados dentro del engine y sin Gem manager productivo, ausencia de AWS/multiplayer/backends no permitidos en build/package/runtime, formatos propios source-free, licencias/avisos/SBOM, pruebas negativas y recorridos completos. No basta deshabilitar un checkbox ni ocultar un DLL. Las dependencias privadas admitidas y notices legales no son faltas de identidad.
 
-Preservar id Tech 6 completo: clustered lights/probes/decals, Stamp/RBrush, caché de sombras, rough glass, iluminación desacoplada de partículas, coherencia, resolución dinámica y profiling. RBrush separa BRUSH/PAYLOAD/TARGET; no es solo decals. Conservar PBR/Frostbite, Hillaire/Bruneton, volumétricos, Nubis, agua de Horizon, GPU-driven/HZB, SDSM, geometría/LOD y atlas histórico. Cada paper es candidato, no feature automáticamente comprometida.
-
-No trasladar SVOGI/Cry shaders por nombre de archivo ni exigir reproducciones numéricas idénticas al renderer anterior. Mantener las lecciones de coste: medir escenas representativas, no solo fixtures pequeños, y no convertir contadores de checks en calidad o rendimiento.
-
-## 7. Alcance de agua y restricciones heredadas vigentes
-
-La aceptación de agua de Cry se cerró por decisión del propietario el 2026-10-09; quedaron límites y una repetición source-free sin ejecutar. Esa historia no acredita O3DE. La prioridad de producto es agua vista desde arriba; underwater y mejoras costeras son etapas posteriores, no motivos para reabrir la antigua reparación ni para bloquear N0.
-
-## 8. Packaging y cierre
-
-Distribución final en un directorio de producto con ejecutable, `.epak` y bibliotecas necesarias; los recursos/licencias de terceros pueden conservar subdirectorios técnicamente requeridos. Sin checkout de desarrollo, compiladores fuente, credenciales ni formatos originales como requisito de ejecución. `.epak` debe evolucionar hacia chunks streaming, delta/overlay y rollback transaccional. Compresión Zstd, hash BLAKE3, firma autenticada para releases oficiales y política de cifrado de Shipping quedan como **destino de diseño pendiente de auditoría e integración**, sin declarar criptografía implementada. ContentPacks/DLC y CampaignRegistry comparten assets por GUID sin duplicar el runtime.
-
-Los formatos finales son binarios validados, versionados y de ABI independiente. No crear XML propio; metadata de tools y formatos internos temporales se migran con sus consumidores, no mediante una purga global. El catálogo está en `docs/EDITOR_ASSET_WORLD_MASTER.md`.
-
-Un vertical PASS exige implementación canónica, autoría/persistencia/cook/runtime relevantes y prueba negativa. Windows no acredita Linux; código presente no acredita integración; documentación no acredita runtime. Estados: PLANNED, DESIGN ONLY, IMPLEMENTED NOT INTEGRATED, INTEGRATED NOT VERIFIED, VERIFIED, DEFERRED, BLOCKED y REJECTED con causa.
-
-El objetivo global no termina con N0, una demo o un cambio de nombres. La matriz de requisitos y `docs/DEFINITION_OF_DONE.md` impiden rebajar alcance por omisión. Continuar por verticales coherentes del roadmap sin detenerse tras microtareas, respetando exclusiones y permisos reales.
+Ver `docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md`, `docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md` y `docs/ROADMAP.md`. Toda especificación anterior se aplica solo donde sea compatible con esta decisión; conservar detalles técnicos válidos, nunca reactivar una exclusión.

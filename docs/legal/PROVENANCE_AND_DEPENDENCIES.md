@@ -1,70 +1,46 @@
-# Procedencia, licencias e independencia de servicios
+# JE — procedencia y dependencias privadas, sin plataformas externas
 
-Estado: **revisión inicial de fuentes; no aprobación jurídica de distribución**. Prioridad del propietario: base legalmente modificable. Repo privado no equivale a permiso para copiar software ajeno.
+**Directiva 2026-10-10. Estado: política y auditoría inicial, no aprobación jurídica/comercial completa.** Ver GOAL, contrato JE y `docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md`.
 
-## 1. Base legal observada
+## Frontera de producto
 
-`LICENSE.txt` del O3DE base permite elegir Apache-2.0 o MIT para el código cubierto por esa licencia, e indica condiciones separadas para terceros. Se conservaron LICENSE.txt, LICENSE_APACHE2.TXT y LICENSE_MIT.TXT sin modificación.
+AWS y multiplayer están EXCLUIDOS: no cuentas/servicios/SDKs Amazon, S3/CloudFront como descarga obligatoria o fallback, GameLift/session/matchmaking/replication/servidores/cloud telemetry ni plataforma online de distribución. No se conservan como optional/deferred. Los content packs/campañas existentes son datos locales; no autorizan comercio/identidad/entitlements remotos.
 
-Base técnica comprobada contra el upstream oficial: commit `241c78b8064898a709cf1c5dd3535c6406763ef3`, tree `db4b7d4a5d784d2283c95903f461e311d69704c8`. Esto acredita identidad del snapshot de código Git, no descarga/completitud/licencias de todos los objetos LFS o paquetes transitivos.
+No añadir plataformas para sustituir AWS. Integrar bibliotecas locales necesarias al motor con versions/hashes/licencias y sin instalación/activación de Gems por el diseñador. El build offline requiere fuentes/paquetes admitidos preaprovisionados y toolchain; no se inventa que el engine no depende del OS/driver/SDK gráfico. Qt/Jolt/Luau/ufbx/Manifold/OpenMesh/Recast/audio/codecs conservan procedencia y pueden existir como bibliotecas privadas dentro de la distribución.
 
-O3DE tiene historia de Lumberyard, pero no es una autorización para usar todo CryEngine 5.7 ni paquetes originales de Lumberyard bajo sus condiciones antiguas. Código con nombres Cry/Amazon dentro del snapshot licenciado debe evaluarse por su procedencia concreta. No borrar atribuciones para ocultar esa historia.
+## O3DE no relicencia CryEngine
 
-No decidir la licencia de las contribuciones originales de Jerico mediante un replace global del LICENSE de O3DE. Cualquier distribución comercial requiere cerrar el inventario aplicable y revisión jurídica cuando corresponda.
+La licencia raíz O3DE permite Apache-2.0 o MIT para el código cubierto, con condiciones separadas para terceros. Preservar LICENSE/NOTICE/SPDX/créditos y modificaciones debidamente identificadas. `JE::` es identidad de código propio/adaptado, no certificado de autoría original ni permiso para eliminar avisos.
 
-## 2. Frontera de rescate desde repositorios anteriores
+No copiar CryEngine 5.7, source/shaders traducidos de Cry, MNM/SVOGI, binarios/SDKs/assets restringidos, Unreal propietario o addons por tener acceso. Requisitos e ideas observables pueden documentarse; código/math/test de Jerico antiguo necesitan auditoría por archivo/derivación/fixture y licencia. No merge/cherry-pick del historial Cry a esta base. Historial/evidencia previa se conserva en su repo, no acredita resultados aquí.
 
-| Material | Tratamiento |
-|---|---|
-| Requisitos originales del propietario, UX deseada y decisiones | Reexpresar en las nuevas especificaciones con referencia histórica |
-| Métricas/logs/capturas de la antigua ejecución | Conservar como evidencia histórica en el origen; nunca acreditar O3DE con ellos |
-| Código original de Jerico previo a Cry, tests y matemáticas | Candidato, no aprobado en bloque; verificar autoría, imports, fragmentos derivados, fixtures y licencia |
-| Código Jerico añadido dentro de CryEngine2 | Cuarentena hasta auditoría por archivo; el namespace propio no demuestra independencia |
-| CryEngine 5.7, shaders traducidos desde Cry, adaptaciones de MNM/SVOGI | No importar por defecto; implementación independiente desde fuentes permitidas |
-| Assets, texturas, escenas y binarios de Cry/Penumbra/otros motores | No copiar sin derechos demostrados; tests nuevos con fixtures sintéticos o licenciados |
-| Papers SIGGRAPH/GDC, diapositivas, implementaciones de referencia | Leer conceptos; permisos de paper, código, datos y patentes se revisan por separado; no republicar PDFs automáticamente |
-| Addons Blender propietarios, Ucupaint/AutoTrack/Auto-Rig Pro | Requisitos/experiencia como referencia; no copiar source/nodes/assets ni asumir licencia por disponer de un ZIP |
-| UE4/idTech u otro código propietario | Sin traslado de implementación; estudiar publicaciones permitidas, no lavar código por traducción |
+Ideas de otros motores y publicaciones SIGGRAPH/GDC están permitidas. Por candidata: URL/origen exacto/commit o versión, sección estudiada, qué comportamiento se busca, qué no se copia, código/datos/licencias/patentes pertinentes, coste/beneficio y pruebas. Código de un motor realmente abierto puede reutilizarse si licencia/avisos/condiciones encajan, no solo por nombre de proyecto. Paper accesible no licencia automáticamente su código, assets o redistribución del PDF.
 
-No merge de historias de Cry ni cherry-picks entre los repositorios como mecanismo de rescate. No declarar clean-room certificado: esta auditoría consultó documentación del proyecto anterior, parte de la cual describe implementaciones derivadas. Una implementación nueva debe registrar fuentes permitidas y su proceso real.
+## Inventario obligatorio
 
-## 3. Inventario inicial observado
+Por dependencia: owner JE, fuente/artefacto, commit/versión/hash, licencia efectiva y avisos, transitivas, uso tool/build/runtime, linking estático/dinámico, descarga efectiva, servidor/fallback, exposición a APIs/ABI, deployment y prueba offline. Distinguir catálogo disponible, target configurado, objeto enlazado y módulo realmente cargado. No afirmar ausente por leer gem.json ni presente en runtime solo por hallarla en un catálogo.
 
-| Elemento | Evidencia de snapshot | Estado y próxima verificación |
-|---|---|---|
-| O3DE | SHA/tree y LICENSE raíz | Identidad/licencia raíz comprobadas; transitivas pendientes |
-| Qt/PySide Windows | Qt 6.11.2 y PySide6 6.11.2 en BuiltInPackages_windows.cmake | Declaración comprobada; descargas/build y módulos/licencias exactos pendientes |
-| Qt licensing | LICENSE raíz menciona LGPLv3, enlace histórico Qt5 | No usar ese enlace antiguo como expediente de Qt6; inventariar la versión efectiva, módulos, linking y obligaciones de fuente/relinking |
-| DXC Windows | 1.8.2505.1-o3de-rev3 en catálogo | Mantener pin inicial; comprobar artefacto/Source y toolchain, no incorporar update Mac por error |
-| OpenSSL Windows | 1.1.1o-rev1 declarado | Auditar uso real y soporte/vulnerabilidades antes de distribución; rama update es candidata, no patch aceptado |
-| AWSNativeSDK | 1.11.288-rev1 declarado | Catálogo no demuestra linkage; seguir targets/imports y excluir si no se consume |
-| AwsIotDeviceSdkCpp | 1.15.2-rev1 declarado | Igual: inventariar uso y retirar del producto cuando se demuestre cierre |
-| MiniAudio Gem | Manifest 0.1.0, licencia Gem Apache/MIT | Biblioteca y codecs tienen expediente propio pendiente |
-| RecastNavigation | Manifest menciona Apache/MIT y zlib para Recast; FetchContent | Fijar hash real, licencia y dependencias CMake |
-| OpenParticleSystem | Manifest Preview 0.0.0 | No congelar formatos privados de Preview como ABI Jerico sin migración |
-| Jolt/Luau/ufbx/KTX2/Basis/OpenXR | Destinos de diseño | No descargados, integrados ni auditados exhaustivamente por este commit |
+La revisión de fuente encontró:
+- `.lfsconfig` apunta a CloudFront; no enviar tokens/contenido privado a ese destino.
+- `cmake/3rdPartyPackages.cmake` añade variables de entorno antes del default CloudFront e incluye S3. Hay que reemplazar el conjunto efectivo y su fallback, no solo anteponer un mirror.
+- AzFramework depende públicamente de AzNetworking; éste menciona OpenSSL/RapidXML/codegen. Clasificar IPC de tools y transporte de juego antes de retirar.
+- Recast tiene pin v1.6.0 y hash/commit, pero usa FetchContent; obtenerlo localmente no es lo mismo que ya sea offline.
+- WhiteBox requiere Manifold/OpenMesh/Atom/editor/legacy y tests físicos: integrar esas partes bajo JE respetando licencias y eliminando sólo rutas no necesitadas.
 
-Este inventario NO es un SBOM completo. N0 debe generar inventario directo/transitivo con nombre, versión, URL, SHA/hash, licencia SPDX, evidencia de licencia, modificados, avisos, uso tool/runtime, linkage/distribución, responsable y estado de admisión. Dependencia sin origen/licencia verificable no se incorpora al producto; el resto del trabajo independiente puede continuar.
+Referencia histórica por snapshot sin cambios: Qt/PySide Windows declarados 6.11.2, AWS SDKs en catálogo y OpenSSL antiguo. No declarar esos artefactos descargados o el producto seguro. Auditar versiones efectivas/vulnerabilidades y linkage usados por el producto antes de distribución; no update ciego de branches.
 
-## 4. AWS: cuatro verificaciones distintas
+## Qt, SDKs y namespaces
 
-1. **Servicios:** ejecutar Editor/Runtime/cook sin cuentas, endpoints AWS, credenciales ni telemetría obligatoria.
-2. **SDK/enlace:** grafo de CMake, bibliotecas/imports efectivos y cierre de deployment, no grep de nombres como prueba final.
-3. **Tools:** revisar descargas, paquetes, Python, asset jobs y scripts de build.
-4. **Hosting:** `.lfsconfig` del base apunta a `https://d3df09qsjufr6g.cloudfront.net/api/v1`; también hay que auditar servidores de 3P. Poder jugar offline no acredita una instalación independiente de Amazon.
+Qt permite opciones comerciales y libres sujetas a condiciones; algunos módulos no están bajo LGPL. Elegir módulos/version/linking y conservar cumplimiento por dependencia real. Integrar no exige static link: no reconfigurar Qt a estático sin resolver requisitos de redistribución/relinking correspondientes. No inventar licencia comercial ni afirmar que distribuir engine obliga automáticamente a liberar todo código del juego.
 
-Mantener la política de no cuenta/no servicios. Para adquirir el baseline, registrar cualquier uso de un mirror público existente como dependencia de distribución transitoria; no llamar a esa etapa AWS-free. Destino: almacenamiento privado/controlado admitido, hashes comprobados, mirror/caché reproducible y bootstrap sin Amazon obligatorio.
+Tipos Qt, Jolt, Vulkan, DirectX y std conservan sus nombres auténticos dentro de límites privados. No exponer AZ/Gem como API final propia ni disfrazar todo O3DE de dependencia exenta: lo que adoptamos como motor se migra a JE. No renombrar APIs del sistema ni los archivos `.r*` por confundir nomenclatura con wire format.
 
-No enviar tokens GitHub o archivos privados al endpoint heredado simplemente porque `.lfsconfig` lo sugiera. Inspeccionar primero `git lfs env`, configuración efectiva y pre-push. Los archivos de esta publicación son Markdown normal y no necesitan nuevos objetos LFS. Para fuentes binarias futuras: identificar dónde se leen los objetos públicos históricos y dónde se suben los privados nuevos; no reescribir historia ni LFS masivamente. Verificar materialización y `git lfs fsck` cuando se hayan obtenido los objetos necesarios.
+No Autodesk FBX SDK ni ATL/MFC impuestos. Si un target lo pide, localizarlo y sustituir la dependencia mínima por vía permitida; no descargar un SDK restringido para fingir baseline completo.
 
-## 5. Requisitos excluidos y seguridad
+## Seguridad y cierre
 
-No imponer Autodesk FBX SDK ni ATL/MFC nuevos. N0 debe detectar si algún target baseline aún los pide; documentar el target y resolverlo con una vía permitida, sin descargar SDKs restringidos para ocultar el bloqueo. No afirmar ausencia hasta medir el grafo/build.
+Inputs fuente/scripts/paquetes/saves son no confiables: bounds/tipos/paths/decompression limits, candidatos y rollback, fuzz donde corresponda. Hash verifica integridad, no firma; crypto/keys sólo con implementación verificada y librerías admitidas, sin servicios online introducidos por el empaquetado. No escribir criptografía propia ni prometer imposibilidad de extracción con claves locales.
 
-No activar cloud deployment, compras, secretos, puertos públicos, telemetría o cambios de seguridad del sistema. MCP/RemoteTools locales con capacidades y validación explícitas. Importadores, scripts, paquetes y saves son inputs no confiables: bounds/tipos/path traversal, fuzzing y publicación candidate-first.
+Prueba final: grafo efectivo de build/link/deployment y observación runtime, red bloqueada, cache local con hashes, missing-package fail-closed, source-free editor/runtime/cook según fase y tres pares gráficos. Sin listeners/telemetría/red de juego; IPC local de tools acotado y ausente en Shipping cuando no se necesita. SBOM/legal notices/excepciones/source offers según corresponda, revisión profesional para distribución cuando haga falta. No certificado de cumplimiento solo por esta auditoría.
 
-## 6. Cierre de distribución
-
-Antes de publicar: inventario/SBOM efectivo del producto, licencias/NOTICE/SPDX y fuentes/ofertas exigidas, materiales/artifacts con procedencia, revisión de módulos Qt usados y linking, dependencias sin soporte o vulnerabilidades relevantes resueltas, zero credenciales y prueba source-free/offline. Hashes acreditan integridad, no autenticidad por sí solos.
-
-Fuentes primarias: https://github.com/o3de/o3de/blob/241c78b8064898a709cf1c5dd3535c6406763ef3/LICENSE.txt ; https://doc.qt.io/qt-6/licensing.html . Los términos se verifican para cada versión realmente redistribuida, no únicamente en estas páginas generales.
+Fuentes primarias: LICENSE raíz del snapshot O3DE; https://doc.qt.io/qt-6/licensing.html ; archivos/SHAs del informe DEP-01..DEP-12. No se publican URLs temporales con tokens ni PDFs ajenos.

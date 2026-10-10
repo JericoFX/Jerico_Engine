@@ -1,32 +1,33 @@
-# Índice canónico de JericoEngine
+# Documentación vigente — JericoEngine / JE
 
-Nueva base: O3DE. Rama única: **development**. Publicación de 2026-10-10: documentación y diseño, no engine integrado.
+**2026-10-10: una rama development; JE::; sin AWS/multiplayer; DX12 y Vulkan; BSP/UI primero y geología activa.** Esta revisión es auditoría/planificación, no motor ya convertido.
 
-| Documento | Función |
+| Documento | Uso |
 |---|---|
-| [GOAL](../GOAL.md) | Objetivo persistente y decisiones superiores |
-| [AGENTS](../AGENTS.md) | Roles, una rama, Git, seguridad y método |
-| [CODEX_START](../CODEX_START.md) | Checkout, default branch y arranque |
-| [ROADMAP](ROADMAP.md) | N0-N12 con resultados y dependencias |
-| [REQUIREMENTS_MATRIX](REQUIREMENTS_MATRIX.md) | Requisitos concretos, owner, etapa y estado |
-| [DEFINITION_OF_DONE](DEFINITION_OF_DONE.md) | Qué acredita un vertical y qué no |
-| [Arquitectura nativa](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners, Gems y mecanismos de integración |
-| [Auditoría de ramas](research/BRANCH_AUDIT_2026_10_10.md) | Las 23 refs y selección sin merges masivos |
-| [Rescate histórico](migration/LEGACY_REQUIREMENT_MAP.md) | Qué conservar/sustituir y qué sigue como historia |
-| [Legal/dependencias](legal/PROVENANCE_AND_DEPENDENCIES.md) | Código permitido, transitivas, Qt, AWS/LFS |
-| [Editor/assets/world](EDITOR_ASSET_WORLD_MASTER.md) | UX, identidad e import/cook |
-| [Materiales, formatos y .epak](ASSET_MATERIALS_FORMATS_EPAK_MASTER.md) | PBR, ORM, compresión, r* y paquetes/deltas firmados |
-| [Luau/gameplay/AI](SCRIPTING_AI_GAMEPLAY_MASTER.md) | Referencias, Store, save, input, inventario y HTN |
-| [Motion/UI/audio/XR](ANIMATION_UI_AUDIO_XR_MASTER.md) | Rigs/IK/fitting, UI, secuencias, sonido y XR |
-| [Procedural/physics/environment](PROCEDURAL_PHYSICS_ENVIRONMENT_MASTER.md) | RMod, RBrush, PWAS/EPLS, Jolt y entorno |
-| [Perfiles 2D e isométrico](PRESENTATION_PROFILES_MASTER.md) | Sprites, normales, plano, vehículos y perfiles de calidad |
-| [Renderer/SIGGRAPH](RENDERING_RASTER_SIGGRAPH_MASTER.md) | Atom/Vulkan, papers y criterios de adopción |
-| [Error book](ENGINE_DEBUGGING_BOOK.md) | Lecciones reutilizables, no causas Atom supuestas |
+| [GOAL](../GOAL.md) | Última decisión del propietario, capacidades y exclusiones |
+| [AGENTS](../AGENTS.md) | Roles, Git, método y evidencia |
+| [CODEX_START](../CODEX_START.md) | Inicio seguro y prioridad visible |
+| [Contrato JE](architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) | Namespace real, CMake/codegen/UUID, Gems dentro del engine |
+| [Arquitectura](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners y disposición de capacidades |
+| [Auditoría de dependencias](research/JE_DEPENDENCY_AUDIT_2026_10_10.md) | Hallazgos DEP-01..12 con source/blobs y límites |
+| [Legal/dependencias](legal/PROVENANCE_AND_DEPENDENCIES.md) | Licencias, bibliotecas privadas, offline y exclusiones |
+| [Roadmap](ROADMAP.md) | N1/N2/N4/N8 adelantados, resto de capacidades conservadas |
+| [Matriz](REQUIREMENTS_MATRIX.md) | IDs JER, gates y estados, sin progreso ficticio |
+| [Definition of Done](DEFINITION_OF_DONE.md) | Qué cuenta como integrado/visible/seguro |
+| [Editor/assets/world](EDITOR_ASSET_WORLD_MASTER.md) | UX/transacciones/identidad/asset pipeline |
+| [Materiales/formatos/epak](ASSET_MATERIALS_FORMATS_EPAK_MASTER.md) | PBR/ORM/r*/cooked packages locales |
+| [BSP/geología/procedural/física](PROCEDURAL_PHYSICS_ENVIRONMENT_MASTER.md) | Geometry/Geology/RMod/RBrush/PWAS/Jolt |
+| [Renderer/SIGGRAPH](RENDERING_RASTER_SIGGRAPH_MASTER.md) | Dos backends, fuente de ideas y mejoras medibles |
+| [Scripting/AI/gameplay](SCRIPTING_AI_GAMEPLAY_MASTER.md) | Luau/Store/HTN/ref/input/save locales |
+| [Motion/UI/audio/XR](ANIMATION_UI_AUDIO_XR_MASTER.md) | Rig/IK/Fit/sequences/UI/audio/VFX/OpenXR |
+| [Perfiles](PRESENTATION_PROFILES_MASTER.md) | 2D/2.5D/isométrico/vehículos sin engines paralelos |
+| [Error book](ENGINE_DEBUGGING_BOOK.md) | Lecciones históricas, no fallos actuales inferidos |
+| [Auditoría de ramas](research/BRANCH_AUDIT_2026_10_10.md) | Snapshot histórico de 23 ramas; no orden de fusionarlas |
+| [Mapa histórico](migration/LEGACY_REQUIREMENT_MAP.md) | Procedencia y reglas sustituidas |
+| [N0](work/N0_FOUNDATION_PLAN.md) | Ejecución inicial con dependencias permitidas |
+| [N2/N11](work/N2_N11_MATERIAL_FORMAT_PLAN.md) | Material/format/package por consumers |
 | [ACTIVE_SLICE](work/ACTIVE_SLICE.md) | Único vertical actual |
-| [N0 plan](work/N0_FOUNDATION_PLAN.md) | Pasos iniciales de Codex |
-| [HANDOFF](work/HANDOFF.md) | Situación actual y siguiente acción |
-| [VERIFICATION_REPORT](work/VERIFICATION_REPORT.md) | Cobertura real de la auditoría y límites |
+| [HANDOFF](work/HANDOFF.md) | Hecho real, límites y siguiente acción |
+| [Verificación](work/VERIFICATION_REPORT.md) | Alcance comprobado de publicación |
 
-GOAL define destino; masters, comportamiento; ROADMAP, orden; ACTIVE_SLICE, trabajo actual; HANDOFF, estado. La evidencia detallada vive por vertical: no copiar el mismo diario en cinco masters.
-
-Los antiguos documentos siguen disponibles en sus repositorios fijados por SHA, pero no reactivan órdenes Cry/Diligent/MNM/SVOGI, topologías históricas de agentes o geología cancelada. La matriz de rescate explica sustituciones. No añadir otro GOAL persistente duplicado ni otra autoridad para una familia ya cubierta. Una ampliación actualiza su master y matriz de requisitos.
+GOAL define destino, masters contratos, ROADMAP orden y ACTIVE_SLICE trabajo actual. No reconstruir decisiones desde chats ni dejar dos masters de ejecución contradictorios. El historial previo conserva detalles útiles, pero no puede reactivar Vulkan-only/DX12-deferred, cancelación total de geología, multiplayer optional o AZ como nomenclatura propia final. Fichas de papers/ramas anteriores son evidencia de lectura histórica, no órdenes de implementación.

@@ -1,31 +1,23 @@
-# Vertical activo — N0: base O3DE reproducible
+# Vertical activo — N0: baseline JE permitido y preparación de BSP visible
 
-Fecha: 2026-10-10. Estado: **READY TO EXECUTE / ENGINE NOT TESTED**.
-Repo único `JericoFX/Jerico_Engine`; rama única **development**. El paquete documental prepara N0; no lo declara ejecutado.
+Fecha 2026-10-10. Estado **READY TO EXECUTE / ENGINE NOT TESTED**. development solamente. Esta revisión documenta la última orden, no anuncia que ya se quitaron dependencias ni se migró código.
 
-## Resultado observable
+## Resultado de N0
 
-Conservar la base O3DE que ya existe y demostrar, en la plataforma local disponible, Editor con una escena Vulkan real, Asset Processor y runtime cocinado, con procedencia/dependencias y métricas iniciales. Identificar por separado el estado Windows/Linux. No usar el runtime Cry como prueba.
+Inspeccionar/configurar la base con dependencias privadas permitidas y locales, sin AWS/multiplayer productivos. Mostrar escena base con Editor/Asset Processor/runtime y registrar métricas. Pares obligatorios: Windows-DX12, Windows-Vulkan, Linux-Vulkan. Par no disponible queda NOT TESTED y no bloquea desarrollo visible del disponible; no se declara N0 portable completo.
 
-## Entradas y autoridad
+## Lectura y tareas concretas
 
-Leer CODEX_START, AGENTS, GOAL, ROADMAP y `N0_FOUNDATION_PLAN.md`. Origen técnico: O3DE `241c78b8064898a709cf1c5dd3535c6406763ef3`, tree `db4b7d4a5d784d2283c95903f461e311d69704c8`. HEAD de trabajo incluye luego el commit documental; registrar su SHA real antes de empezar.
+Leer GOAL/AGENTS, `docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md`, `docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md` y N0_FOUNDATION_PLAN.
 
-## Incluido
+Resolver listas efectivas de package/LFS sin CloudFront/S3/fallback oculto; separar transporte de juego de IPC local; mapear targets servidor/multiplayer y RHI de producto. No usar red de Amazon para obtener un primer baseline ni borrar carpetas por grep. Fijar toolchain/deps hashes/licencias y conservar assets/avisos.
 
-Checkout correcto/sync; default branch check; inventario LFS/3P/toolchain/licencias; mapa de dependencias y AWS; builds originales con correcciones mínimas si una reproducción lo exige; prueba Editor/asset processing/runtime; CPU/GPU/memoria/responsiveness; ruta futura de composición nativa; interfaces XR desde foundation; reporte de bloqueos concretos y siguiente vertical.
+Registrar fuente/configuración/build/códigos de salida, fixture/imagen real, coste cold/steady CPU/GPU/RAM/VRAM y limits. Lectura CMake no es linker/runtime. No generar placeholders JE para marcar avance.
 
-## Excluido
+## Siguiente vertical prioritario
 
-Borrado de Cry/repo/ramas; crear otra rama/worktree; merges masivos; port de código Cry o antiguos engines; renombrado global; reescribir AZ/Core/Gems; integrar Jolt+Luau+UI+todo el roadmap al mismo tiempo; RT, DX12, nuevos targets móviles/WebGPU, geología integral, underwater y flotabilidad DESIGN ONLY.
+N1 UI/BSP: cuarto/corredor/apertura puerta/ventana sobre WhiteBox CSG auditado; UV/material/Undo/Save/reopen y runtime. Integración del owner a JE dentro del engine sin project Gem install. Después N2 materiales y N4 collision, N8 geología adelantado; no esperar todos los sistemas de juego.
 
-## Gates
+## Prohibiciones
 
-- Snapshot/licencias/toolchain y materialización requerida verificados.
-- Editor/scene Vulkan real y assets procesados; runtime cocinado probado o limitación exacta registrada.
-- Origen de assets y librerías permitido; sin dependencia nueva de cuentas AWS/SDK restringidos impuesta.
-- Medidas reproducibles, no solo compilación o screenshot.
-- Estado separado por plataforma y para hosting/download transitorio.
-- HANDOFF con comando/log/hash/resultado/limitación y siguiente acción N1; no cerrar el GOAL global.
-
-Si una plataforma no está disponible, N0 de esa plataforma sigue NOT TESTED. Se puede continuar N1 en la plataforma demostrada sin inventar Linux/VR PASS. Cambios de baseline por fix indispensable permanecen en development y se registran; las otras ramas son referencias, no nuevas bases automáticas.
+Nada AWS/multiplayer/servidores/backend online. Solo DX12/Vulkan como render. No alias JE=AZ como solución final. Geología está activa; BSP→OpenVDB y RT de render no. Buoyancy continúa DESIGN ONLY. No copiar source/shaders de Cry ni borrar otros repositorios/ramas/evidencia.

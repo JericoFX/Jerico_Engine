@@ -1,121 +1,83 @@
-# Roadmap JericoEngine — O3DE nativo, rama única
+# Roadmap JE — BSP/UI primero, geología activa, DX12 y Vulkan
 
-Estado global ACTIVE. N0 preparado; ningún milestone de implementación acreditado por este commit. J0/J3A/M10.5 antiguos son contexto, no progreso de O3DE.
+**Revisión del propietario 2026-10-10.** Los IDs N0–N12 se conservan para trazabilidad, pero ya no constituyen una cola numérica rígida. Estado general ACTIVE; documentación no acredita implementación.
 
-## Orden y dependencias
+## Camino visible prioritario
 
-Ruta propuesta: N0 → N1 → N2 → N3 → N4 → N5 → N6 → N7 → N8 → N9 → N10 → N11 → N12. Cada N admite resultados coherentes publicados individualmente: no megacommit ni micro-slice por tipo. Una rama development, un ACTIVE_SLICE y un integrador. El padre puede ajustar el orden por consumidores demostrados, nunca reactivar exclusiones.
+`N0 baseline local → N1 UI/BSP → N2 materiales/formatos básicos → N4 colisión/interacción → N8 geología/RMod/RBrush → N3/N5/N6/N7/N9/N10 según consumidor → N11/N12 cierre`.
 
-Windows y Linux tienen estado separado. Una plataforma verificada puede avanzar mientras la otra tiene deuda explícita; no declarar ambas ni paralizar todo por hardware inexistente. XR es contrato nativo desde N0/N1: vistas, input e interacción no deben fijarse a desktop/mono. N10 cierra la experiencia y prueba de hardware; no es el momento de descubrir que las interfaces impiden VR.
+N3 mínimo puede adelantarse cuando una interacción requiera Luau; lo mismo una dependencia mínima de física/material. No desarrollar todas las familias a la vez. Un ACTIVE_SLICE, un integrador y development. Optimización y migración JE acompañan cada tramo: no esperar al final. `docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md` gobierna los nombres, la absorción de Gems y excepciones privadas.
 
-## N0 — origen, dependencias y baseline O3DE
+## N0 — fuentes, dependencia local y escena real con los dos backends
 
-**Resultado:** fuente admitida, toolchain reproducible y Editor/Asset Processor/runtime originales con escena Vulkan y métricas.
+Resultado: base O3DE auditable, toolchain/deps permitidas y escena/editor/runtime originales medidos. Sin AWS/multiplayer productivos ni uso de endpoints CloudFront/S3 para conseguir el baseline. Inventariar source/targets/builders/downloads/LFS, definir cache local completa y caso missing-package fail-closed. Excluir server/cloud/extra RHI mediante grafo real, no borrado por nombres.
 
-Seguir `work/N0_FOUNDATION_PLAN.md`. Verificar SHA/tree/LFS/3P/licencias, CMake/toolchain y requisitos excluidos. Seleccionar development aunque el default aún difiera. Auditar AWS por servicio, enlace, build y hosting. Compilar sin modificación cosmética ni importar updates de otras ramas anticipadamente. Mapear interfaces XR/multiview y sus riesgos, sin inventar soporte ya integrado.
+Matriz de aceptación: Windows-DX12, Windows-Vulkan, Linux-Vulkan. Hardware ausente = NOT TESTED explícito. Una plataforma disponible puede avanzar trabajo visible sin declarar portabilidad completa. Null/headless nunca satisface fila gráfica. Medir PBR/luz/sombra/cámara/save/reopen/asset processor/launcher en fixture sintético/licenciado. No afirmar primer build ejecutado por esta documentación.
 
-Aceptación: fixture sintético/licenciado con mesh PBR/luz/cámara/sombra, abrir/editar/guardar/reabrir, procesar assets y ejecutar launcher cocinado. Registrar qué packaging original todavía no permite; no llamarlo formato Jerico final. Medir CPU/GPU/RAM/VRAM/frame pacing y respuesta desde el inicio. Evidencia N0-W/N0-L separada. Dependencia o GPU ausente = estado del paso preciso, no PASS. No borrar Gems.
+## N1 — JericoEditor y BSP útil inmediatamente
 
-## N1 — composición nativa y primer panel/componente Jerico
+Resultado: construir y editar una habitación con corredor, puerta y ventana en el viewport central, dentro del editor real. Reusar WhiteBox CSG/Manifold y component modes tras auditarlos; skin/docking/Inspector/Outliner/paleta Jerico sin segundo editor. Migrar este owner y su API/targets a JE con puentes privados temporales inventariados.
 
-**Depende:** baseline funcional en plataforma objetivo. **Resultado:** proyecto limpio recibe una capacidad Jerico del motor sin instalación/habilitación manual de Gem Jerico.
+Grid/snap, caras/aristas/vértices, extrude/inset/bevel/slice/hollow/booleans se admiten por operaciones completas; no una demo de cubo que proclama BSP completo. Primer checkpoint obligatorio: corte de puerta/ventana, UV/material por cara, Undo/Redo, Save/reopen y consumidor runtime de la geometría resultante. Prueba diferencia vacía, coplanares/escala, límites y conservación de material/region IDs. Capturas reales y coste de editar/reconstruir. Sin activar un Gem Jerico por proyecto.
 
-Extender los registros/editor/componentes existentes con una propiedad y consumidor real de escena. Panel contextual usa comandos/transacciones. No scaffold de todos los sistemas ni segundo World. Mantener diseño de múltiples vistas, semantic input y física compartida para XR.
+## N2 — materiales, importación y formatos que ya se usan
 
-Probar init/use/shutdown una vez, selección, Undo/Redo, save/reopen, prefab instanciado, cook/runtime y limpieza. Título cambiado o biblioteca no utilizada no satisfacen el hito.
+Resultado: escena BSP/GLB PBR, nombres libres, ORM/separados, normal/color-space/UV/alpha y material instances/graph conectados al Asset Processor y Atom adaptados a JE. Ufbx y otros formatos como subverticales probados, no lista de extensiones supuestamente soportadas.
 
-## N2 — assets, materiales y observabilidad gráfica
+`.rmesh/.rmat/.rtext` deben tener writers/readers/validators y uso real; no posponerlos todos a N11 ni inventar formatos sin consumidor. Reimport/cancel/Undo/reopen/cook y ejecución aislada; semánticas correctas en Windows DX12/Vulkan y Linux Vulkan por gates separados. Coste de import, memoria pico/residente, mips/tangentes y retirement de recursos. Shader toolchain offline, variants y reflexión reutilizados; no otro material VM/device.
 
-**Depende:** N1/builders originales. **Resultado:** GLB/materiales → modelo canónico → cook → revisión correcta en Atom/runtime.
+## N4 — Jolt y un objeto BSP/modular físico real
 
-Asset Processor único; ORM/separados, normal/color-space, nombres libres, mips/tangentes, slots/instancias y reimport con overrides. **Leer el master ASSET_MATERIALS_FORMATS_EPAK:** material graph/instancias sobre Atom, conversiones color/normal/canales, semantic slots, importer negative cases y gestión del ciclo de vida de texturas; `.rmat/.rtext/.rmesh` son contratos finales, no renombres de productos O3DE. Ufbx/otros formatos entran como subverticales probados. No dar todos por soportados tras un GLB simple.
+Resultado: puerta/cajón con collider/body/hinge/slider, pivot/gizmo/límites/motor/COM, Play/Pause/Step/Reset, queries/triggers y persistencia/cook. PhysX solo para consumers aún sin migrar, nunca el mismo body en ambos. WhiteBox physics tests y navegación tienen dependencias PhysX que hay que adaptar, no perder tests.
 
-Observabilidad dentro de Atom: pass inputs/outputs, timings CPU/GPU y memoria; diagnóstico apagado sin readbacks. Primer pass propio solo con consumidor real. Controles de PBR/shadows/reflections/fallback y material replacement. Diseñar cámaras/motion vectors/histories por vista, no un buffer global que impida XR.
+Generar colisión de BSP/geología por la autoridad JE, no una física oculta de tools. Activar destrucción simple prefracturada cuando el consumidor lo requiera; Jolt mueve fragmentos, no crea la topología.
 
-Aceptación: import/reimport/cancel/Undo/reopen/cook/runtime y entradas corruptas. Los productos O3DE transitorios se etiquetan; N11 cierra los finales.
+## N8 — geología, RMod y detalle del entorno, adelantados
 
-## N3 — Luau, referencias tipadas, input, triggers y Store inicial
+**Geología activa:** integrar masa/brush→capas→SDF/campos→Surface Nets/Hermite/QEF cuando corresponda→mesh/atributos→material/collision/nav/cook. No forzar toda arquitectura BSP a volumen ni borrar cortes planos analíticos. Reusar matemáticas originales con procedencia verificada, no copiar el engine del Playground.
 
-**Depende:** identidad/transacciones/cook N1-N2. **Resultado:** entidad con script strict y referencia a luz/objeto, interacción y propiedad guardable.
+Checkpoints visibles y separados: (a) roca/familia y cliff con estratos/cortes/overhang; (b) cueva sustraída en masa con interior/materiales/colisión y paso jugable; (c) erosión/fracturas/daño y actualización local, cancel/Undo/save/reopen; (d) source-free y calidad/coste en los tres pares gráficos. Selector de forma independiente de material; mismo campo geológico guía triplanar, strata, sedimento y FreshInterior. BSP→OpenVDB continúa cancelado, no toda geología.
 
-VM/binding/typecheck/cook y tipos desde reflexión. Drag Outliner→IDE crea/reutiliza self.references; self con lifetime nativo. Input semántico compatible con XR, trigger activador/filtro/Once/cooldown y Commands/Events. Primer proveedor Store/Save opt-in sin duplicar cambios nativos.
+RMod: library de piezas/ports/sockets/rutas, elbows/T/cross/reducers/flanges/intersecciones manuales, snap con histéresis, soportes por queries piso/pared/techo, rectas con UV y RMF. Cables/catenaria/cadenas 16/32/64 como pruebas discretas con Jolt. RBrush BRUSH/PAYLOAD/TARGET para paint/mask/decal/vertex/daño, PWAS/EPLS con locks/overrides/seed/GUID y layout manual respetado.
 
-Aceptación: activación cambia luz, estado persiste, referencia rota/ID reciclado/destroy/reload sin acceso inválido. Material/tool Lua se inventaría aparte; no segundo gameplay VM.
+Terrain/vegetation/streaming/HLOD/environment se amplían por necesidad real. Viento físico separado de bending. Agua superior/local sigue alcance conservado; underwater/costa posterior. **Flotabilidad continúa DESIGN ONLY**, no se activa por geología ni vehículos.
 
-## N4 — Jolt y edición de un objeto físico real
+## N3 — Luau, referencias, input, triggers y Store
 
-**Depende:** N2/N3. **Resultado:** puerta/cajón genérico en editor con collider/body/hinge o slider y runtime Jolt.
+Se adelanta solo el mínimo que un checkpoint visible precise. Luau strict, self válido, drag Outliner→self.references tipada Scene/PrefabInternal, Commands/Events, input semántico y triggers Once/cooldown con activador/filtro. Store opt-in captura cambio confirmado sin doble registro. Referencia destruida/reciclada, reload, save y source-free. Una VM de gameplay/UI y tipos públicos JE, no nueva tabla de entidades.
 
-Auditar AzFramework Physics/PhysX; migrar consumidor real con queries/events/cook/debug. PhysX queda temporalmente solo para consumidores clasificados, nunca sobre el mismo cuerpo Jolt. WhiteBox/geometry y primer RBrush/decal se incorporan con pruebas propias; no exigir CSG completo para una puerta.
+## N5 — Motion Studio y manipulación
 
-Aceptación: pivot/eje/límites/motor/COM, push/pull/raycast/trigger, Play/Pause/Step/Reset, save/reopen/Undo/cook/runtime. RBrush separa brush/payload/target, resultado editable y source intacto. Ampliar joints/character/terrain/nav según consumidores, sin una segunda física del editor.
+EMotionFX integrado a JE, `.rskel/.rrig/.ranim/.rgraph`, huesos/pesos/FK/IK/retarget/clip correction. Pausar-corregir-guardar un clip con consumidor real. GripPoints/MatePoints/FitProfiles, una sesión bimanual, fitting por etapas/DOF/tolerancias/simetría/histéresis, safe drive y rollback; Jolt manda e IK contacta. Probar llave/batería y puerta sin solver particular por objeto. Save restaura o cancela coherentemente una sesión, no serializa punteros.
 
-## N5 — Motion Studio, IK e interacción bimanual
+## N6 — JericoUI, inventario, secuencias, narrativa y Save
 
-**Depende:** N4 e importación de skeleton/clip. **Resultado:** manos/personaje manipula objetos Jolt con contacto veraz y corrección de animación persistente.
+Reusar LyShine/Shine/Maestro por piezas verificadas, sin merge de rama entero ni nombres AZ finales. UI rui2d/rui3d→rui, Luau/tweens/grid/hover/drag/preview3D, localización rlang/rloc/rfont, input/focus/accesibilidad y World-space/RTT. Inventory/Items/Item Studio poseen estado, UI presenta. Sequencer rseq maneja cámaras/curvas/eventos por canal y devuelve control al stop/skip/cancel; no inmoviliza player por defecto.
 
-EMotionFX/skinning/graph primero. Separar rskel/rrig/ranim; bones/weights/FK/IK/retarget/clip editing; pausar-corregir-guardar. GripPoints, sockets, InteractionSession y Fit reusable para llave o batería. No solver distinto por objeto.
+Save por provider/version con restore candidato/corrupción/backup; Dialogue/Quest/Journal y replay QA local. Content packs/campañas existentes como datos offline cuando sean necesarios, **sin comercio, entitlements remotos, online accounts ni plataforma DLC**.
 
-Aceptación: IK no teletransporta body; bimanual sin dos writers; cancel/destrucción libera reservas; corrección sobrevive cook/runtime. Fit usa tolerancias anisotrópicas, simetrías y etapas/DOF, con hysteresis/rollback y safe-drive en Jolt. Fijar explícitamente handoff al estado seated y política Save/Restore de sesiones activas: restaurar segura o cancelar con estado coherente, nunca guardar punteros de solver. Desktop y XR comparten contrato.
+## N7 — audio y VFX integrados
 
-## N6 — UI, inventario, narrativa, secuencias y persistencia
+Backend abierto privado, SoundEvents/mixer/voices/streaming/2D/3D/zonas/portales/oclusión y material físico→sound sets. Luau/contacto/sequence usan el mismo audio; device loss/unload seguros. OpenParticleSystem Preview se compara antes de adoptar; emitter/flipbooks/rpart/culling/overdraw visibles. Lighting atlas/Smolder después de medir un caso; sin gameplay dependiente de readback masivo.
 
-**Depende:** N3/N5. **Resultado:** UI Luau con inventario real y una secuencia cámara/animación/eventos, save/load y localización.
+## N9 — navegación e IA local
 
-Auditar LyShine/shine/Maestro sin fusionar ramas enteras. rui2d/rui3d→rui, rlang→rloc, rfont; grid/hover/drag/drop/preview3D/tweens/timelines. Item Studio e Inventory son distintos; UI no escribe estado a escondidas. Narrative Dialogue/Quest/Journal por subverticales.
+Recast/Detour privado fijado y disponible localmente, provider geometría/física compatible con Jolt, dirty tiles/links/agent shapes/repath. No confundir tests PhysX con runtime de navegación ni navmesh de suelo con caminar por techos.
 
-Aceptación: UI/input/focus/texto/localización, inventario consistente, save corrupto rechazado, restore transaccional, sequence stop/skip/cancel devuelve controles. No forzar movimiento total del player por una cámara. Audio/VFX provisional no acredita N7.
+HTN puro al planificar, sensores/memoria/relaciones/territorios/manadas/colonias, reservas y acciones cancelables/presupuestadas. Debug por entidad muestra decisiones/rechazos y aprendizaje individual/compartido desde resultados. Caza/transporte al nido/bait/contramedida conservados y guardables. Esto es IA single-player, NO multiplayer.
 
-## N7 — JericoAudio y JericoParticles
+## N10 — perfiles adicionales y OpenXR
 
-**Depende:** N2/N3/N6. **Resultado:** SoundEvents y VFX authorables/cocinados en editor/runtime.
+2D/2.5D/pixel/isométrico/híbrido/vehículos existentes comparten el motor. Sprites/tilemap/normales/luces/sorting/plane constraints/pixel snap, input/posesión y Jolt. No retrasan el núcleo BSP/geología. XR es contrato desde N0/N1 y aquí se prueba headset/actions/swapchains/haptics/pose/loss/resume/UI/agarre. Bindings DirectX12/Vulkan según soporte real de plataforma/runtime, sin inferir parity por un test desktop.
 
-MiniAudio/backend abierto privado, mixer/voice/streaming/2D/3D/zonas/portales/oclusión con budget, Physical Material→sound sets. OpenParticleSystem Preview se evalúa contra emitter/flipbook/curves/culling/lighting/authoring requeridos, no se adopta ciegamente.
+## N11 — cierre de integración, identidad y distribución
 
-Aceptación: un evento desde Luau/contacto/sequence converge en un solo audio; device loss/unload sin voces huérfanas. Partículas de polvo/chispas/flipbooks con presupuesto de overdraw/CPU/GPU; gameplay no depende de readback masivo. Smolder y atlas de iluminación se evalúan después del sistema base, no son bloqueantes.
+Completar migración JE iniciada en cada owner, composición nativa y retirada de rutas Gem productivas. Solo DX12/Vulkan en distribución; no AWS/multiplayer/servers/otros renderers. Excepciones de dependencia/notices explícitas y legales. No reset masivo ni eliminación de archivos desconocidos.
 
-## N8 — RMod, PWAS/EPLS, RBrush avanzado y mundo/entorno
+Catálogo `.r*` y `.epak` real, ABI independiente, chunks/deps/hash/bounds/version y source-free. Delta/overlay/rollback y protección local se incorporan donde se requieran; no criptografía propia ni servicios online. Algoritmos/keys/licencias auditados, hash no es firma. Bootstrap/build desde cache permitida offline, falta de paquete falla sin fallback a Amazon. Directorio de producto con ejecutable/paquetes/bibliotecas y recursos/notices de terceros necesarios.
 
-**Depende:** N2/N4/N7. **Resultado:** construir un entorno modular editable, con redes/soportes/variantes/cables y detalle no destructivo.
+## N12 — aceptación y rendimiento continuo
 
-Part library configurable, ports/sockets, rutas y fittings (incluidas intersecciones manuales), snap con histéresis, flanges y soportes suelo/pared/techo mediante World/Jolt. Rectas generadas con UV; joints/piezas no se estiran arbitrariamente. Edge chains, damage/bake, catenaria y cadenas 16/32/64. Doors/ventanas/muebles como presets, no hardcode del core.
+No es la primera etapa de optimizar. Cada N ya mide y muestra. Aquí cerrar matriz de pares gráficos, recorridos editor/runtime/cook, namespaces/source/generated/ABI, package/link graph, privacidad/offline, crash/hang/soak/fuzz/device/focus/session loss, incremental rebuild, accesibilidad y calidad.
 
-PWAS propone respetando locks/overrides/GUID y layout manual; EPLS capas/señales sin segundo Environment. RBrush paint/stamp/scatter/material/vertex/damage con outputs distintos. Terrain/vegetation/streaming/HLOD y ambiente se amplían por necesidades reales; coste medido. Destrucción prefracture/bonds/fragmentos con Jolt y microdebris VFX.
-
-Agua superior/local, atmósfera/fog/clima/viento físico opt-in tienen subverticales con su aceptación; no se acreditan por el trabajo viejo. Underwater y breaking waves diferidos, flotabilidad DESIGN ONLY y geología integral no activa. GI raster se analiza sin portar Cry ni introducir RT escondido.
-
-## N9 — Recast/Navigation, HTN, relaciones y memoria
-
-**Depende:** World/physics/animation/script/save. **Resultado:** criaturas ejecutan planes explicables con navegación real, reservas y memoria persistente.
-
-Recast provider revisado al reemplazar PhysX, dirty tiles/links/agent sizes/repath y debug. HTN alto nivel con condiciones puras, queries asíncronas, acciones cancelables y budgets. GraphCanvas/GraphModel son frontend, no segundo planner. Visor por entidad muestra decisión, rechazo, percepción, target y memoria.
-
-Aceptación: araña transporta presa al nido; cuadrúpedos coordinan bait contra araña ciega; colonia/individuo aprenden de resultados confirmados y sobreviven save/load. Destruir target/unload/cancel no bloquea reservas. Nav de suelo no acredita trepar techos; modos extra requieren tests específicos.
-
-## N10 — perfiles 2D/2.5D/isométrico/vehículos y XR completo
-
-**Depende:** sistemas de juego compartidos. **Resultado:** perfiles adicionales sin engines paralelos; OpenXR verificable con visor real.
-
-Sprites/atlas/tilemaps, plane/depth constraints, sorting/pixel snap/cámara ortográfica, normales y luces 2D; isométrico conserva métricas/world/picking. Vehicle usa Jolt y semantic input/posesión, no física aparte. Consultar PRESENTATION_PROFILES_MASTER.
-
-OpenXR presente como contrato desde N0; aquí cerrar sessions/views/swapchains/actions/haptics/tracking loss, UI world-space y agarre compartido. Desktop stereo/mock no es validación de hardware. Vulkan Windows/Linux por separado, sin activar DX12 para pasar XR.
-
-## N11 — identidad, módulos, formatos finales y Shipping
-
-**Depende:** suficientes consumidores reales N1-N10. **Resultado:** distribución Jerico source-free y reproducible con cierre de dependencias.
-
-Migrar nombres/targets/paths y consumidores juntos; no simple CryAction→JericoAction ni replace global AZ. Consolidar por ownership, conservar bibliotecas privadas útiles y avisos legales. Retirar archivos/rutas redundantes solo tras prueba y manifest. Formatos r* y epak versionados, bounded, deterministic, ABI independiente; validar writer/reader/validator y consumidor real de cada uno. `.epak` requiere estudiar index/chunks y streaming, Zstd/BLAKE3 como candidatos pinneados, firma autenticada de release, política explícita de cifrado, delta overlays/rollback, ContentPack/DLC/CampaignRegistry y compatibilidad de saves; nunca atribuir soporte por renombrar un paquete.  no renombrar archivos O3DE para simularlos.
-
-Packaging en directorio final; no checkout/compiladores/source/XML propio/AWS account/servicios. Resolver LFS/3P hosting controlado, licencias Qt/transitivas y SBOM; offline real. Retirar PhysX y Lua/ScriptCanvas gameplay solo cuando no queden consumidores. Herramientas privadas y third-party notices se clasifican, no se borran por nombres.
-
-## N12 — endurecimiento y aceptación global
-
-**Depende:** matriz cubierta salvo diferidos autorizados. **Resultado:** recorridos completos en plataformas admitidas, rendimiento y UX sin afirmaciones ficticias.
-
-Crash/hang QA, fuzz de parsers/import/saves/packages, profiling/soak, device/focus/session loss, corruption/recovery, incremental cook, reproducible build y source-free. Performance/Balanced/Quality/Cinematic-Editor/VR/Pixel2D con presupuestos basados en mediciones, no números históricos de consolas.
-
-Verificar cada requirement ID, README/GOAL coherentes, deuda explícita, licencias/avisos y ausencia de dobles autoridades. El GOAL global solo cierra con todos los requisitos obligatorios o una decisión explícita que cambie alcance; no sustituir una familia por una demo.
-
-## Reglas permanentes
-
-No perseguir todos los papers. Investigación dirigida por problema/consumidor; resultado KEEP/ADAPT/REJECT/DEFER. Lección reusable en error book, evidencia actual en HANDOFF y directorio del vertical. Los proyectos anteriores permanecen intactos como historia/procedencia; no importan PASS ni código automáticamente.
+SIGGRAPH desde N1/N2/N8: por escena BSP/geología medir bottleneck, conservar baseline, aplicar algoritmo mínimo, comparar ON/OFF/ON e imagen/timings/memoria. Rechazar mejoras sin beneficio o con deuda de calidad. No adoptar una arquitectura/paper completo ni importar tuning de consolas. Más checks no equivalen a un motor usable.

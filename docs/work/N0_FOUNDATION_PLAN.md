@@ -1,88 +1,51 @@
-# N0 — plan de auditoría y baseline funcional
+# N0 — plan de baseline local JE y dos backends
 
-Para Codex: ejecutar tareas en orden mediante el flujo de planes disponible en su entorno, respetando AGENTS por encima de defaults de skills. No crear branches/worktrees ni subagentes fuera de los roles permitidos.
+**Goal:** base trazable y escena real que permita transformar BSP/UI sin AWS/multiplayer ni dependencia de descarga opaca.
+**Spec:** GOAL, AGENTS, JE_IDENTITY_AND_NATIVE_MODULES y JE_DEPENDENCY_AUDIT.
+**Estado:** READY TO EXECUTE; ninguna tarea se acredita como ejecutada por este documento.
 
-**Goal:** demostrar el O3DE base legalmente trazable y funcional sobre Vulkan antes de modificar sus sistemas.
-**Arquitectura:** conservar source/build/registro de O3DE. Una rama, un owner de build, dos plataformas con estados independientes. Registrar evidencia sin inventar código producto para justificar la etapa.
-**Stack:** C++/CMake/Qt6/Atom/Vulkan del snapshot; versiones reales de paquetes se verifican, no se actualizan a ciegas.
-**Spec:** GOAL, arquitectura nativa y expediente legal; ROADMAP N0.
+## Restricciones
 
-## Restricciones y atención especial
+Una rama development, un checkout y un owner de build. No code/stash/reset/force/borrado de trabajo ajeno. Dos renderers: DX12 y Vulkan; Windows ambos y Linux Vulkan. No red de juego/server/cloud/AWS. Bibliotecas privadas locales licenciadas permitidas, no librerías inventadas para eludir O3DE. Namespace JE desde código nuevo; bridges privados O3DE sólo migración documentada. Geología activa, BSP primero, sin RT de render ni flotabilidad autorizada.
 
-Sin transferir Cry; sin borrar árboles; sin RT/DX12/geología/flotabilidad; sin tokens enviados a LFS ajeno; sin afirmar runtime por lectura. No instalar FBX SDK/ATL/MFC nuevos. No usar comparación parcial GitHub como diff exhaustivo. El README upstream conserva instrucciones VS2019; el CMake real contiene referencias más recientes. Elegir generador/toolchain instalado y compatible, no exigir instalar VS2026 por su nombre.
+## Task 1 — estado real y cierre de dependencias permitido
 
-Casos a vigilar: checkout con cambios ajenos; LFS incompleto; una dependencia en catálogo pero no enlazada; scene que luce bien pero usa RT o assets remotos; runtime que solo funciona con Asset Processor/checkout disponible.
+- [ ] Confirmar repo/rama/HEAD/status/remotos; fetch y pull ff-only seguro; registrar qué cambios ya existen. Default administrativo distinto no cambia branch.
+- [ ] Inventariar toolchain/SDK/driver/plataforma y packages/materialización LFS, con versiones/hashes/licencias y uso tool/runtime. No auto-instalar componentes privilegiados.
+- [ ] Usar DEP-01/02 para revisar `.lfsconfig`, package server defaults, variables de entorno/fallback y downloader S3. Configurar destino local permitido sin credenciales AWS y sin llamadas a esos hosts.
+- [ ] Rastrear targets cloud/multiplayer/server/extra RHI, sus aliases/auto-generated registries/package references. No eliminar carpetas mientras haya datos/users no clasificados.
+- [ ] Seguir AzFramework→AzNetworking y consumidores locales para separar IPC necesario de transporte de juego. No inferir que un PUBLIC CMake edge implica todas las funciones presentes en binary; comprobar link/map después.
+- [ ] Generar expediente de dependencia por producto/perfil, con EXPECTED ABSENT/NECESSARY PRIVATE/TOOLS ONLY/TEMPORARY MIGRATION/BLOCKED. Falta de paquete local debe dar error específico sin fallback de descarga.
 
-## Tarea 1 — fijar identidad y preservar trabajo
+Verificación: fuente/configuración/outputs del grafo, sin build declarado aún. No bloquear el análisis independiente por un paquete faltante. No «arreglar» falta de fuente enviando PAT al LFS heredado.
 
-Archivos de evidencia a crear al ejecutar: `docs/work/evidence/N0/BASELINE.md` y `COMMANDS.md`.
+## Task 2 — configurar/compilar baseline admitido
 
-- [ ] Inspeccionar remotos, rama, status/HEAD; seguir CODEX_START para development sin reset/stash. Registrar cambios previos y no tocarlos.
-- [ ] Fetch y pull ff-only seguros. Confirmar que el SHA O3DE base es ancestro y verificar sus objetos `git cat-file -t`/`git show`/`git rev-parse <sha>^{tree}`. No cambiar checkout al pasado: el paquete documental permanece en HEAD.
-- [ ] Comparar metadata del origen O3DE y conservar LICENSE/SPDX/NOTICE. No importar historia JericoEngine2.
-- [ ] Comprobar default de GitHub y ajustarlo a development con CLI autorizado cuando sea posible; verificar salida. Falta de permiso se registra sin bloquear trabajo con branch explícito.
+- [ ] Localizar presets/targets/flags del SHA real, no repetir comandos antiguos del README ni suponer APIs/nombres de launcher.
+- [ ] Congelar entradas y ejecutar configure/build con logs/códigos de salida, lista efectiva de deps/paths/defines y despliegue. No reducir errores a warnings para afirmar éxito.
+- [ ] Separar matriz Windows-DX12 / Windows-Vulkan / Linux-Vulkan. El sistema operativo ausente queda NOT TESTED. La misma configuración de engine puede elegir backend, pero cada selección se prueba realmente.
+- [ ] Recoger linker map/imports y output files, consultar que no se seleccionó Null/otra API ni servidor de juego. Un shader o RHI source compilado no prueba presentación.
 
-Salida: identidad exacta y lista de cambios preservados. Resultado negativo: repo equivocado/cambios que impiden switch → stop de la operación peligrosa, no descarte.
+No cambiar todas las bibliotecas/Qt de rama sin fallo reproductible. Si se necesita corrección mínima de baseline, registrar RED/fix/GREEN y mantener source origin. No comenzar un rename general del engine para resolver un error local.
 
-## Tarea 2 — dependencias, LFS y toolchain
+## Task 3 — escena/editor/cook/runtime visibles
 
-Evidencia: `DEPENDENCIES.md`, `GEM_GRAPH.md`, `PLATFORM_MATRIX.md` bajo el mismo directorio N0.
+- [ ] Fixture sintético/licenciado con mesh PBR, luz/sombra/cámara, draw y frame final. Abrir editor, seleccionar/mover, Save/reopen y terminar procesos limpiamente.
+- [ ] Verificar Asset Processor y cook de contenido, luego launcher por la ruta baseline real; registrar fuentes que todavía requiera. No llamar formato final Jerico a un producto nativo O3DE.
+- [ ] Capturar imagen real con backend/version/settings y timings CPU/GPU/peak/resident memory, cold versus steady. P50/p95/p99 si el muestreo lo permite; no FPS de presentación inferidos de timers.
+- [ ] Probar paquete/fuente inválidos y ruta de error; entrada desconocida no borra proyecto ni sobrescribe artefactos aceptados.
+- [ ] Recorrer editor/cook/run con red bloqueada y cache fuente completa; documentar cualquier conexión intentada. Prueba cache incompleta en copia de fixture, no borrando cache del usuario: error sin AWS/fallback.
 
-- [ ] Leer `.lfsconfig`, `git lfs env`, hooks/config efectivos, `.gitattributes` y package server config. Separar lectura pública histórica de subida de binarios privados. No enviar PAT a CloudFront por seguir un comentario. Registrar hosts efectivos y plan de mirror controlado.
-- [ ] Inventariar `engine.json`, manifests Gem, CMake targets/aliases/services y dependencias de Editor/runtime/builders. Recorrer transitivas; `dependencies:[]` no prueba ausencia de 3P/CMake coupling.
-- [ ] Confirmar CMake: mínimo source `3.25`, recomendación del snapshot `4.2.3`; solo VS18 exige la condición 4.2 indicada. Registrar generador/compiler instalados, Python, Qt/PySide, Vulkan loader/driver/layers y GPU disponibles. No concluir toolchain real desde README antiguo.
-- [ ] Comprobar los paquetes Windows declarados Qt/PySide6 6.11.2, DXC y otros frente a los artefactos efectivos. Registrar hash/licencia/uso. No fusionar rama qt-6.12.0 por ser más nueva.
-- [ ] Clasificar AWSNativeSDK/AwsIot/telemetry/cloud, servicios, build hosting y enlace real. Auditar OpenSSL efectivo y riesgo de soporte antes de Shipping; no aplicar update de ABI sin tests.
-- [ ] Resolver materialización de assets/LFS estrictamente necesarios desde origen autorizado y verificar integridad, incluyendo `git lfs fsck` sobre lo obtenido. Pointer no descargado no es asset válido.
-- [ ] Revisar soporte/interfaces OpenXR y multiview en el árbol/dependencias: qué existe, falta o requiere módulo externo licenciado. Resultado de auditoría, no instalar otra plataforma ni afirmar VR funcional.
+Este baseline no acredita que todo AZ ya migró ni que todas las capabilities Gem ya se absorbieron. Marcar deuda concreta, no PRODUCT PASS.
 
-Salida: dependencias directas/transitivas iniciales y bloqueos exactos. Inventario no equivale a aprobación jurídica completa.
+## Task 4 — preparar N1 con source audit limitado a BSP
 
-## Tarea 3 — compilar el baseline sin reescritura
+- [ ] Leer WhiteBox tool API/CSG/component modes/asset handlers/undo y sus dependencias. DEP-05..08 ofrece puntos de partida reales, no copia automática.
+- [ ] Especificar operación completa de cuarto+apertura puerta/ventana con UV/material/region IDs, transform/tolerances, resultado vacío válido y failure rollback.
+- [ ] Localizar funciones existentes de viewport/transactions/cook; nombres reales y tests. Plan de JE::BSP/Geometry dentro del engine, targets/generated files/resources y UUIDs afectados.
+- [ ] Definir captura antes/después y coste de edición/reconstrucción, test Undo/save/reopen/runtime y progreso visible. No primer slice de clase vacía.
+- [ ] Handoff actual con evidencia lograda y límites; pasar a N1 en el par disponible sin inventar PASS en los otros.
 
-Archivos a leer: raíz CMakeLists/CMakePresets; `cmake/Platform` de la plataforma; `scripts` de bootstrap; `AutomatedTesting` o proyecto fixture admitido; los targets del build real. Outputs fuera de source y excluidos de commit salvo evidencias pequeñas.
+## Review focus
 
-- [ ] Elegir un solo directorio de build por plataforma/configuración y un solo owner; no builds paralelos sobre inputs mutables. Definir budgets de workers/memoria para no bloquear el escritorio.
-- [ ] Descubrir comandos actuales de registro/creación mediante help de scripts presentes. El README documenta `scripts\o3de.bat register --this-engine` y `create-project --project-path`; verificar que el script de este pin los admite antes de ejecutarlos.
-- [ ] Configurar usando CMake con source/build explícitos y caché 3P autorizada. Conservar comando entero y salida. Generador según toolchain comprobado, no ejemplo fijo VS2019 copiado.
-- [ ] Inspeccionar targets generados y construir Editor, Asset Processor y GameLauncher del proyecto real. El README muestra el patrón `<Project>.GameLauncher Editor --config profile`; no adivinar nombre de proyecto/ejecutable.
-- [ ] Si falla, reproducir y localizar primer error útil; buscar error book y código actual. Un fix mínimo admitido se prueba y registra separado del baseline sin modificar interfaces/familias ajenas.
-- [ ] Registrar configure/build exit codes, logs y binarios/hash. No marcar editor/render PASS todavía.
-
-Salida: ejecutables reales o blocker con target/log/comando exactos. No crear stubs de dependencias para lograr un build engañoso.
-
-## Tarea 4 — escena Vulkan, editor y datos cocinados
-
-Evidencia: `EDITOR_RUNTIME.md`, capturas/licencias del fixture y comandos de lanzamiento bajo N0. Usar captura nativa real, no mockups.
-
-- [ ] Crear/usar fixture sintético o contenido licenciado: mesh PBR, cámara, luz, sombras y material. Identificar renderer seleccionado en el arranque y device/driver efectivos.
-- [ ] Forzar selección Vulkan mediante configuración/argumentos realmente admitidos por el pin. Verificar que no se activan RT/DiffuseProbeGrid realtime ni fallback silencioso DX12. No borrar sus fuentes para desactivarlos.
-- [ ] Abrir Editor, seleccionar/mover/editar, guardar, cerrar y reabrir. Esperar finalización real del Asset Processor y registrar errores/cancel; no medir una escena con shaders pendientes como steady state.
-- [ ] Cocinar/bundlear con herramientas existentes; ejecutar GameLauncher con productos admitidos. Retirar acceso a source/Asset Processor de manera reversible en entorno de prueba sin borrar originales; comprobar dependencias reales.
-- [ ] Si la ruta baseline solo prueba runtime cooked pero no source-free, registrar exactamente la dependencia restante. N0 parcial puede permitir trabajo focal, no se marca cierre total del gate.
-- [ ] Cerrar, relanzar y comprobar ausencia de callbacks/recursos huérfanos de la prueba. Registrar crash/errors, no esconderlos cerrando diálogo.
-
-Salida: Editor/Runtime reales, productos/escena/renderer y límites. Aceptar baseline O3DE no congela su formato como Jerico final.
-
-## Tarea 5 — coste, diagnóstico y controles
-
-Evidencia: `PERFORMANCE_BASELINE.md`, métricas originales y `VERIFICATION.md` bajo N0.
-
-- [ ] Medir cold start, import/cook, respuesta del editor y steady CPU/GPU; resolución/cámara/settings fijos, GPU/driver/build/logs. Registrar p50/p95/p99 cuando haya muestras suficientes y cantidad de muestras.
-- [ ] Registrar RAM pico/residente y VRAM observada, diferenciar cache/payload/transient copies. No usar solo el tamaño del archivo como budget.
-- [ ] Usar profiler/Atom/RenderDoc o herramienta disponible con permisos actuales. Documentar counters no accesibles, sin cambiar políticas globales de driver.
-- [ ] Probar resize/minimize/focus/unload/reload y asset inválido acotado; controles ON/OFF/ON solo cuando verifiquen una causa/coste real. No dumping de buffers por frame en modo normal.
-- [ ] Repetir en otra plataforma cuando exista entorno. Marcar lo no ejecutado, sin transcribir medidas de Cry ni asumir equivalencia.
-
-Salida: baseline medido, no una promesa genérica de ser más rápido.
-
-## Tarea 6 — cierre y siguiente integración
-
-- [ ] Completar evidence table: step/platform/inputs/command/result/hash/limits. Revisar checklist de legal/graph/compilation/editor/runtime/performance.
-- [ ] Actualizar HANDOFF y ACTIVE_SLICE con estado verdadero. Si hay baseline funcional, preparar N1 con owner/archivo/consumidor exactos encontrados; no scaffold de once subsistemas.
-- [ ] Revisar diff, `git diff --check`, staging explícito, commit honesto y sync/push development por el padre. Fetch posterior y SHA remoto igual al publicado.
-- [ ] Continuar siguiente resultado no bloqueado dentro de GOAL; no pedir al propietario que vuelva a decidir sistemas ya fijados.
-
-## Antes de implementar cualquier subsistema posterior
-
-El plan de cada vertical concreta nombres/archivos/API tras inspección del source. Debe contener prueba de aceptación y negativa, productor/consumidor, licencia, owner, cambios de editor/cook/runtime y criterio de retirar transitorio. El roadmap no inventa interfaces de APIs que todavía no se leyeron. La implementación puede ser profunda, pero debe llegar al consumidor real en esa misma vertical.
+Paquete faltante debe fallar offline; entrada corrompida no cambia asset activo; scene/reference identities sobreviven rename; teardown limpia listeners/jobs/resources; backend selector no cae a Null/otro. Cada uno se verifica en el task que lo produce. Docs/source inspection no cuentan como ejecución de esas verificaciones.

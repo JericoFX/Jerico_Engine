@@ -1,89 +1,63 @@
-# Motion Studio, interacción, Sequencer, UI, audio, VFX y XR
+# JE Motion Studio, interacción, UI, audio, VFX y XR
 
-Estado: contrato de destino N5-N7/N10. No acredita EMotionFX adaptado, Jolt ni Luau integrados. Fuente histórica principal: AUDIO_VFX_ANIMATION_UI_MASTER de JericoEngine2; completar la lectura del tramo relevante antes de implementar.
+**Contrato vigente 2026-10-10, no implementación acreditada.** GOAL/contrato JE superiores. N5/N6/N7/N10 preservan capacidades existentes sin postergar BSP/geología. Nomenclatura propia/adaptada JE::, bibliotecas privadas con licencias. Solo DX12/Vulkan y single-player local; multiplayer/red/servicios AWS excluidos, no deferred.
 
-## 1. Reutilización antes de reescritura
+## Reutilización y datos
 
-Auditar EMotionFX y su integración Atom para skeleton/clip/graph/skinning, Maestro/TrackView para timelines, LyShine y rama shine para UI, MiniAudio/AudioSystem para audio y OpenParticleSystem para VFX. Conservar comportamiento útil con procedencia permitida; no traer CryAnimation, Scaleform, Mannequin o middleware de CryEngine2.
+Auditar EMotionFX/EMotionFXAtom, Maestro/TrackView, LyShine y rama Shine como fuente focal, MiniAudio/AudioSystem, OpenParticleSystem Preview. Integrar implementación útil con consumers/builders/resources/registro bajo owner JE dentro del engine. No convertir todo Jerico en un Gem ni traer CryAnimation/Scaleform/Mannequin de CryEngine2.
 
-Poder reproducir una animación no prueba herramientas de rig, pesos o IK. Un editor UI existente no prueba Luau ni los formatos Jerico. OpenParticleSystem sigue marcado Preview en el manifest leído; todo candidato necesita prueba de producción.
+.rmesh=geometry/skin, .rskel=hierarchy/rest/bind/unidades, .rrig=roles/control/constraints/IK/contact, .ranim=curves/clips/events, .rgraph=anim evaluation, .rseq=orquestación reusable. No serializar tipos privados EMotionFX/Jolt/AZ ni confundir skeleton con rig. Migrar identidad de type/UUID/codegen con el formato.
 
-## 2. Datos de animación
+## Motion Studio y edición
 
-`.rmesh`: geometría, skin weights/indices. `.rskel`: jerarquía/rest pose/unidades/bind data. `.rrig`: roles, controles, límites, solvers y contacto. `.ranim`: curvas/clips/eventos. `.rgraph`: resultado del graph de animación. `.rseq`: orquestación temporal reusable. No guardar tipos internos de EMotionFX ni confundir rig con skeleton.
+Crear/corregir bones/pivot/hierarchy/weights, mostrar/normalizar/mirror influencias, FK/IK/Control Rig/retarget/layers/curves/keyframes. Autoría de rigs de anatomía distinta por controles generales; auto-rig/weight propone para revisión, no magia para toda anatomía. Blender/Cascadeur opcionales para casos especializados, no requisito para reparar bone/pose/clip dentro del editor.
 
-Motion Studio debe crear/corregir huesos, pivots, jerarquía y pesos; normalizar y mostrar influencias, espejar cuando sea compatible, editar FK/IK, retargetear, trabajar layers/curvas/keyframes y corregir clips importados. Auto-rig/auto-weight propone y permite revisión, no promete resolver toda anatomía. Cascadeur/Blender son herramientas externas opcionales, no requisito para reparar un hueso o una pose.
+Workflow: importar→inspeccionar skeleton/pesos→reproducir→pausar→ajustar IK/pose→guardar corrección→reopen/cook/runtime. Distinguir edición de clip, offset de rig y preview efímero. Undo no corrompe fuente ni hace permanente simulación por accidente.
 
-Flujo exigido: importar personaje/manos → comprobar skeleton/weights → reproducir clip → pausar → ajustar IK/pose → guardar corrección como datos de animación → reopen/cook/runtime conserva el cambio. Distinguir modificación del clip, offset del rig y preview temporal. Undo/Redo no corrompe el source.
+## Física, grips y bimanual
 
-## 3. Objetos interactivos y verdad física
+Jolt posee body/constraint/masa/COM/inertia/contactos, IK muestra contacto. Ningún body dinámico recibe transform de dos writers. Door=collider/body/hinge/grip/latch opcional; drawer=slider; valve=constraint/interaction. No DoorPhysics/DrawerPhysics/BatterySolver especiales.
 
-Jolt posee cuerpos, colisiones, masa/COM/inercia y constraints. IK representa dónde contactan manos/patas; no mueve el body por una vía paralela. Un dynamic body no tiene dos writers de transform.
+GripPoint/GrabPoint=agarre, SceneSocket=accesorio, MatePoint=encaje, InsertionSocket/FitProfile=inserción. Ports de redes no se vuelven grips/flotadores sin rol explícito. Un Fit framework con target frames, tolerancias anisotrópicas/simetrías/DOF/etapas, residual, histéresis y force/velocity budgets; asistencia de snap explícita, safe drive por Jolt, rollback/cancel y seated handoff.
 
-GripPoint/GrabPoint describe agarre; SceneSocket ubicación de accesorio; MatePoint define relación de encaje; InsertionSocket y FitProfile definen inserción permitida. No reutilizar un port de tubería o socket genérico como flotador o grip sin rol explícito.
+Una InteractionSession gestiona participantes/objeto/grips/reservas/etapa. Manos principal/secundaria/pesos de contacto sin pelear transforms, segundo actor necesita permiso/reserva. Destroy/unload libera/cancela seguro; save de sesión tiene política explícita restaurar coherente o cancelar, sin pointers de solver.
 
-Door = body + collider + hinge + grip + latch opcional. Drawer = body + slider + grip. Valve = body/constraint y puntos de interacción. No crear DoorPhysics/DrawerPhysics/BatterySolver por objeto. Un Fit framework resuelve frame objetivo, tolerancias, ejes permitidos, secuencia de etapas, residual, velocidad/fuerza admitida, confirmación y salida/cancel. Cualquier asistencia artificial de snap se muestra y limita.
+Inspector y viewport editan colliders/COM/inertia/joints/pivot/axes/limits/motor/spring/friction/break, Grip/Mate/Socket/fit residual/force/debug. Play/Pause/Step/Reset usa Jolt real, cambios al safe point. Probar puerta/manivela/cajón/llave/pila/fusible/tapa/insertos como escenarios del mismo framework, authoring→Undo→save→cook→runtime.
 
-Un InteractionSession posee participantes, objeto, agarres, reservas y etapa. Bimanual no son dos sistemas de mano peleando. Una mano principal/secundaria o pesos de contacto se configuran y se resuelven consistentemente. Dos actores que quieren el mismo objeto requieren reserva/permiso; al desaparecer uno el sistema libera recursos de forma segura.
+## Sequencer
 
-Casos de destino: puerta/manivela, cajón, batería/fusible, llave, tapa y pieza insertada; manos FPS con contact correction, reposicionamiento y animaciones de coger/soltar. Prueba con Jolt paused/step/reset, no animación decorativa.
+Modelo común de tracks tipados/curvas/keyframes/eventos/cámara/rails/audio/animation/environment/UI. Reusar evaluación Maestro y migrar formato/binding/owner a JE, no timeline engine paralelo por panel. Microanimación local puede quedar en rui; reusable/cross-system rseq.
 
-## 4. Herramientas físicas y fitting
+Control por canal explícito. Una cámara fija no toma locomoción completa del player. Stop/cancel/skip/destroy restaura control/overrides/callbacks; event behavior para seek/reverse/loop definido. Preview no ejecuta daño/gameplay destructivo sin modo autorizado. Probar clocks/pausa/deltas sin esconder diferencias mediante roundtrip float.
 
-Seleccionar mesh → fit collider → masa/material/COM → Add Hinge/Slider → colocar pivot/eje con gizmo → límites/fricción/motor/spring/break threshold → grip/socket → Play/Pause/Step/Reset → aplicar o deshacer.
+## JericoUI y localización
 
-Viewport muestra colliders/contactos, COM/inercia, frames/ejes de constraints, límites, target IK, residual de fit, fuerza/torque y owner de reserva. Cambios incompatibles con step en ejecución se aplican en un límite seguro. Save/reopen y `.rcoll/.rpref/.rrig` preservan significado.
+rui2d/rui3d authoring→rui cooked. Screen-space/world-space/render-target y content3D admitido, layout/anchors/pivots/focus/clipping/z-order/DPI; controls/text/images/scroll/grid/drag/drop/3D item preview. Luau tweens/event handlers usan mismo Commands/Events/identity, no ActionScript ni VM UI adicional.
 
-## 5. Sequencer
+Inventory posee transacciones, slots/hover/tooltip/rotation son presentación. Drag/full/close menu no duplican ni pierden items. Debug layout/hit/focus. rlang→rloc, fallback/plural/format/UTF8/shaping/direction según soporte y rfont/atlas; traducciones Qt del editor separadas, i18nsupport branch no equivale a localización completa del juego.
 
-Un modelo temporal con tracks tipados, keyframes, curvas, eventos, cámara, rail/spline, audio, animación y parámetros ambientales/UI. Maestro es candidato de implementación, no ABI final. Reutilizar evaluación/curvas donde sirva; no crear un evaluador distinto para UI, cine y Motion sin necesidad.
+User settings locales: input remap/subtitles/captions/scale/reduce motion/photosensitivity/camera comfort/haptics y display confirm/revert. Texto/iconos además de colores. Entity presentation profiles cambian aspecto sin duplicar gameplay; colisión sólo cambia explícitamente bajo Physics.
 
-Al reproducir, la secuencia adquiere control explícito por canal. Una cámara fija no toma por defecto el movimiento del jugador. Stop/cancel/skip/destroy restaura políticas de control, overrides y callbacks; eventos tienen semántica definida al hacer seek/reverse/loop. Preview del editor no ejecuta daño/gameplay destructivo salvo modo admitido.
+## Audio
 
-UI microanimación puede ser local al `.rui`; timelines reutilizables/cross-system van a `.rseq`. No obligar una asset sequence independiente para cada hover. Curvas y orden de evaluación deterministas bajo los mismos inputs; registrar divergencias de clocks, no esconderlas con conversiones float.
+Una autoridad JE Audio/SoundEvent/mixer/voices/streaming, low-level backend abierto privado. MiniAudio candidato a auditar frente al trabajo Jerico existente: source pin/license/codecs/lifecycle/performance. Nada Wwise/FMOD/cloud obligatorio.
 
-## 6. JericoUI, localización y accesibilidad
+2D/3D/ambient/attached, zones/portals/occlusion/obstruction/reverb, voice priority/virtualization/buses/ducking/preview; HRTF opcional con licencia/coste. Consultas físicas presupuestadas y listener compartido XR. PhysicalMaterial→rsoundsurface pasos/impactos/fricción, no material físico paralelo. Stop/unload/device switch/EOF/corrupt streaming/pausa se prueban; audio clock no se ata a graphics framerate.
 
-`.rui2d/.rui3d` de autoría → `.rui` runtime. UI ScreenSpace, world-space y render-target; nodos con contenido/modelos 3D cuando se admita. Layout/anchors/pivots/focus/clipping/input/z-order/scale; controles, texto, imágenes, scroll/grid, drag/drop y preview 3D de inventario. Luau tweens/handlers usan la misma API Commands/Events, sin VM propia de UI.
+## VFX
 
-Inventory conserva datos; slots/hover/tooltip/item rotation son presentación. Grid no debe duplicar los objetos al hacer drag ni perder una transacción si se cierra el menú. Debug de hit targets, foco y layout.
+Polvo/vapor/chispas/humo/EmberGen flipbooks de datos licenciados, coste primero. OpenParticleSystem sigue candidato Preview, revisar sim CPU/GPU/curvas/graph/spawn/bounds/culling/overdraw/transparent/light/cook; no adoptarlo sin pruebas. rpart=VFX, vector fields/wind cuando haya consumidor y un Environment común.
 
-`.rlang` fuentes/textos y `.rloc` cocinado; fallback, pluralización/formato, UTF-8, dirección/shaping según soporte y fuentes `.rfont`. Qt translations del editor se gestionan por separado; `i18nsupport` no implementa automáticamente el sistema del juego.
+VDB import tool-only puede admitirse de forma independiente; no backend global de geología→VDB. Gameplay proyectiles/daño/triggers no dependen de miles de GPU particle readbacks. Técnicas idTech lighting atlas/Smolder se miden después del sistema base, no nuevo framework renderer.
 
-Settings: remapping, audio, subtítulos/captions, escalado, Reduce Motion, photosensitivity, camera comfort y haptics. Confirm/revert para un display mode arriesgado. Indicadores no dependen solo de color. Perfiles visuales alternativos no bifurcan gameplay.
+## OpenXR
 
-## 7. JericoAudio
+Capacidad nativa comparte World/JE/Luau/Jolt/input/interaction/UI/audio. Diseñar vistas/poses/histories no mono-only desde foundation, verificar runtime/plugin fuente/licencia/pin antes de asumir soporte. Session/reference spaces/actions/swapchains/composition/haptics/timing/loss/reentry y sensores según dispositivo.
 
-Una autoridad SoundEvent/mixer/voz/espacialización, compartida entre editor, Luau, física, animación y sequences. Audio 2D, 3D, ambiental, attached, zonas y portales; streaming, voice limits/prioridad/virtualización, buses, ducking y preview con presupuestos. Low-level backend privado: auditar MiniAudio y el trabajo original de Jerico antes de elegir código. Sin Wwise/FMOD obligatorios.
+Backend binding DX12/Vulkan conforme a plataforma/runtime real; no otras APIs. Desktop stereo/mock no acredita headset/comfort/haptics. Pose tracking no mueve cuerpo sin política; simulation camera y head pose separadas, late update sólo probado. Tests por par sistema/API/headset independientes; no DX12 Linux gate.
 
-Oclusión/obstrucción consultan geometría/física con budget, reverb y portales tienen estado explícito; no un raycast por voz cada frame sin medida. HRTF opcional según licencia/coste y configuración; XR no crea un audio engine distinto. Physical Material enruta impacto/fricción/pasos mediante `.rsoundsurface`; no reemplaza el material físico.
+## Aceptación y diferidos
 
-Stop/destrucción de entidad, cambio de dispositivo, pausa y scene unload cancelan o trasladan voces conforme a política. Tiempo de audio no se fuerza al framerate gráfico. Streams inválidos/EOF/corruptos fallan de forma acotada.
+N5 contacto/clip correction/fitting llave o pila/bimanual con Jolt y datos guardables. N6 UI/inventory/localización+sequence cancel devuelve control. N7 sonido común desde scripts/contacto/secuencia y emitter flipbook profiling/cook. N10 headset/loss/resume/world UI/interaction reales. Cada familia demuestra authoring/persistencia/cook/runtime y coste, no mock.
 
-## 8. JericoParticles
-
-Costo primero: polvo, vapor, chispas, humo y flipbooks (incluido material generado con EmberGen cuando sus derechos lo permitan). `.rpart` es producto VFX; import de VDB/volúmenes solo en tools y con datos runtime propios. No revive geology→VDB.
-
-Auditar OpenParticleSystem: sim CPU/GPU, curvas/graph, spawning, bounds/culling, overdraw, transparencias, collision approximation, iluminación, eventos y cook. Vector fields/viento solo con uso real y budgets; un campo común de Environment.
-
-Proyectiles/daño/trigger son gameplay/physics, no lectura obligatoria de miles de partículas GPU. Eventos visuales pueden degradarse por LOD sin cambiar el juego. Técnicas idTech de lighting atlas y Smolder son etapas comparativas posteriores, no dependencias del primer emitter.
-
-## 9. OpenXR integrado
-
-XR oficial comparte World, Luau, Jolt, input, interacción, UI, audio y render Atom/Vulkan. Localizar e inventariar el soporte OpenXR disponible o externo, licencia y pin; no afirmar que `engine.json` ya lo activa.
-
-Session lifecycle, views/projections, swapchains, reference spaces, frame timing, actions, controller/hands según soporte, haptics, composición y estados de pérdida/reentrada. No convertir poses de tracking en simulación física sin política. Separar camera simulation de head pose; late update/reprojection solo con contrato probado.
-
-Validación en headset real cuando haya hardware. Desktop stereo/mock no acredita session, input ni confort. Windows/Linux tienen estado separado y drivers/runtime registrados. Interfaces limpias permiten futuros backends; no abrir DX12 para cerrar XR actual.
-
-## 10. Criterios por vertical
-
-N5: esqueleto/rig/clip y mano que agarra puerta Jolt con límite; pausar/corregir/guardar/cook; bimanual sin doble writer; llave o batería prueba el Fit reusable.
-
-N6: inventario visual Luau con hover/drag/tween/preview y save; sequence cámara+audio devuelve control tras stop/cancel/skip; localización cambia sin romper referencias.
-
-N7: SoundEvent desde Luau y contacto físico con misma autoridad; scene unload sin voz huérfana. Emitter/flipbook authorable, culling y tiempos/memoria observados en runtime cocinado.
-
-N10: headset, input/pose/haptics/UI world-space y agarre comparten mismo juego; sesión perdida/reanudada no deja body/cámara/input colgados. No se afirma un test de hardware no ejecutado.
-
-Diferidos explícitos: facial/performance capture completo, motion matching obligatorio, neural animation, per-finger física obligatoria y multiplayer de sesiones de interacción. No bloquear el caso de uso principal con ellos.
+Facial/performance capture completo, motion matching/neural obligatorio, per-finger física y full offline editorial permanecen diferidos. Multiplayer de sesiones de interacción NO es futuro de este plan: está excluido. Flotabilidad sigue DESIGN ONLY aunque exista VehicleGame o water.

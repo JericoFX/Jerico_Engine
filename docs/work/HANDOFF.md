@@ -1,35 +1,25 @@
-# Handoff — transición documental O3DE/JericoEngine
+# Handoff — última directiva JE/BSP/geología
 
-Fecha: 2026-10-10. Única rama: development. Estado de implementación nuevo: **NOT VERIFIED**.
+Fecha 2026-10-10. Rama única development. Nueva implementación **NOT VERIFIED**.
 
-## Hecho en esta publicación
+## Cambio del propietario incorporado
 
-Auditoría remota de las 23 ramas, sus HEADs y comparaciones; comprobación del SHA/tree base contra o3de/o3de; lectura del GOAL/AGENTS y contratos relevantes de JericoEngine2, atlas/idTech6/PWAS de JericoEngine1 y manifests/configuración O3DE. Redacción de objetivo, roles, arquitectura, masters, mapa de rescate, 93 requisitos, SIGGRAPH y plan N0.
+Sin AWS ni multiplayer en producto, no optional/deferred. Código propio/adaptado JE:: real, no AZ final ni alias decorativo. Solo DX12/Vulkan (Windows ambos, Linux Vulkan). Gems necesarios absorbidos dentro del engine. BSP/UI/materiales visibles primero, geología reactivada y optimización SIGGRAPH continua; ideas de otros motores permitidas conforme a licencia.
 
-El commit es documental: no contiene engine implementation, shaders, Gems migrados, dependencias instaladas ni pruebas de runtime. Sus documentos se autoidentifican como diseño o instrucciones de futura ejecución. Consultar VERIFICATION_REPORT para cobertura/limitaciones.
+Conservar materiales PBR/ORM/separados, formatos r*/epak, gameplay/animation/UI/physics/AI/XR locales existentes. No expandir a plataformas externas. Buoyancy sigue DESIGN ONLY; RT/underwater y BSP→OpenVDB no se activan por la nueva orden.
 
-## Base y fuentes
+## Hecho en esta revisión
 
-O3DE `241c78b8064898a709cf1c5dd3535c6406763ef3`; árbol `db4b7d4a5d784d2283c95903f461e311d69704c8`. Historico JericoEngine2 `304d9d2e13704e4967e82a8d5a13a5a506be01d4`. El SHA de esta publicación se obtiene de `git log` tras sincronizar; no incrustar un hash autorreferencial inventado.
+Lectura real de dependencias CMake/CSG/paquetes: AzFramework→AzNetworking→OpenSSL/RapidXML/codegen; WhiteBox→Atom/editor/OpenMesh/Manifold y tests PhysX; CSG existente con geometría/validación y gaps de aceptación; Recast deps/pin v1.6.0/FetchContent; selección DX12/Vulkan Windows, Vulkan Linux; CloudFront/S3 default de packages y CloudFront LFS. Ver DEP-01..12 con blobs y alcance de lectura.
 
-## Decisiones consolidadas
+Actualizados los objetivos, identidad/composición, exclusiones, planes de ejecución y orden visible. Ningún namespace/source/build/backend/Gem ha sido convertido por escribir estos documentos. Ninguna prueba GPU/offline/linker ha sido ejecutada. Los commits históricos 013e887/a536fb7 contienen la planificación anterior y no son autoridad cuando contradicen GOAL actual.
 
-Development único; ramas antiguas lectura, sin merge/delete. O3DE/Atom/Vulkan/Qt6, módulos nativos; no Gem Jerico instalable ni engine paralelo. Jolt/Luau/OpenXR, EMotionFX/Maestro/UI/audio/VFX a auditar/adaptar; una autoridad de World/identity/assets/physics/render. Rescate de requisitos/SIGGRAPH, no código Cry. Qt6/PySide actuales declarados; no nueva migración Qt5 supuesta.
+## Próximo trabajo de Codex
 
-Vulkan Windows/Linux, DX12/RT diferidos; underwater y costa después; agua Cry cerrada históricamente no acredita O3DE. Geología integral inactiva; RMod/cables/edge/bake/daño/PWAS/EPLS vivos. Flotabilidad Enable Buoyancy DESIGN ONLY, sin permiso por esta transición. XR considerado en contratos desde N0, prueba de visor N10.
+N0 por el plan nuevo: repo/status/sync, dependencias permitidas locales, graph efectivo y baseline por pares disponibles. No consumir AWS para resolver build. Luego N1 cuarto/corredor/puerta/ventana con editor real, material/UV/Undo/save/cook/runtime y owner JE; N2/N4/N8 según necesidades, geología antes de completar todo gameplay.
 
-## Pendiente inmediato para Codex
+No redescubrir cada vez el roadmap ni bloquear por un tipo abstracto. Publicar resultados visibles con evidence y seguir el siguiente vertical no bloqueado. Cuando falte hardware/paquete, conservar NOT TESTED/BLOCKED específico y avanzar tareas independientes.
 
-Seguir CODEX_START y N0_FOUNDATION_PLAN. Verificar checkout/status/remotos y default branch. Al inicio el default era optimize_scriptcanvas_1; esta auditoría no dispuso de acción administrativa para cambiarlo. Ajustarlo con CLI autorizado y confirmar; development puede usarse explícitamente mientras tanto.
+## Pendientes que no se ocultan
 
-Auditar LFS CloudFront y 3P antes de materializar/subir privados. No se resolvió alojamiento independiente ni se descargaron todos los paquetes. Registro de licencias es inicial, no SBOM total ni aprobación legal.
-
-Crear evidencia real del baseline, elegir plataforma disponible y medir. No continuar la reparación sky de Cry ni declarar O3DE rápido/compilado. Mantener el repo histórico intacto.
-
-## Riesgos abiertos
-
-Dependencias/transitivas y Qt/linking; AWS build-hosting; baseline development no estable probado; Preview OPS; RT oculto en probes; navegación/provider de física; UI migration/formatos; CMake/README de épocas distintas; coste de sustitución de PhysX y Lua gameplay. Cada riesgo tiene owner/etapa en masters y matriz, no se trata como hecho resuelto.
-
-## Enmienda materiales y formatos — mismo día
-
-Se amplía la especificación con `docs/ASSET_MATERIALS_FORMATS_EPAK_MASTER.md`: pipelines de Asset Processor/Atom, materiales ORM y separados con semánticas explícitas, `.rmat/.rtext/.rmesh` y demás formatos Jerico, delta `.epak`, ContentPacks/campañas y firma/cifrado con política de diseño. La matriz pasa de 83 a 93 requisitos para dar pruebas independientes a estos elementos. **Solo documentación: codecs, Material Graph Jerico, firmas, cifrado, DLC y paquetes no se declaran implementados.**
+Build/Editor/Asset Processor/runtime y métricas reales, cierre completo offline/transitivo/licencias/SBOM, refactor IPC/red, identidad JE y migración UUID/codegen/cache, absorción de Gem resources/builders, conservación UV/material de CSG, Jolt/physics/nav y geología GPU/mesher/cook. Default branch administrativo no se afirma cambiado por este conector; development explícito es la rama de trabajo. Ningún otro repositorio o rama fue borrado.
