@@ -1,3 +1,19 @@
+# JericoEngine — base O3DE
+
+**Única rama de trabajo: `development`.** Repositorio de producto: `JericoFX/Jerico_Engine`.
+
+Empezar por [CODEX_START.md](CODEX_START.md), [GOAL.md](GOAL.md), [AGENTS.md](AGENTS.md) y el [índice de documentación](docs/README.md). El [roadmap](docs/ROADMAP.md), la [auditoría de las 23 ramas](docs/research/BRANCH_AUDIT_2026_10_10.md) y el [mapa de rescate de JericoEngine2](docs/migration/LEGACY_REQUIREMENT_MAP.md) definen esta transformación.
+
+Esta incorporación del 2026-10-10 es **documentación y planificación**, no evidencia de que el motor ya esté modificado, compilado o validado. Se conservaron código, Gems, assets, configuración y licencias upstream. El antiguo CryEngine2 no es la base de implementación ni una fuente de código automáticamente admitida. La integración será nativa, con Atom/Vulkan, Jolt, Luau y los contratos Jerico; sin un segundo motor ni instalación manual de Gems Jerico.
+
+La licencia de O3DE y las condiciones de terceros siguen aplicando: consultar [procedencia y dependencias](docs/legal/PROVENANCE_AND_DEPENDENCIES.md). La rama predeterminada de GitHub puede necesitar el ajuste descrito en CODEX_START; seleccionar development explícitamente.
+
+---
+
+## README upstream conservado
+
+El contenido siguiente pertenece al snapshot O3DE de origen. Sus instrucciones de herramientas pueden ser anteriores al CMake/configuración del árbol actual; el plan N0 exige verificarlas. No sustituye el objetivo ni la política legal de Jerico.
+
 # O3DE (Open 3D Engine)
 
 O3DE (Open 3D Engine) is an open-source, real-time, multi-platform 3D engine that enables developers and content creators to build AAA games, cinema-quality 3D worlds, and high-fidelity simulations without any fees or commercial obligations.
