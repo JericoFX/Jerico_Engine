@@ -1,0 +1,9 @@
+{
+  "status": "POSTFLIGHT_ACCEPTED",
+  "oiioManifestPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\extracted-package-manifest.json",
+  "oiioManifestSHA256": "5B467C1F13837C68EFA2E7EA7D6EE91E8A97E87E4C23F3CB1BFF9B0BBEC4D71F",
+  "expectedPackageFiles": 1219,
+  "extraManifestPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\root-extra-accepted-package-manifests.json",
+  "extraManifestSHA256": "5CF84D9C55405FDD3091759BA94E3532C06E71E79118D442EE33995308C1AC22",
+  "configureExit": 1
+}

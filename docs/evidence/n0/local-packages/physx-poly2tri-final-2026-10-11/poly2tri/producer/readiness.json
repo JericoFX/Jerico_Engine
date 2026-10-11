@@ -1,0 +1,42 @@
+{
+  "status": "IMPLEMENTED_NOT_COMPILED; HOLD",
+  "providerFiles": 8,
+  "immutableSourceFiles": 50,
+  "gitBlobMatches": 50,
+  "toolchainInputCount": 44,
+  "freezeCount": 121,
+  "freezeSHA256": "10210F23D5E9C88A52845DFCCB3A4131967A4F84D20B2527DFD2AF336CB58D64",
+  "CommonByteExactSHA256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+  "AST": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/CommonExecution.ps1",
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+      "ASTErrors": 0
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/PrepareAssignment.ps1",
+      "sha256": "AAD10C4234E4318D79CB7B01CF5B72C8B0D6B05208BD67D3A708D5D89F7D3B8F",
+      "ASTErrors": 0
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/RunConsumer.ps1.template",
+      "sha256": "9F4CB8A005E0AE6E3AB1EAE17CC2E5AD8FC6C823BA1DF3AB458C55DDD5498804",
+      "ASTErrors": 0
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/RunProducer.ps1",
+      "sha256": "5814BEEF32C9E010F772CA76F8BC8B71A7E5CE983A7C8FABCF7B9A941C966FD1",
+      "ASTErrors": 0
+    }
+  ],
+  "producerArgc": 6,
+  "consumerProposedArgc": 16,
+  "producerNativeExecutions": 0,
+  "consumerNativeExecutions": 0,
+  "consumerProposedCases": 12,
+  "limits": [
+    "No producer/archive/CRT/native/consumer/engine acceptance",
+    "No Assimp revision unification or full final link proof",
+    "Future consumer source roots/hashes must come from audited real extraction"
+  ]
+}

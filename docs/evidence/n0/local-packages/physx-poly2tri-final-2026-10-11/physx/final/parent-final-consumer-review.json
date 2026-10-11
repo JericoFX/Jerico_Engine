@@ -1,0 +1,15 @@
+{
+  "status": "FOCAL_FINAL_CONSUMER_MATRIX_VERIFIED",
+  "resultSHA256": "9AEFB3AEE8E1F659C13C835D233BFB33B8E8476C4AC5F184F97C50446F272C05",
+  "phasesExitZero": 13,
+  "verifiedRawLogs": 26,
+  "cases": 24,
+  "skips": 0,
+  "freezeMatches": 3765,
+  "archiveSHA256": "6A3655FA52AD06691F1B360B650557518C06494AC0E4EA7418158B7B63F4FC62",
+  "archiveBytes": 73160792,
+  "oldArchiveBytes": 88916080,
+  "reductionBytes": 15755288,
+  "pending": "Archive membership validation and engine integration/link/runtime",
+  "scope": "CPU transition provider only; no final Jolt or visible Editor acceptance"
+}

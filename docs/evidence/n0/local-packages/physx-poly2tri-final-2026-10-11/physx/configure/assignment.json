@@ -1,0 +1,52 @@
+{
+  "status": "NATIVE_NOT_RUN; parent review and sole Luna dispatch",
+  "configure": {
+    "executable": "C:/Program Files/CMake/bin/cmake.exe",
+    "arguments": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/private-source/physx/compiler/public",
+      "-B",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DCMAKE_GENERATOR_INSTANCE:PATH=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+      "-DPHYSX_ROOT_DIR:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/private-source/physx",
+      "-DCMAKEMODULES_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/private-helpers",
+      "-DCMAKEMODULES_VERSION:STRING=JE-official-4.1-a2c0428",
+      "-DCMAKEMODULES_NAME:STRING=JE-OfficialPhysXBuildHelpers",
+      "-DTARGET_BUILD_PLATFORM:STRING=windows",
+      "-DPX_OUTPUT_ARCH:STRING=x86",
+      "-DPX_OUTPUT_LIB_DIR:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries",
+      "-DPX_OUTPUT_BIN_DIR:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries",
+      "-DPX_GENERATE_STATIC_LIBRARIES:BOOL=ON",
+      "-DNV_USE_STATIC_WINCRT:BOOL=OFF",
+      "-DNV_USE_DEBUG_WINCRT:BOOL=ON",
+      "-DPX_BUILDSNIPPETS:BOOL=OFF",
+      "-DPX_BUILDPVDRUNTIME:BOOL=OFF",
+      "-DPX_COPY_EXTERNAL_DLL:BOOL=OFF",
+      "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "-DCMAKE_FIND_USE_PACKAGE_REGISTRY:BOOL=OFF",
+      "-DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY:BOOL=OFF"
+    ],
+    "argc": 28
+  },
+  "buildRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build",
+  "privateRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/private-source",
+  "phases": 1,
+  "scope": "CPU source configure only; no packman/generate_projects/Python/build/install/test/GPU",
+  "configurations": [
+    "debug",
+    "checked",
+    "profile",
+    "release"
+  ],
+  "CRT": "Debug MDd; checked/profile/release MD",
+  "helperVersion": "Official PhysX4.1 helpers pinned a2c0428 with v143 label adaptation, not packman1.28 equivalence",
+  "PUBLIC_RELEASE": 1,
+  "GPUPhysics": "Not supplied, not accepted as equivalent to historical rev4",
+  "acceptance": "Parent only; Jolt final requirement remains"
+}

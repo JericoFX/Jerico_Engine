@@ -1,0 +1,502 @@
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/BuildPoly2TriPackage.cmake b/cmake/Tools/LocalPackages/Poly2Tri/BuildPoly2TriPackage.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/BuildPoly2TriPackage.cmake
+@@ -0,0 +1,123 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS SOURCE_ARCHIVE SOURCE_MANIFEST VS_INSTANCE OUTPUT)
++    JE_python_require_local_path(JE_POLY2TRI_${JE_ARGUMENT})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_POLY2TRI_OUTPUT}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR JE_POLY2TRI_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE local poly2tri: output must be beneath this checkout/build")
++endif()
++if(EXISTS "${JE_POLY2TRI_OUTPUT}")
++    message(FATAL_ERROR "JE local poly2tri: output must be new; existing outputs are preserved")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
++    message(FATAL_ERROR "JE local poly2tri requires Windows x64")
++endif()
++if(NOT EXISTS "${JE_POLY2TRI_VS_INSTANCE}/MSBuild/Current/Bin/MSBuild.exe")
++    message(FATAL_ERROR "JE local poly2tri: explicit Visual Studio instance is missing")
++endif()
++file(READ "${CMAKE_CURRENT_LIST_DIR}/Recipe.json" JE_RECIPE)
++string(JSON JE_SOURCE_COMMIT GET "${JE_RECIPE}" sourceCommit)
++string(JSON JE_SOURCE_HASH GET "${JE_RECIPE}" sourceArchiveSHA256)
++string(JSON JE_SOURCE_URL GET "${JE_RECIPE}" sourceArchiveURL)
++string(JSON JE_MANIFEST_HASH GET "${JE_RECIPE}" sourceManifestSHA256)
++JE_python_verify_file("${JE_POLY2TRI_SOURCE_ARCHIVE}" "${JE_SOURCE_HASH}" "poly2tri source archive")
++JE_python_verify_file("${JE_POLY2TRI_SOURCE_MANIFEST}" "${JE_MANIFEST_HASH}" "poly2tri source manifest")
++file(READ "${JE_POLY2TRI_SOURCE_MANIFEST}" JE_MANIFEST)
++string(JSON JE_ROOT GET "${JE_MANIFEST}" root)
++string(JSON JE_PIN GET "${JE_MANIFEST}" sourceCommit)
++string(JSON JE_ARCHIVE_HASH GET "${JE_MANIFEST}" archiveSHA256)
++string(JSON JE_COUNT LENGTH "${JE_MANIFEST}" entries)
++JE_python_require_local_path(JE_ROOT)
++if(NOT JE_PIN STREQUAL JE_SOURCE_COMMIT OR NOT JE_ARCHIVE_HASH STREQUAL JE_SOURCE_HASH OR NOT JE_COUNT EQUAL 50)
++    message(FATAL_ERROR "JE local poly2tri: source manifest does not describe the exact audited pin")
++endif()
++file(GLOB_RECURSE JE_SOURCE_MEMBERS LIST_DIRECTORIES FALSE RELATIVE "${JE_ROOT}" "${JE_ROOT}/*")
++list(LENGTH JE_SOURCE_MEMBERS JE_ACTUAL_COUNT)
++if(NOT JE_ACTUAL_COUNT EQUAL JE_COUNT)
++    message(FATAL_ERROR "JE local poly2tri: source snapshot membership differs")
++endif()
++math(EXPR JE_LAST "${JE_COUNT} - 1")
++foreach(JE_INDEX RANGE 0 ${JE_LAST})
++    string(JSON JE_RELATIVE GET "${JE_MANIFEST}" entries ${JE_INDEX} path)
++    string(JSON JE_HASH GET "${JE_MANIFEST}" entries ${JE_INDEX} sha256)
++    string(JSON JE_BYTES GET "${JE_MANIFEST}" entries ${JE_INDEX} bytes)
++    if(JE_RELATIVE MATCHES "(^/|\\\\|:|(^|/)\\.\\.?(/|$)|//)" OR NOT JE_RELATIVE IN_LIST JE_SOURCE_MEMBERS)
++        message(FATAL_ERROR "JE local poly2tri: unsafe or missing source manifest member")
++    endif()
++    JE_python_verify_file("${JE_ROOT}/${JE_RELATIVE}" "${JE_HASH}" "poly2tri source member")
++    file(SIZE "${JE_ROOT}/${JE_RELATIVE}" JE_ACTUAL_BYTES)
++    if(NOT JE_ACTUAL_BYTES EQUAL JE_BYTES)
++        message(FATAL_ERROR "JE local poly2tri: source member size differs")
++    endif()
++endforeach()
++# All source/archive/path checks finish before creating the private output.
++set(JE_WORK "${JE_POLY2TRI_OUTPUT}/source-work")
++set(JE_BUILD "${JE_POLY2TRI_OUTPUT}/build")
++set(JE_STAGE "${JE_POLY2TRI_OUTPUT}/stage")
++foreach(JE_INDEX RANGE 0 ${JE_LAST})
++    string(JSON JE_RELATIVE GET "${JE_MANIFEST}" entries ${JE_INDEX} path)
++    configure_file("${JE_ROOT}/${JE_RELATIVE}" "${JE_WORK}/${JE_RELATIVE}" COPYONLY)
++endforeach()
++file(MAKE_DIRECTORY "${JE_POLY2TRI_OUTPUT}/logs")
++function(JE_poly2tri_native JE_PHASE)
++    string(TIMESTAMP JE_START "%Y-%m-%dT%H:%M:%SZ" UTC)
++    execute_process(COMMAND "${CMAKE_COMMAND}" ${ARGN}
++        RESULT_VARIABLE JE_RESULT
++        OUTPUT_FILE "${JE_POLY2TRI_OUTPUT}/logs/${JE_PHASE}.stdout.raw.log"
++        ERROR_FILE "${JE_POLY2TRI_OUTPUT}/logs/${JE_PHASE}.stderr.raw.log")
++    string(TIMESTAMP JE_END "%Y-%m-%dT%H:%M:%SZ" UTC)
++    file(WRITE "${JE_POLY2TRI_OUTPUT}/logs/${JE_PHASE}.result.txt"
++        "UTC start=${JE_START}\nUTC end=${JE_END}\nexit=${JE_RESULT}\nCMake=${CMAKE_COMMAND}\nargv=${ARGN}\nChild PID unavailable to execute_process\n")
++    if(NOT JE_RESULT STREQUAL "0")
++        message(FATAL_ERROR "JE local poly2tri ${JE_PHASE} failed (${JE_RESULT}); raw outputs retained")
++    endif()
++endfunction()
++JE_poly2tri_native(configure -S "${CMAKE_CURRENT_LIST_DIR}" -B "${JE_BUILD}"
++    -G "Visual Studio 17 2022" -A x64 -T v143
++    "-DCMAKE_GENERATOR_INSTANCE:PATH=${JE_POLY2TRI_VS_INSTANCE}"
++    "-DJE_POLY2TRI_WORK:PATH=${JE_WORK}"
++    -DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON
++    -DCMAKE_FIND_USE_PACKAGE_REGISTRY:BOOL=OFF -DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY:BOOL=OFF)
++foreach(JE_CONFIG IN ITEMS Debug Release)
++    JE_poly2tri_native("build-${JE_CONFIG}" --build "${JE_BUILD}" --config "${JE_CONFIG}" --parallel 6 --target JEPoly2Tri)
++    set(JE_LIBRARY "${JE_BUILD}/lib/${JE_CONFIG}/poly2tri.lib")
++    if(NOT EXISTS "${JE_LIBRARY}")
++        message(FATAL_ERROR "JE local poly2tri: ${JE_CONFIG} static archive is missing")
++    endif()
++    file(SIZE "${JE_LIBRARY}" JE_LIBRARY_BYTES)
++    if(JE_LIBRARY_BYTES EQUAL 0)
++        message(FATAL_ERROR "JE local poly2tri: ${JE_CONFIG} static archive is empty")
++    endif()
++endforeach()
++set(JE_PAYLOAD "${JE_STAGE}/poly2tri/poly2tri")
++file(MAKE_DIRECTORY "${JE_PAYLOAD}/lib" "${JE_PAYLOAD}/debug/lib")
++configure_file("${JE_BUILD}/lib/Release/poly2tri.lib" "${JE_PAYLOAD}/lib/poly2tri.lib" COPYONLY)
++configure_file("${JE_BUILD}/lib/Debug/poly2tri.lib" "${JE_PAYLOAD}/debug/lib/poly2tri.lib" COPYONLY)
++foreach(JE_HEADER IN ITEMS poly2tri.h common/shapes.h common/utils.h sweep/advancing_front.h sweep/cdt.h sweep/sweep.h sweep/sweep_context.h)
++    configure_file("${JE_WORK}/poly2tri/${JE_HEADER}" "${JE_PAYLOAD}/include/poly2tri/${JE_HEADER}" COPYONLY)
++endforeach()
++configure_file("${JE_ROOT}/LICENSE" "${JE_STAGE}/poly2tri/LICENSE" COPYONLY)
++configure_file("${JE_ROOT}/README.md" "${JE_STAGE}/poly2tri/README.md" COPYONLY)
++# Preserve notices in each compiled source and the original port's source recipe.
++foreach(JE_CC IN ITEMS common/shapes.cc sweep/advancing_front.cc sweep/cdt.cc sweep/sweep.cc sweep/sweep_context.cc)
++    configure_file("${JE_ROOT}/poly2tri/${JE_CC}" "${JE_STAGE}/LICENSES/Poly2Tri/compiled-source/${JE_CC}" COPYONLY)
++endforeach()
++configure_file("${JE_ROOT}/CMakeLists.txt" "${JE_STAGE}/LICENSES/Poly2Tri/upstream-CMakeLists.txt" COPYONLY)
++configure_file("${CMAKE_CURRENT_LIST_DIR}/Findpoly2tri.cmake" "${JE_STAGE}/Findpoly2tri.cmake" COPYONLY)
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt" "${CMAKE_CURRENT_LIST_DIR}/Recipe.json" "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT" DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "poly2tri-7f0487a-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_POLY2TRI_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "2021-05-18")
++set(JE_PACKAGE_SOURCE_COMMIT "${JE_SOURCE_COMMIT}")
++set(JE_PACKAGE_LICENSE "BSD-3-Clause")
++set(JE_PACKAGE_SOURCE_SHA256 "${JE_SOURCE_HASH}")
++set(JE_PACKAGE_SOURCE_URL "${JE_SOURCE_URL}")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/CMakeLists.txt b/cmake/Tools/LocalPackages/Poly2Tri/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/CMakeLists.txt
+@@ -0,0 +1,36 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_POLY2TRI_WORK)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++foreach(JE_PATH IN ITEMS JE_POLY2TRI_WORK CMAKE_BINARY_DIR)
++    cmake_path(IS_PREFIX JE_BUILD_ROOT "${${JE_PATH}}" NORMALIZE JE_IN_BUILD)
++    if(NOT JE_IN_BUILD OR "${${JE_PATH}}" STREQUAL JE_BUILD_ROOT)
++        message(FATAL_ERROR "JE local poly2tri: ${JE_PATH} must be beneath this checkout/build")
++    endif()
++endforeach()
++set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Original package configurations" FORCE)
++set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++project(JELocalPoly2Tri LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8
++    OR NOT CMAKE_GENERATOR STREQUAL "Visual Studio 17 2022"
++    OR NOT CMAKE_VS_PLATFORM_NAME STREQUAL "x64" OR NOT CMAKE_VS_PLATFORM_TOOLSET STREQUAL "v143")
++    message(FATAL_ERROR "JE local poly2tri requires Visual Studio 2022 Windows x64 v143")
++endif()
++# The historical vcpkg port compiled these five files directly. Do not evaluate
++# upstream testbed/tests or bootstrap vcpkg merely to build the STL-only library.
++add_library(JEPoly2Tri STATIC
++    "${JE_POLY2TRI_WORK}/poly2tri/common/shapes.cc"
++    "${JE_POLY2TRI_WORK}/poly2tri/sweep/advancing_front.cc"
++    "${JE_POLY2TRI_WORK}/poly2tri/sweep/cdt.cc"
++    "${JE_POLY2TRI_WORK}/poly2tri/sweep/sweep.cc"
++    "${JE_POLY2TRI_WORK}/poly2tri/sweep/sweep_context.cc")
++target_compile_features(JEPoly2Tri PRIVATE cxx_std_14)
++target_compile_options(JEPoly2Tri PRIVATE /EHsc)
++set_target_properties(JEPoly2Tri PROPERTIES OUTPUT_NAME poly2tri
++    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
++    ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${CMAKE_CURRENT_BINARY_DIR}/lib/Debug"
++    ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_BINARY_DIR}/lib/Release")
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/Findpoly2tri.cmake b/cmake/Tools/LocalPackages/Poly2Tri/Findpoly2tri.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/Findpoly2tri.cmake
+@@ -0,0 +1,47 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# For complete copyright and license terms please see the LICENSE at the root of this distribution.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++# Adapted from O3DE 3p-package-source@70f0b7b5/package-system/poly2tri.
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(JE_POLY2TRI_LOCAL_ROOT "${CMAKE_CURRENT_LIST_DIR}")
++JE_python_require_local_path(JE_POLY2TRI_LOCAL_ROOT)
++if(NOT CMAKE_SYSTEM_NAME STREQUAL "Windows" OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE local poly2tri package requires Windows x64")
++endif()
++set(poly2tri_INCLUDE_DIR "${JE_POLY2TRI_LOCAL_ROOT}/poly2tri/poly2tri/include/poly2tri")
++set(poly2tri_LIBS_DIR "${JE_POLY2TRI_LOCAL_ROOT}/poly2tri/poly2tri/lib")
++set(poly2tri_LIBRARY_RELEASE "${poly2tri_LIBS_DIR}/poly2tri.lib")
++set(poly2tri_LIBRARY_DEBUG "${poly2tri_LIBS_DIR}/../debug/lib/poly2tri.lib")
++foreach(JE_PATH IN ITEMS poly2tri_INCLUDE_DIR poly2tri_LIBRARY_RELEASE poly2tri_LIBRARY_DEBUG)
++    JE_python_require_local_path(${JE_PATH})
++    if(NOT EXISTS "${${JE_PATH}}")
++        message(FATAL_ERROR "JE local poly2tri: package member is missing: ${${JE_PATH}}")
++    endif()
++endforeach()
++foreach(JE_HEADER IN ITEMS poly2tri.h common/shapes.h common/utils.h sweep/advancing_front.h sweep/cdt.h sweep/sweep.h sweep/sweep_context.h)
++    set(JE_HEADER_PATH "${poly2tri_INCLUDE_DIR}/${JE_HEADER}")
++    JE_python_require_local_path(JE_HEADER_PATH)
++    if(NOT EXISTS "${JE_HEADER_PATH}")
++        message(FATAL_ERROR "JE local poly2tri: package header is missing: ${JE_HEADER}")
++    endif()
++endforeach()
++set(poly2tri_LIBRARY
++    "$<$<CONFIG:profile>:${poly2tri_LIBRARY_RELEASE}>"
++    "$<$<CONFIG:release>:${poly2tri_LIBRARY_RELEASE}>"
++    "$<$<CONFIG:debug>:${poly2tri_LIBRARY_DEBUG}>")
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(poly2tri REQUIRED_VARS poly2tri_INCLUDE_DIR poly2tri_LIBRARY_RELEASE poly2tri_LIBRARY_DEBUG)
++if(TARGET 3rdParty::poly2tri)
++    get_target_property(JE_EXISTING_LIBRARIES 3rdParty::poly2tri INTERFACE_LINK_LIBRARIES)
++    if(NOT "${JE_EXISTING_LIBRARIES}" STREQUAL "${poly2tri_LIBRARY}")
++        message(FATAL_ERROR "JE local poly2tri refuses to replace an existing provider")
++    endif()
++    return()
++endif()
++add_library(3rdParty::poly2tri INTERFACE IMPORTED GLOBAL)
++if(COMMAND ly_target_include_system_directories)
++    ly_target_include_system_directories(TARGET 3rdParty::poly2tri INTERFACE "${poly2tri_INCLUDE_DIR}")
++else()
++    target_include_directories(3rdParty::poly2tri SYSTEM INTERFACE "${poly2tri_INCLUDE_DIR}")
++endif()
++target_link_libraries(3rdParty::poly2tri INTERFACE ${poly2tri_LIBRARY})
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/NOTICE.txt b/cmake/Tools/LocalPackages/Poly2Tri/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/NOTICE.txt
+@@ -0,0 +1,19 @@
++JE local poly2tri provider
++
++Library: jhasse/poly2tri commit 7f0487a81124647f0a4037c4706ff414ce9fe22b.
++Copyright (c) 2009-2018, Poly2Tri Contributors; individual sources also preserve
++their original 2009-2021 notices. BSD-3-Clause: full LICENSE and compiled-source
++notices are retained, as are the original public-header notices.
++
++Find/layout adapted from O3DE 3p-package-source commit
++70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/poly2tri, and its
++vcpkg port replacement patch. O3DE glue is Apache-2.0 OR MIT; full original
++distribution notices are included. No vcpkg or Python is executed/distributed.
++
++JE explicitly uses Windows x64 v143, static libraries and dynamic CRT (Debug
++MDd, Release MD), matching the historical CRT/linkage distinction. This is a
++new JE artifact, not the historical rev1 binary or its hash. No source patch.
++Assimp's newer vendored p2t remains private to its SceneBuilder module; this
++package does not alias Assimp or claim those different sources are identical.
++Source/link analysis is not proof of final engine link, exported symbols,
++redistribution completeness, Editor/cook/runtime behavior, or Jolt integration.
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/README.md b/cmake/Tools/LocalPackages/Poly2Tri/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/README.md
+@@ -0,0 +1,27 @@
++# JE local poly2tri
++
++The producer builds the five core C++ files from the audited jhasse commit in
++Recipe.json. It verifies the archive, pinned full snapshot manifest and every
++source member before creating a private output below this checkout's build.
++No downloads, VCS, upstream testbed/tests, vcpkg bootstrap or global install.
++The immutable source snapshot is copied; no source patches are applied.
++
++Required producer arguments: JE_POLY2TRI_SOURCE_ARCHIVE,
++JE_POLY2TRI_SOURCE_MANIFEST, JE_POLY2TRI_VS_INSTANCE and JE_POLY2TRI_OUTPUT.
++Run BuildPoly2TriPackage.cmake with CMake -P. The output must be new. Windows
++x64 VS2022/v143 compiles Debug/MDd and Release/MD with six explicit jobs.
++The package helper produces packages/poly2tri-7f0487a-je-rev1-windows.tar.xz,
++its .tar.xz.SHA256SUMS sidecar and a .contents directory.
++
++Findpoly2tri preserves 3rdParty::poly2tri, the original nested header layout,
++Release lib and Debug debug/lib. Profile resolves Release as in the original
++package. The tests project consumes this Find without ambient libraries and
++runs four cases per configuration: concave polygon, hole, Steiner insertion
++and coincident-edge rejection with untouched caller points. Core CDT outputs
++must preserve vertex identity and area. The README upstream does not promise
++general validation of arbitrary malformed polygons.
++
++Native configure/build/CTest and archive/COFF/CRT/symbol inspection are pending
++exclusive Luna validation after parent review. Final engine link/deploy and
++Editor/AP/physics behavior remain unverified. This Tools/Editor dependency
++unblocks transitional PhysX authoring; final Jolt migration remains required.
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/Recipe.json b/cmake/Tools/LocalPackages/Poly2Tri/Recipe.json
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/Recipe.json
+@@ -0,0 +1,24 @@
++{
++  "sourceCommit": "7f0487a81124647f0a4037c4706ff414ce9fe22b",
++  "sourceArchiveURL": "https://codeload.github.com/jhasse/poly2tri/tar.gz/7f0487a81124647f0a4037c4706ff414ce9fe22b",
++  "sourceArchiveSHA256": "680b7b505c15775ecdfb8868cb9f6f2d616b21fbb320158d056844add7cb9371",
++  "sourceArchiveBytes": 400502,
++  "sourceManifestSHA256": "cdcfc07f92ba44edb9661226530c4d543d3391b62f50d130770c9d4e4eed30c3",
++  "historicalSourceArchiveSHA512": "1666bca16cef75bd68c8be257f2f1c50155847ab046b3c756da9ea883bbf3139d6292b833f1d6113186accc4bba860270bb261f537744aece35bfee6a611cf5f",
++  "historicalRecipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
++  "historicalVcpkgCommit": "751fc199af8d33eb300af5edbd9e3b77c48f0bca",
++  "license": "BSD-3-Clause",
++  "packageName": "poly2tri-7f0487a-je-rev1-windows",
++  "static": true,
++  "architecture": "x64",
++  "toolsetAdaptation": "v143",
++  "configurations": { "Debug": "MDd", "Release": "MD", "ProfileConsumer": "Release" },
++  "sourcePatched": false,
++  "compiledSourceCount": 5,
++  "publicHeaderCount": 7,
++  "testbed": false,
++  "upstreamUnitTests": false,
++  "coreDependencies": ["C++ standard library"],
++  "historicalBinaryEquivalence": "not asserted",
++  "consumerClassification": "PhysX.Editor polygon-prism authoring; no direct Runtime link declared"
++}
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/Poly2Tri/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/tests/CMakeLists.txt
+@@ -0,0 +1,29 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_POLY2TRI_PACKAGE_ROOT)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_IN_BUILD)
++if(NOT JE_IN_BUILD OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE poly2tri consumer build must be beneath this checkout/build")
++endif()
++set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Original static package configurations")
++set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++project(JELocalPoly2TriConsumer LANGUAGES CXX)
++if(NOT MSVC OR NOT WIN32 OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE poly2tri consumer requires Windows MSVC x64")
++endif()
++list(PREPEND CMAKE_MODULE_PATH "${JE_POLY2TRI_PACKAGE_ROOT}")
++find_package(poly2tri REQUIRED MODULE)
++add_executable(JEPoly2TriConsumer Poly2TriConsumer.cpp)
++target_compile_features(JEPoly2TriConsumer PRIVATE cxx_std_17)
++target_compile_options(JEPoly2TriConsumer PRIVATE /W4 /WX /EHsc)
++target_link_libraries(JEPoly2TriConsumer PRIVATE 3rdParty::poly2tri)
++enable_testing()
++foreach(JE_CASE IN ITEMS concave hole steiner repeated)
++    add_test(NAME JE.LocalPackages.Poly2Tri.${JE_CASE} COMMAND JEPoly2TriConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.Poly2Tri.${JE_CASE} PROPERTIES TIMEOUT 20)
++endforeach()
+diff --git a/cmake/Tools/LocalPackages/Poly2Tri/tests/Poly2TriConsumer.cpp b/cmake/Tools/LocalPackages/Poly2Tri/tests/Poly2TriConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Poly2Tri/tests/Poly2TriConsumer.cpp
+@@ -0,0 +1,157 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++#include <poly2tri.h>
++#include <cmath>
++#include <cstdio>
++#include <stdexcept>
++#include <string>
++#include <vector>
++
++namespace JE::Tools
++{
++    void Require(bool condition, const char* message)
++    {
++        if (!condition)
++        {
++            throw std::runtime_error(message);
++        }
++    }
++
++    std::vector<p2t::Point*> References(std::vector<p2t::Point>& points)
++    {
++        std::vector<p2t::Point*> result;
++        for (p2t::Point& point : points)
++        {
++            result.push_back(&point);
++        }
++        return result;
++    }
++
++    double Area(const std::vector<p2t::Triangle*>& triangles, const std::vector<p2t::Point*>& inputs)
++    {
++        double total = 0.0;
++        for (p2t::Triangle* triangle : triangles)
++        {
++            Require(triangle != nullptr, "triangle is present");
++            p2t::Point* vertices[3] = {triangle->GetPoint(0), triangle->GetPoint(1), triangle->GetPoint(2)};
++            for (p2t::Point* vertex : vertices)
++            {
++                bool found = false;
++                for (p2t::Point* input : inputs)
++                {
++                    found |= vertex == input;
++                }
++                Require(found, "triangle preserves caller-owned input vertex identity");
++            }
++            const double cross = (vertices[1]->x - vertices[0]->x) * (vertices[2]->y - vertices[0]->y)
++                - (vertices[1]->y - vertices[0]->y) * (vertices[2]->x - vertices[0]->x);
++            Require(std::isfinite(cross) && std::abs(cross) > 0.0, "finite nondegenerate triangle");
++            total += std::abs(cross) * 0.5;
++        }
++        return total;
++    }
++
++    void Concave()
++    {
++        // PhysX's polygon-prism authoring uses this CDT/Triangulate/GetTriangles path.
++        std::vector<p2t::Point> points{{0, 0}, {3, 0}, {3, 1}, {1, 1}, {1, 3}, {0, 3}};
++        const auto references = References(points);
++        p2t::CDT triangulation(references);
++        triangulation.Triangulate();
++        const auto triangles = triangulation.GetTriangles();
++        Require(triangles.size() == 4, "six-vertex concave polygon has four triangles");
++        Require(std::abs(Area(triangles, references) - 5.0) <= 1e-12, "concave polygon area is five");
++        for (p2t::Triangle* triangle : triangles)
++        {
++            const double x = (triangle->GetPoint(0)->x + triangle->GetPoint(1)->x + triangle->GetPoint(2)->x) / 3.0;
++            const double y = (triangle->GetPoint(0)->y + triangle->GetPoint(1)->y + triangle->GetPoint(2)->y) / 3.0;
++            Require(!(x > 1.0 && y > 1.0), "no triangle centroid fills the concave opening");
++        }
++    }
++
++    void Hole()
++    {
++        std::vector<p2t::Point> outer{{0, 0}, {6, 0}, {6, 6}, {0, 6}};
++        std::vector<p2t::Point> inner{{2, 2}, {2, 4}, {4, 4}, {4, 2}};
++        const auto outerReferences = References(outer);
++        const auto innerReferences = References(inner);
++        auto all = outerReferences;
++        all.insert(all.end(), innerReferences.begin(), innerReferences.end());
++        p2t::CDT triangulation(outerReferences);
++        triangulation.AddHole(innerReferences);
++        triangulation.Triangulate();
++        const auto triangles = triangulation.GetTriangles();
++        Require(triangles.size() == 8, "square with four-vertex hole has eight triangles");
++        Require(std::abs(Area(triangles, all) - 32.0) <= 1e-12, "hole area remains excluded");
++        for (p2t::Triangle* triangle : triangles)
++        {
++            const double x = (triangle->GetPoint(0)->x + triangle->GetPoint(1)->x + triangle->GetPoint(2)->x) / 3.0;
++            const double y = (triangle->GetPoint(0)->y + triangle->GetPoint(1)->y + triangle->GetPoint(2)->y) / 3.0;
++            Require(!(x > 2.0 && x < 4.0 && y > 2.0 && y < 4.0), "no triangle centroid fills the hole");
++        }
++    }
++
++    void Steiner()
++    {
++        std::vector<p2t::Point> points{{0, 0}, {6, 0}, {6, 6}, {0, 6}};
++        auto references = References(points);
++        p2t::Point center(3, 3);
++        p2t::CDT triangulation(references);
++        triangulation.AddPoint(&center);
++        triangulation.Triangulate();
++        references.push_back(&center);
++        const auto triangles = triangulation.GetTriangles();
++        Require(triangles.size() == 4, "one interior Steiner point produces four triangles");
++        Require(std::abs(Area(triangles, references) - 36.0) <= 1e-12, "Steiner insertion preserves area");
++        size_t centerUses = 0;
++        for (p2t::Triangle* triangle : triangles)
++        {
++            for (int index = 0; index < 3; ++index)
++            {
++                centerUses += triangle->GetPoint(index) == &center ? 1 : 0;
++            }
++        }
++        Require(centerUses == 4, "Steiner point participates in all four triangles");
++    }
++
++    void Repeated()
++    {
++        // The documented primitive rejects coincident edge endpoints. The README
++        // does not promise general validation of arbitrary malformed CDT polygons.
++        p2t::Point first(7, 9), repeated(7, 9);
++        bool rejected = false;
++        try
++        {
++            p2t::Edge edge(first, repeated);
++            (void)edge;
++        }
++        catch (const std::runtime_error& error)
++        {
++            rejected = std::string(error.what()) == "Edge::Edge: p1 == p2";
++        }
++        Require(rejected, "coincident edge is rejected with the upstream diagnostic");
++        Require(first.x == 7 && first.y == 9 && repeated.x == 7 && repeated.y == 9
++            && first.edge_list.empty() && repeated.edge_list.empty(), "rejection does not modify caller points/edges");
++    }
++}
++
++int main(int argc, char** argv)
++{
++    try
++    {
++        JE::Tools::Require(argc == 2, "one consumer case is required");
++        const std::string mode(argv[1]);
++        if (mode == "concave") { JE::Tools::Concave(); }
++        else if (mode == "hole") { JE::Tools::Hole(); }
++        else if (mode == "steiner") { JE::Tools::Steiner(); }
++        else if (mode == "repeated") { JE::Tools::Repeated(); }
++        else { throw std::runtime_error("unknown consumer case"); }
++        std::printf("CASE %s PASS\n", mode.c_str());
++        return 0;
++    }
++    catch (const std::exception& error)
++    {
++        std::fprintf(stderr, "FAIL: %s\n", error.what());
++        return 1;
++    }
++}

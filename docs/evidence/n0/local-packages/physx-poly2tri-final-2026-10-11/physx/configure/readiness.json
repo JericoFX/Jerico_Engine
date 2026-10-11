@@ -1,0 +1,17 @@
+{
+  "status": "NATIVE_NOT_RUN; HOLD all inputs",
+  "inputCount": 3667,
+  "toolchainInputs": 44,
+  "assignmentSHA256": "47B43EAD67CE39D0480D8A6EA8266190791F77453EBC1CB3C4E5B9470A5BB652",
+  "driverSHA256": "0C39E8A2115F5D787190566256E398D20D37D58BA9D835B0D0ECB2CA9FBE643B",
+  "CommonSHA256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+  "freezeSHA256": "FC59E613625899F3A412EB161223C6E8141E41503CC44D9FC76726D54E62754E",
+  "privateSourceRegularFiles": 1788,
+  "privateHelpersAndNotices": 6,
+  "allowedOnlyGeneratedSourceAddition": "physx/include/PxConfig.h",
+  "patches": 3,
+  "ASTerrors": 0,
+  "SDKSourceSHA256": "A2DFA049B0C7FA67723D27D70520D0ED7BCB5DD3C2D9DF8DFB169D8A39C4C142",
+  "noNativeWriter": true,
+  "invalidHashAttempt": "Metadata preserved as .before-invalid-hash-alias; source/copies unchanged"
+}

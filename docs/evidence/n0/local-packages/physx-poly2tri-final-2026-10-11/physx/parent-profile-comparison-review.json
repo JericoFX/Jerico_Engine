@@ -1,0 +1,14 @@
+{
+  "status": "FOCAL_PROFILE_COMPARISON_VERIFIED",
+  "resultSHA256": "344CE3FB219F11C5AED3EA33D199C881EA2601AC3EFEED047172DF6C076BC2EA",
+  "phases": 4,
+  "phasesExitZero": true,
+  "rawLogsHashVerified": 8,
+  "junitSHA256": "CEEEA92C9D77B1E6F1370CA9425B72BB2EEFC414C2EBC03DA9A9373044A7AAC5",
+  "cases": 12,
+  "failures": 0,
+  "skips": 0,
+  "freezeMatches": 3747,
+  "scope": "CPU API consumer comparison 14 versus 8 libraries; no Editor, Asset Processor, visual runtime or Jolt acceptance",
+  "pending": "Actual native link/archive inspection, final package composition and other consumer configurations"
+}

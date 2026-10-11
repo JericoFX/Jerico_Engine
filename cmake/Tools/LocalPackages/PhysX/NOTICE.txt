@@ -1,0 +1,32 @@
+JericoEngine transition CPU PhysX package
+
+PhysX SDK 5.1.1.32142945 is NVIDIA-Omniverse/PhysX commit
+0bbcff3d0c541325f4d14c36ee18f24e22e35e6e (tag 104.1-physx-5.1.1).
+The complete original SDK LICENSE.md and README.md accompany the headers.
+Header copyright notices remain unchanged.
+
+Build helpers originate from NVIDIAGameWorks/PhysX commit
+a2c0428acab643e60618c681b501e86f7fd558cc, externals/cmakemodules.
+Their original files and root LICENSE.md/README.md/externals README are
+preserved in LICENSES/official-build-helpers. The helpers do not contain
+inline copyright/license notices. The root BSD3 notice and the external
+third-party acknowledgments are preserved without inventing a per-file
+attribution or asserting equivalence to the SDK5.1 packman module release.
+
+O3DE's historical PhysX5 recipe/Find contract at commit
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18 informed the JE adaptation.
+O3DE Apache-2.0/MIT license texts are included in LICENSES/O3DE.
+
+Private build adaptations retain PUBLIC_RELEASE=1 and PX_PUBLIC_RELEASE=1,
+disable both external DLL copy gates when PX_COPY_EXTERNAL_DLL=OFF, and
+identify the installed MSVC v143 toolset. Debug uses MDd; other configs MD.
+The six static-pass object archives are renamed explicitly to the original
+Find layout. No GPU physics DLLs, snippets, OmniPVD runtime, shared CPU
+DLLs or downloaded packman dependencies are supplied. CPU cooking retains
+the eGPU_COMPATIBLE convex cooking request used by the engine.
+
+This has a new JE identity and hash; it is not the historical rev4 binary.
+It temporarily unblocks the original baseline. Jolt remains the required
+final physics integration. Package/consumer tests do not certify a working
+Editor/runtime, GPU physics, or a playable vehicle. The vehicle test checks
+the existing SDK API's sprung-mass computation, not a vehicle simulation.

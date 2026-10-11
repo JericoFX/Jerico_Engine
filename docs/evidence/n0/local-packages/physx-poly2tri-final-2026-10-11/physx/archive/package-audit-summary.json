@@ -1,0 +1,50 @@
+{
+  "status": "DATA_AUDIT_COMPLETED_NO_PACKAGE_CODE_EXECUTED",
+  "archiveSHA256": "6A3655FA52AD06691F1B360B650557518C06494AC0E4EA7418158B7B63F4FC62",
+  "archiveBytes": 73160792,
+  "members": 410,
+  "internalHashes": 409,
+  "totalUncompressedBytes": 805293666,
+  "safeRegularMembersOnly": true,
+  "noLinksTraversalCaseOrPrefixCollisions": true,
+  "exactExpectedMembership": true,
+  "sourceNoticeHeaderAndHelperPairsByteExact": 408,
+  "mainLibrariesByteExactAgainstNativeWitnessAndPayload": 32,
+  "libraryConfigs": [
+    "checked",
+    "debug",
+    "profile",
+    "release"
+  ],
+  "libraryTargets": [
+    "PhysX",
+    "PhysXCharacterKinematic",
+    "PhysXCommon",
+    "PhysXCooking",
+    "PhysXExtensions",
+    "PhysXFoundation",
+    "PhysXPvdSDK",
+    "PhysXVehicle"
+  ],
+  "auxiliaryPayloadLibraries": 0,
+  "originalWitnessLibraries": 56,
+  "witnessSHA256": "D1E1704717F36BA1602461B434F152FD161AA446ABBD7E62CFD85C5F0288D693",
+  "sourceManifestSHA256": "202329A844DF20F8E3349C589A3D9567F7D633615B2B17E37FD49929F03AC2AD",
+  "packageInfo": {
+    "license": "BSD-3-Clause; original notices preserved",
+    "name": "PhysX-5.1.1-je-cpu-rev2-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+      "sha256": "a2dfa049b0c7fa67723d27d70520d0ed7bcb5dd3c2d9df8dfb169d8a39c4c142",
+      "url": "https://codeload.github.com/NVIDIA-Omniverse/PhysX/tar.gz/0bbcff3d0c541325f4d14c36ee18f24e22e35e6e"
+    },
+    "version": "5.1.1"
+  },
+  "extractionPerformed": false,
+  "limitations": [
+    "Data and exact SDK source/native-output comparison only",
+    "No new PE/COFF analysis or execution; existing parent-reviewed narrow link audit reused",
+    "No production target/Editor/Jolt/runtime or historical ABI acceptance"
+  ]
+}

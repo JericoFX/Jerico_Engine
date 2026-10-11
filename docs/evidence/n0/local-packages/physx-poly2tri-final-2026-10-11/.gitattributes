@@ -1,0 +1,5 @@
+* -text whitespace=cr-at-eol
+*.patch -whitespace
+# Preserve historical preimage and raw diagnostic bytes.
+integration/PAL_windows.before.cmake -whitespace
+*.raw.log -whitespace

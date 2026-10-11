@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "status": "EVIDENCE_COPIED_BYTE_EXACT; PARENT_BUNDLE_REVIEW_PENDING; NO_NEW_NATIVE_EXECUTION",
+  "originalEvidenceRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages",
+  "ownership": "Only this new evidence directory; outside prior Root source freeze",
+  "contents": [
+    {
+      "path": "shared/CommonExecution.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/CommonExecution.ps1",
+      "bytes": 6037,
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+      "role": "Original native execution capture helper; unchanged"
+    },
+    {
+      "path": "physx/configure/assignment.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/assignment.json",
+      "bytes": 2737,
+      "sha256": "47B43EAD67CE39D0480D8A6EA8266190791F77453EBC1CB3C4E5B9470A5BB652",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/private-patch-proof.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/private-patch-proof.json",
+      "bytes": 5399,
+      "sha256": "9EFF8B6D975934F576F0767D6815832C8A4CC4A079DBFA8D48223593F3C98883",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/helper-license-correction-receipt.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/helper-license-correction-receipt.json",
+      "bytes": 3119,
+      "sha256": "3BDBEFA9D1AEB9CD5F771D1F99E685C9770C1DD5A13BD758D3F5CB9F76A98372",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/readiness.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/readiness.json",
+      "bytes": 849,
+      "sha256": "0D0BCC24E9F5D8DBEAABAF55AA76DDA5FD05DB62DE64150492A9929A66338444",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/PrepareInputs.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/PrepareInputs.ps1",
+      "bytes": 6616,
+      "sha256": "67C221025868F60A4D179685906F1F3512E93EE6BF268E7DBB91CCF16F8A7A23",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/RunConfigure.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/RunConfigure.ps1",
+      "bytes": 1798,
+      "sha256": "0C39E8A2115F5D787190566256E398D20D37D58BA9D835B0D0ECB2CA9FBE643B",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/RunProfileBuild.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/RunProfileBuild.ps1",
+      "bytes": 1524,
+      "sha256": "40E0688417B2B78389D1D2BD3496F7AA1B047A71D3AE8F9CA8DD9C596F5846D1",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/configure/RunRemainingBuilds.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/RunRemainingBuilds.ps1",
+      "bytes": 1869,
+      "sha256": "8976785784C93C636F3C48708F3755B635AAD77FC055A161B5CBA7C81BA1A687",
+      "role": "Original preparation and exact configure/build contract"
+    },
+    {
+      "path": "physx/build-results/attempt1.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/validation-result.json",
+      "bytes": 3153,
+      "sha256": "91E3E639CC396F44562592242EE3D4CFBB449C503444B6DEEBA55C8D9408C43E",
+      "role": "Observed SDK configure or library build result; original argv/PID/exits retained"
+    },
+    {
+      "path": "physx/build-results/profile-build-attempt1.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/profile-build-attempt1/validation-result.json",
+      "bytes": 2034,
+      "sha256": "69A03E22C9AF8DE214D5C54AF74FA2927F562CB9A9D3564D5316ABBA9CCF6EB2",
+      "role": "Observed SDK configure or library build result; original argv/PID/exits retained"
+    },
+    {
+      "path": "physx/build-results/remaining-builds-attempt1.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/remaining-builds-attempt1/validation-result.json",
+      "bytes": 5356,
+      "sha256": "3B540EAFB80A82C6A57FB4508183BDF2D3E5664F324C17EE10252A242FE76BC9",
+      "role": "Observed SDK configure or library build result; original argv/PID/exits retained"
+    },
+    {
+      "path": "physx/provider-initial.patch",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-stage-preparation-rev1/provider-source-diff.patch",
+      "bytes": 66859,
+      "sha256": "A8033AD379D3353248480965B4D21A441AF2F4C80F6ECB8B47537C3290C4DDD2",
+      "role": "Initial provider source diff; final delta is separate"
+    },
+    {
+      "path": "physx/provider-final-delta.patch",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/source-diff.patch",
+      "bytes": 10486,
+      "sha256": "8B5C2B074886B734212C6D6BEEFA72B408A796ECCE4228C2503ED9A41E89AF04",
+      "role": "Final reduced provider source diff"
+    },
+    {
+      "path": "physx/native-artifact-witness.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-stage-preparation-rev1/native-artifact-witness.json",
+      "bytes": 26604,
+      "sha256": "D1E1704717F36BA1602461B434F152FD161AA446ABBD7E62CFD85C5F0288D693",
+      "role": "Original 56 built archives witness; final payload keeps 32"
+    },
+    {
+      "path": "physx/parent-profile-comparison-review.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-stage-preparation-rev1/attempt1/parent-profile-comparison-review.json",
+      "bytes": 619,
+      "sha256": "99BBDC73945B2F5B80F60BBAA84CC84586BB5F92706CD6EA05A0B0E2FA87C570",
+      "role": "Parent review of initial 14-versus-8-library comparison"
+    },
+    {
+      "path": "physx/parent-reduction-decision.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-stage-preparation-rev1/attempt1/link-audit-luna/parent-reduction-decision.json",
+      "bytes": 882,
+      "sha256": "DEE945DF6B68F9C46CFA81AF779B859A55958AF03198B1DA559746DF30A8DBFA",
+      "role": "Parent decision scoped to redundant static archives"
+    },
+    {
+      "path": "physx/link-audit-result.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-stage-preparation-rev1/attempt1/link-audit-luna/capture-rev2/link-audit-result.json",
+      "bytes": 60070,
+      "sha256": "0595C38850BE1C3E10D459F0F1262C7E6D66C66F41233633BC6F37FB59C3916A",
+      "role": "Observed actual link inputs and narrow static archive audit"
+    },
+    {
+      "path": "physx/final/assignment.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/assignment.json",
+      "bytes": 6724,
+      "sha256": "02C4E5AC878B7E2C28B8AB4CC317F497682BE352D10AFECF361B9429A198A450",
+      "role": "Original final stage/consumer reproduction contract; candidate status is historical"
+    },
+    {
+      "path": "physx/final/RunStageAndFinalConsumers.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/RunStageAndFinalConsumers.ps1",
+      "bytes": 4718,
+      "sha256": "9046110D2A6F239D82547B62165BBDFF77DD40EE504517D4C2507CC6944B817E",
+      "role": "Original final stage/consumer reproduction contract; candidate status is historical"
+    },
+    {
+      "path": "physx/final/candidate-receipt.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/candidate-receipt.json",
+      "bytes": 6184,
+      "sha256": "90B4432299DDD07AC631FFDE08E24F1B97EE1C0FDAABC44A252765F4C061BA26",
+      "role": "Original final stage/consumer reproduction contract; candidate status is historical"
+    },
+    {
+      "path": "physx/final/validation-result.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/validation-result.json",
+      "bytes": 20075,
+      "sha256": "9AEFB3AEE8E1F659C13C835D233BFB33B8E8476C4AC5F184F97C50446F272C05",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/final/parent-final-consumer-review.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/parent-final-consumer-review.json",
+      "bytes": 604,
+      "sha256": "3748DBBDC6143D534FD8D984686AE77EAF77C3E295DE14534FFF20F9695F4FD0",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/final/stage-native-membership.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/stage-native-membership.json",
+      "bytes": 298,
+      "sha256": "1B5DED76142B0D663BA94EC1998E08C123261C9CDD769BB2096BA3C7B757DFBD",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/final/debug.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/debug.xml",
+      "bytes": 1670,
+      "sha256": "2FB7913991F2F726B1937B63E477825892EB1246A576ADCA0EE0606F4581411A",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/final/profile.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/profile.xml",
+      "bytes": 1670,
+      "sha256": "80381A4D4D1765A2D9BA2D0DAC1580CD8FDF406125C16073526174E91E09765A",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/final/release.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/release.xml",
+      "bytes": 1670,
+      "sha256": "1868891585C712F79540E0EA755CEEAC49C2F7BE6A95035BBBDB3DA1009E01A9",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/final/profile-checked.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/profile-checked.xml",
+      "bytes": 1669,
+      "sha256": "17201A1D8F8ADA43587C6F209711917B45DDDC832D9324E5817046E6F6B11083",
+      "role": "Final observed result or parent review; four JUnit mappings"
+    },
+    {
+      "path": "physx/archive/package-audit-summary.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-rev1/physx-package-audit/package-audit-summary.json",
+      "bytes": 1769,
+      "sha256": "EDBA9646BDE1871B92BAA916368F4AB5D0876C6A7C2AC7953045F99B7245E6B2",
+      "role": "Exact final archive data audit and 410-member manifest; no SDK execution by auditor"
+    },
+    {
+      "path": "physx/archive/archive-member-manifest.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-rev1/physx-package-audit/archive-member-manifest.json",
+      "bytes": 85743,
+      "sha256": "82A27F91B028782DC18F189FB7397141B767889256A4D183565906218AB0FD03",
+      "role": "Exact final archive data audit and 410-member manifest; no SDK execution by auditor"
+    },
+    {
+      "path": "physx/archive/AuditPhysXPackage.py",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-rev1/physx-package-audit/AuditPhysXPackage.py",
+      "bytes": 8021,
+      "sha256": "F3F9B13FDF951DEC6C67F95E24AFDF744877D01DFC6BAE610181E0CC24786563",
+      "role": "Exact final archive data audit and 410-member manifest; no SDK execution by auditor"
+    },
+    {
+      "path": "physx/archive/RunDataAudit.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-rev1/physx-package-audit/RunDataAudit.ps1",
+      "bytes": 3159,
+      "sha256": "361E65BAA0EB3E2C0805E4C0C8901BEAF6C97F8D69829381C9222C0D52FDD1C8",
+      "role": "Exact final archive data audit and 410-member manifest; no SDK execution by auditor"
+    },
+    {
+      "path": "physx/archive/data-reader-result.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-rev1/physx-package-audit/data-reader-result.json",
+      "bytes": 324,
+      "sha256": "D315D4950E13E9C79000F7353C379AAA80510A4153DDC4481EDC7C71B5CA8F62",
+      "role": "Exact final archive data audit and 410-member manifest; no SDK execution by auditor"
+    },
+    {
+      "path": "physx/source-acquisition.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-rev1-acquisition/source-acquisition.json",
+      "bytes": 580,
+      "sha256": "4F1BBBDDD6E3BE8F454A7D3388D8147BF469B49524BA525F966AFDFB304D205E",
+      "role": "Official source acquisition receipt"
+    },
+    {
+      "path": "poly2tri/producer/assignment.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/assignment.json",
+      "bytes": 1539,
+      "sha256": "04BFCFFDD7936BAAFA52050E4758225682A046D33229F15F5252E3A13F25B467",
+      "role": "Original producer contract, source diff or preparation metadata"
+    },
+    {
+      "path": "poly2tri/producer/RunProducer.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/RunProducer.ps1",
+      "bytes": 1811,
+      "sha256": "5814BEEF32C9E010F772CA76F8BC8B71A7E5CE983A7C8FABCF7B9A941C966FD1",
+      "role": "Original producer contract, source diff or preparation metadata"
+    },
+    {
+      "path": "poly2tri/producer/provider-source-diff.patch",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/provider-source-diff.patch",
+      "bytes": 26967,
+      "sha256": "C3171A326FD858F41D78F583D9E6B07E0204E7CDCCD2208096A6DFC6F6E9E2F8",
+      "role": "Original producer contract, source diff or preparation metadata"
+    },
+    {
+      "path": "poly2tri/producer/provider-source-freeze.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/provider-source-freeze.json",
+      "bytes": 1898,
+      "sha256": "3A7C24C7343CE0E6F260BD3F37D15272454B3A8B0442549D754D28386F669870",
+      "role": "Original producer contract, source diff or preparation metadata"
+    },
+    {
+      "path": "poly2tri/producer/readiness.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/readiness.json",
+      "bytes": 1772,
+      "sha256": "B9196AD22F4AAD3CB55315351A83C221F728720DC7584BD8ED7CBB3BC05BC8CF",
+      "role": "Original producer contract, source diff or preparation metadata"
+    },
+    {
+      "path": "poly2tri/producer/validation-result.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/attempt1/validation-result.json",
+      "bytes": 2453,
+      "sha256": "62B38D04C007A39FEA04801C9AE9DE030A9AF91DD0FF34F00551AF8340B0781A",
+      "role": "Observed producer result and new archive identity"
+    },
+    {
+      "path": "poly2tri/consumer/consumer-assignment.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-assignment.json",
+      "bytes": 2366,
+      "sha256": "C7D33B9E8A07842E310CC8477FBF0AEFFD03BAB0FB35F3D94756C8343221CBC3",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/RunConsumer.ps1",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/RunConsumer.ps1",
+      "bytes": 2290,
+      "sha256": "23F47233452384E24FAA20715CF17CC55723186A962C0C07053FA0BBDEB0841E",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/consumer-readiness.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-readiness.json",
+      "bytes": 1625,
+      "sha256": "913264012DBABE578A038F730554183ECE8A8B739D334FB3754AD6226581C859",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/archive-audit.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/archive-audit.json",
+      "bytes": 8546,
+      "sha256": "FFD76D65A9317DFDE3CCAC122FAB4F6B47FF4A8DCF8289117F9270E1A70FA7C6",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/archive-members.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/archive-members.json",
+      "bytes": 4328,
+      "sha256": "EC3D59AF8093CFB76768098C5A73D661F9CD9FF16B2CC30280AC51779EE9D001",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/extraction-manifest.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/extraction-manifest.json",
+      "bytes": 4839,
+      "sha256": "E8EA44B9E5C2E5EC9DC4E3442D35338A7D1C3BAEE09EB2F8EBE66961F922FF85",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/AuditPackage.py",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/AuditPackage.py",
+      "bytes": 8963,
+      "sha256": "C4DCAF6F43B1E6BA9712255CEAEDAEEB20A945C089582FC7511229FF29FC5089",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/audit-run.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/audit-run.json",
+      "bytes": 638,
+      "sha256": "C398D75737E48EBB3C45D8F892FCC2D868AB37660B491FBF7030F18C62519E25",
+      "role": "Final consumer or archive data audit contract; original preparation statuses retained"
+    },
+    {
+      "path": "poly2tri/consumer/validation-result.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/validation-result.json",
+      "bytes": 10199,
+      "sha256": "2973B6EC233F3CFD51C02423085B14B67BCB4BA3078B20C89FE071678B721598",
+      "role": "Final observed result or parent review; three JUnit configurations"
+    },
+    {
+      "path": "poly2tri/consumer/parent-focal-review.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/parent-focal-review.json",
+      "bytes": 359,
+      "sha256": "6C2D7C888C97FF66A3AEE8B0B103305A95EBB5DC1F2543A2689F1958E2960CDE",
+      "role": "Final observed result or parent review; three JUnit configurations"
+    },
+    {
+      "path": "poly2tri/consumer/Debug.junit.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/Debug.junit.xml",
+      "bytes": 1029,
+      "sha256": "4BE05310679E6AC6B902E91B387B0AF6047570A3465E2251488AFE473FE459EB",
+      "role": "Final observed result or parent review; three JUnit configurations"
+    },
+    {
+      "path": "poly2tri/consumer/Profile.junit.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/Profile.junit.xml",
+      "bytes": 1030,
+      "sha256": "E04FA0ACD275E7C09F5DACB560E48195E099A69FCEA93816BC57C91CB2C05A11",
+      "role": "Final observed result or parent review; three JUnit configurations"
+    },
+    {
+      "path": "poly2tri/consumer/Release.junit.xml",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/Release.junit.xml",
+      "bytes": 1030,
+      "sha256": "877340E2FC6AB58E93D0DB3FB37786A5039BBFE223DEE9D3AA518EFF491796A4",
+      "role": "Final observed result or parent review; three JUnit configurations"
+    },
+    {
+      "path": "poly2tri/source/source-acquisition.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-acquisition/source-acquisition.json",
+      "bytes": 917,
+      "sha256": "4DFA54349AD32CCA675E609F455D1C2350547CD95D4B2A86767242147E28EBD6",
+      "role": "Exact pinned upstream source acquisition and safe extraction evidence"
+    },
+    {
+      "path": "poly2tri/source/source-snapshot-manifest.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-acquisition/source-snapshot-manifest.json",
+      "bytes": 11671,
+      "sha256": "CDCFC07F92BA44EDB9661226530C4D543D3391B62F50D130770C9D4E4EED30C3",
+      "role": "Exact pinned upstream source acquisition and safe extraction evidence"
+    },
+    {
+      "path": "poly2tri/source/source-tar-audit.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-acquisition/source-tar-audit.json",
+      "bytes": 12935,
+      "sha256": "97AD9C2C40A2AE5C0D9945AD489520C1B2A4E078E36141339449E1679F10F1B9",
+      "role": "Exact pinned upstream source acquisition and safe extraction evidence"
+    },
+    {
+      "path": "poly2tri/source/destination-head.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-acquisition/destination-head.json",
+      "bytes": 354,
+      "sha256": "01D8506CD7D40C5EC8B855C4861BD7E4C6C03BDD504CC10D6735FE8ADD5A64F6",
+      "role": "Exact pinned upstream source acquisition and safe extraction evidence"
+    },
+    {
+      "path": "integration/integration.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-parent-integration/integration.json",
+      "bytes": 739,
+      "sha256": "A989140C4EF23D9523E781A54B82755A05BCDC978A5F5477E82C5B1DEB883D90",
+      "role": "Parent PAL/cache integration receipt; root configure pending in original receipt"
+    },
+    {
+      "path": "integration/PAL_windows.before.cmake",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-parent-integration/PAL_windows.before.cmake",
+      "bytes": 625,
+      "sha256": "6839013A926026A9CA33421E3C66D76B028B8BE8879B229108647F87789C5318",
+      "role": "Preserved original Windows package binding before integration"
+    },
+    {
+      "path": "integration/pinned-helper-git-attributes.json",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-physx-poly2tri-parent-integration/pinned-helper-git-attributes.json",
+      "bytes": 261,
+      "sha256": "5CE04CE4130624AF11242E4850C09249BF38FA15009665821CC354629906EC06",
+      "role": "Parent byte-preservation receipt for original helper blobs"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-debug.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-debug.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-debug.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-debug.stdout.raw.log",
+      "bytes": 389,
+      "sha256": "F859CAF66263E54872D5A179C6EB9C8F101DE51DDA043B969DA641A305442DC6",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-profile-checked.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-profile-checked.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-profile-checked.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-profile-checked.stdout.raw.log",
+      "bytes": 401,
+      "sha256": "5C264D37296A36D7523BF4ACD61DD637B81B6E11ACE1C9102E4F32035E6D7506",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-profile.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-profile.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-profile.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-profile.stdout.raw.log",
+      "bytes": 393,
+      "sha256": "1B7DA613469F981CC5776D1EBF28B46B6FF36981DE59E440516B1F1B9953FC89",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-release.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-release.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-build-release.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-build-release.stdout.raw.log",
+      "bytes": 393,
+      "sha256": "1DF3FE70A68548C5422AB6202A5EDAC69B3714FC1652165BADC404040D575019",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-debug.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-debug.stderr.raw.log",
+      "bytes": 115,
+      "sha256": "A33A33A776407D1C90C9E3A2066352F15075F2B5829AC298CB028D6D4BFB9C77",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-debug.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-debug.stdout.raw.log",
+      "bytes": 649,
+      "sha256": "CD6284160B5D14C39B15518FFE410CFD345192F8F8FEB82B317B48EDD09E3F89",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-profile-checked.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-profile-checked.stderr.raw.log",
+      "bytes": 115,
+      "sha256": "A33A33A776407D1C90C9E3A2066352F15075F2B5829AC298CB028D6D4BFB9C77",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-profile-checked.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-profile-checked.stdout.raw.log",
+      "bytes": 659,
+      "sha256": "60AD57D1ACA4700763B4BFCE9B7189760B2282A5EA0A77CBFD6FF488CE0F76B4",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-profile.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-profile.stderr.raw.log",
+      "bytes": 115,
+      "sha256": "A33A33A776407D1C90C9E3A2066352F15075F2B5829AC298CB028D6D4BFB9C77",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-profile.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-profile.stdout.raw.log",
+      "bytes": 651,
+      "sha256": "B66599456421A8995F3CA8939EE7657385D403E0C9B45E5C3287FA240AB26962",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-release.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-release.stderr.raw.log",
+      "bytes": 115,
+      "sha256": "A33A33A776407D1C90C9E3A2066352F15075F2B5829AC298CB028D6D4BFB9C77",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-configure-release.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-configure-release.stdout.raw.log",
+      "bytes": 651,
+      "sha256": "9307141E2DA60910E37FCA79C99861F7FBBFA542956FB82C7FB7C4EF87E4FBD3",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-debug.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-debug.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-debug.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-debug.stdout.raw.log",
+      "bytes": 903,
+      "sha256": "E306385F85AF66E45D3474C8DC6F0048C5E9363BA6E91958D4F9B93128FE56C1",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-profile-checked.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-profile-checked.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-profile-checked.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-profile-checked.stdout.raw.log",
+      "bytes": 913,
+      "sha256": "78BFCADF462B1045DCA7C11CE34B45AC0DAD6B92A8AA1B696E49E2F6233FD9B6",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-profile.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-profile.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-profile.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-profile.stdout.raw.log",
+      "bytes": 905,
+      "sha256": "EA0E8705B7DA0796E4306526A215D74D6B3C4D277F50CA02C1204B0EAE9A0CA3",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-release.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-release.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/consumer-ctest-release.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-ctest-release.stdout.raw.log",
+      "bytes": 905,
+      "sha256": "20E37BED793F5454AF6B5DE0DF7E4EEBA99DBDE6421482F69FC1E828798E37B0",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/stage.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/stage.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "physx/final/raw/stage.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/stage.stdout.raw.log",
+      "bytes": 251,
+      "sha256": "04F0E7BC076871F837A3DBB336AB0804560F6181A011F3A3E76393953DEB3278",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-build-Debug.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-build-Debug.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-build-Debug.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-build-Debug.stdout.raw.log",
+      "bytes": 407,
+      "sha256": "3FB3E4D97A7E4C605F2DE2B8665FB87357748D872B9EDA26E7BA89C88D1EF958",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-build-Profile.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-build-Profile.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-build-Profile.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-build-Profile.stdout.raw.log",
+      "bytes": 409,
+      "sha256": "6D7B2B1C1E6D6D62EEF404F3F3363092C565DA532B3ECDF76320E29F39A99FA2",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-build-Release.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-build-Release.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-build-Release.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-build-Release.stdout.raw.log",
+      "bytes": 409,
+      "sha256": "290CA36C82095A1C103BC0B625C6EDE227A906D9530CBCC2AC99AE65EEA09E4F",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-configure.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-configure.stderr.raw.log",
+      "bytes": 115,
+      "sha256": "A33A33A776407D1C90C9E3A2066352F15075F2B5829AC298CB028D6D4BFB9C77",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-configure.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-configure.stdout.raw.log",
+      "bytes": 804,
+      "sha256": "7D82925FD4818E5D7E7B60ED5533A957CE691BE9A8A94DCC6C020BA5BB6BEAAA",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-ctest-Debug.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-ctest-Debug.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-ctest-Debug.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-ctest-Debug.stdout.raw.log",
+      "bytes": 695,
+      "sha256": "B4A065ADEF2BC914C41A5DA5B4237E24A22B0D40B1AFF004AA455101B840E051",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-ctest-Profile.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-ctest-Profile.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-ctest-Profile.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-ctest-Profile.stdout.raw.log",
+      "bytes": 695,
+      "sha256": "630C13093AA9839C1D9B81B593EF4A56FE775CB8A32C7624022E3C1F8CF77D04",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-ctest-Release.stderr.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-ctest-Release.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    },
+    {
+      "path": "poly2tri/consumer/raw/consumer-ctest-Release.stdout.raw.log",
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/consumer-ctest-Release.stdout.raw.log",
+      "bytes": 695,
+      "sha256": "3A46655799EB66C276BC192D942F4BA12AB12440B6C6351ADF817A3CEEA61D95",
+      "role": "Original final-phase raw text capture referenced by validation-result hashes"
+    }
+  ],
+  "freezeReferences": [
+    {
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/validation-inputs.json",
+      "sha256": "FC59E613625899F3A412EB161223C6E8141E41503CC44D9FC76726D54E62754E",
+      "bytes": 1044417,
+      "count": 3667,
+      "copied": false,
+      "reason": "Summarized reference only; external inputs and full pre/postflight inventories remain in original evidence"
+    },
+    {
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/validation-inputs.json",
+      "sha256": "A18B884FFBF3C84B3CCCF65F1B7A7E88EFE1B9E9D4BC53D3F409FE3E51E0EB5D",
+      "bytes": 1072257,
+      "count": 3765,
+      "copied": false,
+      "reason": "Summarized reference only; external inputs and full pre/postflight inventories remain in original evidence"
+    },
+    {
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-preparation/validation-inputs.json",
+      "sha256": "10210F23D5E9C88A52845DFCCB3A4131967A4F84D20B2527DFD2AF336CB58D64",
+      "bytes": 28941,
+      "count": 121,
+      "copied": false,
+      "reason": "Summarized reference only; external inputs and full pre/postflight inventories remain in original evidence"
+    },
+    {
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/validation-inputs.json",
+      "sha256": "BF5AAC140E27B995CCA2B791E6AE76811C2FB655881F14F0427B4ECBD8A806F7",
+      "bytes": 45272,
+      "count": 183,
+      "copied": false,
+      "reason": "Summarized reference only; external inputs and full pre/postflight inventories remain in original evidence"
+    }
+  ],
+  "largeSourceInventoryReferences": [
+    {
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-rev1-acquisition/source-snapshot-manifest.json",
+      "sha256": "202329A844DF20F8E3349C589A3D9567F7D633615B2B17E37FD49929F03AC2AD",
+      "bytes": 397439,
+      "copied": false,
+      "reason": "Full original source inventory retained externally; archive data-audit summary pins this manifest"
+    },
+    {
+      "originalPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-rev1-acquisition/source-tar-audit.json",
+      "sha256": "F6B4B784D4293FB82CDC983723F7531BDDBBB5F5B2D0672B8E913FB73BF77F42",
+      "bytes": 669745,
+      "copied": false,
+      "reason": "Full original source inventory retained externally; archive data-audit summary pins this manifest"
+    }
+  ],
+  "observations": [
+    "Parent-final-consumer-review records PhysX 24 cases, zero skips across Debug/Profile/Release/Profile-to-Checked",
+    "Parent-focal-review records Poly2Tri 12 cases, zero skips across Debug/Profile/Release",
+    "Native/phase argv, PID, exit and raw text capture hashes are preserved in original result JSON",
+    "Integration receipt records cache44 preserved plus4 files =>48 and exact Windows PAL SHA"
+  ],
+  "reproduction": {
+    "sharedCaptureHelper": "shared/CommonExecution.ps1",
+    "physx": [
+      "physx/configure/assignment.json",
+      "physx/configure/PrepareInputs.ps1",
+      "physx/configure/RunConfigure.ps1",
+      "physx/configure/RunProfileBuild.ps1",
+      "physx/configure/RunRemainingBuilds.ps1",
+      "physx/final/assignment.json",
+      "physx/final/RunStageAndFinalConsumers.ps1",
+      "physx/provider-initial.patch",
+      "physx/provider-final-delta.patch"
+    ],
+    "poly2tri": [
+      "poly2tri/producer/assignment.json",
+      "poly2tri/producer/RunProducer.ps1",
+      "poly2tri/producer/provider-source-diff.patch",
+      "poly2tri/consumer/consumer-assignment.json",
+      "poly2tri/consumer/RunConsumer.ps1"
+    ],
+    "rule": "Drivers are preserved as evidence, not dispatched. Their original absolute paths and adjacent CommonExecution expectations remain unchanged; use published provider sources plus original pinned external/toolchain inputs for reproduction."
+  },
+  "limits": [
+    "This is a portable review bundle, not a complete portable build-input distribution",
+    "Archives, source snapshots, native libraries/executables, toolchain and full freezes are not bundled",
+    "Historical NOT_RUN/pending receipts remain byte exact; later parent reviews define focal status",
+    "No additional tests, native tools, configure or build were executed for this bundle",
+    "PhysX is an exact SDK5.1.1 CPU transitional provider; GPU physics/historical rev4 equivalence and final Jolt are not accepted here",
+    "Vehicle oracle covers sprung-mass/API symbols, not a complete vehicle",
+    "Neither focal package evidence nor integration receipt proves production engine linking, Editor/WhiteBox/AP/cooking/game runtime or visual acceptance",
+    "All original absolute paths are intentionally retained; copied file paths in contents are relative to this index"
+  ],
+  "verification": {
+    "copiedFiles": 100,
+    "copiedBytes": 474825.0,
+    "originalsPrePostByteExact": true,
+    "copiesByteExact": true
+  }
+}

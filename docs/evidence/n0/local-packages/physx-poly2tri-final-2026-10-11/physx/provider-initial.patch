@@ -1,0 +1,1287 @@
+diff --git a/cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake b/cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake
+@@ -0,0 +1,76 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++if(TARGET 3rdParty::PhysX5)
++    return()
++endif()
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(JE_PHYSX_PACKAGE_ROOT "${CMAKE_CURRENT_LIST_DIR}")
++JE_python_require_local_path(JE_PHYSX_PACKAGE_ROOT)
++set(JE_PHYSX_ROOT "${JE_PHYSX_PACKAGE_ROOT}/PhysX/physx")
++if(NOT EXISTS "${JE_PHYSX_ROOT}/version.txt")
++    message(FATAL_ERROR "JE PhysX5: package version.txt is missing")
++endif()
++file(READ "${JE_PHYSX_ROOT}/version.txt" JE_PHYSX_VERSION)
++string(STRIP "${JE_PHYSX_VERSION}" JE_PHYSX_VERSION)
++if(NOT JE_PHYSX_VERSION STREQUAL "5.1.1.32142945"
++    OR (PhysX5_FIND_VERSION AND NOT PhysX5_FIND_VERSION VERSION_EQUAL "5.1.1"))
++    message(FATAL_ERROR "JE PhysX5: the exact 5.1.1 CPU package is required")
++endif()
++set(PhysX5_VERSION "5.1.1")
++set(PhysX5_INCLUDE_DIR "${JE_PHYSX_ROOT}/include" "${JE_PHYSX_ROOT}/include/foundation" "${JE_PHYSX_ROOT}/include/geometry")
++foreach(JE_HEADER IN ITEMS PxPhysicsAPI.h PxConfig.h foundation/PxPhysicsVersion.h)
++    if(NOT EXISTS "${JE_PHYSX_ROOT}/include/${JE_HEADER}")
++        message(FATAL_ERROR "JE PhysX5: missing header ${JE_HEADER}")
++    endif()
++endforeach()
++set(PhysX5_COMPILE_DEFINITIONS PX_PHYSX_STATIC_LIB)
++set(LY_PHYSX_PROFILE_USE_CHECKED_LIBS OFF CACHE BOOL "When ON use PhysX checked libraries for the engine profile configuration")
++if(LY_PHYSX_PROFILE_USE_CHECKED_LIBS)
++    set(JE_PHYSX_PROFILE_CONFIG checked)
++else()
++    set(JE_PHYSX_PROFILE_CONFIG profile)
++endif()
++set(JE_PHYSX_MAIN_LIBS PhysX PhysXPvdSDK PhysXVehicle PhysXCharacterKinematic PhysXExtensions PhysXCooking PhysXCommon PhysXFoundation)
++set(JE_PHYSX_EXTRA_LIBS LowLevel LowLevelAABB LowLevelDynamics PhysXTask SceneQuery SimulationController)
++foreach(JE_CONFIG IN ITEMS debug profile checked release)
++    foreach(JE_LIBRARY IN LISTS JE_PHYSX_MAIN_LIBS JE_PHYSX_EXTRA_LIBS)
++        set(JE_FILE "${JE_PHYSX_ROOT}/bin/static/${JE_CONFIG}/${JE_LIBRARY}_static_64.lib")
++        JE_python_require_local_path(JE_FILE)
++        if(NOT EXISTS "${JE_FILE}")
++            message(FATAL_ERROR "JE PhysX5: missing ${JE_CONFIG} static archive ${JE_LIBRARY}")
++        endif()
++    endforeach()
++endforeach()
++# Preserve the O3DE imported target names and the original main-library order.
++set(JE_PREVIOUS_LIBRARY "")
++foreach(JE_LIBRARY IN LISTS JE_PHYSX_MAIN_LIBS)
++    set(JE_TARGET "PhysX5${JE_LIBRARY}_static_64::imported")
++    add_library(${JE_TARGET} STATIC IMPORTED GLOBAL)
++    set_target_properties(${JE_TARGET} PROPERTIES
++        IMPORTED_CONFIGURATIONS "DEBUG;PROFILE;CHECKED;RELEASE"
++        IMPORTED_LOCATION_DEBUG "${JE_PHYSX_ROOT}/bin/static/debug/${JE_LIBRARY}_static_64.lib"
++        IMPORTED_LOCATION_PROFILE "${JE_PHYSX_ROOT}/bin/static/${JE_PHYSX_PROFILE_CONFIG}/${JE_LIBRARY}_static_64.lib"
++        IMPORTED_LOCATION_CHECKED "${JE_PHYSX_ROOT}/bin/static/checked/${JE_LIBRARY}_static_64.lib"
++        IMPORTED_LOCATION_RELEASE "${JE_PHYSX_ROOT}/bin/static/release/${JE_LIBRARY}_static_64.lib")
++    if(JE_PREVIOUS_LIBRARY)
++        target_link_libraries(${JE_TARGET} INTERFACE ${JE_PREVIOUS_LIBRARY})
++    endif()
++    set(JE_PREVIOUS_LIBRARY ${JE_TARGET})
++endforeach()
++add_library(PhysX5_STATIC_LIBS::imported INTERFACE IMPORTED GLOBAL)
++target_link_libraries(PhysX5_STATIC_LIBS::imported INTERFACE ${JE_PREVIOUS_LIBRARY})
++foreach(JE_LIBRARY IN LISTS JE_PHYSX_EXTRA_LIBS)
++    target_link_libraries(PhysX5_STATIC_LIBS::imported INTERFACE
++        "${JE_PHYSX_ROOT}/bin/static/$<IF:$<CONFIG:profile>,${JE_PHYSX_PROFILE_CONFIG},$<LOWER_CASE:$<CONFIG>>>/${JE_LIBRARY}_static_64.lib")
++endforeach()
++add_library(3rdParty::PhysX5 INTERFACE IMPORTED GLOBAL)
++if(COMMAND ly_target_include_system_directories)
++    ly_target_include_system_directories(TARGET 3rdParty::PhysX5 INTERFACE ${PhysX5_INCLUDE_DIR})
++else()
++    target_include_directories(3rdParty::PhysX5 SYSTEM INTERFACE ${PhysX5_INCLUDE_DIR})
++endif()
++target_link_libraries(3rdParty::PhysX5 INTERFACE PhysX5_STATIC_LIBS::imported)
++target_compile_definitions(3rdParty::PhysX5 INTERFACE ${PhysX5_COMPILE_DEFINITIONS})
++# The transition provider supplies CPU libraries only; no GPU DLL runtime claims.
++set(PhysX5_FOUND TRUE)
+diff --git a/cmake/Tools/LocalPackages/PhysX/NOTICE.txt b/cmake/Tools/LocalPackages/PhysX/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/NOTICE.txt
+@@ -0,0 +1,32 @@
++JericoEngine transition CPU PhysX package
++
++PhysX SDK 5.1.1.32142945 is NVIDIA-Omniverse/PhysX commit
++0bbcff3d0c541325f4d14c36ee18f24e22e35e6e (tag 104.1-physx-5.1.1).
++The complete original SDK LICENSE.md and README.md accompany the headers.
++Header copyright notices remain unchanged.
++
++Build helpers originate from NVIDIAGameWorks/PhysX commit
++a2c0428acab643e60618c681b501e86f7fd558cc, externals/cmakemodules.
++Their original files and root LICENSE.md/README.md/externals README are
++preserved in LICENSES/official-build-helpers. The helpers do not contain
++inline copyright/license notices. The root BSD3 notice and the external
++third-party acknowledgments are preserved without inventing a per-file
++attribution or asserting equivalence to the SDK5.1 packman module release.
++
++O3DE's historical PhysX5 recipe/Find contract at commit
++70f0b7b5257bf7cf935bf1cfd270e1b53ccead18 informed the JE adaptation.
++O3DE Apache-2.0/MIT license texts are included in LICENSES/O3DE.
++
++Private build adaptations retain PUBLIC_RELEASE=1 and PX_PUBLIC_RELEASE=1,
++disable both external DLL copy gates when PX_COPY_EXTERNAL_DLL=OFF, and
++identify the installed MSVC v143 toolset. Debug uses MDd; other configs MD.
++The six static-pass object archives are renamed explicitly to the original
++Find layout. No GPU physics DLLs, snippets, OmniPVD runtime, shared CPU
++DLLs or downloaded packman dependencies are supplied. CPU cooking retains
++the eGPU_COMPATIBLE convex cooking request used by the engine.
++
++This has a new JE identity and hash; it is not the historical rev4 binary.
++It temporarily unblocks the original baseline. Jolt remains the required
++final physics integration. Package/consumer tests do not certify a working
++Editor/runtime, GPU physics, or a playable vehicle. The vehicle test checks
++the existing SDK API's sprung-mass computation, not a vehicle simulation.
+diff --git a/cmake/Tools/LocalPackages/PhysX/official-build-helpers/externals-README.md b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/externals-README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/externals-README.md
+@@ -0,0 +1,13 @@
++# NVIDIA PhysX SDK External Dependencies
++
++This depot contains external third party open source software copyright their respective owners: 
++
++Brian Paul,
++Emil Mikulic,
++Hewlett-Packard Company,
++The Khronos Group Inc.,
++Pawel Olszta,
++VMWare,
++Kitware Inc.,
++and the clang and glew development teams.
++
+diff --git a/cmake/Tools/LocalPackages/PhysX/official-build-helpers/GetCompilerAndPlatform.cmake b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/GetCompilerAndPlatform.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/GetCompilerAndPlatform.cmake
+@@ -0,0 +1,132 @@
++FUNCTION(CompilerDumpVersion _OUTPUT_VERSION)
++
++  EXEC_PROGRAM(${CMAKE_CXX_COMPILER}
++    ARGS ${CMAKE_CXX_COMPILER_ARG1} -dumpversion
++    OUTPUT_VARIABLE COMPILER_VERSION
++  )
++  STRING(REGEX REPLACE "([0-9])\\.([0-9])(\\.[0-9])?" "\\1\\2"
++    COMPILER_VERSION ${COMPILER_VERSION})
++
++  SET(${_OUTPUT_VERSION} ${COMPILER_VERSION})
++ENDFUNCTION()
++
++FUNCTION(GetCompiler _ret)
++	SET(COMPILER_SUFFIX "UNKNOWN")
++	
++	IF(CMAKE_CXX_COMPILER_ID STREQUAL "Intel"
++		OR CMAKE_CXX_COMPILER MATCHES "icl"
++		OR CMAKE_CXX_COMPILER MATCHES "icpc")
++		IF(WIN32)
++			SET (COMPILER_SUFFIX "iw")
++		ELSE()
++			SET (COMPILER_SUFFIX "il")
++		ENDIF()
++	ELSEIF (GHSMULTI)
++		SET(COMPILER_SUFFIX "ghs")
++	ELSEIF (MSVC_VERSION GREATER_EQUAL 1920)
++		SET(COMPILER_SUFFIX "vc142")		
++	ELSEIF (MSVC_VERSION GREATER_EQUAL 1910)
++		SET(COMPILER_SUFFIX "vc141")
++	ELSEIF (MSVC14)
++		SET(COMPILER_SUFFIX "vc140")
++	ELSEIF (MSVC12)
++		SET(COMPILER_SUFFIX "vc120")
++	ELSEIF (MSVC11)
++		SET(COMPILER_SUFFIX "vc110")
++	ELSEIF (MSVC10)
++		SET(COMPILER_SUFFIX "vc100")
++	ELSEIF (MSVC90)
++		SET(COMPILER_SUFFIX "vc90")
++	ELSEIF (MSVC80)
++		SET(COMPILER_SUFFIX "vc80")
++	ELSEIF (MSVC71)
++		SET(COMPILER_SUFFIX "vc71")
++	ELSEIF (MSVC70) # Good luck!
++		SET(COMPILER_SUFFIX "vc7") # yes, this is correct
++	ELSEIF (MSVC60) # Good luck!
++		SET(COMPILER_SUFFIX "vc6") # yes, this is correct
++	ELSEIF (BORLAND)
++		SET(COMPILER_SUFFIX "bcb")
++	ELSEIF(CMAKE_CXX_COMPILER_ID STREQUAL "SunPro")
++		SET(COMPILER_SUFFIX "sw")
++	ELSEIF(CMAKE_CXX_COMPILER_ID STREQUAL "XL")
++		SET(COMPILER_SUFFIX "xlc")
++	ELSEIF (MINGW)
++		CompilerDumpVersion(_COMPILER_VERSION)
++		SET(COMPILER_SUFFIX "mgw${_COMPILER_VERSION}")
++	ELSEIF (UNIX)
++		IF (CMAKE_COMPILER_IS_GNUCXX)
++			CompilerDumpVersion(_COMPILER_VERSION)
++			IF(APPLE)
++		      		# on Mac OS X/Darwin is "xgcc".
++		      		SET(COMPILER_SUFFIX "xgcc${_COMPILER_VERSION}")
++			ELSE()
++		  		SET(COMPILER_SUFFIX "gcc${_COMPILER_VERSION}")
++			ENDIF()
++		ENDIF()
++	ELSEIF (XBOXONE_MSVC_VERSION EQUAL 140)
++		SET(COMPILER_SUFFIX "vc140")
++	ELSEIF (XBOXONE_MSVC_VERSION EQUAL 141)
++		SET(COMPILER_SUFFIX "vc141")
++	ELSEIF (XBOXSERIESX_MSVC_VERSION EQUAL 141)
++		SET(COMPILER_SUFFIX "vc141")
++	ELSE()
++		# add clang!
++		SET(COMPILER_SUFFIX "")
++	ENDIF()
++	
++	SET(${_ret} ${COMPILER_SUFFIX} PARENT_SCOPE)	
++ENDFUNCTION()
++
++FUNCTION(GetStaticCRTString _ret)
++	IF(NOT TARGET_BUILD_PLATFORM STREQUAL "windows")
++		return()
++	ENDIF()
++
++	IF (NV_USE_STATIC_WINCRT)
++		SET(CRT_STRING "mt")
++	ELSE()
++		SET(CRT_STRING "md")
++	ENDIF()
++
++	SET(${_ret} ${CRT_STRING} PARENT_SCOPE)
++ENDFUNCTION()
++
++FUNCTION (GetPlatformBinName PLATFORM_BIN_NAME LIBPATH_SUFFIX)
++	SET(RETVAL "UNKNOWN")
++
++	GetCompiler(COMPILER)
++	
++	IF(TARGET_BUILD_PLATFORM STREQUAL "windows")
++		GetStaticCRTString(CRT_STRING)
++		SET(RETVAL "win.x86_${LIBPATH_SUFFIX}.${COMPILER}.${CRT_STRING}")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "uwp")
++		SET(RETVAL "uwp.${PX_OUTPUT_ARCH}_${LIBPATH_SUFFIX}.${COMPILER}")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "mac")
++		SET(RETVAL "mac.x86_${LIBPATH_SUFFIX}")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "ios")
++		SET(RETVAL "ios.arm_${LIBPATH_SUFFIX}")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "ps4")
++		SET(RETVAL "ps4")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "xboxone")
++		SET(RETVAL "xboxone.${COMPILER}")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "xboxseriesx")
++		SET(RETVAL "xboxseriesx.${COMPILER}")
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "switch")
++		IF (${CMAKE_GENERATOR_PLATFORM} STREQUAL "NX32")
++			SET(RETVAL "switch32")
++		ELSEIF (${CMAKE_GENERATOR_PLATFORM} STREQUAL "NX64")
++		SET(RETVAL "switch64")
++		ENDIF()
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "android")		
++		SET(RETVAL "android.${ANDROID_ABI}.fp-soft")		
++	ELSEIF(TARGET_BUILD_PLATFORM STREQUAL "linux")
++		IF(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "x86_64")
++			SET(RETVAL "linux.clang")
++		ELSEIF(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "aarch64")
++			SET(RETVAL "linux.aarch64")
++		ENDIF()
++	ENDIF()
++
++	SET(${PLATFORM_BIN_NAME} ${RETVAL} PARENT_SCOPE)
++ENDFUNCTION()
+diff --git a/cmake/Tools/LocalPackages/PhysX/official-build-helpers/LICENSE.md b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/LICENSE.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/LICENSE.md
+@@ -0,0 +1,27 @@
++# NVIDIA PhysX SDK 4.1
++
++Copyright (c) 2021 NVIDIA Corporation. All rights reserved.
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions
++are met:
++ * Redistributions of source code must retain the above copyright
++   notice, this list of conditions and the following disclaimer.
++ * Redistributions in binary form must reproduce the above copyright
++   notice, this list of conditions and the following disclaimer in the
++   documentation and/or other materials provided with the distribution.
++ * Neither the name of NVIDIA CORPORATION nor the names of its
++   contributors may be used to endorse or promote products derived
++   from this software without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY
++EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
++PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
++CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
++PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
++OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+diff --git a/cmake/Tools/LocalPackages/PhysX/official-build-helpers/NvidiaBuildOptions.cmake b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/NvidiaBuildOptions.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/NvidiaBuildOptions.cmake
+@@ -0,0 +1,230 @@
++# Define the options up front
++
++OPTION(NV_APPEND_CONFIG_NAME "Append config (DEBUG, CHECKED, PROFILE or '' for release) to outputted binaries." OFF)
++OPTION(NV_USE_GAMEWORKS_OUTPUT_DIRS "Use new GameWorks folder structure for binary output." ON)
++OPTION(NV_USE_STATIC_WINCRT "Use the statically linked windows CRT" OFF)
++OPTION(NV_USE_DEBUG_WINCRT "Use the debug version of the CRT" OFF)
++OPTION(NV_FORCE_64BIT_SUFFIX "Force a 64 bit suffix for platforms that don't register properly." OFF)
++OPTION(NV_FORCE_32BIT_SUFFIX "Force a 32 bit suffix for platforms that don't register properly." OFF)
++
++INCLUDE(SetOutputPaths)
++
++
++IF(NV_USE_GAMEWORKS_OUTPUT_DIRS)
++
++	IF(NV_FORCE_32BIT_SUFFIX AND NV_FORCE_64BIT_SUFFIX)
++		MESSAGE(FATAL_ERROR "Cannot specify both NV_FORCE_64BIT_SUFFIX and NV_FORCE_32BIT_SUFFIX. Choose one.")
++	ENDIF()
++
++	IF(SUPPRESS_SUFFIX)
++		MESSAGE("Suppressing binary suffixes.")
++		SET(LIBPATH_SUFFIX "NONE")
++		# Set default exe suffix. Unset on platforms that don't need it. Include underscore since it's optional
++		SET(EXE_SUFFIX "")
++	ELSEIF(NV_FORCE_32BIT_SUFFIX)
++		MESSAGE("Forcing binary suffixes to 32 bit.")
++		SET(LIBPATH_SUFFIX "32")
++		# Set default exe suffix. Unset on platforms that don't need it. Include underscore since it's optional
++		SET(EXE_SUFFIX "_32")
++	ELSEIF(NV_FORCE_64BIT_SUFFIX)
++		MESSAGE("Forcing binary suffixes to 64 bit.")
++		SET(LIBPATH_SUFFIX "64")
++		# Set default exe suffix. Unset on platforms that don't need it. Include underscore since it's optional
++		SET(EXE_SUFFIX "_64")
++	ELSE()
++		# New bitness suffix
++		IF(CMAKE_SIZEOF_VOID_P EQUAL 8)
++			SET(LIBPATH_SUFFIX "64")
++			# Set default exe suffix. Unset on platforms that don't need it. Include underscore since it's optional
++			SET(EXE_SUFFIX "_64")
++		ELSE()
++			SET(LIBPATH_SUFFIX "32")
++			# Set default exe suffix. Unset on platforms that don't need it. Include underscore since it's optional
++			SET(EXE_SUFFIX "_32")
++		ENDIF()
++	ENDIF()
++	
++	IF (NOT DEFINED PX_OUTPUT_LIB_DIR)
++		MESSAGE(FATAL_ERROR "When using the GameWorks output structure you must specify PX_OUTPUT_LIB_DIR as the base")
++	ENDIF()
++	
++	IF (NOT DEFINED PX_OUTPUT_BIN_DIR)
++		MESSAGE(FATAL_ERROR "When using the GameWorks output structure you must specify PX_OUTPUT_BIN_DIR as the base")
++	ENDIF()
++
++	# Set the WINCRT_DEBUG and WINCRT_NDEBUG variables for use in project compile settings
++	# Really only relevant to windows
++
++	SET(DISABLE_ITERATOR_DEBUGGING "/D \"_HAS_ITERATOR_DEBUGGING=0\" /D \"_ITERATOR_DEBUG_LEVEL=0\"")
++	SET(DISABLE_ITERATOR_DEBUGGING_CUDA "-D_HAS_ITERATOR_DEBUGGING=0 -D_ITERATOR_DEBUG_LEVEL=0")
++	SET(CRT_DEBUG_FLAG "/D \"_DEBUG\"")
++	SET(CRT_NDEBUG_FLAG "/D \"NDEBUG\"")
++
++	# Need a different format for CUDA
++   	SET(CUDA_DEBUG_FLAG "-DNDEBUG ${DISABLE_ITERATOR_DEBUGGING_CUDA}")
++   	SET(CUDA_NDEBUG_FLAG "-DNDEBUG")
++   	
++	SET(CUDA_CRT_COMPILE_OPTIONS_NDEBUG "")
++	SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "")
++
++
++	IF(NV_USE_STATIC_WINCRT)
++	    SET(WINCRT_NDEBUG "/MT ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++		SET(CUDA_CRT_COMPILE_OPTIONS_NDEBUG "/MT")
++
++	    IF (NV_USE_DEBUG_WINCRT)
++		   	SET(CUDA_DEBUG_FLAG "-D_DEBUG")
++	    	SET(WINCRT_DEBUG "/MTd ${CRT_DEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MTd")
++	    ELSE()
++	    	SET(WINCRT_DEBUG "/MT ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MT")
++	    ENDIF()
++	ELSE()
++	    SET(WINCRT_NDEBUG "/MD ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}")
++		SET(CUDA_CRT_COMPILE_OPTIONS_NDEBUG "/MD")
++
++	    IF(NV_USE_DEBUG_WINCRT)
++		   	SET(CUDA_DEBUG_FLAG "-D_DEBUG")
++	    	SET(WINCRT_DEBUG "/MDd ${CRT_DEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MDd")
++	    ELSE()
++	    	SET(WINCRT_DEBUG "/MD ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MD")
++	    ENDIF()
++	ENDIF()
++
++	INCLUDE(GetCompilerAndPlatform)
++
++	GetPlatformBinName(PLATFORM_BIN_NAME ${LIBPATH_SUFFIX})
++
++	
++	SET(PX_ROOT_LIB_DIR "bin/${PLATFORM_BIN_NAME}" CACHE INTERNAL "Relative root of the lib output directory")
++	SET(PX_ROOT_EXE_DIR "bin/${PLATFORM_BIN_NAME}" CACHE INTERNAL "Relative root dir of the exe output directory")
++
++	IF (NOT DEFINED PX_OUTPUT_ARCH)  # platforms with fixed arch like ps4 dont need to have arch defined
++		SET(EXE_SUFFIX "")
++	ENDIF()
++	
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG   "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/debug"   )
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_PROFILE "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/profile" )
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_CHECKED "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/checked" )
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/release" )
++
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG   "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/debug"   )
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_PROFILE "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/profile" )
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_CHECKED "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/checked" )
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${PX_OUTPUT_LIB_DIR}/${PX_ROOT_LIB_DIR}/release" )
++
++	# Set the RUNTIME output directories - this is executables, etc.
++	# Override our normal PX_ROOT_EXE_DIR for Android
++	IF(TARGET_BUILD_PLATFORM STREQUAL "Android")
++		SET(PX_ROOT_EXE_DIR "bin/${COMPILER_AND_PLATFORM}/${ANDROID_ABI}/${CM_ANDROID_FP}" CACHE INTERNAL "Relative root dir of the exe output directory")
++	ENDIF()	
++
++	# RFC 108, we're doing EXEs as the special case since there will be presumable be less of those.
++	SET(PX_EXE_OUTPUT_DIRECTORY_DEBUG 		"${PX_OUTPUT_BIN_DIR}/${PX_ROOT_EXE_DIR}/debug"	  CACHE INTERNAL "Directory to put debug exes in")
++	SET(PX_EXE_OUTPUT_DIRECTORY_PROFILE  	"${PX_OUTPUT_BIN_DIR}/${PX_ROOT_EXE_DIR}/profile" CACHE INTERNAL "Directory to put profile exes in")
++	SET(PX_EXE_OUTPUT_DIRECTORY_CHECKED 	"${PX_OUTPUT_BIN_DIR}/${PX_ROOT_EXE_DIR}/checked" CACHE INTERNAL "Directory to put checked exes in")
++	SET(PX_EXE_OUTPUT_DIRECTORY_RELEASE  	"${PX_OUTPUT_BIN_DIR}/${PX_ROOT_EXE_DIR}/release" CACHE INTERNAL "Directory to put release exes in")
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG 	${CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG}			)
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_PROFILE  ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY_PROFILE}		)
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_CHECKED 	${CMAKE_ARCHIVE_OUTPUT_DIRECTORY_CHECKED}  		)
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE  ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE}		)
++
++
++ELSE()
++	# old bitness suffix
++	IF(CMAKE_SIZEOF_VOID_P EQUAL 8)
++		SET(LIBPATH_SUFFIX "x64")
++	ELSE()
++		SET(LIBPATH_SUFFIX "x86")
++	ENDIF()	
++
++	SET(DISABLE_ITERATOR_DEBUGGING "/D \"_HAS_ITERATOR_DEBUGGING=0\" /D \"_ITERATOR_DEBUG_LEVEL=0\"")
++	SET(DISABLE_ITERATOR_DEBUGGING_CUDA "-D_HAS_ITERATOR_DEBUGGING=0 -D_ITERATOR_DEBUG_LEVEL=0")
++	SET(CRT_DEBUG_FLAG "/D \"_DEBUG\"")
++	SET(CRT_NDEBUG_FLAG "/D \"NDEBUG\"")
++
++	# Need a different format for CUDA
++   	SET(CUDA_DEBUG_FLAG "-DNDEBUG ${DISABLE_ITERATOR_DEBUGGING_CUDA}")
++   	SET(CUDA_NDEBUG_FLAG "-DNDEBUG")
++   	
++	SET(CUDA_CRT_COMPILE_OPTIONS_NDEBUG "")
++	SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "")
++
++	IF(NV_USE_STATIC_WINCRT)
++	    SET(WINCRT_NDEBUG "/MT ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++		SET(CUDA_CRT_COMPILE_OPTIONS_NDEBUG "/MT")
++
++	    IF (NV_USE_DEBUG_WINCRT)
++		   	SET(CUDA_DEBUG_FLAG "-D_DEBUG")
++	    	SET(WINCRT_DEBUG "/MTd ${CRT_DEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MTd")
++	    ELSE()
++	    	SET(WINCRT_DEBUG "/MT ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MT")
++	    ENDIF()
++	ELSE()
++	    SET(WINCRT_NDEBUG "/MD ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}")
++		SET(CUDA_CRT_COMPILE_OPTIONS_NDEBUG "/MD")
++
++	    IF(NV_USE_DEBUG_WINCRT)
++		   	SET(CUDA_DEBUG_FLAG "-D_DEBUG")
++	    	SET(WINCRT_DEBUG "/MDd ${CRT_DEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MDd")
++	    ELSE()
++	    	SET(WINCRT_DEBUG "/MD ${DISABLE_ITERATOR_DEBUGGING} ${CRT_NDEBUG_FLAG}" CACHE INTERNAL "Windows CRT build setting")
++			SET(CUDA_CRT_COMPILE_OPTIONS_DEBUG "/MD")
++	    ENDIF()
++	ENDIF()
++	
++	IF(DEFINED PX_OUTPUT_EXE_DIR)
++		SetExeOutputPath(${PX_OUTPUT_EXE_DIR})
++	ENDIF()
++	IF(DEFINED PX_OUTPUT_DLL_DIR)
++		SetDllOutputPath(${PX_OUTPUT_DLL_DIR})
++	ENDIF()
++	IF(DEFINED PX_OUTPUT_LIB_DIR)
++		SetLibOutputPath(${PX_OUTPUT_LIB_DIR})
++	ENDIF()
++	# All EXE/DLL/LIB output will be overwritten if PX_OUTPUT_ALL_DIR is defined
++	IF(DEFINED PX_OUTPUT_ALL_DIR)
++		SetSingleOutputPath(${PX_OUTPUT_ALL_DIR})
++	ENDIF()
++ENDIF()
++
++IF(NV_APPEND_CONFIG_NAME)
++	SET(CMAKE_DEBUG_POSTFIX   "DEBUG_${LIBPATH_SUFFIX}")
++	SET(CMAKE_PROFILE_POSTFIX "PROFILE_${LIBPATH_SUFFIX}")
++	SET(CMAKE_CHECKED_POSTFIX "CHECKED_${LIBPATH_SUFFIX}")
++	SET(CMAKE_RELEASE_POSTFIX "_${LIBPATH_SUFFIX}")
++ELSE()
++	IF (DEFINED PX_OUTPUT_ARCH)  # platforms with fixed arch like ps4 dont need to have arch defined, then dont add bitness
++		SET(CMAKE_DEBUG_POSTFIX "_${LIBPATH_SUFFIX}")
++		SET(CMAKE_PROFILE_POSTFIX "_${LIBPATH_SUFFIX}")
++		SET(CMAKE_CHECKED_POSTFIX "_${LIBPATH_SUFFIX}")
++		SET(CMAKE_RELEASE_POSTFIX "_${LIBPATH_SUFFIX}")
++	ENDIF()
++ENDIF()
++
++# Can no longer just use LIBPATH_SUFFIX since it depends on build type
++IF(CMAKE_CL_64)
++	SET(RESOURCE_LIBPATH_SUFFIX "x64")
++ELSE(CMAKE_CL_64)
++	SET(RESOURCE_LIBPATH_SUFFIX "x86")
++ENDIF(CMAKE_CL_64)				
++
++
++# removes characters from the version string and leaves just numbers
++FUNCTION(StripPackmanVersion IN_VERSION _OUTPUT_VERSION)
++
++  STRING(REGEX REPLACE "([^0-9.])" ""
++    OUT_V ${IN_VERSION})
++    
++  STRING(REPLACE ".." "."
++    OUT_V2 ${OUT_V})
++
++  SET(${_OUTPUT_VERSION} ${OUT_V2} PARENT_SCOPE)
++ENDFUNCTION(StripPackmanVersion)
+\ No newline at end of file
+diff --git a/cmake/Tools/LocalPackages/PhysX/official-build-helpers/README.md b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/README.md
+@@ -0,0 +1,66 @@
++# NVIDIA PhysX SDK 4.1
++
++Copyright (c) 2021 NVIDIA Corporation. All rights reserved.
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions
++are met:
++ * Redistributions of source code must retain the above copyright
++   notice, this list of conditions and the following disclaimer.
++ * Redistributions in binary form must reproduce the above copyright
++   notice, this list of conditions and the following disclaimer in the
++   documentation and/or other materials provided with the distribution.
++ * Neither the name of NVIDIA CORPORATION nor the names of its
++   contributors may be used to endorse or promote products derived
++   from this software without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY
++EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
++PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
++CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
++PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
++OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++
++## PhysX 5 Now Available
++
++The NVIDIA PhysX SDK version 5 is now available [here](https://github.com/NVIDIA-Omniverse/PhysX).
++This repository will continue to be available to support legacy users.  We encourage all new projects to start on the new release.
++
++## Introduction
++
++Welcome to the NVIDIA PhysX SDK source code repository. This depot includes the PhysX SDK and the Kapla Demo application.
++
++The NVIDIA PhysX SDK is a scalable multi-platform physics solution supporting a wide range of devices, from smartphones to high-end multicore CPUs and GPUs. PhysX is already integrated into some of the most popular game engines, including Unreal Engine, and Unity3D. [PhysX SDK on developer.nvidia.com](https://developer.nvidia.com/physx-sdk).
++
++## Documentation
++
++Please see [Release Notes](http://gameworksdocs.nvidia.com/PhysX/4.1/release_notes.html) for updates pertaining to the latest version.
++
++The full set of documentation can also be found in the repository under physx/documentation or online at http://gameworksdocs.nvidia.com/simulation.html 
++
++Platform specific information can be found here:
++* [Microsoft Windows](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/windows/readme_windows.html)
++* [Linux](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/linux/readme_linux.html)
++* [Google Android ARM](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/android/readme_android.html)
++* [Apple macOS](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/mac/readme_mac.html)
++* [Apple iOS](http://gameworksdocs.nvidia.com/PhysX/4.1/documentation/platformreadme/ios/readme_ios.html)
++ 
++
++## Quick Start Instructions
++
++Requirements:
++* Python 2.7.6 or later
++* CMake 3.12 or later
++
++To begin, clone this repository onto your local drive.  Then change directory to physx/, run ./generate_projects.[bat|sh] and follow on-screen prompts.  This will let you select a platform specific solution to build.  You can then open the generated solution file with your IDE and kick off one or more configuration builds.
++
++To build and run the Kapla Demo see [kaplademo/README.md](kaplademo/README.md).
++
++## Acknowledgements
++
++This depot contains external third party open source software copyright their respective owners.  See [kaplademo/README.md](kaplademo/README.md) and [externals/README.md](externals/README.md) for details.
+diff --git a/cmake/Tools/LocalPackages/PhysX/official-build-helpers/SetOutputPaths.cmake b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/SetOutputPaths.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/official-build-helpers/SetOutputPaths.cmake
+@@ -0,0 +1,95 @@
++FUNCTION(SetOutputPaths 
++	OUTPUT_EXE_DIR 
++	OUTPUT_DLL_DIR 
++	OUTPUT_LIB_DIR)
++
++	SET(EXE_DIR ${OUTPUT_EXE_DIR})
++	SET(DLL_DIR ${OUTPUT_DLL_DIR})
++	SET(LIB_DIR ${OUTPUT_LIB_DIR})
++	
++	# Override the default output directories for all configurations.
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_CHECKED ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_CHECKED ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_CHECKED ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_PROFILE ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_PROFILE ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_PROFILE ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_COMPILE_PDB_OUTPUT_DIRECTORY ${LIB_DIR})
++	
++ENDFUNCTION(SetOutputPaths)
++
++FUNCTION(SetExeOutputPath OUTPUT_EXE_DIR)
++
++	SET(EXE_DIR ${OUTPUT_EXE_DIR})
++	
++	# Override the default output directories for all configurations.
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_CHECKED ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_PROFILE ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${EXE_DIR} PARENT_SCOPE)
++
++ENDFUNCTION(SetExeOutputPath)
++
++FUNCTION(SetDllOutputPath OUTPUT_DLL_DIR)
++
++	SET(DLL_DIR ${OUTPUT_DLL_DIR})
++	
++	# Override the default output directories for all configurations.
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${DLL_DIR}/${ARGV1} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_PROFILE ${DLL_DIR}/${ARGV2} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_CHECKED ${DLL_DIR}/${ARGV3} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${DLL_DIR}/${ARGV4} PARENT_SCOPE)
++
++ENDFUNCTION(SetDllOutputPath)
++
++FUNCTION(SetLibOutputPath OUTPUT_LIB_DIR)
++
++	SET(LIB_DIR ${OUTPUT_LIB_DIR})
++	
++	# Override the default output directories for all configurations.
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${LIB_DIR}/${ARGV1} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_PROFILE ${LIB_DIR}/${ARGV2} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_CHECKED ${LIB_DIR}/${ARGV3} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${LIB_DIR}/${ARGV4} PARENT_SCOPE)
++
++	SET(CMAKE_COMPILE_PDB_OUTPUT_DIRECTORY ${LIB_DIR})
++
++ENDFUNCTION(SetLibOutputPath)
++
++FUNCTION(SetSingleOutputPath OUTPUT_ALL_DIR)
++
++	SET(EXE_DIR ${OUTPUT_ALL_DIR})
++	SET(DLL_DIR ${OUTPUT_ALL_DIR})
++	SET(LIB_DIR ${OUTPUT_ALL_DIR})
++	
++	# Override the default output directories for all configurations.
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_CHECKED ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_CHECKED ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_CHECKED ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_PROFILE ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_PROFILE ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_PROFILE ${LIB_DIR} PARENT_SCOPE)
++
++	SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${EXE_DIR} PARENT_SCOPE)
++	SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${DLL_DIR} PARENT_SCOPE)
++	SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${LIB_DIR} PARENT_SCOPE)
++	
++	SET(CMAKE_COMPILE_PDB_OUTPUT_DIRECTORY ${LIB_DIR})
++	
++ENDFUNCTION(SetSingleOutputPath)
++
+diff --git a/cmake/Tools/LocalPackages/PhysX/PrepareSource.ps1 b/cmake/Tools/LocalPackages/PhysX/PrepareSource.ps1
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/PrepareSource.ps1
+@@ -0,0 +1,60 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++# Data-only preparation: no SDK/CMake/compiler/Git/packman process is launched.
++param(
++    [Parameter(Mandatory)][string]$SourceArchive,
++    [Parameter(Mandatory)][string]$SourceRoot,
++    [Parameter(Mandatory)][string]$SourceManifest,
++    [Parameter(Mandatory)][string]$OutputDirectory,
++    [Parameter(Mandatory)][string]$VSInstance
++)
++$ErrorActionPreference='Stop'
++Set-StrictMode -Version Latest
++function JEHash([string]$path){$s=[IO.File]::OpenRead($path);try{[Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($s))}finally{$s.Dispose()}}
++function JELocal([string]$path){
++    if(-not [IO.Path]::IsPathFullyQualified($path) -or $path.StartsWith('\\') -or $path.StartsWith('//') -or $path.Contains('://')){throw 'JE PhysX: absolute local paths required'}
++    $full=[IO.Path]::GetFullPath($path);$cur=$full
++    while($cur){if(Test-Path -LiteralPath $cur){if((Get-Item -LiteralPath $cur -Force).Attributes -band [IO.FileAttributes]::ReparsePoint){throw "JE PhysX: reparse path rejected $cur"}};$next=[IO.Path]::GetDirectoryName($cur);if($next -eq $cur){break};$cur=$next}
++    return $full.Replace('\','/')
++}
++function JENewFile([string]$path,[byte[]]$bytes){[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($path))|Out-Null;$s=[IO.File]::Open($path,[IO.FileMode]::CreateNew);try{$s.Write($bytes,0,$bytes.Length)}finally{$s.Dispose()}}
++foreach($name in @('SourceArchive','SourceRoot','SourceManifest','OutputDirectory','VSInstance')){Set-Variable -Name $name -Value (JELocal (Get-Variable -Name $name -ValueOnly))}
++$recipe=Get-Content -LiteralPath "$PSScriptRoot/Recipe.json" -Raw|ConvertFrom-Json
++$buildRoot=[IO.Path]::GetFullPath("$PSScriptRoot/../../../../build").Replace('\','/')
++if(-not $OutputDirectory.StartsWith($buildRoot+'/',[StringComparison]::OrdinalIgnoreCase) -or (Test-Path -LiteralPath $OutputDirectory)){throw 'JE PhysX: fresh output beneath checkout/build required'}
++if(-not (Test-Path -LiteralPath "$VSInstance/VC/Tools/MSVC/14.44.35207")){throw 'JE PhysX: audited VS2022/v143 installation is missing'}
++if((JEHash $SourceArchive) -cne $recipe.sourceArchiveSHA256.ToUpperInvariant() -or (JEHash $SourceManifest) -cne $recipe.sourceManifestSHA256.ToUpperInvariant()){throw 'JE PhysX: pinned archive/manifest changed'}
++$manifest=Get-Content -LiteralPath $SourceManifest -Raw|ConvertFrom-Json
++if($manifest.entries.Count -ne 1788 -or $manifest.sourceCommit -cne $recipe.sourceCommit -or $manifest.linksMaterialized -ne 0){throw 'JE PhysX: incomplete source manifest'}
++$seen=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
++foreach($entry in $manifest.entries){
++    if($entry.path -notmatch '^(physx/|LICENSE\.md$|README\.md$)' -or $entry.path -match '(^|/)\.\.(/|$)|[:\\]' -or -not $seen.Add($entry.path)){throw 'JE PhysX: invalid source membership'}
++    $path=JELocal (Join-Path $SourceRoot $entry.path)
++    if((JEHash $path) -cne $entry.sha256.ToUpperInvariant() -or ([IO.FileInfo]::new($path)).Length -ne $entry.bytes){throw "JE PhysX: source differs $($entry.path)"}
++}
++$all=@(Get-ChildItem -LiteralPath $SourceRoot -Recurse -Force)
++foreach($item in $all){if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'JE PhysX: source reparse member rejected'}}
++$files=@($all|Where-Object {-not $_.PSIsContainer})
++if($files.Count -ne 1788){throw 'JE PhysX: source membership count differs'}
++foreach($file in $files){if(-not $seen.Contains([IO.Path]::GetRelativePath($SourceRoot,$file.FullName).Replace('\','/'))){throw 'JE PhysX: unexpected source member'}}
++foreach($helper in $recipe.helperOriginals){$path=JELocal "$PSScriptRoot/official-build-helpers/$($helper.path)";if((JEHash $path) -cne $helper.sha256){throw 'JE PhysX: official helper/notice changed'}}
++$private="$OutputDirectory/private-source";$helpers="$OutputDirectory/private-helpers"
++foreach($entry in $manifest.entries){JENewFile "$private/$($entry.path)" ([IO.File]::ReadAllBytes((Join-Path $SourceRoot $entry.path)))}
++foreach($helper in $recipe.helperOriginals){JENewFile "$helpers/$($helper.path)" ([IO.File]::ReadAllBytes("$PSScriptRoot/official-build-helpers/$($helper.path)"))}
++$patches=[Collections.Generic.List[object]]::new()
++function JEPatch([string]$path,[string]$before,[string]$after){
++    $text=[IO.File]::ReadAllText($path)
++    if(($text.Split([string[]]@($before),[StringSplitOptions]::None).Count-1) -ne 1){throw 'JE PhysX: exact unique patch hunk missing'}
++    $patched=$text.Replace($before,$after)
++    if($patched.Replace($after,$before) -cne $text){throw 'JE PhysX: patch inverse differs'}
++    $beforeHash=JEHash $path;[IO.File]::WriteAllBytes($path,[Text.UTF8Encoding]::new($false).GetBytes($patched))
++    $patches.Add([ordered]@{path=$path;beforeSHA256=$beforeHash;afterSHA256=(JEHash $path);before=$before;after=$after;inverseByteExact=$true})
++}
++$windows="$private/physx/source/compiler/cmake/windows/CMakeLists.txt"
++JEPatch $windows 'IF(PX_COPY_EXTERNAL_DLL OR PUBLIC_RELEASE)' 'IF(PX_COPY_EXTERNAL_DLL)'
++JEPatch $windows "# for public release we copy the dlls for GPU other platforms so we dont keep duplicates around the repository`nIF(PUBLIC_RELEASE)" "# for public release we copy the dlls for GPU other platforms so we dont keep duplicates around the repository`nIF(PX_COPY_EXTERNAL_DLL AND PUBLIC_RELEASE)"
++JEPatch "$helpers/GetCompilerAndPlatform.cmake" "`tELSEIF (MSVC_VERSION GREATER_EQUAL 1920)" "`tELSEIF (MSVC_VERSION GREATER_EQUAL 1930)`n`t`tSET(COMPILER_SUFFIX `"vc143`")`n`tELSEIF (MSVC_VERSION GREATER_EQUAL 1920)"
++if((JEHash $windows) -cne '5DBE8B8DACC1178C992BAA1ED32731378115A671B3D34F989704063B3021E581' -or (JEHash "$helpers/GetCompilerAndPlatform.cmake") -cne 'D3F4995DC5633D96959E390A1AF5A7AB5561B5E6060232070EE04AA1F560623C'){throw 'JE PhysX: adapted output bytes differ from reviewed configure inputs'}
++$arguments=@('-S',"$private/physx/compiler/public",'-B',"$OutputDirectory/build",'-G','Visual Studio 17 2022','-A','x64','-T','v143',"-DCMAKE_GENERATOR_INSTANCE:PATH=$VSInstance","-DPHYSX_ROOT_DIR:PATH=$private/physx","-DCMAKEMODULES_PATH:PATH=$helpers",'-DCMAKEMODULES_VERSION:STRING=JE-official-4.1-a2c0428','-DCMAKEMODULES_NAME:STRING=JE-OfficialPhysXBuildHelpers','-DTARGET_BUILD_PLATFORM:STRING=windows','-DPX_OUTPUT_ARCH:STRING=x86',"-DPX_OUTPUT_LIB_DIR:PATH=$OutputDirectory/binaries","-DPX_OUTPUT_BIN_DIR:PATH=$OutputDirectory/binaries",'-DPX_GENERATE_STATIC_LIBRARIES:BOOL=ON','-DNV_USE_STATIC_WINCRT:BOOL=OFF','-DNV_USE_DEBUG_WINCRT:BOOL=ON','-DPX_BUILDSNIPPETS:BOOL=OFF','-DPX_BUILDPVDRUNTIME:BOOL=OFF','-DPX_COPY_EXTERNAL_DLL:BOOL=OFF','-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON','-DCMAKE_FIND_USE_PACKAGE_REGISTRY:BOOL=OFF','-DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY:BOOL=OFF')
++$result=[ordered]@{status='DATA_PREPARED; NATIVE_NOT_RUN';configureArguments=$arguments;argc=$arguments.Count;patches=$patches.ToArray();targets=@('PhysX','PhysXPvdSDK','PhysXVehicle','PhysXCharacterKinematic','PhysXExtensions','PhysXCooking','PhysXCommon','PhysXFoundation','LowLevel','LowLevelAABB','LowLevelDynamics','PhysXTask','SceneQuery','SimulationController');configurations=@('debug','checked','profile','release');scope='CPU configure/build must be separately assigned; no native executed here'}
++JENewFile "$OutputDirectory/preparation.json" ([Text.UTF8Encoding]::new($false).GetBytes(($result|ConvertTo-Json -Depth 10)+"`n"))
+diff --git a/cmake/Tools/LocalPackages/PhysX/README.md b/cmake/Tools/LocalPackages/PhysX/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/README.md
+@@ -0,0 +1,39 @@
++# Local transition CPU PhysX5 provider
++
++This recipe consumes the exact audited PhysX5.1.1 archive and regular-file
++snapshot, plus the three pinned official4.1 build helpers. It uses private
++copies, VS2022/v143 and four static configurations; it never runs packman
++or generate_projects. `Recipe.json` records source pins, adaptations and
++the CPU-only difference from the historical O3DE rev4 binary.
++
++`PrepareSource.ps1` prepares fresh private source/helpers and emits the
++single configure argv. Compile the original fourteen targets from that
++solution in debug, checked, profile and release. The native executor owns
++those commands; preparation itself does not execute them.
++
++`StagePhysXPackage.cmake` requires the source archive/root/manifest, a native
++artifact witness and its explicit SHA256, and a fresh output below this
++checkout/build. The witness has `libraries` with exactly56 unique
++`{config,target,path,bytes,sha256}` records and `generatedHeader` with
++`{path,sha256}` for the real PxConfig.h. The eight main libraries retain
++their names; six target.dir/config/Target.lib archives are copied as
++Target_static_64.lib. All source/header and native artifact hashes are
++checked before staging. It creates a new JE archive using JECreateLocalPackage.
++
++The Find module preserves 3rdParty::PhysX5, the eight main imported target
++names, static macro/header layout and Profile-to-Checked override. All
++four configurations and56 libraries are required. GPU runtime dependencies
++are intentionally absent from this transition provider.
++
++The consumer has six cases: lifecycle/PVD creation without a transport,
++triangle/convex cooking, CPU simulation/raycast, capsule controller,
++vehicular sprung masses, and invalid cooking with unchanged caller output.
++It checks teardown diagnostics before reporting completion. Run Debug,
++Profile, Release and a separate Profile build with
++LY_PHYSX_PROFILE_USE_CHECKED_LIBS=ON. A second executable runs the identical
++six cases against only the eight-main imported chain, to measure whether
++the six extra archives embedded by TARGET_OBJECTS are redundant. The Find
++contract and staged package retain all fourteen until that comparison is
++executed and accepted. Native validation, engine integration
++and acceptance belong to the parent and its assigned executor. These
++sources alone do not establish PASS or final Jolt/Editor/runtime acceptance.
+diff --git a/cmake/Tools/LocalPackages/PhysX/Recipe.json b/cmake/Tools/LocalPackages/PhysX/Recipe.json
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/Recipe.json
+@@ -0,0 +1,78 @@
++{
++  "identity": "PhysX-5.1.1-je-cpu-rev1-windows",
++  "SDKVersion": "5.1.1.32142945",
++  "sourceCommit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
++  "sourceArchiveSHA256": "a2dfa049b0c7fa67723d27d70520d0ed7bcb5dd3c2d9df8dfb169d8a39c4c142",
++  "sourceURL": "https://codeload.github.com/NVIDIA-Omniverse/PhysX/tar.gz/0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
++  "sourceManifestSHA256": "202329a844df20f8e3349c589a3d9567f7d633615b2b17e37fd49929f03ac2ad",
++  "sourceRegularFiles": 1788,
++  "helperSourceRepository": "NVIDIAGameWorks/PhysX",
++  "helperSourceCommit": "a2c0428acab643e60618c681b501e86f7fd558cc",
++  "helperOriginals": [
++    {
++      "path": "externals-README.md",
++      "sha256": "9B3AFF6F8A902F94EEBD19C8A91A533EE3B81A40E00CF93F322083F1AC4B71E8",
++      "gitBlob": "bec365f1ce6c1d020e30b25a763d325262c25f11"
++    },
++    {
++      "path": "LICENSE.md",
++      "sha256": "CEE409D941F502A1C5AB0A7ECB90B141A57F822129B225BD00B79ADD4F963FFF",
++      "gitBlob": "1e23839241b0f3324b1216c7720b659b5a95f965"
++    },
++    {
++      "path": "README.md",
++      "sha256": "2B2736D87C54D0723C720FC44F385DB4F5EB0E43919C0E62210BD90772DCD223",
++      "gitBlob": "e2b056d09b7079de124ce9aed0f74c73d1851c3d"
++    },
++    {
++      "path": "GetCompilerAndPlatform.cmake",
++      "sha256": "BCF3B1F22893F7760B0B22C51269BF42F881B2DBA4FECD8E47ABEEC7A282FA3F",
++      "gitBlob": "3ab5cfbfa0b87058742c111a96f5d433320b8714"
++    },
++    {
++      "path": "SetOutputPaths.cmake",
++      "sha256": "39FFDAA918398FA1F8D153F49DCBCD814818334309EDD41C684094DD8CF1EB3B",
++      "gitBlob": "a1be9f4dbae49533055158e496b6a532937f565b"
++    },
++    {
++      "path": "NvidiaBuildOptions.cmake",
++      "sha256": "AE551BDE0A3312D4FC74D101654E71DE17DDA31F1A6F4F740A2860DFF9B7FCBC",
++      "gitBlob": "46cb7d6372c423aba69c152846b35073bec1bc8c"
++    }
++  ],
++  "historicalRecipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
++  "historicalPackage": "PhysX-5.1.1-rev4-windows",
++  "historicalBinaryCompatibility": "Not asserted; CPU-only transition to Jolt",
++  "toolset": "v143",
++  "generator": "Visual Studio 17 2022",
++  "architecture": "x64",
++  "configurations": [
++    "debug",
++    "checked",
++    "profile",
++    "release"
++  ],
++  "runtime": {
++    "debug": "MDd",
++    "checked": "MD",
++    "profile": "MD",
++    "release": "MD"
++  },
++  "PX_GENERATE_STATIC_LIBRARIES": true,
++  "PUBLIC_RELEASE": 1,
++  "PX_PUBLIC_RELEASE": 1,
++  "PX_COPY_EXTERNAL_DLL": false,
++  "PX_BUILDSNIPPETS": false,
++  "PX_BUILDPVDRUNTIME": false,
++  "NV_USE_STATIC_WINCRT": false,
++  "NV_USE_DEBUG_WINCRT": true,
++  "GPUPhysics": false,
++  "sharedPass": false,
++  "adaptations": [
++    "Windows Device/freeglut copy gate respects PX_COPY_EXTERNAL_DLL",
++    "Windows GPU DLL copy gate requires PX_COPY_EXTERNAL_DLL as well as PUBLIC_RELEASE",
++    "Official4.1 helper labels installed MSVC>=1930 vc143"
++  ],
++  "libraryRename": "Six real static-pass object-library archives Target.lib -> Target_static_64.lib; not shared DLL import libraries",
++  "licenseScope": "Preserve root LICENSE/README and externals README of helpers; no inline helper notices or per-file third-party attribution invented"
++}
+diff --git a/cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake b/cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake
+@@ -0,0 +1,135 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++# Stage the already built static pass. No configure/build, SDK script or acquisition.
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS SOURCE_ARCHIVE SOURCE_ROOT SOURCE_MANIFEST ARTIFACT_MANIFEST ARTIFACT_MANIFEST_SHA256 OUTPUT)
++    if(NOT DEFINED JE_PHYSX_${JE_ARGUMENT} OR "${JE_PHYSX_${JE_ARGUMENT}}" STREQUAL "")
++        message(FATAL_ERROR "JE PhysX stage: JE_PHYSX_${JE_ARGUMENT} is required")
++    endif()
++endforeach()
++foreach(JE_ARGUMENT IN ITEMS SOURCE_ARCHIVE SOURCE_ROOT SOURCE_MANIFEST ARTIFACT_MANIFEST OUTPUT)
++    JE_python_require_local_path(JE_PHYSX_${JE_ARGUMENT})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_PHYSX_OUTPUT}" NORMALIZE JE_IN_BUILD)
++if(NOT JE_IN_BUILD OR JE_PHYSX_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE PhysX stage: output must be beneath this checkout/build")
++endif()
++if(EXISTS "${JE_PHYSX_OUTPUT}")
++    message(FATAL_ERROR "JE PhysX stage: output must be fresh; existing outputs are preserved")
++endif()
++JE_python_verify_file("${JE_PHYSX_SOURCE_ARCHIVE}" "a2dfa049b0c7fa67723d27d70520d0ed7bcb5dd3c2d9df8dfb169d8a39c4c142" "PhysX SDK source archive")
++JE_python_verify_file("${JE_PHYSX_SOURCE_MANIFEST}" "202329a844df20f8e3349c589a3d9567f7d633615b2b17e37fd49929f03ac2ad" "PhysX SDK source manifest")
++JE_python_verify_file("${JE_PHYSX_ARTIFACT_MANIFEST}" "${JE_PHYSX_ARTIFACT_MANIFEST_SHA256}" "PhysX native artifact witness")
++file(READ "${CMAKE_CURRENT_LIST_DIR}/Recipe.json" JE_RECIPE_JSON)
++string(JSON JE_HELPER_COUNT LENGTH "${JE_RECIPE_JSON}" helperOriginals)
++if(NOT JE_HELPER_COUNT EQUAL 6)
++    message(FATAL_ERROR "JE PhysX stage: complete official helper/notice provenance required")
++endif()
++foreach(JE_INDEX RANGE 5)
++    string(JSON JE_HELPER GET "${JE_RECIPE_JSON}" helperOriginals ${JE_INDEX} path)
++    string(JSON JE_HELPER_SHA GET "${JE_RECIPE_JSON}" helperOriginals ${JE_INDEX} sha256)
++    JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/official-build-helpers/${JE_HELPER}" "${JE_HELPER_SHA}" "PhysX official helper/notice")
++endforeach()
++file(READ "${JE_PHYSX_SOURCE_MANIFEST}" JE_SOURCE_JSON)
++file(READ "${JE_PHYSX_ARTIFACT_MANIFEST}" JE_ARTIFACT_JSON)
++string(JSON JE_SOURCE_COUNT LENGTH "${JE_SOURCE_JSON}" entries)
++string(JSON JE_LIBRARY_COUNT LENGTH "${JE_ARTIFACT_JSON}" libraries)
++if(NOT JE_SOURCE_COUNT EQUAL 1788 OR NOT JE_LIBRARY_COUNT EQUAL 56)
++    message(FATAL_ERROR "JE PhysX stage: require the complete 1788-source/56-static-archive witnesses")
++endif()
++set(JE_MAIN_LIBS PhysX PhysXPvdSDK PhysXVehicle PhysXCharacterKinematic PhysXExtensions PhysXCooking PhysXCommon PhysXFoundation)
++set(JE_EXTRA_LIBS LowLevel LowLevelAABB LowLevelDynamics PhysXTask SceneQuery SimulationController)
++set(JE_EXPECTED_PAIRS "")
++foreach(JE_CONFIG IN ITEMS debug checked profile release)
++    foreach(JE_TARGET IN LISTS JE_MAIN_LIBS JE_EXTRA_LIBS)
++        list(APPEND JE_EXPECTED_PAIRS "${JE_CONFIG}/${JE_TARGET}")
++    endforeach()
++endforeach()
++# Validate all inputs before creating a stage or publishing a package.
++set(JE_SOURCE_PATHS "")
++math(EXPR JE_LAST_SOURCE "${JE_SOURCE_COUNT}-1")
++foreach(JE_INDEX RANGE ${JE_LAST_SOURCE})
++    string(JSON JE_REL GET "${JE_SOURCE_JSON}" entries ${JE_INDEX} path)
++    string(JSON JE_HASH GET "${JE_SOURCE_JSON}" entries ${JE_INDEX} sha256)
++    string(JSON JE_BYTES GET "${JE_SOURCE_JSON}" entries ${JE_INDEX} bytes)
++    if(NOT JE_REL MATCHES "^(physx/|LICENSE[.]md$|README[.]md$)" OR JE_REL MATCHES "(^|/)[.][.](/|$)|[:\\]" OR JE_REL IN_LIST JE_SOURCE_PATHS)
++        message(FATAL_ERROR "JE PhysX stage: invalid source membership")
++    endif()
++    list(APPEND JE_SOURCE_PATHS "${JE_REL}")
++    set(JE_SOURCE_FILE "${JE_PHYSX_SOURCE_ROOT}/${JE_REL}")
++    JE_python_verify_file("${JE_SOURCE_FILE}" "${JE_HASH}" "PhysX immutable source ${JE_REL}")
++    file(SIZE "${JE_SOURCE_FILE}" JE_ACTUAL_BYTES)
++    if(NOT JE_ACTUAL_BYTES EQUAL JE_BYTES)
++        message(FATAL_ERROR "JE PhysX stage: source byte count differs")
++    endif()
++endforeach()
++set(JE_ACTUAL_PAIRS "")
++foreach(JE_INDEX RANGE 55)
++    foreach(JE_FIELD IN ITEMS config target path sha256 bytes)
++        string(JSON JE_${JE_FIELD} GET "${JE_ARTIFACT_JSON}" libraries ${JE_INDEX} ${JE_FIELD})
++    endforeach()
++    set(JE_PAIR "${JE_config}/${JE_target}")
++    if(NOT JE_PAIR IN_LIST JE_EXPECTED_PAIRS OR JE_PAIR IN_LIST JE_ACTUAL_PAIRS)
++        message(FATAL_ERROR "JE PhysX stage: invalid native library membership ${JE_PAIR}")
++    endif()
++    list(APPEND JE_ACTUAL_PAIRS "${JE_PAIR}")
++    get_filename_component(JE_BASENAME "${JE_path}" NAME)
++    if(JE_target IN_LIST JE_MAIN_LIBS)
++        set(JE_EXPECTED_BASENAME "${JE_target}_static_64.lib")
++    else()
++        # The static pass builds object-library archives in target.dir/config.
++        set(JE_EXPECTED_BASENAME "${JE_target}.lib")
++    endif()
++    if(NOT JE_BASENAME STREQUAL JE_EXPECTED_BASENAME)
++        message(FATAL_ERROR "JE PhysX stage: unexpected original library name ${JE_BASENAME}")
++    endif()
++    JE_python_verify_file("${JE_path}" "${JE_sha256}" "PhysX native archive ${JE_PAIR}")
++    file(SIZE "${JE_path}" JE_ACTUAL_BYTES)
++    if(NOT JE_ACTUAL_BYTES EQUAL JE_bytes OR JE_ACTUAL_BYTES EQUAL 0)
++        message(FATAL_ERROR "JE PhysX stage: native archive byte count differs")
++    endif()
++endforeach()
++string(JSON JE_GENERATED_HEADER GET "${JE_ARTIFACT_JSON}" generatedHeader path)
++string(JSON JE_GENERATED_HEADER_SHA GET "${JE_ARTIFACT_JSON}" generatedHeader sha256)
++JE_python_verify_file("${JE_GENERATED_HEADER}" "${JE_GENERATED_HEADER_SHA}" "PhysX generated PxConfig.h")
++file(READ "${JE_GENERATED_HEADER}" JE_CONFIG_TEXT)
++if(NOT JE_CONFIG_TEXT MATCHES "#define PX_PHYSX_STATIC_LIB")
++    message(FATAL_ERROR "JE PhysX stage: generated header must describe the static pass")
++endif()
++set(JE_STAGE "${JE_PHYSX_OUTPUT}/stage")
++foreach(JE_REL IN LISTS JE_SOURCE_PATHS)
++    if(JE_REL MATCHES "^physx/include/" OR JE_REL STREQUAL "physx/version.txt")
++        configure_file("${JE_PHYSX_SOURCE_ROOT}/${JE_REL}" "${JE_STAGE}/PhysX/${JE_REL}" COPYONLY)
++    endif()
++endforeach()
++configure_file("${JE_GENERATED_HEADER}" "${JE_STAGE}/PhysX/physx/include/PxConfig.h" COPYONLY)
++foreach(JE_INDEX RANGE 55)
++    foreach(JE_FIELD IN ITEMS config target path)
++        string(JSON JE_${JE_FIELD} GET "${JE_ARTIFACT_JSON}" libraries ${JE_INDEX} ${JE_FIELD})
++    endforeach()
++    configure_file("${JE_path}" "${JE_STAGE}/PhysX/physx/bin/static/${JE_config}/${JE_target}_static_64.lib" COPYONLY)
++endforeach()
++configure_file("${JE_PHYSX_ARTIFACT_MANIFEST}" "${JE_STAGE}/PhysX/JEStaticArtifactWitness.json" COPYONLY)
++configure_file("${JE_PHYSX_SOURCE_ROOT}/LICENSE.md" "${JE_STAGE}/LICENSES/PhysX/LICENSE.md" COPYONLY)
++configure_file("${JE_PHYSX_SOURCE_ROOT}/README.md" "${JE_STAGE}/LICENSES/PhysX/README.md" COPYONLY)
++foreach(JE_FILE IN ITEMS FindPhysX5.cmake NOTICE.txt Recipe.json)
++    configure_file("${CMAKE_CURRENT_LIST_DIR}/${JE_FILE}" "${JE_STAGE}/${JE_FILE}" COPYONLY)
++endforeach()
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/official-build-helpers" DESTINATION "${JE_STAGE}/LICENSES")
++foreach(JE_FILE IN ITEMS LICENSE.txt LICENSE_APACHE2.TXT LICENSE_MIT.TXT)
++    configure_file("${JE_ENGINE_ROOT}/${JE_FILE}" "${JE_STAGE}/LICENSES/O3DE/${JE_FILE}" COPYONLY)
++endforeach()
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "PhysX-5.1.1-je-cpu-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_PHYSX_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "5.1.1")
++set(JE_PACKAGE_SOURCE_COMMIT "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e")
++set(JE_PACKAGE_SOURCE_SHA256 "a2dfa049b0c7fa67723d27d70520d0ed7bcb5dd3c2d9df8dfb169d8a39c4c142")
++set(JE_PACKAGE_SOURCE_URL "https://codeload.github.com/NVIDIA-Omniverse/PhysX/tar.gz/0bbcff3d0c541325f4d14c36ee18f24e22e35e6e")
++set(JE_PACKAGE_LICENSE "BSD-3-Clause; original notices preserved")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+diff --git a/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt
+@@ -0,0 +1,50 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_PHYSX_PACKAGE_ROOT)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_IN_BUILD)
++if(NOT JE_IN_BUILD OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE PhysX consumer build must be beneath this checkout/build")
++endif()
++set(CMAKE_CONFIGURATION_TYPES "Debug;Profile;Release" CACHE STRING "Original engine configurations")
++set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++project(JELocalPhysXConsumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE PhysX consumer requires Windows MSVC x64")
++endif()
++list(PREPEND CMAKE_MODULE_PATH "${JE_PHYSX_PACKAGE_ROOT}")
++find_package(PhysX5 5.1.1 EXACT REQUIRED MODULE)
++# Check actual imported mapping; the same Profile executable can consume Checked.
++get_target_property(JE_PROFILE_LIBRARY PhysX5PhysX_static_64::imported IMPORTED_LOCATION_PROFILE)
++if(LY_PHYSX_PROFILE_USE_CHECKED_LIBS)
++    set(JE_PROFILE_EXPECTED checked)
++else()
++    set(JE_PROFILE_EXPECTED profile)
++endif()
++if(NOT JE_PROFILE_LIBRARY STREQUAL "${JE_PHYSX_PACKAGE_ROOT}/PhysX/physx/bin/static/${JE_PROFILE_EXPECTED}/PhysX_static_64.lib")
++    message(FATAL_ERROR "JE PhysX consumer resolved an unexpected Profile archive")
++endif()
++foreach(JE_TARGET IN ITEMS JEPhysXConsumer JEPhysXMainChainConsumer)
++    add_executable(${JE_TARGET} PhysXConsumer.cpp)
++    target_compile_features(${JE_TARGET} PRIVATE cxx_std_17)
++    target_compile_definitions(${JE_TARGET} PRIVATE $<$<NOT:$<CONFIG:Debug>>:NDEBUG>)
++    # Vehicle1 is deprecated in the exact SDK but remains an actual engine consumer.
++    target_compile_options(${JE_TARGET} PRIVATE /W4 /WX /wd4996)
++endforeach()
++target_link_libraries(JEPhysXConsumer PRIVATE 3rdParty::PhysX5)
++# Focused comparison: the eight-main chain only, with the same public headers/API.
++# The contractual Find and complete package still retain the six extra archives.
++target_link_libraries(JEPhysXMainChainConsumer PRIVATE PhysX5PhysXFoundation_static_64::imported)
++target_include_directories(JEPhysXMainChainConsumer SYSTEM PRIVATE ${PhysX5_INCLUDE_DIR})
++target_compile_definitions(JEPhysXMainChainConsumer PRIVATE ${PhysX5_COMPILE_DEFINITIONS})
++enable_testing()
++foreach(JE_CASE IN ITEMS lifecycle cooking scene character vehicle invalid)
++    add_test(NAME JE.LocalPackages.PhysX.${JE_CASE} COMMAND JEPhysXConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.PhysX.${JE_CASE} PROPERTIES TIMEOUT 30)
++    add_test(NAME JE.LocalPackages.PhysX.main-chain.${JE_CASE} COMMAND JEPhysXMainChainConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.PhysX.main-chain.${JE_CASE} PROPERTIES TIMEOUT 30)
++endforeach()
+diff --git a/cmake/Tools/LocalPackages/PhysX/tests/PhysXConsumer.cpp b/cmake/Tools/LocalPackages/PhysX/tests/PhysXConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/PhysX/tests/PhysXConsumer.cpp
+@@ -0,0 +1,183 @@
++/* Copyright (c) Contributors to the Open 3D Engine Project.
++ * SPDX-License-Identifier: Apache-2.0 OR MIT */
++#include <PxPhysicsAPI.h>
++#include <characterkinematic/PxCapsuleController.h>
++#include <characterkinematic/PxControllerManager.h>
++#include <vehicle/PxVehicleSDK.h>
++#include <vehicle/PxVehicleUtilSetup.h>
++#include <cmath>
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
++
++namespace JE::Tests
++{
++using namespace physx;
++void Require(bool value, const char* message)
++{
++    if (!value) { std::fprintf(stderr, "FAIL: %s\n", message); std::exit(1); }
++}
++class Errors final : public PxErrorCallback
++{
++public:
++    unsigned count = 0;
++    void reportError(PxErrorCode::Enum code, const char* message, const char*, int) override
++    {
++        ++count;
++        std::fprintf(stderr, "PhysX diagnostic %u: %s\n", static_cast<unsigned>(code), message);
++    }
++};
++struct SDK
++{
++    PxDefaultAllocator allocator;
++    Errors errors;
++    PxFoundation* foundation;
++    PxPvd* pvd;
++    PxPhysics* physics;
++    PxCooking* cooking;
++    SDK()
++    {
++        foundation = PxCreateFoundation(PX_PHYSICS_VERSION, allocator, errors);
++        Require(foundation != nullptr, "Foundation creation");
++        pvd = PxCreatePvd(*foundation);
++        Require(pvd != nullptr, "PVD SDK creation without a network transport");
++        physics = PxCreatePhysics(PX_PHYSICS_VERSION, *foundation, PxTolerancesScale(), true, pvd);
++        Require(physics != nullptr && PxInitExtensions(*physics, pvd), "Physics/Extensions creation");
++        cooking = PxCreateCooking(PX_PHYSICS_VERSION, *foundation, PxCookingParams(physics->getTolerancesScale()));
++        Require(cooking != nullptr, "Cooking creation");
++    }
++    ~SDK()
++    {
++        const unsigned errorsBefore = errors.count;
++        cooking->release();
++        PxCloseExtensions();
++        physics->release();
++        pvd->release();
++        foundation->release();
++        Require(errors.count == errorsBefore, "SDK teardown produces no additional errors");
++    }
++};
++PxTriangleMesh* FloorMesh(SDK& sdk)
++{
++    const PxVec3 vertices[] = { {-10,0,-10}, {10,0,-10}, {-10,0,10}, {10,0,10} };
++    const PxU32 triangles[] = {0,2,1, 1,2,3};
++    PxTriangleMeshDesc desc;
++    desc.points.count = 4; desc.points.stride = sizeof(PxVec3); desc.points.data = vertices;
++    desc.triangles.count = 2; desc.triangles.stride = 3 * sizeof(PxU32); desc.triangles.data = triangles;
++    PxDefaultMemoryOutputStream output;
++    Require(sdk.cooking->cookTriangleMesh(desc, output) && output.getSize() > 0, "Triangle mesh CPU cooking");
++    PxDefaultMemoryInputData input(output.getData(), output.getSize());
++    PxTriangleMesh* mesh = sdk.physics->createTriangleMesh(input);
++    Require(mesh && mesh->getNbVertices() == 4 && mesh->getNbTriangles() == 2, "Cooked triangle mesh readback");
++    return mesh;
++}
++struct World
++{
++    SDK& sdk;
++    PxDefaultCpuDispatcher* dispatcher;
++    PxScene* scene;
++    PxMaterial* material;
++    PxTriangleMesh* mesh;
++    PxRigidStatic* floor;
++    explicit World(SDK& owner) : sdk(owner)
++    {
++        dispatcher = PxDefaultCpuDispatcherCreate(1);
++        Require(dispatcher != nullptr, "CPU dispatcher");
++        PxSceneDesc desc(sdk.physics->getTolerancesScale());
++        desc.gravity = PxVec3(0,-9.81f,0); desc.cpuDispatcher = dispatcher;
++        desc.filterShader = PxDefaultSimulationFilterShader;
++        scene = sdk.physics->createScene(desc);
++        Require(scene != nullptr, "CPU scene creation");
++        material = sdk.physics->createMaterial(0.5f,0.5f,0.0f);
++        Require(material != nullptr, "Material creation");
++        mesh = FloorMesh(sdk);
++        floor = PxCreateStatic(*sdk.physics, PxTransform(PxIdentity), PxTriangleMeshGeometry(mesh), *material);
++        Require(floor != nullptr, "WhiteBox-style triangle-mesh collider");
++        scene->addActor(*floor);
++    }
++    ~World()
++    {
++        floor->release(); scene->release(); dispatcher->release(); mesh->release(); material->release();
++    }
++};
++void Cooking(SDK& sdk)
++{
++    PxTriangleMesh* mesh = FloorMesh(sdk); mesh->release();
++    const PxVec3 points[] = { {0,0,0}, {1,0,0}, {0,1,0}, {0,0,1} };
++    PxConvexMeshDesc desc;
++    desc.points.count = 4; desc.points.stride = sizeof(PxVec3); desc.points.data = points;
++    // Preserve O3DE's cooking request; this does not enable GPU simulation.
++    desc.flags = PxConvexFlag::eCOMPUTE_CONVEX | PxConvexFlag::eGPU_COMPATIBLE;
++    PxDefaultMemoryOutputStream output;
++    Require(sdk.cooking->cookConvexMesh(desc, output) && output.getSize() > 0, "Convex GPU-compatible CPU cooking");
++    PxDefaultMemoryInputData input(output.getData(), output.getSize());
++    PxConvexMesh* convex = sdk.physics->createConvexMesh(input);
++    Require(convex && convex->getNbVertices() == 4, "Convex mesh readback"); convex->release();
++}
++void Scene(SDK& sdk)
++{
++    World world(sdk);
++    PxRigidDynamic* body = PxCreateDynamic(*sdk.physics, PxTransform(PxVec3(0,3,0)), PxSphereGeometry(0.5f), *world.material, 1.0f);
++    Require(body != nullptr, "Dynamic body creation"); world.scene->addActor(*body);
++    for (unsigned frame = 0; frame < 120; ++frame) { world.scene->simulate(1.0f/60); Require(world.scene->fetchResults(true), "Simulation completion"); }
++    Require(body->getGlobalPose().p.y > 0.45f && body->getGlobalPose().p.y < 0.6f, "Dynamic body rests on cooked collider");
++    PxRaycastBuffer hit;
++    Require(world.scene->raycast(PxVec3(5,2,5), PxVec3(0,-1,0), 4, hit) && hit.hasBlock && hit.block.actor == world.floor,
++        "Scene raycast returns the cooked collider");
++    Require(std::fabs(hit.block.distance - 2.0f) < 0.001f, "Raycast distance"); body->release();
++}
++void Character(SDK& sdk)
++{
++    World world(sdk);
++    PxControllerManager* manager = PxCreateControllerManager(*world.scene);
++    Require(manager != nullptr, "Controller manager creation");
++    PxCapsuleControllerDesc desc;
++    desc.height = 1; desc.radius = 0.5f; desc.position = PxExtendedVec3(3,3,3); desc.material = world.material;
++    desc.stepOffset = 0.2f; desc.contactOffset = 0.05f;
++    PxController* controller = manager->createController(desc);
++    Require(controller != nullptr, "Capsule controller creation");
++    const auto collision = controller->move(PxVec3(0,-5,0), 0.001f, 1.0f/60, PxControllerFilters());
++    Require(collision.isSet(PxControllerCollisionFlag::eCOLLISION_DOWN), "Controller collides with cooked floor");
++    Require(controller->getPosition().y > 0 && controller->getPosition().y < 3, "Controller movement readback");
++    controller->release(); manager->release();
++}
++void Vehicle(SDK& sdk)
++{
++    Require(PxInitVehicleSDK(*sdk.physics), "Vehicle SDK initialization");
++    const PxVec3 supports[] = { {-1,0,-1}, {1,0,-1}, {-1,0,1}, {1,0,1} };
++    PxReal masses[4] = {};
++    PxVehicleComputeSprungMasses(4, supports, PxVec3(0), 100, 1, masses);
++    for (float mass : masses) { Require(std::fabs(mass - 25.0f) < 0.001f, "Symmetric sprung-mass computation"); }
++    PxCloseVehicleSDK();
++}
++void Invalid(SDK& sdk)
++{
++    PxTriangleMeshDesc invalid;
++    PxDefaultMemoryOutputStream output;
++    const unsigned char sentinel[] = {0x4a,0x45,0x21}; output.write(sentinel, sizeof(sentinel));
++    const unsigned errorsBefore = sdk.errors.count;
++    Require(!sdk.cooking->cookTriangleMesh(invalid, output), "Invalid mesh rejected");
++    Require(output.getSize() == sizeof(sentinel) && std::memcmp(output.getData(), sentinel, sizeof(sentinel)) == 0,
++        "Invalid cooking leaves caller output unchanged");
++    Require(sdk.errors.count > errorsBefore, "Invalid cooking reports a diagnostic");
++}
++}
++int main(int argc, char** argv)
++{
++    using namespace JE::Tests;
++    Require(argc == 2, "One case name required");
++    Require(PX_PHYSICS_VERSION_MAJOR == 5 && PX_PHYSICS_VERSION_MINOR == 1 && PX_PHYSICS_VERSION_BUGFIX == 1, "Exact PhysX SDK 5.1.1 API");
++    {
++    SDK sdk;
++    if (!std::strcmp(argv[1], "lifecycle")) { Require(sdk.physics->getTolerancesScale().isValid(), "SDK tolerances"); }
++    else if (!std::strcmp(argv[1], "cooking")) { Cooking(sdk); }
++    else if (!std::strcmp(argv[1], "scene")) { Scene(sdk); }
++    else if (!std::strcmp(argv[1], "character")) { Character(sdk); }
++    else if (!std::strcmp(argv[1], "vehicle")) { Vehicle(sdk); }
++    else if (!std::strcmp(argv[1], "invalid")) { Invalid(sdk); }
++    else { Require(false, "Unknown case"); }
++    if (std::strcmp(argv[1], "invalid")) { Require(sdk.errors.count == 0, "Valid operations produce no PhysX errors"); }
++    }
++    std::printf("CASE %s completed against PhysX 5.1.1 CPU\n", argv[1]);
++    return 0;
++}

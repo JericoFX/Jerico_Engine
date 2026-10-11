@@ -1,0 +1,165 @@
+--- a/cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake
++++ b/cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake
+@@ -32,9 +32,8 @@
+     set(JE_PHYSX_PROFILE_CONFIG profile)
+ endif()
+ set(JE_PHYSX_MAIN_LIBS PhysX PhysXPvdSDK PhysXVehicle PhysXCharacterKinematic PhysXExtensions PhysXCooking PhysXCommon PhysXFoundation)
+-set(JE_PHYSX_EXTRA_LIBS LowLevel LowLevelAABB LowLevelDynamics PhysXTask SceneQuery SimulationController)
+ foreach(JE_CONFIG IN ITEMS debug profile checked release)
+-    foreach(JE_LIBRARY IN LISTS JE_PHYSX_MAIN_LIBS JE_PHYSX_EXTRA_LIBS)
++    foreach(JE_LIBRARY IN LISTS JE_PHYSX_MAIN_LIBS)
+         set(JE_FILE "${JE_PHYSX_ROOT}/bin/static/${JE_CONFIG}/${JE_LIBRARY}_static_64.lib")
+         JE_python_require_local_path(JE_FILE)
+         if(NOT EXISTS "${JE_FILE}")
+@@ -60,10 +59,6 @@
+ endforeach()
+ add_library(PhysX5_STATIC_LIBS::imported INTERFACE IMPORTED GLOBAL)
+ target_link_libraries(PhysX5_STATIC_LIBS::imported INTERFACE ${JE_PREVIOUS_LIBRARY})
+-foreach(JE_LIBRARY IN LISTS JE_PHYSX_EXTRA_LIBS)
+-    target_link_libraries(PhysX5_STATIC_LIBS::imported INTERFACE
+-        "${JE_PHYSX_ROOT}/bin/static/$<IF:$<CONFIG:profile>,${JE_PHYSX_PROFILE_CONFIG},$<LOWER_CASE:$<CONFIG>>>/${JE_LIBRARY}_static_64.lib")
+-endforeach()
+ add_library(3rdParty::PhysX5 INTERFACE IMPORTED GLOBAL)
+ if(COMMAND ly_target_include_system_directories)
+     ly_target_include_system_directories(TARGET 3rdParty::PhysX5 INTERFACE ${PhysX5_INCLUDE_DIR})
+--- a/cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake
++++ b/cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake
+@@ -111,7 +111,11 @@
+     foreach(JE_FIELD IN ITEMS config target path)
+         string(JSON JE_${JE_FIELD} GET "${JE_ARTIFACT_JSON}" libraries ${JE_INDEX} ${JE_FIELD})
+     endforeach()
+-    configure_file("${JE_path}" "${JE_STAGE}/PhysX/physx/bin/static/${JE_config}/${JE_target}_static_64.lib" COPYONLY)
++    # Auxiliary TARGET_OBJECTS are already embedded in PhysX_static_64.lib.
++    # Keep their original witness validation above; only stage the main chain.
++    if(JE_target IN_LIST JE_MAIN_LIBS)
++        configure_file("${JE_path}" "${JE_STAGE}/PhysX/physx/bin/static/${JE_config}/${JE_target}_static_64.lib" COPYONLY)
++    endif()
+ endforeach()
+ configure_file("${JE_PHYSX_ARTIFACT_MANIFEST}" "${JE_STAGE}/PhysX/JEStaticArtifactWitness.json" COPYONLY)
+ configure_file("${JE_PHYSX_SOURCE_ROOT}/LICENSE.md" "${JE_STAGE}/LICENSES/PhysX/LICENSE.md" COPYONLY)
+@@ -125,7 +129,7 @@
+     configure_file("${JE_ENGINE_ROOT}/${JE_FILE}" "${JE_STAGE}/LICENSES/O3DE/${JE_FILE}" COPYONLY)
+ endforeach()
+ set(JE_PACKAGE_STAGE "${JE_STAGE}")
+-set(JE_PACKAGE_NAME "PhysX-5.1.1-je-cpu-rev1-windows")
++set(JE_PACKAGE_NAME "PhysX-5.1.1-je-cpu-rev2-windows")
+ set(JE_PACKAGE_OUTPUT "${JE_PHYSX_OUTPUT}/packages")
+ set(JE_PACKAGE_VERSION "5.1.1")
+ set(JE_PACKAGE_SOURCE_COMMIT "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e")
+--- a/cmake/Tools/LocalPackages/PhysX/Recipe.json
++++ b/cmake/Tools/LocalPackages/PhysX/Recipe.json
+@@ -1,5 +1,5 @@
+ {
+-  "identity": "PhysX-5.1.1-je-cpu-rev1-windows",
++  "identity": "PhysX-5.1.1-je-cpu-rev2-windows",
+   "SDKVersion": "5.1.1.32142945",
+   "sourceCommit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+   "sourceArchiveSHA256": "a2dfa049b0c7fa67723d27d70520d0ed7bcb5dd3c2d9df8dfb169d8a39c4c142",
+@@ -73,6 +73,10 @@
+     "Windows GPU DLL copy gate requires PX_COPY_EXTERNAL_DLL as well as PUBLIC_RELEASE",
+     "Official4.1 helper labels installed MSVC>=1930 vc143"
+   ],
+-  "libraryRename": "Six real static-pass object-library archives Target.lib -> Target_static_64.lib; not shared DLL import libraries",
++  "stagedStaticLibraries": 32,
++  "mainLibrariesPerConfiguration": 8,
++  "nativeWitnessLibraries": 56,
++  "auxiliaryArchives": "Six TARGET_OBJECTS archives are validated in the original native witness but not staged or linked separately; their objects are embedded in PhysX_static_64.lib",
++  "reductionEvidence": "Parent-reviewed twelve Profile comparison cases and exact 110/110 auxiliary-member matches; final rev2 four-mapping consumer validation pending",
+   "licenseScope": "Preserve root LICENSE/README and externals README of helpers; no inline helper notices or per-file third-party attribution invented"
+ }
+--- a/cmake/Tools/LocalPackages/PhysX/README.md
++++ b/cmake/Tools/LocalPackages/PhysX/README.md
+@@ -7,33 +7,39 @@
+ the CPU-only difference from the historical O3DE rev4 binary.
+ 
+ `PrepareSource.ps1` prepares fresh private source/helpers and emits the
+-single configure argv. Compile the original fourteen targets from that
+-solution in debug, checked, profile and release. The native executor owns
+-those commands; preparation itself does not execute them.
++single configure argv. The original fourteen targets were built in debug,
++checked, profile and release by the assigned native executor. Rev2 reuses
++those outputs without rebuilding the SDK.
+ 
+ `StagePhysXPackage.cmake` requires the source archive/root/manifest, a native
+ artifact witness and its explicit SHA256, and a fresh output below this
+-checkout/build. The witness has `libraries` with exactly56 unique
++checkout/build. The witness retains exactly56 unique
+ `{config,target,path,bytes,sha256}` records and `generatedHeader` with
+-`{path,sha256}` for the real PxConfig.h. The eight main libraries retain
+-their names; six target.dir/config/Target.lib archives are copied as
+-Target_static_64.lib. All source/header and native artifact hashes are
+-checked before staging. It creates a new JE archive using JECreateLocalPackage.
++`{path,sha256}` for the real PxConfig.h. All source/header and56 native
++artifact hashes are checked before staging. Only the eight main libraries
++per configuration are copied:32 static archives in the new
++`PhysX-5.1.1-je-cpu-rev2-windows` package. The six auxiliary archives remain
++untouched in the original outputs and witness.
+ 
+ The Find module preserves 3rdParty::PhysX5, the eight main imported target
+-names, static macro/header layout and Profile-to-Checked override. All
+-four configurations and56 libraries are required. GPU runtime dependencies
+-are intentionally absent from this transition provider.
++names, original link order, static macro/header layout and Profile-to-Checked
++override. It requires32 main archives across four configurations. Upstream
++Windows TARGET_OBJECTS embeds all six auxiliaries into PhysX_static_64.lib;
++the parent-reviewed Profile comparison passed12 cases, and its link audit
++matched110/110 auxiliary object members. The historical comparison and rev1
++package remain preserved. GPU runtime dependencies are intentionally absent.
+ 
+-The consumer has six cases: lifecycle/PVD creation without a transport,
+-triangle/convex cooking, CPU simulation/raycast, capsule controller,
+-vehicular sprung masses, and invalid cooking with unchanged caller output.
+-It checks teardown diagnostics before reporting completion. Run Debug,
+-Profile, Release and a separate Profile build with
+-LY_PHYSX_PROFILE_USE_CHECKED_LIBS=ON. A second executable runs the identical
+-six cases against only the eight-main imported chain, to measure whether
+-the six extra archives embedded by TARGET_OBJECTS are redundant. The Find
+-contract and staged package retain all fourteen until that comparison is
+-executed and accepted. Native validation, engine integration
+-and acceptance belong to the parent and its assigned executor. These
+-sources alone do not establish PASS or final Jolt/Editor/runtime acceptance.
++The single contractual consumer links only 3rdParty::PhysX5 and preserves
++six cases: lifecycle/PVD creation without a transport, triangle/convex
++cooking, CPU simulation/raycast, capsule controller, vehicular sprung
++masses, and invalid cooking with unchanged caller output. It checks teardown
++diagnostics before reporting completion. Final rev2 validation is NOT_RUN:
++stage fresh, configure/build/CTest Debug, Profile, Release and a separate
++Profile build with LY_PHYSX_PROFILE_USE_CHECKED_LIBS=ON, six cases each.
++The preparation driver records literal arguments, raw logs, JUnit and
++pre/post input hashes; it never builds SDK targets.
++
++Native validation, engine integration and acceptance belong to the parent
++and its assigned executor. These sources and the accepted narrow comparison
++do not establish final package, historical rev4 ABI, Jolt, Editor or runtime
++acceptance.
+--- a/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt
++++ b/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt
+@@ -28,23 +28,14 @@
+ if(NOT JE_PROFILE_LIBRARY STREQUAL "${JE_PHYSX_PACKAGE_ROOT}/PhysX/physx/bin/static/${JE_PROFILE_EXPECTED}/PhysX_static_64.lib")
+     message(FATAL_ERROR "JE PhysX consumer resolved an unexpected Profile archive")
+ endif()
+-foreach(JE_TARGET IN ITEMS JEPhysXConsumer JEPhysXMainChainConsumer)
+-    add_executable(${JE_TARGET} PhysXConsumer.cpp)
+-    target_compile_features(${JE_TARGET} PRIVATE cxx_std_17)
+-    target_compile_definitions(${JE_TARGET} PRIVATE $<$<NOT:$<CONFIG:Debug>>:NDEBUG>)
+-    # Vehicle1 is deprecated in the exact SDK but remains an actual engine consumer.
+-    target_compile_options(${JE_TARGET} PRIVATE /W4 /WX /wd4996)
+-endforeach()
++add_executable(JEPhysXConsumer PhysXConsumer.cpp)
++target_compile_features(JEPhysXConsumer PRIVATE cxx_std_17)
++target_compile_definitions(JEPhysXConsumer PRIVATE $<$<NOT:$<CONFIG:Debug>>:NDEBUG>)
++# Vehicle1 is deprecated in the exact SDK but remains an actual engine consumer.
++target_compile_options(JEPhysXConsumer PRIVATE /W4 /WX /wd4996)
+ target_link_libraries(JEPhysXConsumer PRIVATE 3rdParty::PhysX5)
+-# Focused comparison: the eight-main chain only, with the same public headers/API.
+-# The contractual Find and complete package still retain the six extra archives.
+-target_link_libraries(JEPhysXMainChainConsumer PRIVATE PhysX5PhysXFoundation_static_64::imported)
+-target_include_directories(JEPhysXMainChainConsumer SYSTEM PRIVATE ${PhysX5_INCLUDE_DIR})
+-target_compile_definitions(JEPhysXMainChainConsumer PRIVATE ${PhysX5_COMPILE_DEFINITIONS})
+ enable_testing()
+ foreach(JE_CASE IN ITEMS lifecycle cooking scene character vehicle invalid)
+     add_test(NAME JE.LocalPackages.PhysX.${JE_CASE} COMMAND JEPhysXConsumer ${JE_CASE})
+     set_tests_properties(JE.LocalPackages.PhysX.${JE_CASE} PROPERTIES TIMEOUT 30)
+-    add_test(NAME JE.LocalPackages.PhysX.main-chain.${JE_CASE} COMMAND JEPhysXMainChainConsumer ${JE_CASE})
+-    set_tests_properties(JE.LocalPackages.PhysX.main-chain.${JE_CASE} PROPERTIES TIMEOUT 30)
+ endforeach()

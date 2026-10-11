@@ -1,0 +1,91 @@
+CMake Warning (dev) at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+  The package name passed to find_package_handle_standard_args()
+  (OpenColorIO) does not match the name of the calling package (OpenImageIO).
+  This can lead to problems in calling code that expects find_package()
+  result variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows/FindOpenColorIO.cmake:23 (find_package_handle_standard_args)
+  build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows/FindOpenImageIO.cmake:42 (include)
+  cmake/3rdParty.cmake:74 (find_package)
+  cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  Gems/GradientSignal/Code/CMakeLists.txt:66 (ly_add_target)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at cmake/LYWrappers.cmake:542 (target_link_libraries):
+  Target "CrySystem.Static" links to:
+
+    Gem::AudioSystem.API
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:180 (ly_delayed_target_link_libraries)
+
+
+CMake Error at cmake/LYWrappers.cmake:589 (target_link_libraries):
+  Target "LmbrCentral.Static" links to:
+
+    Gem::AudioSystem.API
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:180 (ly_delayed_target_link_libraries)
+
+
+CMake Error at cmake/LYWrappers.cmake:589 (target_link_libraries):
+  Target "LmbrCentral.Editor.Static" links to:
+
+    Gem::AudioSystem.API
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:180 (ly_delayed_target_link_libraries)
+
+
+CMake Error at cmake/LYWrappers.cmake:589 (target_link_libraries):
+  Target "Atom_Utils.Static" links to:
+
+    Gem::ProfilerImGui
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:180 (ly_delayed_target_link_libraries)
+
+
+CMake Error at cmake/LYWrappers.cmake:589 (target_link_libraries):
+  Target "Maestro.Static" links to:
+
+    Gem::AudioSystem.API
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+Call Stack (most recent call first):
+  CMakeLists.txt:180 (ly_delayed_target_link_libraries)
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

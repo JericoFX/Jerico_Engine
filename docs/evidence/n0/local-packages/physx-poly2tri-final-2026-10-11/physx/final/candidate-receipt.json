@@ -1,0 +1,150 @@
+{
+  "status": "SOURCE_ONLY_NATIVE_NOT_RUN_HOLD",
+  "utc": "2026-10-11T19:00:22.6692179Z",
+  "baselineCount": 3747,
+  "baselinePreflightMatched": 3747,
+  "unchangedBaseline": 3742,
+  "allowedSourceDeltas": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake",
+      "beforeSHA256": "D28E9080C9EFB80462804DC1EF1525BF1B22769B5CDC28B22CBFC9D60563A2B8",
+      "beforeBytes": 4196,
+      "sha256": "A021C619F18981CEA93E8F14ECBE9AD194355BB6BE4063D985C6B2D38C360B5A",
+      "bytes": 3801
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PhysX/README.md",
+      "beforeSHA256": "711BAEED64F91E9870FA0B84CF00DA9337BD9137F9FDD55AE3426AFC0D32FE3E",
+      "beforeBytes": 2377,
+      "sha256": "80284298540BFE2F4FA2580292A3FFDFB494FF57F58B0B9D30423FA1C7B86E7B",
+      "bytes": 2675
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PhysX/Recipe.json",
+      "beforeSHA256": "73C88DE778C9F1F198A62A7F9F2CE82B96690F30609A43DE8274189C65C12C1D",
+      "beforeBytes": 3165,
+      "sha256": "8175E9F75CAA2CEF15F3A2D7E7C4BDFD5C70B62EE62DBF74D5A7E1C7E3A1716A",
+      "bytes": 3491
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake",
+      "beforeSHA256": "2C75522AAAE844EA748CE510954B389980D61FB9CCDB5C0A445BF0AF1C511992",
+      "beforeBytes": 8241,
+      "sha256": "76A9E933877BBF501AD75A7F2AAAE383526E98D42C534EB495D91EF95B58587F",
+      "bytes": 8451
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt",
+      "beforeSHA256": "D5EB4AEA3BA9D9A509D120BAFC8F71861554138A481610E90E6931FB2E35EC08",
+      "beforeBytes": 3100,
+      "sha256": "2B99516E0AB7A54DC053BB00A814F27B4DF5C3DEC5993B61BC9D297462F24948",
+      "bytes": 2366
+    }
+  ],
+  "sourceDeltas": [
+    {
+      "path": "cmake/Tools/LocalPackages/PhysX/FindPhysX5.cmake",
+      "preimageSha256": "D28E9080C9EFB80462804DC1EF1525BF1B22769B5CDC28B22CBFC9D60563A2B8",
+      "preimageBytes": 4196,
+      "sha256": "A021C619F18981CEA93E8F14ECBE9AD194355BB6BE4063D985C6B2D38C360B5A",
+      "bytes": 3801,
+      "inversePreimageByteExact": true,
+      "reconstructedCandidateByteExact": true,
+      "addedLines": 1,
+      "removedLines": 6,
+      "preimageBareLf": 76,
+      "candidateBareLf": 71,
+      "preimageCrlf": 0,
+      "candidateCrlf": 0
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/PhysX/StagePhysXPackage.cmake",
+      "preimageSha256": "2C75522AAAE844EA748CE510954B389980D61FB9CCDB5C0A445BF0AF1C511992",
+      "preimageBytes": 8241,
+      "sha256": "76A9E933877BBF501AD75A7F2AAAE383526E98D42C534EB495D91EF95B58587F",
+      "bytes": 8451,
+      "inversePreimageByteExact": true,
+      "reconstructedCandidateByteExact": true,
+      "addedLines": 6,
+      "removedLines": 2,
+      "preimageBareLf": 135,
+      "candidateBareLf": 139,
+      "preimageCrlf": 0,
+      "candidateCrlf": 0
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/PhysX/Recipe.json",
+      "preimageSha256": "73C88DE778C9F1F198A62A7F9F2CE82B96690F30609A43DE8274189C65C12C1D",
+      "preimageBytes": 3165,
+      "sha256": "8175E9F75CAA2CEF15F3A2D7E7C4BDFD5C70B62EE62DBF74D5A7E1C7E3A1716A",
+      "bytes": 3491,
+      "inversePreimageByteExact": true,
+      "reconstructedCandidateByteExact": true,
+      "addedLines": 6,
+      "removedLines": 2,
+      "preimageBareLf": 1,
+      "candidateBareLf": 1,
+      "preimageCrlf": 77,
+      "candidateCrlf": 81
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/PhysX/README.md",
+      "preimageSha256": "711BAEED64F91E9870FA0B84CF00DA9337BD9137F9FDD55AE3426AFC0D32FE3E",
+      "preimageBytes": 2377,
+      "sha256": "80284298540BFE2F4FA2580292A3FFDFB494FF57F58B0B9D30423FA1C7B86E7B",
+      "bytes": 2675,
+      "inversePreimageByteExact": true,
+      "reconstructedCandidateByteExact": true,
+      "addedLines": 29,
+      "removedLines": 23,
+      "preimageBareLf": 39,
+      "candidateBareLf": 45,
+      "preimageCrlf": 0,
+      "candidateCrlf": 0
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt",
+      "preimageSha256": "D5EB4AEA3BA9D9A509D120BAFC8F71861554138A481610E90E6931FB2E35EC08",
+      "preimageBytes": 3100,
+      "sha256": "2B99516E0AB7A54DC053BB00A814F27B4DF5C3DEC5993B61BC9D297462F24948",
+      "bytes": 2366,
+      "inversePreimageByteExact": true,
+      "reconstructedCandidateByteExact": true,
+      "addedLines": 5,
+      "removedLines": 14,
+      "preimageBareLf": 50,
+      "candidateBareLf": 41,
+      "preimageCrlf": 0,
+      "candidateCrlf": 0
+    }
+  ],
+  "inverseByteExact": true,
+  "consumerOraclesByteExact": true,
+  "commonExecutionByteExact": true,
+  "driverASTErrors": 0,
+  "stageArgumentCount": 8,
+  "consumerConfigureArgumentCount": 17,
+  "plannedPhases": 13,
+  "casesPerMapping": 6,
+  "plannedMappings": [
+    "Debug",
+    "Profile",
+    "Release",
+    "Profile-to-Checked"
+  ],
+  "stageWitnessArchives": 56,
+  "stagedMainArchives": 32,
+  "mainLinkArchives": 8,
+  "noSDKRebuild": true,
+  "existingOutputsPreserved": true,
+  "sourceCommit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+  "sourceArchiveSHA256": "A2DFA049B0C7FA67723D27D70520D0ED7BCB5DD3C2D9DF8DFB169D8A39C4C142",
+  "originalWitnessSHA256": "D1E1704717F36BA1602461B434F152FD161AA446ABBD7E62CFD85C5F0288D693",
+  "parentLinkAuditSHA256": "2DCF99424EDFD3682574F0FCB367474EB27C13449DE6C4494B5C1AD47E0ECAFB",
+  "freezeCount": 3765,
+  "freezeSHA256": "A18B884FFBF3C84B3CCCF65F1B7A7E88EFE1B9E9D4BC53D3F409FE3E51E0EB5D",
+  "driverSHA256": "9046110D2A6F239D82547B62165BBDFF77DD40EE504517D4C2507CC6944B817E",
+  "assignmentSHA256": "02C4E5AC878B7E2C28B8AB4CC317F497682BE352D10AFECF361B9429A198A450",
+  "diffSHA256": "8B5C2B074886B734212C6D6BEEFA72B408A796ECCE4228C2503ED9A41E89AF04",
+  "limitation": "Rev2 archive does not exist yet. Stage/24 CPU cases/native package audits, original production target linking, Editor/Jolt/runtime and historical ABI remain unverified. Parent alone dispatches and accepts."
+}

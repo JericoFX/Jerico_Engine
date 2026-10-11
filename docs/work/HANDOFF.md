@@ -1,5 +1,7 @@
 # Handoff — última directiva JE/BSP/geología
 
+Integración PhysX/Poly2Tri verificada focalmente: 24 + 12 casos PASS, proveedores CPU JE asociados por hash en PAL y paquetes resueltos por Root. Configure del 2026-10-11: exit 1 en 53,495 s durante generación; faltan Gem::AudioSystem.API (CrySystem/LmbrCentral/Maestro) y Gem::ProfilerImGui (Atom_Utils). Freeze 16.925 intacto, cache 48 intacta, sólo 439 archivos de paquetes admitidos. [Evidencia portable](../evidence/n0/local-packages/physx-poly2tri-final-2026-10-11/index.json) y [resultado Root](../evidence/n0/local-packages/physx-poly2tri-final-2026-10-11/root-attempt2/configure-result.json). Siguiente: corregir las relaciones CMake demostradas y generar para ejecutar WhiteBox.Editor.Tests y el editor real. No acredita build, Editor/AP/runtime, Jolt ni cierre N0/N1.
+
 Última directiva del propietario (2026-10-10): **motor, juego y editor sin Python**. CPython se conserva sólo como herramienta externa de compilación/codegen, nunca host, dependencia enlazada ni distribución de Editor/Runtime. Se sustituye el script propio de habitación por acción C++ nativa y se retiran EditorPythonBindings/QtForPython/PySide del recorrido, con revisión de consumidores. Las evidencias anteriores de fixture22/AST y CPython embebido son históricas; el fixture nativo requiere un nuevo freeze y validación. N0/N1 siguen abiertos.
 
 Fecha 2026-10-11. Rama única development. **N0 IN PROGRESS; build original BLOCKED; núcleo CSG VERIFIED con alcance focal, editor/runtime NOT TESTED.**

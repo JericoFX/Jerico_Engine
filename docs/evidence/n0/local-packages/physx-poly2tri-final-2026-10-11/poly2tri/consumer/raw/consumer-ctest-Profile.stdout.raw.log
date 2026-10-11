@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/consumer-attempt1/build
+    Start 1: JE.LocalPackages.Poly2Tri.concave
+1/4 Test #1: JE.LocalPackages.Poly2Tri.concave ....   Passed    0.03 sec
+    Start 2: JE.LocalPackages.Poly2Tri.hole
+2/4 Test #2: JE.LocalPackages.Poly2Tri.hole .......   Passed    0.01 sec
+    Start 3: JE.LocalPackages.Poly2Tri.steiner
+3/4 Test #3: JE.LocalPackages.Poly2Tri.steiner ....   Passed    0.01 sec
+    Start 4: JE.LocalPackages.Poly2Tri.repeated
+4/4 Test #4: JE.LocalPackages.Poly2Tri.repeated ...   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.07 sec

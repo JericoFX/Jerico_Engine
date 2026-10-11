@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/tests/CMakeLists.txt
+  Poly2TriConsumer.cpp
+  JEPoly2TriConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\poly2tri-rev1-consumer-preparation\consumer-attempt1\build\Release\JEPoly2TriConsumer.exe

@@ -1,0 +1,113 @@
+{
+  "status": "DATA_GUARD_REGRESSIONS_PASS_NATIVE_NOT_RUN",
+  "guards": [
+    {
+      "name": "pristine-pass",
+      "phase": "before",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "diagnostic": null
+    },
+    {
+      "name": "known-two-patches-pass",
+      "phase": "before",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "diagnostic": null
+    },
+    {
+      "name": "third-mutation-fail",
+      "phase": "before",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "diagnostic": "unexpected Manifold private member mutation: .clang-format"
+    },
+    {
+      "name": "tamper-one-patch-fail",
+      "phase": "before",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "diagnostic": "Manifold private patch pin mismatch: src/csg_tree.h"
+    },
+    {
+      "name": "missing-member-fail",
+      "phase": "before",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "diagnostic": "Manifold pinned membership/count mismatch"
+    },
+    {
+      "name": "declared-count-mismatch-fail",
+      "phase": "before",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "diagnostic": "Manifold pinned membership/count mismatch"
+    },
+    {
+      "name": "post-known-two-patches-pass",
+      "phase": "after",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "diagnostic": null
+    },
+    {
+      "name": "post-pristine-fail",
+      "phase": "after",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "diagnostic": "Manifold requires pristine pair before configure or exact patched pair; after requires patched pair: after"
+    },
+    {
+      "name": "mixed-pristine-patched-fail",
+      "phase": "before",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "diagnostic": "Manifold requires pristine pair before configure or exact patched pair; after requires patched pair: before"
+    }
+  ],
+  "count": 9,
+  "driverSHA256": "8DAAC5D7A58D0CD17E531CE0B266A505450AB390C315702BE452CDC8704BC8F7",
+  "argumentsUnchanged61": true,
+  "freezeUnchanged16925": true,
+  "inverseByteExact": true,
+  "hashes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\run-root-configure-final.ps1",
+      "sha256": "CA623F46BAD75160C6D4C8D9429A76337556E308A8FC0F7DD61306B742875D88",
+      "bytes": 50261
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\run-root-configure-final-rev2.ps1",
+      "sha256": "8DAAC5D7A58D0CD17E531CE0B266A505450AB390C315702BE452CDC8704BC8F7",
+      "bytes": 52974
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\root-batch-assignment.json",
+      "sha256": "762793D59C1834C9C0FF55ECA5435B0CC550160598FDD1CF805181E05B6FC9D9",
+      "bytes": 11692
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\root-batch-assignment-rev2.json",
+      "sha256": "C54224DAFBD6E46A92C607669F588E1108D0DD4CAF663D1DC5EF25F46AE6323C",
+      "bytes": 11705
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\source-freeze-root-batch.json",
+      "sha256": "7D9D618EDC6968FF88BE8E8EF2B659AE0125C6013A7E0C8392CDEE7982D490E4",
+      "bytes": 3976599
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\driver-rev2-byte-inverse-delta.json",
+      "sha256": "082952C76A12D5EA60EEE41A90A748080EF562254972758FE25A6373397E7C5B",
+      "bytes": 3962
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\driver-rev2-source-diff.patch",
+      "sha256": "4F665F6CB6BD5D5B2E709979BAEBEBF2B9CDF3B8063753F003E7F414D893862C",
+      "bytes": 3875
+    }
+  ],
+  "nativeExecuted": false,
+  "attempt2Created": false,
+  "UTC": "2026-10-11T19:27:36.0387192Z"
+}

@@ -1,0 +1,468 @@
+{
+  "status": "DATA_READ; native build owned by Luna, package/consumer NOT_RUN",
+  "sourceCommit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+  "toolset": "v143",
+  "configurations": [
+    "debug",
+    "checked",
+    "profile",
+    "release"
+  ],
+  "libraries": [
+    {
+      "config": "debug",
+      "target": "PhysX",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysX_static_64.lib",
+      "bytes": 71256746,
+      "sha256": "85AB4D32B1BDD4FA24E83718EB5841C8C20AB7B697A5F1948E183A597CFFE936",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXPvdSDK",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXPvdSDK_static_64.lib",
+      "bytes": 4408394,
+      "sha256": "068C1CC1C401D71D7B4DB4D796F498C10C75ACA1F157EE8A2BA9D552F5AA50FD",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXVehicle",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXVehicle_static_64.lib",
+      "bytes": 17126050,
+      "sha256": "C75467C95B9DDD76B5F8615B2B6D5C7DD510E956B719725BC569B1C1EDB7DA9F",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXCharacterKinematic",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXCharacterKinematic_static_64.lib",
+      "bytes": 2400588,
+      "sha256": "70336BAEA5EABE2D9E1F757AFBB71B5FCE3467214587ACCAE8A5FC1A0BDE0F92",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXExtensions",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXExtensions_static_64.lib",
+      "bytes": 47725474,
+      "sha256": "8F5059891850A59D513A2D28CB4E98F4BB67962E08DCC52E2E6769960810FFCF",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXCooking",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXCooking_static_64.lib",
+      "bytes": 161924,
+      "sha256": "EFC63C0211ACDE6DCABC1A5ADD4CD2D56D9950B0A1E2930B6CCE93A5B7832E29",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXCommon",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXCommon_static_64.lib",
+      "bytes": 39569276,
+      "sha256": "8EDAD01981C578AFCE2FB035B0C72A89EBF8661DA8AA2571F27ED7062E1EB808",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXFoundation",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/debug/PhysXFoundation_static_64.lib",
+      "bytes": 775514,
+      "sha256": "13D4202D96BBD28565D0E228D43D95922B125A4759F8A95282BDE191599D0DC3",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "LowLevel",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevel.dir/debug/LowLevel.lib",
+      "bytes": 4711052,
+      "sha256": "7D323430C2BB4B068A79F95D2DB8FB46FCF3C4965ED572249B1D6D0A07271833",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "LowLevelAABB",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelAABB.dir/debug/LowLevelAABB.lib",
+      "bytes": 3083164,
+      "sha256": "50FFC119D073F693EBE82D271B2B5F56892167637B11AE941ED22D6D5AA030B5",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "LowLevelDynamics",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelDynamics.dir/debug/LowLevelDynamics.lib",
+      "bytes": 9898328,
+      "sha256": "5D087C0FE52CCF1A11C46D06C604A757721121E71AC1824554B2DB63753C1026",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "PhysXTask",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/PhysXTask.dir/debug/PhysXTask.lib",
+      "bytes": 230646,
+      "sha256": "6D89831734F6F27D61EC3CB9263994A50FAC9EB85CD7888031DF2E72A4324CC0",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "SceneQuery",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SceneQuery.dir/debug/SceneQuery.lib",
+      "bytes": 1714534,
+      "sha256": "324A2F9BCB331F6817D80DEE4674709DDBD771572A61AA3A7CF3359157195E73",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "debug",
+      "target": "SimulationController",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SimulationController.dir/debug/SimulationController.lib",
+      "bytes": 17860036,
+      "sha256": "D7380C89D31CE569258092D30478C0439D516285243E79C2213B0BCCB9449945",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysX",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysX_static_64.lib",
+      "bytes": 78372064,
+      "sha256": "A4F945F830CA517EEBF974C85495EF96D090B97E2AB21B13D7830010884A1918",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXPvdSDK",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXPvdSDK_static_64.lib",
+      "bytes": 5024262,
+      "sha256": "B7E6D5042D4664638DA03B6EEB7FC02286DE2037DC570DD630097122CA0553A7",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXVehicle",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXVehicle_static_64.lib",
+      "bytes": 21585556,
+      "sha256": "DECE695785475B3D3289E6652D8EE6E87A63E12C92BCA1B20E47FF3790324A18",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXCharacterKinematic",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXCharacterKinematic_static_64.lib",
+      "bytes": 2692740,
+      "sha256": "98D31B9F5AA960E455D7115A4A4C6C79FBE39DC40B1AFD44C303A9924665A29D",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXExtensions",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXExtensions_static_64.lib",
+      "bytes": 59093468,
+      "sha256": "05B57B0679A365D96B6A1471E316A96BF75E42E8DDD8A04469C389CA1A3F959A",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXCooking",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXCooking_static_64.lib",
+      "bytes": 173928,
+      "sha256": "06AC95686EBC9A54413C0B3DCF72317F07B46FBFE74F4891E672B2B3951C7B6E",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXCommon",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXCommon_static_64.lib",
+      "bytes": 47643966,
+      "sha256": "116A01CD5C48134D427682BC917A91DE1BF51174C77F807074532BF543451C59",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXFoundation",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/checked/PhysXFoundation_static_64.lib",
+      "bytes": 834900,
+      "sha256": "D59DE1B7844CEFD5A12BAA75B6B7A2C82D7EF174A8F10236D8BD5903751B8814",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "LowLevel",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevel.dir/checked/LowLevel.lib",
+      "bytes": 5051206,
+      "sha256": "CDE8DD72BE327C2C03B12FB5AFA7826C66D904C10C5FD68D549E7B5315314945",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "LowLevelAABB",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelAABB.dir/checked/LowLevelAABB.lib",
+      "bytes": 3425872,
+      "sha256": "F41D12DCE6F7846F4F0B714FF44FDE151E5F470DB29DE4707B67BF955BBC3875",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "LowLevelDynamics",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelDynamics.dir/checked/LowLevelDynamics.lib",
+      "bytes": 10850378,
+      "sha256": "B566BC6BA308E12D9F5136A845A3FCF7A75433AF9860AB45ADB88C319F5C5E54",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "PhysXTask",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/PhysXTask.dir/checked/PhysXTask.lib",
+      "bytes": 262144,
+      "sha256": "76952E074D3B6394D0928C5DD6C4042ACCE3C11C5B97882A14479C1B84265360",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "SceneQuery",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SceneQuery.dir/checked/SceneQuery.lib",
+      "bytes": 1931506,
+      "sha256": "5A090B130F97283D1CB49D635C33EE84DC2E17B7AC334826F63E19DC02BA8E1D",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "checked",
+      "target": "SimulationController",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SimulationController.dir/checked/SimulationController.lib",
+      "bytes": 19020946,
+      "sha256": "98B038431CEAAF6241203AA4960059159F39BB8A6DDF076B97FA699577045F93",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysX",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysX_static_64.lib",
+      "bytes": 77136342,
+      "sha256": "98366F9CA661893CAC05DC8CDC8C9F333B50060337724312F73AD7224189B446",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXPvdSDK",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXPvdSDK_static_64.lib",
+      "bytes": 4968802,
+      "sha256": "E66440B6D2AA182FDB2BD101CED894F0D5E15026E4C134C61073130D94B9C1E6",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXVehicle",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXVehicle_static_64.lib",
+      "bytes": 21243648,
+      "sha256": "20BFCBBE6C6A02B169169DA59BDAA64A9EDF8AF51C2318ABBFC755C59B9F0C59",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXCharacterKinematic",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXCharacterKinematic_static_64.lib",
+      "bytes": 2665438,
+      "sha256": "FE271738C71422B9BB9CC77893051D2F7FDD002970A1EC832ED7921817C73F75",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXExtensions",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXExtensions_static_64.lib",
+      "bytes": 58473316,
+      "sha256": "6AC020FD543579FB364B0B4D0FA703705B0EA84362828F757E91A55AEB4A2C17",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXCooking",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXCooking_static_64.lib",
+      "bytes": 176966,
+      "sha256": "A0AE3BFF06D368F709A444D9D506555E8DF34141BD89E5FD1F58E4127471115A",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXCommon",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXCommon_static_64.lib",
+      "bytes": 47574076,
+      "sha256": "A25B6B2F2ED0EAB56D003245EC24881C51BA58C562F352B324593B2F8985B447",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXFoundation",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/profile/PhysXFoundation_static_64.lib",
+      "bytes": 828610,
+      "sha256": "D16F27770D8839AC0E3441A13C4AAB969A18C0661B925AD19D0FC79C87613031",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "LowLevel",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevel.dir/profile/LowLevel.lib",
+      "bytes": 5002012,
+      "sha256": "54B516389FA2667237758D8C7DD41E4505EA15975323AE31492D0F31BF5FABB2",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "LowLevelAABB",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelAABB.dir/profile/LowLevelAABB.lib",
+      "bytes": 3294942,
+      "sha256": "AD558A091DE455A0830FE3B36F63BFB0E663448EE16C077D8468477F77064A31",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "LowLevelDynamics",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelDynamics.dir/profile/LowLevelDynamics.lib",
+      "bytes": 10772948,
+      "sha256": "8C0B26C101EC732A454FE16A5BB4468053ABB201375F184FCE80A7F72A1C2CEE",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "PhysXTask",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/PhysXTask.dir/profile/PhysXTask.lib",
+      "bytes": 259978,
+      "sha256": "92BB9785440493E038AF540CB0E64CE935299EB27467D5E966341CFE34F0B5CE",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "SceneQuery",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SceneQuery.dir/profile/SceneQuery.lib",
+      "bytes": 1869988,
+      "sha256": "737AF2258C3741CD874804C9DFE6AC8F65FCA787496B70687D0F943DCED2AAA7",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "profile",
+      "target": "SimulationController",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SimulationController.dir/profile/SimulationController.lib",
+      "bytes": 18947558,
+      "sha256": "9A1EE4DF4B6609BF2590808DF34975CDA55A23E82E8BAD2AE889ACC645EDF37B",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysX",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysX_static_64.lib",
+      "bytes": 61795878,
+      "sha256": "ED17E6DBBD8381E48222F12B34EF0B656B8E650DC0E10CA3E5A96E1892FF3F62",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXPvdSDK",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXPvdSDK_static_64.lib",
+      "bytes": 4968802,
+      "sha256": "2EBCA147C424BE65B80669254DE5BBBFA6355CD2D3385CF7202C16470FDF0C33",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXVehicle",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXVehicle_static_64.lib",
+      "bytes": 21222316,
+      "sha256": "8AF545291573DE3712B38968BEB915BF754A3F540549211891ECFADCCF7D1DDF",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXCharacterKinematic",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXCharacterKinematic_static_64.lib",
+      "bytes": 2648566,
+      "sha256": "80EEFD4413053B5A6F76BEE95F4803B08BB486F324D1AFF63BEC8C34A9D14A61",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXExtensions",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXExtensions_static_64.lib",
+      "bytes": 50631718,
+      "sha256": "9CE1DC981CE4D62E03960CF3BF2317B5A2B026A879DDF911FA979DD528CCBC04",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXCooking",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXCooking_static_64.lib",
+      "bytes": 176966,
+      "sha256": "4B24A4F91D1A255FADBEEAE4617E1254752CC56DA24CFD0AE10D65AABD02594A",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXCommon",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXCommon_static_64.lib",
+      "bytes": 47504570,
+      "sha256": "95DD958E555C09ED3231674CEE3CAC0F4FDC132A5B27DE70012D63DD7F01F30D",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXFoundation",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/binaries/bin/win.x86_64.vc143.md/release/PhysXFoundation_static_64.lib",
+      "bytes": 828610,
+      "sha256": "72348C217B0F6780787E8EAEA6BC82253EC2B1CBD884649762BED248CEF55B13",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "LowLevel",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevel.dir/release/LowLevel.lib",
+      "bytes": 4955618,
+      "sha256": "8907203A8AF222D890738A7FE157DFB951E65523427C8DB6D0ACCA5255BAF61B",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "LowLevelAABB",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelAABB.dir/release/LowLevelAABB.lib",
+      "bytes": 3220458,
+      "sha256": "73375E4536F1D7F7CAB557E59CFA7E092D649EAD5A38D5C3E1F34CEAEE3E9E84",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "LowLevelDynamics",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/LowLevelDynamics.dir/release/LowLevelDynamics.lib",
+      "bytes": 10738398,
+      "sha256": "9D7A09FEF8A7B163F723A6C5D3B403E573D67771EDA9828DADF1281206033AD4",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "PhysXTask",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/PhysXTask.dir/release/PhysXTask.lib",
+      "bytes": 259978,
+      "sha256": "03F9FC93561712F3D27DC6DD84CF4DB294FBF384D11C55EAB20B2F9A3A8900BF",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "SceneQuery",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SceneQuery.dir/release/SceneQuery.lib",
+      "bytes": 1713312,
+      "sha256": "9B3FB3F7C2BB9CC5C2C61FDAFA1798CC66FCEEED4E0ABC5369A3C4D4ABBD6AEF",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    },
+    {
+      "config": "release",
+      "target": "SimulationController",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/attempt1/build/sdk_source_bin/SimulationController.dir/release/SimulationController.lib",
+      "bytes": 18824032,
+      "sha256": "1B4B90CE77AA45E4ED1CDF17E86F6E4AC39D2CC0663C8983EBB4A5D7630921F3",
+      "container": "COFF archive magic !<arch>; machine/import/symbol audit pending"
+    }
+  ],
+  "generatedHeader": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-configure-preparation-rev1/private-source/physx/include/PxConfig.h",
+    "bytes": 1684,
+    "sha256": "128EB13331F5245011725B3917190D72745B55B94307B29C48BFBB6C63B8AA53"
+  },
+  "rename": "Six static-pass target.dir/config/Target.lib archives -> Target_static_64.lib",
+  "sharedPass": false
+}

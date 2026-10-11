@@ -1,0 +1,13 @@
+{
+  "exitCode": 0,
+  "utcStart": "2026-10-11T19:04:10.4625041Z",
+  "utcEnd": "2026-10-11T19:04:10.6764900Z",
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+  "executableSHA256": "6235ABE2248C14AD86DFE00DBB7BC2396EB4B91F663412C211905E279BCE9D6E",
+  "arguments": [
+    "-I",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-consumer-preparation/AuditPackage.py"
+  ],
+  "scope": "External audited CPython stdlib tar/lzma data-only reader; no package code/tool executed"
+}

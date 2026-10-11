@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PhysX/tests/CMakeLists.txt
+  PhysXConsumer.cpp
+  JEPhysXConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\physx-final-preparation-rev2\attempt1\consumer-debug\Debug\JEPhysXConsumer.exe

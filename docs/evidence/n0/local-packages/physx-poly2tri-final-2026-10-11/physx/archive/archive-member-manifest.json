@@ -1,0 +1,2469 @@
+{
+  "status": "DATA_AUDIT_ONLY_PARENT_ACCEPTANCE_PENDING",
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev2\\packages\\PhysX-5.1.1-je-cpu-rev2-windows.tar.xz",
+  "archiveSHA256": "6A3655FA52AD06691F1B360B650557518C06494AC0E4EA7418158B7B63F4FC62",
+  "archiveBytes": 73160792,
+  "memberCount": 410,
+  "entries": [
+    {
+      "path": "FindPhysX5.cmake",
+      "type": "regular",
+      "bytes": 3801,
+      "sha256": "A021C619F18981CEA93E8F14ECBE9AD194355BB6BE4063D985C6B2D38C360B5A"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "type": "regular",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "type": "regular",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "type": "regular",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "type": "regular",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "LICENSES/PhysX/LICENSE.md",
+      "type": "regular",
+      "bytes": 1535,
+      "sha256": "F95DC18FA272981B6AFBF3F713CC8A068B1BE8D109739ACC3724406CA9388D70"
+    },
+    {
+      "path": "LICENSES/PhysX/README.md",
+      "type": "regular",
+      "bytes": 2444,
+      "sha256": "B36C431CA500B678EA4870AB828C6B7A9CFF1DDA4B60D8109F8F214A904C6F70"
+    },
+    {
+      "path": "LICENSES/official-build-helpers/GetCompilerAndPlatform.cmake",
+      "type": "regular",
+      "bytes": 3900,
+      "sha256": "BCF3B1F22893F7760B0B22C51269BF42F881B2DBA4FECD8E47ABEEC7A282FA3F"
+    },
+    {
+      "path": "LICENSES/official-build-helpers/LICENSE.md",
+      "type": "regular",
+      "bytes": 1508,
+      "sha256": "CEE409D941F502A1C5AB0A7ECB90B141A57F822129B225BD00B79ADD4F963FFF"
+    },
+    {
+      "path": "LICENSES/official-build-helpers/NvidiaBuildOptions.cmake",
+      "type": "regular",
+      "bytes": 9854,
+      "sha256": "AE551BDE0A3312D4FC74D101654E71DE17DDA31F1A6F4F740A2860DFF9B7FCBC"
+    },
+    {
+      "path": "LICENSES/official-build-helpers/README.md",
+      "type": "regular",
+      "bytes": 3900,
+      "sha256": "2B2736D87C54D0723C720FC44F385DB4F5EB0E43919C0E62210BD90772DCD223"
+    },
+    {
+      "path": "LICENSES/official-build-helpers/SetOutputPaths.cmake",
+      "type": "regular",
+      "bytes": 3752,
+      "sha256": "39FFDAA918398FA1F8D153F49DCBCD814818334309EDD41C684094DD8CF1EB3B"
+    },
+    {
+      "path": "LICENSES/official-build-helpers/externals-README.md",
+      "type": "regular",
+      "bytes": 295,
+      "sha256": "9B3AFF6F8A902F94EEBD19C8A91A533EE3B81A40E00CF93F322083F1AC4B71E8"
+    },
+    {
+      "path": "NOTICE.txt",
+      "type": "regular",
+      "bytes": 1845,
+      "sha256": "E2C894930EEBB192C049D5EBA1079866E8AC725E81666C8607F0F38D27C3A27D"
+    },
+    {
+      "path": "PackageInfo.json",
+      "type": "regular",
+      "bytes": 443,
+      "sha256": "4782E96AD00AC6673F55CAA7E45BAF2055F9B0F19A73A82DACEC2A039DDA8025"
+    },
+    {
+      "path": "PhysX/JEStaticArtifactWitness.json",
+      "type": "regular",
+      "bytes": 26604,
+      "sha256": "D1E1704717F36BA1602461B434F152FD161AA446ABBD7E62CFD85C5F0288D693"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXCharacterKinematic_static_64.lib",
+      "type": "regular",
+      "bytes": 2692740,
+      "sha256": "98D31B9F5AA960E455D7115A4A4C6C79FBE39DC40B1AFD44C303A9924665A29D"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXCommon_static_64.lib",
+      "type": "regular",
+      "bytes": 47643966,
+      "sha256": "116A01CD5C48134D427682BC917A91DE1BF51174C77F807074532BF543451C59"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXCooking_static_64.lib",
+      "type": "regular",
+      "bytes": 173928,
+      "sha256": "06AC95686EBC9A54413C0B3DCF72317F07B46FBFE74F4891E672B2B3951C7B6E"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXExtensions_static_64.lib",
+      "type": "regular",
+      "bytes": 59093468,
+      "sha256": "05B57B0679A365D96B6A1471E316A96BF75E42E8DDD8A04469C389CA1A3F959A"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXFoundation_static_64.lib",
+      "type": "regular",
+      "bytes": 834900,
+      "sha256": "D59DE1B7844CEFD5A12BAA75B6B7A2C82D7EF174A8F10236D8BD5903751B8814"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXPvdSDK_static_64.lib",
+      "type": "regular",
+      "bytes": 5024262,
+      "sha256": "B7E6D5042D4664638DA03B6EEB7FC02286DE2037DC570DD630097122CA0553A7"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysXVehicle_static_64.lib",
+      "type": "regular",
+      "bytes": 21585556,
+      "sha256": "DECE695785475B3D3289E6652D8EE6E87A63E12C92BCA1B20E47FF3790324A18"
+    },
+    {
+      "path": "PhysX/physx/bin/static/checked/PhysX_static_64.lib",
+      "type": "regular",
+      "bytes": 78372064,
+      "sha256": "A4F945F830CA517EEBF974C85495EF96D090B97E2AB21B13D7830010884A1918"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXCharacterKinematic_static_64.lib",
+      "type": "regular",
+      "bytes": 2400588,
+      "sha256": "70336BAEA5EABE2D9E1F757AFBB71B5FCE3467214587ACCAE8A5FC1A0BDE0F92"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXCommon_static_64.lib",
+      "type": "regular",
+      "bytes": 39569276,
+      "sha256": "8EDAD01981C578AFCE2FB035B0C72A89EBF8661DA8AA2571F27ED7062E1EB808"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXCooking_static_64.lib",
+      "type": "regular",
+      "bytes": 161924,
+      "sha256": "EFC63C0211ACDE6DCABC1A5ADD4CD2D56D9950B0A1E2930B6CCE93A5B7832E29"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXExtensions_static_64.lib",
+      "type": "regular",
+      "bytes": 47725474,
+      "sha256": "8F5059891850A59D513A2D28CB4E98F4BB67962E08DCC52E2E6769960810FFCF"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXFoundation_static_64.lib",
+      "type": "regular",
+      "bytes": 775514,
+      "sha256": "13D4202D96BBD28565D0E228D43D95922B125A4759F8A95282BDE191599D0DC3"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXPvdSDK_static_64.lib",
+      "type": "regular",
+      "bytes": 4408394,
+      "sha256": "068C1CC1C401D71D7B4DB4D796F498C10C75ACA1F157EE8A2BA9D552F5AA50FD"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysXVehicle_static_64.lib",
+      "type": "regular",
+      "bytes": 17126050,
+      "sha256": "C75467C95B9DDD76B5F8615B2B6D5C7DD510E956B719725BC569B1C1EDB7DA9F"
+    },
+    {
+      "path": "PhysX/physx/bin/static/debug/PhysX_static_64.lib",
+      "type": "regular",
+      "bytes": 71256746,
+      "sha256": "85AB4D32B1BDD4FA24E83718EB5841C8C20AB7B697A5F1948E183A597CFFE936"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXCharacterKinematic_static_64.lib",
+      "type": "regular",
+      "bytes": 2665438,
+      "sha256": "FE271738C71422B9BB9CC77893051D2F7FDD002970A1EC832ED7921817C73F75"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXCommon_static_64.lib",
+      "type": "regular",
+      "bytes": 47574076,
+      "sha256": "A25B6B2F2ED0EAB56D003245EC24881C51BA58C562F352B324593B2F8985B447"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXCooking_static_64.lib",
+      "type": "regular",
+      "bytes": 176966,
+      "sha256": "A0AE3BFF06D368F709A444D9D506555E8DF34141BD89E5FD1F58E4127471115A"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXExtensions_static_64.lib",
+      "type": "regular",
+      "bytes": 58473316,
+      "sha256": "6AC020FD543579FB364B0B4D0FA703705B0EA84362828F757E91A55AEB4A2C17"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXFoundation_static_64.lib",
+      "type": "regular",
+      "bytes": 828610,
+      "sha256": "D16F27770D8839AC0E3441A13C4AAB969A18C0661B925AD19D0FC79C87613031"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXPvdSDK_static_64.lib",
+      "type": "regular",
+      "bytes": 4968802,
+      "sha256": "E66440B6D2AA182FDB2BD101CED894F0D5E15026E4C134C61073130D94B9C1E6"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysXVehicle_static_64.lib",
+      "type": "regular",
+      "bytes": 21243648,
+      "sha256": "20BFCBBE6C6A02B169169DA59BDAA64A9EDF8AF51C2318ABBFC755C59B9F0C59"
+    },
+    {
+      "path": "PhysX/physx/bin/static/profile/PhysX_static_64.lib",
+      "type": "regular",
+      "bytes": 77136342,
+      "sha256": "98366F9CA661893CAC05DC8CDC8C9F333B50060337724312F73AD7224189B446"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXCharacterKinematic_static_64.lib",
+      "type": "regular",
+      "bytes": 2648566,
+      "sha256": "80EEFD4413053B5A6F76BEE95F4803B08BB486F324D1AFF63BEC8C34A9D14A61"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXCommon_static_64.lib",
+      "type": "regular",
+      "bytes": 47504570,
+      "sha256": "95DD958E555C09ED3231674CEE3CAC0F4FDC132A5B27DE70012D63DD7F01F30D"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXCooking_static_64.lib",
+      "type": "regular",
+      "bytes": 176966,
+      "sha256": "4B24A4F91D1A255FADBEEAE4617E1254752CC56DA24CFD0AE10D65AABD02594A"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXExtensions_static_64.lib",
+      "type": "regular",
+      "bytes": 50631718,
+      "sha256": "9CE1DC981CE4D62E03960CF3BF2317B5A2B026A879DDF911FA979DD528CCBC04"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXFoundation_static_64.lib",
+      "type": "regular",
+      "bytes": 828610,
+      "sha256": "72348C217B0F6780787E8EAEA6BC82253EC2B1CBD884649762BED248CEF55B13"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXPvdSDK_static_64.lib",
+      "type": "regular",
+      "bytes": 4968802,
+      "sha256": "2EBCA147C424BE65B80669254DE5BBBFA6355CD2D3385CF7202C16470FDF0C33"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysXVehicle_static_64.lib",
+      "type": "regular",
+      "bytes": 21222316,
+      "sha256": "8AF545291573DE3712B38968BEB915BF754A3F540549211891ECFADCCF7D1DDF"
+    },
+    {
+      "path": "PhysX/physx/bin/static/release/PhysX_static_64.lib",
+      "type": "regular",
+      "bytes": 61795878,
+      "sha256": "ED17E6DBBD8381E48222F12B34EF0B656B8E650DC0E10CA3E5A96E1892FF3F62"
+    },
+    {
+      "path": "PhysX/physx/include/PxActor.h",
+      "type": "regular",
+      "bytes": 9879,
+      "sha256": "5B5CD1EC113B8A9ED6B7D3FFB8F9A2A1D5EC2B0ABAF4C3F92EF199FD3E35CF78"
+    },
+    {
+      "path": "PhysX/physx/include/PxActorData.h",
+      "type": "regular",
+      "bytes": 3608,
+      "sha256": "C9EA0E95AA557E32B6E151163F004F6C751901A836BBF7B76E90A4F94755FE5C"
+    },
+    {
+      "path": "PhysX/physx/include/PxAggregate.h",
+      "type": "regular",
+      "bytes": 9555,
+      "sha256": "B24056256A8595FAE448E1740A8D83E00391711964CD3BB7B47E21D022A05918"
+    },
+    {
+      "path": "PhysX/physx/include/PxArticulationFlag.h",
+      "type": "regular",
+      "bytes": 6284,
+      "sha256": "79AE2CE455FB49A32F21BE8529BF847F3B7E4E4886CA0C3B83DA32D0464FB6D5"
+    },
+    {
+      "path": "PhysX/physx/include/PxArticulationJointReducedCoordinate.h",
+      "type": "regular",
+      "bytes": 21649,
+      "sha256": "C764CB773F8C2BDD839055BA5430CFDCB8A3257532D6E66937A080FD95B66189"
+    },
+    {
+      "path": "PhysX/physx/include/PxArticulationLink.h",
+      "type": "regular",
+      "bytes": 7648,
+      "sha256": "6FD3957F3744B1032FE681AA33F33170BC602899E3FA6048DEC614EB5E2C6821"
+    },
+    {
+      "path": "PhysX/physx/include/PxArticulationReducedCoordinate.h",
+      "type": "regular",
+      "bytes": 59204,
+      "sha256": "7C2431F9B4152183C0A46B40085CC10A351435F382B2813EFB92FEAE35515231"
+    },
+    {
+      "path": "PhysX/physx/include/PxArticulationTendon.h",
+      "type": "regular",
+      "bytes": 21144,
+      "sha256": "193D431485E93E56DEAABE146E7EF996F46BC52FAEEE6E7D0ED27FB59D6AEF5F"
+    },
+    {
+      "path": "PhysX/physx/include/PxArticulationTendonData.h",
+      "type": "regular",
+      "bytes": 3590,
+      "sha256": "59E732BC2DB444A56848E1ACBB9E38FDA2F3382345670625785B5FB76B581A6E"
+    },
+    {
+      "path": "PhysX/physx/include/PxAttachment.h",
+      "type": "regular",
+      "bytes": 2322,
+      "sha256": "0E11CFECD3D22BBE813470EAB2B0FF694CBB4AE1A86EEF1420618E46E4D0E359"
+    },
+    {
+      "path": "PhysX/physx/include/PxBaseMaterial.h",
+      "type": "regular",
+      "bytes": 2735,
+      "sha256": "97F892DA836B45CAFF145D3D2C23ADC7277CBE5CFC002BB0563E62D85D7415D4"
+    },
+    {
+      "path": "PhysX/physx/include/PxBroadPhase.h",
+      "type": "regular",
+      "bytes": 25948,
+      "sha256": "F4F88232AA7F9F20DB8031D3BBDF8950524A30CFD2D02A0E91B6BCFDA1AD8F18"
+    },
+    {
+      "path": "PhysX/physx/include/PxBuffer.h",
+      "type": "regular",
+      "bytes": 3616,
+      "sha256": "6451B122CCBA2AE5556AD304D4C8678B2D9C31CDBBC1E3EADE70670548D89151"
+    },
+    {
+      "path": "PhysX/physx/include/PxClient.h",
+      "type": "regular",
+      "bytes": 2143,
+      "sha256": "3E7B02AA6A0AB6C3DB009CD403BFD9BAC50EDE4C515CEAB0A07D1323CF5D6DA0"
+    },
+    {
+      "path": "PhysX/physx/include/PxConeLimitedConstraint.h",
+      "type": "regular",
+      "bytes": 2685,
+      "sha256": "82A7B35BC8CF1BB26EADAE381D6BC2C09625D2F6F195643284F4A24EF8FDBE76"
+    },
+    {
+      "path": "PhysX/physx/include/PxConfig.h",
+      "type": "regular",
+      "bytes": 1684,
+      "sha256": "128EB13331F5245011725B3917190D72745B55B94307B29C48BFBB6C63B8AA53"
+    },
+    {
+      "path": "PhysX/physx/include/PxConstraint.h",
+      "type": "regular",
+      "bytes": 10251,
+      "sha256": "2FCE524E6A74A9C345345767B3B3CED5B83387AABD0B163C22D40DF5728E3AFB"
+    },
+    {
+      "path": "PhysX/physx/include/PxConstraintDesc.h",
+      "type": "regular",
+      "bytes": 18895,
+      "sha256": "CF8F365403A2D2122505BACDF62B9B4E6E1F18F80EB799E6174B0DF9EA0D90D2"
+    },
+    {
+      "path": "PhysX/physx/include/PxContact.h",
+      "type": "regular",
+      "bytes": 17437,
+      "sha256": "4A83748A16FD18AB64E5F7EA502B05340CDD09EC27DB23741453CE5DD6862C3E"
+    },
+    {
+      "path": "PhysX/physx/include/PxContactModifyCallback.h",
+      "type": "regular",
+      "bytes": 18662,
+      "sha256": "F07DE8B69736FB6DD782EDB54F7F0C03AC1B62671FA48C0C5072B65A1CD159BE"
+    },
+    {
+      "path": "PhysX/physx/include/PxCustomParticleSystemSolverCallback.h",
+      "type": "regular",
+      "bytes": 4478,
+      "sha256": "2A8F46DBAFEB23E08861FB395590D4933B5F6963B86BB2BF03E084B3FAAA92AD"
+    },
+    {
+      "path": "PhysX/physx/include/PxDeletionListener.h",
+      "type": "regular",
+      "bytes": 4229,
+      "sha256": "142DCCC081AB50A609CE9AED68BC38D3B31D57E1A2DCCDE28DC86F3463DADE50"
+    },
+    {
+      "path": "PhysX/physx/include/PxFEMClothFlags.h",
+      "type": "regular",
+      "bytes": 2621,
+      "sha256": "DBBFA0DD15BF9EA653E082245270EBDA5D780D1BA0952F5C150BB64669859E29"
+    },
+    {
+      "path": "PhysX/physx/include/PxFEMClothMaterial.h",
+      "type": "regular",
+      "bytes": 3757,
+      "sha256": "2DF5BE599F0E6CE5162F30C6402EDD23569A7E2A1A1DF3341B769120EB1FB321"
+    },
+    {
+      "path": "PhysX/physx/include/PxFEMMaterial.h",
+      "type": "regular",
+      "bytes": 3946,
+      "sha256": "79D3846E219D41FF55C28A11C5F14EAF69FB70D37546C6EE00B206AA4E1397A9"
+    },
+    {
+      "path": "PhysX/physx/include/PxFEMParameter.h",
+      "type": "regular",
+      "bytes": 3515,
+      "sha256": "B9523CA2BBF5C4F8040B1A500974EFF6012527A665F7601600A3FF5571D9B6BF"
+    },
+    {
+      "path": "PhysX/physx/include/PxFEMSoftBodyMaterial.h",
+      "type": "regular",
+      "bytes": 3532,
+      "sha256": "BD7096DEEF630FF5B05FF9382D7DDE8A907320EBD4B9307379D7333497A04437"
+    },
+    {
+      "path": "PhysX/physx/include/PxFLIPMaterial.h",
+      "type": "regular",
+      "bytes": 2932,
+      "sha256": "2B138D667EE626B00DEA1AB5079D0892EEB9AC470BE310DD6CA444913748FB70"
+    },
+    {
+      "path": "PhysX/physx/include/PxFiltering.h",
+      "type": "regular",
+      "bytes": 30423,
+      "sha256": "379E26065A05DAB26BEEDAF5995C0C8F93B0B8F5FC7BC450CFA1ECA49EBB1F9A"
+    },
+    {
+      "path": "PhysX/physx/include/PxForceMode.h",
+      "type": "regular",
+      "bytes": 2582,
+      "sha256": "8CF4D5ED62FAA88AA0DA772EECCA416939BE65B44E96C8F7061D41A6FF3B6EE5"
+    },
+    {
+      "path": "PhysX/physx/include/PxHairSystemFlag.h",
+      "type": "regular",
+      "bytes": 3120,
+      "sha256": "078B81E20848CD0C3979A31AABA0B3C147995587B117AF474154A1B0026449C1"
+    },
+    {
+      "path": "PhysX/physx/include/PxImmediateMode.h",
+      "type": "regular",
+      "bytes": 42076,
+      "sha256": "D73082AF2F31E29C5E2D2EB5DAA449A77647D3CFF68C5B946182D1A515204C54"
+    },
+    {
+      "path": "PhysX/physx/include/PxLockedData.h",
+      "type": "regular",
+      "bytes": 2706,
+      "sha256": "7F9DA62452F4826D53D2EC0843A28664518941A85B0FFD73419EAAC9EC032D93"
+    },
+    {
+      "path": "PhysX/physx/include/PxMPMMaterial.h",
+      "type": "regular",
+      "bytes": 11928,
+      "sha256": "5828B79CB7F7F6022422FBF4518D403F3EEF69E7BAA9900C4E9DBC71DDF16323"
+    },
+    {
+      "path": "PhysX/physx/include/PxMaterial.h",
+      "type": "regular",
+      "bytes": 12049,
+      "sha256": "5E9B2A1A85CB71E767533ABA1773489AA99A7CD366C0F8AB831EB4A52E3CCFA9"
+    },
+    {
+      "path": "PhysX/physx/include/PxNodeIndex.h",
+      "type": "regular",
+      "bytes": 3668,
+      "sha256": "C27B415DA2C7511585A4E4F447224D932557A867758FC4E8ABAA8E1C1AFD8AA8"
+    },
+    {
+      "path": "PhysX/physx/include/PxPBDMaterial.h",
+      "type": "regular",
+      "bytes": 7079,
+      "sha256": "4B9A3E04AA98F3767AAAF7CA094F947EEF2A145761401A7BF9ABAAAEB59254CC"
+    },
+    {
+      "path": "PhysX/physx/include/PxPBDParticleSystem.h",
+      "type": "regular",
+      "bytes": 4944,
+      "sha256": "1B4B141029EA8B8BF06E3E85735D6FAF405166D870873CA68E153BD06356D7C5"
+    },
+    {
+      "path": "PhysX/physx/include/PxParticleBuffer.h",
+      "type": "regular",
+      "bytes": 22588,
+      "sha256": "945A72217DFA91CFD96F1B64613EA8C494F80C29D50DB592B84F257DC4176521"
+    },
+    {
+      "path": "PhysX/physx/include/PxParticleGpu.h",
+      "type": "regular",
+      "bytes": 8483,
+      "sha256": "2E9CD8D654952D513FF0CC9DA4123A6E9DBBE478DB69429BF5ECC8681468FEBE"
+    },
+    {
+      "path": "PhysX/physx/include/PxParticleMaterial.h",
+      "type": "regular",
+      "bytes": 4429,
+      "sha256": "1794A9D6EF43E89EE700C6797B660C6B9C377506ECB95A2B3212F890C43F720D"
+    },
+    {
+      "path": "PhysX/physx/include/PxParticleSolverType.h",
+      "type": "regular",
+      "bytes": 2745,
+      "sha256": "ECABD06E0FC5E869970D75315E7911186978388B73423D5DF111E1D97F07E73B"
+    },
+    {
+      "path": "PhysX/physx/include/PxParticleSystem.h",
+      "type": "regular",
+      "bytes": 16044,
+      "sha256": "F1BA95FFD69500CA3100F11FD2A5194E8C3DECA21947244279ECD660C20B2605"
+    },
+    {
+      "path": "PhysX/physx/include/PxParticleSystemFlag.h",
+      "type": "regular",
+      "bytes": 4530,
+      "sha256": "6DEC17260E46F19BA240E0FD5FFCA47F20253ECFE436CB11976266012FD82F70"
+    },
+    {
+      "path": "PhysX/physx/include/PxPhysXConfig.h",
+      "type": "regular",
+      "bytes": 1980,
+      "sha256": "BCC21DBE0440614B1407A7E3D9DEFABEB870D6AA26A714F74204965B342A9BF8"
+    },
+    {
+      "path": "PhysX/physx/include/PxPhysics.h",
+      "type": "regular",
+      "bytes": 50667,
+      "sha256": "D798B2DFA42C28A0DF5EAE63935B6211C14B6502B2F7857434CAF52E7B2E8235"
+    },
+    {
+      "path": "PhysX/physx/include/PxPhysicsAPI.h",
+      "type": "regular",
+      "bytes": 8716,
+      "sha256": "8631C8F1BD0223D2BE107250B9E44904D43BCEC7E1F885593034FEDFD57C0B8D"
+    },
+    {
+      "path": "PhysX/physx/include/PxPhysicsSerialization.h",
+      "type": "regular",
+      "bytes": 3564,
+      "sha256": "4FDAD38D034C65EE9D2410E8AB8E929479C6F582EF3D6A09321E6303F1F142D2"
+    },
+    {
+      "path": "PhysX/physx/include/PxPruningStructure.h",
+      "type": "regular",
+      "bytes": 5103,
+      "sha256": "F4FDFBCE581AA5F266E4E282CE2377054D6A0F4B5FD4AD035430AAEE52A85E0D"
+    },
+    {
+      "path": "PhysX/physx/include/PxQueryFiltering.h",
+      "type": "regular",
+      "bytes": 10541,
+      "sha256": "E29D16E96F207947073CA385E394BEDA528753CEE503F926296E7E2C850E5F2D"
+    },
+    {
+      "path": "PhysX/physx/include/PxQueryReport.h",
+      "type": "regular",
+      "bytes": 12332,
+      "sha256": "B19FFEF97B15E90D64BFB712409436C9AD54C615FFF54473F7F2A62083D60536"
+    },
+    {
+      "path": "PhysX/physx/include/PxRigidActor.h",
+      "type": "regular",
+      "bytes": 9439,
+      "sha256": "4E238EFAD0A4B3F0D9C4F648BEA519AD826D9EF461AA41C92C30D37EC90CDB24"
+    },
+    {
+      "path": "PhysX/physx/include/PxRigidBody.h",
+      "type": "regular",
+      "bytes": 28986,
+      "sha256": "2255CF4BB13ACCCC01A473894F0BF27462A4769F1BA2ED636F757AC4F12A78E2"
+    },
+    {
+      "path": "PhysX/physx/include/PxRigidDynamic.h",
+      "type": "regular",
+      "bytes": 17733,
+      "sha256": "22578D6CA669D20744F026F8A9ABA316E117AE2F6989049A6F205D59518B8268"
+    },
+    {
+      "path": "PhysX/physx/include/PxRigidStatic.h",
+      "type": "regular",
+      "bytes": 2929,
+      "sha256": "9CE69C8932A5769BECD63CF4B2D6FFCA9573F63D41F81A31CA8CEC8F0E0114E8"
+    },
+    {
+      "path": "PhysX/physx/include/PxScene.h",
+      "type": "regular",
+      "bytes": 72943,
+      "sha256": "357C1F0DB763A54B0CEEAE819EB742811EB2DCA9AF9A5E4B974EFECBBA84C62B"
+    },
+    {
+      "path": "PhysX/physx/include/PxSceneDesc.h",
+      "type": "regular",
+      "bytes": 37316,
+      "sha256": "3CE6898D88027A681E9E9F6B1ACB7274C78DA5C5862916C46CF08B383FDCDC47"
+    },
+    {
+      "path": "PhysX/physx/include/PxSceneLock.h",
+      "type": "regular",
+      "bytes": 3561,
+      "sha256": "EF0BC0A83382CCBD6E04D6978EBB5556BBE6D6228E1AD0FAC39F4BA66D15C52C"
+    },
+    {
+      "path": "PhysX/physx/include/PxSceneQueryDesc.h",
+      "type": "regular",
+      "bytes": 12911,
+      "sha256": "E3E7055A6CD85483ED675A76316E9C41A448126F82683273E371ACAD80457E4D"
+    },
+    {
+      "path": "PhysX/physx/include/PxSceneQuerySystem.h",
+      "type": "regular",
+      "bytes": 30407,
+      "sha256": "E0BEE841A21C96416A95B56601332ED1B8083941DEACFEE23E5326AAB9380915"
+    },
+    {
+      "path": "PhysX/physx/include/PxShape.h",
+      "type": "regular",
+      "bytes": 27833,
+      "sha256": "320D0CBD7B27E6DF0A4E5E0D3497FF109E7E5852F26D888F6833A0258E299F36"
+    },
+    {
+      "path": "PhysX/physx/include/PxSimulationEventCallback.h",
+      "type": "regular",
+      "bytes": 30876,
+      "sha256": "711666C6196E6A62440CA60DC1B01DD00E97CD8F16B9AEC2A2C108725850B51C"
+    },
+    {
+      "path": "PhysX/physx/include/PxSimulationStatistics.h",
+      "type": "regular",
+      "bytes": 12687,
+      "sha256": "4386D81BDC6CF71287243A6AD1E3394A284836C3C81B1CD67CAE3F2E5AC6096D"
+    },
+    {
+      "path": "PhysX/physx/include/PxSoftBody.h",
+      "type": "regular",
+      "bytes": 34241,
+      "sha256": "FF6ACF30DD81D23C072BBD62F3183BAE46C787B4703FC709C8398D731EEB0C0E"
+    },
+    {
+      "path": "PhysX/physx/include/PxSoftBodyFlag.h",
+      "type": "regular",
+      "bytes": 3172,
+      "sha256": "7AC0EF60CF66F1DE2CDC2D96D2E943E51F1485790454BFF61E631B0EEF84A36F"
+    },
+    {
+      "path": "PhysX/physx/include/PxSparseGridParams.h",
+      "type": "regular",
+      "bytes": 3881,
+      "sha256": "ECDBD87133701EDB7F86AFF823CACC309F94EBE17E53D503FE786FF538D0D764"
+    },
+    {
+      "path": "PhysX/physx/include/PxVisualizationParameter.h",
+      "type": "regular",
+      "bytes": 6985,
+      "sha256": "CD1330F4CECE1E1758BE466E3ED9671CC4D1E6771813D2EBA7D1EB46C67A30EB"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxBoxController.h",
+      "type": "regular",
+      "bytes": 6070,
+      "sha256": "1EA3D2BF6A697A66C96CA81EE265EBD1275BE5B0BE8439CA25228B3E7ACD5A86"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxCapsuleController.h",
+      "type": "regular",
+      "bytes": 6517,
+      "sha256": "110E6B6F316B49798E651BF02DCDD8AD9F55304524DB2BC5BC47299153337EA7"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxController.h",
+      "type": "regular",
+      "bytes": 27618,
+      "sha256": "5247C7E371B0F2093B65A088D80E1F774EE7D68F6084EBB2DCA84896E9994709"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxControllerBehavior.h",
+      "type": "regular",
+      "bytes": 4894,
+      "sha256": "F3D65DEF0021B39FBE090EA5110EDB3E6B72A36E81865A3B640904A884109A76"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxControllerManager.h",
+      "type": "regular",
+      "bytes": 10633,
+      "sha256": "ACE7B07D47C38D6F58A7016DFEB4B8DCB8F8E396134FCB143D9EC623C563FFA7"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxControllerObstacles.h",
+      "type": "regular",
+      "bytes": 5199,
+      "sha256": "DBDAC328B0FCC2A7CDFB97D31981C1A8C4A6D618C758DA1C6A330B1408B1F440"
+    },
+    {
+      "path": "PhysX/physx/include/characterkinematic/PxExtended.h",
+      "type": "regular",
+      "bytes": 6773,
+      "sha256": "39A58DE0D4C4DD1A253BB2DE917B4EC24AE724F54DF911326C29967BC2954CC0"
+    },
+    {
+      "path": "PhysX/physx/include/collision/PxCollisionDefs.h",
+      "type": "regular",
+      "bytes": 3535,
+      "sha256": "80124F0766A1A64B14CE3511A2F8B43306B807440D67F1C9E775545BEBC3BDA9"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxBase.h",
+      "type": "regular",
+      "bytes": 7534,
+      "sha256": "6F36B38253A5343AE173EA07F05E75ADE6C7281A68468795712475BE9750A770"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxCollection.h",
+      "type": "regular",
+      "bytes": 9674,
+      "sha256": "0E85DBE6860B1FC03FA8926353A59B0B4C14E30D08A1261FBECE4FCF2DC37E7D"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxCoreUtilityTypes.h",
+      "type": "regular",
+      "bytes": 5634,
+      "sha256": "25C2B5596CC69C06297A034A5DCB58427E064B7C38B4D56BB32D3488BAAB91DF"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxInsertionCallback.h",
+      "type": "regular",
+      "bytes": 3006,
+      "sha256": "B49FE67238A4BE7954CA72F34A7E2530B502A89FF55B77D46B20FE1ECC92587C"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxMetaData.h",
+      "type": "regular",
+      "bytes": 9013,
+      "sha256": "861EF07C4C8BCEADF891F2A6AB12CCCD976F4BF1BCA58A25D24B247EBE4E561B"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxMetaDataFlags.h",
+      "type": "regular",
+      "bytes": 3415,
+      "sha256": "F22A51A0531826202DE395536920FF00E7E7E979A137BBAB53B41DC764A6733D"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxPhysXCommonConfig.h",
+      "type": "regular",
+      "bytes": 4144,
+      "sha256": "B69B2390B753E4ACBF6A676C29F2730531D4BE649B8B70E27929919E018B55D8"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxProfileZone.h",
+      "type": "regular",
+      "bytes": 2393,
+      "sha256": "66B616F29A61E780A000B0E8E6638170B312DCE044BB0805F8987DD59038FC90"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxRenderBuffer.h",
+      "type": "regular",
+      "bytes": 4538,
+      "sha256": "D6EAEE61949478F293466044DC9250CDE06AF7921C33A031C5886EF8A21D632A"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxRenderOutput.h",
+      "type": "regular",
+      "bytes": 13159,
+      "sha256": "A3D6525FC02AD99BDD19DCD37521E4785FDBB69ED6DAF8F05B3E8DCE77C52C7B"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxSerialFramework.h",
+      "type": "regular",
+      "bytes": 14185,
+      "sha256": "E0E107519C895118AAE18E52C86454A3EF906DD7112E03B981639BFD4F57C187"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxSerializer.h",
+      "type": "regular",
+      "bytes": 8424,
+      "sha256": "A91FBE2BCF69B2E176891FB091D9FF8B14BC505C5BC993E1F3A046391EBBDCB1"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxStringTable.h",
+      "type": "regular",
+      "bytes": 2503,
+      "sha256": "9F248B54851487A96D94596DFFCE9A2B141C450F6E594AF430689614AF2BBE11"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxTolerancesScale.h",
+      "type": "regular",
+      "bytes": 3620,
+      "sha256": "30D836418D1E13189FE3F2F4D6A9222474B36AF491862401066A9A54D7A8221D"
+    },
+    {
+      "path": "PhysX/physx/include/common/PxTypeInfo.h",
+      "type": "regular",
+      "bytes": 6678,
+      "sha256": "ED627887DC962CA5F4745927392CE87FEF5BAC26D77E5271CB5BC4E13C23C05F"
+    },
+    {
+      "path": "PhysX/physx/include/common/windows/PxWindowsDelayLoadHook.h",
+      "type": "regular",
+      "bytes": 3560,
+      "sha256": "BE45572176A5CEE09E635079C5F211700FBDC595C6E678DD0DA5BA7E1E71D99F"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxBVH33MidphaseDesc.h",
+      "type": "regular",
+      "bytes": 3653,
+      "sha256": "54B616A9FFD53E9478F3D64C15D2917C2637570D597409A2A0B106117822CEF9"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxBVH34MidphaseDesc.h",
+      "type": "regular",
+      "bytes": 4031,
+      "sha256": "B10ABF4412FD8300F6E9CFAC05DAD97FA1AA5B7AB73CC0E46BF38F83B71069F5"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxBVHDesc.h",
+      "type": "regular",
+      "bytes": 3867,
+      "sha256": "B93FB6A3B20B5C7C23FDC0FE54CC7E4F23DDCFA7991085B079D97A4997F2F270"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxConvexMeshDesc.h",
+      "type": "regular",
+      "bytes": 9502,
+      "sha256": "DB6EE2FFEEE63DEEAC837945D671A2A8AC79BD71F66A271EA0275966484881FF"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxCooking.h",
+      "type": "regular",
+      "bytes": 42821,
+      "sha256": "22B0629A24A170621DC5D1E9ECE59181C0B1CE989F82CF2DC0A4B0A5567100C5"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxCookingInternal.h",
+      "type": "regular",
+      "bytes": 2359,
+      "sha256": "26927FE644024191AC8BFB8E6A534FB21A037512057264564302F4EED424C2B7"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxMidphaseDesc.h",
+      "type": "regular",
+      "bytes": 3518,
+      "sha256": "F06E40B0DCBCA08CC2FB3F158CD4CF1737AA164F13B62AB4315BBE440FCB0BA6"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxSDFDesc.h",
+      "type": "regular",
+      "bytes": 5909,
+      "sha256": "C27467B1EFD88131955D84C1FCD7B97B0E6B4C7993F795651C04C4FF8DCE295D"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxTetrahedronMeshDesc.h",
+      "type": "regular",
+      "bytes": 7630,
+      "sha256": "855C3579BC0C98757EF575F11CA4C9859A5169E4F4B3A711AB7BBDEE1F4D6FF6"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/PxTriangleMeshDesc.h",
+      "type": "regular",
+      "bytes": 4610,
+      "sha256": "A70C3134B61982FBBB1FCEEABACA1A4189B06673E2C12E88B18BB7D9DB908BB6"
+    },
+    {
+      "path": "PhysX/physx/include/cooking/Pxc.h",
+      "type": "regular",
+      "bytes": 2238,
+      "sha256": "F38E8EEB1172402BF7640EFB7117673C3A1439CBF7AE84F593D10BCE37AA178D"
+    },
+    {
+      "path": "PhysX/physx/include/cudamanager/PxCudaContext.h",
+      "type": "regular",
+      "bytes": 6432,
+      "sha256": "C7FA4B238D02AA6443AA2DC13B56D640B13B4C777A9FEED58C740CF177949649"
+    },
+    {
+      "path": "PhysX/physx/include/cudamanager/PxCudaContextManager.h",
+      "type": "regular",
+      "bytes": 20559,
+      "sha256": "AC85A1B30E3052F511371973E3D9C964632AFE29FCBCB16A14122D8BC34A94A3"
+    },
+    {
+      "path": "PhysX/physx/include/cudamanager/PxCudaTypes.h",
+      "type": "regular",
+      "bytes": 2654,
+      "sha256": "BAA8FA6FD788854BC4FE7038D94D53F385E95CA0053DE5A79E504D9E669395C3"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxBinaryConverter.h",
+      "type": "regular",
+      "bytes": 4680,
+      "sha256": "08B76507DD108AA7C6ABB62AEA3B4ADAABDFF2F04562AF6F6F52794EE44CDC94"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxBroadPhaseExt.h",
+      "type": "regular",
+      "bytes": 3047,
+      "sha256": "64793715446595D98C53DBD8F459C46D83DBA45A63C8A00D1FE474D7AEBAD270"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxCollectionExt.h",
+      "type": "regular",
+      "bytes": 5234,
+      "sha256": "22168F842B22B6F923143F2FB55EBA1B49A6E6E5777738C99E9E7AA42ABA1805"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxConstraintExt.h",
+      "type": "regular",
+      "bytes": 2441,
+      "sha256": "94A56EA8297404D51F2D533F0F89D25D42AC5F274718DA219E659DC8340E5563"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxContactJoint.h",
+      "type": "regular",
+      "bytes": 5371,
+      "sha256": "4B860F4662200E605208D41C654E3681759368F862F1659DBA096B06093A9A9F"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxConvexMeshExt.h",
+      "type": "regular",
+      "bytes": 2815,
+      "sha256": "C44C342A0C4D95230B62D7230527882216CD84F68052829FAC989092BFC954DC"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxCustomGeometryExt.h",
+      "type": "regular",
+      "bytes": 6281,
+      "sha256": "66F815CD994DAC1E3C70E5C7E3008018ABB9AAB931E0B51735044407783BF9BB"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxCustomSceneQuerySystem.h",
+      "type": "regular",
+      "bytes": 8072,
+      "sha256": "ABDDBA343196C8A963748C5F97FD2265DDF4F3791ABF0C0C4958D47EE04DCBCC"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxD6Joint.h",
+      "type": "regular",
+      "bytes": 18395,
+      "sha256": "01D69B0E34662B0BE999FC9A8D70B3248540675A5E742CDCA4CEB75E64B474B4"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxD6JointCreate.h",
+      "type": "regular",
+      "bytes": 14632,
+      "sha256": "8C2CDD2C8C61A8CEFD6FD94B46E7333E4E74D34D9B3771AD5F5C2ED755E5C9C7"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxDefaultAllocator.h",
+      "type": "regular",
+      "bytes": 3236,
+      "sha256": "764650EF87AE2942B42C92A1CEAAFA21341CCF12D4BFDE1DE3EC98BB09F3F007"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxDefaultCpuDispatcher.h",
+      "type": "regular",
+      "bytes": 4656,
+      "sha256": "4ECEEDF991285C7D6C5BAC290A267BC49C3B4125B1F45F31AAF46B5D5541A7D3"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxDefaultErrorCallback.h",
+      "type": "regular",
+      "bytes": 2666,
+      "sha256": "7CFB4E074C2323D04D889DD856BACA4C10E9C06A1DD0116B19921B6732A9AB39"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxDefaultSimulationFilterShader.h",
+      "type": "regular",
+      "bytes": 7594,
+      "sha256": "AE44DC4D8CCC39ACED0B859CCB8408E1B525F435B4DFEECEBFA74AB812F40404"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxDefaultStreams.h",
+      "type": "regular",
+      "bytes": 3962,
+      "sha256": "C71D84316C4A835DB6645541FDEC658BF98D8DAC63F6E4761C436C00F1D75DC8"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxDistanceJoint.h",
+      "type": "regular",
+      "bytes": 8971,
+      "sha256": "0280DEB35A6090734D699BC139959BCC11A3BEE7D03B2EA26ABFD4E3BF14E307"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxExtensionsAPI.h",
+      "type": "regular",
+      "bytes": 3926,
+      "sha256": "4022F8670D79029B739AB9DC11429B4BD061833ED1B801DDF28222300460A172"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxFixedJoint.h",
+      "type": "regular",
+      "bytes": 5620,
+      "sha256": "AFA08313D57947584461D35B758899FC9BB945F197C00DD1955602119EF9CFC5"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxGearJoint.h",
+      "type": "regular",
+      "bytes": 4682,
+      "sha256": "90ACD5E398FA9D980AA2F30498A79F330DBDCF719C9DA16A1F1444B1A697FB80"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxGjkQueryExt.h",
+      "type": "regular",
+      "bytes": 6199,
+      "sha256": "FC45B89A9F26CC735652A932DF061E5A64B858D482C1004F468A9D3D47695FDA"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxJoint.h",
+      "type": "regular",
+      "bytes": 12459,
+      "sha256": "DF905B759CC71EE1EB762BAEE70265B3B6035E895B56E677AE358EA1C29BB041"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxJointLimit.h",
+      "type": "regular",
+      "bytes": 19997,
+      "sha256": "7148BD81F6018EA2EEB11E693A33DA4A6A45976326A762AC8E0D102318630A45"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxMassProperties.h",
+      "type": "regular",
+      "bytes": 15019,
+      "sha256": "15F3418D21DCF9BC7F93488EC19F61C8A23590483795CC4541813A21E418DCFE"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxParticleClothCooker.h",
+      "type": "regular",
+      "bytes": 5341,
+      "sha256": "E038CE7A05B6CD37BD0AE8B572256137367D2F70E890C65B5AD61E23C842F82D"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxParticleExt.h",
+      "type": "regular",
+      "bytes": 17570,
+      "sha256": "B6FFF7732A9637330F7293E4A37589941BD6410BFFE11AF8903C47784D4D8F30"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxPrismaticJoint.h",
+      "type": "regular",
+      "bytes": 7419,
+      "sha256": "5C7EB7E030D91DA4AC617899118424464BD54C43E8611319B47503241E249CFA"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRackAndPinionJoint.h",
+      "type": "regular",
+      "bytes": 5415,
+      "sha256": "27653A3B481D09A56F9BC9EA1FD21CD282719354BB755A5A8F792202EC038380"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRaycastCCD.h",
+      "type": "regular",
+      "bytes": 4032,
+      "sha256": "B0B3A045847CDCD20989C0A6434B5609CD9DFA098AE5580BCFDB304970FF68A7"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRemeshingExt.h",
+      "type": "regular",
+      "bytes": 3478,
+      "sha256": "E417AA88A7A784A93BEDF0C71F6DAE87E11941FF8FCFCC74DC6A93BD5EEBFFAA"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRepXSerializer.h",
+      "type": "regular",
+      "bytes": 5784,
+      "sha256": "E9E899B345626D09F6471361297DAE1E423028D1F056BB7AAA4A493507410182"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRepXSimpleType.h",
+      "type": "regular",
+      "bytes": 3377,
+      "sha256": "F9D2BC6507BB3EA9F81B0759915941248B591106ECC64E5EAA25817700C60F85"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRevoluteJoint.h",
+      "type": "regular",
+      "bytes": 10510,
+      "sha256": "1D35C6BAC883F110E8EC84164F322278653FB400FBA7A208E188BACE6323FA78"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRigidActorExt.h",
+      "type": "regular",
+      "bytes": 7005,
+      "sha256": "710A7150AB924FEEAD0BD6A3CA700E58F672B806FE6E2966B995F7F251EF5112"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxRigidBodyExt.h",
+      "type": "regular",
+      "bytes": 25577,
+      "sha256": "8BC9BA44864F4E803DD83A66B12B18CBA9E9D7E75263E51F6CF6F65E690C52DE"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSamplingExt.h",
+      "type": "regular",
+      "bytes": 10054,
+      "sha256": "D3590A2B2AB75AFE73F49802AF50C47E725482CE29DA7A731F351F6BCCC047E1"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSceneQueryExt.h",
+      "type": "regular",
+      "bytes": 30622,
+      "sha256": "576952BB4AA59E23199A0FF1CEE0A9696D83E7F301361CB101A8C0F7E5886038"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSceneQuerySystemExt.h",
+      "type": "regular",
+      "bytes": 2879,
+      "sha256": "1554F7894C4A7D9C0F39AF704BE60FFE94AB053664FB87A6956F8721A4906912"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSerialization.h",
+      "type": "regular",
+      "bytes": 14522,
+      "sha256": "1BEB67D311A492223BD7A7B0D3AE30353346874891F113663DD3BC2AA93396B9"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxShapeExt.h",
+      "type": "regular",
+      "bytes": 6059,
+      "sha256": "FBABBB869132B82422140F8AA00EE2FE4836DB9CB138440EAF999BCAE97F708E"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSimpleFactory.h",
+      "type": "regular",
+      "bytes": 11038,
+      "sha256": "8EBC684F3AC0429C77D4C7ED337C2F2CA31F82D3C3D920759BA4BE7350FD334F"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSmoothNormals.h",
+      "type": "regular",
+      "bytes": 2761,
+      "sha256": "32B36E2AAAA4DF702493FB6DF544E00943CD632BF28BC66F002595109C0DA706"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSoftBodyExt.h",
+      "type": "regular",
+      "bytes": 10346,
+      "sha256": "D6995C86270282D48FF9E0C38DF8EEA8B44DE87DCA1A78BCD8F7B0A141BC90E9"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxSphericalJoint.h",
+      "type": "regular",
+      "bytes": 6871,
+      "sha256": "9447DBFFD6A77FEE9C95E268C90836182F28905009EC586F7D13922FCA0A96D5"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxStringTableExt.h",
+      "type": "regular",
+      "bytes": 2142,
+      "sha256": "B0581C92D2CFFA61CE090F98031ABA67FAD3AC42DBBC3A6D96D64FC8207AD7C5"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxTetMakerExt.h",
+      "type": "regular",
+      "bytes": 11471,
+      "sha256": "AFAE459DCE79D27E5A8BEEC1B957CC9CCC5DE3C9FCC318774F35B822B74B9555"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxTetrahedronMeshAnalysisResult.h",
+      "type": "regular",
+      "bytes": 2657,
+      "sha256": "A2079E9AA6E167F23743AA0806CFFFA0F2222993A78A4879DFFA0E8E9034F826"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxTetrahedronMeshExt.h",
+      "type": "regular",
+      "bytes": 4744,
+      "sha256": "E73E344A1AD17059C67307C993B6D0732A3D22F340EE288786C139F5D5D2A83B"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxTriangleMeshAnalysisResult.h",
+      "type": "regular",
+      "bytes": 4358,
+      "sha256": "8AE3474FD2ACC71253D1120A610F556837C1589DA27A62F949A411A901977914"
+    },
+    {
+      "path": "PhysX/physx/include/extensions/PxTriangleMeshExt.h",
+      "type": "regular",
+      "bytes": 9134,
+      "sha256": "BABF41267690451CADA1B2D1AEDA5B17330FD252D3CED2840683ACF79E5402E9"
+    },
+    {
+      "path": "PhysX/physx/include/filebuf/PxFileBuf.h",
+      "type": "regular",
+      "bytes": 8643,
+      "sha256": "392F45636B0DD445ED905624705379042E4979771C21772177E85283849780A1"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/Px.h",
+      "type": "regular",
+      "bytes": 3027,
+      "sha256": "310A346FCE5944FCDC3E0BC83D6DCF64298912437BC80E02AF12930C69A575CA"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAlignedMalloc.h",
+      "type": "regular",
+      "bytes": 3233,
+      "sha256": "1F18C59DA6E002A88DA0C8EF4DACAFE7F4E19A8F3DEDD6FA0DF27353225204DF"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAlloca.h",
+      "type": "regular",
+      "bytes": 3714,
+      "sha256": "790CA21BBF95C44E474D39562443584B955867889A5EADA36031D7916D15B42D"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAllocator.h",
+      "type": "regular",
+      "bytes": 6953,
+      "sha256": "C7AA037C115821C6D7AC095474CB1B6ED1B1BC21953DA727C47E9D3A07CE8F92"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAllocatorCallback.h",
+      "type": "regular",
+      "bytes": 3412,
+      "sha256": "695CE997233909654D959C8CA922D88D80142D5939300A30BEEB631D676E22E4"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAoS.h",
+      "type": "regular",
+      "bytes": 1937,
+      "sha256": "9B6802ACE509C4B0945A0A9B4D5DCAF456C8B219FE5DCD3F60E2CE1D9400BE99"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxArray.h",
+      "type": "regular",
+      "bytes": 18954,
+      "sha256": "F48DB5698B78573578E96A837D199B359CFE79E7C32D04767A1FFE0ED95B1FEA"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAssert.h",
+      "type": "regular",
+      "bytes": 4782,
+      "sha256": "BF21064D196D8ACCFA94C36B535826F9C933BAF324B8433E540ABA407B060031"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxAtomic.h",
+      "type": "regular",
+      "bytes": 2917,
+      "sha256": "55473C8F353D996D4026BB54E74B16E050DC7FC8085B41F0C7318F9C2FCD3393"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxBasicTemplates.h",
+      "type": "regular",
+      "bytes": 3856,
+      "sha256": "4007027E67E22B5BF36A2411B46554236B60445622A45F421E8DA4DC980075B2"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxBitAndData.h",
+      "type": "regular",
+      "bytes": 2791,
+      "sha256": "6F2FE2B01B1AF08A23FE78B3DF157ADA915554B5B74EC931864FED4E73A3E6FE"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxBitMap.h",
+      "type": "regular",
+      "bytes": 13851,
+      "sha256": "D334592FEAB03B784ECB5C719B9A5EB5202FC87B30076BCB99F5B60529E3E535"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxBitUtils.h",
+      "type": "regular",
+      "bytes": 3517,
+      "sha256": "2BDA4607F2B325599EAADA90E5C7828BBE7ED3EC0820E0E379BA20A6B20EA884"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxBounds3.h",
+      "type": "regular",
+      "bytes": 15601,
+      "sha256": "2F85F5D788366F66FEFB818F6CD4B3426FC4FCEF5BD488AA48BC43207FD96C9E"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxBroadcast.h",
+      "type": "regular",
+      "bytes": 7864,
+      "sha256": "E54E4B3A2320264E63355BC447C69DBAC12C089CF0256B65CF935E43CB454D82"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxErrorCallback.h",
+      "type": "regular",
+      "bytes": 2653,
+      "sha256": "F319BC1E4F0D1671B6E19A491E03945B3FCCFFE90F691B04B3A2046AF9D2399E"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxErrors.h",
+      "type": "regular",
+      "bytes": 4739,
+      "sha256": "E52714422A27BF3C11CABE396D3D1A67D5A676A61F859F7E536C50CB20780DED"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxFPU.h",
+      "type": "regular",
+      "bytes": 3478,
+      "sha256": "42CF718E11B6606128A058589ABFACC21ED31C1E286F5F6551C133E0CEC77740"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxFlags.h",
+      "type": "regular",
+      "bytes": 13283,
+      "sha256": "4E539D033167FD4AAE296E293BC229AB619EC2F7CE024AE103C133FC557E73D9"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxFoundation.h",
+      "type": "regular",
+      "bytes": 7348,
+      "sha256": "129CECEE1E73712737392B0B5D5241BD86991AFF85539C155B5EEFDF1302A5AA"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxFoundationConfig.h",
+      "type": "regular",
+      "bytes": 2244,
+      "sha256": "5CED17FF088F83C2050C4A0609B33128149E32BE052D0270BBDBD82FC0BC7FD3"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxHash.h",
+      "type": "regular",
+      "bytes": 4232,
+      "sha256": "CEB6C812690A1CF8C401D2B92ECEC5E59C2809419E607ED96BC8B262ECA8DE24"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxHashInternals.h",
+      "type": "regular",
+      "bytes": 18400,
+      "sha256": "957A3CAA069520EF54F391227694CBA175A437E4E6D301BD8DE2A21AB5C84AEB"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxHashMap.h",
+      "type": "regular",
+      "bytes": 4719,
+      "sha256": "885B54034802A75CF505389DE7590A6CB243C225AC6D6B91FA3E3EB7EC020D89"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxHashSet.h",
+      "type": "regular",
+      "bytes": 4787,
+      "sha256": "27F1B3177FC51F8368A01A561D3D2CC7667F37FA0810D90F45F673431800410B"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxIO.h",
+      "type": "regular",
+      "bytes": 3836,
+      "sha256": "2EECD4918094CBD3CED3545F7C33D99AEA77D06F96A3EECAB6AA262F1BEB804F"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxInlineAllocator.h",
+      "type": "regular",
+      "bytes": 2905,
+      "sha256": "D57CCDA182B9EEDB4056EE10F268CFF774462C91463E22F4785D746E6BB91FDC"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxInlineAoS.h",
+      "type": "regular",
+      "bytes": 2046,
+      "sha256": "75450E0344E7AEA799D81AFE77F586C8476D5A5E4C70C0004D281BE057B9E216"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxInlineArray.h",
+      "type": "regular",
+      "bytes": 2609,
+      "sha256": "DA11A147D07E1D5AC39BA13E722894902FD088CF3637F83006D0427F4FA41E15"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxIntrinsics.h",
+      "type": "regular",
+      "bytes": 2162,
+      "sha256": "5E8B18D74B2CC6B69FCFFDF3B89CB1FDCF8DE9D80BE78158867332E5A0600145"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMat33.h",
+      "type": "regular",
+      "bytes": 12168,
+      "sha256": "B700477BEA63FF948921CDAA63D2BAA37AEF008E3E131D10655E11979E434271"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMat34.h",
+      "type": "regular",
+      "bytes": 7928,
+      "sha256": "1A2CB9F5ABCFEFD309E006ECC4D803A6A441C6109A6716A800AD498F389D5DCE"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMat44.h",
+      "type": "regular",
+      "bytes": 11739,
+      "sha256": "BD73232E81FADDB1D2235F5894AD8F561EEAEE5DD5528B431F65D1D068037BE0"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMath.h",
+      "type": "regular",
+      "bytes": 8983,
+      "sha256": "391EFD7B458C560067807D1F34D2DD3B371BBAAFCDDE7FFA9ED425069A67F43F"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMathIntrinsics.h",
+      "type": "regular",
+      "bytes": 2193,
+      "sha256": "14C470457D53CFE6EE3535555D12D24D76E13E813B525BD7F28289F13718007B"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMathUtils.h",
+      "type": "regular",
+      "bytes": 17464,
+      "sha256": "B9CC56EA4CACD52B7396EB15ED92EB7C7C837D863F84E523C6D3D7E51A7804AB"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMemory.h",
+      "type": "regular",
+      "bytes": 4244,
+      "sha256": "342B660562D4FE82656B92EE0A2888C691610FAE80AA91F4755164686751B0DD"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxMutex.h",
+      "type": "regular",
+      "bytes": 4885,
+      "sha256": "250331F4BB4C2BEB67B151F9F78FEDE628E045BC4C292A84CE966546A4C19A17"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxPhysicsVersion.h",
+      "type": "regular",
+      "bytes": 2775,
+      "sha256": "C6B04A2D243B41D894679722B18B444003CD36155F6B1F2E491C226DD957A77E"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxPinnedArray.h",
+      "type": "regular",
+      "bytes": 2285,
+      "sha256": "D47493900CFB88796024D0BD2B4922154F43536AD2062346DAFF243ABC9E9233"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxPlane.h",
+      "type": "regular",
+      "bytes": 4338,
+      "sha256": "994B5CBB9DB5B844EE6E82E7302BBD311BD88F8290761C4A899E028992ADCB02"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxPool.h",
+      "type": "regular",
+      "bytes": 7433,
+      "sha256": "6EE680E55F651EDA2CC271BE02D01457395DA354F172584D029C868D39C10CED"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxPreprocessor.h",
+      "type": "regular",
+      "bytes": 13482,
+      "sha256": "F4BEC9A06746AEA29EC99AF55F75D3874A11AFA135E4CC109736AFFE50C0F631"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxProfiler.h",
+      "type": "regular",
+      "bytes": 4065,
+      "sha256": "09A1CD719E91B76B3330DFE5EEB55F33E29357460FA2BE86ADA0C8B8661F77A1"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxQuat.h",
+      "type": "regular",
+      "bytes": 10768,
+      "sha256": "BC74DE01B5672B0EB4A0CD8342E5CC644EB30CD9FCD0F08CA6F693FA181A4A23"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSIMDHelpers.h",
+      "type": "regular",
+      "bytes": 2735,
+      "sha256": "F6581980B67AA6EAF2E470DE589076330DC9CDD97303C9E7046D1BB46FC74287"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSList.h",
+      "type": "regular",
+      "bytes": 3661,
+      "sha256": "28D63E10EF2EEE890421A51F1B64029DCDDEC1818DAC630B59F03A0646C67EA8"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSimpleTypes.h",
+      "type": "regular",
+      "bytes": 3771,
+      "sha256": "EBA8DF1A8F39F5137EE25E15B395E2AE1BCA93E830621C0B12F16160EEEB9734"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSocket.h",
+      "type": "regular",
+      "bytes": 5087,
+      "sha256": "1F6C6F0C9765C84C7028EC5628703F147EF09B21EF5E75DFFA94CCF7E9F4CEF4"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSort.h",
+      "type": "regular",
+      "bytes": 3935,
+      "sha256": "AA32E76A7DF3EF45A4EE663333B748A189868C63BF87D553CD951D7B3BFD57D8"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSortInternals.h",
+      "type": "regular",
+      "bytes": 5269,
+      "sha256": "723B463184D1BCE5BD1831C1A07502A50F8B6598BCC963DC531535B6862485E1"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxStrideIterator.h",
+      "type": "regular",
+      "bytes": 8531,
+      "sha256": "1E1E10CF067BE5538F0DCF02FAFF4E78254FFE9D9232026D10B5833CBE79039F"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxString.h",
+      "type": "regular",
+      "bytes": 3633,
+      "sha256": "E3411473BF12F62BB82DC4D4365DC22504DAD69818697BE00A2E05018233B640"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxSync.h",
+      "type": "regular",
+      "bytes": 4423,
+      "sha256": "9167423EBC5795E4479A5D1A93D0547E3D2A61CA2ACEC21F78FACAC8995FA995"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxTempAllocator.h",
+      "type": "regular",
+      "bytes": 2339,
+      "sha256": "70B9DCD5E3ACDEE916D3187FD18881D91E18B731D3AD181A0F46B80152AF62A6"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxThread.h",
+      "type": "regular",
+      "bytes": 9729,
+      "sha256": "287EB28DECC123460D99DC1BB8B974EE4A683DA3CBA235E22520857E91F4AAD9"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxTime.h",
+      "type": "regular",
+      "bytes": 3084,
+      "sha256": "7F9C2C20F60C8BB562BAC80D0B612AAD81264EEEB155E203099C985E641D582A"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxTransform.h",
+      "type": "regular",
+      "bytes": 6511,
+      "sha256": "BE8F3FEDD1B14666A0C4AA90593ACD2052171C7D7FD211A520D2C8951BC4CAED"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxUnionCast.h",
+      "type": "regular",
+      "bytes": 2247,
+      "sha256": "827D1B78A30209E36CF49B484635E172C1C8E002D7EBA1C473DD116B3F98C756"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxUserAllocated.h",
+      "type": "regular",
+      "bytes": 3782,
+      "sha256": "B0727E430F2073166ADF6F633952D716900DDC53946D76FB3DC0DF0DAC57F21B"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxUtilities.h",
+      "type": "regular",
+      "bytes": 3911,
+      "sha256": "244E0084C4EEE46058CAB7F4C6EEE4268305E9617EC3D5F4ECF5C62C7FB25E1A"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVec2.h",
+      "type": "regular",
+      "bytes": 7543,
+      "sha256": "9A658CBF07549E69E1F1F47CCE7B5E40C214864EA4B135550ED71F66F9A79530"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVec3.h",
+      "type": "regular",
+      "bytes": 9876,
+      "sha256": "7E1FE50C7BC19AA30C62E4A808A1ACFA3FF8E67579113A3BEE2E5257ED254874"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVec4.h",
+      "type": "regular",
+      "bytes": 8347,
+      "sha256": "2F7A8DC3A7920D91BE7C124F19BFFC7A8A838951CEB63FCF2A3D95AB1AA42FB2"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVecMath.h",
+      "type": "regular",
+      "bytes": 51480,
+      "sha256": "06350BCD0B386B35BB273F18B40EF72C0CB058602F0E20BAA742FBA5A9220B67"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVecMathAoSScalar.h",
+      "type": "regular",
+      "bytes": 5084,
+      "sha256": "A2BE16E4563C1A682BADF384118A5D3BBC42CC6C73625BA5AE3FA529827390B0"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVecMathAoSScalarInline.h",
+      "type": "regular",
+      "bytes": 58272,
+      "sha256": "E52455DF3D9477F532D98E105839E7AB242E16645AA9253FD69096AC23DB659C"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVecMathSSE.h",
+      "type": "regular",
+      "bytes": 2848,
+      "sha256": "4AD5B3832F80F77348BF254D085248244EE1110B805B6C0DA6AD9DFF08EF97DC"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVecQuat.h",
+      "type": "regular",
+      "bytes": 14092,
+      "sha256": "AD99C4D5A5F15A35AF899148260F2565942E11D8F0ED82E1D866BE569DE11057"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/PxVecTransform.h",
+      "type": "regular",
+      "bytes": 7614,
+      "sha256": "A348F93FF4A22D6190A4593D32B17DAB456CE40BCEAE1C3A54F6CC07E581E4BA"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/PxUnixAoS.h",
+      "type": "regular",
+      "bytes": 2194,
+      "sha256": "C7C12E294D27402A03CB9A69EBEBE8DC6F80DA0588EA33F190BB407D31A4CC4A"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/PxUnixFPU.h",
+      "type": "regular",
+      "bytes": 2976,
+      "sha256": "7DC7A9DD2F79F8CEE7F88702E2E90023FF3E119D4D02590BDB6020971E818663"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/PxUnixInlineAoS.h",
+      "type": "regular",
+      "bytes": 2147,
+      "sha256": "434DD740C9EC40335F5B640F1291D07848B944CB6260ED13ADCA21EE9E37B6A2"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/PxUnixIntrinsics.h",
+      "type": "regular",
+      "bytes": 3391,
+      "sha256": "D7DAB7323032443B02BBD1DF8671A8CB6C351DA223291C13CE49AF52111ADE4B"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/PxUnixMathIntrinsics.h",
+      "type": "regular",
+      "bytes": 5123,
+      "sha256": "2D447D35BE5DD31B7C9B8D97A5C33999D366D059D2529AF2E6027AD168A152C4"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/PxUnixTrigConstants.h",
+      "type": "regular",
+      "bytes": 3228,
+      "sha256": "6C1444CDDDBD36998BA291325E1CFD3418779E568EA7914B6E60C6993790D9C0"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/neon/PxUnixNeonAoS.h",
+      "type": "regular",
+      "bytes": 3968,
+      "sha256": "37FD3B880629E9DC7AB10DFF94D0666A9C19BDB4FF43A4D2ABF5EB1F27A19915"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/neon/PxUnixNeonInlineAoS.h",
+      "type": "regular",
+      "bytes": 99340,
+      "sha256": "A8320AA8E4DAB98A3D8AD155AD33312E47D84C6F2F3FF6C108E99977C063B161"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/sse2/PxUnixSse2AoS.h",
+      "type": "regular",
+      "bytes": 4652,
+      "sha256": "E0F3FDB85D4E9DF745A31523A8DB6BEAB184F9C8DFAD7530CA0C9682A2441BCC"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/unix/sse2/PxUnixSse2InlineAoS.h",
+      "type": "regular",
+      "bytes": 90715,
+      "sha256": "7968BD9310D2A41CC3684BEAE37EF4DCEA97BE8DB61B8E4C7808F57EDFE94431"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsAoS.h",
+      "type": "regular",
+      "bytes": 3892,
+      "sha256": "CBA257C744AAE058B28CE25CF75B631EC0DC7F2D4A55BFFDF9FD568E7F9BD95E"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsFPU.h",
+      "type": "regular",
+      "bytes": 2526,
+      "sha256": "983AF361FCAD3A1C7CE364FC77811504C43E9BCFAEA62B0F8424D978483E7EA7"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsInclude.h",
+      "type": "regular",
+      "bytes": 3259,
+      "sha256": "5402056DBDB9B575E055FA2683B99E439D3694CFEB6A06E7A37673C06ADF2724"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsInlineAoS.h",
+      "type": "regular",
+      "bytes": 89777,
+      "sha256": "9E72ACC8FCF99AC79F11D4977C7426BBE9A3023E44316860E10F34025C5BBF07"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsIntrinsics.h",
+      "type": "regular",
+      "bytes": 4979,
+      "sha256": "BF3894564FEE5F6CD2760E6F33584DFB0B3C37E828D65E7AA83F39C06AC2C05F"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsMathIntrinsics.h",
+      "type": "regular",
+      "bytes": 4908,
+      "sha256": "68548156A3A884440096B47573E2640353EF4CF7375277EF8752FBDF697E29F5"
+    },
+    {
+      "path": "PhysX/physx/include/foundation/windows/PxWindowsTrigConstants.h",
+      "type": "regular",
+      "bytes": 2912,
+      "sha256": "3C4C560CE8494A69B407EA5A2EAAC8F352DB3715E522D0663BF4C8B29432C884"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxBVH.h",
+      "type": "regular",
+      "bytes": 12551,
+      "sha256": "039515AD4EECA93779DFF1E0DEF302D02A1999B1C463F3D2C0844BF6C266C113"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxBVHBuildStrategy.h",
+      "type": "regular",
+      "bytes": 2409,
+      "sha256": "288F65A729BEF2CAAD7419B32836FA848EA1AD78A4ACDD8B386598CCFD9B6888"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxBoxGeometry.h",
+      "type": "regular",
+      "bytes": 4004,
+      "sha256": "6B2B82960FD7CF04A328B58E5BF28E36EFCAD1E7558A1802A0CA31CD77E59FAB"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxCapsuleGeometry.h",
+      "type": "regular",
+      "bytes": 4028,
+      "sha256": "BF8DEEE42047C905ADA9CEDA45067870F9E43907E28C80837BFC14A6650D96C2"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxConvexMesh.h",
+      "type": "regular",
+      "bytes": 6382,
+      "sha256": "A8188E3D730A1EAD95165544A78B140CF8BC95FCFFE24203BC47808B3029F775"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxConvexMeshGeometry.h",
+      "type": "regular",
+      "bytes": 5179,
+      "sha256": "7CF5AB9FD4C601ECCDF5B2B848CC3CECFB5CDCCC09C0A261A4602C54ED04B5CF"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxCustomGeometry.h",
+      "type": "regular",
+      "bytes": 10729,
+      "sha256": "D374FC21B78B4608CCE1E56BE7532C3B2A7C6DF8B1E25C8A484DA5E2EECAFB56"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometry.h",
+      "type": "regular",
+      "bytes": 3271,
+      "sha256": "B0E219A44AB3448925BDBCDF73E58ED794C9FB908E41D069534A3910092381FA"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometryHelpers.h",
+      "type": "regular",
+      "bytes": 8630,
+      "sha256": "EE5D4AE5EAB8DA51B7BEE8AE876DE5ED73D22D97DF017AE5433FBEE78FEBA093"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometryHit.h",
+      "type": "regular",
+      "bytes": 7750,
+      "sha256": "8EA56FF4F99459CE42071FB65DABEA49528434517D54C09AFE6D8FAD41F8AC43"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometryInternal.h",
+      "type": "regular",
+      "bytes": 3708,
+      "sha256": "10016422B263D16DC7DD5AA039F049A9E1376CB7D0D384B394587FC7C78A0FB8"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometryQuery.h",
+      "type": "regular",
+      "bytes": 13018,
+      "sha256": "06442A9DF6F044990A7B6BD5D651A3719B7E7AE730B7A2AF84D0E2238B4C6063"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometryQueryContext.h",
+      "type": "regular",
+      "bytes": 3063,
+      "sha256": "CE634184F3E3C5EAA2B32FDB3179D2B1E343A0D0FA014BC8EED70B5204D79863"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGeometryQueryFlags.h",
+      "type": "regular",
+      "bytes": 2721,
+      "sha256": "AAE7F7886F5FF31AD427160D0912D01E64413D4042A923A8E5AD22DEB612A204"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxGjkQuery.h",
+      "type": "regular",
+      "bytes": 5789,
+      "sha256": "3A28A7FBA89E7C666A463DC6E36EF0262CB165FD9A7046680E48A4EFF6A2CE34"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHairSystemDesc.h",
+      "type": "regular",
+      "bytes": 5151,
+      "sha256": "EB2B660416B8A4CC8009EE23A71435B7F39F2AE4689BF70CE0415DFE1ADF216C"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHairSystemGeometry.h",
+      "type": "regular",
+      "bytes": 2349,
+      "sha256": "1EB56F2EC5826F6957A3F10CC1E879F09C993AB62CE1E92C3266004DF329BA53"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHeightField.h",
+      "type": "regular",
+      "bytes": 9272,
+      "sha256": "C5AC1D4E4314697DE3DFAB36614020831B8D99AC30276E73184316F79791E132"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHeightFieldDesc.h",
+      "type": "regular",
+      "bytes": 5585,
+      "sha256": "610ACE3344DB494A3809F91A8B8C59D03A240F9A2D58A89CFF679B9B8CE44268"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHeightFieldFlag.h",
+      "type": "regular",
+      "bytes": 4482,
+      "sha256": "5CB622637A818EB06F0480AAB965921BFCBFB535D803FDC9D0DEE4368F61BC8F"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHeightFieldGeometry.h",
+      "type": "regular",
+      "bytes": 5090,
+      "sha256": "655419001DC262EDFEF7E7271034894DB2B19BB38E1E8F3C035374E7284DE2F2"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxHeightFieldSample.h",
+      "type": "regular",
+      "bytes": 5054,
+      "sha256": "1C6391D501B54B3D657E7140CFA48D1FFBF76FEF9B72AB77034F14268D7EFAEA"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxMeshQuery.h",
+      "type": "regular",
+      "bytes": 12782,
+      "sha256": "F4DD6D8F9507AD0551C8FA06BF4A90C02B54EF08A547AF5AFC021129C93785F5"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxMeshScale.h",
+      "type": "regular",
+      "bytes": 6133,
+      "sha256": "94B04BD747CC9C9E37AB77CAFF8DAC0D8B8B19AE7821628E6062BAEF5BE0FDBF"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxParticleSystemGeometry.h",
+      "type": "regular",
+      "bytes": 3108,
+      "sha256": "6D163487C5D6232F1FE53AC1137A9B35D2ADAF3D29450F9F75278223EDE39D3C"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxPlaneGeometry.h",
+      "type": "regular",
+      "bytes": 3159,
+      "sha256": "E5C70F794FBE166659580EB455643473EDFEF02EACD7042FE92245557FDA6A71"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxReportCallback.h",
+      "type": "regular",
+      "bytes": 8721,
+      "sha256": "0718E249AD295A228C6EE373C66FC457EA5A84584C76F5F13B3F4D71C70EB536"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxSimpleTriangleMesh.h",
+      "type": "regular",
+      "bytes": 4636,
+      "sha256": "A9AEE2DCA1C58A44D2E5843F19033D2BBCEBAD9F01413D1476BA1CD9D487C926"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxSphereGeometry.h",
+      "type": "regular",
+      "bytes": 3260,
+      "sha256": "8A35F654FD7F6A70F793A2910E72A56234218B3C7C083F956512CE85B83CA240"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxTetrahedron.h",
+      "type": "regular",
+      "bytes": 3081,
+      "sha256": "22032F61100665228E7C64557C19A9A146022DB54B42E884585FF2B4565053DB"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxTetrahedronMesh.h",
+      "type": "regular",
+      "bytes": 11207,
+      "sha256": "0C58B0EF61F6F80BB82FF45DA969670A66B94D4C1C88FA60237C600805DBF72F"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxTetrahedronMeshGeometry.h",
+      "type": "regular",
+      "bytes": 3699,
+      "sha256": "0BEB40699095F87D63F1CA3E62E1A5484FB6F4E85EF20235C396900C69CC95DD"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxTriangle.h",
+      "type": "regular",
+      "bytes": 4047,
+      "sha256": "9737F5607EDB86774D297DFFC495E6BAE8EFA9656DA0BA7F77C36863B5144A10"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxTriangleMesh.h",
+      "type": "regular",
+      "bytes": 12937,
+      "sha256": "A7FA8A157D5AAE58B7F9ECB70909271A3EBD49460284379450D84BA0DE95864D"
+    },
+    {
+      "path": "PhysX/physx/include/geometry/PxTriangleMeshGeometry.h",
+      "type": "regular",
+      "bytes": 5436,
+      "sha256": "EB84ADB23B02E451777D10B2D8FE4DD4062571E17D28961B06ACF9D3C1360ED7"
+    },
+    {
+      "path": "PhysX/physx/include/geomutils/PxContactBuffer.h",
+      "type": "regular",
+      "bytes": 2902,
+      "sha256": "06170612193A85B5F8995E8382EA09511BBA4204EF3777ECA617D2C451BA3745"
+    },
+    {
+      "path": "PhysX/physx/include/geomutils/PxContactPoint.h",
+      "type": "regular",
+      "bytes": 3242,
+      "sha256": "F664EC2F38A0F804DEB67AE767715C61502C228DA001B38A92958A69C2EDD131"
+    },
+    {
+      "path": "PhysX/physx/include/gpu/PxGpu.h",
+      "type": "regular",
+      "bytes": 4659,
+      "sha256": "2E844D69F2F820DE8205D076E888FA070B2F2FA9161DCF87684310C1844EB858"
+    },
+    {
+      "path": "PhysX/physx/include/omnipvd/PxOmniPvd.h",
+      "type": "regular",
+      "bytes": 3061,
+      "sha256": "CED843ADC4D355EDC43233A627EAA7FAF7C1218A88C68AB8F2136AE3508DC562"
+    },
+    {
+      "path": "PhysX/physx/include/pvd/PxPvd.h",
+      "type": "regular",
+      "bytes": 6302,
+      "sha256": "60D56468F1BDF4B2DB16AB3AAC98BF0B64B9C5FD83572FE7B535DAC9C1D6F93D"
+    },
+    {
+      "path": "PhysX/physx/include/pvd/PxPvdSceneClient.h",
+      "type": "regular",
+      "bytes": 4313,
+      "sha256": "D361954947555C489A49FF132F48038F462D810CDDC1C32B66195576188EBA3A"
+    },
+    {
+      "path": "PhysX/physx/include/pvd/PxPvdTransport.h",
+      "type": "regular",
+      "bytes": 4203,
+      "sha256": "9339A435E4588749796B36CEC087AE88E899E34E62DFEB2A58786A7CB93470EE"
+    },
+    {
+      "path": "PhysX/physx/include/solver/PxSolverDefs.h",
+      "type": "regular",
+      "bytes": 23983,
+      "sha256": "FAB0174DF9630ED307674FC8C098D62EB6F8B27EEC1333C5CDD54265BBF60865"
+    },
+    {
+      "path": "PhysX/physx/include/task/PxCpuDispatcher.h",
+      "type": "regular",
+      "bytes": 2808,
+      "sha256": "6EBA04A8832ECC211620315C57D9E6FEE16D4CF252C16680C80453596D089E4B"
+    },
+    {
+      "path": "PhysX/physx/include/task/PxTask.h",
+      "type": "regular",
+      "bytes": 8843,
+      "sha256": "8F3F9E48FA53926C3B28A9973A8918445D61D9634C0DC4C8DD61B28B28D463A0"
+    },
+    {
+      "path": "PhysX/physx/include/task/PxTaskManager.h",
+      "type": "regular",
+      "bytes": 6118,
+      "sha256": "45EE915F3321082DF8EA25980703C47EB8946A52A97B31042B4104D08B6F0BFA"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleComponents.h",
+      "type": "regular",
+      "bytes": 39557,
+      "sha256": "EE2D28082104B8BD4B34E60930BFDA540E34108AAE1C178AA34EBB22C3982289"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleDrive.h",
+      "type": "regular",
+      "bytes": 15853,
+      "sha256": "CE89E4D7FF6FC990FC89F222168F997249AFD9A2735EABF7FF9A83BFCAC4E5B2"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleDrive4W.h",
+      "type": "regular",
+      "bytes": 10846,
+      "sha256": "BB7EF13553001AFF49E35480361577A4FB897B0B1825F878726009E00D1F5C46"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleDriveNW.h",
+      "type": "regular",
+      "bytes": 9437,
+      "sha256": "B4B999C9D64772652C655259EC4544AC2B5DA0AE28C8FD4551C8ED8B553B5036"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleDriveTank.h",
+      "type": "regular",
+      "bytes": 11222,
+      "sha256": "7115427605FBA26FF0D06B88D53AE71046BF773A394F4C3A65F15DF164AE84C0"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleNoDrive.h",
+      "type": "regular",
+      "bytes": 8566,
+      "sha256": "E0668B3CF1C9F01904EBAC5D3F22EF2D695915725068E01634CACCB77C5849D2"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleSDK.h",
+      "type": "regular",
+      "bytes": 12441,
+      "sha256": "410657D34EE5FA569E2860D54507DDA08BD6DD6E542DA7E66CA5F4D1C065E05B"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleShaders.h",
+      "type": "regular",
+      "bytes": 4246,
+      "sha256": "E2FC2CE21E416E901C11336A24E837CBC3E7155B3163DBA7A2639AEBB6652532"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleTireFriction.h",
+      "type": "regular",
+      "bytes": 12491,
+      "sha256": "9C9C99DF33B7806AB9B1FC2F3B4F7EF33C39A49B0F92F3DF29EE8BBE94E6A6CA"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleUpdate.h",
+      "type": "regular",
+      "bytes": 32818,
+      "sha256": "5176E0A7BC7EBFE891D59F0E5D5428FEB53175A783F0FCFA162AF9FDD2ABD9EE"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleUtil.h",
+      "type": "regular",
+      "bytes": 2720,
+      "sha256": "AEB357AC74ECE46E947AFF90EFEEFC709A6D9ECE7C681EF67DD4A64914058104"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleUtilControl.h",
+      "type": "regular",
+      "bytes": 29013,
+      "sha256": "B8DDF3B96B34138E25176929CF85CB4D4D4D5891F90592E8CD9128BC8E76A076"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleUtilSetup.h",
+      "type": "regular",
+      "bytes": 8967,
+      "sha256": "244C53A7E3E7FEFBA2DF34C2397B056A377FD2DD6FC85EA69B91C1EE0E30CAEE"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleUtilTelemetry.h",
+      "type": "regular",
+      "bytes": 10565,
+      "sha256": "29E296A3AAD9CA0C09B2F1CDC2888449D0A4475E93FC0DEBE4D8A29E7F573C7F"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle/PxVehicleWheels.h",
+      "type": "regular",
+      "bytes": 38162,
+      "sha256": "18F7891A7D2D70BCD2B060BE021AFC44B19AD291C3FB849BFD31D4F74803C2EC"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleAPI.h",
+      "type": "regular",
+      "bytes": 6044,
+      "sha256": "EA3A16CCBC2AB1560E379729F98EDBEB12994DFD697F28969C0A83D3EE72C650"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleComponent.h",
+      "type": "regular",
+      "bytes": 2546,
+      "sha256": "0078444B12BA58560C41855BA6B97A9A002F768C2E876D5EE36901773196BD5A"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleComponentSequence.h",
+      "type": "regular",
+      "bytes": 10788,
+      "sha256": "F6071FAE0C5CAB47AA5A1737974754BE71454401223F6470133A37D65BFAD63A"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleFunctions.h",
+      "type": "regular",
+      "bytes": 7998,
+      "sha256": "CA5F24090C5FAC05F2B338DB136D4EE2FCBEB49829BD9684128A461A1C0630D8"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleLimits.h",
+      "type": "regular",
+      "bytes": 2030,
+      "sha256": "8DA3094545EB4CEF5F7506ECFFF6570D0DE44842B41666F9C646D7C26A264ED7"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleMaths.h",
+      "type": "regular",
+      "bytes": 5957,
+      "sha256": "81ACB81346863B0C33CC0B55BB559BA9FA849E9404F5FBD8CAF15BB36DFA861C"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/PxVehicleParams.h",
+      "type": "regular",
+      "bytes": 29370,
+      "sha256": "88CA0E36A65F0CFD1F03C06E7AC6479E244E407D6546FE9EF546BC7C4AAC1D8B"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/braking/PxVehicleBrakingFunctions.h",
+      "type": "regular",
+      "bytes": 3618,
+      "sha256": "EC91A735C7CF0B6C53521C45B5EC5A5B66EB5B98ED22CCE239B1A06D7A110AB5"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/braking/PxVehicleBrakingParams.h",
+      "type": "regular",
+      "bytes": 3626,
+      "sha256": "DAAE5E3ADFD8E3CF2038DA22CD6CCD1EBC40B8080F96022F88D70C6C73CB5B14"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/commands/PxVehicleCommandHelpers.h",
+      "type": "regular",
+      "bytes": 3347,
+      "sha256": "1BEE62C89D793447B2B5553528AE6F1D2E9F742D3365ED7042C8DCBDFFB932C0"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/commands/PxVehicleCommandParams.h",
+      "type": "regular",
+      "bytes": 7856,
+      "sha256": "451491062F3F812745E7395BD0729F90B658106E6827D0B19999D89E9D92D67D"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/commands/PxVehicleCommandStates.h",
+      "type": "regular",
+      "bytes": 5088,
+      "sha256": "9539E59ACE2F3FB761A2615A56D6C0274C8C5110DB5D6AC1B26C53D7B0D73C26"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/drivetrain/PxVehicleDrivetrainComponents.h",
+      "type": "regular",
+      "bytes": 34285,
+      "sha256": "037D3ACBD0A1DC2CE53C7AADA737942A1052B09D7B7DC4693728126280EF4229"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/drivetrain/PxVehicleDrivetrainFunctions.h",
+      "type": "regular",
+      "bytes": 18099,
+      "sha256": "E760D03E875360E5E3328AE1E5C3A8E941E785DE7C87AF32DFEFB4C1259FA679"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/drivetrain/PxVehicleDrivetrainHelpers.h",
+      "type": "regular",
+      "bytes": 8765,
+      "sha256": "A0B6DEA0D3D04D9C7C0EE79FF13A499D1D8130406D580A27C96C6EB0D3120422"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/drivetrain/PxVehicleDrivetrainParams.h",
+      "type": "regular",
+      "bytes": 45382,
+      "sha256": "5637F22E73E32574C27D335C9309A56FF21D9536816FC6F4A33BA1987D769BB8"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/drivetrain/PxVehicleDrivetrainStates.h",
+      "type": "regular",
+      "bytes": 9741,
+      "sha256": "965CACF1BCC3B5E8676570F08362551C1D65380B634E9F1431C147BFFE57639B"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxActor/PxVehiclePhysXActorComponents.h",
+      "type": "regular",
+      "bytes": 10105,
+      "sha256": "C3EF8BADCE5AD1B3E9835EB31C55EE4D4776CA327B79F828565E070E8DEADCA9"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxActor/PxVehiclePhysXActorFunctions.h",
+      "type": "regular",
+      "bytes": 8905,
+      "sha256": "77B87D0E78FE877EFDD9F4F3996E57291F897DD5CB071A2B4206E41F9676D82A"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxActor/PxVehiclePhysXActorHelpers.h",
+      "type": "regular",
+      "bytes": 8225,
+      "sha256": "6535D950D5DA417B31F3C796EE305E1804AEF7974BFE3310CB7DC9EAD53E0D96"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxActor/PxVehiclePhysXActorStates.h",
+      "type": "regular",
+      "bytes": 3012,
+      "sha256": "95CF1D8DD7555F48BB6D1DEA9D08311CF2FDBD62DF4EEC99EEBDA304D67CC964"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxConstraints/PxVehiclePhysXConstraintComponents.h",
+      "type": "regular",
+      "bytes": 5188,
+      "sha256": "F9BBC109AA248F2EF454EAAA90B720F0859D209F9A0819F2014CDC24C79C69BA"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxConstraints/PxVehiclePhysXConstraintFunctions.h",
+      "type": "regular",
+      "bytes": 4563,
+      "sha256": "7DED8EF57707CF70CC91C0C740B2962F606F931162044DAA47D022E51165680C"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxConstraints/PxVehiclePhysXConstraintHelpers.h",
+      "type": "regular",
+      "bytes": 3392,
+      "sha256": "D58E51639F222BF7BE928FC724C8F9495C0162CF6D4D649E6A11C5043911FB9E"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxConstraints/PxVehiclePhysXConstraintParams.h",
+      "type": "regular",
+      "bytes": 4988,
+      "sha256": "AC5B0CFCE1B4ED3598C7F3D25F650201FD79BB222EA6B88E389C08A55B0B4C31"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxConstraints/PxVehiclePhysXConstraintStates.h",
+      "type": "regular",
+      "bytes": 13146,
+      "sha256": "EA11064920FCD4D304CB34F4B54B734A00CDEA39993D6BC5697FBB4AB55B72DA"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxRoadGeometry/PxVehiclePhysXRoadGeometryComponents.h",
+      "type": "regular",
+      "bytes": 6194,
+      "sha256": "3FD5582A879A2454554FA7BFCB62ABAA4FECCFF5CDE82FF3BACFD50576C93F71"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxRoadGeometry/PxVehiclePhysXRoadGeometryFunctions.h",
+      "type": "regular",
+      "bytes": 4403,
+      "sha256": "CB2CC5791DEDDD99E4EF31F010F2ED3949428190CE851E4074248D1FC437027D"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxRoadGeometry/PxVehiclePhysXRoadGeometryHelpers.h",
+      "type": "regular",
+      "bytes": 2777,
+      "sha256": "24387B5C077BF7B61AD226F8E7B06B5673CD87D85882F9CFBC5FCF74B6ADAF7B"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxRoadGeometry/PxVehiclePhysXRoadGeometryParams.h",
+      "type": "regular",
+      "bytes": 5421,
+      "sha256": "854A8455B4B10EC450E0B058FA547369888E6084336D6BEB173AE783D05682C5"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/physxRoadGeometry/PxVehiclePhysXRoadGeometryState.h",
+      "type": "regular",
+      "bytes": 2436,
+      "sha256": "BDF12D079738C6531C4AB7D306AD45212CF9A8B9459C4BCCF9414A1CE7585CE7"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/pvd/PxVehiclePvdComponents.h",
+      "type": "regular",
+      "bytes": 16057,
+      "sha256": "13908BA0375137C8D2E9F2A4C631D951041BCC70512EF27382EB61BFC16F742B"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/pvd/PxVehiclePvdFunctions.h",
+      "type": "regular",
+      "bytes": 39874,
+      "sha256": "B834EEE8C5253F9D6CA46AFD1216C4C95C36CF317F86B5FA353485DA3B24099E"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/pvd/PxVehiclePvdHelpers.h",
+      "type": "regular",
+      "bytes": 5269,
+      "sha256": "DB83E3506E49F91267B5DB34FD2D08554AE6C8DB898D8C8EF3AD4954965C903D"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/rigidBody/PxVehicleRigidBodyComponents.h",
+      "type": "regular",
+      "bytes": 5162,
+      "sha256": "24F10769765417FCC70DD7C2811AFCC565F8D1EEAEAD09865DA79498DCB8B2AA"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/rigidBody/PxVehicleRigidBodyFunctions.h",
+      "type": "regular",
+      "bytes": 3720,
+      "sha256": "D9275EC9AA982940D3A2EC91BDEA93879EA1DFD5C7F549120F336223F8BC608E"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/rigidBody/PxVehicleRigidBodyParams.h",
+      "type": "regular",
+      "bytes": 3042,
+      "sha256": "A7835CE6C0EFB8443A83E907E54426B10E3EF54153D648713CA42A961F82DAB5"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/rigidBody/PxVehicleRigidBodyStates.h",
+      "type": "regular",
+      "bytes": 3754,
+      "sha256": "1F3A5CB62B1A87CF424DA429155C289F94491968A952BF15CF2EC71C11DF1A9C"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/roadGeometry/PxVehicleRoadGeometryState.h",
+      "type": "regular",
+      "bytes": 2355,
+      "sha256": "569C10A5CE97357FFA7CC8AE23040F8FE75D5CC7D499FB061390BF4133B4523E"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/steering/PxVehicleSteeringFunctions.h",
+      "type": "regular",
+      "bytes": 3599,
+      "sha256": "90E5F63631B0C6FE3DAA6AAF494032CECE12F734786589C2B150AFB41AB23164"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/steering/PxVehicleSteeringParams.h",
+      "type": "regular",
+      "bytes": 5575,
+      "sha256": "D02C2C0893D66107DBBA4F839CBC6C296A245C55AA1E1826A84AA9FB185FCD4D"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/suspension/PxVehicleSuspensionComponents.h",
+      "type": "regular",
+      "bytes": 18164,
+      "sha256": "2F1454394B1541C934A81AEB5BE74C5D74632995368F3CC601854FFD741B1148"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/suspension/PxVehicleSuspensionFunctions.h",
+      "type": "regular",
+      "bytes": 9080,
+      "sha256": "D392B8A885DD65224D145D1D63905574D519CA66F822D962C09135BF55B78792"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/suspension/PxVehicleSuspensionHelpers.h",
+      "type": "regular",
+      "bytes": 8021,
+      "sha256": "6B7D4B33373D82EC4F49D56AD2DFDC2332E98A1C15326075E3BD27337DE345E0"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/suspension/PxVehicleSuspensionParams.h",
+      "type": "regular",
+      "bytes": 16224,
+      "sha256": "542541A575C95F1A4D199D462E04801F946EA97F0A31379720BC6CF3CE545D8F"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/suspension/PxVehicleSuspensionStates.h",
+      "type": "regular",
+      "bytes": 6102,
+      "sha256": "7AFBADBEA2E9E169AD0C0CFA5A455EE3FE2064F115DE103DAE51CEB36494074A"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/tire/PxVehicleTireComponents.h",
+      "type": "regular",
+      "bytes": 13990,
+      "sha256": "66E50F9DFA7BBC4E59295C2BF6FD1D9D35589E9AE7B0157866C3DF17B13357F4"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/tire/PxVehicleTireFunctions.h",
+      "type": "regular",
+      "bytes": 15908,
+      "sha256": "BFC581CDC6B0AD86593F7575D610E7C44FEA737E2C120E4A35E395DF2DD5D026"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/tire/PxVehicleTireHelpers.h",
+      "type": "regular",
+      "bytes": 3619,
+      "sha256": "483E383739261986F509A5202D9720E5F485B318F9383789CDD376DD896324AB"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/tire/PxVehicleTireParams.h",
+      "type": "regular",
+      "bytes": 7983,
+      "sha256": "C0D1EB144045941EBBD9E704E13122B0FCDA964300D1112608FADCEBC0DCA0A8"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/tire/PxVehicleTireStates.h",
+      "type": "regular",
+      "bytes": 5186,
+      "sha256": "FAD4465556B1D0C3738A471041957CE13909D40064AB9C24D42AE72B6F53857C"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/wheel/PxVehicleWheelComponents.h",
+      "type": "regular",
+      "bytes": 4819,
+      "sha256": "B9B1C4E5CFA18BDA76E41975803D14248CBA1161EC10BA0CDF058FB2DC1B43DD"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/wheel/PxVehicleWheelFunctions.h",
+      "type": "regular",
+      "bytes": 4201,
+      "sha256": "D9453058261CD0214736A877D487E43481FB1452B88528EB91A8631CF1B77322"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/wheel/PxVehicleWheelHelpers.h",
+      "type": "regular",
+      "bytes": 10451,
+      "sha256": "5A6C023FA66F097D8C11A1794A909701B4DE1D98F20ADC9FE988F668621DE78D"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/wheel/PxVehicleWheelParams.h",
+      "type": "regular",
+      "bytes": 3789,
+      "sha256": "F0F7E546213E44EA304C4C64A88F77625C72E8B2BE62CC62689994BDDA8BAFB9"
+    },
+    {
+      "path": "PhysX/physx/include/vehicle2/wheel/PxVehicleWheelStates.h",
+      "type": "regular",
+      "bytes": 3511,
+      "sha256": "E7729B9406A8A6411B7149DEA523C42AAEEDC277A3D43D77BC72AD8AD5E826CB"
+    },
+    {
+      "path": "PhysX/physx/version.txt",
+      "type": "regular",
+      "bytes": 14,
+      "sha256": "514544C6C9760F59BA92A37092263A0F9A0A9F90161DE033781E11D4669EE6F0"
+    },
+    {
+      "path": "Recipe.json",
+      "type": "regular",
+      "bytes": 3491,
+      "sha256": "8175E9F75CAA2CEF15F3A2D7E7C4BDFD5C70B62EE62DBF74D5A7E1C7E3A1716A"
+    },
+    {
+      "path": "SHA256SUMS",
+      "type": "regular",
+      "bytes": 47379,
+      "sha256": "BE48189EC6690B7A6ECF56075D711928FC892B03A675D8867D4FEBC3FF0B7242"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "status": "BUILD_OBSERVED",
+  "wrapperStartUTC": "2026-10-11T18:27:42.2063755Z",
+  "wrapperEndUTC": "2026-10-11T18:28:55.6143724Z",
+  "wrapperPID": 215308,
+  "preflightMatches": 3667,
+  "postflightMatches": 3667,
+  "inputs": 3667,
+  "phases": [
+    {
+      "name": "build-profile",
+      "utc": "2026-10-11T18:27:43.6578296Z",
+      "PID": 72604,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-configure-preparation-rev1\\attempt1\\build",
+        "--config",
+        "profile",
+        "--target",
+        "PhysX",
+        "PhysXPvdSDK",
+        "PhysXVehicle",
+        "PhysXCharacterKinematic",
+        "PhysXExtensions",
+        "PhysXCooking",
+        "PhysXCommon",
+        "PhysXFoundation",
+        "LowLevel",
+        "LowLevelAABB",
+        "LowLevelDynamics",
+        "PhysXTask",
+        "SceneQuery",
+        "SimulationController",
+        "--parallel",
+        "4"
+      ],
+      "count": 21,
+      "exitCode": 0,
+      "elapsedSeconds": 70.8832638,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-configure-preparation-rev1\\profile-build-attempt1\\build-profile.stdout.raw.log",
+      "stdoutBytes": 26421,
+      "stdoutSHA256": "04DE3F05EEE4F14A3E2599CE7C1A9C9F601E34420DE205C7A0BBB525FF6651EA",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-configure-preparation-rev1\\profile-build-attempt1\\build-profile.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "checks": [
+    {
+      "scope": "SDK static profile libraries only; consumer, package and editor not verified",
+      "exitCode": 0
+    }
+  ],
+  "failure": "",
+  "acceptance": "Parent only; this driver does not certify Atom/editor/AP/cook/runtime",
+  "retry": "None"
+}

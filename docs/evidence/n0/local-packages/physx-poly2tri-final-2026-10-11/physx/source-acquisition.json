@@ -1,0 +1,12 @@
+{
+  "url": "https://codeload.github.com/NVIDIA-Omniverse/PhysX/tar.gz/0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+  "destination": "F:/JericoEngine/Dependencies/archives/PhysX-0bbcff3d0c541325f4d14c36ee18f24e22e35e6e.tar.gz",
+  "headStatus": 200,
+  "getStatus": 200,
+  "redirects": 0,
+  "etag": "\"d86318ab0ec690005250034da957b99b6d5b216b7c8afca0ef79c17023c18701\"",
+  "bytes": 46480393,
+  "sha256": "a2dfa049b0c7fa67723d27d70520d0ed7bcb5dd3c2d9df8dfb169d8a39c4c142",
+  "sourceCommit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+  "status": "ACQUIRED_NOT_EXTRACTED"
+}

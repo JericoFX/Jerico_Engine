@@ -1,0 +1,10 @@
+{
+  "status": "FOCAL_CONSUMER_VERIFIED",
+  "resultSHA256": "2973B6EC233F3CFD51C02423085B14B67BCB4BA3078B20C89FE071678B721598",
+  "phasesExitZero": 7,
+  "logsHashVerified": 14,
+  "cases": 12,
+  "skips": 0,
+  "freezeMatches": 183,
+  "scope": "Exact pinned triangulation CPU API in Debug/Profile/Release; engine link/editor/runtime not yet verified"
+}

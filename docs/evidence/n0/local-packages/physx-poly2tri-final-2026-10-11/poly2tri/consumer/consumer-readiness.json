@@ -1,0 +1,43 @@
+{
+  "status": "STATIC_DATA_PREPARATION_COMPLETED; HOLD",
+  "old121Matched": 121,
+  "providerSourceDeltas": 0,
+  "packageMembers": 27,
+  "manifestEntries": 26,
+  "payloadBytes": 1892761,
+  "sourceWitnesses": 23,
+  "configs": [
+    "Debug",
+    "Profile",
+    "Release"
+  ],
+  "casesPerConfig": 4,
+  "nativePlannedPhases": 7,
+  "nativeExecutions": 0,
+  "sourceFreezeCount": 183,
+  "sourceFreezeSHA256": "BF5AAC140E27B995CCA2B791E6AE76811C2FB655881F14F0427B4ECBD8A806F7",
+  "assignmentSHA256": "C7D33B9E8A07842E310CC8477FBF0AEFFD03BAB0FB35F3D94756C8343221CBC3",
+  "driverSHA256": "23F47233452384E24FAA20715CF17CC55723186A962C0C07053FA0BBDEB0841E",
+  "archiveAuditSHA256": "FFD76D65A9317DFDE3CCAC122FAB4F6B47FF4A8DCF8289117F9270E1A70FA7C6",
+  "extractionManifestSHA256": "E8EA44B9E5C2E5EC9DC4E3442D35338A7D1C3BAEE09EB2F8EBE66961F922FF85",
+  "CommonByteExact": true,
+  "templateInverseExact": true,
+  "AST": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-consumer-preparation\\CommonExecution.ps1",
+      "errors": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-consumer-preparation\\FinalizeConsumer.ps1",
+      "errors": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-consumer-preparation\\RunConsumer.ps1",
+      "errors": 0
+    }
+  ],
+  "limits": [
+    "No CRT/symbol export/link/behavior certification from header inspection",
+    "No final engine/Editor/AP/cook/runtime acceptance"
+  ]
+}

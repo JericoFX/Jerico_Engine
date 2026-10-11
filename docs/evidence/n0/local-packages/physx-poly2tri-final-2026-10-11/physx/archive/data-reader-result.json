@@ -1,0 +1,8 @@
+{
+  "exitCode": 0,
+  "elapsedSeconds": 11.4548176,
+  "stdoutSHA256": "8073EF5F5187C803BAF13DC1BD701B13AA68B096198E7BD2F1C0AC02ACBA84C5",
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "sourcesMatched": 5,
+  "acceptance": "Parent only; no SDK/product package executable ran"
+}

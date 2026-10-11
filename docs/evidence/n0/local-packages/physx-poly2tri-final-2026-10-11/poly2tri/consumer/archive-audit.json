@@ -1,0 +1,190 @@
+{
+  "status": "STATIC_DATA_AUDIT_COMPLETED; NO_PACKAGE_CODE_EXECUTED",
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-local-rev1\\packages\\poly2tri-7f0487a-je-rev1-windows.tar.xz",
+  "archiveBytes": 208736,
+  "archiveSHA256": "f00af81d5124edb6f09b4a2de7a5c2855fa6d44f19fa7ac976ecb70fc79252a6",
+  "members": 27,
+  "manifestEntries": 26,
+  "payloadBytes": 1892761,
+  "links": 0,
+  "caseCollisions": 0,
+  "unsafePaths": 0,
+  "packageInfo": {
+    "license": "BSD-3-Clause",
+    "name": "poly2tri-7f0487a-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "7f0487a81124647f0a4037c4706ff414ce9fe22b",
+      "sha256": "680b7b505c15775ecdfb8868cb9f6f2d616b21fbb320158d056844add7cb9371",
+      "url": "https://codeload.github.com/jhasse/poly2tri/tar.gz/7f0487a81124647f0a4037c4706ff414ce9fe22b"
+    },
+    "version": "2021-05-18"
+  },
+  "binaries": [
+    {
+      "configuration": "Release",
+      "path": "poly2tri/poly2tri/lib/poly2tri.lib",
+      "bytes": 511230,
+      "sha256": "4210b96a8b02579c91b64d74fc394229ed6503335ca5a012306935647ababe6f",
+      "structure": {
+        "machine": "0x8664",
+        "objectCount": 5
+      }
+    },
+    {
+      "configuration": "Debug",
+      "path": "poly2tri/poly2tri/debug/lib/poly2tri.lib",
+      "bytes": 1273796,
+      "sha256": "3de88506f5eb70e400bffef3f3d225c242bb643f0b88a2b3b10b658fa4ca00ed",
+      "structure": {
+        "machine": "0x8664",
+        "objectCount": 5
+      }
+    }
+  ],
+  "originalWitnesses": [
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/poly2tri.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\poly2tri.h",
+      "bytes": 1719,
+      "sha256": "69697cb1c6da223b6bd25a2599ce5ea7e99bd27c15e35cefbfc29e95da562dbe"
+    },
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/common/shapes.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\common\\shapes.h",
+      "bytes": 7824,
+      "sha256": "fe1b3e3c71454194bd237956c40be0478f7595f0c6a91a643971758076e0f71d"
+    },
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/common/utils.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\common\\utils.h",
+      "bytes": 3606,
+      "sha256": "5ad36d941bb41246f2afb9a17da63cb2bd7ac71419d23e9ea8f9943113c4a555"
+    },
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/sweep/advancing_front.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\advancing_front.h",
+      "bytes": 2914,
+      "sha256": "cab3d3a5c60c0533de0a0a0014e63d3f3e1d696a2355c9c19f9fd4b5a7ccaf77"
+    },
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/sweep/cdt.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\cdt.h",
+      "bytes": 2596,
+      "sha256": "6a58d6f181509568332b6239a22a0976e163ad2ccc91b65b1f451eaefad314ab"
+    },
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/sweep/sweep.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\sweep.h",
+      "bytes": 8754,
+      "sha256": "05a824a06636368c52ba6aa7c0c06f860b8513ad0481afc2a5729b7bcf8c3b35"
+    },
+    {
+      "packagePath": "poly2tri/poly2tri/include/poly2tri/sweep/sweep_context.h",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\sweep_context.h",
+      "bytes": 4145,
+      "sha256": "4daa5461153a101b4ed16c753b1de775c7e0d335f687a2cf479ac654c8592e53"
+    },
+    {
+      "packagePath": "LICENSES/Poly2Tri/compiled-source/common/shapes.cc",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\common\\shapes.cc",
+      "bytes": 10406,
+      "sha256": "cb0f96cba74d5b03027ddf44e4888c260a9903f06ea843ce2b68b78ae59b2c14"
+    },
+    {
+      "packagePath": "LICENSES/Poly2Tri/compiled-source/sweep/advancing_front.cc",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\advancing_front.cc",
+      "bytes": 3202,
+      "sha256": "9489f2aa413e60a9fad0a3b1d0c5545d8936755c0940c487503639c31aa4d976"
+    },
+    {
+      "packagePath": "LICENSES/Poly2Tri/compiled-source/sweep/cdt.cc",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\cdt.cc",
+      "bytes": 2267,
+      "sha256": "43cf1dfc033c5d25558de8624c456be65af5f52d7048d4b0b7457c01dcc2be06"
+    },
+    {
+      "packagePath": "LICENSES/Poly2Tri/compiled-source/sweep/sweep.cc",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\sweep.cc",
+      "bytes": 24609,
+      "sha256": "e198d98a08555fc1fa90f3fc33cd853031c551a734afede62e1ee588f4bb4b30"
+    },
+    {
+      "packagePath": "LICENSES/Poly2Tri/compiled-source/sweep/sweep_context.cc",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\poly2tri\\sweep\\sweep_context.cc",
+      "bytes": 5470,
+      "sha256": "7563b72906ab14fa492757b70914c9daf9deade00f28dedab5a34404fe94035d"
+    },
+    {
+      "packagePath": "LICENSES/Poly2Tri/upstream-CMakeLists.txt",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\CMakeLists.txt",
+      "bytes": 595,
+      "sha256": "4d603b209aa48d038e6f21bd12138bce7b99bc301aa30c94fc664253cb1beb7c"
+    },
+    {
+      "packagePath": "poly2tri/LICENSE",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\LICENSE",
+      "bytes": 1489,
+      "sha256": "578790e1377a270831ede8c64d7c92d411b6e5a55ce32fbb84a35b376af25ee0"
+    },
+    {
+      "packagePath": "poly2tri/README.md",
+      "source": "F:\\JericoEngine\\Dependencies\\poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b\\README.md",
+      "bytes": 2151,
+      "sha256": "31ac1a8c3f7e34656077b18341123192ef5acf7dc9531ec392125a22af1dfa3b"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/LICENSE.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "source": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "source": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "packagePath": "Findpoly2tri.cmake",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Poly2Tri\\Findpoly2tri.cmake",
+      "bytes": 2668,
+      "sha256": "762d169be833ef97885037ebe73e4f1d00cab13095333f5ab8b9c8a368d60149"
+    },
+    {
+      "packagePath": "NOTICE.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Poly2Tri\\NOTICE.txt",
+      "bytes": 1157,
+      "sha256": "7e3e2eaf51a7f94081ac7ea9915058d134bc45f5e1d5076cb3753e6f56bc8ec7"
+    },
+    {
+      "packagePath": "README.md",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Poly2Tri\\README.md",
+      "bytes": 1650,
+      "sha256": "0c156e26c78bf1af8966f146542edef664bd20f9093982b4d552d1e149e89a41"
+    },
+    {
+      "packagePath": "Recipe.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Poly2Tri\\Recipe.json",
+      "bytes": 1282,
+      "sha256": "61df58f1dc94183e4c24e344cbf0d920c629a7568c0e12922556f219ebc95ef6"
+    },
+    {
+      "packagePath": "JERequireLocalPath.cmake",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    }
+  ],
+  "extractionRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-native-extracted-rev1",
+  "limits": [
+    "No CRT/symbol export/link/behavior certification from header inspection",
+    "No final engine/Editor/AP/cook/runtime acceptance"
+  ]
+}

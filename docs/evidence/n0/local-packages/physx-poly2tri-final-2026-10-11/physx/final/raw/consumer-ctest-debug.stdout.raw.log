@@ -1,0 +1,17 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/physx-final-preparation-rev2/attempt1/consumer-debug
+    Start 1: JE.LocalPackages.PhysX.lifecycle
+1/6 Test #1: JE.LocalPackages.PhysX.lifecycle ...   Passed    0.04 sec
+    Start 2: JE.LocalPackages.PhysX.cooking
+2/6 Test #2: JE.LocalPackages.PhysX.cooking .....   Passed    0.01 sec
+    Start 3: JE.LocalPackages.PhysX.scene
+3/6 Test #3: JE.LocalPackages.PhysX.scene .......   Passed    0.03 sec
+    Start 4: JE.LocalPackages.PhysX.character
+4/6 Test #4: JE.LocalPackages.PhysX.character ...   Passed    0.01 sec
+    Start 5: JE.LocalPackages.PhysX.vehicle
+5/6 Test #5: JE.LocalPackages.PhysX.vehicle .....   Passed    0.01 sec
+    Start 6: JE.LocalPackages.PhysX.invalid
+6/6 Test #6: JE.LocalPackages.PhysX.invalid .....   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =   0.12 sec

@@ -1,0 +1,19 @@
+JE local poly2tri provider
+
+Library: jhasse/poly2tri commit 7f0487a81124647f0a4037c4706ff414ce9fe22b.
+Copyright (c) 2009-2018, Poly2Tri Contributors; individual sources also preserve
+their original 2009-2021 notices. BSD-3-Clause: full LICENSE and compiled-source
+notices are retained, as are the original public-header notices.
+
+Find/layout adapted from O3DE 3p-package-source commit
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/poly2tri, and its
+vcpkg port replacement patch. O3DE glue is Apache-2.0 OR MIT; full original
+distribution notices are included. No vcpkg or Python is executed/distributed.
+
+JE explicitly uses Windows x64 v143, static libraries and dynamic CRT (Debug
+MDd, Release MD), matching the historical CRT/linkage distinction. This is a
+new JE artifact, not the historical rev1 binary or its hash. No source patch.
+Assimp's newer vendored p2t remains private to its SceneBuilder module; this
+package does not alias Assimp or claim those different sources are identical.
+Source/link analysis is not proof of final engine link, exported symbols,
+redistribution completeness, Editor/cook/runtime behavior, or Jolt integration.

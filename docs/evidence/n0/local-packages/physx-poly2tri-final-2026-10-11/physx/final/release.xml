@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="6"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T16:06:05"
+	>
+	<testcase name="JE.LocalPackages.PhysX.lifecycle" classname="JE.LocalPackages.PhysX.lifecycle" time="0.0348411" status="run">
+		<properties/>
+		<system-out>CASE lifecycle completed against PhysX 5.1.1 CPU
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.PhysX.cooking" classname="JE.LocalPackages.PhysX.cooking" time="0.0069172" status="run">
+		<properties/>
+		<system-out>CASE cooking completed against PhysX 5.1.1 CPU
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.PhysX.scene" classname="JE.LocalPackages.PhysX.scene" time="0.0145405" status="run">
+		<properties/>
+		<system-out>CASE scene completed against PhysX 5.1.1 CPU
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.PhysX.character" classname="JE.LocalPackages.PhysX.character" time="0.0075926" status="run">
+		<properties/>
+		<system-out>CASE character completed against PhysX 5.1.1 CPU
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.PhysX.vehicle" classname="JE.LocalPackages.PhysX.vehicle" time="0.0067409" status="run">
+		<properties/>
+		<system-out>CASE vehicle completed against PhysX 5.1.1 CPU
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.PhysX.invalid" classname="JE.LocalPackages.PhysX.invalid" time="0.0066677" status="run">
+		<properties/>
+		<system-out>PhysX diagnostic 4: TriangleMesh::loadFromDesc: desc.isValid() failed!
+CASE invalid completed against PhysX 5.1.1 CPU
+</system-out>
+	</testcase>
+</testsuite>

@@ -1,0 +1,22 @@
+{
+  "status": "INTEGRATED_ROOT_CONFIGURE_PENDING",
+  "oldCacheFilesPreserved": 44,
+  "newCacheFiles": 4,
+  "cacheFiles": 48,
+  "palSHA256": "4B9FE6FEE2C7E5532B777FA583D2B6B8CEED07D6EB38A451505263C29198A0C3",
+  "packages": [
+    {
+      "hash": "6A3655FA52AD06691F1B360B650557518C06494AC0E4EA7418158B7B63F4FC62",
+      "bytes": 73160792,
+      "name": "PhysX-5.1.1-je-cpu-rev2-windows",
+      "source": "physx-local-rev2"
+    },
+    {
+      "hash": "F00AF81D5124EDB6F09B4A2DE7A5C2855FA6D44F19FA7AC976ECB70FC79252A6",
+      "bytes": 208736,
+      "name": "poly2tri-7f0487a-je-rev1-windows",
+      "source": "poly2tri-local-rev1"
+    }
+  ],
+  "scope": "Windows transition packages; no engine build/runtime acceptance"
+}

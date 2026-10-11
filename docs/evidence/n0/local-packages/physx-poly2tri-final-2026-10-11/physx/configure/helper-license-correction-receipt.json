@@ -1,0 +1,57 @@
+{
+  "status": "DATA_INSPECTED; native NOT_RUN",
+  "supersedesClaimOnly": "Historical plan wrongly said BSD notices inline in the three helpers. It remains preserved.",
+  "helperSourceCommit": "a2c0428acab643e60618c681b501e86f7fd558cc",
+  "documents": [
+    {
+      "path": "externals/README.md",
+      "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-source-audit-rev1\\official-helper-externals-README.md",
+      "bytes": 295,
+      "sha256": "9B3AFF6F8A902F94EEBD19C8A91A533EE3B81A40E00CF93F322083F1AC4B71E8",
+      "gitBlob": "bec365f1ce6c1d020e30b25a763d325262c25f11",
+      "primaryTreeMatches": true
+    },
+    {
+      "path": "LICENSE.md",
+      "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-source-audit-rev1\\official-helper-repo-LICENSE.md",
+      "bytes": 1508,
+      "sha256": "CEE409D941F502A1C5AB0A7ECB90B141A57F822129B225BD00B79ADD4F963FFF",
+      "gitBlob": "1e23839241b0f3324b1216c7720b659b5a95f965",
+      "primaryTreeMatches": true
+    },
+    {
+      "path": "README.md",
+      "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-source-audit-rev1\\official-helper-repo-README.md",
+      "bytes": 3900,
+      "sha256": "2B2736D87C54D0723C720FC44F385DB4F5EB0E43919C0E62210BD90772DCD223",
+      "gitBlob": "e2b056d09b7079de124ce9aed0f74c73d1851c3d",
+      "primaryTreeMatches": true
+    },
+    {
+      "path": "externals/cmakemodules/GetCompilerAndPlatform.cmake",
+      "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-source-audit-rev1\\official-build-helper-GetCompilerAndPlatform.cmake",
+      "bytes": 3900,
+      "sha256": "BCF3B1F22893F7760B0B22C51269BF42F881B2DBA4FECD8E47ABEEC7A282FA3F",
+      "gitBlob": "3ab5cfbfa0b87058742c111a96f5d433320b8714",
+      "primaryTreeMatches": true
+    },
+    {
+      "path": "externals/cmakemodules/SetOutputPaths.cmake",
+      "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-source-audit-rev1\\official-build-helper-SetOutputPaths.cmake",
+      "bytes": 3752,
+      "sha256": "39FFDAA918398FA1F8D153F49DCBCD814818334309EDD41C684094DD8CF1EB3B",
+      "gitBlob": "a1be9f4dbae49533055158e496b6a532937f565b",
+      "primaryTreeMatches": true
+    },
+    {
+      "path": "externals/cmakemodules/NvidiaBuildOptions.cmake",
+      "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-source-audit-rev1\\official-build-helper-NvidiaBuildOptions.cmake",
+      "bytes": 9854,
+      "sha256": "AE551BDE0A3312D4FC74D101654E71DE17DDA31F1A6F4F740A2860DFF9B7FCBC",
+      "gitBlob": "46cb7d6372c423aba69c152846b35073bec1bc8c",
+      "primaryTreeMatches": true
+    }
+  ],
+  "licenseScope": "Root LICENSE BSD3 NVIDIA2021 preserved. Root README refers to externals README third-party authors. No inline notice in helpers, no per-file license assignment invented; parent reviewed this limitation.",
+  "inactiveDependencies": "No other external CMake modules acquired or invoked."
+}

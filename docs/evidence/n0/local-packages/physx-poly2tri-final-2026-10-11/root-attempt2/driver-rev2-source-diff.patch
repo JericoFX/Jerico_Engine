@@ -1,0 +1,56 @@
+--- run-root-configure-final.ps1
++++ run-root-configure-final-rev2.ps1
+@@ -58,1 +58,31 @@
+-function Assert-RootPostflight(
++function Assert-ManifoldPrivateBaseline($sourceManifest,$copyManifest,[string]$phase) {
++    $pins = @{
++        'src/csg_tree.h' = @{original='ebcec03aed52e3a05c7ff2ece61e4e547bcfc194339c88521c77bee58bf9741c';originalBytes=3941;patched='3ec6654cb195217ca03d5385640318382a79568cf5a33f7fbea718f13fd64889';patchedBytes=4157}
++        'src/edge_op.cpp' = @{original='c18884a2acfc052752d3236a58ce3db3fd5b96e9f9d8fa55db15ee55de5c9025';originalBytes=34859;patched='8125838072c3352b694a5be4e0e64616729677ca7eefb2340ccc49379b596629';patchedBytes=35873}
++    }
++    if ($phase -cnotin @('before','after') -or $sourceManifest.fileCount -ne 378 -or $copyManifest.fileCount -ne 378 -or @($sourceManifest.files).Count -ne 378 -or @($copyManifest.files).Count -ne 378) { throw 'Manifold pinned membership/count mismatch' }
++    $sourceMap=@{}; $copyMap=@{}
++    foreach ($row in $sourceManifest.files) {
++        $key=$row.relativePath.Replace('\','/')
++        if ($sourceMap.ContainsKey($key)) { throw "duplicate Manifold source member: $key" }
++        $sourceMap[$key]=$row
++    }
++    foreach ($row in $copyManifest.files) {
++        $key=$row.relativePath.Replace('\','/')
++        if ($copyMap.ContainsKey($key)) { throw "duplicate Manifold private member: $key" }
++        $copyMap[$key]=$row
++    }
++    $patchedCount=0
++    foreach ($key in $sourceMap.Keys) {
++        if (-not $copyMap.ContainsKey($key)) { throw "missing Manifold private member: $key" }
++        $source=$sourceMap[$key]; $copy=$copyMap[$key]
++        if ($pins.ContainsKey($key)) {
++            $pin=$pins[$key]
++            if ($source.sha256 -ine $pin.original -or $source.bytes -ne $pin.originalBytes) { throw "Manifold original pin mismatch: $key" }
++            if ($copy.sha256 -ieq $pin.patched -and $copy.bytes -eq $pin.patchedBytes) { $patchedCount++ }
++            elseif ($copy.sha256 -ine $pin.original -or $copy.bytes -ne $pin.originalBytes) { throw "Manifold private patch pin mismatch: $key" }
++        } elseif ($source.sha256 -ine $copy.sha256 -or $source.bytes -ne $copy.bytes) { throw "unexpected Manifold private member mutation: $key" }
++    }
++    if (($phase -ceq 'before' -and $patchedCount -notin @(0,2)) -or ($phase -ceq 'after' -and $patchedCount -ne 2)) { throw "Manifold requires pristine pair before configure or exact patched pair; after requires patched pair: $phase" }
++}
++function Assert-RootPostflight(
+@@ -101,1 +101,1 @@
+-'attempt1'
++'attempt2'
+@@ -102,1 +102,1 @@
+-'fresh attempt1 evidence directory already exists'
++'fresh attempt2 evidence directory already exists'
+@@ -104,1 +104,1 @@
+-'build/n0-validation/local-packages/root-physx-poly2tri-rev1/root-batch-assignment.json'
++'build/n0-validation/local-packages/root-physx-poly2tri-rev1/root-batch-assignment-rev2.json'
+@@ -361,1 +361,6 @@
+-    $privateComparison += [pscustomobject]@{name=$pair.name;sourceFileCount=$sourceManifest.fileCount;copyFileCount=$copyManifest.fileCount;preconfigureDifferences=$diff}
++    $knownPatchDifferences=@()
++    if ($pair.name -ceq 'Manifold') {
++        Assert-ManifoldPrivateBaseline $sourceManifest $copyManifest 'before'
++        $knownPatchDifferences=$diff; $diff=@()
++    }
++    $privateComparison += [pscustomobject]@{name=$pair.name;sourceFileCount=$sourceManifest.fileCount;copyFileCount=$copyManifest.fileCount;preconfigureDifferences=$diff;verifiedManifoldPatchDifferences=$knownPatchDifferences}
+@@ -527,1 +527,2 @@
+-    $sourceMap = @{}; foreach ($row in $sourceManifest.files) { $sourceMap[$row.relativePath]=$row.sha256 }
++    if ($pair.name -ceq 'Manifold') { Assert-ManifoldPrivateBaseline $sourceManifest $copyManifest 'after' }
++    $sourceMap = @{}; foreach ($row in $sourceManifest.files) { $sourceMap[$row.relativePath]=$row.sha256 }

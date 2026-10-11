@@ -1,0 +1,311 @@
+{
+  "root": "F:/JericoEngine/Dependencies/poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b",
+  "sourceCommit": "7f0487a81124647f0a4037c4706ff414ce9fe22b",
+  "archive": "F:/JericoEngine/Dependencies/archives/poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b.tar.gz",
+  "archiveSHA256": "680b7b505c15775ecdfb8868cb9f6f2d616b21fbb320158d056844add7cb9371",
+  "archiveURL": "https://codeload.github.com/jhasse/poly2tri/tar.gz/7f0487a81124647f0a4037c4706ff414ce9fe22b",
+  "fileCount": 50,
+  "linksMaterialized": 0,
+  "entries": [
+    {
+      "path": ".clang-format",
+      "bytes": 355,
+      "sha256": "36773145dcef3f61c311cc4899074babd0803112ef085ac4ce6c029e226f3599",
+      "gitBlob": "f37c78412678c6c832056a9f75f22b56e24f01ee"
+    },
+    {
+      "path": ".github/workflows/linux.yml",
+      "bytes": 810,
+      "sha256": "a142da2f8f1e95a2d9b75b0d3812496e9b7dc029df19040e8ec18ed083a093c0",
+      "gitBlob": "07cc7a94fec38e9a2516e8e5f590cd073d3e432f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 165,
+      "sha256": "d8382751e36a463e089336ff5085cbd457ebac451f9a8d182ab3b5256a97eff5",
+      "gitBlob": "6dd9909771807f1f31573f0b74fe57b1125849a5"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "bytes": 925,
+      "sha256": "915979c82610a06015865b7b99bad2b4ed26f5ed2cfdb2de3d8d5c51d3cf39f2",
+      "gitBlob": "8af86bbad0796fe52f1d58bf7019b0272b1a651c"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 79,
+      "sha256": "aed515bf25baca5ac2162250fc3576fa19c77bdcd8b45bf4b031bd55e2e19043",
+      "gitBlob": "02d68731661864ae7015fd8a6b98df0be383eb48"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "bytes": 1529,
+      "sha256": "d21d8ca32369f21d825e6640cdb615a9c6d249c4ec0bfab7169f998b69fd407d",
+      "gitBlob": "5aaf1884ecfeac17d2d801c7d8614f8786d5de21"
+    },
+    {
+      "path": "AUTHORS",
+      "bytes": 145,
+      "sha256": "7ce8def8923652fb85f021f28e6f1139a523f90aa6cccbf7d2fe94524d2c29a2",
+      "gitBlob": "1736f14bb2aa7b6c96bbffaebb55fa2a84d20345"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 595,
+      "sha256": "4d603b209aa48d038e6f21bd12138bce7b99bc301aa30c94fc664253cb1beb7c",
+      "gitBlob": "50d6e318ca290daa87945aa657581248f9e15963"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1489,
+      "sha256": "578790e1377a270831ede8c64d7c92d411b6e5a55ce32fbb84a35b376af25ee0",
+      "gitBlob": "dddc3ccc3dd3b3b9fd4d2f6f588367ad5bea0fef"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2151,
+      "sha256": "31ac1a8c3f7e34656077b18341123192ef5acf7dc9531ec392125a22af1dfa3b",
+      "gitBlob": "83eeac7637ff5d826b637b1f30841d8123df1871"
+    },
+    {
+      "path": "doc/.gitignore",
+      "bytes": 7,
+      "sha256": "8fa8a5e6cedee99595948ad40b4d8e9a67a84685a9bd31e99c04c9e3d8460082",
+      "gitBlob": "ac7af2e80e3a7920c6989974744a27c21db8cd33"
+    },
+    {
+      "path": "doc/Doxyfile",
+      "bytes": 110598,
+      "sha256": "a60d34af2c733a9e331821b9ed725cf4573e05269717cb7e2e9ad67b12acdff6",
+      "gitBlob": "7201123fdf59035ed6ab302ea9c01706076ade61"
+    },
+    {
+      "path": "doc/FlipScan.png",
+      "bytes": 228287,
+      "sha256": "f92e0f9a5902c5de1a801f1ae50e880e5c6553b33371fe9625fb3f1333b331f5",
+      "gitBlob": "257188699ed2574740722aa7c7c5eb43e552dd77"
+    },
+    {
+      "path": "meson.build",
+      "bytes": 693,
+      "sha256": "a13346614f23c8dfc1ad65012c0f8b23774fd0aba41c0c2bf7b8dca4ea5cc79c",
+      "gitBlob": "e84d8462b26301056b75f49ad03b97e387b0e74c"
+    },
+    {
+      "path": "poly2tri/common/shapes.cc",
+      "bytes": 10406,
+      "sha256": "cb0f96cba74d5b03027ddf44e4888c260a9903f06ea843ce2b68b78ae59b2c14",
+      "gitBlob": "769e16ce8c170926b6d5bfd48ffef8a2bf810afc"
+    },
+    {
+      "path": "poly2tri/common/shapes.h",
+      "bytes": 7824,
+      "sha256": "fe1b3e3c71454194bd237956c40be0478f7595f0c6a91a643971758076e0f71d",
+      "gitBlob": "54b9337aad6c0a8b9dd32fc17fc96a5a2a72254e"
+    },
+    {
+      "path": "poly2tri/common/utils.h",
+      "bytes": 3606,
+      "sha256": "5ad36d941bb41246f2afb9a17da63cb2bd7ac71419d23e9ea8f9943113c4a555",
+      "gitBlob": "f71334c5d3804199f31467e204b53f5db359674c"
+    },
+    {
+      "path": "poly2tri/poly2tri.h",
+      "bytes": 1719,
+      "sha256": "69697cb1c6da223b6bd25a2599ce5ea7e99bd27c15e35cefbfc29e95da562dbe",
+      "gitBlob": "c959d131f95d3cb10a653da81dbcbd29162d46ce"
+    },
+    {
+      "path": "poly2tri/sweep/advancing_front.cc",
+      "bytes": 3202,
+      "sha256": "9489f2aa413e60a9fad0a3b1d0c5545d8936755c0940c487503639c31aa4d976",
+      "gitBlob": "b8e9609efcd1054b2f94b7db1f39ba63fe744e59"
+    },
+    {
+      "path": "poly2tri/sweep/advancing_front.h",
+      "bytes": 2914,
+      "sha256": "cab3d3a5c60c0533de0a0a0014e63d3f3e1d696a2355c9c19f9fd4b5a7ccaf77",
+      "gitBlob": "3de07082434a326478309229c646c04529c6e11c"
+    },
+    {
+      "path": "poly2tri/sweep/cdt.cc",
+      "bytes": 2267,
+      "sha256": "43cf1dfc033c5d25558de8624c456be65af5f52d7048d4b0b7457c01dcc2be06",
+      "gitBlob": "4dfe6a6419ed7de49a5e65a46e200c85f1ca8a0b"
+    },
+    {
+      "path": "poly2tri/sweep/cdt.h",
+      "bytes": 2596,
+      "sha256": "6a58d6f181509568332b6239a22a0976e163ad2ccc91b65b1f451eaefad314ab",
+      "gitBlob": "efeeda3889745deff7d907842ac172f0df1ad38d"
+    },
+    {
+      "path": "poly2tri/sweep/sweep.cc",
+      "bytes": 24609,
+      "sha256": "e198d98a08555fc1fa90f3fc33cd853031c551a734afede62e1ee588f4bb4b30",
+      "gitBlob": "3267a41774f144d00fe9c5a07ee6ab9f3cae06c0"
+    },
+    {
+      "path": "poly2tri/sweep/sweep.h",
+      "bytes": 8754,
+      "sha256": "05a824a06636368c52ba6aa7c0c06f860b8513ad0481afc2a5729b7bcf8c3b35",
+      "gitBlob": "895b0e82576963ccf90cb589a58f86223b4015a7"
+    },
+    {
+      "path": "poly2tri/sweep/sweep_context.cc",
+      "bytes": 5470,
+      "sha256": "7563b72906ab14fa492757b70914c9daf9deade00f28dedab5a34404fe94035d",
+      "gitBlob": "79bc5e7e3550055707b5ab6cb6f520692a69c2bc"
+    },
+    {
+      "path": "poly2tri/sweep/sweep_context.h",
+      "bytes": 4145,
+      "sha256": "4daa5461153a101b4ed16c753b1de775c7e0d335f687a2cf479ac654c8592e53",
+      "gitBlob": "47d970b7bcfb62a077d36b3bf3318b3c8a20de52"
+    },
+    {
+      "path": "testbed/CMakeLists.txt",
+      "bytes": 214,
+      "sha256": "e948954d09f523a5e83c0c8e1c0f005bee3d3702f99d7ab02ecc33b508f4c854",
+      "gitBlob": "385f01bfa40f1d0dacfac7600c9665e62b3e0ce7"
+    },
+    {
+      "path": "testbed/data/2.dat",
+      "bytes": 1255,
+      "sha256": "091cb11ad5219c6f037f2a50720b1ff94dd23fe3f475a60a9074e42c2ae496b4",
+      "gitBlob": "991301f0a6cc0c22e8408e1182e82ce9d5c031f2"
+    },
+    {
+      "path": "testbed/data/bird.dat",
+      "bytes": 4720,
+      "sha256": "e31f92de9264c4b063cf3abb4a8efa42ad2939a9f6faa58a76d0225e56d5c684",
+      "gitBlob": "3f76eae099e1938464fae0cba33476b0e73a1006"
+    },
+    {
+      "path": "testbed/data/custom.dat",
+      "bytes": 60,
+      "sha256": "efa85ebdf7f3147cb238eec410ceb331a10ad35db259a3b1a789b24001d04f54",
+      "gitBlob": "fb1cefb75af4c90da8ec160bc023351cc49926db"
+    },
+    {
+      "path": "testbed/data/deadly_quad.dat",
+      "bytes": 56,
+      "sha256": "bf339893dca89546c8864ad304cd4527ddec896640a56ea3f9639ea39ed165e3",
+      "gitBlob": "7e4b2176f3d66d4a83c1e6e2a39e3f11492e716e"
+    },
+    {
+      "path": "testbed/data/debug.dat",
+      "bytes": 4486,
+      "sha256": "1a20a52564a93fd596e7038928437559e02987165658493c0ca93d62a2977f28",
+      "gitBlob": "08b943e75a05e3ae99f38fd9fda26d3c68eab271"
+    },
+    {
+      "path": "testbed/data/debug2.dat",
+      "bytes": 220382,
+      "sha256": "e32b011f968900c52891fcbad645fa4686b6c7c74f659f35b20e3a93253ff04a",
+      "gitBlob": "c21f1d2f7fd08ba90daafa5ab333956f8afaec9f"
+    },
+    {
+      "path": "testbed/data/diamond.dat",
+      "bytes": 95,
+      "sha256": "765d5af03ad38cb6cf8475a26f106501eb1d2bd793d5512c987a724520cf4593",
+      "gitBlob": "cebcddbf5f571227a4e9c19d69eb151c06da0b71"
+    },
+    {
+      "path": "testbed/data/dude.dat",
+      "bytes": 1976,
+      "sha256": "7d057dc38153d58ebd9c88a12331acfab0ed97907cf2e7562b806a20e4d4c2a8",
+      "gitBlob": "bd8c4e0fa6c8cdfdd977529a7f0934903a4c5e15"
+    },
+    {
+      "path": "testbed/data/funny.dat",
+      "bytes": 2135,
+      "sha256": "5fb6ebeb5edaca6238bcc81c82bdd25a809cbddb7eee77c95edb84614e775493",
+      "gitBlob": "08cd16e5e5c8100884ff12905a878d18dc7d27a9"
+    },
+    {
+      "path": "testbed/data/kzer-za.dat",
+      "bytes": 3523,
+      "sha256": "bd87bf8d5b4aa7546da86b53e48aab4f0998a1ddbf21f2d106ab8bbbd250867d",
+      "gitBlob": "ce844348b1e840f862dada37266264906e52ddfb"
+    },
+    {
+      "path": "testbed/data/nazca_heron.dat",
+      "bytes": 16869,
+      "sha256": "985d9b03762f268b3eec8de0d5876187cbceb82ecc0b9fa3cd315d1ffb0f3d1c",
+      "gitBlob": "14aebf859bc89866a241102ed200b7fd5e7be03d"
+    },
+    {
+      "path": "testbed/data/nazca_monkey.dat",
+      "bytes": 21589,
+      "sha256": "b2b719c01cfa97c4e0244ed4575af0322cddc9e64dddb0ee1407ff2706cd33cb",
+      "gitBlob": "623f9b97eda2bd466220c4b0b684d0397452cf84"
+    },
+    {
+      "path": "testbed/data/polygon.dae",
+      "bytes": 10856,
+      "sha256": "3f8889259275e7d3ba50707c8e940dace3fa7de9b34754f46f81899762a77543",
+      "gitBlob": "91218fad2804c0ad59ac7f67f9a16e734c97bae0"
+    },
+    {
+      "path": "testbed/data/sketchup.dat",
+      "bytes": 6247,
+      "sha256": "35c3dd98b2fcd1bfdf9244d9d4a8af93dcee7774a5b8a47f43ec982639654edb",
+      "gitBlob": "ed1b0dd4976e6c3a5f99016c35d0ae50aee42772"
+    },
+    {
+      "path": "testbed/data/star.dat",
+      "bytes": 79,
+      "sha256": "d672470e0711498f22ea2f96ceb1a75c83d237d073f1137fcc4f0d2b85fad511",
+      "gitBlob": "f74f9587d148206f50daa2e936c70e74ed8c324a"
+    },
+    {
+      "path": "testbed/data/steiner.dat",
+      "bytes": 44,
+      "sha256": "c2f490bc49a86d8dc21a0149f281eabceba09dfc6398ce7e36e231a4d165c244",
+      "gitBlob": "8a3eceebb7add39549beacdba4a1be67dd1a2cf2"
+    },
+    {
+      "path": "testbed/data/strange.dat",
+      "bytes": 124,
+      "sha256": "9c9460d70eb3a42bacffaa5444f0ab750983f301673755a0e8c7cc973945bd52",
+      "gitBlob": "9966eb1dc3ea3a47c80d7863f74e7da1d3740862"
+    },
+    {
+      "path": "testbed/data/tank.dat",
+      "bytes": 1147,
+      "sha256": "ce279c4fd1b7cfbfbe7c05fe3826a72ef7defab8b64ea4fd79efc44cf5e9456f",
+      "gitBlob": "4337c6d094c76dd9ed07fca4d9cb32f618b0de39"
+    },
+    {
+      "path": "testbed/data/test.dat",
+      "bytes": 119,
+      "sha256": "70fd751e03d75982f63851119fabd5517888159e0f1266572507ca41f68b5899",
+      "gitBlob": "8de7fc9ec16cb038e56e8bb73714b7560812f7db"
+    },
+    {
+      "path": "testbed/main.cc",
+      "bytes": 13269,
+      "sha256": "df2dceec218a0c96f202427efcd918e2fc55c4421c54aaf421acecd3b1dcb4fa",
+      "gitBlob": "007721b26eb692a7929a1dcef4c9551e9013c42c"
+    },
+    {
+      "path": "unittest/CMakeLists.txt",
+      "bytes": 551,
+      "sha256": "d29536ef744bed47a64fc9d630b23ed8b37f77ed44c8d4cf3c76811d00f94025",
+      "gitBlob": "993eedb8fef802bf11266efec7cd94161b4f7812"
+    },
+    {
+      "path": "unittest/TriangleTest.cpp",
+      "bytes": 552,
+      "sha256": "5e2247b1901a70cd25e82648568a109bff36a2ca9bed06ee1f35ef21278d70e5",
+      "gitBlob": "28c9ee814d6d31c0a9eff3441d2a11dbc59252d8"
+    },
+    {
+      "path": "unittest/main.cpp",
+      "bytes": 3234,
+      "sha256": "e8f0ca1934be4f055b59a30cc49cf21e419c9716f347ecbf544675ecb037559d",
+      "gitBlob": "7941eac3b355251497de99c251c5bef28578a5d5"
+    }
+  ]
+}

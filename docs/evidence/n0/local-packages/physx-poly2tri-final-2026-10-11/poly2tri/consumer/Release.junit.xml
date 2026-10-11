@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="4"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T16:09:28"
+	>
+	<testcase name="JE.LocalPackages.Poly2Tri.concave" classname="JE.LocalPackages.Poly2Tri.concave" time="0.0254743" status="run">
+		<properties/>
+		<system-out>CASE concave PASS
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.Poly2Tri.hole" classname="JE.LocalPackages.Poly2Tri.hole" time="0.0066661" status="run">
+		<properties/>
+		<system-out>CASE hole PASS
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.Poly2Tri.steiner" classname="JE.LocalPackages.Poly2Tri.steiner" time="0.0068934" status="run">
+		<properties/>
+		<system-out>CASE steiner PASS
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.Poly2Tri.repeated" classname="JE.LocalPackages.Poly2Tri.repeated" time="0.0066635" status="run">
+		<properties/>
+		<system-out>CASE repeated PASS
+</system-out>
+	</testcase>
+</testsuite>

@@ -1,0 +1,16 @@
+{
+  "url": "https://codeload.github.com/jhasse/poly2tri/tar.gz/7f0487a81124647f0a4037c4706ff414ce9fe22b",
+  "sourceCommit": "7f0487a81124647f0a4037c4706ff414ce9fe22b",
+  "utc": "2026-10-11T18:52:14.4525779Z",
+  "status": 200,
+  "bytes": 400502,
+  "sha256": "680b7b505c15775ecdfb8868cb9f6f2d616b21fbb320158d056844add7cb9371",
+  "sha512": "1666bca16cef75bd68c8be257f2f1c50155847ab046b3c756da9ea883bbf3139d6292b833f1d6113186accc4bba860270bb261f537744aece35bfee6a611cf5f",
+  "historicalSourceSHA512": "1666bca16cef75bd68c8be257f2f1c50155847ab046b3c756da9ea883bbf3139d6292b833f1d6113186accc4bba860270bb261f537744aece35bfee6a611cf5f",
+  "historicalSHA512Matched": true,
+  "archive": "F:/JericoEngine/Dependencies/archives/poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b.tar.gz",
+  "autoRedirect": false,
+  "authentication": false,
+  "license": "BSD-3-Clause",
+  "archiveHashIsNotLegacyPackageHash": true
+}

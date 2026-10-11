@@ -1,0 +1,49 @@
+{
+  "status": "PENDING PARENT REVIEW / EXCLUSIVE LUNA DISPATCH",
+  "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-local-rev1\\packages\\poly2tri-7f0487a-je-rev1-windows.tar.xz",
+  "archiveSHA256": "F00AF81D5124EDB6F09B4A2DE7A5C2855FA6D44F19FA7AC976ECB70FC79252A6",
+  "archiveBytes": 208736,
+  "extractedRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-native-extracted-rev1",
+  "extractedManifest": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-consumer-preparation/extraction-manifest.json",
+  "extractedManifestSHA256": "E8EA44B9E5C2E5EC9DC4E3442D35338A7D1C3BAEE09EB2F8EBE66961F922FF85",
+  "members": 27,
+  "consumer": {
+    "arguments": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/tests",
+      "-B",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-consumer-preparation/consumer-attempt1/build",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DCMAKE_GENERATOR_INSTANCE:PATH=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+      "-DJE_POLY2TRI_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-native-extracted-rev1",
+      "-DCMAKE_CONFIGURATION_TYPES:STRING=Debug;Profile;Release",
+      "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "-DCMAKE_FIND_USE_PACKAGE_REGISTRY:BOOL=OFF",
+      "-DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY:BOOL=OFF"
+    ],
+    "argc": 16,
+    "buildRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-consumer-preparation/consumer-attempt1/build"
+  },
+  "configurations": [
+    "Debug",
+    "Profile",
+    "Release"
+  ],
+  "expectedTests": [
+    "JE.LocalPackages.Poly2Tri.concave",
+    "JE.LocalPackages.Poly2Tri.hole",
+    "JE.LocalPackages.Poly2Tri.steiner",
+    "JE.LocalPackages.Poly2Tri.repeated"
+  ],
+  "casesPerConfiguration": 4,
+  "totalCases": 12,
+  "phases": 7,
+  "ProfileConsumesExistingRelease": true,
+  "nativeScope": "One consumer configure, three consumer build/CTest pairs; no producer/extraction/dependency acquisition",
+  "acceptance": "Parent only; does not certify engine/Editor/AP/cook/runtime"
+}

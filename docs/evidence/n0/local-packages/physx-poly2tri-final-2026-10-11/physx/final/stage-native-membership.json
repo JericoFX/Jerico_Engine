@@ -1,0 +1,8 @@
+{
+  "validatedWitnessLibraries": 56,
+  "stagedMainLibraries": 32,
+  "matched": 32,
+  "generatedHeaderMatched": true,
+  "sourceCommit": "0bbcff3d0c541325f4d14c36ee18f24e22e35e6e",
+  "scope": "Data equality of existing SDK outputs only; tar/PE/COFF audits and acceptance remain independent"
+}

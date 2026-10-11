@@ -152,3 +152,10 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /cmake/Tools/LocalPackages/ASTCEncoder/README.md -text whitespace=cr-at-eol
 # Preserve the validated channel-guard patch, including unified-diff context whitespace.
 /cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch -text -whitespace
+# Preserve six original NVIDIA helper/license files used by the pinned PhysX recipe.
+/cmake/Tools/LocalPackages/PhysX/official-build-helpers/externals-README.md -text -whitespace
+/cmake/Tools/LocalPackages/PhysX/official-build-helpers/GetCompilerAndPlatform.cmake -text -whitespace
+/cmake/Tools/LocalPackages/PhysX/official-build-helpers/LICENSE.md -text -whitespace
+/cmake/Tools/LocalPackages/PhysX/official-build-helpers/NvidiaBuildOptions.cmake -text -whitespace
+/cmake/Tools/LocalPackages/PhysX/official-build-helpers/README.md -text -whitespace
+/cmake/Tools/LocalPackages/PhysX/official-build-helpers/SetOutputPaths.cmake -text -whitespace

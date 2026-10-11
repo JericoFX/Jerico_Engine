@@ -1,0 +1,25 @@
+{
+  "status": "NATIVE_NOT_RUN; parent review/sole Luna dispatch required",
+  "sourceCommit": "7f0487a81124647f0a4037c4706ff414ce9fe22b",
+  "sourceArchiveSHA256": "680b7b505c15775ecdfb8868cb9f6f2d616b21fbb320158d056844add7cb9371",
+  "producer": {
+    "arguments": [
+      "-DJE_POLY2TRI_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b.tar.gz",
+      "-DJE_POLY2TRI_SOURCE_MANIFEST:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-acquisition/source-snapshot-manifest.json",
+      "-DJE_POLY2TRI_VS_INSTANCE:PATH=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+      "-DJE_POLY2TRI_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/BuildPoly2TriPackage.cmake"
+    ],
+    "argc": 6
+  },
+  "outputRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1",
+  "archivePath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1/packages/poly2tri-7f0487a-je-rev1-windows.tar.xz",
+  "packageRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1/packages/poly2tri-7f0487a-je-rev1-windows.contents",
+  "scope": "One producer only; no consumer dispatch until real archive audit",
+  "expectedProducerBuilds": [
+    "Debug/MDd",
+    "Release/MD"
+  ],
+  "parallelJobs": 6
+}

@@ -1,0 +1,14 @@
+{
+  "status": "REDUCED_PROVIDER_CANDIDATE_AUTHORIZED",
+  "verifiedNativeCommands": 30,
+  "verifiedLinkTlogs": 4,
+  "auditSHA256": "2DCF99424EDFD3682574F0FCB367474EB27C13449DE6C4494B5C1AD47E0ECAFB",
+  "rationale": [
+    "All six auxiliary target objects are included in static PhysX by SDK source",
+    "Actual profile link inputs 14 versus 8 and six behavioral cases each passed",
+    "No direct auxiliary archive consumer found in Code, Gems/PhysX or cmake/3rdParty"
+  ],
+  "finalCandidate": "32 main archives across Debug/Checked/Profile/Release, original 56-output witness preserved",
+  "requiredBeforeIntegration": "Final contractual consumer Debug/Profile/Release/Profile-to-Checked plus staged package verification; actual engine link remains required",
+  "notClaimed": "Shipping size improvement, Editor acceptance, universal external consumer compatibility"
+}

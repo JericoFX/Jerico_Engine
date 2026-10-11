@@ -1,0 +1,46 @@
+{
+  "status": "PRODUCER_EXIT_ZERO; PARENT_ACCEPTANCE_PENDING",
+  "wrapperStartUTC": "2026-10-11T19:01:34.8510642Z",
+  "wrapperEndUTC": "2026-10-11T19:01:48.9627552Z",
+  "wrapperPID": 311792,
+  "preflightMatches": 121,
+  "postflightMatches": 121,
+  "inputs": 121,
+  "phases": [
+    {
+      "name": "producer",
+      "utc": "2026-10-11T19:01:35.0394082Z",
+      "PID": 313568,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "-DJE_POLY2TRI_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/poly2tri-7f0487a81124647f0a4037c4706ff414ce9fe22b.tar.gz",
+        "-DJE_POLY2TRI_SOURCE_MANIFEST:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-rev1-acquisition/source-snapshot-manifest.json",
+        "-DJE_POLY2TRI_VS_INSTANCE:PATH=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+        "-DJE_POLY2TRI_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/BuildPoly2TriPackage.cmake"
+      ],
+      "count": 6,
+      "exitCode": 0,
+      "elapsedSeconds": 13.7391262,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-preparation\\attempt1\\producer.stdout.raw.log",
+      "stdoutBytes": 255,
+      "stdoutSHA256": "5A05739B84CC3903559814EA02B286F13208AC7292020EE5927C7B7399A24FD7",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\poly2tri-rev1-preparation\\attempt1\\producer.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "checks": [
+    {
+      "archive": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1/packages/poly2tri-7f0487a-je-rev1-windows.tar.xz",
+      "bytes": 208736,
+      "sha256": "F00AF81D5124EDB6F09B4A2DE7A5C2855FA6D44F19FA7AC976ECB70FC79252A6",
+      "sidecar": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/poly2tri-local-rev1/packages/poly2tri-7f0487a-je-rev1-windows.tar.xz.SHA256SUMS",
+      "scope": "Producer outcome only; tar/COFF/CRT/consumer/engine validation pending"
+    }
+  ],
+  "failure": "",
+  "acceptance": "Parent only; this driver does not certify Atom/editor/AP/cook/runtime",
+  "retry": "None"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "IMPLEMENTED_NOT_COMPILED; HOLD for parent review and Luna native assignment",
+  "count": 8,
+  "entries": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/BuildPoly2TriPackage.cmake",
+      "bytes": 7674,
+      "sha256": "879272A248970A20A534128ED53C450F9987CD53EBA35020D0946887CF9B8057"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/CMakeLists.txt",
+      "bytes": 2151,
+      "sha256": "1F861DE0541A61A47AFEF579EDE4C92A127AAC430214CE9E4047000B34F50341"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/Findpoly2tri.cmake",
+      "bytes": 2668,
+      "sha256": "762D169BE833EF97885037EBE73E4F1D00CAB13095333F5AB8B9C8A368D60149"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/NOTICE.txt",
+      "bytes": 1157,
+      "sha256": "7E3E2EAF51A7F94081AC7EA9915058D134BC45F5E1D5076CB3753E6F56BC8EC7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/README.md",
+      "bytes": 1650,
+      "sha256": "0C156E26C78BF1AF8966F146542EDEF664BD20F9093982B4D552D1E149E89A41"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/Recipe.json",
+      "bytes": 1282,
+      "sha256": "61DF58F1DC94183E4C24E344CBF0D920C629A7568C0E12922556F219EBC95EF6"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/tests/CMakeLists.txt",
+      "bytes": 1681,
+      "sha256": "5785588939C282E3B88C0197E842289A0F08259355F0FD58FD8192C3B257035C"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Poly2Tri/tests/Poly2TriConsumer.cpp",
+      "bytes": 6350,
+      "sha256": "978D37EECD640BF8B3F9F274F40178127E34F3A5E820E2C0E81308CFB56A10B0"
+    }
+  ]
+}

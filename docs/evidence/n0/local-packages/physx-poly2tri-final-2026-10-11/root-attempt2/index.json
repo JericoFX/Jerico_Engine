@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "status": "RAW_EVIDENCE_COPIED_NOT_ENGINE_ACCEPTANCE",
+  "createdUTC": "2026-10-11T19:35:13.6127538Z",
+  "configureResult": {
+    "exitCode": 1,
+    "elapsedSeconds": 53.495,
+    "cmakeParentPeakWorkingSetBytes": 228429824,
+    "cmakeParentPeakVirtualBytes": 4766519296,
+    "cmakeParentSamples": 53,
+    "memoryScope": "direct CMake parent only; child MSBuild/compiler processes are not aggregated",
+    "endedUtc": "2026-10-11T19:33:15.8818973Z"
+  },
+  "postflightStatus": "POSTFLIGHT_ACCEPTED",
+  "scope": "Root configure generation exit1 AudioSystem.API/ProfilerImGui; postflight accepted. Packages resolved does not establish Engine/Editor/runtime PASS.",
+  "fileCount": 11,
+  "totalBytes": 186264,
+  "files": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\configure-native-start.json",
+      "name": "configure-native-start.json",
+      "bytes": 5163,
+      "sha256": "6D75BE9212B4F2A94323E78609E040F66619AE2CBFF5EAFE3A25FD6247451A20",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\configure-native-start.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\configure-argv.json",
+      "name": "configure-argv.json",
+      "bytes": 5608,
+      "sha256": "DA506F6A19DFDB39E0B630035D61BC4ADC46FD1E4698FD10896027841339B021",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\configure-argv.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\configure-result.json",
+      "name": "configure-result.json",
+      "bytes": 321,
+      "sha256": "2C07D59E84A284222C6F7F42CA9FA8A69415CF138F41C77C319476E50024E582",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\configure-result.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\configure.stdout.log",
+      "name": "configure.stdout.log",
+      "bytes": 107111,
+      "sha256": "0F9E1E2467150BFF1A70C0275E90EF394CA05F40F8D45BCF3D9F991B678D473E",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\configure.stdout.log"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\configure.stderr.log",
+      "name": "configure.stderr.log",
+      "bytes": 3291,
+      "sha256": "4C034EC55D66525E6C22642D7FBE568F437F618AA963EA3D931558545BCB964D",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\configure.stderr.log"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\root-postflight-guard-result.json",
+      "name": "root-postflight-guard-result.json",
+      "bytes": 641,
+      "sha256": "34E418CCA15A50760B3A82254AF63F405EC390F9C959262B147DD96910D12D0B",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\root-postflight-guard-result.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\input-postflight-deltas.json",
+      "name": "input-postflight-deltas.json",
+      "bytes": 54981,
+      "sha256": "BB49BA3B60580CDE5777804E1119CD5E7C83FFF01F42665986D1C40198513909",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\input-postflight-deltas.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\private-copy-comparison-before.json",
+      "name": "private-copy-comparison-before.json",
+      "bytes": 579,
+      "sha256": "3B16B3838F10A71E4D342844D1780AFE88CDCEB1027BEBAFE39785CA2F1D8890",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\private-copy-comparison-before.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\attempt2\\private-copy-comparison-after.json",
+      "name": "private-copy-comparison-after.json",
+      "bytes": 480,
+      "sha256": "4C9D303B669C7D37787BB9666DAE99B2A97FF4FCACC106CE437CB3EF3C589B35",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\private-copy-comparison-after.json"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\driver-rev2-source-diff.patch",
+      "name": "driver-rev2-source-diff.patch",
+      "bytes": 3875,
+      "sha256": "4F665F6CB6BD5D5B2E709979BAEBEBF2B9CDF3B8063753F003E7F414D893862C",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\driver-rev2-source-diff.patch"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-physx-poly2tri-rev1\\driver-rev2-regression-receipt.json",
+      "name": "driver-rev2-regression-receipt.json",
+      "bytes": 4214,
+      "sha256": "28FA16FEAE3738137859C37128F58181A030364C9656A1DE638A2EC3B8C5A566",
+      "destination": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\local-packages\\physx-poly2tri-final-2026-10-11\\root-attempt2\\driver-rev2-regression-receipt.json"
+    }
+  ]
+}

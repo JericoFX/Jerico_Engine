@@ -1,0 +1,772 @@
+{
+  "startedUTC": "2026-10-11T18:52:17.3664562Z",
+  "inputs": [
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "bytes": 23416,
+      "sha256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+      "fileVersion": "14.44.35228.0"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "bytes": 23376,
+      "sha256": "3D694C782F93E998FEC5DB0C2DF78153565DA23A028EE4618561FA0C33408489",
+      "fileVersion": "14.44.35228.0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\Profile\\JEPhysXConsumer.exe",
+      "bytes": 11844608,
+      "sha256": "863005E914F9097E3B87CE2D5BA939B3D993CD6AFE69396837FEC03D396E6B55",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\Profile\\JEPhysXMainChainConsumer.exe",
+      "bytes": 11844608,
+      "sha256": "DA9CE2D9465F9C95A0E613695D2A55584D181B571C38BA4CA0EB6401DA5B0B77",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXFoundation_static_64.lib",
+      "bytes": 828610,
+      "sha256": "D16F27770D8839AC0E3441A13C4AAB969A18C0661B925AD19D0FC79C87613031",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCommon_static_64.lib",
+      "bytes": 47574076,
+      "sha256": "A25B6B2F2ED0EAB56D003245EC24881C51BA58C562F352B324593B2F8985B447",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCooking_static_64.lib",
+      "bytes": 176966,
+      "sha256": "A0AE3BFF06D368F709A444D9D506555E8DF34141BD89E5FD1F58E4127471115A",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXExtensions_static_64.lib",
+      "bytes": 58473316,
+      "sha256": "6AC020FD543579FB364B0B4D0FA703705B0EA84362828F757E91A55AEB4A2C17",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCharacterKinematic_static_64.lib",
+      "bytes": 2665438,
+      "sha256": "FE271738C71422B9BB9CC77893051D2F7FDD002970A1EC832ED7921817C73F75",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXVehicle_static_64.lib",
+      "bytes": 21243648,
+      "sha256": "20BFCBBE6C6A02B169169DA59BDAA64A9EDF8AF51C2318ABBFC755C59B9F0C59",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXPvdSDK_static_64.lib",
+      "bytes": 4968802,
+      "sha256": "E66440B6D2AA182FDB2BD101CED894F0D5E15026E4C134C61073130D94B9C1E6",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysX_static_64.lib",
+      "bytes": 77136342,
+      "sha256": "98366F9CA661893CAC05DC8CDC8C9F333B50060337724312F73AD7224189B446",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevel_static_64.lib",
+      "bytes": 5002012,
+      "sha256": "54B516389FA2667237758D8C7DD41E4505EA15975323AE31492D0F31BF5FABB2",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevelAABB_static_64.lib",
+      "bytes": 3294942,
+      "sha256": "AD558A091DE455A0830FE3B36F63BFB0E663448EE16C077D8468477F77064A31",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevelDynamics_static_64.lib",
+      "bytes": 10772948,
+      "sha256": "8C0B26C101EC732A454FE16A5BB4468053ABB201375F184FCE80A7F72A1C2CEE",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXTask_static_64.lib",
+      "bytes": 259978,
+      "sha256": "92BB9785440493E038AF540CB0E64CE935299EB27467D5E966341CFE34F0B5CE",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\SceneQuery_static_64.lib",
+      "bytes": 1869988,
+      "sha256": "737AF2258C3741CD874804C9DFE6AC8F65FCA787496B70687D0F943DCED2AAA7",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\SimulationController_static_64.lib",
+      "bytes": 18947558,
+      "sha256": "9A1EE4DF4B6609BF2590808DF34975CDA55A23E82E8BAD2AE889ACC645EDF37B",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXConsumer.dir\\Profile\\JEPhysXConsumer.tlog\\link.command.1.tlog",
+      "bytes": 7378,
+      "sha256": "A3843630298EF95E0CDAB0DC336A1B9FF01B6C13080A877C5BA3DF8B1AB46D17",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXConsumer.dir\\Profile\\JEPhysXConsumer.tlog\\link.read.1.tlog",
+      "bytes": 8954,
+      "sha256": "36296F52FA9CACDB5B9E9AE6A7A1A0D45E078E381AB6E566CF38191EF4841DC6",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXMainChainConsumer.dir\\Profile\\JEPhysXM.BC99E6AA.tlog\\link.command.1.tlog",
+      "bytes": 5206,
+      "sha256": "524588AB56236FF88E2694DFB724C255D36B0F6DD4DE5D89B123337F648E2C6E",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXMainChainConsumer.dir\\Profile\\JEPhysXM.BC99E6AA.tlog\\link.read.1.tlog",
+      "bytes": 6704,
+      "sha256": "1C6580E7173ADFDF045A71FE25A4E94C835A18793705CAF84EEB639D91C2301E",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXConsumer.vcxproj",
+      "bytes": 20543,
+      "sha256": "5213ADCA9572589FB64763A740B0B1FF722A85943CC930BA0B423027E4AA472C",
+      "fileVersion": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXMainChainConsumer.vcxproj",
+      "bytes": 19451,
+      "sha256": "023C2FEB8F6135A1BEF9B75E1AB926171BD741D0E83E9ED54AF8DF3EEB7F8628",
+      "fileVersion": null
+    }
+  ],
+  "commands": [
+    {
+      "label": "JEPhysXConsumer-pe",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/headers",
+        "/dependents",
+        "/imports",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\Profile\\JEPhysXConsumer.exe"
+      ],
+      "nativePID": 229168,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0225167,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\JEPhysXConsumer-pe.stdout.log",
+      "stdoutBytes": 15524,
+      "stdoutSHA256": "4F48A9E73119752C64AB3FF83D6FB8E37664059F29F41EEEEF322BFA71D155C4",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\JEPhysXConsumer-pe.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "JEPhysXMainChainConsumer-pe",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/headers",
+        "/dependents",
+        "/imports",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\Profile\\JEPhysXMainChainConsumer.exe"
+      ],
+      "nativePID": 320620,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0194174,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\JEPhysXMainChainConsumer-pe.stdout.log",
+      "stdoutBytes": 15533,
+      "stdoutSHA256": "A5F6ED7D425D867BDD4DCD2A486FDD5E978CBE1AA989229A69C050E4504DE3E5",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\JEPhysXMainChainConsumer-pe.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXFoundation_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXFoundation_static_64.lib"
+      ],
+      "nativePID": 39668,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.019684,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXFoundation_static_64.stdout.log",
+      "stdoutBytes": 870,
+      "stdoutSHA256": "2A425A1D60CB01B09A3761D8674BADE299D89F381F810D7308AB66E3C69C9E55",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXFoundation_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXFoundation_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXFoundation_static_64.lib"
+      ],
+      "nativePID": 128556,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0178168,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXFoundation_static_64.stdout.log",
+      "stdoutBytes": 4546,
+      "stdoutSHA256": "7742A920AAA1BE5D13A8AF67CF453AE6C986FDE647BB450F098B4E8E4A4F4E65",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXFoundation_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXCommon_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCommon_static_64.lib"
+      ],
+      "nativePID": 144676,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0257724,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXCommon_static_64.stdout.log",
+      "stdoutBytes": 8649,
+      "stdoutSHA256": "2E9D8EA10573C68A84C70181D5A490F1852534575CFF413F3DC2A09CF7481949",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXCommon_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXCommon_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCommon_static_64.lib"
+      ],
+      "nativePID": 211056,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0255861,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXCommon_static_64.stdout.log",
+      "stdoutBytes": 44909,
+      "stdoutSHA256": "F47FA13225403B256EF0687E09C63EEE37750F077D9F904DECE09E8B807C34CD",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXCommon_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXCooking_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCooking_static_64.lib"
+      ],
+      "nativePID": 101896,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0192254,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXCooking_static_64.stdout.log",
+      "stdoutBytes": 254,
+      "stdoutSHA256": "482F5D87537A616187365C80D5759DBA8D63ACECF03BFA6FC30B4FC1B7AECCC7",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXCooking_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXCooking_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCooking_static_64.lib"
+      ],
+      "nativePID": 291400,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0174889,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXCooking_static_64.stdout.log",
+      "stdoutBytes": 1164,
+      "stdoutSHA256": "8DD08E8E9032291E5D0EA04877A4EDFEDE2B472CF691E0892A17E4ED8A315FB7",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXCooking_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXExtensions_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXExtensions_static_64.lib"
+      ],
+      "nativePID": 165628,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0233151,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXExtensions_static_64.stdout.log",
+      "stdoutBytes": 4036,
+      "stdoutSHA256": "05B50B8EE96B4D72E8EEFC8120288B8E308D93633E909A03C98A7C1FB7D7DDEE",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXExtensions_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXExtensions_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXExtensions_static_64.lib"
+      ],
+      "nativePID": 327460,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0295051,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXExtensions_static_64.stdout.log",
+      "stdoutBytes": 20906,
+      "stdoutSHA256": "A48B0C3A8B35F9A44257DA3DE5DEDAE82B78A760F256FAFB7554D8EA00109493",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXExtensions_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXCharacterKinematic_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCharacterKinematic_static_64.lib"
+      ],
+      "nativePID": 56384,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.019478,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXCharacterKinematic_static_64.stdout.log",
+      "stdoutBytes": 724,
+      "stdoutSHA256": "2D4B85D1C191F55B76BECB7C0154FE7A3BC01631038568EC9500AD0DF9BD0243",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXCharacterKinematic_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXCharacterKinematic_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXCharacterKinematic_static_64.lib"
+      ],
+      "nativePID": 5632,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0181179,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXCharacterKinematic_static_64.stdout.log",
+      "stdoutBytes": 3098,
+      "stdoutSHA256": "13C60606C0DAEDDE91402A39852F49E98E88BC3BEAA44ED715C48AB2A5649E7B",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXCharacterKinematic_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXVehicle_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXVehicle_static_64.lib"
+      ],
+      "nativePID": 282212,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0202622,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXVehicle_static_64.stdout.log",
+      "stdoutBytes": 1012,
+      "stdoutSHA256": "CCBD2477BA8CF5F2836B2F56036EE52B9AB7C647905C6489970F2FD377C85608",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXVehicle_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXVehicle_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXVehicle_static_64.lib"
+      ],
+      "nativePID": 172420,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0217545,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXVehicle_static_64.stdout.log",
+      "stdoutBytes": 5409,
+      "stdoutSHA256": "FBB34A292EA2ED50C805DDD805ED813E0BF805D393989D313F8015FC2405C682",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXVehicle_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXPvdSDK_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXPvdSDK_static_64.lib"
+      ],
+      "nativePID": 241276,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.019757,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXPvdSDK_static_64.stdout.log",
+      "stdoutBytes": 641,
+      "stdoutSHA256": "137E369EACDE7F20AA7BC816E248DDF05EF1C071600FA70178F7F3EA5473E57E",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXPvdSDK_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXPvdSDK_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXPvdSDK_static_64.lib"
+      ],
+      "nativePID": 152148,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0198981,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXPvdSDK_static_64.stdout.log",
+      "stdoutBytes": 3535,
+      "stdoutSHA256": "F45EC513C140B99CAFEF864AA85832C1D003F323060182E8F9BC75133052C890",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXPvdSDK_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysX_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysX_static_64.lib"
+      ],
+      "nativePID": 119364,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0333885,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysX_static_64.stdout.log",
+      "stdoutBytes": 21682,
+      "stdoutSHA256": "FBEA680A149A6DE526C83D3FE731E0B859B3E5B06ACAEBEA3CE1EB0BB6A28333",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysX_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysX_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysX_static_64.lib"
+      ],
+      "nativePID": 176248,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0338666,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysX_static_64.stdout.log",
+      "stdoutBytes": 42579,
+      "stdoutSHA256": "00E8E637FB80AF2E1BB340D21C7970209C0246DA585523C61205B5338F70C0DD",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysX_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-LowLevel_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevel_static_64.lib"
+      ],
+      "nativePID": 231072,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0196008,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-LowLevel_static_64.stdout.log",
+      "stdoutBytes": 820,
+      "stdoutSHA256": "1A2C18BF317B2793169038A848F0BE211E9205BBE3744AFD44A0805F86D9B593",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-LowLevel_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-LowLevel_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevel_static_64.lib"
+      ],
+      "nativePID": 23008,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0186637,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-LowLevel_static_64.stdout.log",
+      "stdoutBytes": 4695,
+      "stdoutSHA256": "8666E2A96D52242544328F06699416AFE4A538F4F47C3B2EEDEE0DE678E0FD86",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-LowLevel_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-LowLevelAABB_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevelAABB_static_64.lib"
+      ],
+      "nativePID": 143184,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0193391,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-LowLevelAABB_static_64.stdout.log",
+      "stdoutBytes": 577,
+      "stdoutSHA256": "96ACA997A841BD6720C0C8E186AED866B5902BA2E09B13982E8B6C07DE52206C",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-LowLevelAABB_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-LowLevelAABB_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevelAABB_static_64.lib"
+      ],
+      "nativePID": 318788,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.018768,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-LowLevelAABB_static_64.stdout.log",
+      "stdoutBytes": 3132,
+      "stdoutSHA256": "DC19CCF738BAC25140F9BFD69DB4ACF56080020F944FC9FF8E3287685CE9D580",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-LowLevelAABB_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-LowLevelDynamics_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevelDynamics_static_64.lib"
+      ],
+      "nativePID": 68644,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0200473,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-LowLevelDynamics_static_64.stdout.log",
+      "stdoutBytes": 1534,
+      "stdoutSHA256": "0A884FA41A35382FF33FD36E3E8F3FC911631C353DEBA63566A42278FEA3C865",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-LowLevelDynamics_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-LowLevelDynamics_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\LowLevelDynamics_static_64.lib"
+      ],
+      "nativePID": 251192,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0205115,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-LowLevelDynamics_static_64.stdout.log",
+      "stdoutBytes": 7888,
+      "stdoutSHA256": "6CCB3B22F7349BC41FEBF796740918FBA83A6B2E86E830BADDD010CA3C26E99D",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-LowLevelDynamics_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-PhysXTask_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXTask_static_64.lib"
+      ],
+      "nativePID": 268548,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0188959,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXTask_static_64.stdout.log",
+      "stdoutBytes": 154,
+      "stdoutSHA256": "3DE37ACA885BA6038E80915759A6D4BD10953CA3C0C8CD5AFFD3FD995503D74D",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-PhysXTask_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-PhysXTask_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\PhysXTask_static_64.lib"
+      ],
+      "nativePID": 119780,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0177356,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXTask_static_64.stdout.log",
+      "stdoutBytes": 823,
+      "stdoutSHA256": "0817778F50D0DD40F36EE550D92C66E343980E35548A27699EDA805BEF69E2F1",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-PhysXTask_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-SceneQuery_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\SceneQuery_static_64.lib"
+      ],
+      "nativePID": 77860,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0196055,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-SceneQuery_static_64.stdout.log",
+      "stdoutBytes": 322,
+      "stdoutSHA256": "66A05B45363C70A0A4F239C40AEA31844ECDD3CCE8EE6CD756E20C776D0A9C0F",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-SceneQuery_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-SceneQuery_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\SceneQuery_static_64.lib"
+      ],
+      "nativePID": 296404,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0181636,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-SceneQuery_static_64.stdout.log",
+      "stdoutBytes": 1944,
+      "stdoutSHA256": "74B1D1D32D7F54FB739016F9BE2A4C703E97D87A2C366D305DAFC2A6ADA7BC67",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-SceneQuery_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "archive-SimulationController_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+      "argv": [
+        "/list",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\SimulationController_static_64.lib"
+      ],
+      "nativePID": 79612,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0208452,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-SimulationController_static_64.stdout.log",
+      "stdoutBytes": 3002,
+      "stdoutSHA256": "7E712851D70663F508E2B104DB64F59814DE17C60CEF915B05E0B2D3F873D405",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\archive-SimulationController_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "directives-SimulationController_static_64",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/directives",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-local-rev1\\packages\\PhysX-5.1.1-je-cpu-rev1-windows.contents\\PhysX\\physx\\bin\\static\\profile\\SimulationController_static_64.lib"
+      ],
+      "nativePID": 316200,
+      "nativeExitCode": 0,
+      "elapsedSeconds": 0.0239625,
+      "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-SimulationController_static_64.stdout.log",
+      "stdoutBytes": 14383,
+      "stdoutSHA256": "DA34AB98468175B3529BF531A7282E8013DD7459ACCA553A4CD0294D3FC1CE09",
+      "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\link-audit-luna\\capture-rev2\\directives-SimulationController_static_64.stderr.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "linkTlogs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXConsumer.dir\\Profile\\JEPhysXConsumer.tlog\\link.command.1.tlog",
+      "bytes": 7378,
+      "sha256": "A3843630298EF95E0CDAB0DC336A1B9FF01B6C13080A877C5BA3DF8B1AB46D17",
+      "linkedPhysXArchives": [
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXFOUNDATION_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOMMON_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOOKING_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXEXTENSIONS_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCHARACTERKINEMATIC_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXVEHICLE_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXPVDSDK_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSX_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\LOWLEVEL_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\LOWLEVELAABB_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\LOWLEVELDYNAMICS_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXTASK_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\SCENEQUERY_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\SIMULATIONCONTROLLER_STATIC_64.LIB",
+        "F:/JERICOENGINE/JERICOENGINE/BUILD/N0-VALIDATION/LOCAL-PACKAGES/PHYSX-STAGE-PREPARATION-REV1/ATTEMPT1/CONSUMER-PROFILE/PROFILE/JEPHYSXCONSUMER.LIB"
+      ]
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXConsumer.dir\\Profile\\JEPhysXConsumer.tlog\\link.read.1.tlog",
+      "bytes": 8954,
+      "sha256": "36296F52FA9CACDB5B9E9AE6A7A1A0D45E078E381AB6E566CF38191EF4841DC6",
+      "linkedPhysXArchives": [
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXFOUNDATION_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOMMON_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOOKING_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXEXTENSIONS_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCHARACTERKINEMATIC_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXVEHICLE_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXPVDSDK_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSX_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\LOWLEVEL_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\LOWLEVELAABB_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\LOWLEVELDYNAMICS_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXTASK_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\SCENEQUERY_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\SIMULATIONCONTROLLER_STATIC_64.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\KERNEL32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\USER32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\GDI32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\WINSPOOL.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\SHELL32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\OLE32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\OLEAUT32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\UUID.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\COMDLG32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\ADVAPI32.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\MSVCPRT.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\MSVCRT.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\OLDNAMES.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\VCRUNTIME.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UCRT\\X64\\UCRT.LIB"
+      ]
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXMainChainConsumer.dir\\Profile\\JEPhysXM.BC99E6AA.tlog\\link.command.1.tlog",
+      "bytes": 5206,
+      "sha256": "524588AB56236FF88E2694DFB724C255D36B0F6DD4DE5D89B123337F648E2C6E",
+      "linkedPhysXArchives": [
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXFOUNDATION_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOMMON_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOOKING_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXEXTENSIONS_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCHARACTERKINEMATIC_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXVEHICLE_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXPVDSDK_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSX_STATIC_64.LIB",
+        "F:/JERICOENGINE/JERICOENGINE/BUILD/N0-VALIDATION/LOCAL-PACKAGES/PHYSX-STAGE-PREPARATION-REV1/ATTEMPT1/CONSUMER-PROFILE/PROFILE/JEPHYSXMAINCHAINCONSUMER.LIB"
+      ]
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\physx-stage-preparation-rev1\\attempt1\\consumer-profile\\JEPhysXMainChainConsumer.dir\\Profile\\JEPhysXM.BC99E6AA.tlog\\link.read.1.tlog",
+      "bytes": 6704,
+      "sha256": "1C6580E7173ADFDF045A71FE25A4E94C835A18793705CAF84EEB639D91C2301E",
+      "linkedPhysXArchives": [
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXFOUNDATION_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOMMON_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCOOKING_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXEXTENSIONS_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXCHARACTERKINEMATIC_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXVEHICLE_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSXPVDSDK_STATIC_64.LIB",
+        "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\LOCAL-PACKAGES\\PHYSX-LOCAL-REV1\\PACKAGES\\PHYSX-5.1.1-JE-CPU-REV1-WINDOWS.CONTENTS\\PHYSX\\PHYSX\\BIN\\STATIC\\PROFILE\\PHYSX_STATIC_64.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\KERNEL32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\USER32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\GDI32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\WINSPOOL.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\SHELL32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\OLE32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\OLEAUT32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\UUID.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\COMDLG32.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UM\\X64\\ADVAPI32.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\MSVCPRT.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\MSVCRT.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\OLDNAMES.LIB",
+        "C:\\PROGRAM FILES (X86)\\MICROSOFT VISUAL STUDIO\\2022\\BUILDTOOLS\\VC\\TOOLS\\MSVC\\14.44.35207\\LIB\\X64\\VCRUNTIME.LIB",
+        "C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\LIB\\10.0.26100.0\\UCRT\\X64\\UCRT.LIB"
+      ]
+    }
+  ],
+  "scope": "Existing Profile PE/static archive inspection only; no target execution or relink."
+}
