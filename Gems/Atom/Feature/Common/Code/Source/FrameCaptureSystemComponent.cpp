@@ -695,7 +695,13 @@ namespace AZ
                     }
                     else if (extension == "png")
                     {
-                        if (readbackResult.m_imageDescriptor.m_format == RHI::Format::R8G8B8A8_UNORM ||
+                        if (readbackResult.m_imageDescriptor.m_format == RHI::Format::R10G10B10A2_UNORM)
+                        {
+                            const auto frameCaptureResult = R10G10B10A2PngFrameCaptureOutput(capture->m_outputFilePath, readbackResult);
+                            capture->m_result = frameCaptureResult.m_result;
+                            capture->m_latestCaptureInfo = frameCaptureResult.m_errorMessage.value_or("");
+                        }
+                        else if (readbackResult.m_imageDescriptor.m_format == RHI::Format::R8G8B8A8_UNORM ||
                             readbackResult.m_imageDescriptor.m_format == RHI::Format::B8G8R8A8_UNORM)
                         {
                             AZStd::string folderPath;

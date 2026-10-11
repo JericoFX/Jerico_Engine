@@ -37,7 +37,7 @@ bool GUIApplicationServer::startListening(unsigned short port)
             m_serverListeningPort = port;
         }
 
-        if (!listen(QHostAddress::Any, aznumeric_cast<quint16>(m_serverListeningPort)))
+        if (!listen(QHostAddress::LocalHost, aznumeric_cast<quint16>(m_serverListeningPort)))
         {
             AZ_Error(
                 AssetProcessor::ConsoleChannel,

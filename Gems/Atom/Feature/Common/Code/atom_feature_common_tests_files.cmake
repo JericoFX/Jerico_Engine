@@ -9,6 +9,7 @@
 set(FILES
     Mocks/MockMeshFeatureProcessor.h
     Tests/CommonTest.cpp
+    Tests/FrameCaptureOutputTests.cpp
     Tests/CoreLights/ShadowmapAtlasTest.cpp
     Tests/IndexedDataVectorTests.cpp
     Tests/Mesh/MeshInstanceManagerTests.cpp

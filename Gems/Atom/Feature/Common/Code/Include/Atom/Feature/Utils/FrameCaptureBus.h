@@ -132,6 +132,12 @@ namespace AZ
         ATOM_FEATURE_COMMON_API FrameCaptureOutputResult DdsFrameCaptureOutput(
             const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
 
+        //! Writes an RGBA8 PNG preview of R10G10B10A2_UNORM, rounding normalized channels without gamma or tone mapping.
+        //! Also preserves the exact same packed readback in <outputFilePath>.dds; this sidecar is produced only for 10-bit PNG.
+        //! Both outputs must be new. Success requires both writes; a failed PNG write may leave the original DDS for diagnosis.
+        ATOM_FEATURE_COMMON_API FrameCaptureOutputResult R10G10B10A2PngFrameCaptureOutput(
+            const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
+
         //! Writes out content of ReadbackResult in the Ppm image format.
         ATOM_FEATURE_COMMON_API FrameCaptureOutputResult PpmFrameCaptureOutput(
             const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
