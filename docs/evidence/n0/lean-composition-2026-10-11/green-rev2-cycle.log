@@ -1,0 +1,19 @@
+exit=1
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Configuring incomplete, errors occurred!
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Subdirectories.cmake:313 (message):
+  While visiting
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/green-rev2/20261011-144613-7939cfd7/cycle/fixtures/Selected",
+  a cycle was detected in the "dependencies" array of the following gem.json
+  files in the directories:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/green-rev2/20261011-144613-7939cfd7/cycle/fixtures/Selected;F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/green-rev2/20261011-144613-7939cfd7/cycle/fixtures/Transitive
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Subdirectories.cmake:338 (reorder_dependent_gems_with_cycle_detection)
+  F:/JericoEngine/JericoEngine/cmake/Subdirectories.cmake:338 (reorder_dependent_gems_with_cycle_detection)
+  F:/JericoEngine/JericoEngine/cmake/Subdirectories.cmake:359 (reorder_dependent_gems_with_cycle_detection)
+  F:/JericoEngine/JericoEngine/cmake/Subdirectories.cmake:541 (reorder_dependent_gems_before_external_subdirs)
+  CMakeLists.txt:66 (get_external_subdirectories_in_use)
+
+

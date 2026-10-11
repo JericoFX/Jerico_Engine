@@ -1,0 +1,175 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+--   CompilerLauncher: Not configured
+--   No restricted path found in engine.json, using default: F:/JericoEngine/JericoEngine/restricted
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS=PUBLIC;/EHsc
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_EXPORT_SYMBOLS=
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_WARNINGS=PRIVATE;/W0
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_DEPRECATED_ENUM_ENUM_CONVERSION=PRIVATE;/Wv:18
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_FAST_MATH=/fp:fast
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_ENABLE_FAST_MATH=PRIVATE;/fp:fast
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_FAST_MATH=/fp:precise
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_DISABLE_FAST_MATH=PRIVATE;/fp:precise
+--   Checking downloaded package zlib-1.2.11-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Checking downloaded package freetype-2.11.1-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Checking downloaded package qt-6.11.2-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+--   Checking downloaded package python-3.10.13-je-rev3-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows
+--   Using Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382
+-- Executing CMake scripts...
+--   Using package mimalloc 3.5.2 (MIT)
+--   Checking downloaded package Lua-5.4.4-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows
+--   Using package rapidjson 1.1.0 (MIT)
+--   Checking downloaded package zstd-1.3.5-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows
+--   Using package googlebenchmark v1.7.0 (Apache-2.0)
+--   Checking downloaded package lz4-1.9.4-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-je-rev1-windows
+--   Using package googletest v1.18.0 (BSD-3-Clause)
+--   Using package sqlite 3.53.4 (blessing)
+--   Checking downloaded package OpenSSL-1.1.1o-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenSSL-1.1.1o-je-rev1-windows
+--   Checking downloaded package expat-2.4.2-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Using JE local Expat 2.4.2 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Checking downloaded package tiff-4.2.0.15-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/tiff-4.2.0.15-je-rev1-windows
+--   Using package antlr4 4.13.2 (BSD-3-Clause)
+--   Using package jsoncpp 1.6.2 (Public Domain OR MIT)
+--   Using package cli11 2.6.2 (BSD-3-Clause)
+--   Using package assimp v6.0.4 (Custom BSD-3-Clause)
+--   Using package xxhash 0.8.3 (BSD-2-Clause)
+--   Note: ly_enable_gems called with no PROJECT_NAME name, applying to all projects: 
+     - GEMS     Atom_Bootstrap;AtomShader;AtomViewportDisplayInfo;Camera;CommonFeaturesAtom;EditorModeFeedback;Maestro;PrefabBuilder;SceneProcessing 
+     - GEM_FILE 
+--   add_subdirectory will be called on the following external subdirectories in order:
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/DX12
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Vulkan
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Null
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RPI
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Bootstrap
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Asset/Shader
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayInfo
+--   F:/JericoEngine/JericoEngine/Gems/Camera
+--   F:/JericoEngine/JericoEngine/Gems/LmbrCentral
+--   F:/JericoEngine/JericoEngine/Gems/ImGui
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common
+--   F:/JericoEngine/JericoEngine/Gems/SurfaceData
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom
+--   F:/JericoEngine/JericoEngine/Gems/GradientSignal
+--   F:/JericoEngine/JericoEngine/Gems/GraphCanvas
+--   F:/JericoEngine/JericoEngine/Gems/GraphModel
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Component/DebugCamera
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialCanvas
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/ImguiAtom
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomImGuiTools
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomRenderOptions
+--   F:/JericoEngine/JericoEngine/Gems/EMotionFX
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EMotionFXAtom
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomFont
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayIcons
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomBridge
+--   F:/JericoEngine/JericoEngine/Gems/Atom
+--   F:/JericoEngine/JericoEngine/Gems/Maestro
+--   F:/JericoEngine/JericoEngine/Gems/Prefab/PrefabBuilder
+--   F:/JericoEngine/JericoEngine/Gems/SceneProcessing
+--   F:/JericoEngine/JericoEngine/Projects/JEEditorFixture
+--   F:/JericoEngine/JericoEngine/Gems/CameraFramework
+--   F:/JericoEngine/JericoEngine/Gems/WhiteBox
+--   F:/JericoEngine/JericoEngine/Gems/PhysX/Common
+--   F:/JericoEngine/JericoEngine/Gems/PhysX/Core/PhysX5
+--   F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/DX12/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/DX12/restricted
+--   Using package D3D12MemoryAllocator v3.2.0 (MIT)
+--   Checking downloaded package d3dx12-headers-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/d3dx12-headers-je-rev1-windows
+--   Using JE local original d3dx12 header from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/d3dx12-headers-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Vulkan/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Vulkan/restricted
+--   Checking downloaded package vulkan-validationlayers-1.3.261-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.3.261-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Null/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Null/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RPI/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RPI/restricted
+--   Using package meshoptimizer v1.2 (MIT)
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Bootstrap/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Bootstrap/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Asset/Shader/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Asset/Shader/restricted
+--   Checking downloaded package mcpp-2.7.2_az.2-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/mcpp-2.7.2_az.2-je-rev1-windows
+--   Checking downloaded package DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayInfo/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayInfo/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Camera/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Camera/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/LmbrCentral/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/LmbrCentral/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/ImGui/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/ImGui/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/SurfaceData/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/SurfaceData/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/restricted
+--   Checking downloaded package astc-encoder-3.2-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/astc-encoder-3.2-je-rev1-windows
+--   Using package squish-ccr 2.00-alpha2 (MIT)
+--   Using package sse2neon v1.9.1 (MIT)
+--   Checking downloaded package ISPCTexComp-36b80aa-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/ISPCTexComp-36b80aa-je-rev1-windows
+--   Checking downloaded package OpenEXR-3.1.3-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenEXR-3.1.3-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/GradientSignal/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/GradientSignal/restricted
+--   Checking downloaded package openimageio-opencolorio-2.3.17-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows
+--   Checking downloaded package png-1.6.37-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/png-1.6.37-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/GraphCanvas/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/GraphCanvas/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/GraphModel/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/GraphModel/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Component/DebugCamera/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Component/DebugCamera/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialCanvas/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialCanvas/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/ImguiAtom/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/ImguiAtom/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomImGuiTools/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomImGuiTools/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomRenderOptions/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomRenderOptions/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/EMotionFX/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/EMotionFX/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EMotionFXAtom/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EMotionFXAtom/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomFont/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomFont/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayIcons/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayIcons/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomBridge/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomBridge/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Maestro/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Maestro/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Prefab/PrefabBuilder/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Prefab/PrefabBuilder/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/SceneProcessing/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/SceneProcessing/restricted
+--   Using package mikktspace 1.0 (Zlib)
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/CameraFramework/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/CameraFramework/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/WhiteBox/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/WhiteBox/restricted
+--   Using package OpenMesh v11.0 (BSD-3-Clause)
+--   WhiteBox Gem uses Manifold v3.5.1 (Apache-2.0) https://github.com/elalish/manifold.git
+--       - Manifold provides the CSG boolean operations (Api::MeshBoolean).
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/PhysX/Common/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/PhysX/Common/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/PhysX/Core/PhysX5/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/PhysX/Core/PhysX5/restricted
+--   Downloading package into F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/PhysX-5.1.1-rev4-windows
+-- Configuring incomplete, errors occurred!

@@ -1,0 +1,7 @@
+CMake Error at cmake/tests/JELeanCompositionTests.cmake:40 (message):
+  JE lean composition failures:
+  composition;selected_nvcloth;user_nvcloth;child_only;child_depends_owner;cached;
+  evidence
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/red-rev2/20261011-144550-2a4137f8
+
+

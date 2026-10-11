@@ -1,0 +1,93 @@
+{
+  "red": {
+    "exitCode": 1,
+    "elapsed": "13,929s",
+    "casesFailing": "composition;selected_nvcloth;user_nvcloth;child_only;child_depends_owner;cached",
+    "expectedRejects": "missing;cycle",
+    "run": "red-rev2/20261011-144550-2a4137f8"
+  },
+  "green": {
+    "exitCode": 0,
+    "elapsed": "13,909s",
+    "cases": 8,
+    "run": "green-rev2/20261011-144613-7939cfd7"
+  },
+  "sourceHashes": [
+    {
+      "path": "cmake/Gems.cmake",
+      "preSha256": "754F48F598125A89F68C5240047582D614418844EB0D2E4CFE6E6679D3730210",
+      "postSha256": "754F48F598125A89F68C5240047582D614418844EB0D2E4CFE6E6679D3730210",
+      "unchanged": true
+    },
+    {
+      "path": "build/n0-validation/local-packages/lean-composition-regression/original-Subdirectories.cmake",
+      "preSha256": "88942754DA4347F5F62A0ADEBC9D485BA3F23DA15F63BEA9FA33056DDFC7FD87",
+      "postSha256": "88942754DA4347F5F62A0ADEBC9D485BA3F23DA15F63BEA9FA33056DDFC7FD87",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/LySet.cmake",
+      "preSha256": "D5E669C155618E16A8096100F0F211E1DE8B25F16B5E769AF4F7CA6A56445253",
+      "postSha256": "D5E669C155618E16A8096100F0F211E1DE8B25F16B5E769AF4F7CA6A56445253",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/tests/JELeanCompositionTests.cmake",
+      "preSha256": "D16FDECC46C4E593B14530F81C24071CB01CD195337FC4B1339DC480A51FDDA5",
+      "postSha256": "D16FDECC46C4E593B14530F81C24071CB01CD195337FC4B1339DC480A51FDDA5",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/tests/JELeanCompositionFixture/CMakeLists.txt",
+      "preSha256": "0B7D15DD44154127E6F49319E9FA887AEC0F9A83962F5CB88E28C6719360E8F2",
+      "postSha256": "0B7D15DD44154127E6F49319E9FA887AEC0F9A83962F5CB88E28C6719360E8F2",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/FileUtil.cmake",
+      "preSha256": "2F393D6DCA8DAB38A32158842CA7982FEBA9D492CEFF46045ABCEE758B99E0B4",
+      "postSha256": "2F393D6DCA8DAB38A32158842CA7982FEBA9D492CEFF46045ABCEE758B99E0B4",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/Version.cmake",
+      "preSha256": "6B808F905207847CBCE47149D84F2444507C941EFD5AAA4BA0185A3EC5165777",
+      "postSha256": "6B808F905207847CBCE47149D84F2444507C941EFD5AAA4BA0185A3EC5165777",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/O3DEJson.cmake",
+      "preSha256": "5475850C0FB22D7FFF9469AE43E2C5BCEF3553245CEA14AB859564F1BB639407",
+      "postSha256": "5475850C0FB22D7FFF9469AE43E2C5BCEF3553245CEA14AB859564F1BB639407",
+      "unchanged": true
+    },
+    {
+      "path": "cmake/Subdirectories.cmake",
+      "preSha256": "9DD927E5C45A172BFE77E013B73A688352B5B916896F02F7F294CE6F2ACEA914",
+      "postSha256": "9DD927E5C45A172BFE77E013B73A688352B5B916896F02F7F294CE6F2ACEA914",
+      "unchanged": true
+    }
+  ],
+  "logs": [
+    {
+      "path": "red-rev2.stdout.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    },
+    {
+      "path": "red-rev2.stderr.log",
+      "sha256": "2ECF5CB7A86D46E79C93FDD44938EFE4C58C2C00F278A3E73ED2EBDF71FBD858",
+      "bytes": 333
+    },
+    {
+      "path": "green-rev2.stdout.log",
+      "sha256": "670D099BC04FFF68DCE7754382B7E45C857D558F4334443D6E1F81B0BEF6834F",
+      "bytes": 178
+    },
+    {
+      "path": "green-rev2.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "bytes": 0
+    }
+  ]
+}

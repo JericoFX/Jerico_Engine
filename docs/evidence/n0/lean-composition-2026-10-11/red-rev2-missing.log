@@ -1,0 +1,18 @@
+exit=1
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Configuring incomplete, errors occurred!
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Gems.cmake:138 (message):
+  Unable to locate gem path for Gem "MissingRequired".  Is the gem registered
+  in either the ~/.o3de/o3de_manifest.json,
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/red-rev2/20261011-144550-2a4137f8/missing/fixtures/engine.json,
+  any project.json or any gem.json which itself is registered?
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Gems.cmake:158 (get_all_gem_dependencies)
+  F:/JericoEngine/JericoEngine/cmake/Gems.cmake:478 (get_all_gem_dependencies)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/original-Subdirectories.cmake:422 (ly_enable_gems)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lean-composition-regression/original-Subdirectories.cmake:478 (get_all_external_subdirectories_for_o3de_object)
+  CMakeLists.txt:66 (get_external_subdirectories_in_use)
+
+

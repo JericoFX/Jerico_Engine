@@ -1,0 +1,197 @@
+[
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\luna-rev2-pre-post-hashes.json",
+    "published": "luna-rev2-pre-post-hashes.json",
+    "sha256": "406E71F6A4C31B4B62B9D1F78779C49AD1C79A9BBF255F712F4C330C04333448",
+    "bytes": 3496
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2.stdout.log",
+    "published": "red-rev2.stdout.log",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "bytes": 0
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2.stderr.log",
+    "published": "red-rev2.stderr.log",
+    "sha256": "2ECF5CB7A86D46E79C93FDD44938EFE4C58C2C00F278A3E73ED2EBDF71FBD858",
+    "bytes": 333
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2.exitcode.txt",
+    "published": "red-rev2.exitcode.txt",
+    "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B",
+    "bytes": 1
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2.elapsed.txt",
+    "published": "red-rev2.elapsed.txt",
+    "sha256": "0C1F9D2D7C71E1A1B3EC4AAD7C98CD24B382B148EC10376C23D2C239155A3EE2",
+    "bytes": 7
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2.stdout.log",
+    "published": "green-rev2.stdout.log",
+    "sha256": "670D099BC04FFF68DCE7754382B7E45C857D558F4334443D6E1F81B0BEF6834F",
+    "bytes": 178
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2.stderr.log",
+    "published": "green-rev2.stderr.log",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "bytes": 0
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2.exitcode.txt",
+    "published": "green-rev2.exitcode.txt",
+    "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+    "bytes": 1
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2.elapsed.txt",
+    "published": "green-rev2.elapsed.txt",
+    "sha256": "2A4CF7A69EC837FCFEE5B73524112619E01336960DDA6A8DB6BEE1F5872428CD",
+    "bytes": 7
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\lean-composition-regression\\original-Subdirectories.cmake",
+    "published": "original-Subdirectories.cmake.gz",
+    "sha256": "55A1C1E6008025AD3C781E08F6BABDD927AA0F52A4C996EEC6291C28221CA9E5",
+    "bytes": 6955,
+    "sourceSHA256": "88942754DA4347F5F62A0ADEBC9D485BA3F23DA15F63BEA9FA33056DDFC7FD87",
+    "sourceBytes": 30742,
+    "encoding": "gzip; decoded bytes verified unchanged; preserves original trailing whitespace and CRLF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\cached\\result.log",
+    "published": "red-rev2-cached.log",
+    "sha256": "C66DCE90558D40F67D8C644E12DD2BB51677883FA3E425C779FCB08F75275DCD",
+    "bytes": 343
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\child_depends_owner\\result.log",
+    "published": "red-rev2-child_depends_owner.log",
+    "sha256": "C66DCE90558D40F67D8C644E12DD2BB51677883FA3E425C779FCB08F75275DCD",
+    "bytes": 343
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\child_only\\result.log",
+    "published": "red-rev2-child_only.log",
+    "sha256": "C66DCE90558D40F67D8C644E12DD2BB51677883FA3E425C779FCB08F75275DCD",
+    "bytes": 343
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\composition\\result.log",
+    "published": "red-rev2-composition.log",
+    "sha256": "C66DCE90558D40F67D8C644E12DD2BB51677883FA3E425C779FCB08F75275DCD",
+    "bytes": 343
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\cycle\\result.log",
+    "published": "red-rev2-cycle.log",
+    "sha256": "B6FC205FE170F74736E61E397ADD6E1E0D7BBA92EB9C4865440CE5AFB2581879",
+    "bytes": 1714
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\missing\\result.log",
+    "published": "red-rev2-missing.log",
+    "sha256": "9E624FA8DA07A9DA1406F06342029FED46AB456E1004FE9409B163559A28DFDA",
+    "bytes": 1181
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\selected_nvcloth\\result.log",
+    "published": "red-rev2-selected_nvcloth.log",
+    "sha256": "C66DCE90558D40F67D8C644E12DD2BB51677883FA3E425C779FCB08F75275DCD",
+    "bytes": 343
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\red-rev2\\20261011-144550-2a4137f8\\user_nvcloth\\result.log",
+    "published": "red-rev2-user_nvcloth.log",
+    "sha256": "C66DCE90558D40F67D8C644E12DD2BB51677883FA3E425C779FCB08F75275DCD",
+    "bytes": 343
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\cached\\result.log",
+    "published": "green-rev2-cached.log",
+    "sha256": "CF36FDF1CFFC853CA36E44AA7797FA9A777F99EFA99631C076622F744AD6C106",
+    "bytes": 397
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\child_depends_owner\\result.log",
+    "published": "green-rev2-child_depends_owner.log",
+    "sha256": "063FE582AD64517F8C48ED65FB8248E5D5A6E13E869601F1B4D3BBA2580A16C5",
+    "bytes": 423
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\child_only\\result.log",
+    "published": "green-rev2-child_only.log",
+    "sha256": "87C10CB38B185209F9D34A99B4DAFF4343A2EFBC1E13A3B69B81C7F9C82C2012",
+    "bytes": 405
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\composition\\result.log",
+    "published": "green-rev2-composition.log",
+    "sha256": "648C90FD02609F3660F77882F876D8D84C9418B5135F4BDB8099AFB26FF73238",
+    "bytes": 407
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\cycle\\result.log",
+    "published": "green-rev2-cycle.log",
+    "sha256": "7D02337F2A2067F65F9F53751898B30B5205B09837E45EE14C4E769DD4CEE99A",
+    "bytes": 1390
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\missing\\result.log",
+    "published": "green-rev2-missing.log",
+    "sha256": "854D80ADD95F378F40082AACA98BE9112A3BC6947EB3969D36734E97C061C55B",
+    "bytes": 1051
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\selected_nvcloth\\result.log",
+    "published": "green-rev2-selected_nvcloth.log",
+    "sha256": "649BCFAB6EED213C668ECDF73E3721CBCBA858E38FF7D84BAEE5AAAF99AEEF09",
+    "bytes": 417
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lean-composition-regression\\green-rev2\\20261011-144613-7939cfd7\\user_nvcloth\\result.log",
+    "published": "green-rev2-user_nvcloth.log",
+    "sha256": "96F744AD0F0F14E41C347FE3E83AB1DC021A6C7964CA1A34148B932AA4D6BFDA",
+    "bytes": 409
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\root-lean-composition-rev1\\attempt1\\configure-result.json",
+    "published": "root-configure-result.json",
+    "sha256": "A878F7B798DC6EAEBB123A68A0037BBD3AE85F9CE3CCF68C7A17814345C0224E",
+    "bytes": 320
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\root-lean-composition-rev1\\attempt1\\configure.stdout.log",
+    "published": "root-configure.stdout.log",
+    "sha256": "A3BE8B23E7CFE77B3E1CAE43924C57E8A5D96FF910624C2861D68D8889D52CB5",
+    "bytes": 17823
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\root-lean-composition-rev1\\attempt1\\configure.stderr.log",
+    "published": "root-configure.stderr.log",
+    "sha256": "7A08424DB685AF2C69C4410C0D9702F4F550AD1FE2F20BF858F638373A860617",
+    "bytes": 2192
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\root-lean-composition-rev1\\attempt1\\configure-native-start.json",
+    "published": "root-configure-native-start.json",
+    "sha256": "8C3BA7F7A641B3CA26DC268AB19E0E16ABE6FCCD43D185A75A8546A22C059CB1",
+    "bytes": 5163
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\root-lean-composition-rev1\\attempt1\\root-postflight-guard-result.json",
+    "published": "root-root-postflight-guard-result.json",
+    "sha256": "ABEDF4C1E1E1D2831988640513D6671C2B9A65A08D6C1A58A699C648D7E23557",
+    "bytes": 642
+  },
+  {
+    "source": "build\\n0-validation\\local-packages\\root-lean-composition-rev1\\attempt1\\input-postflight-deltas.json",
+    "published": "root-input-postflight-deltas.json",
+    "sha256": "4A2AF5A316EBF5E9FD29CD555E13AB030B41C89A42E575361E40FE09FC2CB32A",
+    "bytes": 6034
+  }
+]
