@@ -1,0 +1,213 @@
+{
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\strawberry-perl-5.42.3.1-64bit-portable.zip",
+  "sha256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+  "members": 23022,
+  "files": 20858,
+  "directories": 2164,
+  "payload_bytes": 1034502031,
+  "issues": [],
+  "safe_for_regular_file_extraction": true,
+  "licenses": [
+    {
+      "path": "c/lib/python3.9/LICENSE.txt",
+      "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70",
+      "bytes": 13925
+    },
+    {
+      "path": "c/share/cmake-3.29/Templates/CPack.GenericLicense.txt",
+      "sha256": "f7599eb8577a498ba859547c8f5ac1c3302a4b1cb929a3ee61bc5e948d8aa3d6",
+      "bytes": 101
+    },
+    {
+      "path": "licenses/License.rtf",
+      "sha256": "fcfdaaea40d5e45b479b5ec1a370e1373662bf01c1fe9405a3befa3b486c7bf9",
+      "bytes": 5882
+    },
+    {
+      "path": "licenses/fribidi/COPYING",
+      "sha256": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b",
+      "bytes": 26440
+    },
+    {
+      "path": "licenses/graphite2/COPYING",
+      "sha256": "2c272829ff23f182c8bf7ea12fedea69b0ae148663123ed5240c117cb129c9c1",
+      "bytes": 1235
+    },
+    {
+      "path": "licenses/graphite2/LICENSE",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "bytes": 26527
+    },
+    {
+      "path": "licenses/harfbuzz/COPYING",
+      "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+      "bytes": 1971
+    },
+    {
+      "path": "licenses/libbzip2/LICENSE",
+      "sha256": "4919cfb14a73cd64fcef67b107613970cf1659a09aa675dba31314f373bc7204",
+      "bytes": 1901
+    },
+    {
+      "path": "licenses/libdb-BerkeleyDB/LICENSE",
+      "sha256": "9535819925d34ddeb8e7609525a287f93bc91512c28e31994b395bef25b35da2",
+      "bytes": 41787
+    },
+    {
+      "path": "licenses/libexpat/COPYING",
+      "sha256": "122f2c27000472a201d337b9b31f7eb2b52d091b02857061a8880371612d9534",
+      "bytes": 1144
+    },
+    {
+      "path": "licenses/libffi/LICENSE",
+      "sha256": "67894089811f93fca47a76f85e017da6f8582d4ba0905963c6e0f1ad6df7a195",
+      "bytes": 1132
+    },
+    {
+      "path": "licenses/libfontconfig/COPYING",
+      "sha256": "51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067",
+      "bytes": 8616
+    },
+    {
+      "path": "licenses/libfreeglut/COPYING",
+      "sha256": "b6593d5ec4c113a274abb85b10e8615895cb0ddb89f7912af5fe5aa8df38a275",
+      "bytes": 1439
+    },
+    {
+      "path": "licenses/libgd/COPYING",
+      "sha256": "005f4b6b0141d1bd11d371bbf7d4f67947f85a4906b7f5465f942204cf918ba3",
+      "bytes": 2991
+    },
+    {
+      "path": "licenses/libgdbm/COPYING",
+      "sha256": "690d762f2e8e149ab1e2d6a409a3853b6151a2533b2382fae549a176d6bedecf",
+      "bytes": 35072
+    },
+    {
+      "path": "licenses/libgif/COPYING",
+      "sha256": "0c9b7990ecdca88b676db232c226548ac408b279f550d424d996f0d83591dd8e",
+      "bytes": 1088
+    },
+    {
+      "path": "licenses/libgmp/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "path": "licenses/libiconv/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "path": "licenses/libidn2/COPYING",
+      "sha256": "73483f797a83373fca1b968c11785b98c4fc4803cdc7d3210811ca8b075d6d76",
+      "bytes": 1555
+    },
+    {
+      "path": "licenses/libmpc/COPYING.LESSER",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "bytes": 7651
+    },
+    {
+      "path": "licenses/libmpfr/COPYING",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "licenses/libpng/LICENSE",
+      "sha256": "7317e078e2d3b5d7ba5a6159e650945153262b44b76f6700f8e9edb261c5143e",
+      "bytes": 5345
+    },
+    {
+      "path": "licenses/libssh2/COPYING",
+      "sha256": "fda5e2522c58ba1f31c9f2044747616457466f4aebec16ade4af86e3a16a8e02",
+      "bytes": 1959
+    },
+    {
+      "path": "licenses/libtiff/LICENSE.md",
+      "sha256": "0780558a8bfba0af1160ec1ff11ade4f41c0d7deafd6ecfc796b492a788e380d",
+      "bytes": 1164
+    },
+    {
+      "path": "licenses/libunistring/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "path": "licenses/libwebp/COPYING",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "bytes": 1496
+    },
+    {
+      "path": "licenses/libxpm/COPYING",
+      "sha256": "ed3b06bb3b75a0954bd6837a96b41a4676f60dfeee647271613aadecc0fd596e",
+      "bytes": 3792
+    },
+    {
+      "path": "licenses/libxslt/COPYING",
+      "sha256": "7e48e290b6bfccc2ec1b297023a1d77f2fd87417f71fbb9f50aabef40a851819",
+      "bytes": 2968
+    },
+    {
+      "path": "licenses/libxz/COPYING",
+      "sha256": "29a1e305b2e34eefe5d4602d00cde1d528b71c5d9f2eec5106972cf6ddb6f73f",
+      "bytes": 3347
+    },
+    {
+      "path": "licenses/libxz/COPYING.GPLv2",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092
+    },
+    {
+      "path": "licenses/libxz/COPYING.GPLv3",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "licenses/libxz/COPYING.LGPLv2.1",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "path": "licenses/openssl/LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "bytes": 10175
+    },
+    {
+      "path": "licenses/patch/COPYING",
+      "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670",
+      "bytes": 17992
+    },
+    {
+      "path": "licenses/perl/Artistic",
+      "sha256": "dd90d4f42e4dcadf5a7c09eea0189d93c7b37ae560c91f0f6d5233ed3b9292a2",
+      "bytes": 6321
+    },
+    {
+      "path": "licenses/perl/Copying",
+      "sha256": "8979e6dd61852041643c5c5c40ea63b2bd1b438a67d114e62cbaef808c514315",
+      "bytes": 12522
+    },
+    {
+      "path": "licenses/postgresql/COPYRIGHT",
+      "sha256": "9bf20ee493926a7e17a74bc7f05089fbc014269667b1540bc35a6b194a40c9de",
+      "bytes": 1192
+    },
+    {
+      "path": "licenses/readline/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "path": "licenses/termcap/COPYING",
+      "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670",
+      "bytes": 17992
+    },
+    {
+      "path": "perl/lib/pods/perlartistic.pod",
+      "sha256": "137c097d0615aea42eda7a5087baa3f81aab1a431b9046d5e858e8c8c31987c0",
+      "bytes": 7010
+    }
+  ],
+  "tool_executed": false
+}

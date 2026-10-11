@@ -1,0 +1,133 @@
+{
+  "sourceChanges": 3,
+  "sourceInputs": [
+    {
+      "path": "Code/Editor/StartupLogoDialog.cpp",
+      "bytes": 3600,
+      "sha256": "7b3d8d3353aaed24ddfaa5a7be899736c372b6656ae004f5b59e3c0b94ad9cec"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.h",
+      "bytes": 1408,
+      "sha256": "256a61da331adec67ebc176d99df81b8abb67c1a5ee0ba3cbbbb92d041afdbf4"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.qrc",
+      "bytes": 114,
+      "sha256": "984b0c725144cdf8a4b0215d5d7982b1e4a66a94357279e205d125c267ab2f8e"
+    }
+  ],
+  "allUIFilesPreserved": 40,
+  "pngAndSVGByteExact": true,
+  "startupUIByteExact": true,
+  "mcpp17InputsUnchanged": true,
+  "mcppWitness": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "expectedSHA256": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382",
+      "actualSHA256": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/ApplyMcppPatch.cmake",
+      "expectedSHA256": "87f5aa8cfd5b00eb41cc721e300e7214ab1c143e93018aa4985dc55b57a1e4ec",
+      "actualSHA256": "87f5aa8cfd5b00eb41cc721e300e7214ab1c143e93018aa4985dc55b57a1e4ec",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake",
+      "expectedSHA256": "234d2d39993b56b5472a24d61aa95bdce5239cb0c6f63346a9d6040a7cbdd611",
+      "actualSHA256": "234d2d39993b56b5472a24d61aa95bdce5239cb0c6f63346a9d6040a7cbdd611",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/CMakeLists.txt",
+      "expectedSHA256": "9ac4314cb567685b7565955c02bcd4aa1e07701018ac7e04080d21d56225aa20",
+      "actualSHA256": "9ac4314cb567685b7565955c02bcd4aa1e07701018ac7e04080d21d56225aa20",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/Findmcpp.cmake",
+      "expectedSHA256": "b9552d89681d392b85698706f88125a88e4ad0bce8402d9ed962adddf620f786",
+      "actualSHA256": "b9552d89681d392b85698706f88125a88e4ad0bce8402d9ed962adddf620f786",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch",
+      "expectedSHA256": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b",
+      "actualSHA256": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/McppPatchManifest.json",
+      "expectedSHA256": "9f8522a8a06ab9c4207f5f5ee7e7b41837831118512b07b0a8507bb5997aaec3",
+      "actualSHA256": "9f8522a8a06ab9c4207f5f5ee7e7b41837831118512b07b0a8507bb5997aaec3",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/NOTICE.txt",
+      "expectedSHA256": "b880bdc496ae6331fbbf096cc749d214fe3f8e966f997247a1ace314884e029d",
+      "actualSHA256": "b880bdc496ae6331fbbf096cc749d214fe3f8e966f997247a1ace314884e029d",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/README.md",
+      "expectedSHA256": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61",
+      "actualSHA256": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/CMakeLists.txt",
+      "expectedSHA256": "1e27311b5821ae173bfef949fe5bc0062e27414b9c48021391c31bfd0452a681",
+      "actualSHA256": "1e27311b5821ae173bfef949fe5bc0062e27414b9c48021391c31bfd0452a681",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/McppConsumer.cpp",
+      "expectedSHA256": "96e989c07017976b74d8fc908524a5f90afd803a74c5e15d27762dbc55e9ccba",
+      "actualSHA256": "96e989c07017976b74d8fc908524a5f90afd803a74c5e15d27762dbc55e9ccba",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/visualc.mak.original",
+      "expectedSHA256": "a35dc1b5c93acf904ebbad69065125ff93f1b2905d822ae518aa6593fb000c7f",
+      "actualSHA256": "a35dc1b5c93acf904ebbad69065125ff93f1b2905d822ae518aa6593fb000c7f",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "expectedSHA256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "actualSHA256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/mcpp-2.7.2.tar.gz",
+      "expectedSHA256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+      "actualSHA256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "expectedSHA256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "actualSHA256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "expectedSHA256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "actualSHA256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "unchanged": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "expectedSHA256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "actualSHA256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "unchanged": true
+    }
+  ],
+  "sourceDiff": "source-diff.patch",
+  "newFreezeSHA256": "BEBD49E54ECEDC444898E4D1C17F7FC5101DB00CCB34DBCF39A2D0F2DE876DB2",
+  "preservationReceiptSHA256": "A63ABA5A3082C3F361559D8035485A64A19DF8996B850A26C86FD99BE01ADC82",
+  "rccValidation": "PENDING PACKABILITY ONLY",
+  "runtimeValidation": "PENDING REAL EDITOR LOADING/ABOUT/DPI/PROGRESS"
+}

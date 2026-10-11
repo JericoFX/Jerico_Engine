@@ -1,0 +1,38 @@
+{
+  "argv": [
+    "-tvf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz"
+  ],
+  "argc": 2,
+  "native_exit_code": 0,
+  "tar_verbose_count": 1337,
+  "nonregular_count": 0,
+  "nonregular": null,
+  "expected_member_count": 1337,
+  "member_mismatch_count": 2674,
+  "missing": [
+    "FindOpenSSL.cmake",
+    "JERequireLocalPath.cmake",
+    "LICENSES/O3DE/LICENSE.txt",
+    "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+    "LICENSES/O3DE/LICENSE_MIT.TXT",
+    "LICENSES/OpenSSL/ACKNOWLEDGEMENTS",
+    "LICENSES/OpenSSL/AUTHORS",
+    "LICENSES/OpenSSL/LICENSE",
+    "LICENSES/OpenSSL/build-tools/Text-Template-1.46/Artistic",
+    "LICENSES/OpenSSL/build-tools/Text-Template-1.46/COPYING"
+  ],
+  "extra": [
+    "Oct. 10 21:47 FindOpenSSL.cmake",
+    "Oct. 10 21:47 JERequireLocalPath.cmake",
+    "Oct. 10 17:05 LICENSES/O3DE/LICENSE.txt",
+    "Oct. 10 17:05 LICENSES/O3DE/LICENSE_APACHE2.TXT",
+    "Oct. 10 17:05 LICENSES/O3DE/LICENSE_MIT.TXT",
+    "May. 03  2022 LICENSES/OpenSSL/ACKNOWLEDGEMENTS",
+    "May. 03  2022 LICENSES/OpenSSL/AUTHORS",
+    "May. 03  2022 LICENSES/OpenSSL/LICENSE",
+    "May. 03  2022 LICENSES/OpenSSL/build-tools/Text-Template-1.46/Artistic",
+    "May. 03  2022 LICENSES/OpenSSL/build-tools/Text-Template-1.46/COPYING"
+  ],
+  "listing_sha256": "84FC921D93904DD633F01CF5E93546B4F8EA455B88E0F35F7D5372A2B33D21FA"
+}

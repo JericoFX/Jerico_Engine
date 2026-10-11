@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18?recursive=1",
+  "status": 200,
+  "response_uri": "https://api.github.com/repos/o3de/3p-package-source/git/trees/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18?recursive=1",
+  "auto_redirect": false,
+  "credentials": "none",
+  "body_sha256": "1D2B69295AFE769EBE42C4AA4EA150C3F789F0AA1B25D546CB1D20C24B61D4B4"
+}

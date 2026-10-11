@@ -1,0 +1,41 @@
+{
+  "index": 172,
+  "source_path": "Code/Editor/res/Eye_Partial_Open.tif",
+  "expected_sha256": "0cbd086ef8b1fc1cec3ebea3324ad7b53e59c0379f73c4ab85fbaf869b51eb13",
+  "expected_bytes": 32776,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Open.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:26.059264+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Open.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "32776",
+      "ETag": "\"0cbd086ef8b1fc1cec3ebea3324ad7b53e59c0379f73c4ab85fbaf869b51eb13\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Open.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:26.503575+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Open.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "32776",
+      "ETag": "\"0cbd086ef8b1fc1cec3ebea3324ad7b53e59c0379f73c4ab85fbaf869b51eb13\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "0cbd086ef8b1fc1cec3ebea3324ad7b53e59c0379f73c4ab85fbaf869b51eb13",
+  "actual_bytes": 32776,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Eye_Partial_Open.tif",
+  "status": "acquired and byte verified"
+}

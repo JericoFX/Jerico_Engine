@@ -1,0 +1,41 @@
+{
+  "index": 41,
+  "source_path": "Code/Editor/MainWindow/hide_helpers.png",
+  "expected_sha256": "e576a98a702b4848565c6456763197f4a53c518c3b3a504f92b90092be8ad27e",
+  "expected_bytes": 208,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/hide_helpers.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:56.026372+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/hide_helpers.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "208",
+      "ETag": "\"e576a98a702b4848565c6456763197f4a53c518c3b3a504f92b90092be8ad27e\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/hide_helpers.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:56.364225+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/hide_helpers.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "208",
+      "ETag": "\"e576a98a702b4848565c6456763197f4a53c518c3b3a504f92b90092be8ad27e\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "e576a98a702b4848565c6456763197f4a53c518c3b3a504f92b90092be8ad27e",
+  "actual_bytes": 208,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\MainWindow\\hide_helpers.png",
+  "status": "acquired and byte verified"
+}

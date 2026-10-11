@@ -1,0 +1,60 @@
+{
+  "positiveVerifier": [
+    "-DJE_SQLITE_SOURCE_DIR:PATH=F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400",
+    "-DJE_SQLITE_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/sqlite-amalgamation-3530400.zip",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake"
+  ],
+  "rootOverride": "-DFETCHCONTENT_SOURCE_DIR_SQLITE:PATH=F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400",
+  "rootConsumersIntegration": "Parent adds cmake/Tools/LocalPackages/SQLite/tests to existing root build after Code/3rdParty/sqlite; no writer root edit",
+  "build": [
+    "--build",
+    "<parent-approved-root-binary-dir>",
+    "--config",
+    "<parent-approved-configuration>",
+    "--target",
+    "JE_SQLiteConsumer"
+  ],
+  "ctest": [
+    "--test-dir",
+    "<parent-approved-root-binary-dir>",
+    "-C",
+    "<parent-approved-configuration>",
+    "-R",
+    "^JE[.]SQLite[.]",
+    "--output-on-failure"
+  ],
+  "negativeVerifierCases": [
+    {
+      "name": "URI",
+      "replaceSource": "https://invalid.example/sqlite",
+      "expected": "fail local path before I/O"
+    },
+    {
+      "name": "UNC",
+      "replaceSource": "//invalid.example/share/sqlite",
+      "expected": "fail local path before I/O"
+    },
+    {
+      "name": "Missing",
+      "replaceSource": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/sqlite-3530400-audit/absent",
+      "expected": "fail missing source directory"
+    },
+    {
+      "name": "VersionOrBlobChanged",
+      "fixture": "validator-owned copy of four files with SQLITE_VERSION changed to 3.37.2",
+      "expected": "fail source blob SHA; never accepts wrong version"
+    },
+    {
+      "name": "ManifestExtraEntry",
+      "fixture": "validator-owned copy of four files plus extra.txt",
+      "expected": "fail exact 4-entry source manifest"
+    },
+    {
+      "name": "ArchiveTamper",
+      "fixture": "validator-owned changed archive",
+      "expected": "fail exact source SHA before inspecting source"
+    }
+  ],
+  "executionOwner": "Luna only after parent review; no commands executed by writer"
+}

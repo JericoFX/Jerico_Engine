@@ -1,0 +1,16 @@
+JE local Lua 5.4.4 Windows x64 package
+
+Lua source: lua/lua v5.4.4, commit 5d708c3f9cae12820e415d4f89c9eacbe2ab964b.
+Lua is MIT licensed. The complete original 1994-2022 Lua.org, PUC-Rio notice
+is retained in Lua/include/Lua/lua.h and LICENSES/Lua/lua.h. The original
+O3DE recipe LICENSE.txt (1994-2019) is retained separately without alteration.
+
+Recipe and patch provenance: o3de/3p-package-source,
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/Lua.
+The CMake/Find adaptations and patch retain O3DE Apache-2.0 OR MIT provenance;
+both complete O3DE license texts are included. The original patch is included.
+
+JE adaptations use explicit audited local archive input, exact patch hunks,
+VS2022 v143 instead of VS2019, Release-only static lualib with MAKE_LIB,
+and a new package identity/hash. No lua.exe, luac.exe or Lua DLL is produced.
+Source snapshots are preserved; only a newly extracted build work copy is patched.

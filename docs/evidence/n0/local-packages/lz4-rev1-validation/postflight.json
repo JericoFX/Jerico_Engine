@@ -1,0 +1,44 @@
+{
+  "freeze_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-audit\\source-freeze.json",
+  "freeze_sha256": "D6D949B25EB2F83B043C6D61A2838245C73BC2951B29F4166B0D0B24503C47E6",
+  "freeze_expected_sha256": "D6D949B25EB2F83B043C6D61A2838245C73BC2951B29F4166B0D0B24503C47E6",
+  "freeze_count": 13,
+  "freeze_pass": true,
+  "freeze_failures": [],
+  "archive_path": "F:\\JericoEngine\\Dependencies\\archives\\lz4-v1.9.4.tar.gz",
+  "archive_bytes": 354063,
+  "archive_sha256": "0B0E3AA07C8C063DDF40B082BDF7E37A1562BDA40A0FF5272957F3E987E0E54B",
+  "archive_pass": true,
+  "snapshot": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4",
+  "snapshot_files": 187,
+  "snapshot_bytes": 1668409.0,
+  "snapshot_reparse_count": 0,
+  "snapshot_pass": true,
+  "snapshot_failures": [],
+  "package_archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-v143-rev1\\packages\\lz4-1.9.4-je-rev1-windows.tar.xz",
+  "package_archive_bytes": 167540,
+  "package_archive_sha256": "9E7E44C4E9D70307E22DA51ECBFB71934770CA0EC7C4077D5EE739C2A21C2EAC",
+  "binaries": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1\\Release\\JELz4Consumer.exe",
+      "bytes": 104960,
+      "sha256": "BFA2AB98F5CC3B3250F1337B4A521F4C1BE6565B1C65D76EBCB4911197FC06FE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1\\Debug\\JELz4Consumer.exe",
+      "bytes": 300032,
+      "sha256": "D6B4F0BF600D8CF50CA530CBC042FF75F4D6B05A4A2676450AE0309F1E838B06"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-extracted-rev1\\lz4\\lib\\lz4.lib",
+      "bytes": 312126,
+      "sha256": "1203AAFBF33F86E43A2DC60C8B580F4663615E2151B2675335E563637538146C"
+    }
+  ],
+  "consumer_generator": "Visual Studio 17 2022",
+  "consumer_architecture": "x64",
+  "release_ctest_count": 4,
+  "release_ctest_exit": 0,
+  "debug_ctest_count": 4,
+  "debug_ctest_exit": 0
+}

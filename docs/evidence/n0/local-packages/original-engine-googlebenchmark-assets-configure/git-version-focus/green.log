@@ -1,0 +1,7 @@
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+CMake Error at CMakeLists.txt:26 (message):
+  archive fallback was not benchmark_VERSION=1.7.0:
+
+
+-- Configuring incomplete, errors occurred!

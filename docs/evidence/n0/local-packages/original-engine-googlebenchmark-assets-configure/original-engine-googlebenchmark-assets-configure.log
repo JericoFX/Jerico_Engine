@@ -1,0 +1,117 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+--   CompilerLauncher: Not configured
+--   No restricted path found in engine.json, using default: F:/JericoEngine/JericoEngine/restricted
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS=PUBLIC;/EHsc
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_EXPORT_SYMBOLS=
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_WARNINGS=PRIVATE;/W0
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_DEPRECATED_ENUM_ENUM_CONVERSION=PRIVATE;/Wv:18
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_FAST_MATH=/fp:fast
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_ENABLE_FAST_MATH=PRIVATE;/fp:fast
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_FAST_MATH=/fp:precise
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_DISABLE_FAST_MATH=PRIVATE;/fp:precise
+--   Checking downloaded package zlib-1.2.11-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Checking downloaded package freetype-2.11.1-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Checking downloaded package qt-6.11.2-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+--   Checking downloaded package python-3.10.13-je-rev3-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows
+--   Using Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382
+--   Python: Getting/Checking packages listed in F:/JericoEngine/JericoEngine/python/requirements.txt
+--   pip result: 0
+--   pip output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Requirement already satisfied: pluggy==1.6.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 1)) (1.6.0)
+  Requirement already satisfied: atomicwrites==1.4.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 3)) (1.4.1)
+  Requirement already satisfied: attrs==20.1.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 6)) (20.1.0)
+  Requirement already satisfied: certifi==2024.07.04 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 10)) (2024.7.4)
+  Requirement already satisfied: charset-normalizer==2.0.10 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 12)) (2.0.10)
+  Requirement already satisfied: colorama==0.4.3 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 16)) (0.4.3)
+  Requirement already satisfied: docutils==0.15.2 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 20)) (0.15.2)
+  Requirement already satisfied: easyprocess==0.2.8 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 25)) (0.2.8)
+  Requirement already satisfied: exceptiongroup==1.0.4 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 29)) (1.0.4)
+  Requirement already satisfied: gitdb==4.0.10 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 31)) (4.0.10)
+  Requirement already satisfied: smmap==5.0.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 35)) (5.0.0)
+  Requirement already satisfied: gitpython==3.1.44 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 39)) (3.1.44)
+  Requirement already satisfied: idna==3.7 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 42)) (3.7)
+  Requirement already satisfied: imageio==2.8.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 44)) (2.8.0)
+  Requirement already satisfied: importlib-metadata==1.6.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 48)) (1.6.1)
+  Requirement already satisfied: Jinja2==3.1.6 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 52)) (3.1.6)
+  Requirement already satisfied: jmespath==0.9.5 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 54)) (0.9.5)
+  Requirement already satisfied: MarkupSafe==3.0.2 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 58)) (3.0.2)
+  Requirement already satisfied: more-itertools==8.4.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 62)) (8.4.0)
+  Requirement already satisfied: numpy==1.23.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 66)) (1.23.0)
+  Requirement already satisfied: packaging==20.4 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 90)) (20.4)
+  Requirement already satisfied: patch-ng==1.19.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 94)) (1.19.1)
+  Requirement already satisfied: pillow==10.3.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 97)) (10.3.0)
+  Requirement already satisfied: progressbar2==3.53.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 103)) (3.53.1)
+  Requirement already satisfied: psutil==5.9.8 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 107)) (5.9.8)
+  Requirement already satisfied: pyparsing==2.4.7 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 125)) (2.4.7)
+  Requirement already satisfied: pyscreenshot==0.6 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 129)) (0.6)
+  Requirement already satisfied: pytest-mock==3.8.2 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 133)) (3.8.2)
+  Requirement already satisfied: pytest-timeout==2.1.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 137)) (2.1.0)
+  Requirement already satisfied: pytest==7.2.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 141)) (7.2.0)
+  Requirement already satisfied: python-dateutil==2.8.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 144)) (2.8.1)
+  Requirement already satisfied: python-utils==2.5.6 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 148)) (2.5.6)
+  Requirement already satisfied: requests==2.32.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 152)) (2.32.0)
+  Requirement already satisfied: scipy==1.8.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 154)) (1.8.1)
+  Requirement already satisfied: six==1.13.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 180)) (1.13.0)
+  Requirement already satisfied: urllib3==1.26.19 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 184)) (1.26.19)
+  Requirement already satisfied: wcwidth==0.2.5 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 187)) (0.2.5)
+  Requirement already satisfied: zipp==3.19.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 191)) (3.19.1)
+  Requirement already satisfied: tomli==2.0.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 193)) (2.0.1)
+  Requirement already satisfied: iniconfig==1.1.1 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 196)) (1.1.1)
+  Requirement already satisfied: toml==0.10.2 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 199)) (0.10.2)
+  Requirement already satisfied: resolvelib==0.9.0 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 202)) (0.9.0)
+  Requirement already satisfied: puremagic==1.28 in f:\jericoengine\jericoengine\build\n0-validation\original-engine-deps\python-rev3\venv\31e81382\lib\site-packages (from -r F:/JericoEngine/JericoEngine/python/requirements.txt (line 205)) (1.28)
+  
+--   Python: Getting/Checking packages listed in F:/JericoEngine/JericoEngine/python/requirements.txt - Already up to date.
+--   Results from pip check: No broken requirements found.
+  
+-- Executing CMake scripts...
+--   Using package mimalloc 3.5.2 (MIT)
+--   Checking downloaded package Lua-5.4.4-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows
+--   Using package rapidjson 1.1.0 (MIT)
+--   Checking downloaded package zstd-1.3.5-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows
+--   Using package googlebenchmark v1.7.0 (Apache-2.0)
+--   Downloading package into F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-rev1-windows
+CMake Error at cmake/3rdPartyPackages.cmake:290 (message):
+  JE package unavailable offline: lz4-1.9.4-rev1-windows
+
+  SHA256: aa7d4e8f6424fad7fdc0304fecd83c1183886cc4c7b38ba014c85f43d036e550
+
+  Archive:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/lz4-1.9.4-rev1-windows.tar.xz
+
+  Unpack:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-rev1-windows
+
+  Local roots:
+
+  Provision the pinned package independently in the local cache or a local
+  file:/// root; remote fallback is disabled.
+Call Stack (most recent call first):
+  cmake/3rdPartyPackages.cmake:562 (ly_package_internal_download_package)
+  cmake/3rdPartyPackages.cmake:655 (ly_force_download_package)
+  cmake/3rdPartyPackages.cmake:767 (ly_enable_package)
+  cmake/3rdParty.cmake:73 (ly_download_associated_package)
+  cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  Code/Framework/AzFramework/CMakeLists.txt:18 (ly_add_target)
+
+
+-- Configuring incomplete, errors occurred!

@@ -1,0 +1,38 @@
+{
+  "correction_kind": "fixture-preflight-status-correction",
+  "recorded_utc": "2026-10-10T23:49:42.2240378Z",
+  "old_preflight": {
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\fixture-static-preflight-existing.log",
+    "process_exit": 0,
+    "manifest_expected_files": 20,
+    "files_matching": 19,
+    "manifest_aggregate_match": false,
+    "mismatch": {
+      "path": "Projects/JEEditorFixture/README.md",
+      "expected_bytes": 3683,
+      "actual_bytes": 3935,
+      "expected_sha256": "143C24DE1B3FCDAE2E3BF90E0D7AF8F6726FBCAA73C8004208F96E96E34BEF15",
+      "actual_sha256": "55FDF0129970A60907D16F0B907B47C0C2E7E0220653453FB9CEECDC366571C2"
+    },
+    "interpretation": "Historical/stale manifest result; exit 0 does not establish 20/20.",
+    "retained_observations": "AST parse and six JSON syntax checks in this log are independent observations, not Editor runtime acceptance."
+  },
+  "current_resources_preflight": {
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\fixture-resources-preflight.log",
+    "manifest": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-freeze-editor-fixture-resources-parent.json",
+    "manifest_sha256": "CC763794F88632255B5C563EA47D0759BF344DF63D107A46EF2AAD18C86D430E",
+    "process_exit": 0,
+    "manifest_files": 22,
+    "files_matching": 22,
+    "all_pass": true,
+    "runtime": "Not run; live O3DE Editor fixture remains unverified."
+  },
+  "fakegit": {
+    "directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus",
+    "red_driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\red\\CMakeLists.txt",
+    "red_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\red.log",
+    "red_calls": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\red-fakegit.log",
+    "green_driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\green-fixed\\CMakeLists.txt",
+    "green_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\green-fixed.log"
+  }
+}

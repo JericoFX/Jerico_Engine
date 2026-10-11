@@ -1,0 +1,1 @@
+@echo marker`r`n@exit /b 0`r`n

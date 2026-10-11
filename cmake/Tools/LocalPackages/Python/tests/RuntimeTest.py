@@ -17,6 +17,11 @@ expected_executable = home / ("python_d.exe" if args.debug else "python.exe")
 assert Path(sys.executable).resolve() == expected_executable.resolve(), sys.executable
 assert Path(sys.base_prefix).resolve() == home, sys.base_prefix
 assert sys.version_info[:3] == (3, 10, 13), sys.version
+source_commit = "49965601d6afedafe47cc85556d99b7a24981051"
+source_tag = "cpython-3.10.13-archive"
+build_prefix = f"{source_tag}:{source_commit}, "
+assert sys._git == ("CPython", source_tag, source_commit), sys._git
+assert sys.version.startswith(f"3.10.13 ({build_prefix}"), sys.version
 assert bool(hasattr(sys, "gettotalrefcount")) == args.debug, sys.version
 assert sys.flags.isolated and sys.flags.no_user_site
 
@@ -34,6 +39,12 @@ import sqlite3
 import ssl
 import tkinter
 import zlib
+
+ctypes.pythonapi.Py_GetBuildInfo.restype = ctypes.c_char_p
+ctypes.pythonapi.Py_GetVersion.restype = ctypes.c_char_p
+build_info = ctypes.pythonapi.Py_GetBuildInfo().decode("ascii")
+assert build_info.startswith(build_prefix), build_info
+assert ctypes.pythonapi.Py_GetVersion().decode("ascii") == sys.version
 
 for module in (bz2, ctypes, lzma, sqlite3, ssl, tkinter):
     assert Path(module.__file__).resolve().is_relative_to(home), module.__file__

@@ -1,0 +1,41 @@
+{
+  "index": 163,
+  "source_path": "Code/Editor/TrackView/tvplay-09.png",
+  "expected_sha256": "eb2378109caedd5d57972d07330cd985951a15573de8a7d5894adc5511a704d7",
+  "expected_bytes": 396,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvplay-09.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:21.668756+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvplay-09.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "396",
+      "ETag": "\"eb2378109caedd5d57972d07330cd985951a15573de8a7d5894adc5511a704d7\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvplay-09.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:22.109147+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvplay-09.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "396",
+      "ETag": "\"eb2378109caedd5d57972d07330cd985951a15573de8a7d5894adc5511a704d7\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "eb2378109caedd5d57972d07330cd985951a15573de8a7d5894adc5511a704d7",
+  "actual_bytes": 396,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\TrackView\\tvplay-09.png",
+  "status": "acquired and byte verified"
+}

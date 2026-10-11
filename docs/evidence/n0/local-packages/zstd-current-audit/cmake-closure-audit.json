@@ -1,0 +1,124 @@
+[
+  {
+    "path": "build/cmake/CMakeLists.txt",
+    "sha256": "ec60e1204fc4a40800f398e500480e38d8ccb1bfcdc59de112d82d6bbcc51105",
+    "closure_matches": [
+      {
+        "line": 67,
+        "text": "    FIND_PACKAGE(Threads REQUIRED)"
+      },
+      {
+        "line": 78,
+        "text": "ADD_SUBDIRECTORY(lib)"
+      },
+      {
+        "line": 85,
+        "text": "    ADD_SUBDIRECTORY(programs)"
+      },
+      {
+        "line": 93,
+        "text": "    ADD_SUBDIRECTORY(tests)"
+      },
+      {
+        "line": 97,
+        "text": "    ADD_SUBDIRECTORY(contrib)"
+      },
+      {
+        "line": 101,
+        "text": "# Add clean-all target"
+      },
+      {
+        "line": 103,
+        "text": "ADD_CUSTOM_TARGET(clean-all"
+      }
+    ]
+  },
+  {
+    "path": "build/cmake/CMakeModules/AddZstdCompilationFlags.cmake",
+    "sha256": "49c47bd80dd5bfb808e344d135d447e9a89b4bbdfff80b8a5d6a3043e731a64b",
+    "closure_matches": []
+  },
+  {
+    "path": "build/cmake/CMakeModules/GetZstdLibraryVersion.cmake",
+    "sha256": "e66fe98e26913d0f7c06e816fa5149ec7b9df81a50b97caad432191f09d7854d",
+    "closure_matches": []
+  },
+  {
+    "path": "build/cmake/contrib/CMakeLists.txt",
+    "sha256": "fdf267765b63f92bcb8e89314c5d3e5d3ec0764b04bebd82499914af3566b75c",
+    "closure_matches": [
+      {
+        "line": 12,
+        "text": "ADD_SUBDIRECTORY(pzstd)"
+      },
+      {
+        "line": 13,
+        "text": "ADD_SUBDIRECTORY(gen_html)"
+      }
+    ]
+  },
+  {
+    "path": "build/cmake/lib/CMakeLists.txt",
+    "sha256": "8b80d6c4223f14ae66ba3f7f46b0e031c23adff94103a3785790e0a40f799316",
+    "closure_matches": [
+      {
+        "line": 194,
+        "text": "CONFIGURE_FILE("
+      }
+    ]
+  },
+  {
+    "path": "build/cmake/lib/cmake_uninstall.cmake.in",
+    "sha256": "2704e6f52ebd5480c7362adff5fcab321be1ed1e4a19cd89916a47e4a6bce770",
+    "closure_matches": [
+      {
+        "line": 11,
+        "text": "    exec_program("
+      }
+    ]
+  },
+  {
+    "path": "build/cmake/lib/pkgconfig.cmake",
+    "sha256": "cf46b9ea397c602e7fde9b5e3a4a7a2478149c0c34c8e6bd00c499155eaf4ae8",
+    "closure_matches": [
+      {
+        "line": 1,
+        "text": "CONFIGURE_FILE(\"${IN}\" \"${OUT}\" @ONLY)"
+      }
+    ]
+  },
+  {
+    "path": "build/cmake/programs/CMakeLists.txt",
+    "sha256": "88a3188300874838a00628c8aad6d496f9d00a810e34ae70e8d78412669bd392",
+    "closure_matches": [
+      {
+        "line": 81,
+        "text": "    FIND_PACKAGE(ZLIB REQUIRED)"
+      },
+      {
+        "line": 93,
+        "text": "    FIND_PACKAGE(LibLZMA REQUIRED)"
+      }
+    ]
+  },
+  {
+    "path": "build/cmake/tests/CMakeLists.txt",
+    "sha256": "d4e264225e390afa84d8a06ef314acc4a8684dc172138c43af5154b364a95a80",
+    "closure_matches": []
+  },
+  {
+    "path": "build/cmake/contrib/gen_html/CMakeLists.txt",
+    "sha256": "082d19fcaa4103a813722bb519d4fd1ae058f4f18423d27f2241bf1fe624fd81",
+    "closure_matches": []
+  },
+  {
+    "path": "build/cmake/contrib/pzstd/CMakeLists.txt",
+    "sha256": "ab334b52bc4cdefe5c0fee2e7053d7cb35c9854c4da089f0f16b09c388e2bb79",
+    "closure_matches": [
+      {
+        "line": 25,
+        "text": "FIND_PACKAGE(Threads REQUIRED)"
+      }
+    ]
+  }
+]

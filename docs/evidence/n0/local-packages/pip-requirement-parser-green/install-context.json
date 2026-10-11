@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "-m",
+    "pip",
+    "install",
+    "-r",
+    "F:\\JericoEngine\\JericoEngine\\python\\requirements.txt",
+    "--no-deps",
+    "--no-index",
+    "--find-links",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-wheelhouse",
+    "--no-build-isolation",
+    "--no-cache-dir",
+    "--disable-pip-version-check",
+    "--no-warn-script-location"
+  ],
+  "working_directory": "F:\\JericoEngine\\JericoEngine\\python",
+  "settings": {
+    "PYTHONNOUSERSITE": "1",
+    "PIP_CONFIG_FILE": "NUL",
+    "PIP_NO_INDEX": "1",
+    "PIP_DISABLE_PIP_VERSION_CHECK": "1"
+  },
+  "inherited_sensitive_overrides": {
+    "PIP_INDEX_URL_present": false,
+    "PIP_EXTRA_INDEX_URL_present": false,
+    "PIP_FIND_LINKS_present": false,
+    "PIP_TRUSTED_HOST_present": false
+  }
+}

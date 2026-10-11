@@ -1,0 +1,79 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "argv": [
+    "-S",
+    "F:/JericoEngine/JericoEngine",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DLY_PACKAGE_SERVER_URLS:STRING=",
+    "-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps",
+    "-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+    "-DLY_PACKAGE_VALIDATE_CONTENTS=ON",
+    "-DLY_PACKAGE_VALIDATE_PACKAGE=ON",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+    "-DJE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python",
+    "-DJE_PYTHON_WHEELHOUSE:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse",
+    "-DCMAKE_MESSAGE_LOG_LEVEL:STRING=VERBOSE",
+    "-DFETCHCONTENT_SOURCE_DIR_MIMALLOC:PATH=F:/JericoEngine/Dependencies/mimalloc-3.5.2",
+    "-DFETCHCONTENT_SOURCE_DIR_RAPIDJSON:PATH=F:/JericoEngine/Dependencies/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f"
+  ],
+  "argv_count": 19,
+  "mode": "protected root configure with Lua, mimalloc, Python and explicit local RapidJSON source",
+  "freeze_sha": "D777B3557B089A4E4C704AB4A682F0CA45C35F1D7EB45B99D0FCA6C157A163B2",
+  "freeze_count": 20,
+  "rapidjson_archive_sha256": "2d2601a82d2d3b7e143a3c8d43ef616671391034bc46891a9816b79cf2d3e7a8",
+  "rapidjson_source_files": 313,
+  "rapidjson_source_match": true,
+  "rapidjson_audit_inputs": [
+    {
+      "name": "audit-summary.json",
+      "expected": "272c992d0aa4164ba0da0170478a393c576a5f986693ff19145995e5f838d88b",
+      "actual": "272c992d0aa4164ba0da0170478a393c576a5f986693ff19145995e5f838d88b",
+      "match": true
+    },
+    {
+      "name": "inspect_source.py",
+      "expected": "4b4cc58f31850dc6946d85d9a5d0897305e664c86ff053b8c4280e47e256cdef",
+      "actual": "4b4cc58f31850dc6946d85d9a5d0897305e664c86ff053b8c4280e47e256cdef",
+      "match": true
+    },
+    {
+      "name": "source-acquisition.json",
+      "expected": "47465adb11f26a0715e0c69702d43db1e91412a96c63d8d797dfa2724e14712b",
+      "actual": "47465adb11f26a0715e0c69702d43db1e91412a96c63d8d797dfa2724e14712b",
+      "match": true
+    },
+    {
+      "name": "source-destination-head.json",
+      "expected": "d9b8fa3623de62953451021edc4daecaae524b70fa47ac7dd2fd9648f4f1f198",
+      "actual": "d9b8fa3623de62953451021edc4daecaae524b70fa47ac7dd2fd9648f4f1f198",
+      "match": true
+    },
+    {
+      "name": "source-tar-audit.json",
+      "expected": "181d9ace74200d44f6904df198f85b85e4705cb128397e94f5315f7ffc2fea09",
+      "actual": "181d9ace74200d44f6904df198f85b85e4705cb128397e94f5315f7ffc2fea09",
+      "match": true
+    },
+    {
+      "name": "upstream-commit.json",
+      "expected": "93e9de8917bc38227dd3107b84c8107cb77f987c5046d7e85f38d16bc6cfadb9",
+      "actual": "93e9de8917bc38227dd3107b84c8107cb77f987c5046d7e85f38d16bc6cfadb9",
+      "match": true
+    },
+    {
+      "name": "upstream-tree.json",
+      "expected": "ed9d5bd8658a5bb325bbfeae8ac31dc5c4630b401a3739c1f0e5cea36462c944",
+      "actual": "ed9d5bd8658a5bb325bbfeae8ac31dc5c4630b401a3739c1f0e5cea36462c944",
+      "match": true
+    }
+  ],
+  "mimalloc_archive_sha256": "db5c4aaaf356edfeb1aa236b3a052fe3c67d01419db36613f783999341ed5619",
+  "mimalloc_source_files": 382,
+  "cache_files": 56,
+  "cache_bytes": 308199588.0
+}

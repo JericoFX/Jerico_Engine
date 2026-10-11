@@ -1,0 +1,14 @@
+{
+  "helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+  "witness_sha256": "C34909064FE9E852E5EC5A6B34A72B88433A6BEE57C7DE257AB1B23F9894F557",
+  "output_exists": false,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_TEST_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\package-metadata-release\\red-native-capture",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\package-metadata-release\\release-witness.cmake"
+  ],
+  "argc": 3,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "start_utc": "2026-10-11T00:56:51.6663315Z"
+}

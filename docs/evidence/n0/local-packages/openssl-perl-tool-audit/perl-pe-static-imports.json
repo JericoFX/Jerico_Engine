@@ -1,0 +1,46 @@
+[
+  {
+    "path": "perl/bin/perl.exe",
+    "sha256": "D4FA3A6EBE78F5F60E185CF7D7809A7DD8C541739CA4A7BC8687C75548473F42",
+    "machine": 34404,
+    "imports": [
+      "perl542.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll"
+    ]
+  },
+  {
+    "path": "perl/bin/perl542.dll",
+    "sha256": "CB931FE41D0885AB0EEA8498B062F145187EA39D26B8AABDA96792339C40C53E",
+    "machine": 34404,
+    "imports": [
+      "libgcc_s_seh-1.dll",
+      "libstdc++-6.dll",
+      "ADVAPI32.dll",
+      "COMCTL32.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-process-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "USER32.dll",
+      "WS2_32.dll"
+    ]
+  }
+]

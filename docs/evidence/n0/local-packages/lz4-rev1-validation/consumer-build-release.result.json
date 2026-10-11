@@ -1,0 +1,19 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1",
+    "--config",
+    "Release",
+    "--target",
+    "JELz4Consumer"
+  ],
+  "argc": 6,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "native_exit_code": 0,
+  "elapsed_seconds": 2.52,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\consumer-build-release.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\consumer-build-release.stderr.log",
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\consumer-build-release.log",
+  "consumer_exe": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1/Release/JELz4Consumer.exe"
+}

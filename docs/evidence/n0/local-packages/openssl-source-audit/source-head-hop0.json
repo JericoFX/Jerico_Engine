@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-10T23:12:46.1250458Z",
+  "method": "HEAD",
+  "url": "https://www.openssl.org/source/old/1.1.1/openssl-1.1.1o.tar.gz",
+  "queryRedacted": false,
+  "status": 301,
+  "autoRedirect": false,
+  "credentials": "none",
+  "contentLength": 169,
+  "contentType": "text/html",
+  "location": "https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1o/openssl-1.1.1o.tar.gz",
+  "locationQueryRedacted": false
+}

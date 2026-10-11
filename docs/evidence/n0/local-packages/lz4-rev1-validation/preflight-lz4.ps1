@@ -1,0 +1,15 @@
+$ErrorActionPreference='Stop'
+$ev='F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-rev1-validation'
+$freezePath='F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-audit\source-freeze.json'
+$freeze=Get-Content -LiteralPath $freezePath -Raw|ConvertFrom-Json
+$freezeChecks=foreach($x in $freeze.inputs){$f=Get-Item -LiteralPath $x.path;$h=(Get-FileHash -LiteralPath $x.path -Algorithm SHA256).Hash;[pscustomobject]@{path=$x.path;bytes=$f.Length;sha256=$h;pass=($f.Length -eq $x.bytes -and $h -ieq $x.sha256)}}
+$extractPath='F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-audit\source-extraction.json'
+$extract=Get-Content -LiteralPath $extractPath -Raw|ConvertFrom-Json
+$snapshot=$extract.snapshot
+$snapshotChecks=foreach($x in $extract.entries){$p=Join-Path $snapshot ($x.relative_path -replace '/','\');if(-not(Test-Path -LiteralPath $p -PathType Leaf)){[pscustomobject]@{path=$p;pass=$false;issue='missing'};continue};$f=Get-Item -LiteralPath $p;$h=(Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash;[pscustomobject]@{path=$p;bytes=$f.Length;sha256=$h;pass=($x.type -eq 'regular' -and $f.Length -eq $x.bytes -and $h -ieq $x.sha256)}}
+$allFiles=@(Get-ChildItem -LiteralPath $snapshot -Recurse -File)
+$reparse=@(Get-ChildItem -LiteralPath $snapshot -Recurse -Force|Where-Object{$_.Attributes -band [IO.FileAttributes]::ReparsePoint}|Select-Object -ExpandProperty FullName)
+$archive='F:\JericoEngine\Dependencies\archives\lz4-v1.9.4.tar.gz';$archiveHash=(Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash;$archiveBytes=(Get-Item -LiteralPath $archive).Length
+$outputs=@('F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-v143-rev1','F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-extracted-rev1','F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-consumer-rev1')
+$summary=[ordered]@{freeze_sha256=(Get-FileHash -LiteralPath $freezePath -Algorithm SHA256).Hash;freeze_expected_sha256='D6D949B25EB2F83B043C6D61A2838245C73BC2951B29F4166B0D0B24503C47E6';freeze_count=$freeze.inputs.Count;freeze_pass=(@($freezeChecks|Where-Object{-not $_.pass}).Count -eq 0);freeze_failures=@($freezeChecks|Where-Object{-not $_.pass});archive_path=$archive;archive_bytes=$archiveBytes;archive_sha256=$archiveHash;archive_pass=($archiveBytes -eq 354063 -and $archiveHash -ieq '0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b');snapshot=$snapshot;snapshot_manifest=(Get-FileHash -LiteralPath $extractPath -Algorithm SHA256).Hash;snapshot_expected_files=187;snapshot_files=$allFiles.Count;snapshot_bytes=($allFiles|Measure-Object Length -Sum).Sum;snapshot_reparse_count=$reparse.Count;snapshot_pass=($allFiles.Count -eq 187 -and ($allFiles|Measure-Object Length -Sum).Sum -eq 1668409 -and $reparse.Count -eq 0 -and @($snapshotChecks|Where-Object{-not $_.pass}).Count -eq 0);snapshot_failures=@($snapshotChecks|Where-Object{-not $_.pass});outputs=$outputs|ForEach-Object{[pscustomobject]@{path=$_;exists=(Test-Path -LiteralPath $_)}}}
+$summary|ConvertTo-Json -Depth 7|Set-Content -LiteralPath (Join-Path $ev 'preflight.json') -Encoding utf8

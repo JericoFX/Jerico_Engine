@@ -1,0 +1,5 @@
+forward_call_result=1
+backslash_call_result=1
+cmd=C:\WINDOWS/System32/cmd.exe
+sentinel_forward=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-cmd-dispatch-diagnostic-call/sentinel.cmd
+sentinel_back=F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-cmd-dispatch-diagnostic-call\sentinel.cmd

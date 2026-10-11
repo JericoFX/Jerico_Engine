@@ -1,0 +1,27 @@
+{
+  "case": "existing-output-sentinel",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\negative-cases",
+  "arguments": [
+    "-DJE_MCPP_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/mcpp-2.7.2.tar.gz",
+    "-DJE_MCPP_SOURCE_SHA256:STRING=3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+    "-DJE_MCPP_SOURCE_URL:STRING=https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download",
+    "-DJE_MCPP_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\negative-cases\\existing-output\\package",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake"
+  ],
+  "nativeExitCode": 1,
+  "elapsedSeconds": 0.02847,
+  "expectedDiagnostic": "output already exists",
+  "diagnosticMatched": true,
+  "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\negative-cases\\existing-output\\package",
+  "outputAbsent": false,
+  "sentinelPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\negative-cases\\existing-output\\package\\sentinel.txt",
+  "sentinelBeforeSha256": "cd6ab7f79c79bebb502dbb9617304bbd13b90d861ee514cef5fb910d0f403061",
+  "sentinelAfterSha256": "cd6ab7f79c79bebb502dbb9617304bbd13b90d861ee514cef5fb910d0f403061",
+  "sentinelPreserved": true,
+  "sourceArchiveBeforeSha256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+  "sourceArchiveAfterSha256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+  "sourceArchiveUnchanged": true,
+  "guardPass": true
+}

@@ -1,0 +1,7 @@
+CMake Error at JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: CPython pythoncore project SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev3-bad-core/PCbuild/pythoncore.vcxproj
+Call Stack (most recent call first):
+  JericoEngine/build/n0-validation/local-packages/python-provenance-rev3-prefix-driver/prefix-fixed.cmake:149 (JE_python_verify_file)
+
+

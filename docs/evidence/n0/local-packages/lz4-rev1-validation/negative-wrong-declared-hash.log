@@ -1,0 +1,6 @@
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LZ4/BuildLz4Package.cmake:31 (message):
+  JE local lz4: source URL/SHA256 must match the audited v1.9.4 archive
+
+
+

@@ -1,0 +1,107 @@
+Projects/JEEditorFixture/CMakeLists.txt:14: trailing whitespace.
++    # Utility function to look for an optional 'engine_finder_cmake_path'setting 
+Projects/JEEditorFixture/CMakeLists.txt:24: trailing whitespace.
++                # parsing error, and not simply a missing key 
+Projects/JEEditorFixture/CMakeLists.txt:29: trailing whitespace.
++    
+Projects/JEEditorFixture/CMakeLists.txt:31: trailing whitespace.
++    # We support per-project customization to make it easier to upgrade 
+Projects/JEEditorFixture/CMakeLists.txt:32: trailing whitespace.
++    # or revert to a custom EngineFinder.cmake 
+Projects/JEEditorFixture/LICENSE.txt:2: trailing whitespace.
++The default license for Open 3D Engine is the Apache License, Version 2.0 
+Projects/JEEditorFixture/LICENSE.txt:3: trailing whitespace.
++(see LICENSE_APACHE2.TXT); you may elect at your option to use the Open 3D 
+Projects/JEEditorFixture/LICENSE.txt:4: trailing whitespace.
++Engine under the MIT License (see LICENSE_MIT.TXT).  Contributions must be 
+Projects/JEEditorFixture/LICENSE.txt:6: trailing whitespace.
++ 
+Projects/JEEditorFixture/LICENSE.txt:8: trailing whitespace.
++Open 3D Engine requires the use of (and in some cases makes available to you) 
+Projects/JEEditorFixture/LICENSE.txt:9: trailing whitespace.
++software and assets that have been developed by third parties and are subject 
+Projects/JEEditorFixture/LICENSE.txt:10: trailing whitespace.
++to separate license terms (such as code licensed under other open source 
+Projects/JEEditorFixture/LICENSE.txt:11: trailing whitespace.
++licenses).  It is your responsibility to comply with the applicable licenses. 
+Projects/JEEditorFixture/LICENSE.txt:12: trailing whitespace.
++Information on third party materials, and the applicable license terms, are 
+Projects/JEEditorFixture/LICENSE.txt:13: trailing whitespace.
++referenced in or included with the materials, such as in separate LICENSE.txt 
+Projects/JEEditorFixture/LICENSE.txt:16: trailing whitespace.
++Third party components with license-identification SPDX tags are logged in 
+Projects/JEEditorFixture/LICENSE.txt:17: trailing whitespace.
++the 3P repository at https://github.com/o3de/3p-package-source. For more 
+Projects/JEEditorFixture/LICENSE.txt:18: trailing whitespace.
++information on applying SPDX tags to O3DE components properly, see 
+Projects/JEEditorFixture/LICENSE.txt:20: trailing whitespace.
++ 
+Projects/JEEditorFixture/LICENSE.txt:21: trailing whitespace.
++Please note that certain materials are subject to "copyleft" licenses, which 
+Projects/JEEditorFixture/LICENSE.txt:23: trailing whitespace.
++ 
+Projects/JEEditorFixture/LICENSE.txt:24: trailing whitespace.
++- Qt Toolkit https://github.com/qtproject/, which is subject to the GNU 
+Projects/JEEditorFixture/LICENSE.txt:25: trailing whitespace.
++Lesser General Public License version 3 (with certain exceptions). A copy of 
+Projects/JEEditorFixture/LICENSE.txt:26: trailing whitespace.
++the source code for Qt Toolkit may be found at 
+Projects/JEEditorFixture/LICENSE.txt:28: trailing whitespace.
++ 
+Projects/JEEditorFixture/LICENSE.txt:28: new blank line at EOF.
+Projects/JEEditorFixture/Platform/Windows/windows_project.cmake:8: new blank line at EOF.
+Projects/JEEditorFixture/ShaderLib/README.md:3: trailing whitespace.
++Please read:  
+Projects/JEEditorFixture/ShaderLib/README.md:4: trailing whitespace.
++*\<engine\>/Gems/Atom/Feature/Common/Assets/ShaderResourceGroups/README.md*  
+Projects/JEEditorFixture/ShaderLib/README.md:5: trailing whitespace.
++for details on how to customize scenesrg.srgi and viewsrg.srgi.  
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:10: trailing whitespace.
++# Edits to this file may be lost in upgrades. Instead of changing this file, use 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:11: trailing whitespace.
++# the 'engine_finder_cmake_path' key in your project.json or user/project.json to specify 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:28: trailing whitespace.
++# CMAKE_MODULE_PATH must contain a path to an engine's cmake folder 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:67: trailing whitespace.
++            # parsing error, and not simply a missing key 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:74: trailing whitespace.
++# Option 3: Find a compatible engine registered in ~/.o3de/o3de_manifest.json 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:116: trailing whitespace.
++# the first package that returns PACKAGE_VERSION_COMPATIBLE 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:119: trailing whitespace.
++foreach(manifest_engine_path IN LISTS O3DE_ENGINE_PATHS) 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:122: trailing whitespace.
++    if(NOT EXISTS "${version_cmake_path}") 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:133: trailing whitespace.
++        if(NOT O3DE_MOST_COMPATIBLE_ENGINE_PATH) 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:134: trailing whitespace.
++            set(O3DE_MOST_COMPATIBLE_ENGINE_PATH "${manifest_engine_path}") 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:135: trailing whitespace.
++            set(O3DE_MOST_COMPATIBLE_ENGINE_VERSION ${PACKAGE_VERSION}) 
+Projects/JEEditorFixture/cmake/EngineFinder.cmake:160: trailing whitespace.
++# Read the 'engine' field in project.json or user/project.json for more helpful messages 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:6: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:18: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:26: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:30: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:34: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:35: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:50: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:51: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:62: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:63: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:77: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:78: trailing whitespace.
++ 
+cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch:77: new blank line at EOF.

@@ -1,0 +1,19 @@
+{
+  "exitcode": 1,
+  "elapsed_seconds": 9.6631555,
+  "argv_count": 18,
+  "freeze_count": 20,
+  "freeze_all_match_before": true,
+  "freeze_all_match_after": true,
+  "lua_archive_sha_before": "d3962b7b84f7fb484f02f639f631db5613f30a6922953ce41ce8344e4b57cbeb",
+  "lua_archive_sha_after": "d3962b7b84f7fb484f02f639f631db5613f30a6922953ce41ce8344e4b57cbeb",
+  "lua_sidecar_unchanged": true,
+  "cache_files_before": 56,
+  "cache_files_after": 56,
+  "cache_bytes_before": 308199588.0,
+  "cache_bytes_after": 308199588.0,
+  "cache_unchanged": true,
+  "mimalloc_archive_unchanged": true,
+  "mimalloc_source_match_before": true,
+  "mimalloc_source_match_after": true
+}

@@ -1,0 +1,73 @@
+{
+  "aggregateSHA256": "76C17CEAF2DCE7BA6543FF7AD49557344E8DD042EF170E67B01DF6D86423FD26",
+  "deleted": "Projects/JEEditorFixture/Editor/Scripts/author_room.py",
+  "deletedPathAbsent": true,
+  "inputs": [
+    {
+      "path": "Gems/WhiteBox/Code/Source/Editor/JEEditorFixtureAuthoring.cpp",
+      "bytes": 21873,
+      "sha256": "b532dde2d8fcf9630a05c33882828a42cbcf4502f65c839c040cad6ed7adbbcd"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Editor/JEEditorFixtureAuthoring.h",
+      "bytes": 1170,
+      "sha256": "551e454b66dde00401ba983da83ff09e8a1a1bcd20f91001095b0857105b291b"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxDefaultShapes.cpp",
+      "bytes": 7459,
+      "sha256": "e9f3504b4f557931f937992646a3ff539ffb8bd9826a4f4b8a5fe70e9ff424ce"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxDefaultShapes.h",
+      "bytes": 620,
+      "sha256": "541949c6fd9ce19c6980744381be9fc1e58c9340ed98322fd9c552dd6745f691"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+      "bytes": 79343,
+      "sha256": "2c9d69c0fc6cfea04b2e23bdf3d22c5862c191eef9a7342c8dc1538b0a6c853b"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxSystemComponent.cpp",
+      "bytes": 3099,
+      "sha256": "4ad7fad26cbae8854baac91119712bbe8f855411900d4fcbb4b8969cf388689a"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/JEEditorAuthoringTest.cpp",
+      "bytes": 11326,
+      "sha256": "a0d94eae2a969486942849c8b65c8bec86d3e9cbf6e5f87260c893d087e8b55b"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake",
+      "bytes": 3820,
+      "sha256": "b61cada695fc888300576c1230a54947c1a97955a22b973aff722ccb66778f77"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake",
+      "bytes": 614,
+      "sha256": "3c9642fb11b2b02b1a8f33077960109c1964c3b36a659de46199dfe9719b6f00"
+    },
+    {
+      "path": "Gems/WhiteBox/gem.json",
+      "bytes": 826,
+      "sha256": "1f6428acd62eabcdc8fac2b498872e7d81095b9196edef8595beb28f5e2de552"
+    },
+    {
+      "path": "Projects/JEEditorFixture/NOTICE.txt",
+      "bytes": 1645,
+      "sha256": "b14a19c275d74707e976e2d3f5a40514708257895a12d56f56a4d4f5dfc88b95"
+    },
+    {
+      "path": "Projects/JEEditorFixture/project.json",
+      "bytes": 629,
+      "sha256": "d6f860dfb6501498a7591dcf53520859d22834786e184050d4b7053305367a8d"
+    },
+    {
+      "path": "Projects/JEEditorFixture/README.md",
+      "bytes": 4320,
+      "sha256": "4d440e302afeba5bcbaa05ff611ae5b1d82a6f9b67231df0508ea87513ccdc1e"
+    }
+  ],
+  "validation": "PENDING NATIVE EXECUTION"
+}

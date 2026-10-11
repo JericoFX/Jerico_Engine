@@ -1,0 +1,24 @@
+This product includes software developed by the OpenSSL Project for use in the
+OpenSSL Toolkit (https://www.openssl.org/).
+This product includes cryptographic software written by Eric Young
+(eay@cryptsoft.com).
+This product includes software written by Tim Hudson (tjh@cryptsoft.com).
+
+The unmodified OpenSSL 1.1.1o library source is provided under the combined
+OpenSSL and original SSLeay licenses in OpenSSL/LICENSE. The complete library,
+assembly and engine source notices in LICENSES/OpenSSL/source retain additional
+attributions and license alternatives, including Richard Levitte (BSD),
+Cryptogams/Andy Polyakov, Rijmen/Bosselaers/Barreto, Mike Hamburg, NSRI and Oracle.
+The original authors/acknowledgements and the Text::Template build input notices
+are preserved separately under LICENSES/OpenSSL. No alternative license is
+silently selected for files which require their original notice to be retained.
+
+Local CMake, wrapper and consumer contributions use Apache-2.0 OR MIT; complete
+project texts are under LICENSES/O3DE. The local archive has a new identity and
+measured hash. It is not the historical O3DE binary package.
+
+Strawberry Perl and NASM are explicit local build tools, not package payload.
+Their runtime libraries, executables and mixed third-party tool licenses are
+not redistributed by this package. Source provenance and exact tool hashes are
+recorded in OpenSSL/JERecipe.json and the producer output receipts. This notice
+does not assert legal clearance to redistribute the entire portable Perl kit.

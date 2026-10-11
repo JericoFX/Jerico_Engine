@@ -1,0 +1,41 @@
+{
+  "index": 194,
+  "source_path": "Code/Editor/res/tree_view_folder.png",
+  "expected_sha256": "296666dbe0870ef937fbe1bc130358a9eda9ac778982b1102dccb929124b26d8",
+  "expected_bytes": 1291,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/tree_view_folder.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:26.207059+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/tree_view_folder.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "1291",
+      "ETag": "\"296666dbe0870ef937fbe1bc130358a9eda9ac778982b1102dccb929124b26d8\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/tree_view_folder.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:26.689166+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/tree_view_folder.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "1291",
+      "ETag": "\"296666dbe0870ef937fbe1bc130358a9eda9ac778982b1102dccb929124b26d8\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "296666dbe0870ef937fbe1bc130358a9eda9ac778982b1102dccb929124b26d8",
+  "actual_bytes": 1291,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\tree_view_folder.png",
+  "status": "acquired and byte verified"
+}

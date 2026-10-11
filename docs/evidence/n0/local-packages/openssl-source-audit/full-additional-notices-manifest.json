@@ -1,0 +1,787 @@
+[
+  {
+    "path": "CHANGES",
+    "sha256": "9a39b462ebf978261a288f0b65c6fb4ea20b58301abead5d3bf809072cbf5628",
+    "full_byte_copy": "full-additional-notices/CHANGES"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c32913b33252e71190af2066f08115c69bc9fddadf3bf29296e20c835389841c",
+    "full_byte_copy": "full-additional-notices/LICENSE"
+  },
+  {
+    "path": "apps/passwd.c",
+    "sha256": "733371637089ffe8694e8df92175303146e9cac5f3e17ab0913585b0d102bee8",
+    "full_byte_copy": "full-additional-notices/apps/passwd.c"
+  },
+  {
+    "path": "crypto/LPdir_nyi.c",
+    "sha256": "f638ff3001e5dc7ddbb230c288d47737e2d9f85226ea046a604a4259bad07cb0",
+    "full_byte_copy": "full-additional-notices/crypto/LPdir_nyi.c"
+  },
+  {
+    "path": "crypto/LPdir_unix.c",
+    "sha256": "320356ac25a50f915697bd9cecab43fad7912420ab1551449422972c878aef7c",
+    "full_byte_copy": "full-additional-notices/crypto/LPdir_unix.c"
+  },
+  {
+    "path": "crypto/LPdir_vms.c",
+    "sha256": "adc0cd123d9c0ddba011876b4d5e0c3665a769cecccd1a5d6c5049ac8030fe93",
+    "full_byte_copy": "full-additional-notices/crypto/LPdir_vms.c"
+  },
+  {
+    "path": "crypto/LPdir_win.c",
+    "sha256": "63087d5abfbe1d49f5076f92ad2f5a5d58cd9f4af6cd21b29514c0326df367f4",
+    "full_byte_copy": "full-additional-notices/crypto/LPdir_win.c"
+  },
+  {
+    "path": "crypto/LPdir_win32.c",
+    "sha256": "775d02591831f77ffee41beafd0388854e10742af0f27bb94ac2ab7a9597c51b",
+    "full_byte_copy": "full-additional-notices/crypto/LPdir_win32.c"
+  },
+  {
+    "path": "crypto/LPdir_wince.c",
+    "sha256": "2e6a13af735a9b7fb4dafebfce3cb4781b8bd0593b422b49639a756ac49e0a88",
+    "full_byte_copy": "full-additional-notices/crypto/LPdir_wince.c"
+  },
+  {
+    "path": "crypto/aes/aes_core.c",
+    "sha256": "30e5c42410e2cd816b35a5f823018ecb265a2da3c2bdd2aad1cdb226ea85a2c3",
+    "full_byte_copy": "full-additional-notices/crypto/aes/aes_core.c"
+  },
+  {
+    "path": "crypto/aes/aes_x86core.c",
+    "sha256": "16127de408d69734af652c0fb3762d0a9a22aa0924caaad3e7720d9a4d5c016e",
+    "full_byte_copy": "full-additional-notices/crypto/aes/aes_x86core.c"
+  },
+  {
+    "path": "crypto/aes/asm/aes-armv4.pl",
+    "sha256": "2643bc76707494fba19c61da6718e595856833cf2e072302124b0dc5adb34760",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aes-armv4.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aes-c64xplus.pl",
+    "sha256": "a9d46af40d5bf7fb09431bc61324dd61d8c502e0621c78118812f854a27dd9c1",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aes-c64xplus.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aes-mips.pl",
+    "sha256": "281ee9e887ac017fe4ab300d062809770eb2c52e1d4a5d9c389c50eb895b8190",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aes-mips.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aes-parisc.pl",
+    "sha256": "f4cc48b0906233377375a3c839062823dcba4f6a42f319f99f51a1fc7ab10267",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aes-parisc.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aes-ppc.pl",
+    "sha256": "e1f93284e66ab614689f080680fbe952865b862403c7c19c76cbfd3b422a8a3d",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aes-ppc.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aes-s390x.pl",
+    "sha256": "f14c90947cb3f662ffde6c91190b3e28885d5a9bf78fa7e2102ee957e0b1501c",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aes-s390x.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesfx-sparcv9.pl",
+    "sha256": "b78394799c0e2b3f096394bdf4d3ea9f5678df0d06e0892456273f8d5c2c461a",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesfx-sparcv9.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesni-mb-x86_64.pl",
+    "sha256": "5beb473ae072df0354243718780fa455621b2221e03fa9c921854a4d180577da",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesni-mb-x86_64.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesni-sha1-x86_64.pl",
+    "sha256": "fbda8b5f3b613f900269d372d91a490f01603dd6a32e417c9212560371002e8c",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesni-sha1-x86_64.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesni-sha256-x86_64.pl",
+    "sha256": "f248cd0070544d1a3388247ccfc883b83d9bf6d58b40c5550f189e7223738aad",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesni-sha256-x86_64.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesni-x86.pl",
+    "sha256": "254c726386a9205d6e6a8be48c6f9679e02895840e8912b4c386c55eb5b5a51f",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesni-x86.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesni-x86_64.pl",
+    "sha256": "f9f949a48ae275aa455f90841406f684499475e960b87daecd9eb9a7a84c976b",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesni-x86_64.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesp8-ppc.pl",
+    "sha256": "d33481726a7432f7e4a247e300b5a85ed5e6bc223fa2c9086c1efb2c25a29bcd",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesp8-ppc.pl"
+  },
+  {
+    "path": "crypto/aes/asm/aesv8-armx.pl",
+    "sha256": "3a3137a0a7130a61aefb5be06b3117100dd528232f8b70baba4a0dad1cf7e8c5",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/aesv8-armx.pl"
+  },
+  {
+    "path": "crypto/aes/asm/bsaes-armv7.pl",
+    "sha256": "a570a66cf4461ba6df4e6ca9f18f845455c1dd857518c489f15d05fac8b1cc9a",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/bsaes-armv7.pl"
+  },
+  {
+    "path": "crypto/aes/asm/vpaes-armv8.pl",
+    "sha256": "6bc9a6daa838c106f5236911ad4a1de329f16312f2574ff52343a7ce36d24568",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/vpaes-armv8.pl"
+  },
+  {
+    "path": "crypto/aes/asm/vpaes-ppc.pl",
+    "sha256": "590671c7967c261ab7f1055abe5dbfcce7c7897f42288aebe568d4d9c05dd17a",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/vpaes-ppc.pl"
+  },
+  {
+    "path": "crypto/aes/asm/vpaes-x86.pl",
+    "sha256": "bfd3e7df0eb92c1d32225f1ccafc4cc917b352ba1ce7f5915924f36154aab241",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/vpaes-x86.pl"
+  },
+  {
+    "path": "crypto/aes/asm/vpaes-x86_64.pl",
+    "sha256": "aae1a01b2c793305227e6757dde739116c95c125bfeda6073ffb60c8aaae71b8",
+    "full_byte_copy": "full-additional-notices/crypto/aes/asm/vpaes-x86_64.pl"
+  },
+  {
+    "path": "crypto/aria/aria.c",
+    "sha256": "da9d631bb6ae5f11e5ae50ea033082568fe8e84e44f023c3ad087bf12b89664d",
+    "full_byte_copy": "full-additional-notices/crypto/aria/aria.c"
+  },
+  {
+    "path": "crypto/bn/asm/alpha-mont.pl",
+    "sha256": "9a965fc05099cad8166dd2139a369797b76b86f5a3ff649c2d769c809e43f49b",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/alpha-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/armv4-gf2m.pl",
+    "sha256": "59d4382de548cfe64a537ff06d7cc2f853267c374b362112e7c56f604d097295",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/armv4-gf2m.pl"
+  },
+  {
+    "path": "crypto/bn/asm/armv4-mont.pl",
+    "sha256": "033cf96aeb2d944ed8216f6428b50f0c1342effe795eead230780fee09c1b81b",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/armv4-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/armv8-mont.pl",
+    "sha256": "74e3e61fae844a76899b271096ad959126ace8a44c6b423b49b5c60644183846",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/armv8-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/c64xplus-gf2m.pl",
+    "sha256": "6baf33b426d15ba5f1932354803c207ffbaac02a8ca0a297f1f1887f7d9e3ac4",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/c64xplus-gf2m.pl"
+  },
+  {
+    "path": "crypto/bn/asm/ia64-mont.pl",
+    "sha256": "38c66ea37a612cbdae9ec76653ccf5f88639f2c83a4ccc7b68f1a07885925f39",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/ia64-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/mips-mont.pl",
+    "sha256": "695fe1bfe46aadeedd9370ed36052d2f46744e220aae1bacdaf609d565f83d62",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/mips-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/parisc-mont.pl",
+    "sha256": "0618fd3e42cbb86c80f9a442df30eb5ab03fbaba85bf60e305f1e8a7b0303011",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/parisc-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/ppc-mont.pl",
+    "sha256": "1c74d887826dd16230de9da9379143b585030a723c7c77e1a8ceaf67fd431d86",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/ppc-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/ppc64-mont.pl",
+    "sha256": "d71870e9fa8fa2d7b8132f43e9619c1016f24669aaf0e4fcc5b49b10069bf9d4",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/ppc64-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/s390x-gf2m.pl",
+    "sha256": "ff56c23a2625a1d7203558c930795d53e7aae96edf79dff9b425399f3bcf88c3",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/s390x-gf2m.pl"
+  },
+  {
+    "path": "crypto/bn/asm/s390x-mont.pl",
+    "sha256": "5f42262e655b2f0864c888076b9e92003364787f840dfd7fe6821d1f0ab20b75",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/s390x-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/sparcv9-gf2m.pl",
+    "sha256": "46eacdb7fa8a1e456a2f189236c29da071243465d3e5dddeab216195a0b7330c",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/sparcv9-gf2m.pl"
+  },
+  {
+    "path": "crypto/bn/asm/sparcv9-mont.pl",
+    "sha256": "c110a9ffe20fb2df17788f18f4378fe658c65c5ef3e0132eba55b49e6b30c990",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/sparcv9-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/sparcv9a-mont.pl",
+    "sha256": "2a41e7e980b947e74e4f904d2f73f5eb3cf6fcf33aed719a8c54f2829af80d18",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/sparcv9a-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/via-mont.pl",
+    "sha256": "39b3d4fe10f57f762bc04a3d4c007228a27b733ca822626b4fa318bcef9a6603",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/via-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/vis3-mont.pl",
+    "sha256": "8905a111cf37dafab244fef8328a1880e2767dec450d3f14bc9a94b0e962995a",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/vis3-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/x86-gf2m.pl",
+    "sha256": "5d67351d8ab90a1f9bc27442790b38e8b5af3adb2ea808f1c538e302b63292e3",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/x86-gf2m.pl"
+  },
+  {
+    "path": "crypto/bn/asm/x86-mont.pl",
+    "sha256": "ed70f06b72ee5b7952382450d271048c1ea90b8b1a7f2b54725c418d010e2a92",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/x86-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/x86_64-gf2m.pl",
+    "sha256": "093190e7d1cca46563423663eec16612c27b5baafb1045085837c7e0bb92a771",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/x86_64-gf2m.pl"
+  },
+  {
+    "path": "crypto/bn/asm/x86_64-mont.pl",
+    "sha256": "daef157ec69e2ee356eff9b886f493c0c06727de42c53a6bc9e52609bd1ee27a",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/x86_64-mont.pl"
+  },
+  {
+    "path": "crypto/bn/asm/x86_64-mont5.pl",
+    "sha256": "dbb7ec07d1bb9f403691ba3e3b1371e979a11ebe440a026a165f8610d21313b4",
+    "full_byte_copy": "full-additional-notices/crypto/bn/asm/x86_64-mont5.pl"
+  },
+  {
+    "path": "crypto/camellia/asm/cmll-x86.pl",
+    "sha256": "fff9bc31ea47c39ff3d29d5f500bbee2be5f99ae33c85a42f50261519a1ca58d",
+    "full_byte_copy": "full-additional-notices/crypto/camellia/asm/cmll-x86.pl"
+  },
+  {
+    "path": "crypto/camellia/asm/cmll-x86_64.pl",
+    "sha256": "a39992cc95db61459d6ba3b4fc4469b468ec5cc65c8b0e140f8541146eeaea2d",
+    "full_byte_copy": "full-additional-notices/crypto/camellia/asm/cmll-x86_64.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-armv4.pl",
+    "sha256": "99f5da3bed7a9983c75e2507d70f4ff1a098a6e8f043bf041be91b3629ae422c",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-armv4.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-armv8.pl",
+    "sha256": "b7d01513fecbde9fbc790d2602397de122474163fccddb1ef5cfa122d2015d09",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-armv8.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-c64xplus.pl",
+    "sha256": "7fc7c87c75801b38bbd10e1da71e8d23e63cfdb9b25696155ef4831f4bea6aeb",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-c64xplus.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-ppc.pl",
+    "sha256": "8201e4b04f17b94f63fd1632e33c443d82651a188356ecce215b05002d29c07a",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-ppc.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-s390x.pl",
+    "sha256": "92145fd451e8b90dc3060b4b6cbb781c29ea76ebadf1af278f54f210b24877cd",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-s390x.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-x86.pl",
+    "sha256": "0c0b923503045c50339fa62ea5f23f2896d36a5afa5d92d328ba122ada4d5245",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-x86.pl"
+  },
+  {
+    "path": "crypto/chacha/asm/chacha-x86_64.pl",
+    "sha256": "5a8d0031c7baecc3c816b775f59d871835e7effb040c13e9e24d1afc5a334c31",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/asm/chacha-x86_64.pl"
+  },
+  {
+    "path": "crypto/chacha/chacha_enc.c",
+    "sha256": "3537109a7cbf8cbcb891fadf1187fd18bfc4697244d9f454863edf0efc935747",
+    "full_byte_copy": "full-additional-notices/crypto/chacha/chacha_enc.c"
+  },
+  {
+    "path": "crypto/ec/asm/ecp_nistz256-armv4.pl",
+    "sha256": "40ba05324054d59b0ff73206960b52fd98af1aefb527fc0653d88f66aa1f8075",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/ecp_nistz256-armv4.pl"
+  },
+  {
+    "path": "crypto/ec/asm/ecp_nistz256-armv8.pl",
+    "sha256": "5d56ec0425c7e072fd47af26bc6a42c5b96831e7a5386233cbe9211d0c8384d7",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/ecp_nistz256-armv8.pl"
+  },
+  {
+    "path": "crypto/ec/asm/ecp_nistz256-ppc64.pl",
+    "sha256": "bab3bd37522b68ebf4306d4a8611a9b9984c18af2502f133b1a45671c788bdf8",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/ecp_nistz256-ppc64.pl"
+  },
+  {
+    "path": "crypto/ec/asm/ecp_nistz256-sparcv9.pl",
+    "sha256": "0d5960e38388ebfb979259345a96d3e5c5a1eb01a1d307d04e46a01776c33c64",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/ecp_nistz256-sparcv9.pl"
+  },
+  {
+    "path": "crypto/ec/asm/ecp_nistz256-x86.pl",
+    "sha256": "166cf499864dfb17509b744af27bd04f6c62553ca57a907f65247aebc7bd2033",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/ecp_nistz256-x86.pl"
+  },
+  {
+    "path": "crypto/ec/asm/x25519-ppc64.pl",
+    "sha256": "48a8881f53d115b750338ff3f5ea2b00b3c8cb12bfe3497ffe7efc14e7663c04",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/x25519-ppc64.pl"
+  },
+  {
+    "path": "crypto/ec/asm/x25519-x86_64.pl",
+    "sha256": "b058c37ca6fd2e9ba6cd03dfa4925e43cfef8243388d3b906cc9eacbf515d42d",
+    "full_byte_copy": "full-additional-notices/crypto/ec/asm/x25519-x86_64.pl"
+  },
+  {
+    "path": "crypto/ec/ecp_nistp224.c",
+    "sha256": "133ba08c45fbdcb9cc7003e6965a43a40c3b8edde14d8014ffb17b3e3dd1588b",
+    "full_byte_copy": "full-additional-notices/crypto/ec/ecp_nistp224.c"
+  },
+  {
+    "path": "crypto/md5/asm/md5-sparcv9.pl",
+    "sha256": "4194570443a6b459e56848d681dc93a78a504585c4e2bbb95126d07b3bb0f078",
+    "full_byte_copy": "full-additional-notices/crypto/md5/asm/md5-sparcv9.pl"
+  },
+  {
+    "path": "crypto/modes/asm/aesni-gcm-x86_64.pl",
+    "sha256": "e2a5b29a625159dd9a6c23f880eb1736b607e4918c1af8fc83529e046296d16c",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/aesni-gcm-x86_64.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-alpha.pl",
+    "sha256": "3c33c85ca98065c1208d3c7e2005e436f7f2deb810bfc91b69736d4940d881a6",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-alpha.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-armv4.pl",
+    "sha256": "c54f94bfa356dee899ce78aec9d4381431f19e9862550a443ebbab1b83c23822",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-armv4.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-c64xplus.pl",
+    "sha256": "ba3e68b6a74bf2767acea24097d19c58d28f23dd898f06eac4e4fb47f07131c6",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-c64xplus.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-ia64.pl",
+    "sha256": "23d1d1359b8eb97f00f61a68a68ed4a982a7eba1a198b59060127d337237a312",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-ia64.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-parisc.pl",
+    "sha256": "7f0997ff284ef46222397a7302e894deac61dd3618058869a4cd285eb26e9228",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-parisc.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-s390x.pl",
+    "sha256": "8aff7b4902484e77c76b48be8b7cf6a4cd381be4a96e7c3de87ca49214903160",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-s390x.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-sparcv9.pl",
+    "sha256": "d3ac07ae68a3818e04f4c1a4ea3eed9ac2f950e046660e7156010e805dc53e25",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-sparcv9.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-x86.pl",
+    "sha256": "02ce4df864d0137ab32b488e5c3f79c3b92f43603bb5ca8be6cbc3d5f3ac7a5f",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-x86.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghash-x86_64.pl",
+    "sha256": "260aa24d4546b6646690445ba0b38edba403d7913c09e5399f4ac5eafce7eda6",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghash-x86_64.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghashp8-ppc.pl",
+    "sha256": "e0f1064d81d64f236dd5a729406838d90b08c27e2121096c52c413c670907e2b",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghashp8-ppc.pl"
+  },
+  {
+    "path": "crypto/modes/asm/ghashv8-armx.pl",
+    "sha256": "cb5854d36d240364c6fec6671c3db141e74687bcc5d88dbf94a1bf5cf7527e79",
+    "full_byte_copy": "full-additional-notices/crypto/modes/asm/ghashv8-armx.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-armv4.pl",
+    "sha256": "d0ff864669d1706928b27aec378665cb0e3b307eee5b482ebf29abf1ca5bc067",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-armv4.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-armv8.pl",
+    "sha256": "71288a9d6e7eef64333d9b89319fa40d149733e358c7e9eadced0a1d7d12b2c6",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-armv8.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-c64xplus.pl",
+    "sha256": "0107057c401a6ff2b0838aab9b704736550c08fbc81971834c6f4f202de41430",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-c64xplus.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-mips.pl",
+    "sha256": "cd135a12be9c47277cba5e2fcb1b27289cde632584a1e2808f8d9d3222aa3ea4",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-mips.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-ppc.pl",
+    "sha256": "3da40be700562136d1b935479e35d46b31295de5b45317f3ca10d327ab8f2e92",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-ppc.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-ppcfp.pl",
+    "sha256": "af455460399ea65fa61beeb46d7a0faf1b128ca5070929b361084daaf72b19ba",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-ppcfp.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-s390x.pl",
+    "sha256": "c879cb3c6b632d3cef3eba411ea0d1668491c0353585cecc8a004f30544a955d",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-s390x.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-sparcv9.pl",
+    "sha256": "0ee8746f475278a6c7a24b5e338fdfa4225c1907a4ba677f9475db7fa3135251",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-sparcv9.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-x86.pl",
+    "sha256": "1998c110caa1ea62d7bd41b0b7918dd2dae3d2b02207699773b203dec1729bd1",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-x86.pl"
+  },
+  {
+    "path": "crypto/poly1305/asm/poly1305-x86_64.pl",
+    "sha256": "e9ed59a5ca1a014016fda2a08878b1cbc98a72f603b5031e05a2fc138b03658f",
+    "full_byte_copy": "full-additional-notices/crypto/poly1305/asm/poly1305-x86_64.pl"
+  },
+  {
+    "path": "crypto/rc4/asm/rc4-586.pl",
+    "sha256": "e6d6ce4a453540cce69e560f598fe5e8712cf0d341de46bc02c995a73486303b",
+    "full_byte_copy": "full-additional-notices/crypto/rc4/asm/rc4-586.pl"
+  },
+  {
+    "path": "crypto/rc4/asm/rc4-c64xplus.pl",
+    "sha256": "fc651da99f08db21512898fd642212751959a58bc8450d848968f3231ee1209a",
+    "full_byte_copy": "full-additional-notices/crypto/rc4/asm/rc4-c64xplus.pl"
+  },
+  {
+    "path": "crypto/rc4/asm/rc4-md5-x86_64.pl",
+    "sha256": "84af0ad1878af80af48799fb258b424e014d34fb572903f336a66d43d2e4f0f8",
+    "full_byte_copy": "full-additional-notices/crypto/rc4/asm/rc4-md5-x86_64.pl"
+  },
+  {
+    "path": "crypto/rc4/asm/rc4-parisc.pl",
+    "sha256": "3fe4d93256af08b1f9357d63a48d9d9da894cc80647142cf7aaecdef02b64f8a",
+    "full_byte_copy": "full-additional-notices/crypto/rc4/asm/rc4-parisc.pl"
+  },
+  {
+    "path": "crypto/rc4/asm/rc4-s390x.pl",
+    "sha256": "289518afc7db683a8da31c85033f1376d574140a1a050330b88e1415fba767ee",
+    "full_byte_copy": "full-additional-notices/crypto/rc4/asm/rc4-s390x.pl"
+  },
+  {
+    "path": "crypto/rc4/asm/rc4-x86_64.pl",
+    "sha256": "42f8e2f8834e371c9fd78fcead28a04699e9ce13a8c0cc6033f8ad6739e38ff8",
+    "full_byte_copy": "full-additional-notices/crypto/rc4/asm/rc4-x86_64.pl"
+  },
+  {
+    "path": "crypto/seed/seed.c",
+    "sha256": "80618242c9d0f75a5ab1c7c080e857c69710854ec06329e7434bc83438e0fd96",
+    "full_byte_copy": "full-additional-notices/crypto/seed/seed.c"
+  },
+  {
+    "path": "crypto/seed/seed_local.h",
+    "sha256": "a7f2e5ea85f994f62450a0056de9116982291a8abc12d3e971537d89229c4106",
+    "full_byte_copy": "full-additional-notices/crypto/seed/seed_local.h"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-armv4.pl",
+    "sha256": "542e8f46ede74eb9cd19c72a49071bdf91ad78b75c7500481d5c59c65afcda25",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-armv4.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-armv8.pl",
+    "sha256": "4b3770611981a2832588c9f35e4f02e38b2f9ecef3ca23db62a5a25f4a17bd96",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-armv8.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-avx2.pl",
+    "sha256": "c12ee719d061ed159fcba309237af8c11deb2a19606320f7a9bd96c97467ca81",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-avx2.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-avx512.pl",
+    "sha256": "6b60549e38f1d414fa7a6b22ac3425676f3dc13da2076b3cb1ab83fc9b007dc4",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-avx512.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-avx512vl.pl",
+    "sha256": "b7162d20919c3677c0ba5b9c15f32a7b93da382a8772db9e9c01d96dfcd59b09",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-avx512vl.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-c64x.pl",
+    "sha256": "612b74de8eb0be8773a0b06738a39deeb3897059fdd8a85c64cfd910dbba0fa5",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-c64x.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-mmx.pl",
+    "sha256": "b0e6895f1c1b2c32387c7d3b06fd474506a6017e55734e4975b0643c6bcd108d",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-mmx.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-ppc64.pl",
+    "sha256": "b22b70e115f4c24e0c17e916954e0e6afd0c9593e65207a3735ad89aeb97402d",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-ppc64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-s390x.pl",
+    "sha256": "85a7715a8edbdc5636a638da798ffa8b0a99320f1252e6222f2d3099b722b6fa",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-s390x.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600-x86_64.pl",
+    "sha256": "a14915e8a91fb4a15054ed7c1ba6e508e86fc69c3ff5b9073e0600c4846e0656",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600-x86_64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/keccak1600p8-ppc.pl",
+    "sha256": "a8c7a781949b77ac99f175a345c773343818e21c7fc9984f0e7199d301e67c22",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/keccak1600p8-ppc.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-586.pl",
+    "sha256": "eeb0fc4fbcb984038ab1b1c15dc5afcffb11913f9fca00f8d4b915d9798bb400",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-586.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-alpha.pl",
+    "sha256": "cd51ce6fca67e62b73cac97ab23fe72ce9cc611135517a3ddc1eed5c31fcd87b",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-alpha.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-armv4-large.pl",
+    "sha256": "0a06172fa5a03fdb7b99c7515b87a508d83f2dbe319cd44bdd52a9d5cff96ae4",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-armv4-large.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-armv8.pl",
+    "sha256": "6596faa8e1a8a6472ecab5638b39554077451901f2fff8f51eec38ffbc9cff5c",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-armv8.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-c64xplus.pl",
+    "sha256": "f92bca18470640470899a721878a6b70bc5791a30da8129d9de88bbd2a55a79a",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-c64xplus.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-ia64.pl",
+    "sha256": "f8a627a74526c3cbc258af9084971ef1c5f88bea15ea78d1dff8bd249a73c01d",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-ia64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-mb-x86_64.pl",
+    "sha256": "800cc6d88fb5663b7f150eb3d7c4902b65c4814308b969803b41588a6ab12236",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-mb-x86_64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-mips.pl",
+    "sha256": "6be7c374df5c4fa5f54170a785aecdb9fa0a254e9a4a9add71e00cc71b2bf7e3",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-mips.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-parisc.pl",
+    "sha256": "84e61839ebbe074f1eb9af7091afee054d2915c8d37d49ab744e5644d2ee3753",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-parisc.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-ppc.pl",
+    "sha256": "e13e35de483cd2205d94524bd56c459fcf079e038bc7392fcbe3a8086b297a70",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-ppc.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-s390x.pl",
+    "sha256": "119b51be4107546b803fdf4f4903c2dac5153ded1903388c8f73415eb8980f7c",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-s390x.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-sparcv9.pl",
+    "sha256": "34662072f7db2945d9291cc84ef51a308e6aead68e500d24dfce744dab4b9cbd",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-sparcv9.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-sparcv9a.pl",
+    "sha256": "e23a82eb0fad844f4e150112948a07748033f819a7fdd6a17465ddc3af9b77b1",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-sparcv9a.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-thumb.pl",
+    "sha256": "4e49b02927a01e6448717e71647ceac30dddfd9f86532cbc16fa9a1281ae239e",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-thumb.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha1-x86_64.pl",
+    "sha256": "ba4b88674f454bf022b838d93ef5b2434c4e618c32836687afa00a0ec636d426",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha1-x86_64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha256-586.pl",
+    "sha256": "1202d1efbd245d5dcb1f5bdab86ce95a60f97c86f2bf79e8cf011e2005d7e826",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha256-586.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha256-armv4.pl",
+    "sha256": "d0c38f7f021c358624d6845fda1cc2e278b4e8523efbf59de627afae31a69954",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha256-armv4.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha256-c64xplus.pl",
+    "sha256": "65fc995ad25e0e22cdc1d429c02d27ed88495350093b3256ece3adbe6fbe7817",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha256-c64xplus.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha256-mb-x86_64.pl",
+    "sha256": "bc2549bba79c9367e749da71ab40f0b9a1434b87fd3209fdf414c9342ab7cbf2",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha256-mb-x86_64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-586.pl",
+    "sha256": "8ce885933bf41c9624a7a51e42abcb32fc915d61a1e7de3d595281d3d2592af0",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-586.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-armv4.pl",
+    "sha256": "956283d9ad4de0489cab2e32135826c3fcc14d7c0efb991a0fc72b8cc37ec666",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-armv4.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-armv8.pl",
+    "sha256": "effd9a393a181e0595d42d1c5d4a249051a0c62b1ab6e36cb472c9b3dba05567",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-armv8.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-c64xplus.pl",
+    "sha256": "09f9b9e042cc8f848eb852e156bd6892187eab8ce3edad8f1db29db3541d9248",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-c64xplus.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-ia64.pl",
+    "sha256": "4342a9b491a46747edab0ff7bd0f762b1f70b16f374fb415ab6abc588e4e129c",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-ia64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-mips.pl",
+    "sha256": "a8a3a342b55e3fc29a55bc01d22c9426a61b62d54221f98f7e271d5307f21644",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-mips.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-parisc.pl",
+    "sha256": "a86a41d9c116c552f23a6b3aff1ee0f2e5973cbd5086e04eb37db3c42acbbf64",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-parisc.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-ppc.pl",
+    "sha256": "129c4638fdfb3459d804bd9755c998a9f995e90c56825ad6f8c4c02261351489",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-ppc.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-s390x.pl",
+    "sha256": "7d35d2bba8dea8fe33027bf8ca132c6c23f13b34de3c4aee7e8b3e61b065ca2c",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-s390x.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-sparcv9.pl",
+    "sha256": "2148a9ab469e01ea394db0d3382839b47a61c7532d0dc328af661084b965712b",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-sparcv9.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512-x86_64.pl",
+    "sha256": "20411ddd8a77be94515ebf5352936839ff698ae2b39d565b66fc1827c3be3922",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512-x86_64.pl"
+  },
+  {
+    "path": "crypto/sha/asm/sha512p8-ppc.pl",
+    "sha256": "a4bdbebb7cb5bc0b259b1f25e2afacd821cdbf99ffe3012772250ea16fe97adf",
+    "full_byte_copy": "full-additional-notices/crypto/sha/asm/sha512p8-ppc.pl"
+  },
+  {
+    "path": "crypto/siphash/siphash.c",
+    "sha256": "9da8a7c5156f78546629c115fc21ab5478ffb249fdc6e797ac93fac05313bf70",
+    "full_byte_copy": "full-additional-notices/crypto/siphash/siphash.c"
+  },
+  {
+    "path": "crypto/x509v3/v3_pci.c",
+    "sha256": "9c350ee6a263e6524211bcc01f3d682bb4c9cf42f024f219405a9c077a0d12ef",
+    "full_byte_copy": "full-additional-notices/crypto/x509v3/v3_pci.c"
+  },
+  {
+    "path": "crypto/x509v3/v3_pcia.c",
+    "sha256": "1f03c6643126ce61047b25730a43136cd957ed545b0bb3955f3add35b6142b18",
+    "full_byte_copy": "full-additional-notices/crypto/x509v3/v3_pcia.c"
+  },
+  {
+    "path": "engines/asm/e_padlock-x86.pl",
+    "sha256": "296feedf92fc9daaaa78f6939fdcb3a50e691b1dceaa153af45b03385b988983",
+    "full_byte_copy": "full-additional-notices/engines/asm/e_padlock-x86.pl"
+  },
+  {
+    "path": "engines/asm/e_padlock-x86_64.pl",
+    "sha256": "7d11ad2bdb53bcf0a815f21250d69ee7e9778690a26d6e2f40a990682f34c42e",
+    "full_byte_copy": "full-additional-notices/engines/asm/e_padlock-x86_64.pl"
+  },
+  {
+    "path": "external/perl/Text-Template-1.46/Artistic",
+    "sha256": "b7fd9b73ea99602016a326e0b62e6646060d18febdd065ceca8bb482208c3d88",
+    "full_byte_copy": "full-additional-notices/external/perl/Text-Template-1.46/Artistic"
+  },
+  {
+    "path": "external/perl/Text-Template-1.46/COPYING",
+    "sha256": "4d23c8c814e5baf007d854f01d8502e77dc56a41144934e003fb32c4e052d20f",
+    "full_byte_copy": "full-additional-notices/external/perl/Text-Template-1.46/COPYING"
+  },
+  {
+    "path": "external/perl/Text-Template-1.46/MANIFEST",
+    "sha256": "3b667017874fc2df25ae3100962fdd3026615795b0ce60fdd47f02b0f545c688",
+    "full_byte_copy": "full-additional-notices/external/perl/Text-Template-1.46/MANIFEST"
+  },
+  {
+    "path": "external/perl/Text-Template-1.46/lib/Text/Template.pm",
+    "sha256": "ebe5111b20332dcb62b52a6c023dc6cf80bf42f3193fd14f8708239e5ec30f3a",
+    "full_byte_copy": "full-additional-notices/external/perl/Text-Template-1.46/lib/Text/Template.pm"
+  },
+  {
+    "path": "external/perl/Text-Template-1.46/lib/Text/Template/Preprocess.pm",
+    "sha256": "829f63d0c273b77c7232fa1fea02a76f076dc4e4c3070c840a9125296503de5d",
+    "full_byte_copy": "full-additional-notices/external/perl/Text-Template-1.46/lib/Text/Template/Preprocess.pm"
+  },
+  {
+    "path": "include/internal/o_dir.h",
+    "sha256": "1676a17c45a6a8b98290640bc57f2bc6fbaf89a54a01342e65f40d3cf9a7f02f",
+    "full_byte_copy": "full-additional-notices/include/internal/o_dir.h"
+  },
+  {
+    "path": "include/openssl/seed.h",
+    "sha256": "6bf2373dfb10dc5cbc626cf2fe86b9b1c82373d799bdd6be13eedaf7d4540d55",
+    "full_byte_copy": "full-additional-notices/include/openssl/seed.h"
+  },
+  {
+    "path": "test/certs/mkcert.sh",
+    "sha256": "bacfb8ba37113e5f61223f87b97e08214a1f2ea1fe7e756ecc642f4a97f2c410",
+    "full_byte_copy": "full-additional-notices/test/certs/mkcert.sh"
+  }
+]

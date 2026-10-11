@@ -1,0 +1,9 @@
+CMake Deprecation Warning at F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-v143-rev1/source-work/lz4-1.9.4/build/cmake/CMakeLists.txt:13 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+

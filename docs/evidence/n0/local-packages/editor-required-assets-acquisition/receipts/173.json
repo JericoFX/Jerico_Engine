@@ -1,0 +1,41 @@
+{
+  "index": 173,
+  "source_path": "Code/Editor/res/Eye_Partial_Slash.tif",
+  "expected_sha256": "e8485cf2fabeb6acfb55f3cb0fd97f2e2e25a399e7ced7a4a4081f45af532b4d",
+  "expected_bytes": 66592,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Slash.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:26.578909+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Slash.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "66592",
+      "ETag": "\"e8485cf2fabeb6acfb55f3cb0fd97f2e2e25a399e7ced7a4a4081f45af532b4d\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Slash.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:27.112945+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Partial_Slash.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "66592",
+      "ETag": "\"e8485cf2fabeb6acfb55f3cb0fd97f2e2e25a399e7ced7a4a4081f45af532b4d\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "e8485cf2fabeb6acfb55f3cb0fd97f2e2e25a399e7ced7a4a4081f45af532b4d",
+  "actual_bytes": 66592,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Eye_Partial_Slash.tif",
+  "status": "acquired and byte verified"
+}

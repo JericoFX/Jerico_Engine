@@ -1,0 +1,13 @@
+$ErrorActionPreference='Stop'
+$ev='F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev1-pin-corrected-validation'
+$freezePath='F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-perl-tool-audit\source-freeze-openssl-perl-manifest-pin.json'
+$freeze=Get-Content -LiteralPath $freezePath -Raw|ConvertFrom-Json
+$checks=foreach($item in $freeze.files){$f=Get-Item -LiteralPath $item.path;$h=(Get-FileHash -LiteralPath $item.path -Algorithm SHA256).Hash;[pscustomobject]@{path=$item.path;bytes=$f.Length;sha256=$h;pass=($f.Length -eq $item.bytes -and $h -ieq $item.sha256)}}
+$manifestPath='F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-perl-tool-audit\tool-manifest.json'
+$toolRoot='F:\JericoEngine\Dependencies\tools\strawberry-perl-5.42.3.1-64bit-portable'
+$manifest=Get-Content -LiteralPath $manifestPath -Raw|ConvertFrom-Json
+$mismatches=@()
+foreach($item in $manifest){$path=Join-Path $toolRoot ($item.path -replace '/','\');if(-not(Test-Path -LiteralPath $path -PathType Leaf)){$mismatches+= $item.path;continue};$f=Get-Item -LiteralPath $path;$h=(Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash;if($f.Length -ne $item.bytes -or $h -ine $item.sha256){$mismatches+= $item.path}}
+$fileCount=@(Get-ChildItem -LiteralPath $toolRoot -Recurse -File).Count
+$summary=[ordered]@{freeze_sha256=(Get-FileHash -LiteralPath $freezePath -Algorithm SHA256).Hash;freeze_count=$freeze.files.Count;freeze_pass=(@($checks|Where-Object{-not $_.pass}).Count -eq 0);freeze_failures=@($checks|Where-Object{-not $_.pass});manifest_sha256=(Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash;manifest_count=$manifest.Count;tool_tree_file_count=$fileCount;tool_mismatch_count=$mismatches.Count;tool_pass=($manifest.Count -eq 20858 -and $fileCount -eq 20858 -and $mismatches.Count -eq 0);mismatch_sample=@($mismatches|Select-Object -First 10);driver_sha256=(Get-FileHash -LiteralPath 'F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-perl-tool-audit\producer-candidate-inputs.cmake' -Algorithm SHA256).Hash;output_exists=(Test-Path -LiteralPath 'F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-build-rev1');producer_native_exit=1;producer_elapsed_seconds=5.441;input_freeze_unchanged=(@($checks|Where-Object{-not $_.pass}).Count -eq 0);tool_manifest_unchanged=((Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash -eq 'FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A')}
+$summary|ConvertTo-Json -Depth 6|Set-Content -LiteralPath (Join-Path $ev 'postflight.json') -Encoding utf8

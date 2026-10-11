@@ -1,0 +1,11 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-consumer-provenance-rev3
+    Start 1: JE.LocalPackages.PythonEmbed
+1/3 Test #1: JE.LocalPackages.PythonEmbed ............   Passed    0.19 sec
+    Start 2: JE.LocalPackages.PythonRuntimeDebug
+2/3 Test #2: JE.LocalPackages.PythonRuntimeDebug .....   Passed    0.93 sec
+    Start 3: JE.LocalPackages.PythonRuntimeRelease
+3/3 Test #3: JE.LocalPackages.PythonRuntimeRelease ...   Passed    8.98 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Total Test time (real) =  10.13 sec

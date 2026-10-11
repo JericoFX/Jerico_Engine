@@ -1,0 +1,13 @@
+{
+  "url": "https://sqlite.org/2026/sqlite-amalgamation-3530400.zip",
+  "method": "GET",
+  "status": 200,
+  "redirects": [],
+  "credentials": "none",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\sqlite-amalgamation-3530400.zip",
+  "bytes": 2946650,
+  "sha256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D",
+  "expectedSource": "Code/3rdParty/sqlite/CMakeLists.txt and PackageInfo.json",
+  "hashMatches": true,
+  "notPackageHash": true
+}

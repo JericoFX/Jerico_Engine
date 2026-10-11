@@ -1,0 +1,41 @@
+{
+  "index": 177,
+  "source_path": "Code/Editor/res/Padlock_Disabled.tif",
+  "expected_sha256": "712bf1ca195471061a60cf53c77c0fc18bfa16ed902651ec661916caaa602116",
+  "expected_bytes": 24452,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Disabled.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:28.726205+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Disabled.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "24452",
+      "ETag": "\"712bf1ca195471061a60cf53c77c0fc18bfa16ed902651ec661916caaa602116\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Disabled.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:29.205040+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Disabled.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "24452",
+      "ETag": "\"712bf1ca195471061a60cf53c77c0fc18bfa16ed902651ec661916caaa602116\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "712bf1ca195471061a60cf53c77c0fc18bfa16ed902651ec661916caaa602116",
+  "actual_bytes": 24452,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Padlock_Disabled.tif",
+  "status": "acquired and byte verified"
+}

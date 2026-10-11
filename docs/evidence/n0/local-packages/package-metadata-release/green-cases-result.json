@@ -1,0 +1,63 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 0.242941,
+  "end_utc": "2026-10-11T00:59:29.3691025Z",
+  "helper_sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+  "test_sha256": "013840C891E337AEB17DD60C136FA32C6BDBC17FF5B84C2FD0FBF6C61C051A4E",
+  "output_exists": true,
+  "stdout_bytes": 198,
+  "stderr_bytes": 0,
+  "case_count": 7,
+  "case_logs": [
+    {
+      "case": "release",
+      "log_exists": true,
+      "log_sha256": "CA74FCA43453D7567B756F38814271281A2D4FA837328FEF3E70A763BA90AC3F",
+      "output_exists": true,
+      "package_info_exists": true
+    },
+    {
+      "case": "commit",
+      "log_exists": true,
+      "log_sha256": "F869DB75055752B1D939081D5A656052BA60EF8902932DDF26909DBD80F42AE4",
+      "output_exists": true,
+      "package_info_exists": true
+    },
+    {
+      "case": "both",
+      "log_exists": true,
+      "log_sha256": "DED3879173D00D42BFADDB6EB4D3A6E1D80C01EE2467C6A7F633F06040A0F51B",
+      "output_exists": false,
+      "package_info_exists": false
+    },
+    {
+      "case": "neither",
+      "log_exists": true,
+      "log_sha256": "B33543572F5E18603EE056603225A08BA4633C76298A34659FFFBAC31B640F9C",
+      "output_exists": false,
+      "package_info_exists": false
+    },
+    {
+      "case": "invalid-release",
+      "log_exists": true,
+      "log_sha256": "A91255180E33406608DAFC94F8835717D0D07CD0138E48ABEAD9CA031E7BADAC",
+      "output_exists": false,
+      "package_info_exists": false
+    },
+    {
+      "case": "invalid-commit",
+      "log_exists": true,
+      "log_sha256": "61A2B544EED96689EAA7D4208F3B22DB5DB8889C6926D0B0EB49A88AD5CDBE98",
+      "output_exists": false,
+      "package_info_exists": false
+    },
+    {
+      "case": "invalid-hash",
+      "log_exists": true,
+      "log_sha256": "8881637FEBAFCF2573F4F0125B4B39DE79B36F221F6F6D791FE9D2FAB671F197",
+      "output_exists": false,
+      "package_info_exists": false
+    }
+  ],
+  "output_packageinfo_count": 2
+}

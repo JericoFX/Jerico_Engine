@@ -1,0 +1,4 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake:17 (message):
+  JE local mcpp: output must be beneath this checkout/build
+
+

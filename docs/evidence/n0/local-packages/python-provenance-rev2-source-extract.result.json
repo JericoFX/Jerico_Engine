@@ -1,0 +1,12 @@
+{
+  "exitcode": 0,
+  "elapsed_seconds": 0.9972118,
+  "archive_sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+  "snapshot_files": 4437,
+  "files_verified": 4437,
+  "total_bytes": 94883284.0,
+  "all_path_hash_size_matches": true,
+  "reparse_entries": 0,
+  "source_work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2",
+  "pcbuild_exists": true
+}

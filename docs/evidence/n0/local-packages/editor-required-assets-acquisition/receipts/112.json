@@ -1,0 +1,41 @@
+{
+  "index": 112,
+  "source_path": "Code/Editor/TrackView/tvkeys-11.png",
+  "expected_sha256": "a21c981597858f335605fc0d00e8805275dddd7a43e7f0381bf825e0c900ec32",
+  "expected_bytes": 402,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvkeys-11.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:27:28.389902+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvkeys-11.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "402",
+      "ETag": "\"a21c981597858f335605fc0d00e8805275dddd7a43e7f0381bf825e0c900ec32\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvkeys-11.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:27:28.868757+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvkeys-11.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "402",
+      "ETag": "\"a21c981597858f335605fc0d00e8805275dddd7a43e7f0381bf825e0c900ec32\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "a21c981597858f335605fc0d00e8805275dddd7a43e7f0381bf825e0c900ec32",
+  "actual_bytes": 402,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\TrackView\\tvkeys-11.png",
+  "status": "acquired and byte verified"
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\BuildZstdPackage.cmake",
+    "bytes": 5480,
+    "sha256": "4C19138E51EA0E15917BA250447EF544504DE247E56E13C50EAC515E57958BFB"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\CMakeLists.txt",
+    "bytes": 2772,
+    "sha256": "BB0EC783D064D9F8FB2EFE2805B6FC4FE64915413F0FA3F49B6381F99A3B9E5E"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\Findzstd.cmake",
+    "bytes": 2468,
+    "sha256": "19F953303B4E0729FFB0E25B25B5BA3CED475961A7301C7497DF275F42283D07"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\NOTICE.txt",
+    "bytes": 1929,
+    "sha256": "1FAD21A396B2042F2FABAFBB7B9C21E1FE96590520A1CEE44DCD36158D94518D"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\README.md",
+    "bytes": 3515,
+    "sha256": "946221C70881CE1FB1582F24C4F5A182984DCA73FF088D63FADF5C46461116D2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\CMakeLists.txt",
+    "bytes": 2262,
+    "sha256": "F7AC509EC6425D5C365695D2DCF4DDA4021691D48E464A40018027DD047E6323"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\ZstdConsumer.cpp",
+    "bytes": 11351,
+    "sha256": "B2BB74D80DD4E8634E345B3C5E41996FF75BEC9E8B50D79CB3EC2CA2F2CA0B73"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+    "bytes": 6541,
+    "sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+    "bytes": 1982,
+    "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+    "bytes": 1502,
+    "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+    "bytes": 11557,
+    "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+    "bytes": 1074,
+    "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\archives\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+    "bytes": 1707256,
+    "sha256": "DFB594DC41E79C1304EF2C9232746C048E4837578C1CA88CF0E9B83C8CC36457"
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "path": "lib/zstd.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738"
+  },
+  {
+    "path": "lib/common/bitstream.h",
+    "notice": "/* ******************************************************************\n   bitstream\n   Part of FSE library\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n   You can contact the author at :\n   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy\n****************************************************************** */",
+    "sha256": "929327d795476051cd9d9a10b11fac0609842905506128a1d81255ed357f8a26"
+  },
+  {
+    "path": "lib/common/compiler.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "c1d94e3ad94f3077a25794c37ec3adf81b5bcee1ad53aa7dd0d5008ef8407714"
+  },
+  {
+    "path": "lib/common/cpu.h",
+    "notice": "/*\n * Copyright (c) 2018-present, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "e20286346f7e87033c04acf6a833d70d84760d64c1fbb528a42d2139bffc0794"
+  },
+  {
+    "path": "lib/common/debug.c",
+    "notice": "/* ******************************************************************\n   debug\n   Part of FSE library\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n   You can contact the author at :\n   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy\n****************************************************************** */",
+    "sha256": "3a585aec8951b83a572590f75506f249e9c7ed5063928719b11d097bb09462c2"
+  },
+  {
+    "path": "lib/common/debug.h",
+    "notice": "/* ******************************************************************\n   debug\n   Part of FSE library\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n   You can contact the author at :\n   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy\n****************************************************************** */",
+    "sha256": "25f85351d6d3ec7551a397fd3e97e1c2bef91264be45fadc40e91befa46d01f0"
+  },
+  {
+    "path": "lib/common/entropy_common.c",
+    "notice": "/*\n   Common functions of New Generation Entropy library\n   Copyright (C) 2016, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE+HUF source repository : https://github.com/Cyan4973/FiniteStateEntropy\n    - Public forum : https://groups.google.com/forum/#!forum/lz4c\n*************************************************************************** */",
+    "sha256": "b940c4313dd2436a63ed873126fb68e25a14033af38d7b66d401e14ee385d7cc"
+  },
+  {
+    "path": "lib/common/error_private.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "167a51cf71477b55cd41282a3f7c0c7ca930fa8eed83dfeca2f01e90953de875"
+  },
+  {
+    "path": "lib/common/error_private.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "435424ae6cd318f20b73ee17e6fd4b03540b9c338d204485fda40e3efcf78c4b"
+  },
+  {
+    "path": "lib/common/fse.h",
+    "notice": "/* ******************************************************************\n   FSE : Finite State Entropy codec\n   Public Prototypes declaration\n   Copyright (C) 2013-2016, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n   You can contact the author at :\n   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy\n****************************************************************** */",
+    "sha256": "59b996613b045b6bc2a512abdd82e78ab41ec5063e048c6671653aa7be769ee8"
+  },
+  {
+    "path": "lib/common/fse_decompress.c",
+    "notice": "/* ******************************************************************\n   FSE : Finite State Entropy decoder\n   Copyright (C) 2013-2015, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy\n    - Public forum : https://groups.google.com/forum/#!forum/lz4c\n****************************************************************** */",
+    "sha256": "70ee245827e72d7e94f67d14403e376446a81177e9c3ce1f9d59a1459acfc343"
+  },
+  {
+    "path": "lib/common/huf.h",
+    "notice": "/* ******************************************************************\n   huff0 huffman codec,\n   part of Finite State Entropy library\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n   You can contact the author at :\n   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy\n****************************************************************** */",
+    "sha256": "7092f4e1b28a1825436bbf93efcefa4b1244db2a35aa1f044edc3a59f192cd44"
+  },
+  {
+    "path": "lib/common/mem.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "b400f3d413336dfc20a11968fc95807183e2b2d233d491badf533cb88756c668"
+  },
+  {
+    "path": "lib/common/pool.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "8656db50dda183090c782c1bf263440bd0fc71e4a9c80e5a5127399acdb94196"
+  },
+  {
+    "path": "lib/common/pool.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "ffa4e69225f955664ad33cbdf7b08a706661a0a5f7d3f32f22da2cfa58ed4172"
+  },
+  {
+    "path": "lib/common/threading.c",
+    "notice": "/**\n * Copyright (c) 2016 Tino Reichardt\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n *\n * You can contact the author at:\n * - zstdmt source repository: https://github.com/mcmilk/zstdmt\n */",
+    "sha256": "09d256e54671a42ee813bf2fc58e659021e701a8841dc424590028ae2481d249"
+  },
+  {
+    "path": "lib/common/threading.h",
+    "notice": "/**\n * Copyright (c) 2016 Tino Reichardt\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n *\n * You can contact the author at:\n * - zstdmt source repository: https://github.com/mcmilk/zstdmt\n */",
+    "sha256": "9822983f6f64580afd64c9e113998902f587f7e27e02039100b4be5ad69c7055"
+  },
+  {
+    "path": "lib/common/xxhash.c",
+    "notice": "/*\n*  xxHash - Fast Hash algorithm\n*  Copyright (C) 2012-2016, Yann Collet\n*\n*  BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n*\n*  Redistribution and use in source and binary forms, with or without\n*  modification, are permitted provided that the following conditions are\n*  met:\n*\n*  * Redistributions of source code must retain the above copyright\n*  notice, this list of conditions and the following disclaimer.\n*  * Redistributions in binary form must reproduce the above\n*  copyright notice, this list of conditions and the following disclaimer\n*  in the documentation and/or other materials provided with the\n*  distribution.\n*\n*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n*  \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n*  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n*\n*  You can contact the author at :\n*  - xxHash homepage: http://www.xxhash.com\n*  - xxHash source repository : https://github.com/Cyan4973/xxHash\n*/",
+    "sha256": "0fcc6c9db86d368f7984e4fa49771f9f3d483ccc9f4b58796c40498747ffd182"
+  },
+  {
+    "path": "lib/common/xxhash.h",
+    "notice": "/*\n   xxHash - Extremely Fast Hash algorithm\n   Header File\n   Copyright (C) 2012-2016, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n   You can contact the author at :\n   - xxHash source repository : https://github.com/Cyan4973/xxHash\n*/",
+    "sha256": "6107aa2aa3fae5a32e347251220391bb751af0f1a38e4d8cded0860a9187dee3"
+  },
+  {
+    "path": "lib/common/zstd_common.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "f9f1ee5714f4c4d95e3e2c27b8dbd403ed5b44d23c8a6aa6322bb51f5a09b857"
+  },
+  {
+    "path": "lib/common/zstd_errors.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9"
+  },
+  {
+    "path": "lib/common/zstd_internal.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "6826e8dbb940b76d78c31b61f2597960853815e2a06d2ef1201755dc9ebaf231"
+  },
+  {
+    "path": "lib/compress/fse_compress.c",
+    "notice": "/* ******************************************************************\n   FSE : Finite State Entropy encoder\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy\n    - Public forum : https://groups.google.com/forum/#!forum/lz4c\n****************************************************************** */",
+    "sha256": "424a9ba7d2439da30891ebe76272be1b146a1d8e63052ecee6f62ce07744b08d"
+  },
+  {
+    "path": "lib/compress/hist.c",
+    "notice": "/* ******************************************************************\n   hist : Histogram functions\n   part of Finite State Entropy project\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy\n    - Public forum : https://groups.google.com/forum/#!forum/lz4c\n****************************************************************** */",
+    "sha256": "6bb09dec37948ca953277d9dd29fe8b8ed426071f683fbbc90bcced2e5c811df"
+  },
+  {
+    "path": "lib/compress/hist.h",
+    "notice": "/* ******************************************************************\n   hist : Histogram functions\n   part of Finite State Entropy project\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy\n    - Public forum : https://groups.google.com/forum/#!forum/lz4c\n****************************************************************** */",
+    "sha256": "64b7335f31d9ac3611965693e372b42375e8729502bdf153ac2674a72be65363"
+  },
+  {
+    "path": "lib/compress/huf_compress.c",
+    "notice": "/* ******************************************************************\n   Huffman encoder, part of New Generation Entropy library\n   Copyright (C) 2013-2016, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE+HUF source repository : https://github.com/Cyan4973/FiniteStateEntropy\n    - Public forum : https://groups.google.com/forum/#!forum/lz4c\n****************************************************************** */",
+    "sha256": "0c7a99c5ac433ebafac5567d657a90f89b36342105ac451ea08f76e32d4ee3aa"
+  },
+  {
+    "path": "lib/compress/zstdmt_compress.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "050ed9e6bd748f2d6a6a55ef3cf7e22b466920d71f53642fe058b38c4f75f17f"
+  },
+  {
+    "path": "lib/compress/zstdmt_compress.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "47fb2123aa4de3cb753736da6a4f058b1000cc0a7275f50407106ceda3921cf5"
+  },
+  {
+    "path": "lib/compress/zstd_compress.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "4e85f3b10ee2f8c24aa536acbc3bb619c768562eab39920e344e57df32862ff9"
+  },
+  {
+    "path": "lib/compress/zstd_compress_internal.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "024a72b519397e9670eb34a1fcc75089011ca4a4fceb4e9a4ad0aca370734dd9"
+  },
+  {
+    "path": "lib/compress/zstd_double_fast.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "9e66160843c232a3d8bfd875787c57f57c9056991a389561fc29674e011f6517"
+  },
+  {
+    "path": "lib/compress/zstd_double_fast.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "c929378e7d25ea30a14849a0b44f4afaf0fbe2b7c3685d806163301dd6a902a8"
+  },
+  {
+    "path": "lib/compress/zstd_fast.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "7ed776ce39f62effa762d420c0f2a1ae4e879d9b6f36699c04a72ccb1313ed27"
+  },
+  {
+    "path": "lib/compress/zstd_fast.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "a353356ea61d125a766c2c699e317e05a14151694c136f913d5aea4a7e69ea26"
+  },
+  {
+    "path": "lib/compress/zstd_lazy.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "78be4e072434f02689855b86380cd26cdaf3b03511e34892e2f9847b174a946c"
+  },
+  {
+    "path": "lib/compress/zstd_lazy.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "061c9a2810cefb6679968a3784d84e3732091776a4851931c5fc8e6631693426"
+  },
+  {
+    "path": "lib/compress/zstd_ldm.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n */",
+    "sha256": "8b492bc35789735877c7c7543fe44ea3604e7c2d4a338240c57ea64783073420"
+  },
+  {
+    "path": "lib/compress/zstd_ldm.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n */",
+    "sha256": "956d3a3fb23c60ed3b7f6eb8913a37c57734b4ebc4454811c9661ebca8d07cd9"
+  },
+  {
+    "path": "lib/compress/zstd_opt.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Przemyslaw Skibinski, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "9f7735a9a11fc349e827db5f80e1866e70a578cb781465c83a2bf95ca07bbd57"
+  },
+  {
+    "path": "lib/compress/zstd_opt.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "431036676b5717127ac11970e06160a5d5a7312c63e2cdbe54754c4e280bcc6e"
+  },
+  {
+    "path": "lib/decompress/huf_decompress.c",
+    "notice": "/* ******************************************************************\n   huff0 huffman decoder,\n   part of Finite State Entropy library\n   Copyright (C) 2013-present, Yann Collet.\n\n   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n       * Redistributions of source code must retain the above copyright\n   notice, this list of conditions and the following disclaimer.\n       * Redistributions in binary form must reproduce the above\n   copyright notice, this list of conditions and the following disclaimer\n   in the documentation and/or other materials provided with the\n   distribution.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n   OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    You can contact the author at :\n    - FSE+HUF source repository : https://github.com/Cyan4973/FiniteStateEntropy\n****************************************************************** */",
+    "sha256": "de5437c86bab2626e953c52d932647b0e6f0cdd44b4f34c082c7d2f827c59bbb"
+  },
+  {
+    "path": "lib/decompress/zstd_decompress.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "e5227741e7b0ed85f36cfe5c8027359aa6288f4b1566a28344e837df21a3d1ed"
+  },
+  {
+    "path": "lib/deprecated/zbuff.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f"
+  },
+  {
+    "path": "lib/deprecated/zbuff_common.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "05c6608ce90d05d994e3def91cd76580ff1817f33998da4b0203085f246a4972"
+  },
+  {
+    "path": "lib/deprecated/zbuff_compress.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "a04fa0619cf8c4a7a9b105870a339b9b383f5d6f043ff0ab20cf61274815191d"
+  },
+  {
+    "path": "lib/deprecated/zbuff_decompress.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "302bf698ab50148a76631aaef83fbaf8da74c803cffa32e20a12a1b0d0ded26a"
+  },
+  {
+    "path": "lib/dictBuilder/cover.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "3601bc1c39adb9b7fae218b1ce8ce88041fcb300808cdb3586d1ff8ec807e71b"
+  },
+  {
+    "path": "lib/dictBuilder/divsufsort.c",
+    "notice": "/*\n * divsufsort.c for libdivsufsort-lite\n * Copyright (c) 2003-2008 Yuta Mori All Rights Reserved.\n *\n * Permission is hereby granted, free of charge, to any person\n * obtaining a copy of this software and associated documentation\n * files (the \"Software\"), to deal in the Software without\n * restriction, including without limitation the rights to use,\n * copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the\n * Software is furnished to do so, subject to the following\n * conditions:\n *\n * The above copyright notice and this permission notice shall be\n * included in all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\n * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\n * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\n * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\n * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n * OTHER DEALINGS IN THE SOFTWARE.\n */",
+    "sha256": "c6aab9652b409968baf5b063419d666467965c46a469f6b163b5b2d74df99da5"
+  },
+  {
+    "path": "lib/dictBuilder/divsufsort.h",
+    "notice": "/*\n * divsufsort.h for libdivsufsort-lite\n * Copyright (c) 2003-2008 Yuta Mori All Rights Reserved.\n *\n * Permission is hereby granted, free of charge, to any person\n * obtaining a copy of this software and associated documentation\n * files (the \"Software\"), to deal in the Software without\n * restriction, including without limitation the rights to use,\n * copy, modify, merge, publish, distribute, sublicense, and/or sell\n * copies of the Software, and to permit persons to whom the\n * Software is furnished to do so, subject to the following\n * conditions:\n *\n * The above copyright notice and this permission notice shall be\n * included in all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\n * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\n * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\n * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\n * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n * OTHER DEALINGS IN THE SOFTWARE.\n */",
+    "sha256": "f8312544f98feb695e611c68d5191b5ae5302e01a3613e2a6f8e6cd365dd3b2d"
+  },
+  {
+    "path": "lib/dictBuilder/zdict.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "d8db92a14c09ec04dcad5799ee7be9a829b025a1be7bed581eb24ea1ef6358b3"
+  },
+  {
+    "path": "lib/dictBuilder/zdict.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1"
+  },
+  {
+    "path": "lib/legacy/zstd_legacy.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "96507dd27961f48ac03304f948d110f8c79f548f5c22518ea25fcae7265a3d8f"
+  },
+  {
+    "path": "lib/legacy/zstd_v01.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "419bda7aef103af8f42f1ac3024e6a7146f31dec0171c1a3e5e4409e83a6cf9c"
+  },
+  {
+    "path": "lib/legacy/zstd_v01.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "68c0bb7e088910d39deafc5dcf629e0e8c30cea38d3ff9a4af9728a87c7ca91b"
+  },
+  {
+    "path": "lib/legacy/zstd_v02.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "7d703b4b43759eb011b7b680e460892dc634729cb168a9219d7e824b0bc4c795"
+  },
+  {
+    "path": "lib/legacy/zstd_v02.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "fba15b30b8bdbded1e9a92e06c71c4da289d78156bda77d20dc067a7091da5ba"
+  },
+  {
+    "path": "lib/legacy/zstd_v03.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "55b54f5aed9d3bbe924a1f01ee98659ccd383e58f0d0c4ac961d9750796f7f0c"
+  },
+  {
+    "path": "lib/legacy/zstd_v03.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "41dc45ea5a6e901e358ab9cfdea3aa008d91cb80597db28b10c1a183891fb285"
+  },
+  {
+    "path": "lib/legacy/zstd_v04.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "bb7b9728a0abdd70db74fa278497878951f339173f959963182a634c90dbeee2"
+  },
+  {
+    "path": "lib/legacy/zstd_v04.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "03fd1948e6e3b2c7a41933898ec2d3a747d06022b98dc05a045a202fc54acbb1"
+  },
+  {
+    "path": "lib/legacy/zstd_v05.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "f5987302f6820db768df90dac9af01804258f084e2b466a4ebe3be4736be19f5"
+  },
+  {
+    "path": "lib/legacy/zstd_v05.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "e6d204b41dde3f67358f6f29fb9e2455efa447ccd163cb51fc49eabc2fe37830"
+  },
+  {
+    "path": "lib/legacy/zstd_v06.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "ad3a7e8a3dd6d1d61d9148a0000bf1f0ea5a804a8ace7b5fe55b1cbf768470cc"
+  },
+  {
+    "path": "lib/legacy/zstd_v06.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "992e1138577480410ef2a1b3d8157d532ce706f7572e19ce274f6aad0c19d28c"
+  },
+  {
+    "path": "lib/legacy/zstd_v07.c",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "22796690ed15429478d68502554bca92b8364cda64b244a4fe08cc5c18223b30"
+  },
+  {
+    "path": "lib/legacy/zstd_v07.h",
+    "notice": "/*\n * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.\n * All rights reserved.\n *\n * This source code is licensed under both the BSD-style license (found in the\n * LICENSE file in the root directory of this source tree) and the GPLv2 (found\n * in the COPYING file in the root directory of this source tree).\n * You may select, at your option, one of the above-listed licenses.\n */",
+    "sha256": "b204614a90a5dfb5fc4b15e0d89388aacc8420e6e6b62a42265bb810d321a6f7"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/extras/pull_and_build_from_git.py",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 78403,
+    "sha256": "9acaf60a361b30a6ece7c451fde9e19defb295bd612a01cdca135ae5384864bd"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package_build_list_host_windows.json",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 16827,
+    "sha256": "eb1eeb50f2ecabe28d6ecc699efb35c8fbd843e7823fadeff7c0759567f28285"
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/commits?path=package-system/lz4/build_config.json&sha=70f0b7b5257bf7cf935bf1cfd270e1b53ccead18&per_page=20",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 30295,
+    "sha256": "1590e6f148e8ca56ad943646245e56e10870b3bf3e30ce45471540e08678742b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/cb2d074d25488bc9648e412136fabc2a6a943082/package-system/lz4/build_config.json",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 2779,
+    "sha256": "07693dea63a155a00c8368f982bc3765cfae821d1a0255add0774b6327b6503c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/c7efdc07809cb88dd72e10275e896e9a0d62536a/package-system/lz4/build_config.json",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 2519,
+    "sha256": "528f508ca42ce022fecc40bff22a0a5f347525f6023c4b32f36fe66e15910cc5"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/1521b948040c3088c90ae1dd8a1f1da35385db23/package-system/lz4/build_config.json",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 2428,
+    "sha256": "103d3bbfcbd6fd6d3fa05b5fa15d947bb9d33087b8a5896d07a57630d3a6d9ea"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/68e97674712afd8c5e5c99608b35442da579163a/package-system/lz4/build_config.json",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 2428,
+    "sha256": "f010392cda2d31394bafad2e21edb139bbebf6b1ef646e596a46bf3db03a8d5c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/68e97674712afd8c5e5c99608b35442da579163a/package-system/lz4/Findlz4.cmake",
+    "status": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "bytes": 1237,
+    "sha256": "396a4a0d9154b57b9ebe28bbb4542f69a9efc277ba4a1c58d82ff31e5453dbff"
+  }
+]

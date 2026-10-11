@@ -1,0 +1,8 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LZ4/tests/CMakeLists.txt
+  Lz4Consumer.cpp
+  JELz4Consumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\lz4-consumer-rev1\Release\JELz4Consumer.exe
+
+

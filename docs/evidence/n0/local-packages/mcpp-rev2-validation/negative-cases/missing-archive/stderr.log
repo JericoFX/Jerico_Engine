@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: mcpp source archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/negative-cases/missing-source.tar.gz
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake:31 (JE_python_verify_file)
+
+

@@ -1,0 +1,22 @@
+{
+  "working_directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "mode": "-P negative",
+  "argument_count": 6,
+  "arguments": [
+    "-DJE_ZSTD_SOURCE_ARCHIVE=https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+    "-DJE_ZSTD_SOURCE_SHA256=dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+    "-DJE_ZSTD_SOURCE_URL=https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+    "-DJE_ZSTD_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zstd-negative-uri",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake"
+  ],
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-negative-uri",
+  "output_existed_before": false,
+  "source_archive_sha256_before": "dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+  "source_freeze_sha256_before": "d567930c4739ba4d221bd1c3dfe6e7b0f7518107cffa573412d188e383ef2610",
+  "sentinel_path": "",
+  "sentinel_sha256_before": null,
+  "expected_log_pattern": "JE_ZSTD_SOURCE_ARCHIVE must not be a URI",
+  "NativeExitCode": 1,
+  "ExpectedLogMatched": true
+}

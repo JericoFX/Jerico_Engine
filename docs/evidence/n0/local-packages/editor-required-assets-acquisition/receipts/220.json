@@ -1,0 +1,41 @@
+{
+  "index": 220,
+  "source_path": "Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/AreaTex.dds",
+  "expected_sha256": "d0a59111b18e67a66341bf94eeeb96caab0dc120e356bbfd934397a5b1830a73",
+  "expected_bytes": 268928,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/AreaTex.dds",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:17.194145+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/AreaTex.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "268928",
+      "ETag": "\"d0a59111b18e67a66341bf94eeeb96caab0dc120e356bbfd934397a5b1830a73\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/AreaTex.dds",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:17.704403+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/AreaTex.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "268928",
+      "ETag": "\"d0a59111b18e67a66341bf94eeeb96caab0dc120e356bbfd934397a5b1830a73\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "d0a59111b18e67a66341bf94eeeb96caab0dc120e356bbfd934397a5b1830a73",
+  "actual_bytes": 268928,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\AreaTex.dds",
+  "status": "acquired and byte verified"
+}

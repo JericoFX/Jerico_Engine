@@ -1,0 +1,8 @@
+{
+  "name": "producer-uri",
+  "argv_count": 6,
+  "exitcode": 1,
+  "elapsed_seconds": 0.0440444,
+  "expected_text": "JE_LUA_SOURCE_ARCHIVE must not be a URI",
+  "diagnostic_found": false
+}

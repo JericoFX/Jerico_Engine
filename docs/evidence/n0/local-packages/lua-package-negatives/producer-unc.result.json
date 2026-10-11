@@ -1,0 +1,7 @@
+{
+  "name": "producer-unc",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0438183,
+  "diagnostic_found": true,
+  "expected_diagnostic": "must be an absolute local path"
+}

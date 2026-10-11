@@ -1,0 +1,18 @@
+{
+  "name": "consumer-ctest",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-release",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "-V"
+  ],
+  "argv_count": 6,
+  "started": "2026-10-10T19:28:35.8443764-03:00",
+  "exitcode": 0,
+  "elapsed_seconds": 0.0858657,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-evidence\\consumer-ctest.log"
+}

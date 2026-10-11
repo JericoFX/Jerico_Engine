@@ -1,0 +1,47 @@
+{
+  "priorFreeze17": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\editor-native-residual-audit\\source-freeze-editor-native-residual.json",
+  "prior16Unchanged": [
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.h",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Core\\EditorActionsHandler.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEditPy.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.h",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\editor_lib_files.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.h",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorEventsBus.h",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Lib\\Tests\\test_EditorPythonBindings.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.h",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.h",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.ui",
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Commands\\CommandManager.cpp"
+  ],
+  "implemented": [
+    "Project Edit uses existing native ProjectSettingsTool",
+    "Project Open validates selected local project.json, SaveModified/cancel, and direct ProcessLauncher of Editor executable with quoted paths and no command shell",
+    "Startup uses original FindProjectPath resolver exported by one AZF_API declaration; missing project returns 2 with native diagnostic; valid project continues unchanged EditorLib dispatch",
+    "DefaultProject removes only EditorPythonBindings gem; no QtForPython entry existed",
+    "IEditorImpl NotifyExcept empty initialization block removed"
+  ],
+  "staticEvidence": [
+    "38 paths exist and use original CRLF",
+    "16 of prior frozen 17 inputs unchanged; IEditorImpl cleanup is the only further modification in that set",
+    "Original FindProjectPath cpp body and LaunchProjectManager unchanged",
+    "CryCommon PUBLIC AZ::AzFramework link path retained",
+    "DefaultProject JSON parses and other gem order unchanged"
+  ],
+  "notExecuted": [
+    "CMake/configure/build",
+    "Four native API absence assertions",
+    "Exported FindProjectPath link/symbol validation",
+    "Project settings/open/startup runtime with save/cancel and valid/missing project"
+  ],
+  "gaps": [
+    "Native New Project creation port remains pending; no New=Open substitution",
+    "Native New Component wizard workflow remains pending",
+    "Specialized ShaderManagementConsole Python workflows require native ports",
+    "General BehaviorContext APIs/reflection and historical UUIDs preserved; native integration not accepted"
+  ]
+}

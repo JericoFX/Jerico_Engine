@@ -1,0 +1,64 @@
+{
+    "version":  "5.1.26100.9549",
+    "edition":  "Desktop",
+    "ps_module_path":  "C:\\Users\\Jerico\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "autoload_preference_defined":  false,
+    "autoload_preference":  "unset (PowerShell default applies)",
+    "utility_module_available":  [
+                                     {
+                                         "Name":  "Microsoft.PowerShell.Utility",
+                                         "Version":  {
+                                                         "Major":  3,
+                                                         "Minor":  1,
+                                                         "Build":  0,
+                                                         "Revision":  0,
+                                                         "MajorRevision":  0,
+                                                         "MinorRevision":  0
+                                                     },
+                                         "Path":  "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1"
+                                     }
+                                 ],
+    "utility_module_loaded_before":  [
+                                         {
+                                             "Name":  "Microsoft.PowerShell.Utility",
+                                             "Version":  {
+                                                             "Major":  3,
+                                                             "Minor":  1,
+                                                             "Build":  0,
+                                                             "Revision":  0,
+                                                             "MajorRevision":  0,
+                                                             "MinorRevision":  0
+                                                         },
+                                             "Path":  "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1"
+                                         }
+                                     ],
+    "get_file_hash_command_found":  true,
+    "get_file_hash_command":  {
+                                  "name":  "Get-FileHash",
+                                  "command_type":  "Function",
+                                  "source":  "Microsoft.PowerShell.Utility",
+                                  "module_name":  "Microsoft.PowerShell.Utility",
+                                  "version":  "3.1.0.0",
+                                  "definition":  "\r\n    [CmdletBinding(DefaultParameterSetName = \"Path\", HelpURI = \"https://go.microsoft.com/fwlink/?LinkId=517145\")]\r\n    param(\r\n        [Parameter(Mandatory, ParameterSetName=\"Path\", Position = 0)]\r\n        [System.String[]]\r\n        $Path,\r\n\r\n        [Parameter(Mandatory, ParameterSetName=\"LiteralPath\", ValueFromPipelineByPropertyName = $true)]\r\n        [Alias(\"PSPath\")]\r\n        [System.String[]]\r\n        $LiteralPath,\r\n        \r\n        [Parameter(Mandatory, ParameterSetName=\"Stream\")]\r\n        [System.IO.Stream]\r\n        $InputStream,\r\n\r\n        [ValidateSet(\"SHA1\", \"SHA256\", \"SHA384\", \"SHA512\", \"MACTripleDES\", \"MD5\", \"RIPEMD160\")]\r\n        [System.String]\r\n        $Algorithm=\"SHA256\"\r\n    )\r\n    \r\n    begin\r\n    {\r\n        # Construct the strongly-typed crypto object\r\n        \r\n        # First see if it has a FIPS algorithm  \r\n        $hasherType = \"System.Security.Cryptography.${Algorithm}CryptoServiceProvider\" -as [Type]\r\n        if ($hasherType)\r\n        {\r\n            $hasher = $hasherType::New()\r\n        }\r\n        else\r\n        {\r\n            # Check if the type is supported in the current system\r\n            $algorithmType = \"System.Security.Cryptography.${Algorithm}\" -as [Type]\r\n            if ($algorithmType)\r\n            {\r\n                if ($Algorithm -eq \"MACTripleDES\")\r\n                {\r\n                    $hasher = $algorithmType::New()\r\n                }\r\n                else\r\n                {\r\n                    $hasher = $algorithmType::Create()\r\n                }\r\n            }\r\n            else\r\n            {\r\n                $errorId = \"AlgorithmTypeNotSupported\"\r\n                $errorCategory = [System.Management.Automation.ErrorCategory]::InvalidArgument\r\n                $errorMessage = [Microsoft.PowerShell.Commands.UtilityResources]::AlgorithmTypeNotSupported -f $Algorithm\r\n                $exception = [System.InvalidOperationException]::New($errorMessage)\r\n                $errorRecord = [System.Management.Automation.ErrorRecord]::New($exception, $errorId, $errorCategory, $null)\r\n                $PSCmdlet.ThrowTerminatingError($errorRecord)\r\n            }\r\n        }\r\n\r\n        function GetStreamHash\r\n        {\r\n            param(\r\n                [System.IO.Stream]\r\n                $InputStream,\r\n\r\n                [System.String]\r\n                $RelatedPath,\r\n\r\n                [System.Security.Cryptography.HashAlgorithm]\r\n                $Hasher)\r\n\r\n            # Compute file-hash using the crypto object\r\n            [Byte[]] $computedHash = $Hasher.ComputeHash($InputStream)\r\n            [string] $hash = [BitConverter]::ToString($computedHash) -replace \u0027-\u0027,\u0027\u0027\r\n\r\n            if ($RelatedPath -eq $null)\r\n            {\r\n                $retVal = [PSCustomObject] @{\r\n                    Algorithm = $Algorithm.ToUpperInvariant()\r\n                    Hash = $hash\r\n                }\r\n            }\r\n            else\r\n            {\r\n                $retVal = [PSCustomObject] @{\r\n                    Algorithm = $Algorithm.ToUpperInvariant()\r\n                    Hash = $hash\r\n                    Path = $RelatedPath\r\n                }\r\n            }\r\n            $retVal.psobject.TypeNames.Insert(0, \"Microsoft.Powershell.Utility.FileHash\")\r\n            $retVal\r\n        }\r\n    }\r\n    \r\n    process\r\n    {\r\n        if($PSCmdlet.ParameterSetName -eq \"Stream\")\r\n        {\r\n            GetStreamHash -InputStream $InputStream -RelatedPath $null -Hasher $hasher\r\n        }\r\n        else\r\n        {\r\n            $pathsToProcess = @()\r\n            if($PSCmdlet.ParameterSetName  -eq \"LiteralPath\")\r\n            {\r\n                $pathsToProcess += Resolve-Path -LiteralPath $LiteralPath | Foreach-Object ProviderPath\r\n            }\r\n            if($PSCmdlet.ParameterSetName -eq \"Path\")\r\n            {\r\n                $pathsToProcess += Resolve-Path $Path | Foreach-Object ProviderPath\r\n            }\r\n\r\n            foreach($filePath in $pathsToProcess)\r\n            {\r\n                if(Test-Path -LiteralPath $filePath -PathType Container)\r\n                {\r\n                    continue\r\n                }\r\n\r\n                try\r\n                {\r\n                    # Read the file specified in $FilePath as a Byte array\r\n                    [system.io.stream]$stream = [system.io.file]::OpenRead($filePath)\r\n                    GetStreamHash -InputStream $stream  -RelatedPath $filePath -Hasher $hasher\r\n                }\r\n                catch [Exception]\r\n                {\r\n                    $errorMessage = [Microsoft.PowerShell.Commands.UtilityResources]::FileReadError -f $FilePath, $_\r\n                    Write-Error -Message $errorMessage -Category ReadError -ErrorId \"FileReadError\" -TargetObject $FilePath\r\n                    return\r\n                }\r\n                finally\r\n                {\r\n                    if($stream)\r\n                    {\r\n                        $stream.Dispose()\r\n                    }\r\n                }                            \r\n            }\r\n        }\r\n    }\r\n"
+                              },
+    "get_file_hash_sha256":  "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+    "get_file_hash_matches_expected":  true,
+    "get_file_hash_error":  null,
+    "dotnet_sha256":  "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+    "dotnet_matches_expected":  true,
+    "dotnet_error":  null,
+    "utility_module_loaded_after":  [
+                                        {
+                                            "Name":  "Microsoft.PowerShell.Utility",
+                                            "Version":  {
+                                                            "Major":  3,
+                                                            "Minor":  1,
+                                                            "Build":  0,
+                                                            "Revision":  0,
+                                                            "MajorRevision":  0,
+                                                            "MinorRevision":  0
+                                                        },
+                                            "Path":  "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1"
+                                        }
+                                    ]
+}

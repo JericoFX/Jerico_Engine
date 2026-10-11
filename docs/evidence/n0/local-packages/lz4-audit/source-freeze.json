@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake",
+      "bytes": 5650,
+      "sha256": "db82743777ee43d90940574cf980a87776294b9ce084eae22d1830d4223396e8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\CMakeLists.txt",
+      "bytes": 2928,
+      "sha256": "db527d34a3732c073a64363c342ce9ccb86ee3c09614100f718ca37b4321cda4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\Findlz4.cmake",
+      "bytes": 2889,
+      "sha256": "79e2da1b8fd42444a53f53b299091549d08efd9866ca1cf47a7e49d5a364dc45"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\NOTICE.txt",
+      "bytes": 2316,
+      "sha256": "53d419f549fe2e3e4809705d85ab621f908f5207fbdfaf6fda17190e540dcca5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\README.md",
+      "bytes": 2586,
+      "sha256": "bc2752b0757f573c04652c05badbc46d75f0f3e67773fdc0832f0deac40fb581"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\CMakeLists.txt",
+      "bytes": 2048,
+      "sha256": "6fa4629737f5017bcd363edecae552afb53e0d9b4caacfe3e6e3b069a2929cf9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\Lz4Consumer.cpp",
+      "bytes": 8037,
+      "sha256": "29f471205a974b4cdfb535c0c34f0975b5ba7c6930e0fc46395c95a3f45ced73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+      "bytes": 6541,
+      "sha256": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\lz4-v1.9.4.tar.gz",
+      "bytes": 354063,
+      "sha256": "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b"
+    }
+  ],
+  "input_count": 13,
+  "aggregate_sha256": "ce5f7a2ef24fdd26a75f25d5e98f8844a6cb933396bf39caa0c8d872e4ed9984",
+  "scope": "7 new LZ4 candidate files; 6 unchanged shared/license/archive inputs",
+  "build_executed": false,
+  "consumer_executed": false
+}

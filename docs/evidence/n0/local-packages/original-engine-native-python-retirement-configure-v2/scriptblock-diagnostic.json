@@ -1,0 +1,9 @@
+{
+  "historicalHarness": "build/n0-validation/local-packages/original-engine-native-python-retirement-configure/run-root-configure.ps1",
+  "historicalHarnessSha256": "4af33ec2b2e12740817f39b3951527f64287e57c5956d46a958259c845d38cbd",
+  "lineNumber": 103,
+  "lineText": "    sqliteAudit={ fileCount=$sqliteAudit.fileCount; source=Get-TreeSnapshot $sqliteSource; archive=Get-FileHash -Algorithm SHA256 -LiteralPath $sqliteArchive }",
+  "propertyType": "System.Management.Automation.ScriptBlock",
+  "scriptBlockWasNotInvoked": true,
+  "interpretation": "Hashtable value is System.Management.Automation.ScriptBlock; ConvertTo-Json depth expansion caused runaway serialization."
+}

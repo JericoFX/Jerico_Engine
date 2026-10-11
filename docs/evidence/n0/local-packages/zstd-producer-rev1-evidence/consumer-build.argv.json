@@ -1,0 +1,17 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "mode": "cmake --build",
+  "argument_count": 6,
+  "arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zstd-consumer-rev1",
+    "--config",
+    "Release",
+    "--target",
+    "JEZstdConsumer"
+  ],
+  "freeze_sha256_before": "D567930C4739BA4D221BD1C3DFE6E7B0F7518107CFFA573412D188E383EF2610",
+  "NativeExitCode": 0,
+  "FreezeSha256After": "D567930C4739BA4D221BD1C3DFE6E7B0F7518107CFFA573412D188E383EF2610",
+  "FreezeUnchanged": true
+}

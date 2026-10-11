@@ -1,0 +1,41 @@
+{
+  "index": 193,
+  "source_path": "Code/Editor/res/o3de_editor.ico",
+  "expected_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+  "expected_bytes": 148143,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/o3de_editor.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:25.709361+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/o3de_editor.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "148143",
+      "ETag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/o3de_editor.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:26.109895+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/o3de_editor.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "148143",
+      "ETag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+  "actual_bytes": 148143,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\o3de_editor.ico",
+  "status": "acquired and byte verified"
+}

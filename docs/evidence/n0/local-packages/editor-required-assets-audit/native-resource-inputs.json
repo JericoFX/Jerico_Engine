@@ -1,0 +1,1977 @@
+{
+  "resources": [
+    {
+      "path": "Code/Editor/res/ab_toolbar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "434f793b8d095c4135760defbdbc6c6cb26d12ceb952640f06464bba0cb4ebc4",
+      "lfs_pointer": true,
+      "payload_sha256": "13278cd27ad6d705679a6776d2d6ab31c6c4e7243e8a38c6c584aa0096f6069c",
+      "payload_bytes": 28726
+    },
+    {
+      "path": "Code/Editor/res/anim.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "806e38a5a36d45d26626e64dea92a3c1b8fb9b459972d42525211a1e3d1c347d",
+      "lfs_pointer": true,
+      "payload_sha256": "dbc4c519a0d8bb66e5c877e20f19c6c862096cf3bca68153444f3f25a7b034f3",
+      "payload_bytes": 5094
+    },
+    {
+      "path": "Code/Editor/res/animatio.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "3519af2c77d0b7fc2562d4da2528341b7fd346ffed9c2de72218a4a0b208d434",
+      "lfs_pointer": true,
+      "payload_sha256": "db9b83cf8144a703a45d257e5161df639fd08d9ee36d249278b9337297a753c9",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/animations_tree_soundevent.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "e51841c204bb02e88dce15ecf9df6b07df56d765d8a0cb05030d2f494b9f235b",
+      "lfs_pointer": true,
+      "payload_sha256": "636db5b01846d926993bb0eda933424e250e4d9c13d034a2d65f0ab7ed511967",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/animflag_inside_pak.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "2ef5a14053bf17ed87b813862c9c4010f2a6c8c79b8911447070b36e01e16f05",
+      "lfs_pointer": true,
+      "payload_sha256": "3a06d5f98145d6811c63c595827d29bbe54f2a4a9bfcc974208f85050526d74a",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/animflag_on_disk.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "335cadbbc48aadfaba27b9dc9bd3a62eecd426e56eb1d0fc2026ef25c425b0cd",
+      "lfs_pointer": true,
+      "payload_sha256": "e24e098dbeba0ed45ed15b9c4c06e278e406746a0bc9bb3f3336023afc5516ce",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/animtree.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "05dce999e741521c08f556420e19f1b12c22720296b6e76497143f03ee876057",
+      "lfs_pointer": true,
+      "payload_sha256": "a979a67b7cb5171f70cdf86920d654617a8a92d8a118501cdd4f9b96ed0e6187",
+      "payload_bytes": 7734
+    },
+    {
+      "path": "Code/Editor/res/arhitype_tree.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "e821f1b8d31808b39743fc70e1e911772dc9fe89bf88a5914d73cceb695b268b",
+      "lfs_pointer": true,
+      "payload_sha256": "c2d629081b7e780dcb9a3a8ef24f1fd5ddc91f4bebfa199381dc5c5cb0993681",
+      "payload_bytes": 3126
+    },
+    {
+      "path": "Code/Editor/res/arrow_down_black.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "8337ee26c6cb50f7e1e08f542a3b19aa065b5193d066a92dc126dbadf63b9b66",
+      "lfs_pointer": true,
+      "payload_sha256": "bc16a8ba71f1d68c198f9bb2d6b8a211d5eb37c31f541e31f3acca5f780b1043",
+      "payload_bytes": 166
+    },
+    {
+      "path": "Code/Editor/res/arrow_up_black.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "ec73f3f68386bb9b5c9c27a725062e02f4e019240412d4bb65d41ce72dd97a12",
+      "lfs_pointer": true,
+      "payload_sha256": "f1a0544faa77c55fa271b9a019373a955546055b5bdf23d3b5ea17c6a9e57715",
+      "payload_bytes": 166
+    },
+    {
+      "path": "Code/Editor/res/assetIsDraggable.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "e3845882a9efb8fd0d734dbc43122d9bd2114e970b819aed46b5f3645011f7bf",
+      "lfs_pointer": true,
+      "payload_sha256": "1ec424d133559b3bf7594a5ccb8ee41ce0e78b8e56007d3efba7d7dec2538fdf",
+      "payload_bytes": 4286
+    },
+    {
+      "path": "Code/Editor/res/avi_reco.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "470009fadcbd5123fd0f12cd2d9c9380597975bad538d693a0918d28ddb5ca61",
+      "lfs_pointer": true,
+      "payload_sha256": "3c8be44fef9e14131ac2ad8ee5a0f7a58fdcaf730ebc6e1b542ef5136e4a1ec3",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/AVI_Recorder.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "8e34e1f4cb8de9320d3531a1157517f6f3ba7c1d36644c15c5b9567921cf623f",
+      "lfs_pointer": true,
+      "payload_sha256": "06a24da0890c68b3a85036fdeac7f1199740ed1f736844f8d76481b3579c3985",
+      "payload_bytes": 9270
+    },
+    {
+      "path": "Code/Editor/res/ball_disabled.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "eb8a9bddcab19ad4d0ca0555ca90e8e8d4b336cb3af986c4328528c49a977fe3",
+      "lfs_pointer": true,
+      "payload_sha256": "5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4",
+      "payload_bytes": 1150
+    },
+    {
+      "path": "Code/Editor/res/ball_offline.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "4e02a582f39593c3a41c37c85d1328149f3693338684fbfdb656c68743fc7e8e",
+      "lfs_pointer": true,
+      "payload_sha256": "897534f41f97916f07b1125e45d56fef9f5f6049b13eba7bc17e70ff42ebdb05",
+      "payload_bytes": 1150
+    },
+    {
+      "path": "Code/Editor/res/ball_online.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "21dbb1c685a034691eb6bd2ce6457ed2d182c4589801c5fd1fc54512c90705f6",
+      "lfs_pointer": true,
+      "payload_sha256": "b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c",
+      "payload_bytes": 1150
+    },
+    {
+      "path": "Code/Editor/res/ball_pending.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "5d432f70443996c7e664069a02bfb22cbb065d6931c7b56bd8df62f520e2c773",
+      "lfs_pointer": true,
+      "payload_sha256": "499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb",
+      "payload_bytes": 1150
+    },
+    {
+      "path": "Code/Editor/res/bitmap5.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "24a59cd7eb80b32b7532411b8910854ea13a5661d044656f5502612a636ae080",
+      "lfs_pointer": true,
+      "payload_sha256": "2cb99eadc3df8c2cd12997a5f2688811e7414d1165d84b8c56ced8328865cc1e",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bitmap6.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "d946a5524bab9694677e2c8636b9971abe51f214166aeec98a52d8dd9f35bc4b",
+      "lfs_pointer": true,
+      "payload_sha256": "98a325f4d13dc4b9ad9530a16c724efd902066b4c91c4174b81b332d538cfcb4",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00001.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "fdec0238b2eac4a755890637932a11da412c9acf108b1719241f588ee3a09eac",
+      "lfs_pointer": true,
+      "payload_sha256": "b1b56ae08d009caabb2672503b2e97194a88197b962f499c795ce2736e3daa0d",
+      "payload_bytes": 4662
+    },
+    {
+      "path": "Code/Editor/res/bmp00002.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "93366a176c001848674dbab75801b352d566fe90d8b050342b0883a7119a563a",
+      "lfs_pointer": true,
+      "payload_sha256": "fa104c1ccc99bd83a51b090123cfbbd349bd0f21e75bebac92e2a6c5581c560c",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00003.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "afcc3922f58ab3f7a8ff04b597b9e58dcd47151623e96f08b8713d759bc1d2f6",
+      "lfs_pointer": true,
+      "payload_sha256": "5b1e9e077ed795831d604b10dd63ebbbb59c6d71544e02620484ee8a972fbc70",
+      "payload_bytes": 824
+    },
+    {
+      "path": "Code/Editor/res/bmp00005.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "44a623ab9f0ffbc43b92601c337ca76e3161361235b5ddd897072fe1e124e492",
+      "lfs_pointer": true,
+      "payload_sha256": "dbeee4463370136ce15db57c7ea3db621c8b97e8ff7311d6b7a7cc1199abb1b3",
+      "payload_bytes": 41014
+    },
+    {
+      "path": "Code/Editor/res/bmp00006.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "3f61d30482b94ccb99fa0f808dc558710fd21cb4e77faeeefd24bae20203af63",
+      "lfs_pointer": true,
+      "payload_sha256": "f751b56ab6129db8614e29b9c63811db1565a8d80e74a5d596e87e9798355c8f",
+      "payload_bytes": 32822
+    },
+    {
+      "path": "Code/Editor/res/bmp00007.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "bb82281a9e2d917a35553a61007c76c85d1358a9575c516e940ca9fd57ccfc7b",
+      "lfs_pointer": true,
+      "payload_sha256": "cce4b9cad1d4790a0498e924e280b29fdf9ed5584f4c750431959974fa5ef5de",
+      "payload_bytes": 12152
+    },
+    {
+      "path": "Code/Editor/res/bmp00008.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "33852360571c280bd328b575454ee4b74523a5fa4873c7b027eaa198dd28b91c",
+      "lfs_pointer": true,
+      "payload_sha256": "5d5ba4af123524fc9b94f4a910b46354d5184dabb956eb05e7020446f897d5dc",
+      "payload_bytes": 326
+    },
+    {
+      "path": "Code/Editor/res/bmp00009.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "4106edeb8823d11b683b8c5e215657ae7387fa85c6a2f287d69cae0d62373e72",
+      "lfs_pointer": true,
+      "payload_sha256": "0e8e5000fced075800e714f18afea2a59c0afc94987ca4562a890c5457173f6c",
+      "payload_bytes": 246
+    },
+    {
+      "path": "Code/Editor/res/bmp00010.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "027c0489338dc8a6227305f84adf54df811dd6429c64d1d3393873a020649d97",
+      "lfs_pointer": true,
+      "payload_sha256": "e6b52f63baf37c4df26539ab79363ed7b7e2dceb43e7d4b53934ef84aebbc7e0",
+      "payload_bytes": 45110
+    },
+    {
+      "path": "Code/Editor/res/bmp00011.bmp",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "2439769eb1cd8feeb401251624e0eb55b412c4c31f24e49999c8a4866afd9fa5",
+      "lfs_pointer": true,
+      "payload_sha256": "f454fad952404d06176645b3a0c3b84b1863b3eb42ad15c2748a490061002339",
+      "payload_bytes": 106550
+    },
+    {
+      "path": "Code/Editor/res/bmp00012.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "e9f264c290c7aa943b0d4979fe7ab6a790fd486e37f71e6378d7154f59bd256b",
+      "lfs_pointer": true,
+      "payload_sha256": "92a6b3a263c20388f76837bb8f9a840e1d8466735458b0025c99d4a31310d8d2",
+      "payload_bytes": 246
+    },
+    {
+      "path": "Code/Editor/res/bmp00013.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "45bd3203006cc8092073ed91f4af05ff5a23b79de55827ead4428ca0f5f28079",
+      "lfs_pointer": true,
+      "payload_sha256": "a09964e0a69a50966e874434cffcb3ce17862b2a79fe7ea625ae7ef763e3ae88",
+      "payload_bytes": 246
+    },
+    {
+      "path": "Code/Editor/res/bmp00014.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "8b2055572103c25183b0113aea85e78f46cb6f0145ec221326ffe62f54c67a4a",
+      "lfs_pointer": true,
+      "payload_sha256": "e98b95258c13d49e9fb4a3ab86ba251b5bc32db7e79e8c27541bef2f7f0a1f64",
+      "payload_bytes": 1678
+    },
+    {
+      "path": "Code/Editor/res/bmp00015.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "d56186ef6cd2d5c7cd586a2da4a336976dd33dbb896cf5ae24115876d773f8d1",
+      "lfs_pointer": true,
+      "payload_sha256": "69ab0bd58996977db83048badd08c79884f1345e069eb7d5e01d96f3f5618e8d",
+      "payload_bytes": 2934
+    },
+    {
+      "path": "Code/Editor/res/bmp00016.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "6135c969569b4ea1b349b1c7ab93ad80400b8ae10210e36863650ee1cfa0f146",
+      "lfs_pointer": true,
+      "payload_sha256": "4ba9b0e9ba47bb5b23c6ddd093418fe334da02730772f5de8193b9b8e7422ea1",
+      "payload_bytes": 310
+    },
+    {
+      "path": "Code/Editor/res/bmp00017.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "04cafe3040cda8596ad264e3b2112779d1b20ecdf1c3eb47183736cecae195d3",
+      "lfs_pointer": true,
+      "payload_sha256": "3692f54336028aef1dc6b78f63a6b71280d394e8e2afca083aa57cb9d7f61463",
+      "payload_bytes": 12342
+    },
+    {
+      "path": "Code/Editor/res/bmp00019.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "c1b89253ef57c0f56155f009050cdfb0d953fc8518b741f62e8fe84285fa595c",
+      "lfs_pointer": true,
+      "payload_sha256": "41e1c9e246e1f2e264432317318031700aa736832965cdbb42db4b6474a16080",
+      "payload_bytes": 4136
+    },
+    {
+      "path": "Code/Editor/res/bmp00020.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "129cfc5fd0ea36e769119cc89fc65b015cdf43347f79293801a2df08d2138870",
+      "lfs_pointer": true,
+      "payload_sha256": "6f099e9e51145a433475f93acba0805431249aa9971f5b7bb423e6e66731c322",
+      "payload_bytes": 794
+    },
+    {
+      "path": "Code/Editor/res/bmp00024.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "c3b88729e79e0b4d4836aaf5f0a529510b33d32c1e1ac2be582bd1507259c535",
+      "lfs_pointer": true,
+      "payload_sha256": "cdf3b514004467e72157003fb15598c7e306c248b62a308a37e33ab349c821ba",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00025.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "5956878f5241cb957fd34dc31c1cb2a6d84b3caef36844b8bc1926cb8910d3fa",
+      "lfs_pointer": true,
+      "payload_sha256": "c1246b06a972206b431406a06173b0650167245eeccfc8f603232a1687a23cea",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00026.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "a7f26f153e732d0eb256a1d8faaee7576936e085a329525810687165873ed1ca",
+      "lfs_pointer": true,
+      "payload_sha256": "86a33c6a52286bae7c64803f36e7083cdeeef43417a580ce205f9a7fcc75d19f",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00027.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "3087a098fc071de174d10b25d8de113b269e0d743b395c106c1e5090b261264b",
+      "lfs_pointer": true,
+      "payload_sha256": "1295588bcbfccbd234076b1dcc1be685cc913b0acf92d3613875ad8aa9c18466",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00028.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "ea3a23092d3bcd0a58a6a763bf9f5f28dc8d4681248c0a434d45868a561776c9",
+      "lfs_pointer": true,
+      "payload_sha256": "c898c5f4d6b914e63f05198d90e54c90b1c8b491363ce187b36a6030d80f9f15",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00029.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "a20119e69b278458160ef492db2479f112107b87659f9ec499b708a0ea8985ce",
+      "lfs_pointer": true,
+      "payload_sha256": "d2cba3f55479a5967ae5eb723d641994f2dae2848eb71877fde05b23aa9453ba",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00030.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "93366a176c001848674dbab75801b352d566fe90d8b050342b0883a7119a563a",
+      "lfs_pointer": true,
+      "payload_sha256": "fa104c1ccc99bd83a51b090123cfbbd349bd0f21e75bebac92e2a6c5581c560c",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/bmp00031.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "51cce4a17476c1450f4cf5ccc31f9856749cddfabd788337b4adc0e7f196bc78",
+      "lfs_pointer": true,
+      "payload_sha256": "e9bdb2408c2a7059a9fa5ae891af08ec937535427a1c1befd99918975ab7202d",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/brush24bpp.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "7a0eca2d268ef67e848d02c7aa70904fe938fe6ee3b47d94144a1bb243a55cf2",
+      "lfs_pointer": true,
+      "payload_sha256": "ec9b733d7e11a919a37947f1c7c1c87f14ae017b6ddeb94958f51e52b4725b59",
+      "payload_bytes": 15798
+    },
+    {
+      "path": "Code/Editor/res/ce_animations_toolbar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "a407a09ef6d9f9dd1c68fb321dc28baaf3e4de784ff960c6cade1d1813c39a29",
+      "lfs_pointer": true,
+      "payload_sha256": "323b97b36044e4af20a3cc082f06186ade8c17c9c5a4c7f10f4f3f56c0b932db",
+      "payload_bytes": 3330
+    },
+    {
+      "path": "Code/Editor/res/character_parts_bar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "1e94c204cef98779b28038b45d25a9c3771d9ca09f6a1a0e6297cc04f78453e4",
+      "lfs_pointer": true,
+      "payload_sha256": "b326773c7e85d6c1acfc8893b25dc691eb8ce10fceefca1cb0143f0d7f6a4a4c",
+      "payload_bytes": 3128
+    },
+    {
+      "path": "Code/Editor/res/charedit.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "42f5a11682e46267a1d5c6826442550afa5285cbe5852ac5a142faf90ded273b",
+      "lfs_pointer": true,
+      "payload_sha256": "7d8043469ef28f98c4f8c3a9c19bb8158ece6b168be4f7742cd4f65f0b6fe45a",
+      "payload_bytes": 41014
+    },
+    {
+      "path": "Code/Editor/res/chrparamsicons.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "81d5af4b5556e5fa8595ee488bb56e48f058b0e2336b356540652a6a85bf9a8b",
+      "lfs_pointer": true,
+      "payload_sha256": "1e427957fddc7eefcc4cb0a8e71a8be29bbd64255e63ce01dad16963b661ee31",
+      "payload_bytes": 5174
+    },
+    {
+      "path": "Code/Editor/res/clapperboard_cancel.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "331d635a8439e54fda621c3bfe2880f367372f24e3abf0a175e7607e778d63d6",
+      "lfs_pointer": true,
+      "payload_sha256": "01adca7c566fb7c78768eee5dc90f209c3b5e6d6f765a50f6a51f5048e26f5ce",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/clapperboard_ready.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "5f7a3a33f518d3b97b77128f3e1cc1bc295d409de81fde294eab191a1dd081d6",
+      "lfs_pointer": true,
+      "payload_sha256": "d6c2370453ee7a223508e8bf253b8f20ab9d09bf565527f1dde93abd7c6bb6c7",
+      "payload_bytes": 822
+    },
+    {
+      "path": "Code/Editor/res/clone.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "970a6399e78b93ee70bfd885716aef4edaafb4deb9d68d8368c754c05d612d42",
+      "lfs_pointer": true,
+      "payload_sha256": "ef1b030bbdc7c2a1c63bd9f2d6dfbd0a1c40c7ce1025f992ba76cc13bf17c9fd",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/ConsoleToolbar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "27ba19c76551c9f639b5cd046c4616c403b096efe64854ff0ba6e63a61ce7fbd",
+      "lfs_pointer": true,
+      "payload_sha256": "848df2b69b7f3b5691b0310e64bc635e5174b13b2b0dfacd13a42f85ae9275e2",
+      "payload_bytes": 24630
+    },
+    {
+      "path": "Code/Editor/res/CryEdit.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "aa498b77b6e847ddb89286229be5ea8e89c41c5e9c18b00e952fce26bfc16d7c",
+      "lfs_pointer": true,
+      "payload_sha256": "c45d28371fb665e32b0f39fa5dda17e004713cd4cd437c0ce5578a738f8a2558",
+      "payload_bytes": 1078
+    },
+    {
+      "path": "Code/Editor/res/CryEditDoc.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "a17b8d706eebc8b3cdaa4f9ecd0b4bdc8d5d86af7f9401594478ce721b14e2ad",
+      "lfs_pointer": true,
+      "payload_sha256": "1ebd673d37993bdf72aa4116c6cb04601ceb06326f694ef25ee0c8d9bb51bd66",
+      "payload_bytes": 1078
+    },
+    {
+      "path": "Code/Editor/res/cvar_dark.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "1c501bc23d6097a174b835c29f27404f9f33cd6d2c08e480ea0d9eaab9666290",
+      "lfs_pointer": true,
+      "payload_sha256": "883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e",
+      "payload_bytes": 1080
+    },
+    {
+      "path": "Code/Editor/res/db_gametoken.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "361d1e70a71abd97d645651e3adb86fc370a552e95c672d5920f3a2e0683f763",
+      "lfs_pointer": true,
+      "payload_sha256": "ad80037c2c9fa5acd2c63f0ac5664bf1860db593b3b02efd5593fd20a15afb3b",
+      "payload_bytes": 8502
+    },
+    {
+      "path": "Code/Editor/res/db_library_bar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "0a858af7dbaad369aace9407612d5338cd600b7b7d1b13da48c5b27f2f6bb751",
+      "lfs_pointer": true,
+      "payload_sha256": "e286ab86a0c1d558ff5f6f13fddd7bbf991f40a523d882ba718239a71866c6f0",
+      "payload_bytes": 24630
+    },
+    {
+      "path": "Code/Editor/res/db_library_item_bar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "9133bae3aa872cbde89cf40356ea89b3590015632016fe0750dd68972617d698",
+      "lfs_pointer": true,
+      "payload_sha256": "038143e653faecb83257e128a950ff9fcbf3116f0576572a17946b2650cc919a",
+      "payload_bytes": 24630
+    },
+    {
+      "path": "Code/Editor/res/db_music.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "78c248b346a5f2463fd61d5b3216f3228a1f6611a072c74727348e271c42ea4e",
+      "lfs_pointer": true,
+      "payload_sha256": "31cb39f0cf4e631af5c65fac890bd896a71ca90f36118f4cb7601e8b27cbe666",
+      "payload_bytes": 45110
+    },
+    {
+      "path": "Code/Editor/res/db_music_logic.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "a43b765683ed791b56d0adfaf6d76fde7d737868ce7ab57ead1f51337e8b0e44",
+      "lfs_pointer": true,
+      "payload_sha256": "81efe8c9aa995cb257dc7dfe20ddcd76dca27f0aa7e0c7eb9ec3dd1c924ccb78",
+      "payload_bytes": 12342
+    },
+    {
+      "path": "Code/Editor/res/db_standart.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "8b08ccfb459e605a40d1f4d73f61f2e1b7f9ad3803a631257bdb66225753cb1e",
+      "lfs_pointer": true,
+      "payload_sha256": "cf442eee0837eef0cb2d4ff382c6cf2f4d7899ae5e714d8dd66163e3cc7fea51",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/desc_editor_toolbar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "76e106e44de75196e5878e7cd5a3976a5696103c429259b3ad4c1495ee6e1f2c",
+      "lfs_pointer": true,
+      "payload_sha256": "08b3578785fc5d43daa8c3eaf97287ba517fac4fd6de7cc0b992a5d9da2e13e7",
+      "payload_bytes": 12726
+    },
+    {
+      "path": "Code/Editor/res/down_arr.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "c36537729ebf12c958f05d5e7588a7059bbde50cebe6ff75f158b81774f357e0",
+      "lfs_pointer": true,
+      "payload_sha256": "7837e48b73c3f20520f8c7c3b86a8c74cfb28b42d15929ecaa0650bb7669440b",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/down_arrow.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "26086398d45d04544394bb3786a35b8f15ddf04e7c28d9a5246dc4c18b4ab925",
+      "lfs_pointer": true,
+      "payload_sha256": "2ed4e8b43c601da36db18edf4a4a4d470995cf670222b8c67e3d6086a09a2369",
+      "payload_bytes": 166
+    },
+    {
+      "path": "Code/Editor/res/dynamichelp.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "b8d66806ab93f97353b97baea1da5874d341fe190132879aa8996d80bac082de",
+      "lfs_pointer": true,
+      "payload_sha256": "e57d6a27f228b8a087e78d801838b1c7c33486673c9c5018c6f98c8aed14f213",
+      "payload_bytes": 1496
+    },
+    {
+      "path": "Code/Editor/res/edit_mod.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "d8c3734b768099a17f2c0765103c24fb31dfce0dfd21ac35f84464b83e4102cd",
+      "lfs_pointer": true,
+      "payload_sha256": "61f88a261dfa1314d52b849145ded8c5beec1f2e7fe6bb7b6f5e39ae2d92f0e4",
+      "payload_bytes": 10856
+    },
+    {
+      "path": "Code/Editor/res/editwithbutton.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "a36d3ed1608da41c4ed11137493b0363322584a7c2ca45c12c08bb000879825a",
+      "lfs_pointer": true,
+      "payload_sha256": "de2dacda672591b7d91b9b1f67479bb3cd6fa29d8d0c8f264b69de240900ce6c",
+      "payload_bytes": 9378
+    },
+    {
+      "path": "Code/Editor/res/editwithbutton_dark.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "269fa8cb1c61e54be352d4a40f8299ab244ec19e7328cd2d243b60e863088f3d",
+      "lfs_pointer": true,
+      "payload_sha256": "a6f24a36c778ab5984256d8900bc61edb0dcfa7a8749b00f01b438e3954a139f",
+      "payload_bytes": 12404
+    },
+    {
+      "path": "Code/Editor/res/entitybar.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "7e3e6a8455a9ffa9a007e34d08ac6550e865fd2f7057c73a18ee2a3adc8b932c",
+      "lfs_pointer": true,
+      "payload_sha256": "83bda00b8f23b7c0ab58a6361df8bec81ae31e2d566d4304463b292d1684c2d8",
+      "payload_bytes": 838
+    },
+    {
+      "path": "Code/Editor/res/error_report.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "98b9148df474733ea694cb57ae000dd6e60e195067b828fcf591a556375713b9",
+      "lfs_pointer": true,
+      "payload_sha256": "869396b3b39c994767d759c69430c69704bbb98f5785313ebebbd0eecd65e833",
+      "payload_bytes": 2358
+    },
+    {
+      "path": "Code/Editor/res/expand1.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "7fabbaf5a96323eaec45f7433500f2460b23f0d7e074aea1334bbdb301ae9800",
+      "lfs_pointer": true,
+      "payload_sha256": "98af65ba62fbd3e8b2e567427e0f6f26a628b61f91a4672a493aeb94df05ec32",
+      "payload_bytes": 190
+    },
+    {
+      "path": "Code/Editor/res/expand2.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "3a3d5785a6d46e9e2dd4aef252c3aa300e088fc35549be1edd5bd5321c8af017",
+      "lfs_pointer": true,
+      "payload_sha256": "e61257b5cbe46f820cc64609880d60965e2e8eaa2440f869dd40a85eb3efa657",
+      "payload_bytes": 190
+    },
+    {
+      "path": "Code/Editor/res/faceit_playbar.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "0a5e3d5fa08ef667de42c8be366bb29a970dc14d04c58d5fee8e1555a28e12c5",
+      "lfs_pointer": true,
+      "payload_sha256": "3ca747de99939093c3beb6f9b4a35871e72f925a42b739eed54b1e108c5a06f4",
+      "payload_bytes": 838
+    },
+    {
+      "path": "Code/Editor/res/faceit_slidersbar.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "a0b7d9c348c722b504adc99ade3becc72a8a866bf5e9fd2c1b39d140240e249a",
+      "lfs_pointer": true,
+      "payload_sha256": "d2fd2ef99ccf082c4a6119cc6ad618867c567bd4cf57dd20803fcdc5ede26926",
+      "payload_bytes": 238
+    },
+    {
+      "path": "Code/Editor/res/faceit_spline_bar.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "65a3db335530e890eb37e6d0e815ef4984dd94531a9cac7ae3776a942e3d975d",
+      "lfs_pointer": true,
+      "payload_sha256": "331506d310706868affdd12ccedb8c9f2ade9a0e36d80789c4759d9a482ca2c9",
+      "payload_bytes": 198
+    },
+    {
+      "path": "Code/Editor/res/facejoystickbar.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "48001144c1d6a776ecd3f3125ce61e8474ad59e4c6be9bbf28bf58440ea961c0",
+      "lfs_pointer": true,
+      "payload_sha256": "61b9602ef1df9bdaada19e60c023856e582ba4d4424918aaa96a626bbe004ebe",
+      "payload_bytes": 718
+    },
+    {
+      "path": "Code/Editor/res/facesequence_bar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "678c0ae385d2f442fdf562ad2869ea34f1d83cfe996619752131794fc2ae4c2b",
+      "lfs_pointer": true,
+      "payload_sha256": "f8ea2e290f7c61469c22114568d8cb6c1aafa96c4f8ae4c5d020c16def437639",
+      "payload_bytes": 6534
+    },
+    {
+      "path": "Code/Editor/res/facialsequence_bar.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "555114c2ba63e048552debfe41142f70a4b6e8ee5d604075004c6c2a75ca185f",
+      "lfs_pointer": true,
+      "payload_sha256": "d8d635ee0c68ded1455826ef3d2997ca0ebfd1173dac91f69af6e6309bc6dd8b",
+      "payload_bytes": 238
+    },
+    {
+      "path": "Code/Editor/res/feedback.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "ebc9a6090106fabbe4843c0a3c1b3b77523ab0eb4448ce7614c8fb72bbf70e70",
+      "lfs_pointer": true,
+      "payload_sha256": "38d49dc9d2e8a3f06f089c62df65d53e8b4a56458e28ca2f9953cd0779ad51e2",
+      "payload_bytes": 1150
+    },
+    {
+      "path": "Code/Editor/res/file_browse.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "7252060cf95f54dcb4328e3c1c21af279ddd75f1312c3922901d1840edde1a22",
+      "lfs_pointer": true,
+      "payload_sha256": "6222f9da3771c69d03bff96d489a9c26def54274a2d6c5a2dba179d17f582095",
+      "payload_bytes": 1406
+    },
+    {
+      "path": "Code/Editor/res/filesimage.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "b357c4c7167718d13b281da4ec0b9bb6b8d704fe5cd6cefe2cdf777b33cd5137",
+      "lfs_pointer": true,
+      "payload_sha256": "9ea921b89896e94c5b15db6730e21185b465d7c5c4fad0091e3c38ac4c08deda",
+      "payload_bytes": 7734
+    },
+    {
+      "path": "Code/Editor/res/filestatus.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "e4cfe28340639ed77ee5ed5c94712ffebaf93d4960494236ec6c755be13cbfe2",
+      "lfs_pointer": true,
+      "payload_sha256": "c8a795e72902a702fdf0c8e28174085b6690d8aad804b761e8b8fe35b8c74220",
+      "payload_bytes": 6774
+    },
+    {
+      "path": "Code/Editor/res/folder.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "62c5a21658309450a9d4c758c4da4dfbfc6879a2d022622f8ce5e69e353d34bc",
+      "lfs_pointer": true,
+      "payload_sha256": "a7301a45e3569a3c03028e1a6dd9dd97310ac5b61d64cf92224687456e3f7fe4",
+      "payload_bytes": 2238
+    },
+    {
+      "path": "Code/Editor/res/fopen_back.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "9062c249bcc251bd225d274b834e97ed0a64501e4964633ed89cead43d5dbe62",
+      "lfs_pointer": true,
+      "payload_sha256": "6beab064b97ee246d19eba872dd32f7b6cc049402fd4ab9eaabe84a33b794f03",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/fopen_up.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "cddc03a67e6deacf40edfb7ab72bb818f59dd092035b90f3bcbe2967ea69a3aa",
+      "lfs_pointer": true,
+      "payload_sha256": "0d0b6ba294046c6693f87ec357ced5dc0cfe8295726703d3794bdc3cb64cc646",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/grid.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "6cfd11ca6723129acc5f8ebfdb5f416fcb354a2b123e25a2f16f0b2d005afd7b",
+      "lfs_pointer": true,
+      "payload_sha256": "8f9de7e26d5b3e20cf7789606aca4a6b07333a67e43ea1fcb42439ac36b4a81d",
+      "payload_bytes": 2238
+    },
+    {
+      "path": "Code/Editor/res/hypergraph_components.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "8f8dd9f274d3d21fb2393dfa12313d7df182ce149549d4b467926539a4254c7a",
+      "lfs_pointer": true,
+      "payload_sha256": "04983ac0ba8643af15b22a565a312f575f16cdab3cb2d974c98bc597fb4a8a0b",
+      "payload_bytes": 7974
+    },
+    {
+      "path": "Code/Editor/res/hypergraphtree.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "2f191c54f430f035a904f951e147db111b86285ebaafbe84c489aaa25eb9531c",
+      "lfs_pointer": true,
+      "payload_sha256": "8fc6422ba0f672d7c593747fcb030c9765bbfcf965f2620df1ad1d259fdac95b",
+      "payload_bytes": 13014
+    },
+    {
+      "path": "Code/Editor/res/ico00001.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "303019ec638154164e3af777450b10cd0233c1357196ce4ad353528ad3d94052",
+      "lfs_pointer": true,
+      "payload_sha256": "d6286f1e79360576613d3035e7e0bad7fa1ef0b22252e0db562433b84e767591",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/ico00002.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "cdfa401847eed62b20724f605e18a05c45c3310c9e598cc1b2d0f377231b0d85",
+      "lfs_pointer": true,
+      "payload_sha256": "3184a9f950dc83caef4fd11b1119705ca6aa048258117bbbb256f3cd76c99a30",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/icon1.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "d2e47f7a8134c82e01b930f434de32af5b82590aa48240c14246ebc905e3233c",
+      "lfs_pointer": true,
+      "payload_sha256": "52c2257262eaabbdcbfcbca69e38ec06a9cb55c5e5ade6f612f52f1034d995bf",
+      "payload_bytes": 318
+    },
+    {
+      "path": "Code/Editor/res/icon_delete.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "b005736c8cf33b6e396eed99719342b6cf29a6c69869344831fcd6367711fae6",
+      "lfs_pointer": true,
+      "payload_sha256": "cbac5bdd817a605459d4e29750d650f0566f365fc400a2039a179ee5f4340e8a",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/icon_export.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "b57a0d136736367c1530abf0f7215707d73a6cc76cfabac479860fb512b0ad59",
+      "lfs_pointer": true,
+      "payload_sha256": "cc4fe7a4d9ee1d113ee42ad964819660b1531d78b353d16be5e16cdee4194a2f",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/icon_import.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "ac755958b05997df4b3fdf4fcd6f385b86c518597b8bd2e79f19c762d2684e16",
+      "lfs_pointer": true,
+      "payload_sha256": "124ecca29b0643fcb8a52c9c7745b5f3bd0a8ef70d23596ebbe857dd8cde4839",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/icon_new.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "2002300528a5cf3c098c6f7549d5a5850654797841a40fd5fb68bcc3ef8402da",
+      "lfs_pointer": true,
+      "payload_sha256": "6eb866af35cd9b77c7e237096a1685d951a567cfed8ff1ab4f78f2214e5ef8c9",
+      "payload_bytes": 4286
+    },
+    {
+      "path": "Code/Editor/res/icon_pause.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "51c71de2a431e29209db987b46c4eeb9799dc28757b37883463d37e6408916f3",
+      "lfs_pointer": true,
+      "payload_sha256": "8ee0d0ea14da4df4042fc9e7b6cdf6bcf40938b8ed4bea3f688a00ff136fcf3b",
+      "payload_bytes": 1406
+    },
+    {
+      "path": "Code/Editor/res/icon_play.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "207286330cc5e9a70ffce6a676cda6e7d738c4fa862452eae62aed3a316a8db1",
+      "lfs_pointer": true,
+      "payload_sha256": "ca6e0bb441e70aeb90f82b93ab35b4335f34313902ae7bd73a94f3b1daba7178",
+      "payload_bytes": 2238
+    },
+    {
+      "path": "Code/Editor/res/icon_question.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "52bcd35405662e27d32d4984e6874d542c7788da1a74b17dd5c628c2e1f0a2c0",
+      "lfs_pointer": true,
+      "payload_sha256": "63681f42700ed7038d72b4b97194b4a54e1d1524637eb991cd32b803cf2a905c",
+      "payload_bytes": 630
+    },
+    {
+      "path": "Code/Editor/res/icon_question.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "2d39236e607c51a161a791e877f58f62b6409da4e3b51dfc915af9c5c9e369f3",
+      "lfs_pointer": true,
+      "payload_sha256": "b96820567e045e4c13d9bf49e9367daa0e0fe9ff16f811d6ed1ac5be8c63ef95",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/idb_.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "b42324db372217d6ee44075a964f0fbb526c542da6fe5e76a7ea21d104c0139d",
+      "lfs_pointer": true,
+      "payload_sha256": "472a17a3f0a376c74a27de1d3e8959eea349bddeebd989429aedad2a1c9fdb7a",
+      "payload_bytes": 8874
+    },
+    {
+      "path": "Code/Editor/res/k_PlayerButtons.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "155172cd1cc91ea3b4f199431afd4b2fa8ba8ed8b7ca031421201461c05906f8",
+      "lfs_pointer": true,
+      "payload_sha256": "f0a13703d32e774ecd1a08ea5a12b7206166e0ae464144817837da165e59cc27",
+      "payload_bytes": 9654
+    },
+    {
+      "path": "Code/Editor/res/layouts.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "b99523c61374fd49afb053d8b8da5a9fa4d506fcdefb774710f5af3d9d77371b",
+      "lfs_pointer": true,
+      "payload_sha256": "bd2772b1e285e980cd6ba4fa2e37440b1cc20940a8852468d2cbfa2bee0af47d",
+      "payload_bytes": 7944
+    },
+    {
+      "path": "Code/Editor/res/lc_connecting.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "ecf08fc8e635ea22df4da63e4028cb6a368e2800f28987b560bdd511b31f3bc8",
+      "lfs_pointer": true,
+      "payload_sha256": "ece89547a1c9a34c36ac0cee15bafcb8abf1847b5b4c2cf768b9e21bca7b978f",
+      "payload_bytes": 894
+    },
+    {
+      "path": "Code/Editor/res/lc_running.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "3b169a6f434bfab05ca511286ac0db7b94b83a13fe89aaf0ee815773e3cf7bdd",
+      "lfs_pointer": true,
+      "payload_sha256": "d3d402a85a6880f1705d703fc7f83b94b9354ecd28086c20a0527d51100fad8f",
+      "payload_bytes": 1150
+    },
+    {
+      "path": "Code/Editor/res/litebulb.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "efa4d44a858baf948fca4c8af518a3aa9b00d168f48b7aaaf8887a7ea2376c66",
+      "lfs_pointer": true,
+      "payload_sha256": "f3aea1d079aea1b5be9ca9d85d36d000bc11b06e931dc04b10446789b7dd39e6",
+      "payload_bytes": 3126
+    },
+    {
+      "path": "Code/Editor/res/lock_sel.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "e7323dfc44c9a5504fa75db34ad058e7e7e0310d1aad2dbcf844f57d9d4f4a53",
+      "lfs_pointer": true,
+      "payload_sha256": "cfe7847c72e806ab456fac51de4068e9d4f7737604e08880e6ada4d66f88f639",
+      "payload_bytes": 246
+    },
+    {
+      "path": "Code/Editor/res/locksele.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "83143b18499e4c42faf094c6af9cdde3aa1d8b1246f19e36c6ec9cf8d251d10d",
+      "lfs_pointer": true,
+      "payload_sha256": "5fbaf8059ebf6332c331d42a43e4acc07f5be5bace357d1a3eb727bba13b9f60",
+      "payload_bytes": 246
+    },
+    {
+      "path": "Code/Editor/res/lyeditor_small.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "42f483aa273a8a25d9bd650fde3d2460772c7d535e9ba3b43c80b267d41149d6",
+      "lfs_pointer": true,
+      "payload_sha256": "6e98d4b8a6e79daee49db9a87b3dcc6bdf262fa3186b60485c2067d57e74959d",
+      "payload_bytes": 101503
+    },
+    {
+      "path": "Code/Editor/res/mainfram.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "a016fead7acf2cf41a60098aae750ba90c5264b52c1aaaa28aa35c1176689658",
+      "lfs_pointer": true,
+      "payload_sha256": "ff5ea249b5e2a940c8d2b6f5ef7687d6278040e4c4c8670aaf001fab8ba20bf5",
+      "payload_bytes": 2936
+    },
+    {
+      "path": "Code/Editor/res/mann_tagdef_toolbar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "73f6e9ad8687ff98ec9e42b135765c5ddbd4b0bcee63367b12f244e066d32c4b",
+      "lfs_pointer": true,
+      "payload_sha256": "27feba0058a4042a63e643c89fe9596a6348a4d6cbf5a339556af7f5b8052339",
+      "payload_bytes": 8502
+    },
+    {
+      "path": "Code/Editor/res/mann_tagdef_tree.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "8a87c4a6167062144304492addef1caac8f80a51c0e2ee160db46d31d5f82cee",
+      "lfs_pointer": true,
+      "payload_sha256": "37952aa439e09018c85d0cbe73f299fb60854d5bcd1a259b1dd6e21c8223ba4c",
+      "payload_bytes": 1590
+    },
+    {
+      "path": "Code/Editor/res/MannFileManagerImageList.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "1c7799a5477b002858dd359421759ef5d033e253d0ab8a925b1f08b9af1953bb",
+      "lfs_pointer": true,
+      "payload_sha256": "1c57eb2be8c54ecdafe9e1d4992e160986d941eeb813baebb88156b79ba2c937",
+      "payload_bytes": 3126
+    },
+    {
+      "path": "Code/Editor/res/material.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "abe7173903f931953a6dbd132e1a2713943b7aa6913aa00a6a049013ae4c1837",
+      "lfs_pointer": true,
+      "payload_sha256": "4c2ac0e6545025ffa6889e01328554149768e6d9f326dab916893e3194823675",
+      "payload_bytes": 7734
+    },
+    {
+      "path": "Code/Editor/res/material_browser.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "7e492fe4db3a009b01fe96e97c5cd44ebae538c8c8aa509bf0d0f709eba1baab",
+      "lfs_pointer": true,
+      "payload_sha256": "64df6f62e0e0bcc7ddd57fa2fc2419ab24abcafac958492d874d3de27076256b",
+      "payload_bytes": 2966
+    },
+    {
+      "path": "Code/Editor/res/materialbar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "54c8a8818e83b314b2161b0555759e02953e290a99f14c47df79a85c2e32a520",
+      "lfs_pointer": true,
+      "payload_sha256": "653e80952bdeef6c2ee543767a7da1d3a78c7eafd4d257248536f9d2e7cc7e07",
+      "payload_bytes": 45112
+    },
+    {
+      "path": "Code/Editor/res/maximize.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "94106f6efbc1eff6e8e4df915e2e2bf1a91583908817c55d89383a481e0454a7",
+      "lfs_pointer": true,
+      "payload_sha256": "c3f68f877fe8e300d4cc8fd15779efffca8c1a3a854f024e77c4c255cf68945d",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/minus.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "dd59b2e007e0676a247d12f4b5d73973e4462fa9f2ce38086a1ee302a13734d1",
+      "lfs_pointer": true,
+      "payload_sha256": "9921c87977de9a243d6028f025208278682d233480abe443a5eea6b06b80af25",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/misc_bar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "1c59297f6c875b90586ed6a43ee8800257c913faa1c47f82779c28b1ead268a5",
+      "lfs_pointer": true,
+      "payload_sha256": "a51f584928759330e8cf89b8020c37595366e75cb4709d397434c49a57b06b91",
+      "payload_bytes": 4152
+    },
+    {
+      "path": "Code/Editor/res/model_viewport_dock.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "11fa63cc8c60171b72ff06433341d5a5f042f781dc650127d23609a455d4d56e",
+      "lfs_pointer": true,
+      "payload_sha256": "f8967854d9bbc39bfa292b3e51d0acb57b31a4f7a0d1dd8297934d0b249ae976",
+      "payload_bytes": 1784
+    },
+    {
+      "path": "Code/Editor/res/model_viewport_fullscreen.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "845134aa3c915ef0252e5a083d9bf2da9297d72d66613054ede307559e1827e8",
+      "lfs_pointer": true,
+      "payload_sha256": "d8cd9832922f625c6350a0344f2078f2c977e36d3f6ec590b477fe2499c900d0",
+      "payload_bytes": 1784
+    },
+    {
+      "path": "Code/Editor/res/motion_b.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "a61c9918e7877d530504805254ffbdf445ecec7a8da0c4713000abffba5110c4",
+      "lfs_pointer": true,
+      "payload_sha256": "902183e59a69d8fd55ba74b568fb09657a68c66364fd5928d00cba679e59d6bd",
+      "payload_bytes": 2238
+    },
+    {
+      "path": "Code/Editor/res/musictree.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "0e4292603ff1450da1fe75ba1f945c2d2dffbc4193fc09989215053440ec0232",
+      "lfs_pointer": true,
+      "payload_sha256": "7ee62d1a3a43956578d7b9d04a882a099105a3b1a8c8218f5a9ea2736970f15f",
+      "payload_bytes": 3654
+    },
+    {
+      "path": "Code/Editor/res/o3de_editor.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "0212b0cf660b92dd738e094360e667d5ea0860d6ab1af058765b58be42bf828d",
+      "lfs_pointer": true,
+      "payload_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+      "payload_bytes": 148143
+    },
+    {
+      "path": "Code/Editor/res/objectsbrowser.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "123926bdcb065eb04787a194386e23dc3a95e4323c6e0a8567c43b1dc04c5bb6",
+      "lfs_pointer": true,
+      "payload_sha256": "e57058c822a185b1704a30b58e59354dd331c17f0a1035c0723fa776289964d9",
+      "payload_bytes": 2358
+    },
+    {
+      "path": "Code/Editor/res/panel_ve.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "82fe17c109257b8ad7813aeafdff0f8f49d9fca7b5f6e7387405380b0f9cb4fa",
+      "lfs_pointer": true,
+      "payload_sha256": "0788512d45aab94592f53b5c4334dbe2d065db67f2337b5a0b619d61fa85479c",
+      "payload_bytes": 222
+    },
+    {
+      "path": "Code/Editor/res/panel_veg.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "f83192b39fd6a281e382b7c674c8afc2266ddf457f57c051b1387a7b23419cfc",
+      "lfs_pointer": true,
+      "payload_sha256": "1938996547cf7c599e4ae7d293f513e7f4f213f6f1ae8603adb6ffd0560d88b8",
+      "payload_bytes": 2254
+    },
+    {
+      "path": "Code/Editor/res/panel_veg2.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "9ca016071c64fce6076af290ab50c11015a16e2a4ba3afd9193dd3eff18e6836",
+      "lfs_pointer": true,
+      "payload_sha256": "1212179d0f837d207f0e09c3b932a079e52d3ca8a2efa2df760c561bbdc76bf2",
+      "payload_bytes": 2254
+    },
+    {
+      "path": "Code/Editor/res/particles_tree.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "dced78c5c771bfe5970c7726c3d1942b11d84d0ed39bb817c3ebbe8bf7107666",
+      "lfs_pointer": true,
+      "payload_sha256": "8d8791f5d5327c14d1f7f53c136b1069b51abfa13dcdae0b6447422b1160970b",
+      "payload_bytes": 6198
+    },
+    {
+      "path": "Code/Editor/res/particlesbar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "7cd21a17764c6671f34d1e39ac59fc1f167b8f2cbc37574ae1b76e8e403c88a4",
+      "lfs_pointer": true,
+      "payload_sha256": "672b85c3093fde323fa10b8ba130ed1da783ba01eb4f98853c41d0c542b66208",
+      "payload_bytes": 9270
+    },
+    {
+      "path": "Code/Editor/res/pick.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "3889fd882b7ed80fe537709cbdf9976c9b7f6a2cff9cbebb6a41df5538b8a655",
+      "lfs_pointer": true,
+      "payload_sha256": "178d8397d2b69a3aa3dedd0f94b047e669aed38469848b73ce6ef47d37cfa437",
+      "payload_bytes": 358
+    },
+    {
+      "path": "Code/Editor/res/plus.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "bea32dded450d2a308c4017095503b258caa13d5c9c23720891179585722f006",
+      "lfs_pointer": true,
+      "payload_sha256": "948acac6e9d13ff32e8aa6864f07df99a79f036aaade629aa728b178256bed89",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/Preferences.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "3abecb6611d7b340e73d765fd0acab2736f4086077fd41b4d2c93881fe826bb9",
+      "lfs_pointer": true,
+      "payload_sha256": "d4a2bb5a88a5b339101c9a4be86efd431087cae6af4c4ab45d663ccb7fb5b0d5",
+      "payload_bytes": 2550
+    },
+    {
+      "path": "Code/Editor/res/proceduralmaterial_toolbar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "2c5a23696adeac186240d5d4424e7edef08ebefa25ade93ee8b0d439e5ccae28",
+      "lfs_pointer": true,
+      "payload_sha256": "815518436bee1771896237d7a1be4a82becde5c2adf5814b4c652965093bef45",
+      "payload_bytes": 4152
+    },
+    {
+      "path": "Code/Editor/res/progslider_end.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "ef1ad33056c6ffa62d7f3f41c83e399227c7a9e50d1a40dc69a03318d46115ca",
+      "lfs_pointer": true,
+      "payload_sha256": "41743a57eb0eac6786a506c9ff30ec74766540683ee99bde9f1acd69917b9fea",
+      "payload_bytes": 488
+    },
+    {
+      "path": "Code/Editor/res/progslider_marker.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "c1113e268fea8bf287a7f2e333dccdd09d5de244ae2899d48950e18e7814c83f",
+      "lfs_pointer": true,
+      "payload_sha256": "aeb4e3471d6b7bddd56ed91f59a814b68227f42364f367dd94750f691c250874",
+      "payload_bytes": 1174
+    },
+    {
+      "path": "Code/Editor/res/progslider_start.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "7106203d02e9ee9b828628f14d2ce344e3d4785f80eaf145f1036953e0680c41",
+      "lfs_pointer": true,
+      "payload_sha256": "e529e438127afe95e88baec6732d8a357ff4d9453c5675ff1ab66cf90fc410eb",
+      "payload_bytes": 488
+    },
+    {
+      "path": "Code/Editor/res/progslider_thumb.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "9414212d08ede74f4c0d6e43f9ac31046c9be42cbda97ad2adbb48b4e207c894",
+      "lfs_pointer": true,
+      "payload_sha256": "8c40e0b30a04765879b4754b08ea298043a45324d178daac43ac752e5f64cf1f",
+      "payload_bytes": 630
+    },
+    {
+      "path": "Code/Editor/res/progslider_track.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "2582b5d3552dbabe05b86e4aa0e0f63e37abe0d5697461b14476c45a5e59dc0f",
+      "lfs_pointer": true,
+      "payload_sha256": "6eb83a9a58109a60406a779a67f9167617c02d2e45af527dcd53450f258dc08d",
+      "payload_bytes": 248
+    },
+    {
+      "path": "Code/Editor/res/properties.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "b3dda0f4b4ce7b8954834544b4eb83f1994d437802dee24ee72000a6bf24d7f4",
+      "lfs_pointer": true,
+      "payload_sha256": "344957ee2e89d2d129d7f8ccde376a8e1e1689906be677b5ef507315a8a4a5db",
+      "payload_bytes": 1522
+    },
+    {
+      "path": "Code/Editor/res/psd.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "7de386438faf7dcbb742b9bdbbccb4e4c2e433e7970c73c9301ea6f669dacca4",
+      "lfs_pointer": true,
+      "payload_sha256": "ed36c9ab17efc3971c54ca9d35728bd10bf62d17151c6881296938d2eebfbd47",
+      "payload_bytes": 318
+    },
+    {
+      "path": "Code/Editor/res/rename.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "8d6a54fed5faa2ef94c26092c5c3123b20aa0666a1e945d9689e32e55d7acefe",
+      "lfs_pointer": true,
+      "payload_sha256": "5bb5fe05e3c96834aac292b241989250d10d558d2e8523dd8217fd121884be88",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/replace.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "9fce538a965116bf6f101a0d53f74c94dd481bad37fdff88c9a088c19ba85446",
+      "lfs_pointer": true,
+      "payload_sha256": "402a80e0e5a1b1167dda3970ec5059455c515bb397f134419f7d819e67c9443e",
+      "payload_bytes": 766
+    },
+    {
+      "path": "Code/Editor/res/selectobj.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "b59830b74274d479e91e3b52602afe83711c438b838afe6682b0048d4423b454",
+      "lfs_pointer": true,
+      "payload_sha256": "0aca7990aa4f059159f0bac3b163d5575f8760e49587d515ce4d9502005a8492",
+      "payload_bytes": 6968
+    },
+    {
+      "path": "Code/Editor/res/seq_1_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "29a6856708fabf3b2015f427d8b87d044d98c82f95ac545f917e8243790699a3",
+      "lfs_pointer": true,
+      "payload_sha256": "330e0561ec797b84ee9730c1ced5dcc324e41f4369eb7f99be9a7a99a43628b9",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/seq_2_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "7ee08b9a3ddf1493bce6b72481d4f58781cef1fdb9109287ff2140d50f211528",
+      "lfs_pointer": true,
+      "payload_sha256": "24c8739c2c04acb401bcaefb7b601bb1bace1ecbfeaee18acbe25d967c112c30",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/seq_3_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "db05e0a169c60a0ad2c01a06f8075db4cc6df1c5e5caaa3b8c5f63a01431be56",
+      "lfs_pointer": true,
+      "payload_sha256": "eca45c0d161c0e44f3e810075213c46ffcf8c65b1eafc2694a639142fec23a8b",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/seq_4_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "f284dde4faddeb5d34cc88abb8df19c9079b6e9184aa575d2bd5bc3bca9243d9",
+      "lfs_pointer": true,
+      "payload_sha256": "0b44378e20efdcaca97c0922f152df1ab160238fe2e2e35de618f9fe99d9b0de",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/seq_5_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "94a187ad90bc2cb298128c77ccca40c123fcabddae256067989cf58c7b1af197",
+      "lfs_pointer": true,
+      "payload_sha256": "ce3d4e37589bc12a52dd7e9c452b799936c9ea994bbe064fbfcf03f2424c912f",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/seq_6_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "4bea6c504a338d1cb7bab58bf8e3b4b85933af7639bbfc5a33794ad6757d8b8a",
+      "lfs_pointer": true,
+      "payload_sha256": "78d1382699dd6ae792191eb14e0571cd9fb66fcb425632e3220be03105409900",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/seq_7_colour_keys.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "620fe9b430f54915c8c2f92f56e30666771202a0d2b3251ce24395564144734e",
+      "lfs_pointer": true,
+      "payload_sha256": "0849d98ca291947840a5dd921f7eb5bcb096b3c3cd44043dcef5dc59c8a4c1b7",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/sequencer_keys.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "9fe27909198a7ba87023f3dea27b28f5cb8cf864ff34859146432104522d8edc",
+      "lfs_pointer": true,
+      "payload_sha256": "cdb3944fa4f0df22d9c475bbf6ca38c889c02e105af25ce1593180720aa424c4",
+      "payload_bytes": 622
+    },
+    {
+      "path": "Code/Editor/res/sequencer_nodes.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "4b9317759b1e9679fd9e202de05bd27afabcd3a0b60f5270abd2d9b086254d70",
+      "lfs_pointer": true,
+      "payload_sha256": "e93ed47d4d784402bcd5b73dfda1c6cc8c12bbe8e14d2f33c001b67a9df1cdd5",
+      "payload_bytes": 7222
+    },
+    {
+      "path": "Code/Editor/res/soundfiles.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "5e28d465c96985dd9abe67a295075a608d276b16d53771637b31e838c8ddb0cf",
+      "lfs_pointer": true,
+      "payload_sha256": "a9f163728212cb11a1a59f44dad152d8ae686f3ee3ca7080b622144253c7e3f0",
+      "payload_bytes": 4374
+    },
+    {
+      "path": "Code/Editor/res/soundmood.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "962cd17d823eae33dc274ca638fb7c1d70684a697f43cd614fb5f4466cf3274e",
+      "lfs_pointer": true,
+      "payload_sha256": "16375da6ab013710f7b0aa386bfcc4d36c414e99d9b073d6d5d0ddc5a8c7f34a",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/soundpre.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "d0313f05ef1c0f346cfe2e34895a147e70bd835bcf5150a57d456dd5444990c8",
+      "lfs_pointer": true,
+      "payload_sha256": "0479e338ff4e487812e0f4461b02ea7f725b2fae9d38a2f78efab8d2e917b007",
+      "payload_bytes": 28728
+    },
+    {
+      "path": "Code/Editor/res/source_control_buttons.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "a292c587ba5d0f25d7464a4edb047ce544ec5799220145847619ab9a73ce1739",
+      "lfs_pointer": true,
+      "payload_sha256": "ec9f849de25189f4776009155c543e3adf9a693f8fc58ad19ee56198dab7d7d0",
+      "payload_bytes": 8096
+    },
+    {
+      "path": "Code/Editor/res/spline_edit_bar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "5b72980f76d3efb22d7e9a7ae5077adeea78bfeb0eb8988e7bb266231d41f5c7",
+      "lfs_pointer": true,
+      "payload_sha256": "c9cebf316cf3cb44420c1448ffe252e302ca4ccca17bc6e630753d5b22a2c3ae",
+      "payload_bytes": 2926
+    },
+    {
+      "path": "Code/Editor/res/splineextrabar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "434aa5459a6d1713d94f5b4714c7a331a1438bfecc1bda10361058530261c526",
+      "lfs_pointer": true,
+      "payload_sha256": "ba5a00c33d41adc8126935e781401d2ea98d99158153195412a075d34b9ff94b",
+      "payload_bytes": 1438
+    },
+    {
+      "path": "Code/Editor/res/status_mem_low1.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "5f19e4424c74babc3dcb331e2653f5d6c14242e21ca2f7ee99d13af6e2d28d34",
+      "lfs_pointer": true,
+      "payload_sha256": "8a544cfcdea8eeea59b3a28e6c14b1807198ac3fdfb3bd68952b43e03b66c7ba",
+      "payload_bytes": 1078
+    },
+    {
+      "path": "Code/Editor/res/status_mem_low2.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "4997e937f493eb1754d17318f366524708b87d1138ba1fabb79039b99f7022cc",
+      "lfs_pointer": true,
+      "payload_sha256": "9adad0588bb096ea0cbfbbb0a9cbc4f1c0048b7debd69353564db0589a4b0982",
+      "payload_bytes": 1078
+    },
+    {
+      "path": "Code/Editor/res/status_mem_ok.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "d03c0ba631e89d458cfe665f025c228aad3599c5ff81cd9f25259ab9ef8495c9",
+      "lfs_pointer": true,
+      "payload_sha256": "4d3de035945df4c7126cd9fd5293a870f97e46a376211b60233d4fcfba6630d1",
+      "payload_bytes": 1078
+    },
+    {
+      "path": "Code/Editor/res/stdviews.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "591d0e416c39d09e7e9210bf813397297d29d5aa23072158c9e2c8073ae3b801",
+      "lfs_pointer": true,
+      "payload_sha256": "62bf80e7d97d4b2ba8847bc37fe8dedb9d80d536077babd4ef3faf5c4b44e5d2",
+      "payload_bytes": 73784
+    },
+    {
+      "path": "Code/Editor/res/subobjseltype.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "cb5a29d5adde678cd2640222d7bdb5fbc6706007e4777b81f2ab7fbc821cd68d",
+      "lfs_pointer": true,
+      "payload_sha256": "b425961d4a0dd0ccbcf9e200c4f58a894aa188d6f26d95ef33557ee725909bb5",
+      "payload_bytes": 4472
+    },
+    {
+      "path": "Code/Editor/res/sw_mapbar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "fe477ad706a0504c50299e6569fa7ab8fe379f169114da22ef213a93ce0e66cc",
+      "lfs_pointer": true,
+      "payload_sha256": "106a6a4deb1167c09fa035780e95db96dd12794c8631844ccb81f6544d27d644",
+      "payload_bytes": 12342
+    },
+    {
+      "path": "Code/Editor/res/sw_toolbar.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "197ac53f3ce6e7f8d5ca20b1e4430e0c3ea73502b5d3aca5923d0c84dfac40e5",
+      "lfs_pointer": true,
+      "payload_sha256": "78970c2eac4609ab26505bba47704beedaa4abbc743071e9782ca7818e8ba199",
+      "payload_bytes": 9272
+    },
+    {
+      "path": "Code/Editor/res/tabPanel.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "9fe69d25caee8d538d0668a9318e0f57a7a518003c28d0ad4127bfbe82e3ff52",
+      "lfs_pointer": true,
+      "payload_sha256": "7628d9afd956e3dadf6f612d49c28be943b41b9320cb34d211d780a967bb71a6",
+      "payload_bytes": 8854
+    },
+    {
+      "path": "Code/Editor/res/tiff.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "4a632b1ce5e6fe14714421251fe38bf79814efd9dcc1758a4ed69748ced55955",
+      "lfs_pointer": true,
+      "payload_sha256": "890c591a8e8b631ecdbb0eee1171f6f9b36bb28072707f30c5b67fed3474bcf9",
+      "payload_bytes": 318
+    },
+    {
+      "path": "Code/Editor/res/Toolbar.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "bc4ea87071a72e8cac6788c360b4de19af38a1d19729d2e014057cbc7f5d9097",
+      "lfs_pointer": true,
+      "payload_sha256": "9aab0a4d2d66e290a6d3d671d4ff9b0fbf8ebaffa15eb5faeb6a684fc5a82acc",
+      "payload_bytes": 16438
+    },
+    {
+      "path": "Code/Editor/res/toolbar1.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "69047c14e9b94ef33231e77770d27988f0755ea00688eb820ff79a986756ef5a",
+      "lfs_pointer": true,
+      "payload_sha256": "8a986461f60a81a96dd754a804dc8fedb41c3412ca4b75ea79e9a9ed11860453",
+      "payload_bytes": 3654
+    },
+    {
+      "path": "Code/Editor/res/toolbar2.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "e9fe3fd60b487e62953596d46772cc18564561fa32f3c13c0baf59fc5d1b5fcd",
+      "lfs_pointer": true,
+      "payload_sha256": "bd54ad76b20ec5c3672d7883fe2d0c5c61e0ab21491ac8e2d7c00fe24a94d19a",
+      "payload_bytes": 478
+    },
+    {
+      "path": "Code/Editor/res/toolbox.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "f48f9f88d8aaa4f14c6bc0dcb3dda60d971c302cb3c5838373561bdaf9fff04c",
+      "lfs_pointer": true,
+      "payload_sha256": "9028f377c965763ef825a9836cbafba9118b8b11d5e1ac81c2cf1fe32d77fa6f",
+      "payload_bytes": 502
+    },
+    {
+      "path": "Code/Editor/res/trackvie.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "368ca98ba0cac53b7fd8560aa298ab10b80010571d2686d8487b344cbe5c95b5",
+      "lfs_pointer": true,
+      "payload_sha256": "f4c609d3a3f36a56e7af5fcfe28d1679e45c8905644f64542496dcbc402e7ca6",
+      "payload_bytes": 798
+    },
+    {
+      "path": "Code/Editor/res/trackview.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "752fae235f79339eb54151dfb9e617336974a54c07fd7ff5eb34ccf73609b7df",
+      "lfs_pointer": true,
+      "payload_sha256": "899ffac68a041c894c5aaac65aad1d00ca8c0c96b7929ea0bb8d9b467dddc23f",
+      "payload_bytes": 1886
+    },
+    {
+      "path": "Code/Editor/res/trackview1.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "8fdf1f7ba1217a2672ede2f3abad3b4727d28951a47569240a696254955a13c9",
+      "lfs_pointer": true,
+      "payload_sha256": "d4e71126747017126bf5fa8b876c318e0e94182db509f3efe29e0d54714cabed",
+      "payload_bytes": 14198
+    },
+    {
+      "path": "Code/Editor/res/trackview_key.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "53f43603b39633efdd8ca862ad616cfc2a60f83199f541673c6b85f6ace70e56",
+      "lfs_pointer": true,
+      "payload_sha256": "897bfe64e73eece0c08e30021725afb599fc5dd2e8f4072234a69f0f842e407f",
+      "payload_bytes": 1886
+    },
+    {
+      "path": "Code/Editor/res/trackview_keys.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "43ceb22ff0204fc22c5cb821edcfadf6e64aa1b82c8e45ef1567240480979ff7",
+      "lfs_pointer": true,
+      "payload_sha256": "ded0712dec762334f6afd294b46bf4c5888783ac7ac9467feb6e9d0e94e88ba1",
+      "payload_bytes": 622
+    },
+    {
+      "path": "Code/Editor/res/trackview_nodes.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "b703b7f3139e1323ec8f089c228e7464df4e94d3248f1e82f5588633803ec785",
+      "lfs_pointer": true,
+      "payload_sha256": "f2de3681002efb8962b9811418e972a541eae49574323d93c6c4ec4aa3a6766c",
+      "payload_bytes": 29750
+    },
+    {
+      "path": "Code/Editor/res/trackview_play.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "cd0bf67473b3599d2078e999d83b92148950431ce4624f284a384373d4043446",
+      "lfs_pointer": true,
+      "payload_sha256": "8092fa6c14d7f958c561cb1bd2425b2c68831963231ce3df0b1a7fd924b14493",
+      "payload_bytes": 1886
+    },
+    {
+      "path": "Code/Editor/res/trackview_view.bmp",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "f14ad62923d725d56efb9d23d96f3161cb54201eb8fd298a4ddda38d5414580f",
+      "lfs_pointer": true,
+      "payload_sha256": "34a3b950975f775a2ce5a305dfe81b37fd465bd47aca0b610f10f8952a44f9c5",
+      "payload_bytes": 526
+    },
+    {
+      "path": "Code/Editor/res/tree_vie.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "306629fe7dd2e852620be22c3ffcb67304e8d36ab65f68e13adbb3ea16597f57",
+      "lfs_pointer": true,
+      "payload_sha256": "787706d46989a0aa26d53c6a39e7b2fa2a2923d05e7ad0e07dcbde79ef198ec2",
+      "payload_bytes": 2358
+    },
+    {
+      "path": "Code/Editor/res/TreeView.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "2625e91dff96006b679f44107eb0970d5a332d386a99aadf1ea574fa30a3250a",
+      "lfs_pointer": true,
+      "payload_sha256": "1572fc2912cae6edaea8dec799f53cbf95f33026005dd20576ccc4bc17237db5",
+      "payload_bytes": 3126
+    },
+    {
+      "path": "Code/Editor/res/uieditor_main.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "aa0829572e1c11ee7a7105eab8bc11eeb011e9db33aedc63e98744dbe3231af3",
+      "lfs_pointer": true,
+      "payload_sha256": "e201879b223f3fed0e0bfdcc26f6db285d6de80e9a5cf26193c3e0df0b951a4e",
+      "payload_bytes": 3190
+    },
+    {
+      "path": "Code/Editor/res/up_arrow.ico",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "a45f352ccdad0e001485e7ab7420666d4e426e933fbd7a0b0ea6462638ac3c35",
+      "lfs_pointer": true,
+      "payload_sha256": "b4da8d1e878b9717ff3f5f13d6821ab9f6183af0a3603364b59a7744805a0651",
+      "payload_bytes": 166
+    },
+    {
+      "path": "Code/Editor/res/value_types.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "61323d265242cf7865f2a448dbcd0d6f0da63207b22080e513f359f03c73b7ba",
+      "lfs_pointer": true,
+      "payload_sha256": "4e323226af8d652e90bfc93a2f10178abeb2107a83633bf0e72d7996a62a57b2",
+      "payload_bytes": 2422
+    },
+    {
+      "path": "Code/Editor/res/veed_tree.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "eb91774e2f96e954803eef6d94a2926ea1fbf2a761f1c46bc03e1bd890ab1445",
+      "lfs_pointer": true,
+      "payload_sha256": "5cce2d1cbac1eb324886bf627a44a2ef24d7b93ff4d3cc78485e8b649d887b78",
+      "payload_bytes": 10974
+    },
+    {
+      "path": "Code/Editor/res/vegetati.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "8977a15babe97a8225df6741a4b6846c063c8903450e1320f35ab37aefe877cd",
+      "lfs_pointer": true,
+      "payload_sha256": "e595e877f23fe1341535b515e9b780790b2d8febe27b2651c000d74ac121dcfe",
+      "payload_bytes": 1510
+    },
+    {
+      "path": "Code/Editor/res/vegtree.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "449a24d111d44722df22130d00373a73759633075f58307d7685f8beeb0037c3",
+      "lfs_pointer": true,
+      "payload_sha256": "3cfa05a68356a3dbee1f00f7ce7b732e955ffd32ebeb5e788e5756d05ee7eab6",
+      "payload_bytes": 1702
+    },
+    {
+      "path": "Code/Editor/res/video_record.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "88336d73e5135188f28fc885505528de5d620404a69737c74b970a30a85383df",
+      "lfs_pointer": true,
+      "payload_sha256": "a5db8c2a5f66f70cec45b6df2289c6c7fcd74a0a324b4aed56a7905f7b45718a",
+      "payload_bytes": 5430
+    },
+    {
+      "path": "Code/Editor/res/VisualLog_PlayerButtons.bmp",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "155172cd1cc91ea3b4f199431afd4b2fa8ba8ed8b7ca031421201461c05906f8",
+      "lfs_pointer": true,
+      "payload_sha256": "f0a13703d32e774ecd1a08ea5a12b7206166e0ae464144817837da165e59cc27",
+      "payload_bytes": 9654
+    },
+    {
+      "path": "Code/Editor/res/warning16x16.ico",
+      "exists": true,
+      "bytes": 129,
+      "file_sha256": "5a2dae1207bd2ec3a8b1d8fb51bf84af010027a5d772d90a97cbf4d581fecc0f",
+      "lfs_pointer": true,
+      "payload_sha256": "ca2b66b6c093c7edd46a30d1e46f4290a5f62f5eafc19f194bdc985dcfd9b75a",
+      "payload_bytes": 4286
+    },
+    {
+      "path": "Code/Editor/res/water.bmp",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "154ccd900f838ae265269f27369d920931935cc14228bea36c237b2814eb969e",
+      "lfs_pointer": true,
+      "payload_sha256": "4a90c93342a4f778c54d7150641136593c60f3190fafc656ee698ffbe621c413",
+      "payload_bytes": 49206
+    },
+    {
+      "path": "Code/Editor/res/work_in_progress_icon.ico",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "dbc8d0cded0983c961404fdb58f0aa24c4c8344a9d6faf212a89643170648d88",
+      "lfs_pointer": true,
+      "payload_sha256": "af47a2f7199f7b7397bb0ed1677a2353c22d3c8b93cf25de3e24d426796f62d7",
+      "payload_bytes": 16958
+    },
+    {
+      "path": "Code/LauncherUnified/Resources/GameSDK.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "0212b0cf660b92dd738e094360e667d5ea0860d6ab1af058765b58be42bf828d",
+      "lfs_pointer": true,
+      "payload_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+      "payload_bytes": 148143
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/Resources/GameSDK.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "0212b0cf660b92dd738e094360e667d5ea0860d6ab1af058765b58be42bf828d",
+      "lfs_pointer": true,
+      "payload_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+      "payload_bytes": 148143
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+      "exists": true,
+      "bytes": 132,
+      "file_sha256": "c961a156f1223f7a6b353d52ffdd3f57e79eabe11de69749e5c221c8e4ea7931",
+      "lfs_pointer": true,
+      "payload_sha256": "bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836",
+      "payload_bytes": 1200056
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "2134cb107ad744b1ab1623d5efa1940043d9014338d5be4f0e6562036d4e80bf",
+      "lfs_pointer": true,
+      "payload_sha256": "e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8",
+      "payload_bytes": 107733
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "f41bd52239b6e15d531fedf12580c30c31c5f9a442f7df55c91e36d457a1c05e",
+      "lfs_pointer": true,
+      "payload_sha256": "9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2",
+      "payload_bytes": 107680
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "59be53113938f8ccb68556fdeb06e341647a28f4e3be3aba3fd5fa4df60d98ff",
+      "lfs_pointer": true,
+      "payload_sha256": "6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646",
+      "payload_bytes": 108312
+    },
+    {
+      "path": "Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+      "exists": true,
+      "bytes": 131,
+      "file_sha256": "751947f0100d2788246767755189c1a57766de87518859fd3060edad4ce667c2",
+      "lfs_pointer": true,
+      "payload_sha256": "1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809",
+      "payload_bytes": 108131
+    }
+  ],
+  "rc_consumers": [
+    {
+      "consumer": {
+        "path": "Code/Editor/EditorCryEdit.rc",
+        "exists": true,
+        "bytes": 93,
+        "file_sha256": "bd8e58c80ee4c6d49ab57b2e3dde60391b68bfcdc80da8a74d3b8f13b2785ee7",
+        "lfs_pointer": false,
+        "signature_hex": "4944495f49434f4e"
+      },
+      "references": [
+        {
+          "literal": "res/o3de_editor.ico",
+          "input": {
+            "path": "Code/Editor/res/o3de_editor.ico",
+            "exists": true,
+            "bytes": 131,
+            "file_sha256": "0212b0cf660b92dd738e094360e667d5ea0860d6ab1af058765b58be42bf828d",
+            "lfs_pointer": true,
+            "payload_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+            "payload_bytes": 148143
+          }
+        }
+      ]
+    },
+    {
+      "consumer": {
+        "path": "Code/Editor/CryEdit.rc",
+        "exists": true,
+        "bytes": 1398,
+        "file_sha256": "7193e3ad78c2af0dfbc0eeabb1829397e9a8bf4992005c4efaaa0f75c93fab6d",
+        "lfs_pointer": false,
+        "signature_hex": "2f2f204d6963726f"
+      },
+      "references": []
+    },
+    {
+      "consumer": {
+        "path": "Code/Editor/res/CryEdit.rc2",
+        "exists": true,
+        "bytes": 429,
+        "file_sha256": "19ed9e0b9923a27435a340f76b4c34d99d857fc2729a23ab21ef2bb9607e3007",
+        "lfs_pointer": false,
+        "signature_hex": "2f2f0d0a2f2f2043"
+      },
+      "references": []
+    },
+    {
+      "consumer": {
+        "path": "Code/LauncherUnified/Platform/Windows/Launcher.rc.in",
+        "exists": true,
+        "bytes": 366,
+        "file_sha256": "a7a219c1e94e9ddd60fa80a26c45070f60fbdfdb4398c9ca0102e7b69725a2ba",
+        "lfs_pointer": false,
+        "signature_hex": "2f2a0d0a202a2043"
+      },
+      "references": [
+        {
+          "literal": "@ICON_FILE@",
+          "input": null
+        },
+        {
+          "literal": "@SPLASH_FILE@",
+          "input": null
+        }
+      ]
+    },
+    {
+      "consumer": {
+        "path": "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessor.rc",
+        "exists": true,
+        "bytes": 76,
+        "file_sha256": "19d7fdf9ca0d2494c12aa06027ac1be0a5d08227b492eabf47c0b6998234c242",
+        "lfs_pointer": false,
+        "signature_hex": "4944495f49434f4e"
+      },
+      "references": [
+        {
+          "literal": "../../native/ui/style/o3de_assetprocessor.ico",
+          "input": {
+            "path": "Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+            "exists": true,
+            "bytes": 131,
+            "file_sha256": "59be53113938f8ccb68556fdeb06e341647a28f4e3be3aba3fd5fa4df60d98ff",
+            "lfs_pointer": true,
+            "payload_sha256": "6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646",
+            "payload_bytes": 108312
+          }
+        }
+      ]
+    },
+    {
+      "consumer": {
+        "path": "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.rc",
+        "exists": true,
+        "bytes": 54,
+        "file_sha256": "1475b5e8bc0ce5b6ce2704601993f7514e23d245bb934ff8269932ebef95929d",
+        "lfs_pointer": false,
+        "signature_hex": "4944495f49434f4e"
+      },
+      "references": [
+        {
+          "literal": "AssetProcessorBatch.ico",
+          "input": {
+            "path": "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+            "exists": true,
+            "bytes": 131,
+            "file_sha256": "2134cb107ad744b1ab1623d5efa1940043d9014338d5be4f0e6562036d4e80bf",
+            "lfs_pointer": true,
+            "payload_sha256": "e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8",
+            "payload_bytes": 107733
+          }
+        }
+      ]
+    },
+    {
+      "consumer": {
+        "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.rc",
+        "exists": true,
+        "bytes": 47,
+        "file_sha256": "912df7cc4751cab8158efa9a8e023aef9fb6d9f47dcafc0b1ec8400574d0aa6a",
+        "lfs_pointer": false,
+        "signature_hex": "4944495f49434f4e"
+      },
+      "references": [
+        {
+          "literal": "AssetBuilder.ico",
+          "input": {
+            "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+            "exists": true,
+            "bytes": 131,
+            "file_sha256": "f41bd52239b6e15d531fedf12580c30c31c5f9a442f7df55c91e36d457a1c05e",
+            "lfs_pointer": true,
+            "payload_sha256": "9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2",
+            "payload_bytes": 107680
+          }
+        }
+      ]
+    },
+    {
+      "consumer": {
+        "path": "Code/Tools/ProjectManager/Resources/ProjectManager.rc",
+        "exists": true,
+        "bytes": 96,
+        "file_sha256": "e4158d403bdd710e36b1819d4cb6897386c38a8e9880050f2a0af64e255b5d8d",
+        "lfs_pointer": false,
+        "signature_hex": "4944495f49434f4e"
+      },
+      "references": [
+        {
+          "literal": "ProjectManager-Icon.ico",
+          "input": {
+            "path": "Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+            "exists": true,
+            "bytes": 131,
+            "file_sha256": "751947f0100d2788246767755189c1a57766de87518859fd3060edad4ce667c2",
+            "lfs_pointer": true,
+            "payload_sha256": "1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809",
+            "payload_bytes": 108131
+          }
+        }
+      ]
+    }
+  ]
+}

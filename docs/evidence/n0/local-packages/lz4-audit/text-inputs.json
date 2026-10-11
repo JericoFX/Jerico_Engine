@@ -1,0 +1,182 @@
+[
+  {
+    "path": "LICENSE",
+    "bytes": 635,
+    "sha256": "2949fcf758d3c9bcb05f8393ca42cadfa15be04eb4ae4b3327c4ad7957511e1b",
+    "git_blob_sha1": "1b84cc30f0361b13d56bf8c2fbe043493c08fbe6"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5154,
+    "sha256": "6d091cce9100b9132631daf556f8564f43f956fd975afceb67c06231ddd38c51",
+    "git_blob_sha1": "b314e69911367d48a0e79b3c0958a7bc0334d242"
+  },
+  {
+    "path": "build/VS2010/datagen/datagen.vcxproj",
+    "bytes": 9103,
+    "sha256": "9d34553f3923bbd915b909fa44f1ca645baa0ad1a36ec29bd4b4da170426953a",
+    "git_blob_sha1": "e24f961de4d282c037630b878ec3f28fac29a152"
+  },
+  {
+    "path": "build/VS2010/frametest/frametest.vcxproj",
+    "bytes": 9447,
+    "sha256": "3f9b192c66e17a7d94bc122262b1663d7b33ac92184b7cd46922a4fc0886edce",
+    "git_blob_sha1": "3196768729d48eeeaf0c0141754cb017a51518a1"
+  },
+  {
+    "path": "build/VS2010/fullbench-dll/fullbench-dll.vcxproj",
+    "bytes": 10266,
+    "sha256": "3f2abef049a8dde15240cf5d3f8c70ac8b7d8d5ebf2a9fb58608a265927be693",
+    "git_blob_sha1": "8f503f565807d6a2818511be78d067153262c7c9"
+  },
+  {
+    "path": "build/VS2010/fullbench/fullbench.vcxproj",
+    "bytes": 9447,
+    "sha256": "031f4a3a8d97cbfa8901781a4142418c86ce5c8f5df2926a05445bd560618b4a",
+    "git_blob_sha1": "aa6743152a1ecb5be48563920ceea763749aac1b"
+  },
+  {
+    "path": "build/VS2010/fuzzer/fuzzer.vcxproj",
+    "bytes": 9278,
+    "sha256": "0028d471386769985c16c6659fd11d5d8b24f7e6ca82096277abac108942fa45",
+    "git_blob_sha1": "21cbf5622ec2547371ffae49997e9ece6316c8c5"
+  },
+  {
+    "path": "build/VS2010/liblz4-dll/liblz4-dll.vcxproj",
+    "bytes": 9438,
+    "sha256": "ddb961ed8b32b82330c5b94a281c7509a6d7406d9d81b54297ea7e7fb585cfdb",
+    "git_blob_sha1": "56ec3b98120fb8cf7d15d437d2756a7a7cdeeba0"
+  },
+  {
+    "path": "build/VS2010/liblz4/liblz4.vcxproj",
+    "bytes": 9337,
+    "sha256": "f41ac5716174cfd1c497de1fcba5e79be4497ecaabb8b0c2aa2c55045b3fcff2",
+    "git_blob_sha1": "61ea159b412bf8f3996498172aa561ff5ca51e60"
+  },
+  {
+    "path": "build/VS2010/lz4/lz4.vcxproj",
+    "bytes": 10097,
+    "sha256": "da7d243e5c4b03b15aae5c516180c78edcf321a9ef8f7a0bb1b78152b078f1f4",
+    "git_blob_sha1": "de7a7143eea78ba8c667164d473db45aaa541ed9"
+  },
+  {
+    "path": "build/VS2017/datagen/datagen.vcxproj",
+    "bytes": 9282,
+    "sha256": "cd103338dcaed235eb6996542f32d0722702e3f56094d337df4cb60d04ebbe2d",
+    "git_blob_sha1": "30e159ea5d29df1293fc0ca73ef320128a9126c4"
+  },
+  {
+    "path": "build/VS2017/frametest/frametest.vcxproj",
+    "bytes": 9626,
+    "sha256": "00342f1ecbeebae254b55660e650b0c3bb2cecfdb60213147fdc5c0874bc700e",
+    "git_blob_sha1": "a3a403d1b1c82ed0d19f2869668403fc237a80d7"
+  },
+  {
+    "path": "build/VS2017/fullbench-dll/fullbench-dll.vcxproj",
+    "bytes": 10443,
+    "sha256": "e7cce8995563c0dfa6eb24c09dcfffaf5fee88df0644b8c7fd9de62bd0a4974c",
+    "git_blob_sha1": "d54a8d7281941b00a7f8e917fed4ace01ed6114a"
+  },
+  {
+    "path": "build/VS2017/fullbench/fullbench.vcxproj",
+    "bytes": 9626,
+    "sha256": "a93a3692ab932832f9067752cbdde39cc0dce915ae422c179ffcd7e746d28f33",
+    "git_blob_sha1": "54c97439019c3fb3ed2c9285ddc7891cd9cc9fc1"
+  },
+  {
+    "path": "build/VS2017/fuzzer/fuzzer.vcxproj",
+    "bytes": 9457,
+    "sha256": "3ac3efc92550f679b4adf362f30309e580d9679f945904279d85f6b21e509f64",
+    "git_blob_sha1": "aa6fe42508553a919487a3981318b3f6e828a68b"
+  },
+  {
+    "path": "build/VS2017/liblz4-dll/liblz4-dll.vcxproj",
+    "bytes": 9615,
+    "sha256": "5fb7346780a1618f27b5c4f86829271c2cc697a64e3cd9ed180b2c291510be35",
+    "git_blob_sha1": "8e7ee3b978bb69a50853e9df29a15c5073b0db40"
+  },
+  {
+    "path": "build/VS2017/liblz4/liblz4.vcxproj",
+    "bytes": 9516,
+    "sha256": "eaea72933152a4e6b772d2fc5f5624f6f4e55fd5a2cf9288e8b0c9c6783c810e",
+    "git_blob_sha1": "948f7db377e75aa25e38df87f34842354d843aaf"
+  },
+  {
+    "path": "build/VS2017/lz4/lz4.vcxproj",
+    "bytes": 9221,
+    "sha256": "b9ead79ebbe4d6c5ec6b7542780a7be0914a26ab8de85a9bcbec48b4c0d63df5",
+    "git_blob_sha1": "f16c1ec22d07ea9ab613c1647ce424272cb00062"
+  },
+  {
+    "path": "build/VS2022/datagen/datagen.vcxproj",
+    "bytes": 9282,
+    "sha256": "5fe01b83af6bf554f4887249c152cce026d36aa71f296d19af58eac7009c6710",
+    "git_blob_sha1": "69034d410e1c718abf9cac2abb8908b1ba352a2b"
+  },
+  {
+    "path": "build/VS2022/frametest/frametest.vcxproj",
+    "bytes": 9626,
+    "sha256": "dbb2ef5e3ac92ad05310175a071073345711bf5c3dbfcfc00f5f58ff1e32d6e7",
+    "git_blob_sha1": "6b7ff756f3559daad56c1686376cf9f99d1585b8"
+  },
+  {
+    "path": "build/VS2022/fullbench-dll/fullbench-dll.vcxproj",
+    "bytes": 10443,
+    "sha256": "7b7383c5f8002022814623e53fa1487a801c974dadaef3fd065458f49fdc4aea",
+    "git_blob_sha1": "143dc061458be7411b4d8e2dec8c9e623d5fd116"
+  },
+  {
+    "path": "build/VS2022/fullbench/fullbench.vcxproj",
+    "bytes": 9626,
+    "sha256": "bc2521bcfa465c35192cafa0a2bd3489037e8acf1f4d5919db75801b708ead7c",
+    "git_blob_sha1": "57f4b5a28e201f1567b2d8824386c6b440f99d76"
+  },
+  {
+    "path": "build/VS2022/fuzzer/fuzzer.vcxproj",
+    "bytes": 9457,
+    "sha256": "af626e9171d8ca909cc70b0210a43567fbaad1cbe2bd987bef2fcfd8a075406c",
+    "git_blob_sha1": "83482c21727c665d76ee23c6c788ee98aef1d097"
+  },
+  {
+    "path": "build/VS2022/liblz4-dll/liblz4-dll.vcxproj",
+    "bytes": 9615,
+    "sha256": "56352e2375230e4490e936b26f702b14d0b3064a45daea78eab19f28d07eb9d6",
+    "git_blob_sha1": "532ac751fc22395eaaa0beca2c447d833a2a0f01"
+  },
+  {
+    "path": "build/VS2022/liblz4/liblz4.vcxproj",
+    "bytes": 9516,
+    "sha256": "cde64d2215b18cc93874565396d0a4c807ca291f202b22d7d9cc8a6e330c3389",
+    "git_blob_sha1": "fdddaaaad33207e6f0eefe161b0b10720fe36151"
+  },
+  {
+    "path": "build/cmake/CMakeLists.txt",
+    "bytes": 9757,
+    "sha256": "e7f649ffc19aaed3fc33ef43530fa07c577ccac29301a9bd88d3e3ff904010da",
+    "git_blob_sha1": "eb7007b4eadec37e98b01f3f657d793f33d7d972"
+  },
+  {
+    "path": "lib/LICENSE",
+    "bytes": 1311,
+    "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c",
+    "git_blob_sha1": "488491695a6b6984aa3a49a8392b192ed2bcac1d"
+  },
+  {
+    "path": "lib/dll/example/fullbench-dll.vcxproj",
+    "bytes": 9976,
+    "sha256": "7eded4e5abb0ddc5f7aeb289d6a7f22f5d2ba84076b9ebd4387d3c649f009862",
+    "git_blob_sha1": "cdb553422a2dff73cc7b602b199c4276277d811c"
+  },
+  {
+    "path": "lib/lz4.h",
+    "bytes": 43263,
+    "sha256": "c1614ecf7ada7b0be1acb560d4239595f96fbb7aa6a79a7c40cb358753830be6",
+    "git_blob_sha1": "491c6087c417754ff4662a02c1bfc9ddc13d43e1"
+  },
+  {
+    "path": "lib/lz4frame.h",
+    "bytes": 32749,
+    "sha256": "47501e4925d60c0f87c7bfc68c8b9e0e4d942eea786e35d2c5bfbf5e9deab561",
+    "git_blob_sha1": "1bdf6c4fcba57536ff3c97936e1217e5aebb6797"
+  }
+]

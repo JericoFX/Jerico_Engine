@@ -1,0 +1,9 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: portable Perl archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/guard-outputs/missing-perl.zip
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:44 (JE_python_verify_file)
+
+

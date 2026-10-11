@@ -1,0 +1,96 @@
+{
+  "scope": "Manual exact OpenSSL1.1.1o source acquisition and static audit only. Candidate transitive engine dependency; no root OpenSSL missing-package failure proven. No producer/source/config/docs edits, tool installation, Configure/build/test or Git",
+  "source": {
+    "archive": "F:/JericoEngine/Dependencies/archives/openssl-1.1.1o.tar.gz",
+    "bytes": 9856386,
+    "sha512": "75b2f1499cb4640229eb6cd35d85cbff2e19db17b959ac4d04b60f1b395b73567f9003521452a0fcfeea9b31b26de0a7bccf476ecf9caae02298f3647cfb7e23",
+    "expectedSha512": "75b2f1499cb4640229eb6cd35d85cbff2e19db17b959ac4d04b60f1b395b73567f9003521452a0fcfeea9b31b26de0a7bccf476ecf9caae02298f3647cfb7e23",
+    "sha512PinMatches": true,
+    "sha256": "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f",
+    "snapshot": "F:/JericoEngine/Dependencies/openssl-1.1.1o",
+    "tag": "OpenSSL_1_1_1o",
+    "tagCommit": "ca2e0784d2c38edcefd5d68028f4d954bd8faddb",
+    "versionHeader": "include/openssl/opensslv.h OPENSSL_VERSION_NUMBER0x101010ffL and version1.1.1o",
+    "members": 3252,
+    "files": 3093,
+    "directories": 159,
+    "payloadBytes": 41447592,
+    "links": 0,
+    "collisions": 0,
+    "unsafePaths": 0,
+    "reparsePaths": 0,
+    "all3093ExtractedHashesMatch": true,
+    "transport": "Repeated explicit HEAD301 www.openssl.org→HEAD302 github.com→HEAD200 release-assets.githubusercontent.com, then explicit GET200 same signed asset URL held only in memory; no auth/autoredirect, no AWS/S3/CloudFront",
+    "immutable": "Preserve archive/snapshot; any future producer must use own work/build/stage outputs and keep this manifest unchanged"
+  },
+  "staticBuild": {
+    "scannedBuildFiles": 127,
+    "recognizedFetchRunnerMarkers": 0,
+    "closure": "Configure local Configurations/10-main.conf→VC-WIN64A/native MSVC/winthreads→Configurations/windows-makefile.tmpl; local util/perl with_fallback and bundled Text::Template; build.info library source/generators; cl/lib/link/rc/nmake/NASM and local Perl generators. No CMake/ExternalProject/FetchContent or submodule requirement in archive",
+    "defaultOptionalDependencies": "Configure defaults zlib/zlib-dynamic disabled; original historical Windows recipe adds no zlib option. No new feature removal proposed; threads and assembly retained",
+    "candidateLegacyArgv": [
+      "explicit-native-perl.exe",
+      "Configure",
+      "VC-WIN64A",
+      "enable-static-engine",
+      "enable-capieng",
+      "no-ssl2",
+      "no-tests",
+      "-utf-8",
+      "no-shared",
+      "-FS",
+      "--prefix=<own-local-stage>",
+      "--openssldir=<own-local-stage>"
+    ],
+    "argvScope": "Recovered historical recipe inputs, not executed or accepted local producer. Never default ProgramFiles/global install; native Perl and CRT decision required first",
+    "generatedFiles": "configdata.pm/Makefile/opensslconf.h/bn_conf.h/dso_conf.h and assembly are generated in work/build outputs; source archive has all local templates/Perl fallback",
+    "staticLibraryNames": "Configure2053 gates sharednames on shared enabled, windows-makefile.tmpl lib() appends _static only when sharednames exist; no-shared uses libcrypto.lib/libssl.lib installed locally. Names not verified by build",
+    "crt": "VC-noCE-common static lib_cflags /MT /Zl; original vcpkg x64-windows-static triplet requests dynamic CRT but pinned port has no explicit override. Preserve actual compiler flags and validate library allocator boundaries/engine /MD consumer before declaring compatibility; do not silently substitute shared/no-asm/new ABI",
+    "systemLibraries": [
+      "ws2_32.lib",
+      "gdi32.lib",
+      "advapi32.lib",
+      "crypt32.lib",
+      "user32.lib"
+    ],
+    "oldFindExposes": "OpenSSL::Crypto/SSL STATIC IMPORTED GLOBAL; 3rdParty::OpenSSL alias SSL; Crypto interface crypt32.lib ws2_32.lib. Real full MSVC link closure pending",
+    "environment": "Future producer must control Perl/CC/AS/tool paths and OPENSSL_LOCAL_CONFIG_DIR (can load external configs), not inherit arbitrary Git/Cygwin/GCC environment",
+    "provenance": "util/mkbuildinf.pl records compiler flags/platform/time or SOURCE_DATE_EPOCH; no parent Git banner lookup found in this generator",
+    "limitations": "Static scan is not Configure/build/ABI/crypto/IPC/runtime acceptance; historical vcpkg tool acquisitions/cleanup cannot be run offline unchanged"
+  },
+  "legal": {
+    "root": "LICENSE OpenSSL plus original SSLeay; both conditions apply. Retain full copyright/conditions/disclaimers, OpenSSL Project and Eric Young credits; Tim Hudson Windows apps acknowledgment where applicable",
+    "noticeSurveyFiles": 2229,
+    "fullAdditionalNoticeCopies": 157,
+    "additional": "BSD2-style Richard Levitte LPdir files, public-domain AES/Rijmen/Bosselaers/Barreto and Mike Hamburg vpaes notices, NSRI ARIA/Oracle notices, Andy Polyakov Cryptogams/OpenSSL and Camellia GPL/LGPL/MPL/BSD alternatives; retain exact full notices under existing OpenSSL source distribution rather than relicense",
+    "bundledBuildTool": "external/perl/Text-Template1.46 M.J.Dominus GPL2-or-later OR Perl Artistic, both COPYING/Artistic texts and module notices preserved; local Configure fallback, not evidence those license terms apply to all libssl/libcrypto",
+    "evidence": [
+      "all-source-notice-lines.json",
+      "full-additional-notices-manifest.json",
+      "full-additional-notices/",
+      "source-manifest.json",
+      "inspected-text/LICENSE"
+    ],
+    "legalClosure": "All immutable source notice bytes preserved and indexed; final binary redistribution payload/selected notices and security acceptance remain parent review, not credited by this audit"
+  },
+  "nativePerl": "No native Perl found in bounded PATH/registry/known-directory survey; GitCygwin5.42.2 alone not VC proof. MSVC14.44.35207 cl/nmake present; NASMWinLibs2.16.03 previously hashed",
+  "portableCandidate": {
+    "version": "5.42.3.1",
+    "archname": "MSWin32-x64-multi-thread",
+    "url": "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54231_64bit/strawberry-perl-5.42.3.1-64bit-portable.zip",
+    "expectedBytes": 304765269,
+    "expectedSha256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+    "primaryPin": "strawberryperl.com/releases.json agrees with exact GitHub asset size/digest",
+    "heads": "github.com302→release-assets.githubusercontent.com200/304765269; no signed query recorded",
+    "downloaded": false,
+    "installed": false,
+    "readiness": "Needs separate parent acquisition authorization and full ZIP safety/legal audit; no Configure compatibility or tool-source cryptographic verification claimed"
+  },
+  "publicReceipts": "All new source HEAD/GET receipts redact URL query/header Location query. New sanitized-official-source-head-hop1.json/hop2.json public copies replace signed queries recursively; private frozen openssl-current-audit originals retained unchanged and must not publish",
+  "remaining": [
+    "Native Perl provision/audit and CRT producer decision",
+    "Local producer/new artifact identity/hash and consumer validation by Luna",
+    "Original root configure/build/Editor/AP and product acceptance"
+  ],
+  "next": "Parent may authorize exact portable tool acquisition, then design producer retaining version/features/Find aliases and chosen CRT with real consumer validation. No silent OpenSSL upgrade or reuse old AWS package SHA"
+}

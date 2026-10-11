@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-10T22:30:46.2855408Z",
+  "method": "HEAD",
+  "url": "https://codeload.github.com/AngusJohnson/Clipper2/tar.gz/46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "auto_redirect": false,
+  "credentials": "none",
+  "status": 200,
+  "response_uri": "https://codeload.github.com/AngusJohnson/Clipper2/tar.gz/46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "headers": {
+    "Access-Control-Allow-Origin": "https://render.githubusercontent.com",
+    "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "Cross-Origin-Resource-Policy": "cross-origin",
+    "ETag": "\"ba6330296d88f09a198bfa444d988b1d7a8263d4d413e9602080ac7936a54008\"",
+    "Strict-Transport-Security": "max-age=31536000",
+    "Vary": "Authorization, Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "deny",
+    "X-XSS-Protection": "1; mode=block",
+    "Date": "Sat, 10 Oct 2026 22:28:15 GMT",
+    "X-GitHub-Request-Id": "F903:297A2E:3F4B2:32E64C:6ACABBFF",
+    "x-github-edge-region": "brazilsouth",
+    "Content-Disposition": "attachment; filename=Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4.tar.gz",
+    "Content-Type": "application/x-gzip"
+  }
+}

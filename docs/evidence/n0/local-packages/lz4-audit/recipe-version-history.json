@@ -1,0 +1,22 @@
+[
+  {
+    "commit": "cb2d074d25488bc9648e412136fabc2a6a943082",
+    "package_version": "1.9.4-rev2",
+    "message": "Add support for WebAssembly builds of some 3p-packages (#284)\n\n## What does this PR do?\n\nAllow to build several 3p package to the WebAssembly target thanks to\nemscripten compiler\n\nRelated to :\n- https://github.com/o3de/o3de/issues/19083\n- https://github.com/guillaume-haerinck/o3de/tree/emscripten\n\nWhat remains :\n- Emscripten should likely be a 3p-package itself so that users can\ntarget WebAssembly without the need of installing emscripten by themself\n- Need to have all 3p required by the engine/game (and not editor) built\nwith emscripten so that we can build the engine/game itself to\nWebAssembly\n\n## How was this PR tested?\n\nLocal build on windows. \n\nSetup required for now:\n- Install\n[emscripten](https://emscripten.org/docs/getting_started/downloads.html)\n- Install [Ninja build\nsystem](https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages)\n\nSteps:\n- Clone this repository and\n[3p-package-script](https://github.com/o3de/3p-package-scripts) next to\neach other\n- From the 3p package scripts folder, open a terminal and run `python\n.\\build_package.py --search_path ..\\..\\3p-package-source\nLua-5.4.4-rev1-emscripten`\n- Build exit successfully\n- Unzip the created package and check that it is correct\n- (near future) [Link\npackage](https://github.com/o3de/o3de/blob/development/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake)\nagainst o3de and build tests in webassembly (just need to create a wasm\nfolder in the cloned repo and run `emcmake cmake ..\n-DLY_3RDPARTY_PATH=YOUR_PATH` then build the test targets)\n\n---------\n\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>"
+  },
+  {
+    "commit": "c7efdc07809cb88dd72e10275e896e9a0d62536a",
+    "package_version": "1.9.4-rev2",
+    "message": "Mac ARM64 3P support: Add definitions for azslc, AWSNativeSDK, lz4, libsamplerate, and SQLite (#335)\n\n* Add definition for azslc-1.8.22-rev1-mac-arm64\n\n  * Added required `pyyaml` pip library to `build-package.yaml`\n  * Add new entry in package-system/azslc/build_config.json for `Mac-arm64` (using alias '@Mac')\n  * Added `azslc-1.8.22-rev1-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\n* Add definition for AWSNativeSDK-1.11.361-rev1-mac-arm64\n\n  * Updated package-system/AWSNativeSDK/build_AWSNativeSDK_mac.sh to detect mac arm64\n  * Add new entry in package-system/AWSNativeSDK/build_config.json for `Mac-arm64` (using alias '@Mac')\n  * Added `AWSNativeSDK-1.11.361-rev1-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\n* Add definition for lz4-1.9.4-rev2-mac-arm64\n  * Add new entry in package-system/lz4/build_config.json for `Mac-arm64` (using alias '@Mac')\n  * Added `lz4-1.9.4-rev2-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\n* Add definition for libsamplerate-0.2.1-rev2-mac-arm64\n  * Add new entry in package-system/libsamplerate/build_config.json for `Mac-arm64` (using alias '@Mac')\n  * Added `libsamplerate-0.2.1-rev2-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\n* Add definition for SQLite-3.37.2-rev2-mac-arm64\n  * Add new entry in package-system/sqlite/build_config.json for `Mac-arm64` (using alias '@Mac')\n  * Added `SQLite-3.37.2-rev2-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>"
+  },
+  {
+    "commit": "1521b948040c3088c90ae1dd8a1f1da35385db23",
+    "package_version": "1.9.4-rev2",
+    "message": "Fixed lz4 linux build commands to build a static library\n\nDue to the changes that the previous commit made from switching from building using `make` to building using `cmake` setting the `BUILD_SHARED_LIBS` option to `OFF` was missed\n\nThis resulted in a shared library being built for linux instead of a static library.\n\nThe other platforms uses the build_config.json common cmake generate arguments which set BUILD_SHARED_LIBS=OFF and they were correctly built as a static library.\n\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>"
+  },
+  {
+    "commit": "68e97674712afd8c5e5c99608b35442da579163a",
+    "package_version": "1.9.4-rev1",
+    "message": "Skip building of lz4 and lz4c executable for iOS\n\nThis allows iOS to successfully build the lz4 1.9.4 package\n\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>"
+  }
+]

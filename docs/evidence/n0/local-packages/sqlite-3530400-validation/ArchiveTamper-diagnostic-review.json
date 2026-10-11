@@ -1,0 +1,14 @@
+{
+  "case": "ArchiveTamper",
+  "original_result_diagnostic_match": false,
+  "native_exit_code": 1,
+  "elapsed_seconds": 0.0331254,
+  "raw_stderr_sha256": "A9B6548774D5046696FEE107C259BCD56BB6B598474C48D099867861488DD75F",
+  "raw_stderr": "CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):\n  JE local Python: SQLite 3.53.4 official amalgamation archive SHA256\n  mismatch:\n  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/sqlite-3530400-validation/ArchiveTamper/fixtures/sqlite-amalgamation-3530400.zip\nCall Stack (most recent call first):\n  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake:9 (JE_python_verify_file)\n\n\n",
+  "normalized_diagnostic": "CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message): JE local Python: SQLite 3.53.4 official amalgamation archive SHA256 mismatch: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/sqlite-3530400-validation/ArchiveTamper/fixtures/sqlite-amalgamation-3530400.zip Call Stack (most recent call first): F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake:9 (JE_python_verify_file)",
+  "expected_diagnostic": "JE local Python: SQLite 3.53.4 official amalgamation archive SHA256 mismatch:",
+  "diagnostic_match_after_whitespace_normalization": true,
+  "fixture_unchanged": true,
+  "unexpected_package_artifacts": 0,
+  "review_note": "CMake wrapped the diagnostic across lines; no CMake rerun was performed."
+}

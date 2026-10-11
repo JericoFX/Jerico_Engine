@@ -1,0 +1,13 @@
+{
+  "executable": "C:\\Users\\Jerico\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "argv": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\fixture-publication-preflight\\fixture-resources-preflight-publication.py"
+  ],
+  "working_directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "manifest_sha256": "AA8FDC7E3DE67828ECAADE16EE4FB8E0D2B7287232ACE6BE9E04BF6370B70495",
+  "copied_script_sha256": "3F65A34D02AFEA84BBEF26862FE7AA13423B02B0674AE2A07AE7195A2F78AD1A",
+  "native_exit_code": 0,
+  "elapsed_seconds": 0.087,
+  "stdout_json": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\fixture-publication-preflight\\fixture-resources-preflight-publication.json",
+  "stderr_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\fixture-publication-preflight\\fixture-resources-preflight-publication.stderr.log"
+}

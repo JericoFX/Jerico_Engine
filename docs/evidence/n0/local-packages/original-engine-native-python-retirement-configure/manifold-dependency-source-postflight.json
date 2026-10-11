@@ -1,0 +1,1897 @@
+{
+  "path": "F:\\JericoEngine\\Dependencies\\manifold-3.5.1",
+  "exists": true,
+  "fileCount": 378,
+  "files": [
+    {
+      "relativePath": ".clang-format",
+      "bytes": 98,
+      "sha256": "aca4bc2a699dfe715880b1e5492a7e7847a03c4b807850c89e8463f8884550cc"
+    },
+    {
+      "relativePath": ".codecov.yml",
+      "bytes": 129,
+      "sha256": "c815678f9bd97a118f8ccd1a1620f9f70f690b3c06df5e9fac88e4447bb68735"
+    },
+    {
+      "relativePath": ".gersemirc",
+      "bytes": 26,
+      "sha256": "869feac88e9411daced62f982b3913d3bb2cd1efd46341b9c8c69915d7f48ec9"
+    },
+    {
+      "relativePath": ".gitattributes",
+      "bytes": 216,
+      "sha256": "05526ed3b644eae8d18a5089333770592d6ec7f41893f955cff43ea3e0173e83"
+    },
+    {
+      "relativePath": ".gitignore",
+      "bytes": 2009,
+      "sha256": "6cd0358f37c83f24e036350a9ffcc9e56865b180235b6be0fac730ff8a4c5856"
+    },
+    {
+      "relativePath": "AUTHORS",
+      "bytes": 378,
+      "sha256": "074a43d4b1626a34a0a14a036d00100524dd463604b2570c4d76c7baa63608f3"
+    },
+    {
+      "relativePath": "CMakeLists.txt",
+      "bytes": 10951,
+      "sha256": "7dc361ddc092111bbf1be5d47d6d778f4bc40d964ba81ef18196d6be03f9cc10"
+    },
+    {
+      "relativePath": "CONTRIBUTING.md",
+      "bytes": 536,
+      "sha256": "b6ad4b679c4db4b92fc20aa073ed961d1515d24e5155ff3b9161247d4bbfaccb"
+    },
+    {
+      "relativePath": "Doxyfile",
+      "bytes": 131863,
+      "sha256": "d84ec3aad0c88d47c4ad4c0854f9176352c7bf2149313a4646e3d4c7d88fd705"
+    },
+    {
+      "relativePath": "flake.lock",
+      "bytes": 1958,
+      "sha256": "04bdb8af22570d8e4927e209e63d6de21360424c8d51630dbda9a8987d6ed9e9"
+    },
+    {
+      "relativePath": "flake.nix",
+      "bytes": 4899,
+      "sha256": "a29daa78cd3e718c7214c6887d0c15d7f5bf550136ce637b26f5b58539d48661"
+    },
+    {
+      "relativePath": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "relativePath": "package-lock.json",
+      "bytes": 577,
+      "sha256": "dc1f1880c21a2d07519fcb259de7dfa3751040d1cc144423d5a0cf86ab79ec39"
+    },
+    {
+      "relativePath": "package.json",
+      "bytes": 68,
+      "sha256": "54d044076ce36f1a28ace6aa746556b94789504ba0c3fb414d33e29decd30394"
+    },
+    {
+      "relativePath": "pyproject.toml",
+      "bytes": 2107,
+      "sha256": "b57563e736917d56bc3d736af2dffb5872885de9d357ab25692cf09fb33593de"
+    },
+    {
+      "relativePath": "pytest.ini",
+      "bytes": 49,
+      "sha256": "322846e95d4a451fea9b0d39f13853fa045c1cede412e17193b39cf65f351ef8"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 19948,
+      "sha256": "3865bbf147e2c6c38c1aa1d0707c4101991537e35f3ff49ed85326b59e9436a9"
+    },
+    {
+      "relativePath": "RELEASE_CHECKLIST.md",
+      "bytes": 1827,
+      "sha256": "822d4ba98017c5decac1c7c50ab3ac99016454506a7bcdc45f3b1132a35b3623"
+    },
+    {
+      "relativePath": ".github\\dependabot.yml",
+      "bytes": 106,
+      "sha256": "9f5fef3066d7b13bf2a3c7723569f1fb8d579123134862ea3f6d920d6166c2fc"
+    },
+    {
+      "relativePath": ".github\\actions\\git-clone\\action.yml",
+      "bytes": 1086,
+      "sha256": "83ab60f2552584d958791fae72d336a6a4a570ebeb687f1ad19f0dd53222ee6d"
+    },
+    {
+      "relativePath": ".github\\workflows\\build_wheels.yml",
+      "bytes": 1897,
+      "sha256": "feba96fb196af273293452abdcd016e13e793bdf5685afb4e1eace7270da5c91"
+    },
+    {
+      "relativePath": ".github\\workflows\\check_format.yml",
+      "bytes": 694,
+      "sha256": "c51c0c3aea990c48d3f0b3f2d5c6152e2c7de44876b1e00252cc454722a5b508"
+    },
+    {
+      "relativePath": ".github\\workflows\\deploy.yml",
+      "bytes": 1089,
+      "sha256": "9532bb76a71589733b15340ebb9e64ad3a270ff71d1a00836a0b10a8e9fc5779"
+    },
+    {
+      "relativePath": ".github\\workflows\\manifold.yml",
+      "bytes": 20438,
+      "sha256": "5acade8f42b9ce62018b6f92ea415246c4dc9ead5764c7cd76de18c07b35ce44"
+    },
+    {
+      "relativePath": ".github\\workflows\\publish_npm.yml",
+      "bytes": 885,
+      "sha256": "769e618114bbc85c0a77675dba4e2ea499939b279cbcbf69db0e028d109b11d6"
+    },
+    {
+      "relativePath": ".github\\workflows\\release_file.yml",
+      "bytes": 872,
+      "sha256": "89c71829eff294d985fda0d7181defa281be2591b47edbc7c42f05976cebe9be"
+    },
+    {
+      "relativePath": ".github\\workflows\\tsan.yml",
+      "bytes": 3224,
+      "sha256": "9a13ea575a3cfffda61e9b698ee1235e4e80c3e003ded5f5c1d153024d975ebc"
+    },
+    {
+      "relativePath": ".vscode\\launch.json",
+      "bytes": 761,
+      "sha256": "a118f444c932c46786e801f938aef11869fbda140ed6c2983455012b8b255f76"
+    },
+    {
+      "relativePath": ".vscode\\settings.json",
+      "bytes": 3847,
+      "sha256": "c77864e2ed0bef96802a9634c21f456657bb63231ca28ad26b072ecfb92d1ab2"
+    },
+    {
+      "relativePath": "bindings\\CMakeLists.txt",
+      "bytes": 831,
+      "sha256": "3cf2b1663f02ec423fb2ec63721cb740adb62511b4a54682091e4147381714a9"
+    },
+    {
+      "relativePath": "bindings\\c\\box.cpp",
+      "bytes": 3330,
+      "sha256": "ff9fa2420b4958acc0ec963953540f76e83da7077d022b66acc50bbec40d7568"
+    },
+    {
+      "relativePath": "bindings\\c\\CMakeLists.txt",
+      "bytes": 1257,
+      "sha256": "df9a5c43579f2ac342ae32d78349dd462d04d90f177abbe929375abdc78f415b"
+    },
+    {
+      "relativePath": "bindings\\c\\conv.cpp",
+      "bytes": 7604,
+      "sha256": "c65dcc04cca52fc92cee59b090bb89150d7b18c1d4ddf35c28372c024b3a991d"
+    },
+    {
+      "relativePath": "bindings\\c\\conv.h",
+      "bytes": 3173,
+      "sha256": "d2416876602e5a41ad0c024cfd26e3fa7f6bbef855f560a5a926f4006777503f"
+    },
+    {
+      "relativePath": "bindings\\c\\cross.cpp",
+      "bytes": 9549,
+      "sha256": "2cf7778c7ac77c4682cf45c235825b51bb38816ad0f397750c4925a45988e473"
+    },
+    {
+      "relativePath": "bindings\\c\\manifoldc.cpp",
+      "bytes": 41792,
+      "sha256": "400c1f28b158abc30b99b5080fd201cfe4f0d7fb6b6b578ce09d18260567557b"
+    },
+    {
+      "relativePath": "bindings\\c\\rect.cpp",
+      "bytes": 3126,
+      "sha256": "c1ce2b51a826f654da09c98305f341e6481b9b0fd0f9efbb59398cb51049c7be"
+    },
+    {
+      "relativePath": "bindings\\c\\include\\manifold\\manifoldc.h",
+      "bytes": 32676,
+      "sha256": "e987e1d64ac6f54d1a59d003f6e6169877c89aff8596e76458b7792751d40f0e"
+    },
+    {
+      "relativePath": "bindings\\c\\include\\manifold\\types.h",
+      "bytes": 3735,
+      "sha256": "009a76b9e0160bb1c92bd456a06fb38ea51b963ccace94ac437862c055d215a8"
+    },
+    {
+      "relativePath": "bindings\\python\\CMakeLists.txt",
+      "bytes": 2600,
+      "sha256": "901e64dfb65be97c2ed6521288f3b3cd547e93a54573d562e015f2760e91d1eb"
+    },
+    {
+      "relativePath": "bindings\\python\\docstring_override.txt",
+      "bytes": 3151,
+      "sha256": "c30b709f3cb779c6e81c9ecf615a650eec7bdbf421318a20f8b11fb93866f9d1"
+    },
+    {
+      "relativePath": "bindings\\python\\gen_docs.py",
+      "bytes": 3836,
+      "sha256": "efae72f28c6b28b379e5b8cd4f41dfc12670c26c011075fcf781137edfa50662"
+    },
+    {
+      "relativePath": "bindings\\python\\manifold3d.cpp",
+      "bytes": 46270,
+      "sha256": "8ad983a5f18cec899f6e802c462ef0f870c56c114dbf12d5f01fdbf3110934f2"
+    },
+    {
+      "relativePath": "bindings\\python\\README.md",
+      "bytes": 1442,
+      "sha256": "7c37c17aaf43d3fd41be47497013bad22807fda931d46809b38800a99736248c"
+    },
+    {
+      "relativePath": "bindings\\python\\stub_pattern.txt",
+      "bytes": 799,
+      "sha256": "2cc1a707349a3d5d1638a506322a8d8b9baf4d7e94a102094349e85bfb084e38"
+    },
+    {
+      "relativePath": "bindings\\python\\stub_postbuild.py",
+      "bytes": 460,
+      "sha256": "c5edcbbff1e40441eb5e1d2f7e9b465dd2e0c797369e2094fbb0021766fbea4f"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\all_apis.py",
+      "bytes": 5160,
+      "sha256": "a4baeb46450e9a9a0cb1d0757b4e6bd3728401640015d4cfc000da9ba2320293"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\bricks.py",
+      "bytes": 2870,
+      "sha256": "1718c8f92f07e081ec4281000672c8ca8fe2b229bb0973fa728733dfdc4193a6"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\cube_with_dents.py",
+      "bytes": 1080,
+      "sha256": "e34c73116f6ed563d4888e8b44d8aa5393a269b989254fac07f1f1e8f4ea07a2"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\extrude.py",
+      "bytes": 1584,
+      "sha256": "01b28b6585c7ae4e6dc93b752f8b1b14eaaf1198acca9d40de31fe5eb7f50cb7"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\gyroid_module.py",
+      "bytes": 1650,
+      "sha256": "72ba8eae47b21d1e3b2f109d38b351d32c2e1cb86bf8c8437a2ab29f0ebc15e1"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\maze.py",
+      "bytes": 63999,
+      "sha256": "1d3e8ef764ead3a80ee3afdbbd321db3546bb1f08995ac65cc4c2c04a0671f32"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\minkowski.py",
+      "bytes": 674,
+      "sha256": "84f4aeace3d08bba7c9e76ab06b9687f648144347599bd4b5ac524409bb3f65a"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\run_all.py",
+      "bytes": 1708,
+      "sha256": "c0f698c85a06f37b6e68f3a93d0d493693a0940618ccecc5d24275357150132e"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\scallop.py",
+      "bytes": 2391,
+      "sha256": "b38b0a7e70bb508665973e0a0cff0776b15ef2a5cfd97ab504e7041f880dc212"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\split_cube.py",
+      "bytes": 748,
+      "sha256": "a452f3363bc45d406ec9db1d19474b1cf25adb4c81730d75aea973f15ea92a5e"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\sponge.py",
+      "bytes": 1037,
+      "sha256": "827408313c2cc32ed19dafdb43e2f5bd215ecdb9b1123417abe0f6fa6c6c58ff"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\test_torus_knot.py",
+      "bytes": 3077,
+      "sha256": "e62185c753fd1bb6902c16bf82ec94956ad03857a1c9fadaa74aeb7c17cbb79d"
+    },
+    {
+      "relativePath": "bindings\\python\\examples\\union_failure.py",
+      "bytes": 187,
+      "sha256": "9026c4a5822531c44f6742db7f90e227f18fba001f0e5a15f1348b544df30bf8"
+    },
+    {
+      "relativePath": "bindings\\wasm\\.gitignore",
+      "bytes": 207,
+      "sha256": "cdefcc1be87447157e3447128ad7f7063b2348082ae147ab074e75b369da0c63"
+    },
+    {
+      "relativePath": "bindings\\wasm\\api-extractor-manifold.json",
+      "bytes": 1690,
+      "sha256": "2ad0eb617a1b2d2844a88be84e629056fae99784acda3f9af3d2618412281651"
+    },
+    {
+      "relativePath": "bindings\\wasm\\api-extractor-manifoldCAD.json",
+      "bytes": 1505,
+      "sha256": "088df5c4e3ed4e3ae3678b199121b2a1976b36166236691cfb0b2666b614fab6"
+    },
+    {
+      "relativePath": "bindings\\wasm\\api-extractor-manifoldCADGlobals.json",
+      "bytes": 1519,
+      "sha256": "eb42b833100564f23b03aa2beb30bb86e24fc14de7262bd823d1504d07f918b2"
+    },
+    {
+      "relativePath": "bindings\\wasm\\bindings.cpp",
+      "bytes": 10479,
+      "sha256": "4d3cebc88084e4d229c567e8df1252d87fc80f90fbf11e5658986a45be408e36"
+    },
+    {
+      "relativePath": "bindings\\wasm\\bindings.js",
+      "bytes": 24346,
+      "sha256": "ca46f121cd11a751cc15dbae6c7212c88b671edbc5bea19098538ec2d463c796"
+    },
+    {
+      "relativePath": "bindings\\wasm\\CMakeLists.txt",
+      "bytes": 1574,
+      "sha256": "96476968f2f94ed87150f4fc45ce80c8b78ed7925a36d66c3a3ded7016886f55"
+    },
+    {
+      "relativePath": "bindings\\wasm\\esbuild.mjs",
+      "bytes": 318,
+      "sha256": "53d0cb19387e5b5b1093480fb60eb8fb021d00f7d680de9f0ebb83503a3d5515"
+    },
+    {
+      "relativePath": "bindings\\wasm\\helpers.cpp",
+      "bytes": 12060,
+      "sha256": "89cfde8b18c92fafe34cefef1adcc361accf1cfcf33d22b9ca80a7243dbfb5f7"
+    },
+    {
+      "relativePath": "bindings\\wasm\\LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "relativePath": "bindings\\wasm\\manifold-encapsulated-types.d.ts",
+      "bytes": 53563,
+      "sha256": "96dcc839fd87b95b1d2b5b2cc2dc9f78c4de2811bf3e0df40bd7e957ecc6869a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\manifold-global-types.d.ts",
+      "bytes": 4610,
+      "sha256": "8e123edd26ecb1638c3620049ef61137e861430842dda62d7fd4532b98647179"
+    },
+    {
+      "relativePath": "bindings\\wasm\\manifold-root.d.ts",
+      "bytes": 1947,
+      "sha256": "e3df178b81e8fc65de0fda4be7f03bf90c89e137aa8f7b606893e7018f817da0"
+    },
+    {
+      "relativePath": "bindings\\wasm\\package-lock.json",
+      "bytes": 136256,
+      "sha256": "035213d10f43b8dc460e68ebcd4575aec5ef5ae2b3ba1b4d4f8844fc65131185"
+    },
+    {
+      "relativePath": "bindings\\wasm\\package.json",
+      "bytes": 5562,
+      "sha256": "68a8879b7152ebafed56852af38193006506feadf25903cd67a935229905368d"
+    },
+    {
+      "relativePath": "bindings\\wasm\\README.md",
+      "bytes": 4721,
+      "sha256": "0e28c52a390f1e5c37aebcf5a7c6dce88559fa265e49abde6ef0d119d5c5ec54"
+    },
+    {
+      "relativePath": "bindings\\wasm\\tsconfig.json",
+      "bytes": 770,
+      "sha256": "06db3601999735c7350c6cad59604b2fb8e33bb7e733740ddeb1de3afbd4dd59"
+    },
+    {
+      "relativePath": "bindings\\wasm\\typedoc.api.json",
+      "bytes": 680,
+      "sha256": "b55ec4c494415243e53115d7e9fe65bb5386fd55a526a4f7187a6fe19db83e67"
+    },
+    {
+      "relativePath": "bindings\\wasm\\typedoc.common.json",
+      "bytes": 2692,
+      "sha256": "d0b4ec81db623e04fa64169115aac0aa69a98f85db8abc6ebd4d130d87276451"
+    },
+    {
+      "relativePath": "bindings\\wasm\\typedoc.user.json",
+      "bytes": 411,
+      "sha256": "42b17b44f5ff380318ffd00bb76f95dedd483f98b770c2fb73631da439c5693a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\vite.config.js",
+      "bytes": 503,
+      "sha256": "a8a479cdb5580199abcaa30e078cf7d196e01e2c2efb2586df0546648e37af9a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\bin\\manifold-cad",
+      "bytes": 1927,
+      "sha256": "f878a51aff9a294611026ad47f665274e46ea2a70d02f0a69acffe48ab4ffb12"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\bindings-examples.md",
+      "bytes": 320,
+      "sha256": "e63ea6a4384f85baff57e881dd8c8a12dd84457df57ef19217f0a354ac05a7e3"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\bindings.md",
+      "bytes": 886,
+      "sha256": "f1023c2f03d4e0d41e24947afdb868e3ff152973470554a00ca05a94e8ca5488"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\contributing.md",
+      "bytes": 3032,
+      "sha256": "8b8cd4598aad2099f6051cb27e3e27c59b400f22daa9a39786753e817a5ae4a7"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\developer-guide.css",
+      "bytes": 139,
+      "sha256": "5be3a524b6690c0faab3507243a566b653ef9a46bf77bc28f891af9dd4346d14"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\embedding-manifoldcad.md",
+      "bytes": 1666,
+      "sha256": "61e64ec659e4f3231d29ec8b855d1c31d26fd1bbcde57fac1532b4b1c963a294"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\tips.md",
+      "bytes": 2592,
+      "sha256": "78d5d88ebbb4e459b7e1ff7bee7676e7267a50ce5109f3ff1d81df7f9c426fc3"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\user-guide.css",
+      "bytes": 285,
+      "sha256": "d22da14d4b85be58491c6db2c1827cc8a77c73b01f7407c5fbec3d0a46829d43"
+    },
+    {
+      "relativePath": "bindings\\wasm\\documents\\using-manifoldcad.md",
+      "bytes": 1250,
+      "sha256": "bb3c8df0739cf11437fb3d7b4ca1db95e2bafea74f643722a5ac51dd6225131b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\editor-examples.js",
+      "bytes": 1864,
+      "sha256": "c70ee7bc9c303b25c163c505c5fcfe40509fc8e1e54d42817d130f9390a824b0"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\editor.css",
+      "bytes": 8091,
+      "sha256": "dffbeee214040412ba70c6d983b3ef8ae9a98c85921e2e7db56805e9e586bcc9"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\editor.js",
+      "bytes": 45023,
+      "sha256": "faa0dcf39b4fc5e8ddc174b25395265d09ac82bb8783b8e6684b819ae5b20a3f"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\index.html",
+      "bytes": 4877,
+      "sha256": "986bd53ac880fd3bd968650e98392038ea75b17b892f16d48a5bdb489d0a193f"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\package-lock.json",
+      "bytes": 55393,
+      "sha256": "e507ad54351070421a47eab5f43cc4855db6bbdbedd3016f293588aa7b850d0c"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\package.json",
+      "bytes": 791,
+      "sha256": "044a6ac84593d23b303ef3eede3d6468f18a2cdd0777768fae23a97b90d43505"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\README.md",
+      "bytes": 727,
+      "sha256": "4354a00a8acdfbbe24ab309ab6c7ab7eaf04038b994e3dbd895b5932aa79c278"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\vite.config.js",
+      "bytes": 1662,
+      "sha256": "f223bb23f7040d67933d2aa3b31db9fb432191de8905594c0c19b626165ccb35"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\manifest.json",
+      "bytes": 1253,
+      "sha256": "ff4eb12e34d5a44dd4996bbbde4b4a19506a99a3d046fabb696136a3599afa00"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\service-worker.js",
+      "bytes": 3157,
+      "sha256": "32a3e1456aefc785312f2d524613495cbbb48f230848953bbbc15113756851f0"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\fonts\\orbitron-black-webfont.ttf",
+      "bytes": 18452,
+      "sha256": "2f7f48d9f14c954e0eaf47344377dc19db5162413d91d04539bc0e8c1c08e39c"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\close.png",
+      "bytes": 539,
+      "sha256": "2ca46e2be0e053ffe5da4b783af80ff12e99fc9349c0c811d0e65298c488ead8"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\docs.png",
+      "bytes": 330,
+      "sha256": "ae90a24c2c6733910322d47f405554b281a17cf0092f16344ac630a24fa20723"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\edges.png",
+      "bytes": 8975,
+      "sha256": "142c48dc2328fe4affb1dabbf50f40af7eac303a32b2dcbc165fd35abc112738"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\manifoldCAD.png",
+      "bytes": 721457,
+      "sha256": "b2a088ead686663957045325cf38cd732910d5c8f5627dec018544280f9cefdc"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\manifoldCADonly.png",
+      "bytes": 974827,
+      "sha256": "138a0d6657aa2e83c4e75aa82e1f52dfcef9899c1943e870699f8c09fa615591"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\ManifoldIcon.png",
+      "bytes": 2705,
+      "sha256": "5b55a587cfe12dc379e9b2d506a92a3373bc472d2cb10b5c8b5cee6049bf7aae"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\mengerSponge192.png",
+      "bytes": 63692,
+      "sha256": "b849e6d8f12d43b4ec9ec162e5806524694b4b9b7164d0bcb45f83a27c1456cd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\mengerSponge512.png",
+      "bytes": 277408,
+      "sha256": "7bb162e2127f3568b085e2b512b61ac41fee9ba660d147f1a674d066133144bd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\mengerSponge64.png",
+      "bytes": 11081,
+      "sha256": "c4fca4d22ba251ca32a126699b6c7b7505e0faa4b6425a3b815292729277b204"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\pause.png",
+      "bytes": 240,
+      "sha256": "8876adda742b307ce24092b8fbea44f28b30376f01e812f61ec3e26e4a2ef943"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\pencil.png",
+      "bytes": 375,
+      "sha256": "9c71ca9f54b7352529df9782f99f33da911f57265e9e8ffbd2dc3d0ed68660bf"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\play.png",
+      "bytes": 326,
+      "sha256": "bd6e70c20010fd8a5779ec32a8cf003e7af181fd999ff1a7197b9077b5cab9a1"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\redo.png",
+      "bytes": 492,
+      "sha256": "675fb1ee83f4940f39cd2f4a95c54f0c7e4aa0d0215d45975080b9f379623b5b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\share.png",
+      "bytes": 619,
+      "sha256": "7302877db84c935b8592362446d6a336148e7be3db4e880c0b85b2d4e70912cd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\star.png",
+      "bytes": 675,
+      "sha256": "46e5eda989898a6178e23aaa5ec0b988ea80ae4777ed378d33220f833ed9ba8c"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\trash.png",
+      "bytes": 1048,
+      "sha256": "f88d64d1f53459f19f20971e7c2fa538206246b78f1ff6c71fba62ed165bada2"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\icons\\undo.png",
+      "bytes": 471,
+      "sha256": "20452513d424a5f396798d83115878663ac6bca471e28edf1df00233ff11bd9c"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\jsdocs\\index.html",
+      "bytes": 353,
+      "sha256": "0d4fce16ef0bc043236c5c2f7ab8529c86d377063cae4a2b347fa6a79ff0ce31"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\models\\moon.glb",
+      "bytes": 225508,
+      "sha256": "92e6517192a1bd52e727cbfb46e1d28d813f67a1ca9a044f039dfb77b4f8b5a7"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\editor\\public\\models\\space.glb",
+      "bytes": 112188,
+      "sha256": "7dc91a06b061f4763816e3a0ac0b339233561dbc06f55dd8e9a6f1dfabb9fd49"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\make-manifold.html",
+      "bytes": 2270,
+      "sha256": "3258474ba31f064f211a974c14d1a7ef55a65a77d52300f21f822c8844687957"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\make-manifold.ts",
+      "bytes": 4743,
+      "sha256": "0e0d7fc6e1bbede17198c53b804f0fafd8f99de50116a612e434924b1dd2fc40"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\package-lock.json",
+      "bytes": 66790,
+      "sha256": "8415a4a4dfcc2adffb2cc7c6b1d4dc601af4ef2b952094987ccf37c0f22017f5"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\package.json",
+      "bytes": 665,
+      "sha256": "ccc97d6524ccdfb2535ee8832de701cca4857288b0b34ce3d528819ed06ee12b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\README.md",
+      "bytes": 954,
+      "sha256": "e1ab91df91ddf98b3e280bccd458453a493d79580f6996e5f75ac6b876f88595"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\simple-dropzone.d.ts",
+      "bytes": 33,
+      "sha256": "f6dd6d023e44a9dd39c8ea269557d09ef0de2989e21081350f4e069ea1efd841"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\tsconfig.json",
+      "bytes": 439,
+      "sha256": "95414153a619425448f3f847f0f821ab8f4cd36cddcdcd22df2f64c46ba484ee"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\make-manifold\\vite.config.js",
+      "bytes": 512,
+      "sha256": "5c79a3e65df1d649c383ea7969028696510322d1a84139e4b05a1a2ad5332b6a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\model-viewer-script.ts",
+      "bytes": 4416,
+      "sha256": "8556eb8187102425def34628ff576db28694d8c8f26b51dbe7c997d4805e0f12"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\model-viewer.html",
+      "bytes": 2210,
+      "sha256": "14e1912831f630f7cc0daa63930f3ff0c8a9c9b55434ca0ebc7805ff2c7ee644"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\package-lock.json",
+      "bytes": 66038,
+      "sha256": "1758c37c06091985bb98641d110e3be5ebee69b3cf28134d1bfcb8a7eb40c8b2"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\package.json",
+      "bytes": 588,
+      "sha256": "914be2d2cd1f6a6adbadc5a099c152e8f81cf921a6c5f535e5b66e2068516cc1"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\README.md",
+      "bytes": 705,
+      "sha256": "8d55fc7abd8c5e30df4d1610068a14106729c36e3b87a2ccb33a2c0df2b0fbd6"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\tsconfig.json",
+      "bytes": 439,
+      "sha256": "95414153a619425448f3f847f0f821ab8f4cd36cddcdcd22df2f64c46ba484ee"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\vite.config.js",
+      "bytes": 508,
+      "sha256": "6f6ac2a355f6d079a8d365228f92f4c7f730415ec6578eabc9ee6ebdc959250e"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\public\\models\\moon.glb",
+      "bytes": 225508,
+      "sha256": "92e6517192a1bd52e727cbfb46e1d28d813f67a1ca9a044f039dfb77b4f8b5a7"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\model-viewer\\public\\models\\space.glb",
+      "bytes": 112188,
+      "sha256": "7dc91a06b061f4763816e3a0ac0b339233561dbc06f55dd8e9a6f1dfabb9fd49"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\package-lock.json",
+      "bytes": 40632,
+      "sha256": "cc5b3edd954cb9a46516e1bd8ff43871e51c19ba0b61f33bea0725dab2233676"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\package.json",
+      "bytes": 517,
+      "sha256": "fa244f6304126f9f4ba4c413a6c3a6128027269dfd008f5665741047e3436df8"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\README.md",
+      "bytes": 455,
+      "sha256": "150206b82bc437e5b2961c4ca6deb4e82ac3ca9e84b32006f4b2dde8f19f8fe2"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\three.html",
+      "bytes": 1909,
+      "sha256": "900b481dfb5c6d2b0d59a41eca6d238cb4c2dfe24362dc81e83f35f72b0fb92a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\three.ts",
+      "bytes": 6234,
+      "sha256": "577f7d8c84b11cf8a2827f175889f6c0bf4f695cd9fba1f409c632afdca4f4f4"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\tsconfig.json",
+      "bytes": 439,
+      "sha256": "95414153a619425448f3f847f0f821ab8f4cd36cddcdcd22df2f64c46ba484ee"
+    },
+    {
+      "relativePath": "bindings\\wasm\\examples\\three\\vite.config.js",
+      "bytes": 668,
+      "sha256": "b1203c02b747f71d865da41313564923a5734b0fa26e9709735d52115ce83ff8"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\3mf-export.d.ts",
+      "bytes": 38,
+      "sha256": "0f3b26794f5f27f881402197029a831b553c35c0977c06c79834d872e36cbb37"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\animation.ts",
+      "bytes": 9359,
+      "sha256": "ff9a16ac96531065d4954f7fbbbcf90768de75a378c7e9b6d02f76c193ad1409"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\bundler.test.ts",
+      "bytes": 1935,
+      "sha256": "7272976e6b8d6276293156243acf0a2d8efbf438f8781491ce9d3f1ccbaf36a5"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\bundler.ts",
+      "bytes": 12761,
+      "sha256": "96e5fc412bb5608a1993780d6688acbabd8584a8598f22570d47888c77747e36"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\debug.ts",
+      "bytes": 4719,
+      "sha256": "72d138b4d5b6f36c67e4cce23d36f8c1819e1cb6fc83b877740e089e197b5f30"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\error.ts",
+      "bytes": 2905,
+      "sha256": "bcfba888ee09dc19dc21d615fa91683917708456ab24bbba97a041977f4254b3"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\export-3mf.test.ts",
+      "bytes": 9416,
+      "sha256": "a5268558fbca12ad46057cf8819aa7b61058f551d56046ba0aad4e1b1545ac78"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\export-3mf.ts",
+      "bytes": 9688,
+      "sha256": "0c088e7cb3481036bc327214d5ef1d2d8a1b02a7b2614800b378d01bde60f5dd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\export-model.ts",
+      "bytes": 6353,
+      "sha256": "e1af7c39e4ec8dc49d6e1b0701a4f106f37c6175b4883a33a4b0e9e490562899"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\garbage-collector.ts",
+      "bytes": 3796,
+      "sha256": "1ff3cba869d0129aededa788d8e1d447fd8fd9d52989a8ab7127bc5985f5e494"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\gltf-io.ts",
+      "bytes": 19279,
+      "sha256": "af7f2b24375cbb7ea92982b9f8ad1e2f612819537d7a0f9c598f1905d33eb73a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\gltf-node.test.ts",
+      "bytes": 8059,
+      "sha256": "53e0b8b7f028eb0ef310668de1de3aa41dd7601fbcc3370e3c44b731802f7d9d"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\gltf-node.ts",
+      "bytes": 11628,
+      "sha256": "6360083a12e0d0a1d46766c1c1b9b5608f337b95d2f41f06ebc20451ddb20a88"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\gltf-validator.d.ts",
+      "bytes": 98,
+      "sha256": "7c40d6b85e3f681d9b86d476d98b8737c52ac270ad21457d74c3437770303f20"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\import-3mf.ts",
+      "bytes": 8866,
+      "sha256": "3e7ea437db94d52d78a2e536a7abbea64820c520bd4c331aefae5548d3db1f89"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\import-model.test.ts",
+      "bytes": 12456,
+      "sha256": "a8eb325e642e01d8b5eed7ad74bd8f72873a9ebc0778b0775aa2a967eac0ccca"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\import-model.ts",
+      "bytes": 17933,
+      "sha256": "368cf11205a07153fa6e4085e0262151b4d14e40347107ff55c0587aa5ffa330"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\level-of-detail.ts",
+      "bytes": 3913,
+      "sha256": "c659f54aff4b84d7fb55929a39a09784e56c65334bb24ca1c6760214351fde12"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\manifold-gltf.ts",
+      "bytes": 9546,
+      "sha256": "1a591fd65e553c5f0fa17ebe2a948b2922e787eb057966ebc5b870af1cdb1bba"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\manifoldCAD.ts",
+      "bytes": 3095,
+      "sha256": "9d4c23a634b093a0668a5c215406f8777ec5cbd119e59e4baba98992d71e46dd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\material.ts",
+      "bytes": 4307,
+      "sha256": "b020ac1ae78452090b9302297d2882d8e59aa05d026e4771e16095fc79faa640"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\math.ts",
+      "bytes": 2520,
+      "sha256": "4027fddcc304b78e4a972fb422219ceb2269ff3638af8d1223fce46ec0df793a"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\scene-builder.ts",
+      "bytes": 15873,
+      "sha256": "c39df1b4005ef0706cf7368a9a2c34d62db2e1763f115a731b9834d2a116929b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\util.ts",
+      "bytes": 7645,
+      "sha256": "91003a39f9e012e5ff0931aca871fb3fb73db946b44e81c656e6ea465a2b1200"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\wasm.ts",
+      "bytes": 2022,
+      "sha256": "eb287eddcf75fad7300e12beda73f567e8404ea88db6e493a531ab31d4454e55"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\worker.test.ts",
+      "bytes": 7303,
+      "sha256": "cdb448b73cbcf5bee6955c0c553b4fe96c67c04a16b7797a392709e85540ba07"
+    },
+    {
+      "relativePath": "bindings\\wasm\\lib\\worker.ts",
+      "bytes": 13881,
+      "sha256": "0ba4e325ffc1d43828abf3066768541c797c4bde1703ef851eb61367f085766b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\bindings.test.ts",
+      "bytes": 5045,
+      "sha256": "1232d1f2d6597956f844948621c509caee3aafb942386cd9ac79b4b305617f2f"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\cdn.test.ts",
+      "bytes": 2130,
+      "sha256": "d4aa4be3f4afdaf00b7394b5f5bdb54d96232e239a61455aff255c291d6994d6"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\cli.test.ts",
+      "bytes": 1598,
+      "sha256": "f0fbc2c4ded6caca0522c169f38ca46a2c0619a9dca224563e12efd64f545994"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\import.test.ts",
+      "bytes": 12294,
+      "sha256": "e0c962967ab9f3553194f1a8f8b30f134ddac8c387b5f76bfd5fb13c550a33a0"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\stacktrace.test.ts",
+      "bytes": 7146,
+      "sha256": "2bf38f52ccceed0c16fd6cc0fc4ac423ea079715015f8e893044c0082de174b4"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\util.ts",
+      "bytes": 2459,
+      "sha256": "4329730ee324cc1b80ad25f84cb9f029e0ca612355637402d3c9b24304280154"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\warpBatch.perf.test.ts",
+      "bytes": 1263,
+      "sha256": "f68030b6e342b8a26f0e164004613cdcee495b5006ad6e1332bf11b8b03fe927"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\auger.mjs",
+      "bytes": 825,
+      "sha256": "d1ccfe2b1ececece6741ee95def5965aecd5c2e5c69392baf5759679b3c659da"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\gear-bearing.ts",
+      "bytes": 2869,
+      "sha256": "8d3e0aeda50ebc8b115f5b23e06ef1943a49fe053d83c40db43ac251a2701e8f"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\godel-escher-bach.ts",
+      "bytes": 4631,
+      "sha256": "7a2df0814b7de195d45915e949d0b6760ebefc74d33f10c4ad6751af332bc28b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\gyroid-module.ts",
+      "bytes": 2285,
+      "sha256": "bd3b2fae6fee6eb2bcde4168a2b107a1d38958c636687bca0f25f2e1fd68d0d0"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\heart.mjs",
+      "bytes": 1482,
+      "sha256": "9962a124c3b19ff28e06117cb0826dcdb8c50b762f304bcd4052d9008d0b60ac"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\import-manifold.ts",
+      "bytes": 2831,
+      "sha256": "d5be971f2abaaa48b62c411bfdfca5358bed514a397596d6d1fab2de0388c978"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\import-model.ts",
+      "bytes": 793,
+      "sha256": "79ca4dc9b4b8149feb3c7e012302025bca16904dee52a705bfcd5bb121146a70"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\intro.mjs",
+      "bytes": 1709,
+      "sha256": "61d4708589c2d7301f287451fdb66c0bcfbea73bc900f76e4efbc71b7d1f676d"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\involute-gear-library.ts",
+      "bytes": 5063,
+      "sha256": "e943b3279052e79de740e2b23fb42c36397548b4905dbfe36719e1c37c7bff3b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\menger-sponge.mjs",
+      "bytes": 1444,
+      "sha256": "d55798d7cc26b3686606bf3aff133998b0a30a526d15fd2c4f9dbfe52b571006"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\rounded-frame.mjs",
+      "bytes": 1431,
+      "sha256": "5b82c0a7c3e3cbd2afed8b60fe19842beade5bc38b4d20675b66e13ebdeb9936"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\scallop.mjs",
+      "bytes": 2006,
+      "sha256": "491c205058a76b3a992afa2763292b6de0005181ed66ddfe860132bad7677452"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\stretchy-bracelet.mjs",
+      "bytes": 2384,
+      "sha256": "e56fdde619d8f4cbea978a7fa68ce3cb689c5fe826f88bb6a463713e8e0a508d"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\tetrahedron-puzzle.mjs",
+      "bytes": 2751,
+      "sha256": "7b64330f9fa5e787d0ca3ce581a72f37364872f081cc85ef09e16d2de2584bcb"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\torus-knot.mjs",
+      "bytes": 2488,
+      "sha256": "38c7b1b7daead9bb1ffb14c3529d906b864c77dbcf09d1cb69b7640942af0643"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\voronoi.mjs",
+      "bytes": 2142,
+      "sha256": "b44654e137069b90b3e0f09da6f878f60c07d7eda2946648af86e56fc7f6bda2"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\models\\moon.glb",
+      "bytes": 225508,
+      "sha256": "92e6517192a1bd52e727cbfb46e1d28d813f67a1ca9a044f039dfb77b4f8b5a7"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\examples\\models\\space.glb",
+      "bytes": 112188,
+      "sha256": "7dc91a06b061f4763816e3a0ac0b339233561dbc06f55dd8e9a6f1dfabb9fd49"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\bundlerError.mjs",
+      "bytes": 132,
+      "sha256": "1589eabf948ed9fadd481d3f687390c0fa05323a6375abdbd5d82b9b77100298"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\exportReferenceError.mjs",
+      "bytes": 214,
+      "sha256": "c0d168f175c09d65dce091cb4e9256a99f8e0e8730ddd903dd6bca456b8f5c07"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\generateReferenceError.mjs",
+      "bytes": 169,
+      "sha256": "e490b82bd84fbcf4aa3d379e30d2c3c87a17a8da4d8b5b1d9a444cfd593363db"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\glMatrixNoImport.mjs",
+      "bytes": 47,
+      "sha256": "a09c4f5d1178a3240d401d463cd990d01b1a351c37eb073eca92fd7927c57613"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\importReferenceError.mjs",
+      "bytes": 145,
+      "sha256": "3565550656ec9e99f7b09726cf9e0d4cb05ac96ed90c232db8655f20b5f1c69b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\importUnitSphere.mjs",
+      "bytes": 103,
+      "sha256": "dd8d0843fd3764e7c95966c32c6fee1b98c2864529392e8594a46d97599625f5"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\isManifoldCAD.mjs",
+      "bytes": 378,
+      "sha256": "9b2e1c6277c1418b414813d8a757e71732a1dbd1bebcfa17fd6dcc3f346f2a85"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\noGeometryExport.mjs",
+      "bytes": 44,
+      "sha256": "52a87c94e9785ea672146e47305f9d5c6b7f7eaa043ac01e3e97284c61192c01"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\typeScriptSphere.ts",
+      "bytes": 215,
+      "sha256": "7931700eeece0c1ba95e39d9e07d1e0868df8ee6f134285c4a6b6d6d9065f7c4"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\unitSphere.mjs",
+      "bytes": 108,
+      "sha256": "002c3b7174c8d2cd17f9a8acc7f4d9bf675674b7110fb50545f9bc30d0499f9e"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\unitSphereExport.mjs",
+      "bytes": 135,
+      "sha256": "d27dda10c0f68db613438534a04d19c1a6fb45e75e718daa7ba1e3ffddbd3317"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\unitSphereGLTF.mjs",
+      "bytes": 169,
+      "sha256": "a17b629250d5ca7e2aff3d417447a566dccfd1441d43d75092b61a806f09d1cd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\unitSphereGLTFNoExport.mjs",
+      "bytes": 126,
+      "sha256": "bb4e15559476328e0fda6b1c6491ccebf0deee055c562530d200817d0f5b0c29"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\unitSphereNoManifoldImport.mjs",
+      "bytes": 59,
+      "sha256": "4441228f799d49e38e4aef17c0f6778750c0620801ff011178cb19e8c6fc0e4f"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\models\\box.glb",
+      "bytes": 1012,
+      "sha256": "ef3501c93c73e76fdf250a6ab63cb941515f4f7866666559d6d0f055f265f562"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\models\\boxExtMeshManifold.glb",
+      "bytes": 1380,
+      "sha256": "f5f01f3313cfa6e8da6d5ba692f27343f4236ec8d9abd3c1bc0e1f438eac43a9"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\models\\boxNotManifold.glb",
+      "bytes": 1280,
+      "sha256": "15135c209b076b1ecb6607934ab4050c90f4f8da9a988ce6c3ee910d4b0667bd"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\models\\boxNotManifold.obj",
+      "bytes": 383,
+      "sha256": "f20b50e4dded677249d7aab8427e3a9a98dd0473b0188a0901ec45ed413b830b"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\models\\space.glb",
+      "bytes": 112188,
+      "sha256": "7dc91a06b061f4763816e3a0ac0b339233561dbc06f55dd8e9a6f1dfabb9fd49"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\npm\\unitSphere.mjs",
+      "bytes": 111,
+      "sha256": "78a2d6c213278e13a21c88888af913725dab8b9ab7640cb095692b30b1694079"
+    },
+    {
+      "relativePath": "bindings\\wasm\\test\\fixtures\\npm\\unitSphereNoManifoldImport.mjs",
+      "bytes": 59,
+      "sha256": "4441228f799d49e38e4aef17c0f6778750c0620801ff011178cb19e8c6fc0e4f"
+    },
+    {
+      "relativePath": "bindings\\wasm\\types\\manifoldCAD.d.ts",
+      "bytes": 3774,
+      "sha256": "2ff97ddeb61a087fbda840c8ee871df95e99ad724431d3bd82ac9ce2278be589"
+    },
+    {
+      "relativePath": "bindings\\wasm\\types\\manifoldCADGlobals.d.ts",
+      "bytes": 971,
+      "sha256": "ea208fbcccf4c6205b99d309a378759ac9813ff17f2fb62f466aafd10132c6a4"
+    },
+    {
+      "relativePath": "cmake\\configHelper.cmake",
+      "bytes": 1281,
+      "sha256": "5190060b3a681f6627b1a091686e440901007a47113ee3ed4d09aa1d3964b012"
+    },
+    {
+      "relativePath": "cmake\\info.cmake",
+      "bytes": 4024,
+      "sha256": "2f6fc31dd4b53295b7f90e5da06e60c47324b8a604f9f137270ef5261405ed29"
+    },
+    {
+      "relativePath": "cmake\\manifold.pc.in",
+      "bytes": 444,
+      "sha256": "50da3dc009e541fe8cd4f40c7f9b00177cb4be62f5c78340eb080fe2ab3e2f43"
+    },
+    {
+      "relativePath": "cmake\\manifoldConfig.cmake.in",
+      "bytes": 1513,
+      "sha256": "cdb44382ef3b3c59fa341e706fc7f7250dd245de11c0181c39b64f53afea06d9"
+    },
+    {
+      "relativePath": "cmake\\manifoldDeps.cmake",
+      "bytes": 9357,
+      "sha256": "8ba068a7d2dcc6d6a66a4fe88cb5287c538ab46714c340a0e2b30544c98c27c1"
+    },
+    {
+      "relativePath": "cmake\\version.h.in",
+      "bytes": 1312,
+      "sha256": "61cfc1d044f19c3ba32c52931ee4ff1397ff66d13cb5d5fdd0cd762da2db1f2a"
+    },
+    {
+      "relativePath": "cmake\\patches\\0001-clipper2-no-iostream.patch",
+      "bytes": 5097,
+      "sha256": "88763e9a0b2ad9ec036baeaf00317090621aa98c9754869e856ba16080ea8039"
+    },
+    {
+      "relativePath": "cmake\\patches\\apply-clipper2-patch.cmake",
+      "bytes": 1118,
+      "sha256": "9a2d3164c7778931c750ba19b28aa0567161fa26ebf6b3f647000cfebe14ecc9"
+    },
+    {
+      "relativePath": "docs\\ParallelBVH.pdf",
+      "bytes": 268781,
+      "sha256": "d398e0b8f6514f5b9286e0a46b829d43ab7f90ac21410b8f19700a799bd9572e"
+    },
+    {
+      "relativePath": "docs\\RobustBoolean.pdf",
+      "bytes": 2468302,
+      "sha256": "905a72c2964c20951620daa13963a2ca5421eb19d92f415b126d80ac5fed6100"
+    },
+    {
+      "relativePath": "docs\\TriangleInterpolation.pdf",
+      "bytes": 767796,
+      "sha256": "279e722f547a0317255b22b7219afaa4ccb5a79c6d61ba9f4ccbe33facf8e8d8"
+    },
+    {
+      "relativePath": "docs\\Triangulation.pdf",
+      "bytes": 443680,
+      "sha256": "505b2867fe9a86e2ffa2bddbebe3bfb39b6fa8b4bed5cbf532c9b5fafba1638e"
+    },
+    {
+      "relativePath": "extras\\CMakeLists.txt",
+      "bytes": 2630,
+      "sha256": "05b71d85a0a64d3fb5adab9d7f78a182cb4c19d30fc78d9af02bab1382cc9276"
+    },
+    {
+      "relativePath": "extras\\convert_file.cpp",
+      "bytes": 1949,
+      "sha256": "5bcd693c21ae9d3e3e6ab010d6f6704e9afa163d79095846639ce5491847b9ac"
+    },
+    {
+      "relativePath": "extras\\f3d_skeleton.cpp",
+      "bytes": 2919,
+      "sha256": "9a49e3300344e4b08023bff67763302f0d3f6973164049bb213d949d8c5723d5"
+    },
+    {
+      "relativePath": "extras\\large_scene_test.cpp",
+      "bytes": 1648,
+      "sha256": "c33da18ddfae15afeacbef20c962a7d465f340e21dfb9a3579a326d7318ba7e4"
+    },
+    {
+      "relativePath": "extras\\meshIO.cpp",
+      "bytes": 10045,
+      "sha256": "876a6c668f7de2f136c4c2ab75510eac1c0f47a0ffef3f8cb2a3983e41c14e75"
+    },
+    {
+      "relativePath": "extras\\meshIO.h",
+      "bytes": 2417,
+      "sha256": "6d2d037c2b2896865b98e19a03894d550bbcaada3a27011cc2c4b74438861181"
+    },
+    {
+      "relativePath": "extras\\minimize_testcase.cpp",
+      "bytes": 12628,
+      "sha256": "ddf8c539fce3a84a11336f6a8c20e5c777d46aed2851f5d34fa41ae930816641"
+    },
+    {
+      "relativePath": "extras\\perf_phases.cpp",
+      "bytes": 9287,
+      "sha256": "7a4fc171da0cad4fe773187c3a5f2db013144fb53add7789f9051fa1ace1c961"
+    },
+    {
+      "relativePath": "extras\\perf_test.cpp",
+      "bytes": 1229,
+      "sha256": "c69b64b9a180459aafbd5d42cd638dd866cdbdd7f1dc62d94216343523921462"
+    },
+    {
+      "relativePath": "extras\\stl_test.cpp",
+      "bytes": 18282,
+      "sha256": "f9988e0d59487ca1806c5287d810b5d328a62217ff5ba7b86f02b8732f90116a"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\analyze_ember_tests.py",
+      "bytes": 3726,
+      "sha256": "283b1531cf94c132e38296c76b16e7cec8d867e0196acd8e8fed53c0aefea0c1"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\bug-case.json",
+      "bytes": 1405,
+      "sha256": "045f24b91da9134ddbf465432ec90a29cc8aacff0ff3c9b21d721dfa54933565"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\do_ember_tests.py",
+      "bytes": 1912,
+      "sha256": "5be4baba166f680b5cd5be05edda1a3a0007b57b6dbfd78a1e06937e33ce1f40"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\m3max_benchmark.csv",
+      "bytes": 629369,
+      "sha256": "3ae778f9d606fbf19ab2234afa34ae321c89db7a922a435b91ab3df389412dc8"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\man_bench.cpp",
+      "bytes": 7741,
+      "sha256": "81d2cfa7fe7e1ac2af7d9befce73c2507a35d3eba9b0062c681dab30d432a402"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\README.md",
+      "bytes": 1946,
+      "sha256": "3410ec8169b4d0b9b6bdc0e4e8af58897ee981dfa2b95b9bb6359fe8f20135aa"
+    },
+    {
+      "relativePath": "extras\\ember_tests\\testfiles\\ember-benchmark-cases.json",
+      "bytes": 1395430,
+      "sha256": "73e67fa510187fbaebc15936825cb79e8b09459b6edfcd1cd216dc841408cfb2"
+    },
+    {
+      "relativePath": "include\\manifold\\common.h",
+      "bytes": 21729,
+      "sha256": "486d5b2afdfc184b200e3b25f5f659f282728f40fc5ca1db1358a74f6cd4cdea"
+    },
+    {
+      "relativePath": "include\\manifold\\cross_section.h",
+      "bytes": 6874,
+      "sha256": "c7f1cd9744d99ab4765641766645ae087f03580c8deebcee7699fd20f28ad832"
+    },
+    {
+      "relativePath": "include\\manifold\\linalg.h",
+      "bytes": 79516,
+      "sha256": "0a1ae64ec20c3e38f1f90d5d4a43942ea9a076fe91acaf0f9937404634858426"
+    },
+    {
+      "relativePath": "include\\manifold\\manifold.h",
+      "bytes": 14410,
+      "sha256": "aabb3f78ec9bc92c78bdb6952980aa94e0a0ab2aba71463b3b9c92080c9001cf"
+    },
+    {
+      "relativePath": "include\\manifold\\math.h",
+      "bytes": 15491,
+      "sha256": "b2c9bcf8dc3db0e569a7f2c9fdc88aa6279c544a21274dedc1cd528f41a15b5c"
+    },
+    {
+      "relativePath": "include\\manifold\\mesh.h",
+      "bytes": 12883,
+      "sha256": "b729d5033ef5492fb990b95596b46a785f9a56f0da9e167dbf7e748eccf5302b"
+    },
+    {
+      "relativePath": "include\\manifold\\optional_assert.h",
+      "bytes": 2212,
+      "sha256": "0ee34e61e838a0d8f9c5600507067d486e68452be39b9f8b37e44458acf1e233"
+    },
+    {
+      "relativePath": "include\\manifold\\polygon.h",
+      "bytes": 1912,
+      "sha256": "763fea1260aa2fee3761da5a6345311f06d0647c32e4f0756b567ccba0d9e73a"
+    },
+    {
+      "relativePath": "include\\manifold\\vec_view.h",
+      "bytes": 4012,
+      "sha256": "47dad88de84a0662b42473dc3ef1cce90ad316fa97c6075881e2196c5cc44c67"
+    },
+    {
+      "relativePath": "samples\\CMakeLists.txt",
+      "bytes": 1093,
+      "sha256": "b372d9c47d88173024bbdcfa8bea419f605b92db84ad97b0fe601d33d65fcdc5"
+    },
+    {
+      "relativePath": "samples\\include\\samples.h",
+      "bytes": 2316,
+      "sha256": "73a43e981d5d7f926e50be9ca0d76d0474dae0f731db23934a193009ead7ccd5"
+    },
+    {
+      "relativePath": "samples\\models\\apollo_exterior-150k-4096.glb",
+      "bytes": 14624036,
+      "sha256": "9938e0bdbf986e5a1857a1edc2f48a5780027d7d887af8eda208520e3053e0c6"
+    },
+    {
+      "relativePath": "samples\\models\\apollo.png",
+      "bytes": 778524,
+      "sha256": "5721b0afaefbd82667e7c0555623668954ed441f31dfe682303b3a52e1cbe292"
+    },
+    {
+      "relativePath": "samples\\models\\apollo.webp",
+      "bytes": 74062,
+      "sha256": "562eaed3d456f4ef5648dde527141957ff3712a54761696355b9f4282f019c24"
+    },
+    {
+      "relativePath": "samples\\models\\apolloPan.webp",
+      "bytes": 75908,
+      "sha256": "641152f93329dcbd08c623cf228b8b190d435003a056bee922a3e489f4d312a7"
+    },
+    {
+      "relativePath": "samples\\models\\favicon.png",
+      "bytes": 2705,
+      "sha256": "5b55a587cfe12dc379e9b2d506a92a3373bc472d2cb10b5c8b5cee6049bf7aae"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge192.png",
+      "bytes": 63692,
+      "sha256": "b849e6d8f12d43b4ec9ec162e5806524694b4b9b7164d0bcb45f83a27c1456cd"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge3.glb",
+      "bytes": 483692,
+      "sha256": "9b5aa15417428d22a3231bb59f10fd7e86b0130086e32ad41a1dc23416814c3b"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge3.png",
+      "bytes": 432456,
+      "sha256": "d2e395bdc1da9ce884c8b18a44b07b661bbd1af8759ab4f0ad90feaebdcc4345"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge3.webp",
+      "bytes": 49164,
+      "sha256": "8a4b2397309e59fab0b0677c425f17c683f3c5e90f02082acdac045cc4744f22"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge4.glb",
+      "bytes": 8840112,
+      "sha256": "41145757d59d0843dc1034ab599bbe7a707e07138760a1bc53eb2064e660b4d8"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge512.png",
+      "bytes": 277408,
+      "sha256": "7bb162e2127f3568b085e2b512b61ac41fee9ba660d147f1a674d066133144bd"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSponge64.png",
+      "bytes": 11081,
+      "sha256": "c4fca4d22ba251ca32a126699b6c7b7505e0faa4b6425a3b815292729277b204"
+    },
+    {
+      "relativePath": "samples\\models\\mengerSpongeSquare.png",
+      "bytes": 437802,
+      "sha256": "ebb4e3ffe5d9a909c566cdb4f3d196da2e418de8d3e5b6ca3603a65c97453e3d"
+    },
+    {
+      "relativePath": "samples\\models\\perf.glb",
+      "bytes": 621820,
+      "sha256": "1e271e4f83d2e9d6813d7e12dc487fbe2006733267401d2531cc85d95ca38d6e"
+    },
+    {
+      "relativePath": "samples\\models\\perf.png",
+      "bytes": 611880,
+      "sha256": "d542a9d07e0aa9a3548c2eb1866619fd78b0c30782217fe13161b65dcce6f72d"
+    },
+    {
+      "relativePath": "samples\\models\\perf.webp",
+      "bytes": 47540,
+      "sha256": "22d261f19d5f8979c86146e8ce6a4233cce6ba346c4860ccafacf73b51631f23"
+    },
+    {
+      "relativePath": "samples\\models\\rounding.glb",
+      "bytes": 1020,
+      "sha256": "29d71e7fb78ec5dc9362bcbbc659db533a395456f901e68740d26a915d20d6b4"
+    },
+    {
+      "relativePath": "samples\\models\\rounding.webp",
+      "bytes": 9396,
+      "sha256": "169c8dc93beeadf344c164aab22093db52f4efc9674722eb554c5f610ee22ddb"
+    },
+    {
+      "relativePath": "samples\\models\\scallop.glb",
+      "bytes": 3841452,
+      "sha256": "82c549ded5c9c5b90f96d4b0c60a515ad24d2a72fcf6e8231f61b0f134251f7e"
+    },
+    {
+      "relativePath": "samples\\models\\scallop.png",
+      "bytes": 679093,
+      "sha256": "e4999c09dd351aa69715e8a19a4c986ffd06745f6ebeec77c7fb2f3ad8218121"
+    },
+    {
+      "relativePath": "samples\\models\\scallop.webp",
+      "bytes": 70418,
+      "sha256": "9d65e980bebf99cd78633434dcc2d008d0abe7bdbc2f00f0c39f584c6b7e7d3b"
+    },
+    {
+      "relativePath": "samples\\models\\scallopFacets.glb",
+      "bytes": 8120,
+      "sha256": "b29463291540c34b382d01fed57d0a07034d6d5afcd9f5107b1ea0a5a83b4221"
+    },
+    {
+      "relativePath": "samples\\models\\scallopFacets.webp",
+      "bytes": 50020,
+      "sha256": "75717e0c4b75a0416873f93a719e084c9c3732d1ef1b2f991bda3726307cf44c"
+    },
+    {
+      "relativePath": "samples\\src\\bracelet.cpp",
+      "bytes": 3595,
+      "sha256": "eeff685a0ba2e856f6453da0dcd77e7787668b7e2260ac229e4b215990b20a3b"
+    },
+    {
+      "relativePath": "samples\\src\\condensed_matter.cpp",
+      "bytes": 5950,
+      "sha256": "ca3db8f90860e653673fa072b7b1e98b294e1d6e639eab8357c716539e8aebdf"
+    },
+    {
+      "relativePath": "samples\\src\\gyroid_module.cpp",
+      "bytes": 2075,
+      "sha256": "a3ad5378e46128e033846c8a8b6b1e2bbadd952ec882b6fd64d0b69ecf9fb949"
+    },
+    {
+      "relativePath": "samples\\src\\knot.cpp",
+      "bytes": 3115,
+      "sha256": "8c2ba7cc6e48dd63b9608d6468aa2f41ca14a619dd2967858ec726b0a7ebbf9d"
+    },
+    {
+      "relativePath": "samples\\src\\menger_sponge.cpp",
+      "bytes": 1891,
+      "sha256": "9699e9ef6b37a30b18ab55ac2de5e80fb5f15cf09cbfcb414f59a939f373ea13"
+    },
+    {
+      "relativePath": "samples\\src\\rounded_frame.cpp",
+      "bytes": 1710,
+      "sha256": "df90256a03a7099c4b62f8b709c16c82425d8fff03d034fc02a2b79334bf661e"
+    },
+    {
+      "relativePath": "samples\\src\\scallop.cpp",
+      "bytes": 2185,
+      "sha256": "7ebc3780bd45e72095458cafc3902fa165bb15be55b6ec03a411f471e00348a5"
+    },
+    {
+      "relativePath": "samples\\src\\tet_puzzle.cpp",
+      "bytes": 1663,
+      "sha256": "f3777627f120888b6171e12ea85d6addb921f5575228948eb6e8462bdad5b474"
+    },
+    {
+      "relativePath": "scripts\\compare_artifact.sh",
+      "bytes": 1866,
+      "sha256": "da612a9233cde7baea43cfa4196ec2e64806e13b51c8b897cd928db08b74a646"
+    },
+    {
+      "relativePath": "scripts\\determinism_cases.sh",
+      "bytes": 463,
+      "sha256": "6d5716af36c57a627b706037cb572dc82571923bd346985f2996d0534d89b078"
+    },
+    {
+      "relativePath": "scripts\\export_determinism_meshes.sh",
+      "bytes": 470,
+      "sha256": "7af5daa3a95080295bbb40104e0ced4185849a2759e7f6b892d946bb91aa7639"
+    },
+    {
+      "relativePath": "scripts\\format.sh",
+      "bytes": 986,
+      "sha256": "1e8f2d3d4b5e484b72c3b48fbd2979faeb7e682dbf456db9f11917f6c95559a5"
+    },
+    {
+      "relativePath": "scripts\\gersemi-check.sh",
+      "bytes": 362,
+      "sha256": "7190cffe95d8b689fa669badf87c70609eaacfebc63d8e6dc715ac7c043309c9"
+    },
+    {
+      "relativePath": "scripts\\minimizer.sh",
+      "bytes": 2322,
+      "sha256": "d87d4b7f11ca2c12408449d006328b43e75939f6a9db62d49b251795d82809e2"
+    },
+    {
+      "relativePath": "scripts\\normalize_objs.sh",
+      "bytes": 178,
+      "sha256": "618eeb56ca082b38c587b6fbc127d3c478833e41ead8c5d7e5807076de817320"
+    },
+    {
+      "relativePath": "scripts\\test-cmake-subdir.sh",
+      "bytes": 632,
+      "sha256": "29180df16ee8889dafc915bca09bddae776f92ffbced5b7050c4ffac56dd7bdc"
+    },
+    {
+      "relativePath": "scripts\\test-cmake.sh",
+      "bytes": 588,
+      "sha256": "27b6d21f72b0640c9af362b6810eecdcbb7d5d04d56448d0d9207839bb02f8e9"
+    },
+    {
+      "relativePath": "scripts\\test-pkgconfig.sh",
+      "bytes": 502,
+      "sha256": "a273da683dfe4dfc0a13628a9609529319f14cf6cd6e42b3fbbac7f81fbb01a5"
+    },
+    {
+      "relativePath": "src\\boolean_result.cpp",
+      "bytes": 36444,
+      "sha256": "b04121434ee5627f8180affb94077abbcd765f50a9581d44f9ab8492c17c9a2a"
+    },
+    {
+      "relativePath": "src\\boolean3.cpp",
+      "bytes": 22380,
+      "sha256": "2b9af613a4ac5ab4f4f2885241ec5b9fee2208a417a044e99849cd0cd568a97e"
+    },
+    {
+      "relativePath": "src\\boolean3.h",
+      "bytes": 2617,
+      "sha256": "b0af003ecf1e71453ee11e4862f5b185a001b293f4426cbeeec3eda0cda4a895"
+    },
+    {
+      "relativePath": "src\\CMakeLists.txt",
+      "bytes": 3489,
+      "sha256": "d47b881474b267632d1d11b60c4445c2d57cd7ff8f1d12d3e5f9b2be6a97d66c"
+    },
+    {
+      "relativePath": "src\\collider.h",
+      "bytes": 12448,
+      "sha256": "838d7d1dcfadf0f26f084a49b2dec197344e2c756105d56bc407a94e945b3f7b"
+    },
+    {
+      "relativePath": "src\\constructors.cpp",
+      "bytes": 19981,
+      "sha256": "91ad2b4222f01df20b47968ddc3f7e9210c10021b35fad25e9aed7c837a677ca"
+    },
+    {
+      "relativePath": "src\\csg_tree.cpp",
+      "bytes": 36199,
+      "sha256": "b26c69ab2eef1102138029f7cda9bb813c6057a7e192e30699d941bb681a34e9"
+    },
+    {
+      "relativePath": "src\\csg_tree.h",
+      "bytes": 3941,
+      "sha256": "ebcec03aed52e3a05c7ff2ece61e4e547bcfc194339c88521c77bee58bf9741c"
+    },
+    {
+      "relativePath": "src\\disjoint_sets.h",
+      "bytes": 4397,
+      "sha256": "850b1af57ee36d68a9d93b02438fbe505cecddf8ca5cd1e67e1e957dc9393f84"
+    },
+    {
+      "relativePath": "src\\edge_op.cpp",
+      "bytes": 34859,
+      "sha256": "c18884a2acfc052752d3236a58ce3db3fd5b96e9f9d8fa55db15ee55de5c9025"
+    },
+    {
+      "relativePath": "src\\execution_impl.cpp",
+      "bytes": 5543,
+      "sha256": "cdb9d834a41265db178492ed10fe0129bc084d64b73e0c705e886d63d96a8ce2"
+    },
+    {
+      "relativePath": "src\\execution_impl.h",
+      "bytes": 6321,
+      "sha256": "22ca4de4abc7cbe51ff77a8aaa0e70581f3a8f46461ba770eb05f6b592eca71f"
+    },
+    {
+      "relativePath": "src\\face_op.cpp",
+      "bytes": 17373,
+      "sha256": "81ddb9717147f42c670fcccdbdcec8347373bb5dc10e733173ef71ef515d1f06"
+    },
+    {
+      "relativePath": "src\\hashtable.h",
+      "bytes": 5426,
+      "sha256": "b9124c341f035e621bd9f211338660c6f839264fc2d76a569f2b1de5061ba73c"
+    },
+    {
+      "relativePath": "src\\impl.cpp",
+      "bytes": 33394,
+      "sha256": "fae6eb6ddfcbad4beaa591fd15d2044a518a399f4d5fe2af227f2c3d1392498b"
+    },
+    {
+      "relativePath": "src\\impl.h",
+      "bytes": 26487,
+      "sha256": "edf4959215a7843c861c67b353479c0f9065f124ae4f9363dc2758793ba18a36"
+    },
+    {
+      "relativePath": "src\\iters.h",
+      "bytes": 8518,
+      "sha256": "96721613142b489c4913cc06faf162779ca90a6c5e385faa9429fb55eeb3ad4d"
+    },
+    {
+      "relativePath": "src\\manifold.cpp",
+      "bytes": 44786,
+      "sha256": "c3072a039d66e6771508a960597a98a78738684c4bb6eeb526ca600400a0823b"
+    },
+    {
+      "relativePath": "src\\mesh_fixes.h",
+      "bytes": 2116,
+      "sha256": "5f9303e1086f39a2b58545d0c0a455485e25e9fdbca1d3aa76909f8edf71494b"
+    },
+    {
+      "relativePath": "src\\minkowski.cpp",
+      "bytes": 8133,
+      "sha256": "46fc7cb3d69f158dc9adfea9bf7e52029979e85188df2609f4c049050d871faf"
+    },
+    {
+      "relativePath": "src\\parallel.h",
+      "bytes": 47212,
+      "sha256": "85fc74de9b8b1f4b257eb4b5d505ce4fab2b0a1ebd3b7151d6c6e9aedf2aa603"
+    },
+    {
+      "relativePath": "src\\polygon_internal.h",
+      "bytes": 4165,
+      "sha256": "9617eb390cf43812c0eea111f92b2aa53ae5a814588c3c5e54967e3282e722a4"
+    },
+    {
+      "relativePath": "src\\polygon.cpp",
+      "bytes": 35402,
+      "sha256": "611059c3ff61a2df864eb4b206967d4732b9dd915820e922e9be8e813d303ad7"
+    },
+    {
+      "relativePath": "src\\properties.cpp",
+      "bytes": 15687,
+      "sha256": "2e16cec8cdaba41208dadf7922bd7aaaee9ff20f2e7f07e3349fd5af735a5e66"
+    },
+    {
+      "relativePath": "src\\quickhull.cpp",
+      "bytes": 30621,
+      "sha256": "e7efedb4df05798c6bdc72f508cff58313a2239d779da1118b5da58f8297f755"
+    },
+    {
+      "relativePath": "src\\quickhull.h",
+      "bytes": 9597,
+      "sha256": "ff397d52d17679eb270f0b88f9b2f060ab3cf1de472d31678b2e54bd8ecc5a10"
+    },
+    {
+      "relativePath": "src\\sdf.cpp",
+      "bytes": 22250,
+      "sha256": "d6faea922252b257e94399e5ba2b65e7a39d12c8993e1782b486e1a8940a6246"
+    },
+    {
+      "relativePath": "src\\shared.h",
+      "bytes": 11935,
+      "sha256": "a52dc33041f3c837b6ba0c09bfb4b03732debdb0fc4018c86a25e48d282cb9fe"
+    },
+    {
+      "relativePath": "src\\smoothing.cpp",
+      "bytes": 44694,
+      "sha256": "115e6d1ecb9fbd8b12fc71a4da25e187389c9c79b25295dce578b1b402f197db"
+    },
+    {
+      "relativePath": "src\\sort.cpp",
+      "bytes": 21713,
+      "sha256": "0a568d9c19651698a46a89eff5903bba51debb3e8440d1b17135bc8dea06fae4"
+    },
+    {
+      "relativePath": "src\\subdivision.cpp",
+      "bytes": 31384,
+      "sha256": "d8d32537d2e64e9c60649ffe7d22768f3c32b2feefa8983a18035267a209a533"
+    },
+    {
+      "relativePath": "src\\svd.h",
+      "bytes": 10732,
+      "sha256": "afa69ed18d35d8210afedece8c6a43730ac2edbea1896b44f1ff4b9fa7a491d8"
+    },
+    {
+      "relativePath": "src\\tree2d.cpp",
+      "bytes": 1969,
+      "sha256": "ebfed8c712d0f481964ffafa59a33987df65721b3777967c4036be8006f59769"
+    },
+    {
+      "relativePath": "src\\tree2d.h",
+      "bytes": 2645,
+      "sha256": "80b1741bda162e7fc6f0f7014fd3baecddf8f77823ab2884eecda4f49aa98dba"
+    },
+    {
+      "relativePath": "src\\tri_dist.h",
+      "bytes": 6638,
+      "sha256": "549ebdd4accdb3f4d49671039221f588cf92a293611df6748670576743982ef1"
+    },
+    {
+      "relativePath": "src\\utils.h",
+      "bytes": 4701,
+      "sha256": "44a3872882c2977f703e191c489d050f4ad9e0cb2254609b9693008baa9b2743"
+    },
+    {
+      "relativePath": "src\\vec.h",
+      "bytes": 11007,
+      "sha256": "f274c9b7052cf39310ab65ba9643a9e8d8c5d8f680acedd6797a0f458fb6320b"
+    },
+    {
+      "relativePath": "src\\cross_section\\cross_section_boolean2.cpp",
+      "bytes": 5732,
+      "sha256": "243d0d876af7a4525e675bf1daae1bf0b93385cf5465cda9f252326119b7e742"
+    },
+    {
+      "relativePath": "src\\cross_section\\cross_section.cpp",
+      "bytes": 24975,
+      "sha256": "47a7b03fe85564ced8ae940e96249e3942dc6afbfcc7f083bd55efd7e631563b"
+    },
+    {
+      "relativePath": "test\\boolean_complex_test.cpp",
+      "bytes": 64190,
+      "sha256": "99024da6baa94f4648bc5ab149988f4113c5385a35faba96d4919f466a31f263"
+    },
+    {
+      "relativePath": "test\\boolean_test.cpp",
+      "bytes": 35188,
+      "sha256": "cb0b28d7c0f4fad64f26db444944ab69d27775b9e7cd9ac7faa854da72c7fc92"
+    },
+    {
+      "relativePath": "test\\CMakeLists.txt",
+      "bytes": 2388,
+      "sha256": "9f07c978cc83bd802ed8be868293d1d38addbeeabf0880c98b59c597d668dbce"
+    },
+    {
+      "relativePath": "test\\context_test.cpp",
+      "bytes": 44940,
+      "sha256": "58d111539e6e2e6b8ef2152efd354ddb981908349fa4f05bb232a702c8daa9ee"
+    },
+    {
+      "relativePath": "test\\cross_section_test.cpp",
+      "bytes": 8796,
+      "sha256": "3ed09bb4728278a51a3f3c7e11a28757016605fe1d8c421e1041bb76eb387b9c"
+    },
+    {
+      "relativePath": "test\\hull_test.cpp",
+      "bytes": 9286,
+      "sha256": "c5d10f4786ed3eecde9594fde2ce17f2d4a1fbf08a93d4408125431c7d21564c"
+    },
+    {
+      "relativePath": "test\\manifold_fuzz.cpp",
+      "bytes": 3273,
+      "sha256": "9dab0a1a0d5614866c46fbf9763faaef816dd48e4e63454f5d1026e3ce64a17b"
+    },
+    {
+      "relativePath": "test\\manifold_test.cpp",
+      "bytes": 68831,
+      "sha256": "c83d1100677dbe194ad336a6ba7d5371cc4ad0f4d23f312feacc0cd53ac7ef7b"
+    },
+    {
+      "relativePath": "test\\manifoldc_test.cpp",
+      "bytes": 30189,
+      "sha256": "3008fb5ae2402b74eefa6ab9a4b26535da300f38b060b2713ba70c71e54b197f"
+    },
+    {
+      "relativePath": "test\\measurement_test.cpp",
+      "bytes": 8040,
+      "sha256": "c3a9dd7b91f71368a4be5f744cc8de03ce714fe023f54badb2a2b3386184e76c"
+    },
+    {
+      "relativePath": "test\\polygon_fuzz.cpp",
+      "bytes": 4453,
+      "sha256": "dc1521624f9fef4aaae3eb3fcbc9e2efda882f1a64bcb4d6825234ce40fe6fa3"
+    },
+    {
+      "relativePath": "test\\polygon_test.cpp",
+      "bytes": 4216,
+      "sha256": "6acd363de17befadaff643808410ceb9bd1cf6acbdfec8d5e5fd27379231b18e"
+    },
+    {
+      "relativePath": "test\\properties_test.cpp",
+      "bytes": 7192,
+      "sha256": "415643d7bb59b0878bdaa819295502c9cbf3dead75de3ce24b3ed30015930f07"
+    },
+    {
+      "relativePath": "test\\samples_test.cpp",
+      "bytes": 8601,
+      "sha256": "7ac042775bf9f5498bb0a2790bf5ce9d0545b7c57164f671d6e8415af0e64f0b"
+    },
+    {
+      "relativePath": "test\\sdf_test.cpp",
+      "bytes": 7121,
+      "sha256": "e50775fa3b9cff77e26008290a9ea7cda48468360e11bc0eb26bfc80ec3300ba"
+    },
+    {
+      "relativePath": "test\\smooth_test.cpp",
+      "bytes": 16423,
+      "sha256": "78dcca36b8aabcb001b4ab737c8ef7a2a30e54e30dcbcd46d1eb5e5f88822d45"
+    },
+    {
+      "relativePath": "test\\test_main.cpp",
+      "bytes": 18896,
+      "sha256": "75a733578e339b887f7dc2f173f1cd68990f9f73553dc103c9ec0a1a26c81e02"
+    },
+    {
+      "relativePath": "test\\test.h",
+      "bytes": 2111,
+      "sha256": "c5bbb3e83ca50a697f22b9419f371c1193794dc1b252d60cb2a9ae515101871a"
+    },
+    {
+      "relativePath": "test\\models\\Cray_left.obj",
+      "bytes": 30456,
+      "sha256": "4276e824ed0e6c5e776357561adfae51b650f961dbfcb3be4c42567191e7a607"
+    },
+    {
+      "relativePath": "test\\models\\Cray_right.obj",
+      "bytes": 1516,
+      "sha256": "064af131332e0713eed0c712d822321d65da281c8c53f67aec6fff7557fba1e6"
+    },
+    {
+      "relativePath": "test\\models\\Generic_Twin_7081.1.t0_left.obj",
+      "bytes": 1112136,
+      "sha256": "378c4ee0ed86465d8d6c5d2439b44bdd1ff21b066bedd029411662de713a5bef"
+    },
+    {
+      "relativePath": "test\\models\\Generic_Twin_7081.1.t0_right.obj",
+      "bytes": 645926,
+      "sha256": "743cbdbf63e7cd08177b90764925d356984f9407cb6e6a2c685f5e7b6cdc43f0"
+    },
+    {
+      "relativePath": "test\\models\\Generic_Twin_7863.1.t0_left.obj",
+      "bytes": 11123,
+      "sha256": "cdc87c0d0a01aea1abf46dbb733d71740a92a44290e02c4dc74ef111dda74b22"
+    },
+    {
+      "relativePath": "test\\models\\Generic_Twin_7863.1.t0_right.obj",
+      "bytes": 12815,
+      "sha256": "7e6799c29481e8871f6bda3c392fcad584f1f53097c027097284224fb2c3f12d"
+    },
+    {
+      "relativePath": "test\\models\\Havocglass8_left.obj",
+      "bytes": 8394,
+      "sha256": "d615109be824305941058a3c6ace90a01ad179c081c136e8a4f37ede5950bb6d"
+    },
+    {
+      "relativePath": "test\\models\\Havocglass8_right.obj",
+      "bytes": 812,
+      "sha256": "3427f4cb99565ad8b89e3dec05944cb13b3286eca021cd8ff578dc56aad0e955"
+    },
+    {
+      "relativePath": "test\\models\\hull-body.obj",
+      "bytes": 283769,
+      "sha256": "a7f2cdaa5bcf97f0a6c9e7b8de46b653955e7af4e95bab0f576608881ebf9f26"
+    },
+    {
+      "relativePath": "test\\models\\hull-mask.obj",
+      "bytes": 415821,
+      "sha256": "9b40b7fda026c2b08e82b57df2dbc8460e35582720cf44a6b563d594d64ef513"
+    },
+    {
+      "relativePath": "test\\models\\Offset1.obj",
+      "bytes": 199313,
+      "sha256": "e46b6e4f47e6b7f80eaf87cc0298674403e07136b19086f36af0bb98841bb997"
+    },
+    {
+      "relativePath": "test\\models\\Offset2.obj",
+      "bytes": 53192,
+      "sha256": "eacbd24925a91811e6e296bceaea14b4d8fdc93323674d3fb8c3e16ea9017fe3"
+    },
+    {
+      "relativePath": "test\\models\\Offset3.obj",
+      "bytes": 2242,
+      "sha256": "ca13ac6d4154725116886999d576ce22c164e55a3fccb645ef71e17b0871e8a6"
+    },
+    {
+      "relativePath": "test\\models\\Offset4.obj",
+      "bytes": 2760,
+      "sha256": "c894fd2ca43a8cc0ce259cc2473c7062efc59dd7217603a91c1b7d897e0264c3"
+    },
+    {
+      "relativePath": "test\\models\\openscad-nonmanifold-crash.obj",
+      "bytes": 72429,
+      "sha256": "497bd6df29f4c6fd4f3e85f72c31d88e95f01eb11ff1ec51b674e5b459fafcea"
+    },
+    {
+      "relativePath": "test\\models\\self_intersectA.obj",
+      "bytes": 873958,
+      "sha256": "924331ec4fb079dc9250d1f656b47d97c049162a5a049b76381c36559edb36f3"
+    },
+    {
+      "relativePath": "test\\models\\self_intersectB.obj",
+      "bytes": 878051,
+      "sha256": "8861af4b7d694f3c4c85c9f083ac105a9b37f4b55f231f3559f8c91827acdf4e"
+    },
+    {
+      "relativePath": "test\\polygons\\polygon_corpus.txt",
+      "bytes": 44279,
+      "sha256": "69b9709fb8608b827aedbf0c0afbe13e04364c84e1cb626385c7899a7bdac509"
+    },
+    {
+      "relativePath": "test\\polygons\\sponge.txt",
+      "bytes": 56202,
+      "sha256": "d019f0c8582b1bbc677898d158f33644389bcb111cddaf0e4d26c12d48f8b39f"
+    },
+    {
+      "relativePath": "test\\polygons\\zebra.txt",
+      "bytes": 1370491,
+      "sha256": "b2b1593642b060d81b633e1734b821d5622764f6e4a2e8aec5e3bca875cfa5bd"
+    },
+    {
+      "relativePath": "test\\polygons\\zebra3.txt",
+      "bytes": 1453023,
+      "sha256": "9c2a4151e7740001bbfe0e243434ff9779e9e752fa8fea2b803523f3102a314d"
+    }
+  ]
+}

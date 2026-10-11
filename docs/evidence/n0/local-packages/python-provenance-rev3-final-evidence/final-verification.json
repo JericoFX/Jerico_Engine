@@ -1,0 +1,68 @@
+{
+  "source_freeze_sha256": "57ea7b94efedb0b0d82dd9b8cc3db5cac86606c2ab9d9a861c173846f7141359",
+  "freeze_count": 11,
+  "freeze_mismatches": 0,
+  "package_archive": {
+    "bytes": 22351228,
+    "sha256": "12e9eb0ec73bb28a683b250a1d702bad06c963dc8d4c9f4823b8d54871599917"
+  },
+  "package_integrity_summary": {
+    "tar_entries": 3283,
+    "links": 0,
+    "unsafe_paths": 0,
+    "extracted_files": 3283,
+    "extracted_bytes": 105032178.0,
+    "hashes_verified": 3282,
+    "hash_failures": 0,
+    "manifest_mismatches": 0,
+    "provenance": {
+      "adaptation": "Skip Git queries and git-file reads only when all three explicit provenance values exist",
+      "gitBranch": "archive",
+      "gitTag": "cpython-3.10.13-archive",
+      "gitVersion": "49965601d6afedafe47cc85556d99b7a24981051",
+      "patchedSha256": "07f99462cf6a9aa667ad802a3f7285e640ab78b3233fcb7cc243eacf2f0b3a45",
+      "project": "PCbuild/pythoncore.vcxproj",
+      "upstreamSha256": "e7ff6ea2427ffe0c24605b5fa46cd09af5d55e536c47187c8dcc803dd5178b2a"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "python/python.exe",
+      "bytes": 91648,
+      "sha256": "6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e"
+    },
+    {
+      "path": "python/python310.dll",
+      "bytes": 4983296,
+      "sha256": "40e62c978cf9950cb011ced25da11a28d2523550f23ad3e7fa8f665642f801fa"
+    },
+    {
+      "path": "python/python3.dll",
+      "bytes": 54784,
+      "sha256": "18bfcf04a4e32a333f6b89b0431d40a90521601db7c4d32bb7825f90dc132cb8"
+    },
+    {
+      "path": "python/python310_d.dll",
+      "bytes": 10192384,
+      "sha256": "3d6a47af26694170954923bd09ff7e222331da7ce740048cc60e8b2802ac795c"
+    },
+    {
+      "path": "python/python3_d.dll",
+      "bytes": 68608,
+      "sha256": "a607efe33ab3c2e6e046a8671461592cf089442fd9b0b0853fd47186ca5a8eb8"
+    },
+    {
+      "path": "python/libs/python310.lib",
+      "bytes": 356438,
+      "sha256": "86f83cd3db11d40648cdb5282dda59744cd2c2f68f0fc0e9a03771509913132b"
+    },
+    {
+      "path": "python/libs/python310_d.lib",
+      "bytes": 360766,
+      "sha256": "61df1fb8c064073e0f05cc9ab2cbf59b407658cc49c359a8b2a46fb5ff66a329"
+    }
+  ],
+  "process_peak_memory": "not measured: producer process exited before peak counters were captured",
+  "producer_immutable_input_snapshots_match": true,
+  "producer_source_and_external_snapshot_checks_match": true
+}

@@ -1,0 +1,9 @@
+{
+  "status": "configure-not-launched",
+  "harness": "run-root-configure-v2.ps1",
+  "error": "PowerShell preflight tried to read clipper2-original-before.json; actual preflight manifest stem was clipper-original-before.json.",
+  "errorLine": 112,
+  "nativeCmakeInvocations": 0,
+  "preservedPartialManifests": true,
+  "disposition": "Harness naming corrected; next capture uses a fresh attempt2 subdirectory and does not overwrite partial evidence."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "patch-ambiguous",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0282386,
+  "diagnostic_found": true,
+  "expected_diagnostic": "ambiguous patch hunk: loadlib Windows error",
+  "loadlib_sha_before": "68AE702781E03059BEB966F386780B45867CCA24FAFA8C23F55E3E5B3071D4A7",
+  "loadlib_sha_after": "68AE702781E03059BEB966F386780B45867CCA24FAFA8C23F55E3E5B3071D4A7",
+  "loslib_sha_before": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+  "loslib_sha_after": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+  "both_work_files_unchanged": true
+}

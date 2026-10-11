@@ -1,0 +1,943 @@
+{
+  "package_info": {
+    "license": "BSD-3-Clause AND BSD-2-Clause AND MIT",
+    "name": "zstd-1.3.5-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "90ae50224d15e8dbcb9fa26b9be096366733db8e",
+      "sha256": "dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+      "url": "https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e"
+    },
+    "version": "1.3.5"
+  },
+  "recipe": {
+    "sourceVersion": "1.3.5",
+    "toolset": "v143",
+    "generator": "Visual Studio 17 2022",
+    "architecture": "x64",
+    "configuration": "Release",
+    "runtimeLibrary": "MultiThreadedDLL",
+    "legacySupport": 4,
+    "multithread": true,
+    "static": true,
+    "shared": false,
+    "programs": false,
+    "tests": false,
+    "contrib": false,
+    "policyCompatibilityMinimum": "3.5",
+    "historicalBinaryCompatibility": "not asserted"
+  },
+  "archive_sha256": "672edc4a41e31c6f45675b84a314cf1a31caa75428c543ea67a27253d9588793",
+  "sidecar_valid": true,
+  "tar_entry_count": 83,
+  "tar_links": 0,
+  "tar_unsafe_paths": 0,
+  "checksum_entries": 82,
+  "checksum_verified": 82,
+  "checksum_failures": [],
+  "unhashed_files": [],
+  "unexpected_manifest_paths": [],
+  "files": [
+    {
+      "path": "Findzstd.cmake",
+      "expected": "19f953303b4e0729ffb0e25b25b5ba3ced475961a7301c7497df275f42283d07",
+      "actual": "19f953303b4e0729ffb0e25b25b5ba3ced475961a7301c7497df275f42283d07",
+      "match": true,
+      "bytes": 2468
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "match": true,
+      "bytes": 1982
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "expected": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "actual": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "match": true,
+      "bytes": 1502
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "expected": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "actual": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "match": true,
+      "bytes": 11557
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "expected": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "actual": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "match": true,
+      "bytes": 1074
+    },
+    {
+      "path": "LICENSES/Zstd/COPYING",
+      "expected": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "actual": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505",
+      "match": true,
+      "bytes": 18091
+    },
+    {
+      "path": "LICENSES/Zstd/LICENSE",
+      "expected": "2c1a7fa704df8f3a606f6fc010b8b5aaebf403f3aeec339a12048f1ba7331a0b",
+      "actual": "2c1a7fa704df8f3a606f6fc010b8b5aaebf403f3aeec339a12048f1ba7331a0b",
+      "match": true,
+      "bytes": 1530
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/bitstream.h",
+      "expected": "929327d795476051cd9d9a10b11fac0609842905506128a1d81255ed357f8a26",
+      "actual": "929327d795476051cd9d9a10b11fac0609842905506128a1d81255ed357f8a26",
+      "match": true,
+      "bytes": 18204
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/compiler.h",
+      "expected": "c1d94e3ad94f3077a25794c37ec3adf81b5bcee1ad53aa7dd0d5008ef8407714",
+      "actual": "c1d94e3ad94f3077a25794c37ec3adf81b5bcee1ad53aa7dd0d5008ef8407714",
+      "match": true,
+      "bytes": 3919
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/cpu.h",
+      "expected": "e20286346f7e87033c04acf6a833d70d84760d64c1fbb528a42d2139bffc0794",
+      "actual": "e20286346f7e87033c04acf6a833d70d84760d64c1fbb528a42d2139bffc0794",
+      "match": true,
+      "bytes": 4432
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/debug.c",
+      "expected": "3a585aec8951b83a572590f75506f249e9c7ed5063928719b11d097bb09462c2",
+      "actual": "3a585aec8951b83a572590f75506f249e9c7ed5063928719b11d097bb09462c2",
+      "match": true,
+      "bytes": 1912
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/debug.h",
+      "expected": "25f85351d6d3ec7551a397fd3e97e1c2bef91264be45fadc40e91befa46d01f0",
+      "actual": "25f85351d6d3ec7551a397fd3e97e1c2bef91264be45fadc40e91befa46d01f0",
+      "match": true,
+      "bytes": 4689
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/entropy_common.c",
+      "expected": "b940c4313dd2436a63ed873126fb68e25a14033af38d7b66d401e14ee385d7cc",
+      "actual": "b940c4313dd2436a63ed873126fb68e25a14033af38d7b66d401e14ee385d7cc",
+      "match": true,
+      "bytes": 9554
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/error_private.c",
+      "expected": "167a51cf71477b55cd41282a3f7c0c7ca930fa8eed83dfeca2f01e90953de875",
+      "actual": "167a51cf71477b55cd41282a3f7c0c7ca930fa8eed83dfeca2f01e90953de875",
+      "match": true,
+      "bytes": 2695
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/error_private.h",
+      "expected": "435424ae6cd318f20b73ee17e6fd4b03540b9c338d204485fda40e3efcf78c4b",
+      "actual": "435424ae6cd318f20b73ee17e6fd4b03540b9c338d204485fda40e3efcf78c4b",
+      "match": true,
+      "bytes": 2305
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/fse.h",
+      "expected": "59b996613b045b6bc2a512abdd82e78ab41ec5063e048c6671653aa7be769ee8",
+      "actual": "59b996613b045b6bc2a512abdd82e78ab41ec5063e048c6671653aa7be769ee8",
+      "match": true,
+      "bytes": 32982
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/fse_decompress.c",
+      "expected": "70ee245827e72d7e94f67d14403e376446a81177e9c3ce1f9d59a1459acfc343",
+      "actual": "70ee245827e72d7e94f67d14403e376446a81177e9c3ce1f9d59a1459acfc343",
+      "match": true,
+      "bytes": 11179
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/huf.h",
+      "expected": "7092f4e1b28a1825436bbf93efcefa4b1244db2a35aa1f044edc3a59f192cd44",
+      "actual": "7092f4e1b28a1825436bbf93efcefa4b1244db2a35aa1f044edc3a59f192cd44",
+      "match": true,
+      "bytes": 19479
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/mem.h",
+      "expected": "b400f3d413336dfc20a11968fc95807183e2b2d233d491badf533cb88756c668",
+      "actual": "b400f3d413336dfc20a11968fc95807183e2b2d233d491badf533cb88756c668",
+      "match": true,
+      "bytes": 11394
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/pool.c",
+      "expected": "8656db50dda183090c782c1bf263440bd0fc71e4a9c80e5a5127399acdb94196",
+      "actual": "8656db50dda183090c782c1bf263440bd0fc71e4a9c80e5a5127399acdb94196",
+      "match": true,
+      "bytes": 10951
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/pool.h",
+      "expected": "ffa4e69225f955664ad33cbdf7b08a706661a0a5f7d3f32f22da2cfa58ed4172",
+      "actual": "ffa4e69225f955664ad33cbdf7b08a706661a0a5f7d3f32f22da2cfa58ed4172",
+      "match": true,
+      "bytes": 2544
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/threading.c",
+      "expected": "09d256e54671a42ee813bf2fc58e659021e701a8841dc424590028ae2481d249",
+      "actual": "09d256e54671a42ee813bf2fc58e659021e701a8841dc424590028ae2481d249",
+      "match": true,
+      "bytes": 1839
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/threading.h",
+      "expected": "9822983f6f64580afd64c9e113998902f587f7e27e02039100b4be5ad69c7055",
+      "actual": "9822983f6f64580afd64c9e113998902f587f7e27e02039100b4be5ad69c7055",
+      "match": true,
+      "bytes": 4049
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/xxhash.c",
+      "expected": "0fcc6c9db86d368f7984e4fa49771f9f3d483ccc9f4b58796c40498747ffd182",
+      "actual": "0fcc6c9db86d368f7984e4fa49771f9f3d483ccc9f4b58796c40498747ffd182",
+      "match": true,
+      "bytes": 28905
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/xxhash.h",
+      "expected": "6107aa2aa3fae5a32e347251220391bb751af0f1a38e4d8cded0860a9187dee3",
+      "actual": "6107aa2aa3fae5a32e347251220391bb751af0f1a38e4d8cded0860a9187dee3",
+      "match": true,
+      "bytes": 12781
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/zstd_common.c",
+      "expected": "f9f1ee5714f4c4d95e3e2c27b8dbd403ed5b44d23c8a6aa6322bb51f5a09b857",
+      "actual": "f9f1ee5714f4c4d95e3e2c27b8dbd403ed5b44d23c8a6aa6322bb51f5a09b857",
+      "match": true,
+      "bytes": 2570
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/zstd_errors.h",
+      "expected": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9",
+      "actual": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9",
+      "match": true,
+      "bytes": 3715
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/zstd_internal.h",
+      "expected": "6826e8dbb940b76d78c31b61f2597960853815e2a06d2ef1201755dc9ebaf231",
+      "actual": "6826e8dbb940b76d78c31b61f2597960853815e2a06d2ef1201755dc9ebaf231",
+      "match": true,
+      "bytes": 9202
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/fse_compress.c",
+      "expected": "424a9ba7d2439da30891ebe76272be1b146a1d8e63052ecee6f62ce07744b08d",
+      "actual": "424a9ba7d2439da30891ebe76272be1b146a1d8e63052ecee6f62ce07744b08d",
+      "match": true,
+      "bytes": 27523
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/hist.c",
+      "expected": "6bb09dec37948ca953277d9dd29fe8b8ed426071f683fbbc90bcced2e5c811df",
+      "actual": "6bb09dec37948ca953277d9dd29fe8b8ed426071f683fbbc90bcced2e5c811df",
+      "match": true,
+      "bytes": 7926
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/hist.h",
+      "expected": "64b7335f31d9ac3611965693e372b42375e8729502bdf153ac2674a72be65363",
+      "actual": "64b7335f31d9ac3611965693e372b42375e8729502bdf153ac2674a72be65363",
+      "match": true,
+      "bytes": 4327
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/huf_compress.c",
+      "expected": "0c7a99c5ac433ebafac5567d657a90f89b36342105ac451ea08f76e32d4ee3aa",
+      "actual": "0c7a99c5ac433ebafac5567d657a90f89b36342105ac451ea08f76e32d4ee3aa",
+      "match": true,
+      "bytes": 32593
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_compress.c",
+      "expected": "4e85f3b10ee2f8c24aa536acbc3bb619c768562eab39920e344e57df32862ff9",
+      "actual": "4e85f3b10ee2f8c24aa536acbc3bb619c768562eab39920e344e57df32862ff9",
+      "match": true,
+      "bytes": 172122
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_compress_internal.h",
+      "expected": "024a72b519397e9670eb34a1fcc75089011ca4a4fceb4e9a4ad0aca370734dd9",
+      "actual": "024a72b519397e9670eb34a1fcc75089011ca4a4fceb4e9a4ad0aca370734dd9",
+      "match": true,
+      "bytes": 32665
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_double_fast.c",
+      "expected": "9e66160843c232a3d8bfd875787c57f57c9056991a389561fc29674e011f6517",
+      "actual": "9e66160843c232a3d8bfd875787c57f57c9056991a389561fc29674e011f6517",
+      "match": true,
+      "bytes": 23242
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_double_fast.h",
+      "expected": "c929378e7d25ea30a14849a0b44f4afaf0fbe2b7c3685d806163301dd6a902a8",
+      "actual": "c929378e7d25ea30a14849a0b44f4afaf0fbe2b7c3685d806163301dd6a902a8",
+      "match": true,
+      "bytes": 1485
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_fast.c",
+      "expected": "7ed776ce39f62effa762d420c0f2a1ae4e879d9b6f36699c04a72ccb1313ed27",
+      "actual": "7ed776ce39f62effa762d420c0f2a1ae4e879d9b6f36699c04a72ccb1313ed27",
+      "match": true,
+      "bytes": 17705
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_fast.h",
+      "expected": "a353356ea61d125a766c2c699e317e05a14151694c136f913d5aea4a7e69ea26",
+      "actual": "a353356ea61d125a766c2c699e317e05a14151694c136f913d5aea4a7e69ea26",
+      "match": true,
+      "bytes": 1399
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_lazy.c",
+      "expected": "78be4e072434f02689855b86380cd26cdaf3b03511e34892e2f9847b174a946c",
+      "actual": "78be4e072434f02689855b86380cd26cdaf3b03511e34892e2f9847b174a946c",
+      "match": true,
+      "bytes": 51196
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_lazy.h",
+      "expected": "061c9a2810cefb6679968a3784d84e3732091776a4851931c5fc8e6631693426",
+      "actual": "061c9a2810cefb6679968a3784d84e3732091776a4851931c5fc8e6631693426",
+      "match": true,
+      "bytes": 3322
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_ldm.c",
+      "expected": "8b492bc35789735877c7c7543fe44ea3604e7c2d4a338240c57ea64783073420",
+      "actual": "8b492bc35789735877c7c7543fe44ea3604e7c2d4a338240c57ea64783073420",
+      "match": true,
+      "bytes": 25303
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_ldm.h",
+      "expected": "956d3a3fb23c60ed3b7f6eb8913a37c57734b4ebc4454811c9661ebca8d07cd9",
+      "actual": "956d3a3fb23c60ed3b7f6eb8913a37c57734b4ebc4454811c9661ebca8d07cd9",
+      "match": true,
+      "bytes": 4026
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_opt.c",
+      "expected": "9f7735a9a11fc349e827db5f80e1866e70a578cb781465c83a2bf95ca07bbd57",
+      "actual": "9f7735a9a11fc349e827db5f80e1866e70a578cb781465c83a2bf95ca07bbd57",
+      "match": true,
+      "bytes": 52597
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_opt.h",
+      "expected": "431036676b5717127ac11970e06160a5d5a7312c63e2cdbe54754c4e280bcc6e",
+      "actual": "431036676b5717127ac11970e06160a5d5a7312c63e2cdbe54754c4e280bcc6e",
+      "match": true,
+      "bytes": 1975
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstdmt_compress.c",
+      "expected": "050ed9e6bd748f2d6a6a55ef3cf7e22b466920d71f53642fe058b38c4f75f17f",
+      "actual": "050ed9e6bd748f2d6a6a55ef3cf7e22b466920d71f53642fe058b38c4f75f17f",
+      "match": true,
+      "bytes": 83744
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstdmt_compress.h",
+      "expected": "47fb2123aa4de3cb753736da6a4f058b1000cc0a7275f50407106ceda3921cf5",
+      "actual": "47fb2123aa4de3cb753736da6a4f058b1000cc0a7275f50407106ceda3921cf5",
+      "match": true,
+      "bytes": 7677
+    },
+    {
+      "path": "LICENSES/Zstd/library/decompress/huf_decompress.c",
+      "expected": "de5437c86bab2626e953c52d932647b0e6f0cdd44b4f34c082c7d2f827c59bbb",
+      "actual": "de5437c86bab2626e953c52d932647b0e6f0cdd44b4f34c082c7d2f827c59bbb",
+      "match": true,
+      "bytes": 45802
+    },
+    {
+      "path": "LICENSES/Zstd/library/decompress/zstd_decompress.c",
+      "expected": "e5227741e7b0ed85f36cfe5c8027359aa6288f4b1566a28344e837df21a3d1ed",
+      "actual": "e5227741e7b0ed85f36cfe5c8027359aa6288f4b1566a28344e837df21a3d1ed",
+      "match": true,
+      "bytes": 126555
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff.h",
+      "expected": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f",
+      "actual": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f",
+      "match": true,
+      "bytes": 11474
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff_common.c",
+      "expected": "05c6608ce90d05d994e3def91cd76580ff1817f33998da4b0203085f246a4972",
+      "actual": "05c6608ce90d05d994e3def91cd76580ff1817f33998da4b0203085f246a4972",
+      "match": true,
+      "bytes": 1003
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff_compress.c",
+      "expected": "a04fa0619cf8c4a7a9b105870a339b9b383f5d6f043ff0ab20cf61274815191d",
+      "actual": "a04fa0619cf8c4a7a9b105870a339b9b383f5d6f043ff0ab20cf61274815191d",
+      "match": true,
+      "bytes": 5334
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff_decompress.c",
+      "expected": "302bf698ab50148a76631aaef83fbaf8da74c803cffa32e20a12a1b0d0ded26a",
+      "actual": "302bf698ab50148a76631aaef83fbaf8da74c803cffa32e20a12a1b0d0ded26a",
+      "match": true,
+      "bytes": 1919
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/cover.c",
+      "expected": "3601bc1c39adb9b7fae218b1ce8ce88041fcb300808cdb3586d1ff8ec807e71b",
+      "actual": "3601bc1c39adb9b7fae218b1ce8ce88041fcb300808cdb3586d1ff8ec807e71b",
+      "match": true,
+      "bytes": 34267
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/divsufsort.c",
+      "expected": "c6aab9652b409968baf5b063419d666467965c46a469f6b163b5b2d74df99da5",
+      "actual": "c6aab9652b409968baf5b063419d666467965c46a469f6b163b5b2d74df99da5",
+      "match": true,
+      "bytes": 54592
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/divsufsort.h",
+      "expected": "f8312544f98feb695e611c68d5191b5ae5302e01a3613e2a6f8e6cd365dd3b2d",
+      "actual": "f8312544f98feb695e611c68d5191b5ae5302e01a3613e2a6f8e6cd365dd3b2d",
+      "match": true,
+      "bytes": 2419
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/zdict.c",
+      "expected": "d8db92a14c09ec04dcad5799ee7be9a829b025a1be7bed581eb24ea1ef6358b3",
+      "actual": "d8db92a14c09ec04dcad5799ee7be9a829b025a1be7bed581eb24ea1ef6358b3",
+      "match": true,
+      "bytes": 43582
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/zdict.h",
+      "expected": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1",
+      "actual": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1",
+      "match": true,
+      "bytes": 11175
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_legacy.h",
+      "expected": "96507dd27961f48ac03304f948d110f8c79f548f5c22518ea25fcae7265a3d8f",
+      "actual": "96507dd27961f48ac03304f948d110f8c79f548f5c22518ea25fcae7265a3d8f",
+      "match": true,
+      "bytes": 12579
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v01.c",
+      "expected": "419bda7aef103af8f42f1ac3024e6a7146f31dec0171c1a3e5e4409e83a6cf9c",
+      "actual": "419bda7aef103af8f42f1ac3024e6a7146f31dec0171c1a3e5e4409e83a6cf9c",
+      "match": true,
+      "bytes": 70278
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v01.h",
+      "expected": "68c0bb7e088910d39deafc5dcf629e0e8c30cea38d3ff9a4af9728a87c7ca91b",
+      "actual": "68c0bb7e088910d39deafc5dcf629e0e8c30cea38d3ff9a4af9728a87c7ca91b",
+      "match": true,
+      "bytes": 3432
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v02.c",
+      "expected": "7d703b4b43759eb011b7b680e460892dc634729cb168a9219d7e824b0bc4c795",
+      "actual": "7d703b4b43759eb011b7b680e460892dc634729cb168a9219d7e824b0bc4c795",
+      "match": true,
+      "bytes": 127088
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v02.h",
+      "expected": "fba15b30b8bdbded1e9a92e06c71c4da289d78156bda77d20dc067a7091da5ba",
+      "actual": "fba15b30b8bdbded1e9a92e06c71c4da289d78156bda77d20dc067a7091da5ba",
+      "match": true,
+      "bytes": 3342
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v03.c",
+      "expected": "55b54f5aed9d3bbe924a1f01ee98659ccd383e58f0d0c4ac961d9750796f7f0c",
+      "actual": "55b54f5aed9d3bbe924a1f01ee98659ccd383e58f0d0c4ac961d9750796f7f0c",
+      "match": true,
+      "bytes": 113189
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v03.h",
+      "expected": "41dc45ea5a6e901e358ab9cfdea3aa008d91cb80597db28b10c1a183891fb285",
+      "actual": "41dc45ea5a6e901e358ab9cfdea3aa008d91cb80597db28b10c1a183891fb285",
+      "match": true,
+      "bytes": 3352
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v04.c",
+      "expected": "bb7b9728a0abdd70db74fa278497878951f339173f959963182a634c90dbeee2",
+      "actual": "bb7b9728a0abdd70db74fa278497878951f339173f959963182a634c90dbeee2",
+      "match": true,
+      "bytes": 134834
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v04.h",
+      "expected": "03fd1948e6e3b2c7a41933898ec2d3a747d06022b98dc05a045a202fc54acbb1",
+      "actual": "03fd1948e6e3b2c7a41933898ec2d3a747d06022b98dc05a045a202fc54acbb1",
+      "match": true,
+      "bytes": 6070
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v05.c",
+      "expected": "f5987302f6820db768df90dac9af01804258f084e2b466a4ebe3be4736be19f5",
+      "actual": "f5987302f6820db768df90dac9af01804258f084e2b466a4ebe3be4736be19f5",
+      "match": true,
+      "bytes": 155065
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v05.h",
+      "expected": "e6d204b41dde3f67358f6f29fb9e2455efa447ccd163cb51fc49eabc2fe37830",
+      "actual": "e6d204b41dde3f67358f6f29fb9e2455efa447ccd163cb51fc49eabc2fe37830",
+      "match": true,
+      "bytes": 7131
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v06.c",
+      "expected": "ad3a7e8a3dd6d1d61d9148a0000bf1f0ea5a804a8ace7b5fe55b1cbf768470cc",
+      "actual": "ad3a7e8a3dd6d1d61d9148a0000bf1f0ea5a804a8ace7b5fe55b1cbf768470cc",
+      "match": true,
+      "bytes": 165199
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v06.h",
+      "expected": "992e1138577480410ef2a1b3d8157d532ce706f7572e19ce274f6aad0c19d28c",
+      "actual": "992e1138577480410ef2a1b3d8157d532ce706f7572e19ce274f6aad0c19d28c",
+      "match": true,
+      "bytes": 7687
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v07.c",
+      "expected": "22796690ed15429478d68502554bca92b8364cda64b244a4fe08cc5c18223b30",
+      "actual": "22796690ed15429478d68502554bca92b8364cda64b244a4fe08cc5c18223b30",
+      "match": true,
+      "bytes": 184041
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v07.h",
+      "expected": "b204614a90a5dfb5fc4b15e0d89388aacc8420e6e6b62a42265bb810d321a6f7",
+      "actual": "b204614a90a5dfb5fc4b15e0d89388aacc8420e6e6b62a42265bb810d321a6f7",
+      "match": true,
+      "bytes": 8330
+    },
+    {
+      "path": "LICENSES/Zstd/library/zstd.h",
+      "expected": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738",
+      "actual": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738",
+      "match": true,
+      "bytes": 90830
+    },
+    {
+      "path": "NOTICE.txt",
+      "expected": "1fad21a396b2042f2fabafbb7b9c21e1fe96590520a1cee44dcd36158d94518d",
+      "actual": "1fad21a396b2042f2fabafbb7b9c21e1fe96590520a1cee44dcd36158d94518d",
+      "match": true,
+      "bytes": 1929
+    },
+    {
+      "path": "PackageInfo.json",
+      "expected": "0bc9c7316b24b1878915034956f93122830a753fad826c29200c523145f8caac",
+      "actual": "0bc9c7316b24b1878915034956f93122830a753fad826c29200c523145f8caac",
+      "match": true,
+      "bytes": 426
+    },
+    {
+      "path": "README.md",
+      "expected": "946221c70881ce1fb1582f24c4f5a182984dca73ff088d63fadf5c46461116d2",
+      "actual": "946221c70881ce1fb1582f24c4f5a182984dca73ff088d63fadf5c46461116d2",
+      "match": true,
+      "bytes": 3515
+    },
+    {
+      "path": "zstd/JERecipe.json",
+      "expected": "93f2fc4d08a089dafa7c69ad1c5c02f87476f619b102a37a6123d291e13e596d",
+      "actual": "93f2fc4d08a089dafa7c69ad1c5c02f87476f619b102a37a6123d291e13e596d",
+      "match": true,
+      "bytes": 411
+    },
+    {
+      "path": "zstd/include/zbuff.h",
+      "expected": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f",
+      "actual": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f",
+      "match": true,
+      "bytes": 11474
+    },
+    {
+      "path": "zstd/include/zdict.h",
+      "expected": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1",
+      "actual": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1",
+      "match": true,
+      "bytes": 11175
+    },
+    {
+      "path": "zstd/include/zstd.h",
+      "expected": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738",
+      "actual": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738",
+      "match": true,
+      "bytes": 90830
+    },
+    {
+      "path": "zstd/include/zstd_errors.h",
+      "expected": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9",
+      "actual": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9",
+      "match": true,
+      "bytes": 3715
+    },
+    {
+      "path": "zstd/lib/release/zstd_static.lib",
+      "expected": "cbbd9f48c3c07e8e2896e7cf19d83a9410b339b2f722e3ff3dfb75c7485fa298",
+      "actual": "cbbd9f48c3c07e8e2896e7cf19d83a9410b339b2f722e3ff3dfb75c7485fa298",
+      "match": true,
+      "bytes": 1509824
+    }
+  ],
+  "cache_settings": [
+    "CMAKE_CONFIGURATION_TYPES:STRING=Release",
+    "ZSTD_BUILD_CONTRIB:BOOL=OFF",
+    "ZSTD_BUILD_PROGRAMS:BOOL=OFF",
+    "ZSTD_BUILD_SHARED:BOOL=OFF",
+    "ZSTD_BUILD_STATIC:BOOL=ON",
+    "ZSTD_BUILD_TESTS:BOOL=OFF",
+    "ZSTD_LEGACY_SUPPORT:BOOL=ON",
+    "ZSTD_MULTITHREAD_SUPPORT:BOOL=ON",
+    "ZSTD_USE_STATIC_RUNTIME:BOOL=OFF"
+  ],
+  "vcxproj_runtime": [
+    {
+      "IgnoreCase": true,
+      "LineNumber": 57,
+      "Line": "      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>",
+      "Filename": "libzstd_static.vcxproj",
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1\\build\\upstream\\lib\\libzstd_static.vcxproj",
+      "Pattern": "RuntimeLibrary",
+      "Context": null,
+      "Matches": [
+        {
+          "Groups": [
+            {
+              "Groups": [
+                {
+                  "Groups": [
+                    "RuntimeLibrary"
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "RuntimeLibrary"
+                  ],
+                  "Index": 7,
+                  "Length": 14,
+                  "Value": "RuntimeLibrary",
+                  "ValueSpan": null
+                }
+              ],
+              "Success": true,
+              "Name": "0",
+              "Captures": [
+                {
+                  "Groups": [
+                    "RuntimeLibrary"
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "RuntimeLibrary"
+                  ],
+                  "Index": 7,
+                  "Length": 14,
+                  "Value": "RuntimeLibrary",
+                  "ValueSpan": null
+                }
+              ],
+              "Index": 7,
+              "Length": 14,
+              "Value": "RuntimeLibrary",
+              "ValueSpan": null
+            }
+          ],
+          "Success": true,
+          "Name": "0",
+          "Captures": [
+            {
+              "Groups": [
+                {
+                  "Groups": [
+                    "RuntimeLibrary"
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "RuntimeLibrary"
+                  ],
+                  "Index": 7,
+                  "Length": 14,
+                  "Value": "RuntimeLibrary",
+                  "ValueSpan": null
+                }
+              ],
+              "Success": true,
+              "Name": "0",
+              "Captures": [
+                {
+                  "Groups": [
+                    "RuntimeLibrary"
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "RuntimeLibrary"
+                  ],
+                  "Index": 7,
+                  "Length": 14,
+                  "Value": "RuntimeLibrary",
+                  "ValueSpan": null
+                }
+              ],
+              "Index": 7,
+              "Length": 14,
+              "Value": "RuntimeLibrary",
+              "ValueSpan": null
+            }
+          ],
+          "Index": 7,
+          "Length": 14,
+          "Value": "RuntimeLibrary",
+          "ValueSpan": null
+        }
+      ]
+    },
+    {
+      "IgnoreCase": true,
+      "LineNumber": 61,
+      "Line": "      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_UNICODE;UNICODE;NDEBUG;ZSTD_MULTITHREAD;ZSTD_HEAPMODE=0;_CRT_SECURE_NO_WARNINGS;XXH_NAMESPACE=ZSTD_;ZSTD_LEGACY_SUPPORT=4;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>",
+      "Filename": "libzstd_static.vcxproj",
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1\\build\\upstream\\lib\\libzstd_static.vcxproj",
+      "Pattern": "ZSTD_LEGACY_SUPPORT=",
+      "Context": null,
+      "Matches": [
+        {
+          "Groups": [
+            {
+              "Groups": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Success": true,
+              "Name": "0",
+              "Captures": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Index": 174,
+              "Length": 20,
+              "Value": "ZSTD_LEGACY_SUPPORT=",
+              "ValueSpan": null
+            }
+          ],
+          "Success": true,
+          "Name": "0",
+          "Captures": [
+            {
+              "Groups": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Success": true,
+              "Name": "0",
+              "Captures": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Index": 174,
+              "Length": 20,
+              "Value": "ZSTD_LEGACY_SUPPORT=",
+              "ValueSpan": null
+            }
+          ],
+          "Index": 174,
+          "Length": 20,
+          "Value": "ZSTD_LEGACY_SUPPORT=",
+          "ValueSpan": null
+        }
+      ]
+    },
+    {
+      "IgnoreCase": true,
+      "LineNumber": 68,
+      "Line": "      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_UNICODE;UNICODE;NDEBUG;ZSTD_MULTITHREAD;ZSTD_HEAPMODE=0;_CRT_SECURE_NO_WARNINGS;XXH_NAMESPACE=ZSTD_;ZSTD_LEGACY_SUPPORT=4;CMAKE_INTDIR=\\\"Release\\\"</PreprocessorDefinitions>",
+      "Filename": "libzstd_static.vcxproj",
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1\\build\\upstream\\lib\\libzstd_static.vcxproj",
+      "Pattern": "ZSTD_LEGACY_SUPPORT=",
+      "Context": null,
+      "Matches": [
+        {
+          "Groups": [
+            {
+              "Groups": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Success": true,
+              "Name": "0",
+              "Captures": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Index": 174,
+              "Length": 20,
+              "Value": "ZSTD_LEGACY_SUPPORT=",
+              "ValueSpan": null
+            }
+          ],
+          "Success": true,
+          "Name": "0",
+          "Captures": [
+            {
+              "Groups": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Success": true,
+              "Name": "0",
+              "Captures": [
+                {
+                  "Groups": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Success": true,
+                  "Name": "0",
+                  "Captures": [
+                    "ZSTD_LEGACY_SUPPORT="
+                  ],
+                  "Index": 174,
+                  "Length": 20,
+                  "Value": "ZSTD_LEGACY_SUPPORT=",
+                  "ValueSpan": null
+                }
+              ],
+              "Index": 174,
+              "Length": 20,
+              "Value": "ZSTD_LEGACY_SUPPORT=",
+              "ValueSpan": null
+            }
+          ],
+          "Index": 174,
+          "Length": 20,
+          "Value": "ZSTD_LEGACY_SUPPORT=",
+          "ValueSpan": null
+        }
+      ]
+    }
+  ],
+  "library": {
+    "FullName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1-extracted\\zstd\\lib\\release\\zstd_static.lib",
+    "Length": 1509824
+  },
+  "library_sha256": "cbbd9f48c3c07e8e2896e7cf19d83a9410b339b2f722e3ff3dfb75c7485fa298"
+}

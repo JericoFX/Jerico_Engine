@@ -1,0 +1,15 @@
+{
+  "origin": "https://downloads.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz?use_mirror=gigenet",
+  "destinationWithoutQuery": "https://gigenet.dl.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz",
+  "redirectQueryOmitted": true,
+  "method": "HEAD",
+  "status": 200,
+  "automaticRedirects": false,
+  "authentication": false,
+  "locationWithoutQuery": "",
+  "size": 1533457,
+  "etag": "\"493285ee-176611\"",
+  "lastModified": "11/30/2008 12:24:14 +00:00",
+  "contentType": "application/x-gzip",
+  "getPerformed": false
+}

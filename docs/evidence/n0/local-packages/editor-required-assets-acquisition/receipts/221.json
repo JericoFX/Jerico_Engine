@@ -1,0 +1,41 @@
+{
+  "index": 221,
+  "source_path": "Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/DepthOfField_PencilMap_35mmFilm.bmp",
+  "expected_sha256": "52861f61ea5a335441999af7de9f384dfda732adb7c678e97b4a5d43c6d9b6cc",
+  "expected_bytes": 32824,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/DepthOfField_PencilMap_35mmFilm.bmp",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:17.806740+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/DepthOfField_PencilMap_35mmFilm.bmp",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/bmp",
+      "Content-Length": "32824",
+      "ETag": "\"52861f61ea5a335441999af7de9f384dfda732adb7c678e97b4a5d43c6d9b6cc\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/DepthOfField_PencilMap_35mmFilm.bmp",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:18.145611+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/DepthOfField_PencilMap_35mmFilm.bmp",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/bmp",
+      "Content-Length": "32824",
+      "ETag": "\"52861f61ea5a335441999af7de9f384dfda732adb7c678e97b4a5d43c6d9b6cc\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "52861f61ea5a335441999af7de9f384dfda732adb7c678e97b4a5d43c6d9b6cc",
+  "actual_bytes": 32824,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\DepthOfField_PencilMap_35mmFilm.bmp",
+  "status": "acquired and byte verified"
+}

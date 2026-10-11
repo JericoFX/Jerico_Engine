@@ -1,0 +1,103 @@
+{
+  "status": "SOURCE_ACQUIRED_AND_STATIC_AUDIT_COMPLETE_NO_CONFIGURE_BUILD_TEST",
+  "supersedes_read_summary": "zstd-current-summary.json remains immutable historical read-only receipt; source acquisition subsequently authorized by parent",
+  "source_root": "F:\\JericoEngine\\Dependencies\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e",
+  "archive_path": "F:\\JericoEngine\\Dependencies\\archives\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+  "archive_bytes": 1707256,
+  "archive_sha256": "DFB594DC41E79C1304EF2C9232746C048E4837578C1CA88CF0E9B83C8CC36457",
+  "archive_url": "https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+  "tag": "v1.3.5",
+  "commit": "90ae50224d15e8dbcb9fa26b9be096366733db8e",
+  "version_header": "lib/zstd.h defines 1.3.5",
+  "transport": "Manual HEAD then GET, both200 exact codeload URL, redirects disabled, no authentication",
+  "members": 467,
+  "files": 392,
+  "directories": 75,
+  "payload_bytes": 6033546,
+  "links": 0,
+  "path_problems": [],
+  "source_hashes": "392/392 SHA256 match archived payload; no reparse paths",
+  "primary_blobs": {
+    "exact": 358,
+    "eol_attribute_only": 34,
+    "explanation": "Only declared CRLF files in upstream .gitattributes differ from Git blobs. LF normalization reproduces the primary blob SHA1; snapshot retains exact archive bytes.",
+    "proof": "One raw primary .vcproj blob downloaded and decoded; LF-only bytes equal normalized archive payload. All34 declared CRLF paths reproduce primary Git blob SHA1; no source normalization applied."
+  },
+  "submodules": "No Git tree commit entries and no .gitmodules",
+  "cmake_closure": {
+    "scripts": 11,
+    "network": "No FetchContent/ExternalProject/fileDOWNLOAD/git/wget/curl in full CMake script set",
+    "upstream_source_subdir": "build/cmake",
+    "static_target": "libzstd_static",
+    "cmake_msvc_filename": "zstd_static.lib",
+    "upstream_vs2010_filename": "libzstd_static.lib (different producer naming; neither proves historical O3DE layout)",
+    "library_sources": "25 core/common/compress/decompress/dictBuilder/deprecated C sources; legacy ON appends7C sources",
+    "windows_threads": "Native windows.h wrapper; no downloaded pthread dependency",
+    "conditional_extra_deps": "UNIX multithread finds Threads; programs with explicit feature options finds ZLIB/LibLZMA; contrib/pzstd finds Threads. These programs/contrib options are not needed by library.",
+    "safe_library_options": [
+      "-DZSTD_BUILD_STATIC=ON",
+      "-DZSTD_BUILD_SHARED=OFF",
+      "-DZSTD_BUILD_PROGRAMS=OFF",
+      "-DZSTD_BUILD_TESTS=OFF",
+      "-DZSTD_BUILD_CONTRIB=OFF"
+    ],
+    "preserve_feature_candidate": [
+      "-DZSTD_LEGACY_SUPPORT=ON",
+      "-DZSTD_MULTITHREAD_SUPPORT=ON"
+    ],
+    "candidate_basis": "Upstream VS2010 static project defines ZSTD_LEGACY_SUPPORT=4 and ZSTD_MULTITHREAD=1; CMake legacyON emits4. This is evidence of upstream Windows capability, not legacy O3DE recipe flags.",
+    "crt": "Old upstream VS2010 project Debug uses MDd, Release MT. CMake default ZSTD_USE_STATIC_RUNTIME OFF. Parent must choose/verify producer CRT against actual engine configuration, not infer old binary ABI.",
+    "source_writes": "CMake generates uninstall/pkgconfig in binary tree; no source-writing configure command found. clean-all and uninstall are optional destructive targets, never executed.",
+    "compatibility": "Upstream minimum2.8.9 requires compatibility review with installed CMake; no configure executed",
+    "no_add_subdir": "Current Windows engine has no zstd FetchContent wrapper. No valid source override exists yet; adding a local Find/package provider is parent-owned."
+  },
+  "legal": {
+    "root": "BSD-3-Clause OR GPL-2.0, LICENSE and COPYING retained",
+    "recipe_error": "0BSD in Mac recipe is not actual source licence",
+    "embedded_BSD2_paths": [
+      "lib/common/bitstream.h",
+      "lib/common/debug.c",
+      "lib/common/debug.h",
+      "lib/common/entropy_common.c",
+      "lib/common/fse.h",
+      "lib/common/fse_decompress.c",
+      "lib/common/huf.h",
+      "lib/common/xxhash.c",
+      "lib/common/xxhash.h",
+      "lib/compress/fse_compress.c",
+      "lib/compress/hist.c",
+      "lib/compress/hist.h",
+      "lib/compress/huf_compress.c",
+      "lib/decompress/huf_decompress.c"
+    ],
+    "embedded_MIT_paths": [
+      "lib/dictBuilder/divsufsort.c",
+      "lib/dictBuilder/divsufsort.h"
+    ],
+    "other_attribution": "Tino Reichardt threading notice and dictionary paper/Giuseppe Ottaviano attribution retained",
+    "notices_receipt": "library-legal-notices.json contains66 first-comment source notices; full source preserves all inline notices, including embedded legacy entropy notices",
+    "outside_library": "contrib/linux-kernel/COPYING GPLv2 is retained in full immutable archive; not in library-only CMake closure"
+  },
+  "engine_contract": {
+    "target": "3rdParty::zstd PUBLIC AzCore",
+    "consumer_include": "zstd.h with ZSTD_STATIC_LINKING_ONLY",
+    "advanced_symbols": [
+      "ZSTD_createCStream_advanced",
+      "ZSTD_createDStream_advanced",
+      "ZSTD_resetCStream",
+      "ZSTD_resetDStream"
+    ],
+    "headers_install": [
+      "include/zstd.h",
+      "include/zbuff.h",
+      "include/zdict.h",
+      "include/zstd_errors.h"
+    ],
+    "package_name": "zstd-1.35-multiplatform",
+    "binary_package_sha256": "45d466c435f1095898578eedde85acf1fd27190e7ea99aeaa9acfd2f09e12665",
+    "historical_windows_layout": "UNKNOWN: Mac-only Find is not Windows proof; current repo has no Windows Find/module source",
+    "current_actions_exact_package": "Public exact-name query total0; no old package downloaded",
+    "new_artifact_requirement": "Any reconstruction needs new artifact identity/hash/provenance, real advanced allocator streaming consumer, and root revalidation by Luna",
+    "product_scope": "No Engine/Editor/AssetProcessor/runtime/ABI/performance acceptance from acquisition or static audit"
+  }
+}

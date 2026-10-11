@@ -1,0 +1,55 @@
+[
+  {
+    "name": "package-library",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1-extracted\\zstd\\lib\\release\\zstd_static.lib",
+    "exit": 0,
+    "elapsed": 1.3015899,
+    "bytes": 1509824,
+    "sha256": "cbbd9f48c3c07e8e2896e7cf19d83a9410b339b2f722e3ff3dfb75c7485fa298",
+    "machine_lines": [
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)",
+      "8664 machine (x64)"
+    ]
+  },
+  {
+    "name": "consumer-exe",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-consumer-rev1\\Release\\JEZstdConsumer.exe",
+    "exit": 0,
+    "elapsed": 0.0217043,
+    "bytes": 386048,
+    "sha256": "0ac08fe5ec5b7d1c0f0e9c09384f7262f2aa567030dcb50b82af5eb5859db722",
+    "machine_lines": [
+      "8664 machine (x64)"
+    ]
+  }
+]

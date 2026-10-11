@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_LUA_SOURCE_ARCHIVE must be an absolute local path
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake:14 (JE_python_require_local_path)
+
+

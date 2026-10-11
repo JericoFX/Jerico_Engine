@@ -1,0 +1,16 @@
+[
+  {
+    "name": "lz4-1.9.4-je-rev1-windows.tar.xz",
+    "bytes": 167540,
+    "sha256": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac",
+    "sidecar": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac *lz4-1.9.4-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "bytes": 7040252,
+    "sha256": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888",
+    "sidecar": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888 *OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  }
+]

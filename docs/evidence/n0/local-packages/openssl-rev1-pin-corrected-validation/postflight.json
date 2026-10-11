@@ -1,0 +1,18 @@
+{
+  "freeze_sha256": "7E730F85776C891B2206FD69990B2E702587695DDCAA8487721579C3C855F1A4",
+  "freeze_count": 21,
+  "freeze_pass": true,
+  "freeze_failures": [],
+  "manifest_sha256": "FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A",
+  "manifest_count": 20858,
+  "tool_tree_file_count": 20858,
+  "tool_mismatch_count": 0,
+  "tool_pass": true,
+  "mismatch_sample": [],
+  "driver_sha256": "F39CEA6362F8E9C02138F4B7F5448234D4C2A04684670501B4D674BF5D238223",
+  "output_exists": false,
+  "producer_native_exit": 1,
+  "producer_elapsed_seconds": 5.441,
+  "input_freeze_unchanged": true,
+  "tool_manifest_unchanged": true
+}

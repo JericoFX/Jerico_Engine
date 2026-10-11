@@ -1,0 +1,6 @@
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LZ4/BuildLz4Package.cmake:24 (message):
+  JE local lz4: output must be new; existing outputs are preserved
+
+
+

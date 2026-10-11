@@ -1,0 +1,32 @@
+{
+  "baselineCommit": "ce8be74060cf231c11d464edb0862234dea7782d",
+  "snapshotCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "compiledSourcePatchByteIdentical": false,
+  "additionalPath": "config/config.guess",
+  "additionalPatchBytes": 385,
+  "additionalPatchSHA256": "557e78ddd3c306b5428639a72bcb662398482887f7a3b8d8f28104ff25102e50",
+  "corePatchLineDifferences": [
+    {
+      "corePatchLine": 204,
+      "historical": "index c57eaef..ba7c422 100644",
+      "snapshot": "index c57eaef..c910d86 100644"
+    },
+    {
+      "corePatchLine": 254,
+      "historical": "+    // ",
+      "snapshot": "+    //"
+    },
+    {
+      "corePatchLine": 257,
+      "historical": "+    // ",
+      "snapshot": "+    //"
+    },
+    {
+      "corePatchLine": 260,
+      "historical": "+    // ",
+      "snapshot": "+    //"
+    }
+  ],
+  "executableStatementsDiffer": false,
+  "windowsUsesConfigGuess": false
+}

@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1
+    Start 1: JE.LocalPackages.Lz4.blocks
+1/4 Test #1: JE.LocalPackages.Lz4.blocks .......   Passed    0.02 sec
+    Start 2: JE.LocalPackages.Lz4.frames
+2/4 Test #2: JE.LocalPackages.Lz4.frames .......   Passed    0.01 sec
+    Start 3: JE.LocalPackages.Lz4.fragmented
+3/4 Test #3: JE.LocalPackages.Lz4.fragmented ...   Passed    0.01 sec
+    Start 4: JE.LocalPackages.Lz4.errors
+4/4 Test #4: JE.LocalPackages.Lz4.errors .......   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.07 sec

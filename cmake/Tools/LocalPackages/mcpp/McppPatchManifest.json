@@ -1,0 +1,340 @@
+{
+  "recipeCommit": "ce8be74060cf231c11d464edb0862234dea7782d",
+  "patchSHA256": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b",
+  "sourceArchiveSHA256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+  "files": [
+    {
+      "path": "src/configed.H",
+      "originalSHA256": "ad4bb2fab5bf799c8f52bd0b5ec810f2c620c33e8c0d8f0edcac73838ab262b8",
+      "patchedSHA256": "b64ebcb52a4469fd1f4a87620a7a6543cc5fb5a75810dd165bfae659468f24c7",
+      "originalGitBlob": "b4d1ebf3a6bfa2803a4fc2695154fb35972438c1",
+      "patchedGitBlob": "436bd5453a8ae89a187306621d22a1288d63443d",
+      "hunks": [
+        {
+          "sourceOffset": 522,
+          "oldBytes": 248,
+          "patchOffset": 137,
+          "patchBytes": 332
+        }
+      ]
+    },
+    {
+      "path": "src/internal.H",
+      "originalSHA256": "737dd23f9b4a62495e5a75ed03cf43d57038b6689b67ee53da197cfc08910f29",
+      "patchedSHA256": "96b68ae6597667ec61d9246659336c06e48d56f01d86e06b45986d88d2a9f6a7",
+      "originalGitBlob": "5e1c19fb37b45e7a38cb8c94f2e61799c2decc1d",
+      "patchedGitBlob": "94b5a5a0f76e5a2f5b830b0bab2f2f7608cc9ab9",
+      "hunks": [
+        {
+          "sourceOffset": 4604,
+          "oldBytes": 342,
+          "patchOffset": 604,
+          "patchBytes": 397
+        },
+        {
+          "sourceOffset": 13856,
+          "oldBytes": 395,
+          "patchOffset": 1049,
+          "patchBytes": 417
+        },
+        {
+          "sourceOffset": 23699,
+          "oldBytes": 243,
+          "patchOffset": 1538,
+          "patchBytes": 339
+        }
+      ]
+    },
+    {
+      "path": "src/main.c",
+      "originalSHA256": "2746ef879e2beb75634a32c01e86849082aab402516e566def8f328fde97529d",
+      "patchedSHA256": "0d56fa3aaaa74a1e1b65c9f9843c6c391b1232451d065bf4fbf9df5c9df148e5",
+      "originalGitBlob": "a43889481aaad8a7555ab6d97d228f26489211df",
+      "patchedGitBlob": "b892f811857cc9c8e94c7c6a884c2d71bb64a181",
+      "hunks": [
+        {
+          "sourceOffset": 14866,
+          "oldBytes": 72,
+          "patchOffset": 2011,
+          "patchBytes": 103
+        }
+      ]
+    },
+    {
+      "path": "src/main_libmcpp.c",
+      "originalSHA256": "4f807dca8363f9767b291b0236b498ba876f0f7eb40f29728436b3926c427337",
+      "patchedSHA256": "087f7cfd06adcf82d6da28133233c4cc624fc79d48da042da029cdadc5e9ab03",
+      "originalGitBlob": "71639259eff7d8f48ebf6764160f10938a11906a",
+      "patchedGitBlob": "d266c92cff392a95eebd4126dab79cd2a0414b84",
+      "hunks": [
+        {
+          "sourceOffset": 48,
+          "oldBytes": 100,
+          "patchOffset": 2263,
+          "patchBytes": 144
+        }
+      ]
+    },
+    {
+      "path": "src/mcpp_lib.def",
+      "originalSHA256": "b14fa4dce26631e4d0f556031226d043c61737ffbaa9d5ab1b5c30826ac7f236",
+      "patchedSHA256": "57f7da2c5b68d3b83c801a8eda7cddae331cef5b120a86aaf7daa9ebe1f9d017",
+      "originalGitBlob": "c95f440442f3954297d86079a92dfefa29da9fe0",
+      "patchedGitBlob": "b3c10e93a6c496d4f9899e70127b473b0a10805c",
+      "hunks": [
+        {
+          "sourceOffset": 62,
+          "oldBytes": 62,
+          "patchOffset": 2556,
+          "patchBytes": 100
+        }
+      ]
+    },
+    {
+      "path": "src/mcpp_lib.h",
+      "originalSHA256": "d90994451e2885efdf2d76ad09e397a33626240c03cf121025467445837939f6",
+      "patchedSHA256": "7d248a44999d75616d0f0a03ccd9619e6b9a767c0fba835ecad110d4bec13728",
+      "originalGitBlob": "4827f0aafe2f6ea8dcced93eddf30f0bdfcc8f87",
+      "patchedGitBlob": "64b23aed06f3151b678e2c08dfaf1b3d668f3cc2",
+      "hunks": [
+        {
+          "sourceOffset": 0,
+          "oldBytes": 111,
+          "patchOffset": 2789,
+          "patchBytes": 235
+        },
+        {
+          "sourceOffset": 277,
+          "oldBytes": 197,
+          "patchOffset": 3042,
+          "patchBytes": 229
+        },
+        {
+          "sourceOffset": 487,
+          "oldBytes": 564,
+          "patchOffset": 3291,
+          "patchBytes": 1726
+        }
+      ]
+    },
+    {
+      "path": "src/mcpp_out.h",
+      "originalSHA256": "80f64ec93cdeb946107fcf23b234f1308cfc42741b85deb142e2b9f10f0914a1",
+      "patchedSHA256": "6c0393950e63362fa31f06ea07f72e757c0b89015e2369292bb9bd8e8bfa7317",
+      "originalGitBlob": "02ba2aae186138479156db111bdb235d4f1f3a04",
+      "patchedGitBlob": "bf0b82ea558df6e414637a944d5f993761da38aa",
+      "hunks": [
+        {
+          "sourceOffset": 0,
+          "oldBytes": 364,
+          "patchOffset": 5152,
+          "patchBytes": 937
+        }
+      ]
+    },
+    {
+      "path": "src/noconfig.H",
+      "originalSHA256": "c9244a60737dbd70728017751f308a38c5060ac7566b1f09483af765c1a6558d",
+      "patchedSHA256": "43065582f892ec43ecb7d0edc3cf5a9a3647bff7d043769536525375f07120c5",
+      "originalGitBlob": "6b634fe0b32ff67c14c558770bf80a2747bda472",
+      "patchedGitBlob": "6482967453457b60434e16069a04a52a5d625abf",
+      "hunks": [
+        {
+          "sourceOffset": 400,
+          "oldBytes": 474,
+          "patchOffset": 6226,
+          "patchBytes": 635
+        }
+      ]
+    },
+    {
+      "path": "src/support.c",
+      "originalSHA256": "65e2dfe11eae3622cbf03015378f89e1c1c4f877114ed24ba5b1cce40b2e63fb",
+      "patchedSHA256": "3a0c93768ad2537646adf131855c2cbe60157deb53a3da7019768cfd905e68ec",
+      "originalGitBlob": "c57eaef8d2a2638c6c27777bfb3c3151df062ebe",
+      "patchedGitBlob": "ba7c42271e617ae09a21b9ba2f273cc085fab713",
+      "hunks": [
+        {
+          "sourceOffset": 11416,
+          "oldBytes": 178,
+          "patchOffset": 7022,
+          "patchBytes": 626
+        },
+        {
+          "sourceOffset": 21192,
+          "oldBytes": 222,
+          "patchOffset": 7689,
+          "patchBytes": 231
+        },
+        {
+          "sourceOffset": 48961,
+          "oldBytes": 189,
+          "patchOffset": 7967,
+          "patchBytes": 214
+        },
+        {
+          "sourceOffset": 59029,
+          "oldBytes": 259,
+          "patchOffset": 8238,
+          "patchBytes": 1283
+        },
+        {
+          "sourceOffset": 59604,
+          "oldBytes": 301,
+          "patchOffset": 9578,
+          "patchBytes": 388
+        },
+        {
+          "sourceOffset": 61787,
+          "oldBytes": 425,
+          "patchOffset": 10000,
+          "patchBytes": 1005
+        },
+        {
+          "sourceOffset": 65760,
+          "oldBytes": 284,
+          "patchOffset": 11059,
+          "patchBytes": 298
+        },
+        {
+          "sourceOffset": 69676,
+          "oldBytes": 154,
+          "patchOffset": 11405,
+          "patchBytes": 190
+        }
+      ]
+    },
+    {
+      "path": "src/system.c",
+      "originalSHA256": "7951693c2406b20c01a6c5e7480c005e7f9b0c35efc3834565d3d0cc1e0ab2b8",
+      "patchedSHA256": "c32160cf095e0837f024c550c4570b690462dae8c01259e992bdbec87dd5f13b",
+      "originalGitBlob": "475946900ad59a090fe9c9dd2228aea6386429ff",
+      "patchedGitBlob": "5bccf62bc3f66905d547a58b2612400d6ec9e08a",
+      "hunks": [
+        {
+          "sourceOffset": 13349,
+          "oldBytes": 384,
+          "patchOffset": 11795,
+          "patchBytes": 463
+        },
+        {
+          "sourceOffset": 21452,
+          "oldBytes": 291,
+          "patchOffset": 12284,
+          "patchBytes": 316
+        },
+        {
+          "sourceOffset": 33938,
+          "oldBytes": 189,
+          "patchOffset": 12626,
+          "patchBytes": 260
+        },
+        {
+          "sourceOffset": 64477,
+          "oldBytes": 245,
+          "patchOffset": 12933,
+          "patchBytes": 279
+        },
+        {
+          "sourceOffset": 79894,
+          "oldBytes": 132,
+          "patchOffset": 13260,
+          "patchBytes": 163
+        },
+        {
+          "sourceOffset": 81861,
+          "oldBytes": 157,
+          "patchOffset": 13468,
+          "patchBytes": 187
+        },
+        {
+          "sourceOffset": 85274,
+          "oldBytes": 238,
+          "patchOffset": 13703,
+          "patchBytes": 257
+        },
+        {
+          "sourceOffset": 95135,
+          "oldBytes": 215,
+          "patchOffset": 14009,
+          "patchBytes": 294
+        },
+        {
+          "sourceOffset": 99384,
+          "oldBytes": 286,
+          "patchOffset": 14359,
+          "patchBytes": 373
+        },
+        {
+          "sourceOffset": 106674,
+          "oldBytes": 176,
+          "patchOffset": 14774,
+          "patchBytes": 255
+        },
+        {
+          "sourceOffset": 117092,
+          "oldBytes": 235,
+          "patchOffset": 15078,
+          "patchBytes": 308
+        },
+        {
+          "sourceOffset": 117843,
+          "oldBytes": 303,
+          "patchOffset": 15434,
+          "patchBytes": 403
+        },
+        {
+          "sourceOffset": 121839,
+          "oldBytes": 322,
+          "patchOffset": 15867,
+          "patchBytes": 331
+        },
+        {
+          "sourceOffset": 123053,
+          "oldBytes": 315,
+          "patchOffset": 16228,
+          "patchBytes": 394
+        },
+        {
+          "sourceOffset": 123778,
+          "oldBytes": 241,
+          "patchOffset": 16652,
+          "patchBytes": 334
+        },
+        {
+          "sourceOffset": 133515,
+          "oldBytes": 127,
+          "patchOffset": 17042,
+          "patchBytes": 206
+        },
+        {
+          "sourceOffset": 136716,
+          "oldBytes": 124,
+          "patchOffset": 17293,
+          "patchBytes": 754
+        },
+        {
+          "sourceOffset": 138119,
+          "oldBytes": 809,
+          "patchOffset": 18093,
+          "patchBytes": 1937
+        }
+      ]
+    },
+    {
+      "path": "src/testmain.c",
+      "originalSHA256": "10da37980b56f59d3b336cad99a49db496fa8174738aaaea3815eb0efad4140c",
+      "patchedSHA256": "1f538fc738ab25f787dd29aaa9085aa829418ca6c59a401667eeb986df3b811f",
+      "originalGitBlob": "33e47b393961436645dc1f78884e5d5f06624c98",
+      "patchedGitBlob": "ce3e00dbacbb2cc671ec4ba5ae206f7861e0fcf1",
+      "hunks": [
+        {
+          "sourceOffset": 381,
+          "oldBytes": 99,
+          "patchOffset": 20165,
+          "patchBytes": 146
+        }
+      ]
+    }
+  ]
+}

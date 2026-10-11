@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: Lua source archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/does-not-exist-lua-archive.tar.gz
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake:34 (JE_python_verify_file)
+
+

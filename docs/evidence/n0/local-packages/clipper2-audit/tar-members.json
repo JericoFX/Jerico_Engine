@@ -1,0 +1,2497 @@
+[
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.github",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.github/workflows",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.github/workflows/actions_cpp.yml",
+    "type": "file",
+    "bytes": 3161,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7d6c475f10c17950d661cf3da554754e536a4c519d99c53ee8356e2c87ee20b7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.github/workflows/actions_csharp.yml",
+    "type": "file",
+    "bytes": 616,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ff5ed1f88361c8a9b53d6fd6e5f01ef3a50c6617a420c42eef1622587e8a4df2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.gitignore",
+    "type": "file",
+    "bytes": 3,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "64263feac7b00952e9ec3b6c1fd11316faa58ff673c6bd085fac9f6f8d8389f6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.gitmodules",
+    "type": "file",
+    "bytes": 0,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/.gitignore",
+    "type": "file",
+    "bytes": 6,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a7fe054ec20f82b733ba8542234af61d2f3d3ed5f65185347e3c04629ec3b952"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/CMakeLists.txt",
+    "type": "file",
+    "bytes": 2198,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ae74f30a274f0813f64e0b51463ddfa6918f13f63e956b0b67e51a1255f80b06"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/GetIntersectPtBenchmark.cpp",
+    "type": "file",
+    "bytes": 18032,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "1123c2044dbcc4d62ea833f0193d46ce8c25811221544d9103150b4e26524277"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/PointInPolygonBenchmark.cpp",
+    "type": "file",
+    "bytes": 16848,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0563ad4ca0504c73eb64dcfb5c97f5f2e474af68837da2ed8a2e8af8f071241a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/README.md",
+    "type": "file",
+    "bytes": 163,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "550239ca88c00d946a35f8b264eab4cd51f663d51b8402ac5825b4f239fde5c7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/StripDuplicateBenchmark.cpp",
+    "type": "file",
+    "bytes": 1977,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "81f55ef7eba8d0146da43ef72cf2e729c57afd732f9aa203ed011c78fdff3203"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/CMakeLists.txt",
+    "type": "file",
+    "bytes": 12832,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9838e05405efb2db0db11f20dea7c2d3fdfff211dd6be42e3c0e2611ae886348"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2.pc.cmakein",
+    "type": "file",
+    "bytes": 382,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "90ed5212fc01c5d3b25b16ce62498f4f29610d444aa5c1a2588aea18704da74f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Config.cmake.in",
+    "type": "file",
+    "bytes": 156,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8aee0e82d16ff7cd05febd66b1fb1deba790e03c3205f0920ef96c478b1e95b4"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.core.h",
+    "type": "file",
+    "bytes": 35320,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b667c2fe968344252e2c32c0cffc09cf6520164e272fcf63bf46eccc707b138f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.engine.h",
+    "type": "file",
+    "bytes": 18972,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e77185eb535cdae22feb85a045b6b90365f0cfd841bd7fb01714fc03a026fa09"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.export.h",
+    "type": "file",
+    "bytes": 27954,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "035e4257f1f127d6a17833331922f2b1b615371b64bb4cd625842102517793b0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.h",
+    "type": "file",
+    "bytes": 25617,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "145efd001ef2f45ac5655a18e19d8a122efdf665c38d306a1fe91ce9e0d18450"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.minkowski.h",
+    "type": "file",
+    "bytes": 4128,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6ea4f08d3e2561bdd4d95a548e1b5d7983100e317ed805616b8d602f03d3dbe3"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.offset.h",
+    "type": "file",
+    "bytes": 4731,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "147e5f4694327d62cec31fec55b69537f178e808a715a533bb42c01a85cc435a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.rectclip.h",
+    "type": "file",
+    "bytes": 2801,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "2970dbe3f91d32e96abc3117240694fc09f354060ff84e4a95014ec510f4d8dd"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.triangulation.h",
+    "type": "file",
+    "bytes": 1289,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a82d32e65583cce5a6d704796c54de3ddd2963d219057263a0f87f8d14a07d6c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/include/clipper2/clipper.version.h",
+    "type": "file",
+    "bytes": 126,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0d636f1599b09743496d5c15c7dcb5bc3101bd423d6745bf17e480edbffccdac"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/src",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/src/clipper.engine.cpp",
+    "type": "file",
+    "bytes": 87899,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7b2cc17d4debd3b5ee6bd2c592ecda5082253324c7dd514b5593ae1b2c7812b2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/src/clipper.offset.cpp",
+    "type": "file",
+    "bytes": 20974,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ebc01258953212d20fed090a4a740f94926c3c6706a092fec4c5e9cb5292305a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/src/clipper.rectclip.cpp",
+    "type": "file",
+    "bytes": 28076,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "79c7d8d90dd3b577db77a152c4739f6f49bfda8727528291250d3d8e8d79e18c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Lib/src/clipper.triangulation.cpp",
+    "type": "file",
+    "bytes": 38243,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "94e7449b9f278b71d86c3d493d40652bbfa1eae539c1c5b926b66977d82274bb"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Benchmarks",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Benchmarks/Benchmarks.cpp",
+    "type": "file",
+    "bytes": 3389,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "1dd36eeba6577187334c3341786ad9aa03bbd0b3e93511cb3795ae4184e6d620"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Inflate",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Inflate/Inflate.cpp",
+    "type": "file",
+    "bytes": 4724,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a10f8355dff4aef32bfd6fe0ebe5e0332f193b06a08e5e49fac51626da8c2a39"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Inflate/rabbit.svg",
+    "type": "file",
+    "bytes": 1897,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0117c42dfe0b59b6672150836d9fa12c64125f5febc5016df865decee50a67af"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/MemLeakTest",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/MemLeakTest/MemLeakTest.cpp",
+    "type": "file",
+    "bytes": 1983,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ebec9feb353381315314d8fa8f2181f3fdcfaad763289ea302d67116ab2cb20a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/PolygonSamples",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/PolygonSamples/PolygonSamples.cpp",
+    "type": "file",
+    "bytes": 2983,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "64bb355a970380fd98befaeee8c6be395b5a2d6b5ad976b97226283c77dfcc2b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/RandomClipping",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/RandomClipping/RandomClipping.cpp",
+    "type": "file",
+    "bytes": 4750,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "fbba8beb6f9ed759ce8809928f1de8201ba7adc004752a02e8843aea0b2f7525"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/RectClipping",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/RectClipping/RectClipping.cpp",
+    "type": "file",
+    "bytes": 6048,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ed185689139632b5718253c130a2c96145d0530d86c6109f40d823f1c2ef7db1"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/SimpleClipping",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/SimpleClipping/SimpleClipping.cpp",
+    "type": "file",
+    "bytes": 1106,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5f37400e353d50164d34fb99a1565ced69bb6c609dbe34a3b506f93bfce87a5b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test1.svg",
+    "type": "file",
+    "bytes": 897,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ecb870ac4c46aa4acbb355695f490100f7970b8009a6a3f15c77e969c7094c6c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test10.svg",
+    "type": "file",
+    "bytes": 465,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "aea47918ea52b609d1c2f2e498b3433c9be76c06df4a703b66492f7751673820"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test11.svg",
+    "type": "file",
+    "bytes": 423,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f49edd47508e420a742065c80efa565c03769c96aaa462e2403fe6fdc046b65e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test12.svg",
+    "type": "file",
+    "bytes": 463,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "2622bd2262d051e7e6edfb1cb0eb929ecc5456411c9517a03b4067c28ffa4253"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test13.svg",
+    "type": "file",
+    "bytes": 499,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d1043e8451978287c6d2de8f7d00a7ad97c146bd4c3b86006e738701dcfa4be0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test14.svg",
+    "type": "file",
+    "bytes": 582,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "13f72b3cb4f67926e297297e9cbf01026d2ec29c9b55d60f4645c2de75ae635b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test15.svg",
+    "type": "file",
+    "bytes": 664,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "03b613469b8163a25e41d8d9f7da75363f9e22e169dc72e248f60a3545b75e15"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test16.svg",
+    "type": "file",
+    "bytes": 686,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "af97ef6890930e7e2a738c12794d2e4ccef111b4496b0fa883e20d7a1f54806c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test17.svg",
+    "type": "file",
+    "bytes": 593,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f636fdaaca504b894343c31e757f1ac6b6c9d73f4f0219d16168672ffbfbdcc7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test18.svg",
+    "type": "file",
+    "bytes": 510,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "afb4963da6cb44e08c7bbf3338cfe9e38e7eea38252d5ac5559351b45be82d7d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test19.svg",
+    "type": "file",
+    "bytes": 546,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "211954b583c07291cdc7088a075a9195adcf35f47131b906481b43959c8e85d2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test2.svg",
+    "type": "file",
+    "bytes": 597,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "352b0dc3da04d246528fee1b23f9d78eb75266a8f487ff91521bc20fd80eb4f0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test20.svg",
+    "type": "file",
+    "bytes": 511,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5ebaeee69d6e76ca4c06b99ae8d34b4cdd73f3588486d60fbc73ee9b54d4fab6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test21.svg",
+    "type": "file",
+    "bytes": 503,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "cc5c50b0d37fc07ccdb019cfc2beb711ec6444239e349e4ae0facb1cf50929fd"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test22.svg",
+    "type": "file",
+    "bytes": 518,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "42971b184ce743c98c30f2033a3a020e4dcc4f74326e60125ec6025da1e14334"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test23.svg",
+    "type": "file",
+    "bytes": 634,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "70df5ee55155b55ec4d82d90a5e63fe5977722070fdf1a1abd4df2c604f099e0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test24.svg",
+    "type": "file",
+    "bytes": 550,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f0708c427000206959507115572ae299e9409cdd73c7d7a77944cd888edfa566"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test25.svg",
+    "type": "file",
+    "bytes": 592,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "bfb14c2ac0efb369c3410dee823ac43bc039dba3b4e9b372e190601133b77cd7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test26.svg",
+    "type": "file",
+    "bytes": 534,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ee42469dd100c1adaf8307afe569f1996b91a4c1bd3287b91036cf3f6686108d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test27.svg",
+    "type": "file",
+    "bytes": 581,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "583c8f8301eda5a90c108e8cc4ec847ad34605dd9f9a7f22efffbdf4ee0de7e4"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test28.svg",
+    "type": "file",
+    "bytes": 585,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8c3ca173ac918ce24cb72236761b98a22c8203f5da69a7a8c58ae637de54918f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test29.svg",
+    "type": "file",
+    "bytes": 576,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ac40a2c1851708b7512006d01068d02f68b2169d98ad5aafddae9ce0a252f58d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test3.svg",
+    "type": "file",
+    "bytes": 469,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "172cdcc8f3413626eaaac52deef275d479bde33c081557e7661986acf319edb0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test30.svg",
+    "type": "file",
+    "bytes": 1088,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "cbaa0456cf37618a38356dc93b4858d8584cc86373b40e5d4bbae126c712d396"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test31.svg",
+    "type": "file",
+    "bytes": 570,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "73c88fe0f815146ab3e4e74baa6edc92e23ffc2fd5898b02bb10e218cf38ebeb"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test32.svg",
+    "type": "file",
+    "bytes": 568,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d60370f145f6778068538034db6569410654e5faf8991fb7bff8ceaa57449d96"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test33.svg",
+    "type": "file",
+    "bytes": 1327,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c695bc4541ae7ec6e1751c3f9a37aa404b51498fa76905b76e33a18fb8a9ce7e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test34.svg",
+    "type": "file",
+    "bytes": 1644,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f842a99b15324152bafc3fc214a71a9df944b2f5ea610c426dc6fb3ba7f1933b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test35.svg",
+    "type": "file",
+    "bytes": 1339,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5958696204a5bf548679f58feff669f57f5a5ecf0bc5616f6c91d69c356347c3"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test36.svg",
+    "type": "file",
+    "bytes": 1058,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d7a3a02595ebf7c09c64485bacd5e7f632aa5b9e7fe282d90cf34a740d886d06"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test37.svg",
+    "type": "file",
+    "bytes": 1992,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "aa3725b03f1c769426c6db79870c2d686a7636365112e4268b4bcc198aa60388"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test38.svg",
+    "type": "file",
+    "bytes": 2529,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "eaf35fcc3ee834d935369478e6d218599d4d0220062579a0c883c24d3e5de281"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test39.svg",
+    "type": "file",
+    "bytes": 2671,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "17eebfc92513635107b0833bdfd6859897e23014d7197962a2ac8240b501a813"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test4.svg",
+    "type": "file",
+    "bytes": 509,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "86bb752c1be890567c8e4a14670505848807e1513809ca9c382fd65f1eb9455d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test40.svg",
+    "type": "file",
+    "bytes": 3336,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7e4b115c71c0126400f5253330e329d6ad59f874147e989e12899072c72ca23f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test41.svg",
+    "type": "file",
+    "bytes": 2279,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0dcc3c9332cc6e791223bbd01fda716e64ab623241ccf301d85dc559620f72d6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test42.svg",
+    "type": "file",
+    "bytes": 2632,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "13de4ff0d0f5e9dc9f78c02553f67cd2b04c005d35be882046d0364f3c2dacf9"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test43.svg",
+    "type": "file",
+    "bytes": 6158,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f521743b21e1e1434396721720524df514eee49f1454e8d65b2500721b7734e3"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test44.svg",
+    "type": "file",
+    "bytes": 29683,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6f0a63d083f50d0b273e0f3773e66e1ffacde3595609b037d9641a9418157bec"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test45.svg",
+    "type": "file",
+    "bytes": 10517,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7f4c7667b92facc754ef64764ac010d49d49ef26f6ccc2863772fca2061f09d2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test46.svg",
+    "type": "file",
+    "bytes": 12659,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0ce18c0e1c287be2b5f80239e0916b4662061f3eee58ea7a467d8dcc46a10e16"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test47.svg",
+    "type": "file",
+    "bytes": 4587,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "10834ce956e5d2d07714c36a235bab1cf7b2686b6976ea30e656ca986252b2e7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test48.svg",
+    "type": "file",
+    "bytes": 5951,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c1f61757cb417aab4280e04710c7198d724a22b5e0d320f0b1bb2b14b34106df"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test49.svg",
+    "type": "file",
+    "bytes": 11112,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "eb030e601b83fe23f83e0317079e85dd83ea357442db4d147008a1bfd93c109e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test5.svg",
+    "type": "file",
+    "bytes": 479,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b4c353901ff4be129d74d4e1c98953213e0bd65c4119ba48c88125c7cb9a4949"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test50.svg",
+    "type": "file",
+    "bytes": 4825,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ff7d99d845090c123b6bc44637ba76bb282e990a347afea20813f324a6016c0a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test51.svg",
+    "type": "file",
+    "bytes": 11558,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9759cdd6cc5b7d3a1b25222438ecd1e18efa69498bf569a485251568019a0d9a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test52.svg",
+    "type": "file",
+    "bytes": 5739,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d841ac7ebd97243892467abe4d19b3c8add2683a022ab3cef38d1e230a9470ef"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test6.svg",
+    "type": "file",
+    "bytes": 472,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "1661f1d2dc87e7e53cc556ef7c0b08307ff9c197cb299e09eb86e88072178bd4"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test7.svg",
+    "type": "file",
+    "bytes": 504,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "1d4305c1c46dab9a557eb4311ddf77114f3e0884a9de42a1e1162ae83deb2e2f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test8.svg",
+    "type": "file",
+    "bytes": 321,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6c90ff102d65bed6accfea739b72cf90594df9fd68113f83aa1290fcc8478c37"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/Test9.svg",
+    "type": "file",
+    "bytes": 484,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a92bf99a415aac9b6ad1da53e63c2f560e5db276456738bbaff32758755617ef"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/clipper2.svg",
+    "type": "file",
+    "bytes": 9378,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "55ba26b4fe0b08227b2976dc7081181830f927e5175ff202dced5f44a99c7365"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/TriSamples/coral3.svg",
+    "type": "file",
+    "bytes": 4033,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "cee03f0645a306ceaedee606e91292a475f65a6fb2f294f439595718f29ea6a7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/Triangulation/Triangulation.cpp",
+    "type": "file",
+    "bytes": 4992,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b129482dbeff90e48576f5473219b4712358e162ce1d1b2584c3824af5c24ab2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/UnionClipping",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/UnionClipping/UnionClipping.cpp",
+    "type": "file",
+    "bytes": 4331,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a39ae4e83c4c9c8c75dc4ce824760a6ba819ce71bb2df1f1333ff3ccc85bb302"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/UsingZ",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/UsingZ/UsingZ.cpp",
+    "type": "file",
+    "bytes": 5423,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6531f5ace89cc96e185e25f0590a8a44791c50c82f48f88cd70225d9a108cc77"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/VariableOffset",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Examples/VariableOffset/VariableOffset.cpp",
+    "type": "file",
+    "bytes": 4704,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "3d760c0286bd20a59eac3b3e00b930e696f89ce451212663af01e389bd2fa336"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/GoogleTest in Visual Studio.txt",
+    "type": "file",
+    "bytes": 590,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "88161152c1f3fb4b3a58c310c69f8430127164c9834ec195c5f3829b9e2e1aa9"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestExportHeaders.cpp",
+    "type": "file",
+    "bytes": 7810,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "aa72514b2822f968a49714f7b597906cc37a0e67659b2502389387a5990f6fb2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestIsCollinear.cpp",
+    "type": "file",
+    "bytes": 3171,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "efd99dcabe106735e18a79066ddecd62d2df9f2fbaec64d63fb0d653c0f0d9e8"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestLines.cpp",
+    "type": "file",
+    "bytes": 1600,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8f34e3fb76ab22ff3b832eddc510f4afb8f54c2322d82384ca54bbb0963ecb5e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestOffsetOrientation.cpp",
+    "type": "file",
+    "bytes": 1652,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9c06b6cedf3df17382caea1f368a2f5d376df458277419b87eafd5e84993dceb"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestOffsets.cpp",
+    "type": "file",
+    "bytes": 39666,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "56e5da18af22f9a0ce14b292c536fdd5666a0c462ad9b88dd7a0c19db7193c5b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestOrientation.cpp",
+    "type": "file",
+    "bytes": 692,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "88e5d09e95fc711fb38bbb859af0408a28a17d96b05049abe50bc2092bb7d8ee"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestPolygons.cpp",
+    "type": "file",
+    "bytes": 5548,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b3a264e977c149463f6c68f8b43110694921b91f99120be486e45280f11e9685"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestPolytreeHoles.cpp",
+    "type": "file",
+    "bytes": 13100,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "09380f95659bb37f99e572cda7f8281940160500400d3ec97ade0b29d2609b5c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestPolytreeIntersection.cpp",
+    "type": "file",
+    "bytes": 776,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9ff162af0e862952eb25e27f01f829963c0dfd2f1bca0414ecc85c5d0e594dc8"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestPolytreeUnion.cpp",
+    "type": "file",
+    "bytes": 2625,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "2be7f2bd3a27ebb3138daf47b81f8b9e03ffd01643c3e0b5efe9f2a51aad71cd"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestRandomPaths.cpp",
+    "type": "file",
+    "bytes": 3587,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "424adf4fcbb57ec8f285331bc29eba15f2b2e88c81f6e4e3fa9a9808964a35c9"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestRect.cpp",
+    "type": "file",
+    "bytes": 1180,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7b1cb91bc72010dcde4a2f42fd115816e0d919422ddf1e534529966c2367fb89"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestRectClip.cpp",
+    "type": "file",
+    "bytes": 2763,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8330c484806f967da77d9fd7078ceabc41bb69d7a46c66892eabe42d195fdbb0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestSimplifyPath.cpp",
+    "type": "file",
+    "bytes": 348,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8df9f9fec9f9d3da7c7bfe7ed71b7db943a846a494f98a375f881a1b31e58296"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestTrimCollinear.cpp",
+    "type": "file",
+    "bytes": 1106,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ad86092bbddf8459e2c4f1046d4b4592a3d48a3c90226d73a45947d142d653c4"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Tests/TestWindows.cpp",
+    "type": "file",
+    "bytes": 139,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9a93e7b337ad63b659e031a6962b7011cea96efae253d469e323591473610173"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/ClipFileLoad.cpp",
+    "type": "file",
+    "bytes": 3547,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a68934011ee6b0943d9c8bf058f74ea2847419cbd263ee82949c3ab67b4ebfeb"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/ClipFileLoad.h",
+    "type": "file",
+    "bytes": 1222,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0f608e7356dd879b404208fd015ec81ad3940985fdfec5cf52763beb1bba5642"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/ClipFileSave.cpp",
+    "type": "file",
+    "bytes": 8465,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "899a970b5aeebd6f2d5275ea8ee1119b864f52258b8807ed0cab135dd7fe9018"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/ClipFileSave.h",
+    "type": "file",
+    "bytes": 566,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d9b7d98152a969861ab353a1701f3aaadb65395ce75b3b83347932531c14a572"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/Colors.h",
+    "type": "file",
+    "bytes": 1568,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ad1fe6a034dad6f5f738c444cad33f265cb1399e4870d95fe74c1adfe55e09cc"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/CommonUtils.h",
+    "type": "file",
+    "bytes": 941,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "18328d46439af066f117d981d321da433a683734b18ed4e1cbd8ccb623c6009a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/Timer.h",
+    "type": "file",
+    "bytes": 2329,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "999f41fb45b1508ca8bf2a0292e614c251ec78c8459a6327dcdd4d51ced0bbc8"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/clipper.svg.cpp",
+    "type": "file",
+    "bytes": 14656,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "efecfad7fa97146c38dff72f8534e349d59dd6b115c91a699a5fdb47857bb95c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/clipper.svg.h",
+    "type": "file",
+    "bytes": 4225,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b61c3a8769c82f7398281983ad5645a5e16886434e2843f3d8a9ca03ca5cb3ef"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Utils/clipper.svg.utils.h",
+    "type": "file",
+    "bytes": 5585,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "51ba79b825489c69228fc47631ed0dff835f3cb46b6a3b1f488909149792f6ef"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/clipper.version.in",
+    "type": "file",
+    "bytes": 138,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0fa7b02aae2751806611a1d8636df89f162608c1af2a9e6b9b5876876a99c544"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/.editorconfig",
+    "type": "file",
+    "bytes": 5414,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e5f710dfd5da363ae37026df17d8f79b010e71dc261f771f5082deaf4822f758"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/.gitignore",
+    "type": "file",
+    "bytes": 4296,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7ee712ddee34ca179582e495a54c255bd98d0dc62ece01bf9323d557d9202af2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Benchmark",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Benchmark/Benchmark.csproj",
+    "type": "file",
+    "bytes": 753,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7f51b24c077514966473117cda6ae73bce3522a02560a319759258ce60c668eb"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Benchmark/Benchmarks.cs",
+    "type": "file",
+    "bytes": 2803,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b63ebb4546aa76cedf5b3d2766d5f181288fb60cd65588b55a282bbbd768b042"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Benchmark/Program.cs",
+    "type": "file",
+    "bytes": 275,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5da58aa5e378b9117552f73dc8e70ea337dd0bbd00aed379350868372e4d6069"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib.sln",
+    "type": "file",
+    "bytes": 5340,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "4654fd75e01bc49ed1f8c544db4e6045b7f10ca553c81a72981e2c01ded6403c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.Core.cs",
+    "type": "file",
+    "bytes": 23657,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "dd9c64a31234011597a5a23c9dba1b986d7b7ff9fb4d0ad789871cd2731ddcfc"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.Engine.cs",
+    "type": "file",
+    "bytes": 110183,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c134d6aa357b5f4631316c997b07270594126f47d3aa38971aa5b78b9e7f2072"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.Minkowski.cs",
+    "type": "file",
+    "bytes": 3106,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "35babacd3f2ac8e77e2936df3cc1a7fa9b87250ed58bc5d4b68dc1aaa52b8925"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.Offset.cs",
+    "type": "file",
+    "bytes": 23981,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "30dd338557d688b10af3778652b2664ea49c503dce877585cca56e9b8a995a9f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.RectClip.cs",
+    "type": "file",
+    "bytes": 31097,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5d85bc4bf525587535d5772189e6fb6380d0c6d91b1901ad151ce022923e518d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.Triangulation.cs",
+    "type": "file",
+    "bytes": 31030,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "4e00ae605fe012365a7b412bbeda43b2dbb0b08fa2b89abf2f21605912838047"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper.cs",
+    "type": "file",
+    "bytes": 38814,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7fc7ce822be25640389b87806a5b1b70eda5b0dd3021b2cd33f18429fb9f33da"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper2.snk",
+    "type": "file",
+    "bytes": 596,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "3a5e4380b65de51196357007bf8a0f7892b288c13a167789585d69281d7b2a48"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/Clipper2Lib.csproj",
+    "type": "file",
+    "bytes": 2634,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a1b7b2078951e0b30636a29bee9b7b910bc1bfc219e80ef3ea8530630ea5db6f"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/HashCode.cs",
+    "type": "file",
+    "bytes": 4799,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "bd9cfd5c2685731041cec1c5c18b9846ddf3e2a4813c410dc64fd4ae095eeb5d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Clipper2Lib/PooledList.cs",
+    "type": "file",
+    "bytes": 8188,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "38b9cc4636c7893a20303fbc403608331fcd145f7b0f59ebedb9b7bb7151f506"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/ConsoleDemo",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/ConsoleDemo/Clipper2.ico",
+    "type": "file",
+    "bytes": 121308,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/ConsoleDemo/ConsoleDemo.csproj",
+    "type": "file",
+    "bytes": 1112,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d2fc57d772d25a342c640b3611e5e6b18b2bd3256eeff68761bb950d2802f594"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/ConsoleDemo/ConsoleDemo.sln",
+    "type": "file",
+    "bytes": 2809,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6b0b3cf79c205fa2585c6da7499506fa2782e41799c0b35dd34017c78b9d7fc5"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/ConsoleDemo/Main.cs",
+    "type": "file",
+    "bytes": 5628,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0d18e64dde628addddc5acd32085e3425c3bd474daafbaffe6c28fdd57953abc"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/InflateDemo",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/InflateDemo/Clipper2.ico",
+    "type": "file",
+    "bytes": 121308,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/InflateDemo/InflateDemo.csproj",
+    "type": "file",
+    "bytes": 1155,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "cd973f23b168e0310768ca60b4c03f5e49abcc296d951786c719e51b67484178"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/InflateDemo/InflateDemo.sln",
+    "type": "file",
+    "bytes": 2311,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6572c837d903d27319104e8bbbf679a93baa791324f07aa97df9fb7547e23621"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/InflateDemo/Main.cs",
+    "type": "file",
+    "bytes": 4524,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ab1255e4b5f8853eee5d66886523654373ca81b12f60a3fb1ddca7ca71c2c3f1"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/InflateDemo/rabbit.svg",
+    "type": "file",
+    "bytes": 1853,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8e560d04101e15912182d8c01922b6c1703ecbdfc5a4794020881815a8ddb2c9"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/RectClip",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/RectClip/Clipper2.ico",
+    "type": "file",
+    "bytes": 121308,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/RectClip/Main.cs",
+    "type": "file",
+    "bytes": 4149,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a4339cbf7d49dc2c31d79bdd875cc638e847c23fe694b70578dabbdba08ad28d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/RectClip/RectClipDemo.csproj",
+    "type": "file",
+    "bytes": 1629,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "aa9fd088d2678e95dbf66f8d95ab8d249dcb6a4adf77b3397955eed3e1173c5e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/RectClip/RectClipDemo.sln",
+    "type": "file",
+    "bytes": 2313,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ad31548d61b4ac2a73cf9a1c310ea92ebb37602eaa8fdbd7c80f8287fd1bedd2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/Triangulation",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/Triangulation/Clipper2.ico",
+    "type": "file",
+    "bytes": 121308,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/Triangulation/Main.cs",
+    "type": "file",
+    "bytes": 4102,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d7d0451a0da0766754d20d456a680be1e6585019aa260fc8ae7542de50c210bf"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/Triangulation/TriangulationDemo.csproj",
+    "type": "file",
+    "bytes": 1112,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d2fc57d772d25a342c640b3611e5e6b18b2bd3256eeff68761bb950d2802f594"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/Triangulation/TriangulationDemo.sln",
+    "type": "file",
+    "bytes": 2821,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f5b1c307474d6c3093f30051ec8ca44d1afeae5750fc73fdf0cf1f76d74e0dd9"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/USINGZ",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/USINGZ/Program.cs",
+    "type": "file",
+    "bytes": 2868,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8d21f1a5009a2cd7db2ad01bdedc5f038b4f30ae6dd240699627b02ee5523318"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/USINGZ/UsingZ_App.csproj",
+    "type": "file",
+    "bytes": 866,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d16fee824cb95131482089b75280ea130d00bc482b4f46b9f6f227f95749bc2c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Examples/USINGZ/UsingZ_App.sln",
+    "type": "file",
+    "bytes": 1586,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b759538d5a90881f8bec587f168d680a82ddef05bfcf3448ea267b9361a1c973"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/NuGet",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/NuGet/License.txt",
+    "type": "file",
+    "bytes": 1337,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/NuGet/README.md",
+    "type": "file",
+    "bytes": 1080,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "7fba202aa983f8d921ba5bfaa3809101873c98d44d2a2d27dd40b0fdc8374aeb"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/NuGet/icon.png",
+    "type": "file",
+    "bytes": 7381,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ece5054effdd57acec60cc1b964d92ba2cf37406285a30d6d32fb36c9cf2cd1c"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests/TestLines.cs",
+    "type": "file",
+    "bytes": 1316,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "4375bcc2ad1b3563d831794c1812ef9c1abcf2ab16c29d177956fdf37aaed205"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests/TestOffset.cs",
+    "type": "file",
+    "bytes": 322,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "bbe913df35c47152f4edaaf61238d6233ec254758d7563639e6694bef24df839"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests/TestPolygons.cs",
+    "type": "file",
+    "bytes": 2911,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8d996e76c51a81678f736ad40ba1934e60c46e42a4f8bb060ce96dbe2dbc1f9d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests/TestPolytree.cs",
+    "type": "file",
+    "bytes": 6823,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c789ed15a094f9f0e49e4713ad463cbd8f8ea97733207ebadc204410f5d2e996"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests1.csproj",
+    "type": "file",
+    "bytes": 1070,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8ba4b99b78c0ee6c6a79064fccb5afeda48ac2183512d7d9e25af32a5fe0e34b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests1/Tests1.sln",
+    "type": "file",
+    "bytes": 2311,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9aa0e2fc439ed5834879e6a16a047036f35243c678034e8a35db768408296fd2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests2",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests2/Tests",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests2/Tests/TestZCallback1.cs",
+    "type": "file",
+    "bytes": 4578,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9356ff876caac93db1f6baac62f09d2bdb674b639e8653fbaa841b28dba47c54"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests2/TestsZ.csproj",
+    "type": "file",
+    "bytes": 1075,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c839eb1e63293f2bef7dc5fe4bac1ad06898a239385507506b81c931b23158d0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Tests/Tests2/TestsZ.sln",
+    "type": "file",
+    "bytes": 3052,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e4168cf76303a6d77dc992f58a4a412057f3e2bf84647773a779f2c9c7e49741"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/USINGZ",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/USINGZ/Clipper2Lib_Z.csproj",
+    "type": "file",
+    "bytes": 1282,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "52909eac90b88dfa94a706d20e4769d1ddbd6bc19b77dae90a895f4bff1938ac"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/ClipFileIO",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/ClipFileIO/Clipper.FileIO.cs",
+    "type": "file",
+    "bytes": 8667,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "54b729cb143d14fdbd6e5dea08e9d17a0e43bfb753bc1a95746f84a29280b441"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/ClipFileIO/Clipper.FileIO.csproj",
+    "type": "file",
+    "bytes": 420,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "97d40dc448993c8396a42e66f06b19a694535974a35648072dbf3e1ad6d4d316"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/SVG",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/SVG/Clipper.SVG.Utils.cs",
+    "type": "file",
+    "bytes": 3925,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "fa90f3a370354bfc95071998596912b0b7a4f164a66ac1eb4b5a86f7785416ae"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/SVG/Clipper.SVG.cs",
+    "type": "file",
+    "bytes": 13795,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "214fc443b1320411542cb1992250bc6d710e231855672de69fc4e3ab4a241ee9"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/Utils/SVG/Clipper2.SVG.csproj",
+    "type": "file",
+    "bytes": 357,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0c7ebbf66d541f4a89bc52366bd6c35b5ca5bff588ec88b8d130f463bd2418f0"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/Clipper2ZDll.vcxproj",
+    "type": "file",
+    "bytes": 9398,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "27fd286e7845076b9e57995af32c35ddae54fd770d23c5a6bb8eb10fb8a28b78"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/Clipper2_DLL.sln",
+    "type": "file",
+    "bytes": 1413,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "06445c9c50eb6dd468d1ec71be0dcc65534a0effa53d7fad79e0dc846ab53b17"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/Clipper2_Dll.vcxproj",
+    "type": "file",
+    "bytes": 9361,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "3d3cb765d5cbf34f2de1f911fe8a8fda5723431b40ab35f06e98e8e0a263c5e8"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/Clipper2_Z_DLL.sln",
+    "type": "file",
+    "bytes": 1413,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c83220b3f1c4065ea1a12d6028c9d7af4c61c408f57322ca9a70629eddf906c7"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/dllmain.cpp",
+    "type": "file",
+    "bytes": 451,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "03ceda09a0e0664d6e99780c14b0542810acc03fbbb0e8d464e0ac4e7355f527"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/framework.h",
+    "type": "file",
+    "bytes": 149,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d7e3273aca06ee9a2b47ec7f96fbf06fd9301849ebf26ba54a441f8fcde36bd6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/pch.cpp",
+    "type": "file",
+    "bytes": 186,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b20ad711fa06e3ef62f8e3c626e13b3bdc69cff08c60c8b358f38b09e16c99ef"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/CPP_DLL/pch.h",
+    "type": "file",
+    "bytes": 563,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "ae8edb9ed44e84db3a64ff02bb4e053d661dc19474d8e284bda1c4d625744a0b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/ReadMe.md",
+    "type": "file",
+    "bytes": 848,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5691b0afb22a3ec1b18b9fb2fc5a6e1998c4e0adb844fbc5bd66bad58cd18d13"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/COPY Clipper2 DLLs HERE",
+    "type": "file",
+    "bytes": 0,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp/CSharp_TestApp.csproj",
+    "type": "file",
+    "bytes": 606,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a4cd6e8d878ec886090f8b02a3d1c1df64e8928c8acc91049aeb7a568f8f7db5"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp/CSharp_TestApp.sln",
+    "type": "file",
+    "bytes": 1060,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "387d2a8f01f218ae4bab7f0b81db83a55a772edf7c3bfb1ec527e780694e6a64"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp/Program.cs",
+    "type": "file",
+    "bytes": 13776,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a7d106c644cf55867d8762a2fa66db74a6e53e00be72e01a519bcf13a8f4cca4"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2/CSharp_TestApp2.csproj",
+    "type": "file",
+    "bytes": 721,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "95a8cfb80cc3671bb0e4dbc39173f1b812595b179076a1b3105bd97782475c81"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2/CSharp_TestApp2.sln",
+    "type": "file",
+    "bytes": 2750,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e9877efa34545b6da3695e01495f094b49f933d65d6e4eee8d0c17a565035633"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2/Program.cs",
+    "type": "file",
+    "bytes": 4609,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8a58af7131c374ade4de429a58c78011cc9d37e319c903d9df8f85c67542df6e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/Clipper2Dll.Core.cs",
+    "type": "file",
+    "bytes": 13211,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9f227cee51d05117012e763ee2dbb0cdf3f89c602f839cb4c81d9d2c4ca210f4"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/CSharp_TestApps/Clipper2Dll.Svg.cs",
+    "type": "file",
+    "bytes": 15699,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "58dee2c58ee1a670806b9b7f010a3544001a6b17b6f6deb4d392a8c315286eff"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/Delphi_TestApps",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/Delphi_TestApps/COPY Clipper2 DLLs HERE",
+    "type": "file",
+    "bytes": 0,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/Delphi_TestApps/Clipper2Dll.Core.pas",
+    "type": "file",
+    "bytes": 10493,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "48bdee1f5b8b7fa251f40b6d5c3beeb96b6546a5d0fe441ba0daec2ccc86f2d8"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/Delphi_TestApps/Clipper2Dll.SVG.pas",
+    "type": "file",
+    "bytes": 26463,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e10fef051300871a3a455860655f21967db56aaf51a8e5bc10854a2a247ed83e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/Delphi_TestApps/TestApp1",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/TEST_APPS/Delphi_TestApps/TestApp1/Test1_DLL.dpr",
+    "type": "file",
+    "bytes": 7583,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f044e3eaddc5aba632aaec01df459773edfb7572067e2bc2b948ba2ebd1c9a9d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/BenchMark",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/BenchMark/DelphiBenchmark.dpr",
+    "type": "file",
+    "bytes": 2303,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "b254297e9337b5a81fd3e895e3b53123f05163b999ea0307ebac20f589d569d2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/BenchMark/DelphiBenchmark.dproj",
+    "type": "file",
+    "bytes": 7237,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "068a2e9e431c23103fb97a1a9479686e16e4872de20a50337c24edea85f7e7aa"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.Core.pas",
+    "type": "file",
+    "bytes": 79686,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "d992a8105b5107a4c3981b83d6eefe1d307b2cf12b4e468f223292fb3c78370e"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.Engine.pas",
+    "type": "file",
+    "bytes": 126668,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e3c6cfc892d2243f9f2f220fad4251658d05fdfca881cf01d9f321ab562e5e20"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.Minkowski.pas",
+    "type": "file",
+    "bytes": 4153,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "219a568aa45b0091bce1c4f1f2f57dba82fc6ab5f74c41d34d9efe5014ac8a29"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.Offset.pas",
+    "type": "file",
+    "bytes": 31026,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "5cab1cba783fefbacad393a8e5cec1e52c97dd8c36157c1154dad822b9d0d532"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.RectClip.pas",
+    "type": "file",
+    "bytes": 34293,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6590887d324e287231ad8787e9a4e889fbf04db810e7a519e8da336bc9976e42"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.Triangulation.pas",
+    "type": "file",
+    "bytes": 48334,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "9eb1418e6deee25b9d77dbefb370f5054b9cb8d7130240deeea27354ffaee9b2"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.inc",
+    "type": "file",
+    "bytes": 1273,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "f9de956656a28ec8bc7fbd0e21f185471f1a7729e9f4b2bb74dd862e70fa4766"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Clipper2Lib/Clipper.pas",
+    "type": "file",
+    "bytes": 31047,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e1ec1f284bde3076c68040a87527bc70571fadf469e6be60af44fa155c505b02"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Example1",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Example1/Example1.dpr",
+    "type": "file",
+    "bytes": 2770,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "440b2a62aa9e73cb5e88145ded04add082d2a2bd57fc611634f89cf201bdaa9b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Example2",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Example2/Example2.dpr",
+    "type": "file",
+    "bytes": 2863,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c2c195569bd79dc405ab2daeeabbccd35a1b97dcf9d00d7e68a69fcdfe71c969"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Example2/rabbit.svg",
+    "type": "file",
+    "bytes": 1897,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "0117c42dfe0b59b6672150836d9fa12c64125f5febc5016df865decee50a67af"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/RectClip",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/RectClip/RectClip_Demo.dpr",
+    "type": "file",
+    "bytes": 2249,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "6314d7e7d038d0697e74c581c18cd92d2ddfd24745443ac14c2f489295ebd8c6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Triangulation",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Examples/Triangulation/ClipperTri.dpr",
+    "type": "file",
+    "bytes": 1006,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "af147650dee410ab75633235d1a7657ac28a23558bca51024b45d30f7352d8e3"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Utils",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Utils/ClipMisc.pas",
+    "type": "file",
+    "bytes": 8357,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "84a76b9cdbb70f60a604408db8538a8c8937e56f89fe312a62062a2dbb17ca08"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Utils/Clipper.SVG.pas",
+    "type": "file",
+    "bytes": 24867,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "8ded50d491a99cb3d4f8f85b87eecf3a8eb24273e598fbd7ab92a49de518a6b1"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Utils/Colors.pas",
+    "type": "file",
+    "bytes": 1760,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "535bacb1d7c3c7fb9fd964286c6ad107c7ac9d26231cb5690f0aa0c05a7414d6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Delphi/Utils/Timer.pas",
+    "type": "file",
+    "bytes": 1744,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a8841428da77e667764eea365d963261c78783b30f8660cb513471602057f92d"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/LICENSE",
+    "type": "file",
+    "bytes": 1338,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/README.md",
+    "type": "file",
+    "bytes": 5933,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "232437d0b8343f875c367e642b96dd4ab30d5b473cc91f659a50caec018af52a"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Tests",
+    "type": "directory",
+    "bytes": 0,
+    "mode": "0o775",
+    "link_target": "",
+    "errors": []
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Tests/Lines.txt",
+    "type": "file",
+    "bytes": 2669,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "1beb973931b1fbbaa12a3bdef207ecf322d7daabd1fcc580c4cb4cfd9ab03321"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Tests/Offsets.txt",
+    "type": "file",
+    "bytes": 22230,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "82d1e5a9d9a673c942d66ec5a21930d174d99673c9c11a6026dca39e95e2e92b"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Tests/Polygons.txt",
+    "type": "file",
+    "bytes": 96359,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "af4d409fd8496225729240a9695904c90a151b3f89b6cfff1601e702522e7d46"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Tests/PolytreeHoleOwner.txt",
+    "type": "file",
+    "bytes": 68416,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "a37da43cf5a7ee1d056703b49daebd7de472fadf1421e581f4e887bd0bfbacd6"
+  },
+  {
+    "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/Tests/PolytreeHoleOwner2.txt",
+    "type": "file",
+    "bytes": 707255,
+    "mode": "0o664",
+    "link_target": "",
+    "errors": [],
+    "sha256": "e36a4c374deecc0f09cd6e982a3e99f67733e937e38fdf2e910ba5fb5c6ac21b"
+  }
+]

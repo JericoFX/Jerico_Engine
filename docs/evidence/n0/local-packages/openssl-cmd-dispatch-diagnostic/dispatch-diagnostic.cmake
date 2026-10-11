@@ -1,0 +1,8 @@
+set(_root "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-cmd-dispatch-diagnostic")
+set(_cmd "$ENV{SystemRoot}/System32/cmd.exe")
+set(_sentinel_forward "${_root}/sentinel.cmd")
+string(REPLACE "/" "\\" _sentinel_back "${_sentinel_forward}")
+execute_process(COMMAND "${_cmd}" /d /c "${_sentinel_forward}" WORKING_DIRECTORY "${_root}" RESULT_VARIABLE _forward_result OUTPUT_FILE "${_root}/forward.stdout.log" ERROR_FILE "${_root}/forward.stderr.log")
+execute_process(COMMAND "${_cmd}" /d /c "${_sentinel_back}" WORKING_DIRECTORY "${_root}" RESULT_VARIABLE _back_result OUTPUT_FILE "${_root}/backslash.stdout.log" ERROR_FILE "${_root}/backslash.stderr.log")
+message(STATUS "forward_result=${_forward_result};backslash_result=${_back_result};cmd=${_cmd}")
+file(WRITE "${_root}/cmake-internal-result.txt" "forward_result=${_forward_result}\nbackslash_result=${_back_result}\ncmd=${_cmd}\nsentinel_forward=${_sentinel_forward}\nsentinel_back=${_sentinel_back}\n")

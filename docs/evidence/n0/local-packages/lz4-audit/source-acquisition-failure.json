@@ -1,0 +1,35 @@
+{
+  "error": "Source differs from pinned Git blob: build/VS2010/datagen/datagen.vcxproj",
+  "receipts": [
+    {
+      "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "utc": "2026-10-10T23:54:07.503472+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Type": "application/x-gzip",
+        "Content-Length": null,
+        "ETag": "\"6d3d4684f12e24035006be4b07c1bebc893afd24de510a28c557f6c7154fdfa2\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "utc": "2026-10-10T23:54:07.827191+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Type": "application/x-gzip",
+        "Content-Length": null,
+        "ETag": "\"6d3d4684f12e24035006be4b07c1bebc893afd24de510a28c557f6c7154fdfa2\"",
+        "Location": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\mcpp-local-v2\\packages\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+    "bytes": 218928,
+    "sha256": "4C4AE3B71BE82837B18090029D7EC49A19AF80C12B35008B70A0D6F967ACC589"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\mcpp-local-v2\\packages\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 106,
+    "sha256": "CC9459D507D0EDA4A65D31AF97E1B4877B19644FF000536247F41D2056CCE95A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\mcpp-local-v2\\packages\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+    "bytes": 218928,
+    "sha256": "4C4AE3B71BE82837B18090029D7EC49A19AF80C12B35008B70A0D6F967ACC589"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\mcpp-local-v2\\packages\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 106,
+    "sha256": "CC9459D507D0EDA4A65D31AF97E1B4877B19644FF000536247F41D2056CCE95A"
+  }
+]

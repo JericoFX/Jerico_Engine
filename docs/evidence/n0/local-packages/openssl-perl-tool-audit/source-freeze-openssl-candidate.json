@@ -1,0 +1,113 @@
+{
+  "scope": "OpenSSL candidate source and explicit local validation inputs",
+  "state": "frozen for parent integral review; compilation and behavior not executed",
+  "ownedSourceFiles": 11,
+  "fileCount": 21,
+  "files": [
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat",
+      "bytes": 10524,
+      "sha256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+      "bytes": 677736,
+      "sha256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\nmake.exe",
+      "bytes": 134560,
+      "sha256": "B05F089F67DBA8DF1D7CC38798B71E62A6CE8881B234DCFC80A657264597626C"
+    },
+    {
+      "path": "C:\\Users\\Jerico\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\nasm.exe",
+      "bytes": 1680910,
+      "sha256": "991775152CADBC85CAF05DA348EA583145EC9126A0A6F15F20E25896FCD0CD41"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\openssl-1.1.1o.tar.gz",
+      "bytes": 9856386,
+      "sha256": "9384A2B0570DD80358841464677115DF785EDB941C71211F75076D72FE6B438F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\strawberry-perl-5.42.3.1-64bit-portable.zip",
+      "bytes": 304765269,
+      "sha256": "6A081A811781C30ACA51DBC036AFD93092AF91E3297901F02C17043795A10690"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\producer-candidate-inputs.cmake",
+      "bytes": 1186,
+      "sha256": "F39CEA6362F8E9C02138F4B7F5448234D4C2A04684670501B4D674BF5D238223"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\tool-manifest.json",
+      "bytes": 3622658,
+      "sha256": "FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+      "bytes": 6541,
+      "sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\BuildOpenSSLPackage.cmake",
+      "bytes": 11411,
+      "sha256": "F62C7A609E9E0696A1599EE7B20D020D2C7FAA1CD52A3795392095A2FF0158EE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\FindOpenSSL.cmake",
+      "bytes": 3567,
+      "sha256": "8BDA394448D6FD8A899EFC22066AC66774B2E5766291683547EBA1D3202CCF58"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\NOTICE.txt",
+      "bytes": 1528,
+      "sha256": "C70DE2589513897BF64C01D786888890A00575FC991DCA98989D1AE842B227C4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\README.md",
+      "bytes": 4736,
+      "sha256": "B2F1117CB30EB6436513E6714582690DEB4EEC70BD2CCE726D4EC7342D18DC28"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\RunOpenSSLBuild.cmd.in",
+      "bytes": 2340,
+      "sha256": "63CEAB0BCCA9581F52657CADAEA1B4D16ECF2D6E236E5D76A60BE91BBA879550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\CMakeLists.txt",
+      "bytes": 2717,
+      "sha256": "1EA2168DAFDECA7951035C542DF71359892BED0E1D0C3B88CF9DA871C49A1F3C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLConsumer.cpp",
+      "bytes": 12367,
+      "sha256": "5AFEC694578AD91C81C6469ADE29B9399B7E471E7D8AEDA71D516C27184100E2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLFirst.cpp",
+      "bytes": 303,
+      "sha256": "F0CEDB5471CAE1B2164610B812ECF66D920122A1E323A9C659729FD3D8BE0144"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\RunGuardTests.cmake",
+      "bytes": 4280,
+      "sha256": "13718732AF0F5C941EE8F464E2580C4989D93E102EFDE6883223CA070A86ED04"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\WindowsFirst.cpp",
+      "bytes": 303,
+      "sha256": "D9A8BCFD23746DDDE410373368E8F328418415A1482F4C9FB12168B01D300DD4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\VerifyPerlInput.ps1",
+      "bytes": 1835,
+      "sha256": "13D19A8B618B567756A1745F3CEEED6FB9204D0815DA18BB8B02BB05FF5DD794"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    }
+  ]
+}

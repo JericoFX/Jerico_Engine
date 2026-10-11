@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-10T22:48:09.4670306Z",
+  "method": "GET",
+  "url": "https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+  "status": 200,
+  "response_uri": "https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+  "auto_redirect": false,
+  "credentials": "none",
+  "headers": {
+    "Access-Control-Allow-Origin": "https://render.githubusercontent.com",
+    "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "Cross-Origin-Resource-Policy": "cross-origin",
+    "ETag": "\"893a0da265ce51069c957862b2451180a351d129cbf0b17fec93b673357afdc0\"",
+    "Strict-Transport-Security": "max-age=31536000",
+    "Vary": "Authorization, Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "deny",
+    "X-XSS-Protection": "1; mode=block",
+    "Date": "Sat, 10 Oct 2026 22:45:38 GMT",
+    "Transfer-Encoding": "chunked",
+    "X-GitHub-Request-Id": "E80F:199A0F:404D5:33624A:6ACAC012",
+    "x-github-edge-region": "brazilsouth",
+    "Content-Disposition": "attachment; filename=zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+    "Content-Type": "application/x-gzip"
+  },
+  "archive_path": "F:\\JericoEngine\\Dependencies\\archives\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+  "archive_bytes": 1707256,
+  "archive_sha256": "DFB594DC41E79C1304EF2C9232746C048E4837578C1CA88CF0E9B83C8CC36457",
+  "pin_origin": "Observed exact-commit archive SHA authorized by parent; not historical binary package SHA"
+}

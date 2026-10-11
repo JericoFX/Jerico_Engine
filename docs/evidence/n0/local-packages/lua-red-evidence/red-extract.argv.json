@@ -1,0 +1,12 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "tar.exe",
+  "argv": [
+    "-xzf",
+    "F:\\JericoEngine\\Dependencies\\archives\\lua-5.4.4-source.tar.gz",
+    "-C",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-red-unpatched\\source"
+  ],
+  "argv_count": 4,
+  "started": "2026-10-10T19:25:45.2873231-03:00"
+}

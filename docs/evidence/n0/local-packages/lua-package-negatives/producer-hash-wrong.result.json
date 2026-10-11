@@ -1,0 +1,7 @@
+{
+  "name": "producer-hash-wrong",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0292367,
+  "diagnostic_found": true,
+  "expected_diagnostic": "SHA256 mismatch"
+}

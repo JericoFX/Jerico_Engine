@@ -1,0 +1,4 @@
+[
+  "-c",
+  "import ly_test_tools; print(getattr(ly_test_tools, '__file__', None))"
+]

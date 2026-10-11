@@ -1,0 +1,41 @@
+{
+  "index": 210,
+  "source_path": "Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+  "expected_sha256": "6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646",
+  "expected_bytes": 108312,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:11.514639+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "108312",
+      "ETag": "\"6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:11.999406+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "108312",
+      "ETag": "\"6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646",
+  "actual_bytes": 108312,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Tools\\AssetProcessor\\native\\ui\\style\\o3de_assetprocessor.ico",
+  "status": "acquired and byte verified"
+}

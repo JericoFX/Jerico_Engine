@@ -1,0 +1,580 @@
+[
+  {
+    "url": "https://api.github.com/repos/lz4/lz4/git/ref/tags/v1.9.4",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/lz4/lz4/git/ref/tags/v1.9.4",
+    "utc": "2026-10-10T23:51:37.412844+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 323,
+    "sha256": "c20905518cad00d39c474f1473513c0d945874cb48e07d3e5223a34742d63692",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "323",
+      "ETag": "W/\"c20905518cad00d39c474f1473513c0d945874cb48e07d3e5223a34742d63692\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://api.github.com/repos/lz4/lz4/commits/5ff839680134437dbf4678f3d0c7b371d84f4964",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/lz4/lz4/commits/5ff839680134437dbf4678f3d0c7b371d84f4964",
+    "utc": "2026-10-10T23:51:38.035227+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 760333,
+    "sha256": "64e777db71fb21c393ad105d8ed7232fa4a1291065eb57c74175cd1d228321f8",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": null,
+      "ETag": "W/\"64e777db71fb21c393ad105d8ed7232fa4a1291065eb57c74175cd1d228321f8\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://api.github.com/repos/lz4/lz4/git/trees/5ff839680134437dbf4678f3d0c7b371d84f4964?recursive=1",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/lz4/lz4/git/trees/5ff839680134437dbf4678f3d0c7b371d84f4964?recursive=1",
+    "utc": "2026-10-10T23:51:38.477736+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 53439,
+    "sha256": "e6cf66a5c0ba2e78e01c061968a3d9b71cdcd83cfc4092b1cb1f0ef7960f0b5f",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": null,
+      "ETag": "W/\"e6cf66a5c0ba2e78e01c061968a3d9b71cdcd83cfc4092b1cb1f0ef7960f0b5f\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/LICENSE",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/LICENSE",
+    "utc": "2026-10-10T23:51:38.938083+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 635,
+    "sha256": "2949fcf758d3c9bcb05f8393ca42cadfa15be04eb4ae4b3327c4ad7957511e1b",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "635",
+      "ETag": "\"e4e196ec5a62561c2066f79b6ff154f389c65ca3927c7fb15b59f0649c71009c\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/README.md",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/README.md",
+    "utc": "2026-10-10T23:51:39.312351+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 5154,
+    "sha256": "6d091cce9100b9132631daf556f8564f43f956fd975afceb67c06231ddd38c51",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "5154",
+      "ETag": "\"0aa4b1f3e8a00fb317aaeceb58716529f3c4c7a27c3f9406d90f6090c6bee067\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/datagen/datagen.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/datagen/datagen.vcxproj",
+    "utc": "2026-10-10T23:51:39.705303+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9103,
+    "sha256": "9d34553f3923bbd915b909fa44f1ca645baa0ad1a36ec29bd4b4da170426953a",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9103",
+      "ETag": "\"cfbd394e9bc0c0f6f55757f341977d77462554178c266cd82ae61ac587700553\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/frametest/frametest.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/frametest/frametest.vcxproj",
+    "utc": "2026-10-10T23:51:40.107861+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9447,
+    "sha256": "3f9b192c66e17a7d94bc122262b1663d7b33ac92184b7cd46922a4fc0886edce",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9447",
+      "ETag": "\"9a2bab62130070e28ef945bdf000a3bec2784c2283b2443ebd2c9aabaa6d4d32\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/fullbench-dll/fullbench-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/fullbench-dll/fullbench-dll.vcxproj",
+    "utc": "2026-10-10T23:51:40.373787+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 10266,
+    "sha256": "3f2abef049a8dde15240cf5d3f8c70ac8b7d8d5ebf2a9fb58608a265927be693",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "10266",
+      "ETag": "\"e8ba42c4be0c510edf115049daa0954aa10644b1739e8e45cd8610d8a9b08b66\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/fullbench/fullbench.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/fullbench/fullbench.vcxproj",
+    "utc": "2026-10-10T23:51:40.636282+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9447,
+    "sha256": "031f4a3a8d97cbfa8901781a4142418c86ce5c8f5df2926a05445bd560618b4a",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9447",
+      "ETag": "\"6965cdfa1eff09467b7741a4722e1706703147f7c4c999f5e40da87d78dd595e\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/fuzzer/fuzzer.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/fuzzer/fuzzer.vcxproj",
+    "utc": "2026-10-10T23:51:40.912232+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9278,
+    "sha256": "0028d471386769985c16c6659fd11d5d8b24f7e6ca82096277abac108942fa45",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9278",
+      "ETag": "\"3b1b72b1825f94ed25872412954a5d44e13ad92c9be27679528c46b179eb88f8\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/liblz4-dll/liblz4-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/liblz4-dll/liblz4-dll.vcxproj",
+    "utc": "2026-10-10T23:51:41.198139+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9438,
+    "sha256": "ddb961ed8b32b82330c5b94a281c7509a6d7406d9d81b54297ea7e7fb585cfdb",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9438",
+      "ETag": "\"5a6b70700d60633f8c8f7afcf364802a35a4c0fe53ea13212c66346cb1d8bee9\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/liblz4/liblz4.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/liblz4/liblz4.vcxproj",
+    "utc": "2026-10-10T23:51:41.586673+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9337,
+    "sha256": "f41ac5716174cfd1c497de1fcba5e79be4497ecaabb8b0c2aa2c55045b3fcff2",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9337",
+      "ETag": "\"3c0f697763d5609de06d1f458c0ef551ea2badfdfde358ce4db01b7dbf6ec1c9\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/lz4/lz4.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2010/lz4/lz4.vcxproj",
+    "utc": "2026-10-10T23:51:41.953319+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 10097,
+    "sha256": "da7d243e5c4b03b15aae5c516180c78edcf321a9ef8f7a0bb1b78152b078f1f4",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "10097",
+      "ETag": "\"396423e1db2a83a9631f0061b0f97b666d75e51d41f633c9cb67a3cf07c6e7ac\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/datagen/datagen.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/datagen/datagen.vcxproj",
+    "utc": "2026-10-10T23:51:42.216888+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9282,
+    "sha256": "cd103338dcaed235eb6996542f32d0722702e3f56094d337df4cb60d04ebbe2d",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9282",
+      "ETag": "\"8eded0c8910c877bf83a00c567fa24e441c0fa089556b3bd4b8b4bdd3aac2fd1\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/frametest/frametest.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/frametest/frametest.vcxproj",
+    "utc": "2026-10-10T23:51:42.491538+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9626,
+    "sha256": "00342f1ecbeebae254b55660e650b0c3bb2cecfdb60213147fdc5c0874bc700e",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9626",
+      "ETag": "\"49aaa9fe99e1568469a8e297e8563cb189a180af311b5fc9ac510e108c1faac6\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/fullbench-dll/fullbench-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/fullbench-dll/fullbench-dll.vcxproj",
+    "utc": "2026-10-10T23:51:42.871465+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 10443,
+    "sha256": "e7cce8995563c0dfa6eb24c09dcfffaf5fee88df0644b8c7fd9de62bd0a4974c",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "10443",
+      "ETag": "\"60bea458c71b560d3ef016b4a7d0ce9c09fc30b3cc589796e1d0e06efa2b73ad\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/fullbench/fullbench.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/fullbench/fullbench.vcxproj",
+    "utc": "2026-10-10T23:51:43.244116+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9626,
+    "sha256": "a93a3692ab932832f9067752cbdde39cc0dce915ae422c179ffcd7e746d28f33",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9626",
+      "ETag": "\"bc05ec53da3a5fd457f77373aa8feffce3e14a6d138b020116b80f5d348d3f91\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/fuzzer/fuzzer.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/fuzzer/fuzzer.vcxproj",
+    "utc": "2026-10-10T23:51:43.622826+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9457,
+    "sha256": "3ac3efc92550f679b4adf362f30309e580d9679f945904279d85f6b21e509f64",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9457",
+      "ETag": "\"072d5102cc430725f4ee2eb022127288a5aaacecc78ca09b7fd6cc64ef1ab0b7\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/liblz4-dll/liblz4-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/liblz4-dll/liblz4-dll.vcxproj",
+    "utc": "2026-10-10T23:51:44.025541+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9615,
+    "sha256": "5fb7346780a1618f27b5c4f86829271c2cc697a64e3cd9ed180b2c291510be35",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9615",
+      "ETag": "\"5668535513d861aa4b94ab80703e7836841ace474951e2fbf0f4497c943b0c72\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/liblz4/liblz4.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/liblz4/liblz4.vcxproj",
+    "utc": "2026-10-10T23:51:44.292077+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9516,
+    "sha256": "eaea72933152a4e6b772d2fc5f5624f6f4e55fd5a2cf9288e8b0c9c6783c810e",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9516",
+      "ETag": "\"6555bea6c32046900f35f5b2b890dd4228eaec8f61584160e4dad6758a44753f\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/lz4/lz4.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2017/lz4/lz4.vcxproj",
+    "utc": "2026-10-10T23:51:44.658475+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9221,
+    "sha256": "b9ead79ebbe4d6c5ec6b7542780a7be0914a26ab8de85a9bcbec48b4c0d63df5",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9221",
+      "ETag": "\"aa760edf8d8473b0be677849b48a58ff9860380faaf6fc4d843cca913252b660\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/datagen/datagen.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/datagen/datagen.vcxproj",
+    "utc": "2026-10-10T23:51:45.045478+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9282,
+    "sha256": "5fe01b83af6bf554f4887249c152cce026d36aa71f296d19af58eac7009c6710",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9282",
+      "ETag": "\"11e0ef41911de67d3f0bf3e17f17a5ff38240c1409d798a9861cb1cf16e0ab6d\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/frametest/frametest.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/frametest/frametest.vcxproj",
+    "utc": "2026-10-10T23:51:45.310699+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9626,
+    "sha256": "dbb2ef5e3ac92ad05310175a071073345711bf5c3dbfcfc00f5f58ff1e32d6e7",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9626",
+      "ETag": "\"eccbce0de779d2125df23e62b8489a74daad33fe69cd479a65cedd45e5f7fc68\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/fullbench-dll/fullbench-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/fullbench-dll/fullbench-dll.vcxproj",
+    "utc": "2026-10-10T23:51:45.582445+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 10443,
+    "sha256": "7b7383c5f8002022814623e53fa1487a801c974dadaef3fd065458f49fdc4aea",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "10443",
+      "ETag": "\"2eb9ae954df19632c55f2c206eac7567127a9578d87b792d00968a2ee2a749c0\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/fullbench/fullbench.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/fullbench/fullbench.vcxproj",
+    "utc": "2026-10-10T23:51:45.960569+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9626,
+    "sha256": "bc2521bcfa465c35192cafa0a2bd3489037e8acf1f4d5919db75801b708ead7c",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9626",
+      "ETag": "\"79f7ee261efd51a712adcd74dd8f1dd03d0d6dffc4b8e02e45859e6c2148443e\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/fuzzer/fuzzer.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/fuzzer/fuzzer.vcxproj",
+    "utc": "2026-10-10T23:51:46.342459+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9457,
+    "sha256": "af626e9171d8ca909cc70b0210a43567fbaad1cbe2bd987bef2fcfd8a075406c",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9457",
+      "ETag": "\"4c785a30e8a9d7e0dbe92742a861698bab8978c4f2b593db4021de0b81e089a4\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/liblz4-dll/liblz4-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/liblz4-dll/liblz4-dll.vcxproj",
+    "utc": "2026-10-10T23:51:46.620231+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9615,
+    "sha256": "56352e2375230e4490e936b26f702b14d0b3064a45daea78eab19f28d07eb9d6",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9615",
+      "ETag": "\"a477738eeeb1734f51383d48e3bb97e7342dd2a5cba85d36f3211e4a532098d2\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/liblz4/liblz4.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/VS2022/liblz4/liblz4.vcxproj",
+    "utc": "2026-10-10T23:51:46.988457+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9516,
+    "sha256": "cde64d2215b18cc93874565396d0a4c807ca291f202b22d7d9cc8a6e330c3389",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9516",
+      "ETag": "\"0f57f1f892773ebfec054d8accee8e834506dd4c5de921f8109e1f9e51700c18\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/cmake/CMakeLists.txt",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/build/cmake/CMakeLists.txt",
+    "utc": "2026-10-10T23:51:47.379906+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9757,
+    "sha256": "e7f649ffc19aaed3fc33ef43530fa07c577ccac29301a9bd88d3e3ff904010da",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9757",
+      "ETag": "\"2ce7382cacfa7febdc3b79cf0b825c954b732557aedbe298967ea91959dd8e19\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/LICENSE",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/LICENSE",
+    "utc": "2026-10-10T23:51:47.750907+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 1311,
+    "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "1311",
+      "ETag": "\"62fbc9bb999ec420a9421e277f3e5fc897cba71664f9dbe6b31a08897bebbc96\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/dll/example/fullbench-dll.vcxproj",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/dll/example/fullbench-dll.vcxproj",
+    "utc": "2026-10-10T23:51:48.024177+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 9976,
+    "sha256": "7eded4e5abb0ddc5f7aeb289d6a7f22f5d2ba84076b9ebd4387d3c649f009862",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "9976",
+      "ETag": "\"df4fc0e0d415c245bdd512797f95470f8ab8eb1613a97c3f14355a41a224036e\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/lz4.h",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/lz4.h",
+    "utc": "2026-10-10T23:51:48.293909+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 43263,
+    "sha256": "c1614ecf7ada7b0be1acb560d4239595f96fbb7aa6a79a7c40cb358753830be6",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "43263",
+      "ETag": "\"5d15b548cdab0548832c93334677f501963225398c747c9b9ebbfada9d119cf0\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/lz4frame.h",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/lz4/lz4/5ff839680134437dbf4678f3d0c7b371d84f4964/lib/lz4frame.h",
+    "utc": "2026-10-10T23:51:48.695867+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 32749,
+    "sha256": "47501e4925d60c0f87c7bfc68c8b9e0e4d942eea786e35d2c5bfbf5e9deab561",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Length": "32749",
+      "ETag": "\"4244a1828e97f89fbf87c8394c3f74e9b6c8015d876c0827e03021bd7bb5ba46\"",
+      "Location": null
+    }
+  },
+  {
+    "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+    "method": "HEAD",
+    "status": 200,
+    "final_url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+    "utc": "2026-10-10T23:51:49.038783+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 0,
+    "sha256": null,
+    "headers": {
+      "Content-Type": "application/x-gzip",
+      "Content-Length": null,
+      "ETag": "\"6d3d4684f12e24035006be4b07c1bebc893afd24de510a28c557f6c7154fdfa2\"",
+      "Location": null
+    }
+  }
+]

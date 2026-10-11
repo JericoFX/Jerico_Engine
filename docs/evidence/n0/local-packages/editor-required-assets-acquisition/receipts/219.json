@@ -1,0 +1,41 @@
+{
+  "index": 219,
+  "source_path": "Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_mat_lutrgba32f.dds",
+  "expected_sha256": "cfd8cf9d94eccff383e98ef5258ee17fb85a95842f993c9dc71626dfbe40ed52",
+  "expected_bytes": 16532,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_mat_lutrgba32f.dds",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:16.736834+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_mat_lutrgba32f.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "16532",
+      "ETag": "\"cfd8cf9d94eccff383e98ef5258ee17fb85a95842f993c9dc71626dfbe40ed52\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_mat_lutrgba32f.dds",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:17.116847+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_mat_lutrgba32f.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "16532",
+      "ETag": "\"cfd8cf9d94eccff383e98ef5258ee17fb85a95842f993c9dc71626dfbe40ed52\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "cfd8cf9d94eccff383e98ef5258ee17fb85a95842f993c9dc71626dfbe40ed52",
+  "actual_bytes": 16532,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\LTC\\ltc_mat_lutrgba32f.dds",
+  "status": "acquired and byte verified"
+}

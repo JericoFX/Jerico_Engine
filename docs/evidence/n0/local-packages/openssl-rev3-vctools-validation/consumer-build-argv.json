@@ -1,0 +1,18 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\consumer-md",
+    "--config",
+    "Release",
+    "--target",
+    "JEOpenSSLConsumer",
+    "--verbose"
+  ],
+  "argc": 7,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "project": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\consumer-md\\JEOpenSSLConsumer.vcxproj",
+  "project_sha256": "3A023B5FC34077A90FA1F488A6B96001005A1F33D760985D41A6FF972DE390EC",
+  "project_mentions_md_runtime": true,
+  "start_utc": "2026-10-11T00:49:55.8825005Z"
+}

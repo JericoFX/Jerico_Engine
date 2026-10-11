@@ -1,0 +1,41 @@
+{
+  "index": 191,
+  "source_path": "Code/Editor/res/cvar_dark.bmp",
+  "expected_sha256": "883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e",
+  "expected_bytes": 1080,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/cvar_dark.bmp",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:24.763237+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/cvar_dark.bmp",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/bmp",
+      "Content-Length": "1080",
+      "ETag": "\"883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/cvar_dark.bmp",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:25.242188+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/cvar_dark.bmp",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/bmp",
+      "Content-Length": "1080",
+      "ETag": "\"883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e",
+  "actual_bytes": 1080,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\cvar_dark.bmp",
+  "status": "acquired and byte verified"
+}

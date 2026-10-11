@@ -1,0 +1,16 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/strawberry-perl-5.42.3.1-64bit-portable.zip",
+  "officialUrl": "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54231_64bit/strawberry-perl-5.42.3.1-64bit-portable.zip",
+  "bytes": 304765269,
+  "sha256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+  "expectedSha256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+  "pinMatches": true,
+  "snapshot": "F:/JericoEngine/Dependencies/tools/strawberry-perl-5.42.3.1-64bit-portable",
+  "version": "5.42.3.1",
+  "architecture": "MSWin32-x64-multi-thread",
+  "autoRedirect": false,
+  "credentials": "none",
+  "signedQueriesPersisted": false,
+  "toolExecuted": false,
+  "extracted": false
+}

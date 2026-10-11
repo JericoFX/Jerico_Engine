@@ -1,0 +1,41 @@
+{
+  "index": 3,
+  "source_path": "Assets/Editor/Icons/PropertyEditor/error_icon.png",
+  "expected_sha256": "41307cc4f2c5ac0c77cbe2eb15b488a5d52f6c05d850f8dd8d0540ad66e3a925",
+  "expected_bytes": 1189,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/PropertyEditor/error_icon.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:15.249706+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/PropertyEditor/error_icon.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "1189",
+      "ETag": "\"41307cc4f2c5ac0c77cbe2eb15b488a5d52f6c05d850f8dd8d0540ad66e3a925\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/PropertyEditor/error_icon.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:15.675015+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/PropertyEditor/error_icon.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "1189",
+      "ETag": "\"41307cc4f2c5ac0c77cbe2eb15b488a5d52f6c05d850f8dd8d0540ad66e3a925\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "41307cc4f2c5ac0c77cbe2eb15b488a5d52f6c05d850f8dd8d0540ad66e3a925",
+  "actual_bytes": 1189,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Assets\\Editor\\Icons\\PropertyEditor\\error_icon.png",
+  "status": "acquired and byte verified"
+}

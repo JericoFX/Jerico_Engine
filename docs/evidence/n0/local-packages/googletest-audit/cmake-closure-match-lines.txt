@@ -1,0 +1,26 @@
+F:\JericoEngine\Dependencies\googletest-v1.18.0\CMakeLists.txt:21:option(GTEST_HAS_ABSL "Use Abseil and RE2. Requires Abseil and RE2 to be separately added to the build." OFF)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\CMakeLists.txt:23:if(GTEST_HAS_ABSL)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\CMakeLists.txt:25:    find_package(absl REQUIRED)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\CMakeLists.txt:28:    find_package(re2 REQUIRED)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\CMakeLists.txt:14:  gtest_force_shared_crt
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\CMakeLists.txt:45:# Language "C" is required for find_package(Threads).
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\CMakeLists.txt:66:    gtest_force_shared_crt
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\CMakeLists.txt:125:if(GTEST_HAS_ABSL)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\CMakeLists.txt:126:  target_compile_definitions(gtest PUBLIC GTEST_HAS_ABSL=1)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\CMakeLists.txt:259:  # Python tests.
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googlemock\CMakeLists.txt:38:# Language "C" is required for find_package(Threads).
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googlemock\CMakeLists.txt:203:  # Python tests.
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:30:      if (NOT BUILD_SHARED_LIBS AND NOT gtest_force_shared_crt)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:58:    find_package(Threads)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:74:    if (NOT BUILD_SHARED_LIBS AND NOT gtest_force_shared_crt AND NOT DEFINED CMAKE_MSVC_RUNTIME_LIBRARY
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:268:  # Only the interpreter is needed for Python tests. Specifying the component
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:269:  # explicitly avoids a crash in CMake <= 3.23's FindPython3 module when no
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:270:  # Python installation is present (the module calls list(GET) on an empty
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:271:  # list).  QUIET lets the build continue without Python tests instead of
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:273:  find_package(Python3 COMPONENTS Interpreter QUIET)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:297:# Creates a Python test with the given name whose main module is in
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:298:# test/name.py. It does nothing if Python is not installed.
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:300:  if (NOT Python3_Interpreter_FOUND)
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:311:      COMMAND Python3::Interpreter ${CMAKE_CURRENT_SOURCE_DIR}/test/${name}.py
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:314:  # Make the Python import path consistent between Bazel and CMake.
+F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\cmake\internal_utils.cmake:353:      configure_file("${PROJECT_SOURCE_DIR}/cmake/${t}.pc.in"

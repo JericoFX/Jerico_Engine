@@ -1,0 +1,5 @@
+{
+  "status": "NOTPASS harness",
+  "reason": "Join-Path invocation combined the package path and .contents suffix incorrectly; no product files were changed",
+  "stdout": "PowerShell reported missing mandatory ChildPath parameter"
+}

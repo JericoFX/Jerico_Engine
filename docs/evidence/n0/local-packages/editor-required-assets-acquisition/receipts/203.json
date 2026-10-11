@@ -1,0 +1,41 @@
+{
+  "index": 203,
+  "source_path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+  "expected_sha256": "4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc",
+  "expected_bytes": 213128,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:07.481364+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "213128",
+      "ETag": "\"4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:08.016053+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "213128",
+      "ETag": "\"4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc",
+  "actual_bytes": 213128,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-LightItalic.ttf",
+  "status": "acquired and byte verified"
+}

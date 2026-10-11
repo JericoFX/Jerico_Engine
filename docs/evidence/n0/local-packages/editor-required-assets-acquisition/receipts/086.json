@@ -1,0 +1,41 @@
+{
+  "index": 86,
+  "source_path": "Code/Editor/TrackView/spline_edit_bar_06.png",
+  "expected_sha256": "9e58c21845c00ecc27dcf06b33b08e4975e06ff123161730324fb5f99de369f8",
+  "expected_bytes": 158,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/spline_edit_bar_06.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:26:33.426091+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/spline_edit_bar_06.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "158",
+      "ETag": "\"9e58c21845c00ecc27dcf06b33b08e4975e06ff123161730324fb5f99de369f8\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/spline_edit_bar_06.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:26:33.772451+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/spline_edit_bar_06.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "158",
+      "ETag": "\"9e58c21845c00ecc27dcf06b33b08e4975e06ff123161730324fb5f99de369f8\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "9e58c21845c00ecc27dcf06b33b08e4975e06ff123161730324fb5f99de369f8",
+  "actual_bytes": 158,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\TrackView\\spline_edit_bar_06.png",
+  "status": "acquired and byte verified"
+}

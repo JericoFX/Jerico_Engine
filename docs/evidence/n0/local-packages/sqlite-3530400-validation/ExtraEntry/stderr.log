@@ -1,0 +1,4 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake:27 (message):
+  JE SQLite: source must contain exactly the four audited release files
+
+

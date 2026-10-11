@@ -1,0 +1,91 @@
+{
+  "status": "STATIC AUDIT ONLY; NO PAYLOAD GET/MATERIALIZATION/EDITOR/BUILD/TEST",
+  "resource_inventory": {
+    "ico_bmp_files": 201,
+    "direct_native_rc_inputs": [
+      "Code/Editor/res/o3de_editor.ico",
+      "Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+      "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+      "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+      "Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico"
+    ]
+  },
+  "qrc_scope": {
+    "all_entries": 649,
+    "active_editor_entries": 305,
+    "active_editor_lfs_entries": 192,
+    "active_editor_missing_entries": 0,
+    "embedded_qt_font_entries": 10,
+    "excluded_missing_qrc_note": "InfoBar.qrc/i18n_Translations.qrc are not in current Editor file lists. No claim their absent source SVG/QM blocks this target."
+  },
+  "static_atom_sources": 529,
+  "static_atom_pointer_sources": 0,
+  "static_atom_missing_sources": 0,
+  "static_unresolved_edges": [],
+  "closure_findings": [
+    "StandardPBR remains required: imported property groups, native material builder, Lua functors, MainPipeline and LowEndPipeline registries, generated shader templates and shader/include sources.",
+    "Atom default MainRenderPipeline/MainPipeline/pass-template graph and dynamically registered CopyPassTemplate remain required; static graph includes disabled paths conservatively.",
+    "AtomFont critical shader is in AtomLyIntegration/AtomBridge/Assets/Shaders/SimpleTextured.shader, not AtomFont/Assets.",
+    "ImageBasedLightFeatureProcessor and SkyBoxFeatureProcessor Activate always load default maps even without scene components, explicitly to avoid Vulkan TDR in current upstream comments.",
+    "default_iblglobalcm.dds produces both _iblspecular and _ibldiffuse streaming-image outputs via ImageConvert.cpp. It is a single source payload, identical to default_skyboxcm.dds by LFS SHA/size.",
+    "Quad/Polygon feature processor activation loads LTC matrix/amplification images into the scene SRG. SMAA AreaTex/SearchTex and DOF pencil map are settings-dependent.",
+    "ImageSystem generates its one-pixel system colors through CreateFromCpuData; these do not require a fabricated white/black TIFF.",
+    "Project constant WhiteBox material has no default_grid parent or WhiteBoxUV texture reference. Legacy default_grid three TIFFs and WhiteBox UV three TIFFs still exist in enabled scan folders; AP jobs/product priority require runtime evidence.",
+    "Native RC ICO/BMP is a compile-resource requirement; Qt QRC is byte embedding plus later image/font decoding. Listed CMake files alone are not proof an ICO/BMP is a native compiled resource."
+  ],
+  "head_audit": [
+    {
+      "path": "Code/Editor/res/o3de_editor.ico",
+      "status": 200,
+      "pointer_match": true,
+      "content_length": "148143",
+      "etag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\"",
+      "no_auth": true,
+      "no_redirect": true
+    },
+    {
+      "path": "Code/LauncherUnified/Resources/GameSDK.ico",
+      "status": 200,
+      "pointer_match": true,
+      "content_length": "148143",
+      "etag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\"",
+      "no_auth": true,
+      "no_redirect": true
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+      "status": 200,
+      "pointer_match": true,
+      "content_length": "1200056",
+      "etag": "\"bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836\"",
+      "no_auth": true,
+      "no_redirect": true
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera.ttf",
+      "status": 200,
+      "pointer_match": true,
+      "content_length": "65932",
+      "etag": "\"c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d\"",
+      "no_auth": true,
+      "no_redirect": true
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+      "status": 200,
+      "pointer_match": true,
+      "content_length": "152",
+      "etag": "\"5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df\"",
+      "no_auth": true,
+      "no_redirect": true
+    }
+  ],
+  "manifest_items": 228,
+  "font_recovery_matches": 4,
+  "limits": [
+    "No binary has been acquired or imported; HEAD ETag/length is corroboration, not a GET payload hash verification.",
+    "Static closure contains 529 existing regular source files and zero unresolved references in the bounded Atom/material/pass roots; this is not complete dynamic AP/product or all Editor dependency Qt-resource closure.",
+    "CMake/Editor/AP execution, shader compilers, product priority, font parsing, image formats, frames, collision and DX12/Vulkan acceptance remain assigned to Luna/parent.",
+    "JEEditorFixture20/Python/Lua source freezes are preserved. No alternate toolchain icon/font substitution is needed or proposed while exact official payload destinations are available."
+  ]
+}

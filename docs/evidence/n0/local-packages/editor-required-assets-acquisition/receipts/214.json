@@ -1,0 +1,41 @@
+{
+  "index": 214,
+  "source_path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+  "expected_sha256": "5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df",
+  "expected_bytes": 152,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:13.926518+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "152",
+      "ETag": "\"5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:14.285760+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "152",
+      "ETag": "\"5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df",
+  "actual_bytes": 152,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_iblglobalcm.dds",
+  "status": "acquired and byte verified"
+}

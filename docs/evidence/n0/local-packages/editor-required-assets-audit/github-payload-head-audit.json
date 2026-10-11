@@ -1,0 +1,172 @@
+[
+  {
+    "path": "Code/Editor/res/o3de_editor.ico",
+    "commit": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "metadata_receipt": {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Code/Editor/res/o3de_editor.ico?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1215",
+        "Location": null,
+        "ETag": "\"2b7ab7bdbd9cd306e4bdc8f9024af65f53df83fa\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "git_blob_sha1": "2b7ab7bdbd9cd306e4bdc8f9024af65f53df83fa",
+    "pointer_matches_local_bytes": true,
+    "payload_head": {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/o3de_editor.ico",
+      "method": "HEAD",
+      "status": 200,
+      "headers": {
+        "Content-Type": "image/vnd.microsoft.icon",
+        "Content-Length": "148143",
+        "Location": null,
+        "ETag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "metadata_source": "https://api.github.com/repos/o3de/o3de/contents/Code/Editor/res/o3de_editor.ico?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "payload_not_downloaded": true
+  },
+  {
+    "path": "Code/LauncherUnified/Resources/GameSDK.ico",
+    "commit": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "metadata_receipt": {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Code/LauncherUnified/Resources/GameSDK.ico?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1277",
+        "Location": null,
+        "ETag": "\"2b7ab7bdbd9cd306e4bdc8f9024af65f53df83fa\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "git_blob_sha1": "2b7ab7bdbd9cd306e4bdc8f9024af65f53df83fa",
+    "pointer_matches_local_bytes": true,
+    "payload_head": {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/LauncherUnified/Resources/GameSDK.ico",
+      "method": "HEAD",
+      "status": 200,
+      "headers": {
+        "Content-Type": "image/vnd.microsoft.icon",
+        "Content-Length": "148143",
+        "Location": null,
+        "ETag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "metadata_source": "https://api.github.com/repos/o3de/o3de/contents/Code/LauncherUnified/Resources/GameSDK.ico?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "payload_not_downloaded": true
+  },
+  {
+    "path": "Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+    "commit": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "metadata_receipt": {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1367",
+        "Location": null,
+        "ETag": "\"12460fffc797e8f110b78dc521f3ae803f73994a\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "git_blob_sha1": "12460fffc797e8f110b78dc521f3ae803f73994a",
+    "pointer_matches_local_bytes": true,
+    "payload_head": {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+      "method": "HEAD",
+      "status": 200,
+      "headers": {
+        "Content-Type": "image/bmp",
+        "Content-Length": "1200056",
+        "Location": null,
+        "ETag": "\"bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "metadata_source": "https://api.github.com/repos/o3de/o3de/contents/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "payload_not_downloaded": true
+  },
+  {
+    "path": "Assets/Engine/Fonts/Vera.ttf",
+    "commit": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "metadata_receipt": {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Assets/Engine/Fonts/Vera.ttf?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1189",
+        "Location": null,
+        "ETag": "\"50f9cc61c4dd787e6f12ce6d5bd4c937ad80f129\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "git_blob_sha1": "50f9cc61c4dd787e6f12ce6d5bd4c937ad80f129",
+    "pointer_matches_local_bytes": true,
+    "payload_head": {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/Vera.ttf",
+      "method": "HEAD",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "65932",
+        "Location": null,
+        "ETag": "\"c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "metadata_source": "https://api.github.com/repos/o3de/o3de/contents/Assets/Engine/Fonts/Vera.ttf?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "payload_not_downloaded": true
+  },
+  {
+    "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+    "commit": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "metadata_receipt": {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1462",
+        "Location": null,
+        "ETag": "\"90bebb7c7cc8963aa2774aea31562da842c0ce42\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "git_blob_sha1": "90bebb7c7cc8963aa2774aea31562da842c0ce42",
+    "pointer_matches_local_bytes": true,
+    "payload_head": {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+      "method": "HEAD",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "152",
+        "Location": null,
+        "ETag": "\"5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df\""
+      },
+      "authorization": false,
+      "automatic_redirects": false
+    },
+    "metadata_source": "https://api.github.com/repos/o3de/o3de/contents/Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "payload_not_downloaded": true
+  }
+]

@@ -1,0 +1,8 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: SQLite 3.53.4 official amalgamation archive SHA256
+  mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/sqlite-3530400-validation/ArchiveTamper/fixtures/sqlite-amalgamation-3530400.zip
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake:9 (JE_python_verify_file)
+
+

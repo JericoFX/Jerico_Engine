@@ -1,0 +1,85 @@
+{
+  "status": "Blocked exact original splash payload; metadata and HEAD inspection only",
+  "path": "Code/Editor/splashscreen_background.png",
+  "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+  "expected_bytes": 1708521,
+  "pointer_git_blob_sha1": "1b65fb4e2f01c3d1566095816ff78858ab8b8265",
+  "pointer_git_blob_verified": true,
+  "original_pinned_commit": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+  "original_head_status": 404,
+  "history_commits": 11,
+  "exact_oid_candidates": [
+    {
+      "commit": "a77f023b51c3ae69fbb117f00c905109629760f5",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+      "pointer_patch_oid_matches": true,
+      "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+      "expected_bytes": 1708521,
+      "head": {
+        "url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+        "method": "HEAD",
+        "status": 404,
+        "final_url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+        "utc": "2026-10-10T20:35:08.480946-03:00",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Length": "0",
+          "Content-Type": null,
+          "ETag": null,
+          "Location": null
+        }
+      },
+      "head_matches": false,
+      "payload_get": false,
+      "full_payload_sha256_verified": false
+    },
+    {
+      "commit": "0370cca354773adcf98db89a12378d5f3eda352c",
+      "reason": "original PR19779 exact pointer blob",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+      "head": {
+        "url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+        "method": "HEAD",
+        "status": 404,
+        "final_url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Length": "0",
+          "Content-Type": null,
+          "ETag": null,
+          "Location": null
+        }
+      },
+      "head_matches": false,
+      "payload_get": false
+    },
+    {
+      "commit": "3db6943249d8bd7960b9ed7e9aee310b7668586e",
+      "tag": "2605.0",
+      "reason": "official release tag exact pointer blob",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+      "head": {
+        "url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+        "method": "HEAD",
+        "status": 404,
+        "final_url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Length": "0",
+          "Content-Type": null,
+          "ETag": null,
+          "Location": null
+        }
+      },
+      "head_matches": false,
+      "payload_get": false
+    }
+  ],
+  "binary_get_performed": false,
+  "checkout_materialized": false,
+  "other_payload_substitution": false,
+  "next_action": "Parent decides further permitted source acquisition or asset requirement resolution; exact OID/size guard remains. All four known exact-OID official commit/tag endpoints returned404."
+}

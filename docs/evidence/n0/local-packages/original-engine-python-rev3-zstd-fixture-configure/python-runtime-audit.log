@@ -1,0 +1,4 @@
+  File "<string>", line 1
+    import sys,json,importlib; names=["o3de","ly_test_tools","ly_remote_console","editor_python_test_tools"]; out={"version":sys.version,"git":getattr(sys,"_git",None),"modules":{}}; [(out["modules"].update({n:{"ok":True,"file":getattr(importlib.import_module(n),"__file__",None)}}) if True else None) for n in []];\nfor n in names:\n try:\n  m=importlib.import_module(n); out["modules"][n]={"ok":True,"file":getattr(m,"__file__",None)}\n except Exception as e: out["modules"][n]={"ok":False,"error":type(e).__name__+": "+str(e)}\nprint(json.dumps(out,default=str))
+                                                                                                                                                                                                                                                                                                                            ^
+SyntaxError: unexpected character after line continuation character

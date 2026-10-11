@@ -1,0 +1,238 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+--   CompilerLauncher: Not configured
+--   No restricted path found in engine.json, using default: F:/JericoEngine/JericoEngine/restricted
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS=PUBLIC;/EHsc
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_EXPORT_SYMBOLS=
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_WARNINGS=PRIVATE;/W0
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_DEPRECATED_ENUM_ENUM_CONVERSION=PRIVATE;/Wv:18
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_FAST_MATH=/fp:fast
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_ENABLE_FAST_MATH=PRIVATE;/fp:fast
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_FAST_MATH=/fp:precise
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_DISABLE_FAST_MATH=PRIVATE;/fp:precise
+--   Checking downloaded package zlib-1.2.11-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Checking downloaded package freetype-2.11.1-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Checking downloaded package qt-6.11.2-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+'C:/Program Files/CMake/bin/cmake.exe' '-E' 'tar' 'xf' 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-3.10.13-je-rev3-windows.tar.xz'
+--   Checking downloaded package python-3.10.13-je-rev3-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Installed And Validated package at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows - OK
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows
+--   Creating Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382
+'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe' '-m' 'venv' 'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382' '--without-pip' '--clear'
+--   Installing pip into venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382 (F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382/python)
+'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382/Scripts/python.exe' '-m' 'ensurepip' '--upgrade' '--default-pip' '-v'
+Using pip 23.0.1 from C:\Users\Jerico\AppData\Local\Temp\tmpdtkom7i9\pip-23.0.1-py3-none-any.whl\pip (python 3.10)
+Looking in links: c:\Users\Jerico\AppData\Local\Temp\tmpdtkom7i9
+Processing c:\users\jerico\appdata\local\temp\tmpdtkom7i9\setuptools-65.5.0-py3-none-any.whl
+Processing c:\users\jerico\appdata\local\temp\tmpdtkom7i9\pip-23.0.1-py3-none-any.whl
+Installing collected packages: setuptools, pip
+Successfully installed pip-23.0.1 setuptools-65.5.0
+--   Python: Getting/Checking packages listed in F:/JericoEngine/JericoEngine/python/requirements-build.txt
+--   pip result: 0
+--   pip output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\wheel-0.38.4-py3-none-any.whl
+  Installing collected packages: wheel
+  Successfully installed wheel-0.38.4
+  
+--   Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\wheel-0.38.4-py3-none-any.whl
+  Installing collected packages: wheel
+  Successfully installed wheel-0.38.4
+  
+--   Python: Getting/Checking packages listed in F:/JericoEngine/JericoEngine/python/requirements-build.txt - New packages were installed
+--   Results from pip check: No broken requirements found.
+  
+--   Python: Getting/Checking packages listed in F:/JericoEngine/JericoEngine/python/requirements.txt
+--   pip result: 0
+--   pip output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pluggy-1.6.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\attrs-20.1.0-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\certifi-2024.7.4-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\charset_normalizer-2.0.10-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\colorama-0.4.3-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\docutils-0.15.2-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\easyprocess-0.2.8-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\exceptiongroup-1.0.4-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\gitdb-4.0.10-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\smmap-5.0.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\gitpython-3.1.44-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\idna-3.7-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\imageio-2.8.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\importlib_metadata-1.6.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\jinja2-3.1.6-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\jmespath-0.9.5-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\markupsafe-3.0.2-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\more_itertools-8.4.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\numpy-1.23.0-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\packaging-20.4-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\patch_ng-1.19.1-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pillow-10.3.0-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\progressbar2-3.53.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\psutil-5.9.8-cp37-abi3-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pyparsing-2.4.7-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pyscreenshot-0.6-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pytest_mock-3.8.2-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pytest_timeout-2.1.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pytest-7.2.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\python_dateutil-2.8.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\python_utils-2.5.6-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\requests-2.32.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\scipy-1.8.1-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\six-1.13.0-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\urllib3-1.26.19-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\wcwidth-0.2.5-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\zipp-3.19.1-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\tomli-2.0.1-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\iniconfig-1.1.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\toml-0.10.2-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\resolvelib-0.9.0-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\puremagic-1.28-py3-none-any.whl
+  Installing collected packages: wcwidth, resolvelib, python-utils, puremagic, progressbar2, jmespath, iniconfig, easyprocess, zipp, urllib3, tomli, toml, smmap, six, scipy, requests, python-dateutil, pytest-timeout, pytest-mock, pytest, pyscreenshot, pyparsing, psutil, pluggy, pillow, patch-ng, packaging, numpy, more-itertools, MarkupSafe, Jinja2, importlib-metadata, imageio, idna, gitpython, gitdb, exceptiongroup, docutils, colorama, charset-normalizer, certifi, attrs
+  Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.2 attrs-20.1.0 certifi-2024.7.4 charset-normalizer-2.0.10 colorama-0.4.3 docutils-0.15.2 easyprocess-0.2.8 exceptiongroup-1.0.4 gitdb-4.0.10 gitpython-3.1.44 idna-3.7 imageio-2.8.0 importlib-metadata-1.6.1 iniconfig-1.1.1 jmespath-0.9.5 more-itertools-8.4.0 numpy-1.23.0 packaging-20.4 patch-ng-1.19.1 pillow-10.3.0 pluggy-1.6.0 progressbar2-3.53.1 psutil-5.9.8 puremagic-1.28 pyparsing-2.4.7 pyscreenshot-0.6 pytest-7.2.0 pytest-mock-3.8.2 pytest-timeout-2.1.0 python-dateutil-2.8.1 python-utils-2.5.6 requests-2.32.0 resolvelib-0.9.0 scipy-1.8.1 six-1.13.0 smmap-5.0.0 toml-0.10.2 tomli-2.0.1 urllib3-1.26.19 wcwidth-0.2.5 zipp-3.19.1
+  
+--   Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pluggy-1.6.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\attrs-20.1.0-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\certifi-2024.7.4-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\charset_normalizer-2.0.10-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\colorama-0.4.3-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\docutils-0.15.2-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\easyprocess-0.2.8-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\exceptiongroup-1.0.4-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\gitdb-4.0.10-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\smmap-5.0.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\gitpython-3.1.44-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\idna-3.7-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\imageio-2.8.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\importlib_metadata-1.6.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\jinja2-3.1.6-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\jmespath-0.9.5-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\markupsafe-3.0.2-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\more_itertools-8.4.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\numpy-1.23.0-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\packaging-20.4-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\patch_ng-1.19.1-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pillow-10.3.0-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\progressbar2-3.53.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\psutil-5.9.8-cp37-abi3-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pyparsing-2.4.7-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pyscreenshot-0.6-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pytest_mock-3.8.2-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pytest_timeout-2.1.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\pytest-7.2.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\python_dateutil-2.8.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\python_utils-2.5.6-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\requests-2.32.0-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\scipy-1.8.1-cp310-cp310-win_amd64.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\six-1.13.0-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\urllib3-1.26.19-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\wcwidth-0.2.5-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\zipp-3.19.1-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\tomli-2.0.1-py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\iniconfig-1.1.1-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\toml-0.10.2-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\resolvelib-0.9.0-py2.py3-none-any.whl
+  Processing f:\jericoengine\jericoengine\build\n0-validation\local-packages\root-package-cache\python-wheelhouse\puremagic-1.28-py3-none-any.whl
+  Installing collected packages: wcwidth, resolvelib, python-utils, puremagic, progressbar2, jmespath, iniconfig, easyprocess, zipp, urllib3, tomli, toml, smmap, six, scipy, requests, python-dateutil, pytest-timeout, pytest-mock, pytest, pyscreenshot, pyparsing, psutil, pluggy, pillow, patch-ng, packaging, numpy, more-itertools, MarkupSafe, Jinja2, importlib-metadata, imageio, idna, gitpython, gitdb, exceptiongroup, docutils, colorama, charset-normalizer, certifi, attrs
+  Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.2 attrs-20.1.0 certifi-2024.7.4 charset-normalizer-2.0.10 colorama-0.4.3 docutils-0.15.2 easyprocess-0.2.8 exceptiongroup-1.0.4 gitdb-4.0.10 gitpython-3.1.44 idna-3.7 imageio-2.8.0 importlib-metadata-1.6.1 iniconfig-1.1.1 jmespath-0.9.5 more-itertools-8.4.0 numpy-1.23.0 packaging-20.4 patch-ng-1.19.1 pillow-10.3.0 pluggy-1.6.0 progressbar2-3.53.1 psutil-5.9.8 puremagic-1.28 pyparsing-2.4.7 pyscreenshot-0.6 pytest-7.2.0 pytest-mock-3.8.2 pytest-timeout-2.1.0 python-dateutil-2.8.1 python-utils-2.5.6 requests-2.32.0 resolvelib-0.9.0 scipy-1.8.1 six-1.13.0 smmap-5.0.0 toml-0.10.2 tomli-2.0.1 urllib3-1.26.19 wcwidth-0.2.5 zipp-3.19.1
+  
+--   Python: Getting/Checking packages listed in F:/JericoEngine/JericoEngine/python/requirements.txt - New packages were installed
+--   Results from pip check: No broken requirements found.
+  
+--   Python: linking F:/JericoEngine/JericoEngine/Tools/LyTestTools into python site-packages...
+--   pip uninstall result: 0
+--   pip uninstall output: WARNING: Skipping ly-test-tools as it is not installed.
+  
+--   pip install result: 0
+--   pip install output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Obtaining file:///F:/JericoEngine/JericoEngine/Tools/LyTestTools
+    Preparing metadata (setup.py): started
+    Preparing metadata (setup.py): finished with status 'done'
+  Installing collected packages: ly-test-tools
+    Running setup.py develop for ly-test-tools
+  Successfully installed ly-test-tools-1.0.0
+  
+--   Python: linking F:/JericoEngine/JericoEngine/Tools/RemoteConsole/ly_remote_console into python site-packages...
+--   pip uninstall result: 0
+--   pip uninstall output: WARNING: Skipping ly-remote-console as it is not installed.
+  
+--   pip install result: 0
+--   pip install output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Obtaining file:///F:/JericoEngine/JericoEngine/Tools/RemoteConsole/ly_remote_console
+    Preparing metadata (setup.py): started
+    Preparing metadata (setup.py): finished with status 'done'
+  Installing collected packages: ly-remote-console
+    Running setup.py develop for ly-remote-console
+  Successfully installed ly-remote-console-1.0.0
+  
+--   Python: linking F:/JericoEngine/JericoEngine/AutomatedTesting/Gem/PythonTests/EditorPythonTestTools into python site-packages...
+--   pip uninstall result: 0
+--   pip uninstall output: WARNING: Skipping editor-python-test-tools as it is not installed.
+  
+--   pip install result: 0
+--   pip install output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Obtaining file:///F:/JericoEngine/JericoEngine/AutomatedTesting/Gem/PythonTests/EditorPythonTestTools
+    Preparing metadata (setup.py): started
+    Preparing metadata (setup.py): finished with status 'done'
+  Installing collected packages: editor-python-test-tools
+    Running setup.py develop for editor-python-test-tools
+  Successfully installed editor-python-test-tools-1.0.0
+  
+--   Python: linking F:/JericoEngine/JericoEngine/scripts/o3de into python site-packages...
+--   pip uninstall result: 0
+--   pip uninstall output: WARNING: Skipping o3de as it is not installed.
+  
+--   pip install result: 0
+--   pip install output: Looking in links: f:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse
+  Obtaining file:///F:/JericoEngine/JericoEngine/scripts/o3de
+    Preparing metadata (setup.py): started
+    Preparing metadata (setup.py): finished with status 'done'
+  Installing collected packages: o3de
+    Running setup.py develop for o3de
+  Successfully installed o3de-1.0.0
+  
+-- Executing CMake scripts...
+--   Using package mimalloc 3.5.2 (MIT)
+--   Checking downloaded package Lua-5.4.4-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows
+--   Using package rapidjson 1.1.0 (MIT)
+'C:/Program Files/CMake/bin/cmake.exe' '-E' 'tar' 'xf' 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/zstd-1.3.5-je-rev1-windows.tar.xz'
+--   Checking downloaded package zstd-1.3.5-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Installed And Validated package at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows - OK
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows
+--   Found zstd: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows/zstd/lib/release/zstd_static.lib (found version "1.3.5")
+CMake Error at cmake/3rdPartyPackages.cmake:952 (message):
+  JE FetchContent unavailable offline: googlebenchmark
+
+  Pin: 3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac
+  361e8d1cfe0c6c36d30b39f1b61302ece5507320
+
+  Archive cache:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/googlebenchmark
+
+  Provision a pinned local archive or set
+  FETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK to audited local sources; remote
+  and Git fallback are disabled.
+Call Stack (most recent call first):
+  cmake/3rdParty/FindGoogleBenchmark.cmake:54 (o3de_fetch_content)
+  cmake/3rdParty.cmake:74 (find_package)
+  cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  Code/Framework/AzCore/CMakeLists.txt:134 (ly_add_target)
+
+
+-- Configuring incomplete, errors occurred!

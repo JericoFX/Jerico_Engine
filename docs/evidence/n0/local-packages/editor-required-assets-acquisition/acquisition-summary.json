@@ -1,0 +1,63 @@
+{
+  "status": "partial with unavailable approved paths static acquisition; engine validation not performed",
+  "manifest_sha256": "7982d0db8511004f342af03f5e73b2dab510974b7be37508a0c640bfc0dd95a4",
+  "snapshot": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor",
+  "paths": 227,
+  "expected_paths": 228,
+  "failures": [
+    {
+      "index": 196,
+      "source_path": "Code/Editor/splashscreen_background.png",
+      "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+      "expected_bytes": 1708521,
+      "checkout_materialized": false,
+      "status": "failed",
+      "error": "Direct destination refused: {\"url\": \"https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/splashscreen_background.png\", \"method\": \"HEAD\", \"utc\": \"2026-10-10T23:30:27.228253+00:00\", \"status\": 404, \"final_url\": \"https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/splashscreen_background.png\", \"authorization\": false, \"automatic_redirects\": false, \"headers\": {\"Content-Type\": null, \"Content-Length\": \"0\", \"ETag\": null, \"Location\": null}}"
+    }
+  ],
+  "logical_payload_bytes": 13224720,
+  "unique_payloads": 224,
+  "get_count": 220,
+  "head_count": 227,
+  "local_font_recoveries": 4,
+  "deduplicated_paths": 3,
+  "checkout_materialized": false,
+  "payload_execution": false,
+  "notices": [
+    {
+      "path": "LICENSE.txt",
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "bytes": 1502
+    },
+    {
+      "path": "LICENSE_APACHE2.TXT",
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "bytes": 11557
+    },
+    {
+      "path": "LICENSE_MIT.TXT",
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "bytes": 1074
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera_COPYRIGHT.TXT",
+      "sha256": "268d8e58c04d3535c21e7ef43b835e1b00ba7e1e714fcc06ff2f5d59ee9ce17f",
+      "bytes": 6078
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera_RELEASENOTES.TXT",
+      "sha256": "8a8649f35c038a694ca6b005e8ada2732573f8e5dce25b8818b755b1c2463c2b",
+      "bytes": 8274
+    },
+    {
+      "path": "Assets/Editor/Fonts/Open_Sans/LICENSE.txt",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/LICENSE.txt",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560
+    }
+  ]
+}

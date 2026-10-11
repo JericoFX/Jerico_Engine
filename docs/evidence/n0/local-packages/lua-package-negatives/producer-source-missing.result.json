@@ -1,0 +1,7 @@
+{
+  "name": "producer-source-missing",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0279787,
+  "diagnostic_found": true,
+  "expected_diagnostic": "file is missing"
+}

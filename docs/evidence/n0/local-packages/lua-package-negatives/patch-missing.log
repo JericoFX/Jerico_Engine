@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Lua/ApplyLuaPatch.cmake:18 (message):
+  JE local Lua: original patch hunk missing: loadlib Windows error
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Lua/ApplyLuaPatch.cmake:33 (JE_lua_exact_hunk)
+
+

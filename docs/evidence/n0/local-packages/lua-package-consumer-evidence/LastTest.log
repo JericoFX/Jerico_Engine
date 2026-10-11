@@ -1,0 +1,51 @@
+Start testing: Oct 10 19:28 Hora estándar de Montevideo
+----------------------------------------------------------
+1/3 Testing: JE.LocalPackages.Lua.CApi
+1/3 Test: JE.LocalPackages.Lua.CApi
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release/Release/JELuaConsumer.exe" "api"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release
+"JE.LocalPackages.Lua.CApi" start time: Oct 10 19:28 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE Lua api: PASS (allocations=355, reallocations=46, live=0)
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lua.CApi" end time: Oct 10 19:28 Hora estándar de Montevideo
+"JE.LocalPackages.Lua.CApi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: JE.LocalPackages.Lua.Bytecode
+2/3 Test: JE.LocalPackages.Lua.Bytecode
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release/Release/JELuaConsumer.exe" "bytecode"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release
+"JE.LocalPackages.Lua.Bytecode" start time: Oct 10 19:28 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE Lua bytecode: PASS (allocations=303, reallocations=13, live=0)
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lua.Bytecode" end time: Oct 10 19:28 Hora estándar de Montevideo
+"JE.LocalPackages.Lua.Bytecode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: JE.LocalPackages.Lua.WindowsPatch
+3/3 Test: JE.LocalPackages.Lua.WindowsPatch
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release/Release/JELuaConsumer.exe" "patch" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release/JE_Lua_missing_69414532.dll"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-package-consumer-release
+"JE.LocalPackages.Lua.WindowsPatch" start time: Oct 10 19:28 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE Lua patch: PASS (allocations=282, reallocations=5, live=0)
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lua.WindowsPatch" end time: Oct 10 19:28 Hora estándar de Montevideo
+"JE.LocalPackages.Lua.WindowsPatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 19:28 Hora estándar de Montevideo

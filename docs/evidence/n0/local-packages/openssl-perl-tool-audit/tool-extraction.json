@@ -1,0 +1,9 @@
+{
+  "root": "F:\\JericoEngine\\Dependencies\\tools\\strawberry-perl-5.42.3.1-64bit-portable",
+  "files": 20858,
+  "payload_bytes": 1034502031,
+  "all_hashes_match": true,
+  "reparse_paths": [],
+  "tool_executed": false,
+  "policy": "Immutable internal build tool input; no global installation/PATH mutation, shell/relocation/CPAN scripts executed, or runtime redistribution"
+}

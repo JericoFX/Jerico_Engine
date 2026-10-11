@@ -1,0 +1,41 @@
+{
+  "index": 6,
+  "source_path": "Assets/Engine/Fonts/Vera.ttf",
+  "expected_sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d",
+  "expected_bytes": 65932,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/Vera.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:16.544670+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/Vera.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "65932",
+      "ETag": "\"c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/Vera.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:16.958691+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/Vera.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "65932",
+      "ETag": "\"c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d",
+  "actual_bytes": 65932,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Assets\\Engine\\Fonts\\Vera.ttf",
+  "status": "acquired and byte verified"
+}

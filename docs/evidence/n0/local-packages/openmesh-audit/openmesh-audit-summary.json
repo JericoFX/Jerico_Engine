@@ -1,0 +1,48 @@
+{
+  "scope": "audited acquisition and byte-preserving source extraction only; no Git/CMake/build/test/upstream script execution",
+  "source_url": "https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/11.0/OpenMesh-11.0.0.tar.bz2",
+  "head_get_status": 200,
+  "redirects": 0,
+  "credentials": "none",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\OpenMesh-11.0.0.tar.bz2",
+  "archive_bytes": 5867933,
+  "archive_sha256": "9d22e65bdd6a125ac2043350a019ec4346ea83922cafdf47e125a03c16f6fa07",
+  "source_root": "F:\\JericoEngine\\Dependencies\\OpenMesh-11.0.0",
+  "version_from_CMakeLists": "11.0.0",
+  "git_revision": "not claimed for official release tar; Git fallback not used",
+  "members": 710,
+  "files": 611,
+  "directories": 99,
+  "payload_bytes": 14703339,
+  "links": 0,
+  "reparse_points": 0,
+  "collisions": 0,
+  "all_source_hashes_match": true,
+  "licenses": "root BSD-3-Clause plus Berkeley four-clause BSD notice in Windows OpenMeshTools getopt.c; preserve notices; redistribution acceptance remains parent/legal scope",
+  "cmake_files_inspected": 43,
+  "current_wrapper_options": {
+    "OPENMESH_BUILD_SHARED": false,
+    "OPENMESH_DOCS": false,
+    "OPENMESH_BUILD_UNIT_TESTS": false,
+    "DISABLE_QMAKE_BUILD": true,
+    "BUILD_APPS": false,
+    "VCI_NO_LIBRARY_INSTALL": true,
+    "VCI_COMMON_DO_NOT_COPY_POST_BUILD": true
+  },
+  "transitive_closure": {
+    "bundled": "cmake-library fully included",
+    "active_windows_library_targets": [
+      "OpenMeshCore STATIC",
+      "OpenMeshTools STATIC -> OpenMeshCore"
+    ],
+    "disabled": "apps Qt/OpenGL, docs Doxygen/LATEX, tests GoogleTest/Eigen3",
+    "benchmark": "OPENMESH_BENCHMARK_DIR must remain unset/empty; enabling it adds caller-supplied external source",
+    "core_optional_header": "EigenVectorT.hh is an optional adapter including Eigen, not a library source dependency from current CMake",
+    "local_search_side_effect": "VCIPaths probes local C:/libs D:/libs E:/libs R:/libs; no acquisition; current library path has no dependency finder invocation"
+  },
+  "minimum_root_input": "-DFETCHCONTENT_SOURCE_DIR_OPENMESH:PATH=F:/JericoEngine/Dependencies/OpenMesh-11.0.0",
+  "wrapper_change_required_for_current_options": false,
+  "parent_next_action": "Freeze explicit local source override with existing disconnected/no-server guards; Luna sole owner root configure/build validation; preserve 611 source hashes; inspect actual target/options/cache before accepting integration",
+  "consumer_wrapper_sha256": "b83da795150daaecdb9f22eb3782dd9d54816ba2d7ce995fd17825cf6c98c840",
+  "product_acceptance": "PENDING; acquisition does not prove compilation, linkage, Editor, BSP material, Undo or runtime"
+}

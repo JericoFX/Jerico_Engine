@@ -1,0 +1,122 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\freetype-2.11.1-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 712192,
+    "sha256": "a6999aa779cd5e37e415eb784188f73763d396eaaca58f5b9485e2a5568b9802"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\freetype-2.11.1-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 106,
+    "sha256": "6d6ff27fdefa48e7af3bbcda4ed503208118e8eca5958b460f81df520b7e3c9a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 313440,
+    "sha256": "d3962b7b84f7fb484f02f639f631db5613f30a6922953ce41ce8344e4b57cbeb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 100,
+    "sha256": "7fa7b7d0d967bf266922472cc6a037b9ee458911959c37e3f3b836cf4d55aed3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 167540,
+    "sha256": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 100,
+    "sha256": "19ee520cae99c709dde5a7f0f36e05a1d44fede2f6b73cccb173729ae9680e36"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 7040252,
+    "sha256": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 105,
+    "sha256": "7333812e9a91938d0564eb807db67b63bb662fa7fd6e71d9856ce368ffa12f21"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 22663592,
+    "sha256": "cd0272eb5ce46a3437132344a4a6b7022e3aee152da888963cdd9d025cbdf506"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 108,
+    "sha256": "6bebd651d19a6397ea3abc8e28d9d6467010456085fa7e12b9fe7ecb6c937966"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 22341204,
+    "sha256": "4370b5870c6b4da65206f6c8e82ca5540f0f2c60fe4cb2bbbd34dbf1cc7dd2d9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 105,
+    "sha256": "c468957f63bc9aecc776d8ed123fd0b061823e1c51625f34be8a5627fa70f283"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz",
+    "exists": true,
+    "bytes": 22351228,
+    "sha256": "12e9eb0ec73bb28a683b250a1d702bad06c963dc8d4c9f4823b8d54871599917"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 105,
+    "sha256": "243c48858421237bf7acb0fb571ed458ab552a130de1f8fa77de114e8ea092dd"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\qt-6.11.2-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 201790724,
+    "sha256": "f09edc180df0ded92827279c475167be13cbb517de182a5b10ec1337e68dd834"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\qt-6.11.2-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 96,
+    "sha256": "dfaea866c559a9c679d8686887a72d764fbe9d9aa45ce67c2bf410c97fef4e76"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zlib-1.2.11-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 92556,
+    "sha256": "4ff69c9c7f99c917afce6d04cdf3fc6f2a65c0038abf2c677ef418182851bef7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zlib-1.2.11-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 102,
+    "sha256": "df554aa6e6cfe58ec7700d21c69b0f513951b05b2e8d0d6369500ef29bf4bebf"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zstd-1.3.5-je-rev1-windows.tar.xz",
+    "exists": true,
+    "bytes": 567544,
+    "sha256": "672edc4a41e31c6f45675b84a314cf1a31caa75428c543ea67a27253d9588793"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zstd-1.3.5-je-rev1-windows.tar.xz.SHA256SUMS",
+    "exists": true,
+    "bytes": 101,
+    "sha256": "768233f2335aa0655e5b395b1d7554c7aee2d80e9d3b254c2ec58bcf2a6340ac"
+  }
+]

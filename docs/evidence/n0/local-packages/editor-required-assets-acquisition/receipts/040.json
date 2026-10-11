@@ -1,0 +1,41 @@
+{
+  "index": 40,
+  "source_path": "Code/Editor/MainWindow/editwithbutton_dark.png",
+  "expected_sha256": "07c71ae07db664b6fd833115d484341ceb977a53f81ab0ab3b2c9a5ad4a66877",
+  "expected_bytes": 1002,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/editwithbutton_dark.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:55.528142+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/editwithbutton_dark.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "1002",
+      "ETag": "\"07c71ae07db664b6fd833115d484341ceb977a53f81ab0ab3b2c9a5ad4a66877\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/editwithbutton_dark.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:55.959308+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/editwithbutton_dark.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "1002",
+      "ETag": "\"07c71ae07db664b6fd833115d484341ceb977a53f81ab0ab3b2c9a5ad4a66877\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "07c71ae07db664b6fd833115d484341ceb977a53f81ab0ab3b2c9a5ad4a66877",
+  "actual_bytes": 1002,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\MainWindow\\editwithbutton_dark.png",
+  "status": "acquired and byte verified"
+}

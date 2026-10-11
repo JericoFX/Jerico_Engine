@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:107 (message):
+  JE local OpenSSL: native build failed (2); outputs retained
+Call Stack (most recent call first):
+  openssl-perl-tool-audit/producer-candidate-inputs-rev2.cmake:11 (include)
+
+

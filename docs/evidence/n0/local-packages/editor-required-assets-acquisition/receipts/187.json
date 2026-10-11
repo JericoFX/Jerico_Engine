@@ -1,0 +1,41 @@
+{
+  "index": 187,
+  "source_path": "Code/Editor/res/ball_disabled.ico",
+  "expected_sha256": "5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4",
+  "expected_bytes": 1150,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_disabled.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:22.947857+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_disabled.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "1150",
+      "ETag": "\"5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_disabled.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:23.373110+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_disabled.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "1150",
+      "ETag": "\"5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4",
+  "actual_bytes": 1150,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\ball_disabled.ico",
+  "status": "acquired and byte verified"
+}

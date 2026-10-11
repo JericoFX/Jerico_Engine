@@ -1,0 +1,41 @@
+{
+  "index": 67,
+  "source_path": "Code/Editor/MainWindow/standard_views_toolbar-12.png",
+  "expected_sha256": "726ce43df4e0cd341b39b5fd00a32edc665c1b7ae517f17e2a78104ef90eca02",
+  "expected_bytes": 379,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/standard_views_toolbar-12.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:26:23.817937+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/standard_views_toolbar-12.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "379",
+      "ETag": "\"726ce43df4e0cd341b39b5fd00a32edc665c1b7ae517f17e2a78104ef90eca02\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/standard_views_toolbar-12.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:26:24.278705+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/standard_views_toolbar-12.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "379",
+      "ETag": "\"726ce43df4e0cd341b39b5fd00a32edc665c1b7ae517f17e2a78104ef90eca02\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "726ce43df4e0cd341b39b5fd00a32edc665c1b7ae517f17e2a78104ef90eca02",
+  "actual_bytes": 379,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\MainWindow\\standard_views_toolbar-12.png",
+  "status": "acquired and byte verified"
+}

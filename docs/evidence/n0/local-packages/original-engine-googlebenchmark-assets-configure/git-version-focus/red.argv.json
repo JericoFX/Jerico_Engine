@@ -1,0 +1,9 @@
+[
+  "-S",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\red",
+  "-B",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-googlebenchmark-assets-configure\\git-version-focus\\red-build",
+  "-DGET_GIT_MODULE:FILEPATH=F:/JericoEngine/Dependencies/googlebenchmark-1.7.0/cmake/GetGitVersion.cmake",
+  "-DFAKE_CMAKE:FILEPATH=C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "-DFAKE_GIT_SCRIPT:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/original-engine-googlebenchmark-assets-configure/git-version-focus/FakeGit.cmake"
+]

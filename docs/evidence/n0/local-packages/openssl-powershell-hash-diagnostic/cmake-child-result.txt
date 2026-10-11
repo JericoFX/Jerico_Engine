@@ -1,0 +1,5 @@
+result=0
+PS_EXE=C:\WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe
+DIAG_PS=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-powershell-hash-diagnostic/diagnose-cmake-child.ps1
+ROOT_ARG=F:/JericoEngine/Dependencies/tools/strawberry-perl-5.42.3.1-64bit-portable
+MANIFEST_ARG=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-perl-tool-audit/tool-manifest.json

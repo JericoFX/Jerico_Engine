@@ -1,0 +1,306 @@
+{
+  "engine_fonts": [
+    {
+      "path": "Assets/Engine/Fonts/console.font",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "f75bb450adf7277f86fcb70a4aa439a255ae8b2ea520b83f04c610ff0bdf9d38",
+      "lfs_pointer": true,
+      "payload_sha256": "194b91b37a70faa04b1770c79b1b3d0086d07c1d3631b06c1c58b806a2059878",
+      "payload_bytes": 324
+    },
+    {
+      "path": "Assets/Engine/Fonts/console.xml",
+      "exists": true,
+      "bytes": 346,
+      "file_sha256": "e256270f816de5e5d7f5a71a335ae7f77a13f180874aebc3fdcd39df305e763b",
+      "lfs_pointer": false,
+      "signature_hex": "3c666f6e74736861"
+    },
+    {
+      "path": "Assets/Engine/Fonts/default-ui.font",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "082a37cc40278970c572ef1a7d820220f8ef3381a6615f5f856a13722a8b1d73",
+      "lfs_pointer": true,
+      "payload_sha256": "9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8",
+      "payload_bytes": 260
+    },
+    {
+      "path": "Assets/Engine/Fonts/default-ui.xml",
+      "exists": true,
+      "bytes": 276,
+      "file_sha256": "9f2c8aaa794f2a55f7dec9346020935898ee751c66be17f75c42a89845555049",
+      "lfs_pointer": false,
+      "signature_hex": "3c666f6e74736861"
+    },
+    {
+      "path": "Assets/Engine/Fonts/default.font",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "7a474e04f03ecc467748c65347398cacd6bbc4766d3663747cded049929a9485",
+      "lfs_pointer": true,
+      "payload_sha256": "58d365d46a496a71e5df56969a716ddb40e0784743ef3b6c5f5914852be82cda",
+      "payload_bytes": 260
+    },
+    {
+      "path": "Assets/Engine/Fonts/default.xml",
+      "exists": true,
+      "bytes": 277,
+      "file_sha256": "097d6c6e6f497eb7586555528ee3a33b3538f34f34efbbf46785530e1fd647b4",
+      "lfs_pointer": false,
+      "signature_hex": "3c666f6e74736861"
+    },
+    {
+      "path": "Assets/Engine/Fonts/hud.font",
+      "exists": true,
+      "bytes": 128,
+      "file_sha256": "ecc52ce78d2244974dee8c226646a2a8f19543efef95cf5174947154f43a7672",
+      "lfs_pointer": true,
+      "payload_sha256": "c65599e80a7094af11e16b2d5716a0c50c507cf84139ddbbd1c1bc3be3b2ddcf",
+      "payload_bytes": 347
+    },
+    {
+      "path": "Assets/Engine/Fonts/hud.xml",
+      "exists": true,
+      "bytes": 364,
+      "file_sha256": "f783dfc775e2e5ff417860c415a5ad7025d2b20155c946cfcfc4e938be5c01c2",
+      "lfs_pointer": false,
+      "signature_hex": "3c666f6e74736861"
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera.ttf",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "e77e706bace0ede953de052cd173f6b899f704429fb8f2cad4d0fa23e4c4921f",
+      "lfs_pointer": true,
+      "payload_sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d",
+      "payload_bytes": 65932
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera_COPYRIGHT.TXT",
+      "exists": true,
+      "bytes": 6078,
+      "file_sha256": "268d8e58c04d3535c21e7ef43b835e1b00ba7e1e714fcc06ff2f5d59ee9ce17f",
+      "lfs_pointer": false,
+      "signature_hex": "4269747374726561"
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera_RELEASENOTES.TXT",
+      "exists": true,
+      "bytes": 8274,
+      "file_sha256": "8a8649f35c038a694ca6b005e8ada2732573f8e5dce25b8818b755b1c2463c2b",
+      "lfs_pointer": false,
+      "signature_hex": "4269747374726561"
+    },
+    {
+      "path": "Assets/Engine/Fonts/VeraMono.ttf",
+      "exists": true,
+      "bytes": 130,
+      "file_sha256": "b9ea46af79d7a5f0deba339515e9ebd1c6e1059ed2ae1f9bcb587c06ddd7809b",
+      "lfs_pointer": true,
+      "payload_sha256": "da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d",
+      "payload_bytes": 49224
+    }
+  ],
+  "local_original_candidates": [
+    {
+      "source": {
+        "path": "Assets/Engine/Fonts/default.xml",
+        "exists": true,
+        "bytes": 277,
+        "file_sha256": "097d6c6e6f497eb7586555528ee3a33b3538f34f34efbbf46785530e1fd647b4",
+        "lfs_pointer": false,
+        "signature_hex": "3c666f6e74736861"
+      },
+      "candidate_transform": "CRLF to LF only",
+      "candidate_bytes": 260,
+      "candidate_sha256": "58d365d46a496a71e5df56969a716ddb40e0784743ef3b6c5f5914852be82cda",
+      "exact_pointer_match": true
+    },
+    {
+      "source": {
+        "path": "Assets/Engine/Fonts/default-ui.xml",
+        "exists": true,
+        "bytes": 276,
+        "file_sha256": "9f2c8aaa794f2a55f7dec9346020935898ee751c66be17f75c42a89845555049",
+        "lfs_pointer": false,
+        "signature_hex": "3c666f6e74736861"
+      },
+      "candidate_transform": "CRLF to LF only",
+      "candidate_bytes": 260,
+      "candidate_sha256": "9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8",
+      "exact_pointer_match": true
+    },
+    {
+      "source": {
+        "path": "Assets/Engine/Fonts/console.xml",
+        "exists": true,
+        "bytes": 346,
+        "file_sha256": "e256270f816de5e5d7f5a71a335ae7f77a13f180874aebc3fdcd39df305e763b",
+        "lfs_pointer": false,
+        "signature_hex": "3c666f6e74736861"
+      },
+      "candidate_transform": "CRLF to LF only",
+      "candidate_bytes": 324,
+      "candidate_sha256": "194b91b37a70faa04b1770c79b1b3d0086d07c1d3631b06c1c58b806a2059878",
+      "exact_pointer_match": true
+    },
+    {
+      "source": {
+        "path": "Assets/Engine/Fonts/hud.xml",
+        "exists": true,
+        "bytes": 364,
+        "file_sha256": "f783dfc775e2e5ff417860c415a5ad7025d2b20155c946cfcfc4e938be5c01c2",
+        "lfs_pointer": false,
+        "signature_hex": "3c666f6e74736861"
+      },
+      "candidate_transform": "CRLF to LF only",
+      "candidate_bytes": 347,
+      "candidate_sha256": "c65599e80a7094af11e16b2d5716a0c50c507cf84139ddbbd1c1bc3be3b2ddcf",
+      "exact_pointer_match": true
+    }
+  ],
+  "editor_embedded_fonts": [
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "7a048bdb029aa9547be551bd1bf682131132d00e45db56a8b40c6263cdd4b05f",
+        "lfs_pointer": true,
+        "payload_sha256": "3ca680f2444cc9e50447d057c006464566e92f2e77b0b6e26491e5bd757ed4e7",
+        "payload_bytes": 213292
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "6bfb379e6a86cca72c3a0218f3515e4591ad781bb79749c678c302ae9af4c1b7",
+        "lfs_pointer": true,
+        "payload_sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8",
+        "payload_bytes": 222584
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "b6afc849b471fdd0268aed96062efd4528361336bd32115bee494572e8a0f1e3",
+        "lfs_pointer": true,
+        "payload_sha256": "0eeca981116621a96a484ecc58fbfcdc78fda0065fd21fd13707b63bf8a9912c",
+        "payload_bytes": 213420
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Italic.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "08bf4e5280f27694f664d423fc23f9fe7ee1a169a18f7635615aafc00a43d0e2",
+        "lfs_pointer": true,
+        "payload_sha256": "a54dc8488f8193bf30c3820cf6f261f911f9d328d699e1a1b8042641554cec70",
+        "payload_bytes": 212896
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Light.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "10b95c966372ae110ae47d1529c13b5cc2c291bf0251376b50d7bcbc3f852cc4",
+        "lfs_pointer": true,
+        "payload_sha256": "cf5f5184c1441a1660aa52526328e9d5c2793e77b6d8d3a3ad654bdb07ab8424",
+        "payload_bytes": 222412
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "0f1875aa74a4c0eaffff835aa747fb549dd0997a54181cd62443358c3c66f4b9",
+        "lfs_pointer": true,
+        "payload_sha256": "4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc",
+        "payload_bytes": 213128
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Regular.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "8fb7709641ded9b04773c6ba8f1676270f2c83a5561b15855bff2a53280af746",
+        "lfs_pointer": true,
+        "payload_sha256": "e64e508b2aa2880f907e470c4550980ec4c0694d103a43f36150ac3f93189bee",
+        "payload_bytes": 217360
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "da13d95ef147ca2f2d1f9d6448f228de87377b08d3ee722bdf7b792c779ce3ce",
+        "lfs_pointer": true,
+        "payload_sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2",
+        "payload_bytes": 221328
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "ebd957605157bac50cfc1480e4b1d54ba592b5825d04a5bb5f5444c37b25ddc3",
+        "lfs_pointer": true,
+        "payload_sha256": "30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b",
+        "payload_bytes": 212820
+      }
+    },
+    {
+      "consumer": "Code/Framework/AzQtComponents/AzQtComponents/Components/resources.qrc",
+      "alias": null,
+      "editor_cmake_listed": null,
+      "input": {
+        "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+        "exists": true,
+        "bytes": 131,
+        "file_sha256": "468099a7eba9fa49f02b08052ea3513e632fbfb716b55962600a324fd3772306",
+        "lfs_pointer": true,
+        "payload_sha256": "5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323",
+        "payload_bytes": 224592
+      }
+    }
+  ]
+}

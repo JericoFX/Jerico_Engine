@@ -1,0 +1,98 @@
+{
+  "working_directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "mode": "-P",
+  "argument_count": 6,
+  "arguments": [
+    "-DJE_ZSTD_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+    "-DJE_ZSTD_SOURCE_SHA256=dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+    "-DJE_ZSTD_SOURCE_URL=https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+    "-DJE_ZSTD_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zstd-producer-rev1",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake"
+  ],
+  "freeze_sha256": "d567930c4739ba4d221bd1c3dfe6e7b0f7518107cffa573412d188e383ef2610",
+  "source_freeze": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\BuildZstdPackage.cmake",
+      "expected": "4C19138E51EA0E15917BA250447EF544504DE247E56E13C50EAC515E57958BFB",
+      "actual": "4c19138e51ea0e15917ba250447ef544504de247e56e13c50eac515e57958bfb",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\CMakeLists.txt",
+      "expected": "BB0EC783D064D9F8FB2EFE2805B6FC4FE64915413F0FA3F49B6381F99A3B9E5E",
+      "actual": "bb0ec783d064d9f8fb2efe2805b6fc4fe64915413f0fa3f49b6381f99a3b9e5e",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\Findzstd.cmake",
+      "expected": "19F953303B4E0729FFB0E25B25B5BA3CED475961A7301C7497DF275F42283D07",
+      "actual": "19f953303b4e0729ffb0e25b25b5ba3ced475961a7301c7497df275f42283d07",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\NOTICE.txt",
+      "expected": "1FAD21A396B2042F2FABAFBB7B9C21E1FE96590520A1CEE44DCD36158D94518D",
+      "actual": "1fad21a396b2042f2fabafbb7b9c21e1fe96590520a1cee44dcd36158d94518d",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\README.md",
+      "expected": "946221C70881CE1FB1582F24C4F5A182984DCA73FF088D63FADF5C46461116D2",
+      "actual": "946221c70881ce1fb1582f24c4f5a182984dca73ff088d63fadf5c46461116d2",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\CMakeLists.txt",
+      "expected": "F7AC509EC6425D5C365695D2DCF4DDA4021691D48E464A40018027DD047E6323",
+      "actual": "f7ac509ec6425d5c365695d2dcf4dda4021691d48e464a40018027dd047e6323",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\ZstdConsumer.cpp",
+      "expected": "B2BB74D80DD4E8634E345B3C5E41996FF75BEC9E8B50D79CB3EC2CA2F2CA0B73",
+      "actual": "b2bb74d80dd4e8634e345b3c5e41996ff75bec9e8b50d79cb3ec2ca2f2ca0b73",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+      "expected": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+      "actual": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "expected": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+      "expected": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "actual": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+      "expected": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "actual": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+      "expected": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "actual": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "match": true
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+      "expected": "DFB594DC41E79C1304EF2C9232746C048E4837578C1CA88CF0E9B83C8CC36457",
+      "actual": "dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+      "match": true
+    }
+  ],
+  "archive_bytes": 1707256,
+  "archive_sha256": "dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+  "output_absent": true,
+  "NativeExitCode": 0
+}

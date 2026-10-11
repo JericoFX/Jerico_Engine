@@ -1,0 +1,9 @@
+{
+  "index": 196,
+  "source_path": "Code/Editor/splashscreen_background.png",
+  "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+  "expected_bytes": 1708521,
+  "checkout_materialized": false,
+  "status": "failed",
+  "error": "Direct destination refused: {\"url\": \"https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/splashscreen_background.png\", \"method\": \"HEAD\", \"utc\": \"2026-10-10T23:30:27.228253+00:00\", \"status\": 404, \"final_url\": \"https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/splashscreen_background.png\", \"authorization\": false, \"automatic_redirects\": false, \"headers\": {\"Content-Type\": null, \"Content-Length\": \"0\", \"ETag\": null, \"Location\": null}}"
+}

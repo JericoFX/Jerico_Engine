@@ -1,0 +1,7 @@
+[
+  "--test-dir",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1",
+  "-C",
+  "Release",
+  "--output-on-failure"
+]

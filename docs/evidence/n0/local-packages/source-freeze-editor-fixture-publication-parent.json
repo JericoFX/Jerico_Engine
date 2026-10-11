@@ -1,0 +1,112 @@
+[
+  {
+    "path": "Projects/JEEditorFixture/.gitignore",
+    "sha256": "9D7EAAB87EBB7153E34C5754A8341665F3E7B8AD2638767C188152C7D148A3AD",
+    "bytes": 36
+  },
+  {
+    "path": "Projects/JEEditorFixture/Assets/materials/WhiteBoxDefault.material",
+    "sha256": "37DE6D5E6914D038DB2A11032FDA0B1AA4E378C8E08D882C20A08CC0DA205E0C",
+    "bytes": 434
+  },
+  {
+    "path": "Projects/JEEditorFixture/autoexec.cfg",
+    "sha256": "2E040B27120C3C0612C1850E25E1B20A0680B9A06428BD150549220E36A1CFC0",
+    "bytes": 108
+  },
+  {
+    "path": "Projects/JEEditorFixture/cmake/EngineFinder.cmake",
+    "sha256": "D34CCAD4D0242003ABB2EDC630C35430BEC86CED62E193BA40C61A3603B8A539",
+    "bytes": 10274
+  },
+  {
+    "path": "Projects/JEEditorFixture/CMakeLists.txt",
+    "sha256": "1BEF1EAD3171B7A938A16C5DDCCC3120E904B17996903766C0BA6FD492FF5944",
+    "bytes": 2337
+  },
+  {
+    "path": "Projects/JEEditorFixture/Config/shader_global_build_options.json",
+    "sha256": "76A5F96F75CC8ACA5201E98D5096C963630F831CBB704BBAD2C9B99D73C7E6B4",
+    "bytes": 285
+  },
+  {
+    "path": "Projects/JEEditorFixture/Editor/Scripts/author_room.py",
+    "sha256": "76D0F54A888FF6A749EE5CEB7A05B678428DB8079F00C29E0FA78F791718284F",
+    "bytes": 10010
+  },
+  {
+    "path": "Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab",
+    "sha256": "E5857A6A43AA910A3B981F90719E6CC1AE33BFB307F16BE1385652FA44F6C465",
+    "bytes": 6011
+  },
+  {
+    "path": "Projects/JEEditorFixture/LICENSE_APACHE2.TXT",
+    "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+    "bytes": 11557
+  },
+  {
+    "path": "Projects/JEEditorFixture/LICENSE_MIT.TXT",
+    "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+    "bytes": 1074
+  },
+  {
+    "path": "Projects/JEEditorFixture/LICENSE.txt",
+    "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+    "bytes": 1502
+  },
+  {
+    "path": "Projects/JEEditorFixture/NOTICE.txt",
+    "sha256": "010E05C864ED4BCE9A8F5C9CAEFABB7C1F4BB257269BCDD63898E8C96758ACB2",
+    "bytes": 1385
+  },
+  {
+    "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.cmake",
+    "sha256": "55286592CCC9873B19D74D73AB4662542A0AD3EDB2E3F7F13A03EF73865CDA3A",
+    "bytes": 250
+  },
+  {
+    "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.json",
+    "sha256": "50D6239101A7EED1489EA3BD9EB23D28D728C3BA58920CD5C0A98FD168AB4376",
+    "bytes": 27
+  },
+  {
+    "path": "Projects/JEEditorFixture/project.json",
+    "sha256": "9C12C0A2D871DE98E5ADAB390DE2F9A8C1CD9F2245E00096DB13A12ED4A1AEBF",
+    "bytes": 678
+  },
+  {
+    "path": "Projects/JEEditorFixture/README.md",
+    "sha256": "55FDF0129970A60907D16F0B907B47C0C2E7E0220653453FB9CEECDC366571C2",
+    "bytes": 3935
+  },
+  {
+    "path": "Projects/JEEditorFixture/Registry/assetprocessor_settings.setreg",
+    "sha256": "0A88D47A79F716D27C72FEA79F0C112AE6C9CBF21918DBFBC523E597E0CA7224",
+    "bytes": 890
+  },
+  {
+    "path": "Projects/JEEditorFixture/Resources/GameSDK.ico",
+    "sha256": "BA0704EFD586FEE72B3D45B19163A1B67CD5594BCBF57CB28D796E2919502ABA",
+    "bytes": 148143
+  },
+  {
+    "path": "Projects/JEEditorFixture/Resources/Splash.bmp",
+    "sha256": "BBD314F41B90BC9CBA384D86EED865568343CBD332568F74C8CA39A08BC43836",
+    "bytes": 1200056
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/README.md",
+    "sha256": "109493F79878918796FB34D27F33822F3ED063287F25463D34E13D7D4A3D3B30",
+    "bytes": 196
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/scenesrg.srgi",
+    "sha256": "0BAB50BED308F31F62A6D234B17BCD47676EF0FF2A4793933A79F507F35B5C89",
+    "bytes": 793
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/viewsrg.srgi",
+    "sha256": "33959B6021D4A0276D20F13AD4C36C3D6436B86DE01B32700A63D43179B185C6",
+    "bytes": 789
+  }
+]

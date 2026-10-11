@@ -1,0 +1,6 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake:24 (message):
+  JE local package: provide exactly one source commit or release
+
+

@@ -1,0 +1,6 @@
+CMake Error at JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_ZSTD_SOURCE_ARCHIVE must be an absolute local path
+Call Stack (most recent call first):
+  JericoEngine/cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake:12 (JE_python_require_local_path)
+
+

@@ -1,0 +1,47 @@
+{
+  "archiveSHA256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D",
+  "entryCount": 5,
+  "pathPolicy": "single expected root; no absolute/traversal/backslash/colon/control/link/duplicate-case entries",
+  "entries": [
+    {
+      "path": "sqlite-amalgamation-3530400/",
+      "bytes": 0,
+      "compressedBytes": 0,
+      "unixMode": 16893,
+      "type": "directory",
+      "sha256": null
+    },
+    {
+      "path": "sqlite-amalgamation-3530400/sqlite3.c",
+      "bytes": 9515341,
+      "compressedBytes": 2455521,
+      "unixMode": 33204,
+      "type": "file",
+      "sha256": "B1DD5D74EC7F29055A6684FA06FB3C2F6821C87DD38F9A458DFD2E8A1DB28189"
+    },
+    {
+      "path": "sqlite-amalgamation-3530400/shell.c",
+      "bytes": 1185915,
+      "compressedBytes": 304913,
+      "unixMode": 33204,
+      "type": "file",
+      "sha256": "8011ED018AA12969F93573B7BB1EAE2D939D64D0F451B297FF847A0211C85179"
+    },
+    {
+      "path": "sqlite-amalgamation-3530400/sqlite3.h",
+      "bytes": 690838,
+      "compressedBytes": 178428,
+      "unixMode": 33204,
+      "type": "file",
+      "sha256": "919E7F2E8ED1D8F56AC17B412B8971C76AA5D1A879752CC6058F75E7D5910E1D"
+    },
+    {
+      "path": "sqlite-amalgamation-3530400/sqlite3ext.h",
+      "bytes": 39175,
+      "compressedBytes": 6772,
+      "unixMode": 33204,
+      "type": "file",
+      "sha256": "AC9645E5C9FF0CF176EFDD6E75CB5E98F46295D38E02DB5C4D208826A39AB4BE"
+    }
+  ]
+}

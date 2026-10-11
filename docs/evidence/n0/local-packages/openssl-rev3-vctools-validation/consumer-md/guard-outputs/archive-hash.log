@@ -1,0 +1,9 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: OpenSSL source archive SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/guard-outputs/corrupt-source.tar.gz
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:37 (JE_python_verify_file)
+
+

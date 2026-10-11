@@ -1,0 +1,12 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "tar.exe",
+  "argv": [
+    "-xJf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\packages\\Lua-5.4.4-je-rev1-windows.tar.xz",
+    "-C",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\extracted\\Lua-5.4.4-je-rev1-windows"
+  ],
+  "argv_count": 4,
+  "started": "2026-10-10T19:28:09.8442529-03:00"
+}

@@ -1,0 +1,18 @@
+command: "C:\Program Files\CMake\bin\cmake.exe" -P "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-perl-tool-audit\producer-candidate-inputs.cmake"
+working_directory: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages
+started_local: 2026-10-10T21:22:06.7223360-03:00
+finished_local: 2026-10-10T21:22:22.8666581-03:00
+elapsed_seconds: 16.141
+native_exit_code: 1
+stdout_log: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev1-streaming-validation\producer.stdout.log
+stderr_log: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev1-streaming-validation\producer.stderr.log
+--- stdout ---
+
+--- stderr ---
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:105 (message):
+  JE local OpenSSL: native build failed (1); outputs retained
+Call Stack (most recent call first):
+  openssl-perl-tool-audit/producer-candidate-inputs.cmake:11 (include)
+
+
+

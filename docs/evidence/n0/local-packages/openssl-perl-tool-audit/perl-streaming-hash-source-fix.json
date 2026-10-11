@@ -1,0 +1,21 @@
+{
+  "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\VerifyPerlInput.ps1",
+  "beforeSHA256": "13D19A8B618B567756A1745F3CEEED6FB9204D0815DA18BB8B02BB05FF5DD794",
+  "afterSHA256": "D3A51FABCED2B2A3C7EED33F7C1C2D7F0B730867EB58FE864345E7F8AF318711",
+  "onlyHashBlockReplaced": true,
+  "unchangedInputs": 20,
+  "algorithm": "SHA256.Create + File.OpenRead + ComputeHash streaming",
+  "disposal": "nested finally disposes stream and hasher, including exceptional exits",
+  "preservedChecks": [
+    "20858 manifest/tree file count",
+    "relative path safety and root containment",
+    "file sizes",
+    "no-reparse paths",
+    "exact expected SHA256",
+    "verification before producer output/tool execution"
+  ],
+  "environmentModuleChanges": false,
+  "writerExecutedVerifierOrBuildTests": false,
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\source-freeze-openssl-streaming-perl-hash.json",
+  "freezeSHA256": "668F7AE5779A9607EA8BDD5C642F1C4E69CBE6751D9281CF10D23F693B49C5A1"
+}

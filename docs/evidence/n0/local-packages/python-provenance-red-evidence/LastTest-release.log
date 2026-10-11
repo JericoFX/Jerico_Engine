@@ -1,0 +1,65 @@
+Start testing: Oct 10 19:37 Hora estándar de Montevideo
+----------------------------------------------------------
+1/3 Testing: JE.LocalPackages.PythonEmbed
+1/3 Test: JE.LocalPackages.PythonEmbed
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red/Release/JEPythonEmbed.exe"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+"JE.LocalPackages.PythonEmbed" start time: Oct 10 19:37 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE Python: runtime source provenance mismatch
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"JE.LocalPackages.PythonEmbed" end time: Oct 10 19:37 Hora estándar de Montevideo
+"JE.LocalPackages.PythonEmbed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: JE.LocalPackages.PythonRuntimeDebug
+2/3 Test: JE.LocalPackages.PythonRuntimeDebug
+Command: "C:/Program Files/CMake/bin/cmake.exe" "-DJE_PYTHON_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-v143-rev2/extracted/python-3.10.13-je-rev1-windows" "-DJE_RUNTIME_CONFIGURATION=Debug" "-DJE_VENV_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red/venv-Debug" "-P" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+"JE.LocalPackages.PythonRuntimeDebug" start time: Oct 10 19:37 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\Python\tests\RuntimeTest.py", line 23, in <module>
+    assert sys._git == ("CPython", source_tag, source_commit), sys._git
+AssertionError: ('CPython', 'heads/development-dirty', 'b54a874e3d')
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake:35 (message):
+  JE local Python Debug runtime test failed (1)
+
+
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Failed.
+"JE.LocalPackages.PythonRuntimeDebug" end time: Oct 10 19:37 Hora estándar de Montevideo
+"JE.LocalPackages.PythonRuntimeDebug" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: JE.LocalPackages.PythonRuntimeRelease
+3/3 Test: JE.LocalPackages.PythonRuntimeRelease
+Command: "C:/Program Files/CMake/bin/cmake.exe" "-DJE_PYTHON_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-v143-rev2/extracted/python-3.10.13-je-rev1-windows" "-DJE_RUNTIME_CONFIGURATION=Release" "-DJE_VENV_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red/venv-Release" "-P" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+"JE.LocalPackages.PythonRuntimeRelease" start time: Oct 10 19:37 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\Python\tests\RuntimeTest.py", line 23, in <module>
+    assert sys._git == ("CPython", source_tag, source_commit), sys._git
+AssertionError: ('CPython', 'heads/development-dirty', 'b54a874e3d')
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake:35 (message):
+  JE local Python Release runtime test failed (1)
+
+
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Failed.
+"JE.LocalPackages.PythonRuntimeRelease" end time: Oct 10 19:37 Hora estándar de Montevideo
+"JE.LocalPackages.PythonRuntimeRelease" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 19:37 Hora estándar de Montevideo

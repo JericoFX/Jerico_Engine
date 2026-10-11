@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 0.0743924,
+  "end_utc": "2026-10-11T00:59:18.8571228Z",
+  "helper_sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+  "witness_sha256": "C34909064FE9E852E5EC5A6B34A72B88433A6BEE57C7DE257AB1B23F9894F557",
+  "output_exists": true,
+  "package_info_exists": true,
+  "release_message_found": true,
+  "stdout_bytes": 326,
+  "stderr_bytes": 0,
+  "package_info_sha256": "20DA3440C60C1FF6A9CF9D11F92D46905A430B0C782F2BCA22B40C67061D6822",
+  "package_identity": "JEReleaseMetadataWitness",
+  "schema_version": 2,
+  "source": {
+    "release": "mcpp-2.7.2",
+    "sha256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+    "url": "https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download"
+  },
+  "payload_sha256": "97FE02497FB0584B8358EE94887945564F5A4BD2D01AEB6514B20DA90010C068"
+}

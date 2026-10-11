@@ -1,0 +1,32 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2",
+  "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+  "tool_sha256": "0F7DABA445BA37B652AE4180270AB3EFF27ACBBE5D411D3B05DAD51AAB16404C",
+  "project": "PCbuild\\pythoncore.vcxproj",
+  "argument_count": 20,
+  "argv": [
+    "-getProperty:GitVersion,GitTag,GitBranch",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\pythoncore.vcxproj",
+    "/p:Configuration=Release",
+    "/p:Platform=x64",
+    "/p:PlatformToolset=v143",
+    "/p:IncludeExternals=true",
+    "/p:IncludeExtensions=true",
+    "/p:IncludeCTypes=true",
+    "/p:IncludeSSL=true",
+    "/p:IncludeTkinter=true",
+    "/p:IncludeTests=true",
+    "/p:SupportSigning=false",
+    "/p:KillPython=false",
+    "/p:ExternalsDir=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-externals/",
+    "/p:GitVersion=49965601d6afedafe47cc85556d99b7a24981051",
+    "/p:GitTag=cpython-3.10.13-archive",
+    "/p:GitBranch=archive",
+    "/p:PythonForBuild=\"C:/Users/Jerico/AppData/Local/Programs/Python/Python312/python.exe\" -E -s",
+    "/nologo",
+    "/v:m"
+  ],
+  "no_target": true,
+  "query": "-getProperty:GitVersion,GitTag,GitBranch",
+  "documentation": "https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference?view=visualstudio"
+}

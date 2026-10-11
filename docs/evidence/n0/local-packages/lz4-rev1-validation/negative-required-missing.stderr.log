@@ -1,0 +1,4 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LZ4/BuildLz4Package.cmake:9 (message):
+  JE local lz4: JE_LZ4_SOURCE_URL is required
+
+

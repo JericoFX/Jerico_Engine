@@ -1,0 +1,4 @@
+[
+  "-c",
+  "import ly_remote_console; print(getattr(ly_remote_console, '__file__', None))"
+]

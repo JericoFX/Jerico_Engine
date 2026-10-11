@@ -1,0 +1,8 @@
+[
+  "--build",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-consumer-provenance-rev3",
+  "--config",
+  "Debug",
+  "--target",
+  "JEPythonEmbed"
+]

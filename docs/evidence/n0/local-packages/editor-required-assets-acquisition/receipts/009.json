@@ -1,0 +1,31 @@
+{
+  "index": 9,
+  "source_path": "Assets/Engine/Fonts/default-ui.font",
+  "expected_sha256": "9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8",
+  "expected_bytes": 260,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/default-ui.font",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:17.890382+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/default-ui.font",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "260",
+      "ETag": "\"9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8\"",
+      "Location": null
+    }
+  },
+  "local_recovery": {
+    "xml": "Assets/Engine/Fonts/default-ui.xml",
+    "xml_sha256": "9f2c8aaa794f2a55f7dec9346020935898ee751c66be17f75c42a89845555049",
+    "transform": "CRLF to LF only"
+  },
+  "actual_sha256": "9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8",
+  "actual_bytes": 260,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Assets\\Engine\\Fonts\\default-ui.font",
+  "status": "acquired and byte verified"
+}

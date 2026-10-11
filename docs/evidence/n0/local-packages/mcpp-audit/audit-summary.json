@@ -1,0 +1,53 @@
+{
+  "release": "mcpp-2.7.2",
+  "variant": "2.7.2_az.2",
+  "upstreamGitCommit": null,
+  "sourceArchive": "F:/JericoEngine/Dependencies/archives/mcpp-2.7.2.tar.gz",
+  "sourceArchiveSHA256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+  "sourceArchiveBytes": 1533457,
+  "shaPrimaryURL": "https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download?download=&use_mirror=gigenet",
+  "immutableSource": "F:/JericoEngine/Dependencies/mcpp-2.7.2",
+  "tarEntries": 864,
+  "tarFiles": 850,
+  "tarFileBytes": 5236353.0,
+  "tarLinks": 0,
+  "extractionHashesMatched": true,
+  "recipeCommit": "ce8be74060cf231c11d464edb0862234dea7782d",
+  "patchSHA256": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b",
+  "patchFiles": 11,
+  "patchHunks": 39,
+  "patchGitBlobValidation": "Full calculated hashes match all original patch pre/post seven-hex blob prefixes; no upstream Git identity invented",
+  "license": "BSD-2-Clause; DECUS cpp public-domain credit; O3DE adaptation Apache-2.0 OR MIT",
+  "acquisition": "Manual HTTPS SourceForge distribution/mirror redirects audited one hop at a time, no automatic redirects/authentication; final HEAD/GET200; temporal query omitted from receipts",
+  "consumerPaths": [
+    "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/Preprocessor.h",
+    "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/Preprocessor.cpp",
+    "Gems/Atom/Asset/Shader/Code/CMakeLists.txt"
+  ],
+  "interface": [
+    "3rdParty::mcpp INTERFACE IMPORTED GLOBAL",
+    "mcpp/include/mcpp_lib.h",
+    "mcpp/include/mcpp_out.h",
+    "mcpp/lib/mcpp0.lib",
+    "mcpp/lib/mcpp0.dll",
+    "mcpp/lib/mcpp.exe"
+  ],
+  "features": [
+    "MSC Windows compiler-specific defaults",
+    "MCPP_LIB/DLL_EXPORT",
+    "Include callback/const argv/MCPP_OUTDEST",
+    "Absolute line origins/comment source line count",
+    "Seven upstream C translation units; global-state API remains serialized by Atom"
+  ],
+  "configuration": "DLL Release/O2/MD/NDEBUG; CLI original no optimization/NDEBUG additions/MT; VS2022 v143 x64 adaptation",
+  "currentBinaryPin": "mcpp-2.7.2_az.2-rev1-windows/794789aba639bfe2f4e8fcb4424d679933dd6290e523084aa0a4e287ac44acb2",
+  "newBinaryIdentity": "mcpp-2.7.2_az.2-je-rev1-windows; actual package SHA pending Luna",
+  "validation": "PENDING PRODUCER/CONSUMER/GUARD EXECUTION BY LUNA",
+  "limits": [
+    "No compiler/CMake/tests executed by writer",
+    "No ShaderBuilder/Editor/runtime/image acceptance",
+    "No complete legal redistribution certification",
+    "No performance/thread-safety claim",
+    "No source/catalog/docs outside assigned scope modified"
+  ]
+}

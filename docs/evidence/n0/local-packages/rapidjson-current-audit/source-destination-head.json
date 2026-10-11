@@ -1,0 +1,53 @@
+{
+  "url": "https://codeload.github.com/Tencent/rapidjson/tar.gz/24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+  "method": "HEAD",
+  "status": 200,
+  "authorization": false,
+  "max_redirects": 0,
+  "headers": {
+    "Access-Control-Allow-Origin": [
+      "https://render.githubusercontent.com"
+    ],
+    "Content-Security-Policy": [
+      "default-src 'none'; style-src 'unsafe-inline'; sandbox"
+    ],
+    "Cross-Origin-Resource-Policy": [
+      "cross-origin"
+    ],
+    "ETag": [
+      "W/\"88cdc0de11ce6dd5a947899bb74e804b1ef069b12881b85a94f0fab11206ac5b\""
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31536000"
+    ],
+    "Vary": [
+      "Authorization",
+      "Accept-Encoding"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff"
+    ],
+    "X-Frame-Options": [
+      "deny"
+    ],
+    "X-XSS-Protection": [
+      "1; mode=block"
+    ],
+    "Date": [
+      "Sat, 10 Oct 2026 22:35:17 GMT"
+    ],
+    "X-GitHub-Request-Id": [
+      "CB3E:23E5EA:40313:3321D5:6ACABDA5"
+    ],
+    "x-github-edge-region": [
+      "brazilsouth"
+    ],
+    "Content-Disposition": [
+      "attachment; filename=rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f.tar.gz"
+    ],
+    "Content-Type": [
+      "application/x-gzip"
+    ]
+  },
+  "utc": "2026-10-10T22:37:48.5710948Z"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "producer-uri",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "-DJE_LUA_SOURCE_ARCHIVE:FILEPATH=https://offline.invalid/lua.tar.gz",
+    "-DJE_LUA_SOURCE_SHA256=2ff89bbea22a7c8b910d6b006f5ba4559edcf468a25537cedf9988ed90f6b450",
+    "-DJE_LUA_SOURCE_URL=https://codeload.github.com/lua/lua/tar.gz/refs/tags/v5.4.4",
+    "-DJE_LUA_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-neg-uri-output",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\BuildLuaPackage.cmake"
+  ],
+  "argv_count": 6,
+  "expected_diagnostic": "JE_LUA_SOURCE_ARCHIVE must not be a URI",
+  "started": "2026-10-10T19:29:25.5957800-03:00"
+}

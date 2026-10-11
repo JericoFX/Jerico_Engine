@@ -1,0 +1,38 @@
+{
+  "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\googlebenchmark-v1.7.0.tar.gz",
+  "bytes": 194165,
+  "sha256": "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac",
+  "receipts": [
+    {
+      "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+      "utc": "2026-10-10T23:36:10.900705+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Type": "application/x-gzip",
+        "Content-Length": null,
+        "ETag": "\"f86727198b7597cdccc3a9a9064b764598d5c8abda87b8f5f399974327f4a4ff\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+      "utc": "2026-10-10T23:36:11.198320+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Type": "application/x-gzip",
+        "Content-Length": null,
+        "ETag": "\"f86727198b7597cdccc3a9a9064b764598d5c8abda87b8f5f399974327f4a4ff\"",
+        "Location": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "path": "Projects/JEEditorFixture/CMakeLists.txt",
+    "before": "5486FB4054DA6D0094575D990C351A5401E39AF05369DB3A626B1716038ECE41",
+    "after": "1BEF1EAD3171B7A938A16C5DDCCC3120E904B17996903766C0BA6FD492FF5944",
+    "changes": "trailing whitespace and empty EOF only",
+    "bytes": 2337
+  },
+  {
+    "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.cmake",
+    "before": "FD14F0D22D138418901FB6222DB4478CADFEB04CA7CC94DB47DDFD467401F76B",
+    "after": "55286592CCC9873B19D74D73AB4662542A0AD3EDB2E3F7F13A03EF73865CDA3A",
+    "changes": "trailing whitespace and empty EOF only",
+    "bytes": 250
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/README.md",
+    "before": "96498C747D5E46B338FF0C6C8FF9739E6F8B08D1647743382BEB42210E6C5421",
+    "after": "109493F79878918796FB34D27F33822F3ED063287F25463D34E13D7D4A3D3B30",
+    "changes": "trailing whitespace and empty EOF only",
+    "bytes": 196
+  },
+  {
+    "path": "Projects/JEEditorFixture/cmake/EngineFinder.cmake",
+    "before": "6F063BADD68EB5BC5D5066036DAAF25D01249F4AA22E7249A9C9EFC848849385",
+    "after": "D34CCAD4D0242003ABB2EDC630C35430BEC86CED62E193BA40C61A3603B8A539",
+    "changes": "trailing whitespace and empty EOF only",
+    "bytes": 10274
+  }
+]

@@ -1,0 +1,9 @@
+[
+  "--test-dir",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-consumer-provenance-rev3",
+  "-C",
+  "Debug",
+  "--output-on-failure",
+  "-R",
+  "^JE\\.LocalPackages\\.PythonEmbed$"
+]

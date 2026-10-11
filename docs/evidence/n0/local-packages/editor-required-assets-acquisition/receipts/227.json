@@ -1,0 +1,41 @@
+{
+  "index": 227,
+  "source_path": "Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+  "expected_sha256": "bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836",
+  "expected_bytes": 1200056,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:20.832367+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/bmp",
+      "Content-Length": "1200056",
+      "ETag": "\"bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:21.303085+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/bmp",
+      "Content-Length": "1200056",
+      "ETag": "\"bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836",
+  "actual_bytes": 1200056,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Templates\\ScriptOnlyProject\\Template\\Resources\\Splash.bmp",
+  "status": "acquired and byte verified"
+}

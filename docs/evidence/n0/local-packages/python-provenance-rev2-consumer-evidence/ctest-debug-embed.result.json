@@ -1,0 +1,20 @@
+{
+  "name": "ctest-debug-embed",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv_count": 8,
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer",
+    "-C",
+    "Debug",
+    "--output-on-failure",
+    "-V",
+    "-R",
+    "^JE\\.LocalPackages\\.PythonEmbed$"
+  ],
+  "started": "2026-10-10T19:47:15.4043000-03:00",
+  "exitcode": 8,
+  "elapsed_seconds": 0.5217147,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\ctest-debug-embed.log"
+}

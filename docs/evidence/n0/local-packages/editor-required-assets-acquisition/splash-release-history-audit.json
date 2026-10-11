@@ -1,0 +1,455 @@
+{
+  "path": "Code/Editor/splashscreen_background.png",
+  "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+  "expected_bytes": 1708521,
+  "pointer_git_blob_sha1": "1b65fb4e2f01c3d1566095816ff78858ab8b8265",
+  "pointer_git_blob_verified": true,
+  "pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c\nsize 1708521\n",
+  "tags_metadata": [
+    {
+      "name": "Demo01",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/Demo01",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/Demo01",
+      "commit": {
+        "sha": "6eb8fc5988c175d42263be3e606b74442b2a41b6",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/6eb8fc5988c175d42263be3e606b74442b2a41b6"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy9EZW1vMDE="
+    },
+    {
+      "name": "2605.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2605.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2605.0",
+      "commit": {
+        "sha": "3db6943249d8bd7960b9ed7e9aee310b7668586e",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/3db6943249d8bd7960b9ed7e9aee310b7668586e"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNjA1LjA="
+    },
+    {
+      "name": "2510.2",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2510.2",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2510.2",
+      "commit": {
+        "sha": "cf85af783fe207708a7d71e7f65a0225ac8ccfa3",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/cf85af783fe207708a7d71e7f65a0225ac8ccfa3"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNTEwLjI="
+    },
+    {
+      "name": "2510.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2510.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2510.1",
+      "commit": {
+        "sha": "e9fe59f11e3d2360a224ac22c8a8c1b0fb4bde0e",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/e9fe59f11e3d2360a224ac22c8a8c1b0fb4bde0e"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNTEwLjE="
+    },
+    {
+      "name": "2510.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2510.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2510.0",
+      "commit": {
+        "sha": "ece239c0113d988907edea0022f7609387ae7baa",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/ece239c0113d988907edea0022f7609387ae7baa"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNTEwLjA="
+    },
+    {
+      "name": "2505.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2505.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2505.1",
+      "commit": {
+        "sha": "faeeba431d2b22facb020608054ddfb4c66b7224",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/faeeba431d2b22facb020608054ddfb4c66b7224"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNTA1LjE="
+    },
+    {
+      "name": "2505.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2505.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2505.0",
+      "commit": {
+        "sha": "46c647db74ede9c95897f40468f3c2cac59f3532",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/46c647db74ede9c95897f40468f3c2cac59f3532"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNTA1LjA="
+    },
+    {
+      "name": "2409.2",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2409.2",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2409.2",
+      "commit": {
+        "sha": "995e3aff8d608faaf749e261a7ea796df5417f24",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/995e3aff8d608faaf749e261a7ea796df5417f24"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNDA5LjI="
+    },
+    {
+      "name": "2409.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2409.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2409.1",
+      "commit": {
+        "sha": "c602b493dbb91b246f479cb4fc35bbbcf3f55228",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/c602b493dbb91b246f479cb4fc35bbbcf3f55228"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNDA5LjE="
+    },
+    {
+      "name": "2409.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2409.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2409.0",
+      "commit": {
+        "sha": "e8570f9d635c0abbf3d733d0524a3c0ae75d726c",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/e8570f9d635c0abbf3d733d0524a3c0ae75d726c"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yNDA5LjA="
+    },
+    {
+      "name": "2310.3",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2310.3",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2310.3",
+      "commit": {
+        "sha": "1577b1e742358461d8b2e6cfafd937637315c9d5",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/1577b1e742358461d8b2e6cfafd937637315c9d5"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMzEwLjM="
+    },
+    {
+      "name": "2310.2",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2310.2",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2310.2",
+      "commit": {
+        "sha": "e22213ea946932dc2f94d9f1392e98b4bf2b2c3f",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/e22213ea946932dc2f94d9f1392e98b4bf2b2c3f"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMzEwLjI="
+    },
+    {
+      "name": "2310.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2310.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2310.1",
+      "commit": {
+        "sha": "c89678d6ba58271c76650e7aec180a3196f24f02",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/c89678d6ba58271c76650e7aec180a3196f24f02"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMzEwLjE="
+    },
+    {
+      "name": "2310.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2310.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2310.0",
+      "commit": {
+        "sha": "0d490a2b4b5e04fd17edf4850c91f94361d4b836",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/0d490a2b4b5e04fd17edf4850c91f94361d4b836"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMzEwLjA="
+    },
+    {
+      "name": "2305.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2305.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2305.1",
+      "commit": {
+        "sha": "afd9c5c9d9d42d353ee949a9832ef203c22ac332",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/afd9c5c9d9d42d353ee949a9832ef203c22ac332"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMzA1LjE="
+    },
+    {
+      "name": "2305.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2305.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2305.0",
+      "commit": {
+        "sha": "8c1421e2a0d168d34ae9ca6c763270fe8395a809",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/8c1421e2a0d168d34ae9ca6c763270fe8395a809"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMzA1LjA="
+    },
+    {
+      "name": "2210.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2210.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2210.0",
+      "commit": {
+        "sha": "3704e30b2092770be8593c9ec0a8c98d16d7c3d6",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/3704e30b2092770be8593c9ec0a8c98d16d7c3d6"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMjEwLjA="
+    },
+    {
+      "name": "2205.0",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2205.0",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2205.0",
+      "commit": {
+        "sha": "7f4d56adc180f996383251dbdc5dd60ee9098e31",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/7f4d56adc180f996383251dbdc5dd60ee9098e31"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMjA1LjA="
+    },
+    {
+      "name": "2111.2",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2111.2",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2111.2",
+      "commit": {
+        "sha": "c1d7294c5bbdcf581e89fc0f2ba5c9ebf66ee14d",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/c1d7294c5bbdcf581e89fc0f2ba5c9ebf66ee14d"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMTExLjI="
+    },
+    {
+      "name": "2111.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2111.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2111.1",
+      "commit": {
+        "sha": "1da5ef16a8f03ca76b0ed47cac21d18583ecab23",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/1da5ef16a8f03ca76b0ed47cac21d18583ecab23"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMTExLjE="
+    },
+    {
+      "name": "2107.1",
+      "zipball_url": "https://api.github.com/repos/o3de/o3de/zipball/refs/tags/2107.1",
+      "tarball_url": "https://api.github.com/repos/o3de/o3de/tarball/refs/tags/2107.1",
+      "commit": {
+        "sha": "e7f787572e805c413115265e5873fb2425e2f41b",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/e7f787572e805c413115265e5873fb2425e2f41b"
+      },
+      "node_id": "MDM6UmVmMzU0NzQzMzkxOnJlZnMvdGFncy8yMTA3LjE="
+    }
+  ],
+  "pr19779": [
+    {
+      "commit": "2bd5dc8a072dd4be2a15bb0c6f81e92de8466f8c",
+      "files": [
+        {
+          "sha": "58d00e2c3a421b8292cc2a58f32250422c6aaf1c",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/2bd5dc8a072dd4be2a15bb0c6f81e92de8466f8c/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/2bd5dc8a072dd4be2a15bb0c6f81e92de8466f8c/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=2bd5dc8a072dd4be2a15bb0c6f81e92de8466f8c",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:39c933de9edf7d666ee7a59e28dc636b738594787a8e19fab561aece303915d4\n-size 2968529\n+oid sha256:e110285cab49c85ad2d2b433b9b99312ad284f8f65e5cc38391903cd1facffba\n+size 2386778"
+        }
+      ]
+    },
+    {
+      "commit": "a32b7cf7ef5dbcd396d728cefcdabc91f5a226a2",
+      "files": [
+        {
+          "sha": "9360290f6ea8ad4d43c4e1a4396b762ac5973bdd",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/a32b7cf7ef5dbcd396d728cefcdabc91f5a226a2/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/a32b7cf7ef5dbcd396d728cefcdabc91f5a226a2/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=a32b7cf7ef5dbcd396d728cefcdabc91f5a226a2",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:e110285cab49c85ad2d2b433b9b99312ad284f8f65e5cc38391903cd1facffba\n-size 2386778\n+oid sha256:9231fddff1e84a49faf8e4a002ce95cdf00222d97b55c46b2f35589da957e80a\n+size 2177025"
+        }
+      ]
+    },
+    {
+      "commit": "0370cca354773adcf98db89a12378d5f3eda352c",
+      "files": [
+        {
+          "sha": "1b65fb4e2f01c3d1566095816ff78858ab8b8265",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/0370cca354773adcf98db89a12378d5f3eda352c/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/0370cca354773adcf98db89a12378d5f3eda352c/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=0370cca354773adcf98db89a12378d5f3eda352c",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:9231fddff1e84a49faf8e4a002ce95cdf00222d97b55c46b2f35589da957e80a\n-size 2177025\n+oid sha256:92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c\n+size 1708521"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "commit": "0370cca354773adcf98db89a12378d5f3eda352c",
+      "reason": "original PR19779 exact pointer blob",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+      "head": {
+        "url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+        "method": "HEAD",
+        "status": 404,
+        "final_url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Length": "0",
+          "Content-Type": null,
+          "ETag": null,
+          "Location": null
+        }
+      },
+      "head_matches": false,
+      "payload_get": false
+    },
+    {
+      "commit": "3db6943249d8bd7960b9ed7e9aee310b7668586e",
+      "tag": "2605.0",
+      "reason": "official release tag exact pointer blob",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+      "head": {
+        "url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+        "method": "HEAD",
+        "status": 404,
+        "final_url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Length": "0",
+          "Content-Type": null,
+          "ETag": null,
+          "Location": null
+        }
+      },
+      "head_matches": false,
+      "payload_get": false
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/tags?per_page=50",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/tags?per_page=50",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "8212",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"73d916b452a4e75cc18703b2d0981787e11b3fed211abe30acf82051e28678a6\"",
+        "Location": null
+      },
+      "metadata_sha256": "73d916b452a4e75cc18703b2d0981787e11b3fed211abe30acf82051e28678a6"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/pulls/19779/commits?per_page=20",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/pulls/19779/commits?per_page=20",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "10275",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7311663ace00ac1863c7f929079585da79567b33f87a7d0a7abe402bf87ec74f\"",
+        "Location": null
+      },
+      "metadata_sha256": "7311663ace00ac1863c7f929079585da79567b33f87a7d0a7abe402bf87ec74f"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/git/blobs/1b65fb4e2f01c3d1566095816ff78858ab8b8265",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/git/blobs/1b65fb4e2f01c3d1566095816ff78858ab8b8265",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "463",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"493ddaed7d063fd70ad29d69024a038d5fe01d8944e315517103bebf677a9731\"",
+        "Location": null
+      },
+      "metadata_sha256": "493ddaed7d063fd70ad29d69024a038d5fe01d8944e315517103bebf677a9731"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/2bd5dc8a072dd4be2a15bb0c6f81e92de8466f8c",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/2bd5dc8a072dd4be2a15bb0c6f81e92de8466f8c",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4318",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"da6082628af8f1ea55d09fb9bc7b15f4226cd88ba13d794bd51b0cf5fd64f4b0\"",
+        "Location": null
+      },
+      "metadata_sha256": "da6082628af8f1ea55d09fb9bc7b15f4226cd88ba13d794bd51b0cf5fd64f4b0"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/a32b7cf7ef5dbcd396d728cefcdabc91f5a226a2",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/a32b7cf7ef5dbcd396d728cefcdabc91f5a226a2",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4313",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"042dc59de74c4f3de4661cfdcc56f13372fdda827b0708b78827511b8779b3c3\"",
+        "Location": null
+      },
+      "metadata_sha256": "042dc59de74c4f3de4661cfdcc56f13372fdda827b0708b78827511b8779b3c3"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/0370cca354773adcf98db89a12378d5f3eda352c",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/0370cca354773adcf98db89a12378d5f3eda352c",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4325",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"0a49cc9b97241f43c92d2709813972663f75ec221c8f0d5d5197cfe3d90017e4\"",
+        "Location": null
+      },
+      "metadata_sha256": "0a49cc9b97241f43c92d2709813972663f75ec221c8f0d5d5197cfe3d90017e4"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Code/Editor/splashscreen_background.png?ref=3db6943249d8bd7960b9ed7e9aee310b7668586e",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/contents/Code/Editor/splashscreen_background.png?ref=3db6943249d8bd7960b9ed7e9aee310b7668586e",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "1084",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"1b65fb4e2f01c3d1566095816ff78858ab8b8265\"",
+        "Location": null
+      },
+      "metadata_sha256": "2af0eccd04a052c733291afc727686e85ecf5f001e1f0b71ad986228604ec817"
+    },
+    {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+      "method": "HEAD",
+      "status": 404,
+      "final_url": "https://media.githubusercontent.com/media/o3de/o3de/0370cca354773adcf98db89a12378d5f3eda352c/Code/Editor/splashscreen_background.png",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "0",
+        "Content-Type": null,
+        "ETag": null,
+        "Location": null
+      }
+    },
+    {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+      "method": "HEAD",
+      "status": 404,
+      "final_url": "https://media.githubusercontent.com/media/o3de/o3de/3db6943249d8bd7960b9ed7e9aee310b7668586e/Code/Editor/splashscreen_background.png",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "0",
+        "Content-Type": null,
+        "ETag": null,
+        "Location": null
+      }
+    }
+  ],
+  "payload_get": false,
+  "full_payload_sha_verified": false
+}

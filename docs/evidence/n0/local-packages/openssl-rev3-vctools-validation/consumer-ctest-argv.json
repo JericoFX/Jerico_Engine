@@ -1,0 +1,13 @@
+﻿{
+    "executable":  "C:\\Program Files\\CMake\\bin\\ctest.exe",
+    "argv":  [
+                 "--test-dir",
+                 "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\consumer-md",
+                 "-C",
+                 "Release",
+                 "--output-on-failure"
+             ],
+    "argc":  5,
+    "cwd":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "start_utc":  "2026-10-11T00:50:32.2733910Z"
+}

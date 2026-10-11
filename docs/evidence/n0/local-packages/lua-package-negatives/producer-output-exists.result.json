@@ -1,0 +1,7 @@
+{
+  "name": "producer-output-exists",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0344622,
+  "diagnostic_found": true,
+  "expected_diagnostic": "output already exists"
+}

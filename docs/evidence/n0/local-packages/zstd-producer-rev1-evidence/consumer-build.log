@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Zstd/tests/CMakeLists.txt
+  ZstdConsumer.cpp
+  JEZstdConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\zstd-consumer-rev1\Release\JEZstdConsumer.exe

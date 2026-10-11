@@ -1,0 +1,60 @@
+{
+  "scope": "Manual acquisition/static source audit only; no engine/wrapper/options/resolver/source changes",
+  "version": "v1.18.0",
+  "commit": "063de7e9578f82b369302001269680b4b1553359",
+  "commitEvidence": "official-tag-response.json from api.github.com/repos/google/googletest/git/ref/tags/v1.18.0; object.type=commit, exact pin",
+  "sourceURL": "https://github.com/google/googletest/archive/refs/tags/v1.18.0.tar.gz",
+  "auditedRedirects": [
+    "github.com HEAD302 -> https://codeload.github.com/google/googletest/tar.gz/refs/tags/v1.18.0",
+    "codeload.github.com HEAD200/GET200 direct; automatic redirects and credentials disabled"
+  ],
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\googletest-audit\\googletest-v1.18.0.tar.gz",
+  "archiveBytes": 894741,
+  "archiveSHA256": "6e3191c1455468b3fc35a417fb565c1c5071aee1b7e7f85e30cf48a98d37d8b5",
+  "sourceRoot": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0",
+  "tarMembers": 284,
+  "regularFiles": 252,
+  "directoriesIncludingRoot": 31,
+  "metadataEntries": 1,
+  "sourcePayloadBytes": 4143491,
+  "links": 0,
+  "collisions": 0,
+  "lfsPointers": 0,
+  "reparsePoints": 0,
+  "allBlobsMatch": true,
+  "sourceReadOnly": true,
+  "license": "BSD-3-Clause",
+  "licenseFile": "LICENSE",
+  "licenseBytes": 1475,
+  "licenseSHA256": "9702DE7E4117A8E2B20DAFAB11FFDA58C198AEDE066406496BEF670D40A22138",
+  "notices": "All original source/header copyright notices preserved verbatim; LICENSE is the sole license/notice-named file in the release archive",
+  "cmakeClosureFiles": [
+    "CMakeLists.txt",
+    "googlemock/CMakeLists.txt",
+    "googletest/CMakeLists.txt",
+    "googletest/cmake/internal_utils.cmake"
+  ],
+  "closure": "No FetchContent/ExternalProject/file DOWNLOAD/execute_process in CMake closure. Threads lookup uses platform threading. GTEST_HAS_ABSL defaults OFF; optional Abseil/RE2 find_package is not reached by default. No transitive source acquisition required.",
+  "python": "Only optional upstream self-tests call/find Python3, guarded by gtest_build_tests. Existing wrapper already sets gtest_build_tests/gmock_build_tests OFF. No source or test-option change made.",
+  "originalWrapperValues": {
+    "BUILD_GMOCK": true,
+    "BUILD_SHARED_LIBS": false,
+    "INSTALL_GTEST": false,
+    "gmock_build_tests": false,
+    "gtest_build_samples": false,
+    "gtest_build_tests": false,
+    "gtest_force_shared_crt": true,
+    "gtest_hide_internal_symbols": false
+  },
+  "preservedInterfaces": [
+    "3rdParty::googletest::GTest -> gtest",
+    "3rdParty::googletest::GMock -> gmock",
+    "AzTest publicly links GMock/GTest",
+    "AzTest.cpp:102 accesses FLAGS_gtest_catch_exceptions, InitGoogleMock at159/266; original hidden-symbols OFF retained",
+    "Source wrapper retains SYSTEM headers, disabled fast math and installer layout include/gmock_gtest + platform libs"
+  ],
+  "rootArgument": "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=F:/JericoEngine/Dependencies/googletest-v1.18.0",
+  "rootProtection": "Keep existing disconnected/no-server/local-path/source-manifest guards; parent integrates exact override. No additional option changes or duplicate package/provider.",
+  "productAcceptance": "PENDING: no CMake/build/test/Editor/AssetProcessor/runtime claim",
+  "validationOwner": "Parent review/integration and Luna only validation"
+}

@@ -18,8 +18,15 @@ The original optional layout features and CMake target 3rdParty::Python remain.
 The bundled pip 23.0.1 and setuptools 65.5.0 are installed from local wheels;
 the original unpinned remote pip upgrade is omitted.
 
-Artifact identity: python-3.10.13-je-rev1-windows, with its own measured SHA256.
+Artifact identity: python-3.10.13-je-rev3-windows, with its own measured SHA256.
 This artifact does not claim the hash or binary identity of the legacy package.
+Build metadata identifies the audited CPython archive commit above and the tag
+cpython-3.10.13-archive. The producer verifies the exact upstream pythoncore
+project and patches only its work copy: _GetBuildInfo skips the three Git queries
+and the git-file PropertyGroup when all three explicit provenance values exist.
+Messages, directory creation and compile definitions remain upstream. The source
+snapshot stays unchanged; upstream and patched project hashes and explicit
+GitVersion/GitTag/GitBranch values are recorded in JEProvenance.json.
 Source archive receipts and external component pins are in JEProvenance.json.
 The generated python/LICENSE.txt and original component notices are preserved
 under LICENSES. Adapted O3DE glue retains Apache-2.0 OR MIT notices and texts.

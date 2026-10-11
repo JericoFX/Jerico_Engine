@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:9 (message):
+  JE local Python: JE_SQLITE_SOURCE_DIR must not be a URI
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake:7 (JE_python_require_local_path)
+
+

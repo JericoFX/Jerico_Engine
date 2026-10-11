@@ -1,0 +1,33 @@
+{
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\editor-native-residual-audit\\source-freeze-editor-native-residual.json",
+  "freezeSHA256": "3857A618B979845C580191B31B705B7BFF6879DFDD08CCC85F7DC42A1D22EAC5",
+  "ownedSourceCount": 17,
+  "implemented": [
+    "CryEdit Python CLI/handlers/runner removed",
+    "New Component ClassWizard action and ScriptHelp removed",
+    "Python console py/pyRunFile registration removed",
+    "RunFile/RunFileParameters methods/events/reflection removed; native reflection and component UUIDs preserved",
+    "Historical PythonScriptsDialog sources preserved outside file list",
+    "CommandManager native log preserved; Python terminal mirroring removed",
+    "Legacy macro serialized type1 preserved with explicit rejection; native Console/Toggle retained",
+    "Project EditSettings uses native ProjectSettingsTool pane",
+    "Project Open uses file dialog and JSON object/nonempty project_name checks, SaveModified cancel guard, executable self/direct ProcessLauncher and project/engine args"
+  ],
+  "staticChecks": [
+    "ToolsConfigPage UI XML parses with no Script selector",
+    "No native Python runner include/call in changed composition sources; excluded historical dialog still preserved",
+    "OpenSSL frozen21 hashes unchanged",
+    "CRLF source endings preserved"
+  ],
+  "nativeTests": "Four existing reflection assertions changed to require runner absence; CVar/game/console assertions and native dispatch tests preserved. NOT EXECUTED.",
+  "projectStartup": "PENDING Main.cpp uses CheckProjectPathProvided PM fallback when no valid project; --project-path valid route preserved",
+  "gaps": [
+    "Native New Project creation port",
+    "Native New Component wizard port",
+    "Specialized SMC variant generator/expansion port",
+    "Native project startup/close handoff compile and runtime verification"
+  ],
+  "writerExecutedCMakeBuildTests": false,
+  "gitOperations": false,
+  "centralDocsChanged": false
+}

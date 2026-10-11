@@ -1,0 +1,10 @@
+{
+  "root": "F:\\JericoEngine\\Dependencies\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e",
+  "archive_sha256": "dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+  "files": 392,
+  "payload_bytes": 6033546,
+  "all_hashes_match": true,
+  "reparse_paths": [],
+  "extraction": "regular files/directories only into new root; no upstream scripts executed",
+  "snapshot_policy": "immutable input; subsequent builds must use external binary dirs and preserve these source hashes"
+}

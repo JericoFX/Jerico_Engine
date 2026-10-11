@@ -1,0 +1,43 @@
+{
+  "case": "Missing",
+  "exit_code": 1,
+  "elapsed_seconds": 0.0329348,
+  "end_utc": "2026-10-11T01:04:26.9373403Z",
+  "helper_freeze_sha256": "930EE4014DABEED4259A93FE8711204171F09371CAF44DD0C73AA596EE20D803",
+  "path_helper_sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+  "archive_sha256_after": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D",
+  "fixture_files_after": [
+    {
+      "path": "sqlite-amalgamation-3530400.zip",
+      "bytes": 2946650,
+      "sha256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D"
+    },
+    {
+      "path": "source/shell.c",
+      "bytes": 1185915,
+      "sha256": "8011ED018AA12969F93573B7BB1EAE2D939D64D0F451B297FF847A0211C85179"
+    },
+    {
+      "path": "source/sqlite3.c",
+      "bytes": 9515341,
+      "sha256": "B1DD5D74EC7F29055A6684FA06FB3C2F6821C87DD38F9A458DFD2E8A1DB28189"
+    },
+    {
+      "path": "source/sqlite3.h",
+      "bytes": 690838,
+      "sha256": "919E7F2E8ED1D8F56AC17B412B8971C76AA5D1A879752CC6058F75E7D5910E1D"
+    },
+    {
+      "path": "source/sqlite3ext.h",
+      "bytes": 39175,
+      "sha256": "AC9645E5C9FF0CF176EFDD6E75CB5E98F46295D38E02DB5C4D208826A39AB4BE"
+    }
+  ],
+  "diagnostic_match": true,
+  "expected_diagnostic": "JE SQLite: source directory is missing",
+  "fixture_unchanged_during_cmake": true,
+  "unexpected_package_artifact_count": 0,
+  "passed": true,
+  "stdout_bytes": 0,
+  "stderr_bytes": 159
+}

@@ -1,0 +1,431 @@
+{
+  "path": "Code/Editor/splashscreen_background.png",
+  "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+  "expected_bytes": 1708521,
+  "history": [
+    {
+      "commit": "a77f023b51c3ae69fbb117f00c905109629760f5",
+      "message": "Cherry pick release fixes from stabilization/26050 to development (#19803)\n\n* Fixes MSVC compilation in MSVC toolchain 14.50 (#19777)\n\nIt turns out that microsoft's toolchain 14.50 still\nhad the stdext::make_checked_array_iterator function,\nand it was removed in 14.51.\n\nThis causes a compiler in VS 2026 until you update\nto latest.\n\nThis change makes it so that it only uses the\npatch to provide a dummy implementation of\nmake_checked_array_iterator if the toolchain is\n14.51 or later.\n\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\n\n* fix: restore AssetProcessor Assets tab search field (#19776)\n\nSwitch the writer to setFilterRegularExpression() to match the reader.\n\nSigned-off-by: Mateusz \u017bak <mateusz.zak@robotec.ai>\n\n* Update splashscreen for 26.05.0 release (#19779)\n\n* Add new Editor splashscreen for 26.05\n* Update splash with blue gradient with resize\n\nSigned-off-by: Mike Chang <62353586+amzn-changml@users.noreply.github.com>\n\n---------\n\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\nSigned-off-by: Mateusz \u017bak <mateusz.zak@robotec.ai>\nSigned-off-by: Mike Chang <62353586+amzn-changml@users.noreply.github.com>\nCo-authored-by: Mateusz \u017bak <mateusz.zak@robotec.ai>\nCo-authored-by: Mike Chang <62353586+amzn-changml@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "1b65fb4e2f01c3d1566095816ff78858ab8b8265",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/a77f023b51c3ae69fbb117f00c905109629760f5/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/a77f023b51c3ae69fbb117f00c905109629760f5/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=a77f023b51c3ae69fbb117f00c905109629760f5",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:39c933de9edf7d666ee7a59e28dc636b738594787a8e19fab561aece303915d4\n-size 2968529\n+oid sha256:92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c\n+size 1708521"
+        }
+      ]
+    },
+    {
+      "commit": "2a2f8122f6084cffba1e0b69d0e0ad1d04dfa534",
+      "message": "Cherry-pick from `stabilization/25100` to `development` (splash screen and ciso646) (#19290)\n\n* Adds a dummy ciso646 temporarily to satisfy the really old physx packages (#19275)\n\nThis adds a new target called `ciso646-include` which other targets\ncan depend on in order to satisfy old code that looks for `<ciso646>`.\n\nWe need to phase this out, but in order to do so, we'd have to figure\nout how to rebuild and patch Physx4, Physx5, and NVCloth, all of which\ncurrently depend on this.\n\nThis gives us time to figure out what the actual plan is.\n\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\n* Add new splashscreen for 25.10.0 (#19286)\nSigned-off-by: Mike Chang <changml@amazon.com>\n\n---------\n\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\nSigned-off-by: Mike Chang <changml@amazon.com>\nCo-authored-by: Mike Chang <changml@amazon.com>",
+      "files": [
+        {
+          "sha": "6158a8de728d5c0d8773f1f854c1d56b1cceec3d",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/2a2f8122f6084cffba1e0b69d0e0ad1d04dfa534/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/2a2f8122f6084cffba1e0b69d0e0ad1d04dfa534/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=2a2f8122f6084cffba1e0b69d0e0ad1d04dfa534",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:976e2fb0779423cc59d3e4a7f6c638f03348255f91109632247ce3f1fad158dc\n-size 3334160\n+oid sha256:39c933de9edf7d666ee7a59e28dc636b738594787a8e19fab561aece303915d4\n+size 2968529"
+        }
+      ]
+    },
+    {
+      "commit": "48ac59fbebefb9e176d27a5e7a5538c4b977f3a4",
+      "message": "Fix O3DE Splash Screen background for 25.05 (#19046) (#19129)\n\ncloses #19020\n\nChanges:\n\n- Extend the blue gradient foreground on the top side\n- Remove the almost invisible checkered pattern from the margins\n- Left margin size now matches the right margin size (140px) by removing the blue gradient slice\n\nSigned-off-by: Andr\u00e9 L. Alvares <andrluiz.alvares.alvares84@gmail.com>\nCo-authored-by: Andr\u00e9 L. Alvares <andrluiz.alvares.alvares84@gmail.com>",
+      "files": [
+        {
+          "sha": "58f3e8280941478a8bc42c675225927073db8a05",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/48ac59fbebefb9e176d27a5e7a5538c4b977f3a4/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/48ac59fbebefb9e176d27a5e7a5538c4b977f3a4/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=48ac59fbebefb9e176d27a5e7a5538c4b977f3a4",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:7f8f56e7917f368b72c4286b13d9c671e0008cdf4b26e13661033f6ad458b8bc\n-size 3264421\n+oid sha256:976e2fb0779423cc59d3e4a7f6c638f03348255f91109632247ce3f1fad158dc\n+size 3334160"
+        }
+      ]
+    },
+    {
+      "commit": "74d0371bacffb83225b766a88981c3ca8140c825",
+      "message": "Cherry-pick remaining stabilization 2505.0 fixes to dev. (#18973)\n\n* Fixes mesh visibilty flag not being restored on level load (#18926)\n\nFixes Issue: https://github.com/o3de/o3de/issues/18863\n\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\n\n* Addresses compile errors for Mac/ios (#18939)\n\nSigned-off-by: Sidharth Moudgil <moudgils@amazon.com>\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\n\n* Update O3DE Splash Screen background for 25.05 (#18938)\n\nSigned-off-by: Andr\u00e9 L. Alvares <andrluiz.alvares.alvares84@gmail.com>\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\n\n---------\n\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\nSigned-off-by: Sidharth Moudgil <moudgils@amazon.com>\nSigned-off-by: Andr\u00e9 L. Alvares <andrluiz.alvares.alvares84@gmail.com>\nCo-authored-by: moudgils <47460854+moudgils@users.noreply.github.com>\nCo-authored-by: Andr\u00e9 L. Alvares <andrluiz.alvares.alvares84@gmail.com>",
+      "files": [
+        {
+          "sha": "ef5283d0abe78c9e61c787980fd9972561cc58dc",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/74d0371bacffb83225b766a88981c3ca8140c825/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/74d0371bacffb83225b766a88981c3ca8140c825/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=74d0371bacffb83225b766a88981c3ca8140c825",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:5d543f9bfef1a186b2f68c6144320c369ca155a40c6ed81023b14ee1d3e0bfe0\n-size 1800167\n+oid sha256:7f8f56e7917f368b72c4286b13d9c671e0008cdf4b26e13661033f6ad458b8bc\n+size 3264421"
+        }
+      ]
+    },
+    {
+      "commit": "febad954207d42f196a5010c2d9923b7e5be21d2",
+      "message": "Cherrypick stab to dev 03 (#18389)\n\n* Script canvas logger can now identify graph and entity names (#17912)\r\n\r\n* Script canvas logger can now identify graph and entity names\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\n\r\n* Init remote tools later to prevent timing issues\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\n\r\n---------\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n* Further fixes for the ScriptCanvas debugging facilities (#18145)\r\n\r\n* Keep scriptcanvas and compiled files entity UIDs in sync and fix node focus on trace click\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\n\r\n* Add notes for future fix\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\n\r\n* Remove useless check\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\n\r\n---------\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n* Fixes a crash if you enable Script canvas developer Gem (#18328)\r\n\r\nFix issue https://github.com/o3de/o3de/issues/17572\r\n\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n* Fixes a crash when you try to remove elements from unordered set. (#18352)\r\n\r\nFixes issue https://github.com/o3de/o3de/issues/18348\r\n\r\nThe function that it depended on was simply not implemented.\r\nWhile it is not ideal for it to walk the memory linearly when\r\nremoving an element from a set, it's still worth implementing for\r\ncases where the set is being used in a way that relies on indices,\r\nwhich is the case for the UI.\r\n\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n* Fix crash after leaving picking mode (#18366)\r\n\r\nfixes issue https://github.com/o3de/o3de/issues/18365\r\n\r\nThe hook to register and unregister actions happens once during startup,\r\nand is not meant to have any connection to the lifetime of the objects.\r\n\r\nThe crash was happening because the EditorTransformComponentSelection\r\nobject was being destroyed and recreated every time you enter pick mode,\r\nbut its action registration captured its 'this' pointer.\r\n\r\nusually, such action registration would be placed inside some kind of long\r\nlived singleton \"manager\" object, aka a system component, but in this case,\r\nit was put in an ephemeral object.  note that this is still a singleton\r\nobject, there is only ever one of it, and it is essentially the \"manager\",\r\nits just special in that sometimes, it does not exist.\r\n\r\nto fix this with as little \"splash damage\" as possible, I kept most\r\nof the code exactly as-is, without modifying any other classes,\r\nbut I made the action registration happen in a static function with\r\nno \"this\" pointer, which means the compiler could find every illegal\r\ninstance.\r\n\r\nI added a simple AZ::Environment based singleton pattern in there to get\r\nthe current instance when available.  This is also an attempt to keep\r\nthe \"Blast radius\" of this change as small as possible, as this is a\r\nwell-used pattern and bypasses any chance of there being weird\r\ndll-related issues.\r\n\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n* Revert \"Fix hyper-sensitve camera rotation remote clients (#18354)\" (#18368)\r\n\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n* Update O3DE Splash Screen background (#18372)\r\n\r\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: guillaume-haerinck <guillaume.haerinck@outlook.com>\r\nSigned-off-by: Nicholas Lawson <70027408+nick-l-o3de@users.noreply.github.com>\r\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>\r\nCo-authored-by: Guillaume Haerinck <guillaume.haerinck@outlook.com>\r\nCo-authored-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "88d37bb97e5dd184da0606087ced322379f98bcb",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/febad954207d42f196a5010c2d9923b7e5be21d2/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/febad954207d42f196a5010c2d9923b7e5be21d2/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=febad954207d42f196a5010c2d9923b7e5be21d2",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:079c6d28fab15dfe624307d2be81d7008cc582de496f486a604186404ca818ab\n-size 903037\n+oid sha256:5d543f9bfef1a186b2f68c6144320c369ca155a40c6ed81023b14ee1d3e0bfe0\n+size 1800167"
+        }
+      ]
+    },
+    {
+      "commit": "fc040b5828e82b4cd735aff9856185e1930c8ff6",
+      "message": "Reduce image size\n\nSigned-off-by: Danilo Aimini <82231674+AMZN-daimini@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "15bbaa19f40e8216915d1932011ade7dc126e6a9",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/fc040b5828e82b4cd735aff9856185e1930c8ff6/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/fc040b5828e82b4cd735aff9856185e1930c8ff6/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=fc040b5828e82b4cd735aff9856185e1930c8ff6",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:d682eb3cd7db2a8cf6a671071a1b5499e8d4d6cd4cc876ca976e2cf2ec07a6dc\n-size 3702659\n+oid sha256:079c6d28fab15dfe624307d2be81d7008cc582de496f486a604186404ca818ab\n+size 903037"
+        }
+      ]
+    },
+    {
+      "commit": "8438646f9a631115247ea924ddacc5119f7222b7",
+      "message": "Fix proportions of splash image for the Editor\n\nSigned-off-by: Danilo Aimini <82231674+AMZN-daimini@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "84d7250094443b4eb5fdb7d4530dbc0e33392d9b",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/8438646f9a631115247ea924ddacc5119f7222b7/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/8438646f9a631115247ea924ddacc5119f7222b7/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=8438646f9a631115247ea924ddacc5119f7222b7",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:746adf79fe5d0b1cc99e529f9280b79bf9de4d3a2b99f42c6b30ca55f46a35cd\n-size 3390470\n+oid sha256:d682eb3cd7db2a8cf6a671071a1b5499e8d4d6cd4cc876ca976e2cf2ec07a6dc\n+size 3702659"
+        }
+      ]
+    },
+    {
+      "commit": "4ea6d8710b374c49dcb7a8e80c1ab0948bb7ceae",
+      "message": "Stabilization/2310 @ 9f9829b26a47c2f255959b8e7edac24ac081c651 -> Development (#16844)\n\n* Enable the DPE by default\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* Fixed asset picker automated test with DPE enabled\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* type fixing for WrapperType\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fixes from code review\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Fix missing support for multi-collider articulation links (#16713)\r\n\r\n* Fix missing support for multi-collider articulation links\r\n* Adjust to review\r\n---------\r\nSigned-off-by: Micha\u0142 Pe\u0142ka <michal.pelka@robotec.ai>\r\n\r\n* addressing PR feedback\r\n\r\nSigned-off-by: TJ Kotha <tankotha@amazon.com>\r\n\r\n* addressed tweaks and nitpicks\r\n\r\nSigned-off-by: TJ Kotha <tankotha@amazon.com>\r\n\r\n* addressing more feedback\r\n\r\nSigned-off-by: TJ Kotha <tankotha@amazon.com>\r\n\r\n* adjusted spacing\r\n\r\nSigned-off-by: TJ Kotha <tankotha@amazon.com>\r\n\r\n* addressing chgalvan's feedback\r\n\r\nSigned-off-by: TJ Kotha <tankotha@amazon.com>\r\n\r\n* Skip test that is intermittently failing with DPE enabled\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* Fix for failing to open text files when running from a snap install (#16717)\r\n\r\n* Fix for failing to open text files when running from a snap install\r\n\r\n- Update Linux Qt packages to use the fixed revision (rev9) that fixes the snap/open local file issue\r\n- Corrected use of `QUrl(\"file:///\" + ` with the correct way: `QUrl(\"file:///\" + `\r\n- Added warning logs in Project Manager in case QDesktopServices::openUrl(<local file>) fails.\r\n- Fix error causing 'show logs' not to work\r\n\r\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>\r\n\r\n* fix for opaque wrapper types (#16732)\r\n\r\n* type fixing for WrapperType\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fixes from code review\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* turn on override support in the Inspector by default\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Fixed crash in DPE due to events being sent to widgets that have been deleted\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* remove unnecessary overrides, revert to new default\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Material Canvas: Updating material graph shaders to not optimize out material SRG\r\n\r\nThis change updates the material graph template material SRGs to include a placeholder variable. Including and referencing this variable ensures that the material SRG always exists across all shaders that might use it. This initial resolved one assert that triggered when adding or removing material inputs from a material graph, consequently adding or removing variables from the material SRG and corresponding connections in the material type. As the AP processes the material and shader changes, the runtime may receive individual shader updates with inconsistent SRG data until everything is fully compiled and synchronized.\r\n\r\nThis change may be reverted after subsequent changes that may also address the issue.\r\n\r\nRelates to https://github.com/o3de/o3de/issues/16034\r\nRelates to https://github.com/o3de/o3de/issues/16735\r\nRelates to https://github.com/o3de/o3de/issues/14772\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 16376e4323167ddac4346a224e64c59c02140abb)\r\n(cherry picked from commit a3cbcbb3bd369f2d80e0c715b62c0a82780d13c5)\r\n\r\n* Material Canvas: Create new material instance in viewport after changes\r\n\r\nThis change updates the material assignment class with a flag to force it to create a new material instance regardless of property overrides. The material canvas viewport uses this flag to guarantee the most recent version of the material asset and instance are reflected in the viewport.\r\n\r\nRelates to https://github.com/o3de/o3de/issues/16034\r\n\r\nRelates to https://github.com/o3de/o3de/issues/16735\r\n\r\nRelates to https://github.com/o3de/o3de/issues/14772\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 07df9b3a7a64a4982b08034f1647b1a22ddc30f9)\r\n(cherry picked from commit 2275ceed1e929995b75a02030657cee6b26b5113)\r\n\r\n* Material Canvas: Option to delete previously generated files before creating new ones\r\n\r\nThis change provides an option to delete files that were previously generated using the current template before creating new ones. The option was useful while debugging and may also be useful if switching between different material output nodes that might use the same file names. The option is disabled by default.\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 015e0076fddd25c2b387d272aa8f6ede4b59d24d)\r\n(cherry picked from commit fcdd7ee9e5ef1476bf62bebbca57c57738e88170)\r\n\r\n* updating display name and tooltip for delete generated files option\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 8888dff582310ad57ee4330a23f4f526cf7b9443)\r\n(cherry picked from commit 8bc60150ecdd6a7be950cf718902750de6271ab7)\r\n\r\n* Update shader and SRG instance ID creation functions\r\n\r\nThis change updates these functions to generate unique instance IDs that take the content or the version of the data into account. The asset data pointer is used to make the value more unique, relative to the asset, but could be replaced with some other explicit version value or a hash of the data. Ensuring that the instance ID is unique relative to the version of the data will permit new instances to be created or new versions of the asset with the same asset ID.\r\n\r\nRelates to https://github.com/o3de/o3de/issues/16034\r\n\r\nRelates to https://github.com/o3de/o3de/issues/16735\r\n\r\nRelates to https://github.com/o3de/o3de/issues/14772\r\n\r\nRelates to https://github.com/o3de/o3de/issues/15794\u2019\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Converted instance ID data byte array to structure after PR feedback\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Changing shader resource group instance ID generation to only use the shader resource group name and layout hashes\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Renaming instance ID function to MakeSRGPoolInstanceId\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Reverting material related changes from this PR and moving to separate PR\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Reverting but cleaning up changes to make instance ID for shader resource group pool\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Fixed unit tests after enabling prefab overrides\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* Change PR checklist GHA event type (#16765)\r\n\r\n* Fixing warning as error caused by unused variable\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Correcting spelling of \"Default\" in material component\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Restored function within correct spelling and added deprecation notice\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* SMC: Allow access to generated shaders and materials in intermediate assets folder\r\n\r\nReplaced explicit checks for ignoring the cache folder with configurable settings so that SMC could access generated shaders and materials\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Changed the ignored paths pattern settings to use regular expressions.\r\nAdded a faster, direct setting for ignoring the cache holder.\r\nAdded the ignore cache folder setting to the settings dialog.\r\nAdded a settings registry handler to monitor changes to the new settings and update the asset browser.\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Atom tools, SMC, MC: Atom tools asset browser support for extension based file filters\r\n\r\nSMC, MC, and other tools work primarily with source files that are not directly tied to asset types. This change implements support in the atom tools asset browser for setting up extension based file filters in lieu of the asset group based filters.\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* Updating comments and adding switch statement braces per PR feedback\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* fixed a few opaque types, where possible\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Fix reading of the GenericValueList values that contain enums\r\n\r\nThe GenericValueListAttributeDefinition has been updated to use the\r\n`Dom::Utils::ValueFromType` function to properly read the attribute from\r\na Dom::Value\r\n\r\nThe GenericComboBoxCtrl::ConsumeAttribute reading of the\r\nGenericValueList attribute has been updated to try to read a vector of every integer type `AZStd::pair<int-type, AZStd::string>` type.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Updating material canvas asset status reporting to be non blocking with multiple documents open simultaneously\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit d1db12012509a1b4dfaa0778819d7d0d07256c78)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Removing asset handling from material class that reported success even though the class has not been initialized\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 7a7a7c3868324625c2b0388cfcc26eb2c0f76621)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* updated erroneous comments in graph view\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit c34dcb70ddfc7f0667ef74d0d75cbd2c3988f103)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Fix missing texture reference\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit e9302d7f31f7ad9064e4ac874f300d5a4ac818e7)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Centralized logic and settings for deleting previously generated files\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit b3cf1c0fbbf5d880d3e3947eaf48ab6bcc4d223b)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Updating comments for registering shader source data document\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 6a0e647028504ce5a15156e50272d2c59314e4bc)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Restoring settings to clear viewport material when graph compilation starts\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 2820309965dd4f403935de3285df5cfe16de0f00)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Updated comments\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\nupdating messaging to make assets less acidic\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit c1bec429b984165607ac4c63a0ef39040e03f9b0)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* Updating comments\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n(cherry picked from commit 29a623a6eed6718839933b481865ccbfe438a2eb)\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* removing reverted changes\r\n\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\n\r\n* This change fix a diffuse probe grid bake issue with pc which doesn't support raytracing (#16733)\r\n\r\n* This change fix a diffuse probe grid bake issue with pc which doesn't support raytracing\r\n\r\nSigned-off-by: VickyAtAZ <55564570+VickyAtAZ@users.noreply.github.com>\r\nCo-authored-by: Mike Balfour <82224783+mbalfour-amzn@users.noreply.github.com>\r\n\r\n* Fixed comparison of file paths with '.' using the AZ Path API (#16674) (#16798)\r\n\r\nWindows Paths such as `C:/foo/bar/./baz` now correctly compare equal to\r\n`C:/foo/bar/baz` and POSIX paths such as `/baz/bar/./foo` now compare\r\nequal to `/baz/bar/foo`\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Fix for atom tools not launching with all gems enabled\r\n\r\nAll of the atom tools that run independently of the main editor have registry settings to disable specific gems within those tools.\r\nThis is done to speed up launch times and reduce memory utilization by not loading or activating systems that will never be used within those tools.\r\nOccasionally, a new gem is added or activated that may depend on one of the disabled gem modules.\r\nIn this case, the virtual game pad was activated by the game project and relied upon ly shine, which is disabled by those tools.\r\nSo the virtual game pad was added to the disabled list.\r\nAlternatively, the auto load or disabled gem registry settings files can be completely removed to let all of the project runtime dependencies load in the tools.\r\nI attempted this but certain project specific gems, like those from the multiplayer sample, will still need to be disabled.\r\nScript canvas will also need to be disabled because it fires several errors and warnings while, I assume, trying to load graph data.\r\n\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\n\r\n* made a new CVar for AssetEditor DPE support (#16782)\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Disable o3de-extras automated testing for stabilization (#16801)\r\n\r\nSigned-off-by: Mike Chang <changml@amazon.com>\r\n\r\n* Update the splash screen for o3de editor. (#16812)\r\n\r\nSigned-off-by: VickyAtAZ <55564570+VickyAtAZ@users.noreply.github.com>\r\n\r\n* Fixed prefab overrides not working with DPE enabled\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* Fix DPE resizing on Linux (#16813)\r\n\r\n* made a new CVar for AssetEditor DPE support\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fix for Linux DPEs not automatically resizing\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Document Property Editor Slider fixes (#16814)\r\n\r\n* DOM ValueFromType and ValueToType json serialization support\r\n\r\nThe DomUtils.h/.cpp `ValueFromType` and `ValueToType` functions have\r\nbeen updated to use the JSON Serialization system when possible to\r\nconvert an `AZ::Dom::Value` to/from a C++ type.\r\n\r\nThis is the preferred way to store a aggregate type into\r\n`AZ::Dom::Value` as it maintains the C++/C object structure in a Dom\r\nObject/Array structure.\r\n\r\nIf the type doesn't support JSON Serialization, then it fallback to\r\nbeing stored using an `AZStd::any` inside of the Dom::Value as an opaque\r\ntype.\r\nThe limitations of using an opaque type, is that there is no support for\r\ncomparing two `AZStd::any` objects to each other.\r\nThe only way for comparison, is the compare the address where the\r\n`AZStd::any` objects are stored.\r\n\r\nDue to that, the Dom::Value::operator= and AZ::DeepCompareIsEqual can\r\nonly compare the internal `AZStd::shared_ptr<AZStd::any>` instance\r\nmemory address to compare if two opaque types are equal and not a deep\r\ncompare of the fields of the stored aggregate type.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Adding an `IsTypeSerializable` impl for JsonSerialization\r\n\r\nThe `IsTypeSerializable` function checks if an AZ TypeId has either a\r\nserializer registered with the Json Registration Context or is reflected\r\nto the SerializeContext.\r\n\r\nThis allows checking to see if a type can be serialized before calling\r\neither `JsonSerialization::Load` or `JsonSerialization::Store`\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Added check for serializability to the Dom Value <-> Json Serialization functions\r\n\r\nThe Dom Utils `LoadViaJsonSerialization` and `StoreViaJsonSerialization`\r\nfunctions now check if the AZ TypeId is reflected with either the\r\nJsonRegistrationContext or SerializeContext before attempting to use the\r\nJson Serialization system to marshal a Dom Value to/from a C++ object.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* The Dom Patch creation logic now performs a deep compare of array fields\r\n\r\nBecause the Dom Patch creation did not perform a deep compare previously\r\nof it's fields, any Node, Object or Array fields contained within an\r\nArray field performed a pointer comparison between the shared_ptr\r\naddress containing those objects, instead of comparing the properties\r\nand children of those complex types.\r\n\r\nTherefore patch changes were generated for Dom entrys that were\r\nvalue-equivalent, but not address equivalent.\r\n\r\nThis would cause Node children such as Labels fields to compare unequal,\r\neven when the label string was equivalent.\r\n\r\nfixes #16742\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Adding a Json Serializer for the EditContext EnumConstant\r\n\r\nWith an JsonSerializer for the EditContext EnumConstant, it is now\r\npossible to marshal an enum constant to a `Dom::Value` using Json\r\nSerialization.\r\nTherefore the `Dom::Value` would store an \"Object\" instead of an\r\n\"OpaqueType\" which is comparable without a value hash.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Fixed the DOM Utils `ValueToType` function Json Serialization flow\r\n\r\nBy default using JsonSerialization doesn't store full default values to\r\nthe serialized rapidjson object, so only the non-default value fields\r\nwere being added to the Dom::Values\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Changed the Dom Utils MarshalOpaqueValue and ValueToType functions to\r\nuse a no-op Json issue reporter callback to prevent log spam to the\r\nEditor console.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Modified the ReflectionAdapter `VisitObjectBegin` function\r\n`StoreValueIntoPointer` lambda to account for marshaling Dom ObjectTypes\r\n\r\nThe `StoreValueIntoPointer` value was only accounting for visiting\r\npointers to C++ types through the TryMarshalValueToPointer function\r\ncall.\r\n\r\nNow that the Dom Utils `ValueFromType` function has been updated to\r\nwrite C++ structs using Json Serialization to the Dom::Value when\r\npossible, the scenario where a Dom::Value which is an \"Object\" is being\r\nvisited.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Moved `TryMarshalValueToPointer` logic earlier in the ExtractOpaqueValue lambda\r\n\r\nThe flow now attempts to check if the Dom::Value is a Dom::Object which\r\nhas a pointer field that can be deserialized first.\r\nIf that fails, then the JSON Serialization system is used to load Dom\r\nValue object into a C++ type.\r\n\r\nThis is needed as the AssetJsonSerializer needs to suceed in its\r\ndeserialization operation, when all the relavant asset fields are\r\nmissing such as the \"assetId\" field.\r\n\r\nThe result of the operation indicates that JSON Serialization\r\nhas used the default value to intialize the Asset.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Updated the SetValueFromDom function to always use ValueToType.\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Update Code/Framework/AzCore/AzCore/DOM/DomUtils.cpp\r\n\r\nFixed return statement in DomUtils.cpp\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Fixed crash when closing Script Canvas\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* Fixed node serialized path generation to ignore base class path\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\n\r\n* Remove developer preview title from Shortcuts and Bootstrapper WiX templates (#16825)\r\n\r\nSigned-off-by: Mike Chang <changml@amazon.com>\r\n\r\n* Switch override prefs from setreg to CVars, and default the DPE Inspector to \"off\" (#16824)\r\n\r\n* made a new CVar for AssetEditor DPE support\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fix for Linux DPEs not automatically resizing\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* switch override flags from setreg to CVars\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* remove overarchng DPE flag, and add an Inspector-specific one\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* Update Code/Framework/AzToolsFramework/AzToolsFramework/Prefab/PrefabEditorPreferences.cpp\r\n\r\nCo-authored-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* addressed PR feedback\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* default outliner overrides to false\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fix Inspector override tests\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* remove unnecessary extern\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fix more tests\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fix some missed tests\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* fix tests to save/restore cvar settings\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* stupid copy pasta fix\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n* string fix\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\nCo-authored-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\n\r\n* Reverting o3de-extras changes\r\n\r\nSigned-off-by: Olex Lozitskiy <5432499+AMZN-Olex@users.noreply.github.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Chris Galvan <chgalvan@amazon.com>\r\nSigned-off-by: Alex Montgomery <alexmont@amazon.com>\r\nSigned-off-by: TJ Kotha <tankotha@amazon.com>\r\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>\r\nSigned-off-by: gadams3 <guthadam@amazon.com>\r\nSigned-off-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\nSigned-off-by: Guthrie Adams <guthadam@amazon.com>\r\nSigned-off-by: VickyAtAZ <55564570+VickyAtAZ@users.noreply.github.com>\r\nSigned-off-by: Mike Chang <changml@amazon.com>\r\nSigned-off-by: Olex Lozitskiy <5432499+AMZN-Olex@users.noreply.github.com>\r\nCo-authored-by: Chris Galvan <chgalvan@amazon.com>\r\nCo-authored-by: Alex Montgomery <alexmont@amazon.com>\r\nCo-authored-by: Micha\u0142 Pe\u0142ka <michal.pelka@robotec.ai>\r\nCo-authored-by: TJ Kotha <tankotha@amazon.com>\r\nCo-authored-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>\r\nCo-authored-by: T.J. Kotha <112996779+tkothadev@users.noreply.github.com>\r\nCo-authored-by: gadams3 <guthadam@amazon.com>\r\nCo-authored-by: Mike Chang <changml@amazon.com>\r\nCo-authored-by: lumberyard-employee-dm <56135373+lumberyard-employee-dm@users.noreply.github.com>\r\nCo-authored-by: Guthrie Adams <82461473+gadams3@users.noreply.github.com>\r\nCo-authored-by: Qing Tao <55564570+VickyAtAZ@users.noreply.github.com>\r\nCo-authored-by: Mike Balfour <82224783+mbalfour-amzn@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "f7723f4bb69fa45e25e75e1b4508a37046fef4b4",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/4ea6d8710b374c49dcb7a8e80c1ab0948bb7ceae/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/4ea6d8710b374c49dcb7a8e80c1ab0948bb7ceae/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=4ea6d8710b374c49dcb7a8e80c1ab0948bb7ceae",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:07268873b6fa8c882c14d1d5098996e6fc561fab8377281fcdfbde4a3b33ed7c\n-size 2278310\n+oid sha256:746adf79fe5d0b1cc99e529f9280b79bf9de4d3a2b99f42c6b30ca55f46a35cd\n+size 3390470"
+        }
+      ]
+    },
+    {
+      "commit": "34b285cac4e351611e30a453adc35413c7e3dcf8",
+      "message": "Update Editor splashscreen\n\nSigned-off-by: Danilo Aimini <82231674+AMZN-daimini@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "7a2716b0a6473cfee062f48c97917ef9db00c3a8",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/34b285cac4e351611e30a453adc35413c7e3dcf8/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/34b285cac4e351611e30a453adc35413c7e3dcf8/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=34b285cac4e351611e30a453adc35413c7e3dcf8",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:2445c59bea99836bc5780a81e87542fa6d2c9a936eee73ea214649a4184229ac\n-size 3307622\n+oid sha256:07268873b6fa8c882c14d1d5098996e6fc561fab8377281fcdfbde4a3b33ed7c\n+size 2278310"
+        }
+      ]
+    },
+    {
+      "commit": "05f6a36188da24af607257138928c990ae4ea46a",
+      "message": "Update splashscreen\n\nSigned-off-by: Danilo Aimini <82231674+AMZN-daimini@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "610532452a316c288234757fb2ef0a13255256db",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 2,
+          "changes": 4,
+          "blob_url": "https://github.com/o3de/o3de/blob/05f6a36188da24af607257138928c990ae4ea46a/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/05f6a36188da24af607257138928c990ae4ea46a/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=05f6a36188da24af607257138928c990ae4ea46a",
+          "patch": "@@ -1,3 +1,3 @@\n version https://git-lfs.github.com/spec/v1\n-oid sha256:85eb54e3c6f5669590569b53c73ad634cbcd560d3830eda92d3e21d655577139\n-size 3081045\n+oid sha256:2445c59bea99836bc5780a81e87542fa6d2c9a936eee73ea214649a4184229ac\n+size 3307622"
+        }
+      ]
+    },
+    {
+      "commit": "b5b2f5cebcf2d6c987c80818c97a9472ddbb4599",
+      "message": "Update splashscreen for 22.05 release (#9204)\n\nSigned-off-by: Danilo Aimini <82231674+AMZN-daimini@users.noreply.github.com>",
+      "files": [
+        {
+          "sha": "5cc39508fbae9d33f04d34b6914865089cb9f76c",
+          "filename": "Code/Editor/splashscreen_background.png",
+          "status": "added",
+          "additions": 3,
+          "deletions": 0,
+          "changes": 3,
+          "blob_url": "https://github.com/o3de/o3de/blob/b5b2f5cebcf2d6c987c80818c97a9472ddbb4599/Code%2FEditor%2Fsplashscreen_background.png",
+          "raw_url": "https://github.com/o3de/o3de/raw/b5b2f5cebcf2d6c987c80818c97a9472ddbb4599/Code%2FEditor%2Fsplashscreen_background.png",
+          "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2Fsplashscreen_background.png?ref=b5b2f5cebcf2d6c987c80818c97a9472ddbb4599",
+          "patch": "@@ -0,0 +1,3 @@\n+version https://git-lfs.github.com/spec/v1\n+oid sha256:85eb54e3c6f5669590569b53c73ad634cbcd560d3830eda92d3e21d655577139\n+size 3081045"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "commit": "a77f023b51c3ae69fbb117f00c905109629760f5",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+      "pointer_patch_oid_matches": true,
+      "expected_sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+      "expected_bytes": 1708521,
+      "head": {
+        "url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+        "method": "HEAD",
+        "status": 404,
+        "final_url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+        "utc": "2026-10-10T23:35:08.480946+00:00",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Length": "0",
+          "Content-Type": null,
+          "ETag": null,
+          "Location": null
+        }
+      },
+      "head_matches": false,
+      "payload_get": false,
+      "full_payload_sha256_verified": false
+    }
+  ],
+  "receipts": [
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits?path=Code%2FEditor%2Fsplashscreen_background.png&per_page=20",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits?path=Code%2FEditor%2Fsplashscreen_background.png&per_page=20",
+      "utc": "2026-10-10T23:35:07.547066+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a3e4715ffc5a69a201a45d7d3a0e5b2fdfb27389bf3cbb80888217179ba2d032\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/a77f023b51c3ae69fbb117f00c905109629760f5",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/a77f023b51c3ae69fbb117f00c905109629760f5",
+      "utc": "2026-10-10T23:35:08.056789+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"3e2e00e3dc7b0a0488df7f2a38e93f3ead79ae2fa34f76e2467aab33cbaf326a\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+      "method": "HEAD",
+      "status": 404,
+      "final_url": "https://media.githubusercontent.com/media/o3de/o3de/a77f023b51c3ae69fbb117f00c905109629760f5/Code/Editor/splashscreen_background.png",
+      "utc": "2026-10-10T23:35:08.480946+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "0",
+        "Content-Type": null,
+        "ETag": null,
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/2a2f8122f6084cffba1e0b69d0e0ad1d04dfa534",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/2a2f8122f6084cffba1e0b69d0e0ad1d04dfa534",
+      "utc": "2026-10-10T23:35:08.891245+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"6d737e651fab5b3b7f73fee83e79503ed31276ffc0b1b7bcbec8268dfb913f97\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/48ac59fbebefb9e176d27a5e7a5538c4b977f3a4",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/48ac59fbebefb9e176d27a5e7a5538c4b977f3a4",
+      "utc": "2026-10-10T23:35:09.350540+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "6105",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"458146b9431f85c76d5b18f8ece1675db5988bad1da772bb634f9c1c0f7457f5\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/74d0371bacffb83225b766a88981c3ca8140c825",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/74d0371bacffb83225b766a88981c3ca8140c825",
+      "utc": "2026-10-10T23:35:09.777945+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c4a612546827c15047e9d965f49cd3960aed8d868b9ade7b9ad0460356dcbdc1\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/febad954207d42f196a5010c2d9923b7e5be21d2",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/febad954207d42f196a5010c2d9923b7e5be21d2",
+      "utc": "2026-10-10T23:35:10.255024+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"6e4c271c678a0b5b0bc372e779ab9df0598a21effc2eccb7d3c5433bbe53a1fb\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/fc040b5828e82b4cd735aff9856185e1930c8ff6",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/fc040b5828e82b4cd735aff9856185e1930c8ff6",
+      "utc": "2026-10-10T23:35:10.758879+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4306",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"08a0880238c0731515dfe76cd93270ded066ca23b96a459eaedc8c47fbd4c172\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/8438646f9a631115247ea924ddacc5119f7222b7",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/8438646f9a631115247ea924ddacc5119f7222b7",
+      "utc": "2026-10-10T23:35:11.180051+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4336",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2e73910e4f58f4b7adc512cc0cf1c1fa385136a02264bc52d1ea0d03a6f32ed8\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/4ea6d8710b374c49dcb7a8e80c1ab0948bb7ceae",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/4ea6d8710b374c49dcb7a8e80c1ab0948bb7ceae",
+      "utc": "2026-10-10T23:35:11.712254+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ac83f311e1fbe805317c44dda560983e47cc5edb2a1c36a5c7501f360abae5da\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/34b285cac4e351611e30a453adc35413c7e3dcf8",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/34b285cac4e351611e30a453adc35413c7e3dcf8",
+      "utc": "2026-10-10T23:35:12.345140+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4316",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"02db2966681912ceed0ed1e018da48ead02c9d1c0d652a39076b1da9f734a927\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/05f6a36188da24af607257138928c990ae4ea46a",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/05f6a36188da24af607257138928c990ae4ea46a",
+      "utc": "2026-10-10T23:35:12.759164+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "4309",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"744203eabfc4149c171ce89d3a8e6064f95cfb63c028c8e805e21f664906b824\"",
+        "Location": null
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/commits/b5b2f5cebcf2d6c987c80818c97a9472ddbb4599",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/o3de/o3de/commits/b5b2f5cebcf2d6c987c80818c97a9472ddbb4599",
+      "utc": "2026-10-10T23:35:13.177422+00:00",
+      "authorization": false,
+      "automatic_redirects": false,
+      "headers": {
+        "Content-Length": "8695",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"90b4fed5f79683da16e50b97f93e59ef25127c99dc19af144d199658e84e486e\"",
+        "Location": null
+      }
+    }
+  ],
+  "payload_get": false,
+  "limits": "No alternate GET authorized. Candidate HEAD does not replace full SHA verification or parent approval."
+}

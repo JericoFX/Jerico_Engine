@@ -1,0 +1,33 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/strawberry-perl-5.42.3.1-64bit-portable.zip",
+  "sha256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+  "bytes": 304765269,
+  "snapshot": "F:/JericoEngine/Dependencies/tools/strawberry-perl-5.42.3.1-64bit-portable",
+  "members": 23022,
+  "files": 20858,
+  "directories": 2164,
+  "payloadBytes": 1034502031,
+  "unsafePaths": 0,
+  "links": 0,
+  "collisions": 0,
+  "reparsePaths": 0,
+  "fullCRCAndHashesVerified": true,
+  "toolManifestSha256": "FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A",
+  "toolExecuted": false,
+  "globalInstall": false,
+  "signedQueriesPersisted": false,
+  "nativeEvidence": "Official archname MSWin32-x64-multi-thread; Perl.exe/perl542.dll PE AMD64, no Cygwin imports. Runtime invocation still pending Luna",
+  "loader": "perl/bin already includes required libgcc_s_seh-1.dll/libstdc++-6.dll/libwinpthread-1.dll. Controlled PATH can omit c/bin GCC; retain full audited tool snapshot",
+  "legal": "40 named license texts preserved with full tool input. Perl GPL1-or-later OR Artistic; bundled tools/libraries/module licenses include GPL/LGPL/MIT/BSD/Apache2 etc. Internal build-tool use only, no tool/runtime DLLs in OpenSSL engine package; tool redistribution not accepted",
+  "readiness": "Static acquisition/extraction audit closed, not functional tool/Configure/build acceptance",
+  "evidence": [
+    "tool-acquisition.json",
+    "zip-members.json",
+    "zip-audit.json",
+    "tool-manifest.json",
+    "tool-extraction.json",
+    "perl-pe-static-imports.json",
+    "msvc-nasm-file-inputs.json",
+    "license-text/"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+    "version":  "5.1.26100.9549",
+    "edition":  "Desktop",
+    "ps_module_path":  "C:\\Users\\Jerico\\Documents\\PowerShell\\Modules;C:\\Program Files\\PowerShell\\Modules;c:\\users\\jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Modules;C:\\Users\\Jerico\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "autoload_defined":  false,
+    "autoload":  "unset/default",
+    "utility_available":  [
+                              {
+                                  "Name":  "Microsoft.PowerShell.Utility",
+                                  "Version":  {
+                                                  "Major":  7,
+                                                  "Minor":  0,
+                                                  "Build":  0,
+                                                  "Revision":  0,
+                                                  "MajorRevision":  0,
+                                                  "MinorRevision":  0
+                                              },
+                                  "Path":  "C:\\users\\jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1"
+                              },
+                              {
+                                  "Name":  "Microsoft.PowerShell.Utility",
+                                  "Version":  {
+                                                  "Major":  3,
+                                                  "Minor":  1,
+                                                  "Build":  0,
+                                                  "Revision":  0,
+                                                  "MajorRevision":  0,
+                                                  "MinorRevision":  0
+                                              },
+                                  "Path":  "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1"
+                              }
+                          ],
+    "utility_loaded_before":  [
+                                  {
+                                      "Name":  "Microsoft.PowerShell.Utility",
+                                      "Version":  {
+                                                      "Major":  7,
+                                                      "Minor":  0,
+                                                      "Build":  0,
+                                                      "Revision":  0,
+                                                      "MajorRevision":  0,
+                                                      "MinorRevision":  0
+                                                  },
+                                      "Path":  "C:\\users\\jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psd1"
+                                  }
+                              ],
+    "get_file_hash_found":  false,
+    "command_type":  null,
+    "module_name":  null,
+    "get_file_hash_sha256":  null,
+    "get_file_hash_error":  null,
+    "dotnet_sha256":  "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+    "dotnet_error":  null,
+    "root_arg":  "F:/JericoEngine/Dependencies/tools/strawberry-perl-5.42.3.1-64bit-portable",
+    "manifest_arg":  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-perl-tool-audit/tool-manifest.json"
+}

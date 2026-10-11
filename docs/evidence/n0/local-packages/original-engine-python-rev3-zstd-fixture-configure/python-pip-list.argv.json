@@ -1,0 +1,6 @@
+[
+  "-m",
+  "pip",
+  "list",
+  "--format=json"
+]

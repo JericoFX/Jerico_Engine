@@ -1,0 +1,291 @@
+
+Command line (with current working directory = .):
+
+    F:\JericoEngine\Dependencies\tools\strawberry-perl-5.42.3.1-64bit-portable\perl\bin\perl.exe Configure VC-WIN64A enable-static-engine enable-capieng no-ssl2 no-tests -utf-8 no-shared -FS --prefix=F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-build-rev3\install --openssldir=F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-build-rev3\install
+
+Perl information:
+
+    F:\JericoEngine\Dependencies\tools\strawberry-perl-5.42.3.1-64bit-portable\perl\bin\perl.exe
+    5.42.3 for MSWin32-x64-multi-thread
+
+Enabled features:
+
+    aria
+    asm
+    async
+    autoalginit
+    autoerrinit
+    autoload-config
+    bf
+    blake2
+    camellia
+    capieng
+    cast
+    chacha
+    cmac
+    cms
+    comp
+    ct
+    deprecated
+    des
+    dgram
+    dh
+    dsa
+    dso
+    dtls
+    ec
+    ec2m
+    ecdh
+    ecdsa
+    engine
+    err
+    filenames
+    gost
+    hw(-.+)?
+    idea
+    makedepend
+    md4
+    mdc2
+    multiblock
+    nextprotoneg
+    pinshared
+    ocb
+    ocsp
+    pic
+    poly1305
+    posix-io
+    psk
+    rc2
+    rc4
+    rdrand
+    rfc3779
+    rmd160
+    scrypt
+    seed
+    siphash
+    sm2
+    sm3
+    sm4
+    sock
+    srp
+    srtp
+    sse2
+    ssl
+    static-engine
+    stdio
+    threads
+    tls
+    ts
+    ui-console
+    whirlpool
+    tls1
+    tls1-method
+    tls1_1
+    tls1_1-method
+    tls1_2
+    tls1_2-method
+    tls1_3
+    dtls1
+    dtls1-method
+    dtls1_2
+    dtls1_2-method
+
+Disabled features:
+
+    afalgeng                [not-linux] OPENSSL_NO_AFALGENG
+    asan                    [default]   OPENSSL_NO_ASAN
+    buildtest-c++           [default]   
+    crypto-mdebug           [default]   OPENSSL_NO_CRYPTO_MDEBUG
+    crypto-mdebug-backtrace [default]   OPENSSL_NO_CRYPTO_MDEBUG_BACKTRACE
+    devcryptoeng            [default]   OPENSSL_NO_DEVCRYPTOENG
+    dynamic-engine          [option]    
+    ec_nistp_64_gcc_128     [default]   OPENSSL_NO_EC_NISTP_64_GCC_128
+    egd                     [default]   OPENSSL_NO_EGD
+    external-tests          [default]   OPENSSL_NO_EXTERNAL_TESTS
+    fuzz-libfuzzer          [default]   OPENSSL_NO_FUZZ_LIBFUZZER
+    fuzz-afl                [default]   OPENSSL_NO_FUZZ_AFL
+    heartbeats              [default]   OPENSSL_NO_HEARTBEATS
+    md2                     [default]   OPENSSL_NO_MD2 (skip crypto\md2)
+    msan                    [default]   OPENSSL_NO_MSAN
+    rc5                     [default]   OPENSSL_NO_RC5 (skip crypto\rc5)
+    sctp                    [default]   OPENSSL_NO_SCTP
+    shared                  [option]    
+    ssl-trace               [default]   OPENSSL_NO_SSL_TRACE
+    tests                   [option]    OPENSSL_NO_TESTS
+    ubsan                   [default]   OPENSSL_NO_UBSAN
+    unit-test               [default]   OPENSSL_NO_UNIT_TEST
+    weak-ssl-ciphers        [default]   OPENSSL_NO_WEAK_SSL_CIPHERS
+    zlib                    [default]   
+    zlib-dynamic            [default]   
+    ssl3                    [default]   OPENSSL_NO_SSL3
+    ssl3-method             [default]   OPENSSL_NO_SSL3_METHOD
+
+Config target attributes:
+
+    AR => "lib",
+    ARFLAGS => "/nologo",
+    AS => "nasm",
+    ASFLAGS => "-g",
+    CC => "cl",
+    CFLAGS => "/W3 /wd4090 /nologo /O2",
+    CPP => "\$(CC) /EP /C",
+    HASHBANGPERL => "/usr/bin/env perl",
+    LD => "link",
+    LDFLAGS => "/nologo /debug",
+    MT => "mt",
+    MTFLAGS => "-nologo",
+    RANLIB => "CODE(0x21a98abc9e0)",
+    RC => "rc",
+    aes_asm_src => "aes_core.c aes_cbc.c vpaes-x86_64.s aesni-x86_64.s aesni-sha1-x86_64.s aesni-sha256-x86_64.s aesni-mb-x86_64.s",
+    aes_obj => "aes_core.o aes_cbc.o vpaes-x86_64.o aesni-x86_64.o aesni-sha1-x86_64.o aesni-sha256-x86_64.o aesni-mb-x86_64.o",
+    apps_aux_src => "win32_init.c",
+    apps_init_src => "",
+    apps_obj => "win32_init.o",
+    aroutflag => "/out:",
+    asflags => "-Ox -f win64 -DNEAR",
+    asoutflag => "-o ",
+    bf_asm_src => "bf_enc.c",
+    bf_obj => "bf_enc.o",
+    bin_cflags => "/Zi /Fdapp.pdb /MT",
+    bin_lflags => "/subsystem:console /opt:ref",
+    bn_asm_src => "bn_asm.c x86_64-mont.s x86_64-mont5.s x86_64-gf2m.s rsaz_exp.c rsaz-x86_64.s rsaz-avx2.s",
+    bn_obj => "bn_asm.o x86_64-mont.o x86_64-mont5.o x86_64-gf2m.o rsaz_exp.o rsaz-x86_64.o rsaz-avx2.o",
+    bn_ops => "EXPORT_VAR_AS_FN SIXTY_FOUR_BIT",
+    build_file => "makefile",
+    build_scheme => [ "unified", "windows", "VC-common" ],
+    cast_asm_src => "c_enc.c",
+    cast_obj => "c_enc.o",
+    cflags => "/Gs0 /GF /Gy",
+    chacha_asm_src => "chacha-x86_64.s",
+    chacha_obj => "chacha-x86_64.o",
+    cmll_asm_src => "cmll-x86_64.s cmll_misc.c",
+    cmll_obj => "cmll-x86_64.o cmll_misc.o",
+    coutflag => "/Fo",
+    cppflags => "",
+    cpuid_asm_src => "x86_64cpuid.s",
+    cpuid_obj => "x86_64cpuid.o",
+    defines => [ "OPENSSL_SYS_WIN32", "WIN32_LEAN_AND_MEAN", "UNICODE", "_UNICODE", "_CRT_SECURE_NO_DEPRECATE", "_WINSOCK_DEPRECATED_NO_WARNINGS" ],
+    des_asm_src => "des_enc.c fcrypt_b.c",
+    des_obj => "des_enc.o fcrypt_b.o",
+    disable => [  ],
+    dso_cflags => "/Zi /Fddso.pdb",
+    dso_extension => ".dll",
+    dso_scheme => "win32",
+    ec_asm_src => "ecp_nistz256.c ecp_nistz256-x86_64.s x25519-x86_64.s",
+    ec_obj => "ecp_nistz256.o ecp_nistz256-x86_64.o x25519-x86_64.o",
+    enable => [  ],
+    ex_libs => "ws2_32.lib gdi32.lib advapi32.lib crypt32.lib user32.lib",
+    exe_extension => "",
+    includes => [  ],
+    keccak1600_asm_src => "keccak1600-x86_64.s",
+    keccak1600_obj => "keccak1600-x86_64.o",
+    ldoutflag => "/out:",
+    lflags => "",
+    lib_cflags => "/Zi /Fdossl_static.pdb /MT /Zl",
+    lib_cppflags => "",
+    lib_defines => [ "L_ENDIAN" ],
+    md5_asm_src => "md5-x86_64.s",
+    md5_obj => "md5-x86_64.o",
+    modes_asm_src => "ghash-x86_64.s aesni-gcm-x86_64.s",
+    modes_obj => "ghash-x86_64.o aesni-gcm-x86_64.o",
+    module_cflags => "",
+    module_cxxflags => "",
+    module_ldflags => "/dll",
+    mtinflag => "-manifest ",
+    mtoutflag => "-outputresource:",
+    multilib => "-x64",
+    padlock_asm_src => "e_padlock-x86_64.s",
+    padlock_obj => "e_padlock-x86_64.o",
+    perlasm_scheme => "auto",
+    poly1305_asm_src => "poly1305-x86_64.s",
+    poly1305_obj => "poly1305-x86_64.o",
+    rc4_asm_src => "rc4-x86_64.s rc4-md5-x86_64.s",
+    rc4_obj => "rc4-x86_64.o rc4-md5-x86_64.o",
+    rc5_asm_src => "rc5_enc.c",
+    rc5_obj => "rc5_enc.o",
+    rcoutflag => "/fo",
+    rmd160_asm_src => "",
+    rmd160_obj => "",
+    sha1_asm_src => "sha1-x86_64.s sha256-x86_64.s sha512-x86_64.s sha1-mb-x86_64.s sha256-mb-x86_64.s",
+    sha1_obj => "sha1-x86_64.o sha256-x86_64.o sha512-x86_64.o sha1-mb-x86_64.o sha256-mb-x86_64.o",
+    shared_cflag => "",
+    shared_defines => [  ],
+    shared_extension => ".dll",
+    shared_extension_simple => ".dll",
+    shared_ldflag => "/dll",
+    shared_rcflag => "",
+    shared_target => "win-shared",
+    sys_id => "WIN64A",
+    thread_defines => [  ],
+    thread_scheme => "winthreads",
+    unistd => "<unistd.h>",
+    uplink_aux_src => "",
+    uplink_obj => "",
+    wp_asm_src => "wp-x86_64.s",
+    wp_obj => "wp-x86_64.o",
+
+Recorded environment:
+
+    AR = 
+    BUILDFILE = 
+    CC = cl
+    CFLAGS = 
+    CPPFLAGS = 
+    CROSS_COMPILE = 
+    CXX = cl
+    CXXFLAGS = 
+    HASHBANGPERL = 
+    LDFLAGS = 
+    LDLIBS = 
+    OPENSSL_LOCAL_CONFIG_DIR = 
+    PERL = F:\JericoEngine\Dependencies\tools\strawberry-perl-5.42.3.1-64bit-portable\perl\bin\perl.exe
+    RANLIB = 
+    RC = 
+    RCFLAGS = 
+    WINDRES = 
+    __CNF_CFLAGS = 
+    __CNF_CPPDEFINES = 
+    __CNF_CPPFLAGS = 
+    __CNF_CPPINCLUDES = 
+    __CNF_CXXFLAGS = 
+    __CNF_LDFLAGS = 
+    __CNF_LDLIBS = 
+
+Makevars:
+
+    AR              = lib
+    ARFLAGS         = /nologo
+    AS              = nasm
+    ASFLAGS         = -g
+    CC              = cl
+    CFLAGS          = /W3 /wd4090 /nologo /O2 -utf-8 -FS
+    CPP             = $(CC) /EP /C
+    CPPDEFINES      = 
+    CPPFLAGS        = 
+    CPPINCLUDES     = 
+    CXX             = cl
+    CXXFLAGS        = -utf-8 -FS
+    HASHBANGPERL    = F:\JericoEngine\Dependencies\tools\strawberry-perl-5.42.3.1-64bit-portable\perl\bin\perl.exe
+    LD              = link
+    LDFLAGS         = /nologo /debug
+    LDLIBS          = 
+    MT              = mt
+    MTFLAGS         = -nologo
+    PERL            = F:\JericoEngine\Dependencies\tools\strawberry-perl-5.42.3.1-64bit-portable\perl\bin\perl.exe
+    RC              = rc
+    RCFLAGS         = 
+
+NOTE: These variables only represent the configuration view.  The build file
+template may have processed these variables further, please have a look at the
+build file for more exact data:
+    makefile
+
+build file:
+
+    makefile
+
+build file templates:
+
+    Configurations\common0.tmpl
+    Configurations\windows-makefile.tmpl
+    Configurations\common.tmpl

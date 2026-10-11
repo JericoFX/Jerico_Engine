@@ -1,0 +1,53 @@
+{
+  "pip_version": "23.0.1",
+  "parser": "pip._internal.req.req_file.parse_requirements with local PipSession; no pip install or network calls",
+  "requirements_txt": {
+    "hash_before": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+    "hash_after": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+    "unchanged": true,
+    "lexical_pin_count": 43,
+    "pip_parsed_count": 42,
+    "atomicwrites_lexical_pin": {
+      "line": 3,
+      "name": "atomicwrites",
+      "version": "1.4.1",
+      "trailing_continuation": true
+    },
+    "atomicwrites_parsed": false,
+    "pluggy_parsed_row": {
+      "name": "pluggy",
+      "specifier": "==1.6.0",
+      "requirement": "pluggy==1.6.0    ",
+      "comes_from": "-r F:\\JericoEngine\\JericoEngine\\python\\requirements.txt (line 1)",
+      "line_source": "line 1 of F:\\JericoEngine\\JericoEngine\\python\\requirements.txt",
+      "is_editable": false,
+      "options": {
+        "hashes": {
+          "sha256": [
+            "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746",
+            "81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11"
+          ]
+        }
+      }
+    },
+    "read_only_regression_exit": "1"
+  },
+  "requirements_build_txt": {
+    "hash": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6",
+    "pip_parsed_count": 1,
+    "names": [
+      "wheel"
+    ]
+  },
+  "copy": {
+    "path": "requirements-with-pluggy-continuation-removed.txt",
+    "hash": "d2891893d22b227c5d85bd4f1d2ebcca63a67c767be64a79cf7121100ddc6a6e",
+    "only_change": "removed trailing backslash from the exact pluggy hash line; source is untouched",
+    "pip_parsed_count": 43,
+    "atomicwrites_parsed": true,
+    "pluggy_hashes": [
+      "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"
+    ]
+  },
+  "conclusion": "Pip 23.0.1 merges the next atomicwrites line and its hash into pluggy when the preceding pluggy hash line ends in a continuation; atomicwrites is omitted as a requirement. Removing only that continuation in an evidence copy causes atomicwrites to parse as a separate requirement. No install, download, or source edit."
+}

@@ -1,0 +1,12 @@
+{
+  "native_exit": 0,
+  "elapsed_seconds": 262.0242313,
+  "output_exists": true,
+  "freeze_before": "57ea7b94efedb0b0d82dd9b8cc3db5cac86606c2ab9d9a861c173846f7141359",
+  "freeze_after": "57ea7b94efedb0b0d82dd9b8cc3db5cac86606c2ab9d9a861c173846f7141359",
+  "freeze_unchanged": true,
+  "patched_core_sha256": "07f99462cf6a9aa667ad802a3f7285e640ab78b3233fcb7cc243eacf2f0b3a45",
+  "patched_core_expected": "07f99462cf6a9aa667ad802a3f7285e640ab78b3233fcb7cc243eacf2f0b3a45",
+  "patched_core_match": true,
+  "package_name": "python-3.10.13-je-rev3-windows"
+}

@@ -1,0 +1,41 @@
+{
+  "index": 180,
+  "source_path": "Code/Editor/res/Padlock_Enabled_Hover.tif",
+  "expected_sha256": "b98445e3640a8ae7f932bd7ea06f21312c6d7c1c566845c23714c5b65bd39a2a",
+  "expected_bytes": 5386,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Enabled_Hover.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:19.472721+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Enabled_Hover.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "5386",
+      "ETag": "\"b98445e3640a8ae7f932bd7ea06f21312c6d7c1c566845c23714c5b65bd39a2a\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Enabled_Hover.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:19.877560+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Enabled_Hover.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "5386",
+      "ETag": "\"b98445e3640a8ae7f932bd7ea06f21312c6d7c1c566845c23714c5b65bd39a2a\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "b98445e3640a8ae7f932bd7ea06f21312c6d7c1c566845c23714c5b65bd39a2a",
+  "actual_bytes": 5386,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Padlock_Enabled_Hover.tif",
+  "status": "acquired and byte verified"
+}

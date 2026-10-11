@@ -3,11 +3,12 @@
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 
 # Package an explicitly staged local dependency. No acquisition or installation.
-# Required -D arguments: JE_PACKAGE_STAGE, NAME, OUTPUT, VERSION, SOURCE_COMMIT,
-# LICENSE, SOURCE_SHA256 and SOURCE_URL (each prefixed with JE_PACKAGE_).
+# Required -D arguments: JE_PACKAGE_STAGE, NAME, OUTPUT, VERSION, LICENSE,
+# SOURCE_SHA256 and SOURCE_URL, plus exactly one SOURCE_COMMIT or SOURCE_RELEASE
+# (each prefixed with JE_PACKAGE_). A release must not invent an upstream commit.
 cmake_minimum_required(VERSION 3.24)
 
-foreach(JE_ARGUMENT IN ITEMS STAGE NAME OUTPUT VERSION SOURCE_COMMIT LICENSE SOURCE_SHA256 SOURCE_URL)
+foreach(JE_ARGUMENT IN ITEMS STAGE NAME OUTPUT VERSION LICENSE SOURCE_SHA256 SOURCE_URL)
     if(NOT DEFINED JE_PACKAGE_${JE_ARGUMENT} OR "${JE_PACKAGE_${JE_ARGUMENT}}" STREQUAL "")
         message(FATAL_ERROR "JE local package: JE_PACKAGE_${JE_ARGUMENT} is required")
     endif()
@@ -16,10 +17,26 @@ if(NOT JE_PACKAGE_NAME MATCHES "^[A-Za-z0-9][A-Za-z0-9_.-]*$")
     message(FATAL_ERROR "JE local package: invalid package name")
 endif()
 string(LENGTH "${JE_PACKAGE_SOURCE_SHA256}" JE_HASH_LENGTH)
-string(LENGTH "${JE_PACKAGE_SOURCE_COMMIT}" JE_COMMIT_LENGTH)
-if(NOT JE_HASH_LENGTH EQUAL 64 OR NOT JE_PACKAGE_SOURCE_SHA256 MATCHES "^[0-9A-Fa-f]+$"
-    OR NOT JE_COMMIT_LENGTH EQUAL 40 OR NOT JE_PACKAGE_SOURCE_COMMIT MATCHES "^[0-9A-Fa-f]+$")
-    message(FATAL_ERROR "JE local package: source commit and archive SHA256 must be explicit full hashes")
+if(NOT JE_HASH_LENGTH EQUAL 64 OR NOT JE_PACKAGE_SOURCE_SHA256 MATCHES "^[0-9A-Fa-f]+$")
+    message(FATAL_ERROR "JE local package: source archive SHA256 must be an explicit full hash")
+endif()
+if(NOT "${JE_PACKAGE_SOURCE_COMMIT}" STREQUAL "" AND NOT "${JE_PACKAGE_SOURCE_RELEASE}" STREQUAL "")
+    message(FATAL_ERROR "JE local package: provide exactly one source commit or release")
+elseif(NOT "${JE_PACKAGE_SOURCE_COMMIT}" STREQUAL "")
+    string(LENGTH "${JE_PACKAGE_SOURCE_COMMIT}" JE_COMMIT_LENGTH)
+    if(NOT JE_COMMIT_LENGTH EQUAL 40 OR NOT JE_PACKAGE_SOURCE_COMMIT MATCHES "^[0-9A-Fa-f]+$")
+        message(FATAL_ERROR "JE local package: source commit must be an explicit full hash")
+    endif()
+    set(JE_SOURCE_REFERENCE COMMIT)
+    set(JE_INFO_SCHEMA_VERSION 1)
+elseif(NOT "${JE_PACKAGE_SOURCE_RELEASE}" STREQUAL "")
+    if(NOT JE_PACKAGE_SOURCE_RELEASE MATCHES "^[A-Za-z0-9][A-Za-z0-9_.+-]*$")
+        message(FATAL_ERROR "JE local package: invalid source release identifier")
+    endif()
+    set(JE_SOURCE_REFERENCE RELEASE)
+    set(JE_INFO_SCHEMA_VERSION 2)
+else()
+    message(FATAL_ERROR "JE local package: source commit or release is required")
 endif()
 
 function(JE_require_local_package_directory JE_PATH JE_LABEL)
@@ -90,14 +107,14 @@ function(JE_json_string JE_TEXT JE_OUTPUT)
 endfunction()
 
 set(JE_INFO "{}")
-string(JSON JE_INFO SET "${JE_INFO}" schemaVersion 1)
+string(JSON JE_INFO SET "${JE_INFO}" schemaVersion ${JE_INFO_SCHEMA_VERSION})
 foreach(JE_FIELD IN ITEMS NAME VERSION LICENSE)
     string(TOLOWER "${JE_FIELD}" JE_KEY)
     JE_json_string("${JE_PACKAGE_${JE_FIELD}}" JE_VALUE)
     string(JSON JE_INFO SET "${JE_INFO}" "${JE_KEY}" "${JE_VALUE}")
 endforeach()
 set(JE_SOURCE_INFO "{}")
-foreach(JE_FIELD IN ITEMS URL COMMIT SHA256)
+foreach(JE_FIELD IN ITEMS URL ${JE_SOURCE_REFERENCE} SHA256)
     string(TOLOWER "${JE_FIELD}" JE_KEY)
     JE_json_string("${JE_PACKAGE_SOURCE_${JE_FIELD}}" JE_VALUE)
     string(JSON JE_SOURCE_INFO SET "${JE_SOURCE_INFO}" "${JE_KEY}" "${JE_VALUE}")

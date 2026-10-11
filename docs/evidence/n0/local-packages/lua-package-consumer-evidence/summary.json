@@ -1,0 +1,217 @@
+{
+  "configure": {
+    "name": "consumer-configure",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "cmake.exe",
+    "argv": [
+      "-S",
+      "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\tests",
+      "-B",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-release",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-DJE_LUA_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\extracted\\Lua-5.4.4-je-rev1-windows"
+    ],
+    "argv_count": 9,
+    "started": "2026-10-10T19:28:27.5614120-03:00",
+    "exitcode": 0,
+    "elapsed_seconds": 5.8372003,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-evidence\\consumer-configure.log"
+  },
+  "build": {
+    "name": "consumer-build",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "cmake.exe",
+    "argv": [
+      "--build",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-release",
+      "--target",
+      "JELuaConsumer",
+      "--config",
+      "Release"
+    ],
+    "argv_count": 6,
+    "started": "2026-10-10T19:28:33.4160675-03:00",
+    "exitcode": 0,
+    "elapsed_seconds": 2.4243719,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-evidence\\consumer-build.log"
+  },
+  "ctest": {
+    "name": "consumer-ctest",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "ctest.exe",
+    "argv": [
+      "--test-dir",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-release",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "-V"
+    ],
+    "argv_count": 6,
+    "started": "2026-10-10T19:28:35.8443764-03:00",
+    "exitcode": 0,
+    "elapsed_seconds": 0.0858657,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-evidence\\consumer-ctest.log"
+  },
+  "freeze_before": {
+    "sha256": "322BBCDE2DFD6A4B6F9007889BA81E10F09C534A9F8A602034726FFBCF3DBF59",
+    "files": [
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/ApplyLuaPatch.cmake",
+        "expected": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f",
+        "actual": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake",
+        "expected": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7",
+        "actual": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/CMakeLists.txt",
+        "expected": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53",
+        "actual": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/FindLua.cmake",
+        "expected": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f",
+        "actual": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/LICENSE.txt",
+        "expected": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+        "actual": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch",
+        "expected": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+        "actual": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/NOTICE.txt",
+        "expected": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11",
+        "actual": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/tests/CMakeLists.txt",
+        "expected": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404",
+        "actual": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/tests/LuaConsumer.cpp",
+        "expected": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8",
+        "actual": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+        "expected": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+        "actual": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+        "expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+        "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "freeze_after": {
+    "sha256": "322BBCDE2DFD6A4B6F9007889BA81E10F09C534A9F8A602034726FFBCF3DBF59",
+    "files": [
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/ApplyLuaPatch.cmake",
+        "expected": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f",
+        "actual": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake",
+        "expected": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7",
+        "actual": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/CMakeLists.txt",
+        "expected": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53",
+        "actual": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/FindLua.cmake",
+        "expected": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f",
+        "actual": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/LICENSE.txt",
+        "expected": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+        "actual": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch",
+        "expected": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+        "actual": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/NOTICE.txt",
+        "expected": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11",
+        "actual": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/tests/CMakeLists.txt",
+        "expected": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404",
+        "actual": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Lua/tests/LuaConsumer.cpp",
+        "expected": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8",
+        "actual": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+        "expected": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+        "actual": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+        "match": true
+      },
+      {
+        "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+        "expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+        "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "archive_sha_before": "2ff89bbea22a7c8b910d6b006f5ba4559edcf468a25537cedf9988ed90f6b450",
+  "archive_sha_after": "2ff89bbea22a7c8b910d6b006f5ba4559edcf468a25537cedf9988ed90f6b450",
+  "package_root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\extracted\\Lua-5.4.4-je-rev1-windows",
+  "consumer_exe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-release\\Release\\JELuaConsumer.exe",
+    "bytes": 293888,
+    "sha256": "3FFB211FDA2E1E5D444A3ACF1086176B82DCFB22041B0811C115D033D030C293"
+  },
+  "package_lib": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\extracted\\Lua-5.4.4-je-rev1-windows\\Lua\\lib\\release\\lualib.lib",
+    "bytes": 1128074,
+    "sha256": "B510CFCBCC48CD2C97AB9466A8C6F0D38DE9F50E82825ADE6B875AE36FD03026"
+  },
+  "header_count": 28
+}

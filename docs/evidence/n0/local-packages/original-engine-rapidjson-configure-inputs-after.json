@@ -1,0 +1,140 @@
+{
+  "freeze": {
+    "sha256": "D777B3557B089A4E4C704AB4A682F0CA45C35F1D7EB45B99D0FCA6C157A163B2",
+    "count": 20,
+    "all_match": true,
+    "files": [
+      {
+        "path": "CMakeLists.txt",
+        "expected": "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616",
+        "actual": "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616",
+        "match": true
+      },
+      {
+        "path": "engine.json",
+        "expected": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+        "actual": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+        "match": true
+      },
+      {
+        "path": "cmake/3rdPartyPackages.cmake",
+        "expected": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac",
+        "actual": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac",
+        "match": true
+      },
+      {
+        "path": "cmake/LYPython.cmake",
+        "expected": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705",
+        "actual": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705",
+        "match": true
+      },
+      {
+        "path": "cmake/CalculateEnginePathId.cmake",
+        "expected": "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d",
+        "actual": "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d",
+        "match": true
+      },
+      {
+        "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+        "expected": "791b64c58751e4afad1b288e86db8c06d42bff82b92a7d15ef158eb35eafba7c",
+        "actual": "791b64c58751e4afad1b288e86db8c06d42bff82b92a7d15ef158eb35eafba7c",
+        "match": true
+      },
+      {
+        "path": "cmake/3rdParty/Platform/Windows/Python_windows.cmake",
+        "expected": "06c3df766ce45947fcb5278c6bc75853155f3b3d6ac6a40e2e629a88ff0369ca",
+        "actual": "06c3df766ce45947fcb5278c6bc75853155f3b3d6ac6a40e2e629a88ff0369ca",
+        "match": true
+      },
+      {
+        "path": "python/python.cmd",
+        "expected": "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f",
+        "actual": "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f",
+        "match": true
+      },
+      {
+        "path": "python/python.sh",
+        "expected": "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f",
+        "actual": "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f",
+        "match": true
+      },
+      {
+        "path": "python/requirements.txt",
+        "expected": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+        "actual": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2",
+        "match": true
+      },
+      {
+        "path": "python/requirements-build.txt",
+        "expected": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6",
+        "actual": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6",
+        "match": true
+      },
+      {
+        "path": "Tools/LyTestTools/setup.py",
+        "expected": "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5",
+        "actual": "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5",
+        "match": true
+      },
+      {
+        "path": "Tools/RemoteConsole/ly_remote_console/setup.py",
+        "expected": "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1",
+        "actual": "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1",
+        "match": true
+      },
+      {
+        "path": "scripts/o3de/setup.py",
+        "expected": "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912",
+        "actual": "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912",
+        "match": true
+      },
+      {
+        "path": "AutomatedTesting/Gem/PythonTests/EditorPythonTestTools/setup.py",
+        "expected": "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd",
+        "actual": "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd",
+        "match": true
+      },
+      {
+        "path": "Gems/Atom/RPI/Tools/setup.py",
+        "expected": "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262",
+        "actual": "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262",
+        "match": true
+      },
+      {
+        "path": "Code/3rdParty/mimalloc/CMakeLists.txt",
+        "expected": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec",
+        "actual": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec",
+        "match": true
+      },
+      {
+        "path": "Code/3rdParty/mimalloc/PackageInfo.json",
+        "expected": "6b44c1f36e9e090876ce4408022fcb32ce6f870b4c11417958583e1de74abbe6",
+        "actual": "6b44c1f36e9e090876ce4408022fcb32ce6f870b4c11417958583e1de74abbe6",
+        "match": true
+      },
+      {
+        "path": "Code/3rdParty/mimalloc/files.cmake",
+        "expected": "5becde081df1b3ccf0c2e44c065e48b5c702e14c6b83a8302a0f9b6bb56e1d0b",
+        "actual": "5becde081df1b3ccf0c2e44c065e48b5c702e14c6b83a8302a0f9b6bb56e1d0b",
+        "match": true
+      },
+      {
+        "path": "Code/3rdParty/mimalloc/LICENSE.txt",
+        "expected": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4",
+        "actual": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4",
+        "match": true
+      }
+    ]
+  },
+  "rapidjson_source_files": 313,
+  "rapidjson_source_match": true,
+  "rapidjson_archive_sha256": "2d2601a82d2d3b7e143a3c8d43ef616671391034bc46891a9816b79cf2d3e7a8",
+  "mimalloc_source_files": 382,
+  "mimalloc_source_match": true,
+  "mimalloc_archive_sha256": "db5c4aaaf356edfeb1aa236b3a052fe3c67d01419db36613f783999341ed5619",
+  "cache_files": 56,
+  "cache_bytes": 308199588.0,
+  "cache_diff": [],
+  "lua_archive_sha256": "d3962b7b84f7fb484f02f639f631db5613f30a6922953ce41ce8344e4b57cbeb",
+  "lua_sidecar": "d3962b7b84f7fb484f02f639f631db5613f30a6922953ce41ce8344e4b57cbeb *Lua-5.4.4-je-rev1-windows.tar.xz\r\n"
+}

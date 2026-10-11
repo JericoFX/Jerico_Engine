@@ -1,0 +1,5 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake:29 (message):
+  JE local mcpp: source URL/SHA256 must match the audited mcpp-2.7.2 release
+  archive
+
+

@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zstd-consumer-rev1
+    Start 1: JE.LocalPackages.Zstd.Basic
+1/4 Test #1: JE.LocalPackages.Zstd.Basic ..............   Passed    0.03 sec
+    Start 2: JE.LocalPackages.Zstd.Errors
+2/4 Test #2: JE.LocalPackages.Zstd.Errors .............   Passed    0.01 sec
+    Start 3: JE.LocalPackages.Zstd.AdvancedStreams
+3/4 Test #3: JE.LocalPackages.Zstd.AdvancedStreams ....   Passed    0.01 sec
+    Start 4: JE.LocalPackages.Zstd.AllocatorFailure
+4/4 Test #4: JE.LocalPackages.Zstd.AllocatorFailure ...   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.08 sec

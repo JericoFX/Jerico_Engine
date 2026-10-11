@@ -1,0 +1,41 @@
+{
+  "index": 225,
+  "source_path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+  "expected_sha256": "2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f",
+  "expected_bytes": 818744,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:19.963727+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "818744",
+      "ETag": "\"2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:20.372336+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "818744",
+      "ETag": "\"2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f",
+  "actual_bytes": 818744,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_spec.tif",
+  "status": "acquired and byte verified"
+}

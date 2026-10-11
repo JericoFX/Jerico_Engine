@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-10T22:26:07.5957169Z",
+  "method": "HEAD",
+  "url": "https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/11.0/OpenMesh-11.0.0.tar.bz2",
+  "auto_redirect": false,
+  "credentials": "none",
+  "status": 200,
+  "response_uri": "https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/11.0/OpenMesh-11.0.0.tar.bz2",
+  "headers": {
+    "Date": "Sat, 10 Oct 2026 22:23:36 GMT",
+    "Server": "Apache",
+    "Strict-Transport-Security": "max-age=373248001",
+    "ETag": "\"59899d-619696c683ad2\"",
+    "Accept-Ranges": "bytes",
+    "Cache-Control": "max-age=600",
+    "Keep-Alive": "timeout=5, max=100",
+    "Connection": "Keep-Alive",
+    "Last-Modified": "Mon, 27 May 2024 06:14:01 GMT",
+    "Content-Length": "5867933",
+    "Expires": "Sat, 10 Oct 2026 22:33:36 GMT",
+    "Content-Type": "application/x-bzip2"
+  }
+}

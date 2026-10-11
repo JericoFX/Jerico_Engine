@@ -1,0 +1,65 @@
+{
+  "manifest_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-freeze-editor-fixture-publication-parent.json",
+  "manifest_sha256": "AA8FDC7E3DE67828ECAADE16EE4FB8E0D2B7287232ACE6BE9E04BF6370B70495",
+  "manifest_file_count": 22,
+  "files_matching": 22,
+  "file_mismatches": [],
+  "ast": {
+    "parse_ok": true,
+    "functions": [
+      "require_fixture_level",
+      "find_owned",
+      "component_type",
+      "unwrap",
+      "set_property",
+      "mesh_for",
+      "make_box",
+      "apply_boolean",
+      "author"
+    ],
+    "imports": [
+      "WhiteBoxInit",
+      "azlmbr.bus",
+      "azlmbr.editor",
+      "azlmbr.entity",
+      "azlmbr.legacy.general",
+      "azlmbr.math",
+      "os",
+      "pathlib",
+      "sys"
+    ]
+  },
+  "json_checks": [
+    {
+      "path": "Projects/JEEditorFixture/Assets/materials/WhiteBoxDefault.material",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Config/shader_global_build_options.json",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.json",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/project.json",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Registry/assetprocessor_settings.setreg",
+      "valid": true,
+      "root_type": "dict"
+    }
+  ],
+  "all_pass": true
+}

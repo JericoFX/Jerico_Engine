@@ -1,0 +1,8 @@
+[
+  "-DJE_LZ4_SOURCE_ARCHIVE:STRING=https://invalid.example/lz4.tar.gz",
+  "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+  "-DJE_LZ4_SOURCE_URL:STRING=https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+  "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-uri-string",
+  "-P",
+  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+]

@@ -1,0 +1,50 @@
+{
+  "case": "ExtraEntry",
+  "freeze_sha256": "BA64F11199BBDC4A9CD9A613D40E74B0A0FD864264725295852082FC55517518",
+  "verifier_sha256": "930EE4014DABEED4259A93FE8711204171F09371CAF44DD0C73AA596EE20D803",
+  "path_helper_sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+  "source_arg": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\ExtraEntry\\fixtures\\source",
+  "archive_arg": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\ExtraEntry\\fixtures\\sqlite-amalgamation-3530400.zip",
+  "argv": [
+    "-DJE_SQLITE_SOURCE_DIR:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\ExtraEntry\\fixtures\\source",
+    "-DJE_SQLITE_SOURCE_ARCHIVE:FILEPATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\ExtraEntry\\fixtures\\sqlite-amalgamation-3530400.zip",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\VerifySQLiteSource.cmake"
+  ],
+  "argc": 4,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "fixture_files": [
+    {
+      "path": "sqlite-amalgamation-3530400.zip",
+      "bytes": 2946650,
+      "sha256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D"
+    },
+    {
+      "path": "source/extra.txt",
+      "bytes": 16,
+      "sha256": "C53287211C46C54030453DCCF0082F0B63F6C8F143ACA6E59A6A968B465DE966"
+    },
+    {
+      "path": "source/shell.c",
+      "bytes": 1185915,
+      "sha256": "8011ED018AA12969F93573B7BB1EAE2D939D64D0F451B297FF847A0211C85179"
+    },
+    {
+      "path": "source/sqlite3.c",
+      "bytes": 9515341,
+      "sha256": "B1DD5D74EC7F29055A6684FA06FB3C2F6821C87DD38F9A458DFD2E8A1DB28189"
+    },
+    {
+      "path": "source/sqlite3.h",
+      "bytes": 690838,
+      "sha256": "919E7F2E8ED1D8F56AC17B412B8971C76AA5D1A879752CC6058F75E7D5910E1D"
+    },
+    {
+      "path": "source/sqlite3ext.h",
+      "bytes": 39175,
+      "sha256": "AC9645E5C9FF0CF176EFDD6E75CB5E98F46295D38E02DB5C4D208826A39AB4BE"
+    }
+  ],
+  "expected_diagnostic": "source must contain exactly the four audited release files",
+  "start_utc": "2026-10-11T01:05:56.1048737Z"
+}

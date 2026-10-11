@@ -1,0 +1,23 @@
+{
+  "name": "required-missing",
+  "argv": [
+    "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/lz4-v1.9.4.tar.gz",
+    "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+    "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-required-missing",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+  ],
+  "argc": 5,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "elapsed_seconds": 0.04,
+  "native_exit_code": 1,
+  "expected_diagnostic": "JE_LZ4_SOURCE_URL is required",
+  "diagnostic_match": true,
+  "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-required-missing",
+  "unexpected_output_created": false,
+  "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+  "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+  "sentinel_unchanged": true,
+  "corrupt_fixture_sha256": null,
+  "pass": true
+}

@@ -1,0 +1,108 @@
+{
+  "status": "textual candidate reviewed; real Editor/Asset Processor/runtime verification pending",
+  "aggregateAlgorithm": "relative-to-fixture path space uppercase SHA256 space bytes; FullName sorted; LF join without final LF",
+  "aggregateSha256": "7D3DDC099EAE3D175E966D0C39D521DCE13B1F030A8559868C6D6D1D793B19EA",
+  "fileCount": 20,
+  "inputs": [
+    {
+      "path": "Projects/JEEditorFixture/.gitignore",
+      "bytes": 36,
+      "sha256": "9D7EAAB87EBB7153E34C5754A8341665F3E7B8AD2638767C188152C7D148A3AD"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Assets/materials/WhiteBoxDefault.material",
+      "bytes": 434,
+      "sha256": "37DE6D5E6914D038DB2A11032FDA0B1AA4E378C8E08D882C20A08CC0DA205E0C"
+    },
+    {
+      "path": "Projects/JEEditorFixture/autoexec.cfg",
+      "bytes": 108,
+      "sha256": "2E040B27120C3C0612C1850E25E1B20A0680B9A06428BD150549220E36A1CFC0"
+    },
+    {
+      "path": "Projects/JEEditorFixture/cmake/EngineFinder.cmake",
+      "bytes": 10286,
+      "sha256": "6F063BADD68EB5BC5D5066036DAAF25D01249F4AA22E7249A9C9EFC848849385"
+    },
+    {
+      "path": "Projects/JEEditorFixture/CMakeLists.txt",
+      "bytes": 2345,
+      "sha256": "5486FB4054DA6D0094575D990C351A5401E39AF05369DB3A626B1716038ECE41"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Config/shader_global_build_options.json",
+      "bytes": 285,
+      "sha256": "76A5F96F75CC8ACA5201E98D5096C963630F831CBB704BBAD2C9B99D73C7E6B4"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Editor/Scripts/author_room.py",
+      "bytes": 10010,
+      "sha256": "76D0F54A888FF6A749EE5CEB7A05B678428DB8079F00C29E0FA78F791718284F"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "bytes": 6011,
+      "sha256": "E5857A6A43AA910A3B981F90719E6CC1AE33BFB307F16BE1385652FA44F6C465"
+    },
+    {
+      "path": "Projects/JEEditorFixture/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "Projects/JEEditorFixture/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "Projects/JEEditorFixture/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "Projects/JEEditorFixture/NOTICE.txt",
+      "bytes": 1385,
+      "sha256": "010E05C864ED4BCE9A8F5C9CAEFABB7C1F4BB257269BCDD63898E8C96758ACB2"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.cmake",
+      "bytes": 252,
+      "sha256": "FD14F0D22D138418901FB6222DB4478CADFEB04CA7CC94DB47DDFD467401F76B"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.json",
+      "bytes": 27,
+      "sha256": "50D6239101A7EED1489EA3BD9EB23D28D728C3BA58920CD5C0A98FD168AB4376"
+    },
+    {
+      "path": "Projects/JEEditorFixture/project.json",
+      "bytes": 678,
+      "sha256": "9C12C0A2D871DE98E5ADAB390DE2F9A8C1CD9F2245E00096DB13A12ED4A1AEBF"
+    },
+    {
+      "path": "Projects/JEEditorFixture/README.md",
+      "bytes": 3683,
+      "sha256": "143C24DE1B3FCDAE2E3BF90E0D7AF8F6726FBCAA73C8004208F96E96E34BEF15"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Registry/assetprocessor_settings.setreg",
+      "bytes": 890,
+      "sha256": "0A88D47A79F716D27C72FEA79F0C112AE6C9CBF21918DBFBC523E597E0CA7224"
+    },
+    {
+      "path": "Projects/JEEditorFixture/ShaderLib/README.md",
+      "bytes": 202,
+      "sha256": "96498C747D5E46B338FF0C6C8FF9739E6F8B08D1647743382BEB42210E6C5421"
+    },
+    {
+      "path": "Projects/JEEditorFixture/ShaderLib/scenesrg.srgi",
+      "bytes": 793,
+      "sha256": "0BAB50BED308F31F62A6D234B17BCD47676EF0FF2A4793933A79F507F35B5C89"
+    },
+    {
+      "path": "Projects/JEEditorFixture/ShaderLib/viewsrg.srgi",
+      "bytes": 789,
+      "sha256": "33959B6021D4A0276D20F13AD4C36C3D6436B86DE01B32700A63D43179B185C6"
+    }
+  ]
+}

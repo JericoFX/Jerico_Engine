@@ -1,0 +1,22 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "mode": "configure",
+  "argument_count": 9,
+  "arguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Zstd/tests",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zstd-consumer-rev1",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DJE_ZSTD_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zstd-producer-rev1-extracted"
+  ],
+  "freeze_sha256": "d567930c4739ba4d221bd1c3dfe6e7b0f7518107cffa573412d188e383ef2610",
+  "package_root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1-extracted",
+  "package_integrity_sha256": "a2790b024c1dad8eecd1fa878487cbe5efa5fe0bc48ac65acc8cc2c5b7786f9a",
+  "NativeExitCode": 0,
+  "FreezeSha256After": "d567930c4739ba4d221bd1c3dfe6e7b0f7518107cffa573412d188e383ef2610",
+  "FreezeUnchanged": true
+}

@@ -1,0 +1,62 @@
+{
+  "extraction_root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\extracted\\OpenSSL-1.1.1o-je-rev1-windows",
+  "manifest_lines": 1336,
+  "extracted_files": 1337,
+  "manifest_payload_bytes": 49718803,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "reparse_count": 0,
+  "package_info": {
+    "license": "OpenSSL AND SSLeay",
+    "name": "OpenSSL-1.1.1o-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "ca2e0784d2c38edcefd5d68028f4d954bd8faddb",
+      "sha256": "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f",
+      "url": "https://www.openssl.org/source/old/1.1.1/openssl-1.1.1o.tar.gz"
+    },
+    "version": "1.1.1o"
+  },
+  "recipe": {
+    "sourceVersion": "1.1.1o",
+    "sourceCommit": "ca2e0784d2c38edcefd5d68028f4d954bd8faddb",
+    "sourceSHA512": "75b2f1499cb4640229eb6cd35d85cbff2e19db17b959ac4d04b60f1b395b73567f9003521452a0fcfeea9b31b26de0a7bccf476ecf9caae02298f3647cfb7e23",
+    "architecture": "VC-WIN64A",
+    "toolset": "v143/14.44.35207",
+    "compilerFlags": [
+      "/MT",
+      "/Zl",
+      "-utf-8",
+      "-FS"
+    ],
+    "configureFlags": [
+      "enable-static-engine",
+      "enable-capieng",
+      "no-ssl2",
+      "no-tests",
+      "no-shared"
+    ],
+    "threads": true,
+    "assembly": true,
+    "consumerCRT": "/MD",
+    "historicalABI": "not asserted",
+    "perlVersion": "5.42.3.1",
+    "perlArchiveSHA256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+    "perlManifestSHA256": "fb0cc5933d7f126362fd1f2cd6febfba1d8899fe6dbd5288090637947476052a",
+    "nasmSHA256": "991775152cadbc85caf05da348ea583145ec9126a0a6f15f20e25896fcd0cd41",
+    "nasmPATH": "private verified executable only",
+    "headerPatches": {
+      "applied": false,
+      "dtls1Matches": 0,
+      "randMatches": 0,
+      "reason": "Original recipe replacement inputs are absent in the pinned release",
+      "dtls1SHA256": "7304f17cc9998bd7c16539ae9a5ea545f2e0c64086d5e688caba104b6a7ffecc",
+      "randSHA256": "5a91abcbdd14dcf2fc62761ccc58ee9407274ea558c292fa77ad625204ac2bd7"
+    }
+  },
+  "libcrypto_bytes": 25149416,
+  "libcrypto_sha256": "BE9644299D801D35C4D6AD2054321322210059970155AC9D790538727E54945F",
+  "libssl_bytes": 4892804,
+  "libssl_sha256": "0F87D800E534C4F881A18F5202A56DA4CAB4E49A30F7F52A8CEBE6BD8F393E4E",
+  "package_info_equal": true
+}

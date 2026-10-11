@@ -1,0 +1,272 @@
+[
+  {
+    "path": "AcquirePortablePerl.ps1",
+    "sha256": "392868302B0F94EB999A46008847EB8D043F9F66FEA268C710B709B8EBA85583",
+    "bytes": 4189
+  },
+  {
+    "path": "AuditPortableZip.py",
+    "sha256": "7224FFE10EE8B69117701BE7E7493089DA6DAE421E57EAC22EAF83D50B2F0E97",
+    "bytes": 3452
+  },
+  {
+    "path": "ExtractPortableZip.py",
+    "sha256": "B69947A69D9A95DC9D986F9C217F75ED2089BB545EA4434E406FA82B6735E1A9",
+    "bytes": 2368
+  },
+  {
+    "path": "license-text/c/lib/python3.9/LICENSE.txt",
+    "sha256": "599826DF92BFDCD2702EAC691072498BB096C55AF04EE984CF90F70ED77B5A70",
+    "bytes": 13925
+  },
+  {
+    "path": "license-text/c/share/cmake-3.29/Templates/CPack.GenericLicense.txt",
+    "sha256": "F7599EB8577A498BA859547C8F5AC1C3302A4B1CB929A3EE61BC5E948D8AA3D6",
+    "bytes": 101
+  },
+  {
+    "path": "license-text/licenses/fribidi/COPYING",
+    "sha256": "32434AFCC8666BA060E111D715BFDB6C2D5DD8A35FA4D3AB8AD67D8F850D2F2B",
+    "bytes": 26440
+  },
+  {
+    "path": "license-text/licenses/graphite2/COPYING",
+    "sha256": "2C272829FF23F182C8BF7EA12FEDEA69B0AE148663123ED5240C117CB129C9C1",
+    "bytes": 1235
+  },
+  {
+    "path": "license-text/licenses/graphite2/LICENSE",
+    "sha256": "A9BDDE5616ECDD1E980B44F360600EE8783B1F99B8CC83A2BEB163A0A390E861",
+    "bytes": 26527
+  },
+  {
+    "path": "license-text/licenses/harfbuzz/COPYING",
+    "sha256": "BA8F810F2455C2F08E2D56BB49B72F37FCF68F1F4FADE38977CFD7372050AD64",
+    "bytes": 1971
+  },
+  {
+    "path": "license-text/licenses/libbzip2/LICENSE",
+    "sha256": "4919CFB14A73CD64FCEF67B107613970CF1659A09AA675DBA31314F373BC7204",
+    "bytes": 1901
+  },
+  {
+    "path": "license-text/licenses/libdb-BerkeleyDB/LICENSE",
+    "sha256": "9535819925D34DDEB8E7609525A287F93BC91512C28E31994B395BEF25B35DA2",
+    "bytes": 41787
+  },
+  {
+    "path": "license-text/licenses/libexpat/COPYING",
+    "sha256": "122F2C27000472A201D337B9B31F7EB2B52D091B02857061A8880371612D9534",
+    "bytes": 1144
+  },
+  {
+    "path": "license-text/licenses/libffi/LICENSE",
+    "sha256": "67894089811F93FCA47A76F85E017DA6F8582D4BA0905963C6E0F1AD6DF7A195",
+    "bytes": 1132
+  },
+  {
+    "path": "license-text/licenses/libfontconfig/COPYING",
+    "sha256": "51A51AA9823704FD90BCCC616CDD17EBABB5B2B3E9CBDE886CA02C7002288067",
+    "bytes": 8616
+  },
+  {
+    "path": "license-text/licenses/libfreeglut/COPYING",
+    "sha256": "B6593D5EC4C113A274ABB85B10E8615895CB0DDB89F7912AF5FE5AA8DF38A275",
+    "bytes": 1439
+  },
+  {
+    "path": "license-text/licenses/libgd/COPYING",
+    "sha256": "005F4B6B0141D1BD11D371BBF7D4F67947F85A4906B7F5465F942204CF918BA3",
+    "bytes": 2991
+  },
+  {
+    "path": "license-text/licenses/libgdbm/COPYING",
+    "sha256": "690D762F2E8E149AB1E2D6A409A3853B6151A2533B2382FAE549A176D6BEDECF",
+    "bytes": 35072
+  },
+  {
+    "path": "license-text/licenses/libgif/COPYING",
+    "sha256": "0C9B7990ECDCA88B676DB232C226548AC408B279F550D424D996F0D83591DD8E",
+    "bytes": 1088
+  },
+  {
+    "path": "license-text/licenses/libgmp/COPYING",
+    "sha256": "8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903",
+    "bytes": 35147
+  },
+  {
+    "path": "license-text/licenses/libiconv/COPYING",
+    "sha256": "8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903",
+    "bytes": 35147
+  },
+  {
+    "path": "license-text/licenses/libidn2/COPYING",
+    "sha256": "73483F797A83373FCA1B968C11785B98C4FC4803CDC7D3210811CA8B075D6D76",
+    "bytes": 1555
+  },
+  {
+    "path": "license-text/licenses/libmpc/COPYING.LESSER",
+    "sha256": "DA7EABB7BAFDF7D3AE5E9F223AA5BDC1EECE45AC569DC21B3B037520B4464768",
+    "bytes": 7651
+  },
+  {
+    "path": "license-text/licenses/libmpfr/COPYING",
+    "sha256": "3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986",
+    "bytes": 35149
+  },
+  {
+    "path": "license-text/licenses/libpng/LICENSE",
+    "sha256": "7317E078E2D3B5D7BA5A6159E650945153262B44B76F6700F8E9EDB261C5143E",
+    "bytes": 5345
+  },
+  {
+    "path": "license-text/licenses/libssh2/COPYING",
+    "sha256": "FDA5E2522C58BA1F31C9F2044747616457466F4AEBEC16ADE4AF86E3A16A8E02",
+    "bytes": 1959
+  },
+  {
+    "path": "license-text/licenses/libtiff/LICENSE.md",
+    "sha256": "0780558A8BFBA0AF1160EC1FF11ADE4F41C0D7DEAFD6ECFC796B492A788E380D",
+    "bytes": 1164
+  },
+  {
+    "path": "license-text/licenses/libunistring/COPYING",
+    "sha256": "8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903",
+    "bytes": 35147
+  },
+  {
+    "path": "license-text/licenses/libwebp/COPYING",
+    "sha256": "5AEC868F669E384A22372A4E8A1A6CD7D44C64CD451F960CA69CC170D1E13ACF",
+    "bytes": 1496
+  },
+  {
+    "path": "license-text/licenses/libxpm/COPYING",
+    "sha256": "ED3B06BB3B75A0954BD6837A96B41A4676F60DFEEE647271613AADECC0FD596E",
+    "bytes": 3792
+  },
+  {
+    "path": "license-text/licenses/libxslt/COPYING",
+    "sha256": "7E48E290B6BFCCC2EC1B297023A1D77F2FD87417F71FBB9F50AABEF40A851819",
+    "bytes": 2968
+  },
+  {
+    "path": "license-text/licenses/libxz/COPYING",
+    "sha256": "29A1E305B2E34EEFE5D4602D00CDE1D528B71C5D9F2EEC5106972CF6DDB6F73F",
+    "bytes": 3347
+  },
+  {
+    "path": "license-text/licenses/libxz/COPYING.GPLv2",
+    "sha256": "8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643",
+    "bytes": 18092
+  },
+  {
+    "path": "license-text/licenses/libxz/COPYING.GPLv3",
+    "sha256": "3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986",
+    "bytes": 35149
+  },
+  {
+    "path": "license-text/licenses/libxz/COPYING.LGPLv2.1",
+    "sha256": "DC626520DCD53A22F727AF3EE42C770E56C97A64FE3ADB063799D8AB032FE551",
+    "bytes": 26530
+  },
+  {
+    "path": "license-text/licenses/License.rtf",
+    "sha256": "FCFDAAEA40D5E45B479B5EC1A370E1373662BF01C1FE9405A3BEFA3B486C7BF9",
+    "bytes": 5882
+  },
+  {
+    "path": "license-text/licenses/openssl/LICENSE.txt",
+    "sha256": "7D5450CB2D142651B8AFA315B5F238EFC805DAD827D91BA367D8516BC9D49E7A",
+    "bytes": 10175
+  },
+  {
+    "path": "license-text/licenses/patch/COPYING",
+    "sha256": "32B1062F7DA84967E7019D01AB805935CAA7AB7321A7CED0E30EBE75E5DF1670",
+    "bytes": 17992
+  },
+  {
+    "path": "license-text/licenses/perl/Artistic",
+    "sha256": "DD90D4F42E4DCADF5A7C09EEA0189D93C7B37AE560C91F0F6D5233ED3B9292A2",
+    "bytes": 6321
+  },
+  {
+    "path": "license-text/licenses/perl/Copying",
+    "sha256": "8979E6DD61852041643C5C5C40EA63B2BD1B438A67D114E62CBAEF808C514315",
+    "bytes": 12522
+  },
+  {
+    "path": "license-text/licenses/postgresql/COPYRIGHT",
+    "sha256": "9BF20EE493926A7E17A74BC7F05089FBC014269667B1540BC35A6B194A40C9DE",
+    "bytes": 1192
+  },
+  {
+    "path": "license-text/licenses/readline/COPYING",
+    "sha256": "8CEB4B9EE5ADEDDE47B31E975C1D90C73AD27B6B165A1DCD80C7C545EB65B903",
+    "bytes": 35147
+  },
+  {
+    "path": "license-text/licenses/termcap/COPYING",
+    "sha256": "32B1062F7DA84967E7019D01AB805935CAA7AB7321A7CED0E30EBE75E5DF1670",
+    "bytes": 17992
+  },
+  {
+    "path": "license-text/perl/lib/pods/perlartistic.pod",
+    "sha256": "137C097D0615AEA42EDA7A5087BAA3F81AAB1A431B9046D5E858E8C8C31987C0",
+    "bytes": 7010
+  },
+  {
+    "path": "msvc-nasm-file-inputs.json",
+    "sha256": "85994ECDD45570F229E7ADF180BAB9D9D9410B20A7908036A019207D247C512A",
+    "bytes": 1043
+  },
+  {
+    "path": "perl-pe-static-imports.json",
+    "sha256": "C0B0A4B8FFBDD1A6CB961FE996BC08CDB61EBF86D583BA5983E1044EBBD7F5A4",
+    "bytes": 1479
+  },
+  {
+    "path": "perl-tool-audit-summary.json",
+    "sha256": "4C94D8191483A6B24AC8316A27C33A6974B1994DED05B3ADDD9E0A56F20D7595",
+    "bytes": 1676
+  },
+  {
+    "path": "tool-acquisition.json",
+    "sha256": "E506E5E7C4973B16C420CA02F3641CE0B5E952DCBE25610121131182F06A984F",
+    "bytes": 774
+  },
+  {
+    "path": "tool-extraction.json",
+    "sha256": "69C0A84ADA539AAADFC6ECB1165C001E592B67F384A5D258D589214360BB76C5",
+    "bytes": 384
+  },
+  {
+    "path": "tool-get.json",
+    "sha256": "A6DA1BD003CF752627F71F4018E658162CE6F26150C4C411E70F5D692961B772",
+    "bytes": 430
+  },
+  {
+    "path": "tool-head-hop0.json",
+    "sha256": "2FC5C67B0AB0E99DD17962A53D535789E52D2F06A452D0D89FC9E815AF6745A3",
+    "bytes": 552
+  },
+  {
+    "path": "tool-head-hop1.json",
+    "sha256": "7C730383212A3ABEA0DD01AFC87D508C78DDA27D420049A00FDE16C0CC8E021B",
+    "bytes": 431
+  },
+  {
+    "path": "tool-manifest.json",
+    "sha256": "FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A",
+    "bytes": 3622658
+  },
+  {
+    "path": "zip-audit.json",
+    "sha256": "4F0DDEAFFDB781D60C94626B12BF8C37D1EBD39F9C6C7F39D666AA155D83000F",
+    "bytes": 7054
+  },
+  {
+    "path": "zip-members.json",
+    "sha256": "E63FD608A157215F3F8DD0789AA2FFB4900158F4D39AAADA6565504E4704DC3A",
+    "bytes": 6587826
+  }
+]

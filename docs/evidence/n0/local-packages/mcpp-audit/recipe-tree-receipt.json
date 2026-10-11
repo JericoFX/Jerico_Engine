@@ -1,0 +1,11 @@
+{
+  "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18?recursive=1",
+  "head_status": 200,
+  "head_etag": "W/\"1d2b69295afe769ebe42c4aa4ea150c3f789f0aa1b25d546cb1d20c24b61d4b4\"",
+  "head_length": null,
+  "automatic_redirects": false,
+  "authorization": false,
+  "get_status": 200,
+  "bytes": 171528,
+  "sha256": "1d2b69295afe769ebe42c4aa4ea150c3f789f0aa1b25d546cb1d20c24b61d4b4"
+}

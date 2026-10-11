@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2
+    Start 1: JE.LocalPackages.Mcpp.preprocessing
+1/4 Test #1: JE.LocalPackages.Mcpp.preprocessing ...   Passed    0.04 sec
+    Start 2: JE.LocalPackages.Mcpp.comments
+2/4 Test #2: JE.LocalPackages.Mcpp.comments ........   Passed    0.01 sec
+    Start 3: JE.LocalPackages.Mcpp.errors
+3/4 Test #3: JE.LocalPackages.Mcpp.errors ..........   Passed    0.01 sec
+    Start 4: JE.LocalPackages.Mcpp.cli
+4/4 Test #4: JE.LocalPackages.Mcpp.cli .............   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.09 sec

@@ -1,0 +1,90 @@
+{
+  "purpose": "Next original native root configure after verified mcpp rev2 and native splash RCC, with exact local GoogleTest",
+  "sourceFreeze": "build/n0-validation/local-packages/source-freeze-root-googletest-mcpp-splash.json",
+  "sourceFreezeSHA256": "A1DA254EBC36446F21E61F41220AD90D26A7CF7A99EC8174AF36AAAB5038FD75",
+  "sourceCount": 414,
+  "arguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DLY_PACKAGE_SERVER_URLS:STRING=",
+    "-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps",
+    "-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+    "-DLY_PACKAGE_VALIDATE_CONTENTS=ON",
+    "-DLY_PACKAGE_VALIDATE_PACKAGE=ON",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+    "-DJE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3",
+    "-DJE_PYTHON_WHEELHOUSE:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse",
+    "-DCMAKE_MESSAGE_LOG_LEVEL:STRING=VERBOSE",
+    "-DFETCHCONTENT_SOURCE_DIR_MIMALLOC:PATH=F:/JericoEngine/Dependencies/mimalloc-3.5.2",
+    "-DFETCHCONTENT_SOURCE_DIR_RAPIDJSON:PATH=F:/JericoEngine/Dependencies/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+    "-DLY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "-DFETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=F:/JericoEngine/Dependencies/googlebenchmark-1.7.0",
+    "-DFETCHCONTENT_SOURCE_DIR_SQLITE:PATH=F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400",
+    "-DFETCHCONTENT_SOURCE_DIR_MANIFOLD:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/manifold-3.5.1-root",
+    "-DFETCHCONTENT_SOURCE_DIR_CLIPPER2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_Clipper2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_OPENMESH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/OpenMesh-11.0.0-root",
+    "-DMANIFOLD_CROSS_SECTION:BOOL=ON",
+    "-DMANIFOLD_CROSS_SECTION_BACKEND:STRING=clipper2",
+    "-DMANIFOLD_USE_BUILTIN_CLIPPER2:BOOL=ON",
+    "-DMANIFOLD_DOWNLOADS:BOOL=OFF",
+    "-DMANIFOLD_PAR:BOOL=OFF",
+    "-DMANIFOLD_TEST:BOOL=OFF",
+    "-DMANIFOLD_CBIND:BOOL=OFF",
+    "-DMANIFOLD_PYBIND:BOOL=OFF",
+    "-DMANIFOLD_FUZZ:BOOL=OFF",
+    "-DTRACY_ENABLE:BOOL=OFF",
+    "-DASSIMP_ENABLE:BOOL=OFF",
+    "-DMANIFOLD_NO_IOSTREAM:BOOL=OFF",
+    "-DCLIPPER2_UTILS:BOOL=OFF",
+    "-DCLIPPER2_EXAMPLES:BOOL=OFF",
+    "-DCLIPPER2_TESTS:BOOL=OFF",
+    "-DCLIPPER2_USINGZ:STRING=OFF",
+    "-DUSE_EXTERNAL_GBENCHMARK:BOOL=OFF",
+    "-DOPENMESH_BENCHMARK_DIR:PATH=",
+    "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=F:/JericoEngine/Dependencies/googletest-v1.18.0"
+  ],
+  "previousRoot303": "Historical before native Python retirement; own author_room.py excluded after deliberate removal",
+  "mcpp": "Writer diagnosing candidate producer; not catalog-integrated nor used by this root. No writes to root/WhiteBox inputs allowed.",
+  "buildOwner": "validation_luna",
+  "nativeEditorStatus": "NOT COMPILED / NOT EXECUTED",
+  "privateSourceCopyAssignment": "build/n0-validation/local-packages/whitebox-root-source-work-audit/whitebox-root-source-assignment.json",
+  "privateSourceCopyAssignmentSHA256": "6328D7D3E341DB2BBB083283F5342F688D37206C6474939DEC690A6541D7BD1D",
+  "allowedPrivateCopyWrites": [
+    "Manifold/src/csg_tree.h",
+    "Manifold/src/edge_op.cpp",
+    "Clipper2/CPP/Clipper2Lib/include/clipper2/clipper.version.h"
+  ],
+  "googletestFreeze": "build/n0-validation/local-packages/googletest-audit/source-freeze-googletest-current.json",
+  "googletestFreezeSHA256": "9238D2FFB4B465D196167504CBDD9AB7134F6167D6AD2374C047C1A9F6571FDB",
+  "mcppFreeze": "build/n0-validation/local-packages/mcpp-audit/source-freeze-parent17-rev2.json",
+  "mcppFreezeSHA256": "D7C8399550C2E48EDB6F6A160F6AC2EFE76C656BCCBACB6636CD35FBEEE596BF",
+  "approvedPriorRootDeltas": [
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "beforeSHA256": "baeb36c55d8b6429e6772dc141490ac6a8ca47c8dc24d355f01399619e70c7ed",
+      "afterSHA256": "C3BA4B0F24D4C11A3E479BAB869CA90D390E350F01DFF2E7A78F489B610685B2"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.cpp",
+      "beforeSHA256": "9da2b95044cac119b16e6a255bfeaa71ad98d458cb2e621ba64fe8670d409cea",
+      "afterSHA256": "7B3D8D3353AAED24DDFAA5A7BE899736C372B6656AE004F5B59E3C0B94AD9CEC"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.h",
+      "beforeSHA256": "16c23bc5e5ee1083d127e37f79fe47ed7739d8b16c3aeb9ef09dbc8a64b60cd8",
+      "afterSHA256": "256A61DA331ADEC67EBC176D99DF81B8ABB67C1A5EE0BA3CBBBB92D041AFDBF4"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.qrc",
+      "beforeSHA256": "c623afed46e7928c11f742b7d29f908759017d9d27fe0ebb9d4b96c8e7449e8e",
+      "afterSHA256": "984B0C725144CDF8A4B0215D5D7982B1E4A66A94357279E205D125C267AB2F8E"
+    }
+  ]
+}

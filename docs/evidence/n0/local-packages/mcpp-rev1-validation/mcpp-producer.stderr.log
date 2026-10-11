@@ -1,0 +1,11 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: patched src/configed.H SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev1-validation/mcpp-local-v1/source-work/mcpp-2.7.2/src/configed.H
+Call Stack (most recent call first):
+  CMakeLists.txt:30 (JE_python_verify_file)
+
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake:55 (message):
+  JE local mcpp configure failed (1); outputs retained
+
+

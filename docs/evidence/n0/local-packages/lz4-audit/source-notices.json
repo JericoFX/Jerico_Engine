@@ -1,0 +1,85 @@
+{
+  "runtime_library_license": "BSD-2-Clause",
+  "components": "LZ4 core/HC/frame and embedded xxHash",
+  "full_license": {
+    "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\LICENSE",
+    "bytes": 1311,
+    "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+  },
+  "upstream_scope_notice": {
+    "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\LICENSE",
+    "bytes": 635,
+    "sha256": "2949fcf758d3c9bcb05f8393ca42cadfa15be04eb4ae4b3327c4ad7957511e1b"
+  },
+  "upstream_cmake_notice": {
+    "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\cmake\\CMakeLists.txt",
+    "bytes": 9757,
+    "sha256": "e7f649ffc19aaed3fc33ef43530fa07c577ccac29301a9bd88d3e3ff904010da"
+  },
+  "compiled_library_notices": [
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4.c",
+      "bytes": 113390,
+      "sha256": "b6a85fd8f9be0fedb568abd1338719b23b999583ccda6f3404d5ae11e4ce7b8e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4.h",
+      "bytes": 43263,
+      "sha256": "c1614ecf7ada7b0be1acb560d4239595f96fbb7aa6a79a7c40cb358753830be6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4hc.c",
+      "bytes": 70129,
+      "sha256": "bca2cf3a014b21919da4fa92db5adbfbfc9aee2f0938107885a3a8f49a750aa8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4hc.h",
+      "bytes": 20179,
+      "sha256": "6bc1efeb79571807da2ca084809de1760e0cd87064e40eccf9624d95088dce7d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4frame.c",
+      "bytes": 89076,
+      "sha256": "80812286293760e032b254fb1c5bfd03ed099879dbecf1503286c0bb3c342574"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4frame.h",
+      "bytes": 32749,
+      "sha256": "47501e4925d60c0f87c7bfc68c8b9e0e4d942eea786e35d2c5bfbf5e9deab561"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4frame_static.h",
+      "bytes": 2044,
+      "sha256": "31ab72a6e97e4fa0bedd4420d24a3f1f8024cbfa1d8ffad88c87cbb4e04f769d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\xxhash.c",
+      "bytes": 34045,
+      "sha256": "7ae8273e2eae674db237c4d0c300e4a69bff8832b0e5b4e08552255fde006fa2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\xxhash.h",
+      "bytes": 13466,
+      "sha256": "aefdd236f35130495c18764cabed3f7b216906855fc5e6a9025cd2040bc84444"
+    }
+  ],
+  "o3de_glue_licenses": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    }
+  ],
+  "excluded": "GPL CLI/tests/examples are not built or packaged; tar retained as separate source snapshot",
+  "legal_acceptance": "Not decided by this static audit"
+}

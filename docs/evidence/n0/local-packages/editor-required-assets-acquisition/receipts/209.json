@@ -1,0 +1,41 @@
+{
+  "index": 209,
+  "source_path": "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+  "expected_sha256": "e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8",
+  "expected_bytes": 107733,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:10.999938+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "107733",
+      "ETag": "\"e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:11.419703+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "107733",
+      "ETag": "\"e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8",
+  "actual_bytes": 107733,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Tools\\AssetProcessor\\Platform\\Windows\\AssetProcessorBatch.ico",
+  "status": "acquired and byte verified"
+}

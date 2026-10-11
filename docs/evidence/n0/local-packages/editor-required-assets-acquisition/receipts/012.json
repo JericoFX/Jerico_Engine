@@ -1,0 +1,41 @@
+{
+  "index": 12,
+  "source_path": "Code/Editor/Controls/ReflectedPropertyControl/resources/apply.png",
+  "expected_sha256": "1e7fb0db541a13f6f6b6f494f133f72e05c847508bdf69e1bc63dcf8eb4aa752",
+  "expected_bytes": 311,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/apply.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:19.133272+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/apply.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "311",
+      "ETag": "\"1e7fb0db541a13f6f6b6f494f133f72e05c847508bdf69e1bc63dcf8eb4aa752\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/apply.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:19.596600+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/apply.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "311",
+      "ETag": "\"1e7fb0db541a13f6f6b6f494f133f72e05c847508bdf69e1bc63dcf8eb4aa752\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "1e7fb0db541a13f6f6b6f494f133f72e05c847508bdf69e1bc63dcf8eb4aa752",
+  "actual_bytes": 311,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\Controls\\ReflectedPropertyControl\\resources\\apply.png",
+  "status": "acquired and byte verified"
+}

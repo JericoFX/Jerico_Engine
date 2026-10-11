@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts?name=zstd-1.35-multiplatform&per_page=100",
+  "status": 200,
+  "response_uri": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts?name=zstd-1.35-multiplatform&per_page=100",
+  "auto_redirect": false,
+  "credentials": "none",
+  "body_sha256": "244563F989470892C537C9A4622920AF0D228EE4528F7D00C64A06D6CD95856C"
+}

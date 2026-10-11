@@ -1,0 +1,304 @@
+{
+  "allPreserved": true,
+  "uiCount": 40,
+  "preservation": [
+    {
+      "path": "Code/Editor/AssetEditor/AssetEditorWindow.ui",
+      "beforeSHA256": "096cad211e3a281bec59887186974464d1dc34012a95882982a757a531091bfe",
+      "afterSHA256": "096cad211e3a281bec59887186974464d1dc34012a95882982a757a531091bfe",
+      "bytes": 1618,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/AssetImporter/AssetImporterWindow.ui",
+      "beforeSHA256": "bb7235dc5d58a33182f9536b4da1f0330fba85cd20f65c4823449dbd39b67778",
+      "afterSHA256": "bb7235dc5d58a33182f9536b4da1f0330fba85cd20f65c4823449dbd39b67778",
+      "bytes": 6909,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/AssetImporter/ImporterRootDisplay.ui",
+      "beforeSHA256": "2a275a1b0003e88bc00417c710763d8534e1e2dfb267c32d5517fcf5f48263af",
+      "afterSHA256": "2a275a1b0003e88bc00417c710763d8534e1e2dfb267c32d5517fcf5f48263af",
+      "bytes": 4917,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/AssetImporter/UI/FilesAlreadyExistDialog.ui",
+      "beforeSHA256": "8828969edad58ff22fa42012a60f9aeb5d15c8f79cd2b43502437ece1a9d807a",
+      "afterSHA256": "8828969edad58ff22fa42012a60f9aeb5d15c8f79cd2b43502437ece1a9d807a",
+      "bytes": 3928,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/AssetImporter/UI/ProcessingAssetsDialog.ui",
+      "beforeSHA256": "b2c956a6351c0429fe965817a4ba938df3bda4bf0377597b50916c7c6937aff6",
+      "afterSHA256": "b2c956a6351c0429fe965817a4ba938df3bda4bf0377597b50916c7c6937aff6",
+      "bytes": 3627,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/AssetImporter/UI/SelectDestinationDialog.ui",
+      "beforeSHA256": "bab38c3bcad2de74d722b742391d45e0ad9b65ceb326e118fb21d3cdb18ffeba",
+      "afterSHA256": "bab38c3bcad2de74d722b742391d45e0ad9b65ceb326e118fb21d3cdb18ffeba",
+      "bytes": 12145,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/AzAssetBrowser/AzAssetBrowserWindow.ui",
+      "beforeSHA256": "5d5c638dcc0aab560b27c9259ce156aa925b340a9c0e5dc707a62251f529be90",
+      "afterSHA256": "5d5c638dcc0aab560b27c9259ce156aa925b340a9c0e5dc707a62251f529be90",
+      "bytes": 22581,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/CheckOutDialog.ui",
+      "beforeSHA256": "0abfb0b551a4fb1e595135bc2107fd0545d1a83a8da2a1a8b67c2fff20ee0b67",
+      "afterSHA256": "0abfb0b551a4fb1e595135bc2107fd0545d1a83a8da2a1a8b67c2fff20ee0b67",
+      "bytes": 3564,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/Controls/ConsoleSCB.ui",
+      "beforeSHA256": "1afddd749cfaa25524a8be415643439c1e880729b4e6b472e60ba776d1b11932",
+      "afterSHA256": "1afddd749cfaa25524a8be415643439c1e880729b4e6b472e60ba776d1b11932",
+      "bytes": 7411,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/CustomAspectRatioDlg.ui",
+      "beforeSHA256": "5efcbda762991426e131a57a43efe18b8f38dadadb2bfbf78f97005d78320d48",
+      "afterSHA256": "5efcbda762991426e131a57a43efe18b8f38dadadb2bfbf78f97005d78320d48",
+      "bytes": 3125,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/CustomizeKeyboardDialog.ui",
+      "beforeSHA256": "1538120b4e0d5bdd4604aa4235368771fcc51b0a7c1b74b5a06cb3dbc3232fd0",
+      "afterSHA256": "1538120b4e0d5bdd4604aa4235368771fcc51b0a7c1b74b5a06cb3dbc3232fd0",
+      "bytes": 6666,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/CustomResolutionDlg.ui",
+      "beforeSHA256": "6481cfa79d676bfaef874210ba70d5ead5bead5831a76394d8617b20cf7d4577",
+      "afterSHA256": "6481cfa79d676bfaef874210ba70d5ead5bead5831a76394d8617b20cf7d4577",
+      "bytes": 3549,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/Dialogs/PythonScriptsDialog.ui",
+      "beforeSHA256": "0c00c37675b145704571e6a395331b01116015340c8d1d78138172ee59c737ed",
+      "afterSHA256": "0c00c37675b145704571e6a395331b01116015340c8d1d78138172ee59c737ed",
+      "bytes": 1513,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/EditorPreferencesDialog.ui",
+      "beforeSHA256": "2db196207f977f59652f12cf0900e87a07527fec658ddc682be5fd07554bcc73",
+      "afterSHA256": "2db196207f977f59652f12cf0900e87a07527fec658ddc682be5fd07554bcc73",
+      "bytes": 5157,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/ErrorDialog.ui",
+      "beforeSHA256": "399eb1733a86d8cdfb34be7753695fea3d0b6e37edda2f0672863c90040fdedb",
+      "afterSHA256": "399eb1733a86d8cdfb34be7753695fea3d0b6e37edda2f0672863c90040fdedb",
+      "bytes": 3173,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/ErrorReportDialog.ui",
+      "beforeSHA256": "3e26f87818a9c2d022495beab4afb4cabe0b511c7cbf494a3af2c029d7386001",
+      "afterSHA256": "3e26f87818a9c2d022495beab4afb4cabe0b511c7cbf494a3af2c029d7386001",
+      "bytes": 1269,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/FBXExporterDialog.ui",
+      "beforeSHA256": "502cae97d29b09eb8992124aa1feef4516e47114d66ba722ae1de576af2d9ab9",
+      "afterSHA256": "502cae97d29b09eb8992124aa1feef4516e47114d66ba722ae1de576af2d9ab9",
+      "bytes": 2741,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/GenericSelectItemDialog.ui",
+      "beforeSHA256": "396f36e83364f24e1e817bbc2a4eaa51f2ed06c7dce5602579a07776f7ad7b45",
+      "afterSHA256": "396f36e83364f24e1e817bbc2a4eaa51f2ed06c7dce5602579a07776f7ad7b45",
+      "bytes": 1651,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/GotoPositionDlg.ui",
+      "beforeSHA256": "875173d50d7051cdf97abca27cfe399b75198e84a71fc890ee9580ea7acf592e",
+      "afterSHA256": "875173d50d7051cdf97abca27cfe399b75198e84a71fc890ee9580ea7acf592e",
+      "bytes": 5483,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/IconListDialog.ui",
+      "beforeSHA256": "8e477fea36226e0756cb023e940d9ecc4c6baa8a9e6639a7e63b34f618749a82",
+      "afterSHA256": "8e477fea36226e0756cb023e940d9ecc4c6baa8a9e6639a7e63b34f618749a82",
+      "bytes": 1807,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/LayoutConfigDialog.ui",
+      "beforeSHA256": "e60e8ad47340df0b60486cd3733107ffb01f41f4146cd3538b5797439295c7ba",
+      "afterSHA256": "e60e8ad47340df0b60486cd3733107ffb01f41f4146cd3538b5797439295c7ba",
+      "bytes": 4437,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/LevelFileDialog.ui",
+      "beforeSHA256": "11b6506374bfb66b7c3b5d4a38edea1c0df68f35fee6d81700a23b3a25761ce7",
+      "afterSHA256": "11b6506374bfb66b7c3b5d4a38edea1c0df68f35fee6d81700a23b3a25761ce7",
+      "bytes": 3257,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/NewLevelDialog.ui",
+      "beforeSHA256": "d3678d1a25afb2edce87ab9c28811e949dba45aae924dc6726f1917ed78b37d1",
+      "afterSHA256": "d3678d1a25afb2edce87ab9c28811e949dba45aae924dc6726f1917ed78b37d1",
+      "bytes": 4625,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/o3de_logo.svg",
+      "beforeSHA256": "d4080a194123cac6594390a826f0aad6cba36d01127dc4165ea4e8a12ef35337",
+      "afterSHA256": "d4080a194123cac6594390a826f0aad6cba36d01127dc4165ea4e8a12ef35337",
+      "bytes": 7011,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/ProjectSettingsTool/ProjectSettingsToolWidget.ui",
+      "beforeSHA256": "e77372398170cc6fe453f2a0162cc33aaba5e408b324aa5b23d4c69616b09f58",
+      "afterSHA256": "e77372398170cc6fe453f2a0162cc33aaba5e408b324aa5b23d4c69616b09f58",
+      "bytes": 6679,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/SettingsManagerDialog.ui",
+      "beforeSHA256": "04738bd07452a64536a4bae564b8b1e816d80a18f471a260af1f9fe45660e6b9",
+      "afterSHA256": "04738bd07452a64536a4bae564b8b1e816d80a18f471a260af1f9fe45660e6b9",
+      "bytes": 2754,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/splashscreen_background.png",
+      "beforeSHA256": "fb9d21a2ef1282dd062d5f68a2e4026de93a460d53e27e11304cdbd4dfba3731",
+      "afterSHA256": "fb9d21a2ef1282dd062d5f68a2e4026de93a460d53e27e11304cdbd4dfba3731",
+      "bytes": 132,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.ui",
+      "beforeSHA256": "857fbae70065e434e188e99e068ac68a3106943c58b5559ed113ae84e301a2a7",
+      "afterSHA256": "857fbae70065e434e188e99e068ac68a3106943c58b5559ed113ae84e301a2a7",
+      "bytes": 12849,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/ToolsConfigPage.ui",
+      "beforeSHA256": "158a8172118b1c325cc961c87d18823e736d14b510fa1eb16137582a0ef894df",
+      "afterSHA256": "158a8172118b1c325cc961c87d18823e736d14b510fa1eb16137582a0ef894df",
+      "bytes": 8935,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/SequenceBatchRenderDialog.ui",
+      "beforeSHA256": "1e0b1841d5cf55f423e99cf2dc4aef0f65bf77cf06ebd34a48b461beb410d4ed",
+      "afterSHA256": "1e0b1841d5cf55f423e99cf2dc4aef0f65bf77cf06ebd34a48b461beb410d4ed",
+      "bytes": 13586,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TrackViewCurveEditor.ui",
+      "beforeSHA256": "b16b8f2ca9ef25b9237d3451a51a025822b36cdf0cf142388ec4ec8d1d45551a",
+      "afterSHA256": "b16b8f2ca9ef25b9237d3451a51a025822b36cdf0cf142388ec4ec8d1d45551a",
+      "bytes": 13434,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TrackViewFindDlg.ui",
+      "beforeSHA256": "dd64e5b7746b68d8d1bf7ef7737310288e0a949a478480511aeaf41b11521f6f",
+      "afterSHA256": "dd64e5b7746b68d8d1bf7ef7737310288e0a949a478480511aeaf41b11521f6f",
+      "bytes": 2907,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TrackViewNodes.ui",
+      "beforeSHA256": "1c3dfdb5b95f61b53d1fa8fe0d28c74d4c60891f5fb975b17ce6eb2fd8836bc1",
+      "afterSHA256": "1c3dfdb5b95f61b53d1fa8fe0d28c74d4c60891f5fb975b17ce6eb2fd8836bc1",
+      "bytes": 2512,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TrackViewTrackPropsDlg.ui",
+      "beforeSHA256": "115a78a4d32f741c471496c43c5f42948bb3e6c2ac4d02b762c62ccd7f0da485",
+      "afterSHA256": "115a78a4d32f741c471496c43c5f42948bb3e6c2ac4d02b762c62ccd7f0da485",
+      "bytes": 2808,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TVCustomizeTrackColorsDialog.ui",
+      "beforeSHA256": "dedd10a9daa916bd8df949718132edefcf209e339c35e139bea63cd8a93440d2",
+      "afterSHA256": "dedd10a9daa916bd8df949718132edefcf209e339c35e139bea63cd8a93440d2",
+      "bytes": 3070,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TVEventsDialog.ui",
+      "beforeSHA256": "b8f52bd18302eed05d839e99b8cc374ca5b685f33826274e0dcb833282413391",
+      "afterSHA256": "b8f52bd18302eed05d839e99b8cc374ca5b685f33826274e0dcb833282413391",
+      "bytes": 2796,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackView/TVSequenceProps.ui",
+      "beforeSHA256": "b893ab592d83c7ce656fed9c51397b7f8fee53f6ed61cc13c998dbf56859e218",
+      "afterSHA256": "b893ab592d83c7ce656fed9c51397b7f8fee53f6ed61cc13c998dbf56859e218",
+      "bytes": 8150,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackViewExportKeyTimeDlg.ui",
+      "beforeSHA256": "c9320a912d8b10cccad563692b667d40ccc29faf17e6b3debcb54c6d18d288c2",
+      "afterSHA256": "c9320a912d8b10cccad563692b667d40ccc29faf17e6b3debcb54c6d18d288c2",
+      "bytes": 3016,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackViewFBXImportPreviewDialog.ui",
+      "beforeSHA256": "0e856dadbfc01577db7c0062782dc7fce8aeda8ad4d3e3950c693de81599ae15",
+      "afterSHA256": "0e856dadbfc01577db7c0062782dc7fce8aeda8ad4d3e3950c693de81599ae15",
+      "bytes": 2326,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/TrackViewNewSequenceDialog.ui",
+      "beforeSHA256": "2c1d37e6710b6516d516f61fcc31fe49ad397c212c7c5ce024d4ce39651e02e9",
+      "afterSHA256": "2c1d37e6710b6516d516f61fcc31fe49ad397c212c7c5ce024d4ce39651e02e9",
+      "bytes": 2286,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/ViewportTitleDlg.ui",
+      "beforeSHA256": "d65690b8ddb81831cd09e7a448cc7ce7bb84fc0c3c1f8692d9e66ed9a2b6029b",
+      "afterSHA256": "d65690b8ddb81831cd09e7a448cc7ce7bb84fc0c3c1f8692d9e66ed9a2b6029b",
+      "bytes": 1378,
+      "unchanged": true
+    },
+    {
+      "path": "Code/Editor/WelcomeScreen/WelcomeScreenDialog.ui",
+      "beforeSHA256": "598542239b32dd0c021ae16cdfb60feb15b5224470243aa21a8446864c42b6ac",
+      "afterSHA256": "598542239b32dd0c021ae16cdfb60feb15b5224470243aa21a8446864c42b6ac",
+      "bytes": 21369,
+      "unchanged": true
+    }
+  ],
+  "pngIsOriginalLFSPointer": true,
+  "pngPointerPayloadNotMaterialized": true,
+  "runtimeValidation": "PENDING",
+  "rccValidation": "PENDING"
+}

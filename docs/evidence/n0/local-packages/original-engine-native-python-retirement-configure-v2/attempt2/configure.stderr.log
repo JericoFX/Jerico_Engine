@@ -1,0 +1,20 @@
+CMake Error at cmake/3rdPartyPackages.cmake:952 (message):
+  JE FetchContent unavailable offline: googletest
+
+  Pin: 6e3191c1455468b3fc35a417fb565c1c5071aee1b7e7f85e30cf48a98d37d8b5
+  063de7e9578f82b369302001269680b4b1553359
+
+  Archive cache:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/googletest
+
+  Provision a pinned local archive or set FETCHCONTENT_SOURCE_DIR_GOOGLETEST
+  to audited local sources; remote and Git fallback are disabled.
+Call Stack (most recent call first):
+  Code/Framework/AzTest/3rdParty/Findgoogletest.cmake:28 (o3de_fetch_content)
+  cmake/3rdParty.cmake:65 (find_package)
+  cmake/LYWrappers.cmake:650 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  Code/Framework/AzTest/CMakeLists.txt:19 (ly_add_target)
+
+

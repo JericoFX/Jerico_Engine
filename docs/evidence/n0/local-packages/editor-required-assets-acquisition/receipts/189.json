@@ -1,0 +1,41 @@
+{
+  "index": 189,
+  "source_path": "Code/Editor/res/ball_online.ico",
+  "expected_sha256": "b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c",
+  "expected_bytes": 1150,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_online.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:23.915266+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_online.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "1150",
+      "ETag": "\"b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_online.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:24.269346+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_online.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "1150",
+      "ETag": "\"b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c",
+  "actual_bytes": 1150,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\ball_online.ico",
+  "status": "acquired and byte verified"
+}

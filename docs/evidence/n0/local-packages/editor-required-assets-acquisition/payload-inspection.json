@@ -1,0 +1,6286 @@
+{
+  "status": "static container/name-table inspection only",
+  "manifest_sha256": "7982d0db8511004f342af03f5e73b2dab510974b7be37508a0c640bfc0dd95a4",
+  "snapshot": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor",
+  "paths": 227,
+  "bytes": 13224720,
+  "kinds": {
+    "PNG": 170,
+    "sfnt font": 12,
+    "font XML descriptor": 4,
+    "TIFF": 21,
+    "ICO": 11,
+    "BMP": 3,
+    "DDS": 6
+  },
+  "errors": [],
+  "missing": [
+    {
+      "path": "Code/Editor/splashscreen_background.png",
+      "sha256": "92290da114ef3cccd5c8afad1bc0de4b9060a522b08b4218e4d211d2793ecd8c",
+      "bytes": 1708521
+    }
+  ],
+  "payloads": [
+    {
+      "path": "Assets/Editor/Icons/AssetImporter/group_icon.png",
+      "bytes": 1424,
+      "sha256": "ac5e1daab3c6bdc0d27b19f71cb4fd18c3b3f22727b20b7e1217db55ecc85f68",
+      "container": {
+        "kind": "PNG",
+        "width": 24,
+        "height": 24,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Assets/Editor/Icons/AssetImporter/mesh_on.png",
+      "bytes": 771,
+      "sha256": "a68df4eb2d979d209bdd5bc77c9c8fa9a026ccdde4c6e11d39e133375ffbc31d",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Assets/Editor/Icons/PropertyEditor/Browse_on.png",
+      "bytes": 1014,
+      "sha256": "935193affffd5459e91e363ae40d02c3af1be4f9ee2df1a518633e56237fcfa8",
+      "container": {
+        "kind": "PNG",
+        "width": 24,
+        "height": 24,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Assets/Editor/Icons/PropertyEditor/error_icon.png",
+      "bytes": 1189,
+      "sha256": "41307cc4f2c5ac0c77cbe2eb15b488a5d52f6c05d850f8dd8d0540ad66e3a925",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 19,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Assets/Editor/Icons/PropertyEditor/remove.png",
+      "bytes": 304,
+      "sha256": "14ba2d4499ea84b7ecf58d72edc45c17496b72827ac4c1ee13f95bfcfdd28031",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Assets/Editor/Icons/PropertyEditor/reset_icon.png",
+      "bytes": 1292,
+      "sha256": "0362da38d3804e2911130d138be4fd73040d66c8ac7d1b5f9f60c70037e8ca93",
+      "container": {
+        "kind": "PNG",
+        "width": 24,
+        "height": 24,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Assets/Engine/Fonts/Vera.ttf",
+      "bytes": 65932,
+      "sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 17,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Bitstream Vera Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Roman"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Bitstream Vera Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Bitstream Vera Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Release 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "BitstreamVeraSans-Roman"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Bitstream Vera is a trademark of Bitstream, Inc."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Bitstream Inc."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.bitstream.com"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Copyright (c) 2003 by Bitstream, Inc.\r\nAll Rights Reserved.\r\nBitstream Vera is a trademark of Bitstream, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of the fonts accompanying this license (\"Fonts\") and associated documentation files (the \"Font Software\"), to reproduce and distribute the Font Software, including without limitation the rights to use, copy, merge, publish, distribute, and/or sell copies of the Font Software, and to permit persons to whom the Font Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright and trademark notices and this permission notice shall be included in all copies of one or more of the Font Software typefaces.\r\n\r\nThe Font Software may be modified, altered, or added to, and in particular the designs of glyphs or characters in the Fonts may be modified and additional glyphs or characters may be added to the Fonts, only if the fonts are renamed to names not containing either the words \"Bitstream\" or the word \"Vera\".\r\n\r\nThis License becomes null and void to the extent applicable to Fonts or Font Software that has been modified and is distributed under the \"Bitstream Vera\" names.\r\n\r\nThe Font Software may be sold as part of a larger software package but no copy of one or more of the Font Software typefaces may be sold by itself.\r\n\r\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.\r\n\r\nExcept as contained in this notice, the names of Gnome, the Gnome Foundation, and Bitstream Inc., shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Font Software without prior written authorization from the Gnome Foundation or Bitstream Inc., respectively. For further information, contact: fonts at gnome dot org."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Bitstream Vera Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Roman"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Bitstream Vera Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Bitstream Vera Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Release 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "BitstreamVeraSans-Roman"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Bitstream Vera is a trademark of Bitstream, Inc."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Bitstream Inc."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.bitstream.com"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Copyright (c) 2003 by Bitstream, Inc.\r\nAll Rights Reserved.\r\nBitstream Vera is a trademark of Bitstream, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of the fonts accompanying this license (\"Fonts\") and associated documentation files (the \"Font Software\"), to reproduce and distribute the Font Software, including without limitation the rights to use, copy, merge, publish, distribute, and/or sell copies of the Font Software, and to permit persons to whom the Font Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright and trademark notices and this permission notice shall be included in all copies of one or more of the Font Software typefaces.\r\n\r\nThe Font Software may be modified, altered, or added to, and in particular the designs of glyphs or characters in the Fonts may be modified and additional glyphs or characters may be added to the Fonts, only if the fonts are renamed to names not containing either the words \"Bitstream\" or the word \"Vera\".\r\n\r\nThis License becomes null and void to the extent applicable to Fonts or Font Software that has been modified and is distributed under the \"Bitstream Vera\" names.\r\n\r\nThe Font Software may be sold as part of a larger software package but no copy of one or more of the Font Software typefaces may be sold by itself.\r\n\r\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.\r\n\r\nExcept as contained in this notice, the names of Gnome, the Gnome Foundation, and Bitstream Inc., shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Font Software without prior written authorization from the Gnome Foundation or Bitstream Inc., respectively. For further information, contact: fonts at gnome dot org."
+          }
+        ]
+      }
+    },
+    {
+      "path": "Assets/Engine/Fonts/VeraMono.ttf",
+      "bytes": 49224,
+      "sha256": "da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 16,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Bitstream Vera Sans Mono"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Roman"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Bitstream Vera Sans Mono"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Bitstream Vera Sans Mono"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Release 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "BitstreamVeraSansMono-Roman"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Bitstream Vera is a trademark of Bitstream, Inc."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Bitstream Inc."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.bitstream.com"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Copyright (c) 2003 by Bitstream, Inc.\r\nAll Rights Reserved.\r\nBitstream Vera is a trademark of Bitstream, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of the fonts accompanying this license (\"Fonts\") and associated documentation files (the \"Font Software\"), to reproduce and distribute the Font Software, including without limitation the rights to use, copy, merge, publish, distribute, and/or sell copies of the Font Software, and to permit persons to whom the Font Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright and trademark notices and this permission notice shall be included in all copies of one or more of the Font Software typefaces.\r\n\r\nThe Font Software may be modified, altered, or added to, and in particular the designs of glyphs or characters in the Fonts may be modified and additional glyphs or characters may be added to the Fonts, only if the fonts are renamed to names not containing either the words \"Bitstream\" or the word \"Vera\".\r\n\r\nThis License becomes null and void to the extent applicable to Fonts or Font Software that has been modified and is distributed under the \"Bitstream Vera\" names.\r\n\r\nThe Font Software may be sold as part of a larger software package but no copy of one or more of the Font Software typefaces may be sold by itself.\r\n\r\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.\r\n\r\nExcept as contained in this notice, the names of Gnome, the Gnome Foundation, and Bitstream Inc., shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Font Software without prior written authorization from the Gnome Foundation or Bitstream Inc., respectively. For further information, contact: fonts at gnome dot org."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Bitstream Vera Sans Mono"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Roman"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Bitstream Vera Sans Mono"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Bitstream Vera Sans Mono"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Release 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "BitstreamVeraSansMono-Roman"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Bitstream Vera is a trademark of Bitstream, Inc."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Bitstream Inc."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.bitstream.com"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Copyright (c) 2003 by Bitstream, Inc.\r\nAll Rights Reserved.\r\nBitstream Vera is a trademark of Bitstream, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of the fonts accompanying this license (\"Fonts\") and associated documentation files (the \"Font Software\"), to reproduce and distribute the Font Software, including without limitation the rights to use, copy, merge, publish, distribute, and/or sell copies of the Font Software, and to permit persons to whom the Font Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright and trademark notices and this permission notice shall be included in all copies of one or more of the Font Software typefaces.\r\n\r\nThe Font Software may be modified, altered, or added to, and in particular the designs of glyphs or characters in the Fonts may be modified and additional glyphs or characters may be added to the Fonts, only if the fonts are renamed to names not containing either the words \"Bitstream\" or the word \"Vera\".\r\n\r\nThis License becomes null and void to the extent applicable to Fonts or Font Software that has been modified and is distributed under the \"Bitstream Vera\" names.\r\n\r\nThe Font Software may be sold as part of a larger software package but no copy of one or more of the Font Software typefaces may be sold by itself.\r\n\r\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.\r\n\r\nExcept as contained in this notice, the names of Gnome, the Gnome Foundation, and Bitstream Inc., shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Font Software without prior written authorization from the Gnome Foundation or Bitstream Inc., respectively. For further information, contact: fonts at gnome dot org."
+          }
+        ]
+      }
+    },
+    {
+      "path": "Assets/Engine/Fonts/console.font",
+      "bytes": 324,
+      "sha256": "194b91b37a70faa04b1770c79b1b3d0086d07c1d3631b06c1c58b806a2059878",
+      "container": {
+        "kind": "font XML descriptor",
+        "root": "fontshader",
+        "font_references": [
+          {
+            "path": "VeraMono.ttf",
+            "w": "512",
+            "h": "256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Assets/Engine/Fonts/default-ui.font",
+      "bytes": 260,
+      "sha256": "9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8",
+      "container": {
+        "kind": "font XML descriptor",
+        "root": "fontshader",
+        "font_references": [
+          {
+            "path": "Vera.ttf",
+            "w": "512",
+            "h": "256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Assets/Engine/Fonts/default.font",
+      "bytes": 260,
+      "sha256": "58d365d46a496a71e5df56969a716ddb40e0784743ef3b6c5f5914852be82cda",
+      "container": {
+        "kind": "font XML descriptor",
+        "root": "fontshader",
+        "font_references": [
+          {
+            "path": "VeraMono.ttf",
+            "w": "512",
+            "h": "256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Assets/Engine/Fonts/hud.font",
+      "bytes": 347,
+      "sha256": "c65599e80a7094af11e16b2d5716a0c50c507cf84139ddbbd1c1bc3be3b2ddcf",
+      "container": {
+        "kind": "font XML descriptor",
+        "root": "fontshader",
+        "font_references": [
+          {
+            "path": "VeraMono.ttf",
+            "w": "512",
+            "h": "256"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/Controls/ReflectedPropertyControl/resources/apply.png",
+      "bytes": 311,
+      "sha256": "1e7fb0db541a13f6f6b6f494f133f72e05c847508bdf69e1bc63dcf8eb4aa752",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 0,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/Controls/ReflectedPropertyControl/resources/file_browse.png",
+      "bytes": 370,
+      "sha256": "124de9138d3af8e14a49944245d7245df4065c49ad1e5ec1d8377600933558c5",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/ObjSelection.png",
+      "bytes": 348,
+      "sha256": "8e3a467c778f85ce5cba4cfa5c7446f5d91a67bb52a7817dc15d0634f4e39bda",
+      "container": {
+        "kind": "PNG",
+        "width": 12,
+        "height": 12,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/display_info.png",
+      "bytes": 212,
+      "sha256": "d34f123fc3e057438e58ec5144f50f9dc9757d6a855a3c4a1380dedd9a6f243d",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-00.png",
+      "bytes": 260,
+      "sha256": "5ae4076ff057217fc9f7792001a6698694bdf2c4b92c8a609c789ebd3ff604fe",
+      "container": {
+        "kind": "PNG",
+        "width": 8,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-01.png",
+      "bytes": 266,
+      "sha256": "2c8ea1952d2899aacb804da47f0cc16f00ccea0f13ddbefd51d0db026cd3e624",
+      "container": {
+        "kind": "PNG",
+        "width": 8,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-02.png",
+      "bytes": 505,
+      "sha256": "04cd08f209907df14e40500467c98a5d142d33131031a5b4f9bcd5c49c24dd87",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 19,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-03.png",
+      "bytes": 533,
+      "sha256": "b045f5ca44694172d61a101069c824c052229c7b51febba5788c220f6d6d586b",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 20,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-05.png",
+      "bytes": 309,
+      "sha256": "a9d8763e4fb831e70b756803cbbe0773a17abdb279bc17d5670406f161c0c928",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 15,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-06.png",
+      "bytes": 368,
+      "sha256": "d87cf8d940e9f60affa38a1462b58f6f74b6a65b72c9feac52e7a99870558dfb",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-07.png",
+      "bytes": 440,
+      "sha256": "310e1fa4693d44c355c0232b77f34237bfea8891f0115bcd25ce3686f361085a",
+      "container": {
+        "kind": "PNG",
+        "width": 21,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-08.png",
+      "bytes": 440,
+      "sha256": "6a0b3156a4f7e2b2aa511d68ff570218b5dab01ac303458ee59a6e52c8b0b74e",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-09.png",
+      "bytes": 381,
+      "sha256": "a2a38ce8cdd236cca2cefb1f4777040a4ddd90077c710a3f0b4bd1e7d0bb1caf",
+      "container": {
+        "kind": "PNG",
+        "width": 20,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-10.png",
+      "bytes": 1144,
+      "sha256": "da15d697ee11fe93d625792ade298ca83ac5756046423d4573ec91dcc4e04b51",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-11.png",
+      "bytes": 330,
+      "sha256": "3284a1231ff31f8b288113c86bb75339ada9a61c55144a4136c9089a5653484d",
+      "container": {
+        "kind": "PNG",
+        "width": 13,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-12.png",
+      "bytes": 283,
+      "sha256": "5868c382713ea34fc2e538b9c2a04f577bb9c6e1dadbb2ab39cf4badd21a9efb",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-13.png",
+      "bytes": 238,
+      "sha256": "218af4e762974c920be3321e437a85b6804d684035f0622672ddfa54a049a82e",
+      "container": {
+        "kind": "PNG",
+        "width": 10,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-14.png",
+      "bytes": 542,
+      "sha256": "96ffcd2266e603efd1320d70a1e6e3ded3e04765d499ef97c6d3ac6230c491bf",
+      "container": {
+        "kind": "PNG",
+        "width": 24,
+        "height": 17,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-15.png",
+      "bytes": 508,
+      "sha256": "09d59f95dc7af5e6e2f5bea5bafdf571fbf034515a7b0038bd298250b5b343f7",
+      "container": {
+        "kind": "PNG",
+        "width": 23,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-16.png",
+      "bytes": 442,
+      "sha256": "e5d8a20c36f9902afd5d8e5f30ac123fc118101ef045a4ffffcdc8d1a51507cc",
+      "container": {
+        "kind": "PNG",
+        "width": 21,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-17.png",
+      "bytes": 524,
+      "sha256": "ebca3c027be7425fba5b1efb81698c91277183033c92b353845fd8711841c260",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 15,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-18.png",
+      "bytes": 349,
+      "sha256": "30048484887a673c9616bf0b2dd3e4b7a542903030a1db911cdb478e3883d54b",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-19.png",
+      "bytes": 573,
+      "sha256": "87e784db9462eae6555dff1a8a3b23cc92465f3672d60d3a15310f2717cf905a",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-20.png",
+      "bytes": 206,
+      "sha256": "b4022f75f5e00095201c6fa318c1ca00a90e120bffc66aa60a4d741d7d2525a9",
+      "container": {
+        "kind": "PNG",
+        "width": 12,
+        "height": 12,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-22.png",
+      "bytes": 1257,
+      "sha256": "b16504e73124dac1979ccb1314dcc32d01710c2c710597ca9f762472ff8fc8b5",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-23.png",
+      "bytes": 335,
+      "sha256": "773c0c039ebd2b900d6cfad6de3b690774df31624e9352eff8a5806ba4e4353b",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-24.png",
+      "bytes": 259,
+      "sha256": "c474280f2fdfec400f652a7ed1c9d05250848ad13ac42564399496523b6ab117",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 17,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/edit_mode_toolbar-25.png",
+      "bytes": 425,
+      "sha256": "bf5592118e0144e4d5f639be13dd9d35b95171d56b30d6314012bc219d72e905",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/editwithbutton_dark.png",
+      "bytes": 1002,
+      "sha256": "07c71ae07db664b6fd833115d484341ceb977a53f81ab0ab3b2c9a5ad4a66877",
+      "container": {
+        "kind": "PNG",
+        "width": 147,
+        "height": 21,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/hide_helpers.png",
+      "bytes": 208,
+      "sha256": "e576a98a702b4848565c6456763197f4a53c518c3b3a504f92b90092be8ad27e",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/maximize.png",
+      "bytes": 239,
+      "sha256": "f30d7e2491cad1fc9bf5f75d3d64ad2de3a8573a79b0f45f175c6a1ddf1631e5",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/misc_toolbar-00.png",
+      "bytes": 767,
+      "sha256": "edaaf33a30af32663a2432866dc877ff12fb42223c4838fe8aa1605c6f8e82c3",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-00.png",
+      "bytes": 657,
+      "sha256": "6bc910f87a88b33d3d2126fffd90075fc28a78f377171e41b68d4c269d1749d3",
+      "container": {
+        "kind": "PNG",
+        "width": 20,
+        "height": 17,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-01.png",
+      "bytes": 393,
+      "sha256": "ae43c71cd227adb3c79da709c6b4f8199a1acbfc0668a83ab32c65f36f3507e8",
+      "container": {
+        "kind": "PNG",
+        "width": 21,
+        "height": 20,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-02.png",
+      "bytes": 376,
+      "sha256": "9de15447816860f4299edca7942df2f1d57f893c7268d55817f4cbe24c04bc19",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-04.png",
+      "bytes": 257,
+      "sha256": "117566edd1899f38b8325baeb414c575860acc36f8ab69af175ce508166b8ff2",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-05.png",
+      "bytes": 476,
+      "sha256": "c6fd957540c6559f16d8ac9240a40940768de67f3a1dc303c03cd6d406e169d0",
+      "container": {
+        "kind": "PNG",
+        "width": 19,
+        "height": 19,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-06.png",
+      "bytes": 513,
+      "sha256": "157cf30a8cd1d3fe0f81bbad59834cf53ec513fec56a57b7a2f5a399c93d2af5",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 20,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-07.png",
+      "bytes": 346,
+      "sha256": "c9735a8455d6a16df2819812592f802353a62ddc1c67ce4fe4ad08068a064a06",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 17,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-08.png",
+      "bytes": 718,
+      "sha256": "10320f055de866f8faad50f8e5dcff8c3cbc0a9fcc6b168eebc38993cc0d739f",
+      "container": {
+        "kind": "PNG",
+        "width": 23,
+        "height": 19,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-09.png",
+      "bytes": 703,
+      "sha256": "cac871d16a478859f4169e8f12b3d0fce9fd86c0e252e931a50fef5fac0bd9ab",
+      "container": {
+        "kind": "PNG",
+        "width": 22,
+        "height": 19,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/object_toolbar-10.png",
+      "bytes": 1652,
+      "sha256": "54941b08c351f2f7e4f14d854e9784fb00332470f6c2a2b000bd7a18270ecee2",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/proceduralmaterial_toolbar.png",
+      "bytes": 463,
+      "sha256": "2597ca0afb21ee1310975cdab417c85ff994f4da89e70e824e33bddc3e23a2cb",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-00.png",
+      "bytes": 464,
+      "sha256": "54b9dd4dc2766b620346ec1c1036bc42ea0147d6d843ab0aefd800fa9cb90bca",
+      "container": {
+        "kind": "PNG",
+        "width": 20,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-01.png",
+      "bytes": 491,
+      "sha256": "364ab0fdf5a5d40d5acfbf9a4f472b86ccfe49754b091a3fc0e8ee53396782b5",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-02.png",
+      "bytes": 454,
+      "sha256": "a5c9b3590900504eb1b7e107522933bccf852cdffcc416d63f61ce8a2b42c51a",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-03.png",
+      "bytes": 381,
+      "sha256": "ebfd296aae028aacfe4998a6e0630e8b2d570766e3347ec58d962eabaa9447b3",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-04.png",
+      "bytes": 556,
+      "sha256": "1fb8ce6e605df696cf55374dcea1f6151521d3202a7904ea3d0e138156ed81ff",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-05.png",
+      "bytes": 443,
+      "sha256": "e1de4b1da51837ec935269688dbe91f8cae7936dbcc5985e66729bb163d5edb7",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-06.png",
+      "bytes": 303,
+      "sha256": "88f3343d8633f35476d27780e2bf76c4071c7b86b8967cdded9c5f0ee2cc742d",
+      "container": {
+        "kind": "PNG",
+        "width": 8,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-07.png",
+      "bytes": 297,
+      "sha256": "5ff27393a65d1a9d605bf8a39bf419121f0ad59303838c4981d3902ebc7ef1c8",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-08.png",
+      "bytes": 1565,
+      "sha256": "dafb9c2a38008daacd7620b798d22d93442e24c264bfd925fce8c3d586db4e5c",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-09.png",
+      "bytes": 382,
+      "sha256": "516393a0fd916497c4e68f428a6ac164de334976dba4850582a4e17538e6c774",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-10.png",
+      "bytes": 390,
+      "sha256": "2c9b2d3eb4ada26a836fe60809413d339c2f3d94e7892cdeb76fcabf3e4861c6",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-11.png",
+      "bytes": 340,
+      "sha256": "049e31fdf930052ca00ecad4dde48513888da4c3448c905e9ae897da50c6edad",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-12.png",
+      "bytes": 379,
+      "sha256": "726ce43df4e0cd341b39b5fd00a32edc665c1b7ae517f17e2a78104ef90eca02",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-13.png",
+      "bytes": 526,
+      "sha256": "7eb743dad18be09f5f2c2f84ad46503cfa6f3089d6baedd1ef7d46ab7accd0c8",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-14.png",
+      "bytes": 360,
+      "sha256": "074790e25f006eae8fc31261ca8769081247f3f15233ef6388fdcfdf1f2b0999",
+      "container": {
+        "kind": "PNG",
+        "width": 12,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-15.png",
+      "bytes": 373,
+      "sha256": "d34243033c567034bad7047ae4cadd68649f4a79bae6f7cefdd30f630f0c09df",
+      "container": {
+        "kind": "PNG",
+        "width": 11,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-16.png",
+      "bytes": 1244,
+      "sha256": "33f9b5215216b8804c88ad470ee79b2dc3afb3465b76b53ad6216a25a8c835bf",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-17.png",
+      "bytes": 344,
+      "sha256": "4d8617aca0b2ed39ef92c867c54b488b04cb66bf5a1654c8ec561963a937a836",
+      "container": {
+        "kind": "PNG",
+        "width": 15,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/MainWindow/standard_views_toolbar-18.png",
+      "bytes": 341,
+      "sha256": "6eca8a43f23edd881d1436b37f6e8b061f695436f3621f77934018b878dd3f5a",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/ProjectSettingsTool/icons/group_closed.png",
+      "bytes": 308,
+      "sha256": "403ee8a94ec2f0ff532c70d2f56e18d7d83cb335a0cc444b1ac88f2fadff45f7",
+      "container": {
+        "kind": "PNG",
+        "width": 24,
+        "height": 24,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/ProjectSettingsTool/icons/group_open.png",
+      "bytes": 367,
+      "sha256": "e4058789615838100562d84345a5b0fdd7ea5416052105ce0ae2e5a1db13b952",
+      "container": {
+        "kind": "PNG",
+        "width": 24,
+        "height": 24,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/bmp00016_00.png",
+      "bytes": 143,
+      "sha256": "29d6b3e5d2288365b6038fc8ddeadedb4998924eceb9feb9f124eb46c31da4ef",
+      "container": {
+        "kind": "PNG",
+        "width": 8,
+        "height": 8,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/bmp00016_01.png",
+      "bytes": 164,
+      "sha256": "72115aee4f8baa0ee796170de94461624fba38675a3e9138d6ca0efd3fcd733b",
+      "container": {
+        "kind": "PNG",
+        "width": 8,
+        "height": 8,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/clapperboard_cancel.png",
+      "bytes": 446,
+      "sha256": "a064e400b30d4de5d96ce15d54c3a55a1ec655a025479ec34966903d87c1e945",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/clapperboard_ready.png",
+      "bytes": 364,
+      "sha256": "3a9123cfc2ec39e086593e0e4c5edfefeb81e55f7742a1fe55107b7d8b8116b1",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_00.png",
+      "bytes": 144,
+      "sha256": "98d6abe0694969813e40777c30ed08b37ee8b1e21d3b101c6ae1cc73f0f7f203",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_01.png",
+      "bytes": 143,
+      "sha256": "ba30d39cc19a5f154334ed58b0c620adc0d2b8699817ab47140e67ca817fb946",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_02.png",
+      "bytes": 147,
+      "sha256": "3ccfd91d032179c9275309a63d0418bfacc57764153947affc25b502bde79b93",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_03.png",
+      "bytes": 151,
+      "sha256": "3394b7e757f82234362c12f2dc5b032b1030c448768a453642b324d05ac21504",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_04.png",
+      "bytes": 147,
+      "sha256": "a80f1e8aaf99a56e71af5acee471c44e39862710bbd42bbdc71ad2ed36ca19c9",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_05.png",
+      "bytes": 138,
+      "sha256": "2c1141caf31b2d01f193ff5dcf9b1edab8ccbb0fc824c6ebc4594f0ea4032284",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_06.png",
+      "bytes": 158,
+      "sha256": "9e58c21845c00ecc27dcf06b33b08e4975e06ff123161730324fb5f99de369f8",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_07.png",
+      "bytes": 159,
+      "sha256": "b52d11739a7e9cca6788151806e7824e9b6c847dad3a201962f3f3daadc67474",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_08.png",
+      "bytes": 152,
+      "sha256": "7bc6d1fe7f8184f230a1e438c0bcfec266f2ac77f7b3364d654006ff01ac031c",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_09.png",
+      "bytes": 130,
+      "sha256": "56d75cb3865d0eefa9d8c0794f2bfaaa73cd8a366310d8032eff6de63932901b",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_10.png",
+      "bytes": 142,
+      "sha256": "3f127ce50a93699fac340cc1cf162f35b4d93dc9ec74e3653ade5f0aef2c0e77",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_11.png",
+      "bytes": 172,
+      "sha256": "96e1d00b1654e25446db63fb9375a908dd7415644bed13c626b45a4ec1e5d9e1",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_12.png",
+      "bytes": 145,
+      "sha256": "5e13418febcdd2e86b10e2bea62fe026b4009b649e0d1013dc84c6c4a4f401ed",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_13.png",
+      "bytes": 125,
+      "sha256": "49a61fefdb2a0a7d218a7064a1afa1584511ff3b2a3787a176a2d4783b69eb0d",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_14.png",
+      "bytes": 140,
+      "sha256": "03a118a63529650f7d0734b385d15431e1c70fe51b324601c6765981521b5479",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_15.png",
+      "bytes": 138,
+      "sha256": "3537913eb762f1c4bd8bcd87b5b195e76074dd0e3efd9a41af27717bdcce9b3d",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/spline_edit_bar_16.png",
+      "bytes": 189,
+      "sha256": "f121ac550ea7128d744ecb142676302875b6ae7ecf76ca8a933bf332cbdf28e9",
+      "container": {
+        "kind": "PNG",
+        "width": 18,
+        "height": 18,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/trackview_keys_00.png",
+      "bytes": 206,
+      "sha256": "49ac756007e7f372f1f8b9c3e5254f5bb88a5d66c2317e70423c9c91703fc530",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/trackview_keys_01.png",
+      "bytes": 226,
+      "sha256": "466b762cadb338b348be0fc7e5eab2473c3305e964f16c0bbf4f7d6691f3b987",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/trackview_keys_02.png",
+      "bytes": 227,
+      "sha256": "f8f29f4af9cc488160dd9c179995b175696b2cfb77a14d4c3e39b8b0b1d8ff6b",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/trackview_keys_03.png",
+      "bytes": 226,
+      "sha256": "df0c0ef69e861fc95391b63231ab378e32bd8634f1646d7c3442d8d6ded498b2",
+      "container": {
+        "kind": "PNG",
+        "width": 14,
+        "height": 14,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-00.png",
+      "bytes": 394,
+      "sha256": "51121c832d78c50a390e5fdc676d8a100f9271415365a174ab6f30d92d520ab5",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-01.png",
+      "bytes": 394,
+      "sha256": "c1399b45331042c25cfa9b760eb8b0b1984bbab27f46db248f2dad88b6bf9963",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-02.png",
+      "bytes": 378,
+      "sha256": "f08f2190d482fc875973d7b0f19e925d528e32d0a0df7d5bfaaea50f4b3ceef4",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 2,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-03.png",
+      "bytes": 392,
+      "sha256": "5127b2c9c4b11b043d9651c9367ac7da521ee9809dc345d7bd77f8a279ac6fdb",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-04.png",
+      "bytes": 450,
+      "sha256": "3c8e81e098ac1e4da5cef6df59c0719dfd440cdc82b8b250b879dccc69c456af",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-05.png",
+      "bytes": 418,
+      "sha256": "70186898fa92ceb363a206b70e5784e7e93649661fd7c580667ee43bc186dc5a",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-06.png",
+      "bytes": 443,
+      "sha256": "9d0848bd8e2f53698c59d9e3957c73cfef034da63d51d06e60d4afe947004daa",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-07.png",
+      "bytes": 460,
+      "sha256": "60f4ee86a8273b24e902a5401d8eb81d3b61728da13a30a8fd74b4a5e0a6584b",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-08.png",
+      "bytes": 429,
+      "sha256": "286312968ae812a376c966c0851a3d552f2ef0880a48bc7284bc38038277178c",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-09.png",
+      "bytes": 429,
+      "sha256": "97125254154e429ee2de74c2b7054c674add47ef8a3b98e0b4f8e3d54be9d4a4",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-10.png",
+      "bytes": 439,
+      "sha256": "53073879103d1182f485381715d111699f3cd55a63eaebc9f351854fefce53a6",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-11.png",
+      "bytes": 402,
+      "sha256": "a21c981597858f335605fc0d00e8805275dddd7a43e7f0381bf825e0c900ec32",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvkeys-12.png",
+      "bytes": 401,
+      "sha256": "a22795fdfa5ec1ae6f3d84aa6504b237acccbd418a13467e748c2d1730149c85",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-00.png",
+      "bytes": 438,
+      "sha256": "15ab845dfb333069370112328d4c8b514c41fdbfefb224818ed3c69c5056fbaa",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-01.png",
+      "bytes": 440,
+      "sha256": "b25d777d7d7180244b6fd49792c61af8fb5409ea37665831955d490bc4ba85f0",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-02.png",
+      "bytes": 441,
+      "sha256": "f93ae96a55c04276e64be9d3a7f9d670680fa3830ca4f7f92f2a55a968f9aa12",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-03.png",
+      "bytes": 424,
+      "sha256": "67f125c9afc9043ec213d5d4d1865581804dcaebdadfdfca95464f757ea6a638",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-04.png",
+      "bytes": 435,
+      "sha256": "7213b9f39980369718afa621887ffd3f4769e63a04e8c380479e8ffa529592be",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-05.png",
+      "bytes": 445,
+      "sha256": "18d941de2570ae8968736c4562ccd97ef307f75e99e79c310424ac7516e043a0",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-06.png",
+      "bytes": 400,
+      "sha256": "f297d0f87ba29bb34b26da684a4b55a85e55edd7574eff0759dd71f387bdf40b",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 2,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-07.png",
+      "bytes": 177,
+      "sha256": "91743daf529f567ec02c1b9d3ce3fc4fa4a412f160a3c919410833cc37afa8f3",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-08.png",
+      "bytes": 208,
+      "sha256": "d384ed26425739ccb14139ba1d090bc11494677be9960ec361b800f5f2d60308",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvmain-09.png",
+      "bytes": 184,
+      "sha256": "375d14fa1e0ea0aaa5c90ffc7ecf900019df0e964154f541465952712e895a42",
+      "container": {
+        "kind": "PNG",
+        "width": 17,
+        "height": 17,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-00.png",
+      "bytes": 911,
+      "sha256": "0e9d7682ed5cf5a9f02d96910f026abac7471264b0e9ef822b22d417946251fe",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-01.png",
+      "bytes": 691,
+      "sha256": "ecba7dae5d89c3fd859e1e32d5dd1e1bb50777186ff78a849735bff176a2eaf2",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-02.png",
+      "bytes": 386,
+      "sha256": "2eac7d2ddc61de9abcad0342fc17cb63ae078def2699a3cf6626f11deaede57b",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-03.png",
+      "bytes": 386,
+      "sha256": "c9a07c5eb4ecab34e9af679c0f452c01f9546f581fbacc7b799bda3cf8cf8dbd",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-04.png",
+      "bytes": 379,
+      "sha256": "62b7fe11e7ef3de084c3acd3f48066f3a0291e4093c6d6c2c932366b06cedfc2",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 2,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-05.png",
+      "bytes": 385,
+      "sha256": "3283c3d051a52940d84fb682e2be3da9ba688fefb8bef1b954ef09a33c05b4fd",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-06.png",
+      "bytes": 512,
+      "sha256": "ff30374805eca3e38f7e6e4dd1c1c9e5c40555ba3c1613a2ecb20e6e19680da9",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-07.png",
+      "bytes": 909,
+      "sha256": "0a7d40a35988ca8e31fd1953b7da2095aa09a09735420a4d8794f6c512dea91f",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-08.png",
+      "bytes": 962,
+      "sha256": "c67b691fff278ff2f102ab9ed415598c691d73a878e422acb01f0274a164cb7e",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-09.png",
+      "bytes": 501,
+      "sha256": "c070c3b9fee78d69d74b66394130e0b3662140bafca979eb9d17103329db5ee2",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-10.png",
+      "bytes": 1238,
+      "sha256": "d615a4d9a7c2565324d7536dc9a8c03096168a941e87892258f9b1e4b60e725c",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-11.png",
+      "bytes": 677,
+      "sha256": "1c216248f92bc404ca684921d9484b26297cf30f695b96dbd61a8dfc7b71c2f6",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-12.png",
+      "bytes": 1212,
+      "sha256": "566ecf405d2356b65b27433975e839d77f488b8b6686796db9a6cacb1981126c",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-13.png",
+      "bytes": 390,
+      "sha256": "5b77671dcde31c372e5c58224b605f1e273eb79393c90e3a075ea3ae92c497f0",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-14.png",
+      "bytes": 378,
+      "sha256": "6ff6295ad6d69cc2f6fb169688945bd2f9b8483b76912dab66fa47324cf6fc1a",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 2,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-15.png",
+      "bytes": 371,
+      "sha256": "28625a223d74c01ab118c396ca671b15b3b683be03a71644a18556cba1191c2c",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 2,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-16.png",
+      "bytes": 945,
+      "sha256": "bd380e0baa2e0ac263c2c420b02dd94ee58f57589a613dfb630c2e44dccdf338",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-17.png",
+      "bytes": 644,
+      "sha256": "578312acafc43af25ece01737fa4fb4b6c0b05ef5c210aca21a18ad4ac0fa89d",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-18.png",
+      "bytes": 819,
+      "sha256": "be5bccf43401af647277434786c6c4175dba370c9c15d9c21b3c98cad0db34fd",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-19.png",
+      "bytes": 457,
+      "sha256": "3f9272a4fc1bf7f963da7c0a3392c7df3c505b2f5d72fbfab5e4800064f5b96b",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-20.png",
+      "bytes": 581,
+      "sha256": "8e6ce54b0283c9fbc5f2ada9fa16b3134a4938a0a38e061669eda4187bc0cf31",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-21.png",
+      "bytes": 739,
+      "sha256": "e24e61169fabf7afc767bd7f224359d082a80f5c816b6ef7c6a5868f7535d0c1",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-22.png",
+      "bytes": 1301,
+      "sha256": "eb839375f19332adca3b7d78c80813b4bafb0941ecb8ed8e7943af694e4cd83f",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-23.png",
+      "bytes": 520,
+      "sha256": "c890f0c0dd4af4d8d99cc1c0f8c31487392604b6998723859d115b5e928091b4",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-24.png",
+      "bytes": 402,
+      "sha256": "c068e37292980a4bf93ad3de85df040c326f4ad906836459c8447af8d7897859",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-25.png",
+      "bytes": 1253,
+      "sha256": "3b672671a7628c6fa49d44c0bd1332ad932a9026d399463292a50d65602c2a73",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-26.png",
+      "bytes": 1317,
+      "sha256": "d41bf12f0a00bc9167a9cfc092fb8ff6f4e6798186edf6add9afadd44bebeb5c",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-27.png",
+      "bytes": 654,
+      "sha256": "34572a3b00e92d0d77acf1ebbf07f9bb594b12c61dc08452b1518652a84178fe",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-28.png",
+      "bytes": 368,
+      "sha256": "fdffc4c3170846d6e3178123692ecd99adec7fe51b64c05e134f6e165fe8b1d0",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvnodes-29.png",
+      "bytes": 167,
+      "sha256": "8e30cf8d7e0e3426caa2169f885bdbce96be9b69ba57ae3fce93d5f5a7ca1e1d",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-00.png",
+      "bytes": 403,
+      "sha256": "a929269e063f010ac6bf991b9d74aeb3d2e1a730346a45baee954a35a03cb3f3",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-01.png",
+      "bytes": 393,
+      "sha256": "709c627b0c14f345491ed413c67e7ee24c4c3d57bb014ba77295113f312f3c8f",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-02.png",
+      "bytes": 386,
+      "sha256": "c12467b8ef4ee04ccca2f5d35e2f3b14be87dc566c1c17b15bf233c7666aff03",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-03.png",
+      "bytes": 375,
+      "sha256": "5279361aded52cba022d3d017308aafa2a342cb3e935097eac98f5b459cdcf29",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-04.png",
+      "bytes": 405,
+      "sha256": "1da2764eb91bc2f304270c0f5f23719ad6aeed085733df02e074a76766218428",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-05.png",
+      "bytes": 406,
+      "sha256": "ec6212a9ef957ba4807a30e26b7c3df74bbc03f673b14c2ba931cbc78a2be36a",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-06.png",
+      "bytes": 414,
+      "sha256": "ae44f325816b789578f3c879390c13501fbd845e85f9dd681fdd616cc5b8402c",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 4,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-07.png",
+      "bytes": 397,
+      "sha256": "fe177ed4fb1861b6ddb1ea5b20048f0893373349c7bf01e05d52deeea6d3a221",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 2,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-08.png",
+      "bytes": 227,
+      "sha256": "d1810e984136dcd589fa78d960665bc048ce7914c41a298334bef16e62123f51",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-09.png",
+      "bytes": 396,
+      "sha256": "eb2378109caedd5d57972d07330cd985951a15573de8a7d5894adc5511a704d7",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvplay-10.png",
+      "bytes": 404,
+      "sha256": "9c0672064f1df5f4a68a558d3585edcea35ff4aeaf87c2c19145dfc3e1426e41",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvview-00.png",
+      "bytes": 131,
+      "sha256": "21e0a85088489d08c02c6d50f4dc07905f7184f09bc49def76e5588e814d1a4b",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 4,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvview-01.png",
+      "bytes": 156,
+      "sha256": "1fac263f4ee68635c0071ff6b0d76672324409c0e3855e26e562c04c2815e116",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/TrackView/tvview-02.png",
+      "bytes": 186,
+      "sha256": "5d93fce7097ca8ffef1824a0d2eafa031876dbdd3ad3f4cc79fe695261cb36cf",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/WelcomeScreen/DefaultProjectImage.png",
+      "bytes": 2770,
+      "sha256": "1cf8339fb51f82a68d2ab475c0476960e75a79d96d239c5b7cd272fbe4990ffe",
+      "container": {
+        "kind": "PNG",
+        "width": 210,
+        "height": 280,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Open.tif",
+      "bytes": 5526,
+      "sha256": "18602b2f59eb4537c5538867044054ab4c6d8fa1085a0b806c5853becc9a5126",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 2334
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 16,
+            "value_or_offset": 2358,
+            "text": "paint.net 4.0.9"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Open_Hidden.tif",
+      "bytes": 5540,
+      "sha256": "aee9510da2669b53f0b0070630af065ba97bde126d7e5dadb2a05a6a04dae20c",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 2348
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 16,
+            "value_or_offset": 2372,
+            "text": "paint.net 4.0.9"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Open_Hover.tif",
+      "bytes": 5316,
+      "sha256": "c421ceb6cc7ed4ecae1b254d6e9fc523f0c2bef108c84b5f80cd129e2ec8f536",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 2124
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 16,
+            "value_or_offset": 2148,
+            "text": "paint.net 4.0.9"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Partial_Open.tif",
+      "bytes": 32776,
+      "sha256": "0cbd086ef8b1fc1cec3ebea3324ad7b53e59c0379f73c4ab85fbaf869b51eb13",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 302
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 326,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Partial_Slash.tif",
+      "bytes": 66592,
+      "sha256": "e8485cf2fabeb6acfb55f3cb0fd97f2e2e25a399e7ced7a4a4081f45af532b4d",
+      "container": {
+        "kind": "TIFF",
+        "endian": ">",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 302
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 65536
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 326,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Slash.tif",
+      "bytes": 61568,
+      "sha256": "87fc7b3d958788d0df62f02c5f6609f5726f5469157b594c6feeb18359b28855",
+      "container": {
+        "kind": "TIFF",
+        "endian": ">",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 302
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 65536
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 326,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Slash_Hidden.tif",
+      "bytes": 58388,
+      "sha256": "afbb3224e8dfb298ddeaa8ae00df6c793f738ed26d7b9f0e5720d4d089edfa01",
+      "container": {
+        "kind": "TIFF",
+        "endian": ">",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 278
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 65536
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 302,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Eye_Slash_Hover.tif",
+      "bytes": 57372,
+      "sha256": "05bad02363ff0963789306728b26da97ed914624ed087c0f1e20b044bb044925",
+      "container": {
+        "kind": "TIFF",
+        "endian": ">",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 6291456
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 278
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 65536
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 302,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Padlock_Disabled.tif",
+      "bytes": 24452,
+      "sha256": "712bf1ca195471061a60cf53c77c0fc18bfa16ed902651ec661916caaa602116",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 290
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 36,
+            "value_or_offset": 314,
+            "text": "Adobe Photoshop CC 2015.5 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Padlock_Disabled_Hover.tif",
+      "bytes": 24428,
+      "sha256": "ed11089cb1b46669c9ae77edacc142a8f5d604e3aa749b829c6fb74bc6ebd8a1",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 290
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 36,
+            "value_or_offset": 314,
+            "text": "Adobe Photoshop CC 2015.5 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Padlock_Enabled.tif",
+      "bytes": 5580,
+      "sha256": "fda3b714aadc19ae74f3ef1bad18b1d03bd536960eadffd5b7ff96e687e8656c",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 2388
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 16,
+            "value_or_offset": 2412,
+            "text": "paint.net 4.0.9"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Padlock_Enabled_Hover.tif",
+      "bytes": 5386,
+      "sha256": "b98445e3640a8ae7f932bd7ea06f21312c6d7c1c566845c23714c5b65bd39a2a",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 4,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 2194
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 16,
+            "value_or_offset": 2218,
+            "text": "paint.net 4.0.9"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Padlock_Partial_Disabled.tif",
+      "bytes": 36364,
+      "sha256": "a236740a0de21221b25c3c4df58c0bb47d2117503815a8603a4b8c77c80a7f8a",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 314
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 338,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Padlock_Partial_Enabled.tif",
+      "bytes": 35320,
+      "sha256": "b12692907573ba4f779b25faf0dfbf602b4b7c9405c18d79fe5706fc864f6e77",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 96
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 4,
+            "value_or_offset": 302
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 5
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 326,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/Preferences_00.png",
+      "bytes": 171,
+      "sha256": "62eb3999d764c84114f10773f1802740a9259f3e86f123717013dade7aaa89b7",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/Preferences_01.png",
+      "bytes": 137,
+      "sha256": "a3b12755e33ba7a0610dcf338bd51265ec282be95dd375ca213b19b6696e039f",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/Preferences_02.png",
+      "bytes": 160,
+      "sha256": "4a7497747a59a27bed87b86d49e02512f05ca65f35370262e49f9766364c38d0",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/Preferences_03.png",
+      "bytes": 202,
+      "sha256": "6e6f353801258264d6657c7e07e57d8bbb7072b0f7b8dd8a84c4036e2019b113",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 13,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/ball_disabled.ico",
+      "bytes": 1150,
+      "sha256": "5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 22,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/ball_offline.ico",
+      "bytes": 1150,
+      "sha256": "897534f41f97916f07b1125e45d56fef9f5f6049b13eba7bc17e70ff42ebdb05",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 22,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/ball_online.ico",
+      "bytes": 1150,
+      "sha256": "b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 22,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/ball_pending.ico",
+      "bytes": 1150,
+      "sha256": "499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 22,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/cvar_dark.bmp",
+      "bytes": 1080,
+      "sha256": "883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e",
+      "container": {
+        "kind": "BMP",
+        "declared_bytes": 1080,
+        "actual_bytes": 1080,
+        "dib_bytes": 40,
+        "width": 16,
+        "height": 16,
+        "planes": 1,
+        "bits": 32,
+        "pixel_offset": 54
+      }
+    },
+    {
+      "path": "Code/Editor/res/folder.png",
+      "bytes": 871,
+      "sha256": "98a2ee9d9391dc99627ccb1a0fe1a68aaf1c5db4874e084afd1068902d06678f",
+      "container": {
+        "kind": "PNG",
+        "width": 32,
+        "height": 32,
+        "bits": 8,
+        "color_type": 6,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/o3de_editor.ico",
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 48449,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 48551,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 116175,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 133111,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 142751,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 147015,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Editor/res/tree_view_folder.png",
+      "bytes": 1291,
+      "sha256": "296666dbe0870ef937fbe1bc130358a9eda9ac778982b1102dccb929124b26d8",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Editor/res/tree_view_level.png",
+      "bytes": 1315,
+      "sha256": "1d9d2aecb9dfca1e8c9b6a26173e15841c5efef6653c100a8735f7580b8fee4c",
+      "container": {
+        "kind": "PNG",
+        "width": 16,
+        "height": 16,
+        "bits": 8,
+        "color_type": 3,
+        "compression": 0,
+        "filter": 0,
+        "interlace": 0
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+      "bytes": 224592,
+      "sha256": "5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Bold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Bold Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Bold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-Bold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Bold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Bold Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Bold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-Bold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+      "bytes": 213292,
+      "sha256": "3ca680f2444cc9e50447d057c006464566e92f2e77b0b6e26491e5bd757ed4e7",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Bold Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Bold Italic Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Bold Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-BoldItalic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Bold Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Bold Italic Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Bold Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-BoldItalic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+      "bytes": 222584,
+      "sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans Extrabold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Extrabold Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Extrabold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-Extrabold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans Extrabold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Extrabold Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Extrabold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-Extrabold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+      "bytes": 213420,
+      "sha256": "0eeca981116621a96a484ecc58fbfcdc78fda0065fd21fd13707b63bf8a9912c",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans Extrabold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Extrabold Italic Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Extrabold Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-ExtraboldItalic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans Extrabold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Extrabold Italic Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Extrabold Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-ExtraboldItalic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Italic.ttf",
+      "bytes": 212896,
+      "sha256": "a54dc8488f8193bf30c3820cf6f261f911f9d328d699e1a1b8042641554cec70",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Italic Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Italic Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Light.ttf",
+      "bytes": 222412,
+      "sha256": "cf5f5184c1441a1660aa52526328e9d5c2793e77b6d8d3a3ad654bdb07ab8424",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans Light"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Light Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Light"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-Light"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans Light"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Light Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Light"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-Light"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-LightItalic.ttf",
+      "bytes": 213128,
+      "sha256": "4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans Light"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Light Italic Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Light Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSansLight-Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans Light"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Light Italic Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Light Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSansLight-Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Regular.ttf",
+      "bytes": 217360,
+      "sha256": "e64e508b2aa2880f907e470c4550980ec4c0694d103a43f36150ac3f93189bee",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+      "bytes": 221328,
+      "sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans Semibold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Semibold Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Semibold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-Semibold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans Semibold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Regular"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Semibold Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Semibold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-Semibold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+      "bytes": 212820,
+      "sha256": "30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b",
+      "container": {
+        "kind": "sfnt font",
+        "tables": 19,
+        "name_format": 0,
+        "names_and_full_notices": [
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 1,
+            "text": "Open Sans Semibold"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Semibold Italic Build 100"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 4,
+            "text": "Open Sans Semibold Italic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 6,
+            "text": "OpenSans-SemiboldItalic"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 1,
+            "encoding": 0,
+            "language": 0,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 0,
+            "text": "Digitized data copyright \u00a9 2010-2011, Google Corporation."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 1,
+            "text": "Open Sans Semibold"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 2,
+            "text": "Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 3,
+            "text": "Ascender - Open Sans Semibold Italic Build 100"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 4,
+            "text": "Open Sans Semibold Italic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 5,
+            "text": "Version 1.10"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 6,
+            "text": "OpenSans-SemiboldItalic"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 7,
+            "text": "Open Sans is a trademark of Google and may be registered in certain jurisdictions."
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 8,
+            "text": "Ascender Corporation"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 11,
+            "text": "http://www.ascendercorp.com/"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 13,
+            "text": "Licensed under the Apache License, Version 2.0"
+          },
+          {
+            "platform": 3,
+            "encoding": 1,
+            "language": 1033,
+            "name_id": 14,
+            "text": "http://www.apache.org/licenses/LICENSE-2.0"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/LauncherUnified/Resources/GameSDK.ico",
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 48449,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 48551,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 116175,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 133111,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 142751,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 147015,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+      "bytes": 107680,
+      "sha256": "9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 7986,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 8088,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 75712,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 92648,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 102288,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 106552,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/Platform/Windows/AssetProcessorBatch.ico",
+      "bytes": 107733,
+      "sha256": "e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 8039,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 8141,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 75765,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 92701,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 102341,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 106605,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/ui/style/o3de_assetprocessor.ico",
+      "bytes": 108312,
+      "sha256": "6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 8618,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 8720,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 76344,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 93280,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 102920,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 107184,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+      "bytes": 108131,
+      "sha256": "1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 8437,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 8539,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 76163,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 93099,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 102739,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 107003,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/checker_basecolor.tif",
+      "bytes": 810620,
+      "sha256": "57d6744696768f9fb8a5fe5fee9aa36fee1eb87a9dbc1e60d4a35ed3c39d68e6",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 278
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 300,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+      "bytes": 793918,
+      "sha256": "5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 786602
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 270,
+            "type": 2,
+            "count": 69,
+            "value_or_offset": 786608,
+            "text": "X:\\_dev\\lyengine\\dev\\Engine\\EngineAssets\\TextureMsg\\DefaultNoUVs.psd"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_iblglobalcm.dds",
+      "bytes": 152,
+      "sha256": "5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df",
+      "container": {
+        "kind": "DDS",
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "mipmaps": 1,
+        "flags": 135183,
+        "four_cc": "00000000",
+        "pixel_flags": 65,
+        "caps": 4104,
+        "caps2": 65024
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_normal.tif",
+      "bytes": 793918,
+      "sha256": "1b56097f0df01da7ed49311462002f5e1a61b8496306c7ab3b12e17c27afb28a",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 786602
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 270,
+            "type": 2,
+            "count": 69,
+            "value_or_offset": 786608,
+            "text": "X:\\_dev\\lyengine\\dev\\Engine\\EngineAssets\\TextureMsg\\DefaultNoUVs.psd"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_roughness.tif",
+      "bytes": 810996,
+      "sha256": "ba52ff6d59f50b4b5dea6e266572c9e7feb92d5fd85bd0738e0d07d42d234bf7",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 278
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 300,
+            "text": "Adobe Photoshop CC 2014 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_skyboxcm.dds",
+      "bytes": 152,
+      "sha256": "5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df",
+      "container": {
+        "kind": "DDS",
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "mipmaps": 1,
+        "flags": 135183,
+        "four_cc": "00000000",
+        "pixel_flags": 65,
+        "caps": 4104,
+        "caps2": 65024
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_amp_lutrg32f.dds",
+      "bytes": 8340,
+      "sha256": "c9f24a0053c4e3f9c3eb46837984823964ba955fc6c0a962f87eb849b91062c5",
+      "container": {
+        "kind": "DDS",
+        "width": 32,
+        "height": 32,
+        "depth": 1,
+        "mipmaps": 1,
+        "flags": 4111,
+        "four_cc": "44583130",
+        "pixel_flags": 4,
+        "caps": 4096,
+        "caps2": 0
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/LTC/ltc_mat_lutrgba32f.dds",
+      "bytes": 16532,
+      "sha256": "cfd8cf9d94eccff383e98ef5258ee17fb85a95842f993c9dc71626dfbe40ed52",
+      "container": {
+        "kind": "DDS",
+        "width": 32,
+        "height": 32,
+        "depth": 1,
+        "mipmaps": 1,
+        "flags": 4111,
+        "four_cc": "44583130",
+        "pixel_flags": 4,
+        "caps": 4096,
+        "caps2": 0
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/AreaTex.dds",
+      "bytes": 268928,
+      "sha256": "d0a59111b18e67a66341bf94eeeb96caab0dc120e356bbfd934397a5b1830a73",
+      "container": {
+        "kind": "DDS",
+        "width": 160,
+        "height": 560,
+        "depth": 0,
+        "mipmaps": 0,
+        "flags": 528391,
+        "four_cc": "00000000",
+        "pixel_flags": 64,
+        "caps": 4096,
+        "caps2": 0
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/DepthOfField_PencilMap_35mmFilm.bmp",
+      "bytes": 32824,
+      "sha256": "52861f61ea5a335441999af7de9f384dfda732adb7c678e97b4a5d43c6d9b6cc",
+      "container": {
+        "kind": "BMP",
+        "declared_bytes": 32824,
+        "actual_bytes": 32824,
+        "dib_bytes": 40,
+        "width": 128,
+        "height": 64,
+        "planes": 1,
+        "bits": 32,
+        "pixel_offset": 54
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/SearchTex.dds",
+      "bytes": 1152,
+      "sha256": "891e444b6dde7dd98f6902c805cd04e3469892aa1667c92f764d94789477ef3a",
+      "container": {
+        "kind": "DDS",
+        "width": 64,
+        "height": 16,
+        "depth": 0,
+        "mipmaps": 0,
+        "flags": 528391,
+        "four_cc": "00000000",
+        "pixel_flags": 131072,
+        "caps": 4096,
+        "caps2": 0
+      }
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_ddn.tif",
+      "bytes": 3168096,
+      "sha256": "5c89b51ee9e71c0b89aed4102f73779a270fb7313c3439f1252a2ac9958e1951",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 290
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 312,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_diff.tif",
+      "bytes": 820716,
+      "sha256": "166003bfebd724d8155b7fa7469d567cc904a32bb2bc1334de98fa316db3cc1b",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 278
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 300,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Gems/WhiteBox/Assets/textures/uvs/_dev_UV_debug_spec.tif",
+      "bytes": 818744,
+      "sha256": "2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f",
+      "container": {
+        "kind": "TIFF",
+        "endian": "<",
+        "first_ifd_tags": [
+          {
+            "tag": 256,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 257,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 512
+          },
+          {
+            "tag": 258,
+            "type": 3,
+            "count": 3,
+            "value_or_offset": 278
+          },
+          {
+            "tag": 259,
+            "type": 3,
+            "count": 1,
+            "value_or_offset": 1
+          },
+          {
+            "tag": 305,
+            "type": 2,
+            "count": 34,
+            "value_or_offset": 300,
+            "text": "Adobe Photoshop CC 2017 (Windows)"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/Resources/GameSDK.ico",
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+      "container": {
+        "kind": "ICO",
+        "images": [
+          {
+            "width": 256,
+            "height": 256,
+            "bits": 32,
+            "bytes": 48449,
+            "offset": 102,
+            "encoding": "PNG"
+          },
+          {
+            "width": 128,
+            "height": 128,
+            "bits": 32,
+            "bytes": 67624,
+            "offset": 48551,
+            "encoding": "DIB"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bits": 32,
+            "bytes": 16936,
+            "offset": 116175,
+            "encoding": "DIB"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bits": 32,
+            "bytes": 9640,
+            "offset": 133111,
+            "encoding": "DIB"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bits": 32,
+            "bytes": 4264,
+            "offset": 142751,
+            "encoding": "DIB"
+          },
+          {
+            "width": 16,
+            "height": 16,
+            "bits": 32,
+            "bytes": 1128,
+            "offset": 147015,
+            "encoding": "DIB"
+          }
+        ]
+      }
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/Resources/Splash.bmp",
+      "bytes": 1200056,
+      "sha256": "bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836",
+      "container": {
+        "kind": "BMP",
+        "declared_bytes": 1200056,
+        "actual_bytes": 1200056,
+        "dib_bytes": 40,
+        "width": 1200,
+        "height": 500,
+        "planes": 1,
+        "bits": 16,
+        "pixel_offset": 54
+      }
+    }
+  ],
+  "limits": [
+    "No image decode/render, font instantiation, engine import or executable payload was run.",
+    "Headers and embedded notices do not decide legal, visual, product, renderer or AP acceptance."
+  ]
+}

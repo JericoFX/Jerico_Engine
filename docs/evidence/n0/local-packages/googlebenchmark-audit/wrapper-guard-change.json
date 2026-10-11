@@ -1,0 +1,15 @@
+{
+  "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\FindGoogleBenchmark.cmake",
+  "before_sha256": "332858760a3ebd76652f99f403e8ec232533bb1f2e1a70aabae8310bcce278ab",
+  "after_sha256": "1d8b7db0a56b9c3d1105d9ce008c21259a2dc2be589db9d5602ab9dee7ec5792",
+  "before_bytes": 4823,
+  "after_bytes": 5068,
+  "inserted_text": "    # Archive sources must not query an ancestor repository or refresh its Git index.\r\n    # Shadow inherited/cache executables: upstream checks GIT_EXECUTABLE directly.\r\n    set(CMAKE_DISABLE_FIND_PACKAGE_Git ON)\r\n    set(GIT_EXECUTABLE \"\")\r\n\r\n",
+  "all_other_bytes_unchanged": true,
+  "original_bom": false,
+  "before_crlf": 125,
+  "after_crlf": 130,
+  "bare_lf_before": 0,
+  "bare_lf_after": 0,
+  "configure_or_test_executed": false
+}

@@ -1,0 +1,97 @@
+{
+  "manifest_status": "textual candidate reviewed; real Editor/Asset Processor/runtime verification pending",
+  "manifest_file_count": 20,
+  "manifest_aggregate_expected": "7D3DDC099EAE3D175E966D0C39D521DCE13B1F030A8559868C6D6D1D793B19EA",
+  "manifest_aggregate_actual": "7D3DDC099EAE3D175E966D0C39D521DCE13B1F030A8559868C6D6D1D793B19EA",
+  "manifest_aggregate_match": true,
+  "file_match_count": 20,
+  "file_mismatches": [],
+  "ast": {
+    "parse_ok": true,
+    "function_names": [
+      "require_fixture_level",
+      "find_owned",
+      "component_type",
+      "unwrap",
+      "set_property",
+      "mesh_for",
+      "make_box",
+      "apply_boolean",
+      "author"
+    ],
+    "imports": [
+      "WhiteBoxInit",
+      "azlmbr.bus",
+      "azlmbr.editor",
+      "azlmbr.entity",
+      "azlmbr.legacy.general",
+      "azlmbr.math",
+      "os",
+      "pathlib",
+      "sys"
+    ]
+  },
+  "json_checks": [
+    {
+      "path": "Projects/JEEditorFixture/Assets/materials/WhiteBoxDefault.material",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Config/shader_global_build_options.json",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.json",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/project.json",
+      "valid": true,
+      "root_type": "dict"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Registry/assetprocessor_settings.setreg",
+      "valid": true,
+      "root_type": "dict"
+    }
+  ],
+  "project_metadata": {
+    "project_id": "{F63AAB68-D01D-46FC-892A-BD9B5828A7CE}",
+    "script_only": true,
+    "gem_names": [
+      "Atom",
+      "CameraFramework",
+      "ImGui",
+      "WhiteBox",
+      "EditorPythonBindings",
+      "PhysX5",
+      "QtForPython",
+      "PrimitiveAssets",
+      "PrefabBuilder"
+    ],
+    "gem_count": 9
+  },
+  "reflection_constraints": {
+    "native_fields": true,
+    "native_edit_labels": true,
+    "author_labels": true,
+    "type_lookup_bus": true,
+    "property_path_disambiguation": true,
+    "topology_guard": true,
+    "undo_batch": true,
+    "editor_api_only_imports": true
+  },
+  "runtime_status": "not run: author_room.py requires the live O3DE Editor azlmbr buses and an explicitly opened fixture level",
+  "manifest_aggregate_method": "Manifest inputs resolved to fixture files, sorted by Windows FullName, then relative slash path + uppercase SHA256 + byte count joined by LF without trailing LF.",
+  "unlisted_fixture_files": [
+    "user/cmake/engine/CMakePresets.json"
+  ]
+}

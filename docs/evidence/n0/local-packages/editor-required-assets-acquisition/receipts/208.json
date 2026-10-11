@@ -1,0 +1,41 @@
+{
+  "index": 208,
+  "source_path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+  "expected_sha256": "9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2",
+  "expected_bytes": 107680,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:10.533166+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "107680",
+      "ETag": "\"9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:10.906861+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/AssetProcessor/AssetBuilder/AssetBuilder.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "107680",
+      "ETag": "\"9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2",
+  "actual_bytes": 107680,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilder.ico",
+  "status": "acquired and byte verified"
+}

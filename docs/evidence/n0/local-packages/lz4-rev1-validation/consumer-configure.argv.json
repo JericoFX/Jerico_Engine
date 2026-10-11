@@ -1,0 +1,13 @@
+[
+  "-S",
+  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests",
+  "-B",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1",
+  "-G",
+  "Visual Studio 17 2022",
+  "-A",
+  "x64",
+  "-T",
+  "v143",
+  "-DJE_LZ4_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-extracted-rev1"
+]

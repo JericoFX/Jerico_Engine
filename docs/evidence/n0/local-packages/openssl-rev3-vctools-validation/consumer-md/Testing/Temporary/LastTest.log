@@ -1,0 +1,105 @@
+Start testing: Oct 10 21:50 Hora estándar de Montevideo
+----------------------------------------------------------
+1/6 Testing: JE.LocalPackages.OpenSSL.crypto
+1/6 Test: JE.LocalPackages.OpenSSL.crypto
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.exe" "crypto"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md
+"JE.LocalPackages.OpenSSL.crypto" start time: Oct 10 21:50 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+crypto passed with linked OpenSSL1.1.1o, MD consumer
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenSSL.crypto" end time: Oct 10 21:50 Hora estándar de Montevideo
+"JE.LocalPackages.OpenSSL.crypto" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: JE.LocalPackages.OpenSSL.ownership
+2/6 Test: JE.LocalPackages.OpenSSL.ownership
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.exe" "ownership"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md
+"JE.LocalPackages.OpenSSL.ownership" start time: Oct 10 21:50 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+ownership passed with linked OpenSSL1.1.1o, MD consumer
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenSSL.ownership" end time: Oct 10 21:50 Hora estándar de Montevideo
+"JE.LocalPackages.OpenSSL.ownership" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: JE.LocalPackages.OpenSSL.tls
+3/6 Test: JE.LocalPackages.OpenSSL.tls
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.exe" "tls"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md
+"JE.LocalPackages.OpenSSL.tls" start time: Oct 10 21:50 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+tls passed with linked OpenSSL1.1.1o, MD consumer
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenSSL.tls" end time: Oct 10 21:50 Hora estándar de Montevideo
+"JE.LocalPackages.OpenSSL.tls" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: JE.LocalPackages.OpenSSL.azapi
+4/6 Test: JE.LocalPackages.OpenSSL.azapi
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.exe" "azapi"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md
+"JE.LocalPackages.OpenSSL.azapi" start time: Oct 10 21:50 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+azapi passed with linked OpenSSL1.1.1o, MD consumer
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenSSL.azapi" end time: Oct 10 21:50 Hora estándar de Montevideo
+"JE.LocalPackages.OpenSSL.azapi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: JE.LocalPackages.OpenSSL.static-engines
+5/6 Test: JE.LocalPackages.OpenSSL.static-engines
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.exe" "static-engines"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md
+"JE.LocalPackages.OpenSSL.static-engines" start time: Oct 10 21:50 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+static-engines passed with linked OpenSSL1.1.1o, MD consumer
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenSSL.static-engines" end time: Oct 10 21:50 Hora estándar de Montevideo
+"JE.LocalPackages.OpenSSL.static-engines" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: JE.LocalPackages.OpenSSL.Guards
+6/6 Test: JE.LocalPackages.OpenSSL.Guards
+Command: "C:/Program Files/CMake/bin/cmake.exe" "-DJE_OPENSSL_VALID_INPUTS:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-build-rev3/producer-inputs.cmake" "-DJE_GUARD_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/guard-outputs" "-P" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/tests/RunGuardTests.cmake"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md
+"JE.LocalPackages.OpenSSL.Guards" start time: Oct 10 21:50 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+-- JE OpenSSL uri: intended guard rejected before producer output/tool execution
+-- JE OpenSSL unc: intended guard rejected before producer output/tool execution
+-- JE OpenSSL hash: intended guard rejected before producer output/tool execution
+-- JE OpenSSL archive-hash: intended guard rejected before producer output/tool execution
+-- JE OpenSSL missing-perl: intended guard rejected before producer output/tool execution
+-- JE OpenSSL missing-nasm: intended guard rejected before producer output/tool execution
+-- JE OpenSSL old-output: intended guard rejected before producer output/tool execution
+<end of output>
+Test time =   1.76 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenSSL.Guards" end time: Oct 10 21:50 Hora estándar de Montevideo
+"JE.LocalPackages.OpenSSL.Guards" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Oct 10 21:50 Hora estándar de Montevideo

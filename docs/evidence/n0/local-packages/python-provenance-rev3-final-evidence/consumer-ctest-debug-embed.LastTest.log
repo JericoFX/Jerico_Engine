@@ -1,0 +1,19 @@
+Start testing: Oct 10 20:17 Hora estándar de Montevideo
+----------------------------------------------------------
+1/3 Testing: JE.LocalPackages.PythonEmbed
+1/3 Test: JE.LocalPackages.PythonEmbed
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-consumer-provenance-rev3/Debug/JEPythonEmbed.exe"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-consumer-provenance-rev3
+"JE.LocalPackages.PythonEmbed" start time: Oct 10 20:17 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE local Python 3.10.13: embedded C API roundtrip passed
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.PythonEmbed" end time: Oct 10 20:17 Hora estándar de Montevideo
+"JE.LocalPackages.PythonEmbed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 20:17 Hora estándar de Montevideo

@@ -1,0 +1,1015 @@
+{
+  "freeze_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-audit\\source-freeze.json",
+  "freeze_sha256": "D6D949B25EB2F83B043C6D61A2838245C73BC2951B29F4166B0D0B24503C47E6",
+  "freeze_files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake",
+      "bytes": 5650,
+      "sha256": "DB82743777EE43D90940574CF980A87776294B9CE084EAE22D1830D4223396E8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\CMakeLists.txt",
+      "bytes": 2928,
+      "sha256": "DB527D34A3732C073A64363C342CE9CCB86EE3C09614100F718CA37B4321CDA4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\Findlz4.cmake",
+      "bytes": 2889,
+      "sha256": "79E2DA1B8FD42444A53F53B299091549D08EFD9866CA1CF47A7E49D5A364DC45"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\NOTICE.txt",
+      "bytes": 2316,
+      "sha256": "53D419F549FE2E3E4809705D85AB621F908F5207FBDFAF6FDA17190E540DCCA5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\README.md",
+      "bytes": 2586,
+      "sha256": "BC2752B0757F573C04652C05BADBC46D75F0F3E67773FDC0832F0DEAC40FB581"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\CMakeLists.txt",
+      "bytes": 2048,
+      "sha256": "6FA4629737F5017BCD363EDECAE552AFB53E0D9B4CAACFE3E6E3B069A2929CF9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\Lz4Consumer.cpp",
+      "bytes": 8037,
+      "sha256": "29F471205A974B4CDFB535C0C34F0975B5BA7C6930E0FC46395C95A3F45CED73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+      "bytes": 6541,
+      "sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\lz4-v1.9.4.tar.gz",
+      "bytes": 354063,
+      "sha256": "0B0E3AA07C8C063DDF40B082BDF7E37A1562BDA40A0FF5272957F3E987E0E54B"
+    }
+  ],
+  "source_snapshot": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4",
+  "snapshot_files": [
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.circleci\\config.yml",
+      "bytes": 4968,
+      "sha256": "964179EBA2D49082EA13D7F899819E15902D95F38A8FE43B2D281980468A12B3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.circleci\\images\\primary\\Dockerfile",
+      "bytes": 644,
+      "sha256": "089C2787497982D7D452965ECF2AFD93C6EF784C1AAE7F37132EDD064DB7B5DE"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.cirrus.yml",
+      "bytes": 99,
+      "sha256": "411C8F4280D638C58BFBB48BEF390B40A1F056AD7A0B8CEBDC5C1B510F576C1D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.gitattributes",
+      "bytes": 348,
+      "sha256": "0EE157945A4A1CC81AC5BD2F9D6A985363516201F50CDA9602F4A6A16FB778BB"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+      "bytes": 701,
+      "sha256": "028E2A11008F4CEA32C73C1EF2E761EC8DEB1AB2FA7440704CE6EAF3FFE3FD40"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.github\\ISSUE_TEMPLATE\\feature_request.md",
+      "bytes": 595,
+      "sha256": "1F48C52F209A971B8E7EAE4120144D28FCF8EE38A7778A7B4D8CF1AB356617D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.github\\workflows\\README.md",
+      "bytes": 2145,
+      "sha256": "220E109CBF382BFD22AE6B2B5B294D5EE012191F1B8AAFF5CFA7216577CBF01C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.github\\workflows\\ci.yml",
+      "bytes": 29212,
+      "sha256": "E11FACC597D8A2790CF7F6DA39ABCADA73AC1596A8B522805B64EE9F96DAD6F3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.gitignore",
+      "bytes": 353,
+      "sha256": "CD7DA0AB2F60A1B75E600BBF726BB14446F8F1CFC6F609EEC4EEBA1652FB352B"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\.travis.yml",
+      "bytes": 814,
+      "sha256": "150CC185045BAF85A6EBF3D98BC62EABCEA32FBF234E5FF025EF73C131C70A85"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\INSTALL",
+      "bytes": 630,
+      "sha256": "E40CB31226D6F2E42CCC84EB8E0D867776D06846D7C5B7889BC733A5618DEBAD"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\LICENSE",
+      "bytes": 635,
+      "sha256": "2949FCF758D3C9BCB05F8393CA42CADFA15BE04EB4AE4B3327C4AD7957511E1B"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\Makefile",
+      "bytes": 9207,
+      "sha256": "FE165D45C2CBDFD1779C68508C3F0A757DB06B337C3F44E54F1586AF03BE05D7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\Makefile.inc",
+      "bytes": 3304,
+      "sha256": "7CD77560EBA394BDC63580C05399E7AAE09B5A5961ECD044BEDCC09CC042F7CB"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\NEWS",
+      "bytes": 17257,
+      "sha256": "EAAEA3E756CED1362590BCFBF323CFF628B27581DD14179032B5A36F793DD295"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\README.md",
+      "bytes": 5154,
+      "sha256": "6D091CCE9100B9132631DAF556F8564F43F956FD975AFCEB67C06231DDD38C51"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\appveyor.yml",
+      "bytes": 6098,
+      "sha256": "E259259E079E28B50AC53ABA8954556A306BFE4E835645367DE6FBAFEC6A6A5C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\.gitignore",
+      "bytes": 154,
+      "sha256": "B1AF0EB19DB7CB1A14EAD181D705A3D647C356E5612202A21A1A47104ED9B67C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\README.md",
+      "bytes": 2946,
+      "sha256": "FDCE447A9D77630BACE470DFDF109878D2DFA91606AE94B0EEF0AB7DF7F90B34"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\datagen\\datagen.vcxproj",
+      "bytes": 9272,
+      "sha256": "C803BD04FD06B7C879D72844732E9FFFA5B217FEC837AE391BAABFAFE2940DA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\frametest\\frametest.vcxproj",
+      "bytes": 9623,
+      "sha256": "1017AD177F47465C8112D5D0A28F4482264A4A39311A4BDAB0869C77AAC84840"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\fullbench-dll\\fullbench-dll.vcxproj",
+      "bytes": 10445,
+      "sha256": "B399E7D2EF3CC5E75E9BC21CE273D7ED9AFFED093F43CE2A5060BFB9A2EC8E67"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\fullbench\\fullbench.vcxproj",
+      "bytes": 9623,
+      "sha256": "8D1835736EDBAFD50768BE211CCA84E5202219EBE8945C213B44A82604758302"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\fuzzer\\fuzzer.vcxproj",
+      "bytes": 9451,
+      "sha256": "CA736678EED9F7E9B8F368E38AFC0435FE67BE5D7C054041DB56E8F7C5C4330B"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\liblz4-dll\\liblz4-dll.rc",
+      "bytes": 1388,
+      "sha256": "1E5895921E87A4F20E01142B83DABCEDC8629EEC825C519AB05363ECFA64019F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\liblz4-dll\\liblz4-dll.vcxproj",
+      "bytes": 9616,
+      "sha256": "880212056A611304D8DA5A40E1DF9B7A8D616CFC08FD6F00F0B8D9F7F90827B1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\liblz4\\liblz4.vcxproj",
+      "bytes": 9512,
+      "sha256": "169A5D2829AF87ED5330A5EB8D65FCDA73BAE59F77A191C51B9DE150D953EA81"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\lz4.sln",
+      "bytes": 6761,
+      "sha256": "D219512AB9FAE512F062CB2FA26CCDA2A2E7228CFF44211B5F5E16B5DC221DA9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\lz4\\lz4.rc",
+      "bytes": 1388,
+      "sha256": "A7573B7B465664CA2A6DF59202B9CF32B348B40E73A57FE4B81618542679ECF8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2010\\lz4\\lz4.vcxproj",
+      "bytes": 10285,
+      "sha256": "137151E4890030802B17796C1116D7535D104486F6F94C39BD3F2A104C95F168"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\datagen\\datagen.vcxproj",
+      "bytes": 9454,
+      "sha256": "A90EE5104CC610FEFFA9A789B7716DAB2F853F69425E31241E763F986185091A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\frametest\\frametest.vcxproj",
+      "bytes": 9805,
+      "sha256": "9B4E592B9B4897C72EBD1B9EC10E1C705FBB2E591C8F156E10B799ED6809534B"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\fullbench-dll\\fullbench-dll.vcxproj",
+      "bytes": 10626,
+      "sha256": "41F53DBC31AB0BBD6C848BA9144615A43BC6E30B542D8BCE23129E52787C2AED"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\fullbench\\fullbench.vcxproj",
+      "bytes": 9805,
+      "sha256": "D6F5DFE83A345E932A2823239A21EB043BDAA1FE82CB0DA5DFC9F30D852B3E25"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\fuzzer\\fuzzer.vcxproj",
+      "bytes": 9633,
+      "sha256": "CD2B9D1A30007B8E61C3F437471A30BA433DF7F71EAF94A8DD51FA1890AEDB3E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\liblz4-dll\\liblz4-dll.rc",
+      "bytes": 1388,
+      "sha256": "1E5895921E87A4F20E01142B83DABCEDC8629EEC825C519AB05363ECFA64019F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\liblz4-dll\\liblz4-dll.vcxproj",
+      "bytes": 9797,
+      "sha256": "38AAE96DB28852385D686BD8E2487518EE50E35474323070B9D41D958835F30A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\liblz4\\liblz4.vcxproj",
+      "bytes": 9694,
+      "sha256": "E3CBF132D26213FD0388AA5C877E0B638E136EE3C6908DD941859660196F1611"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\lz4.sln",
+      "bytes": 6941,
+      "sha256": "5350D960324090DADAD5E6B1FADD31416A2E9909C71914E4CFA0408FF04F2145"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\lz4\\lz4.rc",
+      "bytes": 1388,
+      "sha256": "A7573B7B465664CA2A6DF59202B9CF32B348B40E73A57FE4B81618542679ECF8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2017\\lz4\\lz4.vcxproj",
+      "bytes": 9396,
+      "sha256": "2565ED2FD72E3B45D9631AAC8C7D2085BDB7838D16D01D8A5BB5BDE70CDFB779"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\datagen\\datagen.vcxproj",
+      "bytes": 9454,
+      "sha256": "5B13CC3AC3B45DA483C18DEBF8DDA363FF231A128294C67F6B7FF48CC5B31E25"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\frametest\\frametest.vcxproj",
+      "bytes": 9805,
+      "sha256": "AC5B303CE5971B40D0A3A6B59C06B5FB256EF21415B609813BACC47113D79309"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\fullbench-dll\\fullbench-dll.vcxproj",
+      "bytes": 10626,
+      "sha256": "2C478B4BC6735E502626168D8A1BB6B881B963A2E6D2906E78F2FC12D043F863"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\fullbench\\fullbench.vcxproj",
+      "bytes": 9805,
+      "sha256": "F997C657CCB4544AA68527C3E5C8E244CF8688FC2334C628EEF9D98717B03213"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\fuzzer\\fuzzer.vcxproj",
+      "bytes": 9633,
+      "sha256": "E25903CD48256C8E82DA75E647AC8735594B1BBCA412148BC3E2C951855E0834"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\liblz4-dll\\liblz4-dll.rc",
+      "bytes": 1388,
+      "sha256": "1E5895921E87A4F20E01142B83DABCEDC8629EEC825C519AB05363ECFA64019F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\liblz4-dll\\liblz4-dll.vcxproj",
+      "bytes": 9797,
+      "sha256": "D8CCD02405F160675E71A998341511B293D6BD452E61CF9EED776F3995D1F74D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\liblz4\\liblz4.vcxproj",
+      "bytes": 9694,
+      "sha256": "2EDAF8AA9F667C353AD79F18E54D1165222A2FC68E32F317DF65725BDDD437E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\VS2022\\lz4.sln",
+      "bytes": 6941,
+      "sha256": "5350D960324090DADAD5E6B1FADD31416A2E9909C71914E4CFA0408FF04F2145"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\cmake\\.gitignore",
+      "bytes": 109,
+      "sha256": "DF63E2DCB7F9C24D2F703E19BD21A7946355F6280F650A650D12BEEF6C3E1094"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\cmake\\CMakeLists.txt",
+      "bytes": 9757,
+      "sha256": "E7F649FFC19AAED3FC33EF43530FA07C577CCAC29301A9BD88D3E3FF904010DA"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\build\\cmake\\lz4Config.cmake.in",
+      "bytes": 70,
+      "sha256": "5B24CAC80E8A438E3A52A11721B0FBC9D00F7BF532EEF5D62F0D894434F32462"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\changelog",
+      "bytes": 475,
+      "sha256": "F7AB7D42941C818B67D13E72023BE47600B9832B009585B0715C567EFE770843"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\compat",
+      "bytes": 2,
+      "sha256": "10159BAF262B43A92D95DB59DAE1F72C645127301661E0A3CE4E38B295A97C58"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\control",
+      "bytes": 612,
+      "sha256": "3ECFDD58076228049FEC9A91ABC2284A7B2E3B7C28ED9E20281C7A8585098AF7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\copyright",
+      "bytes": 321,
+      "sha256": "4F6EF9D0E844BF432D6A0ABB2623F5A61175AE40F7F0E3665490311D89E3AF87"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\dirs",
+      "bytes": 8,
+      "sha256": "5AFD130D6D03C8C12E124CE767ED367CE303C84605FC32727DB31534CB4E3916"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\docs",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\liblz4-dev.install",
+      "bytes": 35,
+      "sha256": "7916058E85E36AF6A8FC1E0001E8305520C584DA9E0CCBEA0D497968E1508DAE"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\liblz4.install",
+      "bytes": 30,
+      "sha256": "1D6E28A20190FD6C9A965211A9C7B93B5BB9F84BDF5200656DABF672D266E76C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\debian\\rules",
+      "bytes": 185,
+      "sha256": "947DFF0B3C6BE7F7E6F8A316D11794D68E5BA9BEB96893A4A4FC556376C01109"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\djgpp\\LICENSE",
+      "bytes": 1292,
+      "sha256": "D011D1E02CB32B71C1CE2922AB41A2E2AD30F4ECF8DE22C078D53618205ABC05"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\djgpp\\Makefile",
+      "bytes": 3524,
+      "sha256": "C686FD1A94622DBEDC831618A7359E670A8B998FCB102580DE3EC6D1B57868B1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\djgpp\\README.MD",
+      "bytes": 1125,
+      "sha256": "1EC3F0DD6C6644BC3938FB52BC6CAF29BE557610F61EA60590C05D1BC02DD30C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\gen_manual\\.gitignore",
+      "bytes": 28,
+      "sha256": "811706A7C3519391761AD5796AEC9454585CBBB98757FAA282E5745A2E0B5CCE"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\gen_manual\\Makefile",
+      "bytes": 3009,
+      "sha256": "A62C2D5E4F8351B78D0B228AB743B882ACCB638A2C0EEBDB3345538AFBA1CCEA"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\gen_manual\\README.md",
+      "bytes": 1144,
+      "sha256": "26EFD8EE20DDDEF8B9E076B170DD932A82467259A07E02180E68B78E10F453ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\gen_manual\\gen-lz4-manual.sh",
+      "bytes": 613,
+      "sha256": "D030A0479FEBFDD7DAA75700EDF495F89B5110DB2BE8535F124849D06B6D63AC"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\gen_manual\\gen_manual.cpp",
+      "bytes": 8642,
+      "sha256": "97DAC662A59FAC29A965C88724D43D960C53B7594F24660DD8E5DD825F310098"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\README.md",
+      "bytes": 832,
+      "sha256": "16BE5030767265E9887C595769C6C234F2AE2002A565FA6F430D95B8BB48F350"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson.build",
+      "bytes": 875,
+      "sha256": "244EAE35E1E7C8C46C35595571A6E5285FA65E4EABE9E8B755C90DAE68034FCE"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\GetLz4LibraryVersion.py",
+      "bytes": 1307,
+      "sha256": "02E03ED183EAC6BBF9F35BF625005B19591F7AA4B56716354DFECC4EE3F3DC93"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\contrib\\gen_manual\\meson.build",
+      "bytes": 1134,
+      "sha256": "AF48CBA69E298197AABBDB1A1E5BBC6AC6F085EE6B266C8445BA81D8B03A128F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\contrib\\meson.build",
+      "bytes": 569,
+      "sha256": "4ADD6EE98356607280803194F4321EF9D181D5BB13A03CC41FF80CAED57734CC"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\examples\\meson.build",
+      "bytes": 1166,
+      "sha256": "5E130D489B6BD7937F1F3B3F2345208151F071C06491A49F9F4E2FDC400F691A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\lib\\meson.build",
+      "bytes": 2120,
+      "sha256": "71643B1CEC0217BA85767CBC8597AE7C30ABD258CD65B0E4591882CA55B60B90"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\meson.build",
+      "bytes": 1802,
+      "sha256": "048D88B78A16F11BC08952F086D18E22520588DB4DC845DBEFA6E40FA95662BF"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\programs\\meson.build",
+      "bytes": 1412,
+      "sha256": "F671A3B7AC4CCBD5A57C8A942BA6589362D7517986A5E6A2A39CE59E625F9BD8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson\\tests\\meson.build",
+      "bytes": 1889,
+      "sha256": "2903161F448F82F87A93A3E9A373900D97D44F487C9A0E3FCB41F9204DDE9E12"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\meson\\meson_options.txt",
+      "bytes": 1243,
+      "sha256": "0A9DB572D606FCF3D4F1B26BF19F5F6819784228DBCF9E3C14EC16D8F764F128"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\snap\\README.md",
+      "bytes": 1171,
+      "sha256": "9B9D26C4C296D459C7D0DAF3ADF47895249A7B03FB3EB29F2B5DD60F0FF33E3B"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\contrib\\snap\\snapcraft.yaml",
+      "bytes": 1116,
+      "sha256": "22F3A2301E8C459BAFA67A47142D72353C5A81F59B481A4ADE7C9FFC8BBC5AA4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\doc\\lz4_Block_format.md",
+      "bytes": 10683,
+      "sha256": "DCE3C34A8738C44ED1DFFB48C73E30297FCA98BA7881408DC228865912C9A42E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\doc\\lz4_Frame_format.md",
+      "bytes": 14907,
+      "sha256": "A7D9FD2021A32305E8FCE822DDBBEB21974DF433407E209A94592E13920B1E2C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\doc\\lz4_manual.html",
+      "bytes": 33979,
+      "sha256": "26E25997F9ECC40B4F8331D793CF175DF8E217334C68F85C1A462B3A94C48687"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\doc\\lz4frame_manual.html",
+      "bytes": 24114,
+      "sha256": "85DF5BFDCFDE69AD7805ABB32CCF584A4BADD38B51FAE28791DFA8F76474871F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\.gitignore",
+      "bytes": 157,
+      "sha256": "22709619D45F578B7CCABD6C30809F603817DEA80E523A74F678C88259ED5B0C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\COPYING",
+      "bytes": 18092,
+      "sha256": "8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\HCStreaming_ringBuffer.c",
+      "bytes": 6155,
+      "sha256": "DE97D059A99A6DB0934930EFF946CCBC9DAF7F111EC5E60651E65F2B79153DE5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\Makefile",
+      "bytes": 4044,
+      "sha256": "905158C0DB084BE3C6CB403067502A8E4871DAF560219695106C4A9398E53C56"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\README.md",
+      "bytes": 313,
+      "sha256": "3DAC202B4AA4C03B4921DA6FFD2DB11791373826AD668614B8AE48FAB8283BB5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\blockStreaming_doubleBuffer.c",
+      "bytes": 4832,
+      "sha256": "8EB96317F1454DB6B400B9DA7B73AC435B16C50401B68B3E571E7EFA7D29D72C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\blockStreaming_doubleBuffer.md",
+      "bytes": 2747,
+      "sha256": "186607A249D039A9B558592719845EE13222284D4BC8C90EB577A1697007DAB0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\blockStreaming_lineByLine.c",
+      "bytes": 5389,
+      "sha256": "F236D3E7A2511475EBF25F8D354EE2D6733C73E67587C65670AEECABC3F1669D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\blockStreaming_lineByLine.md",
+      "bytes": 3650,
+      "sha256": "ED6BF3A195F0AA55C710C9CB785DA3247F0285E7269478CCED0B320D4405B312"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\blockStreaming_ringBuffer.c",
+      "bytes": 4981,
+      "sha256": "DE8FD5CDC83552FF190203004DDB1CACD54174AD3ADAB68DAE7CC20D4994DEBF"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\compress_functions.c",
+      "bytes": 27116,
+      "sha256": "5102B2993B2857A26FE78262AAFE30FF8673FC3537414D135D97F4FA6FC3433B"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\dictionaryRandomAccess.c",
+      "bytes": 8152,
+      "sha256": "C169B03E47269C445CE3ADF028BD76AE8C011735A1322F51E2A13A792D7945E5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\dictionaryRandomAccess.md",
+      "bytes": 2102,
+      "sha256": "013D1E25DE9217FF6224D14522F2A562901C78216CAFD832F77C1921175ABFE7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\fileCompress.c",
+      "bytes": 5554,
+      "sha256": "079AC0651C4D66200FA2AE2E3D983C6E1E71338979AD0A24DB7C473EBBCD1C87"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\frameCompress.c",
+      "bytes": 16113,
+      "sha256": "BD6E2E3B7243769DCE5A35837C6C4CEF726D93405E887844355784EE39D7F3C2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\printVersion.c",
+      "bytes": 269,
+      "sha256": "DCC2F58FE93BB7F50A1B459E54E99ABAE5EBD41363B0ABF54E5A683F5340FBF0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\simple_buffer.c",
+      "bytes": 5598,
+      "sha256": "AC685D4E02A449D067F35720B92297643C6B1E639E3BF29EC4197143C98304F9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\examples\\streaming_api_basics.md",
+      "bytes": 3629,
+      "sha256": "F5F623970B6F533586FE2CB6DD12BCD82F0852A35D1D3406EEF2AB86323831E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\.gitignore",
+      "bytes": 34,
+      "sha256": "406C783739CDB6F0ADECA09A62D91EF94D35C9BA5ABDA0374BD214EE12B1882C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\LICENSE",
+      "bytes": 1311,
+      "sha256": "8B58C446121A109CCF32EDC094BBA3010A3D85E4EE3702950DB55E4D3E87736C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\Makefile",
+      "bytes": 8456,
+      "sha256": "C85BC305201F3AF83AFF6921630633B5C52F4C385616E74D8F3C6A7945BFB58E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\README.md",
+      "bytes": 7723,
+      "sha256": "757660CCDE967712D91B9DB935F0A98F41C83BC9AB8F3449BCF20797D6807AD5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\dll\\example\\Makefile",
+      "bytes": 2036,
+      "sha256": "1E035BE57A8C3613726D39A56EBCFFB20A8F4560E89BB3827EDD3B98535561F7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\dll\\example\\README.md",
+      "bytes": 3058,
+      "sha256": "3BFEF50F199E2D06312368ECFB7198F7B5E34EFF03720B9AEE6783A76277CFF2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\dll\\example\\fullbench-dll.sln",
+      "bytes": 1269,
+      "sha256": "AF0C9152E1109CEA3E7A997E59DC435F032526C238E95681741E2A2F12AD0A74"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\dll\\example\\fullbench-dll.vcxproj",
+      "bytes": 10157,
+      "sha256": "AADB61A66FB7F024A55406E253B7443742F7EB68193E0F143A73DCAF7EC6B240"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\liblz4-dll.rc.in",
+      "bytes": 1109,
+      "sha256": "22860BE8BAFDEB276F3616177C32E00A8E620C59877D97600F43B0853CA6216D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\liblz4.pc.in",
+      "bytes": 387,
+      "sha256": "F2FC76098B8B3282BF63D4B3B5654195097E2125C14BBCEA83A4897118412227"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4.c",
+      "bytes": 113390,
+      "sha256": "B6A85FD8F9BE0FEDB568ABD1338719B23B999583CCDA6F3404D5AE11E4CE7B8E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4.h",
+      "bytes": 43263,
+      "sha256": "C1614ECF7ADA7B0BE1ACB560D4239595F96FBB7AA6A79A7C40CB358753830BE6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4file.c",
+      "bytes": 8647,
+      "sha256": "713E6E81DBF3AACCCF09C2E7BB910C74C13F048F4CB368430D5E66EB488A04EB"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4file.h",
+      "bytes": 3298,
+      "sha256": "5488A9D74AB408E480BB8D7A15BA19E4631D9761FE11E4FBD6920B3C93CB39BF"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4frame.c",
+      "bytes": 89076,
+      "sha256": "80812286293760E032B254FB1C5BFD03ED099879DBECF1503286C0BB3C342574"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4frame.h",
+      "bytes": 32749,
+      "sha256": "47501E4925D60C0F87C7BFC68C8B9E0E4D942EEA786E35D2C5BFBF5E9DEAB561"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4frame_static.h",
+      "bytes": 2044,
+      "sha256": "31AB72A6E97E4FA0BEDD4420D24A3F1F8024CBFA1D8FFAD88C87CBB4E04F769D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4hc.c",
+      "bytes": 70129,
+      "sha256": "BCA2CF3A014B21919DA4FA92DB5ADBFBFC9AEE2F0938107885A3A8F49A750AA8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\lz4hc.h",
+      "bytes": 20179,
+      "sha256": "6BC1EFEB79571807DA2CA084809DE1760E0CD87064E40ECCF9624D95088DCE7D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\xxhash.c",
+      "bytes": 34045,
+      "sha256": "7AE8273E2EAE674DB237C4D0C300E4A69BFF8832B0E5B4E08552255FDE006FA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\lib\\xxhash.h",
+      "bytes": 13466,
+      "sha256": "AEFDD236F35130495C18764CABED3F7B216906855FC5E6A9025CD2040BC84444"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\.gitignore",
+      "bytes": 90,
+      "sha256": "B640076C614FD77B7B33A023CC583EAECDF99332F4F18FA24F504EC7D91C9DFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\Makefile",
+      "bytes": 2720,
+      "sha256": "F78AEB70E53A7BCCD0DD947183A9727EBF8BFB1CE1C1DF105860DA00641518AD"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\compress_frame_fuzzer.c",
+      "bytes": 1561,
+      "sha256": "3329EFBA2287CE33E5BF58C2F3460C407AFEBDB5D7BFDB5560FB9DD7B102F782"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\compress_fuzzer.c",
+      "bytes": 2024,
+      "sha256": "F1AE2F302B1AD5A6AA160C792F9D1C0CE2C291B28A16BF2429DE0FCE3971857D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\compress_hc_fuzzer.c",
+      "bytes": 2311,
+      "sha256": "444B476026723697C8BC0BE68A44AB434E281DD025A6A65D39C70981B422E6F3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\decompress_frame_fuzzer.c",
+      "bytes": 2480,
+      "sha256": "BAF0DAB7BFAE0C7440F0488048DD45C846F809C11DCC0A9A781941F18DF033B2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\decompress_fuzzer.c",
+      "bytes": 3562,
+      "sha256": "5E45BFDF6C5B8A1EED3BD49686CF2BD8C8C17599490759ED1CD21B952AB0362E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\fuzz.h",
+      "bytes": 1704,
+      "sha256": "0A004654A5E1ED8A40663F14136B9B36EB546567E8FA87A0DD50E4269D4BBF46"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\fuzz_data_producer.c",
+      "bytes": 2546,
+      "sha256": "A12393758430EA5C2D1EC51118D9FC74E0C55444072A83ADC00FEB6037C888E0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\fuzz_data_producer.h",
+      "bytes": 1334,
+      "sha256": "4E30F91D4D61F7DA92B285BA33DD1C6FC40FD9058FE95652B38808F45A38BDA1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\fuzz_helpers.h",
+      "bytes": 2731,
+      "sha256": "F4D07483E2ADBC2690F0AAEC7C9A30B114F42C4F40038841869D08CEBE8AE16C"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\lz4_helpers.c",
+      "bytes": 1750,
+      "sha256": "69B9957AE889774E3084F8B96E0D486ECB4816F2561A13DC42EBABF6E32FAA58"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\lz4_helpers.h",
+      "bytes": 339,
+      "sha256": "A858177044DE8A5921951AB4AA8FDDAE6130B1D257D637BA1EA012C541029734"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\ossfuzz.sh",
+      "bytes": 514,
+      "sha256": "31138E44B71510CC1A942E128FACD1911CF9C20C6A3C610316E9D830700FB13A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\round_trip_frame_fuzzer.c",
+      "bytes": 1383,
+      "sha256": "3A07589F1DEEABEA74B1A4728B8528C45B3A1C7A27A783F503DBCA5A35247071"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\round_trip_frame_uncompressed_fuzzer.c",
+      "bytes": 5134,
+      "sha256": "A87DDE93037A39EABC89950C31730B3D4D26F5A349CFB36491DC4265C7149804"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\round_trip_fuzzer.c",
+      "bytes": 5066,
+      "sha256": "0C87880BD1301C4FC1255C34F9ACA341479E22F0E5440C877B0DB52AA9E04E0A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\round_trip_hc_fuzzer.c",
+      "bytes": 1317,
+      "sha256": "BC8AA628675F0366939FB583319C5FCC48E164439B03F4EEF770FFAB42086273"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\round_trip_stream_fuzzer.c",
+      "bytes": 9966,
+      "sha256": "16F4773CEE11B62A998F3D383BE4A55780A910DCB5CC7299D8B2F87B444D13F1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\standaloneengine.c",
+      "bytes": 1804,
+      "sha256": "45A219DE4AA04F76B2A7103FA82C10581131A7E5B486EEDC8F65142CBE12FC40"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\ossfuzz\\travisoss.sh",
+      "bytes": 820,
+      "sha256": "BB5C86548BA064366499E334B2A845EE2074179876A10374E7492C9F4CB0E06D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\.gitignore",
+      "bytes": 178,
+      "sha256": "A1EBDC9F1A6B1A68E372C151EA07EF1D5E21AE87D1EC6DC4592CEC39121A1077"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\COPYING",
+      "bytes": 18092,
+      "sha256": "8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\Makefile",
+      "bytes": 6484,
+      "sha256": "DB557481974FE733694A273C45AB83AA60A56491E7049B1CD91A29B79D3750E0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\README.md",
+      "bytes": 3541,
+      "sha256": "B5726862C990305B9313C4F0AFC96B7174AF90DC9BDF720C50893EAD9A79FF9D"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\bench.c",
+      "bytes": 32704,
+      "sha256": "53FD38D320FE3E325179C2B54273FEB5F617C96372B45EC606C0B02B32964785"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\bench.h",
+      "bytes": 2857,
+      "sha256": "2FF152B06793B2010E1B3ED8CDE8B13FF8720EFD98ACBDEAB43595B730E07404"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\datagen.c",
+      "bytes": 5938,
+      "sha256": "402BE357313F7CB1E61C1C02DFD5326F788180BEDC7B16FB01BA7EFF3F3874DA"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\datagen.h",
+      "bytes": 1687,
+      "sha256": "FD05D6B36D402E9DE9A71AC639F354D50D88277DFA3BEEE80DF14DCC4268B4E2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\lz4-exe.rc.in",
+      "bytes": 850,
+      "sha256": "685D449242BF97F2E89BE11631755BF7CA4E3DA325F2CC20B4AE5E797DE92290"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\lz4.1",
+      "bytes": 9262,
+      "sha256": "FE2F1418E45F8044D53D67022D205C79BEE8E6F72958FB40633B6167289DD909"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\lz4.1.md",
+      "bytes": 8425,
+      "sha256": "EFB089F46F7C065B6DEEFF28BE5582DA06A44ED6AA897D7F803827DD91CBE011"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\lz4cli.c",
+      "bytes": 35034,
+      "sha256": "BB440FE18A438ECF21FC0C732F2EAFBC6E42A3B9B29C35315B41C9FC218E3767"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\lz4io.c",
+      "bytes": 67443,
+      "sha256": "1A24441DA3806F4B7972661069BC1A724EE51B9F478594913CE2B6F513AFEAE8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\lz4io.h",
+      "bytes": 5024,
+      "sha256": "D0FF4D04BE36FF4E4DD8BF7304B10F22804D347B460FF591C031A22F29540A9A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\platform.h",
+      "bytes": 6849,
+      "sha256": "7C5C664C7EA9A7EE4B024DAABE0D8F311BC5000D26B6D3AD1D6012C06592E4C6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\programs\\util.h",
+      "bytes": 22766,
+      "sha256": "5B3E1CA58FEBCB30F0FA1870CC42FA61BD155AA6CB1AB5A93B5BE541A9CA3668"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\.gitignore",
+      "bytes": 273,
+      "sha256": "F70674980743EC645F1273ED06BB025571573573242E33B1BC381D677496708A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\COPYING",
+      "bytes": 18092,
+      "sha256": "8177F97513213526DF2CF6184D8FF986C675AFB514D4E68A404010521B880643"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\Makefile",
+      "bytes": 25486,
+      "sha256": "876CAAA7F622B953AEBB4BE145BE3A47B6DB2CBDD1FF0150ACCAFDBA499BC3DC"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\README.md",
+      "bytes": 3503,
+      "sha256": "5D54EB643E35A35C813034A5898643E527A371D72C699E68E46F74CE47CCE1C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\abiTest.c",
+      "bytes": 6554,
+      "sha256": "BC5DCBBE88D4C1CE369F191B71231F15E7A59FE632731DD9CFA3967D5A7CE930"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\checkFrame.c",
+      "bytes": 10711,
+      "sha256": "C2661471FFAF9B4B6B633FCBE3C1EF1831BFB5E8B33CC1B74EAC656DF1C38B35"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\checkTag.c",
+      "bytes": 2549,
+      "sha256": "A49419F21D05AA45C7D82C7972064E1CD0D87BA6FE0A3417686337545D276445"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\check_liblz4_version.sh",
+      "bytes": 123,
+      "sha256": "E47A787D307711A2E1DD39BC04AA3CEEAB0DBE5EC390E4B56891543706B6D0FB"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\datagencli.c",
+      "bytes": 5214,
+      "sha256": "2933C69B4CD4B2A10F3C5532FF0A1B151A6E3995B4AA7BF07DD516AD3FCFA52E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\decompress-partial-usingDict.c",
+      "bytes": 4161,
+      "sha256": "71A5C13989DD6A5D3BB25631C3DE5FC45C2C0E813D4E9DB36BF8B934632B6499"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\decompress-partial.c",
+      "bytes": 2114,
+      "sha256": "2DE073BEB5445193EAA7FCBB1B866833430CDC98D10B7BBDF40098134A07E937"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\frametest.c",
+      "bytes": 61462,
+      "sha256": "BF5B6052BE10586BAC6993E8B4E81C94F06D5FABBA2B037EF3E166B6BC4662E1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\freestanding.c",
+      "bytes": 7592,
+      "sha256": "2B1F22A08A00A4A902B003CF2FCA312DCF8569AB372B3540397057BA5CEB348F"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\fullbench.c",
+      "bytes": 33669,
+      "sha256": "54E0D1D51466ED1F1A27F5A0135020350328CF7FD9167223F992CAC8FC9836FF"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\fuzzer.c",
+      "bytes": 102370,
+      "sha256": "43ECFF48FF51DCA75F47627410FB9255FCC01D7916DA59F077743BD357A6CA2E"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\goldenSamples\\skip.bin",
+      "bytes": 38,
+      "sha256": "3FEC2AC0604510A1327930B4450F2B48080D648A1D593D7B3B2072394275ADC4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\roundTripTest.c",
+      "bytes": 7309,
+      "sha256": "8266D37DFF64896B6D31684B74C17E8B0A9E03C2D439699011FE568CF0BA44E8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\test-lz4-abi.py",
+      "bytes": 6291,
+      "sha256": "209C73A250A08C972CECAF7799238D8B3FEDE6B18A2FA66E38221687AD7BF93A"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\test-lz4-list.py",
+      "bytes": 12661,
+      "sha256": "1F6F4EF04BFF65F929C4879BA626942C81F7D159CB649A152849D321D748B191"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\test-lz4-speed.py",
+      "bytes": 16785,
+      "sha256": "5A39D26ADBEF528D32B7BAA5214FB583BF2EA868E643B19B323C5694785072DB"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\test-lz4-versions.py",
+      "bytes": 5376,
+      "sha256": "E315556D3D2D3087EFFF4B028BC0712C06240463D07072F29F61715891D84155"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\test_custom_block_sizes.sh",
+      "bytes": 1901,
+      "sha256": "8466F9A3CF99BF29085AD6CBF8F28B3CAE90ED2BF7ACC456E4CD5ECDC7F91130"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\test_install.sh",
+      "bytes": 973,
+      "sha256": "772B9013A80289806AF837968AFDA5055531A5456E9ECBA056BA82EC67A222D1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4\\tests\\unicode_lint.sh",
+      "bytes": 1195,
+      "sha256": "DB8249C743951146F1B76746344A86BF08EEC17C307700244A2F17340981BA69"
+    }
+  ],
+  "archive": {
+    "path": "F:\\JericoEngine\\Dependencies\\archives\\lz4-v1.9.4.tar.gz",
+    "bytes": 354063,
+    "sha256": "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b"
+  },
+  "producer_output_exists": false
+}

@@ -1,0 +1,32 @@
+{
+  "patch_results": [
+    {
+      "name": "patch-missing",
+      "exitcode": 1,
+      "elapsed_seconds": 0.0437021,
+      "diagnostic_found": true,
+      "expected_diagnostic": "original patch hunk missing: loadlib Windows error",
+      "loadlib_sha_before": "A3A5316773658A79F97847141BD42D4C3EEE94B017A5F63AD0D8CC241790265E",
+      "loadlib_sha_after": "A3A5316773658A79F97847141BD42D4C3EEE94B017A5F63AD0D8CC241790265E",
+      "loslib_sha_before": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+      "loslib_sha_after": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+      "both_work_files_unchanged": true
+    },
+    {
+      "name": "patch-ambiguous",
+      "exitcode": 1,
+      "elapsed_seconds": 0.0282386,
+      "diagnostic_found": true,
+      "expected_diagnostic": "ambiguous patch hunk: loadlib Windows error",
+      "loadlib_sha_before": "68AE702781E03059BEB966F386780B45867CCA24FAFA8C23F55E3E5B3071D4A7",
+      "loadlib_sha_after": "68AE702781E03059BEB966F386780B45867CCA24FAFA8C23F55E3E5B3071D4A7",
+      "loslib_sha_before": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+      "loslib_sha_after": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+      "both_work_files_unchanged": true
+    }
+  ],
+  "freeze_sha256": "322BBCDE2DFD6A4B6F9007889BA81E10F09C534A9F8A602034726FFBCF3DBF59",
+  "freeze_files_match": true,
+  "archive_sha_before": "2ff89bbea22a7c8b910d6b006f5ba4559edcf468a25537cedf9988ed90f6b450",
+  "archive_sha_after": "2ff89bbea22a7c8b910d6b006f5ba4559edcf468a25537cedf9988ed90f6b450"
+}

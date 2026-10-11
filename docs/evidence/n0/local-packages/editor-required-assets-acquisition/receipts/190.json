@@ -1,0 +1,41 @@
+{
+  "index": 190,
+  "source_path": "Code/Editor/res/ball_pending.ico",
+  "expected_sha256": "499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb",
+  "expected_bytes": 1150,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_pending.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:24.321924+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_pending.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "1150",
+      "ETag": "\"499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_pending.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:24.695275+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/ball_pending.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "1150",
+      "ETag": "\"499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb",
+  "actual_bytes": 1150,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\ball_pending.ico",
+  "status": "acquired and byte verified"
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "Read-only bounded installation survey; no tool acquisition/installation, Configure/build/test",
+  "nativePerlSurvey": {
+    "onPath": false,
+    "uninstallMatches": 0,
+    "registryRoots": [
+      "HKLM/Software/Microsoft/Windows/CurrentVersion/Uninstall",
+      "HKLM/Software/WOW6432Node/Microsoft/Windows/CurrentVersion/Uninstall",
+      "HKCU/Software/Microsoft/Windows/CurrentVersion/Uninstall"
+    ],
+    "absentKnownPaths": [
+      "C:/Strawberry",
+      "C:/Perl",
+      "C:/Perl64",
+      "C:/Program Files/Strawberry Perl",
+      "C:/Program Files/ActiveState",
+      "C:/Users/Jerico/AppData/Local/ActiveState",
+      "C:/Users/Jerico/AppData/Local/Programs/Strawberry Perl"
+    ],
+    "matchingDirectoryEntries": 0,
+    "limitation": "Native Perl not found in PATH, installation registry and bounded known-location survey; arbitrary custom locations not exhaustively searched",
+    "existingGitPerl": "Git usr/bin perl5.42.2 x86_64-cygwin-thread-multi; not evidence of VC-native matching environment"
+  },
+  "msvc": {
+    "installation": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+    "toolset": "14.44.35207",
+    "clExists": true,
+    "nmakeExists": true,
+    "commandsExecuted": "vswhere read-only installationPath only; cl/nmake not executed"
+  },
+  "nasm": "Existing WinLibs2.16.03 as previous hashed inventory; no acquisition",
+  "candidate": {
+    "provider": "https://strawberryperl.com/releases.json",
+    "version": "5.42.3.1",
+    "architecture": "MSWin32-x64-multi-thread",
+    "url": "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54231_64bit/strawberry-perl-5.42.3.1-64bit-portable.zip",
+    "expectedSha256": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+    "expectedBytes": 304765269,
+    "githubAssetDigestMatches": true,
+    "headRoute": [
+      "github.com302",
+      "release-assets.githubusercontent.com200"
+    ],
+    "downloaded": false,
+    "installed": false,
+    "next": "Parent may authorize this exact portable ZIP; repeat manual HEAD route, verify SHA256 before full ZIP path/link/license audit. Use explicit perl/bin/perl.exe and controlled MSVC/NASM paths; do not add bundled GCC globally or run CPAN/install scripts",
+    "metadataLimit": "Newest5.40.5.1 row inconsistently points edition.portable at MSI; selected5.42.3.1 portable row internally consistent and independently confirmed by exact GitHub release asset digest/size; no version inferred from name alone"
+  }
+}

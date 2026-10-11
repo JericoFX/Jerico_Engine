@@ -1,0 +1,65 @@
+{
+  "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+  "commit": "5ff839680134437dbf4678f3d0c7b371d84f4964",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\lz4-v1.9.4.tar.gz",
+  "bytes": 354063,
+  "sha256": "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+  "receipts": [
+    {
+      "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "automatic_redirects": false,
+      "authorization": false,
+      "headers": {
+        "Access-Control-Allow-Origin": "https://render.githubusercontent.com",
+        "content-disposition": "attachment; filename=lz4-1.9.4.tar.gz",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+        "Content-Type": "application/x-gzip",
+        "cross-origin-resource-policy": "cross-origin",
+        "ETag": "\"6d3d4684f12e24035006be4b07c1bebc893afd24de510a28c557f6c7154fdfa2\"",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Vary": "Authorization,Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "X-XSS-Protection": "1; mode=block",
+        "Date": "Sat, 10 Oct 2026 23:52:22 GMT",
+        "X-GitHub-Request-Id": "E7AE:91B45:41A9B:351B1E:6ACACFB6",
+        "x-github-edge-region": "brazilsouth",
+        "connection": "close"
+      },
+      "body_bytes": 0,
+      "body_sha256": null
+    },
+    {
+      "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+      "automatic_redirects": false,
+      "authorization": false,
+      "headers": {
+        "Access-Control-Allow-Origin": "https://render.githubusercontent.com",
+        "content-disposition": "attachment; filename=lz4-1.9.4.tar.gz",
+        "Content-Length": "354063",
+        "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+        "Content-Type": "application/x-gzip",
+        "cross-origin-resource-policy": "cross-origin",
+        "ETag": "\"6d3d4684f12e24035006be4b07c1bebc893afd24de510a28c557f6c7154fdfa2\"",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Vary": "Authorization,Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "X-XSS-Protection": "1; mode=block",
+        "Date": "Sat, 10 Oct 2026 23:52:23 GMT",
+        "X-GitHub-Request-Id": "683F:244DAF:411DC:3512C5:6ACACFB6",
+        "x-github-edge-region": "brazilsouth",
+        "connection": "close"
+      },
+      "body_bytes": 354063,
+      "body_sha256": "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b"
+    }
+  ],
+  "pin_evidence": "official tag and full Git tree; 33 declared CRLF exports, all compiled library bytes exact"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "patch-missing",
+  "exitcode": 1,
+  "elapsed_seconds": 0.0437021,
+  "diagnostic_found": true,
+  "expected_diagnostic": "original patch hunk missing: loadlib Windows error",
+  "loadlib_sha_before": "A3A5316773658A79F97847141BD42D4C3EEE94B017A5F63AD0D8CC241790265E",
+  "loadlib_sha_after": "A3A5316773658A79F97847141BD42D4C3EEE94B017A5F63AD0D8CC241790265E",
+  "loslib_sha_before": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+  "loslib_sha_after": "9A9377CA3FBBCA810EE9D6813348DD4209071CAAF8620D330F326B30F18B00FD",
+  "both_work_files_unchanged": true
+}

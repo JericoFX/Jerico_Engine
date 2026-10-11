@@ -1,0 +1,15 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\producer-candidate-inputs-rev2.cmake"
+  ],
+  "argc": 2,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "freeze_sha256": "64B36E212350E970E9B7E0BBBEEF3DA65A9820DF60C69019A54CC8AEBDF474F0",
+  "driver_sha256": "B067073733F9F7A4D823B3C9CE39466049FB7568486728B2B1DA3A928A599C71",
+  "producer_sha256": "E8A5316A6B0048F931965355D4276C89DFECF43A9FAAEECE091E1279279CA3A8",
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev2",
+  "output_existed_before": false,
+  "start_utc": "2026-10-11T00:36:57.0520486Z"
+}

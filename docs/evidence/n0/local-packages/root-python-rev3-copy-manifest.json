@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev3\\packages\\python-3.10.13-je-rev3-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\python-3.10.13-je-rev3-windows.tar.xz",
+    "bytes": 22351228,
+    "sha256": "12e9eb0ec73bb28a683b250a1d702bad06c963dc8d4c9f4823b8d54871599917"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev3\\packages\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+    "bytes": 105,
+    "sha256": "243c48858421237bf7acb0fb571ed458ab552a130de1f8fa77de114e8ea092dd"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev3\\packages\\python-3.10.13-je-rev3-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz",
+    "bytes": 22351228,
+    "sha256": "12e9eb0ec73bb28a683b250a1d702bad06c963dc8d4c9f4823b8d54871599917"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev3\\packages\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+    "bytes": 105,
+    "sha256": "243c48858421237bf7acb0fb571ed458ab552a130de1f8fa77de114e8ea092dd"
+  }
+]

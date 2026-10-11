@@ -1,0 +1,22 @@
+[
+  "-S",
+  "F:/JericoEngine/JericoEngine",
+  "-B",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+  "-G",
+  "Visual Studio 17 2022",
+  "-A",
+  "x64",
+  "-DLY_PACKAGE_SERVER_URLS:STRING=",
+  "-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps",
+  "-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+  "-DLY_PACKAGE_VALIDATE_CONTENTS=ON",
+  "-DLY_PACKAGE_VALIDATE_PACKAGE=ON",
+  "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+  "-DJE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3",
+  "-DJE_PYTHON_WHEELHOUSE:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse",
+  "-DCMAKE_MESSAGE_LOG_LEVEL:STRING=VERBOSE",
+  "-DFETCHCONTENT_SOURCE_DIR_MIMALLOC:PATH=F:/JericoEngine/Dependencies/mimalloc-3.5.2",
+  "-DFETCHCONTENT_SOURCE_DIR_RAPIDJSON:PATH=F:/JericoEngine/Dependencies/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+  "-DLY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+]

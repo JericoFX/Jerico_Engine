@@ -1,0 +1,18 @@
+{
+  "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\RunOpenSSLBuild.cmd.in",
+  "beforeSHA256": "63CEAB0BCCA9581F52657CADAEA1B4D16ECF2D6E236E5D76A60BE91BBA879550",
+  "afterSHA256": "957919A212C9DF9DE499C35733C1D6FB2CF3F0E240CB4E2FEE07DAB7A38551E4",
+  "onlyGuardLiteralChanged": true,
+  "oldGuard": "if not \"%VCToolsVersion%\"==\"14.44.35207\\\" exit /b 2",
+  "newGuard": "if not \"%VCToolsVersion%\"==\"14.44.35207\" exit /b 2",
+  "witness": "Luna native vcvars: VCToolsVersion=[14.44.35207], CL/NMAKE exact pinned toolset",
+  "otherPriorInputsUnchanged": 20,
+  "oldDriversAndOutputsPreserved": true,
+  "newDriver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\producer-candidate-inputs-rev3.cmake",
+  "newDriverSHA256": "7C45E7993362430FD081924C934EE889AB15315683EDA61C68AB642585CE3CDE",
+  "freshOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-build-rev3",
+  "buildFlagsFeaturesUnchanged": true,
+  "writerExecutedBuildTests": false,
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\source-freeze-openssl-vctools-version.json",
+  "freezeSHA256": "8DEF2ABEAE3AA8803CEB425F3D1BBE0F1643F1052EFC6D835E93ED4109C2C35C"
+}

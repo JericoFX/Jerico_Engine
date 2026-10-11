@@ -1,0 +1,41 @@
+{
+  "index": 222,
+  "source_path": "Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/SearchTex.dds",
+  "expected_sha256": "891e444b6dde7dd98f6902c805cd04e3469892aa1667c92f764d94789477ef3a",
+  "expected_bytes": 1152,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/SearchTex.dds",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:18.222977+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/SearchTex.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "1152",
+      "ETag": "\"891e444b6dde7dd98f6902c805cd04e3469892aa1667c92f764d94789477ef3a\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/SearchTex.dds",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:18.654488+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/PostProcessing/SearchTex.dds",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "1152",
+      "ETag": "\"891e444b6dde7dd98f6902c805cd04e3469892aa1667c92f764d94789477ef3a\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "891e444b6dde7dd98f6902c805cd04e3469892aa1667c92f764d94789477ef3a",
+  "actual_bytes": 1152,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\SearchTex.dds",
+  "status": "acquired and byte verified"
+}

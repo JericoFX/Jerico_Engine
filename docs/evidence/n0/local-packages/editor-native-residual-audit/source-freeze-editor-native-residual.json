@@ -1,0 +1,92 @@
+{
+  "scope": "Code/Editor native residual runner/UI closure and native Project Edit/Open",
+  "state": "inputs frozen for parent source review; compilation and runtime not verified",
+  "fileCount": 17,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.cpp",
+      "bytes": 119132,
+      "sha256": "A86557A3648C44A6B16EA730DC970ED0FF3952FDD04D2DB255A56ADE8E4E7460"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.h",
+      "bytes": 16899,
+      "sha256": "CA12AAE7222524610A305B48E20CF8BCB19F4324CEDF16589C766ED82F4F1F5C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Core\\EditorActionsHandler.cpp",
+      "bytes": 133235,
+      "sha256": "BF5EF58BBE1B46B8065EFBC4A09FFCE838ECD22923F796D5608E3B8DBF183A4B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEditPy.cpp",
+      "bytes": 20074,
+      "sha256": "9414D0E0285171005DA9560EE7864DD98E7B3B82FBD1D4948728E53468E2A3C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.cpp",
+      "bytes": 27335,
+      "sha256": "F07AE3130F7F97D54E153347CBD8B7B8638515798E3FB39FE327AEF3A1A85D02"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.h",
+      "bytes": 10964,
+      "sha256": "324A4D61E2564746BE012EF9EC8E88D18AB76B3F680AC57D096652CDCE3AC47F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\editor_lib_files.cmake",
+      "bytes": 22063,
+      "sha256": "49CEF54E1EAF61419E56334094F70228DA4D8D3F8D4B4F738F3166DD9E58492C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.cpp",
+      "bytes": 41058,
+      "sha256": "A955FB5A0099F0C111CE6B460020BE53A7966109AB124805C811422B449CA6DE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.h",
+      "bytes": 3112,
+      "sha256": "5518717FF0F36467BD13803DB6CA5C77AFCD65221478606FFB8FA56FF672C480"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorEventsBus.h",
+      "bytes": 4623,
+      "sha256": "285C347DAE880B7830266B3152F5F330B934870E3D63F48AF528F519EA89A3C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Lib\\Tests\\test_EditorPythonBindings.cpp",
+      "bytes": 15690,
+      "sha256": "11CE8AA271CB0C7BCE96D9D88CA32227B08D6B61D7A3470E406659B8335FF41B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.cpp",
+      "bytes": 13744,
+      "sha256": "3AFC7857A5C2F02DE71FD1CD74AC005ABC4EC0326DD0249A1600BB347EAE8FE7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.h",
+      "bytes": 4317,
+      "sha256": "B69727E20C41B6B45AB72D97BF7BC75EE825A3D3CE4BB32797CD62B984735F86"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.cpp",
+      "bytes": 23784,
+      "sha256": "448D1683CA30BA435D089C15FBEE7B21D80F54DF6BC84BC0DD1C0B26B846015F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.h",
+      "bytes": 2140,
+      "sha256": "763C13337668731CF02E9F330F642EFF19F5F47703CFF55F73CBF91BB6500734"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.ui",
+      "bytes": 8935,
+      "sha256": "158A8172118B1C325CC961C87D18823E736D14B510FA1EB16137582A0EF894DF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Commands\\CommandManager.cpp",
+      "bytes": 12772,
+      "sha256": "7D249A74DEC1E1A6E306FA11B7953D840AC9DC72FA7494ACC2973211A8AB9D9C"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "audit-summary.json",
+    "sha256": "272c992d0aa4164ba0da0170478a393c576a5f986693ff19145995e5f838d88b",
+    "bytes": 7830
+  },
+  {
+    "name": "inspect_source.py",
+    "sha256": "4b4cc58f31850dc6946d85d9a5d0897305e664c86ff053b8c4280e47e256cdef",
+    "bytes": 3825
+  },
+  {
+    "name": "source-acquisition.json",
+    "sha256": "47465adb11f26a0715e0c69702d43db1e91412a96c63d8d797dfa2724e14712b",
+    "bytes": 644
+  },
+  {
+    "name": "source-destination-head.json",
+    "sha256": "d9b8fa3623de62953451021edc4daecaae524b70fa47ac7dd2fd9648f4f1f198",
+    "bytes": 1328
+  },
+  {
+    "name": "source-tar-audit.json",
+    "sha256": "181d9ace74200d44f6904df198f85b85e4705cb128397e94f5315f7ffc2fea09",
+    "bytes": 88193
+  },
+  {
+    "name": "upstream-commit.json",
+    "sha256": "93e9de8917bc38227dd3107b84c8107cb77f987c5046d7e85f38d16bc6cfadb9",
+    "bytes": 5871
+  },
+  {
+    "name": "upstream-tree.json",
+    "sha256": "ed9d5bd8658a5bb325bbfeae8ac31dc5c4630b401a3739c1f0e5cea36462c944",
+    "bytes": 86344
+  }
+]

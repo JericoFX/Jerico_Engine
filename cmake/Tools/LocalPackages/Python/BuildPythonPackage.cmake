@@ -53,7 +53,7 @@ JE_python_verify_file("${JE_PYTHON_MSBUILD}" "${JE_PYTHON_MSBUILD_SHA256}" "MSBu
 if(NOT EXISTS "${JE_PYTHON_EXTERNALS_MANIFEST}" OR IS_DIRECTORY "${JE_PYTHON_EXTERNALS_MANIFEST}")
     message(FATAL_ERROR "JE local Python: external archive receipts are missing")
 endif()
-foreach(JE_REQUIRED IN ITEMS PCbuild/pcbuild.proj PCbuild/regen.targets PC/layout/main.py
+foreach(JE_REQUIRED IN ITEMS PCbuild/pcbuild.proj PCbuild/pythoncore.vcxproj PCbuild/regen.targets PC/layout/main.py
     Include/patchlevel.h LICENSE PC/crtlicense.txt Lib/ensurepip/_bundled/pip-23.0.1-py3-none-any.whl
     Lib/ensurepip/_bundled/setuptools-65.5.0-py3-none-any.whl)
     if(NOT EXISTS "${JE_PYTHON_SOURCE_WORK}/${JE_REQUIRED}")
@@ -143,6 +143,57 @@ foreach(JE_REQUIRED IN LISTS JE_REQUIRED_EXTERNAL_FILES)
     endif()
 endforeach()
 
+# Verify the exact upstream project and a unique target before preparing a work-copy patch.
+set(JE_CORE_PROJECT "${JE_PYTHON_SOURCE_WORK}/PCbuild/pythoncore.vcxproj")
+set(JE_CORE_UPSTREAM_SHA256 e7ff6ea2427ffe0c24605b5fa46cd09af5d55e536c47187c8dcc803dd5178b2a)
+JE_python_verify_file("${JE_CORE_PROJECT}" "${JE_CORE_UPSTREAM_SHA256}" "CPython pythoncore project")
+file(READ "${JE_CORE_PROJECT}" JE_CORE_CONTENT)
+string(FIND "${JE_CORE_CONTENT}" "\r\n" JE_CORE_CRLF)
+string(REPLACE "\r\n" "\n" JE_CORE_CONTENT "${JE_CORE_CONTENT}")
+set(JE_CORE_GIT_TARGET [=[  <Target Name="_GetBuildInfo" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <GIT Condition="$(GIT) == ''">git</GIT>
+      <_GIT>$(GIT)</_GIT>
+      <_GIT Condition="$(GIT.Contains(` `))">"$(GIT)"</_GIT>
+    </PropertyGroup>
+    <Message Text="Getting build info from $(_GIT)" Importance="high" />
+    <MakeDir Directories="$(IntDir)" Condition="!Exists($(IntDir))" />
+    <Exec Command="$(_GIT) name-rev --name-only HEAD &gt; &quot;$(IntDir)gitbranch.txt&quot;" ContinueOnError="true" />
+    <Exec Command="$(_GIT) rev-parse --short HEAD &gt; &quot;$(IntDir)gitversion.txt&quot;" ContinueOnError="true" />
+    <Exec Command="$(_GIT) describe --all --always --dirty &gt; &quot;$(IntDir)gittag.txt&quot;" ContinueOnError="true" />
+    <PropertyGroup>
+      <GitBranch Condition="Exists('$(IntDir)gitbranch.txt')">$([System.IO.File]::ReadAllText('$(IntDir)gitbranch.txt').Trim())</GitBranch>
+      <GitVersion Condition="Exists('$(IntDir)gitversion.txt')">$([System.IO.File]::ReadAllText('$(IntDir)gitversion.txt').Trim())</GitVersion>
+      <GitTag Condition="Exists('$(IntDir)gittag.txt')">$([System.IO.File]::ReadAllText('$(IntDir)gittag.txt').Trim())</GitTag>
+    </PropertyGroup>
+    <Message Text="Building $(GitTag):$(GitVersion) $(GitBranch)" Importance="high" />
+    <ItemGroup>
+      <ClCompile Include="..\Modules\getbuildinfo.c">
+        <PreprocessorDefinitions>GITVERSION="$(GitVersion)";GITTAG="$(GitTag)";GITBRANCH="$(GitBranch)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      </ClCompile>
+    </ItemGroup>
+  </Target>]=])
+string(FIND "${JE_CORE_CONTENT}" "${JE_CORE_GIT_TARGET}" JE_CORE_TARGET_OFFSET)
+if(JE_CORE_TARGET_OFFSET LESS 0)
+    message(FATAL_ERROR "JE local Python: upstream _GetBuildInfo target must match exactly once")
+endif()
+string(LENGTH "${JE_CORE_GIT_TARGET}" JE_CORE_TARGET_LENGTH)
+math(EXPR JE_CORE_AFTER_OFFSET "${JE_CORE_TARGET_OFFSET} + ${JE_CORE_TARGET_LENGTH}")
+string(SUBSTRING "${JE_CORE_CONTENT}" ${JE_CORE_AFTER_OFFSET} -1 JE_CORE_AFTER_TARGET)
+string(FIND "${JE_CORE_AFTER_TARGET}" "${JE_CORE_GIT_TARGET}" JE_CORE_DUPLICATE_TARGET)
+if(NOT JE_CORE_DUPLICATE_TARGET LESS 0)
+    message(FATAL_ERROR "JE local Python: upstream _GetBuildInfo target must match exactly once")
+endif()
+# Keep upstream messages/directories/compile definitions, skipping only Git I/O when all pins exist.
+set(JE_GIT_MISSING "Condition=\"'$(GitVersion)' == '' Or '$(GitTag)' == '' Or '$(GitBranch)' == ''\"")
+string(REPLACE "<Exec Command=" "<Exec ${JE_GIT_MISSING} Command=" JE_CORE_PATCHED_TARGET "${JE_CORE_GIT_TARGET}")
+string(REPLACE "    <PropertyGroup>\n      <GitBranch " "    <PropertyGroup ${JE_GIT_MISSING}>\n      <GitBranch "
+    JE_CORE_PATCHED_TARGET "${JE_CORE_PATCHED_TARGET}")
+string(REPLACE "${JE_CORE_GIT_TARGET}" "${JE_CORE_PATCHED_TARGET}" JE_CORE_PATCHED_CONTENT "${JE_CORE_CONTENT}")
+if(NOT JE_CORE_CRLF LESS 0)
+    string(REPLACE "\n" "\r\n" JE_CORE_PATCHED_CONTENT "${JE_CORE_PATCHED_CONTENT}")
+endif()
+
 # All acquisition and receipt checks precede executable invocation or source edits.
 set(ENV{PYTHONNOUSERSITE} 1)
 set(ENV{PYTHONPATH} "")
@@ -159,17 +210,22 @@ if(NOT JE_BOOTSTRAP_RESULT EQUAL 0)
     message(FATAL_ERROR "JE local Python: bootstrap must be the audited Python 3.12 generator")
 endif()
 file(MAKE_DIRECTORY "${JE_PYTHON_OUTPUT}")
+file(WRITE "${JE_CORE_PROJECT}" "${JE_CORE_PATCHED_CONTENT}")
+file(SHA256 "${JE_CORE_PROJECT}" JE_CORE_PATCHED_SHA256)
 file(GLOB JE_EXPAT_OVERLAY "${JE_EXPAT_LIB}/*.h" "${JE_EXPAT_LIB}/*.c")
 file(COPY ${JE_EXPAT_OVERLAY} DESTINATION "${JE_PYTHON_SOURCE_WORK}/Modules/expat")
 # MSBuild global properties override python.props, including its trailing-separator fix.
 string(REGEX REPLACE "/+$" "" JE_MSBUILD_EXTERNALS_DIR "${JE_PYTHON_EXTERNALS_DIR}")
 string(APPEND JE_MSBUILD_EXTERNALS_DIR "/")
 foreach(JE_CONFIGURATION IN ITEMS Debug Release)
+    # The guarded work-copy target preserves these explicit archive provenance properties.
     execute_process(COMMAND "${JE_PYTHON_MSBUILD}" "${JE_PYTHON_SOURCE_WORK}/PCbuild/pcbuild.proj"
         /t:Build /m /nologo /v:m "/p:Configuration=${JE_CONFIGURATION}" /p:Platform=x64
         /p:PlatformToolset=v143 /p:IncludeExternals=true /p:IncludeExtensions=true
         /p:IncludeCTypes=true /p:IncludeSSL=true /p:IncludeTkinter=true /p:IncludeTests=true
         /p:SupportSigning=false /p:KillPython=false "/p:ExternalsDir=${JE_MSBUILD_EXTERNALS_DIR}"
+        /p:GitVersion=49965601d6afedafe47cc85556d99b7a24981051
+        /p:GitTag=cpython-3.10.13-archive /p:GitBranch=archive
         "/p:PythonForBuild=\"${JE_PYTHON_BOOTSTRAP}\" -E -s"
         WORKING_DIRECTORY "${JE_PYTHON_SOURCE_WORK}" RESULT_VARIABLE JE_BUILD_RESULT)
     if(NOT JE_BUILD_RESULT EQUAL 0)
@@ -238,11 +294,13 @@ string(JSON JE_PROVENANCE SET "${JE_PROVENANCE}" expat
     "{\"version\":\"2.4.6\",\"upstreamBundledVersion\":\"2.5.0\",\"commit\":\"65a21f2b2a306d29b44e70264aca948aa0454219\",\"sha256\":\"${JE_PYTHON_EXPAT_SHA256}\",\"url\":\"${JE_EXPAT_URL}\"}")
 string(JSON JE_PROVENANCE SET "${JE_PROVENANCE}" tools
     "{\"toolset\":\"v143\",\"originalToolset\":\"v141\",\"bootstrapVersion\":\"3.12\",\"bootstrapExeSha256\":\"${JE_PYTHON_BOOTSTRAP_SHA256}\",\"msbuildExeSha256\":\"${JE_PYTHON_MSBUILD_SHA256}\"}")
+string(JSON JE_PROVENANCE SET "${JE_PROVENANCE}" buildInfo
+    "{\"project\":\"PCbuild/pythoncore.vcxproj\",\"upstreamSha256\":\"${JE_CORE_UPSTREAM_SHA256}\",\"patchedSha256\":\"${JE_CORE_PATCHED_SHA256}\",\"gitVersion\":\"49965601d6afedafe47cc85556d99b7a24981051\",\"gitTag\":\"cpython-3.10.13-archive\",\"gitBranch\":\"archive\",\"adaptation\":\"Skip Git queries and git-file reads only when all three explicit provenance values exist\"}")
 file(WRITE "${JE_STAGE}/JEProvenance.json" "${JE_PROVENANCE}\n")
 set(JE_PACKAGE_STAGE "${JE_STAGE}")
 set(JE_PACKAGE_OUTPUT "${JE_PYTHON_OUTPUT}/packages")
-set(JE_PACKAGE_NAME python-3.10.13-je-rev1-windows)
-set(JE_PACKAGE_VERSION 3.10.13-je-rev1)
+set(JE_PACKAGE_NAME python-3.10.13-je-rev3-windows)
+set(JE_PACKAGE_VERSION 3.10.13-je-rev3)
 set(JE_PACKAGE_LICENSE PSF-2.0)
 set(JE_PACKAGE_SOURCE_COMMIT 49965601d6afedafe47cc85556d99b7a24981051)
 set(JE_PACKAGE_SOURCE_SHA256 "${JE_PYTHON_SOURCE_SHA256}")

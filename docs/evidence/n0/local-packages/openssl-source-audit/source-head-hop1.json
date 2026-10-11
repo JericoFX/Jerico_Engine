@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-10T23:12:46.5839264Z",
+  "method": "HEAD",
+  "url": "https://github.com/openssl/openssl/releases/download/OpenSSL_1_1_1o/openssl-1.1.1o.tar.gz",
+  "queryRedacted": false,
+  "status": 302,
+  "autoRedirect": false,
+  "credentials": "none",
+  "contentLength": 0,
+  "contentType": "text/html; charset=utf-8",
+  "location": "https://release-assets.githubusercontent.com/github-production-release-asset/7634677/0b4cb256-d00c-4546-a531-9178848b09d3",
+  "locationQueryRedacted": true
+}

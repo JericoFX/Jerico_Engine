@@ -1,0 +1,5 @@
+[
+  "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=https://invalid.example/lz4.tar.gz",
+  "-P",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\echo-path-type.cmake"
+]

@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake:12 (message):
+  JE local package: JE_PACKAGE_SOURCE_COMMIT is required
+Call Stack (most recent call first):
+  package-metadata-release/release-witness.cmake:16 (include)
+
+

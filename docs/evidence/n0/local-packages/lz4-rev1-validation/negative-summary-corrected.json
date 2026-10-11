@@ -1,0 +1,170 @@
+{
+  "case_count": 7,
+  "pass_count": 7,
+  "all_pass": true,
+  "cases": [
+    {
+      "name": "required-missing",
+      "argv": [
+        "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/lz4-v1.9.4.tar.gz",
+        "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+        "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-required-missing",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+      ],
+      "argc": 5,
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "elapsed_seconds": 0.04,
+      "native_exit_code": 1,
+      "expected_diagnostic": "JE_LZ4_SOURCE_URL is required",
+      "diagnostic_match": true,
+      "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-required-missing",
+      "unexpected_output_created": false,
+      "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_unchanged": true,
+      "corrupt_fixture_sha256": null,
+      "pass": true
+    },
+    {
+      "name": "unc",
+      "argv": [
+        "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=//invalid.example/share/lz4.tar.gz",
+        "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+        "-DJE_LZ4_SOURCE_URL:STRING=https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+        "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-unc",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+      ],
+      "argc": 6,
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "elapsed_seconds": 0.023,
+      "native_exit_code": 1,
+      "expected_diagnostic": "JE_LZ4_SOURCE_ARCHIVE must be an absolute local path",
+      "diagnostic_match": true,
+      "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-unc",
+      "unexpected_output_created": false,
+      "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_unchanged": true,
+      "corrupt_fixture_sha256": null,
+      "pass": true
+    },
+    {
+      "name": "wrong-declared-hash",
+      "argv": [
+        "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/lz4-v1.9.4.tar.gz",
+        "-DJE_LZ4_SOURCE_SHA256:STRING=0000000000000000000000000000000000000000000000000000000000000000",
+        "-DJE_LZ4_SOURCE_URL:STRING=https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+        "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-wrong-hash",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+      ],
+      "argc": 6,
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "elapsed_seconds": 0.024,
+      "native_exit_code": 1,
+      "expected_diagnostic": "source URL/SHA256 must match",
+      "diagnostic_match": true,
+      "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-wrong-hash",
+      "unexpected_output_created": false,
+      "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_unchanged": true,
+      "corrupt_fixture_sha256": null,
+      "pass": true
+    },
+    {
+      "name": "wrong-url",
+      "argv": [
+        "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/lz4-v1.9.4.tar.gz",
+        "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+        "-DJE_LZ4_SOURCE_URL:STRING=https://invalid.example/lz4-v1.9.4.tar.gz",
+        "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-wrong-url",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+      ],
+      "argc": 6,
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "elapsed_seconds": 0.024,
+      "native_exit_code": 1,
+      "expected_diagnostic": "source URL/SHA256 must match",
+      "diagnostic_match": true,
+      "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-wrong-url",
+      "unexpected_output_created": false,
+      "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_unchanged": true,
+      "corrupt_fixture_sha256": null,
+      "pass": true
+    },
+    {
+      "name": "corrupt-archive-actual-hash",
+      "argv": [
+        "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-corrupt-source-fixture.bin",
+        "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+        "-DJE_LZ4_SOURCE_URL:STRING=https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+        "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-corrupt",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+      ],
+      "argc": 6,
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "elapsed_seconds": 0.025,
+      "native_exit_code": 1,
+      "expected_diagnostic": "lz4 source archive SHA256 mismatch",
+      "diagnostic_match": true,
+      "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-rev1-validation/guard-output-corrupt",
+      "unexpected_output_created": false,
+      "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_unchanged": true,
+      "corrupt_fixture_sha256": "ee145b259876958d4ed57d0302957290e94ef3524bff1cb28ab53cc057f14307",
+      "pass": true
+    },
+    {
+      "name": "existing-output-sentinel",
+      "argv": [
+        "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/lz4-v1.9.4.tar.gz",
+        "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+        "-DJE_LZ4_SOURCE_URL:STRING=https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+        "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-guard-existing-sentinel",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+      ],
+      "argc": 6,
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "elapsed_seconds": 0.024,
+      "native_exit_code": 1,
+      "expected_diagnostic": "output must be new; existing outputs are preserved",
+      "diagnostic_match": true,
+      "output_path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-guard-existing-sentinel",
+      "unexpected_output_created": false,
+      "sentinel_sha256_before": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_sha256_after": "47DC8BAE5436B0C226690E16B53635F38B9C1436CF5506798D54ED6C4414C6A4",
+      "sentinel_unchanged": true,
+      "corrupt_fixture_sha256": null,
+      "pass": true
+    },
+    {
+      "name": "uri-string-corrected",
+      "native_exit_code": 1,
+      "elapsed_seconds": 0.032,
+      "expected_diagnostic": "JE_LZ4_SOURCE_ARCHIVE must not be a URI",
+      "diagnostic_match": true,
+      "unexpected_output_created": false,
+      "sentinel_unchanged": true,
+      "pass": true
+    }
+  ],
+  "preserved_superseded_attempt": {
+    "name": "uri-filepath-coerced-historical",
+    "native_exit_code": 1,
+    "actual_diagnostic": "JE_LZ4_SOURCE_ARCHIVE must be an absolute local path",
+    "reason": "CMake -D FILEPATH coerces https:// to https:/ before the helper; separately confirmed by echo-path-type.cmake; not counted in corrected pass count."
+  },
+  "negative_fixture_paths": {
+    "corrupt": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-corrupt-source-fixture.bin",
+    "sentinel": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-guard-existing-sentinel"
+  }
+}

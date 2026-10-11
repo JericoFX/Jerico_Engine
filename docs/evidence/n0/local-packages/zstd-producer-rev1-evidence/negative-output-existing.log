@@ -1,0 +1,4 @@
+CMake Error at JericoEngine/cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake:24 (message):
+  JE local zstd: output must be new; existing outputs are preserved
+
+

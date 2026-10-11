@@ -1,0 +1,260 @@
+{
+  "scope": "static inspection only; upstream CMake not executed",
+  "files_inspected": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "1299ef7746bcb6c944ed36310a9427d3b5adbdb5158766dbde4c0fbee5e25bd1",
+      "bytes": 7612
+    },
+    {
+      "path": "cmake/FindOpenMesh.cmake",
+      "sha256": "f0893cd0dde846732f2ee4567cbf1878e6b5938687289b77e581b9002a3575af",
+      "bytes": 6283
+    },
+    {
+      "path": "cmake/fixbundle.cmake.in",
+      "sha256": "06100d13aa9f46f3d9502d3797be3f8e980f3570fa237190be807445a6600698",
+      "bytes": 2011
+    },
+    {
+      "path": "cmake/fixbundle.cmake.win.in",
+      "sha256": "16a020dd3b1f9461e3df63412da8757e9b36abd674d6adbf20185e7d50fb1d05",
+      "bytes": 724
+    },
+    {
+      "path": "cmake/OpenMeshPackage.cmake",
+      "sha256": "c287d24e5dd76946d9f222c8e0b350551ec2882fe9389610d6ce5d70f01ab7ed",
+      "bytes": 5999
+    },
+    {
+      "path": "Doc/CMakeLists.txt",
+      "sha256": "354de8f47e2178aabf9c3bf6e9b3db55f881fcfa17e3355bb64cdc1a5c1a4123",
+      "bytes": 348
+    },
+    {
+      "path": "src/Benchmark/CMakeLists.txt",
+      "sha256": "ff2578e0594e8b609432d6a9d0a13c13c50ad6475d5067ce3fde0c6a070f8c06",
+      "bytes": 315
+    },
+    {
+      "path": "src/Unittests/CMakeLists.txt",
+      "sha256": "416f918be03c6c56c368e7f0493d9cac4dd099dac468b6a40a383d7130a2f0d0",
+      "bytes": 8099
+    },
+    {
+      "path": "src/OpenMesh/Apps/CMakeLists.txt",
+      "sha256": "098e07f46ec17cb6480f125794fcd4a10740c9775ad2162cf201a5f60d21c3d2",
+      "bytes": 3456
+    },
+    {
+      "path": "src/OpenMesh/Core/CMakeLists.txt",
+      "sha256": "2d3730bf486ea46f438f8fb61a845744c32e5f498facfdbe9c33bd8f7a9f53ee",
+      "bytes": 7725
+    },
+    {
+      "path": "src/OpenMesh/Tools/CMakeLists.txt",
+      "sha256": "f884894e789114cb2af3625d4b8a6e6bb9301731ebb4bd04a4ca727ef2775d84",
+      "bytes": 7810
+    },
+    {
+      "path": "src/OpenMesh/Apps/Dualizer/CMakeLists.txt",
+      "sha256": "67ed5ad64dcaa0c0fccac3aa95940030357497eda42b7551c5a75c2f62d8c377",
+      "bytes": 130
+    },
+    {
+      "path": "src/OpenMesh/Apps/mconvert/CMakeLists.txt",
+      "sha256": "b7500ca8f9cdde53494974b030b5804a7afabf03854a9930cfb3181af3bf1e92",
+      "bytes": 130
+    },
+    {
+      "path": "src/OpenMesh/Apps/ProgViewer/CMakeLists.txt",
+      "sha256": "4d49163f23ea118b8746c8d3fd9ca8f31d0e9a3bb9ef18848fa6dbdbee3e5f65",
+      "bytes": 701
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/CMakeLists.txt",
+      "sha256": "ecd7a0e04bc53c0510aa2099e9ebefb6ed901246e7c126bc14cf288edd7462e6",
+      "bytes": 591
+    },
+    {
+      "path": "src/OpenMesh/Apps/Smoothing/CMakeLists.txt",
+      "sha256": "fdc72752444c89994bc2992a6df2e3d2a5bc91b7f9d9033ef5d5c1f54af4c64e",
+      "bytes": 130
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Analyzer/CMakeLists.txt",
+      "sha256": "4fc4bf0a58bda1502870bdd8fafe868e631366c1bc81007399aa293f7c50ee31",
+      "bytes": 134
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/mkbalancedpm/CMakeLists.txt",
+      "sha256": "6b18ed467dd0dfa4cd9b7a17b616b644987a79118aaa9af56c0ebc0032949507",
+      "bytes": 142
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Synthesizer/CMakeLists.txt",
+      "sha256": "20c726c6ecc748e62f6db7bfc2830fb8266a7b616a5b60500077cfd81d7bb211",
+      "bytes": 621
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/commandlineAdaptiveSubdivider/CMakeLists.txt",
+      "sha256": "975c5a8e000be96f693426a82e7d9a43b76320e78fec0d8201edf919293e318c",
+      "bytes": 186
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/commandlineSubdivider/CMakeLists.txt",
+      "sha256": "b92dc45f2a9b66c14a987e52d488566c6ac1b89e26bbe7736dd2c45c01962b59",
+      "bytes": 161
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/SubdividerGui/CMakeLists.txt",
+      "sha256": "eb780601f41d96090510e4891bfb9b16dbaf26f91db5df3f6c5bd40dfdc5ccbf",
+      "bytes": 755
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/commandlineDecimater/CMakeLists.txt",
+      "sha256": "01b2c6237e3fbc8df726cd8b988e34d6d7d23f70d1225a5c43881b25638306d7",
+      "bytes": 158
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/DecimaterGui/CMakeLists.txt",
+      "sha256": "a57e344e51dd090ed9ebe53ef286e24bf799639b0b39b2e69b70510d999650c8",
+      "bytes": 783
+    },
+    {
+      "path": "Doc/Tutorial/CMakeLists.txt-external",
+      "sha256": "c85002ffeec78082f690c424821cf5a3b6463bef06b0c11b923754ca65fc8d06",
+      "bytes": 240
+    },
+    {
+      "path": "Doc/Tutorial/CMakeLists.txt-internal",
+      "sha256": "346c0c5131ec96dbba13f2e02910d5e35a29bd5c63ee7048b9042b8f5bb9c7db",
+      "bytes": 358
+    },
+    {
+      "path": "cmake-library/CI/CMakeLists.txt",
+      "sha256": "e8a907ee7bbb7c9d40cc8eff76997fb7219f6a4e989e4f89f25e7a692ed1c8af",
+      "bytes": 410
+    },
+    {
+      "path": "cmake-library/finders/FindGMM.cmake",
+      "sha256": "8502376642107ef9e65e1f860cb593e480f4cb4efb2e2763abbc6279a4c1c55a",
+      "bytes": 684
+    },
+    {
+      "path": "cmake-library/finders/FindGMSH.cmake",
+      "sha256": "9d0b88a15615b3cd956b09222dafc3788aea173e8f2bfddc57761522c1a4c15a",
+      "bytes": 882
+    },
+    {
+      "path": "cmake-library/finders/FindGurobi.cmake",
+      "sha256": "955fa719b74f37fc6057446e296b7a4c2cde1ba2934d3f561328c87c93d64fe8",
+      "bytes": 4220
+    },
+    {
+      "path": "cmake-library/finders/FindLPSolve.cmake",
+      "sha256": "c1cb899e79e0f677fe933f25658d8a5874044c94de7cd0f8b86ab0f89ebad2c9",
+      "bytes": 1438
+    },
+    {
+      "path": "cmake-library/finders/FindMosek.cmake",
+      "sha256": "d68038d8213abaca9863fb57b5a3cfedd658d1c0e9becfb3d96e0c7a67c98343",
+      "bytes": 2781
+    },
+    {
+      "path": "cmake-library/VCI/MSVCMacros.cmake",
+      "sha256": "f87cca1ed156e6da0eba1488f5ef74a145435fe7adc3fedf04075fbed43a360b",
+      "bytes": 528
+    },
+    {
+      "path": "cmake-library/VCI/VCICommon.cmake",
+      "sha256": "f039d76fca29c5841d469abd5c48bdd08ae0398df3cdba545020b32e9ad97851",
+      "bytes": 11883
+    },
+    {
+      "path": "cmake-library/VCI/VCICompiler.cmake",
+      "sha256": "20fe9d5faef41b37f1c7f1a63eff49082a490382f58f7907599463efd74bbc0c",
+      "bytes": 9149
+    },
+    {
+      "path": "cmake-library/VCI/VCIDoxygen.cmake",
+      "sha256": "88264d733775e84dc71b2d89dd8c1b888f261acf4488b1bb09678cfdf851b5d5",
+      "bytes": 7569
+    },
+    {
+      "path": "cmake-library/VCI/VCIOutput.cmake",
+      "sha256": "2905738731d78a577a3452ebf8b84b8f9652e0f74148d90ee10283059ab4fd11",
+      "bytes": 2448
+    },
+    {
+      "path": "cmake-library/VCI/VCIPaths.cmake",
+      "sha256": "661d36950bff1e5fb9864c4f54d570d6e12be8265dbd559ed193c9e4b52b6531",
+      "bytes": 2317
+    },
+    {
+      "path": "cmake-library/VCI/VCIQt.cmake",
+      "sha256": "b3b01f917e14bafc378035ec74f87950d50244b18aae4b265608ffc4a60443a4",
+      "bytes": 11466
+    },
+    {
+      "path": "cmake-library/CI/tests/CMakeLists.txt",
+      "sha256": "0d5887b932b854a3b054f73aec21476ab86c9eee042e1d5a03e2b5642558635a",
+      "bytes": 747
+    },
+    {
+      "path": "cmake-library/CI/tests/GMM/CMakeLists.txt",
+      "sha256": "4b8937644d5f7202473628cb288efdb16766a448157aca4dc51a7d46e96760f7",
+      "bytes": 159
+    },
+    {
+      "path": "cmake-library/CI/tests/Gurobi/CMakeLists.txt",
+      "sha256": "c21ec7724d388c592ea6c8047f7c0d0db5e89b493b966efd3bdb67459624592e",
+      "bytes": 301
+    },
+    {
+      "path": "cmake-library/CI/tests/Mosek/CMakeLists.txt",
+      "sha256": "00391a5fc25dae4f003ebef48e47e633485260f978c90dd487fd07ba208a9994",
+      "bytes": 287
+    }
+  ],
+  "patterns": {
+    "fetchcontent": "\\bFetchContent(?:_\\w+)?\\b",
+    "externalproject": "\\bExternalProject(?:_\\w+)?\\b",
+    "file_download": "\\bfile\\s*\\(\\s*DOWNLOAD\\b",
+    "execute_process": "\\bexecute_process\\s*\\(",
+    "git_acquisition": "\\bgit\\s+(?:clone|submodule)\\b",
+    "submodule_reference": "\\bsubmodule\\b"
+  },
+  "hits": {
+    "fetchcontent": [
+      {
+        "path": "src/Unittests/CMakeLists.txt",
+        "line": 77,
+        "text": "include(FetchContent)"
+      },
+      {
+        "path": "src/Unittests/CMakeLists.txt",
+        "line": 78,
+        "text": "FetchContent_Declare("
+      },
+      {
+        "path": "src/Unittests/CMakeLists.txt",
+        "line": 86,
+        "text": "FetchContent_MakeAvailable(googletest)"
+      }
+    ],
+    "externalproject": [],
+    "file_download": [],
+    "execute_process": [],
+    "git_acquisition": [],
+    "submodule_reference": []
+  },
+  "reachable_downloads_with_current_wrapper_options": [],
+  "conditional_download": "src/Unittests/CMakeLists.txt FetchContent googletest, OPENMESH_BUILD_UNIT_TESTS ON only; root adds Unittests only when CMAKE_PROJECT_NAME matches OpenMesh",
+  "bundled_cmake_library": "complete files in archive; no Git/submodule acquisition required",
+  "git_metadata": {
+    "gitmodules_present": false,
+    "cmake_library_git_text": "gitdir: ../.git/modules/cmake-library",
+    "interpretation": "regular inert metadata file pointing inside source root at .git/modules/cmake-library; referenced directory absent, no Git invocation in inspected CMake scripts"
+  }
+}

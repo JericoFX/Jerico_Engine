@@ -1,0 +1,9 @@
+{
+  "immutable_source_files_verified": 3093,
+  "source_files_with_notices": 2229,
+  "additional_notice_files_preserved_full_bytes": 157,
+  "build_input_files_scanned": 127,
+  "build_inputs_with_potential_network_markers": [],
+  "scope": "Static source inspection only; markers are evidence for review, not executed behavior or final legal/build acceptance",
+  "all_original_notice_bytes_remain_in_immutable_snapshot": true
+}

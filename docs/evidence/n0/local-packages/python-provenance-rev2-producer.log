@@ -1,0 +1,995 @@
+3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]
+
+  Generated sources are up to date
+  Getting build info from git
+  Building heads/development-dirty:6eb79db287 development
+  _abc.c
+  _bisectmodule.c
+  blake2module.c
+  blake2b_impl.c
+  blake2s_impl.c
+  _codecsmodule.c
+  _collectionsmodule.c
+  _contextvarsmodule.c
+  _csv.c
+  _functoolsmodule.c
+  _heapqmodule.c
+  _json.c
+  _localemodule.c
+  _lsprof.c
+  _math.c
+  _pickle.c
+  _randommodule.c
+  sha3module.c
+  _sre.c
+  _stat.c
+  Generando c├│digo...
+  Compilando...
+  _struct.c
+  _weakref.c
+  arraymodule.c
+  atexitmodule.c
+  audioop.c
+  binascii.c
+  cmathmodule.c
+  _datetimemodule.c
+  errnomodule.c
+  faulthandler.c
+  gcmodule.c
+  itertoolsmodule.c
+  main.c
+  mathmodule.c
+  md5module.c
+  mmapmodule.c
+  _opcode.c
+  _operator.c
+  posixmodule.c
+  rotatingtree.c
+  Generando c├│digo...
+  Compilando...
+  sha1module.c
+  sha256module.c
+  sha512module.c
+  signalmodule.c
+  _statisticsmodule.c
+  symtablemodule.c
+  _threadmodule.c
+  _tracemalloc.c
+  timemodule.c
+  xxsubtype.c
+  _xxsubinterpretersmodule.c
+  fileio.c
+  bytesio.c
+  stringio.c
+  bufferedio.c
+  iobase.c
+  textio.c
+  winconsoleio.c
+  _iomodule.c
+  _codecs_cn.c
+  Generando c├│digo...
+  Compilando...
+  _codecs_hk.c
+  _codecs_iso2022.c
+  _codecs_jp.c
+  _codecs_kr.c
+  _codecs_tw.c
+  multibytecodec.c
+  _winapi.c
+  abstract.c
+  accu.c
+  boolobject.c
+  bytearrayobject.c
+  bytes_methods.c
+  bytesobject.c
+  call.c
+  capsule.c
+  cellobject.c
+  classobject.c
+  codeobject.c
+  complexobject.c
+  descrobject.c
+  Generando c├│digo...
+  Compilando...
+  dictobject.c
+  enumobject.c
+  exceptions.c
+  fileobject.c
+  floatobject.c
+  frameobject.c
+  funcobject.c
+  genericaliasobject.c
+  genobject.c
+  interpreteridobject.c
+  iterobject.c
+  listobject.c
+  longobject.c
+  memoryobject.c
+  methodobject.c
+  moduleobject.c
+  namespaceobject.c
+  object.c
+  obmalloc.c
+  odictobject.c
+  Generando c├│digo...
+  Compilando...
+  picklebufobject.c
+  rangeobject.c
+  setobject.c
+  sliceobject.c
+  structseq.c
+  tupleobject.c
+  typeobject.c
+  unicodectype.c
+  unicodeobject.c
+  unionobject.c
+  weakrefobject.c
+  myreadline.c
+  tokenizer.c
+  token.c
+  pegen.c
+  parser.c
+  string_parser.c
+  peg_api.c
+  invalid_parameter_handler.c
+  winreg.c
+  Generando c├│digo...
+  Compilando...
+  config.c
+  getpathp.c
+  msvcrtmodule.c
+  pyhash.c
+  _warnings.c
+  asdl.c
+  ast.c
+  ast_opt.c
+  ast_unparse.c
+  bltinmodule.c
+  bootstrap_hash.c
+  ceval.c
+  codecs.c
+  compile.c
+  context.c
+  dynamic_annotations.c
+  dynload_win.c
+  errors.c
+  fileutils.c
+  formatter_unicode.c
+  Generando c├│digo...
+  Compilando...
+  frozen.c
+  future.c
+  getargs.c
+  getcompiler.c
+  getcopyright.c
+  getopt.c
+  getplatform.c
+  getversion.c
+  hamt.c
+  hashtable.c
+  import.c
+  importdl.c
+  initconfig.c
+  marshal.c
+  modsupport.c
+  mysnprintf.c
+  mystrtoul.c
+  pathconfig.c
+  preconfig.c
+  pyarena.c
+  Generando c├│digo...
+  Compilando...
+  pyctype.c
+  pyfpe.c
+  pylifecycle.c
+  pymath.c
+  pytime.c
+  pystate.c
+  pystrcmp.c
+  pystrhex.c
+  pystrtod.c
+  dtoa.c
+  Python-ast.c
+  pythonrun.c
+  suggestions.c
+  structmember.c
+  symtable.c
+  sysmodule.c
+  thread.c
+  traceback.c
+  zlibmodule.c
+  adler32.c
+  Generando c├│digo...
+  Compilando...
+  compress.c
+  crc32.c
+  infback.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  uncompr.c
+  zutil.c
+  dl_nt.c
+  Generando c├│digo...
+  deflate.c
+  getbuildinfo.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python310_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python310_d.exp
+  pythoncore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python310_d.dll
+  _ctypes_test.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_test_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_test_d.exp
+  _ctypes_test.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_test_d.pyd
+  _testbuffer.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testbuffer_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testbuffer_d.exp
+  _testbuffer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testbuffer_d.pyd
+  _testcapimodule.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testcapi_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testcapi_d.exp
+  _testcapi.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testcapi_d.pyd
+  _testinternalcapi.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testinternalcapi_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testinternalcapi_d.exp
+  _testinternalcapi.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testinternalcapi_d.pyd
+  _testembed.c
+  _testembed.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testembed_d.exe
+  _testimportmultiple.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testimportmultiple_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testimportmultiple_d.exp
+  _testimportmultiple.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testimportmultiple_d.pyd
+  _testmultiphase.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testmultiphase_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testmultiphase_d.exp
+  _testmultiphase.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testmultiphase_d.pyd
+  _testconsole.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testconsole_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testconsole_d.exp
+  _testconsole.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testconsole_d.pyd
+  python3dll.c
+  _bz2module.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python3_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python3_d.exp
+  blocksort.c
+  python3dll.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python3_d.dll
+  tuklib_cpucores.c
+  bzlib.c
+  sqlite3.c
+  tuklib_physmem.c
+  compress.c
+  pyshellext.cpp
+  launcher.c
+  launcher.c
+  launcher.c
+  _uuidmodule.c
+  _elementtree.c
+  Performing Custom Build Tools
+  _ctypes.c
+  winsound.c
+  overlapped.c
+  _asynciomodule.c
+   Assembling: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\Modules\_decimal\libmpdec\vcdiv64.asm
+  multiprocessing.c
+  pyexpat.c
+  _queuemodule.c
+  unicodedata.c
+  _zoneinfo.c
+  check.c
+  launcher.c
+  xmlparse.c
+  xmlparse.c
+  selectmodule.c
+  _msi.c
+  crctable.c
+  crc32_fast.c
+  semaphore.c
+  _decimal.c
+  xmlrole.c
+  xmlrole.c
+  callbacks.c
+  basearith.c
+  crc32_table.c
+  constants.c
+  Generando c├│digo...
+  xmltok.c
+  xmltok.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_asyncio_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_asyncio_d.exp
+  decompress.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_queue_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_queue_d.exp
+  context.c
+  crc64_fast.c
+  convolute.c
+  crt.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_zoneinfo_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_zoneinfo_d.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_uuid_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_uuid_d.exp
+  Generando c├│digo...
+  Generando c├│digo...
+  crc64_table.c
+  _queue.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_queue_d.pyd
+  difradix2.c
+  _asyncio.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_asyncio_d.pyd
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\winsound_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\winsound_d.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_overlapped_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_overlapped_d.exp
+  callproc.c
+  _uuid.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_uuid_d.pyd
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\select_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\select_d.exp
+  _zoneinfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_zoneinfo_d.pyd
+  fnt.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_multiprocessing_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_multiprocessing_d.exp
+  huffman.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_msi_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_msi_d.exp
+  sha256.c
+  winsound.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\winsound_d.pyd
+  fourstep.c
+  _overlapped.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_overlapped_d.pyd
+  select.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\select_d.pyd
+  _hashopenssl.c
+  io.c
+  _multiprocessing.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_multiprocessing_d.pyd
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\unicodedata_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\unicodedata_d.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\sqlite3_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\sqlite3_d.exp
+  _tkinter.c
+  _msi.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_msi_d.pyd
+  socketmodule.c
+  alone_decoder.c
+  mpalloc.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyexpat_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyexpat_d.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_elementtree_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_elementtree_d.exp
+  unicodedata.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\unicodedata_d.pyd
+  mpdecimal.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyshellext_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyshellext_d.exp
+  randtable.c
+  cfield.c
+  pyexpat.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyexpat_d.pyd
+  alone_encoder.c
+  numbertheory.c
+  _elementtree.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_elementtree_d.pyd
+  venvwlauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\venvwlauncher_d.exe
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_hashlib_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_hashlib_d.exp
+  sqlite3.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\sqlite3_d.dll
+  venvlauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\venvlauncher_d.exe
+  pywlauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyw_d.exe
+  sixstep.c
+  transpose.c
+  pylauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\py_d.exe
+  cache.c
+  pyshellext.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyshellext_d.dll
+  auto_decoder.c
+  tkappinit.c
+  Generando c├│digo...
+  _hashlib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_hashlib_d.pyd
+  Generando c├│digo...
+  Generando c├│digo...
+  connection.c
+  block_buffer_decoder.c
+  malloc_closure.c
+  cursor.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_socket_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_socket_d.exp
+  microprotocols.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_tkinter_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_tkinter_d.exp
+  block_buffer_encoder.c
+  _socket.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_socket_d.pyd
+  module.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_bz2_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_bz2_d.exp
+  _tkinter.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_tkinter_d.pyd
+  block_decoder.c
+  _ssl.c
+  _bz2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_bz2_d.pyd
+  prepare_protocol.c
+  stgdict.c
+  block_encoder.c
+  row.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_decimal_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_decimal_d.exp
+  statement.c
+  block_header_decoder.c
+  _decimal.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_decimal_d.pyd
+  util.c
+  Generando c├│digo...
+  block_header_encoder.c
+  Generando c├│digo...
+  block_util.c
+  applink.c
+  common.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_sqlite3_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_sqlite3_d.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_d.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ssl_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ssl_d.exp
+  easy_buffer_encoder.c
+  _sqlite3.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_sqlite3_d.pyd
+  _ctypes.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_d.pyd
+  _ssl.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ssl_d.pyd
+  Generando c├│digo...
+  Compilando...
+  easy_decoder_memusage.c
+  easy_encoder.c
+  easy_encoder_memusage.c
+  easy_preset.c
+  filter_buffer_decoder.c
+  filter_buffer_encoder.c
+  filter_common.c
+  filter_decoder.c
+  filter_encoder.c
+  filter_flags_decoder.c
+  filter_flags_encoder.c
+  hardware_cputhreads.c
+  hardware_physmem.c
+  index.c
+  index_decoder.c
+  index_encoder.c
+  index_hash.c
+  outqueue.c
+  stream_buffer_decoder.c
+  stream_buffer_encoder.c
+  Generando c├│digo...
+  Compilando...
+  stream_decoder.c
+  stream_encoder.c
+  stream_encoder_mt.c
+  stream_flags_common.c
+  stream_flags_decoder.c
+  stream_flags_encoder.c
+  vli_decoder.c
+  vli_encoder.c
+  vli_size.c
+  delta_common.c
+  delta_decoder.c
+  delta_encoder.c
+  fastpos_table.c
+  lzma2_decoder.c
+  lzma2_encoder.c
+  lzma_decoder.c
+  lzma_encoder.c
+  lzma_encoder_optimum_fast.c
+  lzma_encoder_optimum_normal.c
+  lzma_encoder_presets.c
+  Generando c├│digo...
+  Compilando...
+  lz_decoder.c
+  lz_encoder.c
+  lz_encoder_mf.c
+  price_table.c
+  arm.c
+  armthumb.c
+  ia64.c
+  powerpc.c
+  simple_coder.c
+  simple_decoder.c
+  simple_encoder.c
+  sparc.c
+  x86.c
+  Generando c├│digo...
+  liblzma.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\liblzma_d.lib
+  _lzmamodule.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_lzma_d.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_lzma_d.exp
+  _lzma.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_lzma_d.pyd
+  _freeze_importlib.c
+  _freeze_importlib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_freeze_importlib_d.exe
+  python.c
+  python.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python_d.exe
+  C:\WINDOWS\SYSTEM32\ucrtbased.dll is version 10.0.26100.7705
+  Wrote F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\LICENSE.txt
+  WinMain.c
+  pythonw.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pythonw_d.exe
+
+  Generated sources are up to date
+  Getting build info from git
+  Building heads/development-dirty:6eb79db287 development
+  _abc.c
+  _bisectmodule.c
+  blake2module.c
+  blake2b_impl.c
+  blake2s_impl.c
+  _codecsmodule.c
+  _collectionsmodule.c
+  _contextvarsmodule.c
+  _csv.c
+  _functoolsmodule.c
+  _heapqmodule.c
+  _json.c
+  _localemodule.c
+  _lsprof.c
+  _math.c
+  _pickle.c
+  _randommodule.c
+  sha3module.c
+  _sre.c
+  _stat.c
+  Compilando...
+  _struct.c
+  _weakref.c
+  arraymodule.c
+  atexitmodule.c
+  audioop.c
+  binascii.c
+  cmathmodule.c
+  _datetimemodule.c
+  errnomodule.c
+  faulthandler.c
+  gcmodule.c
+  itertoolsmodule.c
+  main.c
+  mathmodule.c
+  md5module.c
+  mmapmodule.c
+  _opcode.c
+  _operator.c
+  posixmodule.c
+  rotatingtree.c
+  Compilando...
+  sha1module.c
+  sha256module.c
+  sha512module.c
+  signalmodule.c
+  _statisticsmodule.c
+  symtablemodule.c
+  _threadmodule.c
+  _tracemalloc.c
+  timemodule.c
+  xxsubtype.c
+  _xxsubinterpretersmodule.c
+  fileio.c
+  bytesio.c
+  stringio.c
+  bufferedio.c
+  iobase.c
+  textio.c
+  winconsoleio.c
+  _iomodule.c
+  _codecs_cn.c
+  Compilando...
+  _codecs_hk.c
+  _codecs_iso2022.c
+  _codecs_jp.c
+  _codecs_kr.c
+  _codecs_tw.c
+  multibytecodec.c
+  _winapi.c
+  abstract.c
+  accu.c
+  boolobject.c
+  bytearrayobject.c
+  bytes_methods.c
+  bytesobject.c
+  call.c
+  capsule.c
+  cellobject.c
+  classobject.c
+  codeobject.c
+  complexobject.c
+  descrobject.c
+  Compilando...
+  dictobject.c
+  enumobject.c
+  exceptions.c
+  fileobject.c
+  floatobject.c
+  frameobject.c
+  funcobject.c
+  genericaliasobject.c
+  genobject.c
+  interpreteridobject.c
+  iterobject.c
+  listobject.c
+  longobject.c
+  memoryobject.c
+  methodobject.c
+  moduleobject.c
+  namespaceobject.c
+  object.c
+  obmalloc.c
+  odictobject.c
+  Compilando...
+  picklebufobject.c
+  rangeobject.c
+  setobject.c
+  sliceobject.c
+  structseq.c
+  tupleobject.c
+  typeobject.c
+  unicodectype.c
+  unicodeobject.c
+  unionobject.c
+  weakrefobject.c
+  myreadline.c
+  tokenizer.c
+  token.c
+  pegen.c
+  parser.c
+  string_parser.c
+  peg_api.c
+  invalid_parameter_handler.c
+  winreg.c
+  Compilando...
+  config.c
+  getpathp.c
+  msvcrtmodule.c
+  pyhash.c
+  _warnings.c
+  asdl.c
+  ast.c
+  ast_opt.c
+  ast_unparse.c
+  bltinmodule.c
+  bootstrap_hash.c
+  ceval.c
+  codecs.c
+  compile.c
+  context.c
+  dynamic_annotations.c
+  dynload_win.c
+  errors.c
+  fileutils.c
+  formatter_unicode.c
+  Compilando...
+  frozen.c
+  future.c
+  getargs.c
+  getcompiler.c
+  getcopyright.c
+  getopt.c
+  getplatform.c
+  getversion.c
+  hamt.c
+  hashtable.c
+  import.c
+  importdl.c
+  initconfig.c
+  marshal.c
+  modsupport.c
+  mysnprintf.c
+  mystrtoul.c
+  pathconfig.c
+  preconfig.c
+  pyarena.c
+  Compilando...
+  pyctype.c
+  pyfpe.c
+  pylifecycle.c
+  pymath.c
+  pytime.c
+  pystate.c
+  pystrcmp.c
+  pystrhex.c
+  pystrtod.c
+  dtoa.c
+  Python-ast.c
+  pythonrun.c
+  suggestions.c
+  structmember.c
+  symtable.c
+  sysmodule.c
+  thread.c
+  traceback.c
+  zlibmodule.c
+  adler32.c
+  Compilando...
+  compress.c
+  crc32.c
+  infback.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  uncompr.c
+  zutil.c
+  dl_nt.c
+  deflate.c
+  getbuildinfo.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python310.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python310.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  pythoncore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python310.dll
+  _ctypes_test.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_test.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_test.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _ctypes_test.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes_test.pyd
+  _testbuffer.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testbuffer.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testbuffer.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testbuffer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testbuffer.pyd
+  _testcapimodule.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testcapi.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testcapi.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testcapi.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testcapi.pyd
+  _testinternalcapi.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testinternalcapi.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testinternalcapi.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testinternalcapi.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testinternalcapi.pyd
+  _testembed.c
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testembed.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testembed.exe
+  _testimportmultiple.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testimportmultiple.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testimportmultiple.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testimportmultiple.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testimportmultiple.pyd
+  _testmultiphase.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testmultiphase.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testmultiphase.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testmultiphase.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testmultiphase.pyd
+  _testconsole.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testconsole.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testconsole.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _testconsole.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_testconsole.pyd
+  python3dll.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python3.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python3.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  python3dll.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python3.dll
+  xxlimited.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\xxlimited.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\xxlimited.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  xxlimited.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\xxlimited.pyd
+  xxlimited_35.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\xxlimited_35.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\xxlimited_35.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  xxlimited_35.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\xxlimited_35.pyd
+  launcher.c
+  launcher.c
+  Performing Custom Build Tools
+  _msi.c
+  multiprocessing.c
+  _asynciomodule.c
+  pyexpat.c
+  _queuemodule.c
+  pyshellext.cpp
+   Assembling: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\Modules\_decimal\libmpdec\vcdiv64.asm
+  launcher.c
+  _zoneinfo.c
+  _uuidmodule.c
+  launcher.c
+  winsound.c
+  _bz2module.c
+  overlapped.c
+  _elementtree.c
+  selectmodule.c
+  unicodedata.c
+  _ctypes.c
+  _decimal.c
+  tuklib_cpucores.c
+  xmlparse.c
+  sqlite3.c
+  xmlparse.c
+  semaphore.c
+  basearith.c
+  xmlrole.c
+  constants.c
+  xmlrole.c
+  blocksort.c
+  tuklib_physmem.c
+  callbacks.c
+  context.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_asyncio.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_asyncio.exp
+  Generando c├│digo
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_queue.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_queue.exp
+  Generando c├│digo
+  xmltok.c
+  convolute.c
+  Generaci├│n de c├│digo finalizada
+  xmltok.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\select.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\select.exp
+  crt.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_zoneinfo.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_zoneinfo.exp
+  Generando c├│digo
+  Generando c├│digo
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_msi.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_msi.exp
+  Generando c├│digo
+  difradix2.c
+  Generaci├│n de c├│digo finalizada
+  _queue.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_queue.pyd
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_uuid.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_uuid.exp
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\winsound.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\winsound.exp
+  Generando c├│digo
+  Generando c├│digo
+  bzlib.c
+  fnt.c
+  Generaci├│n de c├│digo finalizada
+  check.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_overlapped.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_overlapped.exp
+  Generando c├│digo
+  Generando c├│digo
+  select.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\select.pyd
+  Generaci├│n de c├│digo finalizada
+  fourstep.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_multiprocessing.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_multiprocessing.exp
+  Generaci├│n de c├│digo finalizada
+  Generando c├│digo
+  Generando c├│digo
+  socketmodule.c
+  Generando c├│digo
+  Generando c├│digo
+  _uuid.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_uuid.pyd
+  callproc.c
+  io.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\unicodedata.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\unicodedata.exp
+  crc32_fast.c
+  Generando c├│digo
+  _hashopenssl.c
+  Generaci├│n de c├│digo finalizada
+  Generaci├│n de c├│digo finalizada
+  winsound.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\winsound.pyd
+  Generaci├│n de c├│digo finalizada
+  mpalloc.c
+  Generaci├│n de c├│digo finalizada
+  _msi.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_msi.pyd
+  Generaci├│n de c├│digo finalizada
+  Generaci├│n de c├│digo finalizada
+  _tkinter.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyexpat.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyexpat.exp
+  Generaci├│n de c├│digo finalizada
+  Generando c├│digo
+  mpdecimal.c
+  compress.c
+  _multiprocessing.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_multiprocessing.pyd
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_elementtree.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_elementtree.exp
+  Generaci├│n de c├│digo finalizada
+  Generando c├│digo
+  crc32_table.c
+  _asyncio.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_asyncio.pyd
+  _zoneinfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_zoneinfo.pyd
+  _overlapped.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_overlapped.pyd
+  numbertheory.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyshellext.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyshellext.exp
+  Generando c├│digo
+  sixstep.c
+  crc64_fast.c
+  cfield.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_hashlib.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_hashlib.exp
+  venvwlauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\venvwlauncher.exe
+  Generando c├│digo
+  transpose.c
+  venvlauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\venvlauncher.exe
+  pylauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\py.exe
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\sqlite3.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\sqlite3.exp
+  Generando c├│digo
+  pywlauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyw.exe
+  crctable.c
+  crc64_table.c
+  Generaci├│n de c├│digo finalizada
+  tkappinit.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_socket.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_socket.exp
+  Generando c├│digo
+  unicodedata.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\unicodedata.pyd
+  sha256.c
+  Generaci├│n de c├│digo finalizada
+  Generaci├│n de c├│digo finalizada
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_decimal.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_decimal.exp
+  Generando c├│digo
+  malloc_closure.c
+  decompress.c
+  pyshellext.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyshellext.dll
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_tkinter.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_tkinter.exp
+  Generando c├│digo
+  _hashlib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_hashlib.pyd
+  alone_decoder.c
+  alone_encoder.c
+  Generaci├│n de c├│digo finalizada
+  stgdict.c
+  huffman.c
+  auto_decoder.c
+  _socket.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_socket.pyd
+  _ssl.c
+  block_buffer_decoder.c
+  Generaci├│n de c├│digo finalizada
+  randtable.c
+  block_buffer_encoder.c
+  _tkinter.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_tkinter.pyd
+  block_decoder.c
+  block_encoder.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes.exp
+  Generando c├│digo
+  applink.c
+  block_header_decoder.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_bz2.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_bz2.exp
+  Generando c├│digo
+  block_header_encoder.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ssl.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ssl.exp
+  Generando c├│digo
+  block_util.c
+  common.c
+  easy_buffer_encoder.c
+  Compilando...
+  easy_decoder_memusage.c
+  easy_encoder.c
+  Generaci├│n de c├│digo finalizada
+  easy_encoder_memusage.c
+  _ssl.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ssl.pyd
+  easy_preset.c
+  filter_buffer_decoder.c
+  Generaci├│n de c├│digo finalizada
+  _ctypes.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_ctypes.pyd
+  filter_buffer_encoder.c
+  Generaci├│n de c├│digo finalizada
+  filter_common.c
+  pyexpat.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pyexpat.pyd
+  Generaci├│n de c├│digo finalizada
+  filter_decoder.c
+  _elementtree.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_elementtree.pyd
+  filter_encoder.c
+  filter_flags_decoder.c
+  filter_flags_encoder.c
+  hardware_cputhreads.c
+  hardware_physmem.c
+  index.c
+  Generaci├│n de c├│digo finalizada
+  index_decoder.c
+  _bz2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_bz2.pyd
+  index_encoder.c
+  index_hash.c
+  outqueue.c
+  stream_buffer_decoder.c
+  stream_buffer_encoder.c
+  Compilando...
+  stream_decoder.c
+  stream_encoder.c
+  Generaci├│n de c├│digo finalizada
+  stream_encoder_mt.c
+  _decimal.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_decimal.pyd
+  stream_flags_common.c
+  stream_flags_decoder.c
+  stream_flags_encoder.c
+  vli_decoder.c
+  vli_encoder.c
+  vli_size.c
+  delta_common.c
+  delta_decoder.c
+  delta_encoder.c
+  fastpos_table.c
+  lzma2_decoder.c
+  lzma2_encoder.c
+  lzma_decoder.c
+  lzma_encoder.c
+  lzma_encoder_optimum_fast.c
+  lzma_encoder_optimum_normal.c
+  lzma_encoder_presets.c
+  Compilando...
+  lz_decoder.c
+  lz_encoder.c
+  lz_encoder_mf.c
+  price_table.c
+  arm.c
+  armthumb.c
+  ia64.c
+  powerpc.c
+  simple_coder.c
+  simple_decoder.c
+  simple_encoder.c
+  sparc.c
+  x86.c
+  liblzma.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\liblzma.lib
+  _lzmamodule.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_lzma.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_lzma.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _lzma.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_lzma.pyd
+  Generaci├│n de c├│digo finalizada
+  sqlite3.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\sqlite3.dll
+  cache.c
+  connection.c
+  cursor.c
+  microprotocols.c
+  module.c
+  prepare_protocol.c
+  row.c
+  statement.c
+  util.c
+     Creando biblioteca F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_sqlite3.lib y objeto F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_sqlite3.exp
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _sqlite3.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_sqlite3.pyd
+  _freeze_importlib.c
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  _freeze_importlib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\_freeze_importlib.exe
+  python.c
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  python.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\python.exe
+  C:\WINDOWS\System32\ucrtbase.dll is version 10.0.26100.9444
+  Wrote F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\LICENSE.txt
+  WinMain.c
+  Generando c├│digo
+  Generaci├│n de c├│digo finalizada
+  pythonw.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\source-work\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\PCbuild\amd64\pythonw.exe
+-- JE local package archive: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-v143-provenance-rev2/packages/python-3.10.13-je-rev2-windows.tar.xz
+-- JE local package SHA256: 557adc2ca61d8c4b43bbd050a68aadf5cdf6884d2a176b8a623a9c3fdf171876

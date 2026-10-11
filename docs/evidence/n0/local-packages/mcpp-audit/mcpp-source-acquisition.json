@@ -1,0 +1,19 @@
+{
+  "sourceRelease": "mcpp-2.7.2",
+  "sourceURL": "https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download",
+  "selectionURL": "https://downloads.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz?use_mirror=gigenet",
+  "destinationWithoutQuery": "https://gigenet.dl.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz",
+  "redirectQueryOmitted": true,
+  "headStatus": 200,
+  "getStatus": 200,
+  "automaticRedirects": false,
+  "authentication": false,
+  "etag": "\"493285ee-176611\"",
+  "bytes": 1533457,
+  "sha256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+  "sha256MatchedPrimaryRelease": true,
+  "archive": "F:/JericoEngine/Dependencies/archives/mcpp-2.7.2.tar.gz",
+  "upstreamGitCommit": null,
+  "licensePrimary": "https://mcpp.sourceforge.net/",
+  "licenseClaim": "BSD-style; archive LICENSE must be inspected before producer"
+}

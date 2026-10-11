@@ -1,0 +1,14 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-red-unpatched\\build-consumer",
+    "--target",
+    "JELuaConsumer",
+    "--config",
+    "Release"
+  ],
+  "argv_count": 6,
+  "started": "2026-10-10T19:26:45.1163341-03:00"
+}

@@ -1,0 +1,41 @@
+{
+  "index": 199,
+  "source_path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+  "expected_sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8",
+  "expected_bytes": 222584,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:05.335336+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "222584",
+      "ETag": "\"0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:05.844904+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "222584",
+      "ETag": "\"0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8",
+  "actual_bytes": 222584,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-ExtraBold.ttf",
+  "status": "acquired and byte verified"
+}

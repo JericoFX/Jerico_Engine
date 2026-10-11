@@ -1,0 +1,46 @@
+[
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/ApplyLuaPatch.cmake",
+    "sha256": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake",
+    "sha256": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/CMakeLists.txt",
+    "sha256": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/FindLua.cmake",
+    "sha256": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/LICENSE.txt",
+    "sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch",
+    "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/NOTICE.txt",
+    "sha256": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/tests/CMakeLists.txt",
+    "sha256": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/tests/LuaConsumer.cpp",
+    "sha256": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+    "sha256": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+    "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+  }
+]

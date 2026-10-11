@@ -1,0 +1,41 @@
+{
+  "index": 78,
+  "source_path": "Code/Editor/TrackView/clapperboard_cancel.png",
+  "expected_sha256": "a064e400b30d4de5d96ce15d54c3a55a1ec655a025479ec34966903d87c1e945",
+  "expected_bytes": 446,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/clapperboard_cancel.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:26:29.579433+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/clapperboard_cancel.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "446",
+      "ETag": "\"a064e400b30d4de5d96ce15d54c3a55a1ec655a025479ec34966903d87c1e945\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/clapperboard_cancel.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:26:29.901718+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/clapperboard_cancel.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "446",
+      "ETag": "\"a064e400b30d4de5d96ce15d54c3a55a1ec655a025479ec34966903d87c1e945\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "a064e400b30d4de5d96ce15d54c3a55a1ec655a025479ec34966903d87c1e945",
+  "actual_bytes": 446,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\TrackView\\clapperboard_cancel.png",
+  "status": "acquired and byte verified"
+}

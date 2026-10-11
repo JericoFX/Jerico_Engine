@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "lz4/lz4",
+    "tag": "v1.9.4",
+    "commit": "5ff839680134437dbf4678f3d0c7b371d84f4964",
+    "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+    "archive": {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\lz4-v1.9.4.tar.gz",
+      "bytes": 354063,
+      "sha256": "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b"
+    },
+    "snapshot": "F:\\JericoEngine\\Dependencies\\lz4-1.9.4",
+    "members": 244,
+    "regular_files": 187,
+    "regular_bytes": 1668409,
+    "links": 0,
+    "git_blob_correspondence": "154 files byte-exact;33 declared CRLF exports with exact normalized Git blobs",
+    "compiled_source_headers_cmake_byte_exact": true
+  },
+  "original": {
+    "recipe_repository": "o3de/3p-package-source",
+    "reviewed_commit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "historical_rev1_recipe_commit": "68e97674712afd8c5e5c99608b35442da579163a",
+    "historical_package": "lz4-1.9.4-rev1-windows",
+    "historical_binary_sha256": "aa7d4e8f6424fad7fdc0304fecd83c1183886cc4c7b38ba014c85f43d036e550",
+    "configurations": [
+      "Release"
+    ],
+    "shared": false,
+    "generator": "Visual Studio 16",
+    "CRT": "Default CMake Release DLL runtime; no CRT override in original recipe",
+    "debug_archive_provided": false,
+    "imported_target": "3rdParty::lz4",
+    "imported_location": "lz4/lib/lz4.lib",
+    "headers": [
+      "lz4/include/lz4.h",
+      "lz4/include/lz4hc.h",
+      "lz4/include/lz4frame.h"
+    ],
+    "current_recipe_difference": "rev2 adds Linux/Mac-arm64/Emscripten/compatibility settings; Windows Release/static/Find unchanged",
+    "cli": "Original upstream CLI defaults ON and generic driver builds/installs all targets; no engine CLI caller found"
+  },
+  "candidate": {
+    "files": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake",
+        "bytes": 5650,
+        "sha256": "db82743777ee43d90940574cf980a87776294b9ce084eae22d1830d4223396e8"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\CMakeLists.txt",
+        "bytes": 2928,
+        "sha256": "db527d34a3732c073a64363c342ce9ccb86ee3c09614100f718ca37b4321cda4"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\Findlz4.cmake",
+        "bytes": 2889,
+        "sha256": "79e2da1b8fd42444a53f53b299091549d08efd9866ca1cf47a7e49d5a364dc45"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\NOTICE.txt",
+        "bytes": 2316,
+        "sha256": "53d419f549fe2e3e4809705d85ab621f908f5207fbdfaf6fda17190e540dcca5"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\README.md",
+        "bytes": 2586,
+        "sha256": "bc2752b0757f573c04652c05badbc46d75f0f3e67773fdc0832f0deac40fb581"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\CMakeLists.txt",
+        "bytes": 2048,
+        "sha256": "6fa4629737f5017bcd363edecae552afb53e0d9b4caacfe3e6e3b069a2929cf9"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\Lz4Consumer.cpp",
+        "bytes": 8037,
+        "sha256": "29f471205a974b4cdfb535c0c34f0975b5ba7c6930e0fc46395c95a3f45ced73"
+      }
+    ],
+    "identity": "lz4-1.9.4-je-rev1-windows",
+    "toolset": "VS2022/v143 Windows x64",
+    "CRT": "MultiThreadedDLL (/MD)",
+    "configuration": "Release",
+    "upstream_target": "lz4_static",
+    "core": true,
+    "HC": true,
+    "frame": true,
+    "xxHash": true,
+    "source_patches": false,
+    "cli": false,
+    "legacy_cli": false,
+    "upstream_install": false,
+    "CPack": false,
+    "consumer_cases": [
+      "blocks default+HC roundtrip",
+      "default ZipDir frame roundtrip",
+      "fragmented frame decode",
+      "short destinations/invalid magic/incomplete truncated frame"
+    ],
+    "consumer_configurations": [
+      "Release",
+      "Debug (same Release imported archive)"
+    ],
+    "guards": [
+      "explicit local absolute paths/no UNC/URI/symlink ancestors",
+      "new outputs beneath checkout/build",
+      "exact official source URL/commit/SHA256 before extraction/configure",
+      "missing input rejected",
+      "no implicit acquisition/global install"
+    ]
+  },
+  "consumers": [
+    {
+      "path": "Code/Framework/AzFramework/CMakeLists.txt:41",
+      "usage": "PUBLIC 3rdParty::lz4"
+    },
+    {
+      "path": "Code/Framework/AzFramework/AzFramework/Archive/ZipDirCache.cpp:218",
+      "usage": "LZ4F_compressFrameBound"
+    },
+    {
+      "path": "Code/Framework/AzFramework/AzFramework/Archive/ZipDirStructures.cpp:521-547,618",
+      "usage": "frame compression/context/decompression/error/free"
+    },
+    {
+      "path": "Gems/Compression/Code/Source/Tools/CompressorLZ4Impl.cpp",
+      "usage": "LZ4_compressBound/compress_default"
+    },
+    {
+      "path": "Gems/Compression/Code/Source/Clients/DecompressorLZ4Impl.cpp",
+      "usage": "LZ4_decompress_safe"
+    },
+    {
+      "path": "Gems/MultiplayerCompression",
+      "usage": "historical excluded consumer; not activated by this dependency recipe"
+    }
+  ],
+  "validation": {
+    "state": "IMPLEMENTED NOT VERIFIED",
+    "CMake_compiler_tests_executed": false,
+    "owner": "Luna assigned by parent",
+    "pending": [
+      "producer guards",
+      "native producer",
+      "tar/hash/content inspection",
+      "extracted archive consumer Release+Debug",
+      "parent catalog/root integration"
+    ],
+    "limits": [
+      "No historical binary ABI/performance assertion",
+      "No Editor frame/runtime or legal acceptance",
+      "No catalog/docs/WhiteBox/helper changes"
+    ]
+  },
+  "receipts": [
+    "destination-receipts.json",
+    "recipe-destination-receipts.json",
+    "recipe-history-receipts.json",
+    "source-acquisition.json",
+    "source-tar-audit.json",
+    "source-extraction.json",
+    "archive-difference.json",
+    "source-notices.json",
+    "source-freeze.json"
+  ],
+  "freeze_aggregate_sha256": "ce5f7a2ef24fdd26a75f25d5e98f8844a6cb933396bf39caa0c8d872e4ed9984"
+}

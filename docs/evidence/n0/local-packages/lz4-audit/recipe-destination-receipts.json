@@ -1,0 +1,152 @@
+[
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18?recursive=1",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18?recursive=1",
+    "utc": "2026-10-10T23:52:20.559629+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 171528,
+    "sha256": "1d2b69295afe769ebe42c4aa4ea150c3f789f0aa1b25d546cb1d20c24b61d4b4"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE.txt",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE.txt",
+    "utc": "2026-10-10T23:52:20.864585+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 1397,
+    "sha256": "7baf161ee65f42bf606072b6d8e71582c3d2c7b62f6b56e9d7ffa01ee82784db"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE_APACHE2.TXT",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE_APACHE2.TXT",
+    "utc": "2026-10-10T23:52:21.254737+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 11557,
+    "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE_MIT.TXT",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE_MIT.TXT",
+    "utc": "2026-10-10T23:52:21.538496+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 1074,
+    "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Dockerfile.aarch64",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Dockerfile.aarch64",
+    "utc": "2026-10-10T23:52:21.936612+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 1006,
+    "sha256": "93d560e72a69ff7f7d1e5e47d65258bf464ec2e7d86da5e8453b26cda245c500"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Dockerfile.x86_64",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Dockerfile.x86_64",
+    "utc": "2026-10-10T23:52:22.223594+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 1004,
+    "sha256": "6d4f54846f2ef29105b96722a6b8d84f178aaaa85931c0baf73159dd784a7548"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Findlz4.cmake",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Findlz4.cmake",
+    "utc": "2026-10-10T23:52:22.607404+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 1237,
+    "sha256": "396a4a0d9154b57b9ebe28bbb4542f69a9efc277ba4a1c58d82ff31e5453dbff"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/LICENSE",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/LICENSE",
+    "utc": "2026-10-10T23:52:22.876215+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 635,
+    "sha256": "2949fcf758d3c9bcb05f8393ca42cadfa15be04eb4ae4b3327c4ad7957511e1b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-archlinux.sh",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-archlinux.sh",
+    "utc": "2026-10-10T23:52:23.160010+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 5236,
+    "sha256": "b3d4b69a55fe5b2f171e8af4801436967f4b953a1f6df5aeaa29a9b10d18ec47"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux-aarch64.sh",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux-aarch64.sh",
+    "utc": "2026-10-10T23:52:23.430470+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 538,
+    "sha256": "b340e49585487af9608229c9684104e8568898d6feef080239df4c6145e4092a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux-x86_64.sh",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux-x86_64.sh",
+    "utc": "2026-10-10T23:52:23.722654+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 526,
+    "sha256": "696aaeff2edffb1af00582eb52cf29fdc2b001b393c535010a7507258a496d58"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux.sh",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux.sh",
+    "utc": "2026-10-10T23:52:24.006427+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 5343,
+    "sha256": "225e945148f9ea448b31685a8c1f25b355da38bb86dffe1cc92c561d54a5096f"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build_config.json",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build_config.json",
+    "utc": "2026-10-10T23:52:24.298415+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 2779,
+    "sha256": "07693dea63a155a00c8368f982bc3765cfae821d1a0255add0774b6327b6503c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/docker_build_lz4_linux.sh",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/docker_build_lz4_linux.sh",
+    "utc": "2026-10-10T23:52:24.588013+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 980,
+    "sha256": "80a8c2dc6d4703ed6e397df699c7428450d87558a262f9edfc87a04921026d61"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/package-linux.sh",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/package-linux.sh",
+    "utc": "2026-10-10T23:52:24.968419+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "bytes": 335,
+    "sha256": "5b56230f81c31b498ff792bf02a8dae66c25e90cc2385e0f0c19835a584655ca"
+  }
+]

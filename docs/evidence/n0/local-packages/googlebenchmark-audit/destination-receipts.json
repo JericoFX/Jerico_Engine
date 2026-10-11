@@ -1,0 +1,393 @@
+[
+  {
+    "url": "https://github.com/google/benchmark/archive/refs/tags/v1.7.0.tar.gz",
+    "method": "HEAD",
+    "status": 302,
+    "final_url": "https://github.com/google/benchmark/archive/refs/tags/v1.7.0.tar.gz",
+    "utc": "2026-10-10T23:32:10.679994+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "0",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": null,
+      "Location": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0"
+    },
+    "body_sha256": null,
+    "body_bytes": 0
+  },
+  {
+    "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+    "method": "HEAD",
+    "status": 200,
+    "final_url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+    "utc": "2026-10-10T23:32:11.017291+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": null,
+      "Content-Type": "application/x-gzip",
+      "ETag": "\"f86727198b7597cdccc3a9a9064b764598d5c8abda87b8f5f399974327f4a4ff\"",
+      "Location": null
+    },
+    "body_sha256": null,
+    "body_bytes": 0
+  },
+  {
+    "url": "https://api.github.com/repos/google/benchmark/git/ref/tags/v1.7.0",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/google/benchmark/git/ref/tags/v1.7.0",
+    "utc": "2026-10-10T23:32:11.425414+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "335",
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"7b21bc1269d3aefeab772229d7c115edd1871f412b8765302afe255d6b391451\"",
+      "Location": null
+    },
+    "body_sha256": "7b21bc1269d3aefeab772229d7c115edd1871f412b8765302afe255d6b391451",
+    "body_bytes": 335
+  },
+  {
+    "url": "https://api.github.com/repos/google/benchmark/git/tags/f3ece04c95272a83f54c5ddcf0ab4502c4f148e6",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/google/benchmark/git/tags/f3ece04c95272a83f54c5ddcf0ab4502c4f148e6",
+    "utc": "2026-10-10T23:32:11.765848+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "661",
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"53d4eb08e514121a0b940f422d4aec6a44251a9bec8e10982affe531c5d443bd\"",
+      "Location": null
+    },
+    "body_sha256": "53d4eb08e514121a0b940f422d4aec6a44251a9bec8e10982affe531c5d443bd",
+    "body_bytes": 661
+  },
+  {
+    "url": "https://api.github.com/repos/google/benchmark/commits/361e8d1cfe0c6c36d30b39f1b61302ece5507320",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/google/benchmark/commits/361e8d1cfe0c6c36d30b39f1b61302ece5507320",
+    "utc": "2026-10-10T23:32:12.181710+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "4867",
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"d3eae7abbfed7176787aaa5a0687ed92751534a41124756f356513d744b8db66\"",
+      "Location": null
+    },
+    "body_sha256": "d3eae7abbfed7176787aaa5a0687ed92751534a41124756f356513d744b8db66",
+    "body_bytes": 4867
+  },
+  {
+    "url": "https://api.github.com/repos/google/benchmark/git/trees/361e8d1cfe0c6c36d30b39f1b61302ece5507320?recursive=1",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://api.github.com/repos/google/benchmark/git/trees/361e8d1cfe0c6c36d30b39f1b61302ece5507320?recursive=1",
+    "utc": "2026-10-10T23:32:12.628121+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": null,
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"aab4db938bb579521bfec25d102d197278578047bff3bb2c38143d1188662822\"",
+      "Location": null
+    },
+    "body_sha256": "aab4db938bb579521bfec25d102d197278578047bff3bb2c38143d1188662822",
+    "body_bytes": 43497
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/AUTHORS",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/AUTHORS",
+    "utc": "2026-10-10T23:32:13.105372+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "2413",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"a864f69f3f180de702e80e5b17d253dbedaf3139dc54a4d3edb8bd3caaae1078\"",
+      "Location": null
+    },
+    "body_sha256": "1881e260e164306b0f699ab7a13ce40a85d5674455812baaa17c3e1a1b4fea69",
+    "body_bytes": 2413
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/CMakeLists.txt",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/CMakeLists.txt",
+    "utc": "2026-10-10T23:32:13.378596+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "13747",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"69406540d13cda080d552e524acbe90f041cf3ad732360374acad9d4cee408fb\"",
+      "Location": null
+    },
+    "body_sha256": "e56219c57b870d635ce0c4cf28ba0abafe1cf86f20a7cf133901013d64110277",
+    "body_bytes": 13747
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/CONTRIBUTORS",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/CONTRIBUTORS",
+    "utc": "2026-10-10T23:32:13.755602+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "3613",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"593e78e4833b08a29033a611778a91c0ed05714568bfda28cb1e4e5227aabe6b\"",
+      "Location": null
+    },
+    "body_sha256": "61655b414a97ead634c4ed668aef4750a3f098b36ca4f314c0b15bec59922b95",
+    "body_bytes": 3613
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/LICENSE",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/LICENSE",
+    "utc": "2026-10-10T23:32:14.111038+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "11358",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"ea7695ebe191574f243f2d0da593df55f90669d28366f85d2d8070743095da31\"",
+      "Location": null
+    },
+    "body_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "body_bytes": 11358
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/AddCXXCompilerFlag.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/AddCXXCompilerFlag.cmake",
+    "utc": "2026-10-10T23:32:14.493703+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "2969",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"048747d0fb51a867e08ff9d4c5ffda6f007b7bda0d65f55d850bed4fea571d24\"",
+      "Location": null
+    },
+    "body_sha256": "3520ef146e5a303ba362a56d118e9e99f20456dd78f24e46f6b66e068035c042",
+    "body_bytes": 2969
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/CXXFeatureCheck.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/CXXFeatureCheck.cmake",
+    "utc": "2026-10-10T23:32:14.756869+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "2293",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"65fdde2fdc62156b5b2e83a3c982b4f1957ff91db13eed16100c616b9336245e\"",
+      "Location": null
+    },
+    "body_sha256": "b58097438d782f72a7559be96b40aed0ee4c41a2a0f9d7a2710e89ab47cd4b76",
+    "body_bytes": 2293
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/GetGitVersion.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/GetGitVersion.cmake",
+    "utc": "2026-10-10T23:32:15.009605+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "1865",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"9d1694cccc911c8a9a6fe1b81bdbe50ca6b75ef87da2870f373557d68dc1053a\"",
+      "Location": null
+    },
+    "body_sha256": "e39207da3604ebcbef75909f363e964732d89d494381ca6bf84e4260add97522",
+    "body_bytes": 1865
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/GoogleTest.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/GoogleTest.cmake",
+    "utc": "2026-10-10T23:32:15.401980+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "2281",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"ebcf4bff610aa931c57fdedc7c9dfb3db4c22c29ad23626f0e0287c77a57e51d\"",
+      "Location": null
+    },
+    "body_sha256": "6724530172aacdff89207a19780f3cdcabf7085afd4eaa2558e7798881178e38",
+    "body_bytes": 2281
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindLLVMAr.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindLLVMAr.cmake",
+    "utc": "2026-10-10T23:32:15.766887+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "379",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"14fdf662ef08c2524cd36bcc05d8c8d9c226b2fa267f0cc46f9bb2dec0fe9eb0\"",
+      "Location": null
+    },
+    "body_sha256": "5c6899ac771a6991a30ee41c3dcb72c8bc5a68cb2d437e67e9a04494fd3faadf",
+    "body_bytes": 379
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindLLVMNm.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindLLVMNm.cmake",
+    "utc": "2026-10-10T23:32:16.025117+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "388",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"3c0a5985ca1466e102e82ac8477fa57681f736d2bdd890b980b93d8bd9b09507\"",
+      "Location": null
+    },
+    "body_sha256": "88480c9fa481c7927cb794d1a60dc858a05b02dce38d6686664009112f8d42f6",
+    "body_bytes": 388
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindLLVMRanLib.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindLLVMRanLib.cmake",
+    "utc": "2026-10-10T23:32:16.375664+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "339",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"4f4f2c520c4ed29a6457cbaf12ad93102b1edd53d97fe6dbee4c4feaa8a8849f\"",
+      "Location": null
+    },
+    "body_sha256": "462cddcca5b8d2523382f6a0ca55cba7d8818704dba13fcb6440b3defe981e7b",
+    "body_bytes": 339
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindPFM.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Modules/FindPFM.cmake",
+    "utc": "2026-10-10T23:32:16.770779+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "1108",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"7b9a2afd8d114ad21cf11a9e2e906b5a315855c9c4c9fcbcea39326e4e2afa63\"",
+      "Location": null
+    },
+    "body_sha256": "4d688df1491c124f23c42b909c3505d83001a73e5b46b98a33da862e5f4fa39e",
+    "body_bytes": 1108
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/llvm-toolchain.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/llvm-toolchain.cmake",
+    "utc": "2026-10-10T23:32:17.139570+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "287",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"b86d1a385e2165aa8586b2bb8c7984e1d0ba7e33c95c07fca17558f46c5f20c6\"",
+      "Location": null
+    },
+    "body_sha256": "287b6d25bd8088b5a71710fa5f48136698ee83141a02678a0e79cda050d9405f",
+    "body_bytes": 287
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/split_list.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/split_list.cmake",
+    "utc": "2026-10-10T23:32:17.524637+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "93",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"fa3292fc1a7daa1e51bca2265d16e3d7ecb95b18662cbb46d1239535cdd0bcb0\"",
+      "Location": null
+    },
+    "body_sha256": "1b1f5a101b8d027d15da62b885e28ab346886267ae025e7d85ee7197d1e802ba",
+    "body_bytes": 93
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/src/CMakeLists.txt",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/src/CMakeLists.txt",
+    "utc": "2026-10-10T23:32:17.891439+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "5057",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"fcd0cb9f31cceeda3bfaa3b4409d366547ac381cd57a59ff29477d425935b84e\"",
+      "Location": null
+    },
+    "body_sha256": "52b866b268795a34bbf03d0b069728a63b4be2a7a75196798e36f04915b297ae",
+    "body_bytes": 5057
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/test/AssemblyTests.cmake",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/test/AssemblyTests.cmake",
+    "utc": "2026-10-10T23:32:18.259486+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "2308",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"aa4c1d7e2a7ebcf8c3619a77ee01e513e61111b38f15e3ec7b9b634b06576c3a\"",
+      "Location": null
+    },
+    "body_sha256": "93c443f3ad9167b85c44705c917b53f5619c5fe9a4da592c18e238b54fed2804",
+    "body_bytes": 2308
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/test/CMakeLists.txt",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/test/CMakeLists.txt",
+    "utc": "2026-10-10T23:32:18.534140+00:00",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Length": "11936",
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"d4e97931292b9774885ce8707526bbcf459ed7a9af40339b5877cd8f319f9958\"",
+      "Location": null
+    },
+    "body_sha256": "152988b435e00b9f77830cd9f9e06c12efe356ed40281b929020bcbd1238a25e",
+    "body_bytes": 11936
+  }
+]

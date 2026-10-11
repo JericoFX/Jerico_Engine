@@ -1,0 +1,51 @@
+{
+  "exitcode": 0,
+  "elapsed_seconds": 1.3653103,
+  "argv_count": 21,
+  "log_sha256": "1C7BB09CB1DA73153B27DE93F9D8D4AE52A4810E7365A97276C006F9F4E98308",
+  "log_bytes": 137,
+  "freeze_unchanged": true,
+  "target_files_before": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gitbranch.txt",
+      "bytes": 12,
+      "contents": "development",
+      "sha256": "69DCED1FC82B64513842CE628727EE18744EBE7CECBD16ED47C753B76873F9BE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gittag.txt",
+      "bytes": 24,
+      "contents": "heads/development-dirty",
+      "sha256": "6C74F5233091C13C359864A3AC80ADB2D67A796E79F079BDD9D49A118F2FF7E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gitversion.txt",
+      "bytes": 11,
+      "contents": "6eb79db287",
+      "sha256": "258467C828320DCBBD1C38FBD8A14A303997D7CA3236BCD6AF4FA26F322D19DB"
+    }
+  ],
+  "target_files_after": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gitbranch.txt",
+      "bytes": 12,
+      "contents": "development",
+      "sha256": "69DCED1FC82B64513842CE628727EE18744EBE7CECBD16ED47C753B76873F9BE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gittag.txt",
+      "bytes": 24,
+      "contents": "heads/development-dirty",
+      "sha256": "6C74F5233091C13C359864A3AC80ADB2D67A796E79F079BDD9D49A118F2FF7E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2\\PCbuild\\obj\\310amd64_Release\\pythoncore\\gitversion.txt",
+      "bytes": 11,
+      "contents": "6eb79db287",
+      "sha256": "258467C828320DCBBD1C38FBD8A14A303997D7CA3236BCD6AF4FA26F322D19DB"
+    }
+  ],
+  "archive_unchanged": true,
+  "vcxproj_unchanged": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-msbuild-getbuildinfo-target"
+}

@@ -1,0 +1,27 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/Dependencies/archives/lz4-v1.9.4.tar.gz",
+    "-DJE_LZ4_SOURCE_SHA256:STRING=0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+    "-DJE_LZ4_SOURCE_URL:STRING=https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4",
+    "-DJE_LZ4_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-v143-rev1",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake"
+  ],
+  "argc": 6,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "started_local": "2026-10-10T21:10:20.6927668-03:00",
+  "finished_local": "2026-10-10T21:10:51.9060202-03:00",
+  "elapsed_seconds": 31.21,
+  "native_exit_code": 0,
+  "process_tree_scope": "CMake and descendants visible in 1-second Win32_Process samples; short-lived descendants can be missed",
+  "sample_count": 29,
+  "distinct_process_ids_seen": 25,
+  "peak_sampled_tree_working_set_bytes": 251662336,
+  "peak_sampled_single_process_working_set_bytes": 135688192,
+  "observed_cpu_delta_seconds": 13.984,
+  "stdout_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\producer.stdout.log",
+  "stderr_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\producer.stderr.log",
+  "combined_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\producer.log",
+  "output_created": true
+}

@@ -1,0 +1,4 @@
+[
+  "-c",
+  "import o3de; print(getattr(o3de, '__file__', None))"
+]

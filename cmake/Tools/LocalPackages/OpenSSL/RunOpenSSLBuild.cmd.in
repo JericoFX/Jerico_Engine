@@ -1,0 +1,69 @@
+@echo off
+setlocal
+rem Controlled native environment; no inherited compiler/Perl/config switches.
+set "PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem"
+set "CC="
+set "CXX="
+set "AS="
+set "AR="
+set "LD="
+set "CFLAGS="
+set "CPPFLAGS="
+set "LDFLAGS="
+set "CL="
+set "_CL_="
+set "LINK="
+set "_LINK_="
+set "CROSS_COMPILE="
+set "OPENSSL_LOCAL_CONFIG_DIR="
+set "PERL5OPT="
+set "PERL5LIB="
+set "PERLLIB="
+set "PERL5DB="
+set "PERL_MM_OPT="
+set "PERL_MB_OPT="
+set "PERL_JSON_BACKEND="
+set "PERL_YAML_BACKEND="
+set "HASHBANGPERL="
+set "SOURCE_DATE_EPOCH="
+set "INCLUDE="
+set "LIB="
+set "LIBPATH="
+set "EXTERNAL_INCLUDE="
+set "VSINSTALLDIR="
+set "VCINSTALLDIR="
+set "DevEnvDir="
+set "VCToolsVersion="
+set "VCToolsInstallDir="
+set "WindowsSdkDir="
+set "WindowsSDKVersion="
+set "UCRTVersion="
+set "UniversalCRTSdkDir="
+for /f "tokens=1 delims==" %%V in ('set __VSCMD 2^>nul') do set "%%V="
+for /f "tokens=1 delims==" %%V in ('set __VCVARS 2^>nul') do set "%%V="
+for /f "tokens=1 delims==" %%V in ('set VSCMD_ 2^>nul') do set "%%V="
+set "VSCMD_SKIP_SENDTELEMETRY=1"
+call "@JE_VCVARS@" x64 -vcvars_ver=14.44
+if errorlevel 1 exit /b %errorlevel%
+if not "%VCToolsVersion%"=="14.44.35207" exit /b 2
+set "PATH=@JE_TOOL_BIN@;@JE_MSVC_BIN@;@JE_OPENSSL_PERL_ROOT@\perl\bin;%PATH%"
+set "CC=cl"
+set "CXX=cl"
+set "AS=nasm"
+set "PERL=@JE_OPENSSL_PERL_ROOT@\perl\bin\perl.exe"
+set "PERL5LIB=@JE_OPENSSL_PERL_ROOT@\perl\lib"
+> "@JE_OPENSSL_OUTPUT@\native-build-environment.txt" echo VCToolsVersion=%VCToolsVersion%
+>> "@JE_OPENSSL_OUTPUT@\native-build-environment.txt" echo WindowsSDKVersion=%WindowsSDKVersion%
+>> "@JE_OPENSSL_OUTPUT@\native-build-environment.txt" echo VCToolsInstallDir=%VCToolsInstallDir%
+>> "@JE_OPENSSL_OUTPUT@\native-build-environment.txt" echo WindowsSdkDir=%WindowsSdkDir%
+>> "@JE_OPENSSL_OUTPUT@\native-build-environment.txt" echo PATH=%PATH%
+cd /d "@JE_WORK@"
+if errorlevel 1 exit /b %errorlevel%
+"%PERL%" Configure VC-WIN64A enable-static-engine enable-capieng no-ssl2 no-tests -utf-8 no-shared -FS --prefix="@JE_INSTALL@" --openssldir="@JE_INSTALL@"
+if errorlevel 1 exit /b %errorlevel%
+"%PERL%" configdata.pm --dump > "@JE_OPENSSL_OUTPUT@\configdata-dump.txt"
+if errorlevel 1 exit /b %errorlevel%
+"@JE_NMAKE@" /nologo build_libs
+if errorlevel 1 exit /b %errorlevel%
+"@JE_NMAKE@" /nologo install_dev
+exit /b %errorlevel%

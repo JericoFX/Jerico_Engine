@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "bytes": 7040252,
+    "sha256": "122F6D3A20FD4E8BDC158BCCAE6014F129BE3FAC7F16704EF01E75B8A2491888"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 105,
+    "sha256": "7333812E9A91938D0564EB807DB67B63BB662FA7FD6E71D9856CE368FFA12F21"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "bytes": 7040252,
+    "sha256": "122F6D3A20FD4E8BDC158BCCAE6014F129BE3FAC7F16704EF01E75B8A2491888"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 105,
+    "sha256": "7333812E9A91938D0564EB807DB67B63BB662FA7FD6E71D9856CE368FFA12F21"
+  }
+]

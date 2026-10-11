@@ -1,0 +1,17 @@
+{
+  "member_count": 1337,
+  "expected_count": 1337,
+  "expected_exactly_unique": true,
+  "actual_exactly_unique": true,
+  "missing_count": 0,
+  "missing": null,
+  "extra_count": 0,
+  "extra": null,
+  "unsafe_path_count": 0,
+  "unsafe_paths": null,
+  "verbose_type_lines": 1337,
+  "nonregular_count": 0,
+  "nonregular_entries": null,
+  "listing_sha256": "5B4D42718F2725DC0840EBC99ED386DCCAA86E85FCB07BA2EF7CBF19A47AC7FD",
+  "verbose_listing_sha256": "84FC921D93904DD633F01CF5E93546B4F8EA455B88E0F35F7D5372A2B33D21FA"
+}

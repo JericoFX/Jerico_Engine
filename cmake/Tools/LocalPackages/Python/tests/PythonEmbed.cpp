@@ -8,9 +8,17 @@
 
 int main()
 {
+    const std::string buildPrefix =
+        "cpython-3.10.13-archive:49965601d6afedafe47cc85556d99b7a24981051, ";
     if (std::string(PY_VERSION) != "3.10.13" || std::string(Py_GetVersion()).rfind("3.10.13 ", 0) != 0)
     {
         std::cerr << "JE Python: header/runtime version mismatch\n";
+        return 1;
+    }
+    if (std::string(Py_GetBuildInfo()).rfind(buildPrefix, 0) != 0 ||
+        std::string(Py_GetVersion()).rfind("3.10.13 (" + buildPrefix, 0) != 0)
+    {
+        std::cerr << "JE Python: runtime source provenance mismatch\n";
         return 1;
     }
     const std::wstring home = std::filesystem::path(DEFAULT_LY_PYTHONHOME).wstring();
@@ -31,6 +39,10 @@ int main()
     const int result = PyRun_SimpleString(
         "import sys, zlib, sqlite3\n"
         "assert sys.version_info[:3] == (3, 10, 13)\n"
+        "assert sys._git == ('CPython', 'cpython-3.10.13-archive', "
+        "'49965601d6afedafe47cc85556d99b7a24981051'), sys._git\n"
+        "assert sys.version.startswith('3.10.13 (cpython-3.10.13-archive:"
+        "49965601d6afedafe47cc85556d99b7a24981051, '), sys.version\n"
         "assert zlib.decompress(zlib.compress(b'JE embedded Python' * 256)) == b'JE embedded Python' * 256\n"
         "with sqlite3.connect(':memory:') as db:\n"
         "    assert db.execute('select 6 * 7').fetchone() == (42,)\n");

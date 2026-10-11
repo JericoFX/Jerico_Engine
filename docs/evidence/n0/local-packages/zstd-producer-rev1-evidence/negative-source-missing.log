@@ -1,0 +1,7 @@
+CMake Error at JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: zstd source archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/does-not-exist-zstd.tar.gz
+Call Stack (most recent call first):
+  JericoEngine/cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake:33 (JE_python_verify_file)
+
+

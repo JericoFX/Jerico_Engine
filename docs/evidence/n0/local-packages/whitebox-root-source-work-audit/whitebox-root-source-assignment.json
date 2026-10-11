@@ -1,0 +1,149 @@
+{
+  "scope": "Private byte-exact source copies for original WhiteBox root wrappers",
+  "state": "Copies ready and initial manifests frozen; no CMake/build/test executed",
+  "copyFilesTotal": 1212,
+  "copies": [
+    {
+      "name": "Manifold",
+      "source": "F:\\JericoEngine\\Dependencies\\manifold-3.5.1",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\manifold-3.5.1-root",
+      "archive": "F:\\JericoEngine\\Dependencies\\archives\\manifold-v3.5.1.tar.gz",
+      "archiveSHA256": "1B42F28D7C1C6D07DF7244CA22CB7D82DE980899001969C9985C2662A77EB43C",
+      "files": 378,
+      "directories": 52,
+      "exactCopy": true,
+      "sourceUnchanged": true,
+      "status": "Ready; not configured"
+    },
+    {
+      "name": "Clipper2",
+      "source": "F:\\JericoEngine\\Dependencies\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+      "archive": "F:\\JericoEngine\\Dependencies\\archives\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4.tar.gz",
+      "archiveSHA256": "73F5783E0C88299976334F48E3E356C756B96212C652ECC8BCEEC3BD99455BCB",
+      "files": 223,
+      "directories": 60,
+      "exactCopy": true,
+      "sourceUnchanged": true,
+      "status": "Ready; not configured"
+    },
+    {
+      "name": "OpenMesh",
+      "source": "F:\\JericoEngine\\Dependencies\\OpenMesh-11.0.0",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\OpenMesh-11.0.0-root",
+      "archive": "F:\\JericoEngine\\Dependencies\\archives\\OpenMesh-11.0.0.tar.bz2",
+      "archiveSHA256": "9D22E65BDD6A125AC2043350A019EC4346EA83922CAFDF47E125A03C16F6FA07",
+      "files": 611,
+      "directories": 98,
+      "exactCopy": true,
+      "sourceUnchanged": true,
+      "status": "Ready; not configured"
+    }
+  ],
+  "arguments": [
+    "-DFETCHCONTENT_SOURCE_DIR_MANIFOLD:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/manifold-3.5.1-root",
+    "-DFETCHCONTENT_SOURCE_DIR_CLIPPER2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_Clipper2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_OPENMESH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/OpenMesh-11.0.0-root",
+    "-DMANIFOLD_CROSS_SECTION:BOOL=ON",
+    "-DMANIFOLD_CROSS_SECTION_BACKEND:STRING=clipper2",
+    "-DMANIFOLD_USE_BUILTIN_CLIPPER2:BOOL=ON",
+    "-DMANIFOLD_DOWNLOADS:BOOL=OFF",
+    "-DMANIFOLD_PAR:BOOL=OFF",
+    "-DMANIFOLD_TEST:BOOL=OFF",
+    "-DMANIFOLD_CBIND:BOOL=OFF",
+    "-DMANIFOLD_PYBIND:BOOL=OFF",
+    "-DMANIFOLD_FUZZ:BOOL=OFF",
+    "-DTRACY_ENABLE:BOOL=OFF",
+    "-DASSIMP_ENABLE:BOOL=OFF",
+    "-DMANIFOLD_NO_IOSTREAM:BOOL=OFF",
+    "-DCLIPPER2_UTILS:BOOL=OFF",
+    "-DCLIPPER2_EXAMPLES:BOOL=OFF",
+    "-DCLIPPER2_TESTS:BOOL=OFF",
+    "-DCLIPPER2_USINGZ:STRING=OFF",
+    "-DUSE_EXTERNAL_GBENCHMARK:BOOL=OFF",
+    "-DOPENMESH_BENCHMARK_DIR:PATH="
+  ],
+  "originalWrappers": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\FindManifold.cmake",
+      "sha256": "B43CF2F70A3505848872109219CE9594D7AEAC3B560F2967D29A3108680F0FB4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\FindOpenMesh.cmake",
+      "sha256": "B83DA795150DAAECDB9F22EB3782DD9D54816BA2D7CE995FD17825CF6C98C840"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\clipper2-after.json",
+      "sha256": "9272AF173FD295D108B7297ED00DD97765269607A982E4B98655E84E5C1CE3D3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\clipper2-before.json",
+      "sha256": "0ACEF335EA3D7F5F83373B68E93E9FC92350B1F77236F9ABC746CCF6F346BA60"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\copy-summary.json",
+      "sha256": "ADF0922B829C5E05788CD9DC500CC20D1910BA01914CF880AB077A9247EF0BAA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\manifold-after.json",
+      "sha256": "6C4190A683A202CAA1F6CDB99D32FA12DEC4964376DB3CC4E2C032FD8D58796A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\manifold-before.json",
+      "sha256": "6892191B7D6E9687EED815A1BDFFEC92C4EB4E3909227E22DD9C57CCE21F23F1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\openmesh-after.json",
+      "sha256": "20FB139F586B88CAB5E1E17115C1B893488F219950AF776B6B9DD6144F6B9F51"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-root-source-work-audit\\openmesh-before.json",
+      "sha256": "9A7422D4B8BC049F09E412E8AC9664AF1E77D04E3B68B65E8990DC5DB78045FE"
+    }
+  ],
+  "preserveRootProtections": "Keep the existing original-root driver no-server/local-package guards and FETCHCONTENT_FULLY_DISCONNECTED=ON; these arguments supplement its approved inputs, not a replacement root command",
+  "clipperCaseContract": "FetchContent actual source provider uses uppercase CLIPPER2. Manifold cmake/manifoldDeps.cmake:19 logmissingdep checks exact mixed-case FETCHCONTENT_SOURCE_DIR_Clipper2. Both point at the same audited private root; CPP remains SOURCE_SUBDIR from declarations.",
+  "sourceWrites": [
+    {
+      "wrapper": "FindManifold.cmake",
+      "paths": [
+        "src/csg_tree.h",
+        "src/edge_op.cpp"
+      ],
+      "purpose": "Existing wrapper warning fixes; initial copy remains pristine until Luna configure"
+    },
+    {
+      "upstream": "Clipper2/CPP/CMakeLists.txt:39",
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.version.h",
+      "purpose": "Existing configure_file into source tree, writable private copy only"
+    }
+  ],
+  "offlineClosure": [
+    "Manifold CROSS_SECTION=ON/backend=clipper2 preserved; no alternate boolean2 backend",
+    "MANIFOLD_PAR=OFF prevents TBB search/fetch; original wrapper already forces OFF",
+    "MANIFOLD_TEST/CBIND/PYBIND OFF already forced by wrapper; tests/samples/extras disabled, no Python/nanobind/GTest",
+    "TRACY_ENABLE/FUZZ/ASSIMP OFF are upstream defaults and close corresponding optional fetch/find branches",
+    "MANIFOLD_NO_IOSTREAM OFF preserves current public API; no need for Clipper no-iostream feature patch",
+    "MANIFOLD_DOWNLOADS OFF plus both Clipper source aliases supplies local dependency to logmissingdep without fallthrough",
+    "Clipper utils/examples/tests/benchmark OFF; USINGZ OFF matches upstream Manifold 2D dependency setup",
+    "Existing source overrides bypass FetchContent population/update/patch steps; actual root configure must verify no Git/PATCH_COMMAND/network executed",
+    "OpenMesh release includes cmake-library. Existing wrapper local values disable docs/unit-tests/apps/qmake/install/post-build copy; no additional source required"
+  ],
+  "openMeshOriginalLocalSettings": {
+    "OPENMESH_BUILD_SHARED": false,
+    "OPENMESH_DOCS": false,
+    "OPENMESH_BUILD_UNIT_TESTS": false,
+    "DISABLE_QMAKE_BUILD": true,
+    "BUILD_APPS": false,
+    "VCI_NO_LIBRARY_INSTALL": true,
+    "VCI_COMMON_DO_NOT_COPY_POST_BUILD": true
+  },
+  "unchangedNumericOptions": "CLIPPER2_HI_PRECISION OFF / CLIPPER2_MAX_DECIMAL_PRECISION 8 remain defaults",
+  "noGlobalOverrides": "Do not set global BUILD_SHARED_LIBS or BUILD_TESTING OFF; original wrapper scopes static and dependency tests locally",
+  "licenses": "Original complete snapshots copied, preserving Manifold Apache-2.0; Clipper CPP BSL-1.0 plus unbuilt CSharp notices; OpenMesh BSD3 plus Windows getopt BSD4 notice",
+  "validationOwner": "Luna only after parent integration/review",
+  "productAcceptance": "PENDING: no compilation/linkage/editor/BSP/runtime claim"
+}

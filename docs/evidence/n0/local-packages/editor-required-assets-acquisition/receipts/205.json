@@ -1,0 +1,41 @@
+{
+  "index": 205,
+  "source_path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+  "expected_sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2",
+  "expected_bytes": 221328,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:08.763777+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "221328",
+      "ETag": "\"aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:09.262075+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Semibold.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "221328",
+      "ETag": "\"aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2",
+  "actual_bytes": 221328,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Semibold.ttf",
+  "status": "acquired and byte verified"
+}

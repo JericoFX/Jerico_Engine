@@ -1,0 +1,128 @@
+{
+  "changedSourceFiles": 1,
+  "unchangedInputs": 20,
+  "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\BuildOpenSSLPackage.cmake",
+  "constant": "JE_PERL_MANIFEST_SHA",
+  "beforeLiteral": "fb0cc5933d7f126362fdbfa1d2d6febba1d8899fe6dbd5288090637947476052a",
+  "beforeLength": 65,
+  "afterLiteral": "fb0cc5933d7f126362fd1f2cd6febfba1d8899fe6dbd5288090637947476052a",
+  "afterLength": 64,
+  "sourceBeforeSHA256": "F62C7A609E9E0696A1599EE7B20D020D2C7FAA1CD52A3795392095A2FF0158EE",
+  "sourceAfterSHA256": "ED63AA6236470A61BA5E00184CD3856C0660B36681B57F943247E379BC7564CB",
+  "oneConstantReconstructionMatchesBefore": true,
+  "declaredPinOccurrences": 12,
+  "allPinsLengthHexEquivalent": true,
+  "pins": [
+    {
+      "declared": "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\archives\\openssl-1.1.1o.tar.gz",
+      "algorithm": "SHA256",
+      "measured": "9384A2B0570DD80358841464677115DF785EDB941C71211F75076D72FE6B438F",
+      "equivalent": true
+    },
+    {
+      "declared": "75b2f1499cb4640229eb6cd35d85cbff2e19db17b959ac4d04b60f1b395b73567f9003521452a0fcfeea9b31b26de0a7bccf476ecf9caae02298f3647cfb7e23",
+      "length": 128,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\archives\\openssl-1.1.1o.tar.gz",
+      "algorithm": "SHA512",
+      "measured": "75B2F1499CB4640229EB6CD35D85CBFF2E19DB17B959AC4D04B60F1B395B73567F9003521452A0FCFEEA9B31B26DE0A7BCCF476ECF9CAAE02298F3647CFB7E23",
+      "equivalent": true
+    },
+    {
+      "declared": "6a081a811781c30aca51dbc036afd93092af91e3297901f02c17043795a10690",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\archives\\strawberry-perl-5.42.3.1-64bit-portable.zip",
+      "algorithm": "SHA256",
+      "measured": "6A081A811781C30ACA51DBC036AFD93092AF91E3297901F02C17043795A10690",
+      "equivalent": true
+    },
+    {
+      "declared": "fb0cc5933d7f126362fd1f2cd6febfba1d8899fe6dbd5288090637947476052a",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\tool-manifest.json",
+      "algorithm": "SHA256",
+      "measured": "FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A",
+      "equivalent": true
+    },
+    {
+      "declared": "ee67e4181ae2578b7842f9f1549a7f66e2166638fa544ce6838d9e9033a02275",
+      "length": 64,
+      "hex": true,
+      "input": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat",
+      "algorithm": "SHA256",
+      "measured": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+      "equivalent": true
+    },
+    {
+      "declared": "88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+      "length": 64,
+      "hex": true,
+      "input": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+      "algorithm": "SHA256",
+      "measured": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+      "equivalent": true
+    },
+    {
+      "declared": "b05f089f67dba8df1d7cc38798b71e62a6ce8881b234dcfc80a657264597626c",
+      "length": 64,
+      "hex": true,
+      "input": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\nmake.exe",
+      "algorithm": "SHA256",
+      "measured": "B05F089F67DBA8DF1D7CC38798B71E62A6CE8881B234DCFC80A657264597626C",
+      "equivalent": true
+    },
+    {
+      "declared": "991775152cadbc85caf05da348ea583145ec9126a0a6f15f20e25896fcd0cd41",
+      "length": 64,
+      "hex": true,
+      "input": "C:\\Users\\Jerico\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\nasm.exe",
+      "algorithm": "SHA256",
+      "measured": "991775152CADBC85CAF05DA348EA583145EC9126A0A6F15F20E25896FCD0CD41",
+      "equivalent": true
+    },
+    {
+      "declared": "7304f17cc9998bd7c16539ae9a5ea545f2e0c64086d5e688caba104b6a7ffecc",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\openssl-1.1.1o\\include\\openssl\\dtls1.h",
+      "algorithm": "SHA256",
+      "measured": "7304F17CC9998BD7C16539AE9A5EA545F2E0C64086D5E688CABA104B6A7FFECC",
+      "equivalent": true
+    },
+    {
+      "declared": "5a91abcbdd14dcf2fc62761ccc58ee9407274ea558c292fa77ad625204ac2bd7",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\openssl-1.1.1o\\include\\openssl\\rand.h",
+      "algorithm": "SHA256",
+      "measured": "5A91ABCBDD14DCF2FC62761CCC58EE9407274EA558C292FA77AD625204AC2BD7",
+      "equivalent": true
+    },
+    {
+      "declared": "7304f17cc9998bd7c16539ae9a5ea545f2e0c64086d5e688caba104b6a7ffecc",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\openssl-1.1.1o\\include\\openssl\\dtls1.h",
+      "algorithm": "SHA256",
+      "measured": "7304F17CC9998BD7C16539AE9A5EA545F2E0C64086D5E688CABA104B6A7FFECC",
+      "equivalent": true
+    },
+    {
+      "declared": "5a91abcbdd14dcf2fc62761ccc58ee9407274ea558c292fa77ad625204ac2bd7",
+      "length": 64,
+      "hex": true,
+      "input": "F:\\JericoEngine\\Dependencies\\openssl-1.1.1o\\include\\openssl\\rand.h",
+      "algorithm": "SHA256",
+      "measured": "5A91ABCBDD14DCF2FC62761CCC58EE9407274EA558C292FA77AD625204AC2BD7",
+      "equivalent": true
+    }
+  ],
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\source-freeze-openssl-perl-manifest-pin.json",
+  "freezeSHA256": "7E730F85776C891B2206FD69990B2E702587695DDCAA8487721579C3C855F1A4",
+  "writerExecutedCMakeToolsBuildTests": false
+}

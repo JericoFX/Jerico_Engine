@@ -1,0 +1,82 @@
+[
+  {
+    "path": "CMakeLists.txt",
+    "sha256": "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616"
+  },
+  {
+    "path": "engine.json",
+    "sha256": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d"
+  },
+  {
+    "path": "cmake/3rdPartyPackages.cmake",
+    "sha256": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac"
+  },
+  {
+    "path": "cmake/LYPython.cmake",
+    "sha256": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705"
+  },
+  {
+    "path": "cmake/CalculateEnginePathId.cmake",
+    "sha256": "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d"
+  },
+  {
+    "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+    "sha256": "791b64c58751e4afad1b288e86db8c06d42bff82b92a7d15ef158eb35eafba7c"
+  },
+  {
+    "path": "cmake/3rdParty/Platform/Windows/Python_windows.cmake",
+    "sha256": "06c3df766ce45947fcb5278c6bc75853155f3b3d6ac6a40e2e629a88ff0369ca"
+  },
+  {
+    "path": "python/python.cmd",
+    "sha256": "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f"
+  },
+  {
+    "path": "python/python.sh",
+    "sha256": "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f"
+  },
+  {
+    "path": "python/requirements.txt",
+    "sha256": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2"
+  },
+  {
+    "path": "python/requirements-build.txt",
+    "sha256": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6"
+  },
+  {
+    "path": "Tools/LyTestTools/setup.py",
+    "sha256": "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5"
+  },
+  {
+    "path": "Tools/RemoteConsole/ly_remote_console/setup.py",
+    "sha256": "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1"
+  },
+  {
+    "path": "scripts/o3de/setup.py",
+    "sha256": "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912"
+  },
+  {
+    "path": "AutomatedTesting/Gem/PythonTests/EditorPythonTestTools/setup.py",
+    "sha256": "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd"
+  },
+  {
+    "path": "Gems/Atom/RPI/Tools/setup.py",
+    "sha256": "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/CMakeLists.txt",
+    "sha256": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/PackageInfo.json",
+    "sha256": "6b44c1f36e9e090876ce4408022fcb32ce6f870b4c11417958583e1de74abbe6"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/files.cmake",
+    "sha256": "5becde081df1b3ccf0c2e44c065e48b5c702e14c6b83a8302a0f9b6bb56e1d0b"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/LICENSE.txt",
+    "sha256": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4"
+  }
+]

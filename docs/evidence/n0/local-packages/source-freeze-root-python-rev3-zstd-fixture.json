@@ -1,0 +1,294 @@
+[
+  {
+    "path": "AutomatedTesting/Gem/PythonTests/EditorPythonTestTools/setup.py",
+    "sha256": "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd"
+  },
+  {
+    "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+    "sha256": "a29d20d40003ccd288d7e4e0c83c5e29e24b721f969afb769fb6cc0b470351a2"
+  },
+  {
+    "path": "cmake/3rdParty/Platform/Windows/Python_windows.cmake",
+    "sha256": "83276e3095041a2e9b192e72c5c9bc78e97206e88952dd0288824c55ea19d88c"
+  },
+  {
+    "path": "cmake/3rdPartyPackages.cmake",
+    "sha256": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac"
+  },
+  {
+    "path": "cmake/CalculateEnginePathId.cmake",
+    "sha256": "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d"
+  },
+  {
+    "path": "cmake/Gems.cmake",
+    "sha256": "754f48f598125a89f68c5240047582d614418844eb0d2e4cfe6e6679d3730210"
+  },
+  {
+    "path": "cmake/LYPython.cmake",
+    "sha256": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705"
+  },
+  {
+    "path": "cmake/Projects.cmake",
+    "sha256": "49120b2899b8342e25d5f520bb79fe93f8ee0840b8a4485cd90386466a12a594"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+    "sha256": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/ApplyLuaPatch.cmake",
+    "sha256": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake",
+    "sha256": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/CMakeLists.txt",
+    "sha256": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/FindLua.cmake",
+    "sha256": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/LICENSE.txt",
+    "sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch",
+    "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/NOTICE.txt",
+    "sha256": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/tests/CMakeLists.txt",
+    "sha256": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Lua/tests/LuaConsumer.cpp",
+    "sha256": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+    "sha256": "a0c34a5a5fdbe3f8ffbdd7a0cb73b2fc6f6f17b13d1c897d3740b80013dc31b9"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+    "sha256": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+    "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+    "sha256": "d119fe637a26f99b043b1c342cefe426e19c1279d0c0aee14cb8eb95b060b913"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+    "sha256": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+    "sha256": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+    "sha256": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+    "sha256": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+    "sha256": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+    "sha256": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake",
+    "sha256": "4c19138e51ea0e15917ba250447ef544504de247e56e13c50eac515e57958bfb"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/CMakeLists.txt",
+    "sha256": "bb0ec783d064d9f8fb2efe2805b6fc4fe64915413f0fa3f49b6381f99a3b9e5e"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/Findzstd.cmake",
+    "sha256": "19f953303b4e0729ffb0e25b25b5ba3ced475961a7301c7497df275f42283d07"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/NOTICE.txt",
+    "sha256": "1fad21a396b2042f2fabafbb7b9c21e1fe96590520a1cee44dcd36158d94518d"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/README.md",
+    "sha256": "946221c70881ce1fb1582f24c4f5a182984dca73ff088d63fadf5c46461116d2"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/tests/CMakeLists.txt",
+    "sha256": "f7ac509ec6425d5c365695d2dcf4dda4021691d48e464a40018027dd047e6323"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Zstd/tests/ZstdConsumer.cpp",
+    "sha256": "b2bb74d80dd4e8634e345b3c5e41996ff75bec9e8b50d79cb3ec2ca2f2ca0b73"
+  },
+  {
+    "path": "CMakeLists.txt",
+    "sha256": "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/CMakeLists.txt",
+    "sha256": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/files.cmake",
+    "sha256": "5becde081df1b3ccf0c2e44c065e48b5c702e14c6b83a8302a0f9b6bb56e1d0b"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/LICENSE.txt",
+    "sha256": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4"
+  },
+  {
+    "path": "Code/3rdParty/mimalloc/PackageInfo.json",
+    "sha256": "6b44c1f36e9e090876ce4408022fcb32ce6f870b4c11417958583e1de74abbe6"
+  },
+  {
+    "path": "Code/3rdParty/rapidjson/CMakeLists.txt",
+    "sha256": "9f914da4a03a405f67bd90ea855994eb57c85fa337d7425e6eae42f6321bf0a7"
+  },
+  {
+    "path": "Code/3rdParty/rapidjson/PackageInfo.json",
+    "sha256": "183b607961a5d4a0523ff10746f6890a51a360c24d438b8723f7006c871d0af6"
+  },
+  {
+    "path": "Code/LauncherUnified/launcher_generator.cmake",
+    "sha256": "6d7f276499835a411918c38d877e97a71a7b68f3111d460cabe2a3de22ae7d16"
+  },
+  {
+    "path": "Code/LauncherUnified/Platform/Windows/launcher_project_windows.cmake",
+    "sha256": "38a0c2d0d105443dae4774fd823de01e11a61e01eb427d86a25a403543e87296"
+  },
+  {
+    "path": "engine.json",
+    "sha256": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d"
+  },
+  {
+    "path": "Gems/Atom/RPI/Tools/setup.py",
+    "sha256": "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262"
+  },
+  {
+    "path": "Projects/JEEditorFixture/.gitignore",
+    "sha256": "9d7eaab87ebb7153e34c5754a8341665f3e7b8ad2638767c188152c7d148a3ad"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Assets/materials/WhiteBoxDefault.material",
+    "sha256": "37de6d5e6914d038db2a11032fda0b1aa4e378c8e08d882c20a08cc0da205e0c"
+  },
+  {
+    "path": "Projects/JEEditorFixture/autoexec.cfg",
+    "sha256": "2e040b27120c3c0612c1850e25e1b20a0680b9a06428bd150549220e36a1cfc0"
+  },
+  {
+    "path": "Projects/JEEditorFixture/cmake/EngineFinder.cmake",
+    "sha256": "6f063badd68eb5bc5d5066036daaf25d01249f4aa22e7249a9c9efc848849385"
+  },
+  {
+    "path": "Projects/JEEditorFixture/CMakeLists.txt",
+    "sha256": "5486fb4054da6d0094575d990c351a5401e39af05369db3a626b1716038ece41"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Config/shader_global_build_options.json",
+    "sha256": "76a5f96f75cc8aca5201e98d5096c963630f831cbb704bbad2c9b99d73c7e6b4"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Editor/Scripts/author_room.py",
+    "sha256": "76d0f54a888ff6a749ee5ceb7a05b678428db8079f00c29e0fa78f791718284f"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab",
+    "sha256": "e5857a6a43aa910a3b981f90719e6cc1ae33bfb307f16be1385652fa44f6c465"
+  },
+  {
+    "path": "Projects/JEEditorFixture/LICENSE_APACHE2.TXT",
+    "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+  },
+  {
+    "path": "Projects/JEEditorFixture/LICENSE_MIT.TXT",
+    "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+  },
+  {
+    "path": "Projects/JEEditorFixture/LICENSE.txt",
+    "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+  },
+  {
+    "path": "Projects/JEEditorFixture/NOTICE.txt",
+    "sha256": "010e05c864ed4bce9a8f5c9caefabb7c1f4bb257269bcdd63898e8c96758acb2"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.cmake",
+    "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Platform/Windows/windows_project.json",
+    "sha256": "50d6239101a7eed1489ea3bd9eb23d28d728c3ba58920cd5c0a98fd168ab4376"
+  },
+  {
+    "path": "Projects/JEEditorFixture/project.json",
+    "sha256": "9c12c0a2d871de98e5adab390de2f9a8c1cd9f2245e00096db13a12ed4a1aebf"
+  },
+  {
+    "path": "Projects/JEEditorFixture/README.md",
+    "sha256": "143c24de1b3fcdae2e3bf90e0d7af8f6726fbcaa73c8004208f96e96e34bef15"
+  },
+  {
+    "path": "Projects/JEEditorFixture/Registry/assetprocessor_settings.setreg",
+    "sha256": "0a88d47a79f716d27c72fea79f0c112ae6c9cbf21918dbfbc523e597e0ca7224"
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/README.md",
+    "sha256": "96498c747d5e46b338ff0c6c8ff9739e6f8b08d1647743382beb42210e6c5421"
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/scenesrg.srgi",
+    "sha256": "0bab50bed308f31f62a6d234b17bcd47676ef0ff2a4793933a79f507f35b5c89"
+  },
+  {
+    "path": "Projects/JEEditorFixture/ShaderLib/viewsrg.srgi",
+    "sha256": "33959b6021d4a0276d20f13ad4c36c3d6436b86de01b32700a63d43179b185c6"
+  },
+  {
+    "path": "python/python.cmd",
+    "sha256": "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f"
+  },
+  {
+    "path": "python/python.sh",
+    "sha256": "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f"
+  },
+  {
+    "path": "python/requirements-build.txt",
+    "sha256": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6"
+  },
+  {
+    "path": "python/requirements.txt",
+    "sha256": "22f69d842f651cce2738ff5e31a302bd5f1923c5fdc2b9167a897e13bc20c5a2"
+  },
+  {
+    "path": "scripts/o3de/setup.py",
+    "sha256": "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912"
+  },
+  {
+    "path": "Tools/LyTestTools/setup.py",
+    "sha256": "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5"
+  },
+  {
+    "path": "Tools/RemoteConsole/ly_remote_console/setup.py",
+    "sha256": "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1"
+  }
+]

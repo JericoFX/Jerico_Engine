@@ -1,0 +1,424 @@
+{
+  "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1-extracted",
+  "file_count": 83,
+  "bytes": 3860837.0,
+  "archive_content_file_hash_mismatch_count": 0,
+  "files": [
+    {
+      "path": "Findzstd.cmake",
+      "bytes": 2468,
+      "sha256": "19f953303b4e0729ffb0e25b25b5ba3ced475961a7301c7497df275f42283d07"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "LICENSES/Zstd/COPYING",
+      "bytes": 18091,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/bitstream.h",
+      "bytes": 18204,
+      "sha256": "929327d795476051cd9d9a10b11fac0609842905506128a1d81255ed357f8a26"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/compiler.h",
+      "bytes": 3919,
+      "sha256": "c1d94e3ad94f3077a25794c37ec3adf81b5bcee1ad53aa7dd0d5008ef8407714"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/cpu.h",
+      "bytes": 4432,
+      "sha256": "e20286346f7e87033c04acf6a833d70d84760d64c1fbb528a42d2139bffc0794"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/debug.c",
+      "bytes": 1912,
+      "sha256": "3a585aec8951b83a572590f75506f249e9c7ed5063928719b11d097bb09462c2"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/debug.h",
+      "bytes": 4689,
+      "sha256": "25f85351d6d3ec7551a397fd3e97e1c2bef91264be45fadc40e91befa46d01f0"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/entropy_common.c",
+      "bytes": 9554,
+      "sha256": "b940c4313dd2436a63ed873126fb68e25a14033af38d7b66d401e14ee385d7cc"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/error_private.c",
+      "bytes": 2695,
+      "sha256": "167a51cf71477b55cd41282a3f7c0c7ca930fa8eed83dfeca2f01e90953de875"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/error_private.h",
+      "bytes": 2305,
+      "sha256": "435424ae6cd318f20b73ee17e6fd4b03540b9c338d204485fda40e3efcf78c4b"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/fse_decompress.c",
+      "bytes": 11179,
+      "sha256": "70ee245827e72d7e94f67d14403e376446a81177e9c3ce1f9d59a1459acfc343"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/fse.h",
+      "bytes": 32982,
+      "sha256": "59b996613b045b6bc2a512abdd82e78ab41ec5063e048c6671653aa7be769ee8"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/huf.h",
+      "bytes": 19479,
+      "sha256": "7092f4e1b28a1825436bbf93efcefa4b1244db2a35aa1f044edc3a59f192cd44"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/mem.h",
+      "bytes": 11394,
+      "sha256": "b400f3d413336dfc20a11968fc95807183e2b2d233d491badf533cb88756c668"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/pool.c",
+      "bytes": 10951,
+      "sha256": "8656db50dda183090c782c1bf263440bd0fc71e4a9c80e5a5127399acdb94196"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/pool.h",
+      "bytes": 2544,
+      "sha256": "ffa4e69225f955664ad33cbdf7b08a706661a0a5f7d3f32f22da2cfa58ed4172"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/threading.c",
+      "bytes": 1839,
+      "sha256": "09d256e54671a42ee813bf2fc58e659021e701a8841dc424590028ae2481d249"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/threading.h",
+      "bytes": 4049,
+      "sha256": "9822983f6f64580afd64c9e113998902f587f7e27e02039100b4be5ad69c7055"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/xxhash.c",
+      "bytes": 28905,
+      "sha256": "0fcc6c9db86d368f7984e4fa49771f9f3d483ccc9f4b58796c40498747ffd182"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/xxhash.h",
+      "bytes": 12781,
+      "sha256": "6107aa2aa3fae5a32e347251220391bb751af0f1a38e4d8cded0860a9187dee3"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/zstd_common.c",
+      "bytes": 2570,
+      "sha256": "f9f1ee5714f4c4d95e3e2c27b8dbd403ed5b44d23c8a6aa6322bb51f5a09b857"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/zstd_errors.h",
+      "bytes": 3715,
+      "sha256": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9"
+    },
+    {
+      "path": "LICENSES/Zstd/library/common/zstd_internal.h",
+      "bytes": 9202,
+      "sha256": "6826e8dbb940b76d78c31b61f2597960853815e2a06d2ef1201755dc9ebaf231"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/fse_compress.c",
+      "bytes": 27523,
+      "sha256": "424a9ba7d2439da30891ebe76272be1b146a1d8e63052ecee6f62ce07744b08d"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/hist.c",
+      "bytes": 7926,
+      "sha256": "6bb09dec37948ca953277d9dd29fe8b8ed426071f683fbbc90bcced2e5c811df"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/hist.h",
+      "bytes": 4327,
+      "sha256": "64b7335f31d9ac3611965693e372b42375e8729502bdf153ac2674a72be65363"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/huf_compress.c",
+      "bytes": 32593,
+      "sha256": "0c7a99c5ac433ebafac5567d657a90f89b36342105ac451ea08f76e32d4ee3aa"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_compress_internal.h",
+      "bytes": 32665,
+      "sha256": "024a72b519397e9670eb34a1fcc75089011ca4a4fceb4e9a4ad0aca370734dd9"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_compress.c",
+      "bytes": 172122,
+      "sha256": "4e85f3b10ee2f8c24aa536acbc3bb619c768562eab39920e344e57df32862ff9"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_double_fast.c",
+      "bytes": 23242,
+      "sha256": "9e66160843c232a3d8bfd875787c57f57c9056991a389561fc29674e011f6517"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_double_fast.h",
+      "bytes": 1485,
+      "sha256": "c929378e7d25ea30a14849a0b44f4afaf0fbe2b7c3685d806163301dd6a902a8"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_fast.c",
+      "bytes": 17705,
+      "sha256": "7ed776ce39f62effa762d420c0f2a1ae4e879d9b6f36699c04a72ccb1313ed27"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_fast.h",
+      "bytes": 1399,
+      "sha256": "a353356ea61d125a766c2c699e317e05a14151694c136f913d5aea4a7e69ea26"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_lazy.c",
+      "bytes": 51196,
+      "sha256": "78be4e072434f02689855b86380cd26cdaf3b03511e34892e2f9847b174a946c"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_lazy.h",
+      "bytes": 3322,
+      "sha256": "061c9a2810cefb6679968a3784d84e3732091776a4851931c5fc8e6631693426"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_ldm.c",
+      "bytes": 25303,
+      "sha256": "8b492bc35789735877c7c7543fe44ea3604e7c2d4a338240c57ea64783073420"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_ldm.h",
+      "bytes": 4026,
+      "sha256": "956d3a3fb23c60ed3b7f6eb8913a37c57734b4ebc4454811c9661ebca8d07cd9"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_opt.c",
+      "bytes": 52597,
+      "sha256": "9f7735a9a11fc349e827db5f80e1866e70a578cb781465c83a2bf95ca07bbd57"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstd_opt.h",
+      "bytes": 1975,
+      "sha256": "431036676b5717127ac11970e06160a5d5a7312c63e2cdbe54754c4e280bcc6e"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstdmt_compress.c",
+      "bytes": 83744,
+      "sha256": "050ed9e6bd748f2d6a6a55ef3cf7e22b466920d71f53642fe058b38c4f75f17f"
+    },
+    {
+      "path": "LICENSES/Zstd/library/compress/zstdmt_compress.h",
+      "bytes": 7677,
+      "sha256": "47fb2123aa4de3cb753736da6a4f058b1000cc0a7275f50407106ceda3921cf5"
+    },
+    {
+      "path": "LICENSES/Zstd/library/decompress/huf_decompress.c",
+      "bytes": 45802,
+      "sha256": "de5437c86bab2626e953c52d932647b0e6f0cdd44b4f34c082c7d2f827c59bbb"
+    },
+    {
+      "path": "LICENSES/Zstd/library/decompress/zstd_decompress.c",
+      "bytes": 126555,
+      "sha256": "e5227741e7b0ed85f36cfe5c8027359aa6288f4b1566a28344e837df21a3d1ed"
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff_common.c",
+      "bytes": 1003,
+      "sha256": "05c6608ce90d05d994e3def91cd76580ff1817f33998da4b0203085f246a4972"
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff_compress.c",
+      "bytes": 5334,
+      "sha256": "a04fa0619cf8c4a7a9b105870a339b9b383f5d6f043ff0ab20cf61274815191d"
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff_decompress.c",
+      "bytes": 1919,
+      "sha256": "302bf698ab50148a76631aaef83fbaf8da74c803cffa32e20a12a1b0d0ded26a"
+    },
+    {
+      "path": "LICENSES/Zstd/library/deprecated/zbuff.h",
+      "bytes": 11474,
+      "sha256": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f"
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/cover.c",
+      "bytes": 34267,
+      "sha256": "3601bc1c39adb9b7fae218b1ce8ce88041fcb300808cdb3586d1ff8ec807e71b"
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/divsufsort.c",
+      "bytes": 54592,
+      "sha256": "c6aab9652b409968baf5b063419d666467965c46a469f6b163b5b2d74df99da5"
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/divsufsort.h",
+      "bytes": 2419,
+      "sha256": "f8312544f98feb695e611c68d5191b5ae5302e01a3613e2a6f8e6cd365dd3b2d"
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/zdict.c",
+      "bytes": 43582,
+      "sha256": "d8db92a14c09ec04dcad5799ee7be9a829b025a1be7bed581eb24ea1ef6358b3"
+    },
+    {
+      "path": "LICENSES/Zstd/library/dictBuilder/zdict.h",
+      "bytes": 11175,
+      "sha256": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_legacy.h",
+      "bytes": 12579,
+      "sha256": "96507dd27961f48ac03304f948d110f8c79f548f5c22518ea25fcae7265a3d8f"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v01.c",
+      "bytes": 70278,
+      "sha256": "419bda7aef103af8f42f1ac3024e6a7146f31dec0171c1a3e5e4409e83a6cf9c"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v01.h",
+      "bytes": 3432,
+      "sha256": "68c0bb7e088910d39deafc5dcf629e0e8c30cea38d3ff9a4af9728a87c7ca91b"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v02.c",
+      "bytes": 127088,
+      "sha256": "7d703b4b43759eb011b7b680e460892dc634729cb168a9219d7e824b0bc4c795"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v02.h",
+      "bytes": 3342,
+      "sha256": "fba15b30b8bdbded1e9a92e06c71c4da289d78156bda77d20dc067a7091da5ba"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v03.c",
+      "bytes": 113189,
+      "sha256": "55b54f5aed9d3bbe924a1f01ee98659ccd383e58f0d0c4ac961d9750796f7f0c"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v03.h",
+      "bytes": 3352,
+      "sha256": "41dc45ea5a6e901e358ab9cfdea3aa008d91cb80597db28b10c1a183891fb285"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v04.c",
+      "bytes": 134834,
+      "sha256": "bb7b9728a0abdd70db74fa278497878951f339173f959963182a634c90dbeee2"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v04.h",
+      "bytes": 6070,
+      "sha256": "03fd1948e6e3b2c7a41933898ec2d3a747d06022b98dc05a045a202fc54acbb1"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v05.c",
+      "bytes": 155065,
+      "sha256": "f5987302f6820db768df90dac9af01804258f084e2b466a4ebe3be4736be19f5"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v05.h",
+      "bytes": 7131,
+      "sha256": "e6d204b41dde3f67358f6f29fb9e2455efa447ccd163cb51fc49eabc2fe37830"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v06.c",
+      "bytes": 165199,
+      "sha256": "ad3a7e8a3dd6d1d61d9148a0000bf1f0ea5a804a8ace7b5fe55b1cbf768470cc"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v06.h",
+      "bytes": 7687,
+      "sha256": "992e1138577480410ef2a1b3d8157d532ce706f7572e19ce274f6aad0c19d28c"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v07.c",
+      "bytes": 184041,
+      "sha256": "22796690ed15429478d68502554bca92b8364cda64b244a4fe08cc5c18223b30"
+    },
+    {
+      "path": "LICENSES/Zstd/library/legacy/zstd_v07.h",
+      "bytes": 8330,
+      "sha256": "b204614a90a5dfb5fc4b15e0d89388aacc8420e6e6b62a42265bb810d321a6f7"
+    },
+    {
+      "path": "LICENSES/Zstd/library/zstd.h",
+      "bytes": 90830,
+      "sha256": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738"
+    },
+    {
+      "path": "LICENSES/Zstd/LICENSE",
+      "bytes": 1530,
+      "sha256": "2c1a7fa704df8f3a606f6fc010b8b5aaebf403f3aeec339a12048f1ba7331a0b"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 1929,
+      "sha256": "1fad21a396b2042f2fabafbb7b9c21e1fe96590520a1cee44dcd36158d94518d"
+    },
+    {
+      "path": "PackageInfo.json",
+      "bytes": 426,
+      "sha256": "0bc9c7316b24b1878915034956f93122830a753fad826c29200c523145f8caac"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3515,
+      "sha256": "946221c70881ce1fb1582f24c4f5a182984dca73ff088d63fadf5c46461116d2"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 8638,
+      "sha256": "f5beb25462ea05c6ad491b6ab82a23a3ca7e9b6dddbe5724188038a533a6fa58"
+    },
+    {
+      "path": "zstd/include/zbuff.h",
+      "bytes": 11474,
+      "sha256": "e1aa0c84dd40cfcf5a23e8dea5c376f9da626eeed902667fe0f8cbceb673840f"
+    },
+    {
+      "path": "zstd/include/zdict.h",
+      "bytes": 11175,
+      "sha256": "2b04a5bc793da9095f260d87b3014afcfe4eb21e0cdc7076cb298c44c4775cd1"
+    },
+    {
+      "path": "zstd/include/zstd_errors.h",
+      "bytes": 3715,
+      "sha256": "3b60bd79d4f4abc1bf9648a4da8282f782dd5caf2789aea742f1f4d4ef250ff9"
+    },
+    {
+      "path": "zstd/include/zstd.h",
+      "bytes": 90830,
+      "sha256": "1dd70d1bcd6ba3f3bb1deac73f15d4460fa61032966c1263d84666aec07f6738"
+    },
+    {
+      "path": "zstd/JERecipe.json",
+      "bytes": 411,
+      "sha256": "93f2fc4d08a089dafa7c69ad1c5c02f87476f619b102a37a6123d291e13e596d"
+    },
+    {
+      "path": "zstd/lib/release/zstd_static.lib",
+      "bytes": 1509824,
+      "sha256": "cbbd9f48c3c07e8e2896e7cf19d83a9410b339b2f722e3ff3dfb75c7485fa298"
+    }
+  ],
+  "mismatches": []
+}

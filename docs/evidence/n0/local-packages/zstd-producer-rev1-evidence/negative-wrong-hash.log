@@ -1,0 +1,5 @@
+CMake Error at JericoEngine/cmake/Tools/LocalPackages/Zstd/BuildZstdPackage.cmake:31 (message):
+  JE local zstd: source URL/SHA256 must match the audited 1.3.5 commit
+  archive
+
+

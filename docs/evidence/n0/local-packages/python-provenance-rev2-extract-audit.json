@@ -1,0 +1,17 @@
+{
+  "ExtractExit": 0,
+  "ExtractedFiles": 3283,
+  "ManifestPayloadFiles": 3282,
+  "Matches": true,
+  "PackageInfo": {
+    "license": "PSF-2.0",
+    "name": "python-3.10.13-je-rev2-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "49965601d6afedafe47cc85556d99b7a24981051",
+      "sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+      "url": "https://codeload.github.com/python/cpython/tar.gz/49965601d6afedafe47cc85556d99b7a24981051"
+    },
+    "version": "3.10.13-je-rev2"
+  }
+}

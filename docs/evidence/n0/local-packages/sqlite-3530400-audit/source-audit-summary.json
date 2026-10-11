@@ -1,0 +1,37 @@
+{
+  "version": "3.53.4",
+  "url": "https://sqlite.org/2026/sqlite-amalgamation-3530400.zip",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\sqlite-amalgamation-3530400.zip",
+  "archiveBytes": 2946650,
+  "archiveSHA256": "1e71ddf93849c6a6ecf58b827c0692073d2dd7ee40196158068f7b29f422e87d",
+  "source": "F:\\JericoEngine\\Dependencies\\sqlite-amalgamation-3530400",
+  "sourceID": "2026-07-24 19:02:57 bf7c7f30031888f4e796e429ab3978879485813aaca6f641c7b33e4e09459bcc",
+  "license": "blessing",
+  "licenseFiles": [
+    "sqlite3.c:35",
+    "sqlite3.h:4",
+    "sqlite3ext.h:4",
+    "shell.c:46",
+    "Code/3rdParty/sqlite/LICENSE.txt"
+  ],
+  "legalAudit": "All copyright/license matches in library and public headers use the SQLite disclaimer/blessing; no alternate license matches found. Original files preserved verbatim.",
+  "archiveAudit": "5 entries; expected root directory plus 4 regular files; no links, traversal or case collisions. Per-blob SHA256 captured before extraction.",
+  "downloads": "Official HTTPS sqlite.org only; HEAD/GET direct 200, no credentials/autoredirect. No Azure/AWS/S3/CloudFront consumed.",
+  "closure": "Exactly sqlite3.c/shell.c/sqlite3.h/sqlite3ext.h; no upstream CMake, download scripts or external projects. Existing engine wrapper compiles sqlite3.c only; Windows C runtime/system APIs. Shell is preserved but not built.",
+  "wrapper": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+  "targets": [
+    "3rdParty::sqlite STATIC OUTPUT_NAME sqlite3",
+    "3rdParty::SQLite alias"
+  ],
+  "realConsumers": [
+    "Code/Framework/AzToolsFramework/CMakeLists.txt:54",
+    "Code/Tools/AssetProcessor/CMakeLists.txt:37",
+    "AzToolsFramework/SQLite/SQLiteConnection.cpp Open version/sourceID assertions, prepared/bound statement ownership, transaction APIs",
+    "AzToolsFramework/AssetDatabase/AssetDatabaseConnection.cpp uses existing SQLite abstraction"
+  ],
+  "runtime": "Original engine Configurations_msvc.cmake:137 /MDd Debug and :144 /MD other configs; wrapper has no SQLITE_API dllimport define and creates STATIC target",
+  "rootArgument": "-DFETCHCONTENT_SOURCE_DIR_SQLITE:PATH=F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400",
+  "consumer": "tests/CMakeLists.txt requires existing original engine targets; no duplicate SQLite source compilation/import/provider",
+  "state": "Acquisition/static audit complete; CMake/source guards/native consumer/runtime integration NOT EXECUTED",
+  "legacy3370200": "Historical HEAD-only evidence retained; acquisition stopped before GET when current wrapper 3.53.4 was found. No legacy archive/package was made."
+}

@@ -1,0 +1,41 @@
+{
+  "index": 206,
+  "source_path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+  "expected_sha256": "30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b",
+  "expected_bytes": 212820,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:09.376581+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "212820",
+      "ETag": "\"30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:09.890933+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "212820",
+      "ETag": "\"30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b",
+  "actual_bytes": 212820,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-SemiboldItalic.ttf",
+  "status": "acquired and byte verified"
+}

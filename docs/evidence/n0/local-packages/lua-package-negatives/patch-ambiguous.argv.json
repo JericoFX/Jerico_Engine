@@ -1,0 +1,12 @@
+{
+  "name": "patch-ambiguous",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "-DJE_LUA_WORK:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-patch-negative-fixtures\\ambiguous",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\ApplyLuaPatch.cmake"
+  ],
+  "argv_count": 3,
+  "expected_diagnostic": "ambiguous patch hunk: loadlib Windows error"
+}

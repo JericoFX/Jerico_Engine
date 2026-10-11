@@ -1,0 +1,41 @@
+{
+  "index": 171,
+  "source_path": "Code/Editor/res/Eye_Open_Hover.tif",
+  "expected_sha256": "c421ceb6cc7ed4ecae1b254d6e9fc523f0c2bef108c84b5f80cd129e2ec8f536",
+  "expected_bytes": 5316,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hover.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:25.511719+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hover.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "5316",
+      "ETag": "\"c421ceb6cc7ed4ecae1b254d6e9fc523f0c2bef108c84b5f80cd129e2ec8f536\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hover.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:25.994636+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hover.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "5316",
+      "ETag": "\"c421ceb6cc7ed4ecae1b254d6e9fc523f0c2bef108c84b5f80cd129e2ec8f536\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "c421ceb6cc7ed4ecae1b254d6e9fc523f0c2bef108c84b5f80cd129e2ec8f536",
+  "actual_bytes": 5316,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Eye_Open_Hover.tif",
+  "status": "acquired and byte verified"
+}

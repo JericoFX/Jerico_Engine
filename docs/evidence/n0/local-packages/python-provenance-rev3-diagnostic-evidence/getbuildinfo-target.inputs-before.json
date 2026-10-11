@@ -1,0 +1,68 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev3-diagnostic",
+  "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+  "tool_sha256": "0f7daba445ba37b652ae4180270ab3eff27acbbe5d411d3b05dad51aab16404c",
+  "project": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev3-diagnostic\\PCbuild\\pythoncore.vcxproj",
+  "project_sha256_before": "07f99462cf6a9aa667ad802a3f7285e640ab78b3233fcb7cc243eacf2f0b3a45",
+  "argument_count": 21,
+  "argv": [
+    "-getProperty:GitVersion,GitTag,GitBranch",
+    "-t:_GetBuildInfo",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev3-diagnostic\\PCbuild\\pythoncore.vcxproj",
+    "/p:Configuration=Release",
+    "/p:Platform=x64",
+    "/p:PlatformToolset=v143",
+    "/p:IncludeExternals=true",
+    "/p:IncludeExtensions=true",
+    "/p:IncludeCTypes=true",
+    "/p:IncludeSSL=true",
+    "/p:IncludeTkinter=true",
+    "/p:IncludeTests=true",
+    "/p:SupportSigning=false",
+    "/p:KillPython=false",
+    "/p:ExternalsDir=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-externals/",
+    "/p:GitVersion=49965601d6afedafe47cc85556d99b7a24981051",
+    "/p:GitTag=cpython-3.10.13-archive",
+    "/p:GitBranch=archive",
+    "/p:PythonForBuild=\"C:/Users/Jerico/AppData/Local/Programs/Python/Python312/python.exe\" -E -s",
+    "/nologo",
+    "/v:m"
+  ],
+  "only_target": "_GetBuildInfo",
+  "get_property": "GitVersion,GitTag,GitBranch",
+  "expected_globals": {
+    "GitVersion": "49965601d6afedafe47cc85556d99b7a24981051",
+    "GitBranch": "archive",
+    "GitTag": "cpython-3.10.13-archive"
+  },
+  "source_freeze_sha256": "57EA7B94EFEDB0B0D82DD9B8CC3DB5CAC86606C2AB9D9A861C173846F7141359",
+  "assets_before": [
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\cpython-49965601d6afedafe47cc85556d99b7a24981051.tar.gz",
+      "bytes": 26359731,
+      "sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\archives\\expat-65a21f2b2a306d29b44e70264aca948aa0454219.tar.gz",
+      "bytes": 8314214,
+      "sha256": "54fd00059462c81e8e3c8eef7e90169fca1b48d89122fbc97039d7007190d9c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-externals-manifest.json",
+      "bytes": 2953,
+      "sha256": "3663cba7be84cd7df1ce2df77a7606af85ba6e5da58a3260babe6a609ed518cf"
+    },
+    {
+      "path": "C:\\Users\\Jerico\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "bytes": 105832,
+      "sha256": "805fd29612c221ebea570d372ec5ed46093c25a1033f1765de9b2f8103868886"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+      "bytes": 437048,
+      "sha256": "0f7daba445ba37b652ae4180270ab3eff27acbbe5d411d3b05dad51aab16404c"
+    }
+  ],
+  "git_files_before": [],
+  "output_exists": true
+}

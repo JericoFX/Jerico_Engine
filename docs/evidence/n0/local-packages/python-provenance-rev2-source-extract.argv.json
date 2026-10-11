@@ -1,0 +1,14 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "tar.exe",
+  "argv": [
+    "-xzf",
+    "F:\\JericoEngine\\Dependencies\\archives\\cpython-49965601d6afedafe47cc85556d99b7a24981051.tar.gz",
+    "-C",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2",
+    "--strip-components=1"
+  ],
+  "argv_count": 5,
+  "archive_sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+  "source_work": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev2"
+}

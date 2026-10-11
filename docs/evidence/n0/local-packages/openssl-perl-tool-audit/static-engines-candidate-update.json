@@ -1,0 +1,32 @@
+{
+  "changedSourceFiles": 3,
+  "unchangedInputs": 18,
+  "changes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\README.md",
+      "before": "B2F1117CB30EB6436513E6714582690DEB4EEC70BD2CCE726D4EC7342D18DC28",
+      "after": "2685268E33DC29B33D0F2DA01F3A25469D4D689F892C296674AE82C585024CAE",
+      "bytes": 5275
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\CMakeLists.txt",
+      "before": "1EA2168DAFDECA7951035C542DF71359892BED0E1D0C3B88CF9DA871C49A1F3C",
+      "after": "A10EA13FF93F59E7D6346596108EE1DBAD124C2E3A9173362C2F39785C66C0FA",
+      "bytes": 2732
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLConsumer.cpp",
+      "before": "5AFEC694578AD91C81C6469ADE29B9399B7E471E7D8AEDA71D516C27184100E2",
+      "after": "50AA9BC52F049B7EBB1F736523F59F63142A23D2DAE9BBDD1018028859E7171E",
+      "bytes": 14238
+    }
+  ],
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\source-freeze-openssl-static-engines.json",
+  "freezeSHA256": "8A1DA01093EF3F149C73D2D14F568ABC967FF63D5432A5C95820C15D0DCBAC14",
+  "candidateInputs": "producer-candidate-inputs.cmake",
+  "candidateInputsUnchanged": true,
+  "addedCase": "JE.LocalPackages.OpenSSL.static-engines",
+  "toolsExecuted": false,
+  "buildExecuted": false,
+  "testsExecuted": false
+}

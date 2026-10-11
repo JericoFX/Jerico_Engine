@@ -1,0 +1,1507 @@
+[
+  {
+    "path": "AcquireExactSource.ps1",
+    "bytes": 4562,
+    "sha256": "7A975FC26599A599076BC6A4E2F02C22ADB1AD5F6522AD1C4CA6E13BE9BEBF6E"
+  },
+  {
+    "path": "all-source-notice-lines.json",
+    "bytes": 1893861,
+    "sha256": "2DCD6641C59A6E1BEAE1458F99F957CE929C728FF9F6293EC0486DF83ABD7B52"
+  },
+  {
+    "path": "audit_archive.py",
+    "bytes": 3452,
+    "sha256": "81BECCFEB81E6785103AE15CE619B59A09E831A6E3C8A8C06028D588A0854735"
+  },
+  {
+    "path": "build-input-static-scan.json",
+    "bytes": 22481,
+    "sha256": "FA350D7B6A5E2B9B627AB7CDEEBBB43E205B6D5C310C52BB69A49223C093D1AD"
+  },
+  {
+    "path": "CompleteStaticAudit.py",
+    "bytes": 4283,
+    "sha256": "2CC9F750E26CF89D7D15F6CCF5B466557202B95B8117D6DA21CDAF2E08B42095"
+  },
+  {
+    "path": "extract_source.py",
+    "bytes": 2875,
+    "sha256": "6910807F23A08480E56961D961BE12F04D2EDE1E00D7EDDDF81DCA0B9F4BC28B"
+  },
+  {
+    "path": "full-additional-notices-manifest.json",
+    "bytes": 34592,
+    "sha256": "3859AC886E83E4C74337B1A469494049F520D0C3FD5371C69A60EF98FE4B3A00"
+  },
+  {
+    "path": "full-additional-notices/apps/passwd.c",
+    "bytes": 27051,
+    "sha256": "733371637089FFE8694E8DF92175303146E9CAC5F3E17AB0913585B0D102BEE8"
+  },
+  {
+    "path": "full-additional-notices/CHANGES",
+    "bytes": 601892,
+    "sha256": "9A39B462EBF978261A288F0B65C6FB4EA20B58301ABEAD5D3BF809072CBF5628"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/aes_core.c",
+    "bytes": 81580,
+    "sha256": "30E5C42410E2CD816B35A5F823018ECB265A2DA3C2BDD2AAD1CDB226EA85A2C3"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/aes_x86core.c",
+    "bytes": 41294,
+    "sha256": "16127DE408D69734AF652C0FB3762D0A9A22AA0924CAAAD3E7720D9A4D5C016E"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aes-armv4.pl",
+    "bytes": 33687,
+    "sha256": "2643BC76707494FBA19C61DA6718E595856833CF2E072302124B0DC5ADB34760"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aes-c64xplus.pl",
+    "bytes": 44287,
+    "sha256": "A9D46AF40D5BF7FB09431BC61324DD61D8C502E0621C78118812F854A27DD9C1"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aes-mips.pl",
+    "bytes": 53499,
+    "sha256": "281EE9E887AC017FE4AB300D062809770EB2C52E1D4A5D9C389C50EB895B8190"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aes-parisc.pl",
+    "bytes": 29449,
+    "sha256": "F4CC48B0906233377375A3C839062823DCBA4F6A42F319F99F51A1FC7AB10267"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aes-ppc.pl",
+    "bytes": 39996,
+    "sha256": "E1F93284E66AB614689F080680FBE952865B862403C7C19C76CBFD3B422A8A3D"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aes-s390x.pl",
+    "bytes": 54513,
+    "sha256": "F14C90947CB3F662FFDE6C91190B3E28885D5A9BF78FA7E2102EE957E0B1501C"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesfx-sparcv9.pl",
+    "bytes": 28196,
+    "sha256": "B78394799C0E2B3F096394BDF4D3EA9F5678DF0D06E0892456273F8D5C2C461A"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesni-mb-x86_64.pl",
+    "bytes": 37669,
+    "sha256": "5BEB473AE072DF0354243718780FA455621B2221E03FA9C921854A4D180577DA"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesni-sha1-x86_64.pl",
+    "bytes": 54637,
+    "sha256": "FBDA8B5F3B613F900269D372D91A490F01603DD6A32E417C9212560371002E8C"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesni-sha256-x86_64.pl",
+    "bytes": 44338,
+    "sha256": "F248CD0070544D1A3388247CCFC883B83D9BF6D58B40C5550F189E7223738AAD"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesni-x86_64.pl",
+    "bytes": 129862,
+    "sha256": "F9F949A48AE275AA455F90841406F684499475E960B87DAECD9EB9A7A84C976B"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesni-x86.pl",
+    "bytes": 102159,
+    "sha256": "254C726386A9205D6E6A8BE48C6F9679E02895840E8912B4C386C55EB5B5A51F"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesp8-ppc.pl",
+    "bytes": 93374,
+    "sha256": "D33481726A7432F7E4A247E300B5A85ED5E6BC223FA2C9086C1EFB2C25A29BCD"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/aesv8-armx.pl",
+    "bytes": 22370,
+    "sha256": "3A3137A0A7130A61AEFB5BE06B3117100DD528232F8B70BABA4A0DAD1CF7E8C5"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/bsaes-armv7.pl",
+    "bytes": 63812,
+    "sha256": "A570A66CF4461BA6DF4E6CA9F18F845455C1DD857518C489F15D05FAC8B1CC9A"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/vpaes-armv8.pl",
+    "bytes": 44672,
+    "sha256": "6BC9A6DAA838C106F5236911AD4A1DE329F16312F2574FF52343A7CE36D24568"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/vpaes-ppc.pl",
+    "bytes": 42789,
+    "sha256": "590671C7967C261AB7F1055ABE5DBFCCE7C7897F42288AEBE568D4D9C05DD17A"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/vpaes-x86_64.pl",
+    "bytes": 31348,
+    "sha256": "AAE1A01B2C793305227E6757DDE739116C95C125BFEDA6073FFB60C8AAAE71B8"
+  },
+  {
+    "path": "full-additional-notices/crypto/aes/asm/vpaes-x86.pl",
+    "bytes": 28109,
+    "sha256": "BFD3E7DF0EB92C1D32225F1CCAFC4CC917B352BA1CE7F5915924F36154AAB241"
+  },
+  {
+    "path": "full-additional-notices/crypto/aria/aria.c",
+    "bytes": 45022,
+    "sha256": "DA9D631BB6AE5F11E5AE50EA033082568FE8E84E44F023C3AD087BF12B89664D"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/alpha-mont.pl",
+    "bytes": 5921,
+    "sha256": "9A965FC05099CAD8166DD2139A369797B76B86F5A3FF649C2D769C809E43F49B"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/armv4-gf2m.pl",
+    "bytes": 8418,
+    "sha256": "59D4382DE548CFE64A537FF06D7CC2F853267C374B362112E7C56F604D097295"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/armv4-mont.pl",
+    "bytes": 19719,
+    "sha256": "033CF96AEB2D944ED8216F6428B50F0C1342EFFE795EEAD230780FEE09C1B81B"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/armv8-mont.pl",
+    "bytes": 36915,
+    "sha256": "74E3E61FAE844A76899B271096AD959126ACE8A44C6B423B49B5C60644183846"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/c64xplus-gf2m.pl",
+    "bytes": 4126,
+    "sha256": "6BAF33B426D15BA5F1932354803C207FFBAAC02A8CA0A297F1F1887F7D9E3AC4"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/ia64-mont.pl",
+    "bytes": 26391,
+    "sha256": "38C66EA37A612CBDAE9EC76653CCF5F88639F2C83A4CCC7B68F1A07885925F39"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/mips-mont.pl",
+    "bytes": 9541,
+    "sha256": "695FE1BFE46AADEEDD9370ED36052D2F46744E220AAE1BACDAF609D565F83D62"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/parisc-mont.pl",
+    "bytes": 27571,
+    "sha256": "0618FD3E42CBB86C80F9A442DF30EB5AB03FBABA85BF60E305F1E8A7B0303011"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/ppc-mont.pl",
+    "bytes": 48739,
+    "sha256": "1C74D887826DD16230DE9DA9379143B585030A723C7C77E1A8CEAF67FD431D86"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/ppc64-mont.pl",
+    "bytes": 40770,
+    "sha256": "D71870E9FA8FA2D7B8132F43E9619C1016F24669AAF0E4FCC5B49B10069BF9D4"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/s390x-gf2m.pl",
+    "bytes": 5497,
+    "sha256": "FF56C23A2625A1D7203558C930795D53E7AAE96EDF79DFF9B425399F3BCF88C3"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/s390x-mont.pl",
+    "bytes": 7018,
+    "sha256": "5F42262E655B2F0864C888076B9E92003364787F840DFD7FE6821D1F0AB20B75"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/sparcv9-gf2m.pl",
+    "bytes": 4852,
+    "sha256": "46EACDB7FA8A1E456A2F189236C29DA071243465D3E5DDDEAB216195A0B7330C"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/sparcv9-mont.pl",
+    "bytes": 14101,
+    "sha256": "C110A9FFE20FB2DF17788F18F4378FE658C65C5EF3E0132EBA55B49E6B30C990"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/sparcv9a-mont.pl",
+    "bytes": 20995,
+    "sha256": "2A41E7E980B947E74E4F904D2F73F5EB3CF6FCF33AED719A8C54F2829AF80D18"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/via-mont.pl",
+    "bytes": 9321,
+    "sha256": "39B3D4FE10F57F762BC04A3D4C007228A27B733CA822626B4FA318BCEF9A6603"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/vis3-mont.pl",
+    "bytes": 9292,
+    "sha256": "8905A111CF37DAFAB244FEF8328A1880E2767DEC450D3F14BC9A94B0E962995A"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/x86_64-gf2m.pl",
+    "bytes": 9528,
+    "sha256": "093190E7D1CCA46563423663EEC16612C27B5BAAFB1045085837C7E0BB92A771"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/x86_64-mont.pl",
+    "bytes": 33194,
+    "sha256": "DAEF157EC69E2EE356EFF9B886F493C0C06727DE42C53A6BC9E52609BD1EE27A"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/x86_64-mont5.pl",
+    "bytes": 87768,
+    "sha256": "DBB7EC07D1BB9F403691BA3E3B1371E979A11EBE440A026A165F8610D21313B4"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/x86-gf2m.pl",
+    "bytes": 8130,
+    "sha256": "5D67351D8AB90A1F9BC27442790B38E8B5AF3ADB2EA808F1C538E302B63292E3"
+  },
+  {
+    "path": "full-additional-notices/crypto/bn/asm/x86-mont.pl",
+    "bytes": 17701,
+    "sha256": "ED70F06B72EE5B7952382450D271048C1EA90B8B1A7F2B54725C418D010E2A92"
+  },
+  {
+    "path": "full-additional-notices/crypto/camellia/asm/cmll-x86_64.pl",
+    "bytes": 27150,
+    "sha256": "A39992CC95DB61459D6BA3B4FC4469B468EC5CC65C8B0E140F8541146EEAEA2D"
+  },
+  {
+    "path": "full-additional-notices/crypto/camellia/asm/cmll-x86.pl",
+    "bytes": 33430,
+    "sha256": "FFF9BC31EA47C39FF3D29D5F500BBEE2BE5F99AE33C85A42F50261519A1CA58D"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-armv4.pl",
+    "bytes": 27649,
+    "sha256": "99F5DA3BED7A9983C75E2507D70F4FF1A098A6E8F043BF041BE91B3629AE422C"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-armv8.pl",
+    "bytes": 27176,
+    "sha256": "B7D01513FECBDE9FBC790D2602397DE122474163FCCDDB1EF5CFA122D2015D09"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-c64xplus.pl",
+    "bytes": 25939,
+    "sha256": "7FC7C87C75801B38BBD10E1DA71E8D23E63CFDB9B25696155EF4831F4BEA6AEB"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-ppc.pl",
+    "bytes": 32659,
+    "sha256": "8201E4B04F17B94F63FD1632E33C443D82651A188356ECCE215B05002D29C07A"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-s390x.pl",
+    "bytes": 8053,
+    "sha256": "92145FD451E8B90DC3060B4B6CBB781C29EA76EBADF1AF278F54F210B24877CD"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-x86_64.pl",
+    "bytes": 97525,
+    "sha256": "5A8D0031C7BAECC3C816B775F59D871835E7EFFB040C13E9E24D1AFC5A334C31"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/asm/chacha-x86.pl",
+    "bytes": 33847,
+    "sha256": "0C0B923503045C50339FA62EA5F23F2896D36A5AFA5D92D328BA122ADA4D5245"
+  },
+  {
+    "path": "full-additional-notices/crypto/chacha/chacha_enc.c",
+    "bytes": 4094,
+    "sha256": "3537109A7CBF8CBCB891FADF1187FD18BFC4697244D9F454863EDF0EFC935747"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/ecp_nistz256-armv4.pl",
+    "bytes": 45860,
+    "sha256": "40BA05324054D59B0FF73206960B52FD98AF1AEFB527FC0653D88F66AA1F8075"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/ecp_nistz256-armv8.pl",
+    "bytes": 46354,
+    "sha256": "5D56EC0425C7E072FD47AF26BC6A42C5B96831E7A5386233CBE9211D0C8384D7"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/ecp_nistz256-ppc64.pl",
+    "bytes": 52719,
+    "sha256": "BAB3BD37522B68EBF4306D4A8611A9B9984C18AF2502F133B1A45671C788BDF8"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/ecp_nistz256-sparcv9.pl",
+    "bytes": 78264,
+    "sha256": "0D5960E38388EBFB979259345A96D3E5C5A1EB01A1D307D04E46A01776C33C64"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/ecp_nistz256-x86.pl",
+    "bytes": 57608,
+    "sha256": "166CF499864DFB17509B744AF27BD04F6C62553CA57A907F65247AEBC7BD2033"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/x25519-ppc64.pl",
+    "bytes": 17410,
+    "sha256": "48A8881F53D115B750338FF3F5EA2B00B3C8CB12BFE3497FFE7EFC14E7663C04"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/asm/x25519-x86_64.pl",
+    "bytes": 24893,
+    "sha256": "B058C37CA6FD2E9BA6CD03DFA4925E43CFEF8243388D3B906CC9EACBF515D42D"
+  },
+  {
+    "path": "full-additional-notices/crypto/ec/ecp_nistp224.c",
+    "bytes": 60750,
+    "sha256": "133BA08C45FBDCB9CC7003E6965A43A40C3B8EDDE14D8014FFB17B3E3DD1588B"
+  },
+  {
+    "path": "full-additional-notices/crypto/LPdir_nyi.c",
+    "bytes": 2074,
+    "sha256": "F638FF3001E5DC7DDBB230C288D47737E2D9F85226EA046A604A4259BAD07CB0"
+  },
+  {
+    "path": "full-additional-notices/crypto/LPdir_unix.c",
+    "bytes": 4998,
+    "sha256": "320356AC25A50F915697BD9CECAB43FAD7912420AB1551449422972C878AEF7C"
+  },
+  {
+    "path": "full-additional-notices/crypto/LPdir_vms.c",
+    "bytes": 6331,
+    "sha256": "ADC0CD123D9C0DDBA011876B4D5E0C3665A769CECCCD1A5D6C5049AC8030FE93"
+  },
+  {
+    "path": "full-additional-notices/crypto/LPdir_win.c",
+    "bytes": 7044,
+    "sha256": "63087D5ABFBE1D49F5076F92AD2F5A5D58CD9F4AF6CD21B29514C0326DF367F4"
+  },
+  {
+    "path": "full-additional-notices/crypto/LPdir_win32.c",
+    "bytes": 1893,
+    "sha256": "775D02591831F77FFEE41BEAFD0388854E10742AF0F27BB94AC2AB7A9597C51B"
+  },
+  {
+    "path": "full-additional-notices/crypto/LPdir_wince.c",
+    "bytes": 1999,
+    "sha256": "2E6A13AF735A9B7FB4DAFEBFCE3CB4781B8BD0593B422B49639A756AC49E0A88"
+  },
+  {
+    "path": "full-additional-notices/crypto/md5/asm/md5-sparcv9.pl",
+    "bytes": 10129,
+    "sha256": "4194570443A6B459E56848D681DC93A78A504585C4E2BBB95126D07B3BB0F078"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/aesni-gcm-x86_64.pl",
+    "bytes": 29585,
+    "sha256": "E2A5B29A625159DD9A6C23F880EB1736B607E4918C1AF8FC83529E046296D16C"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-alpha.pl",
+    "bytes": 8004,
+    "sha256": "3C33C85CA98065C1208D3C7E2005E436F7F2DEB810BFC91B69736D4940D881A6"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-armv4.pl",
+    "bytes": 14222,
+    "sha256": "C54F94BFA356DEE899CE78AEC9D4381431F19E9862550A443EBBAB1B83C23822"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-c64xplus.pl",
+    "bytes": 7485,
+    "sha256": "BA3E68B6A74BF2767ACEA24097D19C58D28F23DD898F06EAC4E4FB47F07131C6"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-ia64.pl",
+    "bytes": 18387,
+    "sha256": "23D1D1359B8EB97F00F61A68A68ED4A982A7EBA1A198B59060127D337237A312"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-parisc.pl",
+    "bytes": 17066,
+    "sha256": "7F0997FF284EF46222397A7302E894DEAC61DD3618058869A4CD285EB26E9228"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-s390x.pl",
+    "bytes": 6388,
+    "sha256": "8AFF7B4902484E77C76B48BE8B7CF6A4CD381BE4A96E7C3DE87CA49214903160"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-sparcv9.pl",
+    "bytes": 13008,
+    "sha256": "D3AC07AE68A3818E04F4C1A4EA3EED9AC2F950E046660E7156010E805DC53E25"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-x86_64.pl",
+    "bytes": 44340,
+    "sha256": "260AA24D4546B6646690445BA0B38EDBA403D7913C09E5399F4AC5EAFCE7EDA6"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghash-x86.pl",
+    "bytes": 41619,
+    "sha256": "02CE4DF864D0137AB32B488E5C3F79C3B92F43603BB5CA8BE6CBC3D5F3AC7A5F"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghashp8-ppc.pl",
+    "bytes": 14851,
+    "sha256": "E0F1064D81D64F236DD5A729406838D90B08C27E2121096C52C413C670907E2B"
+  },
+  {
+    "path": "full-additional-notices/crypto/modes/asm/ghashv8-armx.pl",
+    "bytes": 19297,
+    "sha256": "CB5854D36D240364C6FEC6671C3DB141E74687BCC5D88DBF94A1BF5CF7527E79"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-armv4.pl",
+    "bytes": 29879,
+    "sha256": "D0FF864669D1706928B27AEC378665CB0E3B307EEE5B482EBF29ABF1CA5BC067"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-armv8.pl",
+    "bytes": 21691,
+    "sha256": "71288A9D6E7EEF64333D9B89319FA40D149733E358C7E9EADCED0A1D7D12B2C6"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-c64xplus.pl",
+    "bytes": 8696,
+    "sha256": "0107057C401A6FF2B0838AAB9B704736550C08FBC81971834C6F4F202DE41430"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-mips.pl",
+    "bytes": 9089,
+    "sha256": "CD135A12BE9C47277CBA5E2FCB1B27289CDE632584A1E2808F8D9D3222AA3EA4"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-ppc.pl",
+    "bytes": 13671,
+    "sha256": "3DA40BE700562136D1B935479E35D46B31295DE5B45317F3CA10D327AB8F2E92"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-ppcfp.pl",
+    "bytes": 17570,
+    "sha256": "AF455460399EA65FA61BEEB46D7A0FAF1B128CA5070929B361084DAAF72B19BA"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-s390x.pl",
+    "bytes": 4648,
+    "sha256": "C879CB3C6B632D3CEF3EBA411EA0D1668491C0353585CECC8A004F30544A955D"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-sparcv9.pl",
+    "bytes": 24312,
+    "sha256": "0EE8746F475278A6C7A24B5E338FDFA4225C1907A4BA677F9475DB7FA3135251"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-x86_64.pl",
+    "bytes": 100240,
+    "sha256": "E9ED59A5CA1A014016FDA2A08878B1CBC98A72F603B5031E05A2FC138B03658F"
+  },
+  {
+    "path": "full-additional-notices/crypto/poly1305/asm/poly1305-x86.pl",
+    "bytes": 51733,
+    "sha256": "1998C110CAA1EA62D7BD41B0B7918DD2DAE3D2B02207699773B203DEC1729BD1"
+  },
+  {
+    "path": "full-additional-notices/crypto/rc4/asm/rc4-586.pl",
+    "bytes": 12497,
+    "sha256": "E6D6CE4A453540CCE69E560F598FE5E8712CF0D341DE46BC02C995A73486303B"
+  },
+  {
+    "path": "full-additional-notices/crypto/rc4/asm/rc4-c64xplus.pl",
+    "bytes": 4346,
+    "sha256": "FC651DA99F08DB21512898FD642212751959A58BC8450D848968F3231EE1209A"
+  },
+  {
+    "path": "full-additional-notices/crypto/rc4/asm/rc4-md5-x86_64.pl",
+    "bytes": 16836,
+    "sha256": "84AF0AD1878AF80AF48799FB258B424E014D34FB572903F336A66D43D2E4F0F8"
+  },
+  {
+    "path": "full-additional-notices/crypto/rc4/asm/rc4-parisc.pl",
+    "bytes": 7329,
+    "sha256": "3FE4D93256AF08B1F9357D63A48D9D9DA894CC80647142CF7AAECDEF02B64F8A"
+  },
+  {
+    "path": "full-additional-notices/crypto/rc4/asm/rc4-s390x.pl",
+    "bytes": 4669,
+    "sha256": "289518AFC7DB683A8DA31C85033F1376D574140A1A050330B88E1415FBA767EE"
+  },
+  {
+    "path": "full-additional-notices/crypto/rc4/asm/rc4-x86_64.pl",
+    "bytes": 16378,
+    "sha256": "42F8E2F8834E371C9FD78FCEAD28A04699E9CE13A8C0CC6033F8AD6739E38FF8"
+  },
+  {
+    "path": "full-additional-notices/crypto/seed/seed_local.h",
+    "bytes": 4561,
+    "sha256": "A7F2E5EA85F994F62450A0056DE9116982291A8ABC12D3E971537D89229C4106"
+  },
+  {
+    "path": "full-additional-notices/crypto/seed/seed.c",
+    "bytes": 25913,
+    "sha256": "80618242C9D0F75A5AB1C7C080E857C69710854EC06329E7434BC83438E0FD96"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-armv4.pl",
+    "bytes": 44922,
+    "sha256": "542E8F46EDE74EB9CD19C72A49071BDF91AD78B75C7500481D5C59C65AFCDA25"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-armv8.pl",
+    "bytes": 22252,
+    "sha256": "4B3770611981A2832588C9F35E4F02E38B2F9ECEF3CA23DB62A5A25F4A17BD96"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-avx2.pl",
+    "bytes": 16721,
+    "sha256": "C12EE719D061ED159FCBA309237AF8C11DEB2A19606320F7A9BD96C97467CA81"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-avx512.pl",
+    "bytes": 16330,
+    "sha256": "6B60549E38F1D414FA7A6B22AC3425676F3DC13DA2076B3CB1AB83FC9B007DC4"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-avx512vl.pl",
+    "bytes": 13261,
+    "sha256": "B7162D20919C3677C0BA5B9C15F32A7B93DA382A8772DB9E9C01D96DFCD59B09"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-c64x.pl",
+    "bytes": 22737,
+    "sha256": "612B74DE8EB0BE8773A0B06738A39DEEB3897059FDD8A85C64CFD910DBBA0FA5"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-mmx.pl",
+    "bytes": 14115,
+    "sha256": "B0E6895F1C1B2C32387C7D3B06FD474506A6017E55734E4975B0643C6BCD108D"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-ppc64.pl",
+    "bytes": 18893,
+    "sha256": "B22B70E115F4C24E0C17E916954E0E6AFD0C9593E65207A3735AD89AEB97402D"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-s390x.pl",
+    "bytes": 13828,
+    "sha256": "85A7715A8EDBDC5636A638DA798FFA8B0A99320F1252E6222F2D3099B722B6FA"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600-x86_64.pl",
+    "bytes": 14267,
+    "sha256": "A14915E8A91FB4A15054ED7C1BA6E508E86FC69C3FF5B9073E0600C4846E0656"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/keccak1600p8-ppc.pl",
+    "bytes": 19100,
+    "sha256": "A8C7A781949B77AC99F175A345C773343818E21C7FC9984F0E7199D301E67C22"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-586.pl",
+    "bytes": 44471,
+    "sha256": "EEB0FC4FBCB984038AB1B1C15DC5AFCFFB11913F9FCA00F8D4B915D9798BB400"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-alpha.pl",
+    "bytes": 6309,
+    "sha256": "CD51CE6FCA67E62B73CAC97AB23FE72CE9CC611135517A3DDC1EED5C31FCD87B"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-armv4-large.pl",
+    "bytes": 19131,
+    "sha256": "0A06172FA5A03FDB7B99C7515B87A508D83F2DBE319CD44BDD52A9D5CFF96AE4"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-armv8.pl",
+    "bytes": 8298,
+    "sha256": "6596FAA8E1A8A6472ECAB5638B39554077451901F2FFF8F51EEC38FFBC9CFF5C"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-c64xplus.pl",
+    "bytes": 8231,
+    "sha256": "F92BCA18470640470899A721878A6B70BC5791A30DA8129D9DE88BBD2A55A79A"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-ia64.pl",
+    "bytes": 9148,
+    "sha256": "F8A627A74526C3CBC258AF9084971EF1C5F88BEA15EA78D1DFF8BD249A73C01D"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-mb-x86_64.pl",
+    "bytes": 39052,
+    "sha256": "800CC6D88FB5663B7F150EB3D7C4902B65C4814308B969803B41588A6AB12236"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-mips.pl",
+    "bytes": 10739,
+    "sha256": "6BE7C374DF5C4FA5F54170A785AECDB9FA0A254E9A4A9ADD71E00CC71B2BF7E3"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-parisc.pl",
+    "bytes": 6869,
+    "sha256": "84E61839EBBE074F1EB9AF7091AFEE054D2915C8D37D49AB744E5644D2EE3753"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-ppc.pl",
+    "bytes": 8211,
+    "sha256": "E13E35DE483CD2205D94524BD56C459FCF079E038BC7392FCBE3A8086B297A70"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-s390x.pl",
+    "bytes": 5427,
+    "sha256": "119B51BE4107546B803FDF4F4903C2DAC5153DED1903388C8F73415EB8980F7C"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-sparcv9.pl",
+    "bytes": 9444,
+    "sha256": "34662072F7DB2945D9291CC84EF51A308E6AEAD68E500D24DFCE744DAB4B9CBD"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-sparcv9a.pl",
+    "bytes": 16553,
+    "sha256": "E23A82EB0FAD844F4E150112948A07748033F819A7FDD6A17465DDC3AF9B77B1"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-thumb.pl",
+    "bytes": 5200,
+    "sha256": "4E49B02927A01E6448717E71647CEAC30DDDFD9F86532CBC16FA9A1281AE239E"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha1-x86_64.pl",
+    "bytes": 51935,
+    "sha256": "BA4B88674F454BF022B838D93EF5B2434C4E618C32836687AFA00A0EC636D426"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha256-586.pl",
+    "bytes": 36895,
+    "sha256": "1202D1EFBD245D5DCB1F5BDAB86CE95A60F97C86F2BF79E8CF011E2005D7E826"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha256-armv4.pl",
+    "bytes": 18680,
+    "sha256": "D0C38F7F021C358624D6845FDA1CC2E278B4E8523EFBF59DE627AFAE31A69954"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha256-c64xplus.pl",
+    "bytes": 8968,
+    "sha256": "65FC995AD25E0E22CDC1D429C02D27ED88495350093B3256ECE3ADBE6FBE7817"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha256-mb-x86_64.pl",
+    "bytes": 39566,
+    "sha256": "BC2549BBA79C9367E749DA71AB40F0B9A1434B87FD3209FDF414C9342AB7CBF2"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-586.pl",
+    "bytes": 26675,
+    "sha256": "8CE885933BF41C9624A7A51E42ABCB32FC915D61A1E7DE3D595281D3D2592AF0"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-armv4.pl",
+    "bytes": 17669,
+    "sha256": "956283D9AD4DE0489CAB2E32135826C3FCC14D7C0EFB991A0FC72B8CC37EC666"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-armv8.pl",
+    "bytes": 24089,
+    "sha256": "EFFD9A393A181E0595D42D1C5D4A249051A0C62B1AB6E36CB472C9B3DBA05567"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-c64xplus.pl",
+    "bytes": 13519,
+    "sha256": "09F9B9E042CC8F848EB852E156BD6892187EAB8CE3EDAD8F1DB29DB3541D9248"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-ia64.pl",
+    "bytes": 21416,
+    "sha256": "4342A9B491A46747EDAB0FF7BD0F762B1F70B16F374FB415AB6ABC588E4E129C"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-mips.pl",
+    "bytes": 14607,
+    "sha256": "A8A3A342B55E3FC29A55BC01D22C9426A61B62D54221F98F7E271D5307F21644"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-parisc.pl",
+    "bytes": 21860,
+    "sha256": "A86A41D9C116C552F23A6B3AFF1EE0F2E5973CBD5086E04EB37DB3C42ACBBF64"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-ppc.pl",
+    "bytes": 21282,
+    "sha256": "129C4638FDFB3459D804BD9755C998A9F995E90C56825AD6F8C4C02261351489"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-s390x.pl",
+    "bytes": 9276,
+    "sha256": "7D35D2BBA8DEA8FE33027BF8CA132C6C23F13B34DE3C4AEE7E8B3E61B065CA2C"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-sparcv9.pl",
+    "bytes": 22013,
+    "sha256": "2148A9AB469E01EA394DB0D3382839B47A61C7532D0DC328AF661084B965712B"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512-x86_64.pl",
+    "bytes": 64799,
+    "sha256": "20411DDD8A77BE94515EBF5352936839FF698AE2B39D565B66FC1827C3BE3922"
+  },
+  {
+    "path": "full-additional-notices/crypto/sha/asm/sha512p8-ppc.pl",
+    "bytes": 11877,
+    "sha256": "A4BDBEBB7CB5BC0B259B1F25E2AFACD821CDBF99FFE3012772250EA16FE97ADF"
+  },
+  {
+    "path": "full-additional-notices/crypto/siphash/siphash.c",
+    "bytes": 8118,
+    "sha256": "9DA8A7C5156F78546629C115FC21AB5478FFB249FDC6E797AC93FAC05313BF70"
+  },
+  {
+    "path": "full-additional-notices/crypto/x509v3/v3_pci.c",
+    "bytes": 11775,
+    "sha256": "9C350EE6A263E6524211BCC01F3D682BB4C9CF42F024F219405A9C077A0D12EF"
+  },
+  {
+    "path": "full-additional-notices/crypto/x509v3/v3_pcia.c",
+    "bytes": 2679,
+    "sha256": "1F03C6643126CE61047B25730A43136CD957ED545B0BB3955F3ADD35B6142B18"
+  },
+  {
+    "path": "full-additional-notices/engines/asm/e_padlock-x86_64.pl",
+    "bytes": 13217,
+    "sha256": "7D11AD2BDB53BCF0A815F21250D69EE7E9778690A26D6E2F40A990682F34C42E"
+  },
+  {
+    "path": "full-additional-notices/engines/asm/e_padlock-x86.pl",
+    "bytes": 18874,
+    "sha256": "296FEEDF92FC9DAAAA78F6939FDCB3A50E691B1DCEAA153AF45B03385B988983"
+  },
+  {
+    "path": "full-additional-notices/external/perl/Text-Template-1.46/Artistic",
+    "bytes": 6111,
+    "sha256": "B7FD9B73EA99602016A326E0B62E6646060D18FEBDD065CECA8BB482208C3D88"
+  },
+  {
+    "path": "full-additional-notices/external/perl/Text-Template-1.46/COPYING",
+    "bytes": 18043,
+    "sha256": "4D23C8C814E5BAF007D854F01D8502E77DC56A41144934E003FB32C4E052D20F"
+  },
+  {
+    "path": "full-additional-notices/external/perl/Text-Template-1.46/lib/Text/Template.pm",
+    "bytes": 62082,
+    "sha256": "EBE5111B20332DCB62B52A6C023DC6CF80BF42F3193FD14F8708239E5EC30F3A"
+  },
+  {
+    "path": "full-additional-notices/external/perl/Text-Template-1.46/lib/Text/Template/Preprocess.pm",
+    "bytes": 4291,
+    "sha256": "829F63D0C273B77C7232FA1FEA02A76F076DC4E4C3070C840A9125296503DE5D"
+  },
+  {
+    "path": "full-additional-notices/external/perl/Text-Template-1.46/MANIFEST",
+    "bytes": 476,
+    "sha256": "3B667017874FC2DF25AE3100962FDD3026615795B0CE60FDD47F02B0F545C688"
+  },
+  {
+    "path": "full-additional-notices/include/internal/o_dir.h",
+    "bytes": 2227,
+    "sha256": "1676A17C45A6A8B98290640BC57F2BC6FBAF89A54A01342E65F40D3CF9A7F02F"
+  },
+  {
+    "path": "full-additional-notices/include/openssl/seed.h",
+    "bytes": 3479,
+    "sha256": "6BF2373DFB10DC5CBC626CF2FE86B9B1C82373D799BDD6BE13EEDAF7D4540D55"
+  },
+  {
+    "path": "full-additional-notices/LICENSE",
+    "bytes": 6121,
+    "sha256": "C32913B33252E71190AF2066F08115C69BC9FDDADF3BF29296E20C835389841C"
+  },
+  {
+    "path": "full-additional-notices/test/certs/mkcert.sh",
+    "bytes": 8325,
+    "sha256": "BACFB8BA37113E5F61223F87B97E08214A1F2EA1FE7E756ECC642F4A97F2C410"
+  },
+  {
+    "path": "inspected-text/apps/build.info",
+    "bytes": 2373,
+    "sha256": "C6E41AA4D47403ADC5F3C1382DA77052A4E168F423523265BE870CABF82CB825"
+  },
+  {
+    "path": "inspected-text/build.info",
+    "bytes": 4099,
+    "sha256": "1FAFB451A7CFABD49372A2485F99ACF6A5AEFBF1872464A309C9BC79EE1AFB31"
+  },
+  {
+    "path": "inspected-text/config",
+    "bytes": 28626,
+    "sha256": "794A62848261F669B46D7C10A0DE1F4F0B0C6C401359DEEEED0B57A4E58787A4"
+  },
+  {
+    "path": "inspected-text/Configurations/00-base-templates.conf",
+    "bytes": 11582,
+    "sha256": "8A59B4D78963965F01D3ABFAE92AA76A375515E9115033F2457088E1472B4FED"
+  },
+  {
+    "path": "inspected-text/Configurations/10-main.conf",
+    "bytes": 80732,
+    "sha256": "95956497303FA922FC7534785ADCD7F985B9A850BD41E8FF6A97D73FB5733DF9"
+  },
+  {
+    "path": "inspected-text/Configurations/15-android.conf",
+    "bytes": 11680,
+    "sha256": "AA261A39414C1E9884E7E81962642310E57A556511696E42EB0CBE02374FAFB0"
+  },
+  {
+    "path": "inspected-text/Configurations/15-ios.conf",
+    "bytes": 2411,
+    "sha256": "26AD7BE0C3826195EDDF9C19D3D385FA3DFD90869BB3F46FD452CDDEFD324AD7"
+  },
+  {
+    "path": "inspected-text/Configurations/50-djgpp.conf",
+    "bytes": 624,
+    "sha256": "A1CE6FACF2A76952F9924A2C0E671B750D6822F1B43CF9DDC0F4859EB3FD3435"
+  },
+  {
+    "path": "inspected-text/Configurations/50-haiku.conf",
+    "bytes": 1218,
+    "sha256": "A91FFAC31FA2FBAC0C4AC04CEA16D48C5C34129E94BD008EACF2E3DDDE3DBE96"
+  },
+  {
+    "path": "inspected-text/Configurations/50-masm.conf",
+    "bytes": 1076,
+    "sha256": "45E544FC21DC1EF1945BEB8090251F1827EE5A6CAD56E4C23D6FD4721205314C"
+  },
+  {
+    "path": "inspected-text/Configurations/50-win-onecore.conf",
+    "bytes": 3031,
+    "sha256": "2E2F626D9D60BEB243F2CB7AA62161D1CB830AAE58CF8E50DCCC6ED5EFE4008B"
+  },
+  {
+    "path": "inspected-text/Configurations/common.tmpl",
+    "bytes": 8450,
+    "sha256": "EFB432110F945075CAA4DBC8471F903D333A303348BF4B8BF8072FC17208EC23"
+  },
+  {
+    "path": "inspected-text/Configurations/common0.tmpl",
+    "bytes": 1324,
+    "sha256": "AA5AFD98D4CAD920099BE90DD991884C21B3F4598BFFD2E22C8552872CC5FC88"
+  },
+  {
+    "path": "inspected-text/Configurations/descrip.mms.tmpl",
+    "bytes": 50281,
+    "sha256": "AC8534B9B44ABECB7C413682C90BDCF2FA8CAFC0577634BBB7BEECD83F0DBF78"
+  },
+  {
+    "path": "inspected-text/Configurations/INTERNALS.Configure",
+    "bytes": 7883,
+    "sha256": "3D54A61916DEB1F715D24DF0E10184D6F1AD557BC7ADDAE9E8747E33AE7FA58D"
+  },
+  {
+    "path": "inspected-text/Configurations/README",
+    "bytes": 35494,
+    "sha256": "0F61201AB182FC25B22C29CD8322BCB3627C0C15BC2AB009B4456CED19D72EA0"
+  },
+  {
+    "path": "inspected-text/Configurations/README.design",
+    "bytes": 24884,
+    "sha256": "74DBFDF425CC4306BC450BBDB8DB0143D944627E8044517DE1AB5D5E618AE123"
+  },
+  {
+    "path": "inspected-text/Configurations/shared-info.pl",
+    "bytes": 2791,
+    "sha256": "8C9D8A35B536650AEC08E192CEBDDD077DD93F1A2BA8E8E39173649991381B92"
+  },
+  {
+    "path": "inspected-text/Configurations/unix-checker.pm",
+    "bytes": 617,
+    "sha256": "86716919B8ED8989DBEC32B425161EF9950B809C3FE019E426051885E1489776"
+  },
+  {
+    "path": "inspected-text/Configurations/unix-Makefile.tmpl",
+    "bytes": 54686,
+    "sha256": "BD8641183CAB699DA64EA22D5D41025499CA9C8A69DC4D9DA73446E36004AB46"
+  },
+  {
+    "path": "inspected-text/Configurations/windows-checker.pm",
+    "bytes": 649,
+    "sha256": "59EDC790AA4120DF7C2AA3214E1F51B0A044190614BA653DF2255BE286359366"
+  },
+  {
+    "path": "inspected-text/Configurations/windows-makefile.tmpl",
+    "bytes": 30526,
+    "sha256": "EEDF0A0C8C4F83744F0F73D302F0972E4610AB106338CB3EC4A4C427DD62C394"
+  },
+  {
+    "path": "inspected-text/Configure",
+    "bytes": 130510,
+    "sha256": "F0C2AA390E353E572106D9C84EA9EF985ABD114BAA388B2BBDD6337E7E009C45"
+  },
+  {
+    "path": "inspected-text/crypto/aes/build.info",
+    "bytes": 2437,
+    "sha256": "4FD9B60B8EBA57C73EC8037325770B682151C84E5C8C74A8F9F87B27791C2FA8"
+  },
+  {
+    "path": "inspected-text/crypto/aria/build.info",
+    "bytes": 63,
+    "sha256": "506E26DA9ED2BD9DD14A25F593E649C5ACF25BD5A56E43CCEF16EC59614BB2E4"
+  },
+  {
+    "path": "inspected-text/crypto/asn1/build.info",
+    "bytes": 837,
+    "sha256": "FA44195E9E9134C468CD6CC4DC319A10B42EFDFAD2AFC0C24C6C09AB03FE6244"
+  },
+  {
+    "path": "inspected-text/crypto/async/build.info",
+    "bytes": 152,
+    "sha256": "0F207664FD179F0DA32133B314A3A12D882CA0767BD933223987E512F38B6559"
+  },
+  {
+    "path": "inspected-text/crypto/bf/build.info",
+    "bytes": 283,
+    "sha256": "18FC244655787EBA13A938E63BE44DF66237FF9C61C652F9373ABF0E1944DE2D"
+  },
+  {
+    "path": "inspected-text/crypto/bio/build.info",
+    "bytes": 338,
+    "sha256": "C06B0AB353777E854EC2E3FB06DA384D5FEACF7B6A7A793A86F953F75727F9DF"
+  },
+  {
+    "path": "inspected-text/crypto/blake2/build.info",
+    "bytes": 99,
+    "sha256": "32D94885A66457ADDE2492C1F54D8EFF2470FABC56714FF452656D26E0DC5DD2"
+  },
+  {
+    "path": "inspected-text/crypto/bn/build.info",
+    "bytes": 2667,
+    "sha256": "C8CAF83E7EAE6FEF8838B21F1D49B3036D877A5D60C9C9466D35FFFE71679BB9"
+  },
+  {
+    "path": "inspected-text/crypto/buffer/build.info",
+    "bytes": 64,
+    "sha256": "A49CD5C09FA81FE79C92A2746795F4AB03664EDB564FE967E02AB630051FBB65"
+  },
+  {
+    "path": "inspected-text/crypto/build.info",
+    "bytes": 1602,
+    "sha256": "01A8FCAB56106EE83CDAB9AA3D57C014E2794E7F973BB164C98DBD1F6252FDA4"
+  },
+  {
+    "path": "inspected-text/crypto/camellia/build.info",
+    "bytes": 506,
+    "sha256": "C329591BF1DDF3B43874BA5F16EDC771DFC3609B59692A67AB9BE5329EBC2984"
+  },
+  {
+    "path": "inspected-text/crypto/cast/build.info",
+    "bytes": 287,
+    "sha256": "D50CE511FDA2F776EF1B01AB2904A95105177B8E220D16EC08823AD4003C568E"
+  },
+  {
+    "path": "inspected-text/crypto/chacha/build.info",
+    "bytes": 776,
+    "sha256": "9FC715460C418DA09ED9B1F3B0C2955D05E1A601EA08C722E03CD3E093D21355"
+  },
+  {
+    "path": "inspected-text/crypto/cmac/build.info",
+    "bytes": 74,
+    "sha256": "4CAB4DD7922065B919EA2FAB534EA5B2425671A385A9BCC339B034B90B18A1A3"
+  },
+  {
+    "path": "inspected-text/crypto/cms/build.info",
+    "bytes": 217,
+    "sha256": "B60B5FCD1A7BDD099D8D6AD6DFF76D38A2F2F6D69206F606E7B31F2512ED8C78"
+  },
+  {
+    "path": "inspected-text/crypto/comp/build.info",
+    "bytes": 97,
+    "sha256": "85BF6E692117DAE30CBC494D4EBA2D702CD3CAE6F89FA09B7CA0FD4456A7CE2F"
+  },
+  {
+    "path": "inspected-text/crypto/conf/build.info",
+    "bytes": 155,
+    "sha256": "B43B86C91FCE5501F6F7F3BE1AE0563AD61A11A6DC923D51B1CBFD38642B69D4"
+  },
+  {
+    "path": "inspected-text/crypto/ct/build.info",
+    "bytes": 173,
+    "sha256": "CBA8CC48D6E1AFD7524A791DD853AB68B711E20242E53D34F7BC69CFDDFB58A1"
+  },
+  {
+    "path": "inspected-text/crypto/des/build.info",
+    "bytes": 753,
+    "sha256": "E9313F6656218289223C13EDED0EE42C0EF2A907BA1CAD0D921895D5897F6033"
+  },
+  {
+    "path": "inspected-text/crypto/dh/build.info",
+    "bytes": 218,
+    "sha256": "E2BCC399874D63BD088982F115A561FFFB4E0DBB441BB7B594D5599E9C65A718"
+  },
+  {
+    "path": "inspected-text/crypto/dsa/build.info",
+    "bytes": 214,
+    "sha256": "085045EC79EC9A5862B89A021C7489DDCDCFBCD11282A5427C261F607799B003"
+  },
+  {
+    "path": "inspected-text/crypto/dso/build.info",
+    "bytes": 142,
+    "sha256": "F3AC516F673B6627CDD424B8A0187DC1204454B9C8AD7F3921E54FCF4C2B7D63"
+  },
+  {
+    "path": "inspected-text/crypto/ec/build.info",
+    "bytes": 1948,
+    "sha256": "FDABCFBB5D33C483ABC06EFD155649D50D46A23AD330E9DB93E53FA8FAB7C95E"
+  },
+  {
+    "path": "inspected-text/crypto/engine/build.info",
+    "bytes": 426,
+    "sha256": "BC69605ADBFFB3F6E78073735A304007AC70C302C1CDADDA0598475077A0B06F"
+  },
+  {
+    "path": "inspected-text/crypto/engine/README",
+    "bytes": 13940,
+    "sha256": "75F83CD826E3D844A982830CFE3DD40A9745680F598823DC6C20483433E7496C"
+  },
+  {
+    "path": "inspected-text/crypto/err/build.info",
+    "bytes": 81,
+    "sha256": "D6041997113BD776A1D2A0E997B2C222F289E4C3F3B7709B3034B8389721395F"
+  },
+  {
+    "path": "inspected-text/crypto/err/README",
+    "bytes": 1396,
+    "sha256": "C5ED5EFD4E5ACE164C73404AA86A8DC1C86DA1838F78EBD69488FBE29EE907E5"
+  },
+  {
+    "path": "inspected-text/crypto/evp/build.info",
+    "bytes": 1064,
+    "sha256": "31B20792B825DC95E34ADCE28499A555871514B73767F57AF30911D6EC42BE46"
+  },
+  {
+    "path": "inspected-text/crypto/hmac/build.info",
+    "bytes": 84,
+    "sha256": "BB9AF1E0035A0CF7208F4BA6100365554BE8AC10F1D5D0EECE723D0FAC44753B"
+  },
+  {
+    "path": "inspected-text/crypto/idea/build.info",
+    "bytes": 100,
+    "sha256": "6F12243CAA237B8840094E485D046B787D390EEA3E8E1DF4274D2E29D22C1F65"
+  },
+  {
+    "path": "inspected-text/crypto/kdf/build.info",
+    "bytes": 92,
+    "sha256": "EEE49C5E0A5099BC7BA1994CCED8D073E0438E590400CC303A19C17E3A311202"
+  },
+  {
+    "path": "inspected-text/crypto/lhash/build.info",
+    "bytes": 74,
+    "sha256": "6934EBF844A1756EF7AD6C13A94786FAB5B6B4ACA73492F90C4E9A342BEB787E"
+  },
+  {
+    "path": "inspected-text/crypto/md2/build.info",
+    "bytes": 76,
+    "sha256": "FF114B6E07A281ADEE13FB6D0D15F64CB7CC14143AF8617164908F3DDDB9E88A"
+  },
+  {
+    "path": "inspected-text/crypto/md4/build.info",
+    "bytes": 76,
+    "sha256": "947373B325C169C3C8E7F232E254ECC16B2CB87ECD5BCE73E758BD81625C7D73"
+  },
+  {
+    "path": "inspected-text/crypto/md5/build.info",
+    "bytes": 345,
+    "sha256": "9C78923FCAF42ED7E04A9E57AB643D3530C001352D833D0DD36C414B7F1B2ED1"
+  },
+  {
+    "path": "inspected-text/crypto/mdc2/build.info",
+    "bytes": 77,
+    "sha256": "EC3D4B9949842D5FF0B2372F3323F4B129DAB1F55A97BFB399518E19381B5747"
+  },
+  {
+    "path": "inspected-text/crypto/modes/build.info",
+    "bytes": 1238,
+    "sha256": "C5A0C305C1D3B6CA947C7987302A1D2D38F0F22FAE1D3675205826C3D23575C7"
+  },
+  {
+    "path": "inspected-text/crypto/objects/build.info",
+    "bytes": 106,
+    "sha256": "E8684EA0BDAFBC725D38A799848BC2EE106BEF9EEB75794790BB55779FA5FDFE"
+  },
+  {
+    "path": "inspected-text/crypto/objects/README",
+    "bytes": 1273,
+    "sha256": "EA1CB7962BA3EC620E533D2AE20DE9D31E637EE8335886A8E9867E52AB0F3215"
+  },
+  {
+    "path": "inspected-text/crypto/ocsp/build.info",
+    "bytes": 172,
+    "sha256": "C376F4387ED224B780503C83CC11C022896CEEFD487649D83DAD3C3F12E8A91B"
+  },
+  {
+    "path": "inspected-text/crypto/pem/build.info",
+    "bytes": 179,
+    "sha256": "C419F3165A3FF2CC9E5998A03117291C1183585C2B8823B37A5298AE9914B04E"
+  },
+  {
+    "path": "inspected-text/crypto/perlasm/README",
+    "bytes": 3405,
+    "sha256": "A397F0F820309CCD1A25143FA8BDE5C6E5512DE53ADD775214CAFC45EB3E594D"
+  },
+  {
+    "path": "inspected-text/crypto/pkcs12/build.info",
+    "bytes": 243,
+    "sha256": "2F59A1C0BBB1CEEA9EDEB66B36C8E7BBA49DD64A94E8E2F16CAD52C36729559C"
+  },
+  {
+    "path": "inspected-text/crypto/pkcs7/build.info",
+    "bytes": 152,
+    "sha256": "0F56496C6125FD0E2FF6E5CECDD26073F0D491A73AD96492B403936F8AEE3C54"
+  },
+  {
+    "path": "inspected-text/crypto/poly1305/build.info",
+    "bytes": 1080,
+    "sha256": "E4C61FEF5095FA4B702B6719EEB0E5B2E68783994C84FB551A47E67990D65237"
+  },
+  {
+    "path": "inspected-text/crypto/rand/build.info",
+    "bytes": 195,
+    "sha256": "EB3F32CA6D3D5E5B26F96FF8457AFCEA31BFEF12B580DC4C3C4775551BE9F0E3"
+  },
+  {
+    "path": "inspected-text/crypto/rc2/build.info",
+    "bytes": 108,
+    "sha256": "FA9FAD30F2000390E0B060B1C029AC28A5E8E6D715BF06CC05DE1C804AA97401"
+  },
+  {
+    "path": "inspected-text/crypto/rc4/build.info",
+    "bytes": 632,
+    "sha256": "DAFB5E92C1C67DBCEB1346E0CA7F9593EE0D32B565F6DEEC78115575882D71AC"
+  },
+  {
+    "path": "inspected-text/crypto/rc5/build.info",
+    "bytes": 276,
+    "sha256": "9697A4327AEAF8C8934683C3987BAAC00B7DDD22A5442A47F14E4BF24EBA8BA2"
+  },
+  {
+    "path": "inspected-text/crypto/ripemd/build.info",
+    "bytes": 239,
+    "sha256": "8659770D9841882138787C31161F0CAAF5659DAA1AB6EE51446825F69FED0D5D"
+  },
+  {
+    "path": "inspected-text/crypto/rsa/build.info",
+    "bytes": 320,
+    "sha256": "257B566AE3ECACAD27D828D5BFE447E9F1E0AAD0E8EFD3C212F15DF49EE913CB"
+  },
+  {
+    "path": "inspected-text/crypto/seed/build.info",
+    "bytes": 96,
+    "sha256": "11A58534CEFF43757CF9DBED58C94DDEE01789B3992A70E3601E37637BC49CCD"
+  },
+  {
+    "path": "inspected-text/crypto/sha/build.info",
+    "bytes": 3882,
+    "sha256": "D40AAC1BB358E2936547B3F40EE445B49C48FCE159B51F74545FEABAC0DC6CA5"
+  },
+  {
+    "path": "inspected-text/crypto/siphash/build.info",
+    "bytes": 96,
+    "sha256": "380F0A4C8FCD9697EEA92F2B5004050D32A55BD6893A6EC8D03BC316107C8F67"
+  },
+  {
+    "path": "inspected-text/crypto/sm2/build.info",
+    "bytes": 102,
+    "sha256": "A0EA4917C09E9F2153EB4F722A4A419B1437E358D6DD5A8B52AD3CD6E99B45CB"
+  },
+  {
+    "path": "inspected-text/crypto/sm3/build.info",
+    "bytes": 59,
+    "sha256": "619763E5CD74BB7C9556BA97DC559FF219A7E0FA25A704579A2B9B1BDA1F3610"
+  },
+  {
+    "path": "inspected-text/crypto/sm4/build.info",
+    "bytes": 62,
+    "sha256": "E447C13DCAD1E3A3CB2D582B4979BE34F1DD852CDEE1E325C87A8F5F3658138C"
+  },
+  {
+    "path": "inspected-text/crypto/srp/build.info",
+    "bytes": 65,
+    "sha256": "117640A1010AB716E020AC03B532C763A7FA3C2289633098504ECBE94995F376"
+  },
+  {
+    "path": "inspected-text/crypto/stack/build.info",
+    "bytes": 53,
+    "sha256": "08DDCBC25F8FEF0AFF834FDF79A514EB23EE9CE8B3075499E2F446870AB11EC3"
+  },
+  {
+    "path": "inspected-text/crypto/store/build.info",
+    "bytes": 149,
+    "sha256": "411FC258658218B167097415F8D086D2543DBE580BA03AC8F6C9B6B0D3CF2D49"
+  },
+  {
+    "path": "inspected-text/crypto/ts/build.info",
+    "bytes": 219,
+    "sha256": "F9908EE4CA6A1B8A13A050E2864F99DED2871603AEF152B80DEDE8CB7D23A1D1"
+  },
+  {
+    "path": "inspected-text/crypto/txt_db/build.info",
+    "bytes": 54,
+    "sha256": "799C270BFBC9D07D6F8B395AD253C0A8A2F20550328FAD5A6691E79AF4694819"
+  },
+  {
+    "path": "inspected-text/crypto/ui/build.info",
+    "bytes": 106,
+    "sha256": "5A483732CA46036C608B7E20DDD080F9A4B2A171C85ED85C87933D398B6B4514"
+  },
+  {
+    "path": "inspected-text/crypto/whrlpool/build.info",
+    "bytes": 282,
+    "sha256": "AF3BC2B6C3963C272A6EB1FC015578E3B13C8EDFC3A857EA7817FE5337704E9D"
+  },
+  {
+    "path": "inspected-text/crypto/x509/build.info",
+    "bytes": 493,
+    "sha256": "2CC54F328CA08C22601F6098DB0EA39519B0AE34C5823EB84455C31523C9ED4D"
+  },
+  {
+    "path": "inspected-text/crypto/x509v3/build.info",
+    "bytes": 444,
+    "sha256": "AC99CDFC6DEF24AE8D87E06165D78F76E6DB2DE52A84E273AA65C1B68EE4AEC8"
+  },
+  {
+    "path": "inspected-text/demos/bio/Makefile",
+    "bytes": 975,
+    "sha256": "117F672C377E6D6A589361119BE2E9741836CEEE127A84155CA19B27F3E03A23"
+  },
+  {
+    "path": "inspected-text/demos/bio/README",
+    "bytes": 255,
+    "sha256": "9E9FC749BB331ABEAA5347529F6BD04D0C91A8A6D932BEBFEC16B4CC72F1CAAE"
+  },
+  {
+    "path": "inspected-text/demos/certs/README",
+    "bytes": 859,
+    "sha256": "C62177CD495B1692F97F3571844B1B4F873F4D811B75FE17B67BF1DAA9897558"
+  },
+  {
+    "path": "inspected-text/demos/evp/Makefile",
+    "bytes": 532,
+    "sha256": "743FBBFAAE2829921D9C9F76D37A8BA08F73BB3F6B322388320C480DBAA4F66A"
+  },
+  {
+    "path": "inspected-text/demos/README",
+    "bytes": 267,
+    "sha256": "DD75E8BF6EFA43F84576FB0AB2E52C17BCC3565FEFF860AB9262087BD336E874"
+  },
+  {
+    "path": "inspected-text/doc/README",
+    "bytes": 641,
+    "sha256": "06848C1E90BA335BDAF9283725ED7EFF467551212FB4EA701006317281F11389"
+  },
+  {
+    "path": "inspected-text/engines/build.info",
+    "bytes": 1378,
+    "sha256": "40A72AAC066CE902CADB25477C73E57848542699E1949E100E6BD1E26744D396"
+  },
+  {
+    "path": "inspected-text/external/perl/Text-Template-1.46/COPYING",
+    "bytes": 18043,
+    "sha256": "4D23C8C814E5BAF007D854F01D8502E77DC56A41144934E003FB32C4E052D20F"
+  },
+  {
+    "path": "inspected-text/external/perl/Text-Template-1.46/INSTALL",
+    "bytes": 584,
+    "sha256": "D2F84DC3B27915516D16694B00EC29D20D1B427B2C54A85E7691F4CAEAE0CA67"
+  },
+  {
+    "path": "inspected-text/external/perl/Text-Template-1.46/README",
+    "bytes": 11701,
+    "sha256": "04CB0C7ECEB19919260FECC5D617783CFBD39B5BCF676730A5757CBD0EEDA01B"
+  },
+  {
+    "path": "inspected-text/fuzz/build.info",
+    "bytes": 3526,
+    "sha256": "80855D639B9B0634F39DAD35E4F4288D8B69B1D616498471178228BEF2DCDB69"
+  },
+  {
+    "path": "inspected-text/fuzz/README.md",
+    "bytes": 4732,
+    "sha256": "D2E7060C8599DE67F1C2B140CE1D5E40BCB73BB5D4B3C9C8E5B68137E19E82F9"
+  },
+  {
+    "path": "inspected-text/INSTALL",
+    "bytes": 57824,
+    "sha256": "DCEAE9BED597D526A126F95507263563800777F6A1CE218CD0D1B5AAEED8A6D0"
+  },
+  {
+    "path": "inspected-text/LICENSE",
+    "bytes": 6121,
+    "sha256": "C32913B33252E71190AF2066F08115C69BC9FDDADF3BF29296E20C835389841C"
+  },
+  {
+    "path": "inspected-text/NOTES.PERL",
+    "bytes": 4578,
+    "sha256": "D191543A4F97AB7DF62F25E75138802BF85A31E082D64773DA3A50188C493EC7"
+  },
+  {
+    "path": "inspected-text/NOTES.WIN",
+    "bytes": 7488,
+    "sha256": "D63CC8B622130BC05EB6B7DFC0688E70C90DA1BB15BD6504081E113A9446FA6F"
+  },
+  {
+    "path": "inspected-text/README",
+    "bytes": 3157,
+    "sha256": "3A803B22B37277F4CBC8CBA5012CCB3E7EDE2734363F247AE9F90537440E5B1B"
+  },
+  {
+    "path": "inspected-text/ssl/build.info",
+    "bytes": 790,
+    "sha256": "150B3B41DC79F23250BE61FC6ADC9D1E041DC4589F8F60AE1F975EA3E1DFC5DF"
+  },
+  {
+    "path": "inspected-text/ssl/record/README",
+    "bytes": 3546,
+    "sha256": "DAA21A1309C257A48A089ABD2F65F521EF442AEF1428C5CCE50AF24AE4B586C8"
+  },
+  {
+    "path": "inspected-text/ssl/statem/README",
+    "bytes": 3359,
+    "sha256": "5DD5871050B02FDDE174E60C923412F6E53289AC992F244B9B8EC62D5CA29A0B"
+  },
+  {
+    "path": "inspected-text/test/build.info",
+    "bytes": 20937,
+    "sha256": "99785D508607069564BA22DB4C86002FDDEED03C61D7572358E9A57AABF57E3C"
+  },
+  {
+    "path": "inspected-text/test/ossl_shim/build.info",
+    "bytes": 269,
+    "sha256": "673F3257CFE193107106AFA0F166C7DD599B11E8863C97074C1A63F5220E63F0"
+  },
+  {
+    "path": "inspected-text/test/README",
+    "bytes": 4511,
+    "sha256": "468D273A2A69992B6C55453A08FAC1A170DF1EEEE327A5267FD4D08CCFDB7B4B"
+  },
+  {
+    "path": "inspected-text/tools/build.info",
+    "bytes": 209,
+    "sha256": "4EAD731019EDB0B0DBD7B72993C59498E3A645D0472E54B0C41CBB11C20EAEBD"
+  },
+  {
+    "path": "inspected-text/util/build.info",
+    "bytes": 316,
+    "sha256": "F65DB6FE6A0AD3669696A3F5717E8291FD8AB510963FEBAEE8009CB2974BC175"
+  },
+  {
+    "path": "inspected-text/util/openssl-update-copyright",
+    "bytes": 1510,
+    "sha256": "A07CA62389F204668D4768A5EAF722E3260FE1D0A46A5174EAD31D3A1A102D39"
+  },
+  {
+    "path": "native-perl-and-portable-candidate-audit.json",
+    "bytes": 2553,
+    "sha256": "6D8D68B959FC764EF2B2CB5A9E5010268D492548186F083FE81AD364440DC694"
+  },
+  {
+    "path": "openssl-source-audit-summary.json",
+    "bytes": 7502,
+    "sha256": "395F603B0796CA58074C06C44C7B4BC175A1987EBA8088D1924F463CA3C2B4E9"
+  },
+  {
+    "path": "sanitized-official-source-head-hop1.json",
+    "bytes": 5130,
+    "sha256": "B687A906CBEF2D4BD2B2FCE7FA671B9F28CCD232FC795C43D424F322721F29AD"
+  },
+  {
+    "path": "sanitized-official-source-head-hop2.json",
+    "bytes": 1711,
+    "sha256": "17D0CFD2AAE03D1E82669D95169203B864764ECF15ED5C06692A233C95AA4ED0"
+  },
+  {
+    "path": "source-acquisition.json",
+    "bytes": 791,
+    "sha256": "0C922487943A028663F94F9478EEAE9B05186159BB2A6A5AFD1F323AA45F5C96"
+  },
+  {
+    "path": "source-extraction.json",
+    "bytes": 472,
+    "sha256": "ECFFAE3D5DC2CA99F302A1C4A9DF29D7D525892B238ABD138F13820CC2F62EDE"
+  },
+  {
+    "path": "source-get.json",
+    "bytes": 427,
+    "sha256": "96C5034CADF3FAB44E2697329CFEBCA657EAEACA950FC611408572C3D96C842A"
+  },
+  {
+    "path": "source-head-hop0.json",
+    "bytes": 438,
+    "sha256": "C564514520ACD8C018C7FD754DAEBDDC8B81F3EA6280493CB7D307DD23AEBE36"
+  },
+  {
+    "path": "source-head-hop1.json",
+    "bytes": 509,
+    "sha256": "6EDFE8F7F5F6D033BAA5DA2651788EE9119A9CE039C03AA77FEB8624E17C27E1"
+  },
+  {
+    "path": "source-head-hop2.json",
+    "bytes": 428,
+    "sha256": "99E95491638DA9AC8A441CBAD9A363476347BED7D09BB06E40BE6D511850FF50"
+  },
+  {
+    "path": "source-manifest.json",
+    "bytes": 485372,
+    "sha256": "D6D0C713E5A73C4F027277B5DE8336FA9BFAF2364272CE53118FE948BD9C9589"
+  },
+  {
+    "path": "static-scan-summary.json",
+    "bytes": 432,
+    "sha256": "2D7E74DD2D5D2F8DB3BD3CF389CC7B92836719877AE1713A28A3FFA87E2179BB"
+  },
+  {
+    "path": "strawberry-official-github-release-get.json",
+    "bytes": 2019,
+    "sha256": "4773F2128521DDF27DAA5BADDF8232CB7AC31CA056DCFC4F5DA850208D4A9C8C"
+  },
+  {
+    "path": "strawberry-official-github-release-head.json",
+    "bytes": 1934,
+    "sha256": "15B65F9F8FB245B7FBB07432F477CB9EFBB300DBDB293485F909553CB8C35E24"
+  },
+  {
+    "path": "strawberry-official-github-release.txt",
+    "bytes": 7375,
+    "sha256": "273B951B64D375346BA2D5F6F9989BE0A7C4C7DE47F1C682315160BD9F74927F"
+  },
+  {
+    "path": "strawberry-official-releases-get.json",
+    "bytes": 822,
+    "sha256": "A50AE3C6F1F01018B14403D369D16040A3E1CE6ECDDC9BA5959E8EF51BF889F4"
+  },
+  {
+    "path": "strawberry-official-releases-head.json",
+    "bytes": 769,
+    "sha256": "88E4A55D631FB1F620C3828761C65073077269C6D228E4B7C4CA88BA723D30E5"
+  },
+  {
+    "path": "strawberry-official-releases.txt",
+    "bytes": 211001,
+    "sha256": "88A8EEE85B18CDEDB55F0688EFF8BC557053581E6DC0053B575E4F69C14444C1"
+  },
+  {
+    "path": "strawberry-portable-head-hop0.json",
+    "bytes": 492,
+    "sha256": "6B5B955D0AA95FB3F44394283440F96A521AFCCBE30C5CA39F3307B11A57C219"
+  },
+  {
+    "path": "strawberry-portable-head-hop1.json",
+    "bytes": 371,
+    "sha256": "DF6D2064E0AD6A1D1FACA03BC43460ABCF5BF866FCEAD6372B0B2E2BBD141B0A"
+  },
+  {
+    "path": "tar-audit.json",
+    "bytes": 24423,
+    "sha256": "09448E6597913DEE0DA049CD63A3B59D857A4F4DCA50A94B27674E0323C4C6B8"
+  },
+  {
+    "path": "tar-members.json",
+    "bytes": 823976,
+    "sha256": "FAAC57E1ACA901341AD8CE9581BBA798764702E3A8C4705C00902D55A87FBF69"
+  }
+]

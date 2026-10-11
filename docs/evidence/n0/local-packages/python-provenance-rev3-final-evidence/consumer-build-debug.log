@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt
+  PythonEmbed.cpp
+  JEPythonEmbed.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\python-consumer-provenance-rev3\Debug\JEPythonEmbed.exe

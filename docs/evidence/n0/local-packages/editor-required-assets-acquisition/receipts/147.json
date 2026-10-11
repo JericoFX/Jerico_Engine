@@ -1,0 +1,41 @@
+{
+  "index": 147,
+  "source_path": "Code/Editor/TrackView/tvnodes-23.png",
+  "expected_sha256": "c890f0c0dd4af4d8d99cc1c0f8c31487392604b6998723859d115b5e928091b4",
+  "expected_bytes": 520,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvnodes-23.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:27:58.710416+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvnodes-23.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "520",
+      "ETag": "\"c890f0c0dd4af4d8d99cc1c0f8c31487392604b6998723859d115b5e928091b4\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvnodes-23.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:27:59.085491+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/TrackView/tvnodes-23.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "520",
+      "ETag": "\"c890f0c0dd4af4d8d99cc1c0f8c31487392604b6998723859d115b5e928091b4\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "c890f0c0dd4af4d8d99cc1c0f8c31487392604b6998723859d115b5e928091b4",
+  "actual_bytes": 520,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\TrackView\\tvnodes-23.png",
+  "status": "acquired and byte verified"
+}

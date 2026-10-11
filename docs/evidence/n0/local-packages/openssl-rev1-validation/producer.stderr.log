@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:34 (message):
+  JE local Python: portable Perl manifest requires an explicit full SHA256
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:45 (JE_python_verify_file)
+  openssl-perl-tool-audit/producer-candidate-inputs.cmake:11 (include)
+
+

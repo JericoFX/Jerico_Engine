@@ -1,0 +1,124 @@
+{
+  "archiveSha256": "4c4ae3b71be82837b18090029d7ec49a19af80c12b35008b70a0d6f967acc589",
+  "expectedArchiveSha256": "4c4ae3b71be82837b18090029d7ec49a19af80c12b35008b70a0d6f967acc589",
+  "listedMembers": 20,
+  "manifestPayloadFiles": 19,
+  "listExit": 0,
+  "listSeconds": 0.0319901,
+  "extractExit": 0,
+  "extractSeconds": 0.1328795,
+  "extractedRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\mcpp-rev2-validation\\mcpp-extracted-v2",
+  "packageInfo": {
+    "license": "BSD-2-Clause AND (Apache-2.0 OR MIT)",
+    "name": "mcpp-2.7.2_az.2-je-rev1-windows",
+    "schemaVersion": 2,
+    "source": {
+      "release": "mcpp-2.7.2",
+      "sha256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+      "url": "https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download"
+    },
+    "version": "2.7.2_az.2-je-rev1"
+  },
+  "extractedFiles": [
+    {
+      "path": "Findmcpp.cmake",
+      "bytes": 2585,
+      "sha256": "b9552d89681d392b85698706f88125a88e4ad0bce8402d9ed962adddf620f786"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 2359,
+      "sha256": "b880bdc496ae6331fbbf096cc749d214fe3f8e966f997247a1ace314884e029d"
+    },
+    {
+      "path": "PackageInfo.json",
+      "bytes": 408,
+      "sha256": "fbd3e14457f915deb03ae23c9a68e558d8ab6d64788bc21969042879559a5622"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 1727,
+      "sha256": "a5655b4953ea923d16a1a29c07865d0fc4ab9b692795606dae592e06ec4d8b9f"
+    },
+    {
+      "path": "LICENSES\\mcpp\\README.original",
+      "bytes": 2242,
+      "sha256": "64518b3f231989dd46819108db51a93a486b7573f0804d169a7b1d70cbe71987"
+    },
+    {
+      "path": "LICENSES\\mcpp\\source-notices.txt",
+      "bytes": 13727,
+      "sha256": "ec6233ba1d044bde6b2eccb5021ad0cc32faee791a5b27bdc053d1a3c1abd2c5"
+    },
+    {
+      "path": "LICENSES\\O3DE\\LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "LICENSES\\O3DE\\LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "LICENSES\\O3DE\\LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "LICENSES\\O3DE\\mcpp_2.7.2_az.patch",
+      "bytes": 20311,
+      "sha256": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b"
+    },
+    {
+      "path": "LICENSES\\O3DE\\visualc.mak.original",
+      "bytes": 4712,
+      "sha256": "a35dc1b5c93acf904ebbad69065125ff93f1b2905d822ae518aa6593fb000c7f"
+    },
+    {
+      "path": "mcpp\\JERecipe.json",
+      "bytes": 546,
+      "sha256": "a0ad3937e1081ff8a802aa1942e9fa18639a6e72143a4f8136eb756d3a255662"
+    },
+    {
+      "path": "mcpp\\LICENSE",
+      "bytes": 1460,
+      "sha256": "adcd59c07ccdb072c8e1d40adb5cac670fcf3f51ba3a7fb41d46362bfd883b1b"
+    },
+    {
+      "path": "mcpp\\McppPatchManifest.json",
+      "bytes": 10343,
+      "sha256": "9f8522a8a06ab9c4207f5f5ee7e7b41837831118512b07b0a8507bb5997aaec3"
+    },
+    {
+      "path": "mcpp\\include\\mcpp_lib.h",
+      "bytes": 1786,
+      "sha256": "7d248a44999d75616d0f0a03ccd9619e6b9a767c0fba835ecad110d4bec13728"
+    },
+    {
+      "path": "mcpp\\include\\mcpp_out.h",
+      "bytes": 729,
+      "sha256": "6c0393950e63362fa31f06ea07f72e757c0b89015e2369292bb9bd8e8bfa7317"
+    },
+    {
+      "path": "mcpp\\lib\\mcpp.exe",
+      "bytes": 344064,
+      "sha256": "117cd18cc319c224a7808be35ba8a223d0ed75eb02755cac643c10c97a2738a7"
+    },
+    {
+      "path": "mcpp\\lib\\mcpp0.dll",
+      "bytes": 135168,
+      "sha256": "e28db7ef935d6584d0f3ef38849f17d3475f3413251b205c59a5b15484dd66e9"
+    },
+    {
+      "path": "mcpp\\lib\\mcpp0.lib",
+      "bytes": 2874,
+      "sha256": "a5efa54a166803e21acab207d103b663873e044f493c4201db5a8a4fa7f959a3"
+    }
+  ]
+}

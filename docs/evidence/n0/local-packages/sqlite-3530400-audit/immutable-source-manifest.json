@@ -1,0 +1,33 @@
+{
+  "root": "F:\\JericoEngine\\Dependencies\\sqlite-amalgamation-3530400",
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\sqlite-amalgamation-3530400\\shell.c",
+      "bytes": 1185915,
+      "sha256": "8011ED018AA12969F93573B7BB1EAE2D939D64D0F451B297FF847A0211C85179",
+      "readOnly": true
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\sqlite-amalgamation-3530400\\sqlite3.c",
+      "bytes": 9515341,
+      "sha256": "B1DD5D74EC7F29055A6684FA06FB3C2F6821C87DD38F9A458DFD2E8A1DB28189",
+      "readOnly": true
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\sqlite-amalgamation-3530400\\sqlite3.h",
+      "bytes": 690838,
+      "sha256": "919E7F2E8ED1D8F56AC17B412B8971C76AA5D1A879752CC6058F75E7D5910E1D",
+      "readOnly": true
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\sqlite-amalgamation-3530400\\sqlite3ext.h",
+      "bytes": 39175,
+      "sha256": "AC9645E5C9FF0CF176EFDD6E75CB5E98F46295D38E02DB5C4D208826A39AB4BE",
+      "readOnly": true
+    }
+  ],
+  "symlinks": 0,
+  "reparsePoints": 0,
+  "archivePinVerifiedBeforeExtraction": true,
+  "upstreamCmakeOrToolsExecuted": false
+}

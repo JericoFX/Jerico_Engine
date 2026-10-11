@@ -1,0 +1,197 @@
+{
+  "scope": "AtomToolsFramework/tool dependencies, Code/Tools, Editor native Python runner/UI removal, Project Edit/Open/Startup, DefaultProject association",
+  "state": "Frozen for parent source review and native build validation; NOT compiled or runtime accepted",
+  "fileCount": 38,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.cpp",
+      "bytes": 119132,
+      "sha256": "A86557A3648C44A6B16EA730DC970ED0FF3952FDD04D2DB255A56ADE8E4E7460"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.h",
+      "bytes": 16899,
+      "sha256": "CA12AAE7222524610A305B48E20CF8BCB19F4324CEDF16589C766ED82F4F1F5C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Core\\EditorActionsHandler.cpp",
+      "bytes": 133235,
+      "sha256": "BF5EF58BBE1B46B8065EFBC4A09FFCE838ECD22923F796D5608E3B8DBF183A4B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEditPy.cpp",
+      "bytes": 20074,
+      "sha256": "9414D0E0285171005DA9560EE7864DD98E7B3B82FBD1D4948728E53468E2A3C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.cpp",
+      "bytes": 27285,
+      "sha256": "15C2EE3F76D2728F9271A945CF684755C2F6D94D2642EE691E727D4DC41D3F25"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.h",
+      "bytes": 10964,
+      "sha256": "324A4D61E2564746BE012EF9EC8E88D18AB76B3F680AC57D096652CDCE3AC47F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\editor_lib_files.cmake",
+      "bytes": 22063,
+      "sha256": "49CEF54E1EAF61419E56334094F70228DA4D8D3F8D4B4F738F3166DD9E58492C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.cpp",
+      "bytes": 41058,
+      "sha256": "A955FB5A0099F0C111CE6B460020BE53A7966109AB124805C811422B449CA6DE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.h",
+      "bytes": 3112,
+      "sha256": "5518717FF0F36467BD13803DB6CA5C77AFCD65221478606FFB8FA56FF672C480"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorEventsBus.h",
+      "bytes": 4623,
+      "sha256": "285C347DAE880B7830266B3152F5F330B934870E3D63F48AF528F519EA89A3C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Lib\\Tests\\test_EditorPythonBindings.cpp",
+      "bytes": 15690,
+      "sha256": "11CE8AA271CB0C7BCE96D9D88CA32227B08D6B61D7A3470E406659B8335FF41B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.cpp",
+      "bytes": 13744,
+      "sha256": "3AFC7857A5C2F02DE71FD1CD74AC005ABC4EC0326DD0249A1600BB347EAE8FE7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.h",
+      "bytes": 4317,
+      "sha256": "B69727E20C41B6B45AB72D97BF7BC75EE825A3D3CE4BB32797CD62B984735F86"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.cpp",
+      "bytes": 23784,
+      "sha256": "448D1683CA30BA435D089C15FBEE7B21D80F54DF6BC84BC0DD1C0B26B846015F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.h",
+      "bytes": 2140,
+      "sha256": "763C13337668731CF02E9F330F642EFF19F5F47703CFF55F73CBF91BB6500734"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.ui",
+      "bytes": 8935,
+      "sha256": "158A8172118B1C325CC961C87D18823E736D14B510FA1EB16137582A0EF894DF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Commands\\CommandManager.cpp",
+      "bytes": 12772,
+      "sha256": "7D249A74DEC1E1A6E306FA11B7953D840AC9DC72FA7494ACC2973211A8AB9D9C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt",
+      "bytes": 3647,
+      "sha256": "077E1AA31BAE7EAE83389EAFDF1C0C2E928757DB54C68C8CBE22771553F96A0F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\AtomToolsFrameworkModule.h",
+      "bytes": 704,
+      "sha256": "992F7356565FB11C5509603B294770E3618EDA521AD7B4D2C60E4F12D85326D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Application\\AtomToolsApplication.h",
+      "bytes": 4644,
+      "sha256": "E9E801ED0B92E2070651AA48A5E6A0CD9501519CF9A822E4139D70D2275C4E15"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+      "bytes": 26423,
+      "sha256": "B306B3B5E8A0B42C6C4B90E9C993DF3CD28300783794CFAD3906CEFE11C82FE9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Window\\AtomToolsMainWindow.h",
+      "bytes": 4406,
+      "sha256": "E5E0F3698E10905B4D9E119BD5C56C8D693C3788957C5191D7BBAF8D75E302A6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Window\\AtomToolsMainWindow.cpp",
+      "bytes": 26125,
+      "sha256": "FAC992191F9E59366404F108FF6F8B415E829F7FB46E873F8C06909675D52B82"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\AssetBrowser\\AtomToolsAssetBrowserInteractions.cpp",
+      "bytes": 11295,
+      "sha256": "343089D47D9567D4306A834844FBBB80C830EE070B3EF9084762754DEBE144E5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Util\\Util.h",
+      "bytes": 18216,
+      "sha256": "88F8EA44812A4B9F99E57B82C9B353F28809576A5873AE3DB987351494DBD7AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Util\\Util.cpp",
+      "bytes": 44280,
+      "sha256": "F10345BCEF2A20B8FFB769DEF731470B4CA6F0F96A27A74F3F54F7BA751C80CD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "bytes": 254,
+      "sha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "bytes": 254,
+      "sha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "bytes": 254,
+      "sha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "bytes": 254,
+      "sha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\Window\\ShaderManagementConsoleTableView.cpp",
+      "bytes": 19970,
+      "sha256": "CE9BCF718D4298A9EDE1C1194290E7A9427FB912B8125404259B004638320FA7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\CMakeLists.txt",
+      "bytes": 712,
+      "sha256": "7927173627AFDAA7EF3CB9D538255E356ACA0E91430734CC0EF069D30C4848DE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+      "bytes": 7477,
+      "sha256": "5A93205ECD1AC0FA3F2557EAD9632D2AD8A9E6FA35D27BD48E83D30A04657974"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow.cpp",
+      "bytes": 40349,
+      "sha256": "75FA95F0F3B0F354808F6F50009057BCA140BD85DCF3D2ABFF104265A4B15BC3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+      "bytes": 7945,
+      "sha256": "00E9AF671ACB28252AAC6EC5F0F5FECD9025CCB03638FD1972360526C731D397"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\main.cpp",
+      "bytes": 2011,
+      "sha256": "264D1497DC7D8294B6160193F1C71E92322552EB77F877B0804E5304976619BA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzFramework\\AzFramework\\ProjectManager\\ProjectManager.h",
+      "bytes": 1660,
+      "sha256": "B62119405057B955A174D203B5BE101E0B15F274848B11082BD337B7014E84C2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+      "bytes": 1213,
+      "sha256": "31715930EA98DAE6277A21C89505DA83E3684D42A4C80CC9EE7B93316FC4368A"
+    }
+  ]
+}

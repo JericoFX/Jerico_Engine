@@ -1,0 +1,16 @@
+{
+  "name": "rev2-runtime-provenance",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev2\\extracted\\python-3.10.13-je-rev2-windows\\python\\python.exe",
+  "argv_count": 4,
+  "argv": [
+    "-I",
+    "-B",
+    "-c",
+    "import ctypes,json,sys; ctypes.pythonapi.Py_GetBuildInfo.restype=ctypes.c_char_p; ctypes.pythonapi.Py_GetVersion.restype=ctypes.c_char_p; print(json.dumps({\"version\":sys.version,\"sys_git\":sys._git,\"py_get_build_info\":ctypes.pythonapi.Py_GetBuildInfo().decode(\"ascii\"),\"py_get_version\":ctypes.pythonapi.Py_GetVersion().decode(\"ascii\")}))"
+  ],
+  "started": "2026-10-10T19:47:15.9288549-03:00",
+  "exitcode": 0,
+  "elapsed_seconds": 0.1048865,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\rev2-runtime-provenance.log"
+}

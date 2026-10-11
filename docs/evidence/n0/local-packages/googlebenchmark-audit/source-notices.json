@@ -1,0 +1,1103 @@
+[
+  {
+    "path": "include/benchmark/benchmark.h",
+    "sha256": "e922e9488d211c22c53cf08d4c6e4b48279fcf44f6dac2c807a1c0b4a583c5f4",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n// Support for registering benchmarks for functions.\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "include/benchmark/export.h",
+    "sha256": "d2de28d4d9b82bfef5636ad2d88ac464e130a55b810f110c7f47203d6ba0d5e2",
+    "leading_source_text": "#ifndef BENCHMARK_EXPORT_H\n#define BENCHMARK_EXPORT_H\n\n#if defined(_WIN32)\n#define EXPORT_ATTR __declspec(dllexport)\n#define IMPORT_ATTR __declspec(dllimport)\n#define NO_EXPORT_ATTR\n#define DEPRECATED_ATTR __declspec(deprecated)\n#else  // _WIN32\n#define EXPORT_ATTR __attribute__((visibility(\"default\")))\n#define IMPORT_ATTR __attribute__((visibility(\"default\")))\n#define NO_EXPORT_ATTR __attribute__((visibility(\"hidden\")))\n#define DEPRECATE_ATTR __attribute__((__deprecated__))\n#endif  // _WIN32\n\n#ifdef BENCHMARK_STATIC_DEFINE",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/arraysize.h",
+    "sha256": "cb507681e134f78975b22cf015044359145544ecbcc2cf51a32ee84f041588ac",
+    "leading_source_text": "#ifndef BENCHMARK_ARRAYSIZE_H_\n#define BENCHMARK_ARRAYSIZE_H_\n\n#include \"internal_macros.h\"\n\nnamespace benchmark {\nnamespace internal {\n// The arraysize(arr) macro returns the # of elements in an array arr.\n// The expression is a compile-time constant, and therefore can be\n// used in defining new arrays, for example.  If you use arraysize on\n// a pointer by mistake, you will get a compile-time error.\n//\n\n// This template function declaration is used in defining arraysize.\n// Note that the function doesn't need an implementation, as we only\n// use its type.",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/benchmark.cc",
+    "sha256": "fdf33677d650b511c55022850e7d4540cb2d0f4f49a241f10c444333ac8e4662",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"benchmark/benchmark.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/benchmark_api_internal.cc",
+    "sha256": "fbdc532d478af08d5deda7df68e9fe110ae16c1236abf50f955a545df8c113af",
+    "leading_source_text": "#include \"benchmark_api_internal.h\"\n\n#include <cinttypes>\n\n#include \"string_util.h\"\n\nnamespace benchmark {\nnamespace internal {\n\nBenchmarkInstance::BenchmarkInstance(Benchmark* benchmark, int family_idx,\n                                     int per_family_instance_idx,\n                                     const std::vector<int64_t>& args,\n                                     int thread_count)\n    : benchmark_(*benchmark),\n      family_index_(family_idx),\n      per_family_instance_index_(per_family_instance_idx),",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/benchmark_api_internal.h",
+    "sha256": "c993d570c0d8608ce5df7e3eda742e2821d4c6165975bc6d42af5bf3360ec78f",
+    "leading_source_text": "#ifndef BENCHMARK_API_INTERNAL_H\n#define BENCHMARK_API_INTERNAL_H\n\n#include <cmath>\n#include <iosfwd>\n#include <limits>\n#include <memory>\n#include <string>\n#include <vector>\n\n#include \"benchmark/benchmark.h\"\n#include \"commandlineflags.h\"\n\nnamespace benchmark {\nnamespace internal {\n",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/benchmark_main.cc",
+    "sha256": "80ea5a544e79f3ff0e6e7e0ce98304e59f6bd25e538c4e75294951b0e0d40aec",
+    "leading_source_text": "// Copyright 2018 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"benchmark/benchmark.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2018 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/benchmark_name.cc",
+    "sha256": "52ee2892d92807618ab0a86a23680029694ba4928613e19e1e3ad4d4c6c890b2",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include <benchmark/benchmark.h>\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/benchmark_register.cc",
+    "sha256": "25fb86ebc1e2409f740d6cf4f74dfab9bd9991e79457349311d9fa51bc351100",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"benchmark_register.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/benchmark_register.h",
+    "sha256": "d918a8f17287cae924d4142e25267fd0f308b68028d475ddba012ddaa2d14ea1",
+    "leading_source_text": "#ifndef BENCHMARK_REGISTER_H\n#define BENCHMARK_REGISTER_H\n\n#include <limits>\n#include <vector>\n\n#include \"check.h\"\n\nnamespace benchmark {\nnamespace internal {\n\n// Append the powers of 'mult' in the closed interval [lo, hi].\n// Returns iterator to the start of the inserted range.\ntemplate <typename T>\ntypename std::vector<T>::iterator AddPowers(std::vector<T>* dst, T lo, T hi,\n                                            int mult) {",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/benchmark_runner.cc",
+    "sha256": "21e87652f7661a2b20b44825d9febe2167368c9f0e7d9ab84fb1f031b435adeb",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"benchmark_runner.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/benchmark_runner.h",
+    "sha256": "a5c1b2a6cdd92804340bd311cc92df7e056926420241b1a2c40874653e2e06a1",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#ifndef BENCHMARK_RUNNER_H_\n#define BENCHMARK_RUNNER_H_",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/check.cc",
+    "sha256": "ba54ba4e4fd633422cc21db738e04fc3f0208e935042e342e21eeb9a5c4de744",
+    "leading_source_text": "#include \"check.h\"\n\nnamespace benchmark {\nnamespace internal {\n\nstatic AbortHandlerT* handler = &std::abort;\n\nAbortHandlerT*& GetAbortHandler() { return handler; }\n\n}  // namespace internal\n}  // namespace benchmark",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/check.h",
+    "sha256": "167cf212fad1c5486395581cd36164891c75d2e09fdc18e5216874a1c358c164",
+    "leading_source_text": "#ifndef CHECK_H_\n#define CHECK_H_\n\n#include <cmath>\n#include <cstdlib>\n#include <ostream>\n\n#include \"benchmark/export.h\"\n#include \"internal_macros.h\"\n#include \"log.h\"\n\nnamespace benchmark {\nnamespace internal {\n\ntypedef void(AbortHandlerT)();\n",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/colorprint.cc",
+    "sha256": "cfd7aad851dc9ceda472d63216000c00a8568a4de8a343a4f4761f5b0cf38be2",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"colorprint.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      },
+      {
+        "line": 165,
+        "text": "  // supported TERM values is copied from Google Test:"
+      }
+    ]
+  },
+  {
+    "path": "src/colorprint.h",
+    "sha256": "fda7e169dcb7c7f4805829d634ad9d6c0c8565ff45fc913822e30a7357dc5489",
+    "leading_source_text": "#ifndef BENCHMARK_COLORPRINT_H_\n#define BENCHMARK_COLORPRINT_H_\n\n#include <cstdarg>\n#include <iostream>\n#include <string>\n\nnamespace benchmark {\nenum LogColor {\n  COLOR_DEFAULT,\n  COLOR_RED,\n  COLOR_GREEN,\n  COLOR_YELLOW,\n  COLOR_BLUE,\n  COLOR_MAGENTA,\n  COLOR_CYAN,",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/commandlineflags.cc",
+    "sha256": "c8dd4e7f0617265916a5cf71ee9ad963b5245efc5bad05d76f30706529abdaaa",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"commandlineflags.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/commandlineflags.h",
+    "sha256": "e37115f3c52aadefbf1e077bf427d432dc9c9bca96164b2a51d488e85c770f85",
+    "leading_source_text": "#ifndef BENCHMARK_COMMANDLINEFLAGS_H_\n#define BENCHMARK_COMMANDLINEFLAGS_H_\n\n#include <cstdint>\n#include <map>\n#include <string>\n\n#include \"benchmark/export.h\"\n\n// Macro for referencing flags.\n#define FLAG(name) FLAGS_##name\n\n// Macros for declaring flags.\n#define BM_DECLARE_bool(name) BENCHMARK_EXPORT extern bool FLAG(name)\n#define BM_DECLARE_int32(name) BENCHMARK_EXPORT extern int32_t FLAG(name)\n#define BM_DECLARE_double(name) BENCHMARK_EXPORT extern double FLAG(name)",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/complexity.cc",
+    "sha256": "83f103234cea13fc78bfad006450461b7735e4356095c4c74d6d4ae6fed06469",
+    "leading_source_text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n// Source project : https://github.com/ismaelJimenez/cpp.leastsq\n// Adapted to be used with google benchmark",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/complexity.h",
+    "sha256": "d9a9202afd50f9ce59f0454e4c1312c117721a8435b37daf93069773e935a71a",
+    "leading_source_text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n// Source project : https://github.com/ismaelJimenez/cpp.leastsq\n// Adapted to be used with google benchmark",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/console_reporter.cc",
+    "sha256": "fb1f99afd5faad55fb24f0cbb86bb3f60199b6743c25e7b8c45092ee255a1c23",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include <algorithm>\n#include <cstdint>",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/counter.cc",
+    "sha256": "a7856ca57bdb34414aa1b0b01bf09391846d7c90edc16c46ce4c69cc76295864",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"counter.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/counter.h",
+    "sha256": "bb726ba64e38a002051197aa6dbc1375a183443a3c6e21a4480f4968ddd040af",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#ifndef BENCHMARK_COUNTER_H_\n#define BENCHMARK_COUNTER_H_",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/csv_reporter.cc",
+    "sha256": "d0336890ae2ccee46eaf7c95c8bbdf7dc8432747a41b79a50a411485a013b44c",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include <algorithm>\n#include <cstdint>",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/cycleclock.h",
+    "sha256": "c965e0371292808f955b8f2fc3146624548aaff8d04ec56502db45a06a49b80b",
+    "leading_source_text": "// ----------------------------------------------------------------------\n// CycleClock\n//    A CycleClock tells you the current time in Cycles.  The \"time\"\n//    is actually time since power-on.  This is like time() but doesn't\n//    involve a system call and is much more precise.\n//\n// NOTE: Not all cpu/platform/kernel combinations guarantee that this\n// clock increments at a constant rate or is synchronized across all logical\n// cpus in a system.\n//\n// If you need the above guarantees, please consider using a different\n// API. There are efforts to provide an interface which provides a millisecond\n// granularity and implemented as a memory read. A memory read is generally\n// cheaper than the CycleClock for many architectures.\n//\n// Also, in some out of order CPU implementations, the CycleClock is not",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/internal_macros.h",
+    "sha256": "639e6a3159eef6946bd939bd3444f78dc99ea06aac11195adcfbea27eddde12a",
+    "leading_source_text": "#ifndef BENCHMARK_INTERNAL_MACROS_H_\n#define BENCHMARK_INTERNAL_MACROS_H_\n\n#include \"benchmark/benchmark.h\"\n\n/* Needed to detect STL */\n#include <cstdlib>\n\n// clang-format off\n\n#ifndef __has_feature\n#define __has_feature(x) 0\n#endif\n\n#if defined(__clang__)\n  #if defined(__ibmxl__)",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/json_reporter.cc",
+    "sha256": "bea32cef5fd58715113cb18a1a04cbddb219957276086ee9ecc956eae200ff5d",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include <algorithm>\n#include <cmath>",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/log.h",
+    "sha256": "572d8183c66c8bb19d96f5bd0b255d1996ec7365ee9ffb73f4b0e389f7a70da6",
+    "leading_source_text": "#ifndef BENCHMARK_LOG_H_\n#define BENCHMARK_LOG_H_\n\n#include <iostream>\n#include <ostream>\n\n#include \"benchmark/benchmark.h\"\n\nnamespace benchmark {\nnamespace internal {\n\ntypedef std::basic_ostream<char>&(EndLType)(std::basic_ostream<char>&);\n\nclass LogType {\n  friend LogType& GetNullLogInstance();\n  friend LogType& GetErrorLogInstance();",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/mutex.h",
+    "sha256": "5cfbb36f8bdf70abf28e7e2e0d5670f63712c0749ca43877b940356a4268690a",
+    "leading_source_text": "#ifndef BENCHMARK_MUTEX_H_\n#define BENCHMARK_MUTEX_H_\n\n#include <condition_variable>\n#include <mutex>\n\n#include \"check.h\"\n\n// Enable thread safety attributes only with clang.\n// The attributes can be safely erased when compiling with other compilers.\n#if defined(HAVE_THREAD_SAFETY_ATTRIBUTES)\n#define THREAD_ANNOTATION_ATTRIBUTE_(x) __attribute__((x))\n#else\n#define THREAD_ANNOTATION_ATTRIBUTE_(x)  // no-op\n#endif\n",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/perf_counters.cc",
+    "sha256": "159bef9f0743c245860c1630f6fb1b8a8e1279391827cd6430eae6e8e3265832",
+    "leading_source_text": "// Copyright 2021 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"perf_counters.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2021 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/perf_counters.h",
+    "sha256": "6b521005242e60af435c47ad61ee383ddaa6ceddaa18cba95428cfd4c85d63c0",
+    "leading_source_text": "// Copyright 2021 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#ifndef BENCHMARK_PERF_COUNTERS_H\n#define BENCHMARK_PERF_COUNTERS_H",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2021 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/re.h",
+    "sha256": "f7d7a9bf76b389645a68052160057d620cf32b5a41cb54cc70bcbe6038f4b49a",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#ifndef BENCHMARK_RE_H_\n#define BENCHMARK_RE_H_",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/reporter.cc",
+    "sha256": "819b54058094d358e22297d50a2ead2161e7fbe4d71c1c64622af082d0c2229d",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include <cstdlib>\n#include <iostream>",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/sleep.cc",
+    "sha256": "200c8e40139666640ee396e016f102deb5b6bc6ea09cbf59461940185d3becb2",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"sleep.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/sleep.h",
+    "sha256": "8db51462b96ff347d5da4bb2cf1b491129a85ef907164b337d52204ccdba8976",
+    "leading_source_text": "#ifndef BENCHMARK_SLEEP_H_\n#define BENCHMARK_SLEEP_H_\n\nnamespace benchmark {\nconst int kNumMillisPerSecond = 1000;\nconst int kNumMicrosPerMilli = 1000;\nconst int kNumMicrosPerSecond = kNumMillisPerSecond * 1000;\nconst int kNumNanosPerMicro = 1000;\nconst int kNumNanosPerSecond = kNumNanosPerMicro * kNumMicrosPerSecond;\n\nvoid SleepForMilliseconds(int milliseconds);\nvoid SleepForSeconds(double seconds);\n}  // end namespace benchmark\n\n#endif  // BENCHMARK_SLEEP_H_",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/statistics.cc",
+    "sha256": "a6e2c6283c3f1ce3b7801eb745cab6ef6fd32bb32ad27ba9fdfade9a4ae75331",
+    "leading_source_text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved.\n// Copyright 2017 Roman Lebedev. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"statistics.h\"",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved."
+      },
+      {
+        "line": 2,
+        "text": "// Copyright 2017 Roman Lebedev. All rights reserved."
+      },
+      {
+        "line": 4,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 5,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 6,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 8,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 11,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 13,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 14,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/statistics.h",
+    "sha256": "a7e9693f9898bd8b7f4415d28d83718ff347adb234e18fabe9f467dab78a1baf",
+    "leading_source_text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved.\n// Copyright 2017 Roman Lebedev. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#ifndef STATISTICS_H_",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2016 Ismael Jimenez Martinez. All rights reserved."
+      },
+      {
+        "line": 2,
+        "text": "// Copyright 2017 Roman Lebedev. All rights reserved."
+      },
+      {
+        "line": 4,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 5,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 6,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 8,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 11,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 13,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 14,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/string_util.cc",
+    "sha256": "048a5269c9e5e017389f07a557eb1bb800bba3d8e6d2e61d030efbb67a4e715e",
+    "leading_source_text": "#include \"string_util.h\"\n\n#include <array>\n#ifdef BENCHMARK_STL_ANDROID_GNUSTL\n#include <cerrno>\n#endif\n#include <cmath>\n#include <cstdarg>\n#include <cstdio>\n#include <memory>\n#include <sstream>\n\n#include \"arraysize.h\"\n\nnamespace benchmark {\nnamespace {",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/string_util.h",
+    "sha256": "35f9929ac714f91d24f39ac35059f401b6fa6ff23157a443fddbd01ecf834ad7",
+    "leading_source_text": "#ifndef BENCHMARK_STRING_UTIL_H_\n#define BENCHMARK_STRING_UTIL_H_\n\n#include <sstream>\n#include <string>\n#include <utility>\n\n#include \"benchmark/export.h\"\n#include \"internal_macros.h\"\n\nnamespace benchmark {\n\nvoid AppendHumanReadable(int n, std::string* str);\n\nstd::string HumanReadableNumber(double n, double one_k = 1024.0);\n",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/sysinfo.cc",
+    "sha256": "ab13f71464f1f23f53eed947ff29ef8d06aa4c413bab418e3626c9d77a5a97e5",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"internal_macros.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/thread_manager.h",
+    "sha256": "24f7475be9594b4664325edd3700ddfa2d7b5f6a70f999ad5ef4cc8efb5e83c5",
+    "leading_source_text": "#ifndef BENCHMARK_THREAD_MANAGER_H\n#define BENCHMARK_THREAD_MANAGER_H\n\n#include <atomic>\n\n#include \"benchmark/benchmark.h\"\n#include \"mutex.h\"\n\nnamespace benchmark {\nnamespace internal {\n\nclass ThreadManager {\n public:\n  explicit ThreadManager(int num_threads)\n      : alive_threads_(num_threads), start_stop_barrier_(num_threads) {}\n",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/thread_timer.h",
+    "sha256": "145d3a62fdef5bfd420de167c2b7044c8a166b0acbedaeef8b516661fca2c539",
+    "leading_source_text": "#ifndef BENCHMARK_THREAD_TIMER_H\n#define BENCHMARK_THREAD_TIMER_H\n\n#include \"check.h\"\n#include \"timers.h\"\n\nnamespace benchmark {\nnamespace internal {\n\nclass ThreadTimer {\n  explicit ThreadTimer(bool measure_process_cpu_time_)\n      : measure_process_cpu_time(measure_process_cpu_time_) {}\n\n public:\n  static ThreadTimer Create() {\n    return ThreadTimer(/*measure_process_cpu_time_=*/false);",
+    "attribution_lines": []
+  },
+  {
+    "path": "src/timers.cc",
+    "sha256": "3f5ac25dc5ba0e938f5a5f792687837d7508ecd4dfea5258615c308e90db6bdd",
+    "leading_source_text": "// Copyright 2015 Google Inc. All rights reserved.\n//\n// Licensed under the Apache License, Version 2.0 (the \"License\");\n// you may not use this file except in compliance with the License.\n// You may obtain a copy of the License at\n//\n//     http://www.apache.org/licenses/LICENSE-2.0\n//\n// Unless required by applicable law or agreed to in writing, software\n// distributed under the License is distributed on an \"AS IS\" BASIS,\n// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n// See the License for the specific language governing permissions and\n// limitations under the License.\n\n#include \"timers.h\"\n",
+    "attribution_lines": [
+      {
+        "line": 1,
+        "text": "// Copyright 2015 Google Inc. All rights reserved."
+      },
+      {
+        "line": 3,
+        "text": "// Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "line": 4,
+        "text": "// you may not use this file except in compliance with the License."
+      },
+      {
+        "line": 5,
+        "text": "// You may obtain a copy of the License at"
+      },
+      {
+        "line": 7,
+        "text": "//     http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "line": 10,
+        "text": "// distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "line": 12,
+        "text": "// See the License for the specific language governing permissions and"
+      },
+      {
+        "line": 13,
+        "text": "// limitations under the License."
+      }
+    ]
+  },
+  {
+    "path": "src/timers.h",
+    "sha256": "22d3dfdba65eb18956c076ad7231ebfdd990918ef2210a4fdfad75354a0c68c7",
+    "leading_source_text": "#ifndef BENCHMARK_TIMERS_H\n#define BENCHMARK_TIMERS_H\n\n#include <chrono>\n#include <string>\n\nnamespace benchmark {\n\n// Return the CPU usage of the current process\ndouble ProcessCPUUsage();\n\n// Return the CPU usage of the children of the current process\ndouble ChildrenCPUUsage();\n\n// Return the CPU usage of the current thread\ndouble ThreadCPUUsage();",
+    "attribution_lines": []
+  }
+]

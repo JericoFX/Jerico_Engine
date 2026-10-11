@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\python\\requirements.txt",
+      "bytes": 13269,
+      "sha256": "d2891893d22b227c5d85bd4f1d2ebcca63a67c767be64a79cf7121100ddc6a6e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\python\\requirements-build.txt",
+      "bytes": 288,
+      "sha256": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPython.cmake",
+      "bytes": 19974,
+      "sha256": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\Python_windows.cmake",
+      "bytes": 1076,
+      "sha256": "83276e3095041a2e9b192e72c5c9bc78e97206e88952dd0288824c55ea19d88c"
+    }
+  ],
+  "wheelhouse_manifest": "3f4130887189fa77ac15dac34183617e695720faa2a6c24b11ac63f6d67e54e9"
+}

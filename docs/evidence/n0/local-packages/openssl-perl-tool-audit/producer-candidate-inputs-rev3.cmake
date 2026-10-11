@@ -1,0 +1,11 @@
+# Explicit local candidate inputs for parent review. Not executed by the writer.
+set(JE_OPENSSL_SOURCE_ARCHIVE "F:/JericoEngine/Dependencies/archives/openssl-1.1.1o.tar.gz")
+set(JE_OPENSSL_SOURCE_SHA256 "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f")
+set(JE_OPENSSL_SOURCE_URL "https://www.openssl.org/source/old/1.1.1/openssl-1.1.1o.tar.gz")
+set(JE_OPENSSL_PERL_ARCHIVE "F:/JericoEngine/Dependencies/archives/strawberry-perl-5.42.3.1-64bit-portable.zip")
+set(JE_OPENSSL_PERL_ROOT "F:/JericoEngine/Dependencies/tools/strawberry-perl-5.42.3.1-64bit-portable")
+set(JE_OPENSSL_PERL_MANIFEST "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-perl-tool-audit/tool-manifest.json")
+set(JE_OPENSSL_VS_ROOT "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools")
+set(JE_OPENSSL_NASM "C:/Users/Jerico/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/nasm.exe")
+set(JE_OPENSSL_OUTPUT "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-build-rev3")
+include("F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake")

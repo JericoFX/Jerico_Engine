@@ -1,0 +1,30 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\packages\\Lua-5.4.4-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\Lua-5.4.4-je-rev1-windows.tar.xz",
+    "bytes": 313440,
+    "sha256": "D3962B7B84F7FB484F02F639F631DB5613F30A6922953CE41CE8344E4B57CBEB",
+    "already_present": true
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\packages\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 100,
+    "sha256": "7FA7B7D0D967BF266922472CC6A037B9EE458911959C37E3F3B836CF4D55AED3",
+    "already_present": true
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\packages\\Lua-5.4.4-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz",
+    "bytes": 313440,
+    "sha256": "D3962B7B84F7FB484F02F639F631DB5613F30A6922953CE41CE8344E4B57CBEB",
+    "already_present": false
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-producer-rev1\\packages\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 100,
+    "sha256": "7FA7B7D0D967BF266922472CC6A037B9EE458911959C37E3F3B836CF4D55AED3",
+    "already_present": false
+  }
+]

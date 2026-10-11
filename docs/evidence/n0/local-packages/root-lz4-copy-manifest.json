@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-v143-rev1\\packages\\lz4-1.9.4-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\lz4-1.9.4-je-rev1-windows.tar.xz",
+    "bytes": 167540,
+    "sha256": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-v143-rev1\\packages\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 100,
+    "sha256": "19ee520cae99c709dde5a7f0f36e05a1d44fede2f6b73cccb173729ae9680e36"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-v143-rev1\\packages\\lz4-1.9.4-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz",
+    "bytes": 167540,
+    "sha256": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-v143-rev1\\packages\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 100,
+    "sha256": "19ee520cae99c709dde5a7f0f36e05a1d44fede2f6b73cccb173729ae9680e36"
+  }
+]

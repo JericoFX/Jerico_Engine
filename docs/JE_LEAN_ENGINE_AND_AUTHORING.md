@@ -102,6 +102,8 @@ Usar targets existentes/adaptados, **no otro sistema genérico de perfiles, plug
 
 - Editor: UI Qt, BSP/Geology/PWAS/EPLS/Procedural Studio/Material Graph/inspectores/import authoring y previews; recursos pesados de workspaces se crean al usarse, con estados persistentes y límites explícitos.
 - Tools/Cook: builders/importers, evaluadores de recipes/graphs, geometry preprocessing, bake/LOD/collision/nav y packaging; ejecución local y automatizable. Compartir código bibliotecario con el editor, no otro authority de cook.
+Directiva posterior del propietario, 2026-10-10: motor, juego y editor sin Python embebido. Herramientas de autoría mediante C++ nativo; gameplay mediante la VM Luau ya elegida. Python externo puede ejecutar codegen/build, pero el gate de Editor/Runtime exige ausencia de CPython, PySide/shiboken, módulos de bindings, terminal y scripts productivos en targets enlazados, módulos cargados y despliegue. No basta quitar seeds del proyecto si AtomToolsFramework sigue enlazándolo.
+
 - Runtime: World, render, física, script, animación, audio/UI/IA y readers/productos que necesita el contenido; no Qt de edición, MaterialCanvas/GraphCanvas de autoría, Python tool host, import FBX/glTF, shader compiler o builders por accidente. Requisitos legítimos de una dependencia se auditan antes de excluirla.
 
 Los resultados de PWAS/EPLS estáticos se cocinan como instancias, meshes, capas/masks/texturas/material parameters/decals y deps. El runtime no evalúa el graph de fabricación/placement cada frame ni carga Knowledge Library de autoría. Un cambio dinámico ya admitido (wetness, viento o daño) usa datos/algoritmo mínimo del owner runtime, no reintroduce el editor/generador completo. No invalidar el save/gameplay por cambiar quality tier.

@@ -1,0 +1,46 @@
+[
+  {
+    "path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+    "sha256": "cb09dd9769fbbd93b5590db8128e755fc083e9fba9cf1f365d2f8d2d76065e00"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+    "sha256": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+    "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+    "sha256": "4430c0085bc9717fec7c5c333e4c4a0757dd24eec9cad6db6026ad8f51bef392"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+    "sha256": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+    "sha256": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+    "sha256": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+    "sha256": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+    "sha256": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+    "sha256": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5"
+  },
+  {
+    "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+    "sha256": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38"
+  }
+]

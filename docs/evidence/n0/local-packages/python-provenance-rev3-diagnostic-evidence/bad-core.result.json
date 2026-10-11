@@ -1,0 +1,13 @@
+{
+  "native_exit": 1,
+  "elapsed_seconds": 0.4824545,
+  "source_files": 4437,
+  "source_bytes": 94883284.0,
+  "source_core_before": "25c3596f5212f4fecedaf625d57bbc9af16fdab1f60de014200a61fad92d15e2",
+  "source_core_after": "25c3596f5212f4fecedaf625d57bbc9af16fdab1f60de014200a61fad92d15e2",
+  "core_unchanged_by_recipe": true,
+  "output_created": false,
+  "freeze_sha256": "57EA7B94EFEDB0B0D82DD9B8CC3DB5CAC86606C2AB9D9A861C173846F7141359",
+  "freeze_unchanged": true,
+  "git_files": []
+}

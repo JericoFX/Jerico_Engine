@@ -1,0 +1,19 @@
+Start testing: Oct 10 19:47 Hora estándar de Montevideo
+----------------------------------------------------------
+1/3 Testing: JE.LocalPackages.PythonEmbed
+1/3 Test: JE.LocalPackages.PythonEmbed
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-rev2-consumer/Debug/JEPythonEmbed.exe"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-rev2-consumer
+"JE.LocalPackages.PythonEmbed" start time: Oct 10 19:47 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE Python: runtime source provenance mismatch
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Failed.
+"JE.LocalPackages.PythonEmbed" end time: Oct 10 19:47 Hora estándar de Montevideo
+"JE.LocalPackages.PythonEmbed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 19:47 Hora estándar de Montevideo

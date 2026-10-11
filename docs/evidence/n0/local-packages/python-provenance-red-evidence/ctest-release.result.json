@@ -1,0 +1,18 @@
+{
+  "name": "ctest-release",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-red",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "-V"
+  ],
+  "argv_count": 6,
+  "started": "2026-10-10T19:37:18.0066332-03:00",
+  "exitcode": 8,
+  "elapsed_seconds": 0.4407934,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-red-evidence\\ctest-release.log"
+}

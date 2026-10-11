@@ -1,0 +1,14 @@
+{
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-red-unpatched\\build-lualib",
+    "--target",
+    "lualib",
+    "--config",
+    "Release"
+  ],
+  "argv_count": 6,
+  "started": "2026-10-10T19:26:22.4990630-03:00"
+}

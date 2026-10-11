@@ -1,0 +1,71 @@
+Start testing: Oct 10 22:26 Hora estándar de Montevideo
+----------------------------------------------------------
+1/4 Testing: JE.LocalPackages.Mcpp.preprocessing
+1/4 Test: JE.LocalPackages.Mcpp.preprocessing
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/Debug/JEMcppConsumer.exe" "preprocessing" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/fixtures"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2
+"JE.LocalPackages.Mcpp.preprocessing" start time: Oct 10 22:26 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE mcpp preprocessing PASS
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Mcpp.preprocessing" end time: Oct 10 22:26 Hora estándar de Montevideo
+"JE.LocalPackages.Mcpp.preprocessing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: JE.LocalPackages.Mcpp.comments
+2/4 Test: JE.LocalPackages.Mcpp.comments
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/Debug/JEMcppConsumer.exe" "comments" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/fixtures"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2
+"JE.LocalPackages.Mcpp.comments" start time: Oct 10 22:26 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE mcpp comments PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Mcpp.comments" end time: Oct 10 22:26 Hora estándar de Montevideo
+"JE.LocalPackages.Mcpp.comments" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: JE.LocalPackages.Mcpp.errors
+3/4 Test: JE.LocalPackages.Mcpp.errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/Debug/JEMcppConsumer.exe" "errors" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/fixtures"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2
+"JE.LocalPackages.Mcpp.errors" start time: Oct 10 22:26 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+JE mcpp errors PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Mcpp.errors" end time: Oct 10 22:26 Hora estándar de Montevideo
+"JE.LocalPackages.Mcpp.errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: JE.LocalPackages.Mcpp.cli
+4/4 Test: JE.LocalPackages.Mcpp.cli
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-extracted-v2/mcpp/lib/mcpp.exe" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/fixtures/shader.azsl" "-IF:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/fixtures/include" "-DJE_FEATURE=2" "-P"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2
+"JE.LocalPackages.Mcpp.cli" start time: Oct 10 22:26 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-consumer-v2/fixtures/shader.azsl:0: warning: Unknown encoding: C.UTF-8
+    int  shader_value  =  (( 40 )+( 2 )) ;
+const char* label =  "jerico" ;
+float4 JE_SHADER = float4(1,2,3,4);
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[shader_value]
+"JE.LocalPackages.Mcpp.cli" end time: Oct 10 22:26 Hora estándar de Montevideo
+"JE.LocalPackages.Mcpp.cli" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 22:26 Hora estándar de Montevideo

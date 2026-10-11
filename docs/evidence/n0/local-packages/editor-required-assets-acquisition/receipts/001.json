@@ -1,0 +1,41 @@
+{
+  "index": 1,
+  "source_path": "Assets/Editor/Icons/AssetImporter/mesh_on.png",
+  "expected_sha256": "a68df4eb2d979d209bdd5bc77c9c8fa9a026ccdde4c6e11d39e133375ffbc31d",
+  "expected_bytes": 771,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/AssetImporter/mesh_on.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:14.163975+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/AssetImporter/mesh_on.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "771",
+      "ETag": "\"a68df4eb2d979d209bdd5bc77c9c8fa9a026ccdde4c6e11d39e133375ffbc31d\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/AssetImporter/mesh_on.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:14.661621+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Editor/Icons/AssetImporter/mesh_on.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "771",
+      "ETag": "\"a68df4eb2d979d209bdd5bc77c9c8fa9a026ccdde4c6e11d39e133375ffbc31d\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "a68df4eb2d979d209bdd5bc77c9c8fa9a026ccdde4c6e11d39e133375ffbc31d",
+  "actual_bytes": 771,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Assets\\Editor\\Icons\\AssetImporter\\mesh_on.png",
+  "status": "acquired and byte verified"
+}

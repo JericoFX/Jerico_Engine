@@ -1,0 +1,8 @@
+[
+  "--build",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1",
+  "--config",
+  "Release",
+  "--target",
+  "JELz4Consumer"
+]

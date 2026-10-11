@@ -1,0 +1,4 @@
+[
+  "-c",
+  "import sys,json; print(json.dumps({\"version\":sys.version,\"git\":getattr(sys,\"_git\",None)}))"
+]

@@ -1,0 +1,36 @@
+JE local mcpp Windows package
+
+Upstream: mcpp-2.7.2, Kiyoshi Matsui, release 2008-11-30.
+Source: https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download
+Archive SHA256: 3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864
+The release has no established upstream Git commit. It is pinned by archive SHA256,
+not by the O3DE recipe commit. The complete upstream BSD-2-Clause license is in
+mcpp/LICENSE. Compiled source notices preserve the DECUS cpp public-domain credit
+to Martin Minow and the original contributor notices.
+
+O3DE adaptation: package-system/mcpp in o3de/3p-package-source.
+The original _az.2 patch is from ce8be74060cf231c11d464edb0862234dea7782d.
+Patch SHA256: 8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b.
+It adds the include-report callback, const argv/C++ import interface, namespaced
+MCPP output names, Windows/absolute #line paths and corrected comment line counts.
+The audited 70f0b7b5257bf7cf935bf1cfd270e1b53ccead18 snapshot differs only by
+an unused config.guess ARM64 hunk, three trailing comment spaces and a blob index.
+The historical _az.2 patch is retained byte for byte. No config.guess/GPL code is
+compiled or distributed in this package. The upstream source archive contains
+additional files not included in the package.
+
+Windows build adapted from visualc.mak to native CMake/Visual Studio 2022 v143:
+seven original C translation units, COMPILER=MSC, /Za, /favor:AMD64 and original
+_CRT_SECURE_NO_DEPRECATE. DLL: MCPP_LIB/DLL_EXPORT, Release /O2 /MD /DNDEBUG.
+Standalone CLI: the same sources without MCPP_LIB, original default /MT and
+no Release optimization/NDEBUG additions. No globally installed tools or libraries.
+The interface remains 3rdParty::mcpp, mcpp/include, mcpp/lib/mcpp0.lib,
+mcpp/lib/mcpp0.dll and mcpp/lib/mcpp.exe. Atom serializes this global-state API;
+the package makes no new thread-safety, shader performance or engine acceptance claim.
+
+Modifications Copyright (c) Contributors to the Open 3D Engine Project.
+SPDX-License-Identifier: Apache-2.0 OR MIT
+Full O3DE license texts, original patch and recipe are in LICENSES/O3DE.
+JERecipe.json separates the source release/archive hash from the adaptation commit.
+The new JE identity and measured package hash do not impersonate the historical
+mcpp-2.7.2_az.2-rev1-windows binary or its checksum.

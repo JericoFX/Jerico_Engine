@@ -1,0 +1,39 @@
+{
+  "sourceCount": 3,
+  "inputCount": 6,
+  "aggregateSHA256": "b0ac8d88fdf86a75d7655263ad6f27af6057cd98282b7a56bc8d5fedc43a57d1",
+  "rccValidation": "PENDING PACKABILITY ONLY",
+  "runtimeValidation": "PENDING REAL EDITOR LOADING/ABOUT/DPI/PROGRESS",
+  "inputs": [
+    {
+      "path": "Code/Editor/o3de_logo.svg",
+      "bytes": 7011,
+      "sha256": "d4080a194123cac6594390a826f0aad6cba36d01127dc4165ea4e8a12ef35337"
+    },
+    {
+      "path": "Code/Editor/splashscreen_background.png",
+      "bytes": 132,
+      "sha256": "fb9d21a2ef1282dd062d5f68a2e4026de93a460d53e27e11304cdbd4dfba3731"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.cpp",
+      "bytes": 3600,
+      "sha256": "7b3d8d3353aaed24ddfaa5a7be899736c372b6656ae004f5b59e3c0b94ad9cec"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.h",
+      "bytes": 1408,
+      "sha256": "256a61da331adec67ebc176d99df81b8abb67c1a5ee0ba3cbbbb92d041afdbf4"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.qrc",
+      "bytes": 114,
+      "sha256": "984b0c725144cdf8a4b0215d5d7982b1e4a66a94357279e205d125c267ab2f8e"
+    },
+    {
+      "path": "Code/Editor/StartupLogoDialog.ui",
+      "bytes": 12849,
+      "sha256": "857fbae70065e434e188e99e068ac68a3106943c58b5559ed113ae84e301a2a7"
+    }
+  ]
+}

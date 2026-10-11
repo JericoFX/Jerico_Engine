@@ -1,0 +1,13 @@
+{
+  "LY_PACKAGE_SERVER_URLS_present": false,
+  "LY_PACKAGE_DOWNLOAD_CACHE_LOCATION_present": false,
+  "LY_PACKAGE_UNPACK_LOCATION_present": false,
+  "PIP_INDEX_URL_present": false,
+  "PIP_EXTRA_INDEX_URL_present": false,
+  "PIP_FIND_LINKS_present": false,
+  "PIP_TRUSTED_HOST_present": false,
+  "PIP_NO_INDEX": null,
+  "PIP_DISABLE_PIP_VERSION_CHECK": null,
+  "PYTHONNOUSERSITE": null,
+  "PIP_CONFIG_FILE_present": false
+}

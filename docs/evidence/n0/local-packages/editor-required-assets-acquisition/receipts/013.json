@@ -1,0 +1,41 @@
+{
+  "index": 13,
+  "source_path": "Code/Editor/Controls/ReflectedPropertyControl/resources/file_browse.png",
+  "expected_sha256": "124de9138d3af8e14a49944245d7245df4065c49ad1e5ec1d8377600933558c5",
+  "expected_bytes": 370,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/file_browse.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:19.671435+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/file_browse.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "370",
+      "ETag": "\"124de9138d3af8e14a49944245d7245df4065c49ad1e5ec1d8377600933558c5\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/file_browse.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:20.169182+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/Controls/ReflectedPropertyControl/resources/file_browse.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "370",
+      "ETag": "\"124de9138d3af8e14a49944245d7245df4065c49ad1e5ec1d8377600933558c5\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "124de9138d3af8e14a49944245d7245df4065c49ad1e5ec1d8377600933558c5",
+  "actual_bytes": 370,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\Controls\\ReflectedPropertyControl\\resources\\file_browse.png",
+  "status": "acquired and byte verified"
+}

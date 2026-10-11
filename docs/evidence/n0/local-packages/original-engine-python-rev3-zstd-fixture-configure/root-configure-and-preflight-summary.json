@@ -1,0 +1,62 @@
+{
+  "configure": {
+    "argv_file": "original-engine-python-rev3-zstd-fixture-configure.argv.json",
+    "argv_count": 20,
+    "exit_code": 1,
+    "elapsed_seconds": 75.673,
+    "first_blocker": "JE FetchContent unavailable offline: googlebenchmark",
+    "pin_url_hash": "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac",
+    "pin_git_hash": "361e8d1cfe0c6c36d30b39f1b61302ece5507320",
+    "cache": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/googlebenchmark",
+    "caller": "FindGoogleBenchmark.cmake:54 -> cmake/3rdParty.cmake:74 -> cmake/LYWrappers.cmake -> Code/Framework/AzCore/CMakeLists.txt:134",
+    "engine_build_not_run": true
+  },
+  "inputs": {
+    "source_freeze": "73/73",
+    "root_cache": "60 files, before/after identical",
+    "mimalloc": "382 files, before/after identical",
+    "rapidjson": "313 files, before/after identical",
+    "relevant_archives": "7/7 identical: Python rev3, Lua, Zstd, Qt, PySide, mimalloc source, RapidJSON source",
+    "strawberry_archive_note": "Global archive directory not rescanned after parent reported concurrent writer on strawberry-perl; unrelated to this configure"
+  },
+  "python_runtime": {
+    "runtime_audit_exit": 0,
+    "version": "3.10.13 (cpython-3.10.13-archive:49965601d6afedafe47cc85556d99b7a24981051, Oct 10 2026, 2)",
+    "sys_git": [
+      "CPython",
+      "cpython-3.10.13-archive",
+      "49965601d6afedafe47cc85556d99b7a24981051"
+    ],
+    "pip_check_exit": 0,
+    "pip_check": "No broken requirements found",
+    "verified_pin_imports": [
+      "numpy 1.23.0",
+      "scipy 1.8.1",
+      "Pillow 10.3.0",
+      "pytest 7.2.0",
+      "requests 2.32.0",
+      "GitPython 3.1.44",
+      "o3de 1.0.0",
+      "ly-test-tools 1.0.0",
+      "ly-remote-console 1.0.0",
+      "editor-python-test-tools 1.0.0"
+    ],
+    "aws_modules_absent": [
+      "boto3",
+      "botocore",
+      "s3transfer"
+    ],
+    "atomicwrites_note": "pip list lacks atomicwrites 1.4.1, although it is pinned in python/requirements.txt; wheelhouse contains its sdist. The six requested runtime library pins and four editables imported successfully.",
+    "pyside_not_imported": true
+  },
+  "fixture_preflight": {
+    "manifest_freeze_sha256": "350f50a1c54119aea854ce759f819f2e69f9783871b62a0a8b0c3bbbeb12bf47",
+    "files_match": "20/20",
+    "aggregate_match": true,
+    "python_ast_parse": true,
+    "json_files_valid": "6/6",
+    "whitebox_reflection_static_constraints": true,
+    "unlisted_file": "Projects/JEEditorFixture/user/cmake/engine/CMakePresets.json",
+    "editor_assetprocessor_runtime_not_run": true
+  }
+}

@@ -1,0 +1,672 @@
+[
+  {
+    "path": "archive-get.json",
+    "bytes": 1580,
+    "sha256": "B3C48B1BA655AB9A46D49F50EF2D26E69C8CFFF1957133A6BCD4193F7803100B"
+  },
+  {
+    "path": "archive-head.json",
+    "bytes": 1199,
+    "sha256": "336D78EED9490682FFB4913355A78F4A5572B1F8D1E9F98A1731C1AA1405EF55"
+  },
+  {
+    "path": "audit_archive.py",
+    "bytes": 3381,
+    "sha256": "B59E6E06875BD063C4A7BE0EB6A6F92BDA562B6E7B508AF3820BA280204F4C30"
+  },
+  {
+    "path": "cmake-closure-audit.json",
+    "bytes": 3283,
+    "sha256": "FDD97A5B9F000D396032278B074DEE252A033E13CBCA3227016631CEBD6FB999"
+  },
+  {
+    "path": "current-source-manifest.json",
+    "bytes": 1227,
+    "sha256": "CFC284E8F5487A3B0DE2890AD13C169819A8F3C33FAD22DDEDF459D3AAE0A9BC"
+  },
+  {
+    "path": "exact-artifact-search-get.json",
+    "bytes": 441,
+    "sha256": "32EC999ECFFB475A121CBF5CC07123893068BBB263170453D727AC83FE0652E0"
+  },
+  {
+    "path": "exact-artifact-search-head.json",
+    "bytes": 356,
+    "sha256": "7CDF28163C657C5D8F26083705AD0562FFFCAF182B223EEB5B8D624AA2ACC381"
+  },
+  {
+    "path": "exact-artifact-search.json",
+    "bytes": 32,
+    "sha256": "244563F989470892C537C9A4622920AF0D228EE4528F7D00C64A06D6CD95856C"
+  },
+  {
+    "path": "extract_source.py",
+    "bytes": 2935,
+    "sha256": "D66C54171042FDB5CFB78E93A9699DE1BBDFDA8001322606409111A6D158512E"
+  },
+  {
+    "path": "finish_audit.py",
+    "bytes": 4444,
+    "sha256": "06355CC4AD29D47DACE9E91700444D660A152D38D81C70C76201F51175FBC195"
+  },
+  {
+    "path": "inspected-text/build/cmake/CMakeLists.txt",
+    "bytes": 3903,
+    "sha256": "EC60E1204FC4A40800F398E500480E38D8CCB1BFCDC59DE112D82D6BBCC51105"
+  },
+  {
+    "path": "inspected-text/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake",
+    "bytes": 2911,
+    "sha256": "49C47BD80DD5BFB808E344D135D447E9A89B4BBDFFF80B8A5D6A3043E731A64B"
+  },
+  {
+    "path": "inspected-text/build/cmake/CMakeModules/GetZstdLibraryVersion.cmake",
+    "bytes": 452,
+    "sha256": "E66FE98E26913D0F7C06E816FA5149EC7B9DF81A50B97CAAD432191F09D7854D"
+  },
+  {
+    "path": "inspected-text/build/cmake/contrib/CMakeLists.txt",
+    "bytes": 510,
+    "sha256": "FDF267765B63F92BCB8E89314C5D3E5D3EC0764B04BEBD82499914AF3566B75C"
+  },
+  {
+    "path": "inspected-text/build/cmake/contrib/gen_html/CMakeLists.txt",
+    "bytes": 1413,
+    "sha256": "082D19FCAA4103A813722BB519D4FD1AE058F4F18423D27F2241BF1FE624FD81"
+  },
+  {
+    "path": "inspected-text/build/cmake/contrib/pzstd/CMakeLists.txt",
+    "bytes": 1375,
+    "sha256": "AB334B52BC4CDEFE5C0FEE2E7053D7CB35C9854C4DA089F0F16B09C388E2BB79"
+  },
+  {
+    "path": "inspected-text/build/cmake/lib/cmake_uninstall.cmake.in",
+    "bytes": 1005,
+    "sha256": "2704E6F52EBD5480C7362ADFF5FCAB321BE1ED1E4A19CD89916A47E4A6BCE770"
+  },
+  {
+    "path": "inspected-text/build/cmake/lib/CMakeLists.txt",
+    "bytes": 7738,
+    "sha256": "8B80D6C4223F14AE66BA3F7F46B0E031C23ADFF94103A3785790E0A40F799316"
+  },
+  {
+    "path": "inspected-text/build/cmake/lib/pkgconfig.cmake",
+    "bytes": 39,
+    "sha256": "CF46B9EA397C602E7FDE9B5E3A4A7A2478149C0C34C8E6BD00C499155EAF4AE8"
+  },
+  {
+    "path": "inspected-text/build/cmake/programs/CMakeLists.txt",
+    "bytes": 4436,
+    "sha256": "88A3188300874838A00628C8AAD6D496F9D00A810E34AE70E8D78412669BD392"
+  },
+  {
+    "path": "inspected-text/build/cmake/tests/CMakeLists.txt",
+    "bytes": 2558,
+    "sha256": "D4E264225E390AFA84D8A06EF314ACC4A8684DC172138C43AF5154B364A95A80"
+  },
+  {
+    "path": "inspected-text/build/README.md",
+    "bytes": 3142,
+    "sha256": "B2F99D989FF960B09B5845463CFD4A111840CAC906C2672F7452129EC116BB3F"
+  },
+  {
+    "path": "inspected-text/build/VS_scripts/README.md",
+    "bytes": 2136,
+    "sha256": "5233F818EAAB8CBFDE8946FFD3D47DA595D49439FD82F4C961BEBEEA0FBAF12F"
+  },
+  {
+    "path": "inspected-text/contrib/adaptive-compression/Makefile",
+    "bytes": 2334,
+    "sha256": "16FBAEA057A10E3783BD96460D01E638206229945E2F006D875D4F68B35CDA9F"
+  },
+  {
+    "path": "inspected-text/contrib/adaptive-compression/README.md",
+    "bytes": 4977,
+    "sha256": "D0AB0F09BCA44CDA95C2BFE4AD32018958D4E5EFA17D13357309D05130CF66C1"
+  },
+  {
+    "path": "inspected-text/contrib/docker/README.md",
+    "bytes": 368,
+    "sha256": "160950D155D9D3D1E6C9ADB0A464E68878DF3BBCD34F62C68471F08A5B0E8A8F"
+  },
+  {
+    "path": "inspected-text/contrib/gen_html/Makefile",
+    "bytes": 1611,
+    "sha256": "ABA62183CB78A12E6ACE825A3522C540724DF02A5902D0FA4CD92FB0BEDAC6F4"
+  },
+  {
+    "path": "inspected-text/contrib/gen_html/README.md",
+    "bytes": 1120,
+    "sha256": "C1188127206B5C255E74CA76739F35B24C3A02A6BC95C6480947C0EC7AC24CF5"
+  },
+  {
+    "path": "inspected-text/contrib/linux-kernel/COPYING",
+    "bytes": 18091,
+    "sha256": "F9C375A1BE4A41F7B70301DD83C91CB89E41567478859B77EEF375A52D782505"
+  },
+  {
+    "path": "inspected-text/contrib/linux-kernel/lib/zstd/Makefile",
+    "bytes": 683,
+    "sha256": "AAB9F148C951E8CCD356D9C44A089AE650159CE42C3A46D5FEB3073C03272FF8"
+  },
+  {
+    "path": "inspected-text/contrib/linux-kernel/README.md",
+    "bytes": 5265,
+    "sha256": "75B98070FB03A0A72DAEB2E9800B192698DE118F024046C902F099D598811728"
+  },
+  {
+    "path": "inspected-text/contrib/linux-kernel/test/Makefile",
+    "bytes": 1567,
+    "sha256": "EFD54D9051A2203CD7EBFD365B729A280DDF988F0D31572CAF874669BD4D6293"
+  },
+  {
+    "path": "inspected-text/contrib/pzstd/Makefile",
+    "bytes": 7740,
+    "sha256": "7C2DB7EDBAB8C7BBF267C8DCC537FF4B64EC838655612330598746CA808B99DB"
+  },
+  {
+    "path": "inspected-text/contrib/pzstd/README.md",
+    "bytes": 2921,
+    "sha256": "1A79E3EDE5E6AA6BBC7182A6DA9D190534D2F71FC234E7FBA9210D6B475740F0"
+  },
+  {
+    "path": "inspected-text/contrib/seekable_format/examples/Makefile",
+    "bytes": 1559,
+    "sha256": "66A4AA6199F696E81EEA6804C48057DAE3F8B61A601075F9DCDB867F5DD28C48"
+  },
+  {
+    "path": "inspected-text/contrib/VS2005/README.md",
+    "bytes": 154,
+    "sha256": "2E6C807A8C0CDC3FA13705E035419B329DBE2101E7C3324AF13625FAF06A0DD8"
+  },
+  {
+    "path": "inspected-text/COPYING",
+    "bytes": 18091,
+    "sha256": "F9C375A1BE4A41F7B70301DD83C91CB89E41567478859B77EEF375A52D782505"
+  },
+  {
+    "path": "inspected-text/doc/educational_decoder/Makefile",
+    "bytes": 1122,
+    "sha256": "AF6E7F28015B29D0A7E19EC0BF3C63E3C919052B3B0BC5C601D0AC68FD3E6FD1"
+  },
+  {
+    "path": "inspected-text/doc/educational_decoder/README.md",
+    "bytes": 1384,
+    "sha256": "7C3B0CC1E2487E1B8325FF35700E05159E240CF3B947FD641FA29F81BB552683"
+  },
+  {
+    "path": "inspected-text/doc/README.md",
+    "bytes": 1335,
+    "sha256": "72B7C953081FC2042A7BA79B730CFA002E9972C9A4D1623B44B7959561C3A2B9"
+  },
+  {
+    "path": "inspected-text/examples/Makefile",
+    "bytes": 2997,
+    "sha256": "3A2A8546CB8FE32AFE0C0A8316FDC533E52782FB82A8009476984AB4B17E39D4"
+  },
+  {
+    "path": "inspected-text/examples/README.md",
+    "bytes": 1573,
+    "sha256": "450B3E204513906A6F2AA3B9C091DC8F08AED6437311EF1DDEF04D2CB9E5F8EE"
+  },
+  {
+    "path": "inspected-text/lib/dll/example/Makefile",
+    "bytes": 1410,
+    "sha256": "82419340124BEC2FF799544429B2E1642B0844B56E329560775667DBF4A2F0F3"
+  },
+  {
+    "path": "inspected-text/lib/dll/example/README.md",
+    "bytes": 3088,
+    "sha256": "C453DAC3509E9AE0EE36780923C4D412B5AEFB5026CF6DBAECF7E74EB81888EA"
+  },
+  {
+    "path": "inspected-text/lib/Makefile",
+    "bytes": 8056,
+    "sha256": "E1E29467BE78DAF0D593D60C91DC5D1653065BACA35CFF79362AEB2DE4BBF3C4"
+  },
+  {
+    "path": "inspected-text/lib/README.md",
+    "bytes": 5780,
+    "sha256": "90B581A9B92C1F767F3A76D47B7199F5995E90916B9EE33775BCEBB498CA10ED"
+  },
+  {
+    "path": "inspected-text/LICENSE",
+    "bytes": 1530,
+    "sha256": "2C1A7FA704DF8F3A606F6FC010B8B5AAEBF403F3AEEC339A12048F1BA7331A0B"
+  },
+  {
+    "path": "inspected-text/Makefile",
+    "bytes": 11186,
+    "sha256": "0840ABD51B6F7D2A2F9A800BF66FEBE7918BF9F4EAAFB3FA093681237785AAEB"
+  },
+  {
+    "path": "inspected-text/programs/Makefile",
+    "bytes": 10950,
+    "sha256": "7D8B7E5FCFD3ED22B69856DC0A9054FEC849E9C2295E5584B764D6E717605F40"
+  },
+  {
+    "path": "inspected-text/programs/README.md",
+    "bytes": 12674,
+    "sha256": "B88F9F0CC5FA3D5EBDCEDAFD05F86EE395A3FAFB7FD30913C983D4FF10BCD01F"
+  },
+  {
+    "path": "inspected-text/README.md",
+    "bytes": 7648,
+    "sha256": "1023801A6A08F601DB06C248BE946F78CB432D1468FF1ABD03613527416DED62"
+  },
+  {
+    "path": "inspected-text/tests/fuzz/Makefile",
+    "bytes": 4096,
+    "sha256": "721FFA167A84E24E8B46330EB74D22F9A3A178583D6A4572FD7D5C0F2855225A"
+  },
+  {
+    "path": "inspected-text/tests/fuzz/README.md",
+    "bytes": 2958,
+    "sha256": "0A274C652A18299F4E2CE1AAD0F363B59220AD25CAEFF09115582BDB22351064"
+  },
+  {
+    "path": "inspected-text/tests/gzip/Makefile",
+    "bytes": 1527,
+    "sha256": "0F3E9EA94EA578004AEDC6DE2EBBA3374D6EA91572B49BD2096424CDB51245EF"
+  },
+  {
+    "path": "inspected-text/tests/Makefile",
+    "bytes": 15941,
+    "sha256": "F812257AB9643B5270D6510E6CD78C36B25147701884CF1B27B6DCB9CEA43507"
+  },
+  {
+    "path": "inspected-text/tests/README.md",
+    "bytes": 4377,
+    "sha256": "A42D3AE7A3C3F38D1D3F627603A2F4903BF4C6DCE888DDF26ECB13D42FB4C1B6"
+  },
+  {
+    "path": "inspected-text/zlibWrapper/Makefile",
+    "bytes": 4252,
+    "sha256": "44603AF4B98EC335F5EFEE98A93C44A79B7C5341D960D5246A7AF0AA8F64957D"
+  },
+  {
+    "path": "inspected-text/zlibWrapper/README.md",
+    "bytes": 7890,
+    "sha256": "1B5BA87AEE2E25BED1A449E4A78424C2B42BB4229ED331960AFF42575626E13E"
+  },
+  {
+    "path": "library-legal-notices.json",
+    "bytes": 56835,
+    "sha256": "C6AA6FDB7321668FA804FBC65327CA51367809E8C6ED5953AC938B4811C9BA91"
+  },
+  {
+    "path": "primary-mismatch-vcproj-blob-get.json",
+    "bytes": 1972,
+    "sha256": "B2E992315AA896414C7AC8F866F7868AAC29DF509142C31E09408315FF17DC2B"
+  },
+  {
+    "path": "primary-mismatch-vcproj-blob-head.json",
+    "bytes": 1855,
+    "sha256": "CA16FE54867A860DFE99B3E831E7A38A1C3B63706DBE90D0B4666E2320F388E1"
+  },
+  {
+    "path": "primary-mismatch-vcproj-blob.txt",
+    "bytes": 14643,
+    "sha256": "2CF0DA0F2C665ABB9402968404270B12515218143043BCA24D75FE549F1428AB"
+  },
+  {
+    "path": "ReadAuditedMetadata.ps1",
+    "bytes": 1845,
+    "sha256": "20C2B2CE99DED06F2BDF3BA9A607B44581BFA93BC0348C6252D757AB10117D42"
+  },
+  {
+    "path": "recipe-build-config-get.json",
+    "bytes": 1686,
+    "sha256": "D641D802406E2E45B558B36DF288DA2C7A10A52DAC86276A083D26ED8D13A1B6"
+  },
+  {
+    "path": "recipe-build-config-head.json",
+    "bytes": 1604,
+    "sha256": "90053B99F1E5CFC728C1582A2CC18F59C44CDA52A3C89B19A50A8B959D95359D"
+  },
+  {
+    "path": "recipe-build-config.txt",
+    "bytes": 693,
+    "sha256": "AEA8D4DCE451565AB30AAAFB7A1EF25392EFC98C2110F4CA768E54D5F2ACCE96"
+  },
+  {
+    "path": "recipe-build-mac-get.json",
+    "bytes": 1686,
+    "sha256": "18E59CAC6C6B6B1DD89B4DF56F83057F484A6BA95589829E85399346AB8D2FAE"
+  },
+  {
+    "path": "recipe-build-mac-head.json",
+    "bytes": 1604,
+    "sha256": "CB9838617C67EB9F3C937CD6E81A5B2DDD0D4C3313FB5A3CC9F0B8F153B275A4"
+  },
+  {
+    "path": "recipe-build-mac.txt",
+    "bytes": 751,
+    "sha256": "6CFDCBD2959A01363971873C2BA3DC19FA1C7303709F942C66FECAA78A0F0531"
+  },
+  {
+    "path": "recipe-find-zstd-mac-get.json",
+    "bytes": 1688,
+    "sha256": "A4F89FCBDABDC59A77A4AE17F77BDC9360D212B74E487842AB8059FA33CB35AF"
+  },
+  {
+    "path": "recipe-find-zstd-mac-head.json",
+    "bytes": 1606,
+    "sha256": "1261DB2B57B4F3A83C30FA211FAE4F8DA38FB8E8027821300D30BEF3E46EC519"
+  },
+  {
+    "path": "recipe-find-zstd-mac.txt",
+    "bytes": 819,
+    "sha256": "4DD28E3843660965549D53BC4E689691051E1CD0A8FC61AA9B419CDB921909F2"
+  },
+  {
+    "path": "recipe-history-get.json",
+    "bytes": 2062,
+    "sha256": "58C6C61E413D688E9A963E4C008B39AADCFDFDD60A986DA80DA642CE216AED66"
+  },
+  {
+    "path": "recipe-history-head.json",
+    "bytes": 1977,
+    "sha256": "411D2679550DE470DD0CC2C596C95BA62C1BB5C6827335ABA8E210678780C6DB"
+  },
+  {
+    "path": "recipe-history.txt",
+    "bytes": 5291,
+    "sha256": "A8FA9BF00D1D90650930711E7B1523769CD2E8386A273027CAE0EFC2D5288EF2"
+  },
+  {
+    "path": "recipe-install-mac-get.json",
+    "bytes": 1690,
+    "sha256": "A9250850B12E43F45D7DD2F448B860423B836C94F2AAE38DF128D8816C233164"
+  },
+  {
+    "path": "recipe-install-mac-head.json",
+    "bytes": 1608,
+    "sha256": "DD8ED3A86763CAEE938C091C42582EDDAF9D1480D11A87522550D811B26A4F91"
+  },
+  {
+    "path": "recipe-install-mac.txt",
+    "bytes": 423,
+    "sha256": "223B5E57186AB4CC4B6D04A3AE00BEE82CC5D5EED05D068315B46513B339CEA5"
+  },
+  {
+    "path": "recipe-tree-get.json",
+    "bytes": 447,
+    "sha256": "6240612223D716C5F55F8D6A9EAB1764297E3330C1D48483E1C9B16A9A50687E"
+  },
+  {
+    "path": "recipe-tree-head.json",
+    "bytes": 362,
+    "sha256": "8AA19254AA813EB9560223790B3796AE7990902C439751CBC6C2393F5F0C8E37"
+  },
+  {
+    "path": "recipe-tree.json",
+    "bytes": 171528,
+    "sha256": "1D2B69295AFE769EBE42C4AA4EA150C3F789F0AA1B25D546CB1D20C24B61D4B4"
+  },
+  {
+    "path": "source-extraction.json",
+    "bytes": 501,
+    "sha256": "3DB6580BE743EFBEF05CF2BFCF5EC21EF278019A9C017AA8ADEC2E92B19C7EB5"
+  },
+  {
+    "path": "source-git-blob-manifest.json",
+    "bytes": 175793,
+    "sha256": "EB11932EBAD8DFF3F9096527900B885EE7382C4A5DDBFA6B139E293485A224E4"
+  },
+  {
+    "path": "source-identity-audit.json",
+    "bytes": 2228,
+    "sha256": "EED0158FFAABDD4C8C4CCC9E50AA8C094CDEA58CCC366B1D3225054CA1E9D593"
+  },
+  {
+    "path": "source-manifest.json",
+    "bytes": 62147,
+    "sha256": "7E1466A66F0C60626B70ECA3DAFB5E765098073139F2715397D3FF0BFC25B54B"
+  },
+  {
+    "path": "tar-audit.json",
+    "bytes": 12123,
+    "sha256": "CD62CF3EBDE3640B7D8CC6EE0FD38FE31FB2B3A1A05E88087346939DFDC779DE"
+  },
+  {
+    "path": "tar-members.json",
+    "bytes": 128822,
+    "sha256": "954B83811AD8CE93F5570C079395BA4B361550DC77099F4215C53ABB68BA614A"
+  },
+  {
+    "path": "upstream-cmake-lib-get.json",
+    "bytes": 1654,
+    "sha256": "C9FF23AE2C4595883FED282065C1C243BF3DB830C7BE15E182414099D8B39663"
+  },
+  {
+    "path": "upstream-cmake-lib-head.json",
+    "bytes": 1572,
+    "sha256": "0C4ACACBCF71A34987A13CD6E565865C827286846A6756A36628B7EE7886537B"
+  },
+  {
+    "path": "upstream-cmake-lib.txt",
+    "bytes": 7738,
+    "sha256": "8B80D6C4223F14AE66BA3F7F46B0E031C23ADFF94103A3785790E0A40F799316"
+  },
+  {
+    "path": "upstream-cmake-root-get.json",
+    "bytes": 1647,
+    "sha256": "49E3AF5A233C15D2053BB25C3A849455B4C2F4C0909CA9FB4DBD0B7D00FCC055"
+  },
+  {
+    "path": "upstream-cmake-root-head.json",
+    "bytes": 1565,
+    "sha256": "C14EEA19F4E1326A7D44996080A2B7C51D82BB97EE6FC8014778518C7990F965"
+  },
+  {
+    "path": "upstream-cmake-root.txt",
+    "bytes": 3903,
+    "sha256": "EC60E1204FC4A40800F398E500480E38D8CCB1BFCDC59DE112D82D6BBCC51105"
+  },
+  {
+    "path": "upstream-compile-flags-get.json",
+    "bytes": 1702,
+    "sha256": "F3F7492AE98FF68DC25AB0B8BDBC02C7F9BD0497EE1194793F9F7BE2414B1A89"
+  },
+  {
+    "path": "upstream-compile-flags-head.json",
+    "bytes": 1620,
+    "sha256": "23474C12561B2D37E25CA70E7282F107AE41720E6E068F58E637B5C5CFF9129E"
+  },
+  {
+    "path": "upstream-compile-flags.txt",
+    "bytes": 2911,
+    "sha256": "49C47BD80DD5BFB808E344D135D447E9A89B4BBDFFF80B8A5D6A3043E731A64B"
+  },
+  {
+    "path": "upstream-copying-get.json",
+    "bytes": 1605,
+    "sha256": "18865352017C79669BC7B03E861935C91798E0A92DD5AD0DFF31F057E808016B"
+  },
+  {
+    "path": "upstream-copying-head.json",
+    "bytes": 1523,
+    "sha256": "3BF887C9D040A41607C4B79B1AAA143426056ACE55AFBF0CD826C5EE0FCF37DF"
+  },
+  {
+    "path": "upstream-copying.txt",
+    "bytes": 18091,
+    "sha256": "F9C375A1BE4A41F7B70301DD83C91CB89E41567478859B77EEF375A52D782505"
+  },
+  {
+    "path": "upstream-divsufsort-get.json",
+    "bytes": 1652,
+    "sha256": "3214991C186CA4CA3D3448B2F40918BAB3853C7503D04DA9FFD55CA2C00C3F27"
+  },
+  {
+    "path": "upstream-divsufsort-head.json",
+    "bytes": 1570,
+    "sha256": "8E8A5B3A46A8B097FFA8AE705A8FE1912BB13BF84E1DEEBB96C5135351399EA3"
+  },
+  {
+    "path": "upstream-divsufsort.txt",
+    "bytes": 54592,
+    "sha256": "C6AAB9652B409968BAF5B063419D666467965C46A469F6B163B5B2D74DF99DA5"
+  },
+  {
+    "path": "upstream-get-version-get.json",
+    "bytes": 1698,
+    "sha256": "FFB6FB127E6D5BDFB0F72A358AAD37EBBD49342EE26BD73918BAEB4BA055A551"
+  },
+  {
+    "path": "upstream-get-version-head.json",
+    "bytes": 1616,
+    "sha256": "D2CA43BCA71AB100C430A61F6639F18C323DFD8777182072545BACB71AA05CB3"
+  },
+  {
+    "path": "upstream-get-version.txt",
+    "bytes": 452,
+    "sha256": "E66FE98E26913D0F7C06E816FA5149EC7B9DF81A50B97CAAD432191F09D7854D"
+  },
+  {
+    "path": "upstream-lib-makefile-get.json",
+    "bytes": 1618,
+    "sha256": "EFB15E381DD784811FEA192DE3140895CF1D12EEA76B97879A6586C03CCE0CBD"
+  },
+  {
+    "path": "upstream-lib-makefile-head.json",
+    "bytes": 1536,
+    "sha256": "AC0D517C6B2824D9FD24AB63E14A0B3CAF11E721AACF3D48B374EEC04910DFA3"
+  },
+  {
+    "path": "upstream-lib-makefile.txt",
+    "bytes": 8056,
+    "sha256": "E1E29467BE78DAF0D593D60C91DC5D1653065BACA35CFF79362AEB2DE4BBF3C4"
+  },
+  {
+    "path": "upstream-license-get.json",
+    "bytes": 1609,
+    "sha256": "126648BA1C5FECE20FA9FD5CCF9270EAC04F7C820FC93917CBA0AD55B168AB87"
+  },
+  {
+    "path": "upstream-license-head.json",
+    "bytes": 1527,
+    "sha256": "0E0A49D1FCCE857ADD7C355AEC79F878FEA01E51CC813D4918DE8CC1D6F09FED"
+  },
+  {
+    "path": "upstream-license.txt",
+    "bytes": 1530,
+    "sha256": "2C1A7FA704DF8F3A606F6FC010B8B5AAEBF403F3AEEC339A12048F1BA7331A0B"
+  },
+  {
+    "path": "upstream-pkgconfig-get.json",
+    "bytes": 1654,
+    "sha256": "F01D0D64BE83381910A0FC169AC1E6430C176B80AF4E343706862A0AC863F336"
+  },
+  {
+    "path": "upstream-pkgconfig-head.json",
+    "bytes": 1572,
+    "sha256": "7274396DF44C98D170F1E8779EFAD6D1E6F72B1EB376D2F5CA81CF1485EEF27D"
+  },
+  {
+    "path": "upstream-pkgconfig.txt",
+    "bytes": 39,
+    "sha256": "CF46B9EA397C602E7FDE9B5E3A4A7A2478149C0C34C8E6BD00C499155EAF4AE8"
+  },
+  {
+    "path": "upstream-public-header-get.json",
+    "bytes": 1615,
+    "sha256": "157A5669DF520FBB6DBC1E5FA7F1C5E3BC36B1C96B43B4DF63DF0A50DC580CDA"
+  },
+  {
+    "path": "upstream-public-header-head.json",
+    "bytes": 1533,
+    "sha256": "6CA2F64AC1F5CF61ABD3FA905A29B63EC60A132FAC9F893D8293FEFF0A7308B6"
+  },
+  {
+    "path": "upstream-public-header.txt",
+    "bytes": 90830,
+    "sha256": "1DD70D1BCD6BA3F3BB1DEAC73F15D4460FA61032966C1263D84666AEC07F6738"
+  },
+  {
+    "path": "upstream-release-get.json",
+    "bytes": 1961,
+    "sha256": "9E7E38EA151212CD6D66D496EB9FFDE96CBDFF7622979A300044D597E7588E0A"
+  },
+  {
+    "path": "upstream-release-head.json",
+    "bytes": 1876,
+    "sha256": "0A981622FEEAF68B2F46A94CB021C6B8A279D86144262C16C62A60E7E1EBE0C0"
+  },
+  {
+    "path": "upstream-release.txt",
+    "bytes": 11230,
+    "sha256": "BCB0E8383C3083F15ABFE3D692DC64A40C1C80FB5441EC267E1EAE32C82A7445"
+  },
+  {
+    "path": "upstream-tag-ref-get.json",
+    "bytes": 1987,
+    "sha256": "8BA3F8CF614D50E9D67EC5ED432383114BD96F8520832564F662FDB9BB63AE34"
+  },
+  {
+    "path": "upstream-tag-ref-head.json",
+    "bytes": 1902,
+    "sha256": "83A329722033CE399AA33C0AE9051234748D22B1AC6991C0AA1FC0304D7CCF6E"
+  },
+  {
+    "path": "upstream-tag-ref.txt",
+    "bytes": 335,
+    "sha256": "7B8A2BB2A4A0D9C39C18AFE5C6C899F2B729A6AF53E7B5A3806D08537C99B2D3"
+  },
+  {
+    "path": "upstream-tree-get.json",
+    "bytes": 2052,
+    "sha256": "DB2FE4F9EFCE535A10114511E22458888ED7B98C809606FA34B684506CF689BB"
+  },
+  {
+    "path": "upstream-tree-head.json",
+    "bytes": 1934,
+    "sha256": "8E78239FE1D790D100CCE0162549D9388ABA3B702C9B974C926758F22422B3B0"
+  },
+  {
+    "path": "upstream-tree.txt",
+    "bytes": 107361,
+    "sha256": "F2BAA0D44160D75031A7F9756F5EE0F5CEEDD0069B5BBFF8067B6748C0951D97"
+  },
+  {
+    "path": "upstream-uninstall-get.json",
+    "bytes": 1675,
+    "sha256": "0A4B9B99A0284746962F5B1B7914480AF9CD6576855343CBADF64E1C53EEB6E9"
+  },
+  {
+    "path": "upstream-uninstall-head.json",
+    "bytes": 1593,
+    "sha256": "4FDE0E842764100B7EDDF1DAC8A56F96B060CDBD768E5ED05C412A3923C45662"
+  },
+  {
+    "path": "upstream-uninstall.txt",
+    "bytes": 1005,
+    "sha256": "2704E6F52EBD5480C7362ADFF5FCAB321BE1ED1E4A19CD89916A47E4A6BCE770"
+  },
+  {
+    "path": "upstream-xxhash-get.json",
+    "bytes": 1634,
+    "sha256": "E29927C485AF0D67A01A0434165A93E52C30E05F20E985911B79EF33086E86DE"
+  },
+  {
+    "path": "upstream-xxhash-head.json",
+    "bytes": 1552,
+    "sha256": "0E653E3F9F6540996110A80BBEE389A50386138E572246610D01AF8A0F96CAB0"
+  },
+  {
+    "path": "upstream-xxhash.txt",
+    "bytes": 28905,
+    "sha256": "0FCC6C9DB86D368F7984E4FA49771F9F3D483CCC9F4B58796C40498747FFD182"
+  },
+  {
+    "path": "zstd-acquisition-summary.json",
+    "bytes": 6072,
+    "sha256": "F154858901326B95C99DB54137FDADDB38B877C0219B2FBC04D939EB9057AFF4"
+  },
+  {
+    "path": "zstd-current-summary.json",
+    "bytes": 4994,
+    "sha256": "35DE2B0C8DE03FA00787BDBE8DFC163B050DA4553073D0B669D85BB55975AAA6"
+  }
+]

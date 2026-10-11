@@ -1,0 +1,6 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:28 (message):
+  JE local OpenSSL: output must be new; existing outputs are preserved
+
+

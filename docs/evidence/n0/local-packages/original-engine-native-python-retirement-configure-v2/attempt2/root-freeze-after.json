@@ -1,0 +1,2364 @@
+{
+  "name": "root-freeze-after",
+  "fileCount": 393,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\AssetImporter\\group_icon.png",
+      "exists": true,
+      "bytes": 1424,
+      "sha256": "ac5e1daab3c6bdc0d27b19f71cb4fd18c3b3f22727b20b7e1217db55ecc85f68"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\AssetImporter\\mesh_on.png",
+      "exists": true,
+      "bytes": 771,
+      "sha256": "a68df4eb2d979d209bdd5bc77c9c8fa9a026ccdde4c6e11d39e133375ffbc31d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\Browse_on.png",
+      "exists": true,
+      "bytes": 1014,
+      "sha256": "935193affffd5459e91e363ae40d02c3af1be4f9ee2df1a518633e56237fcfa8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\error_icon.png",
+      "exists": true,
+      "bytes": 1189,
+      "sha256": "41307cc4f2c5ac0c77cbe2eb15b488a5d52f6c05d850f8dd8d0540ad66e3a925"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\remove.png",
+      "exists": true,
+      "bytes": 304,
+      "sha256": "14ba2d4499ea84b7ecf58d72edc45c17496b72827ac4c1ee13f95bfcfdd28031"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\reset_icon.png",
+      "exists": true,
+      "bytes": 1292,
+      "sha256": "0362da38d3804e2911130d138be4fd73040d66c8ac7d1b5f9f60c70037e8ca93"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\console.font",
+      "exists": true,
+      "bytes": 324,
+      "sha256": "194b91b37a70faa04b1770c79b1b3d0086d07c1d3631b06c1c58b806a2059878"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\default-ui.font",
+      "exists": true,
+      "bytes": 260,
+      "sha256": "9667e19a1a4ce309c8c7cbac63ef351efe7a453f1d13a022eed2f8a74932b2d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\default.font",
+      "exists": true,
+      "bytes": 260,
+      "sha256": "58d365d46a496a71e5df56969a716ddb40e0784743ef3b6c5f5914852be82cda"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\hud.font",
+      "exists": true,
+      "bytes": 347,
+      "sha256": "c65599e80a7094af11e16b2d5716a0c50c507cf84139ddbbd1c1bc3be3b2ddcf"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\Vera.ttf",
+      "exists": true,
+      "bytes": 65932,
+      "sha256": "c4c45690b345435b2cba52ecabe275f05e49b389b39fe68ad03afbb551288d3d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\VeraMono.ttf",
+      "exists": true,
+      "bytes": 49224,
+      "sha256": "da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\Gem\\PythonTests\\EditorPythonTestTools\\setup.py",
+      "exists": true,
+      "bytes": 1137,
+      "sha256": "ce710d28a0d3f09d0fb548ccd34af91d9c59dc41f43a5c392efe94edeb211dbd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\FindGoogleBenchmark.cmake",
+      "exists": true,
+      "bytes": 5068,
+      "sha256": "1d8b7db0a56b9c3d1105d9ce008c21259a2dc2be589db9d5602ab9dee7ec5792"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "exists": true,
+      "bytes": 6786,
+      "sha256": "baeb36c55d8b6429e6772dc141490ac6a8ca47c8dc24d355f01399619e70c7ed"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\Python_windows.cmake",
+      "exists": true,
+      "bytes": 1076,
+      "sha256": "83276e3095041a2e9b192e72c5c9bc78e97206e88952dd0288824c55ea19d88c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdPartyPackages.cmake",
+      "exists": true,
+      "bytes": 50533,
+      "sha256": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\CalculateEnginePathId.cmake",
+      "exists": true,
+      "bytes": 1457,
+      "sha256": "fb6ed16ea11d0215fd1d5b114a0ae4733b701cc84a6572f6b9e7c1cfe867604d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Gems.cmake",
+      "exists": true,
+      "bytes": 34560,
+      "sha256": "754f48f598125a89f68c5240047582d614418844eb0d2e4cfe6e6679d3730210"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPython.cmake",
+      "exists": true,
+      "bytes": 19974,
+      "sha256": "c2d2e3b228bc6e695fff953ee3c6d453ddb8865c7575de7f861a9fe1239e3705"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Projects.cmake",
+      "exists": true,
+      "bytes": 16122,
+      "sha256": "49120b2899b8342e25d5f520bb79fe93f8ee0840b8a4485cd90386466a12a594"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+      "exists": true,
+      "bytes": 7461,
+      "sha256": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\ApplyLuaPatch.cmake",
+      "exists": true,
+      "bytes": 4667,
+      "sha256": "955649ed47e9552b0eff653ef4d3b57e00b1091eb275717c746e0fa77c920e5f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\BuildLuaPackage.cmake",
+      "exists": true,
+      "bytes": 5766,
+      "sha256": "a6d6222e8669cb52940585989036530f55f17515a484e6466dfc20f3e04660e7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 1794,
+      "sha256": "c13be918eb6e18e73e22e02a461ae1ca440b346ee864c14e840915a037eafa53"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\FindLua.cmake",
+      "exists": true,
+      "bytes": 1891,
+      "sha256": "4a215fbebea22156cb3fa55a614ecb42372c1a674d318f658904fdf85991415f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\LICENSE.txt",
+      "exists": true,
+      "bytes": 1066,
+      "sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\lua_5.4.4_o3de.patch",
+      "exists": true,
+      "bytes": 1958,
+      "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\NOTICE.txt",
+      "exists": true,
+      "bytes": 948,
+      "sha256": "b8d27bb3a6299896fc176242a83e156a3ac5f5b2f257717504a04e2864de8e11"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\tests\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2194,
+      "sha256": "f9e500f8f93d64dff908c5087c8c74fbdcff0424cccd3991dfa582c7e2ca4404"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\tests\\LuaConsumer.cpp",
+      "exists": true,
+      "bytes": 7049,
+      "sha256": "a4c224b064a6822a66f4158aa3b4c7a7796b1e7d3f98e7468f5c46060ce25cb8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake",
+      "exists": true,
+      "bytes": 5650,
+      "sha256": "db82743777ee43d90940574cf980a87776294b9ce084eae22d1830d4223396e8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2928,
+      "sha256": "db527d34a3732c073a64363c342ce9ccb86ee3c09614100f718ca37b4321cda4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\Findlz4.cmake",
+      "exists": true,
+      "bytes": 2889,
+      "sha256": "79e2da1b8fd42444a53f53b299091549d08efd9866ca1cf47a7e49d5a364dc45"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\NOTICE.txt",
+      "exists": true,
+      "bytes": 2316,
+      "sha256": "53d419f549fe2e3e4809705d85ab621f908f5207fbdfaf6fda17190e540dcca5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\README.md",
+      "exists": true,
+      "bytes": 2586,
+      "sha256": "bc2752b0757f573c04652c05badbc46d75f0f3e67773fdc0832f0deac40fb581"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2048,
+      "sha256": "6fa4629737f5017bcd363edecae552afb53e0d9b4caacfe3e6e3b069a2929cf9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\Lz4Consumer.cpp",
+      "exists": true,
+      "bytes": 8037,
+      "sha256": "29f471205a974b4cdfb535c0c34f0975b5ba7c6930e0fc46395c95a3f45ced73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\BuildOpenSSLPackage.cmake",
+      "exists": true,
+      "bytes": 11502,
+      "sha256": "e8a5316a6b0048f931965355d4276c89dfecf43a9faaeece091e1279279ca3a8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\FindOpenSSL.cmake",
+      "exists": true,
+      "bytes": 3567,
+      "sha256": "8bda394448d6fd8a899efc22066ac66774b2e5766291683547eba1d3202ccf58"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\NOTICE.txt",
+      "exists": true,
+      "bytes": 1528,
+      "sha256": "c70de2589513897bf64c01d786888890a00575fc991dca98989d1ae842b227c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\README.md",
+      "exists": true,
+      "bytes": 5275,
+      "sha256": "2685268e33dc29b33d0f2da01f3a25469d4d689f892c296674ae82c585024cae"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\RunOpenSSLBuild.cmd.in",
+      "exists": true,
+      "bytes": 2339,
+      "sha256": "957919a212c9df9de499c35733c1d6fb2cf3f0e240cb4e2fee07dab7a38551e4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2732,
+      "sha256": "a10ea13ff93f59e7d6346596108ee1dbad124c2e3a9173362c2f39785c66c0fa"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLConsumer.cpp",
+      "exists": true,
+      "bytes": 14238,
+      "sha256": "50aa9bc52f049b7ebb1f736523f59f63142a23d2dae9bbdd1018028859e7171e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLFirst.cpp",
+      "exists": true,
+      "bytes": 303,
+      "sha256": "f0cedb5471cae1b2164610b812ecf66d920122a1e323a9c659729fd3d8be0144"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\RunGuardTests.cmake",
+      "exists": true,
+      "bytes": 4280,
+      "sha256": "13718732af0f5c941ee8f464e2580c4989d93e102efde6883223ca070a86ed04"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\WindowsFirst.cpp",
+      "exists": true,
+      "bytes": 303,
+      "sha256": "d9a8bcfd23746ddde410373368e8f328418415a1482f4c9fb12168b01d300dd4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\VerifyPerlInput.ps1",
+      "exists": true,
+      "bytes": 2071,
+      "sha256": "d3a51fabced2b2a3c7eed33f7c1c2d7f0b730867eb58fe864345e7f8af318711"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\BuildPythonPackage.cmake",
+      "exists": true,
+      "bytes": 20272,
+      "sha256": "a0c34a5a5fdbe3f8ffbdd7a0cb73b2fc6f6f17b13d1c897d3740b80013dc31b9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\FindPython.cmake",
+      "exists": true,
+      "bytes": 363,
+      "sha256": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "exists": true,
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\NOTICE.txt",
+      "exists": true,
+      "bytes": 2071,
+      "sha256": "d119fe637a26f99b043b1c342cefe426e19c1279d0c0aee14cb8eb95b060b913"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\python-config-version.cmake",
+      "exists": true,
+      "bytes": 927,
+      "sha256": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\python-config.cmake",
+      "exists": true,
+      "bytes": 2918,
+      "sha256": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2287,
+      "sha256": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\PythonEmbed.cpp",
+      "exists": true,
+      "bytes": 2291,
+      "sha256": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\RunRuntimeTest.cmake",
+      "exists": true,
+      "bytes": 1902,
+      "sha256": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\RuntimeTest.py",
+      "exists": true,
+      "bytes": 4360,
+      "sha256": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\README.md",
+      "exists": true,
+      "bytes": 2140,
+      "sha256": "6d66fd7b1b1c683754ff7a5e049c15b8c662ee779e429ff332a113ddc8456526"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\tests\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 1010,
+      "sha256": "c3f3c416d799e11278843840f41d63c5b765b6d1adfade888af567cb94f5d9f0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\tests\\SQLiteConsumer.cpp",
+      "exists": true,
+      "bytes": 12470,
+      "sha256": "fe4875042ceb97316ae0cf3331a273caeffa943c8193a88088b31aae32b1fc98"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\VerifySQLiteSource.cmake",
+      "exists": true,
+      "bytes": 2352,
+      "sha256": "930ee4014dabeed4259a93fe8711204171f09371caf44dd0c73aa596ee20d803"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\BuildZstdPackage.cmake",
+      "exists": true,
+      "bytes": 5480,
+      "sha256": "4c19138e51ea0e15917ba250447ef544504de247e56e13c50eac515e57958bfb"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2772,
+      "sha256": "bb0ec783d064d9f8fb2efe2805b6fc4fe64915413f0fa3f49b6381f99a3b9e5e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\Findzstd.cmake",
+      "exists": true,
+      "bytes": 2468,
+      "sha256": "19f953303b4e0729ffb0e25b25b5ba3ced475961a7301c7497df275f42283d07"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\NOTICE.txt",
+      "exists": true,
+      "bytes": 1929,
+      "sha256": "1fad21a396b2042f2fabafbb7b9c21e1fe96590520a1cee44dcd36158d94518d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\README.md",
+      "exists": true,
+      "bytes": 3515,
+      "sha256": "946221c70881ce1fb1582f24c4f5a182984dca73ff088d63fadf5c46461116d2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2262,
+      "sha256": "f7ac509ec6425d5c365695d2dcf4dda4021691d48e464a40018027dd047e6323"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\ZstdConsumer.cpp",
+      "exists": true,
+      "bytes": 11351,
+      "sha256": "b2bb74d80dd4e8634e345b3c5e41996ff75bec9e8b50d79cb3ec2ca2f2ca0b73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 9700,
+      "sha256": "0463623551ded5fd210f5389503995cef633f95eeb054cf41296a7b1381e1616"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 1560,
+      "sha256": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\files.cmake",
+      "exists": true,
+      "bytes": 1232,
+      "sha256": "5becde081df1b3ccf0c2e44c065e48b5c702e14c6b83a8302a0f9b6bb56e1d0b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\LICENSE.txt",
+      "exists": true,
+      "bytes": 1117,
+      "sha256": "815e7954241acbb5a81cd72583e6a0b52bb7308c70cd06f445d70bcfe58936d4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\PackageInfo.json",
+      "exists": true,
+      "bytes": 404,
+      "sha256": "6b44c1f36e9e090876ce4408022fcb32ce6f870b4c11417958583e1de74abbe6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\rapidjson\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 1162,
+      "sha256": "9f914da4a03a405f67bd90ea855994eb57c85fa337d7425e6eae42f6321bf0a7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\rapidjson\\PackageInfo.json",
+      "exists": true,
+      "bytes": 446,
+      "sha256": "183b607961a5d4a0523ff10746f6890a51a360c24d438b8723f7006c871d0af6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2875,
+      "sha256": "3dd06bc002b658cee1ba3dc70fe15ac67eaf3fbb1c6e02a686c6b3cc0b5058ed"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\files.cmake",
+      "exists": true,
+      "bytes": 350,
+      "sha256": "80d051cff136003b79843b6a5547e42d27af7a7c740098bd7e26afe1a801e6e5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\LICENSE.txt",
+      "exists": true,
+      "bytes": 250,
+      "sha256": "9e8582e6e57400a18124804c393d5cd5944137090063b348e60a5e33264df562"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\PackageInfo.json",
+      "exists": true,
+      "bytes": 349,
+      "sha256": "8fb68011c32dde60fe8cbd7c4444bbda341f4f8a16d4087acaf98ed4d727a06e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 363,
+      "sha256": "81d127300ca9d9197fb18d212de6ee3c1f69e6b5429c6cf47c244169255d0fd7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 7477,
+      "sha256": "5a93205ecd1ac0fa3f2557ead9632d2ad8a9e6fa35d27bd48e83d30a04657974"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Commands\\CommandManager.cpp",
+      "exists": true,
+      "bytes": 12772,
+      "sha256": "7d249a74dec1e1a6e306fa11b7953d840ac9dc72fa7494acc2973211a8ab9d9c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Controls\\ReflectedPropertyControl\\resources\\apply.png",
+      "exists": true,
+      "bytes": 311,
+      "sha256": "1e7fb0db541a13f6f6b6f494f133f72e05c847508bdf69e1bc63dcf8eb4aa752"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Controls\\ReflectedPropertyControl\\resources\\file_browse.png",
+      "exists": true,
+      "bytes": 370,
+      "sha256": "124de9138d3af8e14a49944245d7245df4065c49ad1e5ec1d8377600933558c5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Core\\EditorActionsHandler.cpp",
+      "exists": true,
+      "bytes": 133235,
+      "sha256": "bf5ef58bbe1b46b8065efbc4a09ffce838ecd22923f796d5608e3b8dbf183a4b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.cpp",
+      "exists": true,
+      "bytes": 119132,
+      "sha256": "a86557a3648c44a6b16ea730dc970ed0ff3952fdd04d2db255a56ade8e4e7460"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.h",
+      "exists": true,
+      "bytes": 16899,
+      "sha256": "ca12aae7222524610a305b48e20cf8bcb19f4324cedf16589c766ed82f4f1f5c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEditPy.cpp",
+      "exists": true,
+      "bytes": 20074,
+      "sha256": "9414d0e0285171005da9560ee7864dd98e7b3b82fbd1d4948728e53468e2a3c1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\editor_lib_files.cmake",
+      "exists": true,
+      "bytes": 22063,
+      "sha256": "49cef54e1eaf61419e56334094f70228da4d8d3f8d4b4f738f3166dd9e58492c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.cpp",
+      "exists": true,
+      "bytes": 27285,
+      "sha256": "15c2ee3f76d2728f9271a945cf684755c2f6d94d2642ee691e727d4dc41d3f25"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.h",
+      "exists": true,
+      "bytes": 10964,
+      "sha256": "324a4d61e2564746be012ef9ec8e88d18ab76b3f680ac57d096652cdce3ac47f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Lib\\Tests\\test_EditorPythonBindings.cpp",
+      "exists": true,
+      "bytes": 15690,
+      "sha256": "11ce8aa271cb0c7bce96d9d88ca32227b08d6b61d7a3470e406659b8335ff41b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\main.cpp",
+      "exists": true,
+      "bytes": 2011,
+      "sha256": "264d1497dc7d8294b6160193f1c71e92322552eb77f877b0804e5304976619ba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow.cpp",
+      "exists": true,
+      "bytes": 40349,
+      "sha256": "75fa95f0f3b0f354808f6f50009057bca140bd85dcf3d2abff104265a4b15bc3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\display_info.png",
+      "exists": true,
+      "bytes": 212,
+      "sha256": "d34f123fc3e057438e58ec5144f50f9dc9757d6a855a3c4a1380dedd9a6f243d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-00.png",
+      "exists": true,
+      "bytes": 260,
+      "sha256": "5ae4076ff057217fc9f7792001a6698694bdf2c4b92c8a609c789ebd3ff604fe"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-01.png",
+      "exists": true,
+      "bytes": 266,
+      "sha256": "2c8ea1952d2899aacb804da47f0cc16f00ccea0f13ddbefd51d0db026cd3e624"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-02.png",
+      "exists": true,
+      "bytes": 505,
+      "sha256": "04cd08f209907df14e40500467c98a5d142d33131031a5b4f9bcd5c49c24dd87"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-03.png",
+      "exists": true,
+      "bytes": 533,
+      "sha256": "b045f5ca44694172d61a101069c824c052229c7b51febba5788c220f6d6d586b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-05.png",
+      "exists": true,
+      "bytes": 309,
+      "sha256": "a9d8763e4fb831e70b756803cbbe0773a17abdb279bc17d5670406f161c0c928"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-06.png",
+      "exists": true,
+      "bytes": 368,
+      "sha256": "d87cf8d940e9f60affa38a1462b58f6f74b6a65b72c9feac52e7a99870558dfb"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-07.png",
+      "exists": true,
+      "bytes": 440,
+      "sha256": "310e1fa4693d44c355c0232b77f34237bfea8891f0115bcd25ce3686f361085a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-08.png",
+      "exists": true,
+      "bytes": 440,
+      "sha256": "6a0b3156a4f7e2b2aa511d68ff570218b5dab01ac303458ee59a6e52c8b0b74e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-09.png",
+      "exists": true,
+      "bytes": 381,
+      "sha256": "a2a38ce8cdd236cca2cefb1f4777040a4ddd90077c710a3f0b4bd1e7d0bb1caf"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-10.png",
+      "exists": true,
+      "bytes": 1144,
+      "sha256": "da15d697ee11fe93d625792ade298ca83ac5756046423d4573ec91dcc4e04b51"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-11.png",
+      "exists": true,
+      "bytes": 330,
+      "sha256": "3284a1231ff31f8b288113c86bb75339ada9a61c55144a4136c9089a5653484d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-12.png",
+      "exists": true,
+      "bytes": 283,
+      "sha256": "5868c382713ea34fc2e538b9c2a04f577bb9c6e1dadbb2ab39cf4badd21a9efb"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-13.png",
+      "exists": true,
+      "bytes": 238,
+      "sha256": "218af4e762974c920be3321e437a85b6804d684035f0622672ddfa54a049a82e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-14.png",
+      "exists": true,
+      "bytes": 542,
+      "sha256": "96ffcd2266e603efd1320d70a1e6e3ded3e04765d499ef97c6d3ac6230c491bf"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-15.png",
+      "exists": true,
+      "bytes": 508,
+      "sha256": "09d59f95dc7af5e6e2f5bea5bafdf571fbf034515a7b0038bd298250b5b343f7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-16.png",
+      "exists": true,
+      "bytes": 442,
+      "sha256": "e5d8a20c36f9902afd5d8e5f30ac123fc118101ef045a4ffffcdc8d1a51507cc"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-17.png",
+      "exists": true,
+      "bytes": 524,
+      "sha256": "ebca3c027be7425fba5b1efb81698c91277183033c92b353845fd8711841c260"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-18.png",
+      "exists": true,
+      "bytes": 349,
+      "sha256": "30048484887a673c9616bf0b2dd3e4b7a542903030a1db911cdb478e3883d54b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-19.png",
+      "exists": true,
+      "bytes": 573,
+      "sha256": "87e784db9462eae6555dff1a8a3b23cc92465f3672d60d3a15310f2717cf905a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-20.png",
+      "exists": true,
+      "bytes": 206,
+      "sha256": "b4022f75f5e00095201c6fa318c1ca00a90e120bffc66aa60a4d741d7d2525a9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-22.png",
+      "exists": true,
+      "bytes": 1257,
+      "sha256": "b16504e73124dac1979ccb1314dcc32d01710c2c710597ca9f762472ff8fc8b5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-23.png",
+      "exists": true,
+      "bytes": 335,
+      "sha256": "773c0c039ebd2b900d6cfad6de3b690774df31624e9352eff8a5806ba4e4353b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-24.png",
+      "exists": true,
+      "bytes": 259,
+      "sha256": "c474280f2fdfec400f652a7ed1c9d05250848ad13ac42564399496523b6ab117"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-25.png",
+      "exists": true,
+      "bytes": 425,
+      "sha256": "bf5592118e0144e4d5f639be13dd9d35b95171d56b30d6314012bc219d72e905"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\editwithbutton_dark.png",
+      "exists": true,
+      "bytes": 1002,
+      "sha256": "07c71ae07db664b6fd833115d484341ceb977a53f81ab0ab3b2c9a5ad4a66877"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\hide_helpers.png",
+      "exists": true,
+      "bytes": 208,
+      "sha256": "e576a98a702b4848565c6456763197f4a53c518c3b3a504f92b90092be8ad27e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\maximize.png",
+      "exists": true,
+      "bytes": 239,
+      "sha256": "f30d7e2491cad1fc9bf5f75d3d64ad2de3a8573a79b0f45f175c6a1ddf1631e5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\misc_toolbar-00.png",
+      "exists": true,
+      "bytes": 767,
+      "sha256": "edaaf33a30af32663a2432866dc877ff12fb42223c4838fe8aa1605c6f8e82c3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-00.png",
+      "exists": true,
+      "bytes": 657,
+      "sha256": "6bc910f87a88b33d3d2126fffd90075fc28a78f377171e41b68d4c269d1749d3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-01.png",
+      "exists": true,
+      "bytes": 393,
+      "sha256": "ae43c71cd227adb3c79da709c6b4f8199a1acbfc0668a83ab32c65f36f3507e8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-02.png",
+      "exists": true,
+      "bytes": 376,
+      "sha256": "9de15447816860f4299edca7942df2f1d57f893c7268d55817f4cbe24c04bc19"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-04.png",
+      "exists": true,
+      "bytes": 257,
+      "sha256": "117566edd1899f38b8325baeb414c575860acc36f8ab69af175ce508166b8ff2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-05.png",
+      "exists": true,
+      "bytes": 476,
+      "sha256": "c6fd957540c6559f16d8ac9240a40940768de67f3a1dc303c03cd6d406e169d0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-06.png",
+      "exists": true,
+      "bytes": 513,
+      "sha256": "157cf30a8cd1d3fe0f81bbad59834cf53ec513fec56a57b7a2f5a399c93d2af5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-07.png",
+      "exists": true,
+      "bytes": 346,
+      "sha256": "c9735a8455d6a16df2819812592f802353a62ddc1c67ce4fe4ad08068a064a06"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-08.png",
+      "exists": true,
+      "bytes": 718,
+      "sha256": "10320f055de866f8faad50f8e5dcff8c3cbc0a9fcc6b168eebc38993cc0d739f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-09.png",
+      "exists": true,
+      "bytes": 703,
+      "sha256": "cac871d16a478859f4169e8f12b3d0fce9fd86c0e252e931a50fef5fac0bd9ab"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-10.png",
+      "exists": true,
+      "bytes": 1652,
+      "sha256": "54941b08c351f2f7e4f14d854e9784fb00332470f6c2a2b000bd7a18270ecee2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\ObjSelection.png",
+      "exists": true,
+      "bytes": 348,
+      "sha256": "8e3a467c778f85ce5cba4cfa5c7446f5d91a67bb52a7817dc15d0634f4e39bda"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\proceduralmaterial_toolbar.png",
+      "exists": true,
+      "bytes": 463,
+      "sha256": "2597ca0afb21ee1310975cdab417c85ff994f4da89e70e824e33bddc3e23a2cb"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-00.png",
+      "exists": true,
+      "bytes": 464,
+      "sha256": "54b9dd4dc2766b620346ec1c1036bc42ea0147d6d843ab0aefd800fa9cb90bca"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-01.png",
+      "exists": true,
+      "bytes": 491,
+      "sha256": "364ab0fdf5a5d40d5acfbf9a4f472b86ccfe49754b091a3fc0e8ee53396782b5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-02.png",
+      "exists": true,
+      "bytes": 454,
+      "sha256": "a5c9b3590900504eb1b7e107522933bccf852cdffcc416d63f61ce8a2b42c51a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-03.png",
+      "exists": true,
+      "bytes": 381,
+      "sha256": "ebfd296aae028aacfe4998a6e0630e8b2d570766e3347ec58d962eabaa9447b3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-04.png",
+      "exists": true,
+      "bytes": 556,
+      "sha256": "1fb8ce6e605df696cf55374dcea1f6151521d3202a7904ea3d0e138156ed81ff"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-05.png",
+      "exists": true,
+      "bytes": 443,
+      "sha256": "e1de4b1da51837ec935269688dbe91f8cae7936dbcc5985e66729bb163d5edb7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-06.png",
+      "exists": true,
+      "bytes": 303,
+      "sha256": "88f3343d8633f35476d27780e2bf76c4071c7b86b8967cdded9c5f0ee2cc742d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-07.png",
+      "exists": true,
+      "bytes": 297,
+      "sha256": "5ff27393a65d1a9d605bf8a39bf419121f0ad59303838c4981d3902ebc7ef1c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-08.png",
+      "exists": true,
+      "bytes": 1565,
+      "sha256": "dafb9c2a38008daacd7620b798d22d93442e24c264bfd925fce8c3d586db4e5c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-09.png",
+      "exists": true,
+      "bytes": 382,
+      "sha256": "516393a0fd916497c4e68f428a6ac164de334976dba4850582a4e17538e6c774"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-10.png",
+      "exists": true,
+      "bytes": 390,
+      "sha256": "2c9b2d3eb4ada26a836fe60809413d339c2f3d94e7892cdeb76fcabf3e4861c6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-11.png",
+      "exists": true,
+      "bytes": 340,
+      "sha256": "049e31fdf930052ca00ecad4dde48513888da4c3448c905e9ae897da50c6edad"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-12.png",
+      "exists": true,
+      "bytes": 379,
+      "sha256": "726ce43df4e0cd341b39b5fd00a32edc665c1b7ae517f17e2a78104ef90eca02"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-13.png",
+      "exists": true,
+      "bytes": 526,
+      "sha256": "7eb743dad18be09f5f2c2f84ad46503cfa6f3089d6baedd1ef7d46ab7accd0c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-14.png",
+      "exists": true,
+      "bytes": 360,
+      "sha256": "074790e25f006eae8fc31261ca8769081247f3f15233ef6388fdcfdf1f2b0999"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-15.png",
+      "exists": true,
+      "bytes": 373,
+      "sha256": "d34243033c567034bad7047ae4cadd68649f4a79bae6f7cefdd30f630f0c09df"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-16.png",
+      "exists": true,
+      "bytes": 1244,
+      "sha256": "33f9b5215216b8804c88ad470ee79b2dc3afb3465b76b53ad6216a25a8c835bf"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-17.png",
+      "exists": true,
+      "bytes": 344,
+      "sha256": "4d8617aca0b2ed39ef92c867c54b488b04cb66bf5a1654c8ec561963a937a836"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-18.png",
+      "exists": true,
+      "bytes": 341,
+      "sha256": "6eca8a43f23edd881d1436b37f6e8b061f695436f3621f77934018b878dd3f5a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\o3de_logo.svg",
+      "exists": true,
+      "bytes": 7011,
+      "sha256": "d4080a194123cac6594390a826f0aad6cba36d01127dc4165ea4e8a12ef35337"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ProjectSettingsTool\\icons\\group_closed.png",
+      "exists": true,
+      "bytes": 308,
+      "sha256": "403ee8a94ec2f0ff532c70d2f56e18d7d83cb335a0cc444b1ac88f2fadff45f7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ProjectSettingsTool\\icons\\group_open.png",
+      "exists": true,
+      "bytes": 367,
+      "sha256": "e4058789615838100562d84345a5b0fdd7ea5416052105ce0ae2e5a1db13b952"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorEventsBus.h",
+      "exists": true,
+      "bytes": 4623,
+      "sha256": "285c347dae880b7830266b3152f5f330b934870e3d63f48af528f519ea89a3c1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.cpp",
+      "exists": true,
+      "bytes": 41058,
+      "sha256": "a955fb5a0099f0c111ce6b460020be53a7966109ab124805c811422b449ca6de"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.h",
+      "exists": true,
+      "bytes": 3112,
+      "sha256": "5518717ff0f36467bd13803db6ca5c77afcd65221478606ffb8fa56ff672c480"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_disabled.ico",
+      "exists": true,
+      "bytes": 1150,
+      "sha256": "5300f5d7eae658f924b3e7e2c7fc713ca0ce025fec3a2fe7b4be61bea264b8c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_offline.ico",
+      "exists": true,
+      "bytes": 1150,
+      "sha256": "897534f41f97916f07b1125e45d56fef9f5f6049b13eba7bc17e70ff42ebdb05"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_online.ico",
+      "exists": true,
+      "bytes": 1150,
+      "sha256": "b6b4ef9e2b6365c7db30323a23f55c0a32155956b947a5957f450f86c9de5b2c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_pending.ico",
+      "exists": true,
+      "bytes": 1150,
+      "sha256": "499595bf23dfb40219045c8125d5ed0de609c89c428c6fb6243c4d1253f41edb"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\cvar_dark.bmp",
+      "exists": true,
+      "bytes": 1080,
+      "sha256": "883fd3154a89bae195c8cc418efc225985754baa9ce44142aaf740e2a65aad7e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Open_Hidden.tif",
+      "exists": true,
+      "bytes": 5540,
+      "sha256": "aee9510da2669b53f0b0070630af065ba97bde126d7e5dadb2a05a6a04dae20c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Open_Hover.tif",
+      "exists": true,
+      "bytes": 5316,
+      "sha256": "c421ceb6cc7ed4ecae1b254d6e9fc523f0c2bef108c84b5f80cd129e2ec8f536"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Open.tif",
+      "exists": true,
+      "bytes": 5526,
+      "sha256": "18602b2f59eb4537c5538867044054ab4c6d8fa1085a0b806c5853becc9a5126"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Partial_Open.tif",
+      "exists": true,
+      "bytes": 32776,
+      "sha256": "0cbd086ef8b1fc1cec3ebea3324ad7b53e59c0379f73c4ab85fbaf869b51eb13"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Partial_Slash.tif",
+      "exists": true,
+      "bytes": 66592,
+      "sha256": "e8485cf2fabeb6acfb55f3cb0fd97f2e2e25a399e7ced7a4a4081f45af532b4d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Slash_Hidden.tif",
+      "exists": true,
+      "bytes": 58388,
+      "sha256": "afbb3224e8dfb298ddeaa8ae00df6c793f738ed26d7b9f0e5720d4d089edfa01"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Slash_Hover.tif",
+      "exists": true,
+      "bytes": 57372,
+      "sha256": "05bad02363ff0963789306728b26da97ed914624ed087c0f1e20b044bb044925"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Slash.tif",
+      "exists": true,
+      "bytes": 61568,
+      "sha256": "87fc7b3d958788d0df62f02c5f6609f5726f5469157b594c6feeb18359b28855"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\folder.png",
+      "exists": true,
+      "bytes": 871,
+      "sha256": "98a2ee9d9391dc99627ccb1a0fe1a68aaf1c5db4874e084afd1068902d06678f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\o3de_editor.ico",
+      "exists": true,
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Disabled_Hover.tif",
+      "exists": true,
+      "bytes": 24428,
+      "sha256": "ed11089cb1b46669c9ae77edacc142a8f5d604e3aa749b829c6fb74bc6ebd8a1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Disabled.tif",
+      "exists": true,
+      "bytes": 24452,
+      "sha256": "712bf1ca195471061a60cf53c77c0fc18bfa16ed902651ec661916caaa602116"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Enabled_Hover.tif",
+      "exists": true,
+      "bytes": 5386,
+      "sha256": "b98445e3640a8ae7f932bd7ea06f21312c6d7c1c566845c23714c5b65bd39a2a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Enabled.tif",
+      "exists": true,
+      "bytes": 5580,
+      "sha256": "fda3b714aadc19ae74f3ef1bad18b1d03bd536960eadffd5b7ff96e687e8656c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Partial_Disabled.tif",
+      "exists": true,
+      "bytes": 36364,
+      "sha256": "a236740a0de21221b25c3c4df58c0bb47d2117503815a8603a4b8c77c80a7f8a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Partial_Enabled.tif",
+      "exists": true,
+      "bytes": 35320,
+      "sha256": "b12692907573ba4f779b25faf0dfbf602b4b7c9405c18d79fe5706fc864f6e77"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_00.png",
+      "exists": true,
+      "bytes": 171,
+      "sha256": "62eb3999d764c84114f10773f1802740a9259f3e86f123717013dade7aaa89b7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_01.png",
+      "exists": true,
+      "bytes": 137,
+      "sha256": "a3b12755e33ba7a0610dcf338bd51265ec282be95dd375ca213b19b6696e039f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_02.png",
+      "exists": true,
+      "bytes": 160,
+      "sha256": "4a7497747a59a27bed87b86d49e02512f05ca65f35370262e49f9766364c38d0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_03.png",
+      "exists": true,
+      "bytes": 202,
+      "sha256": "6e6f353801258264d6657c7e07e57d8bbb7072b0f7b8dd8a84c4036e2019b113"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\tree_view_folder.png",
+      "exists": true,
+      "bytes": 1291,
+      "sha256": "296666dbe0870ef937fbe1bc130358a9eda9ac778982b1102dccb929124b26d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\tree_view_level.png",
+      "exists": true,
+      "bytes": 1315,
+      "sha256": "1d9d2aecb9dfca1e8c9b6a26173e15841c5efef6653c100a8735f7580b8fee4c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\splashscreen_background.png",
+      "exists": true,
+      "bytes": 132,
+      "sha256": "fb9d21a2ef1282dd062d5f68a2e4026de93a460d53e27e11304cdbd4dfba3731"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.cpp",
+      "exists": true,
+      "bytes": 3540,
+      "sha256": "9da2b95044cac119b16e6a255bfeaa71ad98d458cb2e621ba64fe8670d409cea"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.h",
+      "exists": true,
+      "bytes": 1460,
+      "sha256": "16c23bc5e5ee1083d127e37f79fe47ed7739d8b16c3aeb9ef09dbc8a64b60cd8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.qrc",
+      "exists": true,
+      "bytes": 164,
+      "sha256": "c623afed46e7928c11f742b7d29f908759017d9d27fe0ebb9d4b96c8e7449e8e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.ui",
+      "exists": true,
+      "bytes": 12849,
+      "sha256": "857fbae70065e434e188e99e068ac68a3106943c58b5559ed113ae84e301a2a7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.cpp",
+      "exists": true,
+      "bytes": 13744,
+      "sha256": "3afc7857a5c2f02de71fd1cd74ac005abc4ec0326dd0249a1600bb347eae8fe7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.h",
+      "exists": true,
+      "bytes": 4317,
+      "sha256": "b69727e20c41b6b45ab72d97bf7bc75ee825a3d3ce4bb32797cd62b984735f86"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.cpp",
+      "exists": true,
+      "bytes": 23784,
+      "sha256": "448d1683ca30ba435d089c15fbee7b21d80f54df6bc84bc0dd1c0b26b846015f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.h",
+      "exists": true,
+      "bytes": 2140,
+      "sha256": "763c13337668731cf02e9f330f642eff19f5f47703cff55f73cbf91bb6500734"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.ui",
+      "exists": true,
+      "bytes": 8935,
+      "sha256": "158a8172118b1c325cc961c87d18823e736d14b510fa1eb16137582a0ef894df"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\bmp00016_00.png",
+      "exists": true,
+      "bytes": 143,
+      "sha256": "29d6b3e5d2288365b6038fc8ddeadedb4998924eceb9feb9f124eb46c31da4ef"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\bmp00016_01.png",
+      "exists": true,
+      "bytes": 164,
+      "sha256": "72115aee4f8baa0ee796170de94461624fba38675a3e9138d6ca0efd3fcd733b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\clapperboard_cancel.png",
+      "exists": true,
+      "bytes": 446,
+      "sha256": "a064e400b30d4de5d96ce15d54c3a55a1ec655a025479ec34966903d87c1e945"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\clapperboard_ready.png",
+      "exists": true,
+      "bytes": 364,
+      "sha256": "3a9123cfc2ec39e086593e0e4c5edfefeb81e55f7742a1fe55107b7d8b8116b1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_00.png",
+      "exists": true,
+      "bytes": 144,
+      "sha256": "98d6abe0694969813e40777c30ed08b37ee8b1e21d3b101c6ae1cc73f0f7f203"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_01.png",
+      "exists": true,
+      "bytes": 143,
+      "sha256": "ba30d39cc19a5f154334ed58b0c620adc0d2b8699817ab47140e67ca817fb946"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_02.png",
+      "exists": true,
+      "bytes": 147,
+      "sha256": "3ccfd91d032179c9275309a63d0418bfacc57764153947affc25b502bde79b93"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_03.png",
+      "exists": true,
+      "bytes": 151,
+      "sha256": "3394b7e757f82234362c12f2dc5b032b1030c448768a453642b324d05ac21504"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_04.png",
+      "exists": true,
+      "bytes": 147,
+      "sha256": "a80f1e8aaf99a56e71af5acee471c44e39862710bbd42bbdc71ad2ed36ca19c9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_05.png",
+      "exists": true,
+      "bytes": 138,
+      "sha256": "2c1141caf31b2d01f193ff5dcf9b1edab8ccbb0fc824c6ebc4594f0ea4032284"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_06.png",
+      "exists": true,
+      "bytes": 158,
+      "sha256": "9e58c21845c00ecc27dcf06b33b08e4975e06ff123161730324fb5f99de369f8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_07.png",
+      "exists": true,
+      "bytes": 159,
+      "sha256": "b52d11739a7e9cca6788151806e7824e9b6c847dad3a201962f3f3daadc67474"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_08.png",
+      "exists": true,
+      "bytes": 152,
+      "sha256": "7bc6d1fe7f8184f230a1e438c0bcfec266f2ac77f7b3364d654006ff01ac031c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_09.png",
+      "exists": true,
+      "bytes": 130,
+      "sha256": "56d75cb3865d0eefa9d8c0794f2bfaaa73cd8a366310d8032eff6de63932901b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_10.png",
+      "exists": true,
+      "bytes": 142,
+      "sha256": "3f127ce50a93699fac340cc1cf162f35b4d93dc9ec74e3653ade5f0aef2c0e77"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_11.png",
+      "exists": true,
+      "bytes": 172,
+      "sha256": "96e1d00b1654e25446db63fb9375a908dd7415644bed13c626b45a4ec1e5d9e1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_12.png",
+      "exists": true,
+      "bytes": 145,
+      "sha256": "5e13418febcdd2e86b10e2bea62fe026b4009b649e0d1013dc84c6c4a4f401ed"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_13.png",
+      "exists": true,
+      "bytes": 125,
+      "sha256": "49a61fefdb2a0a7d218a7064a1afa1584511ff3b2a3787a176a2d4783b69eb0d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_14.png",
+      "exists": true,
+      "bytes": 140,
+      "sha256": "03a118a63529650f7d0734b385d15431e1c70fe51b324601c6765981521b5479"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_15.png",
+      "exists": true,
+      "bytes": 138,
+      "sha256": "3537913eb762f1c4bd8bcd87b5b195e76074dd0e3efd9a41af27717bdcce9b3d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_16.png",
+      "exists": true,
+      "bytes": 189,
+      "sha256": "f121ac550ea7128d744ecb142676302875b6ae7ecf76ca8a933bf332cbdf28e9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_00.png",
+      "exists": true,
+      "bytes": 206,
+      "sha256": "49ac756007e7f372f1f8b9c3e5254f5bb88a5d66c2317e70423c9c91703fc530"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_01.png",
+      "exists": true,
+      "bytes": 226,
+      "sha256": "466b762cadb338b348be0fc7e5eab2473c3305e964f16c0bbf4f7d6691f3b987"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_02.png",
+      "exists": true,
+      "bytes": 227,
+      "sha256": "f8f29f4af9cc488160dd9c179995b175696b2cfb77a14d4c3e39b8b0b1d8ff6b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_03.png",
+      "exists": true,
+      "bytes": 226,
+      "sha256": "df0c0ef69e861fc95391b63231ab378e32bd8634f1646d7c3442d8d6ded498b2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-00.png",
+      "exists": true,
+      "bytes": 394,
+      "sha256": "51121c832d78c50a390e5fdc676d8a100f9271415365a174ab6f30d92d520ab5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-01.png",
+      "exists": true,
+      "bytes": 394,
+      "sha256": "c1399b45331042c25cfa9b760eb8b0b1984bbab27f46db248f2dad88b6bf9963"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-02.png",
+      "exists": true,
+      "bytes": 378,
+      "sha256": "f08f2190d482fc875973d7b0f19e925d528e32d0a0df7d5bfaaea50f4b3ceef4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-03.png",
+      "exists": true,
+      "bytes": 392,
+      "sha256": "5127b2c9c4b11b043d9651c9367ac7da521ee9809dc345d7bd77f8a279ac6fdb"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-04.png",
+      "exists": true,
+      "bytes": 450,
+      "sha256": "3c8e81e098ac1e4da5cef6df59c0719dfd440cdc82b8b250b879dccc69c456af"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-05.png",
+      "exists": true,
+      "bytes": 418,
+      "sha256": "70186898fa92ceb363a206b70e5784e7e93649661fd7c580667ee43bc186dc5a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-06.png",
+      "exists": true,
+      "bytes": 443,
+      "sha256": "9d0848bd8e2f53698c59d9e3957c73cfef034da63d51d06e60d4afe947004daa"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-07.png",
+      "exists": true,
+      "bytes": 460,
+      "sha256": "60f4ee86a8273b24e902a5401d8eb81d3b61728da13a30a8fd74b4a5e0a6584b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-08.png",
+      "exists": true,
+      "bytes": 429,
+      "sha256": "286312968ae812a376c966c0851a3d552f2ef0880a48bc7284bc38038277178c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-09.png",
+      "exists": true,
+      "bytes": 429,
+      "sha256": "97125254154e429ee2de74c2b7054c674add47ef8a3b98e0b4f8e3d54be9d4a4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-10.png",
+      "exists": true,
+      "bytes": 439,
+      "sha256": "53073879103d1182f485381715d111699f3cd55a63eaebc9f351854fefce53a6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-11.png",
+      "exists": true,
+      "bytes": 402,
+      "sha256": "a21c981597858f335605fc0d00e8805275dddd7a43e7f0381bf825e0c900ec32"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-12.png",
+      "exists": true,
+      "bytes": 401,
+      "sha256": "a22795fdfa5ec1ae6f3d84aa6504b237acccbd418a13467e748c2d1730149c85"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-00.png",
+      "exists": true,
+      "bytes": 438,
+      "sha256": "15ab845dfb333069370112328d4c8b514c41fdbfefb224818ed3c69c5056fbaa"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-01.png",
+      "exists": true,
+      "bytes": 440,
+      "sha256": "b25d777d7d7180244b6fd49792c61af8fb5409ea37665831955d490bc4ba85f0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-02.png",
+      "exists": true,
+      "bytes": 441,
+      "sha256": "f93ae96a55c04276e64be9d3a7f9d670680fa3830ca4f7f92f2a55a968f9aa12"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-03.png",
+      "exists": true,
+      "bytes": 424,
+      "sha256": "67f125c9afc9043ec213d5d4d1865581804dcaebdadfdfca95464f757ea6a638"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-04.png",
+      "exists": true,
+      "bytes": 435,
+      "sha256": "7213b9f39980369718afa621887ffd3f4769e63a04e8c380479e8ffa529592be"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-05.png",
+      "exists": true,
+      "bytes": 445,
+      "sha256": "18d941de2570ae8968736c4562ccd97ef307f75e99e79c310424ac7516e043a0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-06.png",
+      "exists": true,
+      "bytes": 400,
+      "sha256": "f297d0f87ba29bb34b26da684a4b55a85e55edd7574eff0759dd71f387bdf40b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-07.png",
+      "exists": true,
+      "bytes": 177,
+      "sha256": "91743daf529f567ec02c1b9d3ce3fc4fa4a412f160a3c919410833cc37afa8f3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-08.png",
+      "exists": true,
+      "bytes": 208,
+      "sha256": "d384ed26425739ccb14139ba1d090bc11494677be9960ec361b800f5f2d60308"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-09.png",
+      "exists": true,
+      "bytes": 184,
+      "sha256": "375d14fa1e0ea0aaa5c90ffc7ecf900019df0e964154f541465952712e895a42"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-00.png",
+      "exists": true,
+      "bytes": 911,
+      "sha256": "0e9d7682ed5cf5a9f02d96910f026abac7471264b0e9ef822b22d417946251fe"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-01.png",
+      "exists": true,
+      "bytes": 691,
+      "sha256": "ecba7dae5d89c3fd859e1e32d5dd1e1bb50777186ff78a849735bff176a2eaf2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-02.png",
+      "exists": true,
+      "bytes": 386,
+      "sha256": "2eac7d2ddc61de9abcad0342fc17cb63ae078def2699a3cf6626f11deaede57b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-03.png",
+      "exists": true,
+      "bytes": 386,
+      "sha256": "c9a07c5eb4ecab34e9af679c0f452c01f9546f581fbacc7b799bda3cf8cf8dbd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-04.png",
+      "exists": true,
+      "bytes": 379,
+      "sha256": "62b7fe11e7ef3de084c3acd3f48066f3a0291e4093c6d6c2c932366b06cedfc2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-05.png",
+      "exists": true,
+      "bytes": 385,
+      "sha256": "3283c3d051a52940d84fb682e2be3da9ba688fefb8bef1b954ef09a33c05b4fd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-06.png",
+      "exists": true,
+      "bytes": 512,
+      "sha256": "ff30374805eca3e38f7e6e4dd1c1c9e5c40555ba3c1613a2ecb20e6e19680da9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-07.png",
+      "exists": true,
+      "bytes": 909,
+      "sha256": "0a7d40a35988ca8e31fd1953b7da2095aa09a09735420a4d8794f6c512dea91f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-08.png",
+      "exists": true,
+      "bytes": 962,
+      "sha256": "c67b691fff278ff2f102ab9ed415598c691d73a878e422acb01f0274a164cb7e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-09.png",
+      "exists": true,
+      "bytes": 501,
+      "sha256": "c070c3b9fee78d69d74b66394130e0b3662140bafca979eb9d17103329db5ee2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-10.png",
+      "exists": true,
+      "bytes": 1238,
+      "sha256": "d615a4d9a7c2565324d7536dc9a8c03096168a941e87892258f9b1e4b60e725c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-11.png",
+      "exists": true,
+      "bytes": 677,
+      "sha256": "1c216248f92bc404ca684921d9484b26297cf30f695b96dbd61a8dfc7b71c2f6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-12.png",
+      "exists": true,
+      "bytes": 1212,
+      "sha256": "566ecf405d2356b65b27433975e839d77f488b8b6686796db9a6cacb1981126c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-13.png",
+      "exists": true,
+      "bytes": 390,
+      "sha256": "5b77671dcde31c372e5c58224b605f1e273eb79393c90e3a075ea3ae92c497f0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-14.png",
+      "exists": true,
+      "bytes": 378,
+      "sha256": "6ff6295ad6d69cc2f6fb169688945bd2f9b8483b76912dab66fa47324cf6fc1a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-15.png",
+      "exists": true,
+      "bytes": 371,
+      "sha256": "28625a223d74c01ab118c396ca671b15b3b683be03a71644a18556cba1191c2c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-16.png",
+      "exists": true,
+      "bytes": 945,
+      "sha256": "bd380e0baa2e0ac263c2c420b02dd94ee58f57589a613dfb630c2e44dccdf338"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-17.png",
+      "exists": true,
+      "bytes": 644,
+      "sha256": "578312acafc43af25ece01737fa4fb4b6c0b05ef5c210aca21a18ad4ac0fa89d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-18.png",
+      "exists": true,
+      "bytes": 819,
+      "sha256": "be5bccf43401af647277434786c6c4175dba370c9c15d9c21b3c98cad0db34fd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-19.png",
+      "exists": true,
+      "bytes": 457,
+      "sha256": "3f9272a4fc1bf7f963da7c0a3392c7df3c505b2f5d72fbfab5e4800064f5b96b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-20.png",
+      "exists": true,
+      "bytes": 581,
+      "sha256": "8e6ce54b0283c9fbc5f2ada9fa16b3134a4938a0a38e061669eda4187bc0cf31"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-21.png",
+      "exists": true,
+      "bytes": 739,
+      "sha256": "e24e61169fabf7afc767bd7f224359d082a80f5c816b6ef7c6a5868f7535d0c1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-22.png",
+      "exists": true,
+      "bytes": 1301,
+      "sha256": "eb839375f19332adca3b7d78c80813b4bafb0941ecb8ed8e7943af694e4cd83f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-23.png",
+      "exists": true,
+      "bytes": 520,
+      "sha256": "c890f0c0dd4af4d8d99cc1c0f8c31487392604b6998723859d115b5e928091b4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-24.png",
+      "exists": true,
+      "bytes": 402,
+      "sha256": "c068e37292980a4bf93ad3de85df040c326f4ad906836459c8447af8d7897859"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-25.png",
+      "exists": true,
+      "bytes": 1253,
+      "sha256": "3b672671a7628c6fa49d44c0bd1332ad932a9026d399463292a50d65602c2a73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-26.png",
+      "exists": true,
+      "bytes": 1317,
+      "sha256": "d41bf12f0a00bc9167a9cfc092fb8ff6f4e6798186edf6add9afadd44bebeb5c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-27.png",
+      "exists": true,
+      "bytes": 654,
+      "sha256": "34572a3b00e92d0d77acf1ebbf07f9bb594b12c61dc08452b1518652a84178fe"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-28.png",
+      "exists": true,
+      "bytes": 368,
+      "sha256": "fdffc4c3170846d6e3178123692ecd99adec7fe51b64c05e134f6e165fe8b1d0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-29.png",
+      "exists": true,
+      "bytes": 167,
+      "sha256": "8e30cf8d7e0e3426caa2169f885bdbce96be9b69ba57ae3fce93d5f5a7ca1e1d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-00.png",
+      "exists": true,
+      "bytes": 403,
+      "sha256": "a929269e063f010ac6bf991b9d74aeb3d2e1a730346a45baee954a35a03cb3f3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-01.png",
+      "exists": true,
+      "bytes": 393,
+      "sha256": "709c627b0c14f345491ed413c67e7ee24c4c3d57bb014ba77295113f312f3c8f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-02.png",
+      "exists": true,
+      "bytes": 386,
+      "sha256": "c12467b8ef4ee04ccca2f5d35e2f3b14be87dc566c1c17b15bf233c7666aff03"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-03.png",
+      "exists": true,
+      "bytes": 375,
+      "sha256": "5279361aded52cba022d3d017308aafa2a342cb3e935097eac98f5b459cdcf29"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-04.png",
+      "exists": true,
+      "bytes": 405,
+      "sha256": "1da2764eb91bc2f304270c0f5f23719ad6aeed085733df02e074a76766218428"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-05.png",
+      "exists": true,
+      "bytes": 406,
+      "sha256": "ec6212a9ef957ba4807a30e26b7c3df74bbc03f673b14c2ba931cbc78a2be36a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-06.png",
+      "exists": true,
+      "bytes": 414,
+      "sha256": "ae44f325816b789578f3c879390c13501fbd845e85f9dd681fdd616cc5b8402c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-07.png",
+      "exists": true,
+      "bytes": 397,
+      "sha256": "fe177ed4fb1861b6ddb1ea5b20048f0893373349c7bf01e05d52deeea6d3a221"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-08.png",
+      "exists": true,
+      "bytes": 227,
+      "sha256": "d1810e984136dcd589fa78d960665bc048ce7914c41a298334bef16e62123f51"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-09.png",
+      "exists": true,
+      "bytes": 396,
+      "sha256": "eb2378109caedd5d57972d07330cd985951a15573de8a7d5894adc5511a704d7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-10.png",
+      "exists": true,
+      "bytes": 404,
+      "sha256": "9c0672064f1df5f4a68a558d3585edcea35ff4aeaf87c2c19145dfc3e1426e41"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvview-00.png",
+      "exists": true,
+      "bytes": 131,
+      "sha256": "21e0a85088489d08c02c6d50f4dc07905f7184f09bc49def76e5588e814d1a4b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvview-01.png",
+      "exists": true,
+      "bytes": 156,
+      "sha256": "1fac263f4ee68635c0071ff6b0d76672324409c0e3855e26e562c04c2815e116"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvview-02.png",
+      "exists": true,
+      "bytes": 186,
+      "sha256": "5d93fce7097ca8ffef1824a0d2eafa031876dbdd3ad3f4cc79fe695261cb36cf"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\WelcomeScreen\\DefaultProjectImage.png",
+      "exists": true,
+      "bytes": 2770,
+      "sha256": "1cf8339fb51f82a68d2ab475c0476960e75a79d96d239c5b7cd272fbe4990ffe"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzFramework\\AzFramework\\ProjectManager\\ProjectManager.h",
+      "exists": true,
+      "bytes": 1660,
+      "sha256": "b62119405057b955a174d203b5be101e0b15f274848b11082bd337b7014e84c2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Bold.ttf",
+      "exists": true,
+      "bytes": 224592,
+      "sha256": "5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-BoldItalic.ttf",
+      "exists": true,
+      "bytes": 213292,
+      "sha256": "3ca680f2444cc9e50447d057c006464566e92f2e77b0b6e26491e5bd757ed4e7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-ExtraBold.ttf",
+      "exists": true,
+      "bytes": 222584,
+      "sha256": "0fcbdb5cbeea00ae532352c7c94a7d288ebc911ba85f4d595012032dcab64ba8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-ExtraBoldItalic.ttf",
+      "exists": true,
+      "bytes": 213420,
+      "sha256": "0eeca981116621a96a484ecc58fbfcdc78fda0065fd21fd13707b63bf8a9912c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Italic.ttf",
+      "exists": true,
+      "bytes": 212896,
+      "sha256": "a54dc8488f8193bf30c3820cf6f261f911f9d328d699e1a1b8042641554cec70"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Light.ttf",
+      "exists": true,
+      "bytes": 222412,
+      "sha256": "cf5f5184c1441a1660aa52526328e9d5c2793e77b6d8d3a3ad654bdb07ab8424"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-LightItalic.ttf",
+      "exists": true,
+      "bytes": 213128,
+      "sha256": "4482d18b30c4534b5481d594b7c0bc7a9913a7c4c261985e452010a89ab755fc"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Regular.ttf",
+      "exists": true,
+      "bytes": 217360,
+      "sha256": "e64e508b2aa2880f907e470c4550980ec4c0694d103a43f36150ac3f93189bee"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Semibold.ttf",
+      "exists": true,
+      "bytes": 221328,
+      "sha256": "aa3b0ef53db12e3d45094030cac0e69d384e44cc5978643dd4390041cad546e2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-SemiboldItalic.ttf",
+      "exists": true,
+      "bytes": 212820,
+      "sha256": "30536248e59274548d51245662f9deec7fb52946faba33aade28c41473bdd39b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\launcher_generator.cmake",
+      "exists": true,
+      "bytes": 24060,
+      "sha256": "6d7f276499835a411918c38d877e97a71a7b68f3111d460cabe2a3de22ae7d16"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Platform\\Windows\\launcher_project_windows.cmake",
+      "exists": true,
+      "bytes": 1319,
+      "sha256": "38a0c2d0d105443dae4774fd823de01e11a61e01eb427d86a25a403543e87296"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Resources\\GameSDK.ico",
+      "exists": true,
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilder.ico",
+      "exists": true,
+      "bytes": 107680,
+      "sha256": "9952ea1c21ca2b0af0b6562de995b7b8db7cfa262339c3f2e751f6316ce66ac2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\ui\\style\\o3de_assetprocessor.ico",
+      "exists": true,
+      "bytes": 108312,
+      "sha256": "6d8d5415ec280d70da4cf2f4b4d727609b3adbfee8ecd0c44eccbcd6c4156646"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\Platform\\Windows\\AssetProcessorBatch.ico",
+      "exists": true,
+      "bytes": 107733,
+      "sha256": "e99e1bf2665cad0af567d943899c21c5d1ef319f82874f5bcd4718c9497d44d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 712,
+      "sha256": "7927173627afdaa7ef3cb9d538255e356aca0e91430734cc0ef069d30c4848de"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ProjectManager\\Resources\\ProjectManager-Icon.ico",
+      "exists": true,
+      "bytes": 108131,
+      "sha256": "1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "exists": true,
+      "bytes": 3930,
+      "sha256": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\checker_basecolor.tif",
+      "exists": true,
+      "bytes": 810620,
+      "sha256": "57d6744696768f9fb8a5fe5fee9aa36fee1eb87a9dbc1e60d4a35ed3c39d68e6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_basecolor.tif",
+      "exists": true,
+      "bytes": 793918,
+      "sha256": "5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_iblglobalcm.dds",
+      "exists": true,
+      "bytes": 152,
+      "sha256": "5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_normal.tif",
+      "exists": true,
+      "bytes": 793918,
+      "sha256": "1b56097f0df01da7ed49311462002f5e1a61b8496306c7ab3b12e17c27afb28a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_roughness.tif",
+      "exists": true,
+      "bytes": 810996,
+      "sha256": "ba52ff6d59f50b4b5dea6e266572c9e7feb92d5fd85bd0738e0d07d42d234bf7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_skyboxcm.dds",
+      "exists": true,
+      "bytes": 152,
+      "sha256": "5dc1eea34b7f8538e6bc408cb8d11131609f0c90f42e6111510a61c3e76725df"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\LTC\\ltc_amp_lutrg32f.dds",
+      "exists": true,
+      "bytes": 8340,
+      "sha256": "c9f24a0053c4e3f9c3eb46837984823964ba955fc6c0a962f87eb849b91062c5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\LTC\\ltc_mat_lutrgba32f.dds",
+      "exists": true,
+      "bytes": 16532,
+      "sha256": "cfd8cf9d94eccff383e98ef5258ee17fb85a95842f993c9dc71626dfbe40ed52"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\AreaTex.dds",
+      "exists": true,
+      "bytes": 268928,
+      "sha256": "d0a59111b18e67a66341bf94eeeb96caab0dc120e356bbfd934397a5b1830a73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\DepthOfField_PencilMap_35mmFilm.bmp",
+      "exists": true,
+      "bytes": 32824,
+      "sha256": "52861f61ea5a335441999af7de9f384dfda732adb7c678e97b4a5d43c6d9b6cc"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\SearchTex.dds",
+      "exists": true,
+      "bytes": 1152,
+      "sha256": "891e444b6dde7dd98f6902c805cd04e3469892aa1667c92f764d94789477ef3a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Tools\\setup.py",
+      "exists": true,
+      "bytes": 865,
+      "sha256": "4ff0d3db0c4aee6839d8a44a2a90aaedb0e47d54c52cf2893bfacd26846f9262"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 3647,
+      "sha256": "077e1aa31bae7eae83389eafdf1c0c2e928757db54c68c8cbe22771553f96a0f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Application\\AtomToolsApplication.h",
+      "exists": true,
+      "bytes": 4644,
+      "sha256": "e9e801ed0b92e2070651aa48a5e6a0cd9501519cf9a822e4139d70d2275c4e15"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Util\\Util.h",
+      "exists": true,
+      "bytes": 18216,
+      "sha256": "88f8ea44812a4b9f99e57b82c9b353f28809576a5873ae3db987351494dbd7aa"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Window\\AtomToolsMainWindow.h",
+      "exists": true,
+      "bytes": 4406,
+      "sha256": "e5e0f3698e10905b4d9e119bd5c56c8d693c3788957c5191d7bbaf8d75e302a6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+      "exists": true,
+      "bytes": 26423,
+      "sha256": "b306b3b5e8a0b42c6c4b90e9c993df3cd28300783794cfad3906cefe11c82fe9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\AssetBrowser\\AtomToolsAssetBrowserInteractions.cpp",
+      "exists": true,
+      "bytes": 11295,
+      "sha256": "343089d47d9567d4306a834844fbbb80c830ee070b3ef9084762754debe144e5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\AtomToolsFrameworkModule.h",
+      "exists": true,
+      "bytes": 704,
+      "sha256": "992f7356565fb11c5509603b294770e3618eda521ad7b4d2c60e4f12d85326d2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Util\\Util.cpp",
+      "exists": true,
+      "bytes": 44280,
+      "sha256": "f10345bcef2a20b8ffb769def731470b4ca6f0f96a27a74f3f54f7ba751c80cd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Window\\AtomToolsMainWindow.cpp",
+      "exists": true,
+      "bytes": 26125,
+      "sha256": "fac992191f9e59366404f108ff6f8b415e829f7fb46e873f8c06909675d52b82"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "exists": true,
+      "bytes": 254,
+      "sha256": "a02c0760f98eef43d7a66c556ab0a13fe0aeb4346d3eff3a0b03e6845bd3b550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "exists": true,
+      "bytes": 254,
+      "sha256": "a02c0760f98eef43d7a66c556ab0a13fe0aeb4346d3eff3a0b03e6845bd3b550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "exists": true,
+      "bytes": 254,
+      "sha256": "a02c0760f98eef43d7a66c556ab0a13fe0aeb4346d3eff3a0b03e6845bd3b550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+      "exists": true,
+      "bytes": 254,
+      "sha256": "a02c0760f98eef43d7a66c556ab0a13fe0aeb4346d3eff3a0b03e6845bd3b550"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\Window\\ShaderManagementConsoleTableView.cpp",
+      "exists": true,
+      "bytes": 19970,
+      "sha256": "ce9bcf718d4298a9ede1c1194290e7a9427fb912b8125404259b004638320fa7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 7945,
+      "sha256": "00e9af671acb28252aac6ec5f0f5fecd9025ccb03638fd1972360526c731d397"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\FindManifold.cmake",
+      "exists": true,
+      "bytes": 8340,
+      "sha256": "b43cf2f70a3505848872109219ce9594d7aeac3b560f2967d29a3108680f0fb4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\FindOpenMesh.cmake",
+      "exists": true,
+      "bytes": 8863,
+      "sha256": "b83da795150daaecdb9f22eb3782dd9d54816ba2d7ce995fd17825cf6c98c840"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\Installer\\FindManifold.cmake",
+      "exists": true,
+      "bytes": 1468,
+      "sha256": "9f1d4d51dc64a6d8a5bfd8aead0afc4c1133cf69b2d6889abee4d8a35d140104"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\Installer\\FindOpenMesh.cmake",
+      "exists": true,
+      "bytes": 1666,
+      "sha256": "54d8bb6bd723175c3d69ca06c94a8bfdaf51e862ffac724a32c5e9d4ead77bec"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_ddn.tif",
+      "exists": true,
+      "bytes": 3168096,
+      "sha256": "5c89b51ee9e71c0b89aed4102f73779a270fb7313c3439f1252a2ac9958e1951"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_diff.tif",
+      "exists": true,
+      "bytes": 820716,
+      "sha256": "166003bfebd724d8155b7fa7469d567cc904a32bb2bc1334de98fa316db3cc1b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_spec.tif",
+      "exists": true,
+      "bytes": 818744,
+      "sha256": "2e0d1cf087891ed145ff8f01143e2828f0b2ec16e1a0a8ac13cc9985c9b5597f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 6999,
+      "sha256": "dabafd5e87bc188368cb723e3e6c1c02936f53574645d36971718c50ca7b9634"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsg.cpp",
+      "exists": true,
+      "bytes": 37936,
+      "sha256": "0cad2ef8ef08e60dc1aa19e9d5b3b97d669617331edf7bfd6497a10509ad37ba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsg.h",
+      "exists": true,
+      "bytes": 4606,
+      "sha256": "2544fa3f7a098b966889df83c1fd4c131db8786123031206fd16568a819e4660"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.cpp",
+      "exists": true,
+      "bytes": 15998,
+      "sha256": "90e675faddec3df5e0b3ac73304a01478a6702f3b4963c92761ab69ddc6c2099"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.h",
+      "exists": true,
+      "bytes": 4276,
+      "sha256": "a32b8e20db0a5b0d449cba2683e5e2ba2f946393b5f51cb847cda9f6547c4608"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEEditorFixtureAuthoring.cpp",
+      "exists": true,
+      "bytes": 21873,
+      "sha256": "b532dde2d8fcf9630a05c33882828a42cbcf4502f65c839c040cad6ed7adbbcd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEEditorFixtureAuthoring.h",
+      "exists": true,
+      "bytes": 1170,
+      "sha256": "551e454b66dde00401ba983da83ff09e8a1a1bcd20f91001095b0857105b291b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxDefaultShapes.cpp",
+      "exists": true,
+      "bytes": 7459,
+      "sha256": "e9f3504b4f557931f937992646a3ff539ffb8bd9826a4f4b8a5fe70e9ff424ce"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxDefaultShapes.h",
+      "exists": true,
+      "bytes": 620,
+      "sha256": "541949c6fd9ce19c6980744381be9fc1e58c9340ed98322fd9c552dd6745f691"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponent.cpp",
+      "exists": true,
+      "bytes": 79343,
+      "sha256": "2c9d69c0fc6cfea04b2e23bdf3d22c5862c191eef9a7342c8dc1538b0a6c853b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxSystemComponent.cpp",
+      "exists": true,
+      "bytes": 3099,
+      "sha256": "4ad7fad26cbae8854baac91119712bbe8f855411900d4fcbb4b8969cf388689a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\JEEditorAuthoringTest.cpp",
+      "exists": true,
+      "bytes": 11326,
+      "sha256": "a0d94eae2a969486942849c8b65c8bec86d3e9cbf6e5f87260c893d087e8b55b"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTest.cpp",
+      "exists": true,
+      "bytes": 109454,
+      "sha256": "379462f1b6d38785f05aa85c8c8a9fb079c00e0bf410bd0e4461cd00f2ec45b0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\whitebox_editor_supported_files.cmake",
+      "exists": true,
+      "bytes": 3820,
+      "sha256": "b61cada695fc888300576c1230a54947c1a97955a22b973aff722ccb66778f77"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\whitebox_editor_tests_supported_files.cmake",
+      "exists": true,
+      "bytes": 614,
+      "sha256": "3c9642fb11b2b02b1a8f33077960109c1964c3b36a659de46199dfe9719b6f00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\gem.json",
+      "exists": true,
+      "bytes": 826,
+      "sha256": "1f6428acd62eabcdc8fac2b498872e7d81095b9196edef8595beb28f5e2de552"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\.gitignore",
+      "exists": true,
+      "bytes": 36,
+      "sha256": "9d7eaab87ebb7153e34c5754a8341665f3e7b8ad2638767c188152c7d148a3ad"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\materials\\WhiteBoxDefault.material",
+      "exists": true,
+      "bytes": 434,
+      "sha256": "37de6d5e6914d038db2a11032fda0b1aa4e378c8e08d882c20a08cc0da205e0c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\autoexec.cfg",
+      "exists": true,
+      "bytes": 108,
+      "sha256": "2e040b27120c3c0612c1850e25e1b20a0680b9a06428bd150549220e36a1cfc0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\cmake\\EngineFinder.cmake",
+      "exists": true,
+      "bytes": 10274,
+      "sha256": "d34ccad4d0242003abb2edc630c35430bec86ced62e193ba40c61a3603b8a539"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 2337,
+      "sha256": "1bef1ead3171b7a938a16c5ddccc3120e904b17996903766c0ba6fd492ff5944"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Config\\shader_global_build_options.json",
+      "exists": true,
+      "bytes": 285,
+      "sha256": "76a5f96f75cc8aca5201e98d5096c963630f831cbb704bbad2c9b99d73c7e6b4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "exists": true,
+      "bytes": 6011,
+      "sha256": "e5857a6a43aa910a3b981f90719e6cc1ae33bfb307f16be1385652fa44f6c465"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\LICENSE_APACHE2.TXT",
+      "exists": true,
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\LICENSE_MIT.TXT",
+      "exists": true,
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\LICENSE.txt",
+      "exists": true,
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\NOTICE.txt",
+      "exists": true,
+      "bytes": 1645,
+      "sha256": "b14a19c275d74707e976e2d3f5a40514708257895a12d56f56a4d4f5dfc88b95"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Platform\\Windows\\windows_project.cmake",
+      "exists": true,
+      "bytes": 250,
+      "sha256": "55286592ccc9873b19d74d73ab4662542a0ad3edb2e3f7f13a03ef73865cda3a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Platform\\Windows\\windows_project.json",
+      "exists": true,
+      "bytes": 27,
+      "sha256": "50d6239101a7eed1489ea3bd9eb23d28d728c3ba58920cd5c0a98fd168ab4376"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+      "exists": true,
+      "bytes": 629,
+      "sha256": "d6f860dfb6501498a7591dcf53520859d22834786e184050d4b7053305367a8d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+      "exists": true,
+      "bytes": 4320,
+      "sha256": "4d440e302afeba5bcbaa05ff611ae5b1d82a6f9b67231df0508ea87513ccdc1e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Registry\\assetprocessor_settings.setreg",
+      "exists": true,
+      "bytes": 890,
+      "sha256": "0a88d47a79f716d27c72fea79f0c112ae6c9cbf21918dbfbc523e597e0ca7224"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Resources\\GameSDK.ico",
+      "exists": true,
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Resources\\Splash.bmp",
+      "exists": true,
+      "bytes": 1200056,
+      "sha256": "bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\ShaderLib\\README.md",
+      "exists": true,
+      "bytes": 196,
+      "sha256": "109493f79878918796fb34d27f33822f3ed063287f25463d34e13d7d4a3d3b30"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\ShaderLib\\scenesrg.srgi",
+      "exists": true,
+      "bytes": 793,
+      "sha256": "0bab50bed308f31f62a6d234b17bcd47676ef0ff2a4793933a79f507f35b5c89"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\ShaderLib\\viewsrg.srgi",
+      "exists": true,
+      "bytes": 789,
+      "sha256": "33959b6021d4a0276d20f13ad4c36c3d6436b86de01b32700a63d43179b185c6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\python\\python.cmd",
+      "exists": true,
+      "bytes": 3913,
+      "sha256": "067b593be7e2b28919302230382b13a71eb566bced0294a991cc6113adb3123f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\python\\python.sh",
+      "exists": true,
+      "bytes": 4804,
+      "sha256": "15e35908d6638b38f2fd53c168324dea3a9177b0235ac954eef7afa2fda5da7f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\python\\requirements-build.txt",
+      "exists": true,
+      "bytes": 288,
+      "sha256": "b94dff298c27659dbc486d62109f34795bd4a4dbe8ead3cd44d9044fbe6ffad6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\python\\requirements.txt",
+      "exists": true,
+      "bytes": 13269,
+      "sha256": "d2891893d22b227c5d85bd4f1d2ebcca63a67c767be64a79cf7121100ddc6a6e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\scripts\\o3de\\setup.py",
+      "exists": true,
+      "bytes": 1102,
+      "sha256": "6f72b0b20c8ce607f6e630af3362c381e3d7056de710feeab79786ebe1658912"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+      "exists": true,
+      "bytes": 1213,
+      "sha256": "31715930ea98dae6277a21c89505da83e3684d42a4c80cc9ee7b93316fc4368a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\Resources\\GameSDK.ico",
+      "exists": true,
+      "bytes": 148143,
+      "sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\Resources\\Splash.bmp",
+      "exists": true,
+      "bytes": 1200056,
+      "sha256": "bbd314f41b90bc9cba384d86eed865568343cbd332568f74c8ca39a08bc43836"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Tools\\LyTestTools\\setup.py",
+      "exists": true,
+      "bytes": 1777,
+      "sha256": "58cbffe0d1301358cb1d712d6fc234b0c431035506149a53e7ffe464045754e5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Tools\\RemoteConsole\\ly_remote_console\\setup.py",
+      "exists": true,
+      "bytes": 1045,
+      "sha256": "5edfd21099d6da870daed538c9e2ef26213ba8ce618a34db772cb7341a0ad5e1"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "tar_executable": "C:\\Windows\\system32\\tar.exe",
+  "tar_argv": [
+    "-tf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz"
+  ],
+  "tar_argc": 2,
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+  "archive_bytes": 7040252,
+  "archive_sha256": "122F6D3A20FD4E8BDC158BCCAE6014F129BE3FAC7F16704EF01E75B8A2491888",
+  "sidecar_expected": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888",
+  "sidecar_match": true,
+  "manifest": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.contents\\SHA256SUMS",
+  "manifest_entry_count": 1336,
+  "manifest_valid_count": 1336,
+  "manifest_payload_bytes": 49718803,
+  "manifest_mismatch_count": 0,
+  "manifest_mismatches": [],
+  "files_directive_count": 1336,
+  "contents_root_file_count": 1337
+}

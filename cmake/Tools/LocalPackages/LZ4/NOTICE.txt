@@ -1,0 +1,38 @@
+JE local LZ4 1.9.4 package
+
+LZ4 source: https://github.com/lz4/lz4/tree/5ff839680134437dbf4678f3d0c7b371d84f4964
+Official tag: v1.9.4, commit 5ff839680134437dbf4678f3d0c7b371d84f4964.
+Archive: https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4
+SHA256: 0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b
+
+The LZ4 core, HC and frame library and its embedded xxHash use BSD-2-Clause.
+Complete copyright, conditions and disclaimers are retained in LICENSES/LZ4
+and in the original public headers. Upstream's CMake support declares CC0;
+its original complete text is retained as build provenance.
+
+The upstream repository also contains GPLv2 tools, examples and tests.
+Those components are not built or packaged by this library-only recipe.
+UPSTREAM-LICENSE-SCOPE.txt records that distinction; it is not a statement
+that this library is GPLv2. The complete GPL tool code is retained only in
+the separately audited immutable source snapshot.
+
+Find/layout and producer configuration are adapted from O3DE
+3p-package-source/package-system/lz4, original 1.9.4-rev1 recipe commit
+68e97674712afd8c5e5c99608b35442da579163a; the reviewed current recipe is
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18. Original glue credits and complete
+Apache-2.0/MIT licence alternatives are retained in LICENSES/O3DE.
+
+This new JE artifact builds the unchanged source with Visual Studio 2022
+v143, Windows x64, Release and the DLL CRT (/MD), in place of historical
+Visual Studio 16. The upstream CLI and legacy CLI are explicitly disabled
+because the engine consumes only the static library. No DLL, debug library,
+new ABI, implicit download or global installation is introduced.
+The original Find's 3rdParty::lz4 and lz4/include, lz4/lib/lz4.lib interface
+is preserved; Release remains the imported archive in every configuration.
+
+The archive's 33 Visual Studio project/resource files have upstream-declared
+CRLF export endings. Every compiled library source, header and CMake input
+matches the pinned Git blob byte for byte. No snapshot or source patch is
+applied. The package name/hash are new; the original O3DE binary's SHA256
+is neither reused nor claimed. Binary compatibility, performance, complete
+redistribution compliance and Editor/runtime rendering remain separate gates.

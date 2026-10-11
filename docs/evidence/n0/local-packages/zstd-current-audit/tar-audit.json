@@ -1,0 +1,302 @@
+{
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e.tar.gz",
+  "archive_sha256": "dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457",
+  "members": 467,
+  "regular_files": 392,
+  "directories": 75,
+  "links": 0,
+  "payload_bytes": 6033546,
+  "casefold_unique_paths": 467,
+  "problems": [],
+  "selected_text_files": [
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/COPYING",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/LICENSE",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "2c1a7fa704df8f3a606f6fc010b8b5aaebf403f3aeec339a12048f1ba7331a0b"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "0840abd51b6f7d2a2f9a800bf66febe7918bf9f4eaafb3fa093681237785aaeb"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "1023801a6a08f601db06c248be946f78cb432d1468ff1abd03613527416ded62"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "b2f99d989ff960b09b5845463cfd4a111840cac906c2672f7452129ec116bb3f"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/VS_scripts/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "5233f818eaab8cbfde8946ffd3d47da595d49439fd82f4c961bebeea0fbaf12f"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "ec60e1204fc4a40800f398e500480e38d8ccb1bfcdc59de112d82d6bbcc51105"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/CMakeModules/AddZstdCompilationFlags.cmake",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "49c47bd80dd5bfb808e344d135d447e9a89b4bbdfff80b8a5d6a3043e731a64b"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/CMakeModules/GetZstdLibraryVersion.cmake",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "e66fe98e26913d0f7c06e816fa5149ec7b9df81a50b97caad432191f09d7854d"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/contrib/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "fdf267765b63f92bcb8e89314c5d3e5d3ec0764b04bebd82499914af3566b75c"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/contrib/gen_html/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "082d19fcaa4103a813722bb519d4fd1ae058f4f18423d27f2241bf1fe624fd81"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/contrib/pzstd/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "ab334b52bc4cdefe5c0fee2e7053d7cb35c9854c4da089f0f16b09c388e2bb79"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/lib/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "8b80d6c4223f14ae66ba3f7f46b0e031c23adff94103a3785790e0a40f799316"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/lib/cmake_uninstall.cmake.in",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "2704e6f52ebd5480c7362adff5fcab321be1ed1e4a19cd89916a47e4a6bce770"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/lib/pkgconfig.cmake",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "cf46b9ea397c602e7fde9b5e3a4a7a2478149c0c34c8e6bd00c499155eaf4ae8"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/programs/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "88a3188300874838a00628c8aad6d496f9d00a810e34ae70e8d78412669bd392"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/build/cmake/tests/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "d4e264225e390afa84d8a06ef314acc4a8684dc172138c43af5154b364a95a80"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/VS2005/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "2e6c807a8c0cdc3fa13705e035419b329dbe2101e7c3324af13625faf06a0dd8"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/adaptive-compression/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "16fbaea057a10e3783bd96460d01e638206229945e2f006d875d4f68b35cda9f"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/adaptive-compression/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d0ab0f09bca44cda95c2bfe4ad32018958d4e5efa17d13357309d05130cf66c1"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/docker/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "160950d155d9d3d1e6c9adb0a464e68878df3bbcd34f62c68471f08a5b0e8a8f"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/gen_html/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "aba62183cb78a12e6ace825a3522c540724df02a5902d0fa4cd92fb0bedac6f4"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/gen_html/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c1188127206b5c255e74ca76739f35b24c3a02a6bc95c6480947c0ec7ac24cf5"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/linux-kernel/COPYING",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/linux-kernel/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "75b98070fb03a0a72daeb2e9800b192698de118f024046c902f099d598811728"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/linux-kernel/lib/zstd/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "aab9f148c951e8ccd356d9c44a089ae650159ce42c3a46d5feb3073c03272ff8"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/linux-kernel/test/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "efd54d9051a2203cd7ebfd365b729a280ddf988f0d31572caf874669bd4d6293"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/pzstd/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "7c2db7edbab8c7bbf267c8dcc537ff4b64ec838655612330598746ca808b99db"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/pzstd/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "1a79e3ede5e6aa6bbc7182a6da9d190534d2f71fc234e7fba9210d6b475740f0"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/contrib/seekable_format/examples/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "66a4aa6199f696e81eea6804c48057dae3f8b61a601075f9dcdb867f5dd28c48"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/doc/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "72b7c953081fc2042a7ba79b730cfa002e9972c9a4d1623b44b7959561c3a2b9"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/doc/educational_decoder/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "af6e7f28015b29d0a7e19ec0bf3c63e3c919052b3b0bc5c601d0ac68fd3e6fd1"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/doc/educational_decoder/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "7c3b0cc1e2487e1b8325ff35700e05159e240cf3b947fd641fa29f81bb552683"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/examples/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "3a2a8546cb8fe32afe0c0a8316fdc533e52782fb82a8009476984ab4b17e39d4"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/examples/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "450b3e204513906a6f2aa3b9c091dc8f08aed6437311ef1ddef04d2cb9e5f8ee"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/lib/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e1e29467be78daf0d593d60c91dc5d1653065baca35cff79362aeb2de4bbf3c4"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/lib/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "90b581a9b92c1f767f3a76d47b7199f5995e90916b9ee33775bcebb498ca10ed"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/lib/dll/example/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "82419340124bec2ff799544429b2e1642b0844b56e329560775667dbf4a2f0f3"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/lib/dll/example/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c453dac3509e9ae0ee36780923c4d412b5aefb5026cf6dbaecf7e74eb81888ea"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/programs/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "7d8b7e5fcfd3ed22b69856dc0a9054fec849e9c2295e5584b764d6e717605f40"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/programs/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "b88f9f0cc5fa3d5ebdcedafd05f86ee395a3fafb7fd30913c983d4ff10bcd01f"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/tests/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "f812257ab9643b5270d6510e6cd78c36b25147701884cf1b27b6dcb9cea43507"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/tests/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "a42d3ae7a3c3f38d1d3f627603a2f4903bf4c6dce888ddf26ecb13d42fb4c1b6"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/tests/fuzz/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "721ffa167a84e24e8b46330eb74d22f9a3a178583d6a4572fd7d5c0f2855225a"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/tests/fuzz/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "0a274c652a18299f4e2ce1aad0f363b59220ad25caeff09115582bdb22351064"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/tests/gzip/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "0f3e9ea94ea578004aedc6de2ebba3374d6ea91572b49bd2096424cdb51245ef"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/zlibWrapper/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "44603af4b98ec335f5efee98a93c44a79b7c5341d960d5246a7af0aa8f64957d"
+    },
+    {
+      "path": "zstd-90ae50224d15e8dbcb9fa26b9be096366733db8e/zlibWrapper/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "1b5ba87aee2e25bed1a449e4a78424c2b42bb4229ed331960aff42575626e13e"
+    }
+  ],
+  "safe_for_regular_file_extraction": true
+}

@@ -1,0 +1,14 @@
+{
+  "url": "https://codeload.github.com/Tencent/rapidjson/tar.gz/24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+  "method": "GET",
+  "status": 200,
+  "authorization": false,
+  "max_redirects": 0,
+  "archive": "F:/JericoEngine/Dependencies/archives/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f.tar.gz",
+  "bytes": 1116703,
+  "sha256": "2d2601a82d2d3b7e143a3c8d43ef616671391034bc46891a9816b79cf2d3e7a8",
+  "upstream_commit": "24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+  "original_consumer_sha256": "2d2601a82d2d3b7e143a3c8d43ef616671391034bc46891a9816b79cf2d3e7a8",
+  "pin_match": true,
+  "utc": "2026-10-10T22:37:49.1552399Z"
+}

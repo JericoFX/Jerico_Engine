@@ -1,0 +1,13 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-cmd-dispatch-diagnostic\\dispatch-diagnostic.cmake"
+  ],
+  "argc": 2,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "native_exit_code": 0,
+  "elapsed_seconds": 0.063,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-cmd-dispatch-diagnostic\\outer.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-cmd-dispatch-diagnostic\\outer.stderr.log"
+}

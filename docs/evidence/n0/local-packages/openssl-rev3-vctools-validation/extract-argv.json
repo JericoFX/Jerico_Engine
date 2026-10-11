@@ -1,0 +1,14 @@
+{
+  "executable": "C:\\Windows\\system32\\tar.exe",
+  "argv": [
+    "-xf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\packages\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "-C",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\extracted\\OpenSSL-1.1.1o-je-rev1-windows"
+  ],
+  "argc": 4,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\extracted\\OpenSSL-1.1.1o-je-rev1-windows",
+  "archive_sha256": "122F6D3A20FD4E8BDC158BCCAE6014F129BE3FAC7F16704EF01E75B8A2491888",
+  "start_utc": "2026-10-11T00:49:08.9181251Z"
+}

@@ -1,0 +1,41 @@
+{
+  "index": 170,
+  "source_path": "Code/Editor/res/Eye_Open_Hidden.tif",
+  "expected_sha256": "aee9510da2669b53f0b0070630af065ba97bde126d7e5dadb2a05a6a04dae20c",
+  "expected_bytes": 5540,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hidden.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:25.077821+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hidden.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "5540",
+      "ETag": "\"aee9510da2669b53f0b0070630af065ba97bde126d7e5dadb2a05a6a04dae20c\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hidden.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:25.440916+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Open_Hidden.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "5540",
+      "ETag": "\"aee9510da2669b53f0b0070630af065ba97bde126d7e5dadb2a05a6a04dae20c\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "aee9510da2669b53f0b0070630af065ba97bde126d7e5dadb2a05a6a04dae20c",
+  "actual_bytes": 5540,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Eye_Open_Hidden.tif",
+  "status": "acquired and byte verified"
+}

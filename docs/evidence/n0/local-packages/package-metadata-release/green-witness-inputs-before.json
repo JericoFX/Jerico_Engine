@@ -1,0 +1,14 @@
+{
+  "helper_sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+  "witness_sha256": "C34909064FE9E852E5EC5A6B34A72B88433A6BEE57C7DE257AB1B23F9894F557",
+  "output_exists": false,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_TEST_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\package-metadata-release\\green-witness",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\package-metadata-release\\release-witness.cmake"
+  ],
+  "argc": 3,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "start_utc": "2026-10-11T00:59:18.7600395Z"
+}

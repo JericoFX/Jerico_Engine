@@ -1,0 +1,266 @@
+{
+  "freeze_sha256": "5F51D21E2DFD8A904559B6091D04CA60BCD4B8866EB731678E93FE5F6C1B9724",
+  "freeze_before": [
+    {
+      "path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+      "expected": "cb09dd9769fbbd93b5590db8128e755fc083e9fba9cf1f365d2f8d2d76065e00",
+      "actual": "cb09dd9769fbbd93b5590db8128e755fc083e9fba9cf1f365d2f8d2d76065e00",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+      "expected": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684",
+      "actual": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+      "expected": "4430c0085bc9717fec7c5c333e4c4a0757dd24eec9cad6db6026ad8f51bef392",
+      "actual": "4430c0085bc9717fec7c5c333e4c4a0757dd24eec9cad6db6026ad8f51bef392",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+      "expected": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d",
+      "actual": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+      "expected": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1",
+      "actual": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+      "expected": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a",
+      "actual": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+      "expected": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814",
+      "actual": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+      "expected": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a",
+      "actual": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+      "expected": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5",
+      "actual": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "expected": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+      "actual": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+      "match": true
+    }
+  ],
+  "freeze_after": [
+    {
+      "path": "cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake",
+      "expected": "cb09dd9769fbbd93b5590db8128e755fc083e9fba9cf1f365d2f8d2d76065e00",
+      "actual": "cb09dd9769fbbd93b5590db8128e755fc083e9fba9cf1f365d2f8d2d76065e00",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/FindPython.cmake",
+      "expected": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684",
+      "actual": "389832d7441afad6296ba6e50ff021654d28979e70f955d0eddad05993da6684",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/NOTICE.txt",
+      "expected": "4430c0085bc9717fec7c5c333e4c4a0757dd24eec9cad6db6026ad8f51bef392",
+      "actual": "4430c0085bc9717fec7c5c333e4c4a0757dd24eec9cad6db6026ad8f51bef392",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/python-config-version.cmake",
+      "expected": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d",
+      "actual": "18ff68cb13d64e2abe13eba169a45422f1ff59a6751f4cf3f20f51a4fd5ffd4d",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/python-config.cmake",
+      "expected": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1",
+      "actual": "afceb472fb29b7d56d65c69869eab14ed86615f1ca7146fa255bbba672fa45b1",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/CMakeLists.txt",
+      "expected": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a",
+      "actual": "00f50e86d2896f33a81fb5d11326dd482bfb3c63c98997390e36e7dcaad5150a",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/PythonEmbed.cpp",
+      "expected": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814",
+      "actual": "cd46b20fc2deec2279b3d7f46e77544890f75540fad2875bd3b200776e1c2814",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake",
+      "expected": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a",
+      "actual": "8ef2416167827149a0d66f258e3b831d9c2c5d8de0e9f71fb9b39f7fecf1347a",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/Python/tests/RuntimeTest.py",
+      "expected": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5",
+      "actual": "b555f60b2980a8c85221c5116af06047d1de6c5823c4cb6f8aec3c2e790a6cb5",
+      "match": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "expected": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+      "actual": "b067c707919808dda7697ce79efec94a31029ff03b6cc383e374209cc8b68e38",
+      "match": true
+    }
+  ],
+  "freeze_unchanged": true,
+  "package_before": {
+    "archive_sha256": "557adc2ca61d8c4b43bbd050a68aadf5cdf6884d2a176b8a623a9c3fdf171876",
+    "manifest_sha256": "9F31B4212B623710F3CE557800FAB82B29BF5F14CE989FE551FD7DE9041CF0A8",
+    "files": 3282,
+    "payload_bytes": 104677631.0
+  },
+  "package_after": {
+    "archive_sha256": "557adc2ca61d8c4b43bbd050a68aadf5cdf6884d2a176b8a623a9c3fdf171876",
+    "manifest_sha256": "9F31B4212B623710F3CE557800FAB82B29BF5F14CE989FE551FD7DE9041CF0A8"
+  },
+  "package_unchanged": true,
+  "configure": {
+    "name": "configure",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "argv_count": 9,
+    "argv": [
+      "-S",
+      "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests",
+      "-B",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-DJE_PYTHON_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev2\\extracted\\python-3.10.13-je-rev2-windows"
+    ],
+    "started": "2026-10-10T19:47:02.4254646-03:00",
+    "exitcode": 0,
+    "elapsed_seconds": 5.7917649,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\configure.log"
+  },
+  "builds": [
+    {
+      "name": "build-Release",
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv_count": 6,
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer",
+        "--target",
+        "JEPythonEmbed",
+        "--config",
+        "Release"
+      ],
+      "started": "2026-10-10T19:47:08.2411336-03:00",
+      "exitcode": 0,
+      "elapsed_seconds": 3.0947098,
+      "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\build-Release.log"
+    },
+    {
+      "name": "build-Debug",
+      "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv_count": 6,
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer",
+        "--target",
+        "JEPythonEmbed",
+        "--config",
+        "Debug"
+      ],
+      "started": "2026-10-10T19:47:11.3382454-03:00",
+      "exitcode": 0,
+      "elapsed_seconds": 3.0532072,
+      "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\build-Debug.log"
+    }
+  ],
+  "ctest_release": {
+    "name": "ctest-release",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+    "argv_count": 6,
+    "argv": [
+      "--test-dir",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "-V"
+    ],
+    "started": "2026-10-10T19:47:14.3985921-03:00",
+    "exitcode": 8,
+    "elapsed_seconds": 1.0006945,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\ctest-release.log"
+  },
+  "ctest_debug_embed": {
+    "name": "ctest-debug-embed",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+    "argv_count": 8,
+    "argv": [
+      "--test-dir",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer",
+      "-C",
+      "Debug",
+      "--output-on-failure",
+      "-V",
+      "-R",
+      "^JE\\.LocalPackages\\.PythonEmbed$"
+    ],
+    "started": "2026-10-10T19:47:15.4043000-03:00",
+    "exitcode": 8,
+    "elapsed_seconds": 0.5217147,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\ctest-debug-embed.log"
+  },
+  "runtime": {
+    "name": "rev2-runtime-provenance",
+    "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+    "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-provenance-rev2\\extracted\\python-3.10.13-je-rev2-windows\\python\\python.exe",
+    "argv_count": 4,
+    "argv": [
+      "-I",
+      "-B",
+      "-c",
+      "import ctypes,json,sys; ctypes.pythonapi.Py_GetBuildInfo.restype=ctypes.c_char_p; ctypes.pythonapi.Py_GetVersion.restype=ctypes.c_char_p; print(json.dumps({\"version\":sys.version,\"sys_git\":sys._git,\"py_get_build_info\":ctypes.pythonapi.Py_GetBuildInfo().decode(\"ascii\"),\"py_get_version\":ctypes.pythonapi.Py_GetVersion().decode(\"ascii\")}))"
+    ],
+    "started": "2026-10-10T19:47:15.9288549-03:00",
+    "exitcode": 0,
+    "elapsed_seconds": 0.1048865,
+    "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev2-consumer-evidence\\rev2-runtime-provenance.log"
+  },
+  "lasttest_release_sha": "563CDF84A006123DFA64930F987448053816AF78DEA605AA2D9D16FBC28B5EDA",
+  "lasttest_debug_sha": "FBE7B462E763EEBA055EB763CC3C0DC68B1F574FA0B20AEFC8947A6768FA79D1"
+}

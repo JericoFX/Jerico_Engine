@@ -1,0 +1,21 @@
+{
+  "status": "NOT_PASS_harness_capture_failure",
+  "native_exit_code": null,
+  "native_elapsed_seconds": null,
+  "reason": "PowerShell 7 treated native CMake stderr as a terminating NativeCommandError under ErrorActionPreference=Stop before runner could record LASTEXITCODE or elapsed time",
+  "observed_cmake_error": "CMake Error at JECreateLocalPackage.cmake:12 (message)",
+  "helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+  "expected_helper_sha256": "B067C707919808DDA7697CE79EFEC94A31029FF03B6CC383E374209CC8B68E38",
+  "witness_sha256": "C34909064FE9E852E5EC5A6B34A72B88433A6BEE57C7DE257AB1B23F9894F557",
+  "expected_witness_sha256": "C34909064FE9E852E5EC5A6B34A72B88433A6BEE57C7DE257AB1B23F9894F557",
+  "output_exists": true,
+  "stage_payload_exists": true,
+  "stage_payload_bytes": 29,
+  "stage_payload_sha256": "AC2A9507D99E6EAA0B4D60F11106D48F93EB0898660233C6F63F6A1ED24AF9F8",
+  "packages_dir_exists": false,
+  "archive_exists": false,
+  "package_info_exists": false,
+  "stdout_log_bytes": 0,
+  "stderr_log_bytes": 0,
+  "timestamp_utc": "2026-10-11T00:56:03.4429904Z"
+}

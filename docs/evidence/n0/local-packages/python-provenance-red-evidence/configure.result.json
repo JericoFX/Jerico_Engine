@@ -1,0 +1,21 @@
+{
+  "name": "configure",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-red",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DJE_PYTHON_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-v143-rev2\\extracted\\python-3.10.13-je-rev1-windows"
+  ],
+  "argv_count": 9,
+  "started": "2026-10-10T19:37:05.9167488-03:00",
+  "exitcode": 0,
+  "elapsed_seconds": 5.9195389,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-red-evidence\\configure.log"
+}

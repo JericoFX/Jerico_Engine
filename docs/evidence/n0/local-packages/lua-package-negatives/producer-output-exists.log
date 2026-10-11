@@ -1,0 +1,5 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Lua/BuildLuaPackage.cmake:26 (message):
+  JE local Lua: output already exists:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lua-neg-existing-output
+
+

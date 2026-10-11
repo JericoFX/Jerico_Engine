@@ -1,0 +1,41 @@
+{
+  "index": 54,
+  "source_path": "Code/Editor/MainWindow/proceduralmaterial_toolbar.png",
+  "expected_sha256": "2597ca0afb21ee1310975cdab417c85ff994f4da89e70e824e33bddc3e23a2cb",
+  "expected_bytes": 463,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/proceduralmaterial_toolbar.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:26:02.240135+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/proceduralmaterial_toolbar.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "463",
+      "ETag": "\"2597ca0afb21ee1310975cdab417c85ff994f4da89e70e824e33bddc3e23a2cb\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/proceduralmaterial_toolbar.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:26:02.723437+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/MainWindow/proceduralmaterial_toolbar.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "463",
+      "ETag": "\"2597ca0afb21ee1310975cdab417c85ff994f4da89e70e824e33bddc3e23a2cb\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "2597ca0afb21ee1310975cdab417c85ff994f4da89e70e824e33bddc3e23a2cb",
+  "actual_bytes": 463,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\MainWindow\\proceduralmaterial_toolbar.png",
+  "status": "acquired and byte verified"
+}

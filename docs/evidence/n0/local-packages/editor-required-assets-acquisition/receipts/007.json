@@ -1,0 +1,41 @@
+{
+  "index": 7,
+  "source_path": "Assets/Engine/Fonts/VeraMono.ttf",
+  "expected_sha256": "da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d",
+  "expected_bytes": 49224,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/VeraMono.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:25:17.038146+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/VeraMono.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "49224",
+      "ETag": "\"da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/VeraMono.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:25:17.471844+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Assets/Engine/Fonts/VeraMono.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "49224",
+      "ETag": "\"da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "da4281dc7db17a3dfce64a62ced92875c5895340055ec8ba24a3914eb97b349d",
+  "actual_bytes": 49224,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Assets\\Engine\\Fonts\\VeraMono.ttf",
+  "status": "acquired and byte verified"
+}

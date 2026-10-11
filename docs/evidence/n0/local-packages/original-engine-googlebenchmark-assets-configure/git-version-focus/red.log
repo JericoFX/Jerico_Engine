@@ -1,0 +1,7 @@
+-- Building for: Visual Studio 17 2022
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- git version: v3.2.1 normalized to 3.2.1
+-- FOCUS_RED_CONFIRMED: disabling FindGit still ran inherited FakeGit 3 times; GIT_VERSION=3.2.1
+-- Configuring done (1.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/original-engine-googlebenchmark-assets-configure/git-version-focus/red-build

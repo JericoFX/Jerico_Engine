@@ -1,0 +1,52 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (6.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-local-v2/build
+Versi├│n de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/CMakeLists.txt
+  main.c
+  directive.c
+  eval.c
+  expand.c
+  support.c
+  system.c
+  mbchar.c
+  Generando c├│digo...
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\expand.c(713,21): warning C4133: '=': tipos incompatibles, de 'LOCATION *' a 'char *' [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\expand.c(1975,41): warning C4090: '=': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(1603,19): warning C4090: 'funci├│n': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(1609,19): warning C4090: 'funci├│n': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(1612,22): warning C4090: '=': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(2345,21): warning C4090: 'funci├│n': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\system.c(4285,20): warning C4090: '=': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppDll.vcxproj]
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-local-v2/build/Release/mcpp0.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-local-v2/build/Release/mcpp0.exp
+  JEMcppDll.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\Release\mcpp0.dll
+Versi├│n de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/CMakeLists.txt
+  main.c
+  directive.c
+  eval.c
+  expand.c
+  support.c
+  system.c
+  mbchar.c
+  Generando c├│digo...
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\expand.c(713,21): warning C4133: '=': tipos incompatibles, de 'LOCATION *' a 'char *' [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\expand.c(1975,41): warning C4090: '=': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(1603,19): warning C4090: 'funci├│n': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(1609,19): warning C4090: 'funci├│n': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(1612,22): warning C4090: '=': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\support.c(2345,21): warning C4090: 'funci├│n': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\source-work\mcpp-2.7.2\src\system.c(4285,20): warning C4090: '=': calificadores 'const' diferentes [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\JEMcppCli.vcxproj]
+  JEMcppCli.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\mcpp-rev2-validation\mcpp-local-v2\build\Release\mcpp.exe
+-- JE local package archive: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/mcpp-local-v2/packages/mcpp-2.7.2_az.2-je-rev1-windows.tar.xz
+-- JE local package SHA256: 4c4ae3b71be82837b18090029d7ec49a19af80c12b35008b70a0d6f967acc589

@@ -1,0 +1,149 @@
+[
+  {
+    "manifest": "root-freeze",
+    "beforeCount": 393,
+    "afterCount": 393,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googlebenchmark-freeze",
+    "beforeCount": 174,
+    "afterCount": 174,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "sqlite-root-inputs",
+    "beforeCount": 8,
+    "afterCount": 8,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "root-package-cache",
+    "beforeCount": 20,
+    "afterCount": 20,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "wheelhouse",
+    "beforeCount": 44,
+    "afterCount": 44,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "mimalloc-source-before",
+    "beforeCount": 382,
+    "afterCount": 382,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "rapidjson-source-before",
+    "beforeCount": 313,
+    "afterCount": 313,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googlebenchmark-tree-before",
+    "beforeCount": 173,
+    "afterCount": 173,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "sqlite-source-before",
+    "beforeCount": 4,
+    "afterCount": 4,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "manifold-original-before",
+    "beforeCount": 378,
+    "afterCount": 378,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "manifold-private-before",
+    "beforeCount": 378,
+    "afterCount": 378,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "clipper-original-before",
+    "beforeCount": 223,
+    "afterCount": 223,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "clipper-private-before",
+    "beforeCount": 223,
+    "afterCount": 223,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "openmesh-original-before",
+    "beforeCount": 611,
+    "afterCount": 611,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "openmesh-private-before",
+    "beforeCount": 611,
+    "afterCount": 611,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "python-rev3-before",
+    "beforeCount": 10400,
+    "afterCount": 10400,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "engine-packages-before",
+    "beforeCount": 5006,
+    "afterCount": 5033,
+    "deltaCount": 27,
+    "deltas": [
+      "changed-or-added:lz4-1.9.4-je-rev1-windows.stamp",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\Findlz4.cmake",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\JERequireLocalPath.cmake",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\NOTICE.txt",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\PackageInfo.json",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\README.md",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\SHA256SUMS",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\LICENSE",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\upstream-CMakeLists.txt",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\UPSTREAM-LICENSE-SCOPE.txt",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4.c",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4frame_static.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4frame.c",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4frame.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4hc.c",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\lz4hc.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\xxhash.c",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\LZ4\\library\\xxhash.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_APACHE2.TXT",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_MIT.TXT",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\LICENSES\\O3DE\\LICENSE.txt",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\lz4\\JERecipe.json",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\lz4\\include\\lz4.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\lz4\\include\\lz4frame.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\lz4\\include\\lz4hc.h",
+      "changed-or-added:lz4-1.9.4-je-rev1-windows\\lz4\\lib\\lz4.lib"
+    ]
+  }
+]

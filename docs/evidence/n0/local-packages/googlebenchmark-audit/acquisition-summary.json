@@ -1,0 +1,82 @@
+{
+  "status": "source acquired, wrapper guard integrated; configure/build validation pending Luna",
+  "acquisition": {
+    "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+    "archive": "F:\\JericoEngine\\Dependencies\\archives\\googlebenchmark-v1.7.0.tar.gz",
+    "bytes": 194165,
+    "sha256": "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac",
+    "receipts": [
+      {
+        "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+        "method": "HEAD",
+        "status": 200,
+        "final_url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+        "utc": "2026-10-10T23:36:10.900705+00:00",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Type": "application/x-gzip",
+          "Content-Length": null,
+          "ETag": "\"f86727198b7597cdccc3a9a9064b764598d5c8abda87b8f5f399974327f4a4ff\"",
+          "Location": null
+        }
+      },
+      {
+        "url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+        "method": "GET",
+        "status": 200,
+        "final_url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+        "utc": "2026-10-10T23:36:11.198320+00:00",
+        "authorization": false,
+        "automatic_redirects": false,
+        "headers": {
+          "Content-Type": "application/x-gzip",
+          "Content-Length": null,
+          "ETag": "\"f86727198b7597cdccc3a9a9064b764598d5c8abda87b8f5f399974327f4a4ff\"",
+          "Location": null
+        }
+      }
+    ]
+  },
+  "tar": {
+    "archive_sha256": "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac",
+    "commit": "361e8d1cfe0c6c36d30b39f1b61302ece5507320",
+    "members": 190,
+    "regular_files": 173,
+    "regular_bytes": 864912,
+    "links": 0,
+    "all_commit_blob_matches": true,
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "snapshot": "F:\\JericoEngine\\Dependencies\\googlebenchmark-1.7.0",
+  "source_all_sha256_checked": true,
+  "all_source_commit_blobs_match": true,
+  "source_patch": false,
+  "source_writes": "None performed after extraction; upstream generated files use binary dirs. Wrapper now blocks upstream three Git queries/index refresh by disabling FindGit and shadowing inherited/cache GIT_EXECUTABLE with empty normal variable.",
+  "guard": {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\FindGoogleBenchmark.cmake",
+    "before_sha256": "332858760a3ebd76652f99f403e8ec232533bb1f2e1a70aabae8310bcce278ab",
+    "after_sha256": "1d8b7db0a56b9c3d1105d9ce008c21259a2dc2be589db9d5602ab9dee7ec5792",
+    "before_bytes": 4823,
+    "after_bytes": 5068,
+    "inserted_text": "    # Archive sources must not query an ancestor repository or refresh its Git index.\r\n    # Shadow inherited/cache executables: upstream checks GIT_EXECUTABLE directly.\r\n    set(CMAKE_DISABLE_FIND_PACKAGE_Git ON)\r\n    set(GIT_EXECUTABLE \"\")\r\n\r\n",
+    "all_other_bytes_unchanged": true,
+    "original_bom": false,
+    "before_crlf": 125,
+    "after_crlf": 130,
+    "bare_lf_before": 0,
+    "bare_lf_after": 0,
+    "configure_or_test_executed": false
+  },
+  "license": "Apache-2.0; full LICENSE, AUTHORS, CONTRIBUTORS and all source notices intact; no separate NOTICE in pinned tree",
+  "current_wrapper_features_preserved": true,
+  "no_download_paths_active_with_wrapper_options": "GTest ExternalProject download remains behind disabled testing/gtests/bundled/download options; no active upstream network commands found in current CMake path.",
+  "source_override": "-DFETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=F:/JericoEngine/Dependencies/googlebenchmark-1.7.0",
+  "freeze_inputs": 174,
+  "source_notices_files": 44,
+  "limits": [
+    "No CMake, build, native probe, benchmark, tests, install or Git commands executed.",
+    "Effective inherited-Git guard, engine integration, ABI, runtime/performance and redistribution acceptance remain pending parent/Luna.",
+    "Earlier audit-summary.json records the pre-acquisition proposal; acquisition-summary.json and wrapper-guard-change.json reflect this later authorized acquisition and guard."
+  ]
+}

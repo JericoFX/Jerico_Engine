@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: SQLite source sqlite3.h SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/sqlite-3530400-validation/BlobChanged-corrected/fixtures/source/sqlite3.h
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/SQLite/VerifySQLiteSource.cmake:37 (JE_python_verify_file)
+
+

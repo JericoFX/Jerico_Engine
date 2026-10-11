@@ -1,0 +1,15 @@
+{
+  "officialUrl": "https://www.openssl.org/source/old/1.1.1/openssl-1.1.1o.tar.gz",
+  "archive": "F:/JericoEngine/Dependencies/archives/openssl-1.1.1o.tar.gz",
+  "bytes": 9856386,
+  "sha512": "75b2f1499cb4640229eb6cd35d85cbff2e19db17b959ac4d04b60f1b395b73567f9003521452a0fcfeea9b31b26de0a7bccf476ecf9caae02298f3647cfb7e23",
+  "expectedSha512": "75b2f1499cb4640229eb6cd35d85cbff2e19db17b959ac4d04b60f1b395b73567f9003521452a0fcfeea9b31b26de0a7bccf476ecf9caae02298f3647cfb7e23",
+  "pinMatches": true,
+  "sha256": "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f",
+  "sourceVersion": "1.1.1o",
+  "sourceCommit": "ca2e0784d2c38edcefd5d68028f4d954bd8faddb",
+  "autoRedirect": false,
+  "credentials": "none",
+  "signedQueriesPersisted": false,
+  "extracted": false
+}

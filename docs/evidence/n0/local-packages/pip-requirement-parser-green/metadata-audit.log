@@ -1,0 +1,343 @@
+{
+  "python_version": "3.10.13 (cpython-3.10.13-archive:49965601d6afedafe47cc85556d99b7a24981051, Oct 10 2026, 2) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\Scripts\\python.exe",
+  "pip_version": "23.0.1",
+  "requirements_lexical_count": 43,
+  "requirements_installed_count": 42,
+  "requirement_pins": [
+    {
+      "line": 1,
+      "name": "pluggy",
+      "expected": "1.6.0",
+      "actual": "1.6.0",
+      "pass": true
+    },
+    {
+      "line": 3,
+      "name": "atomicwrites",
+      "expected": "1.4.1",
+      "actual": "1.4.1",
+      "pass": true
+    },
+    {
+      "line": 6,
+      "name": "attrs",
+      "expected": "20.1.0",
+      "actual": "20.1.0",
+      "pass": true
+    },
+    {
+      "line": 10,
+      "name": "certifi",
+      "expected": "2024.07.04",
+      "actual": "2024.7.4",
+      "pass": false
+    },
+    {
+      "line": 12,
+      "name": "charset-normalizer",
+      "expected": "2.0.10",
+      "actual": "2.0.10",
+      "pass": true
+    },
+    {
+      "line": 16,
+      "name": "colorama",
+      "expected": "0.4.3",
+      "actual": "0.4.3",
+      "pass": true
+    },
+    {
+      "line": 20,
+      "name": "docutils",
+      "expected": "0.15.2",
+      "actual": "0.15.2",
+      "pass": true
+    },
+    {
+      "line": 25,
+      "name": "easyprocess",
+      "expected": "0.2.8",
+      "actual": "0.2.8",
+      "pass": true
+    },
+    {
+      "line": 29,
+      "name": "exceptiongroup",
+      "expected": "1.0.4",
+      "actual": "1.0.4",
+      "pass": true
+    },
+    {
+      "line": 31,
+      "name": "gitdb",
+      "expected": "4.0.10",
+      "actual": "4.0.10",
+      "pass": true
+    },
+    {
+      "line": 35,
+      "name": "smmap",
+      "expected": "5.0.0",
+      "actual": "5.0.0",
+      "pass": true
+    },
+    {
+      "line": 39,
+      "name": "gitpython",
+      "expected": "3.1.44",
+      "actual": "3.1.44",
+      "pass": true
+    },
+    {
+      "line": 42,
+      "name": "idna",
+      "expected": "3.7",
+      "actual": "3.7",
+      "pass": true
+    },
+    {
+      "line": 44,
+      "name": "imageio",
+      "expected": "2.8.0",
+      "actual": "2.8.0",
+      "pass": true
+    },
+    {
+      "line": 48,
+      "name": "importlib-metadata",
+      "expected": "1.6.1",
+      "actual": "1.6.1",
+      "pass": true
+    },
+    {
+      "line": 52,
+      "name": "jinja2",
+      "expected": "3.1.6",
+      "actual": "3.1.6",
+      "pass": true
+    },
+    {
+      "line": 54,
+      "name": "jmespath",
+      "expected": "0.9.5",
+      "actual": "0.9.5",
+      "pass": true
+    },
+    {
+      "line": 58,
+      "name": "markupsafe",
+      "expected": "3.0.2",
+      "actual": "3.0.2",
+      "pass": true
+    },
+    {
+      "line": 62,
+      "name": "more-itertools",
+      "expected": "8.4.0",
+      "actual": "8.4.0",
+      "pass": true
+    },
+    {
+      "line": 66,
+      "name": "numpy",
+      "expected": "1.23.0",
+      "actual": "1.23.0",
+      "pass": true
+    },
+    {
+      "line": 90,
+      "name": "packaging",
+      "expected": "20.4",
+      "actual": "20.4",
+      "pass": true
+    },
+    {
+      "line": 94,
+      "name": "patch-ng",
+      "expected": "1.19.1",
+      "actual": "1.19.1",
+      "pass": true
+    },
+    {
+      "line": 97,
+      "name": "pillow",
+      "expected": "10.3.0",
+      "actual": "10.3.0",
+      "pass": true
+    },
+    {
+      "line": 103,
+      "name": "progressbar2",
+      "expected": "3.53.1",
+      "actual": "3.53.1",
+      "pass": true
+    },
+    {
+      "line": 107,
+      "name": "psutil",
+      "expected": "5.9.8",
+      "actual": "5.9.8",
+      "pass": true
+    },
+    {
+      "line": 125,
+      "name": "pyparsing",
+      "expected": "2.4.7",
+      "actual": "2.4.7",
+      "pass": true
+    },
+    {
+      "line": 129,
+      "name": "pyscreenshot",
+      "expected": "0.6",
+      "actual": "0.6",
+      "pass": true
+    },
+    {
+      "line": 133,
+      "name": "pytest-mock",
+      "expected": "3.8.2",
+      "actual": "3.8.2",
+      "pass": true
+    },
+    {
+      "line": 137,
+      "name": "pytest-timeout",
+      "expected": "2.1.0",
+      "actual": "2.1.0",
+      "pass": true
+    },
+    {
+      "line": 141,
+      "name": "pytest",
+      "expected": "7.2.0",
+      "actual": "7.2.0",
+      "pass": true
+    },
+    {
+      "line": 144,
+      "name": "python-dateutil",
+      "expected": "2.8.1",
+      "actual": "2.8.1",
+      "pass": true
+    },
+    {
+      "line": 148,
+      "name": "python-utils",
+      "expected": "2.5.6",
+      "actual": "2.5.6",
+      "pass": true
+    },
+    {
+      "line": 152,
+      "name": "requests",
+      "expected": "2.32.0",
+      "actual": "2.32.0",
+      "pass": true
+    },
+    {
+      "line": 154,
+      "name": "scipy",
+      "expected": "1.8.1",
+      "actual": "1.8.1",
+      "pass": true
+    },
+    {
+      "line": 180,
+      "name": "six",
+      "expected": "1.13.0",
+      "actual": "1.13.0",
+      "pass": true
+    },
+    {
+      "line": 184,
+      "name": "urllib3",
+      "expected": "1.26.19",
+      "actual": "1.26.19",
+      "pass": true
+    },
+    {
+      "line": 187,
+      "name": "wcwidth",
+      "expected": "0.2.5",
+      "actual": "0.2.5",
+      "pass": true
+    },
+    {
+      "line": 191,
+      "name": "zipp",
+      "expected": "3.19.1",
+      "actual": "3.19.1",
+      "pass": true
+    },
+    {
+      "line": 193,
+      "name": "tomli",
+      "expected": "2.0.1",
+      "actual": "2.0.1",
+      "pass": true
+    },
+    {
+      "line": 196,
+      "name": "iniconfig",
+      "expected": "1.1.1",
+      "actual": "1.1.1",
+      "pass": true
+    },
+    {
+      "line": 199,
+      "name": "toml",
+      "expected": "0.10.2",
+      "actual": "0.10.2",
+      "pass": true
+    },
+    {
+      "line": 202,
+      "name": "resolvelib",
+      "expected": "0.9.0",
+      "actual": "0.9.0",
+      "pass": true
+    },
+    {
+      "line": 205,
+      "name": "puremagic",
+      "expected": "1.28",
+      "actual": "1.28",
+      "pass": true
+    }
+  ],
+  "build_requirements": {
+    "pins": [
+      {
+        "name": "wheel",
+        "version": "0.38.4"
+      }
+    ],
+    "installed_versions": {
+      "wheel": "0.38.4"
+    },
+    "unique_wheel_0384": true
+  },
+  "aws_absence": [
+    {
+      "name": "boto3",
+      "distribution_version": null,
+      "module_spec": false,
+      "absent": true
+    },
+    {
+      "name": "botocore",
+      "distribution_version": null,
+      "module_spec": false,
+      "absent": true
+    },
+    {
+      "name": "s3transfer",
+      "distribution_version": null,
+      "module_spec": false,
+      "absent": true
+    }
+  ],
+  "all_pass": false
+}

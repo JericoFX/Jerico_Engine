@@ -1,0 +1,704 @@
+{
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\openssl-1.1.1o.tar.gz",
+  "archive_sha256": "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f",
+  "members": 3252,
+  "regular_files": 3093,
+  "directories": 159,
+  "links": 0,
+  "payload_bytes": 41447592,
+  "casefold_unique_paths": 3252,
+  "problems": [],
+  "selected_text_files": [
+    {
+      "path": "openssl-1.1.1o/Configurations/00-base-templates.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "8a59b4d78963965f01d3abfae92aa76a375515e9115033f2457088e1472b4fed"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/10-main.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "95956497303fa922fc7534785adcd7f985b9a850bd41e8ff6a97d73fb5733df9"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/15-android.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "aa261a39414c1e9884e7e81962642310e57a556511696e42eb0cbe02374fafb0"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/15-ios.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "26ad7be0c3826195eddf9c19d3d385fa3dfd90869bb3f46fd452cddefd324ad7"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/50-djgpp.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "a1ce6facf2a76952f9924a2c0e671b750d6822f1b43cf9ddc0f4859eb3fd3435"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/50-haiku.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "a91ffac31fa2fbac0c4ac04cea16d48c5c34129e94bd008eacf2e3ddde3dbe96"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/50-masm.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "45e544fc21dc1ef1945beb8090251f1827ee5a6cad56e4c23d6fd4721205314c"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/50-win-onecore.conf",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "2e2f626d9d60beb243f2cb7aa62161d1cb830aae58cf8e50dccc6ed5efe4008b"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/INTERNALS.Configure",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "3d54a61916deb1f715d24df0e10184d6f1ad557bc7addae9e8747e33ae7fa58d"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "0f61201ab182fc25b22c29cd8322bcb3627c0c15bc2ab009b4456ced19d72ea0"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/README.design",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "74dbfdf425cc4306bc450bbdb8db0143d944627e8044517de1ab5d5e618ae123"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/common.tmpl",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "efb432110f945075caa4dbc8471f903d333a303348bf4b8bf8072fc17208ec23"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/common0.tmpl",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "aa5afd98d4cad920099be90dd991884c21b3f4598bffd2e22c8552872cc5fc88"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/descrip.mms.tmpl",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "ac8534b9b44abecb7c413682c90bdcf2fa8cafc0577634bbb7beecd83f0dbf78"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/shared-info.pl",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "8c9d8a35b536650aec08e192cebddd077dd93f1a2ba8e8e39173649991381b92"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/unix-Makefile.tmpl",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "bd8641183cab699da64ea22d5d41025499ca9c8a69dc4d9da73446e36004ab46"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/unix-checker.pm",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "86716919b8ed8989dbec32b425161ef9950b809c3fe019e426051885e1489776"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/windows-checker.pm",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "59edc790aa4120df7c2aa3214e1f51b0a044190614ba653df2255be286359366"
+    },
+    {
+      "path": "openssl-1.1.1o/Configurations/windows-makefile.tmpl",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "eedf0a0c8c4f83744f0f73d302f0972e4610ab106338cb3ec4a4c427dd62c394"
+    },
+    {
+      "path": "openssl-1.1.1o/Configure",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "f0c2aa390e353e572106d9c84ea9ef985abd114baa388b2bbdd6337e7e009c45"
+    },
+    {
+      "path": "openssl-1.1.1o/INSTALL",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "dceae9bed597d526a126f95507263563800777f6a1ce218cd0d1b5aaeed8a6d0"
+    },
+    {
+      "path": "openssl-1.1.1o/LICENSE",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "c32913b33252e71190af2066f08115c69bc9fddadf3bf29296e20c835389841c"
+    },
+    {
+      "path": "openssl-1.1.1o/NOTES.PERL",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d191543a4f97ab7df62f25e75138802bf85a31e082d64773da3a50188c493ec7"
+    },
+    {
+      "path": "openssl-1.1.1o/NOTES.WIN",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d63cc8b622130bc05eb6b7dfc0688e70c90da1bb15bd6504081e113a9446fa6f"
+    },
+    {
+      "path": "openssl-1.1.1o/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "3a803b22b37277f4cbc8cba5012ccb3e7ede2734363f247ae9f90537440e5b1b"
+    },
+    {
+      "path": "openssl-1.1.1o/apps/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c6e41aa4d47403adc5f3c1382da77052a4e168f423523265be870cabf82cb825"
+    },
+    {
+      "path": "openssl-1.1.1o/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "1fafb451a7cfabd49372a2485f99acf6a5aefbf1872464a309c9bc79ee1afb31"
+    },
+    {
+      "path": "openssl-1.1.1o/config",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "794a62848261f669b46d7c10a0de1f4f0b0c6c401359deeeed0b57a4e58787a4"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/aes/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "4fd9b60b8eba57c73ec8037325770b682151c84e5c8c74a8f9f87b27791c2fa8"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/aria/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "506e26da9ed2bd9dd14a25f593e649c5acf25bd5a56e43ccef16ec59614bb2e4"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/asn1/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "fa44195e9e9134c468cd6cc4dc319a10b42efdfad2afc0c24c6c09ab03fe6244"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/async/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "0f207664fd179f0da32133b314a3a12d882ca0767bd933223987e512f38b6559"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/bf/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "18fc244655787eba13a938e63be44df66237ff9c61c652f9373abf0e1944de2d"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/bio/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c06b0ab353777e854ec2e3fb06da384d5feacf7b6a7a793a86f953f75727f9df"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/blake2/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "32d94885a66457adde2492c1f54d8eff2470fabc56714ff452656d26e0dc5dd2"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/bn/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c8caf83e7eae6fef8838b21f1d49b3036d877a5d60c9c9466d35fffe71679bb9"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/buffer/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "a49cd5c09fa81fe79c92a2746795f4ab03664edb564fe967e02ab630051fbb65"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "01a8fcab56106ee83cdab9aa3d57c014e2794e7f973bb164c98dbd1f6252fda4"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/camellia/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c329591bf1ddf3b43874ba5f16edc771dfc3609b59692a67ab9be5329ebc2984"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/cast/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d50ce511fda2f776ef1b01ab2904a95105177b8e220d16ec08823ad4003c568e"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/chacha/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "9fc715460c418da09ed9b1f3b0c2955d05e1a601ea08c722e03cd3e093d21355"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/cmac/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "4cab4dd7922065b919ea2fab534ea5b2425671a385a9bcc339b034b90b18a1a3"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/cms/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "b60b5fcd1a7bdd099d8d6ad6dff76d38a2f2f6d69206f606e7b31f2512ed8c78"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/comp/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "85bf6e692117dae30cbc494d4eba2d702cd3cae6f89fa09b7ca0fd4456a7ce2f"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/conf/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "b43b86c91fce5501f6f7f3be1ae0563ad61a11a6dc923d51b1cbfd38642b69d4"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/ct/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "cba8cc48d6e1afd7524a791dd853ab68b711e20242e53d34f7bc69cfddfb58a1"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/des/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e9313f6656218289223c13eded0ee42c0ef2a907ba1cad0d921895d5897f6033"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/dh/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e2bcc399874d63bd088982f115a561fffb4e0dbb441bb7b594d5599e9c65a718"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/dsa/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "085045ec79ec9a5862b89a021c7489ddcdcfbcd11282a5427c261f607799b003"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/dso/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "f3ac516f673b6627cdd424b8a0187dc1204454b9c8ad7f3921e54fcf4c2b7d63"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/ec/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "fdabcfbb5d33c483abc06efd155649d50d46a23ad330e9db93e53fa8fab7c95e"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/engine/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "75f83cd826e3d844a982830cfe3dd40a9745680f598823dc6c20483433e7496c"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/engine/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "bc69605adbffb3f6e78073735a304007ac70c302c1cdadda0598475077a0b06f"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/err/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c5ed5efd4e5ace164c73404aa86a8dc1c86da1838f78ebd69488fbe29ee907e5"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/err/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d6041997113bd776a1d2a0e997b2c222f289e4c3f3b7709b3034b8389721395f"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/evp/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "31b20792b825dc95e34adce28499a555871514b73767f57af30911d6ec42be46"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/hmac/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "bb9af1e0035a0cf7208f4ba6100365554be8ac10f1d5d0eece723d0fac44753b"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/idea/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "6f12243caa237b8840094e485d046b787d390eea3e8e1df4274d2e29d22c1f65"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/kdf/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "eee49c5e0a5099bc7ba1994cced8d073e0438e590400cc303a19c17e3a311202"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/lhash/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "6934ebf844a1756ef7ad6c13a94786fab5b6b4aca73492f90c4e9a342beb787e"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/md2/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "ff114b6e07a281adee13fb6d0d15f64cb7cc14143af8617164908f3dddb9e88a"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/md4/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "947373b325c169c3c8e7f232e254ecc16b2cb87ecd5bce73e758bd81625c7d73"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/md5/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "9c78923fcaf42ed7e04a9e57ab643d3530c001352d833d0dd36c414b7f1b2ed1"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/mdc2/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "ec3d4b9949842d5ff0b2372f3323f4b129dab1f55a97bfb399518e19381b5747"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/modes/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c5a0c305c1d3b6ca947c7987302a1d2d38f0f22fae1d3675205826c3d23575c7"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/objects/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "ea1cb7962ba3ec620e533d2ae20de9d31e637ee8335886a8e9867e52ab0f3215"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/objects/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e8684ea0bdafbc725d38a799848bc2ee106bef9eeb75794790bb55779fa5fdfe"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/ocsp/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c376f4387ed224b780503c83cc11c022896ceefd487649d83dad3c3f12e8a91b"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/pem/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c419f3165a3ff2cc9e5998a03117291c1183585c2b8823b37a5298ae9914b04e"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/perlasm/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "a397f0f820309ccd1a25143fa8bde5c6e5512de53add775214cafc45eb3e594d"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/pkcs12/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "2f59a1c0bbb1ceea9edeb66b36c8e7bba49dd64a94e8e2f16cad52c36729559c"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/pkcs7/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "0f56496c6125fd0e2ff6e5cecdd26073f0d491a73ad96492b403936f8aee3c54"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/poly1305/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e4c61fef5095fa4b702b6719eeb0e5b2e68783994c84fb551a47e67990d65237"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/rand/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "eb3f32ca6d3d5e5b26f96ff8457afcea31bfef12b580dc4c3c4775551be9f0e3"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/rc2/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "fa9fad30f2000390e0b060b1c029ac28a5e8e6d715bf06cc05de1c804aa97401"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/rc4/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "dafb5e92c1c67dbceb1346e0ca7f9593ee0d32b565f6deec78115575882d71ac"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/rc5/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "9697a4327aeaf8c8934683c3987baac00b7ddd22a5442a47f14e4bf24eba8ba2"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/ripemd/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "8659770d9841882138787c31161f0caaf5659daa1ab6ee51446825f69fed0d5d"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/rsa/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "257b566ae3ecacad27d828d5bfe447e9f1e0aad0e8efd3c212f15df49ee913cb"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/seed/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "11a58534ceff43757cf9dbed58c94ddee01789b3992a70e3601e37637bc49ccd"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/sha/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d40aac1bb358e2936547b3f40ee445b49c48fce159b51f74545feabac0dc6ca5"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/siphash/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "380f0a4c8fcd9697eea92f2b5004050d32a55bd6893a6ec8d03bc316107c8f67"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/sm2/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "a0ea4917c09e9f2153eb4f722a4a419b1437e358d6dd5a8b52ad3cd6e99b45cb"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/sm3/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "619763e5cd74bb7c9556ba97dc559ff219a7e0fa25a704579a2b9b1bda1f3610"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/sm4/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e447c13dcad1e3a3cb2d582b4979be34f1dd852cdee1e325c87a8f5f3658138c"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/srp/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "117640a1010ab716e020ac03b532c763a7fa3c2289633098504ecbe94995f376"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/stack/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "08ddcbc25f8fef0aff834fdf79a514eb23ee9ce8b3075499e2f446870ab11ec3"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/store/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "411fc258658218b167097415f8d086d2543dbe580ba03ac8f6c9b6b0d3cf2d49"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/ts/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "f9908ee4ca6a1b8a13a050e2864f99ded2871603aef152b80dede8cb7d23a1d1"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/txt_db/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "799c270bfbc9d07d6f8b395ad253c0a8a2f20550328fad5a6691e79af4694819"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/ui/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "5a483732ca46036c608b7e20ddd080f9a4b2a171c85ed85c87933d398b6b4514"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/whrlpool/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "af3bc2b6c3963c272a6eb1fc015578e3b13c8edfc3a857ea7817fe5337704e9d"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/x509/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "2cc54f328ca08c22601f6098db0ea39519b0ae34c5823eb84455c31523c9ed4d"
+    },
+    {
+      "path": "openssl-1.1.1o/crypto/x509v3/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "ac99cdfc6def24ae8d87e06165d78f76e6db2de52a84e273aa65c1b68ee4aec8"
+    },
+    {
+      "path": "openssl-1.1.1o/demos/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "dd75e8bf6efa43f84576fb0ab2e52c17bcc3565feff860ab9262087bd336e874"
+    },
+    {
+      "path": "openssl-1.1.1o/demos/bio/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "117f672c377e6d6a589361119be2e9741836ceee127a84155ca19b27f3e03a23"
+    },
+    {
+      "path": "openssl-1.1.1o/demos/bio/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "9e9fc749bb331abeaa5347529f6bd04d0c91a8a6d932bebfec16b4cc72f1caae"
+    },
+    {
+      "path": "openssl-1.1.1o/demos/certs/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "c62177cd495b1692f97f3571844b1b4f873f4d811b75fe17b67bf1daa9897558"
+    },
+    {
+      "path": "openssl-1.1.1o/demos/evp/Makefile",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "743fbbfaae2829921d9c9f76d37a8ba08f73bb3f6b322388320c480dbaa4f66a"
+    },
+    {
+      "path": "openssl-1.1.1o/doc/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "06848c1e90ba335bdaf9283725ed7eff467551212fb4ea701006317281f11389"
+    },
+    {
+      "path": "openssl-1.1.1o/engines/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "40a72aac066ce902cadb25477c73e57848542699e1949e100e6bd1e26744d396"
+    },
+    {
+      "path": "openssl-1.1.1o/external/perl/Text-Template-1.46/COPYING",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "4d23c8c814e5baf007d854f01d8502e77dc56a41144934e003fb32c4e052d20f"
+    },
+    {
+      "path": "openssl-1.1.1o/external/perl/Text-Template-1.46/INSTALL",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d2f84dc3b27915516d16694b00ec29d20d1b427b2c54a85e7691f4caeae0ca67"
+    },
+    {
+      "path": "openssl-1.1.1o/external/perl/Text-Template-1.46/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "04cb0c7eceb19919260fecc5d617783cfbd39b5bcf676730a5757cbd0eeda01b"
+    },
+    {
+      "path": "openssl-1.1.1o/fuzz/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "d2e7060c8599de67f1c2b140ce1d5e40bcb73bb5d4b3c9c8e5b68137e19e82f9"
+    },
+    {
+      "path": "openssl-1.1.1o/fuzz/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "80855d639b9b0634f39dad35e4f4288d8b69b1d616498471178228bef2dcdb69"
+    },
+    {
+      "path": "openssl-1.1.1o/ssl/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "150b3b41dc79f23250be61fc6adc9d1e041dc4589f8f60ae1f975ea3e1dfc5df"
+    },
+    {
+      "path": "openssl-1.1.1o/ssl/record/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "daa21a1309c257a48a089abd2f65f521ef442aef1428c5cce50af24ae4b586c8"
+    },
+    {
+      "path": "openssl-1.1.1o/ssl/statem/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "5dd5871050b02fdde174e60c923412f6e53289ac992f244b9b8ec62d5ca29a0b"
+    },
+    {
+      "path": "openssl-1.1.1o/test/README",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "468d273a2a69992b6c55453a08fac1a170df1eeee327a5267fd4d08ccfdb7b4b"
+    },
+    {
+      "path": "openssl-1.1.1o/test/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "99785d508607069564ba22db4c86002fddeed03c61d7572358e9a57aabf57e3c"
+    },
+    {
+      "path": "openssl-1.1.1o/test/ossl_shim/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "673f3257cfe193107106afa0f166c7dd599b11e8863c97074c1a63f5220e63f0"
+    },
+    {
+      "path": "openssl-1.1.1o/tools/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "4ead731019edb0b0dbd7b72993c59498e3a645d0472e54b0c41cbb11c20eaebd"
+    },
+    {
+      "path": "openssl-1.1.1o/util/build.info",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "f65db6fe6a0ad3669696a3f5717e8291fd8ab510963febaee8009cb2974bc175"
+    },
+    {
+      "path": "openssl-1.1.1o/util/openssl-update-copyright",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "a07ca62389f204668d4768a5eaf722e3260fe1d0a46a5174ead31d3a1a102d39"
+    }
+  ],
+  "safe_for_regular_file_extraction": true
+}

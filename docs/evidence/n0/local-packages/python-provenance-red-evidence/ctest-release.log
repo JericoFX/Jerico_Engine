@@ -1,0 +1,76 @@
+UpdateCTestConfiguration  from :F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red/DartConfiguration.tcl
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: JE.LocalPackages.PythonEmbed
+
+1: Test command: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\python-provenance-red\Release\JEPythonEmbed.exe
+1: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+1: Test timeout computed to be: 10000000
+1: JE Python: runtime source provenance mismatch
+1/3 Test #1: JE.LocalPackages.PythonEmbed ............***Failed    0.09 sec
+JE Python: runtime source provenance mismatch
+
+test 2
+    Start 2: JE.LocalPackages.PythonRuntimeDebug
+
+2: Test command: "C:\Program Files\CMake\bin\cmake.exe" "-DJE_PYTHON_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-v143-rev2/extracted/python-3.10.13-je-rev1-windows" "-DJE_RUNTIME_CONFIGURATION=Debug" "-DJE_VENV_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red/venv-Debug" "-P" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake"
+2: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+2: Test timeout computed to be: 10000000
+2: Traceback (most recent call last):
+2:   File "F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\Python\tests\RuntimeTest.py", line 23, in <module>
+2:     assert sys._git == ("CPython", source_tag, source_commit), sys._git
+2: AssertionError: ('CPython', 'heads/development-dirty', 'b54a874e3d')
+2: CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake:35 (message):
+2:   JE local Python Debug runtime test failed (1)
+2: 
+2: 
+2/3 Test #2: JE.LocalPackages.PythonRuntimeDebug .....***Failed    0.20 sec
+Traceback (most recent call last):
+  File "F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\Python\tests\RuntimeTest.py", line 23, in <module>
+    assert sys._git == ("CPython", source_tag, source_commit), sys._git
+AssertionError: ('CPython', 'heads/development-dirty', 'b54a874e3d')
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake:35 (message):
+  JE local Python Debug runtime test failed (1)
+
+
+
+test 3
+    Start 3: JE.LocalPackages.PythonRuntimeRelease
+
+3: Test command: "C:\Program Files\CMake\bin\cmake.exe" "-DJE_PYTHON_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-v143-rev2/extracted/python-3.10.13-je-rev1-windows" "-DJE_RUNTIME_CONFIGURATION=Release" "-DJE_VENV_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red/venv-Release" "-P" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake"
+3: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-provenance-red
+3: Test timeout computed to be: 10000000
+3: Traceback (most recent call last):
+3:   File "F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\Python\tests\RuntimeTest.py", line 23, in <module>
+3:     assert sys._git == ("CPython", source_tag, source_commit), sys._git
+3: AssertionError: ('CPython', 'heads/development-dirty', 'b54a874e3d')
+3: CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake:35 (message):
+3:   JE local Python Release runtime test failed (1)
+3: 
+3: 
+3/3 Test #3: JE.LocalPackages.PythonRuntimeRelease ...***Failed    0.10 sec
+Traceback (most recent call last):
+  File "F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\Python\tests\RuntimeTest.py", line 23, in <module>
+    assert sys._git == ("CPython", source_tag, source_commit), sys._git
+AssertionError: ('CPython', 'heads/development-dirty', 'b54a874e3d')
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/tests/RunRuntimeTest.cmake:35 (message):
+  JE local Python Release runtime test failed (1)
+
+
+
+
+0% tests passed, 3 tests failed out of 3
+
+Total Test time (real) =   0.41 sec
+
+The following tests FAILED:
+	  1 - JE.LocalPackages.PythonEmbed (Failed)
+	  2 - JE.LocalPackages.PythonRuntimeDebug (Failed)
+	  3 - JE.LocalPackages.PythonRuntimeRelease (Failed)
+Errors while running CTest

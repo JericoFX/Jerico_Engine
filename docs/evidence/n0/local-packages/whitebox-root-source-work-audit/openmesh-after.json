@@ -1,0 +1,4899 @@
+{
+  "source": "F:\\JericoEngine\\Dependencies\\OpenMesh-11.0.0",
+  "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\OpenMesh-11.0.0-root",
+  "archiveUnchanged": true,
+  "fileCount": 611,
+  "directoryCount": 98,
+  "allSourceBlobsUnchanged": true,
+  "allCopyBlobsExact": true,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 148,
+      "sha256": "0192B4E78EB312B2F968F9029D7E57666C08341296DDAA2AB9DEC57ABE27B9BB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 7612,
+      "sha256": "1299EF7746BCB6C944ED36310A9427D3B5ADBDB5158766DBDE4C0FBEE5E25BD1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 3262,
+      "sha256": "768E6051E5D7A62FD4B0A14C0CE753A65C08218ADE8E85BD1927D48C5ED9B750",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "openmesh.pc.in",
+      "bytes": 254,
+      "sha256": "C9D74142A99C13EA88A73FD837A8424568B2514914D39524F62A6F9AC5939145",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 2420,
+      "sha256": "1AE7CCF2542C95752E086CC2BF2E69DFF8C4DAF932A872FE4C049EA5C6FCCAC1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake/FindOpenMesh.cmake",
+      "bytes": 6283,
+      "sha256": "F0893CD0DDE846732F2EE4567CBF1878E6B5938687289B77E581B9002A3575AF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake/fixbundle.cmake.in",
+      "bytes": 2011,
+      "sha256": "06100D13AA9F46F3D9502D3797BE3F8E980F3570FA237190BE807445A6600698",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake/fixbundle.cmake.win.in",
+      "bytes": 724,
+      "sha256": "16A020DD3B1F9461E3DF63412DA8757E9B36ABD674D6ADBF20185E7D50FB1D05",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake/OpenMeshPackage.cmake",
+      "bytes": 5999,
+      "sha256": "C287D24E5DD76946D9F222C8E0B350551EC2882FE9389610D6CE5D70F01AB7ED",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/.git",
+      "bytes": 38,
+      "sha256": "822AD2995854DC3AD196B576FDDE522A3699DF39DD84052D1C838323D9CD791E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/.gitignore",
+      "bytes": 25,
+      "sha256": "D24E4ED81B0CB6AD1469114EBFF3AEFB582C7B20DED10AC51E9B385B2653751C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/.gitlab-ci-vci.yml",
+      "bytes": 228,
+      "sha256": "A9C8DFA0307DC4C197841DC54D1E272D7688BBAC3D7C3B5A8A35F60DC43C74B8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/.gitlab-ci.yml",
+      "bytes": 419,
+      "sha256": "04E9E01F10DD278E5CAE7FA0AE3876603BA1401EEC41AB3088747BE1F4B5A283",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/README.md",
+      "bytes": 130,
+      "sha256": "19533895B98A30D9AF4598B586A642CFEB7702C574F194FCB24E9F0909D6F188",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/CMakeLists.txt",
+      "bytes": 410,
+      "sha256": "E8A907EE7BBB7C9D40CC8EFF76997FB7219F6A4E989E4F89F25E7A692ED1C8AF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/windows.bat",
+      "bytes": 62,
+      "sha256": "E18C759AB848B6D033F92D289BF99591D33125A2DA8A3AEE65CE2F87B15AA316",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/CMakeLists.txt",
+      "bytes": 747,
+      "sha256": "0D5887B932B854A3B054F73AEC21476AB86C9EEE042E1D5A03E2B5642558635A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/GMM/CMakeLists.txt",
+      "bytes": 159,
+      "sha256": "4B8937644D5F7202473628CB288EFDB16766A448157ACA4DC51A7D46E96760F7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/GMM/test_gmm.cc",
+      "bytes": 106,
+      "sha256": "93EAA4F157291CDB5B54B484DC0F2B015A83AF2B1ED76D822543EC7F5FF3FB17",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/Gurobi/CMakeLists.txt",
+      "bytes": 301,
+      "sha256": "C21EC7724D388C592EA6C8047F7C0D0DB5E89B493B966EFD3BDB67459624592E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/Gurobi/gurobi_c.c",
+      "bytes": 151,
+      "sha256": "42DE7C3FCC93D60F967255D077161D97F7E6A4731C655708AEB752AF1E0604C9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/Gurobi/gurobi_cxx.cc",
+      "bytes": 268,
+      "sha256": "AE42EA572D1F9FEE9BBF4C1F39B73C2CCF4ADF33BA267E9FA25C35DDB0E72460",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/Mosek/CMakeLists.txt",
+      "bytes": 287,
+      "sha256": "00391A5FC25DAE4F003EBEF48E47E633485260F978C90DD487FD07BA208A9994",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/Mosek/mosek_c.c",
+      "bytes": 215,
+      "sha256": "4B8793A6DBFA9EABECF84B15CC886BD916FE585373BB7EDDEF3A8BB820D0C8FD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/CI/tests/Mosek/mosek_cxx.cc",
+      "bytes": 216,
+      "sha256": "2BFEE7C49AFC74D15EA42BE472CB278ED4ABBE5B2D93DDBC72A6009B34C8906A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/finders/FindGMM.cmake",
+      "bytes": 684,
+      "sha256": "8502376642107EF9E65E1F860CB593E480F4CB4EFB2E2763ABBC6279A4C1C55A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/finders/FindGMSH.cmake",
+      "bytes": 882,
+      "sha256": "9D0B88A15615B3CD956B09222DAFC3788AEA173E8F2BFDDC57761522C1A4C15A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/finders/FindGurobi.cmake",
+      "bytes": 4220,
+      "sha256": "955FA719B74F37FC6057446E296B7A4C2CDE1BA2934D3F561328C87C93D64FE8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/finders/FindLPSolve.cmake",
+      "bytes": 1438,
+      "sha256": "C1CB899E79E0F677FE933F25658D8A5874044C94DE7CD0F8B86AB0F89EBAD2C9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/finders/FindMosek.cmake",
+      "bytes": 2781,
+      "sha256": "D68038D8213ABACA9863FB57B5A3CFEDD658D1C0E9BECFB3D96E0C7A67C98343",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/MSVCMacros.cmake",
+      "bytes": 528,
+      "sha256": "F87CCA1ED156E6DA0EBA1488F5EF74A145435FE7ADC3FEDF04075FBED43A360B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/VCICommon.cmake",
+      "bytes": 11883,
+      "sha256": "F039D76FCA29C5841D469ABD5C48BDD08AE0398DF3CDBA545020B32E9AD97851",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/VCICompiler.cmake",
+      "bytes": 9149,
+      "sha256": "20FE9D5FAEF41B37F1C7F1A63EFF49082A490382F58F7907599463EFD74BBC0C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/VCIDoxygen.cmake",
+      "bytes": 7569,
+      "sha256": "88264D733775E84DC71B2D89DD8C1B888F261ACF4488B1BB09678CFDF851B5D5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/VCIOutput.cmake",
+      "bytes": 2448,
+      "sha256": "2905738731D78A577A3452EBF8B84B8F9652E0F74148D90EE10283059AB4FD11",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/VCIPaths.cmake",
+      "bytes": 2317,
+      "sha256": "661D36950BFF1E5FB9864C4F54D570D6E12BE8265DBD559ED193C9E4B52B6531",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "cmake-library/VCI/VCIQt.cmake",
+      "bytes": 11466,
+      "sha256": "B3B01F917E14BAFC378035EC74F87950D50244B18AAE4B265608FFC4A60443A4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/changelog.docu",
+      "bytes": 78364,
+      "sha256": "D74DF25DFA9F1819EE41B1F33B6534A42952A78A8753EB812A17C05AD899D006",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/CMakeLists.txt",
+      "bytes": 348,
+      "sha256": "354DE8F47E2178AABF9C3BF6E9B3DB55F881FCFA17E3355BB64CDC1A5C1A4123",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/compiling.docu",
+      "bytes": 7999,
+      "sha256": "5CA6FBB2B633AD0053ABC457A3FC0FC4442D931817653AD3DAECDD7CF3139048",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/decimater.docu",
+      "bytes": 4569,
+      "sha256": "BCB3ABD1CB51CB1575182C05343BD6E6D7BF58DAC0114C755C8551C6922BB6AA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/doxy.config.in",
+      "bytes": 119988,
+      "sha256": "24F0CAD843D85F42DB61C9D65CB89049ECFE42531DCEE01046ED318017E4FAA2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/holefiller.docu",
+      "bytes": 519,
+      "sha256": "77BEF7A723EF443023F45F7763356AC42778186A6BC070B871D20FEE72CD6CAE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/mainpage.docu",
+      "bytes": 3898,
+      "sha256": "D0C83F4041F20F24B730E15A3F170C6043E778E66FC9010F628B2E38DBEA1DBB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/mesh.docu",
+      "bytes": 39492,
+      "sha256": "E9FAFA7156F9E93666C545623A990DF9D191C25FDCD4CAA7441C4A786226C71D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/misc.docu",
+      "bytes": 1099,
+      "sha256": "38948A31E1E6EE3D681365BAA33E10E82907F6EEC9B7CC0E0952EFFF11B537E8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/namespaces.docu",
+      "bytes": 2406,
+      "sha256": "B1179F270F1AB0A473B6162F2CBAE497358E5F18C3BF629C27529CB7630CAFAC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/navigation.docu",
+      "bytes": 4493,
+      "sha256": "5CCC4F2981CAA3C241F1BEE1B7CD83CF64A5E749CF63EE4CB39F35A04A77F6AC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/operations.docu",
+      "bytes": 4449,
+      "sha256": "4CB428491495406FCE8650AD4AC97D2C958062AC32A33408A792D2BF6300FB37",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/smoother.docu",
+      "bytes": 1734,
+      "sha256": "A7EAD447840CD0CBFC6E8384EAC678A05F8ED362A9CE3A091BF4A605D5980BE9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/speedup.docu",
+      "bytes": 790,
+      "sha256": "52EDC5EDA336A70CF65AA4427D61213F38527149260DE5EB4B62598619D32FFE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/subdivider.docu",
+      "bytes": 1237,
+      "sha256": "06FE214FA2A14B9F2804D955C7F363CC3620A063D100C43BFB2EE64D11A07458",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tools.docu",
+      "bytes": 427,
+      "sha256": "377BE21D7EB8EF3524E97DD25F4DBD7A18EC5D4689946E1F84D511186EF028B3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_01.docu",
+      "bytes": 2306,
+      "sha256": "6CACDA17DACFB225344B08B6ED6F2A9600AAA57905AFE91F7A052A6312B70BC2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_02.docu",
+      "bytes": 1835,
+      "sha256": "EE9F3AD674E4C447EA33E15EA903898799AECE578E3CF69CB170966C89BB9E7C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_03.docu",
+      "bytes": 5275,
+      "sha256": "481826801FDBC4EEC5F9C19F5766B8B103C4A2ECEA49157BFCF11195CE2D6218",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_04.docu",
+      "bytes": 1608,
+      "sha256": "B2860B492B381409D204B56E837A8128EEE2502B495DC1E6858E7F803DEF85B1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_05.docu",
+      "bytes": 6298,
+      "sha256": "D9F5754C0EEF052CE7FECE20B67930472DFCC6320E89346A7BDD80B651E9FD35",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_06.docu",
+      "bytes": 3201,
+      "sha256": "006284D68B8C147847ADD0D932108D7AB5C39D56FB11686FEDB201B63EC7E7D5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_07.docu",
+      "bytes": 1613,
+      "sha256": "C9386E8F823AF50CFDCCB6D6BFA34B3E6CD033B27E69885DBFCEAA15E9DCABD0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_07b.docu",
+      "bytes": 2020,
+      "sha256": "E8D9CFA20E783971FB7F2D897FD4A7061BF83A453E9C4A28C09EBF8C8CFC81F8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_08.docu",
+      "bytes": 6428,
+      "sha256": "78E658470E75F30EE0732D5C071D88FF028866579809DB4C72DF9A1C2B32602B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_09.docu",
+      "bytes": 2697,
+      "sha256": "CBD7823DBEB1307FF4DBDD8D5651EAB90F44A8C32A37F044579C6C292AE933EC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_10.docu",
+      "bytes": 7681,
+      "sha256": "3E0A6AA2187BC7487613910AD0964376C0ADE53D13318C37BF120DAFA8B6BC74",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_11.docu",
+      "bytes": 3695,
+      "sha256": "E778AFBAED8295DF5B008CF0F67A141C0A0FB8C74F096A399FD6B0D2D1BC8870",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_12.docu",
+      "bytes": 1854,
+      "sha256": "0B610522EE26AAAFEFCC3317D0C57EC76B2DC82D41854760C41D2CDA54DA6599",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_build.docu",
+      "bytes": 2518,
+      "sha256": "2B702A96001CE375DE0E563305B702BF368E7320D65087991CCB51EDD4C26165",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/tutorial_main.docu",
+      "bytes": 1794,
+      "sha256": "CB2CB74CEFC037C2B527F2E79985A57639D2369F0060BDED9B9F609D570035B0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/vdpm.docu",
+      "bytes": 692,
+      "sha256": "A0CA8A7B5D3D9FAF922C876C516D06195D48AD25BA21CEBCB451D12855CFE7A2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Concepts/MeshItems.hh",
+      "bytes": 7272,
+      "sha256": "7A5D022720028F864FE8CC17974022DDCAC457308E65493CAC05C83F88030E2B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Concepts/MeshKernel.hh",
+      "bytes": 21791,
+      "sha256": "51592C68009E5B34B96C378AF59B40D5AE23B3655767729A36AF0AAC2C44110B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/adasub.cc",
+      "bytes": 1462,
+      "sha256": "F954599D4D176C93C9FB10C7B8B0BF865E355E8850AF5D5E91BB75749716A71C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/BaseExporter.hh",
+      "bytes": 609,
+      "sha256": "96B7CDBBAD02F135EA3E06299C09C3A7FF9648E7052CC28B56A483BCB83D90D7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/BaseImporter.hh",
+      "bytes": 257,
+      "sha256": "BB0B32DFCB525F326D84368B103390FD147F99F7ADE130D1B63D8AF4140F9A46",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/BaseReader.hh",
+      "bytes": 357,
+      "sha256": "008355115DBEDEA44CAB98E56B8D8720CF794742AF40FB5DDD97AD9C63C13690",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/build-trimesh.cc",
+      "bytes": 322,
+      "sha256": "9DBC20817E45B3FF23E18231F986F0DFFEDA58662E1B00E5411B2904D938295C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/circulator_functions.cc",
+      "bytes": 1843,
+      "sha256": "9BD0029E85DFB09742ACDC7F5F262519D743BD16B386353919EEB200372738A3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/circulators.cc",
+      "bytes": 330,
+      "sha256": "C9E38A27555BCA4B2EFF9A488557313CF0883C80D6D2FCE7F7C2253DDB992FFF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/decimater.cc",
+      "bytes": 905,
+      "sha256": "8604222BF9298B127890570092D51F5C50D36FB031544049693B788D539B4E00",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/draw_normals.cc",
+      "bytes": 446,
+      "sha256": "788624E65AB7CB179D06F29E5DE80E6849BC96C4BC9C92BE679E3B9B3F0C18B9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/iterators.cc",
+      "bytes": 682,
+      "sha256": "7478750C9219D010B95C8DE2FE234628BA90FBB9E142C2400F710A5E6D7556FB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/mesh_io.cc",
+      "bytes": 297,
+      "sha256": "7DE4C26ACAF4DC7DB385F64F1E26356F98884300769D0988767A731ED65A62F8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/mymesh.cc",
+      "bytes": 1196,
+      "sha256": "C1F597AF554230D8343611CD0AD29DB3D505DA4ACF24FBFF6367ECC8B61E43C4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/nav_code_to_from.cc",
+      "bytes": 173,
+      "sha256": "B389A9B290E49C64385E9C83A335AEFFDE14786493899C28932196185BDB0BAE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/nav_code1.cc",
+      "bytes": 476,
+      "sha256": "C83690ECF83D794F0268AF82811E0443A885C24EDA34087FBD0A919B44840821",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/nav_code2.cc",
+      "bytes": 529,
+      "sha256": "F8050801E0074AD66637B37DFBE130D6FF23469F10BB74E98849ECE3114EE37A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/nav_code3.cc",
+      "bytes": 326,
+      "sha256": "B0F0DDB179DD813502B32339F043A650B87A43DD8FD24E05B245D618D4B51C95",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/nav_code4.cc",
+      "bytes": 405,
+      "sha256": "B829595D9166FB23DD44190FAA4C4B1447CA372F9D72D40C163E88DD872B37E2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/nav_code4a.cc",
+      "bytes": 319,
+      "sha256": "201EC234B4647618510512ADB112DF3DC3A1FE9BC89EF5498800D3309DF40178",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/traits0.cc",
+      "bytes": 331,
+      "sha256": "720B2140F0430B83E2F512704DFF3EDE11F98295547CA3A5F0DB343576664672",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/traits1.cc",
+      "bytes": 115,
+      "sha256": "C7CD2685B5771850311C92E63DE744EA00308C385BB8973C0A61C4275D344C69",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/traits2.cc",
+      "bytes": 109,
+      "sha256": "38EBC9DD8915FCC51A34EDFB404808694E77B884CF3BF55DF82097248B6B2511",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/traits3.cc",
+      "bytes": 159,
+      "sha256": "38D4926BA3B6846CBF7816A24D33A73A3F0DA857A0090B7C3D43B3691FF4C4B6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/traits4.cc",
+      "bytes": 162,
+      "sha256": "34DB0353BADB39E2834ABBB3BE888DA0126280A98DBAE1B4958FE63D10AB9924",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Examples/traits5.cc",
+      "bytes": 194,
+      "sha256": "4F31D1B49011F52B1D3843C520EF5956D9BF8AD77BD92B8FFB87404CB46235DF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/html/logo_align.css",
+      "bytes": 83,
+      "sha256": "94B315E5016F726DB2983D904E7EA24E8593ECC3E70D488033315C9A1B551C69",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/html/vci_footer.html",
+      "bytes": 325,
+      "sha256": "9589902ACEBE92A26B49B5DAD8C69DC225066E62F0024ACEB62041C74CDA597A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/class-hierarchy.png",
+      "bytes": 51155,
+      "sha256": "9C1C22DFAA3B08533273228C94FABBEE2CAB7AEE97F0A830D41D20716EEBF27E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/class-hierarchy2.png",
+      "bytes": 50034,
+      "sha256": "46ED65E73404E3BD04598E2B06DA52B0206B3FA04B75023E7A610C44AF07D880",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/collapse_info.png",
+      "bytes": 19660,
+      "sha256": "B09B2FEB4B46D17A934A8C060836629E51A5F66BDDE392E34F823EDF62C7AA55",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/diagrams.sxi",
+      "bytes": 12565,
+      "sha256": "4A5FBD3D8B91228D6460F41EEF2D9EF6C2530D940FA89F877CEF75F03DB48551",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/halfedge_structure.gif",
+      "bytes": 3049,
+      "sha256": "A93AC8A332FF8411B881AB00F6077AD7AF511C63B63C4E43722572F3AE66E32C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/halfedge_structure2.png",
+      "bytes": 4424,
+      "sha256": "E887829A9E353E2E7692EAE813FD8314A9BCBE3ED532A4CAC5FC6D4B62494D94",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/halfedge_structure3.png",
+      "bytes": 5541,
+      "sha256": "98D8C3C13CF204E98E6253F5DB413735430B9BFC51DC180FCE757EBE693DE5E5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/inheritance-simple.png",
+      "bytes": 6609,
+      "sha256": "F82BB0BBFFB5745EF94AC99352D6D17798C90BD0E28FD685C6E584E9C6D46F3A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/inheritance-simple.scaled.png",
+      "bytes": 6685,
+      "sha256": "3F5831C8418E45ED66961371E3492E43191CD3DB8E995BCF030AE94DDCD2AA51",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/inheritance.fig",
+      "bytes": 676,
+      "sha256": "2D684614AAC07F73A2A1166A9054C61F48D8F559643B46331BF1E2BD36CDBEA1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/inheritance.gif",
+      "bytes": 1266,
+      "sha256": "AF58C64159169976AFB403036F2B4C01AE4B8D5FFB0D6CC1344A6A66E88DC493",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/iomanager.gif",
+      "bytes": 27756,
+      "sha256": "073C488464D8944FB20B3C056572644CDFA110C90CF8EB1C6CF1CDECA30D6216",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/iomanager.png",
+      "bytes": 57499,
+      "sha256": "D52A688B5A36C328598245F53B00171030848E38071DA0A8289D9E0297C2E516",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.collapse.png",
+      "bytes": 11923,
+      "sha256": "891D2961FC254D973DBBD8A4DAA7535DD689F22EF54E4C8E382FC6D74C3053FC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.flip.png",
+      "bytes": 4838,
+      "sha256": "C39E21D3FA44D0DDD9D025174E5F8B51D0334D3EC8FD760D094914E325054756",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.inner.png",
+      "bytes": 4009,
+      "sha256": "798E9E4AC7E7DC9B2DA94BD15B1054C431891A72B25E9C67A42E30DFDE013975",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.inout.png",
+      "bytes": 3251,
+      "sha256": "0EB6CD1762C47FD43502FA0E4E0BA839B5CB917394AD7119CE794873F5D97640",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.normal.png",
+      "bytes": 3103,
+      "sha256": "FE0EEB2294BDCAC09C8D21150755784E6A189A889803322A935B5C2B35FA801D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.opp.png",
+      "bytes": 3199,
+      "sha256": "525A785C3D8A935CC3E5A3AEF884F0716C478F53489ACACB29E159DEDF3B5550",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.outer.png",
+      "bytes": 6737,
+      "sha256": "D476B027317F435C553D19C5E4898536533012EF149F4D7F381A4CD6EA564BFA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/mesh.to.from.png",
+      "bytes": 777,
+      "sha256": "E54BBDB2E9D99E14599EB5C35B357FF4B6B7A1F709E6BC424C27F77E8E382174",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/om-format.png",
+      "bytes": 24282,
+      "sha256": "0EE053E55828C58E2AA46DC1EB59CD653C84B945D6552A59984F3432AED12AAB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/OpenMesh_text_128.png",
+      "bytes": 9672,
+      "sha256": "0D58CE4D554E6B95AD324A3DFA438133300AEAC2C3A9072F0DDA369697788697",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/rwth_vci_rgb.jpg",
+      "bytes": 13077,
+      "sha256": "2204661F6C3591A9395EF961EB34B8D801E9B73C28CEA55C2DE426BE4CFA3F6C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/iomanager.tex",
+      "bytes": 1725,
+      "sha256": "29C967639711075714B29D248F652704DC60FC49BCC77AB5DED81A1BA18C2052",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.collapse.tex",
+      "bytes": 3713,
+      "sha256": "19F25A0F03170D5FBABC274A2EDB4FB8D0032ACE9EAAFC7108C9EA94A4829642",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.flip.tex",
+      "bytes": 1334,
+      "sha256": "C212A0DFE6515EF969A975D0BEB59311F0BE6FFBA9779907188C85058A00AB7D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.inner.tex",
+      "bytes": 1195,
+      "sha256": "7079B1F68C9E014D325B8B760BCC5B1FA69B9E785CB4571C2BF7CD60FB2E49CD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.io.tex",
+      "bytes": 1332,
+      "sha256": "D6B79FE9234A94CE88AD5E9D8280BCB9BA21D6A24FCC0683232717FF235F63EE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.normal.tex",
+      "bytes": 1185,
+      "sha256": "0937996B6F29A9552CD2D1C0E642D6F9BEBCDEB0FE667F399036864ED69296BF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.opp.tex",
+      "bytes": 1328,
+      "sha256": "07D623DF3FB16857818E229884DF2F20593E7E901241C7F77A85FA9DB997F113",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.outer.tex",
+      "bytes": 1195,
+      "sha256": "8F5A67DB92BA6F756E3F2A90703089567362DD48246A882D251CD8F9B0C11260",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/images/src/mesh.to.from.tex",
+      "bytes": 588,
+      "sha256": "E5EDF8D214921B1560C9B30D85DE32C5DC62350521DCC1A08816F1CA74FE2E70",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/CMakeLists.txt-external",
+      "bytes": 240,
+      "sha256": "C85002FFEEC78082F690C424821CF5A3B6463BEF06B0C11B923754CA65FC8D06",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/CMakeLists.txt-internal",
+      "bytes": 358,
+      "sha256": "346C0C5131EC96DBBA13F2E02910D5E35A29BD5C63EE7048B9042B8F5BB9C7DB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/01-build_cube/build_cube.cc",
+      "bytes": 5825,
+      "sha256": "9C483BCF3CF7D36F68963FCE708C387BE4FE22ADA79FDC1B900BB7D80A49DA8C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/02-iterators/smooth.cc",
+      "bytes": 1756,
+      "sha256": "0D2617F72364E95FF4C33A62C1CD35C16562FC2016FAF8026539ABCFBD548C4F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/03-properties/smooth.cc",
+      "bytes": 1825,
+      "sha256": "F3909DABD9327779DCC207E8D389D8488FDDD754DBEA959600CF961845784FB7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/04-stl_algorithms/smooth_algo.hh",
+      "bytes": 1896,
+      "sha256": "D11E7E73D528D39FD2404F728C3F09273FE2F2F750E84DBF29ADB054BEAA177B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/04-stl_algorithms/smooth.cc",
+      "bytes": 1256,
+      "sha256": "D1720380954C822B28AD03568149144AA928B533B29934D6380560A2925095AE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/05-std_properties/properties.cc",
+      "bytes": 1848,
+      "sha256": "CBC9F72F00E25BCBAE2A7C25E96937BB7BF8BF26AADE182CA63B561BE5DA473F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/06-attributes/attributes.cc",
+      "bytes": 2514,
+      "sha256": "F7ECE253621B4F97FDDBC9B3EF2BE4F1FB6C94D59C11DA1411D425F618EB4222",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/07-traits/smooth.cc",
+      "bytes": 3243,
+      "sha256": "65AB970D27735B1798E33759137BAA44FB2F99EB9A18CE75BEE55A7AA0488474",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/07b-delete_geometry/delete_geometry.cc",
+      "bytes": 7356,
+      "sha256": "DBBEEB67575D313A2905E17929BFDEE1862B15BD5469FF99F8BB83DEC0B1EB1A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/08-io_options/io_options.cc",
+      "bytes": 8450,
+      "sha256": "A14545BF669A6EF84C96BBF7159941B993E288F645564ADE7A2A70B20F189861",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/10-persistence/fill_props.hh",
+      "bytes": 3028,
+      "sha256": "BDF70E3D3AD6D41E9B97DC6124335F629F49766215FF2898AA7F6315ED4E4492",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/10-persistence/generate_cube.hh",
+      "bytes": 2086,
+      "sha256": "FD552A1CA39859BE30D635ADD40041A5D95C9371432C15F9DAF629E18F5AD8BF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/10-persistence/int2roman.cc",
+      "bytes": 1335,
+      "sha256": "D05D4EF0EE96906EAD143A61486EAD6405A875B2E99F9DD38BC36AA8D03BE726",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/10-persistence/int2roman.hh",
+      "bytes": 129,
+      "sha256": "E5AC084C895EE78AD9E38DDC046E6028D3F4F8BE3B61D9C6400B27B392AA5F29",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/10-persistence/persistence.cc",
+      "bytes": 8517,
+      "sha256": "7A2C48914633C0815844FBF88FE39FCEA8B0DE0EB366E64219912962EBA85E05",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/10-persistence/stats.hh",
+      "bytes": 431,
+      "sha256": "22405936AD6725DF7BF0849166D20DF8C1C827442E5560CE58DCF4CC6195A17D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/11-smart_handles/smooth.cc",
+      "bytes": 1987,
+      "sha256": "74ACB7932A3630F95C816FB893B60FAA4A234C630C4E7CEAC66AD118C1888818",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "Doc/Tutorial/12-predicates/predicates.cc",
+      "bytes": 2078,
+      "sha256": "C88B9C5DF70D97EF24D2CAFE5F6BD2F1448D6C16CD5FC5FD4EB4145B7ECB88EC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/CMakeLists.txt",
+      "bytes": 315,
+      "sha256": "FF2578E0594E8B609432D6A9D0A13C13C50AD6475D5067CE3FDE0C6A070F8C06",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/main.cpp",
+      "bytes": 129,
+      "sha256": "ADD711A9DC11774891BFD23E5B2C1E03C40D1A2E050A64544872338515E86710",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/VectorT_dummy_data.cpp",
+      "bytes": 134,
+      "sha256": "A353037A4DCD2414859B363043337877085A7648D28035E410B4F0139214A0EE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/VectorT_dummy_data.hpp",
+      "bytes": 841,
+      "sha256": "FB45BFDDAEA648E7B0FCE137E37ABF50928B9AA1AC55D9AB4194DB524DAAF994",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/VectorT_legacy.cpp",
+      "bytes": 247,
+      "sha256": "74174F2E852C5587114CD920DC93A6A7BB71237859EA7B75DBA9CC41A1578FCE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/VectorT_new.cpp",
+      "bytes": 211,
+      "sha256": "B7C823D1A85415A54FDF83C68F18707733A47001FE6B1A1B247248AF8C2FC5EC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Benchmark/VectorT.cpp",
+      "bytes": 5158,
+      "sha256": "98269B70E4F761C0AA1DE342E7389ED6A3CC4C63BF19EEA6981F0AC480BA678F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/CMakeLists.txt",
+      "bytes": 3456,
+      "sha256": "098E07F46EC17CB6480F125794FCD4A10740C9775AD2162CF201A5F60D21C3D2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/CmdOption.hh",
+      "bytes": 4291,
+      "sha256": "B4CA3D9F5E2DDE75AE5F3954990AAA33930D67904E4730A4FB3B265669B6E3C2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/decimater.cc",
+      "bytes": 17619,
+      "sha256": "197A01DED40CE3B5F6797D98039DE0F04E26CE756FB0C3D042B33B9B763EC217",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/decimaterviewer.cc",
+      "bytes": 5447,
+      "sha256": "8A0B5837E467F958A406F3D690869B8E3332C636ED4FE4BEB2BB6DE164CD671A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/DecimaterViewerWidget.cc",
+      "bytes": 5514,
+      "sha256": "C2762076232445592E595BAEE8BF4DD5C9D8C6E1AF708CA799973033A3AAD71C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/DecimaterViewerWidget.hh",
+      "bytes": 6799,
+      "sha256": "4D8C2AE2AB88C2B439A1B3414D99581D08470DB150E5DF1DFFD8B6F6A5F3997F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/commandlineDecimater/CMakeLists.txt",
+      "bytes": 158,
+      "sha256": "01B2C6237E3FBC8DF726CD8B988E34D6D7D23F70D1225A5C43881B25638306D7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Decimating/DecimaterGui/CMakeLists.txt",
+      "bytes": 783,
+      "sha256": "A57E344E51DD090ED9EBE53EF286E24BF799639B0B39B2E69B70510D999650C8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Dualizer/CMakeLists.txt",
+      "bytes": 130,
+      "sha256": "67ED5AD64DCAA0C0FCCAC3AA95940030357497EDA42B7551C5A75C2F62D8C377",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Dualizer/dualizer.cc",
+      "bytes": 4038,
+      "sha256": "63B3EA6D87EBDEC5F697191FEF9802ED88A3308E7C67BEAEE1599B4292721004",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/mconvert/CMakeLists.txt",
+      "bytes": 130,
+      "sha256": "B7500CA8F9CDDE53494974B030B5804A7AFABF03854A9930CFB3181AF3BF1E92",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/mconvert/mconvert.cc",
+      "bytes": 15028,
+      "sha256": "25A89FA2DEC731D85D7CBD5260F9DDD07F95A3D2122D721592D3D0FCBC3978BD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/ProgViewer/CMakeLists.txt",
+      "bytes": 701,
+      "sha256": "4D49163F23EA118B8746C8D3FD9CA8F31D0E9A3BB9EF18848FA6DBDBEE3E5F65",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/ProgViewer/progviewer.cc",
+      "bytes": 4155,
+      "sha256": "12A0AA8626B7A143536E9153244C7DDA53C2100F025F0A7FFB0313A481AA1BC7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/ProgViewer/ProgViewerWidget.cc",
+      "bytes": 10355,
+      "sha256": "5FF6687A99657EB97A9E41144838D71B13532D98E658A9C1C3A24D8BC788EA5E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/ProgViewer/ProgViewerWidget.hh",
+      "bytes": 5892,
+      "sha256": "694C317BD971F7C249C89A5D0655E2B93362E8B80EEF8FA3D353A8C912458F67",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Qt/qt.conf",
+      "bytes": 26,
+      "sha256": "C4EA83188906CE486EE4243F62A781B60F7BC59013393D66124E25F2D31864DE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/CMakeLists.txt",
+      "bytes": 591,
+      "sha256": "ECD7A0E04BC53C0510AA2099E9EBEFB6ED901246E7C126BC14CF288EDD7462E6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/meshviewer.cc",
+      "bytes": 6102,
+      "sha256": "6F875B785EB587CF83B6DB730AEEF3AC4A5A2B6BF0A6876D782A62C7E36409F7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/MeshViewerWidget.cc",
+      "bytes": 5302,
+      "sha256": "2AE0618A5F44313C13AD671BF80D0D518F71970F058013DF0DDD523D0D1EC673",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/MeshViewerWidget.hh",
+      "bytes": 4569,
+      "sha256": "415A6693F38A967D19DA4D405ACBDE02BE0E2BDD343E8B07B40BF555790154DC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/MeshViewerWidgetT_impl.hh",
+      "bytes": 23611,
+      "sha256": "4E22FF857FE0D40F07E2A4D065D7AB78AEF458597D27E086A2B4C0B846C82ED7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/MeshViewerWidgetT.hh",
+      "bytes": 7178,
+      "sha256": "9A6477F75F3348115E6E7DF64233A2AEBE98F485A54085784E52612B0453A43D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/QGLViewerWidget.cc",
+      "bytes": 22833,
+      "sha256": "EBDDE9CDBB6A0EA946C7F75158AEA14B787361D19B4F7BEA99E4EEFF87AC80E7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/QtViewer/QGLViewerWidget.hh",
+      "bytes": 7602,
+      "sha256": "C2BA9C2CA70858922B934421744B7369DFA702934DB166628A662150E8DD27D7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Smoothing/CMakeLists.txt",
+      "bytes": 130,
+      "sha256": "FDC72752444C89994BC2992A6DF2E3D2A5BC91B7F9D9033EF5D5C1F54AF4C64E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Smoothing/smooth.cc",
+      "bytes": 6692,
+      "sha256": "26F27B57FB8F4EE946668DC09BF897AE682DA82C38EF84ADA1D5F3C685D0627E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/adaptive_subdivider.cc",
+      "bytes": 15818,
+      "sha256": "FADF93DADE0F4902E9DB4FFE5A2832BEE17A7E3168F9C904DE2CBB25EB0D43F3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/MeshViewerWidget.hh",
+      "bytes": 4672,
+      "sha256": "383871550438306974123C44E7AFFE7B9438265A45DDEFC59EC45C83F829A019",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/qtsubdivider.cc",
+      "bytes": 4182,
+      "sha256": "D6CBB4A8F239A36C972FA445F88B1069521C8373E7014A802FA7FCE5A37E2E0D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/subdivider.cc",
+      "bytes": 11475,
+      "sha256": "173391A13E93A666C438C27A52BF56F5CEB6553168449707DA8C1CEFAD84430D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/SubdivideWidget.cc",
+      "bytes": 13820,
+      "sha256": "8064F205B0D804FBF515D309BBF4C19C607217BFFA2DC145C73924C93C64EA2B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/SubdivideWidget.hh",
+      "bytes": 5214,
+      "sha256": "D4850B1FEE5667E09E1CB331EFC11D674FA67F10EB64138FFAD98BD4F4F239E6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/commandlineAdaptiveSubdivider/CMakeLists.txt",
+      "bytes": 186,
+      "sha256": "975C5A8E000BE96F693426A82E7D9A43B76320E78FEC0D8201EDF919293E318C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/commandlineSubdivider/CMakeLists.txt",
+      "bytes": 161,
+      "sha256": "B92DC45F2A9B66C14A987E52D488566C6AC1B89E26BBE7736DD2C45C01962B59",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Subdivider/SubdividerGui/CMakeLists.txt",
+      "bytes": 755,
+      "sha256": "EB780601F41D96090510E4891BFB9B16DBAF26F91DB5DF3F6C5BD40DFDC5CCBF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/IvViewer/ivviewer.cc",
+      "bytes": 5697,
+      "sha256": "9F3073348AEB7F8005F3D2154A04F87AD221F34BD6D6CB44414DBBF2F3A7BB15",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/IvViewer/SoOpenMeshNodeT_impl.hh",
+      "bytes": 11016,
+      "sha256": "6484BD2F49E65D625E39D577A09BD8EB8C82E1E8C0E3EEE746BFFB9EE62C968B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/IvViewer/SoOpenMeshNodeT.hh",
+      "bytes": 5597,
+      "sha256": "DF0C00AC85F892DFE04886EDD9BE24F18DA11FC3070B2ECFA5F22A664E914E4A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/IvViewer/SoOpenMeshSupport.hh",
+      "bytes": 5854,
+      "sha256": "5B1ECFE12E0AA595C0E2E11849116C6142FB2E21CB7D521CC5510A1E3F0C554D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/OsgViewer/meshviewer.cc",
+      "bytes": 5773,
+      "sha256": "9891DF20B9F8D2F9D708FB36838E11E22C3D90DE97281F332FDBB699BAC36B26",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/OsgViewer/osgviewer.cc",
+      "bytes": 15542,
+      "sha256": "FD9B5B1CBA96504D1D52512773647DB938C3EFA7B76F499A7C342473008724E5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/OsgViewer/README",
+      "bytes": 272,
+      "sha256": "FCE4684C6B7010602DF7B1B675C48A54479A647BF93CF7D2526E6C2C82F198BA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/MeshViewerWidgetT_impl.hh",
+      "bytes": 18575,
+      "sha256": "77D2B3AECA428058BA58B6EA653E46D96A30ACE9F6B9C0A677D5DF86C7F932FF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/MeshViewerWidgetT.hh",
+      "bytes": 6639,
+      "sha256": "A75FC2D14F4DCA8222BAB04E3D57E20A8DC03039FD6ACC3859386A2E045A2777",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/MyMesh.hh",
+      "bytes": 3760,
+      "sha256": "E8144454584125E45F8698DAE5F3026E0AE93A714EDEAEBE603541C8DA09AF8B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/QGLViewerWidget.cc",
+      "bytes": 16778,
+      "sha256": "F25D7EC46FEED509130D7CB9E645928B636908F4EC2655BABCB6550D889E7F66",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/QGLViewerWidget.hh",
+      "bytes": 6717,
+      "sha256": "BE4E4F246A1037E39F2075BED0027B5E918DF5CCA741B49D9F11FABEA0E13E95",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/VDPMClientViewerWidget.cc",
+      "bytes": 45511,
+      "sha256": "69B81ED96EB8E763BC712F3E5EC4BABDD21C910F363BE56D02F35500F3A66554",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/VDPMClientViewerWidget.hh",
+      "bytes": 12396,
+      "sha256": "D1407AE2D9E42613744B891B641F4722AD3828A04B6C4DC8C99E81FA9F8F471A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Client/VDPMStreamingClient.cc",
+      "bytes": 4876,
+      "sha256": "3D87F70E906C639C4C13C1B7AA8E884D4D00DB97C865E9BCCF6A7C9926356016",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/ServerSideVDPM.cc",
+      "bytes": 9605,
+      "sha256": "6E68458D9EBFB1BDE00098D39DD60AB086D580C2FCC75512268983A1E9479E31",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/ServerSideVDPM.hh",
+      "bytes": 5557,
+      "sha256": "BCA0F29869715A196E9D1E76E8CB2170950CBC55EC1169CC7490AFC364CFDC2B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMServerSession.cc",
+      "bytes": 15364,
+      "sha256": "ADEE58CE2D356496575EE9A138FDC0B29ADB92F4A01D2D646EA35ED19D397A62",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMServerSession.hh",
+      "bytes": 7109,
+      "sha256": "907276243732FCDC0415CDFC3B7749BBECD550FC60522102FECA0EA959551955",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMServerSocket.hh",
+      "bytes": 4210,
+      "sha256": "6DA2CE6B0716AC4BE15B35C6EB2867746A52B96DC34CC98CD099D67C947064A6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMServerViewerWidget.cc",
+      "bytes": 4960,
+      "sha256": "D5D6B0D0EB1225E371BA8259CDEE13C4D3E3656EABD50883EB9E7F6A06A9B482",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMServerViewerWidget.hh",
+      "bytes": 4901,
+      "sha256": "A7706FEEEA4A1C2B708B95828EAA243984795D735B2FF0B60263B8EDA1C63254",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMStreamingServer.cc",
+      "bytes": 4144,
+      "sha256": "49ADB6AE25169D0C62FF2DFCF81DDEC8E506B7CA39ED146F39676393715EB570",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming/Server/VDPMStreamingServer.hh",
+      "bytes": 3318,
+      "sha256": "D1A6950217D03C479CEAB33308DAB7F314D80D156B6EC6D8A3AAAAA88C77F961",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/camera.cmr",
+      "bytes": 1237,
+      "sha256": "20FD743BAA5B45F62DDCAD8364D4D27C97371D25DFAC0ADCD01391BC16ADA239",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/MeshViewerWidgetT_impl.hh",
+      "bytes": 18648,
+      "sha256": "B3058D44F300EB5170FD43E02E3BF76F22B36DF4715C0962717C4A1787D42EBD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/MeshViewerWidgetT.hh",
+      "bytes": 6639,
+      "sha256": "A75FC2D14F4DCA8222BAB04E3D57E20A8DC03039FD6ACC3859386A2E045A2777",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/MyMesh.hh",
+      "bytes": 3760,
+      "sha256": "E8144454584125E45F8698DAE5F3026E0AE93A714EDEAEBE603541C8DA09AF8B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/QGLViewerWidget.cc",
+      "bytes": 16832,
+      "sha256": "494072AC7B8644F3A76B11F7B1AFDACBE14D77BC90F0B2AA250E013446A2C9E0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/QGLViewerWidget.hh",
+      "bytes": 6731,
+      "sha256": "DFF2DBE11C724062104EF4ED2EE132CD7659DA72A0BAC9212602FA22F77219BF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/VDPMClientViewerWidget.cc",
+      "bytes": 45964,
+      "sha256": "1C446DB255E9C8102E90715F36629755DC02A48419D089C5DDB076317F8533E8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/VDPMClientViewerWidget.hh",
+      "bytes": 12475,
+      "sha256": "15AB598E86AAB8DF8F9A3881566F205C8DB8A3650C6ADAE6D64C92F82A6664C7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Client/VDPMStreamingClient.cc",
+      "bytes": 4857,
+      "sha256": "7E019E75A7B75F34D02618A17940BD53DCC899A47978EBABB19AB46BA1C3DD01",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/bunny.pm",
+      "bytes": 840200,
+      "sha256": "B96FAEEE91B860AFCA4FEEA2200AB41BC307F745FFCEC6C0BC14331A17D2A22F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/bunny.spm",
+      "bytes": 2781190,
+      "sha256": "9A91DDE9F10B79E62E981141BF0B93BEF72F1BB3D6C0E2D779D55038114738D0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/rockerArm.pm",
+      "bytes": 732068,
+      "sha256": "84BD461F32AC1D8AB9C17F5FE03970B8123880B29F92074035AF589041A469F5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/ServerSideVDPM.cc",
+      "bytes": 9605,
+      "sha256": "6E68458D9EBFB1BDE00098D39DD60AB086D580C2FCC75512268983A1E9479E31",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/ServerSideVDPM.hh",
+      "bytes": 5577,
+      "sha256": "2B64F582DF517108C5CB99023136F8E411A1848311FDCF3F35B110B33DA00BE7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMServerSession.cc",
+      "bytes": 15714,
+      "sha256": "3C3FFF6CF8E2BEC71E0656EEEF3C1AEC372F75FCF05D308748100A8C9DE06030",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMServerSession.hh",
+      "bytes": 7256,
+      "sha256": "99476776F7780F3178599C08830A5032C572CF245F0AE80CC3C189C66C064AEC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMServerSocket.hh",
+      "bytes": 4349,
+      "sha256": "0622DB10076DB952EA8AC390DCAC645EC985634E394B5982DCB90077AB3C76A1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMServerViewerWidget.cc",
+      "bytes": 5044,
+      "sha256": "8BEE0A342E3DE2BECCCC529B5D8C88C6737A0CF2B8703F903F9A0DB8EBFC429E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMServerViewerWidget.hh",
+      "bytes": 4888,
+      "sha256": "17F068EEE32B8D7E657CAFC53233D907396D69777140B9174083456B479E006D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMStreamingServer.cc",
+      "bytes": 4143,
+      "sha256": "8382116371F082B1C49BA6C91DB05B78B6CF5CA3B416402DF3FE4C3753DB1CC9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/Unsupported/Streaming-qt4/Server/VDPMStreamingServer.hh",
+      "bytes": 3318,
+      "sha256": "D1A6950217D03C479CEAB33308DAB7F314D80D156B6EC6D8A3AAAAA88C77F961",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Analyzer/CMakeLists.txt",
+      "bytes": 134,
+      "sha256": "4FC4BF0A58BDA1502870BDD8FAFE868E631366C1BC81007399AA293F7C50EE31",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Analyzer/vdpmanalyzer.cc",
+      "bytes": 32870,
+      "sha256": "44BA0052B1577E6F245F7D0C6AA00B0ED2C8017747ADDDE0882BD95D44A17E4A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/mkbalancedpm/CMakeLists.txt",
+      "bytes": 142,
+      "sha256": "6B18ED467DD0DFA4CD9B7A17B616B644987A79118AAA9AF56C0EBC0032949507",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/mkbalancedpm/mkbalancedpm.cc",
+      "bytes": 12124,
+      "sha256": "EE22BAD21891DA86EC1A0278B68734774B405016CDEBFC4E228FE330AC916BC7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Synthesizer/CMakeLists.txt",
+      "bytes": 621,
+      "sha256": "20C726C6ECC748E62F6DB7BFC2830FB8266A7B616A5B60500077CFD81D7BB211",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Synthesizer/vdpmsynthesizer.cc",
+      "bytes": 4352,
+      "sha256": "3374891BAA9499D0456AEFFB833D94BD2B8EC0524F7DDDB6E3AFA382C88FBA5F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Synthesizer/VDPMSynthesizerViewerWidget.cc",
+      "bytes": 19127,
+      "sha256": "30ADB66CC40131956D5D2A1DF1160F4F021AA7EE03DC2AEB365AB76D6BF3CD9A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Apps/VDProgMesh/Synthesizer/VDPMSynthesizerViewerWidget.hh",
+      "bytes": 6898,
+      "sha256": "44B14D6B1509B5DC4F367336CA61587A00EB2F3223EEB45252A95C99E4F711A8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/CMakeLists.txt",
+      "bytes": 7725,
+      "sha256": "2D3730BF486EA46F438F8FB61A845744C32E5F498FACFDBE9C33BD8F7A9F53EE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/Config.hh",
+      "bytes": 3935,
+      "sha256": "886C2E7D6D96BC4E89BE26E427C7669003FF281056D062F01A9AD3E445A59725",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/EigenVectorT.hh",
+      "bytes": 4905,
+      "sha256": "907C8D6C24108A3AB6BF71DE12148D6874C4A5D6D63E696F14E2955D97C6FFAD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/LoopSchemeMaskT.hh",
+      "bytes": 7722,
+      "sha256": "A55685B0F2BB301D3FC8C7A8018370802EAF60BE7630C8A2FBA860BDB6823A3F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/MathDefs.hh",
+      "bytes": 6141,
+      "sha256": "A244BC61F3D48780918DCCE69D4729750602D37CB66441678DB3E2091D452B19",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/NormalConeT_impl.hh",
+      "bytes": 5975,
+      "sha256": "5829AFD357821C0776295C9496609F6307F284D3B13B08B330619217B8C641EF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/NormalConeT.hh",
+      "bytes": 5467,
+      "sha256": "1FB397E0F54966B22C28B126937E3A79356A5BA5EC469E9CE0CA3BF4ACB84AE9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/Plane3d.hh",
+      "bytes": 4827,
+      "sha256": "50B6C6E10F38A9781F987B1AFC7B2B9C9CB116A4CE89B76B4FD255366B1A80FB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/QuadricT.hh",
+      "bytes": 10423,
+      "sha256": "D2262A99BC79784579E182ECEC0B91E9F5B2C5F8905CA2466DB056C6F48FB42B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/Vector11T.hh",
+      "bytes": 33988,
+      "sha256": "5F41C9B4F4BBAFE3E2E973448F76D53BD458F704352A6E0745229180966118DF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/VectorT_inc.hh",
+      "bytes": 18525,
+      "sha256": "56C59DA59EEE4A8CE128AA83ACB86F66269DE770F35F4071D6D777D9671DCB3D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Geometry/VectorT.hh",
+      "bytes": 14526,
+      "sha256": "C1D7816EF794F72A95E2192C9137019A6C1A664F613B3294CFDC519A92F4FB76",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/BinaryHelper.cc",
+      "bytes": 9504,
+      "sha256": "4D80C2D9037F3A8C4CA34594200B84C298B062B0CC130A40736B62763B1577FF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/BinaryHelper.hh",
+      "bytes": 6864,
+      "sha256": "ACFAF7AE569176D270A0EBC56D26FF179026DE513EDAE2274322EB3C06005DA7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/IOInstances.hh",
+      "bytes": 5724,
+      "sha256": "4F66A374D9896279B189197A7FB6D87BE6E38585DD067E645A4BADE82254777C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/IOManager.cc",
+      "bytes": 10361,
+      "sha256": "3151D5E92BD79BBD68CDBE1C5C2A1855F7497710E7302DA641065F705B36CFD4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/IOManager.hh",
+      "bytes": 9814,
+      "sha256": "0DEB3F84A75F5EF40CC102FDE309CA4E6AF7A96FB489D96A5BEB3F7086B4AAF3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/MeshIO.hh",
+      "bytes": 10734,
+      "sha256": "BECDCE26972A17829C05B2F1A868CF2FDC725788AF462B53AACD509504B277DA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/OFFFormat.hh",
+      "bytes": 4164,
+      "sha256": "5D9A8E466623A0169160151055E83691F69852F8B4B25738E81AED694F79EFF3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/OMFormat.cc",
+      "bytes": 9388,
+      "sha256": "A0ACEF35A7D8C160D87B167252744EEEDA5D74ECA93128FAFF516A300255518F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/OMFormat.hh",
+      "bytes": 22602,
+      "sha256": "ABDC4A9A1117DFBA04984C0B7E96E016D99CF9B91A4952B1908240EB79A7672A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/OMFormatT_impl.hh",
+      "bytes": 7490,
+      "sha256": "AF82EED9D39BD84B1E4316208FBBA774801CB31B53B06A3E71F48E81EC6C9CD0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/Options.hh",
+      "bytes": 9305,
+      "sha256": "6722FDBCF978CDEFAC0112E68399974B5DE42760A5623011C4D0EA0894BE722B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/SR_binary_spec.hh",
+      "bytes": 17130,
+      "sha256": "7A6CF3E01C7884B0A181A78B77397F2BF60C14FC9A78C5F0984EBE41CCFC87C5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/SR_binary_vector_of_bool.hh",
+      "bytes": 2846,
+      "sha256": "4C4C61AC3211D61D6A3D2B09D221F8244E5ADA1AE6D1813BF19DC255952AB8B2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/SR_binary.hh",
+      "bytes": 6386,
+      "sha256": "4851F2A11CCEC6BF589F5FA21FFB2D8211F0615B042FC756F1AC79D6AED9A87A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/SR_rbo.hh",
+      "bytes": 9289,
+      "sha256": "A615480F3FE0F9F152C739D9099F38F8560322ED282CCAC8FDDF31BDC00A8B56",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/SR_store.hh",
+      "bytes": 3971,
+      "sha256": "14FEB544DC2C6E0EC5F5452B1BFD05D7B121E17DEC716D63FC996490C25EA9E3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/SR_types.hh",
+      "bytes": 5010,
+      "sha256": "BF53905AB5AF477FC74F886EF3847608414CFAF382997928835B044110CB95C1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/StoreRestore.hh",
+      "bytes": 5809,
+      "sha256": "4A748BC75FCBED671C407576BEB43EF7226EBD1CFDFB6401CE4354D9247E29AE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/exporter/BaseExporter.hh",
+      "bytes": 8265,
+      "sha256": "E8A41B31A44C0C9699DAE7763E61E19076EE448AAFB84294006E218D63E8F825",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/exporter/ExporterT.hh",
+      "bytes": 13248,
+      "sha256": "C7028741F7C7891BF9164F529D71629814BC4785349CF976A90A34A7652CD40D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/importer/BaseImporter.hh",
+      "bytes": 9662,
+      "sha256": "E5C892E8E31D92E0F5E10C29D79C1AF3A2E0685FA94F30E2BC90ED0D491F1860",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/importer/ImporterT.hh",
+      "bytes": 16188,
+      "sha256": "53C78E596EBC3A4A2F8852BA4A4522607CB2F633D9F36577F2A2F55D29DABD10",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/BaseReader.cc",
+      "bytes": 5106,
+      "sha256": "1C3C42026378566C794400C6A379F15CE45CFD2BF028844773C04540DE6C0BC2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/BaseReader.hh",
+      "bytes": 8033,
+      "sha256": "711FEE63508E8C2EB0E310BC14A24A3C0B115B7B114EA7AF087B7E2B20F5FC1B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/OBJReader.cc",
+      "bytes": 24035,
+      "sha256": "4068628A7AE8A60A46166C561671C998887884D1E693AB30D114D7B2FEB1B094",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/OBJReader.hh",
+      "bytes": 7326,
+      "sha256": "26BECC4CCB69964FA12E6C4F77EF2CB88875FB09F6454E3693D728CC71DB1DDA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/OFFReader.cc",
+      "bytes": 19856,
+      "sha256": "C80F4579F5D725843CBE8C283041863AD23F3CAED8B2F66D5558980F4DFCCC30",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/OFFReader.hh",
+      "bytes": 6527,
+      "sha256": "56447F902F8C53541E90A7B772BEF66639CB757E735BA8A36116FBBD5D0902FE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/OMReader.cc",
+      "bytes": 28150,
+      "sha256": "DC1BAA988F5540BBC2F3CD74813FDD7D87E05934F84F06BCAF74318C767475FA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/OMReader.hh",
+      "bytes": 7157,
+      "sha256": "9DA3557F25978C692B3884681D709E0E23D4A8962557068FB0C1FEF3F1E08D53",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/PLYReader.cc",
+      "bytes": 48307,
+      "sha256": "61B589F982C79AE88457EB3800EBE54D4B972C60B442589C593BE18317848311",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/PLYReader.hh",
+      "bytes": 10047,
+      "sha256": "48DA6E6586F10B61571A702A1CEC42842FE7DA3D5E88BB5535814C0D845568BF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/STLReader.cc",
+      "bytes": 12784,
+      "sha256": "DBBF04F7016555EA0976531E44E18F82C62B9647787FC55E0CB3B0976ECFB383",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/reader/STLReader.hh",
+      "bytes": 5887,
+      "sha256": "3C58E7F3A5D7FD08E047116DF8175C731D1881A107FD79C3B2E3C3E9CB6A373D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/BaseWriter.cc",
+      "bytes": 4523,
+      "sha256": "FB9565D8B0E695F18F5D5766B2468ED0B5E11558E06B786F131EB9F4D6620765",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/BaseWriter.hh",
+      "bytes": 6932,
+      "sha256": "EDB276AE7513AC236530DA7E52A28C943158A53EFA67A6C5A5467E006AAC0B0E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/OBJWriter.cc",
+      "bytes": 13696,
+      "sha256": "82F6D3A57ABDA06207B2658694F48A4C35D905025F543CBCF89F0C5DF798DA54",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/OBJWriter.hh",
+      "bytes": 5664,
+      "sha256": "F568C640DD71ED9C0305CC271B1A1C8305F208EDC76E413B0F056FAD407ADD5A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/OFFWriter.cc",
+      "bytes": 15225,
+      "sha256": "4E957A38A64DDA0EA386EC9B9447D086984DF7F980497F45125780E33B5BCA17",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/OFFWriter.hh",
+      "bytes": 5727,
+      "sha256": "0287E34257203BB99F477EAD4F57C33CE50CA50391B995827BABF46824C5999D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/OMWriter.cc",
+      "bytes": 24013,
+      "sha256": "2CA2F1F26017EA7F1F0DBE456EB654975A46DEC21EFCE342D6849CDED90B7D8F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/OMWriter.hh",
+      "bytes": 5735,
+      "sha256": "157622808ABB607761862462ADACC1F1F8F1B8E942C6816BD17AC66B6A3A0419",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/PLYWriter.cc",
+      "bytes": 23807,
+      "sha256": "72813E8A5FD24757D66A3283AB955ED2C4AC65658F392F72E11C9B1BAE841BD7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/PLYWriter.hh",
+      "bytes": 7654,
+      "sha256": "A14689D7BE69C293CB44777E55463BB7A468F1A1AFA0777906CF0A7D43772691",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/STLWriter.cc",
+      "bytes": 12190,
+      "sha256": "38C556AF2835AB7A1C053905981E401BEC1236521ED96B7A13B6971AADB7BFA6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/STLWriter.hh",
+      "bytes": 5599,
+      "sha256": "2D93700B75993BAFED4AA093B6350296F5639E5D94478B98CAED2B903FC33739",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/VTKWriter.cc",
+      "bytes": 2997,
+      "sha256": "976FF71B71FFBD3232F52FB2F36BFB886E4EBAF3D7A17CCAC9DA81B25109AC3E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/IO/writer/VTKWriter.hh",
+      "bytes": 1844,
+      "sha256": "4ADA7AB4769559F1440A1CCF8004F4C25054C48376EB3F11DB7E30B1E8D3E4CF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/ArrayItems.hh",
+      "bytes": 5293,
+      "sha256": "94027CBA7899985B40D6C5AD2181ABEA4066CBA6D13F4FF0293F397855414660",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/ArrayKernel.cc",
+      "bytes": 8457,
+      "sha256": "C46BF63466E3453166DCADD956730636CD5A9427F2FE0ECA4A976925645FCA5F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/ArrayKernel.hh",
+      "bytes": 31722,
+      "sha256": "E8FAF3935E2F02D24758640656F3C5EBB6B95ECD176973C0BDFBA5D9EF1051B1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/ArrayKernelT_impl.hh",
+      "bytes": 11884,
+      "sha256": "17595B5466782B5983C150605886EA12439F998108B976D2E0C68CFB38825270",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/AttribKernelT.hh",
+      "bytes": 28886,
+      "sha256": "D2BCC111EFE53177D207DFB4845BEA3EBD8E75C271B64CF7ED953F477C126CC0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/Attributes.hh",
+      "bytes": 4874,
+      "sha256": "6BBD9E3022DCFDE6433BBB6A8B75765089B815167F9F800EB1C9A2CCB8B9B884",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/BaseKernel.cc",
+      "bytes": 8422,
+      "sha256": "49742A0E4EC92B7535B6D27A10D89805F8033BD06B9CC87D15628D3B514B633D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/BaseKernel.hh",
+      "bytes": 29000,
+      "sha256": "D12C879B6AA4F58167B37D9C94873B1C25BE9D55F0BD929E19F56FAF78342FF4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/BaseMesh.hh",
+      "bytes": 4416,
+      "sha256": "00C489160DD17A545DF563A6314E717E1B2FA5A3A9DB4891BBD055D7386357C8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/Casts.hh",
+      "bytes": 4343,
+      "sha256": "DF768F08C540DF365A58391B5F977B1A9F4BA0E9BDEC89DF9BDD23A65E78EE60",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/CirculatorsT.hh",
+      "bytes": 31441,
+      "sha256": "D850F3580EFC037FFCB5DCBF1DF56AF1DA3DE3D9D7E8C6B8105F04EDAD1072A6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/DefaultPolyMesh.hh",
+      "bytes": 4051,
+      "sha256": "3C5D814289ABD3D0AEE8376EEDA823D0691738FD9530D9BD38308338A5A51A0A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/DefaultTriMesh.hh",
+      "bytes": 4045,
+      "sha256": "8A86C1425E9EC73B46FEEDF5A5EA3A4CE3BC45D1D10BBCC513A90DC4A3128B0A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/FinalMeshItemsT.hh",
+      "bytes": 9904,
+      "sha256": "4AE597B28794A8A6D7F401FCFE58AC14DB6594B30FFE10070FC6AF01A6BCB003",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/Handles.hh",
+      "bytes": 7465,
+      "sha256": "96F42763E54FC8CB77EA585E49AC1E57C8214A29466B795EC731C24C5E38A2A2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/IteratorsT.hh",
+      "bytes": 10339,
+      "sha256": "6EDB72F16BD72A3D878D012A8841CDE980832563F76D162DEFFB510872B09665",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/PolyConnectivity_inline_impl.hh",
+      "bytes": 55503,
+      "sha256": "B80440420A97E6F3A446D426D30A118E1F8E263DCF2045BC98E5B9D50F1AE4DA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/PolyConnectivity.cc",
+      "bytes": 37290,
+      "sha256": "D77BD028B038CEC3D0F9C995D389B5A3C9981FC41993F3C0D2612A0911A78317",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/PolyConnectivity.hh",
+      "bytes": 75517,
+      "sha256": "6F6EFD063EE86A3207482D61F67A67F16D6A525D2640A51821145242B89A81AD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/PolyMesh_ArrayKernelT.hh",
+      "bytes": 5271,
+      "sha256": "C8ABFBF970EC369B6D91A73B197A37EE264C87DFBB9177BFD3242AA5C7B7BC50",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/PolyMeshT_impl.hh",
+      "bytes": 18537,
+      "sha256": "C20AAED6CD8F31CB454B5445A49AEAE560AAA439B5A3667DB798C6EE137CD62F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/PolyMeshT.hh",
+      "bytes": 25073,
+      "sha256": "55679E6684B7A5DA50B498DD68A80F14AD5D69B2C0E9258036B301B26B62E553",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/SmartHandles.hh",
+      "bytes": 22059,
+      "sha256": "47AD7A32C406B21FD301EB7F2FACE796405EF517B0EEF40E3A567346AAF68420",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/SmartRange.hh",
+      "bytes": 17056,
+      "sha256": "5A0D0DF0AEC14E43FEFB1ECC552AF86BF21DD887424D2EE37A23C58A2477A3A2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/Status.hh",
+      "bytes": 6895,
+      "sha256": "0118CD7F70E83C340E582D5D81B00F527770683E60670AD92EE37675863BC35F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/Tags.hh",
+      "bytes": 3444,
+      "sha256": "612A3233FECA095A2CFCAA3C0CEF77F14418B993242C544193FA06FBDEA596D0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/Traits.hh",
+      "bytes": 9664,
+      "sha256": "A12772036713116E614E76DCCF9317A3FC194256F245B2FA357D4DC06EA38221",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/TriConnectivity.cc",
+      "bytes": 15858,
+      "sha256": "275D73CD626545C5E4F7B6F88050C3B943D7FF286CBA5E0A0E5E8C4EE738C716",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/TriConnectivity.hh",
+      "bytes": 10418,
+      "sha256": "56F8B31B6D5B5E375F9146E0C59395EEA570C6F298228E8B1719D7131630802D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/TriMesh_ArrayKernelT.hh",
+      "bytes": 5174,
+      "sha256": "33DD660C64E58E4EDEFB7F681F0B005D640AB7B3538CCB2C8A8BD3E5CB0881AB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/TriMeshT_impl.hh",
+      "bytes": 4365,
+      "sha256": "14E28AECDC83CAC3A5977444216C21A4301C05C0CD0665DEFC3DEC24F87263DF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/TriMeshT.hh",
+      "bytes": 16833,
+      "sha256": "F6D0B1FCE194CA9EE51941CD60B0FA540977B54B19446319CD0AA3FD829AAA93",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/gen/circulators_header.hh",
+      "bytes": 4683,
+      "sha256": "A3C71248225E17AA9605127FBAEF7615F2C6C223EC179F91C1FE07D3234BFD47",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/gen/circulators_template.hh",
+      "bytes": 4068,
+      "sha256": "F86F6842AE2315B114B85039321BDD9E8B52EA8E2F52EC87F48B83B6F882CB70",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/gen/footer.hh",
+      "bytes": 297,
+      "sha256": "AEF970737FCFC4EFBB60E01466F6F48A6E26E103FF5DB7B8DAA0F5539F5CEDD1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/gen/generate.sh",
+      "bytes": 5477,
+      "sha256": "ECE4D9BA1FC0C8C30857FE720F11F4F52C9E4F577A96B0AFF4E8B58263A30A22",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/gen/iterators_header.hh",
+      "bytes": 4174,
+      "sha256": "4817FC00E23BFB73B10A270D7C3BBDC11A68211160EBAC93E29E90DD2F9EDE32",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Mesh/gen/iterators_template.hh",
+      "bytes": 3665,
+      "sha256": "9ADF5E3A5D1ADE5FF56AB1BE4D5E6BF4F17A193F92F327AAC7B934235FDE27DF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/compiler.hh",
+      "bytes": 7577,
+      "sha256": "85FF60655AA2601FA00448BA3E4AD030D07D1A851FB7F38D3C9A7A9A016F7C78",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/config.h",
+      "bytes": 5503,
+      "sha256": "161470D1E43A481AC1BAD0D6C0C4908EC908B09B32766A1BB9FED9E8563D6731",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/config.hh",
+      "bytes": 3205,
+      "sha256": "EC3F64B9FE3F7A8B3439FC46F716AF313ABF2A51B7092BEFC917565FABF85417",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/mostream.hh",
+      "bytes": 10087,
+      "sha256": "AD4DB5C9564C142C2978D367D875A67C87DDD140C43C34043F939FD27C7FC93E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/omstream.cc",
+      "bytes": 4358,
+      "sha256": "B80F2DC366DFDDE6DC3FDDF27032B6E8EC7DD910E6BF333A6398746F76997125",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/omstream.hh",
+      "bytes": 4271,
+      "sha256": "C322DE615333DAC209E9DCDC9E1BB1B3A8D02B066C3B50E6C4FD3F19A2AAF5EE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/System/OpenMeshDLLMacros.hh",
+      "bytes": 3795,
+      "sha256": "E5412F2149B462489E339F0C63A4D230499D2829D2B883244097C5600B61B112",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Templates/bla.hh",
+      "bytes": 4709,
+      "sha256": "C2C812C386F7DBE43DED3D6E696EBAC67C35A1A62432C5A41F2F822A55A1819A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Templates/blaT_impl.hh",
+      "bytes": 3953,
+      "sha256": "7A3C160C4869129B7A74EADDBE6607B223FCC58CED86609748CEFF7D908FE2EB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/AutoPropertyHandleT.hh",
+      "bytes": 5948,
+      "sha256": "E0330B9DCEC85872A740D4B8825D274958C309C7CCC96B9211F591F5612DEAFB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/BaseProperty.cc",
+      "bytes": 3369,
+      "sha256": "D385D2053D70D097682E9839D33CE2254A85E53FFF2FAC5AF2998FEE6226C8FF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/BaseProperty.hh",
+      "bytes": 7642,
+      "sha256": "8B198937140B223D52B56EA5D671E5150EAD67EAC7AF7841F6A14D80157EAC0E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/color_cast.hh",
+      "bytes": 11148,
+      "sha256": "898AB2616DFFD73270D553F10A4DA27A5B175EB62DE9DFC0DCF01BDABD5D8FB0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/Endian.cc",
+      "bytes": 4172,
+      "sha256": "AC58A2B505D09E6023EF66474B619FB44EB08B7C1A65691E134EAACF521EAFBF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/Endian.hh",
+      "bytes": 4533,
+      "sha256": "E09BAB63D3CF0BB97CBA8F2FD9B7E26D8FF7B4A92349C6703724F222F86438DA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/GenProg.hh",
+      "bytes": 6041,
+      "sha256": "D07DC5F07781AE6206615702303CC733AD39BF5272BCFBF3F6787C66DA8391C9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/HandleToPropHandle.hh",
+      "bytes": 1130,
+      "sha256": "A6EE256F09159887B5B2E1D05EAE838782DF92D46AD79F7F9E83D02EC04168FF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/Noncopyable.hh",
+      "bytes": 4583,
+      "sha256": "0120019A3340A0415FA793F0C3C946292718EE18BFBBA863892352550B093A5D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/Predicates.hh",
+      "bytes": 10238,
+      "sha256": "B3A888A5C4249B1859619B78C15886CA9960F718499BF084C042D0C2E1CDCBD0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/Property.hh",
+      "bytes": 16615,
+      "sha256": "0DF014F5F245FB4EBCDC10BCAAA29E905658BE86153228A52CD82D0377DB192E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/PropertyContainer.hh",
+      "bytes": 12410,
+      "sha256": "F21A53BEAFA81A4F5B8C567F7AD2F9E2D53DAF03E44E9DBDA396BAAB5799262D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/PropertyCreator.cc",
+      "bytes": 6855,
+      "sha256": "3E3E17C112E5295FC610E7362B16542B123FDDBE3983D57735FDFC7BF08E8A00",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/PropertyCreator.hh",
+      "bytes": 12846,
+      "sha256": "7EE1637685B5687DAD7BA9191CF044D32AD48DE4E486F2318642924AC9CA4AB0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/PropertyManager.hh",
+      "bytes": 38105,
+      "sha256": "576E81FD0DED0B746792CE7C64287BACAD2D79D025FBF9B71866B960D43F9F77",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/RandomNumberGenerator.cc",
+      "bytes": 4702,
+      "sha256": "F7D41F02C1C0A81003CA052C09B2E9A3D4C85138AD1199619A32294D48ECDDCA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/RandomNumberGenerator.hh",
+      "bytes": 5068,
+      "sha256": "DF0F8651CA1719F5EBF58053260279D4B62B941F7FC7DE288670B212CC24A33E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/SingletonT_impl.hh",
+      "bytes": 4035,
+      "sha256": "366C21FD6DEE631D785CE0F4A5949E4F2919DD6E54E754D1C02D5CD963963AFB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/SingletonT.hh",
+      "bytes": 5433,
+      "sha256": "BD27F73F44FC5976EE8BEB61697AC864FA4CB5777F4EAD7E09DD137A72DE9BB3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/typename.hh",
+      "bytes": 808,
+      "sha256": "80F9554098978D83DE9B407AAC5E0CBED177A0B2CEF674024C1A38F6A3721B8F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/vector_cast.hh",
+      "bytes": 6196,
+      "sha256": "460FC54C14CA822BB9E61BDB99C028F3DCD76728C0E571EB5A72FF1E59AFB4C7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Core/Utils/vector_traits.hh",
+      "bytes": 4954,
+      "sha256": "2E05F9063D40B66AC0DD6685371FC21EFC46AD60F91B1256C5AD86B085895BEF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial01/cube.cc",
+      "bytes": 5824,
+      "sha256": "BF0E229A3915400D934396B432599262F01D133D3DE2EEAE76BBA7706E9FAC82",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial02/smooth.cc",
+      "bytes": 1741,
+      "sha256": "580DD54972BF543417850AB933EF2214B8FF96619838DDFD04DE626EA98D7E02",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial03/smooth.cc",
+      "bytes": 1689,
+      "sha256": "D3C90E66604B639F2871229FADFABA6123E2B4171E6913FC9B79BCFF01F8F4AC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial04/smooth_algo.hh",
+      "bytes": 1984,
+      "sha256": "4E465DF92ED3AD83409956B5BB6024BA705FD3C8D6B73DAD9CC9E021E18E2596",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial04/smooth.cc",
+      "bytes": 1286,
+      "sha256": "6AAAA19A89AD5A1720C991E05AA076AC843CEE3B4E54781F82CF92D59C46A6EE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial05/properties.cc",
+      "bytes": 1842,
+      "sha256": "CF48BA4224C176D0D16FEFCC2A795BC605566A1EC6A1D27A90F1C2A12C0F8921",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial06/attributes.cc",
+      "bytes": 2542,
+      "sha256": "B569DE75C53AA4FBDEAFA12172E781A9D4E9990ADBCBAC420524077241B351C2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial07/smooth.cc",
+      "bytes": 3278,
+      "sha256": "560CB35A6FA98D5C20EED1EB48331B606A89C74A75E35C381FE2204C1D7E1532",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial08/delete_geometry.cc",
+      "bytes": 7335,
+      "sha256": "765B4CC1F26AB57DF8164A20C1D3A6F5B4CBAEBE47183DCAEB275524B442569F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial09/io_options.cc",
+      "bytes": 8450,
+      "sha256": "A14545BF669A6EF84C96BBF7159941B993E288F645564ADE7A2A70B20F189861",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial10/fill_props.hh",
+      "bytes": 3040,
+      "sha256": "95D71EDA07BCECF96D721CCE7D97D4F29D7F7202BECDD1E34BF2AA433096DADF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial10/generate_cube.hh",
+      "bytes": 2086,
+      "sha256": "FD552A1CA39859BE30D635ADD40041A5D95C9371432C15F9DAF629E18F5AD8BF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial10/int2roman.cc",
+      "bytes": 1337,
+      "sha256": "5549E4A2BDC347A93008D1CBA4DF8C287A95CDD8A7B1B7A71E927ED5BBC7E72D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial10/int2roman.hh",
+      "bytes": 129,
+      "sha256": "E5AC084C895EE78AD9E38DDC046E6028D3F4F8BE3B61D9C6400B27B392AA5F29",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial10/persistence.cc",
+      "bytes": 8397,
+      "sha256": "EB98B12CA64E2349EAB6748A3C3FB4FD41A0C2D1337ACB3E0220B12F9C56F256",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Examples/Tutorial10/stats.hh",
+      "bytes": 431,
+      "sha256": "22405936AD6725DF7BF0849166D20DF8C1C827442E5560CE58DCF4CC6195A17D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/CMakeLists.txt",
+      "bytes": 7810,
+      "sha256": "F884894E789114CB2AF3625D4B8A6E6BB9301731EBB4BD04A4CA727EF2775D84",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/BaseDecimaterT_impl.hh",
+      "bytes": 10883,
+      "sha256": "E046C4A0D26506831F5C2C51DECABF42405CA8BA99F99144E5F5BDD9D30CA082",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/BaseDecimaterT.hh",
+      "bytes": 9633,
+      "sha256": "D831A907AC9BFB8E0264C6BA48EA69AD731C83AEF55E59A281824AD15269BD3F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/CollapseInfoT.hh",
+      "bytes": 7061,
+      "sha256": "0228F7F5367531D2C164DAE336859012A18C79443BF91DDC15B380F33765EFB3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/DecimaterT_impl.hh",
+      "bytes": 12014,
+      "sha256": "52B1BA85C98A2F0B342989FBF3F38FE2A583B93CD1FD35AF42D085C4618FCA72",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/DecimaterT.hh",
+      "bytes": 9201,
+      "sha256": "C4EF70D3595762057465F60E1C0C8D641642D9853364FE99E22DC6C73C8437B3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/McDecimaterT_impl.hh",
+      "bytes": 16838,
+      "sha256": "8AB1666AC43CAE67A74C40BBD2BDFA3142665B841E784AAA0039B6C9DA1FA3A1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/McDecimaterT.hh",
+      "bytes": 8083,
+      "sha256": "ED5A3341D6769FA066911ED80AE398B738828D076A5EF1FE569B72A4013C8BAA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/MixedDecimaterT_impl.hh",
+      "bytes": 7306,
+      "sha256": "8D5AF95E6AF990DCB8F9CDB391A09664DB76E48E93DB3C406B4EA586813DFA66",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/MixedDecimaterT.hh",
+      "bytes": 8475,
+      "sha256": "E7AB463F3C767B47C646094AB54643AF5748A34D35CCB71604C6C964E9B310DC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModAspectRatioT_impl.hh",
+      "bytes": 8102,
+      "sha256": "36983193C277FF17182D89B2B8D83520FC278DEF5FAA2E71079B532BF35FFB74",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModAspectRatioT.hh",
+      "bytes": 6290,
+      "sha256": "B105EE632A6994C158A3649E3F6898AE131D26BF255ED9489F028080BC9B6080",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModBaseT.hh",
+      "bytes": 10299,
+      "sha256": "528CA7482397DB6A9A2735A21B70A737C4E964820D51F6C8C8C3BBF11469608D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModEdgeLengthT_impl.hh",
+      "bytes": 5085,
+      "sha256": "EBB7C2A4B71D05BC250186016F507E9EABCD483F4CAB6522B39BF942FBAC84F3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModEdgeLengthT.hh",
+      "bytes": 5604,
+      "sha256": "E14B005C9A479CB1383DD6C7F0CCA49420EAA027ADB3175DA9B2F07E97ED36A2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModHausdorffT_impl.hh",
+      "bytes": 12591,
+      "sha256": "583FD7CE39C9FE0A2D1AB478714DD38E84EB246915A01A6F13632E6EFF25C1CF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModHausdorffT.hh",
+      "bytes": 6682,
+      "sha256": "B486EDBD069E04B2B6B406F8BB95284DE7EF50D46ED46789DD66280F2982D496",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModIndependentSetsT.hh",
+      "bytes": 4930,
+      "sha256": "E13AD485E844BA0386D43C98E7147E7AD19B8225138518DF94093FF0072FEFEC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModNormalDeviationT.hh",
+      "bytes": 9861,
+      "sha256": "D312DAC1A4C2EBA3186D7DA3A77E1F7EA0873E9BE7DF68AA4617CB9C00658118",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModNormalFlippingT.hh",
+      "bytes": 7586,
+      "sha256": "C242BCE869CC485A87481AD8BAF16DC4493370C651B6E5B6DB4D8551AB38CCFC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModProgMeshT_impl.hh",
+      "bytes": 7127,
+      "sha256": "64EA76DEB017F7E2A4E830D6646F3718C6EFB11F2735C42D5DA644C4CD9E1FC1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModProgMeshT.hh",
+      "bytes": 7592,
+      "sha256": "661023C4CE3EDF24C8E1591CB05716864500397736707F6FEB2B404E69827352",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModQuadricT_impl.hh",
+      "bytes": 6295,
+      "sha256": "EC751C0CAAE1B2052816DDA564B8237CF851431467A1CE3D80AB3AA8FF1D044E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModQuadricT.hh",
+      "bytes": 7067,
+      "sha256": "5D42CCAC70434172DC49FD9B9F311A0FDB149CD54832108521F21B1A00BE08FC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/ModRoundnessT.hh",
+      "bytes": 11657,
+      "sha256": "74D5DC615D909E09A8FA1E12C0C199C696E29071CB2436FEFD85D3CF12E5EF16",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/Observer.cc",
+      "bytes": 4316,
+      "sha256": "3E1B628E23846BB9ED86815F19E0BD8B8F3BE47AE8D70F428E7D49F8FB00843E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Decimater/Observer.hh",
+      "bytes": 5231,
+      "sha256": "9F26410AFBCE097DE0E26D3F4DAEC1C77D4053DE07E099BBA63E6A00F51930A8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Dualizer/meshDualT.hh",
+      "bytes": 6780,
+      "sha256": "5047478337CEEB43B5443CF8303E2F9B14F38CDB422E387588CCE43E552F3160",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/HoleFiller/HoleFillerT_impl.hh",
+      "bytes": 23739,
+      "sha256": "5EA9039E6F6B6919DB0402835B8D1A50083BEC4AFE19365498AA78A2C92FB6FB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/HoleFiller/HoleFillerT.hh",
+      "bytes": 8456,
+      "sha256": "796C963215C164BBBE468DC52BE1FF0F0909A720BEC8192F02556E5215895529",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/ArrayKernelT.hh",
+      "bytes": 9054,
+      "sha256": "75D547DF4EB546C39A011CFB4DF2694DB7A7266C107226CDC56AE4B6547CDFFA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/AttribKernelT.hh",
+      "bytes": 21589,
+      "sha256": "AE97278742269B6BCE8047A0204957A059E4A9B4BAD3F13634D00BEE3B61B400",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/bindT.hh",
+      "bytes": 11227,
+      "sha256": "1E8B51AE608C5B698D0A54E1D89B6161D38D34F7BD221C614D8A435570683FE1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/color_cast.hh",
+      "bytes": 4247,
+      "sha256": "619F1C59BD5263E0EBC866B67D6DA7A35164BBAE0435D2EC185FCB8E902EBFA3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/PropertyKernel.hh",
+      "bytes": 10372,
+      "sha256": "3B0DA77A9D50441551424A3444D6D6091EF86EC742B4BD458CEFDC6D320C3AFB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/PropertyT.hh",
+      "bytes": 13950,
+      "sha256": "57CB90AACA7BA65D1088B1A6756EBF44DA14855FE244F25AB8EF29D8E39E8A88",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/Traits.hh",
+      "bytes": 4780,
+      "sha256": "AD9DAC948EF63D87442A96CF14D6F66F3DCE6AE6E0F4A1643D3A43A15FD88101",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/TriMesh_OSGArrayKernelT.hh",
+      "bytes": 5371,
+      "sha256": "C9EB1F3A923FD5A35E88AF722C3E91E338832443F69BA3855D243AAECFAFCB15",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Kernel_OSG/VectorAdapter.hh",
+      "bytes": 7589,
+      "sha256": "BA13E253F43E0AA8F31006BA2C682C850C90E680CABC7AF15231BD070D84CE08",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/SmartTagger/SmartTaggerT_impl.hh",
+      "bytes": 6919,
+      "sha256": "3388F8DA83A84BBD20D0E38D3CA350BACF12FB3CC6E9C5F3650F7353C4324051",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/SmartTagger/SmartTaggerT.hh",
+      "bytes": 8573,
+      "sha256": "2679E384B3D16987867C8F54C39C999C52E771B92A9C0E96E83B5A28601FCBB6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/JacobiLaplaceSmootherT_impl.hh",
+      "bytes": 7615,
+      "sha256": "A36205AD3FA69652BEDD67D155341BBD743C4C47B0475EF1124D4E8B63CCE875",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/JacobiLaplaceSmootherT.hh",
+      "bytes": 5039,
+      "sha256": "5D0CB7030970AB58DA365B88B7A2C7A6957AC8BA4E11C82C4EA660FDFF4CDEAB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/LaplaceSmootherT_impl.hh",
+      "bytes": 8061,
+      "sha256": "803882195798EAA2426171F3E073114DB999ABE8D33299264CBF581838BE3B21",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/LaplaceSmootherT.hh",
+      "bytes": 5460,
+      "sha256": "61168EEB20C0E69CBCA701D528099D7D177D08E2CB48B0103CEA82AC0C9DAE7B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/smooth_mesh.hh",
+      "bytes": 4765,
+      "sha256": "46F425E2ED51B21FD2A77F6B5833C788E0AD816755854177CF5EA4DF21B2BD46",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/SmootherT_impl.hh",
+      "bytes": 12287,
+      "sha256": "0AFED9353A7C63803396BF2B146556031FD60B7417F0D8D94D60B7E810A3DD75",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Smoother/SmootherT.hh",
+      "bytes": 9381,
+      "sha256": "F6B206EC187F6AAB8BD91126863FD734139BA96311D3130FBF26C414A9AC7810",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/CompositeT_impl.hh",
+      "bytes": 10729,
+      "sha256": "DE0AE8C0444D088A4C8B29CA393312E1F04CA392925F1BFA385EC1FC7BB91CD5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/CompositeT.hh",
+      "bytes": 11044,
+      "sha256": "E4E4F7EDBCD08EEDA394DE0AA42FF7CDC694F6C020A05FBACFF2134F9CB50100",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/CompositeTraits.hh",
+      "bytes": 9138,
+      "sha256": "6AB9C92D4BFC76950FC76BFE3A2D66A98B48FD27E35592E53FDD0AEBCE5DA56E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/RuleInterfaceT.hh",
+      "bytes": 12250,
+      "sha256": "FAFB9A4E774BFBFD358F1482B3C4EA981A93231A37FB93D2278C4541E50DD394",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/RulesT_impl.hh",
+      "bytes": 60048,
+      "sha256": "860F35947BD3E60532D8ADE7C779D52D956F64BD5661C50E42956943253CCDD5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/RulesT.hh",
+      "bytes": 13766,
+      "sha256": "E24DF527B61A1AF5658C582C32A8F05747121359F2D3C253AF622133ED1B357F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Adaptive/Composite/Traits.hh",
+      "bytes": 8440,
+      "sha256": "E715DA607672C2DBDDB725E919FCFCC51263DE64C5FE8CD6C04FEBC7EB48ACA6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/CatmullClarkT_impl.hh",
+      "bytes": 13569,
+      "sha256": "DAC5683D4CE8BAE9931ABDC1EC98C47E221D097FB50B5D0CD516C35DC8A11735",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/CatmullClarkT.hh",
+      "bytes": 7395,
+      "sha256": "951EDDC2A756307D50CBEE4AE794656AAB1647BA79CDAFE8E60748004C002A02",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/CompositeLoopT.hh",
+      "bytes": 5899,
+      "sha256": "31B74E738FDD5E0D881EC110E0D03C7A4FD39D0D9FC60827D88964A40EBA0E0A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/CompositeSqrt3T.hh",
+      "bytes": 5728,
+      "sha256": "A7F0B0C4CF37A68A95AE006D5C2D2BAF0433D3E6356A3055F5412083090A2EF6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/LongestEdgeT.hh",
+      "bytes": 7962,
+      "sha256": "F822366BD6EE9FF594B8859EF11B82869069DAEAC6EADAE2B1D1A7CFE812E1C6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/LoopT.hh",
+      "bytes": 15300,
+      "sha256": "CDAB84FE7CAA8C2A5C7772F7DAB48CFC518E3A6C1AE183972F87D47BB0D986E2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/MidpointT.hh",
+      "bytes": 3694,
+      "sha256": "2AA0688FBCB41A013AAB75859DC23CEDF9E45608AB9B565F37F215AB0B3B6AD5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/ModifiedButterFlyT.hh",
+      "bytes": 19341,
+      "sha256": "6F92A9C2DE7335D032D400045A40D20493A7CC3232C5981A4797E8F94131E10D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/Sqrt3InterpolatingSubdividerLabsikGreinerT.hh",
+      "bytes": 24990,
+      "sha256": "B7C366AE42B832ADCB628EDDA51E57D9B3149786773069FCB9796CF314B39C59",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/Sqrt3T.hh",
+      "bytes": 17242,
+      "sha256": "5CA4C2C1159EF0AE12D9332584243FE58E1CF822568BF613CD8870B753E64FBD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/SubdividerT.hh",
+      "bytes": 7269,
+      "sha256": "62E368582C84E3365B7B789EC0DED0C1D9D62CC0C9C11A06CF4805F54FBCB411",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/Composite/CompositeT_impl.hh",
+      "bytes": 37695,
+      "sha256": "F2076A69746F8D65E51F2EA8266F8024C8D7A3122199BD71490AE057EA7A5F60",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/Composite/CompositeT.hh",
+      "bytes": 9275,
+      "sha256": "9F070F42D8F67BAF4C7CFED76644256B9424350B047C47433DC396432243E32E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Subdivider/Uniform/Composite/CompositeTraits.hh",
+      "bytes": 7079,
+      "sha256": "1EDD692DDCEC741458AA694BDFB59327940F3C4FEDF40A55F34DC272B06692A8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/Config.hh",
+      "bytes": 3922,
+      "sha256": "BC70536FB364C3E27CD36150A6F455D8BEAB48DEA87264D584719661FC6B635A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/conio.cc",
+      "bytes": 8012,
+      "sha256": "AE08AC98B6F266BCFB70772E391216CA235E5B1EACDE0106406F1BF8102470A0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/conio.hh",
+      "bytes": 4333,
+      "sha256": "D34A65AE4184D82DA43C2C668F4215439D090080A7A2E3612E64B7D9D2E221B8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/getopt.c",
+      "bytes": 3940,
+      "sha256": "764A67AF5FB23D898E188B819DB3BB08DD86D6218ECD35F1A147E52621B449F4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/getopt.h",
+      "bytes": 646,
+      "sha256": "66D35042A587CE0904571E950E1748607635CD3053FD18250028CFB61B96196F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/GLConstAsString.hh",
+      "bytes": 4575,
+      "sha256": "CE70200C581519E9C3EB64749B4EB365991EBB690EBC600C3CF5C30AB4C88833",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/Gnuplot.cc",
+      "bytes": 11547,
+      "sha256": "A136B7BE7F215722A4B0E1E19C87C566A985988EA75A23A75B03E31744565C4F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/Gnuplot.hh",
+      "bytes": 4779,
+      "sha256": "05B7E652FDD875E73716D937C7C74A2ECCF6A3A3A59E281317FB7465FB59F770",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/HeapT.hh",
+      "bytes": 11903,
+      "sha256": "AE87BDC7514C263E3922E4775BECEC1F90D4530CF9D615797F8906B18EABA625",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/MeshCheckerT_impl.hh",
+      "bytes": 8473,
+      "sha256": "2E03C5B77810DA05B5DE41E81E23A396508CED1A0ED66F31B1592A34FF6C79A0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/MeshCheckerT.hh",
+      "bytes": 5291,
+      "sha256": "30A7F11429EA9D54BC765BCAE4D24CEE41AE8D2A11A2E006197F9DD1C1C2DFD5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/NumLimitsT.hh",
+      "bytes": 6385,
+      "sha256": "174EBF419531CE74B74F9CE923B5DEF6E8DE28C9D32726E6AA7A11C88FE4FC8A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/StripifierT_impl.hh",
+      "bytes": 8876,
+      "sha256": "213AA0B3907C7E127261C4DAFE65B8952CF88C8B1AAA7BF11EA6A2394784642C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/StripifierT.hh",
+      "bytes": 6082,
+      "sha256": "CDFC2F804C3B1EB7C9027B48E676B18CC9B4EBCE1E7BB86C345B5DAE73BC9170",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/TestingFramework.hh",
+      "bytes": 10932,
+      "sha256": "921A6857215264BF966217069595D0070FAC80C6ADBCBF4B6E182F4D597EE5E3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/Timer.cc",
+      "bytes": 12858,
+      "sha256": "B14B1043A241229EC97C87814D4FED72CFBA6AF0A4B754B2F068F6488729E103",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/Utils/Timer.hh",
+      "bytes": 7022,
+      "sha256": "6FB8198E41A5921C44CD07E4D42858B2AC50618F906CDAFFC0172B9ECEEABDBE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/MeshTraits.hh",
+      "bytes": 5118,
+      "sha256": "F62EC8104F189C048174EF4198C5EA868BEC4E3368EDBDCBE1CA25F44B06A160",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/StreamingDef.hh",
+      "bytes": 4640,
+      "sha256": "73CA22EB8044945F9C3D5442C2D12DFCD6B73D9DCD19A99AC63A528782A2B842",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VFront.cc",
+      "bytes": 4855,
+      "sha256": "3C3642272C298A6FD91B2ED5389C355BFC827504650523493E699254EEFAA004",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VFront.hh",
+      "bytes": 5246,
+      "sha256": "DA5DDE1A74BDC20A6B1DEA06B1ABF829669335CDE66F494B683D1184120C3DA4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchy.cc",
+      "bytes": 6558,
+      "sha256": "216330DF702143352A20C2FB84BCD2CB080ECE010B6DB4EDF4194062171CCCF6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchy.hh",
+      "bytes": 7604,
+      "sha256": "DB7812D5C614A874023FEA4A97947038C1F0B68AB914496BBB343700CB43CA80",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchyNode.hh",
+      "bytes": 8357,
+      "sha256": "767619642C3668DE9DE178F3D5D068A314A1EB536126BBAF8D47E049665193FE",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchyNodeIndex.cc",
+      "bytes": 4001,
+      "sha256": "E0D074331F450B4A2965114B23832934C39E8CBB9CCE2254F8E9F2EBE1C744DA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchyNodeIndex.hh",
+      "bytes": 5477,
+      "sha256": "6C5C1713452018C222F89B10AD2442B56E20E5690D3CFE99737CB7F3B5B16734",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchyWindow.cc",
+      "bytes": 7304,
+      "sha256": "A251543E92838EEF33309BAD4D1B221C64DDF40E99F18565BB7F9C1E380B2EA9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/VHierarchyWindow.hh",
+      "bytes": 8125,
+      "sha256": "35088751EE114E6203B2B17BCD1E3DEB8BC32E3CA65D21A68C4C9684B5F27958",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/ViewingParameters.cc",
+      "bytes": 7870,
+      "sha256": "882D0AD7412A80EFE6D1803B08D119F94077EE92FF89AACB32C00622A45EED58",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/ViewingParameters.hh",
+      "bytes": 6168,
+      "sha256": "B84DB98BF06C68440D31E38CF6D7BFFAE603F98F5B64647C12B32E5E51D7EA04",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/xpm/fileopen.xpm",
+      "bytes": 438,
+      "sha256": "44EB7196E7B100F9F14CA1D4889051118BF729E5CE8C6C428C6CCB152C869DED",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/xpm/fileprint.xpm",
+      "bytes": 476,
+      "sha256": "20452D5B3DBB5CBCF9016B2915724284C92F5241161D99BC4C33472785770391",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/OpenMesh/Tools/VDPM/xpm/filesave.xpm",
+      "bytes": 415,
+      "sha256": "11FA80A1EE2B631C241B8917EC43C3E74A76549CA48794061587C301B91F7B84",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/.gitignore",
+      "bytes": 162,
+      "sha256": "C5902C1D312EF64ED0F67A0FFE92DCC525EFA09E4A44F487C0AD7513495ED852",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/CMakeLists.txt",
+      "bytes": 8099,
+      "sha256": "416F918BE03C6C56C368E7F0493D9CAC4DD099DAC468B6A40A383D7130A2F0D0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/fill_props.hh",
+      "bytes": 2599,
+      "sha256": "C5421A9FDB8B32E231D5F8C088C68468709169764C496577A0CE6BA06880887B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/generate_cube.hh",
+      "bytes": 2082,
+      "sha256": "013F6D333EF175590DC4243CF00E6FBA307D31751261FFDF7FFAC25A51B5BF93",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/int2roman.hh",
+      "bytes": 1265,
+      "sha256": "0DA9B0DB8152FEE54BB59E38767CDFB9DEA3CB6AB1D1C7670AE4B2B6CF4914C4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_add_face.cc",
+      "bytes": 11815,
+      "sha256": "88B5DFC3CB472ED9033013AB82E43C96A6889A97ED5563228A75E64B97FCBDA1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_boundary.cc",
+      "bytes": 5585,
+      "sha256": "08C24F3C729AC8C19C1D1AFBC96A814D6B60D95C001FB4ECE34AE9D46E6C6FC1",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_centroid_calculations.cc",
+      "bytes": 3261,
+      "sha256": "6C8EC9D256A108CCEE55E34A38DAEE2D9585949617B8F0B7DDA5D5B15F83759F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_common_customtraits.hh",
+      "bytes": 3809,
+      "sha256": "80669292E7933DAB1AF766C9060B9BC4032ED53F8FCBD01EBD69069FBDEDD959",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_common.hh",
+      "bytes": 1695,
+      "sha256": "EE9A5AED699CAC82A201207757765C866F71390202E38908C1BB1B22C0D99FCA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_convert_meshes.cc",
+      "bytes": 10019,
+      "sha256": "A8B33A8148F638B20EB3616171ABA30D4B5FDFC73CB5B2AA66FA0409A93E85AA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_cpp_11_features.cc",
+      "bytes": 8499,
+      "sha256": "5E85805FB54071F09241BD7300F6987B01508C976B61589EA160A0922E683385",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_decimater.cc",
+      "bytes": 7539,
+      "sha256": "D92237376778F0B2C3028CD1478DA5BB679CD2BE2F583CBD8ED7E84AF3CA0275",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_delete_face.cc",
+      "bytes": 20210,
+      "sha256": "126B0B6CE3719FE0AFEF7B6D3A42E916BC12FC93130F3C406E88930CCDFFE9AB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_eigen3_type.cc",
+      "bytes": 12118,
+      "sha256": "4B6CC0C36982E688DF6279C6D5F76C50E494C8B27F53C367622027EF37E1CA2F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_faceless_mesh.cc",
+      "bytes": 1936,
+      "sha256": "9D58383AFF15F5B4BA5DEE4C16E359840D8F2049B44CBEC7633C6DF403FB0E47",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_holefiller.cc",
+      "bytes": 1700,
+      "sha256": "202D4C3CC0DF349B2BCF2E93381B74A9E155CE51739BDEC2C12DB6D78C47AAF9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_mc_decimater.cc",
+      "bytes": 5498,
+      "sha256": "66D6281B8A36FEAC4CC2CB5CC8B898098C139083FAFF2BC05878E29A8BC86422",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_mesh_cast.cc",
+      "bytes": 840,
+      "sha256": "6519CBDB240A42F1F7D3F0BAD6C764AF9A05EA4D95991CBF2F3EC0A6A78C40AC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_mesh_dual.cc",
+      "bytes": 1338,
+      "sha256": "C23444C3E2FE4ED08100A3C79223CCD0B88EA77A5FE8C5B9FFF81C1D538E44AD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_mesh_type.cc",
+      "bytes": 1425,
+      "sha256": "5C2BFB2A1B065FE250EA797A93F8ADA51B539F2E00820B48D6501B4F20A80EA3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_mixed_decimater.cc",
+      "bytes": 5478,
+      "sha256": "4E2906D03B6DF218C7A1FBA55C136A27003BDCB9A94F8213AF9F0295BCE49F5A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_new_vertex.cc",
+      "bytes": 2585,
+      "sha256": "C7BB5654E4793AFD1AE318D3F0B6BEB3EE9FDE0375789F54F265A3E308A88BA9",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_normal_calculations.cc",
+      "bytes": 9191,
+      "sha256": "C9005D387C33307D9DA0E87D2EFA26BC0A0F76B3DE27D54D6618F4160055B844",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_polymesh_collapse.cc",
+      "bytes": 1608,
+      "sha256": "1C4ACF5250ED3D32ABA21A336137B36018455CE49F0221ED3181C325A64D2381",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_polymesh_vec2i.cc",
+      "bytes": 1984,
+      "sha256": "DD99412ABCB5A4A1AEE4E9224F1A4B9179042122387A79763154DC951B1E3423",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_property.cc",
+      "bytes": 31054,
+      "sha256": "0E111A9304A34A9A965ABA25C13255AC8CAA6ABA5119A04E3098F51FE5A3CAED",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_propertymanager.cc",
+      "bytes": 35132,
+      "sha256": "B3F1D9DC7045BE33A96A76685434A666F826595124784A629BCC2DE3880E3831",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_randomNumberGenerator.cc",
+      "bytes": 2017,
+      "sha256": "ACD3AC5273E6AE8EC1F5BB7139C7559C158F22A9C8E079C3EDB7847DDA2A7A13",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_read_write_OBJ.cc",
+      "bytes": 29975,
+      "sha256": "E65217615AEAA5E74ABF616AE6C6069B1A53BF0D2169B7F5EEBBB5593E55A48D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_read_write_OFF.cc",
+      "bytes": 11918,
+      "sha256": "B0EE57DDD71994B27268F46E0478695DA24092595A70C1FACAE5CA38A46A13B7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_read_write_OM.cc",
+      "bytes": 78151,
+      "sha256": "EA4E685D56DFD3F190D1139991CE08953BAB23E3A290278961EDA39284F9BCD5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_read_write_PLY.cc",
+      "bytes": 82044,
+      "sha256": "C479C51EE0C4C84047E48D09C55E7367C9F60D1525266D1A0FDA33663DB6DD5E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_read_write_STL.cc",
+      "bytes": 8334,
+      "sha256": "BD5590E14C047F66D253AA43E833C517BBAD71EC7CC19E32D418BC5723478626",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_set_positions_directly.cc",
+      "bytes": 1522,
+      "sha256": "70B528BA4CF59608224884ED2C924093D9EDCFDCCB3F5FC879C2FEB79AE2BB89",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_smart_handles.cc",
+      "bytes": 20332,
+      "sha256": "BCC7574E82F9478F1112227D9155E10B96F94F112145F54490D550790EC4E081",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_smart_ranges.cc",
+      "bytes": 29092,
+      "sha256": "1935334C092492E9BF6EC22B8B0F281D7AB4B45D6C48DE522E3C2C6131D87913",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_smarttagger.cc",
+      "bytes": 8610,
+      "sha256": "93D508199464DC2247E4BB27F6D7F6950BAE8CA4EC9C62DFACD3B8D06FF3B74F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_smoother.cc",
+      "bytes": 3076,
+      "sha256": "4F324F2195ED21FF52BC00B03AD50FCA09415DF74CA547F62D6D252A909A7CA6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_split_copy.cc",
+      "bytes": 4929,
+      "sha256": "E31A8937F79185E5CB38412FFB66B0FF7123F88B3490B9606B03DE6D915D0E47",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_split_edge_copy.cc",
+      "bytes": 8089,
+      "sha256": "C7701E15A3BA09FBB16F60B9A5656B64D97D23D9BAD5CE45819DC2BFFBB9EF91",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_sr_binary.cc",
+      "bytes": 2283,
+      "sha256": "A1B1956922424AB044BC1A942321AC57184DC89E29E29C51A39F74A973501AF3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_stripifier.cc",
+      "bytes": 1156,
+      "sha256": "56D3189216C9678202BDCA2DEC06E3033A6B92ED5CAE03B1F614299A4E61F043",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_subdivider_adaptive.cc",
+      "bytes": 8802,
+      "sha256": "AE8B21D1E40D7FF70EED8A039F64566B135C1908ABB93FCA12F1EFCE2F4D7415",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_subdivider_uniform.cc",
+      "bytes": 35098,
+      "sha256": "76E0362912032221CCB8D0A7D4E348F4885E45D83FC6E92A404C51832DE8FA9B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_traits.cc",
+      "bytes": 1772,
+      "sha256": "7C240BAB6EA7C2FF58F97F642F4219AA95152DDCD1960CD217C37D93C4721E8B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_current_halfedge_handle_replacement.cc",
+      "bytes": 9399,
+      "sha256": "9A61422444D6AB6472E155AF3E539164388122E7065AE034B641EC25575DFE02",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_edge_face.cc",
+      "bytes": 4159,
+      "sha256": "E6573721DD66240AC4FD062A1648B0917B4B0E034D1359CB7F686275F0402ED2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_edge_halfedge.cc",
+      "bytes": 5764,
+      "sha256": "0DD8DA862A763A15155573679B1D898B937177B74B5ADCBF4D4C7511BE57723B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_edge_vertex.cc",
+      "bytes": 3424,
+      "sha256": "761AB83D544D1CBF15FDDCA2C95F34B479929627236BBC5AF5B4803852C88566",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_edge.hh",
+      "bytes": 1880,
+      "sha256": "6C83EEE8C9EA0E6CD4F124E53F703C7E6DDDCDCB5DB6B89526193207CCBC32F7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_face_edge.cc",
+      "bytes": 14938,
+      "sha256": "2E297F250BD8F7EE8705A7FC77B4D4D0810F7302AB23FC916B7A40551DB29745",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_face_face.cc",
+      "bytes": 15780,
+      "sha256": "80593DB5F07C4575DA453C752F19876EC1FA29D8E554DE3106A7A3BEFAA57869",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_face_halfedge.cc",
+      "bytes": 12086,
+      "sha256": "4E6DA8CF9D653C4E2EC677D5AE661C4C148719BD716EB2B2E253681165C71735",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_face_vertex.cc",
+      "bytes": 11578,
+      "sha256": "6E545590AD984AAD07925C595EF6A5E28DB08D0C0C9812738B65975A14F6217A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_halfedge_loop.cc",
+      "bytes": 12901,
+      "sha256": "2B5BCB22311641572C9C5CDE9EB7FEF4E79F3A70494481AD24B2FE230BD43EB7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_vertex_edge.cc",
+      "bytes": 14162,
+      "sha256": "3BDE5F013CE8F2EA1DAAC0E72A63522B4F7A75A53F563B833B194FBF217750B7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_vertex_face.cc",
+      "bytes": 20663,
+      "sha256": "485E0523EDFFF196E0EE02133C2DDA5434F346C1230448DC720B1AA6463A745A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_vertex_ihalfedge.cc",
+      "bytes": 18628,
+      "sha256": "7AF43AB36C2E8FBF7C670596A4CB0B52DCAF20757538C47B0E118FA6684CAC42",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_vertex_ohalfedge.cc",
+      "bytes": 18585,
+      "sha256": "D1290DF93C933380B5147F3A36603C8B20A7B9EA4A5BE637C9647EB700D5654C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_circulator_vertex_vertex.cc",
+      "bytes": 13276,
+      "sha256": "89BC813E98C115F89CE9C650F42F843EA6C9E2F2E6C1FDD4D75D741ED773DD0B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_collapse.cc",
+      "bytes": 27696,
+      "sha256": "BAB4959EB522B0825566C6362B059DFB356A90BDD07DE79ED147C1250622730F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_garbage_collection.cc",
+      "bytes": 17376,
+      "sha256": "90F2384026351AD1CB422624896A48C5FBB086A4BE544E8AD3BEFED5E8D16444",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_iterators.cc",
+      "bytes": 30561,
+      "sha256": "F1CD70DB0CF082DD9A50B4F96689F2B3E46384B27A370A8B98B62A465C81D028",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_navigation.cc",
+      "bytes": 1096,
+      "sha256": "3EC099071FCFC5E887E98D3B3B69AD1F6361D3196DA16D12B3C2D72EF9F466F8",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_others.cc",
+      "bytes": 5283,
+      "sha256": "7A01F5A5E41408FD722A685D8B7A2863A3DF94BEA0230E3F20A5CD7E784D0AD7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_ranges.cc",
+      "bytes": 12436,
+      "sha256": "883937EE4C10933D8F443CBF3CC57A9411BEFB1CEBFCEBAFFAA79949E0FD6557",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_split.cc",
+      "bytes": 4660,
+      "sha256": "C590CEB6642BFECB66CEBB1335DE0396F335DD668FE61D2D52DDF448237A02FD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_trimesh_vec2i.cc",
+      "bytes": 1977,
+      "sha256": "07FE58A65B664A92BC0D51F9E46928CC412F6E5EB832290E2FFB8218E6FA2505",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_tutorials.cc",
+      "bytes": 31061,
+      "sha256": "13C687E556E6F45477B2CF13BB72108F826FD78A9DAF46BE2172F12166A23D60",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_vdpm.cc",
+      "bytes": 7697,
+      "sha256": "1BE1F8FFCD7F7161093B83B523BA9C9B466D89D6118F8626F92F54ABBA467897",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests_vector_type.cc",
+      "bytes": 13033,
+      "sha256": "CA7D2D7A742137D63D74220DA7D571D14ABFAC62D4F560DA0EB4D43B21760ED3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/unittests.cc",
+      "bytes": 137,
+      "sha256": "1E2C68A2D8C6D6ACCF43B9006CB3A07EFB61DD6DC91C92D129E942DBFD8D3918",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/.gitignore",
+      "bytes": 163,
+      "sha256": "7645220C87614CF8C86C93BD35D38077E082AE5805F7EE2AFB2A4CDA3ED016F3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_2holes.off",
+      "bytes": 63319,
+      "sha256": "3718C32EC89CBAF85C2633A5EF7D5F66032254F128B2C3EB62D1302339587A03",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_noisy.off",
+      "bytes": 464588,
+      "sha256": "0F06C59A2D8390F5048FCBA86376568287611AD94D4E6EFD1CE089DB2333D904",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_poly_version_1_2.om",
+      "bytes": 154,
+      "sha256": "C9DD23A030BFF68F5F1859D85BE2CD0694F7C615991D12C0280C4AD9BCED03E6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_poly_version_2_0.om",
+      "bytes": 208,
+      "sha256": "15AB57CD3059D269CCD1EB488F2449D0E2EAEA7E6D2CDA492A1B6BBBEE8E9D70",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_tri_version_1_2.om",
+      "bytes": 154,
+      "sha256": "DA6A89B52275E147003DB655C2382EB90A6DAEDE6847B3DDAC3FEEC0A08B586B",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_tri_version_2_0.om",
+      "bytes": 250,
+      "sha256": "8BCFF0B52DC3212E1C26D07984368C7EF8B47A1D0CCAAAD91166B8038F1679E7",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_tri_version_7_5.om",
+      "bytes": 154,
+      "sha256": "0950B97768937A8BC5320D56E38E733963429E53CE19F48486C65543E06EF352",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube_tri_with_properties_2_1.om",
+      "bytes": 30934,
+      "sha256": "2E521183182A2D866B868AFFC03EDB17CF340F3D6259E891AF7F4131D010B7DC",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-custom_props-binary.ply",
+      "bytes": 1035,
+      "sha256": "970EDAEC7D87A58910F27B3B8CE4CD47FD48D27C195D915F53401F9B53341449",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-custom_props.ply",
+      "bytes": 941,
+      "sha256": "6BE3F17A7E075E4C691EFF3B2DD31061B49ED22468082D2A263F1471DC5EFF0A",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-degenerated.obj",
+      "bytes": 554,
+      "sha256": "6723C37F1D65A3314A63FFC06C4319901EC92AFDA1C9DB8EAB74D96CEF9F50D3",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-extra-elements-binary.ply",
+      "bytes": 524,
+      "sha256": "9C6C04F4B8CAED76D7141CA21FCA11E9DE8B7BB38295D41FC609F0824C8F0A0E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-extra-elements.ply",
+      "bytes": 405,
+      "sha256": "8459412C40501DB9470E282FD933A6C083AEF337B7AA7A8042F6484D8262EA16",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-faceColors.ply",
+      "bytes": 673,
+      "sha256": "90D56B293DE88052DBB33279479A37CF7D011E61F5098083D394A87B1D1927EF",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-normals.ply",
+      "bytes": 459,
+      "sha256": "9BE8E9E1C3953845BCEDF2376DF5351C0D051C10F1DC8B8CD133BCA43B0B446E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-texCoords.obj",
+      "bytes": 709,
+      "sha256": "D5DCE0127FDCA5D841D144F4D0C0900DD8B85C4880F811EE8C31E987A352C76D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-texCoords.om",
+      "bytes": 218,
+      "sha256": "2C27A0E1493478845B7B7A10F6C386F885331411F8A47E569DD06532399D4F94",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-texCoords.ply",
+      "bytes": 524,
+      "sha256": "F23620428EF227A91870E5F39F543A2B0E8F9B908D1B01C7C1AB30C887B2433F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-texCoords3d.obj",
+      "bytes": 772,
+      "sha256": "26CC2351C0F9C7D5C81D5382BC5929ADA61C6A120415629C0EFE68E659C012D5",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-vertex-colors-after-vertex-definition.obj",
+      "bytes": 599,
+      "sha256": "BEA5C7677BE7439F912DD3DD770B3278D7C965130AADF3A27CC0F606CEACC285",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-vertex-colors-as-vc-lines.obj",
+      "bytes": 630,
+      "sha256": "66F7B32338C5D050BAB9D8497686AAA284DA6FD0F74020CDC7CB89003ACC5154",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-vertexColors.om",
+      "bytes": 178,
+      "sha256": "81531D3D730477B3DFE31C7642ED86937447D09CADF055F0BE659A639E88E2BA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal-vertexColors.ply",
+      "bytes": 572,
+      "sha256": "D35C78B64E446E01B1A6E1D00A79329BCB1B516CA7A3EA24836C76EDC2A6123C",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal.obj",
+      "bytes": 502,
+      "sha256": "4B6454E6EFBAEF5B8E368487EDA7E83632223972B267C237073130C72B7502CA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal.om",
+      "bytes": 152,
+      "sha256": "5BBABB4EA169E5D06FC5E95A577C05E42FEB249F7D184F58F99E5701027F8DD2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube-minimal.ply",
+      "bytes": 296,
+      "sha256": "BE504645BA993D54E4AC2AB95B07AD9CBA1DF5EFCF5533095ABDF9C250AA2840",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube1_customProps.om",
+      "bytes": 331134,
+      "sha256": "987BF6F7B74D9138F7FD8246989DB4E0A7BFB52C78CEA5B621DD3901A75411BD",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube1.off",
+      "bytes": 464463,
+      "sha256": "7BF6AB520F6B154FC676F0E052C5CBEE4B35FA7E614D354E5E76CD5EA73F5760",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube1.pm",
+      "bytes": 180644,
+      "sha256": "8E9CE2E2293FA2B22D80F1A6AD3F2D388DE7B1792851244D4FB6CA9D3628CD12",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube1.stl",
+      "bytes": 3190269,
+      "sha256": "9DD3604CFE5D52CE52FA0D9C64989736CAF9891D745492F79635BA118EE12CE6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cube1Binary.stl",
+      "bytes": 752484,
+      "sha256": "84A344EFD940028E9993669CC4AEA1FC2CC6DFAE0311630B3524E705C521D1FB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/CubeCol.mtl",
+      "bytes": 168,
+      "sha256": "EFC073A9FBCCD879A261C7D9652F346C78091FE2D5ADA839C920A47AD31BDFC6",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/CubeCol.obj",
+      "bytes": 426,
+      "sha256": "EEFE5F1430F7964918F24F25A9D670192A966F7615B47860A411B466493B51A2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/cylinder.om",
+      "bytes": 1198,
+      "sha256": "1F3A71DDFC33266395FB7BA9A0E0A6E5519D7BF684314E6A0BDE1025F8B0FF3F",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/meshlab-faceTexCoords-binary.ply",
+      "bytes": 913,
+      "sha256": "ADABBB5EF1F50123176B269816BE9C05359B7B87601113C5E62E27199A6B77D2",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/meshlab-faceTexCoords.ply",
+      "bytes": 794,
+      "sha256": "0BAEDA86815A52766E635BEFD73E319FCCFB1B7B3C8BEEE68A5AEDCD0A8EFE6D",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/meshlab.ply",
+      "bytes": 581,
+      "sha256": "3889111F06D8B47FB1144619143A8BB96BB3672BD40F3A78ED60D9C1AD75E85E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/pointCloudBadEncoding.ply",
+      "bytes": 925,
+      "sha256": "173B4E61C7B41E7F52991E01360325617463C9E2F9F27F074DBE2202FAD8E0AB",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/pointCloudGoodEncoding.ply",
+      "bytes": 902,
+      "sha256": "67CBC4F7A5A93E0C102E826604F80D361F246B29E47F76528F4B4F1415F709CA",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/sphere840.ply",
+      "bytes": 17185,
+      "sha256": "468DD76DB31BB07F095FEC19134C0C906A0EA3097228E6F0E82D13EF7CAE8A7E",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/square_material_texture.mtl",
+      "bytes": 145,
+      "sha256": "4C93150B24FEFB7574BA52D955B19666747AA22941C49EEF48D2A5FF41801A29",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/square_material_texture.obj",
+      "bytes": 306,
+      "sha256": "33D2C53F3917EA6120FA35688549E4ACEFA08424F6FFF6E8905E160A7C4347F0",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/square_material.mtl",
+      "bytes": 78,
+      "sha256": "0302952FFF0E2EB41FE299B148FFDE3A3F91251F57283E29F3F6AB7730A72BE4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    },
+    {
+      "path": "src/Unittests/TestFiles/square_material.obj",
+      "bytes": 298,
+      "sha256": "045DF93D5D0DEABDE7860C853DAC64F775B57E14908CF1EF563C6CE0B8BDE1D4",
+      "sourceUnchanged": true,
+      "copyExact": true,
+      "copyWritable": true
+    }
+  ]
+}

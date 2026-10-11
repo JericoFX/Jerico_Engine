@@ -1,0 +1,81 @@
+{
+  "historical_freeze14_sha256": "BA64F11199BBDC4A9CD9A613D40E74B0A0FD864264725295852082FC55517518",
+  "historical_freeze14_count": 14,
+  "focused_verifier_input_count": 7,
+  "focused_inputs_match": true,
+  "focused_input_failures": [],
+  "positive_and_negative_cases": [
+    {
+      "case": "positive",
+      "exit_code": 0,
+      "elapsed_seconds": 0.0950297,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\positive\\result.json"
+    },
+    {
+      "case": "URI",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0188302,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\URI\\result.json"
+    },
+    {
+      "case": "UNC",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0187701,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\UNC\\result.json"
+    },
+    {
+      "case": "Missing",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0329348,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\Missing\\result.json"
+    },
+    {
+      "case": "BlobChanged",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0893219,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\BlobChanged-corrected\\result.json"
+    },
+    {
+      "case": "ExtraEntry",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0329181,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\ExtraEntry\\result.json"
+    },
+    {
+      "case": "ArchiveTamper",
+      "exit_code": 1,
+      "elapsed_seconds": 0.0331254,
+      "diagnostic_match": true,
+      "fixture_unchanged": true,
+      "unexpected_package_artifacts": 0,
+      "passed": true,
+      "result_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\ArchiveTamper\\result.json"
+    }
+  ],
+  "all_cases_pass": true,
+  "known_parent_change": "Code/3rdParty/sqlite/CMakeLists.txt was intentionally edited by parent after initial freeze; excluded from the focused verifier input closure."
+}

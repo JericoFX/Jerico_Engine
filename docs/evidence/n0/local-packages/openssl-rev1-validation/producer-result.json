@@ -1,0 +1,24 @@
+{
+  "process_tree_observed": true,
+  "started_local": "2026-10-10T20:53:48.3445207-03:00",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "combined_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev1-validation\\producer.log",
+  "output_created": false,
+  "peak_sampled_tree_working_set_bytes": 12476416,
+  "argv": [
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\producer-candidate-inputs.cmake"
+  ],
+  "finished_local": "2026-10-10T20:53:50.7869237-03:00",
+  "peak_sampled_single_process_working_set_bytes": 12476416,
+  "stdout_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev1-validation\\producer.stdout.log",
+  "sampled_process_count": 2,
+  "argc": 2,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "distinct_process_ids_seen": 1,
+  "native_exit_code": 1,
+  "elapsed_seconds": 2.439,
+  "process_tree_scope": "CMake and descendants visible in 1-second Win32_Process samples; not aggregate of missed short-lived children",
+  "command": "cmake -P producer-candidate-inputs.cmake",
+  "stderr_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev1-validation\\producer.stderr.log"
+}

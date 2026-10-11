@@ -1,0 +1,10 @@
+{
+  "root": "F:\\JericoEngine\\Dependencies\\OpenMesh-11.0.0",
+  "archive_sha256": "9d22e65bdd6a125ac2043350a019ec4346ea83922cafdf47e125a03c16f6fa07",
+  "files": 611,
+  "payload_bytes": 14703339,
+  "all_hashes_match": true,
+  "reparse_paths": [],
+  "extraction": "regular files/directories only into new root; no upstream scripts executed",
+  "snapshot_policy": "immutable input; subsequent builds must use external binary dirs and preserve these source hashes"
+}

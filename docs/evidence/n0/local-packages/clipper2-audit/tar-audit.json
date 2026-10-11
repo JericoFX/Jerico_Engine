@@ -1,0 +1,80 @@
+{
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4.tar.gz",
+  "archive_sha256": "73f5783e0c88299976334f48e3e356c756b96212c652ecc8bceec3bd99455bcb",
+  "members": 284,
+  "regular_files": 223,
+  "directories": 61,
+  "links": 0,
+  "payload_bytes": 3006633,
+  "casefold_unique_paths": 284,
+  "problems": [],
+  "selected_text_files": [
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/.gitmodules",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "ae74f30a274f0813f64e0b51463ddfa6918f13f63e956b0b67e51a1255f80b06"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/BenchMark/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "550239ca88c00d946a35f8b264eab4cd51f663d51b8402ac5825b4f239fde5c7"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/CMakeLists.txt",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "9838e05405efb2db0db11f20dea7c2d3fdfff211dd6be42e3c0e2611ae886348"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2.pc.cmakein",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "90ed5212fc01c5d3b25b16ce62498f4f29610d444aa5c1a2588aea18704da74f"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CPP/Clipper2Config.cmake.in",
+      "is_cmake": true,
+      "is_license": false,
+      "sha256": "8aee0e82d16ff7cd05febd66b1fb1deba790e03c3205f0920ef96c478b1e95b4"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/NuGet/License.txt",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/CSharp/NuGet/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "7fba202aa983f8d921ba5bfaa3809101873c98d44d2a2d27dd40b0fdc8374aeb"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/DLL/ReadMe.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "5691b0afb22a3ec1b18b9fb2fc5a6e1998c4e0adb844fbc5bd66bad58cd18d13"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/LICENSE",
+      "is_cmake": false,
+      "is_license": true,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "path": "Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4/README.md",
+      "is_cmake": false,
+      "is_license": false,
+      "sha256": "232437d0b8343f875c367e642b96dd4ab30d5b473cc91f659a50caec018af52a"
+    }
+  ],
+  "safe_for_regular_file_extraction": true
+}

@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: lz4 source archive SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-corrupt-source-fixture.bin
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LZ4/BuildLz4Package.cmake:33 (JE_python_verify_file)
+
+

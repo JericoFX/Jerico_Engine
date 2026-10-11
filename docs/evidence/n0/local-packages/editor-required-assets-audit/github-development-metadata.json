@@ -1,0 +1,116 @@
+{
+  "receipt": {
+    "url": "https://api.github.com/repos/o3de/o3de/commits/development",
+    "method": "GET",
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8",
+      "Content-Length": "7006",
+      "Location": null,
+      "ETag": "W/\"1b2e35fc28e6df9d779d282e3f9adf3bc9b952ba3b03fcbd5b27ecbc92f5d676\""
+    },
+    "authorization": false,
+    "automatic_redirects": false
+  },
+  "data": {
+    "sha": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "node_id": "C_kwDOFST0X9oAKDI0MWM3OGI4MDY0ODk4YTcwOWNmMWM1ZGQzNTM1YzY0MDY3NjNlZjM",
+    "commit": {
+      "author": {
+        "name": "Nick Schuetz",
+        "email": "21105624+nickschuetz@users.noreply.github.com",
+        "date": "2026-10-09T20:15:39Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-10-09T20:15:39Z"
+      },
+      "message": "Editor: remove the unused g_splashScreenState variable from CryEdit.cpp (#20196)\n\ng_splashScreenState and its ESplashScreenState enum are assigned in\nShowSplashScreen and CloseSplashScreen but never read anywhere in the tree.\nClang 23 reports the variable under -Wunused-but-set-global, which -Werror\nturns into a build failure of the Editor on Fedora 45 and rawhide.\n\ng_splashScreenStateLock stays: it still guards g_pInitializeUIInfo and\ng_splashScreen.\n\nSigned-off-by: Nick Schuetz <nschuetz@redhat.com>",
+      "tree": {
+        "sha": "db4b7d4a5d784d2283c95903f461e311d69704c8",
+        "url": "https://api.github.com/repos/o3de/o3de/git/trees/db4b7d4a5d784d2283c95903f461e311d69704c8"
+      },
+      "url": "https://api.github.com/repos/o3de/o3de/git/commits/241c78b8064898a709cf1c5dd3535c6406763ef3",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqyUtrCRC1aQ7uu5UhlAAAryIQAG2SJAalpn939j9qjPQP55WE\nqZiAhDtoIBkNOxqXLOhdkoMvDVuVsxE0mSaTyywdTLUw6A8jl25HAEv6OwCeb8yu\nGQA6FY5jpnbKci12MI9zG3ABWAQsR/le7fTV8c+AW3KcaKpq3TPRFVzU0xnQ9ObI\n/EEwWjI8fLNlyn2lBZljcg73FZP91EsQinCGjUeqHrPvUYfVxIaI1CoGHbWF2loG\nlLaFtA+rUu1fRY0axsEd1+kikgQvY7uwp+n+YlLJTEgcJ3LKz/eZHoNoRkbzwGae\nOD2hFuQww+6pNwhUzSAgAIy6Wk6c2xVmzawOxGs1ufjoHIJEwQ/R0Ce3Z8VZOMx7\nb7fYfKeau/4uaPw1qjebVKS0oEN6n2HDXkEexhA1m4GpaHkwhv2mNptTUYjrtQHR\ndiZrkqYUOseHHC26p+1INiLXEGj3MIowE+aNNyBNev3++iOEeFinzD2HlkxhbWKx\nBeJSlNZzvdc4GM3eB0bKoCCcQNaOeL1Mrmi8dw/Mid/rJzcCzt/wA1G/CUqs+Vlu\nu7e5jsQa1X0I+NRWa+X4Q8gstY5gGxMrjML9R/Fk+aKMpdG2nXezlroqNs71UsZU\nB/D6y5Vex+w0yoDE/ktOIOXRB8XplWvWzrEg13Zqtk3037s/Ol8SZ680rA0j0ZvL\n+UpOtlzMchAKypNRel0v\n=CRQx\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree db4b7d4a5d784d2283c95903f461e311d69704c8\nparent 0af429a2ea25ecb671a5a8b5e09f6c634a277c35\nauthor Nick Schuetz <21105624+nickschuetz@users.noreply.github.com> 1791576939 -0500\ncommitter GitHub <noreply@github.com> 1791576939 -0700\n\nEditor: remove the unused g_splashScreenState variable from CryEdit.cpp (#20196)\n\ng_splashScreenState and its ESplashScreenState enum are assigned in\nShowSplashScreen and CloseSplashScreen but never read anywhere in the tree.\nClang 23 reports the variable under -Wunused-but-set-global, which -Werror\nturns into a build failure of the Editor on Fedora 45 and rawhide.\n\ng_splashScreenStateLock stays: it still guards g_pInitializeUIInfo and\ng_splashScreen.\n\nSigned-off-by: Nick Schuetz <nschuetz@redhat.com>",
+        "verified_at": "2026-10-09T20:15:40Z"
+      }
+    },
+    "url": "https://api.github.com/repos/o3de/o3de/commits/241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "html_url": "https://github.com/o3de/o3de/commit/241c78b8064898a709cf1c5dd3535c6406763ef3",
+    "comments_url": "https://api.github.com/repos/o3de/o3de/commits/241c78b8064898a709cf1c5dd3535c6406763ef3/comments",
+    "author": {
+      "login": "nickschuetz",
+      "id": 21105624,
+      "node_id": "MDQ6VXNlcjIxMTA1NjI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21105624?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nickschuetz",
+      "html_url": "https://github.com/nickschuetz",
+      "followers_url": "https://api.github.com/users/nickschuetz/followers",
+      "following_url": "https://api.github.com/users/nickschuetz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nickschuetz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nickschuetz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nickschuetz/subscriptions",
+      "organizations_url": "https://api.github.com/users/nickschuetz/orgs",
+      "repos_url": "https://api.github.com/users/nickschuetz/repos",
+      "events_url": "https://api.github.com/users/nickschuetz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nickschuetz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0af429a2ea25ecb671a5a8b5e09f6c634a277c35",
+        "url": "https://api.github.com/repos/o3de/o3de/commits/0af429a2ea25ecb671a5a8b5e09f6c634a277c35",
+        "html_url": "https://github.com/o3de/o3de/commit/0af429a2ea25ecb671a5a8b5e09f6c634a277c35"
+      }
+    ],
+    "stats": {
+      "total": 9,
+      "additions": 0,
+      "deletions": 9
+    },
+    "files": [
+      {
+        "sha": "1da3f13ffdef2ea9c50e0db5e3cf2c0936027ae7",
+        "filename": "Code/Editor/CryEdit.cpp",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 9,
+        "changes": 9,
+        "blob_url": "https://github.com/o3de/o3de/blob/241c78b8064898a709cf1c5dd3535c6406763ef3/Code%2FEditor%2FCryEdit.cpp",
+        "raw_url": "https://github.com/o3de/o3de/raw/241c78b8064898a709cf1c5dd3535c6406763ef3/Code%2FEditor%2FCryEdit.cpp",
+        "contents_url": "https://api.github.com/repos/o3de/o3de/contents/Code%2FEditor%2FCryEdit.cpp?ref=241c78b8064898a709cf1c5dd3535c6406763ef3",
+        "patch": "@@ -738,11 +738,6 @@ CCrySingleDocTemplate::Confidence CCrySingleDocTemplate::MatchDocType(const char\n namespace\n {\n     AZStd::mutex g_splashScreenStateLock;\n-    enum ESplashScreenState\n-    {\n-        eSplashScreenState_Init, eSplashScreenState_Started, eSplashScreenState_Destroy\n-    };\n-    ESplashScreenState g_splashScreenState = eSplashScreenState_Init;\n     IInitializeUIInfo* g_pInitializeUIInfo = nullptr;\n     QWidget* g_splashScreen = nullptr;\n }\n@@ -780,7 +775,6 @@ void CCryEditApp::ShowSplashScreen(CCryEditApp* app)\n \n     g_pInitializeUIInfo = splashScreen;\n     g_splashScreen = splashScreen;\n-    g_splashScreenState = eSplashScreenState_Started;\n \n     g_splashScreenStateLock.unlock();\n \n@@ -820,9 +814,6 @@ void CCryEditApp::CloseSplashScreen()\n     if (CStartupLogoDialog::instance())\n     {\n         delete CStartupLogoDialog::instance();\n-        g_splashScreenStateLock.lock();\n-        g_splashScreenState = eSplashScreenState_Destroy;\n-        g_splashScreenStateLock.unlock();\n     }\n \n     GetIEditor()->Notify(eNotify_OnSplashScreenDestroyed);"
+      }
+    ]
+  }
+}

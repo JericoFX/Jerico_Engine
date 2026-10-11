@@ -11,8 +11,8 @@
 # Python package info
 ly_set(LY_PYTHON_VERSION 3.10.13)
 ly_set(LY_PYTHON_VERSION_MAJOR_MINOR 3.10)
-ly_set(LY_PYTHON_PACKAGE_NAME python-3.10.13-je-rev1-windows)
-ly_set(LY_PYTHON_PACKAGE_HASH 4370b5870c6b4da65206f6c8e82ca5540f0f2c60fe4cb2bbbd34dbf1cc7dd2d9)
+ly_set(LY_PYTHON_PACKAGE_NAME python-3.10.13-je-rev3-windows)
+ly_set(LY_PYTHON_PACKAGE_HASH 12e9eb0ec73bb28a683b250a1d702bad06c963dc8d4c9f4823b8d54871599917)
 
 # Python package relative paths
 ly_set(LY_PYTHON_BIN_PATH "python")

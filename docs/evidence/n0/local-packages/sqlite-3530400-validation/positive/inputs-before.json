@@ -1,0 +1,46 @@
+{
+  "case": "positive",
+  "freeze_sha256": "BA64F11199BBDC4A9CD9A613D40E74B0A0FD864264725295852082FC55517518",
+  "source_arg": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\positive\\fixtures\\source",
+  "source_arg_type": "PATH",
+  "archive_arg": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\positive\\fixtures\\sqlite-amalgamation-3530400.zip",
+  "archive_sha256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D",
+  "fixture_files": [
+    {
+      "path": "sqlite-amalgamation-3530400.zip",
+      "bytes": 2946650,
+      "sha256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D"
+    },
+    {
+      "path": "source/shell.c",
+      "bytes": 1185915,
+      "sha256": "8011ED018AA12969F93573B7BB1EAE2D939D64D0F451B297FF847A0211C85179"
+    },
+    {
+      "path": "source/sqlite3.c",
+      "bytes": 9515341,
+      "sha256": "B1DD5D74EC7F29055A6684FA06FB3C2F6821C87DD38F9A458DFD2E8A1DB28189"
+    },
+    {
+      "path": "source/sqlite3.h",
+      "bytes": 690838,
+      "sha256": "919E7F2E8ED1D8F56AC17B412B8971C76AA5D1A879752CC6058F75E7D5910E1D"
+    },
+    {
+      "path": "source/sqlite3ext.h",
+      "bytes": 39175,
+      "sha256": "AC9645E5C9FF0CF176EFDD6E75CB5E98F46295D38E02DB5C4D208826A39AB4BE"
+    }
+  ],
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_SQLITE_SOURCE_DIR:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\positive\\fixtures\\source",
+    "-DJE_SQLITE_SOURCE_ARCHIVE:FILEPATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\sqlite-3530400-validation\\positive\\fixtures\\sqlite-amalgamation-3530400.zip",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\VerifySQLiteSource.cmake"
+  ],
+  "argc": 4,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "expected": "exact official 3.53.4 archive and four source blobs verified",
+  "start_utc": "2026-10-11T01:04:26.2899777Z"
+}

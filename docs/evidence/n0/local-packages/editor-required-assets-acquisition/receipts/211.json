@@ -1,0 +1,41 @@
+{
+  "index": 211,
+  "source_path": "Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+  "expected_sha256": "1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809",
+  "expected_bytes": 108131,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:12.084257+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "108131",
+      "ETag": "\"1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:12.493152+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Tools/ProjectManager/Resources/ProjectManager-Icon.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "108131",
+      "ETag": "\"1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "1c16d531644f29cc9449c8f7c9d9e25ebfec4283f4a1a3612cf250689edd0809",
+  "actual_bytes": 108131,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Tools\\ProjectManager\\Resources\\ProjectManager-Icon.ico",
+  "status": "acquired and byte verified"
+}

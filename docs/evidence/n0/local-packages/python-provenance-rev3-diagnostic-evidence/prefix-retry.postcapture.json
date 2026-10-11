@@ -1,0 +1,141 @@
+{
+  "native_exit": 0,
+  "elapsed_seconds": 0.513,
+  "source_file_count_before": 4437,
+  "source_file_count_after": 4437,
+  "source_bytes_before": 94883284.0,
+  "source_bytes_after": 94878818.0,
+  "patched_core_sha256": "07f99462cf6a9aa667ad802a3f7285e640ab78b3233fcb7cc243eacf2f0b3a45",
+  "source_changes": [
+    {
+      "path": "Modules/expat/xmltok.c",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/xmltok.c",
+        "bytes": 54602,
+        "sha256": "1110f651bdccfa765ad3d6f3857a35887ab35fc0fe7f3f3488fde2b238b482e3"
+      },
+      "after": {
+        "path": "Modules/expat/xmltok.c",
+        "bytes": 54526,
+        "sha256": "bcf324f17a469abb934b08415226a9f8b09f1c25def2a0ddb6e2f5832ad445e7"
+      }
+    },
+    {
+      "path": "Modules/expat/expat_external.h",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/expat_external.h",
+        "bytes": 6138,
+        "sha256": "86afb425ec9999eb4f1ec9ab2fb41c58c4aa5cb9bf934b8c94264670fc5a961d"
+      },
+      "after": {
+        "path": "Modules/expat/expat_external.h",
+        "bytes": 6029,
+        "sha256": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3"
+      }
+    },
+    {
+      "path": "Modules/expat/xmltok_impl.h",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/xmltok_impl.h",
+        "bytes": 3430,
+        "sha256": "f05ad4fe5e98429a7349ff04f57192cac58c324601f2a2e5e697ab0bc05d36d5"
+      },
+      "after": {
+        "path": "Modules/expat/xmltok_impl.h",
+        "bytes": 3431,
+        "sha256": "97ee5d2a120aa096fdc7efd701384ba956de3a38a05a16fc8a66f8537e10d263"
+      }
+    },
+    {
+      "path": "Modules/expat/internal.h",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/internal.h",
+        "bytes": 5963,
+        "sha256": "d2efe5a1018449968a689f444cca432e3d5875aba6ad08ee18ca235d64f41bb9"
+      },
+      "after": {
+        "path": "Modules/expat/internal.h",
+        "bytes": 5808,
+        "sha256": "0f621aec813b3521114a34588ce2bca8ade58301c790fcc3ef246c2ccf1dca4e"
+      }
+    },
+    {
+      "path": "Modules/expat/xmlparse.c",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/xmlparse.c",
+        "bytes": 280418,
+        "sha256": "483518bbd69338eefc706cd7fc0b6039df2d3e347f64097989059ed6d2385a1e"
+      },
+      "after": {
+        "path": "Modules/expat/xmlparse.c",
+        "bytes": 276997,
+        "sha256": "2df154c8bc82ccfba809f7303aa02f7626dc5f06ac9f9eb0b22a3e3f5a1603ae"
+      }
+    },
+    {
+      "path": "PCbuild/pythoncore.vcxproj",
+      "change": "modified",
+      "before": {
+        "path": "PCbuild/pythoncore.vcxproj",
+        "bytes": 30126,
+        "sha256": "e7ff6ea2427ffe0c24605b5fa46cd09af5d55e536c47187c8dcc803dd5178b2a"
+      },
+      "after": {
+        "path": "PCbuild/pythoncore.vcxproj",
+        "bytes": 30442,
+        "sha256": "07f99462cf6a9aa667ad802a3f7285e640ab78b3233fcb7cc243eacf2f0b3a45"
+      }
+    },
+    {
+      "path": "Modules/expat/expat.h",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/expat.h",
+        "bytes": 43535,
+        "sha256": "f521acdad222644365b0e81a33bcd6939a98c91b225c47582cc84bd73d96febc"
+      },
+      "after": {
+        "path": "Modules/expat/expat.h",
+        "bytes": 42636,
+        "sha256": "cabaab6c0330893e4fff25f54a00ca1b8e369e06fc359d78f19d84f11c91cf5c"
+      }
+    },
+    {
+      "path": "Modules/expat/xmltok_impl.c",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/xmltok_impl.c",
+        "bytes": 53718,
+        "sha256": "0fbcba7931707c60301305dab78d2298d96447d0a5513926d8b18135228c0818"
+      },
+      "after": {
+        "path": "Modules/expat/xmltok_impl.c",
+        "bytes": 53599,
+        "sha256": "3e13e257f612fbcec7eebee2a5b8a5b44d80ed8be57bc0103c62a2f6a0faae35"
+      }
+    },
+    {
+      "path": "Modules/expat/siphash.h",
+      "change": "modified",
+      "before": {
+        "path": "Modules/expat/siphash.h",
+        "bytes": 13076,
+        "sha256": "fbce56cd680e690043bbf572188cc2d0a25dbfc0d47ac8cb98eb3de768d4e694"
+      },
+      "after": {
+        "path": "Modules/expat/siphash.h",
+        "bytes": 13072,
+        "sha256": "95172f931786521478afeef8acdd921ef712300600450207b17332cf494bf92e"
+      }
+    }
+  ],
+  "source_removed": [],
+  "freeze_hash": "57EA7B94EFEDB0B0D82DD9B8CC3DB5CAC86606C2AB9D9A861C173846F7141359",
+  "output_exists": true,
+  "git_files": []
+}

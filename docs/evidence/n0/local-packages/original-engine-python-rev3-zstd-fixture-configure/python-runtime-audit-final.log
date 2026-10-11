@@ -1,0 +1,115 @@
+{
+  "sys_version": "3.10.13 (cpython-3.10.13-archive:49965601d6afedafe47cc85556d99b7a24981051, Oct 10 2026, 2) [MSC v.1944 64 bit (AMD64)]",
+  "sys_git": [
+    "CPython",
+    "cpython-3.10.13-archive",
+    "49965601d6afedafe47cc85556d99b7a24981051"
+  ],
+  "pins_and_imports": {
+    "numpy": {
+      "module": "numpy",
+      "module_file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\numpy\\__init__.py",
+      "distribution": "numpy",
+      "expected_version": "1.23.0",
+      "actual_version": "1.23.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "scipy": {
+      "module": "scipy",
+      "module_file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\scipy\\__init__.py",
+      "distribution": "scipy",
+      "expected_version": "1.8.1",
+      "actual_version": "1.8.1",
+      "version_match": true,
+      "spec_found": true
+    },
+    "Pillow": {
+      "module": "PIL",
+      "module_file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\PIL\\__init__.py",
+      "distribution": "Pillow",
+      "expected_version": "10.3.0",
+      "actual_version": "10.3.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "pytest": {
+      "module": "pytest",
+      "module_file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\pytest\\__init__.py",
+      "distribution": "pytest",
+      "expected_version": "7.2.0",
+      "actual_version": "7.2.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "requests": {
+      "module": "requests",
+      "module_file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\requests\\__init__.py",
+      "distribution": "requests",
+      "expected_version": "2.32.0",
+      "actual_version": "2.32.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "GitPython": {
+      "module": "git",
+      "module_file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\git\\__init__.py",
+      "distribution": "GitPython",
+      "expected_version": "3.1.44",
+      "actual_version": "3.1.44",
+      "version_match": true,
+      "spec_found": true
+    },
+    "o3de": {
+      "module": "o3de",
+      "module_file": "f:\\jericoengine\\jericoengine\\scripts\\o3de\\o3de\\__init__.py",
+      "distribution": "o3de",
+      "expected_version": "1.0.0",
+      "actual_version": "1.0.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "ly-test-tools": {
+      "module": "ly_test_tools",
+      "module_file": "f:\\jericoengine\\jericoengine\\tools\\lytesttools\\ly_test_tools\\__init__.py",
+      "distribution": "ly-test-tools",
+      "expected_version": "1.0.0",
+      "actual_version": "1.0.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "ly-remote-console": {
+      "module": "ly_remote_console",
+      "module_file": "f:\\jericoengine\\jericoengine\\tools\\remoteconsole\\ly_remote_console\\ly_remote_console\\__init__.py",
+      "distribution": "ly-remote-console",
+      "expected_version": "1.0.0",
+      "actual_version": "1.0.0",
+      "version_match": true,
+      "spec_found": true
+    },
+    "editor-python-test-tools": {
+      "module": "editor_python_test_tools",
+      "module_file": "f:\\jericoengine\\jericoengine\\automatedtesting\\gem\\pythontests\\editorpythontesttools\\editor_python_test_tools\\__init__.py",
+      "distribution": "editor-python-test-tools",
+      "expected_version": "1.0.0",
+      "actual_version": "1.0.0",
+      "version_match": true,
+      "spec_found": true
+    }
+  },
+  "aws_absence": {
+    "boto3": {
+      "distribution_installed": false,
+      "module_spec_found": false
+    },
+    "botocore": {
+      "distribution_installed": false,
+      "module_spec_found": false
+    },
+    "s3transfer": {
+      "distribution_installed": false,
+      "module_spec_found": false
+    }
+  },
+  "passed": true
+}

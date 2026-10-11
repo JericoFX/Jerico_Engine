@@ -1,0 +1,104 @@
+[
+  {
+    "path": "AUTHORS",
+    "bytes": 2413,
+    "sha256": "1881e260e164306b0f699ab7a13ce40a85d5674455812baaa17c3e1a1b4fea69",
+    "git_blob_sha1": "7d689350b51c1a8bd438f5ae834e888dce829823"
+  },
+  {
+    "path": "CMakeLists.txt",
+    "bytes": 13747,
+    "sha256": "e56219c57b870d635ce0c4cf28ba0abafe1cf86f20a7cf133901013d64110277",
+    "git_blob_sha1": "2058effc703e6a86ec73839b679bdd7074c61f4f"
+  },
+  {
+    "path": "CONTRIBUTORS",
+    "bytes": 3613,
+    "sha256": "61655b414a97ead634c4ed668aef4750a3f098b36ca4f314c0b15bec59922b95",
+    "git_blob_sha1": "4208e0cf51a40c3e08359ca53eae2b9c31a54cb1"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+  },
+  {
+    "path": "cmake/AddCXXCompilerFlag.cmake",
+    "bytes": 2969,
+    "sha256": "3520ef146e5a303ba362a56d118e9e99f20456dd78f24e46f6b66e068035c042",
+    "git_blob_sha1": "858589e9775c6669b260678afbbddfe12f048b38"
+  },
+  {
+    "path": "cmake/CXXFeatureCheck.cmake",
+    "bytes": 2293,
+    "sha256": "b58097438d782f72a7559be96b40aed0ee4c41a2a0f9d7a2710e89ab47cd4b76",
+    "git_blob_sha1": "aa67f58e6deb01ddbab978d4eb6d73d7b9409116"
+  },
+  {
+    "path": "cmake/GetGitVersion.cmake",
+    "bytes": 1865,
+    "sha256": "e39207da3604ebcbef75909f363e964732d89d494381ca6bf84e4260add97522",
+    "git_blob_sha1": "04a1f9b70d683f3fcbffdcd928234a9ae44a9f34"
+  },
+  {
+    "path": "cmake/GoogleTest.cmake",
+    "bytes": 2281,
+    "sha256": "6724530172aacdff89207a19780f3cdcabf7085afd4eaa2558e7798881178e38",
+    "git_blob_sha1": "44adbfbe4b4857eb31b13648de5e78f8e49a33e6"
+  },
+  {
+    "path": "cmake/Modules/FindLLVMAr.cmake",
+    "bytes": 379,
+    "sha256": "5c6899ac771a6991a30ee41c3dcb72c8bc5a68cb2d437e67e9a04494fd3faadf",
+    "git_blob_sha1": "23469813cfab5946c86002cef85caa10e7165380"
+  },
+  {
+    "path": "cmake/Modules/FindLLVMNm.cmake",
+    "bytes": 388,
+    "sha256": "88480c9fa481c7927cb794d1a60dc858a05b02dce38d6686664009112f8d42f6",
+    "git_blob_sha1": "e56430a04f6e84629bb3e06ae511e6f14829319a"
+  },
+  {
+    "path": "cmake/Modules/FindLLVMRanLib.cmake",
+    "bytes": 339,
+    "sha256": "462cddcca5b8d2523382f6a0ca55cba7d8818704dba13fcb6440b3defe981e7b",
+    "git_blob_sha1": "7b53e1a790590bdfc07adf41f0ae74b4a9b61ff0"
+  },
+  {
+    "path": "cmake/Modules/FindPFM.cmake",
+    "bytes": 1108,
+    "sha256": "4d688df1491c124f23c42b909c3505d83001a73e5b46b98a33da862e5f4fa39e",
+    "git_blob_sha1": "cf807a1ee9e96b3997ca8a96313a19548817ed4d"
+  },
+  {
+    "path": "cmake/llvm-toolchain.cmake",
+    "bytes": 287,
+    "sha256": "287b6d25bd8088b5a71710fa5f48136698ee83141a02678a0e79cda050d9405f",
+    "git_blob_sha1": "fc119e52fd26a59786b3480f3e6c64c72b78ad8d"
+  },
+  {
+    "path": "cmake/split_list.cmake",
+    "bytes": 93,
+    "sha256": "1b1f5a101b8d027d15da62b885e28ab346886267ae025e7d85ee7197d1e802ba",
+    "git_blob_sha1": "67aed3fdc8579b7d9a6f06a73fa9b6844976e691"
+  },
+  {
+    "path": "src/CMakeLists.txt",
+    "bytes": 5057,
+    "sha256": "52b866b268795a34bbf03d0b069728a63b4be2a7a75196798e36f04915b297ae",
+    "git_blob_sha1": "585cec6896a159406473c0f4de448f8e3156bb03"
+  },
+  {
+    "path": "test/AssemblyTests.cmake",
+    "bytes": 2308,
+    "sha256": "93c443f3ad9167b85c44705c917b53f5619c5fe9a4da592c18e238b54fed2804",
+    "git_blob_sha1": "c43c711faf87e9cdc4c8864a050433aece8cb936"
+  },
+  {
+    "path": "test/CMakeLists.txt",
+    "bytes": 11936,
+    "sha256": "152988b435e00b9f77830cd9f9e06c12efe356ed40281b929020bcbd1238a25e",
+    "git_blob_sha1": "a49ab195e744cd1daf43944b399d7a91f47c1c8d"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "producer-unc",
+    "exitcode": 1,
+    "elapsed_seconds": 0.0438183,
+    "diagnostic_found": true,
+    "expected_diagnostic": "must be an absolute local path",
+    "output_created": false
+  },
+  {
+    "name": "producer-source-missing",
+    "exitcode": 1,
+    "elapsed_seconds": 0.0279787,
+    "diagnostic_found": true,
+    "expected_diagnostic": "file is missing",
+    "output_created": false
+  },
+  {
+    "name": "producer-hash-wrong",
+    "exitcode": 1,
+    "elapsed_seconds": 0.0292367,
+    "diagnostic_found": true,
+    "expected_diagnostic": "SHA256 mismatch",
+    "output_created": false
+  },
+  {
+    "name": "producer-output-exists",
+    "exitcode": 1,
+    "elapsed_seconds": 0.0344622,
+    "diagnostic_found": true,
+    "expected_diagnostic": "output already exists",
+    "sentinel_sha_before": "644D1C14D3D33144A611CC6D5B8518856D615BB1CBAEE6A602D301D3ACE5BC18",
+    "sentinel_sha_after": "644D1C14D3D33144A611CC6D5B8518856D615BB1CBAEE6A602D301D3ACE5BC18"
+  }
+]

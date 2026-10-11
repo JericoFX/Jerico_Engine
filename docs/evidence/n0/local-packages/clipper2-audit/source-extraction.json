@@ -1,0 +1,10 @@
+{
+  "root": "F:\\JericoEngine\\Dependencies\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "archive_sha256": "73f5783e0c88299976334f48e3e356c756b96212c652ecc8bceec3bd99455bcb",
+  "files": 223,
+  "payload_bytes": 3006633,
+  "all_hashes_match": true,
+  "reparse_paths": [],
+  "extraction": "regular files/directories only into new root; no upstream scripts executed",
+  "snapshot_policy": "immutable input; subsequent builds must use external binary dirs and preserve these source hashes"
+}

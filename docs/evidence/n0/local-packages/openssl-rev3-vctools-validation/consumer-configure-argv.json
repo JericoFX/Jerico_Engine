@@ -1,0 +1,26 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\consumer-md",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_OPENSSL_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\extracted\\OpenSSL-1.1.1o-je-rev1-windows",
+    "-DJE_OPENSSL_VALID_INPUTS:FILEPATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\producer-inputs.cmake",
+    "-DCMAKE_MSVC_RUNTIME_LIBRARY:STRING=MultiThreadedDLL"
+  ],
+  "argc": 13,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests",
+  "binary": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\consumer-md",
+  "package_root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-rev3-vctools-validation\\extracted\\OpenSSL-1.1.1o-je-rev1-windows",
+  "valid_inputs": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3\\producer-inputs.cmake",
+  "package_audit_sha256": "0EAED1AEFE9ADED5457C2EE6DDB63E58078C15996BCAB6F10E2BE5F59D32DA78",
+  "start_utc": "2026-10-11T00:49:44.6791677Z"
+}

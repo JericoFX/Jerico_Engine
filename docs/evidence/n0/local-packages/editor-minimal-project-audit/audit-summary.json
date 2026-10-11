@@ -1,0 +1,164 @@
+{
+  "schema": "JE_editor_minimal_project_audit_v1",
+  "scope": "Static repository reading and metadata/LFS pointer inspection only; evidence outputs only. No project generation, source/config/doc edit, downloads, registration, builds, tests or Git.",
+  "recommendation": {
+    "template": "ScriptOnlyProject",
+    "proposed_name": "JEEditorFixture",
+    "entry": "Source-engine root configure with explicit absolute LY_PROJECTS fixture path; no project-centric script-only/prebuilt mode",
+    "reason": "No custom project Gem/C++/ECS dependency or Multiplayer; existing engine Editor, AP and project GameLauncher plus existing WhiteBox CSG",
+    "native_alternative": "MinimalProject adds generated project Module/SystemComponent/Gem with Atom_AtomBridge.Static, no requirement demonstrated for this fixture; do not create it by default.",
+    "seed_gems": [
+      "Atom",
+      "CameraFramework",
+      "ImGui",
+      "WhiteBox",
+      "EditorPythonBindings",
+      "PhysX5",
+      "QtForPython",
+      "PrimitiveAssets",
+      "PrefabBuilder"
+    ],
+    "metadata_closure_count": 40,
+    "metadata_unknown": 0,
+    "metadata_AWS_Amazon_Multiplayer_GameLift_count": 0,
+    "platform_limit": "Conservative gem.json closure includes platform variants Metal/DX12/Vulkan/Null; actual Windows CMake/PAL target closure still requires configure."
+  },
+  "project_files_to_adapt": [
+    "project.json: replace Name/Version/ProjectId with new explicit project identity, keep script_only:true, engine:o3de; set local descriptive origin/license; remove default restricted placeholder and absent preview reference; replace broad template gem_names with audited seeds; no external_subdirectories Gem",
+    "CMakeLists.txt: replace Name and preserve full original Apache-2.0 OR MIT license block; retain original initialization logic. Engine-source LY_PROJECTS path supplies normal C/C++ engine configure.",
+    "cmake/EngineFinder.cmake: copy inherited template unchanged with license kept only for optional project-centric use; local CMAKE_MODULE_PATH or user/project.json engine_path can select exact checkout without global registration.",
+    "Config/shader_global_build_options.json, ShaderLib/viewsrg.srgi/scenesrg.srgi, Registry/assetprocessor_settings.setreg and assimp_settings.setreg: retain text original local scan/build settings and credits; historical Amazon JSON key is a settings namespace, not an AWS acquisition.",
+    "Levels/start/start.prefab: adapt only fixture authoring content to camera/directional light/WhiteBox cube or CSG solid; remove sample shaderball/groundplane, HDRi skybox and IBL asset refs. Keep native component type IDs and existing valid local entity IDs; new project UUID must be fresh.",
+    "autoexec.cfg: point loadlevel at actual fixture level; preserve game.cfg. AssetBundling SeedList must be refreshed from actual generated spawnable asset IDs if packaging is later required, not copied with stale source GUID.",
+    "Assets/materials/WhiteBoxDefault.material: if parent authorizes texture-free fixture authoring, provide project-local material at the same consumed product path using existing StandardPBR type, no default_grid parent or image references, explicit constant color/useTexture:false. Keep original engine material untouched and rely on audited project scan priority override. This is ordinary authored data, not a new material/renderer system; full shader closure remains pending.",
+    "Resources/GameSDK.ico and Splash.bmp: template and common launcher ICO are LFS pointers. Provide valid original/licensed local inputs or separately authorized small original fixture resources; never copy pointer bytes as binaries. Native Launcher.rc.in references both files, so omitting only one is insufficient.",
+    "LICENSE.txt/LICENSE_APACHE2.TXT/LICENSE_MIT.TXT: preserve original O3DE distribution/license texts and template notices; newly authored fixture asset license/provenance explicit. No UUID reuse from an unrelated project; no changes to component class UUIDs."
+  ],
+  "integration": {
+    "root_option": "-DLY_PROJECTS:STRING=<absolute-new-fixture-path>",
+    "projects": "cmake/Projects.cmake records absolute project paths/names, reads gem_names/external_subdirectories, sets LY_DEFAULT_PROJECT_PATH for one project and writes only user build registry/presets",
+    "targets": "Engine Editor and AssetProcessor/AssetProcessorBatch plus JEEditorFixture.GameLauncher and JEEditorFixture.Assets",
+    "assets_target": "launcher_generator.cmake executes existing APBatch --zeroAnalysisMode --project-path=<fixture> --platforms=<platform>, with project lock file; it is EXCLUDE_FROM_ALL",
+    "variants": "WhiteBox Clients/Servers/Unified runtime; Tools/Builders load WhiteBox.Editor and existing OpenMesh+Manifold. EditorPythonBindings and QtForPython Tools/Builders only; PhysX5 provides native runtime and editor physics.",
+    "generation": "Original engine_template.create_project copies templates, performs substitutions, creates UUIDs and registers unless --no-register; --keep-license-text required to preserve template license blocks. EngineFinder inherits through registered local templates. No generator executed; smallest manual local Windows-only subset can avoid global registration and copying absent LFS resources."
+  },
+  "dependency_limits": {
+    "whitebox_editor": "3rdParty::OpenMesh and 3rdParty::Manifold plus Atom/AzToolsFramework/Legacy Editor",
+    "python_tools": "CPython3.10.13 + pybind11; QtForPython requires Qt Widgets/Test + pyside6 runtime/Tools. Previously provisioned Qt/PySide archives do not prove Editor imports or linkage.",
+    "physics": "3rdParty::PhysX5 circular static library consumer still required",
+    "shader_assets": "Existing ShaderBuilder needs mcpp, DirectXShaderCompilerDxc and SPIRVCross plus existing AZSL compiler pipeline",
+    "image_assets": "ImageProcessingAtom retains Qt, astc-encoder, squish-ccr, TIFF, ISPCTexComp and OpenEXR; minimal project does not remove these existing builders",
+    "no_Amazon": "No AWS/Multiplayer/GameLift gem in conservative metadata closure. No boto3/botocore/s3transfer installation proposed. Full native dependency/network closure remains governed by existing offline resolver/audits."
+  },
+  "asset_findings": {
+    "both_default_levels": "Regular 24KB JSON, but both reference shaderball/groundplane azmodels and goegap HDRi/IBL streaming images; they are not complete independent minimal no-LFS scenes",
+    "available": "Native prefab JSON, material/materialtype JSON, MainPipeline.pass, shader source/include text, icon SVGs and WhiteBox procedural geometry API",
+    "missing": "Template preview/GameSDK.ico/Splash.bmp plus platform image resources are LFS pointers; WhiteBox UV TIFs and default_grid three Default TIFs are pointers",
+    "whitebox_render": "WhiteBoxAtomRenderMesh loads materials/whiteboxdefault.azmaterial and returns without a model when material missing. Setting tint or useTexture off on component alone does not remove this dependency.",
+    "pending": "Complete Atom pipeline/fonts/default image/shader asset closure not audited or cooked; no AP job or Editor/launcher frame run."
+  },
+  "evidence_inputs": [
+    {
+      "path": "Templates/ScriptOnlyProject/Template/project.json",
+      "sha256": "1c4c10ee71230d7023aba83b4a6bc9291776f6b597f3f370714471eff946a7f9",
+      "bytes": 1197
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/CMakeLists.txt",
+      "sha256": "da0e479e95ccec693ded789fc211b280815de91a4dc8047d0c33b5b9b9c80c50",
+      "bytes": 2170
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/CMakePresets.json",
+      "sha256": "447569bc8f8e5e23c3ee50e1a0a05dca4318e50734e83d082e5d99bccb56acdf",
+      "bytes": 199
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/Registry/assetprocessor_settings.setreg",
+      "sha256": "0a88d47a79f716d27c72fea79f0c112ae6c9cbf21918dbfbc523e597e0ca7224",
+      "bytes": 890
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/Template/autoexec.cfg",
+      "sha256": "b6e559b57281497154a94abd7c08b91e0b105260e85282b757cefc6708cb374f",
+      "bytes": 528
+    },
+    {
+      "path": "Templates/ScriptOnlyProject/template.json",
+      "sha256": "5900279bc1ecde17d8bbaa7761b9f3a5df318e984cb700b305b5f2a20dfbdf08",
+      "bytes": 11472
+    },
+    {
+      "path": "Templates/MinimalProject/Template/project.json",
+      "sha256": "108c4c0ff8585a321f78a4ca9ed21390015500feca8410ac47484fe32527376e",
+      "bytes": 742
+    },
+    {
+      "path": "Templates/MinimalProject/Template/Gem/CMakeLists.txt",
+      "sha256": "138baac6b06c8dbb21df03cbf63b1fb0c84fbbaa947394f802e79b852b42fbce",
+      "bytes": 4235
+    },
+    {
+      "path": "Templates/EngineFinder/Template/cmake/EngineFinder.cmake",
+      "sha256": "6f063badd68eb5bc5d5066036daaf25d01249f4aa22e7249a9c9efc848849385",
+      "bytes": 10286
+    },
+    {
+      "path": "scripts/o3de/o3de/engine_template.py",
+      "sha256": "0b0c0c1e4a57c8e0ac3228219c937b9c04aa69ee7c4298903e9db39f0ed5c96f",
+      "bytes": 184836
+    },
+    {
+      "path": "cmake/Findo3de.cmake",
+      "sha256": "d9a24259743449c7d217d2c18a6a2cf5362051206bf5ecd1983318b2e11efb4f",
+      "bytes": 2952
+    },
+    {
+      "path": "cmake/Projects.cmake",
+      "sha256": "49120b2899b8342e25d5f520bb79fe93f8ee0840b8a4485cd90386466a12a594",
+      "bytes": 16122
+    },
+    {
+      "path": "Code/LauncherUnified/launcher_generator.cmake",
+      "sha256": "6d7f276499835a411918c38d877e97a71a7b68f3111d460cabe2a3de22ae7d16",
+      "bytes": 24060
+    },
+    {
+      "path": "Code/LauncherUnified/Platform/Windows/launcher_project_windows.cmake",
+      "sha256": "38a0c2d0d105443dae4774fd823de01e11a61e01eb427d86a25a403543e87296",
+      "bytes": 1319
+    },
+    {
+      "path": "Code/LauncherUnified/Platform/Windows/Launcher.rc.in",
+      "sha256": "a7a219c1e94e9ddd60fa80a26c45070f60fbdfdb4398c9ca0102e7b69725a2ba",
+      "bytes": 366
+    },
+    {
+      "path": "Gems/WhiteBox/Code/CMakeLists.txt",
+      "sha256": "dabafd5e87bc188368cb723e3e6c1c02936f53574645d36971718c50ca7b9634",
+      "bytes": 6999
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp",
+      "sha256": "441f0ae3d0117d2d4aa06f04436f05745d9af483ca0bcd4d61df7a55eec48b34",
+      "bytes": 11266
+    },
+    {
+      "path": "Gems/QtForPython/Code/CMakeLists.txt",
+      "sha256": "27d4adcacdf7e5225646625b73bc7e02cc1c5d2e63dd493edd8822e316b6137e",
+      "bytes": 2864
+    },
+    {
+      "path": "Gems/EditorPythonBindings/Code/CMakeLists.txt",
+      "sha256": "b376cffba7e3181041981209042e5f4b57c6ef78ff19b0845cfcaf13199ffc31",
+      "bytes": 3431
+    },
+    {
+      "path": "Gems/PhysX/Core/PhysX5/CMakeLists.txt",
+      "sha256": "e7b46e533bd30b193aa1ec2e82524079bb8afb7a9a3336707b4cc1c2603d9b1d",
+      "bytes": 9664
+    }
+  ],
+  "evidence_detail": "inputs.json contains full hashes, 40-node gem dependency graph, both template inventories and focal LFS/material hashes.",
+  "acceptance": "Proposed coherent path only; not source implementation, configure/build, cooked-asset, Editor/AP/launcher, WhiteBox runtime/visual, performance or legal redistribution PASS."
+}

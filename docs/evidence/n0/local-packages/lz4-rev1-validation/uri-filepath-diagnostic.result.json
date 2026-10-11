@@ -1,0 +1,13 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_LZ4_SOURCE_ARCHIVE:FILEPATH=https://invalid.example/lz4.tar.gz",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\echo-path-type.cmake"
+  ],
+  "argc": 3,
+  "native_exit_code": 0,
+  "effective_value": "https:/invalid.example/lz4.tar.gz\r\n",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\uri-filepath-diagnostic.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\uri-filepath-diagnostic.stderr.log"
+}

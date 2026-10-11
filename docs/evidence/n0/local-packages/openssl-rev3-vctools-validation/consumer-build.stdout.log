@@ -1,0 +1,52 @@
+Change Dir: 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md'
+
+Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" JEOpenSSLConsumer.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+Compilación iniciada a las 10/10/2026 21:49:56.
+
+Proyecto "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\JEOpenSSLConsumer.vcxproj" en nodo 1 (destinos predeterminados).
+El proyecto "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\JEOpenSSLConsumer.vcxproj" (1) está compilando "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\ZERO_CHECK.vcxproj" (2) en el nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "x64\Release\ZERO_CHECK\".
+  La salida estructurada está habilitada. El formato del diagnóstico del compilador reflejará la jerarquía de errores. Consulte https://aka.ms/cpp/structured-output para obtener más detalles.
+  Creando directorio "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\".
+InitializeBuildStatus:
+  Se creará "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+  Aplicando tarea Touch a "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+CustomBuild:
+  1>Checking Build System
+FinalizeBuildStatus:
+  Se eliminará el archivo "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Compilación del proyecto terminada "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\ZERO_CHECK.vcxproj" (destinos predeterminados).
+PrepareForBuild:
+  La salida estructurada está habilitada. El formato del diagnóstico del compilador reflejará la jerarquía de errores. Consulte https://aka.ms/cpp/structured-output para obtener más detalles.
+  Creando directorio "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\Release\".
+  Creando directorio "JEOpenSSLConsumer.dir\Release\JEOpenSS.BB19C797.tlog\".
+InitializeBuildStatus:
+  Se creará "JEOpenSSLConsumer.dir\Release\JEOpenSS.BB19C797.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+  Aplicando tarea Touch a "JEOpenSSLConsumer.dir\Release\JEOpenSS.BB19C797.tlog\unsuccessfulbuild".
+CustomBuild:
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/tests/CMakeLists.txt
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /nologo /W4 /WX /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /std:c++17 /Fo"JEOpenSSLConsumer.dir\Release\\" /Fd"JEOpenSSLConsumer.dir\Release\vc143.pdb" /external:W0 /TP /errorReport:queue  /external:I "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/extracted/OpenSSL-1.1.1o-je-rev1-windows/OpenSSL/include" F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\OpenSSL\tests\OpenSSLConsumer.cpp F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\OpenSSL\tests\WindowsFirst.cpp F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\OpenSSL\tests\OpenSSLFirst.cpp
+  OpenSSLConsumer.cpp
+  WindowsFirst.cpp
+  OpenSSLFirst.cpp
+  Generando código...
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\Release\JEOpenSSLConsumer.exe" /INCREMENTAL:NO /NOLOGO "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\extracted\OpenSSL-1.1.1o-je-rev1-windows\OpenSSL\lib\libssl.lib" "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\extracted\OpenSSL-1.1.1o-je-rev1-windows\OpenSSL\lib\libcrypto.lib" ws2_32.lib gdi32.lib advapi32.lib crypt32.lib user32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openssl-rev3-vctools-validation/consumer-md/Release/JEOpenSSLConsumer.lib" /MACHINE:X64  /machine:x64 JEOpenSSLConsumer.dir\Release\OpenSSLConsumer.obj
+  JEOpenSSLConsumer.dir\Release\WindowsFirst.obj
+  JEOpenSSLConsumer.dir\Release\OpenSSLFirst.obj
+  JEOpenSSLConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\Release\JEOpenSSLConsumer.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "JEOpenSSLConsumer.dir\Release\JEOpenSS.BB19C797.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "JEOpenSSLConsumer.dir\Release\JEOpenSS.BB19C797.tlog\JEOpenSSLConsumer.lastbuildstate".
+Compilación del proyecto terminada "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openssl-rev3-vctools-validation\consumer-md\JEOpenSSLConsumer.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:03.45
+

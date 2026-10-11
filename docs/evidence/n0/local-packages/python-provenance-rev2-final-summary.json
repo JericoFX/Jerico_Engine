@@ -1,0 +1,167 @@
+{
+  "freeze_sha256": "5F51D21E2DFD8A904559B6091D04CA60BCD4B8866EB731678E93FE5F6C1B9724",
+  "freeze_match": true,
+  "helper_match": true,
+  "external_snapshots": [
+    {
+      "name": "expat-python-input-snapshot.json",
+      "files": 153,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "bzip2-1.0.8-python-input-snapshot.json",
+      "files": 56,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "sqlite-3.40.1.0-python-input-snapshot.json",
+      "files": 5,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "xz-5.2.5-python-input-snapshot.json",
+      "files": 480,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "zlib-1.2.13-python-input-snapshot.json",
+      "files": 243,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "libffi-3.3.0-python-input-snapshot.json",
+      "files": 22,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "openssl-bin-1.1.1u-python-input-snapshot.json",
+      "files": 346,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    },
+    {
+      "name": "tcltk-8.6.12.0-python-input-snapshot.json",
+      "files": 2593,
+      "match": true,
+      "mismatches": 0,
+      "unexpected": 0
+    }
+  ],
+  "producer_exit": 0,
+  "producer_elapsed_seconds": 258.664,
+  "producer_log_sha256": "BBAC0CED8F4415C53314313A8F798A19ADB19B614E859A9E6CA732B93044083B",
+  "archive_sha256": "557adc2ca61d8c4b43bbd050a68aadf5cdf6884d2a176b8a623a9c3fdf171876",
+  "archive_bytes": 22347704,
+  "manifest_entries": 3282,
+  "payload_bytes": 104677631,
+  "manifest_sha256": "9F31B4212B623710F3CE557800FAB82B29BF5F14CE989FE551FD7DE9041CF0A8",
+  "archive_safety": {
+    "entries": 3283,
+    "nonregular": 0,
+    "unsafe_paths": 0,
+    "missing": 0,
+    "extra": [
+      "SHA256SUMS"
+    ]
+  },
+  "package_info": {
+    "license": "PSF-2.0",
+    "name": "python-3.10.13-je-rev2-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "49965601d6afedafe47cc85556d99b7a24981051",
+      "sha256": "12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+      "url": "https://codeload.github.com/python/cpython/tar.gz/49965601d6afedafe47cc85556d99b7a24981051"
+    },
+    "version": "3.10.13-je-rev2"
+  },
+  "runtime": {
+    "version": "3.10.13 (heads/development-dirty:6eb79db287, Oct 10 2026, 19:41:56) [MSC v.1944 64 bit (AMD64)]",
+    "sys_git": [
+      "CPython",
+      "heads/development-dirty",
+      "6eb79db287"
+    ],
+    "py_get_build_info": "heads/development-dirty:6eb79db287, Oct 10 2026, 19:41:56",
+    "py_get_version": "3.10.13 (heads/development-dirty:6eb79db287, Oct 10 2026, 19:41:56) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "consumer": {
+    "configure_exit": 0,
+    "release_build_exit": 0,
+    "debug_build_exit": 0,
+    "release_ctest_exit": 8,
+    "debug_embed_ctest_exit": 8,
+    "freeze_unchanged": true,
+    "package_unchanged": true,
+    "lasttest_release_sha": "563CDF84A006123DFA64930F987448053816AF78DEA605AA2D9D16FBC28B5EDA",
+    "lasttest_debug_sha": "FBE7B462E763EEBA055EB763CC3C0DC68B1F574FA0B20AEFC8947A6768FA79D1"
+  },
+  "binaries": [
+    {
+      "path": "python\\python.exe",
+      "bytes": 91648,
+      "sha256": "3C52FD7E95F349322827203D54690C525B99DA8FCC9904BB3D801ABD5B8483A8"
+    },
+    {
+      "path": "python\\python_d.exe",
+      "bytes": 138752,
+      "sha256": "24B3EFF000A49D37F0DD90609ADFE3D42DC586892AA0BC13EC4FEDC96422E91C"
+    },
+    {
+      "path": "python\\python310.dll",
+      "bytes": 4983296,
+      "sha256": "2C0A8C44D562554319052DBFF7984B681F3AF215D7C48900314ECD82DA6F9815"
+    },
+    {
+      "path": "python\\python310_d.dll",
+      "bytes": 10192384,
+      "sha256": "F89234FB892F6B70473AE80D7BFFA5E1153DAB82F7BDE64F9F65433DF521A016"
+    },
+    {
+      "path": "python\\libs\\python310.lib",
+      "bytes": 356438,
+      "sha256": "86F83CD3DB11D40648CDB5282DDA59744CD2C2F68F0FC0E9A03771509913132B"
+    },
+    {
+      "path": "python\\libs\\python310_d.lib",
+      "bytes": 360766,
+      "sha256": "61DF1FB8C064073E0F05CC9AB2CBF59B407658CC49C359A8B2A46FB5FF66A329"
+    },
+    {
+      "path": "python\\python3.dll",
+      "bytes": 54784,
+      "sha256": "34859B9B0A5264ECC1B41F95685E8F99A70120577F6A40B5F61C40C2CC91C892"
+    },
+    {
+      "path": "python\\python3_d.dll",
+      "bytes": 68608,
+      "sha256": "1996A39DD125A6D2D7DA58872CC56A15949088565C831D46B79218FD3FE8C6C4"
+    }
+  ],
+  "consumer_test_executables": [
+    {
+      "configuration": "Release",
+      "bytes": 36864,
+      "sha256": "C2BCD1AD7862C98C6E06E51F0FD499ECDDB7A7B49277CE5D88B118524F46975E"
+    },
+    {
+      "configuration": "Debug",
+      "bytes": 577536,
+      "sha256": "07AD1A8045777B0EE975EAAAB4F6ED30C701A91B92F5A30B786EEE2B553643BB"
+    }
+  ],
+  "diagnostic_file": "python-provenance-rev2-msbuild-provenance-diagnostic.json"
+}

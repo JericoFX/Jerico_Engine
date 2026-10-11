@@ -1,0 +1,10 @@
+{
+  "root": "F:\\JericoEngine\\Dependencies\\openssl-1.1.1o",
+  "archive_sha256": "9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f",
+  "files": 3093,
+  "payload_bytes": 41447592,
+  "all_hashes_match": true,
+  "reparse_paths": [],
+  "extraction": "regular files/directories only into new root; no upstream scripts executed",
+  "snapshot_policy": "immutable input; subsequent builds must use external binary dirs and preserve these source hashes"
+}

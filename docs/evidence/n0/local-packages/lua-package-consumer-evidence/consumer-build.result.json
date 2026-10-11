@@ -1,0 +1,18 @@
+{
+  "name": "consumer-build",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-release",
+    "--target",
+    "JELuaConsumer",
+    "--config",
+    "Release"
+  ],
+  "argv_count": 6,
+  "started": "2026-10-10T19:28:33.4160675-03:00",
+  "exitcode": 0,
+  "elapsed_seconds": 2.4243719,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lua-package-consumer-evidence\\consumer-build.log"
+}

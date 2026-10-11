@@ -1,0 +1,31 @@
+{
+  "exitCode": 1,
+  "elapsedSeconds": 7.192,
+  "endedUtc": "2026-10-11T01:08:19.9518603Z",
+  "parentCmakePeakWorkingSetBytes": 13987840,
+  "parentCmakePeakVirtualBytes": 4519419904,
+  "parentCmakeSamples": 14,
+  "resourceScope": "direct CMake process only; child MSBuild/compiler/linker totals are not aggregated",
+  "freezeInputsAfter": {
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/ApplyMcppPatch.cmake": "0928946da24846ab0c66e0d5a7d3daddea048a9ad630e17a97bd6d806deefd9e",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake": "234d2d39993b56b5472a24d61aa95bdce5239cb0c6f63346a9d6040a7cbdd611",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/CMakeLists.txt": "9ac4314cb567685b7565955c02bcd4aa1e07701018ac7e04080d21d56225aa20",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/Findmcpp.cmake": "b9552d89681d392b85698706f88125a88e4ad0bce8402d9ed962adddf620f786",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/McppPatchManifest.json": "9f8522a8a06ab9c4207f5f5ee7e7b41837831118512b07b0a8507bb5997aaec3",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/NOTICE.txt": "b880bdc496ae6331fbbf096cc749d214fe3f8e966f997247a1ace314884e029d",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/README.md": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/CMakeLists.txt": "1e27311b5821ae173bfef949fe5bc0062e27414b9c48021391c31bfd0452a681",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/McppConsumer.cpp": "96e989c07017976b74d8fc908524a5f90afd803a74c5e15d27762dbc55e9ccba",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/visualc.mak.original": "a35dc1b5c93acf904ebbad69065125ff93f1b2905d822ae518aa6593fb000c7f",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+    "F:/JericoEngine/Dependencies/archives/mcpp-2.7.2.tar.gz": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864",
+    "F:/JericoEngine/JericoEngine/LICENSE.txt": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+    "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+    "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+  },
+  "changedFreezeInputs": [],
+  "outputExists": true,
+  "outputBytes": 5487210.0
+}

@@ -1,0 +1,15 @@
+{
+  "native_exit": 1,
+  "elapsed_seconds": 0.0270853,
+  "expected_failure": true,
+  "error_pattern_matched": true,
+  "output_exists_after": true,
+  "output_state_unchanged": true,
+  "sentinel_sha256_before": "4818de1c16b9b00826d42fd3cd59dce4bfd85a82bb43911bcba6d9a0be0f09e6",
+  "sentinel_sha256_after": "4818de1c16b9b00826d42fd3cd59dce4bfd85a82bb43911bcba6d9a0be0f09e6",
+  "sentinel_unchanged": true,
+  "source_archive_unchanged": true,
+  "source_freeze_sha256_after": "d567930c4739ba4d221bd1c3dfe6e7b0f7518107cffa573412d188e383ef2610",
+  "source_freeze_unchanged": true,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zstd-producer-rev1-evidence\\negative-output-existing.log"
+}

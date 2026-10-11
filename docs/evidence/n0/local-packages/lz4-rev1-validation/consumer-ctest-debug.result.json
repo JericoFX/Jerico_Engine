@@ -1,0 +1,18 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1",
+    "-C",
+    "Debug",
+    "--output-on-failure"
+  ],
+  "argc": 5,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "native_exit_code": 0,
+  "elapsed_seconds": 0.106,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\consumer-ctest-debug.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\consumer-ctest-debug.stderr.log",
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\consumer-ctest-debug.log",
+  "last_test_log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-consumer-rev1\\Testing\\Temporary\\LastTest.log"
+}

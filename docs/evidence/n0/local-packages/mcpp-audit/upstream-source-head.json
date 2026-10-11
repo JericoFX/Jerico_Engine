@@ -1,0 +1,11 @@
+{
+  "url": "https://sourceforge.net/projects/mcpp/files/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz/download",
+  "method": "HEAD",
+  "status": 302,
+  "automaticRedirects": false,
+  "authentication": false,
+  "locationWithoutQuery": "https://downloads.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz",
+  "redirectQueryOmitted": true,
+  "size": null,
+  "getPerformed": false
+}

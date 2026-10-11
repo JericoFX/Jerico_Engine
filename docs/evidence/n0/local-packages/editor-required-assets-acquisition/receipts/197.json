@@ -1,0 +1,41 @@
+{
+  "index": 197,
+  "source_path": "Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+  "expected_sha256": "5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323",
+  "expected_bytes": 224592,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:04.161311+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "224592",
+      "ETag": "\"5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:04.586924+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Framework/AzQtComponents/AzQtComponents/Components/Fonts/Open_Sans/OpenSans-Bold.ttf",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "224592",
+      "ETag": "\"5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "5894a3649b213cf5b2d673b6e7a871815fd1d120fa68a463592f27db14eae323",
+  "actual_bytes": 224592,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Bold.ttf",
+  "status": "acquired and byte verified"
+}

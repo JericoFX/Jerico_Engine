@@ -1,0 +1,41 @@
+{
+  "index": 75,
+  "source_path": "Code/Editor/ProjectSettingsTool/icons/group_open.png",
+  "expected_sha256": "e4058789615838100562d84345a5b0fdd7ea5416052105ce0ae2e5a1db13b952",
+  "expected_bytes": 367,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/ProjectSettingsTool/icons/group_open.png",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:26:28.031584+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/ProjectSettingsTool/icons/group_open.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "367",
+      "ETag": "\"e4058789615838100562d84345a5b0fdd7ea5416052105ce0ae2e5a1db13b952\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/ProjectSettingsTool/icons/group_open.png",
+    "method": "GET",
+    "utc": "2026-10-10T23:26:28.493864+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/ProjectSettingsTool/icons/group_open.png",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/png",
+      "Content-Length": "367",
+      "ETag": "\"e4058789615838100562d84345a5b0fdd7ea5416052105ce0ae2e5a1db13b952\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "e4058789615838100562d84345a5b0fdd7ea5416052105ce0ae2e5a1db13b952",
+  "actual_bytes": 367,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\ProjectSettingsTool\\icons\\group_open.png",
+  "status": "acquired and byte verified"
+}

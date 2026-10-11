@@ -1,0 +1,68 @@
+{
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-v143-rev1\\packages\\lz4-1.9.4-je-rev1-windows.tar.xz",
+  "archive_bytes": 167540,
+  "archive_sha256": "9E7E44C4E9D70307E22DA51ECBFB71934770CA0EC7C4077D5EE739C2A21C2EAC",
+  "sidecar_matches": true,
+  "package_file_manifest_count": 25,
+  "package_contents_file_count": 26,
+  "content_hash_mismatches": [],
+  "tar_member_count": 26,
+  "tar_member_bytes": 865465,
+  "tar_all_regular_and_safe": true,
+  "tar_members_match_file_list_and_manifest": true,
+  "tar_payload_hash_mismatches": [],
+  "package_metadata": {
+    "license": "BSD-2-Clause",
+    "name": "lz4-1.9.4-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "5ff839680134437dbf4678f3d0c7b371d84f4964",
+      "sha256": "0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b",
+      "url": "https://codeload.github.com/lz4/lz4/tar.gz/refs/tags/v1.9.4"
+    },
+    "version": "1.9.4"
+  },
+  "extraction_root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-extracted-rev1",
+  "extracted_file_count": 26,
+  "extraction_hash_mismatches": [],
+  "recipe": {
+    "sourceVersion": "1.9.4",
+    "toolset": "v143",
+    "generator": "Visual Studio 17 2022",
+    "architecture": "x64",
+    "configuration": "Release",
+    "runtimeLibrary": "MultiThreadedDLL",
+    "static": true,
+    "shared": false,
+    "core": true,
+    "highCompression": true,
+    "frame": true,
+    "xxHash": true,
+    "cli": false,
+    "legacyCli": false,
+    "sourcePatched": false,
+    "policyCompatibilityMinimum": "3.5",
+    "historicalRecipeCommit": "68e97674712afd8c5e5c99608b35442da579163a",
+    "historicalBinaryCompatibility": "not asserted"
+  },
+  "library": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-extracted-rev1\\lz4\\lib\\lz4.lib",
+    "bytes": 312126,
+    "sha256": "1203AAFBF33F86E43A2DC60C8B580F4663615E2151B2675335E563637538146C"
+  },
+  "headers": {
+    "lz4.h": {
+      "bytes": 43263,
+      "sha256": "C1614ECF7ADA7B0BE1ACB560D4239595F96FBB7AA6A79A7C40CB358753830BE6"
+    },
+    "lz4hc.h": {
+      "bytes": 20179,
+      "sha256": "6BC1EFEB79571807DA2CA084809DE1760E0CD87064E40ECCF9624D95088DCE7D"
+    },
+    "lz4frame.h": {
+      "bytes": 32749,
+      "sha256": "47501E4925D60C0F87C7BFC68C8B9E0E4D942EEA786E35D2C5BFBF5E9DEAB561"
+    }
+  },
+  "pass": true
+}

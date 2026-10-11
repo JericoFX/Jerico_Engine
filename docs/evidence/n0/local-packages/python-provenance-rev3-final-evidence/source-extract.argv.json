@@ -1,0 +1,7 @@
+[
+  "-xzf",
+  "F:\\JericoEngine\\Dependencies\\archives\\cpython-49965601d6afedafe47cc85556d99b7a24981051.tar.gz",
+  "-C",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev3",
+  "--strip-components=1"
+]

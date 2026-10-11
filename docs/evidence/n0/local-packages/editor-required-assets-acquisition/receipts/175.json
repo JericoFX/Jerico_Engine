@@ -1,0 +1,41 @@
+{
+  "index": 175,
+  "source_path": "Code/Editor/res/Eye_Slash_Hidden.tif",
+  "expected_sha256": "afbb3224e8dfb298ddeaa8ae00df6c793f738ed26d7b9f0e5720d4d089edfa01",
+  "expected_bytes": 58388,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Slash_Hidden.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:28:27.709404+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Slash_Hidden.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "58388",
+      "ETag": "\"afbb3224e8dfb298ddeaa8ae00df6c793f738ed26d7b9f0e5720d4d089edfa01\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Slash_Hidden.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:28:28.174800+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Eye_Slash_Hidden.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "58388",
+      "ETag": "\"afbb3224e8dfb298ddeaa8ae00df6c793f738ed26d7b9f0e5720d4d089edfa01\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "afbb3224e8dfb298ddeaa8ae00df6c793f738ed26d7b9f0e5720d4d089edfa01",
+  "actual_bytes": 58388,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Eye_Slash_Hidden.tif",
+  "status": "acquired and byte verified"
+}

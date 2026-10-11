@@ -1,0 +1,323 @@
+{
+  "status": "primary source text and destination HEAD audit; archive acquisition and configure pending",
+  "utc": "2026-10-10T23:34:23.753943+00:00",
+  "consumer": {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\FindGoogleBenchmark.cmake",
+    "bytes": 4823,
+    "sha256": "332858760a3ebd76652f99f403e8ec232533bb1f2e1a70aabae8310bcce278ab",
+    "source_mode": "FetchContent_MakeAvailable runs upstream CMake; EXCLUDE_FROM_ALL and SYSTEM, not NO_ADD_SUBDIR",
+    "version": "v1.7.0",
+    "git_commit": "361e8d1cfe0c6c36d30b39f1b61302ece5507320",
+    "url": "https://github.com/google/benchmark/archive/refs/tags/v1.7.0.tar.gz",
+    "source_archive_expected_sha256": "3aff99169fa8bdee356eaa1f691e835a6e57b1efeadb8a0f9f228531158246ac",
+    "archive_sha256_verified": false,
+    "options": {
+      "BUILD_SHARED_LIBS": "OFF",
+      "BENCHMARK_DOWNLOAD_DEPENDENCIES": "OFF",
+      "BENCHMARK_ENABLE_ASSEMBLY_TESTS": "OFF",
+      "BENCHMARK_ENABLE_DOXYGEN": "OFF",
+      "BENCHMARK_ENABLE_GTEST_TESTS": "OFF",
+      "BENCHMARK_ENABLE_INSTALL": "OFF",
+      "BENCHMARK_ENABLE_LIBPFM": "OFF",
+      "BENCHMARK_ENABLE_TESTING": "OFF",
+      "BENCHMARK_ENABLE_WERROR": "OFF",
+      "BENCHMARK_FORCE_WERROR": "OFF",
+      "BENCHMARK_INSTALL_DOCS": "OFF",
+      "BENCHMARK_USE_BUNDLED_GTEST": "OFF"
+    },
+    "CMAKE_POLICY_VERSION_MINIMUM": "3.10",
+    "aliases": [
+      "benchmark::benchmark",
+      "benchmark::benchmark_main",
+      "3rdParty::GoogleBenchmark"
+    ],
+    "engine_interface_defines": [
+      "HAVE_BENCHMARK",
+      "BENCHMARK_STATIC_DEFINE"
+    ],
+    "targets": "static benchmark and benchmark_main; engine interface links benchmark::benchmark",
+    "windows_link": [
+      "Threads::Threads",
+      "shlwapi"
+    ],
+    "includes": [
+      "source/include",
+      "binary/include"
+    ],
+    "installed_engine_layout": [
+      "include/googlebenchmark/benchmark/*.h",
+      "include/googlebenchmark/LICENSE",
+      "lib/Windows/<configuration>/benchmark.lib"
+    ],
+    "required_by": [
+      "Code/Framework/AzTest/CMakeLists.txt:33",
+      "Code/Framework/AzCore/CMakeLists.txt:147"
+    ],
+    "reason_required": "AzTest target setup is explicitly independent of whether ordinary unit tests are enabled."
+  },
+  "official_tag": {
+    "url": "https://api.github.com/repos/google/benchmark/git/ref/tags/v1.7.0",
+    "commit_matches_consumer": true,
+    "tree_truncated": false,
+    "gitlinks": []
+  },
+  "destination": {
+    "direct_url": "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.7.0",
+    "original_url_head": 302,
+    "direct_head": 200,
+    "automatic_redirects": false,
+    "authorization": false,
+    "content_length": null,
+    "etag_is_not_the_expected_archive_sha256": true,
+    "archive_get_performed": false,
+    "next_acquisition": "Parent approval, repeat direct HEAD, one bounded direct GET, full SHA256 exact, tar paths/types/links/collisions audit before extraction. No alternate destination on failure."
+  },
+  "cmake_closure": {
+    "project": "benchmark 1.7.0 CXX; minimum 3.5.1, CMP0077 NEW honors importing normal option overrides",
+    "active_local_checks": "Compiler flag checks, regex and steady_clock try_run/try_compile; Threads and optional rt check. Native probes run locally at configure; audit did not execute them.",
+    "write_locations": "Active src/CMakeLists generates config/version/pkg-config/export files in PROJECT_BINARY_DIR. Feature checks build under CMAKE_BINARY_DIR. No active CMake source-file write found except Git index refresh risk below.",
+    "inactive_download": "cmake/GoogleTest.cmake.in ExternalProject googletest release-1.11.0 Git download is nested behind BENCHMARK_ENABLE_TESTING && BENCHMARK_ENABLE_GTEST_TESTS && BENCHMARK_USE_BUNDLED_GTEST, then ALLOW_DOWNLOADING_GOOGLETEST. Wrapper disables all four.",
+    "other_disabled_paths": "libpfm, Doxygen, installation and assembly scripts are disabled. Windows MSVC assembly default returns before searching FileCheck.",
+    "unconditional_git": {
+      "path": "cmake/GetGitVersion.cmake",
+      "calls": [
+        "find_package(Git)",
+        "git describe --tags --match v[0-9]*.[0-9]*.[0-9]* --abbrev=8",
+        "git update-index -q --refresh",
+        "git diff-index --name-only HEAD --"
+      ],
+      "working_directory": "PROJECT_SOURCE_DIR",
+      "risk": "Source under checkout/build inherits engine Git repository and can refresh its index. Outside-repository snapshot removes that ancestor but ambient GIT_DIR/GIT_WORK_TREE could still redirect Git.",
+      "proposed_minimum_guard": "Parent-owned wrapper block set(CMAKE_DISABLE_FIND_PACKAGE_Git ON) before FetchContent_MakeAvailable; upstream no-Git branch returns 0.0.0 and root project falls back to benchmark_VERSION 1.7.0. Preserve all options and library features. Not implemented or executed.",
+      "bounded_ancestor_inspection": [
+        {
+          "path": "F:/JericoEngine/Dependencies/.git",
+          "exists": false
+        },
+        {
+          "path": "F:/JericoEngine/.git",
+          "exists": false
+        },
+        {
+          "path": "F:/.git",
+          "exists": false
+        }
+      ],
+      "ambient_git_variable_presence": {
+        "GIT_DIR": false,
+        "GIT_WORK_TREE": false,
+        "GIT_INDEX_FILE": false
+      }
+    }
+  },
+  "source_override_proposal": "-DFETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=F:/JericoEngine/Dependencies/googlebenchmark-1.7.0",
+  "licenses": {
+    "declared": "Apache-2.0",
+    "full_license": "upstream/LICENSE",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "preserve": [
+      "LICENSE",
+      "AUTHORS",
+      "CONTRIBUTORS",
+      "all native source attribution notices"
+    ],
+    "notice_file_in_commit_tree": false,
+    "limitations": "No legal redistribution acceptance, no ABI/performance/product or engine build claim. Full acquired archive source headers still require payload audit."
+  },
+  "primary_text_inputs": [
+    {
+      "path": "AUTHORS",
+      "bytes": 2413,
+      "sha256": "1881e260e164306b0f699ab7a13ce40a85d5674455812baaa17c3e1a1b4fea69",
+      "git_blob_sha1": "7d689350b51c1a8bd438f5ae834e888dce829823"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 13747,
+      "sha256": "e56219c57b870d635ce0c4cf28ba0abafe1cf86f20a7cf133901013d64110277",
+      "git_blob_sha1": "2058effc703e6a86ec73839b679bdd7074c61f4f"
+    },
+    {
+      "path": "CONTRIBUTORS",
+      "bytes": 3613,
+      "sha256": "61655b414a97ead634c4ed668aef4750a3f098b36ca4f314c0b15bec59922b95",
+      "git_blob_sha1": "4208e0cf51a40c3e08359ca53eae2b9c31a54cb1"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "cmake/AddCXXCompilerFlag.cmake",
+      "bytes": 2969,
+      "sha256": "3520ef146e5a303ba362a56d118e9e99f20456dd78f24e46f6b66e068035c042",
+      "git_blob_sha1": "858589e9775c6669b260678afbbddfe12f048b38"
+    },
+    {
+      "path": "cmake/CXXFeatureCheck.cmake",
+      "bytes": 2293,
+      "sha256": "b58097438d782f72a7559be96b40aed0ee4c41a2a0f9d7a2710e89ab47cd4b76",
+      "git_blob_sha1": "aa67f58e6deb01ddbab978d4eb6d73d7b9409116"
+    },
+    {
+      "path": "cmake/GetGitVersion.cmake",
+      "bytes": 1865,
+      "sha256": "e39207da3604ebcbef75909f363e964732d89d494381ca6bf84e4260add97522",
+      "git_blob_sha1": "04a1f9b70d683f3fcbffdcd928234a9ae44a9f34"
+    },
+    {
+      "path": "cmake/GoogleTest.cmake",
+      "bytes": 2281,
+      "sha256": "6724530172aacdff89207a19780f3cdcabf7085afd4eaa2558e7798881178e38",
+      "git_blob_sha1": "44adbfbe4b4857eb31b13648de5e78f8e49a33e6"
+    },
+    {
+      "path": "cmake/Modules/FindLLVMAr.cmake",
+      "bytes": 379,
+      "sha256": "5c6899ac771a6991a30ee41c3dcb72c8bc5a68cb2d437e67e9a04494fd3faadf",
+      "git_blob_sha1": "23469813cfab5946c86002cef85caa10e7165380"
+    },
+    {
+      "path": "cmake/Modules/FindLLVMNm.cmake",
+      "bytes": 388,
+      "sha256": "88480c9fa481c7927cb794d1a60dc858a05b02dce38d6686664009112f8d42f6",
+      "git_blob_sha1": "e56430a04f6e84629bb3e06ae511e6f14829319a"
+    },
+    {
+      "path": "cmake/Modules/FindLLVMRanLib.cmake",
+      "bytes": 339,
+      "sha256": "462cddcca5b8d2523382f6a0ca55cba7d8818704dba13fcb6440b3defe981e7b",
+      "git_blob_sha1": "7b53e1a790590bdfc07adf41f0ae74b4a9b61ff0"
+    },
+    {
+      "path": "cmake/Modules/FindPFM.cmake",
+      "bytes": 1108,
+      "sha256": "4d688df1491c124f23c42b909c3505d83001a73e5b46b98a33da862e5f4fa39e",
+      "git_blob_sha1": "cf807a1ee9e96b3997ca8a96313a19548817ed4d"
+    },
+    {
+      "path": "cmake/llvm-toolchain.cmake",
+      "bytes": 287,
+      "sha256": "287b6d25bd8088b5a71710fa5f48136698ee83141a02678a0e79cda050d9405f",
+      "git_blob_sha1": "fc119e52fd26a59786b3480f3e6c64c72b78ad8d"
+    },
+    {
+      "path": "cmake/split_list.cmake",
+      "bytes": 93,
+      "sha256": "1b1f5a101b8d027d15da62b885e28ab346886267ae025e7d85ee7197d1e802ba",
+      "git_blob_sha1": "67aed3fdc8579b7d9a6f06a73fa9b6844976e691"
+    },
+    {
+      "path": "src/CMakeLists.txt",
+      "bytes": 5057,
+      "sha256": "52b866b268795a34bbf03d0b069728a63b4be2a7a75196798e36f04915b297ae",
+      "git_blob_sha1": "585cec6896a159406473c0f4de448f8e3156bb03"
+    },
+    {
+      "path": "test/AssemblyTests.cmake",
+      "bytes": 2308,
+      "sha256": "93c443f3ad9167b85c44705c917b53f5619c5fe9a4da592c18e238b54fed2804",
+      "git_blob_sha1": "c43c711faf87e9cdc4c8864a050433aece8cb936"
+    },
+    {
+      "path": "test/CMakeLists.txt",
+      "bytes": 11936,
+      "sha256": "152988b435e00b9f77830cd9f9e06c12efe356ed40281b929020bcbd1238a25e",
+      "git_blob_sha1": "a49ab195e744cd1daf43944b399d7a91f47c1c8d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Config.cmake.in",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/Config.cmake.in",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/Config.cmake.in",
+      "bytes": 144,
+      "git_blob_sha1": "2e15f0cf82dcad57c9fbb86716762b8b2920f506",
+      "sha256": "eb15c5ff53d6d63e116c1562733ef3a7506cbc48b5bfbcb99e69673512cad8ed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/GoogleTest.cmake.in",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/GoogleTest.cmake.in",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/GoogleTest.cmake.in",
+      "bytes": 2661,
+      "git_blob_sha1": "ce653ac375acaf01b812e81e15f4633378f69fbf",
+      "sha256": "9c364d24bb0ac96f89e18063cc913cd7db9da0ae610284c2549002fdd1de6c55"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/benchmark.pc.in",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/benchmark.pc.in",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/benchmark.pc.in",
+      "bytes": 305,
+      "git_blob_sha1": "34beb012eef1a9b650fd4ee08e6d251ace592042",
+      "sha256": "e44fcedd6a3767c066c70b2206f0a6c79f1200dc11b98d61c89d75684edb9a91"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/gnu_posix_regex.cpp",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/gnu_posix_regex.cpp",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/gnu_posix_regex.cpp",
+      "bytes": 267,
+      "git_blob_sha1": "b5b91cdab7c2a383afccc2b63ddc4bd98aa64bc4",
+      "sha256": "76a047e9a9c7091975278a208e6ca69bf4d9f9ba52aa325c4e022a666bd435e4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/posix_regex.cpp",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/posix_regex.cpp",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/posix_regex.cpp",
+      "bytes": 297,
+      "git_blob_sha1": "466dc62560a27d003b9dd083f0a356b44a4fb83f",
+      "sha256": "bc08e929ba007d49378ac06c88b8d7e20540e5ac3b7619cbb8c050e665f256e0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/std_regex.cpp",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/std_regex.cpp",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/std_regex.cpp",
+      "bytes": 259,
+      "git_blob_sha1": "696f2a26bce02fbcec39ee1786c151400290b31e",
+      "sha256": "0fa3924afd4a383fabbfe2948a4df87869998bb1b3e7d50c3210dfbda8c9757d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/steady_clock.cpp",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/steady_clock.cpp",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/steady_clock.cpp",
+      "bytes": 136,
+      "git_blob_sha1": "66d50d17e9e61f32cbe1df801906a5b8052ce279",
+      "sha256": "e07b58df90208bd4530468045b7ca4dce0cfdb9ae58f998acf15b3cc6ad977a6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/thread_safety_attributes.cpp",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google/benchmark/361e8d1cfe0c6c36d30b39f1b61302ece5507320/cmake/thread_safety_attributes.cpp",
+      "authorization": false,
+      "automatic_redirects": false,
+      "path": "cmake/thread_safety_attributes.cpp",
+      "bytes": 79,
+      "git_blob_sha1": "46161babdb10017d4b0bad8b1eb9bdaf40aad629",
+      "sha256": "6a20eedd42dd562cdcaf22d8155be99b8126576b6de0e2b777ef34ba94e70484"
+    }
+  ],
+  "limits": [
+    "No source/configuration/documentation/Git changes. No CMake/build/test/install. No GoogleBenchmark archive GET or extraction.",
+    "Text inspection establishes proposed paths/guards; only Luna can validate effective CMake and engine integration after parent freezes inputs."
+  ]
+}

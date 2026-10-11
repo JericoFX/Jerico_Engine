@@ -1,0 +1,5 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake:23 (message):
+  JE local mcpp: output already exists:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-rev2-validation/negative-cases/existing-output/package
+
+

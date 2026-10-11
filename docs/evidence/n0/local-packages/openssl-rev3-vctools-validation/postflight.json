@@ -1,0 +1,38 @@
+﻿{
+    "freeze_path":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-perl-tool-audit\\source-freeze-openssl-vctools-version.json",
+    "freeze_sha256":  "8DEF2ABEAE3AA8803CEB425F3D1BBE0F1643F1052EFC6D835E93ED4109C2C35C",
+    "freeze_expected_sha256":  "8DEF2ABEAE3AA8803CEB425F3D1BBE0F1643F1052EFC6D835E93ED4109C2C35C",
+    "freeze_file_count":  21,
+    "freeze_pass":  true,
+    "freeze_failures":  [
+
+                        ],
+    "driver_sha256":  "7C45E7993362430FD081924C934EE889AB15315683EDA61C68AB642585CE3CDE",
+    "openssl_archive_bytes":  9856386,
+    "openssl_archive_sha256":  "9384A2B0570DD80358841464677115DF785EDB941C71211F75076D72FE6B438F",
+    "openssl_archive_pass":  true,
+    "perl_archive_bytes":  304765269,
+    "perl_archive_sha256":  "6A081A811781C30ACA51DBC036AFD93092AF91E3297901F02C17043795A10690",
+    "perl_archive_pass":  true,
+    "tool_manifest_sha256":  "FB0CC5933D7F126362FD1F2CD6FEBFBA1D8899FE6DBD5288090637947476052A",
+    "tool_manifest_count":  20858,
+    "tool_file_count":  20858,
+    "tool_bytes_observed":  1034502031,
+    "tool_mismatch_count":  0,
+    "tool_pass":  true,
+    "tool_mismatches":  [
+
+                        ],
+    "source_root":  "F:\\JericoEngine\\Dependencies\\openssl-1.1.1o",
+    "source_manifest_count":  3093,
+    "source_file_count":  3093,
+    "source_bytes_observed":  41447592,
+    "source_reparse_count":  0,
+    "source_mismatch_count":  0,
+    "source_pass":  true,
+    "source_mismatches":  [
+
+                          ],
+    "output_path":  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openssl-build-rev3",
+    "output_exists":  true
+}

@@ -1,0 +1,8 @@
+{
+  "case": "BlobChanged initial fixture setup",
+  "status": "NOT_RUN",
+  "reason": "PowerShell could not open copied read-only sqlite3.h for fixture mutation; no CMake invocation occurred",
+  "exception": "UnauthorizedAccessException",
+  "original_fixture": "BlobChanged/fixtures/source/sqlite3.h",
+  "corrected_run": "BlobChanged-corrected"
+}

@@ -1,0 +1,12 @@
+{
+  "executable": "C:\\Users\\Jerico\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "argv": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\audit-extract-package.py"
+  ],
+  "argc": 1,
+  "native_exit_code": 0,
+  "elapsed_seconds": 0.286,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\package-audit.stdout.json",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\lz4-rev1-validation\\package-audit.stderr.log",
+  "script_sha256": "D50935F720B5539F4840781A064223A2DF4B2CDA4CCCFA1ABFEC7F70B0448689"
+}

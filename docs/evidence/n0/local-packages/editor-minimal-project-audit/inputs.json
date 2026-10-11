@@ -1,0 +1,1549 @@
+{
+  "schema": "JE_editor_minimal_inputs_v1",
+  "scope": "Static data inspection only; no source/config generation or builds/tests",
+  "proposed_seed_gems": [
+    "Atom",
+    "CameraFramework",
+    "ImGui",
+    "WhiteBox",
+    "EditorPythonBindings",
+    "PhysX5",
+    "QtForPython",
+    "PrimitiveAssets",
+    "PrefabBuilder"
+  ],
+  "gem_dependency_metadata_closure": {
+    "Atom": {
+      "path": "Gems\\Atom\\gem.json",
+      "bytes": 1475,
+      "sha256": "6772c73241ecab592215186e35167fdf95772cffc7f42be71f668b68c70c6da6",
+      "dependencies": [
+        "Atom_Feature_Common",
+        "AtomShader",
+        "Atom_Bootstrap",
+        "Atom_Component_DebugCamera",
+        "Atom_RHI",
+        "Atom_RPI",
+        "AtomToolsFramework",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "Atom_AtomBridge"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_Feature_Common": {
+      "path": "Gems\\Atom\\Feature\\Common\\gem.json",
+      "bytes": 607,
+      "sha256": "85bbe95cac2cb37d2fd734f1bcd27a2b8933245e3465afdbbf7ace35a0eea40d",
+      "dependencies": [
+        "Atom_RPI",
+        "ImGui",
+        "Atom_RHI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_RPI": {
+      "path": "Gems\\Atom\\RPI\\gem.json",
+      "bytes": 534,
+      "sha256": "8d78274b7c41e7bd1af98b332fe133e0ee9c9ef66945ba088bff699ecdea8c13",
+      "dependencies": [
+        "Atom_RHI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_RHI": {
+      "path": "Gems\\Atom\\RHI\\gem.json",
+      "bytes": 702,
+      "sha256": "ab17358a2c0b8b153d4f6fed6db92d41b94f5c348e204ed73dc1ee4948d7ffd6",
+      "dependencies": [
+        "Atom_RHI_DX12",
+        "Atom_RHI_Metal",
+        "Atom_RHI_Vulkan",
+        "Atom_RHI_Null"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_RHI_DX12": {
+      "path": "Gems\\Atom\\RHI\\DX12\\gem.json",
+      "bytes": 529,
+      "sha256": "331a87848bdaac6a5acd33a471df5289c0b48d145b0fd82efdc1c5b3b9fa1ef4",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_RHI_Metal": {
+      "path": "Gems\\Atom\\RHI\\Metal\\gem.json",
+      "bytes": 532,
+      "sha256": "ab5f07a9f999c9f0037d52f25b940ba10ddafc5f2defac2cf2756a2e5a4e2d1a",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_RHI_Vulkan": {
+      "path": "Gems\\Atom\\RHI\\Vulkan\\gem.json",
+      "bytes": 535,
+      "sha256": "766aec1a102b0aeffbd5220bc2189160a91ca52141c7576158a8abb562ac31bd",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_RHI_Null": {
+      "path": "Gems\\Atom\\RHI\\Null\\gem.json",
+      "bytes": 525,
+      "sha256": "959023e2d67b9219b46e500c0fda75c6b1a35b3418f9a9d7a75555253faf4d50",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "ImGui": {
+      "path": "Gems\\ImGui\\gem.json",
+      "bytes": 886,
+      "sha256": "9c12d69aa518fc172ff91e7dee09e6f9eafef5e4307597961a2b51835353908f",
+      "dependencies": [
+        "LmbrCentral"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "LmbrCentral": {
+      "path": "Gems\\LmbrCentral\\gem.json",
+      "bytes": 772,
+      "sha256": "f5319f6673ef36142cc478e688569c7a7bbae731a932714be4a171e52307d38f",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomShader": {
+      "path": "Gems\\Atom\\Asset\\Shader\\gem.json",
+      "bytes": 603,
+      "sha256": "18843504c9ae1cf037dfb5a4894d6959390e021c59a538a2906231a16d0deabc",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_Bootstrap": {
+      "path": "Gems\\Atom\\Bootstrap\\gem.json",
+      "bytes": 548,
+      "sha256": "d8dad11e92615489165e175c476a2be6704864eb8175cdb0774b0811f87186cf",
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_Component_DebugCamera": {
+      "path": "Gems\\Atom\\Component\\DebugCamera\\gem.json",
+      "bytes": 590,
+      "sha256": "0b159d7838dd40db9b92b690a21a26add6424b6f8dc256c3ed3696db021a229e",
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomToolsFramework": {
+      "path": "Gems\\Atom\\Tools\\AtomToolsFramework\\gem.json",
+      "bytes": 663,
+      "sha256": "05ad2ae13256f65845793779599bcab7925b8d0ba090b1436cf6416d731128a7",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Bootstrap",
+        "GraphCanvas",
+        "GraphModel"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "GraphCanvas": {
+      "path": "Gems\\GraphCanvas\\gem.json",
+      "bytes": 790,
+      "sha256": "b22c623929890b34396513163c74af254fe2c89df00f86f5d289f8adcd97936e",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "GraphModel": {
+      "path": "Gems\\GraphModel\\gem.json",
+      "bytes": 792,
+      "sha256": "30ab2d00358949f4392f9aaca5ae7477d617a43ae43ff58276d8260b11266ac0",
+      "dependencies": [
+        "GraphCanvas"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "MaterialCanvas": {
+      "path": "Gems\\Atom\\Tools\\MaterialCanvas\\gem.json",
+      "bytes": 782,
+      "sha256": "1efe6e5b17a9977a7bb50f823c435bfdd451348336149a7bc2e99fae856b0eb2",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "ImageProcessingAtom": {
+      "path": "Gems\\Atom\\Asset\\ImageProcessingAtom\\gem.json",
+      "bytes": 592,
+      "sha256": "b18163439d8c3f14d48e2802e66afe240e9fdf907d4c5bcee693d188b2b2c2d8",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_RHI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "CommonFeaturesAtom": {
+      "path": "Gems\\AtomLyIntegration\\CommonFeatures\\gem.json",
+      "bytes": 733,
+      "sha256": "797a3699b4a89c751c283ff5d86016f0d9f90627b489dd889a0fc29b810d4ba3",
+      "dependencies": [
+        "Atom_Feature_Common",
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
+        "Atom_Bootstrap",
+        "Atom_RPI",
+        "AtomToolsFramework"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "GradientSignal": {
+      "path": "Gems\\GradientSignal\\gem.json",
+      "bytes": 876,
+      "sha256": "278837509f02c22a5bbe5a87e8743fcc93f3e40b821824a8bf64f486ad99965d",
+      "dependencies": [
+        "SurfaceData",
+        "ImageProcessingAtom",
+        "LmbrCentral"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "SurfaceData": {
+      "path": "Gems\\SurfaceData\\gem.json",
+      "bytes": 872,
+      "sha256": "703e42e9c9541ed6e2cbf0cb320796fcec716da335b7655bb748d6a5ea10ae16",
+      "dependencies": [
+        "LmbrCentral",
+        "Atom_RPI",
+        "Atom_Feature_Common"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "MaterialEditor": {
+      "path": "Gems\\Atom\\Tools\\MaterialEditor\\gem.json",
+      "bytes": 782,
+      "sha256": "52942acaea5932e1ca5f358211c20e5a04abc9e402bd1fc6424d2a2bedc5705a",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "PassCanvas": {
+      "path": "Gems\\Atom\\Tools\\PassCanvas\\gem.json",
+      "bytes": 771,
+      "sha256": "59dededf44a68ad87a91f712d269ec8a812fafe87abc14f13d3ab21ef2196ed2",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "ShaderManagementConsole": {
+      "path": "Gems\\Atom\\Tools\\ShaderManagementConsole\\gem.json",
+      "bytes": 800,
+      "sha256": "5be5cb19b125627e7e1ddf81c57a8c6ac887420f2a4c1290cc2661f208411a1c",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "Atom_AtomBridge": {
+      "path": "Gems\\AtomLyIntegration\\AtomBridge\\gem.json",
+      "bytes": 1118,
+      "sha256": "d5cb1b5f120b65e744d81d832606b462ca95d9271cf8bb07681979910745aa0a",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Bootstrap",
+        "Atom_RHI",
+        "Atom_RHI_Null",
+        "Atom_Feature_Common",
+        "Atom_Component_DebugCamera",
+        "AtomImGuiTools",
+        "AtomRenderOptions",
+        "CommonFeaturesAtom",
+        "EMotionFX_Atom",
+        "ImguiAtom",
+        "AtomFont",
+        "AtomViewportDisplayInfo",
+        "AtomShader",
+        "ImageProcessingAtom",
+        "AtomToolsFramework",
+        "AtomViewportDisplayIcons",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomImGuiTools": {
+      "path": "Gems\\AtomLyIntegration\\AtomImGuiTools\\gem.json",
+      "bytes": 596,
+      "sha256": "59775bc73ce3fad47fca19329b4706a1d7d2e6fad45fbb702e2ceb5624b8e0ab",
+      "dependencies": [
+        "ImguiAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "ImguiAtom": {
+      "path": "Gems\\AtomLyIntegration\\ImguiAtom\\gem.json",
+      "bytes": 576,
+      "sha256": "fbaa87c24634929009fd45d72513e3dcf832bc3a7c29ade50bf6bb4f77851236",
+      "dependencies": [
+        "ImGui",
+        "Atom_Feature_Common"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomRenderOptions": {
+      "path": "Gems\\AtomLyIntegration\\AtomRenderOptions\\gem.json",
+      "bytes": 596,
+      "sha256": "83659eb8e008d621ccad694e92a4e44edd559e0c809f27acb14a28f0646b1c76",
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "EMotionFX_Atom": {
+      "path": "Gems\\AtomLyIntegration\\EMotionFXAtom\\gem.json",
+      "bytes": 658,
+      "sha256": "90e3fecf725cce00a8737c43f5ae68409c099ea3a057a3c2c74ff0ae33ebf80a",
+      "dependencies": [
+        "EMotionFX",
+        "Atom_Feature_Common",
+        "Atom_RPI",
+        "Atom_RHI",
+        "CommonFeaturesAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "EMotionFX": {
+      "path": "Gems\\EMotionFX\\gem.json",
+      "bytes": 944,
+      "sha256": "fb2445358e9fa21a3beaf5e2b4889e47849c55841962128044bbb0539388017e",
+      "dependencies": [
+        "Atom_RPI",
+        "LmbrCentral"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomFont": {
+      "path": "Gems\\AtomLyIntegration\\AtomFont\\gem.json",
+      "bytes": 567,
+      "sha256": "8194fde3ddbc5e865372b2228d6a7d59f73d8d654c29d85dc8463d4782fe20ee",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomViewportDisplayInfo": {
+      "path": "Gems\\AtomLyIntegration\\AtomViewportDisplayInfo\\gem.json",
+      "bytes": 613,
+      "sha256": "36c80ff6bfb180a6258dbb6cae0c206106bde8b7ddac43b5647891b8140289fa",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "AtomViewportDisplayIcons": {
+      "path": "Gems\\AtomLyIntegration\\AtomViewportDisplayIcons\\gem.json",
+      "bytes": 636,
+      "sha256": "b13b9240cac407aa8a68fe5cb97e167b1561a7eb60dd12cee3229fc6970db326",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI",
+        "Atom_Bootstrap"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "CameraFramework": {
+      "path": "Gems\\CameraFramework\\gem.json",
+      "bytes": 774,
+      "sha256": "0f76c22b5db00fd8aa741cf25e11e63c2a68b36585970f24fa6ebae2c5ce48cd",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "WhiteBox": {
+      "path": "Gems\\WhiteBox\\gem.json",
+      "bytes": 859,
+      "sha256": "ad195e6469ca341cd35e1386ebdb1ce1f50b17a0c3a4b193d7f292d78c3bb2b5",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Feature_Common",
+        "CommonFeaturesAtom",
+        "EditorPythonBindings"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "EditorPythonBindings": {
+      "path": "Gems\\EditorPythonBindings\\gem.json",
+      "bytes": 779,
+      "sha256": "ef34286c0637cad754f9deb749f4691e367c1a843814ff6336344cd8defa44b9",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "PhysX5": {
+      "path": "Gems\\PhysX\\Core\\PhysX5\\gem.json",
+      "bytes": 1051,
+      "sha256": "c360cd374465d188117d3559918581c26578f92dc5ffa7e205f4faaf95b893f0",
+      "dependencies": [
+        "PhysXCommon",
+        "LmbrCentral",
+        "CommonFeaturesAtom"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "PhysXCommon": {
+      "path": "Gems\\PhysX\\Common\\gem.json",
+      "bytes": 740,
+      "sha256": "e5db78feee8ba54784905d2a933cb8256feeb003b6e332b80e38928b8e13a1cc",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "QtForPython": {
+      "path": "Gems\\QtForPython\\gem.json",
+      "bytes": 799,
+      "sha256": "4f8228df00a26b82355f9112fdafd86e1d7980e59568ec5245228bc33e09e77d",
+      "dependencies": [
+        "EditorPythonBindings"
+      ],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "PrimitiveAssets": {
+      "path": "Gems\\PrimitiveAssets\\gem.json",
+      "bytes": 761,
+      "sha256": "c2a989f660374edc360fb16a10219a7fb113ff0cb12aa52f702b406bcc926c04",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    },
+    "PrefabBuilder": {
+      "path": "Gems\\Prefab\\PrefabBuilder\\gem.json",
+      "bytes": 795,
+      "sha256": "fbc9f6654f91520000e94803f0150a7a0efe7acee0ba1f331ab0c7dcd2a36c25",
+      "dependencies": [],
+      "license": "Apache-2.0 Or MIT"
+    }
+  },
+  "missing_gem_metadata": [],
+  "network_or_multiplayer_gems_in_closure": [],
+  "templates": {
+    "ScriptOnlyProject": {
+      "files": [
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\.command_settings",
+          "bytes": 124,
+          "sha256": "089813ae35120123ccafe6cec96a38a970c0b06489d4c17260bc1c635df4d5e4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\.gitignore",
+          "bytes": 85,
+          "sha256": "81964ac93af998a06cc91e93e8d13e385bbb840072da80fd452ed3380def6124",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\autoexec.cfg",
+          "bytes": 528,
+          "sha256": "b6e559b57281497154a94abd7c08b91e0b105260e85282b757cefc6708cb374f",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\CMakeLists.txt",
+          "bytes": 2170,
+          "sha256": "da0e479e95ccec693ded789fc211b280815de91a4dc8047d0c33b5b9b9c80c50",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\CMakePresets.json",
+          "bytes": 199,
+          "sha256": "447569bc8f8e5e23c3ee50e1a0a05dca4318e50734e83d082e5d99bccb56acdf",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\game.cfg",
+          "bytes": 154,
+          "sha256": "bdac320db8f83d02be55c58cb5b5585dfa8e01aefa7b03b2b46d753e2b199c19",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\package.bat",
+          "bytes": 1553,
+          "sha256": "5d5acf80373b96d22e0347166ae9738659cefe1437d82962f5298d2da250d422",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\package.sh",
+          "bytes": 2494,
+          "sha256": "a5f3fcb53428fb3fdd837c11c7e552791816a390f207b67d06ef83b83eb094c3",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\preview.png",
+          "bytes": 129,
+          "sha256": "a7ca76feaa42593300b13bc1a3601aabaf4133a6f229e3fac41ffa7097e1b381",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\project.json",
+          "bytes": 1197,
+          "sha256": "1c4c10ee71230d7023aba83b4a6bc9291776f6b597f3f370714471eff946a7f9",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Config\\shader_global_build_options.json",
+          "bytes": 285,
+          "sha256": "76a5f96f75cc8aca5201e98d5096c963630f831cbb704bbad2c9b99d73c7e6b4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Registry\\assetprocessor_settings.setreg",
+          "bytes": 890,
+          "sha256": "0a88d47a79f716d27c72fea79f0c112ae6c9cbf21918dbfbc523e597e0ca7224",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Registry\\assimp_settings.setreg",
+          "bytes": 154,
+          "sha256": "a7ff1ec3580392ab7bae8c41559bfdcad5388e2643b2f51cb8046c57d168ba63",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\GameSDK.ico",
+          "bytes": 131,
+          "sha256": "0212b0cf660b92dd738e094360e667d5ea0860d6ab1af058765b58be42bf828d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Splash.bmp",
+          "bytes": 132,
+          "sha256": "c961a156f1223f7a6b353d52ffdd3f57e79eabe11de69749e5c221c8e4ea7931",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\ShaderLib\\README.md",
+          "bytes": 202,
+          "sha256": "96498c747d5e46b338ff0c6c8ff9739e6f8b08d1647743382beb42210e6c5421",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\ShaderLib\\scenesrg.srgi",
+          "bytes": 793,
+          "sha256": "0bab50bed308f31f62a6d234b17bcd47676ef0ff2a4793933a79f507f35b5c89",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\ShaderLib\\viewsrg.srgi",
+          "bytes": 789,
+          "sha256": "33959b6021d4a0276d20f13ad4c36c3d6436b86de01b32700a63d43179b185c6",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\AssetBundling\\SeedLists\\Example.seed",
+          "bytes": 398,
+          "sha256": "dc49be140655b43d9dfc95c8955b71d98e65e98c035ef24dee9eaae55be3d6c0",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Levels\\start\\start.prefab",
+          "bytes": 24288,
+          "sha256": "bc0efabb1fe0a13f318c69a206aa9a77b6e1d5f7eece09a12037a97a8909cfac",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Android\\android_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Android\\android_project.json",
+          "bytes": 216,
+          "sha256": "1a5bb3c461cdf5a2773a5b49299ad1667f09b5731fbe9d5d1b09eaf9cf4d5521",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\iOS\\ios_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\iOS\\ios_project.json",
+          "bytes": 25,
+          "sha256": "dac5edee1d8b6969f67027589cbcaa6ba9cee0e872af0a3a478335142f605398",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Linux\\linux_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Linux\\linux_project.json",
+          "bytes": 25,
+          "sha256": "2e3d10444416ce0ceed1dcc316cb7888136436dfbaf27c858a9b7a9e0856499c",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Mac\\mac_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Mac\\mac_project.json",
+          "bytes": 23,
+          "sha256": "8ae0ed312e6bc08225c46287b350bb308ddfad00640f6911b59bae5e9d080d1e",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Windows\\windows_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Platform\\Windows\\windows_project.json",
+          "bytes": 27,
+          "sha256": "50d6239101a7eed1489ea3bd9eb23d28d728c3ba58920cd5c0a98fd168ab4376",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Info.plist",
+          "bytes": 1379,
+          "sha256": "b2f033f3e2c0dc9cc215b0ac521f402be55963810a07fa098e672158cea87d30",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Info.plist",
+          "bytes": 772,
+          "sha256": "68873648cedb9d4214f015a224bebdb08db9d7b55a30db52ca27f6b58482df1d",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\Contents.json",
+          "bytes": 69,
+          "sha256": "73d83da8f89d57a704aa6df8b476cd9c2a22221daf3b9e949cecdd61e77f7cdc",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\Contents.json",
+          "bytes": 2596,
+          "sha256": "e713b58c4296c42570a1bd4c6fcf43ef561eb83f8bd777e17a3ece7169118183",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadAppIcon152x152.png",
+          "bytes": 129,
+          "sha256": "24edff41ea0d82e166e69947362b8f8eed29a391c97d5f5ca8ab36948b00d24d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadAppIcon76x76.png",
+          "bytes": 129,
+          "sha256": "c0c6c60b9e024e47a61e65534b9ef8eaecee21827bfb14cca66b5f81abd4f9ee",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadProAppIcon167x167.png",
+          "bytes": 129,
+          "sha256": "f73c23af88c9b361b186488f632f983e229f4a134abfa4a0faac30425e791f25",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadSettingsIcon29x29.png",
+          "bytes": 129,
+          "sha256": "ece5fe7f3cbea705e819e86e245292efbd480a31c12ff9758e47442cd225f807",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadSettingsIcon58x58.png",
+          "bytes": 129,
+          "sha256": "5a65b0040a4d94a495eb14bb7c6a7af7f0f04aa0de216f6a1a3eab16b0edb1fe",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadSpotlightIcon40x40.png",
+          "bytes": 129,
+          "sha256": "6ac591b473511ebf5d430448f659574023a35ce0c3aa22e5ddc8ee53e7f23bf8",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPadSpotlightIcon80x80.png",
+          "bytes": 129,
+          "sha256": "29c8865fe158f3080a7644ea6b7eb89f5815a1fd4727a09a1da44e3b4e414f1e",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPhoneAppIcon120x120.png",
+          "bytes": 129,
+          "sha256": "c7ac29cb25fc54790cb630810d2dfe04479d308612cccf069af5b981b3434058",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPhoneAppIcon180x180.png",
+          "bytes": 129,
+          "sha256": "977c0387cddcfa9fcd5d023bd3848bea9391e9459e92a6e1df9985ba972bc516",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPhoneSettingsIcon58x58.png",
+          "bytes": 129,
+          "sha256": "32a5937fc35c04be040249472f1ba15820b30b67cf29cefb59279786aa023b2d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPhoneSettingsIcon87x87.png",
+          "bytes": 129,
+          "sha256": "ec8f9ba9ce9d2b8ec4d3e40e7243a538c99ea2a34e3b9a5f29825d9da0a55fb0",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPhoneSpotlightIcon120x120.png",
+          "bytes": 129,
+          "sha256": "e586fb2160919731ec3601f185a5855f2e72c21a9431b61dca5ba53db759ddcd",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\AppIcon.appiconset\\iPhoneSpotlightIcon80x80.png",
+          "bytes": 129,
+          "sha256": "3f6d0bbf1f7bcdc4bf6d6021ed957f8850ecc7e51ca2a8b42eebbaf22593e1b4",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\Contents.json",
+          "bytes": 4214,
+          "sha256": "1af7d26aa168b49fc75876615023697b3c460e588ec5bb295ed2d89a8c552471",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage1024x768.png",
+          "bytes": 130,
+          "sha256": "4c83c5464c6b592100c417910efcead935614959632cd9872d206cf077c865ec",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage1536x2048.png",
+          "bytes": 130,
+          "sha256": "4f3f8435c4ca71e0e53a4167f416bd4d4c3e31b8945d3c30727eb48dc544b8a2",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage2048x1536.png",
+          "bytes": 130,
+          "sha256": "d5a0327b2be284d4d6ccc34b23a1332c9974da1b06cb9552d7e56b19a44a1e89",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage768x1024.png",
+          "bytes": 130,
+          "sha256": "ca3adafb56f90f022be1a03700ee79e043230c2e400a22b73821dbf142f78189",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPhoneLaunchImage640x1136.png",
+          "bytes": 130,
+          "sha256": "f3b6fd3cedc339309272d4c8fd3fb2181403e220c49709febb07e9c7fb5259ed",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPhoneLaunchImage640x960.png",
+          "bytes": 130,
+          "sha256": "aa4977fd69ec9f2ec66e9a0f26d6a41573f75d681648c2ec3643ae004f11dd29",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\Contents.json",
+          "bytes": 67,
+          "sha256": "e3047866fde813ceb40daea67de82fb9b476e5531f397a3bb9a707d5cc782893",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\Contents.json",
+          "bytes": 1331,
+          "sha256": "90e10ef804d25faf48c91dc50bd84db4a90f5f12d3434ebd5e3e83b37a3e6719",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_128.png",
+          "bytes": 129,
+          "sha256": "748063c5e208d9ae698038c1cb54f396167073b538414d2744053a28f452d732",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_128_2x.png",
+          "bytes": 129,
+          "sha256": "ce1d408e621cec37772323c989bc34602d935149b76bbe0698d00aba8de90b22",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_16.png",
+          "bytes": 129,
+          "sha256": "2e80b464b4579897bfaa1a2595617927d9fdf85c122a6017fbd3e9b2a2e7d926",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_16_2x.png",
+          "bytes": 129,
+          "sha256": "b0bd75103cc995d51e9cd17ee4a30b95602f80ff8b1ad76769d6d3b6d4a4d876",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_256.png",
+          "bytes": 130,
+          "sha256": "6f92205efdd44a40b0bc1815fdd614ad6d5e5d3c8db143fbc71009f4044f21d7",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_256_2x.png",
+          "bytes": 130,
+          "sha256": "13fc41ce2e0a4f053cdaf0dc790707317c53d7be6584e89a347f34a18b76679d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_32.png",
+          "bytes": 129,
+          "sha256": "7e2c36e0aaaccef074a321a9a813096562000d137b055666a3b9924057dbf863",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_32_2x.png",
+          "bytes": 129,
+          "sha256": "ab805f504333980b8a385235d1aaa7c39f7eda55d4c23cf520a8aea4d5de7b29",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_512.png",
+          "bytes": 130,
+          "sha256": "8a7f8f9ddf0f2fd28dd2208bfc196606b66ba025024564041f7b17752a9e2f6c",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\ScriptOnlyProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\AppIcon.appiconset\\icon_512_2x.png",
+          "bytes": 130,
+          "sha256": "61370ab87a8635cad69228759f0a5afa86591e2fb41617741c6794be9552bf05",
+          "lfs_pointer": true
+        }
+      ],
+      "level": {
+        "path": "Templates\\ScriptOnlyProject\\Template\\Levels\\start\\start.prefab",
+        "bytes": 24288,
+        "sha256": "bc0efabb1fe0a13f318c69a206aa9a77b6e1d5f7eece09a12037a97a8909cfac"
+      },
+      "component_types": [
+        "AZ::Render::EditorDirectionalLightComponent",
+        "AZ::Render::EditorGridComponent",
+        "AZ::Render::EditorHDRiSkyboxComponent",
+        "AZ::Render::EditorImageBasedLightComponent",
+        "AZ::Render::EditorMeshComponent",
+        "EditorColliderComponent",
+        "EditorDisabledCompositionComponent",
+        "EditorEntityIconComponent",
+        "EditorEntitySortComponent",
+        "EditorInspectorComponent",
+        "EditorLockComponent",
+        "EditorMaterialComponent",
+        "EditorOnlyEntityComponent",
+        "EditorPendingCompositionComponent",
+        "EditorPrefabComponent",
+        "EditorStaticRigidBodyComponent",
+        "EditorVisibilityComponent",
+        "FlyCameraInputComponent",
+        "GenericComponentWrapper",
+        "LocalViewBookmarkComponent",
+        "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+        "{CA11DA46-29FF-4083-B5F6-E02C3A8C3A3D} EditorCameraComponent"
+      ],
+      "asset_strings": [
+        "lightingpresets/highcontrast/goegap_4k_iblglobalcm_ibldiffuse.exr.streamingimage",
+        "lightingpresets/highcontrast/goegap_4k_iblglobalcm_iblspecular.exr.streamingimage",
+        "lightingpresets/highcontrast/goegap_4k_skyboxcm.exr.streamingimage",
+        "objects/groundplane/groundplane_512x512m.azmodel",
+        "objects/shaderball/shaderball_default_1m.azmodel"
+      ]
+    },
+    "MinimalProject": {
+      "files": [
+        {
+          "path": "Templates\\MinimalProject\\Template\\.command_settings",
+          "bytes": 183,
+          "sha256": "e598b0bdfdb5fe77f3bca4d828d35352090545bf19d554fd00e7fb8bfb6247be",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\.gitignore",
+          "bytes": 69,
+          "sha256": "588e60bde19bc5e036b52daf09faeab21ab250760c789887f44756ad673d7ad1",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\autoexec.cfg",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\CMakeLists.txt",
+          "bytes": 2170,
+          "sha256": "da0e479e95ccec693ded789fc211b280815de91a4dc8047d0c33b5b9b9c80c50",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\CMakePresets.json",
+          "bytes": 199,
+          "sha256": "447569bc8f8e5e23c3ee50e1a0a05dca4318e50734e83d082e5d99bccb56acdf",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\export.bat",
+          "bytes": 3294,
+          "sha256": "8b08eea65d066feb21464b5e96595218b393e9b261775c13cdc39dd8ce051ae1",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\export.sh",
+          "bytes": 3718,
+          "sha256": "f15aff8c82f9a7ea255ab7ec2a8accee5767e06eeff86922f6d2a34e90fc292a",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\game.cfg",
+          "bytes": 154,
+          "sha256": "bdac320db8f83d02be55c58cb5b5585dfa8e01aefa7b03b2b46d753e2b199c19",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\preview.png",
+          "bytes": 129,
+          "sha256": "a7ca76feaa42593300b13bc1a3601aabaf4133a6f229e3fac41ffa7097e1b381",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\project.json",
+          "bytes": 742,
+          "sha256": "108c4c0ff8585a321f78a4ca9ed21390015500feca8410ac47484fe32527376e",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Config\\shader_global_build_options.json",
+          "bytes": 285,
+          "sha256": "76a5f96f75cc8aca5201e98d5096c963630f831cbb704bbad2c9b99d73c7e6b4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\${NameLower}_files.cmake",
+          "bytes": 414,
+          "sha256": "c9d3451d59e23cdcfba750e223520842954b985bdd3c7e023b27e9989f56122a",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\${NameLower}_shared_files.cmake",
+          "bytes": 296,
+          "sha256": "a6d955aa9855957816dbcff390f95c2c412de2130316b4b10729fa66a1c1cce8",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\CMakeLists.txt",
+          "bytes": 4235,
+          "sha256": "138baac6b06c8dbb21df03cbf63b1fb0c84fbbaa947394f802e79b852b42fbce",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\gem.json",
+          "bytes": 897,
+          "sha256": "8471417f45507efb22353f3a09b57903e7612d72ba62d367b5fb7d6fe329c793",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Registry\\assetprocessor_settings.setreg",
+          "bytes": 890,
+          "sha256": "0a88d47a79f716d27c72fea79f0c112ae6c9cbf21918dbfbc523e597e0ca7224",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Registry\\assimp_settings.setreg",
+          "bytes": 154,
+          "sha256": "a7ff1ec3580392ab7bae8c41559bfdcad5388e2643b2f51cb8046c57d168ba63",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Registry\\load_level.setreg",
+          "bytes": 153,
+          "sha256": "597dbc648886f333cb1e1a7ed6c4fc9ef12b8b7e52fc59e8995aef3a0bd08ef1",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\GameSDK.ico",
+          "bytes": 131,
+          "sha256": "0212b0cf660b92dd738e094360e667d5ea0860d6ab1af058765b58be42bf828d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Splash.bmp",
+          "bytes": 132,
+          "sha256": "c961a156f1223f7a6b353d52ffdd3f57e79eabe11de69749e5c221c8e4ea7931",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\ShaderLib\\README.md",
+          "bytes": 202,
+          "sha256": "96498c747d5e46b338ff0c6c8ff9739e6f8b08d1647743382beb42210e6c5421",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\ShaderLib\\scenesrg.srgi",
+          "bytes": 795,
+          "sha256": "cdb60c3fd28cf204bab549ba40d323e1696108b0620b73efbd5fe6c3d0346be5",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\ShaderLib\\viewsrg.srgi",
+          "bytes": 789,
+          "sha256": "33959b6021d4a0276d20f13ad4c36c3d6436b86de01b32700a63d43179b185c6",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\AssetBundling\\SeedLists\\DefaultLevel.seed",
+          "bytes": 619,
+          "sha256": "111e77318ef28e787da90369cd8c063e6c6bd308769db961092de6a429201a0b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Registry\\assetprocessor_settings.setreg",
+          "bytes": 509,
+          "sha256": "914c4aa68c3d35273665b092d391c75778a987f73538753536d26397e0c9f410",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Source\\${Name}Module.cpp",
+          "bytes": 1648,
+          "sha256": "7f01b59b88f725b65e28311143a52806e7592645937be9133aaaeeba46faed55",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Source\\${Name}SystemComponent.cpp",
+          "bytes": 2487,
+          "sha256": "c9e99f38e3a8c305d650d0ba9775d6ab4576a8d7767878ed3b73580735866e3d",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Source\\${Name}SystemComponent.h",
+          "bytes": 1763,
+          "sha256": "90e3ae2657a99cbd727b08ab3a446478535e318f4660b306ee8e5e5f590110bd",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Include\\${Name}\\${Name}Bus.h",
+          "bytes": 1412,
+          "sha256": "207442bbb2a03a3b05d68ecdc850f8d6721f417ccc22b8cba3e5f37afe644222",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Include\\${Name}\\${Name}TypeIds.h",
+          "bytes": 732,
+          "sha256": "217c0db91bac9fda1f52aab71c4f29d461b42a8eb71c38ff982be4f48fe33f8b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Android\\${NameLower}_android_files.cmake",
+          "bytes": 289,
+          "sha256": "3b0092e5c6d92b50f0fc7dce2eb5c833f7be419c74135ed6c620841a53844665",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Android\\${NameLower}_shared_android_files.cmake",
+          "bytes": 266,
+          "sha256": "e012965fa356508e6063fab819a65488d1dff349b80be6dadedb738269341c06",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Android\\PAL_android.cmake",
+          "bytes": 296,
+          "sha256": "3bafe8b187a50648dde781707afd7a860955639357f99bb4efe86736042f90a4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\iOS\\${NameLower}_ios_files.cmake",
+          "bytes": 333,
+          "sha256": "e21af183d2da8024a659b67c173ec276ff124df6cdc5e29429b555f2a6443f3f",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\iOS\\${NameLower}_shared_ios_files.cmake",
+          "bytes": 266,
+          "sha256": "e012965fa356508e6063fab819a65488d1dff349b80be6dadedb738269341c06",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\iOS\\PAL_ios.cmake",
+          "bytes": 296,
+          "sha256": "3bafe8b187a50648dde781707afd7a860955639357f99bb4efe86736042f90a4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Linux\\${NameLower}_linux_files.cmake",
+          "bytes": 287,
+          "sha256": "3371dc7c4453f72bcbb62d572467c060e5fb224483521cf5544f5c2ca262ec3c",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Linux\\${NameLower}_shared_linux_files.cmake",
+          "bytes": 266,
+          "sha256": "e012965fa356508e6063fab819a65488d1dff349b80be6dadedb738269341c06",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Linux\\PAL_linux.cmake",
+          "bytes": 296,
+          "sha256": "3bafe8b187a50648dde781707afd7a860955639357f99bb4efe86736042f90a4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Mac\\${NameLower}_mac_files.cmake",
+          "bytes": 333,
+          "sha256": "61434ae3d6625acb021383853d9241fefec31f010f34dc8985f0660650ede0fc",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Mac\\${NameLower}_shared_mac_files.cmake",
+          "bytes": 314,
+          "sha256": "0c282e7864c0a510b1991347430f27cd2f37ed60519f718681c42ec5683006eb",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Mac\\PAL_mac.cmake",
+          "bytes": 296,
+          "sha256": "3bafe8b187a50648dde781707afd7a860955639357f99bb4efe86736042f90a4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Windows\\${NameLower}_shared_windows_files.cmake",
+          "bytes": 266,
+          "sha256": "e012965fa356508e6063fab819a65488d1dff349b80be6dadedb738269341c06",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Windows\\${NameLower}_windows_files.cmake",
+          "bytes": 289,
+          "sha256": "02afeca8b67494bf56df0efd0bd24545d4dacba88343e2d07cb8ea646e065bfc",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Gem\\Platform\\Windows\\PAL_windows.cmake",
+          "bytes": 296,
+          "sha256": "3bafe8b187a50648dde781707afd7a860955639357f99bb4efe86736042f90a4",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Levels\\DefaultLevel\\DefaultLevel.prefab",
+          "bytes": 24289,
+          "sha256": "1ec637569820a20d4b40c7591a32bf73dd2c7fe323834eb4cd00cbbdaacb1f6d",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Android\\android_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Android\\android_project.json",
+          "bytes": 216,
+          "sha256": "1a5bb3c461cdf5a2773a5b49299ad1667f09b5731fbe9d5d1b09eaf9cf4d5521",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\iOS\\ios_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\iOS\\ios_project.json",
+          "bytes": 25,
+          "sha256": "dac5edee1d8b6969f67027589cbcaa6ba9cee0e872af0a3a478335142f605398",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Linux\\linux_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Linux\\linux_project.json",
+          "bytes": 25,
+          "sha256": "2e3d10444416ce0ceed1dcc316cb7888136436dfbaf27c858a9b7a9e0856499c",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Mac\\mac_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Mac\\mac_project.json",
+          "bytes": 23,
+          "sha256": "8ae0ed312e6bc08225c46287b350bb308ddfad00640f6911b59bae5e9d080d1e",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Windows\\windows_project.cmake",
+          "bytes": 252,
+          "sha256": "fd14f0d22d138418901fb6222db4478cadfeb04ca7cc94db47ddfd467401f76b",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Platform\\Windows\\windows_project.json",
+          "bytes": 27,
+          "sha256": "50d6239101a7eed1489ea3bd9eb23d28d728c3ba58920cd5c0a98fd168ab4376",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Info.plist",
+          "bytes": 1379,
+          "sha256": "b2f033f3e2c0dc9cc215b0ac521f402be55963810a07fa098e672158cea87d30",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Info.plist",
+          "bytes": 772,
+          "sha256": "68873648cedb9d4214f015a224bebdb08db9d7b55a30db52ca27f6b58482df1d",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\Contents.json",
+          "bytes": 69,
+          "sha256": "73d83da8f89d57a704aa6df8b476cd9c2a22221daf3b9e949cecdd61e77f7cdc",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\Contents.json",
+          "bytes": 2596,
+          "sha256": "e713b58c4296c42570a1bd4c6fcf43ef561eb83f8bd777e17a3ece7169118183",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadAppIcon152x152.png",
+          "bytes": 129,
+          "sha256": "24edff41ea0d82e166e69947362b8f8eed29a391c97d5f5ca8ab36948b00d24d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadAppIcon76x76.png",
+          "bytes": 129,
+          "sha256": "c0c6c60b9e024e47a61e65534b9ef8eaecee21827bfb14cca66b5f81abd4f9ee",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadProAppIcon167x167.png",
+          "bytes": 129,
+          "sha256": "f73c23af88c9b361b186488f632f983e229f4a134abfa4a0faac30425e791f25",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadSettingsIcon29x29.png",
+          "bytes": 129,
+          "sha256": "ece5fe7f3cbea705e819e86e245292efbd480a31c12ff9758e47442cd225f807",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadSettingsIcon58x58.png",
+          "bytes": 129,
+          "sha256": "5a65b0040a4d94a495eb14bb7c6a7af7f0f04aa0de216f6a1a3eab16b0edb1fe",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadSpotlightIcon40x40.png",
+          "bytes": 129,
+          "sha256": "6ac591b473511ebf5d430448f659574023a35ce0c3aa22e5ddc8ee53e7f23bf8",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPadSpotlightIcon80x80.png",
+          "bytes": 129,
+          "sha256": "29c8865fe158f3080a7644ea6b7eb89f5815a1fd4727a09a1da44e3b4e414f1e",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPhoneAppIcon120x120.png",
+          "bytes": 129,
+          "sha256": "c7ac29cb25fc54790cb630810d2dfe04479d308612cccf069af5b981b3434058",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPhoneAppIcon180x180.png",
+          "bytes": 129,
+          "sha256": "977c0387cddcfa9fcd5d023bd3848bea9391e9459e92a6e1df9985ba972bc516",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPhoneSettingsIcon58x58.png",
+          "bytes": 129,
+          "sha256": "32a5937fc35c04be040249472f1ba15820b30b67cf29cefb59279786aa023b2d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPhoneSettingsIcon87x87.png",
+          "bytes": 129,
+          "sha256": "ec8f9ba9ce9d2b8ec4d3e40e7243a538c99ea2a34e3b9a5f29825d9da0a55fb0",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPhoneSpotlightIcon120x120.png",
+          "bytes": 129,
+          "sha256": "e586fb2160919731ec3601f185a5855f2e72c21a9431b61dca5ba53db759ddcd",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\${Name}AppIcon.appiconset\\iPhoneSpotlightIcon80x80.png",
+          "bytes": 129,
+          "sha256": "3f6d0bbf1f7bcdc4bf6d6021ed957f8850ecc7e51ca2a8b42eebbaf22593e1b4",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\Contents.json",
+          "bytes": 4214,
+          "sha256": "1af7d26aa168b49fc75876615023697b3c460e588ec5bb295ed2d89a8c552471",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage1024x768.png",
+          "bytes": 130,
+          "sha256": "4c83c5464c6b592100c417910efcead935614959632cd9872d206cf077c865ec",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage1536x2048.png",
+          "bytes": 130,
+          "sha256": "4f3f8435c4ca71e0e53a4167f416bd4d4c3e31b8945d3c30727eb48dc544b8a2",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage2048x1536.png",
+          "bytes": 130,
+          "sha256": "d5a0327b2be284d4d6ccc34b23a1332c9974da1b06cb9552d7e56b19a44a1e89",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPadLaunchImage768x1024.png",
+          "bytes": 130,
+          "sha256": "ca3adafb56f90f022be1a03700ee79e043230c2e400a22b73821dbf142f78189",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPhoneLaunchImage640x1136.png",
+          "bytes": 130,
+          "sha256": "f3b6fd3cedc339309272d4c8fd3fb2181403e220c49709febb07e9c7fb5259ed",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\iOS\\Images.xcassets\\LaunchImage.launchimage\\iPhoneLaunchImage640x960.png",
+          "bytes": 130,
+          "sha256": "aa4977fd69ec9f2ec66e9a0f26d6a41573f75d681648c2ec3643ae004f11dd29",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\Contents.json",
+          "bytes": 67,
+          "sha256": "e3047866fde813ceb40daea67de82fb9b476e5531f397a3bb9a707d5cc782893",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\Contents.json",
+          "bytes": 1331,
+          "sha256": "90e10ef804d25faf48c91dc50bd84db4a90f5f12d3434ebd5e3e83b37a3e6719",
+          "lfs_pointer": false
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_128.png",
+          "bytes": 129,
+          "sha256": "748063c5e208d9ae698038c1cb54f396167073b538414d2744053a28f452d732",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_128_2x.png",
+          "bytes": 129,
+          "sha256": "ce1d408e621cec37772323c989bc34602d935149b76bbe0698d00aba8de90b22",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_16.png",
+          "bytes": 129,
+          "sha256": "2e80b464b4579897bfaa1a2595617927d9fdf85c122a6017fbd3e9b2a2e7d926",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_16_2x.png",
+          "bytes": 129,
+          "sha256": "b0bd75103cc995d51e9cd17ee4a30b95602f80ff8b1ad76769d6d3b6d4a4d876",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_256.png",
+          "bytes": 130,
+          "sha256": "6f92205efdd44a40b0bc1815fdd614ad6d5e5d3c8db143fbc71009f4044f21d7",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_256_2x.png",
+          "bytes": 130,
+          "sha256": "13fc41ce2e0a4f053cdaf0dc790707317c53d7be6584e89a347f34a18b76679d",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_32.png",
+          "bytes": 129,
+          "sha256": "7e2c36e0aaaccef074a321a9a813096562000d137b055666a3b9924057dbf863",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_32_2x.png",
+          "bytes": 129,
+          "sha256": "ab805f504333980b8a385235d1aaa7c39f7eda55d4c23cf520a8aea4d5de7b29",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_512.png",
+          "bytes": 130,
+          "sha256": "8a7f8f9ddf0f2fd28dd2208bfc196606b66ba025024564041f7b17752a9e2f6c",
+          "lfs_pointer": true
+        },
+        {
+          "path": "Templates\\MinimalProject\\Template\\Resources\\Platform\\Mac\\Images.xcassets\\${Name}AppIcon.appiconset\\icon_512_2x.png",
+          "bytes": 130,
+          "sha256": "61370ab87a8635cad69228759f0a5afa86591e2fb41617741c6794be9552bf05",
+          "lfs_pointer": true
+        }
+      ],
+      "level": {
+        "path": "Templates\\MinimalProject\\Template\\Levels\\DefaultLevel\\DefaultLevel.prefab",
+        "bytes": 24289,
+        "sha256": "1ec637569820a20d4b40c7591a32bf73dd2c7fe323834eb4cd00cbbdaacb1f6d"
+      },
+      "component_types": [
+        "AZ::Render::EditorDirectionalLightComponent",
+        "AZ::Render::EditorGridComponent",
+        "AZ::Render::EditorHDRiSkyboxComponent",
+        "AZ::Render::EditorImageBasedLightComponent",
+        "AZ::Render::EditorMeshComponent",
+        "EditorColliderComponent",
+        "EditorDisabledCompositionComponent",
+        "EditorEntityIconComponent",
+        "EditorEntitySortComponent",
+        "EditorInspectorComponent",
+        "EditorLockComponent",
+        "EditorMaterialComponent",
+        "EditorOnlyEntityComponent",
+        "EditorPendingCompositionComponent",
+        "EditorPrefabComponent",
+        "EditorStaticRigidBodyComponent",
+        "EditorVisibilityComponent",
+        "FlyCameraInputComponent",
+        "GenericComponentWrapper",
+        "LocalViewBookmarkComponent",
+        "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+        "{CA11DA46-29FF-4083-B5F6-E02C3A8C3A3D} EditorCameraComponent"
+      ],
+      "asset_strings": [
+        "lightingpresets/highcontrast/goegap_4k_iblglobalcm_ibldiffuse.exr.streamingimage",
+        "lightingpresets/highcontrast/goegap_4k_iblglobalcm_iblspecular.exr.streamingimage",
+        "lightingpresets/highcontrast/goegap_4k_skyboxcm.exr.streamingimage",
+        "objects/groundplane/groundplane_512x512m.azmodel",
+        "objects/shaderball/shaderball_default_1m.azmodel"
+      ]
+    }
+  },
+  "focal_assets": [
+    {
+      "path": "Gems\\WhiteBox\\Assets\\materials\\WhiteBoxDefault.material",
+      "bytes": 243,
+      "sha256": "2bb09139205a12f2b1cd99cdcadec728d0599bc5d50ffa06cf2db914bab3652b",
+      "lfs_pointer": false
+    },
+    {
+      "path": "Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_diff.tif",
+      "bytes": 131,
+      "sha256": "37411c6c9fda664f5c03af20d88625159759a4922b13b06303060f55aae6d68f",
+      "lfs_pointer": true
+    },
+    {
+      "path": "Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_spec.tif",
+      "bytes": 131,
+      "sha256": "9e2c71147b44a94b53bfed80ce57eae4804177c3ef6ebb5be275ba771fe7f2ae",
+      "lfs_pointer": true
+    },
+    {
+      "path": "Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_ddn.tif",
+      "bytes": 132,
+      "sha256": "d6fcd8b8e99347e508c1396366c0bd8dbebddfd3a6564e9ee1d17d420e2fef05",
+      "lfs_pointer": true
+    },
+    {
+      "path": "Gems\\Atom\\Feature\\Common\\Assets\\Materials\\Types\\StandardPBR.materialtype",
+      "bytes": 2586,
+      "sha256": "4f2f1cba8f28e6335959ceaf310e0622d65e4533f68562c5600b7779995cf7f1",
+      "lfs_pointer": false
+    },
+    {
+      "path": "Gems\\Atom\\Feature\\Common\\Assets\\Materials\\Presets\\PBR\\default_grid.material",
+      "bytes": 373,
+      "sha256": "875ca04257574b310fe657dd2bcad9760a514df19ee29416b0cd3a53a5cbe956",
+      "lfs_pointer": false
+    },
+    {
+      "path": "Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_basecolor.tif",
+      "bytes": 131,
+      "sha256": "05dfde566dc8d6779e1ef15e843545949a0f8f1d87d2a0bf86c90d218d915f53",
+      "lfs_pointer": true
+    },
+    {
+      "path": "Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_normal.tif",
+      "bytes": 131,
+      "sha256": "50f03a45ad0687d356a762ca3c8a2d0960fdf5853920ad8eb3aad0003ea239e7",
+      "lfs_pointer": true
+    },
+    {
+      "path": "Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_roughness.tif",
+      "bytes": 131,
+      "sha256": "9428ba47dd6c00f0cc40d8a75a36cfa83f771336817821c19567aca04814e37c",
+      "lfs_pointer": true
+    },
+    {
+      "path": "Gems\\Atom\\Feature\\Common\\Assets\\Passes\\MainPipeline.pass",
+      "bytes": 19785,
+      "sha256": "1900c0c7b7b6103ec5eb9ec0bf5d5e228efbbf86938f07e033cf9e8e2d0a3146",
+      "lfs_pointer": false
+    }
+  ]
+}

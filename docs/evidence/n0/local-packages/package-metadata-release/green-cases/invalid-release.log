@@ -1,0 +1,6 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake:34 (message):
+  JE local package: invalid source release identifier
+
+

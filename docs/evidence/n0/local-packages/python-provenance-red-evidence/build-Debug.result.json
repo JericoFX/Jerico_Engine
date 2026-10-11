@@ -1,0 +1,18 @@
+{
+  "name": "build-Debug",
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "executable": "cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-red",
+    "--target",
+    "JEPythonEmbed",
+    "--config",
+    "Debug"
+  ],
+  "argv_count": 6,
+  "started": "2026-10-10T19:37:14.9297462-03:00",
+  "exitcode": 0,
+  "elapsed_seconds": 3.074078,
+  "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-red-evidence\\build-Debug.log"
+}

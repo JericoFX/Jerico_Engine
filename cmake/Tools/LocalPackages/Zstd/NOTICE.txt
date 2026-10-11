@@ -1,0 +1,32 @@
+JE local zstd 1.3.5 Windows package
+
+Source: Facebook Zstandard tag v1.3.5, commit
+90ae50224d15e8dbcb9fa26b9be096366733db8e.
+Archive SHA256: dfb594dc41e79c1304ef2c9232746c048e4837578c1ca88cf0e9b83c8cc36457.
+URL: https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e
+
+The BSD-3-Clause option in upstream LICENSE is selected for the Zstandard
+software covered by that notice. The alternate GPLv2 COPYING is preserved.
+The Mac-only o3de/3p-package-source recipe's 0BSD metadata is incorrect for
+this source and is not used. This package has its own identity and measured
+archive hash; it does not claim the historical AWS package hash or ABI.
+
+Copyright (c) 2016-present, Facebook, Inc., Yann Collet and contributors.
+Copyright (c) 2016 Tino Reichardt: threading implementation.
+BSD-2-Clause notices for Yann Collet's entropy and xxHash implementations
+and MIT notices for Yuta Mori's divsufsort implementation remain applicable.
+The dictionary builder also retains its paper citation and attribution to
+Giuseppe Ottaviano. Complete library .c/.h files are supplied under
+LICENSES/Zstd/library to preserve all original notices, including embedded
+legacy decoder notices. LICENSES/Zstd contains the original LICENSE/COPYING.
+LICENSES/O3DE preserves the licences of this package's JE/O3DE glue.
+
+Only the library is built. Legacy level4 and multithread support are retained.
+The new Windows artifact uses x64 v143, Release and the DLL CRT (/MD).
+Debug CRT compatibility, compatibility with old O3DE binary packages, and
+engine compression/Editor/runtime acceptance are not established here.
+
+Security debt: this explicitly pinned historical source has not been upgraded
+or certified against present vulnerabilities. Functional package checks do
+not establish suitability for untrusted compressed input. Any upgrade needs
+a separately audited source, format/consumer compatibility review and tests.

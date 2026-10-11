@@ -1,0 +1,4 @@
+[
+  "-c",
+  "import editor_python_test_tools; print(getattr(editor_python_test_tools, '__file__', None))"
+]

@@ -1,0 +1,291 @@
+{
+  "requirement_pins": [
+    {
+      "name": "certifi",
+      "expected": "2024.07.04",
+      "actual": "2024.7.4",
+      "match": false
+    },
+    {
+      "name": "Jinja2",
+      "expected": "3.1.6",
+      "actual": "3.1.6",
+      "match": true
+    },
+    {
+      "name": "pillow",
+      "expected": "10.3.0",
+      "actual": "10.3.0",
+      "match": true
+    },
+    {
+      "name": "attrs",
+      "expected": "20.1.0",
+      "actual": "20.1.0",
+      "match": true
+    },
+    {
+      "name": "gitdb",
+      "expected": "4.0.10",
+      "actual": "4.0.10",
+      "match": true
+    },
+    {
+      "name": "puremagic",
+      "expected": "1.28",
+      "actual": "1.28",
+      "match": true
+    },
+    {
+      "name": "python-dateutil",
+      "expected": "2.8.1",
+      "actual": "2.8.1",
+      "match": true
+    },
+    {
+      "name": "six",
+      "expected": "1.13.0",
+      "actual": "1.13.0",
+      "match": true
+    },
+    {
+      "name": "pytest-timeout",
+      "expected": "2.1.0",
+      "actual": "2.1.0",
+      "match": true
+    },
+    {
+      "name": "wheel",
+      "expected": "0.38.4",
+      "actual": "0.38.4",
+      "match": true
+    },
+    {
+      "name": "pyscreenshot",
+      "expected": "0.6",
+      "actual": "0.6",
+      "match": true
+    },
+    {
+      "name": "toml",
+      "expected": "0.10.2",
+      "actual": "0.10.2",
+      "match": true
+    },
+    {
+      "name": "gitpython",
+      "expected": "3.1.44",
+      "actual": "3.1.44",
+      "match": true
+    },
+    {
+      "name": "tomli",
+      "expected": "2.0.1",
+      "actual": "2.0.1",
+      "match": true
+    },
+    {
+      "name": "packaging",
+      "expected": "20.4",
+      "actual": "20.4",
+      "match": true
+    },
+    {
+      "name": "importlib-metadata",
+      "expected": "1.6.1",
+      "actual": "1.6.1",
+      "match": true
+    },
+    {
+      "name": "progressbar2",
+      "expected": "3.53.1",
+      "actual": "3.53.1",
+      "match": true
+    },
+    {
+      "name": "smmap",
+      "expected": "5.0.0",
+      "actual": "5.0.0",
+      "match": true
+    },
+    {
+      "name": "imageio",
+      "expected": "2.8.0",
+      "actual": "2.8.0",
+      "match": true
+    },
+    {
+      "name": "patch-ng",
+      "expected": "1.19.1",
+      "actual": "1.19.1",
+      "match": true
+    },
+    {
+      "name": "pluggy",
+      "expected": "1.6.0",
+      "actual": "1.6.0",
+      "match": true
+    },
+    {
+      "name": "urllib3",
+      "expected": "1.26.19",
+      "actual": "1.26.19",
+      "match": true
+    },
+    {
+      "name": "python-utils",
+      "expected": "2.5.6",
+      "actual": "2.5.6",
+      "match": true
+    },
+    {
+      "name": "MarkupSafe",
+      "expected": "3.0.2",
+      "actual": "3.0.2",
+      "match": true
+    },
+    {
+      "name": "easyprocess",
+      "expected": "0.2.8",
+      "actual": "0.2.8",
+      "match": true
+    },
+    {
+      "name": "charset-normalizer",
+      "expected": "2.0.10",
+      "actual": "2.0.10",
+      "match": true
+    },
+    {
+      "name": "requests",
+      "expected": "2.32.0",
+      "actual": "2.32.0",
+      "match": true
+    },
+    {
+      "name": "jmespath",
+      "expected": "0.9.5",
+      "actual": "0.9.5",
+      "match": true
+    },
+    {
+      "name": "zipp",
+      "expected": "3.19.1",
+      "actual": "3.19.1",
+      "match": true
+    },
+    {
+      "name": "pytest",
+      "expected": "7.2.0",
+      "actual": "7.2.0",
+      "match": true
+    },
+    {
+      "name": "more-itertools",
+      "expected": "8.4.0",
+      "actual": "8.4.0",
+      "match": true
+    },
+    {
+      "name": "colorama",
+      "expected": "0.4.3",
+      "actual": "0.4.3",
+      "match": true
+    },
+    {
+      "name": "exceptiongroup",
+      "expected": "1.0.4",
+      "actual": "1.0.4",
+      "match": true
+    },
+    {
+      "name": "docutils",
+      "expected": "0.15.2",
+      "actual": "0.15.2",
+      "match": true
+    },
+    {
+      "name": "psutil",
+      "expected": "5.9.8",
+      "actual": "5.9.8",
+      "match": true
+    },
+    {
+      "name": "atomicwrites",
+      "expected": "1.4.1",
+      "actual": null,
+      "match": false
+    },
+    {
+      "name": "wcwidth",
+      "expected": "0.2.5",
+      "actual": "0.2.5",
+      "match": true
+    },
+    {
+      "name": "idna",
+      "expected": "3.7",
+      "actual": "3.7",
+      "match": true
+    },
+    {
+      "name": "iniconfig",
+      "expected": "1.1.1",
+      "actual": "1.1.1",
+      "match": true
+    },
+    {
+      "name": "pyparsing",
+      "expected": "2.4.7",
+      "actual": "2.4.7",
+      "match": true
+    },
+    {
+      "name": "resolvelib",
+      "expected": "0.9.0",
+      "actual": "0.9.0",
+      "match": true
+    },
+    {
+      "name": "pytest-mock",
+      "expected": "3.8.2",
+      "actual": "3.8.2",
+      "match": true
+    },
+    {
+      "name": "numpy",
+      "expected": "1.23.0",
+      "actual": "1.23.0",
+      "match": true
+    },
+    {
+      "name": "scipy",
+      "expected": "1.8.1",
+      "actual": "1.8.1",
+      "match": true
+    }
+  ],
+  "pin_count": 44,
+  "pins_match": 42,
+  "pin_mismatch_count": 2,
+  "aws_distribution_count": 0,
+  "aws_distributions": [],
+  "editable_distributions": [
+    {
+      "name": "editor-python-test-tools",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ly-remote-console",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ly-test-tools",
+      "version": "1.0.0"
+    },
+    {
+      "name": "o3de",
+      "version": "1.0.0"
+    }
+  ]
+}

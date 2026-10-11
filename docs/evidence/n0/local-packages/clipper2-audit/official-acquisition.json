@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-10T22:31:07.1181328Z",
+  "method": "GET",
+  "url": "https://codeload.github.com/AngusJohnson/Clipper2/tar.gz/46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "auto_redirect": false,
+  "credentials": "none",
+  "status": 200,
+  "response_uri": "https://codeload.github.com/AngusJohnson/Clipper2/tar.gz/46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4.tar.gz",
+  "bytes": 716581,
+  "sha256": "73f5783e0c88299976334f48e3e356c756b96212c652ecc8bceec3bd99455bcb",
+  "expected_sha256": "73f5783e0c88299976334f48e3e356c756b96212c652ecc8bceec3bd99455bcb",
+  "hash_match": true,
+  "headers": {
+    "Access-Control-Allow-Origin": "https://render.githubusercontent.com",
+    "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "Cross-Origin-Resource-Policy": "cross-origin",
+    "ETag": "\"ba6330296d88f09a198bfa444d988b1d7a8263d4d413e9602080ac7936a54008\"",
+    "Strict-Transport-Security": "max-age=31536000",
+    "Vary": "Authorization, Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "deny",
+    "X-XSS-Protection": "1; mode=block",
+    "Date": "Sat, 10 Oct 2026 22:28:35 GMT",
+    "Transfer-Encoding": "chunked",
+    "X-GitHub-Request-Id": "F90A:33846A:3FB01:32ED86:6ACABC13",
+    "x-github-edge-region": "brazilsouth",
+    "Content-Disposition": "attachment; filename=Clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4.tar.gz",
+    "Content-Type": "application/x-gzip"
+  }
+}

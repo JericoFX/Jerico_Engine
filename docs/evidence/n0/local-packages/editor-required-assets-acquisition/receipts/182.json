@@ -1,0 +1,41 @@
+{
+  "index": 182,
+  "source_path": "Code/Editor/res/Padlock_Partial_Enabled.tif",
+  "expected_sha256": "b12692907573ba4f779b25faf0dfbf602b4b7c9405c18d79fe5706fc864f6e77",
+  "expected_bytes": 35320,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Partial_Enabled.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:30:20.467423+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Partial_Enabled.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "35320",
+      "ETag": "\"b12692907573ba4f779b25faf0dfbf602b4b7c9405c18d79fe5706fc864f6e77\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Partial_Enabled.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:30:20.924181+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Code/Editor/res/Padlock_Partial_Enabled.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "35320",
+      "ETag": "\"b12692907573ba4f779b25faf0dfbf602b4b7c9405c18d79fe5706fc864f6e77\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "b12692907573ba4f779b25faf0dfbf602b4b7c9405c18d79fe5706fc864f6e77",
+  "actual_bytes": 35320,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Code\\Editor\\res\\Padlock_Partial_Enabled.tif",
+  "status": "acquired and byte verified"
+}

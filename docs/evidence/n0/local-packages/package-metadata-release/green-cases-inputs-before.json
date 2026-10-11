@@ -1,0 +1,14 @@
+{
+  "helper_sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+  "test_sha256": "013840C891E337AEB17DD60C136FA32C6BDBC17FF5B84C2FD0FBF6C61C051A4E",
+  "output_exists": false,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DJE_TEST_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\package-metadata-release\\green-cases",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\package-metadata-release\\metadata-tests.cmake"
+  ],
+  "argc": 3,
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "start_utc": "2026-10-11T00:59:29.0643206Z"
+}

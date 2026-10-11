@@ -125,3 +125,9 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/Lucy_low.fbx filter=lf
 Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/marmoset_bake.tbscene filter=lfs diff=lfs merge=lfs -text
 Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/Brass/brass_bake.spp filter=lfs diff=lfs merge=lfs -text
 Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.spp filter=lfs diff=lfs merge=lfs -text
+
+# Preserve exact upstream legal/patch data; source and Markdown keep whitespace checks.
+/Projects/JEEditorFixture/LICENSE.txt -text -whitespace
+/cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch -text -whitespace
+/cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch -text -whitespace
+/cmake/Tools/LocalPackages/mcpp/visualc.mak.original -text -whitespace

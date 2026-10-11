@@ -1,0 +1,27 @@
+{
+  "index": 226,
+  "source_path": "Templates/ScriptOnlyProject/Template/Resources/GameSDK.ico",
+  "expected_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+  "expected_bytes": 148143,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/GameSDK.ico",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:20.499509+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Templates/ScriptOnlyProject/Template/Resources/GameSDK.ico",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/vnd.microsoft.icon",
+      "Content-Length": "148143",
+      "ETag": "\"ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba\"",
+      "Location": null
+    }
+  },
+  "deduplicated_from_payload_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+  "actual_sha256": "ba0704efd586fee72b3d45b19163a1b67cd5594bcbf57cb28d796e2919502aba",
+  "actual_bytes": 148143,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Templates\\ScriptOnlyProject\\Template\\Resources\\GameSDK.ico",
+  "status": "acquired and byte verified"
+}

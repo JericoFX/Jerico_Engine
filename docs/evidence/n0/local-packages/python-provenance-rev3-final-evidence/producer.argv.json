@@ -1,0 +1,28 @@
+{
+  "working_directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages",
+  "mode": "-P",
+  "argument_count": 15,
+  "arguments": [
+    "-DJE_PYTHON_SOURCE_WORK=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/cpython-49965601d6afedafe47cc85556d99b7a24981051-provenance-rev3",
+    "-DJE_PYTHON_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/cpython-49965601d6afedafe47cc85556d99b7a24981051.tar.gz",
+    "-DJE_PYTHON_SOURCE_SHA256=12c564214c8a3b109d294143cb439e8bccb1cf6be677b52e98c5e2c41941ea44",
+    "-DJE_PYTHON_EXPAT_WORK=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/expat-65a21f2b2a306d29b44e70264aca948aa0454219",
+    "-DJE_PYTHON_EXPAT_ARCHIVE=F:/JericoEngine/Dependencies/archives/expat-65a21f2b2a306d29b44e70264aca948aa0454219.tar.gz",
+    "-DJE_PYTHON_EXPAT_SHA256=54fd00059462c81e8e3c8eef7e90169fca1b48d89122fbc97039d7007190d9c8",
+    "-DJE_PYTHON_EXTERNALS_DIR=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-externals",
+    "-DJE_PYTHON_EXTERNALS_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-externals-manifest.json",
+    "-DJE_PYTHON_BOOTSTRAP=C:/Users/Jerico/AppData/Local/Programs/Python/Python312/python.exe",
+    "-DJE_PYTHON_BOOTSTRAP_SHA256=805fd29612c221ebea570d372ec5ed46093c25a1033f1765de9b2f8103868886",
+    "-DJE_PYTHON_MSBUILD=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/MSBuild.exe",
+    "-DJE_PYTHON_MSBUILD_SHA256=0f7daba445ba37b652ae4180270ab3eff27acbbe5d411d3b05dad51aab16404c",
+    "-DJE_PYTHON_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-v143-provenance-rev3",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/BuildPythonPackage.cmake"
+  ],
+  "source_freeze_sha256": "57ea7b94efedb0b0d82dd9b8cc3db5cac86606c2ab9d9a861c173846f7141359",
+  "source_work_snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\python-provenance-rev3-final-evidence\\source-work-snapshot.json",
+  "source_work_file_count": 4437,
+  "output_absent": true,
+  "NativeExitCode": 0,
+  "FreezeSha256After": "57ea7b94efedb0b0d82dd9b8cc3db5cac86606c2ab9d9a861c173846f7141359"
+}

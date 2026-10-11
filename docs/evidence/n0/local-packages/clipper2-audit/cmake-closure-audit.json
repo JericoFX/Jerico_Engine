@@ -1,0 +1,65 @@
+{
+  "scope": "static audit only; no upstream CMake/Git/patch execution",
+  "files": [
+    {
+      "path": "CPP/Clipper2.pc.cmakein",
+      "sha256": "90ed5212fc01c5d3b25b16ce62498f4f29610d444aa5c1a2588aea18704da74f",
+      "bytes": 382
+    },
+    {
+      "path": "CPP/Clipper2Config.cmake.in",
+      "sha256": "8aee0e82d16ff7cd05febd66b1fb1deba790e03c3205f0920ef96c478b1e95b4",
+      "bytes": 156
+    },
+    {
+      "path": "CPP/CMakeLists.txt",
+      "sha256": "9838e05405efb2db0db11f20dea7c2d3fdfff211dd6be42e3c0e2611ae886348",
+      "bytes": 12832
+    },
+    {
+      "path": "CPP/BenchMark/CMakeLists.txt",
+      "sha256": "ae74f30a274f0813f64e0b51463ddfa6918f13f63e956b0b67e51a1255f80b06",
+      "bytes": 2198
+    }
+  ],
+  "hits": {
+    "fetchcontent": [
+      {
+        "path": "CPP/BenchMark/CMakeLists.txt",
+        "line": 11,
+        "text": "include(FetchContent)"
+      },
+      {
+        "path": "CPP/BenchMark/CMakeLists.txt",
+        "line": 15,
+        "text": "FetchContent_Declare(googlebenchmark"
+      },
+      {
+        "path": "CPP/BenchMark/CMakeLists.txt",
+        "line": 20,
+        "text": "FetchContent_MakeAvailable("
+      }
+    ],
+    "externalproject": [],
+    "file_download": [],
+    "execute_process": [
+      {
+        "path": "CPP/CMakeLists.txt",
+        "line": 238,
+        "text": "execute_process("
+      }
+    ],
+    "git_acquisition": [],
+    "submodule_reference": []
+  },
+  "conditional_network": [
+    "CPP/CMakeLists.txt:225 CLIPPER2_TESTS ON may execute Git clone googletest without a pinned revision",
+    "CPP/CMakeLists.txt:313 USE_EXTERNAL_GBENCHMARK ON adds BenchMark whose CMake fetches Google benchmark v1.7.1"
+  ],
+  "network_with_recommended_options": [],
+  "source_write": "CPP/CMakeLists.txt:38-40 configure_file writes CPP/Clipper2Lib/include/clipper2/clipper.version.h in source; must use work copy even though generated header currently matches",
+  "manifold_default": "MANIFOLD_CROSS_SECTION ON, backend clipper2; no feature removed",
+  "manifold_nested_declaration": "real WhiteBox wrapper declares Clipper2 first via o3de_fetch_content SOURCE_SUBDIR CPP, before manifoldDeps declaration; installed FetchContent first declaration wins",
+  "manifold_carry_patch": "manifoldDeps declares a Clipper2 PATCH_COMMAND using git apply for NO_IOSTREAM; standard source override skips population/patch, first wrapper declaration also has no PATCH_COMMAND. Do not claim patch applied. Current MANIFOLD_NO_IOSTREAM OFF needs no such change; do not enable without separate audited repair/validation",
+  "offline_guard_case": "manifoldDeps logmissingdep(PKG) checks DEFINED FETCHCONTENT_SOURCE_DIR_${PKG}; called with Clipper2, not uppercase CLIPPER2. With MANIFOLD_DOWNLOADS OFF and no Clipper2_FOUND, supply exact mixed-case alias to the same work path alongside standard uppercase override, or parent must separately fix/validate upstream guard. Candidate argv not executed."
+}

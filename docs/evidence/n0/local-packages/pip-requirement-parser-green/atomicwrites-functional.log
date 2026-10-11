@@ -1,0 +1,47 @@
+{
+  "atomicwrites_version": "1.4.1",
+  "module_path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\venv\\31e81382\\lib\\site-packages\\atomicwrites\\__init__.py",
+  "scratch_root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\pip-requirement-parser-green\\atomicwrites-scratch",
+  "checks": [
+    {
+      "case": "overwrite_true_replaces",
+      "pass": true,
+      "detail": {
+        "observed": "new-value"
+      }
+    },
+    {
+      "case": "overwrite_false_rejects_existing",
+      "pass": true,
+      "detail": {
+        "exception": "FileExistsError",
+        "contents": "preserve-this"
+      }
+    },
+    {
+      "case": "exception_preserves_original",
+      "pass": true,
+      "detail": {
+        "exception": "RuntimeError: intentional-context-abort",
+        "contents": "original"
+      }
+    },
+    {
+      "case": "no_temporary_files_remain",
+      "pass": true,
+      "detail": {
+        "files": [
+          "exception-abort.txt",
+          "overwrite-false.txt",
+          "overwrite-true.txt"
+        ],
+        "expected": [
+          "exception-abort.txt",
+          "overwrite-false.txt",
+          "overwrite-true.txt"
+        ]
+      }
+    }
+  ],
+  "all_pass": true
+}

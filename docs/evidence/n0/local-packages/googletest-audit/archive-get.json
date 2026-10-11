@@ -1,0 +1,12 @@
+{
+  "url": "https://codeload.github.com/google/googletest/tar.gz/refs/tags/v1.18.0",
+  "method": "GET",
+  "status": 200,
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\googletest-audit\\googletest-v1.18.0.tar.gz",
+  "bytes": 894741,
+  "sha256": "6E3191C1455468B3FC35A417FB565C1C5071AEE1B7E7F85E30CF48A98D37D8B5",
+  "pinMatches": true,
+  "credentials": "none",
+  "automaticRedirects": false,
+  "acquisition": "manual after each HEAD hop audit"
+}

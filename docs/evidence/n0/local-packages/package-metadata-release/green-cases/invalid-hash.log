@@ -1,0 +1,6 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake:21 (message):
+  JE local package: source archive SHA256 must be an explicit full hash
+
+

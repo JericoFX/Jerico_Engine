@@ -1,0 +1,1413 @@
+{
+  "source": "F:\\JericoEngine\\Dependencies\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4.tar.gz",
+  "archiveBytes": 716581,
+  "archiveSHA256": "73F5783E0C88299976334F48E3E356C756B96212C652ECC8BCEEC3BD99455BCB",
+  "existingManifest": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\clipper2-audit\\source-manifest.json",
+  "existingManifestSHA256": "68C0831A33BCF7E5818FB677A3939920A3A14BCA784090AB5C812C03DDFC2BFC",
+  "fileCount": 223,
+  "directoryCount": 60,
+  "directories": [
+    ".github",
+    ".github/workflows",
+    "CPP",
+    "CPP/BenchMark",
+    "CPP/Clipper2Lib",
+    "CPP/Clipper2Lib/include",
+    "CPP/Clipper2Lib/include/clipper2",
+    "CPP/Clipper2Lib/src",
+    "CPP/Examples",
+    "CPP/Examples/Benchmarks",
+    "CPP/Examples/Inflate",
+    "CPP/Examples/MemLeakTest",
+    "CPP/Examples/PolygonSamples",
+    "CPP/Examples/RandomClipping",
+    "CPP/Examples/RectClipping",
+    "CPP/Examples/SimpleClipping",
+    "CPP/Examples/Triangulation",
+    "CPP/Examples/Triangulation/TriSamples",
+    "CPP/Examples/UnionClipping",
+    "CPP/Examples/UsingZ",
+    "CPP/Examples/VariableOffset",
+    "CPP/Tests",
+    "CPP/Utils",
+    "CSharp",
+    "CSharp/Benchmark",
+    "CSharp/Clipper2Lib",
+    "CSharp/Examples",
+    "CSharp/Examples/ConsoleDemo",
+    "CSharp/Examples/InflateDemo",
+    "CSharp/Examples/RectClip",
+    "CSharp/Examples/Triangulation",
+    "CSharp/Examples/USINGZ",
+    "CSharp/NuGet",
+    "CSharp/Tests",
+    "CSharp/Tests/Tests1",
+    "CSharp/Tests/Tests1/Tests",
+    "CSharp/Tests/Tests2",
+    "CSharp/Tests/Tests2/Tests",
+    "CSharp/USINGZ",
+    "CSharp/Utils",
+    "CSharp/Utils/ClipFileIO",
+    "CSharp/Utils/SVG",
+    "Delphi",
+    "Delphi/BenchMark",
+    "Delphi/Clipper2Lib",
+    "Delphi/Examples",
+    "Delphi/Examples/Example1",
+    "Delphi/Examples/Example2",
+    "Delphi/Examples/RectClip",
+    "Delphi/Examples/Triangulation",
+    "Delphi/Utils",
+    "DLL",
+    "DLL/CPP_DLL",
+    "DLL/TEST_APPS",
+    "DLL/TEST_APPS/CSharp_TestApps",
+    "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp",
+    "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2",
+    "DLL/TEST_APPS/Delphi_TestApps",
+    "DLL/TEST_APPS/Delphi_TestApps/TestApp1",
+    "Tests"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 3,
+      "sha256": "64263FEAC7B00952E9EC3B6C1FD11316FAA58FF673C6BD085FAC9F6F8D8389F6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": ".gitmodules",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1338,
+      "sha256": "C9BFF75738922193E67FA726FA225535870D2AA1059F91452C411736284AD566",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 5933,
+      "sha256": "232437D0B8343F875C367E642B96DD4AB30D5B473CC91F659A50CAEC018AF52A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": ".github/workflows/actions_cpp.yml",
+      "bytes": 3161,
+      "sha256": "7D6C475F10C17950D661CF3DA554754E536A4C519D99C53EE8356E2C87EE20B7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": ".github/workflows/actions_csharp.yml",
+      "bytes": 616,
+      "sha256": "FF5ED1F88361C8A9B53D6FD6E5F01EF3A50C6617A420C42EEF1622587E8A4DF2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/.gitignore",
+      "bytes": 6,
+      "sha256": "A7FE054EC20F82B733BA8542234AF61D2F3D3ED5F65185347E3C04629EC3B952",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/clipper.version.in",
+      "bytes": 138,
+      "sha256": "0FA7B02AAE2751806611A1D8636DF89F162608C1AF2A9E6B9B5876876A99C544",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2.pc.cmakein",
+      "bytes": 382,
+      "sha256": "90ED5212FC01C5D3B25B16CE62498F4F29610D444AA5C1A2588AEA18704DA74F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Config.cmake.in",
+      "bytes": 156,
+      "sha256": "8AEE0E82D16FF7CD05FEBD66B1FB1DEBA790E03C3205F0920EF96C478B1E95B4",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/CMakeLists.txt",
+      "bytes": 12832,
+      "sha256": "9838E05405EFB2DB0DB11F20DEA7C2D3FDFFF211DD6BE42E3C0E2611AE886348",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/GoogleTest in Visual Studio.txt",
+      "bytes": 590,
+      "sha256": "88161152C1F3FB4B3A58C310C69F8430127164C9834EC195C5F3829B9E2E1AA9",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/BenchMark/CMakeLists.txt",
+      "bytes": 2198,
+      "sha256": "AE74F30A274F0813F64E0B51463DDFA6918F13F63E956B0B67E51A1255F80B06",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/BenchMark/GetIntersectPtBenchmark.cpp",
+      "bytes": 18032,
+      "sha256": "1123C2044DBCC4D62EA833F0193D46CE8C25811221544D9103150B4E26524277",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/BenchMark/PointInPolygonBenchmark.cpp",
+      "bytes": 16848,
+      "sha256": "0563AD4CA0504C73EB64DCFB5C97F5F2E474AF68837DA2ED8A2E8AF8F071241A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/BenchMark/README.md",
+      "bytes": 163,
+      "sha256": "550239CA88C00D946A35F8B264EAB4CD51F663D51B8402AC5825B4F239FDE5C7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/BenchMark/StripDuplicateBenchmark.cpp",
+      "bytes": 1977,
+      "sha256": "81F55EF7EBA8D0146DA43EF72CF2E729C57AFD732F9AA203ED011C78FDFF3203",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.core.h",
+      "bytes": 35320,
+      "sha256": "B667C2FE968344252E2C32C0CFFC09CF6520164E272FCF63BF46ECCC707B138F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.engine.h",
+      "bytes": 18972,
+      "sha256": "E77185EB535CDAE22FEB85A045B6B90365F0CFD841BD7FB01714FC03A026FA09",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.export.h",
+      "bytes": 27954,
+      "sha256": "035E4257F1F127D6A17833331922F2B1B615371B64BB4CD625842102517793B0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.h",
+      "bytes": 25617,
+      "sha256": "145EFD001EF2F45AC5655A18E19D8A122EFDF665C38D306A1FE91CE9E0D18450",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.minkowski.h",
+      "bytes": 4128,
+      "sha256": "6EA4F08D3E2561BDD4D95A548E1B5D7983100E317ED805616B8D602F03D3DBE3",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.offset.h",
+      "bytes": 4731,
+      "sha256": "147E5F4694327D62CEC31FEC55B69537F178E808A715A533BB42C01A85CC435A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.rectclip.h",
+      "bytes": 2801,
+      "sha256": "2970DBE3F91D32E96ABC3117240694FC09F354060FF84E4A95014EC510F4D8DD",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.triangulation.h",
+      "bytes": 1289,
+      "sha256": "A82D32E65583CCE5A6D704796C54DE3DDD2963D219057263A0F87F8D14A07D6C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/include/clipper2/clipper.version.h",
+      "bytes": 126,
+      "sha256": "0D636F1599B09743496D5C15C7DCB5BC3101BD423D6745BF17E480EDBFFCCDAC",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/src/clipper.engine.cpp",
+      "bytes": 87899,
+      "sha256": "7B2CC17D4DEBD3B5EE6BD2C592ECDA5082253324C7DD514B5593AE1B2C7812B2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/src/clipper.offset.cpp",
+      "bytes": 20974,
+      "sha256": "EBC01258953212D20FED090A4A740F94926C3C6706A092FEC4C5E9CB5292305A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/src/clipper.rectclip.cpp",
+      "bytes": 28076,
+      "sha256": "79C7D8D90DD3B577DB77A152C4739F6F49BFDA8727528291250D3D8E8D79E18C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Clipper2Lib/src/clipper.triangulation.cpp",
+      "bytes": 38243,
+      "sha256": "94E7449B9F278B71D86C3D493D40652BBFA1EAE539C1C5B926B66977D82274BB",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Benchmarks/Benchmarks.cpp",
+      "bytes": 3389,
+      "sha256": "1DD36EEBA6577187334C3341786AD9AA03BBD0B3E93511CB3795AE4184E6D620",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Inflate/Inflate.cpp",
+      "bytes": 4724,
+      "sha256": "A10F8355DFF4AEF32BFD6FE0EBE5E0332F193B06A08E5E49FAC51626DA8C2A39",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Inflate/rabbit.svg",
+      "bytes": 1897,
+      "sha256": "0117C42DFE0B59B6672150836D9FA12C64125F5FEBC5016DF865DECEE50A67AF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/MemLeakTest/MemLeakTest.cpp",
+      "bytes": 1983,
+      "sha256": "EBEC9FEB353381315314D8FA8F2181F3FDCFAAD763289EA302D67116AB2CB20A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/PolygonSamples/PolygonSamples.cpp",
+      "bytes": 2983,
+      "sha256": "64BB355A970380FD98BEFAEEE8C6BE395B5A2D6B5AD976B97226283C77DFCC2B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/RandomClipping/RandomClipping.cpp",
+      "bytes": 4750,
+      "sha256": "FBBA8BEB6F9ED759CE8809928F1DE8201BA7ADC004752A02E8843AEA0B2F7525",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/RectClipping/RectClipping.cpp",
+      "bytes": 6048,
+      "sha256": "ED185689139632B5718253C130A2C96145D0530D86C6109F40D823F1C2EF7DB1",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/SimpleClipping/SimpleClipping.cpp",
+      "bytes": 1106,
+      "sha256": "5F37400E353D50164D34FB99A1565CED69BB6C609DBE34A3B506F93BFCE87A5B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/Triangulation.cpp",
+      "bytes": 4992,
+      "sha256": "B129482DBEFF90E48576F5473219B4712358E162CE1D1B2584C3824AF5C24AB2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/clipper2.svg",
+      "bytes": 9378,
+      "sha256": "55BA26B4FE0B08227B2976DC7081181830F927E5175FF202DCED5F44A99C7365",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/coral3.svg",
+      "bytes": 4033,
+      "sha256": "CEE03F0645A306CEAEDEE606E91292A475F65A6FB2F294F439595718F29EA6A7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test1.svg",
+      "bytes": 897,
+      "sha256": "ECB870AC4C46AA4ACBB355695F490100F7970B8009A6A3F15C77E969C7094C6C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test10.svg",
+      "bytes": 465,
+      "sha256": "AEA47918EA52B609D1C2F2E498B3433C9BE76C06DF4A703B66492F7751673820",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test11.svg",
+      "bytes": 423,
+      "sha256": "F49EDD47508E420A742065C80EFA565C03769C96AAA462E2403FE6FDC046B65E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test12.svg",
+      "bytes": 463,
+      "sha256": "2622BD2262D051E7E6EDFB1CB0EB929ECC5456411C9517A03B4067C28FFA4253",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test13.svg",
+      "bytes": 499,
+      "sha256": "D1043E8451978287C6D2DE8F7D00A7AD97C146BD4C3B86006E738701DCFA4BE0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test14.svg",
+      "bytes": 582,
+      "sha256": "13F72B3CB4F67926E297297E9CBF01026D2EC29C9B55D60F4645C2DE75AE635B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test15.svg",
+      "bytes": 664,
+      "sha256": "03B613469B8163A25E41D8D9F7DA75363F9E22E169DC72E248F60A3545B75E15",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test16.svg",
+      "bytes": 686,
+      "sha256": "AF97EF6890930E7E2A738C12794D2E4CCEF111B4496B0FA883E20D7A1F54806C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test17.svg",
+      "bytes": 593,
+      "sha256": "F636FDAACA504B894343C31E757F1AC6B6C9D73F4F0219D16168672FFBFBDCC7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test18.svg",
+      "bytes": 510,
+      "sha256": "AFB4963DA6CB44E08C7BBF3338CFE9E38E7EEA38252D5AC5559351B45BE82D7D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test19.svg",
+      "bytes": 546,
+      "sha256": "211954B583C07291CDC7088A075A9195ADCF35F47131B906481B43959C8E85D2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test2.svg",
+      "bytes": 597,
+      "sha256": "352B0DC3DA04D246528FEE1B23F9D78EB75266A8F487FF91521BC20FD80EB4F0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test20.svg",
+      "bytes": 511,
+      "sha256": "5EBAEEE69D6E76CA4C06B99AE8D34B4CDD73F3588486D60FBC73EE9B54D4FAB6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test21.svg",
+      "bytes": 503,
+      "sha256": "CC5C50B0D37FC07CCDB019CFC2BEB711EC6444239E349E4AE0FACB1CF50929FD",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test22.svg",
+      "bytes": 518,
+      "sha256": "42971B184CE743C98C30F2033A3A020E4DCC4F74326E60125EC6025DA1E14334",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test23.svg",
+      "bytes": 634,
+      "sha256": "70DF5EE55155B55EC4D82D90A5E63FE5977722070FDF1A1ABD4DF2C604F099E0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test24.svg",
+      "bytes": 550,
+      "sha256": "F0708C427000206959507115572AE299E9409CDD73C7D7A77944CD888EDFA566",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test25.svg",
+      "bytes": 592,
+      "sha256": "BFB14C2AC0EFB369C3410DEE823AC43BC039DBA3B4E9B372E190601133B77CD7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test26.svg",
+      "bytes": 534,
+      "sha256": "EE42469DD100C1ADAF8307AFE569F1996B91A4C1BD3287B91036CF3F6686108D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test27.svg",
+      "bytes": 581,
+      "sha256": "583C8F8301EDA5A90C108E8CC4EC847AD34605DD9F9A7F22EFFFBDF4EE0DE7E4",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test28.svg",
+      "bytes": 585,
+      "sha256": "8C3CA173AC918CE24CB72236761B98A22C8203F5DA69A7A8C58AE637DE54918F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test29.svg",
+      "bytes": 576,
+      "sha256": "AC40A2C1851708B7512006D01068D02F68B2169D98AD5AAFDDAE9CE0A252F58D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test3.svg",
+      "bytes": 469,
+      "sha256": "172CDCC8F3413626EAAAC52DEEF275D479BDE33C081557E7661986ACF319EDB0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test30.svg",
+      "bytes": 1088,
+      "sha256": "CBAA0456CF37618A38356DC93B4858D8584CC86373B40E5D4BBAE126C712D396",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test31.svg",
+      "bytes": 570,
+      "sha256": "73C88FE0F815146AB3E4E74BAA6EDC92E23FFC2FD5898B02BB10E218CF38EBEB",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test32.svg",
+      "bytes": 568,
+      "sha256": "D60370F145F6778068538034DB6569410654E5FAF8991FB7BFF8CEAA57449D96",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test33.svg",
+      "bytes": 1327,
+      "sha256": "C695BC4541AE7EC6E1751C3F9A37AA404B51498FA76905B76E33A18FB8A9CE7E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test34.svg",
+      "bytes": 1644,
+      "sha256": "F842A99B15324152BAFC3FC214A71A9DF944B2F5EA610C426DC6FB3BA7F1933B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test35.svg",
+      "bytes": 1339,
+      "sha256": "5958696204A5BF548679F58FEFF669F57F5A5ECF0BC5616F6C91D69C356347C3",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test36.svg",
+      "bytes": 1058,
+      "sha256": "D7A3A02595EBF7C09C64485BACD5E7F632AA5B9E7FE282D90CF34A740D886D06",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test37.svg",
+      "bytes": 1992,
+      "sha256": "AA3725B03F1C769426C6DB79870C2D686A7636365112E4268B4BCC198AA60388",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test38.svg",
+      "bytes": 2529,
+      "sha256": "EAF35FCC3EE834D935369478E6D218599D4D0220062579A0C883C24D3E5DE281",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test39.svg",
+      "bytes": 2671,
+      "sha256": "17EEBFC92513635107B0833BDFD6859897E23014D7197962A2AC8240B501A813",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test4.svg",
+      "bytes": 509,
+      "sha256": "86BB752C1BE890567C8E4A14670505848807E1513809CA9C382FD65F1EB9455D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test40.svg",
+      "bytes": 3336,
+      "sha256": "7E4B115C71C0126400F5253330E329D6AD59F874147E989E12899072C72CA23F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test41.svg",
+      "bytes": 2279,
+      "sha256": "0DCC3C9332CC6E791223BBD01FDA716E64AB623241CCF301D85DC559620F72D6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test42.svg",
+      "bytes": 2632,
+      "sha256": "13DE4FF0D0F5E9DC9F78C02553F67CD2B04C005D35BE882046D0364F3C2DACF9",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test43.svg",
+      "bytes": 6158,
+      "sha256": "F521743B21E1E1434396721720524DF514EEE49F1454E8D65B2500721B7734E3",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test44.svg",
+      "bytes": 29683,
+      "sha256": "6F0A63D083F50D0B273E0F3773E66E1FFACDE3595609B037D9641A9418157BEC",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test45.svg",
+      "bytes": 10517,
+      "sha256": "7F4C7667B92FACC754EF64764AC010D49D49EF26F6CCC2863772FCA2061F09D2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test46.svg",
+      "bytes": 12659,
+      "sha256": "0CE18C0E1C287BE2B5F80239E0916B4662061F3EEE58EA7A467D8DCC46A10E16",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test47.svg",
+      "bytes": 4587,
+      "sha256": "10834CE956E5D2D07714C36A235BAB1CF7B2686B6976EA30E656CA986252B2E7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test48.svg",
+      "bytes": 5951,
+      "sha256": "C1F61757CB417AAB4280E04710C7198D724A22B5E0D320F0B1BB2B14B34106DF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test49.svg",
+      "bytes": 11112,
+      "sha256": "EB030E601B83FE23F83E0317079E85DD83EA357442DB4D147008A1BFD93C109E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test5.svg",
+      "bytes": 479,
+      "sha256": "B4C353901FF4BE129D74D4E1C98953213E0BD65C4119BA48C88125C7CB9A4949",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test50.svg",
+      "bytes": 4825,
+      "sha256": "FF7D99D845090C123B6BC44637BA76BB282E990A347AFEA20813F324A6016C0A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test51.svg",
+      "bytes": 11558,
+      "sha256": "9759CDD6CC5B7D3A1B25222438ECD1E18EFA69498BF569A485251568019A0D9A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test52.svg",
+      "bytes": 5739,
+      "sha256": "D841AC7EBD97243892467ABE4D19B3C8ADD2683A022AB3CEF38D1E230A9470EF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test6.svg",
+      "bytes": 472,
+      "sha256": "1661F1D2DC87E7E53CC556EF7C0B08307FF9C197CB299E09EB86E88072178BD4",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test7.svg",
+      "bytes": 504,
+      "sha256": "1D4305C1C46DAB9A557EB4311DDF77114F3E0884A9DE42A1E1162AE83DEB2E2F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test8.svg",
+      "bytes": 321,
+      "sha256": "6C90FF102D65BED6ACCFEA739B72CF90594DF9FD68113F83AA1290FCC8478C37",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/Triangulation/TriSamples/Test9.svg",
+      "bytes": 484,
+      "sha256": "A92BF99A415AAC9B6AD1DA53E63C2F560E5DB276456738BBAFF32758755617EF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/UnionClipping/UnionClipping.cpp",
+      "bytes": 4331,
+      "sha256": "A39AE4E83C4C9C8C75DC4CE824760A6BA819CE71BB2DF1F1333FF3CCC85BB302",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/UsingZ/UsingZ.cpp",
+      "bytes": 5423,
+      "sha256": "6531F5ACE89CC96E185E25F0590A8A44791C50C82F48F88CD70225D9A108CC77",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Examples/VariableOffset/VariableOffset.cpp",
+      "bytes": 4704,
+      "sha256": "3D760C0286BD20A59EAC3B3E00B930E696F89CE451212663AF01E389BD2FA336",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestExportHeaders.cpp",
+      "bytes": 7810,
+      "sha256": "AA72514B2822F968A49714F7B597906CC37A0E67659B2502389387A5990F6FB2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestIsCollinear.cpp",
+      "bytes": 3171,
+      "sha256": "EFD99DCABE106735E18A79066DDECD62D2DF9F2FBAEC64D63FB0D653C0F0D9E8",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestLines.cpp",
+      "bytes": 1600,
+      "sha256": "8F34E3FB76AB22FF3B832EDDC510F4AFB8F54C2322D82384CA54BBB0963ECB5E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestOffsetOrientation.cpp",
+      "bytes": 1652,
+      "sha256": "9C06B6CEDF3DF17382CAEA1F368A2F5D376DF458277419B87EAFD5E84993DCEB",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestOffsets.cpp",
+      "bytes": 39666,
+      "sha256": "56E5DA18AF22F9A0CE14B292C536FDD5666A0C462AD9B88DD7A0C19DB7193C5B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestOrientation.cpp",
+      "bytes": 692,
+      "sha256": "88E5D09E95FC711FB38BBB859AF0408A28A17D96B05049ABE50BC2092BB7D8EE",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestPolygons.cpp",
+      "bytes": 5548,
+      "sha256": "B3A264E977C149463F6C68F8B43110694921B91F99120BE486E45280F11E9685",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestPolytreeHoles.cpp",
+      "bytes": 13100,
+      "sha256": "09380F95659BB37F99E572CDA7F8281940160500400D3EC97ADE0B29D2609B5C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestPolytreeIntersection.cpp",
+      "bytes": 776,
+      "sha256": "9FF162AF0E862952EB25E27F01F829963C0DFD2F1BCA0414ECC85C5D0E594DC8",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestPolytreeUnion.cpp",
+      "bytes": 2625,
+      "sha256": "2BE7F2BD3A27EBB3138DAF47B81F8B9E03FFD01643C3E0B5EFE9F2A51AAD71CD",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestRandomPaths.cpp",
+      "bytes": 3587,
+      "sha256": "424ADF4FCBB57EC8F285331BC29EBA15F2B2E88C81F6E4E3FA9A9808964A35C9",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestRect.cpp",
+      "bytes": 1180,
+      "sha256": "7B1CB91BC72010DCDE4A2F42FD115816E0D919422DDF1E534529966C2367FB89",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestRectClip.cpp",
+      "bytes": 2763,
+      "sha256": "8330C484806F967DA77D9FD7078CEABC41BB69D7A46C66892EABE42D195FDBB0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestSimplifyPath.cpp",
+      "bytes": 348,
+      "sha256": "8DF9F9FEC9F9D3DA7C7BFE7ED71B7DB943A846A494F98A375F881A1B31E58296",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestTrimCollinear.cpp",
+      "bytes": 1106,
+      "sha256": "AD86092BBDDF8459E2C4F1046D4B4592A3D48A3C90226D73A45947D142D653C4",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Tests/TestWindows.cpp",
+      "bytes": 139,
+      "sha256": "9A93E7B337AD63B659E031A6962B7011CEA96EFAE253D469E323591473610173",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/ClipFileLoad.cpp",
+      "bytes": 3547,
+      "sha256": "A68934011EE6B0943D9C8BF058F74EA2847419CBD263EE82949C3AB67B4EBFEB",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/ClipFileLoad.h",
+      "bytes": 1222,
+      "sha256": "0F608E7356DD879B404208FD015EC81AD3940985FDFEC5CF52763BEB1BBA5642",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/ClipFileSave.cpp",
+      "bytes": 8465,
+      "sha256": "899A970B5AEEBD6F2D5275EA8EE1119B864F52258B8807ED0CAB135DD7FE9018",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/ClipFileSave.h",
+      "bytes": 566,
+      "sha256": "D9B7D98152A969861AB353A1701F3AAADB65395CE75B3B83347932531C14A572",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/clipper.svg.cpp",
+      "bytes": 14656,
+      "sha256": "EFECFAD7FA97146C38DFF72F8534E349D59DD6B115C91A699A5FDB47857BB95C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/clipper.svg.h",
+      "bytes": 4225,
+      "sha256": "B61C3A8769C82F7398281983AD5645A5E16886434E2843F3D8A9CA03CA5CB3EF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/clipper.svg.utils.h",
+      "bytes": 5585,
+      "sha256": "51BA79B825489C69228FC47631ED0DFF835F3CB46B6A3B1F488909149792F6EF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/Colors.h",
+      "bytes": 1568,
+      "sha256": "AD1FE6A034DAD6F5F738C444CAD33F265CB1399E4870D95FE74C1ADFE55E09CC",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/CommonUtils.h",
+      "bytes": 941,
+      "sha256": "18328D46439AF066F117D981D321DA433A683734B18ED4E1CBD8CCB623C6009A",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CPP/Utils/Timer.h",
+      "bytes": 2329,
+      "sha256": "999F41FB45B1508CA8BF2A0292E614C251EC78C8459A6327DCDD4D51CED0BBC8",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/.editorconfig",
+      "bytes": 5414,
+      "sha256": "E5F710DFD5DA363AE37026DF17D8F79B010E71DC261F771F5082DEAF4822F758",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/.gitignore",
+      "bytes": 4296,
+      "sha256": "7EE712DDEE34CA179582E495A54C255BD98D0DC62ECE01BF9323D557D9202AF2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib.sln",
+      "bytes": 5340,
+      "sha256": "4654FD75E01BC49ED1F8C544DB4E6045B7F10CA553C81A72981E2C01DED6403C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Benchmark/Benchmark.csproj",
+      "bytes": 753,
+      "sha256": "7F51B24C077514966473117CDA6AE73BCE3522A02560A319759258CE60C668EB",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Benchmark/Benchmarks.cs",
+      "bytes": 2803,
+      "sha256": "B63EBB4546AA76CEDF5B3D2766D5F181288FB60CD65588B55A282BBBD768B042",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Benchmark/Program.cs",
+      "bytes": 275,
+      "sha256": "5DA58AA5E378B9117552F73DC8E70EA337DD0BBD00AED379350868372E4D6069",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.Core.cs",
+      "bytes": 23657,
+      "sha256": "DD9C64A31234011597A5A23C9DBA1B986D7B7FF9FB4D0AD789871CD2731DDCFC",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.cs",
+      "bytes": 38814,
+      "sha256": "7FC7CE822BE25640389B87806A5B1B70EDA5B0DD3021B2CD33F18429FB9F33DA",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.Engine.cs",
+      "bytes": 110183,
+      "sha256": "C134D6AA357B5F4631316C997B07270594126F47D3AA38971AA5B78B9E7F2072",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.Minkowski.cs",
+      "bytes": 3106,
+      "sha256": "35BABACD3F2AC8E77E2936DF3CC1A7FA9B87250ED58BC5D4B68DC1AAA52B8925",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.Offset.cs",
+      "bytes": 23981,
+      "sha256": "30DD338557D688B10AF3778652B2664EA49C503DCE877585CCA56E9B8A995A9F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.RectClip.cs",
+      "bytes": 31097,
+      "sha256": "5D85BC4BF525587535D5772189E6FB6380D0C6D91B1901AD151CE022923E518D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper.Triangulation.cs",
+      "bytes": 31030,
+      "sha256": "4E00AE605FE012365A7B412BBEDA43B2DBB0B08FA2B89ABF2F21605912838047",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper2.snk",
+      "bytes": 596,
+      "sha256": "3A5E4380B65DE51196357007BF8A0F7892B288C13A167789585D69281D7B2A48",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/Clipper2Lib.csproj",
+      "bytes": 2634,
+      "sha256": "A1B7B2078951E0B30636A29BEE9B7B910BC1BFC219E80EF3EA8530630EA5DB6F",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/HashCode.cs",
+      "bytes": 4799,
+      "sha256": "BD9CFD5C2685731041CEC1C5C18B9846DDF3E2A4813C410DC64FD4AE095EEB5D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Clipper2Lib/PooledList.cs",
+      "bytes": 8188,
+      "sha256": "38B9CC4636C7893A20303FBC403608331FCD145F7B0F59EBEDB9B7BB7151F506",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/ConsoleDemo/Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9A2ECC41BF7F763C25FF93DA8D25CF59DD9F7F2235533B7ECC38839B149A7658",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/ConsoleDemo/ConsoleDemo.csproj",
+      "bytes": 1112,
+      "sha256": "D2FC57D772D25A342C640B3611E5E6B18B2BD3256EEFF68761BB950D2802F594",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/ConsoleDemo/ConsoleDemo.sln",
+      "bytes": 2809,
+      "sha256": "6B0B3CF79C205FA2585C6DA7499506FA2782E41799C0B35DD34017C78B9D7FC5",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/ConsoleDemo/Main.cs",
+      "bytes": 5628,
+      "sha256": "0D18E64DDE628ADDDDC5ACD32085E3425C3BD474DAAFBAFFE6C28FDD57953ABC",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/InflateDemo/Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9A2ECC41BF7F763C25FF93DA8D25CF59DD9F7F2235533B7ECC38839B149A7658",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/InflateDemo/InflateDemo.csproj",
+      "bytes": 1155,
+      "sha256": "CD973F23B168E0310768CA60B4C03F5E49ABCC296D951786C719E51B67484178",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/InflateDemo/InflateDemo.sln",
+      "bytes": 2311,
+      "sha256": "6572C837D903D27319104E8BBBF679A93BAA791324F07AA97DF9FB7547E23621",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/InflateDemo/Main.cs",
+      "bytes": 4524,
+      "sha256": "AB1255E4B5F8853EEE5D66886523654373CA81B12F60A3FB1DDCA7CA71C2C3F1",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/InflateDemo/rabbit.svg",
+      "bytes": 1853,
+      "sha256": "8E560D04101E15912182D8C01922B6C1703ECBDFC5A4794020881815A8DDB2C9",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/RectClip/Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9A2ECC41BF7F763C25FF93DA8D25CF59DD9F7F2235533B7ECC38839B149A7658",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/RectClip/Main.cs",
+      "bytes": 4149,
+      "sha256": "A4339CBF7D49DC2C31D79BDD875CC638E847C23FE694B70578DABBDBA08AD28D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/RectClip/RectClipDemo.csproj",
+      "bytes": 1629,
+      "sha256": "AA9FD088D2678E95DBF66F8D95AB8D249DCB6A4ADF77B3397955EED3E1173C5E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/RectClip/RectClipDemo.sln",
+      "bytes": 2313,
+      "sha256": "AD31548D61B4AC2A73CF9A1C310EA92EBB37602EAA8FDBD7C80F8287FD1BEDD2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/Triangulation/Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9A2ECC41BF7F763C25FF93DA8D25CF59DD9F7F2235533B7ECC38839B149A7658",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/Triangulation/Main.cs",
+      "bytes": 4102,
+      "sha256": "D7D0451A0DA0766754D20D456A680BE1E6585019AA260FC8AE7542DE50C210BF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/Triangulation/TriangulationDemo.csproj",
+      "bytes": 1112,
+      "sha256": "D2FC57D772D25A342C640B3611E5E6B18B2BD3256EEFF68761BB950D2802F594",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/Triangulation/TriangulationDemo.sln",
+      "bytes": 2821,
+      "sha256": "F5B1C307474D6C3093F30051EC8CA44D1AFEAE5750FC73FDF0CF1F76D74E0DD9",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/USINGZ/Program.cs",
+      "bytes": 2868,
+      "sha256": "8D21F1A5009A2CD7DB2AD01BDEDC5F038B4F30AE6DD240699627B02EE5523318",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/USINGZ/UsingZ_App.csproj",
+      "bytes": 866,
+      "sha256": "D16FEE824CB95131482089B75280EA130D00BC482B4F46B9F6F227F95749BC2C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Examples/USINGZ/UsingZ_App.sln",
+      "bytes": 1586,
+      "sha256": "B759538D5A90881F8BEC587F168D680A82DDEF05BFCF3448EA267B9361A1C973",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/NuGet/icon.png",
+      "bytes": 7381,
+      "sha256": "ECE5054EFFDD57ACEC60CC1B964D92BA2CF37406285A30D6D32FB36C9CF2CD1C",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/NuGet/License.txt",
+      "bytes": 1337,
+      "sha256": "8D8291CAF1CEE26D23ACF3EB67C9F9A2D58F1C681B16A4FBE8CBFB9E3C0B5A9B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/NuGet/README.md",
+      "bytes": 1080,
+      "sha256": "7FBA202AA983F8D921BA5BFAA3809101873C98D44D2A2D27DD40B0FDC8374AEB",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests1/Tests1.csproj",
+      "bytes": 1070,
+      "sha256": "8BA4B99B78C0EE6C6A79064FCCB5AFEDA48AC2183512D7D9E25AF32A5FE0E34B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests1/Tests1.sln",
+      "bytes": 2311,
+      "sha256": "9AA0E2FC439ED5834879E6A16A047036F35243C678034E8A35DB768408296FD2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests1/Tests/TestLines.cs",
+      "bytes": 1316,
+      "sha256": "4375BCC2AD1B3563D831794C1812EF9C1ABCF2AB16C29D177956FDF37AAED205",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests1/Tests/TestOffset.cs",
+      "bytes": 322,
+      "sha256": "BBE913DF35C47152F4EDAAF61238D6233EC254758D7563639E6694BEF24DF839",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests1/Tests/TestPolygons.cs",
+      "bytes": 2911,
+      "sha256": "8D996E76C51A81678F736AD40BA1934E60C46E42A4F8BB060CE96DBE2DBC1F9D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests1/Tests/TestPolytree.cs",
+      "bytes": 6823,
+      "sha256": "C789ED15A094F9F0E49E4713AD463CBD8F8EA97733207EBADC204410F5D2E996",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests2/TestsZ.csproj",
+      "bytes": 1075,
+      "sha256": "C839EB1E63293F2BEF7DC5FE4BAC1AD06898A239385507506B81C931B23158D0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests2/TestsZ.sln",
+      "bytes": 3052,
+      "sha256": "E4168CF76303A6D77DC992F58A4A412057F3E2BF84647773A779F2C9C7E49741",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Tests/Tests2/Tests/TestZCallback1.cs",
+      "bytes": 4578,
+      "sha256": "9356FF876CAAC93DB1F6BAAC62F09D2BDB674B639E8653FBAA841B28DBA47C54",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/USINGZ/Clipper2Lib_Z.csproj",
+      "bytes": 1282,
+      "sha256": "52909EAC90B88DFA94A706D20E4769D1DDBD6BC19B77DAE90A895F4BFF1938AC",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Utils/ClipFileIO/Clipper.FileIO.cs",
+      "bytes": 8667,
+      "sha256": "54B729CB143D14FDBD6E5DEA08E9D17A0E43BFB753BC1A95746F84A29280B441",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Utils/ClipFileIO/Clipper.FileIO.csproj",
+      "bytes": 420,
+      "sha256": "97D40DC448993C8396A42E66F06B19A694535974A35648072DBF3E1AD6D4D316",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Utils/SVG/Clipper.SVG.cs",
+      "bytes": 13795,
+      "sha256": "214FC443B1320411542CB1992250BC6D710E231855672DE69FC4E3AB4A241EE9",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Utils/SVG/Clipper.SVG.Utils.cs",
+      "bytes": 3925,
+      "sha256": "FA90F3A370354BFC95071998596912B0B7A4F164A66AC1EB4B5A86F7785416AE",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "CSharp/Utils/SVG/Clipper2.SVG.csproj",
+      "bytes": 357,
+      "sha256": "0C7EBBF66D541F4A89BC52366BD6C35B5CA5BFF588EC88B8D130F463BD2418F0",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/BenchMark/DelphiBenchmark.dpr",
+      "bytes": 2303,
+      "sha256": "B254297E9337B5A81FD3E895E3B53123F05163B999EA0307EBAC20F589D569D2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/BenchMark/DelphiBenchmark.dproj",
+      "bytes": 7237,
+      "sha256": "068A2E9E431C23103FB97A1A9479686E16E4872DE20A50337C24EDEA85F7E7AA",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.Core.pas",
+      "bytes": 79686,
+      "sha256": "D992A8105B5107A4C3981B83D6EEFE1D307B2CF12B4E468F223292FB3C78370E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.Engine.pas",
+      "bytes": 126668,
+      "sha256": "E3C6CFC892D2243F9F2F220FAD4251658D05FDFCA881CF01D9F321AB562E5E20",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.inc",
+      "bytes": 1273,
+      "sha256": "F9DE956656A28EC8BC7FBD0E21F185471F1A7729E9F4B2BB74DD862E70FA4766",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.Minkowski.pas",
+      "bytes": 4153,
+      "sha256": "219A568AA45B0091BCE1C4F1F2F57DBA82FC6AB5F74C41D34D9EFE5014AC8A29",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.Offset.pas",
+      "bytes": 31026,
+      "sha256": "5CAB1CBA783FEFBACAD393A8E5CEC1E52C97DD8C36157C1154DAD822B9D0D532",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.pas",
+      "bytes": 31047,
+      "sha256": "E1EC1F284BDE3076C68040A87527BC70571FADF469E6BE60AF44FA155C505B02",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.RectClip.pas",
+      "bytes": 34293,
+      "sha256": "6590887D324E287231AD8787E9A4E889FBF04DB810E7A519E8DA336BC9976E42",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Clipper2Lib/Clipper.Triangulation.pas",
+      "bytes": 48334,
+      "sha256": "9EB1418E6DEEE25B9D77DBEFB370F5054B9CB8D7130240DEEEA27354FFAEE9B2",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Examples/Example1/Example1.dpr",
+      "bytes": 2770,
+      "sha256": "440B2A62AA9E73CB5E88145DED04ADD082D2A2BD57FC611634F89CF201BDAA9B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Examples/Example2/Example2.dpr",
+      "bytes": 2863,
+      "sha256": "C2C195569BD79DC405AB2DAEEABBCCD35A1B97DCF9D00D7E68A69FCDFE71C969",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Examples/Example2/rabbit.svg",
+      "bytes": 1897,
+      "sha256": "0117C42DFE0B59B6672150836D9FA12C64125F5FEBC5016DF865DECEE50A67AF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Examples/RectClip/RectClip_Demo.dpr",
+      "bytes": 2249,
+      "sha256": "6314D7E7D038D0697E74C581C18CD92D2DDFD24745443AC14C2F489295EBD8C6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Examples/Triangulation/ClipperTri.dpr",
+      "bytes": 1006,
+      "sha256": "AF147650DEE410AB75633235D1A7657AC28A23558BCA51024B45D30F7352D8E3",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Utils/ClipMisc.pas",
+      "bytes": 8357,
+      "sha256": "84A76B9CDBB70F60A604408DB8538A8C8937E56F89FE312A62062A2DBB17CA08",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Utils/Clipper.SVG.pas",
+      "bytes": 24867,
+      "sha256": "8DED50D491A99CB3D4F8F85B87EECF3A8EB24273E598FBD7AB92A49DE518A6B1",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Utils/Colors.pas",
+      "bytes": 1760,
+      "sha256": "535BACB1D7C3C7FB9FD964286C6AD107C7AC9D26231CB5690F0AA0C05A7414D6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Delphi/Utils/Timer.pas",
+      "bytes": 1744,
+      "sha256": "A8841428DA77E667764EEA365D963261C78783B30F8660CB513471602057F92D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/ReadMe.md",
+      "bytes": 848,
+      "sha256": "5691B0AFB22A3EC1B18B9FB2FC5A6E1998C4E0ADB844FBC5BD66BAD58CD18D13",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/Clipper2_DLL.sln",
+      "bytes": 1413,
+      "sha256": "06445C9C50EB6DD468D1EC71BE0DCC65534A0EFFA53D7FAD79E0DC846AB53B17",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/Clipper2_Dll.vcxproj",
+      "bytes": 9361,
+      "sha256": "3D3CB765D5CBF34F2DE1F911FE8A8FDA5723431B40AB35F06E98E8E0A263C5E8",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/Clipper2_Z_DLL.sln",
+      "bytes": 1413,
+      "sha256": "C83220B3F1C4065EA1A12D6028C9D7AF4C61C408F57322CA9A70629EDDF906C7",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/Clipper2ZDll.vcxproj",
+      "bytes": 9398,
+      "sha256": "27FD286E7845076B9E57995AF32C35DDAE54FD770D23C5A6BB8EB10FB8A28B78",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/dllmain.cpp",
+      "bytes": 451,
+      "sha256": "03CEDA09A0E0664D6E99780C14B0542810ACC03FBBB0E8D464E0AC4E7355F527",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/framework.h",
+      "bytes": 149,
+      "sha256": "D7E3273ACA06EE9A2B47EC7F96FBF06FD9301849EBF26BA54A441F8FCDE36BD6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/pch.cpp",
+      "bytes": 186,
+      "sha256": "B20AD711FA06E3EF62F8E3C626E13B3BDC69CFF08C60C8B358F38B09E16C99EF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/CPP_DLL/pch.h",
+      "bytes": 563,
+      "sha256": "AE8EDB9ED44E84DB3A64FF02BB4E053D661DC19474D8E284BDA1C4D625744A0B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/Clipper2Dll.Core.cs",
+      "bytes": 13211,
+      "sha256": "9F227CEE51D05117012E763EE2DBB0CDF3F89C602F839CB4C81D9D2C4CA210F4",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/Clipper2Dll.Svg.cs",
+      "bytes": 15699,
+      "sha256": "58DEE2C58EE1A670806B9B7F010A3544001A6B17B6F6DEB4D392A8C315286EFF",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/COPY Clipper2 DLLs HERE",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp/CSharp_TestApp.csproj",
+      "bytes": 606,
+      "sha256": "A4CD6E8D878EC886090F8B02A3D1C1DF64E8928C8ACC91049AEB7A568F8F7DB5",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp/CSharp_TestApp.sln",
+      "bytes": 1060,
+      "sha256": "387D2A8F01F218AE4BAB7F0B81DB83A55A772EDF7C3BFB1EC527E780694E6A64",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp/Program.cs",
+      "bytes": 13776,
+      "sha256": "A7D106C644CF55867D8762A2FA66DB74A6E53E00BE72E01A519BCF13A8F4CCA4",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2/CSharp_TestApp2.csproj",
+      "bytes": 721,
+      "sha256": "95A8CFB80CC3671BB0E4DBC39173F1B812595B179076A1B3105BD97782475C81",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2/CSharp_TestApp2.sln",
+      "bytes": 2750,
+      "sha256": "E9877EFA34545B6DA3695E01495F094B49F933D65D6E4EEE8D0C17A565035633",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/CSharp_TestApps/CSharp_TestApp2/Program.cs",
+      "bytes": 4609,
+      "sha256": "8A58AF7131C374ADE4DE429A58C78011CC9D37E319C903D9DF8F85C67542DF6E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/Delphi_TestApps/Clipper2Dll.Core.pas",
+      "bytes": 10493,
+      "sha256": "48BDEE1F5B8B7FA251F40B6D5C3BEEB96B6546A5D0FE441BA0DAEC2CCC86F2D8",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/Delphi_TestApps/Clipper2Dll.SVG.pas",
+      "bytes": 26463,
+      "sha256": "E10FEF051300871A3A455860655F21967DB56AAF51A8E5BC10854A2A247ED83E",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/Delphi_TestApps/COPY Clipper2 DLLs HERE",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "DLL/TEST_APPS/Delphi_TestApps/TestApp1/Test1_DLL.dpr",
+      "bytes": 7583,
+      "sha256": "F044E3EADDC5ABA632AAEC01DF459773EDFB7572067E2BC2B948BA2EBD1C9A9D",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Tests/Lines.txt",
+      "bytes": 2669,
+      "sha256": "1BEB973931B1FBBAA12A3BDEF207ECF322D7DAABD1FCC580C4CB4CFD9AB03321",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Tests/Offsets.txt",
+      "bytes": 22230,
+      "sha256": "82D1E5A9D9A673C942D66EC5A21930D174D99673C9C11A6026DCA39E95E2E92B",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Tests/Polygons.txt",
+      "bytes": 96359,
+      "sha256": "AF4D409FD8496225729240A9695904C90A151B3F89B6CFFF1601E702522E7D46",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Tests/PolytreeHoleOwner.txt",
+      "bytes": 68416,
+      "sha256": "A37DA43CF5A7EE1D056703B49DAEBD7DE472FADF1421E581F4E887BD0BFBACD6",
+      "sourceReadOnly": false
+    },
+    {
+      "path": "Tests/PolytreeHoleOwner2.txt",
+      "bytes": 707255,
+      "sha256": "E36A4C374DEECC0F09CD6E982A3E99F67733E937E38FDF2E910BA5FB5C6AC21B",
+      "sourceReadOnly": false
+    }
+  ],
+  "allSourceBlobsMatch": true
+}

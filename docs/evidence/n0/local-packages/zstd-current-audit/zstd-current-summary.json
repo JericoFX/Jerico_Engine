@@ -1,0 +1,77 @@
+{
+  "status": "READ_AUDIT_ONLY_NO_ARCHIVE_ACQUIRED_NO_BUILD",
+  "current_consumer": {
+    "target": "3rdParty::zstd",
+    "public_owner": "Code/Framework/AzCore/CMakeLists.txt:89",
+    "header": "Code/Framework/AzCore/AzCore/Compression/zstd_compression.h:13",
+    "advanced_allocator_calls": "Code/Framework/AzCore/AzCore/Compression/zstd_compression.cpp:63,112",
+    "stream_caller": "Code/Framework/AzCore/AzCore/IO/CompressorZStd.cpp",
+    "provider": "Associated binary package; no Code/3rdParty/zstd wrapper or current Findzstd.cmake",
+    "package_name": "zstd-1.35-multiplatform",
+    "package_sha256": "45d466c435f1095898578eedde85acf1fd27190e7ea99aeaa9acfd2f09e12665",
+    "source_override": "None exists in current Windows provider; binary package SHA must not become source SHA"
+  },
+  "primary_recipe": {
+    "repository": "https://github.com/o3de/3p-package-source",
+    "commit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "path": "package-system/zstd/build_config.json",
+    "package_version": "1.35-rev1",
+    "git_tag": "v1.3.5",
+    "platform": "Darwin/Mac-arm64 ONLY",
+    "created_commit": "d7d10e667a8c76a44dbef60d580a8116721d0228",
+    "created_utc": "2026-02-04T07:51:29Z",
+    "history_entries": 1,
+    "interpretation": "This primary recipe explicitly maps 1.35-rev1 to source v1.3.5; historical Windows package source/features/layout are not proved by a Mac-only recipe",
+    "metadata_license_error": "Recipe says 0BSD; fetched upstream LICENSE contains BSD-3-Clause, with alternate GPL-2.0 COPYING"
+  },
+  "exact_artifact_search": {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts?name=zstd-1.35-multiplatform&per_page=100",
+    "total_count": 0,
+    "scope": "Public current Actions exact-name query only; not a proof all historical artifacts are unavailable"
+  },
+  "candidate_source": {
+    "tag": "v1.3.5",
+    "commit": "90ae50224d15e8dbcb9fa26b9be096366733db8e",
+    "tag_type": "lightweight commit ref",
+    "archive_url": "https://codeload.github.com/facebook/zstd/tar.gz/90ae50224d15e8dbcb9fa26b9be096366733db8e",
+    "archive_sha256": null,
+    "archive_bytes": null,
+    "archive_acquired": false,
+    "source_snapshot": null,
+    "reason_not_acquired": "No source archive hash supplied by current Windows package or primary recipe; old binary package hash does not authenticate this candidate source archive",
+    "cmake_source_subdir": "build/cmake",
+    "minimum_cmake": "2.8.9; compatibility with the installed CMake requires owner review; no upstream configure attempted",
+    "upstream_static_target": "libzstd_static",
+    "upstream_msvc_static_filename": "zstd_static.lib (source-derived, not built)",
+    "installed_headers": [
+      "include/zstd.h",
+      "include/zbuff.h",
+      "include/zdict.h",
+      "include/zstd_errors.h"
+    ],
+    "source_count_without_legacy": 25,
+    "cmake_options_static_library_only": [
+      "-DZSTD_BUILD_STATIC=ON",
+      "-DZSTD_BUILD_SHARED=OFF",
+      "-DZSTD_BUILD_PROGRAMS=OFF",
+      "-DZSTD_BUILD_TESTS=OFF",
+      "-DZSTD_BUILD_CONTRIB=OFF"
+    ],
+    "feature_constraints": "Do not infer historical Windows LEGACY/MULTITHREAD/CRT flags from current Mac-only recipe. Mac CMake defaults LEGACY OFF, MULTITHREAD ON, MSVC static-runtime OFF. Preserve advanced allocator/deprecated/dictionary sources; no authorized removal.",
+    "windows_library_external_fetch": "None in the inspected root/lib/AddZstdCompilationFlags/GetZstdLibraryVersion closure; Windows threading comes from source. Upstream configure was not run.",
+    "no_add_subdir": "No current FetchContent provider to override. Upstream root always adds lib; programs/tests/contrib are conditional. A new local package/Find provider must be an explicit parent change and preserve 3rdParty::zstd.",
+    "mac_find_layout": "Findzstd.cmake + zstd/include + zstd/lib/libzstd.a; not proof of historical Windows layout",
+    "legal": [
+      "LICENSE: BSD-3-Clause Facebook/Yann Collet; COPYING: GPL-2.0 alternate",
+      "lib/common/xxhash.c: BSD-2-Clause Yann Collet notice",
+      "lib/dictBuilder/divsufsort.c: MIT Yuta Mori notice"
+    ],
+    "legal_scope": "Selected primary notices inspected; complete archive paths/types/links/collisions/legal audit remains required before source extraction",
+    "dangerous_optional_targets": "clean-all invokes rm -rf; uninstall removes manifest paths. Neither executed or required."
+  },
+  "pending": {
+    "historical_windows": "Exact old Find/layout/features and source hash not recovered",
+    "candidate_acceptance": "Parent must approve exact source identity and source-archive pin procedure; any reconstructed local artifact requires a new package name/hash and provenance, not AWS package hash",
+    "verification": "Luna must build and test real advanced custom-allocation streaming roundtrip and revalidate root; no ABI, Editor, runtime or N0 acceptance from this audit"
+  }
+}

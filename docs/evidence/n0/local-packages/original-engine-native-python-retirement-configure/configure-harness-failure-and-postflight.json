@@ -1,0 +1,58 @@
+{
+  "status": "configure-not-launched",
+  "attemptedHarness": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\original-engine-native-python-retirement-configure\\run-root-configure.ps1",
+  "attemptedHarnessSha256": "4af33ec2b2e12740817f39b3951527f64287e57c5956d46a958259c845d38cbd",
+  "error": "ConvertTo-Json -Depth 8 at run-root-configure.ps1 line 113 emitted a truncation warning, then failed with Insufficient memory to continue execution before ProcessStartInfo construction/start.",
+  "nativeCmakeExitCode": null,
+  "configureStdoutExists": false,
+  "configureStderrExists": false,
+  "evidenceScope": "current postflight only; no complete before snapshot retained or reconstructed; root freeze393 checked against assigned original, plus separately captured current cache, wheelhouse, GoogleBenchmark, SQLite root files, source trees and private copies",
+  "googleBenchmarkFiles": 174,
+  "sqliteRootInputFiles": 8,
+  "packageCacheFiles": 20,
+  "wheelhouseFiles": 44,
+  "copyTreeFiles": 1212,
+  "treeCounts": [
+    {
+      "name": "mimalloc-source-postflight",
+      "fileCount": 382
+    },
+    {
+      "name": "rapidjson-source-postflight",
+      "fileCount": 313
+    },
+    {
+      "name": "googlebenchmark-source-tree-postflight",
+      "fileCount": 173
+    },
+    {
+      "name": "sqlite-source-postflight",
+      "fileCount": 4
+    },
+    {
+      "name": "manifold-dependency-source-postflight",
+      "fileCount": 378
+    },
+    {
+      "name": "clipper-dependency-source-postflight",
+      "fileCount": 223
+    },
+    {
+      "name": "openmesh-dependency-source-postflight",
+      "fileCount": 611
+    },
+    {
+      "name": "manifold-private-copy-postflight",
+      "fileCount": 378
+    },
+    {
+      "name": "clipper-private-copy-postflight",
+      "fileCount": 223
+    },
+    {
+      "name": "openmesh-private-copy-postflight",
+      "fileCount": 611
+    }
+  ],
+  "rootFreezeMismatches": []
+}

@@ -1,0 +1,34 @@
+{
+  "executed": false,
+  "work_copies_created": false,
+  "paths": "proposed paths only; parent must create source copies and freeze their initial manifests",
+  "arguments": [
+    "-DFETCHCONTENT_SOURCE_DIR_MANIFOLD:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/manifold-3.5.1-root",
+    "-DFETCHCONTENT_SOURCE_DIR_CLIPPER2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_Clipper2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DMANIFOLD_CROSS_SECTION:BOOL=ON",
+    "-DMANIFOLD_CROSS_SECTION_BACKEND:STRING=clipper2",
+    "-DMANIFOLD_USE_BUILTIN_CLIPPER2:BOOL=ON",
+    "-DMANIFOLD_DOWNLOADS:BOOL=OFF",
+    "-DMANIFOLD_PAR:BOOL=OFF",
+    "-DMANIFOLD_TEST:BOOL=OFF",
+    "-DMANIFOLD_CBIND:BOOL=OFF",
+    "-DMANIFOLD_PYBIND:BOOL=OFF",
+    "-DTRACY_ENABLE:BOOL=OFF",
+    "-DMANIFOLD_FUZZ:BOOL=OFF",
+    "-DASSIMP_ENABLE:BOOL=OFF",
+    "-DMANIFOLD_NO_IOSTREAM:BOOL=OFF",
+    "-DCLIPPER2_UTILS:BOOL=OFF",
+    "-DCLIPPER2_EXAMPLES:BOOL=OFF",
+    "-DCLIPPER2_TESTS:BOOL=OFF",
+    "-DUSE_EXTERNAL_GBENCHMARK:BOOL=OFF",
+    "-DCLIPPER2_USINGZ:STRING=OFF"
+  ],
+  "existing_wrapper_forces": [
+    "MANIFOLD_PAR/TEST/CBIND/PYBIND/DEBUG OFF and scoped BUILD_SHARED_LIBS OFF"
+  ],
+  "existing_protections": "preserve no-server, validated local package/cache, FETCHCONTENT_FULLY_DISCONNECTED ON; do not replace with unprotected command",
+  "numeric_options": "leave CLIPPER2_HI_PRECISION OFF and CLIPPER2_MAX_DECIMAL_PRECISION 8 defaults unchanged",
+  "additional_case_alias": "exact mixed-case variable only satisfies upstream logmissingdep guard; uppercase remains actual provider/source override",
+  "cpp_source_subdir": "CPP supplied by wrapper declaration; source path must be Clipper root, not /CPP"
+}

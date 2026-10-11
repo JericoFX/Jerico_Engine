@@ -1,0 +1,82 @@
+Start testing: Oct 10 21:14 Hora estándar de Montevideo
+----------------------------------------------------------
+1/4 Testing: JE.LocalPackages.Lz4.blocks
+1/4 Test: JE.LocalPackages.Lz4.blocks
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1/Release/JELz4Consumer.exe" "blocks"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1
+"JE.LocalPackages.Lz4.blocks" start time: Oct 10 21:14 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS: linked library version is exactly 1.9.4
+PASS: default block compression
+PASS: safe block decode is byte exact
+PASS: HC block compression
+PASS: safe block decode is byte exact
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lz4.blocks" end time: Oct 10 21:14 Hora estándar de Montevideo
+"JE.LocalPackages.Lz4.blocks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: JE.LocalPackages.Lz4.frames
+2/4 Test: JE.LocalPackages.Lz4.frames
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1/Release/JELz4Consumer.exe" "frames"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1
+"JE.LocalPackages.Lz4.frames" start time: Oct 10 21:14 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS: linked library version is exactly 1.9.4
+PASS: default frame and decompression context
+PASS: ZipDir single-call frame roundtrip
+PASS: frame context released
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lz4.frames" end time: Oct 10 21:14 Hora estándar de Montevideo
+"JE.LocalPackages.Lz4.frames" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: JE.LocalPackages.Lz4.fragmented
+3/4 Test: JE.LocalPackages.Lz4.fragmented
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1/Release/JELz4Consumer.exe" "fragmented"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1
+"JE.LocalPackages.Lz4.fragmented" start time: Oct 10 21:14 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS: linked library version is exactly 1.9.4
+PASS: default frame and decompression context
+PASS: fragmented frame input/output roundtrip
+PASS: frame context released
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lz4.fragmented" end time: Oct 10 21:14 Hora estándar de Montevideo
+"JE.LocalPackages.Lz4.fragmented" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: JE.LocalPackages.Lz4.errors
+4/4 Test: JE.LocalPackages.Lz4.errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1/Release/JELz4Consumer.exe" "errors"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/lz4-consumer-rev1
+"JE.LocalPackages.Lz4.errors" start time: Oct 10 21:14 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS: linked library version is exactly 1.9.4
+PASS: block compression rejects short destination without overrun
+PASS: safe block decode and frame compression reject short destination
+PASS: truncated frame cannot report complete
+PASS: invalid frame magic reports an error
+PASS: failed frame context released
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Lz4.errors" end time: Oct 10 21:14 Hora estándar de Montevideo
+"JE.LocalPackages.Lz4.errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 21:14 Hora estándar de Montevideo

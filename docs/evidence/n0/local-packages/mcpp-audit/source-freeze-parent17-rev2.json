@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "purpose": "Parent reviewed rev2 LF write and raw file hash, original patch/pins unchanged",
+  "writerFreezeSHA256": "4A52DF6C7B8EF274D2F2CF2FCBFA8F5DFB6D59005AEF3B584AD89CF8AE6CF5D4",
+  "inputCount": 17,
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "bytes": 7461,
+      "sha256": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/ApplyMcppPatch.cmake",
+      "bytes": 4697,
+      "sha256": "87f5aa8cfd5b00eb41cc721e300e7214ab1c143e93018aa4985dc55b57a1e4ec"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake",
+      "bytes": 6760,
+      "sha256": "234d2d39993b56b5472a24d61aa95bdce5239cb0c6f63346a9d6040a7cbdd611"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/CMakeLists.txt",
+      "bytes": 2677,
+      "sha256": "9ac4314cb567685b7565955c02bcd4aa1e07701018ac7e04080d21d56225aa20"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/Findmcpp.cmake",
+      "bytes": 2585,
+      "sha256": "b9552d89681d392b85698706f88125a88e4ad0bce8402d9ed962adddf620f786"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch",
+      "bytes": 20311,
+      "sha256": "8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/McppPatchManifest.json",
+      "bytes": 10343,
+      "sha256": "9f8522a8a06ab9c4207f5f5ee7e7b41837831118512b07b0a8507bb5997aaec3"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/NOTICE.txt",
+      "bytes": 2359,
+      "sha256": "b880bdc496ae6331fbbf096cc749d214fe3f8e966f997247a1ace314884e029d"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/README.md",
+      "bytes": 2575,
+      "sha256": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/CMakeLists.txt",
+      "bytes": 3561,
+      "sha256": "1e27311b5821ae173bfef949fe5bc0062e27414b9c48021391c31bfd0452a681"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/McppConsumer.cpp",
+      "bytes": 7294,
+      "sha256": "96e989c07017976b74d8fc908524a5f90afd803a74c5e15d27762dbc55e9ccba"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/visualc.mak.original",
+      "bytes": 4712,
+      "sha256": "a35dc1b5c93acf904ebbad69065125ff93f1b2905d822ae518aa6593fb000c7f"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/mcpp-2.7.2.tar.gz",
+      "bytes": 1533457,
+      "sha256": "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    }
+  ],
+  "acceptance": "PENDING native producer/consumer/guards; no product claim"
+}

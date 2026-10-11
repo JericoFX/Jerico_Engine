@@ -1,0 +1,19 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenSSL/BuildOpenSSLPackage.cmake:65 (message):
+  JE local OpenSSL: portable Perl manifest verification failed (1):
+  F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\OpenSSL\VerifyPerlInput.ps1
+  : El t├®rmino 'Get-FileHash' no se
+
+  reconoce como nombre de un cmdlet, funci├│n, archivo de script o
+  programa ejecutable.  Compruebe si escribi├│
+
+  correctamente el nombre o, si incluy├│ una ruta de acceso, compruebe
+  que dicha ruta es correcta e int├®ntelo de nuevo.
+
+      + CategoryInfo          : ObjectNotFound: (Get-FileHash:String) [VerifyPerlInput.ps1], CommandNotFoundException
+      + FullyQualifiedErrorId : CommandNotFoundException,VerifyPerlInput.ps1
+   
+
+Call Stack (most recent call first):
+  openssl-perl-tool-audit/producer-candidate-inputs.cmake:11 (include)
+
+

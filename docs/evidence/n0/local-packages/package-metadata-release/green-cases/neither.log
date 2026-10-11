@@ -1,0 +1,6 @@
+exit=1
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake:39 (message):
+  JE local package: source commit or release is required
+
+

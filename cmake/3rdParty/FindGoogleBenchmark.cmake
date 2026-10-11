@@ -77,6 +77,11 @@ block()
     set(CMAKE_MESSAGE_LOG_LEVEL ${O3DE_FETCHCONTENT_MESSAGE_LEVEL})
     set(CMAKE_POLICY_VERSION_MINIMUM "3.10")
 
+    # Archive sources must not query an ancestor repository or refresh its Git index.
+    # Shadow inherited/cache executables: upstream checks GIT_EXECUTABLE directly.
+    set(CMAKE_DISABLE_FIND_PACKAGE_Git ON)
+    set(GIT_EXECUTABLE "")
+
     FetchContent_MakeAvailable(googlebenchmark)
 
     foreach(targetname benchmark benchmark_main)
