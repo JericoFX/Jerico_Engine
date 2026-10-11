@@ -100,11 +100,13 @@
         "Atom_Bootstrap",
         "AtomShader",
         "AtomViewportDisplayInfo",
+        "AudioSystem",
         "Camera",
         "CommonFeaturesAtom",
         "EditorModeFeedback",
         "Maestro",
         "PrefabBuilder",
+        "Profiler",
         "SceneProcessing"
     ],
     "projects": [

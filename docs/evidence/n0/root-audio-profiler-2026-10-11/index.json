@@ -1,0 +1,62 @@
+{
+  "scope": "Root configuration passed; subsequent WhiteBox build failed; no Editor/runtime acceptance",
+  "files": [
+    {
+      "file": "configure-configure-result.json",
+      "source": "build\\n0-validation\\local-packages\\root-audio-profiler-rev1\\attempt1\\configure-result.json",
+      "bytes": 321,
+      "sha256": "D56D62C696FCD99E48021784989E6FCB7EBA1E1778A48067FD8839CD83287C27"
+    },
+    {
+      "file": "configure-configure-native-start.json",
+      "source": "build\\n0-validation\\local-packages\\root-audio-profiler-rev1\\attempt1\\configure-native-start.json",
+      "bytes": 5162,
+      "sha256": "D20B88BA89315DB75C931D91BF9BFDB69583066B70BF14E12A7F42AB33C91133"
+    },
+    {
+      "file": "configure-configure.stdout.log",
+      "source": "build\\n0-validation\\local-packages\\root-audio-profiler-rev1\\attempt1\\configure.stdout.log",
+      "bytes": 109369,
+      "sha256": "F3815085F91E506A383C9117724BD56683CDBF70FF8BA1B4BFAA9BCED0EDCCA3"
+    },
+    {
+      "file": "configure-configure.stderr.log",
+      "source": "build\\n0-validation\\local-packages\\root-audio-profiler-rev1\\attempt1\\configure.stderr.log",
+      "bytes": 1084,
+      "sha256": "EAE78D81117939632167B1C182E11CE1242206450AB4094A6B8E040F10E63419"
+    },
+    {
+      "file": "configure-root-postflight-guard-result.json",
+      "source": "build\\n0-validation\\local-packages\\root-audio-profiler-rev1\\attempt1\\root-postflight-guard-result.json",
+      "bytes": 641,
+      "sha256": "79D0C703794CA453388C512DA3698BD4962A79B6DF88CE3A4D8D4C938DAA8AAA"
+    },
+    {
+      "file": "configure-input-postflight-deltas.json",
+      "source": "build\\n0-validation\\local-packages\\root-audio-profiler-rev1\\attempt1\\input-postflight-deltas.json",
+      "bytes": 5942,
+      "sha256": "7BFE61EF30BB3031DAE0CDF70CB9116CC24895EFDE867080F025485C95167567"
+    },
+    {
+      "file": "whitebox-red-validation-result.json",
+      "source": "build\\n0-validation\\local-packages\\whitebox-editor-native-build-rev1\\attempt1\\validation-result.json",
+      "bytes": 1605,
+      "sha256": "5019D4EDD46DC51E74BF5394B26575DF064C7AB4E9879BC25C46B3AA0D5C873D"
+    },
+    {
+      "file": "whitebox-red-whitebox-editor-build.result.json",
+      "source": "build\\n0-validation\\local-packages\\whitebox-editor-native-build-rev1\\attempt1\\whitebox-editor-build.result.json",
+      "bytes": 1028,
+      "sha256": "CC59284D43CB0EE73EEF083BCB32EE50C2ED2795C050D78309ECA1CE6F21B802"
+    },
+    {
+      "file": "whitebox-red-whitebox-editor-build.stdout.raw.log",
+      "source": "build\\n0-validation\\local-packages\\whitebox-editor-native-build-rev1\\attempt1\\whitebox-editor-build.stdout.raw.log",
+      "bytes": 324535,
+      "sha256": "AD3459FB756C8642EC8BE5DF547951878D5810E4CBF1A4232650C9A033D8AAFC"
+    }
+  ],
+  "rootFreezeSHA256": "DEC3DF80908B0A9F88A69BBAF5718628B9EF2187ABB74C6077B299EE77C04A1C",
+  "buildFreezeSHA256": "2728A090779E72564040E538AA89DD929F7310F83214CD6D7EB0125DEF9CB151",
+  "note": "Full local freezes and pre/post manifests remain under original build evidence paths."
+}

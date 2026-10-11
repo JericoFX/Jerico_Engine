@@ -1,0 +1,26 @@
+{
+  "name": "whitebox-editor-build",
+  "utc": "2026-10-11T19:46:02.9993206Z",
+  "PID": 202232,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "--config",
+    "profile",
+    "--target",
+    "WhiteBox.Editor.Tests",
+    "AzTestRunner",
+    "--parallel",
+    "6"
+  ],
+  "count": 9,
+  "exitCode": 1,
+  "elapsedSeconds": 1133.0794592,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-editor-native-build-rev1\\attempt1\\whitebox-editor-build.stdout.raw.log",
+  "stdoutBytes": 324535,
+  "stdoutSHA256": "AD3459FB756C8642EC8BE5DF547951878D5810E4CBF1A4232650C9A033D8AAFC",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\whitebox-editor-native-build-rev1\\attempt1\\whitebox-editor-build.stderr.raw.log",
+  "stderrBytes": 0,
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}
