@@ -1,0 +1,13 @@
+{
+  "status": "DRAFT_REVIEWED_NOT_EXECUTABLE",
+  "proofSHA256": "754B660B4EA48BF7FDFA3BAC5BCB8FC360CA9FB69675AB56AD2DC8D70BF3B91C",
+  "baselineSHA256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+  "draftSHA256": "E4C25C639081E5F044FBFD37E967278357DB768948955D874CD8FDD794855DD1",
+  "literalReplacements": 12,
+  "inverseByteExact": true,
+  "inverseBytes": 27278,
+  "inverseSHA256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+  "ASTErrors": 0,
+  "argumentPrefix": "Previously checked exact 48 plus 13 in batch input review",
+  "limitations": "Draft throw/PENDING placeholders/count0 retained. Final assignment, freeze and driver require another parent review before Luna."
+}

@@ -1,0 +1,11 @@
+--- a/engine.json
++++ b/engine.json
+@@ -53,8 +53,6 @@
+         "Gems/Microphone",
+         "Gems/MiniAudio",
+         "Gems/MotionMatching",
+-        "Gems/Multiplayer",
+-        "Gems/MultiplayerCompression",
+         "Gems/NvCloth",
+         "Gems/OpenParticleSystem",
+         "Gems/PhysX/Common",

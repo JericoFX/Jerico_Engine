@@ -1,0 +1,133 @@
+{
+  "status": "FINAL ROOT61 CANDIDATE; PARENT REVIEW/DISPATCH PENDING; NATIVE UNEXECUTED",
+  "counts": {
+    "reviewed-root2532": {
+      "validated": 2532,
+      "added": 2532,
+      "duplicates": 0
+    },
+    "reviewed-batch12957": {
+      "validated": 12957,
+      "added": 12947,
+      "duplicates": 10
+    },
+    "approved-batch-MP-driver-provenance": {
+      "validated": 20,
+      "added": 19,
+      "duplicates": 1
+    },
+    "parent-reviewed-SMC10sources": {
+      "validated": 10,
+      "added": 10,
+      "duplicates": 0
+    },
+    "parent-reviewed-SMC14references": {
+      "validated": 14,
+      "added": 12,
+      "duplicates": 2
+    },
+    "SMC-authority-and-base-preparation": {
+      "validated": 9,
+      "added": 9,
+      "duplicates": 0
+    }
+  },
+  "rawInputCount": 15542.0,
+  "uniqueInputCount": 15529,
+  "dedupCount": 13.0,
+  "oldRootDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "beforeSHA256": "0bf845bedef7f84dcf51f5ec986fe0b7ad6fefccb7b4e823c260d062240618a3",
+      "afterSHA256": "605d32ccdd7dfa055560bc81ef79e743dc167318683e1e30733a507f3c582226",
+      "beforeBytes": 3827,
+      "afterBytes": 3758,
+      "reason": "Only two parent-approved Multiplayer composition rows,69bytes; parent-review67ADB pinned"
+    }
+  ],
+  "SMCSourceCount": 10,
+  "SMCReferenceCount": 14,
+  "argumentCount": 61,
+  "prior48PrefixExact": true,
+  "newTrees": 16,
+  "newPatchedBaselines": 3,
+  "cacheFileCount": 32,
+  "wheelhouseCount": 44,
+  "packagePairs": 8,
+  "ASTErrors": 0,
+  "inverseToRoot48DriverByteExact": true,
+  "driverFinalChanges": [
+    {
+      "after": "",
+      "before": "throw 'DRAFT ONLY: pending approved SMC source freeze and final assignment hashes; no execution allowed'\n"
+    },
+    {
+      "after": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6",
+      "before": "PENDING_FINAL_ASSIGNMENT_SHA256"
+    },
+    {
+      "after": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44",
+      "before": "PENDING_FINAL_FREEZE_SHA256"
+    },
+    {
+      "after": "$arguments.Count -ne 61 -or $freeze.Count -ne 15529",
+      "before": "$arguments.Count -ne 61 -or $freeze.Count -ne 0"
+    }
+  ],
+  "draftDriverReplacements": [
+    {
+      "before": "$ErrorActionPreference = 'Stop'",
+      "after": "throw 'DRAFT ONLY: pending approved SMC source freeze and final assignment hashes; no execution allowed'\n$ErrorActionPreference = 'Stop'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-cli11-final'",
+      "after": "'build/n0-validation/local-packages/root-fetchcontent-batch-final'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-cli11-final/root-cli11-assignment.json'",
+      "after": "'build/n0-validation/local-packages/root-fetchcontent-batch-final/root-batch-assignment.json'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-cli11-final/source-freeze-root-cli11.json'",
+      "after": "'build/n0-validation/local-packages/root-fetchcontent-batch-final/source-freeze-root-batch.json'"
+    },
+    {
+      "before": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53",
+      "after": "PENDING_FINAL_ASSIGNMENT_SHA256"
+    },
+    {
+      "before": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292",
+      "after": "PENDING_FINAL_FREEZE_SHA256"
+    },
+    {
+      "before": "$arguments.Count -ne 48 -or $freeze.Count -ne 2532",
+      "after": "$arguments.Count -ne 61 -or $freeze.Count -ne 0"
+    },
+    {
+      "before": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2') { throw 'exact local CLI11 override missing' }",
+      "after": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2') { throw 'exact local CLI11 override missing' }\n$expectedPriorArguments = @(\n    '-S',\n    'F:/JericoEngine/JericoEngine',\n    '-B',\n    'F:/JericoEngine/JericoEngine/build/n0-validation/original-engine',\n    '-G',\n    'Visual Studio 17 2022',\n    '-A',\n    'x64',\n    '-DLY_PACKAGE_SERVER_URLS:STRING=',\n    '-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps',\n    '-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache',\n    '-DLY_PACKAGE_VALIDATE_CONTENTS=ON',\n    '-DLY_PACKAGE_VALIDATE_PACKAGE=ON',\n    '-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON',\n    '-DJE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3',\n    '-DJE_PYTHON_WHEELHOUSE:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse',\n    '-DCMAKE_MESSAGE_LOG_LEVEL:STRING=VERBOSE',\n    '-DFETCHCONTENT_SOURCE_DIR_MIMALLOC:PATH=F:/JericoEngine/Dependencies/mimalloc-3.5.2',\n    '-DFETCHCONTENT_SOURCE_DIR_RAPIDJSON:PATH=F:/JericoEngine/Dependencies/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f',\n    '-DLY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture',\n    '-DFETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=F:/JericoEngine/Dependencies/googlebenchmark-1.7.0',\n    '-DFETCHCONTENT_SOURCE_DIR_SQLITE:PATH=F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400',\n    '-DFETCHCONTENT_SOURCE_DIR_MANIFOLD:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/manifold-3.5.1-root',\n    '-DFETCHCONTENT_SOURCE_DIR_CLIPPER2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root',\n    '-DFETCHCONTENT_SOURCE_DIR_Clipper2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root',\n    '-DFETCHCONTENT_SOURCE_DIR_OPENMESH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/OpenMesh-11.0.0-root',\n    '-DMANIFOLD_CROSS_SECTION:BOOL=ON',\n    '-DMANIFOLD_CROSS_SECTION_BACKEND:STRING=clipper2',\n    '-DMANIFOLD_USE_BUILTIN_CLIPPER2:BOOL=ON',\n    '-DMANIFOLD_DOWNLOADS:BOOL=OFF',\n    '-DMANIFOLD_PAR:BOOL=OFF',\n    '-DMANIFOLD_TEST:BOOL=OFF',\n    '-DMANIFOLD_CBIND:BOOL=OFF',\n    '-DMANIFOLD_PYBIND:BOOL=OFF',\n    '-DMANIFOLD_FUZZ:BOOL=OFF',\n    '-DTRACY_ENABLE:BOOL=OFF',\n    '-DASSIMP_ENABLE:BOOL=OFF',\n    '-DMANIFOLD_NO_IOSTREAM:BOOL=OFF',\n    '-DCLIPPER2_UTILS:BOOL=OFF',\n    '-DCLIPPER2_EXAMPLES:BOOL=OFF',\n    '-DCLIPPER2_TESTS:BOOL=OFF',\n    '-DCLIPPER2_USINGZ:STRING=OFF',\n    '-DUSE_EXTERNAL_GBENCHMARK:BOOL=OFF',\n    '-DOPENMESH_BENCHMARK_DIR:PATH=',\n    '-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=F:/JericoEngine/Dependencies/googletest-v1.18.0',\n    '-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b',\n    '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2',\n    '-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2'\n)\nfor ($index = 0; $index -lt 48; $index++) {\n    if ($arguments[$index] -cne $expectedPriorArguments[$index]) { throw \"prior48 argv prefix differs at $index\" }\n}\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_XXHASH:PATH=F:/JericoEngine/Dependencies/xxhash-0.8.3') { throw 'exact local xxhash override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_D3D12MEMORYALLOCATOR:PATH=F:/JericoEngine/Dependencies/D3D12MemoryAllocator-3.2.0') { throw 'exact local D3D12MemoryAllocator override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_MESHOPTIMIZER:PATH=F:/JericoEngine/Dependencies/meshoptimizer-1.2') { throw 'exact local meshoptimizer override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_SQUISH-CCR:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/squish-ccr-batch-root') { throw 'exact local squish-ccr override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_SSE2NEON:PATH=F:/JericoEngine/Dependencies/sse2neon-1.9.1') { throw 'exact local sse2neon override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_MIKKTSPACE:PATH=F:/JericoEngine/Dependencies/mikktspace-3e895b49d05ea07e4c2133156cfa94369e19e409') { throw 'exact local mikktspace override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_OGG:PATH=F:/JericoEngine/Dependencies/ogg-1.3.6') { throw 'exact local ogg override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_VORBIS:PATH=F:/JericoEngine/Dependencies/vorbis-1.3.7') { throw 'exact local vorbis override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_MINIAUDIO:PATH=F:/JericoEngine/Dependencies/miniaudio-0.11.22') { throw 'exact local miniaudio override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_V-HACD:PATH=F:/JericoEngine/Dependencies/v-hacd-4.1.0') { throw 'exact local v-hacd override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_RECASTNAVIGATION:PATH=F:/JericoEngine/Dependencies/RecastNavigation-1.6.0') { throw 'exact local RecastNavigation override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_ASSIMP:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/assimp-6.0.4-batch-root-rev2') { throw 'exact local assimp override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_TINYUSDZ_REPO:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/_deps/tinyusdz_repo-src') { throw 'exact local tinyusdz_repo override missing' }"
+    },
+    {
+      "before": "    @{name='cli11-tree-before';path='F:\\JericoEngine\\Dependencies\\cli11-2.6.2'},",
+      "after": "    @{name='cli11-tree-before';path='F:\\JericoEngine\\Dependencies\\cli11-2.6.2'},\n    @{name='batch-xxhash-original-before';path='F:\\JericoEngine\\Dependencies\\xxhash-0.8.3'},\n    @{name='batch-D3D12MemoryAllocator-original-before';path='F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0'},\n    @{name='batch-meshoptimizer-original-before';path='F:\\JericoEngine\\Dependencies\\meshoptimizer-1.2'},\n    @{name='batch-squish-ccr-original-before';path='F:\\JericoEngine\\Dependencies\\squish-ccr-deb557d2fa647b191b37a2d8682df54ec8a7cfba'},\n    @{name='batch-squish-ccr-private-before';path='F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\squish-ccr-batch-root'},\n    @{name='batch-sse2neon-original-before';path='F:\\JericoEngine\\Dependencies\\sse2neon-1.9.1'},\n    @{name='batch-mikktspace-original-before';path='F:\\JericoEngine\\Dependencies\\mikktspace-3e895b49d05ea07e4c2133156cfa94369e19e409'},\n    @{name='batch-ogg-original-before';path='F:\\JericoEngine\\Dependencies\\ogg-1.3.6'},\n    @{name='batch-vorbis-original-before';path='F:\\JericoEngine\\Dependencies\\vorbis-1.3.7'},\n    @{name='batch-miniaudio-original-before';path='F:\\JericoEngine\\Dependencies\\miniaudio-0.11.22'},\n    @{name='batch-v-hacd-original-before';path='F:\\JericoEngine\\Dependencies\\v-hacd-4.1.0'},\n    @{name='batch-RecastNavigation-original-before';path='F:\\JericoEngine\\Dependencies\\RecastNavigation-1.6.0'},\n    @{name='batch-assimp-original-before';path='F:\\JericoEngine\\Dependencies\\assimp-6.0.4'},\n    @{name='batch-assimp-private-before';path='F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\assimp-6.0.4-batch-root-rev2'},\n    @{name='batch-tinyusdz_repo-original-before';path='F:\\JericoEngine\\Dependencies\\tinyusdz-6050eef932f7d2788656d63297aa488fb0961ed1'},\n    @{name='batch-tinyusdz_repo-private-before';path='F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\_deps\\tinyusdz_repo-src'},"
+    },
+    {
+      "before": "if (@($privateComparison | Where-Object { $_.preconfigureDifferences.Count -ne 0 }).Count) { throw 'private source copies differ from the assigned pristine source before configure' }",
+      "after": "if (@($privateComparison | Where-Object { $_.preconfigureDifferences.Count -ne 0 }).Count) { throw 'private source copies differ from the assigned pristine source before configure' }\n$batchPatchPairs = @(\n    @{name='squish-ccr';receipt='F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-acquisition\\squish-ccr\\private-patch-receipt.json';sha256='085166C2A6EAA6CD0850A5DD80D9CCFBDD8E267BBF1546DB959DCB067E00C456'},\n    @{name='assimp';receipt='F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-acquisition\\assimp\\private-patch-receipt.json';sha256='4EA45CD24053E2E112D8FE6F1999751F16AB3FFFA2179D8F6670C09DF0842B8E'},\n    @{name='tinyusdz_repo';receipt='F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-acquisition\\tinyusdz_repo\\private-patch-receipt.json';sha256='D7945870E4F0858CA6EE21D8CF438ADB775599F05E04326808E41F412DF8895F'}\n)\nfunction Compare-BatchPatchBaseline([string]$phase) {\n    $results = @()\n    foreach ($pair in $batchPatchPairs) {\n        if ((Get-FileHash -LiteralPath $pair.receipt).Hash -ne $pair.sha256) { throw \"assigned patch receipt differs: $($pair.name)\" }\n        $expected = Get-Content -LiteralPath $pair.receipt -Raw | ConvertFrom-Json\n        $source = Get-Content -LiteralPath (Join-Path $evidence \"batch-$($pair.name)-original-$phase.json\") -Raw | ConvertFrom-Json\n        $copy = Get-Content -LiteralPath (Join-Path $evidence \"batch-$($pair.name)-private-$phase.json\") -Raw | ConvertFrom-Json\n        $errors = @()\n        foreach ($check in @(@{actual=$source;expected=$expected.immutableBefore;kind='immutable'},@{actual=$copy;expected=$expected.privateBaseline;kind='patched-private'})) {\n            $map = @{}; foreach ($row in $check.expected) { $map[$row.relative]=$row }\n            foreach ($row in $check.actual.files) {\n                $relative = $row.relativePath.Replace('\\','/')\n                if (-not $map.ContainsKey($relative) -or $map[$relative].sha256 -ne $row.sha256 -or $map[$relative].bytes -ne $row.bytes) { $errors += \"$($check.kind):changed-or-added:$relative\" }\n                $map.Remove($relative)\n            }\n            foreach ($missing in $map.Keys) { $errors += \"$($check.kind):missing:$missing\" }\n            if ($check.actual.fileCount -ne $expected.fileCount) { $errors += \"$($check.kind):file-count-differs\" }\n        }\n        $results += [pscustomobject]@{name=$pair.name;immutableFiles=$source.fileCount;patchedPrivateFiles=$copy.fileCount;expectedPatchedFiles=$expected.changedFiles.Count;baselineErrors=$errors}\n    }\n    $results | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $evidence \"batch-private-copy-comparison-$phase.json\") -Encoding utf8\n    if (@($results | Where-Object { $_.baselineErrors.Count -ne 0 }).Count) { throw \"batch assigned patched baseline differs: $phase\" }\n}\nCompare-BatchPatchBaseline 'before'"
+    },
+    {
+      "before": "    'private-copy-comparison-before.json','accepted-native-packages-before.json'",
+      "after": "    'private-copy-comparison-before.json','accepted-native-packages-before.json','batch-private-copy-comparison-before.json'"
+    },
+    {
+      "before": "$privateAfter | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $evidence 'private-copy-comparison-after.json') -Encoding utf8",
+      "after": "$privateAfter | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $evidence 'private-copy-comparison-after.json') -Encoding utf8\nCompare-BatchPatchBaseline 'after'"
+    }
+  ],
+  "sourceFreezeSHA256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44",
+  "assignmentSHA256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6",
+  "driverSHA256": "74DAF7FC695E17ECB8DEC04104ED346DAFB47AE53765F5B2310DCBD67D198F7F",
+  "sourceFreezeSMCSHA256": "00142D9F855B8A826AA30236FA713D80F24A3F4AECDD910E94BC34297FE263A7",
+  "parentSMCReviewSHA256": "FEB02D4373165B22579474631D15B43005DDA2AAA7407D8726771F44E31799E2",
+  "nativeExecuted": false
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/port/PyAssimp/LICENSE",
+    "status": 200,
+    "length": 758,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/port/PyAssimp/LICENSE",
+    "status": 200,
+    "length": 758,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models-nonbsd/Ogre/OgreSDK/LICENSE",
+    "status": 200,
+    "length": 1136,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models-nonbsd/Ogre/OgreSDK/LICENSE",
+    "status": 200,
+    "length": 1136,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/AnimatedMorphCube/LICENSE.md",
+    "status": 200,
+    "length": 665,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/AnimatedMorphCube/LICENSE.md",
+    "status": 200,
+    "length": 665,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/MorphPrimitivesTest/LICENSE.md",
+    "status": 200,
+    "length": 796,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/MorphPrimitivesTest/LICENSE.md",
+    "status": 200,
+    "length": 796,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/MorphStressTest/LICENSE.md",
+    "status": 200,
+    "length": 665,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/MorphStressTest/LICENSE.md",
+    "status": 200,
+    "length": 665,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/SimpleMorph/LICENSE.md",
+    "status": 200,
+    "length": 658,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/SimpleMorph/LICENSE.md",
+    "status": 200,
+    "length": 658,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/glTF-Asset-Generator/LICENSE",
+    "status": 200,
+    "length": 1065,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/glTF-Asset-Generator/LICENSE",
+    "status": 200,
+    "length": 1065,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

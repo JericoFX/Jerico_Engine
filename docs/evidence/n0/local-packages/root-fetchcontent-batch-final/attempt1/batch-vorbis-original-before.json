@@ -1,0 +1,2092 @@
+﻿{
+    "name":  "batch-vorbis-original-before",
+    "path":  "F:\\JericoEngine\\Dependencies\\vorbis-1.3.7",
+    "fileCount":  417,
+    "files":  [
+                  {
+                      "relativePath":  ".gitignore",
+                      "bytes":  814,
+                      "sha256":  "cfdb783d7890e5bf912b0ede72154e796ffb7f2280f66e36de724184b7c5b2b4"
+                  },
+                  {
+                      "relativePath":  ".gitlab-ci.yml",
+                      "bytes":  556,
+                      "sha256":  "1722933aa0a9ee329ef0c1051224cc16a4461edda95e6339f7e1dfe9d56d0d79"
+                  },
+                  {
+                      "relativePath":  ".travis.yml",
+                      "bytes":  517,
+                      "sha256":  "0bca69d46eba361e200cef0779da1b51fc58b9a572bab7e9a4782d9f16744e6b"
+                  },
+                  {
+                      "relativePath":  ".ycm_extra_conf.py",
+                      "bytes":  195,
+                      "sha256":  "c4688396fa50cc78c1e08f3fb25d17b357367de3d0b84c0681eb3c8300f90358"
+                  },
+                  {
+                      "relativePath":  "appveyor.yml",
+                      "bytes":  1842,
+                      "sha256":  "07cf1574fd79d865d4dc7dc0a2c4c3b4a5ffbe5d0fbaeec32b7809faa170427b"
+                  },
+                  {
+                      "relativePath":  "AUTHORS",
+                      "bytes":  65,
+                      "sha256":  "f5cab9f16035f770f50299f85cf2938c06dc3a9a30425961067788102ec896d3"
+                  },
+                  {
+                      "relativePath":  "autogen.sh",
+                      "bytes":  245,
+                      "sha256":  "9825dccae7dfdc8a43d57e6426e5dcbd0e7298b0eba70a4b52e573d6bf3cfc73"
+                  },
+                  {
+                      "relativePath":  "Brewfile",
+                      "bytes":  39,
+                      "sha256":  "0ea450c6fd29a230b5df0613b1aa2aeb5f2fd20c33ad7ec4c2240ac84617c9d6"
+                  },
+                  {
+                      "relativePath":  "CHANGES",
+                      "bytes":  7302,
+                      "sha256":  "18d414a3069c3b76f9cb0d4dde91bcb6189914acb63d42c56e1e2775b601946d"
+                  },
+                  {
+                      "relativePath":  "CMakeLists.txt",
+                      "bytes":  2705,
+                      "sha256":  "66083c2c545fab98a075e3c5aa3b73d113ae41dcfeb6040a5f435e58059e69d5"
+                  },
+                  {
+                      "relativePath":  "configure.ac",
+                      "bytes":  9618,
+                      "sha256":  "f28f6a79162f31639d12ab86ffcc496c3bcb0b5e3ede9544eb69ec37abf76901"
+                  },
+                  {
+                      "relativePath":  "COPYING",
+                      "bytes":  1470,
+                      "sha256":  "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a"
+                  },
+                  {
+                      "relativePath":  "libvorbis.spec.in",
+                      "bytes":  3311,
+                      "sha256":  "e26e72eb53c16ec911274c7cd582c911b0572d64e1574c3c4c6ec9c1b2cf656b"
+                  },
+                  {
+                      "relativePath":  "Makefile.am",
+                      "bytes":  1030,
+                      "sha256":  "7d1feef1b92fc80cdb7bf9f4b97317923f67d1afed5466320f725b821a85d743"
+                  },
+                  {
+                      "relativePath":  "README.md",
+                      "bytes":  4786,
+                      "sha256":  "d408e3a8d5eeb70e4dec13fffefbd21c4d4c0b584ae3d6fe4245ef7673a2a739"
+                  },
+                  {
+                      "relativePath":  "vorbis-uninstalled.pc.in",
+                      "bytes":  308,
+                      "sha256":  "4cfdc2d7e4fab380e6ad7c95ac98d88238fde7f33a73ae0efe3a906f0b388efe"
+                  },
+                  {
+                      "relativePath":  "vorbis.m4",
+                      "bytes":  4861,
+                      "sha256":  "cf48b40f1ef8a389d66159ed927ee2f9e17ec91ad3ee936da4645899988b31f5"
+                  },
+                  {
+                      "relativePath":  "vorbis.pc.in",
+                      "bytes":  318,
+                      "sha256":  "d944e22d97a998ff19732da122590e77aef4dcae5214c61a5a5a73f0f593be10"
+                  },
+                  {
+                      "relativePath":  "vorbisenc-uninstalled.pc.in",
+                      "bytes":  374,
+                      "sha256":  "7527f0fc0b610d2b25cdf5fdfb2be9b86d6f50aef5e616be7a1582d6f9d57c38"
+                  },
+                  {
+                      "relativePath":  "vorbisenc.pc.in",
+                      "bytes":  369,
+                      "sha256":  "c7618177398f1932bf72ff201f9254f0f9282d10bd4d0728f24c2079bc8f59f6"
+                  },
+                  {
+                      "relativePath":  "vorbisfile-uninstalled.pc.in",
+                      "bytes":  400,
+                      "sha256":  "680e45eeba0524daf4161326bc2142e9604ff8d20442e7ad9b68a397aec80dfa"
+                  },
+                  {
+                      "relativePath":  "vorbisfile.pc.in",
+                      "bytes":  395,
+                      "sha256":  "6b87a037371e58801d91c3dd5109d49ba14a6a2cc8e7fae2880d35c76820a21b"
+                  },
+                  {
+                      "relativePath":  "cmake\\FindOgg.cmake",
+                      "bytes":  2132,
+                      "sha256":  "b199744a80e7d4762bc1ad56147d453e4f3b7ab925cf003ad639e9253a2495f4"
+                  },
+                  {
+                      "relativePath":  "cmake\\VorbisConfig.cmake.in",
+                      "bytes":  396,
+                      "sha256":  "76ae79f2a7d05142ddfdbf75a1f2230f0fb9c9d46f2d4346a6965fc015f68989"
+                  },
+                  {
+                      "relativePath":  "contrib\\oss-fuzz\\build.sh",
+                      "bytes":  563,
+                      "sha256":  "6c7ee1dcf4c9a2836fd917506ce83a7716395ada04fd9027d2987a2244f02c1f"
+                  },
+                  {
+                      "relativePath":  "contrib\\oss-fuzz\\decode_fuzzer.cc",
+                      "bytes":  1175,
+                      "sha256":  "a1ad08f974fb17ad41c9cfc28225cdf86d48e5df3b34a01d610baa6923b25acc"
+                  },
+                  {
+                      "relativePath":  "debian\\changelog",
+                      "bytes":  6760,
+                      "sha256":  "a1c4d6b5b3157535951f313b00cdda6adf27604a9518c8d8d7cc5958ac8f6eb7"
+                  },
+                  {
+                      "relativePath":  "debian\\control",
+                      "bytes":  2258,
+                      "sha256":  "dafed99721bbd2310b9607380294330570eee7abaeb87f536bed18730449ac20"
+                  },
+                  {
+                      "relativePath":  "debian\\copyright",
+                      "bytes":  1695,
+                      "sha256":  "1f6c6b6397d86d20968d7856d6945591b89e4cb64e5fc1ec8b992811f6a65ed8"
+                  },
+                  {
+                      "relativePath":  "debian\\libvorbis-dev.docs",
+                      "bytes":  39,
+                      "sha256":  "a8f8965b2cb5b5b9c0a61e02ed23be9296775e9087ba7f92d83f13ec89032493"
+                  },
+                  {
+                      "relativePath":  "debian\\libvorbis-dev.examples",
+                      "bytes":  27,
+                      "sha256":  "cf93f787fd1b7fd3ff134df8a53a3d24a443e45cef5114b419d6388c9c850514"
+                  },
+                  {
+                      "relativePath":  "debian\\libvorbis-dev.install",
+                      "bytes":  592,
+                      "sha256":  "34a74644d8ed242e7fa29a0afdbe4b312a4de5b3725b25cca32fe9548729608b"
+                  },
+                  {
+                      "relativePath":  "debian\\libvorbis0a.install",
+                      "bytes":  34,
+                      "sha256":  "c9be022fc24bae5ce6d8b86067824356c1a955c5f78f39cdd6c594c549269c94"
+                  },
+                  {
+                      "relativePath":  "debian\\libvorbisenc2.install",
+                      "bytes":  37,
+                      "sha256":  "502a3e59c1ecff6df2914868edad162413df6618cb0b6f3c55022fb2254add03"
+                  },
+                  {
+                      "relativePath":  "debian\\libvorbisfile3.install",
+                      "bytes":  38,
+                      "sha256":  "b6eaf8acd575c53455013a728a0f77d2bf65d63edf445b424f29610614cf65ec"
+                  },
+                  {
+                      "relativePath":  "debian\\rules",
+                      "bytes":  3333,
+                      "sha256":  "95efde1a3e589dfbaec82388770cd36a2ac4401ac65c5c3e2e9cb1544ce95463"
+                  },
+                  {
+                      "relativePath":  "debian\\watch",
+                      "bytes":  93,
+                      "sha256":  "e37b1b4c240dd34fd0dced14ffb23204312c31f85923b212e5168c98addc9913"
+                  },
+                  {
+                      "relativePath":  "doc\\01-introduction.tex",
+                      "bytes":  23361,
+                      "sha256":  "c8e099d3c2c0330417eff0df59b5995fe75487640c3760b6faad8da68659b7ec"
+                  },
+                  {
+                      "relativePath":  "doc\\02-bitpacking.tex",
+                      "bytes":  8532,
+                      "sha256":  "8118f53fb76ccfc58d457213abcbdf566317d28feaebd56f9ffaf0706823d2af"
+                  },
+                  {
+                      "relativePath":  "doc\\03-codebook.tex",
+                      "bytes":  17416,
+                      "sha256":  "6d47a48af606671d6b9e54bde961115fa59020e16e99ec5979db3bf741882440"
+                  },
+                  {
+                      "relativePath":  "doc\\04-codec.tex",
+                      "bytes":  28439,
+                      "sha256":  "6a90eff69d8bd91af003a9e93d68a0f3366fb4cfb448732dbe5a380bdaf1735c"
+                  },
+                  {
+                      "relativePath":  "doc\\05-comment.tex",
+                      "bytes":  8102,
+                      "sha256":  "4be6beed38d4fa4db920274e8aea955e0a842bb6398c6da0165ac1b1b024880d"
+                  },
+                  {
+                      "relativePath":  "doc\\06-floor0.tex",
+                      "bytes":  9149,
+                      "sha256":  "70782b247263f2289ce2bd6cba3d1e6e06c0c5df97236231190b1c723629a98f"
+                  },
+                  {
+                      "relativePath":  "doc\\07-floor1.tex",
+                      "bytes":  15779,
+                      "sha256":  "697aa31293536a9f36c66f4faebaccaf91ee0075b2fac12ce0e489dd028261a2"
+                  },
+                  {
+                      "relativePath":  "doc\\08-residue.tex",
+                      "bytes":  17231,
+                      "sha256":  "765ec533617309a75575ad4fcd1f87760a8c0424dc912007d1a1280cb3060e52"
+                  },
+                  {
+                      "relativePath":  "doc\\09-helper.tex",
+                      "bytes":  4894,
+                      "sha256":  "72a6d9fa70999701e2ec769d322a5385725e8fce7049ba5dfa172396ccd724ce"
+                  },
+                  {
+                      "relativePath":  "doc\\10-tables.tex",
+                      "bytes":  4311,
+                      "sha256":  "6bbf3ac7328e60028af5cd24b38f6c95861e80f2550bb76434c7f6cab16ad0b4"
+                  },
+                  {
+                      "relativePath":  "doc\\a1-encapsulation-ogg.tex",
+                      "bytes":  6452,
+                      "sha256":  "4534c96c9dcab1f18972d9ba12714fa01666959b48490ae65419b72037fb69f4"
+                  },
+                  {
+                      "relativePath":  "doc\\a2-encapsulation-rtp.tex",
+                      "bytes":  334,
+                      "sha256":  "ec0b4dd946a9453480efcb812d776cc0d4011274a2310ded155116376b63438f"
+                  },
+                  {
+                      "relativePath":  "doc\\components.png",
+                      "bytes":  9741,
+                      "sha256":  "5dd45267530036d463a60ccf8d5e21f099e18507545a15880dfd4ae242f3d82a"
+                  },
+                  {
+                      "relativePath":  "doc\\Doxyfile.in",
+                      "bytes":  47018,
+                      "sha256":  "fe565638f6b95c5bf5350ab7426748217811c57c67ce925de70cd21776527cba"
+                  },
+                  {
+                      "relativePath":  "doc\\eightphase.png",
+                      "bytes":  11130,
+                      "sha256":  "d928eafbe5f5500e16dc4d9a9b6743844332d5ad7496e1cd1ac3b8ee29667c93"
+                  },
+                  {
+                      "relativePath":  "doc\\fish_xiph_org.png",
+                      "bytes":  2503,
+                      "sha256":  "5ad6acc08e81978952f0817231f9166983fec952540eab966cba493ff73e7ac8"
+                  },
+                  {
+                      "relativePath":  "doc\\floor1-1.png",
+                      "bytes":  3420,
+                      "sha256":  "0f6ca87a6deb2e8239e0a1741ecaccec00afa6f469fa12d8d917456bad2431a0"
+                  },
+                  {
+                      "relativePath":  "doc\\floor1-2.png",
+                      "bytes":  3752,
+                      "sha256":  "2aa4dda164aa7f44152419f0503f04ac0cbd40f26fd0a17598ae00d24aed81d9"
+                  },
+                  {
+                      "relativePath":  "doc\\floor1-3.png",
+                      "bytes":  4627,
+                      "sha256":  "46a57dc5ee8f98dbf279258acc0968d869d204f6ecc3dc6c0fdc11cb4b359133"
+                  },
+                  {
+                      "relativePath":  "doc\\floor1-4.png",
+                      "bytes":  4163,
+                      "sha256":  "db32ff30331d45f884b8729ab476c28336d1d5ca29214e511491090495e26730"
+                  },
+                  {
+                      "relativePath":  "doc\\floor1_inverse_dB_table.html",
+                      "bytes":  5418,
+                      "sha256":  "db0919a986075b89d7dec83cfb2434a9893adbdd45ecf72ad727a25a79cc5548"
+                  },
+                  {
+                      "relativePath":  "doc\\floorval.png",
+                      "bytes":  2545,
+                      "sha256":  "4d61c1e956f0acfc909189e101117dc8781c92721172b5f1bdff5a433d981f04"
+                  },
+                  {
+                      "relativePath":  "doc\\footer.tex",
+                      "bytes":  1233,
+                      "sha256":  "b676a7cc4459deddee6414093ab391d6acf05d36c0e21bd00c941ebf69e670e5"
+                  },
+                  {
+                      "relativePath":  "doc\\fourphase.png",
+                      "bytes":  9992,
+                      "sha256":  "1cac06a3999801ac928ccc6d612167dc99b70b5468fae2bfffc8a93593d810de"
+                  },
+                  {
+                      "relativePath":  "doc\\framing.html",
+                      "bytes":  14623,
+                      "sha256":  "0680a2688fec652d75f2a62e2f723865a1501564e21e3796f6d0a298de3c6269"
+                  },
+                  {
+                      "relativePath":  "doc\\helper.html",
+                      "bytes":  5730,
+                      "sha256":  "a1e0f4b8d4f8df7542d1fb4816ab38a2634f8b946c8d83f33451f1ef47e6e3dc"
+                  },
+                  {
+                      "relativePath":  "doc\\hufftree-under.png",
+                      "bytes":  1206,
+                      "sha256":  "ea46391f6399a80a4cca82a73475aa83c0c89ff4e663d8d60df480736fa85aab"
+                  },
+                  {
+                      "relativePath":  "doc\\hufftree.png",
+                      "bytes":  1228,
+                      "sha256":  "56ca1c2b07c549fa819615863ff084b829f113cb2ddf4419abc6660a5ce9e232"
+                  },
+                  {
+                      "relativePath":  "doc\\index.html",
+                      "bytes":  2249,
+                      "sha256":  "d711de877f301101ce45a61ca3602a008b5cabd1db5a37849f81c1723df498e6"
+                  },
+                  {
+                      "relativePath":  "doc\\Makefile.am",
+                      "bytes":  3504,
+                      "sha256":  "f1591b0da06a2dc12bbbe736101a345a848ab5f656c4a189e68147962fb5b275"
+                  },
+                  {
+                      "relativePath":  "doc\\oggstream.html",
+                      "bytes":  8623,
+                      "sha256":  "4f56d111cd549b41ff4e3ccc7a418037e35c2c88240c437931b69497a793d544"
+                  },
+                  {
+                      "relativePath":  "doc\\programming.html",
+                      "bytes":  18839,
+                      "sha256":  "f7c88999edc2f1616e149be69533f56f5b767dec9a2b8273a98583304d50ffda"
+                  },
+                  {
+                      "relativePath":  "doc\\release.txt",
+                      "bytes":  738,
+                      "sha256":  "f898bed106073af3380a0b5b2be189ec787cc99b11aa0bfe10ce5ba88a5ece23"
+                  },
+                  {
+                      "relativePath":  "doc\\residue-pack.png",
+                      "bytes":  32318,
+                      "sha256":  "e672aa80eff320a0dccd89b97515cc30e7d4a14b0b4e592f16fbf8b4acdc556f"
+                  },
+                  {
+                      "relativePath":  "doc\\residue2.png",
+                      "bytes":  20427,
+                      "sha256":  "322d491fddcc35c6199d6ce45e989af384e59aa9fa5fc9b94a6626bdaa94b58b"
+                  },
+                  {
+                      "relativePath":  "doc\\rfc5215.txt",
+                      "bytes":  54327,
+                      "sha256":  "960c9717754928303eca6c2c4eb448c29cadaee23c538d6978b0ed602c2c8a40"
+                  },
+                  {
+                      "relativePath":  "doc\\rfc5215.xml",
+                      "bytes":  48010,
+                      "sha256":  "fae93ab5ed0921626c1a4d29f8aa8f4f82aa3e870f6b30c1f7d6b2efeccb03d1"
+                  },
+                  {
+                      "relativePath":  "doc\\squarepolar.png",
+                      "bytes":  8406,
+                      "sha256":  "419c59a5ad7bbc9bf1196ef26d2f3f861d054e2aeb57b7162ba0ae123ad46f44"
+                  },
+                  {
+                      "relativePath":  "doc\\stereo.html",
+                      "bytes":  16574,
+                      "sha256":  "6bac20d1168d408d38c451dfab48aafc437628f0677f1d689bcf0eac2d389b71"
+                  },
+                  {
+                      "relativePath":  "doc\\stream.png",
+                      "bytes":  2171,
+                      "sha256":  "f9a97cafda7a5fcbd50b565632766ed665f3d67f2f84708652579f2018b6051c"
+                  },
+                  {
+                      "relativePath":  "doc\\v-comment.html",
+                      "bytes":  9048,
+                      "sha256":  "0a18c29c2f944ad293552f7bdda6a6b1f8f8fc2c557690bffd63c1d2d36394d2"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbis-clip.txt",
+                      "bytes":  7021,
+                      "sha256":  "ae8ec3dafa7993f601729edb1d64c0fa8631e747da687754424c3f0dc230b0ea"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbis-errors.txt",
+                      "bytes":  2730,
+                      "sha256":  "c3bbc4e290bd446ab1dd6385cf938a7f6ae860348b68d067bc676890db7c4a82"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbis-fidelity.html",
+                      "bytes":  6663,
+                      "sha256":  "1e8312152e456a89ff3d4324e91cdabf858daf63ec0a3d047f527447f93d31de"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec.cfg",
+                      "bytes":  82,
+                      "sha256":  "96a369dac7355f71e1f63b07a2f19eda32111d364ed0aa00731a98fc6a1bd725"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec.css",
+                      "bytes":  7080,
+                      "sha256":  "205551787b6938af421408ecbaae9148ca8444e3d4f80c87ea2125021d980adf"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec.html",
+                      "bytes":  547996,
+                      "sha256":  "f0ffafdedc352d2a42674b01255793838a7ad6a8592db37ce3ef6df4cc8beb95"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec.pdf",
+                      "bytes":  417200,
+                      "sha256":  "fa28683850e5da9aadd2d4c2f7c746e3eb115387ca1e1c7cbffd7ea429367d7c"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec.tex",
+                      "bytes":  4139,
+                      "sha256":  "b72f5b1cb859aa66f99bda00c08f4bd7b1d9d328c66327c73266c7ad3565b8dd"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec0x.png",
+                      "bytes":  3639,
+                      "sha256":  "5f0388845201a66afa0942874411ce5131496c74c14a4d96906f34b18b24ec55"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec10x.png",
+                      "bytes":  6909,
+                      "sha256":  "750a21e132907216645ff298e5097dcbede9d40227fdd378429a60e880d29a19"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec11x.png",
+                      "bytes":  7365,
+                      "sha256":  "84b1a8f8d7811affd34e75bb9b6a9cfaaf86c22942b56b8d50508f7dfd921d32"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec12x.png",
+                      "bytes":  6550,
+                      "sha256":  "5e2454534ad5b66804b6d188d44c41c8ca4bc33adee0f87169c42a15c63e08b5"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec13x.png",
+                      "bytes":  4135,
+                      "sha256":  "2fe3d00069aee601d7ab6d2ceab1341a9174b7b40a076b994fd09317ce371f91"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec14x.png",
+                      "bytes":  4176,
+                      "sha256":  "6022407818b9d4307590ef12114350e598fe06b6cff50df29c46b799c187f058"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec1x.png",
+                      "bytes":  2643,
+                      "sha256":  "5dfec76cfad651d5103d0b84a06bf65bd5edbe9d40f512099b0c2b9fb753a47d"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec2x.png",
+                      "bytes":  2639,
+                      "sha256":  "8027d80db8b93980dc5a3fcf6e779bf0af83efaa16b3ce4b694b0a09a902da30"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec3x.png",
+                      "bytes":  2643,
+                      "sha256":  "6e51f28a6d2ca404609e99d87514ae586950a73cb3e79ced926dcea458dd87b0"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec4x.png",
+                      "bytes":  2643,
+                      "sha256":  "39726dd2c0286a638483383a27d2ef0d78f5bc762c41ec8c9cef91770d579440"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec5x.png",
+                      "bytes":  2647,
+                      "sha256":  "24526947c9dc3e2ac509ae656eaa8161e211479fe860e8c102ddb00a558f2436"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec6x.png",
+                      "bytes":  2645,
+                      "sha256":  "b23f10b83d7673ac380e07736b474ecbff18185f1bf443010a4a65b3586c34e8"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec7x.png",
+                      "bytes":  4993,
+                      "sha256":  "683e62c39ad3cf89b2f42d0b93add4f9deb86956d6229e25abf6b90188f44727"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec8x.png",
+                      "bytes":  5403,
+                      "sha256":  "aa3ba7ac7b3df8f8ffb94d9a07b4a126254d282055078b0bc29bc405dd6c19e2"
+                  },
+                  {
+                      "relativePath":  "doc\\Vorbis_I_spec9x.png",
+                      "bytes":  4176,
+                      "sha256":  "6022407818b9d4307590ef12114350e598fe06b6cff50df29c46b799c187f058"
+                  },
+                  {
+                      "relativePath":  "doc\\window1.png",
+                      "bytes":  1703,
+                      "sha256":  "0744df634559a918fa9d490bad745b397ebf3a5b893acb869c5526c2f0dca592"
+                  },
+                  {
+                      "relativePath":  "doc\\window2.png",
+                      "bytes":  1601,
+                      "sha256":  "cb2d6a19a7ba06b558f11fdc4164eb582672cc4a68b421712f563085587559a5"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\index.html",
+                      "bytes":  1259,
+                      "sha256":  "ff6572329034dd86975a3c934b34e5cc2b038572639c660624451060cafeb9a9"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\Makefile.am",
+                      "bytes":  1342,
+                      "sha256":  "b01453bd88d7e705fd413bc53a3082b5ece3a9bd020f38f1d3fd8757fa76999c"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\overview.html",
+                      "bytes":  5954,
+                      "sha256":  "377eb20da3237a5f5bcb99bbeb705baadbaded932ba2db8fad9739bdd3643a04"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\reference.html",
+                      "bytes":  3730,
+                      "sha256":  "37fa8dd4dd4fdf696a876a0300294e9e0a71a5d8c1f6db66382efe519dad1252"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\return.html",
+                      "bytes":  2262,
+                      "sha256":  "afa929c59de62a452177ff8ef532c5b9c6764f9f162b15f6834beb12ea05dbc9"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\style.css",
+                      "bytes":  279,
+                      "sha256":  "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_analysis.html",
+                      "bytes":  2629,
+                      "sha256":  "d98aeb13f2fd008e84eb0ca5bc8b1b4f1aa1919eb23509d33f579de940c00e41"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_analysis_blockout.html",
+                      "bytes":  2096,
+                      "sha256":  "af7fe20427f821dcddb2d2677cc5a048424b0ffbb23f5a0ec235f28ce5b61dde"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_analysis_buffer.html",
+                      "bytes":  2115,
+                      "sha256":  "26418b906861cfb7122a6eb48c34f5b27c1c7cb55e908406277bb2e261fa6e55"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_analysis_headerout.html",
+                      "bytes":  2596,
+                      "sha256":  "241d5a52e337764d490add6774ab687b6cd36ab9cf2f3bb836be6435540ff27c"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_analysis_init.html",
+                      "bytes":  1565,
+                      "sha256":  "f9c732074c4e9cf36f1a0beed1abb12a0faa6be0abade414f2916b989b80b64e"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_analysis_wrote.html",
+                      "bytes":  2035,
+                      "sha256":  "055966cf8b303e341b6e2dbce10a487bde80befc047f9ad75904c8b2d356d711"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_bitrate_addblock.html",
+                      "bytes":  1876,
+                      "sha256":  "b6a0bf08b5328dcb2744ddb565df4749d350f7fca43e583c8443b03b03d2cf43"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_bitrate_flushpacket.html",
+                      "bytes":  2109,
+                      "sha256":  "520dc420a620c7dcb26adfc104d0da763c2bd1967941aa918e1c5714d02d0bb0"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_block.html",
+                      "bytes":  1571,
+                      "sha256":  "7b53bb066cdb1114f7c78e1425d5c36d8c2120d6f31c96626a32e16f1e00e7f7"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_block_clear.html",
+                      "bytes":  1293,
+                      "sha256":  "f2352917abf1afb622923f67a737024f829067a80c50a054250bbe36932cea13"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_block_init.html",
+                      "bytes":  1553,
+                      "sha256":  "9e5634acef1d6d95cb1b0fc6059ec16efaa01a2c6a3b4fdd6b6c6f63d6abd9d6"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment.html",
+                      "bytes":  2952,
+                      "sha256":  "29ff0fbf5b6fe5712b949b9d91613297485549bb6f70529af46c049016f6895b"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_commentheader_out.html",
+                      "bytes":  1481,
+                      "sha256":  "4480624db5ff3c117e692e1a7bfdde61399cf45f45257fd10f0b9e60191eaf5e"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment_add.html",
+                      "bytes":  1786,
+                      "sha256":  "d51f71542ebe930a9a8e5e7c89ed5f1c3d350c79adaeaf195d241725efc3f7bb"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment_add_tag.html",
+                      "bytes":  2036,
+                      "sha256":  "6ca087c1edcaf3d81dc22d6790234ac081deedc4ca58952390ced7c50f006beb"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment_clear.html",
+                      "bytes":  1833,
+                      "sha256":  "5c82d21c19c128c3aa27a5ffefaad57c7f7a063d37ec7018070e42c45210c007"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment_init.html",
+                      "bytes":  1954,
+                      "sha256":  "fcd51df9ffd42a052cad022197d3684c3a832481bdadeadbc29a823a10cc41e4"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment_query.html",
+                      "bytes":  1975,
+                      "sha256":  "77e07a5dca450c954b7dd91e6437041b0f424498618b101472c4b95fec772556"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_comment_query_count.html",
+                      "bytes":  1620,
+                      "sha256":  "829d584a9d4a25cf9068c034dbd1d9dc7354fd5dae29a4ea41e54685117f176d"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_dsp_clear.html",
+                      "bytes":  1403,
+                      "sha256":  "fc0dab76b24cb0bd78d7d1dcc9221f5bf4b4b77cef658dd2bbe0c660cd56ef3a"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_dsp_state.html",
+                      "bytes":  1361,
+                      "sha256":  "f61ce69f6327b00562c55d8b06c8178fd5798b6137e18c728a062dcf0972d50b"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_granule_time.html",
+                      "bytes":  1513,
+                      "sha256":  "fda8ae19853640694df971100ffb5b4c83da4b493375f0b00f7d432f815f3b02"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_info.html",
+                      "bytes":  2393,
+                      "sha256":  "06a7301b4f752638b925bf7cee3ca78cd7b502fe91a425ae6984e268afea7a53"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_info_blocksize.html",
+                      "bytes":  1575,
+                      "sha256":  "a5c4578b12e03202df8c3ceaf068433ba06cfe5c19e16dacc6830870a3309d3c"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_info_clear.html",
+                      "bytes":  1279,
+                      "sha256":  "5de75ab98da919c08a3eeeadc7c15daf0bfa688284730702d4fb8afe95745834"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_info_init.html",
+                      "bytes":  1327,
+                      "sha256":  "6afddff08083a6d07fcb3e4306d26f391b97e28b65c1c594f1c3235f15a64c9d"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_packet_blocksize.html",
+                      "bytes":  1622,
+                      "sha256":  "708b766fe8e8d6fc7805f0a074b911762598a6d3ef72ec64c3b8c6164a484661"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis.html",
+                      "bytes":  1772,
+                      "sha256":  "7b896aeef4d43885b643f5f1d50e9f16d4bac07a2a6b85f56dbc27ae6d6b37cb"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_blockin.html",
+                      "bytes":  1819,
+                      "sha256":  "ffc17185a4ac74890a17204796d32bbecf8ed86754b9c15a8c6a824f1fac5957"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_halfrate.html",
+                      "bytes":  1676,
+                      "sha256":  "1f757ccaf53f75f6534b925c1361e5cbacb2049c6832f9a7588dddd4ea4f53ae"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_halfrate_p.html",
+                      "bytes":  1504,
+                      "sha256":  "39708f01cd4096d13fe83a1b603579b495eb45358acd14627d0d97ef140bdb76"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_headerin.html",
+                      "bytes":  2311,
+                      "sha256":  "bbb67133f794a88d10beae439853ae0247dda7c9f796a134c77d0187e6e8f5f0"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_idheader.html",
+                      "bytes":  1503,
+                      "sha256":  "be0678e43eb3e5ae2042292f7fb2e293b711c0864dca78a6becede43bb1e6e4b"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_init.html",
+                      "bytes":  1712,
+                      "sha256":  "29418a7781cc4df7651ccbac43b923f89a2e3fd07b68797c503850d7b3185cd6"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_lapout.html",
+                      "bytes":  2235,
+                      "sha256":  "d792083fa69387a2b2aa866a10c4020e9ad0e037f78a342ee8cbbcc65b943d95"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_pcmout.html",
+                      "bytes":  2263,
+                      "sha256":  "6d8f68c28f394d90e15deadbf0300b22b1781e4b31e3511d947e757d5c60043c"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_read.html",
+                      "bytes":  1641,
+                      "sha256":  "cd9e326a8b60f6bd11ff2e316eebcfd2196712d4ab4484b7c1aef47b8a14f237"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_restart.html",
+                      "bytes":  1501,
+                      "sha256":  "043755c1812494bf45b07d3be4b65f8c6eab2bff79f2a67c2252dde8a10ff6e6"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_synthesis_trackonly.html",
+                      "bytes":  1845,
+                      "sha256":  "8e21dcba272d1c30fd8deced872b886ff93ff16468e29421c532a797d69bc04d"
+                  },
+                  {
+                      "relativePath":  "doc\\libvorbis\\vorbis_version_string.html",
+                      "bytes":  1363,
+                      "sha256":  "bac4384b4582955d09edd0bb7a0614711e303ea9be57e6bc6783b873a441ffc2"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\changes.html",
+                      "bytes":  3648,
+                      "sha256":  "285470a077024982dbf0e837ad1603bf48ea38da329e25533fad0b8cd43564b5"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\examples.html",
+                      "bytes":  4981,
+                      "sha256":  "e240b53d30e1d1f39fb1e583bf891a64a5c1fa114f0220d028bf66a0923d5a8f"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\index.html",
+                      "bytes":  1247,
+                      "sha256":  "a6d181d80d7c3f17cc70e0a783e3ab13360fda285bb700e377a0c880ec59c763"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\Makefile.am",
+                      "bytes":  463,
+                      "sha256":  "7a534f50f98c7a349367894891dc4d42e3caeca03a4b2f57f4ba56a58ae06918"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\ovectl_ratemanage2_arg.html",
+                      "bytes":  2597,
+                      "sha256":  "4d5083dca9af6c558d4b5afd2445dd37c465f73da3688569849fc882beb9b958"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\ovectl_ratemanage_arg.html",
+                      "bytes":  3280,
+                      "sha256":  "6d1dd4081b28932d786ee6cb58f615edddb344d8aef024bc1ccda3dbf40dc619"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\overview.html",
+                      "bytes":  15784,
+                      "sha256":  "0c7a831982d6124324087e6f1e9fb665515e2a93b020c1ad213702c6bc1a523c"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\reference.html",
+                      "bytes":  1646,
+                      "sha256":  "3dd428e4137f196b8f2c898e8dcd5061d715f78412b748676af5d60eac7444c1"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\style.css",
+                      "bytes":  279,
+                      "sha256":  "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\vorbis_encode_ctl.html",
+                      "bytes":  6145,
+                      "sha256":  "0455cc83ec3ea14e925814add5a7e896a706e258a423a5cf6c458eb10f5289b7"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\vorbis_encode_init.html",
+                      "bytes":  2690,
+                      "sha256":  "956516f02c27b3c9eb7c30c35f1d6d85e0c66c43ea311120ed5800b9be5811de"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\vorbis_encode_init_vbr.html",
+                      "bytes":  2298,
+                      "sha256":  "6ea13714ba8afd490f23cd378d8e37998fdff74ff302e087eae912ef23ff2f32"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\vorbis_encode_setup_init.html",
+                      "bytes":  2654,
+                      "sha256":  "7b41c426e37757dbf462a271cfaa7695d9162d00714e01b1c0cec448bc71ac86"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\vorbis_encode_setup_managed.html",
+                      "bytes":  3069,
+                      "sha256":  "0a407f0e22a767b32fb1609c188b010ff27780cd994eb9d6b8710cfae54c9e51"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisenc\\vorbis_encode_setup_vbr.html",
+                      "bytes":  2666,
+                      "sha256":  "f23d1e927bbf7bbc8ef82ed662cb489c721096e05770a749e65647faa249ea10"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\callbacks.html",
+                      "bytes":  4839,
+                      "sha256":  "c7aa2ec5f344ae11531f561feab93917695df9d415068d7afc639b1bac2caca5"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\chainingexample.html",
+                      "bytes":  5535,
+                      "sha256":  "672097e72b2878963aad522de9f550446364fe51bddfa5d8f8916f4cda7c1a23"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\chaining_example_c.html",
+                      "bytes":  3026,
+                      "sha256":  "12a0fd49fb9dcc7f2d1a672f7f68b4a2d766d02b87e6425e4ed6d77cebd26e74"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\crosslap.html",
+                      "bytes":  5361,
+                      "sha256":  "bb4d7915dba6d8ca4d3c3951e610badddedeea6209ee95429634888fd34c87db"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\datastructures.html",
+                      "bytes":  2435,
+                      "sha256":  "bb6eb3d07a3ee8dc6803746987d04702be3e941a4dc14ca5109448bb403c80e1"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\decoding.html",
+                      "bytes":  3360,
+                      "sha256":  "7111429f56a18b0cd7b35453de66adb514d7c8e509df9b85fbf3fc3b49445716"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\example.html",
+                      "bytes":  5482,
+                      "sha256":  "f34f199910d0dc91428fe44ada0e692dd31d5e69ad307f99fa080c8e69dd6756"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\exampleindex.html",
+                      "bytes":  1050,
+                      "sha256":  "17d89f0d36c4a52ca52efaf88b532b361a0e8bbc45164a140a504eb9db957a3a"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\fileinfo.html",
+                      "bytes":  3644,
+                      "sha256":  "50f6aa89371b3b01fb24ec6a906869415bcf38138d004f5e8e5b2efa4545876f"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\index.html",
+                      "bytes":  1414,
+                      "sha256":  "84fd16fb027cbaae4e52f476331882673198b03aea72ccf433af12ed4fcb0d6c"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\initialization.html",
+                      "bytes":  5118,
+                      "sha256":  "be6b5591bd2d7b94b729b294c19b83a65fa6748c1ff38769d1154ec398254b5d"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\Makefile.am",
+                      "bytes":  1217,
+                      "sha256":  "2df95e840f9ef77ab01f73c397ebffec8888d81deacb0a89c9493e6988ecbc14"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\OggVorbis_File.html",
+                      "bytes":  4960,
+                      "sha256":  "64c6e9c22f7a52ff19d39d17a57726a9cc3c6491cee8aa4304127a4101f74a8e"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\overview.html",
+                      "bytes":  1757,
+                      "sha256":  "d21d4f9b27e225eda3ac753b5e7a069d0ed9be7bf0a67f3dfe1f8b4cb6571d9e"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_bitrate.html",
+                      "bytes":  2512,
+                      "sha256":  "9c69276dc694fb3237e34f264b93acb628a94ec2d1ca4b6189233f49182c27b8"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_bitrate_instant.html",
+                      "bytes":  1763,
+                      "sha256":  "22383f5f09f4732ad44f9537d16fdc6eb01a971c44e441d1b71ab278322240aa"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_callbacks.html",
+                      "bytes":  4401,
+                      "sha256":  "38f6d9ac88481957011c212c6b705a9a2a5d6074799d07afb63bd6980ea47f65"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_clear.html",
+                      "bytes":  2190,
+                      "sha256":  "815a8bc8372681d01ca65597cc0d9288a150770f5b8879d2a3699973cdc170c5"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_comment.html",
+                      "bytes":  1906,
+                      "sha256":  "828bf6e6ae82a1da087006783e407e0e4602e9cdd90897da91e496f4662487f1"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_crosslap.html",
+                      "bytes":  3397,
+                      "sha256":  "14b1f4f86fb24c8338158e4df91a35e9e7f6c469258b0441ffbcb555d4910539"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_fopen.html",
+                      "bytes":  4380,
+                      "sha256":  "27096242011114242484cee5aa5b6ab4df8cd3f95aa9b68d1ac89dab71eb2230"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_info.html",
+                      "bytes":  1974,
+                      "sha256":  "29087464d0551d53420ca6c914bc8d6f091b5ef5f1d9ee61fd2ed4786e08adb2"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_open.html",
+                      "bytes":  7501,
+                      "sha256":  "d9e990843dc92b7352d961abd3f045cee49ce289732fd83da9389ca119063a30"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_open_callbacks.html",
+                      "bytes":  6110,
+                      "sha256":  "3627e225606bfa205032bddc8498b92829ea62274496630231ee50dd167bf294"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_pcm_seek.html",
+                      "bytes":  2204,
+                      "sha256":  "8e4ec7c010d7fdc60f088bf1d96b6e429bdb707e7eb4c6a5049395203f459f5b"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_pcm_seek_lap.html",
+                      "bytes":  3311,
+                      "sha256":  "1152ec1754e556ed00e1d6bea35af33e7fd6a272b45edfe03c2a2fef94d65ce3"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_pcm_seek_page.html",
+                      "bytes":  2494,
+                      "sha256":  "38b3986f47960133c29cb240489aa4ca429d073704ce80ebce77004377837673"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_pcm_seek_page_lap.html",
+                      "bytes":  3644,
+                      "sha256":  "c6b5d985fa867b852a8d42da2449e378c03d68f4a4748996a82e6ad7c1a0961c"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_pcm_tell.html",
+                      "bytes":  1467,
+                      "sha256":  "6577b8e11288e0cd6d3a0eca36f77bd1834743df56db0b60db6cccf1c899fb9d"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_pcm_total.html",
+                      "bytes":  1794,
+                      "sha256":  "4646ecb49665aafca2c39f78b4320e9b24b978381fde081832b7302a4a75b508"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_raw_seek.html",
+                      "bytes":  2282,
+                      "sha256":  "1cdabca30aeeea06a172d30ca44e86042a407ed9f13057ab6511e0e18e6fa448"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_raw_seek_lap.html",
+                      "bytes":  3432,
+                      "sha256":  "2e814e309c00aafa8aa06693b7d2f6a4d4a40f6f0ffc9c775b331d97072048c7"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_raw_tell.html",
+                      "bytes":  1812,
+                      "sha256":  "987886c7938b80c3bd41ddc6ced3954caf8c99c3e7203196b121faf15c109777"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_raw_total.html",
+                      "bytes":  1827,
+                      "sha256":  "245e358b807a4755b6851bc66305d50e5d8611e47e82b15a4dbd0590311d0256"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_read.html",
+                      "bytes":  5411,
+                      "sha256":  "616b9fa26e605a5bb0bd4589cb979075a6a3e7b77664e64983fa5839d9565cae"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_read_filter.html",
+                      "bytes":  3803,
+                      "sha256":  "c654420ee2f339e0ec5358446b8e8c44d72afd3fc61aa2eb254d7efa6b4ec3f8"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_read_float.html",
+                      "bytes":  2952,
+                      "sha256":  "e2f63b236c6bebd0e7f7d27314b240177f1ec1ad7534e7848d77af9d8c33b9f6"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_seekable.html",
+                      "bytes":  1415,
+                      "sha256":  "7e1ba29bc9f55ff6c20498bd093a334cb55ebe312f2cd4c92070fe39bd67a60b"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_serialnumber.html",
+                      "bytes":  1807,
+                      "sha256":  "c4127c48a67db1e326c25d76c930fbe06c28379ac9ff99e20fe24333beeed088"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_streams.html",
+                      "bytes":  1456,
+                      "sha256":  "9372583f36fd18baeea6978350c9594aad84afd9d7122923b8f97ba2dc44cc17"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_test.html",
+                      "bytes":  3599,
+                      "sha256":  "761d681d51b23ff0f85e9a45267cbecb9f632a5b36ac5a6e35d3fa75a9b15a84"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_test_callbacks.html",
+                      "bytes":  4100,
+                      "sha256":  "6542e00b1c19c4843d8e0e322bfadfbe61d6239f2b5abb53a66f78e1f5549c0b"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_test_open.html",
+                      "bytes":  1929,
+                      "sha256":  "2dc6da80e25ef0936566f415b81e1e63bac358886d29994b369a524c99ea1d7f"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_time_seek.html",
+                      "bytes":  2255,
+                      "sha256":  "3a0ec524b2df9e0442fe52f773a048e2cdd2b5484051f07f4c463bcff3e3ae99"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_time_seek_lap.html",
+                      "bytes":  3308,
+                      "sha256":  "0aea329ab0e51db4c12a4056b426842c6f726feec3912255ba86e7210934f382"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_time_seek_page.html",
+                      "bytes":  2460,
+                      "sha256":  "5464d335cb10930b6d7d01212fe832ccc41c3f18b19abad03ec0d667b5df248e"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_time_seek_page_lap.html",
+                      "bytes":  3676,
+                      "sha256":  "25b1a1f7f000cda89f2ef04cc6b9d2c2f68a2643c8b1128464b96fde61a32e3c"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_time_tell.html",
+                      "bytes":  1488,
+                      "sha256":  "5b54a2f67fff5abe83ccffa4db421ef353c6a5104a5418b4329be3fcc6d85d48"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\ov_time_total.html",
+                      "bytes":  1808,
+                      "sha256":  "a006b2125d284ab84d7a505a5f64dbd3a6b43c1c84013c5237a0cad5c41409f0"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\reference.html",
+                      "bytes":  3150,
+                      "sha256":  "1160da41581cb1cdc02757407fa3475512272bf2271fefaf53bec8b5f5a606c2"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\seekexample.html",
+                      "bytes":  4208,
+                      "sha256":  "26ed153ac6ea2f86025ecd5bfd3183742798e88f1721560ef6276c69674df2a4"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\seeking.html",
+                      "bytes":  4743,
+                      "sha256":  "107db8620a16f37eaf94bd0750f3b462e5cd9877f37decba24545710beb74e42"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\seekingexample.html",
+                      "bytes":  5204,
+                      "sha256":  "843069cab598d3f8741c743da42e3d1f7e6c0796c006dbed9d71ffcc614fcda0"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\seeking_example_c.html",
+                      "bytes":  1996,
+                      "sha256":  "cc13db889c629469288262c1a11cc209fd1c8f00eb359816a3ae9e1356299317"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\seeking_test_c.html",
+                      "bytes":  1996,
+                      "sha256":  "cc13db889c629469288262c1a11cc209fd1c8f00eb359816a3ae9e1356299317"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\style.css",
+                      "bytes":  279,
+                      "sha256":  "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\threads.html",
+                      "bytes":  1552,
+                      "sha256":  "4f1706f95d35d42035f64396f9606895b4a18f5e1ec0fe33da61f475890feda9"
+                  },
+                  {
+                      "relativePath":  "doc\\vorbisfile\\vorbisfile_example_c.html",
+                      "bytes":  2433,
+                      "sha256":  "e69cc58c7785c4a7f3c9c1557726540b7448f7d6caf50165d21e2de631d101ba"
+                  },
+                  {
+                      "relativePath":  "examples\\chaining_example.c",
+                      "bytes":  2684,
+                      "sha256":  "0cf7282e75d27448fe5529c9b66a95e0e027a1244a880b654333e2e81500e9a0"
+                  },
+                  {
+                      "relativePath":  "examples\\decoder_example.c",
+                      "bytes":  11596,
+                      "sha256":  "3563090c2ae3848acb3644716ec2a5db1da5c4304c0830be9fc9418530984de7"
+                  },
+                  {
+                      "relativePath":  "examples\\encoder_example.c",
+                      "bytes":  8793,
+                      "sha256":  "8fad3307e454a563bbf446990c710647e07a83d663e4e436a6ff80b10dea8f1f"
+                  },
+                  {
+                      "relativePath":  "examples\\frameview.pl",
+                      "bytes":  20618,
+                      "sha256":  "25c284bad4c7e5d437a20611366782513d4d234c0d6f64c026407e9cf1570bbe"
+                  },
+                  {
+                      "relativePath":  "examples\\Makefile.am",
+                      "bytes":  1232,
+                      "sha256":  "d5a9dba98ddb673e056d1ea01a7607597819639968952409fba83ecb8703f416"
+                  },
+                  {
+                      "relativePath":  "examples\\seeking_example.c",
+                      "bytes":  8055,
+                      "sha256":  "af5a64b6902ae4f2c34c934f9319743188118e7eb332634ecd96eba4bc827a1b"
+                  },
+                  {
+                      "relativePath":  "examples\\vorbisfile_example.c",
+                      "bytes":  3070,
+                      "sha256":  "a5e7e0f721a856415c563ac03754d0c7a1091df1f01e4871488b6e1bf0d6da3b"
+                  },
+                  {
+                      "relativePath":  "include\\Makefile.am",
+                      "bytes":  76,
+                      "sha256":  "f52043fecedf546255b1e7dd20097e2b2d451635d5f8373746b53eecc7386a87"
+                  },
+                  {
+                      "relativePath":  "include\\vorbis\\codec.h",
+                      "bytes":  8387,
+                      "sha256":  "1d031e3cbae7defe966426e33802450a56388a1323eec1ec629e6d4095c676c5"
+                  },
+                  {
+                      "relativePath":  "include\\vorbis\\Makefile.am",
+                      "bytes":  159,
+                      "sha256":  "802b0afefce5e3fccad538aa4b4eeef10ef2e70cbb6ff54c5e700c4797e1d4c4"
+                  },
+                  {
+                      "relativePath":  "include\\vorbis\\vorbisenc.h",
+                      "bytes":  16990,
+                      "sha256":  "d2aba0527252dc265ffc40bc9b1955d5ac0dc8d5e16d9376fa366c05fa27dc7f"
+                  },
+                  {
+                      "relativePath":  "include\\vorbis\\vorbisfile.h",
+                      "bytes":  7990,
+                      "sha256":  "7d98264e57b0190ef0a2701a0bea5f982e82fc1bedd93cd9408a2fff7790f803"
+                  },
+                  {
+                      "relativePath":  "lib\\analysis.c",
+                      "bytes":  3088,
+                      "sha256":  "cf75d75c762f27ee9f50e9be794e47551d86cbdfb00fbce962ba3280a9516e4d"
+                  },
+                  {
+                      "relativePath":  "lib\\backends.h",
+                      "bytes":  5151,
+                      "sha256":  "1253a0cf54a10b46591bf1dac1717b3bd76abe89188217cd7fbfaa8f50745df5"
+                  },
+                  {
+                      "relativePath":  "lib\\barkmel.c",
+                      "bytes":  2391,
+                      "sha256":  "75486bfdcb6d4360b606c400a11c5d471def82edb2d204258afa5666eaff6afd"
+                  },
+                  {
+                      "relativePath":  "lib\\bitrate.c",
+                      "bytes":  8478,
+                      "sha256":  "fd8940a065820c247e0e115b9a10af82c09ed419f8c9a6b88eddaaed221f52b3"
+                  },
+                  {
+                      "relativePath":  "lib\\bitrate.h",
+                      "bytes":  1963,
+                      "sha256":  "06bd012d67f97a5dc1de135371060a0c879a83b01c69d2cceee4ddc7cbef2676"
+                  },
+                  {
+                      "relativePath":  "lib\\block.c",
+                      "bytes":  30592,
+                      "sha256":  "7f65c7031c2b94405d2c1b5f0a73cc19efe9506e95736ba0b38d86bd42170a7e"
+                  },
+                  {
+                      "relativePath":  "lib\\CMakeLists.txt",
+                      "bytes":  4580,
+                      "sha256":  "10dcbd29364dafb2aaca916c0b2d4a90105d22fe4fc072ba50cefcdee45c4b6b"
+                  },
+                  {
+                      "relativePath":  "lib\\codebook.c",
+                      "bytes":  13408,
+                      "sha256":  "662728ef6190968fd717af62b19578006357090814b15b2f03ddc7a98871b345"
+                  },
+                  {
+                      "relativePath":  "lib\\codebook.h",
+                      "bytes":  4958,
+                      "sha256":  "1a0bf4ebc17645910080155a83bd39b810c7e73703e97c65c5e7ccfdcb89ec55"
+                  },
+                  {
+                      "relativePath":  "lib\\codec_internal.h",
+                      "bytes":  5392,
+                      "sha256":  "3f32ac0e4e94cb0dde4800b243e1239cda9e4df1d277acf334fb48a648a08f8b"
+                  },
+                  {
+                      "relativePath":  "lib\\envelope.c",
+                      "bytes":  10672,
+                      "sha256":  "ae9f845d39776f7b6072543368a18037f778c56385a5cb6377dac388f44b3b51"
+                  },
+                  {
+                      "relativePath":  "lib\\envelope.h",
+                      "bytes":  2116,
+                      "sha256":  "4bc533e8455ad005fca72274ce10e8c7cff69251f0641d98a8a71922be0ba0ce"
+                  },
+                  {
+                      "relativePath":  "lib\\floor0.c",
+                      "bytes":  6889,
+                      "sha256":  "20185fa3bff19f7c162a113f8fb969f3961079454b3ffd2019e9e555b0bbc61c"
+                  },
+                  {
+                      "relativePath":  "lib\\floor1.c",
+                      "bytes":  30922,
+                      "sha256":  "fd4f403b56bf5538d1cc33fcf9236bca230553c143273fe17f5846ed928b6a64"
+                  },
+                  {
+                      "relativePath":  "lib\\highlevel.h",
+                      "bytes":  1840,
+                      "sha256":  "22758888e37c71831d2dca16848f03443ed5b5308247c727a58c83f23294716c"
+                  },
+                  {
+                      "relativePath":  "lib\\info.c",
+                      "bytes":  19866,
+                      "sha256":  "03af6059fe7e50d0b37a0370707139227e6cd4cc74be56473cd22f0300739fca"
+                  },
+                  {
+                      "relativePath":  "lib\\lookup.c",
+                      "bytes":  3246,
+                      "sha256":  "4b169c62256e13a6575aaf38eb49514d8e7825c0df2429a669768b5a6d6716fa"
+                  },
+                  {
+                      "relativePath":  "lib\\lookup.h",
+                      "bytes":  1249,
+                      "sha256":  "1efc9bdd275e812a7cca384e0880ddc85ea94c4c845bcd41a4fe5a557b32ac86"
+                  },
+                  {
+                      "relativePath":  "lib\\lookups.pl",
+                      "bytes":  3916,
+                      "sha256":  "d20442461647a8c64c00d2b6cd09d9bbe32238fd54c0903dad4e3b31cefbd7fa"
+                  },
+                  {
+                      "relativePath":  "lib\\lookup_data.h",
+                      "bytes":  10036,
+                      "sha256":  "cd14d76eb3380d091bbcdda5bc361e5f2f31803e71e3a2287ac4d1435ed57bd5"
+                  },
+                  {
+                      "relativePath":  "lib\\lpc.c",
+                      "bytes":  4486,
+                      "sha256":  "e782bd2780f354fcb0156855260c082ccdeed76dc1152ba7a6ae45b98520dfeb"
+                  },
+                  {
+                      "relativePath":  "lib\\lpc.h",
+                      "bytes":  1174,
+                      "sha256":  "90b11956f6fe25980613e1fce79d13a49e1109ad76e87c1f11891940df4f78f5"
+                  },
+                  {
+                      "relativePath":  "lib\\lsp.c",
+                      "bytes":  12585,
+                      "sha256":  "cf618a3be06feb94e39eb7a06ad0db4fd8462f8edac93faf4765b28516a9f5ef"
+                  },
+                  {
+                      "relativePath":  "lib\\lsp.h",
+                      "bytes":  1182,
+                      "sha256":  "588111726561c1caa8a22278eb63b7b4fa84dfbeea14d99a1d9d46b77aacda0c"
+                  },
+                  {
+                      "relativePath":  "lib\\Makefile.am",
+                      "bytes":  1926,
+                      "sha256":  "083c60e895d03d701979789e495351b1383ee677334df6606a04f8748976fc73"
+                  },
+                  {
+                      "relativePath":  "lib\\mapping0.c",
+                      "bytes":  28765,
+                      "sha256":  "d3f26fa42c4345f36885e93650ee6da07861b37ea816b131e5fafb7a7c6d19e2"
+                  },
+                  {
+                      "relativePath":  "lib\\masking.h",
+                      "bytes":  39455,
+                      "sha256":  "627fdc3683edda9800edffe0360807d782c1236ba4ad5d05f013517c104b9147"
+                  },
+                  {
+                      "relativePath":  "lib\\mdct.c",
+                      "bytes":  15493,
+                      "sha256":  "e32b379d7a3d9253524abae3c41c5ac2486bf166cf65996efc4e68db1b164993"
+                  },
+                  {
+                      "relativePath":  "lib\\mdct.h",
+                      "bytes":  1955,
+                      "sha256":  "f8ac37e630cd3c0b8790d4de79134e1015dff3a9136beab7835ff8b2e489fe0f"
+                  },
+                  {
+                      "relativePath":  "lib\\misc.c",
+                      "bytes":  5808,
+                      "sha256":  "541173afa41f9f66d53ebdf8ddd0dcaad1594fdb60c80949913fb5184c797b1c"
+                  },
+                  {
+                      "relativePath":  "lib\\misc.h",
+                      "bytes":  1988,
+                      "sha256":  "f83ebd3e0327e6b12cfe11239826691a9fad3f4870b7f8444d7ba54ace289e4a"
+                  },
+                  {
+                      "relativePath":  "lib\\os.h",
+                      "bytes":  5176,
+                      "sha256":  "b9e31c7a0f46d43f6788670fd63f8f3db1584a8915f696e664ec8cf0c8fe81be"
+                  },
+                  {
+                      "relativePath":  "lib\\psy.c",
+                      "bytes":  35900,
+                      "sha256":  "e8ccec1fba7d00961d5c67fec30b488c912f0ad7842ec7b1aeab987b97744b6e"
+                  },
+                  {
+                      "relativePath":  "lib\\psy.h",
+                      "bytes":  4628,
+                      "sha256":  "99d1f493b63185d702868d8f6616ab69bb546ffb61afb3f47a0f637c3ff5b391"
+                  },
+                  {
+                      "relativePath":  "lib\\psytune.c",
+                      "bytes":  16264,
+                      "sha256":  "dc7a55cabd7ee6431f723f3c5923930a944562cb56aafba8a699cd22c420fb9d"
+                  },
+                  {
+                      "relativePath":  "lib\\registry.c",
+                      "bytes":  1772,
+                      "sha256":  "4259a70a4de23ab48a0af4ff08e0f68102052c6c7d3535c06bd7d7e2fdb82a65"
+                  },
+                  {
+                      "relativePath":  "lib\\registry.h",
+                      "bytes":  1247,
+                      "sha256":  "29a25a4e34b3d41458b7a7e1757da9c63cea24322c39616b7fe16b3bf51ab55a"
+                  },
+                  {
+                      "relativePath":  "lib\\res0.c",
+                      "bytes":  24915,
+                      "sha256":  "0d3daf9327dbe14460d9b11df1ea0d9de709e3326d70b607d65720323d0caf62"
+                  },
+                  {
+                      "relativePath":  "lib\\scales.h",
+                      "bytes":  2761,
+                      "sha256":  "455637c2955912086613c0acf0451091dd22707bf1560ac9f964b975998fb545"
+                  },
+                  {
+                      "relativePath":  "lib\\sharedbook.c",
+                      "bytes":  17806,
+                      "sha256":  "a883767bf16552f5cf8686b58b86e55819dcb63487c5307fee5d45820b836a40"
+                  },
+                  {
+                      "relativePath":  "lib\\smallft.c",
+                      "bytes":  22185,
+                      "sha256":  "21b4cd38bc6d50991f4abca4d2619fe1fa27ee74a22bd935804f4cd62b77472a"
+                  },
+                  {
+                      "relativePath":  "lib\\smallft.h",
+                      "bytes":  1218,
+                      "sha256":  "6df874852a7247f181e9a8e7ead541a40893cc50c0a17f1f3e799db25c5a9e61"
+                  },
+                  {
+                      "relativePath":  "lib\\synthesis.c",
+                      "bytes":  5180,
+                      "sha256":  "d5f92aaed1e7b59f3c01e0405813009cda29a61a0e6155d60980907d93c1eeb3"
+                  },
+                  {
+                      "relativePath":  "lib\\tone.c",
+                      "bytes":  1007,
+                      "sha256":  "07baf17ef59384c2831abfa6b46fb37ffe18fe11337cb64a152f5c637e53a842"
+                  },
+                  {
+                      "relativePath":  "lib\\vorbisenc.c",
+                      "bytes":  39310,
+                      "sha256":  "0c123e6c1ecf7fd5729b570db7ff061b2bfeff46815bd93f96ac49c2df79a45d"
+                  },
+                  {
+                      "relativePath":  "lib\\vorbisfile.c",
+                      "bytes":  76295,
+                      "sha256":  "557752159e4c96e4ca339d28a4454c9d7edbf6b2bca6cbe4e8a5f8c44ef9196f"
+                  },
+                  {
+                      "relativePath":  "lib\\window.c",
+                      "bytes":  128646,
+                      "sha256":  "bea202730509aa12bc5f0da703be1a04a7e7dd04b2ee7a2b3a6f8b133edaacbc"
+                  },
+                  {
+                      "relativePath":  "lib\\window.h",
+                      "bytes":  1086,
+                      "sha256":  "9bb736d228deae67699012cc38f81d379e0b077432f162f2dcd1087f7669dc98"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\Makefile.am",
+                      "bytes":  93,
+                      "sha256":  "55f3bccfa5374d38a249101535af6ae2f384b75f1f582aa393b7e8b1ad35a148"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\coupled\\Makefile.am",
+                      "bytes":  106,
+                      "sha256":  "75bee994a567ec99de11cecf816c795e1381543670a29951f9e3f758452d82c8"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\coupled\\res_books_51.h",
+                      "bytes":  459592,
+                      "sha256":  "9e87f1929f827d6c1987d9056aadee865475f522598b2d7c1f484b43db7abfc2"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\coupled\\res_books_stereo.h",
+                      "bytes":  629535,
+                      "sha256":  "af0a24656e4726623836f0b8af30aa8f77a80853eee52c5f761fccd2b151a35b"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\floor\\floor_books.h",
+                      "bytes":  49552,
+                      "sha256":  "5ee30dd6f4dbab7a13e0f2975f54994034769e8061d7d8e1d56ecad6ffcf627b"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\floor\\Makefile.am",
+                      "bytes":  86,
+                      "sha256":  "6303ba3938102fadf64bc0bbe8a44a0c5674f1b6df21fc8a82aa47fc49c9472f"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\uncoupled\\Makefile.am",
+                      "bytes":  94,
+                      "sha256":  "c9c8238679d45014d93382b9945bfa7daf5443b37161e1efc8bf6187c68d1213"
+                  },
+                  {
+                      "relativePath":  "lib\\books\\uncoupled\\res_books_uncoupled.h",
+                      "bytes":  241228,
+                      "sha256":  "2a162ca24be180c6988663164e2490d7eeaacffde984852622112223be615e51"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\floor_all.h",
+                      "bytes":  7395,
+                      "sha256":  "eee5e966bb08c94d03590a9617573ef55fde625a7f38bbac3badcd1dfea7e7a6"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\Makefile.am",
+                      "bytes":  320,
+                      "sha256":  "f8e8aee0ffef99684b7a96e68bb826c72e638652c2ef633ba40896b72421da5e"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\psych_11.h",
+                      "bytes":  2321,
+                      "sha256":  "f07afd1f4c7e3eb3bdacaa17eb7fa4f0284b4b7d566f5c4ad6ac6192c4b95c6c"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\psych_16.h",
+                      "bytes":  6324,
+                      "sha256":  "7a19a41238b98b3bde37383028e9de9814236cb3ea32c762b87a9712a1c17902"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\psych_44.h",
+                      "bytes":  32424,
+                      "sha256":  "89b746cc218d5968534781353a68aa79fe600c70e075133ce8db6a2d1adfa247"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\psych_8.h",
+                      "bytes":  4044,
+                      "sha256":  "038692e77d971e0e9160e7793e00b5720a884a4f814a0fc54f1ea5fb5fee0191"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\residue_16.h",
+                      "bytes":  4834,
+                      "sha256":  "eb845bcd40b90fd9352c0e4368f3d9be0bf724436d7662f801c700c3daf78677"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\residue_44.h",
+                      "bytes":  9913,
+                      "sha256":  "682493552e7e9ab57a23a7da6e9a9cc93f0fc1c9fae14113da5017b9e4aab894"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\residue_44p51.h",
+                      "bytes":  12081,
+                      "sha256":  "264449b1d7011383f25621900b1265aee68c3b08363d02c9ac4c871f65a85445"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\residue_44u.h",
+                      "bytes":  9088,
+                      "sha256":  "9333818e94293a6c4637900c8c61924046ec3f127f64620a301462448347c705"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\residue_8.h",
+                      "bytes":  3201,
+                      "sha256":  "8d9426f1a2e9875aa4415e017ee6dfd89facb74d8fc11ea2ace2303914ca1463"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_11.h",
+                      "bytes":  2749,
+                      "sha256":  "e0db00caa52b067fc00bfb481520e40639b692630e12d4ad7056e63d3c9f8cf1"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_16.h",
+                      "bytes":  3275,
+                      "sha256":  "097c0ee4897e83603d82c9502ae2d370b697d32036029b0129a8d0ae7dc5ecb4"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_22.h",
+                      "bytes":  2785,
+                      "sha256":  "1390300520d3fd2f8c2c982b42d99c6437a49c790ec7bb103bd4ff12fd61cc43"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_32.h",
+                      "bytes":  3014,
+                      "sha256":  "a51d90d39b24dc979ea13e55162b0d3cf9bb02449b40902ec3c13edc3db04a97"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_44.h",
+                      "bytes":  2994,
+                      "sha256":  "ee4d6feae20e853e866d614803f8bd36f373e852f9802c5d9526ce2f102a73c9"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_44p51.h",
+                      "bytes":  1956,
+                      "sha256":  "3475d4f02e159abcab215a255d9522ef6df3a8fcd38eac9384972a71028583b9"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_44u.h",
+                      "bytes":  1967,
+                      "sha256":  "105188c75026efe6f7cdac5d47065334cce856f5c5ca1f5a0a3560a4415176ae"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_8.h",
+                      "bytes":  2862,
+                      "sha256":  "e90461d17349d6e7e598868ef263f543fdb2974ca120460fda166ff7d0dff0d7"
+                  },
+                  {
+                      "relativePath":  "lib\\modes\\setup_X.h",
+                      "bytes":  4197,
+                      "sha256":  "8e34688933fc073c08590eff72d838a4af7c8748dd5c50270a18af2a67e33e32"
+                  },
+                  {
+                      "relativePath":  "m4\\add_cflags.m4",
+                      "bytes":  405,
+                      "sha256":  "7b3356a661a19f0ecc5c72b15fa3fc4ea67ebad53efe26cb1d25f427e7bfc7f1"
+                  },
+                  {
+                      "relativePath":  "m4\\Makefile.am",
+                      "bytes":  101,
+                      "sha256":  "1d8b1e7afa6740629c2a4287a7b9535be5f678a6d81b336cb358cb4a44ebff87"
+                  },
+                  {
+                      "relativePath":  "m4\\ogg.m4",
+                      "bytes":  3958,
+                      "sha256":  "3130207f221fc791a0eb2530dd4b79707d6653c023ca49bd9a377e197bdf6b5c"
+                  },
+                  {
+                      "relativePath":  "m4\\pkg.m4",
+                      "bytes":  5217,
+                      "sha256":  "a16da2a78611fe1076877681e6a50564304fd639f0dc8dbe13008ba798db319c"
+                  },
+                  {
+                      "relativePath":  "macosx\\Info.plist",
+                      "bytes":  1001,
+                      "sha256":  "acd04e7af0276c913861d96e64fb5b71a39dcbe345dbd96bfebb097d2834afea"
+                  },
+                  {
+                      "relativePath":  "macosx\\English.lproj\\InfoPlist.strings",
+                      "bytes":  142,
+                      "sha256":  "cd2a1689466d976fee888abab2c97da7e9876ab1a2233072862d6707621b958d"
+                  },
+                  {
+                      "relativePath":  "macosx\\Vorbis.xcodeproj\\project.pbxproj",
+                      "bytes":  47526,
+                      "sha256":  "7574b57fc3c24b4c4bb34969aa07e91130c53be9cb6766534cae03675de8f59b"
+                  },
+                  {
+                      "relativePath":  "symbian\\bld.inf",
+                      "bytes":  1657,
+                      "sha256":  "a5f144b58bc998f1116a79df45fce01c47efe448d0d34fa27e2b1ded8fc6651f"
+                  },
+                  {
+                      "relativePath":  "symbian\\config.h",
+                      "bytes":  2638,
+                      "sha256":  "7eba257b9e79c832f4bcae5a03222fdc6391ba3e41170c00d0c31470352010a3"
+                  },
+                  {
+                      "relativePath":  "symbian\\vorbis.mmp",
+                      "bytes":  2122,
+                      "sha256":  "48ea94d7c8a7e65f84d30a2cee2db88e00fcafc493337ac8c6416a046b6f9f57"
+                  },
+                  {
+                      "relativePath":  "test\\Makefile.am",
+                      "bytes":  432,
+                      "sha256":  "5515c1778c31b2abb886fb0d877bc3606c088268a6764775173d586fee9d7ddc"
+                  },
+                  {
+                      "relativePath":  "test\\test.c",
+                      "bytes":  2863,
+                      "sha256":  "900545d6a99625958e3997354a264d25b93d275fb8a2ad8f969f596a6de34792"
+                  },
+                  {
+                      "relativePath":  "test\\util.c",
+                      "bytes":  1606,
+                      "sha256":  "a8914b784d78dd8f8fa8eee49040b510ba471587276ec00ca653a0134829b98c"
+                  },
+                  {
+                      "relativePath":  "test\\util.h",
+                      "bytes":  1193,
+                      "sha256":  "bd6a6d3aaec6e1a0d428a128a8799c1e2b34a3d7cffeb39f46be66704f50d272"
+                  },
+                  {
+                      "relativePath":  "test\\write_read.c",
+                      "bytes":  7968,
+                      "sha256":  "b7551c8235c5fe016da2483a2ad735495d60a958d3299283cde6860876925b22"
+                  },
+                  {
+                      "relativePath":  "test\\write_read.h",
+                      "bytes":  1469,
+                      "sha256":  "fc94433d572d93f80804e9417ee75ff9a98232c715be7f5029e848577746febc"
+                  },
+                  {
+                      "relativePath":  "vq\\16.vqs",
+                      "bytes":  3401,
+                      "sha256":  "c93ad4b3d7c659b39f42d361b8cc5219bdde3244ec037cf02096cdde68adcf9a"
+                  },
+                  {
+                      "relativePath":  "vq\\16u.vqs",
+                      "bytes":  3049,
+                      "sha256":  "7d14c70cac78961d1581a857a04ab00c5390ca5972396dad0cb675f8ea5971a9"
+                  },
+                  {
+                      "relativePath":  "vq\\44c-1.vqs",
+                      "bytes":  2417,
+                      "sha256":  "142519bf283a66340b975979a2182c32b6975bcf86bf79d792dfad332a5af28f"
+                  },
+                  {
+                      "relativePath":  "vq\\44c0.vqs",
+                      "bytes":  2383,
+                      "sha256":  "b71d004336a6614223a06ebb7df9aecacb60981e0efefb92bc6e0524607fe71f"
+                  },
+                  {
+                      "relativePath":  "vq\\44c1.vqs",
+                      "bytes":  2412,
+                      "sha256":  "b56b5c95608304ad6a79bb0330f02e66eb8011caffe72a1a4205b327a426bd84"
+                  },
+                  {
+                      "relativePath":  "vq\\44c2.vqs",
+                      "bytes":  1294,
+                      "sha256":  "c2688dc49fcc98557b2fdb40072d6d09ee5481ddf0ea0edc901be82c69d042b4"
+                  },
+                  {
+                      "relativePath":  "vq\\44c3.vqs",
+                      "bytes":  1297,
+                      "sha256":  "a5d7fd9c34f134dfd83b09b9628b25c0092aad236d1dee0370d76c8183632f03"
+                  },
+                  {
+                      "relativePath":  "vq\\44c4.vqs",
+                      "bytes":  1303,
+                      "sha256":  "27e0430d3b65e8d9255c86d60762ad0e65914de3fefd6adc94281a35216b5961"
+                  },
+                  {
+                      "relativePath":  "vq\\44c5.vqs",
+                      "bytes":  1314,
+                      "sha256":  "728b6d08b9a5902425866de16586adb682a70bfdd65520610c7109e041a50347"
+                  },
+                  {
+                      "relativePath":  "vq\\44c6.vqs",
+                      "bytes":  1501,
+                      "sha256":  "b804b263c0ea27c8d7b59b0649afe4ee1bbbac6fd565e2c096e3a14abff3df22"
+                  },
+                  {
+                      "relativePath":  "vq\\44c7.vqs",
+                      "bytes":  1502,
+                      "sha256":  "f65256e498b7c2a2d9105bec2a5d0d21f72b9ccdb469aca2b7e5ae3e23e95646"
+                  },
+                  {
+                      "relativePath":  "vq\\44c8.vqs",
+                      "bytes":  1526,
+                      "sha256":  "842190cf8bd1d527d966caa8c84ab4af9a175d44bfb9af92f8b1f7ff7107fce1"
+                  },
+                  {
+                      "relativePath":  "vq\\44c9.vqs",
+                      "bytes":  1528,
+                      "sha256":  "2d88a8c0fc3f2f58d0240f0dbf532392b4eb279b3aa4add1caea5ee96c3d2324"
+                  },
+                  {
+                      "relativePath":  "vq\\44p-1.vqs",
+                      "bytes":  1531,
+                      "sha256":  "eb3c14a7d289f3bce82ebdaa40024f859cde205c83ccdfff8cd4ffc08a856d59"
+                  },
+                  {
+                      "relativePath":  "vq\\44p0.vqs",
+                      "bytes":  1509,
+                      "sha256":  "2805e6b3db138978771f6c31950f9f5b6c88dc3de4a78406383f06e8f23655a9"
+                  },
+                  {
+                      "relativePath":  "vq\\44p1.vqs",
+                      "bytes":  1509,
+                      "sha256":  "6decb732fc0cdb9def4412390b9b669b408679ef3beaab220b42f0ffebb06a65"
+                  },
+                  {
+                      "relativePath":  "vq\\44p2.vqs",
+                      "bytes":  1689,
+                      "sha256":  "29be14aea08ec97b64cb18efd92466303fa262b9ba44af1d6014292c167e49f5"
+                  },
+                  {
+                      "relativePath":  "vq\\44p3.vqs",
+                      "bytes":  1746,
+                      "sha256":  "7a948bf028570d3dfa329c102e24616d3c61ad62158b4b13efc28486c0f78e95"
+                  },
+                  {
+                      "relativePath":  "vq\\44p4.vqs",
+                      "bytes":  1746,
+                      "sha256":  "7e66565260a614cd6bbfd20ec4e9e8ca94c8d65a83ee91204ef2af5f0aa78d0d"
+                  },
+                  {
+                      "relativePath":  "vq\\44p5.vqs",
+                      "bytes":  1747,
+                      "sha256":  "1a62446e12df116eab11e3ba1cdc98c1e8b8c0cf90db860c21e72b1e01d5ebf5"
+                  },
+                  {
+                      "relativePath":  "vq\\44p6.vqs",
+                      "bytes":  1747,
+                      "sha256":  "26326173325999df633013734a9473b17459e3fa7d961798245bdf43969e9afc"
+                  },
+                  {
+                      "relativePath":  "vq\\44p7.vqs",
+                      "bytes":  1753,
+                      "sha256":  "5703b94cea4b0467bbc411238bb55af9b921b26d195ca1c78934efe4f7919b6e"
+                  },
+                  {
+                      "relativePath":  "vq\\44p8.vqs",
+                      "bytes":  1757,
+                      "sha256":  "b2382741588c1aa4d92ac414d1ad4ce7c48065fc243e2d07d54f090e5a6ea96f"
+                  },
+                  {
+                      "relativePath":  "vq\\44p9.vqs",
+                      "bytes":  1762,
+                      "sha256":  "6f06897aac6ec956306385db4326d804e191a733d615cd57fca96216a2ba858e"
+                  },
+                  {
+                      "relativePath":  "vq\\44u0.vqs",
+                      "bytes":  998,
+                      "sha256":  "e4959e6d6c67a5bbbcc71db8a2fec7401072a8c1d49cd22e6300e2d1ddd71861"
+                  },
+                  {
+                      "relativePath":  "vq\\44u1.vqs",
+                      "bytes":  1002,
+                      "sha256":  "89907542596ef5c93989ccb7ee7bb66eb053a78d056afe3107d0570632515fc9"
+                  },
+                  {
+                      "relativePath":  "vq\\44u2.vqs",
+                      "bytes":  1005,
+                      "sha256":  "f1e6d54a88a0fe995bfd83942c3850d4a9b8cf14cd6a359132ab8d4aa0e9a2c5"
+                  },
+                  {
+                      "relativePath":  "vq\\44u3.vqs",
+                      "bytes":  1015,
+                      "sha256":  "f2949c4b421da10a6a4832054e552a4d6783db3044ae2ee5fd302593150cd03e"
+                  },
+                  {
+                      "relativePath":  "vq\\44u4.vqs",
+                      "bytes":  1025,
+                      "sha256":  "672610e2ce8076f648583740495e4be5399df87e9ce789ffb5b5a07104c739bd"
+                  },
+                  {
+                      "relativePath":  "vq\\44u5.vqs",
+                      "bytes":  1238,
+                      "sha256":  "e53a197767a503496a2c1c70b49e36eb24ffde06ddc7f104c2a242992fffd5ca"
+                  },
+                  {
+                      "relativePath":  "vq\\44u6.vqs",
+                      "bytes":  1243,
+                      "sha256":  "43f29e29a266b9b9e1ba43a721d5ed01f3d07679f5479498fa085bee2c7124d0"
+                  },
+                  {
+                      "relativePath":  "vq\\44u7.vqs",
+                      "bytes":  1281,
+                      "sha256":  "7fd209d77a4351dbcf49f9cfbf8af48174d20c1288a89fd349ad65e4a9a6369d"
+                  },
+                  {
+                      "relativePath":  "vq\\44u8.vqs",
+                      "bytes":  1418,
+                      "sha256":  "bf9231c26d740b77e623f772842f972c81feadab46099448aec9e7a0efa89444"
+                  },
+                  {
+                      "relativePath":  "vq\\44u9.vqs",
+                      "bytes":  1435,
+                      "sha256":  "b7556150f98a036a9ac63099358ccb4085b10c1e7f2ee725f7252d18f1d3c4d5"
+                  },
+                  {
+                      "relativePath":  "vq\\8.vqs",
+                      "bytes":  1836,
+                      "sha256":  "6824c2bad34f29e49720cb91cf7ec09b9723d337c18936796eeba42eb0fd57d5"
+                  },
+                  {
+                      "relativePath":  "vq\\8u.vqs",
+                      "bytes":  1555,
+                      "sha256":  "10d79feddd584a18187ebbe2898f4821c55d4186150aa801f74e86d6d8a690d8"
+                  },
+                  {
+                      "relativePath":  "vq\\bookutil.c",
+                      "bytes":  11785,
+                      "sha256":  "7416c2978c86b2d22b03f694de27a46566167c58264ecc17eba796baa7fde136"
+                  },
+                  {
+                      "relativePath":  "vq\\bookutil.h",
+                      "bytes":  1754,
+                      "sha256":  "9fe57d728d8b7f61a9b8672c6b6f9eaa6e273c94c9d6e40d4681f208b2170daf"
+                  },
+                  {
+                      "relativePath":  "vq\\distribution.c",
+                      "bytes":  6467,
+                      "sha256":  "48757d8a970b2f540ff848d9a6c44707c4057e8c958864abf1265d14faacd614"
+                  },
+                  {
+                      "relativePath":  "vq\\floor_11.vqs",
+                      "bytes":  181,
+                      "sha256":  "0c8ffa14a84fea7aa9f55b3c1cf3727a6406bd227153986b764ae90c99f332f6"
+                  },
+                  {
+                      "relativePath":  "vq\\floor_22.vqs",
+                      "bytes":  640,
+                      "sha256":  "224b98257b2f080d40e12fabd447b4f5ee5694ddbf83651a26ede0d1c4c3df2d"
+                  },
+                  {
+                      "relativePath":  "vq\\floor_44.vqs",
+                      "bytes":  2318,
+                      "sha256":  "30eee790d9ca50330df6ba9a80675c58879a3bacc41885222fdbb5c305f2730d"
+                  },
+                  {
+                      "relativePath":  "vq\\huffbuild.c",
+                      "bytes":  4834,
+                      "sha256":  "0c335ff4b4366ae8c2b2b41f34efd3d64e2951015303057a308faad3bce87f88"
+                  },
+                  {
+                      "relativePath":  "vq\\latticebuild.c",
+                      "bytes":  5094,
+                      "sha256":  "34c499f9a901f1bd5570addfa9eb2f66d78678ba8911ace6fe2a9c832a364236"
+                  },
+                  {
+                      "relativePath":  "vq\\latticetune.c",
+                      "bytes":  4236,
+                      "sha256":  "b543bae946d6d85a42ac7f085b3d39181dc0c1e8f745b76921713bdb687b96ca"
+                  },
+                  {
+                      "relativePath":  "vq\\localcodebook.h",
+                      "bytes":  5063,
+                      "sha256":  "de02f2046bcca6191a7b9fdfd1825dfe5fa987075ff613589220411c97662c1c"
+                  },
+                  {
+                      "relativePath":  "vq\\Makefile.am",
+                      "bytes":  1203,
+                      "sha256":  "618edeacc74466a6a2826b3015072e847bb4b6715196cda34d95583feb750e40"
+                  },
+                  {
+                      "relativePath":  "vq\\make_floor_books.pl",
+                      "bytes":  2596,
+                      "sha256":  "ab96a055f81539a7521cbe3709ae5c2aca197c6c89e0a790d53680e658a3b2e9"
+                  },
+                  {
+                      "relativePath":  "vq\\make_residue_books.pl",
+                      "bytes":  4263,
+                      "sha256":  "9b2ff20d3354ace4b63036449e3206447691376c17ccc69c31f6eb9358860453"
+                  },
+                  {
+                      "relativePath":  "vq\\metrics.c",
+                      "bytes":  8384,
+                      "sha256":  "27935a23aafabcaa11815cf19e12fb7ae36b49ed50f243b5e1726feac77bba5e"
+                  },
+                  {
+                      "relativePath":  "vq\\vqgen.c",
+                      "bytes":  15980,
+                      "sha256":  "962b16e6fddb1c60c8bdc4380a760b5c91b50056643c4f157de7aca3f555203f"
+                  },
+                  {
+                      "relativePath":  "vq\\vqgen.h",
+                      "bytes":  2373,
+                      "sha256":  "1a81c311cac154543a02f11707a98cc52139c490e040167e5b65d67617b59428"
+                  },
+                  {
+                      "relativePath":  "win32\\vorbis.def",
+                      "bytes":  1062,
+                      "sha256":  "0be9cd3252cddb495ccb320d4b4e4b455abc5e430b1d19d004109473eac329b9"
+                  },
+                  {
+                      "relativePath":  "win32\\vorbisenc.def",
+                      "bytes":  173,
+                      "sha256":  "1298704315c15a4d9f117bc8e956dce1fa6a388910fc7e24d82af60694f0a4f4"
+                  },
+                  {
+                      "relativePath":  "win32\\vorbisfile.def",
+                      "bytes":  507,
+                      "sha256":  "f1bf7212582e4c9c8192b64667074dfcb4273137d4b0b11f133c1f21cce933ac"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\libogg.vsprops",
+                      "bytes":  775,
+                      "sha256":  "f214b783ba47df750182e7d952f8ef615ddbb23a4aec105d5653e9eff73f17d6"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\README",
+                      "bytes":  450,
+                      "sha256":  "a4af487632875c23dc40736a7af677f89c2c106d0e098f349fad086642b7d8a8"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\vorbis_dynamic.sln",
+                      "bytes":  3585,
+                      "sha256":  "f7a6b9137459f4b8775779331425e528ba17a709553812ce68035191039c59de"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\vorbis_static.sln",
+                      "bytes":  3581,
+                      "sha256":  "293b54b07235279f32a6bb68da002ca764636dfb5787ac1cd0f989e9aa7c1135"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\libvorbis\\libvorbis_dynamic.vcproj",
+                      "bytes":  28977,
+                      "sha256":  "8bf91306766adc2683b5cd33c265a2cb97b35c7c11ece0faa4e4bcd3785a8931"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\libvorbis\\libvorbis_static.vcproj",
+                      "bytes":  24049,
+                      "sha256":  "4a1e019f12029bc9d3634a7ce3d4e24c8bf8d0f80e83903ee000457ff9f14469"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\libvorbisfile\\libvorbisfile_dynamic.vcproj",
+                      "bytes":  8462,
+                      "sha256":  "27fd44c5738d588a9ba4842f0af685b914f43cff02224362eaa751299b384984"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\libvorbisfile\\libvorbisfile_static.vcproj",
+                      "bytes":  6450,
+                      "sha256":  "d6ba247f1871be86f406f73e5c44d4629710621ffc2e3699f5983c481f801322"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\vorbisdec\\vorbisdec_dynamic.vcproj",
+                      "bytes":  8369,
+                      "sha256":  "ecfb655a5cae4985427fb95bf4f68511532efaf033dd72630e58606117f0de49"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\vorbisdec\\vorbisdec_static.vcproj",
+                      "bytes":  8453,
+                      "sha256":  "5071287bb516c9e32fe756a2478eb0693ffbd289353c3c7c19496278919899ae"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\vorbisenc\\vorbisenc_dynamic.vcproj",
+                      "bytes":  8413,
+                      "sha256":  "345e3a5832c8d5f7769c34981964b26d91266c9c9fb13f58ac40085bd4d7756d"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2005\\vorbisenc\\vorbisenc_static.vcproj",
+                      "bytes":  8497,
+                      "sha256":  "a28a835b088afbcae583217ea624624416a1e6a9f3d7157960e602b715a78a3f"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\libogg.vsprops",
+                      "bytes":  775,
+                      "sha256":  "cb9e9aed8c8b6c5dd09b5ade71680ec3165fb3565af584da8c77fff04f424aa9"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\README",
+                      "bytes":  450,
+                      "sha256":  "a4af487632875c23dc40736a7af677f89c2c106d0e098f349fad086642b7d8a8"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\vorbis_dynamic.sln",
+                      "bytes":  6544,
+                      "sha256":  "8328f8587d424bb9b3e95f4524c64121b7f33b632c9c8b7c750461599fa7efda"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\vorbis_static.sln",
+                      "bytes":  6540,
+                      "sha256":  "e3710bcc7ef6ddc4474bf61e8efb27035409cd2939a011233812690fbee29275"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\libvorbis\\libvorbis_dynamic.vcproj",
+                      "bytes":  24641,
+                      "sha256":  "293937ebb8ae021864d38ceeaa0b359e8b1d5dd27c94333a194dfb01a2cdce45"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\libvorbis\\libvorbis_static.vcproj",
+                      "bytes":  24102,
+                      "sha256":  "8ffc4711b1a3704adf25c15581c845a7c938a04208240e6a94341501d28a85b0"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\libvorbisfile\\libvorbisfile_dynamic.vcproj",
+                      "bytes":  8462,
+                      "sha256":  "729f013f888f2b764ff596e6b5b108fa2fba8adb9ef1cf9c47a87f4f7945fb7c"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\libvorbisfile\\libvorbisfile_static.vcproj",
+                      "bytes":  6324,
+                      "sha256":  "27d8726e8439e2d2501e5b981fb118ffce314c87af6ca60d479b521677c15f80"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\vorbisdec\\vorbisdec_dynamic.vcproj",
+                      "bytes":  8369,
+                      "sha256":  "bc84c903ccab1b22705724d4343da7b17c09ba6710950f6e81c4a903d1caf9a6"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\vorbisdec\\vorbisdec_static.vcproj",
+                      "bytes":  8453,
+                      "sha256":  "7548cfa8bde978c08bd7492ecbbf16aad3331eb12f84b7fa7be808722e41abcd"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\vorbisenc\\vorbisenc_dynamic.vcproj",
+                      "bytes":  8413,
+                      "sha256":  "054a94888d7bb212c60159dd22ddade9f74b70afd2e70f68aa721f7fbbfc7f30"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2008\\vorbisenc\\vorbisenc_static.vcproj",
+                      "bytes":  8497,
+                      "sha256":  "1c638f7579eda7eebb5d863ad59c3086a51768f6c0277dac48d0802e66c1e4ba"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\libogg.props",
+                      "bytes":  1142,
+                      "sha256":  "bd12a55edf2012f9dc350d7ad8d062cdef45ae7b31e3f9305a64512507458f70"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\README",
+                      "bytes":  450,
+                      "sha256":  "2683b62e9fada3d9e0e7dadba576df85e478afe6e3e4edac7bd7aa081ef5c0df"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\vorbis_dynamic.sln",
+                      "bytes":  3590,
+                      "sha256":  "e4f5eb24636a99e28cef0e96d07073f67c20d74e9a0f8037a36c5fdaf41400f6"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\vorbis_static.sln",
+                      "bytes":  3593,
+                      "sha256":  "29ffe8fd9e92572e6031ea97034951cbd247fc315747c424f9218a11a7158912"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\libvorbis\\libvorbis_dynamic.vcxproj",
+                      "bytes":  16436,
+                      "sha256":  "956f0fcb17926ccd91964c4c7f50f75dfbb2e95c71f466c80c75910a1b1a340e"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\libvorbis\\libvorbis_static.vcxproj",
+                      "bytes":  13146,
+                      "sha256":  "6976a8015bbe9cfe6b8b97d10e65727c8d0c41e840c50d6751e3ce1e706788bc"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\libvorbisfile\\libvorbisfile_dynamic.vcxproj",
+                      "bytes":  12196,
+                      "sha256":  "99cd043ef30a3b44b9ee23487e259b552bc8be2c92d7b0dcf311a7f1501c38ed"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\libvorbisfile\\libvorbisfile_static.vcxproj",
+                      "bytes":  9067,
+                      "sha256":  "8b0013e37ec70ad664082cc07e5420e2bb8c0e87e0adbb5e25728cb274adae1c"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\vorbisdec\\vorbisdec_dynamic.vcxproj",
+                      "bytes":  12373,
+                      "sha256":  "b67602dfe4cc13913633b59415ba4e9069766b594c3dd9e3ca23837d04592b5c"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\vorbisdec\\vorbisdec_static.vcxproj",
+                      "bytes":  12428,
+                      "sha256":  "85284716176a02e5504292b0fe8acc48a914f03a6fc6985623043f0e8e0c2729"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\vorbisenc\\vorbisenc_dynamic.vcxproj",
+                      "bytes":  12483,
+                      "sha256":  "eccbcec8d2fc33ffd1e362daa50b749483293ea68d50f0e013b802cb144bf92f"
+                  },
+                  {
+                      "relativePath":  "win32\\VS2010\\vorbisenc\\vorbisenc_static.vcxproj",
+                      "bytes":  12538,
+                      "sha256":  "c85d7ff5f4e784512bd6da204ea4596c55b90d6530a4e9c37997ba374fe34259"
+                  }
+              ]
+}

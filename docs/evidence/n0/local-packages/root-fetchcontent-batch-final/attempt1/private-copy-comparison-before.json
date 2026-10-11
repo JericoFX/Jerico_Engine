@@ -1,0 +1,26 @@
+﻿[
+    {
+        "name":  "Manifold",
+        "sourceFileCount":  378,
+        "copyFileCount":  378,
+        "preconfigureDifferences":  [
+
+                                    ]
+    },
+    {
+        "name":  "Clipper2",
+        "sourceFileCount":  223,
+        "copyFileCount":  223,
+        "preconfigureDifferences":  [
+
+                                    ]
+    },
+    {
+        "name":  "OpenMesh",
+        "sourceFileCount":  611,
+        "copyFileCount":  611,
+        "preconfigureDifferences":  [
+
+                                    ]
+    }
+]

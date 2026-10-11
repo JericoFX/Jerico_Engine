@@ -1,0 +1,26 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://github.com/kmammou/v-hacd/archive/refs/tags/v4.1.0.tar.gz",
+    "status": 302,
+    "length": 0,
+    "contentType": "text/html; charset=utf-8",
+    "etag": "",
+    "location": "https://codeload.github.com/kmammou/v-hacd/tar.gz/refs/tags/v4.1.0",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://codeload.github.com/kmammou/v-hacd/tar.gz/refs/tags/v4.1.0",
+    "status": 200,
+    "length": null,
+    "contentType": "application/x-gzip",
+    "etag": "\"3c5d28fe2ceb334e5b700cd3232b0d7ac1ffb1337f34cfd2ca74665a6447306e\"",
+    "location": null,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

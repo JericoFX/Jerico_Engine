@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/DLTcollab/sse2neon/git/trees/49d9fd548a52fc983ef1431049db1dfe0b1772e5",
+  "status": 200,
+  "length": 3892,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"347b1656d02e2219f71ad52d6eb92bc5d0fcfd5d16928c028997e60da387546a\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

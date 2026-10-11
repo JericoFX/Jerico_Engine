@@ -1,0 +1,33 @@
+{
+  "status": "PARENT_REVIEWED_FOR_ONE_LUNA_ORIGINAL_OFFLINE_CONFIGURE",
+  "argumentCount": 61,
+  "prior48Exact": true,
+  "newSourceOverrides": 13,
+  "inputCount": 15529,
+  "rehashed": 15529,
+  "inputMismatch": 0,
+  "normalizedDuplicate": 0,
+  "ASTErrors": 0,
+  "inverseOriginalRoot48ByteExact": true,
+  "inverseSHA256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+  "literalFinalReplacements": 4,
+  "literalDraftReplacements": 12,
+  "hashes": [
+    {
+      "path": "build\\n0-validation\\local-packages\\root-fetchcontent-batch-final\\root-batch-assignment.json",
+      "sha256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6"
+    },
+    {
+      "path": "build\\n0-validation\\local-packages\\root-fetchcontent-batch-final\\source-freeze-root-batch.json",
+      "sha256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44"
+    },
+    {
+      "path": "build\\n0-validation\\local-packages\\root-fetchcontent-batch-final\\run-root-configure-batch.ps1",
+      "sha256": "74DAF7FC695E17ECB8DEC04104ED346DAFB47AE53765F5B2310DCBD67D198F7F"
+    }
+  ],
+  "actualDriverReview": "All Root48 text preserved except reviewed12 literal additions/replacements plus4 final substitutions; 16 new trees/3 patched-baseline comparisons/cache32/wheels44/8package pairs/argv+freeze before/after/nativeExit/memory/probes/env retained",
+  "evidenceOwner": "Luna only; no simultaneous source/dependency writes",
+  "pending": "Native configure/compiler/GUI results NOT_RUN",
+  "endedUTC": "2026-10-11T04:38:23.2633363Z"
+}

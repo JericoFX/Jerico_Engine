@@ -1,0 +1,7 @@
+{
+  "name": "assimp",
+  "status": "BLOCKED SOURCE AUDIT",
+  "archive": "F:/JericoEngine/Dependencies/archives/assimp-6.0.4.tar.gz",
+  "snapshot": "F:/JericoEngine/Dependencies/assimp-6.0.4",
+  "reason": "tar audit has 1 violations; immutable extraction blocked"
+}

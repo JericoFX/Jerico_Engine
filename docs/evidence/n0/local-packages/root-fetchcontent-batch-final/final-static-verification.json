@@ -1,0 +1,20 @@
+{
+  "status": "FINAL STATIC DRIVER VERIFIED; NOT EXECUTED",
+  "argumentCount": 61,
+  "prior48PrefixExact": true,
+  "inverseRoot48RawBytes": 27278,
+  "inverseRoot48SHA256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+  "ASTErrors": 0,
+  "driverSHA256": "74DAF7FC695E17ECB8DEC04104ED346DAFB47AE53765F5B2310DCBD67D198F7F",
+  "newTrees": 16,
+  "newPatchedBaselines": 3,
+  "countsFrozenSMC": {
+    "references": 14,
+    "sources": 10
+  },
+  "cacheFileCount": 32,
+  "wheelhouseFileCount": 44,
+  "acceptedPackagePairs": 8,
+  "DXCReadOnlyProbesIncludedInFreeze": false,
+  "nativeDriverExecuted": false
+}

@@ -1,0 +1,70 @@
+{
+  "scope": "Read-only CMake boundary review for Editor, AssetProcessor, launcher targets, and JEEditorFixture",
+  "observed_root": {
+    "ly_disable_test_modules_argument_present": false,
+    "note": "Root driver does not pass a LY_BUILD_TESTS knob; current engine CMake uses LY_DISABLE_TEST_MODULES.",
+    "driver": "build/n0-validation/local-packages/root-cli11-final/attempt1/configure-argv.json",
+    "ly_disable_test_modules_effective": "FALSE",
+    "cmake_cache": "build/n0-validation/original-engine/CMakeCache.txt",
+    "argv_count": 48,
+    "ly_build_tests_argument_present": false,
+    "driver_sha256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+    "assignment_sha256": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53",
+    "assignment_comparison": {
+      "configure_argv_count": 48,
+      "assignment_argv_count": 48,
+      "exact_ordered_sequence_match": true,
+      "actual_argv_path": "build/n0-validation/local-packages/root-cli11-final/attempt1/configure-argv.json",
+      "assignment_path": "build/n0-validation/local-packages/root-cli11-final/root-cli11-assignment.json"
+    }
+  },
+  "configure_boundary": {
+    "aztest": "AZ::AzTest is created whenever GoogleTest support is true, independently of PAL_TRAIT_BUILD_TESTS_SUPPORTED; it has PUBLIC GMock, GTest, GoogleBenchmark, AzCore dependencies",
+    "runner": "AZ::AzTestRunner is created on supported platforms whenever GoogleTest support is true; source comments describe it as shipped for users own tests; it links AZ::AzTest. This is source-level intent, not verified deployment.",
+    "windows_defaults": "PAL_TRAIT_BUILD_TESTS_SUPPORTED=TRUE and PAL_TRAIT_TEST_GOOGLE_TEST_SUPPORTED=TRUE",
+    "references": [
+      "cmake/Platform/Windows/PAL_windows.cmake:25-39",
+      "cmake/PAL.cmake:451-457",
+      "Code/Framework/AzTest/CMakeLists.txt:8-37",
+      "Code/Framework/AzTest/3rdParty/Findgoogletest.cmake:18-52",
+      "Code/Tools/AzTestRunner/CMakeLists.txt:18-55"
+    ],
+    "disable_modules": "LY_DISABLE_TEST_MODULES defaults FALSE; when TRUE it makes PAL_TRAIT_BUILD_TESTS_SUPPORTED FALSE, but does not change PAL_TRAIT_TEST_GOOGLE_TEST_SUPPORTED"
+  },
+  "product_vs_test_targets": {
+    "fixture": "JEEditorFixture project.json is script_only=true. Its CMakeLists initializes O3DE but declares no C++ target. Engine cmake/Projects.cmake records LY_PROJECTS and sets LY_DEFAULT_PROJECT_PATH; Editor receives that path as startup argument. The fixture itself does not introduce AzTest/GTest.",
+    "editor": "Editor, EditorCore, EditorLib do not list AZ::AzTest/GTest in production BUILD_DEPENDENCIES; Editor depends on AssetProcessor and runtime EditorLib/CrySystem. EditorCore.Tests and EditorLib.Tests are under PAL_TRAIT_BUILD_TESTS_SUPPORTED and privately link AZ::AzTest.",
+    "launcher": "Launcher.Static/Headless/Unified/Server/Game have no AZ::AzTest in product dependencies; Launcher.Tests is guarded by PAL_TRAIT_BUILD_TESTS_SUPPORTED and privately links AZ::AzTest.",
+    "asset_processor": "AssetProcessor.Static, AssetProcessor, AssetProcessorBatch.Static and AssetProcessorBatch have no AZ::AzTest/GTest in production BUILD_DEPENDENCIES; AssetProcessor.Tests is guarded by PAL_TRAIT_BUILD_TESTS_SUPPORTED and privately links AZ::AzTest.",
+    "references": [
+      "Code/Editor/CMakeLists.txt:13-39,67-120,144-178,187-248",
+      "Code/Tools/AssetProcessor/CMakeLists.txt:18-78,100-149,154-171",
+      "Code/LauncherUnified/CMakeLists.txt:13-103,110-134",
+      "Projects/JEEditorFixture/project.json:1-25",
+      "Projects/JEEditorFixture/CMakeLists.txt:11-48",
+      "cmake/Projects.cmake:262-304"
+    ],
+    "scope_limit": "Findings describe source CMake dependency declarations only. No generated link lines, binary import tables, deployment manifests, or runtime-loaded module evidence were reviewed."
+  },
+  "test_runner_semantics": {
+    "wrapper": "ly_add_googletest registers test modules, adds AzTestRunner to build dependencies, uses it to invoke AzRunUnitTests, and declares AzTestRunner as runtime dependency for test registration",
+    "references": [
+      "cmake/LYTestWrappers.cmake:364-434",
+      "cmake/LYWrappers.cmake:268-294"
+    ]
+  },
+  "whitebox_csg": {
+    "references": [
+      "Gems/WhiteBox/Code/CMakeLists.txt:138-204",
+      "Gems/WhiteBox/Code/Tests/CSG/CMakeLists.txt:4-44"
+    ],
+    "standalone_csg": "Gems/WhiteBox/Code/Tests/CSG is a separate CMake project that builds the production WhiteBoxCsgCore.cpp and registers two native CTest cases; its CMakeLists uses no GTest/AzTest.",
+    "whitebox_gtest_targets": "WhiteBox.Tests, WhiteBox.Editor.Tests and WhiteBox.Editor.Physics.Tests are under PAL_TRAIT_BUILD_TESTS_SUPPORTED; core test target links AZ::AzTest, editor variants use AzTestShared and editor/test framework deps."
+  },
+  "minimum_separation": {
+    "candidate": "After a passing product baseline, if eliminating GoogleTest from the product-only engine configure remains necessary, introduce a deliberate build boundary separating AzTest/AzTestRunner/test modules from the product configure and keep a separate tests-enabled validation configuration. Existing source has no single observed LY_BUILD_TESTS knob providing that split.",
+    "confirmed": "Source CMake app target declarations omit direct AZ::AzTest/GTest dependencies; no binary-level link, deployment, or runtime-load conclusion is claimed. LY_DISABLE_TEST_MODULES can remove engine test module targets, but does not remove the AZ::AzTest/AzTestRunner/GoogleTest configure path.",
+    "tradeoff": "Setting GoogleTest support false would suppress PAL test targets and AzTestRunner, including broad WhiteBox GoogleTest suites; the standalone CSG CTest project remains independently configurable. This is not a way to preserve all WhiteBox regressions."
+  },
+  "search_note": "Bounded searches excluded dependency, build, and asset trees; no general vendor inventory was run."
+}

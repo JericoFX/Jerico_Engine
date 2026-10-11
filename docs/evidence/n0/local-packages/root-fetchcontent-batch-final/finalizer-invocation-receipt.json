@@ -1,0 +1,28 @@
+{
+  "status": "STATIC FINALIZER COMPLETED; NATIVE NOT EXECUTED",
+  "elapsedSeconds": 9.8769016,
+  "scriptSHA256": "7634D2E9658CFD1F06D3A40B671FC1EB1CEED12A47B12DBE7F8DFC978BE13028",
+  "parameters": {
+    "SMCMetadataPaths": [
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/native-shader-variants-audit/source-diff-rev3.patch",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/native-shader-variants-audit/candidate-receipt-rev3.json",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/native-shader-variants-audit/review-document-cmake-rev2.json",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/native-shader-variants-audit/review-window-path-normalization-rev3.json"
+    ],
+    "SMCParentReviewPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/native-shader-variants-audit/parent-review-rev3.json",
+    "SMCParentReviewSHA256": "FEB02D4373165B22579474631D15B43005DDA2AAA7407D8726771F44E31799E2",
+    "SMCFreezeSHA256": "00142D9F855B8A826AA30236FA713D80F24A3F4AECDD910E94BC34297FE263A7",
+    "SMCFreezePath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/native-shader-variants-audit/source-freeze-native-shader-variants-rev3.json"
+  },
+  "result": {
+    "inputCount": 15529,
+    "oldRootDeltas": 1,
+    "argumentCount": 61,
+    "ASTErrors": 0,
+    "inverseRoot48ByteExact": true,
+    "freezeSHA256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44",
+    "assignmentSHA256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6",
+    "driverSHA256": "74DAF7FC695E17ECB8DEC04104ED346DAFB47AE53765F5B2310DCBD67D198F7F"
+  },
+  "nativeDriverExecuted": false
+}

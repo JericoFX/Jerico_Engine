@@ -1,0 +1,12 @@
+{
+  "sourceOnly": "Code/Tools/SceneAPI/SDKWrapper/3rdParty/Findassimp.cmake",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SceneAPI\\SDKWrapper\\3rdParty\\Findassimp.cmake",
+      "bytes": 6773,
+      "sha256": "5834d8a3325179b0066891eab51e06243f7a0400c0bcaee8ed1b24e20f369933"
+    }
+  ],
+  "parentSourceReview": "assimp/parent-Findassimp-review.json",
+  "parentSourceReviewSHA256": "DFEA9E36DB58DF587FFE8F5E7F21264337412E3BEC1B8E07A1465864C4A6B5F8"
+}

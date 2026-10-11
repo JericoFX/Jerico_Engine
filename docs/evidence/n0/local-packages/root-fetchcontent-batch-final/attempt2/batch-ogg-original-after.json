@@ -1,0 +1,632 @@
+{
+  "name": "batch-ogg-original-after",
+  "path": "F:\\JericoEngine\\Dependencies\\ogg-1.3.6",
+  "fileCount": 125,
+  "files": [
+    {
+      "relativePath": ".gitignore",
+      "bytes": 565,
+      "sha256": "054693079c1c2683f52439b27f6e2441443beea483e94219d878400e4c9027af"
+    },
+    {
+      "relativePath": ".gitlab-ci.yml",
+      "bytes": 1934,
+      "sha256": "bfb35b0f72805246223a379968e9e3603b7c9f1369378c5a464c71e901c84d2f"
+    },
+    {
+      "relativePath": ".travis.yml",
+      "bytes": 834,
+      "sha256": "970747b0e7cc0a3f05a0f77fc46be0e5c8974be90773a5f3aebae9f87d843cc7"
+    },
+    {
+      "relativePath": "appveyor.yml",
+      "bytes": 932,
+      "sha256": "27902e9fb05a9407e2c7bfa10c3f5552e9886ac4a450aaf6b83f1e070b191787"
+    },
+    {
+      "relativePath": "AUTHORS",
+      "bytes": 198,
+      "sha256": "6fcb33d0cdd60b5054e7df820916388b590427514288c2bab01c626bb8ae9506"
+    },
+    {
+      "relativePath": "autogen.sh",
+      "bytes": 257,
+      "sha256": "fa536758c372e2177dab71ce2ce6ee1a0f75905a44d4d0412ffab5399f0b0f4a"
+    },
+    {
+      "relativePath": "CHANGES",
+      "bytes": 3730,
+      "sha256": "5206b026f96ae3e5ac0326f62f3712cf5d1dd03d09be89db897be2d0232159ac"
+    },
+    {
+      "relativePath": "CMakeLists.txt",
+      "bytes": 6102,
+      "sha256": "8c93534d189b52c26c66ae4e59d9999cf4284e19ff82f28e5f370b28c55e5a79"
+    },
+    {
+      "relativePath": "configure.ac",
+      "bytes": 6361,
+      "sha256": "8ba7a25442135c5025454f63892fff1a4a07eba432695f574c72bbcc7c99fc43"
+    },
+    {
+      "relativePath": "COPYING",
+      "bytes": 1466,
+      "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+    },
+    {
+      "relativePath": "libogg.spec.in",
+      "bytes": 2941,
+      "sha256": "533636d78b969b46709f7686e1ee422f7a97ea33462609f3fbcb09430f511c90"
+    },
+    {
+      "relativePath": "Makefile.am",
+      "bytes": 1055,
+      "sha256": "098d27f5beb9c58f6ae53b14d4d87274c444de9490528e9064b900e4af6be78e"
+    },
+    {
+      "relativePath": "ogg-uninstalled.pc.in",
+      "bytes": 310,
+      "sha256": "8f59679cfb2f35ea9bd24589d83d2d85f3a7c997d551ab38221ab88a7f1acb0f"
+    },
+    {
+      "relativePath": "ogg.m4",
+      "bytes": 4046,
+      "sha256": "059ff9d3edb873e696079b2ff2f5b42b19ae8fc9f8ff227fff7de6ea5dbab64e"
+    },
+    {
+      "relativePath": "ogg.pc.in",
+      "bytes": 266,
+      "sha256": "17045c2e6b9cb04d011b15147495f5672fdcc33f9a440f2fa479f54766391159"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 4584,
+      "sha256": "59e6e1581cef12a1028a7b0f8bfb55b763dcde97620b82fb1eaca800941b62ba"
+    },
+    {
+      "relativePath": "releases.sha2",
+      "bytes": 3665,
+      "sha256": "8eaad4a1d69e7b58c69e1eaaf299128a44bb375dcd581fd4e42de780f3249f82"
+    },
+    {
+      "relativePath": ".github\\workflows\\autotools.yml",
+      "bytes": 656,
+      "sha256": "6411443aa0f2aff751841a98ff8c04880efa99ad43f198e53444f3006409be0c"
+    },
+    {
+      "relativePath": ".github\\workflows\\cmake.yml",
+      "bytes": 639,
+      "sha256": "03a482f3e81d80e2b8f1044f58d911c8a282007fde37df06b8862b8f01fcd277"
+    },
+    {
+      "relativePath": "cmake\\CheckSizes.cmake",
+      "bytes": 2055,
+      "sha256": "c08bccc5be79786eb394b779001e9d27f18d6d57bb6eb643e1281d0c0990d1ae"
+    },
+    {
+      "relativePath": "cmake\\OggConfig.cmake.in",
+      "bytes": 481,
+      "sha256": "9c77c757889b7df6a00334780fffcd4d1ef8ff88ec66699a066cda24f58f1268"
+    },
+    {
+      "relativePath": "doc\\fish_xiph_org.png",
+      "bytes": 2536,
+      "sha256": "d9d43ccd360e8a2b5785d0b21061141cbca284c7fc378202fc139c47670ce0d9"
+    },
+    {
+      "relativePath": "doc\\framing.html",
+      "bytes": 14507,
+      "sha256": "f1f021228e4d5acc28c9029f254278402493fefb50e3f936ddd7dda8ee632d96"
+    },
+    {
+      "relativePath": "doc\\index.html",
+      "bytes": 1839,
+      "sha256": "2321a15771c7ce3714d3599e0e0c9363f4cabc4c2c9d5663e46008cbb4397ac7"
+    },
+    {
+      "relativePath": "doc\\Makefile.am",
+      "bytes": 307,
+      "sha256": "5b85e478dba6018a506b795f6936f7dfece0ee7f3c81e8b677c718939ef5e158"
+    },
+    {
+      "relativePath": "doc\\multiplex1.png",
+      "bytes": 54409,
+      "sha256": "758b4c95cf431c5b5f5803c56a2eb5c6f8311656ac253e6e7546a1d3515fa177"
+    },
+    {
+      "relativePath": "doc\\multiplex1.svg",
+      "bytes": 31731,
+      "sha256": "f5ff3e2603c81cb669ca6272220dbed5fafd8d8b43ee4e1d48f41f379b65cf53"
+    },
+    {
+      "relativePath": "doc\\ogg-multiplex.html",
+      "bytes": 18925,
+      "sha256": "4e0b75ca7d9361246fb873852b757de605dcbc80373f928ce877aabfc8968b57"
+    },
+    {
+      "relativePath": "doc\\oggstream.html",
+      "bytes": 23737,
+      "sha256": "3065106753f215ed765f0155145417b2c33ddfe049207843f63d01c5e5bba239"
+    },
+    {
+      "relativePath": "doc\\packets.png",
+      "bytes": 19776,
+      "sha256": "47bb12b97020c711cfce816f409a2305ca6b8df3141b8f321262f9885e04d49c"
+    },
+    {
+      "relativePath": "doc\\packets.svg",
+      "bytes": 32561,
+      "sha256": "9fe4eabff681304c1fe67e0c9f77cc167ad10f0bffaa464d706093113e0d5b58"
+    },
+    {
+      "relativePath": "doc\\pages.png",
+      "bytes": 43547,
+      "sha256": "6d39711e662b28c990516b88fa23c0f71791881f421dcd158e15ee9280a4cbfd"
+    },
+    {
+      "relativePath": "doc\\pages.svg",
+      "bytes": 63310,
+      "sha256": "9224159ef2e7f53129ba602a6c672e3be7b7f2027164d0989aa30ced9e0c2c93"
+    },
+    {
+      "relativePath": "doc\\release.txt",
+      "bytes": 1220,
+      "sha256": "45891ac6375160456010ff78e218be0f966b2b6023442c6ffe41e9b0a542225d"
+    },
+    {
+      "relativePath": "doc\\rfc3533.txt",
+      "bytes": 32045,
+      "sha256": "f170265303dd32d026611f7e080338d15d5456643d1d4c22f2c32046860c5476"
+    },
+    {
+      "relativePath": "doc\\rfc3534.txt",
+      "bytes": 10013,
+      "sha256": "a9dd8cda127edd259d9e3f00db9708708e785ce9c48ca1ed7c8c3a8293b21656"
+    },
+    {
+      "relativePath": "doc\\rfc5334.txt",
+      "bytes": 27018,
+      "sha256": "de42494701e2acb01585d3c2668c7057238a573d4d0dbc482f8a3a853079950d"
+    },
+    {
+      "relativePath": "doc\\skeleton.html",
+      "bytes": 15166,
+      "sha256": "587c2d528014a7acf2b7e0003e70194872deb562a63918d1edf8df8e9e219a71"
+    },
+    {
+      "relativePath": "doc\\stream.png",
+      "bytes": 2254,
+      "sha256": "7aef2906fe37b86abe53a3aa668be1881d73ef3b8efc7762a9e354e5edf6a63a"
+    },
+    {
+      "relativePath": "doc\\vorbisword2.png",
+      "bytes": 1394,
+      "sha256": "f97e4fdc963779b4bbcf1c86ae9cf586d69010f11aa0d142ee0f4b6955d1635e"
+    },
+    {
+      "relativePath": "doc\\white-ogg.png",
+      "bytes": 2652,
+      "sha256": "a8cd12b9700b2e503261cef7529e3c7f3b27b433b90f3b5f14636aba602ab2a8"
+    },
+    {
+      "relativePath": "doc\\white-xifish.png",
+      "bytes": 965,
+      "sha256": "393224c5730de09be8a1c9a8a0a6d53add3d77caebc8603e8e033eb527b15a35"
+    },
+    {
+      "relativePath": "doc\\libogg\\bitpacking.html",
+      "bytes": 3388,
+      "sha256": "7c9e448dd207d11db87e7ad65e5fa90fe3ac7e0637f4626ded6025399799e015"
+    },
+    {
+      "relativePath": "doc\\libogg\\datastructures.html",
+      "bytes": 1722,
+      "sha256": "67273252ade0ea8279f0424cdbcd2ba246590ac1870bf64a544bffd866c4c50d"
+    },
+    {
+      "relativePath": "doc\\libogg\\decoding.html",
+      "bytes": 4016,
+      "sha256": "b5652081479c964f89675d064b1859c75222b6471d53b5167a79435b5ce8cc68"
+    },
+    {
+      "relativePath": "doc\\libogg\\encoding.html",
+      "bytes": 2889,
+      "sha256": "af7285c90711fec185c32a0c421a333a7ab1da4696e182227d01a27de61578d3"
+    },
+    {
+      "relativePath": "doc\\libogg\\general.html",
+      "bytes": 3678,
+      "sha256": "a129ecd97f54a16e5e71c7c1c2e7f2c21b0379b181c962e43e1aa5ecff12f8df"
+    },
+    {
+      "relativePath": "doc\\libogg\\index.html",
+      "bytes": 1063,
+      "sha256": "67ea2c0694b5b1843710e106400aab079be04a3cde9f72a99e35ce07aa4ffb3b"
+    },
+    {
+      "relativePath": "doc\\libogg\\Makefile.am",
+      "bytes": 1970,
+      "sha256": "9f630433577fa10463c0e86f589adddc308d17303d5a0fb332a85630dd9b5dd0"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_iovec_t.html",
+      "bytes": 1395,
+      "sha256": "57d6d6e76e8ea17f73ac587eaa5bacef6887619374667f36bd3a9da315c1f6b8"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_packet_clear.html",
+      "bytes": 1431,
+      "sha256": "eb8c2521165ab2c752180fc9463ecc9c3302bee2ced1b2caa5be62613a7463c2"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_packet.html",
+      "bytes": 2259,
+      "sha256": "7e751b37cd7bcbf8325a60fa0cd5391278ad7e1324c131034ecc3829ddc293d2"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_bos.html",
+      "bytes": 1383,
+      "sha256": "349adf43f70c91c8ee0fc90b3932132bbf11b0a51e9d2579584fcf5f6429b90e"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_checksum_set.html",
+      "bytes": 1218,
+      "sha256": "5f48d96a724216380667abacef7860e829ef4e8d5418906e92b8719b0e2cfeba"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_continued.html",
+      "bytes": 1415,
+      "sha256": "0bf4432cdbdd656293c268c1e7ca71dab5f5c8fb3a2d7c713d24989bb31037bc"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_eos.html",
+      "bytes": 1380,
+      "sha256": "6feba15468adc5392a089f7bdbe6122d81d4167541d4a22f52e8477bd98a0df3"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_granulepos.html",
+      "bytes": 1567,
+      "sha256": "29ec8668e8eb6337a11c482e793c4c56bc96f56644346c5843eb1dc54ddbcd56"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_packets.html",
+      "bytes": 1851,
+      "sha256": "7f02f5fe4e89f8300caf1fc29dbafe216d899888c1800be9baa84a1818d99c06"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_pageno.html",
+      "bytes": 1345,
+      "sha256": "88df27e63eed897cbb1b2cf7d252337c69a8d886a806c69fd515331654f450b3"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_serialno.html",
+      "bytes": 1398,
+      "sha256": "56232ac33406c7c594309bf81496f4a89536702a2af654b6f9328c0904c25df3"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page_version.html",
+      "bytes": 1519,
+      "sha256": "8bdc3052493756c6b7d0519eca9f63683ba00ff1d4f35f99c4888d2b07d7c7d6"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_page.html",
+      "bytes": 2219,
+      "sha256": "a052b6f0bd3b717918a8180b2181ca036e48165954f59489cce8f37318fd96ce"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_check.html",
+      "bytes": 2311,
+      "sha256": "58e1c89765a20675f02018be1dbc3ac6b955f8804062e1b6a9311becdb8ef3eb"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_clear.html",
+      "bytes": 1470,
+      "sha256": "afe54010df2c7c85f977437ad2db8c92e22cef964c9278f75fdaced919fad006"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_destroy.html",
+      "bytes": 1726,
+      "sha256": "44ef6c97ad17216e8c316d23bf366c7e4e6035e79054831f08de9fb0ea71a483"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_eos.html",
+      "bytes": 1405,
+      "sha256": "cc9020248ef11120a5b48d609108677b56722794b313266879a710a8adeb1816"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_flush_fill.html",
+      "bytes": 2785,
+      "sha256": "4c674bbe73a332c93b43d18741a355b3a9cb62b177aa75cf1856353ac9618413"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_flush.html",
+      "bytes": 2631,
+      "sha256": "87a91fea47a540bf59c3973544b72f1f7a8630033c7dc63db9f81ee99fedd13a"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_init.html",
+      "bytes": 1627,
+      "sha256": "93abb93ffbce5db3c8456e0bf623ce4036a397d9fd979e94b2aadfa5d43822b7"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_iovecin.html",
+      "bytes": 2421,
+      "sha256": "0118689b95c436ab194f60839d384db7aaa66b91dc1874825a7c8383cce6d92b"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_packetin.html",
+      "bytes": 1887,
+      "sha256": "92d7bfe0439dc467c0d49050380cf414ad55356a5484fad600468d3c4b93fa5c"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_packetout.html",
+      "bytes": 2954,
+      "sha256": "cc1f98bb3e37316b64b5521636082bf4aadee51e4c71a85f65e9b30cd4caa42c"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_packetpeek.html",
+      "bytes": 2313,
+      "sha256": "0e7e941d56152c408e85ea8888abb4419f7ba3a95b03bfa87f3038793dfc0418"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_pagein.html",
+      "bytes": 2184,
+      "sha256": "1f0d808aa6884ef5e444e1827e9c42e4a1d67b95bd3500b7dd8182c262c96e25"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_pageout_fill.html",
+      "bytes": 2986,
+      "sha256": "7fc9195bd9a1ea0efe74ce28aedc571518fa708f8900b994ebe6cfe429ebf7da"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_pageout.html",
+      "bytes": 2758,
+      "sha256": "179b77441063c3f44f910529fac2445b72adea2f287466ef260d554b9a92da3b"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_reset_serialno.html",
+      "bytes": 1604,
+      "sha256": "bcd3b24bc68ba88f366ab4b043fe1b04e397c82eb9f2be58dff7ed4c486bcf44"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_reset.html",
+      "bytes": 1385,
+      "sha256": "1de45eede412c812d5a7767303993d91e21d9102ab463ffa2dbd884f487b58b2"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_stream_state.html",
+      "bytes": 4367,
+      "sha256": "9dbd1fa1aeb397e6bc5869a67d3f87b8f1a00a57b5435b243c4ad95278fac8e1"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_buffer.html",
+      "bytes": 2074,
+      "sha256": "bde5f36f4c7111a489845760c1b455d83f32f64861dbd9b4cbd373ab09d80f57"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_check.html",
+      "bytes": 2271,
+      "sha256": "8ca50f091b0cf6bd1493bfa8d69d1bb8997095b9ce611ac3f5295dd475f3c9bb"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_clear.html",
+      "bytes": 1724,
+      "sha256": "f3f8820e5ddeea0a3b7eb6b2222e398481215c743406929060270acdaa22b245"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_destroy.html",
+      "bytes": 1738,
+      "sha256": "e36b596a151f32b72004b81bd68462606be67cdba56b8605002ca90e0ff4754f"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_init.html",
+      "bytes": 1626,
+      "sha256": "d554cc10e93e65c2ecf9a6678d909bdddb2470fbec41e4d48f61831a271dfc03"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_pageout.html",
+      "bytes": 2532,
+      "sha256": "5392e22e49276daab939dbd8d2fd74a073b6eb4f91010fe140bbe3d6b062aecb"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_pageseek.html",
+      "bytes": 2006,
+      "sha256": "daf47db679385719be084019c75431693305e7a79d3e9dc624d0de9fcb61de86"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_reset.html",
+      "bytes": 1499,
+      "sha256": "93060e040463523daa7ff8728e6d68dd2b89ea0a71fbc6360430d4d78778e659"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_state.html",
+      "bytes": 2245,
+      "sha256": "cf943e825fa77667f2060b252e83de2d2c64d2645a8e220dfdf4dbc455a5a559"
+    },
+    {
+      "relativePath": "doc\\libogg\\ogg_sync_wrote.html",
+      "bytes": 2026,
+      "sha256": "e69b2253100d01d7072296b1c741991182b676b09ce29c98c7831cad4e9dfe80"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_adv.html",
+      "bytes": 1371,
+      "sha256": "ce315810385f298c8647e7ab7a796cdb6c78fcb9cb1c1ca492f94b7c610d955d"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_adv1.html",
+      "bytes": 1287,
+      "sha256": "3c6c599e490d06299acde5891257bf9111bb10eb06e9d25365839e37ef97dc69"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_bits.html",
+      "bytes": 1436,
+      "sha256": "91ab4b3db752fd2ecfb582b67c6fa0a450b207828d7a417c0153ec2b10c1daa0"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_buffer.html",
+      "bytes": 1504,
+      "sha256": "2229acfc89cae73da7558ab72ef3651385e963c37ae20b24f92716501db98695"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_bytes.html",
+      "bytes": 1732,
+      "sha256": "19c04707cce8e4a2429ae0e767a0d437d9ccb338546a8311eae0a513a5d8f539"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_get_buffer.html",
+      "bytes": 1426,
+      "sha256": "3c15c4ebd62ed9d18871224514da0eb984d1e632ab14a1425b5686232a9c2fe5"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_look.html",
+      "bytes": 1636,
+      "sha256": "b948b934edc7452ce437b46bd243a46f708cb170b32aeac9a05f7dc595343441"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_look1.html",
+      "bytes": 1449,
+      "sha256": "a46fb06250caf1b39a62c0da56547ed7a723f3022386afcaf76304d87314ac34"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_read.html",
+      "bytes": 1564,
+      "sha256": "7324b265de44c5b36c9c7c8d8f8ccd83efa0640860290745ab3eea8f2f8ab425"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_read1.html",
+      "bytes": 1541,
+      "sha256": "4f221908fc617ce6e2b0ce77b0739c7c493c1b077c32be96eb578cb1e99c2959"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_readinit.html",
+      "bytes": 1701,
+      "sha256": "c509d81b536686347bfb3c95ec6bce847b894e3b83d509eca58dd8fe7dae8e2a"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_reset.html",
+      "bytes": 1375,
+      "sha256": "4a8b0a79aac75278c83c6c14cd5df3bc49db9d3b12dc6a6c00743c46a3e34a4f"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_write.html",
+      "bytes": 1663,
+      "sha256": "52721baf00383d675bbf2694ab7e7bc36d38ab94d4cca795c5d82a0e58f74474"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_writealign.html",
+      "bytes": 1504,
+      "sha256": "edca62a3ca2b162179ed63457327805282c9f1d2e35664d4379d230014f80084"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_writecheck.html",
+      "bytes": 2595,
+      "sha256": "52c04624728bf46ef756eef37a02cbeff8d72592e1d91fdda9d41b317b0c7ba9"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_writeclear.html",
+      "bytes": 1392,
+      "sha256": "2011e860ce9849071b2d96ca7a25d731cd46602c909120b1d80d75421042443e"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_writecopy.html",
+      "bytes": 1699,
+      "sha256": "fe316c7e2da8e7d27d6e0616c839f6c8772c46eacf285c3ae8307a39a6217b5f"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_writeinit.html",
+      "bytes": 1647,
+      "sha256": "23ef3b1261d55dc7b748849fe0f21de143fadd952b216fc29df04553891e52a3"
+    },
+    {
+      "relativePath": "doc\\libogg\\oggpack_writetrunc.html",
+      "bytes": 1539,
+      "sha256": "2db98c5703d3340017b2b64b4542bc0cba118a51d00af0c4a285301b3221f884"
+    },
+    {
+      "relativePath": "doc\\libogg\\overview.html",
+      "bytes": 1135,
+      "sha256": "5b25881844008eb39019c11559e94265868bf7d9ef78072fcefc33c679b28a38"
+    },
+    {
+      "relativePath": "doc\\libogg\\reference.html",
+      "bytes": 4209,
+      "sha256": "965cdd80325d4422da070e81937390d991c607fe6b5bfc3341d7685cbcdf187f"
+    },
+    {
+      "relativePath": "doc\\libogg\\style.css",
+      "bytes": 279,
+      "sha256": "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d"
+    },
+    {
+      "relativePath": "include\\Makefile.am",
+      "bytes": 73,
+      "sha256": "78a0ca4571dbb1776a6e6169e1e640f5e391b7bdf1b695f7f60355a8030c9718"
+    },
+    {
+      "relativePath": "include\\ogg\\config_types.h.in",
+      "bytes": 600,
+      "sha256": "11523f85a371cfeef5f6945df9eabc9a2d845b9434c108e8b2411f868d0c6022"
+    },
+    {
+      "relativePath": "include\\ogg\\Makefile.am",
+      "bytes": 175,
+      "sha256": "fd2d0468f9e6e083702161ed2c0340c23803d6b152abdc254c4579ebd292d06c"
+    },
+    {
+      "relativePath": "include\\ogg\\ogg.h",
+      "bytes": 8373,
+      "sha256": "aad86109c1fdb377738675a63e0b19859e06ada25ae5c59c290ca7263d1dc4ca"
+    },
+    {
+      "relativePath": "include\\ogg\\os_types.h",
+      "bytes": 4781,
+      "sha256": "3bbab6a5d31e3c25c6080252b042afb87028e3ffff100e3e0285648b250b70f4"
+    },
+    {
+      "relativePath": "src\\bitwise.c",
+      "bytes": 30633,
+      "sha256": "753d2ace9337bcb8c9ef23f42d630186f55f75a0d962ee79b3e7d87a614c147c"
+    },
+    {
+      "relativePath": "src\\crctable.h",
+      "bytes": 23902,
+      "sha256": "bbeb9f7e2ef15925400943a16ea9e3ce6aaf2f84a1e74b69b33e53a5c4693023"
+    },
+    {
+      "relativePath": "src\\framing.c",
+      "bytes": 66904,
+      "sha256": "04373c7f155e0f6d8a5f355108b2908002a6ffe3895da89796619090a3313bdc"
+    },
+    {
+      "relativePath": "src\\Makefile.am",
+      "bytes": 765,
+      "sha256": "28a77ae3274c14c5d7067b7fba8ebf4eb7f98a669d15043fd8a41eb252d027e9"
+    },
+    {
+      "relativePath": "win32\\.gitignore",
+      "bytes": 1399,
+      "sha256": "20e9e1011557f9dea368a4146d26067cbd7a392d54b4ce57100240ae183c45b7"
+    },
+    {
+      "relativePath": "win32\\ogg.def",
+      "bytes": 1268,
+      "sha256": "d729ea4217a91ccf9c8c8535d4204cb5b19ad8fb5b46c292b513830652bfdc5a"
+    },
+    {
+      "relativePath": "win32\\VS2015\\libogg.sln",
+      "bytes": 2019,
+      "sha256": "deaeccb20e18a52b4cbca8bc865e7b81aeeb1c6ff784742bd5d98bf387733ea3"
+    },
+    {
+      "relativePath": "win32\\VS2015\\libogg.vcxproj",
+      "bytes": 15887,
+      "sha256": "a6ad64a9bfd3b85d13c6c3df9f4a5b86ba0cb6f52e290c1c3101df27726fcb45"
+    },
+    {
+      "relativePath": "win32\\VS2015\\libogg.vcxproj.filters",
+      "bytes": 1494,
+      "sha256": "9f7aa1a866339dd4d5d8e2c89dc0e4cf851443cfea000da29ecfc472ccedf60b"
+    }
+  ]
+}

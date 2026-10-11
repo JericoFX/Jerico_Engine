@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/recastnavigation/recastnavigation/git/trees/d6cec358e2fb658cd62ff1cb4a6640323f47c481",
+  "status": 200,
+  "length": 5296,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"faf903baccc788fb9a71e39811f51a57733cff73741386c1c47aa3559f521ffb\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

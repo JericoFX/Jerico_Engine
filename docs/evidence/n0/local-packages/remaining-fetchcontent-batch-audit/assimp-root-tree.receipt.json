@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/assimp/assimp/git/trees/7efc8126a3b271da22ed215b3f1767c2d34e6671",
+  "status": 200,
+  "length": 6896,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"76a3643c176448dd4372bf269312cd2a2b282b009c494359fdadd5d1f76f56b2\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

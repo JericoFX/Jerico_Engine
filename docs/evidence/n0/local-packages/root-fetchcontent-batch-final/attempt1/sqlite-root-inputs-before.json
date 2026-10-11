@@ -1,0 +1,54 @@
+﻿{
+    "name":  "sqlite-root-inputs-before",
+    "fileCount":  8,
+    "files":  [
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\README.md",
+                      "exists":  true,
+                      "bytes":  2140,
+                      "sha256":  "6d66fd7b1b1c683754ff7a5e049c15b8c662ee779e429ff332a113ddc8456526"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\tests\\CMakeLists.txt",
+                      "exists":  true,
+                      "bytes":  1010,
+                      "sha256":  "c3f3c416d799e11278843840f41d63c5b765b6d1adfade888af567cb94f5d9f0"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\tests\\SQLiteConsumer.cpp",
+                      "exists":  true,
+                      "bytes":  12470,
+                      "sha256":  "fe4875042ceb97316ae0cf3331a273caeffa943c8193a88088b31aae32b1fc98"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\VerifySQLiteSource.cmake",
+                      "exists":  true,
+                      "bytes":  2352,
+                      "sha256":  "930ee4014dabeed4259a93fe8711204171f09371caf44dd0c73aa596ee20d803"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+                      "exists":  true,
+                      "bytes":  2875,
+                      "sha256":  "3dd06bc002b658cee1ba3dc70fe15ac67eaf3fbb1c6e02a686c6b3cc0b5058ed"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\files.cmake",
+                      "exists":  true,
+                      "bytes":  350,
+                      "sha256":  "80d051cff136003b79843b6a5547e42d27af7a7c740098bd7e26afe1a801e6e5"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\LICENSE.txt",
+                      "exists":  true,
+                      "bytes":  250,
+                      "sha256":  "9e8582e6e57400a18124804c393d5cd5944137090063b348e60a5e33264df562"
+                  },
+                  {
+                      "path":  "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\PackageInfo.json",
+                      "exists":  true,
+                      "bytes":  349,
+                      "sha256":  "8fb68011c32dde60fe8cbd7c4444bbda341f4f8a16d4087acaf98ed4d727a06e"
+                  }
+              ]
+}

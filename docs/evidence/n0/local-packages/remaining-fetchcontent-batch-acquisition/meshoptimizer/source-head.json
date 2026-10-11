@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/zeux/meshoptimizer/archive/refs/tags/v1.2.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/zeux/meshoptimizer/tar.gz/refs/tags/v1.2",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/zeux/meshoptimizer/tar.gz/refs/tags/v1.2",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"00a2385612f93c1ff6f9bd47db7030213b51591ae2445cc8d5692817afcdbe10\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

@@ -1,0 +1,1954 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/miniaudio-0.11.22.tar.gz",
+  "commit": "350784a9467a79d0fa65802132668e5afbcf3777",
+  "root": "miniaudio-0.11.22",
+  "members": 277,
+  "regularFiles": 192,
+  "fileBytes": 12188293.0,
+  "links": 0,
+  "gitBlobMatches": 192,
+  "primaryBlobFiles": 192,
+  "destination": "F:/JericoEngine/Dependencies/miniaudio-0.11.22",
+  "violations": [],
+  "extracted": false,
+  "membersManifest": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "miniaudio-0.11.22",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/.github",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/CODE_OF_CONDUCT.md",
+      "type": "RegularFile",
+      "bytes": 230,
+      "sha256": "731ece74aa6cab97c85e5f1a2a2678de98ee2e7225610525559ef11452e809f6",
+      "gitBlobSHA1": "bb4aef64b5c958f5f1c5a32931cbd03225d57cb1"
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/FUNDING.yml",
+      "type": "RegularFile",
+      "bytes": 16,
+      "sha256": "95aeb70e27eb46d9a0bd127244446ebc2bca68fb14feff8faf322d4b09c30d30",
+      "gitBlobSHA1": "fb8030101c95cc34503db0d066a795d71d1b4653"
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/ISSUE_TEMPLATE",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "RegularFile",
+      "bytes": 396,
+      "sha256": "6c8d6f7d3b30616c5f7fbbcb84b2456fe7a1ddeb5141046d334819cae6e55935",
+      "gitBlobSHA1": "b212298bc4d55cbbdb08c837c346229a2507c835"
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/ISSUE_TEMPLATE/feature_request.md",
+      "type": "RegularFile",
+      "bytes": 367,
+      "sha256": "21978fe679ae3c0d0c36893d66492209621ab2dc62150d7800f49d7734f340fb",
+      "gitBlobSHA1": "c1744bd4bdfda5578dce1a46c21ccffe0a101be6"
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/ISSUE_TEMPLATE/general-issue.md",
+      "type": "RegularFile",
+      "bytes": 819,
+      "sha256": "6df36ba784c4668d06f278198b7a62a0caad5292b805feb940d05b182f0e700f",
+      "gitBlobSHA1": "d3124b84410b0aa4915059e6e777fe71d89cc5eb"
+    },
+    {
+      "path": "miniaudio-0.11.22/.github/pull_request_template.md",
+      "type": "RegularFile",
+      "bytes": 683,
+      "sha256": "9ada39d5a210689df084fcb183460e688fe4bb7455f9d185011702fdee81c59c",
+      "gitBlobSHA1": "02fbcb51cfcdf3c0db38f48edac335cae8aecd71"
+    },
+    {
+      "path": "miniaudio-0.11.22/.gitignore",
+      "type": "RegularFile",
+      "bytes": 1187,
+      "sha256": "33e4a0a2015eca3735c247e4b1f96c1aa64da97b7908d11357196ed581e89a00",
+      "gitBlobSHA1": "36d70bcee6d1f7bfb7822b289c9fe01b89378f8f"
+    },
+    {
+      "path": "miniaudio-0.11.22/.gitmodules",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "miniaudio-0.11.22/CHANGES.md",
+      "type": "RegularFile",
+      "bytes": 72831,
+      "sha256": "d78cabd4b27ae8525b7ad80a41e512c712aa2d6e009c4c870352db777965fc53",
+      "gitBlobSHA1": "cc7bd483f5efab357cb629201ae398d4aca8ec21"
+    },
+    {
+      "path": "miniaudio-0.11.22/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 26500,
+      "sha256": "a12e3aceb37e3082c02cc07751858d9e5d56735298e263c11b1c929abf6f0de7",
+      "gitBlobSHA1": "51c6108575bd14d3e1dacff2dafdafe7fe7783a5"
+    },
+    {
+      "path": "miniaudio-0.11.22/CONTRIBUTING.md",
+      "type": "RegularFile",
+      "bytes": 5309,
+      "sha256": "5e24934bb37f0baf082673c6477e5363196d0b1d355a80a0f8246684780ab597",
+      "gitBlobSHA1": "f899a1288d771a5408f3eb27a2870d8c2b779419"
+    },
+    {
+      "path": "miniaudio-0.11.22/LICENSE",
+      "type": "RegularFile",
+      "bytes": 2597,
+      "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb",
+      "gitBlobSHA1": "2f9423addfe68aa01449ba885d56d832f04b5e8e"
+    },
+    {
+      "path": "miniaudio-0.11.22/README.md",
+      "type": "RegularFile",
+      "bytes": 6587,
+      "sha256": "1f65ded2beb20911489cb5f4fd09de5235fef7aee9e5dd5032a9262a0f6cbb37",
+      "gitBlobSHA1": "b547bcd0958d9e85db36eb24fbf0229d8d941e2c"
+    },
+    {
+      "path": "miniaudio-0.11.22/data",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/data/16-44100-stereo.flac",
+      "type": "RegularFile",
+      "bytes": 1798051,
+      "sha256": "e35ca9f62353185ea59dd0be0d48b7d59e86c6412af85a809f97cc25f56d0f74",
+      "gitBlobSHA1": "f095df0fc5e40d4ff7b4b8b197c9b7fe84f9ae47"
+    },
+    {
+      "path": "miniaudio-0.11.22/data/48000-stereo.ogg",
+      "type": "RegularFile",
+      "bytes": 494444,
+      "sha256": "56a5d9e693129f6f55c884ed5aae448aa7d49f0286338600e557a4283657162d",
+      "gitBlobSHA1": "27fd0dca4011827753301da3c4f12417b156cee4"
+    },
+    {
+      "path": "miniaudio-0.11.22/data/48000-stereo.opus",
+      "type": "RegularFile",
+      "bytes": 537589,
+      "sha256": "21e1283b466a52c245ad5b656cd8f0aa1eb1072f5aa5094d0cfc9a837c4d1ecc",
+      "gitBlobSHA1": "bba9e9be8dca979cf00f9574e6c834bbfbbf5405"
+    },
+    {
+      "path": "miniaudio-0.11.22/data/README",
+      "type": "RegularFile",
+      "bytes": 209,
+      "sha256": "89b66180fde240f28009c9477ea90dd80b53b768bd3c5a55be4976f96b6bbd7f",
+      "gitBlobSHA1": "35273685d94f3e9af03bf205a26f2899871f03b0"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/build",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/build/README.md",
+      "type": "RegularFile",
+      "bytes": 1050,
+      "sha256": "873957ae01040f6792609c9e9aca738b91b6f234798753ab96b3b71ef16aa49d",
+      "gitBlobSHA1": "e0b0b0c66a64cd78b4857797d6039ae00607a25f"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/custom_backend.c",
+      "type": "RegularFile",
+      "bytes": 31489,
+      "sha256": "8a960e073c3c24bed67def94bb493cfccff25c0eda4f4d1cefaba0596c54e37c",
+      "gitBlobSHA1": "a5e835d7d2ac717269cca28a9fb5711ab2642c93"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/custom_decoder.c",
+      "type": "RegularFile",
+      "bytes": 3692,
+      "sha256": "f2e4e2425461fc0e93ab420c5b06b57f602df22e529b6cd99d4ca0a31fa184f8",
+      "gitBlobSHA1": "b021bd03f2058e1a9b11aa05c573801a68afdbaa"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/custom_decoder_engine.c",
+      "type": "RegularFile",
+      "bytes": 2399,
+      "sha256": "5582ca5818218ebba99f33ba8a21593f672dbbc25c3fddc5d326bfa370d52ed2",
+      "gitBlobSHA1": "1757ec64e1db8104f9ffa586392b7d420b938c57"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/data_source_chaining.c",
+      "type": "RegularFile",
+      "bytes": 5809,
+      "sha256": "d2e9cafb835977026a67da4449832fed65241657ffd752961efac0296856635c",
+      "gitBlobSHA1": "169ca1c880ba404f33919f09f2c7710d6d85c4ba"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/duplex_effect.c",
+      "type": "RegularFile",
+      "bytes": 6203,
+      "sha256": "30102e637869e289fbef31ab6d6830011dab8608170d74643adbe626babd348c",
+      "gitBlobSHA1": "8ff315895c04a23d9d2d14d590c10c44cc32290f"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/engine_advanced.c",
+      "type": "RegularFile",
+      "bytes": 10761,
+      "sha256": "981943463acd388ca836a519e24c750091c8e8340852a80d1187eaddbafd9520",
+      "gitBlobSHA1": "d389c8d1922f91673ca5d34d830c531df9273a68"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/engine_effects.c",
+      "type": "RegularFile",
+      "bytes": 3921,
+      "sha256": "1a0fe7ddb8ea1895a9c3b2fe16dcab1d09bae505982948d61ec2dc6620543ba4",
+      "gitBlobSHA1": "a777a16d67e02d5462b96efb174daa746ea753d3"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/engine_hello_world.c",
+      "type": "RegularFile",
+      "bytes": 656,
+      "sha256": "7b04a7c8e7ad94d3707570409e2f9698441eccdaed837e2c296298d9a4df0f58",
+      "gitBlobSHA1": "16a85291740992e47b0afec027cc00f2381dba91"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/engine_sdl.c",
+      "type": "RegularFile",
+      "bytes": 4559,
+      "sha256": "cfa72ac130c2de381d66fdd328a0c650c96a043f9b3dc3f5f8a28dec108633b7",
+      "gitBlobSHA1": "9b07385d960ac4efaa20181d16bf42f7228456ef"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/engine_steamaudio.c",
+      "type": "RegularFile",
+      "bytes": 17458,
+      "sha256": "9209466b4a2f1bd47f95416669290a89363c27f258feabd03f1bfe9a58b94e63",
+      "gitBlobSHA1": "8e9512e16d6082999839d6e69b5b023cb59ef8a0"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/hilo_interop.c",
+      "type": "RegularFile",
+      "bytes": 5389,
+      "sha256": "e7990664e9c9248cd4605a103394047d289d8cffab336ad5e45a85e917579a9a",
+      "gitBlobSHA1": "9045f4fbc236cd23c15aabaf08ad723f8d501ae3"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/node_graph.c",
+      "type": "RegularFile",
+      "bytes": 10667,
+      "sha256": "cd1c1e0c48f350968d7ae0cc5ad057039dad4c241fee1a415d89d6f1c5cd889f",
+      "gitBlobSHA1": "b83e854b81e8bafaa31b7c0b106edbd296cdd5cc"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/resource_manager.c",
+      "type": "RegularFile",
+      "bytes": 5854,
+      "sha256": "2d42aea3257db7992ecdbb232e3741c37cc03c55622e60bfe28c63cefe6786ad",
+      "gitBlobSHA1": "03374634f92520db194d9af7c5c649c8e460b449"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/resource_manager_advanced.c",
+      "type": "RegularFile",
+      "bytes": 14030,
+      "sha256": "bfacf4a26646557f8a26d858acefa62a43a96d02a38326a164de28a57e7dacff",
+      "gitBlobSHA1": "da08508c1e1d3078f0e662d15488c2986f1e7b41"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_capture.c",
+      "type": "RegularFile",
+      "bytes": 2169,
+      "sha256": "645bb57a2853144e6981571eaed15b17addb7a45901a660f85c55e870f83a100",
+      "gitBlobSHA1": "e0402ab1272d4f16020c562018976a345a1366fb"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_duplex.c",
+      "type": "RegularFile",
+      "bytes": 2477,
+      "sha256": "cceb007c495520cbe486f4805759965db496828b28ce99ca3cd7a022226fe07a",
+      "gitBlobSHA1": "8658b201417a3986ecc96b2c28bb8362d7f537d4"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_enumeration.c",
+      "type": "RegularFile",
+      "bytes": 1575,
+      "sha256": "6b4389ca811ec9dcf1b293d22f24627a6e23db05bb78440e44871a5d67003384",
+      "gitBlobSHA1": "4c430ea131f5830a1359cad7eaaf95ef133ec836"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_loopback.c",
+      "type": "RegularFile",
+      "bytes": 2649,
+      "sha256": "ba432bff2113ce89a630cacbe558d26833707f655a404f1d9bec6b7a4581ab45",
+      "gitBlobSHA1": "f36a2124cd8113e446fd7814aad5f57231489132"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_looping.c",
+      "type": "RegularFile",
+      "bytes": 2300,
+      "sha256": "eb4ad519aa52404a5e33da92be27f7f7f8a4a417a3200e34abbd2b8820107bce",
+      "gitBlobSHA1": "3031a91257dd936b54746d19e6d23187e5e500b2"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_mixing.c",
+      "type": "RegularFile",
+      "bytes": 7252,
+      "sha256": "a8add3e5a7f2d0b72d2547e808274b106a93505fc80595f75036916fc3a3e8cd",
+      "gitBlobSHA1": "2be8f6cfd7be5dca72d2c006a316378a6bb0a030"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_playback.c",
+      "type": "RegularFile",
+      "bytes": 2415,
+      "sha256": "08d2ab03a29b397e537693a3c5153a42e205a1554ec07975464a50da40d2f972",
+      "gitBlobSHA1": "1755b371927389f6727ddc792003a167eda4faca"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_playback_sine.c",
+      "type": "RegularFile",
+      "bytes": 2635,
+      "sha256": "fe36947e9c25e88b20df0b4609743890a102f4b8d8b981ba0c631cbf38a7c7ef",
+      "gitBlobSHA1": "862c517ce24f47be530a6c61bd1c92dfd41c4997"
+    },
+    {
+      "path": "miniaudio-0.11.22/examples/simple_spatialization.c",
+      "type": "RegularFile",
+      "bytes": 2533,
+      "sha256": "594ce78e0cb4152225c98a915cc83b28182d5f9a4249d75760271cb298f0e027",
+      "gitBlobSHA1": "df61e399106504dfc6d3ea3999dfeedd64ccdf4c"
+    },
+    {
+      "path": "miniaudio-0.11.22/external",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/external/fs",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/external/fs/fs.c",
+      "type": "RegularFile",
+      "bytes": 256476,
+      "sha256": "722703a1b642ce1323ee1d80aaf572099ea41fc49d16f669d0c0b41add530067",
+      "gitBlobSHA1": "e3c625f18732e3dc3103e9f3528de9c4f5086d54"
+    },
+    {
+      "path": "miniaudio-0.11.22/external/fs/fs.h",
+      "type": "RegularFile",
+      "bytes": 57146,
+      "sha256": "0b68321249cad956566d074a50eb37f6ef346deaa1a3f29a22e829880dcccaad",
+      "gitBlobSHA1": "ecebf390dde8c2b1c62112f4bfa0d9b60ac6fd67"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders/libopus",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders/libopus/miniaudio_libopus.c",
+      "type": "RegularFile",
+      "bytes": 14906,
+      "sha256": "d58586494c65a4604c7b3d2e0a78851a9ed4ec8a56b68b300aa423a96c9e16ac",
+      "gitBlobSHA1": "ae7887ffc6e60900f2e6bb5fa509c42df53a2d3f"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders/libopus/miniaudio_libopus.h",
+      "type": "RegularFile",
+      "bytes": 2135,
+      "sha256": "2d15bc4acb91a9775babe25527654f75ecc970ecdb05cdf2382a43d8e3eaed97",
+      "gitBlobSHA1": "80dce28008529347122cdcb7bab7078fc6a8e717"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders/libvorbis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders/libvorbis/miniaudio_libvorbis.c",
+      "type": "RegularFile",
+      "bytes": 17182,
+      "sha256": "9943336cefdcdd7d224543fd420ab444364f2ec9abb52ea93124c79574c12426",
+      "gitBlobSHA1": "653b487957fd53fa4743610f9d6a97d9f17fd7c2"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/decoders/libvorbis/miniaudio_libvorbis.h",
+      "type": "RegularFile",
+      "bytes": 2204,
+      "sha256": "ffbfdfa05994aa46330c0223f55114c9f3af88ebeb7a5fa6e18d0623b0b36aeb",
+      "gitBlobSHA1": "6699266c03f54bf0320be6f155823ab9ad631116"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/miniaudio_libopus.h",
+      "type": "RegularFile",
+      "bytes": 14302,
+      "sha256": "8df0f8f87e6a5e897dc297b3d47dcd2649d21165f1ab1f69af85612eb0433606",
+      "gitBlobSHA1": "026d34876f2159006d89c464a0ff7fa84e6fee06"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/miniaudio_libvorbis.h",
+      "type": "RegularFile",
+      "bytes": 15977,
+      "sha256": "2d6f43bdaf84ea4027e62ee1d90be6a5b7e17bea8baa149e627cdcbbc99f89b6",
+      "gitBlobSHA1": "0c29821242477a499504a87fe4256672abc8ef87"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/miniaudio_split",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/miniaudio_split/README.md",
+      "type": "RegularFile",
+      "bytes": 511,
+      "sha256": "3c8278b724e569eb6479a978112a189c617057758a14ec522c1f69a4942a088c",
+      "gitBlobSHA1": "8aa145e6e15bf0959741ed87809a2370c86d52de"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/miniaudio_split/miniaudio.c",
+      "type": "RegularFile",
+      "bytes": 3462399,
+      "sha256": "ea36284b79b06dd576e5f787edcafc27ecdd71584fe30733243d59e85a3f3f5b",
+      "gitBlobSHA1": "f6b28450d7d587651304635b2dd9f673336e412c"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/miniaudio_split/miniaudio.h",
+      "type": "RegularFile",
+      "bytes": 370262,
+      "sha256": "605544d636ae4fc245c4ce47bb8f2cd9d80d0f978c7f9258bbe2806566d25b71",
+      "gitBlobSHA1": "595ea18ab70e3e1c35fcea46cb1e0607fb37d376"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_combiner_node",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_combiner_node/ma_channel_combiner_node.c",
+      "type": "RegularFile",
+      "bytes": 2890,
+      "sha256": "d28663f1180532273d262263aae4117a62250043484dee1f9c997a25e97c0663",
+      "gitBlobSHA1": "6112824311fbd31b5f3dd15a57c9ab94fdc0df04"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_combiner_node/ma_channel_combiner_node.h",
+      "type": "RegularFile",
+      "bytes": 933,
+      "sha256": "19c88593baebb61dc59d2d9bb65693b1e9046fa55d48ab0c67115637f0631a33",
+      "gitBlobSHA1": "94ff22e118a026c97422353d9cf020256b0276c1"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_combiner_node/ma_channel_combiner_node_example.c",
+      "type": "RegularFile",
+      "bytes": 155,
+      "sha256": "b8cdf92a64c7edd3195da49b6437421951a323fae7a12bc5a787419f725b34b1",
+      "gitBlobSHA1": "1854d3dc61fbc84790ef741fd7b112afcca6a9d2"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_separator_node",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_separator_node/ma_channel_separator_node.c",
+      "type": "RegularFile",
+      "bytes": 3078,
+      "sha256": "7e715fa202773534f8cc88a55fafee2e4ee7a65ba81d58e2c7612abb94a4cd44",
+      "gitBlobSHA1": "9c67c5e4674df03debb27b651f73c85d43159491"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_separator_node/ma_channel_separator_node.h",
+      "type": "RegularFile",
+      "bytes": 945,
+      "sha256": "19d410468a6ed3b07ef67e8e560e57747242300a7ad09e42b7c67d8d50d4ce3b",
+      "gitBlobSHA1": "dd3f8046c546c457d23ec686124a60a3411dc506"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_channel_separator_node/ma_channel_separator_node_example.c",
+      "type": "RegularFile",
+      "bytes": 5506,
+      "sha256": "bb2f0ebec72e1db455d9aa3d678b086cea3315f9ae1a79cf30701164e702ca85",
+      "gitBlobSHA1": "04456392ca997c5baf32fb955492f1ba9a985c59"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_ltrim_node",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_ltrim_node/ma_ltrim_node.c",
+      "type": "RegularFile",
+      "bytes": 3658,
+      "sha256": "132c9b5387336c37e6cb0ba94657cfc8120aa4ba45e3b409667707cef305cea1",
+      "gitBlobSHA1": "5698d95cf2f630934941d62b8ec2067d0f18ff27"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_ltrim_node/ma_ltrim_node.h",
+      "type": "RegularFile",
+      "bytes": 914,
+      "sha256": "a7210ee00e6c7eeb517fcf4b86d72d0c11582ca3c99a904a2c11c31c9814ee28",
+      "gitBlobSHA1": "2fea45cefc2b109b3ae60f80e1f65f95e858bb14"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_ltrim_node/ma_ltrim_node_example.c",
+      "type": "RegularFile",
+      "bytes": 3913,
+      "sha256": "9edf2566ee96530a5a9bd8258098f53d2abc3a20a2d9de0efc977dbc69362505",
+      "gitBlobSHA1": "f6a2d05bd3751352eddf2f15c8b004905dec35f5"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_reverb_node",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_reverb_node/ma_reverb_node.c",
+      "type": "RegularFile",
+      "bytes": 2694,
+      "sha256": "aa0d4198c1bc616bec8cba0c996ab87bbd187d480b26c16626485a9be558668b",
+      "gitBlobSHA1": "f67b9f51bd7fa245975626ade353465798548cdb"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_reverb_node/ma_reverb_node.h",
+      "type": "RegularFile",
+      "bytes": 1157,
+      "sha256": "da13fa10252117c0e818d3b5f98a0346b4e84347049d0eebdffa2b31c6c824fb",
+      "gitBlobSHA1": "4df6a725284f71429601b88ad8bd91af8e9135a2"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_reverb_node/ma_reverb_node_example.c",
+      "type": "RegularFile",
+      "bytes": 4700,
+      "sha256": "8a90038bcb8bb5d160c7d9f871bf346ef459ce255f45a79c1d56221c43244287",
+      "gitBlobSHA1": "beb9ac57894d490e6a254468ce7739631c904475"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_reverb_node/verblib.h",
+      "type": "RegularFile",
+      "bytes": 27300,
+      "sha256": "eec03e08d8c51088dc8e61b5dbc9ace1ce69d1f656891ace62f667b112b6f054",
+      "gitBlobSHA1": "126030922663fde50a3d069a085aa1e95410db3a"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_vocoder_node",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_vocoder_node/ma_vocoder_node.c",
+      "type": "RegularFile",
+      "bytes": 2837,
+      "sha256": "efbf01e8d95c910232d85e172a7fb4eb2f9e20f1bea304c67d148dfb0dee62c3",
+      "gitBlobSHA1": "21c7268b88dee590a86ab71e6939ca1566e29e6d"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_vocoder_node/ma_vocoder_node.h",
+      "type": "RegularFile",
+      "bytes": 1471,
+      "sha256": "9c7e575cccad050a2814a6e8019b3a54164fafe56a6687d2d20c3935a76dc52b",
+      "gitBlobSHA1": "23af479870496cf3a31efdb08d77d0c98efb27e6"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_vocoder_node/ma_vocoder_node_example.c",
+      "type": "RegularFile",
+      "bytes": 6177,
+      "sha256": "a470b7b8f2cf5730bc3d8d2fd7b29f4ecded37b58f46b39750d3e9c972ab9bb3",
+      "gitBlobSHA1": "1d29d011f8e6bdb4a4ad1114524942f12f4e40e6"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/nodes/ma_vocoder_node/voclib.h",
+      "type": "RegularFile",
+      "bytes": 26101,
+      "sha256": "f6f9b1ecdb29a02cde5ea5fdb5556e8e0f2ce89608a5c4a9ab5b94cf9dde6125",
+      "gitBlobSHA1": "a0a14363f663aaaf453851896a892a9c8b7f1d89"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/README.md",
+      "type": "RegularFile",
+      "bytes": 2194,
+      "sha256": "8308e212c8ae08949a477cd3385de7acfd90256dcb06ec029475234b9b66db84",
+      "gitBlobSHA1": "71328810caa1f12b46743aa2c260b73683ef759f"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/osaudio.h",
+      "type": "RegularFile",
+      "bytes": 27116,
+      "sha256": "eb32f833f328af97f4613e968b7a5749b57098e752938d09181465ee57716e2c",
+      "gitBlobSHA1": "84fc0ca781dca44c1af76f57fab758133bc05f43"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/osaudio_dos_soundblaster.c",
+      "type": "RegularFile",
+      "bytes": 39729,
+      "sha256": "b2c9e80d485b16d9d52838611e0051d3b78389c8422a0bade29514ed7711122d",
+      "gitBlobSHA1": "404dc71b91d6e143768e5a1cc2d9899c38635f13"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/osaudio_miniaudio.c",
+      "type": "RegularFile",
+      "bytes": 33984,
+      "sha256": "e4e67c6e51509a342d2b1e658d3c40e33542c7c4dbc3526d9d3d9ef3a29f0825",
+      "gitBlobSHA1": "a3ebdd6808387957b46d77243d6edeeb1f508ff2"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/tests",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/tests/osaudio_deviceio.c",
+      "type": "RegularFile",
+      "bytes": 5331,
+      "sha256": "12c179ce0dc98aeea114841e73c7a70ddbf513490f3767914a048e465aed1e51",
+      "gitBlobSHA1": "a08aaf05e38af82de660608bf48b02c9d071e46a"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/osaudio/tests/osaudio_sine.c",
+      "type": "RegularFile",
+      "bytes": 7922,
+      "sha256": "a6aea1ad7bd9769b4a95c3ac90def42578e1ad9e6b651aea524c4c800d6357da",
+      "gitBlobSHA1": "4619e868986b02619eea98aa5213527e60e6d76f"
+    },
+    {
+      "path": "miniaudio-0.11.22/extras/stb_vorbis.c",
+      "type": "RegularFile",
+      "bytes": 192790,
+      "sha256": "4c7cb2ff1f7011e9d67950446b7eb9ca044f2e464d76bfbb0b84dd2e23e65636",
+      "gitBlobSHA1": "3e5c2504c08f76b9d04e4adfbce80818631e835e"
+    },
+    {
+      "path": "miniaudio-0.11.22/miniaudio.c",
+      "type": "RegularFile",
+      "bytes": 56,
+      "sha256": "ab1984bb9804ffd7b0303813595d0b345a8a86c34da1daffc353a14b34102a65",
+      "gitBlobSHA1": "afcddad04c8d20a79cecdd130264dc4934596c2f"
+    },
+    {
+      "path": "miniaudio-0.11.22/miniaudio.h",
+      "type": "RegularFile",
+      "bytes": 4025780,
+      "sha256": "9019743287e443c55e5737a7297f38e5e358561701d6db2d905afb114390c410",
+      "gitBlobSHA1": "c74bebeb3c725c898e4e3502e917a017799b0dca"
+    },
+    {
+      "path": "miniaudio-0.11.22/research",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/research/README.txt",
+      "type": "RegularFile",
+      "bytes": 314,
+      "sha256": "1e211f53deb7148796b6bf253cf2beb40fbae8daa053463bf9b5937852503b54",
+      "gitBlobSHA1": "160f56d72121f124c271341c87ed951ab5c7ca88"
+    },
+    {
+      "path": "miniaudio-0.11.22/resources",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/resources/branding",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/resources/branding/icon-128x128.png",
+      "type": "RegularFile",
+      "bytes": 1189,
+      "sha256": "cf7c1fef77932753696ba137fd3c989ee4001d6d7bbce0e98d90258ad5f0c1da",
+      "gitBlobSHA1": "37c5650d9046d12cc57ac2d989664ec13bb29c12"
+    },
+    {
+      "path": "miniaudio-0.11.22/resources/branding/icon-256x256.png",
+      "type": "RegularFile",
+      "bytes": 2284,
+      "sha256": "b0c03e6f1db8b40a0f196abdb188bae4f0eaa0111e521606f766ac23d20477f6",
+      "gitBlobSHA1": "41400f8476433965f5e95995bbef8173676df55c"
+    },
+    {
+      "path": "miniaudio-0.11.22/resources/branding/icon-64x64.png",
+      "type": "RegularFile",
+      "bytes": 677,
+      "sha256": "073ecbda4f54ef5538454c7c72481e0efaa8a4f2b15d1f9574e96c52affe6646",
+      "gitBlobSHA1": "30118d8807a564c4c68d4477d66631ed207599e1"
+    },
+    {
+      "path": "miniaudio-0.11.22/resources/branding/miniaudio_logo1.png",
+      "type": "RegularFile",
+      "bytes": 183,
+      "sha256": "46412ce6fa2bde7b0a6b8c78d793fab3484020ed14d6a6588f976a08964fb349",
+      "gitBlobSHA1": "a73eb8c513e7af0470ed6fa15545de9b435491a5"
+    },
+    {
+      "path": "miniaudio-0.11.22/resources/branding/miniaudio_logo_400.png",
+      "type": "RegularFile",
+      "bytes": 3183,
+      "sha256": "ce65f3aef0ff30935eb4f53e9a6211f54e943565f28668b31f207ddcfe30a379",
+      "gitBlobSHA1": "85d06c78b09b77c5eb6fc634cc2cbeb7fad094d2"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/README.md",
+      "type": "RegularFile",
+      "bytes": 992,
+      "sha256": "f55a2ba4d2c14df5394c6af0b9843596b5214e573eeb82140e45e4e9aa12c758",
+      "gitBlobSHA1": "929854094c159dff183b419113e1dc272bde9219"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_f32_to_f32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "c489ebd70d32a48645a2807c8537746edf650e97e36129334fcbfde3d5dc9e6a",
+      "gitBlobSHA1": "dd5ceeb79a44152c1da630b4104e9a4df23724f8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_f32_to_s16__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "f2eafc7af39d9fb91ddd713887f9a1263a7e82f9322c96445df49bfcffee4a26",
+      "gitBlobSHA1": "9a918a5354d79442052db00b459b7feced48a2f6"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_f32_to_s24__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 240,
+      "sha256": "238f92c3aa58029978d9bfd64ca29faf1ae21a818315f5c06157a2081fb7cd26",
+      "gitBlobSHA1": "b930ab436ebc13968ad40bcb0e22def2d43a10cf"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_f32_to_s32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "d412063d4b651803e57eb5f926c0a4f0777fbbd6bca3c5b090aa17ba4802ec4b",
+      "gitBlobSHA1": "dd29023573451ff42f920a2314aec94cf168e040"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_f32_to_u8__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 80,
+      "sha256": "1d101b73a87a0aac534c021ed6d77a5650ebb7e4dc79514c883fdf5a676ef3a2",
+      "gitBlobSHA1": "7babb8eb60b38980a68622753bb6b65e0397b943"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s16_to_f32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "16d607fe4633c20a71efb0d62738640900f22586a5e26eb77c3bc7ea47209263",
+      "gitBlobSHA1": "7ddfa62ca40378ece49bf9ef6796f04b480cff9e"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s16_to_s16__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "f56593925f8b390d61033dbfbb218727bf623f4b85aa22a4c3658ce8f70509e6",
+      "gitBlobSHA1": "574838c35bd20086f1ce80d01c3061e98af5de09"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s16_to_s24__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 240,
+      "sha256": "796e42431b027d45c6bbad128a0993920a917f92ae22bf8150fe33d6e357f8d6",
+      "gitBlobSHA1": "324ea8272c364617f1f2586f05f505ef72734ee8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s16_to_s32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "8889d44298d1a5705ba978193ac3b46e1da3526ddb97decafa83a0631cc5c0a4",
+      "gitBlobSHA1": "70baaf6cee754db591de631e025da7e98394dc60"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s16_to_u8__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 80,
+      "sha256": "de9e23013bfa27b0433291ad645324a0ffc2bd89f463c964a83e3c17f74cf6a7",
+      "gitBlobSHA1": "fa7bb23aa0438da9f63e6ed95db5e4b0b45535b8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s24_to_f32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "c489ebd70d32a48645a2807c8537746edf650e97e36129334fcbfde3d5dc9e6a",
+      "gitBlobSHA1": "dd5ceeb79a44152c1da630b4104e9a4df23724f8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s24_to_s16__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "f2eafc7af39d9fb91ddd713887f9a1263a7e82f9322c96445df49bfcffee4a26",
+      "gitBlobSHA1": "9a918a5354d79442052db00b459b7feced48a2f6"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s24_to_s24__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 240,
+      "sha256": "238f92c3aa58029978d9bfd64ca29faf1ae21a818315f5c06157a2081fb7cd26",
+      "gitBlobSHA1": "b930ab436ebc13968ad40bcb0e22def2d43a10cf"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s24_to_s32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "d412063d4b651803e57eb5f926c0a4f0777fbbd6bca3c5b090aa17ba4802ec4b",
+      "gitBlobSHA1": "dd29023573451ff42f920a2314aec94cf168e040"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s24_to_u8__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 80,
+      "sha256": "1d101b73a87a0aac534c021ed6d77a5650ebb7e4dc79514c883fdf5a676ef3a2",
+      "gitBlobSHA1": "7babb8eb60b38980a68622753bb6b65e0397b943"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s32_to_f32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "c489ebd70d32a48645a2807c8537746edf650e97e36129334fcbfde3d5dc9e6a",
+      "gitBlobSHA1": "dd5ceeb79a44152c1da630b4104e9a4df23724f8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s32_to_s16__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "f2eafc7af39d9fb91ddd713887f9a1263a7e82f9322c96445df49bfcffee4a26",
+      "gitBlobSHA1": "9a918a5354d79442052db00b459b7feced48a2f6"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s32_to_s24__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 240,
+      "sha256": "238f92c3aa58029978d9bfd64ca29faf1ae21a818315f5c06157a2081fb7cd26",
+      "gitBlobSHA1": "b930ab436ebc13968ad40bcb0e22def2d43a10cf"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s32_to_s32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "d412063d4b651803e57eb5f926c0a4f0777fbbd6bca3c5b090aa17ba4802ec4b",
+      "gitBlobSHA1": "dd29023573451ff42f920a2314aec94cf168e040"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_s32_to_u8__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 80,
+      "sha256": "1d101b73a87a0aac534c021ed6d77a5650ebb7e4dc79514c883fdf5a676ef3a2",
+      "gitBlobSHA1": "7babb8eb60b38980a68622753bb6b65e0397b943"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_u8_to_f32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "3503d0b8757c96f0547ee510fec7568a85bb430ddd5f20b105a4a7844eee2ce9",
+      "gitBlobSHA1": "a39db0eb08eabd44ba7ac0e70f9a26a3e64421ed"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_u8_to_s16__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "8580463df7d2aa5485311dba79d7b289f991a94a99b684566425bec171b49a05",
+      "gitBlobSHA1": "293a723e42f1c6f7c5f154625a72ef8292fc0b59"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_u8_to_s24__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 240,
+      "sha256": "0fba60d92fd6d94b6c633fed3af057193c9e1c0f156322e5b3cfd31abaf978e5",
+      "gitBlobSHA1": "5d321211f2cebfd2985c86954f14d62f8998f677"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_u8_to_s32__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "a0a182db3999284622c11d56614bbd369e9375af51d5dae33c7395b54507d3bc",
+      "gitBlobSHA1": "1a8b98425b138482b45cc96850841673cb33d608"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/benchmarks/pcm_u8_to_u8__mono_8000.raw",
+      "type": "RegularFile",
+      "bytes": 80,
+      "sha256": "de9e23013bfa27b0433291ad645324a0ffc2bd89f463c964a83e3c17f74cf6a7",
+      "gitBlobSHA1": "fa7bb23aa0438da9f63e6ed95db5e4b0b45535b8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/output",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/output/DO_NOT_DELETE",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/_build/res/sine_s16_mono_48000.wav",
+      "type": "RegularFile",
+      "bytes": 96044,
+      "sha256": "f65d38a33755f3f54ae29228e0de92a0a95089eea4d01390c844f1514cb6332e",
+      "gitBlobSHA1": "b73ec500a0592c28698c3fa903b81127fbb78c3c"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/.gitignore",
+      "type": "RegularFile",
+      "bytes": 225,
+      "sha256": "703238443066325af08e3868d1e4b571a633baf68fcc93e323f0066999a97e1b",
+      "gitBlobSHA1": "aa724b77071afcbd9bb398053e05adaf7ac9405a"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/.gitignore",
+      "type": "RegularFile",
+      "bytes": 6,
+      "sha256": "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4",
+      "gitBlobSHA1": "42afabfd2abebf31384ca7797186a27a4b7dbee8"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/build.gradle.kts",
+      "type": "RegularFile",
+      "bytes": 1382,
+      "sha256": "53db5778c00325dcbc5fcb35d60779d3e98fb7c125360a263b4737af52f84b6f",
+      "gitBlobSHA1": "f6bfa198b84a4c437b93b0a08354c8beaecb5e3a"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/proguard-rules.pro",
+      "type": "RegularFile",
+      "bytes": 750,
+      "sha256": "56fd960cf225f6ca40f982b13a5dbb0d8bc3dfde13ff76422825c6070d0a1890",
+      "gitBlobSHA1": "481bb434814107eb79d7a30b676d344b0df2f8ce"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/androidTest",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/androidTest/java",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/androidTest/java/io",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/androidTest/java/io/miniaud",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/androidTest/java/io/miniaud/miniaudiotester",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/androidTest/java/io/miniaud/miniaudiotester/ExampleInstrumentedTest.kt",
+      "type": "RegularFile",
+      "bytes": 679,
+      "sha256": "29fd97fd205535558b2b5b9c6b69c0b6d891294712d435a68396ff67205fdee3",
+      "gitBlobSHA1": "7a616602a4832e5489180f3153004ded87d31523"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/AndroidManifest.xml",
+      "type": "RegularFile",
+      "bytes": 939,
+      "sha256": "29d9bb05ba8bfd02c4b24f50a172c9cb9c5554b4315cc55751ea819452018337",
+      "gitBlobSHA1": "c39e6dbe824728a7389a5f67102d53a9dfe84973"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/cpp",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/cpp/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 1845,
+      "sha256": "75303c9fcf1e968e1b99fe7a7b31a4bd5a05ddcdb85cb0d2cc47a085e404249d",
+      "gitBlobSHA1": "4148ced323853f742705469b69aef2f7bfacae45"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/cpp/native-lib.cpp",
+      "type": "RegularFile",
+      "bytes": 5478,
+      "sha256": "c80b0c801321b05c93b751b1c1ad64f09f3cdacb236586bee4f6cc8bb69d1b60",
+      "gitBlobSHA1": "3865f2e33d9b13d7de94496c0c998aeb6e10a570"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/java",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/java/io",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/java/io/miniaud",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/java/io/miniaud/miniaudiotester",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/java/io/miniaud/miniaudiotester/MainActivity.kt",
+      "type": "RegularFile",
+      "bytes": 2540,
+      "sha256": "4ecd72c8995e130dbacea7afc96760d24d81cd1a6a2d11f7822348e8845834bf",
+      "gitBlobSHA1": "7340d5465a3b0b0b55da842d12a2e38282a9f58a"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/drawable",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/drawable/ic_launcher_background.xml",
+      "type": "RegularFile",
+      "bytes": 5606,
+      "sha256": "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321",
+      "gitBlobSHA1": "07d5da9cbf141911847041df5d7b87f0dd5ef9d4"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "type": "RegularFile",
+      "bytes": 1702,
+      "sha256": "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7",
+      "gitBlobSHA1": "2b068d11462a4b96669193de13a711a3a36220a0"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/layout",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/layout/activity_main.xml",
+      "type": "RegularFile",
+      "bytes": 3923,
+      "sha256": "6e331b34cf5c91fefd5ea8642cc7cd043f19e41f72ef0dccdc9337e0f5871ef0",
+      "gitBlobSHA1": "d2b41a645dbe31f329aa35c56feb41f508f2332f"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-anydpi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-anydpi/ic_launcher.xml",
+      "type": "RegularFile",
+      "bytes": 343,
+      "sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0",
+      "gitBlobSHA1": "6f3b755bf50c6b03d8714a9c6184705e6a08389f"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml",
+      "type": "RegularFile",
+      "bytes": 343,
+      "sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0",
+      "gitBlobSHA1": "6f3b755bf50c6b03d8714a9c6184705e6a08389f"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-hdpi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "type": "RegularFile",
+      "bytes": 1404,
+      "sha256": "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01",
+      "gitBlobSHA1": "c209e78ecd372343283f4157dcfd918ec5165bb3"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+      "type": "RegularFile",
+      "bytes": 2898,
+      "sha256": "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07",
+      "gitBlobSHA1": "b2dfe3d1ba5cf3ee31b3ecc1ced89044a1f3b7a9"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-mdpi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+      "type": "RegularFile",
+      "bytes": 982,
+      "sha256": "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d",
+      "gitBlobSHA1": "4f0f1d64e58ba64d180ce43ee13bf9a17835fbca"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+      "type": "RegularFile",
+      "bytes": 1772,
+      "sha256": "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632",
+      "gitBlobSHA1": "62b611da081676d42f6c3f78a2c91e7bcedddedb"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xhdpi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+      "type": "RegularFile",
+      "bytes": 1900,
+      "sha256": "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4",
+      "gitBlobSHA1": "948a3070fe34c611c42c0d3ad3013a0dce358be0"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+      "type": "RegularFile",
+      "bytes": 3918,
+      "sha256": "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261",
+      "gitBlobSHA1": "1b9a6956b3acdc11f40ce2bb3f6efbd845cc243f"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xxhdpi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+      "type": "RegularFile",
+      "bytes": 2884,
+      "sha256": "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27",
+      "gitBlobSHA1": "28d4b77f9f036a47549d47db79c16788749dca10"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+      "type": "RegularFile",
+      "bytes": 5914,
+      "sha256": "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12",
+      "gitBlobSHA1": "9287f5083623b375139afb391af71cc533a7dd37"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xxxhdpi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+      "type": "RegularFile",
+      "bytes": 3844,
+      "sha256": "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8",
+      "gitBlobSHA1": "aa7d6427e6fa1074b79ccd52ef67ac15c5637e85"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+      "type": "RegularFile",
+      "bytes": 7778,
+      "sha256": "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc",
+      "gitBlobSHA1": "9126ae37cbc3587421d6889eadd1d91fbf1994d4"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/values-night",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/values-night/themes.xml",
+      "type": "RegularFile",
+      "bytes": 815,
+      "sha256": "ffb97c00e363dc19b84a82aa29ae5f5b9a25c6af54cc25fd9057ec840eb97a9c",
+      "gitBlobSHA1": "e8e74ca982280788ce94546e737e70571b2695d5"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/values",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/values/colors.xml",
+      "type": "RegularFile",
+      "bytes": 378,
+      "sha256": "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88",
+      "gitBlobSHA1": "f8c6127d327620c93d2b2d00342a68e97b98a48d"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/values/strings.xml",
+      "type": "RegularFile",
+      "bytes": 477,
+      "sha256": "9c11d6823608b368b19bdb54bafd39e77da181b27180c5102692cbd0493bad00",
+      "gitBlobSHA1": "2aafab8b19f048db06057ae3d41a3f06d2f21aec"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/values/themes.xml",
+      "type": "RegularFile",
+      "bytes": 815,
+      "sha256": "4e5b3b41f386b13c6d882b2cbfa2026565ddf19b08fb3fecee2a74f927b1fe2d",
+      "gitBlobSHA1": "02910a4cec0ad5dfcbf739b3007c0ee0a364a987"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/xml",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/xml/backup_rules.xml",
+      "type": "RegularFile",
+      "bytes": 478,
+      "sha256": "9f7e4c84c8fd2c81478d15962383f47cc6ff55d62abcd40c8ffa6fc08a8c35b7",
+      "gitBlobSHA1": "fa0f996d2c2a6bdd11f5371de4268c8389d6c720"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/main/res/xml/data_extraction_rules.xml",
+      "type": "RegularFile",
+      "bytes": 551,
+      "sha256": "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381",
+      "gitBlobSHA1": "9ee9997b0b4726e57c27b2f7b21462b604ff8a88"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/test/java",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/test/java/io",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/test/java/io/miniaud",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/test/java/io/miniaud/miniaudiotester",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/app/src/test/java/io/miniaud/miniaudiotester/ExampleUnitTest.kt",
+      "type": "RegularFile",
+      "bytes": 350,
+      "sha256": "3f9d0d407206e06ae34e84d014c979df5a19af170a4a1aa5f73f0e935312226f",
+      "gitBlobSHA1": "e02adfa57b99d560798fd70feb7318d74b4f03a2"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/build.gradle.kts",
+      "type": "RegularFile",
+      "bytes": 218,
+      "sha256": "6ad44a57f5d546a748417bb5da689c932e40c8478bb5c66cfaef35d42400cd82",
+      "gitBlobSHA1": "922f551105e1b8c176391b38c9436d45f172b546"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradle.properties",
+      "type": "RegularFile",
+      "bytes": 1346,
+      "sha256": "51e4b5a131eb01b1cdeb2f6f26aaba69d367a4a9d4ccd10c6d6f6d12fd545b66",
+      "gitBlobSHA1": "20e2a01520742aff4ec9ce578ed4fe5f3a76fe77"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradle",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradle/libs.versions.toml",
+      "type": "RegularFile",
+      "bytes": 1074,
+      "sha256": "3064d1378c58cde613bbda4fd49b9b4a75b6540c7b0e9ce89f8856fd11a30387",
+      "gitBlobSHA1": "23eb8ba5c0cfd8885692e38988962677b95fa55e"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradle/wrapper",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradle/wrapper/gradle-wrapper.jar",
+      "type": "RegularFile",
+      "bytes": 59203,
+      "sha256": "e996d452d2645e70c01c11143ca2d3742734a28da2bf61f25c82bdc288c9e637",
+      "gitBlobSHA1": "e708b1c023ec8b20f512888fe07c5bd3ff77bb8f"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradle/wrapper/gradle-wrapper.properties",
+      "type": "RegularFile",
+      "bytes": 234,
+      "sha256": "b28ae0fa540b336e864145e14c8ea6523ec2f5bfd8c5a07603fa3e4d4cacb8f1",
+      "gitBlobSHA1": "b7f1b0be837a4707a4427d50706fc669998905d4"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradlew",
+      "type": "RegularFile",
+      "bytes": 5766,
+      "sha256": "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65",
+      "gitBlobSHA1": "4f906e0c811fc9e230eb44819f509cd0627f2600"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/gradlew.bat",
+      "type": "RegularFile",
+      "bytes": 2674,
+      "sha256": "c46a27c79007746de5922b17abb6230d64ad8b1ba3ad1585ee5c6543c2a9b129",
+      "gitBlobSHA1": "107acd32c4e687021ef32db511e8a206129b88ec"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/android/MiniaudioTester/settings.gradle.kts",
+      "type": "RegularFile",
+      "bytes": 540,
+      "sha256": "a1c43ed43f1872da801b9c3de3de38007582a12460e1fc6218a7b5debc711e12",
+      "gitBlobSHA1": "3673c976a8c71bd51b32681dbfd1a708ec308496"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/common",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/common/common.c",
+      "type": "RegularFile",
+      "bytes": 1530,
+      "sha256": "9b2ce6bd5c206cdac0f527d94620d8927c093a6ccf847327d39b172c9cc3c172",
+      "gitBlobSHA1": "247ccc9c096243c750d19daef1f951f248d0d779"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/conversion",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/conversion/conversion.c",
+      "type": "RegularFile",
+      "bytes": 11647,
+      "sha256": "785891ef19d0aefac8f8ba6ea898f3f5894b089cef74e344f8ac365421c13067",
+      "gitBlobSHA1": "904676f3c5dc4d1ee36ecd5ed3dd6eb07fedbe93"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/cpp",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/cpp/cpp.cpp",
+      "type": "RegularFile",
+      "bytes": 34,
+      "sha256": "2fb92115af80d24e59c4d32edec9dffac45de0230abe9fa01a5f520dcb972b64",
+      "gitBlobSHA1": "cc1c63b6268ff8be6b0e8511ea9e749b7ed94d63"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/debugging",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/debugging/debugging.cpp",
+      "type": "RegularFile",
+      "bytes": 226,
+      "sha256": "befef8833db463373c84d703c341531b532e5d697793c9a241ffa31a113ae35f",
+      "gitBlobSHA1": "ba7b300e835a2718565cbce88cb7fbe5bc2e2b1c"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/deviceio",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/deviceio/deviceio.c",
+      "type": "RegularFile",
+      "bytes": 21682,
+      "sha256": "ffd159fa71068879d3e76ad5502f45b1124b287c78bf76a2c90104d2b982a803",
+      "gitBlobSHA1": "5590abf5904236f09a11630bf633591badaf3af6"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/emscripten",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/emscripten/emscripten.c",
+      "type": "RegularFile",
+      "bytes": 3935,
+      "sha256": "ea7dc0fe37c15edc10a0b571b772db57d08749cf1e35d4f6765dd2fc33bcadb9",
+      "gitBlobSHA1": "4a5fc1eae020e8293bee2a032d7cf9abec46113b"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/emscripten/emscripten.html",
+      "type": "RegularFile",
+      "bytes": 6039,
+      "sha256": "15e7210cd00911d920a039d75b6550e7b7f0e69f586e571da48fdb934b2395df",
+      "gitBlobSHA1": "19b29d45116c129da3ff640d9f607369eee9334b"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering.c",
+      "type": "RegularFile",
+      "bytes": 1942,
+      "sha256": "850a6907d1d2fd651022f2de46646b893327a4189237d1ab23fc97963e82cf97",
+      "gitBlobSHA1": "88732b500f44baf9e6cf2dc08f3d512c0f909f9d"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_bpf.c",
+      "type": "RegularFile",
+      "bytes": 4968,
+      "sha256": "7b4d4aa6ae47584771fef46248f012096f8054be3d90983109d22eb64412622e",
+      "gitBlobSHA1": "50b05927f261176ddc2a07dcac7ee223fb5499a6"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_dithering.c",
+      "type": "RegularFile",
+      "bytes": 2244,
+      "sha256": "2364c9adad95529d168fb0ad89efd9e614ef2ef8a2c2f9079467d33b1bc860ea",
+      "gitBlobSHA1": "a262664f9721737d776d61bbe480454fa1c57763"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_hishelf.c",
+      "type": "RegularFile",
+      "bytes": 5159,
+      "sha256": "9c2cfbeafa3f7d12ddae416bc27e936c1ff774f1370ef66f4945865407c3e527",
+      "gitBlobSHA1": "39fd966f7febf6780199516f7907fc176adc4a53"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_hpf.c",
+      "type": "RegularFile",
+      "bytes": 7147,
+      "sha256": "2400c02403f502bd00c81c2b1b64c4471339a734ea60c66296c0604e95d5de8c",
+      "gitBlobSHA1": "addb9e3e524880591ad46fdc6aa18143e301135f"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_loshelf.c",
+      "type": "RegularFile",
+      "bytes": 5156,
+      "sha256": "ef55303cc302620c2b820b9817c5a82e8e8c024428cc54867e7c14110629c2f6",
+      "gitBlobSHA1": "37d18d31da0af3f5306ffd80315fb1b42c605461"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_lpf.c",
+      "type": "RegularFile",
+      "bytes": 7164,
+      "sha256": "379ffc6f5ab9d8b3b8e59577b1ddb5bba9c9f5e01daefd9e138ac93a0d1f6bc7",
+      "gitBlobSHA1": "182e4216c9931c5d520a9870aa67c9f9fae236b1"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_notch.c",
+      "type": "RegularFile",
+      "bytes": 5064,
+      "sha256": "9df2972e10f3565223d38450a5d13d4ce9fa8c78225c4e6ba3b50954f4ce501e",
+      "gitBlobSHA1": "c5963b42b868c273abe9d00ab4c2a72d2381faba"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/filtering/filtering_peak.c",
+      "type": "RegularFile",
+      "bytes": 5027,
+      "sha256": "8987ba2ccb9dc63a8a1ded71e0b09e295209c57e54a35ed1e88b30e899bb1e2f",
+      "gitBlobSHA1": "d29f68d5aea0558310bbac8e38f532cca5a9db72"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/generation",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/generation/generation.c",
+      "type": "RegularFile",
+      "bytes": 302,
+      "sha256": "ca7da8ba71ac16fc979eb61f6804cc79f2eb69a82c343a7cd04620bec3187641",
+      "gitBlobSHA1": "31d9fecd05496e34eb70373bbd08c331affd61cc"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/generation/generation_noise.c",
+      "type": "RegularFile",
+      "bytes": 3902,
+      "sha256": "be9425a85ae0154d61a1161b6cf0215a7f71ab9df396d5a61c9b7ee82a1dbc65",
+      "gitBlobSHA1": "bd9a8cce2fd7176c1b6d29023964061cccd63595"
+    },
+    {
+      "path": "miniaudio-0.11.22/tests/generation/generation_waveform.c",
+      "type": "RegularFile",
+      "bytes": 7710,
+      "sha256": "a17ab955a851cb562a611613b2f81fe8c82b671ac0857e99648cd424cf670276",
+      "gitBlobSHA1": "3268d241ca8c0b086549d66ce9c5b4565add5e3e"
+    },
+    {
+      "path": "miniaudio-0.11.22/tools",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tools/audioconverter",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/tools/audioconverter/audioconverter.c",
+      "type": "RegularFile",
+      "bytes": 9507,
+      "sha256": "aacf58012930d440ee95c417f846fd446880d51b8c39aaa5f85560513ba9a18c",
+      "gitBlobSHA1": "9e7d5ece3034ef908414bb4fd4228ee027d3b3f4"
+    },
+    {
+      "path": "miniaudio-0.11.22/website",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/.webplate",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/.webplate/config.webplate",
+      "type": "RegularFile",
+      "bytes": 233,
+      "sha256": "fcbc0c595ac1173e9c64cb3774ac3fc4c06b61985fc12c34307193336790115d",
+      "gitBlobSHA1": "a52d6bbd7f7132831de8686c5a6a028d62c39105"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/.webplate/miniaudio-footer.html",
+      "type": "RegularFile",
+      "bytes": 1290,
+      "sha256": "6a6e81d2cdaef81f8c039d6461deb6c76035f49c37cf1ce753e1df657839c7cd",
+      "gitBlobSHA1": "5aef1f31405e8f4cebb65c3245240f5a1d0690e9"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/.webplate/miniaudio-header.html",
+      "type": "RegularFile",
+      "bytes": 3021,
+      "sha256": "6ae3f92fdaf291e333c45060bdcb14889f997feee1e805ffb739f222571c1b26",
+      "gitBlobSHA1": "208e44124f7296e2c4ced55c6db379bf564f1542"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/CNAME",
+      "type": "RegularFile",
+      "bytes": 10,
+      "sha256": "650291fd4a8e8aabe7a8c228a9e4851f51771f8d6f3346b4fcca0f82382fd1af",
+      "gitBlobSHA1": "2bb96a0567422bdc88f2e69ae61ea5fead131a2f"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/css",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/css/main.css",
+      "type": "RegularFile",
+      "bytes": 2942,
+      "sha256": "9cecc27fcc8dffc6c34adba08080791220e85f61606e838db4593a90498f72f3",
+      "gitBlobSHA1": "d296014c899978cfd3fb736224b576fd8c87fcd5"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/Discord-Logo-White.svg",
+      "type": "RegularFile",
+      "bytes": 1106,
+      "sha256": "db0b1430ec0132a45f0faed5b23105560b5a251d293fd3e6867da85a0c9f343b",
+      "gitBlobSHA1": "4613aa9ae8144bdfc7627b4a1bb2f75d5b6c1145"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/favicon.png",
+      "type": "RegularFile",
+      "bytes": 1189,
+      "sha256": "cf7c1fef77932753696ba137fd3c989ee4001d6d7bbce0e98d90258ad5f0c1da",
+      "gitBlobSHA1": "37c5650d9046d12cc57ac2d989664ec13bb29c12"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/github_white.png",
+      "type": "RegularFile",
+      "bytes": 1571,
+      "sha256": "6b4582ced3c5b039423243207f470dcba7288918131657f89e9bdcada6fa8a40",
+      "gitBlobSHA1": "628da97c70890c73e59204f5b140c4e67671e92d"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/logo1_large.png",
+      "type": "RegularFile",
+      "bytes": 1198,
+      "sha256": "d459fee02970bd9591f70285dc9c2e2dbe85c8e959394faa07d7914ef56c0ec5",
+      "gitBlobSHA1": "1f9f0798ef15e7d090f3f5eb5edf55e0fd5a5005"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/logo1_large_white.png",
+      "type": "RegularFile",
+      "bytes": 1193,
+      "sha256": "80418308a6b375dbc61b009b5230d11672ff26c175a1411793fd827c5dfebb00",
+      "gitBlobSHA1": "098d728ec03ea2a7c8faf977e31e7f3c8632414d"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/mastodon_white.svg",
+      "type": "RegularFile",
+      "bytes": 2260,
+      "sha256": "ce35cd4c685766e662836b6970831e6b7c7afe9911008590003e1d52883427dc",
+      "gitBlobSHA1": "ae235406bddcd8f3528ea033a87dd1724edc5c53"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/miniaudio_wide.png",
+      "type": "RegularFile",
+      "bytes": 8642,
+      "sha256": "9ca3521c8f62463c07a7b6ef1b0f115c327eb616936d4540eda00b4b87ecc1ae",
+      "gitBlobSHA1": "fd9162b54ba93c5a2a73646a753aa3bd8932e982"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/android",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/android/android.svg",
+      "type": "RegularFile",
+      "bytes": 620,
+      "sha256": "2b2f94ccaa0b881930b4c34889a598f1b3493d1610cefa73d2ce7654f7302fd1",
+      "gitBlobSHA1": "b9d3848f2160888a353a6bc862a47e1dfc996025"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/apple",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/apple/apple-black.svg",
+      "type": "RegularFile",
+      "bytes": 980,
+      "sha256": "0a3eebe24d426de89898fcf35aa8e647a7634d72ef9a0fa52a7628f2376753d1",
+      "gitBlobSHA1": "2e7254d234e4d95d4577b6b89160e45433c7dc97"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/bsd",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/bsd/freebsd.svg",
+      "type": "RegularFile",
+      "bytes": 1729,
+      "sha256": "9fd2a5dd10efde521c50377c9a089cb167adc33d0e7297e11070c7cec9324155",
+      "gitBlobSHA1": "4516c4e302ba4571f28e20dc4b2d6f08d22fe647"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/linux",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/linux/linux.svg",
+      "type": "RegularFile",
+      "bytes": 44983,
+      "sha256": "31193c5b7052093cd8710067de9e3b7b5331d854fc588810a6f727d53bc165e5",
+      "gitBlobSHA1": "16317683ef3016a120bd8615f276035b0132017e"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/web",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/web/html5.svg",
+      "type": "RegularFile",
+      "bytes": 1449,
+      "sha256": "62dde6bb0cfcea107e69baa702f6af272253d2c59648c725765d4e4726510113",
+      "gitBlobSHA1": "0171e29ca41e825495ddeca1bf0d7f2e6b01bc82"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/windows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/platforms/windows/windows-10.svg",
+      "type": "RegularFile",
+      "bytes": 1706,
+      "sha256": "731c2f1cdff1d8b820403700b1383fa27f011a49e1e37cfcd5dab947eacfe2fd",
+      "gitBlobSHA1": "1f42364ab62e564ce5d4bac9ba065bdbecc2b184"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/reddit_white.svg",
+      "type": "RegularFile",
+      "bytes": 692,
+      "sha256": "d7419843d89ca6acbe2984726486e0abb59586e9a60f751b3171c2205a07681f",
+      "gitBlobSHA1": "a382e3ed022c81735a5d6679c48cad5699ba3768"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/img/twitter_white.png",
+      "type": "RegularFile",
+      "bytes": 2292,
+      "sha256": "1595fb66de048bd49ea0db776553ff324b1abace74410679d53419fec6b8e4c2",
+      "gitBlobSHA1": "379e215f8f2f131451dcb010aa8108ade3fc4439"
+    },
+    {
+      "path": "miniaudio-0.11.22/website/index.html",
+      "type": "RegularFile",
+      "bytes": 13774,
+      "sha256": "93aee20acf99178a79ab9f17745d3baff1fa4317653d2a92dbbd22d42e19a354",
+      "gitBlobSHA1": "d95e2d770fbcccf473d9befa58837a7d1e2caa10"
+    }
+  ]
+}

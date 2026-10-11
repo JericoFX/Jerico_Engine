@@ -1,0 +1,215 @@
+{
+  "status": "PENDING PARENT EXPLICIT EXPORT-IGNORE EXCEPTION",
+  "archiveSHA256": "00E4BF0B9D9D8E9B346FA3DD859C3CE5F3438451822D5933C07F65A76FC04745",
+  "archiveFiles": 3116,
+  "primaryGitBlobs": 3141,
+  "matchingArchiveGitBlobs": 3116,
+  "links": 0,
+  "omissionCount": 25,
+  "upstreamRule": ".git* export-ignore",
+  "ruleAuthority": "upstream-gitattributes.txt",
+  "ruleGitBlobSHA1": "f3df90d388735c211fe9587b7b8518601accf00d",
+  "omissions": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3df90d388735c211fe9587b7b8518601accf00d",
+      "size": 563,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/f3df90d388735c211fe9587b7b8518601accf00d"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f820ec7d5952fd1bab234679bb36b9a44b84182",
+      "size": 40,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/3f820ec7d5952fd1bab234679bb36b9a44b84182"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f9a5f105b7d31184d112ee5eed7707589fc8a09",
+      "size": 673,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/0f9a5f105b7d31184d112ee5eed7707589fc8a09"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87302a0f079d70e0efccfc1542da8f1359351388",
+      "size": 610,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/87302a0f079d70e0efccfc1542da8f1359351388"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/tech_debt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1172d9325b89357021db3b929a47000918cdfd1",
+      "size": 590,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/a1172d9325b89357021db3b929a47000918cdfd1"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee9898a619b2a564f2a2b1df12f607bfe9f1a6c4",
+      "size": 363,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/ee9898a619b2a564f2a2b1df12f607bfe9f1a6c4"
+    },
+    {
+      "path": ".github/workflows/ccpp.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfbe468655b952ad0f1fb06346393679ddd4195b",
+      "size": 6711,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/bfbe468655b952ad0f1fb06346393679ddd4195b"
+    },
+    {
+      "path": ".github/workflows/cd.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9bedf5ad4418ca9cf785338152bafccfd3b3879",
+      "size": 1347,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/d9bedf5ad4418ca9cf785338152bafccfd3b3879"
+    },
+    {
+      "path": ".github/workflows/cifuzz.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eb4961b6f9c3203be1544ed6d9398891b24eb93",
+      "size": 697,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/2eb4961b6f9c3203be1544ed6d9398891b24eb93"
+    },
+    {
+      "path": ".github/workflows/inno_setup",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92f16918e98fa49d0ff7d1ce0dfe8f17f47a92c8",
+      "size": 1810,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/92f16918e98fa49d0ff7d1ce0dfe8f17f47a92c8"
+    },
+    {
+      "path": ".github/workflows/sanitizer.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4b06ba618fd0316b56aff9f1eb60e247948021d",
+      "size": 1748,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/b4b06ba618fd0316b56aff9f1eb60e247948021d"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68b6e8de4f68d7ae4386ef409b8c38fa68a3b3cb",
+      "size": 2521,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/68b6e8de4f68d7ae4386ef409b8c38fa68a3b3cb"
+    },
+    {
+      "path": "contrib/draco/.gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96acfc612085126a1a07dc52285b671f0d1e4372",
+      "size": 12,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/96acfc612085126a1a07dc52285b671f0d1e4372"
+    },
+    {
+      "path": "contrib/draco/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "522866ee25cf9a2c577edcbea044ef74d0bcec53",
+      "size": 11,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/522866ee25cf9a2c577edcbea044ef74d0bcec53"
+    },
+    {
+      "path": "contrib/draco/.gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25f0a1c0326ba0d81295914ac00a7c33006ea11a",
+      "size": 448,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/25f0a1c0326ba0d81295914ac00a7c33006ea11a"
+    },
+    {
+      "path": "contrib/googletest/.github/ISSUE_TEMPLATE/00-bug_report.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "586779ad2d618299eff5b68f9f8a3da6013934b8",
+      "size": 2064,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/586779ad2d618299eff5b68f9f8a3da6013934b8"
+    },
+    {
+      "path": "contrib/googletest/.github/ISSUE_TEMPLATE/10-feature_request.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3bbc091e8e9a94b39684dfb4cdd16204cfd1773",
+      "size": 1058,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/f3bbc091e8e9a94b39684dfb4cdd16204cfd1773"
+    },
+    {
+      "path": "contrib/googletest/.github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65170d10a78231455bed85e929bc008927445644",
+      "size": 175,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/65170d10a78231455bed85e929bc008927445644"
+    },
+    {
+      "path": "contrib/googletest/.github/workflows/gtest-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03a8cc5e287b47bacc3b9ae7dc0d5b966cf4debe",
+      "size": 790,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/03a8cc5e287b47bacc3b9ae7dc0d5b966cf4debe"
+    },
+    {
+      "path": "contrib/googletest/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fede02f6509344186fa87d06afb8e53e90c5d2fa",
+      "size": 1605,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/fede02f6509344186fa87d06afb8e53e90c5d2fa"
+    },
+    {
+      "path": "contrib/zip/.gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15a5c58091afb6a94589d8366c623c129a78fe40",
+      "size": 24,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/15a5c58091afb6a94589d8366c623c129a78fe40"
+    },
+    {
+      "path": "contrib/zip/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5900dbcdc470a6eb2bcc829f81d4fcbe680bf43",
+      "size": 558,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/a5900dbcdc470a6eb2bcc829f81d4fcbe680bf43"
+    },
+    {
+      "path": "scripts/android_crosscompile/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6caf68aff423350af0ef7b148fec2ed4243658e5",
+      "size": 6,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/6caf68aff423350af0ef7b148fec2ed4243658e5"
+    },
+    {
+      "path": "test/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b652d6aaed255fca7d7d1ae00197bdf9b85bfa25",
+      "size": 41,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/b652d6aaed255fca7d7d1ae00197bdf9b85bfa25"
+    },
+    {
+      "path": "test/headercheck/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "879a87fd517e5105c1071e7469b6e9dcd1daf12c",
+      "size": 15,
+      "url": "https://api.github.com/repos/assimp/assimp/git/blobs/879a87fd517e5105c1071e7469b6e9dcd1daf12c"
+    }
+  ],
+  "consumerAnalysis": "All omitted paths are Git attributes/ignore/modules metadata or GitHub CI/issue configuration. No C/C++/header/CMake/license files omitted. ASSIMP_HUNTER_ENABLED/TESTS/TOOLS disabled; omitted Draco submodules inactive. Tar original preserved unchanged, no synthetic files."
+}

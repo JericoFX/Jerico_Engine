@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/git/trees/e31817bab259085d3a8f8ba205b1840a6ed28068",
+  "status": 200,
+  "length": 3076,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"0595a69e3be9b7074e98d8ccc75a88b773a0f4a9190fc636da30bc478925787b\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

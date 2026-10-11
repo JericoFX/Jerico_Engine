@@ -1,0 +1,26 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://github.com/DLTcollab/sse2neon/archive/refs/tags/v1.9.1.tar.gz",
+    "status": 302,
+    "length": 0,
+    "contentType": "text/html; charset=utf-8",
+    "etag": "",
+    "location": "https://codeload.github.com/DLTcollab/sse2neon/tar.gz/refs/tags/v1.9.1",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://codeload.github.com/DLTcollab/sse2neon/tar.gz/refs/tags/v1.9.1",
+    "status": 200,
+    "length": null,
+    "contentType": "application/x-gzip",
+    "etag": "\"fbbc487575eb12bd302402e07496889e596f709c83e7f83307424a41b3635577\"",
+    "location": null,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

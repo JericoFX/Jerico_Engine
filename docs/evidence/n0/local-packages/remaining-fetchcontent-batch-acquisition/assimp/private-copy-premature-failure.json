@@ -1,0 +1,9 @@
+{
+  "status": "PRESERVED FAILED PRIVATE COPY BEFORE PATCH",
+  "cause": "Writer invoked copying before immutable extraction process completed; source Manifest enumerated a partial tree and patch target missing. No immutable files changed and no hunk written.",
+  "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/assimp-6.0.4-batch-root",
+  "fileCount": 71,
+  "replacementPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/assimp-6.0.4-batch-root-rev2",
+  "correctiveGuard": "Require completed source-tree-manifest, hash/bytes of all inputs and equal file count before private copying",
+  "nativeExecuted": false
+}

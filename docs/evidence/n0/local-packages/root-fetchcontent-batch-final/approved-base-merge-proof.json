@@ -1,0 +1,35 @@
+{
+  "status": "APPROVED BASE PREPARED; SMC NOT READ/HASHED/RECONCILED; NO EXECUTABLE ASSIGNMENT",
+  "counts": {
+    "reviewed-root2532": {
+      "validated": 2532,
+      "added": 2532,
+      "duplicates": 0
+    },
+    "reviewed-batch12957": {
+      "validated": 12957,
+      "added": 12947,
+      "duplicates": 10
+    },
+    "approved-batch-MP-driver-provenance": {
+      "validated": 20,
+      "added": 19,
+      "duplicates": 1
+    }
+  },
+  "rawInputCount": 15509.0,
+  "uniqueInputCount": 15498,
+  "oldRootDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "beforeSHA256": "0bf845bedef7f84dcf51f5ec986fe0b7ad6fefccb7b4e823c260d062240618a3",
+      "afterSHA256": "605d32ccdd7dfa055560bc81ef79e743dc167318683e1e30733a507f3c582226",
+      "beforeBytes": 3827,
+      "afterBytes": 3758,
+      "reason": "Only two parent-approved Multiplayer composition rows,69bytes; parent-review67ADB pinned"
+    }
+  ],
+  "normalization": "GetFullPath+OrdinalIgnoreCase dedup; retains first row spelling for legacySQLite relative-path guards",
+  "baseFreezeSHA256": "980BBAF6FB715B0D6AAF61D878264E3C061CD8D65BEB3D736C9D100A23FAEAC2",
+  "pending": "Parent-reviewed SMC9sources/9refs hash and receipt required; finalize command must revalidate all inputs"
+}

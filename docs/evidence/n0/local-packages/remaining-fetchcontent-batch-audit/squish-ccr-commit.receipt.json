@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/Ethatron/squish-ccr/commits/deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"0fabf3f9659f48bc83dd3b1f470f17dc4b76de5848a69876d4901f3ace519e77\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

@@ -1,0 +1,15 @@
+{
+  "name": "D3D12MemoryAllocator",
+  "URL": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/tar.gz/refs/tags/v3.2.0",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 725544,
+  "sha256": "71d740ecb2d6cdf93b273ae571eb80097a530443993b0a5cb2bdb3cacc1548db",
+  "expectedSHA256": "71d740ecb2d6cdf93b273ae571eb80097a530443993b0a5cb2bdb3cacc1548db",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/D3D12MemoryAllocator-3.2.0.tar.gz",
+  "commit": "1d86c1130f61453634b1df85782e1fecfd59a525",
+  "matchesDeclaredPin": true
+}

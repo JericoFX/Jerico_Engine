@@ -1,0 +1,26 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://github.com/xiph/vorbis/archive/refs/tags/v1.3.7.tar.gz",
+    "status": 302,
+    "length": 0,
+    "contentType": "text/html; charset=utf-8",
+    "etag": "",
+    "location": "https://codeload.github.com/xiph/vorbis/tar.gz/refs/tags/v1.3.7",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://codeload.github.com/xiph/vorbis/tar.gz/refs/tags/v1.3.7",
+    "status": 200,
+    "length": null,
+    "contentType": "application/x-gzip",
+    "etag": "\"bbe2780e2f6daf0e65b9a05569a7ff199ae7ee3f9cffc686c24b83fe7851377b\"",
+    "location": null,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

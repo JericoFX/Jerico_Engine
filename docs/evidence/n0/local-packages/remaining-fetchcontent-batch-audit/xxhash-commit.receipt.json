@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/Cyan4973/xxHash/commits/e626a72bc2321cd320e953a0ccf1584cad60f363",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"59c8327b02fb799b3c33ba817642e84a33ffe699f9b2da92b8642762b0253a76\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

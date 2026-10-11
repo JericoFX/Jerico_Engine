@@ -1,0 +1,101 @@
+{
+  "sourceHistoryPreserved": [
+    "Both Gem implementation and tests",
+    "Multiplayer_ScriptCanvas source",
+    "AutomatedTesting explicit Multiplayer project/targets",
+    "UnifiedMultiplayerGem template and engine template registration",
+    "Multiplayer prefab.tools.setreg NetworkPrefabProcessor source"
+  ],
+  "runtimeDistinction": "Removing external registration prevents these three Gem directories from participating in engine-recursive add_subdirectory. Fixture did not select their runtime variants; no runtime execution was performed.",
+  "sourceFileCount": 1,
+  "remainingProductScope": [
+    "AzNetworking global Framework composition remains; legitimate Editor/AssetProcessor local IPC must be separated before future retirement",
+    "Launcher.Server.Static remains under server platform trait",
+    "Native configure/link/deploy/runtime and complete no-multiplayer acceptance remain pending"
+  ],
+  "pythonSourceDelta": [
+    {
+      "otherSourceUnchanged": false,
+      "approvedEngineDelta": true,
+      "previousSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "currentSHA256": "605D32CCDD7DFA055560BC81EF79E743DC167318683E1E30733A507F3C582226"
+    },
+    {
+      "otherSourceUnchanged": true,
+      "approvedEngineDelta": false,
+      "previousSHA256": "B49C40BE47E7232DC0211C0DCD8D56A6ECD157720590A719449A9A38D27E01E0",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg",
+      "currentSHA256": "B49C40BE47E7232DC0211C0DCD8D56A6ECD157720590A719449A9A38D27E01E0"
+    },
+    {
+      "otherSourceUnchanged": true,
+      "approvedEngineDelta": false,
+      "previousSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg",
+      "currentSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+    },
+    {
+      "otherSourceUnchanged": true,
+      "approvedEngineDelta": false,
+      "previousSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg",
+      "currentSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+    },
+    {
+      "otherSourceUnchanged": true,
+      "approvedEngineDelta": false,
+      "previousSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg",
+      "currentSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+    },
+    {
+      "otherSourceUnchanged": true,
+      "approvedEngineDelta": false,
+      "previousSHA256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+      "currentSHA256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988"
+    }
+  ],
+  "proof": {
+    "removedBytes": 69.0,
+    "originalBytes": 3827,
+    "equalsOriginalMinusTwoCompleteLines": true,
+    "after": {
+      "bytes": 3758,
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "sha256": "605D32CCDD7DFA055560BC81EF79E743DC167318683E1E30733A507F3C582226"
+    },
+    "deleted": [
+      {
+        "bytes": 29,
+        "text": "        \"Gems/Multiplayer\",",
+        "byteSequenceHex": "20202020202020202247656D732F4D756C7469706C61796572222C0D0A",
+        "line": 56
+      },
+      {
+        "bytes": 40,
+        "text": "        \"Gems/MultiplayerCompression\",",
+        "byteSequenceHex": "20202020202020202247656D732F4D756C7469706C61796572436F6D7072657373696F6E222C0D0A",
+        "line": 57
+      }
+    ],
+    "originalSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+    "allOtherJsonDataPreserved": true,
+    "keptLineByteSegmentsUnmodified": true
+  },
+  "execution": "No CMake/build/test/Git/delegation",
+  "remainingRegisteredGemMetadataDependers": [],
+  "state": "Frozen for parent actual diff review",
+  "previousPythonCompositionFreezePreserved": true,
+  "addedPaths": [],
+  "removedPaths": [
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\MultiplayerCompression",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Multiplayer_ScriptCanvas"
+  ],
+  "nativeConsumerProof": "No external Code/Gems/Projects C++ or header references to Multiplayer headers/namespaces found; registered native Gem metadata has no remaining dependers. Child CMake explicitly links Multiplayer.Common.Static and exits through removed parent branch.",
+  "closureBefore": 111,
+  "closureAfter": 108,
+  "scope": "Only engine.json Multiplayer and MultiplayerCompression entries"
+}

@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/xiph/ogg/git/ref/tags/v1.3.6",
+  "status": 200,
+  "length": 319,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"45d0cafbe5157b391491e4a69ee7018bfc458a272834b99ea39d5ca2275f5bce\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

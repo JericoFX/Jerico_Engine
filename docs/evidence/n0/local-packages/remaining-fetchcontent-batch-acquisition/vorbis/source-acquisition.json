@@ -1,0 +1,15 @@
+{
+  "name": "vorbis",
+  "URL": "https://codeload.github.com/xiph/vorbis/tar.gz/refs/tags/v1.3.7",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 1234573,
+  "sha256": "270c76933d0934e42c5ee0a54a36280e2d87af1de3cc3e584806357e237afd13",
+  "expectedSHA256": "270c76933d0934e42c5ee0a54a36280e2d87af1de3cc3e584806357e237afd13",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/vorbis-1.3.7.tar.gz",
+  "commit": "0657aee69dec8508a0011f47f3b69d7538e9d262",
+  "matchesDeclaredPin": true
+}

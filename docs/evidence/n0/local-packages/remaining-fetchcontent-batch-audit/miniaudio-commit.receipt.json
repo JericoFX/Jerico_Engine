@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/mackron/miniaudio/commits/350784a9467a79d0fa65802132668e5afbcf3777",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"250833232d575f375248afaca12f792f95df65c19c44fa88c373f8df01305d28\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

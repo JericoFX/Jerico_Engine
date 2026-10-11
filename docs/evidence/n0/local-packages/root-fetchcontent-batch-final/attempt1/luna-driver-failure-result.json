@@ -1,0 +1,19 @@
+{
+  "attempt": "attempt1",
+  "driverExitCode": 1,
+  "driverWallSecondsObservedByTool": 85.5,
+  "nativeCMakeStatus": "NOT_RUN",
+  "nativeCMakeExitCode": null,
+  "launcher": "powershell.exe (Windows PowerShell classic)",
+  "failure": "ProcessStartInfo.ArgumentList was null",
+  "driverPath": "run-root-configure-batch.ps1",
+  "driverLine": 315,
+  "diagnostic": "InvokeMethodOnNull while adding --version to ProcessStartInfo.ArgumentList",
+  "postflight": "NOT_REACHED",
+  "configureArgvCreated": false,
+  "configureStdoutCreated": false,
+  "configureStderrCreated": false,
+  "configureResultCreated": false,
+  "attemptDirectoryPreserved": true,
+  "note": "Preflight manifests exist in attempt1; this is a launcher failure, not a CMake configure result."
+}

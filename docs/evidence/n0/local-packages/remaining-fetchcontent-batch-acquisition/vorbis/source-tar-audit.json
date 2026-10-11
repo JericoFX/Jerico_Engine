@@ -1,0 +1,3228 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/vorbis-1.3.7.tar.gz",
+  "commit": "0657aee69dec8508a0011f47f3b69d7538e9d262",
+  "root": "vorbis-1.3.7",
+  "members": 459,
+  "regularFiles": 417,
+  "fileBytes": 4742673.0,
+  "links": 0,
+  "gitBlobMatches": 417,
+  "primaryBlobFiles": 417,
+  "destination": "F:/JericoEngine/Dependencies/vorbis-1.3.7",
+  "violations": [],
+  "extracted": false,
+  "membersManifest": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "vorbis-1.3.7",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/.gitignore",
+      "type": "RegularFile",
+      "bytes": 814,
+      "sha256": "cfdb783d7890e5bf912b0ede72154e796ffb7f2280f66e36de724184b7c5b2b4",
+      "gitBlobSHA1": "27ec90e069523b619cc18b5f0aac10ebad81ef1d"
+    },
+    {
+      "path": "vorbis-1.3.7/.gitlab-ci.yml",
+      "type": "RegularFile",
+      "bytes": 556,
+      "sha256": "1722933aa0a9ee329ef0c1051224cc16a4461edda95e6339f7e1dfe9d56d0d79",
+      "gitBlobSHA1": "e438d9724ad40ac01da2621ddfb1e5a97dcf910e"
+    },
+    {
+      "path": "vorbis-1.3.7/.travis.yml",
+      "type": "RegularFile",
+      "bytes": 517,
+      "sha256": "0bca69d46eba361e200cef0779da1b51fc58b9a572bab7e9a4782d9f16744e6b",
+      "gitBlobSHA1": "23fec3d403aa01043a97d12b02fcbd960d96e931"
+    },
+    {
+      "path": "vorbis-1.3.7/.ycm_extra_conf.py",
+      "type": "RegularFile",
+      "bytes": 195,
+      "sha256": "c4688396fa50cc78c1e08f3fb25d17b357367de3d0b84c0681eb3c8300f90358",
+      "gitBlobSHA1": "f4e30e890519747c610dcc95577be0c224db7b63"
+    },
+    {
+      "path": "vorbis-1.3.7/AUTHORS",
+      "type": "RegularFile",
+      "bytes": 65,
+      "sha256": "f5cab9f16035f770f50299f85cf2938c06dc3a9a30425961067788102ec896d3",
+      "gitBlobSHA1": "0da10363c0cbaa09350bda3f3a6a6bf762cf536e"
+    },
+    {
+      "path": "vorbis-1.3.7/Brewfile",
+      "type": "RegularFile",
+      "bytes": 39,
+      "sha256": "0ea450c6fd29a230b5df0613b1aa2aeb5f2fd20c33ad7ec4c2240ac84617c9d6",
+      "gitBlobSHA1": "af81e5b4631ae7ff7dced7f9d162af7bb45eab87"
+    },
+    {
+      "path": "vorbis-1.3.7/CHANGES",
+      "type": "RegularFile",
+      "bytes": 7302,
+      "sha256": "18d414a3069c3b76f9cb0d4dde91bcb6189914acb63d42c56e1e2775b601946d",
+      "gitBlobSHA1": "c4a0addf07fee5881f005d8ce13d654eab46dce0"
+    },
+    {
+      "path": "vorbis-1.3.7/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 2705,
+      "sha256": "66083c2c545fab98a075e3c5aa3b73d113ae41dcfeb6040a5f435e58059e69d5",
+      "gitBlobSHA1": "f377c4286fa1db0189b4122a595ba7c2acb36509"
+    },
+    {
+      "path": "vorbis-1.3.7/COPYING",
+      "type": "RegularFile",
+      "bytes": 1470,
+      "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a",
+      "gitBlobSHA1": "fb456a87bdfafe2cab7de982e8ce11204933ec5c"
+    },
+    {
+      "path": "vorbis-1.3.7/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1030,
+      "sha256": "7d1feef1b92fc80cdb7bf9f4b97317923f67d1afed5466320f725b821a85d743",
+      "gitBlobSHA1": "359a70199c127e16aad608d3517ae006e855186e"
+    },
+    {
+      "path": "vorbis-1.3.7/README.md",
+      "type": "RegularFile",
+      "bytes": 4786,
+      "sha256": "d408e3a8d5eeb70e4dec13fffefbd21c4d4c0b584ae3d6fe4245ef7673a2a739",
+      "gitBlobSHA1": "30c88d391d928b2fccca9690fcaee05299aa4e44"
+    },
+    {
+      "path": "vorbis-1.3.7/appveyor.yml",
+      "type": "RegularFile",
+      "bytes": 1842,
+      "sha256": "07cf1574fd79d865d4dc7dc0a2c4c3b4a5ffbe5d0fbaeec32b7809faa170427b",
+      "gitBlobSHA1": "154c3c26a799eb71efb26592e5547556344867e9"
+    },
+    {
+      "path": "vorbis-1.3.7/autogen.sh",
+      "type": "RegularFile",
+      "bytes": 245,
+      "sha256": "9825dccae7dfdc8a43d57e6426e5dcbd0e7298b0eba70a4b52e573d6bf3cfc73",
+      "gitBlobSHA1": "d859d327baec3a76a74c9ec920719270e853d75b"
+    },
+    {
+      "path": "vorbis-1.3.7/cmake",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/cmake/FindOgg.cmake",
+      "type": "RegularFile",
+      "bytes": 2132,
+      "sha256": "b199744a80e7d4762bc1ad56147d453e4f3b7ab925cf003ad639e9253a2495f4",
+      "gitBlobSHA1": "ebcd7d4e2856a975b2439130e6562d56be851fab"
+    },
+    {
+      "path": "vorbis-1.3.7/cmake/VorbisConfig.cmake.in",
+      "type": "RegularFile",
+      "bytes": 396,
+      "sha256": "76ae79f2a7d05142ddfdbf75a1f2230f0fb9c9d46f2d4346a6965fc015f68989",
+      "gitBlobSHA1": "6fc07941503a0009b75ee46927bae2f146c62e07"
+    },
+    {
+      "path": "vorbis-1.3.7/configure.ac",
+      "type": "RegularFile",
+      "bytes": 9618,
+      "sha256": "f28f6a79162f31639d12ab86ffcc496c3bcb0b5e3ede9544eb69ec37abf76901",
+      "gitBlobSHA1": "14a267f8923933573dc6a417d8a41a993742b7f1"
+    },
+    {
+      "path": "vorbis-1.3.7/contrib",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/contrib/oss-fuzz",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/contrib/oss-fuzz/build.sh",
+      "type": "RegularFile",
+      "bytes": 563,
+      "sha256": "6c7ee1dcf4c9a2836fd917506ce83a7716395ada04fd9027d2987a2244f02c1f",
+      "gitBlobSHA1": "1f76b4a3ea5b90cd4eac8951a1f5679492de1fe5"
+    },
+    {
+      "path": "vorbis-1.3.7/contrib/oss-fuzz/decode_fuzzer.cc",
+      "type": "RegularFile",
+      "bytes": 1175,
+      "sha256": "a1ad08f974fb17ad41c9cfc28225cdf86d48e5df3b34a01d610baa6923b25acc",
+      "gitBlobSHA1": "b8840c1458849fcb82e80d2b58cf87a19aa8902d"
+    },
+    {
+      "path": "vorbis-1.3.7/debian",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/debian/changelog",
+      "type": "RegularFile",
+      "bytes": 6760,
+      "sha256": "a1c4d6b5b3157535951f313b00cdda6adf27604a9518c8d8d7cc5958ac8f6eb7",
+      "gitBlobSHA1": "fae34ba764922c44ff634571271a75c0f2b0324a"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/control",
+      "type": "RegularFile",
+      "bytes": 2258,
+      "sha256": "dafed99721bbd2310b9607380294330570eee7abaeb87f536bed18730449ac20",
+      "gitBlobSHA1": "b3f26469e5198c4e8a8422f122068beb8cec2e48"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/copyright",
+      "type": "RegularFile",
+      "bytes": 1695,
+      "sha256": "1f6c6b6397d86d20968d7856d6945591b89e4cb64e5fc1ec8b992811f6a65ed8",
+      "gitBlobSHA1": "c6bf857edc2c682e1116e19b6382554930b31352"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/libvorbis-dev.docs",
+      "type": "RegularFile",
+      "bytes": 39,
+      "sha256": "a8f8965b2cb5b5b9c0a61e02ed23be9296775e9087ba7f92d83f13ec89032493",
+      "gitBlobSHA1": "d1df5710ae414c15b7d042e0820073778d4957e6"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/libvorbis-dev.examples",
+      "type": "RegularFile",
+      "bytes": 27,
+      "sha256": "cf93f787fd1b7fd3ff134df8a53a3d24a443e45cef5114b419d6388c9c850514",
+      "gitBlobSHA1": "1ae77b56a47f4265e06fb95979ba4de70da44d06"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/libvorbis-dev.install",
+      "type": "RegularFile",
+      "bytes": 592,
+      "sha256": "34a74644d8ed242e7fa29a0afdbe4b312a4de5b3725b25cca32fe9548729608b",
+      "gitBlobSHA1": "db22e502024291f79490f6b53900ee569a8c3349"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/libvorbis0a.install",
+      "type": "RegularFile",
+      "bytes": 34,
+      "sha256": "c9be022fc24bae5ce6d8b86067824356c1a955c5f78f39cdd6c594c549269c94",
+      "gitBlobSHA1": "ad38b8b6d4b0cc25abf0a4d80b32331a1c872969"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/libvorbisenc2.install",
+      "type": "RegularFile",
+      "bytes": 37,
+      "sha256": "502a3e59c1ecff6df2914868edad162413df6618cb0b6f3c55022fb2254add03",
+      "gitBlobSHA1": "eb70258f3c409e34aed414dc21291345c003e1c8"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/libvorbisfile3.install",
+      "type": "RegularFile",
+      "bytes": 38,
+      "sha256": "b6eaf8acd575c53455013a728a0f77d2bf65d63edf445b424f29610614cf65ec",
+      "gitBlobSHA1": "83bf445e6c28945fe419baa6d810067068170d2e"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/rules",
+      "type": "RegularFile",
+      "bytes": 3333,
+      "sha256": "95efde1a3e589dfbaec82388770cd36a2ac4401ac65c5c3e2e9cb1544ce95463",
+      "gitBlobSHA1": "419ca7a32b3d25122a29555fd0c5cd9bb5ff5554"
+    },
+    {
+      "path": "vorbis-1.3.7/debian/watch",
+      "type": "RegularFile",
+      "bytes": 93,
+      "sha256": "e37b1b4c240dd34fd0dced14ffb23204312c31f85923b212e5168c98addc9913",
+      "gitBlobSHA1": "3a050841cb1bc308523b519ec14f407e2f7c3e63"
+    },
+    {
+      "path": "vorbis-1.3.7/doc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/doc/01-introduction.tex",
+      "type": "RegularFile",
+      "bytes": 23361,
+      "sha256": "c8e099d3c2c0330417eff0df59b5995fe75487640c3760b6faad8da68659b7ec",
+      "gitBlobSHA1": "d7767df08ef87ca6d056057857067637b1396280"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/02-bitpacking.tex",
+      "type": "RegularFile",
+      "bytes": 8532,
+      "sha256": "8118f53fb76ccfc58d457213abcbdf566317d28feaebd56f9ffaf0706823d2af",
+      "gitBlobSHA1": "905dcaf259212b966db6d0a2e1785c1e9562b1cb"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/03-codebook.tex",
+      "type": "RegularFile",
+      "bytes": 17416,
+      "sha256": "6d47a48af606671d6b9e54bde961115fa59020e16e99ec5979db3bf741882440",
+      "gitBlobSHA1": "11516a3bb820b283d11f81992853f69fbb7afef8"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/04-codec.tex",
+      "type": "RegularFile",
+      "bytes": 28439,
+      "sha256": "6a90eff69d8bd91af003a9e93d68a0f3366fb4cfb448732dbe5a380bdaf1735c",
+      "gitBlobSHA1": "333c22729103923694ec3cd829820e18cbc61b90"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/05-comment.tex",
+      "type": "RegularFile",
+      "bytes": 8102,
+      "sha256": "4be6beed38d4fa4db920274e8aea955e0a842bb6398c6da0165ac1b1b024880d",
+      "gitBlobSHA1": "7e54455340d363d44480529d88bfac682722e6c4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/06-floor0.tex",
+      "type": "RegularFile",
+      "bytes": 9149,
+      "sha256": "70782b247263f2289ce2bd6cba3d1e6e06c0c5df97236231190b1c723629a98f",
+      "gitBlobSHA1": "f3042a64444dc2c3a68499edcd6f79d77e3c2b41"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/07-floor1.tex",
+      "type": "RegularFile",
+      "bytes": 15779,
+      "sha256": "697aa31293536a9f36c66f4faebaccaf91ee0075b2fac12ce0e489dd028261a2",
+      "gitBlobSHA1": "47ad798caa5d6141b75d2d73c65ef82580119482"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/08-residue.tex",
+      "type": "RegularFile",
+      "bytes": 17231,
+      "sha256": "765ec533617309a75575ad4fcd1f87760a8c0424dc912007d1a1280cb3060e52",
+      "gitBlobSHA1": "ea382437d91b38adf6af51d1f677d9add7d0c335"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/09-helper.tex",
+      "type": "RegularFile",
+      "bytes": 4894,
+      "sha256": "72a6d9fa70999701e2ec769d322a5385725e8fce7049ba5dfa172396ccd724ce",
+      "gitBlobSHA1": "0a13795b236e46d12eb52dcaecfa17097dcdba49"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/10-tables.tex",
+      "type": "RegularFile",
+      "bytes": 4311,
+      "sha256": "6bbf3ac7328e60028af5cd24b38f6c95861e80f2550bb76434c7f6cab16ad0b4",
+      "gitBlobSHA1": "c2881d63ba7916d961db6ff07f565a8e147e69c5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Doxyfile.in",
+      "type": "RegularFile",
+      "bytes": 47018,
+      "sha256": "fe565638f6b95c5bf5350ab7426748217811c57c67ce925de70cd21776527cba",
+      "gitBlobSHA1": "cdb894fa60e333edcd881af22580f7162f1fd9ee"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 3504,
+      "sha256": "f1591b0da06a2dc12bbbe736101a345a848ab5f656c4a189e68147962fb5b275",
+      "gitBlobSHA1": "3f1424797c15ef8d37e3978e7756c8f88df3e0dd"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec.cfg",
+      "type": "RegularFile",
+      "bytes": 82,
+      "sha256": "96a369dac7355f71e1f63b07a2f19eda32111d364ed0aa00731a98fc6a1bd725",
+      "gitBlobSHA1": "6fca7cece9a25a9ec0de86dd584c9773e41a8671"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec.css",
+      "type": "RegularFile",
+      "bytes": 7080,
+      "sha256": "205551787b6938af421408ecbaae9148ca8444e3d4f80c87ea2125021d980adf",
+      "gitBlobSHA1": "5331f18415a57223c1c60abebcae86ce4fd23ce5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec.html",
+      "type": "RegularFile",
+      "bytes": 547996,
+      "sha256": "f0ffafdedc352d2a42674b01255793838a7ad6a8592db37ce3ef6df4cc8beb95",
+      "gitBlobSHA1": "a1d9496ffe0d8b4bb8aeb2b407d98ada70f84bb0"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec.pdf",
+      "type": "RegularFile",
+      "bytes": 417200,
+      "sha256": "fa28683850e5da9aadd2d4c2f7c746e3eb115387ca1e1c7cbffd7ea429367d7c",
+      "gitBlobSHA1": "165628fdf84d520acc8b7ade0a8393c147a63770"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec.tex",
+      "type": "RegularFile",
+      "bytes": 4139,
+      "sha256": "b72f5b1cb859aa66f99bda00c08f4bd7b1d9d328c66327c73266c7ad3565b8dd",
+      "gitBlobSHA1": "1213a25aa26dc1d888b343e5125d4acd30c71341"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec0x.png",
+      "type": "RegularFile",
+      "bytes": 3639,
+      "sha256": "5f0388845201a66afa0942874411ce5131496c74c14a4d96906f34b18b24ec55",
+      "gitBlobSHA1": "a6b90fa7f1965474d602c858d7a2b4233dcde5b1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec10x.png",
+      "type": "RegularFile",
+      "bytes": 6909,
+      "sha256": "750a21e132907216645ff298e5097dcbede9d40227fdd378429a60e880d29a19",
+      "gitBlobSHA1": "571f324bd5968f711de04148a3987b7718921582"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec11x.png",
+      "type": "RegularFile",
+      "bytes": 7365,
+      "sha256": "84b1a8f8d7811affd34e75bb9b6a9cfaaf86c22942b56b8d50508f7dfd921d32",
+      "gitBlobSHA1": "50c3994fb520d277ffc24768f51898ac4c89b51c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec12x.png",
+      "type": "RegularFile",
+      "bytes": 6550,
+      "sha256": "5e2454534ad5b66804b6d188d44c41c8ca4bc33adee0f87169c42a15c63e08b5",
+      "gitBlobSHA1": "4dcbe6a9b1d04eca297126375ef7d834677e54bf"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec13x.png",
+      "type": "RegularFile",
+      "bytes": 4135,
+      "sha256": "2fe3d00069aee601d7ab6d2ceab1341a9174b7b40a076b994fd09317ce371f91",
+      "gitBlobSHA1": "dd80c1ed4ba559b5b60ab529a271cd9236973602"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec14x.png",
+      "type": "RegularFile",
+      "bytes": 4176,
+      "sha256": "6022407818b9d4307590ef12114350e598fe06b6cff50df29c46b799c187f058",
+      "gitBlobSHA1": "38cbbdb1363b9999f9ba6e8f4116e86908d2701d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec1x.png",
+      "type": "RegularFile",
+      "bytes": 2643,
+      "sha256": "5dfec76cfad651d5103d0b84a06bf65bd5edbe9d40f512099b0c2b9fb753a47d",
+      "gitBlobSHA1": "2e72115b7377c7bc73cf663261c526017884dfc8"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec2x.png",
+      "type": "RegularFile",
+      "bytes": 2639,
+      "sha256": "8027d80db8b93980dc5a3fcf6e779bf0af83efaa16b3ce4b694b0a09a902da30",
+      "gitBlobSHA1": "334be846a1410487db3a75631698e7d01801c6d4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec3x.png",
+      "type": "RegularFile",
+      "bytes": 2643,
+      "sha256": "6e51f28a6d2ca404609e99d87514ae586950a73cb3e79ced926dcea458dd87b0",
+      "gitBlobSHA1": "a280384d45c37e9c96637b1b59cc68fda9deace0"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec4x.png",
+      "type": "RegularFile",
+      "bytes": 2643,
+      "sha256": "39726dd2c0286a638483383a27d2ef0d78f5bc762c41ec8c9cef91770d579440",
+      "gitBlobSHA1": "a79c2fe5147b8605b42a581f9fa1ff312874a354"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec5x.png",
+      "type": "RegularFile",
+      "bytes": 2647,
+      "sha256": "24526947c9dc3e2ac509ae656eaa8161e211479fe860e8c102ddb00a558f2436",
+      "gitBlobSHA1": "3c7ff14374201a1a6fb2bac58e8a9ca9c5a7c5c7"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec6x.png",
+      "type": "RegularFile",
+      "bytes": 2645,
+      "sha256": "b23f10b83d7673ac380e07736b474ecbff18185f1bf443010a4a65b3586c34e8",
+      "gitBlobSHA1": "8d78a006538f6aa187141d8de9cd5fbeeb1eb2ca"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec7x.png",
+      "type": "RegularFile",
+      "bytes": 4993,
+      "sha256": "683e62c39ad3cf89b2f42d0b93add4f9deb86956d6229e25abf6b90188f44727",
+      "gitBlobSHA1": "67440ea389ffef1f96c302a41a39e9ba62c54f33"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec8x.png",
+      "type": "RegularFile",
+      "bytes": 5403,
+      "sha256": "aa3ba7ac7b3df8f8ffb94d9a07b4a126254d282055078b0bc29bc405dd6c19e2",
+      "gitBlobSHA1": "c7e58704d9c4d10451dcde924aa2e6a85f23f92b"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/Vorbis_I_spec9x.png",
+      "type": "RegularFile",
+      "bytes": 4176,
+      "sha256": "6022407818b9d4307590ef12114350e598fe06b6cff50df29c46b799c187f058",
+      "gitBlobSHA1": "38cbbdb1363b9999f9ba6e8f4116e86908d2701d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/a1-encapsulation-ogg.tex",
+      "type": "RegularFile",
+      "bytes": 6452,
+      "sha256": "4534c96c9dcab1f18972d9ba12714fa01666959b48490ae65419b72037fb69f4",
+      "gitBlobSHA1": "8bbd31bc5f9aa21aa317206af092161701a15ae0"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/a2-encapsulation-rtp.tex",
+      "type": "RegularFile",
+      "bytes": 334,
+      "sha256": "ec0b4dd946a9453480efcb812d776cc0d4011274a2310ded155116376b63438f",
+      "gitBlobSHA1": "35a93c6f9747af326fe39c050989509e3a4ddfd5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/components.png",
+      "type": "RegularFile",
+      "bytes": 9741,
+      "sha256": "5dd45267530036d463a60ccf8d5e21f099e18507545a15880dfd4ae242f3d82a",
+      "gitBlobSHA1": "0c4e75c6e6117ba49e23f3b47abb6618bea4a0ab"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/eightphase.png",
+      "type": "RegularFile",
+      "bytes": 11130,
+      "sha256": "d928eafbe5f5500e16dc4d9a9b6743844332d5ad7496e1cd1ac3b8ee29667c93",
+      "gitBlobSHA1": "8272e44824c17c2c9b0e663e309042f7a714baa3"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/fish_xiph_org.png",
+      "type": "RegularFile",
+      "bytes": 2503,
+      "sha256": "5ad6acc08e81978952f0817231f9166983fec952540eab966cba493ff73e7ac8",
+      "gitBlobSHA1": "dc64a038fa2a651d76703bb6888020438cd15a20"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/floor1-1.png",
+      "type": "RegularFile",
+      "bytes": 3420,
+      "sha256": "0f6ca87a6deb2e8239e0a1741ecaccec00afa6f469fa12d8d917456bad2431a0",
+      "gitBlobSHA1": "bd7faba6680caabc6cf15ffb723e1048adc6610b"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/floor1-2.png",
+      "type": "RegularFile",
+      "bytes": 3752,
+      "sha256": "2aa4dda164aa7f44152419f0503f04ac0cbd40f26fd0a17598ae00d24aed81d9",
+      "gitBlobSHA1": "46f0ac23079a3078160cdb9e8091edf4cabfd6cf"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/floor1-3.png",
+      "type": "RegularFile",
+      "bytes": 4627,
+      "sha256": "46a57dc5ee8f98dbf279258acc0968d869d204f6ecc3dc6c0fdc11cb4b359133",
+      "gitBlobSHA1": "4d03c6a1b722d66faaa58c8c8cfe2929c37de67e"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/floor1-4.png",
+      "type": "RegularFile",
+      "bytes": 4163,
+      "sha256": "db32ff30331d45f884b8729ab476c28336d1d5ca29214e511491090495e26730",
+      "gitBlobSHA1": "f96e77dd70fd641af0b40a2a32ce7c39ec2ed6da"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/floor1_inverse_dB_table.html",
+      "type": "RegularFile",
+      "bytes": 5418,
+      "sha256": "db0919a986075b89d7dec83cfb2434a9893adbdd45ecf72ad727a25a79cc5548",
+      "gitBlobSHA1": "88412500f8295e43c1f3ad4c9ecc3a660842012f"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/floorval.png",
+      "type": "RegularFile",
+      "bytes": 2545,
+      "sha256": "4d61c1e956f0acfc909189e101117dc8781c92721172b5f1bdff5a433d981f04",
+      "gitBlobSHA1": "49d6ec190f851627ae91539fb961f4803233b5e2"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/footer.tex",
+      "type": "RegularFile",
+      "bytes": 1233,
+      "sha256": "b676a7cc4459deddee6414093ab391d6acf05d36c0e21bd00c941ebf69e670e5",
+      "gitBlobSHA1": "bb5e590c84b7c32a667a9c32bc6845b7f5843e11"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/fourphase.png",
+      "type": "RegularFile",
+      "bytes": 9992,
+      "sha256": "1cac06a3999801ac928ccc6d612167dc99b70b5468fae2bfffc8a93593d810de",
+      "gitBlobSHA1": "a86e128d2d5ac0aebab154bdd2c70c88779de026"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/framing.html",
+      "type": "RegularFile",
+      "bytes": 14623,
+      "sha256": "0680a2688fec652d75f2a62e2f723865a1501564e21e3796f6d0a298de3c6269",
+      "gitBlobSHA1": "b362d6cac9d72c22bdce35e27f389b1bd471fc31"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/helper.html",
+      "type": "RegularFile",
+      "bytes": 5730,
+      "sha256": "a1e0f4b8d4f8df7542d1fb4816ab38a2634f8b946c8d83f33451f1ef47e6e3dc",
+      "gitBlobSHA1": "5da77653e482ecd4cdeb536510f0af0337de20ac"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/hufftree-under.png",
+      "type": "RegularFile",
+      "bytes": 1206,
+      "sha256": "ea46391f6399a80a4cca82a73475aa83c0c89ff4e663d8d60df480736fa85aab",
+      "gitBlobSHA1": "be6e8d6bb8e5cb37a812be7120619331ee72aa0c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/hufftree.png",
+      "type": "RegularFile",
+      "bytes": 1228,
+      "sha256": "56ca1c2b07c549fa819615863ff084b829f113cb2ddf4419abc6660a5ce9e232",
+      "gitBlobSHA1": "f4dc537425bfc1fd8a06bc32b795dcbbd98ae493"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/index.html",
+      "type": "RegularFile",
+      "bytes": 2249,
+      "sha256": "d711de877f301101ce45a61ca3602a008b5cabd1db5a37849f81c1723df498e6",
+      "gitBlobSHA1": "5c260ceabf7fb2f3f72f6ef0ae892037bb16a19b"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1342,
+      "sha256": "b01453bd88d7e705fd413bc53a3082b5ece3a9bd020f38f1d3fd8757fa76999c",
+      "gitBlobSHA1": "0bcc135b75d8069ecea9180f9672f28a7323d611"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/index.html",
+      "type": "RegularFile",
+      "bytes": 1259,
+      "sha256": "ff6572329034dd86975a3c934b34e5cc2b038572639c660624451060cafeb9a9",
+      "gitBlobSHA1": "7d87cc4dc932a5fedf4fae4ebda3cc4f79a2c4a6"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/overview.html",
+      "type": "RegularFile",
+      "bytes": 5954,
+      "sha256": "377eb20da3237a5f5bcb99bbeb705baadbaded932ba2db8fad9739bdd3643a04",
+      "gitBlobSHA1": "574db7457624a919f8344eb3ac8d645a017aefb3"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/reference.html",
+      "type": "RegularFile",
+      "bytes": 3730,
+      "sha256": "37fa8dd4dd4fdf696a876a0300294e9e0a71a5d8c1f6db66382efe519dad1252",
+      "gitBlobSHA1": "7c254c7db71509676ad7fe75d824c3f5aba38613"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/return.html",
+      "type": "RegularFile",
+      "bytes": 2262,
+      "sha256": "afa929c59de62a452177ff8ef532c5b9c6764f9f162b15f6834beb12ea05dbc9",
+      "gitBlobSHA1": "2ce46fab0079c1d753a2ffb0e704bcdd353cfdfe"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/style.css",
+      "type": "RegularFile",
+      "bytes": 279,
+      "sha256": "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d",
+      "gitBlobSHA1": "81cf417953ca5ca4ba619adfe48b058a69db7ba1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_analysis.html",
+      "type": "RegularFile",
+      "bytes": 2629,
+      "sha256": "d98aeb13f2fd008e84eb0ca5bc8b1b4f1aa1919eb23509d33f579de940c00e41",
+      "gitBlobSHA1": "78bab433f8077591fb91fe7c9b5819ab7121c24d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_analysis_blockout.html",
+      "type": "RegularFile",
+      "bytes": 2096,
+      "sha256": "af7fe20427f821dcddb2d2677cc5a048424b0ffbb23f5a0ec235f28ce5b61dde",
+      "gitBlobSHA1": "2ca51c0ae7a1f78039248dbce3fcf2bb8b057cc1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_analysis_buffer.html",
+      "type": "RegularFile",
+      "bytes": 2115,
+      "sha256": "26418b906861cfb7122a6eb48c34f5b27c1c7cb55e908406277bb2e261fa6e55",
+      "gitBlobSHA1": "7a8a34a5dd7ada3ee3741151e99c71d94df623ff"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_analysis_headerout.html",
+      "type": "RegularFile",
+      "bytes": 2596,
+      "sha256": "241d5a52e337764d490add6774ab687b6cd36ab9cf2f3bb836be6435540ff27c",
+      "gitBlobSHA1": "9880fb964f1a141fa32b17453a87d68b63af6827"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_analysis_init.html",
+      "type": "RegularFile",
+      "bytes": 1565,
+      "sha256": "f9c732074c4e9cf36f1a0beed1abb12a0faa6be0abade414f2916b989b80b64e",
+      "gitBlobSHA1": "2ffde1fb7d7b0f2ae59d9da08caa8ab03c93e915"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_analysis_wrote.html",
+      "type": "RegularFile",
+      "bytes": 2035,
+      "sha256": "055966cf8b303e341b6e2dbce10a487bde80befc047f9ad75904c8b2d356d711",
+      "gitBlobSHA1": "16ace2da6262c50f729bb6af4feeda77f2451dcb"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_bitrate_addblock.html",
+      "type": "RegularFile",
+      "bytes": 1876,
+      "sha256": "b6a0bf08b5328dcb2744ddb565df4749d350f7fca43e583c8443b03b03d2cf43",
+      "gitBlobSHA1": "334a9e084b7c1941caa52c6be37491ef55fbaa4f"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_bitrate_flushpacket.html",
+      "type": "RegularFile",
+      "bytes": 2109,
+      "sha256": "520dc420a620c7dcb26adfc104d0da763c2bd1967941aa918e1c5714d02d0bb0",
+      "gitBlobSHA1": "7277bc4e05ddbc196fe4f941f28994b21bbbe6db"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_block.html",
+      "type": "RegularFile",
+      "bytes": 1571,
+      "sha256": "7b53bb066cdb1114f7c78e1425d5c36d8c2120d6f31c96626a32e16f1e00e7f7",
+      "gitBlobSHA1": "0c4f21470305018dc9c5ac803b16acf9ebd7927d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_block_clear.html",
+      "type": "RegularFile",
+      "bytes": 1293,
+      "sha256": "f2352917abf1afb622923f67a737024f829067a80c50a054250bbe36932cea13",
+      "gitBlobSHA1": "5d4a5ca7dde5980e7792b61a5f9da1416249f1c7"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_block_init.html",
+      "type": "RegularFile",
+      "bytes": 1553,
+      "sha256": "9e5634acef1d6d95cb1b0fc6059ec16efaa01a2c6a3b4fdd6b6c6f63d6abd9d6",
+      "gitBlobSHA1": "10bb273480edeef6fe9d8c51853c4ef610d3251c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment.html",
+      "type": "RegularFile",
+      "bytes": 2952,
+      "sha256": "29ff0fbf5b6fe5712b949b9d91613297485549bb6f70529af46c049016f6895b",
+      "gitBlobSHA1": "25dc9218d752bcb50c3b3e412b3cbf2370c8e6a9"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment_add.html",
+      "type": "RegularFile",
+      "bytes": 1786,
+      "sha256": "d51f71542ebe930a9a8e5e7c89ed5f1c3d350c79adaeaf195d241725efc3f7bb",
+      "gitBlobSHA1": "7fa7fec4c6fe3697b012d4bdc4b543cdf05584bb"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment_add_tag.html",
+      "type": "RegularFile",
+      "bytes": 2036,
+      "sha256": "6ca087c1edcaf3d81dc22d6790234ac081deedc4ca58952390ced7c50f006beb",
+      "gitBlobSHA1": "13ac01607e689517380f092fb76bf05dafe37b05"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment_clear.html",
+      "type": "RegularFile",
+      "bytes": 1833,
+      "sha256": "5c82d21c19c128c3aa27a5ffefaad57c7f7a063d37ec7018070e42c45210c007",
+      "gitBlobSHA1": "bb9684cdfc24adb56f2032e7eb9c032d687046f7"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment_init.html",
+      "type": "RegularFile",
+      "bytes": 1954,
+      "sha256": "fcd51df9ffd42a052cad022197d3684c3a832481bdadeadbc29a823a10cc41e4",
+      "gitBlobSHA1": "bb6333b7c97c6fc6fc46d1963f3e2c3433962b4a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment_query.html",
+      "type": "RegularFile",
+      "bytes": 1975,
+      "sha256": "77e07a5dca450c954b7dd91e6437041b0f424498618b101472c4b95fec772556",
+      "gitBlobSHA1": "71cf97ac7d9d3fa961291752a03a3806723b6fc9"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_comment_query_count.html",
+      "type": "RegularFile",
+      "bytes": 1620,
+      "sha256": "829d584a9d4a25cf9068c034dbd1d9dc7354fd5dae29a4ea41e54685117f176d",
+      "gitBlobSHA1": "dc1e84c97a2b88e36cf96279bebb669dadc30ba5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_commentheader_out.html",
+      "type": "RegularFile",
+      "bytes": 1481,
+      "sha256": "4480624db5ff3c117e692e1a7bfdde61399cf45f45257fd10f0b9e60191eaf5e",
+      "gitBlobSHA1": "e880b016309519babebca14487b59264c917ff3a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_dsp_clear.html",
+      "type": "RegularFile",
+      "bytes": 1403,
+      "sha256": "fc0dab76b24cb0bd78d7d1dcc9221f5bf4b4b77cef658dd2bbe0c660cd56ef3a",
+      "gitBlobSHA1": "a012a7e38e99eb4c3b737a5fcbbc72357932331d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_dsp_state.html",
+      "type": "RegularFile",
+      "bytes": 1361,
+      "sha256": "f61ce69f6327b00562c55d8b06c8178fd5798b6137e18c728a062dcf0972d50b",
+      "gitBlobSHA1": "3ac31a5dfa8519d16a3f5ee2a260244e05fe8418"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_granule_time.html",
+      "type": "RegularFile",
+      "bytes": 1513,
+      "sha256": "fda8ae19853640694df971100ffb5b4c83da4b493375f0b00f7d432f815f3b02",
+      "gitBlobSHA1": "adca9b01e240807f21fcc21af9dcd80abb3bd5d6"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_info.html",
+      "type": "RegularFile",
+      "bytes": 2393,
+      "sha256": "06a7301b4f752638b925bf7cee3ca78cd7b502fe91a425ae6984e268afea7a53",
+      "gitBlobSHA1": "fccea2124c17091ff49abd5091771356710a3970"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_info_blocksize.html",
+      "type": "RegularFile",
+      "bytes": 1575,
+      "sha256": "a5c4578b12e03202df8c3ceaf068433ba06cfe5c19e16dacc6830870a3309d3c",
+      "gitBlobSHA1": "47d00e1bd3e39b9e8628ebb6ef42e51be3b1b781"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_info_clear.html",
+      "type": "RegularFile",
+      "bytes": 1279,
+      "sha256": "5de75ab98da919c08a3eeeadc7c15daf0bfa688284730702d4fb8afe95745834",
+      "gitBlobSHA1": "da52223f025f4cff82b7e62f32de74c70c482d2c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_info_init.html",
+      "type": "RegularFile",
+      "bytes": 1327,
+      "sha256": "6afddff08083a6d07fcb3e4306d26f391b97e28b65c1c594f1c3235f15a64c9d",
+      "gitBlobSHA1": "ab81515bf32c89937d88826537085422815c692f"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_packet_blocksize.html",
+      "type": "RegularFile",
+      "bytes": 1622,
+      "sha256": "708b766fe8e8d6fc7805f0a074b911762598a6d3ef72ec64c3b8c6164a484661",
+      "gitBlobSHA1": "7ae8ff6f3fe5281fc1d8f3400af8dd289d9dc1a0"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis.html",
+      "type": "RegularFile",
+      "bytes": 1772,
+      "sha256": "7b896aeef4d43885b643f5f1d50e9f16d4bac07a2a6b85f56dbc27ae6d6b37cb",
+      "gitBlobSHA1": "902e3b6a5d07a64faccad0c2015769b5e8f179d5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_blockin.html",
+      "type": "RegularFile",
+      "bytes": 1819,
+      "sha256": "ffc17185a4ac74890a17204796d32bbecf8ed86754b9c15a8c6a824f1fac5957",
+      "gitBlobSHA1": "32ec6681dcbe05eba10515b80fc2b25ea6c152f1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_halfrate.html",
+      "type": "RegularFile",
+      "bytes": 1676,
+      "sha256": "1f757ccaf53f75f6534b925c1361e5cbacb2049c6832f9a7588dddd4ea4f53ae",
+      "gitBlobSHA1": "8869723f8adfcbdd1d4e7fdd7fcf0a74a91d2a66"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_halfrate_p.html",
+      "type": "RegularFile",
+      "bytes": 1504,
+      "sha256": "39708f01cd4096d13fe83a1b603579b495eb45358acd14627d0d97ef140bdb76",
+      "gitBlobSHA1": "b2b3f983e9da559b1a7ab0876954ef6afc7eba31"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_headerin.html",
+      "type": "RegularFile",
+      "bytes": 2311,
+      "sha256": "bbb67133f794a88d10beae439853ae0247dda7c9f796a134c77d0187e6e8f5f0",
+      "gitBlobSHA1": "5234bbec35a54085211d9a54dabc2b43cc65fc8a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_idheader.html",
+      "type": "RegularFile",
+      "bytes": 1503,
+      "sha256": "be0678e43eb3e5ae2042292f7fb2e293b711c0864dca78a6becede43bb1e6e4b",
+      "gitBlobSHA1": "cc58eb25dd6e42e4ab1949800a357a05a72def21"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_init.html",
+      "type": "RegularFile",
+      "bytes": 1712,
+      "sha256": "29418a7781cc4df7651ccbac43b923f89a2e3fd07b68797c503850d7b3185cd6",
+      "gitBlobSHA1": "6d2c7a9cb4b2144230ca778a0016b36d2d5e8925"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_lapout.html",
+      "type": "RegularFile",
+      "bytes": 2235,
+      "sha256": "d792083fa69387a2b2aa866a10c4020e9ad0e037f78a342ee8cbbcc65b943d95",
+      "gitBlobSHA1": "77696e4c8ad5d149f28350f91c335089bdc23bc7"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_pcmout.html",
+      "type": "RegularFile",
+      "bytes": 2263,
+      "sha256": "6d8f68c28f394d90e15deadbf0300b22b1781e4b31e3511d947e757d5c60043c",
+      "gitBlobSHA1": "8a22bb8f45cdc6a565bd64ccfcde174ad5eb1d40"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_read.html",
+      "type": "RegularFile",
+      "bytes": 1641,
+      "sha256": "cd9e326a8b60f6bd11ff2e316eebcfd2196712d4ab4484b7c1aef47b8a14f237",
+      "gitBlobSHA1": "3b1ee70e5e13f3e50a7e3cb275e3cfd6e4a97ab4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_restart.html",
+      "type": "RegularFile",
+      "bytes": 1501,
+      "sha256": "043755c1812494bf45b07d3be4b65f8c6eab2bff79f2a67c2252dde8a10ff6e6",
+      "gitBlobSHA1": "efcf13364d238df24ea313d9afc1d03b8fbbe615"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_synthesis_trackonly.html",
+      "type": "RegularFile",
+      "bytes": 1845,
+      "sha256": "8e21dcba272d1c30fd8deced872b886ff93ff16468e29421c532a797d69bc04d",
+      "gitBlobSHA1": "550f32d0b3b415bca704b1bcac9fda02d1b499ba"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/libvorbis/vorbis_version_string.html",
+      "type": "RegularFile",
+      "bytes": 1363,
+      "sha256": "bac4384b4582955d09edd0bb7a0614711e303ea9be57e6bc6783b873a441ffc2",
+      "gitBlobSHA1": "017d68461799a7fa2c40ee3569eb1fe55073c5a8"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/oggstream.html",
+      "type": "RegularFile",
+      "bytes": 8623,
+      "sha256": "4f56d111cd549b41ff4e3ccc7a418037e35c2c88240c437931b69497a793d544",
+      "gitBlobSHA1": "48c337edfca6662433ebd747e4be355342360e54"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/programming.html",
+      "type": "RegularFile",
+      "bytes": 18839,
+      "sha256": "f7c88999edc2f1616e149be69533f56f5b767dec9a2b8273a98583304d50ffda",
+      "gitBlobSHA1": "b0ad255cf3d097b5d2a87650ce8d48b1aa150ac3"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/release.txt",
+      "type": "RegularFile",
+      "bytes": 738,
+      "sha256": "f898bed106073af3380a0b5b2be189ec787cc99b11aa0bfe10ce5ba88a5ece23",
+      "gitBlobSHA1": "38d90d714c61599f451c25a52b4de726a5186fc2"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/residue-pack.png",
+      "type": "RegularFile",
+      "bytes": 32318,
+      "sha256": "e672aa80eff320a0dccd89b97515cc30e7d4a14b0b4e592f16fbf8b4acdc556f",
+      "gitBlobSHA1": "6ed071b857362cf5760aa4a77d9d0bb472ec49fb"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/residue2.png",
+      "type": "RegularFile",
+      "bytes": 20427,
+      "sha256": "322d491fddcc35c6199d6ce45e989af384e59aa9fa5fc9b94a6626bdaa94b58b",
+      "gitBlobSHA1": "e8bde3262cb60c7405cd536061413087bb701906"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/rfc5215.txt",
+      "type": "RegularFile",
+      "bytes": 54327,
+      "sha256": "960c9717754928303eca6c2c4eb448c29cadaee23c538d6978b0ed602c2c8a40",
+      "gitBlobSHA1": "67adf92a8bdf7e0997becabd4e02ef2dec3f041a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/rfc5215.xml",
+      "type": "RegularFile",
+      "bytes": 48010,
+      "sha256": "fae93ab5ed0921626c1a4d29f8aa8f4f82aa3e870f6b30c1f7d6b2efeccb03d1",
+      "gitBlobSHA1": "719c10043a07b7d68440eaab0c582b830ab362e6"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/squarepolar.png",
+      "type": "RegularFile",
+      "bytes": 8406,
+      "sha256": "419c59a5ad7bbc9bf1196ef26d2f3f861d054e2aeb57b7162ba0ae123ad46f44",
+      "gitBlobSHA1": "4f9b03d33b3945cf2b644a49301ac0232a8cf3d1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/stereo.html",
+      "type": "RegularFile",
+      "bytes": 16574,
+      "sha256": "6bac20d1168d408d38c451dfab48aafc437628f0677f1d689bcf0eac2d389b71",
+      "gitBlobSHA1": "c7180e0e9ed5184f81cf1d74abaf4fdad2a5d1e0"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/stream.png",
+      "type": "RegularFile",
+      "bytes": 2171,
+      "sha256": "f9a97cafda7a5fcbd50b565632766ed665f3d67f2f84708652579f2018b6051c",
+      "gitBlobSHA1": "d1d2f368507dff661c6422193eebd53cf3722544"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/v-comment.html",
+      "type": "RegularFile",
+      "bytes": 9048,
+      "sha256": "0a18c29c2f944ad293552f7bdda6a6b1f8f8fc2c557690bffd63c1d2d36394d2",
+      "gitBlobSHA1": "0093447cd6b812ca2456e536af119c784b3519e4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbis-clip.txt",
+      "type": "RegularFile",
+      "bytes": 7021,
+      "sha256": "ae8ec3dafa7993f601729edb1d64c0fa8631e747da687754424c3f0dc230b0ea",
+      "gitBlobSHA1": "2e6703445da1c9813168847b72dfd5f0ea11e067"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbis-errors.txt",
+      "type": "RegularFile",
+      "bytes": 2730,
+      "sha256": "c3bbc4e290bd446ab1dd6385cf938a7f6ae860348b68d067bc676890db7c4a82",
+      "gitBlobSHA1": "e873d8ab076627624cb9d49faa6fc96249aed5b4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbis-fidelity.html",
+      "type": "RegularFile",
+      "bytes": 6663,
+      "sha256": "1e8312152e456a89ff3d4324e91cdabf858daf63ec0a3d047f527447f93d31de",
+      "gitBlobSHA1": "85229282fa67cdb0105e7e93c90d6aa1f59a4f3b"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 463,
+      "sha256": "7a534f50f98c7a349367894891dc4d42e3caeca03a4b2f57f4ba56a58ae06918",
+      "gitBlobSHA1": "bbab3c5ba4b0586181badf250fef2ae1fa8b88e9"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/changes.html",
+      "type": "RegularFile",
+      "bytes": 3648,
+      "sha256": "285470a077024982dbf0e837ad1603bf48ea38da329e25533fad0b8cd43564b5",
+      "gitBlobSHA1": "fbf0ebc4844a0352aab59c38a2326eb1492d5300"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/examples.html",
+      "type": "RegularFile",
+      "bytes": 4981,
+      "sha256": "e240b53d30e1d1f39fb1e583bf891a64a5c1fa114f0220d028bf66a0923d5a8f",
+      "gitBlobSHA1": "72282eb91c51daebb2d67baf4266d49910e159d2"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/index.html",
+      "type": "RegularFile",
+      "bytes": 1247,
+      "sha256": "a6d181d80d7c3f17cc70e0a783e3ab13360fda285bb700e377a0c880ec59c763",
+      "gitBlobSHA1": "b39c04f245ebdb231ecdd6f396da42f0c3de8e3b"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/ovectl_ratemanage2_arg.html",
+      "type": "RegularFile",
+      "bytes": 2597,
+      "sha256": "4d5083dca9af6c558d4b5afd2445dd37c465f73da3688569849fc882beb9b958",
+      "gitBlobSHA1": "cc79625444ccef7639b53ee5f6f6c55e18b0bd2e"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/ovectl_ratemanage_arg.html",
+      "type": "RegularFile",
+      "bytes": 3280,
+      "sha256": "6d1dd4081b28932d786ee6cb58f615edddb344d8aef024bc1ccda3dbf40dc619",
+      "gitBlobSHA1": "f64c05782d118cdc38a533c755d25f49617ad04a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/overview.html",
+      "type": "RegularFile",
+      "bytes": 15784,
+      "sha256": "0c7a831982d6124324087e6f1e9fb665515e2a93b020c1ad213702c6bc1a523c",
+      "gitBlobSHA1": "cf439b5b5ac35360876a8ca3e2ade2e61df4320a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/reference.html",
+      "type": "RegularFile",
+      "bytes": 1646,
+      "sha256": "3dd428e4137f196b8f2c898e8dcd5061d715f78412b748676af5d60eac7444c1",
+      "gitBlobSHA1": "041ebd3aae4d8df816ddcfbe452a020b5d3f2c88"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/style.css",
+      "type": "RegularFile",
+      "bytes": 279,
+      "sha256": "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d",
+      "gitBlobSHA1": "81cf417953ca5ca4ba619adfe48b058a69db7ba1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/vorbis_encode_ctl.html",
+      "type": "RegularFile",
+      "bytes": 6145,
+      "sha256": "0455cc83ec3ea14e925814add5a7e896a706e258a423a5cf6c458eb10f5289b7",
+      "gitBlobSHA1": "b1d836e03b5d182345720a7412259af99ce4eb79"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/vorbis_encode_init.html",
+      "type": "RegularFile",
+      "bytes": 2690,
+      "sha256": "956516f02c27b3c9eb7c30c35f1d6d85e0c66c43ea311120ed5800b9be5811de",
+      "gitBlobSHA1": "4f57280954a1eb04d29023fe32cb87d22a63cebe"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/vorbis_encode_init_vbr.html",
+      "type": "RegularFile",
+      "bytes": 2298,
+      "sha256": "6ea13714ba8afd490f23cd378d8e37998fdff74ff302e087eae912ef23ff2f32",
+      "gitBlobSHA1": "d37b87c57b3be1dc50d60a30394edbc754c5306f"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/vorbis_encode_setup_init.html",
+      "type": "RegularFile",
+      "bytes": 2654,
+      "sha256": "7b41c426e37757dbf462a271cfaa7695d9162d00714e01b1c0cec448bc71ac86",
+      "gitBlobSHA1": "752d40af99db51d1094b0066a5a0a530e97b2305"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/vorbis_encode_setup_managed.html",
+      "type": "RegularFile",
+      "bytes": 3069,
+      "sha256": "0a407f0e22a767b32fb1609c188b010ff27780cd994eb9d6b8710cfae54c9e51",
+      "gitBlobSHA1": "bea9aa233fb00f57096e3beba63a50f4ad4827a3"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisenc/vorbis_encode_setup_vbr.html",
+      "type": "RegularFile",
+      "bytes": 2666,
+      "sha256": "f23d1e927bbf7bbc8ef82ed662cb489c721096e05770a749e65647faa249ea10",
+      "gitBlobSHA1": "4b59c3c2840b9d4853d95394aaf83bbce7c370d7"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1217,
+      "sha256": "2df95e840f9ef77ab01f73c397ebffec8888d81deacb0a89c9493e6988ecbc14",
+      "gitBlobSHA1": "fb27d44ae8a4fbfdc7df92de8e4f149b6521fe70"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/OggVorbis_File.html",
+      "type": "RegularFile",
+      "bytes": 4960,
+      "sha256": "64c6e9c22f7a52ff19d39d17a57726a9cc3c6491cee8aa4304127a4101f74a8e",
+      "gitBlobSHA1": "e2cef6adeb743f98778608625a6b8fdc574ca345"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/callbacks.html",
+      "type": "RegularFile",
+      "bytes": 4839,
+      "sha256": "c7aa2ec5f344ae11531f561feab93917695df9d415068d7afc639b1bac2caca5",
+      "gitBlobSHA1": "7ce493a99da577458147ae913bd50dba4199856c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/chaining_example_c.html",
+      "type": "RegularFile",
+      "bytes": 3026,
+      "sha256": "12a0fd49fb9dcc7f2d1a672f7f68b4a2d766d02b87e6425e4ed6d77cebd26e74",
+      "gitBlobSHA1": "b3e146cfadc19efc86e325470649de1148db8fdd"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/chainingexample.html",
+      "type": "RegularFile",
+      "bytes": 5535,
+      "sha256": "672097e72b2878963aad522de9f550446364fe51bddfa5d8f8916f4cda7c1a23",
+      "gitBlobSHA1": "4c190b16b0d9e9e9d7d496c05b8a013dce662a7c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/crosslap.html",
+      "type": "RegularFile",
+      "bytes": 5361,
+      "sha256": "bb4d7915dba6d8ca4d3c3951e610badddedeea6209ee95429634888fd34c87db",
+      "gitBlobSHA1": "b6693249f49049ec625a8c27093eb2e6f550b03d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/datastructures.html",
+      "type": "RegularFile",
+      "bytes": 2435,
+      "sha256": "bb6eb3d07a3ee8dc6803746987d04702be3e941a4dc14ca5109448bb403c80e1",
+      "gitBlobSHA1": "caf023c5e71ab4d175496d280a95d850b9eadb4c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/decoding.html",
+      "type": "RegularFile",
+      "bytes": 3360,
+      "sha256": "7111429f56a18b0cd7b35453de66adb514d7c8e509df9b85fbf3fc3b49445716",
+      "gitBlobSHA1": "3ff8a0369fa10b8af145623a5baacdbc01cfe1d4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/example.html",
+      "type": "RegularFile",
+      "bytes": 5482,
+      "sha256": "f34f199910d0dc91428fe44ada0e692dd31d5e69ad307f99fa080c8e69dd6756",
+      "gitBlobSHA1": "9a6b0f62a6291b5d14814f80d74c3fdae580a499"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/exampleindex.html",
+      "type": "RegularFile",
+      "bytes": 1050,
+      "sha256": "17d89f0d36c4a52ca52efaf88b532b361a0e8bbc45164a140a504eb9db957a3a",
+      "gitBlobSHA1": "afe9adab4971cbf3967c53f10dfb626224f08051"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/fileinfo.html",
+      "type": "RegularFile",
+      "bytes": 3644,
+      "sha256": "50f6aa89371b3b01fb24ec6a906869415bcf38138d004f5e8e5b2efa4545876f",
+      "gitBlobSHA1": "a703100d8345c2ccee6d6b618d6791071de90080"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/index.html",
+      "type": "RegularFile",
+      "bytes": 1414,
+      "sha256": "84fd16fb027cbaae4e52f476331882673198b03aea72ccf433af12ed4fcb0d6c",
+      "gitBlobSHA1": "b5bde1571cb2d3de9cba855b2b3c77834c51059a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/initialization.html",
+      "type": "RegularFile",
+      "bytes": 5118,
+      "sha256": "be6b5591bd2d7b94b729b294c19b83a65fa6748c1ff38769d1154ec398254b5d",
+      "gitBlobSHA1": "346ee72f5d8c3434fff93c01d954c80b09818cfa"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_bitrate.html",
+      "type": "RegularFile",
+      "bytes": 2512,
+      "sha256": "9c69276dc694fb3237e34f264b93acb628a94ec2d1ca4b6189233f49182c27b8",
+      "gitBlobSHA1": "ae1495b7563ddfe89d35d214eee9243c41ffa3d2"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_bitrate_instant.html",
+      "type": "RegularFile",
+      "bytes": 1763,
+      "sha256": "22383f5f09f4732ad44f9537d16fdc6eb01a971c44e441d1b71ab278322240aa",
+      "gitBlobSHA1": "2edfd044db1b147c5af00bf5e87df58728ac74b8"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_callbacks.html",
+      "type": "RegularFile",
+      "bytes": 4401,
+      "sha256": "38f6d9ac88481957011c212c6b705a9a2a5d6074799d07afb63bd6980ea47f65",
+      "gitBlobSHA1": "b9e5802876a182204e0c8346d9817cf5a5f94123"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_clear.html",
+      "type": "RegularFile",
+      "bytes": 2190,
+      "sha256": "815a8bc8372681d01ca65597cc0d9288a150770f5b8879d2a3699973cdc170c5",
+      "gitBlobSHA1": "0c011bfedb14d03184470e48d39f6996f5bbbee8"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_comment.html",
+      "type": "RegularFile",
+      "bytes": 1906,
+      "sha256": "828bf6e6ae82a1da087006783e407e0e4602e9cdd90897da91e496f4662487f1",
+      "gitBlobSHA1": "02795b75b764a5e3dd281e56e0d75d02c95fc38c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_crosslap.html",
+      "type": "RegularFile",
+      "bytes": 3397,
+      "sha256": "14b1f4f86fb24c8338158e4df91a35e9e7f6c469258b0441ffbcb555d4910539",
+      "gitBlobSHA1": "6b563f6229016285c43714f68aceea920fb8d9eb"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_fopen.html",
+      "type": "RegularFile",
+      "bytes": 4380,
+      "sha256": "27096242011114242484cee5aa5b6ab4df8cd3f95aa9b68d1ac89dab71eb2230",
+      "gitBlobSHA1": "75927149e980383cc89caec4df6eff3eff0b70d9"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_info.html",
+      "type": "RegularFile",
+      "bytes": 1974,
+      "sha256": "29087464d0551d53420ca6c914bc8d6f091b5ef5f1d9ee61fd2ed4786e08adb2",
+      "gitBlobSHA1": "e29c516d8e272c24a8c334a376e4e306040aa111"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_open.html",
+      "type": "RegularFile",
+      "bytes": 7501,
+      "sha256": "d9e990843dc92b7352d961abd3f045cee49ce289732fd83da9389ca119063a30",
+      "gitBlobSHA1": "bf214aaf34c5804ae38f4c2f0bc0f908677a8eef"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_open_callbacks.html",
+      "type": "RegularFile",
+      "bytes": 6110,
+      "sha256": "3627e225606bfa205032bddc8498b92829ea62274496630231ee50dd167bf294",
+      "gitBlobSHA1": "60816803bb6b4a5be7fb3691e68207574c679a44"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_pcm_seek.html",
+      "type": "RegularFile",
+      "bytes": 2204,
+      "sha256": "8e4ec7c010d7fdc60f088bf1d96b6e429bdb707e7eb4c6a5049395203f459f5b",
+      "gitBlobSHA1": "3709467a18018a0e58f319b5be44475999e5655d"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_pcm_seek_lap.html",
+      "type": "RegularFile",
+      "bytes": 3311,
+      "sha256": "1152ec1754e556ed00e1d6bea35af33e7fd6a272b45edfe03c2a2fef94d65ce3",
+      "gitBlobSHA1": "71c490aa8facbba3bff0c24e01ccb8d384783d90"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_pcm_seek_page.html",
+      "type": "RegularFile",
+      "bytes": 2494,
+      "sha256": "38b3986f47960133c29cb240489aa4ca429d073704ce80ebce77004377837673",
+      "gitBlobSHA1": "6f33505e13c57fa6d2659a58e1feb597cb8ebadd"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_pcm_seek_page_lap.html",
+      "type": "RegularFile",
+      "bytes": 3644,
+      "sha256": "c6b5d985fa867b852a8d42da2449e378c03d68f4a4748996a82e6ad7c1a0961c",
+      "gitBlobSHA1": "d4736eb408ec4a3efb59ec10bdc4da1d3572f70c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_pcm_tell.html",
+      "type": "RegularFile",
+      "bytes": 1467,
+      "sha256": "6577b8e11288e0cd6d3a0eca36f77bd1834743df56db0b60db6cccf1c899fb9d",
+      "gitBlobSHA1": "114bec54feb7702be9a3247a2003fb7d575190ee"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_pcm_total.html",
+      "type": "RegularFile",
+      "bytes": 1794,
+      "sha256": "4646ecb49665aafca2c39f78b4320e9b24b978381fde081832b7302a4a75b508",
+      "gitBlobSHA1": "cad8c318b81987e0af122c35eb700a16942de376"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_raw_seek.html",
+      "type": "RegularFile",
+      "bytes": 2282,
+      "sha256": "1cdabca30aeeea06a172d30ca44e86042a407ed9f13057ab6511e0e18e6fa448",
+      "gitBlobSHA1": "9074b354003b908359ab29a9c3b84cf244298170"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_raw_seek_lap.html",
+      "type": "RegularFile",
+      "bytes": 3432,
+      "sha256": "2e814e309c00aafa8aa06693b7d2f6a4d4a40f6f0ffc9c775b331d97072048c7",
+      "gitBlobSHA1": "87d0e7ebdfac7fa50abfb1a4f396627a6e2256ff"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_raw_tell.html",
+      "type": "RegularFile",
+      "bytes": 1812,
+      "sha256": "987886c7938b80c3bd41ddc6ced3954caf8c99c3e7203196b121faf15c109777",
+      "gitBlobSHA1": "419a5b32c44379797c4c5f93646e51f355092536"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_raw_total.html",
+      "type": "RegularFile",
+      "bytes": 1827,
+      "sha256": "245e358b807a4755b6851bc66305d50e5d8611e47e82b15a4dbd0590311d0256",
+      "gitBlobSHA1": "54c93c1960db2d50da49c249dce10dd6c9ad74a5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_read.html",
+      "type": "RegularFile",
+      "bytes": 5411,
+      "sha256": "616b9fa26e605a5bb0bd4589cb979075a6a3e7b77664e64983fa5839d9565cae",
+      "gitBlobSHA1": "e696086e8adf6f85fdfd93768ff1425b386e864b"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_read_filter.html",
+      "type": "RegularFile",
+      "bytes": 3803,
+      "sha256": "c654420ee2f339e0ec5358446b8e8c44d72afd3fc61aa2eb254d7efa6b4ec3f8",
+      "gitBlobSHA1": "932b7a92f25e34eb7724cb477042c9f8966433b4"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_read_float.html",
+      "type": "RegularFile",
+      "bytes": 2952,
+      "sha256": "e2f63b236c6bebd0e7f7d27314b240177f1ec1ad7534e7848d77af9d8c33b9f6",
+      "gitBlobSHA1": "00c2f37b5b292729d739e3c27b644b9498d89349"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_seekable.html",
+      "type": "RegularFile",
+      "bytes": 1415,
+      "sha256": "7e1ba29bc9f55ff6c20498bd093a334cb55ebe312f2cd4c92070fe39bd67a60b",
+      "gitBlobSHA1": "c4448ba57a4b1e4dabc96ce1e07df8ba144699a9"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_serialnumber.html",
+      "type": "RegularFile",
+      "bytes": 1807,
+      "sha256": "c4127c48a67db1e326c25d76c930fbe06c28379ac9ff99e20fe24333beeed088",
+      "gitBlobSHA1": "eaf24b0c0c708ab0e7b34e4dba896392be25ae2a"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_streams.html",
+      "type": "RegularFile",
+      "bytes": 1456,
+      "sha256": "9372583f36fd18baeea6978350c9594aad84afd9d7122923b8f97ba2dc44cc17",
+      "gitBlobSHA1": "233490464c5de137d9cfc2a80398b949b1285f26"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_test.html",
+      "type": "RegularFile",
+      "bytes": 3599,
+      "sha256": "761d681d51b23ff0f85e9a45267cbecb9f632a5b36ac5a6e35d3fa75a9b15a84",
+      "gitBlobSHA1": "663927f8bc371cb82929df44ec7bbdabd2219bdf"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_test_callbacks.html",
+      "type": "RegularFile",
+      "bytes": 4100,
+      "sha256": "6542e00b1c19c4843d8e0e322bfadfbe61d6239f2b5abb53a66f78e1f5549c0b",
+      "gitBlobSHA1": "77ee16d64a596b4430d5e04f6e0ed78557571e08"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_test_open.html",
+      "type": "RegularFile",
+      "bytes": 1929,
+      "sha256": "2dc6da80e25ef0936566f415b81e1e63bac358886d29994b369a524c99ea1d7f",
+      "gitBlobSHA1": "f6ef0ed6872659759fd03216d089db4549bae7a5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_time_seek.html",
+      "type": "RegularFile",
+      "bytes": 2255,
+      "sha256": "3a0ec524b2df9e0442fe52f773a048e2cdd2b5484051f07f4c463bcff3e3ae99",
+      "gitBlobSHA1": "067ac01d206827a550c2114b240de528905d86ac"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_time_seek_lap.html",
+      "type": "RegularFile",
+      "bytes": 3308,
+      "sha256": "0aea329ab0e51db4c12a4056b426842c6f726feec3912255ba86e7210934f382",
+      "gitBlobSHA1": "e163949a11415f956773789d90aa570c51501855"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_time_seek_page.html",
+      "type": "RegularFile",
+      "bytes": 2460,
+      "sha256": "5464d335cb10930b6d7d01212fe832ccc41c3f18b19abad03ec0d667b5df248e",
+      "gitBlobSHA1": "a76750af8adfac170014d3ec6204e1ef19a95d9c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_time_seek_page_lap.html",
+      "type": "RegularFile",
+      "bytes": 3676,
+      "sha256": "25b1a1f7f000cda89f2ef04cc6b9d2c2f68a2643c8b1128464b96fde61a32e3c",
+      "gitBlobSHA1": "2d7c606ea50c1e8bce3176580b7957e8afd2c93c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_time_tell.html",
+      "type": "RegularFile",
+      "bytes": 1488,
+      "sha256": "5b54a2f67fff5abe83ccffa4db421ef353c6a5104a5418b4329be3fcc6d85d48",
+      "gitBlobSHA1": "73cbe60f9cc27ccc944a73edd0332bf60ab94035"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/ov_time_total.html",
+      "type": "RegularFile",
+      "bytes": 1808,
+      "sha256": "a006b2125d284ab84d7a505a5f64dbd3a6b43c1c84013c5237a0cad5c41409f0",
+      "gitBlobSHA1": "98133d2645132ba3676764b579710b187d7fd7e7"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/overview.html",
+      "type": "RegularFile",
+      "bytes": 1757,
+      "sha256": "d21d4f9b27e225eda3ac753b5e7a069d0ed9be7bf0a67f3dfe1f8b4cb6571d9e",
+      "gitBlobSHA1": "dfe80297d0068027533c563a15d3ed4d4023ae4c"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/reference.html",
+      "type": "RegularFile",
+      "bytes": 3150,
+      "sha256": "1160da41581cb1cdc02757407fa3475512272bf2271fefaf53bec8b5f5a606c2",
+      "gitBlobSHA1": "4c00a4d73de1aa0cfd2a941c63fa9ca7f69cbe59"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/seekexample.html",
+      "type": "RegularFile",
+      "bytes": 4208,
+      "sha256": "26ed153ac6ea2f86025ecd5bfd3183742798e88f1721560ef6276c69674df2a4",
+      "gitBlobSHA1": "5da157e5b7493f731d72bbb57d2f2f308b93fc41"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/seeking.html",
+      "type": "RegularFile",
+      "bytes": 4743,
+      "sha256": "107db8620a16f37eaf94bd0750f3b462e5cd9877f37decba24545710beb74e42",
+      "gitBlobSHA1": "d479984fa06464c76f5f379bf613fca748c99d61"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/seeking_example_c.html",
+      "type": "RegularFile",
+      "bytes": 1996,
+      "sha256": "cc13db889c629469288262c1a11cc209fd1c8f00eb359816a3ae9e1356299317",
+      "gitBlobSHA1": "a7b9759c73d4ebbf8a93c5b54e8f1a1158d9c5e5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/seeking_test_c.html",
+      "type": "RegularFile",
+      "bytes": 1996,
+      "sha256": "cc13db889c629469288262c1a11cc209fd1c8f00eb359816a3ae9e1356299317",
+      "gitBlobSHA1": "a7b9759c73d4ebbf8a93c5b54e8f1a1158d9c5e5"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/seekingexample.html",
+      "type": "RegularFile",
+      "bytes": 5204,
+      "sha256": "843069cab598d3f8741c743da42e3d1f7e6c0796c006dbed9d71ffcc614fcda0",
+      "gitBlobSHA1": "6b831dbca09d91cbaeda0bb1fbdf2d5d93a07204"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/style.css",
+      "type": "RegularFile",
+      "bytes": 279,
+      "sha256": "dce5d3639396566c572515801a5e5599a894bdfe875796c26d44000187840e7d",
+      "gitBlobSHA1": "81cf417953ca5ca4ba619adfe48b058a69db7ba1"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/threads.html",
+      "type": "RegularFile",
+      "bytes": 1552,
+      "sha256": "4f1706f95d35d42035f64396f9606895b4a18f5e1ec0fe33da61f475890feda9",
+      "gitBlobSHA1": "3d20151638eb453cac25e14b2fae16fc035a359e"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/vorbisfile/vorbisfile_example_c.html",
+      "type": "RegularFile",
+      "bytes": 2433,
+      "sha256": "e69cc58c7785c4a7f3c9c1557726540b7448f7d6caf50165d21e2de631d101ba",
+      "gitBlobSHA1": "8662d9961f003146ac4408ff672e692e729cbbaf"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/window1.png",
+      "type": "RegularFile",
+      "bytes": 1703,
+      "sha256": "0744df634559a918fa9d490bad745b397ebf3a5b893acb869c5526c2f0dca592",
+      "gitBlobSHA1": "968bd3fe975ad8b2c2a66f839289d042f0f11ebe"
+    },
+    {
+      "path": "vorbis-1.3.7/doc/window2.png",
+      "type": "RegularFile",
+      "bytes": 1601,
+      "sha256": "cb2d6a19a7ba06b558f11fdc4164eb582672cc4a68b421712f563085587559a5",
+      "gitBlobSHA1": "bd8e3bb07ed4ab588142bd681bc4156956ca4d12"
+    },
+    {
+      "path": "vorbis-1.3.7/examples",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/examples/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1232,
+      "sha256": "d5a9dba98ddb673e056d1ea01a7607597819639968952409fba83ecb8703f416",
+      "gitBlobSHA1": "63dc8985fdd4a13efbd1b68f675effdcd157fb2a"
+    },
+    {
+      "path": "vorbis-1.3.7/examples/chaining_example.c",
+      "type": "RegularFile",
+      "bytes": 2684,
+      "sha256": "0cf7282e75d27448fe5529c9b66a95e0e027a1244a880b654333e2e81500e9a0",
+      "gitBlobSHA1": "bde3749004a283636a015a88aaff0ce3f2ec9bd9"
+    },
+    {
+      "path": "vorbis-1.3.7/examples/decoder_example.c",
+      "type": "RegularFile",
+      "bytes": 11596,
+      "sha256": "3563090c2ae3848acb3644716ec2a5db1da5c4304c0830be9fc9418530984de7",
+      "gitBlobSHA1": "082f1bc9f76de0af0a413b8ff62dfb0972cf5437"
+    },
+    {
+      "path": "vorbis-1.3.7/examples/encoder_example.c",
+      "type": "RegularFile",
+      "bytes": 8793,
+      "sha256": "8fad3307e454a563bbf446990c710647e07a83d663e4e436a6ff80b10dea8f1f",
+      "gitBlobSHA1": "9a527f33de906964a7de922dd7ea0e6050beb2ab"
+    },
+    {
+      "path": "vorbis-1.3.7/examples/frameview.pl",
+      "type": "RegularFile",
+      "bytes": 20618,
+      "sha256": "25c284bad4c7e5d437a20611366782513d4d234c0d6f64c026407e9cf1570bbe",
+      "gitBlobSHA1": "edcf5d03650b8f7e32ca9db941d2deed8b8cfdde"
+    },
+    {
+      "path": "vorbis-1.3.7/examples/seeking_example.c",
+      "type": "RegularFile",
+      "bytes": 8055,
+      "sha256": "af5a64b6902ae4f2c34c934f9319743188118e7eb332634ecd96eba4bc827a1b",
+      "gitBlobSHA1": "9588680b14cd5d8ce734ecab345b41e28f4d77dd"
+    },
+    {
+      "path": "vorbis-1.3.7/examples/vorbisfile_example.c",
+      "type": "RegularFile",
+      "bytes": 3070,
+      "sha256": "a5e7e0f721a856415c563ac03754d0c7a1091df1f01e4871488b6e1bf0d6da3b",
+      "gitBlobSHA1": "78c8a04fe50d773c8b598654a1315963c308ac9b"
+    },
+    {
+      "path": "vorbis-1.3.7/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/include/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 76,
+      "sha256": "f52043fecedf546255b1e7dd20097e2b2d451635d5f8373746b53eecc7386a87",
+      "gitBlobSHA1": "0f34fab4ca61c0ef3f650a643f53286d532ab09f"
+    },
+    {
+      "path": "vorbis-1.3.7/include/vorbis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/include/vorbis/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 159,
+      "sha256": "802b0afefce5e3fccad538aa4b4eeef10ef2e70cbb6ff54c5e700c4797e1d4c4",
+      "gitBlobSHA1": "dbba34e55974a19203f0c094e91a3ed69298e150"
+    },
+    {
+      "path": "vorbis-1.3.7/include/vorbis/codec.h",
+      "type": "RegularFile",
+      "bytes": 8387,
+      "sha256": "1d031e3cbae7defe966426e33802450a56388a1323eec1ec629e6d4095c676c5",
+      "gitBlobSHA1": "f8a912bc26cd1a8c31c446a6a37ff80345ed4179"
+    },
+    {
+      "path": "vorbis-1.3.7/include/vorbis/vorbisenc.h",
+      "type": "RegularFile",
+      "bytes": 16990,
+      "sha256": "d2aba0527252dc265ffc40bc9b1955d5ac0dc8d5e16d9376fa366c05fa27dc7f",
+      "gitBlobSHA1": "085b15e669fce01bd9fb3a9ec16b018cb0b0e528"
+    },
+    {
+      "path": "vorbis-1.3.7/include/vorbis/vorbisfile.h",
+      "type": "RegularFile",
+      "bytes": 7990,
+      "sha256": "7d98264e57b0190ef0a2701a0bea5f982e82fc1bedd93cd9408a2fff7790f803",
+      "gitBlobSHA1": "3d65393f52f9cde25a4936b0a96f0f3a64d25fc5"
+    },
+    {
+      "path": "vorbis-1.3.7/lib",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/lib/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 4580,
+      "sha256": "10dcbd29364dafb2aaca916c0b2d4a90105d22fe4fc072ba50cefcdee45c4b6b",
+      "gitBlobSHA1": "7cd68e50991efb3dad33d3f532fabe81cdda4958"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1926,
+      "sha256": "083c60e895d03d701979789e495351b1383ee677334df6606a04f8748976fc73",
+      "gitBlobSHA1": "e22895eab6649aed6bd54b74515248de7edcbb9b"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/analysis.c",
+      "type": "RegularFile",
+      "bytes": 3088,
+      "sha256": "cf75d75c762f27ee9f50e9be794e47551d86cbdfb00fbce962ba3280a9516e4d",
+      "gitBlobSHA1": "14919737eb5779ba8ba2da301e0db3bda8eaac71"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/backends.h",
+      "type": "RegularFile",
+      "bytes": 5151,
+      "sha256": "1253a0cf54a10b46591bf1dac1717b3bd76abe89188217cd7fbfaa8f50745df5",
+      "gitBlobSHA1": "670b0b902ebda71b6800fba725032e8f57077b2c"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/barkmel.c",
+      "type": "RegularFile",
+      "bytes": 2391,
+      "sha256": "75486bfdcb6d4360b606c400a11c5d471def82edb2d204258afa5666eaff6afd",
+      "gitBlobSHA1": "f833c30211733b462a59b4b98fbc78b3052b98ce"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/bitrate.c",
+      "type": "RegularFile",
+      "bytes": 8478,
+      "sha256": "fd8940a065820c247e0e115b9a10af82c09ed419f8c9a6b88eddaaed221f52b3",
+      "gitBlobSHA1": "132553cbee7e2b077758fb069cfbe1c2d4137168"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/bitrate.h",
+      "type": "RegularFile",
+      "bytes": 1963,
+      "sha256": "06bd012d67f97a5dc1de135371060a0c879a83b01c69d2cceee4ddc7cbef2676",
+      "gitBlobSHA1": "48fa150596feb1988185bab8cfceaff1572da9bc"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/block.c",
+      "type": "RegularFile",
+      "bytes": 30592,
+      "sha256": "7f65c7031c2b94405d2c1b5f0a73cc19efe9506e95736ba0b38d86bd42170a7e",
+      "gitBlobSHA1": "6a50da08434f297219080c938230592cab68a5cc"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 93,
+      "sha256": "55f3bccfa5374d38a249101535af6ae2f384b75f1f582aa393b7e8b1ad35a148",
+      "gitBlobSHA1": "3697a7177ec1c115ccd1ef4e9412ce8c6bf08f39"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/coupled",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/coupled/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 106,
+      "sha256": "75bee994a567ec99de11cecf816c795e1381543670a29951f9e3f758452d82c8",
+      "gitBlobSHA1": "1115201dd09248cd89d8b7af0fbe89cef2236e3d"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/coupled/res_books_51.h",
+      "type": "RegularFile",
+      "bytes": 459592,
+      "sha256": "9e87f1929f827d6c1987d9056aadee865475f522598b2d7c1f484b43db7abfc2",
+      "gitBlobSHA1": "eb569c6f046bdaf324c0a6d48bcf79a0979fb7b0"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/coupled/res_books_stereo.h",
+      "type": "RegularFile",
+      "bytes": 629535,
+      "sha256": "af0a24656e4726623836f0b8af30aa8f77a80853eee52c5f761fccd2b151a35b",
+      "gitBlobSHA1": "7b53cb972baf956661408bb6dbf83693a99d7401"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/floor",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/floor/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 86,
+      "sha256": "6303ba3938102fadf64bc0bbe8a44a0c5674f1b6df21fc8a82aa47fc49c9472f",
+      "gitBlobSHA1": "272ab1a28c68d4f0393a7cd41ba6f1f50f4f85fc"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/floor/floor_books.h",
+      "type": "RegularFile",
+      "bytes": 49552,
+      "sha256": "5ee30dd6f4dbab7a13e0f2975f54994034769e8061d7d8e1d56ecad6ffcf627b",
+      "gitBlobSHA1": "d26664f766c330de5974d700e8f74b34e8bc4838"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/uncoupled",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/uncoupled/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 94,
+      "sha256": "c9c8238679d45014d93382b9945bfa7daf5443b37161e1efc8bf6187c68d1213",
+      "gitBlobSHA1": "93ff417c8f13e5a4eff7884acc146cc2f153ac92"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/books/uncoupled/res_books_uncoupled.h",
+      "type": "RegularFile",
+      "bytes": 241228,
+      "sha256": "2a162ca24be180c6988663164e2490d7eeaacffde984852622112223be615e51",
+      "gitBlobSHA1": "107e22f9e35fff3341ff17fd59d57fd4658d3480"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/codebook.c",
+      "type": "RegularFile",
+      "bytes": 13408,
+      "sha256": "662728ef6190968fd717af62b19578006357090814b15b2f03ddc7a98871b345",
+      "gitBlobSHA1": "7a0c206783f07b5dd13d71c933a9ab5c5465a991"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/codebook.h",
+      "type": "RegularFile",
+      "bytes": 4958,
+      "sha256": "1a0bf4ebc17645910080155a83bd39b810c7e73703e97c65c5e7ccfdcb89ec55",
+      "gitBlobSHA1": "7d4e2aae4f7f4355f52a586ea155002d26013213"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/codec_internal.h",
+      "type": "RegularFile",
+      "bytes": 5392,
+      "sha256": "3f32ac0e4e94cb0dde4800b243e1239cda9e4df1d277acf334fb48a648a08f8b",
+      "gitBlobSHA1": "2ecf5e5c73c228d3bf5744785cc9a6668c0231b5"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/envelope.c",
+      "type": "RegularFile",
+      "bytes": 10672,
+      "sha256": "ae9f845d39776f7b6072543368a18037f778c56385a5cb6377dac388f44b3b51",
+      "gitBlobSHA1": "22d39aa6e0bb57572bffeebf606beeb0a6d79dab"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/envelope.h",
+      "type": "RegularFile",
+      "bytes": 2116,
+      "sha256": "4bc533e8455ad005fca72274ce10e8c7cff69251f0641d98a8a71922be0ba0ce",
+      "gitBlobSHA1": "2ef60a82ca24e3848c64b5d8a9dae2bb3e553a97"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/floor0.c",
+      "type": "RegularFile",
+      "bytes": 6889,
+      "sha256": "20185fa3bff19f7c162a113f8fb969f3961079454b3ffd2019e9e555b0bbc61c",
+      "gitBlobSHA1": "f4a6d4d559aab9107cf50bd2d387295a90968995"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/floor1.c",
+      "type": "RegularFile",
+      "bytes": 30922,
+      "sha256": "fd4f403b56bf5538d1cc33fcf9236bca230553c143273fe17f5846ed928b6a64",
+      "gitBlobSHA1": "c4fe3ea7e7bec4a54fa23fddd090a8ee4a3ff326"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/highlevel.h",
+      "type": "RegularFile",
+      "bytes": 1840,
+      "sha256": "22758888e37c71831d2dca16848f03443ed5b5308247c727a58c83f23294716c",
+      "gitBlobSHA1": "7690e3ebfb92b03aa1a6c80a1e4ced3ab94e7402"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/info.c",
+      "type": "RegularFile",
+      "bytes": 19866,
+      "sha256": "03af6059fe7e50d0b37a0370707139227e6cd4cc74be56473cd22f0300739fca",
+      "gitBlobSHA1": "f2e39e387e67d954578e32fd2a712dba2b69914e"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lookup.c",
+      "type": "RegularFile",
+      "bytes": 3246,
+      "sha256": "4b169c62256e13a6575aaf38eb49514d8e7825c0df2429a669768b5a6d6716fa",
+      "gitBlobSHA1": "7cd01a44d38dfdc048bae7ebf1d91e2d8928841a"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lookup.h",
+      "type": "RegularFile",
+      "bytes": 1249,
+      "sha256": "1efc9bdd275e812a7cca384e0880ddc85ea94c4c845bcd41a4fe5a557b32ac86",
+      "gitBlobSHA1": "ec05014f44b13192ea000ed076fdedca56d3623e"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lookup_data.h",
+      "type": "RegularFile",
+      "bytes": 10036,
+      "sha256": "cd14d76eb3380d091bbcdda5bc361e5f2f31803e71e3a2287ac4d1435ed57bd5",
+      "gitBlobSHA1": "7935715a70c0550477f04b4520ef3c9bf28344ee"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lookups.pl",
+      "type": "RegularFile",
+      "bytes": 3916,
+      "sha256": "d20442461647a8c64c00d2b6cd09d9bbe32238fd54c0903dad4e3b31cefbd7fa",
+      "gitBlobSHA1": "87e2cad8122aa5dd0d1345f5cb62ec27820c39bd"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lpc.c",
+      "type": "RegularFile",
+      "bytes": 4486,
+      "sha256": "e782bd2780f354fcb0156855260c082ccdeed76dc1152ba7a6ae45b98520dfeb",
+      "gitBlobSHA1": "877da47f8efeb9ee138479f4a152d793e0fdc878"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lpc.h",
+      "type": "RegularFile",
+      "bytes": 1174,
+      "sha256": "90b11956f6fe25980613e1fce79d13a49e1109ad76e87c1f11891940df4f78f5",
+      "gitBlobSHA1": "4f59e6d32de2ff11fd4d3b51c0449a97a6ed6fc8"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lsp.c",
+      "type": "RegularFile",
+      "bytes": 12585,
+      "sha256": "cf618a3be06feb94e39eb7a06ad0db4fd8462f8edac93faf4765b28516a9f5ef",
+      "gitBlobSHA1": "8afa305f50af6bc4c2cf4cfd34e8ea343eba72b5"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/lsp.h",
+      "type": "RegularFile",
+      "bytes": 1182,
+      "sha256": "588111726561c1caa8a22278eb63b7b4fa84dfbeea14d99a1d9d46b77aacda0c",
+      "gitBlobSHA1": "68b38daf1690530fc2eef81bf1940deccf8bcf09"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/mapping0.c",
+      "type": "RegularFile",
+      "bytes": 28765,
+      "sha256": "d3f26fa42c4345f36885e93650ee6da07861b37ea816b131e5fafb7a7c6d19e2",
+      "gitBlobSHA1": "efa0fbcd93bb26e931aaa2a105b018f44d73974f"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/masking.h",
+      "type": "RegularFile",
+      "bytes": 39455,
+      "sha256": "627fdc3683edda9800edffe0360807d782c1236ba4ad5d05f013517c104b9147",
+      "gitBlobSHA1": "7a196a37eb1fe6a1236dcef02a6d24cc81ce412d"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/mdct.c",
+      "type": "RegularFile",
+      "bytes": 15493,
+      "sha256": "e32b379d7a3d9253524abae3c41c5ac2486bf166cf65996efc4e68db1b164993",
+      "gitBlobSHA1": "2a0ff8d01ba232634d259829eb2c0c25a5f2426d"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/mdct.h",
+      "type": "RegularFile",
+      "bytes": 1955,
+      "sha256": "f8ac37e630cd3c0b8790d4de79134e1015dff3a9136beab7835ff8b2e489fe0f",
+      "gitBlobSHA1": "ceaea617a3476a343fceb24c79a346d63818b954"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/misc.c",
+      "type": "RegularFile",
+      "bytes": 5808,
+      "sha256": "541173afa41f9f66d53ebdf8ddd0dcaad1594fdb60c80949913fb5184c797b1c",
+      "gitBlobSHA1": "70a091d798c07b4bdd52a69acb2d6a0879373be0"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/misc.h",
+      "type": "RegularFile",
+      "bytes": 1988,
+      "sha256": "f83ebd3e0327e6b12cfe11239826691a9fad3f4870b7f8444d7ba54ace289e4a",
+      "gitBlobSHA1": "eac5160e88aab0a77c226f8b25c044837b3b49c8"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "f8e8aee0ffef99684b7a96e68bb826c72e638652c2ef633ba40896b72421da5e",
+      "gitBlobSHA1": "5c7ffefaa4a66ac02e8ab68a422e435887e87e9a"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/floor_all.h",
+      "type": "RegularFile",
+      "bytes": 7395,
+      "sha256": "eee5e966bb08c94d03590a9617573ef55fde625a7f38bbac3badcd1dfea7e7a6",
+      "gitBlobSHA1": "2e3d4a50123479337c23adda81e38875eebcc9b7"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/psych_11.h",
+      "type": "RegularFile",
+      "bytes": 2321,
+      "sha256": "f07afd1f4c7e3eb3bdacaa17eb7fa4f0284b4b7d566f5c4ad6ac6192c4b95c6c",
+      "gitBlobSHA1": "9d8ed357eea8fae0443475029ff4e98af16f72c2"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/psych_16.h",
+      "type": "RegularFile",
+      "bytes": 6324,
+      "sha256": "7a19a41238b98b3bde37383028e9de9814236cb3ea32c762b87a9712a1c17902",
+      "gitBlobSHA1": "49cbf7c4b2789ae949d63fa18e2c3b957e5d3c46"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/psych_44.h",
+      "type": "RegularFile",
+      "bytes": 32424,
+      "sha256": "89b746cc218d5968534781353a68aa79fe600c70e075133ce8db6a2d1adfa247",
+      "gitBlobSHA1": "d15509b71dcbb23bdfbcb0a40f9318df735ae5e7"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/psych_8.h",
+      "type": "RegularFile",
+      "bytes": 4044,
+      "sha256": "038692e77d971e0e9160e7793e00b5720a884a4f814a0fc54f1ea5fb5fee0191",
+      "gitBlobSHA1": "a19817f7602c29f69054464a9a4881f4781c4403"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/residue_16.h",
+      "type": "RegularFile",
+      "bytes": 4834,
+      "sha256": "eb845bcd40b90fd9352c0e4368f3d9be0bf724436d7662f801c700c3daf78677",
+      "gitBlobSHA1": "15e161c8629ad900219e29007215beee494bed0c"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/residue_44.h",
+      "type": "RegularFile",
+      "bytes": 9913,
+      "sha256": "682493552e7e9ab57a23a7da6e9a9cc93f0fc1c9fae14113da5017b9e4aab894",
+      "gitBlobSHA1": "3f982695a736473c3914a541ec04c5b1b97cc146"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/residue_44p51.h",
+      "type": "RegularFile",
+      "bytes": 12081,
+      "sha256": "264449b1d7011383f25621900b1265aee68c3b08363d02c9ac4c871f65a85445",
+      "gitBlobSHA1": "8ac5f65e625597c9ae3fd3aa03405f222ee0659d"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/residue_44u.h",
+      "type": "RegularFile",
+      "bytes": 9088,
+      "sha256": "9333818e94293a6c4637900c8c61924046ec3f127f64620a301462448347c705",
+      "gitBlobSHA1": "2f3595e49fa47c048fcd2bac7d0d56182b6dc1e0"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/residue_8.h",
+      "type": "RegularFile",
+      "bytes": 3201,
+      "sha256": "8d9426f1a2e9875aa4415e017ee6dfd89facb74d8fc11ea2ace2303914ca1463",
+      "gitBlobSHA1": "b836f79c84cab53099a21d090f1b26d6774e8fdb"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_11.h",
+      "type": "RegularFile",
+      "bytes": 2749,
+      "sha256": "e0db00caa52b067fc00bfb481520e40639b692630e12d4ad7056e63d3c9f8cf1",
+      "gitBlobSHA1": "5ade5dd169943ff1f24555a8a9ce650d1ea73b7d"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_16.h",
+      "type": "RegularFile",
+      "bytes": 3275,
+      "sha256": "097c0ee4897e83603d82c9502ae2d370b697d32036029b0129a8d0ae7dc5ecb4",
+      "gitBlobSHA1": "8b2daafa3fcc946302cb5253f6584deb1290658e"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_22.h",
+      "type": "RegularFile",
+      "bytes": 2785,
+      "sha256": "1390300520d3fd2f8c2c982b42d99c6437a49c790ec7bb103bd4ff12fd61cc43",
+      "gitBlobSHA1": "eef5a4e7da1ae6f62c92d74994c88e4b9b2b4f66"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_32.h",
+      "type": "RegularFile",
+      "bytes": 3014,
+      "sha256": "a51d90d39b24dc979ea13e55162b0d3cf9bb02449b40902ec3c13edc3db04a97",
+      "gitBlobSHA1": "f87cb767d079403b8800d457227aa7006b09fad8"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_44.h",
+      "type": "RegularFile",
+      "bytes": 2994,
+      "sha256": "ee4d6feae20e853e866d614803f8bd36f373e852f9802c5d9526ce2f102a73c9",
+      "gitBlobSHA1": "12d592808e91ead557079da75eadb56b2849561a"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_44p51.h",
+      "type": "RegularFile",
+      "bytes": 1956,
+      "sha256": "3475d4f02e159abcab215a255d9522ef6df3a8fcd38eac9384972a71028583b9",
+      "gitBlobSHA1": "4d49173ffb833a918da0a3dc29c878c0b1c59960"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_44u.h",
+      "type": "RegularFile",
+      "bytes": 1967,
+      "sha256": "105188c75026efe6f7cdac5d47065334cce856f5c5ca1f5a0a3560a4415176ae",
+      "gitBlobSHA1": "2dd8bf701f35f8571baba1ec3fd87c136c791aec"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_8.h",
+      "type": "RegularFile",
+      "bytes": 2862,
+      "sha256": "e90461d17349d6e7e598868ef263f543fdb2974ca120460fda166ff7d0dff0d7",
+      "gitBlobSHA1": "16b02e01b70648324c1fc7715243cc4f1315f74b"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/modes/setup_X.h",
+      "type": "RegularFile",
+      "bytes": 4197,
+      "sha256": "8e34688933fc073c08590eff72d838a4af7c8748dd5c50270a18af2a67e33e32",
+      "gitBlobSHA1": "27807c10b4246dad5604843d4efe51fce9edd5fa"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/os.h",
+      "type": "RegularFile",
+      "bytes": 5176,
+      "sha256": "b9e31c7a0f46d43f6788670fd63f8f3db1584a8915f696e664ec8cf0c8fe81be",
+      "gitBlobSHA1": "9ded7358d4272dd8f84875afbedacff9f915ad57"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/psy.c",
+      "type": "RegularFile",
+      "bytes": 35900,
+      "sha256": "e8ccec1fba7d00961d5c67fec30b488c912f0ad7842ec7b1aeab987b97744b6e",
+      "gitBlobSHA1": "036b094aa763b3c8773386c17f548f70dfd1bc58"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/psy.h",
+      "type": "RegularFile",
+      "bytes": 4628,
+      "sha256": "99d1f493b63185d702868d8f6616ab69bb546ffb61afb3f47a0f637c3ff5b391",
+      "gitBlobSHA1": "d9a04e8b74db10b3110fb9efb72e64ceb2524d7d"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/psytune.c",
+      "type": "RegularFile",
+      "bytes": 16264,
+      "sha256": "dc7a55cabd7ee6431f723f3c5923930a944562cb56aafba8a699cd22c420fb9d",
+      "gitBlobSHA1": "67223e5118769f5762447cb31aa82b67ab336152"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/registry.c",
+      "type": "RegularFile",
+      "bytes": 1772,
+      "sha256": "4259a70a4de23ab48a0af4ff08e0f68102052c6c7d3535c06bd7d7e2fdb82a65",
+      "gitBlobSHA1": "db0f67b2e28d3549f4077274c9d61d6cf4d0c34b"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/registry.h",
+      "type": "RegularFile",
+      "bytes": 1247,
+      "sha256": "29a25a4e34b3d41458b7a7e1757da9c63cea24322c39616b7fe16b3bf51ab55a",
+      "gitBlobSHA1": "b823aa60911ee0b8f426518ad96c5bb346539327"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/res0.c",
+      "type": "RegularFile",
+      "bytes": 24915,
+      "sha256": "0d3daf9327dbe14460d9b11df1ea0d9de709e3326d70b607d65720323d0caf62",
+      "gitBlobSHA1": "c931aded387de8903aa81a32a9a1b848db3edce8"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/scales.h",
+      "type": "RegularFile",
+      "bytes": 2761,
+      "sha256": "455637c2955912086613c0acf0451091dd22707bf1560ac9f964b975998fb545",
+      "gitBlobSHA1": "3c2ae48d9e9cc9f77a8aa9fdaed64d6add31a22a"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/sharedbook.c",
+      "type": "RegularFile",
+      "bytes": 17806,
+      "sha256": "a883767bf16552f5cf8686b58b86e55819dcb63487c5307fee5d45820b836a40",
+      "gitBlobSHA1": "62a9a00afb8f7d0b4a79a13dc4c4fdba4683d5e0"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/smallft.c",
+      "type": "RegularFile",
+      "bytes": 22185,
+      "sha256": "21b4cd38bc6d50991f4abca4d2619fe1fa27ee74a22bd935804f4cd62b77472a",
+      "gitBlobSHA1": "4ffabab4bb6191ef5eb9ee757e77409a915472af"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/smallft.h",
+      "type": "RegularFile",
+      "bytes": 1218,
+      "sha256": "6df874852a7247f181e9a8e7ead541a40893cc50c0a17f1f3e799db25c5a9e61",
+      "gitBlobSHA1": "02fe8f9cd415e07294d4eab25d89b0db1401dbc3"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/synthesis.c",
+      "type": "RegularFile",
+      "bytes": 5180,
+      "sha256": "d5f92aaed1e7b59f3c01e0405813009cda29a61a0e6155d60980907d93c1eeb3",
+      "gitBlobSHA1": "3e2d6812704308eccf1d27a907d3ef14fd7c4b57"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/tone.c",
+      "type": "RegularFile",
+      "bytes": 1007,
+      "sha256": "07baf17ef59384c2831abfa6b46fb37ffe18fe11337cb64a152f5c637e53a842",
+      "gitBlobSHA1": "5b8b0206040ebd507b5ccc85cee3be50cf5c33d1"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/vorbisenc.c",
+      "type": "RegularFile",
+      "bytes": 39310,
+      "sha256": "0c123e6c1ecf7fd5729b570db7ff061b2bfeff46815bd93f96ac49c2df79a45d",
+      "gitBlobSHA1": "cf3806a6e1930e8cce3fcac8c4faaaa25cc5ca6a"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/vorbisfile.c",
+      "type": "RegularFile",
+      "bytes": 76295,
+      "sha256": "557752159e4c96e4ca339d28a4454c9d7edbf6b2bca6cbe4e8a5f8c44ef9196f",
+      "gitBlobSHA1": "9219c2f2dc6d823456c7ab7383fe0818b98a3582"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/window.c",
+      "type": "RegularFile",
+      "bytes": 128646,
+      "sha256": "bea202730509aa12bc5f0da703be1a04a7e7dd04b2ee7a2b3a6f8b133edaacbc",
+      "gitBlobSHA1": "2151b278d14f17ee0ab1e35336048eadf4193e86"
+    },
+    {
+      "path": "vorbis-1.3.7/lib/window.h",
+      "type": "RegularFile",
+      "bytes": 1086,
+      "sha256": "9bb736d228deae67699012cc38f81d379e0b077432f162f2dcd1087f7669dc98",
+      "gitBlobSHA1": "33d83f85f9a047c3ab6ed2c015b59804e21af6e4"
+    },
+    {
+      "path": "vorbis-1.3.7/libvorbis.spec.in",
+      "type": "RegularFile",
+      "bytes": 3311,
+      "sha256": "e26e72eb53c16ec911274c7cd582c911b0572d64e1574c3c4c6ec9c1b2cf656b",
+      "gitBlobSHA1": "aeba197516b57899904f4cce7b9b2f2caa00a663"
+    },
+    {
+      "path": "vorbis-1.3.7/m4",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/m4/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 101,
+      "sha256": "1d8b1e7afa6740629c2a4287a7b9535be5f678a6d81b336cb358cb4a44ebff87",
+      "gitBlobSHA1": "cd184850f71e5db41c307fbdfcedb3f86edb9056"
+    },
+    {
+      "path": "vorbis-1.3.7/m4/add_cflags.m4",
+      "type": "RegularFile",
+      "bytes": 405,
+      "sha256": "7b3356a661a19f0ecc5c72b15fa3fc4ea67ebad53efe26cb1d25f427e7bfc7f1",
+      "gitBlobSHA1": "eeb6efda0e7dac7f4d243498d89a6630d979a3b4"
+    },
+    {
+      "path": "vorbis-1.3.7/m4/ogg.m4",
+      "type": "RegularFile",
+      "bytes": 3958,
+      "sha256": "3130207f221fc791a0eb2530dd4b79707d6653c023ca49bd9a377e197bdf6b5c",
+      "gitBlobSHA1": "1d3fb8b7b675e71700199aa0eff81205cde8128b"
+    },
+    {
+      "path": "vorbis-1.3.7/m4/pkg.m4",
+      "type": "RegularFile",
+      "bytes": 5217,
+      "sha256": "a16da2a78611fe1076877681e6a50564304fd639f0dc8dbe13008ba798db319c",
+      "gitBlobSHA1": "996e2945439277198ba3d84b13edf1c6117fb051"
+    },
+    {
+      "path": "vorbis-1.3.7/macosx",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/macosx/English.lproj",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/macosx/English.lproj/InfoPlist.strings",
+      "type": "RegularFile",
+      "bytes": 142,
+      "sha256": "cd2a1689466d976fee888abab2c97da7e9876ab1a2233072862d6707621b958d",
+      "gitBlobSHA1": "cfe1b22a882c2fbdf1a83e1f56d3003b12e59d29"
+    },
+    {
+      "path": "vorbis-1.3.7/macosx/Info.plist",
+      "type": "RegularFile",
+      "bytes": 1001,
+      "sha256": "acd04e7af0276c913861d96e64fb5b71a39dcbe345dbd96bfebb097d2834afea",
+      "gitBlobSHA1": "63e1b09c9099e0ae6ef87b92d6912ceef8cd0817"
+    },
+    {
+      "path": "vorbis-1.3.7/macosx/Vorbis.xcodeproj",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/macosx/Vorbis.xcodeproj/project.pbxproj",
+      "type": "RegularFile",
+      "bytes": 47526,
+      "sha256": "7574b57fc3c24b4c4bb34969aa07e91130c53be9cb6766534cae03675de8f59b",
+      "gitBlobSHA1": "12f5392a58e18e305dd2fda88b373631618b2242"
+    },
+    {
+      "path": "vorbis-1.3.7/symbian",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/symbian/bld.inf",
+      "type": "RegularFile",
+      "bytes": 1657,
+      "sha256": "a5f144b58bc998f1116a79df45fce01c47efe448d0d34fa27e2b1ded8fc6651f",
+      "gitBlobSHA1": "69625fe8dc58603209290a4c910b9f7dd5c5dfdb"
+    },
+    {
+      "path": "vorbis-1.3.7/symbian/config.h",
+      "type": "RegularFile",
+      "bytes": 2638,
+      "sha256": "7eba257b9e79c832f4bcae5a03222fdc6391ba3e41170c00d0c31470352010a3",
+      "gitBlobSHA1": "56d2179edf5856a078664b2c26649207832971d5"
+    },
+    {
+      "path": "vorbis-1.3.7/symbian/vorbis.mmp",
+      "type": "RegularFile",
+      "bytes": 2122,
+      "sha256": "48ea94d7c8a7e65f84d30a2cee2db88e00fcafc493337ac8c6416a046b6f9f57",
+      "gitBlobSHA1": "f4314190a717fde5e47db993d105912e8d02378b"
+    },
+    {
+      "path": "vorbis-1.3.7/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/test/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 432,
+      "sha256": "5515c1778c31b2abb886fb0d877bc3606c088268a6764775173d586fee9d7ddc",
+      "gitBlobSHA1": "b68ebdb12d710c97805f80a9b14bb7426411ef67"
+    },
+    {
+      "path": "vorbis-1.3.7/test/test.c",
+      "type": "RegularFile",
+      "bytes": 2863,
+      "sha256": "900545d6a99625958e3997354a264d25b93d275fb8a2ad8f969f596a6de34792",
+      "gitBlobSHA1": "e9b48744fc06fd468a213efd41f5b6ca0d1f4c8c"
+    },
+    {
+      "path": "vorbis-1.3.7/test/util.c",
+      "type": "RegularFile",
+      "bytes": 1606,
+      "sha256": "a8914b784d78dd8f8fa8eee49040b510ba471587276ec00ca653a0134829b98c",
+      "gitBlobSHA1": "3dc1597c386f582db274d4ad1ec85fa50a1d29fd"
+    },
+    {
+      "path": "vorbis-1.3.7/test/util.h",
+      "type": "RegularFile",
+      "bytes": 1193,
+      "sha256": "bd6a6d3aaec6e1a0d428a128a8799c1e2b34a3d7cffeb39f46be66704f50d272",
+      "gitBlobSHA1": "9fe471c0ab641c68bd264761073779987461d514"
+    },
+    {
+      "path": "vorbis-1.3.7/test/write_read.c",
+      "type": "RegularFile",
+      "bytes": 7968,
+      "sha256": "b7551c8235c5fe016da2483a2ad735495d60a958d3299283cde6860876925b22",
+      "gitBlobSHA1": "9495240958b20468bbaedc8044155006f3e5685e"
+    },
+    {
+      "path": "vorbis-1.3.7/test/write_read.h",
+      "type": "RegularFile",
+      "bytes": 1469,
+      "sha256": "fc94433d572d93f80804e9417ee75ff9a98232c715be7f5029e848577746febc",
+      "gitBlobSHA1": "b99609aa497cee31184b5d91581f870dd71d8220"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbis-uninstalled.pc.in",
+      "type": "RegularFile",
+      "bytes": 308,
+      "sha256": "4cfdc2d7e4fab380e6ad7c95ac98d88238fde7f33a73ae0efe3a906f0b388efe",
+      "gitBlobSHA1": "aa70a01903016755b325a1293e3dab21757ce995"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbis.m4",
+      "type": "RegularFile",
+      "bytes": 4861,
+      "sha256": "cf48b40f1ef8a389d66159ed927ee2f9e17ec91ad3ee936da4645899988b31f5",
+      "gitBlobSHA1": "7b67c584ecba8f66d635e45b77de66aa5c0cd5ca"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbis.pc.in",
+      "type": "RegularFile",
+      "bytes": 318,
+      "sha256": "d944e22d97a998ff19732da122590e77aef4dcae5214c61a5a5a73f0f593be10",
+      "gitBlobSHA1": "f5ca77d0fc69a00ee49cfa16d6348b1ca29748a7"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbisenc-uninstalled.pc.in",
+      "type": "RegularFile",
+      "bytes": 374,
+      "sha256": "7527f0fc0b610d2b25cdf5fdfb2be9b86d6f50aef5e616be7a1582d6f9d57c38",
+      "gitBlobSHA1": "4667d9cfdbdd9b93fa96c0804dabf681a74ba292"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbisenc.pc.in",
+      "type": "RegularFile",
+      "bytes": 369,
+      "sha256": "c7618177398f1932bf72ff201f9254f0f9282d10bd4d0728f24c2079bc8f59f6",
+      "gitBlobSHA1": "a412b7a5586162f62add7004d46a6f0f036b92e6"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbisfile-uninstalled.pc.in",
+      "type": "RegularFile",
+      "bytes": 400,
+      "sha256": "680e45eeba0524daf4161326bc2142e9604ff8d20442e7ad9b68a397aec80dfa",
+      "gitBlobSHA1": "2e7e96d8ea26f3437de530abe530ff1de79797c0"
+    },
+    {
+      "path": "vorbis-1.3.7/vorbisfile.pc.in",
+      "type": "RegularFile",
+      "bytes": 395,
+      "sha256": "6b87a037371e58801d91c3dd5109d49ba14a6a2cc8e7fae2880d35c76820a21b",
+      "gitBlobSHA1": "e58a071f22b82d3816c139885ec5e4625c864b29"
+    },
+    {
+      "path": "vorbis-1.3.7/vq",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/vq/16.vqs",
+      "type": "RegularFile",
+      "bytes": 3401,
+      "sha256": "c93ad4b3d7c659b39f42d361b8cc5219bdde3244ec037cf02096cdde68adcf9a",
+      "gitBlobSHA1": "3d15f408572ff26c81119dad28d3e37ddb76686b"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/16u.vqs",
+      "type": "RegularFile",
+      "bytes": 3049,
+      "sha256": "7d14c70cac78961d1581a857a04ab00c5390ca5972396dad0cb675f8ea5971a9",
+      "gitBlobSHA1": "854de98f7773fe731166c91f891484a6b18335ff"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c-1.vqs",
+      "type": "RegularFile",
+      "bytes": 2417,
+      "sha256": "142519bf283a66340b975979a2182c32b6975bcf86bf79d792dfad332a5af28f",
+      "gitBlobSHA1": "ff30d65d1555f568f9500c83209596d846234112"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c0.vqs",
+      "type": "RegularFile",
+      "bytes": 2383,
+      "sha256": "b71d004336a6614223a06ebb7df9aecacb60981e0efefb92bc6e0524607fe71f",
+      "gitBlobSHA1": "f650f8f4f650bae64061e3665d582b0840f54bab"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c1.vqs",
+      "type": "RegularFile",
+      "bytes": 2412,
+      "sha256": "b56b5c95608304ad6a79bb0330f02e66eb8011caffe72a1a4205b327a426bd84",
+      "gitBlobSHA1": "c21a6b3699468c3e9e607137937c82c0837852e4"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c2.vqs",
+      "type": "RegularFile",
+      "bytes": 1294,
+      "sha256": "c2688dc49fcc98557b2fdb40072d6d09ee5481ddf0ea0edc901be82c69d042b4",
+      "gitBlobSHA1": "9fdbd03feafe88a29765bd48d3d710da7c9b78a0"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c3.vqs",
+      "type": "RegularFile",
+      "bytes": 1297,
+      "sha256": "a5d7fd9c34f134dfd83b09b9628b25c0092aad236d1dee0370d76c8183632f03",
+      "gitBlobSHA1": "57a1317f37ff9a8db22c90b3d6b1bea446aeab22"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c4.vqs",
+      "type": "RegularFile",
+      "bytes": 1303,
+      "sha256": "27e0430d3b65e8d9255c86d60762ad0e65914de3fefd6adc94281a35216b5961",
+      "gitBlobSHA1": "82a36e1929206fe063a2cf3ce30bbf877d10397e"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c5.vqs",
+      "type": "RegularFile",
+      "bytes": 1314,
+      "sha256": "728b6d08b9a5902425866de16586adb682a70bfdd65520610c7109e041a50347",
+      "gitBlobSHA1": "9790843bb9d4f5f9561ed64c879ab1dbb777ef7a"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c6.vqs",
+      "type": "RegularFile",
+      "bytes": 1501,
+      "sha256": "b804b263c0ea27c8d7b59b0649afe4ee1bbbac6fd565e2c096e3a14abff3df22",
+      "gitBlobSHA1": "f420dd01208152e92f76c9deb2d985df37542956"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c7.vqs",
+      "type": "RegularFile",
+      "bytes": 1502,
+      "sha256": "f65256e498b7c2a2d9105bec2a5d0d21f72b9ccdb469aca2b7e5ae3e23e95646",
+      "gitBlobSHA1": "088d81db0e3b9c47809e7a5f55c9ab16238b02bb"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c8.vqs",
+      "type": "RegularFile",
+      "bytes": 1526,
+      "sha256": "842190cf8bd1d527d966caa8c84ab4af9a175d44bfb9af92f8b1f7ff7107fce1",
+      "gitBlobSHA1": "ce5bdbe07ad03ce630019586dbf76339ab742491"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44c9.vqs",
+      "type": "RegularFile",
+      "bytes": 1528,
+      "sha256": "2d88a8c0fc3f2f58d0240f0dbf532392b4eb279b3aa4add1caea5ee96c3d2324",
+      "gitBlobSHA1": "1c54786cb3cc10707c7d367cec763c5c5253b3b2"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p-1.vqs",
+      "type": "RegularFile",
+      "bytes": 1531,
+      "sha256": "eb3c14a7d289f3bce82ebdaa40024f859cde205c83ccdfff8cd4ffc08a856d59",
+      "gitBlobSHA1": "02d26fb792340d208a79f03066f018cd92ed21de"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p0.vqs",
+      "type": "RegularFile",
+      "bytes": 1509,
+      "sha256": "2805e6b3db138978771f6c31950f9f5b6c88dc3de4a78406383f06e8f23655a9",
+      "gitBlobSHA1": "16479ba6672828e79b3c628f5d207df9dd597ae5"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p1.vqs",
+      "type": "RegularFile",
+      "bytes": 1509,
+      "sha256": "6decb732fc0cdb9def4412390b9b669b408679ef3beaab220b42f0ffebb06a65",
+      "gitBlobSHA1": "74352c31c76292baac03f38c6bec528592c4f760"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p2.vqs",
+      "type": "RegularFile",
+      "bytes": 1689,
+      "sha256": "29be14aea08ec97b64cb18efd92466303fa262b9ba44af1d6014292c167e49f5",
+      "gitBlobSHA1": "7eabbab4a036590b49f8cee336c6c0b250ce6e22"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p3.vqs",
+      "type": "RegularFile",
+      "bytes": 1746,
+      "sha256": "7a948bf028570d3dfa329c102e24616d3c61ad62158b4b13efc28486c0f78e95",
+      "gitBlobSHA1": "b1c66a6034aa11ba08f60e88fcc896ebf1c3a564"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p4.vqs",
+      "type": "RegularFile",
+      "bytes": 1746,
+      "sha256": "7e66565260a614cd6bbfd20ec4e9e8ca94c8d65a83ee91204ef2af5f0aa78d0d",
+      "gitBlobSHA1": "4b70436d4c60273dbcdc9026dcaed538628b8b88"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p5.vqs",
+      "type": "RegularFile",
+      "bytes": 1747,
+      "sha256": "1a62446e12df116eab11e3ba1cdc98c1e8b8c0cf90db860c21e72b1e01d5ebf5",
+      "gitBlobSHA1": "0372321a0008a20fb3cac5a7f2eabdaa0686edc2"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p6.vqs",
+      "type": "RegularFile",
+      "bytes": 1747,
+      "sha256": "26326173325999df633013734a9473b17459e3fa7d961798245bdf43969e9afc",
+      "gitBlobSHA1": "9daad60bb7bc5de973d38c474711ea8844f3bd2d"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p7.vqs",
+      "type": "RegularFile",
+      "bytes": 1753,
+      "sha256": "5703b94cea4b0467bbc411238bb55af9b921b26d195ca1c78934efe4f7919b6e",
+      "gitBlobSHA1": "9ec5d026ed4392700a6ef4832c97055de1584095"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p8.vqs",
+      "type": "RegularFile",
+      "bytes": 1757,
+      "sha256": "b2382741588c1aa4d92ac414d1ad4ce7c48065fc243e2d07d54f090e5a6ea96f",
+      "gitBlobSHA1": "a75af84af28acbad4ba9b46630898f4375231927"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44p9.vqs",
+      "type": "RegularFile",
+      "bytes": 1762,
+      "sha256": "6f06897aac6ec956306385db4326d804e191a733d615cd57fca96216a2ba858e",
+      "gitBlobSHA1": "4c007800ee75a94c8861d320c90ccbf1f9f70362"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u0.vqs",
+      "type": "RegularFile",
+      "bytes": 998,
+      "sha256": "e4959e6d6c67a5bbbcc71db8a2fec7401072a8c1d49cd22e6300e2d1ddd71861",
+      "gitBlobSHA1": "5bc3f60c8fc2b9a730de012100bcfbe977f8cc9a"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u1.vqs",
+      "type": "RegularFile",
+      "bytes": 1002,
+      "sha256": "89907542596ef5c93989ccb7ee7bb66eb053a78d056afe3107d0570632515fc9",
+      "gitBlobSHA1": "ed19dc6cec1b4a41eb0a55019fa19b56c31ad115"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u2.vqs",
+      "type": "RegularFile",
+      "bytes": 1005,
+      "sha256": "f1e6d54a88a0fe995bfd83942c3850d4a9b8cf14cd6a359132ab8d4aa0e9a2c5",
+      "gitBlobSHA1": "314461e4acdabb5d8b909fd8bc4f8e79de22c2b6"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u3.vqs",
+      "type": "RegularFile",
+      "bytes": 1015,
+      "sha256": "f2949c4b421da10a6a4832054e552a4d6783db3044ae2ee5fd302593150cd03e",
+      "gitBlobSHA1": "c882109d4d3072be06168e682a6c3dabc0c93bd1"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u4.vqs",
+      "type": "RegularFile",
+      "bytes": 1025,
+      "sha256": "672610e2ce8076f648583740495e4be5399df87e9ce789ffb5b5a07104c739bd",
+      "gitBlobSHA1": "cb4d9baea21a4c76958878fd794a4df28e6057c6"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u5.vqs",
+      "type": "RegularFile",
+      "bytes": 1238,
+      "sha256": "e53a197767a503496a2c1c70b49e36eb24ffde06ddc7f104c2a242992fffd5ca",
+      "gitBlobSHA1": "a3c175d94e30c7fce0737dcab6737ed05be6b54d"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u6.vqs",
+      "type": "RegularFile",
+      "bytes": 1243,
+      "sha256": "43f29e29a266b9b9e1ba43a721d5ed01f3d07679f5479498fa085bee2c7124d0",
+      "gitBlobSHA1": "ca8b7b12412b06ea56b0d7d039d21fabb5b74d87"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u7.vqs",
+      "type": "RegularFile",
+      "bytes": 1281,
+      "sha256": "7fd209d77a4351dbcf49f9cfbf8af48174d20c1288a89fd349ad65e4a9a6369d",
+      "gitBlobSHA1": "2efe5aa90c001880f0289b062d9f2731e1e10868"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u8.vqs",
+      "type": "RegularFile",
+      "bytes": 1418,
+      "sha256": "bf9231c26d740b77e623f772842f972c81feadab46099448aec9e7a0efa89444",
+      "gitBlobSHA1": "ecedb09a83bc576dcb8adea43018182c90633595"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/44u9.vqs",
+      "type": "RegularFile",
+      "bytes": 1435,
+      "sha256": "b7556150f98a036a9ac63099358ccb4085b10c1e7f2ee725f7252d18f1d3c4d5",
+      "gitBlobSHA1": "42a3877bf6199c2c23e596de55fbf0a712d8ad0a"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/8.vqs",
+      "type": "RegularFile",
+      "bytes": 1836,
+      "sha256": "6824c2bad34f29e49720cb91cf7ec09b9723d337c18936796eeba42eb0fd57d5",
+      "gitBlobSHA1": "517a589e45bce4781aba21e3b11b60f0bcfe5521"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/8u.vqs",
+      "type": "RegularFile",
+      "bytes": 1555,
+      "sha256": "10d79feddd584a18187ebbe2898f4821c55d4186150aa801f74e86d6d8a690d8",
+      "gitBlobSHA1": "0ed0ec8b8cb5835ecd6c05d2ebb5927c1b6ebc37"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1203,
+      "sha256": "618edeacc74466a6a2826b3015072e847bb4b6715196cda34d95583feb750e40",
+      "gitBlobSHA1": "e9c272e0c6994987cf46d1247f818ebb8eda12aa"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/bookutil.c",
+      "type": "RegularFile",
+      "bytes": 11785,
+      "sha256": "7416c2978c86b2d22b03f694de27a46566167c58264ecc17eba796baa7fde136",
+      "gitBlobSHA1": "c8b894e17c3ce46f515623474a235ba9d1550712"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/bookutil.h",
+      "type": "RegularFile",
+      "bytes": 1754,
+      "sha256": "9fe57d728d8b7f61a9b8672c6b6f9eaa6e273c94c9d6e40d4681f208b2170daf",
+      "gitBlobSHA1": "d8fbcbe524f8359678b7f1451872902ebb582de0"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/distribution.c",
+      "type": "RegularFile",
+      "bytes": 6467,
+      "sha256": "48757d8a970b2f540ff848d9a6c44707c4057e8c958864abf1265d14faacd614",
+      "gitBlobSHA1": "7c0c095a647fb171481c2aa57592f90c74f47009"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/floor_11.vqs",
+      "type": "RegularFile",
+      "bytes": 181,
+      "sha256": "0c8ffa14a84fea7aa9f55b3c1cf3727a6406bd227153986b764ae90c99f332f6",
+      "gitBlobSHA1": "ccd73e842538a673014cccc9ff5ab1ea18faf0ee"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/floor_22.vqs",
+      "type": "RegularFile",
+      "bytes": 640,
+      "sha256": "224b98257b2f080d40e12fabd447b4f5ee5694ddbf83651a26ede0d1c4c3df2d",
+      "gitBlobSHA1": "b80328e9a211fba10dcaf63f05f1abec0460e6b0"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/floor_44.vqs",
+      "type": "RegularFile",
+      "bytes": 2318,
+      "sha256": "30eee790d9ca50330df6ba9a80675c58879a3bacc41885222fdbb5c305f2730d",
+      "gitBlobSHA1": "dd213f7b1e51dea4daace5579beb466114115376"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/huffbuild.c",
+      "type": "RegularFile",
+      "bytes": 4834,
+      "sha256": "0c335ff4b4366ae8c2b2b41f34efd3d64e2951015303057a308faad3bce87f88",
+      "gitBlobSHA1": "ba00a2e8f9745420e4233b9ae55101c42987b81f"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/latticebuild.c",
+      "type": "RegularFile",
+      "bytes": 5094,
+      "sha256": "34c499f9a901f1bd5570addfa9eb2f66d78678ba8911ace6fe2a9c832a364236",
+      "gitBlobSHA1": "0f87e6aaee3ed94247339cbf13bcc631670313ee"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/latticetune.c",
+      "type": "RegularFile",
+      "bytes": 4236,
+      "sha256": "b543bae946d6d85a42ac7f085b3d39181dc0c1e8f745b76921713bdb687b96ca",
+      "gitBlobSHA1": "67fc1e2dc79c3b21638832bf36fc418444df90c4"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/localcodebook.h",
+      "type": "RegularFile",
+      "bytes": 5063,
+      "sha256": "de02f2046bcca6191a7b9fdfd1825dfe5fa987075ff613589220411c97662c1c",
+      "gitBlobSHA1": "dbade0de8764a348353d516eaabc00f3f33c79c5"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/make_floor_books.pl",
+      "type": "RegularFile",
+      "bytes": 2596,
+      "sha256": "ab96a055f81539a7521cbe3709ae5c2aca197c6c89e0a790d53680e658a3b2e9",
+      "gitBlobSHA1": "5c37366172f6bc513324a15076e4acb2124f26f9"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/make_residue_books.pl",
+      "type": "RegularFile",
+      "bytes": 4263,
+      "sha256": "9b2ff20d3354ace4b63036449e3206447691376c17ccc69c31f6eb9358860453",
+      "gitBlobSHA1": "b37d0dcd20f5ca6a8fbe5f4ca3dd85fdfd1366ab"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/metrics.c",
+      "type": "RegularFile",
+      "bytes": 8384,
+      "sha256": "27935a23aafabcaa11815cf19e12fb7ae36b49ed50f243b5e1726feac77bba5e",
+      "gitBlobSHA1": "d9f0da357b2624d9d00dd9f36553a48c5fbba0cc"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/vqgen.c",
+      "type": "RegularFile",
+      "bytes": 15980,
+      "sha256": "962b16e6fddb1c60c8bdc4380a760b5c91b50056643c4f157de7aca3f555203f",
+      "gitBlobSHA1": "45f7790d788827fbe4e64ee45cdb4863f01124bc"
+    },
+    {
+      "path": "vorbis-1.3.7/vq/vqgen.h",
+      "type": "RegularFile",
+      "bytes": 2373,
+      "sha256": "1a81c311cac154543a02f11707a98cc52139c490e040167e5b65d67617b59428",
+      "gitBlobSHA1": "47a7d2da6e0f51487caa4e242bc605adfe5bf8a3"
+    },
+    {
+      "path": "vorbis-1.3.7/win32",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/README",
+      "type": "RegularFile",
+      "bytes": 450,
+      "sha256": "a4af487632875c23dc40736a7af677f89c2c106d0e098f349fad086642b7d8a8",
+      "gitBlobSHA1": "931047eee3dfcee948ac2ab6a35288fe1a6fa03a"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libogg.vsprops",
+      "type": "RegularFile",
+      "bytes": 775,
+      "sha256": "f214b783ba47df750182e7d952f8ef615ddbb23a4aec105d5653e9eff73f17d6",
+      "gitBlobSHA1": "7fe0db78a83bb86a1af0d05d87490ec474852053"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libvorbis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libvorbis/libvorbis_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 28977,
+      "sha256": "8bf91306766adc2683b5cd33c265a2cb97b35c7c11ece0faa4e4bcd3785a8931",
+      "gitBlobSHA1": "fc156ef0eff3cbad1ba872ccf9da14df3207f6d9"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libvorbis/libvorbis_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 24049,
+      "sha256": "4a1e019f12029bc9d3634a7ce3d4e24c8bf8d0f80e83903ee000457ff9f14469",
+      "gitBlobSHA1": "01ce302cb32ff37eca996ba22304a942be17fbe4"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libvorbisfile",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libvorbisfile/libvorbisfile_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 8462,
+      "sha256": "27fd44c5738d588a9ba4842f0af685b914f43cff02224362eaa751299b384984",
+      "gitBlobSHA1": "5c541acfa0f72a17de03258c5ac44f12ae5f6f3d"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/libvorbisfile/libvorbisfile_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 6450,
+      "sha256": "d6ba247f1871be86f406f73e5c44d4629710621ffc2e3699f5983c481f801322",
+      "gitBlobSHA1": "a409810f1ccbbbbe09312092c1fe17d9dda400e8"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbis_dynamic.sln",
+      "type": "RegularFile",
+      "bytes": 3585,
+      "sha256": "f7a6b9137459f4b8775779331425e528ba17a709553812ce68035191039c59de",
+      "gitBlobSHA1": "d0d5fa42b13f3482fde2fc1dfb2d2dbe89e16720"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbis_static.sln",
+      "type": "RegularFile",
+      "bytes": 3581,
+      "sha256": "293b54b07235279f32a6bb68da002ca764636dfb5787ac1cd0f989e9aa7c1135",
+      "gitBlobSHA1": "6e61f63028a45393ef8828ccb927ff0465ebcd64"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbisdec",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbisdec/vorbisdec_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 8369,
+      "sha256": "ecfb655a5cae4985427fb95bf4f68511532efaf033dd72630e58606117f0de49",
+      "gitBlobSHA1": "84687a27d4ea6811290a089132b3b7789871c555"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbisdec/vorbisdec_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 8453,
+      "sha256": "5071287bb516c9e32fe756a2478eb0693ffbd289353c3c7c19496278919899ae",
+      "gitBlobSHA1": "f3b83a92fb529a9b1fe5165f93b5243b2bd657fb"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbisenc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbisenc/vorbisenc_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 8413,
+      "sha256": "345e3a5832c8d5f7769c34981964b26d91266c9c9fb13f58ac40085bd4d7756d",
+      "gitBlobSHA1": "19366b5d701752d9902c95d9926b191ae56a16ba"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2005/vorbisenc/vorbisenc_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 8497,
+      "sha256": "a28a835b088afbcae583217ea624624416a1e6a9f3d7157960e602b715a78a3f",
+      "gitBlobSHA1": "7c7a626a5ce6df9cbe9ef1c5c40a898914e6afe0"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/README",
+      "type": "RegularFile",
+      "bytes": 450,
+      "sha256": "a4af487632875c23dc40736a7af677f89c2c106d0e098f349fad086642b7d8a8",
+      "gitBlobSHA1": "931047eee3dfcee948ac2ab6a35288fe1a6fa03a"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libogg.vsprops",
+      "type": "RegularFile",
+      "bytes": 775,
+      "sha256": "cb9e9aed8c8b6c5dd09b5ade71680ec3165fb3565af584da8c77fff04f424aa9",
+      "gitBlobSHA1": "1355b507a04f534163db08e7982c001400c86cf9"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libvorbis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libvorbis/libvorbis_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 24641,
+      "sha256": "293937ebb8ae021864d38ceeaa0b359e8b1d5dd27c94333a194dfb01a2cdce45",
+      "gitBlobSHA1": "e3c7b56e3c672c23a540e16ce638753b8eb3054b"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libvorbis/libvorbis_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 24102,
+      "sha256": "8ffc4711b1a3704adf25c15581c845a7c938a04208240e6a94341501d28a85b0",
+      "gitBlobSHA1": "688d8c3988121ca93649c45869d85ed71634771c"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libvorbisfile",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libvorbisfile/libvorbisfile_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 8462,
+      "sha256": "729f013f888f2b764ff596e6b5b108fa2fba8adb9ef1cf9c47a87f4f7945fb7c",
+      "gitBlobSHA1": "c799088ad1592b7c4f117646f113d07ed4f3d139"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/libvorbisfile/libvorbisfile_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 6324,
+      "sha256": "27d8726e8439e2d2501e5b981fb118ffce314c87af6ca60d479b521677c15f80",
+      "gitBlobSHA1": "a0acbd0d8a39ff58da603a1288776d7adf3b20e5"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbis_dynamic.sln",
+      "type": "RegularFile",
+      "bytes": 6544,
+      "sha256": "8328f8587d424bb9b3e95f4524c64121b7f33b632c9c8b7c750461599fa7efda",
+      "gitBlobSHA1": "1c141d2f25c8715366749dfef65be8bb5130c602"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbis_static.sln",
+      "type": "RegularFile",
+      "bytes": 6540,
+      "sha256": "e3710bcc7ef6ddc4474bf61e8efb27035409cd2939a011233812690fbee29275",
+      "gitBlobSHA1": "45b8be44f604bcd1a1fb3ce66a73e46b0ecc88a8"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbisdec",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbisdec/vorbisdec_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 8369,
+      "sha256": "bc84c903ccab1b22705724d4343da7b17c09ba6710950f6e81c4a903d1caf9a6",
+      "gitBlobSHA1": "e5783ac63cced17b7e73afd1a680fc9eff00ea44"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbisdec/vorbisdec_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 8453,
+      "sha256": "7548cfa8bde978c08bd7492ecbbf16aad3331eb12f84b7fa7be808722e41abcd",
+      "gitBlobSHA1": "b2597cec74073f47cacd270d031092a7989b24a6"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbisenc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbisenc/vorbisenc_dynamic.vcproj",
+      "type": "RegularFile",
+      "bytes": 8413,
+      "sha256": "054a94888d7bb212c60159dd22ddade9f74b70afd2e70f68aa721f7fbbfc7f30",
+      "gitBlobSHA1": "bb783d45c9865e59adcc6de4ba9fdf3f04c74bf1"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2008/vorbisenc/vorbisenc_static.vcproj",
+      "type": "RegularFile",
+      "bytes": 8497,
+      "sha256": "1c638f7579eda7eebb5d863ad59c3086a51768f6c0277dac48d0802e66c1e4ba",
+      "gitBlobSHA1": "b93f16529f0834c9c9e7fd80d9ba3334bad5b6a9"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/README",
+      "type": "RegularFile",
+      "bytes": 450,
+      "sha256": "2683b62e9fada3d9e0e7dadba576df85e478afe6e3e4edac7bd7aa081ef5c0df",
+      "gitBlobSHA1": "69489a14e1ac182b23e0f1097e4c138aa9badf9d"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libogg.props",
+      "type": "RegularFile",
+      "bytes": 1142,
+      "sha256": "bd12a55edf2012f9dc350d7ad8d062cdef45ae7b31e3f9305a64512507458f70",
+      "gitBlobSHA1": "27b0860bc71df245cd0eabd545774b285d0e5888"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libvorbis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libvorbis/libvorbis_dynamic.vcxproj",
+      "type": "RegularFile",
+      "bytes": 16436,
+      "sha256": "956f0fcb17926ccd91964c4c7f50f75dfbb2e95c71f466c80c75910a1b1a340e",
+      "gitBlobSHA1": "c806a53e88739dca979626e3d42ef96ab0e0edb9"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libvorbis/libvorbis_static.vcxproj",
+      "type": "RegularFile",
+      "bytes": 13146,
+      "sha256": "6976a8015bbe9cfe6b8b97d10e65727c8d0c41e840c50d6751e3ce1e706788bc",
+      "gitBlobSHA1": "18a1b151f31b08a4aae3dbe0b7fd6c9593dd543f"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libvorbisfile",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libvorbisfile/libvorbisfile_dynamic.vcxproj",
+      "type": "RegularFile",
+      "bytes": 12196,
+      "sha256": "99cd043ef30a3b44b9ee23487e259b552bc8be2c92d7b0dcf311a7f1501c38ed",
+      "gitBlobSHA1": "503d609eb9eaf9ef48f9cd8c119e6f2ce7563550"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/libvorbisfile/libvorbisfile_static.vcxproj",
+      "type": "RegularFile",
+      "bytes": 9067,
+      "sha256": "8b0013e37ec70ad664082cc07e5420e2bb8c0e87e0adbb5e25728cb274adae1c",
+      "gitBlobSHA1": "c78f2884707d67bdef69bc0b42a7259e081c2b90"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbis_dynamic.sln",
+      "type": "RegularFile",
+      "bytes": 3590,
+      "sha256": "e4f5eb24636a99e28cef0e96d07073f67c20d74e9a0f8037a36c5fdaf41400f6",
+      "gitBlobSHA1": "cae06d9da3ae7c29372799da922f9476f7252050"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbis_static.sln",
+      "type": "RegularFile",
+      "bytes": 3593,
+      "sha256": "29ffe8fd9e92572e6031ea97034951cbd247fc315747c424f9218a11a7158912",
+      "gitBlobSHA1": "7e1729aabc6c98c05f19cb7b20260753fe7f5728"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbisdec",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbisdec/vorbisdec_dynamic.vcxproj",
+      "type": "RegularFile",
+      "bytes": 12373,
+      "sha256": "b67602dfe4cc13913633b59415ba4e9069766b594c3dd9e3ca23837d04592b5c",
+      "gitBlobSHA1": "70097a3d1a1385aa43bf828c45dc3c5455965c97"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbisdec/vorbisdec_static.vcxproj",
+      "type": "RegularFile",
+      "bytes": 12428,
+      "sha256": "85284716176a02e5504292b0fe8acc48a914f03a6fc6985623043f0e8e0c2729",
+      "gitBlobSHA1": "753a6b61967e06fa0919816284d1b3ab5328cab3"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbisenc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbisenc/vorbisenc_dynamic.vcxproj",
+      "type": "RegularFile",
+      "bytes": 12483,
+      "sha256": "eccbcec8d2fc33ffd1e362daa50b749483293ea68d50f0e013b802cb144bf92f",
+      "gitBlobSHA1": "115f8b849996db5b1a251e8a1965125ad33a4e1f"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/VS2010/vorbisenc/vorbisenc_static.vcxproj",
+      "type": "RegularFile",
+      "bytes": 12538,
+      "sha256": "c85d7ff5f4e784512bd6da204ea4596c55b90d6530a4e9c37997ba374fe34259",
+      "gitBlobSHA1": "065ed5680a99b2bc82286e176df2af64bb676f9d"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/vorbis.def",
+      "type": "RegularFile",
+      "bytes": 1062,
+      "sha256": "0be9cd3252cddb495ccb320d4b4e4b455abc5e430b1d19d004109473eac329b9",
+      "gitBlobSHA1": "884f8f023cf76aa4afc58f675e8e7652570e5f52"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/vorbisenc.def",
+      "type": "RegularFile",
+      "bytes": 173,
+      "sha256": "1298704315c15a4d9f117bc8e956dce1fa6a388910fc7e24d82af60694f0a4f4",
+      "gitBlobSHA1": "79af064407738eec6fc5dc0b0103357b50f61698"
+    },
+    {
+      "path": "vorbis-1.3.7/win32/vorbisfile.def",
+      "type": "RegularFile",
+      "bytes": 507,
+      "sha256": "f1bf7212582e4c9c8192b64667074dfcb4273137d4b0b11f133c1f21cce933ac",
+      "gitBlobSHA1": "4dc55496237d5cc0a0fe3375b637d8b36c3d2c24"
+    }
+  ]
+}

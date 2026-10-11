@@ -1,0 +1,21 @@
+{
+  "review": "native-shader-variants rev3 Window.cpp path normalization only",
+  "result": "NO_NEW_FINDINGS_IN_REVIEWED_WINDOW_DELTA",
+  "freezeFile": "source-freeze-native-shader-variants-rev3.json",
+  "freezeSha256": "00142d9f855b8a826aa30236fa713d80f24a3f4aecdd910e94bc34297fe263a7",
+  "diffFile": "source-diff-rev3.patch",
+  "diffSha256": "fbdf8bf450d26395643e5110c7e32b7811ceaac31eb5fd63d29bc162e23b4ccf",
+  "reviewedFile": {
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+    "freezeSha256": "d2888d6348b5a81d45ff1a1c400a30749f979e05e332aee5be1ab3e7edcd23f0",
+    "currentSha256": "d2888d6348b5a81d45ff1a1c400a30749f979e05e332aee5be1ab3e7edcd23f0",
+    "matches": true
+  },
+  "findings": [],
+  "reviewNotes": [
+    "The mutable absolute shaderPath is passed through AtomToolsFramework::ValidateDocumentPath before asset lookup, systemoptions path derivation, baseline/generation, and CreateDocumentFromFilePath; the same normalized path is used for each path-sensitive step.",
+    "This addresses the previously identified raw Qt path versus normalized document path mismatch at source level. No source API change was introduced by this delta.",
+    "Document.cpp/.h and CMake review is carried by review-document-cmake-rev2.json; not re-reviewed here.",
+    "Source freeze status is SOURCE_FROZEN_NOT_COMPILED. No native compilation or runtime validation was run."
+  ]
+}

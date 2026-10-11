@@ -1,0 +1,15 @@
+{
+  "name": "xxhash",
+  "URL": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/refs/tags/v0.8.3",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 1147630,
+  "sha256": "aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80",
+  "expectedSHA256": "aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/xxhash-0.8.3.tar.gz",
+  "commit": "e626a72bc2321cd320e953a0ccf1584cad60f363",
+  "matchesDeclaredPin": true
+}

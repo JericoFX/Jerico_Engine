@@ -1,0 +1,118 @@
+{
+  "status": "ROOT61 STATIC CANDIDATE FROZEN FOR PARENT REVIEW; NO NATIVE EXECUTION",
+  "files": [
+    {
+      "name": "approved-base-inputs.json",
+      "bytes": 3853051,
+      "sha256": "980BBAF6FB715B0D6AAF61D878264E3C061CD8D65BEB3D736C9D100A23FAEAC2"
+    },
+    {
+      "name": "approved-base-merge-proof.json",
+      "bytes": 1307,
+      "sha256": "8F88B8E6AD476AC6C2E2A667F5055B90C45993ABBF2448CF2521E5E3042CCF15"
+    },
+    {
+      "name": "approved-base-origin-manifest.json",
+      "bytes": 3255180,
+      "sha256": "6CBBB3845F5CCB1D3485176E2B3107FFFE9BDF106236AE4A984FDB7965769393"
+    },
+    {
+      "name": "argv61-draft.json",
+      "bytes": 4803,
+      "sha256": "53C81A6EDB16453A893DF7C34A9BB49067BA52ECA383DB9092B1B72E4D79D8B1"
+    },
+    {
+      "name": "driver-diff.json",
+      "bytes": 13702,
+      "sha256": "C0DAFB38C0AB9D5A1B3005734609FCA2C3F1D76D28E2ABE97309360CD909BC41"
+    },
+    {
+      "name": "driver-structure-proof.json",
+      "bytes": 14766,
+      "sha256": "754B660B4EA48BF7FDFA3BAC5BCB8FC360CA9FB69675AB56AD2DC8D70BF3B91C"
+    },
+    {
+      "name": "driver-structure-v1-parser-failure.json",
+      "bytes": 349,
+      "sha256": "643245B7A3A94B05A4D9BFE64C5F01E799383829CCA090F3698857A810CCBB19"
+    },
+    {
+      "name": "final-derivation-proof.json",
+      "bytes": 16261,
+      "sha256": "777A56DE92F2DE465243080654F28B5DCEF1D0FC0D028E11665E1923681B9BC8"
+    },
+    {
+      "name": "final-merge-origin-manifest.json",
+      "bytes": 3262244,
+      "sha256": "4847A22BBE354BAA36919DD66DCD4D3637E060F2648D8573D9921B77DDFF4AC9"
+    },
+    {
+      "name": "final-static-verification.json",
+      "bytes": 640,
+      "sha256": "7DDBF9D65C031DDD7D8A9446753F39EF2F5A5B67F7F61747B3C438004DF470B4"
+    },
+    {
+      "name": "finalizer-invocation-receipt.json",
+      "bytes": 1747,
+      "sha256": "A3DEB906887A9C9E3A3F92CD1F14C47A3D3394AF0182DEC750A20235D9FA505C"
+    },
+    {
+      "name": "finalizer-rev2-static-proof.json",
+      "bytes": 704,
+      "sha256": "E2D0E9074E0932D39CC1DF99F54991F014841AF1C02ADAE5994BFCBDFC2529C5"
+    },
+    {
+      "name": "FinalizeRootBatch.ps1",
+      "bytes": 13809,
+      "sha256": "45792F03D615131DADD937503723BDC6A733B3795216CDA0D741BD671055CB0D"
+    },
+    {
+      "name": "FinalizeRootBatchRev2.ps1",
+      "bytes": 14033,
+      "sha256": "7634D2E9658CFD1F06D3A40B671FC1EB1CEED12A47B12DBE7F8DFC978BE13028"
+    },
+    {
+      "name": "parent-driver-draft-review.json",
+      "bytes": 736,
+      "sha256": "EF3C8F3A079D4EF50D66267673778DD4BED4E88EF8FEFE0AF92A26699700D171"
+    },
+    {
+      "name": "PrepareDriverStructure.ps1",
+      "bytes": 9687,
+      "sha256": "436984C5FB689C60656BD1A1056E1E30B98CCA1D203AEC073ACB9E617B2ED9A5"
+    },
+    {
+      "name": "PrepareDriverStructureRev2.ps1",
+      "bytes": 9808,
+      "sha256": "786629A75E3A6783634129356232DB612B7F950B3C1D3E7992887B5A3AC552A9"
+    },
+    {
+      "name": "root-batch-assignment.json",
+      "bytes": 13330,
+      "sha256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6"
+    },
+    {
+      "name": "run-root-configure-batch-draft-rev2.ps1",
+      "bytes": 37738,
+      "sha256": "E4C25C639081E5F044FBFD37E967278357DB768948955D874CD8FDD794855DD1"
+    },
+    {
+      "name": "run-root-configure-batch-draft.ps1",
+      "bytes": 37740,
+      "sha256": "C7D571E50BCEDBC0839D902C0B3A6E3DE36DE042E56BFFD8030A0BDECA228A2A"
+    },
+    {
+      "name": "run-root-configure-batch.ps1",
+      "bytes": 37707,
+      "sha256": "74DAF7FC695E17ECB8DEC04104ED346DAFB47AE53765F5B2310DCBD67D198F7F"
+    },
+    {
+      "name": "source-freeze-root-batch.json",
+      "bytes": 3860026,
+      "sha256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44"
+    }
+  ],
+  "fileCount": 22,
+  "excludedIndependentAudit": "dxc-* metadata and probes are not Rootbuildinputs/outputscope fordispatch",
+  "driverEffectiveReplacements": 11
+}

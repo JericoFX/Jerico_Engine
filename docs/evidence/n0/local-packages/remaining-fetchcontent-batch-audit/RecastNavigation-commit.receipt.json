@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/recastnavigation/recastnavigation/commits/6dc1667f580357e8a2154c28b7867bea7e8ad3a7",
+  "status": 200,
+  "length": 4302,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"768c70f38c5b2581972cdfbb3ad241ed5472e5c32a83706ebda379c360c079a9\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

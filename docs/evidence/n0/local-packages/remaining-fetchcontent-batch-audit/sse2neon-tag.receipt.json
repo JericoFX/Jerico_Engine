@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/DLTcollab/sse2neon/git/ref/tags/v1.9.1",
+  "status": 200,
+  "length": 345,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"f2654c0ad327e624033e92501be6a60b46de09ed09f36a64ba78ee00fc14a807\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

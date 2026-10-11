@@ -1,0 +1,15 @@
+{
+  "name": "meshoptimizer",
+  "URL": "https://codeload.github.com/zeux/meshoptimizer/tar.gz/refs/tags/v1.2",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 565981,
+  "sha256": "e40f71b809cdf3361b9a4def85fd44534e8733ce29d4b943c145b76859e4c2b4",
+  "expectedSHA256": "e40f71b809cdf3361b9a4def85fd44534e8733ce29d4b943c145b76859e4c2b4",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/meshoptimizer-1.2.tar.gz",
+  "commit": "9d9890c73011d75920af614485296d1e03e95448",
+  "matchesDeclaredPin": true
+}

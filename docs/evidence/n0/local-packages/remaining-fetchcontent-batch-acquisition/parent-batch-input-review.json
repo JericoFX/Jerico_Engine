@@ -1,0 +1,22 @@
+{
+  "scope": "Parent accepted audited sources and faithful original private patches; no native dispatch yet",
+  "batchInputsVerified": 12957,
+  "batchFreezeSHA256": "2B33F44E52E624C76425963C0F24E10239F34CD5E8A925693F8902BD488070C0",
+  "sourceSnapshots": 13,
+  "immutableFiles": 7060,
+  "privateFiles": 5573,
+  "archiveBytes": 187195275,
+  "original48ArgumentsPreserved": true,
+  "addedSourceOverrides": 13,
+  "privatePatchInverseRawByteMatches": 14,
+  "beforeGitIndexMatches": 14,
+  "afterGitIndexMatches": 12,
+  "originalIndexLimit": "Two Squish after abbreviations differ; exact original hunks/context/inverse and SHA256 receipts retained, no original patch changes",
+  "assimpExportException": "Only exact 25 upstream .git* export omissions approved, original archive retained",
+  "immutableSourcesRemainOriginal": true,
+  "pending": [
+    "SMC writer freeze and parent diff review",
+    "Final Root61 driver review",
+    "Original engine CMake/build/run"
+  ]
+}

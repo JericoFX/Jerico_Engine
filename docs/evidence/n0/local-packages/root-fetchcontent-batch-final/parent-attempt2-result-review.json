@@ -1,0 +1,394 @@
+{
+  "status": "REVIEWED_CONFIGURE_FAILURE_ONLY",
+  "timestampUtc": "2026-10-11T04:51:44.6679229Z",
+  "argumentsMatched": 61,
+  "rootFreezeMatched": 15529,
+  "nativeCMakeExitCode": 1,
+  "elapsedSeconds": 16.174,
+  "firstFatalPackage": "vulkan-validationlayers-1.3.261-rev1-windows",
+  "packageSha256": "79132c6379e0d167c7a2f5a8e251861759a71d92f1fb8cc3b873df821d83ae51",
+  "snapshotsCompared": [
+    {
+      "manifest": "root-freeze",
+      "before": 15529,
+      "after": 15529,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "googlebenchmark-freeze",
+      "before": 174,
+      "after": 174,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "googletest-freeze",
+      "before": 260,
+      "after": 260,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "mcpp-freeze",
+      "before": 17,
+      "after": 17,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "splash-freeze",
+      "before": 6,
+      "after": 6,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "splash-rcc-output",
+      "before": 1,
+      "after": 1,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "sqlite-root-inputs",
+      "before": 8,
+      "after": 8,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "root-package-cache",
+      "before": 32,
+      "after": 32,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "wheelhouse",
+      "before": 44,
+      "after": 44,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "mimalloc-source",
+      "before": 382,
+      "after": 382,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "rapidjson-source",
+      "before": 313,
+      "after": 313,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "googlebenchmark-tree",
+      "before": 173,
+      "after": 173,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "googletest-tree",
+      "before": 252,
+      "after": 252,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "antlr4-tree",
+      "before": 2296,
+      "after": 2296,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "jsoncpp-tree",
+      "before": 229,
+      "after": 229,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "cli11-tree",
+      "before": 304,
+      "after": 304,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-xxhash-original",
+      "before": 87,
+      "after": 87,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-D3D12MemoryAllocator-original",
+      "before": 292,
+      "after": 292,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-meshoptimizer-original",
+      "before": 112,
+      "after": 112,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-squish-ccr-original",
+      "before": 186,
+      "after": 186,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-squish-ccr-private",
+      "before": 186,
+      "after": 186,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-sse2neon-original",
+      "before": 41,
+      "after": 41,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-mikktspace-original",
+      "before": 3,
+      "after": 3,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-ogg-original",
+      "before": 125,
+      "after": 125,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-vorbis-original",
+      "before": 417,
+      "after": 417,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-miniaudio-original",
+      "before": 192,
+      "after": 192,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-v-hacd-original",
+      "before": 62,
+      "after": 62,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-RecastNavigation-original",
+      "before": 156,
+      "after": 156,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-assimp-original",
+      "before": 3116,
+      "after": 3116,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-assimp-private",
+      "before": 3116,
+      "after": 3116,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-tinyusdz_repo-original",
+      "before": 2271,
+      "after": 2271,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "batch-tinyusdz_repo-private",
+      "before": 2271,
+      "after": 2271,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "sqlite-source",
+      "before": 4,
+      "after": 4,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "manifold-original",
+      "before": 378,
+      "after": 378,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "manifold-private",
+      "before": 378,
+      "after": 378,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "clipper-original",
+      "before": 223,
+      "after": 223,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "clipper-private",
+      "before": 223,
+      "after": 223,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "openmesh-original",
+      "before": 611,
+      "after": 611,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "openmesh-private",
+      "before": 611,
+      "after": 611,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "python-rev3",
+      "before": 10400,
+      "after": 10400,
+      "added": 0,
+      "changedExisting": 0,
+      "removed": 0
+    },
+    {
+      "manifest": "engine-packages",
+      "before": 6501,
+      "after": 6516,
+      "added": 15,
+      "changedExisting": 0,
+      "removed": 0
+    }
+  ],
+  "acceptedD3dx12PayloadHashesMatched": 14,
+  "acceptedD3dx12StampAdded": 1,
+  "memoryScope": "direct CMake parent only; child MSBuild/compiler processes are not aggregated",
+  "cmakeParentPeakWorkingSetBytes": 70361088,
+  "attempt1": "Launcher failure, CMake NOT_RUN; preserved, no postflight evidence",
+  "engineBuild": "NOT_RUN",
+  "editorRuntimeGpu": "NOT_RUN",
+  "limitations": "13 source overrides are supplied, but not all configured before fatal. No engine/Editor success or performance acceptance.",
+  "reviewedFiles": [
+    {
+      "path": "root-batch-assignment.json",
+      "sha256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6"
+    },
+    {
+      "path": "source-freeze-root-batch.json",
+      "sha256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44"
+    },
+    {
+      "path": "run-root-configure-batch-attempt2.ps1",
+      "sha256": "4B9FB818021BE196F2FDC47CF498C8F52797AF96B0FB381DB743303C4BBD9AA8"
+    },
+    {
+      "path": "attempt2-launcher-preflight.json",
+      "sha256": "229C00A8D3471200754563F7D34A6DB26A9ADA9B8AFC0EC49D5978F2180D3998"
+    },
+    {
+      "path": "attempt1/luna-driver-failure-result.json",
+      "sha256": "B43847E3C57693502B1965A5FC16AB4A6083CA1F234AF37BE2985F5ADAE816F1"
+    },
+    {
+      "path": "attempt2/configure-result.json",
+      "sha256": "2F86932E293DF2E63ECCC149217BDE878D0A70C8979AEEF60605B49C2C802784"
+    },
+    {
+      "path": "attempt2/configure-argv.json",
+      "sha256": "1F20FE5FC12C4CDC4D5503DE310AFF27594B72E2EFC0417A53E4357B2EF36841"
+    },
+    {
+      "path": "attempt2/configure.stdout.log",
+      "sha256": "AB668161EB992331408E0C7EF33E25A6FAD04E6531FE2D6283427F76B7B7794F"
+    },
+    {
+      "path": "attempt2/configure.stderr.log",
+      "sha256": "402BD0E0CF0A2C35A62DECF7B4111F75F92189B50847D0B8B87999F7169DA150"
+    },
+    {
+      "path": "attempt2/input-postflight-deltas.json",
+      "sha256": "C29EB503E0BEB3F2316BC01B73F7D4109B1D1A035B83D745CF70D0343DBB978B"
+    },
+    {
+      "path": "attempt2/cmake-tool-version.json",
+      "sha256": "D1E5B94939F20591ED85002D2ECD2D88D92DC44F93A08DA50C6E2BFBDC253CB4"
+    }
+  ]
+}

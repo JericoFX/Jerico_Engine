@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/assimp/assimp/archive/e0b52347c6e52de2827ec957a9ebf00ce3c54f79.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"cb182a9161f045be58ccda0db5784289f667684d6d8f7312ec896875be8d85d6\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

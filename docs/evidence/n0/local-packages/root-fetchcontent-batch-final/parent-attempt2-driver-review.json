@@ -1,0 +1,23 @@
+{
+  "status": "PARENT_REVIEWED_LAUNCHER_REPAIR_FOR_ONE_LUNA_ATTEMPT",
+  "originalDriverSHA256": "74DAF7FC695E17ECB8DEC04104ED346DAFB47AE53765F5B2310DCBD67D198F7F",
+  "retryDriverSHA256": "4B9FB818021BE196F2FDC47CF498C8F52797AF96B0FB381DB743303C4BBD9AA8",
+  "onlyDriverChanges": [
+    "Requires PowerShell7/Core before all side effects",
+    "Fresh attempt2 evidence directory and matching refusal message"
+  ],
+  "allOtherDriverTextByteRestoration": true,
+  "ASTErrors": 0,
+  "launcher": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "configuredShell": "7.6.5",
+  "edition": "Core",
+  "ProcessStartInfoArgumentListAvailable": true,
+  "unchangedAssignmentSHA256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6",
+  "unchangedFreezeSHA256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44",
+  "argumentCount": 61,
+  "inputCount": 15529,
+  "attempt1": "Preserved; NOT_RUN CMake, failed in Windows PowerShell classical ArgumentList before native invoke",
+  "productSourcesChanged": false,
+  "pending": "Native configure still NOT_RUN"
+}

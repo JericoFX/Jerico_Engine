@@ -1,0 +1,8 @@
+{
+  "status": "RED_NOT_RUN",
+  "reason": "Writer is forbidden native execution; parent assigns Luna after source review. Existing script defects are source-derived, not a behavioral RED result.",
+  "testsPath": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp",
+  "testsSha256": "4BDB41710FFCC00573B9291CCDC7B783D798B32C848D3DE0D696C07CD28E9A77",
+  "implementationWritten": false,
+  "saveUndoGui": "NOT_RUN; real existing document integration remains required"
+}

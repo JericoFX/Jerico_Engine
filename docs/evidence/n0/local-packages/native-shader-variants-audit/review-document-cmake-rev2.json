@@ -1,0 +1,36 @@
+{
+  "review": "native-shader-variants rev2 document/CMake delta",
+  "result": "NO_NEW_FINDINGS_IN_REVIEWED_DOCUMENT_AND_CMAKE_DELTA",
+  "freezeFile": "source-freeze-native-shader-variants-rev2.json",
+  "freezeSha256": "4a388f7d2e280b78add427a3cc5ee703e5fcb4eda4a3ec544f5ac3dcb89d660c",
+  "diffFile": "source-diff-rev2.patch",
+  "diffSha256": "f3a1440e5811a762f769acc7941f669b33e70c9924105b9aaac87d2f2b4674ee",
+  "reviewedFiles": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp",
+      "freezeSha256": "036516ce7bd19962b1ca940a599965eb322d409591501b606a077ee417af4a59",
+      "currentSha256": "036516ce7bd19962b1ca940a599965eb322d409591501b606a077ee417af4a59",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.h",
+      "freezeSha256": "11d685f716e86206f660bcae5aeb5431df13e2a9e3bf09701a192495985ff33d",
+      "currentSha256": "11d685f716e86206f660bcae5aeb5431df13e2a9e3bf09701a192495985ff33d",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "freezeSha256": "ac4195fbaa6691891e1222d9f00f2a62633d9cece8083598d6b91b0949d15fc8",
+      "currentSha256": "ac4195fbaa6691891e1222d9f00f2a62633d9cece8083598d6b91b0949d15fc8",
+      "matches": true
+    }
+  ],
+  "reviewNotes": [
+    "Setter now validates shader asset/layout before applying the supplied source snapshot, including an empty variant list; undo/redo uses the same exact-snapshot path.",
+    "LoadShaderSourceData computes the system-only initial baseline via the shared generator and fails opening on invalid asset/layout/systemoptions; no new issue found in this flow.",
+    "UpdateOptionValue was removed from the private declaration/definition and has no remaining scoped callers.",
+    "CMake test block is nested after host-tool and PAL application-supported gates, and is separately gated on PAL_TRAIT_BUILD_TESTS_SUPPORTED; no scope issue found.",
+    "The rev2 Window.cpp raw-path versus normalized document-path concern was reported by parent and is not re-reviewed here. The live Window.cpp no longer matches rev2, so this receipt is limited to the frozen rev2 diff and the three listed files.",
+    "Native compilation/tests were not run; no acceptance claim."
+  ]
+}

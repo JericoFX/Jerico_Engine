@@ -1,0 +1,456 @@
+[
+  {
+    "url": "https://api.github.com/repos/o3de/DirectXShaderCompiler/git/ref/tags/release-1.8.2505.1-o3de",
+    "status": 404,
+    "location": "",
+    "automaticRedirects": false,
+    "authorization": false,
+    "body": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest/git/refs#get-a-reference",
+      "status": "404"
+    }
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/DirectXShaderCompiler/releases/tags/release-1.8.2505.1-o3de",
+    "status": 404,
+    "location": "",
+    "automaticRedirects": false,
+    "authorization": false,
+    "body": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest/releases/releases#get-a-release-by-tag-name",
+      "status": "404"
+    }
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/commits?path=package-system%2FDirectXShaderCompiler%2Fbuild_config.json&sha=70f0b7b5257bf7cf935bf1cfd270e1b53ccead18&per_page=5",
+    "status": 200,
+    "location": "",
+    "automaticRedirects": false,
+    "authorization": false,
+    "body": [
+      {
+        "sha": "01daa42cf3c20e8286782ff232eecee4f7cbe3fe",
+        "node_id": "C_kwDOFbd6J9oAKDAxZGFhNDJjZjNjMjBlODI4Njc4MmZmMjMyZWVjZWU0ZjdjYmUzZmU",
+        "commit": {
+          "author": {
+            "name": "Steve Pham",
+            "email": "82231385+spham-amzn@users.noreply.github.com",
+            "date": "2026-08-03T06:04:12Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2026-08-03T06:04:12Z"
+          },
+          "message": "Bump revision for DirectX 5 for mac-arm64 (#392)\n\nBump revision for DirectX 5 for mac-arm64 because rev4 was never\npromoted to prod\n\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>",
+          "tree": {
+            "sha": "5781e10678f011d11b3ac7ffc9b7411c2dbcdbfc",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/5781e10678f011d11b3ac7ffc9b7411c2dbcdbfc"
+          },
+          "url": "https://api.github.com/repos/o3de/3p-package-source/git/commits/01daa42cf3c20e8286782ff232eecee4f7cbe3fe",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqcC9cCRC1aQ7uu5UhlAAAylYQACmhotwXVZX1Bn8x4TXhzS8+\n8EoiXyE/QUl8DxzOCr2y8eOPxgixPoskQy0tHTkYTYua7g/Gn0yJnKMHZJ8y2URA\neJ7nW1iEoizWDZQSb8fHao6JBH6dw7qyu4CAEz0vPJHw0mbSwchYFl7acoOXdYhB\nwNQZ10MbSNDRWquITWJgO4sqyZ/kvQ+TYhfcAyvQ0lee4Chw2cOf8fznE+KfJF7F\nG6lZtb+pMncM65ELj1QQ6MZRNbQGCnXqaTP2k0ZM6T30qlFwrq/RtUQgrC5wxsRB\nth7rGS4jshmdJTXZlp4TyeHbVsW/admGFYhvVBLEgmKTl5xe5ZNX/qsIbRkHeCJB\nIBP7DBgnwyqEkUs558vGqI1lPzxGaBsyjQIV5Yo6lefUmcZfLl2h7kvilKGqBrUs\nnBSBqm0e9AWJvmVUjQpcEP+6hXMOiNwMMymXrGkEMaxr5stIoxtGsfOnbW0FWXMh\noJWOjJTBRomFWUjvX1I7m3EQfnXdjCSQVBa5hwa+BPAJYxx3d5zUVoqev6/UBBnh\nmBRpU2xBFN5X3Pj4RjudqBcnGDZyccdZRc30+LfbNFyeiWmZkILZ1+NNYjtrzcCP\nva9yw6g1DSOwj+Ny9ucy5dxGx7K4DOep9qhGJ/Ndd9Wxpb7ArZLvupW5Or0H3nzP\nnF3hyKddwRHHHIj86M52\n=/mo2\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree 5781e10678f011d11b3ac7ffc9b7411c2dbcdbfc\nparent 84ae49d281a0098b4490f90631f36081f4f36cc5\nauthor Steve Pham <82231385+spham-amzn@users.noreply.github.com> 1785737052 -0700\ncommitter GitHub <noreply@github.com> 1785737052 -0700\n\nBump revision for DirectX 5 for mac-arm64 (#392)\n\nBump revision for DirectX 5 for mac-arm64 because rev4 was never\npromoted to prod\n\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>",
+            "verified_at": "2026-08-03T06:04:13Z"
+          }
+        },
+        "url": "https://api.github.com/repos/o3de/3p-package-source/commits/01daa42cf3c20e8286782ff232eecee4f7cbe3fe",
+        "html_url": "https://github.com/o3de/3p-package-source/commit/01daa42cf3c20e8286782ff232eecee4f7cbe3fe",
+        "comments_url": "https://api.github.com/repos/o3de/3p-package-source/commits/01daa42cf3c20e8286782ff232eecee4f7cbe3fe/comments",
+        "author": {
+          "login": "spham-amzn",
+          "id": 82231385,
+          "node_id": "MDQ6VXNlcjgyMjMxMzg1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/82231385?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/spham-amzn",
+          "html_url": "https://github.com/spham-amzn",
+          "followers_url": "https://api.github.com/users/spham-amzn/followers",
+          "following_url": "https://api.github.com/users/spham-amzn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/spham-amzn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/spham-amzn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/spham-amzn/subscriptions",
+          "organizations_url": "https://api.github.com/users/spham-amzn/orgs",
+          "repos_url": "https://api.github.com/users/spham-amzn/repos",
+          "events_url": "https://api.github.com/users/spham-amzn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/spham-amzn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "84ae49d281a0098b4490f90631f36081f4f36cc5",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/commits/84ae49d281a0098b4490f90631f36081f4f36cc5",
+            "html_url": "https://github.com/o3de/3p-package-source/commit/84ae49d281a0098b4490f90631f36081f4f36cc5"
+          }
+        ]
+      },
+      {
+        "sha": "ab626af8ba3607d74821df02a4f617b466e6afb9",
+        "node_id": "C_kwDOFbd6J9oAKGFiNjI2YWY4YmEzNjA3ZDc0ODIxZGYwMmE0ZjYxN2I0NjZlNmFmYjk",
+        "commit": {
+          "author": {
+            "name": "Steve Pham",
+            "email": "82231385+spham-amzn@users.noreply.github.com",
+            "date": "2026-01-18T16:46:03Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2026-01-18T16:46:03Z"
+          },
+          "message": "Mac ARM64 3P support: Add definition for DirectXShaderCompilerDxc-1.82505.1-o3de-rev4-mac-arm64 (#333)\n\n* Add new entry in package-system/DirectXShaderCompiler/build_config.json for `Mac-arm64`\n* Added `DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev4-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>",
+          "tree": {
+            "sha": "0332c013e680a42b3082c0dea85b224eedeb35f4",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/0332c013e680a42b3082c0dea85b224eedeb35f4"
+          },
+          "url": "https://api.github.com/repos/o3de/3p-package-source/git/commits/ab626af8ba3607d74821df02a4f617b466e6afb9",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJpbQ5LCRC1aQ7uu5UhlAAAJHIQAB1rwHqg9gk36SIv12h5kHxw\nquaC0aEBcXb+JKynjsr7SqWeLuK2G7tOHQ/oQolQVzP1zpqtOIyIe5KMcucv2+oz\nWEafdqqp4P/3BalWbeYBGvk0kPgMitX0LTVTVIlvi6P2YKW7hXoINe8kdpAgbpMc\nFmO5/BYeWJ9BPw2afP0QoFLsz8ONZPu8FGi7prPnnjYdsKeB2BdrK1TOTeh53gGD\nnULD9TQsCQ4GFuL9Kfffzy1g3hKyd720NHblImu2M0YTfH6q3N9J0gUCJsStq/Hi\nHRP6NQ3xZRcitUHaNNtI2msk7KcsK4YM7Ekjxta+QV+yoZoqBoVtYyHOKYL38QcH\np4pPbPiEI2xli+x2UUqKXHnnhOEY+D6wRaaTFkpl5S7atO9VdDQcJcIdsE2fzEEV\nljF6YXDKl0G1Ey1nOaCdXrE6hjI5TsWKuMSeJSYKUDDSus8qnh25pRjNTLM96rxv\nV0BMjIcrKYfWxGNwJ+8J/GbH/FQGxQkTzHvroR8S7tHXt8946C9rv4MFIPW7TO0U\n/cLfSKm1T9l1IpKHBndx8jQ11Fumygvb+EeAoSLwa0+oNovNpdRCJJstN8HrHcMo\nc1mjwve6VRPNVsHt/B/K5wSm132+cC8vxRcDOJPUkp0C7SHBRtP7ccoBTja1JE3V\ntxKu82uDg1cvnsbDsl62\n=OQYe\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree 0332c013e680a42b3082c0dea85b224eedeb35f4\nparent 0d93bce78cb82e20ebf775135230f7900bb77eef\nauthor Steve Pham <82231385+spham-amzn@users.noreply.github.com> 1768754763 -0800\ncommitter GitHub <noreply@github.com> 1768754763 -0800\n\nMac ARM64 3P support: Add definition for DirectXShaderCompilerDxc-1.82505.1-o3de-rev4-mac-arm64 (#333)\n\n* Add new entry in package-system/DirectXShaderCompiler/build_config.json for `Mac-arm64`\n* Added `DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev4-mac-arm64` into package_build_list_host_darwin-arm64.json`\n\nSigned-off-by: Steve Pham <82231385+spham-amzn@users.noreply.github.com>",
+            "verified_at": "2026-01-18T16:46:03Z"
+          }
+        },
+        "url": "https://api.github.com/repos/o3de/3p-package-source/commits/ab626af8ba3607d74821df02a4f617b466e6afb9",
+        "html_url": "https://github.com/o3de/3p-package-source/commit/ab626af8ba3607d74821df02a4f617b466e6afb9",
+        "comments_url": "https://api.github.com/repos/o3de/3p-package-source/commits/ab626af8ba3607d74821df02a4f617b466e6afb9/comments",
+        "author": {
+          "login": "spham-amzn",
+          "id": 82231385,
+          "node_id": "MDQ6VXNlcjgyMjMxMzg1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/82231385?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/spham-amzn",
+          "html_url": "https://github.com/spham-amzn",
+          "followers_url": "https://api.github.com/users/spham-amzn/followers",
+          "following_url": "https://api.github.com/users/spham-amzn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/spham-amzn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/spham-amzn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/spham-amzn/subscriptions",
+          "organizations_url": "https://api.github.com/users/spham-amzn/orgs",
+          "repos_url": "https://api.github.com/users/spham-amzn/repos",
+          "events_url": "https://api.github.com/users/spham-amzn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/spham-amzn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "0d93bce78cb82e20ebf775135230f7900bb77eef",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/commits/0d93bce78cb82e20ebf775135230f7900bb77eef",
+            "html_url": "https://github.com/o3de/3p-package-source/commit/0d93bce78cb82e20ebf775135230f7900bb77eef"
+          }
+        ]
+      },
+      {
+        "sha": "45e4d900fe42c06327641ff0eaa4e311c3dc6d95",
+        "node_id": "C_kwDOFbd6J9oAKDQ1ZTRkOTAwZmU0MmMwNjMyNzY0MWZmMGVhYTRlMzExYzNkYzZkOTU",
+        "commit": {
+          "author": {
+            "name": "Arbiter",
+            "email": "96613937+EnterTheArcane@users.noreply.github.com",
+            "date": "2026-01-13T21:50:10Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2026-01-13T21:50:10Z"
+          },
+          "message": "Remove missing symlink from DirectXShaderCompilerDxc runtime dependencies (#295)\n\nDirectXShaderCompilerDxc lists `libdxcompiler.3.7.dylib` as a runtime\ndependency, but this artifact is never created during the build. My\nguess is that it used to be a symlink to libdxcompiler.dylib that was\nremoved at some point.\n\nThis bumps the macOS build of DirectXShaderCompilerDxc to rev4 and\nremoves the bad reference.\n\n---------\n\nSigned-off-by: EnterTheArcane <96613937+EnterTheArcane@users.noreply.github.com>",
+          "tree": {
+            "sha": "1fc972d6df8d957ddb98a8ee562caaed5c3344ce",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/1fc972d6df8d957ddb98a8ee562caaed5c3344ce"
+          },
+          "url": "https://api.github.com/repos/o3de/3p-package-source/git/commits/45e4d900fe42c06327641ff0eaa4e311c3dc6d95",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJpZr4SCRC1aQ7uu5UhlAAAip8QAEQRSpjdo+SOf0uu2TumRCxX\n3JH5b9JKyyhBeE1YEzSS5oXZIAC1uiV9HfictnTZwRCsryNjR8qebjOP0RHpHU8+\n/RwFx8iNHLIC9G3MjUb9euq38vg5O0gB6dIXskaBangLK+tRsbLfaCKOktrdDT+6\n/PABWY3Lg0kOodpFhW6EDV8o3SL4w/3FsrHUbxHWSVPAycv8an9YRFD1BUgjnGiW\n8HV9mECNUFtmI7YvSHHbguBGtKt0y2rv3O61aguTtocmQxmSD+ewMwA4fezYO3Bv\nI52FsxFl3QQb2FzasboZ+CWBQJZr2k3PBoH4PXkdgXg0eNDpdUmG4BupB3A1DhcI\nNlgWjDwSg7WaNaZ4b5SutfU0UEwg1K5DEu0aO97Gda0PrGXEdpQgkSAPBopPb4y1\ndBdH9CaZfSKYzcGvQs6gBoJabZ75qBH2QEDiTm8nwFOt27+LFQ1qeom4CDbOatM3\n2wi1CBmF3NpTMyQED5wNJjmON2YtAWt4MIqWnoQZmeKGMgcDU7m2sLdfq6DHHdP4\n08hLQCIqEOCwYFGsG3QMnrqXoR1CMBPIBYuCTOsAQb/d88lh8jDj0DC///WeDr2v\nKOGjBJy5mmI1g4T2vCMz7TB4pmbXBBuYGCT+0C8VPEKSfsI+xT3f+vfJl9M5iwpK\n3DTwYzKM38bAYWoWfPok\n=TmOE\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree 1fc972d6df8d957ddb98a8ee562caaed5c3344ce\nparent a54b0ef94e2301f7d9612f0854d925941954d9dd\nauthor Arbiter <96613937+EnterTheArcane@users.noreply.github.com> 1768341010 -0700\ncommitter GitHub <noreply@github.com> 1768341010 -0800\n\nRemove missing symlink from DirectXShaderCompilerDxc runtime dependencies (#295)\n\nDirectXShaderCompilerDxc lists `libdxcompiler.3.7.dylib` as a runtime\ndependency, but this artifact is never created during the build. My\nguess is that it used to be a symlink to libdxcompiler.dylib that was\nremoved at some point.\n\nThis bumps the macOS build of DirectXShaderCompilerDxc to rev4 and\nremoves the bad reference.\n\n---------\n\nSigned-off-by: EnterTheArcane <96613937+EnterTheArcane@users.noreply.github.com>",
+            "verified_at": "2026-01-13T21:50:10Z"
+          }
+        },
+        "url": "https://api.github.com/repos/o3de/3p-package-source/commits/45e4d900fe42c06327641ff0eaa4e311c3dc6d95",
+        "html_url": "https://github.com/o3de/3p-package-source/commit/45e4d900fe42c06327641ff0eaa4e311c3dc6d95",
+        "comments_url": "https://api.github.com/repos/o3de/3p-package-source/commits/45e4d900fe42c06327641ff0eaa4e311c3dc6d95/comments",
+        "author": {
+          "login": "EnterTheArcane",
+          "id": 96613937,
+          "node_id": "U_kgDOBcI2MQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/96613937?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/EnterTheArcane",
+          "html_url": "https://github.com/EnterTheArcane",
+          "followers_url": "https://api.github.com/users/EnterTheArcane/followers",
+          "following_url": "https://api.github.com/users/EnterTheArcane/following{/other_user}",
+          "gists_url": "https://api.github.com/users/EnterTheArcane/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/EnterTheArcane/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/EnterTheArcane/subscriptions",
+          "organizations_url": "https://api.github.com/users/EnterTheArcane/orgs",
+          "repos_url": "https://api.github.com/users/EnterTheArcane/repos",
+          "events_url": "https://api.github.com/users/EnterTheArcane/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/EnterTheArcane/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "a54b0ef94e2301f7d9612f0854d925941954d9dd",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/commits/a54b0ef94e2301f7d9612f0854d925941954d9dd",
+            "html_url": "https://github.com/o3de/3p-package-source/commit/a54b0ef94e2301f7d9612f0854d925941954d9dd"
+          }
+        ]
+      },
+      {
+        "sha": "e5a849dfc01e43b617ac2b0d9b08e40668e28904",
+        "node_id": "C_kwDOFbd6J9oAKGU1YTg0OWRmYzAxZTQzYjYxN2FjMmIwZDliMDhlNDA2NjhlMjg5MDQ",
+        "commit": {
+          "author": {
+            "name": "Martin Sattlecker",
+            "email": "120572403+msat-huawei@users.noreply.github.com",
+            "date": "2025-09-09T06:26:16Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-09-09T06:26:16Z"
+          },
+          "message": "Build DXC with the VS2019 toolset (#292)\n\nThere are some problems with the Jenkings CI where DXC complains about\nmissing dlls.\nO3DE currently supports building with VS2019 so the VS2022 runtime\nshould probably not be required.\n\n---------\n\nSigned-off-by: Martin Sattlecker <martin.sattlecker@huawei.com>",
+          "tree": {
+            "sha": "e662bafe01ff90822c018d135d9f616280790615",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/e662bafe01ff90822c018d135d9f616280790615"
+          },
+          "url": "https://api.github.com/repos/o3de/3p-package-source/git/commits/e5a849dfc01e43b617ac2b0d9b08e40668e28904",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJov8iICRC1aQ7uu5UhlAAAdFUQAAJIbYhsqD2KrUgoEFigfvdu\nvfTd1WD/BuwrZ4o6bzgRF5KLomAdnwiAg/ijEWPlWuwjQNeat+Lqs7Hj5e49yY6Z\ngnFw4i8c4UZUjx3wcPqqIga1ekeYA8eFnPmyp4RPS+uUeG1MNRLyQv4cpOSv1wFt\nCtkZ/06QN4VxvYS98bOuWCmeefApBLOF2UPaLks+taKrbQOkW16YWeiujGEQyBpX\nB9rWMJH5cpPgO4+kFTFpwBkPaWWoHv7ybYoxLu/ZfQsORtHBpj/7Btl/m0doPsEG\nNc1YeP4o1tnra6wLhw2/9UZFV0gw+ij5Yn37mBLFer1WobDCH8TwKbGTfKsxSxJX\n0Pqo7ochKaSPT7mE+dsyHPslGnRnz1mhB8dWAX30ID7mm/Vf89jbspMWMFICsSYb\nA+v/b484YPo8Kzx4qLl79/8l0iR3Zefq4dxRmb7ULZX/7d3o7mKa12TWaB999HD3\nzhFQ6565gBEQ5BSfCDeW1yNwakBGwGcyDoyAkcFRxmQ974pnoXsoYhH6jXxUOexE\nM6pWTz/7N+OFuHKnUG+e2LSdebLQChMOBvvbl7+MnadefJFz+kprQWMfalxQj86F\n/kJj+Yie3x/HCSEO97T5wkXbxOBvkxoSlcUokthLSHhFXf9bCBaQbTCoDxbKBhGA\nuJCbLRNAtDBEvIHXxO54\n=VBMe\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree e662bafe01ff90822c018d135d9f616280790615\nparent 37d1bc821f164a2d95d1b09e7b662f5d6b26e2bb\nauthor Martin Sattlecker <120572403+msat-huawei@users.noreply.github.com> 1757399176 +0200\ncommitter GitHub <noreply@github.com> 1757399176 +0200\n\nBuild DXC with the VS2019 toolset (#292)\n\nThere are some problems with the Jenkings CI where DXC complains about\nmissing dlls.\nO3DE currently supports building with VS2019 so the VS2022 runtime\nshould probably not be required.\n\n---------\n\nSigned-off-by: Martin Sattlecker <martin.sattlecker@huawei.com>",
+            "verified_at": "2025-09-09T06:26:17Z"
+          }
+        },
+        "url": "https://api.github.com/repos/o3de/3p-package-source/commits/e5a849dfc01e43b617ac2b0d9b08e40668e28904",
+        "html_url": "https://github.com/o3de/3p-package-source/commit/e5a849dfc01e43b617ac2b0d9b08e40668e28904",
+        "comments_url": "https://api.github.com/repos/o3de/3p-package-source/commits/e5a849dfc01e43b617ac2b0d9b08e40668e28904/comments",
+        "author": {
+          "login": "msat-huawei",
+          "id": 120572403,
+          "node_id": "U_kgDOBy_J8w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/120572403?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/msat-huawei",
+          "html_url": "https://github.com/msat-huawei",
+          "followers_url": "https://api.github.com/users/msat-huawei/followers",
+          "following_url": "https://api.github.com/users/msat-huawei/following{/other_user}",
+          "gists_url": "https://api.github.com/users/msat-huawei/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/msat-huawei/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/msat-huawei/subscriptions",
+          "organizations_url": "https://api.github.com/users/msat-huawei/orgs",
+          "repos_url": "https://api.github.com/users/msat-huawei/repos",
+          "events_url": "https://api.github.com/users/msat-huawei/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/msat-huawei/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "37d1bc821f164a2d95d1b09e7b662f5d6b26e2bb",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/commits/37d1bc821f164a2d95d1b09e7b662f5d6b26e2bb",
+            "html_url": "https://github.com/o3de/3p-package-source/commit/37d1bc821f164a2d95d1b09e7b662f5d6b26e2bb"
+          }
+        ]
+      },
+      {
+        "sha": "e8fd183dff8e67697b1cac61e82dc40fd0caee69",
+        "node_id": "C_kwDOFbd6J9oAKGU4ZmQxODNkZmY4ZTY3Njk3YjFjYWM2MWU4MmRjNDBmZDBjYWVlNjk",
+        "commit": {
+          "author": {
+            "name": "Martin Sattlecker",
+            "email": "120572403+msat-huawei@users.noreply.github.com",
+            "date": "2025-08-07T15:45:42Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-08-07T15:45:42Z"
+          },
+          "message": "Build DXC without hct on Windows and use the built dxil.dll (#290)\n\nThe install script for the dxc previously installed the `dxil.dll` from\nthe Windows SDK instead of using the one from the install directory.\nI found that the `dxil.dll` from the Windows SDK is no longer compatible\nwith the 2505.1 executables when testing\nhttps://github.com/o3de/o3de/pull/19171\nCopying `dxil.dll` from a locally built dxc did however fix this\nproblem.\n\nI'm not sure why we ever used the `dxil.dll` from the Windows SDK\ninstead of the built one. On Linux and Mac there is no Windows SDK so\nthey use the built one without problems.\n\nThis PR also changes the build step from the `hct` build script to using\nCMake directly. As far as I can see hct is only a wrapper around CMake\nanyway.\n\n---------\n\nSigned-off-by: Martin Sattlecker <martin.sattlecker@huawei.com>",
+          "tree": {
+            "sha": "b0338d0b39749b584f712c463117b126cc82323e",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/git/trees/b0338d0b39749b584f712c463117b126cc82323e"
+          },
+          "url": "https://api.github.com/repos/o3de/3p-package-source/git/commits/e8fd183dff8e67697b1cac61e82dc40fd0caee69",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJolMonCRC1aQ7uu5UhlAAAiCIQAK4H9j3VB/on4IBUmX+XH2km\n3Dm9KPkUNYhwLVd35KMcWG0UdekNrzeKf1BqSENYZYKFaOZPzxA6wdTBOIAgU4Nm\nG8SQ4iPu5VzAzRvET3KkhnRaoXUaJoguAUWm1Ku5B/DDIwOYBtEqTZvfR+Jg4Tg6\ncqdYBSC+pDhIk9Z0dj331DPhMh86WP6+RxSr/8mREbgMU9FQiejSTMWeoxf1hVaL\nnVvKRTjneGe+6mrvOJp5lWJmQfF2Zi0R0dZW4o8InuCtIgoWwGi+eqDLJhcs/Dz6\nNlBfg3a4kkGxihKOpz1ITAfMffsL2IPtMgWqZEe7ZIYBynDtoN/pKt2Eaf3BkRei\nZJQMFq8hc8uDRCzE0NkB8XYHE5BtKTGzm/PytriFVfspA7OpEYZiS0/A5jNa8W6K\noTeSMsCunnBXbAL2K8vK4vExstWxoI5jngyTm4eMC4MpTY+aBcqUBRA402pSEQb3\niS83fWVCPbyre7Gm0EYYhNfGXDH+9uZqReisSfm5VhOIFVXEGLhqseSjb5Mxx1up\nRIu0KfTQPW17p/qepbkpvc4bxtyE60zgNAZcagp0KpuvpiCbET3oR7BHKNx1VQyk\n6mh+HWIFUFlejQdu87Hd+sPlN8p4sYGaWmlHUCwwZ22Fxk0YqNITGXGyGGgQEPT9\npnbM0Htm9g/kXF+HU1tv\n=G/If\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree b0338d0b39749b584f712c463117b126cc82323e\nparent 2dfc112793035a1ebe44793b3c3f7d481388e2a5\nauthor Martin Sattlecker <120572403+msat-huawei@users.noreply.github.com> 1754581542 +0200\ncommitter GitHub <noreply@github.com> 1754581542 -0700\n\nBuild DXC without hct on Windows and use the built dxil.dll (#290)\n\nThe install script for the dxc previously installed the `dxil.dll` from\nthe Windows SDK instead of using the one from the install directory.\nI found that the `dxil.dll` from the Windows SDK is no longer compatible\nwith the 2505.1 executables when testing\nhttps://github.com/o3de/o3de/pull/19171\nCopying `dxil.dll` from a locally built dxc did however fix this\nproblem.\n\nI'm not sure why we ever used the `dxil.dll` from the Windows SDK\ninstead of the built one. On Linux and Mac there is no Windows SDK so\nthey use the built one without problems.\n\nThis PR also changes the build step from the `hct` build script to using\nCMake directly. As far as I can see hct is only a wrapper around CMake\nanyway.\n\n---------\n\nSigned-off-by: Martin Sattlecker <martin.sattlecker@huawei.com>",
+            "verified_at": "2025-08-07T15:45:43Z"
+          }
+        },
+        "url": "https://api.github.com/repos/o3de/3p-package-source/commits/e8fd183dff8e67697b1cac61e82dc40fd0caee69",
+        "html_url": "https://github.com/o3de/3p-package-source/commit/e8fd183dff8e67697b1cac61e82dc40fd0caee69",
+        "comments_url": "https://api.github.com/repos/o3de/3p-package-source/commits/e8fd183dff8e67697b1cac61e82dc40fd0caee69/comments",
+        "author": {
+          "login": "msat-huawei",
+          "id": 120572403,
+          "node_id": "U_kgDOBy_J8w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/120572403?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/msat-huawei",
+          "html_url": "https://github.com/msat-huawei",
+          "followers_url": "https://api.github.com/users/msat-huawei/followers",
+          "following_url": "https://api.github.com/users/msat-huawei/following{/other_user}",
+          "gists_url": "https://api.github.com/users/msat-huawei/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/msat-huawei/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/msat-huawei/subscriptions",
+          "organizations_url": "https://api.github.com/users/msat-huawei/orgs",
+          "repos_url": "https://api.github.com/users/msat-huawei/repos",
+          "events_url": "https://api.github.com/users/msat-huawei/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/msat-huawei/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "2dfc112793035a1ebe44793b3c3f7d481388e2a5",
+            "url": "https://api.github.com/repos/o3de/3p-package-source/commits/2dfc112793035a1ebe44793b3c3f7d481388e2a5",
+            "html_url": "https://github.com/o3de/3p-package-source/commit/2dfc112793035a1ebe44793b3c3f7d481388e2a5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/actions/artifacts?name=DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows&per_page=100",
+    "status": 200,
+    "location": "",
+    "automaticRedirects": false,
+    "authorization": false,
+    "body": {
+      "total_count": 0,
+      "artifacts": []
+    }
+  }
+]

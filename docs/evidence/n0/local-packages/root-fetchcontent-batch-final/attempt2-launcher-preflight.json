@@ -1,0 +1,17 @@
+{
+  "timestampUtc": "2026-10-11T04:43:11.9181236Z",
+  "launcherPath": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "launcherVersion": "7.6.5",
+  "callerShellPath": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "driverPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-fetchcontent-batch-final\\run-root-configure-batch-attempt2.ps1",
+  "driverSha256": "4b9fb818021be196f2fdc47cf498c8f52797af96b0fb381db743303c4bbd9aa8",
+  "assignmentSha256": "401f6e61e4b3526d1594d8f7e11929415dd18a6e8bf90a34e69e4a7a68ca5ce6",
+  "freezeSha256": "a91288daded0d34246bef87ba3f144b34d2c8775215ed09aaf12e0e6ff4a1a44",
+  "expectedDriverSha256": "4B9FB818021BE196F2FDC47CF498C8F52797AF96B0FB381DB743303C4BBD9AA8",
+  "expectedAssignmentSha256": "401F6E61E4B3526D1594D8F7E11929415DD18A6E8BF90A34E69E4A7A68CA5CE6",
+  "expectedFreezeSha256": "A91288DADED0D34246BEF87BA3F144B34D2C8775215ED09AAF12E0E6FF4A1A44",
+  "expectedAttempt2Absent": true,
+  "checkoutBuildToolProcesses": 0,
+  "nativeLaunchStatus": "NOT_YET_STARTED"
+}

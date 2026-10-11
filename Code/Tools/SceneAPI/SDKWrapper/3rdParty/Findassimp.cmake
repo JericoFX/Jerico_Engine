@@ -67,6 +67,11 @@ block()
     set(RESTORE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
     PAL_Assimp_Lift_CxxFlagsWarnings()
 
+    # Use the pinned archive provenance without querying the engine ancestor repository.
+    set(ASSIMP_IGNORE_GIT_HASH ON)
+    set(GIT_COMMIT_HASH e0b52347)
+    set(GIT_BRANCH archive)
+
     # the below line is what actualy runs its CMakeList.txt file and executes targets and so on:
     FetchContent_MakeAvailable(assimp)
 

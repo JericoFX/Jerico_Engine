@@ -1,0 +1,26 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://github.com/lighttransport/LightUSD/archive/6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+    "status": 302,
+    "length": 0,
+    "contentType": "text/html; charset=utf-8",
+    "etag": "",
+    "location": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+    "status": 200,
+    "length": null,
+    "contentType": "application/x-gzip",
+    "etag": "\"aa6de07009e82926926962b04636efcebed7e34579fa03d2bf54a74328c1b85b\"",
+    "location": null,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

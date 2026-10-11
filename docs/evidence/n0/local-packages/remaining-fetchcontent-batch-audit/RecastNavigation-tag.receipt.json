@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/recastnavigation/recastnavigation/git/ref/tags/v1.6.0",
+  "status": 200,
+  "length": 369,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"8815aa69b7de1983bce776d523dfe6286387a822577b9484ace6a6900595464e\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

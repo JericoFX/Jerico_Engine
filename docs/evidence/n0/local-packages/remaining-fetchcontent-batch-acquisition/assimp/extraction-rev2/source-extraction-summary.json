@@ -1,0 +1,14 @@
+{
+  "status": "ORIGINAL ARCHIVE EXTRACTED; NATIVE UNVERIFIED",
+  "files": 3116,
+  "fileBytes": 245131867.0,
+  "links": 0,
+  "gitBlobMatches": 3116,
+  "extractionHashMatches": 3116,
+  "exportOmissionCount": 25,
+  "authoritySHA256": "2035122802A0F76FC7B6CD9CBDEBD4E59B9F3AE41043C984643E577D6A371E29",
+  "archiveSHA256": "00E4BF0B9D9D8E9B346FA3DD859C3CE5F3438451822D5933C07F65A76FC04745",
+  "immutableSnapshot": "F:/JericoEngine/Dependencies/assimp-6.0.4",
+  "initialFailedAuditPreserved": true,
+  "syntheticFiles": 0
+}

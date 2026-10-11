@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/refs/tags/v3.2.0.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/tar.gz/refs/tags/v3.2.0",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/tar.gz/refs/tags/v3.2.0",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"24ec9e26558f40c362e1d6407368bf2a2a2e9661364c4e8afe9a60c730486de3\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

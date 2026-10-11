@@ -1,0 +1,135 @@
+{
+  "revision": 3,
+  "sourceCount": 10,
+  "referenceCount": 14,
+  "regressionCount": 13,
+  "regressions": "RED_NOT_RUN",
+  "build": "NOT_RUN",
+  "ctest": "NOT_RUN",
+  "gui": "NOT_RUN",
+  "undoSaveReopen": "NOT_RUN",
+  "changesFromRev2": [
+    "Window shaderPath becomes mutable and passes ValidateDocumentPath before LoadAsset/Generate/factory, matching the exact document OS-normalized baseline path; no lax equality"
+  ],
+  "changedExistingRev2": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+      "beforeSha256": "628FE340CEEBECBED3E21373B9D3BEE88A7A0740530DD1DF93E969DB99EAF1F1",
+      "afterSha256": "D2888D6348B5A81D45FF1A1C400A30749F979E05E332AEE5BE1AB3E7EDCD23F0"
+    }
+  ],
+  "originalDocumentInputs": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp",
+      "sha256": "844D1C3B616D585BE9DBC0DE97D22A63BB63D463E145C6F7A358F57BCF161CFA",
+      "bytes": 31704
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.h",
+      "sha256": "8E886888E618351FD9D49ECF3F18019DB54F514D8BE3995FD5E48E48DC19E0A2",
+      "bytes": 4909
+    }
+  ],
+  "sourceLineChecks": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h",
+      "addedLines": 3,
+      "removedLines": 0,
+      "oldCRLF": 52,
+      "oldBareLF": 0,
+      "newCRLF": 55,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+      "addedLines": 246,
+      "removedLines": 0,
+      "oldCRLF": 296,
+      "oldBareLF": 0,
+      "newCRLF": 542,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.h",
+      "addedLines": 42,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 42
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.cpp",
+      "addedLines": 238,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 238
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake",
+      "addedLines": 2,
+      "removedLines": 0,
+      "oldCRLF": 32,
+      "oldBareLF": 0,
+      "newCRLF": 34,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "addedLines": 11,
+      "removedLines": 0,
+      "oldCRLF": 80,
+      "oldBareLF": 0,
+      "newCRLF": 91,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp",
+      "addedLines": 222,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 222
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/shadervariantgenerator_tests_files.cmake",
+      "addedLines": 7,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 7
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp",
+      "addedLines": 46,
+      "removedLines": 115,
+      "oldCRLF": 661,
+      "oldBareLF": 0,
+      "newCRLF": 592,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.h",
+      "addedLines": 0,
+      "removedLines": 9,
+      "oldCRLF": 102,
+      "oldBareLF": 0,
+      "newCRLF": 93,
+      "newBareLF": 0
+    }
+  ],
+  "untouched": "Public document buses and signatures, EndEdit, existing compact action defect, 13 generator tests, helper, historical scripts, other owners, rev1 receipts",
+  "limitations": [
+    "No native behavior/compiler evidence",
+    "No executed regression against document zero-list Undo, Save/Reopen, window cancellation or source reload",
+    "Applies exactly the captured validated snapshot; does not claim filesystem/asset lock atomicity after capture",
+    "FindMaterialAssetsUsingShader still returns vector without explicit database-failure result; recorded errors abort",
+    "Batch generation and standalone combinatorial dialog remain pending"
+  ],
+  "freezeSha256": "00142D9F855B8A826AA30236FA713D80F24A3F4AECDD910E94BC34297FE263A7",
+  "diffSha256": "FBDF8BF450D26395643E5110C7E32B7811CEAAC31EB5FD63D29BC162E23B4CCF"
+}

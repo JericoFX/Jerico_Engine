@@ -1,0 +1,15 @@
+{
+  "name": "v-hacd",
+  "URL": "https://codeload.github.com/kmammou/v-hacd/tar.gz/refs/tags/v4.1.0",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 7104847,
+  "sha256": "9fe895cd10ec995d2171b11bde97aaaa221b418a3aaed0f5d9a068ae057d626b",
+  "expectedSHA256": "9fe895cd10ec995d2171b11bde97aaaa221b418a3aaed0f5d9a068ae057d626b",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/v-hacd-4.1.0.tar.gz",
+  "commit": "22ec20a7f8ea221ab600df869369b9c6a258cb10",
+  "matchesDeclaredPin": true
+}

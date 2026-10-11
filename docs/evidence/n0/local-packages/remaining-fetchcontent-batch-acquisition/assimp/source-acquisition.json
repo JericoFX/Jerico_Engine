@@ -1,0 +1,15 @@
+{
+  "name": "assimp",
+  "URL": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 152382812,
+  "sha256": "00e4bf0b9d9d8e9b346fa3dd859c3ce5f3438451822d5933c07f65a76fc04745",
+  "expectedSHA256": "00e4bf0b9d9d8e9b346fa3dd859c3ce5f3438451822d5933c07f65a76fc04745",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/assimp-6.0.4.tar.gz",
+  "commit": "e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+  "matchesDeclaredPin": true
+}

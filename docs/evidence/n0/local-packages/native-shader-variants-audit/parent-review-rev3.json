@@ -1,0 +1,63 @@
+{
+  "status": "PARENT_SOURCE_REVIEW_ACCEPTED_FOR_NATIVE_VALIDATION_ONLY",
+  "checkout": "F:\\JericoEngine\\JericoEngine",
+  "branch": "development",
+  "sourceCount": 10,
+  "referenceCount": 14,
+  "parentRehashed": 24,
+  "inputMismatchCount": 0,
+  "metadata": [
+    {
+      "path": "source-freeze-native-shader-variants-rev3.json",
+      "sha256": "00142D9F855B8A826AA30236FA713D80F24A3F4AECDD910E94BC34297FE263A7",
+      "bytes": 5772
+    },
+    {
+      "path": "source-diff-rev3.patch",
+      "sha256": "FBDF8BF450D26395643E5110C7E32B7811CEAAC31EB5FD63D29BC162E23B4CCF",
+      "bytes": 51589
+    },
+    {
+      "path": "candidate-receipt-rev3.json",
+      "sha256": "43EFDBBCB5BEE2129F3463A74E6C8C599A97F1464669981E68DADCFBBF7E40E4",
+      "bytes": 4763
+    },
+    {
+      "path": "review-document-cmake-rev2.json",
+      "sha256": "5E1E119C7E6D8B79730438EAEF66665858CECB263A5AF2BEDF71C7B679D34E74",
+      "bytes": 2404
+    },
+    {
+      "path": "review-window-path-normalization-rev3.json",
+      "sha256": "5B662EB64FEFF99258A1EA4F2965264032EB04F89427D81A3A282E1F99412228",
+      "bytes": 1461
+    }
+  ],
+  "parentActualDiffRead": [
+    "Full helper/tests and initial Window action",
+    "Full document/header actual diff and updated Window snapshot flow",
+    "PAL test placement and normalized path change"
+  ],
+  "sourceChecks": [
+    "Production and tests compile same JE::ShaderVariants helper",
+    "No second renderer/material authority/cooker or new dependency",
+    "Setter exact snapshot including empty and validates asset/layout before commit",
+    "Shader load only initialization path uses helper and safe stable ID limit",
+    "Window fresh factory no automatic Save; baseline comparison before BeginEdit",
+    "Same normalized absolute path before asset/baseline/factory; final relative shader source path",
+    "Unused private UpdateOptionValue declaration/definition removed, public buses unchanged",
+    "13 meaningful generator regressions authored, not executed"
+  ],
+  "diffCheckExit": 0,
+  "newSourceWhitespaceCount": 0,
+  "compiler": "NOT_RUN",
+  "regressions": "13 NOT_RUN",
+  "windowDocumentUndoSaveReopen": "NOT_RUN",
+  "publication": "Do not publish product source as verified before native compile/integration",
+  "limitations": [
+    "No filesystem/asset lock atomicity claimed",
+    "Database-query vector cannot distinguish empty success from silent failure; real database test pending",
+    "Batch/combinatorial/NewProject/NewComponent native ports pending",
+    "EndEdit public behavior unchanged; no hints-only bug shown for this action"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/DLTcollab/sse2neon/commits/92f6de174717aef09033ad21568d5bb9e5470404",
+  "status": 200,
+  "length": 4846,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"1ec72a5082dc562b67b21cacf1e14f23e69dfd8f926ffc26f5e9959c1514912b\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

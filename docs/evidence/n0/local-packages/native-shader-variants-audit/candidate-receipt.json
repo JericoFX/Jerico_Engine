@@ -1,0 +1,125 @@
+{
+  "scope": "Single selected .shader native action; no batch/combinatorial dialog/NewProject/NewComponent port",
+  "changedSourceCount": 8,
+  "regressionCount": 13,
+  "regressions": "RED_NOT_RUN",
+  "build": "NOT_RUN",
+  "ctest": "NOT_RUN",
+  "gui": "NOT_RUN",
+  "saveUndoReopen": "NOT_RUN; existing real document APIs retained, not credited by algorithm tests",
+  "sourceChecks": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h",
+      "existingOriginal": true,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 3,
+      "removedLines": 0,
+      "oldCRLF": 52,
+      "oldBareLF": 0,
+      "newCRLF": 55,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+      "existingOriginal": true,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 230,
+      "removedLines": 0,
+      "oldCRLF": 296,
+      "oldBareLF": 0,
+      "newCRLF": 526,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.h",
+      "existingOriginal": false,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 42,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 42
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.cpp",
+      "existingOriginal": false,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 238,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 238
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake",
+      "existingOriginal": true,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 2,
+      "removedLines": 0,
+      "oldCRLF": 32,
+      "oldBareLF": 0,
+      "newCRLF": 34,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "existingOriginal": true,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 11,
+      "removedLines": 0,
+      "oldCRLF": 80,
+      "oldBareLF": 0,
+      "newCRLF": 91,
+      "newBareLF": 0
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp",
+      "existingOriginal": false,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 222,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 222
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/shadervariantgenerator_tests_files.cmake",
+      "existingOriginal": false,
+      "originalLinesPreservedInOrder": true,
+      "addedLines": 7,
+      "removedLines": 0,
+      "oldCRLF": 0,
+      "oldBareLF": 0,
+      "newCRLF": 0,
+      "newBareLF": 7
+    }
+  ],
+  "integration": "GetSourceAssetInfo/FindMaterialAssetsUsingShader/GetMaterialInstanceShaderItems; MaterialOwnsShaderOption; ShaderOptionGroup/ShaderVariantListSourceData; CreateDocumentFromFilePath/BeginEdit/Set/EndEdit/DestroyDocument",
+  "sourceContractCorrections": [
+    "Hint union across all materials excluding system keys",
+    "Dedup after material-owned projection and system overrides",
+    "Empty system expansion starts from actual Name default",
+    "Expansion skips groups missing that option instead of cloning duplicate rows",
+    "17-bit shader product stable-ID overflow rejected before expansion"
+  ],
+  "untouched": [
+    "Historical Python scripts",
+    "Existing compaction-action connection defect",
+    "Document and public buses",
+    "B38 freeze histories",
+    "Engine/Python/Multiplayer composition",
+    "Other writer/provider sources"
+  ],
+  "limitations": [
+    "No executed behavioral RED or GREEN",
+    "No native material asset/GUI/Undo/Save acceptance",
+    "Dependency-query bus returns vector without explicit database-failure status; recorded errors abort, native database behavior still pending",
+    "Stable IDs are reproducible for a fixed sorted material input and descriptor order; regeneration with changed variants is not an incremental stable-ID preservation scheme",
+    "Project-path runtime and asynchronous asset rebuild behavior remain native integration gates"
+  ],
+  "freezeSha256": "7CE0A18998A0B2CD34D9783CB0D99515D700DF2A3F2460DEBA0B9E1D47CD018A",
+  "diffSha256": "5160722C5CEE2CC5BDEDDFCC4CD8F519150E2361534220CA326364B64AA4292B"
+}

@@ -1,0 +1,1673 @@
+{
+  "afterCount": 108,
+  "scope": "Current engine recursive external registration metadata; does not evaluate CMake or load runtime",
+  "before": [
+    {
+      "dependencies": [],
+      "gemName": "Achievements",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Achievements"
+    },
+    {
+      "dependencies": [],
+      "gemName": "AFR",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AFR"
+    },
+    {
+      "dependencies": [
+        "Compression"
+      ],
+      "gemName": "Archive",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Archive"
+    },
+    {
+      "dependencies": [],
+      "gemName": "AssetValidation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AssetValidation"
+    },
+    {
+      "dependencies": [
+        "Atom_Feature_Common",
+        "AtomShader",
+        "Atom_Bootstrap",
+        "Atom_Component_DebugCamera",
+        "Atom_RHI",
+        "Atom_RPI",
+        "AtomToolsFramework",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "Atom_AtomBridge"
+      ],
+      "gemName": "Atom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom"
+    },
+    {
+      "dependencies": [
+        "Sponza",
+        "ReferenceMaterials"
+      ],
+      "gemName": "AtomContent",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent"
+    },
+    {
+      "dependencies": [
+        "Atom_AtomBridge",
+        "AtomFont",
+        "AtomImGuiTools",
+        "AtomRenderOptions",
+        "AtomViewportDisplayIcons",
+        "AtomViewportDisplayInfo",
+        "CommonFeaturesAtom",
+        "EditorModeFeedback",
+        "EMotionFX_Atom",
+        "ImguiAtom"
+      ],
+      "gemName": "AtomLyIntegration",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration"
+    },
+    {
+      "dependencies": [],
+      "gemName": "AtomTressFX",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomTressFX"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral"
+      ],
+      "gemName": "AudioSystem",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AudioSystem"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "gemName": "BarrierInput",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\BarrierInput"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "gemName": "Camera",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera"
+    },
+    {
+      "dependencies": [],
+      "gemName": "CameraFramework",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework"
+    },
+    {
+      "dependencies": [],
+      "gemName": "CertificateManager",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CertificateManager"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Compression",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Compression"
+    },
+    {
+      "dependencies": [],
+      "gemName": "CrashReporting",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CrashReporting"
+    },
+    {
+      "dependencies": [],
+      "gemName": "CustomAssetExample",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CustomAssetExample"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Bootstrap"
+      ],
+      "gemName": "DebugDraw",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DebugDraw"
+    },
+    {
+      "dependencies": [],
+      "gemName": "DevTextures",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DevTextures"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom",
+        "LmbrCentral"
+      ],
+      "gemName": "DiffuseProbeGrid",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DiffuseProbeGrid"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "LmbrCentral"
+      ],
+      "gemName": "EMotionFX",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\EMotionFX"
+    },
+    {
+      "dependencies": [],
+      "gemName": "ExpressionEvaluation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ExpressionEvaluation"
+    },
+    {
+      "dependencies": [
+        "GradientSignal",
+        "LmbrCentral",
+        "SurfaceData"
+      ],
+      "gemName": "FastNoise",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\FastNoise"
+    },
+    {
+      "dependencies": [],
+      "gemName": "GameState",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GameState"
+    },
+    {
+      "dependencies": [
+        "GameState",
+        "LocalUser",
+        "LyShine",
+        "SaveData",
+        "MessagePopup",
+        "LmbrCentral",
+        "UiBasics",
+        "LyShineExamples"
+      ],
+      "gemName": "GameStateSamples",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GameStateSamples"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "gemName": "Gestures",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Gestures"
+    },
+    {
+      "dependencies": [
+        "SurfaceData",
+        "ImageProcessingAtom",
+        "LmbrCentral"
+      ],
+      "gemName": "GradientSignal",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GradientSignal"
+    },
+    {
+      "dependencies": [],
+      "gemName": "GraphCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphCanvas"
+    },
+    {
+      "dependencies": [
+        "GraphCanvas"
+      ],
+      "gemName": "GraphModel",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphModel"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral"
+      ],
+      "gemName": "ImGui",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui"
+    },
+    {
+      "dependencies": [],
+      "gemName": "InAppPurchases",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\InAppPurchases"
+    },
+    {
+      "dependencies": [
+        "GraphModel",
+        "GradientSignal",
+        "SurfaceData",
+        "LmbrCentral",
+        "GraphCanvas"
+      ],
+      "gemName": "LandscapeCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LandscapeCanvas"
+    },
+    {
+      "dependencies": [],
+      "gemName": "LmbrCentral",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LmbrCentral"
+    },
+    {
+      "dependencies": [],
+      "gemName": "LocalUser",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LocalUser"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral",
+        "Atom_RPI",
+        "Atom",
+        "Atom_Bootstrap",
+        "AtomFont",
+        "TextureAtlas",
+        "AtomToolsFramework",
+        "UiBasics"
+      ],
+      "gemName": "LyShine",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShine"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral",
+        "LyShine"
+      ],
+      "gemName": "LyShineExamples",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShineExamples"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral",
+        "Atom",
+        "Atom_Bootstrap",
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "gemName": "Maestro",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Maestro"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Meshlets",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Meshlets"
+    },
+    {
+      "dependencies": [
+        "LyShine"
+      ],
+      "gemName": "MessagePopup",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MessagePopup"
+    },
+    {
+      "dependencies": [
+        "AudioSystem"
+      ],
+      "gemName": "Microphone",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Microphone"
+    },
+    {
+      "dependencies": [],
+      "gemName": "MiniAudio",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MiniAudio"
+    },
+    {
+      "dependencies": [
+        "EMotionFX"
+      ],
+      "gemName": "MotionMatching",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching"
+    },
+    {
+      "dependencies": [
+        "PhysX",
+        "CertificateManager",
+        "Atom_Feature_Common",
+        "ImGui"
+      ],
+      "gemName": "Multiplayer",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer"
+    },
+    {
+      "dependencies": [],
+      "gemName": "MultiplayerCompression",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MultiplayerCompression"
+    },
+    {
+      "dependencies": [
+        "CommonFeaturesAtom",
+        "EMotionFX"
+      ],
+      "gemName": "NvCloth",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\NvCloth"
+    },
+    {
+      "dependencies": [
+        null
+      ],
+      "gemName": "OpenParticleSystem",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\OpenParticleSystem"
+    },
+    {
+      "dependencies": [],
+      "gemName": "PhysXCommon",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Common"
+    },
+    {
+      "dependencies": [
+        "PhysXCommon",
+        "LmbrCentral",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "PhysX5",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Core\\PhysX5"
+    },
+    {
+      "dependencies": [
+        "PhysX5",
+        "ImGui"
+      ],
+      "gemName": "PhysX5Debug",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\PhysX5"
+    },
+    {
+      "dependencies": [],
+      "gemName": "PrefabBuilder",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Presence",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Presence"
+    },
+    {
+      "dependencies": [],
+      "gemName": "PrimitiveAssets",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets"
+    },
+    {
+      "dependencies": [
+        "ImGui"
+      ],
+      "gemName": "Profiler",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler"
+    },
+    {
+      "dependencies": [],
+      "gemName": "RecastNavigation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\RecastNavigation"
+    },
+    {
+      "dependencies": [],
+      "gemName": "RemoteTools",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\RemoteTools"
+    },
+    {
+      "dependencies": [],
+      "gemName": "SaveData",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SaveData"
+    },
+    {
+      "dependencies": [],
+      "gemName": "SceneLoggingExample",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneLoggingExample"
+    },
+    {
+      "dependencies": [],
+      "gemName": "SceneProcessing",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneProcessing"
+    },
+    {
+      "dependencies": [
+        null
+      ],
+      "gemName": "ScriptAutomation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptAutomation"
+    },
+    {
+      "dependencies": [
+        "ScriptEvents",
+        "ExpressionEvaluation",
+        "GraphCanvas"
+      ],
+      "gemName": "ScriptCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvas"
+    },
+    {
+      "dependencies": [
+        "ScriptCanvas",
+        "GraphCanvas"
+      ],
+      "gemName": "ScriptCanvasDeveloper",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper"
+    },
+    {
+      "dependencies": [
+        "ScriptCanvas"
+      ],
+      "gemName": "ScriptCanvasPhysics",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasPhysics"
+    },
+    {
+      "dependencies": [
+        "ScriptCanvas",
+        "GraphCanvas",
+        "ScriptEvents"
+      ],
+      "gemName": "ScriptCanvasTesting",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasTesting"
+    },
+    {
+      "dependencies": [],
+      "gemName": "ScriptedEntityTweener",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptedEntityTweener"
+    },
+    {
+      "dependencies": [],
+      "gemName": "ScriptEvents",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptEvents"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "SkyAtmosphere",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SkyAtmosphere"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Stars",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Stars"
+    },
+    {
+      "dependencies": [
+        "CameraFramework",
+        "LmbrCentral"
+      ],
+      "gemName": "StartingPointCamera",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera"
+    },
+    {
+      "dependencies": [
+        "ScriptCanvas"
+      ],
+      "gemName": "StartingPointInput",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointInput"
+    },
+    {
+      "dependencies": [],
+      "gemName": "StartingPointMovement",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointMovement"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Streamer",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral",
+        "Atom_RPI",
+        "Atom_Feature_Common"
+      ],
+      "gemName": "SurfaceData",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SurfaceData"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom",
+        "GradientSignal",
+        "SurfaceData",
+        "LmbrCentral"
+      ],
+      "gemName": "Terrain",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Terrain"
+    },
+    {
+      "dependencies": [],
+      "gemName": "TestAssetBuilder",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TestAssetBuilder"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "ImageProcessingAtom"
+      ],
+      "gemName": "TextureAtlas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TextureAtlas"
+    },
+    {
+      "dependencies": [],
+      "gemName": "TickBusOrderViewer",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TickBusOrderViewer"
+    },
+    {
+      "dependencies": [],
+      "gemName": "UiBasics",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\UiBasics"
+    },
+    {
+      "dependencies": [
+        "LmbrCentral",
+        "SurfaceData",
+        "CommonFeaturesAtom",
+        "GradientSignal"
+      ],
+      "gemName": "Vegetation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Vegetation"
+    },
+    {
+      "dependencies": [],
+      "gemName": "VideoPlaybackFramework",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\VideoPlaybackFramework"
+    },
+    {
+      "dependencies": [
+        "LyShine",
+        "UiBasics"
+      ],
+      "gemName": "VirtualGamepad",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\VirtualGamepad"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Feature_Common",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "WhiteBox",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_RHI"
+      ],
+      "gemName": "ImageProcessingAtom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\ImageProcessingAtom"
+    },
+    {
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "gemName": "AtomShader",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "gemName": "Atom_Bootstrap",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "gemName": "Atom_Component_DebugCamera",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "ImGui",
+        "Atom_RHI"
+      ],
+      "gemName": "Atom_Feature_Common",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common"
+    },
+    {
+      "dependencies": [
+        "Atom_RHI_DX12",
+        "Atom_RHI_Metal",
+        "Atom_RHI_Vulkan",
+        "Atom_RHI_Null"
+      ],
+      "gemName": "Atom_RHI",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI"
+    },
+    {
+      "dependencies": [
+        "Atom_RHI"
+      ],
+      "gemName": "Atom_RPI",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Bootstrap",
+        "GraphCanvas",
+        "GraphModel"
+      ],
+      "gemName": "AtomToolsFramework",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework"
+    },
+    {
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "MaterialCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas"
+    },
+    {
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "MaterialEditor",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor"
+    },
+    {
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "PassCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas"
+    },
+    {
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "ShaderManagementConsole",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Sponza",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\Sponza"
+    },
+    {
+      "dependencies": [],
+      "gemName": "ReferenceMaterials",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\ReferenceMaterials"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Atom_TestData",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\TestData"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Bootstrap",
+        "Atom_RHI",
+        "Atom_RHI_Null",
+        "Atom_Feature_Common",
+        "Atom_Component_DebugCamera",
+        "AtomImGuiTools",
+        "AtomRenderOptions",
+        "CommonFeaturesAtom",
+        "EMotionFX_Atom",
+        "ImguiAtom",
+        "AtomFont",
+        "AtomViewportDisplayInfo",
+        "AtomShader",
+        "ImageProcessingAtom",
+        "AtomToolsFramework",
+        "AtomViewportDisplayIcons",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole"
+      ],
+      "gemName": "Atom_AtomBridge",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge"
+    },
+    {
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "gemName": "AtomFont",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont"
+    },
+    {
+      "dependencies": [
+        "ImguiAtom"
+      ],
+      "gemName": "AtomImGuiTools",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools"
+    },
+    {
+      "dependencies": [
+        "Atom_RPI"
+      ],
+      "gemName": "AtomRenderOptions",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomRenderOptions"
+    },
+    {
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI",
+        "Atom_Bootstrap"
+      ],
+      "gemName": "AtomViewportDisplayIcons",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons"
+    },
+    {
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ],
+      "gemName": "AtomViewportDisplayInfo",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayInfo"
+    },
+    {
+      "dependencies": [
+        "Atom_Feature_Common",
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
+        "Atom_Bootstrap",
+        "Atom_RPI",
+        "AtomToolsFramework"
+      ],
+      "gemName": "CommonFeaturesAtom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures"
+    },
+    {
+      "dependencies": [
+        "Atom_Feature_Common",
+        "Atom_RPI",
+        "Atom_RHI",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "EditorModeFeedback",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback"
+    },
+    {
+      "dependencies": [
+        "EMotionFX",
+        "Atom_Feature_Common",
+        "Atom_RPI",
+        "Atom_RHI",
+        "CommonFeaturesAtom"
+      ],
+      "gemName": "EMotionFX_Atom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EMotionFXAtom"
+    },
+    {
+      "dependencies": [
+        "ImGui",
+        "Atom_Feature_Common"
+      ],
+      "gemName": "ImguiAtom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom"
+    },
+    {
+      "dependencies": [
+        "ScriptCanvas"
+      ],
+      "gemName": "Multiplayer_ScriptCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Multiplayer_ScriptCanvas"
+    },
+    {
+      "dependencies": [],
+      "gemName": "StreamerProfiler",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer\\StreamerProfiler"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Atom_RHI_DX12",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\DX12"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Atom_RHI_Metal",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Atom_RHI_Null",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Null"
+    },
+    {
+      "dependencies": [],
+      "gemName": "Atom_RHI_Vulkan",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan"
+    }
+  ],
+  "removedPaths": [
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\MultiplayerCompression",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Multiplayer_ScriptCanvas"
+  ],
+  "after": [
+    {
+      "gemName": "Achievements",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Achievements",
+      "dependencies": []
+    },
+    {
+      "gemName": "AFR",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AFR",
+      "dependencies": []
+    },
+    {
+      "gemName": "Archive",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Archive",
+      "dependencies": [
+        "Compression"
+      ]
+    },
+    {
+      "gemName": "AssetValidation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AssetValidation",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom",
+      "dependencies": [
+        "Atom_Feature_Common",
+        "AtomShader",
+        "Atom_Bootstrap",
+        "Atom_Component_DebugCamera",
+        "Atom_RHI",
+        "Atom_RPI",
+        "AtomToolsFramework",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "Atom_AtomBridge"
+      ]
+    },
+    {
+      "gemName": "AtomContent",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent",
+      "dependencies": [
+        "Sponza",
+        "ReferenceMaterials"
+      ]
+    },
+    {
+      "gemName": "AtomLyIntegration",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration",
+      "dependencies": [
+        "Atom_AtomBridge",
+        "AtomFont",
+        "AtomImGuiTools",
+        "AtomRenderOptions",
+        "AtomViewportDisplayIcons",
+        "AtomViewportDisplayInfo",
+        "CommonFeaturesAtom",
+        "EditorModeFeedback",
+        "EMotionFX_Atom",
+        "ImguiAtom"
+      ]
+    },
+    {
+      "gemName": "AtomTressFX",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomTressFX",
+      "dependencies": []
+    },
+    {
+      "gemName": "AudioSystem",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AudioSystem",
+      "dependencies": [
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "BarrierInput",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\BarrierInput",
+      "dependencies": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "Camera",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera",
+      "dependencies": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "CameraFramework",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework",
+      "dependencies": []
+    },
+    {
+      "gemName": "CertificateManager",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CertificateManager",
+      "dependencies": []
+    },
+    {
+      "gemName": "Compression",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Compression",
+      "dependencies": []
+    },
+    {
+      "gemName": "CrashReporting",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CrashReporting",
+      "dependencies": []
+    },
+    {
+      "gemName": "CustomAssetExample",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CustomAssetExample",
+      "dependencies": []
+    },
+    {
+      "gemName": "DebugDraw",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DebugDraw",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Bootstrap"
+      ]
+    },
+    {
+      "gemName": "DevTextures",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DevTextures",
+      "dependencies": []
+    },
+    {
+      "gemName": "DiffuseProbeGrid",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DiffuseProbeGrid",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom",
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "EMotionFX",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\EMotionFX",
+      "dependencies": [
+        "Atom_RPI",
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "ExpressionEvaluation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ExpressionEvaluation",
+      "dependencies": []
+    },
+    {
+      "gemName": "FastNoise",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\FastNoise",
+      "dependencies": [
+        "GradientSignal",
+        "LmbrCentral",
+        "SurfaceData"
+      ]
+    },
+    {
+      "gemName": "GameState",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GameState",
+      "dependencies": []
+    },
+    {
+      "gemName": "GameStateSamples",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GameStateSamples",
+      "dependencies": [
+        "GameState",
+        "LocalUser",
+        "LyShine",
+        "SaveData",
+        "MessagePopup",
+        "LmbrCentral",
+        "UiBasics",
+        "LyShineExamples"
+      ]
+    },
+    {
+      "gemName": "Gestures",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Gestures",
+      "dependencies": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "GradientSignal",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GradientSignal",
+      "dependencies": [
+        "SurfaceData",
+        "ImageProcessingAtom",
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "GraphCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphCanvas",
+      "dependencies": []
+    },
+    {
+      "gemName": "GraphModel",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphModel",
+      "dependencies": [
+        "GraphCanvas"
+      ]
+    },
+    {
+      "gemName": "ImGui",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui",
+      "dependencies": [
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "InAppPurchases",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\InAppPurchases",
+      "dependencies": []
+    },
+    {
+      "gemName": "LandscapeCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LandscapeCanvas",
+      "dependencies": [
+        "GraphModel",
+        "GradientSignal",
+        "SurfaceData",
+        "LmbrCentral",
+        "GraphCanvas"
+      ]
+    },
+    {
+      "gemName": "LmbrCentral",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LmbrCentral",
+      "dependencies": []
+    },
+    {
+      "gemName": "LocalUser",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LocalUser",
+      "dependencies": []
+    },
+    {
+      "gemName": "LyShine",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShine",
+      "dependencies": [
+        "LmbrCentral",
+        "Atom_RPI",
+        "Atom",
+        "Atom_Bootstrap",
+        "AtomFont",
+        "TextureAtlas",
+        "AtomToolsFramework",
+        "UiBasics"
+      ]
+    },
+    {
+      "gemName": "LyShineExamples",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShineExamples",
+      "dependencies": [
+        "LmbrCentral",
+        "LyShine"
+      ]
+    },
+    {
+      "gemName": "Maestro",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Maestro",
+      "dependencies": [
+        "LmbrCentral",
+        "Atom",
+        "Atom_Bootstrap",
+        "Atom_RHI",
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "Meshlets",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Meshlets",
+      "dependencies": []
+    },
+    {
+      "gemName": "MessagePopup",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MessagePopup",
+      "dependencies": [
+        "LyShine"
+      ]
+    },
+    {
+      "gemName": "Microphone",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Microphone",
+      "dependencies": [
+        "AudioSystem"
+      ]
+    },
+    {
+      "gemName": "MiniAudio",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MiniAudio",
+      "dependencies": []
+    },
+    {
+      "gemName": "MotionMatching",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching",
+      "dependencies": [
+        "EMotionFX"
+      ]
+    },
+    {
+      "gemName": "NvCloth",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\NvCloth",
+      "dependencies": [
+        "CommonFeaturesAtom",
+        "EMotionFX"
+      ]
+    },
+    {
+      "gemName": "OpenParticleSystem",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\OpenParticleSystem",
+      "dependencies": [
+        null
+      ]
+    },
+    {
+      "gemName": "PhysXCommon",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Common",
+      "dependencies": []
+    },
+    {
+      "gemName": "PhysX5",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Core\\PhysX5",
+      "dependencies": [
+        "PhysXCommon",
+        "LmbrCentral",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "PhysX5Debug",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\PhysX5",
+      "dependencies": [
+        "PhysX5",
+        "ImGui"
+      ]
+    },
+    {
+      "gemName": "PrefabBuilder",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder",
+      "dependencies": []
+    },
+    {
+      "gemName": "Presence",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Presence",
+      "dependencies": []
+    },
+    {
+      "gemName": "PrimitiveAssets",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets",
+      "dependencies": []
+    },
+    {
+      "gemName": "Profiler",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler",
+      "dependencies": [
+        "ImGui"
+      ]
+    },
+    {
+      "gemName": "RecastNavigation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\RecastNavigation",
+      "dependencies": []
+    },
+    {
+      "gemName": "RemoteTools",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\RemoteTools",
+      "dependencies": []
+    },
+    {
+      "gemName": "SaveData",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SaveData",
+      "dependencies": []
+    },
+    {
+      "gemName": "SceneLoggingExample",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneLoggingExample",
+      "dependencies": []
+    },
+    {
+      "gemName": "SceneProcessing",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneProcessing",
+      "dependencies": []
+    },
+    {
+      "gemName": "ScriptAutomation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptAutomation",
+      "dependencies": [
+        null
+      ]
+    },
+    {
+      "gemName": "ScriptCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvas",
+      "dependencies": [
+        "ScriptEvents",
+        "ExpressionEvaluation",
+        "GraphCanvas"
+      ]
+    },
+    {
+      "gemName": "ScriptCanvasDeveloper",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper",
+      "dependencies": [
+        "ScriptCanvas",
+        "GraphCanvas"
+      ]
+    },
+    {
+      "gemName": "ScriptCanvasPhysics",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasPhysics",
+      "dependencies": [
+        "ScriptCanvas"
+      ]
+    },
+    {
+      "gemName": "ScriptCanvasTesting",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasTesting",
+      "dependencies": [
+        "ScriptCanvas",
+        "GraphCanvas",
+        "ScriptEvents"
+      ]
+    },
+    {
+      "gemName": "ScriptedEntityTweener",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptedEntityTweener",
+      "dependencies": []
+    },
+    {
+      "gemName": "ScriptEvents",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptEvents",
+      "dependencies": []
+    },
+    {
+      "gemName": "SkyAtmosphere",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SkyAtmosphere",
+      "dependencies": [
+        "Atom_RPI",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "Stars",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Stars",
+      "dependencies": []
+    },
+    {
+      "gemName": "StartingPointCamera",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera",
+      "dependencies": [
+        "CameraFramework",
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "StartingPointInput",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointInput",
+      "dependencies": [
+        "ScriptCanvas"
+      ]
+    },
+    {
+      "gemName": "StartingPointMovement",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointMovement",
+      "dependencies": []
+    },
+    {
+      "gemName": "Streamer",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer",
+      "dependencies": []
+    },
+    {
+      "gemName": "SurfaceData",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SurfaceData",
+      "dependencies": [
+        "LmbrCentral",
+        "Atom_RPI",
+        "Atom_Feature_Common"
+      ]
+    },
+    {
+      "gemName": "Terrain",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Terrain",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom",
+        "GradientSignal",
+        "SurfaceData",
+        "LmbrCentral"
+      ]
+    },
+    {
+      "gemName": "TestAssetBuilder",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TestAssetBuilder",
+      "dependencies": []
+    },
+    {
+      "gemName": "TextureAtlas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TextureAtlas",
+      "dependencies": [
+        "Atom_RPI",
+        "ImageProcessingAtom"
+      ]
+    },
+    {
+      "gemName": "TickBusOrderViewer",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TickBusOrderViewer",
+      "dependencies": []
+    },
+    {
+      "gemName": "UiBasics",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\UiBasics",
+      "dependencies": []
+    },
+    {
+      "gemName": "Vegetation",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Vegetation",
+      "dependencies": [
+        "LmbrCentral",
+        "SurfaceData",
+        "CommonFeaturesAtom",
+        "GradientSignal"
+      ]
+    },
+    {
+      "gemName": "VideoPlaybackFramework",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\VideoPlaybackFramework",
+      "dependencies": []
+    },
+    {
+      "gemName": "VirtualGamepad",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\VirtualGamepad",
+      "dependencies": [
+        "LyShine",
+        "UiBasics"
+      ]
+    },
+    {
+      "gemName": "WhiteBox",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Feature_Common",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "ImageProcessingAtom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\ImageProcessingAtom",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_RHI"
+      ]
+    },
+    {
+      "gemName": "AtomShader",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "Atom_Bootstrap",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap",
+      "dependencies": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "Atom_Component_DebugCamera",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera",
+      "dependencies": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "Atom_Feature_Common",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common",
+      "dependencies": [
+        "Atom_RPI",
+        "ImGui",
+        "Atom_RHI"
+      ]
+    },
+    {
+      "gemName": "Atom_RHI",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI",
+      "dependencies": [
+        "Atom_RHI_DX12",
+        "Atom_RHI_Metal",
+        "Atom_RHI_Vulkan",
+        "Atom_RHI_Null"
+      ]
+    },
+    {
+      "gemName": "Atom_RPI",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI",
+      "dependencies": [
+        "Atom_RHI"
+      ]
+    },
+    {
+      "gemName": "AtomToolsFramework",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Bootstrap",
+        "GraphCanvas",
+        "GraphModel"
+      ]
+    },
+    {
+      "gemName": "MaterialCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "MaterialEditor",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "PassCanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "ShaderManagementConsole",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole",
+      "dependencies": [
+        "AtomToolsFramework",
+        "Atom_RPI",
+        "Atom_RHI",
+        "Atom_Feature_Common",
+        "ImageProcessingAtom",
+        "Atom_Component_DebugCamera",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "Sponza",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\Sponza",
+      "dependencies": []
+    },
+    {
+      "gemName": "ReferenceMaterials",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\ReferenceMaterials",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom_TestData",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\TestData",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom_AtomBridge",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge",
+      "dependencies": [
+        "Atom_RPI",
+        "Atom_Bootstrap",
+        "Atom_RHI",
+        "Atom_RHI_Null",
+        "Atom_Feature_Common",
+        "Atom_Component_DebugCamera",
+        "AtomImGuiTools",
+        "AtomRenderOptions",
+        "CommonFeaturesAtom",
+        "EMotionFX_Atom",
+        "ImguiAtom",
+        "AtomFont",
+        "AtomViewportDisplayInfo",
+        "AtomShader",
+        "ImageProcessingAtom",
+        "AtomToolsFramework",
+        "AtomViewportDisplayIcons",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole"
+      ]
+    },
+    {
+      "gemName": "AtomFont",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "AtomImGuiTools",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools",
+      "dependencies": [
+        "ImguiAtom"
+      ]
+    },
+    {
+      "gemName": "AtomRenderOptions",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomRenderOptions",
+      "dependencies": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "AtomViewportDisplayIcons",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI",
+        "Atom_Bootstrap"
+      ]
+    },
+    {
+      "gemName": "AtomViewportDisplayInfo",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayInfo",
+      "dependencies": [
+        "Atom_RHI",
+        "Atom_RPI"
+      ]
+    },
+    {
+      "gemName": "CommonFeaturesAtom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures",
+      "dependencies": [
+        "Atom_Feature_Common",
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
+        "Atom_Bootstrap",
+        "Atom_RPI",
+        "AtomToolsFramework"
+      ]
+    },
+    {
+      "gemName": "EditorModeFeedback",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback",
+      "dependencies": [
+        "Atom_Feature_Common",
+        "Atom_RPI",
+        "Atom_RHI",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "EMotionFX_Atom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EMotionFXAtom",
+      "dependencies": [
+        "EMotionFX",
+        "Atom_Feature_Common",
+        "Atom_RPI",
+        "Atom_RHI",
+        "CommonFeaturesAtom"
+      ]
+    },
+    {
+      "gemName": "ImguiAtom",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom",
+      "dependencies": [
+        "ImGui",
+        "Atom_Feature_Common"
+      ]
+    },
+    {
+      "gemName": "StreamerProfiler",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer\\StreamerProfiler",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom_RHI_DX12",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\DX12",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom_RHI_Metal",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom_RHI_Null",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Null",
+      "dependencies": []
+    },
+    {
+      "gemName": "Atom_RHI_Vulkan",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan",
+      "dependencies": []
+    }
+  ],
+  "otherRegisteredPathsPreserved": true,
+  "remainingGemMetadataDependers": [],
+  "addedPaths": [],
+  "beforeCount": 111
+}

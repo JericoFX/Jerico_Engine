@@ -1,0 +1,12 @@
+{
+  "status": "PREPARED FINALIZER; NOT EXECUTED",
+  "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-fetchcontent-batch-final/FinalizeRootBatchRev2.ps1",
+  "sha256": "7634D2E9658CFD1F06D3A40B671FC1EB1CEED12A47B12DBE7F8DFC978BE13028",
+  "ASTErrors": 0,
+  "change": "Derives SMC counts from exact parent-approved freeze; accepts explicit provenance paths instead of assuming diff/receipt filenames",
+  "baseInputs": 15498,
+  "basePreparationSHA256": "980BBAF6FB715B0D6AAF61D878264E3C061CD8D65BEB3D736C9D100A23FAEAC2",
+  "priorFinalizerPreserved": true,
+  "pending": "Approved SMC freeze SHA, parent review SHA and exact metadata paths",
+  "nativeExecuted": false
+}

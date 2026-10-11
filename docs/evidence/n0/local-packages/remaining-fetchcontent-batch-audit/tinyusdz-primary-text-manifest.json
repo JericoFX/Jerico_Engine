@@ -1,0 +1,1159 @@
+{
+  "textFiles": 115,
+  "files": [
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/CMakeLists.txt",
+      "bytes": 48102,
+      "gitBlobSHA1": "297c6ff8c2f7f477a9029da4b6f993cda9674cba",
+      "gitBlobMatched": true,
+      "sha256": "f2891d1fde06d350ec0baa00519f0cd994f267ff387005108de4f03f6c375385"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/LICENSE",
+      "bytes": 672,
+      "gitBlobSHA1": "f4dd9c6c48ccc456ae6c12d81f03240a80e69521",
+      "gitBlobMatched": true,
+      "sha256": "956559a8307fa5d9393752f8684f41345231046481b4a2155fa7503e4fe9c113"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "android/app/src/main/cpp/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\android\\app\\src\\main\\cpp\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/android/app/src/main/cpp/CMakeLists.txt",
+      "bytes": 5220,
+      "gitBlobSHA1": "ec7afed51baece8b2b00132cd7a41548e808a52c",
+      "gitBlobMatched": true,
+      "sha256": "04b9ec3ea637f4c594a8ed34e02112e918afc9f7ebe9e4badab0de140c6b2d7c"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/ClangClCMakeCompileRules.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\ClangClCMakeCompileRules.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/ClangClCMakeCompileRules.cmake",
+      "bytes": 748,
+      "gitBlobSHA1": "a3bcf1c24a9186516616909996535d47abc91129",
+      "gitBlobMatched": true,
+      "sha256": "6166994e9bf8cd8eefdf6f05e9de3e48ed1e9cd1ea2b398ef41536b98677eefa"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/clang-cl-msvc-windows.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\clang-cl-msvc-windows.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/clang-cl-msvc-windows.cmake",
+      "bytes": 13000,
+      "gitBlobSHA1": "e2eac1428d14da1f1b53cb919b3ef75f4e9bdc1b",
+      "gitBlobMatched": true,
+      "sha256": "39c324234bb11a432341b4f3c504c1990d1527f818273f62e95c0b3120e7e251"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/clang-cl-msvc-wsl.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\clang-cl-msvc-wsl.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/clang-cl-msvc-wsl.cmake",
+      "bytes": 12972,
+      "gitBlobSHA1": "ffe21314072e644186ffb093029a13e5e8d7ae37",
+      "gitBlobMatched": true,
+      "sha256": "077cc93cba20bf1cabc879c5a7b612b2d406d7ced92ff9fbf3aec46044f78906"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/ios.toolchain.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\ios.toolchain.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/ios.toolchain.cmake",
+      "bytes": 3353,
+      "gitBlobSHA1": "1e7bf7040b74cc6843f4facd89eac1bd90cc5167",
+      "gitBlobMatched": true,
+      "sha256": "cbd246958bd26594125d9ad63f69d395711d873bea6cee3c8877d7bf55e9558e"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/linux_i386.toolchain.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\linux_i386.toolchain.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/linux_i386.toolchain.cmake",
+      "bytes": 618,
+      "gitBlobSHA1": "9c4a5094305ef3cc6e7677fe85adf5b35fae8969",
+      "gitBlobMatched": true,
+      "sha256": "fedc9a67a164919e0eed8efee6114e055891bee5f907596447b0b6426d10e495"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/lld-linux.toolchain.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\lld-linux.toolchain.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/lld-linux.toolchain.cmake",
+      "bytes": 171,
+      "gitBlobSHA1": "c0fa81bcb63a7f06826dc7626bd201db277c446c",
+      "gitBlobMatched": true,
+      "sha256": "c2d73808fa38c1285e9ecb89aeeb3091d200c03292c388ed26ca96f24fb5fbc1"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/llvm-mingw-cross.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\llvm-mingw-cross.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/llvm-mingw-cross.cmake",
+      "bytes": 881,
+      "gitBlobSHA1": "f7e1759c2e4783f26de83ba19089265a9514864e",
+      "gitBlobMatched": true,
+      "sha256": "f15a2825aa33d4b73949aa2c67f831064efc46341fa5265050875313ef09b586"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/llvm-mingw-win64.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\llvm-mingw-win64.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/llvm-mingw-win64.cmake",
+      "bytes": 761,
+      "gitBlobSHA1": "439b5240fa1d63e9d11d3dd7846c140c57e401e3",
+      "gitBlobMatched": true,
+      "sha256": "38d4c2d6628bc6ae00fee8796b079fb5f2f341c682f6c6c9afd982a6872ab55f"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/mingw64-cross.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\mingw64-cross.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/mingw64-cross.cmake",
+      "bytes": 681,
+      "gitBlobSHA1": "479cdd4d2d106676c46ec4aaab32ed3331e4390e",
+      "gitBlobMatched": true,
+      "sha256": "c2b62b0c269dac4fdf93485496e912e178de491da23412533befc8d60a33437a"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/sanitizers/FindASan.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindASan.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/sanitizers/FindASan.cmake",
+      "bytes": 2144,
+      "gitBlobSHA1": "98ea7cb311ca05384d3fc1f6c3f1575bb9cc6de7",
+      "gitBlobMatched": true,
+      "sha256": "bd30b1c3cb0682b8a2b0b599f6c51fbf99ef4908b00eba8826f0d484c623b01b"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/sanitizers/FindMSan.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindMSan.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/sanitizers/FindMSan.cmake",
+      "bytes": 2292,
+      "gitBlobSHA1": "22d0050e97c5e42ea387c972d258e4d9578e3e44",
+      "gitBlobMatched": true,
+      "sha256": "55e40f0994b47f8e779622af2007c69252d9456be99f4aa4fba7dd49c23d5580"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/sanitizers/FindSanitizers.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindSanitizers.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/sanitizers/FindSanitizers.cmake",
+      "bytes": 3737,
+      "gitBlobSHA1": "101bab8439f8d9560a01653a7a6795be6f8cb383",
+      "gitBlobMatched": true,
+      "sha256": "90b2b41a9985763b6fdd9f2e1ebe203140516bf79fe67600c23234927d83ee94"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/sanitizers/FindTSan.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindTSan.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/sanitizers/FindTSan.cmake",
+      "bytes": 2555,
+      "gitBlobSHA1": "3cba3c03b6bd1f2994e6d87e04b7119d89a9adcc",
+      "gitBlobMatched": true,
+      "sha256": "ceace234abd5a463ad1b8134ad06c4c8004895b2e8fc9edb67e64620ea97ca47"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/sanitizers/FindUBSan.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindUBSan.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/sanitizers/FindUBSan.cmake",
+      "bytes": 1696,
+      "gitBlobSHA1": "ae103f71725f485a005d22f6323f81642e4f4ea9",
+      "gitBlobMatched": true,
+      "sha256": "4720ec96ea42a2a9c07d887c1fc5562ed3e8c222f5778a18b78c46678b23f156"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "cmake/sanitizers/sanitize-helpers.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\sanitize-helpers.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/cmake/sanitizers/sanitize-helpers.cmake",
+      "bytes": 7684,
+      "gitBlobSHA1": "3649b074237bb900ac18d2eb191bab5dc73ea901",
+      "gitBlobMatched": true,
+      "sha256": "e6f2e53f9014e4be1bf703e746d6a4262486a265c50e37792a4fff479f9d9e64"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "data/materialx/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\data\\materialx\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/data/materialx/LICENSE",
+      "bytes": 10173,
+      "gitBlobSHA1": "d9a10c0d8e868ebf8da0b3dc95bb0be634c34bfe",
+      "gitBlobMatched": true,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/api_tutorial/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\api_tutorial\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/api_tutorial/CMakeLists.txt",
+      "bytes": 499,
+      "gitBlobSHA1": "2b9742d109087efe6708c0f2462b0a29e0533382",
+      "gitBlobMatched": true,
+      "sha256": "ad875e894ab200d7ef8068adfe030f45e35691ddff3ee3d5da4ed06c710347c0"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/asset_resolution/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\asset_resolution\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/asset_resolution/CMakeLists.txt",
+      "bytes": 518,
+      "gitBlobSHA1": "1fc7bb1be5c369c8c8b9ecec5189f194a22d6f31",
+      "gitBlobMatched": true,
+      "sha256": "0b4e6526534135d490b8ffe441dc465880f53212815f1654dffa301ade26a9ea"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/c_api_example/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\c_api_example\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/c_api_example/CMakeLists.txt",
+      "bytes": 500,
+      "gitBlobSHA1": "7076629e51cf8b185fb486d9382d2be2b73c3c3a",
+      "gitBlobMatched": true,
+      "sha256": "bebc19a1857e9687ad38275cbd0c241c65a6f4078b9daf4a3e4392ab074545e2"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/LICENSE.roboto_mono_embed.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\LICENSE.roboto_mono_embed.md",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/LICENSE.roboto_mono_embed.md",
+      "bytes": 65,
+      "gitBlobSHA1": "b174b4ce2e9515e3fd92c5c11cfcfa100ef5128e",
+      "gitBlobMatched": true,
+      "sha256": "f682864312068d19367688f90c3131db40df6e8733df82a8df4695ec817a2d67"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/bvh/LICENSE.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\bvh\\LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/bvh/LICENSE.txt",
+      "bytes": 1065,
+      "gitBlobSHA1": "9eea4117edb715b3dd51b0adcefb4be3e83ad767",
+      "gitBlobMatched": true,
+      "sha256": "90259d069d810962c1bcde272f41cfa77e156a6ac2708ae1391bafbc8492eba7"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/cuew/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\cuew\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/cuew/LICENSE",
+      "bytes": 10038,
+      "gitBlobSHA1": "c7533090bbe8747c1e9f3e50fb7f30e1ad07be17",
+      "gitBlobMatched": true,
+      "sha256": "c52718780b46e8c7ea48b9ae0406061d4918761e385b6e024571a37c6d02dd95"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/GenerateMappings.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\GenerateMappings.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/GenerateMappings.cmake",
+      "bytes": 1725,
+      "gitBlobSHA1": "47e63741dce1055c51a51c7aed6aa9583e78bbd8",
+      "gitBlobMatched": true,
+      "sha256": "ea563d484abacb75ad0902428915337d95f9a39fa1bbf1cf71d7d5ddf97da320"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/i686-w64-mingw32-clang.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\i686-w64-mingw32-clang.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/i686-w64-mingw32-clang.cmake",
+      "bytes": 596,
+      "gitBlobSHA1": "8726b2382fb030d19d88f0ca851e66fa7435005d",
+      "gitBlobMatched": true,
+      "sha256": "9cf42de30ad84095801b2dff752df930c692680089d8f47c77f9445cdacece24"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/i686-w64-mingw32.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\i686-w64-mingw32.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/i686-w64-mingw32.cmake",
+      "bytes": 588,
+      "gitBlobSHA1": "2ca4dcd9559339d7ffbf0052d496be0494b540ee",
+      "gitBlobMatched": true,
+      "sha256": "f26d94a113c02bba7cded9715bcf51a9d04ba40d497ccffc05b4ef256aa8399f"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/modules/FindEpollShim.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindEpollShim.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/modules/FindEpollShim.cmake",
+      "bytes": 747,
+      "gitBlobSHA1": "f34d07090efd830cf3a3c16a063027a3077c4715",
+      "gitBlobMatched": true,
+      "sha256": "3689ad05d6b6460d2b5313130d3cb474ab195f6698690737582d3ee98cb4c942"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/modules/FindOSMesa.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindOSMesa.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/modules/FindOSMesa.cmake",
+      "bytes": 445,
+      "gitBlobSHA1": "3194bd91aba752835fd7ecc4de3db403d8efc82e",
+      "gitBlobMatched": true,
+      "sha256": "0ab39cf837f390904cb4bf68db853346b53fa5d4dc047f554f188b44b4454643"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/modules/FindWaylandProtocols.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindWaylandProtocols.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/modules/FindWaylandProtocols.cmake",
+      "bytes": 915,
+      "gitBlobSHA1": "8eb83f27ef88575f80a56198bd2635580452a914",
+      "gitBlobMatched": true,
+      "sha256": "706af7855811374a02067a28e25094c2be01b1a9dbac306fc24b4d628e259622"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/modules/FindXKBCommon.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindXKBCommon.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/modules/FindXKBCommon.cmake",
+      "bytes": 1043,
+      "gitBlobSHA1": "0f571eeacb5cd91d4ef72a89a066142e5a6a0d0a",
+      "gitBlobMatched": true,
+      "sha256": "6efde4707a7ee1cc9837e558c8c5a231cb4aaf04adb05fe94056c232e44fdc22"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/x86_64-w64-mingw32-clang.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\x86_64-w64-mingw32-clang.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/x86_64-w64-mingw32-clang.cmake",
+      "bytes": 606,
+      "gitBlobSHA1": "60f7914df9c1221142effa556e54fadfc3e1484b",
+      "gitBlobMatched": true,
+      "sha256": "7f2ea33c57c8726be2a1dfac703d2a4f7c3993c3345ce5c927f0fa1474fc2083"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMake/x86_64-w64-mingw32.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\x86_64-w64-mingw32.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMake/x86_64-w64-mingw32.cmake",
+      "bytes": 598,
+      "gitBlobSHA1": "063e845aac4d8dd4d865811331f8cd4d56514841",
+      "gitBlobMatched": true,
+      "sha256": "e68df045d9aa039fef4f984a7c8e48cd6ac3df8960adc960f6e45674d3f6cee3"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/CMakeLists.txt",
+      "bytes": 13548,
+      "gitBlobSHA1": "b4bbded5ba6f58a088b8eefaafa5f18f3ad59876",
+      "gitBlobMatched": true,
+      "sha256": "676cff61700b5119b914744c557257d4886c607f1a8fd6dba2826dfb755adb1a"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/LICENSE.md",
+      "bytes": 904,
+      "gitBlobSHA1": "7494a3f689caf46e268f7ac0b28a07f5416f8c65",
+      "gitBlobMatched": true,
+      "sha256": "149704059b5d0bf551637e50042dd4de9c2cae921021f6636298911e3a5f9462"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/cmake_uninstall.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\cmake_uninstall.cmake.in",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/cmake_uninstall.cmake.in",
+      "bytes": 1142,
+      "gitBlobSHA1": "4ea57b1cfb6c476f152a505710973005bb118870",
+      "gitBlobMatched": true,
+      "sha256": "4b90bee4fba7a2fbd101f896d11b07c6b79635fc6961d4e0e0f31cc3cb1bc059"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/docs/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\docs\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/docs/CMakeLists.txt",
+      "bytes": 1027,
+      "gitBlobSHA1": "2347858ec0d3ec4847abe3d1d3e2f928fb01c955",
+      "gitBlobMatched": true,
+      "sha256": "da0c2d0b8b0c9936b636623e8126d4fd078ce06fc92644aba5b3b68673004f89"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/examples/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\examples\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/examples/CMakeLists.txt",
+      "bytes": 3833,
+      "gitBlobSHA1": "0eba4e65a222c750e289f7b2152be357423f269e",
+      "gitBlobMatched": true,
+      "sha256": "ecd81cee3ae6ae76ed07c7ec2265fa6dd57823c18a93fe1918646d4e310236af"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/src/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\src\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/src/CMakeLists.txt",
+      "bytes": 8739,
+      "gitBlobSHA1": "b6dd86c5451260ca3711af5036d88f0e64314802",
+      "gitBlobMatched": true,
+      "sha256": "c016810460a8183a9b03b1e646df171d132c31cdd001eff899e41c383349a73d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/src/glfw3Config.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\src\\glfw3Config.cmake.in",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/src/glfw3Config.cmake.in",
+      "bytes": 56,
+      "gitBlobSHA1": "1fa200e2704b068d8fc4fb8a813d172427c8c2a1",
+      "gitBlobMatched": true,
+      "sha256": "ee6ca5eb96cba1091e96656e80ab4f1b9ed1b8a51a8869b28708ce5ae4b2f29d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/glfw-3.3.6/tests/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\tests\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/glfw-3.3.6/tests/CMakeLists.txt",
+      "bytes": 4556,
+      "gitBlobSHA1": "91374b2f354113182fd29227072300e789e48ca2",
+      "gitBlobMatched": true,
+      "sha256": "fdce2ffb50d2cc924c34ec466f10a9c92e656b9cf7ee520e69b17edfa341a68c"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/imgui/LICENSE.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\imgui\\LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/imgui/LICENSE.txt",
+      "bytes": 1083,
+      "gitBlobSHA1": "4023e0caa85dfe9b12621ab403c126ca753893ee",
+      "gitBlobMatched": true,
+      "sha256": "1b64b23b817e547982a86984685f5e9337695caa542753fb6f08d502d5208e38"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/imnodes/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\imnodes\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/imnodes/LICENSE.md",
+      "bytes": 1072,
+      "gitBlobSHA1": "ac8539e29274ef4bb8906f631ad4d62873d39a63",
+      "gitBlobMatched": true,
+      "sha256": "b7e20dc32020807b0525c1f8f84a15a9f52693a58974b38354d3f4819b9b5174"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/metalcpp/LICENSE.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\metalcpp\\LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/metalcpp/LICENSE.txt",
+      "bytes": 11344,
+      "gitBlobSHA1": "25ea926d3b48f357e09373e79a7e0dc3c2c7056f",
+      "gitBlobMatched": true,
+      "sha256": "e2d25f10f91f20394fcae4352162a7a07453c8e060821707c3e88cc583fa1f85"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/nativefiledialog-extended/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/nativefiledialog-extended/CMakeLists.txt",
+      "bytes": 789,
+      "gitBlobSHA1": "da9f07e2b7e90d390b22b14f4f6dda0f51b76066",
+      "gitBlobMatched": true,
+      "sha256": "44e0f1716aa368074c8a5e5334bec95b308340436d30608d4ad8a4e9bfcdc5e6"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/nativefiledialog-extended/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/nativefiledialog-extended/LICENSE",
+      "bytes": 820,
+      "gitBlobSHA1": "3ab103c5519aaa6f3c7713f1ea6fd459e87ab058",
+      "gitBlobMatched": true,
+      "sha256": "b332d6f507142c66a0e904838b6437e6273734589c22a16b57392b89bfdccb2a"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/nativefiledialog-extended/src/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\src\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/nativefiledialog-extended/src/CMakeLists.txt",
+      "bytes": 1645,
+      "gitBlobSHA1": "871e6950e182b3ce97a64b7b3b57a27d61937a95",
+      "gitBlobMatched": true,
+      "sha256": "a05af1ef54c7f05c3690fc2919b2b24b73dfdf4b201edb129a136191cc0cd1df"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/nativefiledialog-extended/test/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\test\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/nativefiledialog-extended/test/CMakeLists.txt",
+      "bytes": 424,
+      "gitBlobSHA1": "7af0a59ed6f1ac035ac479e32079a23510b2b21a",
+      "gitBlobMatched": true,
+      "sha256": "1a86c3b8baab0be75cf3452577e2e081f1992ae904c73b7d55d8998b90603ead"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/common/virtualGizmo3D/license.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\virtualGizmo3D\\license.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/common/virtualGizmo3D/license.txt",
+      "bytes": 1352,
+      "gitBlobSHA1": "2ce8b6f33728330b8abff9850e995d97ba816847",
+      "gitBlobMatched": true,
+      "sha256": "5b5ffa503290498d2eca202f84cdd8686bc36e2ad947959d63faf988d73c5685"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/file_format/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\file_format\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/file_format/CMakeLists.txt",
+      "bytes": 508,
+      "gitBlobSHA1": "6800be6658f6910756c729fb2b5254bff8e0865b",
+      "gitBlobMatched": true,
+      "sha256": "27cc6f37ced6d4b0c94721fd4bbb461625e284e160b3be58a30ed8dba2d9231c"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/openglviewer/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\openglviewer\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/openglviewer/CMakeLists.txt",
+      "bytes": 2928,
+      "gitBlobSHA1": "6d7108712ee440389d3e6c5b1df0911b88b64d23",
+      "gitBlobMatched": true,
+      "sha256": "32c20f49504f8d9555122274ff8bbf0c9a1d38022ae0eb536c89ca50eda51538"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/optixviewer/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\optixviewer\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/optixviewer/CMakeLists.txt",
+      "bytes": 2723,
+      "gitBlobSHA1": "bd76c373f0e1b2bfc194af3f0c9ccd3657d7ea87",
+      "gitBlobMatched": true,
+      "sha256": "d8e94e80f3e4d593e48d08c3ae5dfa801876a7426a419b4e1130026098772025"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/optixviewer/cmake/FindOptiX.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\optixviewer\\cmake\\FindOptiX.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/optixviewer/cmake/FindOptiX.cmake",
+      "bytes": 3165,
+      "gitBlobSHA1": "b08dd748babc84d7acd9420f8f6955efaa440c8b",
+      "gitBlobMatched": true,
+      "sha256": "fed744a1ec523a94a3aa96600118007ef0a3016f5e305d179f6a5c300cf45b7b"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/pxrusd/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\pxrusd\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/pxrusd/CMakeLists.txt",
+      "bytes": 6578,
+      "gitBlobSHA1": "a869926222311b0a6c25fe418ec3b6a56615f8b9",
+      "gitBlobMatched": true,
+      "sha256": "57fe8136306f6a7aaa63dcbea9d085b7741b4758cba970457592e59b9d3875a5"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/save_usda/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\save_usda\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/save_usda/CMakeLists.txt",
+      "bytes": 477,
+      "gitBlobSHA1": "6923eb9cacf6a52089544e9a57f5ee54cbf4d60b",
+      "gitBlobMatched": true,
+      "sha256": "2f187a121deed975f991d84e12f3d8631b3c70b699c682a80f3bda10fb15f346"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/sdlviewer/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\sdlviewer\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/sdlviewer/CMakeLists.txt",
+      "bytes": 7544,
+      "gitBlobSHA1": "8c675e5a5224442e081cbde030fee1d8da413877",
+      "gitBlobMatched": true,
+      "sha256": "de1a0f0d0bf826e17bc08ccc17b1d783afc46da6869a99dd7cb79b6e5bcbdab5"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/tusdcat/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\tusdcat\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/tusdcat/CMakeLists.txt",
+      "bytes": 479,
+      "gitBlobSHA1": "013b55220a9221d7cf51b5f958d9e4b1681be284",
+      "gitBlobMatched": true,
+      "sha256": "46bba48d09995bb382c479df9f579794fef78f361bb2a70b9b610d691d25e115"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/tydra_api/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\tydra_api\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/tydra_api/CMakeLists.txt",
+      "bytes": 494,
+      "gitBlobSHA1": "9097cdb4a6323973fe6dd5c02186499356cbb6c1",
+      "gitBlobMatched": true,
+      "sha256": "73bae9482de538692928baf96085dd7ca1d072bf01a3597ff44cd242ab43d2b5"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/tydra_to_renderscene/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\tydra_to_renderscene\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/tydra_to_renderscene/CMakeLists.txt",
+      "bytes": 510,
+      "gitBlobSHA1": "65b02c495b3edf0a820e5fc8156a74ef810feb18",
+      "gitBlobMatched": true,
+      "sha256": "4d54400e9ea06416365c68acfbccaaf7785eb3a8ac3dea40a5fc5b75d60f69bc"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/usd_to_gltf/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\usd_to_gltf\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/usd_to_gltf/CMakeLists.txt",
+      "bytes": 506,
+      "gitBlobSHA1": "f5ba9dc52d781996fa58760e298708a7f844155a",
+      "gitBlobMatched": true,
+      "sha256": "ab1cabf79f5f150f8a70aa7ba315cb76049e9fbf468a53612b539770a05c0026"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "examples/usd_to_json/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\usd_to_json\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/examples/usd_to_json/CMakeLists.txt",
+      "bytes": 495,
+      "gitBlobSHA1": "680fa156ae4542f08089ddf2ffb7743dafa665ed",
+      "gitBlobMatched": true,
+      "sha256": "c792bc684daa1aff16a2bb504cb6384fdb23d1db09dab4f2e7236bf4745dc3eb"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "sandbox/reflection/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\sandbox\\reflection\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/sandbox/reflection/CMakeLists.txt",
+      "bytes": 159,
+      "gitBlobSHA1": "986d72d201f55f913548334fe86ca251d5867293",
+      "gitBlobMatched": true,
+      "sha256": "255616319405464ac03e257e9bb9a1a4215cf56c10608b8c519aa4f300a6b51f"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "sandbox/threejs/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\sandbox\\threejs\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/sandbox/threejs/CMakeLists.txt",
+      "bytes": 1697,
+      "gitBlobSHA1": "948066ace670a5db49d4cc6faed362c16ec43379",
+      "gitBlobMatched": true,
+      "sha256": "80f642e81bf3b46438ae518dcbccdbc7ba7ac62d541df32d21d2cc62113d390a"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "sandbox/wasi/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\sandbox\\wasi\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/sandbox/wasi/CMakeLists.txt",
+      "bytes": 2698,
+      "gitBlobSHA1": "cb9d2b7997bffb003a4b746f6aa755476dde6662",
+      "gitBlobMatched": true,
+      "sha256": "a9fdb171700b7bdf29a9924638b6f52f89c5f1db5b8219ee1f21a67953e600d7"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "schema/usdz/LICENSE/LICENSE.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\schema\\usdz\\LICENSE\\LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/schema/usdz/LICENSE/LICENSE.txt",
+      "bytes": 1054,
+      "gitBlobSHA1": "5e871b1e9142214e69c2d1409808c79a57dda85c",
+      "gitBlobMatched": true,
+      "sha256": "739509ddb2dbe734aaa3c376371ccfb153347d3870e99e4ed8eaa6f1e5762832"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/blender/python3.9/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\blender\\python3.9\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/blender/python3.9/LICENSE",
+      "bytes": 13925,
+      "gitBlobSHA1": "473861da1be7c5f24f405814ef1370de6ab946c9",
+      "gitBlobMatched": true,
+      "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/LICENSE.miniz",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\LICENSE.miniz",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/LICENSE.miniz",
+      "bytes": 1162,
+      "gitBlobSHA1": "b6ff45a30fb56f0bbd9e398f4997b2d491e25ad3",
+      "gitBlobMatched": true,
+      "sha256": "6f20fa7672b00e2e975c291df737cf227addf3ad32e36fef3fe0f416e4664d3d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/LICENSE.ogt_vox.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\LICENSE.ogt_vox.md",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/LICENSE.ogt_vox.md",
+      "bytes": 1069,
+      "gitBlobSHA1": "eadf7208f3220b47c9b2360b11e59fa834f81a72",
+      "gitBlobMatched": true,
+      "sha256": "d042ed80bcd38fdb32f81d73b9eac7907e66689fec1b42ca152697342d9e1c27"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/OpenFBX/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\OpenFBX\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/OpenFBX/LICENSE",
+      "bytes": 1071,
+      "gitBlobSHA1": "45cc0d228fd2a467ab4c7e9c7aed9541a64c232e",
+      "gitBlobMatched": true,
+      "sha256": "7771794e50cff1cca0e931526d2af91b3dc9f3834775f2f7c93fdc641c2dc261"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/alac/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\alac\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/alac/LICENSE",
+      "bytes": 9112,
+      "gitBlobSHA1": "c9500ba9e08ad58e1dd52e3ab91dbdf5ac4cb296",
+      "gitBlobMatched": true,
+      "sha256": "a337314dd82d26791112c1e5a85725b2eb92f5b7e6f9102fa4eaa2903f77518f"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/fast_float/LICENSE-APACHE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\fast_float\\LICENSE-APACHE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/fast_float/LICENSE-APACHE",
+      "bytes": 10767,
+      "gitBlobSHA1": "26f4398f24999c3908a11653e3b5ba6f9d681123",
+      "gitBlobMatched": true,
+      "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/fast_float/LICENSE-BOOST",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\fast_float\\LICENSE-BOOST",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/fast_float/LICENSE-BOOST",
+      "bytes": 1337,
+      "gitBlobSHA1": "127a5bc39ba030c7cb99cc0aedc4f280ffe27310",
+      "gitBlobMatched": true,
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/fast_float/LICENSE-MIT",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\fast_float\\LICENSE-MIT",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/fast_float/LICENSE-MIT",
+      "bytes": 1079,
+      "gitBlobSHA1": "2fb2a37ad7fda521092c8b7b16911176c3f8a81b",
+      "gitBlobMatched": true,
+      "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/filesystem/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\filesystem\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/filesystem/LICENSE",
+      "bytes": 1086,
+      "gitBlobSHA1": "8b24faa71df84f50f20be447162cad09ac3feefd",
+      "gitBlobMatched": true,
+      "sha256": "1b265537c97cfb422ffb52492c96979943f54fab8746a6dd38d8329953d487cc"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/floaxie/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\floaxie\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/floaxie/LICENSE",
+      "bytes": 11358,
+      "gitBlobSHA1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "gitBlobMatched": true,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/glob/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\glob\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/glob/LICENSE",
+      "bytes": 1063,
+      "gitBlobSHA1": "bcae1c6a21083c6bdd4bbcc5fb34feb50ee89d90",
+      "gitBlobMatched": true,
+      "sha256": "46035285f8a5547b5b6a50f0433243a5ffc494b825dd51855bb1903a6c54382b"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/jsonhpp/LICENSE.MIT",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\jsonhpp\\LICENSE.MIT",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/jsonhpp/LICENSE.MIT",
+      "bytes": 1076,
+      "gitBlobSHA1": "1c1f7a690d815db3a79ea3d4c9138a497e2e7702",
+      "gitBlobMatched": true,
+      "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/jsteemann/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\jsteemann\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/jsteemann/LICENSE",
+      "bytes": 11344,
+      "gitBlobSHA1": "9de9747f6810dca40d80824f6703e3ea214eb437",
+      "gitBlobMatched": true,
+      "sha256": "56cb58840980e1895822ef06ef8b8a5250fd48c58f59b1441c2b71447440a008"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/mapbox/earcut/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\mapbox\\earcut\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/mapbox/earcut/LICENSE",
+      "bytes": 738,
+      "gitBlobSHA1": "8bafb577305e2ade52a4f75a7c589f9db8a4e5eb",
+      "gitBlobMatched": true,
+      "sha256": "828f2aed51b6526881a236758ec9b08cd69928fbfc70346d9d44a0b3a3444fe1"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/mapbox/eternal/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\mapbox\\eternal\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/mapbox/eternal/LICENSE.md",
+      "bytes": 738,
+      "gitBlobSHA1": "9bcf13e1e3c32ce89c96c01363a909a7e601a4ae",
+      "gitBlobMatched": true,
+      "sha256": "2c620eaf6c3ee3e33b07f3b6ef0dfd0a9e0a52c93a46aa4ccf7773dbb562daec"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/CMakeLists.txt",
+      "bytes": 2961,
+      "gitBlobSHA1": "3d14d614c5dfaa598ca2e2d04b92b1b2ca9fb05b",
+      "gitBlobMatched": true,
+      "sha256": "26791f23b8dc708261026f6c7cd886bb51e364b91118543d3d8b26f1950808cb"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/LICENSE",
+      "bytes": 1521,
+      "gitBlobSHA1": "3d3426d400064d53d291c028457f699b3edf9b7c",
+      "gitBlobMatched": true,
+      "sha256": "f305091a4e57805870b217a28ea4b1f16610eece8457d2370f822a9696b75836"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/cmake/nanobind-config.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\cmake\\nanobind-config.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/cmake/nanobind-config.cmake",
+      "bytes": 8007,
+      "gitBlobSHA1": "fe349c17a84362afdadd748342d3846043e351fb",
+      "gitBlobMatched": true,
+      "sha256": "98a461e02c50ca82eca3cc3b3dd4e6906446a366c96c86f4c7311ab66369a3b0"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/ext/robin_map/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/ext/robin_map/CMakeLists.txt",
+      "bytes": 3176,
+      "gitBlobSHA1": "924f38f0221f52b0ac7279ce21c7da624a215cd9",
+      "gitBlobMatched": true,
+      "sha256": "e9612c91e59c2b6c02746d728236f11db6b0c71920966c6ebf7e3f3f6bec78f7"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/ext/robin_map/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/ext/robin_map/LICENSE",
+      "bytes": 1102,
+      "gitBlobSHA1": "e9c5ae95f36a6b4e4e9937adcc674b155f8011c8",
+      "gitBlobMatched": true,
+      "sha256": "11f2c685ba565a31aef1219f63a7a8845602c97bff70016b9e3278dfe51a2ec5"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/ext/robin_map/cmake/tsl-robin-mapConfig.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\cmake\\tsl-robin-mapConfig.cmake.in",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/ext/robin_map/cmake/tsl-robin-mapConfig.cmake.in",
+      "bytes": 407,
+      "gitBlobSHA1": "d2ce23305ef9b89291e7fd22fd5a7e32d056d52b",
+      "gitBlobMatched": true,
+      "sha256": "4fdc2c4c22b55fc4ea48c1541e973cc24432e8f80cf3610faa1c62ba54c3c440"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/nanobind/ext/robin_map/tests/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\tests\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/nanobind/ext/robin_map/tests/CMakeLists.txt",
+      "bytes": 1111,
+      "gitBlobSHA1": "3accb0e6f8ac2e750f7fdc5282ce07f55776e55e",
+      "gitBlobMatched": true,
+      "sha256": "5889d67251812a96f883e9d261db341b6e79a871b9749471724d3217e5c6898d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/CMakeLists.txt",
+      "bytes": 10999,
+      "gitBlobSHA1": "3787982cbdcc9a1d820c0fb4f29d3d79511d6df8",
+      "gitBlobMatched": true,
+      "sha256": "37ce809b13755f6d6c7843c0dbd40bc598947881000c2bc132ab0e828cb58610"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/LICENSE",
+      "bytes": 1684,
+      "gitBlobSHA1": "e466b0dfda14f3a7c8ece512937eb99c8b7b6d68",
+      "gitBlobMatched": true,
+      "sha256": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/FindCatch.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\FindCatch.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/FindCatch.cmake",
+      "bytes": 2350,
+      "gitBlobSHA1": "57bba58b30ffd25336a57b35b3405f1dfadca63c",
+      "gitBlobMatched": true,
+      "sha256": "21e99db5064e8524df410606c7754b29bd8e0cb09576ebdb27634e08b76b7bf6"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/FindEigen3.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\FindEigen3.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/FindEigen3.cmake",
+      "bytes": 3105,
+      "gitBlobSHA1": "83625d92e071abdda3e1e066d2d3770dd1a4e38c",
+      "gitBlobMatched": true,
+      "sha256": "9624a761c330d6003123e0191954b408926c390d9b19c0dc1b72db091e6cb5af"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/FindPythonLibsNew.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\FindPythonLibsNew.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/FindPythonLibsNew.cmake",
+      "bytes": 10890,
+      "gitBlobSHA1": "a5a628fd7abe500609217254e32c9edb5afab097",
+      "gitBlobMatched": true,
+      "sha256": "0c365226245d94394aad3e5005282cbf6c5910bb4445adb8cd4407b3b2d24327"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/cmake_uninstall.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\cmake_uninstall.cmake.in",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/cmake_uninstall.cmake.in",
+      "bytes": 952,
+      "gitBlobSHA1": "1e5d2bb876d17f24b88b19ddb525d4146869944b",
+      "gitBlobMatched": true,
+      "sha256": "dfdc294572479be844cc61a48a5d476c114f213bbd24ecd5e7156de3a24b7011"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/pybind11Common.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11Common.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/pybind11Common.cmake",
+      "bytes": 13487,
+      "gitBlobSHA1": "e1fb601acc956dd81a93301deaf283a56f654965",
+      "gitBlobMatched": true,
+      "sha256": "0a47bb2ca4bb4b00c25049f2c82379b5af56b8ceb909188945bf1d8b16893c2d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/pybind11Config.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11Config.cmake.in",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/pybind11Config.cmake.in",
+      "bytes": 6930,
+      "gitBlobSHA1": "9383e8c671e90f249c55e1d3fa3540b09af9f1e7",
+      "gitBlobMatched": true,
+      "sha256": "96c376b7d7308e3c760b2486329db09a0a25c214323ae930c20da8f80afbcada"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/pybind11NewTools.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11NewTools.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/pybind11NewTools.cmake",
+      "bytes": 8955,
+      "gitBlobSHA1": "9e13daf1a12063d547d76deda7895b943f4d23f0",
+      "gitBlobMatched": true,
+      "sha256": "9ea9000d206b765b98193f5d4b6bf6408dcf743b35029fbc24f0c7eaea1ef46f"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/pybind11/tools/pybind11Tools.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11Tools.cmake",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/pybind11/tools/pybind11Tools.cmake",
+      "bytes": 7862,
+      "gitBlobSHA1": "1b6045b70ea6476f6ab405959f049cce865d292e",
+      "gitBlobMatched": true,
+      "sha256": "8989f91fdc7d043f9676b8fced53730a58ffb17b88a2bfc6798b471fb364aa93"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/simple_match/LICENSE_1_0.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\simple_match\\LICENSE_1_0.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/simple_match/LICENSE_1_0.txt",
+      "bytes": 1338,
+      "gitBlobSHA1": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "gitBlobMatched": true,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/external/string_id/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\string_id\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/external/string_id/LICENSE",
+      "bytes": 900,
+      "gitBlobSHA1": "935e282f036b67d7f471dea5ae1f08d267e7d7b8",
+      "gitBlobMatched": true,
+      "sha256": "599726ff2964605f2b80d5237e4744525b50c68539c6f49f41cb35b1ea5fc535"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/lz4/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\lz4\\LICENSE",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/lz4/LICENSE",
+      "bytes": 1311,
+      "gitBlobSHA1": "488491695a6b6984aa3a49a8392b192ed2bcac1d",
+      "gitBlobMatched": true,
+      "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/CMakeLists.txt",
+      "bytes": 28882,
+      "gitBlobSHA1": "8616b2f28f0820fb584ae9c944bcf371a045d3d1",
+      "gitBlobMatched": true,
+      "sha256": "eb515667fae4017a01627080b925233717ecb054319151fe2a82e519ac9df83d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/LICENSE.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/LICENSE.txt",
+      "bytes": 10038,
+      "gitBlobSHA1": "c7533090bbe8747c1e9f3e50fb7f30e1ad07be17",
+      "gitBlobMatched": true,
+      "sha256": "c52718780b46e8c7ea48b9ae0406061d4918761e385b6e024571a37c6d02dd95"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/CMakeLists.txt",
+      "bytes": 15822,
+      "gitBlobSHA1": "f01a8a055c4db5fa3601ed816f21b22c15b575db",
+      "gitBlobMatched": true,
+      "sha256": "0eb3bada99d5fa788e7a5b62ed81fdedcf63a327b5de071297517d3f2f33d1bb"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/bfr/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\bfr\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/bfr/CMakeLists.txt",
+      "bytes": 3020,
+      "gitBlobSHA1": "81784a38f420b8e30649e859de8388c4e57e4a0f",
+      "gitBlobMatched": true,
+      "sha256": "7837ebcd768477dab7dab5201baeb46b4c551191a109ba7af16ca33d053f705d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/far/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\far\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/far/CMakeLists.txt",
+      "bytes": 2953,
+      "gitBlobSHA1": "e2f59dbc3306a0a4c149f275c89ee4b4e46ecffa",
+      "gitBlobMatched": true,
+      "sha256": "f99cd8a3d75b763c45e7736d49aad26b144091adda8d9bf218741f5b63c0e0f6"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/hbr/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\hbr\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/hbr/CMakeLists.txt",
+      "bytes": 1800,
+      "gitBlobSHA1": "8c3e4b0fe05cd351427b94888dd6e93b9009c9c0",
+      "gitBlobMatched": true,
+      "sha256": "7bb0133d7227cb294154a22fbf25166de5c10c4a82ad12274da187ada1649f6d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/osd/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\osd\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/osd/CMakeLists.txt",
+      "bytes": 10822,
+      "gitBlobSHA1": "75f64b661c7d41b522fab2560bcbdad708cc94fa",
+      "gitBlobMatched": true,
+      "sha256": "2f4909b82edbb0afc8d041e298367559bd8ff03bb5f6908e5ac52158767db402"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/sdc/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\sdc\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/sdc/CMakeLists.txt",
+      "bytes": 2159,
+      "gitBlobSHA1": "a6e414e9b2b89f85f94dc5f37f6a31a349312d58",
+      "gitBlobMatched": true,
+      "sha256": "4673bb5c7ab1ee0d8e15c293213fc8ff9e0ffbcf8fd359776a941ba1991917f7"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/tools/stringify/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\tools\\stringify\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/tools/stringify/CMakeLists.txt",
+      "bytes": 1532,
+      "gitBlobSHA1": "ae0aad9408b369373156a4e5716b6a344ef5366b",
+      "gitBlobMatched": true,
+      "sha256": "717b4b6386d7dfe9bac9834c603ad4c8ab6b5047721ae2807c0c75a64369b797"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "src/osd/opensubdiv/vtr/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\vtr\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/src/osd/opensubdiv/vtr/CMakeLists.txt",
+      "bytes": 2515,
+      "gitBlobSHA1": "e4e1b8c5e62a473928cde491219a561936db095c",
+      "gitBlobMatched": true,
+      "sha256": "e742b751d21021fbb0e6e33e20f63624788224c2eb6a69a49f918ca74d96ad8c"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "tests/decompress-int/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\tests\\decompress-int\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/tests/decompress-int/CMakeLists.txt",
+      "bytes": 880,
+      "gitBlobSHA1": "9ee99f0de723d2d481c67ba3ce682f7cbc625319",
+      "gitBlobMatched": true,
+      "sha256": "de57286c1a7ec4be872408cb8d821b52a06357b60d307be812ae8da5e90ab03d"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "tests/unit/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\tests\\unit\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/tests/unit/CMakeLists.txt",
+      "bytes": 1310,
+      "gitBlobSHA1": "40466431f1c787094e59245c7cc1d0236d5e1fd0",
+      "gitBlobMatched": true,
+      "sha256": "e8cd4d4aacb47f19ebf9551f7ef135a1a6e7820a3753ef94f038017089e1ee42"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "tests/unit/LICENSE.acutest",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\tests\\unit\\LICENSE.acutest",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/tests/unit/LICENSE.acutest",
+      "bytes": 1096,
+      "gitBlobSHA1": "e661bc5c7fd83424173c686a47702165a37458c5",
+      "gitBlobMatched": true,
+      "sha256": "827839b47b4fe6b9675f15939c85cd56be5ec1c37910bd1bd0ed4d7cbce42002"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "sourcePath": "web/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\web\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/web/CMakeLists.txt",
+      "bytes": 1715,
+      "gitBlobSHA1": "334ce96ce1c33baac206215f5608a6c1d150f8eb",
+      "gitBlobMatched": true,
+      "sha256": "557e470539c39ba919894d5da1be1241220b9f2c8136cbc4df219855417931bc"
+    }
+  ],
+  "gaps": [],
+  "archivesAcquired": 0,
+  "nativeProcessesExecuted": 0,
+  "content": "Only primary CMake/license/notice/submodule text, data inspection; no executable or binary fetched"
+}

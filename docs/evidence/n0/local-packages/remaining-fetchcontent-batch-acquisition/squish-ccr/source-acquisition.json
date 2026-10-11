@@ -1,0 +1,15 @@
+{
+  "name": "squish-ccr",
+  "URL": "https://codeload.github.com/Ethatron/squish-ccr/tar.gz/deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 1710059,
+  "sha256": "5b578a95b339a99af3fc31116b159118c2fad8568388f824bbdfacba00afa7f3",
+  "expectedSHA256": "5b578a95b339a99af3fc31116b159118c2fad8568388f824bbdfacba00afa7f3",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/squish-ccr-deb557d2fa647b191b37a2d8682df54ec8a7cfba.tar.gz",
+  "commit": "deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+  "matchesDeclaredPin": true
+}

@@ -1,0 +1,876 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/meshoptimizer-1.2.tar.gz",
+  "commit": "9d9890c73011d75920af614485296d1e03e95448",
+  "root": "meshoptimizer-1.2",
+  "members": 123,
+  "regularFiles": 112,
+  "fileBytes": 2314044.0,
+  "links": 0,
+  "gitBlobMatches": 112,
+  "primaryBlobFiles": 112,
+  "destination": "F:/JericoEngine/Dependencies/meshoptimizer-1.2",
+  "violations": [],
+  "extracted": false,
+  "membersManifest": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "meshoptimizer-1.2",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/.clang-format",
+      "type": "RegularFile",
+      "bytes": 388,
+      "sha256": "8dec91e8fbd8662ced18ddc4acf3ef2278802d31116969bf30a5c636353dae60",
+      "gitBlobSHA1": "13b9079597830306b5fe54ba28f91d521104ff37"
+    },
+    {
+      "path": "meshoptimizer-1.2/.editorconfig",
+      "type": "RegularFile",
+      "bytes": 191,
+      "sha256": "71dbd95f523c38bb729fc3c690c816759eff3a77d5dd89bbbdb49bf2bd7c0b1e",
+      "gitBlobSHA1": "288fe1ca441e914a2637bcb61825e0ab41045afc"
+    },
+    {
+      "path": "meshoptimizer-1.2/.git-blame-ignore-revs",
+      "type": "RegularFile",
+      "bytes": 687,
+      "sha256": "e11e72052f4df93a1558da2bf7c6b4b8d9ffcaf3f17b55651d3935712503943b",
+      "gitBlobSHA1": "77aa716cd1eb62b86aff3a4b99e0db5551cab16d"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/ISSUE_TEMPLATE",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "RegularFile",
+      "bytes": 215,
+      "sha256": "863c199a3bf2165ce2430bb0da9558c96c0cde6f894de9d14f783dd15a432378",
+      "gitBlobSHA1": "6949faaec8bcb083ff35be24b3f0560bf4c36e48"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/ISSUE_TEMPLATE/config.yml",
+      "type": "RegularFile",
+      "bytes": 216,
+      "sha256": "69c2221aa7c68d14d106397dc31f32be347de26baee5441b38bcb4da43b17eca",
+      "gitBlobSHA1": "3a7d1b5d83877fb88ef269bd8dd2db38fb7ab565"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/ISSUE_TEMPLATE/feature_request.md",
+      "type": "RegularFile",
+      "bytes": 191,
+      "sha256": "c7fb82c8e045d4c6148f625da170fc4463a7fe140c21cd1fda5fdde51619b752",
+      "gitBlobSHA1": "1dbda009db9fd48acda569f84d23ff9396b6ba09"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/codecov.yml",
+      "type": "RegularFile",
+      "bytes": 107,
+      "sha256": "776e84ec18043d2f40efdf6a2b3e1ce99bc4eb246e3de7784cdaef465b2d23f0",
+      "gitBlobSHA1": "3ed6eb4aa20878c3818cfdb6bd399d213f395c0d"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/workflows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/workflows/build.yml",
+      "type": "RegularFile",
+      "bytes": 9955,
+      "sha256": "28f02bf840e0a819169427480bc1730a05d46b40885c0237441863cf23615559",
+      "gitBlobSHA1": "e4dc66d1e2a40e38d175940f2a4e3295b265d013"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/workflows/cifuzz.yml",
+      "type": "RegularFile",
+      "bytes": 809,
+      "sha256": "2207b2a72bdf6d36ed56e816a64108e386829823a9dfc95d4477701af009976f",
+      "gitBlobSHA1": "4ee4197c4405f59703d0e10b30ffeefd692ce077"
+    },
+    {
+      "path": "meshoptimizer-1.2/.github/workflows/release.yml",
+      "type": "RegularFile",
+      "bytes": 2640,
+      "sha256": "ad98de434219993b62e2b0ca2a28558a68193659e75e93be7f5f3443b27bfe00",
+      "gitBlobSHA1": "fe44ec60dbc2e4c293cbdeecde0883c3a6cdfa8e"
+    },
+    {
+      "path": "meshoptimizer-1.2/.gitignore",
+      "type": "RegularFile",
+      "bytes": 187,
+      "sha256": "06a06b372001e5d022e4a8bb79f2e7d803005e17c08b69b926d4b2a05cd97615",
+      "gitBlobSHA1": "37533f735cc554dc5def703f41b6179ef883908e"
+    },
+    {
+      "path": "meshoptimizer-1.2/.prettierrc",
+      "type": "RegularFile",
+      "bytes": 208,
+      "sha256": "def126e99e98fc2f6a7b42b91c66987e31e813c01f1cefe79f7b9b1a47aff0da",
+      "gitBlobSHA1": "78f1f570c08f64c02a26899fa2eef89c4a275a49"
+    },
+    {
+      "path": "meshoptimizer-1.2/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 8131,
+      "sha256": "e56383b054f6d1b7a2a5146ed274a22ec86965a66dd357500492ea0dfc23cfd0",
+      "gitBlobSHA1": "ba512d13313f9166f0b284044802836f67e599f8"
+    },
+    {
+      "path": "meshoptimizer-1.2/CONTRIBUTING.md",
+      "type": "RegularFile",
+      "bytes": 4757,
+      "sha256": "d63cd384cf7a4c540aa45662021dccad308f7d07c976c354b8fad11087b2ca0c",
+      "gitBlobSHA1": "864284113abf315f941ea1bed2e304a7ae2cb71b"
+    },
+    {
+      "path": "meshoptimizer-1.2/LICENSE.md",
+      "type": "RegularFile",
+      "bytes": 1079,
+      "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26",
+      "gitBlobSHA1": "468827f4b86ef754465396a9e163db25af406626"
+    },
+    {
+      "path": "meshoptimizer-1.2/Makefile",
+      "type": "RegularFile",
+      "bytes": 10425,
+      "sha256": "ef61dd06dcd348ba5673a66dec352123e098bac4721fd349d42c7a28d9657b63",
+      "gitBlobSHA1": "8b1662d68866ef42e7389ee401569a5260de7c4f"
+    },
+    {
+      "path": "meshoptimizer-1.2/README.md",
+      "type": "RegularFile",
+      "bytes": 98450,
+      "sha256": "cc14ca68c58e95712b61fac6afadaa7d4f033cd7c4605f70f67e6b9115cf324f",
+      "gitBlobSHA1": "552cfa7fd923ae45e36763696ae729d152be9d54"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/ansi.c",
+      "type": "RegularFile",
+      "bytes": 97,
+      "sha256": "45f87277cc554501a1cc7939c1791dce1a19e38d719b480183f3f6a15ae8f96b",
+      "gitBlobSHA1": "9e4f347566ee6c9e1433c73ab370b2dbb8428d91"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/clusterlod.h",
+      "type": "RegularFile",
+      "bytes": 32069,
+      "sha256": "143461d2863a8abb979faca1b702c971498d9627c9f8f83c4d62c0aa4bc2a271",
+      "gitBlobSHA1": "554daaf73600fbf2cb75fc587ede5e9b9ddc05cb"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/index.html",
+      "type": "RegularFile",
+      "bytes": 3594,
+      "sha256": "bd2f1ef1f1305c960bc0cc45e0138d538d52c5c2e1cf877775b9453b2b9c21b4",
+      "gitBlobSHA1": "883fb933afd8b3ede190dbef9f6925865bd98afd"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/main.cpp",
+      "type": "RegularFile",
+      "bytes": 74273,
+      "sha256": "fc504b5b4ee62976e19fc529a75af1e62d813f3dd84163f5b1e870ff01066033",
+      "gitBlobSHA1": "d4b6c916cdf3b43bcfa85a09f9c09bce1e2edc0c"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/meshletdec.slang",
+      "type": "RegularFile",
+      "bytes": 7281,
+      "sha256": "98420dc6e0b7658cc65041afa5d5f5c1673158876c4917064a7797395ae4bb89",
+      "gitBlobSHA1": "82426178fad3915fe8243e3760a5def961b2b9a7"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/nanite.cpp",
+      "type": "RegularFile",
+      "bytes": 16653,
+      "sha256": "594443579b22b3d902a8b0a63807bebd65296f2092a6ecce232335413f8b82ea",
+      "gitBlobSHA1": "ed8469ef9e9d0ff216033beb118f1dba58953676"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/pirate.glb",
+      "type": "RegularFile",
+      "bytes": 24696,
+      "sha256": "0fb46b7aa48c73994285ff8645fcb7be3541afcfdfa5c4add3a7bfe42b78c426",
+      "gitBlobSHA1": "261f086367f766ec821ffc499dbd62f62353966a"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/pirate.obj",
+      "type": "RegularFile",
+      "bytes": 368962,
+      "sha256": "cf11ea6f1fad6688123fbb80c5ca39ad5e48908cfa53d68e09a3f03f53c524a1",
+      "gitBlobSHA1": "b4407aa7bc6ea82c440345d4e191a2dab54871ab"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/simplify.html",
+      "type": "RegularFile",
+      "bytes": 34036,
+      "sha256": "e6177f86b1576ce2ea1f60754a7a96d20a1246b6db170c9c24680435c20ed2d5",
+      "gitBlobSHA1": "91acb251ee9949033e8ed771b826d14ecf8fe2e4"
+    },
+    {
+      "path": "meshoptimizer-1.2/demo/tests.cpp",
+      "type": "RegularFile",
+      "bytes": 104035,
+      "sha256": "f7100cf480eac96ab226375470fffd381052482b9d14309fdf393cb322b2dc05",
+      "gitBlobSHA1": "88f86654dedcce5043f2bd7514b65c900703d6cc"
+    },
+    {
+      "path": "meshoptimizer-1.2/extern",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/extern/.clang-format",
+      "type": "RegularFile",
+      "bytes": 20,
+      "sha256": "a46c8911862713e50ddaf798e09d3b69ecf4e7dde3fa5edb8a0c2856a88c49fa",
+      "gitBlobSHA1": "e3845288a2aece185aa94e88e303e0134efde368"
+    },
+    {
+      "path": "meshoptimizer-1.2/extern/cgltf.h",
+      "type": "RegularFile",
+      "bytes": 205754,
+      "sha256": "efb169dee911696b5d35fc8e3f7ea0c56d679debc529eba9ca6aa6443ba9d5e9",
+      "gitBlobSHA1": "316a11dfd89e1ff69348a3cacb21709ad1e29bd8"
+    },
+    {
+      "path": "meshoptimizer-1.2/extern/fast_obj.h",
+      "type": "RegularFile",
+      "bytes": 35433,
+      "sha256": "4dc1d206f104ed390d70794d3287fbf0c24748ea4ac39f86c860c74a16b9371b",
+      "gitBlobSHA1": "7967756ad9cadeca7a358d068ad0699480a8da7f"
+    },
+    {
+      "path": "meshoptimizer-1.2/extern/sdefl.h",
+      "type": "RegularFile",
+      "bytes": 28129,
+      "sha256": "d490452a22b97c44cc8542e59fdd14666d5ba5167eaa05e8c50745832c1e462c",
+      "gitBlobSHA1": "85ffb8ab1992d48051356532b690ddfa01a84754"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/README.md",
+      "type": "RegularFile",
+      "bytes": 9437,
+      "sha256": "74b73b7eca8141cc60cef9b8f2674422c4eaae8a6dafd1c067a24272c27de05d",
+      "gitBlobSHA1": "d75863924d8e9345fa7e10a8eef1a4545c57e87f"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/animation.cpp",
+      "type": "RegularFile",
+      "bytes": 9895,
+      "sha256": "e5009282c42a9fd99bfb90c02adbea9f870d896c3d996f079052845013bbb1aa",
+      "gitBlobSHA1": "2f09f61925568c6e8334c475a8d3d1399590af21"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/cli.js",
+      "type": "RegularFile",
+      "bytes": 525,
+      "sha256": "c7f3a81fa93a3609847fb75817e4777c339bd5f94963bdbb9aa224a6fdb038ce",
+      "gitBlobSHA1": "336985ba315589451736c5c9bef1eb0784f1e26b"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/encodebasis.cpp",
+      "type": "RegularFile",
+      "bytes": 6889,
+      "sha256": "f5d4fa046badc1f9ecaa9caf51090abefbe3f6fa2d6d62392a9d54094150ff9c",
+      "gitBlobSHA1": "720262d6fb86029171a257136c1f7077027ef854"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/encodewebp.cpp",
+      "type": "RegularFile",
+      "bytes": 5192,
+      "sha256": "a9e87efc983277c67a653511cf60e21388a58543c52a21f8a09e6ffcb0fe8217",
+      "gitBlobSHA1": "5042b3752b10682153f617c0cfe0edf9b1d6d341"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/fileio.cpp",
+      "type": "RegularFile",
+      "bytes": 2351,
+      "sha256": "67c1cc29321c8abe349afe7f40940f0ed01205c2fc9e4a33bfdbb6ced926a144",
+      "gitBlobSHA1": "ad0e3d317306d50943c9e1d158e99acb34cbf752"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/fuzz.dict",
+      "type": "RegularFile",
+      "bytes": 3149,
+      "sha256": "0d8726116ec976b5921fae6c0682052fed7f04c9e28a09e91575fa8e6f26ac53",
+      "gitBlobSHA1": "f923c46e2073a0da2194b4376d87f55d569104b6"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/fuzz.glb",
+      "type": "RegularFile",
+      "bytes": 6540,
+      "sha256": "2d055d2d56a492d1b9302de6e733046b625cf51e5f2a3090bd3a8c11acc93c17",
+      "gitBlobSHA1": "fb49bac89ea0ee527e48bb6a43c525ecdfe22604"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/gltfpack.cpp",
+      "type": "RegularFile",
+      "bytes": 56089,
+      "sha256": "fdabfe6950ca5c2126b2b496b69b3f5d5e1edd96e22b4ad1083621d85ab4a711",
+      "gitBlobSHA1": "177a0250e9a3af8fd18d669c9e765e5f3e7ef27a"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/gltfpack.h",
+      "type": "RegularFile",
+      "bytes": 14208,
+      "sha256": "3578d52ca2200c472099424799ea6a4a4186ae09f7d740174d8effde5335faf1",
+      "gitBlobSHA1": "a114b8146a03e824e2bf7d7911f8f20c9258a980"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/gltfpack.manifest",
+      "type": "RegularFile",
+      "bytes": 391,
+      "sha256": "c545044c127a74966aaec0693053c3d02dc095b63bdc0d9ced17969220de2789",
+      "gitBlobSHA1": "324aa6d6a337250de435ac65dc638dcb5361cfb7"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/image.cpp",
+      "type": "RegularFile",
+      "bytes": 9285,
+      "sha256": "fd28dd8756a8e438f120d0bbac0d55a31327e9cd1f87fe663ed32a275dafdb3c",
+      "gitBlobSHA1": "0615ff06fe2e3b898897ad68f57c460bc313149a"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/json.cpp",
+      "type": "RegularFile",
+      "bytes": 1685,
+      "sha256": "4b76aebe9eb7ed182056cbf57958c54c684605492c33879128068f681f42c2c0",
+      "gitBlobSHA1": "837f47d86db93c7baba76eb53427750830450bab"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/library.js",
+      "type": "RegularFile",
+      "bytes": 7962,
+      "sha256": "fdeee2ee7b3828939fc6d346b4f6452201e0c9cd0994e0dd743f2a4d86704ee9",
+      "gitBlobSHA1": "6169626cbff7b9aa6171cfa898045d77f43fbc98"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/material.cpp",
+      "type": "RegularFile",
+      "bytes": 18753,
+      "sha256": "03950cfbb395d12125b505fa44a85a065cd4c30390f99a78ae87bfae01c4acca",
+      "gitBlobSHA1": "63aa9f2388818d945044512aff16f87613aea236"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/mesh.cpp",
+      "type": "RegularFile",
+      "bytes": 37266,
+      "sha256": "ead7a6034c556a9cff8b4b3537ac3712b680d222154d5b32d159b7f7d7f16443",
+      "gitBlobSHA1": "2cc94a8dc5e69b7145e696589b15c9740d7bc17c"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/node.cpp",
+      "type": "RegularFile",
+      "bytes": 5528,
+      "sha256": "6295c8f9e5c9c592c02489bcbe0e66add15a0faa9ca7e5eee674fc193d9656c6",
+      "gitBlobSHA1": "c3da288457ea3747c3ce1de334c99ab551eb0285"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/package.json",
+      "type": "RegularFile",
+      "bytes": 600,
+      "sha256": "54b57aae70160b53cca521ffe34c22be4094a6e76311984219ce5abfd692c877",
+      "gitBlobSHA1": "a7900e6ab5c37123f01a0dd4666f2e5394bba209"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/parsegltf.cpp",
+      "type": "RegularFile",
+      "bytes": 19955,
+      "sha256": "6ce7ed934ee7950c83b55b5db197802e1764f63b1dfa3c37cdca22adbdc0e4e4",
+      "gitBlobSHA1": "2b9543c7ee76929729fb748b5527aceb4c36a2c8"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/parselib.cpp",
+      "type": "RegularFile",
+      "bytes": 255,
+      "sha256": "7f264d8542c0475eb256f03e0ae7d54727b3ba8fddcbc40e7d7abee8cfc6854c",
+      "gitBlobSHA1": "9ae069662b63d113d7670e9e88bf102ebf1ba492"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/parseobj.cpp",
+      "type": "RegularFile",
+      "bytes": 9826,
+      "sha256": "c6ab2a5bc01608d99e748df1e0f3e9fe9ce11a037d5395ddad000012c777685a",
+      "gitBlobSHA1": "cdfa36ea76cf52129705904376958de147436477"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/stream.cpp",
+      "type": "RegularFile",
+      "bytes": 27546,
+      "sha256": "49d25f61088a5f9eab1ebca7c0eb99044da6e607e8aed3885bf4ebaa7dad8cef",
+      "gitBlobSHA1": "ae523c22cd170eb52bfc477dc291a9af2a0c7176"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/wasistubs.cpp",
+      "type": "RegularFile",
+      "bytes": 1412,
+      "sha256": "281615d8a0057a327b400313dd545b9df16e8272147ccd0de01624259ab33d92",
+      "gitBlobSHA1": "2573b1126c18f87a6ba4128e360465571b64bf5f"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/wasistubs.txt",
+      "type": "RegularFile",
+      "bytes": 36,
+      "sha256": "3442945d8deaec558cbf07bcc8b9d0cf163b3525bbd97ef3f81cbbbffac2d05e",
+      "gitBlobSHA1": "dc29d467c4ef86531c72607ee517e1eb52270b02"
+    },
+    {
+      "path": "meshoptimizer-1.2/gltf/write.cpp",
+      "type": "RegularFile",
+      "bytes": 52445,
+      "sha256": "b22084babb21151a090f06c0286ef64167fab84448a9861841a803c1c2f8a039",
+      "gitBlobSHA1": "70c6c636a7c8b8d84ad12d76ad5a70b35c5345ff"
+    },
+    {
+      "path": "meshoptimizer-1.2/js",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/js/README.md",
+      "type": "RegularFile",
+      "bytes": 32874,
+      "sha256": "4d74f427a0692612de2119fce803f6443e7401f425a78ee8bfa6052e48948ff5",
+      "gitBlobSHA1": "e48816f10d715876e2f6f213203b356c34577e10"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/benchmark.js",
+      "type": "RegularFile",
+      "bytes": 3686,
+      "sha256": "bcb8f5a5ae81a82c57f234bbff0e8d9b30207b67ca23155046c1e2c039b6af0f",
+      "gitBlobSHA1": "b7e11ede46b41b2b2a63ee472a8efbe3ef6085cc"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/index.d.ts",
+      "type": "RegularFile",
+      "bytes": 198,
+      "sha256": "917002075ea95a08edefc5102ff3bd1e920f17e623ea35e6f44150d95f5d81f0",
+      "gitBlobSHA1": "71b08d788ca5e0042658b6498a293847c3dacf78"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/index.js",
+      "type": "RegularFile",
+      "bytes": 199,
+      "sha256": "0afb975db2733391c2d0cabfbe707ee6d9a9651dddc221aeda5d819379958a89",
+      "gitBlobSHA1": "1ebea45d8341cee6970dc9ee8bce2786dcd4f2a4"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_clusterizer.d.ts",
+      "type": "RegularFile",
+      "bytes": 1853,
+      "sha256": "0106567d192becc7894a7be4cce986cbc4ef5a6bccb61be0e2f646315e84bd8d",
+      "gitBlobSHA1": "df56c9abfada1d3e4a9560e513e1ba3c162c0954"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_clusterizer.js",
+      "type": "RegularFile",
+      "bytes": 32101,
+      "sha256": "633b7fd92c308b830e62f36d2a5d45a67ad806df8a80d53f54a3ad282eff590d",
+      "gitBlobSHA1": "cc7c4f3d2d1b6b90a5028b16901d19df4089edab"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_clusterizer.test.js",
+      "type": "RegularFile",
+      "bytes": 4600,
+      "sha256": "8c6ad6888b3ad5ef6d5670bd4ae832b3a0ac408693f3668e2896267fdad2a990",
+      "gitBlobSHA1": "28731977305d744ffc010ce8b46437bd70f1b69d"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_decoder.cjs",
+      "type": "RegularFile",
+      "bytes": 29400,
+      "sha256": "fedf06f101ff2ba59d66335578230b7e8f5fac5057dee084be64c67444ac6c12",
+      "gitBlobSHA1": "f43e71a35b34ae2a5b36589c437297815e1c3ed7"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_decoder.d.ts",
+      "type": "RegularFile",
+      "bytes": 870,
+      "sha256": "804e95c2fea13467a2e8002a8aa41fb470a17b3fea5a8d7eaaa156c635c03a70",
+      "gitBlobSHA1": "905b2462c084a1732e295fffe32426a40d068f39"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_decoder.mjs",
+      "type": "RegularFile",
+      "bytes": 29059,
+      "sha256": "cb08bf53ad8ad9693d8bb759b2dbade350eb38bcce63d005385e225b564c5f6a",
+      "gitBlobSHA1": "fcd9a1ce98ff0ff45d570fb8d2a15ffa874754e0"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_decoder.test.js",
+      "type": "RegularFile",
+      "bytes": 16220,
+      "sha256": "70488d804844802804fc8d4eb302779ea392f746f97df654cc2fabe0ca72c6ac",
+      "gitBlobSHA1": "8153e0b7a31b1950dc916ba0cdf8908d509f217c"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_decoder_reference.js",
+      "type": "RegularFile",
+      "bytes": 15535,
+      "sha256": "207f64595be3d5d0c0d728a981673c3fee8b4d9e671341831d556485d96de8dc",
+      "gitBlobSHA1": "030f4d38dbfff44b8e6c6798e4ccd660365ac9f0"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_encoder.d.ts",
+      "type": "RegularFile",
+      "bytes": 1448,
+      "sha256": "4c769e430f99a67a55ed23c981ab6b51e1587a93479d328ba16ffc08289d39a9",
+      "gitBlobSHA1": "288f5dfc7c044526003f834ee892fa1d775cdcc9"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_encoder.js",
+      "type": "RegularFile",
+      "bytes": 24348,
+      "sha256": "f82f201a778333291ba1ca63035321f1c6d2770ef52d219e69e13f6cb2098429",
+      "gitBlobSHA1": "ae144c7c59d8027f981866b96219acbe3355093a"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_encoder.test.js",
+      "type": "RegularFile",
+      "bytes": 8354,
+      "sha256": "532a04b27a8631f53696a82b949b3bd9155e10e9f410663970ae206f4aca593b",
+      "gitBlobSHA1": "7b174a05e35156fd6a82367961790c238f6cb8bf"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_simplifier.d.ts",
+      "type": "RegularFile",
+      "bytes": 2281,
+      "sha256": "6ec682b8b2214d72b63a2bc42038f2dcccd034d7553b58abdc21417ceb73bf34",
+      "gitBlobSHA1": "0722274bf1e4636646ad5c2e6b671e17a3a8c8e7"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_simplifier.js",
+      "type": "RegularFile",
+      "bytes": 55177,
+      "sha256": "c77634874ca565e1445bbb140c1a626ae8f4c71d7fa69e332806955fb1337824",
+      "gitBlobSHA1": "d48b8316a5eecd09200d1e96ad73c34b5400df53"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_simplifier.test.js",
+      "type": "RegularFile",
+      "bytes": 6351,
+      "sha256": "62ed9a054a129e11afdba2d5f9e3ee55511fd33923fa45d07bb0a58b605e30c9",
+      "gitBlobSHA1": "c125a91f6fc9f774e7630ef99ff80f74df3c5f03"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_tangents.d.ts",
+      "type": "RegularFile",
+      "bytes": 606,
+      "sha256": "a6a70fb3e6ee76e02813c6d60b3a47a0fcfe04125235608ebb1db6856a57c9c9",
+      "gitBlobSHA1": "6074a3ebde7ae99bd2f8659b9de0905b0fbe06c3"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_tangents.js",
+      "type": "RegularFile",
+      "bytes": 10102,
+      "sha256": "fccccf8a37f4ed32b8d3980d3901959a47bd4a4e0703e77d6e5202098b6086af",
+      "gitBlobSHA1": "827ff4b80d5511f09d299982bfe090bedc5c53e1"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/meshopt_tangents.test.js",
+      "type": "RegularFile",
+      "bytes": 2543,
+      "sha256": "e6def7e4ec6537e01fd0797d3c30c02755baa0cf9c197ff98110c3e391786d4e",
+      "gitBlobSHA1": "b2be3cd234440f9e3a9b9534048b7f601b9a76c8"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/package.json",
+      "type": "RegularFile",
+      "bytes": 1444,
+      "sha256": "25ab31c7544e8f8d05dbdb3955cd89189dcaea860039538c348295df2bb6effb",
+      "gitBlobSHA1": "aca49d85eac04bbc1a75a8e9dd9d6c8901ea333a"
+    },
+    {
+      "path": "meshoptimizer-1.2/js/wasi_trace.js",
+      "type": "RegularFile",
+      "bytes": 1264,
+      "sha256": "26c6ddf615a448f2de2d5f46d75f1d639470c14011bb27c469f2642bd9f37d85",
+      "gitBlobSHA1": "c30281e1d3fd431458a31df2cb8172c226cc8de4"
+    },
+    {
+      "path": "meshoptimizer-1.2/src",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/src/allocator.cpp",
+      "type": "RegularFile",
+      "bytes": 607,
+      "sha256": "d2cc48691fe2f4c6d097bf7a766389cfb7f83ca14a5f747e3944332656d02254",
+      "gitBlobSHA1": "058fbf3129cae10f91df463789e5b295e5fac093"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/clusterizer.cpp",
+      "type": "RegularFile",
+      "bytes": 47507,
+      "sha256": "71a5b826d16ab107d91f3baf620a718318694b9060da1d74614ff8e04e8939e7",
+      "gitBlobSHA1": "0b630b2cb01ca498bbf49b0eb41210a74ca87f28"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/indexanalyzer.cpp",
+      "type": "RegularFile",
+      "bytes": 3820,
+      "sha256": "bff37aecb10cefa33f3f6a217413c6ac98899c23e6de5282420c60e6baf786ec",
+      "gitBlobSHA1": "e8e975c274a25ca3249f32803eb4a9f17ecbf29c"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/indexcodec.cpp",
+      "type": "RegularFile",
+      "bytes": 20832,
+      "sha256": "8648e71f044e0a23622c199f250818a62d68fd05673e2e692167f257de27565f",
+      "gitBlobSHA1": "2aa1297d0ecccf41f7f6168c0220f6f184143292"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/indexgenerator.cpp",
+      "type": "RegularFile",
+      "bytes": 24513,
+      "sha256": "0e971dd8cc2ced68cd0374163461fc6c3e846267aee7b47203837164991a015e",
+      "gitBlobSHA1": "1b707bb1b6e24b4f0dc912caee4eef9c88baa567"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/meshletcodec.cpp",
+      "type": "RegularFile",
+      "bytes": 33807,
+      "sha256": "f7bad517cb77a646ba0beef916ac42715c2fe18002f29e12c6cd4ccd5835e678",
+      "gitBlobSHA1": "f6984a77b95d6ba107bd73c6da3d186d53199562"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/meshletutils.cpp",
+      "type": "RegularFile",
+      "bytes": 20635,
+      "sha256": "4813a0c9e8648c6de53f317322fa17c9486ff024f186aa9d631e7c60ba96c33e",
+      "gitBlobSHA1": "b92332addaf0160b6a84ad2c099d4214c1fe8b4c"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/meshoptimizer.h",
+      "type": "RegularFile",
+      "bytes": 104802,
+      "sha256": "21a72040a75bacf6ddefb7e74f1cf566af1e68ea5e4dc0db598278f4681e0b87",
+      "gitBlobSHA1": "e6aa58eb4d6f5cc47ba9d221aa59e4da9dd5f927"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/opacitymap.cpp",
+      "type": "RegularFile",
+      "bytes": 18567,
+      "sha256": "81037b530d10aaac80a43197294aef5b27b3ccf8d1e323c5ccdc0945fc4c5d69",
+      "gitBlobSHA1": "0ec5eaab4a023f6ddb2a5b2d3f63147749121132"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/overdrawoptimizer.cpp",
+      "type": "RegularFile",
+      "bytes": 11671,
+      "sha256": "a70412562f991133ce52b2833adee9de0a9029dc45312ada1eb5c2452dc4f3ee",
+      "gitBlobSHA1": "682b924a9082fd1e4143d530a483e156c0125b9c"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/partition.cpp",
+      "type": "RegularFile",
+      "bytes": 19202,
+      "sha256": "cb988381000256e42b6e2759c908f37c935228fde322958fb227533f39b139f5",
+      "gitBlobSHA1": "c19cf19f7da83c7d2dfec4163c2da843ee24dc88"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/quantization.cpp",
+      "type": "RegularFile",
+      "bytes": 3503,
+      "sha256": "28282f555d42a118a6735f161b1ba78fcbe0d1810a6a337a399bd8471f79105e",
+      "gitBlobSHA1": "8571973022acc5433d156a48bca617b562f5b055"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/rasterizer.cpp",
+      "type": "RegularFile",
+      "bytes": 8739,
+      "sha256": "2172e0ac82359a19f2880763e2088f51b7ec361b23fb54f743b618691967dbe5",
+      "gitBlobSHA1": "0e640bc0287bdc15b64c836defeaa446bb8f3509"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/simplifier.cpp",
+      "type": "RegularFile",
+      "bytes": 104083,
+      "sha256": "dc40aadb307577ed3f7adb5102a506263de8b9fea1d5582a24c04bff2874a2cc",
+      "gitBlobSHA1": "5102b215d448d6937495004ec4e12734b4b7043b"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/spatialorder.cpp",
+      "type": "RegularFile",
+      "bytes": 11093,
+      "sha256": "9005ee0069ed8c56797606de80c0cd951ab55ffb608bc3af83c4e5b2517371b1",
+      "gitBlobSHA1": "8a785fcd5604a7d4ed0e685706f4a18f46c70463"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/stripifier.cpp",
+      "type": "RegularFile",
+      "bytes": 7752,
+      "sha256": "e653e6be3a9b821016a1f6a90b756b971422f1246ebd03e60b478251a288bfd4",
+      "gitBlobSHA1": "4043195aeb1625dcb1e902857f2f7a4177a601cc"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/tangentspace.cpp",
+      "type": "RegularFile",
+      "bytes": 17241,
+      "sha256": "b006a329f9c90fe042a8bdc5dfcab7422d5ada3fd1864a0cd79ec1f2c5597af3",
+      "gitBlobSHA1": "81cce4d5e43955c43791b6840e489b63f0999633"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/vcacheoptimizer.cpp",
+      "type": "RegularFile",
+      "bytes": 14171,
+      "sha256": "618429ef4db8ab9b16fde4e73dcf425d89452acbf103085478bc8b1761fa6689",
+      "gitBlobSHA1": "e4ecc71d36e5acb28752c03d0e28df33175f497b"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/vertexcodec.cpp",
+      "type": "RegularFile",
+      "bytes": 60494,
+      "sha256": "a3c51e91602c607a82ad0fdc32b089e890e3a3caf7934d82b7a993d64cd683ed",
+      "gitBlobSHA1": "c8b9133da00a90be1e49e4ab6df9ad4ff04aa660"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/vertexfilter.cpp",
+      "type": "RegularFile",
+      "bytes": 55334,
+      "sha256": "22fe9f4bb0179be212d8d440bd5cb3510a505be8b2a7ba069ae890cdd0010998",
+      "gitBlobSHA1": "de830f1ae0b1f2455e35ea57cb765d1075b2c46c"
+    },
+    {
+      "path": "meshoptimizer-1.2/src/vfetchoptimizer.cpp",
+      "type": "RegularFile",
+      "bytes": 1915,
+      "sha256": "aa534bb8150ca27ae229c58a0dc51f85f9acccbc5d4214f4c82edd91fc08e478",
+      "gitBlobSHA1": "4847465b6ab022c6f827125ae018171ff203f507"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/bitmask.py",
+      "type": "RegularFile",
+      "bytes": 515,
+      "sha256": "30771f53f5b3a02af09c63e731f8adbc9391b038206330dda49bbc42d94e2ad8",
+      "gitBlobSHA1": "f429cb77cf40e00ac6c8fcd02e22924806b896e4"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/clusterfuzz.cpp",
+      "type": "RegularFile",
+      "bytes": 2904,
+      "sha256": "81e63276bbb5ce8da404ef5d4f9d7c70112cc64f8196e97912efc5051fb22ed9",
+      "gitBlobSHA1": "d4e5baa0f2f424aa62bd41d86b7ba182d4b9a33a"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/codecbench.cpp",
+      "type": "RegularFile",
+      "bytes": 13265,
+      "sha256": "fb42194cfd08f21ae30d00504b42c27978a4936772d87acac7c0efc9c435610e",
+      "gitBlobSHA1": "503c33c01ef505a94c579c33e8cbfdcd340a977c"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/codecfuzz.cpp",
+      "type": "RegularFile",
+      "bytes": 6885,
+      "sha256": "b3612e90f38223ff1555e1ad872ef9f1daa3e6c83d54ff2166a5253fd284a5be",
+      "gitBlobSHA1": "3a3eada900139cd43d697e6bbbfab1677d4e13af"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/codectest.cpp",
+      "type": "RegularFile",
+      "bytes": 6008,
+      "sha256": "b54277c8354410ff21fd0cf359078369d8070cd734d72d87c2808265af3d435f",
+      "gitBlobSHA1": "a760a370276aec3b4385d19b665d73f2f557248f"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/gltfbasis.py",
+      "type": "RegularFile",
+      "bytes": 2858,
+      "sha256": "ebb96f33c46a37a6552ee4f7a0a5fd6c028513e388d50603c06d56804b8de25d",
+      "gitBlobSHA1": "9fc881666722bc12496b190df95165cdcef55553"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/objloader.cpp",
+      "type": "RegularFile",
+      "bytes": 136,
+      "sha256": "bf75dac4ca51aecb6374569876d9f903ada5607e4fdf76b78f2109d5a86dc355",
+      "gitBlobSHA1": "ceab390797e192ef41a9dc9c53a58047a5d82d41"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/simplifyfuzz.cpp",
+      "type": "RegularFile",
+      "bytes": 1550,
+      "sha256": "3bda3a609315916682445594c86a75f43cbea0c32460fccede2fc0d7c2742219",
+      "gitBlobSHA1": "66860ac8c4e80c13da9553d93b3922610691fce8"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/vcachetester.cpp",
+      "type": "RegularFile",
+      "bytes": 13388,
+      "sha256": "a85b0af1e77f2fbbb43434de45e5f654d34e0616af074e9a5fac4da20bc2f703",
+      "gitBlobSHA1": "3f3625da2db0b065e178ad9f4ca391fa93832078"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/vcachetuner.cpp",
+      "type": "RegularFile",
+      "bytes": 11475,
+      "sha256": "d70716eca4f1d137ed1bd5ce21d976e56cae501bee97a54378a71cc992c15bd7",
+      "gitBlobSHA1": "4edc60e288ee030c690d5a9d4c97fbb90b28633c"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/wasmpack.py",
+      "type": "RegularFile",
+      "bytes": 1329,
+      "sha256": "2a83b8f34ded072ec55f506d95bd1b4ea324b521b21877b6b3b7a3e71432ef05",
+      "gitBlobSHA1": "feb8eee3afbffdc181b7fd67d5607821b581d239"
+    },
+    {
+      "path": "meshoptimizer-1.2/tools/wasmstubs.cpp",
+      "type": "RegularFile",
+      "bytes": 2042,
+      "sha256": "a0e52af404e310ceeea38a63e713adf1b243cc33b5dbb8709ce9c6bb44dec288",
+      "gitBlobSHA1": "6c855b04c677c483c115b369ae944ab48bb15589"
+    }
+  ]
+}

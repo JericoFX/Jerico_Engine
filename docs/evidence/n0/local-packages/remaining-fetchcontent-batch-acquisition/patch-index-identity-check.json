@@ -1,0 +1,142 @@
+[
+  {
+    "name": "squish-ccr",
+    "relative": "bitoneset.cpp",
+    "beforeGitBlobSHA1": "bc0a0a7d8cbd9dcff041a35a32a6f88f09949000",
+    "expectedOldAbbreviation": "bc0a0a7",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "3dc456d4e84c3d7f5fe433079961d354740aa0a4",
+    "expectedNewAbbreviation": "3dc456d",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "colourset.cpp",
+    "beforeGitBlobSHA1": "9af55efdcabc5896fc9eab23b540dc6265b0e8e6",
+    "expectedOldAbbreviation": "9af55ef",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "dcc4a5de2405ce015edd7679f5295a187bf2beb2",
+    "expectedNewAbbreviation": "dcc4a5d",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "config.h",
+    "beforeGitBlobSHA1": "ef7dbbdf9f4e63f0ee0b9d7ca48d849e68ff5819",
+    "expectedOldAbbreviation": "ef7dbbd",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "9b1bf89a57f780758a2b802b378b59b244372648",
+    "expectedNewAbbreviation": "9b1bf89",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "inlineables.cpp",
+    "beforeGitBlobSHA1": "f2e0ca1aa0714c17cd4a6c7560ec0a0bbeadf086",
+    "expectedOldAbbreviation": "f2e0ca1",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "cdb51bcc8704de08a2fbb018f3a362a5788ec172",
+    "expectedNewAbbreviation": "cdb51bc",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "maths.cpp",
+    "beforeGitBlobSHA1": "d9c38082be30428719bbdec8cd8a2c929b0d7b17",
+    "expectedOldAbbreviation": "d9c3808",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "b58c36a03e1e5caed98164d45b6b6f595d553665",
+    "expectedNewAbbreviation": "b58c36a",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "maths_sse.h",
+    "beforeGitBlobSHA1": "eeff0d57f968335e0ce6b98ff025e4125621b071",
+    "expectedOldAbbreviation": "eeff0d5",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "ff08ea09abfdfba6e3eb27fc4ef42168a0e659fc",
+    "expectedNewAbbreviation": "2a8eb89",
+    "afterIndexMatch": false
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "paletteclusterfit.cpp",
+    "beforeGitBlobSHA1": "2d6f5a1dbfe1b12866e5c486680b6d6bff31ae80",
+    "expectedOldAbbreviation": "2d6f5a1",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "b98e975914ed4656ec3d2dfbf1e61ab829f6ab84",
+    "expectedNewAbbreviation": "b98e975",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "palettefit.cpp",
+    "beforeGitBlobSHA1": "062f45c2b176634b219354d164a2903f29b0bf5d",
+    "expectedOldAbbreviation": "062f45c",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "120da2792eade6dfc855c38193b51a673e41416b",
+    "expectedNewAbbreviation": "120da27",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "paletteset.cpp",
+    "beforeGitBlobSHA1": "bee740cc42252ebf943a00979cd57e3a023d2abb",
+    "expectedOldAbbreviation": "bee740c",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "8c7aea083b6fbf668e0bc3cecfb895309f392b0a",
+    "expectedNewAbbreviation": "8c7aea0",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "simd_float.h",
+    "beforeGitBlobSHA1": "f401b68b965118085252b66efecd3c7270031e51",
+    "expectedOldAbbreviation": "f401b68",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "668bb617c2797ab502905c4e9af081671f9640fe",
+    "expectedNewAbbreviation": "668bb61",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "squish-ccr",
+    "relative": "simd_sse.h",
+    "beforeGitBlobSHA1": "f959e20b6b2ff96b0de156007db5d72bdf847687",
+    "expectedOldAbbreviation": "f959e20",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "acc188d568f8eced45d6d79e652d20618273beb9",
+    "expectedNewAbbreviation": "542fbba",
+    "afterIndexMatch": false
+  },
+  {
+    "name": "assimp",
+    "relative": "contrib/tinyusdz/patches/tinyusdz.patch",
+    "beforeGitBlobSHA1": "2a883d16a153953c9a75c023c77f3882c4d4288a",
+    "expectedOldAbbreviation": "2a883d16a",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "5645004d5944c71f45a1bb6e80fc13b43f9e6485",
+    "expectedNewAbbreviation": "5645004d5",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "tinyusdz_repo",
+    "relative": "src/external/stb_image_resize2.h",
+    "beforeGitBlobSHA1": "b982eb1f4029ba911b73bdf7b912f65e7dce9f31",
+    "expectedOldAbbreviation": "b982eb1f",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "6b4d35825a8106baccd36e054fc94633716eb57d",
+    "expectedNewAbbreviation": "6b4d3582",
+    "afterIndexMatch": true
+  },
+  {
+    "name": "tinyusdz_repo",
+    "relative": "src/value-types.hh",
+    "beforeGitBlobSHA1": "5b6be1d21b9099c48030a113e64e264882efab00",
+    "expectedOldAbbreviation": "5b6be1d2",
+    "beforeIndexMatch": true,
+    "afterGitBlobSHA1": "0f15f7c38718bb64c39ecc1953bc5a25eb7ba343",
+    "expectedNewAbbreviation": "0f15f7c3",
+    "afterIndexMatch": true
+  }
+]

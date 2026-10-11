@@ -1,0 +1,715 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/xxhash-0.8.3.tar.gz",
+  "commit": "e626a72bc2321cd320e953a0ccf1584cad60f363",
+  "root": "xxHash-0.8.3",
+  "members": 100,
+  "regularFiles": 87,
+  "fileBytes": 5440024.0,
+  "links": 0,
+  "gitBlobMatches": 87,
+  "primaryBlobFiles": 87,
+  "destination": "F:/JericoEngine/Dependencies/xxhash-0.8.3",
+  "violations": [],
+  "extracted": false,
+  "membersManifest": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "xxHash-0.8.3",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 167,
+      "sha256": "dd394337fc8104fc727ab97b979c84230ab2098bd4ce3d122191105fc8da501f",
+      "gitBlobSHA1": "fbcf75b55530acd0d256d0c3d41aea5c212b7a8c"
+    },
+    {
+      "path": "xxHash-0.8.3/.github",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/.github/dependabot.yml",
+      "type": "RegularFile",
+      "bytes": 249,
+      "sha256": "37504f1b2dbd9b0e7dad8b99a661de8759427f2d02dc297d1c5d80bc34fbf4ae",
+      "gitBlobSHA1": "7bb4cf765de7c2dfd9f034e75ca6f36acd448148"
+    },
+    {
+      "path": "xxHash-0.8.3/.github/workflows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/.github/workflows/ci.yml",
+      "type": "RegularFile",
+      "bytes": 29456,
+      "sha256": "bbc9cb59a4cb53559f5aa036470427a8274e0ed3147ecbeff8e7c59a039d20b0",
+      "gitBlobSHA1": "d806dff84bf685371ec174be1859714041d8b1e5"
+    },
+    {
+      "path": "xxHash-0.8.3/.github/workflows/scorecard.yml",
+      "type": "RegularFile",
+      "bytes": 2978,
+      "sha256": "df5da4abfe055ef9b519a9388afbe9b70d6bb118da34e5f44132dcea359bcf36",
+      "gitBlobSHA1": "c44e0b2e1e4b27c4715347c8aa9200764e1c99d2"
+    },
+    {
+      "path": "xxHash-0.8.3/.gitignore",
+      "type": "RegularFile",
+      "bytes": 659,
+      "sha256": "974bb9f880ce2b3fea9914cffb4e341082bcad4ae1e6211cb7111b40c4abd5a5",
+      "gitBlobSHA1": "b88c1cc44cb192e21e6d62ac90eae7758ebbde6a"
+    },
+    {
+      "path": "xxHash-0.8.3/CHANGELOG",
+      "type": "RegularFile",
+      "bytes": 6296,
+      "sha256": "19629e01c9ea61b55db79eef166869cbe4e62eb5c4e6ce9b1a251e5b9d0c0975",
+      "gitBlobSHA1": "0eaba6116c7bb650ceaf4d1266474b619eb4914b"
+    },
+    {
+      "path": "xxHash-0.8.3/Doxyfile",
+      "type": "RegularFile",
+      "bytes": 2119,
+      "sha256": "cce5cc9532abcae1f863cdd77528441f6caf12dbdcd00c67763f7cb55bb64dcf",
+      "gitBlobSHA1": "a2597db347dbaac90cdd7701a2eb801f137a4d08"
+    },
+    {
+      "path": "xxHash-0.8.3/Doxyfile-internal",
+      "type": "RegularFile",
+      "bytes": 2117,
+      "sha256": "217ed64b3c55c0a9b8210a06be4b4b008ea2257c61601ce97ed145c663841103",
+      "gitBlobSHA1": "2efcef500ea088a96a72b4af7174f6bc13a23c17"
+    },
+    {
+      "path": "xxHash-0.8.3/LICENSE",
+      "type": "RegularFile",
+      "bytes": 1389,
+      "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a",
+      "gitBlobSHA1": "e4c5da7234eca7baad9a46f0b144e49ccad2e500"
+    },
+    {
+      "path": "xxHash-0.8.3/Makefile",
+      "type": "RegularFile",
+      "bytes": 26155,
+      "sha256": "129e68a5e7f207a71eb163afb84d0aad7853700cd7b4f1208d9129cb9cbb3fd1",
+      "gitBlobSHA1": "5b7b8fff1b5e21ffbf3b54d560dbeec528f7c53e"
+    },
+    {
+      "path": "xxHash-0.8.3/README.md",
+      "type": "RegularFile",
+      "bytes": 17299,
+      "sha256": "750a69246094fb9db7fe857cc81d1e9a95e30e93b0d534e461c1c762061081f1",
+      "gitBlobSHA1": "a634d1a0b0636900a5ca66b7be50466a34f41ede"
+    },
+    {
+      "path": "xxHash-0.8.3/SECURITY.md",
+      "type": "RegularFile",
+      "bytes": 688,
+      "sha256": "9332581e7551a9a4a16c34eb877c1b1485aeaf9b93ec13b080f89ae843202572",
+      "gitBlobSHA1": "2a8b4c8e5a1387217873e1a9e1f84b0d5eb5387b"
+    },
+    {
+      "path": "xxHash-0.8.3/appveyor.yml",
+      "type": "RegularFile",
+      "bytes": 3682,
+      "sha256": "a54f0800917f548629125af963b2685de375b7021d45a87b3e4c70142de23307",
+      "gitBlobSHA1": "7aef900fc22aeed8cabfca3c91106bfe7d54cecc"
+    },
+    {
+      "path": "xxHash-0.8.3/cli",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/cli/.tipi",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/cli/.tipi/deps",
+      "type": "RegularFile",
+      "bytes": 30,
+      "sha256": "1de8cde77901923deaa6d8a5cbb8cea9e593d535889dc3c9d45d2b121f8c11e5",
+      "gitBlobSHA1": "653dbe10812e03bde108c5fab55d2e6537aec3ff"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/.tipi/opts",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/COPYING",
+      "type": "RegularFile",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "gitBlobSHA1": "d159169d1050894d3ea3b98e1c965c4058208fe1"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/README.md",
+      "type": "RegularFile",
+      "bytes": 238,
+      "sha256": "8ab8925c399596dcb5a51a448a9a1fc117c4adabeede392a25aaaa6d034c9cac",
+      "gitBlobSHA1": "a60a945fcd5d9e87f6754c4a7892feb6c5b5125e"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_arch.c",
+      "type": "RegularFile",
+      "bytes": 1804,
+      "sha256": "75bc1cf1483bb7b88e2db18ee807cd71ffa1cd602ebb58ba1f29ceb2b1911a69",
+      "gitBlobSHA1": "3540af48dd3e7d74d9c3216b89ea021dc549246f"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_arch.h",
+      "type": "RegularFile",
+      "bytes": 6284,
+      "sha256": "3581c430ce821ed89473dca19265c463b4316bd4d1f6426989966bac765f92d8",
+      "gitBlobSHA1": "aae7eaa8ca23b2ea1f086994f3a061fd81ff3d35"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_bench.c",
+      "type": "RegularFile",
+      "bytes": 16957,
+      "sha256": "904c5252c03aed5cbe8b15a72048648b4c7c17fbbe92779178ee3359bb9d012d",
+      "gitBlobSHA1": "7f67969aca7807c1fc81d2b8df34e5f32299d01a"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_bench.h",
+      "type": "RegularFile",
+      "bytes": 1505,
+      "sha256": "e1779a83edf19f8b601652700f5b8c83ba1f8c4a32d899f83f4e2a8ba4f06a08",
+      "gitBlobSHA1": "6faaec8c983b97221995f7353baa1efe36437f4d"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_config.h",
+      "type": "RegularFile",
+      "bytes": 6029,
+      "sha256": "a155cfebfcb77cfe061b41acd819bc3545f433fed5e4a125f40b6ffac989c518",
+      "gitBlobSHA1": "eec5528db5ccd4bd99373da55af073b28ff382b5"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_os_specific.c",
+      "type": "RegularFile",
+      "bytes": 15801,
+      "sha256": "cf1d3256d80ca96b33eda18599cb13cc59541af3ef8394920cfad207971b7c10",
+      "gitBlobSHA1": "8438d0cf13f820fa59ecd4814b439275b503ff48"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_os_specific.h",
+      "type": "RegularFile",
+      "bytes": 2410,
+      "sha256": "d388f61bc375add6a91e97f4e2f8e5cd9b4e41f1f2d3d14f606b7374178f3fc3",
+      "gitBlobSHA1": "e1e080a43fe4f7f825573157f7ba8b932757d2bc"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_output.c",
+      "type": "RegularFile",
+      "bytes": 1891,
+      "sha256": "c21a735d1c136acd028a0986e3e218f0ac4fdd1f39e03710c6b214fd8cb09383",
+      "gitBlobSHA1": "ee7002bd42ec93df51e91eab89cdc65f36c038ed"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_output.h",
+      "type": "RegularFile",
+      "bytes": 1697,
+      "sha256": "72afce7c686580b2fc55d678ad5b27b0caf0a36bb8d3a0c95743dbcf34457911",
+      "gitBlobSHA1": "9a7926dfcd2fdf19d885bcdca8ee9e5192c571b3"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_sanity_check.c",
+      "type": "RegularFile",
+      "bytes": 29677,
+      "sha256": "f1cf719abcd194161e0d812fa51083f6d1406596ceb65955aba97e3d96a0561d",
+      "gitBlobSHA1": "98014d59a4c4d54c22d1e6f96e6b857c97154c86"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xsum_sanity_check.h",
+      "type": "RegularFile",
+      "bytes": 1729,
+      "sha256": "fe458c767cbf2aa1bc45b3c5cdf2b4a89a711c748ab3ca3507b855235be8eb74",
+      "gitBlobSHA1": "af766dfa4fb58173b1c635f6fcd3397bbb1251f1"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xxhsum.1",
+      "type": "RegularFile",
+      "bytes": 4846,
+      "sha256": "0be3f6c23d94c765a09af9d61ed305fcf4705a18da7f1a4e7b2c5b12cb50f481",
+      "gitBlobSHA1": "dd5fdeb428e66d5ecd90f4ab257ab710c790ecec"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xxhsum.1.md",
+      "type": "RegularFile",
+      "bytes": 5324,
+      "sha256": "d9d9ebcb04bdb1f190a022f95fa65346a8113242aa00bc9e239ef0f77a60bbe2",
+      "gitBlobSHA1": "7f5c76dec29fe0ac5875bbc93544a280a9ca4661"
+    },
+    {
+      "path": "xxHash-0.8.3/cli/xxhsum.c",
+      "type": "RegularFile",
+      "bytes": 59413,
+      "sha256": "fd26c92d84f7e9f71ca25eab046a4da8ded830375dcc680f87803b020837a4d5",
+      "gitBlobSHA1": "046070d8c51888d00aa270698c9ae2b480225a3e"
+    },
+    {
+      "path": "xxHash-0.8.3/clib.json",
+      "type": "RegularFile",
+      "bytes": 255,
+      "sha256": "4b40cc2f005a8e48db9bb9b79ed821c19de3e35e3208722ad093d76322008dcc",
+      "gitBlobSHA1": "242343c5d992d4a19b9a9fe9d3845c5f12525569"
+    },
+    {
+      "path": "xxHash-0.8.3/cmake_unofficial",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/cmake_unofficial/.gitignore",
+      "type": "RegularFile",
+      "bytes": 116,
+      "sha256": "51a9a395b389f84e618beba03b6b64e3cd155864acf96ffa3a0909609d80ba43",
+      "gitBlobSHA1": "93d9fe4f6d0b09dbc2a3e6e62ffdba30591c9a52"
+    },
+    {
+      "path": "xxHash-0.8.3/cmake_unofficial/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 7737,
+      "sha256": "f77792382a0cef2ed1746e702a1494a721487a1f132b568bd4c448fe80244b62",
+      "gitBlobSHA1": "89242ec6dd81686a1f2bd4cf7a9f163c7772ce28"
+    },
+    {
+      "path": "xxHash-0.8.3/cmake_unofficial/JoinPaths.cmake",
+      "type": "RegularFile",
+      "bytes": 817,
+      "sha256": "794b0d8fa62a3b798c7df12d50114580d1a47a234bfb6b4d83092eb646a6ecc4",
+      "gitBlobSHA1": "c68d91b84dbc7238d8202cd55c6022e8c94fac3d"
+    },
+    {
+      "path": "xxHash-0.8.3/cmake_unofficial/README.md",
+      "type": "RegularFile",
+      "bytes": 1207,
+      "sha256": "b96b36ee579a21b0345afce457b873302b909f501a24d4a151b8637a6f3abe71",
+      "gitBlobSHA1": "37339124187ee957546f0c812089a0eb9e036a4f"
+    },
+    {
+      "path": "xxHash-0.8.3/cmake_unofficial/xxHashConfig.cmake.in",
+      "type": "RegularFile",
+      "bytes": 72,
+      "sha256": "5a0b912c25fa75cea1845c0083b9ad58c867cf764e30ba6becfad6ef576c5f08",
+      "gitBlobSHA1": "fd282bee667f9f40d6c42b2461e28823fad805cb"
+    },
+    {
+      "path": "xxHash-0.8.3/doc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/doc/README.md",
+      "type": "RegularFile",
+      "bytes": 413,
+      "sha256": "c83f006d355c25c160df54a1981bda1bb08374da2efc6b6c1296d7a829189dda",
+      "gitBlobSHA1": "a73ad72907c9bd358e142cb0f042da8c3c6680a9"
+    },
+    {
+      "path": "xxHash-0.8.3/doc/xxhash.cry",
+      "type": "RegularFile",
+      "bytes": 7190,
+      "sha256": "0a221e49377b1f49d73f6bd94ab2efd1cc505f347edc383936867a6ba831cf26",
+      "gitBlobSHA1": "984e1c8b6b63ebd179d7d349fcb779f65cf80f2f"
+    },
+    {
+      "path": "xxHash-0.8.3/doc/xxhash_spec.md",
+      "type": "RegularFile",
+      "bytes": 35240,
+      "sha256": "61c47af338b2feefcc7621700ef6b941bcf9b1dd33899c503f68cb797e7ef333",
+      "gitBlobSHA1": "1a544e9ba977010e824fc7b77aea97dda248351c"
+    },
+    {
+      "path": "xxHash-0.8.3/fuzz",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/fuzz/fuzzer.c",
+      "type": "RegularFile",
+      "bytes": 261,
+      "sha256": "79d1753fd335c90076a2c75b83fd8f8fdbfe850cef45cbb438e58e6b8c9cba4c",
+      "gitBlobSHA1": "731ba4d497e093790fdc8670dcd7d3d38dca1249"
+    },
+    {
+      "path": "xxHash-0.8.3/libxxhash.pc.in",
+      "type": "RegularFile",
+      "bytes": 410,
+      "sha256": "93ffcce29132f7fbd1e6bf5e20cda47697b1321873937b515eda52b6b0b9499c",
+      "gitBlobSHA1": "fc59344ca22b9c200792b85d640362ea9da5ffd6"
+    },
+    {
+      "path": "xxHash-0.8.3/tests",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/tests/Makefile",
+      "type": "RegularFile",
+      "bytes": 4018,
+      "sha256": "d58d589eb1546e590f2187610d5d6011405d0d92c7e48b7b87c403ce2adaf7b7",
+      "gitBlobSHA1": "b9e45b0aed05b417626c26119ba0a67cda417091"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/.clang_complete",
+      "type": "RegularFile",
+      "bytes": 8,
+      "sha256": "84b92f6c29732d6093990d932902990d1656be71a8dcca83419f5dba5aaa4708",
+      "gitBlobSHA1": "87dff6b82cb2be8aedcd5aac33087eba9726f82c"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/.gitignore",
+      "type": "RegularFile",
+      "bytes": 111,
+      "sha256": "d5fba126934e8c9dc7e5f2d38c5e063162f90646f368ee7feea3759c67763b5f",
+      "gitBlobSHA1": "93f3e073b2a4a2b09337650e26058c7086d3bae3"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/LICENSE",
+      "type": "RegularFile",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "gitBlobSHA1": "d159169d1050894d3ea3b98e1c965c4058208fe1"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/Makefile",
+      "type": "RegularFile",
+      "bytes": 2272,
+      "sha256": "5cf7d15753e2797580a952966a9f74a5296e6e4283c5c1305e8afce40e5c22dc",
+      "gitBlobSHA1": "a7edd48668c68cfca496ce34a681969f4b12ee70"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/benchHash.c",
+      "type": "RegularFile",
+      "bytes": 5316,
+      "sha256": "9d3fc60a9f6d073218bb4156a7ed6f33515c47ce7d578ff98328de6b94a1c46e",
+      "gitBlobSHA1": "5da4678e5cef53d6c75d24c967239b54b9ecbed3"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/benchHash.h",
+      "type": "RegularFile",
+      "bytes": 2015,
+      "sha256": "1f83751e65a258dbdfee857bb2d7920a026d5d40bfb415688e92712b40c81551",
+      "gitBlobSHA1": "9caa0a73f56db3a40700b6c1d8893a1f131915e7"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/benchfn.c",
+      "type": "RegularFile",
+      "bytes": 9711,
+      "sha256": "465b16349b560f95f73343bd055767e1aef5a9d2b913ecf49842967e22878187",
+      "gitBlobSHA1": "9d8f7265f0b46416decbdd361ef6aca13ef24ee0"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/benchfn.h",
+      "type": "RegularFile",
+      "bytes": 8724,
+      "sha256": "b81c8ae8e61b1b7e5aeb473b92dac0650943cdfccc064eb9064099c699b3d521",
+      "gitBlobSHA1": "82f165571fe7316b00fc08ecd3de4730dbfa3498"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/bhDisplay.c",
+      "type": "RegularFile",
+      "bytes": 5902,
+      "sha256": "bc32cba351e7ae51d1b9b75d87d4ff21293ea7a2661234fc2a6e72109df42f06",
+      "gitBlobSHA1": "eb9c197e1bf774329aeddbd315f01870faae4483"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/bhDisplay.h",
+      "type": "RegularFile",
+      "bytes": 1956,
+      "sha256": "22ee5e3fd745e320945af4d972770411ee77bae450676da1fec6ba3b148b691d",
+      "gitBlobSHA1": "0e5b72b166e59d0dceb33315e34390455a6ac55e"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/hashes.h",
+      "type": "RegularFile",
+      "bytes": 3459,
+      "sha256": "7f809594989809332d6bb7032ea945476a90c90dacd0f689a2b89fbe35edc294",
+      "gitBlobSHA1": "39f6e0f9fe0ebfc1d5b82cd101869f4821526ae6"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/main.c",
+      "type": "RegularFile",
+      "bytes": 7437,
+      "sha256": "72c91d6b060b3d60bdbf867cd06a6ae4d39d76ab6df694a2664748ef2f86f810",
+      "gitBlobSHA1": "8a6b8165c430d9245f5ab6c7fccad4715e7dfe42"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/timefn.c",
+      "type": "RegularFile",
+      "bytes": 4898,
+      "sha256": "f61424f3f11089245fd02e55f036dc0079e33647c25713506331b34915039ab7",
+      "gitBlobSHA1": "e3a05916136842315e97291617ea8e1c1562ced6"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/bench/timefn.h",
+      "type": "RegularFile",
+      "bytes": 2560,
+      "sha256": "880108d9514d9a3b4318ef38f2227ff6a1221f7f92590912d531b7e1cf058ac7",
+      "gitBlobSHA1": "6155f64740a77daaba91d01eee5d7c5a587e121d"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/cli-comment-line.sh",
+      "type": "RegularFile",
+      "bytes": 815,
+      "sha256": "29d4c63340454371cdc18029fae8c286e8eecee780b0a80ce20f75f74e479d6e",
+      "gitBlobSHA1": "0c024ccabd2bd37064523370b2390b6cb0dbd64c"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/cli-ignore-missing.sh",
+      "type": "RegularFile",
+      "bytes": 1130,
+      "sha256": "7b9005e966296442a37fbb6b7b1a49b768b4efdc54206815a8fbd7373f38f752",
+      "gitBlobSHA1": "4b961699a7da38473e6499c85c86cf9e70827ed4"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/.gitignore",
+      "type": "RegularFile",
+      "bytes": 32,
+      "sha256": "b44f1f46a697c4055f00b331d33b1c99b51399c2d7977e270001e60f06327060",
+      "gitBlobSHA1": "f85592639b4249811231eb17441cadcbc37d451c"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/LICENSE",
+      "type": "RegularFile",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "gitBlobSHA1": "d159169d1050894d3ea3b98e1c965c4058208fe1"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/Makefile",
+      "type": "RegularFile",
+      "bytes": 2166,
+      "sha256": "dd0a27da33a5c29f0301807b94b2942183488fc1ba0ae7110c76f6698c0ea1d1",
+      "gitBlobSHA1": "eee4b59e3c1c8ec0618cc3288241bdd375da4142"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/README.md",
+      "type": "RegularFile",
+      "bytes": 4813,
+      "sha256": "078f0d5df59b1d937e35ec795bd18a82853a490d0901288219ff8314ae49b6b7",
+      "gitBlobSHA1": "683b1151863e7f4bf5aa2598e06af5ac096d9c3a"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/allcodecs",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/allcodecs/README.md",
+      "type": "RegularFile",
+      "bytes": 50,
+      "sha256": "dc4b8e6cfcf56e8a3b8dac74417d258a015fdd367acc4b6953ee7db6bbf01438",
+      "gitBlobSHA1": "d41fc2dbbfc1ef96fdd34cd6ce1af1a93791d027"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/allcodecs/dummy.c",
+      "type": "RegularFile",
+      "bytes": 1266,
+      "sha256": "d068b8dff15513c93372e82b9ceeef70fe380232a0dbcf0482daa4a7e794083f",
+      "gitBlobSHA1": "547d5c7366dbf97afb8c5d0451ac3b744c59378f"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/allcodecs/dummy.h",
+      "type": "RegularFile",
+      "bytes": 1299,
+      "sha256": "f36788a13d2cd6bb2c903598393c09339df474cdca6b0829a3cd67d7c0e11d53",
+      "gitBlobSHA1": "85856eff2e8ef18a0d0298fad2dea1551fc97aa9"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/hashes.h",
+      "type": "RegularFile",
+      "bytes": 3018,
+      "sha256": "31d8d00987a709bc766d7faebe56a7c46cd96bd9fafb1bb5c749765dd839c790",
+      "gitBlobSHA1": "7a648421f3492318c6c90672058c6790811b7e4f"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/main.c",
+      "type": "RegularFile",
+      "bytes": 37859,
+      "sha256": "42896835bb986438b869cad58d1b3128972333b062b8431b953455c13a910101",
+      "gitBlobSHA1": "30aee4a4fb913b589b092ff6e241860ce34d4b39"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/pool.c",
+      "type": "RegularFile",
+      "bytes": 10475,
+      "sha256": "76cfeb573d28f525a5699eccda9e767248daea95f7258139527fae0c994d7122",
+      "gitBlobSHA1": "e6f2b797c0e3c1a1df80b14068d7d39e92889591"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/pool.h",
+      "type": "RegularFile",
+      "bytes": 2340,
+      "sha256": "b306518cf5bc4aaf16d14d100f0ebcb70345e0863a437b0755cb778a02673f0f",
+      "gitBlobSHA1": "0ca7cc785ee18feab18ef4b39ad76b8921863ddc"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/sort.cc",
+      "type": "RegularFile",
+      "bytes": 1785,
+      "sha256": "cd3be6a40afc1e457a13ff7f133964e2d4bb513006a726afc1eadb1bd64801fc",
+      "gitBlobSHA1": "c0cacda29c80ae01c29686f4f13786af3c37e203"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/sort.hh",
+      "type": "RegularFile",
+      "bytes": 1294,
+      "sha256": "06c0824e4615aac86c10fd16cc50b5402f13d065ce146591f2b5396cc9fd14d5",
+      "gitBlobSHA1": "16374c1b9c46751671614a1a5f0ee233715e22ca"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/threading.c",
+      "type": "RegularFile",
+      "bytes": 1867,
+      "sha256": "8dbb44241cdc874fdb2d7192eb79cb97d1fa31b2bf26bc56eaa84239dcfd4ff3",
+      "gitBlobSHA1": "5164667192383734b9cab44da75d73020ef51258"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/collisions/threading.h",
+      "type": "RegularFile",
+      "bytes": 3912,
+      "sha256": "0dffb280b3ce38e081d32a97fb6f908539df6b24d33d2f7933620bcf7a263f80",
+      "gitBlobSHA1": "700bf44269bd323d1aa21242d1d7a57ca5f0c733"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/filename-escape.sh",
+      "type": "RegularFile",
+      "bytes": 641,
+      "sha256": "f68f437542f08cf162ad2369c96a33ae24845f4a88f32e3184148c5c50b80770",
+      "gitBlobSHA1": "7c52e7ea166c6f1b0dbdfacb67adc468ef88948a"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/generate_unicode_test.c",
+      "type": "RegularFile",
+      "bytes": 6245,
+      "sha256": "1829422db6c67ce7958068768a0d5309317764effbf543367feb9e5f057cac6a",
+      "gitBlobSHA1": "eed6ac01a514b5a6b0ddd4808bc7aa495bb258fc"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/multiInclude.c",
+      "type": "RegularFile",
+      "bytes": 2390,
+      "sha256": "47b3e72692d30f0a78d48f2a1ce38e3d3248673d6ede42628662a9214c492330",
+      "gitBlobSHA1": "8912771dd322b3e74051f08804bc4c9cc545bb7b"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/ppc_define.c",
+      "type": "RegularFile",
+      "bytes": 1775,
+      "sha256": "5166bd847dd425980f05615fd0850e5296b1fd088edd592f49867dec856c49a3",
+      "gitBlobSHA1": "d94c2c7240b8160f215900c1938949c9a3cbb179"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/sanity_test.c",
+      "type": "RegularFile",
+      "bytes": 27048,
+      "sha256": "e2907110658d9248742a80b0e702312c66555bd6fe781fe1979a5a64acc25469",
+      "gitBlobSHA1": "3e3d4f16130b1a226ccd59ceec5b10f0767e8dd9"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/sanity_test_vectors.h",
+      "type": "RegularFile",
+      "bytes": 4587988,
+      "sha256": "e81b5f30744714293c511110b0b6f538516d9432153d8a1cb7dc0d8a73589af7",
+      "gitBlobSHA1": "a5025a2d34be5e7a81c2e01802a5f3588399b58f"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/sanity_test_vectors_generator.c",
+      "type": "RegularFile",
+      "bytes": 14782,
+      "sha256": "c577e47a20bbc2e5a57915276364af0232320373bc4bdcef81954aceea3b55f2",
+      "gitBlobSHA1": "f910462308ac316724517a515db482f0769295d9"
+    },
+    {
+      "path": "xxHash-0.8.3/tests/unicode_lint.sh",
+      "type": "RegularFile",
+      "bytes": 1017,
+      "sha256": "e1552f60f7d4b117f0e7c022f9dda5f0cf317f86e832817cf224491e63029c0e",
+      "gitBlobSHA1": "2e68f58674476b644a2f8693f289c0c45ae4a71f"
+    },
+    {
+      "path": "xxHash-0.8.3/xxh3.h",
+      "type": "RegularFile",
+      "bytes": 2394,
+      "sha256": "a927ee0e6e0800835baed52b16bc981ec39f46287271a1a3f77c22cc48634430",
+      "gitBlobSHA1": "7e3ce68e0ccb2f6665df5ffbeccf9e3fb7a1aab1"
+    },
+    {
+      "path": "xxHash-0.8.3/xxh_x86dispatch.c",
+      "type": "RegularFile",
+      "bytes": 32121,
+      "sha256": "5ebb8caa74c8503826d1e4504e5c614d9fe21169edd0f4032c4771edb3d67e74",
+      "gitBlobSHA1": "03e7dc4109927272c0bb89a2bab94744c3bb76d1"
+    },
+    {
+      "path": "xxHash-0.8.3/xxh_x86dispatch.h",
+      "type": "RegularFile",
+      "bytes": 4058,
+      "sha256": "ac82561df1d457ea4c8feb17f9df2d53ecf7d99b36b3d2c94cd0bb248e328825",
+      "gitBlobSHA1": "7085221570e3acf3fd954a5dfdcd0ae504eade0e"
+    },
+    {
+      "path": "xxHash-0.8.3/xxhash.c",
+      "type": "RegularFile",
+      "bytes": 1855,
+      "sha256": "5c3591fe6e6c86a619eb26760e9520e37a6fd5152882ab5ad93f912e2a855966",
+      "gitBlobSHA1": "e60cc37f13c27ff0668ec2535937df3f4c097ec2"
+    },
+    {
+      "path": "xxHash-0.8.3/xxhash.h",
+      "type": "RegularFile",
+      "bytes": 268319,
+      "sha256": "17973c0dc49d9854ca26caa191f0e12f7a424b68858d9a78de3860d959d85e4b",
+      "gitBlobSHA1": "78fc2e8dbf6db809650fbb59762c5566a71677ca"
+    }
+  ]
+}

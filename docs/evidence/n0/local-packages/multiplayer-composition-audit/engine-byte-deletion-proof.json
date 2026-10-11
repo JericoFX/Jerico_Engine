@@ -1,0 +1,27 @@
+{
+  "removedBytes": 69.0,
+  "originalBytes": 3827,
+  "equalsOriginalMinusTwoCompleteLines": true,
+  "after": {
+    "bytes": 3758,
+    "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+    "sha256": "605D32CCDD7DFA055560BC81EF79E743DC167318683E1E30733A507F3C582226"
+  },
+  "deleted": [
+    {
+      "bytes": 29,
+      "text": "        \"Gems/Multiplayer\",",
+      "byteSequenceHex": "20202020202020202247656D732F4D756C7469706C61796572222C0D0A",
+      "line": 56
+    },
+    {
+      "bytes": 40,
+      "text": "        \"Gems/MultiplayerCompression\",",
+      "byteSequenceHex": "20202020202020202247656D732F4D756C7469706C61796572436F6D7072657373696F6E222C0D0A",
+      "line": 57
+    }
+  ],
+  "originalSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+  "allOtherJsonDataPreserved": true,
+  "keptLineByteSegmentsUnmodified": true
+}

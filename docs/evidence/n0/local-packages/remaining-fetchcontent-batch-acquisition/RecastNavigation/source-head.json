@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/recastnavigation/recastnavigation/archive/refs/tags/v1.6.0.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/recastnavigation/recastnavigation/tar.gz/refs/tags/v1.6.0",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/recastnavigation/recastnavigation/tar.gz/refs/tags/v1.6.0",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"ef1bd4d88e9e51cf33f8bbd0ae141db8bd3a50a795e7acf31354d86c9ba4e0d3\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

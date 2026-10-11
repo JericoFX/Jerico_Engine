@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/refs/tags/v0.8.3",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/refs/tags/v0.8.3",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"57a4acc7f1d973583fa24868c78765b3168fd810e5d169ea5c545b691402a4f8\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

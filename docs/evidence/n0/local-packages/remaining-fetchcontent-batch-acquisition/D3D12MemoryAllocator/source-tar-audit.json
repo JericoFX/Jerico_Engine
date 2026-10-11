@@ -1,0 +1,2171 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/D3D12MemoryAllocator-3.2.0.tar.gz",
+  "commit": "1d86c1130f61453634b1df85782e1fecfd59a525",
+  "root": "D3D12MemoryAllocator-3.2.0",
+  "members": 308,
+  "regularFiles": 292,
+  "fileBytes": 3169617.0,
+  "links": 0,
+  "gitBlobMatches": 292,
+  "primaryBlobFiles": 292,
+  "destination": "F:/JericoEngine/Dependencies/D3D12MemoryAllocator-3.2.0",
+  "violations": [],
+  "extracted": false,
+  "membersManifest": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/.github",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/.github/workflows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/.github/workflows/windows.yaml",
+      "type": "RegularFile",
+      "bytes": 1834,
+      "sha256": "c7846d1630b08c6ea913e08fea79e9e800842856d14aed86a46f238217ae38f3",
+      "gitBlobSHA1": "97cd3755a1fd71cb8cf1f306b8f7ba0c8d0d5583"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/.gitignore",
+      "type": "RegularFile",
+      "bytes": 6,
+      "sha256": "fe54d1fd9b0ea946a38c56b98ec8ad8dff0ce784bc926b25433e44d2703f6f0f",
+      "gitBlobSHA1": "d16386367f7cd7dd3c1842c484239e9e82a25efc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/CHANGELOG.md",
+      "type": "RegularFile",
+      "bytes": 5453,
+      "sha256": "e92ce5c82c1b37e05cf3f6351aa7bfa0a562cf803064a264d0866fecc9b37ffa",
+      "gitBlobSHA1": "4c4546b1a542293196037afc666cb3789548cb7e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 1351,
+      "sha256": "0c336497f8257b0797b624b0eb93b7c85d67851ab905534d3785e663b90e063a",
+      "gitBlobSHA1": "5cf7273a2c9cec48ad12b17eee4187d30f2d07fa"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/LICENSE.txt",
+      "type": "RegularFile",
+      "bytes": 1099,
+      "sha256": "5478a2f36b736e13dd3250b9c71a4ab521bc327fb9d112a92c647bf3e69ddb68",
+      "gitBlobSHA1": "3d5a69a6f5695507ecc9c412c783ca60572bf878"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/NOTICES.txt",
+      "type": "RegularFile",
+      "bytes": 2839,
+      "sha256": "7b7fc5046e474378f4fe0bde65508e0d2b3146b58568ebc7cc192aea85ff91b8",
+      "gitBlobSHA1": "6c079b16c4f0bd4a87785a4b4f775e7b14ed65ba"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/README.md",
+      "type": "RegularFile",
+      "bytes": 8193,
+      "sha256": "7711db96c4b060537ffcadb43a930a2443e0529d7562921497b3303cfb5e5782",
+      "gitBlobSHA1": "87964cc58aca59acf9982bd51c076ad3bd1f9f29"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/bin",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/bin/D3D12Sample.exe",
+      "type": "RegularFile",
+      "bytes": 331776,
+      "sha256": "374d28e999373910a956cbc4ae1ea3ab02e2f28e225f54550483b2ba8dc446fd",
+      "gitBlobSHA1": "1eef953f168ed867b0a2da9304680ecb32963d52"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/.nojekyll",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Aliasing.png",
+      "type": "RegularFile",
+      "bytes": 6208,
+      "sha256": "426ab1152bcb4cb186a55a14e3da825aab6f358b56306cd986dd1c236ad211df",
+      "gitBlobSHA1": "5f37edb9ed67bd2b628edfc9134c4eba4a9ba89e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Linear_allocator_1_algo_default.png",
+      "type": "RegularFile",
+      "bytes": 1264,
+      "sha256": "f6857dbe6a9ad96a763660d9e7029f03d03925521f1b7d57c909ceff7e8a3969",
+      "gitBlobSHA1": "e3e8f47c1b4730e6bac2778016fe1030e656c771"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Linear_allocator_2_algo_linear.png",
+      "type": "RegularFile",
+      "bytes": 1989,
+      "sha256": "8f3aa6d883ba45d8d57144ecefeb27a5301fd56be83564907b7f4cefc07e10a6",
+      "gitBlobSHA1": "c2a38b2e8140e12baf9e4706259d3259737553bd"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Linear_allocator_3_free_at_once.png",
+      "type": "RegularFile",
+      "bytes": 5205,
+      "sha256": "c9a8c46d3eedc144640dacd1e1b96d5cdbc6548b2a22712929508dbbe859c7c4",
+      "gitBlobSHA1": "a000ad569aa8f08d89ceec469be7d2355e6d93b0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Linear_allocator_4_stack.png",
+      "type": "RegularFile",
+      "bytes": 3356,
+      "sha256": "9d8e2c07248004054d80320cd9ef242bb84692cc22e30657f675cef7f912acef",
+      "gitBlobSHA1": "4dba064b48c12f9b08ff9b568b1acd70304b573a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Linear_allocator_5_ring_buffer.png",
+      "type": "RegularFile",
+      "bytes": 2246,
+      "sha256": "58930b3135589b24d8192a3987cf04280118cf0a170f3e2030590ee2ae0c1e00",
+      "gitBlobSHA1": "0686702ac2ceb6991eed14955c709200d5c0d41b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Linear_allocator_7_double_stack.png",
+      "type": "RegularFile",
+      "bytes": 1595,
+      "sha256": "d72e0d4afd8a78fbcddd008c6ddd88503c6d969d734f02bf24510b033d99529e",
+      "gitBlobSHA1": "77d1468b7f7ffb8c48b29726e75cca04645fc48b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Margins_1.png",
+      "type": "RegularFile",
+      "bytes": 268,
+      "sha256": "074780273067e6ac4363484eba44552ec23d1aa7cd5002d2a4dc12430595fd30",
+      "gitBlobSHA1": "8c9e1844c89cd0fbbb22ede4fc1a30deaea09a40"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/gfx/Margins_2.png",
+      "type": "RegularFile",
+      "bytes": 6542,
+      "sha256": "8434fe4aa414a6b7f300e99cfcf69c751c7ca0a55e841888d6d452f4db87bea0",
+      "gitBlobSHA1": "e0aefbcc037f9c3544489f50c9d8e7091eec8672"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/_d3_d12_mem_alloc_8h.html",
+      "type": "RegularFile",
+      "bytes": 48762,
+      "sha256": "4439244e20fb494d5280cd71341d1b6b9daf36b29126f4133781e2dee46574ae",
+      "gitBlobSHA1": "1570785ca20b155c45cfc43573f8fd323b75b557"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/annotated.html",
+      "type": "RegularFile",
+      "bytes": 17410,
+      "sha256": "864ffe13b2bbe48f3228c4939551d679d9df9b82e01be0dd473bbd72acde7685",
+      "gitBlobSHA1": "dfcd99324a22268bfa10f5bff79a7a4253e29a5a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/bc_s.png",
+      "type": "RegularFile",
+      "bytes": 676,
+      "sha256": "9e7ed0ef70f99bb7f763a48ddd95d5990e103bb145eedfd0a76d19c122374be2",
+      "gitBlobSHA1": "224b29aa9847d5a4b3902efd602b7ddf7d33e6c2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/bc_sd.png",
+      "type": "RegularFile",
+      "bytes": 635,
+      "sha256": "be713b2cca9757f7589575afd788e336fc967cbb3218d4973122f2f19572eae6",
+      "gitBlobSHA1": "31ca888dc71049713b35c351933a8d0f36180bf1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_allocation-members.html",
+      "type": "RegularFile",
+      "bytes": 10891,
+      "sha256": "4180bf29ce7e4fe76386e3c53372a0bd61446696a871c8f05aea4999784afe33",
+      "gitBlobSHA1": "47d39a33ec80cc5f8cab08322400c7aba6b45eb4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_allocation.html",
+      "type": "RegularFile",
+      "bytes": 26485,
+      "sha256": "47d770f8e8677651d06f9e577ae9fdbd674d524a30c7dadb32fa5f7dbd1c4e94",
+      "gitBlobSHA1": "d62239bc38409c587c534d14b3bbc96b26e5c653"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_allocation.png",
+      "type": "RegularFile",
+      "bytes": 538,
+      "sha256": "4c2358946d90e4d5f6efd65f6b2a24d81a7bfb08d76342a862bb934b3b28fc49",
+      "gitBlobSHA1": "57188b35528ecc629fb9ffd1aa571d849efee59e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_allocator-members.html",
+      "type": "RegularFile",
+      "bytes": 13297,
+      "sha256": "891cc03a69fb986b7de4452a36fbbf9264ea484e8931d9f0baf39a412d2de34a",
+      "gitBlobSHA1": "edac74e9f951a3cbf8ebc3e41195e01efa4d1bb0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_allocator.html",
+      "type": "RegularFile",
+      "bytes": 61470,
+      "sha256": "e343b10a571b8c2b313aa04c9437a128c369ec711a30ee4d2a1cf8f9533f3763",
+      "gitBlobSHA1": "7aab5ab97ce81db08b622b407e09416fbaa312e7"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_allocator.png",
+      "type": "RegularFile",
+      "bytes": 488,
+      "sha256": "805fff27272f09abb8b1ffed49333f8f0d7f0d925a20217260bdf9fa56657ce3",
+      "gitBlobSHA1": "db6890c30b23e402df125aac623ec4a0307da41f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_defragmentation_context-members.html",
+      "type": "RegularFile",
+      "bytes": 6441,
+      "sha256": "888da5a36f0d66dfb89c7654cf2504ce72b26e641213c670e2d68543afd13083",
+      "gitBlobSHA1": "be6456480d641df4a31625973cb499e002887f91"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_defragmentation_context.html",
+      "type": "RegularFile",
+      "bytes": 13261,
+      "sha256": "18b223bbe71c4f1dd5999582918e06c5b5c28a10a9b1d365a7b72e3e98269e36",
+      "gitBlobSHA1": "801d483187b488dc305364c9a5a0f5d5ff638403"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_defragmentation_context.png",
+      "type": "RegularFile",
+      "bytes": 719,
+      "sha256": "b253774f3562dfd873ab1ccb971876c4b671266934f932a761c7b372dfb78437",
+      "gitBlobSHA1": "68880815adb1a999c54fb49052aa00936dd7f736"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_pool-members.html",
+      "type": "RegularFile",
+      "bytes": 6964,
+      "sha256": "d299a704ca6a983aa91e2e517a417eda3dedbdf8b6bed7c36696b1b8a272cf37",
+      "gitBlobSHA1": "151ee31e5b4d7afbc9db67198959669e89853733"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_pool.html",
+      "type": "RegularFile",
+      "bytes": 16209,
+      "sha256": "9cdbae4b26b1c1a2c2cc530c5c784bf7a540b6a703954345448b7ed15a0c9e60",
+      "gitBlobSHA1": "785ac8b2fd2baf4c970525c62fd78fdc479cf555"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_pool.png",
+      "type": "RegularFile",
+      "bytes": 475,
+      "sha256": "36e406bc166a14c0d19da2632ac341753af58ef6637e7dd729f999fdbc2ec719",
+      "gitBlobSHA1": "fa3d8c0cebe49776ca12695a7a019ac5d4e31a80"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_virtual_block-members.html",
+      "type": "RegularFile",
+      "bytes": 8973,
+      "sha256": "a5b0d541fb564b6c6e03abb3658a87ecf7fb6602f99c9c8949cd65afcf35bc43",
+      "gitBlobSHA1": "229789d39300ded72163d3444955f5fe7302614b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_virtual_block.html",
+      "type": "RegularFile",
+      "bytes": 23359,
+      "sha256": "7e0b7db636cf1d4129b304dd95b76d212d209b672a406bb23ca67860547afd4e",
+      "gitBlobSHA1": "d8e0310cec4e20ccff04f73a38b96a1a76c27dea"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/class_d3_d12_m_a_1_1_virtual_block.png",
+      "type": "RegularFile",
+      "bytes": 594,
+      "sha256": "f04ceb218c49513e590e0df51c3a253c654bbcb4023f40b06f69ea5507ef5dfc",
+      "gitBlobSHA1": "85d3c3d12584259e5e3c137bba8047c64929a97f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/classes.html",
+      "type": "RegularFile",
+      "bytes": 10027,
+      "sha256": "d4274e3c4d11a2de457e15da89361bd1c371c0e81cd383f09bcde3a00eab4e0e",
+      "gitBlobSHA1": "399871e45107301b1ee6e27c4ff1faaac30ccc79"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/clipboard.js",
+      "type": "RegularFile",
+      "bytes": 2999,
+      "sha256": "9cb033550ae5eee1b9bb88ec53c6fa4a1f15f978c5bdc5b07622c54c2ade002d",
+      "gitBlobSHA1": "6a0f42cdeb68d8ce6137a571e097a94a8a2873b9"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/closed.png",
+      "type": "RegularFile",
+      "bytes": 132,
+      "sha256": "c98c02adc57337f58c40aae15bbac05a3ccb364e5adb1d610a16452e92f17830",
+      "gitBlobSHA1": "98cc2c909da37a6df914fbf67780eebd99c597f5"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/codefolding.js",
+      "type": "RegularFile",
+      "bytes": 5923,
+      "sha256": "688e50f03911a579b5e0644b37d405f0155ecf42f470a17b46f493a981b1a536",
+      "gitBlobSHA1": "5b55e8b66660022970a8e827e6c4331749de4354"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/configuration.html",
+      "type": "RegularFile",
+      "bytes": 13928,
+      "sha256": "bc54a42341b641e8b8baeabdb11ff6718ee8dd154bf2c9867167fb887bbf4014",
+      "gitBlobSHA1": "661d3bc5365fecf4e6fa156951b5610a97f10b09"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/cookie.js",
+      "type": "RegularFile",
+      "bytes": 1874,
+      "sha256": "6f9da35eed772d69c37ff64eea68cf217e46afce266db7ca3b131a388f4c95fe",
+      "gitBlobSHA1": "53ad21d98119a04bd7f6e558e6a4a04364e2a1cb"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/custom_pools.html",
+      "type": "RegularFile",
+      "bytes": 13235,
+      "sha256": "080f22cb7e75a82ba75b8f3f2b3836aaa86848bda609cecfae20bafbe89f3214",
+      "gitBlobSHA1": "8d309f622dfaa34524f0f83236357322dd8e788d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/defragmentation.html",
+      "type": "RegularFile",
+      "bytes": 28897,
+      "sha256": "3aa14fc9691371b62eb49874375a2a663ed80683a1c90a15bf0b858ea4a2c804",
+      "gitBlobSHA1": "5f083cf6eeea68a247722a236399a9268ffdddde"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/dir_d44c64559bbebec7f509842c48db8b23.html",
+      "type": "RegularFile",
+      "bytes": 5119,
+      "sha256": "f756bd5476be2ba87ace6b9a7c60841cd547ff8675c9f917a6e1fca932c4a213",
+      "gitBlobSHA1": "9baf2899583a123924d9f15ebbe39fc5b7f4eb2f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/doc.svg",
+      "type": "RegularFile",
+      "bytes": 1503,
+      "sha256": "83a7c9918c8b9ae1bb31a7bfee6f9c3e099f1ffe5dbf798232218d60ad2a6401",
+      "gitBlobSHA1": "0b928a531713b063e737da937bb85a53365a8ec2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/docd.svg",
+      "type": "RegularFile",
+      "bytes": 1503,
+      "sha256": "6b1d157a374648a3aa2c4b387ec7f9bad398ab00c41c2958fcbec2e3382cff1e",
+      "gitBlobSHA1": "ac18b27552268ce7e82797636da773a6c5bbc4b8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/doxygen.css",
+      "type": "RegularFile",
+      "bytes": 55569,
+      "sha256": "0fe048e9a1d69b720530a7ae510d96347de6a751ae9ead1f9d72bd1e1328998c",
+      "gitBlobSHA1": "2990034f53dc3c6bf8d32595af26bda8a1a4121e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/doxygen.svg",
+      "type": "RegularFile",
+      "bytes": 15461,
+      "sha256": "2c92e9d85d456640d5f2bbdf717112a216230e4b5be7450983c6182afbaf1fc9",
+      "gitBlobSHA1": "79a76354078d0fe34ea30c3a481405c720937483"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/doxygen_crawl.html",
+      "type": "RegularFile",
+      "bytes": 27331,
+      "sha256": "a69c8c6564fdea54f2856d603eecab722d12fdda75b83b8445a3cd8745d798af",
+      "gitBlobSHA1": "ab74f1e4c61345a5f65412cca920e9cde1e465b7"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/dynsections.js",
+      "type": "RegularFile",
+      "bytes": 7707,
+      "sha256": "396aeab294189a8a236860ab037045e73bf4857954a36f41b20ddfa6563462d7",
+      "gitBlobSHA1": "0e15bd4d08346afe93b9d462084678e9bf6c83b6"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/faq.html",
+      "type": "RegularFile",
+      "bytes": 18230,
+      "sha256": "169235e30c7d04e75644bd38e02c52fafc69c6100f5272b84bb37449e0543c86",
+      "gitBlobSHA1": "12db9bc88d76a7a47036307002eb35977fcb0e6a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/files.html",
+      "type": "RegularFile",
+      "bytes": 5151,
+      "sha256": "d6b7e5ff8cd1de3e1a862cd41af9fb51378025c93673152e6ff06f48ca0fe983",
+      "gitBlobSHA1": "7560b04f7ed4b8b54964948c02231b059dd07c9c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/folderclosed.svg",
+      "type": "RegularFile",
+      "bytes": 1996,
+      "sha256": "5e69d68baad1ee117dac14f49cad9afbfb73cce14d48d28560c89b0b7345f205",
+      "gitBlobSHA1": "b04bed2e723617bea1e7dda93638dddf7e5971ed"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/folderclosedd.svg",
+      "type": "RegularFile",
+      "bytes": 1996,
+      "sha256": "3d53dd5faa7a4fcac2695013494b8ba5b2466d85c5b2e0959a2f8ce0f4d23ee3",
+      "gitBlobSHA1": "52f0166a23e730c238954892aecd3babfabf75d0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/folderopen.svg",
+      "type": "RegularFile",
+      "bytes": 3269,
+      "sha256": "54a824d5208f5b504b2d283899fe31e45918df7df9b8af104f95a2f47bd5230d",
+      "gitBlobSHA1": "f6896dd254b6d25580338d9c9a097fc46e445355"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/folderopend.svg",
+      "type": "RegularFile",
+      "bytes": 3214,
+      "sha256": "21337c5db15aaf20a567216c02e21225b36b8f86d15217018c84a13218e1f9a5",
+      "gitBlobSHA1": "2d1f06e7bc6e85be079b7ee1346c79baa4c50ce1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/functions.html",
+      "type": "RegularFile",
+      "bytes": 27716,
+      "sha256": "3d1cd92cf812af7bfee4d36c6161c44491b1900910ad01c4b7a1619e691e1042",
+      "gitBlobSHA1": "dc647ae2c1b885ba0fd6b11f85b78ac6bd4609a4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/functions_func.html",
+      "type": "RegularFile",
+      "bytes": 13692,
+      "sha256": "8ddd25c3e62a76e31b84c7bf3aeacc50875aa064ad44431e4d59a0b826f26fda",
+      "gitBlobSHA1": "4fd6f06a115e154598e0af48bff1f0f2c9d31c03"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/functions_rela.html",
+      "type": "RegularFile",
+      "bytes": 5599,
+      "sha256": "9e787eb34a586bb3d1908d296bf1513776f8b698e052c855b02baa33cf92eba6",
+      "gitBlobSHA1": "1b1f6f768e6e12dca054ea399b09d70cfdd4dd63"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/functions_vars.html",
+      "type": "RegularFile",
+      "bytes": 18324,
+      "sha256": "04bc92138d2a269f781363ce18e833a5d593b5bc2f11fe060df3f2fd2c550950",
+      "gitBlobSHA1": "62a8dcb0208cc760d5b3e60b7f0dd3ffafaa761a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/general_considerations.html",
+      "type": "RegularFile",
+      "bytes": 9883,
+      "sha256": "e221a9dd4000767506a1c897c7c6939d18d884acfc3aac4a28064fafeec87f0b",
+      "gitBlobSHA1": "7651881df7e5a2a03138ff03eff5b361fe0bec8d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/globals.html",
+      "type": "RegularFile",
+      "bytes": 5488,
+      "sha256": "70fa7033e1549d38c2bacaa9c70db402ad03569d90deb68926bfbe8f17afc888",
+      "gitBlobSHA1": "fb24ca28d1e0e6c72cfdf6f23657f54b26b0ffde"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/globals_defs.html",
+      "type": "RegularFile",
+      "bytes": 5482,
+      "sha256": "4872e466e31830fa5f0df1caea472a01b23bbed40edc0be7ffcb2e44aab1140f",
+      "gitBlobSHA1": "37b359cb79a01b8a2ab062e207e55c7dafc04a14"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/hierarchy.html",
+      "type": "RegularFile",
+      "bytes": 17553,
+      "sha256": "30a57d540a11e45ec8aed072d9b60644179bfb2f706a35343f25eb48a348de71",
+      "gitBlobSHA1": "8d90a45cb29bd7dc68ea4a331869265cb821d253"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/index.html",
+      "type": "RegularFile",
+      "bytes": 8970,
+      "sha256": "c95a1374be3f1a9e5a012da7b736bc41d6a9577e6ff4f0cbe9a0e69a68fedac9",
+      "gitBlobSHA1": "8b7875dfa5d22e003c76d5fa87db9d95d3df86ff"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/jquery.js",
+      "type": "RegularFile",
+      "bytes": 176782,
+      "sha256": "3092fe64f7a14890a95e713d556a50d08f8fbf4d8872af7a0164770285776706",
+      "gitBlobSHA1": "875ada738f09baedd40cf597556d6a764ac03270"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/linear_algorithm.html",
+      "type": "RegularFile",
+      "bytes": 10929,
+      "sha256": "4d91c8bafc48b8467552a138d506cbef0adddfe2695cedd1b5ee070f1a1c2eb1",
+      "gitBlobSHA1": "9b47dc36350b0f5a29e9ab692399519464a255a8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/menu.js",
+      "type": "RegularFile",
+      "bytes": 20694,
+      "sha256": "31875c27c512f480f7989b09c51e395deaf0ce0de70cf19200450fe415a6f91e",
+      "gitBlobSHA1": "8172efef4c412ea6adbe07a5d8d72962e07ceea6"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/menudata.js",
+      "type": "RegularFile",
+      "bytes": 4756,
+      "sha256": "0dbc0a0859f6639fa5e4e38eb1f27397fc78bdcfd40dc820ec2e0f79497aabc2",
+      "gitBlobSHA1": "2b1ec865a21057371587bc3f94ed7f6b1c18d0a4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/minus.svg",
+      "type": "RegularFile",
+      "bytes": 582,
+      "sha256": "422b18aa23b98c22464d121c12bc52f870e6312db42cbf87e06f2036e85c9fa1",
+      "gitBlobSHA1": "f70d0c1a183d0c0323f4d5cdb48456711103d039"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/minusd.svg",
+      "type": "RegularFile",
+      "bytes": 582,
+      "sha256": "25594bc92fcf5604e7f70f85607806057c12eb081f6738eacc815227a6da7f1b",
+      "gitBlobSHA1": "5f8e879628d5bd6c15329554c21f40ad710e86c3"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespace_d3_d12_m_a.html",
+      "type": "RegularFile",
+      "bytes": 68971,
+      "sha256": "d05ea335860e4979f119f0956e9426df5a37b530596b125205157d8df4bf8972",
+      "gitBlobSHA1": "4ce3b6c2350b43adc22fdea63f8403393cb8beb1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespacemembers.html",
+      "type": "RegularFile",
+      "bytes": 13998,
+      "sha256": "2816b965eb99952b3aa0c2bbdf62b129c54684df4514c7fb1869acfd062badb2",
+      "gitBlobSHA1": "1b48ae410afc618f18905984f592360099b688f4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespacemembers_enum.html",
+      "type": "RegularFile",
+      "bytes": 5451,
+      "sha256": "bd798a8e849ff0db2b8b9f21ed99e0fc02f92c7700868c31b551d70a2bc73c5e",
+      "gitBlobSHA1": "9ea8afb5bd1010671abfbeddf314efa80a7f5562"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespacemembers_eval.html",
+      "type": "RegularFile",
+      "bytes": 12251,
+      "sha256": "3a13f90c7deb55cb71f32f8a0a38f1b43ea71905e90cdf9a52344c21e8f1421e",
+      "gitBlobSHA1": "450c0bdaa945e0c6ac9e3ab1352fb34e165ffd4d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespacemembers_func.html",
+      "type": "RegularFile",
+      "bytes": 4786,
+      "sha256": "4aa034ac509d696e15d4f567860044a999a0064ca5887aba7356e00b66fb4e0e",
+      "gitBlobSHA1": "901ddd90bd98e0cefb85cd56d29e548c6315e84b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespacemembers_type.html",
+      "type": "RegularFile",
+      "bytes": 4903,
+      "sha256": "c5f42e5ef5841fbb385152dcc634873481b6c9917f39278118355a6bd54f65f5",
+      "gitBlobSHA1": "7009f2ac86c69c0150f9156759780376ccbc7c05"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/namespaces.html",
+      "type": "RegularFile",
+      "bytes": 4925,
+      "sha256": "3f348a6f6deac2a3d76e983abda9bed361ae1217a362c2423435063b732fe53d",
+      "gitBlobSHA1": "a16dc4513960042c7eef650270f5f5fb13f1715c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/nav_f.png",
+      "type": "RegularFile",
+      "bytes": 153,
+      "sha256": "4bdc6a72666e1b300fdfc5ecf102714c9fd57df76fdf47139f8dbf8ae5986364",
+      "gitBlobSHA1": "72a58a529ed3a9ed6aa0c51a79cf207e026deee2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/nav_fd.png",
+      "type": "RegularFile",
+      "bytes": 169,
+      "sha256": "68c43d3eb0bccfc8ae7de4e17b1d6f98455b527b8ef7e3a6f600abe2b13c1a28",
+      "gitBlobSHA1": "032fbdd4c54f54fa9a2e6423b94ef4b2ebdfaceb"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/nav_g.png",
+      "type": "RegularFile",
+      "bytes": 95,
+      "sha256": "3171164c16baa5953c17821a7ce5feac673c05a56b287453ce3a0bf5048f0999",
+      "gitBlobSHA1": "2093a237a94f6c83e19ec6e5fd42f7ddabdafa81"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/nav_h.png",
+      "type": "RegularFile",
+      "bytes": 98,
+      "sha256": "b7711604d6cdeaf3cdfd661fa21fc5bf18de929671c801f00415eaecd35abda3",
+      "gitBlobSHA1": "33389b101d9cd9b4c98ad286b5d9c46a6671f650"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/nav_hd.png",
+      "type": "RegularFile",
+      "bytes": 114,
+      "sha256": "0714b74a43b5e56a05414eb1b18d9f817aa91339359efb23dba4c411434ed7a5",
+      "gitBlobSHA1": "de80f18ad6488b9990303f267a76fdc83f0ffd80"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/navtree.css",
+      "type": "RegularFile",
+      "bytes": 5658,
+      "sha256": "d7450c5f71c37411cf07d4fbd6d406582d2c84ddf4cbbcd26d20ad783c9ca793",
+      "gitBlobSHA1": "0ea3a07a5fe3faa745bb7e36ab5a49f1bea1605f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/open.png",
+      "type": "RegularFile",
+      "bytes": 123,
+      "sha256": "a04665e9dd0ef5ef2c6ddf02b4a12472984485adb027fd12ae6c60ffd203b1a4",
+      "gitBlobSHA1": "30f75c7efe2dd0c9e956e35b69777a02751f048b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/optimal_allocation.html",
+      "type": "RegularFile",
+      "bytes": 52678,
+      "sha256": "3a51b05323c2aaec097c51fc6a638b58ca9fcd2b3ae7ee74601dc586321dce25",
+      "gitBlobSHA1": "3180b5abaefa21aac5b476e5800b51c353c813c0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/plus.svg",
+      "type": "RegularFile",
+      "bytes": 696,
+      "sha256": "d61742bec8a971f30ae95299e6563256662fe8e2bc68382833a959e063a10063",
+      "gitBlobSHA1": "0752016553550e348b92bae6d5cb39c7122f13d8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/plusd.svg",
+      "type": "RegularFile",
+      "bytes": 696,
+      "sha256": "85b5f198191092946af4ca07025e904eb8ade8930176626e8a6e88ac1bdb247c",
+      "gitBlobSHA1": "0c65bfe946d2340fd759123fb4e0c6d557871efd"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/quick_start.html",
+      "type": "RegularFile",
+      "bytes": 35569,
+      "sha256": "4ace814bbf0eab513dc6bd38f754a25583f867f8bfca6036dbcba82ebfe3d807",
+      "gitBlobSHA1": "ab6b4411e0cef1aadc7cc900692e5551ec4e9a08"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/resize.js",
+      "type": "RegularFile",
+      "bytes": 5722,
+      "sha256": "cadf4cd5369db2cb128738ca28b373287a5b868a2067866ec0f4dc85a1fd2f70",
+      "gitBlobSHA1": "178d03bcb80bad335d0ccbcd63241fefd66c334e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/resource_aliasing.html",
+      "type": "RegularFile",
+      "bytes": 14874,
+      "sha256": "066583744b6c5c2557777ac0301ca64ba724472f381c5692dd0a974a2670f5e9",
+      "gitBlobSHA1": "203c6b0d12383ef613411add1e1d0717c597ab16"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_0.js",
+      "type": "RegularFile",
+      "bytes": 9013,
+      "sha256": "00249043673889cb8474e8f3973222c8e9cdc8669c750674496f54347b7d6650",
+      "gitBlobSHA1": "6c2966801100bb98646d5f01b80ea45b204f7f10"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_1.js",
+      "type": "RegularFile",
+      "bytes": 2318,
+      "sha256": "d26842243d18b09c537f2037f1aed84736d0d9a03c2dd565810177c05897dcfa",
+      "gitBlobSHA1": "ee3352bac18f6a233efd88a79db7b719ac8961eb"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_10.js",
+      "type": "RegularFile",
+      "bytes": 1412,
+      "sha256": "611ad9f9eb50c3950be4f980de0163dce6c9b964175853911b5a70aa0e2b5227",
+      "gitBlobSHA1": "2b0b15b8028229981e383787a1b3837ada923c58"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_11.js",
+      "type": "RegularFile",
+      "bytes": 2786,
+      "sha256": "320e5693be9496fb4ab9971a4f1b74197a3c175f5a7ae843834ca555157c9721",
+      "gitBlobSHA1": "ec40df7395ea404f6cadbca23c91084092fd2452"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_12.js",
+      "type": "RegularFile",
+      "bytes": 486,
+      "sha256": "77cbe4fcae83f18f7126af9b13c0feb8ec263800f4e5d141d1204615e2856bca",
+      "gitBlobSHA1": "cbae0a67c9fe84069d1a234e6e32160e5ae95755"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_13.js",
+      "type": "RegularFile",
+      "bytes": 959,
+      "sha256": "09460277ef3bb52b5e96048cb87b555913d491df6d02f779f2d06f5910b4d848",
+      "gitBlobSHA1": "686619a0e8f8132995ef7709a11ffbaf784996bd"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_14.js",
+      "type": "RegularFile",
+      "bytes": 3524,
+      "sha256": "6838255772a586c60913a40d6edec6d4cac2b24f6e93412ffef75f5315ad201b",
+      "gitBlobSHA1": "8c2726aa4b437e4d7cc5fa63098428fbd7ec37ef"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_15.js",
+      "type": "RegularFile",
+      "bytes": 92,
+      "sha256": "4f54858686a2b23fb849b29d0dd56714acea091877bd9857f252a11824333175",
+      "gitBlobSHA1": "8225a92b6822d6a1d56b16e8872e4dc986876efc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_2.js",
+      "type": "RegularFile",
+      "bytes": 7823,
+      "sha256": "2d57ce0e4a36f4b7bccd7f0c9f01e2b9ee84ee76ac8a608379378cb4443ea7c3",
+      "gitBlobSHA1": "3f36103827a087758b5eaeb4179a83c805cbbd7a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_3.js",
+      "type": "RegularFile",
+      "bytes": 5048,
+      "sha256": "8be9e5a08a7d38d0e73891461b48e764ca62ffef0a2c3d91319e3366de3ba0ee",
+      "gitBlobSHA1": "2600a14ac9bb5c2c128084f904d7b07bb1e49252"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_4.js",
+      "type": "RegularFile",
+      "bytes": 346,
+      "sha256": "8577ed20988e9229ef310e056c894c957548ff23f91a5ad9025c920fe15140cf",
+      "gitBlobSHA1": "ecc6c7ab281440aa702fc4db74c2fdc70f8939aa"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_5.js",
+      "type": "RegularFile",
+      "bytes": 1919,
+      "sha256": "87eef604bf5a71007edb3748d054db8f3b53e34bf8bff0674700513bcf915df1",
+      "gitBlobSHA1": "fe1f8c469f7ba37eb13d4e8042a06922bb47e728"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_6.js",
+      "type": "RegularFile",
+      "bytes": 2449,
+      "sha256": "db2bb63dd47c73df69697585850d89216add455b4f74bac52af44d6da9ffdcb7",
+      "gitBlobSHA1": "1cb73ca6eb3c4a66ab89c8f117f648f5f44358ef"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_7.js",
+      "type": "RegularFile",
+      "bytes": 1113,
+      "sha256": "745fd40518c57c5b3d18f1d2152950439c1486ac862c56c940ff717808e894c0",
+      "gitBlobSHA1": "fe3f89f75203f18b74f8cdbd614c1c559128a779"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_8.js",
+      "type": "RegularFile",
+      "bytes": 876,
+      "sha256": "c6638195825bca59bd254641a2318c252ef044533975a1776261ce120816995a",
+      "gitBlobSHA1": "aca0ae9a9ca7939730172c5e4e5ec53ba9329892"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_9.js",
+      "type": "RegularFile",
+      "bytes": 104,
+      "sha256": "cc253faf1020eea49d35f77d97b76ac98725ec74d4f6b94a62c7526813218406",
+      "gitBlobSHA1": "2f270a2e7b7c2954f7570e17c9fdf2e0722ff80b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_a.js",
+      "type": "RegularFile",
+      "bytes": 323,
+      "sha256": "8ca91ab90cecd67f364f1e765e704a9980be4f2dc346354ad34b07621dc43786",
+      "gitBlobSHA1": "c6c926db6904170327b2670dd403d42383bc946e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_b.js",
+      "type": "RegularFile",
+      "bytes": 2492,
+      "sha256": "d64c043f058217a92654dfc8c2a04fc86421615b1d58f8af1ddf2926f11b833a",
+      "gitBlobSHA1": "c8d63ede8eb31e46f886d7c0d17e34a98f77a5e5"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_c.js",
+      "type": "RegularFile",
+      "bytes": 394,
+      "sha256": "4b0e076678f69ffe15472c0e6769eef99aad5c4f9a4158a3f69e463d579783e4",
+      "gitBlobSHA1": "a836e173b4635db3ab28383f98b035719c29285e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_d.js",
+      "type": "RegularFile",
+      "bytes": 1065,
+      "sha256": "fb1a5e01fe8b00222771fa8781b12e3de4c28d024c7df185a8b06c5ed9d4ac34",
+      "gitBlobSHA1": "e475b21e871559ff5bfe51b644b29b03f9916361"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_e.js",
+      "type": "RegularFile",
+      "bytes": 4895,
+      "sha256": "5b7507e5df4cd4413ef1c37577ecc8ed8eb020a415c0d366a3b4c6d92800be54",
+      "gitBlobSHA1": "ac2468593361e4eccaef2785985d5ccc7a2f1496"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/all_f.js",
+      "type": "RegularFile",
+      "bytes": 169,
+      "sha256": "ff5a02c3bc45ce65870f22e0613f6930ed6fc6fbf43b790ac5840a53602e0741",
+      "gitBlobSHA1": "c9afe7b57b1a2c3c50a8d39cf0e7e5390c9bd39e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_0.js",
+      "type": "RegularFile",
+      "bytes": 584,
+      "sha256": "e7c3f696536f308a91751ec3404eb6ddf9fbf1d235353a6b88db24274a98df0a",
+      "gitBlobSHA1": "4b6b839450a003a1c2b11b44b226d9bd83f0d996"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_1.js",
+      "type": "RegularFile",
+      "bytes": 100,
+      "sha256": "56a6d802f991452221fe43a2b9fc16b4f6a80f1071eb45c3b62218c0503106c4",
+      "gitBlobSHA1": "d09c711ec126b53984ec9b3c656117e935721460"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_2.js",
+      "type": "RegularFile",
+      "bytes": 552,
+      "sha256": "4377fc19bc5a2c4e0ce92ee5a12eadc53658dd970d6cc0e5e96e2ad3c34ef7c4",
+      "gitBlobSHA1": "f6d7a328144042a69c09238db9f0445e0e123f0b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_3.js",
+      "type": "RegularFile",
+      "bytes": 885,
+      "sha256": "547b8bd4691e2017de92059e92319a13812530efc75148d06187e0d0b53727b4",
+      "gitBlobSHA1": "efb78faf643f2b49c2853796bd0c542f2390153c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_4.js",
+      "type": "RegularFile",
+      "bytes": 192,
+      "sha256": "3afb2aee3416b9a0fc4a78a4d18f4da4c117655d9a7ce8375a9a28016b74e776",
+      "gitBlobSHA1": "7ee755f2dc31688ffa3bf9e959f12a90b623dfad"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_5.js",
+      "type": "RegularFile",
+      "bytes": 112,
+      "sha256": "39b2e44c34437725e1c30d81c7abac40dea86eac05e17a3b37477bcc8191e1c4",
+      "gitBlobSHA1": "4c75f7fb39750a04f414ebc81c0ed437be2a928f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_6.js",
+      "type": "RegularFile",
+      "bytes": 128,
+      "sha256": "e54cff04fb54f7ef6e3325499bd24d48ebae8462d9b6120664742e5641a47235",
+      "gitBlobSHA1": "7efd95aa7de7f2b676316301a04042ccdcc29758"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/classes_7.js",
+      "type": "RegularFile",
+      "bytes": 683,
+      "sha256": "4df18efeeb5db0d8612bc67f5565bb657c365559d30a11c394abee353237e222",
+      "gitBlobSHA1": "0c0c7b5b71b39cce8ad07688fd820dc9f24e930e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/close.svg",
+      "type": "RegularFile",
+      "bytes": 947,
+      "sha256": "0fca47408229664b0ceb6abd29c94dda65696baffebc9c930e4fba0382488117",
+      "gitBlobSHA1": "337d6cc13298b861a04a41f0a1003a5c9b18c8ab"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/defines_0.js",
+      "type": "RegularFile",
+      "bytes": 1058,
+      "sha256": "b9ff4591f805318b1d613526bd631498b0e4a5eaf7834a815da49af6c0d7f22a",
+      "gitBlobSHA1": "0ca7ae2604c67751341af5b6b4dcce12eedbd1dc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enums_0.js",
+      "type": "RegularFile",
+      "bytes": 274,
+      "sha256": "52214ee78c252e0ded2a20077a0a66bb6046c876bf0632655f242ff0101981f5",
+      "gitBlobSHA1": "3e694df0a227e955434380ebf4391830f868abfe"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enums_1.js",
+      "type": "RegularFile",
+      "bytes": 316,
+      "sha256": "597cac81ce6360d14229ecb00ddc0e9cf1bfe4a1ef2d80dc7e6b54ec41e92022",
+      "gitBlobSHA1": "7d5240961f3d9ee12e4da1d2847dbfc194bb4968"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enums_2.js",
+      "type": "RegularFile",
+      "bytes": 136,
+      "sha256": "3b5ae870f9b4c05006e18440946cf9ffa3b1282231dbfe5dc5c83a54275e7442",
+      "gitBlobSHA1": "0be386c3f15019a05b42f2715a18fafa1123a3de"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enums_3.js",
+      "type": "RegularFile",
+      "bytes": 302,
+      "sha256": "f6331a7dc81cf64293e7c4732b433f78bfc34290923d7095bbc7b6ef9f14ea70",
+      "gitBlobSHA1": "c6fd873b8cbf019f4ef2a7efa49ba46cefa11fa7"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enumvalues_0.js",
+      "type": "RegularFile",
+      "bytes": 3794,
+      "sha256": "169d2b44939be06abbc9b5bea9279bffc0789c136b4afbd4511e2a62031309c7",
+      "gitBlobSHA1": "3fcb12f3f97f6442f23fd94c2a2d4577a4fc3d02"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enumvalues_1.js",
+      "type": "RegularFile",
+      "bytes": 1459,
+      "sha256": "d2079dae7ee3d78fab591092787b88841ec214632bd98596ec709fc9edc6c3ab",
+      "gitBlobSHA1": "45d0d7b1cf471816560c25f8cec546abe88308a2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enumvalues_2.js",
+      "type": "RegularFile",
+      "bytes": 1152,
+      "sha256": "4353753777a56162b8c0a9c383e2c2cb58364df5b54b93694c9cbe93cbc20521",
+      "gitBlobSHA1": "0344f641c5e0c3c33b8ce8426ac5435acdc795a0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/enumvalues_3.js",
+      "type": "RegularFile",
+      "bytes": 1877,
+      "sha256": "c0555ea119a50fb0489e23ba27a9c7156d701a8cfb00a9a4f1878c142fe55356",
+      "gitBlobSHA1": "389e8e0e1c6d55c7c4585b2cc967c7ff8439a00e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/files_0.js",
+      "type": "RegularFile",
+      "bytes": 105,
+      "sha256": "f9ae1d12ab0c9c8a22223a9157ada2da6689122afc465ab96f76ec1926618553",
+      "gitBlobSHA1": "15db7f196cadeeeb8f4d7c445e1d9d02f6c450d3"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_0.js",
+      "type": "RegularFile",
+      "bytes": 301,
+      "sha256": "e18cfdd040e8c7cc1ce1b7f65328544118a868b44805c35c74721725434e2f2c",
+      "gitBlobSHA1": "dff87c81ea974a0a9315d4d1ae3c9df674b2205a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_1.js",
+      "type": "RegularFile",
+      "bytes": 767,
+      "sha256": "0bc7d7ac92038342b8d04ba7ca8cb7f8f966af603e3fccceab0d7f3a2c059840",
+      "gitBlobSHA1": "fec83ad754d8c2ba9ba740f95e7726f8f04feacf"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_2.js",
+      "type": "RegularFile",
+      "bytes": 5450,
+      "sha256": "afda2100782a79351d6f722737ac4243fe5205f91404348d7c2006e3d12c4b1a",
+      "gitBlobSHA1": "b844eae4c3f4a6178f8876a36c97e4c613493a81"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_3.js",
+      "type": "RegularFile",
+      "bytes": 176,
+      "sha256": "7ae4581de8debee3a7b5b71fed7552c6ed3d612e3f7bed5e7b322b3bd0c95caa",
+      "gitBlobSHA1": "b0ecd0c2f5e0778d004ceb690468c585dbef6728"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_4.js",
+      "type": "RegularFile",
+      "bytes": 460,
+      "sha256": "03ae63a4ce18a0e9d798e12d275bde118d5991c047a27f149bff34723b58ba1a",
+      "gitBlobSHA1": "bb2ff970c18b7792855c0e7c2d504db8a2238574"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_5.js",
+      "type": "RegularFile",
+      "bytes": 2221,
+      "sha256": "8121ca42136ab29626da3fd7db5a9ebc9f7245bdb6b7a90e76c7d6fdf8025fce",
+      "gitBlobSHA1": "e0a8c64d3bd97b7ffb4930f519a1f4cfab620ae7"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_6.js",
+      "type": "RegularFile",
+      "bytes": 760,
+      "sha256": "fd6c805f7418b8291073300222f3eb7a9830a7049be58f59e832dd67f0bee554",
+      "gitBlobSHA1": "538639e181f2efe58eff3a540c5aefa8041c650f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/functions_7.js",
+      "type": "RegularFile",
+      "bytes": 872,
+      "sha256": "7789d6dad466e31801900a1c845ffd9d775adef5da627af7975421c689d2b87b",
+      "gitBlobSHA1": "7d3ab0a269773022c770577c29d1ccdfd00ec4d0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/mag.svg",
+      "type": "RegularFile",
+      "bytes": 804,
+      "sha256": "fa25ecffc91dcc7c1d14b34cc87bc6848514d5d7697f6f3c12191e8440515427",
+      "gitBlobSHA1": "ffb6cf0d0251cb0eb2b0173fbd77ee2373385527"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/mag_d.svg",
+      "type": "RegularFile",
+      "bytes": 804,
+      "sha256": "c3df08a0a30b7488cfe470572168e82b250aecc1703311797e8f3a44c4da9823",
+      "gitBlobSHA1": "4122773f92c32ce6bca14d8bf407c11c635bfcf3"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/mag_sel.svg",
+      "type": "RegularFile",
+      "bytes": 1019,
+      "sha256": "a12627d70bff4b36542402ef7668fd0da94844d48a19a6c0a91d8e22eb20f5de",
+      "gitBlobSHA1": "553dba8773264b110b8c04cfaecf8d94df01a975"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/mag_seld.svg",
+      "type": "RegularFile",
+      "bytes": 1019,
+      "sha256": "2102d7424960ca705bce50ef2732ada44e512144939dae8cbfc18861ddfd5995",
+      "gitBlobSHA1": "c906f84c83a39ee10705c40b722d4eda15966327"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/namespaces_0.js",
+      "type": "RegularFile",
+      "bytes": 87,
+      "sha256": "51dc3ff138280ed29b8d8ced70e5eef23fedf131c4c136766996eb50363f0fe9",
+      "gitBlobSHA1": "c5e41892e9395b97a1d4cdbb45c76680c03ed0cd"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_0.js",
+      "type": "RegularFile",
+      "bytes": 2585,
+      "sha256": "5d21b59ac6b49b48b7e81d69cb9714aeed7482d8f11f2eb947a1441661033d01",
+      "gitBlobSHA1": "4e13aaf6efa2c7cd4bac37ee248eac35c6cf3974"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_1.js",
+      "type": "RegularFile",
+      "bytes": 463,
+      "sha256": "a78f5694ce9ca29a3286a7269b068f56efae70064490cd40cec8ceddeaafbab8",
+      "gitBlobSHA1": "d34b057b655f338582c2d6b8b5ab83a7cf7722e8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_10.js",
+      "type": "RegularFile",
+      "bytes": 1125,
+      "sha256": "1277fdc168722661220ebabd246fdb69909160d14ddd56f8e6c1054530fb4cc6",
+      "gitBlobSHA1": "af3b029475638753cf1c93dfd811f0e4c322e807"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_11.js",
+      "type": "RegularFile",
+      "bytes": 239,
+      "sha256": "37f80d3884b0c5cc53ce53d2bc5b1f804c5507525b1d9ff3aae0cd50120fc5d8",
+      "gitBlobSHA1": "ce665b63ef2a57247f16bedc86cdc3b78e194e54"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_12.js",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "e5e5fdffec6f8da93034a36928afd9c795bb73103e0ecfdb3eb49cf9c1de7a5f",
+      "gitBlobSHA1": "32f0ad5cb1fd007a0645a0bb27bf32e18d83784e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_13.js",
+      "type": "RegularFile",
+      "bytes": 711,
+      "sha256": "3ce66bab4b8d5c204b6bd9724ce6375b5ff84506f1b890a74114cfa6fdb8bb3b",
+      "gitBlobSHA1": "aa04e5d266ce4ea3f71b697362b8b63a0b63987b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_14.js",
+      "type": "RegularFile",
+      "bytes": 92,
+      "sha256": "4f54858686a2b23fb849b29d0dd56714acea091877bd9857f252a11824333175",
+      "gitBlobSHA1": "8225a92b6822d6a1d56b16e8872e4dc986876efc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_2.js",
+      "type": "RegularFile",
+      "bytes": 1532,
+      "sha256": "93337c3ec845451e235c000248d3e03ce556a71e3a0c4267d084bdd5012b0aa3",
+      "gitBlobSHA1": "7553f759e38ea90c1c49ac1645c34b415312fe89"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_3.js",
+      "type": "RegularFile",
+      "bytes": 577,
+      "sha256": "079e4296fda99f2d06f815cb7985f59403e5b871b42e4b6ea6802ff28dac01d8",
+      "gitBlobSHA1": "89d174b9258dd98378da5ffe90be05dffc5089df"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_4.js",
+      "type": "RegularFile",
+      "bytes": 499,
+      "sha256": "d781b3555237a87e9e0f9284866ef328233f06d186eea2748e22fc2906c54903",
+      "gitBlobSHA1": "6f9860c0129dd61dbdbc71ae10e9027b35acf98d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_5.js",
+      "type": "RegularFile",
+      "bytes": 246,
+      "sha256": "e32c40d7fe528b58760fac74ea1608e934545d7045ce95989d9a45c11f435350",
+      "gitBlobSHA1": "b85c57f1ae0051232e851854681afe07c9fa7ef0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_6.js",
+      "type": "RegularFile",
+      "bytes": 235,
+      "sha256": "8d77c7823d42e46b33def0686224d737bc62e06eda78d641dd41a2f3de330210",
+      "gitBlobSHA1": "6386d6ce5525d43c5b5dfa5d160f8bd64790509a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_7.js",
+      "type": "RegularFile",
+      "bytes": 136,
+      "sha256": "cd4d37013b5b4c3c548066f07430197cb0bda0bc7476e69f9c76cef0d8c208b3",
+      "gitBlobSHA1": "75d06396a2a92eb908e7782b9760a18cce964705"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_8.js",
+      "type": "RegularFile",
+      "bytes": 104,
+      "sha256": "cc253faf1020eea49d35f77d97b76ac98725ec74d4f6b94a62c7526813218406",
+      "gitBlobSHA1": "2f270a2e7b7c2954f7570e17c9fdf2e0722ff80b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_9.js",
+      "type": "RegularFile",
+      "bytes": 198,
+      "sha256": "6ec1af811e8ce6c7e4eeb87466ba4307f35c5e39858272dd8054c0c1695805d8",
+      "gitBlobSHA1": "9cdb2345bfa50f40b13b75b604746bf2f6cc2b22"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_a.js",
+      "type": "RegularFile",
+      "bytes": 854,
+      "sha256": "365f8053c5320514951aaaea6052456201358b45d9be7d76422d149eab646534",
+      "gitBlobSHA1": "0ce8dfd495f244f4ae6c7afe8d5ca8dc52e33c73"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_b.js",
+      "type": "RegularFile",
+      "bytes": 269,
+      "sha256": "33fd01cfee465863bc1c8c3b38bcb520b9fc542e1f1ab0763b35d584a1d2f01b",
+      "gitBlobSHA1": "a1fc38667ee7682f1e194bc95c8e9177fbaef641"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_c.js",
+      "type": "RegularFile",
+      "bytes": 712,
+      "sha256": "470ad5a361f970ed5f039729f9f4af95d6d040d6dd817ec635b3bd88b8ee07db",
+      "gitBlobSHA1": "2036541c078745345b996ae9aec648be2d5a2baf"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_d.js",
+      "type": "RegularFile",
+      "bytes": 750,
+      "sha256": "29e8c815a32a03aa43c77f46d78618dbff6d888a2e19af5af474f143abc90f69",
+      "gitBlobSHA1": "61cd77120e708eac495250aacd2526e1616492e2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_e.js",
+      "type": "RegularFile",
+      "bytes": 169,
+      "sha256": "ff5a02c3bc45ce65870f22e0613f6930ed6fc6fbf43b790ac5840a53602e0741",
+      "gitBlobSHA1": "c9afe7b57b1a2c3c50a8d39cf0e7e5390c9bd39e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/pages_f.js",
+      "type": "RegularFile",
+      "bytes": 1254,
+      "sha256": "163274df1ba7bce35b64412243cf5a0936d280280c298092e540e7790762a580",
+      "gitBlobSHA1": "97e8dbfa6f968e5b7124dca695b3513f18794fb8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/related_0.js",
+      "type": "RegularFile",
+      "bytes": 323,
+      "sha256": "68104df3f7ce60c871d1048e7314f1f90534f490cfb3be4bfe512706361f050e",
+      "gitBlobSHA1": "05aba7f084dc45af1db072bbfce246ff3b6b44fc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/related_1.js",
+      "type": "RegularFile",
+      "bytes": 681,
+      "sha256": "de6d1254c8bd2aadaa626520ddb05413405d4d07d2bcc49dee1a216c24fce5b0",
+      "gitBlobSHA1": "7e285eec118be11c2bbf3eb93fc19c08ddf52c77"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/search.css",
+      "type": "RegularFile",
+      "bytes": 7071,
+      "sha256": "26734eec6762a0c4cc2b2a694a35bdbb91e2762929c46c6a05088291e6b9beae",
+      "gitBlobSHA1": "043d32d98d9d9eee5bc7f421c5e36c54c1b111a7"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/search.js",
+      "type": "RegularFile",
+      "bytes": 23995,
+      "sha256": "9a1451e22257a8d75b1d8eba8f312e7a2c843e32eaf3be13522762180f313f02",
+      "gitBlobSHA1": "dc14410fb197c30d0a8d03b33f5c626937de5da1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/searchdata.js",
+      "type": "RegularFile",
+      "bytes": 690,
+      "sha256": "1e3cc8570f13ccacff7ffe08df51dfe986d953fae32aa6836f16772e84a18733",
+      "gitBlobSHA1": "2029dc155b0a9d5feaa594aafbadfb942462b2b3"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/typedefs_0.js",
+      "type": "RegularFile",
+      "bytes": 268,
+      "sha256": "ec65d0c2d43c3e2c6ba4c4547dcb922fdd9e306b7126c90ae9bcccb9526661ae",
+      "gitBlobSHA1": "dd86405f92126e108a8abc31fc05ac9797865b06"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/typedefs_1.js",
+      "type": "RegularFile",
+      "bytes": 144,
+      "sha256": "1b64bf13f6f2845e76935c403ef77bd83517182b8e64b1de6c1fd5def3cf8046",
+      "gitBlobSHA1": "48ceee20419a391ad339e8b87c7d5378128a2f90"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_0.js",
+      "type": "RegularFile",
+      "bytes": 1324,
+      "sha256": "53ad3a944dc5563e099d304f28bf587424dc06a3f8e4a71f2d9eaa9b04f9179e",
+      "gitBlobSHA1": "733f6711587d1d9410598e714fe1dd6043fe0143"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_1.js",
+      "type": "RegularFile",
+      "bytes": 1057,
+      "sha256": "031fd13b85bd094e864532e2b566bbce70dc8496420614133153557aa1624387",
+      "gitBlobSHA1": "a4dcdef19b12ad1eea98ddab3811a4f4cb9e29db"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_2.js",
+      "type": "RegularFile",
+      "bytes": 182,
+      "sha256": "3dc07bab1a8937e3ce75f885bef42c2fe717f6ad8211067e40814e3ee9a94722",
+      "gitBlobSHA1": "c7351993c680cd68752e26ca4cf0931928a59dfa"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_3.js",
+      "type": "RegularFile",
+      "bytes": 190,
+      "sha256": "be266a37c04f9af122f7ced12bce3d7d95827bf065213a73b9df4f3e7d67436c",
+      "gitBlobSHA1": "a00e2d07ec5cc57089370102c4574f199c96a0e1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_4.js",
+      "type": "RegularFile",
+      "bytes": 876,
+      "sha256": "722e7fa73a10236b0382246598e5c396e15f486eb9d67488ff07be12844c0ffb",
+      "gitBlobSHA1": "9c59262fb81934fac6a3ceef9b9f7e324eab2b54"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_5.js",
+      "type": "RegularFile",
+      "bytes": 911,
+      "sha256": "4cffbcf457a33d4c3608cdff6b5319bfdda3daeccbf5b18d97be9d025288f7c0",
+      "gitBlobSHA1": "ebf5e9258f2885b04381b8851313af85a4748259"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_6.js",
+      "type": "RegularFile",
+      "bytes": 145,
+      "sha256": "cb838fc5b7c698d4aa3dfa2e840f555b7dfef1d2cb03f3dae4342efac5dbada9",
+      "gitBlobSHA1": "20dad19ccb9429f764149a23c3c502372280637e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_7.js",
+      "type": "RegularFile",
+      "bytes": 1651,
+      "sha256": "86185441da0539dffc5fe37a7a671d3924612a55f889fbffc11f5d478225bc2f",
+      "gitBlobSHA1": "b6f061fb7df8e7e66e3bc7f466f1355ce4791cf2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_8.js",
+      "type": "RegularFile",
+      "bytes": 145,
+      "sha256": "91093c0bc0a055291828b602b7c1ed273626db0ddac2ed8e5fdc1cac7d3e465c",
+      "gitBlobSHA1": "ed158380bf008cf5e311a637a1a900b5f26a1ff2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_9.js",
+      "type": "RegularFile",
+      "bytes": 373,
+      "sha256": "2cb1c1f742670e0c4d2f4562e0c5b715b253c8f16878278bdbd8d8e35ea26bf2",
+      "gitBlobSHA1": "48c8fc1e0012385779ee473d1204cecca29f794c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_a.js",
+      "type": "RegularFile",
+      "bytes": 2730,
+      "sha256": "76193a20767fef7a74f82beeeb732637e20892a26098c802083e5dc06e148ed0",
+      "gitBlobSHA1": "4dd763fc4cbcc2b97b2f477385884440390ef1ae"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_b.js",
+      "type": "RegularFile",
+      "bytes": 178,
+      "sha256": "70dff0c3a19550852d76350104e35fee0bba8c49a2443e7a8a5a76c1c9d4d45c",
+      "gitBlobSHA1": "c019367d7aef4a5849c5716b366d2d42ceda3256"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_c.js",
+      "type": "RegularFile",
+      "bytes": 753,
+      "sha256": "42032761a01a8c904ebc55c80af935561c7ff642d1fe5c933b74f6267aa5211b",
+      "gitBlobSHA1": "e0031c5e907ed1ad8038e7b574a84abf6cbf3e66"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_d.js",
+      "type": "RegularFile",
+      "bytes": 159,
+      "sha256": "0204188e829df5456cd0fac73afcb13c6fee3769a5bf11134b1caaad0bc44d5f",
+      "gitBlobSHA1": "47aa9f87b05a4ae8b81b390a2cd3f6f583015683"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/search/variables_e.js",
+      "type": "RegularFile",
+      "bytes": 659,
+      "sha256": "63860a114d9304b41fcbd72ed13e9fb546396c0f13c36486c8e4ce00c3f8e2bc",
+      "gitBlobSHA1": "9a5b620a2ee6c748380fd96153cff848c0b6e176"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/splitbar.png",
+      "type": "RegularFile",
+      "bytes": 314,
+      "sha256": "1c555557ca84ba3598f52c281780dd7e22655db21ac383712e62d4540a1bc525",
+      "gitBlobSHA1": "fe895f2c58179b471a22d8320b39a4bd7312ec8e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/splitbard.png",
+      "type": "RegularFile",
+      "bytes": 282,
+      "sha256": "cc185f49e6cf1385cd1dcbbc96511185e7db3b82170a228e6a4325d3a8884a96",
+      "gitBlobSHA1": "8367416d757fd7b6dc4272b6432dc75a75abd068"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/statistics.html",
+      "type": "RegularFile",
+      "bytes": 11350,
+      "sha256": "eec314fbf1ffdc57245c155f022890670fcdd9fb62636f80967b8e361f67243c",
+      "gitBlobSHA1": "82a82db97df885a98c9be7f9e6c02262cada4d6f"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___c_a_l_l_b_a_c_k_s-members.html",
+      "type": "RegularFile",
+      "bytes": 6055,
+      "sha256": "5e81c40ae3d8ec32b065b14f06189223a928bd9dd73b3c7b295dd55fba0e57a2",
+      "gitBlobSHA1": "548e0c62045487485d57c0627f070700cdc6c9f9"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___c_a_l_l_b_a_c_k_s.html",
+      "type": "RegularFile",
+      "bytes": 9112,
+      "sha256": "9e1a76c758100200bf62336fce483fb6cc83b520aaba059e29bc1aaa4f7b2b53",
+      "gitBlobSHA1": "d84e7ab160ac41f2eabb68f4106578212c46c659"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 6599,
+      "sha256": "dbacb5a4cc038c5cd48a5b2220da5a2c0f29b7767eb0f8cf403275eb0a40d94a",
+      "gitBlobSHA1": "f59ed45a9e78d2d99bffed5e490c088f81dc203d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 14939,
+      "sha256": "f11e779cf85b6e03f5350b3ab1cca5790d2d23f71459882b7aeb761a9e9d88da",
+      "gitBlobSHA1": "99a7321174c506e28dbe3ce6d9c9241e589c0934"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 783,
+      "sha256": "3692aaf638346a61bcc9ba3e04fd61abed7606703411b495b8295e4143856c84",
+      "gitBlobSHA1": "4598b4806f3265b179ddff7f44e1d9e25503235c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_o_r___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 6576,
+      "sha256": "3006d529f889bda28f61103f026a71f8b47483bc3af26dcd57b19983b9550d71",
+      "gitBlobSHA1": "f1eed090e8f0d0d861c455cefcb5eb01b8f9e516"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_o_r___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 12310,
+      "sha256": "6d4bd0215ebb7738e8d259a618c2fb537581a21bdfc04b567b7e2250b10515e7",
+      "gitBlobSHA1": "cb3d692912f2d5831764fd3a179dc57808576903"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_budget-members.html",
+      "type": "RegularFile",
+      "bytes": 5707,
+      "sha256": "4ab24bdf2e3d6d3ec9f4400b36a6f1054f6d161fe5f413fc202436850b0966d7",
+      "gitBlobSHA1": "e3519f92da7a77f0438ef515ea142b7b6ecf1e2e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_budget.html",
+      "type": "RegularFile",
+      "bytes": 10298,
+      "sha256": "0279fbfa5781904d9f1b6fd91eb0c7b28cb7da100cf20f0d6e6ecfbf6e8ff5ea",
+      "gitBlobSHA1": "4f916dd6e12a4b7ddd4a963268b7ec11a9803338"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 8475,
+      "sha256": "5cc3502f35fa772ab890495e94ae60c80d54f42f89a95be5776e41161ce29623",
+      "gitBlobSHA1": "7ff1b30ea394f2fe4963060b3414a07a0afc8868"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 20179,
+      "sha256": "59eed9df833dfa6269d95240f147f125fc6c22cdb15033f6e316cfc01bd552ba",
+      "gitBlobSHA1": "8acaca91b5dd2543fd546d9e72f7676c83289245"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 778,
+      "sha256": "5a8db34610dbd558c2606cdd0e48e5d086de3496adfc85e10a433b8fe224cb3c",
+      "gitBlobSHA1": "d74b2ec3dac409baff9b31ee7c9cf4effd3fac37"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_p_o_o_l___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 9617,
+      "sha256": "e8116ad49dc812a12b92e107d84d56219fb2898399818389971f6c1f7a4f3447",
+      "gitBlobSHA1": "20e6b5c72151023dd962570265326b78013a5c62"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_p_o_o_l___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 23949,
+      "sha256": "03e9ffb1b132cf162ff66ac3bda0bdf69d4bac3a363c6d288088151ed275c5df",
+      "gitBlobSHA1": "61dce69cdf032b64a38a6216855b65e611544a96"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_p_o_o_l___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 650,
+      "sha256": "e66d9bf3dad1a589dc755e23c1c910a17c1f34ed8d1256fab0a9fdb6951238e3",
+      "gitBlobSHA1": "0c2ce80f6dd63c424830698e459e47015a8077d0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 7963,
+      "sha256": "ed43b37bcf245ca33bd4f21c13d8cdacb98e2fb9f4814d8a709ba783ba0cbb9e",
+      "gitBlobSHA1": "5577a6ba8a593f346ec696098b8a0ff9154ebe98"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 16704,
+      "sha256": "7d4d8141240482bc4cd6a4cd060c2aa520325aae12812f97bc44bd2db5bd8375",
+      "gitBlobSHA1": "d18d725a31624f94f2d47f532535519629dd0aeb"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 927,
+      "sha256": "ed1fdcad2a8cdacdc3778772dc4902ad895dc8890fdfb2ed49a602e1d8e5ed7a",
+      "gitBlobSHA1": "6a492999dd970470500ff33625fc32b0c0681a43"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 7403,
+      "sha256": "f36da363e89365df4fd80afbd8c7e23cf15b1124ca29d21d701327bb51209beb",
+      "gitBlobSHA1": "bacbaac620d51509bc251677aa987253d1f489ef"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 15818,
+      "sha256": "c28dd398b8f197bb85d226ad2f797886bc4481137fa06ca5a59b69326f97268b",
+      "gitBlobSHA1": "a2e6caa63c84d3c28bf38bb87fb932aa282a7ddb"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 828,
+      "sha256": "ff889e610b06b6c3e595a1cf6b8595dafbd3fb2fbc716135b34e01a354399ca9",
+      "gitBlobSHA1": "9809485e82bb0c2f8f3abffcf6272ea2104aa27a"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 6070,
+      "sha256": "09fbe83a5def1a1be422016a15ab57c114258d3456f33f5aef232744c1f23fe4",
+      "gitBlobSHA1": "1287df774fd6e5ce08c8d773dddfb853983a8af2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 9484,
+      "sha256": "637fca6788cbd23adf0060a7c84ecdf7f873159c8598f6bbd147cd8032ba8cc9",
+      "gitBlobSHA1": "198610dff60da25158a43a0f60323bcab9b8890c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___m_o_v_e-members.html",
+      "type": "RegularFile",
+      "bytes": 6069,
+      "sha256": "d17acaaf77d471a7b14b36639be2ee26c1591b5a9cbab3461c78a95bee184e70",
+      "gitBlobSHA1": "202221fb62076d35ab20635326f0145d4613e8b4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___m_o_v_e.html",
+      "type": "RegularFile",
+      "bytes": 11280,
+      "sha256": "2a5899155b6c0c7e78e8efd311ab47cd3622ac84c6f372791b9a2f9ea636366d",
+      "gitBlobSHA1": "69bb53770bd29ee3acda721f5041b4e1c61cddd8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___p_a_s_s___m_o_v_e___i_n_f_o-members.html",
+      "type": "RegularFile",
+      "bytes": 5873,
+      "sha256": "b646e1da0f3e4e004847f765393fe9cd35e21d829c2ab449ed20fe1287c09c2c",
+      "gitBlobSHA1": "f820cb3ed6c59b3941ae591c6c78b56408690371"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___p_a_s_s___m_o_v_e___i_n_f_o.html",
+      "type": "RegularFile",
+      "bytes": 12690,
+      "sha256": "6a0a5c31ad472631800dd1d2b7b296b7c59f236c1823cb758cca6a1c10afd660",
+      "gitBlobSHA1": "d5e11b8910ca6bd25b9964c8444e69abb6311ac6"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___s_t_a_t_s-members.html",
+      "type": "RegularFile",
+      "bytes": 6442,
+      "sha256": "c4ed0f0cb7d2b0869945c66902aa2ca74eab2a3efc2ac2ab3f88c57d879421cd",
+      "gitBlobSHA1": "19d7dc514f0a7c882cef483d7e24e56ede356e4b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___s_t_a_t_s.html",
+      "type": "RegularFile",
+      "bytes": 10403,
+      "sha256": "f3ebf7fc914e4724ba9c646c0057a177f0a81e4c2439cd5e9df7bda8c7ce81c9",
+      "gitBlobSHA1": "fb9343c97b1126c3a8c5b475226695bc3a028821"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_detailed_statistics-members.html",
+      "type": "RegularFile",
+      "bytes": 6843,
+      "sha256": "3198b3c17881603eaff0ffbc820929138f04bed0037c44d37b34a0fd9e9e7df4",
+      "gitBlobSHA1": "35831276139eeabe1db21419715b425e9f7bd410"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_detailed_statistics.html",
+      "type": "RegularFile",
+      "bytes": 13153,
+      "sha256": "b880640b4e43e2014e280490f265dbb68a6200a30305f20b3b4369585c000ee0",
+      "gitBlobSHA1": "6d80e9c206119bbc6186985406c927e183db820b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 7619,
+      "sha256": "626a1e30b4a764a22c70273defa3571b4f7c405ed65312ec6ee054877c765d1f",
+      "gitBlobSHA1": "40b00478223b18ae0f2cd75f23dfc9ca3a8c9f59"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 20036,
+      "sha256": "d51f3a62f022885011ae1d76ec918d43b0b0fcd1b2e9c96e27e2e13f72b8fb53",
+      "gitBlobSHA1": "4de9569d2815c4b8e48c7d082384a111acc1cd21"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 658,
+      "sha256": "9123663a2b91398c7b66bca8249cf40a2e1b47087b3e403592279a3a4e1a49e8",
+      "gitBlobSHA1": "4d6107f0753d8a20e9cac9f9077d261a3750e4e1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_statistics-members.html",
+      "type": "RegularFile",
+      "bytes": 6059,
+      "sha256": "571ee9c6046761f7bdddac9ce4c88d9b0f8fd6a2eb8799b68bfa64ad08190592",
+      "gitBlobSHA1": "bf9a32c02ba4b7f28c0c083f46547a9587aacec1"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_statistics.html",
+      "type": "RegularFile",
+      "bytes": 11830,
+      "sha256": "c8c3f929fca8afad005fbbd4988337e1a2a37a2c3b836fbad1001e2e4b571f83",
+      "gitBlobSHA1": "942ff55bc98212a9eae5cf9a203d20aa36ec2bae"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_total_statistics-members.html",
+      "type": "RegularFile",
+      "bytes": 5846,
+      "sha256": "e043ad5d745eba53a9a32ef3da91c23486c9a2eb5314a29deea7622a59a09400",
+      "gitBlobSHA1": "065413451ce8330569d06ebc022f7cdddbdc9233"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_total_statistics.html",
+      "type": "RegularFile",
+      "bytes": 11159,
+      "sha256": "d46a3987ea867b7924e802daabf270cdc8bc31df242a566289f5652a909d0304",
+      "gitBlobSHA1": "65c511db4904ace02e8f45de685be9e59d2153f3"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 6480,
+      "sha256": "62b510af5bbbb382bc26c9a76017dc3d7fd500f95c9fec1a32b0ff1a757e947c",
+      "gitBlobSHA1": "7489ef2a97a0f409cfb8a291312730268e29ee36"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 11004,
+      "sha256": "3152e4a433f01a9e080b0782d147faa1cfad3f4f5618f7bf9f8808b52e74de1b",
+      "gitBlobSHA1": "0a16b292ee922f3cfbb3cd7cf5729254f6aa2a01"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 933,
+      "sha256": "02504442f9049918c4ccee2db75736ed010309d72f952b8fa626c24a6735a731",
+      "gitBlobSHA1": "a9d4204e977e435680ecb45f8de0a953beacbb2e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___i_n_f_o-members.html",
+      "type": "RegularFile",
+      "bytes": 6117,
+      "sha256": "157f0537822e514b7a5dc86af1c16993b27b37ef1fd0e44f4bb8f3dc3f86a36d",
+      "gitBlobSHA1": "aa79bf51783e86c22895eacc93256caef323153d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___i_n_f_o.html",
+      "type": "RegularFile",
+      "bytes": 9771,
+      "sha256": "dce60e16e84520ac05cf9f54c284fa730aa9f4b51bb62d426c3fa92111a21a43",
+      "gitBlobSHA1": "bbd3794749163659fd6dc74e0bf172c54d8aecaf"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c-members.html",
+      "type": "RegularFile",
+      "bytes": 6014,
+      "sha256": "e357591cdb05479c775251b6239dfeebe92f7bb64d26369191ceb3c34746ff6d",
+      "gitBlobSHA1": "6649a8ca9adc0a2738d4befec3f0d0f8f2f9f2a8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.html",
+      "type": "RegularFile",
+      "bytes": 10709,
+      "sha256": "43e46052f4dea2f711e3ea1c029c6241b989b98bcff83c44523501514ab7e34c",
+      "gitBlobSHA1": "0a7ea70a42b63d7ed790474aba1734c22b3b9df8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.png",
+      "type": "RegularFile",
+      "bytes": 836,
+      "sha256": "d594fbdefb0d0b56182ce6cc2924769cd87c77d2a936eec4850b1b70c3ca5e40",
+      "gitBlobSHA1": "bdf1b04c9af1c942d3324cdbc3ac38c0c6444638"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_virtual_allocation-members.html",
+      "type": "RegularFile",
+      "bytes": 5263,
+      "sha256": "7b6f1af98e75ee98ad14aba69c211d562261c29b6be561a22bc2cc8281106684",
+      "gitBlobSHA1": "70bea90694a82dc0a5b2c3cdb1a0f29c620ad680"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/struct_d3_d12_m_a_1_1_virtual_allocation.html",
+      "type": "RegularFile",
+      "bytes": 7358,
+      "sha256": "9d14f8037e2a43395301ad65c89b1bf9416e6031687a50ccb62305dbdbd8f4c2",
+      "gitBlobSHA1": "b9497380a3a4249e79e93a726f7927310438dd85"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/sync_off.png",
+      "type": "RegularFile",
+      "bytes": 853,
+      "sha256": "39bcba0c183ec442cc90fe27a2dbafd4e1c791aff374b5326ba16880a16d9826",
+      "gitBlobSHA1": "3b443fc62892114406e3d399421b2a881b897acc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/sync_on.png",
+      "type": "RegularFile",
+      "bytes": 845,
+      "sha256": "9abb731904dd1f8eb00aaea66bfef72d5252931d84cc01cfabde3bea854b5b14",
+      "gitBlobSHA1": "e08320fb64e6fa33b573005ed6d8fe294e19db76"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_a.png",
+      "type": "RegularFile",
+      "bytes": 142,
+      "sha256": "5ddd37bdced843340e0679b6b4e7ed2fe318fd0cef76d160543722e0c3eac11f",
+      "gitBlobSHA1": "3b725c41c5a527a3a3e40097077d0e206a681247"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_ad.png",
+      "type": "RegularFile",
+      "bytes": 135,
+      "sha256": "9f4783d1f7ed442e14caa8124ffa47e9adb0264b5115b10885223a921ceab458",
+      "gitBlobSHA1": "e34850acfc24be58da6d2fd1ccc6b29cc84fe34d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_b.png",
+      "type": "RegularFile",
+      "bytes": 169,
+      "sha256": "901ae15db25905dca7a17b81c6d51869fd12ea569fc4b072d217786b4b4d73bd",
+      "gitBlobSHA1": "e2b4a8638cb3496a016eaed9e16ffc12846dea18"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_bd.png",
+      "type": "RegularFile",
+      "bytes": 173,
+      "sha256": "e5ecd262d002acd5d15b8691504d1ecd8f25eb8c03a11bd79e8547c330c71065",
+      "gitBlobSHA1": "91c25249869ffe5269c24f8c441e3f1bf75df400"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_h.png",
+      "type": "RegularFile",
+      "bytes": 177,
+      "sha256": "e4b9bd9425bc87b33d6b1911e6398673939aa2f15ac505b9a1ab029b8452dd08",
+      "gitBlobSHA1": "fd5cb705488e60fcf30f56fcc951dee74f3b095b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_hd.png",
+      "type": "RegularFile",
+      "bytes": 180,
+      "sha256": "28986f7b21b7378028ae6c6668801f323db800a582e2ea52f94379fa97faa790",
+      "gitBlobSHA1": "2489273d4ce1d11d3f7557335244c02b9959351b"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_s.png",
+      "type": "RegularFile",
+      "bytes": 184,
+      "sha256": "69f392daa28adc942272615ff2db16bcf084f01ec9fcc2f7f6a632b2bba8c468",
+      "gitBlobSHA1": "ab478c95b67371d700a20869f7de1ddd73522d50"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tab_sd.png",
+      "type": "RegularFile",
+      "bytes": 188,
+      "sha256": "1f9e4f3a2e041411fa4d7195fd1c1690bbbf273afd6846417992590acd443ded",
+      "gitBlobSHA1": "757a565ced4730f85c833fb2547d8e199ae68f19"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/tabs.css",
+      "type": "RegularFile",
+      "bytes": 11741,
+      "sha256": "352cf22a6789628afb1496ff0b9b4576b5d616352e108230f45fba47f22138c0",
+      "gitBlobSHA1": "5b84c153e3ace86fc10ef01d339f764fcf3a9772"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/docs/html/virtual_allocator.html",
+      "type": "RegularFile",
+      "bytes": 26953,
+      "sha256": "1492f34dc27434a47fdae100ec8c5242830a4644b5890686df86db20dbd934ed",
+      "gitBlobSHA1": "c1cfc2798000bb866baf4f166dd607be16c9faf2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/include/D3D12MemAlloc.h",
+      "type": "RegularFile",
+      "bytes": 172541,
+      "sha256": "672193f18428428832ca9c9f22d7940229a7afea5a2280435f7dabf1cc19b903",
+      "gitBlobSHA1": "36ec787f3390b4fa371b0e63e08442ab1ae413ec"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/.editorconfig",
+      "type": "RegularFile",
+      "bytes": 68,
+      "sha256": "3f80c747ac4dc7c9107bf928e26ed63c59c6942bf88c9c202187392c4cf160b3",
+      "gitBlobSHA1": "8abf0efc440fedcd383dce813bbcb4c4a3a343e2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 6662,
+      "sha256": "d85899243de52fa559b7e3199b911cf7706d046e4775fc286a55d52653f50908",
+      "gitBlobSHA1": "34ec3f8489da24e28b3153a4a85025864d407158"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Common.cpp",
+      "type": "RegularFile",
+      "bytes": 5117,
+      "sha256": "9a8b2225c712e00fdd19a70a8f83250376a457a0337faba85a5e34821db1395f",
+      "gitBlobSHA1": "73943cef688f938f4f33062189ba7305bd8155c7"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Common.h",
+      "type": "RegularFile",
+      "bytes": 12857,
+      "sha256": "ae013b11a8fdc452e6d6ed9361858629c974901d2422b6e3939aa830b7cfe0ac",
+      "gitBlobSHA1": "6f150acc169a7a13b7a3718dd9c765f9b551c6b8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/D3D12MemAlloc.cpp",
+      "type": "RegularFile",
+      "bytes": 355437,
+      "sha256": "cb81d9184e4a69407f7b9f204bd7b56247a014c82cd698cc7002c03aeb41bdd8",
+      "gitBlobSHA1": "0a58d302ba02c8d14f401e6e333103d6545fca77"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/D3D12MemAlloc.natvis",
+      "type": "RegularFile",
+      "bytes": 2036,
+      "sha256": "25e04d152bdfbb140e732ff231b2abb645c21de8735fcd8e5852e2e87ceeb04f",
+      "gitBlobSHA1": "102bc9f01304dea94854c4e506feff1788757593"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/D3D12Sample.cpp",
+      "type": "RegularFile",
+      "bytes": 78183,
+      "sha256": "1be10a7b416869b5f94df83ddef642de6ac52e3687052f9acefeeef9cd0ba967",
+      "gitBlobSHA1": "a2b5f8d9c2615079ea7da957b456697f88ac8cbd"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Doxyfile",
+      "type": "RegularFile",
+      "bytes": 132902,
+      "sha256": "3e38b82907756d77ac9ce6bc20c8bca994174c6f76855c64c57ff7ceb8683e61",
+      "gitBlobSHA1": "c2609e8748bfcacbf0e86edc24dec9b4c668e659"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Shaders",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Shaders/FxBatchCompilerScript.fxbc",
+      "type": "RegularFile",
+      "bytes": 1300,
+      "sha256": "e157f42e4e101c6c1783d24c3e7fbb664d5944d5c63ccdf6f8964a56bc69a97c",
+      "gitBlobSHA1": "d21c2acf0c2c7c2e3f5ee54b5ab33ba8152f2cd8"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Shaders/PS.hlsl",
+      "type": "RegularFile",
+      "bytes": 1503,
+      "sha256": "36bbeb461e5dddcdc8cacbee131071a94e24bd562dd0bd63d43458f29bad1341",
+      "gitBlobSHA1": "828c8b21de3a87a088b8329addbedbe22e68d4a4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Shaders/PS_Compiled.h",
+      "type": "RegularFile",
+      "bytes": 7004,
+      "sha256": "2c5bb7be95e787e8e1d4465e59638db158e2acfae7f256e55c4399fbe84ca0ff",
+      "gitBlobSHA1": "495c73b62c0a197e4503cba8c175b15cdd97d877"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Shaders/VS.hlsl",
+      "type": "RegularFile",
+      "bytes": 1618,
+      "sha256": "fc4a1f38bd3281526c10c4e4ae7f687e19149f0e41eaa5b7d9505784557f8e29",
+      "gitBlobSHA1": "796810d6db62e2c58ecbee5fdab20ea6407d9c54"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Shaders/VS_Compiled.h",
+      "type": "RegularFile",
+      "bytes": 7405,
+      "sha256": "45dc02d920d5b18243d7658df5e5bb29da90f396601108afb8b5a0b74364ed8d",
+      "gitBlobSHA1": "2d30bda10ba25de7a1b9a5431055821228602aa6"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Tests.cpp",
+      "type": "RegularFile",
+      "bytes": 198457,
+      "sha256": "dd36f582dba2c026031db097c85155235af84c02e7ca0794ff5079accd7641c8",
+      "gitBlobSHA1": "b24a2eeef27185e9f0e81490d1b5b088fe3f2db4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/Tests.h",
+      "type": "RegularFile",
+      "bytes": 1459,
+      "sha256": "3ed58a11824a3456c5371f9dd7296bf0543f5025d66b98eab7e1fda3d5570c49",
+      "gitBlobSHA1": "6121f70c548ab091ecc1dd3c57963ee845a0b18c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/cmake",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/src/cmake/config.cmake.in",
+      "type": "RegularFile",
+      "bytes": 108,
+      "sha256": "cea5381f1159497cd8396bbe2cfa73492a8986da5f86b87438e300b16f7d0365",
+      "gitBlobSHA1": "3e47daa5ebdea8c0e24dbcdb6292f9983f1c56ed"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/GpuMemDump.schema.json",
+      "type": "RegularFile",
+      "bytes": 6418,
+      "sha256": "9e0f24fabdfa1173728ba002cc4e244332e388446ed903d5f61974cf996d7e40",
+      "gitBlobSHA1": "4d3331c66debfc5c60ac098339b6023743a09318"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/GpuMemDumpVis.py",
+      "type": "RegularFile",
+      "bytes": 14742,
+      "sha256": "4878818fb72ae1bd7d8a72a14f67837c4d3ec0ade8ec74e268d82bfacad283aa",
+      "gitBlobSHA1": "6d6155be918d098b5e4b36ac8492e20c6aa75180"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README.md",
+      "type": "RegularFile",
+      "bytes": 3568,
+      "sha256": "2e4b4691350c1fe98bce3136459121e8f2184482ae223841e93c8e236d0aa5dc",
+      "gitBlobSHA1": "afcda059f7b44e9c246152674a7f0aa9d1db21d0"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/ExampleOutput.png",
+      "type": "RegularFile",
+      "bytes": 98005,
+      "sha256": "8f337096f2595b51d37a48b1bff9497ea91b8d8324938ff44493ed9a5fea4fee",
+      "gitBlobSHA1": "2646ed225d4efa623bfb460ab7a53d9907b81569"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Bkg.png",
+      "type": "RegularFile",
+      "bytes": 196,
+      "sha256": "82ece0d1aca31f64ebd989a6b42f548b1cfc3c41f75751d2c55e97482bedd7f0",
+      "gitBlobSHA1": "f8fd89f0623afee76ed639fea85a49c05496818d"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Buffer_1.png",
+      "type": "RegularFile",
+      "bytes": 1705,
+      "sha256": "2eb801889a2d7cf857b5fdf13e8ade0dbe71080b46efbbf18141c47c2aa38778",
+      "gitBlobSHA1": "3805225019ff6412efc72f75f01cc1715935123c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Buffer_2.png",
+      "type": "RegularFile",
+      "bytes": 1590,
+      "sha256": "87c0694c6d45f77e6b074ae308bdb1e780bfe6bc43b924b3d75b2a59f33cbbdf",
+      "gitBlobSHA1": "bc3773fd6283298753e3ae7f16ff43dfc86cf2bb"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Buffer_3.png",
+      "type": "RegularFile",
+      "bytes": 1877,
+      "sha256": "b68cc0319fba047fde905f141eb063ae07e4549b8843ecc99a7cd2fc481dc518",
+      "gitBlobSHA1": "992d8b295330b6a876b6edb6390727ea5fc7cfe2"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Buffer_4.png",
+      "type": "RegularFile",
+      "bytes": 2195,
+      "sha256": "db4a3d049e9b89b8272e32e726270ebd2d41e7b2aee8727c03aa00b258f37f73",
+      "gitBlobSHA1": "d29f54e89c314be12ee15d25eee46fd3198315b4"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Details.png",
+      "type": "RegularFile",
+      "bytes": 964,
+      "sha256": "66ae054934a797d4ffca4475399f7803cd31734528d257a9da81f5cd593a690d",
+      "gitBlobSHA1": "a9c8535273bfcc354651f6beb04256d84c34bfda"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Image_1.png",
+      "type": "RegularFile",
+      "bytes": 1739,
+      "sha256": "fb6dcab4d2e6431056428cbdb684a2add46da0dba1ddb321100eb369863e7892",
+      "gitBlobSHA1": "dc180afb93147f9033eda6cb1031a3722a768c02"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Image_2.png",
+      "type": "RegularFile",
+      "bytes": 1592,
+      "sha256": "16d9b7eda96a9f05c91bf25f835e4d5c9a63405ad8ccdd022a97644ae5e94211",
+      "gitBlobSHA1": "fc35c7cd559f3fc0f3371f5ad5c621b0fb30d94e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Image_3.png",
+      "type": "RegularFile",
+      "bytes": 1719,
+      "sha256": "197a8d95b244eae3e96427059d0c144a3d46bc64c5d98b868f93779b69bcb82d",
+      "gitBlobSHA1": "b69849dddbb2120b20e6afc31dcc34898cc17889"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Image_4.png",
+      "type": "RegularFile",
+      "bytes": 1925,
+      "sha256": "74118046cfd7e294abd5fc807552df167481d933af35ecc83b8b56eccecfc7d3",
+      "gitBlobSHA1": "7f3980ec077b7e612236647a23ea68d4ed502072"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Image_Linear.png",
+      "type": "RegularFile",
+      "bytes": 1432,
+      "sha256": "434c7a96c0d4bcb7fb059987af560d2ba61384d3245395b5c73d9f23ea7f23db",
+      "gitBlobSHA1": "36d8be511ceec7d382aa8beceaef31c986481ccc"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Image_Unknown.png",
+      "type": "RegularFile",
+      "bytes": 1449,
+      "sha256": "b8b580328459e7b814975722867db1ca46081acbf2685843ee95dc0d905836e7",
+      "gitBlobSHA1": "f3f40ecb67774af1668fa95f698d3ef71361818c"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Texture_1.png",
+      "type": "RegularFile",
+      "bytes": 1739,
+      "sha256": "fb6dcab4d2e6431056428cbdb684a2add46da0dba1ddb321100eb369863e7892",
+      "gitBlobSHA1": "dc180afb93147f9033eda6cb1031a3722a768c02"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Texture_2.png",
+      "type": "RegularFile",
+      "bytes": 1592,
+      "sha256": "16d9b7eda96a9f05c91bf25f835e4d5c9a63405ad8ccdd022a97644ae5e94211",
+      "gitBlobSHA1": "fc35c7cd559f3fc0f3371f5ad5c621b0fb30d94e"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Texture_3.png",
+      "type": "RegularFile",
+      "bytes": 1719,
+      "sha256": "197a8d95b244eae3e96427059d0c144a3d46bc64c5d98b868f93779b69bcb82d",
+      "gitBlobSHA1": "b69849dddbb2120b20e6afc31dcc34898cc17889"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Texture_4.png",
+      "type": "RegularFile",
+      "bytes": 1925,
+      "sha256": "74118046cfd7e294abd5fc807552df167481d933af35ecc83b8b56eccecfc7d3",
+      "gitBlobSHA1": "7f3980ec077b7e612236647a23ea68d4ed502072"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/README_files/Legend_Unknown.png",
+      "type": "RegularFile",
+      "bytes": 1356,
+      "sha256": "12fa57135162cc157d714cc371b60043c95e370da0577a29e5c51917ba98fc26",
+      "gitBlobSHA1": "3053726c104abc5ce6e33d69c0413bc8e2403dd5"
+    },
+    {
+      "path": "D3D12MemoryAllocator-3.2.0/tools/GpuMemDumpVis/Sample.json",
+      "type": "RegularFile",
+      "bytes": 20684,
+      "sha256": "4333ec54b85d8538a44f27762773f85e829c607ba9e32d91568913b7cd80ebe4",
+      "gitBlobSHA1": "d12c8b370ccf0b620385b21caee2921a8bea51e1"
+    }
+  ]
+}

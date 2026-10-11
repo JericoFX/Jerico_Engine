@@ -1,0 +1,514 @@
+{
+  "status": "READ-ONLY BATCH PREPARATION READY FOR PARENT REVIEW; NO ARCHIVE ACQUISITION/AUTHORIZATION INFERRED",
+  "directDeclarations": {
+    "total": 24,
+    "alreadyProvisioned": 10,
+    "remaining": 12,
+    "excluded": 2
+  },
+  "transitiveSelectedSources": 1,
+  "items": [
+    {
+      "name": "xxhash",
+      "class": "TOP_LEVEL",
+      "versionPin": "e626a72bc2321cd320e953a0ccf1584cad60f363",
+      "originalURL": "https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz",
+      "archiveCandidateURL": "https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/refs/tags/v0.8.3",
+      "archiveSHA256": "aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "BSD-2-Clause",
+      "primaryNotices": [
+        {
+          "name": "xxhash",
+          "sourcePath": "LICENSE",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\xxhash\\LICENSE",
+          "url": "https://raw.githubusercontent.com/Cyan4973/xxHash/e626a72bc2321cd320e953a0ccf1584cad60f363/LICENSE",
+          "bytes": 1389,
+          "gitBlobSHA1": "e4c5da7234eca7baad9a46f0b144e49ccad2e500",
+          "gitBlobMatched": true,
+          "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+        }
+      ],
+      "consumer": "Code/Tools/AssetProcessor/AssetBuilderSDK/CMakeLists.txt:35 and AssetProcessor/CMakeLists.txt:38",
+      "selectedBehavior": "NO_ADD_SUBDIR; original wrapper compiles xxhash.c and copies xxhash.h; upstream tooling inactive",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_XXHASH",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "D3D12MemoryAllocator",
+      "class": "TOP_LEVEL",
+      "versionPin": "1d86c1130f61453634b1df85782e1fecfd59a525",
+      "originalURL": "https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/refs/tags/v3.2.0.tar.gz",
+      "archiveCandidateURL": "https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/refs/tags/v3.2.0.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/tar.gz/refs/tags/v3.2.0",
+      "archiveSHA256": "71d740ecb2d6cdf93b273ae571eb80097a530443993b0a5cb2bdb3cacc1548db",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "MIT",
+      "primaryNotices": [
+        {
+          "name": "D3D12MemoryAllocator",
+          "sourcePath": "LICENSE.txt",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/LICENSE.txt",
+          "bytes": 1099,
+          "gitBlobSHA1": "3d5a69a6f5695507ecc9c412c783ca60572bf878",
+          "gitBlobMatched": true,
+          "sha256": "5478a2f36b736e13dd3250b9c71a4ab521bc327fb9d112a92c647bf3e69ddb68"
+        },
+        {
+          "name": "D3D12MemoryAllocator",
+          "sourcePath": "NOTICES.txt",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\NOTICES.txt",
+          "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/NOTICES.txt",
+          "bytes": 2839,
+          "gitBlobSHA1": "6c079b16c4f0bd4a87785a4b4f775e7b14ed65ba",
+          "gitBlobMatched": true,
+          "sha256": "7b7fc5046e474378f4fe0bde65508e0d2b3146b58568ebc7cc192aea85ff91b8"
+        }
+      ],
+      "consumer": "Gems/Atom/RHI/DX12/Code/CMakeLists.txt:133",
+      "selectedBehavior": "Upstream root/src CMake: static default, sample/docs OFF defaults, SDK d3d12/dxgi/dxguid only, generated config in binary; optional Agility path empty default, no acquisition",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_D3D12MEMORYALLOCATOR",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "meshoptimizer",
+      "class": "TOP_LEVEL",
+      "versionPin": "9d9890c73011d75920af614485296d1e03e95448",
+      "originalURL": "https://github.com/zeux/meshoptimizer/archive/refs/tags/v1.2.tar.gz",
+      "archiveCandidateURL": "https://github.com/zeux/meshoptimizer/archive/refs/tags/v1.2.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/zeux/meshoptimizer/tar.gz/refs/tags/v1.2",
+      "archiveSHA256": "e40f71b809cdf3361b9a4def85fd44534e8733ce29d4b943c145b76859e4c2b4",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "MIT",
+      "primaryNotices": [
+        {
+          "name": "meshoptimizer",
+          "sourcePath": "LICENSE.md",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\meshoptimizer\\LICENSE.md",
+          "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/LICENSE.md",
+          "bytes": 1079,
+          "gitBlobSHA1": "468827f4b86ef754465396a9e163db25af406626",
+          "gitBlobMatched": true,
+          "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
+        }
+      ],
+      "consumer": "Gems/Atom/RPI/Code/CMakeLists.txt:46,274",
+      "selectedBehavior": "NO_ADD_SUBDIR; original static source filelist/header; upstream gltfpack/Basis/WebP branches inactive",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_MESHOPTIMIZER",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "squish-ccr",
+      "class": "TOP_LEVEL",
+      "versionPin": "deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+      "originalURL": "https://github.com/Ethatron/squish-ccr/archive/deb557d2fa647b191b37a2d8682df54ec8a7cfba.tar.gz",
+      "archiveCandidateURL": "https://github.com/Ethatron/squish-ccr/archive/deb557d2fa647b191b37a2d8682df54ec8a7cfba.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/Ethatron/squish-ccr/tar.gz/deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+      "archiveSHA256": "5b578a95b339a99af3fc31116b159118c2fad8568388f824bbdfacba00afa7f3",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "MIT",
+      "primaryNotices": [
+        {
+          "name": "squish-ccr",
+          "sourcePath": "README",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\squish-ccr\\README",
+          "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/README",
+          "bytes": 1581,
+          "gitBlobSHA1": "3a3852ad53ebd1290fae2a841c4616318a7252a4",
+          "gitBlobMatched": true,
+          "sha256": "5238dc0990fa6c547af4da5dce39812b23ee0dad31c98913c1a95904d4e23b39"
+        },
+        {
+          "name": "squish-ccr",
+          "sourcePath": "squish.h",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\squish-ccr\\squish.h",
+          "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/squish.h",
+          "bytes": 19331,
+          "gitBlobSHA1": "44455d8165cdd92b19b2cdb67a3eade3c2fcd833",
+          "gitBlobMatched": true,
+          "sha256": "7b6c3a8501fc2651f705e60919febfb6d4b66ef71bf907892cc766cadf0d0172"
+        }
+      ],
+      "consumer": "Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:67",
+      "selectedBehavior": "NO_ADD_SUBDIR; original static CCR/CPP/SSE2 definitions and local squish-ccr.patch; use prepatched private work copy. Immutable snapshot never patched",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_SQUISH-CCR",
+      "mutableSourceRequired": true,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "sse2neon",
+      "class": "TOP_LEVEL",
+      "versionPin": "92f6de174717aef09033ad21568d5bb9e5470404",
+      "originalURL": "https://github.com/DLTcollab/sse2neon/archive/refs/tags/v1.9.1.tar.gz",
+      "archiveCandidateURL": "https://github.com/DLTcollab/sse2neon/archive/refs/tags/v1.9.1.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/DLTcollab/sse2neon/tar.gz/refs/tags/v1.9.1",
+      "archiveSHA256": "6b70e7cb8c5ce4641002b85deaafe97efdf9ade9b49884edeaf678b35f0e132f",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "MIT",
+      "primaryNotices": [
+        {
+          "name": "sse2neon",
+          "sourcePath": "LICENSE",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\sse2neon\\LICENSE",
+          "url": "https://raw.githubusercontent.com/DLTcollab/sse2neon/92f6de174717aef09033ad21568d5bb9e5470404/LICENSE",
+          "bytes": 1083,
+          "gitBlobSHA1": "c1aa1af5495ab76c5ae49502d82c743b5947eb9c",
+          "gitBlobMatched": true,
+          "sha256": "e962fe0dfa637c465df35d496fb198982eb52b8afd3046f370083c6e9856b34f"
+        }
+      ],
+      "consumer": "Code/3rdParty/squish-ccr/CMakeLists.txt:47",
+      "selectedBehavior": "NO_ADD_SUBDIR; HEADERONLY, unconditional squish wrapper dependency even x64; preserve API and original licensing",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_SSE2NEON",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "mikktspace",
+      "class": "TOP_LEVEL",
+      "versionPin": "3e895b49d05ea07e4c2133156cfa94369e19e409",
+      "originalURL": "https://github.com/mmikk/MikkTSpace/archive/3e895b49d05ea07e4c2133156cfa94369e19e409.tar.gz",
+      "archiveCandidateURL": "https://github.com/mmikk/MikkTSpace/archive/3e895b49d05ea07e4c2133156cfa94369e19e409.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/mmikk/MikkTSpace/tar.gz/3e895b49d05ea07e4c2133156cfa94369e19e409",
+      "archiveSHA256": "aeba65ddee85a679133d510d71d00b108f603752f90b15b9ecf7777033f6e351",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "Zlib",
+      "primaryNotices": [
+        {
+          "name": "mikktspace",
+          "sourcePath": "mikktspace.h",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\mikktspace\\mikktspace.h",
+          "url": "https://raw.githubusercontent.com/mmikk/MikkTSpace/3e895b49d05ea07e4c2133156cfa94369e19e409/mikktspace.h",
+          "bytes": 8209,
+          "gitBlobSHA1": "52c44a713c60ebff71133a41e0711bbf7199fc5e",
+          "gitBlobMatched": true,
+          "sha256": "17fc433894f24c73753d548086cc4d8c5c0379f4a6edfb98b5da243e4f0bc3d0"
+        }
+      ],
+      "consumer": "Gems/SceneProcessing/Code/CMakeLists.txt:47",
+      "selectedBehavior": "Root primary tree has no CMakeLists.txt; original wrapper owns static mikktspace.c/header; no upstream configuration",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_MIKKTSPACE",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "ogg",
+      "class": "TOP_LEVEL",
+      "versionPin": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822",
+      "originalURL": "https://github.com/xiph/ogg/archive/refs/tags/v1.3.6.tar.gz",
+      "archiveCandidateURL": "https://github.com/xiph/ogg/archive/refs/tags/v1.3.6.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/xiph/ogg/tar.gz/refs/tags/v1.3.6",
+      "archiveSHA256": "95b643da661155d79db9de2fca55daed3a8d491039829def246aacb3d9201c81",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "BSD-3-Clause",
+      "primaryNotices": [
+        {
+          "name": "ogg",
+          "sourcePath": "COPYING",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\COPYING",
+          "url": "https://raw.githubusercontent.com/xiph/ogg/be05b13e98b048f0b5a0f5fa8ce514d56db5f822/COPYING",
+          "bytes": 1466,
+          "gitBlobSHA1": "6111c6c5a6b95057e43d36b7c217b073bf5f9b22",
+          "gitBlobMatched": true,
+          "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+        }
+      ],
+      "consumer": "Findminiaudio.cmake→find_package(vorbis)→Findvorbis.cmake→find_package(Ogg)",
+      "selectedBehavior": "Static upstream; tests/docs/framework/pkgconfig disabled by wrapper; config_types.h output is binary relative path; no FetchContent/Git/network branch in selected closure",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_OGG",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "vorbis",
+      "class": "TOP_LEVEL",
+      "versionPin": "0657aee69dec8508a0011f47f3b69d7538e9d262",
+      "originalURL": "https://github.com/xiph/vorbis/archive/refs/tags/v1.3.7.tar.gz",
+      "archiveCandidateURL": "https://github.com/xiph/vorbis/archive/refs/tags/v1.3.7.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/xiph/vorbis/tar.gz/refs/tags/v1.3.7",
+      "archiveSHA256": "270c76933d0934e42c5ee0a54a36280e2d87af1de3cc3e584806357e237afd13",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "BSD-3-Clause",
+      "primaryNotices": [
+        {
+          "name": "vorbis",
+          "sourcePath": "COPYING",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\COPYING",
+          "url": "https://raw.githubusercontent.com/xiph/vorbis/0657aee69dec8508a0011f47f3b69d7538e9d262/COPYING",
+          "bytes": 1470,
+          "gitBlobSHA1": "fb456a87bdfafe2cab7de982e8ce11204933ec5c",
+          "gitBlobMatched": true,
+          "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a"
+        }
+      ],
+      "consumer": "Gems/MiniAudio/3rdParty/Findminiaudio.cmake:20",
+      "selectedBehavior": "Static upstream root/lib; find Ogg resolves original target first; tests/framework disabled. Original vorbis/vorbisfile/vorbisenc graph retained",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_VORBIS",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "miniaudio",
+      "class": "TOP_LEVEL",
+      "versionPin": "350784a9467a79d0fa65802132668e5afbcf3777",
+      "originalURL": "https://github.com/mackron/miniaudio/archive/refs/tags/0.11.22.tar.gz",
+      "archiveCandidateURL": "https://github.com/mackron/miniaudio/archive/refs/tags/0.11.22.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/mackron/miniaudio/tar.gz/refs/tags/0.11.22",
+      "archiveSHA256": "bcb07bfb27e6fa94d34da73ba2d5642d4940b208ec2a660dbf4e52e6b7cd492f",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "MIT No Attribution",
+      "primaryNotices": [
+        {
+          "name": "miniaudio",
+          "sourcePath": "LICENSE",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\LICENSE",
+          "url": "https://raw.githubusercontent.com/mackron/miniaudio/350784a9467a79d0fa65802132668e5afbcf3777/LICENSE",
+          "bytes": 2597,
+          "gitBlobSHA1": "2f9423addfe68aa01449ba885d56d832f04b5e8e",
+          "gitBlobMatched": true,
+          "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+        }
+      ],
+      "consumer": "Gems/MiniAudio/Code/CMakeLists.txt:58,141",
+      "selectedBehavior": "Original wrapper provides Ogg/Vorbis before upstream; tests/examples OFF, MA_COINIT_VALUE=2. Existing vorbisfile prevents external fallback. Optional opus/SteamAudio system searches do not download, but require cache inspection for ambient target contamination",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_MINIAUDIO",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "v-hacd",
+      "class": "TOP_LEVEL",
+      "versionPin": "22ec20a7f8ea221ab600df869369b9c6a258cb10",
+      "originalURL": "https://github.com/kmammou/v-hacd/archive/refs/tags/v4.1.0.tar.gz",
+      "archiveCandidateURL": "https://github.com/kmammou/v-hacd/archive/refs/tags/v4.1.0.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/kmammou/v-hacd/tar.gz/refs/tags/v4.1.0",
+      "archiveSHA256": "9fe895cd10ec995d2171b11bde97aaaa221b418a3aaed0f5d9a068ae057d626b",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "BSD-3-Clause",
+      "primaryNotices": [
+        {
+          "name": "v-hacd",
+          "sourcePath": "LICENSE",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\v-hacd\\LICENSE",
+          "url": "https://raw.githubusercontent.com/kmammou/v-hacd/22ec20a7f8ea221ab600df869369b9c6a258cb10/LICENSE",
+          "bytes": 1546,
+          "gitBlobSHA1": "efc7f64399c41f49fe1c151d7abb00be8a46583b",
+          "gitBlobMatched": true,
+          "sha256": "245c933225f5bd28a10336137b26f1f86551b6b1d29f804253eb5e1d73744c2e"
+        }
+      ],
+      "consumer": "Gems/PhysX/Core/PhysX5/CMakeLists.txt:144",
+      "selectedBehavior": "NO_ADD_SUBDIR; original HEADERONLY VHACD.h for PhysX editor decomposition; app/submodules not consumed",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_V-HACD",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "RecastNavigation",
+      "class": "TOP_LEVEL",
+      "versionPin": "6dc1667f580357e8a2154c28b7867bea7e8ad3a7",
+      "originalURL": "https://github.com/recastnavigation/recastnavigation/archive/refs/tags/v1.6.0.tar.gz",
+      "archiveCandidateURL": "https://github.com/recastnavigation/recastnavigation/archive/refs/tags/v1.6.0.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/recastnavigation/recastnavigation/tar.gz/refs/tags/v1.6.0",
+      "archiveSHA256": "d48ca0121962fa0639502c0f56c4e3ae72f98e55d88727225444f500775c0074",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "Zlib",
+      "primaryNotices": [
+        {
+          "name": "RecastNavigation",
+          "sourcePath": "License.txt",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\License.txt",
+          "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/License.txt",
+          "bytes": 877,
+          "gitBlobSHA1": "c259ddf6cd36f4745ca71bff1092d3c9d2af900d",
+          "gitBlobMatched": true,
+          "sha256": "ffad87821cce7cfd3be00b63ffadd01b04e83a4c6a0bcc68f06362ffd42d705e"
+        }
+      ],
+      "consumer": "Gems/RecastNavigation/Code/CMakeLists.txt:35-37,58-61",
+      "selectedBehavior": "Static upstream five libraries; demo/tests/examples OFF and DT_POLYREF64 ON by wrapper; config/version outputs binary. DetourCrowd dependency retained",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_RECASTNAVIGATION",
+      "mutableSourceRequired": false,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "assimp",
+      "class": "TOP_LEVEL",
+      "versionPin": "e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+      "originalURL": "https://github.com/assimp/assimp/archive/e0b52347c6e52de2827ec957a9ebf00ce3c54f79.tar.gz",
+      "archiveCandidateURL": "https://github.com/assimp/assimp/archive/e0b52347c6e52de2827ec957a9ebf00ce3c54f79.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+      "archiveSHA256": "00e4bf0b9d9d8e9b346fa3dd859c3ce5f3438451822d5933c07f65a76fc04745",
+      "archiveSHAStatus": "Original declared archive hash, not yet GET-verified",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "Custom BSD-3-Clause",
+      "primaryNotices": [
+        {
+          "name": "assimp",
+          "sourcePath": "LICENSE",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\LICENSE",
+          "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/LICENSE",
+          "bytes": 3791,
+          "gitBlobSHA1": "f7ff71e8c4d397e928c1488ade2e522cbf1e7771",
+          "gitBlobMatched": true,
+          "sha256": "21195d410708b82757d3e34c3a40c427f6e59339da862e9480d4fcdc79b7a1bd"
+        }
+      ],
+      "consumer": "Code/Tools/SceneAPI/SDKWrapper/CMakeLists.txt:19",
+      "selectedBehavior": "Original static USD ON; tools/tests/shared/Hunter/install/zlib build OFF; ZLIB target required. Private copy preapplies tinyusd-include.patch. USD FetchContent depends on separate tinyusdz_repo; VRML/Hunter/Draco defaults OFF",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_ASSIMP",
+      "mutableSourceRequired": true,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    },
+    {
+      "name": "tinyusdz_repo",
+      "class": "TRANSITIVE_USD",
+      "versionPin": "6050eef932f7d2788656d63297aa488fb0961ed1",
+      "originalURL": "https://github.com/lighttransport/tinyusdz",
+      "archiveCandidateURL": "https://github.com/lighttransport/LightUSD/archive/6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+      "directArchiveURL": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+      "archiveSHA256": null,
+      "archiveSHAStatus": "No original archive hash; approval must explicitly allow measuring new archive and verifying every source Git blob against exact commit",
+      "commitCorroborated": true,
+      "tagPinMatched": true,
+      "license": "Apache-2.0 main; bundled third-party licenses retained separately",
+      "primaryNotices": [
+        {
+          "name": "tinyusdz_repo",
+          "sourcePath": "LICENSE",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\LICENSE",
+          "url": "https://raw.githubusercontent.com/lighttransport/LightUSD/6050eef932f7d2788656d63297aa488fb0961ed1/LICENSE",
+          "bytes": 672,
+          "gitBlobSHA1": "f4dd9c6c48ccc456ae6c12d81f03240a80e69521",
+          "gitBlobMatched": true,
+          "sha256": "956559a8307fa5d9393752f8684f41345231046481b4a2155fa7503e4fe9c113"
+        }
+      ],
+      "consumer": "Assimp USD importer ON in original O3DE wrapper",
+      "selectedBehavior": "Official old Git pin now in renamed LightUSD. Apache2 main source + bundled notices. CMake root subproject defaults tests/examples/Python OFF; no active FetchContent/Git/download/execute_process. Assimp manually compiles 46 core +4 dependency paths from hardcoded _deps directory; upstream EXCLUDE_FROM_ALL targets alone do not change that path",
+      "overrideVariable": "FETCHCONTENT_SOURCE_DIR_TINYUSDZ_REPO",
+      "mutableSourceRequired": true,
+      "archiveAcquired": false,
+      "tarPathTypeLinkCollisionAudit": "PENDING acquisition; metadata is not a safe-extraction witness"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Original wrapper-owned source/header libraries",
+      "sources": [
+        "xxhash",
+        "meshoptimizer",
+        "squish-ccr",
+        "sse2neon",
+        "mikktspace",
+        "v-hacd"
+      ],
+      "dependencyEdges": [
+        "squish-ccr→sse2neon"
+      ],
+      "preparation": "Exact primary archives/hash/Git blobs, safe immutable snapshots; only squish gets separately verified prepatched private copy"
+    },
+    {
+      "name": "Original Windows/Gem upstream CMake",
+      "sources": [
+        "D3D12MemoryAllocator",
+        "ogg",
+        "vorbis",
+        "miniaudio",
+        "RecastNavigation"
+      ],
+      "dependencyEdges": [
+        "miniaudio→vorbis→ogg"
+      ],
+      "preparation": "Exact primary archives/hash/Git blobs, safe immutable snapshots; preserve all existing flags/targets and full licensing. No new system tool/install/network path"
+    },
+    {
+      "name": "Original SceneAPI importer + selected USD",
+      "sources": [
+        "assimp",
+        "tinyusdz_repo"
+      ],
+      "dependencyEdges": [
+        "assimp→ZLIB already local",
+        "assimp USD→tinyusdz_repo"
+      ],
+      "preparation": "Exact Assimp archive hash; separately measured canonical primary TinyUSD archive verified by commit/blob tree. Parent-reviewed byteexact patches on new private copies, no Git/Python patch tool execution"
+    }
+  ],
+  "patches": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SceneAPI\\SDKWrapper\\3rdParty\\tinyusd-include.patch",
+      "bytes": 1393,
+      "sha256": "3b8536116b594f29fe0bc769507aa1665cafe03ab5100a3d6f0e6659638b1971"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\squish-ccr\\squish-ccr.patch",
+      "bytes": 72247,
+      "sha256": "426595eee9ebef2a667f2e66a740eee6bfe8c77326abb5f3bca79c80ae21b3ba"
+    }
+  ],
+  "sourcePreparation": {
+    "immutable": "New F:/JericoEngine/Dependencies snapshots, archive receipt/tar audit/Git blob/full extraction SHA before use; never mutate existing snapshots",
+    "assimp": "Private source under build; preapply original tinyusd-include.patch to contrib/tinyusdz/patches/tinyusdz.patch. Preserve before/after source file hashes and unique exact hunks",
+    "tinyusdz": "Private source must be F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/_deps/tinyusdz_repo-src unless parent authorizes a code path adaptation. SOURCE_DIR_TINYUSDZ_REPO points to exactly that path; preapply resulting original Assimp tinyusdz.patch to this private source. Standard SOURCE_DIR overrides bypass population/Git/PATCH_COMMAND; runtime test still pending",
+    "squish": "Private source under build preapplies original squish-ccr.patch; corresponding exact SOURCE_DIR_SQUISH-CCR override bypasses inherited legacy Python PATCH_COMMAND. All immutable source/patch notices preserved",
+    "assimpGit": "Proposed supported wrapper-local ASSIMP_IGNORE_GIT_HASH ON before MakeAvailable, plus GIT_COMMIT_HASH e0b52347 and GIT_BRANCH archive if parent wants accurate generated revision metadata. Upstream CMake259–281 proves guard skips two Git calls and uses provided hash; no wrapper edit performed",
+    "provenance": "Existing exact source override path types/ancestor guards, Root before/after tree witnesses, pristine private-source preflight and measured archive hashes retained in subsequent derivation; no broad provider/fallback"
+  },
+  "sourceBehaviorLimits": [
+    "No archive bytes acquired: twelve declared hashes remain unverified until GET; TinyUSD archive has no original checksum",
+    "Optional miniaudio opus/SteamAudio ambient searches are not network fetches; current Root has not reached them; block unknown ambient deps rather than acquiring extras",
+    "All archives may contain inactive tests/docs/models/resources; safe tar audit and legal inventory required before extraction. Assimp LICENSE explicitly excludes test/models-nonbsd from its general BSD terms",
+    "TinyUSD LICENSE is a short Apache2 notice rather than full standard text; retain it and bundled notices, and preserve an authoritative full Apache2 text for eventual redistribution",
+    "Root48 resolved CLI11 but stopped at Assimp; no later Gem/Metal composition, native build, importer/runtime or Editor acceptance implied",
+    "This is source-selected FetchContent preparation, not full dependency SBOM or closure of all prebuilt packages/tooling"
+  ],
+  "forbidden": [
+    "pybind11/PySide/Python product bindings",
+    "RGA while actual cache FALSE",
+    "SPIRVCross for unsupported Metal Windows path",
+    "Any AWS/S3/CloudFront/LFS/Git clone/automatic install/fallback acquisition"
+  ],
+  "archivesAcquired": 0,
+  "buildTestAcquiredToolProcesses": 0
+}

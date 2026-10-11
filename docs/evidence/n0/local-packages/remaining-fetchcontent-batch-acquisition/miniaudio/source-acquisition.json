@@ -1,0 +1,15 @@
+{
+  "name": "miniaudio",
+  "URL": "https://codeload.github.com/mackron/miniaudio/tar.gz/refs/tags/0.11.22",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 4485197,
+  "sha256": "bcb07bfb27e6fa94d34da73ba2d5642d4940b208ec2a660dbf4e52e6b7cd492f",
+  "expectedSHA256": "bcb07bfb27e6fa94d34da73ba2d5642d4940b208ec2a660dbf4e52e6b7cd492f",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/miniaudio-0.11.22.tar.gz",
+  "commit": "350784a9467a79d0fa65802132668e5afbcf3777",
+  "matchesDeclaredPin": true
+}

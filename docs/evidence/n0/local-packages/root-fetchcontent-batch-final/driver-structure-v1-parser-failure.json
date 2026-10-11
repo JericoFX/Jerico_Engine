@@ -1,0 +1,8 @@
+{
+  "status": "DRAFT V1 PARSER FAILED; NO EXECUTION",
+  "cause": "Generated literal48-prefix and3patch-pairs arrays carried final comma, rejected by PowerShell AST",
+  "correction": "Rev2 trims last comma of both arrays only",
+  "draftV1Preserved": "run-root-configure-batch-draft.ps1",
+  "nativeExecution": false,
+  "sourceWrites": false
+}

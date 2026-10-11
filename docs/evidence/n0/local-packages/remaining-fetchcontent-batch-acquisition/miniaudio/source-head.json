@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/mackron/miniaudio/archive/refs/tags/0.11.22.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/mackron/miniaudio/tar.gz/refs/tags/0.11.22",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/mackron/miniaudio/tar.gz/refs/tags/0.11.22",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"b21776ab17cf3f21f24a4a5d7bb11861610c3c3c001fc82288b4f88b2ba42d4c\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

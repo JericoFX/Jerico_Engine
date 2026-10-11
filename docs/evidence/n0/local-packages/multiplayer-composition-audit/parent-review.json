@@ -1,0 +1,19 @@
+{
+  "state": "Parent source-scope review accepted; native configuration/link/deploy/runtime pending",
+  "currentEngineSHA256": "605D32CCDD7DFA055560BC81EF79E743DC167318683E1E30733A507F3C582226",
+  "priorPythonEngineSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+  "previousFreezePreserved": true,
+  "actualPatchSHA256": "969346A4B5459864DAE7768CE72B23781BDBB788A9B9EA84D01CED162C580482",
+  "byteDeletionProof": true,
+  "removedLines": 2,
+  "removedBytes": 69,
+  "unchangedPythonSiblingCount": 5,
+  "freezeFileCountVerified": 1,
+  "staticClosureBefore": 111,
+  "staticClosureAfter": 108,
+  "limitations": [
+    "AzNetworking and Server launcher retained pending consumer separation",
+    "No native no-multiplayer acceptance",
+    "Product composition must be verified with Python retirement implementation"
+  ]
+}

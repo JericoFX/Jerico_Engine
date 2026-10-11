@@ -1,0 +1,133 @@
+{
+  "status": "14/14 PATCH INVERSIONS RAW BYTE EXACT; NATIVE UNVERIFIED",
+  "method": "Original existing unified diffs reversed in memory only; all source positions/counts/context exact; no source writes or patch tools executed",
+  "files": [
+    {
+      "name": "squish-ccr",
+      "relative": "bitoneset.cpp",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "1329562468a619bb5469ce02b1690226465789b483a1116d053cc85fa4aac523",
+      "originalSHA256": "1329562468a619bb5469ce02b1690226465789b483a1116d053cc85fa4aac523",
+      "originalBytes": 10140
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "colourset.cpp",
+      "hunks": 3,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "2b6ccee65718627f6de4acfe3a6986f303f7b6c8f6fb8fb0f2ab1b702c53635d",
+      "originalSHA256": "2b6ccee65718627f6de4acfe3a6986f303f7b6c8f6fb8fb0f2ab1b702c53635d",
+      "originalBytes": 17507
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "config.h",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "f1376f831665dc8a6949dac35e02c62e7e77f5af29a5b46c914218cc1a13e580",
+      "originalSHA256": "f1376f831665dc8a6949dac35e02c62e7e77f5af29a5b46c914218cc1a13e580",
+      "originalBytes": 14957
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "inlineables.cpp",
+      "hunks": 5,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "5479ffc13bfdf5474914dbff4ead56e11e44462ee70b82e7e396da86be8d449d",
+      "originalSHA256": "5479ffc13bfdf5474914dbff4ead56e11e44462ee70b82e7e396da86be8d449d",
+      "originalBytes": 52998
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "maths.cpp",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "2286a3089120257a76310693305b54336993bd354f810a6d57b0fe11b65cfd42",
+      "originalSHA256": "2286a3089120257a76310693305b54336993bd354f810a6d57b0fe11b65cfd42",
+      "originalBytes": 61208
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "maths_sse.h",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "06c6d997c3c0ffac057ecceac7b5392a8b846c87ae7b80d32bab64a7c0d386bd",
+      "originalSHA256": "06c6d997c3c0ffac057ecceac7b5392a8b846c87ae7b80d32bab64a7c0d386bd",
+      "originalBytes": 3461
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "paletteclusterfit.cpp",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "ade17c9d34716bca1a8d47b2226e9eb4c83bf2ecd25f47a64e011f3c9e8d871f",
+      "originalSHA256": "ade17c9d34716bca1a8d47b2226e9eb4c83bf2ecd25f47a64e011f3c9e8d871f",
+      "originalBytes": 73341
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "palettefit.cpp",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "fa761170406d2a148974b50ad67b78b0cfe47642e86346377e6dc626c7ddfd80",
+      "originalSHA256": "fa761170406d2a148974b50ad67b78b0cfe47642e86346377e6dc626c7ddfd80",
+      "originalBytes": 16349
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "paletteset.cpp",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "b6ce5bccb72a6f26276e536c9cd0fae135fecdb1b7bf9200d4912350ea90d721",
+      "originalSHA256": "b6ce5bccb72a6f26276e536c9cd0fae135fecdb1b7bf9200d4912350ea90d721",
+      "originalBytes": 44185
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "simd_float.h",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "3fdc1a584550f2d8021d2b04383150c656db425f16c0c77716545554dafa1e19",
+      "originalSHA256": "3fdc1a584550f2d8021d2b04383150c656db425f16c0c77716545554dafa1e19",
+      "originalBytes": 47919
+    },
+    {
+      "name": "squish-ccr",
+      "relative": "simd_sse.h",
+      "hunks": 78,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "f20f3c3d1fb376d593e4712deace7bd77a517b0efcae700031236b845a04a9db",
+      "originalSHA256": "f20f3c3d1fb376d593e4712deace7bd77a517b0efcae700031236b845a04a9db",
+      "originalBytes": 112595
+    },
+    {
+      "name": "assimp",
+      "relative": "contrib/tinyusdz/patches/tinyusdz.patch",
+      "hunks": 2,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "7daa2de0ba9f73ab5479e3397c9f78afc467cebea13d137aa62f4ae7799a84a1",
+      "originalSHA256": "7daa2de0ba9f73ab5479e3397c9f78afc467cebea13d137aa62f4ae7799a84a1",
+      "originalBytes": 1740
+    },
+    {
+      "name": "tinyusdz_repo",
+      "relative": "src/external/stb_image_resize2.h",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "28cb665ffc156aa38635f1785b77861da0407de9c25056ec40d20131881cead8",
+      "originalSHA256": "28cb665ffc156aa38635f1785b77861da0407de9c25056ec40d20131881cead8",
+      "originalBytes": 451028
+    },
+    {
+      "name": "tinyusdz_repo",
+      "relative": "src/value-types.hh",
+      "hunks": 1,
+      "rawByteInverseExact": true,
+      "restoredSHA256": "5f3b0c88254abd155fc97a74d370d0a85bd23828dbb830f363e7e262fb43d110",
+      "originalSHA256": "5f3b0c88254abd155fc97a74d370d0a85bd23828dbb830f363e7e262fb43d110",
+      "originalBytes": 69343
+    }
+  ],
+  "fileCount": 14
+}

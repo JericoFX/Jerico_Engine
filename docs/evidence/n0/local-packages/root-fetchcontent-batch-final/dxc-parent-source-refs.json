@@ -1,0 +1,13 @@
+{
+  "endpoint": "https://github.com/o3de/DirectXShaderCompiler.git",
+  "operation": "read-only ls-remote; no source or package acquired",
+  "exactConfiguredRef": "release-1.8.2505.1-o3de",
+  "initialExactTagExitCode": 2,
+  "exitCode": 0,
+  "refs": [
+    "ref: refs/heads/master\tHEAD",
+    "320d40bf354ae6e59eb2d6b8a5ac0dca5dd658f7\tHEAD",
+    "1cc0ab76dafe08a4144e419e619a8951a3d219db\trefs/heads/release-1.8.2505.1-o3de"
+  ],
+  "endedUTC": "2026-10-11T04:35:43.9511013Z"
+}

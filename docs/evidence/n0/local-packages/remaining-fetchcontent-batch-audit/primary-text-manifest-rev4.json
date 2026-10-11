@@ -1,0 +1,759 @@
+{
+  "textFiles": 75,
+  "files": [
+    {
+      "name": "xxhash",
+      "sourcePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\xxhash\\LICENSE",
+      "url": "https://raw.githubusercontent.com/Cyan4973/xxHash/e626a72bc2321cd320e953a0ccf1584cad60f363/LICENSE",
+      "bytes": 1389,
+      "gitBlobSHA1": "e4c5da7234eca7baad9a46f0b144e49ccad2e500",
+      "gitBlobMatched": true,
+      "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+    },
+    {
+      "name": "D3D12MemoryAllocator",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/CMakeLists.txt",
+      "bytes": 1351,
+      "gitBlobSHA1": "5cf7273a2c9cec48ad12b17eee4187d30f2d07fa",
+      "gitBlobMatched": true,
+      "sha256": "0c336497f8257b0797b624b0eb93b7c85d67851ab905534d3785e663b90e063a"
+    },
+    {
+      "name": "D3D12MemoryAllocator",
+      "sourcePath": "LICENSE.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/LICENSE.txt",
+      "bytes": 1099,
+      "gitBlobSHA1": "3d5a69a6f5695507ecc9c412c783ca60572bf878",
+      "gitBlobMatched": true,
+      "sha256": "5478a2f36b736e13dd3250b9c71a4ab521bc327fb9d112a92c647bf3e69ddb68"
+    },
+    {
+      "name": "D3D12MemoryAllocator",
+      "sourcePath": "NOTICES.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\NOTICES.txt",
+      "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/NOTICES.txt",
+      "bytes": 2839,
+      "gitBlobSHA1": "6c079b16c4f0bd4a87785a4b4f775e7b14ed65ba",
+      "gitBlobMatched": true,
+      "sha256": "7b7fc5046e474378f4fe0bde65508e0d2b3146b58568ebc7cc192aea85ff91b8"
+    },
+    {
+      "name": "D3D12MemoryAllocator",
+      "sourcePath": "src/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\src\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/src/CMakeLists.txt",
+      "bytes": 6662,
+      "gitBlobSHA1": "34ec3f8489da24e28b3153a4a85025864d407158",
+      "gitBlobMatched": true,
+      "sha256": "d85899243de52fa559b7e3199b911cf7706d046e4775fc286a55d52653f50908"
+    },
+    {
+      "name": "D3D12MemoryAllocator",
+      "sourcePath": "src/cmake/config.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\src\\cmake\\config.cmake.in",
+      "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/src/cmake/config.cmake.in",
+      "bytes": 108,
+      "gitBlobSHA1": "3e47daa5ebdea8c0e24dbcdb6292f9983f1c56ed",
+      "gitBlobMatched": true,
+      "sha256": "cea5381f1159497cd8396bbe2cfa73492a8986da5f86b87438e300b16f7d0365"
+    },
+    {
+      "name": "meshoptimizer",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\meshoptimizer\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/CMakeLists.txt",
+      "bytes": 8131,
+      "gitBlobSHA1": "ba512d13313f9166f0b284044802836f67e599f8",
+      "gitBlobMatched": true,
+      "sha256": "e56383b054f6d1b7a2a5146ed274a22ec86965a66dd357500492ea0dfc23cfd0"
+    },
+    {
+      "name": "meshoptimizer",
+      "sourcePath": "LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\meshoptimizer\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/LICENSE.md",
+      "bytes": 1079,
+      "gitBlobSHA1": "468827f4b86ef754465396a9e163db25af406626",
+      "gitBlobMatched": true,
+      "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
+    },
+    {
+      "name": "squish-ccr",
+      "sourcePath": "README",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\squish-ccr\\README",
+      "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/README",
+      "bytes": 1581,
+      "gitBlobSHA1": "3a3852ad53ebd1290fae2a841c4616318a7252a4",
+      "gitBlobMatched": true,
+      "sha256": "5238dc0990fa6c547af4da5dce39812b23ee0dad31c98913c1a95904d4e23b39"
+    },
+    {
+      "name": "squish-ccr",
+      "sourcePath": "squish.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\squish-ccr\\squish.h",
+      "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/squish.h",
+      "bytes": 19331,
+      "gitBlobSHA1": "44455d8165cdd92b19b2cdb67a3eade3c2fcd833",
+      "gitBlobMatched": true,
+      "sha256": "7b6c3a8501fc2651f705e60919febfb6d4b66ef71bf907892cc766cadf0d0172"
+    },
+    {
+      "name": "sse2neon",
+      "sourcePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\sse2neon\\LICENSE",
+      "url": "https://raw.githubusercontent.com/DLTcollab/sse2neon/92f6de174717aef09033ad21568d5bb9e5470404/LICENSE",
+      "bytes": 1083,
+      "gitBlobSHA1": "c1aa1af5495ab76c5ae49502d82c743b5947eb9c",
+      "gitBlobMatched": true,
+      "sha256": "e962fe0dfa637c465df35d496fb198982eb52b8afd3046f370083c6e9856b34f"
+    },
+    {
+      "name": "mikktspace",
+      "sourcePath": "mikktspace.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\mikktspace\\mikktspace.h",
+      "url": "https://raw.githubusercontent.com/mmikk/MikkTSpace/3e895b49d05ea07e4c2133156cfa94369e19e409/mikktspace.h",
+      "bytes": 8209,
+      "gitBlobSHA1": "52c44a713c60ebff71133a41e0711bbf7199fc5e",
+      "gitBlobMatched": true,
+      "sha256": "17fc433894f24c73753d548086cc4d8c5c0379f4a6edfb98b5da243e4f0bc3d0"
+    },
+    {
+      "name": "ogg",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/xiph/ogg/be05b13e98b048f0b5a0f5fa8ce514d56db5f822/CMakeLists.txt",
+      "bytes": 6102,
+      "gitBlobSHA1": "9776109a9252731a8c1591d9a801cbdd08ea8f27",
+      "gitBlobMatched": true,
+      "sha256": "8c93534d189b52c26c66ae4e59d9999cf4284e19ff82f28e5f370b28c55e5a79"
+    },
+    {
+      "name": "ogg",
+      "sourcePath": "COPYING",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\COPYING",
+      "url": "https://raw.githubusercontent.com/xiph/ogg/be05b13e98b048f0b5a0f5fa8ce514d56db5f822/COPYING",
+      "bytes": 1466,
+      "gitBlobSHA1": "6111c6c5a6b95057e43d36b7c217b073bf5f9b22",
+      "gitBlobMatched": true,
+      "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+    },
+    {
+      "name": "ogg",
+      "sourcePath": "cmake/CheckSizes.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\cmake\\CheckSizes.cmake",
+      "url": "https://raw.githubusercontent.com/xiph/ogg/be05b13e98b048f0b5a0f5fa8ce514d56db5f822/cmake/CheckSizes.cmake",
+      "bytes": 2055,
+      "gitBlobSHA1": "4d6c8a0b88a87516463c5bf391551fbb87a260d6",
+      "gitBlobMatched": true,
+      "sha256": "c08bccc5be79786eb394b779001e9d27f18d6d57bb6eb643e1281d0c0990d1ae"
+    },
+    {
+      "name": "ogg",
+      "sourcePath": "cmake/OggConfig.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\cmake\\OggConfig.cmake.in",
+      "url": "https://raw.githubusercontent.com/xiph/ogg/be05b13e98b048f0b5a0f5fa8ce514d56db5f822/cmake/OggConfig.cmake.in",
+      "bytes": 481,
+      "gitBlobSHA1": "43de6a9330e07bf7987a6759e77af27cc1e17b0e",
+      "gitBlobMatched": true,
+      "sha256": "9c77c757889b7df6a00334780fffcd4d1ef8ff88ec66699a066cda24f58f1268"
+    },
+    {
+      "name": "vorbis",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/xiph/vorbis/0657aee69dec8508a0011f47f3b69d7538e9d262/CMakeLists.txt",
+      "bytes": 2705,
+      "gitBlobSHA1": "f377c4286fa1db0189b4122a595ba7c2acb36509",
+      "gitBlobMatched": true,
+      "sha256": "66083c2c545fab98a075e3c5aa3b73d113ae41dcfeb6040a5f435e58059e69d5"
+    },
+    {
+      "name": "vorbis",
+      "sourcePath": "COPYING",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\COPYING",
+      "url": "https://raw.githubusercontent.com/xiph/vorbis/0657aee69dec8508a0011f47f3b69d7538e9d262/COPYING",
+      "bytes": 1470,
+      "gitBlobSHA1": "fb456a87bdfafe2cab7de982e8ce11204933ec5c",
+      "gitBlobMatched": true,
+      "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a"
+    },
+    {
+      "name": "vorbis",
+      "sourcePath": "cmake/FindOgg.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\cmake\\FindOgg.cmake",
+      "url": "https://raw.githubusercontent.com/xiph/vorbis/0657aee69dec8508a0011f47f3b69d7538e9d262/cmake/FindOgg.cmake",
+      "bytes": 2132,
+      "gitBlobSHA1": "ebcd7d4e2856a975b2439130e6562d56be851fab",
+      "gitBlobMatched": true,
+      "sha256": "b199744a80e7d4762bc1ad56147d453e4f3b7ab925cf003ad639e9253a2495f4"
+    },
+    {
+      "name": "vorbis",
+      "sourcePath": "cmake/VorbisConfig.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\cmake\\VorbisConfig.cmake.in",
+      "url": "https://raw.githubusercontent.com/xiph/vorbis/0657aee69dec8508a0011f47f3b69d7538e9d262/cmake/VorbisConfig.cmake.in",
+      "bytes": 396,
+      "gitBlobSHA1": "6fc07941503a0009b75ee46927bae2f146c62e07",
+      "gitBlobMatched": true,
+      "sha256": "76ae79f2a7d05142ddfdbf75a1f2230f0fb9c9d46f2d4346a6965fc015f68989"
+    },
+    {
+      "name": "vorbis",
+      "sourcePath": "lib/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\lib\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/xiph/vorbis/0657aee69dec8508a0011f47f3b69d7538e9d262/lib/CMakeLists.txt",
+      "bytes": 4580,
+      "gitBlobSHA1": "7cd68e50991efb3dad33d3f532fabe81cdda4958",
+      "gitBlobMatched": true,
+      "sha256": "10dcbd29364dafb2aaca916c0b2d4a90105d22fe4fc072ba50cefcdee45c4b6b"
+    },
+    {
+      "name": "miniaudio",
+      "sourcePath": ".gitmodules",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\.gitmodules",
+      "url": "https://raw.githubusercontent.com/mackron/miniaudio/350784a9467a79d0fa65802132668e5afbcf3777/.gitmodules",
+      "bytes": 0,
+      "gitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "gitBlobMatched": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "miniaudio",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/mackron/miniaudio/350784a9467a79d0fa65802132668e5afbcf3777/CMakeLists.txt",
+      "bytes": 26500,
+      "gitBlobSHA1": "51c6108575bd14d3e1dacff2dafdafe7fe7783a5",
+      "gitBlobMatched": true,
+      "sha256": "a12e3aceb37e3082c02cc07751858d9e5d56735298e263c11b1c929abf6f0de7"
+    },
+    {
+      "name": "miniaudio",
+      "sourcePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\LICENSE",
+      "url": "https://raw.githubusercontent.com/mackron/miniaudio/350784a9467a79d0fa65802132668e5afbcf3777/LICENSE",
+      "bytes": 2597,
+      "gitBlobSHA1": "2f9423addfe68aa01449ba885d56d832f04b5e8e",
+      "gitBlobMatched": true,
+      "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+    },
+    {
+      "name": "miniaudio",
+      "sourcePath": "tests/android/MiniaudioTester/app/src/main/cpp/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\tests\\android\\MiniaudioTester\\app\\src\\main\\cpp\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/mackron/miniaudio/350784a9467a79d0fa65802132668e5afbcf3777/tests/android/MiniaudioTester/app/src/main/cpp/CMakeLists.txt",
+      "bytes": 1845,
+      "gitBlobSHA1": "4148ced323853f742705469b69aef2f7bfacae45",
+      "gitBlobMatched": true,
+      "sha256": "75303c9fcf1e968e1b99fe7a7b31a4bd5a05ddcdb85cb0d2cc47a085e404249d"
+    },
+    {
+      "name": "v-hacd",
+      "sourcePath": ".gitmodules",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\v-hacd\\.gitmodules",
+      "url": "https://raw.githubusercontent.com/kmammou/v-hacd/22ec20a7f8ea221ab600df869369b9c6a258cb10/.gitmodules",
+      "bytes": 96,
+      "gitBlobSHA1": "5aee4f845a62e9638467b713919f0b5cf52b3b7c",
+      "gitBlobMatched": true,
+      "sha256": "084800fa19a1c0f841b3b766684f360a2eb94ee93df0397cf017fb3434552727"
+    },
+    {
+      "name": "v-hacd",
+      "sourcePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\v-hacd\\LICENSE",
+      "url": "https://raw.githubusercontent.com/kmammou/v-hacd/22ec20a7f8ea221ab600df869369b9c6a258cb10/LICENSE",
+      "bytes": 1546,
+      "gitBlobSHA1": "efc7f64399c41f49fe1c151d7abb00be8a46583b",
+      "gitBlobMatched": true,
+      "sha256": "245c933225f5bd28a10336137b26f1f86551b6b1d29f804253eb5e1d73744c2e"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/CMakeLists.txt",
+      "bytes": 2955,
+      "gitBlobSHA1": "9a4c8ab575b2e0f4add5796fa89a5c244d76ba95",
+      "gitBlobMatched": true,
+      "sha256": "237070a74d0682d1fd1ec5597e5e5034b3cdcf0e6f9f81c0c35aafa94297b3b2"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "DebugUtils/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\DebugUtils\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/DebugUtils/CMakeLists.txt",
+      "bytes": 1239,
+      "gitBlobSHA1": "a3cd7995dea86cd1b7a24a3ec0b78c5da6862fa2",
+      "gitBlobMatched": true,
+      "sha256": "a5914efae46b0cc0bb96485da483504312db7d5c77bea81fa527d47e742aec93"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "Detour/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Detour\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/Detour/CMakeLists.txt",
+      "bytes": 1336,
+      "gitBlobSHA1": "c8eb858f533efe3782f49f820aa82a2817a16c20",
+      "gitBlobMatched": true,
+      "sha256": "1bf9037aa3c6e46ce0405378e89aaf36382bdea2b8e648c2c230005d99bd2412"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "DetourCrowd/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\DetourCrowd\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/DetourCrowd/CMakeLists.txt",
+      "bytes": 1221,
+      "gitBlobSHA1": "214cb4ced11b85772a77e040687e03e86d206fa3",
+      "gitBlobMatched": true,
+      "sha256": "67dc02a56e67169bd61cc7fb62205c01b52b2d351c23457ed4996aaec0309fe0"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "DetourTileCache/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\DetourTileCache\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/DetourTileCache/CMakeLists.txt",
+      "bytes": 1274,
+      "gitBlobSHA1": "e9cd3ed8246529c428ddfd7cd86a1bbf0661c759",
+      "gitBlobMatched": true,
+      "sha256": "40db49741e8dfa444a0a4fd0d5c6dda38b69cd963e99eaa03b77be6e90397dba"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "Docs/doxygen-awesome-css/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Docs\\doxygen-awesome-css\\LICENSE",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/Docs/doxygen-awesome-css/LICENSE",
+      "bytes": 1065,
+      "gitBlobSHA1": "1d8b99a958425f64c7f9f638fa23ec2e56991d7e",
+      "gitBlobMatched": true,
+      "sha256": "a848f4935f110d45ae18cc4149b9613776648c6dc5e596f247b501b3d2503134"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "License.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\License.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/License.txt",
+      "bytes": 877,
+      "gitBlobSHA1": "c259ddf6cd36f4745ca71bff1092d3c9d2af900d",
+      "gitBlobMatched": true,
+      "sha256": "ffad87821cce7cfd3be00b63ffadd01b04e83a4c6a0bcc68f06362ffd42d705e"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "Recast/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Recast\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/Recast/CMakeLists.txt",
+      "bytes": 1113,
+      "gitBlobSHA1": "75a6939a4a16dd429a0733020bac337ab21d1545",
+      "gitBlobMatched": true,
+      "sha256": "aa7a6385706086a676f545a01817924a61ebf142b219ed592b66774ed31c699e"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "RecastDemo/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\RecastDemo\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/RecastDemo/CMakeLists.txt",
+      "bytes": 3296,
+      "gitBlobSHA1": "1e8f9398a934ced84454011001e8892c7fa55149",
+      "gitBlobMatched": true,
+      "sha256": "4a336336c491e96bfee19dabc08cd68bca4fe44a8a57e1001b0199c5c6db2a02"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "RecastDemo/cmake/FindSDL2.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\RecastDemo\\cmake\\FindSDL2.cmake",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/RecastDemo/cmake/FindSDL2.cmake",
+      "bytes": 7706,
+      "gitBlobSHA1": "f69c68a139f1ad5d2da329411026261062330a66",
+      "gitBlobMatched": true,
+      "sha256": "b73b85086f10291d91cdaffd9fc58d2545071973531bd218de155cbef4fa678c"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "Tests/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Tests\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/Tests/CMakeLists.txt",
+      "bytes": 542,
+      "gitBlobSHA1": "9a87479e2de262de2dab085037c26ae6e9036293",
+      "gitBlobMatched": true,
+      "sha256": "f6044059de454d0b295bd73df9055b793677824c5da5cb0cfdc9b59dec4aa2df"
+    },
+    {
+      "name": "RecastNavigation",
+      "sourcePath": "recastnavigation-config.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\recastnavigation-config.cmake.in",
+      "url": "https://raw.githubusercontent.com/recastnavigation/recastnavigation/6dc1667f580357e8a2154c28b7867bea7e8ad3a7/recastnavigation-config.cmake.in",
+      "bytes": 84,
+      "gitBlobSHA1": "c6e232b0d324761c856052d1a2070c61546128b2",
+      "gitBlobMatched": true,
+      "sha256": "c2ea77b2588481b0b2dc4a1b83263b2ee92115d1b21671c3d7324dc1c3e8a30f"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/CMakeLists.txt",
+      "bytes": 38919,
+      "gitBlobSHA1": "b603b2ef43752d415c90697b75d5cfdca98d3ba0",
+      "gitBlobMatched": true,
+      "sha256": "a4672e926fc8780b3517fd9df7a7b230f36f12b1b41be20e3f2014aded32d142"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/LICENSE",
+      "bytes": 3791,
+      "gitBlobSHA1": "f7ff71e8c4d397e928c1488ade2e522cbf1e7771",
+      "gitBlobMatched": true,
+      "sha256": "21195d410708b82757d3e34c3a40c427f6e59339da862e9480d4fcdc79b7a1bd"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/Coveralls.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\Coveralls.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/Coveralls.cmake",
+      "bytes": 4959,
+      "gitBlobSHA1": "5343f1583c176f41c197667f7419935745912a6a",
+      "gitBlobMatched": true,
+      "sha256": "d3cf534bb12e4c15a61e63511bfd7c50c4020a67fdb7ff9936705561099e8dcb"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/CoverallsClear.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\CoverallsClear.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/CoverallsClear.cmake",
+      "bytes": 1366,
+      "gitBlobSHA1": "a9ad487630513df789ffcfec5ac058361e21fccb",
+      "gitBlobMatched": true,
+      "sha256": "044bb3ad67cd857334c021abdf5566e63b56b09012b927cd4643ba5326359746"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/CoverallsGenerateGcov.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\CoverallsGenerateGcov.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/CoverallsGenerateGcov.cmake",
+      "bytes": 16928,
+      "gitBlobSHA1": "1047371642ca0eed4f16c31d510aaeb489ab0427",
+      "gitBlobMatched": true,
+      "sha256": "b897921fd174d267830f2ea02e8c85e96e5d4f9821d0a03f61b30401f184af3e"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/DebSourcePPA.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\DebSourcePPA.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/DebSourcePPA.cmake",
+      "bytes": 17417,
+      "gitBlobSHA1": "ebf129b4f067ea2810c47c244caa5d5bee8d6b50",
+      "gitBlobMatched": true,
+      "sha256": "beb154359b6a223070a425cc348f09ad2191914570379690bea4c4e3c78bd7aa"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/FindDirectX.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindDirectX.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/FindDirectX.cmake",
+      "bytes": 4059,
+      "gitBlobSHA1": "adc83690275ac6dc98b15fb78afab0d6e61f98e3",
+      "gitBlobMatched": true,
+      "sha256": "b5823ad35b35ab74244c7d620d49bc96e1e2c1aec70d8fad8622ffde804d58b0"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/FindPkgMacros.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindPkgMacros.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/FindPkgMacros.cmake",
+      "bytes": 5395,
+      "gitBlobSHA1": "d3a6042a71b06ed6788d086de3cf7fdd3e8f4498",
+      "gitBlobMatched": true,
+      "sha256": "a4014415523402bcb7f7a10e2626ed47b2194653e75fe0037daab8dadab28f10"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/FindRT.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindRT.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/FindRT.cmake",
+      "bytes": 596,
+      "gitBlobSHA1": "c397acabd5e6b67e1d267644048c4d7e85f9562c",
+      "gitBlobMatched": true,
+      "sha256": "202d3eee697685c2024e357c5ced743d6c1e45df10e099b2734cbe4fa2e8f391"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/FindZLIB.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindZLIB.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/FindZLIB.cmake",
+      "bytes": 1560,
+      "gitBlobSHA1": "95eb51547377ad817104e6cdbf8367dcdc6c6c90",
+      "gitBlobMatched": true,
+      "sha256": "0489c2ec15d5995f7a14969c48fcbdd89d4c201c23b804679c7a562675dc5446"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/Findassimp.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\Findassimp.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/Findassimp.cmake",
+      "bytes": 3313,
+      "gitBlobSHA1": "c5d7e269b3636e1291a85226bde64ae990bce76d",
+      "gitBlobMatched": true,
+      "sha256": "73b8a652b995fae81c59970cfed3659ab04f586f8f2781904a8d1af198f85e09"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/HunterGate.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\HunterGate.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/HunterGate.cmake",
+      "bytes": 16253,
+      "gitBlobSHA1": "48bd50658017292d124650fef7b5299fcb6b9258",
+      "gitBlobMatched": true,
+      "sha256": "41ece3ddb99e8b485c9a74ca59c771a5ae2cb87c09095556ac8aa7ba7ae2d936"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/MinGW_x86_64.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\MinGW_x86_64.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/MinGW_x86_64.cmake",
+      "bytes": 649,
+      "gitBlobSHA1": "d5c1f15011ed47146856b311cd27d55d9e93e570",
+      "gitBlobMatched": true,
+      "sha256": "745462064f9ef636e52fc616db6aa1206ee35c74862cfe621a724c0a609194b4"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/PrecompiledHeader.cmake",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\PrecompiledHeader.cmake",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/PrecompiledHeader.cmake",
+      "bytes": 1011,
+      "gitBlobSHA1": "92ae592c9ed32a37ac187910dd6ec0795da4eb53",
+      "gitBlobMatched": true,
+      "sha256": "166f2c74b0ed025e157939975536b6f86b9602b3539f2e739a382a5f75062df2"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/assimp-hunter-config.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\assimp-hunter-config.cmake.in",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/assimp-hunter-config.cmake.in",
+      "bytes": 638,
+      "gitBlobSHA1": "1988f7e7d866ad88262cbdc56aa64b7778faf590",
+      "gitBlobMatched": true,
+      "sha256": "5e4d7cd85393d86e7a71eef96dbdb2076a8c49da6ca3e8c5096b8c6b9e065167"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/assimp-plain-config.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\assimp-plain-config.cmake.in",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/assimp-plain-config.cmake.in",
+      "bytes": 335,
+      "gitBlobSHA1": "6551dcb68d440c6d6d1cdfc3e4d178b3b85db925",
+      "gitBlobMatched": true,
+      "sha256": "b23d811255a2895bdad17023df908911dea11012a179f0b6585826a98b870f64"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "cmake-modules/cmake_uninstall.cmake.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\cmake_uninstall.cmake.in",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/cmake-modules/cmake_uninstall.cmake.in",
+      "bytes": 743,
+      "gitBlobSHA1": "1670115955c465e5498eae321e2c868c7ee5d729",
+      "gitBlobMatched": true,
+      "sha256": "81109b27fae1172f28a3ff68a01b6960314b1b0ba701db4639ae22e82e7702cf"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "code/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\code\\CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/code/CMakeLists.txt",
+      "bytes": 54859,
+      "gitBlobSHA1": "b7b08de3b7156e5e7d8ea3d574ed9b0f58f85fc1",
+      "gitBlobMatched": true,
+      "sha256": "fce4b0968cecd78b3606603e5bb76b4213ceab54446a56d32db11c5fa4cff40e"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/clipper/License.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\clipper\\License.txt",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/clipper/License.txt",
+      "bytes": 1374,
+      "gitBlobSHA1": "3e3af47ba31d4875e8d2628009dd980e8fc7b8dd",
+      "gitBlobMatched": true,
+      "sha256": "1bc8ddf91ba50e4186abb6b2339910e4529471ad8181b7cf2a5026c09ce09294"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/draco/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\draco\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/draco/LICENSE",
+      "bytes": 13898,
+      "gitBlobSHA1": "30109545483a9b9889532c2bd5254c6fee4eb121",
+      "gitBlobMatched": true,
+      "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/earcut-hpp/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\earcut-hpp\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/earcut-hpp/LICENSE",
+      "bytes": 738,
+      "gitBlobSHA1": "8bafb577305e2ade52a4f75a7c589f9db8a4e5eb",
+      "gitBlobMatched": true,
+      "sha256": "828f2aed51b6526881a236758ec9b08cd69928fbfc70346d9d44a0b3a3444fe1"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/googletest/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\googletest\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/googletest/LICENSE",
+      "bytes": 1475,
+      "gitBlobSHA1": "1941a11f8ce94389160b458927a29ba217542818",
+      "gitBlobMatched": true,
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/openddlparser/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\openddlparser\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/openddlparser/LICENSE",
+      "bytes": 1079,
+      "gitBlobSHA1": "4c1476bc400f49c7ae2642bf0808c887cf38b5e1",
+      "gitBlobMatched": true,
+      "sha256": "656597ef86119e4a526fb8621e0112b95051cf9d63a311b09b3a73346da00ead"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/poly2tri/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\poly2tri\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/poly2tri/LICENSE",
+      "bytes": 1489,
+      "gitBlobSHA1": "dddc3ccc3dd3b3b9fd4d2f6f588367ad5bea0fef",
+      "gitBlobMatched": true,
+      "sha256": "578790e1377a270831ede8c64d7c92d411b6e5a55ce32fbb84a35b376af25ee0"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/pugixml/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\pugixml\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/pugixml/LICENSE.md",
+      "bytes": 1103,
+      "gitBlobSHA1": "db838d4f2e2a34e5f654672aa10bc108a6db5d7e",
+      "gitBlobMatched": true,
+      "sha256": "f58038b9e590ae1c2157440ecd165479c895fdcc1d7f5b1c68af775b74d14a2b"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/rapidjson/license.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\rapidjson\\license.txt",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/rapidjson/license.txt",
+      "bytes": 5152,
+      "gitBlobSHA1": "7ccc161c84b243687498a0dae5043c1da6173ac4",
+      "gitBlobMatched": true,
+      "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/utf8cpp/doc/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\utf8cpp\\doc\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/utf8cpp/doc/LICENSE",
+      "bytes": 1338,
+      "gitBlobSHA1": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+      "gitBlobMatched": true,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/zlib/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\zlib\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/zlib/LICENSE",
+      "bytes": 1002,
+      "gitBlobSHA1": "ab8ee6f71428c3e4646b12b64ad387cde33462e5",
+      "gitBlobMatched": true,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "contrib/zlib/contrib/dotzlib/LICENSE_1_0.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\zlib\\contrib\\dotzlib\\LICENSE_1_0.txt",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/contrib/zlib/contrib/dotzlib/LICENSE_1_0.txt",
+      "bytes": 1337,
+      "gitBlobSHA1": "127a5bc39ba030c7cb99cc0aedc4f280ffe27310",
+      "gitBlobMatched": true,
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "port/PyAssimp/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\port\\PyAssimp\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/port/PyAssimp/LICENSE",
+      "bytes": 758,
+      "gitBlobSHA1": "91cf88d726ded0e7bceb94848b18b2b658172973",
+      "gitBlobMatched": true,
+      "sha256": "3bd0109a3a0b7c29d75f420dd0cac97662584534bfdc93af0eb6d186c0e030a5"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "test/models-nonbsd/Ogre/OgreSDK/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models-nonbsd\\Ogre\\OgreSDK\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models-nonbsd/Ogre/OgreSDK/LICENSE",
+      "bytes": 1136,
+      "gitBlobSHA1": "ccdfb00fa9c481e0b4e79ebea70551a5bdf9971f",
+      "gitBlobMatched": true,
+      "sha256": "5e29749dcf0948ac36e1e65205414f37416ba30602ab8af4f8a5a9711130bbeb"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "test/models/glTF2/AnimatedMorphCube/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\AnimatedMorphCube\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/AnimatedMorphCube/LICENSE.md",
+      "bytes": 665,
+      "gitBlobSHA1": "f480b9838578e80bf2a8b0a9330f88fb5f6d63bc",
+      "gitBlobMatched": true,
+      "sha256": "4ec94a96ff33c1ab2b413d54724b44fff21e223ce65dc3a2a24630fcebac241f"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "test/models/glTF2/MorphPrimitivesTest/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\MorphPrimitivesTest\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/MorphPrimitivesTest/LICENSE.md",
+      "bytes": 796,
+      "gitBlobSHA1": "5ed3468909451552d3fc2cd1d473b39dd5beaa65",
+      "gitBlobMatched": true,
+      "sha256": "26bad41ec2f1e8da0d101379daa443984ef5b0c21ab063e42329df17698b902c"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "test/models/glTF2/MorphStressTest/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\MorphStressTest\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/MorphStressTest/LICENSE.md",
+      "bytes": 665,
+      "gitBlobSHA1": "2e9a26b9f8815a0dd4f8d085b7d32e63eaea882b",
+      "gitBlobMatched": true,
+      "sha256": "1db76d9806e1ae198f6ebe568f44949a04624cb417e74426b274ec134e0a4eac"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "test/models/glTF2/SimpleMorph/LICENSE.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\SimpleMorph\\LICENSE.md",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/SimpleMorph/LICENSE.md",
+      "bytes": 658,
+      "gitBlobSHA1": "a941085299abf1708391d4d8348a780cc96fce88",
+      "gitBlobMatched": true,
+      "sha256": "b70e9873ef2d0a792fb29827f2151404321577b0917b59cdb648c9984be96d6e"
+    },
+    {
+      "name": "assimp",
+      "sourcePath": "test/models/glTF2/glTF-Asset-Generator/LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\glTF-Asset-Generator\\LICENSE",
+      "url": "https://raw.githubusercontent.com/assimp/assimp/e0b52347c6e52de2827ec957a9ebf00ce3c54f79/test/models/glTF2/glTF-Asset-Generator/LICENSE",
+      "bytes": 1065,
+      "gitBlobSHA1": "7b7a04a5cc1b7349356dde705b06d7287f7dd3dd",
+      "gitBlobMatched": true,
+      "sha256": "6a06f0e50464caa68ac6977caef942ac736a8942f20bf3230fa3f854dc098428"
+    }
+  ],
+  "gaps": [],
+  "archivesAcquired": 0,
+  "nativeProcessesExecuted": 0,
+  "content": "Only primary CMake/license/notice/submodule text, data inspection; no executable or binary fetched"
+}

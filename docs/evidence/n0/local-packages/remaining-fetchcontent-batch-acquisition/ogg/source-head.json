@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/xiph/ogg/archive/refs/tags/v1.3.6.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/xiph/ogg/tar.gz/refs/tags/v1.3.6",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/xiph/ogg/tar.gz/refs/tags/v1.3.6",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"3f5c3360a25d1017fbd1d9b12d09f567b4096b138acb071f34902abb79ddaea7\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

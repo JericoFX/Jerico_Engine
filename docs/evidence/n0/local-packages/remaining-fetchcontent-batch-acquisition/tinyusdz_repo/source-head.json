@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://github.com/lighttransport/tinyusdz/archive/6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+    "status": 301,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://github.com/lighttransport/LightUSD/archive/6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://github.com/lighttransport/LightUSD/archive/6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "url": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"aa6de07009e82926926962b04636efcebed7e34579fa03d2bf54a74328c1b85b\"",
+    "location": "",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

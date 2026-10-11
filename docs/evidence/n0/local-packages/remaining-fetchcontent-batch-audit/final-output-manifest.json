@@ -1,0 +1,1577 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-commit.json",
+    "bytes": 253149,
+    "sha256": "4ac8c13db23d77127029a4663153033fd00b87b5f24bc59929d0e93a037d8615"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-commit.receipt.json",
+    "bytes": 406,
+    "sha256": "cec33a2c41a9fed935fbd887735dc730a501caee6691ed398727f970c5190c0d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-destination-pin-audit.json",
+    "bytes": 2114,
+    "sha256": "a5aaeb0f97433a535929c22e3168579dde64eed7f526e8aa52ef4dc4aebec806"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-recursive-tree.json",
+    "bytes": 895669,
+    "sha256": "e707bd58903de4a3da027a74bc89e601b66b68160ff442b4d6939d8ef6df6a86"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-root-tree.json",
+    "bytes": 6896,
+    "sha256": "76a3643c176448dd4372bf269312cd2a2b282b009c494359fdadd5d1f76f56b2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-root-tree.receipt.json",
+    "bytes": 408,
+    "sha256": "6e3b7149063228db7027173d82f164d6f5bbf160eafdf49bf969c227bbac9d38"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\assimp-source-head.json",
+    "bytes": 856,
+    "sha256": "110c1ef71d7518940a364d43538552f9337858b780cf4b7867e31a32fd65c6b6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\AuditAssimp.ps1",
+    "bytes": 5683,
+    "sha256": "92b74a9063ab1793aea6b4ccdb56b2156c4b358502fa953d8802970664077902"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\AuditDestinations.ps1",
+    "bytes": 5698,
+    "sha256": "5a26d502497c026d9f7e4252142e3c9ed4318d2e9a0cca428a44647658648569"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\AuditTinyusdz.ps1",
+    "bytes": 5716,
+    "sha256": "18b1931fefe0fa0866dd1ca7000da45dfa11f41913180f9761d7a08ceb7f351b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\AuditTinyusdzCanonical.ps1",
+    "bytes": 5717,
+    "sha256": "813df275c83ee095f85827ac19c8cefd5ea2c04a043429724208dacf27559d54"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\batch-acquisition-plan.json",
+    "bytes": 30758,
+    "sha256": "97722ec07c61b20cabe06119b0c4abeb2f67c11a19b7b7e34031ee70009cd7df"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\batch-declared-inventory.json",
+    "bytes": 11450,
+    "sha256": "42eb17a624e1efdbbbd254f0cb673e7bb39f849369e561874d705e7991cc19be"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\complete-wrapper-inventory.json",
+    "bytes": 9121,
+    "sha256": "75aba873fab7a5e690f2e5591456061a01ef8df95228331eeefd7215527d8e46"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-commit.json",
+    "bytes": 16330,
+    "sha256": "bec3faafde0ffe4fb4d5970dafbbcd116ad2ff259c9a3fec1db946d1c820c4f6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-commit.receipt.json",
+    "bytes": 438,
+    "sha256": "9b8f7d1f2b3674a7a0fe223ef54a708f9a4f54d4c0d7dbd8131ab728a62a2261"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-recursive-tree.json",
+    "bytes": 83240,
+    "sha256": "69e1a404ab2b4c7e8d757adca03b12691a44bfa72814b0b5eabc36ff101cd951"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-root-tree.json",
+    "bytes": 3076,
+    "sha256": "0595a69e3be9b7074e98d8ccc75a88b773a0f4a9190fc636da30bc478925787b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-root-tree.receipt.json",
+    "bytes": 440,
+    "sha256": "9d46bdde71ebb96c13d34314d67ac92d08ef2b7d0649580e856eaa83a4e219e2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-source-head.json",
+    "bytes": 880,
+    "sha256": "c2b1418bd2335c16e7b3a62779e8748f0d3d4b556175239e33de21cc059bb106"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-tag.json",
+    "bytes": 399,
+    "sha256": "d667663b4ad17f01a97c2c18373cb6083d12a5844af882f12589075482682040"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\D3D12MemoryAllocator-tag.receipt.json",
+    "bytes": 408,
+    "sha256": "ee5a5fd39879c572ef6340566d8f6c27d06b0e516a1ee4e2c2d923fd562ca27f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\destination-pin-audit.json",
+    "bytes": 22474,
+    "sha256": "fcdc5b1b93d6871133ede0f964f17acfd699703596a73c87939286f58b724035"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\GenerateBatchPlan.ps1",
+    "bytes": 13014,
+    "sha256": "a7942c355498a0a892fe62be54e35a6293c2bb2c88f8de777ce785bf6625f753"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-commit.json",
+    "bytes": 156296,
+    "sha256": "f91594d7957708491a01c92c5cc16868a65bc3fc619828898120008d84e771fb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-commit.receipt.json",
+    "bytes": 411,
+    "sha256": "a30fc587f1acf66e5882711eba793c0cec3140480e56131f5669fb53d665a8fc"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-root-tree.json",
+    "bytes": 3823,
+    "sha256": "c6349e9f58fc539460652c56f20049d079ed7887a462e1a64a44f194fa645ff8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-root-tree.receipt.json",
+    "bytes": 413,
+    "sha256": "80b392436ebb9273fc7b54327110635b03d3ab3dbaeecdb547067719a16b29a4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-source-head.json",
+    "bytes": 793,
+    "sha256": "70d89ff36ebd5696dbaa3d6eeb6428a0858993bea2e577dd0ba4c5844700c105"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-tag.json",
+    "bytes": 337,
+    "sha256": "728c44c859e3f54bef7ec1be054accda8a1b10530761ce13644e2152ab13ac56"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\meshoptimizer-tag.receipt.json",
+    "bytes": 379,
+    "sha256": "e115bfe2a21cd2030487c0b8de4ce17921f542bbd1c910593a215751e801ba9a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\mikktspace-commit.json",
+    "bytes": 4621,
+    "sha256": "fc2f1ee33281fb5ee983e5960c903bdafa7db42d87f70168427aa3d3976daa5f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\mikktspace-commit.receipt.json",
+    "bytes": 409,
+    "sha256": "0edb3c51aba60573c368def99d8bbe3d5ff608887f24a21c40422c0aa06ac869"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\mikktspace-root-tree.json",
+    "bytes": 839,
+    "sha256": "713feebc6b723170566e0fe7e0c8e8b56f1b3b23918c1437763f4b0e6e09fab1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\mikktspace-root-tree.receipt.json",
+    "bytes": 410,
+    "sha256": "7efcb5475135c8cace7a0b4645a1cd4ecc64d9bd9d8fd924778f43b25dcca9f2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\mikktspace-source-head.json",
+    "bytes": 865,
+    "sha256": "ca1eef87b0699e882b01d33e8e06af888f9dca3e171bf3dc05718270acf17cb9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-commit.json",
+    "bytes": 38460,
+    "sha256": "250833232d575f375248afaca12f792f95df65c19c44fa88c373f8df01305d28"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-commit.receipt.json",
+    "bytes": 410,
+    "sha256": "283fca901880fb71fa43b019a9a79e025bf67f57dd38a600eb52b48ae30ab111"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-recursive-tree.json",
+    "bytes": 67368,
+    "sha256": "82f14e5a2433a7873211d24d4ba2684552044fb44b24dec1d0e1d12d585d6772"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-root-tree.json",
+    "bytes": 4199,
+    "sha256": "c57a1fafe358f207d81f934b5c489430463f90dcdbe596f9c319a88b6bde8695"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-root-tree.receipt.json",
+    "bytes": 412,
+    "sha256": "b7e6e56c3277848ad876b87583dda0053015ecc9a81c616357865ea4b6f608d2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-source-head.json",
+    "bytes": 799,
+    "sha256": "58a522f1a9e2429fb80af4342a9519530ffe46026a4a493574a8e1b0da3c7b87"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-tag-object.json",
+    "bytes": 662,
+    "sha256": "e032bdb51adcd31f3f45bf17eec0fb13506d6999bf1ed6f9cb888bd47dc269bd"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-tag-object.receipt.json",
+    "bytes": 410,
+    "sha256": "780f5eee382648194a211e1b8e93fe81af84edea68fb355ac289b647a1793d1a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-tag.json",
+    "bytes": 339,
+    "sha256": "ef4003259e19b65e8d09ebe1383724be2ec60f132aaa6affe383bb9e4388facb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\miniaudio-tag.receipt.json",
+    "bytes": 381,
+    "sha256": "60c81b530c4f3b2a3038cb009109f724d94f732feea4f97f69262e98d5a3c5d2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-commit.json",
+    "bytes": 85585,
+    "sha256": "0d7cfa271d66e03c38b21c7ec696135ed2a41653d36abeae9e1327cbfb1f3ee4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-commit.receipt.json",
+    "bytes": 401,
+    "sha256": "25051c76e91a9515fc2db7be17acce71b5a91e795e0360b996ac44ca2e2e1c18"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-recursive-tree.json",
+    "bytes": 30156,
+    "sha256": "760445944eb8210d2d150dc3b8b55985d79fe6da285bcca38091751fa85aaf2b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-root-tree.json",
+    "bytes": 4912,
+    "sha256": "abf86a2ed98da079b248b876757dac405ce8943d7babcd5acd509164dc217328"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-root-tree.receipt.json",
+    "bytes": 403,
+    "sha256": "49a4a0335564f50fbd4fc9a0c862ab80a944696742baf554b260affdc0c7df3f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-source-head.json",
+    "bytes": 769,
+    "sha256": "553250ae4fc565887b08d89f914c7e31dce2d3cdda8b7a69b9038e1390863b6e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-tag-object.json",
+    "bytes": 3122,
+    "sha256": "6559cdd45b7efd333704ca182b01c1df3bf6ec37be78c0c24bc7401348567b9b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-tag-object.receipt.json",
+    "bytes": 402,
+    "sha256": "f097b1b70c231b1efe9413f7f78491f3d24b531914d753b41d4e0d35cffa67f6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-tag.json",
+    "bytes": 319,
+    "sha256": "45d0cafbe5157b391491e4a69ee7018bfc458a272834b99ea39d5ca2275f5bce"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ogg-tag.receipt.json",
+    "bytes": 371,
+    "sha256": "635697d0fc96cab1b98ef40890d17234a2beed6d0c14cd835d757a78e55b9db8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\primary-text-http-receipts-rev2.json",
+    "bytes": 10200,
+    "sha256": "b62d0c57afae783c476a1ef548e22c496c65511a78aa457aee205ededbeab792"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\primary-text-http-receipts-rev3.json",
+    "bytes": 36207,
+    "sha256": "abba74970198b12cde7c90c9760d0aa4df72d1b90466d98909150c1c59edcef2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\primary-text-http-receipts-rev4.json",
+    "bytes": 5288,
+    "sha256": "3c51840a467c3e78ce8a4e36549819ae8432b7911fd90885e1448dc4177572f5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\primary-text-http-receipts.json",
+    "bytes": 7760,
+    "sha256": "e131e62eb1cbf533d5366ee843bfa5149a6cbb371b9f0752eff830a099b1b1c7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\primary-text-manifest-rev4.json",
+    "bytes": 45262,
+    "sha256": "559d0179b56ea67c066549ca51638321ad1ec40db2b7ebdf025b0a467d7f31f8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ReadPrimaryTexts.ps1",
+    "bytes": 5445,
+    "sha256": "f55639020926b7b1979de2b7572f94add5d5c6feefa12ba1c8d05fb8f2e13b8e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ReadPrimaryTextsRev2.ps1",
+    "bytes": 6575,
+    "sha256": "ba3704d10fd3816bb18a7a36eacb3935abb0b5387579bd9cb429e3e79950683d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ReadPrimaryTextsRev3.ps1",
+    "bytes": 6590,
+    "sha256": "e2ea5a4437451b8aa744d74bacf7697f7d5a70b553e52e08d90ca8ff5016382d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ReadPrimaryTextsRev4.ps1",
+    "bytes": 6641,
+    "sha256": "29958e49d481e699135d5c28e2fbf5e317f8ea45fb691bc1a3cae088496bfdad"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\ReadTinyusdzPrimaryTexts.ps1",
+    "bytes": 6585,
+    "sha256": "74917ff9f2b3f116977f1ccc10c9a57f8ddc86e08b8fe19b8fb850f730bbc96f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-commit.json",
+    "bytes": 4302,
+    "sha256": "768c70f38c5b2581972cdfbb3ad241ed5472e5c32a83706ebda379c360c079a9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-commit.receipt.json",
+    "bytes": 426,
+    "sha256": "f42e652142f0655cbf908fa33887070741aaac0ec83d64cd4985e59bac083442"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-recursive-tree.json",
+    "bytes": 48700,
+    "sha256": "70257064cdf557728dc5e51ac64ff059f1222c02ced85881878061cf91e6d5ad"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-root-tree.json",
+    "bytes": 5296,
+    "sha256": "faf903baccc788fb9a71e39811f51a57733cff73741386c1c47aa3559f521ffb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-root-tree.receipt.json",
+    "bytes": 428,
+    "sha256": "aa89bdf13f7959681d209f799aa2b6d3ccd549628ae4bb9018015c096e4c1b6d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-source-head.json",
+    "bytes": 844,
+    "sha256": "81c497005cb3bf45592ef22d099ec2ef0e0c8cc56386b4dddbf35b8e7a999808"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-tag-object.json",
+    "bytes": 689,
+    "sha256": "262c3b26a9d2814447a1601a5d64fb928400cb92358776fee524e99ace6ed6af"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-tag-object.receipt.json",
+    "bytes": 426,
+    "sha256": "a8ac7905212a0efdd09cb041b124af1a6a0481f813251621ec19d916d9c60335"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-tag.json",
+    "bytes": 369,
+    "sha256": "8815aa69b7de1983bce776d523dfe6286387a822577b9484ace6a6900595464e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\RecastNavigation-tag.receipt.json",
+    "bytes": 396,
+    "sha256": "4f5b17b3b2698207b1007694d249e414c70ce94e677350b93a7d135820dd4b73"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\source-freeze-batch-preparation.json",
+    "bytes": 60689,
+    "sha256": "678e0df7aa647a016defa3d2a6598458ee237f590021c53d190e2ae20250675b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\squish-ccr-commit.json",
+    "bytes": 280959,
+    "sha256": "0fabf3f9659f48bc83dd3b1f470f17dc4b76de5848a69876d4901f3ace519e77"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\squish-ccr-commit.receipt.json",
+    "bytes": 412,
+    "sha256": "5defed93751cba10b2837f2d2e8fbda7ef623c5e1831545fa2ffc3b6a9d54b6c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\squish-ccr-root-tree.json",
+    "bytes": 29661,
+    "sha256": "9ba707524d842fa4e0f626e7fdb876ec3edbca7e5bd260f318607dc1ab06b1b2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\squish-ccr-root-tree.receipt.json",
+    "bytes": 414,
+    "sha256": "649ebf626d2bb6c36e8f5f65b55dbb6b9e1d6c93f9466eec198f6b2417f5523e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\squish-ccr-source-head.json",
+    "bytes": 874,
+    "sha256": "b11c37351ed652158546f71ed77e2f977a0fda735fef6a867412d76c8be981f8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-commit.json",
+    "bytes": 4846,
+    "sha256": "1ec72a5082dc562b67b21cacf1e14f23e69dfd8f926ffc26f5e9959c1514912b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-commit.receipt.json",
+    "bytes": 411,
+    "sha256": "a29a02240516b9115d6e202388eaa6a042726f37f991a9e3343b5342c35b87cb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-root-tree.json",
+    "bytes": 3892,
+    "sha256": "347b1656d02e2219f71ad52d6eb92bc5d0fcfd5d16928c028997e60da387546a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-root-tree.receipt.json",
+    "bytes": 413,
+    "sha256": "66ccb99ac06aed836998ced1cbab76f74f3bc0501712fe5973d49326ccb9aa7b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-source-head.json",
+    "bytes": 799,
+    "sha256": "bb7418ef53baba5c4835ffeae8c2fcdf9a7bf26903015fcd8e183331081cc0c8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-tag.json",
+    "bytes": 345,
+    "sha256": "f2654c0ad327e624033e92501be6a60b46de09ed09f36a64ba78ee00fc14a807"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\sse2neon-tag.receipt.json",
+    "bytes": 381,
+    "sha256": "2cf61b5bc2d5dd7fc856672b235347d2a6e2d1b759a0150f7f6dcc0930e393f8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\assimp-hunter-config.cmake.in",
+    "bytes": 638,
+    "sha256": "5e4d7cd85393d86e7a71eef96dbdb2076a8c49da6ca3e8c5096b8c6b9e065167"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\assimp-plain-config.cmake.in",
+    "bytes": 335,
+    "sha256": "b23d811255a2895bdad17023df908911dea11012a179f0b6585826a98b870f64"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\cmake_uninstall.cmake.in",
+    "bytes": 743,
+    "sha256": "81109b27fae1172f28a3ff68a01b6960314b1b0ba701db4639ae22e82e7702cf"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\Coveralls.cmake",
+    "bytes": 4959,
+    "sha256": "d3cf534bb12e4c15a61e63511bfd7c50c4020a67fdb7ff9936705561099e8dcb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\CoverallsClear.cmake",
+    "bytes": 1366,
+    "sha256": "044bb3ad67cd857334c021abdf5566e63b56b09012b927cd4643ba5326359746"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\CoverallsGenerateGcov.cmake",
+    "bytes": 16928,
+    "sha256": "b897921fd174d267830f2ea02e8c85e96e5d4f9821d0a03f61b30401f184af3e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\DebSourcePPA.cmake",
+    "bytes": 17417,
+    "sha256": "beb154359b6a223070a425cc348f09ad2191914570379690bea4c4e3c78bd7aa"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\Findassimp.cmake",
+    "bytes": 3313,
+    "sha256": "73b8a652b995fae81c59970cfed3659ab04f586f8f2781904a8d1af198f85e09"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindDirectX.cmake",
+    "bytes": 4059,
+    "sha256": "b5823ad35b35ab74244c7d620d49bc96e1e2c1aec70d8fad8622ffde804d58b0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindPkgMacros.cmake",
+    "bytes": 5395,
+    "sha256": "a4014415523402bcb7f7a10e2626ed47b2194653e75fe0037daab8dadab28f10"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindRT.cmake",
+    "bytes": 596,
+    "sha256": "202d3eee697685c2024e357c5ced743d6c1e45df10e099b2734cbe4fa2e8f391"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\FindZLIB.cmake",
+    "bytes": 1560,
+    "sha256": "0489c2ec15d5995f7a14969c48fcbdd89d4c201c23b804679c7a562675dc5446"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\HunterGate.cmake",
+    "bytes": 16253,
+    "sha256": "41ece3ddb99e8b485c9a74ca59c771a5ae2cb87c09095556ac8aa7ba7ae2d936"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\MinGW_x86_64.cmake",
+    "bytes": 649,
+    "sha256": "745462064f9ef636e52fc616db6aa1206ee35c74862cfe621a724c0a609194b4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\cmake-modules\\PrecompiledHeader.cmake",
+    "bytes": 1011,
+    "sha256": "166f2c74b0ed025e157939975536b6f86b9602b3539f2e739a382a5f75062df2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\CMakeLists.txt",
+    "bytes": 38919,
+    "sha256": "a4672e926fc8780b3517fd9df7a7b230f36f12b1b41be20e3f2014aded32d142"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\code\\CMakeLists.txt",
+    "bytes": 54859,
+    "sha256": "fce4b0968cecd78b3606603e5bb76b4213ceab54446a56d32db11c5fa4cff40e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\clipper\\License.txt",
+    "bytes": 1374,
+    "sha256": "1bc8ddf91ba50e4186abb6b2339910e4529471ad8181b7cf2a5026c09ce09294"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\draco\\LICENSE",
+    "bytes": 13898,
+    "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\earcut-hpp\\LICENSE",
+    "bytes": 738,
+    "sha256": "828f2aed51b6526881a236758ec9b08cd69928fbfc70346d9d44a0b3a3444fe1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\googletest\\LICENSE",
+    "bytes": 1475,
+    "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\openddlparser\\LICENSE",
+    "bytes": 1079,
+    "sha256": "656597ef86119e4a526fb8621e0112b95051cf9d63a311b09b3a73346da00ead"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\poly2tri\\LICENSE",
+    "bytes": 1489,
+    "sha256": "578790e1377a270831ede8c64d7c92d411b6e5a55ce32fbb84a35b376af25ee0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\pugixml\\LICENSE.md",
+    "bytes": 1103,
+    "sha256": "f58038b9e590ae1c2157440ecd165479c895fdcc1d7f5b1c68af775b74d14a2b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\rapidjson\\license.txt",
+    "bytes": 5152,
+    "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\utf8cpp\\doc\\LICENSE",
+    "bytes": 1338,
+    "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\zlib\\contrib\\dotzlib\\LICENSE_1_0.txt",
+    "bytes": 1337,
+    "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\contrib\\zlib\\LICENSE",
+    "bytes": 1002,
+    "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\LICENSE",
+    "bytes": 3791,
+    "sha256": "21195d410708b82757d3e34c3a40c427f6e59339da862e9480d4fcdc79b7a1bd"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\port\\PyAssimp\\LICENSE",
+    "bytes": 758,
+    "sha256": "3bd0109a3a0b7c29d75f420dd0cac97662584534bfdc93af0eb6d186c0e030a5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models-nonbsd\\Ogre\\OgreSDK\\LICENSE",
+    "bytes": 1136,
+    "sha256": "5e29749dcf0948ac36e1e65205414f37416ba30602ab8af4f8a5a9711130bbeb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\AnimatedMorphCube\\LICENSE.md",
+    "bytes": 665,
+    "sha256": "4ec94a96ff33c1ab2b413d54724b44fff21e223ce65dc3a2a24630fcebac241f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\glTF-Asset-Generator\\LICENSE",
+    "bytes": 1065,
+    "sha256": "6a06f0e50464caa68ac6977caef942ac736a8942f20bf3230fa3f854dc098428"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\MorphPrimitivesTest\\LICENSE.md",
+    "bytes": 796,
+    "sha256": "26bad41ec2f1e8da0d101379daa443984ef5b0c21ab063e42329df17698b902c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\MorphStressTest\\LICENSE.md",
+    "bytes": 665,
+    "sha256": "1db76d9806e1ae198f6ebe568f44949a04624cb417e74426b274ec134e0a4eac"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\assimp\\test\\models\\glTF2\\SimpleMorph\\LICENSE.md",
+    "bytes": 658,
+    "sha256": "b70e9873ef2d0a792fb29827f2151404321577b0917b59cdb648c9984be96d6e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\CMakeLists.txt",
+    "bytes": 1351,
+    "sha256": "0c336497f8257b0797b624b0eb93b7c85d67851ab905534d3785e663b90e063a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\LICENSE.txt",
+    "bytes": 1099,
+    "sha256": "5478a2f36b736e13dd3250b9c71a4ab521bc327fb9d112a92c647bf3e69ddb68"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\NOTICES.txt",
+    "bytes": 2839,
+    "sha256": "7b7fc5046e474378f4fe0bde65508e0d2b3146b58568ebc7cc192aea85ff91b8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\src\\cmake\\config.cmake.in",
+    "bytes": 108,
+    "sha256": "cea5381f1159497cd8396bbe2cfa73492a8986da5f86b87438e300b16f7d0365"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\D3D12MemoryAllocator\\src\\CMakeLists.txt",
+    "bytes": 6662,
+    "sha256": "d85899243de52fa559b7e3199b911cf7706d046e4775fc286a55d52653f50908"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\meshoptimizer\\CMakeLists.txt",
+    "bytes": 8131,
+    "sha256": "e56383b054f6d1b7a2a5146ed274a22ec86965a66dd357500492ea0dfc23cfd0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\meshoptimizer\\LICENSE.md",
+    "bytes": 1079,
+    "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\mikktspace\\mikktspace.h",
+    "bytes": 8209,
+    "sha256": "17fc433894f24c73753d548086cc4d8c5c0379f4a6edfb98b5da243e4f0bc3d0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\.gitmodules",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\CMakeLists.txt",
+    "bytes": 26500,
+    "sha256": "a12e3aceb37e3082c02cc07751858d9e5d56735298e263c11b1c929abf6f0de7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\LICENSE",
+    "bytes": 2597,
+    "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\miniaudio\\tests\\android\\MiniaudioTester\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "bytes": 1845,
+    "sha256": "75303c9fcf1e968e1b99fe7a7b31a4bd5a05ddcdb85cb0d2cc47a085e404249d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\cmake\\CheckSizes.cmake",
+    "bytes": 2055,
+    "sha256": "c08bccc5be79786eb394b779001e9d27f18d6d57bb6eb643e1281d0c0990d1ae"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\cmake\\OggConfig.cmake.in",
+    "bytes": 481,
+    "sha256": "9c77c757889b7df6a00334780fffcd4d1ef8ff88ec66699a066cda24f58f1268"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\CMakeLists.txt",
+    "bytes": 6102,
+    "sha256": "8c93534d189b52c26c66ae4e59d9999cf4284e19ff82f28e5f370b28c55e5a79"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\ogg\\COPYING",
+    "bytes": 1466,
+    "sha256": "d2ab5758336489da61c12cc5bb757da5339c4ae9001f9bb0562b4370249af814"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\CMakeLists.txt",
+    "bytes": 2955,
+    "sha256": "237070a74d0682d1fd1ec5597e5e5034b3cdcf0e6f9f81c0c35aafa94297b3b2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\DebugUtils\\CMakeLists.txt",
+    "bytes": 1239,
+    "sha256": "a5914efae46b0cc0bb96485da483504312db7d5c77bea81fa527d47e742aec93"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Detour\\CMakeLists.txt",
+    "bytes": 1336,
+    "sha256": "1bf9037aa3c6e46ce0405378e89aaf36382bdea2b8e648c2c230005d99bd2412"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\DetourCrowd\\CMakeLists.txt",
+    "bytes": 1221,
+    "sha256": "67dc02a56e67169bd61cc7fb62205c01b52b2d351c23457ed4996aaec0309fe0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\DetourTileCache\\CMakeLists.txt",
+    "bytes": 1274,
+    "sha256": "40db49741e8dfa444a0a4fd0d5c6dda38b69cd963e99eaa03b77be6e90397dba"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Docs\\doxygen-awesome-css\\LICENSE",
+    "bytes": 1065,
+    "sha256": "a848f4935f110d45ae18cc4149b9613776648c6dc5e596f247b501b3d2503134"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\License.txt",
+    "bytes": 877,
+    "sha256": "ffad87821cce7cfd3be00b63ffadd01b04e83a4c6a0bcc68f06362ffd42d705e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Recast\\CMakeLists.txt",
+    "bytes": 1113,
+    "sha256": "aa7a6385706086a676f545a01817924a61ebf142b219ed592b66774ed31c699e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\RecastDemo\\cmake\\FindSDL2.cmake",
+    "bytes": 7706,
+    "sha256": "b73b85086f10291d91cdaffd9fc58d2545071973531bd218de155cbef4fa678c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\RecastDemo\\CMakeLists.txt",
+    "bytes": 3296,
+    "sha256": "4a336336c491e96bfee19dabc08cd68bca4fe44a8a57e1001b0199c5c6db2a02"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\recastnavigation-config.cmake.in",
+    "bytes": 84,
+    "sha256": "c2ea77b2588481b0b2dc4a1b83263b2ee92115d1b21671c3d7324dc1c3e8a30f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\RecastNavigation\\Tests\\CMakeLists.txt",
+    "bytes": 542,
+    "sha256": "f6044059de454d0b295bd73df9055b793677824c5da5cb0cfdc9b59dec4aa2df"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\squish-ccr\\README",
+    "bytes": 1581,
+    "sha256": "5238dc0990fa6c547af4da5dce39812b23ee0dad31c98913c1a95904d4e23b39"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\squish-ccr\\squish.h",
+    "bytes": 19331,
+    "sha256": "7b6c3a8501fc2651f705e60919febfb6d4b66ef71bf907892cc766cadf0d0172"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\sse2neon\\LICENSE",
+    "bytes": 1083,
+    "sha256": "e962fe0dfa637c465df35d496fb198982eb52b8afd3046f370083c6e9856b34f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\android\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "bytes": 5220,
+    "sha256": "04b9ec3ea637f4c594a8ed34e02112e918afc9f7ebe9e4badab0de140c6b2d7c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\clang-cl-msvc-windows.cmake",
+    "bytes": 13000,
+    "sha256": "39c324234bb11a432341b4f3c504c1990d1527f818273f62e95c0b3120e7e251"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\clang-cl-msvc-wsl.cmake",
+    "bytes": 12972,
+    "sha256": "077cc93cba20bf1cabc879c5a7b612b2d406d7ced92ff9fbf3aec46044f78906"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\ClangClCMakeCompileRules.cmake",
+    "bytes": 748,
+    "sha256": "6166994e9bf8cd8eefdf6f05e9de3e48ed1e9cd1ea2b398ef41536b98677eefa"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\ios.toolchain.cmake",
+    "bytes": 3353,
+    "sha256": "cbd246958bd26594125d9ad63f69d395711d873bea6cee3c8877d7bf55e9558e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\linux_i386.toolchain.cmake",
+    "bytes": 618,
+    "sha256": "fedc9a67a164919e0eed8efee6114e055891bee5f907596447b0b6426d10e495"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\lld-linux.toolchain.cmake",
+    "bytes": 171,
+    "sha256": "c2d73808fa38c1285e9ecb89aeeb3091d200c03292c388ed26ca96f24fb5fbc1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\llvm-mingw-cross.cmake",
+    "bytes": 881,
+    "sha256": "f15a2825aa33d4b73949aa2c67f831064efc46341fa5265050875313ef09b586"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\llvm-mingw-win64.cmake",
+    "bytes": 761,
+    "sha256": "38d4c2d6628bc6ae00fee8796b079fb5f2f341c682f6c6c9afd982a6872ab55f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\mingw64-cross.cmake",
+    "bytes": 681,
+    "sha256": "c2b62b0c269dac4fdf93485496e912e178de491da23412533befc8d60a33437a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindASan.cmake",
+    "bytes": 2144,
+    "sha256": "bd30b1c3cb0682b8a2b0b599f6c51fbf99ef4908b00eba8826f0d484c623b01b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindMSan.cmake",
+    "bytes": 2292,
+    "sha256": "55e40f0994b47f8e779622af2007c69252d9456be99f4aa4fba7dd49c23d5580"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindSanitizers.cmake",
+    "bytes": 3737,
+    "sha256": "90b2b41a9985763b6fdd9f2e1ebe203140516bf79fe67600c23234927d83ee94"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindTSan.cmake",
+    "bytes": 2555,
+    "sha256": "ceace234abd5a463ad1b8134ad06c4c8004895b2e8fc9edb67e64620ea97ca47"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\FindUBSan.cmake",
+    "bytes": 1696,
+    "sha256": "4720ec96ea42a2a9c07d887c1fc5562ed3e8c222f5778a18b78c46678b23f156"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\cmake\\sanitizers\\sanitize-helpers.cmake",
+    "bytes": 7684,
+    "sha256": "e6f2e53f9014e4be1bf703e746d6a4262486a265c50e37792a4fff479f9d9e64"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\CMakeLists.txt",
+    "bytes": 48102,
+    "sha256": "f2891d1fde06d350ec0baa00519f0cd994f267ff387005108de4f03f6c375385"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\data\\materialx\\LICENSE",
+    "bytes": 10173,
+    "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\api_tutorial\\CMakeLists.txt",
+    "bytes": 499,
+    "sha256": "ad875e894ab200d7ef8068adfe030f45e35691ddff3ee3d5da4ed06c710347c0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\asset_resolution\\CMakeLists.txt",
+    "bytes": 518,
+    "sha256": "0b4e6526534135d490b8ffe441dc465880f53212815f1654dffa301ade26a9ea"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\c_api_example\\CMakeLists.txt",
+    "bytes": 500,
+    "sha256": "bebc19a1857e9687ad38275cbd0c241c65a6f4078b9daf4a3e4392ab074545e2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\bvh\\LICENSE.txt",
+    "bytes": 1065,
+    "sha256": "90259d069d810962c1bcde272f41cfa77e156a6ac2708ae1391bafbc8492eba7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\cuew\\LICENSE",
+    "bytes": 10038,
+    "sha256": "c52718780b46e8c7ea48b9ae0406061d4918761e385b6e024571a37c6d02dd95"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\cmake_uninstall.cmake.in",
+    "bytes": 1142,
+    "sha256": "4b90bee4fba7a2fbd101f896d11b07c6b79635fc6961d4e0e0f31cc3cb1bc059"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\GenerateMappings.cmake",
+    "bytes": 1725,
+    "sha256": "ea563d484abacb75ad0902428915337d95f9a39fa1bbf1cf71d7d5ddf97da320"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\i686-w64-mingw32-clang.cmake",
+    "bytes": 596,
+    "sha256": "9cf42de30ad84095801b2dff752df930c692680089d8f47c77f9445cdacece24"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\i686-w64-mingw32.cmake",
+    "bytes": 588,
+    "sha256": "f26d94a113c02bba7cded9715bcf51a9d04ba40d497ccffc05b4ef256aa8399f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindEpollShim.cmake",
+    "bytes": 747,
+    "sha256": "3689ad05d6b6460d2b5313130d3cb474ab195f6698690737582d3ee98cb4c942"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindOSMesa.cmake",
+    "bytes": 445,
+    "sha256": "0ab39cf837f390904cb4bf68db853346b53fa5d4dc047f554f188b44b4454643"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindWaylandProtocols.cmake",
+    "bytes": 915,
+    "sha256": "706af7855811374a02067a28e25094c2be01b1a9dbac306fc24b4d628e259622"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\modules\\FindXKBCommon.cmake",
+    "bytes": 1043,
+    "sha256": "6efde4707a7ee1cc9837e558c8c5a231cb4aaf04adb05fe94056c232e44fdc22"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\x86_64-w64-mingw32-clang.cmake",
+    "bytes": 606,
+    "sha256": "7f2ea33c57c8726be2a1dfac703d2a4f7c3993c3345ce5c927f0fa1474fc2083"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMake\\x86_64-w64-mingw32.cmake",
+    "bytes": 598,
+    "sha256": "e68df045d9aa039fef4f984a7c8e48cd6ac3df8960adc960f6e45674d3f6cee3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\CMakeLists.txt",
+    "bytes": 13548,
+    "sha256": "676cff61700b5119b914744c557257d4886c607f1a8fd6dba2826dfb755adb1a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\docs\\CMakeLists.txt",
+    "bytes": 1027,
+    "sha256": "da0c2d0b8b0c9936b636623e8126d4fd078ce06fc92644aba5b3b68673004f89"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\examples\\CMakeLists.txt",
+    "bytes": 3833,
+    "sha256": "ecd81cee3ae6ae76ed07c7ec2265fa6dd57823c18a93fe1918646d4e310236af"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\LICENSE.md",
+    "bytes": 904,
+    "sha256": "149704059b5d0bf551637e50042dd4de9c2cae921021f6636298911e3a5f9462"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\src\\CMakeLists.txt",
+    "bytes": 8739,
+    "sha256": "c016810460a8183a9b03b1e646df171d132c31cdd001eff899e41c383349a73d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\src\\glfw3Config.cmake.in",
+    "bytes": 56,
+    "sha256": "ee6ca5eb96cba1091e96656e80ab4f1b9ed1b8a51a8869b28708ce5ae4b2f29d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\glfw-3.3.6\\tests\\CMakeLists.txt",
+    "bytes": 4556,
+    "sha256": "fdce2ffb50d2cc924c34ec466f10a9c92e656b9cf7ee520e69b17edfa341a68c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\imgui\\LICENSE.txt",
+    "bytes": 1083,
+    "sha256": "1b64b23b817e547982a86984685f5e9337695caa542753fb6f08d502d5208e38"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\imnodes\\LICENSE.md",
+    "bytes": 1072,
+    "sha256": "b7e20dc32020807b0525c1f8f84a15a9f52693a58974b38354d3f4819b9b5174"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\LICENSE.roboto_mono_embed.md",
+    "bytes": 65,
+    "sha256": "f682864312068d19367688f90c3131db40df6e8733df82a8df4695ec817a2d67"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\metalcpp\\LICENSE.txt",
+    "bytes": 11344,
+    "sha256": "e2d25f10f91f20394fcae4352162a7a07453c8e060821707c3e88cc583fa1f85"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\CMakeLists.txt",
+    "bytes": 789,
+    "sha256": "44e0f1716aa368074c8a5e5334bec95b308340436d30608d4ad8a4e9bfcdc5e6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\LICENSE",
+    "bytes": 820,
+    "sha256": "b332d6f507142c66a0e904838b6437e6273734589c22a16b57392b89bfdccb2a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\src\\CMakeLists.txt",
+    "bytes": 1645,
+    "sha256": "a05af1ef54c7f05c3690fc2919b2b24b73dfdf4b201edb129a136191cc0cd1df"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\nativefiledialog-extended\\test\\CMakeLists.txt",
+    "bytes": 424,
+    "sha256": "1a86c3b8baab0be75cf3452577e2e081f1992ae904c73b7d55d8998b90603ead"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\common\\virtualGizmo3D\\license.txt",
+    "bytes": 1352,
+    "sha256": "5b5ffa503290498d2eca202f84cdd8686bc36e2ad947959d63faf988d73c5685"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\file_format\\CMakeLists.txt",
+    "bytes": 508,
+    "sha256": "27cc6f37ced6d4b0c94721fd4bbb461625e284e160b3be58a30ed8dba2d9231c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\openglviewer\\CMakeLists.txt",
+    "bytes": 2928,
+    "sha256": "32c20f49504f8d9555122274ff8bbf0c9a1d38022ae0eb536c89ca50eda51538"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\optixviewer\\cmake\\FindOptiX.cmake",
+    "bytes": 3165,
+    "sha256": "fed744a1ec523a94a3aa96600118007ef0a3016f5e305d179f6a5c300cf45b7b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\optixviewer\\CMakeLists.txt",
+    "bytes": 2723,
+    "sha256": "d8e94e80f3e4d593e48d08c3ae5dfa801876a7426a419b4e1130026098772025"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\pxrusd\\CMakeLists.txt",
+    "bytes": 6578,
+    "sha256": "57fe8136306f6a7aaa63dcbea9d085b7741b4758cba970457592e59b9d3875a5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\save_usda\\CMakeLists.txt",
+    "bytes": 477,
+    "sha256": "2f187a121deed975f991d84e12f3d8631b3c70b699c682a80f3bda10fb15f346"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\sdlviewer\\CMakeLists.txt",
+    "bytes": 7544,
+    "sha256": "de1a0f0d0bf826e17bc08ccc17b1d783afc46da6869a99dd7cb79b6e5bcbdab5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\tusdcat\\CMakeLists.txt",
+    "bytes": 479,
+    "sha256": "46bba48d09995bb382c479df9f579794fef78f361bb2a70b9b610d691d25e115"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\tydra_api\\CMakeLists.txt",
+    "bytes": 494,
+    "sha256": "73bae9482de538692928baf96085dd7ca1d072bf01a3597ff44cd242ab43d2b5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\tydra_to_renderscene\\CMakeLists.txt",
+    "bytes": 510,
+    "sha256": "4d54400e9ea06416365c68acfbccaaf7785eb3a8ac3dea40a5fc5b75d60f69bc"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\usd_to_gltf\\CMakeLists.txt",
+    "bytes": 506,
+    "sha256": "ab1cabf79f5f150f8a70aa7ba315cb76049e9fbf468a53612b539770a05c0026"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\examples\\usd_to_json\\CMakeLists.txt",
+    "bytes": 495,
+    "sha256": "c792bc684daa1aff16a2bb504cb6384fdb23d1db09dab4f2e7236bf4745dc3eb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\LICENSE",
+    "bytes": 672,
+    "sha256": "956559a8307fa5d9393752f8684f41345231046481b4a2155fa7503e4fe9c113"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\sandbox\\reflection\\CMakeLists.txt",
+    "bytes": 159,
+    "sha256": "255616319405464ac03e257e9bb9a1a4215cf56c10608b8c519aa4f300a6b51f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\sandbox\\threejs\\CMakeLists.txt",
+    "bytes": 1697,
+    "sha256": "80f642e81bf3b46438ae518dcbccdbc7ba7ac62d541df32d21d2cc62113d390a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\sandbox\\wasi\\CMakeLists.txt",
+    "bytes": 2698,
+    "sha256": "a9fdb171700b7bdf29a9924638b6f52f89c5f1db5b8219ee1f21a67953e600d7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\schema\\usdz\\LICENSE\\LICENSE.txt",
+    "bytes": 1054,
+    "sha256": "739509ddb2dbe734aaa3c376371ccfb153347d3870e99e4ed8eaa6f1e5762832"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\blender\\python3.9\\LICENSE",
+    "bytes": 13925,
+    "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\alac\\LICENSE",
+    "bytes": 9112,
+    "sha256": "a337314dd82d26791112c1e5a85725b2eb92f5b7e6f9102fa4eaa2903f77518f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\fast_float\\LICENSE-APACHE",
+    "bytes": 10767,
+    "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\fast_float\\LICENSE-BOOST",
+    "bytes": 1337,
+    "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\fast_float\\LICENSE-MIT",
+    "bytes": 1079,
+    "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\filesystem\\LICENSE",
+    "bytes": 1086,
+    "sha256": "1b265537c97cfb422ffb52492c96979943f54fab8746a6dd38d8329953d487cc"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\floaxie\\LICENSE",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\glob\\LICENSE",
+    "bytes": 1063,
+    "sha256": "46035285f8a5547b5b6a50f0433243a5ffc494b825dd51855bb1903a6c54382b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\jsonhpp\\LICENSE.MIT",
+    "bytes": 1076,
+    "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\jsteemann\\LICENSE",
+    "bytes": 11344,
+    "sha256": "56cb58840980e1895822ef06ef8b8a5250fd48c58f59b1441c2b71447440a008"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\LICENSE.miniz",
+    "bytes": 1162,
+    "sha256": "6f20fa7672b00e2e975c291df737cf227addf3ad32e36fef3fe0f416e4664d3d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\LICENSE.ogt_vox.md",
+    "bytes": 1069,
+    "sha256": "d042ed80bcd38fdb32f81d73b9eac7907e66689fec1b42ca152697342d9e1c27"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\mapbox\\earcut\\LICENSE",
+    "bytes": 738,
+    "sha256": "828f2aed51b6526881a236758ec9b08cd69928fbfc70346d9d44a0b3a3444fe1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\mapbox\\eternal\\LICENSE.md",
+    "bytes": 738,
+    "sha256": "2c620eaf6c3ee3e33b07f3b6ef0dfd0a9e0a52c93a46aa4ccf7773dbb562daec"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\cmake\\nanobind-config.cmake",
+    "bytes": 8007,
+    "sha256": "98a461e02c50ca82eca3cc3b3dd4e6906446a366c96c86f4c7311ab66369a3b0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\CMakeLists.txt",
+    "bytes": 2961,
+    "sha256": "26791f23b8dc708261026f6c7cd886bb51e364b91118543d3d8b26f1950808cb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\cmake\\tsl-robin-mapConfig.cmake.in",
+    "bytes": 407,
+    "sha256": "4fdc2c4c22b55fc4ea48c1541e973cc24432e8f80cf3610faa1c62ba54c3c440"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\CMakeLists.txt",
+    "bytes": 3176,
+    "sha256": "e9612c91e59c2b6c02746d728236f11db6b0c71920966c6ebf7e3f3f6bec78f7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\LICENSE",
+    "bytes": 1102,
+    "sha256": "11f2c685ba565a31aef1219f63a7a8845602c97bff70016b9e3278dfe51a2ec5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\ext\\robin_map\\tests\\CMakeLists.txt",
+    "bytes": 1111,
+    "sha256": "5889d67251812a96f883e9d261db341b6e79a871b9749471724d3217e5c6898d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\nanobind\\LICENSE",
+    "bytes": 1521,
+    "sha256": "f305091a4e57805870b217a28ea4b1f16610eece8457d2370f822a9696b75836"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\OpenFBX\\LICENSE",
+    "bytes": 1071,
+    "sha256": "7771794e50cff1cca0e931526d2af91b3dc9f3834775f2f7c93fdc641c2dc261"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\CMakeLists.txt",
+    "bytes": 10999,
+    "sha256": "37ce809b13755f6d6c7843c0dbd40bc598947881000c2bc132ab0e828cb58610"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\LICENSE",
+    "bytes": 1684,
+    "sha256": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\cmake_uninstall.cmake.in",
+    "bytes": 952,
+    "sha256": "dfdc294572479be844cc61a48a5d476c114f213bbd24ecd5e7156de3a24b7011"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\FindCatch.cmake",
+    "bytes": 2350,
+    "sha256": "21e99db5064e8524df410606c7754b29bd8e0cb09576ebdb27634e08b76b7bf6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\FindEigen3.cmake",
+    "bytes": 3105,
+    "sha256": "9624a761c330d6003123e0191954b408926c390d9b19c0dc1b72db091e6cb5af"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\FindPythonLibsNew.cmake",
+    "bytes": 10890,
+    "sha256": "0c365226245d94394aad3e5005282cbf6c5910bb4445adb8cd4407b3b2d24327"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11Common.cmake",
+    "bytes": 13487,
+    "sha256": "0a47bb2ca4bb4b00c25049f2c82379b5af56b8ceb909188945bf1d8b16893c2d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11Config.cmake.in",
+    "bytes": 6930,
+    "sha256": "96c376b7d7308e3c760b2486329db09a0a25c214323ae930c20da8f80afbcada"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11NewTools.cmake",
+    "bytes": 8955,
+    "sha256": "9ea9000d206b765b98193f5d4b6bf6408dcf743b35029fbc24f0c7eaea1ef46f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\pybind11\\tools\\pybind11Tools.cmake",
+    "bytes": 7862,
+    "sha256": "8989f91fdc7d043f9676b8fced53730a58ffb17b88a2bfc6798b471fb364aa93"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\simple_match\\LICENSE_1_0.txt",
+    "bytes": 1338,
+    "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\external\\string_id\\LICENSE",
+    "bytes": 900,
+    "sha256": "599726ff2964605f2b80d5237e4744525b50c68539c6f49f41cb35b1ea5fc535"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\lz4\\LICENSE",
+    "bytes": 1311,
+    "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\CMakeLists.txt",
+    "bytes": 28882,
+    "sha256": "eb515667fae4017a01627080b925233717ecb054319151fe2a82e519ac9df83d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\LICENSE.txt",
+    "bytes": 10038,
+    "sha256": "c52718780b46e8c7ea48b9ae0406061d4918761e385b6e024571a37c6d02dd95"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\bfr\\CMakeLists.txt",
+    "bytes": 3020,
+    "sha256": "7837ebcd768477dab7dab5201baeb46b4c551191a109ba7af16ca33d053f705d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\CMakeLists.txt",
+    "bytes": 15822,
+    "sha256": "0eb3bada99d5fa788e7a5b62ed81fdedcf63a327b5de071297517d3f2f33d1bb"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\far\\CMakeLists.txt",
+    "bytes": 2953,
+    "sha256": "f99cd8a3d75b763c45e7736d49aad26b144091adda8d9bf218741f5b63c0e0f6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\hbr\\CMakeLists.txt",
+    "bytes": 1800,
+    "sha256": "7bb0133d7227cb294154a22fbf25166de5c10c4a82ad12274da187ada1649f6d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\osd\\CMakeLists.txt",
+    "bytes": 10822,
+    "sha256": "2f4909b82edbb0afc8d041e298367559bd8ff03bb5f6908e5ac52158767db402"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\sdc\\CMakeLists.txt",
+    "bytes": 2159,
+    "sha256": "4673bb5c7ab1ee0d8e15c293213fc8ff9e0ffbcf8fd359776a941ba1991917f7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\tools\\stringify\\CMakeLists.txt",
+    "bytes": 1532,
+    "sha256": "717b4b6386d7dfe9bac9834c603ad4c8ab6b5047721ae2807c0c75a64369b797"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\src\\osd\\opensubdiv\\vtr\\CMakeLists.txt",
+    "bytes": 2515,
+    "sha256": "e742b751d21021fbb0e6e33e20f63624788224c2eb6a69a49f918ca74d96ad8c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\tests\\decompress-int\\CMakeLists.txt",
+    "bytes": 880,
+    "sha256": "de57286c1a7ec4be872408cb8d821b52a06357b60d307be812ae8da5e90ab03d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\tests\\unit\\CMakeLists.txt",
+    "bytes": 1310,
+    "sha256": "e8cd4d4aacb47f19ebf9551f7ef135a1a6e7820a3753ef94f038017089e1ee42"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\tests\\unit\\LICENSE.acutest",
+    "bytes": 1096,
+    "sha256": "827839b47b4fe6b9675f15939c85cd56be5ec1c37910bd1bd0ed4d7cbce42002"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\tinyusdz_repo\\web\\CMakeLists.txt",
+    "bytes": 1715,
+    "sha256": "557e470539c39ba919894d5da1be1241220b9f2c8136cbc4df219855417931bc"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\v-hacd\\.gitmodules",
+    "bytes": 96,
+    "sha256": "084800fa19a1c0f841b3b766684f360a2eb94ee93df0397cf017fb3434552727"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\v-hacd\\LICENSE",
+    "bytes": 1546,
+    "sha256": "245c933225f5bd28a10336137b26f1f86551b6b1d29f804253eb5e1d73744c2e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\cmake\\FindOgg.cmake",
+    "bytes": 2132,
+    "sha256": "b199744a80e7d4762bc1ad56147d453e4f3b7ab925cf003ad639e9253a2495f4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\cmake\\VorbisConfig.cmake.in",
+    "bytes": 396,
+    "sha256": "76ae79f2a7d05142ddfdbf75a1f2230f0fb9c9d46f2d4346a6965fc015f68989"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\CMakeLists.txt",
+    "bytes": 2705,
+    "sha256": "66083c2c545fab98a075e3c5aa3b73d113ae41dcfeb6040a5f435e58059e69d5"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\COPYING",
+    "bytes": 1470,
+    "sha256": "ec1815db59fcd302846df949d7424876cb2e2dc5ed1606c5fb0b36787b1cf43a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\vorbis\\lib\\CMakeLists.txt",
+    "bytes": 4580,
+    "sha256": "10dcbd29364dafb2aaca916c0b2d4a90105d22fe4fc072ba50cefcdee45c4b6b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\texts\\xxhash\\LICENSE",
+    "bytes": 1389,
+    "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz_repo-commit.json",
+    "bytes": 18630,
+    "sha256": "5746a0b6758a3466872857a9a2bf7cd629460d04c3d786056854bb3f2c21ff1f"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz_repo-commit.receipt.json",
+    "bytes": 416,
+    "sha256": "6b45947edc268bc6c4c274eab93b609682d585e2b8ab65d8788dc2e597e7eef3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz_repo-recursive-tree.json",
+    "bytes": 627791,
+    "sha256": "5937a84b169023b82bd7a5406a641e85714eef86df19454fd06715c799c5e8b8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz_repo-root-tree.json",
+    "bytes": 7889,
+    "sha256": "375c3cb628e55fd2f3b88a0b5742f5f3b59f0f856b1ed2f06f375ea4c79a3055"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz_repo-root-tree.receipt.json",
+    "bytes": 418,
+    "sha256": "ea7b8233a553976355c82cca43be4017bf898dec8023649b1d4ef29ee32201ec"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz_repo-source-head.json",
+    "bytes": 886,
+    "sha256": "b5809560e477de2eebdfa73ba1a36a20b7707b63b6b55616936e2f24ad2e3edc"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz-canonical-transitive.json",
+    "bytes": 845,
+    "sha256": "82999f189e310dbdc8d8593863be2351a176896e93d958bac8cf0e7deba3362c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz-declared-transitive.json",
+    "bytes": 767,
+    "sha256": "ec5f276c1f6ca3ecc513c675b37e8e4d956df50b1826b33555a567cdb707eee9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz-destination-pin-audit.json",
+    "bytes": 2073,
+    "sha256": "943c00d1972f0bac4cb84a4cb1480afd90aeefd4287e49214db95281340d4a53"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz-first-head-discrepancy.json",
+    "bytes": 360,
+    "sha256": "c3a0508c4375a9516e77a7d878a334f5507b5b1a0c1b93d51da073749c7abe61"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz-primary-text-http-receipts.json",
+    "bytes": 88995,
+    "sha256": "d4bdf24364d31d9951032b2dc0052bbf704e9efadb4f5f2c1e4e7cfb3f11586d"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\tinyusdz-primary-text-manifest.json",
+    "bytes": 75643,
+    "sha256": "340646cd9d043ac73069697614f60728f153f1dc72e79352ce0268475fb34c4a"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-commit.json",
+    "bytes": 4558,
+    "sha256": "dccdcd933a8d191ad468a5e95330ed5772a022461a6190e771e07466d386e145"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-commit.receipt.json",
+    "bytes": 407,
+    "sha256": "5ac4ed0ca450f31b2dd05c95fde4df9a70b632371368703f332624705634f886"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-root-tree.json",
+    "bytes": 1635,
+    "sha256": "c10f520fed27545743c0a24ae79db32da52d2cddc1e19d9430bb888a39976e6c"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-root-tree.receipt.json",
+    "bytes": 409,
+    "sha256": "f91c78b8270c9eed640acc36d4e1032d3e34cbe970ec32d6008a62bc93650c20"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-source-head.json",
+    "bytes": 787,
+    "sha256": "ca15ada3a64e52051f7efbd74bb9fcaae63ed1280bda2cdf16509b4acfc5c851"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-tag.json",
+    "bytes": 337,
+    "sha256": "63cc3dc4dfc292766cc712c6b9fb8fb63dbe95fa97256f7a010f609c27621b7e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\v-hacd-tag.receipt.json",
+    "bytes": 377,
+    "sha256": "b1eef6620e1f0b045a579b46671c5bc393a926ecb7a010a08d0bf92281d1d021"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-commit.json",
+    "bytes": 7062,
+    "sha256": "630e2b5fc9e46bf9600358c8272849d100874d5ba2998d22138b1dbfc3f8021e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-commit.receipt.json",
+    "bytes": 404,
+    "sha256": "5fe01e8703cad0f5093e34b8ed63e0cd8d9261dbe3f49042ac2669316e5d58f6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-recursive-tree.json",
+    "bytes": 103061,
+    "sha256": "f170402485b73f0a4ca7dffbaefc378d25052b16672f78acbe4871ec40db69fe"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-root-tree.json",
+    "bytes": 7474,
+    "sha256": "e75519f04768752ea002c163a1f1327b109455b77b715ad90996bb3ead83278b"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-root-tree.receipt.json",
+    "bytes": 406,
+    "sha256": "ab4c5ff8cda1502050ec1c41659011173dfbea454f3a52b6927858acbd8c5c7e"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-source-head.json",
+    "bytes": 778,
+    "sha256": "ac5894ee69dc98e0950c9761882046227fdc06096b8c164dae83427a901ebfd1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-tag-object.json",
+    "bytes": 4176,
+    "sha256": "d8818f98b2b65f75bf1a939c844a237282c649c47d5468fb257a6c5116bd2eda"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-tag-object.receipt.json",
+    "bytes": 405,
+    "sha256": "26d7592bd1e9628dea9a111bcc565e842620926e5dd97ff2d7f87f86e4055160"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-tag.json",
+    "bytes": 325,
+    "sha256": "32d5e1ac55cea5e09afb0b969b1c2dee2a239b946ab3d09e76c25b6f826b43ce"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\vorbis-tag.receipt.json",
+    "bytes": 374,
+    "sha256": "0a4f82fad10113b42378b4160752a38d8351c9d4a2f22e70ff59e7b8aa8ecfef"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-commit.json",
+    "bytes": 250552,
+    "sha256": "59c8327b02fb799b3c33ba817642e84a33ffe699f9b2da92b8642762b0253a76"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-commit.receipt.json",
+    "bytes": 408,
+    "sha256": "75426a2833c956ab07d75d5d0efbdac85d2a5451fc2a9dd0c2121fd035bbd9b3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-root-tree.json",
+    "bytes": 5093,
+    "sha256": "6de336dcbc25f2598ed5e8627ba918f93b44cae0b546a5c224db9139201cf768"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-root-tree.receipt.json",
+    "bytes": 410,
+    "sha256": "06a3996712400bfaae556117b15a082a3b857792f7515e2a15e05a4200f0a8a9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-source-head.json",
+    "bytes": 790,
+    "sha256": "f01f7c1a500273909b76fd4341437b105cc8e55c14542117d49dce1eb49952ef"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-tag.json",
+    "bytes": 339,
+    "sha256": "df4a23a44762795c1ca3bd05d642c18e98e04ad5ec03a60df7050c7b838b8683"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\remaining-fetchcontent-batch-audit\\xxhash-tag.receipt.json",
+    "bytes": 378,
+    "sha256": "dff1028ef392abf25c050f4fcd16b5745d55c272588e949e56a59b1ea1469d0b"
+  }
+]

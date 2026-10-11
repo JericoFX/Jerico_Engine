@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/assimp/assimp/commits/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"4ac8c13db23d77127029a4663153033fd00b87b5f24bc59929d0e93a037d8615\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

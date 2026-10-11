@@ -1,0 +1,15 @@
+{
+  "name": "sse2neon",
+  "URL": "https://codeload.github.com/DLTcollab/sse2neon/tar.gz/refs/tags/v1.9.1",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 270312,
+  "sha256": "6b70e7cb8c5ce4641002b85deaafe97efdf9ade9b49884edeaf678b35f0e132f",
+  "expectedSHA256": "6b70e7cb8c5ce4641002b85deaafe97efdf9ade9b49884edeaf678b35f0e132f",
+  "measuredSHAApproved": false,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/sse2neon-1.9.1.tar.gz",
+  "commit": "92f6de174717aef09033ad21568d5bb9e5470404",
+  "matchesDeclaredPin": true
+}

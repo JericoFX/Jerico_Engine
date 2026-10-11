@@ -1,0 +1,50 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/mikktspace-3e895b49d05ea07e4c2133156cfa94369e19e409.tar.gz",
+  "commit": "3e895b49d05ea07e4c2133156cfa94369e19e409",
+  "root": "MikkTSpace-3e895b49d05ea07e4c2133156cfa94369e19e409",
+  "members": 5,
+  "regularFiles": 3,
+  "fileBytes": 65804.0,
+  "links": 0,
+  "gitBlobMatches": 3,
+  "primaryBlobFiles": 3,
+  "destination": "F:/JericoEngine/Dependencies/mikktspace-3e895b49d05ea07e4c2133156cfa94369e19e409",
+  "violations": [],
+  "extracted": false,
+  "membersManifest": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "MikkTSpace-3e895b49d05ea07e4c2133156cfa94369e19e409",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null,
+      "gitBlobSHA1": null
+    },
+    {
+      "path": "MikkTSpace-3e895b49d05ea07e4c2133156cfa94369e19e409/README.md",
+      "type": "RegularFile",
+      "bytes": 156,
+      "sha256": "295d4e37ac1980e1f811c340f618ffa68fc10bf906b34bc93a64c6960351bdfc",
+      "gitBlobSHA1": "9fda1559e44a1c4293cc1309a50323c3dec4e49f"
+    },
+    {
+      "path": "MikkTSpace-3e895b49d05ea07e4c2133156cfa94369e19e409/mikktspace.c",
+      "type": "RegularFile",
+      "bytes": 57439,
+      "sha256": "de87e74107df766ce68108801262bd8d53899414236b59810509a8fc2a51e288",
+      "gitBlobSHA1": "0342ae0146f1e14854ad8d3309bbbc3d27adc9bc"
+    },
+    {
+      "path": "MikkTSpace-3e895b49d05ea07e4c2133156cfa94369e19e409/mikktspace.h",
+      "type": "RegularFile",
+      "bytes": 8209,
+      "sha256": "17fc433894f24c73753d548086cc4d8c5c0379f4a6edfb98b5da243e4f0bc3d0",
+      "gitBlobSHA1": "52c44a713c60ebff71133a41e0711bbf7199fc5e"
+    }
+  ]
+}

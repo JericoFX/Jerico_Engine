@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/lighttransport/LightUSD/commits/6050eef932f7d2788656d63297aa488fb0961ed1",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"5746a0b6758a3466872857a9a2bf7cd629460d04c3d786056854bb3f2c21ff1f\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/zeux/meshoptimizer/git/trees/beb061dc4aafb796e83c997d557ce10e91c726ea",
+  "status": 200,
+  "length": 3823,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"c6349e9f58fc539460652c56f20049d079ed7887a462e1a64a44f194fa645ff8\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

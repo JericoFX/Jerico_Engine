@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/Cyan4973/xxHash/git/ref/tags/v0.8.3",
+  "status": 200,
+  "length": 339,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"df4a23a44762795c1ca3bd05d642c18e98e04ad5ec03a60df7050c7b838b8683\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

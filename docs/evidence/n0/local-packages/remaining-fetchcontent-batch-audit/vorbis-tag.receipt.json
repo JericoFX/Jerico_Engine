@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/xiph/vorbis/git/ref/tags/v1.3.7",
+  "status": 200,
+  "length": 325,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"32d5e1ac55cea5e09afb0b969b1c2dee2a239b946ab3d09e76c25b6f826b43ce\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

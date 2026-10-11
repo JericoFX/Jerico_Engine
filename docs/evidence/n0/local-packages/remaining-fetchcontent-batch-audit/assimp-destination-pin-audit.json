@@ -1,0 +1,47 @@
+{
+  "name": "assimp",
+  "repository": "assimp/assimp",
+  "sourceURL": "https://github.com/assimp/assimp/archive/e0b52347c6e52de2827ec957a9ebf00ce3c54f79.tar.gz",
+  "directArchiveURL": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+  "expectedArchiveSHA256": "00e4bf0b9d9d8e9b346fa3dd859c3ce5f3438451822d5933c07f65a76fc04745",
+  "expectedGitCommit": "e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+  "sourceHEADs": [
+    {
+      "method": "HEAD",
+      "url": "https://github.com/assimp/assimp/archive/e0b52347c6e52de2827ec957a9ebf00ce3c54f79.tar.gz",
+      "status": 302,
+      "length": 0,
+      "contentType": "text/html; charset=utf-8",
+      "etag": "",
+      "location": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+      "authorization": false,
+      "automaticRedirects": false,
+      "cookies": false
+    },
+    {
+      "method": "HEAD",
+      "url": "https://codeload.github.com/assimp/assimp/tar.gz/e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+      "status": 200,
+      "length": null,
+      "contentType": "application/x-gzip",
+      "etag": "\"cb182a9161f045be58ccda0db5784289f667684d6d8f7312ec896875be8d85d6\"",
+      "location": null,
+      "authorization": false,
+      "automaticRedirects": false,
+      "cookies": false
+    }
+  ],
+  "commitCorroborated": true,
+  "tagCommit": "e0b52347c6e52de2827ec957a9ebf00ce3c54f79",
+  "tagPinMatched": true,
+  "rootTreeAvailable": true,
+  "rootTree": "7efc8126a3b271da22ed215b3f1767c2d34e6671",
+  "archiveAcquired": false,
+  "archiveHashVerified": false,
+  "licenseDeclared": "Custom BSD-3-Clause",
+  "wrapper": "Code/Tools/SceneAPI/SDKWrapper/3rdParty/Findassimp.cmake",
+  "wrapperSHA256": "0c20f26b27ac8ca5f100ee15f34970242bc54eda658b50c41a68b2a28cff7f17",
+  "consumer": "Code/Tools/SceneAPI/SDKWrapper/CMakeLists.txt:19",
+  "noAddSubdir": false,
+  "scope": "Actual Root48 first fatal; static USD importer ON, ZLIB external, tools/tests/shared/Hunter/install OFF; original tinyusd-include.patch requires private source"
+}

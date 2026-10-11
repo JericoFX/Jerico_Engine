@@ -1,0 +1,22 @@
+[
+  {
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h",
+    "sha256": "AD55ABC619D162809C1F0033780D171AF4150646ED7EBC0A889E9908E230A7A3",
+    "bytes": 2066
+  },
+  {
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+    "sha256": "96C8DE7F7294E1AB5C159E88801F906020D4B712B43CA06E843D8E78BBCD5D21",
+    "bytes": 13212
+  },
+  {
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake",
+    "sha256": "ED81A44EF5FDEE6CA97430975B8B1864322706F864950B3CC573E607170F932D",
+    "bytes": 1235
+  },
+  {
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+    "sha256": "0159D7A1DCAC0403408324AC32AF68063576FF32F32293D7EA6680FEC2A641E4",
+    "bytes": 3123
+  }
+]

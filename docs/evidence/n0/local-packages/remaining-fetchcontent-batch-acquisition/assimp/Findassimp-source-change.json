@@ -1,0 +1,11 @@
+{
+  "source": "F:/JericoEngine/JericoEngine/Code/Tools/SceneAPI/SDKWrapper/3rdParty/Findassimp.cmake",
+  "beforeSHA256": "0c20f26b27ac8ca5f100ee15f34970242bc54eda658b50c41a68b2a28cff7f17",
+  "afterSHA256": "5834d8a3325179b0066891eab51e06243f7a0400c0bcaee8ed1b24e20f369933",
+  "beforeBytes": 6581,
+  "afterBytes": 6773,
+  "inverseByteExact": true,
+  "originalEOL": "CRLF",
+  "scope": "Five added lines inside block before FetchContent_MakeAvailable; three normal local variables; no global/cache or flags/targets/pins changes",
+  "nativeStatus": "UNVERIFIED"
+}

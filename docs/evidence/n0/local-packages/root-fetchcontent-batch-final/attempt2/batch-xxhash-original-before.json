@@ -1,0 +1,442 @@
+{
+  "name": "batch-xxhash-original-before",
+  "path": "F:\\JericoEngine\\Dependencies\\xxhash-0.8.3",
+  "fileCount": 87,
+  "files": [
+    {
+      "relativePath": ".gitattributes",
+      "bytes": 167,
+      "sha256": "dd394337fc8104fc727ab97b979c84230ab2098bd4ce3d122191105fc8da501f"
+    },
+    {
+      "relativePath": ".gitignore",
+      "bytes": 659,
+      "sha256": "974bb9f880ce2b3fea9914cffb4e341082bcad4ae1e6211cb7111b40c4abd5a5"
+    },
+    {
+      "relativePath": "appveyor.yml",
+      "bytes": 3682,
+      "sha256": "a54f0800917f548629125af963b2685de375b7021d45a87b3e4c70142de23307"
+    },
+    {
+      "relativePath": "CHANGELOG",
+      "bytes": 6296,
+      "sha256": "19629e01c9ea61b55db79eef166869cbe4e62eb5c4e6ce9b1a251e5b9d0c0975"
+    },
+    {
+      "relativePath": "clib.json",
+      "bytes": 255,
+      "sha256": "4b40cc2f005a8e48db9bb9b79ed821c19de3e35e3208722ad093d76322008dcc"
+    },
+    {
+      "relativePath": "Doxyfile",
+      "bytes": 2119,
+      "sha256": "cce5cc9532abcae1f863cdd77528441f6caf12dbdcd00c67763f7cb55bb64dcf"
+    },
+    {
+      "relativePath": "Doxyfile-internal",
+      "bytes": 2117,
+      "sha256": "217ed64b3c55c0a9b8210a06be4b4b008ea2257c61601ce97ed145c663841103"
+    },
+    {
+      "relativePath": "libxxhash.pc.in",
+      "bytes": 410,
+      "sha256": "93ffcce29132f7fbd1e6bf5e20cda47697b1321873937b515eda52b6b0b9499c"
+    },
+    {
+      "relativePath": "LICENSE",
+      "bytes": 1389,
+      "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+    },
+    {
+      "relativePath": "Makefile",
+      "bytes": 26155,
+      "sha256": "129e68a5e7f207a71eb163afb84d0aad7853700cd7b4f1208d9129cb9cbb3fd1"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 17299,
+      "sha256": "750a69246094fb9db7fe857cc81d1e9a95e30e93b0d534e461c1c762061081f1"
+    },
+    {
+      "relativePath": "SECURITY.md",
+      "bytes": 688,
+      "sha256": "9332581e7551a9a4a16c34eb877c1b1485aeaf9b93ec13b080f89ae843202572"
+    },
+    {
+      "relativePath": "xxh_x86dispatch.c",
+      "bytes": 32121,
+      "sha256": "5ebb8caa74c8503826d1e4504e5c614d9fe21169edd0f4032c4771edb3d67e74"
+    },
+    {
+      "relativePath": "xxh_x86dispatch.h",
+      "bytes": 4058,
+      "sha256": "ac82561df1d457ea4c8feb17f9df2d53ecf7d99b36b3d2c94cd0bb248e328825"
+    },
+    {
+      "relativePath": "xxh3.h",
+      "bytes": 2394,
+      "sha256": "a927ee0e6e0800835baed52b16bc981ec39f46287271a1a3f77c22cc48634430"
+    },
+    {
+      "relativePath": "xxhash.c",
+      "bytes": 1855,
+      "sha256": "5c3591fe6e6c86a619eb26760e9520e37a6fd5152882ab5ad93f912e2a855966"
+    },
+    {
+      "relativePath": "xxhash.h",
+      "bytes": 268319,
+      "sha256": "17973c0dc49d9854ca26caa191f0e12f7a424b68858d9a78de3860d959d85e4b"
+    },
+    {
+      "relativePath": ".github\\dependabot.yml",
+      "bytes": 249,
+      "sha256": "37504f1b2dbd9b0e7dad8b99a661de8759427f2d02dc297d1c5d80bc34fbf4ae"
+    },
+    {
+      "relativePath": ".github\\workflows\\ci.yml",
+      "bytes": 29456,
+      "sha256": "bbc9cb59a4cb53559f5aa036470427a8274e0ed3147ecbeff8e7c59a039d20b0"
+    },
+    {
+      "relativePath": ".github\\workflows\\scorecard.yml",
+      "bytes": 2978,
+      "sha256": "df5da4abfe055ef9b519a9388afbe9b70d6bb118da34e5f44132dcea359bcf36"
+    },
+    {
+      "relativePath": "cli\\COPYING",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "relativePath": "cli\\README.md",
+      "bytes": 238,
+      "sha256": "8ab8925c399596dcb5a51a448a9a1fc117c4adabeede392a25aaaa6d034c9cac"
+    },
+    {
+      "relativePath": "cli\\xsum_arch.c",
+      "bytes": 1804,
+      "sha256": "75bc1cf1483bb7b88e2db18ee807cd71ffa1cd602ebb58ba1f29ceb2b1911a69"
+    },
+    {
+      "relativePath": "cli\\xsum_arch.h",
+      "bytes": 6284,
+      "sha256": "3581c430ce821ed89473dca19265c463b4316bd4d1f6426989966bac765f92d8"
+    },
+    {
+      "relativePath": "cli\\xsum_bench.c",
+      "bytes": 16957,
+      "sha256": "904c5252c03aed5cbe8b15a72048648b4c7c17fbbe92779178ee3359bb9d012d"
+    },
+    {
+      "relativePath": "cli\\xsum_bench.h",
+      "bytes": 1505,
+      "sha256": "e1779a83edf19f8b601652700f5b8c83ba1f8c4a32d899f83f4e2a8ba4f06a08"
+    },
+    {
+      "relativePath": "cli\\xsum_config.h",
+      "bytes": 6029,
+      "sha256": "a155cfebfcb77cfe061b41acd819bc3545f433fed5e4a125f40b6ffac989c518"
+    },
+    {
+      "relativePath": "cli\\xsum_os_specific.c",
+      "bytes": 15801,
+      "sha256": "cf1d3256d80ca96b33eda18599cb13cc59541af3ef8394920cfad207971b7c10"
+    },
+    {
+      "relativePath": "cli\\xsum_os_specific.h",
+      "bytes": 2410,
+      "sha256": "d388f61bc375add6a91e97f4e2f8e5cd9b4e41f1f2d3d14f606b7374178f3fc3"
+    },
+    {
+      "relativePath": "cli\\xsum_output.c",
+      "bytes": 1891,
+      "sha256": "c21a735d1c136acd028a0986e3e218f0ac4fdd1f39e03710c6b214fd8cb09383"
+    },
+    {
+      "relativePath": "cli\\xsum_output.h",
+      "bytes": 1697,
+      "sha256": "72afce7c686580b2fc55d678ad5b27b0caf0a36bb8d3a0c95743dbcf34457911"
+    },
+    {
+      "relativePath": "cli\\xsum_sanity_check.c",
+      "bytes": 29677,
+      "sha256": "f1cf719abcd194161e0d812fa51083f6d1406596ceb65955aba97e3d96a0561d"
+    },
+    {
+      "relativePath": "cli\\xsum_sanity_check.h",
+      "bytes": 1729,
+      "sha256": "fe458c767cbf2aa1bc45b3c5cdf2b4a89a711c748ab3ca3507b855235be8eb74"
+    },
+    {
+      "relativePath": "cli\\xxhsum.1",
+      "bytes": 4846,
+      "sha256": "0be3f6c23d94c765a09af9d61ed305fcf4705a18da7f1a4e7b2c5b12cb50f481"
+    },
+    {
+      "relativePath": "cli\\xxhsum.1.md",
+      "bytes": 5324,
+      "sha256": "d9d9ebcb04bdb1f190a022f95fa65346a8113242aa00bc9e239ef0f77a60bbe2"
+    },
+    {
+      "relativePath": "cli\\xxhsum.c",
+      "bytes": 59413,
+      "sha256": "fd26c92d84f7e9f71ca25eab046a4da8ded830375dcc680f87803b020837a4d5"
+    },
+    {
+      "relativePath": "cli\\.tipi\\deps",
+      "bytes": 30,
+      "sha256": "1de8cde77901923deaa6d8a5cbb8cea9e593d535889dc3c9d45d2b121f8c11e5"
+    },
+    {
+      "relativePath": "cli\\.tipi\\opts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "cmake_unofficial\\.gitignore",
+      "bytes": 116,
+      "sha256": "51a9a395b389f84e618beba03b6b64e3cd155864acf96ffa3a0909609d80ba43"
+    },
+    {
+      "relativePath": "cmake_unofficial\\CMakeLists.txt",
+      "bytes": 7737,
+      "sha256": "f77792382a0cef2ed1746e702a1494a721487a1f132b568bd4c448fe80244b62"
+    },
+    {
+      "relativePath": "cmake_unofficial\\JoinPaths.cmake",
+      "bytes": 817,
+      "sha256": "794b0d8fa62a3b798c7df12d50114580d1a47a234bfb6b4d83092eb646a6ecc4"
+    },
+    {
+      "relativePath": "cmake_unofficial\\README.md",
+      "bytes": 1207,
+      "sha256": "b96b36ee579a21b0345afce457b873302b909f501a24d4a151b8637a6f3abe71"
+    },
+    {
+      "relativePath": "cmake_unofficial\\xxHashConfig.cmake.in",
+      "bytes": 72,
+      "sha256": "5a0b912c25fa75cea1845c0083b9ad58c867cf764e30ba6becfad6ef576c5f08"
+    },
+    {
+      "relativePath": "doc\\README.md",
+      "bytes": 413,
+      "sha256": "c83f006d355c25c160df54a1981bda1bb08374da2efc6b6c1296d7a829189dda"
+    },
+    {
+      "relativePath": "doc\\xxhash_spec.md",
+      "bytes": 35240,
+      "sha256": "61c47af338b2feefcc7621700ef6b941bcf9b1dd33899c503f68cb797e7ef333"
+    },
+    {
+      "relativePath": "doc\\xxhash.cry",
+      "bytes": 7190,
+      "sha256": "0a221e49377b1f49d73f6bd94ab2efd1cc505f347edc383936867a6ba831cf26"
+    },
+    {
+      "relativePath": "fuzz\\fuzzer.c",
+      "bytes": 261,
+      "sha256": "79d1753fd335c90076a2c75b83fd8f8fdbfe850cef45cbb438e58e6b8c9cba4c"
+    },
+    {
+      "relativePath": "tests\\cli-comment-line.sh",
+      "bytes": 815,
+      "sha256": "29d4c63340454371cdc18029fae8c286e8eecee780b0a80ce20f75f74e479d6e"
+    },
+    {
+      "relativePath": "tests\\cli-ignore-missing.sh",
+      "bytes": 1130,
+      "sha256": "7b9005e966296442a37fbb6b7b1a49b768b4efdc54206815a8fbd7373f38f752"
+    },
+    {
+      "relativePath": "tests\\filename-escape.sh",
+      "bytes": 641,
+      "sha256": "f68f437542f08cf162ad2369c96a33ae24845f4a88f32e3184148c5c50b80770"
+    },
+    {
+      "relativePath": "tests\\generate_unicode_test.c",
+      "bytes": 6245,
+      "sha256": "1829422db6c67ce7958068768a0d5309317764effbf543367feb9e5f057cac6a"
+    },
+    {
+      "relativePath": "tests\\Makefile",
+      "bytes": 4018,
+      "sha256": "d58d589eb1546e590f2187610d5d6011405d0d92c7e48b7b87c403ce2adaf7b7"
+    },
+    {
+      "relativePath": "tests\\multiInclude.c",
+      "bytes": 2390,
+      "sha256": "47b3e72692d30f0a78d48f2a1ce38e3d3248673d6ede42628662a9214c492330"
+    },
+    {
+      "relativePath": "tests\\ppc_define.c",
+      "bytes": 1775,
+      "sha256": "5166bd847dd425980f05615fd0850e5296b1fd088edd592f49867dec856c49a3"
+    },
+    {
+      "relativePath": "tests\\sanity_test_vectors_generator.c",
+      "bytes": 14782,
+      "sha256": "c577e47a20bbc2e5a57915276364af0232320373bc4bdcef81954aceea3b55f2"
+    },
+    {
+      "relativePath": "tests\\sanity_test_vectors.h",
+      "bytes": 4587988,
+      "sha256": "e81b5f30744714293c511110b0b6f538516d9432153d8a1cb7dc0d8a73589af7"
+    },
+    {
+      "relativePath": "tests\\sanity_test.c",
+      "bytes": 27048,
+      "sha256": "e2907110658d9248742a80b0e702312c66555bd6fe781fe1979a5a64acc25469"
+    },
+    {
+      "relativePath": "tests\\unicode_lint.sh",
+      "bytes": 1017,
+      "sha256": "e1552f60f7d4b117f0e7c022f9dda5f0cf317f86e832817cf224491e63029c0e"
+    },
+    {
+      "relativePath": "tests\\bench\\.clang_complete",
+      "bytes": 8,
+      "sha256": "84b92f6c29732d6093990d932902990d1656be71a8dcca83419f5dba5aaa4708"
+    },
+    {
+      "relativePath": "tests\\bench\\.gitignore",
+      "bytes": 111,
+      "sha256": "d5fba126934e8c9dc7e5f2d38c5e063162f90646f368ee7feea3759c67763b5f"
+    },
+    {
+      "relativePath": "tests\\bench\\benchfn.c",
+      "bytes": 9711,
+      "sha256": "465b16349b560f95f73343bd055767e1aef5a9d2b913ecf49842967e22878187"
+    },
+    {
+      "relativePath": "tests\\bench\\benchfn.h",
+      "bytes": 8724,
+      "sha256": "b81c8ae8e61b1b7e5aeb473b92dac0650943cdfccc064eb9064099c699b3d521"
+    },
+    {
+      "relativePath": "tests\\bench\\benchHash.c",
+      "bytes": 5316,
+      "sha256": "9d3fc60a9f6d073218bb4156a7ed6f33515c47ce7d578ff98328de6b94a1c46e"
+    },
+    {
+      "relativePath": "tests\\bench\\benchHash.h",
+      "bytes": 2015,
+      "sha256": "1f83751e65a258dbdfee857bb2d7920a026d5d40bfb415688e92712b40c81551"
+    },
+    {
+      "relativePath": "tests\\bench\\bhDisplay.c",
+      "bytes": 5902,
+      "sha256": "bc32cba351e7ae51d1b9b75d87d4ff21293ea7a2661234fc2a6e72109df42f06"
+    },
+    {
+      "relativePath": "tests\\bench\\bhDisplay.h",
+      "bytes": 1956,
+      "sha256": "22ee5e3fd745e320945af4d972770411ee77bae450676da1fec6ba3b148b691d"
+    },
+    {
+      "relativePath": "tests\\bench\\hashes.h",
+      "bytes": 3459,
+      "sha256": "7f809594989809332d6bb7032ea945476a90c90dacd0f689a2b89fbe35edc294"
+    },
+    {
+      "relativePath": "tests\\bench\\LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "relativePath": "tests\\bench\\main.c",
+      "bytes": 7437,
+      "sha256": "72c91d6b060b3d60bdbf867cd06a6ae4d39d76ab6df694a2664748ef2f86f810"
+    },
+    {
+      "relativePath": "tests\\bench\\Makefile",
+      "bytes": 2272,
+      "sha256": "5cf7d15753e2797580a952966a9f74a5296e6e4283c5c1305e8afce40e5c22dc"
+    },
+    {
+      "relativePath": "tests\\bench\\timefn.c",
+      "bytes": 4898,
+      "sha256": "f61424f3f11089245fd02e55f036dc0079e33647c25713506331b34915039ab7"
+    },
+    {
+      "relativePath": "tests\\bench\\timefn.h",
+      "bytes": 2560,
+      "sha256": "880108d9514d9a3b4318ef38f2227ff6a1221f7f92590912d531b7e1cf058ac7"
+    },
+    {
+      "relativePath": "tests\\collisions\\.gitignore",
+      "bytes": 32,
+      "sha256": "b44f1f46a697c4055f00b331d33b1c99b51399c2d7977e270001e60f06327060"
+    },
+    {
+      "relativePath": "tests\\collisions\\hashes.h",
+      "bytes": 3018,
+      "sha256": "31d8d00987a709bc766d7faebe56a7c46cd96bd9fafb1bb5c749765dd839c790"
+    },
+    {
+      "relativePath": "tests\\collisions\\LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "relativePath": "tests\\collisions\\main.c",
+      "bytes": 37859,
+      "sha256": "42896835bb986438b869cad58d1b3128972333b062b8431b953455c13a910101"
+    },
+    {
+      "relativePath": "tests\\collisions\\Makefile",
+      "bytes": 2166,
+      "sha256": "dd0a27da33a5c29f0301807b94b2942183488fc1ba0ae7110c76f6698c0ea1d1"
+    },
+    {
+      "relativePath": "tests\\collisions\\pool.c",
+      "bytes": 10475,
+      "sha256": "76cfeb573d28f525a5699eccda9e767248daea95f7258139527fae0c994d7122"
+    },
+    {
+      "relativePath": "tests\\collisions\\pool.h",
+      "bytes": 2340,
+      "sha256": "b306518cf5bc4aaf16d14d100f0ebcb70345e0863a437b0755cb778a02673f0f"
+    },
+    {
+      "relativePath": "tests\\collisions\\README.md",
+      "bytes": 4813,
+      "sha256": "078f0d5df59b1d937e35ec795bd18a82853a490d0901288219ff8314ae49b6b7"
+    },
+    {
+      "relativePath": "tests\\collisions\\sort.cc",
+      "bytes": 1785,
+      "sha256": "cd3be6a40afc1e457a13ff7f133964e2d4bb513006a726afc1eadb1bd64801fc"
+    },
+    {
+      "relativePath": "tests\\collisions\\sort.hh",
+      "bytes": 1294,
+      "sha256": "06c0824e4615aac86c10fd16cc50b5402f13d065ce146591f2b5396cc9fd14d5"
+    },
+    {
+      "relativePath": "tests\\collisions\\threading.c",
+      "bytes": 1867,
+      "sha256": "8dbb44241cdc874fdb2d7192eb79cb97d1fa31b2bf26bc56eaa84239dcfd4ff3"
+    },
+    {
+      "relativePath": "tests\\collisions\\threading.h",
+      "bytes": 3912,
+      "sha256": "0dffb280b3ce38e081d32a97fb6f908539df6b24d33d2f7933620bcf7a263f80"
+    },
+    {
+      "relativePath": "tests\\collisions\\allcodecs\\dummy.c",
+      "bytes": 1266,
+      "sha256": "d068b8dff15513c93372e82b9ceeef70fe380232a0dbcf0482daa4a7e794083f"
+    },
+    {
+      "relativePath": "tests\\collisions\\allcodecs\\dummy.h",
+      "bytes": 1299,
+      "sha256": "f36788a13d2cd6bb2c903598393c09339df474cdca6b0829a3cd67d7c0e11d53"
+    },
+    {
+      "relativePath": "tests\\collisions\\allcodecs\\README.md",
+      "bytes": 50,
+      "sha256": "dc4b8e6cfcf56e8a3b8dac74417d258a015fdd367acc4b6953ee7db6bbf01438"
+    }
+  ]
+}

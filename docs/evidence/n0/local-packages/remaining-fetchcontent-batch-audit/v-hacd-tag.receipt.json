@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/kmammou/v-hacd/git/ref/tags/v4.1.0",
+  "status": 200,
+  "length": 337,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"63cc3dc4dfc292766cc712c6b9fb8fb63dbe95fa97256f7a010f609c27621b7e\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

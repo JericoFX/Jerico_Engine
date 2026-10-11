@@ -1,0 +1,1075 @@
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h
+@@ -39,6 +39,8 @@
+ 
+         void GenerateStatisticView();
+ 
++        void GenerateShaderVariantList();
++
+         void ShowContextMenu(const QPoint& pos);
+ 
+         void ErrorMessageBoxesForDocumentVerification(const DocumentVerificationResult& verification);
+@@ -48,5 +50,6 @@
+ 
+         AtomToolsFramework::AtomToolsDocumentInspector* m_documentInspector = {};
+         QWidget* m_statisticView = nullptr;
++        bool m_generationInProgress = false;
+     };
+ } // namespace ShaderManagementConsole
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp
+@@ -9,7 +9,9 @@
+ #include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
+ #include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
+ #include <Atom/RPI.Edit/Common/AssetUtils.h>
++#include <Atom/RPI.Edit/Common/JsonUtils.h>
+ #include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
++#include <AtomToolsFramework/Debug/TraceRecorder.h>
+ #include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
+ #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
+ #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
+@@ -17,6 +19,7 @@
+ #include <AzCore/Utils/Utils.h>
+ 
+ #include <Data/ShaderVariantStatisticData.h>
++#include <Data/ShaderVariantListGenerator.h>
+ #include <Document/ShaderManagementConsoleDocumentRequestBus.h>
+ #include <Window/ShaderManagementConsoleWindow.h>
+ #include <Window/ShaderManagementConsoleStatisticView.h>
+@@ -29,6 +32,11 @@
+ #include <QWindow>
+ #include <QMessageBox>
+ #include <QMenuBar>
++#include <QCoreApplication>
++#include <QFileInfo>
++#include <QScopedValueRollback>
++#include <AzCore/std/algorithm.h>
++#include <limits>
+ 
+ namespace ShaderManagementConsole
+ {
+@@ -151,6 +159,10 @@
+     {
+         Base::CreateMenus(menuBar);
+ 
++        QAction* generateAction = new QAction(tr("Generate Shader Variant List..."), m_menuFile);
++        QObject::connect(generateAction, &QAction::triggered, this, &ShaderManagementConsoleWindow::GenerateShaderVariantList);
++        m_menuFile->insertAction(m_menuFile->actions().back(), generateAction);
++
+         QAction* verifyAction = new QAction(tr("Verify Variantlist invariants"), m_menuFile);
+         QObject::connect(verifyAction, &QAction::triggered, this, [this](){
+             DocumentVerificationResult verification;
+@@ -189,6 +201,234 @@
+         m_menuFile->insertAction(m_menuFile->actions().back(), action);
+     }
+ 
++    void ShaderManagementConsoleWindow::GenerateShaderVariantList()
++    {
++        if (m_generationInProgress)
++        {
++            return;
++        }
++        QScopedValueRollback<bool> generationGuard(m_generationInProgress, true);
++        const QString selectedPath = QFileDialog::getOpenFileName(this, tr("Select shader"), {}, tr("Shader (*.shader)"));
++        if (selectedPath.isEmpty())
++        {
++            return;
++        }
++        const QFileInfo selectedFile(selectedPath);
++        if (!selectedFile.isFile() || selectedFile.suffix() != AZ::RPI::ShaderSourceData::Extension)
++        {
++            QMessageBox::critical(this, tr("Generation failed"), tr("Select an existing .shader file."));
++            return;
++        }
++        const AZStd::string shaderPath = selectedFile.absoluteFilePath().toUtf8().constData();
++        const auto fail = [this](const AZStd::string& message)
++        {
++            QMessageBox::critical(this, tr("Generation failed"), QString::fromUtf8(message.c_str()));
++        };
++        if (!ShaderManagementConsoleRequestBus::HasHandlers())
++        {
++            fail("The shader/material asset service is unavailable.");
++            return;
++        }
++        AtomToolsFramework::TraceRecorder assetTrace;
++        AZ::Data::AssetInfo sourceInfo;
++        ShaderManagementConsoleRequestBus::BroadcastResult(
++            sourceInfo, &ShaderManagementConsoleRequestBus::Events::GetSourceAssetInfo, shaderPath);
++        const auto shader = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(shaderPath);
++        if (!sourceInfo.m_assetId.IsValid() || sourceInfo.m_relativePath.empty() || !shader.IsSuccess() ||
++            assetTrace.GetErrorCount(true) != 0)
++        {
++            fail("The selected shader must have a successfully built shader asset.\n" + assetTrace.GetDump());
++            return;
++        }
++        const auto* layout = shader.GetValue()->GetShaderOptionGroupLayout();
++        if (!layout || !layout->IsFinalized())
++        {
++            fail("The selected shader does not have a finalized option layout.");
++            return;
++        }
++
++        AZ::RPI::ShaderOptionValuesSourceData systemOptions;
++        AZ::IO::Path systemPath(shaderPath);
++        systemPath.ReplaceExtension("systemoptions");
++        if (QFileInfo(QString::fromUtf8(systemPath.c_str())).exists() &&
++            !AZ::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
++        {
++            fail("The shader's .systemoptions file could not be read.");
++            return;
++        }
++        QProgressDialog progress(tr("Validate shader options..."), tr("Cancel"), 0, 1, this);
++        progress.setWindowModality(Qt::WindowModal);
++        progress.setAutoClose(false);
++        progress.setAutoReset(false);
++        progress.setMinimumDuration(0);
++        const auto isCancelled = [&progress]
++        {
++            QCoreApplication::processEvents();
++            return progress.wasCanceled();
++        };
++        // Capture the absolute-path system-only baseline expected when the selected shader is opened.
++        const auto baseline = JE::ShaderVariants::Generate(shaderPath, *layout, {}, systemOptions, isCancelled);
++        if (!baseline.IsSuccess())
++        {
++            progress.hide();
++            if (baseline.GetError().m_reason != JE::ShaderVariants::FailureReason::Cancelled)
++            {
++                fail(baseline.GetError().m_message);
++            }
++            return;
++        }
++
++        AZStd::vector<AZ::Data::AssetId> materialIds;
++        ShaderManagementConsoleRequestBus::BroadcastResult(
++            materialIds, &ShaderManagementConsoleRequestBus::Events::FindMaterialAssetsUsingShader, sourceInfo.m_relativePath);
++        if (assetTrace.GetErrorCount(true) != 0 || materialIds.size() > static_cast<size_t>(std::numeric_limits<int>::max()))
++        {
++            progress.hide();
++            fail("Material dependencies could not be collected.\n" + assetTrace.GetDump());
++            return;
++        }
++        AZStd::sort(materialIds.begin(), materialIds.end(), [](const auto& lhs, const auto& rhs)
++        {
++            return lhs.ToFixedString() < rhs.ToFixedString();
++        });
++        materialIds.erase(AZStd::unique(materialIds.begin(), materialIds.end()), materialIds.end());
++        progress.setLabelText(tr("Gather shader variants from materials..."));
++        progress.setRange(0, AZStd::max(1, static_cast<int>(materialIds.size())));
++
++        AZStd::vector<JE::ShaderVariants::MaterialVariant> materials;
++        for (size_t index = 0; index < materialIds.size(); ++index)
++        {
++            progress.setValue(static_cast<int>(index));
++            if (isCancelled())
++            {
++                return;
++            }
++            AtomToolsFramework::TraceRecorder materialTrace;
++            AZStd::vector<AZ::RPI::ShaderCollection::Item> items;
++            ShaderManagementConsoleRequestBus::BroadcastResult(
++                items, &ShaderManagementConsoleRequestBus::Events::GetMaterialInstanceShaderItems, materialIds[index]);
++            if (materialTrace.GetErrorCount(true) != 0)
++            {
++                progress.hide();
++                fail("A dependent material could not be loaded.\n" + materialTrace.GetDump());
++                return;
++            }
++            for (const auto& item : items)
++            {
++                if (item.GetShaderAssetId() != shader.GetValue().GetId() || item.GetShaderVariantId().IsEmpty())
++                {
++                    continue;
++                }
++                JE::ShaderVariants::MaterialVariant material{item.GetShaderOptionGroup(), {}};
++                if (!material.m_options.GetShaderOptionLayout())
++                {
++                    progress.hide();
++                    fail("A dependent material has no shader option layout.");
++                    return;
++                }
++                for (const auto& descriptor : material.m_options.GetShaderOptionDescriptors())
++                {
++                    if (item.MaterialOwnsShaderOption(descriptor.GetName()))
++                    {
++                        material.m_materialOwnedOptions.insert(descriptor.GetName());
++                    }
++                }
++                materials.push_back(AZStd::move(material));
++            }
++        }
++        progress.setLabelText(tr("Expand and validate shader variants..."));
++        auto generated = JE::ShaderVariants::Generate(sourceInfo.m_relativePath, *layout, materials, systemOptions, isCancelled);
++        if (!generated.IsSuccess())
++        {
++            progress.hide();
++            if (generated.GetError().m_reason != JE::ShaderVariants::FailureReason::Cancelled)
++            {
++                fail(generated.GetError().m_message);
++            }
++            return;
++        }
++        if (isCancelled())
++        {
++            return;
++        }
++        progress.hide();
++
++        const auto matchesData = [](const AZ::RPI::ShaderVariantListSourceData& actual, const AZ::RPI::ShaderVariantListSourceData& expected)
++        {
++            if (actual.m_shaderFilePath != expected.m_shaderFilePath || actual.m_materialOptionsHint != expected.m_materialOptionsHint ||
++                actual.m_shaderVariants.size() != expected.m_shaderVariants.size())
++            {
++                return false;
++            }
++            for (size_t index = 0; index < expected.m_shaderVariants.size(); ++index)
++            {
++                const auto& actualVariant = actual.m_shaderVariants[index];
++                const auto& expectedVariant = expected.m_shaderVariants[index];
++                if (actualVariant.m_stableId != expectedVariant.m_stableId || actualVariant.m_options != expectedVariant.m_options ||
++                    actualVariant.m_enableRegisterAnalysis != expectedVariant.m_enableRegisterAnalysis || actualVariant.m_asic != expectedVariant.m_asic)
++                {
++                    return false;
++                }
++            }
++            return true;
++        };
++
++        // Opening the shader keeps the absolute source path for existing Save/SaveAs behavior. No file is written here.
++        AtomToolsFramework::TraceRecorder documentTrace;
++        AZ::Uuid documentId;
++        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(
++            documentId, m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::CreateDocumentFromFilePath,
++            shaderPath, AZStd::string{});
++        const auto destroy = [&]
++        {
++            if (!documentId.IsNull())
++            {
++                AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
++                    m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::DestroyDocument, documentId);
++            }
++        };
++        AZ::RPI::ShaderVariantListSourceData openedBaseline;
++        if (!documentId.IsNull())
++        {
++            ShaderManagementConsoleDocumentRequestBus::EventResult(
++                openedBaseline, documentId, &ShaderManagementConsoleDocumentRequestBus::Events::GetShaderVariantListSourceData);
++        }
++        if (documentId.IsNull() || documentTrace.GetErrorCount(true) != 0 || !matchesData(openedBaseline, baseline.GetValue()))
++        {
++            destroy();
++            fail("The shader baseline changed or could not be opened. Generate the list again.\n" + documentTrace.GetDump());
++            return;
++        }
++        bool began = false;
++        if (!documentId.IsNull() && documentTrace.GetErrorCount(true) == 0)
++        {
++            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
++                began, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
++        }
++        if (!began)
++        {
++            destroy();
++            fail("The variant list document could not be created for editing.\n" + documentTrace.GetDump());
++            return;
++        }
++        ShaderManagementConsoleDocumentRequestBus::Event(
++            documentId, &ShaderManagementConsoleDocumentRequestBus::Events::SetShaderVariantListSourceData, generated.GetValue());
++        AZ::RPI::ShaderVariantListSourceData applied;
++        ShaderManagementConsoleDocumentRequestBus::EventResult(
++            applied, documentId, &ShaderManagementConsoleDocumentRequestBus::Events::GetShaderVariantListSourceData);
++        bool ended = false;
++        if (matchesData(applied, generated.GetValue()) && documentTrace.GetErrorCount(true) == 0)
++        {
++            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
++                ended, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
++        }
++        if (!ended || documentTrace.GetErrorCount(true) != 0)
++        {
++            destroy();
++            fail("The variant list edit could not be completed.\n" + documentTrace.GetDump());
++        }
++    }
++
+     void ShaderManagementConsoleWindow::GenerateStatisticView()
+     {
+         AZStd::vector<AZ::Data::AssetId> materialAssetIdList;
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.h
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.h
+@@ -0,0 +1,42 @@
++/*
++ * Copyright (c) Contributors to the Open 3D Engine Project.
++ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
++ * SPDX-License-Identifier: Apache-2.0 OR MIT
++ */
++
++#pragma once
++
++#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
++#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
++#include <AzCore/Outcome/Outcome.h>
++#include <AzCore/std/function/function_template.h>
++
++namespace JE::ShaderVariants
++{
++    // A snapshot of an existing material shader item. Ownership is supplied by MaterialOwnsShaderOption.
++    struct MaterialVariant
++    {
++        AZ::RPI::ShaderOptionGroup m_options;
++        AZStd::unordered_set<AZ::Name> m_materialOwnedOptions;
++    };
++
++    enum class FailureReason
++    {
++        InvalidInput,
++        Cancelled
++    };
++
++    struct Failure
++    {
++        FailureReason m_reason;
++        AZStd::string m_message;
++    };
++
++    // No document or file is changed. An error/cancellation never returns a partial source data set.
++    AZ::Outcome<AZ::RPI::ShaderVariantListSourceData, Failure> Generate(
++        const AZStd::string& shaderPath,
++        const AZ::RPI::ShaderOptionGroupLayout& layout,
++        const AZStd::vector<MaterialVariant>& materials,
++        const AZ::RPI::ShaderOptionValuesSourceData& systemOptions,
++        const AZStd::function<bool()>& isCancelled = {});
++}
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.cpp
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.cpp
+@@ -0,0 +1,238 @@
++/*
++ * Copyright (c) Contributors to the Open 3D Engine Project.
++ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
++ * SPDX-License-Identifier: Apache-2.0 OR MIT
++ */
++
++#include <Data/ShaderVariantListGenerator.h>
++
++namespace JE::ShaderVariants
++{
++    AZ::Outcome<AZ::RPI::ShaderVariantListSourceData, Failure> Generate(
++        const AZStd::string& shaderPath,
++        const AZ::RPI::ShaderOptionGroupLayout& layout,
++        const AZStd::vector<MaterialVariant>& materials,
++        const AZ::RPI::ShaderOptionValuesSourceData& systemOptions,
++        const AZStd::function<bool()>& isCancelled)
++    {
++        using namespace AZ::RPI;
++        const auto invalid = [](const char* message) { return AZ::Failure(Failure{FailureReason::InvalidInput, message}); };
++        const auto cancelled = [] { return AZ::Failure(Failure{FailureReason::Cancelled, {}}); };
++        const auto poll = [&isCancelled] { return isCancelled && isCancelled(); };
++        if (poll())
++        {
++            return cancelled();
++        }
++        if (shaderPath.empty() || !layout.IsFinalized())
++        {
++            return invalid("The shader path and finalized option layout are required.");
++        }
++
++        const auto& descriptors = layout.GetShaderOptions();
++        for (const auto& descriptor : descriptors)
++        {
++            if (descriptor.GetMinValue().GetIndex() > descriptor.GetMaxValue().GetIndex() ||
++                !descriptor.FindValue(descriptor.GetDefaultValue()).IsValid())
++            {
++                return invalid("A shader option has an invalid range or default value.");
++            }
++        }
++        for (const auto& [name, value] : systemOptions)
++        {
++            const auto index = layout.FindShaderOptionIndex(name);
++            if (!index.IsValid() || (!value.IsEmpty() && !layout.FindValue(index, value).IsValid()))
++            {
++                return invalid("A system option name or value is not defined by the selected shader.");
++            }
++        }
++
++        // ShaderVariantAsset::MakeAssetProductSubId reserves bits [0,16] for stable IDs; zero is the root variant.
++        constexpr size_t MaxVariants = (1u << 17) - 1;
++        ShaderVariantListSourceData result;
++        result.m_shaderFilePath = shaderPath;
++        AZStd::vector<ShaderOptionGroup> groups;
++        AZStd::unordered_set<ShaderVariantId> uniqueGroups;
++        const ConstPtr<ShaderOptionGroupLayout> layoutPtr(&layout);
++
++        for (const auto& material : materials)
++        {
++            if (poll())
++            {
++                return cancelled();
++            }
++            const auto* materialLayout = material.m_options.GetShaderOptionLayout();
++            if (!materialLayout || !materialLayout->IsFinalized() || materialLayout->GetShaderOptions() != descriptors)
++            {
++                return invalid("A material shader option group does not match the selected shader layout.");
++            }
++            for (const auto& name : material.m_materialOwnedOptions)
++            {
++                if (!layout.FindShaderOptionIndex(name).IsValid())
++                {
++                    return invalid("Material ownership refers to an unknown shader option.");
++                }
++            }
++
++            const auto& materialId = material.m_options.GetShaderVariantId();
++            if ((materialId.m_mask & ~layout.GetBitMask()).any())
++            {
++                return invalid("A material option mask includes bits outside the selected shader layout.");
++            }
++
++            ShaderOptionGroup group(layoutPtr);
++            for (const auto& descriptor : descriptors)
++            {
++                const auto& name = descriptor.GetName();
++                const auto optionMask = materialId.m_mask & descriptor.GetBitMask();
++                if (optionMask.any() && optionMask != descriptor.GetBitMask())
++                {
++                    return invalid("A material option mask contains an incomplete descriptor.");
++                }
++                auto value = material.m_options.GetValue(name);
++                if (!value.IsValid())
++                {
++                    continue;
++                }
++                if (value.GetIndex() < descriptor.GetMinValue().GetIndex() ||
++                    value.GetIndex() > descriptor.GetMaxValue().GetIndex() || descriptor.GetValueName(value).IsEmpty())
++                {
++                    return invalid("A material shader option value is outside its descriptor range.");
++                }
++                if (material.m_materialOwnedOptions.count(name) == 0)
++                {
++                    continue;
++                }
++                const auto system = systemOptions.find(name);
++                if (system != systemOptions.end())
++                {
++                    value = descriptor.FindValue(system->second.IsEmpty() ? descriptor.GetDefaultValue() : system->second);
++                }
++                else
++                {
++                    result.m_materialOptionsHint.insert(name);
++                }
++                if (!group.SetValue(name, value))
++                {
++                    return invalid("A material option could not be projected into the shader layout.");
++                }
++            }
++            if (!group.IsEmpty() && uniqueGroups.insert(group.GetShaderVariantId()).second)
++            {
++                if (groups.size() == MaxVariants)
++                {
++                    return invalid("The variant count exceeds the shader asset stable ID range.");
++                }
++                groups.push_back(AZStd::move(group));
++            }
++        }
++
++        // Match the document's existing empty-list initialization, without publishing unchecked system options.
++        if (groups.empty() && !systemOptions.empty())
++        {
++            ShaderOptionGroup group(layoutPtr);
++            for (const auto& [name, value] : systemOptions)
++            {
++                const auto& descriptor = layout.GetShaderOption(layout.FindShaderOptionIndex(name));
++                if (!group.SetValue(name, value.IsEmpty() ? descriptor.GetDefaultValue() : value))
++                {
++                    return invalid("A system option could not be set in the selected shader layout.");
++                }
++            }
++            uniqueGroups.insert(group.GetShaderVariantId());
++            groups.push_back(AZStd::move(group));
++        }
++
++        // Check the full Cartesian size before allocating expansion buffers or assigning stable IDs.
++        size_t total = 0;
++        for (const auto& group : groups)
++        {
++            size_t count = 1;
++            for (const auto& descriptor : descriptors)
++            {
++                const auto system = systemOptions.find(descriptor.GetName());
++                if (system != systemOptions.end() && system->second.IsEmpty() && group.GetValue(descriptor.GetName()).IsValid())
++                {
++                    const uint64_t width = uint64_t(descriptor.GetMaxValue().GetIndex()) - descriptor.GetMinValue().GetIndex() + 1;
++                    if (width > MaxVariants || count > MaxVariants / width)
++                    {
++                        return invalid("System option expansion exceeds the shader asset stable ID range.");
++                    }
++                    count *= static_cast<size_t>(width);
++                }
++            }
++            if (count > MaxVariants - total)
++            {
++                return invalid("The expanded variant count exceeds the shader asset stable ID range.");
++            }
++            total += count;
++        }
++        groups.reserve(total);
++
++        // Descriptor order, then default-first value order, gives reproducible IDs for a fixed material input order.
++        for (const auto& descriptor : descriptors)
++        {
++            const auto system = systemOptions.find(descriptor.GetName());
++            if (system == systemOptions.end() || !system->second.IsEmpty())
++            {
++                continue;
++            }
++            const size_t originalSize = groups.size();
++            for (uint64_t valueIndex = descriptor.GetMinValue().GetIndex(); valueIndex <= descriptor.GetMaxValue().GetIndex(); ++valueIndex)
++            {
++                if (poll())
++                {
++                    return cancelled();
++                }
++                const AZ::Name valueName = descriptor.GetValueName(static_cast<uint32_t>(valueIndex));
++                if (valueName.IsEmpty())
++                {
++                    return invalid("A system option range contains an undefined value.");
++                }
++                if (valueName == descriptor.GetDefaultValue())
++                {
++                    continue;
++                }
++                for (size_t index = 0; index < originalSize; ++index)
++                {
++                    if (poll())
++                    {
++                        return cancelled();
++                    }
++                    if (!groups[index].GetValue(descriptor.GetName()).IsValid())
++                    {
++                        continue;
++                    }
++                    ShaderOptionGroup copy(groups[index]);
++                    if (!copy.SetValue(descriptor.GetName(), valueName))
++                    {
++                        return invalid("A system option value could not be expanded.");
++                    }
++                    if (uniqueGroups.insert(copy.GetShaderVariantId()).second)
++                    {
++                        groups.push_back(AZStd::move(copy));
++                    }
++                }
++            }
++        }
++
++        result.m_shaderVariants.reserve(groups.size());
++        for (const auto& group : groups)
++        {
++            if (poll())
++            {
++                return cancelled();
++            }
++            ShaderOptionValuesSourceData values;
++            for (const auto& descriptor : descriptors)
++            {
++                const auto value = group.GetValue(descriptor.GetName());
++                if (value.IsValid())
++                {
++                    values.emplace(descriptor.GetName(), descriptor.GetValueName(value));
++                }
++            }
++            result.m_shaderVariants.emplace_back(static_cast<AZ::u32>(result.m_shaderVariants.size() + 1), AZStd::move(values));
++        }
++        return AZ::Success(AZStd::move(result));
++    }
++}
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake
+@@ -7,6 +7,8 @@
+ #
+ 
+ set(FILES
++    Source/Data/ShaderVariantListGenerator.cpp
++    Source/Data/ShaderVariantListGenerator.h
+     Source/Data/ShaderVariantStatisticData.cpp
+     Source/Data/ShaderVariantStatisticData.h
+     
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt
+@@ -18,6 +18,17 @@
+     return()
+ endif()
+ 
++if(PAL_TRAIT_BUILD_TESTS_SUPPORTED AND PAL_TRAIT_BUILD_HOST_TOOLS)
++    ly_add_target(
++        NAME ShaderManagementConsole.VariantGenerator.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
++        NAMESPACE Gem
++        FILES_CMAKE Tests/shadervariantgenerator_tests_files.cmake
++        INCLUDE_DIRECTORIES PRIVATE Source
++        BUILD_DEPENDENCIES PRIVATE AZ::AzTest AZ::AzTestShared Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
++    )
++    ly_add_googletest(NAME Gem::ShaderManagementConsole.VariantGenerator.Tests LABELS REQUIRES_tiaf)
++endif()
++
+ ly_add_target(
+     NAME ShaderManagementConsole APPLICATION
+     NAMESPACE Gem
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp
+@@ -0,0 +1,222 @@
++/*
++ * Copyright (c) Contributors to the Open 3D Engine Project.
++ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
++ * SPDX-License-Identifier: Apache-2.0 OR MIT
++ */
++
++#include <Data/ShaderVariantListGenerator.h>
++#include <AzCore/Name/NameDictionary.h>
++#include <AzCore/UnitTest/TestTypes.h>
++#include <AzTest/AzTest.h>
++
++namespace JE::ShaderVariants
++{
++    class ShaderVariantListGeneratorTests : public UnitTest::LeakDetectionFixture
++    {
++    protected:
++        void SetUp() override
++        {
++            AZ::NameDictionary::Create();
++            m_layout = AZ::RPI::ShaderOptionGroupLayout::Create();
++            using namespace AZ::RPI;
++            ASSERT_TRUE(m_layout->AddShaderOption({AZ::Name("A"), ShaderOptionType::Boolean, 0, 0,
++                CreateBoolShaderOptionValues(), AZ::Name("False")}));
++            ASSERT_TRUE(m_layout->AddShaderOption({AZ::Name("B"), ShaderOptionType::Boolean, 1, 1,
++                CreateBoolShaderOptionValues(), AZ::Name("False")}));
++            // Non-first default catches comparing an option-value handle with a value name, or retaining a material value.
++            ASSERT_TRUE(m_layout->AddShaderOption({AZ::Name("System"), ShaderOptionType::Enumeration, 2, 2,
++                CreateEnumShaderOptionValues({"Low", "Medium", "High"}), AZ::Name("Medium")}));
++            m_layout->Finalize();
++        }
++
++        void TearDown() override
++        {
++            m_layout.reset();
++            AZ::NameDictionary::Destroy();
++        }
++
++        MaterialVariant Material(AZStd::initializer_list<AZStd::pair<const char*, const char*>> values)
++        {
++            MaterialVariant result{AZ::RPI::ShaderOptionGroup(m_layout), {}};
++            for (const auto& [name, value] : values)
++            {
++                EXPECT_TRUE(result.m_options.SetValue(AZ::Name(name), AZ::Name(value)));
++                result.m_materialOwnedOptions.insert(AZ::Name(name));
++            }
++            return result;
++        }
++
++        AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout> m_layout;
++    };
++
++    TEST_F(ShaderVariantListGeneratorTests, NoVariantsReturnsEmptyListAndHints)
++    {
++        auto result = Generate("fixture.shader", *m_layout, {}, {});
++        ASSERT_TRUE(result.IsSuccess());
++        EXPECT_EQ(result.GetValue().m_shaderFilePath, "fixture.shader");
++        EXPECT_TRUE(result.GetValue().m_shaderVariants.empty());
++        EXPECT_TRUE(result.GetValue().m_materialOptionsHint.empty());
++        auto root = Material({});
++        auto rootResult = Generate("fixture.shader", *m_layout, {root}, {});
++        ASSERT_TRUE(rootResult.IsSuccess());
++        EXPECT_TRUE(rootResult.GetValue().m_shaderVariants.empty());
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, HintsAreUnionOfAllMaterialsAndStableIdsStartAtOne)
++    {
++        auto result = Generate("fixture.shader", *m_layout, {Material({{"A", "True"}}), Material({{"B", "True"}})}, {});
++        ASSERT_TRUE(result.IsSuccess());
++        const auto& data = result.GetValue();
++        ASSERT_EQ(data.m_shaderVariants.size(), 2);
++        EXPECT_EQ(data.m_shaderVariants[0].m_stableId, 1);
++        EXPECT_EQ(data.m_shaderVariants[1].m_stableId, 2);
++        EXPECT_EQ(data.m_shaderVariants[0].m_options.at(AZ::Name("A")), AZ::Name("True"));
++        EXPECT_EQ(data.m_shaderVariants[1].m_options.at(AZ::Name("B")), AZ::Name("True"));
++        EXPECT_EQ(data.m_materialOptionsHint.size(), 2);
++        EXPECT_EQ(data.m_materialOptionsHint.count(AZ::Name("A")), 1);
++        EXPECT_EQ(data.m_materialOptionsHint.count(AZ::Name("B")), 1);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, DeduplicatesAfterNonMaterialOptionsAreCleared)
++    {
++        auto first = Material({{"A", "True"}, {"B", "False"}});
++        auto second = Material({{"A", "True"}, {"B", "True"}});
++        first.m_materialOwnedOptions.erase(AZ::Name("B"));
++        second.m_materialOwnedOptions.erase(AZ::Name("B"));
++        auto result = Generate("fixture.shader", *m_layout, {first, second, first}, {});
++        ASSERT_TRUE(result.IsSuccess());
++        ASSERT_EQ(result.GetValue().m_shaderVariants.size(), 1);
++        EXPECT_EQ(result.GetValue().m_shaderVariants[0].m_options.size(), 1);
++        EXPECT_EQ(result.GetValue().m_materialOptionsHint.size(), 1);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, FixedSystemOverrideDeduplicatesAndIsExcludedFromHints)
++    {
++        auto result = Generate("fixture.shader", *m_layout,
++            {Material({{"A", "True"}, {"System", "Low"}}), Material({{"A", "True"}, {"System", "High"}})},
++            {{AZ::Name("System"), AZ::Name("Medium")}});
++        ASSERT_TRUE(result.IsSuccess());
++        ASSERT_EQ(result.GetValue().m_shaderVariants.size(), 1);
++        EXPECT_EQ(result.GetValue().m_shaderVariants[0].m_options.at(AZ::Name("System")), AZ::Name("Medium"));
++        EXPECT_EQ(result.GetValue().m_materialOptionsHint.count(AZ::Name("System")), 0);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, ExpansionUsesRealNonFirstDefaultAndDenseStableIds)
++    {
++        auto result = Generate("fixture.shader", *m_layout, {Material({{"A", "True"}, {"System", "High"}})},
++            {{AZ::Name("System"), AZ::Name()}});
++        ASSERT_TRUE(result.IsSuccess());
++        const auto& variants = result.GetValue().m_shaderVariants;
++        ASSERT_EQ(variants.size(), 3);
++        EXPECT_EQ(variants[0].m_options.at(AZ::Name("System")), AZ::Name("Medium"));
++        EXPECT_EQ(variants[1].m_options.at(AZ::Name("System")), AZ::Name("Low"));
++        EXPECT_EQ(variants[2].m_options.at(AZ::Name("System")), AZ::Name("High"));
++        EXPECT_EQ(variants[0].m_stableId, 1);
++        EXPECT_EQ(variants[1].m_stableId, 2);
++        EXPECT_EQ(variants[2].m_stableId, 3);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, NoMaterialsPreservesSystemOnlyInitializationAndCartesianExpansion)
++    {
++        auto result = Generate("fixture.shader", *m_layout, {}, {{AZ::Name("A"), AZ::Name()}, {AZ::Name("System"), AZ::Name()}});
++        ASSERT_TRUE(result.IsSuccess());
++        const auto& variants = result.GetValue().m_shaderVariants;
++        ASSERT_EQ(variants.size(), 6);
++        EXPECT_TRUE(result.GetValue().m_materialOptionsHint.empty());
++        EXPECT_EQ(variants[0].m_options.at(AZ::Name("A")), AZ::Name("False"));
++        EXPECT_EQ(variants[0].m_options.at(AZ::Name("System")), AZ::Name("Medium"));
++        EXPECT_EQ(variants[5].m_options.at(AZ::Name("A")), AZ::Name("True"));
++        EXPECT_EQ(variants[5].m_options.at(AZ::Name("System")), AZ::Name("High"));
++        for (size_t index = 0; index < variants.size(); ++index)
++        {
++            EXPECT_EQ(variants[index].m_stableId, index + 1);
++        }
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, ExpansionDoesNotCloneVariantsMissingTheSystemOption)
++    {
++        auto result = Generate("fixture.shader", *m_layout,
++            {Material({{"A", "True"}}), Material({{"B", "True"}, {"System", "High"}})},
++            {{AZ::Name("System"), AZ::Name()}});
++        ASSERT_TRUE(result.IsSuccess());
++        ASSERT_EQ(result.GetValue().m_shaderVariants.size(), 4);
++        EXPECT_EQ(result.GetValue().m_shaderVariants[0].m_options.count(AZ::Name("System")), 0);
++        EXPECT_EQ(result.GetValue().m_materialOptionsHint.size(), 2);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, InvalidSystemKeyOrValueReturnsFailureWithoutADataSet)
++    {
++        auto unknown = Generate("fixture.shader", *m_layout, {}, {{AZ::Name("Absent"), AZ::Name("True")}});
++        ASSERT_FALSE(unknown.IsSuccess());
++        EXPECT_EQ(unknown.GetError().m_reason, FailureReason::InvalidInput);
++        auto invalid = Generate("fixture.shader", *m_layout, {}, {{AZ::Name("System"), AZ::Name("Typo")}});
++        ASSERT_FALSE(invalid.IsSuccess());
++        EXPECT_EQ(invalid.GetError().m_reason, FailureReason::InvalidInput);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, InvalidLayoutPathAndOwnershipAreRejected)
++    {
++        auto unfinished = AZ::RPI::ShaderOptionGroupLayout::Create();
++        EXPECT_FALSE(Generate("fixture.shader", *unfinished, {}, {}).IsSuccess());
++        EXPECT_FALSE(Generate("", *m_layout, {}, {}).IsSuccess());
++        auto material = Material({{"A", "True"}});
++        material.m_materialOwnedOptions.insert(AZ::Name("Absent"));
++        EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
++        material.m_options = AZ::RPI::ShaderOptionGroup();
++        EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, CancelBeforeAndDuringGenerationReturnsNoPartialData)
++    {
++        auto before = Generate("fixture.shader", *m_layout, {}, {}, [] { return true; });
++        ASSERT_FALSE(before.IsSuccess());
++        EXPECT_EQ(before.GetError().m_reason, FailureReason::Cancelled);
++        size_t polls = 0;
++        auto during = Generate("fixture.shader", *m_layout, {}, {{AZ::Name("A"), AZ::Name()}, {AZ::Name("System"), AZ::Name()}},
++            [&polls] { return ++polls >= 4; });
++        ASSERT_FALSE(during.IsSuccess());
++        EXPECT_EQ(during.GetError().m_reason, FailureReason::Cancelled);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, MalformedMaterialValueAndPartialOrForeignMasksAreRejected)
++    {
++        auto material = Material({{"System", "High"}});
++        auto id = material.m_options.GetShaderVariantId();
++        id.m_key.set(2).set(3); // value 3 is not part of the three-value System enum.
++        material.m_options = AZ::RPI::ShaderOptionGroup(m_layout, id);
++        EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
++        id.m_key.reset();
++        id.m_mask.reset(3); // only one bit of the two-bit descriptor is present.
++        material.m_options = AZ::RPI::ShaderOptionGroup(m_layout, id);
++        EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
++        id.m_mask.set(10);
++        material.m_options = AZ::RPI::ShaderOptionGroup(m_layout, id);
++        EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, ProductSubIdOverflowIsRejectedBeforeExpansion)
++    {
++        auto layout = AZ::RPI::ShaderOptionGroupLayout::Create();
++        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("Range"), AZ::RPI::ShaderOptionType::IntegerRange, 0, 0,
++            AZ::RPI::CreateIntRangeShaderOptionValues(0, 131071), AZ::Name("0")}));
++        layout->Finalize();
++        auto result = Generate("fixture.shader", *layout, {}, {{AZ::Name("Range"), AZ::Name()}});
++        ASSERT_FALSE(result.IsSuccess());
++        EXPECT_EQ(result.GetError().m_reason, FailureReason::InvalidInput);
++    }
++
++    TEST_F(ShaderVariantListGeneratorTests, CartesianProductOverflowIsRejectedWithIndividuallyValidRanges)
++    {
++        auto layout = AZ::RPI::ShaderOptionGroupLayout::Create();
++        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("X"), AZ::RPI::ShaderOptionType::IntegerRange, 0, 0,
++            AZ::RPI::CreateIntRangeShaderOptionValues(0, 511), AZ::Name("0")}));
++        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("Y"), AZ::RPI::ShaderOptionType::IntegerRange, 9, 1,
++            AZ::RPI::CreateIntRangeShaderOptionValues(0, 511), AZ::Name("0")}));
++        layout->Finalize();
++        auto result = Generate("fixture.shader", *layout, {}, {{AZ::Name("X"), AZ::Name()}, {AZ::Name("Y"), AZ::Name()}});
++        ASSERT_FALSE(result.IsSuccess());
++        EXPECT_EQ(result.GetError().m_reason, FailureReason::InvalidInput);
++    }
++}
++
++AZ_UNIT_TEST_HOOK(DEFAULT_UNIT_TEST_ENV);
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/shadervariantgenerator_tests_files.cmake
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/shadervariantgenerator_tests_files.cmake
+@@ -0,0 +1,7 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++set(FILES
++    ../Source/Data/ShaderVariantListGenerator.h
++    ../Source/Data/ShaderVariantListGenerator.cpp
++    ShaderVariantListGeneratorTests.cpp
++)
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp
+@@ -15,6 +15,7 @@
+ #include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+ #include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+ #include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
++#include <AzCore/IO/SystemFile.h>
+ #include <AzCore/RTTI/BehaviorContext.h>
+ #include <AzCore/Serialization/EditContext.h>
+ #include <AzCore/Serialization/SerializeContext.h>
+@@ -22,6 +23,7 @@
+ #include <AzFramework/StringFunc/StringFunc.h>
+ #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
+ #include <AzToolsFramework/API/ToolsApplicationAPI.h>
++#include <Data/ShaderVariantListGenerator.h>
+ #include <Document/ShaderManagementConsoleDocument.h>
+ #include <HashedVariantListSourceData.h>
+ 
+@@ -277,105 +279,23 @@
+     void ShaderManagementConsoleDocument::SetShaderVariantListSourceData(
+         const AZ::RPI::ShaderVariantListSourceData& shaderVariantListSourceData)
+     {
+-        m_shaderVariantListSourceData = shaderVariantListSourceData;
+-        AZStd::string shaderPath = m_shaderVariantListSourceData.m_shaderFilePath;
+-
++        const auto& shaderPath = shaderVariantListSourceData.m_shaderFilePath;
+         auto shaderAssetResult = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(m_absolutePath, shaderPath);
+         if (!shaderAssetResult)
+         {
+             AZ_Error("ShaderManagementConsoleDocument", false, "Could not load shader asset: %s.", shaderPath.c_str());
+             return;
+         }
+-        m_shaderAsset = shaderAssetResult.GetValue();
+-
+-        // We consider an empty shader variant list data set, a request for initialization
+-        if (m_shaderVariantListSourceData.m_shaderVariants.empty())
++        const auto* layout = shaderAssetResult.GetValue()->GetShaderOptionGroupLayout();
++        if (!layout || !layout->IsFinalized())
+         {
+-            // Read system option file
+-            AZ::IO::Path fullPath = AZ::IO::Path(AZ::RPI::AssetUtils::ResolvePathReference(m_absolutePath, shaderPath));
+-            fullPath.ReplaceExtension("systemoptions");
+-
+-            AZ::RPI::ShaderOptionValuesSourceData systemOptionSetting;
+-            if (!AZ::RPI::JsonUtils::LoadObjectFromFile(fullPath.String(), systemOptionSetting))
+-            {
+-                AZ_Warning("ShaderManagementConsoleDocument", false, "System option setting not found : '%s.'", fullPath.c_str());
+-            }
+-
+-            if (systemOptionSetting.size() > 0)
+-            {
+-                AZ::u32 stableId = 1;
+-                AZStd::vector<AZ::RPI::ShaderOptionDescriptor> unsetOption;
+-                const auto& shaderOptionDescriptors = m_shaderAsset->GetShaderOptionGroupLayout()->GetShaderOptions();
+-
+-                // Check user input with descriptor from shader asset
+-                for (auto& shaderOptionDescriptor : shaderOptionDescriptors)
+-                {
+-                    AZ::Name optionName = shaderOptionDescriptor.GetName();
+-                    const auto optionIt = systemOptionSetting.find(optionName);
+-                    if (optionIt != systemOptionSetting.end())
+-                    {
+-                        AZ::Name valueName = AZ::Name(optionIt->second);
+-                        if (strcmp(valueName.GetCStr(), "") == 0)
+-                        {
+-                            // Option with unset value, expand later
+-                            unsetOption.push_back(shaderOptionDescriptor);
+-                            systemOptionSetting[optionName] = shaderOptionDescriptor.GetDefaultValue();
+-                        }
+-                    }
+-                }
+-
+-                // Get total number of variants
+-                size_t totalVariantSize = 1;
+-                for (auto& shaderOptionDescriptor : unsetOption)
+-                {
+-                    uint32_t minValue = shaderOptionDescriptor.GetMinValue().GetIndex();
+-                    uint32_t maxValue = shaderOptionDescriptor.GetMaxValue().GetIndex();
+-                    totalVariantSize = totalVariantSize * (maxValue - minValue + 1);
+-                }
+-                m_shaderVariantListSourceData.m_shaderVariants.reserve(totalVariantSize);
+-                m_shaderVariantListSourceData.m_shaderVariants.emplace_back(stableId, systemOptionSetting);
+-                stableId++;
+-
+-                // Expand unset option
+-                for (auto& shaderOptionDescriptor : unsetOption)
+-                {
+-                    AZStd::vector<AZ::RPI::ShaderVariantListSourceData::VariantInfo> shaderVariants;
+-                    AZStd::vector<AZ::RPI::ShaderVariantListSourceData::VariantInfo> expandShaderVariants;
+-
+-                    uint32_t minValue = shaderOptionDescriptor.GetMinValue().GetIndex();
+-                    uint32_t maxValue = shaderOptionDescriptor.GetMaxValue().GetIndex();
+-                    size_t listSize = m_shaderVariantListSourceData.m_shaderVariants.size();
+-                    size_t expandSize = listSize * (maxValue - minValue);
+-                    shaderVariants.reserve(listSize);
+-                    expandShaderVariants.reserve(expandSize);
+-
+-                    for (uint32_t index = minValue; index <= maxValue; ++index)
+-                    {
+-                        AZ::Name optionValue = shaderOptionDescriptor.GetValueName(index);
+-                        if (optionValue != shaderOptionDescriptor.GetDefaultValue())
+-                        {
+-                            stableId = UpdateOptionValue(
+-                                m_shaderVariantListSourceData.m_shaderVariants,
+-                                shaderVariants,
+-                                shaderOptionDescriptor.GetName(),
+-                                optionValue,
+-                                stableId);
+-
+-                            expandShaderVariants.insert(
+-                                expandShaderVariants.end(),
+-                                AZStd::make_move_iterator(shaderVariants.begin()),
+-                                AZStd::make_move_iterator(shaderVariants.end()));
+-                        }
+-                    }
+-
+-                    m_shaderVariantListSourceData.m_shaderVariants.insert(
+-                        m_shaderVariantListSourceData.m_shaderVariants.end(),
+-                        AZStd::make_move_iterator(expandShaderVariants.begin()),
+-                        AZStd::make_move_iterator(expandShaderVariants.end()));
+-                }
+-            }
++            AZ_Error("ShaderManagementConsoleDocument", false, "Shader option layout is not finalized: %s.", shaderPath.c_str());
++            return;
+         }
+ 
++        // Apply the exact supplied snapshot, including zero variants. Undo must not reload .systemoptions.
++        m_shaderVariantListSourceData = shaderVariantListSourceData;
++        m_shaderAsset = shaderAssetResult.GetValue();
+         AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
+             m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
+         AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
+@@ -614,9 +534,38 @@
+ 
+     bool ShaderManagementConsoleDocument::LoadShaderSourceData()
+     {
+-        AZ::RPI::ShaderVariantListSourceData shaderVariantListSourceData;
+-        shaderVariantListSourceData.m_shaderFilePath = m_absolutePath;
+-        SetShaderVariantListSourceData(shaderVariantListSourceData);
++        const auto shader = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(m_absolutePath);
++        if (!shader.IsSuccess())
++        {
++            AZ_Error("ShaderManagementConsoleDocument", false, "Could not load shader asset: %s.", m_absolutePath.c_str());
++            return OpenFailed();
++        }
++        const auto* layout = shader.GetValue()->GetShaderOptionGroupLayout();
++        if (!layout || !layout->IsFinalized())
++        {
++            AZ_Error("ShaderManagementConsoleDocument", false, "Shader option layout is not finalized: %s.", m_absolutePath.c_str());
++            return OpenFailed();
++        }
++        AZ::IO::Path systemPath(m_absolutePath);
++        systemPath.ReplaceExtension("systemoptions");
++        AZ::RPI::ShaderOptionValuesSourceData systemOptions;
++        if (AZ::IO::SystemFile::Exists(systemPath.c_str()) &&
++            !AZ::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
++        {
++            AZ_Error("ShaderManagementConsoleDocument", false, "Invalid system option file: %s.", systemPath.c_str());
++            return OpenFailed();
++        }
++        const auto baseline = JE::ShaderVariants::Generate(m_absolutePath, *layout, {}, systemOptions);
++        if (!baseline.IsSuccess())
++        {
++            AZ_Error("ShaderManagementConsoleDocument", false, "%s", baseline.GetError().m_message.c_str());
++            return OpenFailed();
++        }
++        SetShaderVariantListSourceData(baseline.GetValue());
++        if (!m_shaderAsset.IsReady() || m_shaderVariantListSourceData.m_shaderFilePath != m_absolutePath)
++        {
++            return OpenFailed();
++        }
+         m_modified = {};
+         return OpenSucceeded();
+     }
+@@ -632,30 +581,12 @@
+         }
+ 
+         SetShaderVariantListSourceData(shaderVariantListSourceData);
++        if (!m_shaderAsset.IsReady())
++        {
++            return OpenFailed();
++        }
+         m_modified = {};
+         return OpenSucceeded();
+     }
+ 
+-    AZ::u32 ShaderManagementConsoleDocument::UpdateOptionValue(
+-        AZStd::vector<AZ::RPI::ShaderVariantListSourceData::VariantInfo>& shaderVariantIN,
+-        AZStd::vector<AZ::RPI::ShaderVariantListSourceData::VariantInfo>& shaderVariantOUT,
+-        AZ::Name targetOption,
+-        AZ::Name targetValue,
+-        AZ::u32 stableId)
+-    {
+-        shaderVariantOUT.clear();
+-
+-        for (auto& variantInfo : shaderVariantIN)
+-        {
+-            AZ::RPI::ShaderOptionValuesSourceData optionList;
+-            optionList = variantInfo.m_options;
+-            if (optionList.count(targetOption) > 0)
+-            {
+-                optionList[targetOption] = targetValue;
+-            }
+-            shaderVariantOUT.emplace_back(stableId, optionList);
+-            stableId += 1;
+-        }
+-        return stableId;
+-    }
+ } // namespace ShaderManagementConsole
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.h
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.h
+@@ -75,15 +75,6 @@
+         // Read shader source data from JSON then find all references to populate the shader variant list and initialize the document
+         bool LoadShaderVariantListSourceData();
+ 
+-        // Copy shaderVariantIN to shaderVariantOUT, if the targetOption exist, update the value to targetValue
+-        // Return value is stableId += size of shaderVariantIN
+-        AZ::u32 UpdateOptionValue(
+-            AZStd::vector<AZ::RPI::ShaderVariantListSourceData::VariantInfo>& shaderVariantIN,
+-            AZStd::vector<AZ::RPI::ShaderVariantListSourceData::VariantInfo>& shaderVariantOUT,
+-            AZ::Name targetOption,
+-            AZ::Name targetValue,
+-            AZ::u32 stableId);
+-
+         // Source data for shader variant list
+         AZ::RPI::ShaderVariantListSourceData m_shaderVariantListSourceData;
+ 

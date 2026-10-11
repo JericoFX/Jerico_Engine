@@ -1,0 +1,103 @@
+{
+  "status": "FOCAL READONLY CONTRACT IDENTIFIED; EXACT SOURCE/BINARY ACQUISITION NOT APPROVED OR FOUND",
+  "package": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows",
+  "legacyArchiveSHA256": "224a34691a17234c2294202368d9756635f11d66ac9bc528f929d84cf4acac8e",
+  "interface": "3rdParty::DirectXShaderCompilerDxc INTERFACE IMPORTED GLOBAL; runtime-only deployment",
+  "requiredFiles": [
+    "DirectXShaderCompilerDxc/bin/dxc.exe",
+    "DirectXShaderCompilerDxc/bin/dxsc.exe",
+    "DirectXShaderCompilerDxc/bin/dxil.dll",
+    "DirectXShaderCompilerDxc/bin/dxcompiler.dll"
+  ],
+  "deployRoot": "Builders/DirectXShaderCompiler",
+  "selectedConsumer": "Atom_Shader.Builders RUNTIME_DEPENDENCIES, DX12 and Vulkan Windows ShaderPlatformInterface execute dxc.exe; DX12 useSpecializationConstants additionally executes dxsc.exe",
+  "originalRecipeCommit": "e5a849dfc01e43b617ac2b0d9b08e40668e28904",
+  "originalSourceRepository": "https://github.com/o3de/DirectXShaderCompiler",
+  "originalSourceTag": "release-1.8.2505.1-o3de",
+  "declaredLicense": "NCSA, LICENSE.TXT; exact upstream full notice not yet acquired/verified",
+  "recipeWindows": {
+    "build_configs": [
+      "Release"
+    ],
+    "cmake_find_source": "FindDirectXShaderCompilerDxc.cmake.Windows",
+    "cmake_generate_args": [
+      "-GNinja",
+      "-Csrc/cmake/caches/PredefinedParams.cmake",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DLLVM_INCLUDE_TESTS:BOOL=OFF",
+      "-DCLANG_INCLUDE_TESTS:BOOL=OFF",
+      "-DHLSL_INCLUDE_TESTS:BOOL=OFF",
+      "-DSPIRV_BUILD_TESTS:BOOL=OFF",
+      "-DLLVM_INCLUDE_TOOLS=ON"
+    ],
+    "cmake_build_args": [
+      "--target",
+      "all llvm-as llvm-dis",
+      "--parallel"
+    ],
+    "cmake_install_filter": [
+      "bin/dxc.exe",
+      "bin/dxsc.exe",
+      "bin/dxil.dll",
+      "bin/dxcompiler.dll"
+    ]
+  },
+  "recipe70f0Difference": "Common package_version nowrev4 forMac; Windows host build list stillrev3. Historicale5a849 recipe pins exactrev3. No arbitrary Microsoft vanilla substitution.",
+  "localAvailability": "No DXC source/package archive in bounded Dependencies root/archives inventory",
+  "exactActionsArtifacts": 0,
+  "actionsMetadataStatus": 200,
+  "sourceTagAPIStatus": 404,
+  "sourceReleaseAPIStatus": 404,
+  "repositoryExistence": "Unresolved: subsequent repo/matchingrefs API403rate limit; tag/release404 does not prove repo deletion",
+  "apiRateLimit": "403 from subsequent official GitHub API reads; do not repeat unchanged or use auth workaround",
+  "sourceCommit": "UNRESOLVED; do not invent commit from recipeCommit/tag",
+  "archiveSHAStatus": "Legacy package archive SHA known; source archive SHA not measured because none acquired",
+  "bootstrapProduct": "No Python interpreter/product required by native runtime-only target. Historical Python acquisition/build driver is not approved for execution; exact build closure requires source before approval.",
+  "nativeMeaningfulChecksProposed": [
+    "Exact four files/hash/PE AMD64/DLLimports/complete licenses before packaging",
+    "DXC compile real smallHLSLcompute toDXIL andSPIRV using currentBuilder flags/profiles, inspect emitted outputs/reflection/errors",
+    "DXSC real specialization-constant patch and offsetsJSON only after exact fork verified; keep feature and reject mismatched vanilla substitute"
+  ],
+  "nextAction": "Parent choose/audit permitted exact binary package destination or recover official O3DE fork exact tag/commit; preservecataloguehash only if originalarchive matches. Reconstructed bundle mustnewJEidentity/hash, with complete license/source closure. No provisioning until approved.",
+  "root61Impact": "Independent audit only; Root61 and SMC source freeze remain firstpriority, no extraargv/features/dependencies",
+  "sourceInputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "bytes": 6788,
+      "sha256": "2D8C84C9BB2C8EFF7ECD5A6DF3AA5B22BC67EE2CC761E3E696319A6A3DA346E5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt",
+      "bytes": 5117,
+      "sha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\DX12\\Code\\Source\\RHI.Builders\\ShaderPlatformInterface.cpp",
+      "bytes": 22235,
+      "sha256": "2C6BE1DA604EB0E7116B8FEF80F6E2012A1342F1EF8A2A7DF75303E6D1684D37"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\RHI.Builders\\ShaderPlatformInterface.cpp",
+      "bytes": 15980,
+      "sha256": "FA8679C8964084C7171213338BAE11A7F73A962E92A220E2FF13313716205CA7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\Platform\\Windows\\Vulkan_Traits_Windows.h",
+      "bytes": 996,
+      "sha256": "B86191E710E902C28590C6CFDD082D8CCB2E0C6371668B4250BE5984ED54240C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Code\\Source\\RHI.Edit\\Utils.cpp",
+      "bytes": 25169,
+      "sha256": "8C534371987E7048C9DA0D59EBCB8A45D6BAFF8CA3236F2A69BB79000FD98EAE"
+    }
+  ],
+  "primaryMetadata": [
+    "dxc-readonly-primary-metadata.json",
+    "dxc-readonly-recipe-rev3-and-source-status.json"
+  ],
+  "primaryBackground": "https://github.com/o3de/sig-graphics-audio/issues/163",
+  "nativeExecuted": false,
+  "archivesDownloaded": 0,
+  "sourceModified": false
+}

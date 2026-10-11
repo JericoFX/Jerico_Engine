@@ -1,0 +1,18 @@
+{
+  "remainingCount": 12,
+  "selected": [
+    {
+      "wrapper": "Assimp code/CMakeLists.txt:1004-1113",
+      "wrapperSHA256": "FCE4B0968CECD78B3606603E5BB76B4213CEAB54446A56D32DB11C5FA4CFF40E",
+      "fetchName": "tinyusdz_repo",
+      "sourceURL": "https://github.com/lighttransport/LightUSD/archive/6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+      "archiveSHA256": null,
+      "gitCommit": "6050eef932f7d2788656d63297aa488fb0961ed1",
+      "license": "Pending primary license read",
+      "consumer": "Assimp USD importer ON in original O3DE wrapper",
+      "selection": "Transitively selected by upstream Assimp; official archive URL derived from declared Git pin; no original archive hash exists",
+      "noAddSubdir": false,
+      "originalGitRepository": "https://github.com/lighttransport/tinyusdz"
+    }
+  ]
+}

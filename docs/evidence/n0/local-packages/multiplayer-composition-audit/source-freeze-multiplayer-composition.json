@@ -1,0 +1,12 @@
+{
+  "scope": "Only two approved engine external_subdirectories entries",
+  "fileCount": 1,
+  "state": "Frozen for parent review; no native configure/link/runtime acceptance",
+  "files": [
+    {
+      "bytes": 3758,
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "sha256": "605D32CCDD7DFA055560BC81EF79E743DC167318683E1E30733A507F3C582226"
+    }
+  ]
+}

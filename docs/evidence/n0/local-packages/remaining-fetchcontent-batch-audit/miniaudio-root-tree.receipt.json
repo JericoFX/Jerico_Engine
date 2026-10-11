@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/mackron/miniaudio/git/trees/cbcd610659983b0761bb67b7419be7783e107a3d",
+  "status": 200,
+  "length": 4199,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"c57a1fafe358f207d81f934b5c489430463f90dcdbe596f9c319a88b6bde8695\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

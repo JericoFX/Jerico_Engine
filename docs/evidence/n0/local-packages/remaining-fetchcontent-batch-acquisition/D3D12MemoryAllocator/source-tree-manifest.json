@@ -1,0 +1,1471 @@
+{
+  "sourceRoot": "F:/JericoEngine/Dependencies/D3D12MemoryAllocator-3.2.0",
+  "commit": "1d86c1130f61453634b1df85782e1fecfd59a525",
+  "files": 292,
+  "gitBlobMatches": 292,
+  "extractionHashMatches": 292,
+  "archive": "F:/JericoEngine/Dependencies/archives/D3D12MemoryAllocator-3.2.0.tar.gz",
+  "archiveSHA256": "71d740ecb2d6cdf93b273ae571eb80097a530443993b0a5cb2bdb3cacc1548db",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\.github\\workflows\\windows.yaml",
+      "bytes": 1834,
+      "sha256": "c7846d1630b08c6ea913e08fea79e9e800842856d14aed86a46f238217ae38f3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\.gitignore",
+      "bytes": 6,
+      "sha256": "fe54d1fd9b0ea946a38c56b98ec8ad8dff0ce784bc926b25433e44d2703f6f0f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\CHANGELOG.md",
+      "bytes": 5453,
+      "sha256": "e92ce5c82c1b37e05cf3f6351aa7bfa0a562cf803064a264d0866fecc9b37ffa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\CMakeLists.txt",
+      "bytes": 1351,
+      "sha256": "0c336497f8257b0797b624b0eb93b7c85d67851ab905534d3785e663b90e063a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\LICENSE.txt",
+      "bytes": 1099,
+      "sha256": "5478a2f36b736e13dd3250b9c71a4ab521bc327fb9d112a92c647bf3e69ddb68"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\NOTICES.txt",
+      "bytes": 2839,
+      "sha256": "7b7fc5046e474378f4fe0bde65508e0d2b3146b58568ebc7cc192aea85ff91b8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\README.md",
+      "bytes": 8193,
+      "sha256": "7711db96c4b060537ffcadb43a930a2443e0529d7562921497b3303cfb5e5782"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\bin\\D3D12Sample.exe",
+      "bytes": 331776,
+      "sha256": "374d28e999373910a956cbc4ae1ea3ab02e2f28e225f54550483b2ba8dc446fd"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Aliasing.png",
+      "bytes": 6208,
+      "sha256": "426ab1152bcb4cb186a55a14e3da825aab6f358b56306cd986dd1c236ad211df"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Linear_allocator_1_algo_default.png",
+      "bytes": 1264,
+      "sha256": "f6857dbe6a9ad96a763660d9e7029f03d03925521f1b7d57c909ceff7e8a3969"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Linear_allocator_2_algo_linear.png",
+      "bytes": 1989,
+      "sha256": "8f3aa6d883ba45d8d57144ecefeb27a5301fd56be83564907b7f4cefc07e10a6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Linear_allocator_3_free_at_once.png",
+      "bytes": 5205,
+      "sha256": "c9a8c46d3eedc144640dacd1e1b96d5cdbc6548b2a22712929508dbbe859c7c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Linear_allocator_4_stack.png",
+      "bytes": 3356,
+      "sha256": "9d8e2c07248004054d80320cd9ef242bb84692cc22e30657f675cef7f912acef"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Linear_allocator_5_ring_buffer.png",
+      "bytes": 2246,
+      "sha256": "58930b3135589b24d8192a3987cf04280118cf0a170f3e2030590ee2ae0c1e00"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Linear_allocator_7_double_stack.png",
+      "bytes": 1595,
+      "sha256": "d72e0d4afd8a78fbcddd008c6ddd88503c6d969d734f02bf24510b033d99529e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Margins_1.png",
+      "bytes": 268,
+      "sha256": "074780273067e6ac4363484eba44552ec23d1aa7cd5002d2a4dc12430595fd30"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\gfx\\Margins_2.png",
+      "bytes": 6542,
+      "sha256": "8434fe4aa414a6b7f300e99cfcf69c751c7ca0a55e841888d6d452f4db87bea0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\_d3_d12_mem_alloc_8h.html",
+      "bytes": 48762,
+      "sha256": "4439244e20fb494d5280cd71341d1b6b9daf36b29126f4133781e2dee46574ae"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\annotated.html",
+      "bytes": 17410,
+      "sha256": "864ffe13b2bbe48f3228c4939551d679d9df9b82e01be0dd473bbd72acde7685"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\bc_s.png",
+      "bytes": 676,
+      "sha256": "9e7ed0ef70f99bb7f763a48ddd95d5990e103bb145eedfd0a76d19c122374be2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\bc_sd.png",
+      "bytes": 635,
+      "sha256": "be713b2cca9757f7589575afd788e336fc967cbb3218d4973122f2f19572eae6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_allocation-members.html",
+      "bytes": 10891,
+      "sha256": "4180bf29ce7e4fe76386e3c53372a0bd61446696a871c8f05aea4999784afe33"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_allocation.html",
+      "bytes": 26485,
+      "sha256": "47d770f8e8677651d06f9e577ae9fdbd674d524a30c7dadb32fa5f7dbd1c4e94"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_allocation.png",
+      "bytes": 538,
+      "sha256": "4c2358946d90e4d5f6efd65f6b2a24d81a7bfb08d76342a862bb934b3b28fc49"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_allocator-members.html",
+      "bytes": 13297,
+      "sha256": "891cc03a69fb986b7de4452a36fbbf9264ea484e8931d9f0baf39a412d2de34a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_allocator.html",
+      "bytes": 61470,
+      "sha256": "e343b10a571b8c2b313aa04c9437a128c369ec711a30ee4d2a1cf8f9533f3763"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_allocator.png",
+      "bytes": 488,
+      "sha256": "805fff27272f09abb8b1ffed49333f8f0d7f0d925a20217260bdf9fa56657ce3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_defragmentation_context-members.html",
+      "bytes": 6441,
+      "sha256": "888da5a36f0d66dfb89c7654cf2504ce72b26e641213c670e2d68543afd13083"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_defragmentation_context.html",
+      "bytes": 13261,
+      "sha256": "18b223bbe71c4f1dd5999582918e06c5b5c28a10a9b1d365a7b72e3e98269e36"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_defragmentation_context.png",
+      "bytes": 719,
+      "sha256": "b253774f3562dfd873ab1ccb971876c4b671266934f932a761c7b372dfb78437"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_pool-members.html",
+      "bytes": 6964,
+      "sha256": "d299a704ca6a983aa91e2e517a417eda3dedbdf8b6bed7c36696b1b8a272cf37"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_pool.html",
+      "bytes": 16209,
+      "sha256": "9cdbae4b26b1c1a2c2cc530c5c784bf7a540b6a703954345448b7ed15a0c9e60"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_pool.png",
+      "bytes": 475,
+      "sha256": "36e406bc166a14c0d19da2632ac341753af58ef6637e7dd729f999fdbc2ec719"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_virtual_block-members.html",
+      "bytes": 8973,
+      "sha256": "a5b0d541fb564b6c6e03abb3658a87ecf7fb6602f99c9c8949cd65afcf35bc43"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_virtual_block.html",
+      "bytes": 23359,
+      "sha256": "7e0b7db636cf1d4129b304dd95b76d212d209b672a406bb23ca67860547afd4e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\class_d3_d12_m_a_1_1_virtual_block.png",
+      "bytes": 594,
+      "sha256": "f04ceb218c49513e590e0df51c3a253c654bbcb4023f40b06f69ea5507ef5dfc"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\classes.html",
+      "bytes": 10027,
+      "sha256": "d4274e3c4d11a2de457e15da89361bd1c371c0e81cd383f09bcde3a00eab4e0e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\clipboard.js",
+      "bytes": 2999,
+      "sha256": "9cb033550ae5eee1b9bb88ec53c6fa4a1f15f978c5bdc5b07622c54c2ade002d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\closed.png",
+      "bytes": 132,
+      "sha256": "c98c02adc57337f58c40aae15bbac05a3ccb364e5adb1d610a16452e92f17830"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\codefolding.js",
+      "bytes": 5923,
+      "sha256": "688e50f03911a579b5e0644b37d405f0155ecf42f470a17b46f493a981b1a536"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\configuration.html",
+      "bytes": 13928,
+      "sha256": "bc54a42341b641e8b8baeabdb11ff6718ee8dd154bf2c9867167fb887bbf4014"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\cookie.js",
+      "bytes": 1874,
+      "sha256": "6f9da35eed772d69c37ff64eea68cf217e46afce266db7ca3b131a388f4c95fe"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\custom_pools.html",
+      "bytes": 13235,
+      "sha256": "080f22cb7e75a82ba75b8f3f2b3836aaa86848bda609cecfae20bafbe89f3214"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\defragmentation.html",
+      "bytes": 28897,
+      "sha256": "3aa14fc9691371b62eb49874375a2a663ed80683a1c90a15bf0b858ea4a2c804"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\dir_d44c64559bbebec7f509842c48db8b23.html",
+      "bytes": 5119,
+      "sha256": "f756bd5476be2ba87ace6b9a7c60841cd547ff8675c9f917a6e1fca932c4a213"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\doc.svg",
+      "bytes": 1503,
+      "sha256": "83a7c9918c8b9ae1bb31a7bfee6f9c3e099f1ffe5dbf798232218d60ad2a6401"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\docd.svg",
+      "bytes": 1503,
+      "sha256": "6b1d157a374648a3aa2c4b387ec7f9bad398ab00c41c2958fcbec2e3382cff1e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\doxygen.css",
+      "bytes": 55569,
+      "sha256": "0fe048e9a1d69b720530a7ae510d96347de6a751ae9ead1f9d72bd1e1328998c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\doxygen.svg",
+      "bytes": 15461,
+      "sha256": "2c92e9d85d456640d5f2bbdf717112a216230e4b5be7450983c6182afbaf1fc9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\doxygen_crawl.html",
+      "bytes": 27331,
+      "sha256": "a69c8c6564fdea54f2856d603eecab722d12fdda75b83b8445a3cd8745d798af"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\dynsections.js",
+      "bytes": 7707,
+      "sha256": "396aeab294189a8a236860ab037045e73bf4857954a36f41b20ddfa6563462d7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\faq.html",
+      "bytes": 18230,
+      "sha256": "169235e30c7d04e75644bd38e02c52fafc69c6100f5272b84bb37449e0543c86"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\files.html",
+      "bytes": 5151,
+      "sha256": "d6b7e5ff8cd1de3e1a862cd41af9fb51378025c93673152e6ff06f48ca0fe983"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\folderclosed.svg",
+      "bytes": 1996,
+      "sha256": "5e69d68baad1ee117dac14f49cad9afbfb73cce14d48d28560c89b0b7345f205"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\folderclosedd.svg",
+      "bytes": 1996,
+      "sha256": "3d53dd5faa7a4fcac2695013494b8ba5b2466d85c5b2e0959a2f8ce0f4d23ee3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\folderopen.svg",
+      "bytes": 3269,
+      "sha256": "54a824d5208f5b504b2d283899fe31e45918df7df9b8af104f95a2f47bd5230d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\folderopend.svg",
+      "bytes": 3214,
+      "sha256": "21337c5db15aaf20a567216c02e21225b36b8f86d15217018c84a13218e1f9a5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\functions.html",
+      "bytes": 27716,
+      "sha256": "3d1cd92cf812af7bfee4d36c6161c44491b1900910ad01c4b7a1619e691e1042"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\functions_func.html",
+      "bytes": 13692,
+      "sha256": "8ddd25c3e62a76e31b84c7bf3aeacc50875aa064ad44431e4d59a0b826f26fda"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\functions_rela.html",
+      "bytes": 5599,
+      "sha256": "9e787eb34a586bb3d1908d296bf1513776f8b698e052c855b02baa33cf92eba6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\functions_vars.html",
+      "bytes": 18324,
+      "sha256": "04bc92138d2a269f781363ce18e833a5d593b5bc2f11fe060df3f2fd2c550950"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\general_considerations.html",
+      "bytes": 9883,
+      "sha256": "e221a9dd4000767506a1c897c7c6939d18d884acfc3aac4a28064fafeec87f0b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\globals.html",
+      "bytes": 5488,
+      "sha256": "70fa7033e1549d38c2bacaa9c70db402ad03569d90deb68926bfbe8f17afc888"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\globals_defs.html",
+      "bytes": 5482,
+      "sha256": "4872e466e31830fa5f0df1caea472a01b23bbed40edc0be7ffcb2e44aab1140f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\hierarchy.html",
+      "bytes": 17553,
+      "sha256": "30a57d540a11e45ec8aed072d9b60644179bfb2f706a35343f25eb48a348de71"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\index.html",
+      "bytes": 8970,
+      "sha256": "c95a1374be3f1a9e5a012da7b736bc41d6a9577e6ff4f0cbe9a0e69a68fedac9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\jquery.js",
+      "bytes": 176782,
+      "sha256": "3092fe64f7a14890a95e713d556a50d08f8fbf4d8872af7a0164770285776706"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\linear_algorithm.html",
+      "bytes": 10929,
+      "sha256": "4d91c8bafc48b8467552a138d506cbef0adddfe2695cedd1b5ee070f1a1c2eb1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\menu.js",
+      "bytes": 20694,
+      "sha256": "31875c27c512f480f7989b09c51e395deaf0ce0de70cf19200450fe415a6f91e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\menudata.js",
+      "bytes": 4756,
+      "sha256": "0dbc0a0859f6639fa5e4e38eb1f27397fc78bdcfd40dc820ec2e0f79497aabc2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\minus.svg",
+      "bytes": 582,
+      "sha256": "422b18aa23b98c22464d121c12bc52f870e6312db42cbf87e06f2036e85c9fa1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\minusd.svg",
+      "bytes": 582,
+      "sha256": "25594bc92fcf5604e7f70f85607806057c12eb081f6738eacc815227a6da7f1b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespace_d3_d12_m_a.html",
+      "bytes": 68971,
+      "sha256": "d05ea335860e4979f119f0956e9426df5a37b530596b125205157d8df4bf8972"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespacemembers.html",
+      "bytes": 13998,
+      "sha256": "2816b965eb99952b3aa0c2bbdf62b129c54684df4514c7fb1869acfd062badb2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespacemembers_enum.html",
+      "bytes": 5451,
+      "sha256": "bd798a8e849ff0db2b8b9f21ed99e0fc02f92c7700868c31b551d70a2bc73c5e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespacemembers_eval.html",
+      "bytes": 12251,
+      "sha256": "3a13f90c7deb55cb71f32f8a0a38f1b43ea71905e90cdf9a52344c21e8f1421e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespacemembers_func.html",
+      "bytes": 4786,
+      "sha256": "4aa034ac509d696e15d4f567860044a999a0064ca5887aba7356e00b66fb4e0e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespacemembers_type.html",
+      "bytes": 4903,
+      "sha256": "c5f42e5ef5841fbb385152dcc634873481b6c9917f39278118355a6bd54f65f5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\namespaces.html",
+      "bytes": 4925,
+      "sha256": "3f348a6f6deac2a3d76e983abda9bed361ae1217a362c2423435063b732fe53d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\nav_f.png",
+      "bytes": 153,
+      "sha256": "4bdc6a72666e1b300fdfc5ecf102714c9fd57df76fdf47139f8dbf8ae5986364"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\nav_fd.png",
+      "bytes": 169,
+      "sha256": "68c43d3eb0bccfc8ae7de4e17b1d6f98455b527b8ef7e3a6f600abe2b13c1a28"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\nav_g.png",
+      "bytes": 95,
+      "sha256": "3171164c16baa5953c17821a7ce5feac673c05a56b287453ce3a0bf5048f0999"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\nav_h.png",
+      "bytes": 98,
+      "sha256": "b7711604d6cdeaf3cdfd661fa21fc5bf18de929671c801f00415eaecd35abda3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\nav_hd.png",
+      "bytes": 114,
+      "sha256": "0714b74a43b5e56a05414eb1b18d9f817aa91339359efb23dba4c411434ed7a5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\navtree.css",
+      "bytes": 5658,
+      "sha256": "d7450c5f71c37411cf07d4fbd6d406582d2c84ddf4cbbcd26d20ad783c9ca793"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\open.png",
+      "bytes": 123,
+      "sha256": "a04665e9dd0ef5ef2c6ddf02b4a12472984485adb027fd12ae6c60ffd203b1a4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\optimal_allocation.html",
+      "bytes": 52678,
+      "sha256": "3a51b05323c2aaec097c51fc6a638b58ca9fcd2b3ae7ee74601dc586321dce25"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\plus.svg",
+      "bytes": 696,
+      "sha256": "d61742bec8a971f30ae95299e6563256662fe8e2bc68382833a959e063a10063"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\plusd.svg",
+      "bytes": 696,
+      "sha256": "85b5f198191092946af4ca07025e904eb8ade8930176626e8a6e88ac1bdb247c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\quick_start.html",
+      "bytes": 35569,
+      "sha256": "4ace814bbf0eab513dc6bd38f754a25583f867f8bfca6036dbcba82ebfe3d807"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\resize.js",
+      "bytes": 5722,
+      "sha256": "cadf4cd5369db2cb128738ca28b373287a5b868a2067866ec0f4dc85a1fd2f70"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\resource_aliasing.html",
+      "bytes": 14874,
+      "sha256": "066583744b6c5c2557777ac0301ca64ba724472f381c5692dd0a974a2670f5e9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_0.js",
+      "bytes": 9013,
+      "sha256": "00249043673889cb8474e8f3973222c8e9cdc8669c750674496f54347b7d6650"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_1.js",
+      "bytes": 2318,
+      "sha256": "d26842243d18b09c537f2037f1aed84736d0d9a03c2dd565810177c05897dcfa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_10.js",
+      "bytes": 1412,
+      "sha256": "611ad9f9eb50c3950be4f980de0163dce6c9b964175853911b5a70aa0e2b5227"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_11.js",
+      "bytes": 2786,
+      "sha256": "320e5693be9496fb4ab9971a4f1b74197a3c175f5a7ae843834ca555157c9721"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_12.js",
+      "bytes": 486,
+      "sha256": "77cbe4fcae83f18f7126af9b13c0feb8ec263800f4e5d141d1204615e2856bca"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_13.js",
+      "bytes": 959,
+      "sha256": "09460277ef3bb52b5e96048cb87b555913d491df6d02f779f2d06f5910b4d848"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_14.js",
+      "bytes": 3524,
+      "sha256": "6838255772a586c60913a40d6edec6d4cac2b24f6e93412ffef75f5315ad201b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_15.js",
+      "bytes": 92,
+      "sha256": "4f54858686a2b23fb849b29d0dd56714acea091877bd9857f252a11824333175"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_2.js",
+      "bytes": 7823,
+      "sha256": "2d57ce0e4a36f4b7bccd7f0c9f01e2b9ee84ee76ac8a608379378cb4443ea7c3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_3.js",
+      "bytes": 5048,
+      "sha256": "8be9e5a08a7d38d0e73891461b48e764ca62ffef0a2c3d91319e3366de3ba0ee"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_4.js",
+      "bytes": 346,
+      "sha256": "8577ed20988e9229ef310e056c894c957548ff23f91a5ad9025c920fe15140cf"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_5.js",
+      "bytes": 1919,
+      "sha256": "87eef604bf5a71007edb3748d054db8f3b53e34bf8bff0674700513bcf915df1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_6.js",
+      "bytes": 2449,
+      "sha256": "db2bb63dd47c73df69697585850d89216add455b4f74bac52af44d6da9ffdcb7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_7.js",
+      "bytes": 1113,
+      "sha256": "745fd40518c57c5b3d18f1d2152950439c1486ac862c56c940ff717808e894c0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_8.js",
+      "bytes": 876,
+      "sha256": "c6638195825bca59bd254641a2318c252ef044533975a1776261ce120816995a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_9.js",
+      "bytes": 104,
+      "sha256": "cc253faf1020eea49d35f77d97b76ac98725ec74d4f6b94a62c7526813218406"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_a.js",
+      "bytes": 323,
+      "sha256": "8ca91ab90cecd67f364f1e765e704a9980be4f2dc346354ad34b07621dc43786"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_b.js",
+      "bytes": 2492,
+      "sha256": "d64c043f058217a92654dfc8c2a04fc86421615b1d58f8af1ddf2926f11b833a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_c.js",
+      "bytes": 394,
+      "sha256": "4b0e076678f69ffe15472c0e6769eef99aad5c4f9a4158a3f69e463d579783e4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_d.js",
+      "bytes": 1065,
+      "sha256": "fb1a5e01fe8b00222771fa8781b12e3de4c28d024c7df185a8b06c5ed9d4ac34"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_e.js",
+      "bytes": 4895,
+      "sha256": "5b7507e5df4cd4413ef1c37577ecc8ed8eb020a415c0d366a3b4c6d92800be54"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\all_f.js",
+      "bytes": 169,
+      "sha256": "ff5a02c3bc45ce65870f22e0613f6930ed6fc6fbf43b790ac5840a53602e0741"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_0.js",
+      "bytes": 584,
+      "sha256": "e7c3f696536f308a91751ec3404eb6ddf9fbf1d235353a6b88db24274a98df0a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_1.js",
+      "bytes": 100,
+      "sha256": "56a6d802f991452221fe43a2b9fc16b4f6a80f1071eb45c3b62218c0503106c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_2.js",
+      "bytes": 552,
+      "sha256": "4377fc19bc5a2c4e0ce92ee5a12eadc53658dd970d6cc0e5e96e2ad3c34ef7c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_3.js",
+      "bytes": 885,
+      "sha256": "547b8bd4691e2017de92059e92319a13812530efc75148d06187e0d0b53727b4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_4.js",
+      "bytes": 192,
+      "sha256": "3afb2aee3416b9a0fc4a78a4d18f4da4c117655d9a7ce8375a9a28016b74e776"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_5.js",
+      "bytes": 112,
+      "sha256": "39b2e44c34437725e1c30d81c7abac40dea86eac05e17a3b37477bcc8191e1c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_6.js",
+      "bytes": 128,
+      "sha256": "e54cff04fb54f7ef6e3325499bd24d48ebae8462d9b6120664742e5641a47235"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\classes_7.js",
+      "bytes": 683,
+      "sha256": "4df18efeeb5db0d8612bc67f5565bb657c365559d30a11c394abee353237e222"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\close.svg",
+      "bytes": 947,
+      "sha256": "0fca47408229664b0ceb6abd29c94dda65696baffebc9c930e4fba0382488117"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\defines_0.js",
+      "bytes": 1058,
+      "sha256": "b9ff4591f805318b1d613526bd631498b0e4a5eaf7834a815da49af6c0d7f22a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enums_0.js",
+      "bytes": 274,
+      "sha256": "52214ee78c252e0ded2a20077a0a66bb6046c876bf0632655f242ff0101981f5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enums_1.js",
+      "bytes": 316,
+      "sha256": "597cac81ce6360d14229ecb00ddc0e9cf1bfe4a1ef2d80dc7e6b54ec41e92022"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enums_2.js",
+      "bytes": 136,
+      "sha256": "3b5ae870f9b4c05006e18440946cf9ffa3b1282231dbfe5dc5c83a54275e7442"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enums_3.js",
+      "bytes": 302,
+      "sha256": "f6331a7dc81cf64293e7c4732b433f78bfc34290923d7095bbc7b6ef9f14ea70"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enumvalues_0.js",
+      "bytes": 3794,
+      "sha256": "169d2b44939be06abbc9b5bea9279bffc0789c136b4afbd4511e2a62031309c7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enumvalues_1.js",
+      "bytes": 1459,
+      "sha256": "d2079dae7ee3d78fab591092787b88841ec214632bd98596ec709fc9edc6c3ab"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enumvalues_2.js",
+      "bytes": 1152,
+      "sha256": "4353753777a56162b8c0a9c383e2c2cb58364df5b54b93694c9cbe93cbc20521"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\enumvalues_3.js",
+      "bytes": 1877,
+      "sha256": "c0555ea119a50fb0489e23ba27a9c7156d701a8cfb00a9a4f1878c142fe55356"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\files_0.js",
+      "bytes": 105,
+      "sha256": "f9ae1d12ab0c9c8a22223a9157ada2da6689122afc465ab96f76ec1926618553"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_0.js",
+      "bytes": 301,
+      "sha256": "e18cfdd040e8c7cc1ce1b7f65328544118a868b44805c35c74721725434e2f2c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_1.js",
+      "bytes": 767,
+      "sha256": "0bc7d7ac92038342b8d04ba7ca8cb7f8f966af603e3fccceab0d7f3a2c059840"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_2.js",
+      "bytes": 5450,
+      "sha256": "afda2100782a79351d6f722737ac4243fe5205f91404348d7c2006e3d12c4b1a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_3.js",
+      "bytes": 176,
+      "sha256": "7ae4581de8debee3a7b5b71fed7552c6ed3d612e3f7bed5e7b322b3bd0c95caa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_4.js",
+      "bytes": 460,
+      "sha256": "03ae63a4ce18a0e9d798e12d275bde118d5991c047a27f149bff34723b58ba1a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_5.js",
+      "bytes": 2221,
+      "sha256": "8121ca42136ab29626da3fd7db5a9ebc9f7245bdb6b7a90e76c7d6fdf8025fce"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_6.js",
+      "bytes": 760,
+      "sha256": "fd6c805f7418b8291073300222f3eb7a9830a7049be58f59e832dd67f0bee554"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\functions_7.js",
+      "bytes": 872,
+      "sha256": "7789d6dad466e31801900a1c845ffd9d775adef5da627af7975421c689d2b87b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\mag.svg",
+      "bytes": 804,
+      "sha256": "fa25ecffc91dcc7c1d14b34cc87bc6848514d5d7697f6f3c12191e8440515427"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\mag_d.svg",
+      "bytes": 804,
+      "sha256": "c3df08a0a30b7488cfe470572168e82b250aecc1703311797e8f3a44c4da9823"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\mag_sel.svg",
+      "bytes": 1019,
+      "sha256": "a12627d70bff4b36542402ef7668fd0da94844d48a19a6c0a91d8e22eb20f5de"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\mag_seld.svg",
+      "bytes": 1019,
+      "sha256": "2102d7424960ca705bce50ef2732ada44e512144939dae8cbfc18861ddfd5995"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\namespaces_0.js",
+      "bytes": 87,
+      "sha256": "51dc3ff138280ed29b8d8ced70e5eef23fedf131c4c136766996eb50363f0fe9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_0.js",
+      "bytes": 2585,
+      "sha256": "5d21b59ac6b49b48b7e81d69cb9714aeed7482d8f11f2eb947a1441661033d01"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_1.js",
+      "bytes": 463,
+      "sha256": "a78f5694ce9ca29a3286a7269b068f56efae70064490cd40cec8ceddeaafbab8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_10.js",
+      "bytes": 1125,
+      "sha256": "1277fdc168722661220ebabd246fdb69909160d14ddd56f8e6c1054530fb4cc6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_11.js",
+      "bytes": 239,
+      "sha256": "37f80d3884b0c5cc53ce53d2bc5b1f804c5507525b1d9ff3aae0cd50120fc5d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_12.js",
+      "bytes": 320,
+      "sha256": "e5e5fdffec6f8da93034a36928afd9c795bb73103e0ecfdb3eb49cf9c1de7a5f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_13.js",
+      "bytes": 711,
+      "sha256": "3ce66bab4b8d5c204b6bd9724ce6375b5ff84506f1b890a74114cfa6fdb8bb3b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_14.js",
+      "bytes": 92,
+      "sha256": "4f54858686a2b23fb849b29d0dd56714acea091877bd9857f252a11824333175"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_2.js",
+      "bytes": 1532,
+      "sha256": "93337c3ec845451e235c000248d3e03ce556a71e3a0c4267d084bdd5012b0aa3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_3.js",
+      "bytes": 577,
+      "sha256": "079e4296fda99f2d06f815cb7985f59403e5b871b42e4b6ea6802ff28dac01d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_4.js",
+      "bytes": 499,
+      "sha256": "d781b3555237a87e9e0f9284866ef328233f06d186eea2748e22fc2906c54903"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_5.js",
+      "bytes": 246,
+      "sha256": "e32c40d7fe528b58760fac74ea1608e934545d7045ce95989d9a45c11f435350"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_6.js",
+      "bytes": 235,
+      "sha256": "8d77c7823d42e46b33def0686224d737bc62e06eda78d641dd41a2f3de330210"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_7.js",
+      "bytes": 136,
+      "sha256": "cd4d37013b5b4c3c548066f07430197cb0bda0bc7476e69f9c76cef0d8c208b3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_8.js",
+      "bytes": 104,
+      "sha256": "cc253faf1020eea49d35f77d97b76ac98725ec74d4f6b94a62c7526813218406"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_9.js",
+      "bytes": 198,
+      "sha256": "6ec1af811e8ce6c7e4eeb87466ba4307f35c5e39858272dd8054c0c1695805d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_a.js",
+      "bytes": 854,
+      "sha256": "365f8053c5320514951aaaea6052456201358b45d9be7d76422d149eab646534"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_b.js",
+      "bytes": 269,
+      "sha256": "33fd01cfee465863bc1c8c3b38bcb520b9fc542e1f1ab0763b35d584a1d2f01b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_c.js",
+      "bytes": 712,
+      "sha256": "470ad5a361f970ed5f039729f9f4af95d6d040d6dd817ec635b3bd88b8ee07db"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_d.js",
+      "bytes": 750,
+      "sha256": "29e8c815a32a03aa43c77f46d78618dbff6d888a2e19af5af474f143abc90f69"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_e.js",
+      "bytes": 169,
+      "sha256": "ff5a02c3bc45ce65870f22e0613f6930ed6fc6fbf43b790ac5840a53602e0741"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\pages_f.js",
+      "bytes": 1254,
+      "sha256": "163274df1ba7bce35b64412243cf5a0936d280280c298092e540e7790762a580"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\related_0.js",
+      "bytes": 323,
+      "sha256": "68104df3f7ce60c871d1048e7314f1f90534f490cfb3be4bfe512706361f050e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\related_1.js",
+      "bytes": 681,
+      "sha256": "de6d1254c8bd2aadaa626520ddb05413405d4d07d2bcc49dee1a216c24fce5b0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\search.css",
+      "bytes": 7071,
+      "sha256": "26734eec6762a0c4cc2b2a694a35bdbb91e2762929c46c6a05088291e6b9beae"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\search.js",
+      "bytes": 23995,
+      "sha256": "9a1451e22257a8d75b1d8eba8f312e7a2c843e32eaf3be13522762180f313f02"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\searchdata.js",
+      "bytes": 690,
+      "sha256": "1e3cc8570f13ccacff7ffe08df51dfe986d953fae32aa6836f16772e84a18733"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\typedefs_0.js",
+      "bytes": 268,
+      "sha256": "ec65d0c2d43c3e2c6ba4c4547dcb922fdd9e306b7126c90ae9bcccb9526661ae"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\typedefs_1.js",
+      "bytes": 144,
+      "sha256": "1b64bf13f6f2845e76935c403ef77bd83517182b8e64b1de6c1fd5def3cf8046"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_0.js",
+      "bytes": 1324,
+      "sha256": "53ad3a944dc5563e099d304f28bf587424dc06a3f8e4a71f2d9eaa9b04f9179e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_1.js",
+      "bytes": 1057,
+      "sha256": "031fd13b85bd094e864532e2b566bbce70dc8496420614133153557aa1624387"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_2.js",
+      "bytes": 182,
+      "sha256": "3dc07bab1a8937e3ce75f885bef42c2fe717f6ad8211067e40814e3ee9a94722"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_3.js",
+      "bytes": 190,
+      "sha256": "be266a37c04f9af122f7ced12bce3d7d95827bf065213a73b9df4f3e7d67436c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_4.js",
+      "bytes": 876,
+      "sha256": "722e7fa73a10236b0382246598e5c396e15f486eb9d67488ff07be12844c0ffb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_5.js",
+      "bytes": 911,
+      "sha256": "4cffbcf457a33d4c3608cdff6b5319bfdda3daeccbf5b18d97be9d025288f7c0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_6.js",
+      "bytes": 145,
+      "sha256": "cb838fc5b7c698d4aa3dfa2e840f555b7dfef1d2cb03f3dae4342efac5dbada9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_7.js",
+      "bytes": 1651,
+      "sha256": "86185441da0539dffc5fe37a7a671d3924612a55f889fbffc11f5d478225bc2f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_8.js",
+      "bytes": 145,
+      "sha256": "91093c0bc0a055291828b602b7c1ed273626db0ddac2ed8e5fdc1cac7d3e465c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_9.js",
+      "bytes": 373,
+      "sha256": "2cb1c1f742670e0c4d2f4562e0c5b715b253c8f16878278bdbd8d8e35ea26bf2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_a.js",
+      "bytes": 2730,
+      "sha256": "76193a20767fef7a74f82beeeb732637e20892a26098c802083e5dc06e148ed0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_b.js",
+      "bytes": 178,
+      "sha256": "70dff0c3a19550852d76350104e35fee0bba8c49a2443e7a8a5a76c1c9d4d45c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_c.js",
+      "bytes": 753,
+      "sha256": "42032761a01a8c904ebc55c80af935561c7ff642d1fe5c933b74f6267aa5211b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_d.js",
+      "bytes": 159,
+      "sha256": "0204188e829df5456cd0fac73afcb13c6fee3769a5bf11134b1caaad0bc44d5f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\search\\variables_e.js",
+      "bytes": 659,
+      "sha256": "63860a114d9304b41fcbd72ed13e9fb546396c0f13c36486c8e4ce00c3f8e2bc"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\splitbar.png",
+      "bytes": 314,
+      "sha256": "1c555557ca84ba3598f52c281780dd7e22655db21ac383712e62d4540a1bc525"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\splitbard.png",
+      "bytes": 282,
+      "sha256": "cc185f49e6cf1385cd1dcbbc96511185e7db3b82170a228e6a4325d3a8884a96"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\statistics.html",
+      "bytes": 11350,
+      "sha256": "eec314fbf1ffdc57245c155f022890670fcdd9fb62636f80967b8e361f67243c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___c_a_l_l_b_a_c_k_s-members.html",
+      "bytes": 6055,
+      "sha256": "5e81c40ae3d8ec32b065b14f06189223a928bd9dd73b3c7b295dd55fba0e57a2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___c_a_l_l_b_a_c_k_s.html",
+      "bytes": 9112,
+      "sha256": "9e1a76c758100200bf62336fce483fb6cc83b520aaba059e29bc1aaa4f7b2b53"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "bytes": 6599,
+      "sha256": "dbacb5a4cc038c5cd48a5b2220da5a2c0f29b7767eb0f8cf403275eb0a40d94a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "bytes": 14939,
+      "sha256": "f11e779cf85b6e03f5350b3ab1cca5790d2d23f71459882b7aeb761a9e9d88da"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "bytes": 783,
+      "sha256": "3692aaf638346a61bcc9ba3e04fd61abed7606703411b495b8295e4143856c84"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_o_r___d_e_s_c-members.html",
+      "bytes": 6576,
+      "sha256": "3006d529f889bda28f61103f026a71f8b47483bc3af26dcd57b19983b9550d71"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_a_l_l_o_c_a_t_o_r___d_e_s_c.html",
+      "bytes": 12310,
+      "sha256": "6d4bd0215ebb7738e8d259a618c2fb537581a21bdfc04b567b7e2250b10515e7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_budget-members.html",
+      "bytes": 5707,
+      "sha256": "4ab24bdf2e3d6d3ec9f4400b36a6f1054f6d161fe5f413fc202436850b0966d7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_budget.html",
+      "bytes": 10298,
+      "sha256": "0279fbfa5781904d9f1b6fd91eb0c7b28cb7da100cf20f0d6e6ecfbf6e8ff5ea"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "bytes": 8475,
+      "sha256": "5cc3502f35fa772ab890495e94ae60c80d54f42f89a95be5776e41161ce29623"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "bytes": 20179,
+      "sha256": "59eed9df833dfa6269d95240f147f125fc6c22cdb15033f6e316cfc01bd552ba"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "bytes": 778,
+      "sha256": "5a8db34610dbd558c2606cdd0e48e5d086de3496adfc85e10a433b8fe224cb3c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_p_o_o_l___d_e_s_c-members.html",
+      "bytes": 9617,
+      "sha256": "e8116ad49dc812a12b92e107d84d56219fb2898399818389971f6c1f7a4f3447"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_p_o_o_l___d_e_s_c.html",
+      "bytes": 23949,
+      "sha256": "03e9ffb1b132cf162ff66ac3bda0bdf69d4bac3a363c6d288088151ed275c5df"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_p_o_o_l___d_e_s_c.png",
+      "bytes": 650,
+      "sha256": "e66d9bf3dad1a589dc755e23c1c910a17c1f34ed8d1256fab0a9fdb6951238e3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "bytes": 7963,
+      "sha256": "ed43b37bcf245ca33bd4f21c13d8cdacb98e2fb9f4814d8a709ba783ba0cbb9e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "bytes": 16704,
+      "sha256": "7d4d8141240482bc4cd6a4cd060c2aa520325aae12812f97bc44bd2db5bd8375"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "bytes": 927,
+      "sha256": "ed1fdcad2a8cdacdc3778772dc4902ad895dc8890fdfb2ed49a602e1d8e5ed7a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c-members.html",
+      "bytes": 7403,
+      "sha256": "f36da363e89365df4fd80afbd8c7e23cf15b1124ca29d21d701327bb51209beb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.html",
+      "bytes": 15818,
+      "sha256": "c28dd398b8f197bb85d226ad2f797886bc4481137fa06ca5a59b69326f97268b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_c_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.png",
+      "bytes": 828,
+      "sha256": "ff889e610b06b6c3e595a1cf6b8595dafbd3fb2fbc716135b34e01a354399ca9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___d_e_s_c-members.html",
+      "bytes": 6070,
+      "sha256": "09fbe83a5def1a1be422016a15ab57c114258d3456f33f5aef232744c1f23fe4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___d_e_s_c.html",
+      "bytes": 9484,
+      "sha256": "637fca6788cbd23adf0060a7c84ecdf7f873159c8598f6bbd147cd8032ba8cc9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___m_o_v_e-members.html",
+      "bytes": 6069,
+      "sha256": "d17acaaf77d471a7b14b36639be2ee26c1591b5a9cbab3461c78a95bee184e70"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___m_o_v_e.html",
+      "bytes": 11280,
+      "sha256": "2a5899155b6c0c7e78e8efd311ab47cd3622ac84c6f372791b9a2f9ea636366d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___p_a_s_s___m_o_v_e___i_n_f_o-members.html",
+      "bytes": 5873,
+      "sha256": "b646e1da0f3e4e004847f765393fe9cd35e21d829c2ab449ed20fe1287c09c2c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___p_a_s_s___m_o_v_e___i_n_f_o.html",
+      "bytes": 12690,
+      "sha256": "6a0a5c31ad472631800dd1d2b7b296b7c59f236c1823cb758cca6a1c10afd660"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___s_t_a_t_s-members.html",
+      "bytes": 6442,
+      "sha256": "c4ed0f0cb7d2b0869945c66902aa2ca74eab2a3efc2ac2ab3f88c57d879421cd"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_d_e_f_r_a_g_m_e_n_t_a_t_i_o_n___s_t_a_t_s.html",
+      "bytes": 10403,
+      "sha256": "f3ebf7fc914e4724ba9c646c0057a177f0a81e4c2439cd5e9df7bda8c7ce81c9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_detailed_statistics-members.html",
+      "bytes": 6843,
+      "sha256": "3198b3c17881603eaff0ffbc820929138f04bed0037c44d37b34a0fd9e9e7df4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_detailed_statistics.html",
+      "bytes": 13153,
+      "sha256": "b880640b4e43e2014e280490f265dbb68a6200a30305f20b3b4369585c000ee0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c-members.html",
+      "bytes": 7619,
+      "sha256": "626a1e30b4a764a22c70273defa3571b4f7c405ed65312ec6ee054877c765d1f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c.html",
+      "bytes": 20036,
+      "sha256": "d51f3a62f022885011ae1d76ec918d43b0b0fcd1b2e9c96e27e2e13f72b8fb53"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_p_o_o_l___d_e_s_c.png",
+      "bytes": 658,
+      "sha256": "9123663a2b91398c7b66bca8249cf40a2e1b47087b3e403592279a3a4e1a49e8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_statistics-members.html",
+      "bytes": 6059,
+      "sha256": "571ee9c6046761f7bdddac9ce4c88d9b0f8fd6a2eb8799b68bfa64ad08190592"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_statistics.html",
+      "bytes": 11830,
+      "sha256": "c8c3f929fca8afad005fbbd4988337e1a2a37a2c3b836fbad1001e2e4b571f83"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_total_statistics-members.html",
+      "bytes": 5846,
+      "sha256": "e043ad5d745eba53a9a32ef3da91c23486c9a2eb5314a29deea7622a59a09400"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_total_statistics.html",
+      "bytes": 11159,
+      "sha256": "d46a3987ea867b7924e802daabf270cdc8bc31df242a566289f5652a909d0304"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c-members.html",
+      "bytes": 6480,
+      "sha256": "62b510af5bbbb382bc26c9a76017dc3d7fd500f95c9fec1a32b0ff1a757e947c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.html",
+      "bytes": 11004,
+      "sha256": "3152e4a433f01a9e080b0782d147faa1cfad3f4f5618f7bf9f8808b52e74de1b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___d_e_s_c.png",
+      "bytes": 933,
+      "sha256": "02504442f9049918c4ccee2db75736ed010309d72f952b8fa626c24a6735a731"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___i_n_f_o-members.html",
+      "bytes": 6117,
+      "sha256": "157f0537822e514b7a5dc86af1c16993b27b37ef1fd0e44f4bb8f3dc3f86a36d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___a_l_l_o_c_a_t_i_o_n___i_n_f_o.html",
+      "bytes": 9771,
+      "sha256": "dce60e16e84520ac05cf9f54c284fa730aa9f4b51bb62d426c3fa92111a21a43"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c-members.html",
+      "bytes": 6014,
+      "sha256": "e357591cdb05479c775251b6239dfeebe92f7bb64d26369191ceb3c34746ff6d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.html",
+      "bytes": 10709,
+      "sha256": "43e46052f4dea2f711e3ea1c029c6241b989b98bcff83c44523501514ab7e34c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_v_i_r_t_u_a_l___b_l_o_c_k___d_e_s_c.png",
+      "bytes": 836,
+      "sha256": "d594fbdefb0d0b56182ce6cc2924769cd87c77d2a936eec4850b1b70c3ca5e40"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_virtual_allocation-members.html",
+      "bytes": 5263,
+      "sha256": "7b6f1af98e75ee98ad14aba69c211d562261c29b6be561a22bc2cc8281106684"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\struct_d3_d12_m_a_1_1_virtual_allocation.html",
+      "bytes": 7358,
+      "sha256": "9d14f8037e2a43395301ad65c89b1bf9416e6031687a50ccb62305dbdbd8f4c2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\sync_off.png",
+      "bytes": 853,
+      "sha256": "39bcba0c183ec442cc90fe27a2dbafd4e1c791aff374b5326ba16880a16d9826"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\sync_on.png",
+      "bytes": 845,
+      "sha256": "9abb731904dd1f8eb00aaea66bfef72d5252931d84cc01cfabde3bea854b5b14"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_a.png",
+      "bytes": 142,
+      "sha256": "5ddd37bdced843340e0679b6b4e7ed2fe318fd0cef76d160543722e0c3eac11f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_ad.png",
+      "bytes": 135,
+      "sha256": "9f4783d1f7ed442e14caa8124ffa47e9adb0264b5115b10885223a921ceab458"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_b.png",
+      "bytes": 169,
+      "sha256": "901ae15db25905dca7a17b81c6d51869fd12ea569fc4b072d217786b4b4d73bd"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_bd.png",
+      "bytes": 173,
+      "sha256": "e5ecd262d002acd5d15b8691504d1ecd8f25eb8c03a11bd79e8547c330c71065"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_h.png",
+      "bytes": 177,
+      "sha256": "e4b9bd9425bc87b33d6b1911e6398673939aa2f15ac505b9a1ab029b8452dd08"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_hd.png",
+      "bytes": 180,
+      "sha256": "28986f7b21b7378028ae6c6668801f323db800a582e2ea52f94379fa97faa790"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_s.png",
+      "bytes": 184,
+      "sha256": "69f392daa28adc942272615ff2db16bcf084f01ec9fcc2f7f6a632b2bba8c468"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tab_sd.png",
+      "bytes": 188,
+      "sha256": "1f9e4f3a2e041411fa4d7195fd1c1690bbbf273afd6846417992590acd443ded"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\tabs.css",
+      "bytes": 11741,
+      "sha256": "352cf22a6789628afb1496ff0b9b4576b5d616352e108230f45fba47f22138c0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\docs\\html\\virtual_allocator.html",
+      "bytes": 26953,
+      "sha256": "1492f34dc27434a47fdae100ec8c5242830a4644b5890686df86db20dbd934ed"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\include\\D3D12MemAlloc.h",
+      "bytes": 172541,
+      "sha256": "672193f18428428832ca9c9f22d7940229a7afea5a2280435f7dabf1cc19b903"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\.editorconfig",
+      "bytes": 68,
+      "sha256": "3f80c747ac4dc7c9107bf928e26ed63c59c6942bf88c9c202187392c4cf160b3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\CMakeLists.txt",
+      "bytes": 6662,
+      "sha256": "d85899243de52fa559b7e3199b911cf7706d046e4775fc286a55d52653f50908"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Common.cpp",
+      "bytes": 5117,
+      "sha256": "9a8b2225c712e00fdd19a70a8f83250376a457a0337faba85a5e34821db1395f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Common.h",
+      "bytes": 12857,
+      "sha256": "ae013b11a8fdc452e6d6ed9361858629c974901d2422b6e3939aa830b7cfe0ac"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\D3D12MemAlloc.cpp",
+      "bytes": 355437,
+      "sha256": "cb81d9184e4a69407f7b9f204bd7b56247a014c82cd698cc7002c03aeb41bdd8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\D3D12MemAlloc.natvis",
+      "bytes": 2036,
+      "sha256": "25e04d152bdfbb140e732ff231b2abb645c21de8735fcd8e5852e2e87ceeb04f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\D3D12Sample.cpp",
+      "bytes": 78183,
+      "sha256": "1be10a7b416869b5f94df83ddef642de6ac52e3687052f9acefeeef9cd0ba967"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Doxyfile",
+      "bytes": 132902,
+      "sha256": "3e38b82907756d77ac9ce6bc20c8bca994174c6f76855c64c57ff7ceb8683e61"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Shaders\\FxBatchCompilerScript.fxbc",
+      "bytes": 1300,
+      "sha256": "e157f42e4e101c6c1783d24c3e7fbb664d5944d5c63ccdf6f8964a56bc69a97c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Shaders\\PS.hlsl",
+      "bytes": 1503,
+      "sha256": "36bbeb461e5dddcdc8cacbee131071a94e24bd562dd0bd63d43458f29bad1341"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Shaders\\PS_Compiled.h",
+      "bytes": 7004,
+      "sha256": "2c5bb7be95e787e8e1d4465e59638db158e2acfae7f256e55c4399fbe84ca0ff"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Shaders\\VS.hlsl",
+      "bytes": 1618,
+      "sha256": "fc4a1f38bd3281526c10c4e4ae7f687e19149f0e41eaa5b7d9505784557f8e29"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Shaders\\VS_Compiled.h",
+      "bytes": 7405,
+      "sha256": "45dc02d920d5b18243d7658df5e5bb29da90f396601108afb8b5a0b74364ed8d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Tests.cpp",
+      "bytes": 198457,
+      "sha256": "dd36f582dba2c026031db097c85155235af84c02e7ca0794ff5079accd7641c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\Tests.h",
+      "bytes": 1459,
+      "sha256": "3ed58a11824a3456c5371f9dd7296bf0543f5025d66b98eab7e1fda3d5570c49"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\src\\cmake\\config.cmake.in",
+      "bytes": 108,
+      "sha256": "cea5381f1159497cd8396bbe2cfa73492a8986da5f86b87438e300b16f7d0365"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\GpuMemDump.schema.json",
+      "bytes": 6418,
+      "sha256": "9e0f24fabdfa1173728ba002cc4e244332e388446ed903d5f61974cf996d7e40"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\GpuMemDumpVis.py",
+      "bytes": 14742,
+      "sha256": "4878818fb72ae1bd7d8a72a14f67837c4d3ec0ade8ec74e268d82bfacad283aa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README.md",
+      "bytes": 3568,
+      "sha256": "2e4b4691350c1fe98bce3136459121e8f2184482ae223841e93c8e236d0aa5dc"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\ExampleOutput.png",
+      "bytes": 98005,
+      "sha256": "8f337096f2595b51d37a48b1bff9497ea91b8d8324938ff44493ed9a5fea4fee"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Bkg.png",
+      "bytes": 196,
+      "sha256": "82ece0d1aca31f64ebd989a6b42f548b1cfc3c41f75751d2c55e97482bedd7f0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Buffer_1.png",
+      "bytes": 1705,
+      "sha256": "2eb801889a2d7cf857b5fdf13e8ade0dbe71080b46efbbf18141c47c2aa38778"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Buffer_2.png",
+      "bytes": 1590,
+      "sha256": "87c0694c6d45f77e6b074ae308bdb1e780bfe6bc43b924b3d75b2a59f33cbbdf"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Buffer_3.png",
+      "bytes": 1877,
+      "sha256": "b68cc0319fba047fde905f141eb063ae07e4549b8843ecc99a7cd2fc481dc518"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Buffer_4.png",
+      "bytes": 2195,
+      "sha256": "db4a3d049e9b89b8272e32e726270ebd2d41e7b2aee8727c03aa00b258f37f73"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Details.png",
+      "bytes": 964,
+      "sha256": "66ae054934a797d4ffca4475399f7803cd31734528d257a9da81f5cd593a690d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Image_1.png",
+      "bytes": 1739,
+      "sha256": "fb6dcab4d2e6431056428cbdb684a2add46da0dba1ddb321100eb369863e7892"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Image_2.png",
+      "bytes": 1592,
+      "sha256": "16d9b7eda96a9f05c91bf25f835e4d5c9a63405ad8ccdd022a97644ae5e94211"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Image_3.png",
+      "bytes": 1719,
+      "sha256": "197a8d95b244eae3e96427059d0c144a3d46bc64c5d98b868f93779b69bcb82d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Image_4.png",
+      "bytes": 1925,
+      "sha256": "74118046cfd7e294abd5fc807552df167481d933af35ecc83b8b56eccecfc7d3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Image_Linear.png",
+      "bytes": 1432,
+      "sha256": "434c7a96c0d4bcb7fb059987af560d2ba61384d3245395b5c73d9f23ea7f23db"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Image_Unknown.png",
+      "bytes": 1449,
+      "sha256": "b8b580328459e7b814975722867db1ca46081acbf2685843ee95dc0d905836e7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Texture_1.png",
+      "bytes": 1739,
+      "sha256": "fb6dcab4d2e6431056428cbdb684a2add46da0dba1ddb321100eb369863e7892"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Texture_2.png",
+      "bytes": 1592,
+      "sha256": "16d9b7eda96a9f05c91bf25f835e4d5c9a63405ad8ccdd022a97644ae5e94211"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Texture_3.png",
+      "bytes": 1719,
+      "sha256": "197a8d95b244eae3e96427059d0c144a3d46bc64c5d98b868f93779b69bcb82d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Texture_4.png",
+      "bytes": 1925,
+      "sha256": "74118046cfd7e294abd5fc807552df167481d933af35ecc83b8b56eccecfc7d3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\README_files\\Legend_Unknown.png",
+      "bytes": 1356,
+      "sha256": "12fa57135162cc157d714cc371b60043c95e370da0577a29e5c51917ba98fc26"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\D3D12MemoryAllocator-3.2.0\\tools\\GpuMemDumpVis\\Sample.json",
+      "bytes": 20684,
+      "sha256": "4333ec54b85d8538a44f27762773f85e829c607ba9e32d91568913b7cd80ebe4"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/Cyan4973/xxHash/e626a72bc2321cd320e953a0ccf1584cad60f363/LICENSE",
+    "status": 200,
+    "length": 1389,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/Cyan4973/xxHash/e626a72bc2321cd320e953a0ccf1584cad60f363/LICENSE",
+    "status": 200,
+    "length": 1389,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://api.github.com/repos/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/git/trees/e31817bab259085d3a8f8ba205b1840a6ed28068?recursive=1",
+    "status": 200,
+    "length": null,
+    "contentType": "application/json; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/CMakeLists.txt",
+    "status": 200,
+    "length": 1351,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/CMakeLists.txt",
+    "status": 200,
+    "length": 1351,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/LICENSE.txt",
+    "status": 200,
+    "length": 1099,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/LICENSE.txt",
+    "status": 200,
+    "length": 1099,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/NOTICES.txt",
+    "status": 200,
+    "length": 2839,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/NOTICES.txt",
+    "status": 200,
+    "length": 2839,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/src/CMakeLists.txt",
+    "status": 200,
+    "length": 6662,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/src/CMakeLists.txt",
+    "status": 200,
+    "length": 6662,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/src/cmake/config.cmake.in",
+    "status": 200,
+    "length": 108,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/1d86c1130f61453634b1df85782e1fecfd59a525/src/cmake/config.cmake.in",
+    "status": 200,
+    "length": 108,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/CMakeLists.txt",
+    "status": 200,
+    "length": 8131,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/CMakeLists.txt",
+    "status": 200,
+    "length": 8131,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/LICENSE.md",
+    "status": 200,
+    "length": 1079,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/zeux/meshoptimizer/9d9890c73011d75920af614485296d1e03e95448/LICENSE.md",
+    "status": 200,
+    "length": 1079,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/README",
+    "status": 200,
+    "length": 1581,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/README",
+    "status": 200,
+    "length": 1581,
+    "contentType": "text/plain; charset=utf-8",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/squish.h",
+    "status": 200,
+    "length": 19331,
+    "contentType": "application/octet-stream",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "GET",
+    "url": "https://raw.githubusercontent.com/Ethatron/squish-ccr/deb557d2fa647b191b37a2d8682df54ec8a7cfba/squish.h",
+    "status": 200,
+    "length": 19331,
+    "contentType": "application/octet-stream",
+    "redirect": false,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "scope": "Native single selected shader variant list",
+  "checkout": "F:\\JericoEngine\\JericoEngine",
+  "status": "SOURCE_FROZEN_NOT_COMPILED",
+  "files": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h",
+      "sha256": "3882F75E356CFB12A4BECCEB49D89ED52E0FEF7C161AB8244F8C6ACFF9803662",
+      "bytes": 2157
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+      "sha256": "560BF0074037BE0D05BA767D34C243B60EF0CF73E47522A5A0DC711DF4103D51",
+      "bytes": 24563
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.h",
+      "sha256": "F0455E11D9948A8755BE16A248E49E909D69A35C86BA33A4DFDB8BB350044502",
+      "bytes": 1360
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.cpp",
+      "sha256": "DB43509C5DBE15567B8D00050EAF1DD20FB1CCE36DFD5B221077655C301FAFE7",
+      "bytes": 10291
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake",
+      "sha256": "0805D4463C028638734080523190E6156FA877FB17C06235ADE4DC5B1FC049D7",
+      "bytes": 1329
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "sha256": "4C110E4C4BCCD854E1EFE87675EA28893E7C95814677EF8C7E08DE8EDC255E83",
+      "bytes": 3661
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp",
+      "sha256": "BD6BF74E50FF3E2EF508D473F5E2ADF804020CC7AB7E4C000B44DC63CA03C4CF",
+      "bytes": 11524
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/shadervariantgenerator_tests_files.cmake",
+      "sha256": "A9841DA616EBF79D1AFFB5BA0D3A15C8F4CDCEE465CFD69A0D903BE6E91B4810",
+      "bytes": 255
+    }
+  ],
+  "referenceInputs": [
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/ShaderManagementConsoleRequestBus.h",
+      "sha256": "BB475896C42B17DBC057A856BD2CF940BF685BD9D7FBDDF2D7AECACD14C3CB67",
+      "bytes": 2165
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/ShaderManagementConsoleApplication.cpp",
+      "sha256": "81BE504F367E144E82DFBB76A0C3684E6EA3C0880E6C4A5BBBA9520284CF1B2E",
+      "bytes": 13013
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp",
+      "sha256": "844D1C3B616D585BE9DBC0DE97D22A63BB63D463E145C6F7A358F57BCF161CFA",
+      "bytes": 31704
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocumentRequestBus.h",
+      "sha256": "9DB7A9D1F4BBEFB8EFE38417DD2F861A22FBB4B8BF7C43B59182C54CAEA02F73",
+      "bytes": 4687
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Scripts/GenerateShaderVariantListUtil.py",
+      "sha256": "42AC618519093C2D6DB733D4A9C06B12A2DE9A13F1F8DBD7BEF9600CD21F4912",
+      "bytes": 8347
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Reflect/Shader/ShaderOptionGroupLayout.h",
+      "sha256": "F5910F34DF8D6B3535DC1EBCFEA77DC074914C554BB4B3A195370FDF668B5579",
+      "bytes": 15333
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Reflect/Shader/ShaderOptionGroup.h",
+      "sha256": "0E7C88D49EB10F980F8BF18BEE798AF75C801CBB5E7902C234CB2975C316F211",
+      "bytes": 6790
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Reflect/Shader/ShaderVariantAsset.cpp",
+      "sha256": "A27A97983AD217F4EFA5E5F034D8C9F808C31F9FAF0F7AD661A4512671ED1486",
+      "bytes": 4985
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h",
+      "sha256": "25A34E71B1267E31E6DF85B9FE87A427EF8CD66A9074A1834A086BBB0261288E",
+      "bytes": 4005
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Document/AtomToolsDocumentSystem.cpp",
+      "sha256": "E6FE8A47550E9C04417C24678A8B8E19714C1F8AC98E55B43F4084D8677169B2",
+      "bytes": 29618
+    }
+  ],
+  "nativeValidationOwner": "Luna only after parent review"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "STATIC AUDITOR V1 FAILED BEFORE WRITES",
+  "cause": "PowerShell generic Span SequenceEqual overload binding ambiguity",
+  "resolution": "Rev2 uses exact bijective Base64 representation equality of raw byte arrays",
+  "sourceMutation": false,
+  "nativeExecuted": false
+}

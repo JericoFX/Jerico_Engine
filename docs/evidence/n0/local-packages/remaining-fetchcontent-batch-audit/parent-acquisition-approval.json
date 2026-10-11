@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-11",
+  "reviewer": "parent",
+  "scope": "Approve exact thirteen public source archives only after audited official destinations/pins/notices; no native build or dependency install",
+  "planSHA256": "97722EC07C61B20CABE06119B0C4ABEB2F67C11A19B7B7E34031EE70009CD7DF",
+  "preparationInputsVerified": 216,
+  "directDeclaredHashes": 12,
+  "measuredArchiveApproval": {
+    "name": "tinyusdz_repo",
+    "commit": "6050eef932f7d2788656d63297aa488fb0961ed1",
+    "officialDestination": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+    "condition": "Record new archive SHA and verify complete Git blob/extraction manifest before use"
+  },
+  "conditions": [
+    "No AWS/S3/CloudFront/Git fallback/LFS/binary installer",
+    "No existing snapshot overwrite; audit member paths/types/links/case collisions before extracting",
+    "Retain inactive test/assets/notices locally, exclude non-BSD model assets from product",
+    "No source patches in immutable snapshots; private copies and exact existing patches only",
+    "Source-ready is not native/importer/legal/Editor acceptance"
+  ]
+}

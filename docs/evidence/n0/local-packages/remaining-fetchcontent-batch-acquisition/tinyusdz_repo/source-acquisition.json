@@ -1,0 +1,15 @@
+{
+  "name": "tinyusdz_repo",
+  "URL": "https://codeload.github.com/lighttransport/LightUSD/tar.gz/6050eef932f7d2788656d63297aa488fb0961ed1",
+  "headStatus": 200,
+  "getStatus": 200,
+  "bytes": 16016231,
+  "sha256": "5a9aa6702a1d922d9ef12f52ea7a7a4f11425fb03e210dd0fdd2c3a000d56e4b",
+  "expectedSHA256": null,
+  "measuredSHAApproved": true,
+  "automaticRedirects": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/tinyusdz-6050eef932f7d2788656d63297aa488fb0961ed1.tar.gz",
+  "commit": "6050eef932f7d2788656d63297aa488fb0961ed1",
+  "matchesDeclaredPin": false
+}

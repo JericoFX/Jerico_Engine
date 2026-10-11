@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/Cyan4973/xxHash/git/trees/9d4f447c856962a98e22f144bd9b0315ab4d18f8",
+  "status": 200,
+  "length": 5093,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"6de336dcbc25f2598ed5e8627ba918f93b44cae0b546a5c224db9139201cf768\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

@@ -1,0 +1,12 @@
+--- a/Code/Tools/SceneAPI/SDKWrapper/3rdParty/Findassimp.cmake
++++ b/Code/Tools/SceneAPI/SDKWrapper/3rdParty/Findassimp.cmake
+@@ -68,4 +68,9 @@
+     PAL_Assimp_Lift_CxxFlagsWarnings()
+ 
++    # Use the pinned archive provenance without querying the engine ancestor repository.
++    set(ASSIMP_IGNORE_GIT_HASH ON)
++    set(GIT_COMMIT_HASH e0b52347)
++    set(GIT_BRANCH archive)
++
+     # the below line is what actualy runs its CMakeList.txt file and executes targets and so on:
+     FetchContent_MakeAvailable(assimp)

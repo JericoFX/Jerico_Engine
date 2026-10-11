@@ -1,0 +1,205 @@
+{
+  "search": "Case-insensitive function and direct FetchContent searches throughout Code/Gems/cmake owning sources; tests and local provider candidates excluded",
+  "declarations": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake\\3rdParty\\FetchRGA.cmake",
+      "bytes": 1485,
+      "sha256": "a44029cf11a847af476a7aab0f79ee1dcf5313ef740747b4b5d2dedd28f703f9",
+      "fetchName": "RGA",
+      "category": "EXCLUDED_ACTUAL_CACHE_FALSE",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\xxhash\\CMakeLists.txt",
+      "bytes": 1084,
+      "sha256": "22bab4f78958301c7adf9e17a7052c130e33c051c6890938ce7991233ef5ed4b",
+      "fetchName": "xxhash",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\sse2neon\\CMakeLists.txt",
+      "bytes": 1070,
+      "sha256": "f23745854437a319b042782e794db89581e1641577e9e9ea663cd2b1ad49d3d5",
+      "fetchName": "sse2neon",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\squish-ccr\\CMakeLists.txt",
+      "bytes": 1773,
+      "sha256": "c4b14cc51b83d2d8915756459eb0ab2cc96ff64db2340be4d3a025469c08c690",
+      "fetchName": "squish-ccr",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\sqlite\\CMakeLists.txt",
+      "bytes": 2875,
+      "sha256": "3dd06bc002b658cee1ba3dc70fe15ac67eaf3fbb1c6e02a686c6b3cc0b5058ed",
+      "fetchName": "sqlite",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\rapidjson\\CMakeLists.txt",
+      "bytes": 1162,
+      "sha256": "9f914da4a03a405f67bd90ea855994eb57c85fa337d7425e6eae42f6321bf0a7",
+      "fetchName": "rapidjson",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\mimalloc\\CMakeLists.txt",
+      "bytes": 1560,
+      "sha256": "c7ab90e631e0d5c91ec6e16f6ce0d94b42014d0f90ac641962bebdca0500f1ec",
+      "fetchName": "mimalloc",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/mimalloc-3.5.2"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\mikktspace\\CMakeLists.txt",
+      "bytes": 1161,
+      "sha256": "e28f97f4a04dc1a63c7bd726f3dc26315b0959a79d633e710c11704d3037fb27",
+      "fetchName": "mikktspace",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\meshoptimizer\\CMakeLists.txt",
+      "bytes": 1124,
+      "sha256": "6c9a3a8cdd6f528674f090857776ca7a85b1fac6672697baa261a557f8ab9a92",
+      "fetchName": "meshoptimizer",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\jsoncpp\\CMakeLists.txt",
+      "bytes": 1173,
+      "sha256": "ea03ce67a4f89d363ff1a13d4d4eb10e19a0cdffb085fecdf8b8d16eb6c8bb5f",
+      "fetchName": "jsoncpp",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/jsoncpp-1.6.2"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\cli11\\CMakeLists.txt",
+      "bytes": 996,
+      "sha256": "dd3f6d188a640382d4c3ebd0a4e214b964efe218b2cebc3a6cbfd82204a77be2",
+      "fetchName": "cli11",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/cli11-2.6.2"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\3rdParty\\antlr4\\CMakeLists.txt",
+      "bytes": 1701,
+      "sha256": "d190abe17f5e6a8760573b0a97000364d01cac263d99196379f6edd468f9a5c7",
+      "fetchName": "antlr4",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake\\3rdParty\\Findpybind11.cmake",
+      "bytes": 1664,
+      "sha256": "637ec9df345db5681873e04d2bf63f4969f107fba19cc114cf97c318b581b832",
+      "fetchName": "pybind11",
+      "category": "EXCLUDED_PRODUCT_PYTHON",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake\\3rdParty\\FindGoogleBenchmark.cmake",
+      "bytes": 5068,
+      "sha256": "1d8b7db0a56b9c3d1105d9ce008c21259a2dc2be589db9d5602ab9dee7ec5792",
+      "fetchName": "googlebenchmark",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/googlebenchmark-1.7.0"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\WhiteBox\\3rdParty\\FindOpenMesh.cmake",
+      "bytes": 8863,
+      "sha256": "b83da795150daaecdb9f22eb3782dd9d54816ba2d7ce995fd17825cf6c98c840",
+      "fetchName": "OpenMesh",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/OpenMesh-11.0.0-root"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\WhiteBox\\3rdParty\\FindManifold.cmake",
+      "bytes": 8340,
+      "sha256": "b43cf2f70a3505848872109219ce9594d7aeac3b560f2967d29a3108680f0fb4",
+      "fetchName": "manifold",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/manifold-3.5.1-root"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\MiniAudio\\3rdParty\\Findvorbis.cmake",
+      "bytes": 3759,
+      "sha256": "f5a7ed8930cb17058ca2b2dde5b9d337292195e5fb353dae555a76c76c8efcbd",
+      "fetchName": "vorbis",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\MiniAudio\\3rdParty\\FindOgg.cmake",
+      "bytes": 3180,
+      "sha256": "2894a3529143aa673354f8ffcb05ac9dcac8da0cbada079a297a586ae11f4f02",
+      "fetchName": "ogg",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\MiniAudio\\3rdParty\\Findminiaudio.cmake",
+      "bytes": 6693,
+      "sha256": "81ed7f0ff29118678edda928f8cc9762e6b17b76fe38b9cb79aee5c8c6b21f00",
+      "fetchName": "miniaudio",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\RecastNavigation\\3rdParty\\FindRecastNavigation.cmake",
+      "bytes": 6441,
+      "sha256": "3f511ab1f7c5a0468a495b6f2c9d5892c9da65ab74dac8901262a60afbf7dd8d",
+      "fetchName": "RecastNavigation",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\Tools\\SceneAPI\\SDKWrapper\\3rdParty\\Findassimp.cmake",
+      "bytes": 6581,
+      "sha256": "0c20f26b27ac8ca5f100ee15f34970242bc54eda658b50c41a68b2a28cff7f17",
+      "fetchName": "assimp",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\PhysX\\Core\\PhysX5\\3rdParty\\v-hacd\\CMakeLists.txt",
+      "bytes": 1067,
+      "sha256": "ddc1b2ee727927945252b6bbb57e3a30acd8a798b80830848c072367aff6f14e",
+      "fetchName": "v-hacd",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems\\Atom\\RHI\\DX12\\3rdParty\\FindD3D12MemoryAllocator.cmake",
+      "bytes": 2291,
+      "sha256": "5dd02ea47f4bcb71f0e481f57b470fb429696c9a4cf258e1f7692d9f3692dbe0",
+      "fetchName": "D3D12MemoryAllocator",
+      "category": "REMAINING_SELECTED_DECLARATION",
+      "override": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code\\Framework\\AzTest\\3rdParty\\Findgoogletest.cmake",
+      "bytes": 4337,
+      "sha256": "c6a5911b6aa580f943a8fd5dc95c729ac09aa2a97ce5b90954001dd7d1d7e85d",
+      "fetchName": "googletest",
+      "category": "LOCAL_OVERRIDE_PROVISIONED_NOT_ALL_TARGETS_VALIDATED",
+      "override": "F:/JericoEngine/Dependencies/googletest-v1.18.0"
+    }
+  ],
+  "counts": {
+    "total": 24,
+    "provisioned": 10,
+    "remaining": 12,
+    "excluded": 2
+  },
+  "transitives": "TinyUSDZ13th source found in Assimp USD branch; this inventory is not total SBOM/legal/engine acceptance",
+  "rootNative": "Root48 stopped at Assimp; later Gem composition is inferred rather than configure evidence"
+}

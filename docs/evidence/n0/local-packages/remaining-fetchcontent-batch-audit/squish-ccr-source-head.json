@@ -1,0 +1,26 @@
+[
+  {
+    "method": "HEAD",
+    "url": "https://github.com/Ethatron/squish-ccr/archive/deb557d2fa647b191b37a2d8682df54ec8a7cfba.tar.gz",
+    "status": 302,
+    "length": 0,
+    "contentType": "text/html; charset=utf-8",
+    "etag": "",
+    "location": "https://codeload.github.com/Ethatron/squish-ccr/tar.gz/deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  },
+  {
+    "method": "HEAD",
+    "url": "https://codeload.github.com/Ethatron/squish-ccr/tar.gz/deb557d2fa647b191b37a2d8682df54ec8a7cfba",
+    "status": 200,
+    "length": null,
+    "contentType": "application/x-gzip",
+    "etag": "\"b8c08f0285294c0746c5574975add3823bdaa3c2e1f887120f20bd68b09ae34d\"",
+    "location": null,
+    "authorization": false,
+    "automaticRedirects": false,
+    "cookies": false
+  }
+]

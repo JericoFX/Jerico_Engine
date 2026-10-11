@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/lighttransport/LightUSD/git/trees/744ade8ff2ae4b59a1815336798a3eb995269b38",
+  "status": 200,
+  "length": 7889,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"375c3cb628e55fd2f3b88a0b5742f5f3b59f0f856b1ed2f06f375ea4c79a3055\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

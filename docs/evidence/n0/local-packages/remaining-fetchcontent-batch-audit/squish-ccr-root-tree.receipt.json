@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/Ethatron/squish-ccr/git/trees/ca60949c943acd1910aaf8ff573951230135f6ab",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"9ba707524d842fa4e0f626e7fdb876ec3edbca7e5bd260f318607dc1ab06b1b2\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

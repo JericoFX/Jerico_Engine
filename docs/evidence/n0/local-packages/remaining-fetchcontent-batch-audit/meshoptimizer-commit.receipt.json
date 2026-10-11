@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/zeux/meshoptimizer/commits/9d9890c73011d75920af614485296d1e03e95448",
+  "status": 200,
+  "length": null,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"f91594d7957708491a01c92c5cc16868a65bc3fc619828898120008d84e771fb\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

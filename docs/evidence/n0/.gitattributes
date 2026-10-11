@@ -142,3 +142,27 @@ local-packages/root-cli11-final/attempt1/before-CMakeCache.txt -whitespace
 local-packages/root-cli11-final/attempt1/before-CMakeFiles-CMakeConfigureLog.yaml -whitespace
 local-packages/python-product-composition-audit/source-diff.patch -whitespace
 local-packages/python-product-composition-audit/source-diff-rev2.patch -whitespace
+# Exact upstream notices, before-snapshots, diff transcripts and CMake captures for Root61.
+local-packages/native-shader-variants-audit/before/Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake -whitespace
+local-packages/native-shader-variants-audit/source-diff-rev2.patch -whitespace
+local-packages/native-shader-variants-audit/source-diff-rev3.patch -whitespace
+local-packages/native-shader-variants-audit/source-diff.patch -whitespace
+local-packages/remaining-fetchcontent-batch-acquisition/assimp/Findassimp-before.cmake -whitespace
+local-packages/remaining-fetchcontent-batch-acquisition/assimp/Findassimp-source-diff.patch -whitespace
+local-packages/remaining-fetchcontent-batch-acquisition/assimp/upstream-gitattributes.txt -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/assimp/cmake-modules/Coveralls.cmake -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/assimp/cmake-modules/FindZLIB.cmake -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/assimp/contrib/rapidjson/license.txt -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/D3D12MemoryAllocator/NOTICES.txt -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/RecastNavigation/License.txt -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/squish-ccr/squish.h -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/tinyusdz_repo/examples/common/glfw-3.3.6/CMake/GenerateMappings.cmake -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/tinyusdz_repo/examples/common/glfw-3.3.6/CMake/modules/FindXKBCommon.cmake -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/tinyusdz_repo/examples/common/glfw-3.3.6/LICENSE.md -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/tinyusdz_repo/examples/common/LICENSE.roboto_mono_embed.md -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/tinyusdz_repo/examples/optixviewer/cmake/FindOptiX.cmake -whitespace
+local-packages/remaining-fetchcontent-batch-audit/texts/tinyusdz_repo/schema/usdz/LICENSE/LICENSE.txt -whitespace
+local-packages/root-fetchcontent-batch-final/attempt1/before-CMakeCache.txt -whitespace
+local-packages/root-fetchcontent-batch-final/attempt1/before-CMakeFiles-CMakeConfigureLog.yaml -whitespace
+local-packages/root-fetchcontent-batch-final/attempt2/before-CMakeCache.txt -whitespace
+local-packages/root-fetchcontent-batch-final/attempt2/before-CMakeFiles-CMakeConfigureLog.yaml -whitespace

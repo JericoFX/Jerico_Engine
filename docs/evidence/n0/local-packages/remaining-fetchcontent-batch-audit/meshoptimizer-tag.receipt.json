@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/zeux/meshoptimizer/git/ref/tags/v1.2",
+  "status": 200,
+  "length": 337,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"728c44c859e3f54bef7ec1be054accda8a1b10530761ce13644e2152ab13ac56\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

@@ -1,0 +1,12 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/git/ref/tags/v3.2.0",
+  "status": 200,
+  "length": 399,
+  "contentType": "application/json; charset=utf-8",
+  "etag": "W/\"d667663b4ad17f01a97c2c18373cb6083d12a5844af882f12589075482682040\"",
+  "location": null,
+  "authorization": false,
+  "automaticRedirects": false,
+  "cookies": false
+}

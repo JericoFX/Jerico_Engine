@@ -1,0 +1,967 @@
+﻿{
+    "name":  "batch-miniaudio-original-before",
+    "path":  "F:\\JericoEngine\\Dependencies\\miniaudio-0.11.22",
+    "fileCount":  192,
+    "files":  [
+                  {
+                      "relativePath":  ".gitignore",
+                      "bytes":  1187,
+                      "sha256":  "33e4a0a2015eca3735c247e4b1f96c1aa64da97b7908d11357196ed581e89a00"
+                  },
+                  {
+                      "relativePath":  ".gitmodules",
+                      "bytes":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "relativePath":  "CHANGES.md",
+                      "bytes":  72831,
+                      "sha256":  "d78cabd4b27ae8525b7ad80a41e512c712aa2d6e009c4c870352db777965fc53"
+                  },
+                  {
+                      "relativePath":  "CMakeLists.txt",
+                      "bytes":  26500,
+                      "sha256":  "a12e3aceb37e3082c02cc07751858d9e5d56735298e263c11b1c929abf6f0de7"
+                  },
+                  {
+                      "relativePath":  "CONTRIBUTING.md",
+                      "bytes":  5309,
+                      "sha256":  "5e24934bb37f0baf082673c6477e5363196d0b1d355a80a0f8246684780ab597"
+                  },
+                  {
+                      "relativePath":  "LICENSE",
+                      "bytes":  2597,
+                      "sha256":  "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+                  },
+                  {
+                      "relativePath":  "miniaudio.c",
+                      "bytes":  56,
+                      "sha256":  "ab1984bb9804ffd7b0303813595d0b345a8a86c34da1daffc353a14b34102a65"
+                  },
+                  {
+                      "relativePath":  "miniaudio.h",
+                      "bytes":  4025780,
+                      "sha256":  "9019743287e443c55e5737a7297f38e5e358561701d6db2d905afb114390c410"
+                  },
+                  {
+                      "relativePath":  "README.md",
+                      "bytes":  6587,
+                      "sha256":  "1f65ded2beb20911489cb5f4fd09de5235fef7aee9e5dd5032a9262a0f6cbb37"
+                  },
+                  {
+                      "relativePath":  ".github\\CODE_OF_CONDUCT.md",
+                      "bytes":  230,
+                      "sha256":  "731ece74aa6cab97c85e5f1a2a2678de98ee2e7225610525559ef11452e809f6"
+                  },
+                  {
+                      "relativePath":  ".github\\FUNDING.yml",
+                      "bytes":  16,
+                      "sha256":  "95aeb70e27eb46d9a0bd127244446ebc2bca68fb14feff8faf322d4b09c30d30"
+                  },
+                  {
+                      "relativePath":  ".github\\pull_request_template.md",
+                      "bytes":  683,
+                      "sha256":  "9ada39d5a210689df084fcb183460e688fe4bb7455f9d185011702fdee81c59c"
+                  },
+                  {
+                      "relativePath":  ".github\\ISSUE_TEMPLATE\\bug_report.md",
+                      "bytes":  396,
+                      "sha256":  "6c8d6f7d3b30616c5f7fbbcb84b2456fe7a1ddeb5141046d334819cae6e55935"
+                  },
+                  {
+                      "relativePath":  ".github\\ISSUE_TEMPLATE\\feature_request.md",
+                      "bytes":  367,
+                      "sha256":  "21978fe679ae3c0d0c36893d66492209621ab2dc62150d7800f49d7734f340fb"
+                  },
+                  {
+                      "relativePath":  ".github\\ISSUE_TEMPLATE\\general-issue.md",
+                      "bytes":  819,
+                      "sha256":  "6df36ba784c4668d06f278198b7a62a0caad5292b805feb940d05b182f0e700f"
+                  },
+                  {
+                      "relativePath":  "data\\16-44100-stereo.flac",
+                      "bytes":  1798051,
+                      "sha256":  "e35ca9f62353185ea59dd0be0d48b7d59e86c6412af85a809f97cc25f56d0f74"
+                  },
+                  {
+                      "relativePath":  "data\\48000-stereo.ogg",
+                      "bytes":  494444,
+                      "sha256":  "56a5d9e693129f6f55c884ed5aae448aa7d49f0286338600e557a4283657162d"
+                  },
+                  {
+                      "relativePath":  "data\\48000-stereo.opus",
+                      "bytes":  537589,
+                      "sha256":  "21e1283b466a52c245ad5b656cd8f0aa1eb1072f5aa5094d0cfc9a837c4d1ecc"
+                  },
+                  {
+                      "relativePath":  "data\\README",
+                      "bytes":  209,
+                      "sha256":  "89b66180fde240f28009c9477ea90dd80b53b768bd3c5a55be4976f96b6bbd7f"
+                  },
+                  {
+                      "relativePath":  "examples\\custom_backend.c",
+                      "bytes":  31489,
+                      "sha256":  "8a960e073c3c24bed67def94bb493cfccff25c0eda4f4d1cefaba0596c54e37c"
+                  },
+                  {
+                      "relativePath":  "examples\\custom_decoder.c",
+                      "bytes":  3692,
+                      "sha256":  "f2e4e2425461fc0e93ab420c5b06b57f602df22e529b6cd99d4ca0a31fa184f8"
+                  },
+                  {
+                      "relativePath":  "examples\\custom_decoder_engine.c",
+                      "bytes":  2399,
+                      "sha256":  "5582ca5818218ebba99f33ba8a21593f672dbbc25c3fddc5d326bfa370d52ed2"
+                  },
+                  {
+                      "relativePath":  "examples\\data_source_chaining.c",
+                      "bytes":  5809,
+                      "sha256":  "d2e9cafb835977026a67da4449832fed65241657ffd752961efac0296856635c"
+                  },
+                  {
+                      "relativePath":  "examples\\duplex_effect.c",
+                      "bytes":  6203,
+                      "sha256":  "30102e637869e289fbef31ab6d6830011dab8608170d74643adbe626babd348c"
+                  },
+                  {
+                      "relativePath":  "examples\\engine_advanced.c",
+                      "bytes":  10761,
+                      "sha256":  "981943463acd388ca836a519e24c750091c8e8340852a80d1187eaddbafd9520"
+                  },
+                  {
+                      "relativePath":  "examples\\engine_effects.c",
+                      "bytes":  3921,
+                      "sha256":  "1a0fe7ddb8ea1895a9c3b2fe16dcab1d09bae505982948d61ec2dc6620543ba4"
+                  },
+                  {
+                      "relativePath":  "examples\\engine_hello_world.c",
+                      "bytes":  656,
+                      "sha256":  "7b04a7c8e7ad94d3707570409e2f9698441eccdaed837e2c296298d9a4df0f58"
+                  },
+                  {
+                      "relativePath":  "examples\\engine_sdl.c",
+                      "bytes":  4559,
+                      "sha256":  "cfa72ac130c2de381d66fdd328a0c650c96a043f9b3dc3f5f8a28dec108633b7"
+                  },
+                  {
+                      "relativePath":  "examples\\engine_steamaudio.c",
+                      "bytes":  17458,
+                      "sha256":  "9209466b4a2f1bd47f95416669290a89363c27f258feabd03f1bfe9a58b94e63"
+                  },
+                  {
+                      "relativePath":  "examples\\hilo_interop.c",
+                      "bytes":  5389,
+                      "sha256":  "e7990664e9c9248cd4605a103394047d289d8cffab336ad5e45a85e917579a9a"
+                  },
+                  {
+                      "relativePath":  "examples\\node_graph.c",
+                      "bytes":  10667,
+                      "sha256":  "cd1c1e0c48f350968d7ae0cc5ad057039dad4c241fee1a415d89d6f1c5cd889f"
+                  },
+                  {
+                      "relativePath":  "examples\\resource_manager.c",
+                      "bytes":  5854,
+                      "sha256":  "2d42aea3257db7992ecdbb232e3741c37cc03c55622e60bfe28c63cefe6786ad"
+                  },
+                  {
+                      "relativePath":  "examples\\resource_manager_advanced.c",
+                      "bytes":  14030,
+                      "sha256":  "bfacf4a26646557f8a26d858acefa62a43a96d02a38326a164de28a57e7dacff"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_capture.c",
+                      "bytes":  2169,
+                      "sha256":  "645bb57a2853144e6981571eaed15b17addb7a45901a660f85c55e870f83a100"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_duplex.c",
+                      "bytes":  2477,
+                      "sha256":  "cceb007c495520cbe486f4805759965db496828b28ce99ca3cd7a022226fe07a"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_enumeration.c",
+                      "bytes":  1575,
+                      "sha256":  "6b4389ca811ec9dcf1b293d22f24627a6e23db05bb78440e44871a5d67003384"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_loopback.c",
+                      "bytes":  2649,
+                      "sha256":  "ba432bff2113ce89a630cacbe558d26833707f655a404f1d9bec6b7a4581ab45"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_looping.c",
+                      "bytes":  2300,
+                      "sha256":  "eb4ad519aa52404a5e33da92be27f7f7f8a4a417a3200e34abbd2b8820107bce"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_mixing.c",
+                      "bytes":  7252,
+                      "sha256":  "a8add3e5a7f2d0b72d2547e808274b106a93505fc80595f75036916fc3a3e8cd"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_playback.c",
+                      "bytes":  2415,
+                      "sha256":  "08d2ab03a29b397e537693a3c5153a42e205a1554ec07975464a50da40d2f972"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_playback_sine.c",
+                      "bytes":  2635,
+                      "sha256":  "fe36947e9c25e88b20df0b4609743890a102f4b8d8b981ba0c631cbf38a7c7ef"
+                  },
+                  {
+                      "relativePath":  "examples\\simple_spatialization.c",
+                      "bytes":  2533,
+                      "sha256":  "594ce78e0cb4152225c98a915cc83b28182d5f9a4249d75760271cb298f0e027"
+                  },
+                  {
+                      "relativePath":  "examples\\build\\README.md",
+                      "bytes":  1050,
+                      "sha256":  "873957ae01040f6792609c9e9aca738b91b6f234798753ab96b3b71ef16aa49d"
+                  },
+                  {
+                      "relativePath":  "external\\fs\\fs.c",
+                      "bytes":  256476,
+                      "sha256":  "722703a1b642ce1323ee1d80aaf572099ea41fc49d16f669d0c0b41add530067"
+                  },
+                  {
+                      "relativePath":  "external\\fs\\fs.h",
+                      "bytes":  57146,
+                      "sha256":  "0b68321249cad956566d074a50eb37f6ef346deaa1a3f29a22e829880dcccaad"
+                  },
+                  {
+                      "relativePath":  "extras\\miniaudio_libopus.h",
+                      "bytes":  14302,
+                      "sha256":  "8df0f8f87e6a5e897dc297b3d47dcd2649d21165f1ab1f69af85612eb0433606"
+                  },
+                  {
+                      "relativePath":  "extras\\miniaudio_libvorbis.h",
+                      "bytes":  15977,
+                      "sha256":  "2d6f43bdaf84ea4027e62ee1d90be6a5b7e17bea8baa149e627cdcbbc99f89b6"
+                  },
+                  {
+                      "relativePath":  "extras\\stb_vorbis.c",
+                      "bytes":  192790,
+                      "sha256":  "4c7cb2ff1f7011e9d67950446b7eb9ca044f2e464d76bfbb0b84dd2e23e65636"
+                  },
+                  {
+                      "relativePath":  "extras\\decoders\\libopus\\miniaudio_libopus.c",
+                      "bytes":  14906,
+                      "sha256":  "d58586494c65a4604c7b3d2e0a78851a9ed4ec8a56b68b300aa423a96c9e16ac"
+                  },
+                  {
+                      "relativePath":  "extras\\decoders\\libopus\\miniaudio_libopus.h",
+                      "bytes":  2135,
+                      "sha256":  "2d15bc4acb91a9775babe25527654f75ecc970ecdb05cdf2382a43d8e3eaed97"
+                  },
+                  {
+                      "relativePath":  "extras\\decoders\\libvorbis\\miniaudio_libvorbis.c",
+                      "bytes":  17182,
+                      "sha256":  "9943336cefdcdd7d224543fd420ab444364f2ec9abb52ea93124c79574c12426"
+                  },
+                  {
+                      "relativePath":  "extras\\decoders\\libvorbis\\miniaudio_libvorbis.h",
+                      "bytes":  2204,
+                      "sha256":  "ffbfdfa05994aa46330c0223f55114c9f3af88ebeb7a5fa6e18d0623b0b36aeb"
+                  },
+                  {
+                      "relativePath":  "extras\\miniaudio_split\\miniaudio.c",
+                      "bytes":  3462399,
+                      "sha256":  "ea36284b79b06dd576e5f787edcafc27ecdd71584fe30733243d59e85a3f3f5b"
+                  },
+                  {
+                      "relativePath":  "extras\\miniaudio_split\\miniaudio.h",
+                      "bytes":  370262,
+                      "sha256":  "605544d636ae4fc245c4ce47bb8f2cd9d80d0f978c7f9258bbe2806566d25b71"
+                  },
+                  {
+                      "relativePath":  "extras\\miniaudio_split\\README.md",
+                      "bytes":  511,
+                      "sha256":  "3c8278b724e569eb6479a978112a189c617057758a14ec522c1f69a4942a088c"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_channel_combiner_node\\ma_channel_combiner_node.c",
+                      "bytes":  2890,
+                      "sha256":  "d28663f1180532273d262263aae4117a62250043484dee1f9c997a25e97c0663"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_channel_combiner_node\\ma_channel_combiner_node.h",
+                      "bytes":  933,
+                      "sha256":  "19c88593baebb61dc59d2d9bb65693b1e9046fa55d48ab0c67115637f0631a33"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_channel_combiner_node\\ma_channel_combiner_node_example.c",
+                      "bytes":  155,
+                      "sha256":  "b8cdf92a64c7edd3195da49b6437421951a323fae7a12bc5a787419f725b34b1"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_channel_separator_node\\ma_channel_separator_node.c",
+                      "bytes":  3078,
+                      "sha256":  "7e715fa202773534f8cc88a55fafee2e4ee7a65ba81d58e2c7612abb94a4cd44"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_channel_separator_node\\ma_channel_separator_node.h",
+                      "bytes":  945,
+                      "sha256":  "19d410468a6ed3b07ef67e8e560e57747242300a7ad09e42b7c67d8d50d4ce3b"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_channel_separator_node\\ma_channel_separator_node_example.c",
+                      "bytes":  5506,
+                      "sha256":  "bb2f0ebec72e1db455d9aa3d678b086cea3315f9ae1a79cf30701164e702ca85"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_ltrim_node\\ma_ltrim_node.c",
+                      "bytes":  3658,
+                      "sha256":  "132c9b5387336c37e6cb0ba94657cfc8120aa4ba45e3b409667707cef305cea1"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_ltrim_node\\ma_ltrim_node.h",
+                      "bytes":  914,
+                      "sha256":  "a7210ee00e6c7eeb517fcf4b86d72d0c11582ca3c99a904a2c11c31c9814ee28"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_ltrim_node\\ma_ltrim_node_example.c",
+                      "bytes":  3913,
+                      "sha256":  "9edf2566ee96530a5a9bd8258098f53d2abc3a20a2d9de0efc977dbc69362505"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_reverb_node\\ma_reverb_node.c",
+                      "bytes":  2694,
+                      "sha256":  "aa0d4198c1bc616bec8cba0c996ab87bbd187d480b26c16626485a9be558668b"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_reverb_node\\ma_reverb_node.h",
+                      "bytes":  1157,
+                      "sha256":  "da13fa10252117c0e818d3b5f98a0346b4e84347049d0eebdffa2b31c6c824fb"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_reverb_node\\ma_reverb_node_example.c",
+                      "bytes":  4700,
+                      "sha256":  "8a90038bcb8bb5d160c7d9f871bf346ef459ce255f45a79c1d56221c43244287"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_reverb_node\\verblib.h",
+                      "bytes":  27300,
+                      "sha256":  "eec03e08d8c51088dc8e61b5dbc9ace1ce69d1f656891ace62f667b112b6f054"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_vocoder_node\\ma_vocoder_node.c",
+                      "bytes":  2837,
+                      "sha256":  "efbf01e8d95c910232d85e172a7fb4eb2f9e20f1bea304c67d148dfb0dee62c3"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_vocoder_node\\ma_vocoder_node.h",
+                      "bytes":  1471,
+                      "sha256":  "9c7e575cccad050a2814a6e8019b3a54164fafe56a6687d2d20c3935a76dc52b"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_vocoder_node\\ma_vocoder_node_example.c",
+                      "bytes":  6177,
+                      "sha256":  "a470b7b8f2cf5730bc3d8d2fd7b29f4ecded37b58f46b39750d3e9c972ab9bb3"
+                  },
+                  {
+                      "relativePath":  "extras\\nodes\\ma_vocoder_node\\voclib.h",
+                      "bytes":  26101,
+                      "sha256":  "f6f9b1ecdb29a02cde5ea5fdb5556e8e0f2ce89608a5c4a9ab5b94cf9dde6125"
+                  },
+                  {
+                      "relativePath":  "extras\\osaudio\\osaudio.h",
+                      "bytes":  27116,
+                      "sha256":  "eb32f833f328af97f4613e968b7a5749b57098e752938d09181465ee57716e2c"
+                  },
+                  {
+                      "relativePath":  "extras\\osaudio\\osaudio_dos_soundblaster.c",
+                      "bytes":  39729,
+                      "sha256":  "b2c9e80d485b16d9d52838611e0051d3b78389c8422a0bade29514ed7711122d"
+                  },
+                  {
+                      "relativePath":  "extras\\osaudio\\osaudio_miniaudio.c",
+                      "bytes":  33984,
+                      "sha256":  "e4e67c6e51509a342d2b1e658d3c40e33542c7c4dbc3526d9d3d9ef3a29f0825"
+                  },
+                  {
+                      "relativePath":  "extras\\osaudio\\README.md",
+                      "bytes":  2194,
+                      "sha256":  "8308e212c8ae08949a477cd3385de7acfd90256dcb06ec029475234b9b66db84"
+                  },
+                  {
+                      "relativePath":  "extras\\osaudio\\tests\\osaudio_deviceio.c",
+                      "bytes":  5331,
+                      "sha256":  "12c179ce0dc98aeea114841e73c7a70ddbf513490f3767914a048e465aed1e51"
+                  },
+                  {
+                      "relativePath":  "extras\\osaudio\\tests\\osaudio_sine.c",
+                      "bytes":  7922,
+                      "sha256":  "a6aea1ad7bd9769b4a95c3ac90def42578e1ad9e6b651aea524c4c800d6357da"
+                  },
+                  {
+                      "relativePath":  "research\\README.txt",
+                      "bytes":  314,
+                      "sha256":  "1e211f53deb7148796b6bf253cf2beb40fbae8daa053463bf9b5937852503b54"
+                  },
+                  {
+                      "relativePath":  "resources\\branding\\icon-128x128.png",
+                      "bytes":  1189,
+                      "sha256":  "cf7c1fef77932753696ba137fd3c989ee4001d6d7bbce0e98d90258ad5f0c1da"
+                  },
+                  {
+                      "relativePath":  "resources\\branding\\icon-256x256.png",
+                      "bytes":  2284,
+                      "sha256":  "b0c03e6f1db8b40a0f196abdb188bae4f0eaa0111e521606f766ac23d20477f6"
+                  },
+                  {
+                      "relativePath":  "resources\\branding\\icon-64x64.png",
+                      "bytes":  677,
+                      "sha256":  "073ecbda4f54ef5538454c7c72481e0efaa8a4f2b15d1f9574e96c52affe6646"
+                  },
+                  {
+                      "relativePath":  "resources\\branding\\miniaudio_logo1.png",
+                      "bytes":  183,
+                      "sha256":  "46412ce6fa2bde7b0a6b8c78d793fab3484020ed14d6a6588f976a08964fb349"
+                  },
+                  {
+                      "relativePath":  "resources\\branding\\miniaudio_logo_400.png",
+                      "bytes":  3183,
+                      "sha256":  "ce65f3aef0ff30935eb4f53e9a6211f54e943565f28668b31f207ddcfe30a379"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\.gitignore",
+                      "bytes":  225,
+                      "sha256":  "703238443066325af08e3868d1e4b571a633baf68fcc93e323f0066999a97e1b"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\build.gradle.kts",
+                      "bytes":  218,
+                      "sha256":  "6ad44a57f5d546a748417bb5da689c932e40c8478bb5c66cfaef35d42400cd82"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\gradle.properties",
+                      "bytes":  1346,
+                      "sha256":  "51e4b5a131eb01b1cdeb2f6f26aaba69d367a4a9d4ccd10c6d6f6d12fd545b66"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\gradlew",
+                      "bytes":  5766,
+                      "sha256":  "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\gradlew.bat",
+                      "bytes":  2674,
+                      "sha256":  "c46a27c79007746de5922b17abb6230d64ad8b1ba3ad1585ee5c6543c2a9b129"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\settings.gradle.kts",
+                      "bytes":  540,
+                      "sha256":  "a1c43ed43f1872da801b9c3de3de38007582a12460e1fc6218a7b5debc711e12"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\.gitignore",
+                      "bytes":  6,
+                      "sha256":  "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\build.gradle.kts",
+                      "bytes":  1382,
+                      "sha256":  "53db5778c00325dcbc5fcb35d60779d3e98fb7c125360a263b4737af52f84b6f"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\proguard-rules.pro",
+                      "bytes":  750,
+                      "sha256":  "56fd960cf225f6ca40f982b13a5dbb0d8bc3dfde13ff76422825c6070d0a1890"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\androidTest\\java\\io\\miniaud\\miniaudiotester\\ExampleInstrumentedTest.kt",
+                      "bytes":  679,
+                      "sha256":  "29fd97fd205535558b2b5b9c6b69c0b6d891294712d435a68396ff67205fdee3"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\AndroidManifest.xml",
+                      "bytes":  939,
+                      "sha256":  "29d9bb05ba8bfd02c4b24f50a172c9cb9c5554b4315cc55751ea819452018337"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\cpp\\CMakeLists.txt",
+                      "bytes":  1845,
+                      "sha256":  "75303c9fcf1e968e1b99fe7a7b31a4bd5a05ddcdb85cb0d2cc47a085e404249d"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\cpp\\native-lib.cpp",
+                      "bytes":  5478,
+                      "sha256":  "c80b0c801321b05c93b751b1c1ad64f09f3cdacb236586bee4f6cc8bb69d1b60"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\java\\io\\miniaud\\miniaudiotester\\MainActivity.kt",
+                      "bytes":  2540,
+                      "sha256":  "4ecd72c8995e130dbacea7afc96760d24d81cd1a6a2d11f7822348e8845834bf"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml",
+                      "bytes":  5606,
+                      "sha256":  "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml",
+                      "bytes":  1702,
+                      "sha256":  "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\layout\\activity_main.xml",
+                      "bytes":  3923,
+                      "sha256":  "6e331b34cf5c91fefd5ea8642cc7cd043f19e41f72ef0dccdc9337e0f5871ef0"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-anydpi\\ic_launcher.xml",
+                      "bytes":  343,
+                      "sha256":  "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-anydpi\\ic_launcher_round.xml",
+                      "bytes":  343,
+                      "sha256":  "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp",
+                      "bytes":  1404,
+                      "sha256":  "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp",
+                      "bytes":  2898,
+                      "sha256":  "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp",
+                      "bytes":  982,
+                      "sha256":  "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp",
+                      "bytes":  1772,
+                      "sha256":  "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp",
+                      "bytes":  1900,
+                      "sha256":  "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp",
+                      "bytes":  3918,
+                      "sha256":  "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp",
+                      "bytes":  2884,
+                      "sha256":  "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp",
+                      "bytes":  5914,
+                      "sha256":  "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp",
+                      "bytes":  3844,
+                      "sha256":  "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp",
+                      "bytes":  7778,
+                      "sha256":  "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\values\\colors.xml",
+                      "bytes":  378,
+                      "sha256":  "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\values\\strings.xml",
+                      "bytes":  477,
+                      "sha256":  "9c11d6823608b368b19bdb54bafd39e77da181b27180c5102692cbd0493bad00"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\values\\themes.xml",
+                      "bytes":  815,
+                      "sha256":  "4e5b3b41f386b13c6d882b2cbfa2026565ddf19b08fb3fecee2a74f927b1fe2d"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\values-night\\themes.xml",
+                      "bytes":  815,
+                      "sha256":  "ffb97c00e363dc19b84a82aa29ae5f5b9a25c6af54cc25fd9057ec840eb97a9c"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\xml\\backup_rules.xml",
+                      "bytes":  478,
+                      "sha256":  "9f7e4c84c8fd2c81478d15962383f47cc6ff55d62abcd40c8ffa6fc08a8c35b7"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\main\\res\\xml\\data_extraction_rules.xml",
+                      "bytes":  551,
+                      "sha256":  "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\app\\src\\test\\java\\io\\miniaud\\miniaudiotester\\ExampleUnitTest.kt",
+                      "bytes":  350,
+                      "sha256":  "3f9d0d407206e06ae34e84d014c979df5a19af170a4a1aa5f73f0e935312226f"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\gradle\\libs.versions.toml",
+                      "bytes":  1074,
+                      "sha256":  "3064d1378c58cde613bbda4fd49b9b4a75b6540c7b0e9ce89f8856fd11a30387"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\gradle\\wrapper\\gradle-wrapper.jar",
+                      "bytes":  59203,
+                      "sha256":  "e996d452d2645e70c01c11143ca2d3742734a28da2bf61f25c82bdc288c9e637"
+                  },
+                  {
+                      "relativePath":  "tests\\android\\MiniaudioTester\\gradle\\wrapper\\gradle-wrapper.properties",
+                      "bytes":  234,
+                      "sha256":  "b28ae0fa540b336e864145e14c8ea6523ec2f5bfd8c5a07603fa3e4d4cacb8f1"
+                  },
+                  {
+                      "relativePath":  "tests\\common\\common.c",
+                      "bytes":  1530,
+                      "sha256":  "9b2ce6bd5c206cdac0f527d94620d8927c093a6ccf847327d39b172c9cc3c172"
+                  },
+                  {
+                      "relativePath":  "tests\\conversion\\conversion.c",
+                      "bytes":  11647,
+                      "sha256":  "785891ef19d0aefac8f8ba6ea898f3f5894b089cef74e344f8ac365421c13067"
+                  },
+                  {
+                      "relativePath":  "tests\\cpp\\cpp.cpp",
+                      "bytes":  34,
+                      "sha256":  "2fb92115af80d24e59c4d32edec9dffac45de0230abe9fa01a5f520dcb972b64"
+                  },
+                  {
+                      "relativePath":  "tests\\debugging\\debugging.cpp",
+                      "bytes":  226,
+                      "sha256":  "befef8833db463373c84d703c341531b532e5d697793c9a241ffa31a113ae35f"
+                  },
+                  {
+                      "relativePath":  "tests\\deviceio\\deviceio.c",
+                      "bytes":  21682,
+                      "sha256":  "ffd159fa71068879d3e76ad5502f45b1124b287c78bf76a2c90104d2b982a803"
+                  },
+                  {
+                      "relativePath":  "tests\\emscripten\\emscripten.c",
+                      "bytes":  3935,
+                      "sha256":  "ea7dc0fe37c15edc10a0b571b772db57d08749cf1e35d4f6765dd2fc33bcadb9"
+                  },
+                  {
+                      "relativePath":  "tests\\emscripten\\emscripten.html",
+                      "bytes":  6039,
+                      "sha256":  "15e7210cd00911d920a039d75b6550e7b7f0e69f586e571da48fdb934b2395df"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering.c",
+                      "bytes":  1942,
+                      "sha256":  "850a6907d1d2fd651022f2de46646b893327a4189237d1ab23fc97963e82cf97"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_bpf.c",
+                      "bytes":  4968,
+                      "sha256":  "7b4d4aa6ae47584771fef46248f012096f8054be3d90983109d22eb64412622e"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_dithering.c",
+                      "bytes":  2244,
+                      "sha256":  "2364c9adad95529d168fb0ad89efd9e614ef2ef8a2c2f9079467d33b1bc860ea"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_hishelf.c",
+                      "bytes":  5159,
+                      "sha256":  "9c2cfbeafa3f7d12ddae416bc27e936c1ff774f1370ef66f4945865407c3e527"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_hpf.c",
+                      "bytes":  7147,
+                      "sha256":  "2400c02403f502bd00c81c2b1b64c4471339a734ea60c66296c0604e95d5de8c"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_loshelf.c",
+                      "bytes":  5156,
+                      "sha256":  "ef55303cc302620c2b820b9817c5a82e8e8c024428cc54867e7c14110629c2f6"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_lpf.c",
+                      "bytes":  7164,
+                      "sha256":  "379ffc6f5ab9d8b3b8e59577b1ddb5bba9c9f5e01daefd9e138ac93a0d1f6bc7"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_notch.c",
+                      "bytes":  5064,
+                      "sha256":  "9df2972e10f3565223d38450a5d13d4ce9fa8c78225c4e6ba3b50954f4ce501e"
+                  },
+                  {
+                      "relativePath":  "tests\\filtering\\filtering_peak.c",
+                      "bytes":  5027,
+                      "sha256":  "8987ba2ccb9dc63a8a1ded71e0b09e295209c57e54a35ed1e88b30e899bb1e2f"
+                  },
+                  {
+                      "relativePath":  "tests\\generation\\generation.c",
+                      "bytes":  302,
+                      "sha256":  "ca7da8ba71ac16fc979eb61f6804cc79f2eb69a82c343a7cd04620bec3187641"
+                  },
+                  {
+                      "relativePath":  "tests\\generation\\generation_noise.c",
+                      "bytes":  3902,
+                      "sha256":  "be9425a85ae0154d61a1161b6cf0215a7f71ab9df396d5a61c9b7ee82a1dbc65"
+                  },
+                  {
+                      "relativePath":  "tests\\generation\\generation_waveform.c",
+                      "bytes":  7710,
+                      "sha256":  "a17ab955a851cb562a611613b2f81fe8c82b671ac0857e99648cd424cf670276"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\README.md",
+                      "bytes":  992,
+                      "sha256":  "f55a2ba4d2c14df5394c6af0b9843596b5214e573eeb82140e45e4e9aa12c758"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\sine_s16_mono_48000.wav",
+                      "bytes":  96044,
+                      "sha256":  "f65d38a33755f3f54ae29228e0de92a0a95089eea4d01390c844f1514cb6332e"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_f32_to_f32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "c489ebd70d32a48645a2807c8537746edf650e97e36129334fcbfde3d5dc9e6a"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_f32_to_s16__mono_8000.raw",
+                      "bytes":  160,
+                      "sha256":  "f2eafc7af39d9fb91ddd713887f9a1263a7e82f9322c96445df49bfcffee4a26"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_f32_to_s24__mono_8000.raw",
+                      "bytes":  240,
+                      "sha256":  "238f92c3aa58029978d9bfd64ca29faf1ae21a818315f5c06157a2081fb7cd26"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_f32_to_s32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "d412063d4b651803e57eb5f926c0a4f0777fbbd6bca3c5b090aa17ba4802ec4b"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_f32_to_u8__mono_8000.raw",
+                      "bytes":  80,
+                      "sha256":  "1d101b73a87a0aac534c021ed6d77a5650ebb7e4dc79514c883fdf5a676ef3a2"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s16_to_f32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "16d607fe4633c20a71efb0d62738640900f22586a5e26eb77c3bc7ea47209263"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s16_to_s16__mono_8000.raw",
+                      "bytes":  160,
+                      "sha256":  "f56593925f8b390d61033dbfbb218727bf623f4b85aa22a4c3658ce8f70509e6"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s16_to_s24__mono_8000.raw",
+                      "bytes":  240,
+                      "sha256":  "796e42431b027d45c6bbad128a0993920a917f92ae22bf8150fe33d6e357f8d6"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s16_to_s32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "8889d44298d1a5705ba978193ac3b46e1da3526ddb97decafa83a0631cc5c0a4"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s16_to_u8__mono_8000.raw",
+                      "bytes":  80,
+                      "sha256":  "de9e23013bfa27b0433291ad645324a0ffc2bd89f463c964a83e3c17f74cf6a7"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s24_to_f32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "c489ebd70d32a48645a2807c8537746edf650e97e36129334fcbfde3d5dc9e6a"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s24_to_s16__mono_8000.raw",
+                      "bytes":  160,
+                      "sha256":  "f2eafc7af39d9fb91ddd713887f9a1263a7e82f9322c96445df49bfcffee4a26"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s24_to_s24__mono_8000.raw",
+                      "bytes":  240,
+                      "sha256":  "238f92c3aa58029978d9bfd64ca29faf1ae21a818315f5c06157a2081fb7cd26"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s24_to_s32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "d412063d4b651803e57eb5f926c0a4f0777fbbd6bca3c5b090aa17ba4802ec4b"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s24_to_u8__mono_8000.raw",
+                      "bytes":  80,
+                      "sha256":  "1d101b73a87a0aac534c021ed6d77a5650ebb7e4dc79514c883fdf5a676ef3a2"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s32_to_f32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "c489ebd70d32a48645a2807c8537746edf650e97e36129334fcbfde3d5dc9e6a"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s32_to_s16__mono_8000.raw",
+                      "bytes":  160,
+                      "sha256":  "f2eafc7af39d9fb91ddd713887f9a1263a7e82f9322c96445df49bfcffee4a26"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s32_to_s24__mono_8000.raw",
+                      "bytes":  240,
+                      "sha256":  "238f92c3aa58029978d9bfd64ca29faf1ae21a818315f5c06157a2081fb7cd26"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s32_to_s32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "d412063d4b651803e57eb5f926c0a4f0777fbbd6bca3c5b090aa17ba4802ec4b"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_s32_to_u8__mono_8000.raw",
+                      "bytes":  80,
+                      "sha256":  "1d101b73a87a0aac534c021ed6d77a5650ebb7e4dc79514c883fdf5a676ef3a2"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_u8_to_f32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "3503d0b8757c96f0547ee510fec7568a85bb430ddd5f20b105a4a7844eee2ce9"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_u8_to_s16__mono_8000.raw",
+                      "bytes":  160,
+                      "sha256":  "8580463df7d2aa5485311dba79d7b289f991a94a99b684566425bec171b49a05"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_u8_to_s24__mono_8000.raw",
+                      "bytes":  240,
+                      "sha256":  "0fba60d92fd6d94b6c633fed3af057193c9e1c0f156322e5b3cfd31abaf978e5"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_u8_to_s32__mono_8000.raw",
+                      "bytes":  320,
+                      "sha256":  "a0a182db3999284622c11d56614bbd369e9375af51d5dae33c7395b54507d3bc"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\benchmarks\\pcm_u8_to_u8__mono_8000.raw",
+                      "bytes":  80,
+                      "sha256":  "de9e23013bfa27b0433291ad645324a0ffc2bd89f463c964a83e3c17f74cf6a7"
+                  },
+                  {
+                      "relativePath":  "tests\\_build\\res\\output\\DO_NOT_DELETE",
+                      "bytes":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "relativePath":  "tools\\audioconverter\\audioconverter.c",
+                      "bytes":  9507,
+                      "sha256":  "aacf58012930d440ee95c417f846fd446880d51b8c39aaa5f85560513ba9a18c"
+                  },
+                  {
+                      "relativePath":  "website\\CNAME",
+                      "bytes":  10,
+                      "sha256":  "650291fd4a8e8aabe7a8c228a9e4851f51771f8d6f3346b4fcca0f82382fd1af"
+                  },
+                  {
+                      "relativePath":  "website\\index.html",
+                      "bytes":  13774,
+                      "sha256":  "93aee20acf99178a79ab9f17745d3baff1fa4317653d2a92dbbd22d42e19a354"
+                  },
+                  {
+                      "relativePath":  "website\\.webplate\\config.webplate",
+                      "bytes":  233,
+                      "sha256":  "fcbc0c595ac1173e9c64cb3774ac3fc4c06b61985fc12c34307193336790115d"
+                  },
+                  {
+                      "relativePath":  "website\\.webplate\\miniaudio-footer.html",
+                      "bytes":  1290,
+                      "sha256":  "6a6e81d2cdaef81f8c039d6461deb6c76035f49c37cf1ce753e1df657839c7cd"
+                  },
+                  {
+                      "relativePath":  "website\\.webplate\\miniaudio-header.html",
+                      "bytes":  3021,
+                      "sha256":  "6ae3f92fdaf291e333c45060bdcb14889f997feee1e805ffb739f222571c1b26"
+                  },
+                  {
+                      "relativePath":  "website\\css\\main.css",
+                      "bytes":  2942,
+                      "sha256":  "9cecc27fcc8dffc6c34adba08080791220e85f61606e838db4593a90498f72f3"
+                  },
+                  {
+                      "relativePath":  "website\\img\\Discord-Logo-White.svg",
+                      "bytes":  1106,
+                      "sha256":  "db0b1430ec0132a45f0faed5b23105560b5a251d293fd3e6867da85a0c9f343b"
+                  },
+                  {
+                      "relativePath":  "website\\img\\favicon.png",
+                      "bytes":  1189,
+                      "sha256":  "cf7c1fef77932753696ba137fd3c989ee4001d6d7bbce0e98d90258ad5f0c1da"
+                  },
+                  {
+                      "relativePath":  "website\\img\\github_white.png",
+                      "bytes":  1571,
+                      "sha256":  "6b4582ced3c5b039423243207f470dcba7288918131657f89e9bdcada6fa8a40"
+                  },
+                  {
+                      "relativePath":  "website\\img\\logo1_large.png",
+                      "bytes":  1198,
+                      "sha256":  "d459fee02970bd9591f70285dc9c2e2dbe85c8e959394faa07d7914ef56c0ec5"
+                  },
+                  {
+                      "relativePath":  "website\\img\\logo1_large_white.png",
+                      "bytes":  1193,
+                      "sha256":  "80418308a6b375dbc61b009b5230d11672ff26c175a1411793fd827c5dfebb00"
+                  },
+                  {
+                      "relativePath":  "website\\img\\mastodon_white.svg",
+                      "bytes":  2260,
+                      "sha256":  "ce35cd4c685766e662836b6970831e6b7c7afe9911008590003e1d52883427dc"
+                  },
+                  {
+                      "relativePath":  "website\\img\\miniaudio_wide.png",
+                      "bytes":  8642,
+                      "sha256":  "9ca3521c8f62463c07a7b6ef1b0f115c327eb616936d4540eda00b4b87ecc1ae"
+                  },
+                  {
+                      "relativePath":  "website\\img\\reddit_white.svg",
+                      "bytes":  692,
+                      "sha256":  "d7419843d89ca6acbe2984726486e0abb59586e9a60f751b3171c2205a07681f"
+                  },
+                  {
+                      "relativePath":  "website\\img\\twitter_white.png",
+                      "bytes":  2292,
+                      "sha256":  "1595fb66de048bd49ea0db776553ff324b1abace74410679d53419fec6b8e4c2"
+                  },
+                  {
+                      "relativePath":  "website\\img\\platforms\\android\\android.svg",
+                      "bytes":  620,
+                      "sha256":  "2b2f94ccaa0b881930b4c34889a598f1b3493d1610cefa73d2ce7654f7302fd1"
+                  },
+                  {
+                      "relativePath":  "website\\img\\platforms\\apple\\apple-black.svg",
+                      "bytes":  980,
+                      "sha256":  "0a3eebe24d426de89898fcf35aa8e647a7634d72ef9a0fa52a7628f2376753d1"
+                  },
+                  {
+                      "relativePath":  "website\\img\\platforms\\bsd\\freebsd.svg",
+                      "bytes":  1729,
+                      "sha256":  "9fd2a5dd10efde521c50377c9a089cb167adc33d0e7297e11070c7cec9324155"
+                  },
+                  {
+                      "relativePath":  "website\\img\\platforms\\linux\\linux.svg",
+                      "bytes":  44983,
+                      "sha256":  "31193c5b7052093cd8710067de9e3b7b5331d854fc588810a6f727d53bc165e5"
+                  },
+                  {
+                      "relativePath":  "website\\img\\platforms\\web\\html5.svg",
+                      "bytes":  1449,
+                      "sha256":  "62dde6bb0cfcea107e69baa702f6af272253d2c59648c725765d4e4726510113"
+                  },
+                  {
+                      "relativePath":  "website\\img\\platforms\\windows\\windows-10.svg",
+                      "bytes":  1706,
+                      "sha256":  "731c2f1cdff1d8b820403700b1383fa27f011a49e1e37cfcd5dab947eacfe2fd"
+                  }
+              ]
+}
