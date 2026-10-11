@@ -1,0 +1,310 @@
+{
+  "scope": "WhiteBox per-face native Atom materials and selected-face UV candidate",
+  "root": "F:\\JericoEngine\\JericoEngine",
+  "status": "SOURCE_ONLY_NOT_RUN",
+  "nativeOwner": "Luna after parent review",
+  "files": [
+    {
+      "path": "Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake",
+      "bytes": 3918,
+      "sha256": "082DA202B2D7A7333C02FF9CF43FC92476CE981902B2A257C91DDE634A666BC5"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake",
+      "bytes": 660,
+      "sha256": "A28D4F30BC1B571887833F42460C66B6ACAE044C6E722AD78615DBA3503D2C6D"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h",
+      "bytes": 4972,
+      "sha256": "42352CD7C48B57F6F618A930061F5F6B2E3BFFC2CAACCA7868220BF9BB120273"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+      "bytes": 92711,
+      "sha256": "54BD4F8A0C4E6871BD877AA649FA503C9711A879BBE12A3FE0DF9E0F90358121"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h",
+      "bytes": 17302,
+      "sha256": "93AE9D52F8833E4B8D1287D0F6977720D2A16198A5F6EE6197331FF54E462DC6"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp",
+      "bytes": 3760,
+      "sha256": "DBA6D630CB191797B6D7395CF0EAF692CC4D48F74AF2A8F04B3B7FA3E920E74A"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/WhiteBoxComponent.h",
+      "bytes": 2472,
+      "sha256": "E41E96877C0145FB5A6AB32E687FA581CD12D1E2127585C4CBAE5CD8F77607AB"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp",
+      "bytes": 5179,
+      "sha256": "66CC15C9B6ED0B160EBBD70820A382CA849D6BA4AFC531AF241C24822FB6A735"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h",
+      "bytes": 3097,
+      "sha256": "E77990376F7BC6D7DDF89FD13A2A5C1E2DE6A6B8CF9E1B27E68FDF004A92875B"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp",
+      "bytes": 15603,
+      "sha256": "8A8FF3172DBBB2E9B357AA73CEF3B7291FAA348DC60CCAAD8A9F93692FFD12AF"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h",
+      "bytes": 6000,
+      "sha256": "AE69DCF4EE2669BF6E14B786DE0F7312AAE410A81FC3FD1A689EAEAC29965929"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp",
+      "bytes": 2874,
+      "sha256": "D2BCCD55509A98B594DF4A91D9282F7BDA2224D74198BBD1BD95399B015E1259"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h",
+      "bytes": 1275,
+      "sha256": "F33CF53D36040EEA382B1E25441962EC6F85DDEC90F6FD5A124A7C97AF57190B"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp",
+      "bytes": 76639,
+      "sha256": "4B10D9BA91ED9449B394DDAEF2F02676195D67D629B58B042C3853047A0516E6"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp",
+      "bytes": 10367,
+      "sha256": "04FFB2A3AEC5E9D1F64D2678D47CF0882907FF11CF073D3837F3D36D5103AA16"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp",
+      "bytes": 64070,
+      "sha256": "91F059119BBBC123B2ED4DB55F99EE9CB1542940BA532A4EDE8431ADFFE0C0CB"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp",
+      "bytes": 73394,
+      "sha256": "2DE8C7E7F0ED11ABA3A68C38DD3F63E71DD882160B66B9BA8B6719C3457A29D7"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp",
+      "bytes": 10009,
+      "sha256": "E02E3C05175219AA344CD29F1F1ED0AF99C3C2BAE8A02D09049BFDA44B4489B0"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp",
+      "bytes": 17068,
+      "sha256": "3AC7B00C3D69B267FEBCDFCD0D184DAA6F267A05DF67C8FB8996965FE35476CB"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp",
+      "bytes": 10421,
+      "sha256": "3067BDE1F7B938084FD4D744448ED0FCC35AF94625EAF5300D6111184FEC9F78"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp",
+      "bytes": 15476,
+      "sha256": "AF89DFDA497CBE8958604B7FCEA6BA93079BC9063417CF06BBBA91E0BB538FC2"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp",
+      "bytes": 16960,
+      "sha256": "E306506964164149FB4221297721850FBD2DA32617A6B48DEBFBF4347EDE0314"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.cpp",
+      "bytes": 13909,
+      "sha256": "9A374A77B031DD7F838198A4CDD54BB203567FA94FCF8B29BFE1AF91AED54181"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.h",
+      "bytes": 2021,
+      "sha256": "1439EA9D2BAC9C6FFFCA1D89C871462C15F40BF2938324121F30513846EE210A"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/JEWhiteBoxSurfaceMaterialsTest.cpp",
+      "bytes": 25979,
+      "sha256": "32910BC1584D082F3F31EF6124A095BCCC4D163BB1B4CC96DE700172C38662F6"
+    }
+  ],
+  "references": [
+    {
+      "path": "Gems/WhiteBox/Code/CMakeLists.txt",
+      "bytes": 6999,
+      "sha256": "DABAFD5E87BC188368CB723E3E6C1C02936F53574645D36971718C50CA7B9634"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h",
+      "bytes": 4891,
+      "sha256": "406D675C9DDC0763D39458EB026B97825A9E735BDFC2499A51C509A5054D0F7F"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp",
+      "bytes": 44368,
+      "sha256": "A999EED6CF4F9E175FD106A51546747425EEA7A04DBC4E90403239208FE79027"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.h",
+      "bytes": 4276,
+      "sha256": "A32B8E20DB0A5B0D449CBA2683E5E2BA2F946393B5F51CB847CDA9F6547C4608"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.cpp",
+      "bytes": 15998,
+      "sha256": "90E675FADDEC3DF5E0B3AC73304A01478A6702F3B4963C92761AB69DDC6C2099"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp",
+      "bytes": 174627,
+      "sha256": "51F0F9250DF532BF3EE4D57B899EA137116BFA82BE6CEDB59BE4270D0F4B1108"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h",
+      "bytes": 50392,
+      "sha256": "9A251232FEEA99F7FA1BBBB6DA7ED0C204105D3717A0CF2B1E1C9FE509F13E69"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp",
+      "bytes": 130740,
+      "sha256": "4B66BEB59AD76F4D343FA13985437A7736F284BAEFE8F87385D55F14CF13D9FF"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/WhiteBoxTestFixtures.h",
+      "bytes": 6949,
+      "sha256": "3F9DFAC4F85BA6609ECC42227BABE6F9CDF5E80E540D71A450F2BDFF56A5C4DC"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/CSG/WhiteBoxCsgCoreTest.cpp",
+      "bytes": 26648,
+      "sha256": "3E0C8BD358AE0805DB50B1DAC36DC9E2141655896393A8FD7AFCD27986E94A47"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxMaterial.h",
+      "bytes": 1120,
+      "sha256": "2122F4E00BE15C9130FD8AC2594E0B91C638D82A5F31FB3246EF605BED3DD477"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxMeshAtomData.h",
+      "bytes": 1650,
+      "sha256": "DF9B0A926DF6E23D5CF453380882974C95C466D25F440BF35F0710A26DD23C37"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxMeshAtomData.cpp",
+      "bytes": 3929,
+      "sha256": "297939B8CFB8ABB235C6B6B8DE60F83705981BB80B814EAAFE457E3372F8E123"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Util/WhiteBoxMathUtil.h",
+      "bytes": 1694,
+      "sha256": "1EBC475D4AA4A20572C9BC57378CBCE26B2905D7ABCDF4D0BD1AF369DF6BA201"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Util/WhiteBoxMathUtil.cpp",
+      "bytes": 3547,
+      "sha256": "700EB5E45C5A034FAE406148621925925F722B47159347ECF043326ECC17EC68"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Asset/EditorWhiteBoxMeshAsset.h",
+      "bytes": 4856,
+      "sha256": "784176A03115D3A2990871CD4616E7A8FBE85B9ED1FB3CB2C85DB601205302AB"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Asset/EditorWhiteBoxMeshAsset.cpp",
+      "bytes": 12121,
+      "sha256": "180F6C3B01B8FAE7BD48700BF755D097E21C5F913644A3D7FCC86485FC922058"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultModeBus.h",
+      "bytes": 5665,
+      "sha256": "72A7ABC3992B36635E913A345DE011D83F2623C1264A48A43A611FC6C389B72B"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Include/AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h",
+      "bytes": 18006,
+      "sha256": "BBAA76C8BD2EFDAD88AFCD79267E69863162809BAAA4F2F044E4DB0E0169997A"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Include/AtomLyIntegration/CommonFeatures/Material/MaterialAssignment.h",
+      "bytes": 4738,
+      "sha256": "0FAA3B57617BFE815508F0C911483A4EAE2DF39A68101668FC3234419A89295C"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Include/AtomLyIntegration/CommonFeatures/Material/MaterialAssignmentId.h",
+      "bytes": 3803,
+      "sha256": "726102F490B73A04AF4A0FDEE08CE46FCF8F7ACBFFDFBDAB763AC5EDD59308DF"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/Material/MaterialAssignment.cpp",
+      "bytes": 20070,
+      "sha256": "B1B4761D3B58BDCD3DFCCED1B3CEE47471D63E4772202CEA032B39D7428E00D8"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/Material/MaterialAssignmentId.cpp",
+      "bytes": 7479,
+      "sha256": "2FFDF9B56D331067C1EEC7F0F0D9ECB2157EF58AE7F27CBFC71AE0040C4D5E50"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/Material/MaterialComponentController.cpp",
+      "bytes": 49447,
+      "sha256": "95F4D381D515B3F8FE4A991A35B98B828C6D9C62E691ECB5D046E8C400E5E36A"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Include/AtomLyIntegration/CommonFeatures/Material/MaterialComponentConfig.h",
+      "bytes": 1715,
+      "sha256": "0E68CAB14C84A86610CFFB1CEBC1611291183FC431E42D7CD808B1A3F5D4C075"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Include/Atom/Feature/Mesh/MeshFeatureProcessorInterface.h",
+      "bytes": 22463,
+      "sha256": "ECF45DF38E678451953DD59BD25C1CC60A7311F5932CFDA8810EDD3543FF6D3E"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Mesh/MeshFeatureProcessor.cpp",
+      "bytes": 148979,
+      "sha256": "AAC0E8B44AC72B84CBA9EC158D0E2836214951E55DAACCECD32844B17BA39683"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Reflect/Model/ModelAssetCreator.h",
+      "bytes": 2356,
+      "sha256": "B9B69FDBC648F1AFF48C9663A629B6713FBDFD030733B66CF41B607C41B8C2B9"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Reflect/Model/ModelLodAssetCreator.h",
+      "bytes": 4466,
+      "sha256": "E44FD07941F22C054EB2E2483BBB167A7A5EEC1B0C9E8AA624B90F300CBF71C9"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Reflect/Model/ModelLodAssetCreator.cpp",
+      "bytes": 12565,
+      "sha256": "8277B8C8E1B982CD7DE51D258B5ED1DCCBAE1716ACB96E6C3E16B52DBDC9EA87"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Public/Material/Material.h",
+      "bytes": 14434,
+      "sha256": "10EA67CBF424886BC770619DB9D9C9E423D50A1F518CDECE49308EE3DE5C0324"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Public/Model/Model.h",
+      "bytes": 5454,
+      "sha256": "4F25F7FCC4BA801E786233ED2273AD9C7A9A213BD1A12C840405744BFEE6ADB4"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Reflect/Material/MaterialPropertyValue.h",
+      "bytes": 6837,
+      "sha256": "EF0F1D72A88D2B5DB553F3462FED70094362C0B0B24764D5EF49FAC0A8044DA4"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Reflect/Material/MaterialPropertyValue.cpp",
+      "bytes": 16140,
+      "sha256": "9CF5334D175824647F5716BA8B23B1C09CB05CF9FA18D7666F888D02DDD0C8DC"
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Serialization/SerializeContext.h",
+      "bytes": 131622,
+      "sha256": "212300C601C77E07FDA6238CF98D0042250AB76DA0DE6FBC8D9EB4710495597E"
+    }
+  ]
+}

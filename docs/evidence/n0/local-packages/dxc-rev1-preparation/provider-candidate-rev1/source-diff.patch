@@ -1,0 +1,2467 @@
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/ApplyPrivateProvenance.cmake b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/ApplyPrivateProvenance.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/ApplyPrivateProvenance.cmake
+@@ -0,0 +1,74 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_PATH IN ITEMS JE_WORK_dxc JE_WORK_spirv-tools JE_DXC_PROOF_OUTPUT)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++foreach(JE_PATH IN ITEMS JE_WORK_dxc JE_WORK_spirv-tools JE_DXC_PROOF_OUTPUT)
++    cmake_path(IS_PREFIX JE_BUILD_ROOT "${${JE_PATH}}" NORMALIZE JE_PRIVATE)
++    if(NOT JE_PRIVATE OR "${${JE_PATH}}" STREQUAL JE_BUILD_ROOT)
++        message(FATAL_ERROR "JE DXC provenance requires private checkout/build paths")
++    endif()
++endforeach()
++if(EXISTS "${JE_DXC_PROOF_OUTPUT}")
++    message(FATAL_ERROR "JE DXC private proof exists")
++endif()
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/PrivateProvenance.json"
++    "4a8716eb03a11408bb65cb3a15550193be6685eb0d7e8ee140f4e3aa50943266" "approved three private overlays")
++file(READ "${CMAKE_CURRENT_LIST_DIR}/PrivateProvenance.json" JE_SPEC)
++string(JSON JE_COUNT LENGTH "${JE_SPEC}" overlays)
++if(NOT JE_COUNT EQUAL 3)
++    message(FATAL_ERROR "JE DXC requires exactly three approved overlays")
++endif()
++file(MAKE_DIRECTORY "${JE_DXC_PROOF_OUTPUT}")
++foreach(JE_INDEX RANGE 0 2)
++    foreach(JE_FIELD IN ITEMS id source path beforeSHA256 afterSHA256)
++        string(JSON JE_${JE_FIELD} GET "${JE_SPEC}" overlays ${JE_INDEX} ${JE_FIELD})
++    endforeach()
++    set(JE_FILE "${JE_WORK_${JE_source}}/${JE_path}")
++    JE_python_verify_file("${JE_FILE}" "${JE_beforeSHA256}" "${JE_id} pristine private source")
++    configure_file("${JE_FILE}" "${JE_DXC_PROOF_OUTPUT}/${JE_id}.before" COPYONLY)
++    file(READ "${JE_FILE}" JE_ORIGINAL)
++    set(JE_CHANGED "${JE_ORIGINAL}")
++    string(JSON JE_HUNKS LENGTH "${JE_SPEC}" overlays ${JE_INDEX} replacements)
++    math(EXPR JE_LAST "${JE_HUNKS}-1")
++    foreach(JE_HUNK RANGE 0 ${JE_LAST})
++        string(JSON JE_BEFORE GET "${JE_SPEC}" overlays ${JE_INDEX} replacements ${JE_HUNK} before)
++        string(JSON JE_AFTER GET "${JE_SPEC}" overlays ${JE_INDEX} replacements ${JE_HUNK} after)
++        string(FIND "${JE_CHANGED}" "${JE_BEFORE}" JE_FIRST)
++        if(JE_FIRST LESS 0)
++            message(FATAL_ERROR "JE DXC private overlay context missing")
++        endif()
++        string(LENGTH "${JE_BEFORE}" JE_LENGTH)
++        math(EXPR JE_REST_START "${JE_FIRST}+${JE_LENGTH}")
++        string(SUBSTRING "${JE_CHANGED}" ${JE_REST_START} -1 JE_REST)
++        string(FIND "${JE_REST}" "${JE_BEFORE}" JE_SECOND)
++        if(NOT JE_SECOND LESS 0)
++            message(FATAL_ERROR "JE DXC overlay context not unique")
++        endif()
++        string(REPLACE "${JE_BEFORE}" "${JE_AFTER}" JE_CHANGED "${JE_CHANGED}")
++    endforeach()
++    set(JE_INVERSE "${JE_CHANGED}")
++    foreach(JE_HUNK RANGE ${JE_LAST} 0 -1)
++        string(JSON JE_BEFORE GET "${JE_SPEC}" overlays ${JE_INDEX} replacements ${JE_HUNK} before)
++        string(JSON JE_AFTER GET "${JE_SPEC}" overlays ${JE_INDEX} replacements ${JE_HUNK} after)
++        if(JE_AFTER STREQUAL "" AND JE_BEFORE STREQUAL "import subprocess\n")
++            # Exact deletion in the pinned GetCommitInfo.py; restore its original import position.
++            string(REPLACE "import os\n" "import os\n${JE_BEFORE}" JE_INVERSE "${JE_INVERSE}")
++        else()
++            string(REPLACE "${JE_AFTER}" "${JE_BEFORE}" JE_INVERSE "${JE_INVERSE}")
++        endif()
++    endforeach()
++    if(NOT JE_INVERSE STREQUAL JE_ORIGINAL)
++        message(FATAL_ERROR "JE DXC private overlay inverse differs")
++    endif()
++    file(CONFIGURE OUTPUT "${JE_DXC_PROOF_OUTPUT}/${JE_id}.inverse" CONTENT "${JE_INVERSE}" @ONLY NEWLINE_STYLE UNIX)
++    JE_python_verify_file("${JE_DXC_PROOF_OUTPUT}/${JE_id}.inverse" "${JE_beforeSHA256}" "${JE_id} byteexact inverse")
++    file(CONFIGURE OUTPUT "${JE_FILE}" CONTENT "${JE_CHANGED}" @ONLY NEWLINE_STYLE UNIX)
++    JE_python_verify_file("${JE_FILE}" "${JE_afterSHA256}" "${JE_id} raw patched SHA")
++    configure_file("${JE_FILE}" "${JE_DXC_PROOF_OUTPUT}/${JE_id}.after" COPYONLY)
++endforeach()
++configure_file("${CMAKE_CURRENT_LIST_DIR}/PrivateProvenance.json" "${JE_DXC_PROOF_OUTPUT}/overlays.json" COPYONLY)
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake
+@@ -0,0 +1,136 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS ARCHIVES_ROOT PYTHON PYTHON_SHA256 NINJA NINJA_SHA256 CL CL_SHA256 OUTPUT)
++    if(NOT DEFINED JE_DXC_${JE_ARGUMENT} OR "${JE_DXC_${JE_ARGUMENT}}" STREQUAL "")
++        message(FATAL_ERROR "JE DXC: JE_DXC_${JE_ARGUMENT} is required")
++    endif()
++endforeach()
++foreach(JE_PATH IN ITEMS JE_DXC_ARCHIVES_ROOT JE_DXC_PYTHON JE_DXC_NINJA JE_DXC_CL JE_DXC_OUTPUT)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_DXC_OUTPUT}" NORMALIZE JE_LOCAL_OUTPUT)
++if(NOT JE_LOCAL_OUTPUT OR JE_DXC_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE DXC output must be below checkout/build")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" OR NOT "$ENV{VSCMD_ARG_TGT_ARCH}" STREQUAL "x64")
++    message(FATAL_ERROR "JE DXC requires the existing VS2022/v143 x64 development environment; no toolchain installation")
++endif()
++if(EXISTS "${JE_DXC_OUTPUT}")
++    message(FATAL_ERROR "JE DXC output exists; previous attempts are retained")
++endif()
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/SourcePins.json"
++    "a6a4be45d6d99baf555e13ef0661600c47585ad4089f1584e49d69dc36815cdc" "approved exact source pins")
++file(READ "${CMAKE_CURRENT_LIST_DIR}/SourcePins.json" JE_PINS)
++string(JSON JE_COUNT LENGTH "${JE_PINS}" sources)
++if(NOT JE_COUNT EQUAL 3)
++    message(FATAL_ERROR "JE DXC selected Windows closure requires exactly three sources")
++endif()
++foreach(JE_INDEX RANGE 0 2)
++    foreach(JE_FIELD IN ITEMS id url sha256 archiveRelativePath archiveRoot cmakeSHA256)
++        string(JSON JE_${JE_FIELD} GET "${JE_PINS}" sources ${JE_INDEX} ${JE_FIELD})
++    endforeach()
++    if(NOT JE_url MATCHES "^https://codeload[.]github[.]com/(o3de/DirectXShaderCompiler|KhronosGroup/SPIRV-Headers|KhronosGroup/SPIRV-Tools)/tar[.]gz/[0-9a-f]+$")
++        message(FATAL_ERROR "JE DXC source provenance URL differs from approved primary endpoints")
++    endif()
++    set(JE_ARCHIVE_${JE_id} "${JE_DXC_ARCHIVES_ROOT}/${JE_archiveRelativePath}")
++    JE_python_verify_file("${JE_ARCHIVE_${JE_id}}" "${JE_sha256}" "${JE_id} exact local archive")
++    set(JE_ARCHIVE_ROOT_${JE_id} "${JE_archiveRoot}")
++    set(JE_CMAKE_SHA_${JE_id} "${JE_cmakeSHA256}")
++endforeach()
++foreach(JE_TOOL IN ITEMS PYTHON NINJA CL)
++    JE_python_verify_file("${JE_DXC_${JE_TOOL}}" "${JE_DXC_${JE_TOOL}_SHA256}" "audited existing external ${JE_TOOL}")
++endforeach()
++string(JSON JE_NOTICE_SHA GET "${JE_PINS}" sourceNoticeSHA256)
++string(JSON JE_OVERLAY_SHA GET "${JE_PINS}" privateProvenanceSHA256)
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/SourceNotices.txt" "${JE_NOTICE_SHA}" "full source notices")
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/PrivateProvenance.json" "${JE_OVERLAY_SHA}" "three private overlays")
++# Immutable tool trees stay untouched; Python is an external generation tool only.
++set(ENV{PYTHONDONTWRITEBYTECODE} "1")
++file(MAKE_DIRECTORY "${JE_DXC_OUTPUT}/logs" "${JE_DXC_OUTPUT}/source-work")
++function(JE_dxc_native JE_LABEL)
++    set(JE_ARGS "[]")
++    set(JE_INDEX 0)
++    foreach(JE_ARGUMENT IN LISTS ARGN)
++        string(REPLACE "\\" "\\\\" JE_ESCAPED "${JE_ARGUMENT}")
++        string(REPLACE "\"" "\\\"" JE_ESCAPED "${JE_ESCAPED}")
++        string(JSON JE_ARGS SET "${JE_ARGS}" ${JE_INDEX} "\"${JE_ESCAPED}\"")
++        math(EXPR JE_INDEX "${JE_INDEX}+1")
++    endforeach()
++    file(WRITE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.argv.json" "${JE_ARGS}\n")
++    string(TIMESTAMP JE_START "%s" UTC)
++    execute_process(COMMAND ${ARGN} RESULT_VARIABLE JE_RESULT
++        OUTPUT_FILE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.stdout.txt"
++        ERROR_FILE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.stderr.txt")
++    string(TIMESTAMP JE_END "%s" UTC)
++    math(EXPR JE_SECONDS "${JE_END}-${JE_START}")
++    file(WRITE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.result.json"
++        "{\"exitResult\":\"${JE_RESULT}\",\"elapsedWholeSeconds\":${JE_SECONDS}}\n")
++    if(NOT JE_RESULT STREQUAL "0")
++        message(FATAL_ERROR "JE DXC ${JE_LABEL} failed (${JE_RESULT}); outputs retained; no package ready")
++    endif()
++endfunction()
++JE_dxc_native(python-generation-version "${JE_DXC_PYTHON}" -I -c
++    "print(__import__('sys').version) or __import__('sys').exit(0 if __import__('sys').version_info[:3] == (3, 10, 13) else 1)")
++foreach(JE_ID IN ITEMS dxc spirv-headers spirv-tools)
++    # Archives were fully tar/Gitblob audited before provisioning; no source VCS is needed.
++    file(ARCHIVE_EXTRACT INPUT "${JE_ARCHIVE_${JE_ID}}" DESTINATION "${JE_DXC_OUTPUT}/source-work/${JE_ID}")
++    set(JE_WORK_${JE_ID} "${JE_DXC_OUTPUT}/source-work/${JE_ID}/${JE_ARCHIVE_ROOT_${JE_ID}}")
++    JE_python_verify_file("${JE_WORK_${JE_ID}}/CMakeLists.txt" "${JE_CMAKE_SHA_${JE_ID}}" "${JE_ID} pristine private CMake")
++endforeach()
++set(JE_DXC_PROOF_OUTPUT "${JE_DXC_OUTPUT}/private-provenance-proof")
++include("${CMAKE_CURRENT_LIST_DIR}/ApplyPrivateProvenance.cmake")
++set(JE_BINARY "${JE_DXC_OUTPUT}/build-Release")
++JE_dxc_native(configure-Release "${CMAKE_COMMAND}" -S "${JE_WORK_dxc}" -B "${JE_BINARY}" -G Ninja
++    "-C${JE_WORK_dxc}/cmake/caches/PredefinedParams.cmake"
++    "-DCMAKE_MAKE_PROGRAM=${JE_DXC_NINJA}" "-DCMAKE_C_COMPILER=${JE_DXC_CL}" "-DCMAKE_CXX_COMPILER=${JE_DXC_CL}"
++    -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS:BOOL=OFF -DCLANG_INCLUDE_TESTS:BOOL=OFF
++    -DHLSL_INCLUDE_TESTS:BOOL=OFF -DSPIRV_BUILD_TESTS:BOOL=OFF -DLLVM_INCLUDE_TOOLS=ON
++    "-DPython3_EXECUTABLE=${JE_DXC_PYTHON}" "-DDXC_SPIRV_HEADERS_DIR=${JE_WORK_spirv-headers}"
++    "-DDXC_SPIRV_TOOLS_DIR=${JE_WORK_spirv-tools}" -DHLSL_ENABLE_FIXED_VER=ON -DHLSL_FIXED_VERSION_LOCATION:PATH=
++    -DHLSL_AUTOCRLF=OFF -DSPIRV_TOOLS_BUILD_STATIC=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON)
++# Record optional ambient discoveries; never obtain a new library or suppress an existing feature.
++file(STRINGS "${JE_BINARY}/CMakeCache.txt" JE_OPTIONAL_FIND_LINES
++    REGEX "^(DIASDK|MSVC_DIA_SDK_DIR|LIBXML2|LLVM_ENABLE_ZLIB|HAVE_ZLIB_H|HAVE_LIBZ|METAL_IRCONVERTER|ENABLE_METAL_CODEGEN|Python3|LLVM_USE_CRT_RELEASE|HLSL_|ENABLE_SPIRV_CODEGEN|CMAKE_CXX_COMPILER|CMAKE_C_COMPILER)[^=]*=")
++string(REPLACE ";" "\n" JE_OPTIONAL_FIND_TEXT "${JE_OPTIONAL_FIND_LINES}")
++file(WRITE "${JE_DXC_OUTPUT}/logs/selected-cache-finds.txt" "${JE_OPTIONAL_FIND_TEXT}\n")
++JE_dxc_native(build-Release "${CMAKE_COMMAND}" --build "${JE_BINARY}" --target all llvm-as llvm-dis --parallel)
++foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
++    if(NOT EXISTS "${JE_BINARY}/bin/${JE_FILE}")
++        message(FATAL_ERROR "JE DXC required original output missing: ${JE_FILE}")
++    endif()
++endforeach()
++# No stage/package is produced until the original real native target set succeeds.
++set(JE_STAGE "${JE_DXC_OUTPUT}/stage")
++file(MAKE_DIRECTORY "${JE_STAGE}/DirectXShaderCompilerDxc/bin" "${JE_STAGE}/LICENSES/O3DE")
++foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
++    file(COPY "${JE_BINARY}/bin/${JE_FILE}" DESTINATION "${JE_STAGE}/DirectXShaderCompilerDxc/bin")
++endforeach()
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/FindDirectXShaderCompilerDxc.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt"
++    "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/SourceNotices.txt" DESTINATION "${JE_STAGE}/LICENSES")
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT"
++    DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++string(JSON JE_RECIPE SET "${JE_PINS}" sourceNumericVersion "\"1.8.2505.0\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" sourceShortHash "\"1cc0ab76\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" historyCount 4954)
++string(JSON JE_RECIPE SET "${JE_RECIPE}" historyCountMethod "\"Pinned GitHub REST unfiltered history cardinality; not local git rev-list\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" externalPythonToolSHA256 "\"${JE_DXC_PYTHON_SHA256}\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" pythonDistributed false)
++string(JSON JE_RECIPE SET "${JE_RECIPE}" generator "\"Ninja\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" toolset "\"v143\"")
++file(WRITE "${JE_STAGE}/DirectXShaderCompilerDxc/JERecipe.json" "${JE_RECIPE}\n")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_DXC_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "1.8.2505.1")
++set(JE_PACKAGE_SOURCE_COMMIT "1cc0ab76dafe08a4144e419e619a8951a3d219db")
++set(JE_PACKAGE_SOURCE_SHA256 "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42")
++set(JE_PACKAGE_SOURCE_URL "https://codeload.github.com/o3de/DirectXShaderCompiler/tar.gz/${JE_PACKAGE_SOURCE_COMMIT}")
++set(JE_PACKAGE_LICENSE "NCSA; Apache-2.0; Khronos permissive; scoped MIT/Unlicense, regex, Unicode/MD5 notices in LICENSES")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
++file(WRITE "${JE_DXC_OUTPUT}/package-ready.json" "{\"status\":\"PRODUCED; NATIVE CONSUMER/ROOT/EDITOR ACCEPTANCE PENDING\"}\n")
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/FindDirectXShaderCompilerDxc.cmake b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/FindDirectXShaderCompilerDxc.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/FindDirectXShaderCompilerDxc.cmake
+@@ -0,0 +1,27 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++if(TARGET 3rdParty::DirectXShaderCompilerDxc)
++    return()
++endif()
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(DirectXShaderCompilerDxc_BINARY_DIR "${CMAKE_CURRENT_LIST_DIR}/DirectXShaderCompilerDxc/bin")
++JE_python_require_local_path(DirectXShaderCompilerDxc_BINARY_DIR)
++file(READ "${CMAKE_CURRENT_LIST_DIR}/PackageInfo.json" JE_PACKAGE_INFO)
++string(JSON DirectXShaderCompilerDxc_VERSION GET "${JE_PACKAGE_INFO}" version)
++set(DirectXShaderCompilerDxc_RUNTIME_DEPENDENCIES)
++foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
++    set(JE_PATH "${DirectXShaderCompilerDxc_BINARY_DIR}/${JE_FILE}")
++    JE_python_require_local_path(JE_PATH)
++    if(NOT EXISTS "${JE_PATH}" OR IS_DIRECTORY "${JE_PATH}")
++        message(FATAL_ERROR "JE DXC local package is incomplete: ${JE_PATH}")
++    endif()
++    list(APPEND DirectXShaderCompilerDxc_RUNTIME_DEPENDENCIES "${JE_PATH}")
++endforeach()
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(DirectXShaderCompilerDxc REQUIRED_VARS
++    DirectXShaderCompilerDxc_BINARY_DIR VERSION_VAR DirectXShaderCompilerDxc_VERSION)
++add_library(3rdParty::DirectXShaderCompilerDxc INTERFACE IMPORTED GLOBAL)
++if(COMMAND ly_add_target_files)
++    ly_add_target_files(TARGETS 3rdParty::DirectXShaderCompilerDxc
++        OUTPUT_SUBDIRECTORY Builders/DirectXShaderCompiler FILES ${DirectXShaderCompilerDxc_RUNTIME_DEPENDENCIES})
++endif()
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/NOTICE.txt b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/NOTICE.txt
+@@ -0,0 +1,41 @@
++Copyright (c) Contributors to the Open 3D Engine Project.
++JE package glue: Apache-2.0 OR MIT; full texts in LICENSES/O3DE.
++
++This is a newly built local package, not the historical binary package and
++not a Microsoft-signed binary release. Its real archive SHA must be measured.
++The original O3DE Windows recipe distributes four Release tools:
++DirectXShaderCompilerDxc/bin/dxc.exe, dxsc.exe, dxil.dll, dxcompiler.dll.
++The engine target/deploy path remain 3rdParty::DirectXShaderCompilerDxc and
++Builders/DirectXShaderCompiler. dxsc is the original DX12 specialization
++patcher and remains present. No Python interpreter is distributed.
++
++DXC source authority: o3de/DirectXShaderCompiler branch
++release-1.8.2505.1-o3de, pinned commit
++1cc0ab76dafe08a4144e419e619a8951a3d219db, not an invented upstream tag.
++The source numeric version is1.8.2505.0; package branch identity .1 does not
++alter those original numeric fields. Full source pin is in ProductVersion.
++Original IDxcVersionInfo2 allocations require the short8 hash1cc0ab76.
++Count4954 is the reviewed unfiltered pinned GitHub REST history cardinality,
++not a local git rev-list measurement. API queries and ownership remain intact.
++
++The three documented private overlays affect only version.inc,
++GetCommitInfo.py, and SPIRV-Tools update_build_version.py. Original immutable
++archives/snapshots remain unchanged. All before/after SHA256 and exact byte
++inverses are recorded. Source generators, feature defaults, EH/RTTI,
++SPIR-V code generation and original Windows tests-off recipe are preserved.
++SPIRV-Headers aa6cef192b8e693916eb713e7a9ccadf06062ceb and SPIRV-Tools
++a62abcb402009b9ca5975e6167c09f237f630e0e are the exact selected gitlinks.
++
++Full source licensing/notices are retained in LICENSES/SourceNotices.txt:
++NCSA and ThirdPartyNotices; Apache-2.0 SPIRV-Tools; Khronos SPIRV-Headers;
++LLVM regex COPYRIGHT; actual DxilCompression LICENSE.TXT and source notices
++for miniz, ConvertUTF and MD5. Source build/test Autoconf notices in the full
++authority license are scoped historical text, not an attribution of every
++distributed DLL to GPL or a certification of complete redistribution rights.
++
++The pinned 2025 source includes the open retail DXIL validator hash algorithm.
++DXIL hashing is distinct from Windows DLL Authenticode signing. Source-built
++dxil.dll still ships as the original recipe requires. No validation bypass,
++developer-mode enablement or external signed-validator replacement is used.
++Native compilation, shader validation and real DX12/Vulkan product behavior
++are separate acceptance gates; this notice does not claim those gates passed.
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/PrivateProvenance.json b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/PrivateProvenance.json
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/PrivateProvenance.json
+@@ -0,0 +1,52 @@
++{
++  "schemaVersion": 1,
++  "overlays": [
++    {
++      "id": "commit-info",
++      "source": "dxc",
++      "path": "utils/GetCommitInfo.py",
++      "replacements": [
++        {
++          "after": "",
++          "before": "import subprocess\n"
++        },
++        {
++          "after": "def git_get_commit_hash():\n    # Audited archive1cc0ab76; original runtime allocations require8 characters.\n    return \"1cc0ab76\"\n\n\ndef git_get_commit_count():\n    # Pinned GitHub REST unfiltered history cardinality; not local git rev-list.\n    return 4954",
++          "before": "def git_get_commit_hash():\n    try:\n        return subprocess.check_output(\n            ['git', 'rev-parse', '--short=8', 'HEAD']).decode('ascii').strip()\n    except subprocess.CalledProcessError:\n        return \"00000000\"\n\n\ndef git_get_commit_count():\n    try:\n        return subprocess.check_output(\n            ['git', 'rev-list', '--count', 'HEAD']).decode('ascii').strip()\n    except subprocess.CalledProcessError:\n        return 0"
++        }
++      ],
++      "afterSHA256": "15e1408450fac999d683eea6a1eaa1a71c30f2b6500695617c6097fb0b159215",
++      "beforeSHA256": "16036fa6f82f17cf778e8cf22c690a5bdac3b15a981ca59c0384ad6f292bf84d"
++    },
++    {
++      "id": "fixed-version",
++      "source": "dxc",
++      "path": "utils/version/version.inc",
++      "replacements": [
++        {
++          "after": "#define RC_PRODUCT_VERSION \"1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db\"",
++          "before": "#define RC_PRODUCT_VERSION \"1.8.2505.0\""
++        }
++      ],
++      "afterSHA256": "59ab0f6082a4de27b5c94d39c4a1ec6e9a01e1bdb0246871e6c7a142c785d7d0",
++      "beforeSHA256": "8c5d6d8bda85c32eda2b6f24da43b799d3a5c6f5bd94e249a596569cf8159658"
++    },
++    {
++      "id": "spirv-description",
++      "source": "spirv-tools",
++      "path": "utils/update_build_version.py",
++      "replacements": [
++        {
++          "after": "    description = \"a62abcb402009b9ca5975e6167c09f237f630e0e (archive)\"",
++          "before": "    description = os.getenv(\"FORCED_BUILD_VERSION_DESCRIPTION\", describe(repo_path))"
++        }
++      ],
++      "afterSHA256": "e72f37dc38095d874e4f94564a8f769fa43b71411e33000d654473b2b564e9a9",
++      "beforeSHA256": "929b4f3a4e433b511b8143b1c5b8df705486bd044e030299fe7457cb10b495e3"
++    }
++  ],
++  "historyCountMethod": "Pinned GitHub REST unfiltered list cardinality4954, not local git rev-list",
++  "originalNumericVersion": "1.8.2505.0",
++  "fixedVersionGuard": "HLSL_ENABLE_FIXED_VER=ON; HLSL_FIXED_VERSION_LOCATION empty; upstream uses private utils/version/version.inc without invoking gen_version.py",
++  "parentApprovalSHA256": "31BC4468E2C83C59E19843A1130646C7057A90614115E1079CD9CE000EF782A5"
++}
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md
+@@ -0,0 +1,79 @@
++# Local DirectXShaderCompilerDxc
++
++The original O3DE Windows Release/Ninja recipe is preserved, including its
++`PredefinedParams.cmake`, targets `all llvm-as llvm-dis`, EH/RTTI/SPIRV code
++generation, original tests-off options and four payload tools. This local
++producer creates `DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows`
++with a new measured package SHA. The source numeric version remains
++`1.8.2505.0`. Find retains the imported interface target and deploys the four
++tools under `Builders/DirectXShaderCompiler` through the engine hook.
++
++Only explicit local archives from `SourcePins.json` and existing audited
++external Python3.10.13, VS2022/v143 x64 cl and VS-bundled Ninja are accepted.
++Output must be new below this checkout/build. All source/tool hashes and
++path guards precede output creation. No acquisition, Git, SDK/toolchain
++installer, global install or Python payload is involved. An existing x64
++VS development environment is required for the original Ninja build.
++
++Each archive is extracted into a private source-work copy. Exactly three
++provenance overlays use raw before/after hashes and byteexact inversion:
++private `utils/version/version.inc`, `utils/GetCommitInfo.py`, and private
++SPIRV-Tools `utils/update_build_version.py`. The fixed version uses upstream
++`HLSL_ENABLE_FIXED_VER=ON` with `HLSL_FIXED_VERSION_LOCATION` **empty**.
++This matters: a nonempty alternate location still causes the upstream first
++version target to invoke the Git generator. No upstream CMake is patched.
++The original numeric fields remain1.8.2505.0; ProductVersion carries the full
++archive pin. Runtime commit queries return short8 `1cc0ab76` and count4954,
++the audited pinned API history cardinality. Full40 strings cannot be placed
++in the original8+1 allocations. SPIRV retains its original CHANGES version.
++
++All native argv, result codes, stdout/stderr and whole-second timings are
++captured. `logs/selected-cache-finds.txt` records actual optional LibXml2,
++zlib, Metal and CRT/tool configuration; no extra dependency is acquired or
++feature suppressed to make configuration pass. A failed build retains its
++diagnostic work and creates no ready stamp or staged package. Only all four
++real native output files are staged after successful original targets.
++The shared local package helper remains unchanged. A ready stamp denotes
++production only, not consumer/Root/Editor acceptance.
++
++Luna alone runs the following after parent review/freeze, from the existing
++VS2022 x64 build environment and with fresh output:
++
++```powershell
++cmake `
++  '-DJE_DXC_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition' `
++  '-DJE_DXC_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe' `
++  '-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e' `
++  '-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe' `
++  '-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8' `
++  '-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe' `
++  '-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d' `
++  '-DJE_DXC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1' `
++  -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake'
++```
++
++Extract the produced archive to a new directory. Configure `tests/` using
++VS2022/v143 x64 with `JE_DXC_PACKAGE_ROOT` pointing to that extracted payload
++and `JE_DXC_SOURCE_ROOT` pointing to the audited immutable DXC snapshot.
++Build `JEDirectXShaderCompilerDxcConsumer` Release and run its four CTests.
++The DXSC case depends on the DXIL case; use fresh consumer output so emitted
++objects and receipts are never overwritten.
++
++The consumer loads the actual two package DLLs, checks API provenance and
++numeric/full-pin PE version, compiles HLSL using an actual local include,
++checks real DXIL retail hash and the external validator's HRESULT **and**
++operation status, verifies SPIR-V compute main/header/instruction bounds,
++and rejects malformed HLSL without an object. Real dxsc uses the engine's
++`0x45678900` sentinel, must change the specialization-bearing container,
++produce a valid bit offset for constant7 and revalidate its retail DXIL.
++Malformed DXIL must be rejected without a successful output. The pure hash
++oracle compiles only the pinned upstream hash source, not upstream CMake.
++No `-Vd`, preview profile, developer mode, experimental bypass or mock is used.
++
++Native producer/consumer and producer guard negatives are pending Luna.
++Relevant negatives: missing/corrupt source/tool, remote/UNC/symlink path,
++existing/outside-build output, wrong private-patch witness and absent x64
++build environment. Optional ambient libraries/actual PE imports need review;
++full licensing notices do not certify legal redistribution. Root target
++generation, AP compilation and real DX12/Vulkan Editor/PSO acceptance remain
++separate pending gates.
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourceNotices.txt b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourceNotices.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourceNotices.txt
+@@ -0,0 +1,1647 @@
++===== LICENSE.TXT [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-preparation\acquisition\dxc\snapshot] =====
++==============================================================================
++LLVM Release License
++==============================================================================
++University of Illinois/NCSA
++Open Source License
++
++Copyright (c) 2003-2015 University of Illinois at Urbana-Champaign.
++All rights reserved.
++
++Developed by:
++
++    LLVM Team
++
++    University of Illinois at Urbana-Champaign
++
++    http://llvm.org
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of
++this software and associated documentation files (the "Software"), to deal with
++the Software without restriction, including without limitation the rights to
++use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
++of the Software, and to permit persons to whom the Software is furnished to do
++so, subject to the following conditions:
++
++    * Redistributions of source code must retain the above copyright notice,
++      this list of conditions and the following disclaimers.
++
++    * Redistributions in binary form must reproduce the above copyright notice,
++      this list of conditions and the following disclaimers in the
++      documentation and/or other materials provided with the distribution.
++
++    * Neither the names of the LLVM Team, University of Illinois at
++      Urbana-Champaign, nor the names of its contributors may be used to
++      endorse or promote products derived from this Software without specific
++      prior written permission.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
++FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
++CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
++SOFTWARE.
++
++==============================================================================
++Copyrights and Licenses for Third Party Software Distributed with LLVM:
++==============================================================================
++The LLVM software contains code written by third parties.  Such software will
++have its own individual LICENSE.TXT file in the directory in which it appears.
++This file will describe the copyrights, license, and restrictions which apply
++to that code.
++
++The disclaimer of warranty in the University of Illinois Open Source License
++applies to all code in the LLVM Distribution, and nothing in any of the
++other licenses gives permission to use the names of the LLVM Team or the
++University of Illinois to endorse or promote products derived from this
++Software.
++
++------------------
++
++Files: lib/Miniz/* include/miniz/*
++
++Copyright 2013-2014 RAD Game Tools and Valve Software
++Copyright 2010-2014 Rich Geldreich and Tenacious Software LLC
++
++All Rights Reserved.
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in
++all copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++THE SOFTWARE.
++
++------------------
++
++Files: lib/Miniz/miniz.c
++
++This is free and unencumbered software released into the public domain.
++
++Anyone is free to copy, modify, publish, use, compile, sell, or
++distribute this software, either in source code form or as a compiled
++binary, for any purpose, commercial or non-commercial, and by any
++means.
++
++In jurisdictions that recognize copyright laws, the author or authors
++of this software dedicate any and all copyright interest in the
++software to the public domain. We make this dedication for the benefit
++of the public at large and to the detriment of our heirs and
++successors. We intend this dedication to be an overt act of
++relinquishment in perpetuity of all present and future rights to this
++software under copyright law.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
++EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
++MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
++IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
++OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
++ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
++OTHER DEALINGS IN THE SOFTWARE.
++
++For more information, please refer to <http://unlicense.org/>
++
++------------------
++
++Files: lib/Support/* docs/SystemLibrary.rst
++
++Written by Henry Spencer.  Not derived from licensed software.
++
++Permission is granted to anyone to use this software for any
++purpose on any computer system, and to redistribute it freely,
++subject to the following restrictions:
++
++1. The author is not responsible for the consequences of use of
++        this software, no matter how awful, even if they arise
++        from defects in it.
++
++2. The origin of this software must not be misrepresented, either
++        by explicit claim or by omission.
++
++3. Altered versions must be plainly marked as such, and must not
++        be misrepresented as being the original software.
++
++------------------
++
++Files: include/llvm/Support/ConvertUTF.h
++
++Copyright 2001-2004 Unicode, Inc.
++
++Disclaimer
++
++This source code is provided as is by Unicode, Inc. No claims are
++made as to fitness for any particular purpose. No warranties of any
++kind are expressed or implied. The recipient agrees to determine
++applicability of information provided. If this file has been
++purchased on magnetic or optical media from Unicode, Inc., the
++sole remedy for any claim will be exchange of defective media
++within 90 days of receipt.
++
++Limitations on Rights to Redistribute This Code
++
++Unicode, Inc. hereby grants the right to freely use the information
++supplied in this file in the creation of products supporting the
++Unicode Standard, and to make copies of this file in any form
++for internal or external distribution as long as this notice
++remains attached.
++
++------------------
++
++Files: include/llvm/Support/MD5.h
++
++This software was written by Alexander Peslyak in 2001.  No copyright is
++claimed, and the software is hereby placed in the public domain.
++In case this attempt to disclaim copyright and place the software in the
++public domain is deemed null and void, then the software is
++Copyright (c) 2001 Alexander Peslyak and it is hereby released to the
++general public under the following terms:
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted.
++
++There's ABSOLUTELY NO WARRANTY, express or implied.
++
++------------------
++
++Files: lib/Support/regstrlcpy.c
++
++Copyright (c) 1998 Todd C. Miller <Todd.Miller@courtesan.com>
++
++Permission to use, copy, modify, and distribute this software for any
++purpose with or without fee is hereby granted, provided that the above
++copyright notice and this permission notice appear in all copies.
++
++THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
++WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
++MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
++ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
++WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
++ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
++OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
++
++
++
++
++------------------
++------------------
++
++THE FOLLOWING LICENSES ARE FOR BUILD AND TEST DEPENDENCIES ONLY.
++
++------------------
++------------------
++
++Files: utils/unittest/googletest/*
++
++Copyright 2008, Google Inc.
++All rights reserved.
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions are
++met:
++
++    * Redistributions of source code must retain the above copyright
++notice, this list of conditions and the following disclaimer.
++    * Redistributions in binary form must reproduce the above
++copyright notice, this list of conditions and the following disclaimer
++in the documentation and/or other materials provided with the
++distribution.
++    * Neither the name of Google Inc. nor the names of its
++contributors may be used to endorse or promote products derived from
++this software without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++
++------------------
++
++Files: utils/unittest/googlemock/*
++
++Copyright 2008, Google Inc.
++All rights reserved.
++
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions are
++met:
++
++    * Redistributions of source code must retain the above copyright
++notice, this list of conditions and the following disclaimer.
++    * Redistributions in binary form must reproduce the above
++copyright notice, this list of conditions and the following disclaimer
++in the documentation and/or other materials provided with the
++distribution.
++    * Neither the name of Google Inc. nor the names of its
++contributors may be used to endorse or promote products derived from
++this software without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
++OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
++SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
++LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
++OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++
++------------------
++
++Files: test/YamlParser/*
++
++Copyright (c) 2006 Kirill Simonov
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of
++this software and associated documentation files (the "Software"), to deal in
++the Software without restriction, including without limitation the rights to
++use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
++of the Software, and to permit persons to whom the Software is furnished to do
++so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all
++copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
++
++------------------
++
++Files: autoconf/config.guess
++
++                    GNU GENERAL PUBLIC LICENSE
++                       Version 2, June 1991
++
++ Copyright (C) 1989, 1991 Free Software Foundation, Inc.,
++ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
++ Everyone is permitted to copy and distribute verbatim copies
++ of this license document, but changing it is not allowed.
++
++                            Preamble
++
++  The licenses for most software are designed to take away your
++freedom to share and change it.  By contrast, the GNU General Public
++License is intended to guarantee your freedom to share and change free
++software--to make sure the software is free for all its users.  This
++General Public License applies to most of the Free Software
++Foundation's software and to any other program whose authors commit to
++using it.  (Some other Free Software Foundation software is covered by
++the GNU Lesser General Public License instead.)  You can apply it to
++your programs, too.
++
++  When we speak of free software, we are referring to freedom, not
++price.  Our General Public Licenses are designed to make sure that you
++have the freedom to distribute copies of free software (and charge for
++this service if you wish), that you receive source code or can get it
++if you want it, that you can change the software or use pieces of it
++in new free programs; and that you know you can do these things.
++
++  To protect your rights, we need to make restrictions that forbid
++anyone to deny you these rights or to ask you to surrender the rights.
++These restrictions translate to certain responsibilities for you if you
++distribute copies of the software, or if you modify it.
++
++  For example, if you distribute copies of such a program, whether
++gratis or for a fee, you must give the recipients all the rights that
++you have.  You must make sure that they, too, receive or can get the
++source code.  And you must show them these terms so they know their
++rights.
++
++  We protect your rights with two steps: (1) copyright the software, and
++(2) offer you this license which gives you legal permission to copy,
++distribute and/or modify the software.
++
++  Also, for each author's protection and ours, we want to make certain
++that everyone understands that there is no warranty for this free
++software.  If the software is modified by someone else and passed on, we
++want its recipients to know that what they have is not the original, so
++that any problems introduced by others will not reflect on the original
++authors' reputations.
++
++  Finally, any free program is threatened constantly by software
++patents.  We wish to avoid the danger that redistributors of a free
++program will individually obtain patent licenses, in effect making the
++program proprietary.  To prevent this, we have made it clear that any
++patent must be licensed for everyone's free use or not licensed at all.
++
++  The precise terms and conditions for copying, distribution and
++modification follow.
++
++   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
++
++  0. This License applies to any program or other work which contains
++a notice placed by the copyright holder saying it may be distributed
++under the terms of this General Public License.  The "Program", below,
++refers to any such program or work, and a "work based on the Program"
++means either the Program or any derivative work under copyright law:
++that is to say, a work containing the Program or a portion of it,
++either verbatim or with modifications and/or translated into another
++language.  (Hereinafter, translation is included without limitation in
++the term "modification".)  Each licensee is addressed as "you".
++
++Activities other than copying, distribution and modification are not
++covered by this License; they are outside its scope.  The act of
++running the Program is not restricted, and the output from the Program
++is covered only if its contents constitute a work based on the
++Program (independent of having been made by running the Program).
++Whether that is true depends on what the Program does.
++
++  1. You may copy and distribute verbatim copies of the Program's
++source code as you receive it, in any medium, provided that you
++conspicuously and appropriately publish on each copy an appropriate
++copyright notice and disclaimer of warranty; keep intact all the
++notices that refer to this License and to the absence of any warranty;
++and give any other recipients of the Program a copy of this License
++along with the Program.
++
++You may charge a fee for the physical act of transferring a copy, and
++you may at your option offer warranty protection in exchange for a fee.
++
++  2. You may modify your copy or copies of the Program or any portion
++of it, thus forming a work based on the Program, and copy and
++distribute such modifications or work under the terms of Section 1
++above, provided that you also meet all of these conditions:
++
++    a) You must cause the modified files to carry prominent notices
++    stating that you changed the files and the date of any change.
++
++    b) You must cause any work that you distribute or publish, that in
++    whole or in part contains or is derived from the Program or any
++    part thereof, to be licensed as a whole at no charge to all third
++    parties under the terms of this License.
++
++    c) If the modified program normally reads commands interactively
++    when run, you must cause it, when started running for such
++    interactive use in the most ordinary way, to print or display an
++    announcement including an appropriate copyright notice and a
++    notice that there is no warranty (or else, saying that you provide
++    a warranty) and that users may redistribute the program under
++    these conditions, and telling the user how to view a copy of this
++    License.  (Exception: if the Program itself is interactive but
++    does not normally print such an announcement, your work based on
++    the Program is not required to print an announcement.)
++
++These requirements apply to the modified work as a whole.  If
++identifiable sections of that work are not derived from the Program,
++and can be reasonably considered independent and separate works in
++themselves, then this License, and its terms, do not apply to those
++sections when you distribute them as separate works.  But when you
++distribute the same sections as part of a whole which is a work based
++on the Program, the distribution of the whole must be on the terms of
++this License, whose permissions for other licensees extend to the
++entire whole, and thus to each and every part regardless of who wrote it.
++
++Thus, it is not the intent of this section to claim rights or contest
++your rights to work written entirely by you; rather, the intent is to
++exercise the right to control the distribution of derivative or
++collective works based on the Program.
++
++In addition, mere aggregation of another work not based on the Program
++with the Program (or with a work based on the Program) on a volume of
++a storage or distribution medium does not bring the other work under
++the scope of this License.
++
++  3. You may copy and distribute the Program (or a work based on it,
++under Section 2) in object code or executable form under the terms of
++Sections 1 and 2 above provided that you also do one of the following:
++
++    a) Accompany it with the complete corresponding machine-readable
++    source code, which must be distributed under the terms of Sections
++    1 and 2 above on a medium customarily used for software interchange; or,
++
++    b) Accompany it with a written offer, valid for at least three
++    years, to give any third party, for a charge no more than your
++    cost of physically performing source distribution, a complete
++    machine-readable copy of the corresponding source code, to be
++    distributed under the terms of Sections 1 and 2 above on a medium
++    customarily used for software interchange; or,
++
++    c) Accompany it with the information you received as to the offer
++    to distribute corresponding source code.  (This alternative is
++    allowed only for noncommercial distribution and only if you
++    received the program in object code or executable form with such
++    an offer, in accord with Subsection b above.)
++
++The source code for a work means the preferred form of the work for
++making modifications to it.  For an executable work, complete source
++code means all the source code for all modules it contains, plus any
++associated interface definition files, plus the scripts used to
++control compilation and installation of the executable.  However, as a
++special exception, the source code distributed need not include
++anything that is normally distributed (in either source or binary
++form) with the major components (compiler, kernel, and so on) of the
++operating system on which the executable runs, unless that component
++itself accompanies the executable.
++
++If distribution of executable or object code is made by offering
++access to copy from a designated place, then offering equivalent
++access to copy the source code from the same place counts as
++distribution of the source code, even though third parties are not
++compelled to copy the source along with the object code.
++
++  4. You may not copy, modify, sublicense, or distribute the Program
++except as expressly provided under this License.  Any attempt
++otherwise to copy, modify, sublicense or distribute the Program is
++void, and will automatically terminate your rights under this License.
++However, parties who have received copies, or rights, from you under
++this License will not have their licenses terminated so long as such
++parties remain in full compliance.
++
++  5. You are not required to accept this License, since you have not
++signed it.  However, nothing else grants you permission to modify or
++distribute the Program or its derivative works.  These actions are
++prohibited by law if you do not accept this License.  Therefore, by
++modifying or distributing the Program (or any work based on the
++Program), you indicate your acceptance of this License to do so, and
++all its terms and conditions for copying, distributing or modifying
++the Program or works based on it.
++
++  6. Each time you redistribute the Program (or any work based on the
++Program), the recipient automatically receives a license from the
++original licensor to copy, distribute or modify the Program subject to
++these terms and conditions.  You may not impose any further
++restrictions on the recipients' exercise of the rights granted herein.
++You are not responsible for enforcing compliance by third parties to
++this License.
++
++  7. If, as a consequence of a court judgment or allegation of patent
++infringement or for any other reason (not limited to patent issues),
++conditions are imposed on you (whether by court order, agreement or
++otherwise) that contradict the conditions of this License, they do not
++excuse you from the conditions of this License.  If you cannot
++distribute so as to satisfy simultaneously your obligations under this
++License and any other pertinent obligations, then as a consequence you
++may not distribute the Program at all.  For example, if a patent
++license would not permit royalty-free redistribution of the Program by
++all those who receive copies directly or indirectly through you, then
++the only way you could satisfy both it and this License would be to
++refrain entirely from distribution of the Program.
++
++If any portion of this section is held invalid or unenforceable under
++any particular circumstance, the balance of the section is intended to
++apply and the section as a whole is intended to apply in other
++circumstances.
++
++It is not the purpose of this section to induce you to infringe any
++patents or other property right claims or to contest validity of any
++such claims; this section has the sole purpose of protecting the
++integrity of the free software distribution system, which is
++implemented by public license practices.  Many people have made
++generous contributions to the wide range of software distributed
++through that system in reliance on consistent application of that
++system; it is up to the author/donor to decide if he or she is willing
++to distribute software through any other system and a licensee cannot
++impose that choice.
++
++This section is intended to make thoroughly clear what is believed to
++be a consequence of the rest of this License.
++
++  8. If the distribution and/or use of the Program is restricted in
++certain countries either by patents or by copyrighted interfaces, the
++original copyright holder who places the Program under this License
++may add an explicit geographical distribution limitation excluding
++those countries, so that distribution is permitted only in or among
++countries not thus excluded.  In such case, this License incorporates
++the limitation as if written in the body of this License.
++
++  9. The Free Software Foundation may publish revised and/or new versions
++of the General Public License from time to time.  Such new versions will
++be similar in spirit to the present version, but may differ in detail to
++address new problems or concerns.
++
++Each version is given a distinguishing version number.  If the Program
++specifies a version number of this License which applies to it and "any
++later version", you have the option of following the terms and conditions
++either of that version or of any later version published by the Free
++Software Foundation.  If the Program does not specify a version number of
++this License, you may choose any version ever published by the Free Software
++Foundation.
++
++  10. If you wish to incorporate parts of the Program into other free
++programs whose distribution conditions are different, write to the author
++to ask for permission.  For software which is copyrighted by the Free
++Software Foundation, write to the Free Software Foundation; we sometimes
++make exceptions for this.  Our decision will be guided by the two goals
++of preserving the free status of all derivatives of our free software and
++of promoting the sharing and reuse of software generally.
++
++                            NO WARRANTY
++
++  11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
++FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
++OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
++PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
++OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
++MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
++TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
++PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
++REPAIR OR CORRECTION.
++
++  12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
++WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
++REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,
++INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING
++OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED
++TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY
++YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER
++PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
++POSSIBILITY OF SUCH DAMAGES.
++
++Autoconf Exception
++
++As a special exception, the Free Software Foundation gives unlimited
++permission to copy, distribute and modify the configure scripts that are the
++output of Autoconf. You need not follow the terms of the GNU General Public
++License when using or distributing such scripts, even though portions of the
++text of Autoconf appear in them. The GNU General Public License (GPL) does
++govern all other use of the material that constitutes the Autoconf program.
++
++Certain portions of the Autoconf source text are designed to be copied (in
++certain cases, depending on the input) into the output of Autoconf. We call
++these the "data" portions. The rest of the Autoconf source text consists of
++comments plus executable code that decides which of the data portions to
++output in any given case. We call these comments and executable code the "non-
++data" portions. Autoconf never copies any of the non-data portions into its
++output.
++
++This special exception to the GPL applies to versions of Autoconf released by
++the Free Software Foundation. When you make and distribute a modified version
++of Autoconf, you may extend this special exception to the GPL to apply to your
++modified version as well, *unless* your modified version has the potential to
++copy into its output some of the text that was the non-data portion of the
++version that you started with. (In other words, unless your change moves or
++copies text from the non-data portions to the data portions.) If your
++modification has such potential, you must delete any notice of this special
++exception to the GPL from your modified version.
++
++                     END OF TERMS AND CONDITIONS
++
++
++===== ThirdPartyNotices.txt [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-preparation\acquisition\dxc\snapshot] =====
++Microsoft/DirectXShaderCompiler
++
++THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
++
++Do Not Translate or Localize
++
++This project incorporates components from the projects listed below. The
++original copyright notices and the licenses under which Microsoft received
++such components are set forth below. Microsoft reserves all rights not
++expressly granted herein, whether by implication, estoppel or otherwise.
++
++
++* LLVM
++
++==============================================================================
++LLVM Release License
++==============================================================================
++University of Illinois/NCSA
++Open Source License
++
++Copyright (c) 2003-2015 University of Illinois at Urbana-Champaign.
++All rights reserved.
++
++Developed by:
++
++    LLVM Team
++
++    University of Illinois at Urbana-Champaign
++
++    http://llvm.org
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of
++this software and associated documentation files (the "Software"), to deal with
++the Software without restriction, including without limitation the rights to
++use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
++of the Software, and to permit persons to whom the Software is furnished to do
++so, subject to the following conditions:
++
++    * Redistributions of source code must retain the above copyright notice,
++      this list of conditions and the following disclaimers.
++
++    * Redistributions in binary form must reproduce the above copyright notice,
++      this list of conditions and the following disclaimers in the
++      documentation and/or other materials provided with the distribution.
++
++    * Neither the names of the LLVM Team, University of Illinois at
++      Urbana-Champaign, nor the names of its contributors may be used to
++      endorse or promote products derived from this Software without specific
++      prior written permission.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
++FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
++CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
++SOFTWARE.
++
++==============================================================================
++Copyrights and Licenses for Third Party Software Distributed with LLVM:
++==============================================================================
++The LLVM software contains code written by third parties.  Such software will
++have its own individual LICENSE.TXT file in the directory in which it appears.
++This file will describe the copyrights, license, and restrictions which apply
++to that code.
++
++The disclaimer of warranty in the University of Illinois Open Source License
++applies to all code in the LLVM Distribution, and nothing in any of the
++other licenses gives permission to use the names of the LLVM Team or the
++University of Illinois to endorse or promote products derived from this
++Software.
++
++The following pieces of software have additional or alternate copyrights,
++licenses, and/or restrictions:
++
++Program             Directory
++-------             ---------
++OpenBSD regex       llvm/lib/Support/{reg*, COPYRIGHT.regex}
++pyyaml tests        llvm/test/YAMLParser/{*.data, LICENSE.TXT}
++md5 contributions   llvm/lib/Support/MD5.cpp llvm/include/llvm/Support/MD5.h
++
++
++* tools\clang
++
++==============================================================================
++LLVM Release License
++==============================================================================
++University of Illinois/NCSA
++Open Source License
++
++Copyright (c) 2007-2015 University of Illinois at Urbana-Champaign.
++All rights reserved.
++
++Developed by:
++
++    LLVM Team
++
++    University of Illinois at Urbana-Champaign
++
++    http://llvm.org
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of
++this software and associated documentation files (the "Software"), to deal with
++the Software without restriction, including without limitation the rights to
++use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
++of the Software, and to permit persons to whom the Software is furnished to do
++so, subject to the following conditions:
++
++    * Redistributions of source code must retain the above copyright notice,
++      this list of conditions and the following disclaimers.
++
++    * Redistributions in binary form must reproduce the above copyright notice,
++      this list of conditions and the following disclaimers in the
++      documentation and/or other materials provided with the distribution.
++
++    * Neither the names of the LLVM Team, University of Illinois at
++      Urbana-Champaign, nor the names of its contributors may be used to
++      endorse or promote products derived from this Software without specific
++      prior written permission.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
++FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
++CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE
++SOFTWARE.
++
++==============================================================================
++The LLVM software contains code written by third parties.  Such software will
++have its own individual LICENSE.TXT file in the directory in which it appears.
++This file will describe the copyrights, license, and restrictions which apply
++to that code.
++
++The disclaimer of warranty in the University of Illinois Open Source License
++applies to all code in the LLVM Distribution, and nothing in any of the
++other licenses gives permission to use the names of the LLVM Team or the
++University of Illinois to endorse or promote products derived from this
++Software.
++
++
++* test\YAMLParser
++
++Copyright (c) 2006 Kirill Simonov
++
++Permission is hereby granted, free of charge, to any person obtaining a copy of
++this software and associated documentation files (the "Software"), to deal in
++the Software without restriction, including without limitation the rights to
++use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
++of the Software, and to permit persons to whom the Software is furnished to do
++so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all
++copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
++
++* include\llvm\Support
++
++LLVM System Interface Library
++-------------------------------------------------------------------------------
++The LLVM System Interface Library is licensed under the Illinois Open Source
++License and has the following additional copyright:
++
++Copyright (C) 2004 eXtensible Systems, Inc.
++
++* OpenBSD regex
++
++$OpenBSD: COPYRIGHT,v 1.3 2003/06/02 20:18:36 millert Exp $
++
++Copyright 1992, 1993, 1994 Henry Spencer.  All rights reserved.
++This software is not subject to any license of the American Telephone
++and Telegraph Company or of the Regents of the University of California.
++
++Permission is granted to anyone to use this software for any purpose on
++any computer system, and to alter it and redistribute it, subject
++to the following restrictions:
++
++1. The author is not responsible for the consequences of use of this
++   software, no matter how awful, even if they arise from flaws in it.
++
++2. The origin of this software must not be misrepresented, either by
++   explicit claim or by omission.  Since few users ever read sources,
++   credits must appear in the documentation.
++
++3. Altered versions must be plainly marked as such, and must not be
++   misrepresented as being the original software.  Since few users
++   ever read sources, credits must appear in the documentation.
++
++4. This notice may not be removed or altered.
++
++=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
++/*-
++ * Copyright (c) 1994
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)COPYRIGHT	8.1 (Berkeley) 3/16/94
++ */
++
++* lib\Headers Files
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in
++all copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++THE SOFTWARE.
++
++
++===== lib/Support/COPYRIGHT.regex [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-preparation\acquisition\dxc\snapshot] =====
++$OpenBSD: COPYRIGHT,v 1.3 2003/06/02 20:18:36 millert Exp $
++
++Copyright 1992, 1993, 1994 Henry Spencer.  All rights reserved.
++This software is not subject to any license of the American Telephone
++and Telegraph Company or of the Regents of the University of California.
++
++Permission is granted to anyone to use this software for any purpose on
++any computer system, and to alter it and redistribute it, subject
++to the following restrictions:
++
++1. The author is not responsible for the consequences of use of this
++   software, no matter how awful, even if they arise from flaws in it.
++
++2. The origin of this software must not be misrepresented, either by
++   explicit claim or by omission.  Since few users ever read sources,
++   credits must appear in the documentation.
++
++3. Altered versions must be plainly marked as such, and must not be
++   misrepresented as being the original software.  Since few users
++   ever read sources, credits must appear in the documentation.
++
++4. This notice may not be removed or altered.
++
++=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
++/*-
++ * Copyright (c) 1994
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)COPYRIGHT	8.1 (Berkeley) 3/16/94
++ */
++
++
++===== lib/DxilCompression/LICENSE.TXT [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-preparation\acquisition\dxc\snapshot] =====
++Copyright 2013-2014 RAD Game Tools and Valve Software
++Copyright 2010-2014 Rich Geldreich and Tenacious Software LLC
++
++All Rights Reserved.
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in
++all copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++THE SOFTWARE.
++
++
++===== LICENSE [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-preparation\acquisition\spirv-headers\snapshot] =====
++Files: All files except for those called out below.
++Copyright (c) 2015-2024 The Khronos Group Inc.
++
++Permission is hereby granted, free of charge, to any person obtaining a
++copy of this software and/or associated documentation files (the
++"Materials"), to deal in the Materials without restriction, including
++without limitation the rights to use, copy, modify, merge, publish,
++distribute, sublicense, and/or sell copies of the Materials, and to
++permit persons to whom the Materials are furnished to do so, subject to
++the following conditions:
++
++The above copyright notice and this permission notice shall be included
++in all copies or substantial portions of the Materials.
++
++MODIFICATIONS TO THIS FILE MAY MEAN IT NO LONGER ACCURATELY REFLECTS
++KHRONOS STANDARDS. THE UNMODIFIED, NORMATIVE VERSIONS OF KHRONOS
++SPECIFICATIONS AND HEADER INFORMATION ARE LOCATED AT
++   https://www.khronos.org/registry/
++
++THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
++EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
++MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
++IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
++CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
++TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
++MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
++
++---
++
++Files: include/spirv/spir-v.xml
++Copyright (c) 2015-2024 The Khronos Group Inc.
++
++Permission is hereby granted, free of charge, to any person obtaining a
++copy of this software and/or associated documentation files (the
++"Materials"), to deal in the Materials without restriction, including
++without limitation the rights to use, copy, modify, merge, publish,
++distribute, sublicense, and/or sell copies of the Materials, and to
++permit persons to whom the Materials are furnished to do so, subject to
++the following conditions:
++
++The above copyright notice and this permission notice shall be included
++in all copies or substantial portions of the Materials.
++
++THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
++EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
++MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
++IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
++CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
++TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
++MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
++
++---
++
++Files: tools/buildHeaders/jsoncpp/*
++The JsonCpp library's source code, including accompanying documentation,
++tests and demonstration applications, are licensed under the following
++conditions...
++
++The author (Baptiste Lepilleur) explicitly disclaims copyright in all
++jurisdictions which recognize such a disclaimer. In such jurisdictions,
++this software is released into the Public Domain.
++
++In jurisdictions which do not recognize Public Domain property (e.g. Germany as of
++2010), this software is Copyright (c) 2007-2010 by Baptiste Lepilleur, and is
++released under the terms of the MIT License (see below).
++
++In jurisdictions which recognize Public Domain property, the user of this
++software may choose to accept it either as 1) Public Domain, 2) under the
++conditions of the MIT License (see below), or 3) under the terms of dual
++Public Domain/MIT License conditions described here, as they choose.
++
++The MIT License is about as close to Public Domain as a license can get, and is
++described in clear, concise terms at:
++
++   http://en.wikipedia.org/wiki/MIT_License
++
++The full text of the MIT License follows:
++
++========================================================================
++Copyright (c) 2007-2010 Baptiste Lepilleur
++
++Permission is hereby granted, free of charge, to any person
++obtaining a copy of this software and associated documentation
++files (the "Software"), to deal in the Software without
++restriction, including without limitation the rights to use, copy,
++modify, merge, publish, distribute, sublicense, and/or sell copies
++of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be
++included in all copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
++EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
++MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
++NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
++BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
++ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
++CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
++========================================================================
++
++---
++
++
++===== LICENSE [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-preparation\acquisition\spirv-tools\snapshot] =====
++
++                                 Apache License
++                           Version 2.0, January 2004
++                        http://www.apache.org/licenses/
++
++   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
++
++   1. Definitions.
++
++      "License" shall mean the terms and conditions for use, reproduction,
++      and distribution as defined by Sections 1 through 9 of this document.
++
++      "Licensor" shall mean the copyright owner or entity authorized by
++      the copyright owner that is granting the License.
++
++      "Legal Entity" shall mean the union of the acting entity and all
++      other entities that control, are controlled by, or are under common
++      control with that entity. For the purposes of this definition,
++      "control" means (i) the power, direct or indirect, to cause the
++      direction or management of such entity, whether by contract or
++      otherwise, or (ii) ownership of fifty percent (50%) or more of the
++      outstanding shares, or (iii) beneficial ownership of such entity.
++
++      "You" (or "Your") shall mean an individual or Legal Entity
++      exercising permissions granted by this License.
++
++      "Source" form shall mean the preferred form for making modifications,
++      including but not limited to software source code, documentation
++      source, and configuration files.
++
++      "Object" form shall mean any form resulting from mechanical
++      transformation or translation of a Source form, including but
++      not limited to compiled object code, generated documentation,
++      and conversions to other media types.
++
++      "Work" shall mean the work of authorship, whether in Source or
++      Object form, made available under the License, as indicated by a
++      copyright notice that is included in or attached to the work
++      (an example is provided in the Appendix below).
++
++      "Derivative Works" shall mean any work, whether in Source or Object
++      form, that is based on (or derived from) the Work and for which the
++      editorial revisions, annotations, elaborations, or other modifications
++      represent, as a whole, an original work of authorship. For the purposes
++      of this License, Derivative Works shall not include works that remain
++      separable from, or merely link (or bind by name) to the interfaces of,
++      the Work and Derivative Works thereof.
++
++      "Contribution" shall mean any work of authorship, including
++      the original version of the Work and any modifications or additions
++      to that Work or Derivative Works thereof, that is intentionally
++      submitted to Licensor for inclusion in the Work by the copyright owner
++      or by an individual or Legal Entity authorized to submit on behalf of
++      the copyright owner. For the purposes of this definition, "submitted"
++      means any form of electronic, verbal, or written communication sent
++      to the Licensor or its representatives, including but not limited to
++      communication on electronic mailing lists, source code control systems,
++      and issue tracking systems that are managed by, or on behalf of, the
++      Licensor for the purpose of discussing and improving the Work, but
++      excluding communication that is conspicuously marked or otherwise
++      designated in writing by the copyright owner as "Not a Contribution."
++
++      "Contributor" shall mean Licensor and any individual or Legal Entity
++      on behalf of whom a Contribution has been received by Licensor and
++      subsequently incorporated within the Work.
++
++   2. Grant of Copyright License. Subject to the terms and conditions of
++      this License, each Contributor hereby grants to You a perpetual,
++      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
++      copyright license to reproduce, prepare Derivative Works of,
++      publicly display, publicly perform, sublicense, and distribute the
++      Work and such Derivative Works in Source or Object form.
++
++   3. Grant of Patent License. Subject to the terms and conditions of
++      this License, each Contributor hereby grants to You a perpetual,
++      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
++      (except as stated in this section) patent license to make, have made,
++      use, offer to sell, sell, import, and otherwise transfer the Work,
++      where such license applies only to those patent claims licensable
++      by such Contributor that are necessarily infringed by their
++      Contribution(s) alone or by combination of their Contribution(s)
++      with the Work to which such Contribution(s) was submitted. If You
++      institute patent litigation against any entity (including a
++      cross-claim or counterclaim in a lawsuit) alleging that the Work
++      or a Contribution incorporated within the Work constitutes direct
++      or contributory patent infringement, then any patent licenses
++      granted to You under this License for that Work shall terminate
++      as of the date such litigation is filed.
++
++   4. Redistribution. You may reproduce and distribute copies of the
++      Work or Derivative Works thereof in any medium, with or without
++      modifications, and in Source or Object form, provided that You
++      meet the following conditions:
++
++      (a) You must give any other recipients of the Work or
++          Derivative Works a copy of this License; and
++
++      (b) You must cause any modified files to carry prominent notices
++          stating that You changed the files; and
++
++      (c) You must retain, in the Source form of any Derivative Works
++          that You distribute, all copyright, patent, trademark, and
++          attribution notices from the Source form of the Work,
++          excluding those notices that do not pertain to any part of
++          the Derivative Works; and
++
++      (d) If the Work includes a "NOTICE" text file as part of its
++          distribution, then any Derivative Works that You distribute must
++          include a readable copy of the attribution notices contained
++          within such NOTICE file, excluding those notices that do not
++          pertain to any part of the Derivative Works, in at least one
++          of the following places: within a NOTICE text file distributed
++          as part of the Derivative Works; within the Source form or
++          documentation, if provided along with the Derivative Works; or,
++          within a display generated by the Derivative Works, if and
++          wherever such third-party notices normally appear. The contents
++          of the NOTICE file are for informational purposes only and
++          do not modify the License. You may add Your own attribution
++          notices within Derivative Works that You distribute, alongside
++          or as an addendum to the NOTICE text from the Work, provided
++          that such additional attribution notices cannot be construed
++          as modifying the License.
++
++      You may add Your own copyright statement to Your modifications and
++      may provide additional or different license terms and conditions
++      for use, reproduction, or distribution of Your modifications, or
++      for any such Derivative Works as a whole, provided Your use,
++      reproduction, and distribution of the Work otherwise complies with
++      the conditions stated in this License.
++
++   5. Submission of Contributions. Unless You explicitly state otherwise,
++      any Contribution intentionally submitted for inclusion in the Work
++      by You to the Licensor shall be under the terms and conditions of
++      this License, without any additional terms or conditions.
++      Notwithstanding the above, nothing herein shall supersede or modify
++      the terms of any separate license agreement you may have executed
++      with Licensor regarding such Contributions.
++
++   6. Trademarks. This License does not grant permission to use the trade
++      names, trademarks, service marks, or product names of the Licensor,
++      except as required for reasonable and customary use in describing the
++      origin of the Work and reproducing the content of the NOTICE file.
++
++   7. Disclaimer of Warranty. Unless required by applicable law or
++      agreed to in writing, Licensor provides the Work (and each
++      Contributor provides its Contributions) on an "AS IS" BASIS,
++      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
++      implied, including, without limitation, any warranties or conditions
++      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
++      PARTICULAR PURPOSE. You are solely responsible for determining the
++      appropriateness of using or redistributing the Work and assume any
++      risks associated with Your exercise of permissions under this License.
++
++   8. Limitation of Liability. In no event and under no legal theory,
++      whether in tort (including negligence), contract, or otherwise,
++      unless required by applicable law (such as deliberate and grossly
++      negligent acts) or agreed to in writing, shall any Contributor be
++      liable to You for damages, including any direct, indirect, special,
++      incidental, or consequential damages of any character arising as a
++      result of this License or out of the use or inability to use the
++      Work (including but not limited to damages for loss of goodwill,
++      work stoppage, computer failure or malfunction, or any and all
++      other commercial damages or losses), even if such Contributor
++      has been advised of the possibility of such damages.
++
++   9. Accepting Warranty or Additional Liability. While redistributing
++      the Work or Derivative Works thereof, You may choose to offer,
++      and charge a fee for, acceptance of support, warranty, indemnity,
++      or other liability obligations and/or rights consistent with this
++      License. However, in accepting such obligations, You may act only
++      on Your own behalf and on Your sole responsibility, not on behalf
++      of any other Contributor, and only if You agree to indemnify,
++      defend, and hold each Contributor harmless for any liability
++      incurred by, or claims asserted against, such Contributor by reason
++      of your accepting any such warranty or additional liability.
++
++   END OF TERMS AND CONDITIONS
++
++   APPENDIX: How to apply the Apache License to your work.
++
++      To apply the Apache License to your work, attach the following
++      boilerplate notice, with the fields enclosed by brackets "[]"
++      replaced with your own identifying information. (Don't include
++      the brackets!)  The text should be enclosed in the appropriate
++      comment syntax for the file format. We also recommend that a
++      file or class name and description of purpose be included on the
++      same "printed page" as the copyright notice for easier
++      identification within third-party archives.
++
++   Copyright [yyyy] [name of copyright owner]
++
++   Licensed under the Apache License, Version 2.0 (the "License");
++   you may not use this file except in compliance with the License.
++   You may obtain a copy of the License at
++
++       http://www.apache.org/licenses/LICENSE-2.0
++
++   Unless required by applicable law or agreed to in writing, software
++   distributed under the License is distributed on an "AS IS" BASIS,
++   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++   See the License for the specific language governing permissions and
++   limitations under the License.
++
++
++===== full pre-directive source notices: lib/Support/ConvertUTF.c =====
++/*===--- ConvertUTF.c - Universal Character Names conversions ---------------===
++ *
++ *                     The LLVM Compiler Infrastructure
++ *
++ * This file is distributed under the University of Illinois Open Source
++ * License. See LICENSE.TXT for details.
++ *
++ *===------------------------------------------------------------------------=*/
++/*
++ * Copyright 2001-2004 Unicode, Inc.
++ * 
++ * Disclaimer
++ * 
++ * This source code is provided as is by Unicode, Inc. No claims are
++ * made as to fitness for any particular purpose. No warranties of any
++ * kind are expressed or implied. The recipient agrees to determine
++ * applicability of information provided. If this file has been
++ * purchased on magnetic or optical media from Unicode, Inc., the
++ * sole remedy for any claim will be exchange of defective media
++ * within 90 days of receipt.
++ * 
++ * Limitations on Rights to Redistribute This Code
++ * 
++ * Unicode, Inc. hereby grants the right to freely use the information
++ * supplied in this file in the creation of products supporting the
++ * Unicode Standard, and to make copies of this file in any form
++ * for internal or external distribution as long as this notice
++ * remains attached.
++ */
++
++/* ---------------------------------------------------------------------
++
++    Conversions between UTF32, UTF-16, and UTF-8. Source code file.
++    Author: Mark E. Davis, 1994.
++    Rev History: Rick McGowan, fixes & updates May 2001.
++    Sept 2001: fixed const & error conditions per
++        mods suggested by S. Parent & A. Lillich.
++    June 2002: Tim Dodd added detection and handling of incomplete
++        source sequences, enhanced error detection, added casts
++        to eliminate compiler warnings.
++    July 2003: slight mods to back out aggressive FFFE detection.
++    Jan 2004: updated switches in from-UTF8 conversions.
++    Oct 2004: updated to use UNI_MAX_LEGAL_UTF32 in UTF-32 conversions.
++
++    See the header file "ConvertUTF.h" for complete documentation.
++
++------------------------------------------------------------------------ */
++
++
++===== full pre-directive source notices: lib/Support/MD5.cpp =====
++/*
++ * This code is derived from (original license follows):
++ *
++ * This is an OpenSSL-compatible implementation of the RSA Data Security, Inc.
++ * MD5 Message-Digest Algorithm (RFC 1321).
++ *
++ * Homepage:
++ * http://openwall.info/wiki/people/solar/software/public-domain-source-code/md5
++ *
++ * Author:
++ * Alexander Peslyak, better known as Solar Designer <solar at openwall.com>
++ *
++ * This software was written by Alexander Peslyak in 2001.  No copyright is
++ * claimed, and the software is hereby placed in the public domain.
++ * In case this attempt to disclaim copyright and place the software in the
++ * public domain is deemed null and void, then the software is
++ * Copyright (c) 2001 Alexander Peslyak and it is hereby released to the
++ * general public under the following terms:
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted.
++ *
++ * There's ABSOLUTELY NO WARRANTY, express or implied.
++ *
++ * (This is a heavily cut-down "BSD license".)
++ *
++ * This differs from Colin Plumb's older public domain implementation in that
++ * no exactly 32-bit integer data type is required (any 32-bit or wider
++ * unsigned integer data type will do), there's no compile-time endianness
++ * configuration, and the function prototypes match OpenSSL's.  No code from
++ * Colin Plumb's implementation has been reused; this comment merely compares
++ * the properties of the two independent implementations.
++ *
++ * The primary goals of this implementation are portability and ease of use.
++ * It is meant to be fast, but not as fast as possible.  Some known
++ * optimizations are not included to reduce source code size and avoid
++ * compile-time configuration.
++ */
++
++
++===== full pre-directive source notices: lib/DxilCompression/miniz.c =====
++/**************************************************************************
++ *
++ * Copyright 2013-2014 RAD Game Tools and Valve Software
++ * Copyright 2010-2014 Rich Geldreich and Tenacious Software LLC
++ * All Rights Reserved.
++ *
++ * Permission is hereby granted, free of charge, to any person obtaining a copy
++ * of this software and associated documentation files (the "Software"), to deal
++ * in the Software without restriction, including without limitation the rights
++ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++ * copies of the Software, and to permit persons to whom the Software is
++ * furnished to do so, subject to the following conditions:
++ *
++ * The above copyright notice and this permission notice shall be included in
++ * all copies or substantial portions of the Software.
++ *
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++ * THE SOFTWARE.
++ *
++ **************************************************************************/
++
++
++===== full pre-directive source notices: lib/DxilCompression/miniz.h =====
++/* miniz.c 2.1.0 - public domain deflate/inflate, zlib-subset, ZIP
++   reading/writing/appending, PNG writing See "unlicense" statement at the end
++   of this file. Rich Geldreich <richgel99@gmail.com>, last updated Oct. 13,
++   2013 Implements RFC 1950: http://www.ietf.org/rfc/rfc1950.txt and RFC 1951:
++   http://www.ietf.org/rfc/rfc1951.txt
++
++   Most API's defined in miniz.c are optional. For example, to disable the
++   archive related functions just define MINIZ_NO_ARCHIVE_APIS, or to get rid of
++   all stdio usage define MINIZ_NO_STDIO (see the list below for more macros).
++
++   * Low-level Deflate/Inflate implementation notes:
++
++     Compression: Use the "tdefl" API's. The compressor supports raw, static,
++   and dynamic blocks, lazy or greedy parsing, match length filtering, RLE-only,
++   and Huffman-only streams. It performs and compresses approximately as well as
++   zlib.
++
++     Decompression: Use the "tinfl" API's. The entire decompressor is
++   implemented as a single function coroutine: see tinfl_decompress(). It
++   supports decompression into a 32KB (or larger power of 2) wrapping buffer, or
++   into a memory block large enough to hold the entire file.
++
++     The low-level tdefl/tinfl API's do not make any use of dynamic memory
++   allocation.
++
++   * zlib-style API notes:
++
++     miniz.c implements a fairly large subset of zlib. There's enough
++   functionality present for it to be a drop-in zlib replacement in many apps:
++        The z_stream struct, optional memory allocation callbacks
++        deflateInit/deflateInit2/deflate/deflateReset/deflateEnd/deflateBound
++        inflateInit/inflateInit2/inflate/inflateReset/inflateEnd
++        compress, compress2, compressBound, uncompress
++        CRC-32, Adler-32 - Using modern, minimal code size, CPU cache friendly
++   routines. Supports raw deflate streams or standard zlib streams with adler-32
++   checking.
++
++     Limitations:
++      The callback API's are not implemented yet. No support for gzip headers or
++   zlib static dictionaries. I've tried to closely emulate zlib's various
++   flavors of stream flushing and return status codes, but there are no
++   guarantees that miniz.c pulls this off perfectly.
++
++   * PNG writing: See the tdefl_write_image_to_png_file_in_memory() function,
++   originally written by Alex Evans. Supports 1-4 bytes/pixel images.
++
++   * ZIP archive API notes:
++
++     The ZIP archive API's where designed with simplicity and efficiency in
++   mind, with just enough abstraction to get the job done with minimal fuss.
++   There are simple API's to retrieve file information, read files from existing
++   archives, create new archives, append new files to existing archives, or
++   clone archive data from one archive to another. It supports archives located
++   in memory or the heap, on disk (using stdio.h), or you can specify custom
++   file read/write callbacks.
++
++     - Archive reading: Just call this function to read a single file from a
++   disk archive:
++
++      void *mz_zip_extract_archive_file_to_heap(const char *pZip_filename, const
++   char *pArchive_name, size_t *pSize, mz_uint zip_flags);
++
++     For more complex cases, use the "mz_zip_reader" functions. Upon opening an
++   archive, the entire central directory is located and read as-is into memory,
++   and subsequent file access only occurs when reading individual files.
++
++     - Archives file scanning: The simple way is to use this function to scan a
++   loaded archive for a specific file:
++
++     int mz_zip_reader_locate_file(mz_zip_archive *pZip, const char *pName,
++   const char *pComment, mz_uint flags);
++
++     The locate operation can optionally check file comments too, which (as one
++   example) can be used to identify multiple versions of the same file in an
++   archive. This function uses a simple linear search through the central
++     directory, so it's not very fast.
++
++     Alternately, you can iterate through all the files in an archive (using
++   mz_zip_reader_get_num_files()) and retrieve detailed info on each file by
++   calling mz_zip_reader_file_stat().
++
++     - Archive creation: Use the "mz_zip_writer" functions. The ZIP writer
++   immediately writes compressed file data to disk and builds an exact image of
++   the central directory in memory. The central directory image is written all
++   at once at the end of the archive file when the archive is finalized.
++
++     The archive writer can optionally align each file's local header and file
++   data to any power of 2 alignment, which can be useful when the archive will
++   be read from optical media. Also, the writer supports placing arbitrary data
++   blobs at the very beginning of ZIP archives. Archives written using either
++   feature are still readable by any ZIP tool.
++
++     - Archive appending: The simple way to add a single file to an archive is
++   to call this function:
++
++      mz_bool mz_zip_add_mem_to_archive_file_in_place(const char *pZip_filename,
++   const char *pArchive_name, const void *pBuf, size_t buf_size, const void
++   *pComment, mz_uint16 comment_size, mz_uint level_and_flags);
++
++     The archive will be created if it doesn't already exist, otherwise it'll be
++   appended to. Note the appending is done in-place and is not an atomic
++   operation, so if something goes wrong during the operation it's possible the
++   archive could be left without a central directory (although the local file
++   headers and file data will be fine, so the archive will be recoverable).
++
++     For more complex archive modification scenarios:
++     1. The safest way is to use a mz_zip_reader to read the existing archive,
++   cloning only those bits you want to preserve into a new archive using using
++   the mz_zip_writer_add_from_zip_reader() function (which compiles the
++     compressed file data as-is). When you're done, delete the old archive and
++   rename the newly written archive, and you're done. This is safe but requires
++   a bunch of temporary disk space or heap memory.
++
++     2. Or, you can convert an mz_zip_reader in-place to an mz_zip_writer using
++   mz_zip_writer_init_from_reader(), append new files as needed, then finalize
++   the archive which will write an updated central directory to the original
++   archive. (This is basically what mz_zip_add_mem_to_archive_file_in_place()
++   does.) There's a possibility that the archive's central directory could be
++   lost with this method if anything goes wrong, though.
++
++     - ZIP archive support limitations:
++     No zip64 or spanning support. Extraction functions can only handle
++   unencrypted, stored or deflated files. Requires streams capable of seeking.
++
++   * This is a header file library, like stb_image.c. To get only a header file,
++   either cut and paste the below header, or create miniz.h, #define
++   MINIZ_HEADER_FILE_ONLY, and then include miniz.c from it.
++
++   * Important: For best perf. be sure to customize the below macros for your
++   target platform: #define MINIZ_USE_UNALIGNED_LOADS_AND_STORES 1 #define
++   MINIZ_LITTLE_ENDIAN 1 #define MINIZ_HAS_64BIT_REGISTERS 1
++
++   * On platforms using glibc, Be sure to "#define _LARGEFILE64_SOURCE 1" before
++   including miniz.c to ensure miniz uses the 64-bit variants: fopen64(),
++   stat64(), etc. Otherwise you won't be able to process large files (i.e.
++   32-bit stat() fails for me on files > 0x7FFFFFFF bytes).
++*/
++
++
++===== full pre-directive source notices: include/miniz/miniz.h =====
++/* miniz.c 2.1.0 - public domain deflate/inflate, zlib-subset, ZIP
++   reading/writing/appending, PNG writing See "unlicense" statement at the end
++   of this file. Rich Geldreich <richgel99@gmail.com>, last updated Oct. 13,
++   2013 Implements RFC 1950: http://www.ietf.org/rfc/rfc1950.txt and RFC 1951:
++   http://www.ietf.org/rfc/rfc1951.txt
++
++   Most API's defined in miniz.c are optional. For example, to disable the
++   archive related functions just define MINIZ_NO_ARCHIVE_APIS, or to get rid of
++   all stdio usage define MINIZ_NO_STDIO (see the list below for more macros).
++
++   * Low-level Deflate/Inflate implementation notes:
++
++     Compression: Use the "tdefl" API's. The compressor supports raw, static,
++   and dynamic blocks, lazy or greedy parsing, match length filtering, RLE-only,
++   and Huffman-only streams. It performs and compresses approximately as well as
++   zlib.
++
++     Decompression: Use the "tinfl" API's. The entire decompressor is
++   implemented as a single function coroutine: see tinfl_decompress(). It
++   supports decompression into a 32KB (or larger power of 2) wrapping buffer, or
++   into a memory block large enough to hold the entire file.
++
++     The low-level tdefl/tinfl API's do not make any use of dynamic memory
++   allocation.
++
++   * zlib-style API notes:
++
++     miniz.c implements a fairly large subset of zlib. There's enough
++   functionality present for it to be a drop-in zlib replacement in many apps:
++        The z_stream struct, optional memory allocation callbacks
++        deflateInit/deflateInit2/deflate/deflateReset/deflateEnd/deflateBound
++        inflateInit/inflateInit2/inflate/inflateReset/inflateEnd
++        compress, compress2, compressBound, uncompress
++        CRC-32, Adler-32 - Using modern, minimal code size, CPU cache friendly
++   routines. Supports raw deflate streams or standard zlib streams with adler-32
++   checking.
++
++     Limitations:
++      The callback API's are not implemented yet. No support for gzip headers or
++   zlib static dictionaries. I've tried to closely emulate zlib's various
++   flavors of stream flushing and return status codes, but there are no
++   guarantees that miniz.c pulls this off perfectly.
++
++   * PNG writing: See the tdefl_write_image_to_png_file_in_memory() function,
++   originally written by Alex Evans. Supports 1-4 bytes/pixel images.
++
++   * ZIP archive API notes:
++
++     The ZIP archive API's where designed with simplicity and efficiency in
++   mind, with just enough abstraction to get the job done with minimal fuss.
++   There are simple API's to retrieve file information, read files from existing
++   archives, create new archives, append new files to existing archives, or
++   clone archive data from one archive to another. It supports archives located
++   in memory or the heap, on disk (using stdio.h), or you can specify custom
++   file read/write callbacks.
++
++     - Archive reading: Just call this function to read a single file from a
++   disk archive:
++
++      void *mz_zip_extract_archive_file_to_heap(const char *pZip_filename, const
++   char *pArchive_name, size_t *pSize, mz_uint zip_flags);
++
++     For more complex cases, use the "mz_zip_reader" functions. Upon opening an
++   archive, the entire central directory is located and read as-is into memory,
++   and subsequent file access only occurs when reading individual files.
++
++     - Archives file scanning: The simple way is to use this function to scan a
++   loaded archive for a specific file:
++
++     int mz_zip_reader_locate_file(mz_zip_archive *pZip, const char *pName,
++   const char *pComment, mz_uint flags);
++
++     The locate operation can optionally check file comments too, which (as one
++   example) can be used to identify multiple versions of the same file in an
++   archive. This function uses a simple linear search through the central
++     directory, so it's not very fast.
++
++     Alternately, you can iterate through all the files in an archive (using
++   mz_zip_reader_get_num_files()) and retrieve detailed info on each file by
++   calling mz_zip_reader_file_stat().
++
++     - Archive creation: Use the "mz_zip_writer" functions. The ZIP writer
++   immediately writes compressed file data to disk and builds an exact image of
++   the central directory in memory. The central directory image is written all
++   at once at the end of the archive file when the archive is finalized.
++
++     The archive writer can optionally align each file's local header and file
++   data to any power of 2 alignment, which can be useful when the archive will
++   be read from optical media. Also, the writer supports placing arbitrary data
++   blobs at the very beginning of ZIP archives. Archives written using either
++   feature are still readable by any ZIP tool.
++
++     - Archive appending: The simple way to add a single file to an archive is
++   to call this function:
++
++      mz_bool mz_zip_add_mem_to_archive_file_in_place(const char *pZip_filename,
++   const char *pArchive_name, const void *pBuf, size_t buf_size, const void
++   *pComment, mz_uint16 comment_size, mz_uint level_and_flags);
++
++     The archive will be created if it doesn't already exist, otherwise it'll be
++   appended to. Note the appending is done in-place and is not an atomic
++   operation, so if something goes wrong during the operation it's possible the
++   archive could be left without a central directory (although the local file
++   headers and file data will be fine, so the archive will be recoverable).
++
++     For more complex archive modification scenarios:
++     1. The safest way is to use a mz_zip_reader to read the existing archive,
++   cloning only those bits you want to preserve into a new archive using using
++   the mz_zip_writer_add_from_zip_reader() function (which compiles the
++     compressed file data as-is). When you're done, delete the old archive and
++   rename the newly written archive, and you're done. This is safe but requires
++   a bunch of temporary disk space or heap memory.
++
++     2. Or, you can convert an mz_zip_reader in-place to an mz_zip_writer using
++   mz_zip_writer_init_from_reader(), append new files as needed, then finalize
++   the archive which will write an updated central directory to the original
++   archive. (This is basically what mz_zip_add_mem_to_archive_file_in_place()
++   does.) There's a possibility that the archive's central directory could be
++   lost with this method if anything goes wrong, though.
++
++     - ZIP archive support limitations:
++     No zip64 or spanning support. Extraction functions can only handle
++   unencrypted, stored or deflated files. Requires streams capable of seeking.
++
++   * This is a header file library, like stb_image.c. To get only a header file,
++   either cut and paste the below header, or create miniz.h, #define
++   MINIZ_HEADER_FILE_ONLY, and then include miniz.c from it.
++
++   * Important: For best perf. be sure to customize the below macros for your
++   target platform: #define MINIZ_USE_UNALIGNED_LOADS_AND_STORES 1 #define
++   MINIZ_LITTLE_ENDIAN 1 #define MINIZ_HAS_64BIT_REGISTERS 1
++
++   * On platforms using glibc, Be sure to "#define _LARGEFILE64_SOURCE 1" before
++   including miniz.c to ensure miniz uses the 64-bit variants: fopen64(),
++   stat64(), etc. Otherwise you won't be able to process large files (i.e.
++   32-bit stat() fails for me on files > 0x7FFFFFFF bytes).
++*/
++
++
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourcePins.json b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourcePins.json
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourcePins.json
+@@ -0,0 +1,40 @@
++{
++  "schemaVersion": 1,
++  "sources": [
++    {
++      "id": "dxc",
++      "repository": "o3de/DirectXShaderCompiler",
++      "commit": "1cc0ab76dafe08a4144e419e619a8951a3d219db",
++      "url": "https://codeload.github.com/o3de/DirectXShaderCompiler/tar.gz/1cc0ab76dafe08a4144e419e619a8951a3d219db",
++      "sha256": "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42",
++      "archiveRelativePath": "dxc/dxc-1cc0ab76dafe08a4144e419e619a8951a3d219db.tar.gz",
++      "archiveRoot": "DirectXShaderCompiler-1cc0ab76dafe08a4144e419e619a8951a3d219db",
++      "cmakeSHA256": "30dc8842ba82a40b0d1a835d7ee61c3e528acbd62a84c7e83bd26417f100097f"
++    },
++    {
++      "id": "spirv-headers",
++      "repository": "KhronosGroup/SPIRV-Headers",
++      "commit": "aa6cef192b8e693916eb713e7a9ccadf06062ceb",
++      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/aa6cef192b8e693916eb713e7a9ccadf06062ceb",
++      "sha256": "1bf0568bad1f9e30fce8d3199e54ae7ade1c16dbe913b5afd9b499149a9bb9a5",
++      "archiveRelativePath": "spirv-headers/spirv-headers-aa6cef192b8e693916eb713e7a9ccadf06062ceb.tar.gz",
++      "archiveRoot": "SPIRV-Headers-aa6cef192b8e693916eb713e7a9ccadf06062ceb",
++      "cmakeSHA256": "77b5686b30ce4c2642b77ff0bfa82142efa139b9ab58f990e54693b6f508e331"
++    },
++    {
++      "id": "spirv-tools",
++      "repository": "KhronosGroup/SPIRV-Tools",
++      "commit": "a62abcb402009b9ca5975e6167c09f237f630e0e",
++      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Tools/tar.gz/a62abcb402009b9ca5975e6167c09f237f630e0e",
++      "sha256": "7f6561171be2f314a26cb2a686d653050ee318655a89970d41ab3bef3269a4db",
++      "archiveRelativePath": "spirv-tools/spirv-tools-a62abcb402009b9ca5975e6167c09f237f630e0e.tar.gz",
++      "archiveRoot": "SPIRV-Tools-a62abcb402009b9ca5975e6167c09f237f630e0e",
++      "cmakeSHA256": "76fe3f3990c3c70acbd46911768e9943d5af0d23527ffb70a968e5682c29ba04"
++    }
++  ],
++  "privateProvenanceSHA256": "4a8716eb03a11408bb65cb3a15550193be6685eb0d7e8ee140f4e3aa50943266",
++  "sourceNoticeSHA256": "86cd3780fe9fcfb8d7d66543f1c42d45b43bbd14be21119e07366e2a77afeb74",
++  "sourceVersion": "1.8.2505.0",
++  "originalRecipeRef": "release-1.8.2505.1-o3de (branch)",
++  "originalPackageHashNotSourceHash": "224a34691a17234c2294202368d9756635f11d66ac9bc528f929d84cf4acac8e"
++}
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/CMakeLists.txt
+@@ -0,0 +1,45 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++foreach(JE_PATH IN ITEMS JE_DXC_PACKAGE_ROOT JE_DXC_SOURCE_ROOT CMAKE_BINARY_DIR)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_LOCAL_OUTPUT)
++if(NOT JE_LOCAL_OUTPUT OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE DXC consumer output must be below checkout/build")
++endif()
++JE_python_verify_file("${JE_DXC_SOURCE_ROOT}/include/dxc/dxcapi.h"
++    "1855295d3e9ed604a8f2b9dbd415a9d8f39f9e78b386f2f46fd00615da2cdfee" "pinned DXC API headers")
++JE_python_verify_file("${JE_DXC_SOURCE_ROOT}/lib/DxilHash/DxilHash.cpp"
++    "d66b631ea28d4c90a8217fac004f9290eaac07f79115451e0c4e954c0b0c94af" "pinned upstream retail hash oracle")
++JE_python_verify_file("${JE_DXC_SOURCE_ROOT}/include/dxc/DxilHash/DxilHash.h"
++    "4cff245da88b69526290495b2e439745a938aa60e48fd565832c9d8d2dfe6918" "pinned hash API header")
++project(JELocalDirectXShaderCompilerDxcConsumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE DXC consumer requires Windows MSVC x64")
++endif()
++list(PREPEND CMAKE_MODULE_PATH "${JE_DXC_PACKAGE_ROOT}")
++find_package(DirectXShaderCompilerDxc 1.8.2505.1 EXACT REQUIRED MODULE)
++add_executable(JEDirectXShaderCompilerDxcConsumer DirectXShaderCompilerDxcConsumer.cpp
++    "${JE_DXC_SOURCE_ROOT}/lib/DxilHash/DxilHash.cpp")
++target_compile_features(JEDirectXShaderCompilerDxcConsumer PRIVATE cxx_std_17)
++target_compile_options(JEDirectXShaderCompilerDxcConsumer PRIVATE /W4)
++target_include_directories(JEDirectXShaderCompilerDxcConsumer SYSTEM PRIVATE "${JE_DXC_SOURCE_ROOT}/include")
++target_link_libraries(JEDirectXShaderCompilerDxcConsumer PRIVATE 3rdParty::DirectXShaderCompilerDxc ole32 version)
++enable_testing()
++foreach(JE_CASE IN ITEMS dxil spirv invalid)
++    add_test(NAME JE.LocalPackages.DXC.${JE_CASE} COMMAND JEDirectXShaderCompilerDxcConsumer
++        ${JE_CASE} "${DirectXShaderCompilerDxc_BINARY_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/${JE_CASE}" "${CMAKE_CURRENT_LIST_DIR}")
++    set_tests_properties(JE.LocalPackages.DXC.${JE_CASE} PROPERTIES TIMEOUT 90)
++endforeach()
++add_test(NAME JE.LocalPackages.DXC.dxsc COMMAND "${CMAKE_COMMAND}"
++    "-DJE_DXSC=${DirectXShaderCompilerDxc_BINARY_DIR}/dxsc.exe"
++    "-DJE_CONSUMER=$<TARGET_FILE:JEDirectXShaderCompilerDxcConsumer>"
++    "-DJE_BIN=${DirectXShaderCompilerDxc_BINARY_DIR}"
++    "-DJE_INPUT=${CMAKE_CURRENT_BINARY_DIR}/dxil/fixture.dxil"
++    "-DJE_OUTPUT=${CMAKE_CURRENT_BINARY_DIR}/dxsc"
++    "-DJE_INCLUDES=${CMAKE_CURRENT_LIST_DIR}" -P "${CMAKE_CURRENT_LIST_DIR}/RunDxsc.cmake")
++set_tests_properties(JE.LocalPackages.DXC.dxsc PROPERTIES DEPENDS JE.LocalPackages.DXC.dxil TIMEOUT 90)
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
+@@ -0,0 +1,215 @@
++/* Copyright (c) Contributors to the Open 3D Engine Project.
++ * SPDX-License-Identifier: Apache-2.0 OR MIT */
++
++#define WIN32_LEAN_AND_MEAN
++#define NOMINMAX
++#include <Windows.h>
++#include <winver.h>
++#include <wrl/client.h>
++#include <dxc/dxcapi.h>
++#include <dxc/DxilHash/DxilHash.h>
++#include <array>
++#include <cstdint>
++#include <cstdio>
++#include <cstring>
++#include <filesystem>
++#include <fstream>
++#include <iterator>
++#include <stdexcept>
++#include <string>
++#include <vector>
++
++namespace JE::DxcTest
++{
++    using Microsoft::WRL::ComPtr;
++    void Require(bool condition, const char* message)
++    {
++        if (!condition) { throw std::runtime_error(message); }
++    }
++    void Hr(HRESULT result, const char* message) { Require(SUCCEEDED(result), message); }
++    void FileVersion(const std::filesystem::path& dll)
++    {
++        DWORD unused = 0;
++        const DWORD size = GetFileVersionInfoSizeW(dll.c_str(), &unused);
++        Require(size > 0, "real DLL version resource");
++        std::vector<BYTE> data(size);
++        Require(GetFileVersionInfoW(dll.c_str(), 0, size, data.data()) != 0, "DLL version resource read");
++        VS_FIXEDFILEINFO* fixed = nullptr;
++        UINT length = 0;
++        Require(VerQueryValueW(data.data(), L"\\", reinterpret_cast<void**>(&fixed), &length) != 0
++            && fixed && length >= sizeof(*fixed), "fixed file version");
++        Require(HIWORD(fixed->dwFileVersionMS) == 1 && LOWORD(fixed->dwFileVersionMS) == 8
++            && HIWORD(fixed->dwFileVersionLS) == 2505 && LOWORD(fixed->dwFileVersionLS) == 0, "original numeric1.8.2505.0");
++        struct Translation { WORD language; WORD codePage; };
++        Translation* translation = nullptr;
++        Require(VerQueryValueW(data.data(), L"\\VarFileInfo\\Translation", reinterpret_cast<void**>(&translation), &length) != 0
++            && translation && length >= sizeof(Translation), "version resource translation");
++        wchar_t query[96]{};
++        swprintf_s(query, L"\\StringFileInfo\\%04x%04x\\ProductVersion", translation->language, translation->codePage);
++        wchar_t* product = nullptr;
++        Require(VerQueryValueW(data.data(), query, reinterpret_cast<void**>(&product), &length) != 0 && product,
++            "product version text");
++        Require(std::wstring(product).find(L"1cc0ab76dafe08a4144e419e619a8951a3d219db") != std::wstring::npos,
++            "full archive source pin in product version");
++    }
++    class Module
++    {
++    public:
++        explicit Module(const std::filesystem::path& path)
++            : handle(LoadLibraryExW(path.c_str(), nullptr, LOAD_LIBRARY_SEARCH_DLL_LOAD_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32))
++        {
++            Require(handle != nullptr, "LoadLibraryExW explicit package DLL");
++            const FARPROC raw = GetProcAddress(handle, "DxcCreateInstance");
++            Require(raw != nullptr, "DxcCreateInstance export");
++            static_assert(sizeof(create) == sizeof(raw));
++            std::memcpy(&create, &raw, sizeof(create));
++        }
++        ~Module() { FreeLibrary(handle); }
++        Module(const Module&) = delete;
++        Module& operator=(const Module&) = delete;
++        DxcCreateInstanceProc create{};
++    private:
++        HMODULE handle{};
++    };
++    void Provenance(IDxcCompiler3* compiler)
++    {
++        ComPtr<IDxcVersionInfo2> info;
++        Hr(compiler->QueryInterface(IID_PPV_ARGS(&info)), "IDxcVersionInfo2 retained");
++        UINT32 major = 0, minor = 0, count = 0;
++        Hr(info->GetVersion(&major, &minor), "compiler version HRESULT");
++        Require(major == 1 && minor == 8, "compiler1.8 API version");
++        char* hash = nullptr;
++        Hr(info->GetCommitInfo(&count, &hash), "commit info HRESULT");
++        const bool exact = hash && std::strcmp(hash, "1cc0ab76") == 0 && count == 4954;
++        CoTaskMemFree(hash);
++        Require(exact, "exact8 source hash/API-history cardinality and ownership");
++    }
++    void RetailHash(IDxcBlob* object)
++    {
++        const auto* bytes = static_cast<const BYTE*>(object->GetBufferPointer());
++        const SIZE_T size = object->GetBufferSize();
++        Require(size >= 32 && size <= UINT32_MAX && std::memcmp(bytes, "DXBC", 4) == 0, "real DXIL container header");
++        UINT32 declaredSize = 0;
++        std::memcpy(&declaredSize, bytes + 24, sizeof(declaredSize));
++        Require(declaredSize == size, "DXIL container byte count");
++        std::array<BYTE, DXIL_CONTAINER_HASH_SIZE> digest{};
++        // Reuse the pinned upstream retail algorithm as the oracle for the actual DLL output.
++        ComputeHashRetail(bytes + 20, static_cast<UINT32>(size - 20), digest.data());
++        Require(std::memcmp(digest.data(), bytes + 4, digest.size()) == 0, "retail DXIL hash, no preview/bypass hash");
++        Require(digest != std::array<BYTE, DXIL_CONTAINER_HASH_SIZE>{}, "nonzero retail hash");
++    }
++    void Validate(Module& validator, IDxcBlob* object)
++    {
++        ComPtr<IDxcValidator> api;
++        Hr(validator.create(CLSID_DxcValidator, IID_PPV_ARGS(&api)), "external source-built dxil validator");
++        ComPtr<IDxcOperationResult> operation;
++        Hr(api->Validate(object, DxcValidatorFlags_Default, &operation), "validator invocation HRESULT");
++        HRESULT status = E_FAIL;
++        Hr(operation->GetStatus(&status), "validator operation GetStatus");
++        Require(SUCCEEDED(status), "actual DXIL validation operation status");
++        ComPtr<IDxcBlob> validated;
++        Hr(operation->GetResult(&validated), "validator result object");
++        Require(validated.Get() != nullptr, "validator returned actual object");
++        RetailHash(validated.Get());
++    }
++    void Write(IDxcBlob* object, const std::filesystem::path& path)
++    {
++        Require(!std::filesystem::exists(path), "consumer output already exists");
++        std::filesystem::create_directories(path.parent_path());
++        std::ofstream stream(path, std::ios::binary);
++        stream.write(static_cast<const char*>(object->GetBufferPointer()), static_cast<std::streamsize>(object->GetBufferSize()));
++        Require(stream.good(), "write actual compiled object");
++    }
++    void Spirv(IDxcBlob* object)
++    {
++        const SIZE_T bytes = object->GetBufferSize();
++        Require(bytes >= 20 && bytes % 4 == 0, "SPIR-V word layout");
++        std::vector<UINT32> words(bytes / 4);
++        std::memcpy(words.data(), object->GetBufferPointer(), bytes);
++        Require(words[0] == 0x07230203 && words[1] >= 0x00010000 && words[1] <= 0x00010300 && words[3] > 0 && words[4] == 0,
++            "real Vulkan1.1 SPIR-V header");
++        bool compute = false;
++        for (size_t index = 5; index < words.size();)
++        {
++            const UINT32 length = words[index] >> 16;
++            const UINT32 opcode = words[index] & 0xffff;
++            Require(length > 0 && index + length <= words.size(), "valid SPIR-V instruction bounds");
++            if (opcode == 15 && length >= 4 && words[index + 1] == 5)
++            {
++                const char* name = reinterpret_cast<const char*>(&words[index + 3]);
++                const SIZE_T remaining = (length - 3) * 4;
++                Require(std::memchr(name, 0, remaining) != nullptr, "terminated SPIR-V entry point");
++                compute = std::strcmp(name, "main") == 0;
++            }
++            index += length;
++        }
++        Require(compute, "SPIR-V compute main entry point");
++    }
++    void Run(const std::wstring& mode, const std::filesystem::path& bin, const std::filesystem::path& output,
++        const std::filesystem::path& includes)
++    {
++        Module compilerDll(bin / L"dxcompiler.dll");
++        Module validatorDll(bin / L"dxil.dll");
++        FileVersion(bin / L"dxcompiler.dll");
++        ComPtr<IDxcCompiler3> compiler;
++        ComPtr<IDxcUtils> utils;
++        Hr(compilerDll.create(CLSID_DxcCompiler, IID_PPV_ARGS(&compiler)), "real compiler API");
++        Hr(compilerDll.create(CLSID_DxcUtils, IID_PPV_ARGS(&utils)), "real utils API");
++        Provenance(compiler.Get());
++        if (mode == L"patched")
++        {
++            ComPtr<IDxcBlobEncoding> blob;
++            Hr(utils->LoadFile((output / L"patched.dxil").c_str(), nullptr, &blob), "load real dxsc output");
++            RetailHash(blob.Get());
++            Validate(validatorDll, blob.Get());
++            return;
++        }
++        constexpr const char* valid = "#include \"JE_DxcFixture.hlsli\"\nRWByteAddressBuffer output : register(u0);\n"
++            "[numthreads(1,1,1)] void main(uint3 id : SV_DispatchThreadID) { volatile uint specialization = 7; output.Store(id.x * 4, specialization + JE_VALUE); }\n";
++        constexpr const char* invalid = "[numthreads(1,1,1)] void main( { this is malformed HLSL; }";
++        const char* text = mode == L"invalid" ? invalid : valid;
++        DxcBuffer source{text, std::strlen(text), DXC_CP_UTF8};
++        const std::wstring includeDirectory = includes.wstring();
++        std::vector<LPCWSTR> args{L"-E", L"main", L"-T", L"cs_6_0", L"-I", includeDirectory.c_str()};
++        if (mode == L"spirv") { args.push_back(L"-spirv"); args.push_back(L"-fspv-target-env=vulkan1.1"); }
++        ComPtr<IDxcIncludeHandler> handler;
++        Hr(utils->CreateDefaultIncludeHandler(&handler), "real include handler");
++        ComPtr<IDxcResult> result;
++        Hr(compiler->Compile(&source, args.data(), static_cast<UINT32>(args.size()), handler.Get(), IID_PPV_ARGS(&result)), "compile invocation HRESULT");
++        HRESULT status = E_FAIL;
++        Hr(result->GetStatus(&status), "compiler operation GetStatus");
++        if (mode == L"invalid")
++        {
++            ComPtr<IDxcBlobUtf8> errors;
++            Hr(result->GetOutput(DXC_OUT_ERRORS, IID_PPV_ARGS(&errors), nullptr), "invalid shader diagnostics");
++            Require(FAILED(status) && errors.Get() != nullptr && errors->GetStringLength() > 0 && !result->HasOutput(DXC_OUT_OBJECT), "malformed shader rejected with diagnostics and no object");
++            return;
++        }
++        if (FAILED(status))
++        {
++            ComPtr<IDxcBlobUtf8> errors;
++            Hr(result->GetOutput(DXC_OUT_ERRORS, IID_PPV_ARGS(&errors), nullptr), "valid shader failure diagnostics");
++            if (errors.Get() != nullptr) { std::fprintf(stderr, "%s\n", errors->GetStringPointer()); }
++        }
++        Require(SUCCEEDED(status), "valid HLSL compile operation status");
++        ComPtr<IDxcBlob> object;
++        Hr(result->GetOutput(DXC_OUT_OBJECT, IID_PPV_ARGS(&object), nullptr), "actual compiled object");
++        Require(object.Get() != nullptr, "compiled object present");
++        if (mode == L"spirv") { Spirv(object.Get()); Write(object.Get(), output / L"fixture.spv"); }
++        else { RetailHash(object.Get()); Validate(validatorDll, object.Get()); Write(object.Get(), output / L"fixture.dxil"); }
++    }
++}
++
++int wmain(int argc, wchar_t** argv)
++{
++    try
++    {
++        JE::DxcTest::Require(argc == 5, "usage: consumer dxil|spirv|invalid|patched package-bin output local-includes");
++        const std::wstring mode(argv[1]);
++        JE::DxcTest::Require(mode == L"dxil" || mode == L"spirv" || mode == L"invalid" || mode == L"patched", "known consumer case");
++        JE::DxcTest::Run(mode, argv[2], argv[3], argv[4]);
++        std::printf("CASE PASS: actual DXC API/provenance/validation\n");
++        return 0;
++    }
++    catch (const std::exception& error) { std::fprintf(stderr, "CASE FAIL: %s\n", error.what()); return 1; }
++}
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/JE_DxcFixture.hlsli b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/JE_DxcFixture.hlsli
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/JE_DxcFixture.hlsli
+@@ -0,0 +1,3 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++#define JE_VALUE 19u
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/RunDxsc.cmake b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/RunDxsc.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/RunDxsc.cmake
+@@ -0,0 +1,48 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++foreach(JE_PATH IN ITEMS JE_DXSC JE_CONSUMER JE_BIN JE_INPUT JE_OUTPUT JE_INCLUDES)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_OUTPUT}" NORMALIZE JE_LOCAL_OUTPUT)
++if(NOT JE_LOCAL_OUTPUT OR JE_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE DXSC test output must be below checkout/build")
++endif()
++if(NOT EXISTS "${JE_INPUT}" OR EXISTS "${JE_OUTPUT}")
++    message(FATAL_ERROR "JE DXSC requires real compiled DXIL and fresh output")
++endif()
++file(MAKE_DIRECTORY "${JE_OUTPUT}")
++# Same sentinel as the actual DX12 ShaderStageFunction consumer:0x45678900.
++execute_process(COMMAND "${JE_DXSC}" -sv=1164413184 "-o=${JE_OUTPUT}/patched.dxil"
++    "-f=${JE_OUTPUT}/offsets.json" "${JE_INPUT}" RESULT_VARIABLE JE_RESULT
++    OUTPUT_FILE "${JE_OUTPUT}/positive.stdout.txt" ERROR_FILE "${JE_OUTPUT}/positive.stderr.txt")
++if(NOT JE_RESULT STREQUAL "0")
++    message(FATAL_ERROR "JE actual dxsc patch failed: ${JE_RESULT}")
++endif()
++file(SHA256 "${JE_INPUT}" JE_BEFORE_SHA)
++file(SHA256 "${JE_OUTPUT}/patched.dxil" JE_AFTER_SHA)
++if(JE_BEFORE_SHA STREQUAL JE_AFTER_SHA)
++    message(FATAL_ERROR "JE DXSC output did not actually change the specialization-bearing DXIL")
++endif()
++file(READ "${JE_OUTPUT}/offsets.json" JE_OFFSETS)
++string(JSON JE_OFFSET GET "${JE_OFFSETS}" 7)
++file(SIZE "${JE_OUTPUT}/patched.dxil" JE_BYTES)
++math(EXPR JE_BITS "${JE_BYTES}*8")
++if(NOT JE_OFFSET MATCHES "^[0-9]+$" OR JE_OFFSET LESS 1 OR JE_OFFSET GREATER_EQUAL JE_BITS)
++    message(FATAL_ERROR "JE DXSC specialization7 did not produce a valid real bit offset")
++endif()
++execute_process(COMMAND "${JE_CONSUMER}" patched "${JE_BIN}" "${JE_OUTPUT}" "${JE_INCLUDES}"
++    RESULT_VARIABLE JE_RESULT OUTPUT_FILE "${JE_OUTPUT}/validate.stdout.txt" ERROR_FILE "${JE_OUTPUT}/validate.stderr.txt")
++if(NOT JE_RESULT STREQUAL "0")
++    message(FATAL_ERROR "JE DXSC output validation failed: ${JE_RESULT}")
++endif()
++file(WRITE "${JE_OUTPUT}/malformed.dxil" "JE malformed container")
++execute_process(COMMAND "${JE_DXSC}" -sv=1164413184 "-o=${JE_OUTPUT}/rejected.dxil"
++    "-f=${JE_OUTPUT}/rejected.json" "${JE_OUTPUT}/malformed.dxil" RESULT_VARIABLE JE_RESULT
++    OUTPUT_FILE "${JE_OUTPUT}/negative.stdout.txt" ERROR_FILE "${JE_OUTPUT}/negative.stderr.txt")
++if(JE_RESULT STREQUAL "0" OR EXISTS "${JE_OUTPUT}/rejected.dxil" OR EXISTS "${JE_OUTPUT}/rejected.json")
++    message(FATAL_ERROR "JE DXSC malformed container was not rejected")
++endif()

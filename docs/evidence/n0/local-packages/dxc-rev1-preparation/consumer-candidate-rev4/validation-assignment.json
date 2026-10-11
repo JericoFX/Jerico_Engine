@@ -1,0 +1,62 @@
+{
+  "status": "CORRECTED INVALID OUTPUT-BYTES ORACLE; ALL FOUR CASES PENDING LUNA",
+  "nativeOwner": "Luna only after parent review",
+  "consumerRevision": 4,
+  "producerRebuild": false,
+  "extraction": "Reuse accepted real extracted archive read-only; no re-extraction",
+  "archiveSHA256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782",
+  "packageRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1",
+  "consumerConfigure": {
+    "argv": [
+      "-S",
+      "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/tests",
+      "-B",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev4",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_DXC_PACKAGE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1",
+      "-DJE_DXC_SOURCE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition/dxc/snapshot",
+      "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
+    ],
+    "executable": "C:/Program Files/CMake/bin/cmake.exe"
+  },
+  "consumerBuild": {
+    "argv": [
+      "--build",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev4",
+      "--config",
+      "Release",
+      "--target",
+      "JEDirectXShaderCompilerDxcConsumer",
+      "--parallel",
+      "6"
+    ],
+    "executable": "C:/Program Files/CMake/bin/cmake.exe"
+  },
+  "consumerCTest": {
+    "expected": "4/4 real cases; HRESULT and operationstatus, exact provenance, retail hash, actual dxsc and malformed rejection",
+    "cases": [
+      "JE.LocalPackages.DXC.dxil",
+      "JE.LocalPackages.DXC.spirv",
+      "JE.LocalPackages.DXC.invalid",
+      "JE.LocalPackages.DXC.dxsc"
+    ],
+    "executable": "C:/Program Files/CMake/bin/ctest.exe",
+    "argv": [
+      "--test-dir",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev4",
+      "-C",
+      "Release",
+      "--output-on-failure"
+    ]
+  },
+  "correctedOracle": "Failed status, successful diagnostic/object/result queries, nonempty diagnostics, no object or result bytes, and absent invalid output path; registered output slot is not emitted bytecode",
+  "preservedOracles": "PE1.8.2505.0/full40 pin, hash8/count4954/CoTaskMemFree, HRESULT+status, retail hash, actual validator, SPIRV, dxsc and malformed rejection",
+  "nativeExecuted": false,
+  "acceptance": false,
+  "diagnosticQueries": "All diagnostic prints preserved; require errorsHr/objectHr/resultHr success after printing observed values"
+}

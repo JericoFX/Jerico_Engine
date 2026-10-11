@@ -1,0 +1,22 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\existing-output\\retain.txt",
+    "bytes": 57,
+    "sha256": "DB715E57DCEE9C923B752935FE9C59039DC3C36E24D72E3A1696A705F0DDEF12"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\changed-archives\\dxc\\dxc-1cc0ab76dafe08a4144e419e619a8951a3d219db.tar.gz",
+    "bytes": 24722612,
+    "sha256": "B1A9D77581830D7F1DEBED9ADC879C036944FE373A912EEA13418A80F2835DD8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\overlay-work\\dxc\\utils\\GetCommitInfo.py",
+    "bytes": 1849,
+    "sha256": "09E5FB84275998A199C72A418E2C5ABD715CB08E14AAB90CD89DA315A4D7CE04"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\wrong-cl-sha.cmake",
+    "bytes": 701,
+    "sha256": "1557248D2866E6CF030946C76D580E22FFCBAC907C04C6D52CCB7F21EAC84D42"
+  }
+]

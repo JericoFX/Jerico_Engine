@@ -1,0 +1,25 @@
+{
+  "status": "PARENT SOURCE/DRIVER REVIEW PASS; NATIVE NOT_RUN",
+  "nativeOwner": "Luna only",
+  "driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\RunDxcConsumerParentRev2.ps1",
+  "driverSHA256": "3DB4A0662F011C4BE27F51BBEC99A9005A24B341067CA0B05EC5AE0F371A20A8",
+  "freezeSHA256": "4427A9E7947AC6999D9FFA36FA55704885CADBF4E4C0E745D4B89CE6ADC0F03B",
+  "assignmentSHA256": "87C0542F096189E5D34231106CDABD03C70D59B7FB3DC39740DC02AFD2FFBE90",
+  "inputCount": 23373,
+  "verifiedChanges": [],
+  "actualDiff": "One require1.8 to exactDXIL1.9 plus upstream comment and real observed printf; all other CPP strings inverse exact",
+  "preserved": "PE1.8.2505.0/full40pin/IDxcVersionInfo2 hash8+count4954; all HRESULT/status, retail hash, validator, SPV and dxsc",
+  "producerRebuild": false,
+  "archiveAuditReused": "Actual tar15/manifest14 already audited; identical archive/payload rehashed before/after",
+  "freshOutputs": [
+    "dxc-rev1-validation/consumer-attempt2",
+    "dxc-native-consumer-rev2"
+  ],
+  "nativeScopes": [
+    "original configure",
+    "original build target",
+    "four real CTests with raw JUnit+LastTest"
+  ],
+  "guardsPEAndRootAuthorized": false,
+  "acceptance": "Parent must review actual results; no engine/frame acceptance"
+}

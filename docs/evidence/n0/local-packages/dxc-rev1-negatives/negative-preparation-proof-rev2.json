@@ -1,0 +1,232 @@
+{
+  "status": "PREPARED ONLY; NOT RUN",
+  "nativeExecuted": false,
+  "acceptance": false,
+  "sourceInputs": 23373,
+  "unchangedPreviousInputs": 23347,
+  "authorizedDeltas": [
+    {
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+        "bytes": 11330,
+        "sha256": "849a88914c60a4e4327c69068da4914bfa9b9b41c062873dbb444a5a7aa63e4f",
+        "role": "new DXC provider source; native pending"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+        "bytes": 11542,
+        "sha256": "A09161480B2D8C90C1B9DA96A50DE1F3909C09CD7D6EA0554556212C95851C3A",
+        "role": "one corrected consumer DXIL API oracle; no producer/package changes"
+      }
+    }
+  ],
+  "additionalInputs": 25,
+  "scopes": {
+    "PRIVATE-OVERLAY": 1,
+    "FUNCTION-GUARD": 1,
+    "PRODUCER": 16
+  },
+  "fixtureFilesCreatedByWriter": 0,
+  "runtimeFixtureCount": 4,
+  "powershellParserErrors": 0,
+  "historicalInputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegatives.ps1",
+      "bytes": 9562,
+      "sha256": "7022F2F2A31B905C483EDBA95EC074DFD1B5D829687B303224479E5059540AA0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment.json",
+      "bytes": 36205,
+      "sha256": "11B08617C06A45BD3DBAD2839492C26DE819F205E18CD1D3B6023EE04B331DFC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-setup-freeze.json",
+      "bytes": 3291,
+      "sha256": "CB09585E79C1D147C2FA0794FD63450F5DAD53B0F33ADCA180EAA66AAA45482A"
+    }
+  ],
+  "driver": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegativesRev2.ps1",
+    "bytes": 9800,
+    "sha256": "ECBF9321FFCCE2BCEC73DBD60F9C0916AD235969BEBAE381BCAC107ADFAF845F"
+  },
+  "assignment": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment-rev2.json",
+    "bytes": 41996,
+    "sha256": "D0AF36852D02984ED2F645ADDD29395923768DBA8B8838A1A5DD3F88B6FC8D7C"
+  },
+  "secondaryGuardCases": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "dxc exact local archive file is missing",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-missing-archive"
+      ],
+      "label": "missing-archive"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "dxc exact local archive SHA256 mismatch",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-archive-sha"
+      ],
+      "label": "archive-sha"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-ninja.exe",
+      "expectedError": "audited existing external PYTHON file is missing",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-missing-tool"
+      ],
+      "label": "missing-tool"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-ninja.exe",
+      "expectedError": "audited existing external PYTHON SHA256 mismatch",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-python-sha"
+      ],
+      "label": "python-sha"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "audited existing external NINJA SHA256 mismatch",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-ninja-sha"
+      ],
+      "label": "ninja-sha"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-after-cl-sha",
+      "expectedError": "audited existing external CL SHA256 mismatch",
+      "scope": "FUNCTION-GUARD",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-cl-sha"
+      ],
+      "label": "cl-sha"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must not be a URI",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-uri"
+      ],
+      "label": "uri"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must be an absolute local path",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-unc"
+      ],
+      "label": "unc"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must not use symlink paths",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-junction"
+      ],
+      "label": "junction"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must not use symlink paths",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-ancestor-reparse"
+      ],
+      "label": "ancestor-reparse"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC output exists; previous attempts are retained",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\existing-output\\logs",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\existing-output\\source-work",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\existing-output\\build-Release",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\existing-output\\stage",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\existing-output\\packages",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\existing-output\\package-ready.json"
+      ],
+      "label": "existing-output"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC output must be below checkout/build",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\JE_DXC_negative_never_created"
+      ],
+      "label": "outside-build"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC requires the existing VS2022/v143 x64 development environment",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-absent-vs"
+      ],
+      "label": "absent-vs"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS is required",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-jobs-absent"
+      ],
+      "label": "jobs-absent"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-jobs-zero"
+      ],
+      "label": "jobs-zero"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-jobs-negative"
+      ],
+      "label": "jobs-negative"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\missing-secondary-cl.exe",
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+      "scope": "PRODUCER",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\not-created-jobs-noninteger"
+      ],
+      "label": "jobs-noninteger"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\fixtures\\overlay-work\\dxc\\utils\\version\\version.inc",
+      "expectedError": "commit-info pristine private source SHA256 mismatch",
+      "scope": "PRIVATE-OVERLAY",
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\stage",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\packages",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\build-Release",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev2\\package-ready.json"
+      ],
+      "label": "overlay-mismatch"
+    }
+  ],
+  "limitations": "No negative CMake invocation, compiler, test, fixture, or junction was executed/created. Native results pending parent review and Luna."
+}

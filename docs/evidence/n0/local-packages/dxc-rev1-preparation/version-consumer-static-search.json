@@ -1,0 +1,192 @@
+[
+  {
+    "matches": [
+      {
+        "line": 1073,
+        "text": "CROSS_PLATFORM_UUIDOF(IDxcVersionInfo2, \"fb6904c4-42f0-4b62-9c46-983af7da7c83\")"
+      },
+      {
+        "line": 1078,
+        "text": "struct IDxcVersionInfo2 : public IDxcVersionInfo {"
+      },
+      {
+        "line": 1079,
+        "text": "  virtual HRESULT STDMETHODCALLTYPE GetCommitInfo("
+      }
+    ],
+    "path": "include/dxc/dxcapi.h"
+  },
+  {
+    "matches": [
+      {
+        "line": 923,
+        "text": "    CComPtr<IDxcVersionInfo2> pVersionInfo2;"
+      },
+      {
+        "line": 926,
+        "text": "      IFT(pVersionInfo2->GetCommitInfo(&CommitCount, &m_CommitShaStorage));"
+      }
+    ],
+    "path": "lib/DxilContainer/DxilContainerAssembler.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 86,
+        "text": "  uint32_t getGitCommitCount();"
+      },
+      {
+        "line": 88,
+        "text": "  const char *getGitCommitHash();"
+      }
+    ],
+    "path": "tools/clang/include/clang/Basic/Version.h"
+  },
+  {
+    "matches": [
+      {
+        "line": 206,
+        "text": "uint32_t getGitCommitCount() { return kGitCommitCount; }"
+      },
+      {
+        "line": 207,
+        "text": "const char *getGitCommitHash() { return kGitCommitHash; }"
+      }
+    ],
+    "path": "tools/clang/lib/Basic/Version.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 43,
+        "text": "uint32_t getGitCommitCount() { return 0; }"
+      },
+      {
+        "line": 44,
+        "text": "const char *getGitCommitHash() { return \"<unknown-hash>\"; }"
+      },
+      {
+        "line": 687,
+        "text": "        std::string(\"dxc-commit-hash: \") + clang::getGitCommitHash();"
+      },
+      {
+        "line": 1485,
+        "text": "                                         clang::getGitCommitHash(),"
+      }
+    ],
+    "path": "tools/clang/lib/SPIRV/SpirvEmitter.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 1247,
+        "text": "    CComPtr<IDxcVersionInfo2> VerInfo2;"
+      },
+      {
+        "line": 1259,
+        "text": "        VerInfo2->GetCommitInfo(&commitCount, &commitHash);"
+      }
+    ],
+    "path": "tools/clang/tools/dxclib/dxc.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 464,
+        "text": "                    public IDxcVersionInfo2"
+      },
+      {
+        "line": 505,
+        "text": "                                       IDxcVersionInfo2"
+      },
+      {
+        "line": 1730,
+        "text": "  HRESULT STDMETHODCALLTYPE GetCommitInfo(UINT32 *pCommitCount,"
+      },
+      {
+        "line": 1739,
+        "text": "    std::strcpy(hash, getGitCommitHash());"
+      },
+      {
+        "line": 1742,
+        "text": "    *pCommitCount = getGitCommitCount();"
+      }
+    ],
+    "path": "tools/clang/tools/dxcompiler/dxcompilerobj.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 58,
+        "text": "struct DxcPdbVersionInfo : public IDxcVersionInfo2, public IDxcVersionInfo3 {"
+      },
+      {
+        "line": 87,
+        "text": "    return DoBasicQueryInterface<IDxcVersionInfo, IDxcVersionInfo2,"
+      },
+      {
+        "line": 107,
+        "text": "  virtual HRESULT STDMETHODCALLTYPE GetCommitInfo(UINT32 *pCommitCount,"
+      }
+    ],
+    "path": "tools/clang/tools/dxcompiler/dxcpdbutils.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 29,
+        "text": "                     public IDxcVersionInfo2"
+      },
+      {
+        "line": 79,
+        "text": "  // IDxcVersionInfo2"
+      },
+      {
+        "line": 80,
+        "text": "  HRESULT STDMETHODCALLTYPE GetCommitInfo(UINT32 *pCommitCount,"
+      },
+      {
+        "line": 123,
+        "text": "HRESULT STDMETHODCALLTYPE DxcValidator::GetCommitInfo(UINT32 *pCommitCount,"
+      },
+      {
+        "line": 132,
+        "text": "  std::strcpy(hash, clang::getGitCommitHash());"
+      },
+      {
+        "line": 135,
+        "text": "  *pCommitCount = clang::getGitCommitCount();"
+      }
+    ],
+    "path": "tools/clang/tools/dxcompiler/dxcvalidator.cpp"
+  },
+  {
+    "matches": [
+      {
+        "line": 29,
+        "text": "                     public IDxcVersionInfo2"
+      },
+      {
+        "line": 69,
+        "text": "  // IDxcVersionInfo2"
+      },
+      {
+        "line": 70,
+        "text": "  HRESULT STDMETHODCALLTYPE GetCommitInfo(UINT32 *pCommitCount,"
+      },
+      {
+        "line": 102,
+        "text": "HRESULT STDMETHODCALLTYPE DxcValidator::GetCommitInfo(UINT32 *pCommitCount,"
+      },
+      {
+        "line": 111,
+        "text": "  std::strcpy(hash, clang::getGitCommitHash());"
+      },
+      {
+        "line": 114,
+        "text": "  *pCommitCount = clang::getGitCommitCount();"
+      }
+    ],
+    "path": "tools/clang/tools/dxildll/dxcvalidator.cpp"
+  }
+]

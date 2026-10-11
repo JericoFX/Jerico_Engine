@@ -1,0 +1,27 @@
+{
+  "driverInverseExact": true,
+  "caseCount": 18,
+  "allowedDriverDeltas": [
+    "fresh attempt and assignment filename/hash",
+    "source input count23373 to23385",
+    "six SHA256 callsites use .NET streaming with disposal"
+  ],
+  "status": "STATIC INVERSE EXACT; NOT NATIVE",
+  "junctionsCreated": 0,
+  "caseArgvEqualAfterFreshNaming": true,
+  "sourceFreezeCount": 23385,
+  "sourceFreezeSHA": "A708661417616D36547CF224DD24712176157A1B02A8086A93DD64079AEEAD92",
+  "attemptsAbsent": [
+    "attempt1",
+    "attempt-rev2",
+    "attempt-rev3"
+  ],
+  "fixturesCreated": 0,
+  "scopes": {
+    "PRODUCER": 16,
+    "FUNCTION-GUARD": 1,
+    "PRIVATE-OVERLAY": 1
+  },
+  "acceptance": false,
+  "nativeExecuted": false
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "sourceRelativePath": "lib/DxilCompression/LICENSE.TXT",
+    "sha256": "6F20FA7672B00E2E975C291DF737CF227ADDF3AD32E36FEF3FE0F416E4664D3D",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/version-api-texts/lib__DxilCompression__LICENSE.TXT"
+  },
+  {
+    "sourceRelativePath": "lib/DxilContainer/DxilContainerAssembler.cpp",
+    "sha256": "14430D3FFE20F418D4323BB69A5223BBD1A1C4F86E59F891ACF6F02D8FC9BB26",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/version-api-texts/lib__DxilContainer__DxilContainerAssembler.cpp"
+  },
+  {
+    "sourceRelativePath": "tools/clang/lib/SPIRV/SpirvEmitter.cpp",
+    "sha256": "8155F7B50FC07CEF049CDECA7B736E5450D0667CD3BF34D8031671559D4F8683",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/version-api-texts/tools__clang__lib__SPIRV__SpirvEmitter.cpp"
+  },
+  {
+    "sourceRelativePath": "tools/clang/tools/dxildll/dxcvalidator.cpp",
+    "sha256": "0417EE37954DDAE5AAFC3B9BD34AB14370BF07B72147D532031113AB167CD4B5",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/version-api-texts/tools__clang__tools__dxildll__dxcvalidator.cpp"
+  }
+]

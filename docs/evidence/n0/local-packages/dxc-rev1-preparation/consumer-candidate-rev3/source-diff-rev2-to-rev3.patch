@@ -1,0 +1,19 @@
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
+--- a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
+@@ -186,1 +186,14 @@
+-            Hr(result->GetOutput(DXC_OUT_ERRORS, IID_PPV_ARGS(&errors), nullptr), "invalid shader diagnostics");
++            const HRESULT errorsHr = result->GetOutput(DXC_OUT_ERRORS, IID_PPV_ARGS(&errors), nullptr);
++            const BOOL hasObject = result->HasOutput(DXC_OUT_OBJECT);
++            ComPtr<IDxcBlob> diagnosticObject;
++            const HRESULT objectHr = result->GetOutput(DXC_OUT_OBJECT, IID_PPV_ARGS(&diagnosticObject), nullptr);
++            ComPtr<IDxcBlob> diagnosticResult;
++            const HRESULT resultHr = result->GetResult(&diagnosticResult);
++            std::printf("INVALID OBSERVED: status=0x%08lx errorsHr=0x%08lx errorsLength=%zu hasObject=%u\n",
++                static_cast<unsigned long>(status), static_cast<unsigned long>(errorsHr),
++                errors.Get() != nullptr ? errors->GetStringLength() : size_t{0}, static_cast<unsigned>(hasObject));
++            std::printf("INVALID OBJECT: hr=0x%08lx pointer=%p bytes=%zu\n", static_cast<unsigned long>(objectHr),
++                static_cast<void*>(diagnosticObject.Get()), diagnosticObject.Get() != nullptr ? diagnosticObject->GetBufferSize() : size_t{0});
++            std::printf("INVALID RESULT: hr=0x%08lx pointer=%p bytes=%zu\n", static_cast<unsigned long>(resultHr),
++                static_cast<void*>(diagnosticResult.Get()), diagnosticResult.Get() != nullptr ? diagnosticResult->GetBufferSize() : size_t{0});
++            Hr(errorsHr, "invalid shader diagnostics");

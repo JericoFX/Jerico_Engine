@@ -1,0 +1,39 @@
+{
+  "status": "PLANNED_NOT_RUN",
+  "nativeOwner": "Luna assigned by parent",
+  "rootBuild": "Use parent-approved generated Root build path, not a new harness",
+  "configuration": "profile unless parent selects the original generated configuration",
+  "build": [
+    "cmake",
+    "--build",
+    "<approved-root-build>",
+    "--config",
+    "profile",
+    "--target",
+    "WhiteBox.Editor.Tests"
+  ],
+  "focalRunner": [
+    "<approved-root-build>/bin/profile/AzTestRunner.exe",
+    "<approved-root-build>/bin/profile/WhiteBox.Editor.Tests.dll",
+    "AzRunUnitTests",
+    "--gtest_filter=WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialPartitionRetainsDistinctSlotsAndExactCornerUVs:WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialMergeRemapsLocalSlotsWithoutTruncatingUUIDOrLosingOverrides:WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialConflictPreservesGeometryBindingsAndMaterialReferences:WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialOwnerGuardRejectsBeforeReplacingCandidate:WhiteBoxSurfaceMaterialTestFixture.SelectedPolygonUVTransformIsAtomicAndKeepsUnselectedCornersAndUUIDs:WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialAssignmentChangesWholeInheritedSurfaceAndRejectsInvalidSelection:EditorWhiteBoxComponentTestFixture.SceneSurfaceBindingsAndManualUVGuardSurviveSerializationClone:WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialBooleanChainRetainsBothOperandSlotsAndCornerUVs:WhiteBoxSurfaceMaterialTestFixture.DuplicateSurfaceBindingsFailWithoutPublishingAnyPartialOutput:EditorWhiteBoxComponentTestFixture.ManualUVGuardRejectsVoxelGeometryBeforeMutation:EditorWhiteBoxComponentTestFixture.NativeMaterialAssignmentRoundtripKeepsAssetsPropertiesAndUVReferences:EditorWhiteBoxComponentTestFixture.LegacyFaceSchemaDefaultsToSlotZeroWithoutChangingCornerUVs:WhiteBoxSurfaceMaterialTestFixture.InvalidMaterialPartitionPreservesInputOrderAndCornerData:WhiteBoxSurfaceMaterialTestFixture.OwnerGuardAlsoPreservesExplicitOverridesEqualToLegacyFallback:WhiteBoxSurfaceMaterialTestFixture.DifferentLegacyTintAndTextureRequireOwnerAndImportExactFallback:WhiteBoxSurfaceMaterialTestFixture.SharedUUIDAssetOrUVOverrideConflictNeverReplacesCandidate"
+  ],
+  "originalSuite": [
+    "ctest",
+    "--test-dir",
+    "<approved-root-build>",
+    "-C",
+    "profile",
+    "-R",
+    "^Gem::WhiteBox\\.Editor\\.Tests\\.main::TEST_RUN$",
+    "--output-on-failure"
+  ],
+  "requiredProductChecks": [
+    "WhiteBox entity + native Material component on both operands; distinct assets/property/UV overrides via Material Inspector",
+    "Room/door/window CSG preserves UUID lineage, selected corner UVs and per-face materials visibly in shared viewport",
+    "Conflicting UUID and missing target Material owner preserve geometry/bindings/native refs/Undo snapshot",
+    "UV edit Undo/Redo; authored UV protected geometry action; explicit Planar reset Undo",
+    "Save scene/reopen bindings/assets/overrides/UVs and cached runtime slots",
+    "BuildGameEntity/AP/runtime retains MaterialComponent references and per-face visible assignments"
+  ]
+}

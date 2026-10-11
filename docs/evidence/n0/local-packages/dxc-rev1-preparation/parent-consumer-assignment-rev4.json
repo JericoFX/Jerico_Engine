@@ -1,0 +1,23 @@
+{
+  "status": "PARENT EXACT DIFF/INVERSE REVIEW; FOUR NATIVE CASES ASSIGNED",
+  "nativeOwner": "Existing validation_luna only",
+  "driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/RunDxcConsumerParentRev4.ps1",
+  "driverSHA256": "E6889B0510F1ACA879DAC130EFC0880E1F1A81823601454CA416B1E13E588689",
+  "sourceInputs": 23385,
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/consumer-candidate-rev4/source-freeze-dxc-consumer-rev4.json",
+  "freezeSHA256": "A708661417616D36547CF224DD24712176157A1B02A8086A93DD64079AEEAD92",
+  "workerAssignmentSHA256": "848BCA5E32ED6E815126EAC789EEB8F874865D51B4A5C2D748DA1B04DBC2664B",
+  "cppSHA256": "3FE2DA8FC5D468FFDCC14090AD2D2FB7EC0B44A328059AB47D33AD6E4E723064",
+  "inverseExact": true,
+  "parserErrors": 0,
+  "cases": [
+    "JE.LocalPackages.DXC.dxil",
+    "JE.LocalPackages.DXC.spirv",
+    "JE.LocalPackages.DXC.invalid",
+    "JE.LocalPackages.DXC.dxsc"
+  ],
+  "review": "Pinned upstream plus actual diagnostic established registered zero-length output slot on failure. Corrected oracle requires successful diagnostic/object/result queries, failed operation status, nonempty diagnostics, both byte lengths zero or null, and absent output path. Positive oracles unchanged.",
+  "producerRebuild": false,
+  "extraction": false,
+  "acceptance": false
+}

@@ -1,0 +1,36 @@
+{
+  "changedPaths": [],
+  "status": "FAIL; RETAIN ACTUAL RESULTS",
+  "cases": [],
+  "engineAccepted": false,
+  "rootExecuted": false,
+  "payloadStatus": "PASS",
+  "nativeResults": {
+    "archiveAudit": {
+      "evidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-attempt1/archive-audit.json",
+      "currentNativeExecuted": false,
+      "reusedVerifiedEvidence": true,
+      "nativeExit": 0,
+      "historicalElapsedSeconds": 0.4777378
+    },
+    "extraction": {
+      "scope": "Existing actual package read-only; all 15 members rehashed before/after",
+      "currentNativeExecuted": false,
+      "reusedVerifiedEvidence": true,
+      "nativeExit": 0,
+      "historicalElapsedSeconds": 0.4783017
+    },
+    "configure": {
+      "elapsedSeconds": 5.8963243,
+      "nativeExit": 0
+    },
+    "build": {
+      "elapsedSeconds": 3.9278515,
+      "nativeExit": 0
+    },
+    "ctest": {
+      "elapsedSeconds": 0.2302701,
+      "nativeExit": 8
+    }
+  }
+}

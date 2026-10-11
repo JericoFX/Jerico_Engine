@@ -1,0 +1,78 @@
+{
+  "scopes": {
+    "PRIVATE-OVERLAY": 1,
+    "FUNCTION-GUARD": 1,
+    "PRODUCER": 16
+  },
+  "nativeExecuted": false,
+  "caseCount": 18,
+  "status": "PENDING LUNA EXECUTION",
+  "sourceInputs": 23373,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegativesRev2.ps1",
+      "bytes": 9800,
+      "sha256": "ECBF9321FFCCE2BCEC73DBD60F9C0916AD235969BEBAE381BCAC107ADFAF845F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment-rev2.json",
+      "bytes": 41996,
+      "sha256": "D0AF36852D02984ED2F645ADDD29395923768DBA8B8838A1A5DD3F88B6FC8D7C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\PrepareNegativeAssignmentRev2.ps1",
+      "bytes": 9842,
+      "sha256": "1BDA91E63519739BF6CD5517D8DD6B9AFD44F64FAEB86D146C924519FFD30AAB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-preparation-proof-rev2.json",
+      "bytes": 12468,
+      "sha256": "8FC7BEF674E01509D99BA880227FF54D9B44EED630365D622B2773E5D70D8DB8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev2\\source-freeze-dxc-consumer-rev2.json",
+      "bytes": 8904612,
+      "sha256": "4427A9E7947AC6999D9FFA36FA55704885CADBF4E4C0E745D4B89CE6ADC0F03B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegatives.ps1",
+      "bytes": 9562,
+      "sha256": "7022F2F2A31B905C483EDBA95EC074DFD1B5D829687B303224479E5059540AA0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment.json",
+      "bytes": 36205,
+      "sha256": "11B08617C06A45BD3DBAD2839492C26DE819F205E18CD1D3B6023EE04B331DFC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-setup-freeze.json",
+      "bytes": 3291,
+      "sha256": "CB09585E79C1D147C2FA0794FD63450F5DAD53B0F33ADCA180EAA66AAA45482A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\packages\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "bytes": 7352940,
+      "sha256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\packages\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 131,
+      "sha256": "8A9C9F9F562F099559770A5770B1465928471416181CEBC38198B2FEFF2E627E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\logs\\configure-Release.result.json",
+      "bytes": 45,
+      "sha256": "5EA56CDCF3EBD160E0E870E5D0BB397BFE5DA2CD50E581575AA4084153526119"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\logs\\build-Release.result.json",
+      "bytes": 46,
+      "sha256": "019C60776E3DCF55B4F1D2FA223594ABFA0CBD98F6DB1A8E0E9B80A9662ADAFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\package-ready.json",
+      "bytes": 71,
+      "sha256": "6C1B91417DB8A6D9C30239351F725927B1F4BBEFAB23494B6B8D8E01A277C413"
+    }
+  ]
+}

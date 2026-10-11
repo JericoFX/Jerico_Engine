@@ -1,0 +1,221 @@
+{
+  "status": "THREE EXACT SOURCES ACQUIRED/EXTRACTED; CLOSED PLAN FOR PARENT OVERLAY/PRODUCER REVIEW; NO IMPLEMENTATION OR NATIVE ACCEPTANCE",
+  "sources": [
+    {
+      "id": "dxc",
+      "repository": "o3de/DirectXShaderCompiler",
+      "commit": "1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "ref": "refs/heads/release-1.8.2505.1-o3de",
+      "url": "https://codeload.github.com/o3de/DirectXShaderCompiler/tar.gz/1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "license": "NCSA plus scoped MIT/Unlicense/Spencer/BSD/Unicode notices",
+      "cmakeMinimum": "3.17.2",
+      "selectedPath": "private DXC source root",
+      "archiveSHA256": "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42",
+      "archiveBytes": 24722611,
+      "archiveStatus": "ACQUIRED: direct HTTPS HEAD/GET200, no redirects/auth; safely extracted and full primary comparison verified",
+      "snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot",
+      "fileCount": 17851,
+      "extractionReceipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\source-extraction-rev2.json",
+      "comparison": "17832 raw Gitblob matches +19 exact approved CRLF/LF derived proofs. Snapshot RAW bytes unchanged."
+    },
+    {
+      "id": "spirv-headers",
+      "repository": "KhronosGroup/SPIRV-Headers",
+      "commit": "aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+      "ref": "exact gitlink, no tag invented",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+      "license": "Khronos permissive full LICENSE, scoped JsonCpp PD/MIT tooling notices",
+      "cmakeMinimum": "3.14",
+      "selectedPath": "private DXC/external/SPIRV-Headers",
+      "packageProjectVersion": "1.5.5",
+      "normativeHeaderVersion": "SPIR-V 1.6, revision1",
+      "archiveSHA256": "1bf0568bad1f9e30fce8d3199e54ae7ade1c16dbe913b5afd9b499149a9bb9a5",
+      "archiveBytes": 547754,
+      "archiveStatus": "ACQUIRED: direct HTTPS HEAD/GET200, no redirects/auth; safely extracted and full primary comparison verified",
+      "snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot",
+      "fileCount": 104,
+      "extractionReceipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\source-extraction.json",
+      "comparison": "All files raw Gitblob match; no links/omissions."
+    },
+    {
+      "id": "spirv-tools",
+      "repository": "KhronosGroup/SPIRV-Tools",
+      "commit": "a62abcb402009b9ca5975e6167c09f237f630e0e",
+      "ref": "exact gitlink, no tag invented",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Tools/tar.gz/a62abcb402009b9ca5975e6167c09f237f630e0e",
+      "license": "Apache-2.0 full LICENSE plus per-file notices",
+      "cmakeMinimum": "3.22.1",
+      "selectedPath": "private DXC/external/SPIRV-Tools",
+      "changesVersion": "v2025.2 2025-04-22",
+      "archiveSHA256": "7f6561171be2f314a26cb2a686d653050ee318655a89970d41ab3bef3269a4db",
+      "archiveBytes": 3289276,
+      "archiveStatus": "ACQUIRED: direct HTTPS HEAD/GET200, no redirects/auth; safely extracted and full primary comparison verified",
+      "snapshot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\snapshot",
+      "fileCount": 1706,
+      "extractionReceipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\source-extraction.json",
+      "comparison": "All files raw Gitblob match; no links/omissions."
+    }
+  ],
+  "originalPackage": {
+    "name": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows",
+    "sha256": "224a34691a17234c2294202368d9756635f11d66ac9bc528f929d84cf4acac8e",
+    "notSourceArchiveHash": true
+  },
+  "newIdentityProposal": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows; real newly measured package SHA; parent decides acceptance/catalogue",
+  "interface": {
+    "target": "3rdParty::DirectXShaderCompilerDxc",
+    "kind": "INTERFACE IMPORTED GLOBAL",
+    "payload": [
+      "DirectXShaderCompilerDxc/bin/dxc.exe",
+      "DirectXShaderCompilerDxc/bin/dxsc.exe",
+      "DirectXShaderCompilerDxc/bin/dxil.dll",
+      "DirectXShaderCompilerDxc/bin/dxcompiler.dll"
+    ],
+    "deploy": "Builders/DirectXShaderCompiler",
+    "headersDistributed": false,
+    "releaseOnly": true
+  },
+  "consumers": [
+    "Atom_Shader.Builders runtime dependency Gems/Atom/Asset/Shader/Code/CMakeLists.txt:108",
+    "DX12 ShaderPlatformInterface.cpp:238 executes dxc.exe; 337-361 executes dxsc.exe when specialization constants are enabled",
+    "Vulkan ShaderPlatformInterface.cpp:164 executes dxc with -spirv; no removal of either backend"
+  ],
+  "dxsc": {
+    "role": "O3DE DXIL specialization-constant patcher, not Metal IR converter",
+    "source": "tools/clang/tools/dxsc/dxsc.cpp:98",
+    "target": "dxsc",
+    "links": "dxcompiler",
+    "arguments": "-sv=<sentinel> -o=<patched.dxil> -f=<offsets.json> <input.dxil>",
+    "preserve": true
+  },
+  "originalRecipe": {
+    "authority": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-current-audit\\original-recipe-rev3-build_config.json",
+      "bytes": 4759,
+      "sha256": "e7b14571b6ad090a91a1ef7b7abf0bfdc1da52b873a9c466ae496016a7f2886b",
+      "fileVersion": null
+    },
+    "generateArgs": [
+      "-GNinja",
+      "-Csrc/cmake/caches/PredefinedParams.cmake",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DLLVM_INCLUDE_TESTS:BOOL=OFF",
+      "-DCLANG_INCLUDE_TESTS:BOOL=OFF",
+      "-DHLSL_INCLUDE_TESTS:BOOL=OFF",
+      "-DSPIRV_BUILD_TESTS:BOOL=OFF",
+      "-DLLVM_INCLUDE_TOOLS=ON"
+    ],
+    "buildArgs": [
+      "--target",
+      "all llvm-as llvm-dis",
+      "--parallel"
+    ],
+    "installFilter": [
+      "bin/dxc.exe",
+      "bin/dxsc.exe",
+      "bin/dxil.dll",
+      "bin/dxcompiler.dll"
+    ],
+    "preserveTargets": [
+      "dxc",
+      "dxsc",
+      "dxildll",
+      "dxcompiler"
+    ],
+    "recipeCache": "cmake/caches/PredefinedParams.cmake: ENABLE_SPIRV_CODEGEN ON, LLVM EH/RTTI ON, tests overridden OFF by original recipe"
+  },
+  "sourceClosure": {
+    "actualGitlinks": 3,
+    "selectedWindowsGitlinks": 2,
+    "directXHeaders": "Actual third gitlink 980971e835876dc0cde415e8f9bc646e64667bf7 is guarded NOT WIN32, not acquired",
+    "googletest": "Declared in .gitmodules but absent from pinned external tree; all original Windows test switches OFF, no invented dependency",
+    "otherSPIRVDeps": "SPIRV_SKIP_EXECUTABLES ON sets SPIRV_SKIP_TESTS ON; fuzz/compression OFF defaults; no test-only GTest/Abseil/RE2/Effcee/protobuf acquisition",
+    "staticSPIRV": "SPIRV_TOOLS_BUILD_STATIC ON default required by SPIRV-Tools-static and opt; preserve shared auxiliary upstream target, distribute only four DXC outputs",
+    "automaticAcquisition": "Read selected external/CMakeLists and SPIRV external/CMakeLists: local add_subdirectory only, no download call; do not run DEPS updater/get_sources/Git submodule"
+  },
+  "toolchain": {
+    "inventory": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-current-audit\\parent-local-toolchain-inventory.json",
+      "bytes": 1537,
+      "sha256": "50058a4632809d02b6f53a019aaf3a117f77993b2f00aa3c8818cbc922c6bb09",
+      "fileVersion": null
+    },
+    "closureWitness": "local-toolchain-closure-witness.json",
+    "compiler": "MSVC19.44.35228/v143, VSBuildTools14.44.35207",
+    "generator": "Original Ninja using VS bundled explicit ninja.exe, VS x64 environment from audited vcvars64",
+    "crt": "Release /MD, use upstream LLVM_USE_CRT_RELEASE=MD to make original selection explicit; do not change iterator level0 or C++17",
+    "sdk": "Existing WindowsSDK10.0.26100.0 rc/mc",
+    "dia": "Required by dxc/dxcompiler and LLVMDxilDia. Explicit existing DIASDK_INCLUDE_DIR and DIASDK_GUIDS_LIBRARY; no DIA installer",
+    "atl": "dxildll links atls.lib; present VS x64 ATL include/library; no ATL installer",
+    "pythonTool": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+      "sha256": "6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+      "runtime": "CPython3.10.13 JE rev3, source49965601d6afedafe47cc85556d99b7a24981051",
+      "usage": "Python3_EXECUTABLE explicit: root llvm-build, HCT, SPIRV table generation; audited source imports stdlib plus source-local modules only",
+      "distributed": false,
+      "compatibility": "Static Python3 stdlib inspection compatible; actual generators remain pending Luna"
+    }
+  },
+  "minimumPolicies": "Selected root3.17.2, Clang3.17.2, SPIRVTools3.22.1, Headers3.14 all exceed3.5; no CMAKE_POLICY_VERSION_MINIMUM override justified by current evidence. CMake4.3 native configure remains pending.",
+  "ambientFinds": {
+    "metal": "config-ix.cmake573 find_package(MetalIRConverter) optional, never REQUIRED; not a dependency of dxsc. Do not acquire it. Producer must report actual detection and reject unexpected payload additions before acceptance",
+    "xml": "Clang CMake170 LibXml2 optional; no automatic acquisition, native cache/import audit must record actual result",
+    "zlib": "LLVM_ENABLE_ZLIB optional; config-ix disables if header/library absent. Internal DXILCompression/miniz remains selected, no external zlib upgrade required",
+    "policy": "Keep original feature defaults; no suppression flags selected here"
+  },
+  "provenanceProposal": {
+    "demonstrated": "gen_version.py executes git diff/rev-parse/rev-list in source beneath engine; GetCommitInfo.py queries source Git and its custom target touches only private work script; SPIRV getenv default eagerly calls describe. These would observe ancestor engine metadata.",
+    "preferredVersion": "Use supported HLSL_ENABLE_FIXED_VER=ON and HLSL_FIXED_VERSION_LOCATION=<private generated-version dir>. Derive its version.inc byte-audited from original1.8.2505.0; preserve four numeric fields and add exact DXC archive pin to product string. Neither .1 nor an original binary hash is fabricated.",
+    "queryFeature": "Keep HLSL_SUPPORT_QUERY_GIT_COMMIT_INFO ON. Proposed private GetCommitInfo.py emits short hash1cc0ab76 (8bytes required by all existing 8+1 allocations) and count4954 from the reviewed pinned GitHub REST history cardinality. Full40 source pin remains in package/provenance metadata, not the fixed-size runtime string. No count0/history fabrication, no E_NOTIMPL or API/allocator changes. Overlay still needs parent authorization.",
+    "spirv": "Private update_build_version.py overlay replaces the sole eager description expression with exact a62abcb402009b9ca5975e6167c09f237f630e0e (archive), retaining CHANGES v2025.2; before/after SHA and exact inversion required.",
+    "hct": "Explicit HLSL_AUTOCRLF=OFF for audited LF archive prevents git config query. HLSL_COPY_GENERATED_SOURCES remains OFF; BUILD_DIR generators continue unchanged; no HLSL_DISABLE_SOURCE_GENERATION.",
+    "otherVCS": "VersionFromVCS requires immediate source/.git or .svn before queries; preserve original LLVM_APPEND_VC_REV ON but source archive has neither. Clang SVNVersion path also needs immediate source VCS files.",
+    "sourceWrites": "All extraction and overlays are private under fresh checkout/build output. Snapshot/archive stay immutable; HCT temp, TableGen and version outputs remain binary/private work. PYTHONDONTWRITEBYTECODE=1 protects existing external tool.",
+    "approvalRequired": true,
+    "runtimeContractEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\version-api-contract-addendum.json",
+    "historyEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\commit-history-metadata-receipt-rev3.json",
+    "historyMethod": "Unfiltered pinned GitHub REST pages1/4954/4955;4954 is API-list cardinality, not a local git rev-list execution."
+  },
+  "legal": {
+    "requiredFullTexts": [
+      "DXC LICENSE.TXT",
+      "DXC ThirdPartyNotices.txt",
+      "lib/Support/COPYRIGHT.regex",
+      "SPIRV-Headers LICENSE",
+      "SPIRV-Tools LICENSE",
+      "original O3DE glue licenses",
+      "lib/DxilCompression/LICENSE.TXT"
+    ],
+    "scope": "Retain actual per-file headers in compiled code and notices, including Miniz MIT/Unlicense, ConvertUTF Unicode, MD5, OpenBSD/Spencer regex. Source LICENSE build/test GPL Autoconf section is historical scoped text, not proof that distributed DLLs are GPL; acquisition manifest and compiled file scope still require inspection.",
+    "redistributionCertified": false,
+    "sourceRedistribution": "Do not distribute the entire source archive as binary runtime payload or silently delete preserved inactive sources"
+  },
+  "acquisitionGuards": [
+    "Repeat exact pinned codeload HEAD without redirects/auth before approved GET",
+    "Only the three exact official URLs; no fallback/clone/AWS/S3/CloudFront/LFS/install",
+    "Measure full gzip archive SHA/bytes; ETag is not source SHA256",
+    "Before extract audit traversal, drive/UNC paths, duplicate/case collisions, member types/links; PAX metadata only narrowly verified, never materialized",
+    "Fetch pinned primary recursive tree where available, compare Gitblob paths/content, distinguish gitlinks/export-ignore gaps explicitly",
+    "Retain full immutable snapshots, licenses, raw receipts; create fresh private copies and exact reversible overlays only after parent approval"
+  ],
+  "nativeValidationPlan": [
+    "Luna only: original configure/build Release with all recipe tool targets and flags preserved, record native argv/exits/tool imports",
+    "Archive extraction consumer uses original Find/deploy and four actual PEs; verify x64/CRT/imports/version provenance and no Python distributed",
+    "Compile actual HLSL to valid DXIL and SPIR-V, reject malformed shader with nonzero/no successful artifact",
+    "dxsc patch real generated specialization-sentinel DXIL and offsets.json; malformed container rejected; retain original API/error semantics",
+    "IDxcVersionInfo2 exact8 hash1cc0ab76/count4954 under reviewed API-cardinality provenance, CoTaskMemFree ownership; full40 source pin in package metadata. Native consumer must inspect compiled retail DXIL hash, validation operation status, malformed-shader rejection; no -Vd/devmode/experimental bypass.",
+    "Root, AP and real DX12/Vulkan Editor/GPU behavior are separate pending gates"
+  ],
+  "outstanding": [
+    "Parent authorization of exact private provenance overlays and producer source scope",
+    "Fresh private copies of DXC plus two local gitlinks, raw immutable snapshots must remain unchanged",
+    "Luna-only original Release compiler/CMake/PE/native consumers after source review/freeze",
+    "Real AP/DX12/Vulkan Editor pipeline acceptance and legal/product acceptance remain pending"
+  ],
+  "archiveAcquired": 3,
+  "nativeExecuted": false,
+  "frozenVVLModified": false,
+  "productSourceModified": false,
+  "signingAudit": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\dxil-signing-audit\\dxil-signing-contract.json",
+  "supersedes": "Historical closed plan/count0/full40 runtime proposal remains preserved; this plan plus runtime contract addendum replaces that unsafe proposal."
+}

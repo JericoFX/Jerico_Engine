@@ -1,0 +1,39 @@
+{
+  "status": "PARENT SOURCE REVIEW; NATIVE PENDING",
+  "freezeSHA256": "52C12F26F2898076B99F2811523AC7B8311555780BAA3C8CCCA4639E1B5F4D5B",
+  "sourceFiles": 25,
+  "referenceFiles": 35,
+  "rehashChanges": [],
+  "diffSHA256": "9CC0FC4B5D7A4810B4780B4E05F6674991CA016C0DF73BC14E3E4F1600C6B8AD",
+  "reviewed": "Full UUID/corner UV persistence, transactional slot/reference merge, MaterialConsumerService and existing Atom material ownership, stable submesh partition, Inspector actions, serialized scene bindings, CSG commit/live evaluation, manual UV guards and sixteen focal regressions.",
+  "expectedTests": [
+    "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialPartitionRetainsDistinctSlotsAndExactCornerUVs",
+    "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialMergeRemapsLocalSlotsWithoutTruncatingUUIDOrLosingOverrides",
+    "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialConflictPreservesGeometryBindingsAndMaterialReferences",
+    "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialOwnerGuardRejectsBeforeReplacingCandidate",
+    "WhiteBoxSurfaceMaterialTestFixture.SelectedPolygonUVTransformIsAtomicAndKeepsUnselectedCornersAndUUIDs",
+    "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialAssignmentChangesWholeInheritedSurfaceAndRejectsInvalidSelection",
+    "EditorWhiteBoxComponentTestFixture.SceneSurfaceBindingsAndManualUVGuardSurviveSerializationClone",
+    "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialBooleanChainRetainsBothOperandSlotsAndCornerUVs",
+    "WhiteBoxSurfaceMaterialTestFixture.DuplicateSurfaceBindingsFailWithoutPublishingAnyPartialOutput",
+    "EditorWhiteBoxComponentTestFixture.ManualUVGuardRejectsVoxelGeometryBeforeMutation",
+    "EditorWhiteBoxComponentTestFixture.NativeMaterialAssignmentRoundtripKeepsAssetsPropertiesAndUVReferences",
+    "EditorWhiteBoxComponentTestFixture.LegacyFaceSchemaDefaultsToSlotZeroWithoutChangingCornerUVs",
+    "WhiteBoxSurfaceMaterialTestFixture.InvalidMaterialPartitionPreservesInputOrderAndCornerData",
+    "WhiteBoxSurfaceMaterialTestFixture.OwnerGuardAlsoPreservesExplicitOverridesEqualToLegacyFallback",
+    "WhiteBoxSurfaceMaterialTestFixture.DifferentLegacyTintAndTextureRequireOwnerAndImportExactFallback",
+    "WhiteBoxSurfaceMaterialTestFixture.SharedUUIDAssetOrUVOverrideConflictNeverReplacesCandidate"
+  ],
+  "nativeTestsRun": 0,
+  "nativeOwner": "Existing validation_luna after original Root generation and parent assignment",
+  "nativeRoute": "Original WhiteBox.Editor.Tests target and AzTestRunner; no replacement harness",
+  "limits": [
+    "Geometry operations that reproject authored UV remain blocked until explicit planar reset. Full edit/reprojection workflow acceptance pending.",
+    "Current integer slot Inspector is a prototype; Hammer2/custom UI acceptance pending.",
+    "Original renderer forces full mesh rebuild; manual UV detection can scan the full mesh. Neither path is measured as an optimization.",
+    "Native compilation, MaterialComponent interaction, whole Undo/Redo, scene Save/reopen, AP/cook, runtime and visible per-face results remain pending."
+  ],
+  "engineAccepted": false,
+  "editorAccepted": false,
+  "visualAccepted": false
+}

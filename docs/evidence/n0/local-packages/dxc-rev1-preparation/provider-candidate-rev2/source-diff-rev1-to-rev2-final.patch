@@ -1,0 +1,449 @@
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake
+--- a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake
+@@ -1,136 +1,140 @@
+-# Copyright (c) Contributors to the Open 3D Engine Project.
+-# SPDX-License-Identifier: Apache-2.0 OR MIT
+-cmake_minimum_required(VERSION 3.24)
+-include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
+-foreach(JE_ARGUMENT IN ITEMS ARCHIVES_ROOT PYTHON PYTHON_SHA256 NINJA NINJA_SHA256 CL CL_SHA256 OUTPUT)
+-    if(NOT DEFINED JE_DXC_${JE_ARGUMENT} OR "${JE_DXC_${JE_ARGUMENT}}" STREQUAL "")
+-        message(FATAL_ERROR "JE DXC: JE_DXC_${JE_ARGUMENT} is required")
+-    endif()
+-endforeach()
+-foreach(JE_PATH IN ITEMS JE_DXC_ARCHIVES_ROOT JE_DXC_PYTHON JE_DXC_NINJA JE_DXC_CL JE_DXC_OUTPUT)
+-    JE_python_require_local_path(${JE_PATH})
+-endforeach()
+-get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
+-set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
+-cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_DXC_OUTPUT}" NORMALIZE JE_LOCAL_OUTPUT)
+-if(NOT JE_LOCAL_OUTPUT OR JE_DXC_OUTPUT STREQUAL JE_BUILD_ROOT)
+-    message(FATAL_ERROR "JE DXC output must be below checkout/build")
+-endif()
+-if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" OR NOT "$ENV{VSCMD_ARG_TGT_ARCH}" STREQUAL "x64")
+-    message(FATAL_ERROR "JE DXC requires the existing VS2022/v143 x64 development environment; no toolchain installation")
+-endif()
+-if(EXISTS "${JE_DXC_OUTPUT}")
+-    message(FATAL_ERROR "JE DXC output exists; previous attempts are retained")
+-endif()
+-JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/SourcePins.json"
+-    "a6a4be45d6d99baf555e13ef0661600c47585ad4089f1584e49d69dc36815cdc" "approved exact source pins")
+-file(READ "${CMAKE_CURRENT_LIST_DIR}/SourcePins.json" JE_PINS)
+-string(JSON JE_COUNT LENGTH "${JE_PINS}" sources)
+-if(NOT JE_COUNT EQUAL 3)
+-    message(FATAL_ERROR "JE DXC selected Windows closure requires exactly three sources")
+-endif()
+-foreach(JE_INDEX RANGE 0 2)
+-    foreach(JE_FIELD IN ITEMS id url sha256 archiveRelativePath archiveRoot cmakeSHA256)
+-        string(JSON JE_${JE_FIELD} GET "${JE_PINS}" sources ${JE_INDEX} ${JE_FIELD})
+-    endforeach()
+-    if(NOT JE_url MATCHES "^https://codeload[.]github[.]com/(o3de/DirectXShaderCompiler|KhronosGroup/SPIRV-Headers|KhronosGroup/SPIRV-Tools)/tar[.]gz/[0-9a-f]+$")
+-        message(FATAL_ERROR "JE DXC source provenance URL differs from approved primary endpoints")
+-    endif()
+-    set(JE_ARCHIVE_${JE_id} "${JE_DXC_ARCHIVES_ROOT}/${JE_archiveRelativePath}")
+-    JE_python_verify_file("${JE_ARCHIVE_${JE_id}}" "${JE_sha256}" "${JE_id} exact local archive")
+-    set(JE_ARCHIVE_ROOT_${JE_id} "${JE_archiveRoot}")
+-    set(JE_CMAKE_SHA_${JE_id} "${JE_cmakeSHA256}")
+-endforeach()
+-foreach(JE_TOOL IN ITEMS PYTHON NINJA CL)
+-    JE_python_verify_file("${JE_DXC_${JE_TOOL}}" "${JE_DXC_${JE_TOOL}_SHA256}" "audited existing external ${JE_TOOL}")
+-endforeach()
+-string(JSON JE_NOTICE_SHA GET "${JE_PINS}" sourceNoticeSHA256)
+-string(JSON JE_OVERLAY_SHA GET "${JE_PINS}" privateProvenanceSHA256)
+-JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/SourceNotices.txt" "${JE_NOTICE_SHA}" "full source notices")
+-JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/PrivateProvenance.json" "${JE_OVERLAY_SHA}" "three private overlays")
+-# Immutable tool trees stay untouched; Python is an external generation tool only.
+-set(ENV{PYTHONDONTWRITEBYTECODE} "1")
+-file(MAKE_DIRECTORY "${JE_DXC_OUTPUT}/logs" "${JE_DXC_OUTPUT}/source-work")
+-function(JE_dxc_native JE_LABEL)
+-    set(JE_ARGS "[]")
+-    set(JE_INDEX 0)
+-    foreach(JE_ARGUMENT IN LISTS ARGN)
+-        string(REPLACE "\\" "\\\\" JE_ESCAPED "${JE_ARGUMENT}")
+-        string(REPLACE "\"" "\\\"" JE_ESCAPED "${JE_ESCAPED}")
+-        string(JSON JE_ARGS SET "${JE_ARGS}" ${JE_INDEX} "\"${JE_ESCAPED}\"")
+-        math(EXPR JE_INDEX "${JE_INDEX}+1")
+-    endforeach()
+-    file(WRITE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.argv.json" "${JE_ARGS}\n")
+-    string(TIMESTAMP JE_START "%s" UTC)
+-    execute_process(COMMAND ${ARGN} RESULT_VARIABLE JE_RESULT
+-        OUTPUT_FILE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.stdout.txt"
+-        ERROR_FILE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.stderr.txt")
+-    string(TIMESTAMP JE_END "%s" UTC)
+-    math(EXPR JE_SECONDS "${JE_END}-${JE_START}")
+-    file(WRITE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.result.json"
+-        "{\"exitResult\":\"${JE_RESULT}\",\"elapsedWholeSeconds\":${JE_SECONDS}}\n")
+-    if(NOT JE_RESULT STREQUAL "0")
+-        message(FATAL_ERROR "JE DXC ${JE_LABEL} failed (${JE_RESULT}); outputs retained; no package ready")
+-    endif()
+-endfunction()
+-JE_dxc_native(python-generation-version "${JE_DXC_PYTHON}" -I -c
+-    "print(__import__('sys').version) or __import__('sys').exit(0 if __import__('sys').version_info[:3] == (3, 10, 13) else 1)")
+-foreach(JE_ID IN ITEMS dxc spirv-headers spirv-tools)
+-    # Archives were fully tar/Gitblob audited before provisioning; no source VCS is needed.
+-    file(ARCHIVE_EXTRACT INPUT "${JE_ARCHIVE_${JE_ID}}" DESTINATION "${JE_DXC_OUTPUT}/source-work/${JE_ID}")
+-    set(JE_WORK_${JE_ID} "${JE_DXC_OUTPUT}/source-work/${JE_ID}/${JE_ARCHIVE_ROOT_${JE_ID}}")
+-    JE_python_verify_file("${JE_WORK_${JE_ID}}/CMakeLists.txt" "${JE_CMAKE_SHA_${JE_ID}}" "${JE_ID} pristine private CMake")
+-endforeach()
+-set(JE_DXC_PROOF_OUTPUT "${JE_DXC_OUTPUT}/private-provenance-proof")
+-include("${CMAKE_CURRENT_LIST_DIR}/ApplyPrivateProvenance.cmake")
+-set(JE_BINARY "${JE_DXC_OUTPUT}/build-Release")
+-JE_dxc_native(configure-Release "${CMAKE_COMMAND}" -S "${JE_WORK_dxc}" -B "${JE_BINARY}" -G Ninja
+-    "-C${JE_WORK_dxc}/cmake/caches/PredefinedParams.cmake"
+-    "-DCMAKE_MAKE_PROGRAM=${JE_DXC_NINJA}" "-DCMAKE_C_COMPILER=${JE_DXC_CL}" "-DCMAKE_CXX_COMPILER=${JE_DXC_CL}"
+-    -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS:BOOL=OFF -DCLANG_INCLUDE_TESTS:BOOL=OFF
+-    -DHLSL_INCLUDE_TESTS:BOOL=OFF -DSPIRV_BUILD_TESTS:BOOL=OFF -DLLVM_INCLUDE_TOOLS=ON
+-    "-DPython3_EXECUTABLE=${JE_DXC_PYTHON}" "-DDXC_SPIRV_HEADERS_DIR=${JE_WORK_spirv-headers}"
+-    "-DDXC_SPIRV_TOOLS_DIR=${JE_WORK_spirv-tools}" -DHLSL_ENABLE_FIXED_VER=ON -DHLSL_FIXED_VERSION_LOCATION:PATH=
+-    -DHLSL_AUTOCRLF=OFF -DSPIRV_TOOLS_BUILD_STATIC=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON)
+-# Record optional ambient discoveries; never obtain a new library or suppress an existing feature.
+-file(STRINGS "${JE_BINARY}/CMakeCache.txt" JE_OPTIONAL_FIND_LINES
+-    REGEX "^(DIASDK|MSVC_DIA_SDK_DIR|LIBXML2|LLVM_ENABLE_ZLIB|HAVE_ZLIB_H|HAVE_LIBZ|METAL_IRCONVERTER|ENABLE_METAL_CODEGEN|Python3|LLVM_USE_CRT_RELEASE|HLSL_|ENABLE_SPIRV_CODEGEN|CMAKE_CXX_COMPILER|CMAKE_C_COMPILER)[^=]*=")
+-string(REPLACE ";" "\n" JE_OPTIONAL_FIND_TEXT "${JE_OPTIONAL_FIND_LINES}")
+-file(WRITE "${JE_DXC_OUTPUT}/logs/selected-cache-finds.txt" "${JE_OPTIONAL_FIND_TEXT}\n")
+-JE_dxc_native(build-Release "${CMAKE_COMMAND}" --build "${JE_BINARY}" --target all llvm-as llvm-dis --parallel)
+-foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
+-    if(NOT EXISTS "${JE_BINARY}/bin/${JE_FILE}")
+-        message(FATAL_ERROR "JE DXC required original output missing: ${JE_FILE}")
+-    endif()
+-endforeach()
+-# No stage/package is produced until the original real native target set succeeds.
+-set(JE_STAGE "${JE_DXC_OUTPUT}/stage")
+-file(MAKE_DIRECTORY "${JE_STAGE}/DirectXShaderCompilerDxc/bin" "${JE_STAGE}/LICENSES/O3DE")
+-foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
+-    file(COPY "${JE_BINARY}/bin/${JE_FILE}" DESTINATION "${JE_STAGE}/DirectXShaderCompilerDxc/bin")
+-endforeach()
+-file(COPY "${CMAKE_CURRENT_LIST_DIR}/FindDirectXShaderCompilerDxc.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt"
+-    "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
+-configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
+-file(COPY "${CMAKE_CURRENT_LIST_DIR}/SourceNotices.txt" DESTINATION "${JE_STAGE}/LICENSES")
+-file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT"
+-    DESTINATION "${JE_STAGE}/LICENSES/O3DE")
+-string(JSON JE_RECIPE SET "${JE_PINS}" sourceNumericVersion "\"1.8.2505.0\"")
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" sourceShortHash "\"1cc0ab76\"")
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" historyCount 4954)
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" historyCountMethod "\"Pinned GitHub REST unfiltered history cardinality; not local git rev-list\"")
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" externalPythonToolSHA256 "\"${JE_DXC_PYTHON_SHA256}\"")
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" pythonDistributed false)
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" generator "\"Ninja\"")
+-string(JSON JE_RECIPE SET "${JE_RECIPE}" toolset "\"v143\"")
+-file(WRITE "${JE_STAGE}/DirectXShaderCompilerDxc/JERecipe.json" "${JE_RECIPE}\n")
+-set(JE_PACKAGE_STAGE "${JE_STAGE}")
+-set(JE_PACKAGE_NAME "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows")
+-set(JE_PACKAGE_OUTPUT "${JE_DXC_OUTPUT}/packages")
+-set(JE_PACKAGE_VERSION "1.8.2505.1")
+-set(JE_PACKAGE_SOURCE_COMMIT "1cc0ab76dafe08a4144e419e619a8951a3d219db")
+-set(JE_PACKAGE_SOURCE_SHA256 "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42")
+-set(JE_PACKAGE_SOURCE_URL "https://codeload.github.com/o3de/DirectXShaderCompiler/tar.gz/${JE_PACKAGE_SOURCE_COMMIT}")
+-set(JE_PACKAGE_LICENSE "NCSA; Apache-2.0; Khronos permissive; scoped MIT/Unlicense, regex, Unicode/MD5 notices in LICENSES")
+-include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+-file(WRITE "${JE_DXC_OUTPUT}/package-ready.json" "{\"status\":\"PRODUCED; NATIVE CONSUMER/ROOT/EDITOR ACCEPTANCE PENDING\"}\n")
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS ARCHIVES_ROOT PYTHON PYTHON_SHA256 NINJA NINJA_SHA256 CL CL_SHA256 PARALLEL_JOBS OUTPUT)
++    if(NOT DEFINED JE_DXC_${JE_ARGUMENT} OR "${JE_DXC_${JE_ARGUMENT}}" STREQUAL "")
++        message(FATAL_ERROR "JE DXC: JE_DXC_${JE_ARGUMENT} is required")
++    endif()
++endforeach()
++if(NOT JE_DXC_PARALLEL_JOBS MATCHES "^[1-9][0-9]*$")
++    message(FATAL_ERROR "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer")
++endif()
++foreach(JE_PATH IN ITEMS JE_DXC_ARCHIVES_ROOT JE_DXC_PYTHON JE_DXC_NINJA JE_DXC_CL JE_DXC_OUTPUT)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_DXC_OUTPUT}" NORMALIZE JE_LOCAL_OUTPUT)
++if(NOT JE_LOCAL_OUTPUT OR JE_DXC_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE DXC output must be below checkout/build")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows" OR NOT "$ENV{VSCMD_ARG_TGT_ARCH}" STREQUAL "x64")
++    message(FATAL_ERROR "JE DXC requires the existing VS2022/v143 x64 development environment; no toolchain installation")
++endif()
++if(EXISTS "${JE_DXC_OUTPUT}")
++    message(FATAL_ERROR "JE DXC output exists; previous attempts are retained")
++endif()
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/SourcePins.json"
++    "a6a4be45d6d99baf555e13ef0661600c47585ad4089f1584e49d69dc36815cdc" "approved exact source pins")
++file(READ "${CMAKE_CURRENT_LIST_DIR}/SourcePins.json" JE_PINS)
++string(JSON JE_COUNT LENGTH "${JE_PINS}" sources)
++if(NOT JE_COUNT EQUAL 3)
++    message(FATAL_ERROR "JE DXC selected Windows closure requires exactly three sources")
++endif()
++foreach(JE_INDEX RANGE 0 2)
++    foreach(JE_FIELD IN ITEMS id url sha256 archiveRelativePath archiveRoot cmakeSHA256)
++        string(JSON JE_${JE_FIELD} GET "${JE_PINS}" sources ${JE_INDEX} ${JE_FIELD})
++    endforeach()
++    if(NOT JE_url MATCHES "^https://codeload[.]github[.]com/(o3de/DirectXShaderCompiler|KhronosGroup/SPIRV-Headers|KhronosGroup/SPIRV-Tools)/tar[.]gz/[0-9a-f]+$")
++        message(FATAL_ERROR "JE DXC source provenance URL differs from approved primary endpoints")
++    endif()
++    set(JE_ARCHIVE_${JE_id} "${JE_DXC_ARCHIVES_ROOT}/${JE_archiveRelativePath}")
++    JE_python_verify_file("${JE_ARCHIVE_${JE_id}}" "${JE_sha256}" "${JE_id} exact local archive")
++    set(JE_ARCHIVE_ROOT_${JE_id} "${JE_archiveRoot}")
++    set(JE_CMAKE_SHA_${JE_id} "${JE_cmakeSHA256}")
++endforeach()
++foreach(JE_TOOL IN ITEMS PYTHON NINJA CL)
++    JE_python_verify_file("${JE_DXC_${JE_TOOL}}" "${JE_DXC_${JE_TOOL}_SHA256}" "audited existing external ${JE_TOOL}")
++endforeach()
++string(JSON JE_NOTICE_SHA GET "${JE_PINS}" sourceNoticeSHA256)
++string(JSON JE_OVERLAY_SHA GET "${JE_PINS}" privateProvenanceSHA256)
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/SourceNotices.txt" "${JE_NOTICE_SHA}" "full source notices")
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/PrivateProvenance.json" "${JE_OVERLAY_SHA}" "three private overlays")
++# Immutable tool trees stay untouched; Python is an external generation tool only.
++set(ENV{PYTHONDONTWRITEBYTECODE} "1")
++file(MAKE_DIRECTORY "${JE_DXC_OUTPUT}/logs" "${JE_DXC_OUTPUT}/source-work")
++function(JE_dxc_native JE_LABEL)
++    set(JE_ARGS "[]")
++    set(JE_INDEX 0)
++    foreach(JE_ARGUMENT IN LISTS ARGN)
++        string(REPLACE "\\" "\\\\" JE_ESCAPED "${JE_ARGUMENT}")
++        string(REPLACE "\"" "\\\"" JE_ESCAPED "${JE_ESCAPED}")
++        string(JSON JE_ARGS SET "${JE_ARGS}" ${JE_INDEX} "\"${JE_ESCAPED}\"")
++        math(EXPR JE_INDEX "${JE_INDEX}+1")
++    endforeach()
++    file(WRITE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.argv.json" "${JE_ARGS}\n")
++    string(TIMESTAMP JE_START "%s" UTC)
++    execute_process(COMMAND ${ARGN} RESULT_VARIABLE JE_RESULT
++        OUTPUT_FILE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.stdout.txt"
++        ERROR_FILE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.stderr.txt")
++    string(TIMESTAMP JE_END "%s" UTC)
++    math(EXPR JE_SECONDS "${JE_END}-${JE_START}")
++    file(WRITE "${JE_DXC_OUTPUT}/logs/${JE_LABEL}.result.json"
++        "{\"exitResult\":\"${JE_RESULT}\",\"elapsedWholeSeconds\":${JE_SECONDS}}\n")
++    if(NOT JE_RESULT STREQUAL "0")
++        message(FATAL_ERROR "JE DXC ${JE_LABEL} failed (${JE_RESULT}); outputs retained; no package ready")
++    endif()
++endfunction()
++JE_dxc_native(python-generation-version "${JE_DXC_PYTHON}" -I -c
++    "print(__import__('sys').version) or __import__('sys').exit(0 if __import__('sys').version_info[:3] == (3, 10, 13) else 1)")
++foreach(JE_ID IN ITEMS dxc spirv-headers spirv-tools)
++    # Archives were fully tar/Gitblob audited before provisioning; no source VCS is needed.
++    file(ARCHIVE_EXTRACT INPUT "${JE_ARCHIVE_${JE_ID}}" DESTINATION "${JE_DXC_OUTPUT}/source-work/${JE_ID}")
++    set(JE_WORK_${JE_ID} "${JE_DXC_OUTPUT}/source-work/${JE_ID}/${JE_ARCHIVE_ROOT_${JE_ID}}")
++    JE_python_verify_file("${JE_WORK_${JE_ID}}/CMakeLists.txt" "${JE_CMAKE_SHA_${JE_ID}}" "${JE_ID} pristine private CMake")
++endforeach()
++set(JE_DXC_PROOF_OUTPUT "${JE_DXC_OUTPUT}/private-provenance-proof")
++include("${CMAKE_CURRENT_LIST_DIR}/ApplyPrivateProvenance.cmake")
++set(JE_BINARY "${JE_DXC_OUTPUT}/build-Release")
++JE_dxc_native(configure-Release "${CMAKE_COMMAND}" -S "${JE_WORK_dxc}" -B "${JE_BINARY}" -G Ninja
++    "-C${JE_WORK_dxc}/cmake/caches/PredefinedParams.cmake"
++    "-DCMAKE_MAKE_PROGRAM=${JE_DXC_NINJA}" "-DCMAKE_C_COMPILER=${JE_DXC_CL}" "-DCMAKE_CXX_COMPILER=${JE_DXC_CL}"
++    -DCMAKE_BUILD_TYPE=Release -DLLVM_INCLUDE_TESTS:BOOL=OFF -DCLANG_INCLUDE_TESTS:BOOL=OFF
++    -DHLSL_INCLUDE_TESTS:BOOL=OFF -DSPIRV_BUILD_TESTS:BOOL=OFF -DLLVM_INCLUDE_TOOLS=ON
++    "-DPython3_EXECUTABLE=${JE_DXC_PYTHON}" "-DDXC_SPIRV_HEADERS_DIR=${JE_WORK_spirv-headers}"
++    "-DDXC_SPIRV_TOOLS_DIR=${JE_WORK_spirv-tools}" -DHLSL_ENABLE_FIXED_VER=ON -DHLSL_FIXED_VERSION_LOCATION:PATH=
++    -DHLSL_AUTOCRLF=OFF -DSPIRV_TOOLS_BUILD_STATIC=ON -DFETCHCONTENT_FULLY_DISCONNECTED=ON)
++# Record optional ambient discoveries; never obtain a new library or suppress an existing feature.
++file(STRINGS "${JE_BINARY}/CMakeCache.txt" JE_OPTIONAL_FIND_LINES
++    REGEX "^(DIASDK|MSVC_DIA_SDK_DIR|LIBXML2|LLVM_ENABLE_ZLIB|HAVE_ZLIB_H|HAVE_LIBZ|METAL_IRCONVERTER|ENABLE_METAL_CODEGEN|Python3|LLVM_USE_CRT_RELEASE|HLSL_|ENABLE_SPIRV_CODEGEN|CMAKE_CXX_COMPILER|CMAKE_C_COMPILER)[^=]*=")
++string(REPLACE ";" "\n" JE_OPTIONAL_FIND_TEXT "${JE_OPTIONAL_FIND_LINES}")
++file(WRITE "${JE_DXC_OUTPUT}/logs/selected-cache-finds.txt" "${JE_OPTIONAL_FIND_TEXT}\n")
++JE_dxc_native(build-Release "${CMAKE_COMMAND}" --build "${JE_BINARY}" --target all llvm-as llvm-dis --parallel "${JE_DXC_PARALLEL_JOBS}")
++foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
++    if(NOT EXISTS "${JE_BINARY}/bin/${JE_FILE}")
++        message(FATAL_ERROR "JE DXC required original output missing: ${JE_FILE}")
++    endif()
++endforeach()
++# No stage/package is produced until the original real native target set succeeds.
++set(JE_STAGE "${JE_DXC_OUTPUT}/stage")
++file(MAKE_DIRECTORY "${JE_STAGE}/DirectXShaderCompilerDxc/bin" "${JE_STAGE}/LICENSES/O3DE")
++foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
++    file(COPY "${JE_BINARY}/bin/${JE_FILE}" DESTINATION "${JE_STAGE}/DirectXShaderCompilerDxc/bin")
++endforeach()
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/FindDirectXShaderCompilerDxc.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt"
++    "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/SourceNotices.txt" DESTINATION "${JE_STAGE}/LICENSES")
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT"
++    DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++string(JSON JE_RECIPE SET "${JE_PINS}" sourceNumericVersion "\"1.8.2505.0\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" sourceShortHash "\"1cc0ab76\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" historyCount 4954)
++string(JSON JE_RECIPE SET "${JE_RECIPE}" historyCountMethod "\"Pinned GitHub REST unfiltered history cardinality; not local git rev-list\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" externalPythonToolSHA256 "\"${JE_DXC_PYTHON_SHA256}\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" pythonDistributed false)
++string(JSON JE_RECIPE SET "${JE_RECIPE}" generator "\"Ninja\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" toolset "\"v143\"")
++string(JSON JE_RECIPE SET "${JE_RECIPE}" parallelJobs "${JE_DXC_PARALLEL_JOBS}")
++file(WRITE "${JE_STAGE}/DirectXShaderCompilerDxc/JERecipe.json" "${JE_RECIPE}\n")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_DXC_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "1.8.2505.1")
++set(JE_PACKAGE_SOURCE_COMMIT "1cc0ab76dafe08a4144e419e619a8951a3d219db")
++set(JE_PACKAGE_SOURCE_SHA256 "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42")
++set(JE_PACKAGE_SOURCE_URL "https://codeload.github.com/o3de/DirectXShaderCompiler/tar.gz/${JE_PACKAGE_SOURCE_COMMIT}")
++set(JE_PACKAGE_LICENSE "NCSA; Apache-2.0; Khronos permissive; scoped MIT/Unlicense, regex, Unicode/MD5 notices in LICENSES")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
++file(WRITE "${JE_DXC_OUTPUT}/package-ready.json" "{\"status\":\"PRODUCED; NATIVE CONSUMER/ROOT/EDITOR ACCEPTANCE PENDING\"}\n")
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md
+--- a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md
+@@ -1,79 +1,86 @@
+-# Local DirectXShaderCompilerDxc
+-
+-The original O3DE Windows Release/Ninja recipe is preserved, including its
+-`PredefinedParams.cmake`, targets `all llvm-as llvm-dis`, EH/RTTI/SPIRV code
+-generation, original tests-off options and four payload tools. This local
+-producer creates `DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows`
+-with a new measured package SHA. The source numeric version remains
+-`1.8.2505.0`. Find retains the imported interface target and deploys the four
+-tools under `Builders/DirectXShaderCompiler` through the engine hook.
+-
+-Only explicit local archives from `SourcePins.json` and existing audited
+-external Python3.10.13, VS2022/v143 x64 cl and VS-bundled Ninja are accepted.
+-Output must be new below this checkout/build. All source/tool hashes and
+-path guards precede output creation. No acquisition, Git, SDK/toolchain
+-installer, global install or Python payload is involved. An existing x64
+-VS development environment is required for the original Ninja build.
+-
+-Each archive is extracted into a private source-work copy. Exactly three
+-provenance overlays use raw before/after hashes and byteexact inversion:
+-private `utils/version/version.inc`, `utils/GetCommitInfo.py`, and private
+-SPIRV-Tools `utils/update_build_version.py`. The fixed version uses upstream
+-`HLSL_ENABLE_FIXED_VER=ON` with `HLSL_FIXED_VERSION_LOCATION` **empty**.
+-This matters: a nonempty alternate location still causes the upstream first
+-version target to invoke the Git generator. No upstream CMake is patched.
+-The original numeric fields remain1.8.2505.0; ProductVersion carries the full
+-archive pin. Runtime commit queries return short8 `1cc0ab76` and count4954,
+-the audited pinned API history cardinality. Full40 strings cannot be placed
+-in the original8+1 allocations. SPIRV retains its original CHANGES version.
+-
+-All native argv, result codes, stdout/stderr and whole-second timings are
+-captured. `logs/selected-cache-finds.txt` records actual optional LibXml2,
+-zlib, Metal and CRT/tool configuration; no extra dependency is acquired or
+-feature suppressed to make configuration pass. A failed build retains its
+-diagnostic work and creates no ready stamp or staged package. Only all four
+-real native output files are staged after successful original targets.
+-The shared local package helper remains unchanged. A ready stamp denotes
+-production only, not consumer/Root/Editor acceptance.
+-
+-Luna alone runs the following after parent review/freeze, from the existing
+-VS2022 x64 build environment and with fresh output:
+-
+-```powershell
+-cmake `
+-  '-DJE_DXC_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition' `
+-  '-DJE_DXC_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe' `
+-  '-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e' `
+-  '-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe' `
+-  '-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8' `
+-  '-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe' `
+-  '-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d' `
+-  '-DJE_DXC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1' `
+-  -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake'
+-```
+-
+-Extract the produced archive to a new directory. Configure `tests/` using
+-VS2022/v143 x64 with `JE_DXC_PACKAGE_ROOT` pointing to that extracted payload
+-and `JE_DXC_SOURCE_ROOT` pointing to the audited immutable DXC snapshot.
+-Build `JEDirectXShaderCompilerDxcConsumer` Release and run its four CTests.
+-The DXSC case depends on the DXIL case; use fresh consumer output so emitted
+-objects and receipts are never overwritten.
+-
+-The consumer loads the actual two package DLLs, checks API provenance and
+-numeric/full-pin PE version, compiles HLSL using an actual local include,
+-checks real DXIL retail hash and the external validator's HRESULT **and**
+-operation status, verifies SPIR-V compute main/header/instruction bounds,
+-and rejects malformed HLSL without an object. Real dxsc uses the engine's
+-`0x45678900` sentinel, must change the specialization-bearing container,
+-produce a valid bit offset for constant7 and revalidate its retail DXIL.
+-Malformed DXIL must be rejected without a successful output. The pure hash
+-oracle compiles only the pinned upstream hash source, not upstream CMake.
+-No `-Vd`, preview profile, developer mode, experimental bypass or mock is used.
+-
+-Native producer/consumer and producer guard negatives are pending Luna.
+-Relevant negatives: missing/corrupt source/tool, remote/UNC/symlink path,
+-existing/outside-build output, wrong private-patch witness and absent x64
+-build environment. Optional ambient libraries/actual PE imports need review;
+-full licensing notices do not certify legal redistribution. Root target
+-generation, AP compilation and real DX12/Vulkan Editor/PSO acceptance remain
+-separate pending gates.
++# Local DirectXShaderCompilerDxc
++
++The original O3DE Windows Release/Ninja recipe is preserved, including its
++`PredefinedParams.cmake`, targets `all llvm-as llvm-dis`, EH/RTTI/SPIRV code
++generation, original tests-off options and four payload tools. This local
++producer creates `DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows`
++with a new measured package SHA. The source numeric version remains
++`1.8.2505.0`. Find retains the imported interface target and deploys the four
++tools under `Builders/DirectXShaderCompiler` through the engine hook.
++
++Only explicit local archives from `SourcePins.json` and existing audited
++external Python3.10.13, VS2022/v143 x64 cl and VS-bundled Ninja are accepted.
++Output must be new below this checkout/build. All source/tool hashes and
++path guards precede output creation. No acquisition, Git, SDK/toolchain
++installer, global install or Python payload is involved. An existing x64
++VS development environment is required for the original Ninja build.
++
++`JE_DXC_PARALLEL_JOBS` is required and must be a positive integer before
++any output is created. Native build argv uses explicit `--parallel <jobs>`;
++the initial reviewed assignment uses 6 jobs to contain concurrent memory
++usage while preserving every original target. The actual value is recorded
++in JERecipe.json and the native argv receipt.
++
++Each archive is extracted into a private source-work copy. Exactly three
++provenance overlays use raw before/after hashes and byteexact inversion:
++private `utils/version/version.inc`, `utils/GetCommitInfo.py`, and private
++SPIRV-Tools `utils/update_build_version.py`. The fixed version uses upstream
++`HLSL_ENABLE_FIXED_VER=ON` with `HLSL_FIXED_VERSION_LOCATION` **empty**.
++This matters: a nonempty alternate location still causes the upstream first
++version target to invoke the Git generator. No upstream CMake is patched.
++The original numeric fields remain1.8.2505.0; ProductVersion carries the full
++archive pin. Runtime commit queries return short8 `1cc0ab76` and count4954,
++the audited pinned API history cardinality. Full40 strings cannot be placed
++in the original8+1 allocations. SPIRV retains its original CHANGES version.
++
++All native argv, result codes, stdout/stderr and whole-second timings are
++captured. `logs/selected-cache-finds.txt` records actual optional LibXml2,
++zlib, Metal and CRT/tool configuration; no extra dependency is acquired or
++feature suppressed to make configuration pass. A failed build retains its
++diagnostic work and creates no ready stamp or staged package. Only all four
++real native output files are staged after successful original targets.
++The shared local package helper remains unchanged. A ready stamp denotes
++production only, not consumer/Root/Editor acceptance.
++
++Luna alone runs the following after parent review/freeze, from the existing
++VS2022 x64 build environment and with fresh output:
++
++```powershell
++cmake `
++  '-DJE_DXC_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition' `
++  '-DJE_DXC_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe' `
++  '-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e' `
++  '-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe' `
++  '-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8' `
++  '-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe' `
++  '-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d' `
++  '-DJE_DXC_PARALLEL_JOBS=6' `
++  '-DJE_DXC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1' `
++  -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake'
++```
++
++Extract the produced archive to a new directory. Configure `tests/` using
++VS2022/v143 x64 with `JE_DXC_PACKAGE_ROOT` pointing to that extracted payload
++and `JE_DXC_SOURCE_ROOT` pointing to the audited immutable DXC snapshot.
++Build `JEDirectXShaderCompilerDxcConsumer` Release and run its four CTests.
++The DXSC case depends on the DXIL case; use fresh consumer output so emitted
++objects and receipts are never overwritten.
++
++The consumer loads the actual two package DLLs, checks API provenance and
++numeric/full-pin PE version, compiles HLSL using an actual local include,
++checks real DXIL retail hash and the external validator's HRESULT **and**
++operation status, verifies SPIR-V compute main/header/instruction bounds,
++and rejects malformed HLSL without an object. Real dxsc uses the engine's
++`0x45678900` sentinel, must change the specialization-bearing container,
++produce a valid bit offset for constant7 and revalidate its retail DXIL.
++Malformed DXIL must be rejected without a successful output. The pure hash
++oracle compiles only the pinned upstream hash source, not upstream CMake.
++No `-Vd`, preview profile, developer mode, experimental bypass or mock is used.
++
++Native producer/consumer and producer guard negatives are pending Luna.
++Relevant negatives: missing/corrupt source/tool, remote/UNC/symlink path,
++existing/outside-build output, wrong private-patch witness and absent x64
++build environment. Optional ambient libraries/actual PE imports need review;
++full licensing notices do not certify legal redistribution. Root target
++generation, AP compilation and real DX12/Vulkan Editor/PSO acceptance remain
++separate pending gates.

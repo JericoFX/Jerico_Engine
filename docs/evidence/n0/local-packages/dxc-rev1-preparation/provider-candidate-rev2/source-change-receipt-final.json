@@ -1,0 +1,44 @@
+{
+  "status": "EXACT SOURCE REVISION ONLY; NATIVE NOT RUN",
+  "revision": 2,
+  "oldInputCount": 23322,
+  "providerFiles": 12,
+  "changedProviderFiles": 2,
+  "unchangedProviderFiles": 10,
+  "sourceDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\BuildDirectXShaderCompilerDxcPackage.cmake",
+      "beforeBytes": 9380,
+      "beforeSHA256": "fb87a7b551f2549e17279f27ec3bfb3b732c3389ab35e1564e34ec349949e182",
+      "afterBytes": 9645,
+      "afterSHA256": "0016b9f0b56e86ae57ec3d48db0f923c3b0f4b4e3f28d2eb50a9819e9c9fe817",
+      "inverseByteExact": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\README.md",
+      "beforeBytes": 5259,
+      "beforeSHA256": "f5812f6139b2c1299a56cf55d0809c8f8899c0a3e00cc4e292a8f09eb3185acf",
+      "afterBytes": 5634,
+      "afterSHA256": "da8dd0068c7ce61eda81670254e6308cb8046329bb897619c82007d3d71e684f",
+      "inverseByteExact": true
+    }
+  ],
+  "sourceReplacements": 6,
+  "inverseByteExact": true,
+  "parallelJobs": 6,
+  "guardPlacement": "Required argument and canonical positive integer check before path reads/output creation/native commands",
+  "targetsUnchanged": "all llvm-as llvm-dis",
+  "sidecarCorrection": ".tar.xz.SHA256SUMS from actual shared helper; rev1 assignment preserved",
+  "sourceGeneration": "Original codegen remains enabled; HLSL_COPY_GENERATED_SOURCES default OFF untouched",
+  "primarySource": "https://cmake.org/cmake/help/v4.3/manual/cmake.1.html#build-a-project",
+  "nativeExecuted": false,
+  "acceptance": false,
+  "finalREADMECommandCorrection": {
+    "scope": "Only trailing space after newly added PowerShell continuation backtick",
+    "inverseByteExact": true,
+    "removedBytes": 1,
+    "originalRev1InverseComposition": "Final to draft exact one-space inverse, then six exact revision inverses already verified in source-change-receipt.json",
+    "draftSHA256": "87477492e514d03b4a7b3be3e7472d6b1b7363788ff11447a9e955e1514731f6",
+    "finalSHA256": "da8dd0068c7ce61eda81670254e6308cb8046329bb897619c82007d3d71e684f"
+  }
+}

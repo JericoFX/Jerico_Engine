@@ -1,0 +1,109 @@
+{
+  "status": "PARENT STATIC PE REVIEW PASS",
+  "packageFiles": 15,
+  "payloadManifestRecords": 14,
+  "packageSHA256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782",
+  "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+  "binaries": [
+    {
+      "name": "dxc.exe",
+      "rawCaptureSHA256": "B795020596AD625E0944A451CD2DE19CED05C1E817AFB9C361F97F0D98F9B238",
+      "nativeExit": 0,
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "machine": "AMD64",
+      "imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "ole32.dll",
+        "OLEAUT32.dll",
+        "VCRUNTIME140_1.dll",
+        "VCRUNTIME140.dll",
+        "VERSION.dll"
+      ]
+    },
+    {
+      "name": "dxsc.exe",
+      "rawCaptureSHA256": "80A9070D0C499E3CA5D0DFF52E5902652254D6E3C0D85F35C5472B8B32E9CA88",
+      "nativeExit": 0,
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "machine": "AMD64",
+      "imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "dxcompiler.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "ole32.dll",
+        "VCRUNTIME140_1.dll",
+        "VCRUNTIME140.dll"
+      ]
+    },
+    {
+      "name": "dxcompiler.dll",
+      "rawCaptureSHA256": "AAA0B9355EABC31FACF32E2A043EF7E169FDFC7D04FB14B88E4D3333DB990FF2",
+      "nativeExit": 0,
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "machine": "AMD64",
+      "imports": [
+        "ADVAPI32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "ole32.dll",
+        "OLEAUT32.dll",
+        "VCRUNTIME140_1.dll",
+        "VCRUNTIME140.dll"
+      ]
+    },
+    {
+      "name": "dxil.dll",
+      "rawCaptureSHA256": "2EB1F0FCA5AB3DF16D4929B31EBE4150DC3476D30A9A8688E406241A5C448975",
+      "nativeExit": 0,
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "machine": "AMD64",
+      "imports": [
+        "ADVAPI32.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "ole32.dll",
+        "VCRUNTIME140_1.dll",
+        "VCRUNTIME140.dll"
+      ]
+    }
+  ],
+  "toolExecutedByParent": false,
+  "runtimeDependencies": "Observed Windows/MSVC CRT imports; presence checks in Luna evidence. API-set contracts are not classified as missing physical DLLs.",
+  "limits": "Static PE and local presence evidence only. No portability, signing, engine, device or frame acceptance.",
+  "engineAccepted": false
+}

@@ -1,0 +1,180 @@
+{
+  "status": "READONLY SOURCE/PRIMARY DOCUMENTATION AUDIT; NATIVE VALIDATION PENDING",
+  "sourceCommit": "1cc0ab76dafe08a4144e419e619a8951a3d219db",
+  "conclusion": "No additional closed/signed Microsoft validator binary acquisition is required by the audited 2025 source contract. The source includes retail DXIL hash computation; original four-tool payload still includes its source-built dxil.dll.",
+  "distinctions": [
+    "DXIL container validator hash is not Windows DLL Authenticode signing.",
+    "The older 2021 wiki describes the pre-open-source validator flow, and cannot override the exact 2025 implementation.",
+    "Successful HRESULT alone is insufficient: consumer must inspect IDxcOperationResult status, hash/container, invalid-shader rejection and later real DX12 pipeline acceptance."
+  ],
+  "sourceChain": [
+    "lib/DxilHash/DxilHash.cpp:211 implements ComputeHashRetail,351 ComputeHashDebug under NCSA source license.",
+    "tools/clang/tools/dxcvalidator/dxcvalidator.cpp:36-85 computes retail hash for ordinary shader models; preview models use PreviewByPassHash upstream. Do not request preview profiles or bypass.",
+    "dxcvalidator.cpp:101 calls ValidateDxilContainer;222-270 retains validationStatus and returns it in IDxcOperationResult alongside hashed container. Require successful operation status.",
+    "tools/clang/tools/dxcvalidator/CMakeLists.txt:5-24 links DxilHash and DxilValidation into dxcvalidator.",
+    "tools/clang/tools/dxcompiler/dxcutil.cpp:53-79 Auto selects the internal validator; only explicit External requires dxil.dll.",
+    "tools/clang/tools/dxildll/CMakeLists.txt links LLVMDxilHash and dxcvalidator; dxildll/dxcvalidator.cpp:76-94 delegates to the same validateWithDebug routine.",
+    "lib/DxilContainer/DxcContainerBuilder.cpp:195-220 detects/preserves retail/debug hashing for supported container edits; this is relevant to specialization edits, not a substitute for runtime proof."
+  ],
+  "publicSources": [
+    {
+      "url": "https://api.github.com/repos/microsoft/DirectXShaderCompiler/releases/tags/v1.8.2502",
+      "status": 200,
+      "autoRedirect": false,
+      "authentication": false,
+      "bytes": 7937,
+      "sha256": "8F7602422B45CB4A469A4A619A4D7A1710C141CD5E999384B45A5A186AE84C89",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\dxil-signing-audit\\microsoft-release-v1.8.2502.json",
+      "fetchedUtc": "2026-10-11T06:11:05.9404984Z",
+      "binaryAcquired": false
+    },
+    {
+      "url": "https://devblogs.microsoft.com/directx/open-sourcing-dxil-validator-hash/",
+      "status": 200,
+      "autoRedirect": false,
+      "authentication": false,
+      "bytes": 235518,
+      "sha256": "D1D35CEF53182E1B8CA9A0015D9C27C0E906C22C250050158D68EB67D9A80F73",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\dxil-signing-audit\\microsoft-dxil-validator-hash.html",
+      "fetchedUtc": "2026-10-11T06:11:07.9671807Z",
+      "binaryAcquired": false
+    }
+  ],
+  "officialRelease": {
+    "url": "https://github.com/microsoft/DirectXShaderCompiler/releases/tag/v1.8.2502",
+    "tag": "v1.8.2502",
+    "publishedAt": "2025-02-21T22:07:31Z",
+    "interpretation": "February2025 release explicitly removes separate validator requirement for hashed shaders and cites the open-sourcing change. No release asset requested."
+  },
+  "prohibitedShortcuts": [
+    "-Vd",
+    "developer-mode enablement",
+    "experimental shader-model bypass",
+    "replacement vanilla compiler",
+    "omitting dxsc/dxil from the original payload"
+  ],
+  "sourceInputs": [
+    {
+      "relativePath": "README.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\README.md",
+      "bytes": 5996,
+      "sha256": "5EAE5E583199559719545D0DA74502F510FF1BFBA90D0F7E2179AEE189553F16",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/README.md"
+    },
+    {
+      "relativePath": "LICENSE.TXT",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\LICENSE.TXT",
+      "bytes": 29241,
+      "sha256": "27A49E35D1DA96EBA18FBA54BC882667FF0FF8C0254F16F2B6E165D605BA7DF8",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/LICENSE.TXT"
+    },
+    {
+      "relativePath": "ThirdPartyNotices.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\ThirdPartyNotices.txt",
+      "bytes": 11256,
+      "sha256": "19512A5D0A015EF16D167272C164DA49A604614A786206212A80AD486ED0BE6D",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/ThirdPartyNotices.txt"
+    },
+    {
+      "relativePath": "lib/DxilHash/DxilHash.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\lib\\DxilHash\\DxilHash.cpp",
+      "bytes": 20017,
+      "sha256": "D66B631EA28D4C90A8217FAC004F9290EAAC07F79115451E0C4E954C0B0C94AF",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/lib/DxilHash/DxilHash.cpp"
+    },
+    {
+      "relativePath": "lib/DxilHash/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\lib\\DxilHash\\CMakeLists.txt",
+      "bytes": 47,
+      "sha256": "BDA2EEF9F3AE66A3F1CD2D5AC9301C620A166F6DED3600569B9219E56C2F99F3",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/lib/DxilHash/CMakeLists.txt"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxcvalidator/dxcvalidator.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxcvalidator\\dxcvalidator.cpp",
+      "bytes": 11169,
+      "sha256": "0489C898ADCFEAC9CAF4CC84BA6B83A6CD93EE8825A3E6D182AC495BE1DD42A6",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxcvalidator/dxcvalidator.cpp"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxcvalidator/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxcvalidator\\CMakeLists.txt",
+      "bytes": 809,
+      "sha256": "94483C5C91644B00A9BD164745399CD9A47942A18624FB859C18A3D28A44FC7F",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxcvalidator/CMakeLists.txt"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxildll/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxildll\\CMakeLists.txt",
+      "bytes": 1862,
+      "sha256": "C0D0E5BA27FD6DA7FD9ED6359F3B376B29D5BD05F5743ACF4B482F76FDC271F0",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxildll/CMakeLists.txt"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxildll/dxcvalidator.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxildll\\dxcvalidator.cpp",
+      "bytes": 4908,
+      "sha256": "0417EE37954DDAE5AAFC3B9BD34AB14370BF07B72147D532031113AB167CD4B5",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxildll/dxcvalidator.cpp"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxcompiler/dxcutil.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxcompiler\\dxcutil.cpp",
+      "bytes": 15990,
+      "sha256": "BABC23CBA835C5D299B9185683308DCFD0CC8D863E2F5B03F8B59A71BAB18DE4",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxcompiler/dxcutil.cpp"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxcompiler/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxcompiler\\CMakeLists.txt",
+      "bytes": 3774,
+      "sha256": "8B7DFFF230E0085C6E0028DE000CCA5D987D628319EC6B46F32490368B98DE6A",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxcompiler/CMakeLists.txt"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxcompiler/dxcvalidator.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxcompiler\\dxcvalidator.cpp",
+      "bytes": 6404,
+      "sha256": "CA39F883508A16DC803A95ECF5B51CB81BCDE6FF85B0D930F0FC51574AC39923",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxcompiler/dxcvalidator.cpp"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxcompiler/dxillib.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxcompiler\\dxillib.cpp",
+      "bytes": 2515,
+      "sha256": "2E606BA823801D4259C3A077F61C8ED53768E4EA123206CF7BABE561A77CF3B9",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxcompiler/dxillib.cpp"
+    },
+    {
+      "relativePath": "lib/DxilContainer/DxcContainerBuilder.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\lib\\DxilContainer\\DxcContainerBuilder.cpp",
+      "bytes": 11612,
+      "sha256": "8EB4E5C85A7984E605AFBBA3441DA5A808F78DED4A6B6892E88E1F11BA8D6467",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/lib/DxilContainer/DxcContainerBuilder.cpp"
+    },
+    {
+      "relativePath": "unittests/DxilHash/DxilHashTest.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\unittests\\DxilHash\\DxilHashTest.cpp",
+      "bytes": 4206,
+      "sha256": "6A6A37B660ABAA5FF7707A7C09006B4E0DDE9592096CF80440E72A3B8FFA32E1",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/unittests/DxilHash/DxilHashTest.cpp"
+    },
+    {
+      "relativePath": "tools/clang/tools/dxsc/dxsc.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\tools\\clang\\tools\\dxsc\\dxsc.cpp",
+      "bytes": 15110,
+      "sha256": "B260D7EA038FB4A46A179CE2D4E9DA10770C6D9EB390E7507FD5B917E8F7E24C",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/tools/clang/tools/dxsc/dxsc.cpp"
+    },
+    {
+      "relativePath": "lib/DxilCompression/LICENSE.TXT",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\lib\\DxilCompression\\LICENSE.TXT",
+      "bytes": 1162,
+      "sha256": "6F20FA7672B00E2E975C291DF737CF227ADDF3AD32E36FEF3FE0F416E4664D3D",
+      "url": "https://raw.githubusercontent.com/o3de/DirectXShaderCompiler/1cc0ab76dafe08a4144e419e619a8951a3d219db/lib/DxilCompression/LICENSE.TXT"
+    }
+  ],
+  "nativeExecuted": false,
+  "gpuAcceptance": false,
+  "redistributionCertified": false
+}

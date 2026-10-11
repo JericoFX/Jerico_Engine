@@ -1,0 +1,89 @@
+{
+  "status": "PARENT FOCAL PACKAGE ACCEPTED AND CATALOG/CACHE INTEGRATED",
+  "package": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows",
+  "archiveBytes": 7352940,
+  "archiveSHA256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782",
+  "producer": "5ABB25C1883ADEA32789D9C0FE18C1F3C2A2654A5984BC994DC619861862AB08",
+  "finalConsumer": "5F2FE485E62B302D3E9B49AA98F67D233023BE9A7C2D084C1A0C9F4B81A7357D",
+  "consumerCases": 4,
+  "negativeCases": 18,
+  "negativeScopes": {
+    "PRIVATE-OVERLAY": 1,
+    "FUNCTION-GUARD": 1,
+    "PRODUCER": 16
+  },
+  "negativeEvidenceSHA256": "8E307CEC3C1F21745957D76EDE72F92DED0FEC574D8756CA597F727BE4B8924C",
+  "parentPeReviewSHA256": "C9B43FFBD68C972181A177506FEB1A64AC76C80E9BD63ABA85065037437B0731",
+  "sourceInputs": 23385,
+  "providerFiles": [
+    {
+      "sha256": "CC79754C8EDB6C43A26C16EA2339F8AD9186B529C4991CFB4E2A187C595F20E4",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/ApplyPrivateProvenance.cmake",
+      "bytes": 4298
+    },
+    {
+      "sha256": "0016B9F0B56E86AE57EC3D48DB0F923C3B0F4B4E3F28D2EB50A9819E9C9FE817",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake",
+      "bytes": 9645
+    },
+    {
+      "sha256": "8A336ECB7756A6A2F2AF156D3EA414A99A8887EEB7E7B87DBAAC17495AC6CF77",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/FindDirectXShaderCompilerDxc.cmake",
+      "bytes": 1512
+    },
+    {
+      "sha256": "6F78013B4F0E468A34EA2E9BCEF2DC1B7BAF7C66874BE6EBFED558B9BF4D2A8B",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/NOTICE.txt",
+      "bytes": 2605
+    },
+    {
+      "sha256": "4A8716EB03A11408BB65CB3A15550193BE6685EB0D7E8EE140F4E3AA50943266",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/PrivateProvenance.json",
+      "bytes": 2762
+    },
+    {
+      "sha256": "DA8DD0068C7CE61EDA81670254E6308CB8046329BB897619C82007D3D71E684F",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/README.md",
+      "bytes": 5634
+    },
+    {
+      "sha256": "86CD3780FE9FCFB8D7D66543F1C42D45B43BBD14BE21119E07366E2A77AFEB74",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourceNotices.txt",
+      "bytes": 81433
+    },
+    {
+      "sha256": "A6A4BE45D6D99BAF555E13EF0661600C47585AD4089F1584E49D69DC36815CDC",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourcePins.json",
+      "bytes": 2327
+    },
+    {
+      "sha256": "38474A1491A498B50A77E7A778995E10CA7A9D175EBF3C2403D1C64FB803B752",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/CMakeLists.txt",
+      "bytes": 3041
+    },
+    {
+      "sha256": "3FE2DA8FC5D468FFDCC14090AD2D2FB7EC0B44A328059AB47D33AD6E4E723064",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp",
+      "bytes": 13255
+    },
+    {
+      "sha256": "F6462EB20C39329A2EE64F23D7FE53BF702E622ED5A7EBB30E841B58946EFE0B",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/JE_DxcFixture.hlsli",
+      "bytes": 128
+    },
+    {
+      "sha256": "CFE8DE91F8D2809B0E640A386023D11A25E166D7F5CD563D4DC5BA91803B1B21",
+      "path": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/RunDxsc.cmake",
+      "bytes": 2800
+    }
+  ],
+  "cacheFilesBefore": 34,
+  "cacheFilesAfter": 36,
+  "catalogBeforeSHA256": "787C1CD917DE63F52FAE25B3825C9AE4E1DE18B65EA042CC0211482C594FA00A",
+  "catalogAfterSHA256": "EF3CD0C05C25764DE725A0D197846BE6F0F5CA043A812812E9DB5B757733F326",
+  "catalogInverseExact": true,
+  "review": "Original source pins, options, four binaries, codegen, legal notices and archive retained. Only consumer API/version and empty-object oracle corrected using upstream and actual RED/GREEN.",
+  "limits": "Focal shader compiler package. Static PE/import presence and native API consumers do not establish portability, signing, Editor/AP/runtime, DX12/Vulkan frames or product dependency separation.",
+  "rootExecuted": false,
+  "engineAccepted": false
+}

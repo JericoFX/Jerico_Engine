@@ -1,0 +1,16 @@
+{
+  "id": "spirv-tools",
+  "repository": "KhronosGroup/SPIRV-Tools",
+  "commit": "a62abcb402009b9ca5975e6167c09f237f630e0e",
+  "url": "https://codeload.github.com/KhronosGroup/SPIRV-Tools/tar.gz/a62abcb402009b9ca5975e6167c09f237f630e0e",
+  "status": 200,
+  "redirectFollowed": false,
+  "authentication": false,
+  "bytes": 3289276,
+  "sha256": "7f6561171be2f314a26cb2a686d653050ee318655a89970d41ab3bef3269a4db",
+  "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\spirv-tools-a62abcb402009b9ca5975e6167c09f237f630e0e.tar.gz",
+  "headGetEtagEqual": true,
+  "etag": "\"b51646e07e0d2d6a290622be132a7605ac76988cabd1b0ab7c7edb67785128e7\"",
+  "utc": "2026-10-11T05:40:25.9851868Z",
+  "identity": "Measured original source archive, not historical package hash; pending full tar/primary Gitblob verification"
+}

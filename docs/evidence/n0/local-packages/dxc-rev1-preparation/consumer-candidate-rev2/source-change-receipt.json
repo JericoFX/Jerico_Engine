@@ -1,0 +1,20 @@
+{
+  "status": "ONE SOURCE ORACLE CORRECTION; NATIVE NOT RUN",
+  "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+  "beforeBytes": 11330,
+  "beforeSHA256": "849A88914C60A4E4327C69068DA4914BFA9B9B41C062873DBB444A5A7AA63E4F",
+  "afterBytes": 11542,
+  "afterSHA256": "A09161480B2D8C90C1B9DA96A50DE1F3909C09CD7D6EA0554556212C95851C3A",
+  "exactInverse": true,
+  "sourceContract": [
+    "dxcompiler/dxcompilerobj.cpp:1708-1714 returns DXIL::kDxilMajor/kDxilMinor",
+    "include/dxc/DXIL/DxilConstants.h:29,32 are1,9",
+    "dxildll/dxcvalidator.cpp:97-100 delegates getValidationVersion",
+    "dxcvalidator/dxcvalidator.cpp:278-282 delegates generated GetValidationVersion",
+    "build-Release/lib/DxilValidation/DxilValidationImpl.inc:533-534 actual generated1,9",
+    "utils/version/version.inc:RC_VERSION_FIELD_1..4/RC_FILE_VERSION remain1.8.2505.0"
+  ],
+  "nativeObservedFailure": "Historical consumer-attempt1 CTest failed compiler1.8 oracle before compile; dxsc dependency had no emitted fixture",
+  "producerOrPackageChange": false,
+  "bypassAdded": false
+}

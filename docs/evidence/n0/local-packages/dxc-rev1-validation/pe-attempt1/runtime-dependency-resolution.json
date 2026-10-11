@@ -1,0 +1,187 @@
+{
+  "scope": "Read-only existence checks in package bin, Windows System32, and installed VS VC143 x64 redist folders; not loader proof",
+  "candidateDirs": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin",
+    "C:\\WINDOWS\\System32",
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT"
+  ],
+  "imports": [
+    {
+      "dll": "ADVAPI32.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+          "bytes": 791056,
+          "fileVersion": "10.0.26100.3624 (WinBuild.160101.0800)"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "api-ms-win-crt-convert-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-time-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "api-ms-win-crt-utility-l1-1-0.dll",
+      "found": [],
+      "resolved": false
+    },
+    {
+      "dll": "dxcompiler.dll",
+      "found": [
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxcompiler.dll",
+          "bytes": 21216256,
+          "fileVersion": "1.8.2505.0"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "KERNEL32.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\KERNEL32.dll",
+          "bytes": 861984,
+          "fileVersion": "10.0.26100.9549 (WinBuild.160101.0800)"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "MSVCP140.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\MSVCP140.dll",
+          "bytes": 643512,
+          "fileVersion": "14.51.36247.0"
+        },
+        {
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\MSVCP140.dll",
+          "bytes": 557728,
+          "fileVersion": "14.44.35211.0"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "ole32.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\ole32.dll",
+          "bytes": 1720576,
+          "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "OLEAUT32.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+          "bytes": 916152,
+          "fileVersion": "10.0.26100.9549 (WinBuild.160101.0800)"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "VCRUNTIME140_1.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\VCRUNTIME140_1.dll",
+          "bytes": 50112,
+          "fileVersion": "14.51.36247.0"
+        },
+        {
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\VCRUNTIME140_1.dll",
+          "bytes": 49792,
+          "fileVersion": "14.44.35211.0"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "VCRUNTIME140.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\VCRUNTIME140.dll",
+          "bytes": 178616,
+          "fileVersion": "14.51.36247.0"
+        },
+        {
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\VCRUNTIME140.dll",
+          "bytes": 124544,
+          "fileVersion": "14.44.35211.0"
+        }
+      ],
+      "resolved": true
+    },
+    {
+      "dll": "VERSION.dll",
+      "found": [
+        {
+          "path": "C:\\WINDOWS\\System32\\VERSION.dll",
+          "bytes": 55192,
+          "fileVersion": "10.0.26100.1150 (WinBuild.160101.0800)"
+        }
+      ],
+      "resolved": true
+    }
+  ],
+  "notFound": [
+    "api-ms-win-crt-convert-l1-1-0.dll",
+    "api-ms-win-crt-environment-l1-1-0.dll",
+    "api-ms-win-crt-heap-l1-1-0.dll",
+    "api-ms-win-crt-locale-l1-1-0.dll",
+    "api-ms-win-crt-math-l1-1-0.dll",
+    "api-ms-win-crt-runtime-l1-1-0.dll",
+    "api-ms-win-crt-stdio-l1-1-0.dll",
+    "api-ms-win-crt-string-l1-1-0.dll",
+    "api-ms-win-crt-time-l1-1-0.dll",
+    "api-ms-win-crt-utility-l1-1-0.dll"
+  ],
+  "pythonMetalLibXml2Zlib": []
+}

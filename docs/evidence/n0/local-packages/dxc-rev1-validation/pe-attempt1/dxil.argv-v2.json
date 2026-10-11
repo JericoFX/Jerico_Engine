@@ -1,0 +1,12 @@
+{
+  "executable": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+  "arguments": [
+    "/headers",
+    "/imports",
+    "/exports",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxil.dll"
+  ],
+  "argumentCount": 4,
+  "targetPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxil.dll",
+  "targetSHA256": "4DC3C25408D7BC058EAA9F106E0FCED51DEC788970AEB7F8A4B3B3AAD7B968C5"
+}

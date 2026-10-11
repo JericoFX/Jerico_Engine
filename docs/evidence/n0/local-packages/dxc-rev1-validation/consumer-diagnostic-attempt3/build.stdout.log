@@ -1,0 +1,8 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/CMakeLists.txt
+  DirectXShaderCompilerDxcConsumer.cpp
+  DxilHash.cpp
+  Generando código...
+  JEDirectXShaderCompilerDxcConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-native-consumer-rev3\Release\JEDirectXShaderCompilerDxcConsumer.exe

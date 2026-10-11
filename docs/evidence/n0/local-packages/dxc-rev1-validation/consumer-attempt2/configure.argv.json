@@ -1,0 +1,19 @@
+{
+  "workingDirectory": "F:/JericoEngine/JericoEngine",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/tests",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev2",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_DXC_PACKAGE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1",
+    "-DJE_DXC_SOURCE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition/dxc/snapshot",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
+  ]
+}

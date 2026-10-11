@@ -1,0 +1,66 @@
+{
+  "status": "PARENT REVIEWED DIAGNOSTIC DISPATCH; EXPECTED HISTORICAL ASSERTION RED",
+  "nativeOwner": "Existing validation_luna only",
+  "driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/RunDxcConsumerDiagnosticParentRev3b.ps1",
+  "driverSHA256": "D516E0827B5E63C5E4EE8741A7938E337F137CAAE853338EC3882DAB821F9382",
+  "sourceFreezeSHA256": "B06DB30C0DCDEC4EF685C8606C0A8FD19F54D1B1E967C90DA35DB4842750B909",
+  "sourceInputs": 23379,
+  "cppSHA256": "4ED3A3DCFBDDC5E3E8E4006B449E5BE8F77E5C81DECF9F9C39F3DB14623E1407",
+  "configure": {
+    "argv": [
+      "-S",
+      "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/tests",
+      "-B",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev3",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_DXC_PACKAGE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1",
+      "-DJE_DXC_SOURCE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition/dxc/snapshot",
+      "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
+    ],
+    "executable": "C:/Program Files/CMake/bin/cmake.exe"
+  },
+  "build": {
+    "argv": [
+      "--build",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev3",
+      "--config",
+      "Release",
+      "--target",
+      "JEDirectXShaderCompilerDxcConsumer",
+      "--parallel",
+      "6"
+    ],
+    "executable": "C:/Program Files/CMake/bin/cmake.exe"
+  },
+  "ctest": {
+    "argv": [
+      "--test-dir",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev3",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "-R",
+      "^JE[.]LocalPackages[.]DXC[.]invalid$",
+      "--output-junit",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-diagnostic-attempt3/ctest.junit.xml"
+    ],
+    "executable": "C:/Program Files/CMake/bin/ctest.exe",
+    "cases": [
+      "JE.LocalPackages.DXC.invalid"
+    ]
+  },
+  "purpose": "Observe HRESULT, diagnostics, advertised slot and both object lengths while retaining the historical rejection assertion.",
+  "preserved": "Source pins, original producer, all positive oracles and immutable 15-file extracted package.",
+  "producerRebuild": false,
+  "extraction": false,
+  "rootExecuted": false,
+  "acceptance": false,
+  "parserErrors": 0,
+  "harnessCorrection": "Correct exactly one frozen file basename rev2 to rev3. Previous preflight caught absence before any native execution; previous evidence retained.",
+  "inverseExact": true
+}

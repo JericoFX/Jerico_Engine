@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:20 (message):
+  JE DXC output must be below checkout/build
+
+

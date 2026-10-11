@@ -1,0 +1,1122 @@
+{
+  "name": "clipper-original-after",
+  "path": "F:\\JericoEngine\\Dependencies\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+  "fileCount": 223,
+  "files": [
+    {
+      "relativePath": ".gitignore",
+      "bytes": 3,
+      "sha256": "64263feac7b00952e9ec3b6c1fd11316faa58ff673c6bd085fac9f6f8d8389f6"
+    },
+    {
+      "relativePath": ".gitmodules",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "LICENSE",
+      "bytes": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 5933,
+      "sha256": "232437d0b8343f875c367e642b96dd4ab30d5b473cc91f659a50caec018af52a"
+    },
+    {
+      "relativePath": ".github\\workflows\\actions_cpp.yml",
+      "bytes": 3161,
+      "sha256": "7d6c475f10c17950d661cf3da554754e536a4c519d99c53ee8356e2c87ee20b7"
+    },
+    {
+      "relativePath": ".github\\workflows\\actions_csharp.yml",
+      "bytes": 616,
+      "sha256": "ff5ed1f88361c8a9b53d6fd6e5f01ef3a50c6617a420c42eef1622587e8a4df2"
+    },
+    {
+      "relativePath": "CPP\\.gitignore",
+      "bytes": 6,
+      "sha256": "a7fe054ec20f82b733ba8542234af61d2f3d3ed5f65185347e3c04629ec3b952"
+    },
+    {
+      "relativePath": "CPP\\clipper.version.in",
+      "bytes": 138,
+      "sha256": "0fa7b02aae2751806611a1d8636df89f162608c1af2a9e6b9b5876876a99c544"
+    },
+    {
+      "relativePath": "CPP\\Clipper2.pc.cmakein",
+      "bytes": 382,
+      "sha256": "90ed5212fc01c5d3b25b16ce62498f4f29610d444aa5c1a2588aea18704da74f"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Config.cmake.in",
+      "bytes": 156,
+      "sha256": "8aee0e82d16ff7cd05febd66b1fb1deba790e03c3205f0920ef96c478b1e95b4"
+    },
+    {
+      "relativePath": "CPP\\CMakeLists.txt",
+      "bytes": 12832,
+      "sha256": "9838e05405efb2db0db11f20dea7c2d3fdfff211dd6be42e3c0e2611ae886348"
+    },
+    {
+      "relativePath": "CPP\\GoogleTest in Visual Studio.txt",
+      "bytes": 590,
+      "sha256": "88161152c1f3fb4b3a58c310c69f8430127164c9834ec195c5f3829b9e2e1aa9"
+    },
+    {
+      "relativePath": "CPP\\BenchMark\\CMakeLists.txt",
+      "bytes": 2198,
+      "sha256": "ae74f30a274f0813f64e0b51463ddfa6918f13f63e956b0b67e51a1255f80b06"
+    },
+    {
+      "relativePath": "CPP\\BenchMark\\GetIntersectPtBenchmark.cpp",
+      "bytes": 18032,
+      "sha256": "1123c2044dbcc4d62ea833f0193d46ce8c25811221544d9103150b4e26524277"
+    },
+    {
+      "relativePath": "CPP\\BenchMark\\PointInPolygonBenchmark.cpp",
+      "bytes": 16848,
+      "sha256": "0563ad4ca0504c73eb64dcfb5c97f5f2e474af68837da2ed8a2e8af8f071241a"
+    },
+    {
+      "relativePath": "CPP\\BenchMark\\README.md",
+      "bytes": 163,
+      "sha256": "550239ca88c00d946a35f8b264eab4cd51f663d51b8402ac5825b4f239fde5c7"
+    },
+    {
+      "relativePath": "CPP\\BenchMark\\StripDuplicateBenchmark.cpp",
+      "bytes": 1977,
+      "sha256": "81f55ef7eba8d0146da43ef72cf2e729c57afd732f9aa203ed011c78fdff3203"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.core.h",
+      "bytes": 35320,
+      "sha256": "b667c2fe968344252e2c32c0cffc09cf6520164e272fcf63bf46eccc707b138f"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.engine.h",
+      "bytes": 18972,
+      "sha256": "e77185eb535cdae22feb85a045b6b90365f0cfd841bd7fb01714fc03a026fa09"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.export.h",
+      "bytes": 27954,
+      "sha256": "035e4257f1f127d6a17833331922f2b1b615371b64bb4cd625842102517793b0"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.h",
+      "bytes": 25617,
+      "sha256": "145efd001ef2f45ac5655a18e19d8a122efdf665c38d306a1fe91ce9e0d18450"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.minkowski.h",
+      "bytes": 4128,
+      "sha256": "6ea4f08d3e2561bdd4d95a548e1b5d7983100e317ed805616b8d602f03d3dbe3"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.offset.h",
+      "bytes": 4731,
+      "sha256": "147e5f4694327d62cec31fec55b69537f178e808a715a533bb42c01a85cc435a"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.rectclip.h",
+      "bytes": 2801,
+      "sha256": "2970dbe3f91d32e96abc3117240694fc09f354060ff84e4a95014ec510f4d8dd"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.triangulation.h",
+      "bytes": 1289,
+      "sha256": "a82d32e65583cce5a6d704796c54de3ddd2963d219057263a0f87f8d14a07d6c"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\include\\clipper2\\clipper.version.h",
+      "bytes": 126,
+      "sha256": "0d636f1599b09743496d5c15c7dcb5bc3101bd423d6745bf17e480edbffccdac"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\src\\clipper.engine.cpp",
+      "bytes": 87899,
+      "sha256": "7b2cc17d4debd3b5ee6bd2c592ecda5082253324c7dd514b5593ae1b2c7812b2"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\src\\clipper.offset.cpp",
+      "bytes": 20974,
+      "sha256": "ebc01258953212d20fed090a4a740f94926c3c6706a092fec4c5e9cb5292305a"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\src\\clipper.rectclip.cpp",
+      "bytes": 28076,
+      "sha256": "79c7d8d90dd3b577db77a152c4739f6f49bfda8727528291250d3d8e8d79e18c"
+    },
+    {
+      "relativePath": "CPP\\Clipper2Lib\\src\\clipper.triangulation.cpp",
+      "bytes": 38243,
+      "sha256": "94e7449b9f278b71d86c3d493d40652bbfa1eae539c1c5b926b66977d82274bb"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Benchmarks\\Benchmarks.cpp",
+      "bytes": 3389,
+      "sha256": "1dd36eeba6577187334c3341786ad9aa03bbd0b3e93511cb3795ae4184e6d620"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Inflate\\Inflate.cpp",
+      "bytes": 4724,
+      "sha256": "a10f8355dff4aef32bfd6fe0ebe5e0332f193b06a08e5e49fac51626da8c2a39"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Inflate\\rabbit.svg",
+      "bytes": 1897,
+      "sha256": "0117c42dfe0b59b6672150836d9fa12c64125f5febc5016df865decee50a67af"
+    },
+    {
+      "relativePath": "CPP\\Examples\\MemLeakTest\\MemLeakTest.cpp",
+      "bytes": 1983,
+      "sha256": "ebec9feb353381315314d8fa8f2181f3fdcfaad763289ea302d67116ab2cb20a"
+    },
+    {
+      "relativePath": "CPP\\Examples\\PolygonSamples\\PolygonSamples.cpp",
+      "bytes": 2983,
+      "sha256": "64bb355a970380fd98befaeee8c6be395b5a2d6b5ad976b97226283c77dfcc2b"
+    },
+    {
+      "relativePath": "CPP\\Examples\\RandomClipping\\RandomClipping.cpp",
+      "bytes": 4750,
+      "sha256": "fbba8beb6f9ed759ce8809928f1de8201ba7adc004752a02e8843aea0b2f7525"
+    },
+    {
+      "relativePath": "CPP\\Examples\\RectClipping\\RectClipping.cpp",
+      "bytes": 6048,
+      "sha256": "ed185689139632b5718253c130a2c96145d0530d86c6109f40d823f1c2ef7db1"
+    },
+    {
+      "relativePath": "CPP\\Examples\\SimpleClipping\\SimpleClipping.cpp",
+      "bytes": 1106,
+      "sha256": "5f37400e353d50164d34fb99a1565ced69bb6c609dbe34a3b506f93bfce87a5b"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\Triangulation.cpp",
+      "bytes": 4992,
+      "sha256": "b129482dbeff90e48576f5473219b4712358e162ce1d1b2584c3824af5c24ab2"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\clipper2.svg",
+      "bytes": 9378,
+      "sha256": "55ba26b4fe0b08227b2976dc7081181830f927e5175ff202dced5f44a99c7365"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\coral3.svg",
+      "bytes": 4033,
+      "sha256": "cee03f0645a306ceaedee606e91292a475f65a6fb2f294f439595718f29ea6a7"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test1.svg",
+      "bytes": 897,
+      "sha256": "ecb870ac4c46aa4acbb355695f490100f7970b8009a6a3f15c77e969c7094c6c"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test10.svg",
+      "bytes": 465,
+      "sha256": "aea47918ea52b609d1c2f2e498b3433c9be76c06df4a703b66492f7751673820"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test11.svg",
+      "bytes": 423,
+      "sha256": "f49edd47508e420a742065c80efa565c03769c96aaa462e2403fe6fdc046b65e"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test12.svg",
+      "bytes": 463,
+      "sha256": "2622bd2262d051e7e6edfb1cb0eb929ecc5456411c9517a03b4067c28ffa4253"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test13.svg",
+      "bytes": 499,
+      "sha256": "d1043e8451978287c6d2de8f7d00a7ad97c146bd4c3b86006e738701dcfa4be0"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test14.svg",
+      "bytes": 582,
+      "sha256": "13f72b3cb4f67926e297297e9cbf01026d2ec29c9b55d60f4645c2de75ae635b"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test15.svg",
+      "bytes": 664,
+      "sha256": "03b613469b8163a25e41d8d9f7da75363f9e22e169dc72e248f60a3545b75e15"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test16.svg",
+      "bytes": 686,
+      "sha256": "af97ef6890930e7e2a738c12794d2e4ccef111b4496b0fa883e20d7a1f54806c"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test17.svg",
+      "bytes": 593,
+      "sha256": "f636fdaaca504b894343c31e757f1ac6b6c9d73f4f0219d16168672ffbfbdcc7"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test18.svg",
+      "bytes": 510,
+      "sha256": "afb4963da6cb44e08c7bbf3338cfe9e38e7eea38252d5ac5559351b45be82d7d"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test19.svg",
+      "bytes": 546,
+      "sha256": "211954b583c07291cdc7088a075a9195adcf35f47131b906481b43959c8e85d2"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test2.svg",
+      "bytes": 597,
+      "sha256": "352b0dc3da04d246528fee1b23f9d78eb75266a8f487ff91521bc20fd80eb4f0"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test20.svg",
+      "bytes": 511,
+      "sha256": "5ebaeee69d6e76ca4c06b99ae8d34b4cdd73f3588486d60fbc73ee9b54d4fab6"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test21.svg",
+      "bytes": 503,
+      "sha256": "cc5c50b0d37fc07ccdb019cfc2beb711ec6444239e349e4ae0facb1cf50929fd"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test22.svg",
+      "bytes": 518,
+      "sha256": "42971b184ce743c98c30f2033a3a020e4dcc4f74326e60125ec6025da1e14334"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test23.svg",
+      "bytes": 634,
+      "sha256": "70df5ee55155b55ec4d82d90a5e63fe5977722070fdf1a1abd4df2c604f099e0"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test24.svg",
+      "bytes": 550,
+      "sha256": "f0708c427000206959507115572ae299e9409cdd73c7d7a77944cd888edfa566"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test25.svg",
+      "bytes": 592,
+      "sha256": "bfb14c2ac0efb369c3410dee823ac43bc039dba3b4e9b372e190601133b77cd7"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test26.svg",
+      "bytes": 534,
+      "sha256": "ee42469dd100c1adaf8307afe569f1996b91a4c1bd3287b91036cf3f6686108d"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test27.svg",
+      "bytes": 581,
+      "sha256": "583c8f8301eda5a90c108e8cc4ec847ad34605dd9f9a7f22efffbdf4ee0de7e4"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test28.svg",
+      "bytes": 585,
+      "sha256": "8c3ca173ac918ce24cb72236761b98a22c8203f5da69a7a8c58ae637de54918f"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test29.svg",
+      "bytes": 576,
+      "sha256": "ac40a2c1851708b7512006d01068d02f68b2169d98ad5aafddae9ce0a252f58d"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test3.svg",
+      "bytes": 469,
+      "sha256": "172cdcc8f3413626eaaac52deef275d479bde33c081557e7661986acf319edb0"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test30.svg",
+      "bytes": 1088,
+      "sha256": "cbaa0456cf37618a38356dc93b4858d8584cc86373b40e5d4bbae126c712d396"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test31.svg",
+      "bytes": 570,
+      "sha256": "73c88fe0f815146ab3e4e74baa6edc92e23ffc2fd5898b02bb10e218cf38ebeb"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test32.svg",
+      "bytes": 568,
+      "sha256": "d60370f145f6778068538034db6569410654e5faf8991fb7bff8ceaa57449d96"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test33.svg",
+      "bytes": 1327,
+      "sha256": "c695bc4541ae7ec6e1751c3f9a37aa404b51498fa76905b76e33a18fb8a9ce7e"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test34.svg",
+      "bytes": 1644,
+      "sha256": "f842a99b15324152bafc3fc214a71a9df944b2f5ea610c426dc6fb3ba7f1933b"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test35.svg",
+      "bytes": 1339,
+      "sha256": "5958696204a5bf548679f58feff669f57f5a5ecf0bc5616f6c91d69c356347c3"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test36.svg",
+      "bytes": 1058,
+      "sha256": "d7a3a02595ebf7c09c64485bacd5e7f632aa5b9e7fe282d90cf34a740d886d06"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test37.svg",
+      "bytes": 1992,
+      "sha256": "aa3725b03f1c769426c6db79870c2d686a7636365112e4268b4bcc198aa60388"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test38.svg",
+      "bytes": 2529,
+      "sha256": "eaf35fcc3ee834d935369478e6d218599d4d0220062579a0c883c24d3e5de281"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test39.svg",
+      "bytes": 2671,
+      "sha256": "17eebfc92513635107b0833bdfd6859897e23014d7197962a2ac8240b501a813"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test4.svg",
+      "bytes": 509,
+      "sha256": "86bb752c1be890567c8e4a14670505848807e1513809ca9c382fd65f1eb9455d"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test40.svg",
+      "bytes": 3336,
+      "sha256": "7e4b115c71c0126400f5253330e329d6ad59f874147e989e12899072c72ca23f"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test41.svg",
+      "bytes": 2279,
+      "sha256": "0dcc3c9332cc6e791223bbd01fda716e64ab623241ccf301d85dc559620f72d6"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test42.svg",
+      "bytes": 2632,
+      "sha256": "13de4ff0d0f5e9dc9f78c02553f67cd2b04c005d35be882046d0364f3c2dacf9"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test43.svg",
+      "bytes": 6158,
+      "sha256": "f521743b21e1e1434396721720524df514eee49f1454e8d65b2500721b7734e3"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test44.svg",
+      "bytes": 29683,
+      "sha256": "6f0a63d083f50d0b273e0f3773e66e1ffacde3595609b037d9641a9418157bec"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test45.svg",
+      "bytes": 10517,
+      "sha256": "7f4c7667b92facc754ef64764ac010d49d49ef26f6ccc2863772fca2061f09d2"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test46.svg",
+      "bytes": 12659,
+      "sha256": "0ce18c0e1c287be2b5f80239e0916b4662061f3eee58ea7a467d8dcc46a10e16"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test47.svg",
+      "bytes": 4587,
+      "sha256": "10834ce956e5d2d07714c36a235bab1cf7b2686b6976ea30e656ca986252b2e7"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test48.svg",
+      "bytes": 5951,
+      "sha256": "c1f61757cb417aab4280e04710c7198d724a22b5e0d320f0b1bb2b14b34106df"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test49.svg",
+      "bytes": 11112,
+      "sha256": "eb030e601b83fe23f83e0317079e85dd83ea357442db4d147008a1bfd93c109e"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test5.svg",
+      "bytes": 479,
+      "sha256": "b4c353901ff4be129d74d4e1c98953213e0bd65c4119ba48c88125c7cb9a4949"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test50.svg",
+      "bytes": 4825,
+      "sha256": "ff7d99d845090c123b6bc44637ba76bb282e990a347afea20813f324a6016c0a"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test51.svg",
+      "bytes": 11558,
+      "sha256": "9759cdd6cc5b7d3a1b25222438ecd1e18efa69498bf569a485251568019a0d9a"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test52.svg",
+      "bytes": 5739,
+      "sha256": "d841ac7ebd97243892467abe4d19b3c8add2683a022ab3cef38d1e230a9470ef"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test6.svg",
+      "bytes": 472,
+      "sha256": "1661f1d2dc87e7e53cc556ef7c0b08307ff9c197cb299e09eb86e88072178bd4"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test7.svg",
+      "bytes": 504,
+      "sha256": "1d4305c1c46dab9a557eb4311ddf77114f3e0884a9de42a1e1162ae83deb2e2f"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test8.svg",
+      "bytes": 321,
+      "sha256": "6c90ff102d65bed6accfea739b72cf90594df9fd68113f83aa1290fcc8478c37"
+    },
+    {
+      "relativePath": "CPP\\Examples\\Triangulation\\TriSamples\\Test9.svg",
+      "bytes": 484,
+      "sha256": "a92bf99a415aac9b6ad1da53e63c2f560e5db276456738bbaff32758755617ef"
+    },
+    {
+      "relativePath": "CPP\\Examples\\UnionClipping\\UnionClipping.cpp",
+      "bytes": 4331,
+      "sha256": "a39ae4e83c4c9c8c75dc4ce824760a6ba819ce71bb2df1f1333ff3ccc85bb302"
+    },
+    {
+      "relativePath": "CPP\\Examples\\UsingZ\\UsingZ.cpp",
+      "bytes": 5423,
+      "sha256": "6531f5ace89cc96e185e25f0590a8a44791c50c82f48f88cd70225d9a108cc77"
+    },
+    {
+      "relativePath": "CPP\\Examples\\VariableOffset\\VariableOffset.cpp",
+      "bytes": 4704,
+      "sha256": "3d760c0286bd20a59eac3b3e00b930e696f89ce451212663af01e389bd2fa336"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestExportHeaders.cpp",
+      "bytes": 7810,
+      "sha256": "aa72514b2822f968a49714f7b597906cc37a0e67659b2502389387a5990f6fb2"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestIsCollinear.cpp",
+      "bytes": 3171,
+      "sha256": "efd99dcabe106735e18a79066ddecd62d2df9f2fbaec64d63fb0d653c0f0d9e8"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestLines.cpp",
+      "bytes": 1600,
+      "sha256": "8f34e3fb76ab22ff3b832eddc510f4afb8f54c2322d82384ca54bbb0963ecb5e"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestOffsetOrientation.cpp",
+      "bytes": 1652,
+      "sha256": "9c06b6cedf3df17382caea1f368a2f5d376df458277419b87eafd5e84993dceb"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestOffsets.cpp",
+      "bytes": 39666,
+      "sha256": "56e5da18af22f9a0ce14b292c536fdd5666a0c462ad9b88dd7a0c19db7193c5b"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestOrientation.cpp",
+      "bytes": 692,
+      "sha256": "88e5d09e95fc711fb38bbb859af0408a28a17d96b05049abe50bc2092bb7d8ee"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestPolygons.cpp",
+      "bytes": 5548,
+      "sha256": "b3a264e977c149463f6c68f8b43110694921b91f99120be486e45280f11e9685"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestPolytreeHoles.cpp",
+      "bytes": 13100,
+      "sha256": "09380f95659bb37f99e572cda7f8281940160500400d3ec97ade0b29d2609b5c"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestPolytreeIntersection.cpp",
+      "bytes": 776,
+      "sha256": "9ff162af0e862952eb25e27f01f829963c0dfd2f1bca0414ecc85c5d0e594dc8"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestPolytreeUnion.cpp",
+      "bytes": 2625,
+      "sha256": "2be7f2bd3a27ebb3138daf47b81f8b9e03ffd01643c3e0b5efe9f2a51aad71cd"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestRandomPaths.cpp",
+      "bytes": 3587,
+      "sha256": "424adf4fcbb57ec8f285331bc29eba15f2b2e88c81f6e4e3fa9a9808964a35c9"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestRect.cpp",
+      "bytes": 1180,
+      "sha256": "7b1cb91bc72010dcde4a2f42fd115816e0d919422ddf1e534529966c2367fb89"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestRectClip.cpp",
+      "bytes": 2763,
+      "sha256": "8330c484806f967da77d9fd7078ceabc41bb69d7a46c66892eabe42d195fdbb0"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestSimplifyPath.cpp",
+      "bytes": 348,
+      "sha256": "8df9f9fec9f9d3da7c7bfe7ed71b7db943a846a494f98a375f881a1b31e58296"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestTrimCollinear.cpp",
+      "bytes": 1106,
+      "sha256": "ad86092bbddf8459e2c4f1046d4b4592a3d48a3c90226d73a45947d142d653c4"
+    },
+    {
+      "relativePath": "CPP\\Tests\\TestWindows.cpp",
+      "bytes": 139,
+      "sha256": "9a93e7b337ad63b659e031a6962b7011cea96efae253d469e323591473610173"
+    },
+    {
+      "relativePath": "CPP\\Utils\\ClipFileLoad.cpp",
+      "bytes": 3547,
+      "sha256": "a68934011ee6b0943d9c8bf058f74ea2847419cbd263ee82949c3ab67b4ebfeb"
+    },
+    {
+      "relativePath": "CPP\\Utils\\ClipFileLoad.h",
+      "bytes": 1222,
+      "sha256": "0f608e7356dd879b404208fd015ec81ad3940985fdfec5cf52763beb1bba5642"
+    },
+    {
+      "relativePath": "CPP\\Utils\\ClipFileSave.cpp",
+      "bytes": 8465,
+      "sha256": "899a970b5aeebd6f2d5275ea8ee1119b864f52258b8807ed0cab135dd7fe9018"
+    },
+    {
+      "relativePath": "CPP\\Utils\\ClipFileSave.h",
+      "bytes": 566,
+      "sha256": "d9b7d98152a969861ab353a1701f3aaadb65395ce75b3b83347932531c14a572"
+    },
+    {
+      "relativePath": "CPP\\Utils\\clipper.svg.cpp",
+      "bytes": 14656,
+      "sha256": "efecfad7fa97146c38dff72f8534e349d59dd6b115c91a699a5fdb47857bb95c"
+    },
+    {
+      "relativePath": "CPP\\Utils\\clipper.svg.h",
+      "bytes": 4225,
+      "sha256": "b61c3a8769c82f7398281983ad5645a5e16886434e2843f3d8a9ca03ca5cb3ef"
+    },
+    {
+      "relativePath": "CPP\\Utils\\clipper.svg.utils.h",
+      "bytes": 5585,
+      "sha256": "51ba79b825489c69228fc47631ed0dff835f3cb46b6a3b1f488909149792f6ef"
+    },
+    {
+      "relativePath": "CPP\\Utils\\Colors.h",
+      "bytes": 1568,
+      "sha256": "ad1fe6a034dad6f5f738c444cad33f265cb1399e4870d95fe74c1adfe55e09cc"
+    },
+    {
+      "relativePath": "CPP\\Utils\\CommonUtils.h",
+      "bytes": 941,
+      "sha256": "18328d46439af066f117d981d321da433a683734b18ed4e1cbd8ccb623c6009a"
+    },
+    {
+      "relativePath": "CPP\\Utils\\Timer.h",
+      "bytes": 2329,
+      "sha256": "999f41fb45b1508ca8bf2a0292e614c251ec78c8459a6327dcdd4d51ced0bbc8"
+    },
+    {
+      "relativePath": "CSharp\\.editorconfig",
+      "bytes": 5414,
+      "sha256": "e5f710dfd5da363ae37026df17d8f79b010e71dc261f771f5082deaf4822f758"
+    },
+    {
+      "relativePath": "CSharp\\.gitignore",
+      "bytes": 4296,
+      "sha256": "7ee712ddee34ca179582e495a54c255bd98d0dc62ece01bf9323d557d9202af2"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib.sln",
+      "bytes": 5340,
+      "sha256": "4654fd75e01bc49ed1f8c544db4e6045b7f10ca553c81a72981e2c01ded6403c"
+    },
+    {
+      "relativePath": "CSharp\\Benchmark\\Benchmark.csproj",
+      "bytes": 753,
+      "sha256": "7f51b24c077514966473117cda6ae73bce3522a02560a319759258ce60c668eb"
+    },
+    {
+      "relativePath": "CSharp\\Benchmark\\Benchmarks.cs",
+      "bytes": 2803,
+      "sha256": "b63ebb4546aa76cedf5b3d2766d5f181288fb60cd65588b55a282bbbd768b042"
+    },
+    {
+      "relativePath": "CSharp\\Benchmark\\Program.cs",
+      "bytes": 275,
+      "sha256": "5da58aa5e378b9117552f73dc8e70ea337dd0bbd00aed379350868372e4d6069"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.Core.cs",
+      "bytes": 23657,
+      "sha256": "dd9c64a31234011597a5a23c9dba1b986d7b7ff9fb4d0ad789871cd2731ddcfc"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.cs",
+      "bytes": 38814,
+      "sha256": "7fc7ce822be25640389b87806a5b1b70eda5b0dd3021b2cd33f18429fb9f33da"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.Engine.cs",
+      "bytes": 110183,
+      "sha256": "c134d6aa357b5f4631316c997b07270594126f47d3aa38971aa5b78b9e7f2072"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.Minkowski.cs",
+      "bytes": 3106,
+      "sha256": "35babacd3f2ac8e77e2936df3cc1a7fa9b87250ed58bc5d4b68dc1aaa52b8925"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.Offset.cs",
+      "bytes": 23981,
+      "sha256": "30dd338557d688b10af3778652b2664ea49c503dce877585cca56e9b8a995a9f"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.RectClip.cs",
+      "bytes": 31097,
+      "sha256": "5d85bc4bf525587535d5772189e6fb6380d0c6d91b1901ad151ce022923e518d"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper.Triangulation.cs",
+      "bytes": 31030,
+      "sha256": "4e00ae605fe012365a7b412bbeda43b2dbb0b08fa2b89abf2f21605912838047"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper2.snk",
+      "bytes": 596,
+      "sha256": "3a5e4380b65de51196357007bf8a0f7892b288c13a167789585d69281d7b2a48"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\Clipper2Lib.csproj",
+      "bytes": 2634,
+      "sha256": "a1b7b2078951e0b30636a29bee9b7b910bc1bfc219e80ef3ea8530630ea5db6f"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\HashCode.cs",
+      "bytes": 4799,
+      "sha256": "bd9cfd5c2685731041cec1c5c18b9846ddf3e2a4813c410dc64fd4ae095eeb5d"
+    },
+    {
+      "relativePath": "CSharp\\Clipper2Lib\\PooledList.cs",
+      "bytes": 8188,
+      "sha256": "38b9cc4636c7893a20303fbc403608331fcd145f7b0f59ebedb9b7bb7151f506"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\ConsoleDemo\\Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\ConsoleDemo\\ConsoleDemo.csproj",
+      "bytes": 1112,
+      "sha256": "d2fc57d772d25a342c640b3611e5e6b18b2bd3256eeff68761bb950d2802f594"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\ConsoleDemo\\ConsoleDemo.sln",
+      "bytes": 2809,
+      "sha256": "6b0b3cf79c205fa2585c6da7499506fa2782e41799c0b35dd34017c78b9d7fc5"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\ConsoleDemo\\Main.cs",
+      "bytes": 5628,
+      "sha256": "0d18e64dde628addddc5acd32085e3425c3bd474daafbaffe6c28fdd57953abc"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\InflateDemo\\Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\InflateDemo\\InflateDemo.csproj",
+      "bytes": 1155,
+      "sha256": "cd973f23b168e0310768ca60b4c03f5e49abcc296d951786c719e51b67484178"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\InflateDemo\\InflateDemo.sln",
+      "bytes": 2311,
+      "sha256": "6572c837d903d27319104e8bbbf679a93baa791324f07aa97df9fb7547e23621"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\InflateDemo\\Main.cs",
+      "bytes": 4524,
+      "sha256": "ab1255e4b5f8853eee5d66886523654373ca81b12f60a3fb1ddca7ca71c2c3f1"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\InflateDemo\\rabbit.svg",
+      "bytes": 1853,
+      "sha256": "8e560d04101e15912182d8c01922b6c1703ecbdfc5a4794020881815a8ddb2c9"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\RectClip\\Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\RectClip\\Main.cs",
+      "bytes": 4149,
+      "sha256": "a4339cbf7d49dc2c31d79bdd875cc638e847c23fe694b70578dabbdba08ad28d"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\RectClip\\RectClipDemo.csproj",
+      "bytes": 1629,
+      "sha256": "aa9fd088d2678e95dbf66f8d95ab8d249dcb6a4adf77b3397955eed3e1173c5e"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\RectClip\\RectClipDemo.sln",
+      "bytes": 2313,
+      "sha256": "ad31548d61b4ac2a73cf9a1c310ea92ebb37602eaa8fdbd7c80f8287fd1bedd2"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\Triangulation\\Clipper2.ico",
+      "bytes": 121308,
+      "sha256": "9a2ecc41bf7f763c25ff93da8d25cf59dd9f7f2235533b7ecc38839b149a7658"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\Triangulation\\Main.cs",
+      "bytes": 4102,
+      "sha256": "d7d0451a0da0766754d20d456a680be1e6585019aa260fc8ae7542de50c210bf"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\Triangulation\\TriangulationDemo.csproj",
+      "bytes": 1112,
+      "sha256": "d2fc57d772d25a342c640b3611e5e6b18b2bd3256eeff68761bb950d2802f594"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\Triangulation\\TriangulationDemo.sln",
+      "bytes": 2821,
+      "sha256": "f5b1c307474d6c3093f30051ec8ca44d1afeae5750fc73fdf0cf1f76d74e0dd9"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\USINGZ\\Program.cs",
+      "bytes": 2868,
+      "sha256": "8d21f1a5009a2cd7db2ad01bdedc5f038b4f30ae6dd240699627b02ee5523318"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\USINGZ\\UsingZ_App.csproj",
+      "bytes": 866,
+      "sha256": "d16fee824cb95131482089b75280ea130d00bc482b4f46b9f6f227f95749bc2c"
+    },
+    {
+      "relativePath": "CSharp\\Examples\\USINGZ\\UsingZ_App.sln",
+      "bytes": 1586,
+      "sha256": "b759538d5a90881f8bec587f168d680a82ddef05bfcf3448ea267b9361a1c973"
+    },
+    {
+      "relativePath": "CSharp\\NuGet\\icon.png",
+      "bytes": 7381,
+      "sha256": "ece5054effdd57acec60cc1b964d92ba2cf37406285a30d6d32fb36c9cf2cd1c"
+    },
+    {
+      "relativePath": "CSharp\\NuGet\\License.txt",
+      "bytes": 1337,
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+    },
+    {
+      "relativePath": "CSharp\\NuGet\\README.md",
+      "bytes": 1080,
+      "sha256": "7fba202aa983f8d921ba5bfaa3809101873c98d44d2a2d27dd40b0fdc8374aeb"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests1\\Tests1.csproj",
+      "bytes": 1070,
+      "sha256": "8ba4b99b78c0ee6c6a79064fccb5afeda48ac2183512d7d9e25af32a5fe0e34b"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests1\\Tests1.sln",
+      "bytes": 2311,
+      "sha256": "9aa0e2fc439ed5834879e6a16a047036f35243c678034e8a35db768408296fd2"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests1\\Tests\\TestLines.cs",
+      "bytes": 1316,
+      "sha256": "4375bcc2ad1b3563d831794c1812ef9c1abcf2ab16c29d177956fdf37aaed205"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests1\\Tests\\TestOffset.cs",
+      "bytes": 322,
+      "sha256": "bbe913df35c47152f4edaaf61238d6233ec254758d7563639e6694bef24df839"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests1\\Tests\\TestPolygons.cs",
+      "bytes": 2911,
+      "sha256": "8d996e76c51a81678f736ad40ba1934e60c46e42a4f8bb060ce96dbe2dbc1f9d"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests1\\Tests\\TestPolytree.cs",
+      "bytes": 6823,
+      "sha256": "c789ed15a094f9f0e49e4713ad463cbd8f8ea97733207ebadc204410f5d2e996"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests2\\TestsZ.csproj",
+      "bytes": 1075,
+      "sha256": "c839eb1e63293f2bef7dc5fe4bac1ad06898a239385507506b81c931b23158d0"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests2\\TestsZ.sln",
+      "bytes": 3052,
+      "sha256": "e4168cf76303a6d77dc992f58a4a412057f3e2bf84647773a779f2c9c7e49741"
+    },
+    {
+      "relativePath": "CSharp\\Tests\\Tests2\\Tests\\TestZCallback1.cs",
+      "bytes": 4578,
+      "sha256": "9356ff876caac93db1f6baac62f09d2bdb674b639e8653fbaa841b28dba47c54"
+    },
+    {
+      "relativePath": "CSharp\\USINGZ\\Clipper2Lib_Z.csproj",
+      "bytes": 1282,
+      "sha256": "52909eac90b88dfa94a706d20e4769d1ddbd6bc19b77dae90a895f4bff1938ac"
+    },
+    {
+      "relativePath": "CSharp\\Utils\\ClipFileIO\\Clipper.FileIO.cs",
+      "bytes": 8667,
+      "sha256": "54b729cb143d14fdbd6e5dea08e9d17a0e43bfb753bc1a95746f84a29280b441"
+    },
+    {
+      "relativePath": "CSharp\\Utils\\ClipFileIO\\Clipper.FileIO.csproj",
+      "bytes": 420,
+      "sha256": "97d40dc448993c8396a42e66f06b19a694535974a35648072dbf3e1ad6d4d316"
+    },
+    {
+      "relativePath": "CSharp\\Utils\\SVG\\Clipper.SVG.cs",
+      "bytes": 13795,
+      "sha256": "214fc443b1320411542cb1992250bc6d710e231855672de69fc4e3ab4a241ee9"
+    },
+    {
+      "relativePath": "CSharp\\Utils\\SVG\\Clipper.SVG.Utils.cs",
+      "bytes": 3925,
+      "sha256": "fa90f3a370354bfc95071998596912b0b7a4f164a66ac1eb4b5a86f7785416ae"
+    },
+    {
+      "relativePath": "CSharp\\Utils\\SVG\\Clipper2.SVG.csproj",
+      "bytes": 357,
+      "sha256": "0c7ebbf66d541f4a89bc52366bd6c35b5ca5bff588ec88b8d130f463bd2418f0"
+    },
+    {
+      "relativePath": "Delphi\\BenchMark\\DelphiBenchmark.dpr",
+      "bytes": 2303,
+      "sha256": "b254297e9337b5a81fd3e895e3b53123f05163b999ea0307ebac20f589d569d2"
+    },
+    {
+      "relativePath": "Delphi\\BenchMark\\DelphiBenchmark.dproj",
+      "bytes": 7237,
+      "sha256": "068a2e9e431c23103fb97a1a9479686e16e4872de20a50337c24edea85f7e7aa"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.Core.pas",
+      "bytes": 79686,
+      "sha256": "d992a8105b5107a4c3981b83d6eefe1d307b2cf12b4e468f223292fb3c78370e"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.Engine.pas",
+      "bytes": 126668,
+      "sha256": "e3c6cfc892d2243f9f2f220fad4251658d05fdfca881cf01d9f321ab562e5e20"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.inc",
+      "bytes": 1273,
+      "sha256": "f9de956656a28ec8bc7fbd0e21f185471f1a7729e9f4b2bb74dd862e70fa4766"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.Minkowski.pas",
+      "bytes": 4153,
+      "sha256": "219a568aa45b0091bce1c4f1f2f57dba82fc6ab5f74c41d34d9efe5014ac8a29"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.Offset.pas",
+      "bytes": 31026,
+      "sha256": "5cab1cba783fefbacad393a8e5cec1e52c97dd8c36157c1154dad822b9d0d532"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.pas",
+      "bytes": 31047,
+      "sha256": "e1ec1f284bde3076c68040a87527bc70571fadf469e6be60af44fa155c505b02"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.RectClip.pas",
+      "bytes": 34293,
+      "sha256": "6590887d324e287231ad8787e9a4e889fbf04db810e7a519e8da336bc9976e42"
+    },
+    {
+      "relativePath": "Delphi\\Clipper2Lib\\Clipper.Triangulation.pas",
+      "bytes": 48334,
+      "sha256": "9eb1418e6deee25b9d77dbefb370f5054b9cb8d7130240deeea27354ffaee9b2"
+    },
+    {
+      "relativePath": "Delphi\\Examples\\Example1\\Example1.dpr",
+      "bytes": 2770,
+      "sha256": "440b2a62aa9e73cb5e88145ded04add082d2a2bd57fc611634f89cf201bdaa9b"
+    },
+    {
+      "relativePath": "Delphi\\Examples\\Example2\\Example2.dpr",
+      "bytes": 2863,
+      "sha256": "c2c195569bd79dc405ab2daeeabbccd35a1b97dcf9d00d7e68a69fcdfe71c969"
+    },
+    {
+      "relativePath": "Delphi\\Examples\\Example2\\rabbit.svg",
+      "bytes": 1897,
+      "sha256": "0117c42dfe0b59b6672150836d9fa12c64125f5febc5016df865decee50a67af"
+    },
+    {
+      "relativePath": "Delphi\\Examples\\RectClip\\RectClip_Demo.dpr",
+      "bytes": 2249,
+      "sha256": "6314d7e7d038d0697e74c581c18cd92d2ddfd24745443ac14c2f489295ebd8c6"
+    },
+    {
+      "relativePath": "Delphi\\Examples\\Triangulation\\ClipperTri.dpr",
+      "bytes": 1006,
+      "sha256": "af147650dee410ab75633235d1a7657ac28a23558bca51024b45d30f7352d8e3"
+    },
+    {
+      "relativePath": "Delphi\\Utils\\ClipMisc.pas",
+      "bytes": 8357,
+      "sha256": "84a76b9cdbb70f60a604408db8538a8c8937e56f89fe312a62062a2dbb17ca08"
+    },
+    {
+      "relativePath": "Delphi\\Utils\\Clipper.SVG.pas",
+      "bytes": 24867,
+      "sha256": "8ded50d491a99cb3d4f8f85b87eecf3a8eb24273e598fbd7ab92a49de518a6b1"
+    },
+    {
+      "relativePath": "Delphi\\Utils\\Colors.pas",
+      "bytes": 1760,
+      "sha256": "535bacb1d7c3c7fb9fd964286c6ad107c7ac9d26231cb5690f0aa0c05a7414d6"
+    },
+    {
+      "relativePath": "Delphi\\Utils\\Timer.pas",
+      "bytes": 1744,
+      "sha256": "a8841428da77e667764eea365d963261c78783b30f8660cb513471602057f92d"
+    },
+    {
+      "relativePath": "DLL\\ReadMe.md",
+      "bytes": 848,
+      "sha256": "5691b0afb22a3ec1b18b9fb2fc5a6e1998c4e0adb844fbc5bd66bad58cd18d13"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\Clipper2_DLL.sln",
+      "bytes": 1413,
+      "sha256": "06445c9c50eb6dd468d1ec71be0dcc65534a0effa53d7fad79e0dc846ab53b17"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\Clipper2_Dll.vcxproj",
+      "bytes": 9361,
+      "sha256": "3d3cb765d5cbf34f2de1f911fe8a8fda5723431b40ab35f06e98e8e0a263c5e8"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\Clipper2_Z_DLL.sln",
+      "bytes": 1413,
+      "sha256": "c83220b3f1c4065ea1a12d6028c9d7af4c61c408f57322ca9a70629eddf906c7"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\Clipper2ZDll.vcxproj",
+      "bytes": 9398,
+      "sha256": "27fd286e7845076b9e57995af32c35ddae54fd770d23c5a6bb8eb10fb8a28b78"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\dllmain.cpp",
+      "bytes": 451,
+      "sha256": "03ceda09a0e0664d6e99780c14b0542810acc03fbbb0e8d464e0ac4e7355f527"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\framework.h",
+      "bytes": 149,
+      "sha256": "d7e3273aca06ee9a2b47ec7f96fbf06fd9301849ebf26ba54a441f8fcde36bd6"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\pch.cpp",
+      "bytes": 186,
+      "sha256": "b20ad711fa06e3ef62f8e3c626e13b3bdc69cff08c60c8b358f38b09e16c99ef"
+    },
+    {
+      "relativePath": "DLL\\CPP_DLL\\pch.h",
+      "bytes": 563,
+      "sha256": "ae8edb9ed44e84db3a64ff02bb4e053d661dc19474d8e284bda1c4d625744a0b"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\Clipper2Dll.Core.cs",
+      "bytes": 13211,
+      "sha256": "9f227cee51d05117012e763ee2dbb0cdf3f89c602f839cb4c81d9d2c4ca210f4"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\Clipper2Dll.Svg.cs",
+      "bytes": 15699,
+      "sha256": "58dee2c58ee1a670806b9b7f010a3544001a6b17b6f6deb4d392a8c315286eff"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\COPY Clipper2 DLLs HERE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\CSharp_TestApp\\CSharp_TestApp.csproj",
+      "bytes": 606,
+      "sha256": "a4cd6e8d878ec886090f8b02a3d1c1df64e8928c8acc91049aeb7a568f8f7db5"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\CSharp_TestApp\\CSharp_TestApp.sln",
+      "bytes": 1060,
+      "sha256": "387d2a8f01f218ae4bab7f0b81db83a55a772edf7c3bfb1ec527e780694e6a64"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\CSharp_TestApp\\Program.cs",
+      "bytes": 13776,
+      "sha256": "a7d106c644cf55867d8762a2fa66db74a6e53e00be72e01a519bcf13a8f4cca4"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\CSharp_TestApp2\\CSharp_TestApp2.csproj",
+      "bytes": 721,
+      "sha256": "95a8cfb80cc3671bb0e4dbc39173f1b812595b179076a1b3105bd97782475c81"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\CSharp_TestApp2\\CSharp_TestApp2.sln",
+      "bytes": 2750,
+      "sha256": "e9877efa34545b6da3695e01495f094b49f933d65d6e4eee8d0c17a565035633"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\CSharp_TestApps\\CSharp_TestApp2\\Program.cs",
+      "bytes": 4609,
+      "sha256": "8a58af7131c374ade4de429a58c78011cc9d37e319c903d9df8f85c67542df6e"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\Delphi_TestApps\\Clipper2Dll.Core.pas",
+      "bytes": 10493,
+      "sha256": "48bdee1f5b8b7fa251f40b6d5c3beeb96b6546a5d0fe441ba0daec2ccc86f2d8"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\Delphi_TestApps\\Clipper2Dll.SVG.pas",
+      "bytes": 26463,
+      "sha256": "e10fef051300871a3a455860655f21967db56aaf51a8e5bc10854a2a247ed83e"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\Delphi_TestApps\\COPY Clipper2 DLLs HERE",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "DLL\\TEST_APPS\\Delphi_TestApps\\TestApp1\\Test1_DLL.dpr",
+      "bytes": 7583,
+      "sha256": "f044e3eaddc5aba632aaec01df459773edfb7572067e2bc2b948ba2ebd1c9a9d"
+    },
+    {
+      "relativePath": "Tests\\Lines.txt",
+      "bytes": 2669,
+      "sha256": "1beb973931b1fbbaa12a3bdef207ecf322d7daabd1fcc580c4cb4cfd9ab03321"
+    },
+    {
+      "relativePath": "Tests\\Offsets.txt",
+      "bytes": 22230,
+      "sha256": "82d1e5a9d9a673c942d66ec5a21930d174d99673c9c11a6026dca39e95e2e92b"
+    },
+    {
+      "relativePath": "Tests\\Polygons.txt",
+      "bytes": 96359,
+      "sha256": "af4d409fd8496225729240a9695904c90a151b3f89b6cfff1601e702522e7d46"
+    },
+    {
+      "relativePath": "Tests\\PolytreeHoleOwner.txt",
+      "bytes": 68416,
+      "sha256": "a37da43cf5a7ee1d056703b49daebd7de472fadf1421e581f4e887bd0bfbacd6"
+    },
+    {
+      "relativePath": "Tests\\PolytreeHoleOwner2.txt",
+      "bytes": 707255,
+      "sha256": "e36a4c374deecc0f09cd6e982a3e99f67733e937e38fdf2e910ba5fb5c6ac21b"
+    }
+  ]
+}

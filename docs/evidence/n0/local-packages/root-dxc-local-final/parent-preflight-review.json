@@ -1,0 +1,48 @@
+{
+  "status": "PARENT CURRENT FREEZE/DERIVED ROOT DRIVER; NATIVE NOT RUN",
+  "sourceCount": 15674,
+  "oldSourceCount": 15597,
+  "reviewedDeltas": [
+    {
+      "reason": "Parent reviewed WhiteBox surface materials or accepted DXC catalog binding",
+      "beforeSHA256": "787c1cd917de63f52fae25b3825c9ae4e1de18b65ea042cc0211482c594fa00a",
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "afterSHA256": "EF3CD0C05C25764DE725A0D197846BE6F0F5CA043A812812E9DB5B757733F326"
+    },
+    {
+      "reason": "Parent reviewed WhiteBox surface materials or accepted DXC catalog binding",
+      "beforeSHA256": "fdc95fef6cfe6ab1f0d6efabbb4f4ca61797f25f1bd0c6ae9a03681ca90b9a7f",
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+      "afterSHA256": "54BD4F8A0C4E6871BD877AA649FA503C9711A879BBE12A3FE0DF9E0F90358121"
+    },
+    {
+      "reason": "Parent reviewed WhiteBox surface materials or accepted DXC catalog binding",
+      "beforeSHA256": "b0cf803f40789d6590d6298f6c7a8ac94c699a0eaa7434b0075fa0bb4e3fe29a",
+      "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp",
+      "afterSHA256": "66CC15C9B6ED0B160EBBD70820A382CA849D6BA4AFC531AF241C24822FB6A735"
+    },
+    {
+      "reason": "Parent reviewed WhiteBox surface materials or accepted DXC catalog binding",
+      "beforeSHA256": "b61cada695fc888300576c1230a54947c1a97955a22b973aff722ccb66778f77",
+      "path": "Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake",
+      "afterSHA256": "082DA202B2D7A7333C02FF9CF43FC92476CE981902B2A257C91DDE634A666BC5"
+    },
+    {
+      "reason": "Parent reviewed WhiteBox surface materials or accepted DXC catalog binding",
+      "beforeSHA256": "3c9642fb11b2b02b1a8f33077960109c1964c3b36a659de46199dfe9719b6f00",
+      "path": "Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake",
+      "afterSHA256": "A28D4F30BC1B571887833F42460C66B6ACAE044C6E722AD78615DBA3503D2C6D"
+    }
+  ],
+  "arguments": 61,
+  "argumentsUnchanged": true,
+  "cacheFiles": 36,
+  "wheelhouseFiles": 44,
+  "assignmentSHA256": "9CF710AFC67CBFF9BF635E5E901911108A17B233940FE6EFBED7C083C48BA2F0",
+  "freezeSHA256": "AF617F8664743B42A80CC17A31475998C2F1A3819BE430C0FD073A4F7696EAA3",
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-dxc-local-final/run-root-configure-dxc-parent-rev1.ps1",
+  "driverSHA256": "D0876C989526EE283CEFFDF03674C3154740263A0877F7A29A9DE1763DABAA23",
+  "syntaxErrors": 0,
+  "nativeOwner": "Existing validation_luna only",
+  "limits": "Original configuration route with uncompiled Python/WhiteBox/SMC/SQLite candidates. No baseline HEAD, Editor, runtime or visual acceptance."
+}

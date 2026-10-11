@@ -1,0 +1,717 @@
+[
+  {
+    "path": "Gems\\WhiteBox\\Code\\.editorconfig",
+    "size": 177,
+    "sha256": "4B9C6EC6A79C3DC076D8CF863DA4B9FD652547DD7FCF191C7F9A5ED3C77B15EF"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\CMakeLists.txt",
+    "size": 6999,
+    "sha256": "DABAFD5E87BC188368CB723E3E6C1C02936F53574645D36971718C50CA7B9634"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_editor_physics_tests_supported_files.cmake",
+    "size": 271,
+    "sha256": "0D8C593B7574971309540B04F4175B7D6B0834F19FD00D81E9957B5BAA0DB4A0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_editor_shared_files.cmake",
+    "size": 368,
+    "sha256": "09C1F3BD1A8810B7680E334A26D1DEE11A87C99374A76B6C9DFA5E5CDB7AB519"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_editor_supported_files.cmake",
+    "size": 3820,
+    "sha256": "B61CADA695FC888300576C1230A54947C1A97955A22B973AFF722CCB66778F77"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_editor_tests_supported_files.cmake",
+    "size": 614,
+    "sha256": "3C9642FB11B2B02B1A8F33077960109C1964C3B36A659DE46199DFE9719B6F00"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_shared_files.cmake",
+    "size": 296,
+    "sha256": "6652120ECE920590073A84EC94103D415BAE9D0D19DE0BD10CA9F910A04F7E8E"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_supported_files.cmake",
+    "size": 1621,
+    "sha256": "0FDB452E2DBA5A313A1E6947E8F1200BE7ED9753E24EF08A839EAFE6B7200C5B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_tests_supported_files.cmake",
+    "size": 271,
+    "sha256": "3FBCD0F556C6358FD646503AF3521FAE2B2A38F62CE6CE0E485E4539B631016A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Include\\WhiteBox\\EditorWhiteBoxColliderBus.h",
+    "size": 911,
+    "sha256": "1D63CAE18C03F73CA8AB28A7AE149F6716E370F9EE8EEF9F9ABEEFE58D39552F"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Include\\WhiteBox\\EditorWhiteBoxComponentBus.h",
+    "size": 4810,
+    "sha256": "AD1338D940DF8FAF06E34B72C638C0A2DAF07507874F76CBD84C433F8B96DE13"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Include\\WhiteBox\\WhiteBoxBus.h",
+    "size": 1493,
+    "sha256": "9501FE8DC54C2B15E79927935E4CCF87061F4C0857BC77EBC25A2C66996BB972"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Include\\WhiteBox\\WhiteBoxComponentBus.h",
+    "size": 804,
+    "sha256": "4A72E9C3AF98E1BE7DD25D396997ABA69945A013ACC54BF13E6116F345665108"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Include\\WhiteBox\\WhiteBoxToolApi.h",
+    "size": 50392,
+    "sha256": "9A251232FEEA99F7FA1BBBB6DA7ED0C204105D3717A0CF2B1E1C9FE509F13E69"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponent.cpp",
+    "size": 79246,
+    "sha256": "FDC95FEF6CFE6AB1F0D6EFABBB4F4CA61797F25F1BD0C6AE9A03681CA90B9A7F"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponent.h",
+    "size": 15634,
+    "sha256": "4A49E9454FE7B97FBBE8504DCCB538597B0F6C5CE6D30D144862EFB2F1C040FE"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponentMode.cpp",
+    "size": 31571,
+    "sha256": "407B7D78389C4D9832982C50D7E540C81F4DED0A10065BB2191366E3BEF249FB"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponentMode.h",
+    "size": 6930,
+    "sha256": "1B39D2C8009ABF88F92D0BD0C72794AB53D68A71841965FCC09951BB48DBC40C"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponentModeBus.h",
+    "size": 1790,
+    "sha256": "5603428DC53BF49A966BB7957C8C4C96158976BF3697717B273DCE8D843E3CE8"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponentModeTypes.cpp",
+    "size": 1439,
+    "sha256": "8CA66F5ECB492C418FF59A60DA86525B624B4F778F22C8A8228C9CE6D427F30E"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponentModeTypes.h",
+    "size": 5054,
+    "sha256": "BF24FA73B81447A13F374A0B30646ED7862711188F773C5753BAB5254D115CC5"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxDefaultShapeTypes.h",
+    "size": 1830,
+    "sha256": "E2BF6B82DAF8428DBF9F81CA3112E39285761D3717DE44E217C82A8229728C48"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxEdgeModifierBus.h",
+    "size": 1063,
+    "sha256": "AFDB1F0155ACD14F9BBA3BC4FA4CD2050FDFE86ACBE0DE92E9488DFEB2CE06A2"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxPolygonModifierBus.h",
+    "size": 1124,
+    "sha256": "D486739B0306A19DE305F296138FD2FBFF59C840C592A3B562F3159529ABAC8A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxSystemComponent.cpp",
+    "size": 3099,
+    "sha256": "4AD7FAD26CBAE8854BAAC91119712BBE8F855411900D4FCBB4B8969CF388689A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxSystemComponent.h",
+    "size": 1427,
+    "sha256": "A79A4A3E197FEF88078EEBEC3ED604658408A72B4941AF92CCAE8CDAC33003BE"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBox_testEditorModule.cpp",
+    "size": 1541,
+    "sha256": "B981426DCE1AFC6DBB90C1A992BA7CB2EC21D6C3CF8C665ED5C243A9384E2049"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBox_testEditorModule.h",
+    "size": 719,
+    "sha256": "22D78B42BD3F5608EE44EAFC852A1664CB6C2B522E9BB177E5D637F7D23AAEF2"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxComponent.cpp",
+    "size": 3372,
+    "sha256": "F985402684ECAB5F9EED65EE1C91D1532A07AFE5C87F20E85AC6DD3808033785"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxComponent.h",
+    "size": 2268,
+    "sha256": "BC54C374DDD772AEE1DA9E356918782BBED4DC8137787DB0296005F4D13DD20A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxEditorModule.cpp",
+    "size": 1536,
+    "sha256": "2BE6F9CE24CF77D67CC64BFE8BBB1633EC79340AD8876776C1F52F720A8361D3"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxEditorModule.h",
+    "size": 719,
+    "sha256": "22D78B42BD3F5608EE44EAFC852A1664CB6C2B522E9BB177E5D637F7D23AAEF2"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxModule.cpp",
+    "size": 1469,
+    "sha256": "16A4A7E4FEFD5E2073151706D619AF8312E6855EF696C731F9333740C4FAE4D6"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxModule.h",
+    "size": 689,
+    "sha256": "130F3A76CB722CF65520DB18E33A05ED29A66992E0E119B41B284CBD05214313"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxSystemComponent.cpp",
+    "size": 2983,
+    "sha256": "2B1EFDC7F7CC20D0D83BCB406DD97AE8EA6DB333D1E35AC356DB63A849856E0C"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxSystemComponent.h",
+    "size": 2026,
+    "sha256": "E205EEE392C4A57A9ABDEA24DE199CED632DEE3D07093689D75A912690225445"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxToolApiReflection.cpp",
+    "size": 16891,
+    "sha256": "02A85610D93D4D4D01D5004E396316CCFEDC7B5D49ED72B228B10D170B22C581"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxToolApiReflection.h",
+    "size": 714,
+    "sha256": "49935DCE5FECF82B467973929A8BD0D404346991E5D97C4D1D96B078849676B9"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\EditorWhiteBoxMeshAsset.cpp",
+    "size": 12121,
+    "sha256": "180F6C3B01B8FAE7BD48700BF755D097E21C5F913644A3D7FCC86485FC922058"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\EditorWhiteBoxMeshAsset.h",
+    "size": 4856,
+    "sha256": "784176A03115D3A2990871CD4616E7A8FBE85B9ED1FB3CB2C85DB601205302AB"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\WhiteBoxMeshAsset.h",
+    "size": 2124,
+    "sha256": "5B7859D4B35B7708915B6E9BC64E06BBCC156FA95F867C732B85D20669FDC059"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\WhiteBoxMeshAssetBus.h",
+    "size": 1040,
+    "sha256": "347FC8881BF08FDDDC9DDECF6B8A757FCEBAC6C68EBE0C5F67979A5998B928EC"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\WhiteBoxMeshAssetHandler.cpp",
+    "size": 6129,
+    "sha256": "5EF7BA6E747AFFE281404094AC23292F22474080C189EFD215F8D861372B1896"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\WhiteBoxMeshAssetHandler.h",
+    "size": 2164,
+    "sha256": "EF5BDFA2F916EA4225C28C819865E2485CEBA6D93496627A999870A89B5010B5"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\WhiteBoxMeshAssetUndoCommand.cpp",
+    "size": 1827,
+    "sha256": "B9A472488A0039F93E54CDECDA31CE566D30DAEB8C5974EEB9248B948ACC9122"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Asset\\WhiteBoxMeshAssetUndoCommand.h",
+    "size": 1620,
+    "sha256": "9883DF4F574D657ADC8D9F40A1B70DF09107449E546F142A7ED924C0C055E1FA"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Components\\EditorWhiteBoxColliderComponent.cpp",
+    "size": 10802,
+    "sha256": "973F0721A6A1A95D16320734CF8607938662FE7A0A4B632C404FB34427EF7FCC"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Components\\EditorWhiteBoxColliderComponent.h",
+    "size": 3064,
+    "sha256": "0E6B07E1BFFB6AA284AC1296F26E42A30D1C94DF368623DF200D666D85BD5DA3"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Components\\WhiteBoxColliderComponent.cpp",
+    "size": 7919,
+    "sha256": "1DA03458CFD248FB7C6E291FF351CE021E2A7E0B0F4E4576053E234AEA895CC8"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Components\\WhiteBoxColliderComponent.h",
+    "size": 2741,
+    "sha256": "A11A59CA47BDAA29CF6187EAF80FD5A633966DAF91FA7A915343A7DC183EABD7"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Components\\WhiteBoxColliderConfiguration.cpp",
+    "size": 1960,
+    "sha256": "698D156711EBD59AF709E10BA3786194A53B8AEEC4DCF80DAAEE9E5E617C5F7F"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Components\\WhiteBoxColliderConfiguration.h",
+    "size": 1013,
+    "sha256": "756B56BA7EC3041413514543D892DF25D10D410FA1A023FF8A33344485530E4A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsg.cpp",
+    "size": 44368,
+    "sha256": "A999EED6CF4F9E175FD106A51546747425EEA7A04DBC4E90403239208FE79027"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsg.h",
+    "size": 4891,
+    "sha256": "406D675C9DDC0763D39458EB026B97825A9E735BDFC2499A51C509A5054D0F7F"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.cpp",
+    "size": 15998,
+    "sha256": "90E675FADDEC3DF5E0B3AC73304A01478A6702F3B4963C92761AB69DDC6C2099"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.h",
+    "size": 4276,
+    "sha256": "A32B8E20DB0A5B0D449CBA2683E5E2BA2F946393B5F51CB847CDA9F6547C4608"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxToolApi.cpp",
+    "size": 174627,
+    "sha256": "51F0F9250DF532BF3EE4D57B899EA137116BFA82BE6CEDB59BE4270D0F4B1108"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Editor\\JEEditorFixtureAuthoring.cpp",
+    "size": 21873,
+    "sha256": "B532DDE2D8FCF9630A05C33882828A42CBCF4502F65C839C040CAD6ED7ADBBCD"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Editor\\JEEditorFixtureAuthoring.h",
+    "size": 1170,
+    "sha256": "551E454B66DDE00401BA983DA83FF09E8A1A1BCD20F91001095B0857105B291B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxDefaultShapes.cpp",
+    "size": 7459,
+    "sha256": "E9F3504B4F557931F937992646A3FF539FFB8BD9826A4F4B8A5FE70E9FF424CE"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxDefaultShapes.h",
+    "size": 620,
+    "sha256": "541949C6FD9CE19C6980744381BE9FC1E58C9340ED98322FD9C552DD6745F691"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\Android\\PAL_android.cmake",
+    "size": 262,
+    "sha256": "CAF6F831028587EAC2112462BCC0764EB847CFF77DE6CAC0313FC4D5E22F8FC0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\Emscripten\\PAL_emscripten.cmake",
+    "size": 263,
+    "sha256": "B8C648599F245980177B435615E4FACA9196514BBD9C33CC95E5F4A7BAB45D02"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\iOS\\PAL_ios.cmake",
+    "size": 263,
+    "sha256": "B8C648599F245980177B435615E4FACA9196514BBD9C33CC95E5F4A7BAB45D02"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\Linux\\PAL_linux.cmake",
+    "size": 262,
+    "sha256": "CAF6F831028587EAC2112462BCC0764EB847CFF77DE6CAC0313FC4D5E22F8FC0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\Mac\\PAL_mac.cmake",
+    "size": 263,
+    "sha256": "B8C648599F245980177B435615E4FACA9196514BBD9C33CC95E5F4A7BAB45D02"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\Mac\\platform_mac_tools.cmake",
+    "size": 346,
+    "sha256": "8980391C3BCDCA98DADE9B8216E665EFEBE749F8BC9A42AF7B6E09C2B007BD2A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Platform\\Windows\\PAL_windows.cmake",
+    "size": 262,
+    "sha256": "CAF6F831028587EAC2112462BCC0764EB847CFF77DE6CAC0313FC4D5E22F8FC0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxMaterial.cpp",
+    "size": 2187,
+    "sha256": "7023952A9541F7B1A0A46DD12D96831E53C9A98A98A453D3F9D15039AE10D226"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxMaterial.h",
+    "size": 1120,
+    "sha256": "2122F4E00BE15C9130FD8AC2594E0B91C638D82A5F31FB3246EF605BED3DD477"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxNullRenderMesh.cpp",
+    "size": 1109,
+    "sha256": "998A7328CEF6D873540BEB368DD49FD7E2D9D51BC5BD85BC52EC021F859888A7"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxNullRenderMesh.h",
+    "size": 993,
+    "sha256": "D503F2F84D2BA092DF98F7941B0430395624F132ACBF884FCEC925CD7CB6CDF0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderData.cpp",
+    "size": 3231,
+    "sha256": "B0CF803F40789D6590D6298F6C7A8AC94C699A0EAA7434B0075FA0BB4E3FE29A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderData.h",
+    "size": 1798,
+    "sha256": "FEC3E990CE5C814B24EE564280441A72515EC3784010DF0A34D0771FB15DF698"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderDataUtil.cpp",
+    "size": 2971,
+    "sha256": "7E52B8F48D616F14A53D7844B16F3F8F45A6A02CECC4DCA8246301E2D48F5D5C"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderDataUtil.h",
+    "size": 983,
+    "sha256": "E7653EA6B6ADF3E052EFCCAB059C02731676EBCB8AB6D06DB29B652BD2B0E69D"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderMeshInterface.cpp",
+    "size": 382,
+    "sha256": "97F4CFB5E92EFB09337252A7B74AFCE5065FE7BA9E7FF361ACEE41E250CCB09B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderMeshInterface.h",
+    "size": 1467,
+    "sha256": "C755669D1EED6087EDA4C13A80879FDAE9676DC3AFDA80B58AC3AC57E09F86A1"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\PackedFloat2.h",
+    "size": 481,
+    "sha256": "43CF5E5E6B1E02B9E0F3183ED104EBBDAD4153D9672B784D96FCCE6698FAF03F"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\TangentSpaceHelper.cpp",
+    "size": 11111,
+    "sha256": "640D73F951B05F5E29298C73F90D9AB759ED0A51104E3EF8DCB90578F534BA58"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\TangentSpaceHelper.h",
+    "size": 1797,
+    "sha256": "6F5E49A531B57AE5C749BAC916AC129688D3D108663869B22333A496F9C7052E"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxAtomRenderMesh.cpp",
+    "size": 11266,
+    "sha256": "441F0AE3D0117D2D4AA06F04436F05745D9AF483CA0BCD4D61DF7A55EEC48B34"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxAtomRenderMesh.h",
+    "size": 4988,
+    "sha256": "170AAC95BAFB1E284AB8AC1D8A7DCAF2187D2FF7364CD588B31D9532C48546BE"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxAttributeBuffer.h",
+    "size": 7307,
+    "sha256": "185DB2A83457D9EB494690B526825B9D1BC0C6A51634FF289A1E5803C08546E8"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxBuffer.h",
+    "size": 7369,
+    "sha256": "CC58B88760C081E3B955BEB4CC7994C7F52033F0E43B7FC28D9F353474D41E55"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxMeshAtomData.cpp",
+    "size": 3929,
+    "sha256": "297939B8CFB8ABB235C6B6B8DE60F83705981BB80B814EAAFE457E3372F8E123"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxMeshAtomData.h",
+    "size": 1650,
+    "sha256": "DF9B0A926DF6E23D5CF453380882974C95C466D25F440BF35F0710A26DD23C37"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxComponentModeCommon.cpp",
+    "size": 2255,
+    "sha256": "6CF298E2B8E9C1D2E3EE80FB79CCBDFFA9D8E131403C319D3968680F0159B4E8"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxComponentModeCommon.h",
+    "size": 985,
+    "sha256": "A98976214780ADBC759FE5A49F9FC5D798DE4B84EE148C1498605096CA4C3E03"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxDefaultMode.cpp",
+    "size": 76387,
+    "sha256": "30EA386E5E7211CCB36DA34911791F0B416F76F7FFEB31BBA91CCEC6F98444A6"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxDefaultMode.h",
+    "size": 7791,
+    "sha256": "1F1BBF4B68EE0957C35EF9187F4D5E8350ED9A3B954F5E0EE86D163EA072F7AA"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxDefaultModeBus.h",
+    "size": 5665,
+    "sha256": "72A7ABC3992B36635E913A345DE011D83F2623C1264A48A43A611FC6C389B72B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxEdgeRestoreMode.cpp",
+    "size": 10267,
+    "sha256": "D37D307D898FBFFF8B15405515521B72EFF4DE2686ED68EDACF1925EF6837D8B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxEdgeRestoreMode.h",
+    "size": 2249,
+    "sha256": "0AC7D18BE1D12DF7C14ECE11E33553416E137AC4EA6E323CCFE5CD45F0C9B629"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxTransformMode.cpp",
+    "size": 63494,
+    "sha256": "3AC44A5997DF550678E737DDDF73AC254B872CAD2B30B6BAC38A972D64348AC6"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxTransformMode.h",
+    "size": 6687,
+    "sha256": "700EC4D21878C5513A04612FA75D6C7E2E1A93E211FD846AACACAC3CE09DF5D6"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxTransformModeBus.h",
+    "size": 2235,
+    "sha256": "2A527370EA9940A90B25516BE2FFDBE371A9915DFD95AFB7DBB5250EDCAEBC6C"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\WhiteBoxNumericInput.h",
+    "size": 9492,
+    "sha256": "796AE2A148243F36C45796C0F64450EA19E722B614B7F4868FC6596FEC10E344"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxEditorDrawUtil.cpp",
+    "size": 3116,
+    "sha256": "56369B95EA9210661C02EE4D41856716FA24CCD994CA99149A1360C8E8EC751D"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxEditorDrawUtil.h",
+    "size": 1458,
+    "sha256": "D19C8D8014CEC637785E27F1CA52A1321AB775C52D9A158C30FCA34DDC1AD7B4"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxEditorUtil.cpp",
+    "size": 1273,
+    "sha256": "A36D2697B5451969B6179479C45CEB2B8E8232654386D6F91304E7721F819484"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxEditorUtil.h",
+    "size": 596,
+    "sha256": "E4EAF8D2935E240A168ACD094D745A0DE755B30DB75AAFED75BA6FB193126AC0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxMathUtil.cpp",
+    "size": 3547,
+    "sha256": "700EB5E45C5A034FAE406148621925925F722B47159347ECF043326ECC17EC68"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxMathUtil.h",
+    "size": 1694,
+    "sha256": "1EBC475D4AA4A20572C9BC57378CBCE26B2905D7ABCDF4D0BD1AF369DF6BA201"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxTextureUtil.cpp",
+    "size": 2932,
+    "sha256": "2BF19551512DAEEEEFA8035DA6CF3DC90EE35E57916A8C5EDC338E531199BD52"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Util\\WhiteBoxTextureUtil.h",
+    "size": 795,
+    "sha256": "479807F9ED106A7CAAF1F9AF5615BC0A7FEA4A8445F93DB88CB90CF6BA359A10"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxDrawShapeMode.cpp",
+    "size": 73176,
+    "sha256": "D95021CA0CDF95D4352B127B7A05FA461D05630F85C63D4D4E90A7E5389F7682"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxDrawShapeMode.h",
+    "size": 10011,
+    "sha256": "11E6E5720BD1D582FF6E0BFE213B9107D53A215682BEAB8C12BF34ABF411C7E6"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxDrawShapeModeBus.h",
+    "size": 1537,
+    "sha256": "4D6D20B9E00DB52CB7EE7BA5DF2653FDAE3082E6418DC22280132F55BFE613F6"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxEdgeScaleModifier.cpp",
+    "size": 9855,
+    "sha256": "858E8F957B876DEA433863CEB01B490FE9206D8A6AE848C45EC82D8BF8493FFE"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxEdgeScaleModifier.h",
+    "size": 2624,
+    "sha256": "F04BC0FFE97A31E490F5F37719478C87BB4753F9E59EFC70F579756375F88C37"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxEdgeTranslationModifier.cpp",
+    "size": 16918,
+    "sha256": "E5322EC1C581D34F54F6D27A7E3CC775EE8252BC8EE100E5F08CC098603582A5"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxEdgeTranslationModifier.h",
+    "size": 4002,
+    "sha256": "3C0B6EFBC630AAB30750CDD1EB7DEE154ADE52D3D633364DAA99E7F67CC6908C"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxManipulatorBounds.cpp",
+    "size": 5312,
+    "sha256": "0C51E2B75736E8E2A8B9E8858B06B84156D5D5662B6B105F199B041566D80A3B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxManipulatorBounds.h",
+    "size": 7106,
+    "sha256": "AE85513B3F7C9021DEE56929497F0B53490790793783295DF73B8180376C06DF"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxManipulatorViews.cpp",
+    "size": 9022,
+    "sha256": "00C39B14FB63522CCDEC00FDAF77DBF95D2A79081E178C1346EE446E8E022483"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxManipulatorViews.h",
+    "size": 3296,
+    "sha256": "631C8BED83B556D06F58C6EE2CF66E87BEFCC0B2AE8AB923E9AE0DFE30263BF8"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxModifierUtil.cpp",
+    "size": 2032,
+    "sha256": "6A338D7A3A74FC8CDB9AEB4A721D11E5EBB32021C78D5E28FB54B267CB80CA69"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxModifierUtil.h",
+    "size": 1278,
+    "sha256": "D0769E2387A5C3AE58F9AABE1F87A1A906CB46334500BF38A7546400FDEEC9F9"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxPolygonScaleModifier.cpp",
+    "size": 10279,
+    "sha256": "1F0B7C857A5A70D8ACDE504282A9F3F045192896E4EF27B75B69C5B18351CE5B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxPolygonScaleModifier.h",
+    "size": 2296,
+    "sha256": "1788E11097FD71B636663E716AD92FEA8944CE874068F9468BC77FCFAA2D7C46"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxPolygonTranslationModifier.cpp",
+    "size": 15326,
+    "sha256": "8354F6EC73A4689DDFA0F739C3CE4E2BFDC5F86D4A18438D1A65FF4ECC365FEF"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxPolygonTranslationModifier.h",
+    "size": 3148,
+    "sha256": "8726EE4C90597B63AB1A4CC4AD2125E400666E2D5FFD49A64FB1DB954E86650D"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxShapeBuilders.h",
+    "size": 4394,
+    "sha256": "CEC30943BD66B484999280AB4EAABDF4B20B7E903A42C26E77236889C49B2D47"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxVertexTranslationModifier.cpp",
+    "size": 16810,
+    "sha256": "EA338CDECC57D5DA7008A04CA843FB896362001DE7AF9A593F2CDACFCFA20BE4"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxVertexTranslationModifier.h",
+    "size": 3857,
+    "sha256": "426AE2335BAA590A72207AF3289CF52C9FB4B4DFCA9132507EB1B526FDAEFE09"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxViewportConstants.cpp",
+    "size": 3069,
+    "sha256": "7B343DC598BD51346EFF71A69F48FE29D4E361969451AAB0FABF835B7937EC6E"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxViewportConstants.h",
+    "size": 2026,
+    "sha256": "0BCBA44CB524182D820AB4482D50DF219FC68FE922454C2DC77C14C2087DD2EB"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\JEEditorAuthoringTest.cpp",
+    "size": 11326,
+    "sha256": "A0D94EAE2A969486942849C8B65C8BEC86D3E9CBF6E5F87260C893D087E8B55B"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxComponentTest.cpp",
+    "size": 42951,
+    "sha256": "26D8D0E9F16E0A2876C29FE140F13880D2382E371C76D6FA2656618CD711E091"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxEdgeTest.cpp",
+    "size": 4803,
+    "sha256": "870CF1F9997B79D0E74B55FB4C5914D44A712072B7B8091AD8AFFC628E5400A9"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxPhysicsTest.cpp",
+    "size": 4952,
+    "sha256": "DAC7F58C97121251C7428D2F823A2CF344FE8D3E316C0756D5F0A2F718B286AE"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxRenderDataTest.cpp",
+    "size": 4390,
+    "sha256": "C79609704A6106899BA9FB0B65A30174E5BE1A42BCCE5964459E577D6D2A4DBB"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxRuntimeTest.cpp",
+    "size": 368,
+    "sha256": "742A6FF622B2609D41B0D033F25332F372917C28163578D9EE8194DCA94A479A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxSelectionTest.cpp",
+    "size": 2543,
+    "sha256": "F09895E4C36823ECEF58FDE0B16C20DCA4BC9EA97F99484B45D9296FBB36D1F0"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTest.cpp",
+    "size": 130740,
+    "sha256": "4B66BEB59AD76F4D343FA13985437A7736F284BAEFE8F87385D55F14CF13D9FF"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTestFixtures.h",
+    "size": 6949,
+    "sha256": "3F9DFAC4F85BA6609ECC42227BABE6F9CDF5E80E540D71A450F2BDFF56A5C4DC"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTestRailsAutomation.cpp",
+    "size": 20075,
+    "sha256": "58D1B35163B36885B7413744BAB1D1D3C59117035E857740D56ACD31079A050E"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTestUtil.cpp",
+    "size": 5893,
+    "sha256": "AB9F44608A7E5894CD29DA213FB032A0A589436B38DA0F8D5224ACF6799AB5D7"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTestUtil.h",
+    "size": 2598,
+    "sha256": "7997C24882CD858FB19B78E42911F3193072064279E776A4B796BD6CE4010B30"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\WhiteBoxUVTest.cpp",
+    "size": 13058,
+    "sha256": "68BEE4F072049DAE9F06450EC01ADAEA8D557E0F1D8779B9874637496BFE84F8"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\CSG\\CMakeLists.txt",
+    "size": 2075,
+    "sha256": "3B85DECD6B7C451F333167B8830643E3C966A00EA4F861DA7DAA2584D6D46E07"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\CSG\\WhiteBoxCsgCoreTest.cpp",
+    "size": 26648,
+    "sha256": "3E0C8BD358AE0805DB50B1DAC36DC9E2141655896393A8FD7AFCD27986E94A47"
+  }
+]

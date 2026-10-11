@@ -1,0 +1,12 @@
+{
+  "label": "cl-sha",
+  "scope": "FUNCTION-GUARD",
+  "secondaryMissingPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\missing-after-cl-sha",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0319538,
+  "expectedError": "audited existing external CL SHA256 mismatch",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION"
+}

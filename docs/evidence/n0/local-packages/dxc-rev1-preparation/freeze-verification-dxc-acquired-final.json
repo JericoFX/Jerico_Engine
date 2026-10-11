@@ -1,0 +1,12 @@
+{
+  "inputCount": 19828,
+  "verified": 19828,
+  "historicalUnchanged": 1966,
+  "newInputs": 17862,
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\source-freeze-dxc-acquired-final.json",
+  "freezeSHA256": "7333734E7669C1151616CBED86D2C81A2E1FE8278E3CC01C719D87788475C93B",
+  "snapshotFiles": 19661,
+  "sourceArchives": 3,
+  "deltaToPrior": "Only new own acquisition/snapshot/evidence files; no source/helper/catalogue/Root inputs edited",
+  "nativeExecuted": false
+}

@@ -1,0 +1,27 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+if(TARGET 3rdParty::DirectXShaderCompilerDxc)
+    return()
+endif()
+include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
+set(DirectXShaderCompilerDxc_BINARY_DIR "${CMAKE_CURRENT_LIST_DIR}/DirectXShaderCompilerDxc/bin")
+JE_python_require_local_path(DirectXShaderCompilerDxc_BINARY_DIR)
+file(READ "${CMAKE_CURRENT_LIST_DIR}/PackageInfo.json" JE_PACKAGE_INFO)
+string(JSON DirectXShaderCompilerDxc_VERSION GET "${JE_PACKAGE_INFO}" version)
+set(DirectXShaderCompilerDxc_RUNTIME_DEPENDENCIES)
+foreach(JE_FILE IN ITEMS dxc.exe dxsc.exe dxil.dll dxcompiler.dll)
+    set(JE_PATH "${DirectXShaderCompilerDxc_BINARY_DIR}/${JE_FILE}")
+    JE_python_require_local_path(JE_PATH)
+    if(NOT EXISTS "${JE_PATH}" OR IS_DIRECTORY "${JE_PATH}")
+        message(FATAL_ERROR "JE DXC local package is incomplete: ${JE_PATH}")
+    endif()
+    list(APPEND DirectXShaderCompilerDxc_RUNTIME_DEPENDENCIES "${JE_PATH}")
+endforeach()
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(DirectXShaderCompilerDxc REQUIRED_VARS
+    DirectXShaderCompilerDxc_BINARY_DIR VERSION_VAR DirectXShaderCompilerDxc_VERSION)
+add_library(3rdParty::DirectXShaderCompilerDxc INTERFACE IMPORTED GLOBAL)
+if(COMMAND ly_add_target_files)
+    ly_add_target_files(TARGETS 3rdParty::DirectXShaderCompilerDxc
+        OUTPUT_SUBDIRECTORY Builders/DirectXShaderCompiler FILES ${DirectXShaderCompilerDxc_RUNTIME_DEPENDENCIES})
+endif()

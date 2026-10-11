@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: dxc exact local archive SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-negatives/attempt-rev3/fixtures/changed-archives/dxc/dxc-1cc0ab76dafe08a4144e419e619a8951a3d219db.tar.gz
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:43 (JE_python_verify_file)
+
+

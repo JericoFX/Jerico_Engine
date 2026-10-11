@@ -1,0 +1,44 @@
+{
+  "changes": [],
+  "sourceInputs": 23379,
+  "toolchainInputs": 44,
+  "extraInputs": [
+    {
+      "sha256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB",
+      "path": "C:/Program Files/CMake/bin/ctest.exe",
+      "bytes": 14012488
+    },
+    {
+      "sha256": "D516E0827B5E63C5E4EE8741A7938E337F137CAAE853338EC3882DAB821F9382",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\RunDxcConsumerDiagnosticParentRev3b.ps1",
+      "bytes": 15446
+    },
+    {
+      "sha256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "bytes": 7352940
+    },
+    {
+      "sha256": "8A9C9F9F562F099559770A5770B1465928471416181CEBC38198B2FEFF2E627E",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 131
+    },
+    {
+      "sha256": "7F385D2CB8B425AE4A7F6586DA7CFF8D8A20766F60B769AB1E55E886276B42A0",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-attempt1/archive-audit.json",
+      "bytes": 6220
+    },
+    {
+      "sha256": "5071D82C8A6507D2400DF4E8785089658A1E86781CBBA268F53C509194871C26",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-attempt1/postflight.json",
+      "bytes": 1156
+    }
+  ],
+  "status": "PASS",
+  "fourMembershipRoots": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition/dxc/snapshot",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition/spirv-headers/snapshot",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition/spirv-tools/snapshot",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/Lib"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "overlays": [
+    {
+      "id": "commit-info",
+      "source": "dxc",
+      "path": "utils/GetCommitInfo.py",
+      "replacements": [
+        {
+          "after": "",
+          "before": "import subprocess\n"
+        },
+        {
+          "after": "def git_get_commit_hash():\n    # Audited archive1cc0ab76; original runtime allocations require8 characters.\n    return \"1cc0ab76\"\n\n\ndef git_get_commit_count():\n    # Pinned GitHub REST unfiltered history cardinality; not local git rev-list.\n    return 4954",
+          "before": "def git_get_commit_hash():\n    try:\n        return subprocess.check_output(\n            ['git', 'rev-parse', '--short=8', 'HEAD']).decode('ascii').strip()\n    except subprocess.CalledProcessError:\n        return \"00000000\"\n\n\ndef git_get_commit_count():\n    try:\n        return subprocess.check_output(\n            ['git', 'rev-list', '--count', 'HEAD']).decode('ascii').strip()\n    except subprocess.CalledProcessError:\n        return 0"
+        }
+      ],
+      "afterSHA256": "15e1408450fac999d683eea6a1eaa1a71c30f2b6500695617c6097fb0b159215",
+      "beforeSHA256": "16036fa6f82f17cf778e8cf22c690a5bdac3b15a981ca59c0384ad6f292bf84d"
+    },
+    {
+      "id": "fixed-version",
+      "source": "dxc",
+      "path": "utils/version/version.inc",
+      "replacements": [
+        {
+          "after": "#define RC_PRODUCT_VERSION \"1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db\"",
+          "before": "#define RC_PRODUCT_VERSION \"1.8.2505.0\""
+        }
+      ],
+      "afterSHA256": "59ab0f6082a4de27b5c94d39c4a1ec6e9a01e1bdb0246871e6c7a142c785d7d0",
+      "beforeSHA256": "8c5d6d8bda85c32eda2b6f24da43b799d3a5c6f5bd94e249a596569cf8159658"
+    },
+    {
+      "id": "spirv-description",
+      "source": "spirv-tools",
+      "path": "utils/update_build_version.py",
+      "replacements": [
+        {
+          "after": "    description = \"a62abcb402009b9ca5975e6167c09f237f630e0e (archive)\"",
+          "before": "    description = os.getenv(\"FORCED_BUILD_VERSION_DESCRIPTION\", describe(repo_path))"
+        }
+      ],
+      "afterSHA256": "e72f37dc38095d874e4f94564a8f769fa43b71411e33000d654473b2b564e9a9",
+      "beforeSHA256": "929b4f3a4e433b511b8143b1c5b8df705486bd044e030299fe7457cb10b495e3"
+    }
+  ],
+  "historyCountMethod": "Pinned GitHub REST unfiltered list cardinality4954, not local git rev-list",
+  "originalNumericVersion": "1.8.2505.0",
+  "fixedVersionGuard": "HLSL_ENABLE_FIXED_VER=ON; HLSL_FIXED_VERSION_LOCATION empty; upstream uses private utils/version/version.inc without invoking gen_version.py",
+  "parentApprovalSHA256": "31BC4468E2C83C59E19843A1130646C7057A90614115E1079CD9CE000EF782A5"
+}

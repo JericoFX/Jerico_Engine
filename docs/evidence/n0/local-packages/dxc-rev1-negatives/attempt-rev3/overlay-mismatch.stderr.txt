@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: commit-info pristine private source SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-negatives/attempt-rev3/fixtures/overlay-work/dxc/utils/GetCommitInfo.py
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/ApplyPrivateProvenance.cmake:32 (JE_python_verify_file)
+
+

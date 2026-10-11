@@ -1,0 +1,68 @@
+{
+  "status": "PENDING LUNA NATIVE EXECUTION; PREPARATION ONLY",
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegatives.ps1",
+      "bytes": 9562,
+      "sha256": "7022F2F2A31B905C483EDBA95EC074DFD1B5D829687B303224479E5059540AA0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\PrepareNegativeAssignment.ps1",
+      "bytes": 10226,
+      "sha256": "59AD7D2DFC168C1712858A12FD9435B792158AB04F2F85FF85290EC56CECB657"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment.json",
+      "bytes": 36205,
+      "sha256": "11B08617C06A45BD3DBAD2839492C26DE819F205E18CD1D3B6023EE04B331DFC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\driver-source-diff.patch",
+      "bytes": 20292,
+      "sha256": "C76E004DF6105F9337D2AD4EA94C4008C71681AC3BBA41547179448C0F368E16"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\provider-candidate-rev2\\source-freeze-dxc-provider-rev2-final.json",
+      "bytes": 8895130,
+      "sha256": "123AE0639F373D0EF16E6147FC74765CBCBBD7AF42CCEF1535D58A5B7A1C5CCD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\provider-candidate-rev2\\validation-assignment.json",
+      "bytes": 5330,
+      "sha256": "5968A5F2785CC65BEBA8AD14EAB987C429645F2EC5BB3CCBBE3FA21902CE9585"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\packages\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "bytes": 7352940,
+      "sha256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\packages\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 131,
+      "sha256": "8A9C9F9F562F099559770A5770B1465928471416181CEBC38198B2FEFF2E627E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\logs\\configure-Release.result.json",
+      "bytes": 45,
+      "sha256": "5EA56CDCF3EBD160E0E870E5D0BB397BFE5DA2CD50E581575AA4084153526119"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\logs\\build-Release.result.json",
+      "bytes": 46,
+      "sha256": "019C60776E3DCF55B4F1D2FA223594ABFA0CBD98F6DB1A8E0E9B80A9662ADAFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\package-ready.json",
+      "bytes": 71,
+      "sha256": "6C1B91417DB8A6D9C30239351F725927B1F4BBEFAB23494B6B8D8E01A277C413"
+    }
+  ],
+  "fileCount": 11,
+  "sourceFreezeReferencedInputs": 23348,
+  "cases": 18,
+  "writerCreatedFixtureFiles": 0,
+  "PowerShellParserErrors": 0,
+  "nativeExecuted": false,
+  "sourceOrSnapshotWrites": false,
+  "acceptance": false
+}

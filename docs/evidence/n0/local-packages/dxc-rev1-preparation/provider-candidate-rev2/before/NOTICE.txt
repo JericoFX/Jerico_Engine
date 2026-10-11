@@ -1,0 +1,41 @@
+Copyright (c) Contributors to the Open 3D Engine Project.
+JE package glue: Apache-2.0 OR MIT; full texts in LICENSES/O3DE.
+
+This is a newly built local package, not the historical binary package and
+not a Microsoft-signed binary release. Its real archive SHA must be measured.
+The original O3DE Windows recipe distributes four Release tools:
+DirectXShaderCompilerDxc/bin/dxc.exe, dxsc.exe, dxil.dll, dxcompiler.dll.
+The engine target/deploy path remain 3rdParty::DirectXShaderCompilerDxc and
+Builders/DirectXShaderCompiler. dxsc is the original DX12 specialization
+patcher and remains present. No Python interpreter is distributed.
+
+DXC source authority: o3de/DirectXShaderCompiler branch
+release-1.8.2505.1-o3de, pinned commit
+1cc0ab76dafe08a4144e419e619a8951a3d219db, not an invented upstream tag.
+The source numeric version is1.8.2505.0; package branch identity .1 does not
+alter those original numeric fields. Full source pin is in ProductVersion.
+Original IDxcVersionInfo2 allocations require the short8 hash1cc0ab76.
+Count4954 is the reviewed unfiltered pinned GitHub REST history cardinality,
+not a local git rev-list measurement. API queries and ownership remain intact.
+
+The three documented private overlays affect only version.inc,
+GetCommitInfo.py, and SPIRV-Tools update_build_version.py. Original immutable
+archives/snapshots remain unchanged. All before/after SHA256 and exact byte
+inverses are recorded. Source generators, feature defaults, EH/RTTI,
+SPIR-V code generation and original Windows tests-off recipe are preserved.
+SPIRV-Headers aa6cef192b8e693916eb713e7a9ccadf06062ceb and SPIRV-Tools
+a62abcb402009b9ca5975e6167c09f237f630e0e are the exact selected gitlinks.
+
+Full source licensing/notices are retained in LICENSES/SourceNotices.txt:
+NCSA and ThirdPartyNotices; Apache-2.0 SPIRV-Tools; Khronos SPIRV-Headers;
+LLVM regex COPYRIGHT; actual DxilCompression LICENSE.TXT and source notices
+for miniz, ConvertUTF and MD5. Source build/test Autoconf notices in the full
+authority license are scoped historical text, not an attribution of every
+distributed DLL to GPL or a certification of complete redistribution rights.
+
+The pinned 2025 source includes the open retail DXIL validator hash algorithm.
+DXIL hashing is distinct from Windows DLL Authenticode signing. Source-built
+dxil.dll still ships as the original recipe requires. No validation bypass,
+developer-mode enablement or external signed-validator replacement is used.
+Native compilation, shader validation and real DX12/Vulkan product behavior
+are separate acceptance gates; this notice does not claim those gates passed.

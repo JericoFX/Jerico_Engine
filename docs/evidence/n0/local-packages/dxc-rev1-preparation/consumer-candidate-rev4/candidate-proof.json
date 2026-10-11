@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN FOR PARENT REVIEW",
+  "verified": 23385,
+  "historicalInputs": 23379,
+  "deltas": 1,
+  "unknownDeltas": 0,
+  "source": {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+    "bytes": 13255,
+    "sha256": "3FE2DA8FC5D468FFDCC14090AD2D2FB7EC0B44A328059AB47D33AD6E4E723064",
+    "role": "single invalid oracle edit"
+  },
+  "diff": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev4\\source-diff-rev3-to-rev4.patch",
+    "bytes": 1302,
+    "sha256": "0F2B7D339F4411BDD027712013DF8C28E2394EAF144D1CD5C1FDC7E2303408AA",
+    "role": "actual exact inverse diff"
+  },
+  "assignment": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev4\\validation-assignment.json",
+    "bytes": 2778,
+    "sha256": "848BCA5E32ED6E815126EAC789EEB8F874865D51B4A5C2D748DA1B04DBC2664B",
+    "role": "fresh rev4 all four cases"
+  },
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev4\\source-freeze-dxc-consumer-rev4.json",
+    "bytes": 8909417,
+    "sha256": "A708661417616D36547CF224DD24712176157A1B02A8086A93DD64079AEEAD92",
+    "role": "complete corrected source freeze"
+  },
+  "bareFreeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev4\\source-freeze-dxc-consumer-rev4-bare.json",
+    "bytes": 8630496,
+    "sha256": "BABAD6B9BE1CA9D8FB74F82CA5B5E230CF37650981C1A6DA2F7D4B03AA43529A",
+    "role": "bare file list"
+  },
+  "nativeExecuted": false,
+  "acceptance": false
+}

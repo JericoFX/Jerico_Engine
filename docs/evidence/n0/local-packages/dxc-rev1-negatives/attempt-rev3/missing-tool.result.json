@@ -1,0 +1,12 @@
+{
+  "label": "missing-tool",
+  "scope": "PRODUCER",
+  "secondaryMissingPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\missing-secondary-ninja.exe",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.1620959,
+  "expectedError": "audited existing external PYTHON file is missing",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION"
+}

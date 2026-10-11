@@ -1,0 +1,280 @@
+{
+  "status": "EXISTING INSTALLED LOCAL TOOLCHAIN WITNESS; ENVIRONMENT INITIALIZATION/NATIVE PENDING",
+  "instanceId": "72be9b85",
+  "installationPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+  "modulePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll",
+  "files": [
+    {
+      "path": "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\_Instances\\72be9b85\\state.json",
+      "bytes": 13929,
+      "sha256": "D5C31AAD678877058C1498276075CFA2E90F15E760AAD77BCA14FE7E0CC4C231",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja\\ninja.exe",
+      "bytes": 2649032,
+      "sha256": "FF29BCB5F547174BAE6B73C84278CCE9B674E8EBC2F3C3926AB21030B33F34B8",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\Launch-VsDevShell.ps1",
+      "bytes": 24098,
+      "sha256": "B36195B3440CEC7EC7F5EDC52EE631CA58C0617090343044C068321125630457",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll",
+      "bytes": 37944,
+      "sha256": "B574FAB3F690DF68E04EB7DB0606B8AFA61E80BC839F36DACD2CF4A9BA000C2D",
+      "fileVersion": "17.14.40313.35511"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\VsDevCmd.bat",
+      "bytes": 11526,
+      "sha256": "C004278E64444BF3524360F960511B5CE7B1D0306910F08A4EBCF1C42FF9BD6D",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\dotnet.bat",
+      "bytes": 10033,
+      "sha256": "E9FCDD8A29629E2594A3D2AC34E03CA944AAF92F1E93AED003173A5466F262E2",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\msbuild.bat",
+      "bytes": 1251,
+      "sha256": "0A1CCA60B353B2881AC1ED587C1323A7535E1BEDDA749C94247B9EF110EFDF08",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\parse_cmd.bat",
+      "bytes": 10278,
+      "sha256": "01AA909650DFCB166C0FD6352CCF550177B8E90CDE140214F18D105061F9196B",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\vsdevcmd_end.bat",
+      "bytes": 4066,
+      "sha256": "4F85EE6D2B1B4DFF009EA9681FFAF7A698A96E8DD4E4CA3C779B8884DE1C7206",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\vsdevcmd_start.bat",
+      "bytes": 4048,
+      "sha256": "DA311BEAE7797632908B5A2E292AC00811E1373AB3108921AB1FE3EF2EC84466",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\winsdk.bat",
+      "bytes": 21064,
+      "sha256": "66BBDB774BF79D538828EFAFB2099E2485A79C610BEAC775052D43F8C6BD752B",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\cmake.bat",
+      "bytes": 1925,
+      "sha256": "0938795316A9882A684F9744FE96C82D1F60D8D9AA5E5223749B85BB4E329602",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\codecoverage.bat",
+      "bytes": 1461,
+      "sha256": "F4BB6F3A7ABCBD04C7999F7E3A8287220A7889E35905727F2C308C915EF629FE",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\ConnectionManagerExe.bat",
+      "bytes": 1361,
+      "sha256": "62991251273DB1680499E3AF92CFA93B2DD1C08D97517C7731CF0CDA8AC0B5D9",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\diaghub.bat",
+      "bytes": 1123,
+      "sha256": "164A604DB6E97ACFDBBECD3973A0EBAF6EFC2C4E36BACB9EF45D2D945D3A85EF",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\netfxsdk.bat",
+      "bytes": 6987,
+      "sha256": "4A5EE8E9D3B82B6F88F1DFC8582B1480C712F2E8C5A77C8383007D58677F243A",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\roslyn.bat",
+      "bytes": 1263,
+      "sha256": "F417AEB7F9C2387DF16E397C70E90643CBA4E0C40741BA669D08509C387AE534",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\team_explorer.bat",
+      "bytes": 1607,
+      "sha256": "D4904972B2D7DD9EBCF438F81C929068B094B94B83D7200F0BA868670377F02A",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\testwindow.bat",
+      "bytes": 1405,
+      "sha256": "43CCF694CC0C717C84B99656CA585C8A1B0055DA6C4B2065A0E896DA1F4D5764",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\vcpkg.bat",
+      "bytes": 914,
+      "sha256": "51441266A31DB1CDFFFFCE6B29E1DC7BE72A0F9F34D4A6F26DA3140B1889A3CD",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\vcvars.bat",
+      "bytes": 38924,
+      "sha256": "136BEB56E4C59F6F704EC5CCBC6E86FFC92D526F1F2996C79E48739F909696C6",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\vcvars\\vcvars140.bat",
+      "bytes": 13146,
+      "sha256": "037B9F4EBD2E21E493EF8CA14C770AEF4C70774C52D934DCDCA54A9D6CF831CD",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\DIA SDK\\include\\dia2.h",
+      "bytes": 1256012,
+      "sha256": "B56BFC63323476AD7535B578B9E1095427EA777FEE000B35F4D2BF70C73FF6A0",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\DIA SDK\\lib\\amd64\\diaguids.lib",
+      "bytes": 2228364,
+      "sha256": "2B2D5103A90CD53C6B49A7BCF0AED05D35E1A5560908AADC09ED9117DA3FE098",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCRedistVersion.default.props",
+      "bytes": 301,
+      "sha256": "22F3C383E8E336DD7834CA3DA9E4D85AEC2D8DC1C67C8583012135CD695EBE1E",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCRedistVersion.default.txt",
+      "bytes": 13,
+      "sha256": "A57D05F36A0E13206231F97899D320819D02725273BC30D4C3197D529AF63D91",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCRedistVersion.v143.default.props",
+      "bytes": 301,
+      "sha256": "22F3C383E8E336DD7834CA3DA9E4D85AEC2D8DC1C67C8583012135CD695EBE1E",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.default.props",
+      "bytes": 408,
+      "sha256": "700B0F21C92704263695A111659181204704203AC3FBADCA95C0210A9AAA80AB",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.default.txt",
+      "bytes": 13,
+      "sha256": "030613DF718548A88970E4C1844A8605D17ABA9AA36BFEA0B4359D8F28FD62BF",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.v143.default.props",
+      "bytes": 421,
+      "sha256": "4B35FA2C3046D5833CE08343295FEACC30D1281187BF8E5D3450CB2CBCBF4601",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.v143.default.txt",
+      "bytes": 13,
+      "sha256": "030613DF718548A88970E4C1844A8605D17ABA9AA36BFEA0B4359D8F28FD62BF",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars32.bat",
+      "bytes": 39,
+      "sha256": "E0F12BA374968F55CE898EE0384EB9C9B989CC3B499E3C0D553368AD223E28C8",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+      "bytes": 39,
+      "sha256": "6B516D8FCF543C14B2D861E1F45661E0029230FE0DC48E86CE78522801822209",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat",
+      "bytes": 10524,
+      "sha256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsamd64_x86.bat",
+      "bytes": 43,
+      "sha256": "4C618B293D9E6F2913521A3CF0C49F926610699FFC580E36F862175F2950A447",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsx86_amd64.bat",
+      "bytes": 43,
+      "sha256": "B7790487BC1FC458C234D0A2BAEE291A4816D89EF32D3DA4E4B77DA82BEB9B4D",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\atlmfc\\include\\atlbase.h",
+      "bytes": 214478,
+      "sha256": "9334AFFF859A11C56C4A2265D2CAFBE958BA1DA23D3FF6FAF9B09AE4046D8D5B",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\atlmfc\\lib\\x64\\atls.lib",
+      "bytes": 815728,
+      "sha256": "BD162C7A998225A3524471CFC1889B0FDC48D0FF2BCC26177E56C47A137ACE5C",
+      "fileVersion": null
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+      "bytes": 677736,
+      "sha256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+      "fileVersion": "19.44.35228.0"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe",
+      "bytes": 3252576,
+      "sha256": "CA11E6C45DEBD34BF652DFE984C5360A531A005ED78BF72852330C9C2590CF0D",
+      "fileVersion": "14.44.35228.0"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mc.exe",
+      "bytes": 661848,
+      "sha256": "79B5BA66AE0CF0DEFC049B3436D892C2731D13D9F194836EA8A8469ABDB39651",
+      "fileVersion": "10.0.26100.7705 (WinBuild.160101.0800)"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+      "bytes": 55640,
+      "sha256": "43DA1503C262C30894C851589BF0155F8365D77E63A5F7BC13982320E3A6B42D",
+      "fileVersion": "10.0.26100.7705 (WinBuild.160101.0800)"
+    },
+    {
+      "path": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "bytes": 13119048,
+      "sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+      "fileVersion": "4.3.4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python\\python.exe",
+      "bytes": 91648,
+      "sha256": "6235ABE2248C14AD86DFE00DBB7BC2396EB4B91F663412C211905E279BCE9D6E",
+      "fileVersion": "3.10.13"
+    }
+  ],
+  "fileCount": 44,
+  "memoryObserved": {
+    "totalMiB": 32678.359375,
+    "freeMiB": 15734.7109375,
+    "logicalProcessors": 20
+  },
+  "parallelJobs": 6,
+  "scope": "Selected existing VS setup helpers, tools and DIA/ATL witnesses; no installer, acquisition or complete hermetic toolchain claim"
+}

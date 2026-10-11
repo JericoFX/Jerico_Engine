@@ -1,0 +1,527 @@
+{
+  "status": "PREPARED ONLY; NOT RUN",
+  "nativeOwner": "Luna only after parent review",
+  "nativeExecuted": false,
+  "acceptance": false,
+  "sourceFreeze": {
+    "files": 23348,
+    "sha256": "123AE0639F373D0EF16E6147FC74765CBCBBD7AF42CCEF1535D58A5B7A1C5CCD",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\provider-candidate-rev2\\source-freeze-dxc-provider-rev2-final.json"
+  },
+  "productionWitnesses": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\packages\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "bytes": 7352940,
+      "sha256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\packages\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 131,
+      "sha256": "8A9C9F9F562F099559770A5770B1465928471416181CEBC38198B2FEFF2E627E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\logs\\configure-Release.result.json",
+      "bytes": 45,
+      "sha256": "5EA56CDCF3EBD160E0E870E5D0BB397BFE5DA2CD50E581575AA4084153526119"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\logs\\build-Release.result.json",
+      "bytes": 46,
+      "sha256": "019C60776E3DCF55B4F1D2FA223594ABFA0CBD98F6DB1A8E0E9B80A9662ADAFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1\\package-ready.json",
+      "bytes": 71,
+      "sha256": "6C1B91417DB8A6D9C30239351F725927B1F4BBEFAB23494B6B8D8E01A277C413"
+    }
+  ],
+  "snapshots": [
+    {
+      "files": 17851,
+      "id": "dxc",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot"
+    },
+    {
+      "files": 104,
+      "id": "spirv-headers",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot"
+    },
+    {
+      "files": 1706,
+      "id": "spirv-tools",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\snapshot"
+    }
+  ],
+  "fixtureSources": {
+    "commitInfo": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\utils\\GetCommitInfo.py",
+    "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\dxc-1cc0ab76dafe08a4144e419e619a8951a3d219db.tar.gz"
+  },
+  "pathsMustRemainAbsent": [
+    "F:\\JericoEngine\\JericoEngine\\JE_DXC_negative_never_created"
+  ],
+  "cases": [
+    {
+      "label": "missing-archive",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-missing-archive",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "dxc exact local archive file is missing",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-missing-archive"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "archive-sha",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\changed-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-archive-sha",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "dxc exact local archive SHA256 mismatch",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-archive-sha"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "missing-tool",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\missing-python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-missing-tool",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "audited existing external PYTHON file is missing",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-missing-tool"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "python-sha",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=0000000000000000000000000000000000000000000000000000000000000000",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-python-sha",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "audited existing external PYTHON SHA256 mismatch",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-python-sha"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "ninja-sha",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=0000000000000000000000000000000000000000000000000000000000000000",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-ninja-sha",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "audited existing external NINJA SHA256 mismatch",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-ninja-sha"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "cl-sha",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=0000000000000000000000000000000000000000000000000000000000000000",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-cl-sha",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "audited existing external CL SHA256 mismatch",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-cl-sha"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "uri",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=https://example.invalid/JE_DXC_never_contacted",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-uri",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must not be a URI",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-uri"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "unc",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=//localhost/JE_DXC_never_shared/archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-unc",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must be an absolute local path",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-unc"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "junction",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\archive-junction",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-junction",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must not use symlink paths",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-junction"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "ancestor-reparse",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\archive-junction\\missing-child",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-ancestor-reparse",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE_DXC_ARCHIVES_ROOT must not use symlink paths",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-ancestor-reparse"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "existing-output",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC output exists; previous attempts are retained",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output\\logs",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output\\source-work",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output\\build-Release",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output\\stage",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output\\packages",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\existing-output\\package-ready.json"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "outside-build",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\JE_DXC_negative_never_created",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC output must be below checkout/build",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\JE_DXC_negative_never_created"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "absent-vs",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-absent-vs",
+        "-DJE_DXC_PARALLEL_JOBS=6",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC requires the existing VS2022/v143 x64 development environment",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": null
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-absent-vs"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "jobs-absent",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-absent",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS is required",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-absent"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "jobs-zero",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-zero",
+        "-DJE_DXC_PARALLEL_JOBS=0",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-zero"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "jobs-negative",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-negative",
+        "-DJE_DXC_PARALLEL_JOBS=-1",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-negative"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "jobs-noninteger",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\empty-archives",
+        "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+        "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+        "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+        "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+        "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-noninteger",
+        "-DJE_DXC_PARALLEL_JOBS=six",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+      ],
+      "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+      "childEnvironment": {
+        "VSCMD_ARG_TGT_ARCH": "x64"
+      },
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\not-created-jobs-noninteger"
+      ],
+      "allowedEmptyProof": null
+    },
+    {
+      "label": "overlay-mismatch",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_WORK_dxc=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\overlay-work\\dxc",
+        "-DJE_WORK_spirv-tools=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\fixtures\\overlay-work\\spirv-tools",
+        "-DJE_DXC_PROOF_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\overlay-proof",
+        "-P",
+        "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\ApplyPrivateProvenance.cmake"
+      ],
+      "expectedError": "commit-info pristine private source SHA256 mismatch",
+      "childEnvironment": {},
+      "mustRemainAbsent": [
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\stage",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\packages",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\build-Release",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\package-ready.json"
+      ],
+      "allowedEmptyProof": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt1\\overlay-proof"
+    }
+  ],
+  "fixtureDesign": [
+    "Luna creates only attempt1 fixtures; writer did not create fixtures or execute native",
+    "Archive fixture is exact source archive copied plus one byte; original stays read-only",
+    "Three fixture files are hashed and membership-checked before/after cases",
+    "Junction target is private empty local directory, not any source snapshot; no link cleanup",
+    "Absent child of junction proves ancestor reparse rejection before file lookup",
+    "Existing-output marker preserved byte-exact; no production children permitted",
+    "Outside-build sentinel never written: empty archive root is a second early rejection if expected guard regresses",
+    "Jobs and absent-VS cases also have empty archives as a safe secondary guard",
+    "Child process VS variable set only for guard context or removed for absent-VS; host environment unmodified",
+    "Overlay uses actual helper with altered first pristine file; only an empty proof directory may be created, no successful patch or production"
+  ],
+  "resultContract": "Every case must return nonzero, match its exact normalized diagnostic, create no production output and preserve fixtures. All 23348 source inputs, 3 full tree memberships and 5 positive-production witnesses remain intact. Any failure stops commands and preserves evidence.",
+  "limits": "Negative guards prove rejection only. Real archive payload/consumer/runtime/Root/DX12 acceptance belongs to parent and its separately assigned Luna driver."
+}

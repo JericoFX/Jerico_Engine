@@ -1,0 +1,6 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_DXC_ARCHIVES_ROOT must be an absolute local path
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:14 (JE_python_require_local_path)
+
+

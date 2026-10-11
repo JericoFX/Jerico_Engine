@@ -1,0 +1,15 @@
+{
+  "status": "PARENT ACTUAL DERIVED DRIVER REVIEW",
+  "driverSHA256": "D0876C989526EE283CEFFDF03674C3154740263A0877F7A29A9DE1763DABAA23",
+  "assignmentSHA256": "9CF710AFC67CBFF9BF635E5E901911108A17B233940FE6EFBED7C083C48BA2F0",
+  "freezeSHA256": "AF617F8664743B42A80CC17A31475998C2F1A3819BE430C0FD073A4F7696EAA3",
+  "sourceInputs": 15674,
+  "arguments": 61,
+  "literalDriverInverseExact": true,
+  "actualArgvUnchanged": true,
+  "sourceDeltas": 5,
+  "cacheFiles": 36,
+  "wheelhouseFiles": 44,
+  "nativeOwner": "Existing validation_luna only",
+  "scope": "Only CMake toolversion and original offline Root configure; preserve native failure and all pre/post evidence; no native build/acceptance"
+}

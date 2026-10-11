@@ -1,0 +1,16 @@
+{
+  "id": "spirv-headers",
+  "repository": "KhronosGroup/SPIRV-Headers",
+  "commit": "aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+  "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+  "status": 200,
+  "redirectFollowed": false,
+  "authentication": false,
+  "bytes": 547754,
+  "sha256": "1bf0568bad1f9e30fce8d3199e54ae7ade1c16dbe913b5afd9b499149a9bb9a5",
+  "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\spirv-headers-aa6cef192b8e693916eb713e7a9ccadf06062ceb.tar.gz",
+  "headGetEtagEqual": true,
+  "etag": "\"9d79bed5044647bddb705b3a5f8ffc06fa08faf81cf9262ee3448bb95998a316\"",
+  "utc": "2026-10-11T05:40:25.9706065Z",
+  "identity": "Measured original source archive, not historical package hash; pending full tar/primary Gitblob verification"
+}

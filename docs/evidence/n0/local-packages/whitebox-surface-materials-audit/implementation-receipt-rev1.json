@@ -1,0 +1,340 @@
+{
+  "status": "SOURCE_IMPLEMENTED_NATIVE_NOT_RUN",
+  "sourceFreeze": {
+    "path": "source-freeze-whitebox-surface-materials-rev1.json",
+    "sha256": "52C12F26F2898076B99F2811523AC7B8311555780BAA3C8CCCA4639E1B5F4D5B",
+    "files": 25,
+    "references": 35
+  },
+  "diff": {
+    "path": "source-diff-rev1.patch",
+    "sha256": "9CC0FC4B5D7A4810B4780B4E05F6674991CA016C0DF73BC14E3E4F1600C6B8AD",
+    "added": 1238,
+    "removed": 41,
+    "reconstruction": "25 candidate strings reconstructed from original/additions; current sources match source-views",
+    "summary": "diff-summary-rev1.json"
+  },
+  "preservation": {
+    "originalFiles": 143,
+    "changedOriginals": 22,
+    "unchangedOriginals": 121,
+    "newFiles": 3,
+    "beforeSnapshotsIntact": true,
+    "unchangedPaths": [
+      "Gems/WhiteBox/Code/.editorconfig",
+      "Gems/WhiteBox/Code/CMakeLists.txt",
+      "Gems/WhiteBox/Code/whitebox_editor_physics_tests_supported_files.cmake",
+      "Gems/WhiteBox/Code/whitebox_editor_shared_files.cmake",
+      "Gems/WhiteBox/Code/whitebox_shared_files.cmake",
+      "Gems/WhiteBox/Code/whitebox_supported_files.cmake",
+      "Gems/WhiteBox/Code/whitebox_tests_supported_files.cmake",
+      "Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxColliderBus.h",
+      "Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxBus.h",
+      "Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxComponentBus.h",
+      "Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponentMode.cpp",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponentMode.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponentModeBus.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponentModeTypes.cpp",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponentModeTypes.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxDefaultShapeTypes.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxEdgeModifierBus.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxPolygonModifierBus.h",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxSystemComponent.cpp",
+      "Gems/WhiteBox/Code/Source/EditorWhiteBoxSystemComponent.h",
+      "Gems/WhiteBox/Code/Source/WhiteBox_testEditorModule.cpp",
+      "Gems/WhiteBox/Code/Source/WhiteBox_testEditorModule.h",
+      "Gems/WhiteBox/Code/Source/WhiteBoxEditorModule.cpp",
+      "Gems/WhiteBox/Code/Source/WhiteBoxEditorModule.h",
+      "Gems/WhiteBox/Code/Source/WhiteBoxModule.cpp",
+      "Gems/WhiteBox/Code/Source/WhiteBoxModule.h",
+      "Gems/WhiteBox/Code/Source/WhiteBoxSystemComponent.cpp",
+      "Gems/WhiteBox/Code/Source/WhiteBoxSystemComponent.h",
+      "Gems/WhiteBox/Code/Source/WhiteBoxToolApiReflection.cpp",
+      "Gems/WhiteBox/Code/Source/WhiteBoxToolApiReflection.h",
+      "Gems/WhiteBox/Code/Source/Asset/EditorWhiteBoxMeshAsset.cpp",
+      "Gems/WhiteBox/Code/Source/Asset/EditorWhiteBoxMeshAsset.h",
+      "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAsset.h",
+      "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetBus.h",
+      "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetHandler.cpp",
+      "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetHandler.h",
+      "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetUndoCommand.cpp",
+      "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetUndoCommand.h",
+      "Gems/WhiteBox/Code/Source/Components/EditorWhiteBoxColliderComponent.cpp",
+      "Gems/WhiteBox/Code/Source/Components/EditorWhiteBoxColliderComponent.h",
+      "Gems/WhiteBox/Code/Source/Components/WhiteBoxColliderComponent.cpp",
+      "Gems/WhiteBox/Code/Source/Components/WhiteBoxColliderComponent.h",
+      "Gems/WhiteBox/Code/Source/Components/WhiteBoxColliderConfiguration.cpp",
+      "Gems/WhiteBox/Code/Source/Components/WhiteBoxColliderConfiguration.h",
+      "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp",
+      "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h",
+      "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.cpp",
+      "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.h",
+      "Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp",
+      "Gems/WhiteBox/Code/Source/Editor/JEEditorFixtureAuthoring.cpp",
+      "Gems/WhiteBox/Code/Source/Editor/JEEditorFixtureAuthoring.h",
+      "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxDefaultShapes.cpp",
+      "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxDefaultShapes.h",
+      "Gems/WhiteBox/Code/Source/Platform/Android/PAL_android.cmake",
+      "Gems/WhiteBox/Code/Source/Platform/Emscripten/PAL_emscripten.cmake",
+      "Gems/WhiteBox/Code/Source/Platform/iOS/PAL_ios.cmake",
+      "Gems/WhiteBox/Code/Source/Platform/Linux/PAL_linux.cmake",
+      "Gems/WhiteBox/Code/Source/Platform/Mac/PAL_mac.cmake",
+      "Gems/WhiteBox/Code/Source/Platform/Mac/platform_mac_tools.cmake",
+      "Gems/WhiteBox/Code/Source/Platform/Windows/PAL_windows.cmake",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxMaterial.cpp",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxMaterial.h",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxNullRenderMesh.cpp",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxNullRenderMesh.h",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderDataUtil.cpp",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderDataUtil.h",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderMeshInterface.cpp",
+      "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderMeshInterface.h",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/PackedFloat2.h",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/TangentSpaceHelper.cpp",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/TangentSpaceHelper.h",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAttributeBuffer.h",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxBuffer.h",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxMeshAtomData.cpp",
+      "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxMeshAtomData.h",
+      "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.h",
+      "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultModeBus.h",
+      "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.h",
+      "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.h",
+      "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformModeBus.h",
+      "Gems/WhiteBox/Code/Source/SubComponentModes/WhiteBoxNumericInput.h",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxEditorDrawUtil.cpp",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxEditorDrawUtil.h",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxEditorUtil.cpp",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxEditorUtil.h",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxMathUtil.cpp",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxMathUtil.h",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxTextureUtil.cpp",
+      "Gems/WhiteBox/Code/Source/Util/WhiteBoxTextureUtil.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeModeBus.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxManipulatorBounds.cpp",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxManipulatorBounds.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxManipulatorViews.cpp",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxManipulatorViews.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxModifierUtil.cpp",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxModifierUtil.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxShapeBuilders.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.h",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxViewportConstants.cpp",
+      "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxViewportConstants.h",
+      "Gems/WhiteBox/Code/Tests/JEEditorAuthoringTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxComponentTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxEdgeTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxPhysicsTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxRenderDataTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxRuntimeTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxSelectionTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxTestFixtures.h",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxTestRailsAutomation.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxTestUtil.cpp",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxTestUtil.h",
+      "Gems/WhiteBox/Code/Tests/WhiteBoxUVTest.cpp",
+      "Gems/WhiteBox/Code/Tests/CSG/CMakeLists.txt",
+      "Gems/WhiteBox/Code/Tests/CSG/WhiteBoxCsgCoreTest.cpp"
+    ],
+    "eol": [
+      {
+        "path": "Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake",
+        "crlf": 86,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake",
+        "crlf": 22,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h",
+        "crlf": 115,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+        "crlf": 1884,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h",
+        "crlf": 296,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp",
+        "crlf": 99,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/WhiteBoxComponent.h",
+        "crlf": 62,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp",
+        "crlf": 137,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h",
+        "crlf": 99,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp",
+        "crlf": 400,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h",
+        "crlf": 128,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp",
+        "crlf": 64,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h",
+        "crlf": 32,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp",
+        "crlf": 1583,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp",
+        "crlf": 246,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp",
+        "crlf": 1264,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp",
+        "crlf": 1603,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp",
+        "crlf": 205,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp",
+        "crlf": 376,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp",
+        "crlf": 226,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp",
+        "crlf": 319,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp",
+        "crlf": 370,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.cpp",
+        "crlf": 267,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.h",
+        "crlf": 38,
+        "bareLF": 0,
+        "utf8Bom": false
+      },
+      {
+        "path": "Gems/WhiteBox/Code/Tests/JEWhiteBoxSurfaceMaterialsTest.cpp",
+        "crlf": 444,
+        "bareLF": 0,
+        "utf8Bom": false
+      }
+    ]
+  },
+  "tests": {
+    "count": 16,
+    "names": [
+      "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialPartitionRetainsDistinctSlotsAndExactCornerUVs",
+      "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialMergeRemapsLocalSlotsWithoutTruncatingUUIDOrLosingOverrides",
+      "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialConflictPreservesGeometryBindingsAndMaterialReferences",
+      "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialOwnerGuardRejectsBeforeReplacingCandidate",
+      "WhiteBoxSurfaceMaterialTestFixture.SelectedPolygonUVTransformIsAtomicAndKeepsUnselectedCornersAndUUIDs",
+      "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialAssignmentChangesWholeInheritedSurfaceAndRejectsInvalidSelection",
+      "EditorWhiteBoxComponentTestFixture.SceneSurfaceBindingsAndManualUVGuardSurviveSerializationClone",
+      "WhiteBoxSurfaceMaterialTestFixture.SurfaceMaterialBooleanChainRetainsBothOperandSlotsAndCornerUVs",
+      "WhiteBoxSurfaceMaterialTestFixture.DuplicateSurfaceBindingsFailWithoutPublishingAnyPartialOutput",
+      "EditorWhiteBoxComponentTestFixture.ManualUVGuardRejectsVoxelGeometryBeforeMutation",
+      "EditorWhiteBoxComponentTestFixture.NativeMaterialAssignmentRoundtripKeepsAssetsPropertiesAndUVReferences",
+      "EditorWhiteBoxComponentTestFixture.LegacyFaceSchemaDefaultsToSlotZeroWithoutChangingCornerUVs",
+      "WhiteBoxSurfaceMaterialTestFixture.InvalidMaterialPartitionPreservesInputOrderAndCornerData",
+      "WhiteBoxSurfaceMaterialTestFixture.OwnerGuardAlsoPreservesExplicitOverridesEqualToLegacyFallback",
+      "WhiteBoxSurfaceMaterialTestFixture.DifferentLegacyTintAndTextureRequireOwnerAndImportExactFallback",
+      "WhiteBoxSurfaceMaterialTestFixture.SharedUUIDAssetOrUVOverrideConflictNeverReplacesCandidate"
+    ],
+    "red": "NOT_RUN",
+    "green": "NOT_RUN",
+    "nativeTarget": "WhiteBox.Editor.Tests"
+  },
+  "materialContract": [
+    "Full UUID128 equality maps to explicit local uint32 Atom slots; no hashes/truncation",
+    "Scene owns UUID/slot bindings, native MaterialComponent owns asset/property/UV references; mesh-only .wbm excludes slots",
+    "Same UUID incompatible asset ID, typed native property overrides, UV override map or legacy Tint/UseTexture rejects before mesh/map/Undo mutation",
+    "Distinct legacy Tint/UseTexture imports as baseColor overrides with Material owner; missing owner rejects actionably",
+    "Native explicit overrides require destination owner even if values equal current legacy fallback",
+    "Pre-created non-persistable material instances are rejected; semantic comparison is conservative authoring-data equality",
+    "Inspector adds selected-face slot/UV controls; existing Atom Add Component Material supplies material assets/overrides"
+  ],
+  "limits": [
+    "No CMake, native compilation, tests, Editor/AP/runtime or visible material acceptance executed",
+    "Native MaterialComponent async loads, visible multi-slot shader rendering, scene Save/reopen and cross-component Undo/Redo remain real required gates",
+    "Guard intentionally blocks planar-reproject geometry editing on authored UVs until explicit Reset All UVs to Planar",
+    "Mesh-only SaveAs notice separates geometry/UV/UUID export from scene materials; fresh entity import without scene bindings falls back to slot0",
+    "Existing valid-empty adapter/render/collider acceptance remains deferred; kernel green does not certify Editor",
+    "No Atom/material authority, AssetHandler, OpenMesh codec, CSG kernel or provider/root changes"
+  ]
+}

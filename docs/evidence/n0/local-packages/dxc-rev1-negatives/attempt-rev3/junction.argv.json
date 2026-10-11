@@ -1,0 +1,19 @@
+{
+  "childEnvironment": {
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\archive-junction",
+    "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+    "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+    "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+    "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+    "-DJE_DXC_CL=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\missing-secondary-cl.exe",
+    "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+    "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\not-created-junction",
+    "-DJE_DXC_PARALLEL_JOBS=6",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+  ]
+}

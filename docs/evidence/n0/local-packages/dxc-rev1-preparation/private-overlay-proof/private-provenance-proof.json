@@ -1,0 +1,47 @@
+{
+  "overlays": [
+    {
+      "id": "commit-info",
+      "immutableSource": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\utils\\GetCommitInfo.py",
+      "beforePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\private-overlay-proof\\commit-info.before",
+      "afterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\private-overlay-proof\\commit-info.after",
+      "beforeSHA256": "16036fa6f82f17cf778e8cf22c690a5bdac3b15a981ca59c0384ad6f292bf84d",
+      "afterSHA256": "15e1408450fac999d683eea6a1eaa1a71c30f2b6500695617c6097fb0b159215",
+      "inverseByteExact": true,
+      "upstreamSnapshotUnchanged": true
+    },
+    {
+      "id": "fixed-version",
+      "immutableSource": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\utils\\version\\version.inc",
+      "beforePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\private-overlay-proof\\fixed-version.before",
+      "afterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\private-overlay-proof\\fixed-version.after",
+      "beforeSHA256": "8c5d6d8bda85c32eda2b6f24da43b799d3a5c6f5bd94e249a596569cf8159658",
+      "afterSHA256": "59ab0f6082a4de27b5c94d39c4a1ec6e9a01e1bdb0246871e6c7a142c785d7d0",
+      "inverseByteExact": true,
+      "upstreamSnapshotUnchanged": true
+    },
+    {
+      "id": "spirv-description",
+      "immutableSource": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\snapshot\\utils\\update_build_version.py",
+      "beforePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\private-overlay-proof\\spirv-description.before",
+      "afterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\private-overlay-proof\\spirv-description.after",
+      "beforeSHA256": "929b4f3a4e433b511b8143b1c5b8df705486bd044e030299fe7457cb10b495e3",
+      "afterSHA256": "e72f37dc38095d874e4f94564a8f769fa43b71411e33000d654473b2b564e9a9",
+      "inverseByteExact": true,
+      "upstreamSnapshotUnchanged": true
+    }
+  ],
+  "nativeExecuted": false,
+  "exactInverseCount": 3,
+  "parentApprovedAdaptation": "Private version.inc +fixedON/locationempty; historical external-location proposal would still invoke generatorGit",
+  "fixedVersionCmake": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\snapshot\\utils\\version\\CMakeLists.txt",
+    "sha256": "C851AC748A32C8EC5CD864DE9241A270157F97C7A4E44BAA566FC68E883764A8"
+  },
+  "sourceInputs": [
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\PrivateProvenance.json",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\SourcePins.json",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\SourceNotices.txt"
+  ],
+  "snapshotWrites": 0
+}

@@ -1,0 +1,14 @@
+{
+  "status": "STATIC DATA REHASH ONLY",
+  "verified": 23322,
+  "oldInputDeltas": 0,
+  "newProviderFiles": 12,
+  "externalPythonFiles": 3463,
+  "sourceDiffSHA256": "6ED13B9D9505CFE1589FF326403F62ACA14D02D25BC23DBDBE51EF5789E532E4",
+  "assignmentSHA256": "FFA6AAD2C7CBBD6360E78524530823259541DB7EB7688C3B797F9628D2084260",
+  "freezeSHA256": "C1062E584831C449B36F2D37FFD870F7489DF5AA18AD5AD069C9B14F7E2DD529",
+  "bareFreezeSHA256": "298093BE06B8A459B1EA6218DAB4981D1612150CB504A05E1B1289B49CCDF89A",
+  "fixedVersionPlanCorrection": "Private utils/version/version.inc, HLSL_ENABLE_FIXED_VER=ON, HLSL_FIXED_VERSION_LOCATION empty; nonempty old-plan location would invoke Git. No upstream CMake patch.",
+  "nativeExecuted": false,
+  "acceptance": false
+}

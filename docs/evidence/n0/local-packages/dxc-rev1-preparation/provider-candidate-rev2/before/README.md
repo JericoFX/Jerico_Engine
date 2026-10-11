@@ -1,0 +1,79 @@
+# Local DirectXShaderCompilerDxc
+
+The original O3DE Windows Release/Ninja recipe is preserved, including its
+`PredefinedParams.cmake`, targets `all llvm-as llvm-dis`, EH/RTTI/SPIRV code
+generation, original tests-off options and four payload tools. This local
+producer creates `DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows`
+with a new measured package SHA. The source numeric version remains
+`1.8.2505.0`. Find retains the imported interface target and deploys the four
+tools under `Builders/DirectXShaderCompiler` through the engine hook.
+
+Only explicit local archives from `SourcePins.json` and existing audited
+external Python3.10.13, VS2022/v143 x64 cl and VS-bundled Ninja are accepted.
+Output must be new below this checkout/build. All source/tool hashes and
+path guards precede output creation. No acquisition, Git, SDK/toolchain
+installer, global install or Python payload is involved. An existing x64
+VS development environment is required for the original Ninja build.
+
+Each archive is extracted into a private source-work copy. Exactly three
+provenance overlays use raw before/after hashes and byteexact inversion:
+private `utils/version/version.inc`, `utils/GetCommitInfo.py`, and private
+SPIRV-Tools `utils/update_build_version.py`. The fixed version uses upstream
+`HLSL_ENABLE_FIXED_VER=ON` with `HLSL_FIXED_VERSION_LOCATION` **empty**.
+This matters: a nonempty alternate location still causes the upstream first
+version target to invoke the Git generator. No upstream CMake is patched.
+The original numeric fields remain1.8.2505.0; ProductVersion carries the full
+archive pin. Runtime commit queries return short8 `1cc0ab76` and count4954,
+the audited pinned API history cardinality. Full40 strings cannot be placed
+in the original8+1 allocations. SPIRV retains its original CHANGES version.
+
+All native argv, result codes, stdout/stderr and whole-second timings are
+captured. `logs/selected-cache-finds.txt` records actual optional LibXml2,
+zlib, Metal and CRT/tool configuration; no extra dependency is acquired or
+feature suppressed to make configuration pass. A failed build retains its
+diagnostic work and creates no ready stamp or staged package. Only all four
+real native output files are staged after successful original targets.
+The shared local package helper remains unchanged. A ready stamp denotes
+production only, not consumer/Root/Editor acceptance.
+
+Luna alone runs the following after parent review/freeze, from the existing
+VS2022 x64 build environment and with fresh output:
+
+```powershell
+cmake `
+  '-DJE_DXC_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition' `
+  '-DJE_DXC_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe' `
+  '-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e' `
+  '-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe' `
+  '-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8' `
+  '-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe' `
+  '-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d' `
+  '-DJE_DXC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1' `
+  -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake'
+```
+
+Extract the produced archive to a new directory. Configure `tests/` using
+VS2022/v143 x64 with `JE_DXC_PACKAGE_ROOT` pointing to that extracted payload
+and `JE_DXC_SOURCE_ROOT` pointing to the audited immutable DXC snapshot.
+Build `JEDirectXShaderCompilerDxcConsumer` Release and run its four CTests.
+The DXSC case depends on the DXIL case; use fresh consumer output so emitted
+objects and receipts are never overwritten.
+
+The consumer loads the actual two package DLLs, checks API provenance and
+numeric/full-pin PE version, compiles HLSL using an actual local include,
+checks real DXIL retail hash and the external validator's HRESULT **and**
+operation status, verifies SPIR-V compute main/header/instruction bounds,
+and rejects malformed HLSL without an object. Real dxsc uses the engine's
+`0x45678900` sentinel, must change the specialization-bearing container,
+produce a valid bit offset for constant7 and revalidate its retail DXIL.
+Malformed DXIL must be rejected without a successful output. The pure hash
+oracle compiles only the pinned upstream hash source, not upstream CMake.
+No `-Vd`, preview profile, developer mode, experimental bypass or mock is used.
+
+Native producer/consumer and producer guard negatives are pending Luna.
+Relevant negatives: missing/corrupt source/tool, remote/UNC/symlink path,
+existing/outside-build output, wrong private-patch witness and absent x64
+build environment. Optional ambient libraries/actual PE imports need review;
+full licensing notices do not certify legal redistribution. Root target
+generation, AP compilation and real DX12/Vulkan Editor/PSO acceptance remain
+separate pending gates.

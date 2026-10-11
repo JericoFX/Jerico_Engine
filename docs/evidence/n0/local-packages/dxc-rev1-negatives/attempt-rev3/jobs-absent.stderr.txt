@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:7 (message):
+  JE DXC: JE_DXC_PARALLEL_JOBS is required
+
+

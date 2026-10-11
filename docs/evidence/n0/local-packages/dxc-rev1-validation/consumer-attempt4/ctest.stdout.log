@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-consumer-rev4
+    Start 1: JE.LocalPackages.DXC.dxil
+1/4 Test #1: JE.LocalPackages.DXC.dxil ........   Passed    0.04 sec
+    Start 2: JE.LocalPackages.DXC.spirv
+2/4 Test #2: JE.LocalPackages.DXC.spirv .......   Passed    0.02 sec
+    Start 3: JE.LocalPackages.DXC.invalid
+3/4 Test #3: JE.LocalPackages.DXC.invalid .....   Passed    0.02 sec
+    Start 4: JE.LocalPackages.DXC.dxsc
+4/4 Test #4: JE.LocalPackages.DXC.dxsc ........   Passed    0.06 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.17 sec

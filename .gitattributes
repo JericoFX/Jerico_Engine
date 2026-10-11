@@ -138,3 +138,6 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /cmake/Tools/LocalPackages/OpenEXR/o3de_package_utilities.cmake -text -whitespace
 /cmake/Tools/LocalPackages/VulkanValidationLayers/SourceNotices.txt -text -whitespace
 /cmake/Tools/LocalPackages/VulkanValidationLayers/SourcePins.json -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourceNotices.txt -text -whitespace
+/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourcePins.json -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/PrivateProvenance.json -text whitespace=cr-at-eol

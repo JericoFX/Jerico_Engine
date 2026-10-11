@@ -1,0 +1,41 @@
+{
+  "nativeResults": {
+    "archiveAudit": {
+      "historicalElapsedSeconds": 0.4777378,
+      "reusedVerifiedEvidence": true,
+      "nativeExit": 0,
+      "currentNativeExecuted": false,
+      "evidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-attempt1/archive-audit.json"
+    },
+    "extraction": {
+      "historicalElapsedSeconds": 0.4783017,
+      "scope": "Existing actual package read-only; all 15 members rehashed before/after",
+      "reusedVerifiedEvidence": true,
+      "nativeExit": 0,
+      "currentNativeExecuted": false
+    },
+    "configure": {
+      "elapsedSeconds": 5.8509137,
+      "nativeExit": 0
+    },
+    "build": {
+      "elapsedSeconds": 3.9891697,
+      "nativeExit": 0
+    },
+    "ctest": {
+      "elapsedSeconds": 0.1994775,
+      "nativeExit": 0
+    }
+  },
+  "engineAccepted": false,
+  "cases": [
+    "JE.LocalPackages.DXC.dxil",
+    "JE.LocalPackages.DXC.dxsc",
+    "JE.LocalPackages.DXC.invalid",
+    "JE.LocalPackages.DXC.spirv"
+  ],
+  "status": "FOCAL CONSUMER FINISHED; PARENT/GUARDS/PE/ROOT REQUIRED",
+  "changedPaths": [],
+  "payloadStatus": "PASS",
+  "rootExecuted": false
+}

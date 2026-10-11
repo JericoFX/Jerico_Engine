@@ -1,0 +1,26 @@
+CMake Error at cmake/3rdPartyPackages.cmake:331 (message):
+  JE package unavailable offline: astc-encoder-3.2-rev2-windows
+
+  SHA256: 17249bfa438afb34e21449865d9c9297471174ae0cea9b2f9def2ee206038295
+
+  Archive:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/astc-encoder-3.2-rev2-windows.tar.xz
+
+  Unpack:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/astc-encoder-3.2-rev2-windows
+
+  Local roots: ;
+
+  Provision the pinned package independently in the local cache or a local
+  file:/// root; remote fallback is disabled.
+Call Stack (most recent call first):
+  cmake/3rdPartyPackages.cmake:562 (ly_package_internal_download_package)
+  cmake/3rdPartyPackages.cmake:655 (ly_force_download_package)
+  cmake/3rdPartyPackages.cmake:767 (ly_enable_package)
+  cmake/3rdParty.cmake:73 (ly_download_associated_package)
+  cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:39 (ly_add_target)
+
+

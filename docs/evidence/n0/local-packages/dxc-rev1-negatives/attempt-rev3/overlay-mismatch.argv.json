@@ -1,0 +1,11 @@
+{
+  "childEnvironment": {},
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "-DJE_WORK_dxc=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\overlay-work\\dxc",
+    "-DJE_WORK_spirv-tools=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\overlay-work\\spirv-tools",
+    "-DJE_DXC_PROOF_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\overlay-proof",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\ApplyPrivateProvenance.cmake"
+  ]
+}

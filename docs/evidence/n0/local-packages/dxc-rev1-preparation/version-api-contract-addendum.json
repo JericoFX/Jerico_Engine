@@ -1,0 +1,42 @@
+{
+  "status": "READONLY CONTRACT CORRECTION; NO OVERLAY/SOURCE/CONFIG/NATIVE CHANGES",
+  "supersedes": "source-plan-dxc-closed.json provenanceProposal.queryFeature fullSHA/count0 only; previous plan preserved as historical",
+  "sourceCommit": "1cc0ab76dafe08a4144e419e619a8951a3d219db",
+  "interface": {
+    "authority": "include/dxc/dxcapi.h:1078-1084",
+    "countContract": "Total number of commits, not an unknown-history sentinel",
+    "hashContract": "Latest commit SHA as CoTaskMemAlloc string, caller CoTaskMemFree",
+    "implementationContract": "Compiler+internal validator+dxildll validator allocate exactly8+1 and strcpy, script guarantees8 characters",
+    "fullHashUnsafe": true,
+    "zeroUnknownWouldViolateContract": true
+  },
+  "measuredHistory": {
+    "counter": 4954,
+    "authority": "commit-history-metadata-receipt-rev3.json",
+    "method": "Pinned unfiltered GitHub commit list per_page1; first pin1cc0, last4954 root6ee4074a4b43fa23bf5ad27e4f6cafc6b835e437, next4955 empty",
+    "nativeGitRevListRun": false,
+    "notInventedSentinel": true,
+    "approval": "Parent review required before substituting archive constants"
+  },
+  "safeProposal": {
+    "keepQueryFeature": true,
+    "generatedCount": "4954u, if parent accepts pinned API list cardinality",
+    "generatedHash": "1cc0ab76, exactly8 characters",
+    "fullPinWhere": "PackageInfo/JERecipe/product provenance text, not the fixed8 allocation API",
+    "implementation": "Future narrowly reviewed private GetCommitInfo.py generation constants; preserve compose_commit_namespace/outputs and original C++ API/allocators unchanged",
+    "doNotUse": "No count0 as unknown, no full40 strcpy, no E_NOTIMPL, no HLSL_SUPPORT_QUERY_GIT_COMMIT_INFO=OFF"
+  },
+  "runtimeConsumers": [
+    "DxilContainerAssembler.cpp:923-934 queries GetCommitInfo via IFT and serializes version CommitCount/SHA; an error can fail container assembly",
+    "SPIRV SpirvEmitter.cpp:687/1485 emits commit hash in debug/module metadata",
+    "dxclib/dxc.cpp:1247/1259 shows count/hash in CLI version output",
+    "dxcpdbutils.cpp:107 re-exposes stored version metadata",
+    "Bounded rg Atom headers/cpp: no direct IDxcVersionInfo2/GetCommitInfo callers observed"
+  ],
+  "nativeOracles": [
+    "Compiler and validator QueryInterface succeeds, GetCommitInfo returns S_OK,count4954/hash8 exact and caller frees",
+    "Preserve invalid argument rejection and bounded allocations under both CLI DLLs",
+    "Real DXIL/PDB metadata roundtrip and SPIRV debug provenance checks; retain all previous compile/error/dxsc requirements"
+  ],
+  "legalAdditional": "Full actual lib/DxilCompression/LICENSE.TXT retained as audited text receipt; MIT/Miniz notice required with compiled DXIL compression, not merely historical lib/Miniz path"
+}

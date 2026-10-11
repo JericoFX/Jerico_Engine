@@ -1,0 +1,10 @@
+{
+  "childEnvironment": {
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\wrong-cl-sha.cmake"
+  ]
+}

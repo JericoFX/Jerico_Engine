@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dxc",
+    "url": "https://api.github.com/repos/o3de/DirectXShaderCompiler/git/trees/1cc0ab76dafe08a4144e419e619a8951a3d219db?recursive=1",
+    "status": 200,
+    "redirectFollowed": false,
+    "authentication": false,
+    "bytes": 5070107,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition/dxc/primary-git-tree.json",
+    "sha256": "9C428F169FBE938FAE7738915CD7648FD45BAA2CF97FE23E2E081FCEFCEC853D",
+    "entries": 19122,
+    "truncated": false
+  },
+  {
+    "id": "spirv-headers",
+    "url": "https://api.github.com/repos/KhronosGroup/SPIRV-Headers/git/trees/aa6cef192b8e693916eb713e7a9ccadf06062ceb?recursive=1",
+    "status": 200,
+    "redirectFollowed": false,
+    "authentication": false,
+    "bytes": 30677,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition/spirv-headers/primary-git-tree.json",
+    "sha256": "6649A17C15DB62A76E82318CF1A3214C20A85084B7551E930AA2B47A6D9AA2CD",
+    "entries": 122,
+    "truncated": false
+  },
+  {
+    "id": "spirv-tools",
+    "url": "https://api.github.com/repos/KhronosGroup/SPIRV-Tools/git/trees/a62abcb402009b9ca5975e6167c09f237f630e0e?recursive=1",
+    "status": 200,
+    "redirectFollowed": false,
+    "authentication": false,
+    "bytes": 459426,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition/spirv-tools/primary-git-tree.json",
+    "sha256": "CFB9B1527D7E67DFD7A177DA1927B9A453693BCA82F65EFEA975F8497790F23E",
+    "entries": 1807,
+    "truncated": false
+  }
+]

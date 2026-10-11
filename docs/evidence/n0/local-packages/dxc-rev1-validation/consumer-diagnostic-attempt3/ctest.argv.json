@@ -1,0 +1,15 @@
+{
+  "executable": "C:/Program Files/CMake/bin/ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev3",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "-R",
+    "^JE[.]LocalPackages[.]DXC[.]invalid$",
+    "--output-junit",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-diagnostic-attempt3/ctest.junit.xml"
+  ],
+  "workingDirectory": "F:/JericoEngine/JericoEngine"
+}

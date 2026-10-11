@@ -1,0 +1,106 @@
+{
+  "status": "CANDIDATE FOR PARENT REVIEW; DO NOT EXECUTE UNTIL LUNA ASSIGNED",
+  "nativeOwner": "Luna only",
+  "nativeExecuted": false,
+  "environment": "Existing VS2022/v143 x64 development environment, inherited local SDK/DIA/ATL; no install",
+  "producer": {
+    "freshOutput": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1",
+    "executable": "C:/Program Files/CMake/bin/cmake.exe",
+    "argv": [
+      "-DJE_DXC_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition",
+      "-DJE_DXC_PYTHON=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python/python.exe",
+      "-DJE_DXC_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+      "-DJE_DXC_NINJA=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+      "-DJE_DXC_NINJA_SHA256=ff29bcb5f547174bae6b73c84278cce9b674e8ebc2f3c3926ab21030b33f34b8",
+      "-DJE_DXC_CL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "-DJE_DXC_CL_SHA256=88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+      "-DJE_DXC_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1",
+      "-DJE_DXC_PARALLEL_JOBS=6",
+      "-P",
+      "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake"
+    ],
+    "parallelJobs": 6
+  },
+  "package": {
+    "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+    "packageVersion": "1.8.2505.1",
+    "id": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows",
+    "sourceNumericVersion": "1.8.2505.0",
+    "extractedRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1",
+    "sha256": "MEASURE AFTER REAL PRODUCTION, NEVER LEGACY HASH",
+    "extraction": "Luna audits local produced tar paths/types/links/hashes before fresh private extraction; test this actual archive, not stage/contents",
+    "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz"
+  },
+  "consumerConfigure": {
+    "argv": [
+      "-S",
+      "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc/tests",
+      "-B",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev1",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_DXC_PACKAGE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1",
+      "-DJE_DXC_SOURCE_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation/acquisition/dxc/snapshot",
+      "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
+    ],
+    "executable": "C:/Program Files/CMake/bin/cmake.exe"
+  },
+  "consumerBuild": {
+    "argv": [
+      "--build",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev1",
+      "--config",
+      "Release",
+      "--target",
+      "JEDirectXShaderCompilerDxcConsumer",
+      "--parallel",
+      "6"
+    ],
+    "executable": "C:/Program Files/CMake/bin/cmake.exe"
+  },
+  "consumerCTest": {
+    "expected": "4/4 real cases; HRESULT and operationstatus, exact provenance, retail hash, actual dxsc and malformed rejection",
+    "cases": [
+      "JE.LocalPackages.DXC.dxil",
+      "JE.LocalPackages.DXC.spirv",
+      "JE.LocalPackages.DXC.invalid",
+      "JE.LocalPackages.DXC.dxsc"
+    ],
+    "executable": "C:/Program Files/CMake/bin/ctest.exe",
+    "argv": [
+      "--test-dir",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev1",
+      "-C",
+      "Release",
+      "--output-on-failure"
+    ]
+  },
+  "guards": [
+    "missing archive",
+    "wrong archive SHA",
+    "wrong external tool SHA",
+    "remote URL path",
+    "UNC path",
+    "symlink path/ancestor",
+    "existing output",
+    "outside-build output",
+    "missing VS x64 environment",
+    "private provenance before/after/inverse mismatch",
+    "missing parallel jobs",
+    "zero/negative/noninteger parallel jobs"
+  ],
+  "preservation": "Preflight/postflight full frozen inputs and all three snapshot memberships; no output cleanup/overwrite; archive helper and Root unchanged",
+  "acceptanceLimits": [
+    "Native producer and consumer NOT_RUN",
+    "No Root/AP/Editor/DX12 PSO/Vulkan acceptance",
+    "Actual optional LibXml2/zlib/Metal/DIA/CRT cache and PE imports to review",
+    "Full notices preserve provenance, not legal certification",
+    "Retail DXIL hash is upstream shader compatibility metadata, not Authenticode/security signature"
+  ],
+  "revision": 2,
+  "parallelSource": "https://cmake.org/cmake/help/v4.3/manual/cmake.1.html#build-a-project"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="4"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T05:01:03"
+	>
+	<testcase name="JE.LocalPackages.DXC.dxil" classname="JE.LocalPackages.DXC.dxil" time="0.0435089" status="run">
+		<properties/>
+		<system-out>OBSERVED DXIL API version: 1.9
+CASE PASS: actual DXC API/provenance/validation
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.DXC.spirv" classname="JE.LocalPackages.DXC.spirv" time="0.020115" status="run">
+		<properties/>
+		<system-out>OBSERVED DXIL API version: 1.9
+CASE PASS: actual DXC API/provenance/validation
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.DXC.invalid" classname="JE.LocalPackages.DXC.invalid" time="0.0168113" status="run">
+		<properties/>
+		<system-out>OBSERVED DXIL API version: 1.9
+INVALID OBSERVED: status=0x80004005 errorsHr=0x00000000 errorsLength=502 hasObject=1
+INVALID OBJECT: hr=0x00000000 pointer=000001C7902F2758 bytes=0
+INVALID RESULT: hr=0x00000000 pointer=000001C7902F2758 bytes=0
+CASE PASS: actual DXC API/provenance/validation
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.DXC.dxsc" classname="JE.LocalPackages.DXC.dxsc" time="0.0642142" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+</testsuite>

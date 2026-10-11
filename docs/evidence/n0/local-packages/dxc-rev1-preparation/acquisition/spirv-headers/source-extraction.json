@@ -1,0 +1,736 @@
+{
+  "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot",
+  "fileCount": 104,
+  "verified": 104,
+  "files": [
+    {
+      "relativePath": ".gitattributes",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\.gitattributes",
+      "gitBlobSHA1": "3fa5aaf16554f550a2602e177f1e731fdac26e47",
+      "sha256": "0bfa620beefedeab026b247a8282e483c225b491f5d7c5bbee741fbbb9e62b81",
+      "bytes": 72
+    },
+    {
+      "relativePath": ".github/dependabot.yml",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\.github\\dependabot.yml",
+      "gitBlobSHA1": "2390d8c809eea1d6587357cdad25ed4af134db32",
+      "sha256": "bc0b0608a6c4d65ed3a51cfa3d680e5280a47cf9550c02d065c602e8f9678a09",
+      "bytes": 187
+    },
+    {
+      "relativePath": ".github/workflows/presubmit.yml",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\.github\\workflows\\presubmit.yml",
+      "gitBlobSHA1": "d7958ca752d3dbe5f584179b9422964f80c4c483",
+      "sha256": "829e67a70e0c1e1e7c88baef8147e0bd9ff368cea5bc3dd6c1718547cf2601cb",
+      "bytes": 3994
+    },
+    {
+      "relativePath": ".gitignore",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\.gitignore",
+      "gitBlobSHA1": "f33592c908c0875e2dcd6806e6e2df4f42c3f84b",
+      "sha256": "02ef26c1818fbf294636d85c15deb9bf59c82bc4df27c56f79184171234c1bd3",
+      "bytes": 20
+    },
+    {
+      "relativePath": "BUILD.bazel",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\BUILD.bazel",
+      "gitBlobSHA1": "36e83fa9815dc74657bf3c2de610037e0e125ea5",
+      "sha256": "a8ff11cabc8562c68cf127c47f0cbad5e754f0c545f4c704fed028c90eb4ce44",
+      "bytes": 4928
+    },
+    {
+      "relativePath": "BUILD.gn",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\BUILD.gn",
+      "gitBlobSHA1": "34294e023ba454c35677360bd446be54e03777cc",
+      "sha256": "51ebfcf6581756547c6cae674d2afb5648e406522ab21723c4565858b640c6f4",
+      "bytes": 1993
+    },
+    {
+      "relativePath": "CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\CMakeLists.txt",
+      "gitBlobSHA1": "957b92243c56bb9199396050a9925fd41d2eae16",
+      "sha256": "77b5686b30ce4c2642b77ff0bfa82142efa139b9ab58f990e54693b6f508e331",
+      "bytes": 3382
+    },
+    {
+      "relativePath": "CODE_OF_CONDUCT.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\CODE_OF_CONDUCT.md",
+      "gitBlobSHA1": "a11610bd300bc0ad8135cda4ccc581dda85e0e57",
+      "sha256": "a25e58cd66a9543e1500db9a5c3c027e874893ad1a264530bf26eb10918b5d80",
+      "bytes": 280
+    },
+    {
+      "relativePath": "LICENSE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\LICENSE",
+      "gitBlobSHA1": "a02ace17bf2dfb849bb538401bbf1b1c84d15aa0",
+      "sha256": "ff04ae7e6a468587fe59434fee2e67c0e2a749b592c794b764ff80f30b94a084",
+      "bytes": 4812
+    },
+    {
+      "relativePath": "README.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\README.md",
+      "gitBlobSHA1": "ed388285646ff96b3199fcd8cea3f9f64099bf6b",
+      "sha256": "f34d6b93a29876e7e44a66df34ca03a3d5f29c09a9a9efb3953f1cf43224bd74",
+      "bytes": 7735
+    },
+    {
+      "relativePath": "SECURITY.md",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\SECURITY.md",
+      "gitBlobSHA1": "9b51f0cf0c6486ad33409961b20e79e7144aec48",
+      "sha256": "be1c5c1e7227173e3c6171ea2541c22a422931a92c13a304b5b8df873b188433",
+      "bytes": 699
+    },
+    {
+      "relativePath": "WORKSPACE",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\WORKSPACE",
+      "gitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "relativePath": "cmake/SPIRV-Headers.pc.in",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\cmake\\SPIRV-Headers.pc.in",
+      "gitBlobSHA1": "843b0a7e7a621b7ba18399dc904727b85fd6851a",
+      "sha256": "4b4feafea8ed648cd513ca2bf70a28e907324b317b4095092262981ab4e9a3a7",
+      "bytes": 194
+    },
+    {
+      "relativePath": "include/spirv/1.0/GLSL.std.450.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\GLSL.std.450.h",
+      "gitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8",
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "bytes": 4127
+    },
+    {
+      "relativePath": "include/spirv/1.0/OpenCL.std.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\OpenCL.std.h",
+      "gitBlobSHA1": "19a6688490c76d13c77eb59843120eee7684f46e",
+      "sha256": "1bf64f1224a5368b7ae8182a5f9ebb29ebda56c43ddf1a387220c248a4963e49",
+      "bytes": 4788
+    },
+    {
+      "relativePath": "include/spirv/1.0/extinst.glsl.std.450.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\extinst.glsl.std.450.grammar.json",
+      "gitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80",
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "bytes": 14747
+    },
+    {
+      "relativePath": "include/spirv/1.0/extinst.opencl.std.100.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\extinst.opencl.std.100.grammar.json",
+      "gitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0",
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "bytes": 29376
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.core.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.core.grammar.json",
+      "gitBlobSHA1": "f3cfc4c299bffa83e69163d3429cc7ee19e5e14d",
+      "sha256": "0ee6f4207abffdfb13cd0ef3f3166eb56c58282df970325f87371538b98c2b55",
+      "bytes": 164356
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.cs",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.cs",
+      "gitBlobSHA1": "de325cc4aad5bfc2f8f5c50ac8e3c0c254b6e337",
+      "sha256": "7ae09b3799f6d533765d1f321a4f2e2fce46e48ded27308d5bd3adffb1b4ec42",
+      "bytes": 30372
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.h",
+      "gitBlobSHA1": "bd5a9b9593aa4fd5725c07bd0deec6bbc9bdfec2",
+      "sha256": "2d5012f7c72d90550f288d9a8f7d8bf4fab85522d42b9e25240d68bac5bbda7b",
+      "bytes": 33460
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.hpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.hpp",
+      "gitBlobSHA1": "e98a89cee74b5ce077eac5f8c4836acfa784f045",
+      "sha256": "6a788efe40b59ae770bed56072b9c65cb2d998a0ccc706e849082835ecf7ab26",
+      "bytes": 30970
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.hpp11",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.hpp11",
+      "gitBlobSHA1": "8896e81b7c40ab422787dac4a8b3cda9032f65e1",
+      "sha256": "a7d79fd03dd5a8e7a2b543415e804d0f47fa0c68d13bc3b2163caadcf7a5c938",
+      "bytes": 25436
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.json",
+      "gitBlobSHA1": "9b0a8f3de2840d0816f4fae09d1ba19bfa07c07b",
+      "sha256": "0d65e97a7ddb2e987fef1e58bf0ff32de2c9475c1e9aa7557c88dd7b37906206",
+      "bytes": 39137
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.lua",
+      "gitBlobSHA1": "2bd33ba082b7f99f4da151ed980ec0a7640e4746",
+      "sha256": "02828ad5fba2cb80313cbc888ab8e5a97bb46071b078073c5e5c48ae8ec6d6a0",
+      "bytes": 25964
+    },
+    {
+      "relativePath": "include/spirv/1.0/spirv.py",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.0\\spirv.py",
+      "gitBlobSHA1": "8a200e7655f8486150be7afbe2848b4046c1524d",
+      "sha256": "f26b9f9ed7df9c95004953662547c26b63ccda8a04e4260a883a6c891e4e1be5",
+      "bytes": 27578
+    },
+    {
+      "relativePath": "include/spirv/1.1/GLSL.std.450.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\GLSL.std.450.h",
+      "gitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8",
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "bytes": 4127
+    },
+    {
+      "relativePath": "include/spirv/1.1/OpenCL.std.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\OpenCL.std.h",
+      "gitBlobSHA1": "19a6688490c76d13c77eb59843120eee7684f46e",
+      "sha256": "1bf64f1224a5368b7ae8182a5f9ebb29ebda56c43ddf1a387220c248a4963e49",
+      "bytes": 4788
+    },
+    {
+      "relativePath": "include/spirv/1.1/extinst.glsl.std.450.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\extinst.glsl.std.450.grammar.json",
+      "gitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80",
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "bytes": 14747
+    },
+    {
+      "relativePath": "include/spirv/1.1/extinst.opencl.std.100.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\extinst.opencl.std.100.grammar.json",
+      "gitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0",
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "bytes": 29376
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.core.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.core.grammar.json",
+      "gitBlobSHA1": "c142e60a1750476bab9c4c85a33d5035eb32334e",
+      "sha256": "1c1fdaf1c7f5a5e43368e9058158f9dfa8818fa2af9690969479eafdd3a312e8",
+      "bytes": 169138
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.cs",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.cs",
+      "gitBlobSHA1": "99194e51450382108b0650b004419099fcfe9104",
+      "sha256": "35b7d6589f7af7ddfc7cb767087ed91bc995e9cbdcd10720c87ff017908ade9e",
+      "bytes": 31200
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.h",
+      "gitBlobSHA1": "971c3be6d25db99494e0f2ff78bf64b87c99ad25",
+      "sha256": "bff97d2f7597ed7e7e179cd989e92746e3baba2244b4845cf81fc3a1e0199475",
+      "bytes": 34331
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.hpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.hpp",
+      "gitBlobSHA1": "c26ac1f26c6d6d9667adde4e0ac4ff7e9a067144",
+      "sha256": "ad8ba5758ef28fc5cecbc2a7b794f3ee6f3aa06f4b5c05c6bd07e65ae0c14395",
+      "bytes": 31775
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.hpp11",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.hpp11",
+      "gitBlobSHA1": "992d43b5f5426f265c1b2967a06465457a27a2db",
+      "sha256": "56600c2401e908e17828fcba3a5a6605116e7050892d171978318a7d5097d22f",
+      "bytes": 26087
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.json",
+      "gitBlobSHA1": "4c18e0192a365ef2021f6540e390de8f85350e9a",
+      "sha256": "ca2fcda12f1f74521a0be893fbf21c286ed492f0052f48fb5b9f656dcd3c2550",
+      "bytes": 40057
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.lua",
+      "gitBlobSHA1": "ad34e0abe9d587b401e613b24280148dae51fae1",
+      "sha256": "7c3799f2b35d7ef50f601f921373bf41774d4ba5d6d5b6f07e77e876d4970150",
+      "bytes": 26704
+    },
+    {
+      "relativePath": "include/spirv/1.1/spirv.py",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.1\\spirv.py",
+      "gitBlobSHA1": "519a59710d192975db1d67aec6cf552168995367",
+      "sha256": "80b42128a214bb2639f3f459a2550347dec71eedd96028f48d5c529fb1d063aa",
+      "bytes": 28362
+    },
+    {
+      "relativePath": "include/spirv/1.2/GLSL.std.450.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\GLSL.std.450.h",
+      "gitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8",
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "bytes": 4127
+    },
+    {
+      "relativePath": "include/spirv/1.2/OpenCL.std.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\OpenCL.std.h",
+      "gitBlobSHA1": "19a6688490c76d13c77eb59843120eee7684f46e",
+      "sha256": "1bf64f1224a5368b7ae8182a5f9ebb29ebda56c43ddf1a387220c248a4963e49",
+      "bytes": 4788
+    },
+    {
+      "relativePath": "include/spirv/1.2/extinst.glsl.std.450.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\extinst.glsl.std.450.grammar.json",
+      "gitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80",
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "bytes": 14747
+    },
+    {
+      "relativePath": "include/spirv/1.2/extinst.opencl.std.100.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\extinst.opencl.std.100.grammar.json",
+      "gitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0",
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "bytes": 29376
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.core.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.core.grammar.json",
+      "gitBlobSHA1": "393ee3c8497d7574098ce499aab0180275324aa4",
+      "sha256": "3e04cd2830b382dbbc58bed98bec73d0a90937208fc3219a9a57b3a1149c1d52",
+      "bytes": 170540
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.cs",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.cs",
+      "gitBlobSHA1": "493303d6ab0827e9ed01daea6e4488e2855fe482",
+      "sha256": "2a8650a17c7684cf7c7331555c58d6a66a2600fd9b0b8eda8ab0c24b7ca1f422",
+      "bytes": 31407
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.h",
+      "gitBlobSHA1": "7c6d884d8e491688df2a6238c4dc50a6cb0f3d5f",
+      "sha256": "6ded440f20b37749d24b5381580e8fc2399131b7eaeafdab620c131c70f751f5",
+      "bytes": 34567
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.hpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.hpp",
+      "gitBlobSHA1": "57bd97a0210976528d4fd00173a9fac5ce9b40fb",
+      "sha256": "112cbd9795fbc1a200f6945192c37bbad44d87b26a7f3d03e5eb1e8a47431168",
+      "bytes": 31993
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.hpp11",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.hpp11",
+      "gitBlobSHA1": "7a875fdb1665ac5975b89509a39f76319bf0781e",
+      "sha256": "c57d150216560dd5d960efedda1ee410b15d6730574e2156651de6a93a8bea6b",
+      "bytes": 26246
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.json",
+      "gitBlobSHA1": "9c0ff0a43e32c8fe0b18db2a073885abb2aff203",
+      "sha256": "c305c77c0a57f1abeaae3cd016e2abfb00399931de13453716bb8a65c1524e37",
+      "bytes": 40318
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.lua",
+      "gitBlobSHA1": "0de507d5c913840ffdd911a43183ed6408005376",
+      "sha256": "51f16765ddd90f66f7a08dc29e4fb0d182634b76a1dc2216915d3794d8e3e155",
+      "bytes": 26887
+    },
+    {
+      "relativePath": "include/spirv/1.2/spirv.py",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\1.2\\spirv.py",
+      "gitBlobSHA1": "cefee4d66ac43ae1143f0c7eba943176b65240c5",
+      "sha256": "bd950f3969acb714f97d39a7139e5143ad476bd4337fae9a3aac835f387d9aa6",
+      "bytes": 28557
+    },
+    {
+      "relativePath": "include/spirv/spir-v.xml",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\spir-v.xml",
+      "gitBlobSHA1": "1eb9707a179171919d04097a04fdd958042ca252",
+      "sha256": "51caa7261a33b875391922b31a67b51671dd26db86fe77bc422492fe50872dbe",
+      "bytes": 22906
+    },
+    {
+      "relativePath": "include/spirv/unified1/AMD_gcn_shader.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\AMD_gcn_shader.h",
+      "gitBlobSHA1": "e626a7a9568d59bb694e6031856cfa7b3cf3db70",
+      "sha256": "4a96133110a8af1a6b2b9f406e5e9b6f8bebcbaf6724fa35cf248ccee30e72a5",
+      "bytes": 1880
+    },
+    {
+      "relativePath": "include/spirv/unified1/AMD_shader_ballot.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\AMD_shader_ballot.h",
+      "gitBlobSHA1": "563c0b622d5101934d56ba0800d797995953ca27",
+      "sha256": "490a6c939fe5bab522ef9f19eb02db59b5b8e787afa02d150fc1659b3891481d",
+      "bytes": 1972
+    },
+    {
+      "relativePath": "include/spirv/unified1/AMD_shader_explicit_vertex_parameter.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\AMD_shader_explicit_vertex_parameter.h",
+      "gitBlobSHA1": "e663330c19fad7da5aca8e29fe4304739a65d5c8",
+      "sha256": "a0941f660b24547f189c04ca915e93516f057e01612c689e42e92dfeed5ed3e7",
+      "bytes": 1991
+    },
+    {
+      "relativePath": "include/spirv/unified1/AMD_shader_trinary_minmax.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\AMD_shader_trinary_minmax.h",
+      "gitBlobSHA1": "dd51c5fc81f7fb3258d9e0c15c47d38d799f257d",
+      "sha256": "a3f71c268f3aa7c75cfc8a652e5d9c939fa43acd1fe88f72d13c8316f9a343ee",
+      "bytes": 2233
+    },
+    {
+      "relativePath": "include/spirv/unified1/DebugInfo.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\DebugInfo.h",
+      "gitBlobSHA1": "a3c0af456203616385bc49d65bb7a64c820cf391",
+      "sha256": "8322942ed8d1a61779f486c4b19d3641404204d6ad8ed36907353360f32d1b79",
+      "bytes": 4714
+    },
+    {
+      "relativePath": "include/spirv/unified1/GLSL.std.450.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\GLSL.std.450.h",
+      "gitBlobSHA1": "0594f907a145aa238668db22e825eb4ef4e7f4bd",
+      "sha256": "8bca15bf3e149e5927e366adfe048c00535273e81dd21e3f0f0bc1f58fd9f293",
+      "bytes": 4127
+    },
+    {
+      "relativePath": "include/spirv/unified1/NonSemanticClspvReflection.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\NonSemanticClspvReflection.h",
+      "gitBlobSHA1": "ee7c158a1bbaf2d2ee7ef27c475137e2e4e67418",
+      "sha256": "e29786b3db1537d21336f6e0301c4e28cbee3ef00ffb68d3e344d7f3abe46472",
+      "bytes": 4662
+    },
+    {
+      "relativePath": "include/spirv/unified1/NonSemanticDebugBreak.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\NonSemanticDebugBreak.h",
+      "gitBlobSHA1": "8604fe7842f0be1507dc086abaf86cb31ecae114",
+      "sha256": "12a1fb15d3f30c08c631f5465fbab359198738b991512b5e6a9ee1aa54ef8646",
+      "bytes": 1859
+    },
+    {
+      "relativePath": "include/spirv/unified1/NonSemanticDebugPrintf.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\NonSemanticDebugPrintf.h",
+      "gitBlobSHA1": "bc24683ec04048aa1fdb74c8c99dd549c6135117",
+      "sha256": "7f74b5d06fc0e92861b3cc7561bc34f465750aa08400673b6c5703e4246f0f1c",
+      "bytes": 1868
+    },
+    {
+      "relativePath": "include/spirv/unified1/NonSemanticShaderDebugInfo100.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\NonSemanticShaderDebugInfo100.h",
+      "gitBlobSHA1": "b276b560cbc8c7bf5d1dbbef12c7b338f376c0aa",
+      "sha256": "f22e8ce116c326c81ad4d0cc99b8da7b95f8fb800de77c11f7129bd04d251299",
+      "bytes": 7918
+    },
+    {
+      "relativePath": "include/spirv/unified1/NonSemanticVkspReflection.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\NonSemanticVkspReflection.h",
+      "gitBlobSHA1": "af4a556e54bdd32c78ae1edcd868d1c9a8006c13",
+      "sha256": "3b667c721d8d695e349ffd047e2aa9923cad84e94422a21825bfea03a62375a3",
+      "bytes": 2254
+    },
+    {
+      "relativePath": "include/spirv/unified1/OpenCL.std.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\OpenCL.std.h",
+      "gitBlobSHA1": "ed74f203e196abf7a309d228711579ee98f02c82",
+      "sha256": "b2ba3fa9c4368e979addc6885b6255da0f2e797d32dd9a3dfce448f995e5e4c8",
+      "bytes": 9883
+    },
+    {
+      "relativePath": "include/spirv/unified1/OpenCLDebugInfo100.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\OpenCLDebugInfo100.h",
+      "gitBlobSHA1": "ffbd16f1d7329eab3bdf6ad3299b6cc018c67887",
+      "sha256": "e159af6efe64db36cc526c178b657d15e25be29dfd1dddf0e02c278865928586",
+      "bytes": 6102
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.debuginfo.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.debuginfo.grammar.json",
+      "gitBlobSHA1": "918a9e547be4746bbbf2f808c6a733909246c4c6",
+      "sha256": "a24c296b55ce91a96a8314278dedd1f73dec690c0c595bc210e412083d631e14",
+      "bytes": 17326
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.glsl.std.450.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.glsl.std.450.grammar.json",
+      "gitBlobSHA1": "ac8fc6dda6edfe9b811e9a4443098635cbc9246a",
+      "sha256": "d211843d2d7f253e2b4b4e56f2afe546f6e4abbdedebca78b1cd8cfdb0ec69a5",
+      "bytes": 14747
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.nonsemantic.clspvreflection.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.nonsemantic.clspvreflection.grammar.json",
+      "gitBlobSHA1": "bd8dfd1afb4c249f0043178ea7c3a973e96a3871",
+      "sha256": "425414766ed0b387f05e30a57b74cfcc6288d07b23d61b86befa118c1d73d4d8",
+      "bytes": 13258
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.nonsemantic.debugbreak.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.nonsemantic.debugbreak.grammar.json",
+      "gitBlobSHA1": "ae288833811da558523a29b951f6d12edaed78ea",
+      "sha256": "1d30fb3a054592f8d749dff42ad4aa4f695bd5f0d4a9cadc70694a1d0cafe23b",
+      "bytes": 109
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.nonsemantic.debugprintf.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.nonsemantic.debugprintf.grammar.json",
+      "gitBlobSHA1": "71fa7112cfedd63e8ea2abde0ec8feed8657549c",
+      "sha256": "cee40052315c2eb05472f8eaf6b89a2103924f60960de38b91176daa676a0b06",
+      "bytes": 254
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.nonsemantic.shader.debuginfo.100.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.nonsemantic.shader.debuginfo.100.grammar.json",
+      "gitBlobSHA1": "1eb2859a1093f9eb4022e5bb2f9d7d244c64a2cd",
+      "sha256": "b8fdafe12dba77e9f0da0d4650f2c4ad4a291ac2d2428d2159dda2a8f0bff1fe",
+      "bytes": 20688
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.nonsemantic.vkspreflection.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.nonsemantic.vkspreflection.grammar.json",
+      "gitBlobSHA1": "0bc12d60dfd62f496f995512c7787e48d897aee0",
+      "sha256": "5479df05d87a80d84031fe8837908fb66b02b8f07f5cdb43b06005534d749200",
+      "bytes": 5235
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.opencl.debuginfo.100.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.opencl.debuginfo.100.grammar.json",
+      "gitBlobSHA1": "53b001c530d4642f67b9265f916b1bcb81fe4138",
+      "sha256": "19c119a9a4acc25099d4c333b081b841a2fd6ce95b7cba86a11c0a90bad46a97",
+      "bytes": 19777
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.opencl.std.100.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.opencl.std.100.grammar.json",
+      "gitBlobSHA1": "21b7876b0e6448e8eb176f74efc17756dbd4685d",
+      "sha256": "3b35d875c91910b0a57a3dd0e22c5fbcd40757a128bcf77d740ce02e1c0d7b52",
+      "bytes": 29376
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.spv-amd-gcn-shader.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.spv-amd-gcn-shader.grammar.json",
+      "gitBlobSHA1": "e18251bba1b2259347e3a28ab286bfedff8f099e",
+      "sha256": "7b972dba987f7c1fbe45576b6c8519e44ceca376e72149cce6ced715036ea931",
+      "bytes": 535
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.spv-amd-shader-ballot.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.spv-amd-shader-ballot.grammar.json",
+      "gitBlobSHA1": "62a470eeb658526afe1b9d33c4c37ff1401873d0",
+      "sha256": "e157110872680641caf4f0c85a87c4fd6f938cf44ee2e86aed08e1ad05e10239",
+      "bytes": 1065
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.spv-amd-shader-explicit-vertex-parameter.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.spv-amd-shader-explicit-vertex-parameter.grammar.json",
+      "gitBlobSHA1": "e156b1b6f8170d07a48833437b7ffe0995426fc0",
+      "sha256": "bc1a31468a8bc0f0181f1f9df5670c681a73508e6f5b20c15542afda84e1e9fa",
+      "bytes": 329
+    },
+    {
+      "relativePath": "include/spirv/unified1/extinst.spv-amd-shader-trinary-minmax.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\extinst.spv-amd-shader-trinary-minmax.grammar.json",
+      "gitBlobSHA1": "c681976fe9249223f32f22fed03826c9e7439c41",
+      "sha256": "c00616ee0b00eeec3710fd32dbc26959fcaee50ae7ce3add4d216755c1d48efa",
+      "bytes": 2620
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.bf",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.bf",
+      "gitBlobSHA1": "2fca6be62df67d828dfda95e17f77162252f68d6",
+      "sha256": "763a23726fb2dc152a3d0be60920c618c9732798c7a8bbc87272d2b49835a555",
+      "bytes": 92455
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.core.grammar.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.core.grammar.json",
+      "gitBlobSHA1": "1350da46a695c922d7ded8c908fbe761449bb9ef",
+      "sha256": "5a5e0d1406c9ba5556aa14e98144f8a0c95f03e5152f68f2f98e66d14e84423f",
+      "bytes": 560030
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.cs",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.cs",
+      "gitBlobSHA1": "ee0d1941a7b62b43cf50ee768e4ac803fc863c65",
+      "sha256": "b8a773d3c0c0ef701c3c500449ab8d53cfdae41f2f0bb396771ad9a738735912",
+      "bytes": 90627
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.h",
+      "gitBlobSHA1": "d8df1b33d83d3097fbdaa5049e7522a9d1bba695",
+      "sha256": "6266690ea0097e6e137d343a38444debecfe06d765b0ab9c256b8cf5918e7aae",
+      "bytes": 293750
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.hpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.hpp",
+      "gitBlobSHA1": "bb690713b2e55b97f36b052e4f5617634d5bd9d4",
+      "sha256": "64156d9a65d167bc26d3e22f4519d240104fcd79ad49475e07c2a4707c55dc26",
+      "bytes": 285884
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.hpp11",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.hpp11",
+      "gitBlobSHA1": "bc4485d4bed5aad7396933f0382d5cd80358d3da",
+      "sha256": "b2c14272241e99c5084ce06baec88e87db3d66299f2279d3d68fa7074143ea54",
+      "bytes": 277877
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.json",
+      "gitBlobSHA1": "7c4f9db0941aaf9a7cb520ad2caf111b3e313830",
+      "sha256": "faa1d1e1b409db9a433147572d5a4bf4f9b338568a7e5cdd6943832d08c899bf",
+      "bytes": 106468
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.lua",
+      "gitBlobSHA1": "6cae8ce4a0c1d300d6a71beb95ab28293d420cbe",
+      "sha256": "a8bdb836dbd8aa98ce196df8a48aa68702c1456fd57c9ebd73d24e68126b44ed",
+      "bytes": 80199
+    },
+    {
+      "relativePath": "include/spirv/unified1/spirv.py",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spirv.py",
+      "gitBlobSHA1": "7f6e8e8e0c0b62c07973368ee8e3e3eda6a3f071",
+      "sha256": "86cf3ffe5450b7def8b1e9167ba9f7b77a672868047c5177e5ebf2a59923508d",
+      "bytes": 82944
+    },
+    {
+      "relativePath": "include/spirv/unified1/spv.d",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\include\\spirv\\unified1\\spv.d",
+      "gitBlobSHA1": "63f66907796ed04503153b51f52b0424b841ef2d",
+      "sha256": "822efca9c67d33133094783ae549baaba72dc6ebb7b584629fbebb42c18b5acd",
+      "bytes": 71815
+    },
+    {
+      "relativePath": "tests/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tests\\CMakeLists.txt",
+      "gitBlobSHA1": "88a956c4e7e52bf11e4ee7cc890b573096c34e3c",
+      "sha256": "8ae1e2b5c7e9603af340d795044763c33bf3539d3805b80933f627bb4b5f2f19",
+      "bytes": 2882
+    },
+    {
+      "relativePath": "tests/example.c",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tests\\example.c",
+      "gitBlobSHA1": "11e8e815c0d597c38c5d3b73a728efa6facd5838",
+      "sha256": "765c63d54f86cd345d2b9fd72b863bee69af6f9d90a4bda9bbb6c5323eee33f6",
+      "bytes": 1666
+    },
+    {
+      "relativePath": "tests/example.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tests\\example.cpp",
+      "gitBlobSHA1": "b506236430a078a3e4cd93aee03baf5efb76d9fb",
+      "sha256": "0744c9a47f59b1668bcc51a82407c30c9c80d0789b36edc69d4f5a8ed942d122",
+      "bytes": 1704
+    },
+    {
+      "relativePath": "tests/example11.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tests\\example11.cpp",
+      "gitBlobSHA1": "c1f0a797ebae5638fc310fcd8ba2e864f752d2e7",
+      "sha256": "27d9f1b4070399ee2d96dec637d87811ef765d3f2767436419d3eac09b4768e3",
+      "bytes": 1710
+    },
+    {
+      "relativePath": "tests/find_package/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tests\\find_package\\CMakeLists.txt",
+      "gitBlobSHA1": "548edb55937b96e4447ea11bc0d353c5cc2c68e1",
+      "sha256": "e7f7ed3328d86620bae0439b0022ecb193d123f4c3a9b1e48fe3db97c1dce66b",
+      "bytes": 609
+    },
+    {
+      "relativePath": "tests/pkg_config/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tests\\pkg_config\\CMakeLists.txt",
+      "gitBlobSHA1": "b2897e288a22c3511a3bd25b05ea1baf97589add",
+      "sha256": "4fd5cd62855344c86a85cc63aa3b2efcff5cbb5d5559904a1dce344d5c7508dd",
+      "bytes": 582
+    },
+    {
+      "relativePath": "tools/buildHeaders/CMakeLists.txt",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\CMakeLists.txt",
+      "gitBlobSHA1": "3f86c3ed54f135e635bd4fcca09217c8da06a796",
+      "sha256": "386411a1421ee77380a9a8a0e30824ea4f3f2a0112e2cb585ea5b82c15bdfda7",
+      "bytes": 554
+    },
+    {
+      "relativePath": "tools/buildHeaders/bin/generate_language_headers.py",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\bin\\generate_language_headers.py",
+      "gitBlobSHA1": "ccd843b947321b0f7decf390ec46ee4610cd4188",
+      "sha256": "a4e32937c7500be190ff19cdca8721f40f20edffd09b0de3101cbed7fd300d89",
+      "bytes": 8798
+    },
+    {
+      "relativePath": "tools/buildHeaders/bin/makeExtinstHeaders.py",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\bin\\makeExtinstHeaders.py",
+      "gitBlobSHA1": "96ce008f642e5e976d1a325bd66a44d7b2fccc90",
+      "sha256": "dd424b2d55e785f22d842c6994419ca9b32e6cd318f776a9352dfbbac417946a",
+      "bytes": 1517
+    },
+    {
+      "relativePath": "tools/buildHeaders/bin/makeHeaders",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\bin\\makeHeaders",
+      "gitBlobSHA1": "853c46726e49d3101937ad55fc7e9e7db32d175b",
+      "sha256": "f3ee5da75f6a5c7cebcc85598ceacc454344e2d744fcf59f264c4db1fb868c81",
+      "bytes": 209
+    },
+    {
+      "relativePath": "tools/buildHeaders/header.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\header.cpp",
+      "gitBlobSHA1": "a5570971b1313768c620cdfc54ed03554a51afcf",
+      "sha256": "a8e36d7a75c49beae784cb5558023fc58763d1bf9eef209e03109b94767f299b",
+      "bytes": 38816
+    },
+    {
+      "relativePath": "tools/buildHeaders/header.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\header.h",
+      "gitBlobSHA1": "6854f80b5d5922013ac1e4c64810a6f9b872b4c5",
+      "sha256": "2c4a0db9a6ea30741b45700958c54e3ffdf5df23e5b0aad13dcc216951a8b448",
+      "bytes": 2041
+    },
+    {
+      "relativePath": "tools/buildHeaders/jsonToSpirv.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\jsonToSpirv.cpp",
+      "gitBlobSHA1": "0249cb3bed7af2d3205ae132fd151fb19ca7d5f3",
+      "sha256": "935b8876e57ad064c335b38323484179b58cf0f39f8da0cd797835d6563effba",
+      "bytes": 40774
+    },
+    {
+      "relativePath": "tools/buildHeaders/jsonToSpirv.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\jsonToSpirv.h",
+      "gitBlobSHA1": "a91d0909d44e2b53983d34794c731cf6936f1296",
+      "sha256": "f398546d473fdfa99cc5eda672f1b8b26e2d7f827581dde55ea0aa0dd4a33456",
+      "bytes": 11300
+    },
+    {
+      "relativePath": "tools/buildHeaders/jsoncpp/dist/json/json-forwards.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\jsoncpp\\dist\\json\\json-forwards.h",
+      "gitBlobSHA1": "901bc063a63b5ee858c914b742501979e89a6d53",
+      "sha256": "757c5fb189b56c574b0d91e306f56052667914ee666699d5d311675795c9da88",
+      "bytes": 8954
+    },
+    {
+      "relativePath": "tools/buildHeaders/jsoncpp/dist/json/json.h",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\jsoncpp\\dist\\json\\json.h",
+      "gitBlobSHA1": "7145b1a4e4391a5d0b4db939e39f234c2babdd34",
+      "sha256": "01ada08bea4a25a3cc095050f1ce633d0b9ed9cb3a4a127eee8dc7534b662901",
+      "bytes": 65863
+    },
+    {
+      "relativePath": "tools/buildHeaders/jsoncpp/dist/jsoncpp.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\jsoncpp\\dist\\jsoncpp.cpp",
+      "gitBlobSHA1": "49569f9185f051217f672f5d311cdb117debf5d1",
+      "sha256": "7e3744005f1ee198e119fcfc7ba74c12465300a8fe626169f1180f551a4fc64a",
+      "bytes": 147987
+    },
+    {
+      "relativePath": "tools/buildHeaders/main.cpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot\\tools\\buildHeaders\\main.cpp",
+      "gitBlobSHA1": "6e6a03b3406fe81737d238fa1d294f491ebb846d",
+      "sha256": "4ad2734e98645830a7ed717ec64d5ff7aa304e528428e0a1cc4010dd7bacb58b",
+      "bytes": 4511
+    }
+  ],
+  "immutableIntent": "Never modify this snapshot; future approved producer must copy it"
+}

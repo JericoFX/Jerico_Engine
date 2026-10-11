@@ -1,0 +1,395 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-native-extracted-rev1\DirectXShaderCompilerDxc\bin\dxil.dll
+
+PE signature found
+
+File Type: DLL
+
+FILE HEADER VALUES
+            8664 machine (x64)
+               6 number of sections
+        6ACB361A time date stamp Sun Oct 11 04:09:14 2026
+               0 file pointer to symbol table
+               0 number of symbols
+              F0 size of optional header
+            2022 characteristics
+                   Executable
+                   Application can handle large (>2GB) addresses
+                   DLL
+
+OPTIONAL HEADER VALUES
+             20B magic # (PE32+)
+           14.44 linker version
+          14CA00 size of code
+           5F600 size of initialized data
+               0 size of uninitialized data
+           7E930 entry point (000000018007E930) _DllMainCRTStartup
+            1000 base of code
+       180000000 image base (0000000180000000 to 00000001801AFFFF)
+            1000 section alignment
+             200 file alignment
+            6.00 operating system version
+            3.07 image version
+            6.00 subsystem version
+               0 Win32 version
+          1B0000 size of image
+             400 size of headers
+               0 checksum
+               2 subsystem (Windows GUI)
+            4160 DLL characteristics
+                   High Entropy Virtual Addresses
+                   Dynamic base
+                   NX compatible
+                   Control Flow Guard
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+          194500 [      6C] RVA [size] of Export Directory
+          19456C [     118] RVA [size] of Import Directory
+          1AD000 [     610] RVA [size] of Resource Directory
+          19F000 [    D8FC] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+          1AE000 [    1A2C] RVA [size] of Base Relocation Directory
+          1733E0 [      70] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+          173480 [      28] RVA [size] of Thread Storage Directory
+          1732A0 [     140] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+          14E000 [     3F0] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+  14C84F virtual size
+    1000 virtual address (0000000180001000 to 000000018014D84E)
+  14CA00 size of raw data
+     400 file pointer to raw data (00000400 to 0014CDFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+SECTION HEADER #2
+  .rdata name
+   4742C virtual size
+  14E000 virtual address (000000018014E000 to 000000018019542B)
+   47600 size of raw data
+  14CE00 file pointer to raw data (0014CE00 to 001943FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        Time Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    6ACB361A cv            82 0017AE98   179C98    Format: RSDS, {ECD6FE93-EDD4-4022-9E63-F21171092B86}, 1, F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-local-rev1\build-Release\bin\dxil.pdb
+    6ACB361A feat          14 0017AF1C   179D1C    Counts: Pre-VC++ 11.00=0, C/C++=208, /GS=208, /sdl=0, guardN=208
+    6ACB361A coffgrp      374 0017AF30   179D30
+    6ACB361A dllchar        4 0017B2A4   17A0A4
+
+        00000001 extended DLL characteristics
+                   CET compatible
+
+  Section contains the following exports for dxil.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+           2 number of functions
+           2 number of names
+
+    ordinal hint RVA      name
+
+          1    0 000017E0 DxcCreateInstance = DxcCreateInstance
+          2    1 000018D0 DxcCreateInstance2 = DxcCreateInstance2
+
+  Section contains the following imports:
+
+    KERNEL32.dll
+             18014E020 Import Address Table
+             1801946A8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         5EA TlsAlloc
+                         5EC TlsGetValue
+                         5EE TlsSetValue
+                         5EB TlsFree
+                         423 MultiByteToWideChar
+                         64C WideCharToMultiByte
+                         12F DeleteCriticalSection
+                         2EE GetProcessTimes
+                         241 GetCurrentProcess
+                         225 GetConsoleMode
+                         22B GetConsoleScreenBufferInfo
+                         548 SetConsoleTextAttribute
+                         31A GetSystemTimeAsFileTime
+                         44B OutputDebugStringW
+                         397 InitializeCriticalSectionEx
+                         28D GetLastError
+                         303 GetStdHandle
+                         157 EnterCriticalSection
+                         3F0 LeaveCriticalSection
+                         402 LocalFree
+                         1CF FormatMessageA
+                         290 GetLocaleInfoEx
+                         4EA ReleaseSRWLockExclusive
+                           0 AcquireSRWLockExclusive
+                         62D WakeAllConditionVariable
+                         5CA SleepConditionVariableSRW
+                         509 RtlCaptureContext
+                         511 RtlLookupFunctionEntry
+                         518 RtlVirtualUnwind
+                         5FB UnhandledExceptionFilter
+                         5B8 SetUnhandledExceptionFilter
+                         5D8 TerminateProcess
+                         3B8 IsProcessorFeaturePresent
+                         481 QueryPerformanceCounter
+                         242 GetCurrentProcessId
+                         3B0 IsDebuggerPresent
+                         246 GetCurrentThreadId
+                         39A InitializeSListHead
+                         37C HeapAlloc
+                         383 HeapReAlloc
+                         380 HeapFree
+                         385 HeapSize
+                         395 InitializeCriticalSection
+                         2E4 GetProcessHeap
+
+    ADVAPI32.dll
+             18014E000 Import Address Table
+             180194688 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         10E EventUnregister
+                         10C EventRegister
+                         114 EventWriteTransfer
+
+    ole32.dll
+             18014E3D0 Import Address Table
+             180194A58 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          51 CoGetMalloc
+                          8B CoTaskMemAlloc
+                          8C CoTaskMemFree
+
+    MSVCP140.dll
+             18014E188 Import Address Table
+             180194810 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         273 ?_Syserror_map@std@@YAPEBDH@Z
+                         28E ?_Xlength_error@std@@YAXPEBD@Z
+                         28C ?_Xbad_function_call@std@@YAXXZ
+                         591 _Query_perf_frequency
+                         590 _Query_perf_counter
+                         4B9 ?setf@ios_base@std@@QEAAHHH@Z
+                         285 ?_Winerror_map@std@@YAHH@Z
+                         585 _Mtx_lock
+                         589 _Mtx_unlock
+                         275 ?_Throw_Cpp_error@std@@YAXH@Z
+                         28F ?_Xout_of_range@std@@YAXPEBD@Z
+
+    VCRUNTIME140.dll
+             18014E1E8 Import Address Table
+             180194870 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          3C memcpy
+                           1 _CxxThrowException
+                          22 __std_exception_destroy
+                          21 __std_exception_copy
+                          3E memset
+                          36 _purecall
+                          3B memcmp
+                          3D memmove
+                          3A memchr
+                           8 __C_specific_handler
+                          1B __current_exception
+                          1C __current_exception_context
+                          25 __std_type_info_destroy_list
+                          23 __std_terminate
+
+    VCRUNTIME140_1.dll
+             18014E260 Import Address Table
+             1801948E8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           0 __CxxFrameHandler4
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             18014E280 Import Address Table
+             180194908 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          18 free
+                          17 calloc
+
+    api-ms-win-crt-string-l1-1-0.dll
+             18014E370 Import Address Table
+             1801949F8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          65 isalpha
+                          86 strcmp
+                          88 strcpy
+                          68 isdigit
+                          6C isprint
+                          98 toupper
+                          64 isalnum
+                          8B strlen
+                          A3 wcslen
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             18014E2B0 Import Address Table
+             180194938 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          3F _seh_filter_dll
+                          18 _configure_narrow_argv
+                          3A _invoke_watson
+                          34 _initialize_onexit_table
+                          3C _register_onexit_function
+                          33 _initialize_narrow_environment
+                          54 abort
+                          1E _crt_atexit
+                          21 _errno
+                          16 _cexit
+                          36 _initterm
+                          37 _initterm_e
+                          67 terminate
+                          22 _execute_onexit_table
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             18014E328 Import Address Table
+             1801949B0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           B __stdio_common_vsnprintf_s
+                          57 _setmode
+                          26 _fileno
+                           0 __acrt_iob_func
+                           F __stdio_common_vsprintf_s
+                           D __stdio_common_vsprintf
+                          8A fwrite
+                          37 _get_osfhandle
+
+    api-ms-win-crt-utility-l1-1-0.dll
+             18014E3C0 Import Address Table
+             180194A48 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          19 qsort
+
+    api-ms-win-crt-math-l1-1-0.dll
+             18014E298 Import Address Table
+             180194920 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          7D ceilf
+                          2B _fpclass
+
+    api-ms-win-crt-convert-l1-1-0.dll
+             18014E270 Import Address Table
+             1801948F8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          50 atoi
+
+SECTION HEADER #3
+   .data name
+    8200 virtual size
+  196000 virtual address (0000000180196000 to 000000018019E1FF)
+    6400 size of raw data
+  194400 file pointer to raw data (00194400 to 0019A7FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #4
+  .pdata name
+    D8FC virtual size
+  19F000 virtual address (000000018019F000 to 00000001801AC8FB)
+    DA00 size of raw data
+  19A800 file pointer to raw data (0019A800 to 001A81FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #5
+   .rsrc name
+     610 virtual size
+  1AD000 virtual address (00000001801AD000 to 00000001801AD60F)
+     800 size of raw data
+  1A8200 file pointer to raw data (001A8200 to 001A89FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #6
+  .reloc name
+    1A2C virtual size
+  1AE000 virtual address (00000001801AE000 to 00000001801AFA2B)
+    1C00 size of raw data
+  1A8A00 file pointer to raw data (001A8A00 to 001AA5FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42000040 flags
+         Initialized Data
+         Discardable
+         Read Only
+
+  Summary
+
+        9000 .data
+        E000 .pdata
+       48000 .rdata
+        2000 .reloc
+        1000 .rsrc
+      14D000 .text

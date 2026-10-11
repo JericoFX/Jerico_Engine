@@ -1,0 +1,1977 @@
+diff --git a/Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake b/Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake
+--- a/Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake
++++ b/Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake
+@@ -20,6 +20,8 @@
+     Source/EditorWhiteBoxEdgeModifierBus.h
+     Source/EditorWhiteBoxPolygonModifierBus.h
+     Source/EditorWhiteBoxDefaultShapeTypes.h
++    Source/Editor/JEWhiteBoxSurfaceMaterials.h
++    Source/Editor/JEWhiteBoxSurfaceMaterials.cpp
+     Source/Editor/JEWhiteBoxDefaultShapes.h
+     Source/Editor/JEWhiteBoxDefaultShapes.cpp
+     Source/Editor/JEEditorFixtureAuthoring.h
+diff --git a/Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake b/Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake
+--- a/Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake
++++ b/Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake
+@@ -7,6 +7,7 @@
+ #
+ 
+ set(FILES
++    Tests/JEWhiteBoxSurfaceMaterialsTest.cpp
+     Tests/WhiteBoxComponentTest.cpp
+     Tests/JEEditorAuthoringTest.cpp
+     Tests/WhiteBoxTestFixtures.h
+diff --git a/Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h b/Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h
+--- a/Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h
++++ b/Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h
+@@ -58,6 +58,9 @@
+         //! Set the white box mesh default shape.
+         virtual void SetDefaultShape(DefaultShapeType defaultShape) = 0;
+ 
++        //! True when geometry edits that reproject UVs must be rejected until an explicit reset.
++        virtual bool HasManualUVs() const { return false; }
++
+         //! Number of sides the draw-shape tool uses for round / N-gon shapes
+         //! (4 = box / square). Sourced from the component's "Draw Sides" property.
+         virtual int GetDrawSides() { return 4; }
+diff --git a/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp b/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp
+--- a/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp
++++ b/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp
+@@ -12,6 +12,10 @@
+ #include "EditorWhiteBoxComponentMode.h"
+ #include "EditorWhiteBoxComponentModeBus.h"
+ #include "Editor/JEWhiteBoxDefaultShapes.h"
++#include "Editor/JEWhiteBoxSurfaceMaterials.h"
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
++#include "SubComponentModes/EditorWhiteBoxDefaultModeBus.h"
++#include "Util/WhiteBoxTextureUtil.h"
+ #include "Rendering/WhiteBoxNullRenderMesh.h"
+ #include "Rendering/WhiteBoxRenderDataUtil.h"
+ #include "Rendering/WhiteBoxRenderMeshInterface.h"
+@@ -34,6 +38,7 @@
+ #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
+ #include <AzFramework/Translation/TranslationDef.h>
+ #include <AzCore/std/numeric.h>
++#include <AzCore/std/limits.h>
+ #include <AzFramework/StringFunc/StringFunc.h>
+ #include <AzQtComponents/Components/Widgets/FileDialog.h>
+ #include <AzToolsFramework/API/ComponentEntitySelectionBus.h>
+@@ -71,7 +76,8 @@
+ 
+     // build intermediate data to be passed to WhiteBoxRenderMeshInterface
+     // to be used to generate concrete render mesh
++    static WhiteBoxRenderData CreateWhiteBoxRenderData(
++        const WhiteBoxMesh& whiteBox, const WhiteBoxMaterial& material, const JE::BSP::SurfaceMaterialBindings& bindings)
+-    static WhiteBoxRenderData CreateWhiteBoxRenderData(const WhiteBoxMesh& whiteBox, const WhiteBoxMaterial& material)
+     {
+         AZ_PROFILE_FUNCTION(AzToolsFramework);
+ 
+@@ -81,7 +87,7 @@
+         const auto faceCount = Api::MeshFaceCount(whiteBox);
+         faceData.reserve(faceCount);
+ 
++        const auto createWhiteBoxFaceFromHandle = [&whiteBox, &bindings](const Api::FaceHandle& faceHandle) -> WhiteBoxFace
+-        const auto createWhiteBoxFaceFromHandle = [&whiteBox](const Api::FaceHandle& faceHandle) -> WhiteBoxFace
+         {
+             const auto copyVertex = [&whiteBox](const Api::HalfedgeHandle& in, WhiteBoxVertex& out)
+             {
+@@ -91,6 +97,8 @@
+             };
+ 
+             WhiteBoxFace face;
++            face.m_surfaceId = Api::FaceSurfaceId(whiteBox, faceHandle);
++            face.m_materialSlot = JE::BSP::FindSurfaceMaterialSlot(bindings, face.m_surfaceId);
+             face.m_normal = Api::FaceNormal(whiteBox, faceHandle);
+             const auto faceHalfedgeHandles = Api::FaceHalfedgeHandles(whiteBox, faceHandle);
+ 
+@@ -126,6 +134,7 @@
+     // callback for when the default shape field is changed
+     AZ::Crc32 EditorWhiteBoxComponent::OnDefaultShapeChange()
+     {
++        if (!AllowPlanarGeometryEdit({GetEntityId(), GetId()})) { return AZ::Edit::PropertyRefreshLevels::EntireTree; }
+         // if the shape type has just changed and it is no longer an asset type, check if a mesh asset
+         // is in use and clear it if so (switch back to using the component serialized White Box mesh)
+         if (!DisplayingAsset(m_defaultShape) && m_editorMeshAsset->InUse())
+@@ -225,9 +234,21 @@
+         AZ::TransformBus::EventResult(sourceWorldTM, m_booleanSourceEntity, &AZ::TransformBus::Events::GetWorldTM);
+         const AZ::Transform operandTransform = thisWorldTM.GetInverse() * sourceWorldTM;
+ 
++        AZ::Render::MaterialAssignmentMap targetMaterials, sourceMaterials;
++        AZ::Render::MaterialComponentRequestBus::EventResult(targetMaterials, GetEntityId(), &AZ::Render::MaterialComponentRequests::GetMaterialMapCopy);
++        AZ::Render::MaterialComponentRequestBus::EventResult(sourceMaterials, m_booleanSourceEntity, &AZ::Render::MaterialComponentRequests::GetMaterialMapCopy);
++        JE::BSP::SurfaceMaterialMerge materials;
++        AZStd::string materialError;
++        if (!JE::BSP::MergeSurfaceMaterials(*targetMesh, m_surfaceMaterialBindings, targetMaterials, m_material,
++            *sourceMesh, sourceComponents[0]->m_surfaceMaterialBindings, sourceMaterials, sourceComponents[0]->m_material,
++            AZ::Render::MaterialComponentRequestBus::HasHandlers(GetEntityId()), materials, materialError))
++        {
++            QMessageBox::warning(AzToolsFramework::GetActiveWindow(), "White Box Boolean", materialError.c_str());
++            AZ_Warning("WhiteBox", false, "%s", materialError.c_str());
++            return;
++        }
++        auto candidate = Api::CloneMesh(*targetMesh);
++        if (!candidate || !Api::ApplyMeshBoolean(*candidate, *sourceMesh, operandTransform, m_booleanOperation))
+-        AzToolsFramework::ScopedUndoBatch undoBatch("White Box Boolean");
+-
+-        if (!Api::ApplyMeshBoolean(*targetMesh, *sourceMesh, operandTransform, m_booleanOperation))
+         {
+             AZ_Warning(
+                 "EditorWhiteBoxComponent", false,
+@@ -235,6 +256,11 @@
+             return;
+         }
+ 
++        // Publish geometry, scene bindings and native material references in one editor transaction.
++        AzToolsFramework::ScopedUndoBatch undoBatch("White Box Boolean");
++        Api::ReplaceMesh(*targetMesh, AZStd::move(candidate));
++        m_manualUVs = m_manualUVs || sourceComponents[0]->HasManualUVs();
++        PublishMaterialMerge(materials.m_bindings, materials.m_materials);
+         Api::CalculateNormals(*targetMesh);
+ 
+         SerializeWhiteBox();
+@@ -446,6 +472,7 @@
+ 
+     void EditorWhiteBoxComponent::SetVoxelCell(const AZ::Vector3& cellMin, const bool filled)
+     {
++        if (!AllowPlanarGeometryEdit({GetEntityId(), GetId()})) { return; }
+         const AZ::u64 key = VoxelDetail::PackCell(
+             static_cast<int>(std::floor(cellMin.GetX())), static_cast<int>(std::floor(cellMin.GetY())),
+             static_cast<int>(std::floor(cellMin.GetZ())));
+@@ -478,10 +505,10 @@
+ 
+     void EditorWhiteBoxComponent::EvaluateLiveBoolean()
+     {
+-        m_displayMesh.reset();
+-
+         if (!m_liveBoolean || !m_booleanSourceEntity.IsValid() || m_booleanSourceEntity == GetEntityId())
+         {
++            m_displayMesh.reset();
++            m_displayMaterialBindings.clear();
+             return;
+         }
+ 
+@@ -515,6 +542,18 @@
+         AZ::TransformBus::EventResult(sourceWorldTM, m_booleanSourceEntity, &AZ::TransformBus::Events::GetWorldTM);
+         const AZ::Transform operandTransform = thisWorldTM.GetInverse() * sourceWorldTM;
+ 
++        AZ::Render::MaterialAssignmentMap targetMaterials, sourceMaterials;
++        AZ::Render::MaterialComponentRequestBus::EventResult(targetMaterials, GetEntityId(), &AZ::Render::MaterialComponentRequests::GetMaterialMapCopy);
++        AZ::Render::MaterialComponentRequestBus::EventResult(sourceMaterials, m_booleanSourceEntity, &AZ::Render::MaterialComponentRequests::GetMaterialMapCopy);
++        JE::BSP::SurfaceMaterialMerge materials;
++        AZStd::string materialError;
++        if (!JE::BSP::MergeSurfaceMaterials(*baseMesh, m_surfaceMaterialBindings, targetMaterials, m_material,
++            *sourceMesh, sourceComponents[0]->m_surfaceMaterialBindings, sourceMaterials, sourceComponents[0]->m_material,
++            AZ::Render::MaterialComponentRequestBus::HasHandlers(GetEntityId()), materials, materialError))
++        {
++            AZ_Warning("WhiteBox", false, "Live boolean rejected: %s", materialError.c_str());
++            return;
++        }
+         // Evaluate into a clone so the editable base is never modified.
+         Api::WhiteBoxMeshPtr evaluated = Api::CloneMesh(*baseMesh);
+         if (!evaluated)
+@@ -524,18 +563,40 @@
+         if (Api::ApplyMeshBoolean(*evaluated, *sourceMesh, operandTransform, m_booleanOperation))
+         {
+             Api::CalculateNormals(*evaluated);
++            if (materials.m_bindings != m_surfaceMaterialBindings ||
++                !JE::BSP::MaterialAssignmentsEquivalent(materials.m_materials, targetMaterials))
++            {
++                AzToolsFramework::ScopedUndoBatch undo("White Box Live Material Bindings");
++                PublishMaterialMerge(materials.m_bindings, materials.m_materials);
++                undo.MarkEntityDirty(GetEntityId());
++            }
++            m_displayMaterialBindings = materials.m_bindings;
+             m_displayMesh = AZStd::move(evaluated);
+         }
++        // A failed candidate preserves the last successfully evaluated geometry and associations.
+-        // on failure (no overlap) m_displayMesh stays null -> falls back to the base.
+     }
+ 
+     void EditorWhiteBoxComponent::UpdateBooleanSourceListener()
+     {
++        m_booleanSourceListener.AZ::TransformNotificationBus::Handler::BusDisconnect();
++        m_booleanSourceListener.AZ::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
++        m_booleanSourceListener.EditorWhiteBoxComponentNotificationBus::Handler::BusDisconnect();
+-        m_booleanSourceListener.BusDisconnect();
+         if (m_liveBoolean && m_booleanSourceEntity.IsValid() && m_booleanSourceEntity != GetEntityId())
+         {
+             m_booleanSourceListener.m_owner = this;
++            m_booleanSourceListener.AZ::TransformNotificationBus::Handler::BusConnect(m_booleanSourceEntity);
++            m_booleanSourceListener.AZ::Render::MaterialComponentNotificationBus::Handler::BusConnect(m_booleanSourceEntity);
++            AZ::Entity* source = nullptr;
++            AZ::ComponentApplicationBus::BroadcastResult(source, &AZ::ComponentApplicationRequests::FindEntity, m_booleanSourceEntity);
++            if (source)
++            {
++                const auto components = source->FindComponents<EditorWhiteBoxComponent>();
++                if (!components.empty())
++                {
++                    m_booleanSourceListener.EditorWhiteBoxComponentNotificationBus::Handler::BusConnect(
++                        AZ::EntityComponentIdPair(m_booleanSourceEntity, components[0]->GetId()));
++                }
++            }
+-            m_booleanSourceListener.BusConnect(m_booleanSourceEntity);
+         }
+     }
+ 
+@@ -573,6 +634,20 @@
+         }
+     }
+ 
++    void EditorWhiteBoxComponent::BooleanSourceListener::OnWhiteBoxMeshModified()
++    {
++        if (m_owner) { m_owner->RebuildWhiteBox(); }
++    }
++    void EditorWhiteBoxComponent::BooleanSourceListener::OnMaterialsUpdated(
++        [[maybe_unused]] const AZ::Render::MaterialAssignmentMap& materials)
++    {
++        if (m_owner) { m_owner->RebuildWhiteBox(); }
++    }
++    void EditorWhiteBoxComponent::BooleanSourceListener::OnMaterialPropertiesUpdated(
++        [[maybe_unused]] const AZ::Render::MaterialAssignmentMap& materials)
++    {
++        if (m_owner) { m_owner->RebuildWhiteBox(); }
++    }
+     bool EditorWhiteBoxVersionConverter(
+         AZ::SerializeContext& context, AZ::SerializeContext::DataElementNode& classElement)
+     {
+@@ -710,15 +785,22 @@
+     {
+         EditorWhiteBoxMeshAsset::Reflect(context);
+         DrawShapeData::Reflect(context);
++        JE::BSP::SurfaceMaterialBinding::Reflect(context);
+ 
+         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
+         {
+             serializeContext->Class<EditorWhiteBoxComponent, EditorComponentBase>()
++                ->Version(3, &EditorWhiteBoxVersionConverter)
+-                ->Version(2, &EditorWhiteBoxVersionConverter)
+                 ->Field("WhiteBoxData", &EditorWhiteBoxComponent::m_whiteBoxData)
+                 ->Field("DefaultShape", &EditorWhiteBoxComponent::m_defaultShape)
+                 ->Field("EditorMeshAsset", &EditorWhiteBoxComponent::m_editorMeshAsset)
+                 ->Field("Material", &EditorWhiteBoxComponent::m_material)
++                ->Field("SurfaceMaterialBindings", &EditorWhiteBoxComponent::m_surfaceMaterialBindings)
++                ->Field("ManualUVs", &EditorWhiteBoxComponent::m_manualUVs)
++                ->Field("SelectedMaterialSlot", &EditorWhiteBoxComponent::m_selectedMaterialSlot)
++                ->Field("UVScale", &EditorWhiteBoxComponent::m_uvScale)
++                ->Field("UVOffset", &EditorWhiteBoxComponent::m_uvOffset)
++                ->Field("UVRotation", &EditorWhiteBoxComponent::m_uvRotation)
+                 ->Field("RenderData", &EditorWhiteBoxComponent::m_renderData)
+                 ->Field("ComponentMode", &EditorWhiteBoxComponent::m_componentModeDelegate)
+                 ->Field("FlipYZForExport", &EditorWhiteBoxComponent::m_flipYZForExport)
+@@ -756,6 +838,7 @@
+                     ->EnumAttribute(DefaultShapeType::Sphere, QT_TRANSLATE_NOOP("WhiteBox", "Sphere"))
+                     ->EnumAttribute(DefaultShapeType::Asset, QT_TRANSLATE_NOOP("WhiteBox", "Mesh Asset"))
+                     ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorWhiteBoxComponent::OnDefaultShapeChange)
++                    ->Attribute(AZ::Edit::Attributes::ReadOnly, &EditorWhiteBoxComponent::HasManualUVs)
+                     ->DataElement(
+                         AZ::Edit::UIHandlers::Default, &EditorWhiteBoxComponent::m_drawShapeData,
+                         QT_TRANSLATE_NOOP("WhiteBox", "Draw Shape"),
+@@ -788,6 +871,24 @@
+                         QT_TRANSLATE_NOOP("WhiteBox", "The properties of the White Box material."))
+                     ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorWhiteBoxComponent::OnMaterialChange)
+                     ->Attribute(AZ::Edit::Attributes::Visibility, AZ::Edit::PropertyVisibility::ShowChildrenOnly)
++                    ->ClassElement(AZ::Edit::ClassElements::Group, "Selected Faces")
++                    ->DataElement(AZ::Edit::UIHandlers::Default, &EditorWhiteBoxComponent::m_selectedMaterialSlot,
++                        "Material Slot", "Local Atom slot for the selected polygon's complete surface UUID. Configure assets and overrides in the Atom Material component.")
++                    ->Attribute(AZ::Edit::Attributes::Min, 0)
++                    ->Attribute(AZ::Edit::Attributes::Max, AZStd::numeric_limits<uint32_t>::max() - 1)
++                    ->UIElement(AZ::Edit::UIHandlers::Button, "", "Bind selected faces to this slot; geometry and UVs are preserved.")
++                    ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorWhiteBoxComponent::AssignSelectedMaterialSlot)
++                    ->Attribute(AZ::Edit::Attributes::ButtonText, "Assign Material Slot")
++                    ->DataElement(AZ::Edit::UIHandlers::Default, &EditorWhiteBoxComponent::m_uvScale, "UV Scale", "Multiply selected corner UVs.")
++                    ->DataElement(AZ::Edit::UIHandlers::Default, &EditorWhiteBoxComponent::m_uvOffset, "UV Offset", "Offset selected corner UVs after rotation.")
++                    ->DataElement(AZ::Edit::UIHandlers::Default, &EditorWhiteBoxComponent::m_uvRotation, "UV Rotation", "Rotate selected corner UVs in degrees.")
++                    ->UIElement(AZ::Edit::UIHandlers::Button, "", "Apply to selected polygons. Manual UVs protect the mesh from geometry edits that would reproject them.")
++                    ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorWhiteBoxComponent::ApplySelectedUVTransform)
++                    ->Attribute(AZ::Edit::Attributes::ButtonText, "Apply UV Transform")
++                    ->UIElement(AZ::Edit::UIHandlers::Button, "", "Explicitly discard custom UVs on the entire mesh and restore planar projection.")
++                    ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorWhiteBoxComponent::ResetPlanarUVs)
++                    ->Attribute(AZ::Edit::Attributes::ButtonText, "Reset All UVs to Planar")
++                    ->ClassElement(AZ::Edit::ClassElements::Group, "")
+                     ->DataElement(
+                         AZ::Edit::UIHandlers::Default, &EditorWhiteBoxComponent::m_componentModeDelegate,
+                         QT_TRANSLATE_NOOP("WhiteBox", "Component Mode"),
+@@ -851,6 +952,89 @@
+         }
+     }
+ 
++    bool EditorWhiteBoxComponent::HasManualUVs() const
++    {
++        if (m_manualUVs) { return true; }
++        // A mesh-only import has no scene guard flag, but its authored corner UVs must still be protected.
++        const auto* mesh = m_editorMeshAsset ? const_cast<EditorWhiteBoxComponent*>(this)->GetWhiteBoxMesh() : m_whiteBox.get();
++        if (!mesh) { return false; }
++        for (const auto face : Api::MeshFaceHandles(*mesh))
++        {
++            const auto normal = Api::FaceNormal(*mesh, face);
++            for (const auto corner : Api::FaceHalfedgeHandles(*mesh, face))
++            {
++                const auto position = Api::VertexPosition(*mesh, Api::HalfedgeVertexHandleAtTip(*mesh, corner));
++                if (Api::HalfedgeUV(*mesh, corner) != CreatePlanarUVFromVertex(normal, position)) { return true; }
++            }
++        }
++        return false;
++    }
++
++    bool EditorWhiteBoxComponent::AssignPolygonMaterialSlots(const Api::PolygonHandles& polygons, uint32_t slot)
++    {
++        auto* mesh = GetWhiteBoxMesh();
++        auto candidate = m_surfaceMaterialBindings;
++        if (!mesh || !JE::BSP::AssignPolygonMaterial(*mesh, polygons, slot, candidate)) { return false; }
++        AzToolsFramework::ScopedUndoBatch undo("Assign White Box Face Material");
++        m_surfaceMaterialBindings = AZStd::move(candidate);
++        RecordWhiteBoxAction(*mesh, {GetEntityId(), GetId()}, "Assign White Box Face Material", UVCommitMode::Preserve);
++        return true;
++    }
++
++    bool EditorWhiteBoxComponent::ApplyPolygonUVTransform(const Api::PolygonHandles& polygons, const AZ::Vector2& scale,
++        const AZ::Vector2& offset, float rotationDegrees)
++    {
++        auto* mesh = GetWhiteBoxMesh();
++        if (!mesh) { return false; }
++        auto candidate = Api::CloneMesh(*mesh);
++        if (!candidate || !JE::BSP::TransformPolygonUVs(*candidate, polygons, scale, offset, rotationDegrees)) { return false; }
++        AzToolsFramework::ScopedUndoBatch undo("Edit White Box Face UVs");
++        Api::ReplaceMesh(*mesh, AZStd::move(candidate));
++        m_manualUVs = true;
++        RecordWhiteBoxAction(*mesh, {GetEntityId(), GetId()}, "Edit White Box Face UVs", UVCommitMode::Preserve);
++        return true;
++    }
++
++    void EditorWhiteBoxComponent::AssignSelectedMaterialSlot()
++    {
++        Api::PolygonHandles polygons;
++        EditorWhiteBoxDefaultModeRequestBus::EventResult(polygons, AZ::EntityComponentIdPair(GetEntityId(), GetId()),
++            &EditorWhiteBoxDefaultModeRequests::SelectedPolygonHandles);
++        if (!AssignPolygonMaterialSlots(polygons, m_selectedMaterialSlot))
++        {
++            QMessageBox::warning(AzToolsFramework::GetActiveWindow(), "White Box Faces", "Select a polygon in Default component mode and choose a valid material slot.");
++        }
++    }
++
++    void EditorWhiteBoxComponent::ApplySelectedUVTransform()
++    {
++        Api::PolygonHandles polygons;
++        EditorWhiteBoxDefaultModeRequestBus::EventResult(polygons, AZ::EntityComponentIdPair(GetEntityId(), GetId()),
++            &EditorWhiteBoxDefaultModeRequests::SelectedPolygonHandles);
++        if (!ApplyPolygonUVTransform(polygons, m_uvScale, m_uvOffset, m_uvRotation))
++        {
++            QMessageBox::warning(AzToolsFramework::GetActiveWindow(), "White Box UVs", "Select a polygon in Default component mode and enter finite UV values.");
++        }
++    }
++
++    void EditorWhiteBoxComponent::ResetPlanarUVs()
++    {
++        auto* mesh = GetWhiteBoxMesh();
++        if (!mesh) { return; }
++        AzToolsFramework::ScopedUndoBatch undo("Reset White Box UVs to Planar");
++        m_manualUVs = false;
++        RecordWhiteBoxAction(*mesh, {GetEntityId(), GetId()}, "Reset White Box UVs to Planar", UVCommitMode::Reproject);
++    }
++
++    void EditorWhiteBoxComponent::PublishMaterialMerge(const JE::BSP::SurfaceMaterialBindings& bindings,
++        const AZ::Render::MaterialAssignmentMap& materials)
++    {
++        m_surfaceMaterialBindings = bindings;
++        if (AZ::Render::MaterialComponentRequestBus::HasHandlers(GetEntityId()))
++        {
++            AZ::Render::MaterialComponentRequestBus::Event(GetEntityId(), &AZ::Render::MaterialComponentRequests::SetMaterialMap, materials);
++        }
++    }
+     void EditorWhiteBoxComponent::OnMaterialChange()
+     {
+         if (m_renderMesh.has_value())
+@@ -905,6 +1089,7 @@
+     void EditorWhiteBoxComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
+     {
+         provided.push_back(AZ_CRC_CE("WhiteBoxService"));
++        provided.push_back(AZ_CRC_CE("MaterialConsumerService"));
+     }
+ 
+     void EditorWhiteBoxComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
+@@ -912,6 +1097,7 @@
+         incompatible.push_back(AZ_CRC_CE("NonUniformScaleService"));
+         incompatible.push_back(AZ_CRC_CE("MeshService"));
+         incompatible.push_back(AZ_CRC_CE("WhiteBoxService"));
++        incompatible.push_back(AZ_CRC_CE("MaterialConsumerService"));
+     }
+ 
+     EditorWhiteBoxComponent::EditorWhiteBoxComponent() = default;
+@@ -988,7 +1174,9 @@
+         EditorWhiteBoxComponentNotificationBus::Handler::BusDisconnect();
+         AzToolsFramework::Components::EditorComponentBase::Deactivate();
+ 
++        m_booleanSourceListener.AZ::TransformNotificationBus::Handler::BusDisconnect();
++        m_booleanSourceListener.AZ::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
++        m_booleanSourceListener.EditorWhiteBoxComponentNotificationBus::Handler::BusDisconnect();
+-        m_booleanSourceListener.BusDisconnect();
+ 
+         m_componentModeDelegate.Disconnect();
+         m_editorMeshAsset->Release();
+@@ -1082,7 +1270,7 @@
+         if (m_renderMesh.has_value())
+         {
+             // cache the white box render data
++            m_renderData = CreateWhiteBoxRenderData(*EvaluatedMesh(), m_material, m_displayMesh ? m_displayMaterialBindings : m_surfaceMaterialBindings);
+-            m_renderData = CreateWhiteBoxRenderData(*EvaluatedMesh(), m_material);
+ 
+             // it's possible the white box mesh data isn't yet ready (for example if it's stored
+             // in an asset which hasn't finished loading yet) so don't attempt to create a render
+@@ -1129,6 +1317,7 @@
+ 
+     void EditorWhiteBoxComponent::SetDefaultShape(const DefaultShapeType defaultShape)
+     {
++        if (HasManualUVs()) { AZ_Warning("WhiteBox", false, "Reset authored UVs explicitly before replacing the default shape."); return; }
+         m_defaultShape = defaultShape;
+         OnDefaultShapeChange();
+     }
+@@ -1322,6 +1511,11 @@
+ 
+     AZ::Crc32 EditorWhiteBoxComponent::SaveAsAsset()
+     {
++        if (!m_surfaceMaterialBindings.empty())
++        {
++            QMessageBox::information(AzToolsFramework::GetActiveWindow(), "Save White Box Mesh",
++                "The mesh asset stores geometry, corner UVs and surface identities. Face-material bindings and Atom material overrides are saved with the scene. Save the scene to preserve them.");
++        }
+         // let the user select final location of the saved asset
+         const auto absoluteSavePathFn = [](const AZStd::string& initialAbsolutePath)
+         {
+@@ -1468,7 +1662,8 @@
+ 
+         // Extract white box geometry data to convert to visible geometry vertices and indices
+         const WhiteBoxRenderData renderData =
++            CreateWhiteBoxRenderData(*const_cast<EditorWhiteBoxComponent*>(this)->EvaluatedMesh(), m_material,
++                m_displayMesh ? m_displayMaterialBindings : m_surfaceMaterialBindings);
+-            CreateWhiteBoxRenderData(*const_cast<EditorWhiteBoxComponent*>(this)->EvaluatedMesh(), m_material);
+ 
+         // Convert the white box render data into visible geometry data
+         const AzFramework::VisibleGeometry geometry = BuildVisibleGeometryFromWhiteBoxRenderData(GetEntityId(), renderData);
+diff --git a/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h b/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h
+--- a/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h
++++ b/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h
+@@ -10,6 +10,7 @@
+ 
+ #include "Rendering/WhiteBoxMaterial.h"
+ #include "Rendering/WhiteBoxRenderData.h"
++#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+ #include "Viewport/WhiteBoxViewportConstants.h"
+ 
+ #include <AzCore/Component/TransformBus.h>
+@@ -74,6 +75,11 @@
+         bool GetDrawCarve() override { return m_drawCarve; }
+         bool GetDrawUnitCube() override { return m_drawUnitCube; }
+         void SetVoxelCell(const AZ::Vector3& cellMin, bool filled) override;
++        bool HasManualUVs() const override;
++        const JE::BSP::SurfaceMaterialBindings& GetSurfaceMaterialBindings() const { return m_surfaceMaterialBindings; }
++        bool AssignPolygonMaterialSlots(const Api::PolygonHandles& polygons, uint32_t slot);
++        bool ApplyPolygonUVTransform(const Api::PolygonHandles& polygons, const AZ::Vector2& scale,
++            const AZ::Vector2& offset, float rotationDegrees);
+ 
+         // EditorComponentSelectionRequestsBus overrides ...
+         AZ::Aabb GetEditorSelectionBoundsViewport(const AzFramework::ViewportInfo& viewportInfo) override;
+@@ -191,6 +197,11 @@
+         AZ::Crc32 BooleanGroupVisibility() const;
+ 
+         void OnMaterialChange();
++        void AssignSelectedMaterialSlot();
++        void ApplySelectedUVTransform();
++        void ResetPlanarUVs();
++        void PublishMaterialMerge(const JE::BSP::SurfaceMaterialBindings& bindings,
++            const AZ::Render::MaterialAssignmentMap& materials);
+         AZ::Crc32 AssetVisibility() const;
+ 
+         using ComponentModeDelegate = AzToolsFramework::ComponentModeFramework::ComponentModeDelegate;
+@@ -210,6 +221,13 @@
+         WhiteBoxRenderData m_renderData; //!< Cached render data constructed from the White Box mesh source data.
+         WhiteBoxMaterial m_material = {
+             DefaultMaterialTint, DefaultMaterialUseTexture}; //!< Render material for White Box mesh.
++        JE::BSP::SurfaceMaterialBindings m_surfaceMaterialBindings; //!< Scene bindings; MaterialComponent owns materials.
++        JE::BSP::SurfaceMaterialBindings m_displayMaterialBindings; //!< Evaluated live result, never substituted for base IDs.
++        bool m_manualUVs = false;
++        uint32_t m_selectedMaterialSlot = 0;
++        AZ::Vector2 m_uvScale = AZ::Vector2::CreateOne();
++        AZ::Vector2 m_uvOffset = AZ::Vector2::CreateZero();
++        float m_uvRotation = 0.0f;
+         DefaultShapeType m_defaultShape =
+             DefaultShapeType::Cube; //!< Used for selecting a default shape for the White Box mesh.
+         bool m_flipYZForExport = false; //!< Flips the Y and Z components of white box vertices when exporting for different coordinate systems
+@@ -230,8 +248,13 @@
+ 
+         //! Re-evaluates this component's live boolean when the source entity moves.
+         struct BooleanSourceListener : public AZ::TransformNotificationBus::Handler
++            , public AZ::Render::MaterialComponentNotificationBus::Handler
++            , public EditorWhiteBoxComponentNotificationBus::Handler
+         {
+             void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
++            void OnWhiteBoxMeshModified() override;
++            void OnMaterialsUpdated(const AZ::Render::MaterialAssignmentMap& materials) override;
++            void OnMaterialPropertiesUpdated(const AZ::Render::MaterialAssignmentMap& materials) override;
+             EditorWhiteBoxComponent* m_owner = nullptr;
+         };
+         BooleanSourceListener m_booleanSourceListener;
+diff --git a/Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp b/Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp
+--- a/Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp
++++ b/Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp
+@@ -29,6 +29,16 @@
+         }
+     }
+ 
++    void WhiteBoxComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided)
++    {
++        provided.push_back(AZ_CRC_CE("MaterialConsumerService"));
++    }
++
++    void WhiteBoxComponent::GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible)
++    {
++        incompatible.push_back(AZ_CRC_CE("MaterialConsumerService"));
++    }
++
+     WhiteBoxComponent::WhiteBoxComponent() = default;
+     WhiteBoxComponent::~WhiteBoxComponent() = default;
+ 
+diff --git a/Gems/WhiteBox/Code/Source/WhiteBoxComponent.h b/Gems/WhiteBox/Code/Source/WhiteBoxComponent.h
+--- a/Gems/WhiteBox/Code/Source/WhiteBoxComponent.h
++++ b/Gems/WhiteBox/Code/Source/WhiteBoxComponent.h
+@@ -30,6 +30,8 @@
+     public:
+         AZ_COMPONENT(WhiteBoxComponent, "{6CFD4D82-FA68-4C18-BE67-43FC2B755B64}", AZ::Component)
+         static void Reflect(AZ::ReflectContext* context);
++        static void GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& provided);
++        static void GetIncompatibleServices(AZ::ComponentDescriptor::DependencyArrayType& incompatible);
+ 
+         WhiteBoxComponent();
+         WhiteBoxComponent(const WhiteBoxComponent&) = delete;
+diff --git a/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp b/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp
+--- a/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp
++++ b/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp
+@@ -9,6 +9,9 @@
+ #include "WhiteBoxRenderData.h"
+ 
+ #include <AzCore/Serialization/SerializeContext.h>
++#include <AzCore/std/algorithm.h>
++#include <AzCore/std/sort.h>
++#include <AzCore/std/limits.h>
+ 
+ namespace WhiteBox
+ {
+@@ -20,7 +23,7 @@
+         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
+         {
+             serializeContext->Class<WhiteBoxRenderData>()
++                ->Version(3)
+-                ->Version(2)
+                 ->Field("Faces", &WhiteBoxRenderData::m_faces)
+                 ->Field("Material", &WhiteBoxRenderData::m_material);
+         }
+@@ -44,11 +47,13 @@
+         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
+         {
+             serializeContext->Class<WhiteBoxFace>()
++                ->Version(2)
+-                ->Version(1)
+                 ->Field("Vertex1", &WhiteBoxFace::m_v1)
+                 ->Field("Vertex2", &WhiteBoxFace::m_v2)
+                 ->Field("Vertex3", &WhiteBoxFace::m_v3)
++                ->Field("Normal", &WhiteBoxFace::m_normal)
++                ->Field("SurfaceId", &WhiteBoxFace::m_surfaceId)
++                ->Field("MaterialSlot", &WhiteBoxFace::m_materialSlot);
+-                ->Field("Normal", &WhiteBoxFace::m_normal);
+         }
+     }
+ 
+@@ -88,3 +93,46 @@
+         return outFaces;
+     }
+ } // namespace WhiteBox
++
++namespace JE::BSP
++{
++    void SurfaceMaterialBinding::Reflect(AZ::ReflectContext* context)
++    {
++        if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
++        {
++            serializeContext->Class<SurfaceMaterialBinding>()->Version(1)
++                ->Field("SurfaceId", &SurfaceMaterialBinding::m_surfaceId)
++                ->Field("MaterialSlot", &SurfaceMaterialBinding::m_materialSlot);
++        }
++    }
++
++    uint32_t FindSurfaceMaterialSlot(const SurfaceMaterialBindings& bindings, const AZ::Uuid& surfaceId)
++    {
++        for (const auto& binding : bindings)
++        {
++            if (binding.m_surfaceId == surfaceId) { return binding.m_materialSlot; }
++        }
++        return 0;
++    }
++
++    AZStd::vector<MaterialIndexRange> PartitionFacesByMaterial(WhiteBox::WhiteBoxFaces& faces)
++    {
++        if (faces.size() > AZStd::numeric_limits<uint32_t>::max() / 3 ||
++            AZStd::any_of(faces.begin(), faces.end(), [](const auto& face)
++                { return face.m_materialSlot == AZStd::numeric_limits<uint32_t>::max(); })) { return {}; }
++        AZStd::stable_sort(faces.begin(), faces.end(), [](const auto& a, const auto& b)
++        {
++            return a.m_materialSlot < b.m_materialSlot;
++        });
++        AZStd::vector<MaterialIndexRange> ranges;
++        for (size_t face = 0; face < faces.size(); ++face)
++        {
++            if (ranges.empty() || ranges.back().m_materialSlot != faces[face].m_materialSlot)
++            {
++                ranges.push_back({faces[face].m_materialSlot, static_cast<uint32_t>(face * 3), 0});
++            }
++            ranges.back().m_indexCount += 3;
++        }
++        return ranges;
++    }
++}
+\ No newline at end of file
+diff --git a/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h b/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h
+--- a/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h
++++ b/Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h
+@@ -10,6 +10,7 @@
+ 
+ #include "WhiteBoxMaterial.h"
+ 
++#include <AzCore/Math/Uuid.h>
+ #include <AzCore/Math/Vector2.h>
+ #include <AzCore/Math/Vector3.h>
+ #include <AzCore/RTTI/TypeInfo.h>
+@@ -20,6 +21,30 @@
+     class ReflectContext;
+ }
+ 
++namespace JE::BSP
++{
++    //! Full caller-owned surface identity and a local Atom slot. Slot zero is the legacy fallback.
++    struct SurfaceMaterialBinding
++    {
++        AZ_TYPE_INFO(SurfaceMaterialBinding, "{150374DB-4A94-46DB-A11E-C34EFB4DCC71}");
++        static void Reflect(AZ::ReflectContext* context);
++        AZ::Uuid m_surfaceId;
++        uint32_t m_materialSlot = 0;
++        bool operator==(const SurfaceMaterialBinding& rhs) const
++        {
++            return m_surfaceId == rhs.m_surfaceId && m_materialSlot == rhs.m_materialSlot;
++        }
++    };
++    using SurfaceMaterialBindings = AZStd::vector<SurfaceMaterialBinding>;
++    uint32_t FindSurfaceMaterialSlot(const SurfaceMaterialBindings& bindings, const AZ::Uuid& surfaceId);
++
++    struct MaterialIndexRange
++    {
++        uint32_t m_materialSlot = 0;
++        uint32_t m_firstIndex = 0;
++        uint32_t m_indexCount = 0;
++    };
++}
+ namespace WhiteBox
+ {
+     struct WhiteBoxVertex;
+@@ -58,9 +83,17 @@
+         WhiteBoxVertex m_v2;
+         WhiteBoxVertex m_v3;
+         AZ::Vector3 m_normal;
++        AZ::Uuid m_surfaceId; //!< Opaque UUID128, never used as an Atom slot or truncated.
++        uint32_t m_materialSlot = 0;
+     };
+ 
+     //! Builds a vector of visible faces by removing the degenerate faces from the source data
+     WhiteBoxFaces BuildCulledWhiteBoxFaces(const WhiteBoxFaces& sourceData);
+ 
+ } // namespace WhiteBox
++
++namespace JE::BSP
++{
++    //! Stable partition of whole triangles; shared vertex streams retain their exact corner UVs.
++    AZStd::vector<MaterialIndexRange> PartitionFacesByMaterial(WhiteBox::WhiteBoxFaces& faces);
++}
+diff --git a/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp b/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp
+--- a/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp
++++ b/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp
+@@ -21,6 +21,7 @@
+ #include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
+ #include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+ #include <AzCore/Math/PackedVector3.h>
++#include <AzCore/std/limits.h>
+ 
+ namespace WhiteBox
+ {
+@@ -28,6 +29,8 @@
+         : m_entityId(entityId)
+     {
+         AZ::Render::MeshHandleStateRequestBus::Handler::BusConnect(m_entityId);
++        AZ::Render::MaterialConsumerRequestBus::Handler::BusConnect(m_entityId);
++        AZ::Render::MaterialComponentNotificationBus::Handler::BusConnect(m_entityId);
+     }
+ 
+     AtomRenderMesh::~AtomRenderMesh()
+@@ -40,6 +43,8 @@
+                 m_entityId, &AZ::Render::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
+         }
+         
++        AZ::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
++        AZ::Render::MaterialConsumerRequestBus::Handler::BusDisconnect();
+         AZ::Render::MeshHandleStateRequestBus::Handler::BusDisconnect();
+         AZ::TickBus::Handler::BusDisconnect();
+     }
+@@ -105,9 +110,11 @@
+         }
+     }
+ 
++    void AtomRenderMesh::AddMeshBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator, const JE::BSP::MaterialIndexRange& range)
+-    void AtomRenderMesh::AddMeshBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator)
+     {
++        const auto indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(
++            range.m_firstIndex, range.m_indexCount, AZ::RHI::Format::R32_UINT);
++        modelLodCreator.SetMeshIndexBuffer(AZ::RPI::BufferAssetView{m_indexBuffer->GetBuffer(), indexView});
+-        modelLodCreator.SetMeshIndexBuffer(m_indexBuffer->GetBufferAssetView());
+ 
+         for (auto& attribute : m_attributes)
+         {
+@@ -130,14 +137,16 @@
+         AZ::RPI::ModelLodAssetCreator modelLodCreator;
+         modelLodCreator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
+         AddLodBuffers(modelLodCreator);
++        for (const auto& range : m_materialRanges)
++        {
++            modelLodCreator.BeginMesh();
++            modelLodCreator.SetMeshAabb(meshData.GetAabb());
++            modelLodCreator.SetMeshMaterialSlot(range.m_materialSlot);
++            // Submeshes share the same position, normal, tangent and exact corner-UV buffers.
++            AddMeshBuffers(modelLodCreator, range);
++            modelLodCreator.EndMesh();
++        }
+-        modelLodCreator.BeginMesh();
+-        modelLodCreator.SetMeshAabb(meshData.GetAabb());
+-        
+-        modelLodCreator.SetMeshMaterialSlot(OneMaterialSlotId);
+ 
+-        AddMeshBuffers(modelLodCreator);
+-        modelLodCreator.EndMesh();
+-
+         if (!modelLodCreator.End(m_lodAsset))
+         {
+             AZ_Error("CreateLodAsset", false, "Couldn't create LoD asset.");
+@@ -168,12 +177,16 @@
+         
+         if (auto materialAsset = AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::MaterialAsset>(TexturedMaterialPath.data()))
+         {
++            // The fallback instance is private to this entity; native MaterialComponent owns overrides.
++            m_materialInstance = AZ::RPI::Material::Create(materialAsset);
++            for (const auto& range : m_materialRanges)
++            {
++                AZ::RPI::ModelMaterialSlot materialSlot;
++                materialSlot.m_stableId = range.m_materialSlot;
++                materialSlot.m_displayName = AZ::Name(AZStd::string::format("Surface slot %u", range.m_materialSlot));
++                materialSlot.m_defaultMaterialAsset = materialAsset;
++                modelCreator.AddMaterialSlot(materialSlot);
++            }
+-            m_materialInstance = AZ::RPI::Material::FindOrCreate(materialAsset);
+-
+-            AZ::RPI::ModelMaterialSlot materialSlot;
+-            materialSlot.m_stableId = OneMaterialSlotId;
+-            materialSlot.m_defaultMaterialAsset = materialAsset;
+-            modelCreator.AddMaterialSlot(materialSlot);
+         }
+         else
+         {
+@@ -199,7 +212,13 @@
+         }
+ 
+         m_meshFeatureProcessor->ReleaseMesh(m_meshHandle);
++        m_meshHandle = m_meshFeatureProcessor->AcquireMesh(AZ::Render::MeshHandleDescriptor(m_modelAsset));
++        AZ::Render::MaterialConsumerNotificationBus::Event(
++            m_entityId, &AZ::Render::MaterialConsumerNotifications::OnMaterialAssignmentSlotsChanged);
++        AZ::Render::MaterialAssignmentMap materials;
++        AZ::Render::MaterialComponentRequestBus::EventResult(
++            materials, m_entityId, &AZ::Render::MaterialComponentRequests::GetMaterialMapCopy);
++        ApplyNativeMaterials(materials);
+-        m_meshHandle = m_meshFeatureProcessor->AcquireMesh(AZ::Render::MeshHandleDescriptor(m_modelAsset, m_materialInstance));
+         AZ::Render::MeshHandleStateNotificationBus::Event(m_entityId, &AZ::Render::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
+ 
+         return true;
+@@ -241,7 +260,15 @@
+ 
+     void AtomRenderMesh::BuildMesh(const WhiteBoxRenderData& renderData, const AZ::Transform& worldFromLocal)
+     {
++        WhiteBoxFaces culledFaceList = BuildCulledWhiteBoxFaces(renderData.m_faces);
++        if (culledFaceList.size() > AZStd::numeric_limits<uint32_t>::max() / 3)
++        {
++            AZ_Error("WhiteBox", false, "White Box material partition exceeds the Atom index range.");
++            return;
++        }
++        auto materialRanges = JE::BSP::PartitionFacesByMaterial(culledFaceList);
++        if (materialRanges.empty()) { return; }
++        m_materialRanges = AZStd::move(materialRanges);
+-        const WhiteBoxFaces culledFaceList = BuildCulledWhiteBoxFaces(renderData.m_faces);
+         const WhiteBoxMeshAtomData meshData(culledFaceList);
+ 
+         if (DoesMeshRequireFullRebuild(meshData))
+@@ -283,6 +310,11 @@
+                 m_materialInstance->SetPropertyValue(materialPropertyIndex, material.m_useTexture);
+             }
+ 
++            AZ::Render::MaterialAssignmentMap materials;
++            AZ::Render::MaterialComponentRequestBus::EventResult(
++                materials, m_entityId, &AZ::Render::MaterialComponentRequests::GetMaterialMapCopy);
++            ApplyNativeMaterials(materials);
++
+             // If the material changes were successfully applied then disconnect from the tick bus. Otherwise, make another attempt on the next tick.
+             if (!m_materialInstance->NeedsCompile() || m_materialInstance->Compile())
+             {
+@@ -295,6 +327,53 @@
+         }
+     }
+ 
++    AZ::Render::MaterialAssignmentId AtomRenderMesh::FindMaterialAssignmentId(
++        const AZ::Render::MaterialAssignmentLodIndex lod, const AZStd::string& label) const
++    {
++        return AZ::Render::GetMaterialSlotIdFromModelAsset(m_modelAsset, lod, label);
++    }
++
++    AZ::Render::MaterialAssignmentLabelMap AtomRenderMesh::GetMaterialLabels() const
++    {
++        return AZ::Render::GetMaterialSlotLabelsFromModelAsset(m_modelAsset);
++    }
++
++    AZ::Render::MaterialAssignmentMap AtomRenderMesh::GetDefaultMaterialMap() const
++    {
++        return AZ::Render::GetDefaultMaterialMapFromModelAsset(m_modelAsset);
++    }
++
++    AZStd::unordered_set<AZ::Name> AtomRenderMesh::GetModelUvNames() const
++    {
++        return m_model ? m_model->GetUvNames() : AZStd::unordered_set<AZ::Name>{};
++    }
++
++    void AtomRenderMesh::ApplyNativeMaterials(const AZ::Render::MaterialAssignmentMap& materials)
++    {
++        if (!m_meshFeatureProcessor || !m_meshHandle.IsValid()) { return; }
++        auto customMaterials = AZ::Render::ConvertToCustomMaterialMap(materials);
++        // Keep only the historical fallback on slots not covered by native Atom instances.
++        for (const auto& range : m_materialRanges)
++        {
++            const auto& assignment = AZ::Render::GetMaterialAssignmentFromMapWithFallback(
++                materials, AZ::Render::MaterialAssignmentId::CreateFromLodAndStableId(0, range.m_materialSlot));
++            if (!assignment.m_materialInstance && m_materialInstance)
++            {
++                customMaterials[{0, range.m_materialSlot}].m_material = m_materialInstance;
++            }
++        }
++        m_meshFeatureProcessor->SetCustomMaterials(m_meshHandle, customMaterials);
++    }
++
++    void AtomRenderMesh::OnMaterialsUpdated(const AZ::Render::MaterialAssignmentMap& materials)
++    {
++        ApplyNativeMaterials(materials);
++    }
++
++    void AtomRenderMesh::OnMaterialPropertiesUpdated([[maybe_unused]] const AZ::Render::MaterialAssignmentMap& materials)
++    {
++        if (m_meshFeatureProcessor && m_meshHandle.IsValid()) { m_meshFeatureProcessor->SetRayTracingDirty(m_meshHandle); }
++    }
+     void AtomRenderMesh::OnTick([[maybe_unused]] float deltaTime, [[maybe_unused]] AZ::ScriptTimePoint time)
+     {
+         if (!m_materialInstance || !m_materialInstance->NeedsCompile() || m_materialInstance->Compile())
+diff --git a/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h b/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h
+--- a/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h
++++ b/Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h
+@@ -17,6 +17,7 @@
+ 
+ #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+ #include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
++#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+ #include <AzCore/Component/TransformBus.h>
+ #include <AzCore/Name/Name.h>
+ 
+@@ -35,6 +36,8 @@
+     class AtomRenderMesh
+         : public RenderMeshInterface
+         , private AZ::Render::MeshHandleStateRequestBus::Handler
++        , private AZ::Render::MaterialConsumerRequestBus::Handler
++        , private AZ::Render::MaterialComponentNotificationBus::Handler
+         , private AZ::TickBus::Handler
+     {
+     public:
+@@ -75,6 +78,16 @@
+         // MeshHandleStateRequestBus overrides ...
+         const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
+ 
++        // Native Atom material authority and Inspector integration.
++        AZ::Render::MaterialAssignmentId FindMaterialAssignmentId(
++            AZ::Render::MaterialAssignmentLodIndex lod, const AZStd::string& label) const override;
++        AZ::Render::MaterialAssignmentLabelMap GetMaterialLabels() const override;
++        AZ::Render::MaterialAssignmentMap GetDefaultMaterialMap() const override;
++        AZStd::unordered_set<AZ::Name> GetModelUvNames() const override;
++        void OnMaterialsUpdated(const AZ::Render::MaterialAssignmentMap& materials) override;
++        void OnMaterialPropertiesUpdated(const AZ::Render::MaterialAssignmentMap& materials) override;
++        void ApplyNativeMaterials(const AZ::Render::MaterialAssignmentMap& materials);
++
+         bool CreateMeshBuffers(const WhiteBoxMeshAtomData& meshData);
+         bool UpdateMeshBuffers(const WhiteBoxMeshAtomData& meshData);
+         bool MeshRequiresFullRebuild(const WhiteBoxMeshAtomData& meshData) const;
+@@ -83,7 +96,7 @@
+         void CreateModelAsset();
+         bool CreateModel();
+         void AddLodBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator);
++        void AddMeshBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator, const JE::BSP::MaterialIndexRange& range);
+-        void AddMeshBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator);
+         bool AreAttributesValid() const;
+         bool DoesMeshRequireFullRebuild(const WhiteBoxMeshAtomData& meshData) const;
+ 
+@@ -95,6 +108,7 @@
+         AZ::Render::MeshFeatureProcessorInterface::MeshHandle m_meshHandle;
+         AZ::Data::Instance<AZ::RPI::Material> m_materialInstance;
+         uint32_t m_vertexCount = 0;
++        AZStd::vector<JE::BSP::MaterialIndexRange> m_materialRanges;
+         AZStd::unique_ptr<IndexBuffer> m_indexBuffer;
+         AZStd::array<
+             AZStd::variant<
+@@ -107,7 +121,6 @@
+ 
+         //! Default white box mesh material.
+         static constexpr AZStd::string_view TexturedMaterialPath = "materials/whiteboxdefault.azmaterial";
+-        static constexpr AZ::RPI::ModelMaterialSlot::StableId OneMaterialSlotId = 0;
+ 
+         //! White box model name.
+         static constexpr AZStd::string_view ModelName = "WhiteBoxMesh";
+diff --git a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp
+--- a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp
++++ b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp
+@@ -17,11 +17,22 @@
+ {
+     using ComponentModeRequestBus = AzToolsFramework::ComponentModeFramework::ComponentModeRequestBus;
+ 
++    bool AllowPlanarGeometryEdit(const AZ::EntityComponentIdPair entityComponentIdPair)
++    {
++        bool manual = false;
++        EditorWhiteBoxComponentRequestBus::EventResult(manual, entityComponentIdPair,
++            &EditorWhiteBoxComponentRequests::HasManualUVs);
++        if (manual)
++        {
++            AZ_Warning("WhiteBox", false, "Geometry edit rejected to preserve authored UVs. Use the White Box Inspector's Reset All UVs to Planar action before geometry edits that reproject UVs.");
++        }
++        return !manual;
++    }
+     void RecordWhiteBoxAction(
++        WhiteBoxMesh& whiteBox, const AZ::EntityComponentIdPair entityComponentIdPair, const char* undoRedoDesc, const UVCommitMode uvMode)
+-        WhiteBoxMesh& whiteBox, const AZ::EntityComponentIdPair entityComponentIdPair, const char* undoRedoDesc)
+     {
+         // update UVs
++        if (uvMode == UVCommitMode::Reproject) { Api::CalculatePlanarUVs(whiteBox); }
+-        Api::CalculatePlanarUVs(whiteBox);
+ 
+         // record an undo step
+         AzToolsFramework::ScopedUndoBatch undoBatch(undoRedoDesc);
+diff --git a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h
+--- a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h
++++ b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h
+@@ -15,9 +15,14 @@
+ {
+     struct WhiteBoxMesh;
+ 
++    enum class UVCommitMode { Reproject, Preserve };
++    //! Reject operations that would erase authored corner UVs before any geometry mutation.
++    bool AllowPlanarGeometryEdit(AZ::EntityComponentIdPair entityComponentIdPair);
++
+     //! Record an undo/redo step and notify the white box mesh
+     void RecordWhiteBoxAction(
++        WhiteBoxMesh& whiteBox, const AZ::EntityComponentIdPair entityComponentIdPair, const char* undoRedoDesc,
++        UVCommitMode uvMode = UVCommitMode::Reproject);
+-        WhiteBoxMesh& whiteBox, const AZ::EntityComponentIdPair entityComponentIdPair, const char* undoRedoDesc);
+ 
+     //! Returns true if user input is for flipping an edge
+     bool InputFlipEdge(const AzToolsFramework::ViewportInteraction::MouseInteractionEvent& mouseInteraction);
+diff --git a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp
+--- a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp
++++ b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp
+@@ -1044,6 +1044,7 @@
+ 
+     void DefaultMode::HideSelectedEdge()
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+         auto modifier = AZStd::get_if<AZStd::unique_ptr<EdgeTranslationModifier>>(&m_selectedModifier);
+ 
+         WhiteBoxMesh* whiteBox = nullptr;
+@@ -1061,6 +1062,7 @@
+ 
+     void DefaultMode::HideSelectedVertex()
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+         auto modifier = AZStd::get_if<AZStd::unique_ptr<VertexTranslationModifier>>(&m_selectedModifier);
+ 
+         WhiteBoxMesh* whiteBox = nullptr;
+@@ -1254,6 +1256,7 @@
+ 
+     void DefaultMode::ApplyNumeric()
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { m_numericInput.Reset(); return; }
+         if (!m_numericInput.IsActive())
+         {
+             m_numericInput.Reset();
+diff --git a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp
+--- a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp
++++ b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp
+@@ -93,7 +93,7 @@
+             break;
+         }
+ 
++        if (InputRestore(mouseInteraction) && AllowPlanarGeometryEdit(entityComponentIdPair))
+-        if (InputRestore(mouseInteraction))
+         {
+             switch (closestIntersection)
+             {
+@@ -127,7 +127,7 @@
+             }
+         }
+ 
++        if (InputFlipEdge(mouseInteraction) && AllowPlanarGeometryEdit(entityComponentIdPair))
+-        if (InputFlipEdge(mouseInteraction))
+         {
+             switch (closestIntersection)
+             {
+diff --git a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp
+--- a/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp
++++ b/Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp
+@@ -887,6 +887,7 @@
+                                    transformSelection = m_whiteBoxSelection,
+                                    currentManipulator = AZStd::weak_ptr<AzToolsFramework::TranslationManipulators>(translationManipulators)](const auto& action)
+         {
++            if (!AllowPlanarGeometryEdit(entityComponentIdPair)) { return; }
+             WhiteBoxMesh* whiteBox = nullptr;
+             EditorWhiteBoxComponentRequestBus::EventResult(
+                 whiteBox, entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+@@ -914,6 +915,7 @@
+                                  currentManipulator = AZStd::weak_ptr<AzToolsFramework::TranslationManipulators>(
+                                      translationManipulators)](const auto& action)
+         {
++            if (!AllowPlanarGeometryEdit(entityComponentIdPair)) { return; }
+             WhiteBoxMesh* whiteBox = nullptr;
+             EditorWhiteBoxComponentRequestBus::EventResult(
+                 whiteBox, entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+@@ -976,6 +978,7 @@
+              currentManipulator = AZStd::weak_ptr<AzToolsFramework::RotationManipulators>(rotationManipulators)](
+                 const AzToolsFramework::AngularManipulator::Action& action)
+             {
++                if (!AllowPlanarGeometryEdit(entityComponentIdPair)) { return; }
+                 WhiteBoxMesh* whiteBox = nullptr;
+                 EditorWhiteBoxComponentRequestBus::EventResult(
+                     whiteBox, entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+@@ -1007,6 +1010,7 @@
+              currentManipulator = AZStd::weak_ptr<AzToolsFramework::RotationManipulators>(rotationManipulators)](
+                 const AzToolsFramework::AngularManipulator::Action& action)
+             {
++                if (!AllowPlanarGeometryEdit(entityComponentIdPair)) { return; }
+                 WhiteBoxMesh* whiteBox = nullptr;
+                 EditorWhiteBoxComponentRequestBus::EventResult(
+                     whiteBox, entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+@@ -1063,6 +1067,7 @@
+             [entityComponentIdPair = m_entityComponentIdPair,
+              transformSelection = m_whiteBoxSelection](const auto& action, ScaleType scaleType)
+         {
++            if (!AllowPlanarGeometryEdit(entityComponentIdPair)) { return; }
+             WhiteBoxMesh* whiteBox = nullptr;
+             EditorWhiteBoxComponentRequestBus::EventResult(
+                 whiteBox, entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+@@ -1099,6 +1104,7 @@
+             [mouseMoveHandlerFn, entityComponentIdPair = m_entityComponentIdPair,
+              transformSelection = m_whiteBoxSelection](const auto& action, ScaleType scaleType)
+         {
++            if (!AllowPlanarGeometryEdit(entityComponentIdPair)) { return; }
+             WhiteBoxMesh* whiteBox = nullptr;
+             EditorWhiteBoxComponentRequestBus::EventResult(
+                 whiteBox, entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+@@ -1133,6 +1139,7 @@
+ 
+     void TransformMode::ApplyNumericTransform()
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { m_numericInput.Reset(); return; }
+         if (!m_numericInput.IsActive() || !m_whiteBoxSelection)
+         {
+             m_numericInput.Reset();
+diff --git a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp
+--- a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp
++++ b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp
+@@ -6,6 +6,7 @@
+  *
+  */
+ 
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
+ #include "WhiteBoxDrawShapeMode.h"
+ 
+ #include "EditorWhiteBoxComponent.h"
+@@ -910,6 +911,7 @@
+ 
+     void DrawShapeMode::CommitBox(const AZ::Transform& worldFromLocal)
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+         WhiteBoxMesh* whiteBox = nullptr;
+         EditorWhiteBoxComponentRequestBus::EventResult(
+             whiteBox, m_entityComponentIdPair,
+@@ -984,6 +986,7 @@
+     // exceeds the wall thickness - automatically, no special-casing.
+     void DrawShapeMode::BooleanAtPolygon(const AZ::Transform& worldFromLocal, float height)
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+         WhiteBoxMesh* whiteBox = nullptr;
+         EditorWhiteBoxComponentRequestBus::EventResult(
+             whiteBox, m_entityComponentIdPair,
+diff --git a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp
+--- a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp
++++ b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp
+@@ -6,6 +6,7 @@
+  *
+  */
+ 
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
+ #include "SubComponentModes/EditorWhiteBoxDefaultModeBus.h"
+ #include "Util/WhiteBoxMathUtil.h"
+ #include "Viewport/WhiteBoxViewportConstants.h"
+@@ -113,6 +114,7 @@
+             manipulator->InstallMouseMoveCallback(
+                 [this](const AzToolsFramework::LinearManipulator::Action& action)
+                 {
++                    if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+                     WhiteBoxMesh* whiteBox = nullptr;
+                     EditorWhiteBoxComponentRequestBus::EventResult(
+                         whiteBox, m_entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+diff --git a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp
+--- a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp
++++ b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp
+@@ -6,6 +6,7 @@
+  *
+  */
+ 
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
+ #include "EditorWhiteBoxComponentModeBus.h"
+ #include "EditorWhiteBoxEdgeModifierBus.h"
+ #include "SubComponentModes/EditorWhiteBoxDefaultModeBus.h"
+@@ -154,6 +155,7 @@
+         m_translationManipulator->InstallMouseMoveCallback(
+             [this, sharedState](const AzToolsFramework::PlanarManipulator::Action& action)
+             {
++                if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+                 WhiteBoxMesh* whiteBox = nullptr;
+                 EditorWhiteBoxComponentRequestBus::EventResult(
+                     whiteBox, m_entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+diff --git a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp
+--- a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp
++++ b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp
+@@ -6,6 +6,7 @@
+  *
+  */
+ 
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
+ #include "EditorWhiteBoxPolygonModifierBus.h"
+ #include "SubComponentModes/EditorWhiteBoxDefaultModeBus.h"
+ #include "Util/WhiteBoxMathUtil.h"
+@@ -124,6 +125,7 @@
+ 
+     void PolygonScaleModifier::OnMouseMove(const AzToolsFramework::LinearManipulator::Action& action)
+     {
++        if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+         WhiteBoxMesh* whiteBox = nullptr;
+         EditorWhiteBoxComponentRequestBus::EventResult(
+             whiteBox, m_entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+diff --git a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp
+--- a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp
++++ b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp
+@@ -6,6 +6,7 @@
+  *
+  */
+ 
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
+ #include "EditorWhiteBoxComponentModeBus.h"
+ #include "EditorWhiteBoxPolygonModifierBus.h"
+ #include "SubComponentModes/EditorWhiteBoxDefaultModeBus.h"
+@@ -94,6 +95,7 @@
+         m_translationManipulator->InstallMouseMoveCallback(
+             [this, sharedState](const AzToolsFramework::LinearManipulator::Action& action) mutable
+             {
++                if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+                 WhiteBoxMesh* whiteBox = nullptr;
+                 EditorWhiteBoxComponentRequestBus::EventResult(
+                     whiteBox, m_entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+diff --git a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp
+--- a/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp
++++ b/Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp
+@@ -6,6 +6,7 @@
+  *
+  */
+ 
++#include "SubComponentModes/EditorWhiteBoxComponentModeCommon.h"
+ #include "SubComponentModes/EditorWhiteBoxDefaultModeBus.h"
+ #include "Util/WhiteBoxMathUtil.h"
+ #include "Viewport/WhiteBoxModifierUtil.h"
+@@ -167,6 +168,7 @@
+         m_translationManipulator->InstallMouseMoveCallback(
+             [this, sharedState](const MultiLinearManipulator::Action& action)
+             {
++                if (!AllowPlanarGeometryEdit(m_entityComponentIdPair)) { return; }
+                 WhiteBoxMesh* whiteBox = nullptr;
+                 EditorWhiteBoxComponentRequestBus::EventResult(
+                     whiteBox, m_entityComponentIdPair, &EditorWhiteBoxComponentRequests::GetWhiteBoxMesh);
+diff --git a/Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.cpp b/Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.cpp
+--- /dev/null
++++ b/Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.cpp
+@@ -0,0 +1,267 @@
++/*
++ * Copyright (c) Contributors to the Open 3D Engine Project.
++ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
++ *
++ * SPDX-License-Identifier: Apache-2.0 OR MIT
++ */
++#include "JEWhiteBoxSurfaceMaterials.h"
++#include <Atom/RPI.Reflect/Material/MaterialPropertyValue.h>
++#include <AzCore/std/algorithm.h>
++#include <AzCore/std/containers/map.h>
++#include <AzCore/std/containers/unordered_map.h>
++#include <AzCore/std/containers/unordered_set.h>
++#include <AzCore/std/limits.h>
++#include <cmath>
++
++namespace JE::BSP
++{
++    namespace
++    {
++        namespace Api = WhiteBox::Api;
++        using Assignment = AZ::Render::MaterialAssignment;
++        using AssignmentId = AZ::Render::MaterialAssignmentId;
++        constexpr uint32_t InvalidSlot = AZStd::numeric_limits<uint32_t>::max();
++
++        bool ValidBindings(const SurfaceMaterialBindings& bindings)
++        {
++            AZStd::unordered_set<AZ::Uuid> keys;
++            for (const auto& binding : bindings)
++            {
++                if (binding.m_surfaceId.IsNull() || binding.m_materialSlot == InvalidSlot ||
++                    !keys.insert(binding.m_surfaceId).second) { return false; }
++            }
++            return true;
++        }
++
++        bool HasAssignment(const Assignment& assignment)
++        {
++            return assignment.m_materialAsset.GetId().IsValid() || !assignment.m_propertyOverrides.empty() ||
++                !assignment.m_matModUvOverrides.empty() || assignment.m_materialInstancePreCreated;
++        }
++
++        Assignment ResolveAssignment(const AZ::Render::MaterialAssignmentMap& materials, uint32_t slot,
++            const WhiteBox::WhiteBoxMaterial& legacy, bool* explicitAssignment = nullptr)
++        {
++            if (explicitAssignment) { *explicitAssignment = false; }
++            // Resolve serialized authoring data even while native material instances are loading.
++            for (const auto& id : {AssignmentId::CreateFromLodAndStableId(0, slot),
++                AssignmentId::CreateFromStableIdOnly(slot), AssignmentId::CreateDefault()})
++            {
++                const auto it = materials.find(id);
++                // A present slot reset also has meaning: Atom resolves it against the model default asset.
++                if (it != materials.end() && (!id.IsDefault() || HasAssignment(it->second)))
++                {
++                    if (explicitAssignment) { *explicitAssignment = true; }
++                    return it->second;
++                }
++            }
++            Assignment fallback;
++            fallback.m_propertyOverrides[AZ::Name("baseColor.color")] = AZ::Color(legacy.m_tint);
++            fallback.m_propertyOverrides[AZ::Name("baseColor.useTexture")] = legacy.m_useTexture;
++            return fallback;
++        }
++
++        bool EqualAssignments(const Assignment& lhs, const Assignment& rhs)
++        {
++            if (lhs.m_materialAsset.GetId() != rhs.m_materialAsset.GetId() ||
++                lhs.m_matModUvOverrides != rhs.m_matModUvOverrides ||
++                lhs.m_propertyOverrides.size() != rhs.m_propertyOverrides.size()) { return false; }
++            // A pre-created instance cannot be reconstructed from serialized asset/override data.
++            if (lhs.m_materialInstancePreCreated || rhs.m_materialInstancePreCreated) { return false; }
++            for (const auto& [name, value] : lhs.m_propertyOverrides)
++            {
++                const auto it = rhs.m_propertyOverrides.find(name);
++                if (it == rhs.m_propertyOverrides.end() || value.type() != it->second.type()) { return false; }
++                const auto a = AZ::RPI::MaterialPropertyValue::FromAny(value);
++                const auto b = AZ::RPI::MaterialPropertyValue::FromAny(it->second);
++                // Unsupported values are conflicts, never silently treated as equal.
++                if (!a.IsValid() || !b.IsValid() || a != b) { return false; }
++            }
++            return true;
++        }
++
++        bool SelectedFaces(const WhiteBox::WhiteBoxMesh& mesh, const Api::PolygonHandles& polygons, Api::FaceHandles& output)
++        {
++            if (polygons.empty()) { return false; }
++            const auto validFaces = Api::MeshFaceHandles(mesh);
++            const auto validPolygons = Api::MeshPolygonHandles(mesh);
++            for (const auto& polygon : polygons)
++            {
++                if (AZStd::find(validPolygons.begin(), validPolygons.end(), polygon) == validPolygons.end()) { return false; }
++                for (const auto face : polygon.m_faceHandles)
++                {
++                    if (AZStd::find(validFaces.begin(), validFaces.end(), face) == validFaces.end()) { return false; }
++                    if (AZStd::find(output.begin(), output.end(), face) == output.end()) { output.push_back(face); }
++                }
++            }
++            return !output.empty();
++        }
++    }
++
++    bool MergeSurfaceMaterials(
++        const WhiteBox::WhiteBoxMesh& target, const SurfaceMaterialBindings& targetBindings,
++        const AZ::Render::MaterialAssignmentMap& targetMaterials, const WhiteBox::WhiteBoxMaterial& targetLegacy,
++        const WhiteBox::WhiteBoxMesh& source, const SurfaceMaterialBindings& sourceBindings,
++        const AZ::Render::MaterialAssignmentMap& sourceMaterials, const WhiteBox::WhiteBoxMaterial& sourceLegacy,
++        bool targetHasMaterialOwner, SurfaceMaterialMerge& output, AZStd::string& error)
++    {
++        if (!ValidBindings(targetBindings) || !ValidBindings(sourceBindings))
++        {
++            error = "Invalid or duplicate surface-to-material bindings; the current mesh is preserved.";
++            return false;
++        }
++        SurfaceMaterialMerge candidate{targetBindings, targetMaterials};
++        AZStd::map<uint32_t, Assignment> slots;
++        AZStd::map<uint32_t, bool> explicitSlots;
++        slots[0] = ResolveAssignment(targetMaterials, 0, targetLegacy, &explicitSlots[0]);
++        AZStd::unordered_map<AZ::Uuid, Assignment> surfaces;
++        for (const auto face : Api::MeshFaceHandles(target))
++        {
++            const auto id = Api::FaceSurfaceId(target, face);
++            if (id.IsNull()) { error = "Missing destination surface UUID; the current mesh is preserved."; return false; }
++            const auto slot = FindSurfaceMaterialSlot(targetBindings, id);
++            slots[slot] = ResolveAssignment(targetMaterials, slot, targetLegacy, &explicitSlots[slot]);
++            surfaces[id] = slots[slot];
++            if (AZStd::none_of(candidate.m_bindings.begin(), candidate.m_bindings.end(), [&](const auto& b){ return b.m_surfaceId == id; }))
++            {
++                candidate.m_bindings.push_back({id, slot});
++            }
++        }
++        // Reserve scene slots even when their original geometry is temporarily absent (Undo/live CSG).
++        for (const auto& binding : targetBindings)
++        {
++            slots[binding.m_materialSlot] = ResolveAssignment(targetMaterials, binding.m_materialSlot, targetLegacy, &explicitSlots[binding.m_materialSlot]);
++            surfaces[binding.m_surfaceId] = slots[binding.m_materialSlot];
++        }
++        for (const auto& entry : targetMaterials)
++        {
++            const auto& id = entry.first;
++            if (id.m_materialSlotStableId != InvalidSlot)
++            {
++                slots[id.m_materialSlotStableId] = ResolveAssignment(targetMaterials, id.m_materialSlotStableId, targetLegacy,
++                    &explicitSlots[id.m_materialSlotStableId]);
++            }
++        }
++        AZStd::unordered_map<uint32_t, uint32_t> sourceSlotRemap;
++        AZStd::unordered_set<AZ::Uuid> visited;
++        for (const auto face : Api::MeshFaceHandles(source))
++        {
++            const auto id = Api::FaceSurfaceId(source, face);
++            if (id.IsNull()) { error = "Missing source surface UUID; the current mesh is preserved."; return false; }
++            if (!visited.insert(id).second) { continue; }
++            const auto sourceSlot = FindSurfaceMaterialSlot(sourceBindings, id);
++            bool sourceExplicit = false;
++            const auto assignment = ResolveAssignment(sourceMaterials, sourceSlot, sourceLegacy, &sourceExplicit);
++            const auto inherited = surfaces.find(id);
++            if (inherited != surfaces.end() && !EqualAssignments(inherited->second, assignment))
++            {
++                error = "The same surface UUID has incompatible material assets, properties or UV overrides; the current mesh is preserved.";
++                return false;
++            }
++            if (sourceExplicit && !targetHasMaterialOwner)
++            {
++                error = "Add the Atom Material component to the destination to preserve the source material assignments; the current mesh is preserved.";
++                return false;
++            }
++            if (inherited != surfaces.end())
++            {
++                const auto inheritedSlot = FindSurfaceMaterialSlot(candidate.m_bindings, id);
++                if (sourceExplicit && !explicitSlots[inheritedSlot])
++                {
++                    candidate.m_materials[AssignmentId::CreateFromStableIdOnly(inheritedSlot)] = assignment;
++                    explicitSlots[inheritedSlot] = true;
++                }
++                sourceSlotRemap.try_emplace(sourceSlot, inheritedSlot);
++                continue;
++            }
++            const auto mapped = sourceSlotRemap.find(sourceSlot);
++            auto compatible = AZStd::find_if(slots.begin(), slots.end(), [&](const auto& entry)
++            {
++                return explicitSlots[entry.first] == sourceExplicit && EqualAssignments(entry.second, assignment);
++            });
++            uint32_t slot = 0;
++            if (mapped != sourceSlotRemap.end()) { slot = mapped->second; }
++            else if (compatible != slots.end()) { slot = compatible->first; }
++            else
++            {
++                if (!targetHasMaterialOwner)
++                {
++                    error = "Add the Atom Material component to the destination to preserve the source material assignments; the current mesh is preserved.";
++                    return false;
++                }
++                if (assignment.m_materialInstancePreCreated)
++                {
++                    error = "The source has a pre-created material instance without a persistable assignment; the current mesh is preserved.";
++                    return false;
++                }
++                const auto last = slots.rbegin()->first;
++                if (last >= InvalidSlot - 1) { error = "Material slot capacity exhausted; the current mesh is preserved."; return false; }
++                slot = last + 1;
++                slots[slot] = assignment;
++                explicitSlots[slot] = true;
++                candidate.m_materials[AssignmentId::CreateFromStableIdOnly(slot)] = assignment;
++            }
++            candidate.m_bindings.push_back({id, slot});
++            sourceSlotRemap[sourceSlot] = slot;
++            surfaces[id] = assignment;
++        }
++        output = AZStd::move(candidate);
++        error.clear();
++        return true;
++    }
++
++    bool MaterialAssignmentsEquivalent(const AZ::Render::MaterialAssignmentMap& lhs,
++        const AZ::Render::MaterialAssignmentMap& rhs)
++    {
++        if (lhs.size() != rhs.size()) { return false; }
++        for (const auto& [id, assignment] : lhs)
++        {
++            const auto it = rhs.find(id);
++            if (it == rhs.end() || !EqualAssignments(assignment, it->second)) { return false; }
++        }
++        return true;
++    }
++    bool AssignPolygonMaterial(const WhiteBox::WhiteBoxMesh& mesh, const Api::PolygonHandles& polygons,
++        uint32_t slot, SurfaceMaterialBindings& bindings)
++    {
++        Api::FaceHandles faces;
++        if (slot == InvalidSlot || !ValidBindings(bindings) || !SelectedFaces(mesh, polygons, faces)) { return false; }
++        auto candidate = bindings;
++        for (const auto face : faces)
++        {
++            const auto id = Api::FaceSurfaceId(mesh, face);
++            if (id.IsNull()) { return false; }
++            const auto it = AZStd::find_if(candidate.begin(), candidate.end(), [&](const auto& binding){ return binding.m_surfaceId == id; });
++            if (it == candidate.end()) { candidate.push_back({id, slot}); }
++            else { it->m_materialSlot = slot; }
++        }
++        bindings = AZStd::move(candidate);
++        return true;
++    }
++
++    bool TransformPolygonUVs(WhiteBox::WhiteBoxMesh& mesh, const Api::PolygonHandles& polygons,
++        const AZ::Vector2& scale, const AZ::Vector2& offset, float rotationDegrees)
++    {
++        Api::FaceHandles faces;
++        if (!scale.IsFinite() || !offset.IsFinite() || !std::isfinite(rotationDegrees) ||
++            !SelectedFaces(mesh, polygons, faces)) { return false; }
++        const float radians = AZ::DegToRad(rotationDegrees);
++        const float cosine = std::cos(radians);
++        const float sine = std::sin(radians);
++        AZStd::vector<AZStd::pair<Api::HalfedgeHandle, AZ::Vector2>> transformed;
++        for (const auto face : faces)
++        {
++            for (const auto halfedge : Api::FaceHalfedgeHandles(mesh, face))
++            {
++                const auto uv = Api::HalfedgeUV(mesh, halfedge);
++                const float u = uv.GetX() * scale.GetX();
++                const float v = uv.GetY() * scale.GetY();
++                const AZ::Vector2 result(cosine * u - sine * v + offset.GetX(), sine * u + cosine * v + offset.GetY());
++                if (!result.IsFinite()) { return false; }
++                transformed.emplace_back(halfedge, result);
++            }
++        }
++        for (const auto& [halfedge, uv] : transformed) { Api::SetHalfedgeUV(mesh, halfedge, uv); }
++        return true;
++    }
++}
+diff --git a/Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.h b/Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.h
+--- /dev/null
++++ b/Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.h
+@@ -0,0 +1,38 @@
++/*
++ * Copyright (c) Contributors to the Open 3D Engine Project.
++ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
++ *
++ * SPDX-License-Identifier: Apache-2.0 OR MIT
++ */
++#pragma once
++#include <Rendering/WhiteBoxRenderData.h>
++#include <WhiteBox/WhiteBoxToolApi.h>
++#include <AtomLyIntegration/CommonFeatures/Material/MaterialAssignment.h>
++
++namespace JE::BSP
++{
++    struct SurfaceMaterialMerge
++    {
++        SurfaceMaterialBindings m_bindings;
++        AZ::Render::MaterialAssignmentMap m_materials;
++    };
++
++    //! Validate/merge scene associations before CSG. Failure leaves every output unchanged.
++    //! Native MaterialComponent remains the owner of the returned references and overrides.
++    bool MergeSurfaceMaterials(
++        const WhiteBox::WhiteBoxMesh& target, const SurfaceMaterialBindings& targetBindings,
++        const AZ::Render::MaterialAssignmentMap& targetMaterials, const WhiteBox::WhiteBoxMaterial& targetLegacy,
++        const WhiteBox::WhiteBoxMesh& source, const SurfaceMaterialBindings& sourceBindings,
++        const AZ::Render::MaterialAssignmentMap& sourceMaterials, const WhiteBox::WhiteBoxMaterial& sourceLegacy,
++        bool targetHasMaterialOwner, SurfaceMaterialMerge& output, AZStd::string& error);
++
++    bool MaterialAssignmentsEquivalent(const AZ::Render::MaterialAssignmentMap& lhs,
++        const AZ::Render::MaterialAssignmentMap& rhs);
++
++    //! Bind the complete inherited surface, not a truncated identifier or triangulation face index.
++    bool AssignPolygonMaterial(const WhiteBox::WhiteBoxMesh& mesh, const WhiteBox::Api::PolygonHandles& polygons,
++        uint32_t slot, SurfaceMaterialBindings& bindings);
++    //! Apply one validated affine transform to selected corners, preserving all other UVs and keys.
++    bool TransformPolygonUVs(WhiteBox::WhiteBoxMesh& mesh, const WhiteBox::Api::PolygonHandles& polygons,
++        const AZ::Vector2& scale, const AZ::Vector2& offset, float rotationDegrees);
++}
+diff --git a/Gems/WhiteBox/Code/Tests/JEWhiteBoxSurfaceMaterialsTest.cpp b/Gems/WhiteBox/Code/Tests/JEWhiteBoxSurfaceMaterialsTest.cpp
+--- /dev/null
++++ b/Gems/WhiteBox/Code/Tests/JEWhiteBoxSurfaceMaterialsTest.cpp
+@@ -0,0 +1,444 @@
++/*
++ * Copyright (c) Contributors to the Open 3D Engine Project.
++ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
++ *
++ * SPDX-License-Identifier: Apache-2.0 OR MIT
++ */
++#include "WhiteBoxTestFixtures.h"
++#include <AzCore/Name/NameDictionary.h>
++#include "Editor/JEWhiteBoxSurfaceMaterials.h"
++#include "Rendering/Atom/WhiteBoxMeshAtomData.h"
++#include <AzCore/IO/ByteContainerStream.h>
++#include <AzCore/Serialization/Utils.h>
++#include <AzCore/std/limits.h>
++#include <AzCore/std/algorithm.h>
++
++namespace UnitTest
++{
++    namespace Api = WhiteBox::Api;
++    using namespace JE::BSP;
++
++    class WhiteBoxSurfaceMaterialTestFixture : public WhiteBoxTestFixture
++    {
++        bool m_ownsNameDictionary = false;
++        void SetUpEditorFixtureImpl() override
++        {
++            m_ownsNameDictionary = !AZ::NameDictionary::IsReady();
++            if (m_ownsNameDictionary) { AZ::NameDictionary::Create(); }
++        }
++        void TearDownEditorFixtureImpl() override
++        {
++            if (m_ownsNameDictionary) { AZ::NameDictionary::Destroy(); }
++        }
++    };
++
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SurfaceMaterialPartitionRetainsDistinctSlotsAndExactCornerUVs)
++    {
++        WhiteBox::WhiteBoxFaces faces(3);
++        for (size_t i = 0; i < faces.size(); ++i)
++        {
++            faces[i].m_surfaceId = AZ::Uuid::CreateRandom();
++            faces[i].m_materialSlot = i == 1 ? 7 : 0;
++            faces[i].m_v1 = {AZ::Vector3(0, 0, static_cast<float>(i)), AZ::Vector2(10 + static_cast<float>(i), 20)};
++            faces[i].m_v2 = {AZ::Vector3(1, 0, static_cast<float>(i)), AZ::Vector2(30, 40)};
++            faces[i].m_v3 = {AZ::Vector3(0, 1, static_cast<float>(i)), AZ::Vector2(50, 60)};
++        }
++        auto ranges = PartitionFacesByMaterial(faces);
++        ASSERT_EQ(ranges.size(), 2);
++        EXPECT_EQ(ranges[0].m_materialSlot, 0);
++        EXPECT_EQ(ranges[0].m_firstIndex, 0);
++        EXPECT_EQ(ranges[0].m_indexCount, 6);
++        EXPECT_EQ(ranges[1].m_materialSlot, 7);
++        EXPECT_EQ(ranges[1].m_firstIndex, 6);
++        EXPECT_EQ(ranges[1].m_indexCount, 3);
++        EXPECT_EQ(faces[0].m_v1.m_uv, AZ::Vector2(10, 20));
++        EXPECT_EQ(faces[1].m_v1.m_uv, AZ::Vector2(12, 20));
++        EXPECT_EQ(faces[2].m_v1.m_uv, AZ::Vector2(11, 20));
++        const WhiteBox::WhiteBoxMeshAtomData data(faces);
++        EXPECT_EQ(data.GetUVs()[3][0], 12.0f);
++        EXPECT_EQ(data.GetUVs()[6][0], 11.0f);
++        EXPECT_EQ(data.GetIndices().size(), 9);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SurfaceMaterialMergeRemapsLocalSlotsWithoutTruncatingUUIDOrLosingOverrides)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CloneMesh(*m_whiteBox);
++        const AZ::Uuid a = AZ::Uuid::CreateString("{11111111-2222-3333-4444-555555555555}");
++        const AZ::Uuid b = AZ::Uuid::CreateString("{11111111-2222-3333-4444-555555555556}");
++        for (auto face : Api::MeshFaceHandles(*m_whiteBox)) { Api::SetFaceSurfaceId(*m_whiteBox, face, a); }
++        for (auto face : Api::MeshFaceHandles(*source)) { Api::SetFaceSurfaceId(*source, face, b); }
++        AZ::Render::MaterialAssignmentMap sourceMaterials;
++        auto& assignment = sourceMaterials[AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(0)];
++        assignment.m_propertyOverrides[AZ::Name("roughness.factor")] = 0.375f;
++        assignment.m_matModUvOverrides[AZ::RHI::ShaderSemantic("UV", 0)] = AZ::Name("UV0");
++        SurfaceMaterialMerge result;
++        AZStd::string error;
++        ASSERT_TRUE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, {}, *source, {}, sourceMaterials, {}, true, result, error));
++        const auto aSlot = FindSurfaceMaterialSlot(result.m_bindings, a);
++        const auto bSlot = FindSurfaceMaterialSlot(result.m_bindings, b);
++        EXPECT_NE(aSlot, bSlot);
++        const auto& imported = result.m_materials.at(AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(bSlot));
++        EXPECT_EQ(*AZStd::any_cast<float>(&imported.m_propertyOverrides.at(AZ::Name("roughness.factor"))), 0.375f);
++        EXPECT_EQ(imported.m_matModUvOverrides.at(AZ::RHI::ShaderSemantic("UV", 0)), AZ::Name("UV0"));
++        EXPECT_EQ(FindSurfaceMaterialSlot(result.m_bindings, AZ::Uuid::CreateRandom()), 0);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SurfaceMaterialConflictPreservesGeometryBindingsAndMaterialReferences)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CloneMesh(*m_whiteBox);
++        Api::WhiteBoxMeshStream before;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, before));
++        AZ::Render::MaterialAssignmentMap materials;
++        materials[AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(0)].m_propertyOverrides[AZ::Name("roughness.factor")] = 0.2f;
++        SurfaceMaterialMerge output;
++        const auto sentinel = AZ::Uuid::CreateRandom();
++        output.m_bindings.push_back({sentinel, 99});
++        output.m_materials = materials;
++        AZStd::string error;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, {}, *source, {}, materials, {}, true, output, error));
++        EXPECT_NE(error.find("incompatible"), AZStd::string::npos);
++        ASSERT_EQ(output.m_bindings.size(), 1);
++        EXPECT_EQ(output.m_bindings[0].m_surfaceId, sentinel);
++        EXPECT_EQ(output.m_bindings[0].m_materialSlot, 99);
++        EXPECT_EQ(*AZStd::any_cast<float>(&output.m_materials.begin()->second.m_propertyOverrides.begin()->second), 0.2f);
++        Api::WhiteBoxMeshStream after;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, after));
++        EXPECT_EQ(before, after);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SurfaceMaterialOwnerGuardRejectsBeforeReplacingCandidate)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CreateWhiteBoxMesh();
++        Api::InitializeAsUnitCube(*source);
++        AZ::Render::MaterialAssignmentMap materials;
++        materials[AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(0)].m_propertyOverrides[AZ::Name("roughness.factor")] = 0.4f;
++        SurfaceMaterialMerge result;
++        result.m_bindings.push_back({AZ::Uuid::CreateRandom(), 8});
++        AZStd::string error;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, {}, *source, {}, materials, {}, false, result, error));
++        EXPECT_NE(error.find("Material component"), AZStd::string::npos);
++        ASSERT_EQ(result.m_bindings.size(), 1);
++        EXPECT_EQ(result.m_bindings[0].m_materialSlot, 8);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SelectedPolygonUVTransformIsAtomicAndKeepsUnselectedCornersAndUUIDs)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        const auto polygons = Api::MeshPolygonHandles(*m_whiteBox);
++        const auto chosen = polygons.front();
++        const auto untouched = Api::FaceHalfedgeHandles(*m_whiteBox, polygons.back().m_faceHandles.front()).front();
++        const auto untouchedUV = Api::HalfedgeUV(*m_whiteBox, untouched);
++        const auto corner = Api::FaceHalfedgeHandles(*m_whiteBox, chosen.m_faceHandles.front()).front();
++        const auto oldUV = Api::HalfedgeUV(*m_whiteBox, corner);
++        const auto id = Api::FaceSurfaceId(*m_whiteBox, chosen.m_faceHandles.front());
++        EXPECT_TRUE(TransformPolygonUVs(*m_whiteBox, {chosen}, AZ::Vector2(2, 3), AZ::Vector2(5, 7), 0));
++        EXPECT_EQ(Api::HalfedgeUV(*m_whiteBox, corner), AZ::Vector2(oldUV.GetX() * 2 + 5, oldUV.GetY() * 3 + 7));
++        EXPECT_EQ(Api::HalfedgeUV(*m_whiteBox, untouched), untouchedUV);
++        EXPECT_EQ(Api::FaceSurfaceId(*m_whiteBox, chosen.m_faceHandles.front()), id);
++        Api::WhiteBoxMeshStream before, after;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, before));
++        EXPECT_FALSE(TransformPolygonUVs(*m_whiteBox, {Api::PolygonHandle{{Api::FaceHandle{99999}}}}, AZ::Vector2::CreateOne(), AZ::Vector2::CreateZero(), 0));
++        EXPECT_FALSE(TransformPolygonUVs(*m_whiteBox, {chosen}, AZ::Vector2::CreateOne(), AZ::Vector2::CreateZero(), AZStd::numeric_limits<float>::infinity()));
++        EXPECT_FALSE(TransformPolygonUVs(*m_whiteBox, {chosen}, AZ::Vector2(AZStd::numeric_limits<float>::quiet_NaN(), 1), AZ::Vector2::CreateZero(), 0));
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, after));
++        EXPECT_EQ(before, after);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SurfaceMaterialAssignmentChangesWholeInheritedSurfaceAndRejectsInvalidSelection)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto polygons = Api::MeshPolygonHandles(*m_whiteBox);
++        SurfaceMaterialBindings bindings;
++        EXPECT_TRUE(AssignPolygonMaterial(*m_whiteBox, {polygons.front()}, 12, bindings));
++        for (auto face : polygons.front().m_faceHandles)
++        {
++            EXPECT_EQ(FindSurfaceMaterialSlot(bindings, Api::FaceSurfaceId(*m_whiteBox, face)), 12);
++        }
++        const auto before = bindings;
++        EXPECT_FALSE(AssignPolygonMaterial(*m_whiteBox, {}, 9, bindings));
++        EXPECT_EQ(bindings, before);
++        EXPECT_FALSE(AssignPolygonMaterial(*m_whiteBox, {polygons.front()}, AZStd::numeric_limits<uint32_t>::max(), bindings));
++        EXPECT_EQ(bindings, before);
++    }
++
++    TEST_F(EditorWhiteBoxComponentTestFixture, SceneSurfaceBindingsAndManualUVGuardSurviveSerializationClone)
++    {
++        auto* mesh = m_whiteBoxComponent->GetWhiteBoxMesh();
++        const auto polygon = Api::MeshPolygonHandles(*mesh).front();
++        ASSERT_TRUE(m_whiteBoxComponent->AssignPolygonMaterialSlots({polygon}, 17));
++        ASSERT_TRUE(m_whiteBoxComponent->ApplyPolygonUVTransform({polygon}, AZ::Vector2(2, 2), AZ::Vector2(3, 5), 0));
++        AZ::SerializeContext* context = nullptr;
++        AZ::ComponentApplicationBus::BroadcastResult(context, &AZ::ComponentApplicationRequests::GetSerializeContext);
++        ASSERT_NE(context, nullptr);
++        auto* clone = context->CloneObject(m_whiteBoxComponent);
++        ASSERT_NE(clone, nullptr);
++        EXPECT_TRUE(clone->HasManualUVs());
++        EXPECT_EQ(clone->GetSurfaceMaterialBindings(), m_whiteBoxComponent->GetSurfaceMaterialBindings());
++        delete clone;
++        AZStd::vector<AZ::u8> buffer;
++        AZ::IO::ByteContainerStream<AZStd::vector<AZ::u8>> stream(&buffer);
++        ASSERT_TRUE(AZ::Utils::SaveObjectToStream(stream, AZ::DataStream::ST_BINARY, m_whiteBoxComponent, context));
++        stream.Seek(0, AZ::IO::GenericStream::ST_SEEK_BEGIN);
++        auto* reopened = AZ::Utils::LoadObjectFromStream<WhiteBox::EditorWhiteBoxComponent>(stream, context);
++        ASSERT_NE(reopened, nullptr);
++        reopened->DeserializeWhiteBox();
++        EXPECT_TRUE(reopened->HasManualUVs());
++        EXPECT_EQ(reopened->GetSurfaceMaterialBindings(), m_whiteBoxComponent->GetSurfaceMaterialBindings());
++        const auto corner = Api::FaceHalfedgeHandles(*mesh, polygon.m_faceHandles.front()).front();
++        EXPECT_EQ(Api::HalfedgeUV(*reopened->GetWhiteBoxMesh(), corner), Api::HalfedgeUV(*mesh, corner));
++        delete reopened;
++    }
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SurfaceMaterialBooleanChainRetainsBothOperandSlotsAndCornerUVs)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CreateWhiteBoxMesh();
++        Api::InitializeAsUnitCube(*source);
++        AZStd::vector<AZ::Uuid> sourceIds;
++        for (const auto face : Api::MeshFaceHandles(*source))
++        {
++            sourceIds.push_back(Api::FaceSurfaceId(*source, face));
++            for (const auto corner : Api::FaceHalfedgeHandles(*source, face))
++            {
++                const auto p = Api::VertexPosition(*source, Api::HalfedgeVertexHandleAtTip(*source, corner));
++                Api::SetHalfedgeUV(*source, corner, AZ::Vector2(2 * p.GetX() + 3 * p.GetY() + 5 * p.GetZ() + 17,
++                    7 * p.GetX() + 11 * p.GetY() + 13 * p.GetZ() + 29));
++            }
++        }
++        AZ::Render::MaterialAssignmentMap materials;
++        materials[AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(0)].m_propertyOverrides[AZ::Name("roughness.factor")] = 0.65f;
++        SurfaceMaterialMerge merged;
++        AZStd::string error;
++        ASSERT_TRUE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, {}, *source, {}, materials, {}, true, merged, error));
++        ASSERT_TRUE(Api::ApplyMeshBoolean(*m_whiteBox, *source, AZ::Transform::CreateTranslation(AZ::Vector3(0.5f, 0, 0)), Api::BooleanOperation::Union));
++        bool targetFound = false, sourceFound = false;
++        for (auto face : Api::MeshFaceHandles(*m_whiteBox))
++        {
++            const auto slot = FindSurfaceMaterialSlot(merged.m_bindings, Api::FaceSurfaceId(*m_whiteBox, face));
++            targetFound |= slot == 0;
++            sourceFound |= slot != 0;
++        }
++        EXPECT_TRUE(targetFound);
++        EXPECT_TRUE(sourceFound);
++        auto third = Api::CreateWhiteBoxMesh();
++        Api::InitializeAsUnitCube(*third);
++        SurfaceMaterialMerge chain;
++        ASSERT_TRUE(MergeSurfaceMaterials(*m_whiteBox, merged.m_bindings, merged.m_materials, {}, *third, {}, materials, {}, true, chain, error));
++        const auto thirdId = Api::FaceSurfaceId(*third, Api::MeshFaceHandles(*third).front());
++        EXPECT_NE(FindSurfaceMaterialSlot(chain.m_bindings, thirdId), 0);
++        for (const auto& binding : merged.m_bindings)
++        {
++            EXPECT_EQ(FindSurfaceMaterialSlot(chain.m_bindings, binding.m_surfaceId), binding.m_materialSlot);
++        }
++        ASSERT_TRUE(Api::ApplyMeshBoolean(*m_whiteBox, *third, AZ::Transform::CreateTranslation(AZ::Vector3(0, 0.5f, 0)), Api::BooleanOperation::Union));
++        size_t survivingSourceCorners = 0;
++        for (const auto face : Api::MeshFaceHandles(*m_whiteBox))
++        {
++            const auto id = Api::FaceSurfaceId(*m_whiteBox, face);
++            if (AZStd::find(sourceIds.begin(), sourceIds.end(), id) == sourceIds.end()) { continue; }
++            EXPECT_NE(FindSurfaceMaterialSlot(chain.m_bindings, id), 0);
++            for (const auto corner : Api::FaceHalfedgeHandles(*m_whiteBox, face))
++            {
++                const auto p = Api::VertexPosition(*m_whiteBox, Api::HalfedgeVertexHandleAtTip(*m_whiteBox, corner));
++                const AZ::Vector2 expected(2 * (p.GetX() - 0.5f) + 3 * p.GetY() + 5 * p.GetZ() + 17,
++                    7 * (p.GetX() - 0.5f) + 11 * p.GetY() + 13 * p.GetZ() + 29);
++                EXPECT_EQ(Api::HalfedgeUV(*m_whiteBox, corner), expected);
++                ++survivingSourceCorners;
++            }
++        }
++        EXPECT_GT(survivingSourceCorners, 0);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, DuplicateSurfaceBindingsFailWithoutPublishingAnyPartialOutput)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CloneMesh(*m_whiteBox);
++        const auto id = Api::FaceSurfaceId(*m_whiteBox, Api::MeshFaceHandles(*m_whiteBox).front());
++        SurfaceMaterialMerge output;
++        output.m_bindings.push_back({AZ::Uuid::CreateRandom(), 33});
++        const auto before = output.m_bindings;
++        AZStd::string error;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {{id, 0}, {id, 1}}, {}, {}, *source, {}, {}, {}, true, output, error));
++        EXPECT_EQ(output.m_bindings, before);
++    }
++
++    TEST_F(EditorWhiteBoxComponentTestFixture, ManualUVGuardRejectsVoxelGeometryBeforeMutation)
++    {
++        auto* mesh = m_whiteBoxComponent->GetWhiteBoxMesh();
++        auto polygon = Api::MeshPolygonHandles(*mesh).front();
++        ASSERT_TRUE(m_whiteBoxComponent->ApplyPolygonUVTransform({polygon}, AZ::Vector2(2, 2), AZ::Vector2(3, 5), 0));
++        Api::WhiteBoxMeshStream before, after;
++        ASSERT_TRUE(Api::WriteMesh(*mesh, before));
++        AZ_TEST_START_TRACE_SUPPRESSION;
++        m_whiteBoxComponent->SetVoxelCell(AZ::Vector3(5, 5, 5), true);
++        AZ_TEST_STOP_TRACE_SUPPRESSION(1);
++        ASSERT_TRUE(Api::WriteMesh(*mesh, after));
++        EXPECT_EQ(before, after);
++    }
++
++    TEST_F(EditorWhiteBoxComponentTestFixture, NativeMaterialAssignmentRoundtripKeepsAssetsPropertiesAndUVReferences)
++    {
++        AZ::SerializeContext* context = nullptr;
++        AZ::ComponentApplicationBus::BroadcastResult(context, &AZ::ComponentApplicationRequests::GetSerializeContext);
++        ASSERT_NE(context, nullptr);
++        if (!context->FindClassData(azrtti_typeid<AZ::Render::MaterialAssignment>()))
++        {
++            AZ::Render::MaterialAssignment::Reflect(context);
++        }
++        AZ::Render::MaterialAssignmentMap materials;
++        const auto key = AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(12);
++        const AZ::Data::AssetId assetId(AZ::Uuid::CreateRandom(), 47);
++        materials[key] = AZ::Render::MaterialAssignment(assetId);
++        materials[key].m_propertyOverrides[AZ::Name("roughness.factor")] = 0.875f;
++        materials[key].m_matModUvOverrides[AZ::RHI::ShaderSemantic("UV", 0)] = AZ::Name("UV0");
++        auto sourceMesh = Api::CreateWhiteBoxMesh();
++        Api::InitializeAsUnitCube(*sourceMesh);
++        SurfaceMaterialBindings sourceBindings;
++        ASSERT_TRUE(AssignPolygonMaterial(*sourceMesh, Api::MeshPolygonHandles(*sourceMesh), 12, sourceBindings));
++        SurfaceMaterialMerge merged;
++        AZStd::string error;
++        ASSERT_TRUE(MergeSurfaceMaterials(*m_whiteBoxComponent->GetWhiteBoxMesh(), {}, {}, {},
++            *sourceMesh, sourceBindings, materials, {}, true, merged, error));
++        const auto importedSlot = FindSurfaceMaterialSlot(merged.m_bindings,
++            Api::FaceSurfaceId(*sourceMesh, Api::MeshFaceHandles(*sourceMesh).front()));
++        const auto importedKey = AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(importedSlot);
++        EXPECT_EQ(merged.m_materials.at(importedKey).m_materialAsset.GetId(), assetId);
++        AZStd::vector<AZ::u8> bytes;
++        AZ::IO::ByteContainerStream<AZStd::vector<AZ::u8>> stream(&bytes);
++        ASSERT_TRUE(AZ::Utils::SaveObjectToStream(stream, AZ::DataStream::ST_BINARY, &merged.m_materials, context));
++        stream.Seek(0, AZ::IO::GenericStream::ST_SEEK_BEGIN);
++        auto* reopened = AZ::Utils::LoadObjectFromStream<AZ::Render::MaterialAssignmentMap>(stream, context);
++        ASSERT_NE(reopened, nullptr);
++        ASSERT_EQ(reopened->size(), 1);
++        EXPECT_EQ(reopened->at(importedKey).m_materialAsset.GetId(), assetId);
++        EXPECT_EQ(*AZStd::any_cast<float>(&reopened->at(importedKey).m_propertyOverrides.at(AZ::Name("roughness.factor"))), 0.875f);
++        EXPECT_EQ(reopened->at(importedKey).m_matModUvOverrides.at(AZ::RHI::ShaderSemantic("UV", 0)), AZ::Name("UV0"));
++        delete reopened;
++    }
++
++    TEST_F(EditorWhiteBoxComponentTestFixture, LegacyFaceSchemaDefaultsToSlotZeroWithoutChangingCornerUVs)
++    {
++        AZ::SerializeContext* context = nullptr;
++        AZ::ComponentApplicationBus::BroadcastResult(context, &AZ::ComponentApplicationRequests::GetSerializeContext);
++        ASSERT_NE(context, nullptr);
++        WhiteBox::WhiteBoxFace authored;
++        authored.m_v1 = {AZ::Vector3(0, 0, 0), AZ::Vector2(3, 7)};
++        authored.m_v2 = {AZ::Vector3(1, 0, 0), AZ::Vector2(9, 11)};
++        authored.m_v3 = {AZ::Vector3(0, 1, 0), AZ::Vector2(13, 17)};
++        authored.m_normal = AZ::Vector3::CreateAxisZ();
++        authored.m_surfaceId = AZ::Uuid::CreateRandom();
++        authored.m_materialSlot = 23;
++        AZ::SerializeContext::DataElementNode legacy;
++        ASSERT_TRUE(legacy.Convert<WhiteBox::WhiteBoxFace>(*context));
++        ASSERT_TRUE(legacy.SetData(*context, authored));
++        ASSERT_TRUE(legacy.RemoveElementByName(AZ_CRC_CE("SurfaceId")));
++        ASSERT_TRUE(legacy.RemoveElementByName(AZ_CRC_CE("MaterialSlot")));
++        legacy.SetVersion(1);
++        WhiteBox::WhiteBoxFace reopened;
++        ASSERT_TRUE(legacy.GetData(reopened));
++        EXPECT_EQ(reopened.m_materialSlot, 0);
++        EXPECT_TRUE(reopened.m_surfaceId.IsNull());
++        EXPECT_EQ(reopened.m_v1.m_uv, authored.m_v1.m_uv);
++        EXPECT_EQ(reopened.m_v2.m_uv, authored.m_v2.m_uv);
++        EXPECT_EQ(reopened.m_v3.m_uv, authored.m_v3.m_uv);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, InvalidMaterialPartitionPreservesInputOrderAndCornerData)
++    {
++        WhiteBox::WhiteBoxFaces faces(2);
++        faces[0].m_materialSlot = 7;
++        faces[0].m_v1.m_uv = AZ::Vector2(2, 3);
++        faces[1].m_materialSlot = AZStd::numeric_limits<uint32_t>::max();
++        faces[1].m_v1.m_uv = AZ::Vector2(5, 7);
++        EXPECT_TRUE(PartitionFacesByMaterial(faces).empty());
++        EXPECT_EQ(faces[0].m_materialSlot, 7);
++        EXPECT_EQ(faces[0].m_v1.m_uv, AZ::Vector2(2, 3));
++        EXPECT_EQ(faces[1].m_v1.m_uv, AZ::Vector2(5, 7));
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, OwnerGuardAlsoPreservesExplicitOverridesEqualToLegacyFallback)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CreateWhiteBoxMesh();
++        Api::InitializeAsUnitCube(*source);
++        const WhiteBox::WhiteBoxMaterial legacy;
++        AZ::Render::MaterialAssignmentMap materials;
++        auto& assignment = materials[AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(0)];
++        assignment.m_propertyOverrides[AZ::Name("baseColor.color")] = AZ::Color(legacy.m_tint);
++        assignment.m_propertyOverrides[AZ::Name("baseColor.useTexture")] = legacy.m_useTexture;
++        SurfaceMaterialMerge output;
++        AZStd::string error;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, legacy, *source, {}, materials, legacy, false, output, error));
++        EXPECT_NE(error.find("Material component"), AZStd::string::npos);
++        EXPECT_TRUE(output.m_bindings.empty());
++        EXPECT_TRUE(output.m_materials.empty());
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, DifferentLegacyTintAndTextureRequireOwnerAndImportExactFallback)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CreateWhiteBoxMesh();
++        Api::InitializeAsUnitCube(*source);
++        const WhiteBox::WhiteBoxMaterial targetLegacy;
++        auto sourceLegacy = targetLegacy;
++        sourceLegacy.m_tint = AZ::Vector3(0.2f, 0.4f, 0.8f);
++        sourceLegacy.m_useTexture = !targetLegacy.m_useTexture;
++        SurfaceMaterialMerge output;
++        output.m_bindings.push_back({AZ::Uuid::CreateRandom(), 41});
++        const auto before = output.m_bindings;
++        AZStd::string error;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, targetLegacy,
++            *source, {}, {}, sourceLegacy, false, output, error));
++        EXPECT_EQ(output.m_bindings, before);
++        EXPECT_TRUE(output.m_materials.empty());
++        EXPECT_NE(error.find("Material component"), AZStd::string::npos);
++        ASSERT_TRUE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, targetLegacy,
++            *source, {}, {}, sourceLegacy, true, output, error));
++        const auto slot = FindSurfaceMaterialSlot(output.m_bindings, Api::FaceSurfaceId(*source, Api::MeshFaceHandles(*source).front()));
++        ASSERT_NE(slot, 0);
++        ASSERT_EQ(output.m_materials.size(), 1);
++        const auto& imported = output.m_materials.at(AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(slot));
++        EXPECT_EQ(*AZStd::any_cast<AZ::Color>(&imported.m_propertyOverrides.at(AZ::Name("baseColor.color"))), AZ::Color(sourceLegacy.m_tint));
++        EXPECT_EQ(*AZStd::any_cast<bool>(&imported.m_propertyOverrides.at(AZ::Name("baseColor.useTexture"))), sourceLegacy.m_useTexture);
++        for (const auto face : Api::MeshFaceHandles(*source))
++        {
++            EXPECT_EQ(FindSurfaceMaterialSlot(output.m_bindings, Api::FaceSurfaceId(*source, face)), slot);
++        }
++        auto inherited = Api::CloneMesh(*m_whiteBox);
++        output.m_bindings = before;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, {}, targetLegacy,
++            *inherited, {}, {}, sourceLegacy, true, output, error));
++        EXPECT_EQ(output.m_bindings, before);
++        EXPECT_NE(error.find("incompatible"), AZStd::string::npos);
++    }
++
++    TEST_F(WhiteBoxSurfaceMaterialTestFixture, SharedUUIDAssetOrUVOverrideConflictNeverReplacesCandidate)
++    {
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto source = Api::CloneMesh(*m_whiteBox);
++        const auto key = AZ::Render::MaterialAssignmentId::CreateFromStableIdOnly(0);
++        AZ::Render::MaterialAssignmentMap targetMaterials, sourceMaterials;
++        targetMaterials[key] = AZ::Render::MaterialAssignment(AZ::Data::AssetId(AZ::Uuid::CreateRandom(), 7));
++        sourceMaterials[key] = AZ::Render::MaterialAssignment(AZ::Data::AssetId(AZ::Uuid::CreateRandom(), 7));
++        SurfaceMaterialMerge output;
++        output.m_bindings.push_back({AZ::Uuid::CreateRandom(), 41});
++        output.m_materials = targetMaterials;
++        const auto before = output.m_bindings;
++        AZStd::string error;
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, targetMaterials, {},
++            *source, {}, sourceMaterials, {}, true, output, error));
++        EXPECT_EQ(output.m_bindings, before);
++        EXPECT_TRUE(MaterialAssignmentsEquivalent(output.m_materials, targetMaterials));
++        EXPECT_NE(error.find("incompatible"), AZStd::string::npos);
++        sourceMaterials = targetMaterials;
++        sourceMaterials[key].m_matModUvOverrides[AZ::RHI::ShaderSemantic("UV", 0)] = AZ::Name("UV1");
++        EXPECT_FALSE(MergeSurfaceMaterials(*m_whiteBox, {}, targetMaterials, {},
++            *source, {}, sourceMaterials, {}, true, output, error));
++        EXPECT_EQ(output.m_bindings, before);
++        EXPECT_TRUE(MaterialAssignmentsEquivalent(output.m_materials, targetMaterials));
++        EXPECT_NE(error.find("incompatible"), AZStd::string::npos);
++    }
++}

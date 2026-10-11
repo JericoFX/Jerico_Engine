@@ -1,0 +1,64 @@
+{
+  "status": "PREPARATION ONLY; NO NATIVE",
+  "sourceInputs": 23385,
+  "previousSourceInputs": 23373,
+  "unchangedPreviousInputs": 23372,
+  "authorizedSourceDeltas": [
+    {
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+        "bytes": 13255,
+        "sha256": "3FE2DA8FC5D468FFDCC14090AD2D2FB7EC0B44A328059AB47D33AD6E4E723064",
+        "role": "invalid-only emitted-bytes oracle correction"
+      },
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+        "bytes": 11542,
+        "sha256": "A09161480B2D8C90C1B9DA96A50DE1F3909C09CD7D6EA0554556212C95851C3A",
+        "role": "one corrected consumer DXIL API oracle; no producer/package changes"
+      }
+    }
+  ],
+  "additionalInputs": 12,
+  "cases": 18,
+  "scopeCounts": {
+    "PRIVATE-OVERLAY": 1,
+    "FUNCTION-GUARD": 1,
+    "PRODUCER": 16
+  },
+  "caseArgvAndGuardsEqualAfterNaming": true,
+  "streamSHA256CallCount": 6,
+  "ASTerrors": 0,
+  "fixturesCreated": 0,
+  "junctionsCreated": 0,
+  "attemptExists": false,
+  "historicalWitnesses": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment-rev2.json",
+      "bytes": 41996,
+      "sha256": "D0AF36852D02984ED2F645ADDD29395923768DBA8B8838A1A5DD3F88B6FC8D7C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegativesRev2.ps1",
+      "bytes": 9800,
+      "sha256": "ECBF9321FFCCE2BCEC73DBD60F9C0916AD235969BEBAE381BCAC107ADFAF845F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-review-freeze-rev2.json",
+      "bytes": 5075,
+      "sha256": "BCE0DD5EC6594D8B731D80C98D17C064A769C590B087E714695D777D83312775"
+    }
+  ],
+  "driver": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\RunDxcNegativesRev3.ps1",
+    "bytes": 10011,
+    "sha256": "405BC4EB1ECD22152AE8D78CF402116CA50F1D3E65976262EF7AF7047F8C0601"
+  },
+  "assignment": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\negative-assignment-rev3.json",
+    "bytes": 42038,
+    "sha256": "63B815D3BA3E87586B0C1194ABF57620EB6076D55124DEF0F9F680A80D2B1DB3"
+  },
+  "nativeExecuted": false,
+  "acceptance": false
+}

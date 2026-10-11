@@ -1,0 +1,32 @@
+{
+  "actualNativeResults": {
+    "archiveAudit": {
+      "nativeExit": 0,
+      "historicalElapsedSeconds": 0.4777378,
+      "currentNativeExecuted": false,
+      "evidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-validation/consumer-attempt1/archive-audit.json",
+      "reusedVerifiedEvidence": true
+    },
+    "extraction": {
+      "nativeExit": 0,
+      "historicalElapsedSeconds": 0.4783017,
+      "currentNativeExecuted": false,
+      "scope": "Existing actual package read-only; all 15 members rehashed before/after",
+      "reusedVerifiedEvidence": true
+    },
+    "configure": {
+      "nativeExit": 0,
+      "elapsedSeconds": 6.1707001
+    },
+    "build": {
+      "nativeExit": 0,
+      "elapsedSeconds": 4.2150851
+    },
+    "ctest": {
+      "nativeExit": 8,
+      "elapsedSeconds": 0.1028621
+    }
+  },
+  "message": "Actual CTest failure/error/skipped/duplicate case",
+  "scriptStack": "at <ScriptBlock>, F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\RunDxcConsumerDiagnosticParentRev3b.ps1: line 165"
+}

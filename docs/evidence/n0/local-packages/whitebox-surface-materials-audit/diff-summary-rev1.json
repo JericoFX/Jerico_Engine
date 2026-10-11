@@ -1,0 +1,152 @@
+[
+  {
+    "path": "Gems/WhiteBox/Code/whitebox_editor_supported_files.cmake",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake",
+    "added": 1,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Include/WhiteBox/EditorWhiteBoxComponentBus.h",
+    "added": 3,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+    "added": 209,
+    "removed": 14,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.h",
+    "added": 23,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/WhiteBoxComponent.cpp",
+    "added": 10,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/WhiteBoxComponent.h",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp",
+    "added": 51,
+    "removed": 3,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.h",
+    "added": 33,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.cpp",
+    "added": 96,
+    "removed": 17,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Rendering/Atom/WhiteBoxAtomRenderMesh.h",
+    "added": 15,
+    "removed": 2,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.cpp",
+    "added": 13,
+    "removed": 2,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxComponentModeCommon.h",
+    "added": 6,
+    "removed": 1,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxDefaultMode.cpp",
+    "added": 3,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxEdgeRestoreMode.cpp",
+    "added": 2,
+    "removed": 2,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/SubComponentModes/EditorWhiteBoxTransformMode.cpp",
+    "added": 7,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxDrawShapeMode.cpp",
+    "added": 3,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeScaleModifier.cpp",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxEdgeTranslationModifier.cpp",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonScaleModifier.cpp",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxPolygonTranslationModifier.cpp",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Viewport/WhiteBoxVertexTranslationModifier.cpp",
+    "added": 2,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.cpp",
+    "added": 267,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Editor/JEWhiteBoxSurfaceMaterials.h",
+    "added": 38,
+    "removed": 0,
+    "reconstruction": true
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Tests/JEWhiteBoxSurfaceMaterialsTest.cpp",
+    "added": 444,
+    "removed": 0,
+    "reconstruction": true
+  }
+]

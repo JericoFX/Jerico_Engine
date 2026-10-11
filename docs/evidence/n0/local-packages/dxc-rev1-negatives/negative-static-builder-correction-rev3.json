@@ -1,0 +1,16 @@
+{
+  "assignmentChanged": false,
+  "fixturesCreated": 0,
+  "driverChanged": false,
+  "beforeSHA": "4A0769771428152D3A8A88187D92E8BD6EF26BDC80775A5C38FB8576484AEDA0",
+  "afterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\BuildNegativeReviewRev3.ps1",
+  "cause": "Review builder inherited a nonexistent creator filename from revision2 template; ParseFile returned FileReadError",
+  "afterSHA": "8499F25EBB5AC7510DA4AA952C854A5794386F658DE818BB9CA8A9D93A17FBD2",
+  "nativeExecuted": false,
+  "replacement": {
+    "after": "PrepareNegativeFinalRev3.ps1",
+    "before": "PrepareNegativeAssignmentRev3.ps1"
+  },
+  "status": "STATIC PREPARATION ERROR CORRECTED; NO NATIVE",
+  "beforePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\BuildNegativeReviewRev3.before-static-fix.ps1"
+}

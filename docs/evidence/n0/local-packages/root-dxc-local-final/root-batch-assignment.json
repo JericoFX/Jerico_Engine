@@ -1,0 +1,215 @@
+{
+  "purpose": "Original offline Root61 after accepted DXC and parent-reviewed WhiteBox materials/UV; identical native argv, current freeze. Editor/runtime pending.",
+  "sourceFreeze": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-dxc-local-final/source-freeze-root-batch.json",
+  "sourceFreezeSHA256": "AF617F8664743B42A80CC17A31475998C2F1A3819BE430C0FD073A4F7696EAA3",
+  "sourceCount": 15674,
+  "arguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-DLY_PACKAGE_SERVER_URLS:STRING=",
+    "-DLY_3RDPARTY_PATH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps",
+    "-DLY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache",
+    "-DLY_PACKAGE_VALIDATE_CONTENTS=ON",
+    "-DLY_PACKAGE_VALIDATE_PACKAGE=ON",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+    "-DJE_PYTHON_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3",
+    "-DJE_PYTHON_WHEELHOUSE:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/python-wheelhouse",
+    "-DCMAKE_MESSAGE_LOG_LEVEL:STRING=VERBOSE",
+    "-DFETCHCONTENT_SOURCE_DIR_MIMALLOC:PATH=F:/JericoEngine/Dependencies/mimalloc-3.5.2",
+    "-DFETCHCONTENT_SOURCE_DIR_RAPIDJSON:PATH=F:/JericoEngine/Dependencies/rapidjson-24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+    "-DLY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "-DFETCHCONTENT_SOURCE_DIR_GOOGLEBENCHMARK:PATH=F:/JericoEngine/Dependencies/googlebenchmark-1.7.0",
+    "-DFETCHCONTENT_SOURCE_DIR_SQLITE:PATH=F:/JericoEngine/Dependencies/sqlite-amalgamation-3530400",
+    "-DFETCHCONTENT_SOURCE_DIR_MANIFOLD:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/manifold-3.5.1-root",
+    "-DFETCHCONTENT_SOURCE_DIR_CLIPPER2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_Clipper2:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+    "-DFETCHCONTENT_SOURCE_DIR_OPENMESH:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/OpenMesh-11.0.0-root",
+    "-DMANIFOLD_CROSS_SECTION:BOOL=ON",
+    "-DMANIFOLD_CROSS_SECTION_BACKEND:STRING=clipper2",
+    "-DMANIFOLD_USE_BUILTIN_CLIPPER2:BOOL=ON",
+    "-DMANIFOLD_DOWNLOADS:BOOL=OFF",
+    "-DMANIFOLD_PAR:BOOL=OFF",
+    "-DMANIFOLD_TEST:BOOL=OFF",
+    "-DMANIFOLD_CBIND:BOOL=OFF",
+    "-DMANIFOLD_PYBIND:BOOL=OFF",
+    "-DMANIFOLD_FUZZ:BOOL=OFF",
+    "-DTRACY_ENABLE:BOOL=OFF",
+    "-DASSIMP_ENABLE:BOOL=OFF",
+    "-DMANIFOLD_NO_IOSTREAM:BOOL=OFF",
+    "-DCLIPPER2_UTILS:BOOL=OFF",
+    "-DCLIPPER2_EXAMPLES:BOOL=OFF",
+    "-DCLIPPER2_TESTS:BOOL=OFF",
+    "-DCLIPPER2_USINGZ:STRING=OFF",
+    "-DUSE_EXTERNAL_GBENCHMARK:BOOL=OFF",
+    "-DOPENMESH_BENCHMARK_DIR:PATH=",
+    "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=F:/JericoEngine/Dependencies/googletest-v1.18.0",
+    "-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+    "-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2",
+    "-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2",
+    "-DFETCHCONTENT_SOURCE_DIR_XXHASH:PATH=F:/JericoEngine/Dependencies/xxhash-0.8.3",
+    "-DFETCHCONTENT_SOURCE_DIR_D3D12MEMORYALLOCATOR:PATH=F:/JericoEngine/Dependencies/D3D12MemoryAllocator-3.2.0",
+    "-DFETCHCONTENT_SOURCE_DIR_MESHOPTIMIZER:PATH=F:/JericoEngine/Dependencies/meshoptimizer-1.2",
+    "-DFETCHCONTENT_SOURCE_DIR_SQUISH-CCR:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/squish-ccr-batch-root",
+    "-DFETCHCONTENT_SOURCE_DIR_SSE2NEON:PATH=F:/JericoEngine/Dependencies/sse2neon-1.9.1",
+    "-DFETCHCONTENT_SOURCE_DIR_MIKKTSPACE:PATH=F:/JericoEngine/Dependencies/mikktspace-3e895b49d05ea07e4c2133156cfa94369e19e409",
+    "-DFETCHCONTENT_SOURCE_DIR_OGG:PATH=F:/JericoEngine/Dependencies/ogg-1.3.6",
+    "-DFETCHCONTENT_SOURCE_DIR_VORBIS:PATH=F:/JericoEngine/Dependencies/vorbis-1.3.7",
+    "-DFETCHCONTENT_SOURCE_DIR_MINIAUDIO:PATH=F:/JericoEngine/Dependencies/miniaudio-0.11.22",
+    "-DFETCHCONTENT_SOURCE_DIR_V-HACD:PATH=F:/JericoEngine/Dependencies/v-hacd-4.1.0",
+    "-DFETCHCONTENT_SOURCE_DIR_RECASTNAVIGATION:PATH=F:/JericoEngine/Dependencies/RecastNavigation-1.6.0",
+    "-DFETCHCONTENT_SOURCE_DIR_ASSIMP:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/source-work/assimp-6.0.4-batch-root-rev2",
+    "-DFETCHCONTENT_SOURCE_DIR_TINYUSDZ_REPO:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/_deps/tinyusdz_repo-src"
+  ],
+  "previousRoot414": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-googletest-mcpp-splash-assignment.json",
+  "buildOwner": "/root/validation_luna",
+  "nativeEditorStatus": "NOT COMPILED / NOT EXECUTED",
+  "privateSourceCopyAssignment": "build/n0-validation/local-packages/whitebox-root-source-work-audit/whitebox-root-source-assignment.json",
+  "privateSourceCopyAssignmentSHA256": "6328D7D3E341DB2BBB083283F5342F688D37206C6474939DEC690A6541D7BD1D",
+  "allowedPrivateCopyWrites": [
+    "Manifold/src/csg_tree.h",
+    "Manifold/src/edge_op.cpp",
+    "Clipper2/CPP/Clipper2Lib/include/clipper2/clipper.version.h"
+  ],
+  "googletestFreeze": "build/n0-validation/local-packages/googletest-audit/source-freeze-googletest-current.json",
+  "googletestFreezeSHA256": "9238D2FFB4B465D196167504CBDD9AB7134F6167D6AD2374C047C1A9F6571FDB",
+  "mcppFreeze": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/mcpp-audit/source-freeze-root-current17.json",
+  "mcppFreezeSHA256": "99A6E519ABB8E7E39C7DE401DBAD1E86D57C07A55A83C656646ABB8177A45361",
+  "approvedPriorRootDeltas": [
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "beforeSHA256": "c3ba4b0f24d4c11a3e479bab869ca90d390e350f01dff2e7a78f489b610685b2",
+      "afterSHA256": "d6c7fab5bc7f22e5fb25d6856bafb1e2ca074f1fe859c94bd91338e687825b35"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/README.md",
+      "beforeSHA256": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61",
+      "afterSHA256": "98dc785b63af86d3ac6da454680c054dd554a1e274298f6b2284143e75b07ec6"
+    }
+  ],
+  "packageCacheFileCount": 32,
+  "newAcceptedPackages": [
+    {
+      "name": "expat-2.4.2-je-rev1-windows",
+      "sha256": "c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925"
+    },
+    {
+      "name": "tiff-4.2.0.15-je-rev1-windows",
+      "sha256": "d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2"
+    },
+    {
+      "name": "png-1.6.37-je-rev1-windows",
+      "sha256": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4"
+    },
+    {
+      "name": "d3dx12-headers-je-rev1-windows",
+      "sha256": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73"
+    },
+    {
+      "name": "OpenEXR-3.1.3-je-rev1-windows",
+      "sha256": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0",
+      "bytes": 6880112
+    }
+  ],
+  "pythonPolicy": "External build/codegen tool only; Engine/Game/Editor link/deploy/runtime absence still unverified",
+  "preparationStatus": "FINAL CANDIDATE FOR PARENT REVIEW; NOT DISPATCHED OR EXECUTED",
+  "baselineAssignmentSHA256": "DF6EC8FA0BE69BD19B0D76B378FF429D090CFDA110788525E3C6CAE85068D36C",
+  "baselineFreezeSHA256": "CAD89C5B29770A34F165EC51D1D9A5DB2577EB867A0C636BBB57314976417DE6",
+  "antlrSourceFreezeSHA256": "7117E9A85C5D5EE2E4CA7AA9A5F7CA13BD1C72A3100EA30C039BFB1714E18092",
+  "antlrSourceRoot": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+  "spirvcrossRuntimeMoveFreezeSHA256": "7DDDDD35D3DDFFCAE48478713C3FF72F397FF663E6691EEC0A78B294E89FA852",
+  "openExrStatus": "Parent accepted focal producer, native consumer Release/Debug and 10 guards; original engine integration pending",
+  "priorApproved765FreezeSHA256": "B665B0E78D833396D0D47615060F05ADFA489BEF4827408A1E161975A1B8F294",
+  "authorizedCurrentDeltas": [
+    {
+      "origin": "approved-root765",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "beforeBytes": 6787,
+      "beforeSHA256": "d6c7fab5bc7f22e5fb25d6856bafb1e2ca074f1fe859c94bd91338e687825b35",
+      "afterBytes": 6788,
+      "afterSHA256": "2d8c84c9bb2c8eff7ecd5a6df3aa5b22bc67ee2cc761e3e696319a6a3da346e5",
+      "reason": "Parent accepted OpenEXR catalogue entry"
+    },
+    {
+      "origin": "openexr-v2-1182",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\README.md",
+      "beforeBytes": 8472,
+      "beforeSHA256": "52CC81F75C4C916441FE55ECF65F30308E5535AB0F4EEAE82E85422C69A17AA1",
+      "afterBytes": 9501,
+      "afterSHA256": "3a2a380acfff140b67396e93e6254e4e4ef00063a4984f8aab22e813d9a45a6f",
+      "reason": "Parent status-only documentation update after OpenEXR freeze"
+    }
+  ],
+  "openExrProvenance": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-freeze-openexr-candidate-v2.json",
+      "sha256": "7745DC711AC2F20AE812108434D5F338B7FCD88E0A3793496B8DB8BC664B8163"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\validation-arguments-v2.json",
+      "sha256": "0D219066133D2A20EE8756ACEC2F1D06DF0EB1E2C34084F950D07D0943345880"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\validation-summary.json",
+      "sha256": "92E569A6FC0786BEEE9DFC95C572938CF2CBCB8EDC875F92798A8F885BE28170"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-openexr-copy-manifest.json",
+      "sha256": "66C081C2793F02848E41832FDB2220BA53EBBAA42E89F3C3D1C25BD9BB13B483"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-parent-integration.json",
+      "sha256": "543221115CEBD03E77EFD8BFC731D9733B7D680B2AF1BE75D7D44DB129F21713"
+    }
+  ],
+  "previousRoot1953FreezeSHA256": "36CED3BAE28693DCAD99F89356B5ED2C72657C5B6CFE1A56DA6AE0A0A83D532E",
+  "jsoncppSourceRoot": "F:/JericoEngine/Dependencies/jsoncpp-1.6.2",
+  "jsoncppArchiveSHA256": "c40e5a2583df633b904525305bda40b622d9971fee1ece7ce48ca723a4907d36",
+  "currentWhitespaceDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\FindImath.cmake",
+      "beforeBytes": 1724,
+      "beforeSHA256": "0837b72ef5853db21e7543a7ca40bd00b428b7f36b9fd7143921b7685016dd9f",
+      "afterBytes": 1718,
+      "afterSHA256": "8d6943660b969394da20ce1467f7a0479b5da0eb1679b3db99d882c974637328",
+      "reason": "Parent removed trailing spaces only; normalization receipt pinned"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\FindOpenEXR.cmake",
+      "beforeBytes": 3600,
+      "beforeSHA256": "8574ecc7d2a4381cb2152939181c9a1aafeafcb76862aedf0dfd81e94d79a899",
+      "afterBytes": 3595,
+      "afterSHA256": "767b82230223b555ad7458b20fccf0a0b29ac1adddb092096df01b07c1ee0f2c",
+      "reason": "Parent removed trailing spaces only; normalization receipt pinned"
+    }
+  ],
+  "previousRoot2203FreezeSHA256": "2C8496737E9D90609E47761EFDC8C7A6AF4D30BEE7BBC7BA28CDF857120526B8",
+  "cli11SourceRoot": "F:/JericoEngine/Dependencies/cli11-2.6.2",
+  "cli11ArchiveSHA256": "c6ea6b2e5608b3ea8617999bd5f47420c71b2ebdb8dc4767c1034d1da5785711",
+  "pythonCompositionReceipt": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-product-composition-audit/parent-review-rev2.json",
+  "currentCompositionDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "beforeBytes": 3930,
+      "beforeSHA256": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+      "afterBytes": 3827,
+      "afterSHA256": "0bf845bedef7f84dcf51f5ec986fe0b7ad6fefccb7b4e823c260d062240618a3",
+      "reason": "Parent-reviewed exclusion of Python Gem product composition; six-file receipt pinned"
+    }
+  ],
+  "priorRoot2532FreezeSHA256": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292",
+  "batchInputReviewSHA256": "F62224334651424208108740000A926ADBBAD6FBA33AFE5E2134DE8B3F0DC950",
+  "multiplayerCompositionSHA256": "67ADB8C81369FB54C5D3B5C2915A9315C075B31083617669EA7F85F2235FC580",
+  "nativeSMCFreezeSHA256": "00142D9F855B8A826AA30236FA713D80F24A3F4AECDD910E94BC34297FE263A7",
+  "nativeSMCParentReviewSHA256": "FEB02D4373165B22579474631D15B43005DDA2AAA7407D8726771F44E31799E2",
+  "batchPrivateBaselineReceipts": [
+    "squish-ccr",
+    "assimp",
+    "tinyusdz_repo"
+  ]
+}

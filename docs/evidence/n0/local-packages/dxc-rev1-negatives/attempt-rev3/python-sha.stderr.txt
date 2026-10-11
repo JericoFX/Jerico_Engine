@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: audited existing external PYTHON SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:48 (JE_python_verify_file)
+
+

@@ -1,0 +1,45 @@
+--- RunDxcNegatives.ps1 (historical rev1)
++++ RunDxcNegativesRev2.ps1 (prepared only)
+@@ -3,16 +3,16 @@
+ Set-StrictMode -Version Latest
+ if ($PSVersionTable.PSEdition -ne 'Core') { throw 'PowerShell Core required' }
+ $root = [IO.Path]::GetFullPath($PSScriptRoot)
++$attempt = Join-Path $root 'attempt-rev2'
+-$attempt = Join-Path $root 'attempt1'
+ if ($root -ne 'F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-negatives') { throw 'Assigned output root differs' }
+ if (Test-Path -LiteralPath $attempt) { throw 'Attempt exists; retain it' }
++$assignmentPath = Join-Path $root 'negative-assignment-rev2.json'
++if ((Get-FileHash -LiteralPath $assignmentPath).Hash -ne 'D0AF36852D02984ED2F645ADDD29395923768DBA8B8838A1A5DD3F88B6FC8D7C') { throw 'Negative assignment changed' }
+-$assignmentPath = Join-Path $root 'negative-assignment.json'
+-if ((Get-FileHash -LiteralPath $assignmentPath).Hash -ne '11B08617C06A45BD3DBAD2839492C26DE819F205E18CD1D3B6023EE04B331DFC') { throw 'Negative assignment changed' }
+ $assignment = Get-Content -LiteralPath $assignmentPath -Raw | ConvertFrom-Json
+ $freezePath = $assignment.sourceFreeze.path
+ if ((Get-FileHash -LiteralPath $freezePath).Hash -ne $assignment.sourceFreeze.sha256) { throw 'Approved DXC freeze changed' }
+ $freeze = Get-Content -LiteralPath $freezePath -Raw | ConvertFrom-Json
++if ($freeze.files.Count -ne 23373 -or $assignment.cases.Count -ne 18) { throw 'Input/case counts differ' }
+-if ($freeze.files.Count -ne 23348 -or $assignment.cases.Count -ne 18) { throw 'Input/case counts differ' }
+ function Test-FrozenInputs {
+     $changed = @()
+     foreach ($file in $freeze.files) {
+@@ -50,9 +50,10 @@
+ try { $bytes = $encoding.GetBytes("`n# JE negative fixture only; never a package input.`n"); $stream.Write($bytes,0,$bytes.Length) } finally { $stream.Dispose() }
+ # Only a private empty target is exposed through the junction. No snapshot is a target.
+ $junction = Join-Path $attempt 'fixtures/archive-junction'
++$junctionTarget = [IO.Path]::GetFullPath((Join-Path $attempt 'fixtures/reparse-target'))
+-$junctionTarget = Join-Path $attempt 'fixtures/reparse-target'
+ New-Item -ItemType Junction -Path $junction -Value $junctionTarget | Out-Null
++[IO.File]::WriteAllText($assignment.helperFixture.path,$assignment.helperFixture.content,$encoding)
++$fixtureFiles = @((Join-Path $attempt 'fixtures/existing-output/retain.txt'),$changedArchive,$wrongOverlay,$assignment.helperFixture.path)
+-$fixtureFiles = @((Join-Path $attempt 'fixtures/existing-output/retain.txt'),$changedArchive,$wrongOverlay)
+ $fixtures = @(foreach ($path in $fixtureFiles) { [ordered]@{ path = $path; bytes = (Get-Item -LiteralPath $path).Length; sha256 = (Get-FileHash -LiteralPath $path).Hash } })
+ Write-Json (Join-Path $attempt 'fixture-manifest.json') $fixtures
+ function Test-Fixtures {
+@@ -106,7 +107,7 @@
+             }
+             $fixtureChanges = Test-Fixtures
+             $pass = $nativeExit -ne 0 -and $expected -and $absent -and $fixtureChanges.Count -eq 0
++            $result = [ordered]@{ label = $case.label; scope = $case.scope; secondaryMissingPath = $case.secondaryMissingPath; nativeExit = $nativeExit; elapsedSeconds = $watch.Elapsed.TotalSeconds; expectedError = $case.expectedError; observedExpectedError = $expected; outputCondition = $absent; fixtureChanges = @($fixtureChanges); status = if ($pass) { 'PASS REJECTION' } else { 'FAIL' } }
+-            $result = [ordered]@{ label = $case.label; nativeExit = $nativeExit; elapsedSeconds = $watch.Elapsed.TotalSeconds; expectedError = $case.expectedError; observedExpectedError = $expected; outputCondition = $absent; fixtureChanges = @($fixtureChanges); status = if ($pass) { 'PASS REJECTION' } else { 'FAIL' } }
+             Write-Json "$prefix.result.json" $result
+             $results += $result
+             Write-Host "$($case.label): exit=$nativeExit expected=$expected output=$absent"

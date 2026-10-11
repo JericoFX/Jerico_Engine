@@ -1,0 +1,23 @@
+Start testing: Oct 11 04:55 Hora estándar de Montevideo
+----------------------------------------------------------
+3/4 Testing: JE.LocalPackages.DXC.invalid
+3/4 Test: JE.LocalPackages.DXC.invalid
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-consumer-rev3/Release/JEDirectXShaderCompilerDxcConsumer.exe" "invalid" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-extracted-rev1/DirectXShaderCompilerDxc/bin" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-consumer-rev3/invalid" "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-consumer-rev3
+"JE.LocalPackages.DXC.invalid" start time: Oct 11 04:55 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE FAIL: malformed shader rejected with diagnostics and no object
+OBSERVED DXIL API version: 1.9
+INVALID OBSERVED: status=0x80004005 errorsHr=0x00000000 errorsLength=502 hasObject=1
+INVALID OBJECT: hr=0x00000000 pointer=000001E856A83968 bytes=0
+INVALID RESULT: hr=0x00000000 pointer=000001E856A83968 bytes=0
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Failed.
+"JE.LocalPackages.DXC.invalid" end time: Oct 11 04:55 Hora estándar de Montevideo
+"JE.LocalPackages.DXC.invalid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 11 04:55 Hora estándar de Montevideo

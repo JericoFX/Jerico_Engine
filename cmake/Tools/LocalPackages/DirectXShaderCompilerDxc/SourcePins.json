@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "dxc",
+      "repository": "o3de/DirectXShaderCompiler",
+      "commit": "1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "url": "https://codeload.github.com/o3de/DirectXShaderCompiler/tar.gz/1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "sha256": "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42",
+      "archiveRelativePath": "dxc/dxc-1cc0ab76dafe08a4144e419e619a8951a3d219db.tar.gz",
+      "archiveRoot": "DirectXShaderCompiler-1cc0ab76dafe08a4144e419e619a8951a3d219db",
+      "cmakeSHA256": "30dc8842ba82a40b0d1a835d7ee61c3e528acbd62a84c7e83bd26417f100097f"
+    },
+    {
+      "id": "spirv-headers",
+      "repository": "KhronosGroup/SPIRV-Headers",
+      "commit": "aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+      "sha256": "1bf0568bad1f9e30fce8d3199e54ae7ade1c16dbe913b5afd9b499149a9bb9a5",
+      "archiveRelativePath": "spirv-headers/spirv-headers-aa6cef192b8e693916eb713e7a9ccadf06062ceb.tar.gz",
+      "archiveRoot": "SPIRV-Headers-aa6cef192b8e693916eb713e7a9ccadf06062ceb",
+      "cmakeSHA256": "77b5686b30ce4c2642b77ff0bfa82142efa139b9ab58f990e54693b6f508e331"
+    },
+    {
+      "id": "spirv-tools",
+      "repository": "KhronosGroup/SPIRV-Tools",
+      "commit": "a62abcb402009b9ca5975e6167c09f237f630e0e",
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Tools/tar.gz/a62abcb402009b9ca5975e6167c09f237f630e0e",
+      "sha256": "7f6561171be2f314a26cb2a686d653050ee318655a89970d41ab3bef3269a4db",
+      "archiveRelativePath": "spirv-tools/spirv-tools-a62abcb402009b9ca5975e6167c09f237f630e0e.tar.gz",
+      "archiveRoot": "SPIRV-Tools-a62abcb402009b9ca5975e6167c09f237f630e0e",
+      "cmakeSHA256": "76fe3f3990c3c70acbd46911768e9943d5af0d23527ffb70a968e5682c29ba04"
+    }
+  ],
+  "privateProvenanceSHA256": "4a8716eb03a11408bb65cb3a15550193be6685eb0d7e8ee140f4e3aa50943266",
+  "sourceNoticeSHA256": "86cd3780fe9fcfb8d7d66543f1c42d45b43bbd14be21119e07366e2a77afeb74",
+  "sourceVersion": "1.8.2505.0",
+  "originalRecipeRef": "release-1.8.2505.1-o3de (branch)",
+  "originalPackageHashNotSourceHash": "224a34691a17234c2294202368d9756635f11d66ac9bc528f929d84cf4acac8e"
+}

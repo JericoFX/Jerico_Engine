@@ -1,0 +1,126 @@
+[
+  {
+    "name": "dxc.exe",
+    "sha256": "A5B49096AE694F6FFF33221580C7D7A2DC6E44D21F89544640D2D32786823FF0",
+    "fileVersion": "1.8.2505.0",
+    "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+    "nativeExit": 0,
+    "machine": "x64",
+    "subsystem": "Windows CUI",
+    "exportsParsed": 0,
+    "imports": [
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "KERNEL32.dll",
+      "MSVCP140.dll",
+      "ole32.dll",
+      "OLEAUT32.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll",
+      "VERSION.dll"
+    ],
+    "relevantImportNames": [
+      "MSVCP140.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ]
+  },
+  {
+    "name": "dxsc.exe",
+    "sha256": "E3B2193F4FAA97BE4EBD5E9A391A69BD7F0D2AA86B8B8887C82484D769575486",
+    "fileVersion": "1.8.2505.0",
+    "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+    "nativeExit": 0,
+    "machine": "x64",
+    "subsystem": "Windows CUI",
+    "exportsParsed": 0,
+    "imports": [
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "dxcompiler.dll",
+      "KERNEL32.dll",
+      "MSVCP140.dll",
+      "ole32.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ],
+    "relevantImportNames": [
+      "MSVCP140.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ]
+  },
+  {
+    "name": "dxcompiler.dll",
+    "sha256": "744A1E05C362A8614A0F96F315DE78C1A5DD562ED9634DCEC928FC05583B728D",
+    "fileVersion": "1.8.2505.0",
+    "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+    "nativeExit": 0,
+    "machine": "x64",
+    "subsystem": "Windows GUI",
+    "exportsParsed": 2,
+    "imports": [
+      "ADVAPI32.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "KERNEL32.dll",
+      "MSVCP140.dll",
+      "ole32.dll",
+      "OLEAUT32.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ],
+    "relevantImportNames": [
+      "MSVCP140.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ]
+  },
+  {
+    "name": "dxil.dll",
+    "sha256": "4DC3C25408D7BC058EAA9F106E0FCED51DEC788970AEB7F8A4B3B3AAD7B968C5",
+    "fileVersion": "1.8.2505.0",
+    "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db",
+    "nativeExit": 0,
+    "machine": "x64",
+    "subsystem": "Windows GUI",
+    "exportsParsed": 2,
+    "imports": [
+      "ADVAPI32.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "KERNEL32.dll",
+      "MSVCP140.dll",
+      "ole32.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ],
+    "relevantImportNames": [
+      "MSVCP140.dll",
+      "VCRUNTIME140_1.dll",
+      "VCRUNTIME140.dll"
+    ]
+  }
+]

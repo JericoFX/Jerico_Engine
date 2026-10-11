@@ -1,0 +1,360 @@
+{
+  "status": "READ-ONLY REUSE REVIEW",
+  "dispatch": {
+    "ownConfigureLaunch": "NOT_RUN: pre-existing attempt1 guard stopped driver before CMake",
+    "driverExit": 1,
+    "attemptEvidenceCreatedUtc": "2026-10-11T08:14:10.1810027Z"
+  },
+  "assignment": {
+    "sha256": "9cf710afc67cbff9bf635e5e901911108a17b233940fe6efbed7c083c48ba2f0",
+    "arguments": 61
+  },
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\source-freeze-root-batch.json",
+    "sha256": "af617f8664743b42a80cc17a31475998c2f1a3819be430c0fd073a4f7696eaa3",
+    "expectedSHA256": "AF617F8664743B42A80CC17A31475998C2F1A3819BE430C0FD073A4F7696EAA3",
+    "entryCount": 15674,
+    "mismatches": []
+  },
+  "recordedConfigure": {
+    "nativeExit": 1,
+    "elapsedSeconds": 29.346,
+    "cmakeVersion": "cmake version 4.3.4\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "cmakeSHA256": "1aa884bf1f4949327fffcc8ee4a97c2d684bdc1d0a64b71f01dc16321c7fbc64",
+    "recordedArgumentCount": 61,
+    "argumentsExactlyMatchAssignment": true,
+    "recordedFreezeSHA256": "af617f8664743b42a80cc17a31475998c2f1a3819be430c0fd073a4f7696eaa3",
+    "recordedAssignmentSHA256": "9cf710afc67cbff9bf635e5e901911108a17b233940fe6efbed7c083c48ba2f0",
+    "firstFatalPackage": "astc-encoder-3.2-rev2-windows",
+    "firstFatalSHA256": "17249bfa438afb34e21449865d9c9297471174ae0cea9b2f9def2ee206038295",
+    "firstFatalCMakeLocation": "cmake/3rdPartyPackages.cmake:331; Asset ImageProcessingAtom CMakeLists.txt:39"
+  },
+  "rehashedInputs": {
+    "cache": {
+      "declaredCount": 36,
+      "checkedCount": 36,
+      "mismatches": []
+    },
+    "wheelhouse": {
+      "declaredCount": 44,
+      "checkedCount": 44,
+      "mismatches": []
+    }
+  },
+  "postflight": {
+    "manifestCount": 41,
+    "unexpectedDeltaManifests": [],
+    "expectedDXCDeploymentDeltaCount": 16,
+    "expectedDXCDeploymentPaths": [
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.stamp",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\FindDirectXShaderCompilerDxc.cmake",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\JERequireLocalPath.cmake",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\NOTICE.txt",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\PackageInfo.json",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\README.md",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\SHA256SUMS",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\DirectXShaderCompilerDxc\\JERecipe.json",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\DirectXShaderCompilerDxc\\bin\\dxc.exe",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\DirectXShaderCompilerDxc\\bin\\dxcompiler.dll",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\DirectXShaderCompilerDxc\\bin\\dxil.dll",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\DirectXShaderCompilerDxc\\bin\\dxsc.exe",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\LICENSES\\SourceNotices.txt",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_APACHE2.TXT",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_MIT.TXT",
+      "changed-or-added:DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows\\LICENSES\\O3DE\\LICENSE.txt"
+    ]
+  },
+  "dxc": {
+    "archiveSHA256": "62fc6978933215440718d8d810ab5ecf20a36368a8592d12822f902ed0654782",
+    "archiveMatchesAcceptedAudit": true,
+    "archiveMemberCount": 15,
+    "sha256ManifestPayloadRecords": 14,
+    "sidecar": "62fc6978933215440718d8d810ab5ecf20a36368a8592d12822f902ed0654782 *DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+    "payloadComparedCount": 15,
+    "payloadMismatch": [],
+    "payloadFiles": [
+      {
+        "path": "DirectXShaderCompilerDxc/JERecipe.json",
+        "expectedBytes": 2772,
+        "expectedSHA256": "476dbfd812e1fe23860ba28784b2544cff50de54cb24c0c998ae89206ab0671a",
+        "extracted": {
+          "exists": true,
+          "bytes": 2772,
+          "sha256": "476dbfd812e1fe23860ba28784b2544cff50de54cb24c0c998ae89206ab0671a",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 2772,
+          "sha256": "476dbfd812e1fe23860ba28784b2544cff50de54cb24c0c998ae89206ab0671a",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "DirectXShaderCompilerDxc/bin/dxc.exe",
+        "expectedBytes": 1210368,
+        "expectedSHA256": "a5b49096ae694f6fff33221580c7d7a2dc6e44d21f89544640d2d32786823ff0",
+        "extracted": {
+          "exists": true,
+          "bytes": 1210368,
+          "sha256": "a5b49096ae694f6fff33221580c7d7a2dc6e44d21f89544640d2d32786823ff0",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1210368,
+          "sha256": "a5b49096ae694f6fff33221580c7d7a2dc6e44d21f89544640d2d32786823ff0",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "DirectXShaderCompilerDxc/bin/dxcompiler.dll",
+        "expectedBytes": 21216256,
+        "expectedSHA256": "744a1e05c362a8614a0f96f315de78c1a5dd562ed9634dcec928fc05583b728d",
+        "extracted": {
+          "exists": true,
+          "bytes": 21216256,
+          "sha256": "744a1e05c362a8614a0f96f315de78c1a5dd562ed9634dcec928fc05583b728d",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 21216256,
+          "sha256": "744a1e05c362a8614a0f96f315de78c1a5dd562ed9634dcec928fc05583b728d",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "DirectXShaderCompilerDxc/bin/dxil.dll",
+        "expectedBytes": 1746432,
+        "expectedSHA256": "4dc3c25408d7bc058eaa9f106e0fced51dec788970aeb7f8a4b3b3aad7b968c5",
+        "extracted": {
+          "exists": true,
+          "bytes": 1746432,
+          "sha256": "4dc3c25408d7bc058eaa9f106e0fced51dec788970aeb7f8a4b3b3aad7b968c5",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1746432,
+          "sha256": "4dc3c25408d7bc058eaa9f106e0fced51dec788970aeb7f8a4b3b3aad7b968c5",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "DirectXShaderCompilerDxc/bin/dxsc.exe",
+        "expectedBytes": 1000448,
+        "expectedSHA256": "e3b2193f4faa97be4ebd5e9a391a69bd7f0d2aa86b8b8887c82484d769575486",
+        "extracted": {
+          "exists": true,
+          "bytes": 1000448,
+          "sha256": "e3b2193f4faa97be4ebd5e9a391a69bd7f0d2aa86b8b8887c82484d769575486",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1000448,
+          "sha256": "e3b2193f4faa97be4ebd5e9a391a69bd7f0d2aa86b8b8887c82484d769575486",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "FindDirectXShaderCompilerDxc.cmake",
+        "expectedBytes": 1512,
+        "expectedSHA256": "8a336ecb7756a6a2f2af156d3ea414a99a8887eeb7e7b87dbaac17495ac6cf77",
+        "extracted": {
+          "exists": true,
+          "bytes": 1512,
+          "sha256": "8a336ecb7756a6a2f2af156d3ea414a99a8887eeb7e7b87dbaac17495ac6cf77",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1512,
+          "sha256": "8a336ecb7756a6a2f2af156d3ea414a99a8887eeb7e7b87dbaac17495ac6cf77",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "JERequireLocalPath.cmake",
+        "expectedBytes": 1982,
+        "expectedSHA256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+        "extracted": {
+          "exists": true,
+          "bytes": 1982,
+          "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1982,
+          "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "LICENSES/O3DE/LICENSE.txt",
+        "expectedBytes": 1502,
+        "expectedSHA256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+        "extracted": {
+          "exists": true,
+          "bytes": 1502,
+          "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1502,
+          "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+        "expectedBytes": 11557,
+        "expectedSHA256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+        "extracted": {
+          "exists": true,
+          "bytes": 11557,
+          "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 11557,
+          "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+        "expectedBytes": 1074,
+        "expectedSHA256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+        "extracted": {
+          "exists": true,
+          "bytes": 1074,
+          "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1074,
+          "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "LICENSES/SourceNotices.txt",
+        "expectedBytes": 81433,
+        "expectedSHA256": "86cd3780fe9fcfb8d7d66543f1c42d45b43bbd14be21119e07366e2a77afeb74",
+        "extracted": {
+          "exists": true,
+          "bytes": 81433,
+          "sha256": "86cd3780fe9fcfb8d7d66543f1c42d45b43bbd14be21119e07366e2a77afeb74",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 81433,
+          "sha256": "86cd3780fe9fcfb8d7d66543f1c42d45b43bbd14be21119e07366e2a77afeb74",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "NOTICE.txt",
+        "expectedBytes": 2605,
+        "expectedSHA256": "6f78013b4f0e468a34ea2e9bcef2dc1b7baf7c66874be6ebfed558b9bf4d2a8b",
+        "extracted": {
+          "exists": true,
+          "bytes": 2605,
+          "sha256": "6f78013b4f0e468a34ea2e9bcef2dc1b7baf7c66874be6ebfed558b9bf4d2a8b",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 2605,
+          "sha256": "6f78013b4f0e468a34ea2e9bcef2dc1b7baf7c66874be6ebfed558b9bf4d2a8b",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "PackageInfo.json",
+        "expectedBytes": 535,
+        "expectedSHA256": "f6d2f9102a2c01d76a2604f743e039a3102f9e71cbb97ce9857b32ed3a2f0a95",
+        "extracted": {
+          "exists": true,
+          "bytes": 535,
+          "sha256": "f6d2f9102a2c01d76a2604f743e039a3102f9e71cbb97ce9857b32ed3a2f0a95",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 535,
+          "sha256": "f6d2f9102a2c01d76a2604f743e039a3102f9e71cbb97ce9857b32ed3a2f0a95",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "README.md",
+        "expectedBytes": 5634,
+        "expectedSHA256": "da8dd0068c7ce61eda81670254e6308cb8046329bb897619c82007d3d71e684f",
+        "extracted": {
+          "exists": true,
+          "bytes": 5634,
+          "sha256": "da8dd0068c7ce61eda81670254e6308cb8046329bb897619c82007d3d71e684f",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 5634,
+          "sha256": "da8dd0068c7ce61eda81670254e6308cb8046329bb897619c82007d3d71e684f",
+          "matchesArchive": true
+        }
+      },
+      {
+        "path": "SHA256SUMS",
+        "expectedBytes": 1349,
+        "expectedSHA256": "b726acca8c762ce718c2a5efad71c312493d7dad17dd71d85cf8e620cb6f061f",
+        "extracted": {
+          "exists": true,
+          "bytes": 1349,
+          "sha256": "b726acca8c762ce718c2a5efad71c312493d7dad17dd71d85cf8e620cb6f061f",
+          "matchesArchive": true
+        },
+        "deployed": {
+          "exists": true,
+          "bytes": 1349,
+          "sha256": "b726acca8c762ce718c2a5efad71c312493d7dad17dd71d85cf8e620cb6f061f",
+          "matchesArchive": true
+        }
+      }
+    ],
+    "extractedReparsePoints": [],
+    "deployedReparsePoints": [],
+    "packageInfoName": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows",
+    "packageInfoVersion": "1.8.2505.1",
+    "catalogAssociationLine": "ly_associate_package(PACKAGE_NAME DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows TARGETS DirectXShaderCompilerDxc    PACKAGE_HASH 62fc6978933215440718d8d810ab5ecf20a36368a8592d12822f902ed0654782)",
+    "catalogHashMatches": true,
+    "stampPresent": true,
+    "stampBytes": 0,
+    "stampWriteUtc": "2026-10-11T08:14:08.2399969Z"
+  },
+  "activeCMakeMSBuildCompilerProcesses": [],
+  "acceptance": false,
+  "driver": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\run-root-configure-dxc-parent-rev1.ps1",
+    "sha256": "d0876c989526ee283ceffdf03674c3154740263a0877f7a29a9de1763dabaa23",
+    "expectedSHA256": "D0876C989526EE283CEFFDF03674C3154740263A0877F7A29A9DE1763DABAA23",
+    "parentReviewPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\parent-driver-review-rev1.json",
+    "parentReviewSHA256": "34d493d4cf9835aedabca8ae2d3eeb7031ce1ecebdac4413b41377a95eba438f",
+    "recordedRunAttribution": "Pre-existing attempt records exact CMake argv, assignment/freeze hashes, CMake version and postflight; no per-run wrapper-start receipt establishes which launcher created that historical attempt."
+  },
+  "evidencePaths": {
+    "configureArgv": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\attempt1\\configure-argv.json",
+    "configureResult": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\attempt1\\configure-result.json",
+    "configureStdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\attempt1\\configure.stdout.log",
+    "configureStderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\attempt1\\configure.stderr.log",
+    "postflightDeltas": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\attempt1\\input-postflight-deltas.json",
+    "thisReview": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-dxc-local-final\\luna-reuse-review-rev1.json"
+  }
+}

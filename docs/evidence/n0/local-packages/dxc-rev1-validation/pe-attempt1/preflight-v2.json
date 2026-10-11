@@ -1,0 +1,126 @@
+{
+  "freezeSHA256": "4427A9E7947AC6999D9FFA36FA55704885CADBF4E4C0E745D4B89CE6ADC0F03B",
+  "freezeFileCount": 23373,
+  "packageManifestSHA256": "B726ACCA8C762CE718C2A5EFAD71C312493D7DAD17DD71D85CF8E620CB6F061F",
+  "packageManifestRecordCount": 14,
+  "extractedPackageFileCount": 15,
+  "extractedMembership": [
+    {
+      "relativePath": "DirectXShaderCompilerDxc/bin/dxc.exe",
+      "bytes": 1210368,
+      "sha256": "A5B49096AE694F6FFF33221580C7D7A2DC6E44D21F89544640D2D32786823FF0"
+    },
+    {
+      "relativePath": "DirectXShaderCompilerDxc/bin/dxcompiler.dll",
+      "bytes": 21216256,
+      "sha256": "744A1E05C362A8614A0F96F315DE78C1A5DD562ED9634DCEC928FC05583B728D"
+    },
+    {
+      "relativePath": "DirectXShaderCompilerDxc/bin/dxil.dll",
+      "bytes": 1746432,
+      "sha256": "4DC3C25408D7BC058EAA9F106E0FCED51DEC788970AEB7F8A4B3B3AAD7B968C5"
+    },
+    {
+      "relativePath": "DirectXShaderCompilerDxc/bin/dxsc.exe",
+      "bytes": 1000448,
+      "sha256": "E3B2193F4FAA97BE4EBD5E9A391A69BD7F0D2AA86B8B8887C82484D769575486"
+    },
+    {
+      "relativePath": "DirectXShaderCompilerDxc/JERecipe.json",
+      "bytes": 2772,
+      "sha256": "476DBFD812E1FE23860BA28784B2544CFF50DE54CB24C0C998AE89206AB0671A"
+    },
+    {
+      "relativePath": "FindDirectXShaderCompilerDxc.cmake",
+      "bytes": 1512,
+      "sha256": "8A336ECB7756A6A2F2AF156D3EA414A99A8887EEB7E7B87DBAAC17495AC6CF77"
+    },
+    {
+      "relativePath": "JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "relativePath": "LICENSES/SourceNotices.txt",
+      "bytes": 81433,
+      "sha256": "86CD3780FE9FCFB8D7D66543F1C42D45B43BBD14BE21119E07366E2A77AFEB74"
+    },
+    {
+      "relativePath": "NOTICE.txt",
+      "bytes": 2605,
+      "sha256": "6F78013B4F0E468A34EA2E9BCEF2DC1B7BAF7C66874BE6EBFED558B9BF4D2A8B"
+    },
+    {
+      "relativePath": "PackageInfo.json",
+      "bytes": 535,
+      "sha256": "F6D2F9102A2C01D76A2604F743E039A3102F9E71CBB97CE9857B32ED3A2F0A95"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 5634,
+      "sha256": "DA8DD0068C7CE61EDA81670254E6308CB8046329BB897619C82007D3D71E684F"
+    },
+    {
+      "relativePath": "SHA256SUMS",
+      "bytes": 1349,
+      "sha256": "B726ACCA8C762CE718C2A5EFAD71C312493D7DAD17DD71D85CF8E620CB6F061F"
+    }
+  ],
+  "binaries": [
+    {
+      "name": "dxc.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxc.exe",
+      "bytes": 1210368,
+      "sha256": "A5B49096AE694F6FFF33221580C7D7A2DC6E44D21F89544640D2D32786823FF0",
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db"
+    },
+    {
+      "name": "dxsc.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxsc.exe",
+      "bytes": 1000448,
+      "sha256": "E3B2193F4FAA97BE4EBD5E9A391A69BD7F0D2AA86B8B8887C82484D769575486",
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db"
+    },
+    {
+      "name": "dxcompiler.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxcompiler.dll",
+      "bytes": 21216256,
+      "sha256": "744A1E05C362A8614A0F96F315DE78C1A5DD562ED9634DCEC928FC05583B728D",
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db"
+    },
+    {
+      "name": "dxil.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-extracted-rev1\\DirectXShaderCompilerDxc\\bin\\dxil.dll",
+      "bytes": 1746432,
+      "sha256": "4DC3C25408D7BC058EAA9F106E0FCED51DEC788970AEB7F8A4B3B3AAD7B968C5",
+      "fileVersion": "1.8.2505.0",
+      "productVersion": "1.8.2505.0 JE archive 1cc0ab76dafe08a4144e419e619a8951a3d219db"
+    }
+  ],
+  "dumpbin": {
+    "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+    "bytes": 23416,
+    "sha256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "fileVersion": "14.44.35228.0",
+    "productVersion": "14.44.35228.0"
+  },
+  "status": "PREFLIGHT PASS"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PARENT ASSIGNMENT FOR LUNA ONLY; NOT_RUN",
+  "driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\RunDxcConsumerParentRev1.ps1",
+  "driverSHA256": "FD1C6425575B9A87680E07784BA97DCAADCCF89E76EC29F1FF7CAB1E19B8499B",
+  "sourceFreezeSHA256": "123AE0639F373D0EF16E6147FC74765CBCBBD7AF42CCEF1535D58A5B7A1C5CCD",
+  "toolchainWitnessSHA256": "F9923C56A303C4AA7D75F61E4C85A4304559A73AB4EB6B76D32502EA3B691107",
+  "sourceInputs": 23348,
+  "toolchainInputs": 44,
+  "archiveSHA256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782",
+  "freshOutputs": [
+    "dxc-rev1-validation/consumer-attempt1",
+    "dxc-native-extracted-rev1",
+    "dxc-native-consumer-rev1"
+  ],
+  "checks": [
+    "Actual produced tar before extraction: exact 15 regular members, 14 manifest hashes, provenance/recipe, original notices/files",
+    "Fresh CMake extraction, exact before/after payload",
+    "Original configure/build/CTest argv, four cases, no errors/failures/skips/duplicates",
+    "Full source+toolchain+archive+driver+CTest pre/post and four memberships"
+  ],
+  "nativeOwner": "Luna",
+  "parallelJobs": 6,
+  "sourceOrGlobalEnvironmentChanges": false,
+  "guardsPEOrRootAuthorized": false,
+  "acceptance": "Parent review required; focal package only; no engine/editor/DX12 PSO/Vulkan frame proof"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PARENT APPROVED DXC PRIVATE PROVENANCE OVERLAYS AND PROVIDER IMPLEMENTATION; NATIVE ACCEPTANCE PENDING",
+  "planSHA256": "4FCB89C0A8B14A68438AB1979181B4D29E44D651D5AAB279619D78573A4ECE20",
+  "signingAuditSHA256": "4C7F4831824313D6457D3027879040E7C6B1935D4863F92C2254FE3363B1AF43",
+  "freezeSHA256": "7333734E7669C1151616CBED86D2C81A2E1FE8278E3CC01C719D87788475C93B",
+  "checkedInputs": 19828,
+  "snapshotFiles": 19661,
+  "sourceClosure": "Three exact original Windows sources; no signed-validator release or extra test dependencies acquisition",
+  "approvedOverlays": [
+    "Supported private fixed-version.inc original numeric1.8.2505.0, fullsourcepin product metadata",
+    "Private GetCommitInfo.py emits exact short1cc0ab76/count4954 from reviewed API cardinality; original allocation/API/compose preserved",
+    "Private SPIRV update_build_version.py exact a62abcb... archive description; original CHANGES retained"
+  ],
+  "requiredOverlayProof": "Exact before/after/inverse bytes and SHA, private copies only; immutable archives/snapshots and other checkouts unchanged",
+  "sourceScope": "cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/** and own build/dxc-rev1-preparation evidence only",
+  "productTopology": "Original dxc/dxsc/dxil.dll/dxcompiler.dll only Release, original4 targets, original Ninja cache/tests-off and original EH/RTTI/SPIRV/codegen preserved",
+  "constraints": [
+    "External audited Python only; no distributed Python",
+    "No HLSL_DISABLE_SOURCE_GENERATION, -Vd, developer mode or experimental bypass",
+    "No cache/catalog/Root/platform/template changes in writer scope",
+    "Record optional ambient LibXml2/zlib/Metal actual finds; no acquisition",
+    "Preserve full selected legal notices including actual DxilCompression license",
+    "Native oracles require HRESULT+operationstatus+retailDXIL hash/error rejection/real dxsc+SPIRV provenance; later DX12 PSO separate"
+  ],
+  "nativeOwner": "Luna assigned after parent actual source/diff/freeze review",
+  "nativeAuthorizedNow": false,
+  "writerOwnership": "Dependency writer only; no delegation/Git",
+  "acceptance": false
+}

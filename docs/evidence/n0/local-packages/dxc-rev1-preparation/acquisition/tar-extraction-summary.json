@@ -1,0 +1,25 @@
+[
+  {
+    "error": "Tar has 21 violations; not extracted",
+    "status": "FAILED_PRESERVED",
+    "id": "dxc"
+  },
+  {
+    "primaryMatches": 104,
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\snapshot",
+    "fileCount": 104,
+    "status": "TAR_SAFE_FULL_GITBLOB_EXTRACT_VERIFIED",
+    "id": "spirv-headers",
+    "sha256": "1bf0568bad1f9e30fce8d3199e54ae7ade1c16dbe913b5afd9b499149a9bb9a5",
+    "pinnedTextCount": 3
+  },
+  {
+    "primaryMatches": 1706,
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\snapshot",
+    "fileCount": 1706,
+    "status": "TAR_SAFE_FULL_GITBLOB_EXTRACT_VERIFIED",
+    "id": "spirv-tools",
+    "sha256": "7f6561171be2f314a26cb2a686d653050ee318655a89970d41ab3bef3269a4db",
+    "pinnedTextCount": 8
+  }
+]

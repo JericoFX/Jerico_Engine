@@ -1,0 +1,215 @@
+[
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_editor_supported_files.cmake",
+    "oldHash": "B61CADA695FC888300576C1230A54947C1A97955A22B973AFF722CCB66778F77",
+    "sha256": "082DA202B2D7A7333C02FF9CF43FC92476CE981902B2A257C91DDE634A666BC5",
+    "oldCRLF": 84,
+    "oldBareLF": 0,
+    "newCRLF": 86,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\whitebox_editor_tests_supported_files.cmake",
+    "oldHash": "3C9642FB11B2B02B1A8F33077960109C1964C3B36A659DE46199DFE9719B6F00",
+    "sha256": "A28D4F30BC1B571887833F42460C66B6ACAE044C6E722AD78615DBA3503D2C6D",
+    "oldCRLF": 21,
+    "oldBareLF": 0,
+    "newCRLF": 22,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Include\\WhiteBox\\EditorWhiteBoxComponentBus.h",
+    "oldHash": "AD1338D940DF8FAF06E34B72C638C0A2DAF07507874F76CBD84C433F8B96DE13",
+    "sha256": "42352CD7C48B57F6F618A930061F5F6B2E3BFFC2CAACCA7868220BF9BB120273",
+    "oldCRLF": 112,
+    "oldBareLF": 0,
+    "newCRLF": 115,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponent.cpp",
+    "oldHash": "FDC95FEF6CFE6AB1F0D6EFABBB4F4CA61797F25F1BD0C6AE9A03681CA90B9A7F",
+    "sha256": "54BD4F8A0C4E6871BD877AA649FA503C9711A879BBE12A3FE0DF9E0F90358121",
+    "oldCRLF": 1689,
+    "oldBareLF": 0,
+    "newCRLF": 1884,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponent.h",
+    "oldHash": "4A49E9454FE7B97FBBE8504DCCB538597B0F6C5CE6D30D144862EFB2F1C040FE",
+    "sha256": "93AE9D52F8833E4B8D1287D0F6977720D2A16198A5F6EE6197331FF54E462DC6",
+    "oldCRLF": 273,
+    "oldBareLF": 0,
+    "newCRLF": 296,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxComponent.cpp",
+    "oldHash": "F985402684ECAB5F9EED65EE1C91D1532A07AFE5C87F20E85AC6DD3808033785",
+    "sha256": "DBA6D630CB191797B6D7395CF0EAF692CC4D48F74AF2A8F04B3B7FA3E920E74A",
+    "oldCRLF": 89,
+    "oldBareLF": 0,
+    "newCRLF": 99,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\WhiteBoxComponent.h",
+    "oldHash": "BC54C374DDD772AEE1DA9E356918782BBED4DC8137787DB0296005F4D13DD20A",
+    "sha256": "E41E96877C0145FB5A6AB32E687FA581CD12D1E2127585C4CBAE5CD8F77607AB",
+    "oldCRLF": 60,
+    "oldBareLF": 0,
+    "newCRLF": 62,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderData.cpp",
+    "oldHash": "B0CF803F40789D6590D6298F6C7A8AC94C699A0EAA7434B0075FA0BB4E3FE29A",
+    "sha256": "66CC15C9B6ED0B160EBBD70820A382CA849D6BA4AFC531AF241C24822FB6A735",
+    "oldCRLF": 90,
+    "oldBareLF": 0,
+    "newCRLF": 137,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\WhiteBoxRenderData.h",
+    "oldHash": "FEC3E990CE5C814B24EE564280441A72515EC3784010DF0A34D0771FB15DF698",
+    "sha256": "E77990376F7BC6D7DDF89FD13A2A5C1E2DE6A6B8CF9E1B27E68FDF004A92875B",
+    "oldCRLF": 66,
+    "oldBareLF": 0,
+    "newCRLF": 99,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxAtomRenderMesh.cpp",
+    "oldHash": "441F0AE3D0117D2D4AA06F04436F05745D9AF483CA0BCD4D61DF7A55EEC48B34",
+    "sha256": "8A8FF3172DBBB2E9B357AA73CEF3B7291FAA348DC60CCAAD8A9F93692FFD12AF",
+    "oldCRLF": 321,
+    "oldBareLF": 0,
+    "newCRLF": 400,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Rendering\\Atom\\WhiteBoxAtomRenderMesh.h",
+    "oldHash": "170AAC95BAFB1E284AB8AC1D8A7DCAF2187D2FF7364CD588B31D9532C48546BE",
+    "sha256": "AE69DCF4EE2669BF6E14B786DE0F7312AAE410A81FC3FD1A689EAEAC29965929",
+    "oldCRLF": 115,
+    "oldBareLF": 0,
+    "newCRLF": 128,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxComponentModeCommon.cpp",
+    "oldHash": "6CF298E2B8E9C1D2E3EE80FB79CCBDFFA9D8E131403C319D3968680F0159B4E8",
+    "sha256": "D2BCCD55509A98B594DF4A91D9282F7BDA2224D74198BBD1BD95399B015E1259",
+    "oldCRLF": 53,
+    "oldBareLF": 0,
+    "newCRLF": 64,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxComponentModeCommon.h",
+    "oldHash": "A98976214780ADBC759FE5A49F9FC5D798DE4B84EE148C1498605096CA4C3E03",
+    "sha256": "F33CF53D36040EEA382B1E25441962EC6F85DDEC90F6FD5A124A7C97AF57190B",
+    "oldCRLF": 27,
+    "oldBareLF": 0,
+    "newCRLF": 32,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxDefaultMode.cpp",
+    "oldHash": "30EA386E5E7211CCB36DA34911791F0B416F76F7FFEB31BBA91CCEC6F98444A6",
+    "sha256": "4B10D9BA91ED9449B394DDAEF2F02676195D67D629B58B042C3853047A0516E6",
+    "oldCRLF": 1580,
+    "oldBareLF": 0,
+    "newCRLF": 1583,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxEdgeRestoreMode.cpp",
+    "oldHash": "D37D307D898FBFFF8B15405515521B72EFF4DE2686ED68EDACF1925EF6837D8B",
+    "sha256": "04FFB2A3AEC5E9D1F64D2678D47CF0882907FF11CF073D3837F3D36D5103AA16",
+    "oldCRLF": 246,
+    "oldBareLF": 0,
+    "newCRLF": 246,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\SubComponentModes\\EditorWhiteBoxTransformMode.cpp",
+    "oldHash": "3AC44A5997DF550678E737DDDF73AC254B872CAD2B30B6BAC38A972D64348AC6",
+    "sha256": "2E2FC995A410B1754464B315375A377A425476E8EA437C9079C88793AA272DCA",
+    "oldCRLF": 1257,
+    "oldBareLF": 0,
+    "newCRLF": 1264,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxDrawShapeMode.cpp",
+    "oldHash": "D95021CA0CDF95D4352B127B7A05FA461D05630F85C63D4D4E90A7E5389F7682",
+    "sha256": "2DE8C7E7F0ED11ABA3A68C38DD3F63E71DD882160B66B9BA8B6719C3457A29D7",
+    "oldCRLF": 1600,
+    "oldBareLF": 0,
+    "newCRLF": 1603,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxEdgeScaleModifier.cpp",
+    "oldHash": "858E8F957B876DEA433863CEB01B490FE9206D8A6AE848C45EC82D8BF8493FFE",
+    "sha256": "E02E3C05175219AA344CD29F1F1ED0AF99C3C2BAE8A02D09049BFDA44B4489B0",
+    "oldCRLF": 203,
+    "oldBareLF": 0,
+    "newCRLF": 205,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxEdgeTranslationModifier.cpp",
+    "oldHash": "E5322EC1C581D34F54F6D27A7E3CC775EE8252BC8EE100E5F08CC098603582A5",
+    "sha256": "7D9DB7362F2E3F044A63C0FD0B58ECCF111A23487C5DF6FF5E2348D170E9896F",
+    "oldCRLF": 374,
+    "oldBareLF": 0,
+    "newCRLF": 376,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxPolygonScaleModifier.cpp",
+    "oldHash": "1F0B7C857A5A70D8ACDE504282A9F3F045192896E4EF27B75B69C5B18351CE5B",
+    "sha256": "3067BDE1F7B938084FD4D744448ED0FCC35AF94625EAF5300D6111184FEC9F78",
+    "oldCRLF": 224,
+    "oldBareLF": 0,
+    "newCRLF": 226,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxPolygonTranslationModifier.cpp",
+    "oldHash": "8354F6EC73A4689DDFA0F739C3CE4E2BFDC5F86D4A18438D1A65FF4ECC365FEF",
+    "sha256": "E039CED2897BC304C9D189A88726011BD8E3D2CF665E7B1A9483B4DFB20A3909",
+    "oldCRLF": 317,
+    "oldBareLF": 0,
+    "newCRLF": 319,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Viewport\\WhiteBoxVertexTranslationModifier.cpp",
+    "oldHash": "EA338CDECC57D5DA7008A04CA843FB896362001DE7AF9A593F2CDACFCFA20BE4",
+    "sha256": "B34CE96B17742534F0DB7379BF3B68F834DFCB6C83A5AD9439CA9F8267559E01",
+    "oldCRLF": 368,
+    "oldBareLF": 0,
+    "newCRLF": 370,
+    "newBareLF": 0
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxSurfaceMaterials.cpp",
+    "oldHash": null,
+    "sha256": "2D6812A27A9F83976D91C9D6B20C5394F375986ADC9BFF6D90151331E8BF0F78"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxSurfaceMaterials.h",
+    "oldHash": null,
+    "sha256": "1439EA9D2BAC9C6FFFCA1D89C871462C15F40BF2938324121F30513846EE210A"
+  },
+  {
+    "path": "Gems\\WhiteBox\\Code\\Tests\\JEWhiteBoxSurfaceMaterialsTest.cpp",
+    "oldHash": null,
+    "sha256": "83F3D836A364763FB2D4EEA89C42D63B4CBFCDE62C58BF5B21F3867E4D4AEB15"
+  }
+]

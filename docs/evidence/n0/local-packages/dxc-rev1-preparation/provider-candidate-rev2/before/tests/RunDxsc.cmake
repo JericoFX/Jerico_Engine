@@ -1,0 +1,48 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+cmake_minimum_required(VERSION 3.24)
+include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
+foreach(JE_PATH IN ITEMS JE_DXSC JE_CONSUMER JE_BIN JE_INPUT JE_OUTPUT JE_INCLUDES)
+    JE_python_require_local_path(${JE_PATH})
+endforeach()
+get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
+set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
+cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_OUTPUT}" NORMALIZE JE_LOCAL_OUTPUT)
+if(NOT JE_LOCAL_OUTPUT OR JE_OUTPUT STREQUAL JE_BUILD_ROOT)
+    message(FATAL_ERROR "JE DXSC test output must be below checkout/build")
+endif()
+if(NOT EXISTS "${JE_INPUT}" OR EXISTS "${JE_OUTPUT}")
+    message(FATAL_ERROR "JE DXSC requires real compiled DXIL and fresh output")
+endif()
+file(MAKE_DIRECTORY "${JE_OUTPUT}")
+# Same sentinel as the actual DX12 ShaderStageFunction consumer:0x45678900.
+execute_process(COMMAND "${JE_DXSC}" -sv=1164413184 "-o=${JE_OUTPUT}/patched.dxil"
+    "-f=${JE_OUTPUT}/offsets.json" "${JE_INPUT}" RESULT_VARIABLE JE_RESULT
+    OUTPUT_FILE "${JE_OUTPUT}/positive.stdout.txt" ERROR_FILE "${JE_OUTPUT}/positive.stderr.txt")
+if(NOT JE_RESULT STREQUAL "0")
+    message(FATAL_ERROR "JE actual dxsc patch failed: ${JE_RESULT}")
+endif()
+file(SHA256 "${JE_INPUT}" JE_BEFORE_SHA)
+file(SHA256 "${JE_OUTPUT}/patched.dxil" JE_AFTER_SHA)
+if(JE_BEFORE_SHA STREQUAL JE_AFTER_SHA)
+    message(FATAL_ERROR "JE DXSC output did not actually change the specialization-bearing DXIL")
+endif()
+file(READ "${JE_OUTPUT}/offsets.json" JE_OFFSETS)
+string(JSON JE_OFFSET GET "${JE_OFFSETS}" 7)
+file(SIZE "${JE_OUTPUT}/patched.dxil" JE_BYTES)
+math(EXPR JE_BITS "${JE_BYTES}*8")
+if(NOT JE_OFFSET MATCHES "^[0-9]+$" OR JE_OFFSET LESS 1 OR JE_OFFSET GREATER_EQUAL JE_BITS)
+    message(FATAL_ERROR "JE DXSC specialization7 did not produce a valid real bit offset")
+endif()
+execute_process(COMMAND "${JE_CONSUMER}" patched "${JE_BIN}" "${JE_OUTPUT}" "${JE_INCLUDES}"
+    RESULT_VARIABLE JE_RESULT OUTPUT_FILE "${JE_OUTPUT}/validate.stdout.txt" ERROR_FILE "${JE_OUTPUT}/validate.stderr.txt")
+if(NOT JE_RESULT STREQUAL "0")
+    message(FATAL_ERROR "JE DXSC output validation failed: ${JE_RESULT}")
+endif()
+file(WRITE "${JE_OUTPUT}/malformed.dxil" "JE malformed container")
+execute_process(COMMAND "${JE_DXSC}" -sv=1164413184 "-o=${JE_OUTPUT}/rejected.dxil"
+    "-f=${JE_OUTPUT}/rejected.json" "${JE_OUTPUT}/malformed.dxil" RESULT_VARIABLE JE_RESULT
+    OUTPUT_FILE "${JE_OUTPUT}/negative.stdout.txt" ERROR_FILE "${JE_OUTPUT}/negative.stderr.txt")
+if(JE_RESULT STREQUAL "0" OR EXISTS "${JE_OUTPUT}/rejected.dxil" OR EXISTS "${JE_OUTPUT}/rejected.json")
+    message(FATAL_ERROR "JE DXSC malformed container was not rejected")
+endif()

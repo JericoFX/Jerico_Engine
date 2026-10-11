@@ -1,0 +1,20 @@
+{
+  "status": "PARENT SOURCE/DIFF REVIEWED; PRODUCER AUTHORIZED TO LUNA; ACCEPTANCE PENDING",
+  "sourceInputsRehashed": 23348,
+  "changedPaths": [],
+  "sourceFreezeSHA256": "123AE0639F373D0EF16E6147FC74765CBCBBD7AF42CCEF1535D58A5B7A1C5CCD",
+  "producerExactInverseSHA256": "FB87A7B551F2549E17279F27EC3BFB3B732C3389AB35E1564E34EC349949E182",
+  "producerSHA256": "0016B9F0B56E86AE57EC3D48DB0F923C3B0F4B4E3F28D2EB50A9819E9C9FE817",
+  "driverPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\RunDxcProducerParentRev1.ps1",
+  "driverSHA256": "B7162F4D9B460139BAD6F53400C822E9C48C7F7E286ECF5FCB498AA2B9FDB387",
+  "toolchainWitnessSHA256": "F9923C56A303C4AA7D75F61E4C85A4304559A73AB4EB6B76D32502EA3B691107",
+  "sourceGeneration": "HCT.cmake defaults COPY_GENERATED OFF and DISABLE_SOURCE_GENERATION OFF, unchanged; no bypass",
+  "sidecar": "Actual helper .tar.xz.SHA256SUMS",
+  "primarySchedulingSource": "https://cmake.org/cmake/help/v4.3/manual/cmake.1.html#build-a-project",
+  "nativeExecuted": false,
+  "limits": [
+    "Producer only, no acceptance",
+    "Consumer/guards/PE/Root/Editor pending",
+    "Memory scheduling choice is not an achieved measurement"
+  ]
+}

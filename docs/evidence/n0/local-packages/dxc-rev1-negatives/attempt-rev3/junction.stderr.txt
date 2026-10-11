@@ -1,0 +1,6 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:19 (message):
+  JE local Python: JE_DXC_ARCHIVES_ROOT must not use symlink paths
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:14 (JE_python_require_local_path)
+
+

@@ -1,0 +1,212 @@
+{
+  "name": "batch-sse2neon-original-before",
+  "path": "F:\\JericoEngine\\Dependencies\\sse2neon-1.9.1",
+  "fileCount": 41,
+  "files": [
+    {
+      "relativePath": ".clang-format",
+      "bytes": 500,
+      "sha256": "bd1f091e07e4c1458ea6a1f3fcb8c504c630c4bb7826629d188c057ee4e6a85a"
+    },
+    {
+      "relativePath": ".clang-tidy",
+      "bytes": 1695,
+      "sha256": "7ce383c2a5bf26ff0fbea5b39160f05a9ca5e92c212d1fb7c4334735fbda98ce"
+    },
+    {
+      "relativePath": ".gitattributes",
+      "bytes": 71,
+      "sha256": "ec45250b69fabe9acc14aea32db1b3d4d7c48b906b24b74fc2868481e7315888"
+    },
+    {
+      "relativePath": ".gitignore",
+      "bytes": 137,
+      "sha256": "daa43d3fc4702c5ec2b5f5b01cc7f5b17b0c098c8381af4274bf3ac3f7328f7c"
+    },
+    {
+      "relativePath": "CONTRIBUTING.md",
+      "bytes": 13353,
+      "sha256": "2bb4d2d75cce5d600ee4e3bd3f9abc269bc21f74c872597ffe796482fefcb392"
+    },
+    {
+      "relativePath": "LICENSE",
+      "bytes": 1083,
+      "sha256": "e962fe0dfa637c465df35d496fb198982eb52b8afd3046f370083c6e9856b34f"
+    },
+    {
+      "relativePath": "Makefile",
+      "bytes": 12239,
+      "sha256": "ba7a1927147a3c627e245463c49b89760a2f4da913a121a64ff9c03baec587b6"
+    },
+    {
+      "relativePath": "perf-tier.md",
+      "bytes": 12565,
+      "sha256": "c487962e14217175c2fe29588838d66296e3ec81f5aaa8b888cc69969e0f4a85"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 30913,
+      "sha256": "50f4c87fa308ba653929c5175b59776ab3b4f01ead8a1c3249dcf0ec5452d6c2"
+    },
+    {
+      "relativePath": "sse2neon.h",
+      "bytes": 484176,
+      "sha256": "78632498a57bf7e080e84cb8d74c47ce93b204cece77eab79de2908eb8bc92ed"
+    },
+    {
+      "relativePath": "sse2neon.sln",
+      "bytes": 1854,
+      "sha256": "867263a25bfc5e826685094a7c05e220b240d221de48bd2c4303321a670d5e92"
+    },
+    {
+      "relativePath": "sse2neon.vcxproj",
+      "bytes": 11464,
+      "sha256": "f304470e3ae30f7b41830d1845cc9056e5808b469172ab2043e88829a7c5f69c"
+    },
+    {
+      "relativePath": "sse2neon.vcxproj.filters",
+      "bytes": 1649,
+      "sha256": "0e8c5b961abd4042c1aa63ad9e02d532837d118b462c0d4c2ef91ccf3dc7a684"
+    },
+    {
+      "relativePath": ".ci\\check-casts.py",
+      "bytes": 33949,
+      "sha256": "31b3cc74ad971efe9dac7b96ed9b12a27b77c92c7c63de7bbd72c1e1ff3d8c88"
+    },
+    {
+      "relativePath": ".ci\\check-format.sh",
+      "bytes": 302,
+      "sha256": "4e083c4ca8939b48813b277e034e3a30ce995b8fc9f5ceb9716be7fdfeeb7b16"
+    },
+    {
+      "relativePath": ".ci\\check-macros.py",
+      "bytes": 19525,
+      "sha256": "32a6bc9ff19a8251e9b40dc59d1f4caa2c75d69be2a4d32c17c2c606fdd8867a"
+    },
+    {
+      "relativePath": ".ci\\check-perf-tier.sh",
+      "bytes": 900,
+      "sha256": "eacecf2cd18dceec8a165943732de59552738cc80ca64688791fece223239a8d"
+    },
+    {
+      "relativePath": ".ci\\common.sh",
+      "bytes": 514,
+      "sha256": "89e4b29f2e9444ea6f011e852745543972e53c95e73e3abaa07afbf2edab8edf"
+    },
+    {
+      "relativePath": ".ci\\cross-check.sh",
+      "bytes": 580,
+      "sha256": "61b532959ee73235035bb3caa5a11b8a8a70c75799b35003f5cc41032a5c1bf4"
+    },
+    {
+      "relativePath": ".ci\\cross-tool.sh",
+      "bytes": 599,
+      "sha256": "98e091147f1eae09ec110d2cbc39f17723e4e22d694910db421b34c752c6d29c"
+    },
+    {
+      "relativePath": ".github\\CODEOWNERS",
+      "bytes": 156,
+      "sha256": "7dbb61f8439a53e52d2d7f3346407dbc9e1f819afbd1884d947b8fecacbdc066"
+    },
+    {
+      "relativePath": ".github\\workflows\\main.yml",
+      "bytes": 31384,
+      "sha256": "155060b177e8f3bedcc78db1b511b434e1b4fdea3a52e840ce7d43892f9f814c"
+    },
+    {
+      "relativePath": ".github\\workflows\\perf-tier.yml",
+      "bytes": 4408,
+      "sha256": "e74509289a821b1345bb8e0a9ae1af4b973dcd71bf7099a2a2b6ab653c1cb0e5"
+    },
+    {
+      "relativePath": "scripts\\analyze-tiers.py",
+      "bytes": 73218,
+      "sha256": "9aa3103d43bf848df65a88f5d1a174a7a6a2167af0599143fb0f8237551b9300"
+    },
+    {
+      "relativePath": "scripts\\coverage-check.py",
+      "bytes": 28191,
+      "sha256": "cde33b6d0ea7e8a86da26f880f24344cbb1ac4454cc4d164f08f0ade25875f09"
+    },
+    {
+      "relativePath": "scripts\\fuzz-progress.sh",
+      "bytes": 4970,
+      "sha256": "b5fba36594f9c45b2a6f7afe10277825db05b18a4a0b3ec8cf7295f588e8b283"
+    },
+    {
+      "relativePath": "scripts\\gen-golden.py",
+      "bytes": 4816,
+      "sha256": "ebca52365b0fef33aeb401ce587923342b1691a6ba045786125aa07672b0b7f1"
+    },
+    {
+      "relativePath": "scripts\\gen-perf-report.py",
+      "bytes": 7810,
+      "sha256": "e6d07f5da954a19feb9770056303d4283907b3c1351016240dff1e3492637824"
+    },
+    {
+      "relativePath": "tests\\aes.cpp",
+      "bytes": 25717,
+      "sha256": "731ddc8fc92f233ed655dd275a75f85bf02e8f25c5cb179263452df76bee8a8c"
+    },
+    {
+      "relativePath": "tests\\binding.cpp",
+      "bytes": 602,
+      "sha256": "f161661f745bc865f61eb467ee1c051b4e161246d289d9c4ec01bd4c32485bb7"
+    },
+    {
+      "relativePath": "tests\\binding.h",
+      "bytes": 490,
+      "sha256": "a6feca1fcb37aad026e1a760412ecb667d6ec3464d4a52854fd39817d7bdb2d2"
+    },
+    {
+      "relativePath": "tests\\common.cpp",
+      "bytes": 12173,
+      "sha256": "6787a71adeba42eeca124fef72366f1dd7b3599411e292fc99a3e47ad9023334"
+    },
+    {
+      "relativePath": "tests\\common.h",
+      "bytes": 18882,
+      "sha256": "e7b70b553e819e4400ce5597474f21405e0815656be3c3a62318ad8a27cf2028"
+    },
+    {
+      "relativePath": "tests\\differential.cpp",
+      "bytes": 39210,
+      "sha256": "e78c3562266d7b71839ed286f9ca03fcc7fde69bbc2b56ea2d63e408e33519fb"
+    },
+    {
+      "relativePath": "tests\\fuzz.cpp",
+      "bytes": 57141,
+      "sha256": "13114609da0b1b5a5d4d28ebeccb130c9bd23ae618ab8c2652717dc5bbb64b19"
+    },
+    {
+      "relativePath": "tests\\ieee754.cpp",
+      "bytes": 56185,
+      "sha256": "6c5d2c848f33d533799104a04a1b5a6954a6880fc2cb4675024b311f97bb3e18"
+    },
+    {
+      "relativePath": "tests\\impl.cpp",
+      "bytes": 448939,
+      "sha256": "e5b924dd8b8afc4c824245e96639c655e94557bd7942a8d6266a47255bf2a2d4"
+    },
+    {
+      "relativePath": "tests\\impl.h",
+      "bytes": 20294,
+      "sha256": "a69a008043e85eea9a6ce02a6c3e324a0c95bf93694b80a0ee99f7adef473fc1"
+    },
+    {
+      "relativePath": "tests\\main.cpp",
+      "bytes": 1595,
+      "sha256": "d38e21d2727e892cecd876a0f8c98f5f0b95b9e968dca62b90dc01be69782a57"
+    },
+    {
+      "relativePath": "tests\\nan.cpp",
+      "bytes": 68906,
+      "sha256": "c82bb6dc73acc3d9339fa658ef9013c09d0ce7598ca8bebffc7e5ad075db90b6"
+    },
+    {
+      "relativePath": "tests\\README.md",
+      "bytes": 867,
+      "sha256": "7af815872fef8a74c9979614b777f108d8609985718ed64ca726d063b09c465c"
+    }
+  ]
+}

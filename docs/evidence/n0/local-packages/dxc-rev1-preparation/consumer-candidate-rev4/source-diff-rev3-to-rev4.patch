@@ -1,0 +1,13 @@
+diff --git a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
+--- a/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
++++ b/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/DirectXShaderCompilerDxcConsumer.cpp
+@@ -200,1 +200,8 @@
+-            Require(FAILED(status) && errors.Get() != nullptr && errors->GetStringLength() > 0 && !result->HasOutput(DXC_OUT_OBJECT), "malformed shader rejected with diagnostics and no object");
++            Hr(objectHr, "invalid shader object query");
++            Hr(resultHr, "invalid shader result query");
++            // DXC registers the object slot on failure; an empty blob emits no bytecode.
++            Require(FAILED(status) && errors.Get() != nullptr && errors->GetStringLength() > 0
++                && (diagnosticObject.Get() == nullptr || diagnosticObject->GetBufferSize() == 0)
++                && (diagnosticResult.Get() == nullptr || diagnosticResult->GetBufferSize() == 0),
++                "malformed shader rejected with diagnostics and no object bytes");
++            Require(!std::filesystem::exists(output), "malformed shader created no output path");

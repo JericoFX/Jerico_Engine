@@ -1,0 +1,12 @@
+{
+  "label": "jobs-zero",
+  "scope": "PRODUCER",
+  "secondaryMissingPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\missing-secondary-cl.exe",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0289108,
+  "expectedError": "JE DXC: JE_DXC_PARALLEL_JOBS must be a positive integer",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION"
+}

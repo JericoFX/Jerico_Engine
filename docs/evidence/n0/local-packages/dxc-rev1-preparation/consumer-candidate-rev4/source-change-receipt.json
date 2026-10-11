@@ -1,0 +1,38 @@
+{
+  "status": "SOURCE ORACLE CORRECTION ONLY; NATIVE PENDING",
+  "before": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev4\\DirectXShaderCompilerDxcConsumer.rev3.before.cpp",
+    "bytes": 12775,
+    "sha256": "4ED3A3DCFBDDC5E3E8E4006B449E5BE8F77E5C81DECF9F9C39F3DB14623E1407",
+    "role": "exact diagnostic rev3 before bytes"
+  },
+  "after": {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+    "bytes": 13255,
+    "sha256": "3FE2DA8FC5D468FFDCC14090AD2D2FB7EC0B44A328059AB47D33AD6E4E723064",
+    "role": "one authorized invalid assertion replacement"
+  },
+  "exactInverse": true,
+  "diagnosticsUnchanged": true,
+  "positiveOraclesUnchanged": true,
+  "producerChanged": false,
+  "packageChanged": false,
+  "parentReviewedNativeValues": {
+    "resultBytes": 0,
+    "status": "0x80004005",
+    "hasOutput": 1,
+    "errorsHRESULT": "S_OK",
+    "objectHRESULT": "S_OK",
+    "errorsLength": 502,
+    "objectBytes": 0,
+    "resultHRESULT": "S_OK",
+    "sameBlob": true
+  },
+  "sourceContract": [
+    "dxcapi.impl.h:428-454 HasOutput records kind, GetOutput returns registered object independent of operation status",
+    "dxcompilerobj.cpp:649-660 registers initial output memory stream blob;1305-1315 stores object before setting failed operation status"
+  ],
+  "preserved": "API1.9, PE/full40pin/hash8/count4954/ownership, all diagnostic prints, retail hash, validator, SPIRV and real dxsc",
+  "nativeExecuted": false,
+  "acceptance": false
+}

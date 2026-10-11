@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "1cc0ab76dafe08a4144e419e619a8951a3d219db",
+  "apiListCount": 4954,
+  "meaning": "Pinned GitHub REST commit-list pagination, per_page1, first exact source pin, last-page plus next empty boundary; not a local Git rev-list execution",
+  "records": [
+    {
+      "url": "https://api.github.com/repos/o3de/DirectXShaderCompiler/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1",
+      "label": "first",
+      "status": 200,
+      "redirectFollowed": false,
+      "authentication": false,
+      "link": "<https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=2>; rel=\"next\", <https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4954>; rel=\"last\"",
+      "returnedCount": 1,
+      "commitSHAs": [
+        "1cc0ab76dafe08a4144e419e619a8951a3d219db"
+      ],
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\history-first-rev3.json",
+      "sha256": "77376A3421C680B4A1C03422BC0FF058D8A4298792E664FBE93160EAF8909FDD"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/DirectXShaderCompiler/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4954",
+      "label": "last",
+      "status": 200,
+      "redirectFollowed": false,
+      "authentication": false,
+      "link": "<https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4955>; rel=\"next\", <https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4954>; rel=\"last\", <https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=1>; rel=\"first\", <https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4953>; rel=\"prev\"",
+      "returnedCount": 1,
+      "commitSHAs": [
+        "6ee4074a4b43fa23bf5ad27e4f6cafc6b835e437"
+      ],
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\history-last-rev3.json",
+      "sha256": "FE1C87D5BDEB596D5818D991DEC854943DCD97727110F033F7A5348803A9245C"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/DirectXShaderCompiler/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4955",
+      "label": "after-last",
+      "status": 200,
+      "redirectFollowed": false,
+      "authentication": false,
+      "link": "<https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=1>; rel=\"first\", <https://api.github.com/repositories/364732666/commits?sha=1cc0ab76dafe08a4144e419e619a8951a3d219db&per_page=1&page=4954>; rel=\"prev\"",
+      "returnedCount": 0,
+      "commitSHAs": [],
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\history-after-last-rev3.json",
+      "sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945"
+    }
+  ],
+  "nativeExecuted": false,
+  "sourceModified": false
+}

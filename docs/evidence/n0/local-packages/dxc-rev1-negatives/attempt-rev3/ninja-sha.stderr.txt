@@ -1,0 +1,8 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: audited existing external NINJA SHA256 mismatch:
+  C:/Program Files (x86)/Microsoft Visual
+  Studio/2022/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/BuildDirectXShaderCompilerDxcPackage.cmake:48 (JE_python_verify_file)
+
+

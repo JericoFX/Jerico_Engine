@@ -1,0 +1,60 @@
+--- RunDxcNegativesRev2.ps1 (historical rev2)
++++ RunDxcNegativesRev3.ps1 (prepared only)
+@@ -2,22 +2,28 @@
+ $ErrorActionPreference = 'Stop'
+ Set-StrictMode -Version Latest
+ if ($PSVersionTable.PSEdition -ne 'Core') { throw 'PowerShell Core required' }
++# Stream hashing avoids per-file cmdlet overhead; the SHA256 guard is unchanged.
++function Get-JEFileSHA256([string] $path) {
++    $stream = [IO.File]::OpenRead($path)
++    try { return [Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($stream)) }
++    finally { $stream.Dispose() }
++}
+ $root = [IO.Path]::GetFullPath($PSScriptRoot)
++$attempt = Join-Path $root 'attempt-rev3'
+-$attempt = Join-Path $root 'attempt-rev2'
+ if ($root -ne 'F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\dxc-rev1-negatives') { throw 'Assigned output root differs' }
+ if (Test-Path -LiteralPath $attempt) { throw 'Attempt exists; retain it' }
++$assignmentPath = Join-Path $root 'negative-assignment-rev3.json'
++if ((Get-JEFileSHA256 $assignmentPath) -ne '63B815D3BA3E87586B0C1194ABF57620EB6076D55124DEF0F9F680A80D2B1DB3') { throw 'Negative assignment changed' }
+-$assignmentPath = Join-Path $root 'negative-assignment-rev2.json'
+-if ((Get-FileHash -LiteralPath $assignmentPath).Hash -ne 'D0AF36852D02984ED2F645ADDD29395923768DBA8B8838A1A5DD3F88B6FC8D7C') { throw 'Negative assignment changed' }
+ $assignment = Get-Content -LiteralPath $assignmentPath -Raw | ConvertFrom-Json
+ $freezePath = $assignment.sourceFreeze.path
++if ((Get-JEFileSHA256 $freezePath) -ne $assignment.sourceFreeze.sha256) { throw 'Approved DXC freeze changed' }
+-if ((Get-FileHash -LiteralPath $freezePath).Hash -ne $assignment.sourceFreeze.sha256) { throw 'Approved DXC freeze changed' }
+ $freeze = Get-Content -LiteralPath $freezePath -Raw | ConvertFrom-Json
++if ($freeze.files.Count -ne 23385 -or $assignment.cases.Count -ne 18) { throw 'Input/case counts differ' }
+-if ($freeze.files.Count -ne 23373 -or $assignment.cases.Count -ne 18) { throw 'Input/case counts differ' }
+ function Test-FrozenInputs {
+     $changed = @()
+     foreach ($file in $freeze.files) {
+         if (-not (Test-Path -LiteralPath $file.path -PathType Leaf)) { $changed += $file.path; continue }
++        if ((Get-Item -LiteralPath $file.path).Length -ne $file.bytes -or (Get-JEFileSHA256 $file.path) -ne $file.sha256) { $changed += $file.path }
+-        if ((Get-Item -LiteralPath $file.path).Length -ne $file.bytes -or (Get-FileHash -LiteralPath $file.path).Hash -ne $file.sha256) { $changed += $file.path }
+     }
+     foreach ($tree in $assignment.snapshots) {
+         $prefix = [IO.Path]::GetFullPath($tree.path) + '\'
+@@ -26,7 +32,7 @@
+         if ($actual.Count -ne $tree.files -or $expected.Count -ne $tree.files -or ($actual -join "`n") -cne ($expected -join "`n")) { $changed += "Snapshot membership: $($tree.id)" }
+     }
+     foreach ($file in $assignment.productionWitnesses) {
++        if ((Get-Item -LiteralPath $file.path).Length -ne $file.bytes -or (Get-JEFileSHA256 $file.path) -ne $file.sha256) { $changed += $file.path }
+-        if ((Get-Item -LiteralPath $file.path).Length -ne $file.bytes -or (Get-FileHash -LiteralPath $file.path).Hash -ne $file.sha256) { $changed += $file.path }
+     }
+     return ,$changed
+ }
+@@ -54,11 +60,11 @@
+ New-Item -ItemType Junction -Path $junction -Value $junctionTarget | Out-Null
+ [IO.File]::WriteAllText($assignment.helperFixture.path,$assignment.helperFixture.content,$encoding)
+ $fixtureFiles = @((Join-Path $attempt 'fixtures/existing-output/retain.txt'),$changedArchive,$wrongOverlay,$assignment.helperFixture.path)
++$fixtures = @(foreach ($path in $fixtureFiles) { [ordered]@{ path = $path; bytes = (Get-Item -LiteralPath $path).Length; sha256 = (Get-JEFileSHA256 $path) } })
+-$fixtures = @(foreach ($path in $fixtureFiles) { [ordered]@{ path = $path; bytes = (Get-Item -LiteralPath $path).Length; sha256 = (Get-FileHash -LiteralPath $path).Hash } })
+ Write-Json (Join-Path $attempt 'fixture-manifest.json') $fixtures
+ function Test-Fixtures {
+     $changed = @()
++    foreach ($file in $fixtures) { if ((Get-Item -LiteralPath $file.path).Length -ne $file.bytes -or (Get-JEFileSHA256 $file.path) -ne $file.sha256) { $changed += $file.path } }
+-    foreach ($file in $fixtures) { if ((Get-Item -LiteralPath $file.path).Length -ne $file.bytes -or (Get-FileHash -LiteralPath $file.path).Hash -ne $file.sha256) { $changed += $file.path } }
+     $actual = @(Get-ChildItem -LiteralPath (Join-Path $attempt 'fixtures') -Recurse -File | ForEach-Object FullName | Sort-Object)
+     if (($actual -join "`n") -cne (($fixtureFiles | Sort-Object) -join "`n")) { $changed += 'Fixture membership changed' }
+     $link = Get-Item -LiteralPath $junction

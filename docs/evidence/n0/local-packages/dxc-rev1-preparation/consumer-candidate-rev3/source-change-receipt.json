@@ -1,0 +1,30 @@
+{
+  "status": "INSTRUMENTATION ONLY; NO NATIVE EXECUTION",
+  "before": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\consumer-candidate-rev3\\DirectXShaderCompilerDxcConsumer.rev2.before.cpp",
+    "bytes": 11542,
+    "sha256": "A09161480B2D8C90C1B9DA96A50DE1F3909C09CD7D6EA0554556212C95851C3A",
+    "role": "exact before bytes"
+  },
+  "after": {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\DirectXShaderCompilerDxc\\tests\\DirectXShaderCompilerDxcConsumer.cpp",
+    "bytes": 12775,
+    "sha256": "4ED3A3DCFBDDC5E3E8E4006B449E5BE8F77E5C81DECF9F9C39F3DB14623E1407",
+    "role": "invalid diagnostic instrumentation only"
+  },
+  "exactInverse": true,
+  "originalFailingAssertionUnchanged": true,
+  "positiveOraclesUnchanged": true,
+  "producerChanged": false,
+  "packageChanged": false,
+  "queriesMustSucceed": false,
+  "diagnosticFields": [
+    "operation status HRESULT",
+    "errors HRESULT / length",
+    "HasOutput OBJECT",
+    "GetOutput OBJECT HRESULT / pointer / byte size",
+    "GetResult HRESULT / pointer / byte size"
+  ],
+  "nativeExecuted": false,
+  "acceptance": false
+}

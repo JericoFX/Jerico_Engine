@@ -1,0 +1,12 @@
+{
+  "label": "existing-output",
+  "scope": "PRODUCER",
+  "secondaryMissingPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-negatives\\attempt-rev3\\fixtures\\missing-secondary-cl.exe",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0322941,
+  "expectedError": "JE DXC output exists; previous attempts are retained",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION"
+}

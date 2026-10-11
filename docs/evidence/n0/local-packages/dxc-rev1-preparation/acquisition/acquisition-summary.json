@@ -1,0 +1,23 @@
+[
+  {
+    "sha256": "1b36fde66ebad5806563373cb722b3c57e8b1d580880e898b3b9d6a5e4529e42",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\dxc\\dxc-1cc0ab76dafe08a4144e419e619a8951a3d219db.tar.gz",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "bytes": 24722611,
+    "id": "dxc"
+  },
+  {
+    "sha256": "1bf0568bad1f9e30fce8d3199e54ae7ade1c16dbe913b5afd9b499149a9bb9a5",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-headers\\spirv-headers-aa6cef192b8e693916eb713e7a9ccadf06062ceb.tar.gz",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "bytes": 547754,
+    "id": "spirv-headers"
+  },
+  {
+    "sha256": "7f6561171be2f314a26cb2a686d653050ee318655a89970d41ab3bef3269a4db",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\acquisition\\spirv-tools\\spirv-tools-a62abcb402009b9ca5975e6167c09f237f630e0e.tar.gz",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "bytes": 3289276,
+    "id": "spirv-tools"
+  }
+]
