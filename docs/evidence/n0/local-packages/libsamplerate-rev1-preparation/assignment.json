@@ -1,0 +1,23 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "owner": "Luna only after parent review",
+  "scope": "Single offline producer; no consumer/guards/Root/retry",
+  "launcher": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-preparation/RunProducer.ps1"
+  ],
+  "scriptSHA256": "72DE9CA77C2C481D8E1358E16BE5090D1C79752EB47690C4905A2B2E090EE4A2",
+  "sourceFreeze": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-freeze-libsamplerate-rev1.json",
+  "sourceFreezeSHA256": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+  "inputs": 136,
+  "nativeArgumentCount": 5,
+  "freshOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build",
+  "runEvidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-preparation/producer-run",
+  "nativeNotRun": true,
+  "driverParseErrors": 0,
+  "consumerRequiresFreshAudit": true
+}

@@ -1,0 +1,19 @@
+{
+  "status": "EXTERNAL_STDLIB_DATA_AUDIT_EXIT_ZERO",
+  "receiptUTC": "2026-10-11T10:16:08.8880994Z",
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+  "executableSHA256": "6235ABE2248C14AD86DFE00DBB7BC2396EB4B91F663412C211905E279BCE9D6E",
+  "arguments": [
+    "-I",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-package-audit/AuditPackage.py"
+  ],
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exitCode": 0,
+  "scope": "Own tar/json/hash/path/struct COFF data reader only; no acquired code loading or execution",
+  "scriptSHA256": "E4B6B306CCD6F4019832CEB52F5F8BE83685F5EC1EFEBDBE2181ED51A8848C3B",
+  "stdoutSHA256": "1630F5DBA88685EC2EF78207F1E6D1D24F39F76B55059C5ECDA04D87201E2CAC",
+  "stderrBytes": 0,
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "nativeBuildTestExecuted": false
+}

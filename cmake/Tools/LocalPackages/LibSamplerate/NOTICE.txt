@@ -1,0 +1,13 @@
+libsamplerate 0.2.1: copyright Erik de Castro Lopo and contributors.
+BSD-2-Clause. Full original terms: libsamplerate/COPYING and
+LICENSES/libsamplerate/COPYING. Full compiled-source and coefficient/header
+notices are retained under LICENSES/libsamplerate/source-notices.
+JE rev2 modification (BSD-2-Clause): src_new rejects channels below one before
+allocation, returning NULL and optionally SRC_ERR_BAD_CHANNEL_COUNT. Original
+samplerate.c.original and the exact patch with pre/post hashes are retained in
+LICENSES/libsamplerate/patch-provenance; source-notices/samplerate.c is modified.
+
+Original O3DE recipe and JE packaging glue: Apache-2.0 OR MIT;
+full terms under LICENSES/O3DE. This package is a new local Windows artifact,
+not the legacy AWS package and not a claim of its binary ABI or provenance.
+No compiler, Python, libsndfile, example/test executable or installer is shipped.

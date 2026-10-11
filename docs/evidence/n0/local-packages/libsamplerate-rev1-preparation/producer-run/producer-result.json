@@ -1,0 +1,29 @@
+{
+  "wrapperStartUTC": "2026-10-11T10:08:54.7270712Z",
+  "wrapperEndUTC": "2026-10-11T10:09:18.1520162Z",
+  "wrapperPID": 180456,
+  "nativeAttempted": true,
+  "nativePID": 264916,
+  "nativeStartUTC": "2026-10-11T10:08:54.9159356Z",
+  "nativeExitCode": 0,
+  "nativeElapsedSeconds": 23.0591641,
+  "preflightMatches": 136,
+  "postflightMatches": 136,
+  "inputs": 136,
+  "wrapperFailure": null,
+  "rawLogs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-preparation\\producer-run\\producer.stdout.raw.log",
+      "bytes": 263,
+      "sha256": "C8BEFFD00A600BA932AF5BCB03A1F1533309A0AF194C2B7D754ECE2E5CC5E233"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-preparation\\producer-run\\producer.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build",
+  "outputRetained": true,
+  "scope": "Producer only; no consumer/guards/Root; no retries; no acceptance claim"
+}

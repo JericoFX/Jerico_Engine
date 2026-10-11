@@ -150,3 +150,5 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /cmake/Tools/LocalPackages/ASTCEncoder/NOTICE.txt -text whitespace=cr-at-eol
 /cmake/Tools/LocalPackages/ASTCEncoder/PatchHunks.json -text whitespace=cr-at-eol
 /cmake/Tools/LocalPackages/ASTCEncoder/README.md -text whitespace=cr-at-eol
+# Preserve the validated channel-guard patch, including unified-diff context whitespace.
+/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch -text -whitespace

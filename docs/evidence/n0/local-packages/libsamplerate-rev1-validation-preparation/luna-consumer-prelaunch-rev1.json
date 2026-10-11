@@ -1,0 +1,58 @@
+{
+  "status": "CONSUMER_PREFLIGHT_READY",
+  "utc": "2026-10-11T10:21:00.1440631Z",
+  "callerPID": 200724,
+  "workingDirectory": "F:\\JericoEngine",
+  "launcher": {
+    "path": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+    "edition": "Core",
+    "version": "7.6.5",
+    "processPath": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+  },
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/RunConsumer.ps1"
+  ],
+  "fixedHashes": {
+    "assignment": "54747431982F0AFB1196E29A9751414584F2D90E9A3546C4A6FC3595A258505D",
+    "driver-freeze": "6899CF7A787BB3FF53ADD6188CFE41D63F985CEC4D0E03EE3F36B7CDA90B84A6",
+    "validation-inputs": "000D9AE5519DDFA6E00FC995B73AA6DB03F42F5F842713B1B159EDCF26C6A155",
+    "parent-review": "09A1DFB5C75541871326C552178B1B3A36080805AF4F298953E51012270F088B",
+    "consumer-driver": "A02B31C9DFFE266BCC6B96A39B774DC022BA23D9F2B302816E3AD7C53ADE9E0A",
+    "guards-driver": "05319411C8060FA8EC6741E388A42852A6E00BE1C3168032D4FD9C31D9AEA05A",
+    "authority": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "freeze": {
+    "entries": 177,
+    "sha256": "6899CF7A787BB3FF53ADD6188CFE41D63F985CEC4D0E03EE3F36B7CDA90B84A6",
+    "rehashMatches": 177,
+    "rehashMismatches": 0,
+    "validationEntries": 174
+  },
+  "parentReview": {
+    "sha256": "09A1DFB5C75541871326C552178B1B3A36080805AF4F298953E51012270F088B",
+    "status": "PARENT DISPATCH DATA REVIEW PASS; NATIVE NOT RUN",
+    "inputDeltas": 0
+  },
+  "producer": {
+    "nativeExit": 0,
+    "elapsedSeconds": 23.0591641,
+    "postflightMatches": 136
+  },
+  "outputs": {
+    "consumerBuild": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-consumer",
+    "consumerBuildAbsent": true,
+    "consumerEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run",
+    "consumerEvidenceAbsent": true,
+    "guardFixtures": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-guards",
+    "guardFixturesAbsent": true,
+    "guardEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\guards-run",
+    "guardEvidenceAbsent": true
+  },
+  "relatedProcesses": [],
+  "preflightNote": "An initial local comparison used a stale CommonExecution hash; the current hash matched the frozen entry and the complete 177-entry rehash then passed."
+}

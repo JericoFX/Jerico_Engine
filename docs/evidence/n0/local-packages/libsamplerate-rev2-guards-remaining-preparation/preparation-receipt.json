@@ -1,0 +1,16 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "utc": "2026-10-11T10:51:37.8268194Z",
+  "original195Matches": 195,
+  "validationInputs": 208,
+  "driverFreezeCount": 209,
+  "parseErrors": 0,
+  "review": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/prior-two-guards-whitespace-review.json",
+  "reviewSHA256": "6AB623696CECA998A641D3124111B06B7C3DF67A704125A3567918CD87752A15",
+  "assignment": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/assignment.json",
+  "assignmentSHA256": "2F08F3AF4B97E2B5A51D2A5A337DD2172D0690122A8C274841AAD840BE72A440",
+  "historicalEvidenceRewritten": false,
+  "fixtureBytesRewritten": false,
+  "productSourcesModified": false,
+  "nativeExecuted": false
+}

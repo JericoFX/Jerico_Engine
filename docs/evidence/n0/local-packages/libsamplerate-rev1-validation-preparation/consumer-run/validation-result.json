@@ -1,0 +1,88 @@
+{
+  "status": "FAIL_OR_INCOMPLETE",
+  "wrapperStartUTC": "2026-10-11T10:21:04.3277455Z",
+  "wrapperEndUTC": "2026-10-11T10:21:13.7377191Z",
+  "wrapperPID": 93720,
+  "preflightMatches": 174,
+  "postflightMatches": 174,
+  "inputs": 174,
+  "phases": [
+    {
+      "name": "configure",
+      "utc": "2026-10-11T10:21:04.5788447Z",
+      "PID": 189228,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "-S",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests",
+        "-B",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+        "-G",
+        "Visual Studio 17 2022",
+        "-A",
+        "x64",
+        "-T",
+        "v143",
+        "-DJE_SAMPLERATE_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-package-audit/extracted/libsamplerate-0.2.1-je-rev1-windows"
+      ],
+      "count": 11,
+      "exitCode": 0,
+      "elapsedSeconds": 5.8526533,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\configure.stdout.raw.log",
+      "stdoutBytes": 852,
+      "stdoutSHA256": "6499649F14B85FC3E5420F5709AEC8319D7C27BED37B391C4874A9931711558D",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\configure.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "name": "build-Release",
+      "utc": "2026-10-11T10:21:10.4505613Z",
+      "PID": 326816,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "--build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+        "--config",
+        "Release"
+      ],
+      "count": 4,
+      "exitCode": 0,
+      "elapsedSeconds": 2.9092963,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\build-Release.stdout.raw.log",
+      "stdoutBytes": 512,
+      "stdoutSHA256": "B1426AF39B17EA43FCAFADB12CDC9B540BB6D0DAA96C05599C09D55498510B35",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\build-Release.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "name": "ctest-Release",
+      "utc": "2026-10-11T10:21:13.3674748Z",
+      "PID": 35796,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "arguments": [
+        "--test-dir",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+        "-C",
+        "Release",
+        "--output-on-failure",
+        "--output-junit",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\Release-junit.xml"
+      ],
+      "count": 7,
+      "exitCode": 8,
+      "elapsedSeconds": 0.1559405,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\ctest-Release.stdout.raw.log",
+      "stdoutBytes": 1218,
+      "stdoutSHA256": "8C8866EC416198C48DC23AB305647AAA8D576D7EAFAB3512A38E1F12CEB1E3F8",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\ctest-Release.stderr.raw.log",
+      "stderrBytes": 27,
+      "stderrSHA256": "18E00877DC1071C85CD4F479D451BEBEEF8309022E46CF8C63B0BED5151984A4"
+    }
+  ],
+  "checks": [],
+  "failure": "System.Management.Automation.RuntimeException: Release CTest failed; no retry",
+  "acceptance": "Parent only; this driver does not certify Atom/editor/AP/cook/runtime",
+  "retry": "None"
+}

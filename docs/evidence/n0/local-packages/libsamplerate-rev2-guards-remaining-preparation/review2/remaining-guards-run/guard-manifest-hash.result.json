@@ -1,0 +1,22 @@
+{
+  "name": "guard-manifest-hash",
+  "utc": "2026-10-11T10:56:54.0957300Z",
+  "PID": 30472,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+    "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.json",
+    "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-manifest-hash",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+  ],
+  "count": 5,
+  "exitCode": 1,
+  "elapsedSeconds": 0.0500266,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-guards-remaining-preparation\\review2\\remaining-guards-run\\guard-manifest-hash.stdout.raw.log",
+  "stdoutBytes": 0,
+  "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-guards-remaining-preparation\\review2\\remaining-guards-run\\guard-manifest-hash.stderr.raw.log",
+  "stderrBytes": 396,
+  "stderrSHA256": "ABEB798ED1055A16087496852D78D5A06C49E64EB6D37EF0961E0463DEE9ABF2"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PARENT_SOURCE_AND_DISPATCH_REVIEWED",
+  "sourceFreezeEntries": 136,
+  "currentDriverInputsRehashed": 142,
+  "snapshotFiles": 99,
+  "producerArgumentCount": 5,
+  "parseErrors": 0,
+  "sourceFilesRead": 6,
+  "sourceAndAuditReaderRead": true,
+  "lunaReviewSHA256": "FF788D325F8D5E1F3B1E8D519DABAFF44AD9D86907E93292EEA9111C6E0B850B",
+  "assignmentSHA256": "1F8E767A764C9CD7902AC2CD97080D72431C9A219BB1A4E21B322B341E632D4C",
+  "nativeExecuted": false,
+  "allowedNext": "Luna single prepared producer only, preserved CreateNew prelaunch and native PID/argv/raw streams/prepost136; no retry, consumer, guards, Root or Git",
+  "engineAccepted": false
+}

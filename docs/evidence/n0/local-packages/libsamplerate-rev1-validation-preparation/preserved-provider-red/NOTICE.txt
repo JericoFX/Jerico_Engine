@@ -1,0 +1,9 @@
+libsamplerate 0.2.1: copyright Erik de Castro Lopo and contributors.
+BSD-2-Clause. Full original terms: libsamplerate/COPYING and
+LICENSES/libsamplerate/COPYING. Full compiled-source and coefficient/header
+notices are retained under LICENSES/libsamplerate/source-notices.
+
+Original O3DE recipe and JE packaging glue: Apache-2.0 OR MIT;
+full terms under LICENSES/O3DE. This package is a new local Windows artifact,
+not the legacy AWS package and not a claim of its binary ABI or provenance.
+No compiler, Python, libsndfile, example/test executable or installer is shipped.

@@ -1,0 +1,15 @@
+{
+  "status": "PARENT SOURCE/DIFF AND DISPATCH REVIEW PASS",
+  "utc": "2026-10-11T10:37:38.4163058Z",
+  "sourceReviewSHA256": "07EAFD59362612B631B011F3310FEDF9583D621F75B91D2AD5834CF55BEF7C30",
+  "lunaReviewSHA256": "A945CF9E4FC452B5BE62BF01FDFB02DEE270D159FE82FB049377713C92C95E39",
+  "currentDriverInputs": 154,
+  "deltas": 0,
+  "snapshotFiles": 99,
+  "snapshotReparsePoints": 0,
+  "assignmentSHA256": "897AD62B1AB9FAD040AEFD282415FF0267F1BF0598611ED2C855A39DC4BD9D72",
+  "allowedNext": "Luna single prepared producer only; no automatic consumer/guards/Root/retry",
+  "doubleInvalidArgumentDisposition": "Accepted scoped error-selection change: channels<1 is rejected before converter selection. Invalid converter with valid channel preserves original behavior. Public API does not specify precedence when both arguments are invalid; current Microphone uses the valid constant. No legacy behavior/binary ABI acceptance asserted.",
+  "nativeExecuted": false,
+  "packageAccepted": false
+}

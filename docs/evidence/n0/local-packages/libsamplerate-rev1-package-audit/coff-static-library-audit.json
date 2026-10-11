@@ -1,0 +1,81 @@
+{
+  "status": "STATIC_DATA_AUDIT_ONLY",
+  "libraryBytes": 1546392,
+  "librarySHA256": "5DBCD4ADC2F8FA396EC6915399F20A1AA40BB6AAAF27C8E35830F913409A48A8",
+  "machine": "AMD64",
+  "objectMembers": [
+    {
+      "member": "samplerate.dir\\Release\\src_zoh.obj",
+      "machine": "AMD64",
+      "bytes": 9802,
+      "symbolCount": 149,
+      "externalDefinitions": 10
+    },
+    {
+      "member": "samplerate.dir\\Release\\src_sinc.obj",
+      "machine": "AMD64",
+      "bytes": 1496593,
+      "symbolCount": 417,
+      "externalDefinitions": 18
+    },
+    {
+      "member": "samplerate.dir\\Release\\src_linear.obj",
+      "machine": "AMD64",
+      "bytes": 9978,
+      "symbolCount": 149,
+      "externalDefinitions": 10
+    },
+    {
+      "member": "samplerate.dir\\Release\\samplerate.obj",
+      "machine": "AMD64",
+      "bytes": 23402,
+      "symbolCount": 392,
+      "externalDefinitions": 57
+    }
+  ],
+  "apiDefinitions": [
+    "src_callback_new",
+    "src_callback_read",
+    "src_clone",
+    "src_delete",
+    "src_error",
+    "src_float_to_int_array",
+    "src_float_to_short_array",
+    "src_get_channels",
+    "src_get_description",
+    "src_get_name",
+    "src_get_version",
+    "src_int_to_float_array",
+    "src_is_valid_ratio",
+    "src_new",
+    "src_process",
+    "src_reset",
+    "src_set_ratio",
+    "src_short_to_float_array",
+    "src_simple",
+    "src_strerror"
+  ],
+  "apiDefinitionsCount": 20,
+  "dynamicImportObjects": 0,
+  "pythonSymbolReferences": 0,
+  "directives": [
+    {
+      "member": "samplerate.dir\\Release\\src_zoh.obj",
+      "text": "   /DEFAULTLIB:\"MSVCRT\" /DEFAULTLIB:\"OLDNAMES\" "
+    },
+    {
+      "member": "samplerate.dir\\Release\\src_sinc.obj",
+      "text": "   /DEFAULTLIB:\"MSVCRT\" /DEFAULTLIB:\"OLDNAMES\" "
+    },
+    {
+      "member": "samplerate.dir\\Release\\src_linear.obj",
+      "text": "   /DEFAULTLIB:\"MSVCRT\" /DEFAULTLIB:\"OLDNAMES\" "
+    },
+    {
+      "member": "samplerate.dir\\Release\\samplerate.obj",
+      "text": "   /DEFAULTLIB:\"MSVCRT\" /DEFAULTLIB:\"OLDNAMES\" "
+    }
+  ],
+  "loadedOrExecuted": false,
+  "CRTLimit": "Release MSVCRT directives observed; no general mixed-CRT or legacy binary compatibility claim"
+}

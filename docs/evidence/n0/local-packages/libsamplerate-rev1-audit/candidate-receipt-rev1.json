@@ -1,0 +1,73 @@
+{
+  "status": "SOURCE_CANDIDATE_PREPARED; PRODUCER_CONSUMER_GUARDS_NATIVE_NOT_RUN",
+  "sourceCommit": "a147b6dc4046deda22b2aa772b348717de772e2b",
+  "version": "0.2.1",
+  "archiveSHA256": "F90E46BBF9BAE05139E297CEEBD5394EF77CE5E294E6B46BEFFCC15B9446A041",
+  "archiveBytes": 3954416,
+  "sourceFiles": 99,
+  "rawExactPrimaryFiles": 98,
+  "attributeExplainedCRLFFiles": 1,
+  "sourceBytesRewritten": false,
+  "sourceDiffSHA256": "7E0CB1319A07C983F4ACA3265BE4D17D43A7F88FD1F61FB46D13DC6E658C2E39",
+  "sourceFreezeSHA256": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+  "sourceFreezeCount": 136,
+  "argumentAuthoritySHA256": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+  "candidateFiles": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake",
+      "bytes": 7699,
+      "sha256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/Findlibsamplerate.cmake",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt",
+      "bytes": 572,
+      "sha256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/README.md",
+      "bytes": 4708,
+      "sha256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/CMakeLists.txt",
+      "bytes": 1753,
+      "sha256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp",
+      "bytes": 11636,
+      "sha256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9",
+      "role": "candidate-owned"
+    }
+  ],
+  "externalDataReader": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+    "sha256": "6235ABE2248C14AD86DFE00DBB7BC2396EB4B91F663412C211905E279BCE9D6E",
+    "arguments": [
+      "-I",
+      "-B"
+    ],
+    "scope": "stdlib tar/hash/path/json audit only",
+    "firstRawBlobCheckExit": 1,
+    "secondAttributedCheckExit": 0,
+    "sourceExecuted": false,
+    "firstFailurePreserved": true
+  },
+  "closure": "C99 samplerate static, all converters; no downloads or native transitive dependency in selected Windows closure; CheckCSourceRuns processor clipping remains upstream and pending",
+  "consumerScope": "seven cases Release/MD and Debug/MDd against Release/MD library; mixed CRT general compatibility not asserted",
+  "engineAccepted": false,
+  "catalogIntegrated": false,
+  "noGit": true,
+  "noNativeExecuted": true,
+  "noDelegation": true
+}

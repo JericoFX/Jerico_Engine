@@ -1,0 +1,14 @@
+{
+  "status": "STATIC_PREPARATION_CHECKS_ONLY",
+  "immutableSourceMatches": 99,
+  "immutableSourceCount": 99,
+  "archiveMatches": true,
+  "sourceCandidateCount": 6,
+  "driverParseErrors": 0,
+  "sourceFreezeCount": 136,
+  "driverFreezeCount": 142,
+  "sourceFreezeSHA256": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+  "driverFreezeSHA256": "37ABA24BA679D6BE0F707E3096ABB5C66660D9D44E335BB59C33AF0E32D9BB4F",
+  "producerOutputExists": false,
+  "nativeExecuted": false
+}

@@ -1,0 +1,1262 @@
+{
+  "status": "FROZEN_FOR_PARENT_REVIEW; SIX_GUARDS_NOT_RUN",
+  "count": 209,
+  "retainedValidationInputs": 195,
+  "existingGuardFixtures": 2,
+  "entries": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/ApplySamplerateChannelGuard.cmake",
+      "bytes": 3029,
+      "sha256": "D63F807530489B667BA23B3D0BA9A4E66730A2E7732891E4EDAFA5E37404645E",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake",
+      "bytes": 8106,
+      "sha256": "7BA9E954247DA0E97D61AD7B05F50274A08C2A9502D9F2DAC53AE4D5834EB5E5",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/Findlibsamplerate.cmake",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt",
+      "bytes": 890,
+      "sha256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/README.md",
+      "bytes": 5870,
+      "sha256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.json",
+      "bytes": 876,
+      "sha256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch",
+      "bytes": 321,
+      "sha256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/CMakeLists.txt",
+      "bytes": 1753,
+      "sha256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp",
+      "bytes": 13888,
+      "sha256": "F4849B5A9B5DB686084A7E1DF149DEC249F019A3A3EF9C8FD0F5C1CCC76A2072",
+      "role": "candidate-owned"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/.gitattributes",
+      "bytes": 166,
+      "sha256": "5BCE63AABCB7122DDC5919B0F20E9F4E44270F5C9F5426B233D41E68FB7F8804",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/.github/workflows/build.yml",
+      "bytes": 2735,
+      "sha256": "BA3E008FD78225813A923BDB901F07B2A4680EE2B8E626C3B32BDCF0FFE599DA",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/.gitignore",
+      "bytes": 893,
+      "sha256": "601E8AC147B69843E560230129F99D85B39AEF778B740EFBAC811B28657BBEA2",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/AUTHORS",
+      "bytes": 326,
+      "sha256": "1407129D9CF9EE8444E0A397577FA384C945646D74BEB3C66AAB626024418230",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/CMakeLists.txt",
+      "bytes": 3474,
+      "sha256": "1614975A3C60DD7989AD35B3A33713DB2BD85DAB6A267E09F5C5BE4704E5A888",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/COPYING",
+      "bytes": 1334,
+      "sha256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/ChangeLog",
+      "bytes": 36486,
+      "sha256": "FE5DD16BE3B89A0468500F0A72C5A612DDB73F61EDD1D71AFC0D73780645CB79",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/INSTALL",
+      "bytes": 3390,
+      "sha256": "29B2B59283E55CBFABA21D6040203D2EF122AD1C206E83F9DF901FCCAB4DEF47",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Makefile.am",
+      "bytes": 5602,
+      "sha256": "66A03B192E3CEB9A5CED0C3E8FE55A582B1B73B649337CB0B31E5D4260DFF42B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/NEWS",
+      "bytes": 2434,
+      "sha256": "560058624784A49A390B42B08075BE4D55736BBA6648B67ED65EE6328D1EC2FA",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/Readme.md",
+      "bytes": 929,
+      "sha256": "C580A70F9374D3C8AC1E3B52FA8D0C7BD51CF81A4145B96224768B8277B9DBF0",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/generate_filter.m",
+      "bytes": 692,
+      "sha256": "79C99F4FDCD098FD95B07AD78A66C83F36F10433E9E8439438ED52DD9EC1CAA1",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/make_filter.m",
+      "bytes": 4113,
+      "sha256": "A8CAE2AD0469949BD323C59D873224AB2C53FC0FB7C5D575952B06445560C223",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/measure_filter.m",
+      "bytes": 1893,
+      "sha256": "0D4EBADDB715B355EA06EDDC04D4D38A38B46DF2D657CEC7E033D6D1BB3F53E6",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/README.md",
+      "bytes": 2496,
+      "sha256": "FED0E72D78A0AEC9268A1E3FF3F9813DE6101138549F13B4C6102ED2F3296DFB",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Win32/libsamplerate-0.def",
+      "bytes": 477,
+      "sha256": "BE5C2D301193247D6841A65DDB2D53F7720006174C93862AFB31078A712851CC",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/autogen.sh",
+      "bytes": 3675,
+      "sha256": "23983B51D79F04B0DE26910DCEBFE71F46CFAC1A2271C5233E12E42A2C871BA2",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/ClipMode.cmake",
+      "bytes": 2007,
+      "sha256": "9D5548A88CD4F9A223D8D5F13CD8D392876BBF7BDEAF4E644407CAFEFD55CF94",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindFFTW3.cmake",
+      "bytes": 2959,
+      "sha256": "2E73C2EA5314C7E481E4895CD29037D29984015E36F5238C70F04F0671B895CA",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindFLAC.cmake",
+      "bytes": 1697,
+      "sha256": "2C9F6ADCA8E48D6A60EA32C681848DC1F1439A3639A01D2E2B69E7831A208694",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindOgg.cmake",
+      "bytes": 1419,
+      "sha256": "483931C94C78BC7B1BDDA010DF853E31A242312408D436C0C55B84751A2D1ACB",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindOpus.cmake",
+      "bytes": 1571,
+      "sha256": "95A93461A3B707EF8D22EE3CED913F843F3164DA50511D50DD84F6C49AE4F065",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindSndFile.cmake",
+      "bytes": 1532,
+      "sha256": "E913C028EEAD9F9A9C9C0DDFAE3172EB4526B7EAAC8209D5133F273BA3CDBE7D",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindVorbis.cmake",
+      "bytes": 5671,
+      "sha256": "C924F6CA4F9BA0076E68415079498518481A8C02871CB51E502B7FDA6E08293E",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/SampleRateConfig.cmake.in",
+      "bytes": 59,
+      "sha256": "E35421250CF4B716B366DFA1F321B5DDE80AAEAE61B37F54A6A99B010B1F056C",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/config.h.cmake",
+      "bytes": 1889,
+      "sha256": "EF82A2BB6DFD9331755F16CA5A9299C5BA101D0AB5A50FA0AC7EEE1D5693487A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/configure.ac",
+      "bytes": 12457,
+      "sha256": "9D586CEF9202B0860F5F2985E171A09E01FA24ED18FFA4B92F26DA6701ED81E7",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/CMakeLists.txt",
+      "bytes": 277,
+      "sha256": "4E791C96BFA70D19424AFAEB87837BA409A63BF9441CDB6BDB9DD9743EA1DA6D",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/SRC.css",
+      "bytes": 650,
+      "sha256": "A0F9417D431CC2274C44BDF0D646D3E717217CC4A1E9712BDEBEDE13DCE0F575",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/SRC.png",
+      "bytes": 22775,
+      "sha256": "1EB21D2890118CF1B78A36B7B710AC2105890C3BB0A53C1631221A8A3B62472D",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/_config.yml",
+      "bytes": 205,
+      "sha256": "1D1FB6A14A65E0F2054C27151BA82C02183C8BFB9FBE5A8507568360EDDFD932",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/_layouts/default.html",
+      "bytes": 1416,
+      "sha256": "212F5F2CE7F692D4EC61EE1539A238EB22A147ECE9C77B572C3D4AF9B9C7A379",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api.md",
+      "bytes": 1950,
+      "sha256": "18E67D73DB8B49BC2FDCB3A02E10BB3DCA16B8CAFFB201CF48A5FDFAECF0FB08",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_callback.md",
+      "bytes": 3588,
+      "sha256": "4B58AE6C37104CD5CB702E8E9E772400B96B6C98689AB1B87F0A1600EEA08743",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_full.md",
+      "bytes": 4614,
+      "sha256": "74B58D6402938120302B6288CFFD755FA8EE559D55E9D2DA9994B209BF362543",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_misc.md",
+      "bytes": 5789,
+      "sha256": "16654B85973D9680F87BEE7B94205628CDE2CA7893F930490578E92724216CFE",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_simple.md",
+      "bytes": 2429,
+      "sha256": "8BF42FB81BFAD8D5F92960B0A1B8B65A69DA806C4D1DB3FFF87AB38BBB8E389A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/bugs.md",
+      "bytes": 1791,
+      "sha256": "FA2344FC8D23D14E96E3ACE544292ED3306223B3E0689D6FDBAB66FBA21D707F",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/download.md",
+      "bytes": 515,
+      "sha256": "125FF9E2C3E2235516DEDB5884FD5B8E15468CED663D79221E19C60853CBA4F3",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/faq.md",
+      "bytes": 10253,
+      "sha256": "3EF5CD3977BB503316E6443F532211A9F123A136C77117EA20DEA84B6DAED3F0",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/foo_dsp_src9.png",
+      "bytes": 8846,
+      "sha256": "08C53DB4428DCF731F4FFA35448438F6986108AEADBBFAD68B1971ABDEF6157A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/history.md",
+      "bytes": 1786,
+      "sha256": "11625A8F05DDBEBCE5DACA6D60634770E47C568B4C544B68DADBA4EC56EBE3CF",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/index.md",
+      "bytes": 9180,
+      "sha256": "B8D3092E0A1B2E6544352331F27C50F015CACDB1A00AD4D62A000C690882CFC6",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/license.md",
+      "bytes": 377,
+      "sha256": "9722032E4B5684F0ECD399480183A9029623636ADD1E9515621DEFAF8DBCF3ED",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/lists.md",
+      "bytes": 479,
+      "sha256": "A9D37B1A2802CD5999D55D149C69C325BC51E1BE95456ECD94516238E82BEB6B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/paypal.png",
+      "bytes": 770,
+      "sha256": "A49E6087FA53B889B39B214C7AB00F7658F158754E93884486D584CFAA3A775F",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/quality.md",
+      "bytes": 4059,
+      "sha256": "BDE83DABEB25C8BF85A57D844BE2AF199ABDFF212E8F1606F8A694AB7BB6593B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/win32.md",
+      "bytes": 694,
+      "sha256": "6338AF0904D8E6A0D3C5C59F745EB9F30B379328183351EEDA42EE350F40BC76",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/CMakeLists.txt",
+      "bytes": 981,
+      "sha256": "8AF8B5FAA142EF38EA65AF353EC0A297F5EDBCE6568A28027B5E7E26C8351AEF",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/audio_out.c",
+      "bytes": 31012,
+      "sha256": "9FC6CDA3F8B0F0D6630646A0FA3DE163739AAB67771EF2EEEC5C4501DA6EEB4C",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/audio_out.h",
+      "bytes": 842,
+      "sha256": "8703CB3866A4444B0730D5AC61F7607055D4779985BC19E6FA1C4B4A016BB6A5",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/timewarp-file.c",
+      "bytes": 6050,
+      "sha256": "80C7FD9A445502CC5AB388F6DA2B60539431FD98B9D3F752CCA754917A047F7F",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/varispeed-play.c",
+      "bytes": 6167,
+      "sha256": "51D9E5F56486664B5DC8D30BC632BE8E9949DB00F89A36F5C1540C1A83AC87FE",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/include/samplerate.h",
+      "bytes": 4971,
+      "sha256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/libsamplerate.spec.in",
+      "bytes": 1455,
+      "sha256": "D2D1D10278A7E65D34BD394E512914C178F3649ECCC8CC4A09E37B473CE39702",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_append_compile_flags.m4",
+      "bytes": 2992,
+      "sha256": "71173F317BD5D915F6C215569CF2E7DC092BDE838FC07B8EF7ED99F6BAD58176",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_append_flag.m4",
+      "bytes": 2779,
+      "sha256": "06C86FAF340A11A68C24115751DE99247D56836810EF7723A4C0C01D827D0A5B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_append_link_flags.m4",
+      "bytes": 2938,
+      "sha256": "91F7CBA5211E332EBC30BD6D163DB08474FB4D2237650F82F9B02F039A933FB6",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_check_compile_flag.m4",
+      "bytes": 3331,
+      "sha256": "302601F55EDC1C28382E383E4C96EE3820F56DF01964350A8BAE16AFD2F27F78",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_check_link_flag.m4",
+      "bytes": 3183,
+      "sha256": "602348BE096FB9883E6A12A5619021E8DAA2D6B41294AE8EF7701DD62F3D2662",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_compiler_vendor.m4",
+      "bytes": 3606,
+      "sha256": "47BCED48FFA93FA6B1169581DF1D6AF1120BDCF824D5AA51453BD8A320CAD1FF",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_compiler_version.m4",
+      "bytes": 21739,
+      "sha256": "19C12D301755172BE8FC18792105CEF9992C7E9470404DD0DE27D527F775491B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_recursive_eval.m4",
+      "bytes": 2408,
+      "sha256": "E03D2FCB4617102F534439279E152862FF1291F3D4D1B7244022D5950A09B565",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_require_defined.m4",
+      "bytes": 1218,
+      "sha256": "D870B21E817747C6A61A9DD72E06EA45F87E012C7A1A9AA5FF90CD3AF89B3774",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/check_signal.m4",
+      "bytes": 487,
+      "sha256": "DD41BE14C8E2F528B42FFEC64836F00D5ED228BB2F9753FC968947B87654486A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/clip_mode.m4",
+      "bytes": 2378,
+      "sha256": "8999DC496D005F398937B57805A58ADB96B3B3CA282F7B124DDFD263E9027EF0",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/samplerate.pc.in",
+      "bytes": 260,
+      "sha256": "05EC5DA75DE1971AC36518B0612DB9578926406D762333FD00623E7B10FB78D4",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/CMakeLists.txt",
+      "bytes": 4757,
+      "sha256": "9A02CDE4CAAB6A7A71543570BFCCD094AC06FE5B910FA15D957A9BA4C053A408",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/Version_script.in",
+      "bytes": 689,
+      "sha256": "CDFBF22BB0D9E58E77FB8B55A9DA944060A992700550A8ECC7C84BAC4E108A8A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/check_asm.sh",
+      "bytes": 1475,
+      "sha256": "D38AF21DFBBC96CBFE172EDDA3A7B2F5AD80E7AD1615D30D21CA5815DD8370FC",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/common.h",
+      "bytes": 3883,
+      "sha256": "22817E4C09BA5795697333ED1F67FF9255E23CF8DED52E33D07BAC3839B3FF98",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/fastest_coeffs.h",
+      "bytes": 72194,
+      "sha256": "60B342165E7BE7C58EFD9002163C07B65ECE52994EE839DBE06908991EF1FB1B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/high_qual_coeffs.h",
+      "bytes": 9187199,
+      "sha256": "35D4BC6ED93CBD5A89510D7D7EFDA00116B5C28A25369C07288BC7D25A937DF6",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/mid_qual_coeffs.h",
+      "bytes": 606564,
+      "sha256": "22B2B75EF0344F60787F19C3BFD594D47303C0FAFE7E13D0E7517612B8963D7D",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/samplerate.c",
+      "bytes": 12951,
+      "sha256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/src_linear.c",
+      "bytes": 7457,
+      "sha256": "AD5E2DA1C4285001B770CDBB22F11FF3D9FE8EB2CF84CAB4073FB10B8433D16B",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/src_sinc.c",
+      "bytes": 41355,
+      "sha256": "6B29D6D94A0091A4B13ED7709DB881FD9E27C9BFF1A411FEC1B03BD1A8DA1401",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/src_zoh.c",
+      "bytes": 6818,
+      "sha256": "3B9F4ADDC454F7CD2A965951F8D60858AF8164EBD91041062E61566BBAD6157A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/CMakeLists.txt",
+      "bytes": 3730,
+      "sha256": "92EEF771EE6167707D431176968365E8ACE277F874AEDC9CAC0516A70C852185",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/calc_snr.c",
+      "bytes": 6309,
+      "sha256": "6A8064E21D5EEE13BC2C5C58BF6267F6AEBDEA668B21AA16FFCF60E9AB0D14D4",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/callback_hang_test.c",
+      "bytes": 2496,
+      "sha256": "B3AF2CDB0BC12EEA731569C20A43F5F3C0702F25B7873FF46833EE9ACB8F3D3A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/callback_test.c",
+      "bytes": 6164,
+      "sha256": "909A50C1F0BD5BCB872F1E391907AB095C2506C601F7005E7DDD9A6DB1806041",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/clone_test.c",
+      "bytes": 4259,
+      "sha256": "AD9A8897F04DF3200B70EC1DC1789DD4ED85407A116F3F0819E45CDB86FE31D9",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/downsample_test.c",
+      "bytes": 1271,
+      "sha256": "42EF9E2F9DDCAEF3112D4AB1C963202B47ED9B6A98E668331154A9F26B5736A9",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/float_short_test.c",
+      "bytes": 4754,
+      "sha256": "5E67C416855B2FC42578AC7C2CB914335B9C8857820B416485233915743EAECD",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/misc_test.c",
+      "bytes": 4694,
+      "sha256": "57D13EE8FC46A026CD24419EAE8E7332EBC7179DE34C08259095C5383650DD2A",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/multi_channel_test.c",
+      "bytes": 11144,
+      "sha256": "EC127A4F11EF5171E3318182A1170582999EA86AA1C4920DECCFBC12772372A6",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/multichan_throughput_test.c",
+      "bytes": 6281,
+      "sha256": "46D94966929C5982F67DBA9981CC4DF451DA080C6A5D754A9CDFB8E7249D000C",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/nullptr_test.c",
+      "bytes": 2465,
+      "sha256": "008306440CB9959F11FF647DF78DA857200298A083C905482875A3C3E817F3E4",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/reset_test.c",
+      "bytes": 6055,
+      "sha256": "700ACAAD7ECD6BA90407ECF8B5571CB8287118298A11C160AA7EF9BB8D7E2BD1",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/simple_test.c",
+      "bytes": 4518,
+      "sha256": "0939E630A5F9E945B1E41FAFCE8C644FF74FF946AD3D5179FD1CD6AA39545769",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/snr_bw_test.c",
+      "bytes": 10686,
+      "sha256": "7E782D69397EB4B7B12CB0E68A22373540CE5FA584305F787F91DA8EA9D52219",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/src-evaluate.c",
+      "bytes": 13364,
+      "sha256": "E05DB0831FCAA783A3BEDFEF93C1C863146A59F7533E355C598AAA6C8A2812B5",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/streaming_test.c",
+      "bytes": 3817,
+      "sha256": "3468932EB008AC26D0FBFD94B88E4AC142B1E9CD345F2E21A6D633E9CC9FA4DA",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/termination_test.c",
+      "bytes": 9698,
+      "sha256": "AED8DE138E10641241EFD83ECC8BA507F829EEFCBA7709DECFB4E88DA690684C",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/throughput_test.c",
+      "bytes": 6171,
+      "sha256": "512B6BD9D0FA2C628921BD8978D902F953D9DF0B45B08827E944C8F2B0704D29",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/util.c",
+      "bytes": 5288,
+      "sha256": "AD54F1C53468130CFE1A266B5CAC88A427FB9E6475BF33ACC65E113AC98006DB",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/util.h",
+      "bytes": 1245,
+      "sha256": "3DE5558F9CAD059654D8E818DCF6A3FA5383F7E657B392930778E89D5A6E7EBA",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/varispeed_test.c",
+      "bytes": 7838,
+      "sha256": "B900953D87E444AFDACC056556E6CDDD707DCE0EF02E727FC1D09C32DB39DCD1",
+      "role": "immutable-source"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+      "bytes": 3954416,
+      "sha256": "F90E46BBF9BAE05139E297CEEBD5394EF77CE5E294E6B46BEFFCC15B9446A041",
+      "role": "immutable-archive"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+      "bytes": 21751,
+      "sha256": "35D7D9F0A5CA3F563BE8294B2D9CBC43A89B520DFE88BCCDD40FA2DD6EE12FF0",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/primary-tree.json",
+      "bytes": 25912,
+      "sha256": "5DB007258A36B7DE3C5079627479EA03538B2336B9CC6D8BCE9E882A4AA29A32",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-eol-attribution-proof.json",
+      "bytes": 750,
+      "sha256": "0FA96E49A7AFFD71D1F85081A2512CD086D82C4C93A1463E3D9AF9E54029767A",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/archive-audit-before-extraction.json",
+      "bytes": 36219,
+      "sha256": "1DC832BC4FCB4E890DCA8ACF1683E5363643C85C78EE8102781D0136121CB051",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-extraction-receipt.json",
+      "bytes": 436,
+      "sha256": "B3A3BF10E8342E151192EA8CC9FDCD66563A3E56D8A0C3C6498E77410FB180A7",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-get.json",
+      "bytes": 678,
+      "sha256": "53D082D70B88CD392D30951B7E9D1137A4A93001E072D595461AF99583686933",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-head.json",
+      "bytes": 274,
+      "sha256": "B08C05CC647A6ACBFD554F303DE04D85A236B45AFC8D818B90E5D446AFF4883A",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/primary-def-blob.json",
+      "bytes": 912,
+      "sha256": "ED5D838A7B89C6F21BDA55BBD9ECB7665F86DCEA1D9EE6853CFD7AA75B5AE947",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/primary-def.raw",
+      "bytes": 447,
+      "sha256": "4D19392764FBEBE1777924C65E8ADD8E6CF4F78841A2FF3A260BFF09AF92F8C0",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/AuditSourceV2.py",
+      "bytes": 4332,
+      "sha256": "F13A56678BE90EB9D28DEAF87609C239B9D3663A63121286BC75527A6984A853",
+      "role": "source-audit-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/libsamplerate/build_config.json",
+      "bytes": 3687,
+      "sha256": "44DD3C2BA45359BE99E254437EA296419FF14A8507387785C95F69BB3E6A6972",
+      "role": "approved-research-recipe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/libsamplerate/Findlibsamplerate.cmake.template",
+      "bytes": 1253,
+      "sha256": "7F89D3350D4129F9B3A64A8CD9A577BE5BD96523036462C913DAFE8BE59A5F7F",
+      "role": "approved-research-recipe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-history-original-build_config.json",
+      "bytes": 4101,
+      "sha256": "40541E902E5F178EBF6C67330EDC571BA2D9E18080ECFF707566676D9C3EB4B3",
+      "role": "approved-research-recipe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-tag.json",
+      "bytes": 345,
+      "sha256": "B2E247666323264D99EDFE8991A0AA106202871B504722D89B94969E24CB6A2D",
+      "role": "approved-research-recipe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-annotated-tag",
+      "bytes": 2820,
+      "sha256": "0EAC5417FD71CF777D611331C46447075450807D88688921C36E840712EEF266",
+      "role": "approved-research-recipe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/native-recipes-research-summary.json",
+      "bytes": 18801,
+      "sha256": "6A05F3ACD1320F0A9670C23219B8C95B77B860AF7F251722CBD9479B9945C177",
+      "role": "approved-research-recipe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "bytes": 7461,
+      "sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/CMakeLists.txt",
+      "bytes": 2754,
+      "sha256": "DDDDE76007DF444B20F0F3D9E1F724DA3E83B69D0BD16D788E6A8C181A1A514D",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/Source/Platform/Windows/platform_windows.cmake",
+      "bytes": 273,
+      "sha256": "2D9B1A8596AAB520013D760B4A8A417CCCA347B3E9DFC036FE233455374CCF31",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/Source/Platform/Windows/MicrophoneSystemComponent_Windows.cpp",
+      "bytes": 32623,
+      "sha256": "336365697EAFE435204B673C4D76BABAA7DABB8F0728E29E8B27545AED9E0D74",
+      "role": "existing-shared-authority-readonly"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/vcvarsall.bat",
+      "bytes": 10524,
+      "sha256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+      "role": "installed-tool-readonly"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe",
+      "bytes": 436024,
+      "sha256": "58FBE0ACAC5265FE9A93ACB291E1DBD50432C4EBF00FF9B9FB4C34BC0F247C73",
+      "role": "installed-tool-readonly"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "bytes": 677736,
+      "sha256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+      "role": "installed-tool-readonly"
+    },
+    {
+      "path": "C:/Program Files/CMake/bin/cmake.exe",
+      "bytes": 13119048,
+      "sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+      "role": "installed-tool-readonly"
+    },
+    {
+      "path": "C:/Program Files/CMake/bin/ctest.exe",
+      "bytes": 14012488,
+      "sha256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB",
+      "role": "installed-tool-readonly"
+    },
+    {
+      "path": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "bytes": 301368,
+      "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "role": "installed-tool-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/BuildLibSampleratePackage.cmake",
+      "bytes": 7699,
+      "sha256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D",
+      "role": "preserved-rev1-candidate"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/Findlibsamplerate.cmake",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "role": "preserved-rev1-candidate"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/NOTICE.txt",
+      "bytes": 572,
+      "sha256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069",
+      "role": "preserved-rev1-candidate"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/README.md",
+      "bytes": 4708,
+      "sha256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2",
+      "role": "preserved-rev1-candidate"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/tests/CMakeLists.txt",
+      "bytes": 1753,
+      "sha256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "role": "preserved-rev1-candidate"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/tests/LibSamplerateConsumer.cpp",
+      "bytes": 11636,
+      "sha256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9",
+      "role": "preserved-rev1-candidate"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-freeze-libsamplerate-rev1.json",
+      "bytes": 38013,
+      "sha256": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/validation-arguments-rev1.json",
+      "bytes": 4429,
+      "sha256": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/parent-consumer-red-review-rev1.json",
+      "bytes": 4151,
+      "sha256": "64C0C13DFD4D00BE190A52927D430D3B01E8B2CB7C7CF150AF246F0AD5858C77",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/candidate-byte-proof-rev2.json",
+      "bytes": 4050,
+      "sha256": "D3926BCDEA8152BE41A9BB350225C9BB383FA0D3C63D2C82B046AD241AC0D0F9",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/source-diff-rev2.patch",
+      "bytes": 17795,
+      "sha256": "344659698754C19DFAFF802303B5AD73807F383C707DBACEAC434CF3409CF1E4",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/validation-arguments-rev2.json",
+      "bytes": 4461,
+      "sha256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-preparation/PrepareCandidateRev2-v2.ps1",
+      "bytes": 10587,
+      "sha256": "69D28C7045F99395783E4EF8D9B2CF36C9BB53CC43081C8B4B3BDE36DD4AD205",
+      "role": "revision-authority-readonly"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/Findlibsamplerate.cmake",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/O3DE/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/O3DE/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/COPYING",
+      "bytes": 1334,
+      "sha256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/SourceManifest.json",
+      "bytes": 21751,
+      "sha256": "35D7D9F0A5CA3F563BE8294B2D9CBC43A89B520DFE88BCCDD40FA2DD6EE12FF0",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/patch-provenance/SamplerateChannelGuard.json",
+      "bytes": 876,
+      "sha256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/patch-provenance/SamplerateChannelGuard.patch",
+      "bytes": 321,
+      "sha256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/patch-provenance/samplerate.c.original",
+      "bytes": 12951,
+      "sha256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/common.h",
+      "bytes": 3883,
+      "sha256": "22817E4C09BA5795697333ED1F67FF9255E23CF8DED52E33D07BAC3839B3FF98",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/fastest_coeffs.h",
+      "bytes": 72194,
+      "sha256": "60B342165E7BE7C58EFD9002163C07B65ECE52994EE839DBE06908991EF1FB1B",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/high_qual_coeffs.h",
+      "bytes": 9187199,
+      "sha256": "35D4BC6ED93CBD5A89510D7D7EFDA00116B5C28A25369C07288BC7D25A937DF6",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/mid_qual_coeffs.h",
+      "bytes": 606564,
+      "sha256": "22B2B75EF0344F60787F19C3BFD594D47303C0FAFE7E13D0E7517612B8963D7D",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/samplerate.c",
+      "bytes": 13047,
+      "sha256": "14238804216C63FC3CD5B42CDB2FDE1086CC510CAC2F6C13DA4BAFAB55076FAE",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/samplerate.h",
+      "bytes": 4971,
+      "sha256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/src_linear.c",
+      "bytes": 7457,
+      "sha256": "AD5E2DA1C4285001B770CDBB22F11FF3D9FE8EB2CF84CAB4073FB10B8433D16B",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/src_sinc.c",
+      "bytes": 41355,
+      "sha256": "6B29D6D94A0091A4B13ED7709DB881FD9E27C9BFF1A411FEC1B03BD1A8DA1401",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/LICENSES/libsamplerate/source-notices/src_zoh.c",
+      "bytes": 6818,
+      "sha256": "3B9F4ADDC454F7CD2A965951F8D60858AF8164EBD91041062E61566BBAD6157A",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/NOTICE.txt",
+      "bytes": 890,
+      "sha256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/PackageInfo.json",
+      "bytes": 421,
+      "sha256": "2DCD0AE538058582233839DEE6DE03FCE06B88667A0030DA5E4510282B6E8A05",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/README.md",
+      "bytes": 5870,
+      "sha256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/SHA256SUMS",
+      "bytes": 2775,
+      "sha256": "10BE3DD2001311012E2C79CE38E2B45864F640112A1D9B78E07D332439A97211",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/libsamplerate/COPYING",
+      "bytes": 1334,
+      "sha256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/libsamplerate/JERecipe.json",
+      "bytes": 689,
+      "sha256": "BB45173121A25D58D09B59DDD4B0F252C8B177335B7F595C631F0856CE54DB00",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/libsamplerate/include/samplerate.h",
+      "bytes": 4971,
+      "sha256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows/libsamplerate/lib/samplerate.lib",
+      "bytes": 1546456,
+      "sha256": "F522378C7F300B064A678DAD0663D73D5B917769D1BC421933D8786DA15A8DB3",
+      "role": "audited-rev2-sdk"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/source-freeze-libsamplerate-rev2.json",
+      "bytes": 43514,
+      "sha256": "1AFEF870853E0E9FB64FB27F9DE7A24C3B4081252B0314A93AA6075C8BC03C29",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-build/packages/libsamplerate-0.2.1-je-rev2-windows.tar.xz",
+      "bytes": 3954496,
+      "sha256": "01086CD19A1D241B4B0504FE16142C80BF29AF329543E67FF773301EDAA95122",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-build/packages/libsamplerate-0.2.1-je-rev2-windows.tar.xz.SHA256SUMS",
+      "bytes": 110,
+      "sha256": "7B7581774EEF0319704834C3D252D710F50F0614C5F4C84FF6107264ECB049D7",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-build/source-work/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/samplerate.c",
+      "bytes": 13047,
+      "sha256": "14238804216C63FC3CD5B42CDB2FDE1086CC510CAC2F6C13DA4BAFAB55076FAE",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/archive-audit-before-extraction.json",
+      "bytes": 6334,
+      "sha256": "A1DF5AB91FBCAC2E365EF82596184CB2566E390B6D4C0EDB2A1FD165D27715A3",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/audit-reader-receipt.json",
+      "bytes": 937,
+      "sha256": "31CB1AF5F19B7CB2139EA005A1A6BE1CA40CB51EFFADC0AE486916806A6C6385",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/audit-stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/audit-stdout.log",
+      "bytes": 125,
+      "sha256": "664D0FF7C7B1629AA94834FEEA8FBAD457BBDC7255AB495D33E4B5929CA1D978",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/AuditPackage.py",
+      "bytes": 11802,
+      "sha256": "B4F8B3108BE95185B984B21CF8F13ECAF2662FD398A349D3A961A3E1C13C7CA6",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/coff-static-library-audit.json",
+      "bytes": 2196,
+      "sha256": "0B1F2CFC9C2E5E3AC5017B838A8CEE64F4D69CA7493D952626A3C75BEF077115",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/extracted-package-manifest.json",
+      "bytes": 5575,
+      "sha256": "1CEECD28FCA8A197C4A2C2E8F0A287A3B2688CA27FDE1C8D562118F664E2F256",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/package-audit-summary.json",
+      "bytes": 567,
+      "sha256": "7FDCFA99DD552B171EC5BF9939D39187682629B80BF4AA1D367D96F6D7D0F034",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/patch-provenance-audit.json",
+      "bytes": 1507,
+      "sha256": "DA747CFA3CAA7F9ED69C5E828AD072D66AD49BEBFDC467F3D33DE4DBBC0509F3",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/CommonExecution.ps1",
+      "bytes": 6037,
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunConsumer.ps1",
+      "bytes": 3603,
+      "sha256": "FA429474DC4207B9FE76A1217BD3EAA9DE0352ACF2623FFA5DEEEECDD0FF2759",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunGuards.ps1",
+      "bytes": 3158,
+      "sha256": "C3D474B825AAF8A374612C46A9A9BF4CD73A59E186409A132BC3FB944CA84F61",
+      "role": "archive-audit-and-validation-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/validation-inputs.json",
+      "bytes": 58367,
+      "sha256": "24000B278E47F18F63E8E42E8EA7E57AC9519977CB7832E628C8647590786F8C",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/validation-result.json",
+      "bytes": 4191,
+      "sha256": "0192C2623701D70CD3BF6C87A34ED639AD2EAD7E8D0924CDCFDA280149072BA0",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/prior-two-guards-whitespace-review.json",
+      "bytes": 2728,
+      "sha256": "6AB623696CECA998A641D3124111B06B7C3DF67A704125A3567918CD87752A15",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/invalid-preparation-review.json",
+      "bytes": 741,
+      "sha256": "8D5090489EFC2EB8095D29838C208BEE15F1BC9E2863D3F6F387451A60BA9FD2",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.tar.gz",
+      "bytes": 38,
+      "sha256": "41356F3DE5CB873F6593A272961E20A36CC83EE03F53F81F6517DC1FB5D0621C",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.json",
+      "bytes": 38,
+      "sha256": "41356F3DE5CB873F6593A272961E20A36CC83EE03F53F81F6517DC1FB5D0621C",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/guard-uri.stdout.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/guard-uri.stderr.raw.log",
+      "bytes": 298,
+      "sha256": "0E90D175ED568F66B56A147E20AB71D072928C7EB900EBCD8EEBD365EBE2654F",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/guard-uri.result.json",
+      "bytes": 1273,
+      "sha256": "C9E1938759B2CA3E6B6C4F27764B424293D28647B9130FFEAA000E673CC281EF",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/guard-unc.stdout.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/guard-unc.stderr.raw.log",
+      "bytes": 314,
+      "sha256": "D79D9C370A08E9BF26900435498883D4F8D3AC3D0323D394507BBEE786654A7F",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/guard-unc.result.json",
+      "bytes": 1279,
+      "sha256": "33B4AD54DC3077952093E58FD8A161C3AA2D842ED54222C12E9C89BB8B0F1EB2",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/CommonExecution.ps1",
+      "bytes": 6037,
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/RunRemainingGuards.ps1",
+      "bytes": 3801,
+      "sha256": "BCE9D0C8365EC91B19FCC7382E5B2213BC5606A74BAC8473F9E8702EAD4EC0E0",
+      "role": "remaining-guards-frozen-input-or-authority"
+    }
+  ]
+}

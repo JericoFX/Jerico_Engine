@@ -1,0 +1,178 @@
+{
+  "status": "CONSUMER_CASES_PASSED_ONLY",
+  "wrapperStartUTC": "2026-10-11T10:48:18.3000055Z",
+  "wrapperEndUTC": "2026-10-11T10:48:31.6351779Z",
+  "wrapperPID": 158732,
+  "preflightMatches": 195,
+  "postflightMatches": 195,
+  "inputs": 195,
+  "phases": [
+    {
+      "name": "configure",
+      "utc": "2026-10-11T10:48:18.5685259Z",
+      "PID": 275064,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "-S",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests",
+        "-B",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+        "-G",
+        "Visual Studio 17 2022",
+        "-A",
+        "x64",
+        "-T",
+        "v143",
+        "-DJE_SAMPLERATE_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/extracted/libsamplerate-0.2.1-je-rev2-windows"
+      ],
+      "count": 11,
+      "exitCode": 0,
+      "elapsedSeconds": 5.8367801,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\configure.stdout.raw.log",
+      "stdoutBytes": 852,
+      "stdoutSHA256": "A59F1EC89DF76C6684C088FF1A904906AEDB71DED46497CD20C1D309EE579A8D",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\configure.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "name": "build-Release",
+      "utc": "2026-10-11T10:48:24.4236665Z",
+      "PID": 113152,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "--build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+        "--config",
+        "Release"
+      ],
+      "count": 4,
+      "exitCode": 0,
+      "elapsedSeconds": 2.8727302,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\build-Release.stdout.raw.log",
+      "stdoutBytes": 512,
+      "stdoutSHA256": "A2D9328A26C50EBDEF5AAA22CC739CAEA712781310D5C887CBC942BE73FB8E01",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\build-Release.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "name": "ctest-Release",
+      "utc": "2026-10-11T10:48:27.3039540Z",
+      "PID": 110328,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "arguments": [
+        "--test-dir",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+        "-C",
+        "Release",
+        "--output-on-failure",
+        "--output-junit",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\Release-junit.xml"
+      ],
+      "count": 7,
+      "exitCode": 0,
+      "elapsedSeconds": 0.1533391,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\ctest-Release.stdout.raw.log",
+      "stdoutBytes": 1107,
+      "stdoutSHA256": "037C890BB4D0D8BB1D317AE550A35313CFECB5858345AD40F91187AFB463031F",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\ctest-Release.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "name": "build-Debug",
+      "utc": "2026-10-11T10:48:27.4994341Z",
+      "PID": 208044,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "--build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+        "--config",
+        "Debug"
+      ],
+      "count": 4,
+      "exitCode": 0,
+      "elapsedSeconds": 3.0719314,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\build-Debug.stdout.raw.log",
+      "stdoutBytes": 783,
+      "stdoutSHA256": "399C68D123AD7CC8F4B51C6877DDF9ACEB3216356F34B05F6B6FF008ED67414C",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\build-Debug.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "name": "ctest-Debug",
+      "utc": "2026-10-11T10:48:30.5782045Z",
+      "PID": 242956,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "arguments": [
+        "--test-dir",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+        "-C",
+        "Debug",
+        "--output-on-failure",
+        "--output-junit",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\Debug-junit.xml"
+      ],
+      "count": 7,
+      "exitCode": 0,
+      "elapsedSeconds": 0.8480641,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\ctest-Debug.stdout.raw.log",
+      "stdoutBytes": 1107,
+      "stdoutSHA256": "5E887A68AF6783676367814F1A5079117D41D788589916AACE0EDB9792BA8ECC",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\ctest-Debug.stderr.raw.log",
+      "stderrBytes": 0,
+      "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "checks": [
+    {
+      "configuration": "Release",
+      "cases": 7,
+      "names": [
+        "JE.LocalPackages.LibSamplerate.api",
+        "JE.LocalPackages.LibSamplerate.conversions",
+        "JE.LocalPackages.LibSamplerate.fast",
+        "JE.LocalPackages.LibSamplerate.medium",
+        "JE.LocalPackages.LibSamplerate.best",
+        "JE.LocalPackages.LibSamplerate.reset",
+        "JE.LocalPackages.LibSamplerate.errors"
+      ],
+      "junit": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\Release-junit.xml",
+      "junitSHA256": "465E4E7EA533DE88C057F131A9607B9AE66EC64F442E6D1B51CAFBFAAAC759BC",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-consumer\\Release\\JELibSamplerateConsumer.exe",
+      "executableSHA256": "910A53DB77CF02FAA11E413A13FE2F66D67712506BFFD56AF3B934D88AF021E0",
+      "staticLibraryPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows\\libsamplerate\\lib\\samplerate.lib",
+      "staticLibrarySHA256": "F522378C7F300B064A678DAD0663D73D5B917769D1BC421933D8786DA15A8DB3",
+      "linkedVersionProof": "Frozen api case requires exact src_get_version() libsamplerate-0.2.1 string",
+      "CRT": "Release /MD library; consumer /MD or /MDd; raw diagnostics retained, general mixed-CRT compatibility not certified",
+      "status": "NATIVE_CASES_PASSED"
+    },
+    {
+      "configuration": "Debug",
+      "cases": 7,
+      "names": [
+        "JE.LocalPackages.LibSamplerate.api",
+        "JE.LocalPackages.LibSamplerate.conversions",
+        "JE.LocalPackages.LibSamplerate.fast",
+        "JE.LocalPackages.LibSamplerate.medium",
+        "JE.LocalPackages.LibSamplerate.best",
+        "JE.LocalPackages.LibSamplerate.reset",
+        "JE.LocalPackages.LibSamplerate.errors"
+      ],
+      "junit": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\Debug-junit.xml",
+      "junitSHA256": "7ADCB972C442E5DB3A9527840F47359FFABB9F24EED110FF9288EA1DC47D93A8",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-consumer\\Debug\\JELibSamplerateConsumer.exe",
+      "executableSHA256": "F891CE7D5FE5D074150B4861D054F8F3C6D219F5BBA01250046735AE12995F5A",
+      "staticLibraryPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows\\libsamplerate\\lib\\samplerate.lib",
+      "staticLibrarySHA256": "F522378C7F300B064A678DAD0663D73D5B917769D1BC421933D8786DA15A8DB3",
+      "linkedVersionProof": "Frozen api case requires exact src_get_version() libsamplerate-0.2.1 string",
+      "CRT": "Release /MD library; consumer /MD or /MDd; raw diagnostics retained, general mixed-CRT compatibility not certified",
+      "status": "NATIVE_CASES_PASSED"
+    }
+  ],
+  "failure": "",
+  "acceptance": "Parent only; this driver does not certify Atom/editor/AP/cook/runtime",
+  "retry": "None"
+}

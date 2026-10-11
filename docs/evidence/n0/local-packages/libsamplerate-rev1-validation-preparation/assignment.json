@@ -1,0 +1,58 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "owner": "Luna only after explicit parent review/dispatch",
+  "launcher": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "inputs": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/validation-inputs.json",
+    "sha256": "000D9AE5519DDFA6E00FC995B73AA6DB03F42F5F842713B1B159EDCF26C6A155",
+    "count": 174,
+    "original136Unchanged": true,
+    "sdk24ByteExact": true,
+    "driverSourceCount": 3
+  },
+  "consumer": {
+    "wrapperArguments": [
+      "-NoLogo",
+      "-NoProfile",
+      "-File",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/RunConsumer.ps1"
+    ],
+    "scriptSHA256": "A02B31C9DFFE266BCC6B96A39B774DC022BA23D9F2B302816E3AD7C53ADE9E0A",
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "cases": 7,
+    "nativeConfigureArgumentAuthority": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/validation-arguments-rev1.json",
+    "authoritySHA256": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+    "freshBuild": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+    "sdkRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-package-audit\\extracted\\libsamplerate-0.2.1-je-rev1-windows",
+    "evidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/consumer-run",
+    "JUnit": [
+      "Release-junit.xml",
+      "Debug-junit.xml"
+    ],
+    "CRT": "Release static library /MD; consumer /MD or /MDd, all linker diagnostics preserved; no general CRT compatibility acceptance"
+  },
+  "guards": {
+    "wrapperArguments": [
+      "-NoLogo",
+      "-NoProfile",
+      "-File",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/RunGuards.ps1"
+    ],
+    "scriptSHA256": "05319411C8060FA8EC6741E388A42852A6E00BE1C3168032D4FD9C31D9AEA05A",
+    "cases": 8,
+    "fixtures": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-guards",
+    "evidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/guards-run",
+    "authority": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/validation-arguments-rev1.json",
+    "authoritySHA256": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+    "scope": "nonzero native result+specific diagnostic+unchanged output existence; old-output existence only, not a complete private build manifest"
+  },
+  "nativeExecuted": false,
+  "automaticDispatch": false,
+  "retry": false,
+  "Root": false,
+  "runtimeAccepted": false
+}

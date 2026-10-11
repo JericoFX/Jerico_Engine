@@ -1,0 +1,100 @@
+{
+  "utc": "2026-10-11T10:32:20.8645781Z",
+  "status": "STATIC_DATA_CHECK_ONLY; NATIVE_NOT_RUN",
+  "revision": "rev2",
+  "genuineRED": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/parent-consumer-red-review-rev1.json",
+  "genuineREDSHA256": "64C0C13DFD4D00BE190A52927D430D3B01E8B2CB7C7CF150AF246F0AD5858C77",
+  "previousInputsUnchanged": 130,
+  "preservedOriginals": 6,
+  "candidateFiles": 9,
+  "changed": 4,
+  "added": 3,
+  "unchanged": 2,
+  "files": [
+    {
+      "status": "ADDED",
+      "oldSHA256": null,
+      "newSHA256": "D63F807530489B667BA23B3D0BA9A4E66730A2E7732891E4EDAFA5E37404645E",
+      "newBytes": 3029,
+      "oldBytes": 0,
+      "path": "ApplySamplerateChannelGuard.cmake"
+    },
+    {
+      "status": "CHANGED",
+      "oldSHA256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D",
+      "newSHA256": "7BA9E954247DA0E97D61AD7B05F50274A08C2A9502D9F2DAC53AE4D5834EB5E5",
+      "newBytes": 8106,
+      "oldBytes": 7699,
+      "path": "BuildLibSampleratePackage.cmake"
+    },
+    {
+      "status": "UNCHANGED",
+      "oldSHA256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "newSHA256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "newBytes": 1720,
+      "oldBytes": 1720,
+      "path": "Findlibsamplerate.cmake"
+    },
+    {
+      "status": "CHANGED",
+      "oldSHA256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069",
+      "newSHA256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174",
+      "newBytes": 890,
+      "oldBytes": 572,
+      "path": "NOTICE.txt"
+    },
+    {
+      "status": "CHANGED",
+      "oldSHA256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2",
+      "newSHA256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C",
+      "newBytes": 5870,
+      "oldBytes": 4708,
+      "path": "README.md"
+    },
+    {
+      "status": "ADDED",
+      "oldSHA256": null,
+      "newSHA256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955",
+      "newBytes": 876,
+      "oldBytes": 0,
+      "path": "SamplerateChannelGuard.json"
+    },
+    {
+      "status": "ADDED",
+      "oldSHA256": null,
+      "newSHA256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B",
+      "newBytes": 321,
+      "oldBytes": 0,
+      "path": "SamplerateChannelGuard.patch"
+    },
+    {
+      "status": "UNCHANGED",
+      "oldSHA256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "newSHA256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "newBytes": 1753,
+      "oldBytes": 1753,
+      "path": "tests/CMakeLists.txt"
+    },
+    {
+      "status": "CHANGED",
+      "oldSHA256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9",
+      "newSHA256": "F4849B5A9B5DB686084A7E1DF149DEC249F019A3A3EF9C8FD0F5C1CCC76A2072",
+      "newBytes": 13888,
+      "oldBytes": 11636,
+      "path": "tests/LibSamplerateConsumer.cpp"
+    }
+  ],
+  "originalSource": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/samplerate.c",
+  "originalSHA256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B",
+  "modifiedSHA256ComputedInMemory": "14238804216C63FC3CD5B42CDB2FDE1086CC510CAC2F6C13DA4BAFAB55076FAE",
+  "modifiedBytes": 13047,
+  "uniqueHunk": true,
+  "exactPatchEqualsApplicator": true,
+  "immutableSourceWritten": false,
+  "positiveCaseOraclesByteExact": true,
+  "existingErrorsTailAndDispatchByteExact": true,
+  "sourceDiff": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/source-diff-rev2.patch",
+  "sourceDiffSHA256": "344659698754C19DFAFF802303B5AD73807F383C707DBACEAC434CF3409CF1E4",
+  "nativeExecuted": false,
+  "scope": "One src_new private-work guard; all five converters/version/API/CRT unchanged; consumer error oracle strengthened"
+}

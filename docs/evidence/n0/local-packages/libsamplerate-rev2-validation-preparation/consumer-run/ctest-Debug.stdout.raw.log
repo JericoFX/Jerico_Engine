@@ -1,0 +1,19 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+    Start 1: JE.LocalPackages.LibSamplerate.api
+1/7 Test #1: JE.LocalPackages.LibSamplerate.api ...........   Passed    0.03 sec
+    Start 2: JE.LocalPackages.LibSamplerate.conversions
+2/7 Test #2: JE.LocalPackages.LibSamplerate.conversions ...   Passed    0.01 sec
+    Start 3: JE.LocalPackages.LibSamplerate.fast
+3/7 Test #3: JE.LocalPackages.LibSamplerate.fast ..........   Passed    0.01 sec
+    Start 4: JE.LocalPackages.LibSamplerate.medium
+4/7 Test #4: JE.LocalPackages.LibSamplerate.medium ........   Passed    0.02 sec
+    Start 5: JE.LocalPackages.LibSamplerate.best
+5/7 Test #5: JE.LocalPackages.LibSamplerate.best ..........   Passed    0.03 sec
+    Start 6: JE.LocalPackages.LibSamplerate.reset
+6/7 Test #6: JE.LocalPackages.LibSamplerate.reset .........   Passed    0.01 sec
+    Start 7: JE.LocalPackages.LibSamplerate.errors
+7/7 Test #7: JE.LocalPackages.LibSamplerate.errors ........   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   0.82 sec

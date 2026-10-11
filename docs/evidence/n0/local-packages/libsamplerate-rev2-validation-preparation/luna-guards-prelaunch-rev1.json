@@ -1,0 +1,54 @@
+{
+  "status": "GUARDS_PREFLIGHT_READY",
+  "utc": "2026-10-11T10:48:59.8790961Z",
+  "callerPID": 36756,
+  "hashes": {
+    "assignment": "000D2D8B8944B5245527B6AB72D840B9CA17C4DEFE73A3A228E35E464151E193",
+    "parentReview": "C682CA5BB71ADBDA93B8292B4F209FA2A60BC32240894BFA2DD35B52C66D0439",
+    "driverFreeze": "C4515095FBB0F721788F343707FE1F36E0F0E742F709F3218789914C1A2E9852",
+    "validationInputs": "24000B278E47F18F63E8E42E8EA7E57AC9519977CB7832E628C8647590786F8C",
+    "authority": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+    "consumerDriver": "FA429474DC4207B9FE76A1217BD3EAA9DE0352ACF2623FFA5DEEEECDD0FF2759",
+    "guardDriver": "C3D474B825AAF8A374612C46A9A9BF4CD73A59E186409A132BC3FB944CA84F61",
+    "commonExecution": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "consumerEvidence": {
+    "validationResult": "B3689F96A42C820FE0A5716DFB91CE4C47EF5B55A61435ECE3D94153361B16A9",
+    "status": "CONSUMER_CASES_PASSED_ONLY",
+    "preflightMatches": 195,
+    "postflightMatches": 195,
+    "releaseCases": 7,
+    "releaseFailures": 0,
+    "releaseSkips": 0,
+    "debugCases": 7,
+    "debugFailures": 0,
+    "debugSkips": 0
+  },
+  "preGuardRehash": {
+    "freezeEntries": 196,
+    "freezeMatched": 196,
+    "validationEntries": 195,
+    "validationMatched": 195
+  },
+  "guardArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunGuards.ps1"
+  ],
+  "guardCount": 8,
+  "outputs": {
+    "guardBuild": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards",
+    "absent": true,
+    "guardEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run",
+    "absentEvidence": true,
+    "fixtures": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-guards",
+    "absentFixtures": true,
+    "externalOutput": "F:\\JericoEngine\\Dependencies\\libsamplerate-forbidden-output",
+    "absentExternal": true,
+    "oldRev1Output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-build",
+    "retained": true
+  },
+  "relatedProcesses": []
+}

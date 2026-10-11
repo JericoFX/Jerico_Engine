@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-11T10:47:25.4777040Z",
+  "status": "PARENT_STATIC_REVIEW_FOR_SINGLE_LUNA_DISPATCH_ONLY",
+  "assignmentSHA256": "000D2D8B8944B5245527B6AB72D840B9CA17C4DEFE73A3A228E35E464151E193",
+  "frozenInputsMatched": 196,
+  "extractedSdkFilesMatched": 27,
+  "archiveSHA256": "01086CD19A1D241B4B0504FE16142C80BF29AF329543E67FF773301EDAA95122",
+  "sourceAndDriversRead": true,
+  "apiDefinitions": 20,
+  "casesPerConfiguration": 7,
+  "configurations": [
+    "Release",
+    "Debug"
+  ],
+  "negativeGuards": 8,
+  "oldOutputGuardLimit": "Retained rev1 directory existence only",
+  "compatibilityLimit": "No general mixed-CRT or legacy ABI acceptance",
+  "nativeExecutedByParent": false,
+  "engineEditorRuntimeAccepted": false
+}

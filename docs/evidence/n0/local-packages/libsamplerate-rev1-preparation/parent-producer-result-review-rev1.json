@@ -1,0 +1,21 @@
+{
+  "status": "PARENT PRODUCER RESULT REVIEWED; PACKAGE/CONSUMERS/GUARDS STILL PENDING",
+  "nativeExit": 0,
+  "nativePID": 264916,
+  "wrapperPID": 180456,
+  "elapsedSeconds": 23.0591641,
+  "preflightInputs": 136,
+  "postflightInputs": 136,
+  "currentInputsRehashed": 142,
+  "inputDeltas": 0,
+  "archiveBytes": 3947260,
+  "archiveSHA256": "4B202E429E792B7BA7CBE7B592A22CD4E1FEE5E84C47FA10E23B6C33AA5D3028",
+  "nativeResultSHA256": "12C7BEF27CCAB4499AC527933EEF1E1B83274BC708BCF7DE0533FAF089DC4FCD",
+  "nativeStartSHA256": "120BE04A06CF3BB47A5915F4E2C973F5F6C7F8E9B93C751AF9788B70F460624B",
+  "launcherSHA256": "29C33F5B04AF23C309DA08AF83E1FEF49E44580DA360F6B03A2A4FC81568CF75",
+  "warning": "Original minimum-version CMake deprecation retained",
+  "processorClipping": "Original positive/negative probes returned false, no CPU clipping; not a failed configure/build",
+  "consumerAndGuardsExecuted": false,
+  "engineAccepted": false,
+  "catalogIntegrated": false
+}

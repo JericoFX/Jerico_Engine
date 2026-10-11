@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-11T10:56:53.9184859Z",
+  "PID": 273780,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "executableSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+  "arguments": [
+    "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/absent.tar.gz",
+    "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+    "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-missing-archive",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+  ],
+  "count": 5
+}

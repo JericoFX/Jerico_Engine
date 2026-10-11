@@ -1,0 +1,14 @@
+{
+  "status": "ARCHIVE_STATIC_COFF_AND_FRESH_EXTRACTION_VERIFIED_DATA_ONLY",
+  "archiveBytes": 3954496,
+  "archiveSHA256": "01086CD19A1D241B4B0504FE16142C80BF29AF329543E67FF773301EDAA95122",
+  "files": 27,
+  "contentManifestEntries": 26,
+  "sourceNoticeFindPairs": 23,
+  "staticObjectCount": 4,
+  "apiDefinitions": 20,
+  "root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows",
+  "nativeConsumerNotRun": true,
+  "guardsNotRun": true,
+  "engineAccepted": false
+}

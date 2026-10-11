@@ -1,0 +1,81 @@
+{
+  "status": "PARENT NATIVE RED VERIFIED; PACKAGE NOT ACCEPTED",
+  "utc": "2026-10-11T10:23:24.5115701Z",
+  "nativePhases": [
+    {
+      "name": "configure",
+      "PID": 189228,
+      "utc": "2026-10-11T10:21:04.5788447Z",
+      "exitCode": 0,
+      "elapsedSeconds": 5.8526533
+    },
+    {
+      "name": "build-Release",
+      "PID": 326816,
+      "utc": "2026-10-11T10:21:10.4505613Z",
+      "exitCode": 0,
+      "elapsedSeconds": 2.9092963
+    },
+    {
+      "name": "ctest-Release",
+      "PID": 35796,
+      "utc": "2026-10-11T10:21:13.3674748Z",
+      "exitCode": 8,
+      "elapsedSeconds": 0.1559405
+    }
+  ],
+  "resultSHA256": "7A077C998080E8C0398ECB5EFFF409C3B0BE9768E9ED157AEDD11C91869DDC14",
+  "JUnitSHA256": "F5E6ECEC6B4AF56534D7DF1DE5473F86D7923FE637FD904694F6539EDDF22E5F",
+  "passedCases": 6,
+  "failedCase": "JE.LocalPackages.LibSamplerate.errors",
+  "diagnostic": "zero channels were accepted",
+  "skippedCases": 0,
+  "preflightInputs": 174,
+  "postflightInputs": 174,
+  "currentFrozen177Matched": true,
+  "preservedSource": [
+    {
+      "sha256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D",
+      "bytes": 7699,
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\preserved-provider-red\\BuildLibSampleratePackage.cmake",
+      "original": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+    },
+    {
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "bytes": 1720,
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\preserved-provider-red\\Findlibsamplerate.cmake",
+      "original": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/Findlibsamplerate.cmake"
+    },
+    {
+      "sha256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069",
+      "bytes": 572,
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\preserved-provider-red\\NOTICE.txt",
+      "original": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt"
+    },
+    {
+      "sha256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2",
+      "bytes": 4708,
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\preserved-provider-red\\README.md",
+      "original": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/README.md"
+    },
+    {
+      "sha256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "bytes": 1753,
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\preserved-provider-red\\tests\\CMakeLists.txt",
+      "original": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/CMakeLists.txt"
+    },
+    {
+      "sha256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9",
+      "bytes": 11636,
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\preserved-provider-red\\tests\\LibSamplerateConsumer.cpp",
+      "original": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp"
+    }
+  ],
+  "verifiedSource": "src_new forwards without channels<1 validation; sinc_state_new only asserts channels>0 and rejects >MAX_CHANNELS; Release disables asserts",
+  "causalLimit": "Native result demonstrates API rejected condition false; source identifies absent public guard. Pointer/error values not separately traced.",
+  "nextChange": "Private-work src_new channel guard, preserving immutable source snapshot, API/version/converters and strengthening invalid-channel regression",
+  "DebugExecuted": false,
+  "guardsExecuted": false,
+  "catalogIntegrated": false,
+  "sourceRerun": false
+}

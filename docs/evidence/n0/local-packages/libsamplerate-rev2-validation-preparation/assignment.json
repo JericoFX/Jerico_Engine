@@ -1,0 +1,78 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "executionOwner": "Luna only after parent review",
+  "scope": "Consumer Release7+Debug7, then8negative producer guards; no producer/retry/Root",
+  "launcher": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "consumerWrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunConsumer.ps1"
+  ],
+  "guardWrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunGuards.ps1"
+  ],
+  "drivers": [
+    {
+      "bytes": 6037,
+      "parseErrors": 0,
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/CommonExecution.ps1"
+    },
+    {
+      "bytes": 3603,
+      "parseErrors": 0,
+      "sha256": "FA429474DC4207B9FE76A1217BD3EAA9DE0352ACF2623FFA5DEEEECDD0FF2759",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunConsumer.ps1"
+    },
+    {
+      "bytes": 3158,
+      "parseErrors": 0,
+      "sha256": "C3D474B825AAF8A374612C46A9A9BF4CD73A59E186409A132BC3FB944CA84F61",
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/RunGuards.ps1"
+    }
+  ],
+  "validationInputs": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/validation-inputs.json",
+  "validationInputsSHA256": "24000B278E47F18F63E8E42E8EA7E57AC9519977CB7832E628C8647590786F8C",
+  "validationInputCount": 195,
+  "driverFreeze": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/driver-freeze.json",
+  "driverFreezeSHA256": "C4515095FBB0F721788F343707FE1F36E0F0E742F709F3218789914C1A2E9852",
+  "driverFreezeCount": 196,
+  "argumentAuthority": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/validation-arguments-rev2.json",
+  "argumentAuthoritySHA256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+  "SDKRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-package-audit\\extracted\\libsamplerate-0.2.1-je-rev2-windows",
+  "freshConsumerOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+  "freshGuardOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards",
+  "cases": [
+    "api",
+    "conversions",
+    "fast",
+    "medium",
+    "best",
+    "reset",
+    "errors"
+  ],
+  "configurations": [
+    "Release",
+    "Debug"
+  ],
+  "guardNames": [
+    "uri",
+    "unc",
+    "missing-archive",
+    "archive-hash",
+    "missing-manifest",
+    "manifest-hash",
+    "external-output",
+    "old-output"
+  ],
+  "oldOutputGuardScope": "Retained rev1 producer directory existence only; not full build manifest preservation",
+  "CRTLimit": "Release /MD library; Debug /MDd consumer only bounded checks; no general mixed-CRT/legacyABI certification",
+  "nativeNotRun": true,
+  "retry": false,
+  "acceptance": "Parent only after actual results and rehash; no Editor/AP/runtime acceptance"
+}

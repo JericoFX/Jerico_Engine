@@ -1,0 +1,15 @@
+--- a/src/samplerate.c
++++ b/src/samplerate.c
+@@ -25,6 +25,12 @@
+ src_new (int converter_type, int channels, int *error)
+ {
++	if (channels < 1)
++	{	if (error)
++			*error = SRC_ERR_BAD_CHANNEL_COUNT ;
++		return NULL ;
++		} ;
++
+ 	return psrc_set_converter (converter_type, channels, error) ;
+ } /* src_new */
+ 
+ SRC_STATE*

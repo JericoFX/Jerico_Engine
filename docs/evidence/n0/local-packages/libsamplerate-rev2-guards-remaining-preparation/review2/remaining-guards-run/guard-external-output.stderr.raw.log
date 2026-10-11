@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake:13 (message):
+  JE local libsamplerate: output must be beneath this checkout/build
+
+

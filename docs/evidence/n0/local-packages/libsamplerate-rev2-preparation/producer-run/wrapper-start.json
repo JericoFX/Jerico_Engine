@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-11T10:38:11.7765495Z",
+  "PID": 45016,
+  "launcher": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "PowerShell": "7.6.5",
+  "script": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-preparation\\RunProducer.ps1",
+  "scriptSHA256": "737D93EB9D544E3B4C179965B12ABE847100984428D3F84963020B0ACCE553FA",
+  "workingDirectory": "F:/JericoEngine/JericoEngine",
+  "scope": "Single libsamplerate producer, no consumer/guards/Root/retry"
+}

@@ -1,0 +1,7 @@
+C:/Program Files/CMake/bin/cmake.exe
+--build
+F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build/build
+--config
+Release
+--target
+samplerate

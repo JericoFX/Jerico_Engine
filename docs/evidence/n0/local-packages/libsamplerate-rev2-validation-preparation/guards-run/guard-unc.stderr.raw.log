@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_SAMPLERATE_SOURCE_ARCHIVE must be an absolute local
+  path
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake:7 (JE_python_require_local_path)
+
+

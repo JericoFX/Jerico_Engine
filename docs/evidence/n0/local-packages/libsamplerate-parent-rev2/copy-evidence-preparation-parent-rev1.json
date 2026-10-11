@@ -1,0 +1,86 @@
+{
+  "status": "COPIER_PREPARED_NOT_EXECUTED",
+  "utc": "2026-10-11T11:10:11.5474040Z",
+  "script": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-parent-rev2/CopyLibSamplerateEvidenceParentRev1.ps1",
+  "scriptBytes": 12199,
+  "scriptSHA256": "EF74235E41734879591F35A9A99751368EBE2E82421B83F8DE031CCA08B0850C",
+  "parseErrors": 0,
+  "reference": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/copy-root-audit-evidence-parent-rev4.ps1",
+  "referenceSHA256": "9CD82BFCA99034D238A83A004374A6311FBA3828C2B371A910103D7D94A9BA81",
+  "focalAcceptance": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/parent-focal-acceptance-rev1.json",
+  "focalAcceptanceSHA256": "A6AAB1FA968FCC9FA4BB44056457F452E29E8F34BBFCFCD318CCA361ACECB316",
+  "integration": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-parent-rev2/parent-package-integration.json",
+  "integrationSHA256": "DBDFEF16691219C6A01B72896DB6BCEDD652F6F9AEA92D0DA33C5C8206C1DC57",
+  "fixedFolders": [
+    "libsamplerate-rev1-audit",
+    "libsamplerate-rev1-preparation",
+    "libsamplerate-rev1-package-audit",
+    "libsamplerate-rev1-validation-preparation",
+    "libsamplerate-rev2-audit",
+    "libsamplerate-rev2-audit-v2",
+    "libsamplerate-rev2-preparation",
+    "libsamplerate-rev2-package-audit",
+    "libsamplerate-rev2-validation-preparation",
+    "libsamplerate-rev2-guards-remaining-preparation",
+    "libsamplerate-parent-rev2"
+  ],
+  "folderCount": 11,
+  "selectedFilesCurrently": 241,
+  "selectionAddsThisPreparationReceiptWhenParentExecutes": true,
+  "skippedBeforeTraversal": 3,
+  "producerTopLevelLogs": 16,
+  "packageMetadataPairs": 2,
+  "packageMetadataFiles": 4,
+  "preservedProviderOwnSources": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/BuildLibSampleratePackage.cmake",
+      "bytes": 7699,
+      "sha256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/Findlibsamplerate.cmake",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/NOTICE.txt",
+      "bytes": 572,
+      "sha256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/README.md",
+      "bytes": 4708,
+      "sha256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/tests/CMakeLists.txt",
+      "bytes": 1753,
+      "sha256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/tests/LibSamplerateConsumer.cpp",
+      "bytes": 11636,
+      "sha256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9"
+    }
+  ],
+  "providerCurrentFilesUnchanged": 9,
+  "csvCurrentlyRows": 5657,
+  "csvCurrentlyBytes": 1536789,
+  "csvCurrentlySHA256": "FC7A47B850A8991CCB19BC26C7E9171334D5CCDBE87E5FA9B7A326873C7221ED",
+  "csvPreviousBytesUntouchedByPreparation": true,
+  "csvUpdateStrategy": "Append new rows only; raw existing prefix/row order/hash values preserved, hashes compared case-insensitively because historic CSV contains lowercase",
+  "existingCsvOutsideLocalPackagesRows": 7,
+  "oldCsvDestinationVerificationRoot": "docs/evidence/n0; explicit existing rows only, no traversal",
+  "newEvidenceDestination": "docs/evidence/n0/local-packages",
+  "copiesNoClobber": true,
+  "sourceAndDestinationSHA256VerifiedBeforeAfterCopy": true,
+  "excludes": "Archives,binaries,source-work,snapshots,extractedSDK,payloads,stage,fixtures,consumer/build/toolchain trees; only explicit .files/.tar.xz.SHA256SUMS package metadata and six own RED provider sources allowed",
+  "OIIOTraversal": false,
+  "globalRootTraversal": false,
+  "globalMasterUpdate": "Parent final evidence proof step; copier does not traverse or rewrite master",
+  "nativeExecuted": false,
+  "copierExecuted": false,
+  "CSVWritten": false,
+  "docsWritten": false,
+  "pending": "Parent review and execution; preparation does not assert copied evidence or manifest global proof"
+}

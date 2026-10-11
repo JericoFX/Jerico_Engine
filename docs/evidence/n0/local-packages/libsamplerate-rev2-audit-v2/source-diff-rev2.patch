@@ -1,0 +1,274 @@
+--- a/cmake/Tools/LocalPackages/LibSamplerate/ApplySamplerateChannelGuard.cmake
++++ b/cmake/Tools/LocalPackages/LibSamplerate/ApplySamplerateChannelGuard.cmake
+@@ -1,0 +1,55 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++# Apply only to the producer's already-verified private source-work copy.
++cmake_path(IS_PREFIX JE_SAMPLERATE_OUTPUT "${JE_WORK}" NORMALIZE JE_PATCH_IN_OUTPUT)
++if(NOT JE_PATCH_IN_OUTPUT OR JE_WORK STREQUAL JE_SAMPLERATE_OUTPUT)
++    message(FATAL_ERROR "JE local libsamplerate: patch source must be inside the fresh producer output")
++endif()
++set(JE_PATCH_SOURCE "${JE_WORK}/src/samplerate.c")
++set(JE_PATCH_BEFORE_SHA "415263500672638f67c36f1a34332cb2f96762efc801d313fd0ac125ef21524b")
++set(JE_PATCH_AFTER_SHA "14238804216c63fc3cd5b42cdb2fde1086cc510cac2f6c13da4bafab55076fae")
++JE_python_verify_file("${JE_PATCH_SOURCE}" "${JE_PATCH_BEFORE_SHA}" "libsamplerate channel guard original source")
++file(SIZE "${JE_PATCH_SOURCE}" JE_PATCH_BEFORE_SIZE)
++if(NOT JE_PATCH_BEFORE_SIZE EQUAL 12951)
++    message(FATAL_ERROR "JE local libsamplerate: channel guard original size differs")
++endif()
++file(READ "${JE_PATCH_SOURCE}" JE_PATCH_TEXT)
++set(JE_PATCH_BEFORE [=[src_new (int converter_type, int channels, int *error)
++{
++	return psrc_set_converter (converter_type, channels, error) ;
++} /* src_new */]=])
++set(JE_PATCH_AFTER [=[src_new (int converter_type, int channels, int *error)
++{
++	if (channels < 1)
++	{	if (error)
++			*error = SRC_ERR_BAD_CHANNEL_COUNT ;
++		return NULL ;
++		} ;
++
++	return psrc_set_converter (converter_type, channels, error) ;
++} /* src_new */]=])
++string(FIND "${JE_PATCH_TEXT}" "${JE_PATCH_BEFORE}" JE_PATCH_OFFSET)
++if(JE_PATCH_OFFSET LESS 0)
++    message(FATAL_ERROR "JE local libsamplerate: channel guard hunk is missing")
++endif()
++string(LENGTH "${JE_PATCH_BEFORE}" JE_PATCH_HUNK_SIZE)
++math(EXPR JE_PATCH_REMAINDER_OFFSET "${JE_PATCH_OFFSET} + ${JE_PATCH_HUNK_SIZE}")
++string(SUBSTRING "${JE_PATCH_TEXT}" ${JE_PATCH_REMAINDER_OFFSET} -1 JE_PATCH_REMAINDER)
++string(FIND "${JE_PATCH_REMAINDER}" "${JE_PATCH_BEFORE}" JE_PATCH_SECOND_OFFSET)
++if(NOT JE_PATCH_SECOND_OFFSET LESS 0)
++    message(FATAL_ERROR "JE local libsamplerate: channel guard hunk is not unique")
++endif()
++# Keep original and modified notices distinct; never replace the upstream snapshot.
++file(MAKE_DIRECTORY "${JE_SAMPLERATE_OUTPUT}/patch-provenance")
++configure_file("${JE_PATCH_SOURCE}" "${JE_SAMPLERATE_OUTPUT}/patch-provenance/samplerate.c.original" COPYONLY)
++string(REPLACE "${JE_PATCH_BEFORE}" "${JE_PATCH_AFTER}" JE_PATCH_TEXT "${JE_PATCH_TEXT}")
++string(SHA256 JE_PATCH_CANDIDATE_SHA "${JE_PATCH_TEXT}")
++if(NOT JE_PATCH_CANDIDATE_SHA STREQUAL JE_PATCH_AFTER_SHA)
++    message(FATAL_ERROR "JE local libsamplerate: channel guard candidate SHA256 differs")
++endif()
++file(CONFIGURE OUTPUT "${JE_PATCH_SOURCE}" CONTENT "${JE_PATCH_TEXT}" @ONLY NEWLINE_STYLE UNIX)
++JE_python_verify_file("${JE_PATCH_SOURCE}" "${JE_PATCH_AFTER_SHA}" "libsamplerate channel guard patched source")
++file(SIZE "${JE_PATCH_SOURCE}" JE_PATCH_AFTER_SIZE)
++if(NOT JE_PATCH_AFTER_SIZE EQUAL 13047)
++    message(FATAL_ERROR "JE local libsamplerate: channel guard patched size differs")
++endif()
+--- a/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake
++++ b/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake
+@@ -51,6 +51,7 @@
+ if(NOT JE_VERSION_LINE STREQUAL "project(libsamplerate VERSION 0.2.1 LANGUAGES C)")
+     message(FATAL_ERROR "JE local libsamplerate: source version is not 0.2.1")
+ endif()
++include("${CMAKE_CURRENT_LIST_DIR}/ApplySamplerateChannelGuard.cmake")
+ 
+ function(JE_samplerate_native JE_LABEL)
+     file(WRITE "${JE_SAMPLERATE_OUTPUT}/${JE_LABEL}-argv.txt" "")
+@@ -92,6 +93,10 @@
+ file(GLOB JE_NOTICE_SOURCES "${JE_WORK}/src/*.c" "${JE_WORK}/src/*.h")
+ file(COPY ${JE_NOTICE_SOURCES} DESTINATION "${JE_STAGE}/LICENSES/libsamplerate/source-notices")
+ file(COPY "${JE_WORK}/include/samplerate.h" DESTINATION "${JE_STAGE}/LICENSES/libsamplerate/source-notices")
++file(COPY "${JE_SAMPLERATE_OUTPUT}/patch-provenance/samplerate.c.original"
++    "${CMAKE_CURRENT_LIST_DIR}/SamplerateChannelGuard.patch"
++    "${CMAKE_CURRENT_LIST_DIR}/SamplerateChannelGuard.json"
++    DESTINATION "${JE_STAGE}/LICENSES/libsamplerate/patch-provenance")
+ file(COPY "${CMAKE_CURRENT_LIST_DIR}/Findlibsamplerate.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt"
+     "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
+ configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
+@@ -107,12 +112,12 @@
+   "BUILD_SHARED_LIBS": false, "BUILD_TESTING": false,
+   "LIBSAMPLERATE_EXAMPLES": false, "LIBSAMPLERATE_INSTALL": false,
+   "SINC_FAST": true, "SINC_MEDIUM": true, "SINC_BEST": true,
+-  "sourcePatches": [], "legacyBinaryABI": "not asserted",
++  "sourcePatches": ["LICENSES/libsamplerate/patch-provenance/SamplerateChannelGuard.json"], "legacyBinaryABI": "not asserted",
+   "DebugConsumer": "/MDd against Release /MD; bounded testing only, no general CRT compatibility claim"
+ }
+ ]=])
+ set(JE_PACKAGE_STAGE "${JE_STAGE}")
+-set(JE_PACKAGE_NAME "libsamplerate-0.2.1-je-rev1-windows")
++set(JE_PACKAGE_NAME "libsamplerate-0.2.1-je-rev2-windows")
+ set(JE_PACKAGE_OUTPUT "${JE_SAMPLERATE_OUTPUT}/packages")
+ set(JE_PACKAGE_VERSION "0.2.1")
+ set(JE_PACKAGE_SOURCE_COMMIT "${JE_SOURCE_COMMIT}")
+--- a/cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt
++++ b/cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt
+@@ -2,6 +2,10 @@
+ BSD-2-Clause. Full original terms: libsamplerate/COPYING and
+ LICENSES/libsamplerate/COPYING. Full compiled-source and coefficient/header
+ notices are retained under LICENSES/libsamplerate/source-notices.
++JE rev2 modification (BSD-2-Clause): src_new rejects channels below one before
++allocation, returning NULL and optionally SRC_ERR_BAD_CHANNEL_COUNT. Original
++samplerate.c.original and the exact patch with pre/post hashes are retained in
++LICENSES/libsamplerate/patch-provenance; source-notices/samplerate.c is modified.
+ 
+ Original O3DE recipe and JE packaging glue: Apache-2.0 OR MIT;
+ full terms under LICENSES/O3DE. This package is a new local Windows artifact,
+--- a/cmake/Tools/LocalPackages/LibSamplerate/README.md
++++ b/cmake/Tools/LocalPackages/LibSamplerate/README.md
+@@ -1,5 +1,7 @@
+ This candidate builds the original libsamplerate 0.2.1 C API, statically, from
+-commit `a147b6dc4046deda22b2aa772b348717de772e2b`. Native validation is NOT RUN.
++commit `a147b6dc4046deda22b2aa772b348717de772e2b`. Native validation of rev2 is NOT RUN.
++Rev1 producer passed, but its Release consumer was RED: 6/7 cases passed;
++`errors` reported "zero channels were accepted". Debug and guards were not run.
+ The current Windows caller is `Gem::Microphone.Static`:
+ `MicrophoneSystemComponent_Windows.cpp` uses short/float conversions,
+ `src_new(SRC_SINC_MEDIUM_QUALITY)`, streaming `src_process`, and `src_delete`.
+@@ -12,7 +14,15 @@
+ MEDIUM, BEST, linear and zero-order converters. Shared library, tests, examples
+ and install are OFF. SndFile and its auxiliary codec discovery are confined
+ upstream to the disabled tests/examples branch; the library has no additional
+-Windows native link dependencies. No feature or source patch is introduced.
++Windows native link dependencies. Rev2 applies exactly one private-workcopy
++patch to `src_new`: reject channels below one before converter allocation,
++return NULL and set `SRC_ERR_BAD_CHANNEL_COUNT` when an error pointer exists.
++Release disables constructor assertions; this public guard also covers
++`src_callback_new` and `src_simple`. Version, C API and all converters remain.
++`ApplySamplerateChannelGuard.cmake` requires the original full hash and one
++exact hunk, then verifies the complete modified hash/size with LF preserved.
++`SamplerateChannelGuard.json` records both hashes; the SDK retains original
++`samplerate.c.original`, modified source notices, patch and metadata visibly.
+ The upstream processor-clipping configure probes remain original.
+ 
+ The source URL is the official codeload archive at the exact commit. Audited
+@@ -21,7 +31,7 @@
+ match raw Git blobs. `Win32/libsamplerate-0.def` differs only by 30 CRLF/LF
+ pairs, attributed to committed `.gitattributes` (`*.def text eol=crlf`), with
+ the primary raw response and decoded API blob byte-identical. All snapshot and
+-build input bytes remain as downloaded; comparison does not rewrite sources.
++immutable input bytes remain as downloaded; comparison does not rewrite sources.
+ That `.def` is used only for shared Windows builds, which this recipe does not
+ select. Full BSD2 COPYING and compiled-library/header notices are shipped.
+ The upstream GPL2-or-later `src/check_asm.sh` helper is neither run nor shipped.
+@@ -30,22 +40,22 @@
+ `3rdParty::libsamplerate` INTERFACE IMPORTED GLOBAL,
+ `libsamplerate/include/samplerate.h`, `libsamplerate/lib/samplerate.lib`, no
+ extra compile definitions/link options. New identity:
+-`libsamplerate-0.2.1-je-rev1-windows`; its actual archive hash is pending Luna.
++`libsamplerate-0.2.1-je-rev2-windows`; its actual archive hash is pending Luna.
+ The legacy `0.2.1-rev2` package hash and ABI are not claimed for this artifact.
+ 
+ Producer command (Luna only, new output, no retries or global install):
+ 
+ ```powershell
+-& 'C:/Program Files/CMake/bin/cmake.exe' '-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz' '-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json' '-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build' -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake'
++& 'C:/Program Files/CMake/bin/cmake.exe' '-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz' '-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json' '-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-build' -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake'
+ ```
+ 
+ After independent archive audit and fresh extraction, set the package root
+ to that extracted SDK, then configure/build/test this consumer (Luna only):
+ 
+ ```powershell
+-& 'C:/Program Files/CMake/bin/cmake.exe' -S 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests' -B 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer' -G 'Visual Studio 17 2022' -A x64 -T v143 '-DJE_SAMPLERATE_PACKAGE_ROOT=<absolute audited extracted SDK>'
+-& 'C:/Program Files/CMake/bin/cmake.exe' --build 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer' --config Release
+-& 'C:/Program Files/CMake/bin/ctest.exe' --test-dir 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer' -C Release --output-on-failure
++& 'C:/Program Files/CMake/bin/cmake.exe' -S 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests' -B 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer' -G 'Visual Studio 17 2022' -A x64 -T v143 '-DJE_SAMPLERATE_PACKAGE_ROOT=<absolute audited extracted rev2 SDK>'
++& 'C:/Program Files/CMake/bin/cmake.exe' --build 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer' --config Release
++& 'C:/Program Files/CMake/bin/ctest.exe' --test-dir 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer' -C Release --output-on-failure
+ ```
+ 
+ Repeat only the build/test commands with Debug after Release. The consumer is
+@@ -59,6 +69,11 @@
+ streaming/partial consumption/end-of-input/flush at three ratios for each sinc
+ quality, mathematical frame duration and stereo sine timing/amplitude,
+ reset/replay, linear/ZOH and invalid converter/channels/ratio/data/overlap.
++The same `errors` case now requires all five converters to reject channels
++0 and -1 with or without error pointers, including callback construction and
++simple conversion. The channel error string must match; callback user data
++must not be called and simple output/frame metadata must remain unchanged.
++The six positive-case oracles and seven-case CTest registration are unchanged.
+ No microphone hardware, real-time budget or sound-quality ranking is claimed.
+ Negative producer guards require a specific diagnostic, nonzero native exit,
+ and no new output; generic command failure is not a passing guard.
+--- a/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.json
++++ b/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.json
+@@ -1,0 +1,14 @@
++{
++  "sourceCommit": "a147b6dc4046deda22b2aa772b348717de772e2b",
++  "path": "src/samplerate.c",
++  "originalBytes": 12951,
++  "originalSHA256": "415263500672638f67c36f1a34332cb2f96762efc801d313fd0ac125ef21524b",
++  "modifiedBytes": 13047,
++  "modifiedSHA256": "14238804216c63fc3cd5b42cdb2fde1086cc510cac2f6c13da4bafab55076fae",
++  "patch": "SamplerateChannelGuard.patch",
++  "hunks": 1,
++  "modification": "JE: src_new rejects channels < 1 before converter allocation, returns NULL and optionally sets SRC_ERR_BAD_CHANNEL_COUNT; src_callback_new and src_simple inherit this guard.",
++  "license": "BSD-2-Clause; original copyright and full source notices retained",
++  "scope": "Private producer workcopy only; immutable source, version, public API and all five converters preserved",
++  "nativeStatus": "NOT_RUN; rev1 Release consumer errors case was RED: zero channels were accepted"
++}
+--- a/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch
++++ b/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch
+@@ -1,0 +1,15 @@
++--- a/src/samplerate.c
+++++ b/src/samplerate.c
++@@ -25,6 +25,12 @@
++ src_new (int converter_type, int channels, int *error)
++ {
+++	if (channels < 1)
+++	{	if (error)
+++			*error = SRC_ERR_BAD_CHANNEL_COUNT ;
+++		return NULL ;
+++		} ;
+++
++ 	return psrc_set_converter (converter_type, channels, error) ;
++ } /* src_new */
++ 
++ SRC_STATE*
+--- a/cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp
++++ b/cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp
+@@ -176,13 +176,50 @@
+         }
+     }
+ 
++    long EmptyCallback(void* userData, float** data)
++    {
++        *static_cast<bool*>(userData) = true;
++        *data = nullptr;
++        return 0;
++    }
++
+     void Errors()
+     {
+         int error = 0;
+         State bad(src_new(99, 1, &error));
+         Require(!bad && error != 0 && std::strlen(src_strerror(error)) != 0, "bad converter was accepted");
+-        error = 0; bad.reset(src_new(SRC_SINC_MEDIUM_QUALITY, 0, &error));
+-        Require(!bad && error != 0, "zero channels were accepted");
++        for (int converter = SRC_SINC_BEST_QUALITY; converter <= SRC_LINEAR; ++converter)
++        {
++            for (const int channels : {0, -1})
++            {
++                error = 0;
++                bad.reset(src_new(converter, channels, &error));
++                Require(!bad && error != 0 && std::strcmp(src_strerror(error), "Channel count must be >= 1.") == 0,
++                    "invalid channels were accepted or wrong error returned");
++                bad.reset(src_new(converter, channels, nullptr));
++                Require(!bad, "invalid channels accepted without error pointer");
++                bool callbackCalled = false;
++                error = 0;
++                bad.reset(src_callback_new(EmptyCallback, converter, channels, &error, &callbackCalled));
++                Require(!bad && error != 0 && std::strcmp(src_strerror(error), "Channel count must be >= 1.") == 0
++                    && !callbackCalled, "callback accepted invalid channels or called user data");
++                bad.reset(src_callback_new(EmptyCallback, converter, channels, nullptr, &callbackCalled));
++                Require(!bad && !callbackCalled, "callback accepted invalid channels without error pointer");
++                std::array<float, 8> input{};
++                std::array<float, 8> output;
++                output.fill(9.0f);
++                SRC_DATA invalid{};
++                invalid.data_in = input.data(); invalid.data_out = output.data();
++                invalid.input_frames = 8; invalid.output_frames = 8; invalid.src_ratio = 1.0;
++                invalid.input_frames_used = 17; invalid.output_frames_gen = 19;
++                const int simpleError = src_simple(&invalid, converter, channels);
++                Require(simpleError != 0 && std::strcmp(src_strerror(simpleError), "Channel count must be >= 1.") == 0,
++                    "simple accepted invalid channels or wrong error returned");
++                Require(invalid.input_frames_used == 17 && invalid.output_frames_gen == 19 && invalid.end_of_input == 0
++                    && std::all_of(output.begin(), output.end(), [](float value) { return value == 9.0f; }),
++                    "invalid-channel simple mutated output or frame metadata");
++            }
++        }
+         Require(src_delete(nullptr) == nullptr && src_get_channels(nullptr) < 0 && src_reset(nullptr) != 0, "null state contract differs");
+         auto state = NewState(SRC_SINC_MEDIUM_QUALITY, 1);
+         Require(!src_is_valid_ratio(0.0) && !src_is_valid_ratio(1e9) && src_is_valid_ratio(44100.0 / 48000.0), "ratio bounds differ");

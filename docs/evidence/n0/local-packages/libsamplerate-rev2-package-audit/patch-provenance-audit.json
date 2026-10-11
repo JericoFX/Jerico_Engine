@@ -1,0 +1,29 @@
+{
+  "status": "STATIC_BYTE_AUDIT_ONLY",
+  "immutableOriginalSHA256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B",
+  "originalBytes": 12951,
+  "modifiedNoticeSHA256": "14238804216C63FC3CD5B42CDB2FDE1086CC510CAC2F6C13DA4BAFAB55076FAE",
+  "modifiedBytes": 13047,
+  "originalNoticeByteExact": true,
+  "modifiedNoticeMatchesCompiledWorkcopyAndStrictPatch": true,
+  "metadataAndPatchMatchFrozenProvider": true,
+  "originalSourceWritten": false,
+  "sourcePatches": [
+    "LICENSES/libsamplerate/patch-provenance/SamplerateChannelGuard.json"
+  ],
+  "metadata": {
+    "sourceCommit": "a147b6dc4046deda22b2aa772b348717de772e2b",
+    "path": "src/samplerate.c",
+    "originalBytes": 12951,
+    "originalSHA256": "415263500672638f67c36f1a34332cb2f96762efc801d313fd0ac125ef21524b",
+    "modifiedBytes": 13047,
+    "modifiedSHA256": "14238804216c63fc3cd5b42cdb2fde1086cc510cac2f6c13da4bafab55076fae",
+    "patch": "SamplerateChannelGuard.patch",
+    "hunks": 1,
+    "modification": "JE: src_new rejects channels < 1 before converter allocation, returns NULL and optionally sets SRC_ERR_BAD_CHANNEL_COUNT; src_callback_new and src_simple inherit this guard.",
+    "license": "BSD-2-Clause; original copyright and full source notices retained",
+    "scope": "Private producer workcopy only; immutable source, version, public API and all five converters preserved",
+    "nativeStatus": "NOT_RUN; rev1 Release consumer errors case was RED: zero channels were accepted"
+  },
+  "nativeExecuted": false
+}

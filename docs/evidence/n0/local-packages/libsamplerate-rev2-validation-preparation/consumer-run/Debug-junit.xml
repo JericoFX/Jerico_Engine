@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="7"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T07:48:30"
+	>
+	<testcase name="JE.LocalPackages.LibSamplerate.api" classname="JE.LocalPackages.LibSamplerate.api" time="0.0268745" status="run">
+		<properties/>
+		<system-out>PASS api
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.LibSamplerate.conversions" classname="JE.LocalPackages.LibSamplerate.conversions" time="0.0074975" status="run">
+		<properties/>
+		<system-out>PASS conversions
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.LibSamplerate.fast" classname="JE.LocalPackages.LibSamplerate.fast" time="0.0131446" status="run">
+		<properties/>
+		<system-out>PASS fast
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.LibSamplerate.medium" classname="JE.LocalPackages.LibSamplerate.medium" time="0.0152624" status="run">
+		<properties/>
+		<system-out>PASS medium
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.LibSamplerate.best" classname="JE.LocalPackages.LibSamplerate.best" time="0.0273476" status="run">
+		<properties/>
+		<system-out>PASS best
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.LibSamplerate.reset" classname="JE.LocalPackages.LibSamplerate.reset" time="0.0115465" status="run">
+		<properties/>
+		<system-out>PASS reset
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.LibSamplerate.errors" classname="JE.LocalPackages.LibSamplerate.errors" time="0.0074852" status="run">
+		<properties/>
+		<system-out>PASS errors
+</system-out>
+	</testcase>
+</testsuite>

@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-11T10:52:48.3797221Z",
+  "invalidAssignmentSHA256": "2F08F3AF4B97E2B5A51D2A5A337DD2172D0690122A8C274841AAD840BE72A440",
+  "historicalInvalidReceiptsPreserved": true,
+  "nativeExecuted": false,
+  "replacement": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/assignment.json",
+  "cause": "Outer inventory used fixtures variable defined only in unexecuted driver text; two invalid paths had null hashes. Native driver not executed.",
+  "status": "INVALID_PREPARATION; DO_NOT_DISPATCH",
+  "invalidAssignment": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/assignment.json"
+}

@@ -1,0 +1,56 @@
+{
+  "status": "REV2_PRODUCER_PREFLIGHT_READY",
+  "utc": "2026-10-11T10:38:07.4016486Z",
+  "callerPID": 323372,
+  "workingDirectory": "F:\\JericoEngine",
+  "launcher": {
+    "path": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+    "edition": "Core",
+    "version": "7.6.5",
+    "processPath": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+  },
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-preparation/RunProducer.ps1"
+  ],
+  "authorityHashes": {
+    "assignment": "897AD62B1AB9FAD040AEFD282415FF0267F1BF0598611ED2C855A39DC4BD9D72",
+    "driver": "737D93EB9D544E3B4C179965B12ABE847100984428D3F84963020B0ACCE553FA",
+    "driverFreeze": "AFAE8FF3962C96F30D0EF497CE4F3DE5D966C443B43D6A7989C4BFE1464D13C9",
+    "sourceFreeze": "1AFEF870853E0E9FB64FB27F9DE7A24C3B4081252B0314A93AA6075C8BC03C29",
+    "arguments": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+    "parentReview": "2877D1ED8B4A79AFE6EDF40344C7A100620F05D7EAEB92A708AE93548CF04EB2",
+    "lunaReview": "A945CF9E4FC452B5BE62BF01FDFB02DEE270D159FE82FB049377713C92C95E39",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "sourceFreeze": {
+    "entries": 152,
+    "hash": "1AFEF870853E0E9FB64FB27F9DE7A24C3B4081252B0314A93AA6075C8BC03C29",
+    "matched": 152
+  },
+  "driverFreeze": {
+    "entries": 154,
+    "hash": "AFAE8FF3962C96F30D0EF497CE4F3DE5D966C443B43D6A7989C4BFE1464D13C9",
+    "matched": 154
+  },
+  "parentDispositionReview": {
+    "sha256": "2877D1ED8B4A79AFE6EDF40344C7A100620F05D7EAEB92A708AE93548CF04EB2",
+    "status": "PARENT SOURCE/DIFF AND DISPATCH REVIEW PASS"
+  },
+  "lunaReview": {
+    "sha256": "A945CF9E4FC452B5BE62BF01FDFB02DEE270D159FE82FB049377713C92C95E39",
+    "nativeNotRun": true
+  },
+  "output": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-build",
+    "absent": true
+  },
+  "producerRunEvidence": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-preparation\\producer-run",
+    "absent": true
+  },
+  "relatedProcesses": []
+}

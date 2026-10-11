@@ -1,0 +1,22 @@
+{
+  "name": "guard-uri",
+  "utc": "2026-10-11T10:49:04.1169476Z",
+  "PID": 196912,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "-DJE_SAMPLERATE_SOURCE_ARCHIVE=https://invalid.example/libsamplerate.tar.gz",
+    "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+    "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-uri",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+  ],
+  "count": 5,
+  "exitCode": 1,
+  "elapsedSeconds": 0.0457827,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-uri.stdout.raw.log",
+  "stdoutBytes": 0,
+  "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-uri.stderr.raw.log",
+  "stderrBytes": 298,
+  "stderrSHA256": "0E90D175ED568F66B56A147E20AB71D072928C7EB900EBCD8EEBD365EBE2654F"
+}

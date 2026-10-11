@@ -1,0 +1,20 @@
+{
+  "exitCode": 0,
+  "beforeMatches": 152,
+  "launcher": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+  "sourceInputs": 152,
+  "stdoutSHA256": "664D0FF7C7B1629AA94834FEEA8FBAD457BBDC7255AB495D33E4B5929CA1D978",
+  "launcherSHA256": "6235ABE2248C14AD86DFE00DBB7BC2396EB4B91F663412C211905E279BCE9D6E",
+  "utcEnd": "2026-10-11T10:40:55.7460978Z",
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "status": "DATA_AUDIT_READER_RESULT",
+  "productNativeExecuted": false,
+  "afterMatches": 152,
+  "utcStart": "2026-10-11T10:40:55.0852703Z",
+  "scriptSHA256": "B4F8B3108BE95185B984B21CF8F13ECAF2662FD398A349D3A961A3E1C13C7CA6",
+  "arguments": [
+    "-I",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/AuditPackage.py"
+  ]
+}

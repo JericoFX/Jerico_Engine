@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-11T10:48:18.5685259Z",
+  "PID": 275064,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "executableSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+  "arguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_SAMPLERATE_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-package-audit/extracted/libsamplerate-0.2.1-je-rev2-windows"
+  ],
+  "count": 11
+}

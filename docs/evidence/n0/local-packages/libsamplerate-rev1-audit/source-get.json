@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-11T09:48:45.8695996Z",
+  "url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/a147b6dc4046deda22b2aa772b348717de772e2b",
+  "hosts": [
+    "codeload.github.com"
+  ],
+  "status": 200,
+  "redirects": 0,
+  "autoRedirect": false,
+  "authentication": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+  "bytes": 3954416,
+  "sha256": "F90E46BBF9BAE05139E297CEEBD5394EF77CE5E294E6B46BEFFCC15B9446A041",
+  "verification": "Measured SHA256; immutable commit/tag provenance and complete Git tree comparison precede extraction. No published archive digest assumed."
+}

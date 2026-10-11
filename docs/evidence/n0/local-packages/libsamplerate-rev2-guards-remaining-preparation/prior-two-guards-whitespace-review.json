@@ -1,0 +1,47 @@
+{
+  "status": "READONLY_REINTERPRETATION_OF_RETAINED_NATIVE_RESULTS",
+  "utc": "2026-10-11T10:51:37.4749227Z",
+  "cause": "CMake wraps absolute local path across newline; contiguous matcher was false-negative",
+  "normalization": "Only whitespace runs collapsed to one space, then leading/trailing whitespace trimmed; case and all non-whitespace bytes unchanged",
+  "historicalResult": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-validation-preparation/guards-run/validation-result.json",
+  "historicalResultSHA256": "0192C2623701D70CD3BF6C87A34ED639AD2EAD7E8D0924CDCFDA280149072BA0",
+  "authority": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/validation-arguments-rev2.json",
+  "authoritySHA256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+  "cases": [
+    {
+      "rawContainsExpected": true,
+      "stderrSHA256": "0E90D175ED568F66B56A147E20AB71D072928C7EB900EBCD8EEBD365EBE2654F",
+      "beforeOutputExists": false,
+      "nativeExitCode": 1,
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-uri.stderr.raw.log",
+      "afterOutputExists": false,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-uri.stdout.raw.log",
+      "normalizedContainsExpected": true,
+      "nativeRerun": false,
+      "name": "uri",
+      "stdoutBytes": 0,
+      "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderrBytes": 298,
+      "currentOutputAbsent": true
+    },
+    {
+      "rawContainsExpected": false,
+      "stderrSHA256": "D79D9C370A08E9BF26900435498883D4F8D3AC3D0323D394507BBEE786654A7F",
+      "beforeOutputExists": false,
+      "nativeExitCode": 1,
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-unc.stderr.raw.log",
+      "afterOutputExists": false,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-unc.stdout.raw.log",
+      "normalizedContainsExpected": true,
+      "nativeRerun": false,
+      "name": "unc",
+      "stdoutBytes": 0,
+      "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderrBytes": 314,
+      "currentOutputAbsent": true
+    }
+  ],
+  "consumerProducerConfigureRepeated": false,
+  "nativeExecuted": false,
+  "acceptance": "Parent only; remaining six guards pending"
+}

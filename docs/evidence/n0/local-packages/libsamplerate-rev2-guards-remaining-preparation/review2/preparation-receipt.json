@@ -1,0 +1,33 @@
+{
+  "status": "PREPARED_NOT_RUN_REVIEW2",
+  "utc": "2026-10-11T10:52:48.7133509Z",
+  "original195Matches": 195,
+  "validationInputs": 209,
+  "driverFreezeCount": 210,
+  "parseErrors": 0,
+  "fixtureInputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.tar.gz",
+      "bytes": 38,
+      "sha256": "41356F3DE5CB873F6593A272961E20A36CC83EE03F53F81F6517DC1FB5D0621C",
+      "role": "remaining-guards-frozen-input-or-authority"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.json",
+      "bytes": 38,
+      "sha256": "41356F3DE5CB873F6593A272961E20A36CC83EE03F53F81F6517DC1FB5D0621C",
+      "role": "remaining-guards-frozen-input-or-authority"
+    }
+  ],
+  "remainingGuardArgumentsCount": 5,
+  "remainingGuardsCount": 6,
+  "expectedOutputExistenceVerified": true,
+  "review": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/prior-two-guards-whitespace-review.json",
+  "reviewSHA256": "6AB623696CECA998A641D3124111B06B7C3DF67A704125A3567918CD87752A15",
+  "assignment": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/assignment.json",
+  "assignmentSHA256": "63A841409BC6ECB39D05AA4CCF1F3D776DBEFDC756357C0740B3AA0AFC5647AE",
+  "historicalEvidenceRewritten": false,
+  "fixtureBytesRewritten": false,
+  "productSourcesModified": false,
+  "nativeExecuted": false
+}

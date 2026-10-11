@@ -1,0 +1,14 @@
+{
+  "status": "PARENT DATA REVIEW RED ONLY; NO NATIVE FAILURE",
+  "utc": "2026-10-11T10:18:30.4757459Z",
+  "originalReviewer": "build\\n0-validation\\local-packages\\libsamplerate-rev1-preparation\\ReviewProducerParentRev1.ps1",
+  "observedToolExit": 1,
+  "observedException": "Native stage result failed",
+  "originalToolStdErrPreserved": false,
+  "verifiedCause": "Stage result=0 lines end CRLF; old anchored LF-only regex rejects trailing CR",
+  "configureResultHex": "73746172743D323032362D31302D31315431303A30383A35355A0D0A656E643D323032362D31302D31315431303A30393A30395A0D0A726573756C743D300D0A",
+  "buildResultHex": "73746172743D323032362D31302D31315431303A30393A30395A0D0A656E643D323032362D31302D31315431303A30393A31325A0D0A726573756C743D300D0A",
+  "nativeRerun": false,
+  "sourceChanges": false,
+  "correction": "New parent rev2 accepts zero-result line with either LF or CRLF; native status expectation unchanged"
+}

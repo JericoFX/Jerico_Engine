@@ -1,0 +1,112 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "producer": {
+    "count": 5,
+    "arguments": [
+      "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+      "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+      "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+    ]
+  },
+  "consumer": {
+    "count": 11,
+    "arguments": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests",
+      "-B",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_SAMPLERATE_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-package-audit/extracted/libsamplerate-0.2.1-je-rev1-windows"
+    ],
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "cases": [
+      "api",
+      "conversions",
+      "fast",
+      "medium",
+      "best",
+      "reset",
+      "errors"
+    ],
+    "archiveAuditBeforeConsumer": true
+  },
+  "guards": [
+    {
+      "name": "uri",
+      "replaceVariable": "JE_SAMPLERATE_SOURCE_ARCHIVE",
+      "value": "https://invalid.example/libsamplerate.tar.gz",
+      "expectedDiagnostic": "must not be a URI",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "unc",
+      "replaceVariable": "JE_SAMPLERATE_SOURCE_ARCHIVE",
+      "value": "//localhost/not-a-local-input/libsamplerate.tar.gz",
+      "expectedDiagnostic": "absolute local path",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "missing-archive",
+      "replaceVariable": "JE_SAMPLERATE_SOURCE_ARCHIVE",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-guards/absent.tar.gz",
+      "expectedDiagnostic": "source archive file is missing",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "archive-hash",
+      "replaceVariable": "JE_SAMPLERATE_SOURCE_ARCHIVE",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-guards/wrong.tar.gz",
+      "expectedDiagnostic": "source archive SHA256 mismatch",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "missing-manifest",
+      "replaceVariable": "JE_SAMPLERATE_SOURCE_MANIFEST",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-guards/absent.json",
+      "expectedDiagnostic": "source manifest file is missing",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "manifest-hash",
+      "replaceVariable": "JE_SAMPLERATE_SOURCE_MANIFEST",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-guards/wrong.json",
+      "expectedDiagnostic": "source manifest SHA256 mismatch",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "external-output",
+      "replaceVariable": "JE_SAMPLERATE_OUTPUT",
+      "value": "F:/JericoEngine/Dependencies/libsamplerate-forbidden-output",
+      "expectedDiagnostic": "output must be beneath this checkout/build",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    },
+    {
+      "name": "old-output",
+      "replaceVariable": "JE_SAMPLERATE_OUTPUT",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build",
+      "expectedDiagnostic": "output must be new",
+      "expectedNonzero": true,
+      "expectedNoNewOutput": true
+    }
+  ],
+  "guardPrerequisites": "After retained producer output exists. New guard-owned wrong.tar.gz and wrong.json are plain invalid local bytes, no immutable input alteration; output unchanged means directory existence, not a full old-build manifest.",
+  "executionOwner": "Luna after parent review/dispatch",
+  "retry": false
+}

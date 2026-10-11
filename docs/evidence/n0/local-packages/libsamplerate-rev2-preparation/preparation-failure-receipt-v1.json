@@ -1,0 +1,10 @@
+{
+  "script": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-preparation/PrepareCandidateRev2.ps1",
+  "utc": "2026-10-11T10:32:20.2014597Z",
+  "nativeExecuted": false,
+  "cause": "PowerShell built-in alias diff resolved Compare-Object instead of the local function Diff",
+  "outputs": "No candidate proof/freeze/diff generated; empty rev2-audit directory retained",
+  "scriptSHA256": "BFE2EA862068230A11C5D55D47A971E8E7139FC969D86D562BEEBE7D3969447E",
+  "repair": "New preparation script uses unambiguous JEUnifiedDiff; all provider sources unchanged",
+  "status": "PREPARATION_FAILED_NO_NATIVE"
+}

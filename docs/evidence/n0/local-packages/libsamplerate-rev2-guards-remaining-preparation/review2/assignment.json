@@ -1,0 +1,127 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED_REVIEW2",
+  "owner": "Luna only after parent review",
+  "scope": "Only six unexecuted producer rejection guards; no URI/UNC/configure/consumer/producer retry",
+  "launcher": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/RunRemainingGuards.ps1"
+  ],
+  "scripts": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/CommonExecution.ps1",
+      "bytes": 6037,
+      "parseErrors": 0,
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/RunRemainingGuards.ps1",
+      "bytes": 3801,
+      "parseErrors": 0,
+      "sha256": "BCE9D0C8365EC91B19FCC7382E5B2213BC5606A74BAC8473F9E8702EAD4EC0E0"
+    }
+  ],
+  "argumentAuthority": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/validation-arguments-rev2.json",
+  "argumentAuthoritySHA256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+  "validationInputs": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/validation-inputs.json",
+  "validationInputsSHA256": "872D9141B665C33797BA4F0BA7D7137859497AD895EB33BEB4614B07F24DA7C8",
+  "validationInputsCount": 209,
+  "driverFreeze": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/driver-freeze.json",
+  "driverFreezeSHA256": "B5175ED72D0923D50A3CBC5F18DD913894CF7B2E5D28923B803F7E5526ACAD83",
+  "driverFreezeCount": 210,
+  "newRunEvidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/remaining-guards-run",
+  "existingFixturesReadOnly": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards",
+  "guardPlans": [
+    {
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-missing-archive",
+      "outputExistsBefore": false,
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/absent.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-missing-archive",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "expectedDiagnostic": "source archive file is missing",
+      "name": "missing-archive",
+      "count": 5
+    },
+    {
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-archive-hash",
+      "outputExistsBefore": false,
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-archive-hash",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "expectedDiagnostic": "source archive SHA256 mismatch",
+      "name": "archive-hash",
+      "count": 5
+    },
+    {
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-missing-manifest",
+      "outputExistsBefore": false,
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/absent.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-missing-manifest",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "expectedDiagnostic": "source manifest file is missing",
+      "name": "missing-manifest",
+      "count": 5
+    },
+    {
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-manifest-hash",
+      "outputExistsBefore": false,
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/wrong.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-manifest-hash",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "expectedDiagnostic": "source manifest SHA256 mismatch",
+      "name": "manifest-hash",
+      "count": 5
+    },
+    {
+      "output": "F:/JericoEngine/Dependencies/libsamplerate-forbidden-output",
+      "outputExistsBefore": false,
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/Dependencies/libsamplerate-forbidden-output",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "expectedDiagnostic": "output must be beneath this checkout/build",
+      "name": "external-output",
+      "count": 5
+    },
+    {
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build",
+      "outputExistsBefore": true,
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-build",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "expectedDiagnostic": "output must be new",
+      "name": "old-output",
+      "count": 5
+    }
+  ],
+  "matcher": "Whitespace normalization only; raw logs preserved",
+  "oldOutputLimit": "Retained rev1 producer directory existence only; not a full historical build manifest",
+  "nativeNotRun": true,
+  "retry": false
+}

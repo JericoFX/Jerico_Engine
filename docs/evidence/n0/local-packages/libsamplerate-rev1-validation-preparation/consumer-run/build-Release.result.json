@@ -1,0 +1,21 @@
+{
+  "name": "build-Release",
+  "utc": "2026-10-11T10:21:10.4505613Z",
+  "PID": 326816,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+    "--config",
+    "Release"
+  ],
+  "count": 4,
+  "exitCode": 0,
+  "elapsedSeconds": 2.9092963,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\build-Release.stdout.raw.log",
+  "stdoutBytes": 512,
+  "stdoutSHA256": "B1426AF39B17EA43FCAFADB12CDC9B540BB6D0DAA96C05599C09D55498510B35",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\build-Release.stderr.raw.log",
+  "stderrBytes": 0,
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

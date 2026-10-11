@@ -1,0 +1,109 @@
+{
+  "utc": "2026-10-11T10:57:55.5847121Z",
+  "status": "PARENT_FOCAL_LIBSAMPLERATE_REV2_ACCEPTED_FOR_CATALOG_INTEGRATION",
+  "acceptedForCatalogIntegration": true,
+  "sourceInputDeltas": 0,
+  "inputsRehashed": 210,
+  "consumerCases": 14,
+  "consumerResultSHA256": "B3689F96A42C820FE0A5716DFB91CE4C47EF5B55A61435ECE3D94153361B16A9",
+  "consumerPhases": [
+    {
+      "name": "configure",
+      "exitCode": 0,
+      "elapsedSeconds": 5.8367801,
+      "PID": 275064
+    },
+    {
+      "name": "build-Release",
+      "exitCode": 0,
+      "elapsedSeconds": 2.8727302,
+      "PID": 113152
+    },
+    {
+      "name": "ctest-Release",
+      "exitCode": 0,
+      "elapsedSeconds": 0.1533391,
+      "PID": 110328
+    },
+    {
+      "name": "build-Debug",
+      "exitCode": 0,
+      "elapsedSeconds": 3.0719314,
+      "PID": 208044
+    },
+    {
+      "name": "ctest-Debug",
+      "exitCode": 0,
+      "elapsedSeconds": 0.8480641,
+      "PID": 242956
+    }
+  ],
+  "guards": [
+    {
+      "name": "uri",
+      "exitCode": 1,
+      "PID": 196912,
+      "seconds": 0.0457827,
+      "rejection": true
+    },
+    {
+      "name": "unc",
+      "exitCode": 1,
+      "PID": 298964,
+      "seconds": 0.0381294,
+      "rejection": true
+    },
+    {
+      "name": "missing-archive",
+      "exitCode": 1,
+      "PID": 273780,
+      "seconds": 0.046043,
+      "rejection": true
+    },
+    {
+      "name": "archive-hash",
+      "exitCode": 1,
+      "PID": 116820,
+      "seconds": 0.0378657,
+      "rejection": true
+    },
+    {
+      "name": "missing-manifest",
+      "exitCode": 1,
+      "PID": 273204,
+      "seconds": 0.0482481,
+      "rejection": true
+    },
+    {
+      "name": "manifest-hash",
+      "exitCode": 1,
+      "PID": 30472,
+      "seconds": 0.0500266,
+      "rejection": true
+    },
+    {
+      "name": "external-output",
+      "exitCode": 1,
+      "PID": 32024,
+      "seconds": 0.0372421,
+      "rejection": true
+    },
+    {
+      "name": "old-output",
+      "exitCode": 1,
+      "PID": 19752,
+      "seconds": 0.0370784,
+      "rejection": true
+    }
+  ],
+  "guardCases": 8,
+  "historicalPartialGuardResultSHA256": "0192C2623701D70CD3BF6C87A34ED639AD2EAD7E8D0924CDCFDA280149072BA0",
+  "remainingGuardResultSHA256": "6210EA52C389D7630DFFDCF2FBFDD5A2ECFEFE49D31C2A096524128F6146D62D",
+  "matcherCorrection": "Only diagnostic whitespace; URI/UNC native runs reused; six previously unexecuted guards ran once",
+  "archiveSHA256": "01086CD19A1D241B4B0504FE16142C80BF29AF329543E67FF773301EDAA95122",
+  "archiveBytes": 3954496,
+  "nativeDebugWarning": "LNK4098 retained: Release /MD library with Debug /MDd consumer; no general mixed-CRT or legacy ABI acceptance",
+  "oldOutputGuardLimit": "Directory existence only",
+  "nativeExecutionByParent": false,
+  "engineEditorRuntimeAccepted": false
+}

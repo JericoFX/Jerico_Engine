@@ -1,0 +1,24 @@
+{
+  "rawExact": 98,
+  "differences": [
+    {
+      "path": "Win32/libsamplerate-0.def",
+      "rawBytes": 477,
+      "rawSHA256": "be5c2d301193247d6841a65ddb2d53f7720006174c93862afb31078a712851cc",
+      "rawGitBlobSHA1": "682a81830841e16175895cae6a839c6e2cdb11cb",
+      "primaryGitBlobSHA1": "b91d79f5b394fb7797470c6792799ff1b74aadb2",
+      "crlfCount": 30,
+      "lfCount": 30,
+      "normalizedGitBlobSHA1": "b91d79f5b394fb7797470c6792799ff1b74aadb2",
+      "normalizedMatchesGit": true
+    }
+  ],
+  "attributes": [
+    {
+      "path": ".gitattributes",
+      "text": "*.ac text eol=lf\n*.am text eol=lf\n*.m4 text eol=lf\n*.pc text eol=lf\n*.spec text eol=lf\n*.sh text eol=lf\n\n*.bat text eol=crlf\n*.def text eol=crlf\n*.msvc text eol=crlf\n",
+      "rawGitBlobExact": true
+    }
+  ],
+  "extracted": false
+}

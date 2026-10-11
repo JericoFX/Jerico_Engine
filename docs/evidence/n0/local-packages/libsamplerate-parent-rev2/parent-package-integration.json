@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-11T11:00:00.3621511Z",
+  "status": "PARENT_FOCAL_LIBSAMPLERATE_REV2_CATALOG_AND_LOCAL_CACHE_INTEGRATED",
+  "packageName": "libsamplerate-0.2.1-je-rev2-windows",
+  "archiveBytes": 3954496,
+  "archiveSHA256": "01086CD19A1D241B4B0504FE16142C80BF29AF329543E67FF773301EDAA95122",
+  "acceptanceSHA256": "A6AAB1FA968FCC9FA4BB44056457F452E29E8F34BBFCFCD318CCA361ACECB316",
+  "providerFiles": [
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/ApplySamplerateChannelGuard.cmake",
+      "bytes": 3029,
+      "sha256": "D63F807530489B667BA23B3D0BA9A4E66730A2E7732891E4EDAFA5E37404645E"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake",
+      "bytes": 8106,
+      "sha256": "7BA9E954247DA0E97D61AD7B05F50274A08C2A9502D9F2DAC53AE4D5834EB5E5"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/Findlibsamplerate.cmake",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt",
+      "bytes": 890,
+      "sha256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/README.md",
+      "bytes": 5870,
+      "sha256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.json",
+      "bytes": 876,
+      "sha256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch",
+      "bytes": 321,
+      "sha256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/tests/CMakeLists.txt",
+      "bytes": 1753,
+      "sha256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp",
+      "bytes": 13888,
+      "sha256": "F4849B5A9B5DB686084A7E1DF149DEC249F019A3A3EF9C8FD0F5C1CCC76A2072"
+    }
+  ],
+  "consumerCases": 14,
+  "guardCases": 8,
+  "existingCacheFilesBytePreserved": 40,
+  "cacheFilesAfter": 42,
+  "catalogBeforeSHA256": "333778663011B38AF79966FAFA55FDA85DB7C29DD58BFE40CA0746754DC62F49",
+  "catalogAfterSHA256": "78F17F12803FDF1B6ADBE2063004AB0D96132DD3D2A0DC3817426EDE26B22302",
+  "catalogInverseExact": true,
+  "debugWarning": "LNK4098 retained; original Release /MD static library, bounded Debug /MDd consumer only",
+  "originalSourceModified": false,
+  "engineEditorRuntimeAccepted": false,
+  "rootReconfigured": false,
+  "dependencyFootprintReduced": false
+}

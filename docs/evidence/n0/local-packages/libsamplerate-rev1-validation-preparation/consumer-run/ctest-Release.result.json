@@ -1,0 +1,24 @@
+{
+  "name": "ctest-Release",
+  "utc": "2026-10-11T10:21:13.3674748Z",
+  "PID": 35796,
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "arguments": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-consumer",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\Release-junit.xml"
+  ],
+  "count": 7,
+  "exitCode": 8,
+  "elapsedSeconds": 0.1559405,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\ctest-Release.stdout.raw.log",
+  "stdoutBytes": 1218,
+  "stdoutSHA256": "8C8866EC416198C48DC23AB305647AAA8D576D7EAFAB3512A38E1F12CEB1E3F8",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-validation-preparation\\consumer-run\\ctest-Release.stderr.raw.log",
+  "stderrBytes": 27,
+  "stderrSHA256": "18E00877DC1071C85CD4F479D451BEBEEF8309022E46CF8C63B0BED5151984A4"
+}

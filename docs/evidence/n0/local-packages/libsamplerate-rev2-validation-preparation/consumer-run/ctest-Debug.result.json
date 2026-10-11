@@ -1,0 +1,24 @@
+{
+  "name": "ctest-Debug",
+  "utc": "2026-10-11T10:48:30.5782045Z",
+  "PID": 242956,
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "arguments": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer",
+    "-C",
+    "Debug",
+    "--output-on-failure",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\Debug-junit.xml"
+  ],
+  "count": 7,
+  "exitCode": 0,
+  "elapsedSeconds": 0.8480641,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\ctest-Debug.stdout.raw.log",
+  "stdoutBytes": 1107,
+  "stdoutSHA256": "5E887A68AF6783676367814F1A5079117D41D788589916AACE0EDB9792BA8ECC",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\consumer-run\\ctest-Debug.stderr.raw.log",
+  "stderrBytes": 0,
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

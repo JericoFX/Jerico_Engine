@@ -1,0 +1,18 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "scripts": 3,
+  "parseErrors": 0,
+  "originalInputsMatched": 136,
+  "sdkMatched": 24,
+  "inputs": 174,
+  "archiveBytes": 3947260,
+  "archiveSHA256": "4B202E429E792B7BA7CBE7B592A22CD4E1FEE5E84C47FA10E23B6C33AA5D3028",
+  "consumerCasesPerConfiguration": 7,
+  "guardCases": 8,
+  "allRunDirectoriesAbsent": true,
+  "freshConsumerBuildAbsent": true,
+  "guardFixturesAbsent": true,
+  "noOriginalInputWritten": true,
+  "dataAuditOnly": true,
+  "nativeExecuted": false
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\libsamplerate-rev1-audit\AuditSource.py", line 31, in <module>
+    assert blob==blobs[rel]['sha'],('raw Git blob mismatch',rel,blob,blobs[rel]['sha'])
+AssertionError: ('raw Git blob mismatch', 'Win32/libsamplerate-0.def', '682a81830841e16175895cae6a839c6e2cdb11cb', 'b91d79f5b394fb7797470c6792799ff1b74aadb2')

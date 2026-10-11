@@ -1,0 +1,16 @@
+{
+  "path": "Win32/libsamplerate-0.def",
+  "attributePath": ".gitattributes",
+  "attributeGitBlobSHA1": "036315d39cf3f42e139dc84a66869c3e5c4a74d3",
+  "attributeRule": "*.def text eol=crlf",
+  "rawArchiveBytes": 477,
+  "rawArchiveSHA256": "BE5C2D301193247D6841A65DDB2D53F7720006174C93862AFB31078A712851CC",
+  "rawGitBlobSHA1": "682a81830841e16175895cae6a839c6e2cdb11cb",
+  "primaryBytes": 447,
+  "primarySHA256": "4D19392764FBEBE1777924C65E8ADD8E6CF4F78841A2FF3A260BFF09AF92F8C0",
+  "primaryGitBlobSHA1": "b91d79f5b394fb7797470c6792799ff1b74aadb2",
+  "primaryRawEqualsAPIBlob": true,
+  "difference": "Exactly30 CRLF versus LF pairs; every other byte equal; comparison only, no rewrite",
+  "rawExactOtherFiles": 98,
+  "archiveSourceRewritten": false
+}

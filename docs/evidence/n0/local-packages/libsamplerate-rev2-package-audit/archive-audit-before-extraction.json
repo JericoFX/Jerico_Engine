@@ -1,0 +1,189 @@
+{
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-build\\packages\\libsamplerate-0.2.1-je-rev2-windows.tar.xz",
+  "archiveBytes": 3954496,
+  "archiveSHA256": "01086CD19A1D241B4B0504FE16142C80BF29AF329543E67FF773301EDAA95122",
+  "regularFiles": 27,
+  "links": 0,
+  "caseCollisions": 0,
+  "contentManifestEntries": 26,
+  "manifestCoverageComplete": true,
+  "payloadByteExact": true,
+  "sourceNoticeFindPairs": 23,
+  "sourceNoticeFindPairsExact": true,
+  "packageInfo": {
+    "license": "BSD-2-Clause",
+    "name": "libsamplerate-0.2.1-je-rev2-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "a147b6dc4046deda22b2aa772b348717de772e2b",
+      "sha256": "f90e46bbf9bae05139e297ceebd5394ef77ce5e294e6b46beffcc15b9446a041",
+      "url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/a147b6dc4046deda22b2aa772b348717de772e2b"
+    },
+    "version": "0.2.1"
+  },
+  "entries": [
+    {
+      "path": "Findlibsamplerate.cmake",
+      "type": "regular",
+      "bytes": 1720,
+      "sha256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "type": "regular",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "type": "regular",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "type": "regular",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "type": "regular",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "LICENSES/libsamplerate/COPYING",
+      "type": "regular",
+      "bytes": 1334,
+      "sha256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D"
+    },
+    {
+      "path": "LICENSES/libsamplerate/SourceManifest.json",
+      "type": "regular",
+      "bytes": 21751,
+      "sha256": "35D7D9F0A5CA3F563BE8294B2D9CBC43A89B520DFE88BCCDD40FA2DD6EE12FF0"
+    },
+    {
+      "path": "LICENSES/libsamplerate/patch-provenance/SamplerateChannelGuard.json",
+      "type": "regular",
+      "bytes": 876,
+      "sha256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955"
+    },
+    {
+      "path": "LICENSES/libsamplerate/patch-provenance/SamplerateChannelGuard.patch",
+      "type": "regular",
+      "bytes": 321,
+      "sha256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B"
+    },
+    {
+      "path": "LICENSES/libsamplerate/patch-provenance/samplerate.c.original",
+      "type": "regular",
+      "bytes": 12951,
+      "sha256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/common.h",
+      "type": "regular",
+      "bytes": 3883,
+      "sha256": "22817E4C09BA5795697333ED1F67FF9255E23CF8DED52E33D07BAC3839B3FF98"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/fastest_coeffs.h",
+      "type": "regular",
+      "bytes": 72194,
+      "sha256": "60B342165E7BE7C58EFD9002163C07B65ECE52994EE839DBE06908991EF1FB1B"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/high_qual_coeffs.h",
+      "type": "regular",
+      "bytes": 9187199,
+      "sha256": "35D4BC6ED93CBD5A89510D7D7EFDA00116B5C28A25369C07288BC7D25A937DF6"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/mid_qual_coeffs.h",
+      "type": "regular",
+      "bytes": 606564,
+      "sha256": "22B2B75EF0344F60787F19C3BFD594D47303C0FAFE7E13D0E7517612B8963D7D"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/samplerate.c",
+      "type": "regular",
+      "bytes": 13047,
+      "sha256": "14238804216C63FC3CD5B42CDB2FDE1086CC510CAC2F6C13DA4BAFAB55076FAE"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/samplerate.h",
+      "type": "regular",
+      "bytes": 4971,
+      "sha256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/src_linear.c",
+      "type": "regular",
+      "bytes": 7457,
+      "sha256": "AD5E2DA1C4285001B770CDBB22F11FF3D9FE8EB2CF84CAB4073FB10B8433D16B"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/src_sinc.c",
+      "type": "regular",
+      "bytes": 41355,
+      "sha256": "6B29D6D94A0091A4B13ED7709DB881FD9E27C9BFF1A411FEC1B03BD1A8DA1401"
+    },
+    {
+      "path": "LICENSES/libsamplerate/source-notices/src_zoh.c",
+      "type": "regular",
+      "bytes": 6818,
+      "sha256": "3B9F4ADDC454F7CD2A965951F8D60858AF8164EBD91041062E61566BBAD6157A"
+    },
+    {
+      "path": "NOTICE.txt",
+      "type": "regular",
+      "bytes": 890,
+      "sha256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174"
+    },
+    {
+      "path": "PackageInfo.json",
+      "type": "regular",
+      "bytes": 421,
+      "sha256": "2DCD0AE538058582233839DEE6DE03FCE06B88667A0030DA5E4510282B6E8A05"
+    },
+    {
+      "path": "README.md",
+      "type": "regular",
+      "bytes": 5870,
+      "sha256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C"
+    },
+    {
+      "path": "SHA256SUMS",
+      "type": "regular",
+      "bytes": 2775,
+      "sha256": "10BE3DD2001311012E2C79CE38E2B45864F640112A1D9B78E07D332439A97211"
+    },
+    {
+      "path": "libsamplerate/COPYING",
+      "type": "regular",
+      "bytes": 1334,
+      "sha256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D"
+    },
+    {
+      "path": "libsamplerate/JERecipe.json",
+      "type": "regular",
+      "bytes": 689,
+      "sha256": "BB45173121A25D58D09B59DDD4B0F252C8B177335B7F595C631F0856CE54DB00"
+    },
+    {
+      "path": "libsamplerate/include/samplerate.h",
+      "type": "regular",
+      "bytes": 4971,
+      "sha256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626"
+    },
+    {
+      "path": "libsamplerate/lib/samplerate.lib",
+      "type": "regular",
+      "bytes": 1546456,
+      "sha256": "F522378C7F300B064A678DAD0663D73D5B917769D1BC421933D8786DA15A8DB3"
+    }
+  ],
+  "nativeExecuted": false
+}

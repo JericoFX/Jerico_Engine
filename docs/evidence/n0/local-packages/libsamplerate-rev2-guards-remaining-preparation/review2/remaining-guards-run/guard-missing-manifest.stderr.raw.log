@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: libsamplerate source manifest file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/absent.json
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake:25 (JE_python_verify_file)
+
+

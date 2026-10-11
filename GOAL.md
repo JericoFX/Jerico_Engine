@@ -35,6 +35,8 @@ No borrar repositorios, ramas, código, licencias, assets ni evidencias con esta
 
 Para cada subsistema: localizar productores/consumidores y dependencias reales → elegir un owner JE → integrar código/registro/datos/builders → migrar consumidores → demostrar editor/runtime/cook y APIs gráficas aplicables → retirar ruta antigua y aliases temporales. No rechazar tecnología útil por su nombre ni mantener dos autoridades por evitar cambiar consumidores.
 
+Estado N0, 2026-10-11: libsamplerate JE rev2 integrado tras corregir canales inválidos en la copia privada y pasar 14 pruebas de uso y ocho controles de rechazo. Los cinco conversores permanecen. OpenImageIO/OpenColorIO sin Python integrado sigue pendiente: su productor falló en el arranque Windows de Boost, antes de compilar. El configure original aún no genera la solución; Editor/AP, habitación BSP visible, DX12/Vulkan y mediciones del producto siguen pendientes. Aprovisionar estos paquetes no decide su permanencia; aplicar la retirada por consumidores del apartado 7 después del baseline funcional. Detalle y evidencia en ACTIVE_SLICE/HANDOFF.
+
 ## 4. Stack y owners finales
 
 | Área | Destino |

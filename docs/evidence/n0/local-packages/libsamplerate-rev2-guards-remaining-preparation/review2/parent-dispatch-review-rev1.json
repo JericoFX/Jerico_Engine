@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-11T10:54:31.8290763Z",
+  "status": "PARENT_STATIC_REVIEW_FOR_SIX_PREVIOUSLY_UNEXECUTED_GUARDS",
+  "inputsMatched": 210,
+  "names": [
+    "missing-archive",
+    "archive-hash",
+    "missing-manifest",
+    "manifest-hash",
+    "external-output",
+    "old-output"
+  ],
+  "sourceChange": false,
+  "priorUriUncNativeRepeated": false,
+  "matcher": "Whitespace only; exact case and words; raw diagnostics preserved",
+  "oldOutputLimit": "Directory existence only",
+  "nativeExecuted": false,
+  "engineAccepted": false
+}

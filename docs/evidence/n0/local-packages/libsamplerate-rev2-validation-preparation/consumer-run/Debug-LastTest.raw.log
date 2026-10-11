@@ -1,0 +1,115 @@
+Start testing: Oct 11 07:48 Hora estándar de Montevideo
+----------------------------------------------------------
+1/7 Testing: JE.LocalPackages.LibSamplerate.api
+1/7 Test: JE.LocalPackages.LibSamplerate.api
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "api"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.api" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS api
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.api" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.api" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: JE.LocalPackages.LibSamplerate.conversions
+2/7 Test: JE.LocalPackages.LibSamplerate.conversions
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "conversions"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.conversions" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS conversions
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.conversions" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.conversions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: JE.LocalPackages.LibSamplerate.fast
+3/7 Test: JE.LocalPackages.LibSamplerate.fast
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "fast"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.fast" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS fast
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.fast" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.fast" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: JE.LocalPackages.LibSamplerate.medium
+4/7 Test: JE.LocalPackages.LibSamplerate.medium
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "medium"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.medium" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS medium
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.medium" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.medium" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: JE.LocalPackages.LibSamplerate.best
+5/7 Test: JE.LocalPackages.LibSamplerate.best
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "best"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.best" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS best
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.best" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.best" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: JE.LocalPackages.LibSamplerate.reset
+6/7 Test: JE.LocalPackages.LibSamplerate.reset
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "reset"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.reset" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS reset
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.reset" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.reset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: JE.LocalPackages.LibSamplerate.errors
+7/7 Test: JE.LocalPackages.LibSamplerate.errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer/Debug/JELibSamplerateConsumer.exe" "errors"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-consumer
+"JE.LocalPackages.LibSamplerate.errors" start time: Oct 11 07:48 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS errors
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.LibSamplerate.errors" end time: Oct 11 07:48 Hora estándar de Montevideo
+"JE.LocalPackages.LibSamplerate.errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 11 07:48 Hora estándar de Montevideo

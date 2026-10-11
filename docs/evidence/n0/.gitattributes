@@ -274,3 +274,5 @@ local-packages/root-fetchcontent-batch-final/attempt2/before-CMakeFiles-CMakeCon
 /local-packages/n0-remaining-packages-audit-rev1/research/samplerate-src-CMakeLists.txt -whitespace
 /local-packages/root-texture-codecs-local-final/attempt1/before-CMakeCache.txt -whitespace
 /local-packages/root-texture-codecs-local-final/attempt1/before-CMakeFiles-CMakeConfigureLog.yaml -whitespace
+# Preserve captured unified-diff context; raw source/copy/blob SHA checks remain mandatory.
+/local-packages/libsamplerate-rev2-audit-v2/source-diff-rev2.patch -whitespace

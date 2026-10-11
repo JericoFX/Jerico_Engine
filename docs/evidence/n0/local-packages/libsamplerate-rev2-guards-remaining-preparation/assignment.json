@@ -1,0 +1,49 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "owner": "Luna only after parent review",
+  "scope": "Only six unexecuted producer rejection guards; no URI/UNC/configure/consumer/producer retry",
+  "launcher": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/RunRemainingGuards.ps1"
+  ],
+  "scripts": [
+    {
+      "sha256": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+      "bytes": 6037,
+      "parseErrors": 0,
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/CommonExecution.ps1"
+    },
+    {
+      "sha256": "BCE9D0C8365EC91B19FCC7382E5B2213BC5606A74BAC8473F9E8702EAD4EC0E0",
+      "bytes": 3801,
+      "parseErrors": 0,
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/RunRemainingGuards.ps1"
+    }
+  ],
+  "argumentAuthority": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/validation-arguments-rev2.json",
+  "argumentAuthoritySHA256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+  "validationInputs": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/validation-inputs.json",
+  "validationInputsSHA256": "71222C24BB17A36EBF90C0CF67219D2C1385BD8517F31D29F80D63A2794BA739",
+  "validationInputsCount": 208,
+  "driverFreeze": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/driver-freeze.json",
+  "driverFreezeSHA256": "733F5DFC3037F71D7D6F67CC45FD354792D7E0DC74B0895F78FD63298122DBFF",
+  "driverFreezeCount": 209,
+  "newRunEvidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/remaining-guards-run",
+  "existingFixturesReadOnly": null,
+  "remainingGuards": [
+    "missing-archive",
+    "archive-hash",
+    "missing-manifest",
+    "manifest-hash",
+    "external-output",
+    "old-output"
+  ],
+  "matcher": "Whitespace normalization only; raw logs preserved",
+  "oldOutputLimit": "Retained rev1 producer directory existence only; not a full historical build manifest",
+  "nativeNotRun": true,
+  "retry": false
+}

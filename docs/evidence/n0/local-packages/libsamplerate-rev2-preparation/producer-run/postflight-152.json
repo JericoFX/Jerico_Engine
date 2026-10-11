@@ -1,0 +1,1528 @@
+{
+  "utc": "2026-10-11T10:38:33.8462627Z",
+  "expectedCount": 152,
+  "count": 152,
+  "matched": 152,
+  "entries": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/ApplySamplerateChannelGuard.cmake",
+      "expectedBytes": 3029,
+      "expectedSHA256": "D63F807530489B667BA23B3D0BA9A4E66730A2E7732891E4EDAFA5E37404645E",
+      "exists": true,
+      "actualBytes": 3029,
+      "actualSHA256": "D63F807530489B667BA23B3D0BA9A4E66730A2E7732891E4EDAFA5E37404645E",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake",
+      "expectedBytes": 8106,
+      "expectedSHA256": "7BA9E954247DA0E97D61AD7B05F50274A08C2A9502D9F2DAC53AE4D5834EB5E5",
+      "exists": true,
+      "actualBytes": 8106,
+      "actualSHA256": "7BA9E954247DA0E97D61AD7B05F50274A08C2A9502D9F2DAC53AE4D5834EB5E5",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/Findlibsamplerate.cmake",
+      "expectedBytes": 1720,
+      "expectedSHA256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "exists": true,
+      "actualBytes": 1720,
+      "actualSHA256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/NOTICE.txt",
+      "expectedBytes": 890,
+      "expectedSHA256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174",
+      "exists": true,
+      "actualBytes": 890,
+      "actualSHA256": "8F3E69F98330C9A818CB199B2C2AF4C756D046262D059E72F85B5E2A81DE7174",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/README.md",
+      "expectedBytes": 5870,
+      "expectedSHA256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C",
+      "exists": true,
+      "actualBytes": 5870,
+      "actualSHA256": "0D926968B5FC50E7729D5E707D86066E5342329E81FF420C03D0372C37C4766C",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.json",
+      "expectedBytes": 876,
+      "expectedSHA256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955",
+      "exists": true,
+      "actualBytes": 876,
+      "actualSHA256": "F7DBD14A63ED50F56E1FCDA3C397515EAE6FF0ACC9C1C94DA49F1B607B76F955",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/SamplerateChannelGuard.patch",
+      "expectedBytes": 321,
+      "expectedSHA256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B",
+      "exists": true,
+      "actualBytes": 321,
+      "actualSHA256": "976D307DD088548CFCB2B852BA4C06D4ABD7CD4D586E62F2B5D1D24317E4CD9B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/CMakeLists.txt",
+      "expectedBytes": 1753,
+      "expectedSHA256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "exists": true,
+      "actualBytes": 1753,
+      "actualSHA256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/tests/LibSamplerateConsumer.cpp",
+      "expectedBytes": 13888,
+      "expectedSHA256": "F4849B5A9B5DB686084A7E1DF149DEC249F019A3A3EF9C8FD0F5C1CCC76A2072",
+      "exists": true,
+      "actualBytes": 13888,
+      "actualSHA256": "F4849B5A9B5DB686084A7E1DF149DEC249F019A3A3EF9C8FD0F5C1CCC76A2072",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/.gitattributes",
+      "expectedBytes": 166,
+      "expectedSHA256": "5BCE63AABCB7122DDC5919B0F20E9F4E44270F5C9F5426B233D41E68FB7F8804",
+      "exists": true,
+      "actualBytes": 166,
+      "actualSHA256": "5BCE63AABCB7122DDC5919B0F20E9F4E44270F5C9F5426B233D41E68FB7F8804",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/.github/workflows/build.yml",
+      "expectedBytes": 2735,
+      "expectedSHA256": "BA3E008FD78225813A923BDB901F07B2A4680EE2B8E626C3B32BDCF0FFE599DA",
+      "exists": true,
+      "actualBytes": 2735,
+      "actualSHA256": "BA3E008FD78225813A923BDB901F07B2A4680EE2B8E626C3B32BDCF0FFE599DA",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/.gitignore",
+      "expectedBytes": 893,
+      "expectedSHA256": "601E8AC147B69843E560230129F99D85B39AEF778B740EFBAC811B28657BBEA2",
+      "exists": true,
+      "actualBytes": 893,
+      "actualSHA256": "601E8AC147B69843E560230129F99D85B39AEF778B740EFBAC811B28657BBEA2",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/AUTHORS",
+      "expectedBytes": 326,
+      "expectedSHA256": "1407129D9CF9EE8444E0A397577FA384C945646D74BEB3C66AAB626024418230",
+      "exists": true,
+      "actualBytes": 326,
+      "actualSHA256": "1407129D9CF9EE8444E0A397577FA384C945646D74BEB3C66AAB626024418230",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/CMakeLists.txt",
+      "expectedBytes": 3474,
+      "expectedSHA256": "1614975A3C60DD7989AD35B3A33713DB2BD85DAB6A267E09F5C5BE4704E5A888",
+      "exists": true,
+      "actualBytes": 3474,
+      "actualSHA256": "1614975A3C60DD7989AD35B3A33713DB2BD85DAB6A267E09F5C5BE4704E5A888",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/COPYING",
+      "expectedBytes": 1334,
+      "expectedSHA256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D",
+      "exists": true,
+      "actualBytes": 1334,
+      "actualSHA256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/ChangeLog",
+      "expectedBytes": 36486,
+      "expectedSHA256": "FE5DD16BE3B89A0468500F0A72C5A612DDB73F61EDD1D71AFC0D73780645CB79",
+      "exists": true,
+      "actualBytes": 36486,
+      "actualSHA256": "FE5DD16BE3B89A0468500F0A72C5A612DDB73F61EDD1D71AFC0D73780645CB79",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/INSTALL",
+      "expectedBytes": 3390,
+      "expectedSHA256": "29B2B59283E55CBFABA21D6040203D2EF122AD1C206E83F9DF901FCCAB4DEF47",
+      "exists": true,
+      "actualBytes": 3390,
+      "actualSHA256": "29B2B59283E55CBFABA21D6040203D2EF122AD1C206E83F9DF901FCCAB4DEF47",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Makefile.am",
+      "expectedBytes": 5602,
+      "expectedSHA256": "66A03B192E3CEB9A5CED0C3E8FE55A582B1B73B649337CB0B31E5D4260DFF42B",
+      "exists": true,
+      "actualBytes": 5602,
+      "actualSHA256": "66A03B192E3CEB9A5CED0C3E8FE55A582B1B73B649337CB0B31E5D4260DFF42B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/NEWS",
+      "expectedBytes": 2434,
+      "expectedSHA256": "560058624784A49A390B42B08075BE4D55736BBA6648B67ED65EE6328D1EC2FA",
+      "exists": true,
+      "actualBytes": 2434,
+      "actualSHA256": "560058624784A49A390B42B08075BE4D55736BBA6648B67ED65EE6328D1EC2FA",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/Readme.md",
+      "expectedBytes": 929,
+      "expectedSHA256": "C580A70F9374D3C8AC1E3B52FA8D0C7BD51CF81A4145B96224768B8277B9DBF0",
+      "exists": true,
+      "actualBytes": 929,
+      "actualSHA256": "C580A70F9374D3C8AC1E3B52FA8D0C7BD51CF81A4145B96224768B8277B9DBF0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/generate_filter.m",
+      "expectedBytes": 692,
+      "expectedSHA256": "79C99F4FDCD098FD95B07AD78A66C83F36F10433E9E8439438ED52DD9EC1CAA1",
+      "exists": true,
+      "actualBytes": 692,
+      "actualSHA256": "79C99F4FDCD098FD95B07AD78A66C83F36F10433E9E8439438ED52DD9EC1CAA1",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/make_filter.m",
+      "expectedBytes": 4113,
+      "expectedSHA256": "A8CAE2AD0469949BD323C59D873224AB2C53FC0FB7C5D575952B06445560C223",
+      "exists": true,
+      "actualBytes": 4113,
+      "actualSHA256": "A8CAE2AD0469949BD323C59D873224AB2C53FC0FB7C5D575952B06445560C223",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Octave/measure_filter.m",
+      "expectedBytes": 1893,
+      "expectedSHA256": "0D4EBADDB715B355EA06EDDC04D4D38A38B46DF2D657CEC7E033D6D1BB3F53E6",
+      "exists": true,
+      "actualBytes": 1893,
+      "actualSHA256": "0D4EBADDB715B355EA06EDDC04D4D38A38B46DF2D657CEC7E033D6D1BB3F53E6",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/README.md",
+      "expectedBytes": 2496,
+      "expectedSHA256": "FED0E72D78A0AEC9268A1E3FF3F9813DE6101138549F13B4C6102ED2F3296DFB",
+      "exists": true,
+      "actualBytes": 2496,
+      "actualSHA256": "FED0E72D78A0AEC9268A1E3FF3F9813DE6101138549F13B4C6102ED2F3296DFB",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/Win32/libsamplerate-0.def",
+      "expectedBytes": 477,
+      "expectedSHA256": "BE5C2D301193247D6841A65DDB2D53F7720006174C93862AFB31078A712851CC",
+      "exists": true,
+      "actualBytes": 477,
+      "actualSHA256": "BE5C2D301193247D6841A65DDB2D53F7720006174C93862AFB31078A712851CC",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/autogen.sh",
+      "expectedBytes": 3675,
+      "expectedSHA256": "23983B51D79F04B0DE26910DCEBFE71F46CFAC1A2271C5233E12E42A2C871BA2",
+      "exists": true,
+      "actualBytes": 3675,
+      "actualSHA256": "23983B51D79F04B0DE26910DCEBFE71F46CFAC1A2271C5233E12E42A2C871BA2",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/ClipMode.cmake",
+      "expectedBytes": 2007,
+      "expectedSHA256": "9D5548A88CD4F9A223D8D5F13CD8D392876BBF7BDEAF4E644407CAFEFD55CF94",
+      "exists": true,
+      "actualBytes": 2007,
+      "actualSHA256": "9D5548A88CD4F9A223D8D5F13CD8D392876BBF7BDEAF4E644407CAFEFD55CF94",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindFFTW3.cmake",
+      "expectedBytes": 2959,
+      "expectedSHA256": "2E73C2EA5314C7E481E4895CD29037D29984015E36F5238C70F04F0671B895CA",
+      "exists": true,
+      "actualBytes": 2959,
+      "actualSHA256": "2E73C2EA5314C7E481E4895CD29037D29984015E36F5238C70F04F0671B895CA",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindFLAC.cmake",
+      "expectedBytes": 1697,
+      "expectedSHA256": "2C9F6ADCA8E48D6A60EA32C681848DC1F1439A3639A01D2E2B69E7831A208694",
+      "exists": true,
+      "actualBytes": 1697,
+      "actualSHA256": "2C9F6ADCA8E48D6A60EA32C681848DC1F1439A3639A01D2E2B69E7831A208694",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindOgg.cmake",
+      "expectedBytes": 1419,
+      "expectedSHA256": "483931C94C78BC7B1BDDA010DF853E31A242312408D436C0C55B84751A2D1ACB",
+      "exists": true,
+      "actualBytes": 1419,
+      "actualSHA256": "483931C94C78BC7B1BDDA010DF853E31A242312408D436C0C55B84751A2D1ACB",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindOpus.cmake",
+      "expectedBytes": 1571,
+      "expectedSHA256": "95A93461A3B707EF8D22EE3CED913F843F3164DA50511D50DD84F6C49AE4F065",
+      "exists": true,
+      "actualBytes": 1571,
+      "actualSHA256": "95A93461A3B707EF8D22EE3CED913F843F3164DA50511D50DD84F6C49AE4F065",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindSndFile.cmake",
+      "expectedBytes": 1532,
+      "expectedSHA256": "E913C028EEAD9F9A9C9C0DDFAE3172EB4526B7EAAC8209D5133F273BA3CDBE7D",
+      "exists": true,
+      "actualBytes": 1532,
+      "actualSHA256": "E913C028EEAD9F9A9C9C0DDFAE3172EB4526B7EAAC8209D5133F273BA3CDBE7D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/FindVorbis.cmake",
+      "expectedBytes": 5671,
+      "expectedSHA256": "C924F6CA4F9BA0076E68415079498518481A8C02871CB51E502B7FDA6E08293E",
+      "exists": true,
+      "actualBytes": 5671,
+      "actualSHA256": "C924F6CA4F9BA0076E68415079498518481A8C02871CB51E502B7FDA6E08293E",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/cmake/SampleRateConfig.cmake.in",
+      "expectedBytes": 59,
+      "expectedSHA256": "E35421250CF4B716B366DFA1F321B5DDE80AAEAE61B37F54A6A99B010B1F056C",
+      "exists": true,
+      "actualBytes": 59,
+      "actualSHA256": "E35421250CF4B716B366DFA1F321B5DDE80AAEAE61B37F54A6A99B010B1F056C",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/config.h.cmake",
+      "expectedBytes": 1889,
+      "expectedSHA256": "EF82A2BB6DFD9331755F16CA5A9299C5BA101D0AB5A50FA0AC7EEE1D5693487A",
+      "exists": true,
+      "actualBytes": 1889,
+      "actualSHA256": "EF82A2BB6DFD9331755F16CA5A9299C5BA101D0AB5A50FA0AC7EEE1D5693487A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/configure.ac",
+      "expectedBytes": 12457,
+      "expectedSHA256": "9D586CEF9202B0860F5F2985E171A09E01FA24ED18FFA4B92F26DA6701ED81E7",
+      "exists": true,
+      "actualBytes": 12457,
+      "actualSHA256": "9D586CEF9202B0860F5F2985E171A09E01FA24ED18FFA4B92F26DA6701ED81E7",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/CMakeLists.txt",
+      "expectedBytes": 277,
+      "expectedSHA256": "4E791C96BFA70D19424AFAEB87837BA409A63BF9441CDB6BDB9DD9743EA1DA6D",
+      "exists": true,
+      "actualBytes": 277,
+      "actualSHA256": "4E791C96BFA70D19424AFAEB87837BA409A63BF9441CDB6BDB9DD9743EA1DA6D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/SRC.css",
+      "expectedBytes": 650,
+      "expectedSHA256": "A0F9417D431CC2274C44BDF0D646D3E717217CC4A1E9712BDEBEDE13DCE0F575",
+      "exists": true,
+      "actualBytes": 650,
+      "actualSHA256": "A0F9417D431CC2274C44BDF0D646D3E717217CC4A1E9712BDEBEDE13DCE0F575",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/SRC.png",
+      "expectedBytes": 22775,
+      "expectedSHA256": "1EB21D2890118CF1B78A36B7B710AC2105890C3BB0A53C1631221A8A3B62472D",
+      "exists": true,
+      "actualBytes": 22775,
+      "actualSHA256": "1EB21D2890118CF1B78A36B7B710AC2105890C3BB0A53C1631221A8A3B62472D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/_config.yml",
+      "expectedBytes": 205,
+      "expectedSHA256": "1D1FB6A14A65E0F2054C27151BA82C02183C8BFB9FBE5A8507568360EDDFD932",
+      "exists": true,
+      "actualBytes": 205,
+      "actualSHA256": "1D1FB6A14A65E0F2054C27151BA82C02183C8BFB9FBE5A8507568360EDDFD932",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/_layouts/default.html",
+      "expectedBytes": 1416,
+      "expectedSHA256": "212F5F2CE7F692D4EC61EE1539A238EB22A147ECE9C77B572C3D4AF9B9C7A379",
+      "exists": true,
+      "actualBytes": 1416,
+      "actualSHA256": "212F5F2CE7F692D4EC61EE1539A238EB22A147ECE9C77B572C3D4AF9B9C7A379",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api.md",
+      "expectedBytes": 1950,
+      "expectedSHA256": "18E67D73DB8B49BC2FDCB3A02E10BB3DCA16B8CAFFB201CF48A5FDFAECF0FB08",
+      "exists": true,
+      "actualBytes": 1950,
+      "actualSHA256": "18E67D73DB8B49BC2FDCB3A02E10BB3DCA16B8CAFFB201CF48A5FDFAECF0FB08",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_callback.md",
+      "expectedBytes": 3588,
+      "expectedSHA256": "4B58AE6C37104CD5CB702E8E9E772400B96B6C98689AB1B87F0A1600EEA08743",
+      "exists": true,
+      "actualBytes": 3588,
+      "actualSHA256": "4B58AE6C37104CD5CB702E8E9E772400B96B6C98689AB1B87F0A1600EEA08743",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_full.md",
+      "expectedBytes": 4614,
+      "expectedSHA256": "74B58D6402938120302B6288CFFD755FA8EE559D55E9D2DA9994B209BF362543",
+      "exists": true,
+      "actualBytes": 4614,
+      "actualSHA256": "74B58D6402938120302B6288CFFD755FA8EE559D55E9D2DA9994B209BF362543",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_misc.md",
+      "expectedBytes": 5789,
+      "expectedSHA256": "16654B85973D9680F87BEE7B94205628CDE2CA7893F930490578E92724216CFE",
+      "exists": true,
+      "actualBytes": 5789,
+      "actualSHA256": "16654B85973D9680F87BEE7B94205628CDE2CA7893F930490578E92724216CFE",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/api_simple.md",
+      "expectedBytes": 2429,
+      "expectedSHA256": "8BF42FB81BFAD8D5F92960B0A1B8B65A69DA806C4D1DB3FFF87AB38BBB8E389A",
+      "exists": true,
+      "actualBytes": 2429,
+      "actualSHA256": "8BF42FB81BFAD8D5F92960B0A1B8B65A69DA806C4D1DB3FFF87AB38BBB8E389A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/bugs.md",
+      "expectedBytes": 1791,
+      "expectedSHA256": "FA2344FC8D23D14E96E3ACE544292ED3306223B3E0689D6FDBAB66FBA21D707F",
+      "exists": true,
+      "actualBytes": 1791,
+      "actualSHA256": "FA2344FC8D23D14E96E3ACE544292ED3306223B3E0689D6FDBAB66FBA21D707F",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/download.md",
+      "expectedBytes": 515,
+      "expectedSHA256": "125FF9E2C3E2235516DEDB5884FD5B8E15468CED663D79221E19C60853CBA4F3",
+      "exists": true,
+      "actualBytes": 515,
+      "actualSHA256": "125FF9E2C3E2235516DEDB5884FD5B8E15468CED663D79221E19C60853CBA4F3",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/faq.md",
+      "expectedBytes": 10253,
+      "expectedSHA256": "3EF5CD3977BB503316E6443F532211A9F123A136C77117EA20DEA84B6DAED3F0",
+      "exists": true,
+      "actualBytes": 10253,
+      "actualSHA256": "3EF5CD3977BB503316E6443F532211A9F123A136C77117EA20DEA84B6DAED3F0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/foo_dsp_src9.png",
+      "expectedBytes": 8846,
+      "expectedSHA256": "08C53DB4428DCF731F4FFA35448438F6986108AEADBBFAD68B1971ABDEF6157A",
+      "exists": true,
+      "actualBytes": 8846,
+      "actualSHA256": "08C53DB4428DCF731F4FFA35448438F6986108AEADBBFAD68B1971ABDEF6157A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/history.md",
+      "expectedBytes": 1786,
+      "expectedSHA256": "11625A8F05DDBEBCE5DACA6D60634770E47C568B4C544B68DADBA4EC56EBE3CF",
+      "exists": true,
+      "actualBytes": 1786,
+      "actualSHA256": "11625A8F05DDBEBCE5DACA6D60634770E47C568B4C544B68DADBA4EC56EBE3CF",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/index.md",
+      "expectedBytes": 9180,
+      "expectedSHA256": "B8D3092E0A1B2E6544352331F27C50F015CACDB1A00AD4D62A000C690882CFC6",
+      "exists": true,
+      "actualBytes": 9180,
+      "actualSHA256": "B8D3092E0A1B2E6544352331F27C50F015CACDB1A00AD4D62A000C690882CFC6",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/license.md",
+      "expectedBytes": 377,
+      "expectedSHA256": "9722032E4B5684F0ECD399480183A9029623636ADD1E9515621DEFAF8DBCF3ED",
+      "exists": true,
+      "actualBytes": 377,
+      "actualSHA256": "9722032E4B5684F0ECD399480183A9029623636ADD1E9515621DEFAF8DBCF3ED",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/lists.md",
+      "expectedBytes": 479,
+      "expectedSHA256": "A9D37B1A2802CD5999D55D149C69C325BC51E1BE95456ECD94516238E82BEB6B",
+      "exists": true,
+      "actualBytes": 479,
+      "actualSHA256": "A9D37B1A2802CD5999D55D149C69C325BC51E1BE95456ECD94516238E82BEB6B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/paypal.png",
+      "expectedBytes": 770,
+      "expectedSHA256": "A49E6087FA53B889B39B214C7AB00F7658F158754E93884486D584CFAA3A775F",
+      "exists": true,
+      "actualBytes": 770,
+      "actualSHA256": "A49E6087FA53B889B39B214C7AB00F7658F158754E93884486D584CFAA3A775F",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/quality.md",
+      "expectedBytes": 4059,
+      "expectedSHA256": "BDE83DABEB25C8BF85A57D844BE2AF199ABDFF212E8F1606F8A694AB7BB6593B",
+      "exists": true,
+      "actualBytes": 4059,
+      "actualSHA256": "BDE83DABEB25C8BF85A57D844BE2AF199ABDFF212E8F1606F8A694AB7BB6593B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/docs/win32.md",
+      "expectedBytes": 694,
+      "expectedSHA256": "6338AF0904D8E6A0D3C5C59F745EB9F30B379328183351EEDA42EE350F40BC76",
+      "exists": true,
+      "actualBytes": 694,
+      "actualSHA256": "6338AF0904D8E6A0D3C5C59F745EB9F30B379328183351EEDA42EE350F40BC76",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/CMakeLists.txt",
+      "expectedBytes": 981,
+      "expectedSHA256": "8AF8B5FAA142EF38EA65AF353EC0A297F5EDBCE6568A28027B5E7E26C8351AEF",
+      "exists": true,
+      "actualBytes": 981,
+      "actualSHA256": "8AF8B5FAA142EF38EA65AF353EC0A297F5EDBCE6568A28027B5E7E26C8351AEF",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/audio_out.c",
+      "expectedBytes": 31012,
+      "expectedSHA256": "9FC6CDA3F8B0F0D6630646A0FA3DE163739AAB67771EF2EEEC5C4501DA6EEB4C",
+      "exists": true,
+      "actualBytes": 31012,
+      "actualSHA256": "9FC6CDA3F8B0F0D6630646A0FA3DE163739AAB67771EF2EEEC5C4501DA6EEB4C",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/audio_out.h",
+      "expectedBytes": 842,
+      "expectedSHA256": "8703CB3866A4444B0730D5AC61F7607055D4779985BC19E6FA1C4B4A016BB6A5",
+      "exists": true,
+      "actualBytes": 842,
+      "actualSHA256": "8703CB3866A4444B0730D5AC61F7607055D4779985BC19E6FA1C4B4A016BB6A5",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/timewarp-file.c",
+      "expectedBytes": 6050,
+      "expectedSHA256": "80C7FD9A445502CC5AB388F6DA2B60539431FD98B9D3F752CCA754917A047F7F",
+      "exists": true,
+      "actualBytes": 6050,
+      "actualSHA256": "80C7FD9A445502CC5AB388F6DA2B60539431FD98B9D3F752CCA754917A047F7F",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/examples/varispeed-play.c",
+      "expectedBytes": 6167,
+      "expectedSHA256": "51D9E5F56486664B5DC8D30BC632BE8E9949DB00F89A36F5C1540C1A83AC87FE",
+      "exists": true,
+      "actualBytes": 6167,
+      "actualSHA256": "51D9E5F56486664B5DC8D30BC632BE8E9949DB00F89A36F5C1540C1A83AC87FE",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/include/samplerate.h",
+      "expectedBytes": 4971,
+      "expectedSHA256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626",
+      "exists": true,
+      "actualBytes": 4971,
+      "actualSHA256": "DFE5F4107782BCF6E9B8421A9E7C4772E19446A4C18727C73B22286D3FBB6626",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/libsamplerate.spec.in",
+      "expectedBytes": 1455,
+      "expectedSHA256": "D2D1D10278A7E65D34BD394E512914C178F3649ECCC8CC4A09E37B473CE39702",
+      "exists": true,
+      "actualBytes": 1455,
+      "actualSHA256": "D2D1D10278A7E65D34BD394E512914C178F3649ECCC8CC4A09E37B473CE39702",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_append_compile_flags.m4",
+      "expectedBytes": 2992,
+      "expectedSHA256": "71173F317BD5D915F6C215569CF2E7DC092BDE838FC07B8EF7ED99F6BAD58176",
+      "exists": true,
+      "actualBytes": 2992,
+      "actualSHA256": "71173F317BD5D915F6C215569CF2E7DC092BDE838FC07B8EF7ED99F6BAD58176",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_append_flag.m4",
+      "expectedBytes": 2779,
+      "expectedSHA256": "06C86FAF340A11A68C24115751DE99247D56836810EF7723A4C0C01D827D0A5B",
+      "exists": true,
+      "actualBytes": 2779,
+      "actualSHA256": "06C86FAF340A11A68C24115751DE99247D56836810EF7723A4C0C01D827D0A5B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_append_link_flags.m4",
+      "expectedBytes": 2938,
+      "expectedSHA256": "91F7CBA5211E332EBC30BD6D163DB08474FB4D2237650F82F9B02F039A933FB6",
+      "exists": true,
+      "actualBytes": 2938,
+      "actualSHA256": "91F7CBA5211E332EBC30BD6D163DB08474FB4D2237650F82F9B02F039A933FB6",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_check_compile_flag.m4",
+      "expectedBytes": 3331,
+      "expectedSHA256": "302601F55EDC1C28382E383E4C96EE3820F56DF01964350A8BAE16AFD2F27F78",
+      "exists": true,
+      "actualBytes": 3331,
+      "actualSHA256": "302601F55EDC1C28382E383E4C96EE3820F56DF01964350A8BAE16AFD2F27F78",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_check_link_flag.m4",
+      "expectedBytes": 3183,
+      "expectedSHA256": "602348BE096FB9883E6A12A5619021E8DAA2D6B41294AE8EF7701DD62F3D2662",
+      "exists": true,
+      "actualBytes": 3183,
+      "actualSHA256": "602348BE096FB9883E6A12A5619021E8DAA2D6B41294AE8EF7701DD62F3D2662",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_compiler_vendor.m4",
+      "expectedBytes": 3606,
+      "expectedSHA256": "47BCED48FFA93FA6B1169581DF1D6AF1120BDCF824D5AA51453BD8A320CAD1FF",
+      "exists": true,
+      "actualBytes": 3606,
+      "actualSHA256": "47BCED48FFA93FA6B1169581DF1D6AF1120BDCF824D5AA51453BD8A320CAD1FF",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_compiler_version.m4",
+      "expectedBytes": 21739,
+      "expectedSHA256": "19C12D301755172BE8FC18792105CEF9992C7E9470404DD0DE27D527F775491B",
+      "exists": true,
+      "actualBytes": 21739,
+      "actualSHA256": "19C12D301755172BE8FC18792105CEF9992C7E9470404DD0DE27D527F775491B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_recursive_eval.m4",
+      "expectedBytes": 2408,
+      "expectedSHA256": "E03D2FCB4617102F534439279E152862FF1291F3D4D1B7244022D5950A09B565",
+      "exists": true,
+      "actualBytes": 2408,
+      "actualSHA256": "E03D2FCB4617102F534439279E152862FF1291F3D4D1B7244022D5950A09B565",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/ax_require_defined.m4",
+      "expectedBytes": 1218,
+      "expectedSHA256": "D870B21E817747C6A61A9DD72E06EA45F87E012C7A1A9AA5FF90CD3AF89B3774",
+      "exists": true,
+      "actualBytes": 1218,
+      "actualSHA256": "D870B21E817747C6A61A9DD72E06EA45F87E012C7A1A9AA5FF90CD3AF89B3774",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/check_signal.m4",
+      "expectedBytes": 487,
+      "expectedSHA256": "DD41BE14C8E2F528B42FFEC64836F00D5ED228BB2F9753FC968947B87654486A",
+      "exists": true,
+      "actualBytes": 487,
+      "actualSHA256": "DD41BE14C8E2F528B42FFEC64836F00D5ED228BB2F9753FC968947B87654486A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/m4/clip_mode.m4",
+      "expectedBytes": 2378,
+      "expectedSHA256": "8999DC496D005F398937B57805A58ADB96B3B3CA282F7B124DDFD263E9027EF0",
+      "exists": true,
+      "actualBytes": 2378,
+      "actualSHA256": "8999DC496D005F398937B57805A58ADB96B3B3CA282F7B124DDFD263E9027EF0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/samplerate.pc.in",
+      "expectedBytes": 260,
+      "expectedSHA256": "05EC5DA75DE1971AC36518B0612DB9578926406D762333FD00623E7B10FB78D4",
+      "exists": true,
+      "actualBytes": 260,
+      "actualSHA256": "05EC5DA75DE1971AC36518B0612DB9578926406D762333FD00623E7B10FB78D4",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/CMakeLists.txt",
+      "expectedBytes": 4757,
+      "expectedSHA256": "9A02CDE4CAAB6A7A71543570BFCCD094AC06FE5B910FA15D957A9BA4C053A408",
+      "exists": true,
+      "actualBytes": 4757,
+      "actualSHA256": "9A02CDE4CAAB6A7A71543570BFCCD094AC06FE5B910FA15D957A9BA4C053A408",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/Version_script.in",
+      "expectedBytes": 689,
+      "expectedSHA256": "CDFBF22BB0D9E58E77FB8B55A9DA944060A992700550A8ECC7C84BAC4E108A8A",
+      "exists": true,
+      "actualBytes": 689,
+      "actualSHA256": "CDFBF22BB0D9E58E77FB8B55A9DA944060A992700550A8ECC7C84BAC4E108A8A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/check_asm.sh",
+      "expectedBytes": 1475,
+      "expectedSHA256": "D38AF21DFBBC96CBFE172EDDA3A7B2F5AD80E7AD1615D30D21CA5815DD8370FC",
+      "exists": true,
+      "actualBytes": 1475,
+      "actualSHA256": "D38AF21DFBBC96CBFE172EDDA3A7B2F5AD80E7AD1615D30D21CA5815DD8370FC",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/common.h",
+      "expectedBytes": 3883,
+      "expectedSHA256": "22817E4C09BA5795697333ED1F67FF9255E23CF8DED52E33D07BAC3839B3FF98",
+      "exists": true,
+      "actualBytes": 3883,
+      "actualSHA256": "22817E4C09BA5795697333ED1F67FF9255E23CF8DED52E33D07BAC3839B3FF98",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/fastest_coeffs.h",
+      "expectedBytes": 72194,
+      "expectedSHA256": "60B342165E7BE7C58EFD9002163C07B65ECE52994EE839DBE06908991EF1FB1B",
+      "exists": true,
+      "actualBytes": 72194,
+      "actualSHA256": "60B342165E7BE7C58EFD9002163C07B65ECE52994EE839DBE06908991EF1FB1B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/high_qual_coeffs.h",
+      "expectedBytes": 9187199,
+      "expectedSHA256": "35D4BC6ED93CBD5A89510D7D7EFDA00116B5C28A25369C07288BC7D25A937DF6",
+      "exists": true,
+      "actualBytes": 9187199,
+      "actualSHA256": "35D4BC6ED93CBD5A89510D7D7EFDA00116B5C28A25369C07288BC7D25A937DF6",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/mid_qual_coeffs.h",
+      "expectedBytes": 606564,
+      "expectedSHA256": "22B2B75EF0344F60787F19C3BFD594D47303C0FAFE7E13D0E7517612B8963D7D",
+      "exists": true,
+      "actualBytes": 606564,
+      "actualSHA256": "22B2B75EF0344F60787F19C3BFD594D47303C0FAFE7E13D0E7517612B8963D7D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/samplerate.c",
+      "expectedBytes": 12951,
+      "expectedSHA256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B",
+      "exists": true,
+      "actualBytes": 12951,
+      "actualSHA256": "415263500672638F67C36F1A34332CB2F96762EFC801D313FD0AC125EF21524B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/src_linear.c",
+      "expectedBytes": 7457,
+      "expectedSHA256": "AD5E2DA1C4285001B770CDBB22F11FF3D9FE8EB2CF84CAB4073FB10B8433D16B",
+      "exists": true,
+      "actualBytes": 7457,
+      "actualSHA256": "AD5E2DA1C4285001B770CDBB22F11FF3D9FE8EB2CF84CAB4073FB10B8433D16B",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/src_sinc.c",
+      "expectedBytes": 41355,
+      "expectedSHA256": "6B29D6D94A0091A4B13ED7709DB881FD9E27C9BFF1A411FEC1B03BD1A8DA1401",
+      "exists": true,
+      "actualBytes": 41355,
+      "actualSHA256": "6B29D6D94A0091A4B13ED7709DB881FD9E27C9BFF1A411FEC1B03BD1A8DA1401",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/src/src_zoh.c",
+      "expectedBytes": 6818,
+      "expectedSHA256": "3B9F4ADDC454F7CD2A965951F8D60858AF8164EBD91041062E61566BBAD6157A",
+      "exists": true,
+      "actualBytes": 6818,
+      "actualSHA256": "3B9F4ADDC454F7CD2A965951F8D60858AF8164EBD91041062E61566BBAD6157A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/CMakeLists.txt",
+      "expectedBytes": 3730,
+      "expectedSHA256": "92EEF771EE6167707D431176968365E8ACE277F874AEDC9CAC0516A70C852185",
+      "exists": true,
+      "actualBytes": 3730,
+      "actualSHA256": "92EEF771EE6167707D431176968365E8ACE277F874AEDC9CAC0516A70C852185",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/calc_snr.c",
+      "expectedBytes": 6309,
+      "expectedSHA256": "6A8064E21D5EEE13BC2C5C58BF6267F6AEBDEA668B21AA16FFCF60E9AB0D14D4",
+      "exists": true,
+      "actualBytes": 6309,
+      "actualSHA256": "6A8064E21D5EEE13BC2C5C58BF6267F6AEBDEA668B21AA16FFCF60E9AB0D14D4",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/callback_hang_test.c",
+      "expectedBytes": 2496,
+      "expectedSHA256": "B3AF2CDB0BC12EEA731569C20A43F5F3C0702F25B7873FF46833EE9ACB8F3D3A",
+      "exists": true,
+      "actualBytes": 2496,
+      "actualSHA256": "B3AF2CDB0BC12EEA731569C20A43F5F3C0702F25B7873FF46833EE9ACB8F3D3A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/callback_test.c",
+      "expectedBytes": 6164,
+      "expectedSHA256": "909A50C1F0BD5BCB872F1E391907AB095C2506C601F7005E7DDD9A6DB1806041",
+      "exists": true,
+      "actualBytes": 6164,
+      "actualSHA256": "909A50C1F0BD5BCB872F1E391907AB095C2506C601F7005E7DDD9A6DB1806041",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/clone_test.c",
+      "expectedBytes": 4259,
+      "expectedSHA256": "AD9A8897F04DF3200B70EC1DC1789DD4ED85407A116F3F0819E45CDB86FE31D9",
+      "exists": true,
+      "actualBytes": 4259,
+      "actualSHA256": "AD9A8897F04DF3200B70EC1DC1789DD4ED85407A116F3F0819E45CDB86FE31D9",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/downsample_test.c",
+      "expectedBytes": 1271,
+      "expectedSHA256": "42EF9E2F9DDCAEF3112D4AB1C963202B47ED9B6A98E668331154A9F26B5736A9",
+      "exists": true,
+      "actualBytes": 1271,
+      "actualSHA256": "42EF9E2F9DDCAEF3112D4AB1C963202B47ED9B6A98E668331154A9F26B5736A9",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/float_short_test.c",
+      "expectedBytes": 4754,
+      "expectedSHA256": "5E67C416855B2FC42578AC7C2CB914335B9C8857820B416485233915743EAECD",
+      "exists": true,
+      "actualBytes": 4754,
+      "actualSHA256": "5E67C416855B2FC42578AC7C2CB914335B9C8857820B416485233915743EAECD",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/misc_test.c",
+      "expectedBytes": 4694,
+      "expectedSHA256": "57D13EE8FC46A026CD24419EAE8E7332EBC7179DE34C08259095C5383650DD2A",
+      "exists": true,
+      "actualBytes": 4694,
+      "actualSHA256": "57D13EE8FC46A026CD24419EAE8E7332EBC7179DE34C08259095C5383650DD2A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/multi_channel_test.c",
+      "expectedBytes": 11144,
+      "expectedSHA256": "EC127A4F11EF5171E3318182A1170582999EA86AA1C4920DECCFBC12772372A6",
+      "exists": true,
+      "actualBytes": 11144,
+      "actualSHA256": "EC127A4F11EF5171E3318182A1170582999EA86AA1C4920DECCFBC12772372A6",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/multichan_throughput_test.c",
+      "expectedBytes": 6281,
+      "expectedSHA256": "46D94966929C5982F67DBA9981CC4DF451DA080C6A5D754A9CDFB8E7249D000C",
+      "exists": true,
+      "actualBytes": 6281,
+      "actualSHA256": "46D94966929C5982F67DBA9981CC4DF451DA080C6A5D754A9CDFB8E7249D000C",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/nullptr_test.c",
+      "expectedBytes": 2465,
+      "expectedSHA256": "008306440CB9959F11FF647DF78DA857200298A083C905482875A3C3E817F3E4",
+      "exists": true,
+      "actualBytes": 2465,
+      "actualSHA256": "008306440CB9959F11FF647DF78DA857200298A083C905482875A3C3E817F3E4",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/reset_test.c",
+      "expectedBytes": 6055,
+      "expectedSHA256": "700ACAAD7ECD6BA90407ECF8B5571CB8287118298A11C160AA7EF9BB8D7E2BD1",
+      "exists": true,
+      "actualBytes": 6055,
+      "actualSHA256": "700ACAAD7ECD6BA90407ECF8B5571CB8287118298A11C160AA7EF9BB8D7E2BD1",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/simple_test.c",
+      "expectedBytes": 4518,
+      "expectedSHA256": "0939E630A5F9E945B1E41FAFCE8C644FF74FF946AD3D5179FD1CD6AA39545769",
+      "exists": true,
+      "actualBytes": 4518,
+      "actualSHA256": "0939E630A5F9E945B1E41FAFCE8C644FF74FF946AD3D5179FD1CD6AA39545769",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/snr_bw_test.c",
+      "expectedBytes": 10686,
+      "expectedSHA256": "7E782D69397EB4B7B12CB0E68A22373540CE5FA584305F787F91DA8EA9D52219",
+      "exists": true,
+      "actualBytes": 10686,
+      "actualSHA256": "7E782D69397EB4B7B12CB0E68A22373540CE5FA584305F787F91DA8EA9D52219",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/src-evaluate.c",
+      "expectedBytes": 13364,
+      "expectedSHA256": "E05DB0831FCAA783A3BEDFEF93C1C863146A59F7533E355C598AAA6C8A2812B5",
+      "exists": true,
+      "actualBytes": 13364,
+      "actualSHA256": "E05DB0831FCAA783A3BEDFEF93C1C863146A59F7533E355C598AAA6C8A2812B5",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/streaming_test.c",
+      "expectedBytes": 3817,
+      "expectedSHA256": "3468932EB008AC26D0FBFD94B88E4AC142B1E9CD345F2E21A6D633E9CC9FA4DA",
+      "exists": true,
+      "actualBytes": 3817,
+      "actualSHA256": "3468932EB008AC26D0FBFD94B88E4AC142B1E9CD345F2E21A6D633E9CC9FA4DA",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/termination_test.c",
+      "expectedBytes": 9698,
+      "expectedSHA256": "AED8DE138E10641241EFD83ECC8BA507F829EEFCBA7709DECFB4E88DA690684C",
+      "exists": true,
+      "actualBytes": 9698,
+      "actualSHA256": "AED8DE138E10641241EFD83ECC8BA507F829EEFCBA7709DECFB4E88DA690684C",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/throughput_test.c",
+      "expectedBytes": 6171,
+      "expectedSHA256": "512B6BD9D0FA2C628921BD8978D902F953D9DF0B45B08827E944C8F2B0704D29",
+      "exists": true,
+      "actualBytes": 6171,
+      "actualSHA256": "512B6BD9D0FA2C628921BD8978D902F953D9DF0B45B08827E944C8F2B0704D29",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/util.c",
+      "expectedBytes": 5288,
+      "expectedSHA256": "AD54F1C53468130CFE1A266B5CAC88A427FB9E6475BF33ACC65E113AC98006DB",
+      "exists": true,
+      "actualBytes": 5288,
+      "actualSHA256": "AD54F1C53468130CFE1A266B5CAC88A427FB9E6475BF33ACC65E113AC98006DB",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/util.h",
+      "expectedBytes": 1245,
+      "expectedSHA256": "3DE5558F9CAD059654D8E818DCF6A3FA5383F7E657B392930778E89D5A6E7EBA",
+      "exists": true,
+      "actualBytes": 1245,
+      "actualSHA256": "3DE5558F9CAD059654D8E818DCF6A3FA5383F7E657B392930778E89D5A6E7EBA",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b/tests/varispeed_test.c",
+      "expectedBytes": 7838,
+      "expectedSHA256": "B900953D87E444AFDACC056556E6CDDD707DCE0EF02E727FC1D09C32DB39DCD1",
+      "exists": true,
+      "actualBytes": 7838,
+      "actualSHA256": "B900953D87E444AFDACC056556E6CDDD707DCE0EF02E727FC1D09C32DB39DCD1",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/libsamplerate-a147b6dc4046deda22b2aa772b348717de772e2b.tar.gz",
+      "expectedBytes": 3954416,
+      "expectedSHA256": "F90E46BBF9BAE05139E297CEEBD5394EF77CE5E294E6B46BEFFCC15B9446A041",
+      "exists": true,
+      "actualBytes": 3954416,
+      "actualSHA256": "F90E46BBF9BAE05139E297CEEBD5394EF77CE5E294E6B46BEFFCC15B9446A041",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+      "expectedBytes": 21751,
+      "expectedSHA256": "35D7D9F0A5CA3F563BE8294B2D9CBC43A89B520DFE88BCCDD40FA2DD6EE12FF0",
+      "exists": true,
+      "actualBytes": 21751,
+      "actualSHA256": "35D7D9F0A5CA3F563BE8294B2D9CBC43A89B520DFE88BCCDD40FA2DD6EE12FF0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/primary-tree.json",
+      "expectedBytes": 25912,
+      "expectedSHA256": "5DB007258A36B7DE3C5079627479EA03538B2336B9CC6D8BCE9E882A4AA29A32",
+      "exists": true,
+      "actualBytes": 25912,
+      "actualSHA256": "5DB007258A36B7DE3C5079627479EA03538B2336B9CC6D8BCE9E882A4AA29A32",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-eol-attribution-proof.json",
+      "expectedBytes": 750,
+      "expectedSHA256": "0FA96E49A7AFFD71D1F85081A2512CD086D82C4C93A1463E3D9AF9E54029767A",
+      "exists": true,
+      "actualBytes": 750,
+      "actualSHA256": "0FA96E49A7AFFD71D1F85081A2512CD086D82C4C93A1463E3D9AF9E54029767A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/archive-audit-before-extraction.json",
+      "expectedBytes": 36219,
+      "expectedSHA256": "1DC832BC4FCB4E890DCA8ACF1683E5363643C85C78EE8102781D0136121CB051",
+      "exists": true,
+      "actualBytes": 36219,
+      "actualSHA256": "1DC832BC4FCB4E890DCA8ACF1683E5363643C85C78EE8102781D0136121CB051",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-extraction-receipt.json",
+      "expectedBytes": 436,
+      "expectedSHA256": "B3A3BF10E8342E151192EA8CC9FDCD66563A3E56D8A0C3C6498E77410FB180A7",
+      "exists": true,
+      "actualBytes": 436,
+      "actualSHA256": "B3A3BF10E8342E151192EA8CC9FDCD66563A3E56D8A0C3C6498E77410FB180A7",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-get.json",
+      "expectedBytes": 678,
+      "expectedSHA256": "53D082D70B88CD392D30951B7E9D1137A4A93001E072D595461AF99583686933",
+      "exists": true,
+      "actualBytes": 678,
+      "actualSHA256": "53D082D70B88CD392D30951B7E9D1137A4A93001E072D595461AF99583686933",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-head.json",
+      "expectedBytes": 274,
+      "expectedSHA256": "B08C05CC647A6ACBFD554F303DE04D85A236B45AFC8D818B90E5D446AFF4883A",
+      "exists": true,
+      "actualBytes": 274,
+      "actualSHA256": "B08C05CC647A6ACBFD554F303DE04D85A236B45AFC8D818B90E5D446AFF4883A",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/primary-def-blob.json",
+      "expectedBytes": 912,
+      "expectedSHA256": "ED5D838A7B89C6F21BDA55BBD9ECB7665F86DCEA1D9EE6853CFD7AA75B5AE947",
+      "exists": true,
+      "actualBytes": 912,
+      "actualSHA256": "ED5D838A7B89C6F21BDA55BBD9ECB7665F86DCEA1D9EE6853CFD7AA75B5AE947",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/primary-def.raw",
+      "expectedBytes": 447,
+      "expectedSHA256": "4D19392764FBEBE1777924C65E8ADD8E6CF4F78841A2FF3A260BFF09AF92F8C0",
+      "exists": true,
+      "actualBytes": 447,
+      "actualSHA256": "4D19392764FBEBE1777924C65E8ADD8E6CF4F78841A2FF3A260BFF09AF92F8C0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/AuditSourceV2.py",
+      "expectedBytes": 4332,
+      "expectedSHA256": "F13A56678BE90EB9D28DEAF87609C239B9D3663A63121286BC75527A6984A853",
+      "exists": true,
+      "actualBytes": 4332,
+      "actualSHA256": "F13A56678BE90EB9D28DEAF87609C239B9D3663A63121286BC75527A6984A853",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/libsamplerate/build_config.json",
+      "expectedBytes": 3687,
+      "expectedSHA256": "44DD3C2BA45359BE99E254437EA296419FF14A8507387785C95F69BB3E6A6972",
+      "exists": true,
+      "actualBytes": 3687,
+      "actualSHA256": "44DD3C2BA45359BE99E254437EA296419FF14A8507387785C95F69BB3E6A6972",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/libsamplerate/Findlibsamplerate.cmake.template",
+      "expectedBytes": 1253,
+      "expectedSHA256": "7F89D3350D4129F9B3A64A8CD9A577BE5BD96523036462C913DAFE8BE59A5F7F",
+      "exists": true,
+      "actualBytes": 1253,
+      "actualSHA256": "7F89D3350D4129F9B3A64A8CD9A577BE5BD96523036462C913DAFE8BE59A5F7F",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-history-original-build_config.json",
+      "expectedBytes": 4101,
+      "expectedSHA256": "40541E902E5F178EBF6C67330EDC571BA2D9E18080ECFF707566676D9C3EB4B3",
+      "exists": true,
+      "actualBytes": 4101,
+      "actualSHA256": "40541E902E5F178EBF6C67330EDC571BA2D9E18080ECFF707566676D9C3EB4B3",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-tag.json",
+      "expectedBytes": 345,
+      "expectedSHA256": "B2E247666323264D99EDFE8991A0AA106202871B504722D89B94969E24CB6A2D",
+      "exists": true,
+      "actualBytes": 345,
+      "actualSHA256": "B2E247666323264D99EDFE8991A0AA106202871B504722D89B94969E24CB6A2D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-annotated-tag",
+      "expectedBytes": 2820,
+      "expectedSHA256": "0EAC5417FD71CF777D611331C46447075450807D88688921C36E840712EEF266",
+      "exists": true,
+      "actualBytes": 2820,
+      "actualSHA256": "0EAC5417FD71CF777D611331C46447075450807D88688921C36E840712EEF266",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/native-recipes-research-summary.json",
+      "expectedBytes": 18801,
+      "expectedSHA256": "6A05F3ACD1320F0A9670C23219B8C95B77B860AF7F251722CBD9479B9945C177",
+      "exists": true,
+      "actualBytes": 18801,
+      "actualSHA256": "6A05F3ACD1320F0A9670C23219B8C95B77B860AF7F251722CBD9479B9945C177",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "expectedBytes": 7461,
+      "expectedSHA256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+      "exists": true,
+      "actualBytes": 7461,
+      "actualSHA256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "expectedBytes": 1982,
+      "expectedSHA256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "exists": true,
+      "actualBytes": 1982,
+      "actualSHA256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "expectedBytes": 1502,
+      "expectedSHA256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "exists": true,
+      "actualBytes": 1502,
+      "actualSHA256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "expectedBytes": 11557,
+      "expectedSHA256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "exists": true,
+      "actualBytes": 11557,
+      "actualSHA256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "expectedBytes": 1074,
+      "expectedSHA256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "exists": true,
+      "actualBytes": 1074,
+      "actualSHA256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/CMakeLists.txt",
+      "expectedBytes": 2754,
+      "expectedSHA256": "DDDDE76007DF444B20F0F3D9E1F724DA3E83B69D0BD16D788E6A8C181A1A514D",
+      "exists": true,
+      "actualBytes": 2754,
+      "actualSHA256": "DDDDE76007DF444B20F0F3D9E1F724DA3E83B69D0BD16D788E6A8C181A1A514D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/Source/Platform/Windows/platform_windows.cmake",
+      "expectedBytes": 273,
+      "expectedSHA256": "2D9B1A8596AAB520013D760B4A8A417CCCA347B3E9DFC036FE233455374CCF31",
+      "exists": true,
+      "actualBytes": 273,
+      "actualSHA256": "2D9B1A8596AAB520013D760B4A8A417CCCA347B3E9DFC036FE233455374CCF31",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/Source/Platform/Windows/MicrophoneSystemComponent_Windows.cpp",
+      "expectedBytes": 32623,
+      "expectedSHA256": "336365697EAFE435204B673C4D76BABAA7DABB8F0728E29E8B27545AED9E0D74",
+      "exists": true,
+      "actualBytes": 32623,
+      "actualSHA256": "336365697EAFE435204B673C4D76BABAA7DABB8F0728E29E8B27545AED9E0D74",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/vcvarsall.bat",
+      "expectedBytes": 10524,
+      "expectedSHA256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+      "exists": true,
+      "actualBytes": 10524,
+      "actualSHA256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe",
+      "expectedBytes": 436024,
+      "expectedSHA256": "58FBE0ACAC5265FE9A93ACB291E1DBD50432C4EBF00FF9B9FB4C34BC0F247C73",
+      "exists": true,
+      "actualBytes": 436024,
+      "actualSHA256": "58FBE0ACAC5265FE9A93ACB291E1DBD50432C4EBF00FF9B9FB4C34BC0F247C73",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "expectedBytes": 677736,
+      "expectedSHA256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+      "exists": true,
+      "actualBytes": 677736,
+      "actualSHA256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "C:/Program Files/CMake/bin/cmake.exe",
+      "expectedBytes": 13119048,
+      "expectedSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+      "exists": true,
+      "actualBytes": 13119048,
+      "actualSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "C:/Program Files/CMake/bin/ctest.exe",
+      "expectedBytes": 14012488,
+      "expectedSHA256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB",
+      "exists": true,
+      "actualBytes": 14012488,
+      "actualSHA256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "expectedBytes": 301368,
+      "expectedSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "exists": true,
+      "actualBytes": 301368,
+      "actualSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/BuildLibSampleratePackage.cmake",
+      "expectedBytes": 7699,
+      "expectedSHA256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D",
+      "exists": true,
+      "actualBytes": 7699,
+      "actualSHA256": "AC49C897F23D6F76645B9D207531B3DA33082F34C83470FC7F74E648CF51598D",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/Findlibsamplerate.cmake",
+      "expectedBytes": 1720,
+      "expectedSHA256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "exists": true,
+      "actualBytes": 1720,
+      "actualSHA256": "F29CEEBFA0785681E532824E188FA298B7A1471B96974F59DABB36EFF72FC4F2",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/NOTICE.txt",
+      "expectedBytes": 572,
+      "expectedSHA256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069",
+      "exists": true,
+      "actualBytes": 572,
+      "actualSHA256": "5373172E65D42158CE77D8D3C0431824F7B75CA3BF6F72F49B9F9EF577619069",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/README.md",
+      "expectedBytes": 4708,
+      "expectedSHA256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2",
+      "exists": true,
+      "actualBytes": 4708,
+      "actualSHA256": "9D0B57721DD6EB7F2A4D886937BCDC781EF32CFD8F7E6A875D105C7AC6948FD2",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/tests/CMakeLists.txt",
+      "expectedBytes": 1753,
+      "expectedSHA256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "exists": true,
+      "actualBytes": 1753,
+      "actualSHA256": "6F9B1715D122BBFA4CC4FD89DAE2110A3F638FCC0387EC066685361A9DE65FA0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/preserved-provider-red/tests/LibSamplerateConsumer.cpp",
+      "expectedBytes": 11636,
+      "expectedSHA256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9",
+      "exists": true,
+      "actualBytes": 11636,
+      "actualSHA256": "A5183B2D3BB992C3D7ACBFA85DD7D09E5F5001000B704378A7AD9466A0D4C9A9",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-freeze-libsamplerate-rev1.json",
+      "expectedBytes": 38013,
+      "expectedSHA256": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+      "exists": true,
+      "actualBytes": 38013,
+      "actualSHA256": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/validation-arguments-rev1.json",
+      "expectedBytes": 4429,
+      "expectedSHA256": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+      "exists": true,
+      "actualBytes": 4429,
+      "actualSHA256": "B623FE1D877D8F83A22E9D5D124C13E3DDEF875AD0A9BDC0D06FD821093BC585",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-validation-preparation/parent-consumer-red-review-rev1.json",
+      "expectedBytes": 4151,
+      "expectedSHA256": "64C0C13DFD4D00BE190A52927D430D3B01E8B2CB7C7CF150AF246F0AD5858C77",
+      "exists": true,
+      "actualBytes": 4151,
+      "actualSHA256": "64C0C13DFD4D00BE190A52927D430D3B01E8B2CB7C7CF150AF246F0AD5858C77",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/candidate-byte-proof-rev2.json",
+      "expectedBytes": 4050,
+      "expectedSHA256": "D3926BCDEA8152BE41A9BB350225C9BB383FA0D3C63D2C82B046AD241AC0D0F9",
+      "exists": true,
+      "actualBytes": 4050,
+      "actualSHA256": "D3926BCDEA8152BE41A9BB350225C9BB383FA0D3C63D2C82B046AD241AC0D0F9",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/source-diff-rev2.patch",
+      "expectedBytes": 17795,
+      "expectedSHA256": "344659698754C19DFAFF802303B5AD73807F383C707DBACEAC434CF3409CF1E4",
+      "exists": true,
+      "actualBytes": 17795,
+      "actualSHA256": "344659698754C19DFAFF802303B5AD73807F383C707DBACEAC434CF3409CF1E4",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-audit-v2/validation-arguments-rev2.json",
+      "expectedBytes": 4461,
+      "expectedSHA256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+      "exists": true,
+      "actualBytes": 4461,
+      "actualSHA256": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+      "matches": true,
+      "failure": null
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-preparation/PrepareCandidateRev2-v2.ps1",
+      "expectedBytes": 10587,
+      "expectedSHA256": "69D28C7045F99395783E4EF8D9B2CF36C9BB53CC43081C8B4B3BDE36DD4AD205",
+      "exists": true,
+      "actualBytes": 10587,
+      "actualSHA256": "69D28C7045F99395783E4EF8D9B2CF36C9BB53CC43081C8B4B3BDE36DD4AD205",
+      "matches": true,
+      "failure": null
+    }
+  ]
+}

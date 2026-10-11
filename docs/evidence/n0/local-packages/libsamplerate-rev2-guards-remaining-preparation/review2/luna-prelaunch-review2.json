@@ -1,0 +1,52 @@
+{
+  "status": "SIX_REMAINING_GUARDS_PREFLIGHT_READY",
+  "utc": "2026-10-11T10:56:05.6105898Z",
+  "callerPID": 280348,
+  "hashes": {
+    "assignment": "63A841409BC6ECB39D05AA4CCF1F3D776DBEFDC756357C0740B3AA0AFC5647AE",
+    "parentReview": "D1822C3871A559D300AF3F1B2B3F6870FD558D144F12C2B75E7C66BC02F06F20",
+    "driverFreeze": "B5175ED72D0923D50A3CBC5F18DD913894CF7B2E5D28923B803F7E5526ACAD83",
+    "validationInputs": "872D9141B665C33797BA4F0BA7D7137859497AD895EB33BEB4614B07F24DA7C8",
+    "guardDriver": "BCE9D0C8365EC91B19FCC7382E5B2213BC5606A74BAC8473F9E8702EAD4EC0E0",
+    "common": "4F5817DEB28E99F4D1998BA49C3E7495A6279D4C3DFF4DD107D5A70A34378B23",
+    "authority": "BA3B3D3E25CB765D1B978ED147F8AA0546A2BA6F0D9B3D85910E6C9EA14AAAF0",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "sourceAndDriverRehash": {
+    "driverEntries": 210,
+    "driverMatched": 210,
+    "validationEntries": 209,
+    "validationMatched": 209
+  },
+  "consumerGate": {
+    "status": "CONSUMER_CASES_PASSED_ONLY",
+    "releaseCases": 7,
+    "releaseFailures": 0,
+    "releaseSkips": 0,
+    "debugCases": 7,
+    "debugFailures": 0,
+    "debugSkips": 0,
+    "postflight195": 195
+  },
+  "alreadyRun": [
+    "uri",
+    "unc"
+  ],
+  "toRun": [
+    "missing-archive",
+    "archive-hash",
+    "missing-manifest",
+    "manifest-hash",
+    "external-output",
+    "old-output"
+  ],
+  "existingFixtures": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards",
+  "existingFixturesReadOnly": true,
+  "remainingRunEvidence": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards-remaining-preparation/review2/remaining-guards-run",
+  "remainingRunEvidenceAbsent": true,
+  "oldOutputExists": true,
+  "externalOutputAbsent": true,
+  "outputsCurrentExpected": true,
+  "relatedProcesses": [],
+  "scope": "Only six guards; no URI/UNC repeat, producer or consumer"
+}

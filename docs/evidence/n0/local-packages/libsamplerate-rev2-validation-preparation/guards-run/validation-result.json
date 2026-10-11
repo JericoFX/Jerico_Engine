@@ -1,0 +1,82 @@
+{
+  "status": "FAIL_OR_INCOMPLETE",
+  "wrapperStartUTC": "2026-10-11T10:49:03.8500244Z",
+  "wrapperEndUTC": "2026-10-11T10:49:04.4354194Z",
+  "wrapperPID": 128036,
+  "preflightMatches": 195,
+  "postflightMatches": 195,
+  "inputs": 195,
+  "phases": [
+    {
+      "name": "guard-uri",
+      "utc": "2026-10-11T10:49:04.1169476Z",
+      "PID": 196912,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=https://invalid.example/libsamplerate.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-uri",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "count": 5,
+      "exitCode": 1,
+      "elapsedSeconds": 0.0457827,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-uri.stdout.raw.log",
+      "stdoutBytes": 0,
+      "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-uri.stderr.raw.log",
+      "stderrBytes": 298,
+      "stderrSHA256": "0E90D175ED568F66B56A147E20AB71D072928C7EB900EBCD8EEBD365EBE2654F"
+    },
+    {
+      "name": "guard-unc",
+      "utc": "2026-10-11T10:49:04.1835795Z",
+      "PID": 298964,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "arguments": [
+        "-DJE_SAMPLERATE_SOURCE_ARCHIVE=//localhost/not-a-local-input/libsamplerate.tar.gz",
+        "-DJE_SAMPLERATE_SOURCE_MANIFEST=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-audit/source-manifest.json",
+        "-DJE_SAMPLERATE_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-unc",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/LibSamplerate/BuildLibSampleratePackage.cmake"
+      ],
+      "count": 5,
+      "exitCode": 1,
+      "elapsedSeconds": 0.0381294,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-unc.stdout.raw.log",
+      "stdoutBytes": 0,
+      "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev2-validation-preparation\\guards-run\\guard-unc.stderr.raw.log",
+      "stderrBytes": 314,
+      "stderrSHA256": "D79D9C370A08E9BF26900435498883D4F8D3AC3D0323D394507BBEE786654A7F"
+    }
+  ],
+  "checks": [
+    {
+      "name": "uri",
+      "expectedDiagnostic": "must not be a URI",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-uri",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true,
+      "oldOutputScope": "Existence of retained directory only; no full private old-build manifest claim"
+    },
+    {
+      "name": "unc",
+      "expectedDiagnostic": "absolute local path",
+      "exitCode": 1,
+      "diagnosticPresent": false,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev2-guards/output-unc",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": false,
+      "oldOutputScope": "Existence of retained directory only; no full private old-build manifest claim"
+    }
+  ],
+  "failure": "System.Management.Automation.RuntimeException: Guard unc did not demonstrate expected pre-output rejection; no retry",
+  "acceptance": "Parent only; this driver does not certify Atom/editor/AP/cook/runtime",
+  "retry": "None"
+}

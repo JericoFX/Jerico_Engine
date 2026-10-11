@@ -1,0 +1,40 @@
+{
+  "status": "PREFLIGHT_READY",
+  "utc": "2026-10-11T10:08:49.4743922Z",
+  "caller_pid": 284072,
+  "cwd": "F:\\JericoEngine",
+  "powershell": {
+    "edition": "Core",
+    "version": "7.6.5",
+    "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+  },
+  "launcher": {
+    "path": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+    "file_version": "7.6.5.500"
+  },
+  "wrapper_argv": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/libsamplerate-rev1-preparation/RunProducer.ps1"
+  ],
+  "hashes": {
+    "assignment": "1F8E767A764C9CD7902AC2CD97080D72431C9A219BB1A4E21B322B341E632D4C",
+    "driver": "72DE9CA77C2C481D8E1358E16BE5090D1C79752EB47690C4905A2B2E090EE4A2",
+    "driverFreeze": "37ABA24BA679D6BE0F707E3096ABB5C66660D9D44E335BB59C33AF0E32D9BB4F",
+    "parentReview": "4A768F24ED6DDDF6588248A031568946E98CAA169F71D365C8AFBC65D7AFEFD3",
+    "sourceFreeze": "56C34D9835C18C444EFA77F4B2042B1A31D938E49E0BF74948CB7DCA8550A986",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "source_freeze_entries": 136,
+  "driver_freeze_entries": 142,
+  "dispatch_review_status": "PARENT_SOURCE_AND_DISPATCH_REVIEWED",
+  "assignment_id": null,
+  "producer_output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-build",
+  "producer_output_absent": true,
+  "producer_run_evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\libsamplerate-rev1-preparation\\producer-run",
+  "producer_run_evidence_absent": true,
+  "related_processes": [],
+  "preflight_note": "Initial broad launcher-path process probe matched its own PowerShell query; corrected driver-specific query excluding caller PID found no active producer."
+}
