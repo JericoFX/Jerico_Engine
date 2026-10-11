@@ -1,0 +1,32 @@
+{
+  "exitCode": 0,
+  "producerRebuilt": false,
+  "archiveReExtracted": false,
+  "stages": [
+    {
+      "label": "configure",
+      "exitCode": 0,
+      "seconds": 5.9143658
+    },
+    {
+      "label": "build-Release",
+      "exitCode": 0,
+      "seconds": 2.9133776
+    },
+    {
+      "label": "ctest-Release",
+      "exitCode": 0,
+      "seconds": 0.3999994
+    },
+    {
+      "label": "build-Debug",
+      "exitCode": 0,
+      "seconds": 2.7817985
+    },
+    {
+      "label": "ctest-Debug",
+      "exitCode": 0,
+      "seconds": 0.8423374
+    }
+  ]
+}

@@ -1,0 +1,675 @@
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake b/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake
+@@ -0,0 +1,121 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++set(JE_INPUT_NAMES SOURCE_ARCHIVE SOURCE_ROOT SOURCE_MANIFEST TOOL_ARCHIVE TOOL_ROOT TOOL_MANIFEST VS_ROOT POWERSHELL OUTPUT)
++foreach(JE_NAME IN LISTS JE_INPUT_NAMES)
++    JE_python_require_local_path(JE_ISPC_${JE_NAME})
++    if("${JE_ISPC_${JE_NAME}}" MATCHES "[%!^&|<>\";\r\n]")
++        message(FATAL_ERROR "JE ISPCTexComp: unsupported batch path characters in ${JE_NAME}")
++    endif()
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_ISPC_OUTPUT}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR JE_ISPC_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE ISPCTexComp: output must be beneath this checkout/build")
++endif()
++if(EXISTS "${JE_ISPC_OUTPUT}")
++    message(FATAL_ERROR "JE ISPCTexComp: output must be new; previous outputs are preserved")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
++    message(FATAL_ERROR "JE ISPCTexComp: native Windows MSVC x64 is required")
++endif()
++set(JE_SOURCE_SHA "029373e6ec5b10d7e29eefdc5a231fb86c79b76a4a39c58c2727c6729de28ab7")
++set(JE_TOOL_SHA "b34de2c36aff2afaa56b669ea41f9e614a045564ca74fc0b138e17ccea4880b7")
++JE_python_verify_file("${JE_ISPC_SOURCE_ARCHIVE}" "${JE_SOURCE_SHA}" "pinned encoder archive")
++JE_python_verify_file("${JE_ISPC_TOOL_ARCHIVE}" "${JE_TOOL_SHA}" "official ISPC 1.16.1 archive")
++file(SIZE "${JE_ISPC_SOURCE_ARCHIVE}" JE_SOURCE_BYTES)
++file(SIZE "${JE_ISPC_TOOL_ARCHIVE}" JE_TOOL_BYTES)
++if(NOT JE_SOURCE_BYTES EQUAL 6435298 OR NOT JE_TOOL_BYTES EQUAL 44708214)
++    message(FATAL_ERROR "JE ISPCTexComp: audited archive size mismatch")
++endif()
++JE_python_verify_file("${JE_ISPC_SOURCE_MANIFEST}" "57f92dec28e02ed21fc8d496b46668e9f7c8a2c687596197663ce3a8fe3a2b44" "immutable encoder manifest")
++JE_python_verify_file("${JE_ISPC_TOOL_MANIFEST}" "c7b2d1e932455ea837bd824b8440dbd7c964a9ee2e5f5ae69e16833e37af7f6e" "immutable ISPC manifest")
++set(JE_VCVARS "${JE_ISPC_VS_ROOT}/VC/Auxiliary/Build/vcvarsall.bat")
++set(JE_MSBUILD "${JE_ISPC_VS_ROOT}/MSBuild/Current/Bin/amd64/MSBuild.exe")
++set(JE_CL "${JE_ISPC_VS_ROOT}/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe")
++JE_python_verify_file("${JE_VCVARS}" "ee67e4181ae2578b7842f9f1549a7f66e2166638fa544ce6838d9e9033a02275" "MSVC vcvarsall")
++JE_python_verify_file("${JE_MSBUILD}" "58fbe0acac5265fe9a93acb291e1dbd50432c4ebf00ff9b9fb4c34bc0f247c73" "MSBuild x64")
++JE_python_verify_file("${JE_CL}" "88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d" "MSVC x64 compiler")
++JE_python_verify_file("${JE_ISPC_VS_ROOT}/MSBuild/Microsoft/VC/v170/Microsoft.Cl.Common.props"
++    "9d9c3aa8770dfc7e7430b831252e1efbab0799c7ce0d25a03485ff506bed575b" "original Release /MD default")
++JE_python_verify_file("${JE_ISPC_TOOL_ROOT}/bin/ispc.exe"
++    "91f687613eff144125057463255d79db78960ed1f5fcd487411187f5a8e3323f" "external ISPC compiler")
++JE_python_verify_file("${JE_ISPC_POWERSHELL}" "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139" "audited PowerShell Core 7.6.5")
++execute_process(COMMAND "${JE_ISPC_POWERSHELL}" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass
++    -File "${CMAKE_CURRENT_LIST_DIR}/VerifyInputs.ps1"
++    -SourceRoot "${JE_ISPC_SOURCE_ROOT}" -SourceManifest "${JE_ISPC_SOURCE_MANIFEST}"
++    -ToolRoot "${JE_ISPC_TOOL_ROOT}" -ToolManifest "${JE_ISPC_TOOL_MANIFEST}"
++    RESULT_VARIABLE JE_VERIFY_RESULT OUTPUT_VARIABLE JE_VERIFY_OUTPUT ERROR_VARIABLE JE_VERIFY_ERROR)
++if(NOT JE_VERIFY_RESULT EQUAL 0)
++    message(FATAL_ERROR "JE ISPCTexComp: immutable input verification failed (${JE_VERIFY_RESULT}): ${JE_VERIFY_ERROR}")
++endif()
++# Only the private copy receives generated kernel headers and objects.
++set(JE_WORK "${JE_ISPC_OUTPUT}/source-work/encoder")
++set(JE_BIN "${JE_ISPC_OUTPUT}/bin")
++set(JE_INT "${JE_ISPC_OUTPUT}/obj")
++set(JE_EMPTY_USER "${JE_ISPC_OUTPUT}/empty-user")
++set(JE_EMPTY_PROPS "${JE_ISPC_OUTPUT}/NoOverrides.props")
++set(JE_STAGE "${JE_ISPC_OUTPUT}/stage")
++file(MAKE_DIRECTORY "${JE_WORK}" "${JE_WORK}/ISPC/win" "${JE_EMPTY_USER}")
++file(COPY "${JE_ISPC_SOURCE_ROOT}/" DESTINATION "${JE_WORK}")
++configure_file("${JE_ISPC_TOOL_ROOT}/bin/ispc.exe" "${JE_WORK}/ISPC/win/ispc.exe" COPYONLY)
++file(WRITE "${JE_ISPC_OUTPUT}/input-verification.txt" "${JE_VERIFY_OUTPUT}")
++file(CONFIGURE OUTPUT "${JE_EMPTY_PROPS}" CONTENT
++    "<Project xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\" />\n" @ONLY NEWLINE_STYLE UNIX)
++file(WRITE "${JE_ISPC_OUTPUT}/producer-inputs.cmake" "# Audited offline inputs.\n")
++foreach(JE_NAME IN LISTS JE_INPUT_NAMES)
++    file(APPEND "${JE_ISPC_OUTPUT}/producer-inputs.cmake" "set(JE_ISPC_${JE_NAME} [==[${JE_ISPC_${JE_NAME}}]==])\n")
++endforeach()
++foreach(JE_NAME IN ITEMS VCVARS MSBUILD WORK)
++    string(REPLACE "/" "\\" JE_NATIVE_${JE_NAME} "${JE_${JE_NAME}}")
++endforeach()
++string(REPLACE "/" "\\" JE_NATIVE_OUTPUT "${JE_ISPC_OUTPUT}")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/RunBuild.cmd.in" "${JE_ISPC_OUTPUT}/build.cmd" @ONLY)
++# cmd.exe itself requires native separators, as established by the OpenSSL witness.
++string(REPLACE "/" "\\" JE_CMD "$ENV{SystemRoot}/System32/cmd.exe")
++string(REPLACE "/" "\\" JE_BATCH "${JE_ISPC_OUTPUT}/build.cmd")
++execute_process(COMMAND "${JE_CMD}" /d /c "${JE_BATCH}" WORKING_DIRECTORY "${JE_WORK}/ispc_texcomp"
++    RESULT_VARIABLE JE_BUILD_RESULT OUTPUT_FILE "${JE_ISPC_OUTPUT}/build.stdout.log" ERROR_FILE "${JE_ISPC_OUTPUT}/build.stderr.log")
++if(NOT JE_BUILD_RESULT EQUAL 0)
++    message(FATAL_ERROR "JE ISPCTexComp: original native project failed (${JE_BUILD_RESULT}); outputs retained")
++endif()
++foreach(JE_KERNEL IN ITEMS kernel kernel_astc)
++    foreach(JE_SUFFIX IN ITEMS "" _sse2 _sse4 _avx _avx2)
++        if(NOT EXISTS "${JE_BIN}/${JE_KERNEL}${JE_SUFFIX}.obj")
++            message(FATAL_ERROR "JE ISPCTexComp: original multi-target kernel object is missing")
++        endif()
++    endforeach()
++endforeach()
++foreach(JE_FILE IN ITEMS ispc_texcomp.dll ispc_texcomp.lib)
++    if(NOT EXISTS "${JE_BIN}/${JE_FILE}")
++        message(FATAL_ERROR "JE ISPCTexComp: expected ${JE_FILE} is missing")
++    endif()
++endforeach()
++file(MAKE_DIRECTORY "${JE_STAGE}/ISPCTexComp/include/ISPC" "${JE_STAGE}/ISPCTexComp/bin" "${JE_STAGE}/LICENSES/ISPCTexComp/source")
++file(COPY "${JE_BIN}/ispc_texcomp.dll" "${JE_BIN}/ispc_texcomp.lib" DESTINATION "${JE_STAGE}/ISPCTexComp/bin")
++configure_file("${JE_WORK}/ispc_texcomp/ispc_texcomp.h" "${JE_STAGE}/ISPCTexComp/include/ISPC/ispc_texcomp.h" COPYONLY)
++file(COPY "${JE_WORK}/license.txt" DESTINATION "${JE_STAGE}/ISPCTexComp")
++file(COPY "${JE_WORK}/ispc_texcomp/" DESTINATION "${JE_STAGE}/LICENSES/ISPCTexComp/source"
++    FILES_MATCHING PATTERN "*.cpp" PATTERN "*.ispc" PATTERN "ispc_texcomp.h")
++file(COPY "${JE_ISPC_TOOL_ROOT}/LICENSE.txt" "${JE_ISPC_TOOL_ROOT}/third-party-programs.txt" DESTINATION "${JE_STAGE}/LICENSES/ISPC-build-tool")
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT" DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/FindISPCTexComp.cmake" "${JE_STAGE}/FindISPCTexComp.cmake" COPYONLY)
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt" "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++file(WRITE "${JE_STAGE}/ISPCTexComp/JERecipe.json"
++    "{\n  \"sourceCommit\": \"36b80aac50ea401a9adde44d86712c2241b2acfd\", \"architecture\": \"x64\",\n"
++    "  \"toolset\": \"v143/14.44.35207\", \"sdk\": \"10.0.26100.0\", \"CRT\": \"/MD Release\",\n"
++    "  \"ISPC\": \"1.16.1\", \"toolArchiveSHA256\": \"${JE_TOOL_SHA}\", \"toolDigestAuthority\": \"local measurement; upstream digest unavailable\",\n"
++    "  \"ISPCflags\": [\"-O2\", \"--target=sse2,sse4,avx,avx2\", \"--opt=fast-math\"],\n"
++    "  \"sourcePatches\": false, \"historicalBinaryABI\": \"not asserted\", \"toolRedistributed\": false\n}\n")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "ISPCTexComp-36b80aa-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_ISPC_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "36b80aa")
++set(JE_PACKAGE_SOURCE_COMMIT "36b80aac50ea401a9adde44d86712c2241b2acfd")
++set(JE_PACKAGE_LICENSE "MIT")
++set(JE_PACKAGE_SOURCE_SHA256 "${JE_SOURCE_SHA}")
++set(JE_PACKAGE_SOURCE_URL "https://codeload.github.com/GameTechDev/ISPCTextureCompressor/tar.gz/${JE_PACKAGE_SOURCE_COMMIT}")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake b/cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake
+@@ -0,0 +1,36 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++if(TARGET 3rdParty::ISPCTexComp)
++    return()
++endif()
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(JE_ISPC_LOCAL_ROOT "${CMAKE_CURRENT_LIST_DIR}")
++JE_python_require_local_path(JE_ISPC_LOCAL_ROOT)
++if(NOT WIN32 AND NOT PAL_PLATFORM_NAME STREQUAL "Windows")
++    message(FATAL_ERROR "JE local ISPCTexComp package is Windows x64 only")
++endif()
++if(NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE local ISPCTexComp package requires an x64 consumer")
++endif()
++set(ISPCTexComp_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/ISPCTexComp/include")
++set(ISPCTexComp_BINARY_DIR "${CMAKE_CURRENT_LIST_DIR}/ISPCTexComp/bin")
++set(ISPCTexComp_LIBRARY "${ISPCTexComp_BINARY_DIR}/ispc_texcomp.lib")
++set(ISPCTexComp_RUNTIME_DEPENDENCIES "${ISPCTexComp_BINARY_DIR}/ispc_texcomp.dll")
++set(ISPCTexComp_VERSION_STRING "36b80aa")
++foreach(JE_FILE IN ITEMS "${ISPCTexComp_INCLUDE_DIR}/ISPC/ispc_texcomp.h" "${ISPCTexComp_LIBRARY}" "${ISPCTexComp_RUNTIME_DEPENDENCIES}")
++    JE_python_require_local_path(JE_FILE)
++    if(NOT EXISTS "${JE_FILE}" OR IS_DIRECTORY "${JE_FILE}")
++        message(FATAL_ERROR "JE local ISPCTexComp: required package file is missing: ${JE_FILE}")
++    endif()
++endforeach()
++add_library(3rdParty::ISPCTexComp INTERFACE IMPORTED GLOBAL)
++if(COMMAND ly_target_include_system_directories)
++    ly_target_include_system_directories(TARGET 3rdParty::ISPCTexComp INTERFACE "${ISPCTexComp_INCLUDE_DIR}")
++else()
++    target_include_directories(3rdParty::ISPCTexComp SYSTEM INTERFACE "${ISPCTexComp_INCLUDE_DIR}")
++endif()
++target_link_libraries(3rdParty::ISPCTexComp INTERFACE "${ISPCTexComp_LIBRARY}")
++if(COMMAND ly_add_target_files)
++    ly_add_target_files(TARGETS 3rdParty::ISPCTexComp FILES "${ISPCTexComp_RUNTIME_DEPENDENCIES}")
++endif()
++set(ISPCTexComp_FOUND TRUE)
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/NOTICE.txt b/cmake/Tools/LocalPackages/ISPCTexComp/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/NOTICE.txt
+@@ -0,0 +1,11 @@
++ISPCTexComp: Copyright (c) 2016-2019 Intel Corporation, MIT license.
++Exact upstream source: GameTechDev/ISPCTextureCompressor
++36b80aac50ea401a9adde44d86712c2241b2acfd.
++Full license and library source notices are included unchanged.
++
++ISPC 1.16.1 is an external build tool, not part of this product payload.
++Its Intel BSD3 license and complete third-party notices are retained for
++build provenance. Neither ispc.exe nor ispcrt.dll is redistributed here.
++
++Local packaging glue: Contributors to the Open 3D Engine Project,
++Apache-2.0 OR MIT; retained original notices apply.
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/README.md b/cmake/Tools/LocalPackages/ISPCTexComp/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/README.md
+@@ -0,0 +1,38 @@
++# Local ISPCTexComp input candidate
++
++NOT VERIFIED: producer, eight native consumers, guards and original Atom integration have not run. Luna owns native validation. This is a Windows x64 Release DLL/import-library package, not a new codec or renderer.
++
++The Windows recipe at o3de/3p-package-source `70f0b7b5257bf7cf935bf1cfd270e1b53ccead18`, `package-system/ISPCTexComp/build_package_image.py`, pins encoder `36b80aac50ea401a9adde44d86712c2241b2acfd` and external ISPC 1.16.1. Its older upstream README mentioning 1.9.2 does not replace that recipe. The current catalog uses `ISPCTexComp-36b80aa-rev1-windows`; the new artifact is `ISPCTexComp-36b80aa-je-rev1-windows`, with a new measured package SHA after validation. No inherited package hash or historical binary ABI is claimed.
++
++The original `ispc_texcomp.vcxproj` builds unchanged with explicit v143/14.44.35207 and SDK 10.0.26100.0 overrides. Its Release dynamic-library configuration uses `/MD` through audited `Microsoft.Cl.Common.props:103`. User property sheets and Directory.Build overrides are isolated. Original `-O2 --target=sse2,sse4,avx,avx2 --opt=fast-math` kernels and dispatcher remain. The immutable source/tool manifests and archive hashes are checked before creating output or invoking either compiler. Only a new private work copy receives generated files. No upstream patch, Python invocation, installation, PATH change outside the child process, or acquisition occurs.
++
++The official source archive SHA256 is locally measured `029373e6ec5b10d7e29eefdc5a231fb86c79b76a4a39c58c2727c6729de28ab7` (6,435,298 bytes). All 238 entries were compared to pinned primary blobs: 72 byte-exact, 166 only CRLF versus LF under committed DXUT/DirectXTex attributes. The eight library files are byte-exact. Extraction retains archive bytes; no blanket normalization or export-cause claim. ISPC ZIP SHA256 `b34de2c36aff2afaa56b669ea41f9e614a045564ca74fc0b138e17ccea4880b7` (44,708,214 bytes) is a local measurement; no official asset digest was published. Compiler provenance/notices are retained, but neither ispc.exe nor ispcrt.dll enters the product payload.
++
++Original caller: `Gem::ImageProcessingAtom.Editor.Static`, `Source/Compressors/ISPCTextureCompressor.cpp`, includes `ISPC/ispc_texcomp.h` and links `3rdParty::ISPCTexComp`. Atom uses BC3, unsigned half HDR BC6H and RGB/alpha BC7; it also registers ASTC profiles but deliberately routes ASTC encoding elsewhere. The package preserves all 26 original exports, including BC1/ETC1/ASTC. Find preserves the original include/bin layout, interface target and runtime DLL deployment hook.
++
++Native consumer cases check all exports and the loaded DLL path, BC1/BC3 constant color and BC3 alpha via a test-only block oracle, half HDR BC6H modes, all BC7 profiles/mode prefixes, ETC1 and all ASTC profiles at 4/6/8 square blocks, reproducibility, raster block order, stride, bounds, source ownership and 32/64-bit border replication. ETC1/ASTC/BC6H/BC7 checks do not certify decoded image quality. Public compression APIs return void and require valid block-aligned inputs/buffers; invalid pointers/dimensions are not error-return APIs and are not invoked. Negative checks belong to real producer path/hash/manifest/output guards. Public host dispatch is exercised; ISA forcing and cross-machine dispatch coverage remain pending.
++
++Commands for the validation owner, fresh directories only:
++
++```powershell
++$engine = 'F:/JericoEngine/JericoEngine'
++$audit = "$engine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit"
++$output = "$engine/build/n0-validation/local-packages/ispc-texcomp-rev1-build"
++cmake '-DJE_ISPC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz' `
++  '-DJE_ISPC_SOURCE_ROOT=F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd' `
++  "-DJE_ISPC_SOURCE_MANIFEST=$audit/source-immutable-manifest.json" `
++  '-DJE_ISPC_TOOL_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip' `
++  '-DJE_ISPC_TOOL_ROOT=F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows' `
++  "-DJE_ISPC_TOOL_MANIFEST=$audit/tool-immutable-manifest.json" `
++  '-DJE_ISPC_VS_ROOT=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools' `
++  '-DJE_ISPC_POWERSHELL=C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe' `
++  "-DJE_ISPC_OUTPUT=$output" -P "$engine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake"
++cmake -S "$engine/cmake/Tools/LocalPackages/ISPCTexComp/tests" `
++  -B "$engine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer" `
++  -G 'Visual Studio 17 2022' -A x64 `
++  "-DJE_ISPC_PACKAGE_ROOT=$output/packages/ISPCTexComp-36b80aa-je-rev1-windows.contents"
++cmake --build "$engine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer" --config Release
++ctest --test-dir "$engine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer" -C Release --output-on-failure
++```
++
++Repeat the consumer build/tests with Debug separately if assigned; the SDK DLL remains Release `/MD` and this does not certify general mixed-CRT compatibility. Atom/editor/AP integration, actual asset cooking, runtime rendering and performance are pending. The pinned legacy tool/library versions retain security/maintenance debt; this provider does not silently upgrade them.
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/RunBuild.cmd.in b/cmake/Tools/LocalPackages/ISPCTexComp/RunBuild.cmd.in
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/RunBuild.cmd.in
+@@ -0,0 +1,41 @@
++@echo off
++setlocal
++rem No inherited compiler switches, user property sheets, GCC or Python PATH.
++set "PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem"
++set "CL="
++set "_CL_="
++set "LINK="
++set "_LINK_="
++set "INCLUDE="
++set "LIB="
++set "LIBPATH="
++set "EXTERNAL_INCLUDE="
++set "VSINSTALLDIR="
++set "VCINSTALLDIR="
++set "DevEnvDir="
++set "VCToolsVersion="
++set "VCToolsInstallDir="
++set "WindowsSdkDir="
++set "WindowsSDKVersion="
++set "UCRTVersion="
++set "UniversalCRTSdkDir="
++set "MSBuildSDKsPath="
++set "MSBuildExtensionsPath="
++set "MSBuildExtensionsPath32="
++set "MSBuildExtensionsPath64="
++set "MSBuildUserExtensionsPath="
++set "VCTargetsPath="
++for /f "tokens=1 delims==" %%V in ('set __VSCMD 2^>nul') do set "%%V="
++for /f "tokens=1 delims==" %%V in ('set __VCVARS 2^>nul') do set "%%V="
++for /f "tokens=1 delims==" %%V in ('set VSCMD_ 2^>nul') do set "%%V="
++set "VSCMD_SKIP_SENDTELEMETRY=1"
++call "@JE_NATIVE_VCVARS@" x64 10.0.26100.0 -vcvars_ver=14.44
++if errorlevel 1 exit /b %errorlevel%
++if not "%VCToolsVersion%"=="14.44.35207" exit /b 2
++if not "%WindowsSDKVersion%"=="10.0.26100.0\" exit /b 3
++> "@JE_NATIVE_OUTPUT@\native-environment.txt" echo VCToolsVersion=%VCToolsVersion%
++>> "@JE_NATIVE_OUTPUT@\native-environment.txt" echo WindowsSDKVersion=%WindowsSDKVersion%
++cd /d "@JE_NATIVE_WORK@\ispc_texcomp"
++if errorlevel 1 exit /b %errorlevel%
++"@JE_NATIVE_MSBUILD@" "@JE_NATIVE_WORK@\ispc_texcomp\ispc_texcomp.vcxproj" /t:Build /m /nologo /v:normal /nr:false /bl:"@JE_NATIVE_OUTPUT@\build.binlog" /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143 /p:VCToolsVersion=14.44.35207 /p:WindowsTargetPlatformVersion=10.0.26100.0 /p:VCTargetsPath="@JE_ISPC_VS_ROOT@/MSBuild/Microsoft/VC/v170/" /p:OutDir="@JE_BIN@/" /p:IntDir="@JE_INT@/" /p:UserRootDir="@JE_EMPTY_USER@/" /p:DirectoryBuildPropsPath="@JE_EMPTY_PROPS@" /p:DirectoryBuildTargetsPath="@JE_EMPTY_PROPS@"
++exit /b %errorlevel%
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/ISPCTexComp/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/tests/CMakeLists.txt
+@@ -0,0 +1,33 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_ISPC_PACKAGE_ROOT)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE ISPCTexComp consumer output must be beneath this checkout/build")
++endif()
++project(JELocalISPCTexCompConsumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE ISPCTexComp consumer requires Windows MSVC x64")
++endif()
++list(PREPEND CMAKE_MODULE_PATH "${JE_ISPC_PACKAGE_ROOT}")
++find_package(ISPCTexComp REQUIRED MODULE)
++if(NOT ISPCTexComp_VERSION_STRING STREQUAL "36b80aa")
++    message(FATAL_ERROR "JE ISPCTexComp consumer requires the original pinned source version")
++endif()
++add_executable(JEISPCTexCompConsumer ISPCTexCompConsumer.cpp)
++target_compile_features(JEISPCTexCompConsumer PRIVATE cxx_std_17)
++target_compile_options(JEISPCTexCompConsumer PRIVATE /W4 /WX)
++target_link_libraries(JEISPCTexCompConsumer PRIVATE 3rdParty::ISPCTexComp)
++set_property(TARGET JEISPCTexCompConsumer PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++add_custom_command(TARGET JEISPCTexCompConsumer POST_BUILD COMMAND "${CMAKE_COMMAND}" -E copy_if_different
++    "${ISPCTexComp_RUNTIME_DEPENDENCIES}" "$<TARGET_FILE_DIR:JEISPCTexCompConsumer>")
++enable_testing()
++foreach(JE_CASE IN ITEMS exports bc1 bc3 bc6h bc7 etc1 astc borders)
++    add_test(NAME JE.LocalPackages.ISPCTexComp.${JE_CASE} COMMAND JEISPCTexCompConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.ISPCTexComp.${JE_CASE} PROPERTIES TIMEOUT 120)
++endforeach()
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/tests/ISPCTexCompConsumer.cpp b/cmake/Tools/LocalPackages/ISPCTexComp/tests/ISPCTexCompConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/tests/ISPCTexCompConsumer.cpp
+@@ -0,0 +1,304 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++#define WIN32_LEAN_AND_MEAN
++#define NOMINMAX
++#include <Windows.h>
++#include <ISPC/ispc_texcomp.h>
++#include <algorithm>
++#include <array>
++#include <cstddef>
++#include <cstdint>
++#include <cstdlib>
++#include <filesystem>
++#include <iostream>
++#include <stdexcept>
++#include <string>
++#include <vector>
++
++namespace JE::ISPCTexCompTests
++{
++    void Require(bool condition, const char* message)
++    {
++        if (!condition)
++        {
++            throw std::runtime_error(message);
++        }
++    }
++
++    void Exports()
++    {
++        const HMODULE library = GetModuleHandleW(L"ispc_texcomp.dll");
++        Require(library != nullptr, "Original DLL import was not resolved");
++        std::array<wchar_t, 32768> modulePath{};
++        std::array<wchar_t, 32768> exePath{};
++        Require(GetModuleFileNameW(library, modulePath.data(), static_cast<DWORD>(modulePath.size())) != 0,
++            "DLL path unavailable");
++        Require(GetModuleFileNameW(nullptr, exePath.data(), static_cast<DWORD>(exePath.size())) != 0,
++            "Executable path unavailable");
++        Require(std::filesystem::path(modulePath.data()).parent_path() == std::filesystem::path(exePath.data()).parent_path(),
++            "Consumer loaded a DLL outside its explicit package copy");
++        const char* exports[] = {
++            "CompressBlocksBC1", "CompressBlocksBC3", "CompressBlocksBC6H", "CompressBlocksBC7",
++            "CompressBlocksETC1", "CompressBlocksASTC", "GetProfile_ultrafast", "GetProfile_veryfast",
++            "GetProfile_fast", "GetProfile_basic", "GetProfile_slow", "GetProfile_alpha_ultrafast",
++            "GetProfile_alpha_veryfast", "GetProfile_alpha_fast", "GetProfile_alpha_basic", "GetProfile_alpha_slow",
++            "GetProfile_bc6h_veryfast", "GetProfile_bc6h_fast", "GetProfile_bc6h_basic", "GetProfile_bc6h_slow",
++            "GetProfile_bc6h_veryslow", "GetProfile_etc_slow", "GetProfile_astc_fast", "GetProfile_astc_alpha_fast",
++            "GetProfile_astc_alpha_slow", "ReplicateBorders"
++        };
++        for (const char* name : exports)
++        {
++            Require(GetProcAddress(library, name) != nullptr, name);
++        }
++        static_assert(sizeof(rgba_surface) == 24);
++        static_assert(offsetof(rgba_surface, stride) == 16);
++    }
++
++    using Color = std::array<int, 4>;
++    constexpr Color First{32, 96, 192, 37};
++    constexpr Color Second{208, 48, 16, 221};
++
++    Color Color565(std::uint16_t value)
++    {
++        return {static_cast<int>((value >> 11) & 31) * 255 / 31,
++            static_cast<int>((value >> 5) & 63) * 255 / 63, static_cast<int>(value & 31) * 255 / 31, 255};
++    }
++
++    // Test-only BC1/BC3 block oracle, not a product decompressor.
++    void CheckBCColor(const std::uint8_t* block, const Color& expected, bool alpha)
++    {
++        const auto* color = block + (alpha ? 8 : 0);
++        const std::uint16_t e0 = static_cast<std::uint16_t>(color[0] | (color[1] << 8));
++        const std::uint16_t e1 = static_cast<std::uint16_t>(color[2] | (color[3] << 8));
++        std::array<Color, 4> palette{Color565(e0), Color565(e1), Color{}, Color{}};
++        for (std::size_t channel = 0; channel < 3; ++channel)
++        {
++            palette[2][channel] = (2 * palette[0][channel] + palette[1][channel]) / 3;
++            palette[3][channel] = (palette[0][channel] + 2 * palette[1][channel]) / 3;
++            if (!alpha && e0 <= e1)
++            {
++                palette[2][channel] = (palette[0][channel] + palette[1][channel]) / 2;
++                palette[3][channel] = 0;
++            }
++        }
++        std::uint32_t selectors = 0;
++        std::uint64_t alphaSelectors = 0;
++        std::array<int, 8> alphaPalette{};
++        for (unsigned index = 0; index < 4; ++index)
++        {
++            selectors |= static_cast<std::uint32_t>(color[index + 4]) << (8 * index);
++        }
++        if (alpha)
++        {
++            alphaPalette[0] = block[0];
++            alphaPalette[1] = block[1];
++            for (unsigned index = 0; index < 6; ++index)
++            {
++                alphaSelectors |= static_cast<std::uint64_t>(block[index + 2]) << (8 * index);
++            }
++            for (int index = 2; index < 8; ++index)
++            {
++                alphaPalette[static_cast<std::size_t>(index)] = block[0] > block[1]
++                    ? ((8 - index) * block[0] + (index - 1) * block[1]) / 7
++                    : index < 6 ? ((6 - index) * block[0] + (index - 1) * block[1]) / 5 : index == 6 ? 0 : 255;
++            }
++        }
++        for (unsigned pixel = 0; pixel < 16; ++pixel)
++        {
++            const auto& decoded = palette[(selectors >> (2 * pixel)) & 3];
++            for (std::size_t channel = 0; channel < 3; ++channel)
++            {
++                Require(std::abs(decoded[channel] - expected[channel]) <= 8, "BC color constant fixture was not encoded");
++            }
++            if (alpha)
++            {
++                Require(std::abs(alphaPalette[(alphaSelectors >> (3 * pixel)) & 7] - expected[3]) <= 1,
++                    "BC3 alpha constant fixture was not encoded");
++            }
++        }
++    }
++
++    template<class Compress, class CheckBlock>
++    void Blocks(int blockWidth, int blockHeight, int blockBytes, bool hdr, Compress compress, CheckBlock checkBlock)
++    {
++        const int width = 2 * blockWidth;
++        const int height = 2 * blockHeight;
++        const int bytesPerPixel = hdr ? 8 : 4;
++        const int compactStride = width * bytesPerPixel;
++        const int paddedStride = compactStride + 32;
++        std::vector<std::uint8_t> compact(static_cast<std::size_t>(compactStride * height));
++        std::vector<std::uint8_t> padded(static_cast<std::size_t>(paddedStride * height), 0xA5);
++        for (int y = 0; y < height; ++y)
++        {
++            for (int x = 0; x < width; ++x)
++            {
++                const bool second = ((x / blockWidth + y / blockHeight) & 1) != 0;
++                for (int channel = 0; channel < 4; ++channel)
++                {
++                    const std::size_t offset = static_cast<std::size_t>(y * compactStride + x * bytesPerPixel);
++                    if (hdr)
++                    {
++                        const std::array<std::uint16_t, 4> firstHalf{0x3400, 0x3C00, 0x4000, 0x3C00};
++                        const std::array<std::uint16_t, 4> secondHalf{0x4200, 0x3800, 0x3C00, 0x3C00};
++                        const auto value = (second ? secondHalf : firstHalf)[static_cast<std::size_t>(channel)];
++                        compact[offset + static_cast<std::size_t>(channel * 2)] = static_cast<std::uint8_t>(value & 255);
++                        compact[offset + static_cast<std::size_t>(channel * 2 + 1)] = static_cast<std::uint8_t>(value >> 8);
++                    }
++                    else
++                    {
++                        compact[offset + static_cast<std::size_t>(channel)] =
++                            static_cast<std::uint8_t>((second ? Second : First)[static_cast<std::size_t>(channel)]);
++                    }
++                }
++            }
++            std::copy_n(compact.data() + y * compactStride, compactStride, padded.data() + y * paddedStride);
++        }
++        const auto inputBefore = compact;
++        const auto paddedBefore = padded;
++        const std::size_t outputBytes = static_cast<std::size_t>(4 * blockBytes);
++        std::vector<std::uint8_t> result(outputBytes + 128, 0xCD);
++        std::vector<std::uint8_t> repeated(outputBytes + 128, 0xCD);
++        std::vector<std::uint8_t> strided(outputBytes + 128, 0xCD);
++        rgba_surface input{compact.data(), width, height, compactStride};
++        rgba_surface inputPadded{padded.data(), width, height, paddedStride};
++        compress(&input, result.data() + 64);
++        compress(&input, repeated.data() + 64);
++        compress(&inputPadded, strided.data() + 64);
++        Require(result == repeated, "Repeated native dispatch changed compressed blocks");
++        Require(result == strided, "Input stride changed compressed blocks");
++        Require(compact == inputBefore && padded == paddedBefore, "Compression mutated caller-owned input");
++        Require(std::all_of(result.begin(), result.begin() + 64, [](auto b) { return b == 0xCD; }) &&
++            std::all_of(result.end() - 64, result.end(), [](auto b) { return b == 0xCD; }), "Compressed output bounds violated");
++        Require(!std::equal(result.begin() + 64, result.begin() + 64 + blockBytes, result.begin() + 64 + blockBytes),
++            "Distinct color/HDR blocks produced identical output");
++        Require(std::equal(result.begin() + 64, result.begin() + 64 + blockBytes, result.begin() + 64 + 3 * blockBytes),
++            "Raster block order lost repeated diagonal fixture");
++        for (int index = 0; index < 4; ++index)
++        {
++            checkBlock(result.data() + 64 + index * blockBytes, index == 1 || index == 2 ? Second : First);
++        }
++    }
++
++    void Codec(const std::string& name)
++    {
++        const auto noDecode = [](const std::uint8_t*, const Color&) {};
++        if (name == "bc1" || name == "bc3")
++        {
++            const bool alpha = name == "bc3";
++            Blocks(4, 4, alpha ? 16 : 8, false, alpha ? CompressBlocksBC3 : CompressBlocksBC1,
++                [alpha](const auto* b, const Color& color) { CheckBCColor(b, color, alpha); });
++        }
++        else if (name == "bc6h")
++        {
++            const std::array<void (*)(bc6h_enc_settings*), 5> profiles{
++                GetProfile_bc6h_veryfast, GetProfile_bc6h_fast, GetProfile_bc6h_basic, GetProfile_bc6h_slow, GetProfile_bc6h_veryslow};
++            for (const auto profile : profiles)
++            {
++                bc6h_enc_settings settings{};
++                profile(&settings);
++                Blocks(4, 4, 16, true, [&settings](auto* s, auto* d) { CompressBlocksBC6H(s, d, &settings); },
++                    [](const auto* b, const Color&)
++                    {
++                        const int prefix = b[0] & 31;
++                        Require((prefix & 3) < 2 || prefix == 2 || prefix == 6 || prefix == 10 || prefix == 14 ||
++                            prefix == 18 || prefix == 22 || prefix == 26 || prefix == 30 || prefix == 3 || prefix == 7 ||
++                            prefix == 11 || prefix == 15, "Reserved BC6H mode emitted");
++                    });
++            }
++        }
++        else if (name == "bc7")
++        {
++            const std::array<void (*)(bc7_enc_settings*), 10> profiles{
++                GetProfile_ultrafast, GetProfile_veryfast, GetProfile_fast, GetProfile_basic, GetProfile_slow,
++                GetProfile_alpha_ultrafast, GetProfile_alpha_veryfast, GetProfile_alpha_fast, GetProfile_alpha_basic, GetProfile_alpha_slow};
++            for (std::size_t index = 0; index < profiles.size(); ++index)
++            {
++                bc7_enc_settings settings{};
++                profiles[index](&settings);
++                Require(settings.channels == (index < 5 ? 3 : 4), "BC7 profile lost RGB/alpha semantics");
++                Blocks(4, 4, 16, false, [&settings](auto* s, auto* d) { CompressBlocksBC7(s, d, &settings); },
++                    [](const auto* b, const Color&) { Require(b[0] != 0, "Reserved BC7 mode emitted"); });
++            }
++        }
++        else if (name == "etc1")
++        {
++            etc_enc_settings settings{};
++            GetProfile_etc_slow(&settings);
++            Blocks(4, 4, 8, false, [&settings](auto* s, auto* d) { CompressBlocksETC1(s, d, &settings); }, noDecode);
++        }
++        else if (name == "astc")
++        {
++            const std::array<void (*)(astc_enc_settings*, int, int), 3> profiles{
++                GetProfile_astc_fast, GetProfile_astc_alpha_fast, GetProfile_astc_alpha_slow};
++            for (int blockSize : {4, 6, 8})
++            {
++                for (std::size_t index = 0; index < profiles.size(); ++index)
++                {
++                    astc_enc_settings settings{};
++                    profiles[index](&settings, blockSize, blockSize);
++                    Require(settings.channels == (index == 0 ? 3 : 4) && settings.block_width == blockSize &&
++                        settings.block_height == blockSize, "ASTC profile changed block/alpha contract");
++                    Blocks(blockSize, blockSize, 16, false, [&settings](auto* s, auto* d) { CompressBlocksASTC(s, d, &settings); }, noDecode);
++                }
++            }
++        }
++        else
++        {
++            throw std::runtime_error("Unknown codec case");
++        }
++    }
++
++    void Borders()
++    {
++        for (int bpp : {32, 64})
++        {
++            const int pixelBytes = bpp / 8;
++            std::vector<std::uint8_t> source(static_cast<std::size_t>(3 * 2 * pixelBytes));
++            for (std::size_t index = 0; index < source.size(); ++index)
++            {
++                source[index] = static_cast<std::uint8_t>(index + 1);
++            }
++            const auto before = source;
++            std::vector<std::uint8_t> result(static_cast<std::size_t>(4 * 4 * pixelBytes + 32), 0xCD);
++            rgba_surface input{source.data(), 3, 2, 3 * pixelBytes};
++            rgba_surface output{result.data() + 16, 4, 4, 4 * pixelBytes};
++            ReplicateBorders(&output, &input, 1, 1, bpp);
++            for (int y = 0; y < 4; ++y)
++            {
++                for (int x = 0; x < 4; ++x)
++                {
++                    const auto* expected = source.data() + (3 + (std::min)(x + 1, 2)) * pixelBytes;
++                    Require(std::equal(expected, expected + pixelBytes, output.ptr + (y * 4 + x) * pixelBytes),
++                        "Border replication did not preserve the clipped source pixel");
++                }
++            }
++            Require(before == source && std::all_of(result.begin(), result.begin() + 16, [](auto b) { return b == 0xCD; }) &&
++                std::all_of(result.end() - 16, result.end(), [](auto b) { return b == 0xCD; }), "Border replication violated buffer ownership");
++        }
++    }
++}
++
++int main(int argc, char** argv)
++{
++    try
++    {
++        JE::ISPCTexCompTests::Require(argc == 2, "Select one native consumer case");
++        const std::string name = argv[1];
++        JE::ISPCTexCompTests::Exports();
++        if (name == "borders")
++        {
++            JE::ISPCTexCompTests::Borders();
++        }
++        else if (name != "exports")
++        {
++            JE::ISPCTexCompTests::Codec(name);
++        }
++        std::cout << "PASS " << name << '\n';
++        return 0;
++    }
++    catch (const std::exception& error)
++    {
++        std::cerr << error.what() << '\n';
++        return 1;
++    }
++}
+diff --git a/cmake/Tools/LocalPackages/ISPCTexComp/VerifyInputs.ps1 b/cmake/Tools/LocalPackages/ISPCTexComp/VerifyInputs.ps1
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ISPCTexComp/VerifyInputs.ps1
+@@ -0,0 +1,51 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++param([Parameter(Mandatory=$true)][string]$SourceRoot,
++    [Parameter(Mandatory=$true)][string]$SourceManifest,
++    [Parameter(Mandatory=$true)][string]$ToolRoot,
++    [Parameter(Mandatory=$true)][string]$ToolManifest)
++Set-StrictMode -Version Latest
++$ErrorActionPreference='Stop'
++foreach($inputPair in @(@{root=$SourceRoot;manifest=$SourceManifest;count=238},
++    @{root=$ToolRoot;manifest=$ToolManifest;count=175})){
++    $root=[IO.Path]::GetFullPath($inputPair.root).TrimEnd('\','/')
++    $ancestor=[IO.DirectoryInfo]::new($root)
++    while($ancestor){
++        if($ancestor.Exists -and ($ancestor.Attributes -band [IO.FileAttributes]::ReparsePoint)){
++            throw 'JE ISPCTexComp: input ancestor is a reparse point'
++        }
++        $ancestor=$ancestor.Parent
++    }
++    $manifest=Get-Content -LiteralPath $inputPair.manifest -Raw | ConvertFrom-Json
++    $records=@($manifest.entries)
++    if($manifest.files -ne $inputPair.count -or $records.Count -ne $inputPair.count){
++        throw 'JE ISPCTexComp: input manifest count mismatch'
++    }
++    $names=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
++    $queue=[Collections.Generic.Queue[string]]::new()
++    $queue.Enqueue($root)
++    $count=0
++    while($queue.Count){
++        foreach($item in (Get-ChildItem -LiteralPath $queue.Dequeue() -Force)){
++            if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'JE ISPCTexComp: reparse input'}
++            if($item.PSIsContainer){$queue.Enqueue($item.FullName)}else{$count++}
++        }
++    }
++    if($count -ne $inputPair.count){throw 'JE ISPCTexComp: input file count mismatch'}
++    foreach($record in $records){
++        if($record.path -match '(^[\\/]|(^|[\\/])\.\.?([\\/]|$)|:|\\)' -or -not $names.Add($record.path)){
++            throw 'JE ISPCTexComp: unsafe or duplicate manifest path'
++        }
++        $path=[IO.Path]::GetFullPath((Join-Path $root $record.path))
++        if(-not $path.StartsWith($root+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'JE ISPCTexComp: escaping manifest path'}
++        $item=Get-Item -LiteralPath $path
++        if($item.PSIsContainer -or $item.Length -ne $record.bytes){throw 'JE ISPCTexComp: input size mismatch'}
++        $hasher=[Security.Cryptography.SHA256]::Create()
++        try{
++            $stream=[IO.File]::OpenRead($path)
++            try{$digest=$hasher.ComputeHash($stream)}finally{$stream.Dispose()}
++        }finally{$hasher.Dispose()}
++        if(([BitConverter]::ToString($digest)).Replace('-','') -ne $record.sha256){throw 'JE ISPCTexComp: input SHA256 mismatch'}
++    }
++}
++Write-Output 'JE ISPCTexComp: immutable source 238 and external tool 175 files verified; no compiler executed'

@@ -1,0 +1,134 @@
+{
+  "status": "PENDING PARENT REVIEW / LUNA NATIVE EXECUTION",
+  "nativeExecuted": false,
+  "nativeOwner": "Luna",
+  "producer": {
+    "executable": "C:/Program Files/CMake/bin/cmake.exe",
+    "argv": [
+      "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150.tar.gz",
+      "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+      "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+      "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+    ],
+    "freshOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1"
+  },
+  "package": {
+    "identity": "astc-encoder-3.2-je-rev1-windows",
+    "archive": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1/packages/astc-encoder-3.2-je-rev1-windows.tar.xz",
+    "sidecar": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1/packages/astc-encoder-3.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "sha256": "MEASURE FROM REAL PRODUCTION",
+    "extractedRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1",
+    "extract": "Audit real produced archive paths/types/links/hashes before fresh extraction; never substitute stage for consumer"
+  },
+  "consumerConfigure": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/tests",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_ASTC_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1"
+  ],
+  "consumerBuild": [
+    [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+      "--config",
+      "Release",
+      "--parallel",
+      "8"
+    ],
+    [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+      "--config",
+      "Debug",
+      "--parallel",
+      "8"
+    ]
+  ],
+  "consumerCTest": [
+    [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+      "-C",
+      "Release",
+      "--output-on-failure"
+    ],
+    [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+      "-C",
+      "Debug",
+      "--output-on-failure"
+    ]
+  ],
+  "testCountPerConfig": 9,
+  "scope": "Tools/Editor under PAL_TRAIT_BUILD_HOST_TOOLS; no Runtime executable deployment",
+  "guards": [
+    {
+      "scope": "PRODUCER",
+      "expected": "is required",
+      "case": "missing-required-argument"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "source archive file is missing",
+      "case": "archive-missing"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "source archive SHA256 mismatch",
+      "case": "archive-hash"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must match the audited 3.2 archive",
+      "case": "pin-url-or-sha"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must not be a URI",
+      "case": "URI"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must be an absolute local path",
+      "case": "UNC-relative"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must not use symlink paths",
+      "case": "symlink-junction-ancestor"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "output must be new",
+      "case": "output-existing"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must be beneath this checkout/build",
+      "case": "output-outside-build"
+    },
+    {
+      "fixture": "Only private copy under own fresh attempt; invoke ApplyASTCPatch, not a claimed producer case",
+      "scope": "PATCH-HELPER",
+      "expected": "pristine patch input SHA256 mismatch",
+      "case": "pristine-byte-mismatch"
+    }
+  ],
+  "guardFixturePolicy": "Luna creates fresh local fixtures; producer negatives keep a missing archive secondary backstop so regression cannot reach build; no global path mutations",
+  "limits": [
+    "No native PASS yet",
+    "No original legacy binary hash claim",
+    "No Editor visual/performance acceptance",
+    "No current catalogue/cache/Root mutation"
+  ]
+}

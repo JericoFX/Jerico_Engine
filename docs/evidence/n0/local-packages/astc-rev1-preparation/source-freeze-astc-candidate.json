@@ -1,0 +1,3338 @@
+[
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\.gitattributes",
+    "sha256": "B9D0DDA5F7AE49B0B79CB8A4593998E779643B3E2E8BA8D9F8431EA4B239FBE3",
+    "bytes": 423,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-avx2_fastest_results.csv",
+    "sha256": "348062539F9441937F836DD72C1071E20D8A7D92CE7AD4D867B37C1121C17A5B",
+    "bytes": 6109,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-avx2_fast_results.csv",
+    "sha256": "4579D3BC800D672058B7927FA6D44EF78AC37870304CB474FCD52210B9EAB4AD",
+    "bytes": 6046,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse4.1_thorough_results.csv",
+    "sha256": "267F41F6D60ACCDF0D896071B974E5EC98EA73D566C45D1423E8C3F530920D21",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse4.1_medium_results.csv",
+    "sha256": "D254D9D80190787D736459B9B22D3062277D4EE86854ABE7AF09C4DA680A0A99",
+    "bytes": 6033,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse4.1_fastest_results.csv",
+    "sha256": "C0F3EA7BA81FC25F8E133EF5D56F58F759873BED3BCBA0407145A14B4E43C4DF",
+    "bytes": 6094,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse4.1_fast_results.csv",
+    "sha256": "E7D344059714130166FB39E5DE13AC458ABA2B8590A7B14A897B1893C0BC7066",
+    "bytes": 6040,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse2_thorough_results.csv",
+    "sha256": "E0C1C122A6F85883404FA0693250B3FE150445513A46E01B84C3868EA157BF61",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse2_medium_results.csv",
+    "sha256": "9535272D2ADC6B98BF9A7228EE0BD0B348A6AD59D022A93B423CA367E1D0BBBB",
+    "bytes": 6033,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse2_fastest_results.csv",
+    "sha256": "582692B717AC55D69D5CF6CE79D4F385060C5B7C7D05D455AF9365B90E27CFF3",
+    "bytes": 6089,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-sse2_fast_results.csv",
+    "sha256": "DA7CCCDECE050F5909EE289DAAEEC2164DA4FC1439A8939F6C1C220DC2C77A3B",
+    "bytes": 6037,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-avx2_thorough_results.csv",
+    "sha256": "5FA95A53C015370D7FDE1186BAE079DC2B6F3A007135E9E381E541076E0CFB2A",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-avx2_medium_results.csv",
+    "sha256": "06E3A07E0C861488F50D758A7784B63681DF916F4B4AADA7C144129CF2279300",
+    "bytes": 6033,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-avx2_fastest_results.csv",
+    "sha256": "8F7BD4048D9E51844A61B4780FE2654CC3B58F325F54002E30B0E30E75762961",
+    "bytes": 6096,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-2.5-avx2_fast_results.csv",
+    "sha256": "BE68B17ABC4D91C2813DCCAB3E502B679F5C724F5F4D1A0FD0E07FBCC2084528",
+    "bytes": 6043,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-avx2_medium_results.csv",
+    "sha256": "F896ADE12B17F2E257D0A043212BB5114032115F2296A0A759B02A36FDB99718",
+    "bytes": 6033,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-1.7_thorough_results.csv",
+    "sha256": "96D7ADAAE0843A7BC259BD7FC9C59ADE3136EC62FCDC4F0DCE9CF90A8713EBBD",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-1.7_fastest_results.csv",
+    "sha256": "8761ED4D918989C3AC014BC3212B76D194D54B584D0AE168F31D55040D981257",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-1.7_fast_results.csv",
+    "sha256": "5D7EDD1AA6C17C7E36C8B265E41EB3A25BD16BAC72A3162B8699B1E029042BA1",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDRS-RGBA\\ldrs-rgba-02.png",
+    "sha256": "93C788987A98617D3656201F48F69363217F61D6FC569468F54FBB27C298D376",
+    "bytes": 211398,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDRS-RGBA\\ldrs-rgba-01.png",
+    "sha256": "495250C68C1676E3BD1D89BDB707FD24609CDD9E810E46D9DDCCCB752D6AE7F9",
+    "bytes": 196069,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDRS-RGBA\\ldrs-rgba-00.png",
+    "sha256": "7F7515A18DED55B551E659453E81491419AA7927D98B45A121800739E0FFA326",
+    "bytes": 157580,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-XY\\ldr-xy-02.png",
+    "sha256": "FA194E26A275101C3D858D47E8F363A800704F0292E42A8FB3C2668EF59AFFB9",
+    "bytes": 126089,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-XY\\ldr-xy-01.png",
+    "sha256": "E4F8CCB990EB61E59DAB1B28D8381C95B6ECBD98BA4D2CDB20D497AD11640EC9",
+    "bytes": 118660,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-XY\\ldr-xy-00.png",
+    "sha256": "4562800F9A0C6D889C8A42DA7EA7C8DC559BC4699C8F25DE0F22F7AE9626FCF8",
+    "bytes": 113120,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGBA\\ldr-rgba-02.png",
+    "sha256": "93C788987A98617D3656201F48F69363217F61D6FC569468F54FBB27C298D376",
+    "bytes": 211398,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGBA\\ldr-rgba-01.png",
+    "sha256": "495250C68C1676E3BD1D89BDB707FD24609CDD9E810E46D9DDCCCB752D6AE7F9",
+    "bytes": 196069,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGBA\\ldr-rgba-00.png",
+    "sha256": "7F7515A18DED55B551E659453E81491419AA7927D98B45A121800739E0FFA326",
+    "bytes": 157580,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-10.png",
+    "sha256": "93476AAAFD7586FD75194A46D8B7D4A8D30D0E970A7ED1197E97FF69BFD1CFA5",
+    "bytes": 21955,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-09.png",
+    "sha256": "787CEC51553A53D5DB4F8D87885090AA0D031CC17744F77BAC0BE66E639220B0",
+    "bytes": 141666,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-08.png",
+    "sha256": "292D7BF35AEE483FCC4051CC4D324387CDAB62913D57492613FEAF3596D95337",
+    "bytes": 89515,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-1.7_medium_results.csv",
+    "sha256": "03F3234A4140E5CBCA924E0F88953069A5E7F8717F1187F1DEF5C058F94F84E8",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-avx2_thorough_results.csv",
+    "sha256": "848D34E1918C05F92B6E33F5A7234939229A74A3C530B1FAC0328BBBEF066729",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse2_fast_results.csv",
+    "sha256": "C283F0C96FEB3F9982942D60A7059483862E4290C953FC9FCC4FFA8C7B5786C3",
+    "bytes": 6038,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse2_fastest_results.csv",
+    "sha256": "CDB700842E39A93318206A859362FB3DF93D8E28D3FE5D25929A9A3A0201F09A",
+    "bytes": 6093,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_test_functional.py",
+    "sha256": "9CD5CC0A895832DF5A01ED8565AF1730CEFAE666369C8FC4AAAB7B981998C5AF",
+    "bytes": 73359,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_size_binary.py",
+    "sha256": "C9FC11F1C7E03A22DB7F307F00763956B032917AD697804B815313965580845A",
+    "bytes": 5982,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_quality_test.py",
+    "sha256": "A25DF89F1C3800B057A043B8D8889B576F0EC60D0F9187850B62643C10A9CA65",
+    "bytes": 3498,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_profile_valgrind.py",
+    "sha256": "D3E1526627FB9545513B6DBD0E076B31A7311F9C786A7F08368C1CB529FB0EB2",
+    "bytes": 6125,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_minify_test.sh",
+    "sha256": "04511544A1C68D2A8352F1A1E32B32B7BFBE77ABC2054D9A92410B48BD84027C",
+    "bytes": 643,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_image_sweep.py",
+    "sha256": "6228B94697A7382A985204C23E7B6A05DA031A4E25847EA735F60F2C03840397",
+    "bytes": 2733,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_image_info.py",
+    "sha256": "D183D32315C74DFB9A1F3BD265C13B797998BD017D6DF0B3E039628263C2053D",
+    "bytes": 5851,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_dump_binary.py",
+    "sha256": "EF9E91895155E1EA0E4B66EFD3604258245F397801CC727313FFD2E90691EC60",
+    "bytes": 3513,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Makefile",
+    "sha256": "51FD7D1FDDCBFB66E6F928D9683FBD8C3B3F8C2FCD95EF6D2647D920B885A7AF",
+    "bytes": 642,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-main-avx2_thorough_results.csv",
+    "sha256": "2A589559409B4189E5BD751C6D26EF362C496E0985710EED434FAAD50B8B2084",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-main-avx2_medium_results.csv",
+    "sha256": "41C3C54FDE56BF3AB32C4EA570B7EE68327D9D1A9AE1C12657A6F6B5780D5625",
+    "bytes": 6034,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-main-avx2_fastest_results.csv",
+    "sha256": "72203FAB2CC8D70D0346EAF96A429EABCD31A7E6E884401B70EE3928F80D4E29",
+    "bytes": 6103,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-main-avx2_fast_results.csv",
+    "sha256": "9FDF1A951673779F83E8B2AC61D1072F7B3288B01A53C41E2A3D5D1A3AAB39C2",
+    "bytes": 6041,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse4.1_thorough_results.csv",
+    "sha256": "DD06698A873E75CD7473F4ACDA6C1293C711228BEC03610889E3D57184FE7E49",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse4.1_medium_results.csv",
+    "sha256": "4F6800F43F9AD91EFD4764571C67724BE8A919D04B26218F9DDD8BCC11678E44",
+    "bytes": 6033,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse4.1_fastest_results.csv",
+    "sha256": "C28BB22559BB704D2F727FB4DA131850A8A3CC1C828457896525CFE14740D6D5",
+    "bytes": 6105,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse4.1_fast_results.csv",
+    "sha256": "5438761C66FA8C338D156EB1F4A36ADA4AF18E7230F9163C206BB04A06048595",
+    "bytes": 6043,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse2_medium_results.csv",
+    "sha256": "22D4FB8CA43E34A62A41E48FC9A9E2B0FF67BD9D0059805456F05ADFCFEF8084",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse2_thorough_results.csv",
+    "sha256": "B2F48331AEE6B581FB9A0FD31114626C28CE5CEDCDBDD2EED745A30C0DD46054",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse4.1_fast_results.csv",
+    "sha256": "F36DA2056237B984D6B81A2A236B23203C1D669150342F6E35E766BE6B2C59A3",
+    "bytes": 6043,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse4.1_fastest_results.csv",
+    "sha256": "63B46F7D515A16C335AFDF8E3048E32ECFE4135CCE36DA363D48A22508650EF7",
+    "bytes": 6101,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse4.1_medium_results.csv",
+    "sha256": "7F048C9C41563CCEFE812F664FEE0BA055929386467F86FA69C916B834650F7A",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.0-sse4.1_thorough_results.csv",
+    "sha256": "6D4167A96A703CCFC8264E015719B20F06D2D4A8FE0010458F053CDFD3D9699B",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-07.png",
+    "sha256": "DF6FFAF504432BE67EAA79F2CEE2EDA13AB3183F4F8834EE405E5BABE08B47D9",
+    "bytes": 127756,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-avx2_fast_results.csv",
+    "sha256": "41CFB2126C957DFB8851F525876FC2FE9B9E58E93FC24ABA386742E29F7E3C8F",
+    "bytes": 6046,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-avx2_medium_results.csv",
+    "sha256": "ECFAE50864CF5D8F1B8C4B3721EEDF9766588D532A514AAABAAD78760E364F61",
+    "bytes": 6035,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-avx2_thorough_results.csv",
+    "sha256": "115E46959C573D752562009D763E6528A73CD5307269B604FA834B5FFBF0D0EC",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse2_fast_results.csv",
+    "sha256": "0B4DB2A27602A9EA7A4AFCBFBED8D741414AEC6E4484A67BAC80281D1DA65956",
+    "bytes": 6040,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse2_fastest_results.csv",
+    "sha256": "23B66CD9D9156A0DA9F4FDB00D709D3DFDBB34E174F5CDDB6728D6FBF201EFD9",
+    "bytes": 6098,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse2_medium_results.csv",
+    "sha256": "2DA1F1AF236348F4458C590078A51A5A2D7DF0D26287204F343A3A8E9C93F839",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-sse2_thorough_results.csv",
+    "sha256": "59873F4D161059F681DD72097D81EB096678739BF6736D5E4CC27F4339AD7360",
+    "bytes": 6032,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\astc_reference-3.1-avx2_fastest_results.csv",
+    "sha256": "A5E8868D2EBA2D77E65524A6809E87C90CC6CA1E7109E6A88A7F492D899B429F",
+    "bytes": 6110,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-06.png",
+    "sha256": "59BD89057FAA565819AB7CC7650FEA30C29400ADDD06DB731F3AB60EDB76580A",
+    "bytes": 181096,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-05.png",
+    "sha256": "369BB91F4C7777948A68EA3776731D0417AC4EDD1C78755A4D8A062F8542B48A",
+    "bytes": 170880,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-04.png",
+    "sha256": "0DF1D060951A9AAEAA262041DA466CA9531D551E51ECEE808EA2ACC3D45B4A56",
+    "bytes": 149357,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse2_thorough_results.csv",
+    "sha256": "2547B4602B6F45BD6A543C445EB3A28E5672F7A32AA7E9FB3F7B66D7AEE23FFA",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse2_medium_results.csv",
+    "sha256": "903B10AC4EBCBEACF50E9ACFE810A45174D22A8AA3B75B51BEE4C1FD7080B13D",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse2_fastest_results.csv",
+    "sha256": "7D25E03AF40C37F04A306F9067CCA5F018601FCC5B63FEF6CCEA9513A3D57140",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse2_fast_results.csv",
+    "sha256": "7A4D0B6155E046E7B4023EFD196A276FA4274B8CDC3071E9666BC6A0D6E7CBF1",
+    "bytes": 1440,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-avx2_thorough_results.csv",
+    "sha256": "7A6D7FF82E7C9034F0CC311DA2F2B9E1DA58013A5EAF5BF74AB62BD5AB2EBB97",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-avx2_medium_results.csv",
+    "sha256": "C936578C6328EA337B9E2AB588BA9E633D660EF12054B3B8F9AD2B348880E96E",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-avx2_fastest_results.csv",
+    "sha256": "481954169D82F1E63F59A65BD2B3B30E0EC0C370E66ABCE2C0FC39BE320CE6BE",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-avx2_fast_results.csv",
+    "sha256": "7B93F3E3C4E76E4A2EE402E95DA3B334D4098A780A743CA33F5301E0B0EF40C5",
+    "bytes": 1442,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-1.7_thorough_results.csv",
+    "sha256": "277DF5310C187F682571633C276F644D81F64FDF8A193548EABFC74A168C4BE2",
+    "bytes": 1440,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-1.7_medium_results.csv",
+    "sha256": "AFBAF8EA80EB722B4261A3439D2581E15473F8A94BBB3B332089D5C8477132D4",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-1.7_fastest_results.csv",
+    "sha256": "22A16014C897DF322C18BCD44AEBDB73700EC11618BB1EED10F723E4B88E8004",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-1.7_fast_results.csv",
+    "sha256": "1284FD9F7599598D3B97170C8C04E3999AE46587A3391D07355F8F9191BBAF7B",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse4.1_thorough_results.csv",
+    "sha256": "0778D8D3ADA3D6F5B0DF8B10B22D2E79A56BBCB7A50C32434B4BC21CC611F20C",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse4.1_medium_results.csv",
+    "sha256": "2FEF87FD178C9DAF7CD8A08A8CC4EACE61B6589B31147B2381B141498C41965A",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse4.1_fastest_results.csv",
+    "sha256": "36180EF95468F479D2480539B1D441C2B710092DB9B469588F719D3FD28D623B",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse4.1_fast_results.csv",
+    "sha256": "0A2E1BA8FD6786898BF7F15D6C0A42CD789DF2EED79CFD8DCE192F6607C5B27D",
+    "bytes": 382,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse2_thorough_results.csv",
+    "sha256": "D609575FD4B23FD7E10CC00EDD7C9AE373860C0A628336D1DD8205F952651954",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse2_fastest_results.csv",
+    "sha256": "C33FA41694CF3C65C1829DEC904AAAEA6597609522EADB62AFFC08CECB85D865",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse2_medium_results.csv",
+    "sha256": "09DD6E2FCB05419DACD05E5807545CCF17B4EC452502C8F540DBA4301652B7FC",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse2_thorough_results.csv",
+    "sha256": "9FE21DDBCFB016CBEA0C0044067076B166F1050D6DEE7FCEBD973727AC3022AE",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse4.1_fast_results.csv",
+    "sha256": "9ACEDDAC853A2DE4A12CDCAD3909F9A0A0815DFA6CAB8BB94B4CF6080F04B50C",
+    "bytes": 381,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse4.1_fastest_results.csv",
+    "sha256": "D2E5735AE9B438E0085BF375A9FEEF4A84EC108BA6ECD3473C3ADAE20A551F6F",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse4.1_medium_results.csv",
+    "sha256": "23954D19319BD4ECEF1F031385B50182DAA3FDB90685D4116AAB9DEA8FC742CA",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse4.1_fast_results.csv",
+    "sha256": "61288E89C2A05552EC5C9D53C171B8AC50B286C7489BE5B784EB482A2093E1CB",
+    "bytes": 1441,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse4.1_thorough_results.csv",
+    "sha256": "B360B564A4495C619C91BF8C6B283145EAC8DC2AAC4AC74EFB198A784D94B048",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-avx2_fastest_results.csv",
+    "sha256": "F7F05C5F3E9C0E7F5C7F3F8B4BD2D99883689F5231CD397E4DD5D2EB3E03E668",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-avx2_medium_results.csv",
+    "sha256": "C47DA5C969CB123BD2440133C292F4EDF7AFC7F0D5D42E1D411EB080D904D0BA",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-avx2_thorough_results.csv",
+    "sha256": "1EA968B32163EF49051D9181713D2046DD75A8213709C4513213E4E1BC81F3CF",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse2_fast_results.csv",
+    "sha256": "020C3A8E1BBC96127E7036CD8F2AD8F0F4253AD4C74E60C3DCC86A4A0958EFFE",
+    "bytes": 380,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse2_fastest_results.csv",
+    "sha256": "60B170F14A4A5A12C24458CCC3552696DC61491CB6474103397AD26D43025348",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-sse2_medium_results.csv",
+    "sha256": "A29EE754621AD623275AE6FBC14B85DA2981C67367FF7E89EE5532EFD69AC47D",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.1-avx2_fast_results.csv",
+    "sha256": "6C0B53A970DD0BEC038E420F5D3AAFEB01C86FC82F9B70D1152D6ED59D719859",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_test_image.py",
+    "sha256": "599E378B0897FEC61BA8D37CD1AE9BD3DB50D50E80497A6C9BF9203E70866208",
+    "bytes": 14830,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse4.1_fastest_results.csv",
+    "sha256": "B8E7F66FC533802F74BE21F602FBFEC43C3CDE6609D3E165DB28F5E2D0474B45",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse4.1_thorough_results.csv",
+    "sha256": "E2B3262C7F9C2C119B75860857BC8D35F9ED7A768AACA0D6FFCAA035A2BB8EBC",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-03.png",
+    "sha256": "0CD06612FAF0D62FF70649EF26A257DE5F8B1EAB3D51642CC070641CD467D39A",
+    "bytes": 83249,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-02.png",
+    "sha256": "27C1D72940F5CCCC6ED449F112FD478AE9E8207EE7EF60B2637CD87259B4469A",
+    "bytes": 179764,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-01.png",
+    "sha256": "DED5EA7732D0FCDC2A95A7C8DEF83BC5C465749DCEA889F331812865148E16A8",
+    "bytes": 149685,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-RGB\\ldr-rgb-00.png",
+    "sha256": "72BF89C439781BB8E9BF582589FEC9E2DCFD3581472D1D8182B445A1099B5879",
+    "bytes": 164227,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-L\\ldr-l-01-3.dds",
+    "sha256": "00F26460A4BBE6437FFE5E11E5205044D02BDF9F048EE9106DA722C6287077B6",
+    "bytes": 69049,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\LDR-L\\ldr-l-00-3.dds",
+    "sha256": "D27944533174971756C6EDBD658583875E0172C4A5DD5BD4334866C9CE0ADB46",
+    "bytes": 262272,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Small\\HDR-RGB\\hdr-rgb-00.hdr",
+    "sha256": "B767971BB82576C141785D17FDC2C958F23A838A5DEA66A4C223BDEB60A6DC7C",
+    "bytes": 218146,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse4.1_thorough_results.csv",
+    "sha256": "B67D2018F91AB874FA3F0D1C54F02D895FBE56A0F440AB2EBF4E357FFD47FE05",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse4.1_medium_results.csv",
+    "sha256": "B1B9FEF309A6032B4EB3D0D53E13C2932F1A4B6BCC343050BF814495415166B1",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse4.1_fastest_results.csv",
+    "sha256": "92E8909B96012AE852E9ECD8184B837156D06FF9EDE2152B8CA0A35FDE689A83",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse4.1_fast_results.csv",
+    "sha256": "639C4881D90481B9A4AFA1A34931F56CF1BEE55BCE27F1E046BB9C9A921AC56A",
+    "bytes": 1441,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse2_thorough_results.csv",
+    "sha256": "FC30CEEC2ACD16741F88131909518B92C98A2BA0B93819E5D6AFBAA4B5D86D71",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse2_medium_results.csv",
+    "sha256": "37BEF549192CBB51798E4AC81B1FE788F3DF9EEB7C165035E67A27BAFA161CDB",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse2_fastest_results.csv",
+    "sha256": "B30B091AEB9F921D11197356150B48C5C7DBC84BD54266D0DF86DDB78418EB94",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-sse2_fast_results.csv",
+    "sha256": "A900A7845BE4EABF63A0D32451E3376B74DCDE6ECD715CC1DF8291768B378544",
+    "bytes": 1441,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-avx2_thorough_results.csv",
+    "sha256": "C23DF4BD491F8F5AAC04D65CB8E23D834041AE44B1468D4ADED95D6CA9408ECE",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-avx2_medium_results.csv",
+    "sha256": "84FF9E58C41F2AB8F32EE3B9157BE6D3E91F18393227EE8111366594219DE4AE",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-avx2_fast_results.csv",
+    "sha256": "21994762681AA6176E9DBEB86C203EC542835F38F812B9B954B6C24855772284",
+    "bytes": 1444,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-avx2_fastest_results.csv",
+    "sha256": "9CBD8B0D5DBE1C76E6E062A197DFA35D054F0722245985B9A4D1E65FAA88D9DC",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-avx2_medium_results.csv",
+    "sha256": "0168068C272A17C28D01E87050083870879B3E6366B3FB113E4EF7AD1B1A7123",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-avx2_thorough_results.csv",
+    "sha256": "65B271F9DA95491602C9F666F8CE5B7FF6CD1A19B6D431CC0FE8C174CB47F125",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse2_fast_results.csv",
+    "sha256": "5CA4C8F6A542519C61DBF05FD53EF214A37AFA112B135B120BD075101E94778C",
+    "bytes": 1440,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse2_fastest_results.csv",
+    "sha256": "1321D387354FE8C06B8E037D7720CA3DBCFCF67943D46775F860FFC26EB64877",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-2.5-sse4.1_medium_results.csv",
+    "sha256": "933DA591EA9649B1CA10001CD689E995D0F6E5E55BAB640F4E50C46DAE66B2A0",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse2_medium_results.csv",
+    "sha256": "65C577FDD4C5E49B04EEA1587DAE8D8893F6F07D88B163BC83F5BEF3E56F5485",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse4.1_fast_results.csv",
+    "sha256": "9480FE7E142EE7F7989E366D2D83747B5A829D74014B90E93D1562D2A8A3438E",
+    "bytes": 1441,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse4.1_fastest_results.csv",
+    "sha256": "7B0814BC95297491315591145E8A83354255E95C15F8AFC7A01D4272F872EB7A",
+    "bytes": 1453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse4.1_medium_results.csv",
+    "sha256": "CF5567E7B9AB4B9EA90136FA660AFBC71092EFFCE88E664A9E1F29E19CF7D541",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse4.1_thorough_results.csv",
+    "sha256": "38D3C6400746D767444CFCEB29D7F1ACEF9B94F863BB370A3F4CD9CF39559ACD",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-avx2_fast_results.csv",
+    "sha256": "BCA034B9E0545AE85AB819752DC9857AA129E65AE58C7BED119735E7452D4C84",
+    "bytes": 1445,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.1-avx2_fastest_results.csv",
+    "sha256": "FB6944BC853C138B2BC051C33E474629E2EDD994F790DBED3D777165DCA61057",
+    "bytes": 1454,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakSim\\astc_reference-3.0-sse2_thorough_results.csv",
+    "sha256": "813FFA0BEB17777A2B2FCA7C64C2088EF895965D70DD3B71C7A20C05C3D863B5",
+    "bytes": 1434,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-sse2_fast_results.csv",
+    "sha256": "7F3FA5A90AB37961274D6D9CEE0CCCBD098F08B4C9041BEAF5261A8D6DBB42C1",
+    "bytes": 380,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_test_image_dl.py",
+    "sha256": "A0B4685B2037029197BDD4AF11F784E4706B00D6ECA4281C061F79DBCAC17700",
+    "bytes": 4975,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_test_result_plot.py",
+    "sha256": "053BEFDE510FC8FEBD06F00C279DF0F6B8F6390A97A21A4F307014B9B346F395",
+    "bytes": 11665,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\msbuild.bat",
+    "sha256": "0A1CCA60B353B2881AC1ED587C1323A7535E1BEDDA749C94247B9EF110EFDF08",
+    "bytes": 1251,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\dotnet.bat",
+    "sha256": "E9FCDD8A29629E2594A3D2AC34E03CA944AAF92F1E93AED003173A5466F262E2",
+    "bytes": 10033,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\VsDevCmd.bat",
+    "sha256": "C004278E64444BF3524360F960511B5CE7B1D0306910F08A4EBCF1C42FF9BD6D",
+    "bytes": 11526,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll",
+    "sha256": "B574FAB3F690DF68E04EB7DB0606B8AFA61E80BC839F36DACD2CF4A9BA000C2D",
+    "bytes": 37944,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\Launch-VsDevShell.ps1",
+    "sha256": "B36195B3440CEC7EC7F5EDC52EE631CA58C0617090343044C068321125630457",
+    "bytes": 24098,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja\\ninja.exe",
+    "sha256": "FF29BCB5F547174BAE6B73C84278CCE9B674E8EBC2F3C3926AB21030B33F34B8",
+    "bytes": 2649032,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\_Instances\\72be9b85\\state.json",
+    "sha256": "D5C31AAD678877058C1498276075CFA2E90F15E760AAD77BCA14FE7E0CC4C231",
+    "bytes": 13929,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-preparation\\FinalizeCandidate.ps1",
+    "sha256": "5DD719D02924E6366F2166D6A69E00D92CB1F5C22404D3CF8F76F6D606E569CD",
+    "bytes": 7223,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-preparation\\RunASTCProducer.ps1",
+    "sha256": "7D68BE16F94F7FD15A6FC3C3BDD017A96A1152B7388AFB0FEBF248D1EC369B55",
+    "bytes": 2145,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-preparation\\source-diff.patch",
+    "sha256": "05E6DA911A988305A3C30C1CF15139E07DDFD41FCC1C45514722693B7BD937BB",
+    "bytes": 42293,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-preparation\\validation-assignment.json",
+    "sha256": "E5C710C927F833D273F883EFEC68C6553A4C75A3481EAFF39DA305A3108802D0",
+    "bytes": 4789,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+    "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+    "bytes": 1074,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+    "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+    "bytes": 11557,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+    "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+    "bytes": 1502,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\parse_cmd.bat",
+    "sha256": "01AA909650DFCB166C0FD6352CCF550177B8E90CDE140214F18D105061F9196B",
+    "bytes": 10278,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+    "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+    "bytes": 1982,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+    "bytes": 13119048,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\archives\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150.tar.gz",
+    "sha256": "291C26FCF20B8E23A6EB1AD4DD75F5AFECF79D316C0477C532DF6D5693291403",
+    "bytes": 34228268,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-tree.json.receipt.json",
+    "sha256": "EFBB4A56BFF42FEA4F6AFC10B9B35C694B9F22497B20954EE0146DEE822ED36B",
+    "bytes": 366,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-tree.json",
+    "sha256": "D8FC0D78DCDCD88E75FF1037AE3079D96B97899DD123AE092B0D25EE49526C23",
+    "bytes": 124377,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-tag-3.2.json.receipt.json",
+    "sha256": "83628FCC150FDD81EB4C8115F54112511525B74B99E31721470A3548D397A046",
+    "bytes": 317,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-tag-3.2.json",
+    "sha256": "F4E9DFA1FC166CA18D821477A1B19C34845B4595B497E3FDC920AB5B91EC0C8F",
+    "bytes": 349,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__UnitTest__CMakeLists.txt",
+    "sha256": "C0BD701EE97357F324E956F3759FEBE7304D1EF8BC6A9F21F0963130C56DC868",
+    "bytes": 1529,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__UnitTest__cmake_core.cmake",
+    "sha256": "6265C57F8BCAA3028D0A53A4321919879151EF3BE7F7199094D5C6C19A0D32C7",
+    "bytes": 3890,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__CMakeLists.txt",
+    "sha256": "BE219F76912DD07DAA37A33B3E7E7E39B6DA02C890E4B5F84F703E6F99301B2A",
+    "bytes": 2053,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__cmake_core.cmake",
+    "sha256": "8DC80B739B4CD7957E136BB75872C9E3C2CBC2229448C4876A5AEA442798A1AA",
+    "bytes": 9577,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__astcenc.h",
+    "sha256": "A19C5A0BA650EB7F61C24B29673EEE78B0D6F72B5B17426CFE349BD9F82967AA",
+    "bytes": 30890,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-LICENSE.txt",
+    "sha256": "494ACCC32E50EB523A0E384D0AE6D4B702DB867A89D6971216760E92B240EE12",
+    "bytes": 10139,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-CMakeLists.txt",
+    "sha256": "86F785318C024BBE740CA5FF05982C195A3E4A14A8DC01E663B2E245EA3C2A85",
+    "bytes": 7604,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-.gitmodules",
+    "sha256": "C5DDF02C76ED1528241621E601ED737757C6F4C144845072CE931182E723BE99",
+    "bytes": 106,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+    "sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+    "bytes": 7461,
+    "owner": "explicit shared/build/provenance input"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\vsdevcmd_end.bat",
+    "sha256": "4F85EE6D2B1B4DFF009EA9681FFAF7A698A96E8DD4E4CA3C779B8884DE1C7206",
+    "bytes": 4066,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\vsdevcmd_start.bat",
+    "sha256": "DA311BEAE7797632908B5A2E292AC00811E1373AB3108921AB1FE3EF2EC84466",
+    "bytes": 4048,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\core\\winsdk.bat",
+    "sha256": "66BBDB774BF79D538828EFAFB2099E2485A79C610BEAC775052D43F8C6BD752B",
+    "bytes": 21064,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+    "sha256": "43DA1503C262C30894C851589BF0155F8365D77E63A5F7BC13982320E3A6B42D",
+    "bytes": 55640,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mc.exe",
+    "sha256": "79B5BA66AE0CF0DEFC049B3436D892C2731D13D9F194836EA8A8469ABDB39651",
+    "bytes": 661848,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe",
+    "sha256": "CA11E6C45DEBD34BF652DFE984C5360A531A005ED78BF72852330C9C2590CF0D",
+    "bytes": 3252576,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+    "sha256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+    "bytes": 677736,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\atlmfc\\lib\\x64\\atls.lib",
+    "sha256": "BD162C7A998225A3524471CFC1889B0FDC48D0FF2BCC26177E56C47A137ACE5C",
+    "bytes": 815728,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\atlmfc\\include\\atlbase.h",
+    "sha256": "9334AFFF859A11C56C4A2265D2CAFBE958BA1DA23D3FF6FAF9B09AE4046D8D5B",
+    "bytes": 214478,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsx86_amd64.bat",
+    "sha256": "B7790487BC1FC458C234D0A2BAEE291A4816D89EF32D3DA4E4B77DA82BEB9B4D",
+    "bytes": 43,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsamd64_x86.bat",
+    "sha256": "4C618B293D9E6F2913521A3CF0C49F926610699FFC580E36F862175F2950A447",
+    "bytes": 43,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat",
+    "sha256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+    "bytes": 10524,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+    "sha256": "6B516D8FCF543C14B2D861E1F45661E0029230FE0DC48E86CE78522801822209",
+    "bytes": 39,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars32.bat",
+    "sha256": "E0F12BA374968F55CE898EE0384EB9C9B989CC3B499E3C0D553368AD223E28C8",
+    "bytes": 39,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.v143.default.txt",
+    "sha256": "030613DF718548A88970E4C1844A8605D17ABA9AA36BFEA0B4359D8F28FD62BF",
+    "bytes": 13,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.v143.default.props",
+    "sha256": "4B35FA2C3046D5833CE08343295FEACC30D1281187BF8E5D3450CB2CBCBF4601",
+    "bytes": 421,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.default.txt",
+    "sha256": "030613DF718548A88970E4C1844A8605D17ABA9AA36BFEA0B4359D8F28FD62BF",
+    "bytes": 13,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCToolsVersion.default.props",
+    "sha256": "700B0F21C92704263695A111659181204704203AC3FBADCA95C0210A9AAA80AB",
+    "bytes": 408,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCRedistVersion.v143.default.props",
+    "sha256": "22F3C383E8E336DD7834CA3DA9E4D85AEC2D8DC1C67C8583012135CD695EBE1E",
+    "bytes": 301,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCRedistVersion.default.txt",
+    "sha256": "A57D05F36A0E13206231F97899D320819D02725273BC30D4C3197D529AF63D91",
+    "bytes": 13,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\cmake.bat",
+    "sha256": "0938795316A9882A684F9744FE96C82D1F60D8D9AA5E5223749B85BB4E329602",
+    "bytes": 1925,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\codecoverage.bat",
+    "sha256": "F4BB6F3A7ABCBD04C7999F7E3A8287220A7889E35905727F2C308C915EF629FE",
+    "bytes": 1461,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\ConnectionManagerExe.bat",
+    "sha256": "62991251273DB1680499E3AF92CFA93B2DD1C08D97517C7731CF0CDA8AC0B5D9",
+    "bytes": 1361,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\diaghub.bat",
+    "sha256": "164A604DB6E97ACFDBBECD3973A0EBAF6EFC2C4E36BACB9EF45D2D945D3A85EF",
+    "bytes": 1123,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\netfxsdk.bat",
+    "sha256": "4A5EE8E9D3B82B6F88F1DFC8582B1480C712F2E8C5A77C8383007D58677F243A",
+    "bytes": 6987,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\roslyn.bat",
+    "sha256": "F417AEB7F9C2387DF16E397C70E90643CBA4E0C40741BA669D08509C387AE534",
+    "bytes": 1263,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-.gitattributes",
+    "sha256": "B9D0DDA5F7AE49B0B79CB8A4593998E779643B3E2E8BA8D9F8431EA4B239FBE3",
+    "bytes": 423,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\team_explorer.bat",
+    "sha256": "D4904972B2D7DD9EBCF438F81C929068B094B94B83D7200F0BA868670377F02A",
+    "bytes": 1607,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\vcpkg.bat",
+    "sha256": "51441266A31DB1CDFFFFCE6B29E1DC7BE72A0F9F34D4A6F26DA3140B1889A3CD",
+    "bytes": 914,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\vcvars.bat",
+    "sha256": "136BEB56E4C59F6F704EC5CCBC6E86FFC92D526F1F2996C79E48739F909696C6",
+    "bytes": 38924,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\vcvars\\vcvars140.bat",
+    "sha256": "037B9F4EBD2E21E493EF8CA14C770AEF4C70774C52D934DCDCA54A9D6CF831CD",
+    "bytes": 13146,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\DIA SDK\\include\\dia2.h",
+    "sha256": "B56BFC63323476AD7535B578B9E1095427EA777FEE000B35F4D2BF70C73FF6A0",
+    "bytes": 1256012,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\DIA SDK\\lib\\amd64\\diaguids.lib",
+    "sha256": "2B2D5103A90CD53C6B49A7BCF0AED05D35E1A5560908AADC09ED9117DA3FE098",
+    "bytes": 2228364,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\Microsoft.VCRedistVersion.default.props",
+    "sha256": "22F3C383E8E336DD7834CA3DA9E4D85AEC2D8DC1C67C8583012135CD695EBE1E",
+    "bytes": 301,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\vsdevcmd\\ext\\testwindow.bat",
+    "sha256": "43CCF694CC0C717C84B99656CA585C8A1B0055DA6C4B2065A0E896DA1F4D5764",
+    "bytes": 1405,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\source-tar-audit.json",
+    "sha256": "399D8BC279833B02F3F4AEE020B032297BBA4F1FBB40C85CB68E8E7ECEC3833D",
+    "bytes": 209928,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\source-head.json",
+    "sha256": "E18A293DB51C94651C36AE131C3F284AAD0D66F878893D7C8CEAB53CAA593DFE",
+    "bytes": 567,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\source-extraction.json",
+    "sha256": "CB206A4395FD3009A55AFF593C88F479D29AEDF1B9AD50DAE5DBFD3AC1919F9F",
+    "bytes": 181750,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\AcquireSource.ps1",
+    "sha256": "5438812B93BE13FD653BCF0DC27B736E18654EBF2C6AF3B569CC9D1C555C1547",
+    "bytes": 3721,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\tests\\CMakeLists.txt",
+    "sha256": "149114A48C3390C66C23C2BE7D7A8BC201D607A749C4248ADEC468CA4701EA61",
+    "bytes": 1949,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\tests\\ASTCEncoderConsumer.cpp",
+    "sha256": "BA069F77C5F806E2F7691482CE4BE7BEF74F77A21D8041F82ED82DF56800E2A0",
+    "bytes": 12145,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\README.md",
+    "sha256": "D2C9B594B027C80869BA9DECF3CBE37ECF65984432B3DC0A3DB1A6DC475D3FC5",
+    "bytes": 3310,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\PatchHunks.json",
+    "sha256": "1D45ACD2E7674FDB62AFD8187C5FF7D41C72590CD359F84CE518CAD5E3AB2DCA",
+    "bytes": 4385,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\NOTICE.txt",
+    "sha256": "6CCEA62946FF7628E34095E5C3B6F68AFB8A1BE2C5BBC515FB2A25357CB5F217",
+    "bytes": 1445,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\Findastc-encoder.cmake",
+    "sha256": "AAC42E995D9D17356016972BF7B14B190FD19776B69708E2D6A0624A1D421C92",
+    "bytes": 2231,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\BuildASTCEncoderPackage.cmake",
+    "sha256": "F8B4F49E347CCF6D9F2D17CD31C7411466C72326C47A26539E6CA87FB80FE9AF",
+    "bytes": 7697,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\astc-encoder-3.2-rev1.patch",
+    "sha256": "88E0389289A28DB8D937842D890A7EC4953D2295C263997236B05BE4B3B5BD00",
+    "bytes": 2605,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\ApplyASTCPatch.cmake",
+    "sha256": "DE056FC46E31274D6068105AD6FA0B266EC30F384AA8B8EBF4BF3F114CE5A060",
+    "bytes": 3719,
+    "owner": "ASTC provider candidate"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\jenkins\\release.Jenkinsfile",
+    "sha256": "2F101E0ACD4BD95D3EF209B661E619E67EA181E772A0B6B1451E730E926912D3",
+    "bytes": 13573,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\jenkins\\nightly.Jenkinsfile",
+    "sha256": "D0AB01FA78CD442BD7459D92A672C609CC0A80D4AFF04F6B33A46DD78915C324",
+    "bytes": 8419,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\jenkins\\dockerimage.Jenkinsfile",
+    "sha256": "90213D66546B9B4E436AC64078F6A45FD09E6C0568AFC76FF90825DD7B00A065",
+    "bytes": 976,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\jenkins\\build.Dockerfile",
+    "sha256": "9149D592F94E98087B0A2056C554A5DA81D3CE8ED43E449E1D9891D644D558B3",
+    "bytes": 890,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\jenkins\\build-image.sh",
+    "sha256": "B89184292D86F46EDB4406131B4D43C043596CFA14BF602CC181A76C0500B13F",
+    "bytes": 1732,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Utils\\astc_test_autoextract_hdr.cpp",
+    "sha256": "7E7406A9C3E8323C766D8056EA6DA2E0002144FD1B2228CA8BB7651F904135B0",
+    "bytes": 6105,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Utils\\astc_test_autoextract.cpp",
+    "sha256": "6A9920C5E556B4A3D2923C3F5A96031F2CB83B87096C0C6BF97737A746465985",
+    "bytes": 5492,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_test_result_report.py",
+    "sha256": "1AA1A0047BDC5A1C559F905760C2347F9B9B371AD06108B7C61DD486AF393A5E",
+    "bytes": 8695,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_trace_analysis.py",
+    "sha256": "AC2D1CA6C572BF0C45EFA5534B2ED216E2122BEB5C7628057F2D6F76045E9DE8",
+    "bytes": 15764,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_update_ref.sh",
+    "sha256": "F5DD6884F4AE2AC5053ECB7BC7253F5C57AA6E523A72EE436FAA670336DABCD1",
+    "bytes": 666,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\make.bat",
+    "sha256": "90236D3A6CFD3C13BEAAC053F2908CCA282495B77E7CF619489BA70AC09E8B23",
+    "bytes": 768,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\testlib\\__init__.py",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "bytes": 0,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\testlib\\encoder.py",
+    "sha256": "9505F4371E776D6BFFF81B8A0962596E4C291B82C727F65425B41CE7D4EBAE9D",
+    "bytes": 13798,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\astcencoder-o3de.patch",
+    "sha256": "549B647FA2F723541C1769CD7227A74E87ADA95DD145E11B828031F3F3F332BC",
+    "bytes": 3839,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\testlib\\image.py",
+    "sha256": "2CAD5528016ED29C2F3E4AC478C6F43F6A58FB8811117AB18A1173AACA9C2954",
+    "bytes": 13923,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\testlib\\resultset.py",
+    "sha256": "EA5BBF0F7735898A89798D7C3D89476B5EA8D9E904FB6349234C0DBDE52E58ED",
+    "bytes": 10552,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\testlib\\testset.py",
+    "sha256": "581AB6E2207E37FB1B497832DA8F87C7E44FFD2D6379A3D88795B35612E8530E",
+    "bytes": 3385,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Utils\\Example\\CMakeLists.txt",
+    "sha256": "92959675846CBDAFA3E0DFF6AD9009DA0AF951DFFBB4F6D52408EC769ED0A46B",
+    "bytes": 2423,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Utils\\Example\\README.md",
+    "sha256": "9BA72C64F117349413BB8F78A2B36942359358346CD0531E44A1F75068AB9FC2",
+    "bytes": 1562,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Utils\\Example\\astc_api_example.cpp",
+    "sha256": "367AE3A372263B014E03D6111586102823703A86A165984B2FF0A86917E187D3",
+    "bytes": 5941,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Utils\\astc_rgbm_codec.cpp",
+    "sha256": "38FF314079E786C3BA64929810711AC1B7882853A9369869C5BD8D97AC9A02C3",
+    "bytes": 4636,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\testlib\\misc.py",
+    "sha256": "C640A2724D3DD13CB9936C32A84DF63F70E4C16B023142022C7F37C6CF9F3F80",
+    "bytes": 1317,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\astc_test_python.py",
+    "sha256": "60047F9685DAA692F6482039E982DABC15F1CEC657D86AB6C90DC370B34738F1",
+    "bytes": 2135,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_config.json",
+    "sha256": "7F660F80987CC382AF1FC2D9366EDB30BF4BE766B33A99BD34186074AA4BF97E",
+    "bytes": 2147,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_mac_arm64.sh",
+    "sha256": "CBE5E1BF2CBC50EEB41BE35C2C12A6414B1AB431EC5D98A5E75DDA26775FAC88",
+    "bytes": 789,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\source-acquisition.json",
+    "sha256": "BF2FE274CF8B844EA66202F12FCAD9837B1CEC2C7EDD740A2F033364AD5161B7",
+    "bytes": 795,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-install_windows.cmd",
+    "sha256": "4B18902F10C8E317F15F23DB1BEBC03ACFFD1738AA6E1A4475DFECF7337BD5E7",
+    "bytes": 1222,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-Findastc-encoder.cmake.template",
+    "sha256": "5AF4AC28D056C62B7D6587C2C71B6285EA2256D4AF024DF3FB4FD30ACB75EB91",
+    "bytes": 1681,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-build_windows.cmd",
+    "sha256": "C3FC0857B8AD5D94DBB7AA46114CC2122C3E36CEB60F108C34F3780690E40D88",
+    "bytes": 610,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-build_config.json",
+    "sha256": "8CEFED80394007235C9AB5D5A3403C5BF89029750DBF6653440E91007D21202B",
+    "bytes": 1284,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-astcencoder-o3de.patch",
+    "sha256": "D5558CD419C8D46BDC958064CB97F963D1EA793866414C025906EC15033512ED",
+    "bytes": 14,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-astc-encoder-3.2-rev1.patch",
+    "sha256": "88E0389289A28DB8D937842D890A7EC4953D2295C263997236B05BE4B3B5BD00",
+    "bytes": 2605,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe-history.json.receipt.json",
+    "sha256": "1CF53410634A0C567E08A2AED61B06589BEA0209A654289BC8201F05800872B2",
+    "bytes": 419,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe-history.json",
+    "sha256": "B7770995D83663661C98B838BB77CFA6F5BB4587A026A56FCB87914CB9F36319",
+    "bytes": 35820,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe-extraction-receipt.json",
+    "sha256": "A8386BD1D5F22B48DDF5CCDFD33EAE0BB095161B8164BEDC434DB990CE80BAC1",
+    "bytes": 6748,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\ReadPrimaryMetadata.ps1",
+    "sha256": "17EBD118F2F14528CF408A23CAE2F77BF2F67421A56E8A38336F99C1C4E3A63E",
+    "bytes": 2881,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\PreparePatchManifest.ps1",
+    "sha256": "D0C8AC4586B68000157E1B7502C11DFE1D540E27391D0BE4A59E84E6610A6C43",
+    "bytes": 4130,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\pinned-text-receipts.json",
+    "sha256": "E7391F9C36B7A04652A780BF322B392914B59A8F087ED92C28AB52488A6AF937",
+    "bytes": 6909,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\patch-preparation-proof.json",
+    "sha256": "F8B59BD76BE809EDD5BD932D4B9C6D121B8EEE7BA37E31C62671B354D4696C91",
+    "bytes": 882,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_windows.cmd",
+    "sha256": "4B18902F10C8E317F15F23DB1BEBC03ACFFD1738AA6E1A4475DFECF7337BD5E7",
+    "bytes": 1222,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_mac.sh",
+    "sha256": "3AEBED69CFA5C521CABD406FC57A0366EB76CEBD34F32AD41043AC9CBADFD440",
+    "bytes": 688,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_mac_arm64.sh",
+    "sha256": "B1AF57805A2325F255214893B8BDA875CE196DB47DDD8464DE3A6E7B010BCB5B",
+    "bytes": 684,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_mac.sh",
+    "sha256": "06868B2AA227BE0E247575F029FDDCE3AEA8DECC75D3A1E4823DD326C3E6AA61",
+    "bytes": 735,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_windows.cmd",
+    "sha256": "C3FC0857B8AD5D94DBB7AA46114CC2122C3E36CEB60F108C34F3780690E40D88",
+    "bytes": 610,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build-linux.sh",
+    "sha256": "B98DFA0E9CEEAA99F0036BEE0E3CBEE16E154B3FAD3FD163B2ED62543137E5CF",
+    "bytes": 2724,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\docker_build_astcencoder_linux.sh",
+    "sha256": "260D3D64ADD9CF1026E6AFEF31AA29325094A7335A49347CE6A4B3950CA5FD31",
+    "bytes": 926,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Dockerfile",
+    "sha256": "6CB112F00F66CAA2AF7A5510EDE21DA07B90209B0198974933A89A52B69FB555",
+    "bytes": 1341,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\empty-source-file-inspection.json",
+    "sha256": "8B63BAAEE7E9F65644FFAD81BF187B4F441D9ED372F8F2F59205302E15CE066E",
+    "bytes": 464,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_linux.sh",
+    "sha256": "CD57DDCADA02374D462FE728DA6E8F3D9F516168E293ED2FADCF5C422CB2A719",
+    "bytes": 794,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.linux-aarch64",
+    "sha256": "B9CBADD7EBEA89AE5A245310B6B510621C3EC79BA9E4A5EF9E43DE5AED49107F",
+    "bytes": 1232,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.mac-arm64",
+    "sha256": "B9CBADD7EBEA89AE5A245310B6B510621C3EC79BA9E4A5EF9E43DE5AED49107F",
+    "bytes": 1232,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.template",
+    "sha256": "5AF4AC28D056C62B7D6587C2C71B6285EA2256D4AF024DF3FB4FD30ACB75EB91",
+    "bytes": 1681,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\historical-patch-attributes-receipts.json",
+    "sha256": "168DE7E1A51B47A67E0120E67D8D1FF648182BF18865C83E928E4ACDF8733A9C",
+    "bytes": 937,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\InspectSource.before-empty-file-fix.ps1",
+    "sha256": "8B476A4B09A28232EB0071E80F8BCF3D8E53E78173197B8410EF7A43824CB40E",
+    "bytes": 6980,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\InspectSource.ps1",
+    "sha256": "120BEAF51FB2F77CDAD9E6FEB72A32006DE33C72E996916700B40355F41BB7CC",
+    "bytes": 7030,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_linux.sh",
+    "sha256": "20FD404044FEE0F51F71A4C2957A94A3029B055BBEE95AD9403F0BD10345FB82",
+    "bytes": 980,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.linux-x86_64",
+    "sha256": "8D4B3DFD0162309385B3787F9496DD558A1E272C198B5EC184E44CE2A2D50112",
+    "bytes": 1234,
+    "owner": "source/recipe/patch audit historical receipts"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-avx2_thorough_results.csv",
+    "sha256": "0552BF88664AD76455C2A178D3C5D674FBEEEA02F2CE653DD9D0862C05C8E393",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-avx2_medium_results.csv",
+    "sha256": "2F530E2F64E644D775DE6BCD205279D310FA8D83A79022CD18F91F0585E4A382",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-avx2_fastest_results.csv",
+    "sha256": "1FDBF81E75DB4D51B382B9CA29D5F70ED8A40E36840BA60034E6CC2A49D2B426",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.astc",
+    "sha256": "F8512766071566CC8612DA34BAE7D44C9F9161F7B292290BD6F52E2F5CC5EE80",
+    "bytes": 80,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr-complex.png",
+    "sha256": "DF81BF1962512437C15BE39343167767EE15D9243BC30AE9689ACBADA7D85CE8",
+    "bytes": 3045,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\hdr.hdr",
+    "sha256": "1CEC379C0CA6FB87AD53511269C648388BA4B552A06BFF2C04DF6B2B603C2634",
+    "bytes": 217,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\hdr.exr",
+    "sha256": "90AFF5C37CDFD98C9FFB3B1B5AA082EBF6F420C0BD3BCEEEE4B554D18465F030",
+    "bytes": 971,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\hdr.astc",
+    "sha256": "66B60AC14CECD6E8BC895C16333470D50BE57DE6F594FC801A65DF22008792EC",
+    "bytes": 80,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\hdr-complex.exr",
+    "sha256": "E6A16A419EC8F487BE26CB223C3770923A03E22D9327AE2903C1888761217107",
+    "bytes": 825,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\LDRS-A-1x1.png",
+    "sha256": "8E86395887334346A2A50876F0B07293A9F297F6B0A9BCEDEB5898566247CF4C",
+    "bytes": 1278,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\LDRS-A-1x1.astc",
+    "sha256": "1392AB23A64DB8EF468458FCD8B5CA969354CC908AE8E80E4C6ABB8D0D2B62A7",
+    "bytes": 32,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\LDR-A-1x1.png",
+    "sha256": "335E2A1D19F3D572D5664C899853F4E7EB9CAA595EA8888E5F2CDDB85F64C9DA",
+    "bytes": 509,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\LDR-A-1x1.astc",
+    "sha256": "E414D79E31DD49BB3E3EF0CDC4C6D918C24D9F1583307C0EE14E97E4032C5EB3",
+    "bytes": 32,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\HDR-A-1x1.exr",
+    "sha256": "5E09A64448FFD3E0A4DA4B4C46836242D1446ECDFCD5A15F5FEB6A17BA9B4100",
+    "bytes": 335,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\HDR-A-1x1.astc",
+    "sha256": "677E500AEBE8CB2EA7CAB79DAE3B66C8EB549718D3C66660092D618B6828A116",
+    "bytes": 32,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\tinyexr.h",
+    "sha256": "90ED53F3B785F0FB729859001F34FAB5C5BB8D28526736F629C5A44B6975F1FD",
+    "bytes": 481656,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\stb_image_write.h",
+    "sha256": "B0D05F271D2E6E835E9BB47CEECC14356A693BBBC0B9623CD489AF628D067C32",
+    "bytes": 71181,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.bmp",
+    "sha256": "D19E4773A1658822FEFB09F00A3A19D2ACA6DD534CE6021C9A3BC449F87B8BB0",
+    "bytes": 312,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\stb_image.h",
+    "sha256": "AACB50B4069700F745F5032C09FD0CF229DB9B557FE59B2DD524075540FC5065",
+    "bytes": 278901,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_version.h.in",
+    "sha256": "7B93C1FFBCD6AADEFE47C6DD08F1786208C0FC9F3DDAC431F52F0A8E4AFEDE9A",
+    "bytes": 1010,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_toplevel_help.cpp",
+    "sha256": "A571D548ADD759F045C1456FFCA66D4EE17B8481014D9929D142904886E3C2A7",
+    "bytes": 25384,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_toplevel.cpp",
+    "sha256": "9A87AB45EBDACB490F12AEA3007AD634FDD111B00058BBE6F4B11D0D24E49376",
+    "bytes": 49780,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_platform_dependents.cpp",
+    "sha256": "A19A132F130DA96BFF22695F887A85C7C2C82CC563123FF7827211FB68BC5D29",
+    "bytes": 5038,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_internal.h",
+    "sha256": "544188F8AA69D7EB540E2E6017BF466A61D946D031341DEDBBE7F38DBE5C7264",
+    "bytes": 9517,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_image_load_store.cpp",
+    "sha256": "B82399C8EFCD1EBCB3685AD5DE504E7D90265BBF08BC94E6B8C44E85BCBF1F9F",
+    "bytes": 71590,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_image_external.cpp",
+    "sha256": "63113B0D334C688924BBC3559D9814FBBD160EC7ACC5A91E988FEB15FEF58474",
+    "bytes": 1756,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_image.cpp",
+    "sha256": "77D069CB169F6339203E121482A0FC06EE689B32D0705E7FB7BE95F0B1595B50",
+    "bytes": 10587,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_error_metrics.cpp",
+    "sha256": "BC24AD4F35CC69D17010B6B508E71FD06CA88E4848FF9E96164728C34C1E119D",
+    "bytes": 10523,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_weight_quant_xfer_tables.cpp",
+    "sha256": "31346501E492257B012C0B8CC33F4EFF8D1CC76D984177D9795B241F888F67DD",
+    "bytes": 6524,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_weight_align.cpp",
+    "sha256": "D9673E3DB3B26968D8A5640A5A7F3EE91F64FB693280EA9BD21C61F919F61BFE",
+    "bytes": 24681,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_sse_4.h",
+    "sha256": "56B1A57D2FB9B1DE15F531F299D57AAF35D59A260CE1A836D15C68ACE7E7251C",
+    "bytes": 24638,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_none_4.h",
+    "sha256": "24B6E565A6486C37CBC81EFA0D53F1607A10266052C7C951932DF7C6BEC9EA65",
+    "bytes": 24077,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_neon_4.h",
+    "sha256": "8DE4201F42D5DBCCB080A2835DFD1819F14C2A6F04E1BC4C2402DA65EBDBF79E",
+    "bytes": 20896,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\cmake_core.cmake",
+    "sha256": "8DC80B739B4CD7957E136BB75872C9E3C2CBC2229448C4876A5AEA442798A1AA",
+    "bytes": 9577,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.dds",
+    "sha256": "2BCF4620C4C0626EAA993B60453F496F1B06D89E315BBDB09711FFCD04059BC8",
+    "bytes": 384,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.jpg",
+    "sha256": "E40942E053CC743C906AD31BF599EF2B33C8C9D3D7A19B2D7D348791A9993742",
+    "bytes": 11596,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.ktx",
+    "sha256": "67D4CDD7BD7FA979277401638002C37F4038D0F1656C3D1EF1DFB54411F45C93",
+    "bytes": 324,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-avx2_thorough_results.csv",
+    "sha256": "E1E54A824A0E5EEBC0243AA26445C42D220820DBFE77D9976E9CC2F36E16A944",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-avx2_medium_results.csv",
+    "sha256": "22260833EC37708979C93FC1F07EDFD8DACD0EC6099CC4FFBBBB31CA02191354",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-avx2_fastest_results.csv",
+    "sha256": "8531F3F341B6F8E85E3FBDC6CE0F654C0DAD6C6D70D3703E1F73CF5FB77884AD",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-avx2_fast_results.csv",
+    "sha256": "B0BB6362C3D4FDC09D60BC282C8F86418809D42C194CDEFDE1D776AFF8E31AB6",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-1.7_thorough_results.csv",
+    "sha256": "CB6C632EEF6C49F12F37F5B597AEDCED0E9DF77AA89E4C359F51E55F88070BFC",
+    "bytes": 1785,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-1.7_medium_results.csv",
+    "sha256": "2D225545113BE05595014FAF05A3920031F1F56B65AE1306AEFB8FED45226FAD",
+    "bytes": 1745,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-1.7_fastest_results.csv",
+    "sha256": "85206B0DA64F48D6CAD873432B652F2567C53AA5245E477C923344FD09B590D7",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-1.7_fast_results.csv",
+    "sha256": "70DFF4CED36CB760C7E36790E820A048FED42FEB3F0A288DFDD42C1F73F44994",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\LICENSE.txt",
+    "sha256": "F7230D5A427449430EC09E331F751AE8A7E26CAFDC0AF89C02E5312E4320DE9B",
+    "bytes": 7244,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\HDR-RGB\\hdr-rgb-riverwalk.hdr",
+    "sha256": "BAF1A97C65CC64C486CF6E7519A69049622E799BCAAA7AEF320A3AA29364F6A0",
+    "bytes": 2249839,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\HDR-RGB\\hdr-rgb-eveningroad.hdr",
+    "sha256": "49627ECB64A77E12567C8C3853CB63248A14013FD7553EBFFB904F8FD428FFEC",
+    "bytes": 1814489,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\HDR-RGB\\hdr-rgb-canarywharf.hdr",
+    "sha256": "C4BDE23D37A20540788F3BC5CC38D6099FFF79FEE62FA2EE26E179223477E479",
+    "bytes": 1895076,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\HDR-RGB\\hdr-rgb-bellparkpier.hdr",
+    "sha256": "C612F5817CD7BF802A3FC6C2E0C51D26966B0F89EAAA0A3A6DE181D079325C4D",
+    "bytes": 1735220,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\HDR-RGB\\hdr-rgb-arboretum.hdr",
+    "sha256": "41D2B0E294077600A7590FD1407AA14F48616657DD4D51BB8C2358D5965F8B33",
+    "bytes": 2115626,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\testlib-testset.rst",
+    "sha256": "B71C0993790656E5459A532B14E746AB1B74F43CE284B7082993D91A037C724F",
+    "bytes": 146,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\testlib-resultset.rst",
+    "sha256": "A9B0B892BA92A5D80E609A88F5ADC966447D292DDFCB2B68A6F9467B133682BD",
+    "bytes": 152,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\testlib-misc.rst",
+    "sha256": "48649867259429010F771093647F6AA32635BD7A6DB72E7E433F883D3B94E384",
+    "bytes": 137,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.png",
+    "sha256": "25A134F09E55AE44F9F9F4CAB7121384460D13152E6E2F7E254AAA249D01E941",
+    "bytes": 2818,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr.tga",
+    "sha256": "9E65394282EC0CC5EBBAD6E107C9B7547ABD20F4C5359090008EF024D16E6F90",
+    "bytes": 300,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr_0.png",
+    "sha256": "25A134F09E55AE44F9F9F4CAB7121384460D13152E6E2F7E254AAA249D01E941",
+    "bytes": 2818,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\Tiles\\ldr_1.png",
+    "sha256": "25A134F09E55AE44F9F9F4CAB7121384460D13152E6E2F7E254AAA249D01E941",
+    "bytes": 2818,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Data\\empty.unk",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "bytes": 0,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\astc_image_info.rst",
+    "sha256": "820001F6DE75B56D00E658E110BE104AD5995EA7BFCE9326C35E7A528EB2788D",
+    "bytes": 146,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_common_4.h",
+    "sha256": "30550877D96BFB33BE994B83EFD1C05F4F4CD893EB9D7642D34D2A160B78CA6D",
+    "bytes": 8274,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\astc_size_binary.rst",
+    "sha256": "BA3D12B9A2E334C6F131367928713A1A39EACD42A919A0B4B0918E95306D2878",
+    "bytes": 149,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\astc_test_image.rst",
+    "sha256": "4DD005F5AF5617A382DAA2D04C9CD7389A68D9731DFDEC15EC722DE02E97547D",
+    "bytes": 146,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\astc_test_image_dl.rst",
+    "sha256": "648BB3DEDCE516A9ED775EEB4DB53673BAB5B0EB886D35555087C64649A92A2F",
+    "bytes": 155,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\conf.py",
+    "sha256": "CDB9E32154FFFA9D9D52A49F819F12828EF625FCDBBC2C1ACC7C96BF782EDBB5",
+    "bytes": 1944,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\index.rst",
+    "sha256": "831CDF6471541E55B1781F49BCBE3FFC5B5E2F74A2F15774E0D978F6D92CF1D2",
+    "bytes": 230,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\testlib-encoder.rst",
+    "sha256": "53796795ABA5068FA218B241A49340C291BE723A431232BC351BC4AD410506BF",
+    "bytes": 146,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\testlib-image.rst",
+    "sha256": "BD56E2AA4BDE1F9157C861F9DB32656B80569699D01AB590CBD826842B076355",
+    "bytes": 140,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\DocSource\\astc_test_functional.rst",
+    "sha256": "130D93DCB2CC438C543B5505628D6FF2779DAF30A7F68C418D4F1C837FDE14CD",
+    "bytes": 161,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_avx2_8.h",
+    "sha256": "0BAF68DEA52CC3B0363CD3EBB3D694E9224991465FC44845F736E342615BEA2D",
+    "bytes": 24941,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib.h",
+    "sha256": "1AEFE32A0EFBA21BBB629B8BF01F625552260E89D6E03CBF16E682B81A9A4280",
+    "bytes": 15315,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_symbolic_physical.cpp",
+    "sha256": "50C444C9E0AF7462336F34D623502F6EDBE816645435AF860C735A9A38F73E36",
+    "bytes": 14096,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Profiling.md",
+    "sha256": "FFED1CF5A7C90B8B437DA2480E62B00376F4B98E9272CAC136660B7C37BE6DD7",
+    "bytes": 3477,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\OptimizationIdeas.md",
+    "sha256": "C415A02A82AB86DA3DE9C6E23734872BCFF2B383A74D3D31C97F21A6F43E3EB6",
+    "bytes": 3190,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\hash.png",
+    "sha256": "C23499A8BA8D3B9D2764C1AB699ACEDB8BBDF445826F669EAED06CA8D670F1C2",
+    "bytes": 48160,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\gradient-2p.svg",
+    "sha256": "D6AC2DB1673A20FE93C57D6B9DE3E73D682119AED4CECDA047999939B9FD2BBC",
+    "bytes": 80568,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\gradient-1p.svg",
+    "sha256": "C43D63D5B343922E6507085C44DF187A07C3A5C729CAF9D0F01DCB7E08B06027",
+    "bytes": 55860,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\coverage-legacy.svg",
+    "sha256": "B145AD67B7398E8C6102BC0677B345E887B4ADBA5778E000B9902F5C309AC195",
+    "bytes": 77285,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\coverage-astc.svg",
+    "sha256": "FDB7766439ACF04D14CBF813E98C7C175487848F9B4FAB936E3C4BCF44D5DB5D",
+    "bytes": 124773,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\bise.png",
+    "sha256": "4BCF237CB961C5352D92BCF0FF7E0F7DABDD9FAE16D347C019499B43BEE646B1",
+    "bytes": 29662,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\binary.png",
+    "sha256": "E9802E297034B06E08012759A7052401EF1CE836A066BB49117BE5D99B8FDF72",
+    "bytes": 23822,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverviewImg\\astc-quality.png",
+    "sha256": "F4E1361855F0AE61D856A70686811510C4543203532120946B70B36B14BFFC7C",
+    "bytes": 117549,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\FormatOverview.md",
+    "sha256": "B4553D646010D5656FE0BB8D77C07F97E49F39B37DFB0C9F718D50D160B5EC62",
+    "bytes": 21880,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Encoding.md",
+    "sha256": "1B4B5CA0E9E228BDC31FBDA6672FCB11D50F19B8E75C08D06490535558257799",
+    "bytes": 10607,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\relative-3.0-to-3.1.png",
+    "sha256": "4401199307C7A599FF771FD50974759D9CFDBF77C77AADDCAEB63155B819031A",
+    "bytes": 113109,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\relative-2.5-to-3.0.png",
+    "sha256": "C5ABEBCF40A23CB2BF178EE134427DEE6532B3CC667CAFBC3B3C5E771AB91BAA",
+    "bytes": 118918,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\relative-2.2-to-2.3.png",
+    "sha256": "CCC973BB65BE6D7987980256DB30A69E056165B631EE57C01B307DB1C5322C32",
+    "bytes": 125721,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\relative-2.1-to-2.2.png",
+    "sha256": "2BA07FFB39C6E0A8426156DD964F25F7DF81B67240633B21B8F8C6BA94622D11",
+    "bytes": 122512,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\relative-2.0-to-2.1.png",
+    "sha256": "61BCE2E89D5FB82F16045E2C37AC36B5D3D92BF201540101F09B21D14DAF5986",
+    "bytes": 122453,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\.gitignore",
+    "sha256": "0D834B8A5C52A9204749A7033006C3D335BBEE711EA3FC0726B60E5ECE6F055E",
+    "bytes": 520,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\.gitmodules",
+    "sha256": "C5DDF02C76ED1528241621E601ED737757C6F4C144845072CE931182E723BE99",
+    "bytes": 106,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\.pylintrc",
+    "sha256": "D466DF7445C38660B237F6FA79D7AA208BD56E2FACCC5CE154F721B00C3FCBE7",
+    "bytes": 16412,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\CMakeLists.txt",
+    "sha256": "86F785318C024BBE740CA5FF05982C195A3E4A14A8DC01E663B2E245EA3C2A85",
+    "bytes": 7604,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Analysis.md",
+    "sha256": "69C88A05719EFA9F07805FE958A455CBCA132AA305B96C88C1436574D8BE9AA1",
+    "bytes": 2103,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Building.md",
+    "sha256": "692071DD3CE27AF78EF221C4E6D4622AF43C0E820331C03D798812479B2E8F20",
+    "bytes": 6178,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Roadmap.md",
+    "sha256": "FCB6B48032F02D10CF83C2544FB6734CDAB12FCB36C33ABDB347DAE995AD8B5D",
+    "bytes": 2811,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLog-2x.md",
+    "sha256": "72EFC37CE93BB9E04B034BDA2A416C7E4DF8C029D6857331F9A37506381510DC",
+    "bytes": 15204,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\absolute-1.7-to-2.0.png",
+    "sha256": "8410CAFAA7CB7E04EC49311BDA9595C6892AB76DDD7030720B1E0F629E3D2140",
+    "bytes": 114044,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\absolute-2.0-to-2.1.png",
+    "sha256": "4A850353E247556EDA9DEDEA9BB98F0106471A313C408BDCF3F304C5F1D53AA1",
+    "bytes": 151755,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\absolute-2.1-to-2.2.png",
+    "sha256": "1CA13AB574108814CC64B73E4C605B957A8AD8DBF40B14B626C53A35A29C2222",
+    "bytes": 144084,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\absolute-2.2-to-2.3.png",
+    "sha256": "1E9E6F5EDFACB83A0B2166999694A4C5111C665A0B8EB195ED21422C74D786B1",
+    "bytes": 152303,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\absolute-2.5-to-3.0.png",
+    "sha256": "44663992B4C6A064387747A3105A700675C176A7B2CDEC1B5FF73786D8096591",
+    "bytes": 136735,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLogImg\\relative-1.7-to-2.0.png",
+    "sha256": "261D8060D23B4C6AB97A5D3A4C5170F7AA38F923C79BFC05C9F660251B15C64A",
+    "bytes": 114507,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\ChangeLog-3x.md",
+    "sha256": "62819A080D2390BF8C6D2D1FCC056198D559DA6DF17E8EC6F9E367FABBD555B0",
+    "bytes": 5858,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse2_fast_results.csv",
+    "sha256": "C9797EC11CAAB71B2579FAB90784A48912939FFCDB314B3029F3E29E08086015",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Terminology.md",
+    "sha256": "8589C16584D9CBC51C1D07D2A8A587A53E3E5C83E1BA13ED0040208109F2D158",
+    "bytes": 2820,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\LICENSE.txt",
+    "sha256": "494ACCC32E50EB523A0E384D0AE6D4B702DB867A89D6971216760E92B240EE12",
+    "bytes": 10139,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_quantization.cpp",
+    "sha256": "740920FBC5BB1550967C30C6BF2DF7D724841AED0C3B037FEB03B4FA5DF9AA4B",
+    "bytes": 37233,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_platform_isa_detection.cpp",
+    "sha256": "C7BD870B7D1B32A1587CA2E4FECCB9AFF1C79890A589C94BAB68A28B01624610",
+    "bytes": 4244,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_pick_best_endpoint_format.cpp",
+    "sha256": "7EB36348F255A3F62E53068769D02542DB8F65D4390A14B9255C8E463F50F7A9",
+    "bytes": 44120,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_percentile_tables.cpp",
+    "sha256": "D201234E89185AF8CA6520753A6764FAB8F19EDD08C2BAA70A33066BC03228CC",
+    "bytes": 54935,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_partition_tables.cpp",
+    "sha256": "F1F5B1A13CD7BF4052CE93D10C164F6990E25E35904042FD6EE77EBD56E1F8D6",
+    "bytes": 9946,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_mathlib_softfloat.cpp",
+    "sha256": "6D756E06AEF85161764D932AB58F955D36E6F2508BC0382E1178763DD5D23A99",
+    "bytes": 15303,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_mathlib.h",
+    "sha256": "8A4A68529F437B252823B5CFA26B6574DC83CA6C2CA12AA320BB6E3363EFC64F",
+    "bytes": 10241,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_mathlib.cpp",
+    "sha256": "9B207409E5026EB509C95EC31DB70DD33183E5153EF9286E4AC18DC6EEE39B6F",
+    "bytes": 1446,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_internal.h",
+    "sha256": "0342DBAC0DCDCC089A97BC1F3338468E3EB849B9A26460E44BB03DD00FFE6C9A",
+    "bytes": 85891,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_integer_sequence.cpp",
+    "sha256": "7E574DD1CDEDB7A9EB219CD94B13CA99B11DD41A0690503B73A66D6E48754578",
+    "bytes": 22143,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_image.cpp",
+    "sha256": "0B187139CFFE4B526FF862CC571B522FFA7CA7C06D07156AABE8535C9984DCA5",
+    "bytes": 12297,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_ideal_endpoints_and_weights.cpp",
+    "sha256": "53B7F199226FBD5E989CBAC29A217AEA59D4220D86F4EDE1F29A7A6E427C96C9",
+    "bytes": 50036,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_find_best_partitioning.cpp",
+    "sha256": "EC4704E4950CF932ED6EB6C13C4419204B0BE88529218CFC6768C911E05B607B",
+    "bytes": 24735,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_entry.cpp",
+    "sha256": "3792F9858514CB9F9900834BB48ED0CE9A1C2CD221EF595941D390A5AC0A8459",
+    "bytes": 39637,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_diagnostic_trace.h",
+    "sha256": "45D283E041FE6D74BD7E9C5900402D0F4CF645AECB7E20AEDE41C125C192DE3E",
+    "bytes": 6296,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_diagnostic_trace.cpp",
+    "sha256": "1A7362762110DC386548CA837E1832F491781E891ACA64194785A9BA9AF42DEE",
+    "bytes": 4877,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_decompress_symbolic.cpp",
+    "sha256": "C625807A3D6E9BF471AA574D5B3BDD2F7A7C5663109263A6327A8C828C058EA2",
+    "bytes": 12749,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\README.md",
+    "sha256": "B9EF85813900965B6D9C7CF95A83DC16BCD4642CAAB72906D0427A1E642000A0",
+    "bytes": 9236,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\CMakeLists.txt",
+    "sha256": "BE219F76912DD07DAA37A33B3E7E7E39B6DA02C890E4B5F84F703E6F99301B2A",
+    "bytes": 2053,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\Fuzzers\\build.sh",
+    "sha256": "52FF3D3E66AB3CA8B1A3ED5F22E3E84DC98C81E50A6CA8779E196DB3EA19A82B",
+    "bytes": 1851,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\Fuzzers\\fuzz_astc_physical_to_symbolic.cpp",
+    "sha256": "F66AEA70D6776DAA7BF819354796D6D0A433607AC2696A685888B7D8E1CCCEF2",
+    "bytes": 3026,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\UnitTest\\CMakeLists.txt",
+    "sha256": "C0BD701EE97357F324E956F3759FEBE7304D1EF8BC6A9F21F0963130C56DC868",
+    "bytes": 1529,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\UnitTest\\cmake_core.cmake",
+    "sha256": "6265C57F8BCAA3028D0A53A4321919879151EF3BE7F7199094D5C6C19A0D32C7",
+    "bytes": 3890,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Docs\\Testing.md",
+    "sha256": "0CB5FFE77929D238AA59832A7F2C30180108EB50F6EA57FC087F46CDD5FAC972",
+    "bytes": 4925,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\UnitTest\\test_simd.cpp",
+    "sha256": "F6AA11CE0F407DAD078F52801DB10F3BEA13EC86BCA044CFB3BCEA05ABBBD4B5",
+    "bytes": 81245,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_averages_and_directions.cpp",
+    "sha256": "1B8AEE567BD8C0C960378FDE34C202D0909E3F635C11BFCD858C26E5F6B069C5",
+    "bytes": 23734,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_block_sizes.cpp",
+    "sha256": "035988387763BB8C4BF6C9809DCDF5AD2C2E6B6D64497EAC04DC3EC4830708DC",
+    "bytes": 35152,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_color_quantize.cpp",
+    "sha256": "35D7D3E6076FF2142C03FE6C301CF7D76ABD48A31D7A5FF8C5B703BC349D89C7",
+    "bytes": 58076,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_color_unquantize.cpp",
+    "sha256": "6575116D4430770EF4E4EE9E5201CA324C75105022C5BEBC90EEAF7E102E5782",
+    "bytes": 25576,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_compress_symbolic.cpp",
+    "sha256": "08A253AE8F3372ACD587C0A2CF5F45F14C38A8F4115EA77EC33F46EC77477AD7",
+    "bytes": 53696,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_compute_variance.cpp",
+    "sha256": "DDADA4A6690CA7FB4B5A890EAC143CCD77DEED2E1A22EBCD3B623787D8ADAEDE",
+    "bytes": 18647,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc.h",
+    "sha256": "A19C5A0BA650EB7F61C24B29673EEE78B0D6F72B5B17426CFE349BD9F82967AA",
+    "bytes": 30890,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse2_fastest_results.csv",
+    "sha256": "EEF88901877EC80B573B7724ACE060E5663142C09FC8C6A6E96BD0BBAE40049A",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse2_medium_results.csv",
+    "sha256": "40965413F87379383E67243900116505A5A258A8009D9D6F5504B61BF69B7E0B",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse2_thorough_results.csv",
+    "sha256": "8961A2C0A4F3DFDCFFEA06A7551E308CC93C70B074E1B4F667F3C09BA0834E3E",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse2_fastest_results.csv",
+    "sha256": "F166A415D73443B1C58EC4C38E8B3AF97E05338535B35F99395A918471035B1D",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse2_fast_results.csv",
+    "sha256": "EC49CC8E752AAAB47A2C2295FA43B5209026C7E83643C887573062F07300387B",
+    "bytes": 7261,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-avx2_thorough_results.csv",
+    "sha256": "95BC0E486E79D6E2A26A3748D91600135371B95D8FEB5E51ED683D7F43E7D7FD",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-avx2_medium_results.csv",
+    "sha256": "441506DB5FCD5CA226AAB0FF0D0131B6B9CD926D82B0FD492FD71866F0D61A9A",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-avx2_fastest_results.csv",
+    "sha256": "F307D3A1D517540A31392BDD13E4D07A172A6DD2C18957F0B09BBF01E0F21D64",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-avx2_fast_results.csv",
+    "sha256": "3D71ABDA56E195EB0C4AC0779BD56BC39F863C7292F101008DA2A3EFED8CE439",
+    "bytes": 7287,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse4.1_thorough_results.csv",
+    "sha256": "D390EB0344413BA3799D74231A695300C3A08AA55CD749C529D83C2B754CBE41",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse4.1_medium_results.csv",
+    "sha256": "7DE778992FA43EDBB5C775F7D650A32A487EF0AD8F316B2593B0247B5882D730",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse4.1_fastest_results.csv",
+    "sha256": "1CBE27E1F562E6339A0BF5BD0C7728EBA637267E3C2C39FE79A4FAC1E962E42F",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse4.1_fast_results.csv",
+    "sha256": "9A1EB2DFDD0AC0049E8199D681B99B9556D17123705721EB8F94BA9338A1E0F1",
+    "bytes": 7267,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse2_thorough_results.csv",
+    "sha256": "D1F13518C99A3254DCD2DDE7968C7CD7104FD9DD192B5FE04A9E043198794A5E",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse2_medium_results.csv",
+    "sha256": "05FDBC214CFB5EF5E06B3AB93E1D7A46EC98BDC264D49716C74A6161CA42390E",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse2_fastest_results.csv",
+    "sha256": "FA3DC6CC8EB3CDD398243271469237675DCC05D11FDA2B6D4CD025B61087986F",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-sse2_fast_results.csv",
+    "sha256": "2733DC40790370CF2BECCA5FA3CA832070E9864460BD83F816B2F68F0E1DC1C8",
+    "bytes": 7254,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-avx2_thorough_results.csv",
+    "sha256": "75F23989783ACC9EB089E38D6276DC68FA7B3BDEC1C7D8EB6626C5C01478867D",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-avx2_medium_results.csv",
+    "sha256": "C83B85E2B658682E278C30E3AE78DAA77A787E4A1EEF1FFFF9C71264833B9EA5",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-avx2_fastest_results.csv",
+    "sha256": "9A48658D81B8D6F27E3F4214ECBAEAFE67797D8A0A50238613D4B5BEFD2821E6",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-avx2_thorough_results.csv",
+    "sha256": "726AADEB4B950D5B827F5BF88C8D520A5F8430A97362EB79609311DA6F57E4D2",
+    "bytes": 3181,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse2_fast_results.csv",
+    "sha256": "09EE456AAB70BB2486869131779B0C82C9514DAA316FEDABA8231766F6205642",
+    "bytes": 3202,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse2_fastest_results.csv",
+    "sha256": "0839C84A5DFF8CED935B92CD86D2F435AC5818CFD3BAD3B1C48ABB95F5A8EE47",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse2_medium_results.csv",
+    "sha256": "90CC3D79F47522BD80E76D39402512D9265B46F9FC5BC7477FFEB349644FE186",
+    "bytes": 3186,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse2_thorough_results.csv",
+    "sha256": "3B4FFF46F03FD5AB1E1796D94AE85929F0D9EB3C7A34AFCA5C7F9A253315AFB5",
+    "bytes": 3180,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse4.1_fast_results.csv",
+    "sha256": "F0FFB1B62E6449B041FC456E6693287519A89707E16D5806960E9180C5B4F4EC",
+    "bytes": 3209,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse2_medium_results.csv",
+    "sha256": "88E8DDE7CCCFF066D7FB55CA211ED87D0E633B79B29BC85A139FF8BCDA6A75FD",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse4.1_fastest_results.csv",
+    "sha256": "5A6BC3C99BF3572CC63655CA03A9F3B9A696AE510822D3A533BDC80C7941B9B1",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse4.1_thorough_results.csv",
+    "sha256": "A858634CCD3BC25659D4FE62CBC7D4AE36FAB69C1390BE232440ABE37211C2A6",
+    "bytes": 3178,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-1.7_fast_results.csv",
+    "sha256": "F538E1DEF09503BF65005433130C74C120012DA1E5AAD051E435CCF1276E816B",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-1.7_fastest_results.csv",
+    "sha256": "00E42F3D73B2DFDD0A2DC2616A72C11F2811C153C1909D6DAA79F9FAB95C87C1",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-1.7_medium_results.csv",
+    "sha256": "1E1932BF5B0840A2BD467BA581AAA79BCAC717374E63A55962C9D899346C3F28",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-1.7_thorough_results.csv",
+    "sha256": "6BA61D3FA99B4665282DAA0359EDD67BD732B8EC80529D12038D720A21F55CD7",
+    "bytes": 7198,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-2.5-avx2_fast_results.csv",
+    "sha256": "37070E941DCA5EFE395253E3EC62DB0571A276DEE09924E2D29FF7D68F9F3E9D",
+    "bytes": 7277,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-sse4.1_medium_results.csv",
+    "sha256": "0FA76DC658A8CA267253291DFE2CD9AAF8DD13254C79C5E23FE119E0E2E3012E",
+    "bytes": 3188,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-avx2_medium_results.csv",
+    "sha256": "C5045A75F9BD2162015C6EA1718B88D62AA0C88C2C573A1A6E836CD5860FB8EF",
+    "bytes": 3192,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse2_thorough_results.csv",
+    "sha256": "CAA1C7281BA2B490447DBCD27A4FC3CE9668B6AACA9C4996FC6C190822982127",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse4.1_fastest_results.csv",
+    "sha256": "10008E9D6CC4A0CBAA918286FACA30AF98F0CCF2886B1902C4B1AA173B0CCBF3",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-3.0-avx2_fast_results.csv",
+    "sha256": "C84E20439D53DE77BFEA801014063C6F98BE964E4BD053DCC26AD450486E6477",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse4.1_thorough_results.csv",
+    "sha256": "FCDFC5D7CE4AC616C7E280021C7B3EA4FB07D9E6BF2E87A94B80CD9864040FBB",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse4.1_medium_results.csv",
+    "sha256": "8EB3044E93432C4C04AB4DDA4992CB5E06CC5BA20642B28E7F6E8B7AAD6FEFC6",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse4.1_fastest_results.csv",
+    "sha256": "8D2BA8684B27B5EAD6FAFE83035052CAD5EEAD5083EC98ADAB748F86291A6230",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse4.1_fast_results.csv",
+    "sha256": "84F98FED8B68C80BDF47E71F3D6D8FB23B63B37810ABC1D2F18F1EF60F846405",
+    "bytes": 380,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse2_thorough_results.csv",
+    "sha256": "21EB8E0A4060679B8A45815FC1FC7C2CB7BE1CD2B3D05EF22820564C359667E8",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse2_medium_results.csv",
+    "sha256": "687A054033A79FE90FF5AFE17B50AD7EDD640B944CDD8482D0CB1DB7BBDC63D6",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse2_fastest_results.csv",
+    "sha256": "A81F1A40EC066518CBF08E3D60EFF23ED5CE5A95E10256BA6FF86211850A3153",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-sse2_fast_results.csv",
+    "sha256": "62CFCE5F3F883AC1BF944BA21B3BEF640CBFEE60D9FBD41CD786E8D64981C3D1",
+    "bytes": 380,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-avx2_thorough_results.csv",
+    "sha256": "37812904954F91FECF3560C296C9AE7490B2DEC5402599B82A79A628F8AEE411",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-avx2_medium_results.csv",
+    "sha256": "A9F513B24FDEEF210EE0707277CDAB633D9C9680E47EF00D4CD9DA09CFB40476",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-avx2_fastest_results.csv",
+    "sha256": "A8AC24EC69629CEA16B36FB0A142CBE03FF5298271EFBA41969F159D5999718C",
+    "bytes": 383,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-2.5-avx2_fast_results.csv",
+    "sha256": "388013167308F68AEDA80B618C1C53D2CC1E68CCDB418B73F3CF4F5D2DFB7934",
+    "bytes": 381,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-1.7_thorough_results.csv",
+    "sha256": "28A6BDD3584D75E10319B4D6C0D55405DE6BF75C64153083B8D69D4E16DA4E80",
+    "bytes": 398,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-1.7_medium_results.csv",
+    "sha256": "E43ABFD44A1C63C020911F5DC979396C67D712F22E22EA891357B59B2427C6E2",
+    "bytes": 388,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-1.7_fastest_results.csv",
+    "sha256": "47F987F364CF2CD0F6F6A99C3A267791D9521FFA296129985EE744ECC1AEF0D6",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\KodakMnt\\astc_reference-1.7_fast_results.csv",
+    "sha256": "FFC435FDB40521BF66F0616FD194C6275AF0F075814ED06E47A8E7D92537EA7F",
+    "bytes": 378,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse4.1_medium_results.csv",
+    "sha256": "CDEDE5BC446B54F41626E63A52B484F2B0EDD9D04E64898F984F399B57156BB9",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse4.1_thorough_results.csv",
+    "sha256": "B5241CA2E1167647A1F2D1FD2D1089E1DA80DA0967D0B8716DA1F419DE5F7ADE",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-avx2_fast_results.csv",
+    "sha256": "910C16AAA544E6016A626AC0B243893EBD2311A4792A4F648ED8B000CAD12627",
+    "bytes": 7287,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-avx2_fastest_results.csv",
+    "sha256": "2CE00939FAF5E4BF405E98D1A4BC546B9D9BC1014804914A062B630DA4A9453A",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-avx2_medium_results.csv",
+    "sha256": "0258B974053A702FF4639653116C95437C504FE2852A64E1484EA7914B0DB140",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-avx2_thorough_results.csv",
+    "sha256": "9E44E0BAE9C05EDAE073D2AA60F5D32244AA0EC564EB25E8874E931430B5FC4C",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.0-sse4.1_fast_results.csv",
+    "sha256": "B0B50F12D2C65C2B27FC9778E687B2193421E87B3342C444FCA7CB641CA0B9C6",
+    "bytes": 7274,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse2_fast_results.csv",
+    "sha256": "0AB986DC16F1C2AA6BF348D26D4F946880F97F559E8365F9DBFA93F4F88EE159",
+    "bytes": 7268,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse2_medium_results.csv",
+    "sha256": "14CC53416E39B619E6C439BA55B686E67C0667295D3B67405605CB760FB75351",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse2_thorough_results.csv",
+    "sha256": "3873B366B8696531B7E05AF18BE5BE026E7E914412C9A9944D87AD6C229B56C0",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse4.1_fast_results.csv",
+    "sha256": "672BD2F515E039841C207FAB3B310CE1645E14601FF4538137EB4721675F55FE",
+    "bytes": 7278,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse4.1_fastest_results.csv",
+    "sha256": "71F8F1C9B94F53577B123C3D2B7FCF2017446A6502D10C2FD0D452E5FCD3BD13",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse4.1_medium_results.csv",
+    "sha256": "D55203F9EFA5AFE0FC6FFF4E16B48494DB38E0D510EAFB67DC2104CEBC118CB3",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse4.1_thorough_results.csv",
+    "sha256": "5E76391B1E34A298E07E05A5E4A0030718ECB3B75D25890C42EDED5A952F7691",
+    "bytes": 7194,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Kodak\\astc_reference-3.1-sse2_fastest_results.csv",
+    "sha256": "6C7A36AA1A4098ACC6D860934F4E6A8C5665F606A6F572779FF683C4325680CF",
+    "bytes": 7314,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\Python-rev3\\packages\\python-3.10.13-je-rev3-windows\\python\\python.exe",
+    "sha256": "6235ABE2248C14AD86DFE00DBB7BC2396EB4B91F663412C211905E279BCE9D6E",
+    "bytes": 91648,
+    "owner": "unchanged installed VS/v143 SDK toolchain witness"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-avx2_fastest_results.csv",
+    "sha256": "05DCE506703EC42D3550CAAD98085564095494E881A60050B8FA7BECC94B1D23",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse4.1_thorough_results.csv",
+    "sha256": "7528A41D47A1898A08333D80DA267CCD78434717E4ABBC14051A021F05319F36",
+    "bytes": 3178,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGB\\ldr-rgb-emissive.png",
+    "sha256": "0433F987563CF954751110A2029A05AE26DAE8D5BEE812E1E433A605362D279A",
+    "bytes": 68698,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGB\\ldr-rgb-diffuse.png",
+    "sha256": "B9267F02A90A04D6A5E55B4F4A7819702DC8196A18D04FB8A0AD2EB9F10CF67C",
+    "bytes": 2918910,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-L\\ldr-l-occlusion.png",
+    "sha256": "E1FCAEC95867F0BA552F3A15AEC03C5A459081A9AF70494B10D2EC0BBBA3D3B4",
+    "bytes": 229058,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse4.1_thorough_results.csv",
+    "sha256": "B25DF5CC7B3FEA71C7EE342879A1DD1861482A9A23DEFF35A03994571BED69E4",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse4.1_medium_results.csv",
+    "sha256": "9A1B44732DDFF12C7F6D54D00C20BCF804E7F0B83334007F5B1A0D8B1D85417F",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse4.1_fastest_results.csv",
+    "sha256": "EC3F57E80E378C146962A20723D71590FFDC616D18FA95AEA0D1171BC4C3DEA4",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse4.1_fast_results.csv",
+    "sha256": "F4EFCA5F93AA6FAB07630C6E5E63C04A4BB99C8C3AE03B28F1388E47C5C233A1",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse2_thorough_results.csv",
+    "sha256": "35335F4C482815ED20D9EA3C4FFC44D3DF73FCD1A6E59FFE4058D91AD9A8206A",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse2_medium_results.csv",
+    "sha256": "A9CF2971646D28859702995EF3684AB4847E75B216CDC7BA64F8034AC12B7904",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse2_fastest_results.csv",
+    "sha256": "621DDFDBB985F204B039E61A31A164CC58A467F4A91C8CBF6D11E357CF50E4F7",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-sse2_fast_results.csv",
+    "sha256": "CCDED195979444F110F4B5EE071DE6C409572D675EC802F4841EBE98356CE3B2",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-avx2_thorough_results.csv",
+    "sha256": "914929BEFDF9032C383C184B25C82EAC950FCE84217726ADB0FF276417EF4E27",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-avx2_medium_results.csv",
+    "sha256": "A57AB18679AF2FADD9235C60C138F28D6279995170DAA32F13F4FDDC6F9ADE12",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-avx2_fastest_results.csv",
+    "sha256": "D9F0EBC2A8B00B621A4DE1751841DAFC4F1D1156460212CABD7E92BD9985C49A",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.1-avx2_fast_results.csv",
+    "sha256": "D7E8846A498F9B1027F971ECD46A6E54A8E5DD2A820BFA10FC489505398FDFE3",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse4.1_thorough_results.csv",
+    "sha256": "348A5C5B31405CA689EFE4B34357C100BA2A30E97FCCA7A19F3F3A95E3FBA603",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse4.1_medium_results.csv",
+    "sha256": "B59CB4842837E6BC619E66413A43EFF25FED5EE285AD38072AAEE178FF86B3D1",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse4.1_fast_results.csv",
+    "sha256": "0BDBA8F530721C1F7587EE1C1A4DBFA1D2617DBEF7EC2ED26A505E4BFFF61F91",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse4.1_fastest_results.csv",
+    "sha256": "1B98616E6B1B2F3511725CB480DAC1442B0D686DC2C9885450AE18C06C46D593",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse4.1_medium_results.csv",
+    "sha256": "BF86AA3049C638E34A31940558C958964FADDD5B6BEF738031544B3A317E0987",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-2.5-sse4.1_thorough_results.csv",
+    "sha256": "3C89C3E81AF7AE32B538FE40793981055DD8A96DFF8AB4FE991A47EE4E73B0FB",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-avx2_fast_results.csv",
+    "sha256": "A44C7E6CE8FACDEF4787AEE72D7C14114B0328B5BE7F1D139BBF11DF0E29B920",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-avx2_fastest_results.csv",
+    "sha256": "990454D429747067C7811B717BA571639CDCF6F16990AAECEA9C9641EB319C22",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGB\\ldr-rgb-metalrough.png",
+    "sha256": "8C5995BE18F28692ACD990B6EE2663F807C5548E917807F125CD06D207775366",
+    "bytes": 1184895,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-avx2_medium_results.csv",
+    "sha256": "0A2BF40983699A13145EB804C0A7EFFEE9AFBC4C8F4920B36133580F805F4695",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse2_fast_results.csv",
+    "sha256": "BD2A525B8815E4B90E9C06CFE2B6DCEDEC01B9F359007139FB5D4D1425C30117",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse2_fastest_results.csv",
+    "sha256": "C99DCB193BD90D642FC286335C6F829DBCDDAD3BE660206356CF87FFC622AEF0",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse2_medium_results.csv",
+    "sha256": "EA271A209509C7681065251139958443B6DDB726F71D096699833C482F70FDC5",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse2_thorough_results.csv",
+    "sha256": "EAD5DC01D78B732B97B49D1F7EDDAFF4EA064114406A7F45DD07AAC3B10CBA98",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse4.1_fast_results.csv",
+    "sha256": "C583BB690E5EE9D80431B9ED4CF36BA1F10B2C32BEC069593273125C842D4FF6",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-sse4.1_fastest_results.csv",
+    "sha256": "E92C5F8ABFC505C39BB45FF0F25451F8E6471F5A379305D66B67ED00F84C5A9D",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\HDRIHaven\\astc_reference-3.0-avx2_thorough_results.csv",
+    "sha256": "8BB24D622BDC4CCB25D708BF1F891996F697B795A813ED9A05F79114EA81B78A",
+    "bytes": 1736,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.1-avx2_fast_results.csv",
+    "sha256": "53EF9305C87D361D88E7AF5FCDC5A1DDF83D09C805888FCA79323FDC3CA4D74F",
+    "bytes": 3213,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGB\\ldr-rgb-metalrough2.png",
+    "sha256": "710B24FD30A8578038D0AD4521FA4A009B63E526CC3F520BCA17CF7F3607B46F",
+    "bytes": 4283964,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGBA\\ldr-rgba-diffuse.png",
+    "sha256": "84734C4235059825FF38A9356C8F824208E4556F711403EEC667BB3FB849BF69",
+    "bytes": 1532433,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse4.1_medium_results.csv",
+    "sha256": "EC43471FAF2BB9D9C97941741CF3AFD2262B0D388CFBE747B2C9AEA7AAB310FB",
+    "bytes": 3187,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse4.1_fastest_results.csv",
+    "sha256": "3411E69E799A5F30432DA57C272BF26965CC2EA5F4A4DAA77FD44A82B50993AB",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse4.1_fast_results.csv",
+    "sha256": "792DA70B20B0D8916F6CE564305E08624FC953B747855B709B0A4C866820E6C0",
+    "bytes": 3209,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse2_thorough_results.csv",
+    "sha256": "C8D2BBD1E1B482B6481A0F5B9F215C759C62D791F5C918CA3E13ABA757DEEC55",
+    "bytes": 3181,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse2_medium_results.csv",
+    "sha256": "431E9FB9F73B78E1EC020441C4C2CE3437B1BC2A9079A4B60AB552237B4944A6",
+    "bytes": 3186,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse2_fastest_results.csv",
+    "sha256": "D8D92F047A15B68DC1BD9BC33F7EBD6A59BC2957D5778B043060784F8D625247",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-sse2_fast_results.csv",
+    "sha256": "D92335E57D8E00253835B432DDAA4C5E9D94191AF81E6246AE4578DF387DD156",
+    "bytes": 3200,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-avx2_thorough_results.csv",
+    "sha256": "CAAE87C67DA541494F5C0A3852A99169D28C98FB16F02036499EE33C95F2A473",
+    "bytes": 3181,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-avx2_medium_results.csv",
+    "sha256": "7A05CBC9A85763B27E7CA94042EF8C3BF21D59F00F4BC7CCEE13DA440DC36F73",
+    "bytes": 3192,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-avx2_fastest_results.csv",
+    "sha256": "DEBC5291C712E5644953C47ED8CC9C7B30E86DDDB2718DF770E7C1CCA0F76DED",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-3.0-avx2_fast_results.csv",
+    "sha256": "F85E9142ACB8135705B7716C7A7142E1AC4EEA553E96173D703801DAA1AD08D3",
+    "bytes": 3211,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse4.1_thorough_results.csv",
+    "sha256": "DDC53461EEE22C70FD7D24202D42CB994FDE58F0C7A2D4C558F03EBBD61749C9",
+    "bytes": 3184,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse4.1_medium_results.csv",
+    "sha256": "FE2732666FFA8E0738586DB9BAC55308A75E3B76277591A4124B86AB88F3DE4B",
+    "bytes": 3186,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse4.1_fastest_results.csv",
+    "sha256": "2BD8078AFF72624E3C06D6905AB2F135A932006CA995550D433EA55699BFF2A0",
+    "bytes": 3227,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse4.1_fast_results.csv",
+    "sha256": "8483E2A2108D7A18B13CE6EE356161DF11D55C460E630526756E228A0B657A67",
+    "bytes": 3202,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse2_thorough_results.csv",
+    "sha256": "A24CDEBFF277A3897FD748B77DD60633FB5444B6A74FFB9969F06D608ED4D144",
+    "bytes": 3186,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse2_medium_results.csv",
+    "sha256": "FE127E85BA58727B173051A6DA4FE76E775798320F467860142BCEF11D35B7DB",
+    "bytes": 3186,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGBA\\ldr-rgba-specgloss.png",
+    "sha256": "E7E58CC7623FA77EF2865A63FD0F8E3B137FF156BE3B8EF09A47F9B71E60F474",
+    "bytes": 2000552,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-XY\\ldr-xy-normal1.png",
+    "sha256": "9DAE5B0FE6B55903C8850EF69EACC77CBD0CDAA2916D121FCD4AF54402744AED",
+    "bytes": 2057482,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-XY\\ldr-xy-normal2.png",
+    "sha256": "E88539E257BC15A37510F5ADB71D6EF2376D8BA42433BDF6287FFF8F15ADCC36",
+    "bytes": 4882079,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LICENSE.txt",
+    "sha256": "EDC930CA714966B56089C5A3E9A790366F9BF37E1749FB17E6DCF40B8783251F",
+    "bytes": 1346,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-1.7_fast_results.csv",
+    "sha256": "79C4F0A07B79F2F2D96296D6C8D12FA113E1518BCB02DACA3A17B5B041694081",
+    "bytes": 3185,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-1.7_fastest_results.csv",
+    "sha256": "64966C7BB9D80F6D7B2564979D9E47918FBAAB60618B92EFFBED9819C5E6B3D3",
+    "bytes": 3184,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\LDR-RGBA\\ldr-rgba-base.png",
+    "sha256": "BFABE406BF3E786F4077B1153E810EA7BF6C5EA046684781DFAF57CC7E3F790D",
+    "bytes": 1635069,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-1.7_medium_results.csv",
+    "sha256": "5270E4AE4D6F6C90B7A2BE0B3BE580F9DB3A25F246D19C7FCCBDAE5CCDC1A0CD",
+    "bytes": 3186,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-avx2_fast_results.csv",
+    "sha256": "DC6D53304FCB78CFC40981EC288A050CBC37FAE1018B0919DF00493011088B08",
+    "bytes": 3208,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-avx2_fastest_results.csv",
+    "sha256": "00ECBE82C7B086CF0D78439550A8E35BEFA96DCF0C05B1BDB77935E100EF1845",
+    "bytes": 3228,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-avx2_medium_results.csv",
+    "sha256": "5EDA88B3059DF8706A0AD626FA39DBDCF699618D6F3451B5BB0D9DCCFDE0EC22",
+    "bytes": 3190,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-avx2_thorough_results.csv",
+    "sha256": "853E9B6E50E6FC64F603548D45AB3A4A09C4282959AD391CA7E515F4CD3BB1B3",
+    "bytes": 3178,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse2_fast_results.csv",
+    "sha256": "4BC0DF379E1993152B7BD71DA6573164F919AFCAEA06852814B6FA257013CE28",
+    "bytes": 3200,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-2.5-sse2_fastest_results.csv",
+    "sha256": "85771C2175C44BAEEC0D3ABF190EBCFAD822FA14B75836DF73C7CC30AE801FE8",
+    "bytes": 3226,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Test\\Images\\Khronos\\astc_reference-1.7_thorough_results.csv",
+    "sha256": "62D0002EEB31651D1A6601268B1A23B9D6DABB991B87F9E22A1FAB544F9E2F0F",
+    "bytes": 3244,
+    "owner": "immutable ARM source / exact primary Gitblob"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\parent-native-toolchain-rev1\\witness.json",
+    "sha256": "F9923C56A303C4AA7D75F61E4C85A4304559A73AB4EB6B76D32502EA3B691107",
+    "bytes": 13129,
+    "owner": "existing parent toolchain witness"
+  }
+]

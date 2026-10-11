@@ -1,0 +1,9 @@
+{
+  "status": "ARCHIVE_AUDITED_FRESH_EXTRACTED_NOT_CONSUMER_VERIFIED",
+  "archiveSHA256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF",
+  "archiveBytes": 491564,
+  "files": 21,
+  "root": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-package-audit\\extracted\\ISPCTexComp-36b80aa-je-rev1-windows",
+  "productTooling": false,
+  "note": "No acquired code executed. CPython external stdlib data-only tar reader. No build/runtime acceptance."
+}

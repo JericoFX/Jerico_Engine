@@ -1,0 +1,10 @@
+{
+  "failedAudit": "AuditExtractInputs.ps1 stopped before source snapshot creation",
+  "cause": "Observed archive contains CRLF where pinned Git blobs retain LF; export cause not established",
+  "sample": "ISPC Texture Compressor/DXUT/Core/DDSTextureLoader.cpp",
+  "archiveBytes": 62913,
+  "primaryBytes": 61088,
+  "primaryRawComparison": "Exact after CRLF -> LF only",
+  "noSourcePatch": true,
+  "acceptance": "v2 verifies every full Git blob exact or exact after only byte-level CRLF removal, preserving archive/source bytes"
+}

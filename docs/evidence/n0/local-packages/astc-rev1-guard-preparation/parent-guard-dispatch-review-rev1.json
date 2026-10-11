@@ -1,0 +1,17 @@
+{
+  "decision": "TEN REAL NEGATIVE GUARDS APPROVED FOR ONE LUNA DISPATCH",
+  "pins": {
+    "negative-assignment.json": "586560A210455B04B837C826CD38D1F96E56F4B7584A1C11138B3CD072600709",
+    "source-freeze-astc-guards.json": "DA65BCA6F3007F85D6C855E9652DE18825BB7AF873197B053AA661C96D79D5A8",
+    "RunASTCGuards.ps1": "23E38737CC56C935CDA4A21D1D9D86A7687999F9C23A121BF53A3A5D752BCD51"
+  },
+  "guardInputs": 716,
+  "sourceInputs": 712,
+  "currentDeltas": 0,
+  "producerCases": 9,
+  "patchHelperCases": 1,
+  "driverASTErrors": 0,
+  "fixturePolicy": "Fresh private attempt only; four files and empty junction target unchanged. Producer cases cannot use real archive; tiny hash fixture or missing archive. No cleanup. Native result must reject with exact diagnostic and absent outputs.",
+  "nativeExecuted": false,
+  "engineAccepted": false
+}

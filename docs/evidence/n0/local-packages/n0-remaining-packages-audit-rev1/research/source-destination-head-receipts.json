@@ -1,0 +1,101 @@
+[
+  {
+    "method": "GET_TEXT",
+    "url": "https://raw.githubusercontent.com/Tessil/robin-map/908ccf9f039a0e50813544c0444ca664ca292d7c/LICENSE",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/robin-LICENSE",
+    "bytes": 1063,
+    "sha256": "EE5DB94AAA0398F12870270EF815D0EFC64818CAF68F06535D5754D2C4F99120"
+  },
+  {
+    "method": "HEAD",
+    "name": "samplerate",
+    "url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/a147b6dc4046deda22b2aa772b348717de772e2b",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "oiio",
+    "url": "https://codeload.github.com/AcademySoftwareFoundation/OpenImageIO/tar.gz/14d38284c54bce02f8228ea87cdfa93dc0afda77",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "ocio",
+    "url": "https://codeload.github.com/AcademySoftwareFoundation/OpenColorIO/tar.gz/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "jpeg",
+    "url": "https://codeload.github.com/libjpeg-turbo/libjpeg-turbo/tar.gz/ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "yaml",
+    "url": "https://codeload.github.com/jbeder/yaml-cpp/tar.gz/9a3624205e8774953ef18f57067b3426c1c5ada6",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "pystring",
+    "url": "https://codeload.github.com/imageworks/pystring/tar.gz/c2de99deb4f0bd13751f8436400b5e8662301769",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "fmt",
+    "url": "https://codeload.github.com/fmtlib/fmt/tar.gz/9e8b86fd2d9806672cc73133d21780dd182bfd24",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "robin",
+    "url": "https://codeload.github.com/Tessil/robin-map/tar.gz/908ccf9f039a0e50813544c0444ca664ca292d7c",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  },
+  {
+    "method": "HEAD",
+    "name": "lcms",
+    "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+    "status": 200,
+    "location": "",
+    "content_length": null,
+    "sha256": null,
+    "archive_get_performed": false
+  }
+]

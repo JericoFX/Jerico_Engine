@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "sha256": "B7770995D83663661C98B838BB77CFA6F5BB4587A026A56FCB87914CB9F36319",
+  "authorization": false,
+  "automaticRedirects": false,
+  "url": "https://api.github.com/repos/o3de/3p-package-source/commits?path=package-system%2Fastc-encoder%2Fbuild_config.json&per_page=20&sha=70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "bytes": 35820,
+  "contentType": "application/json; charset=utf-8"
+}

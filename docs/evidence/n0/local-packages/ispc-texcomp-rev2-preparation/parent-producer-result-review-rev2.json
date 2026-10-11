@@ -1,0 +1,23 @@
+{
+  "decision": "ISPCTEXCOMP PRODUCER ACCEPTED FOR ARCHIVE AUDIT AND CONSUMERS",
+  "nativeResultSHA256": "8026F3B582EB42A832BBFE5BAD6966CD85495970D80F15B800F009C31FB169E8",
+  "nativeStartSHA256": "F220A6BB048EFDD6844A55A5F10C3B75D466E7062E35FAAD1646876ED2D492BA",
+  "wrapperStartSHA256": "E9DD70BC2848D1ED7483FB680F55A250ADB34F8DD63AA24A320E63FDAC24C64E",
+  "nativeExit": 0,
+  "nativeSeconds": 27.986035,
+  "wrapperPID": 221464,
+  "nativePID": 163508,
+  "sourceFreezeEntries": 458,
+  "preflightMatches": 458,
+  "postflightMatches": 458,
+  "owningRawSourceFilesUnchanged": 8,
+  "archiveBytes": 491564,
+  "archiveSHA256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF",
+  "warnings": "MSBuild reports 4 warnings: empty NoOverrides.props duplicate import and three original kernel_astc type/shadow warnings. Raw ISPC performance diagnostics also present. No upstream patch or warning suppression; no performance acceptance.",
+  "compileFlagsObserved": "/MD /MACHINE:X64 /DLL with original two C++ sources and ISPC kernels",
+  "archiveIndependentAudit": "PENDING",
+  "consumers": "NOT_RUN",
+  "guards": "NOT_RUN",
+  "catalogIntegrated": false,
+  "engineAccepted": false
+}

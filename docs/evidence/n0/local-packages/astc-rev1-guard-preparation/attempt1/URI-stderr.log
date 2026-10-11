@@ -1,0 +1,6 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:9 (message):
+  JE local Python: JE_ASTC_OUTPUT must not be a URI
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake:11 (JE_python_require_local_path)
+
+

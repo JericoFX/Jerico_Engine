@@ -1,0 +1,56 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "owner": "Explicit parent dispatch to Luna, exclusive native validation owner",
+  "scope": "Consumer 8 cases Release + Debug and 9 original producer guard rejections, separate runs",
+  "launcher": {
+    "path": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "consumer": {
+    "wrapperArguments": [
+      "-NoLogo",
+      "-NoProfile",
+      "-File",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-validation-preparation/RunConsumer.ps1"
+    ],
+    "scriptSHA256": "685C6B5D8CC0F267ECEB738629A249C006CCB532F1A644EF060A1A6C584DBA89",
+    "freshBuild": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer",
+    "SDKRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-package-audit\\extracted\\ISPCTexComp-36b80aa-je-rev1-windows",
+    "cases": 8,
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation/consumer-run",
+    "rawJUnit": [
+      "Release-junit.xml",
+      "Debug-junit.xml"
+    ],
+    "DLLProof": "expected/copied path/hash recorded; actual loaded path verified by GetModuleFileNameW parent-equality assert only, not captured as text"
+  },
+  "guards": {
+    "wrapperArguments": [
+      "-NoLogo",
+      "-NoProfile",
+      "-File",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-validation-preparation/RunGuards.ps1"
+    ],
+    "scriptSHA256": "4D789E0AAE96A0751CF6DBEB857627EC57680E5982951C148FDBA4A0191416FB",
+    "cases": 9,
+    "authoritySHA256": "35B6A7D77269F60E2A067B401980E01C3F4576E2F755D0DE09CFB3B1851127F4",
+    "fixtures": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards",
+    "evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation/guards-run",
+    "acceptance": "Nonzero native result plus expected diagnostic plus no output creation, 9 cases expected; no PASS from a generic failure"
+  },
+  "inputs": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\validation-inputs.json",
+    "sha256": "DF45F46828446FE0113777546CFDE2983FC099588404548821C9D24A7B6E8710",
+    "count": 490,
+    "source458Unchanged": true
+  },
+  "runtime": "No Atom/editor/AP/cook/runtime acceptance",
+  "warnings": "Observed MSB4011 empty props duplicate and 3 upstream ISPC sites retained, no source repair",
+  "automaticExecution": false,
+  "retry": false,
+  "Root": false
+}

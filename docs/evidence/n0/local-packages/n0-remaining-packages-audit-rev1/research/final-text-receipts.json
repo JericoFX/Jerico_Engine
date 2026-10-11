@@ -1,0 +1,90 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/jbeder/yaml-cpp/9a3624205e8774953ef18f57067b3426c1c5ada6/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/yaml-CMakeLists.txt",
+    "bytes": 11129,
+    "sha256": "6352BFCB4A3A41834FC66E8576622F5A482CE393D233C878E2CD3EF16E3765AC"
+  },
+  {
+    "url": "https://api.github.com/repos/mm2/Little-CMS/git/ref/tags/lcms2.2",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/lcms-tag.json",
+    "bytes": 329,
+    "sha256": "FEFBE385519477D01DB7A2EDE3B14658907F6B445BCE368587295FA5AD2EC4CF"
+  },
+  {
+    "url": "https://api.github.com/repos/imageworks/pystring/git/tags/ab198227ec53d53b98311d62906f9f2879295844",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/pystring-annotated-tag.json",
+    "bytes": 662,
+    "sha256": "A46CE42010408C29FC816390E681D2EED914F3D9AE90143435BBADE03955D650"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/jbeder/yaml-cpp/9a3624205e8774953ef18f57067b3426c1c5ada6/LICENSE",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/yaml-LICENSE",
+    "bytes": 1061,
+    "sha256": "AA6FCC27BE034E41E21DD832F9175BFE694A48491D9E14FF0FA278E19AD14F1B"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/fmtlib/fmt/9e8b86fd2d9806672cc73133d21780dd182bfd24/LICENSE.rst",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/fmt-LICENSE",
+    "bytes": 1408,
+    "sha256": "825C9324E70F8C839C8BA910543DD4A7DAEE243B86EF960594C11381A19980B8"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/ecf021bc0d6f435daacff7c35ccaeef0145df1b9/README.ijg",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/jpeg-README.ijg",
+    "bytes": 12732,
+    "sha256": "4B7B9F8C03BB8D60270DFD12684E70AB21E4ABFD27E73905CD1A7C4CAE6F5CDB"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9/package-system/openimageio-opencolorio/distribution/FindOpenColorIO.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-historical-FindOpenColorIO.cmake",
+    "bytes": 7562,
+    "sha256": "9452998F21F07DB2EE1789CDED1E014B37E295AEC0AD986F437BBA07FE719643"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9/package-system/openimageio-opencolorio/distribution/FindOpenImageIO.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-historical-FindOpenImageIO.cmake",
+    "bytes": 10688,
+    "sha256": "F76EB34C77ECBB8218CBC0C7445A84D4E0C14A5D16D86A15A49A3245D243466C"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/projects/Buildlcms2.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-Buildlcms2.cmake",
+    "bytes": 726,
+    "sha256": "E80B0476FDCF7D03ABA9420BD1DC8B9AEF41B1A9D9151608D84452CD65558785"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/libutil/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-libutil-CMakeLists.txt",
+    "bytes": 8369,
+    "sha256": "546AA03D0E65EBECA965CBE8C9EA7710BBCE675485F84C40E64E14829454E59B"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/cmake/plugin.cmake",
+    "status": 404,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-plugin.cmake",
+    "bytes": 14,
+    "sha256": "D5558CD419C8D46BDC958064CB97F963D1EA793866414C025906EC15033512ED"
+  }
+]

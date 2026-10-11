@@ -1,0 +1,101 @@
+{
+  "status": "PENDING PARENT REVIEW / LUNA EXECUTION",
+  "nativeExecuted": false,
+  "freshAttempt": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-consumer-validation/attempt1",
+  "freshBuild": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+  "cmake": "C:/Program Files/CMake/bin/cmake.exe",
+  "ctest": "C:/Program Files/CMake/bin/ctest.exe",
+  "configure": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/tests",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_ASTC_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1"
+  ],
+  "expectedTests": [
+    "JE.LocalPackages.ASTC.ldr8",
+    "JE.LocalPackages.ASTC.ldr16",
+    "JE.LocalPackages.ASTC.ldr32",
+    "JE.LocalPackages.ASTC.srgb",
+    "JE.LocalPackages.ASTC.hdr-rgb",
+    "JE.LocalPackages.ASTC.hdr",
+    "JE.LocalPackages.ASTC.normal",
+    "JE.LocalPackages.ASTC.invalid",
+    "JE.LocalPackages.ASTC.cli"
+  ],
+  "configurations": [
+    "Release",
+    "Debug"
+  ],
+  "testsPerConfiguration": 9,
+  "package": {
+    "bytes": 1179220,
+    "payloadBytes": 8503430,
+    "sha256": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca",
+    "members": 63,
+    "archive": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1/packages/astc-encoder-3.2-je-rev1-windows.tar.xz",
+    "extractedRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1"
+  },
+  "nativeScope": "One configure; one build and CTest for each config. No producer, no extraction, no negatives dispatched by this driver.",
+  "guardsProposed": [
+    {
+      "scope": "PRODUCER",
+      "expected": "is required",
+      "case": "missing-required-argument"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "source archive file is missing",
+      "case": "archive-missing"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "source archive SHA256 mismatch",
+      "case": "archive-hash"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must match the audited 3.2 archive",
+      "case": "pin-url-or-sha"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must not be a URI",
+      "case": "URI"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must be an absolute local path",
+      "case": "UNC-relative"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must not use symlink paths",
+      "case": "symlink-junction-ancestor"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "output must be new",
+      "case": "output-existing"
+    },
+    {
+      "scope": "PRODUCER",
+      "expected": "must be beneath this checkout/build",
+      "case": "output-outside-build"
+    },
+    {
+      "fixture": "Only private copy under own fresh attempt; invoke ApplyASTCPatch, not a claimed producer case",
+      "scope": "PATCH-HELPER",
+      "expected": "pristine patch input SHA256 mismatch",
+      "case": "pristine-byte-mismatch"
+    }
+  ],
+  "guardPolicy": "Not executed/fixtures not created. Producer negatives always retain missing archive secondary backstop except actual tiny-file hash case; no variant may reach a successful producer. PATCH-HELPER case uses only private files under own fresh attempt and before/after hash witness, not a claimed producer case.",
+  "acceptance": "Parent acceptance only; no Editor/engine PASS from this consumer"
+}

@@ -1,0 +1,317 @@
+{
+  "name": "batch-v-hacd-original-after",
+  "path": "F:\\JericoEngine\\Dependencies\\v-hacd-4.1.0",
+  "fileCount": 62,
+  "files": [
+    {
+      "relativePath": ".gitignore",
+      "bytes": 12948,
+      "sha256": "38aea70cd94e7bdd543cb8bcee498a8df01ae06ad2528f25159ccb504c89c351"
+    },
+    {
+      "relativePath": ".gitmodules",
+      "bytes": 96,
+      "sha256": "084800fa19a1c0f841b3b766684f360a2eb94ee93df0397cf017fb3434552727"
+    },
+    {
+      "relativePath": "LICENSE",
+      "bytes": 1546,
+      "sha256": "245c933225f5bd28a10336137b26f1f86551b6b1d29f804253eb5e1d73744c2e"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 4677,
+      "sha256": "c6a836651f0f9d3b03df1a8c90505532554bda8d89556ff8795b9f9a00bb6d6c"
+    },
+    {
+      "relativePath": "app\\ALL_BUILD.vcxproj",
+      "bytes": 16496,
+      "sha256": "fc8259316951d3fc2384f9ed45951901578b766e88722678751c9839a9b9c92b"
+    },
+    {
+      "relativePath": "app\\ALL_BUILD.vcxproj.filters",
+      "bytes": 267,
+      "sha256": "462ffa4ee9e565d12a8632226472049d87d87bfe73813fd066c3ea55f0277f1f"
+    },
+    {
+      "relativePath": "app\\ALL_BUILD.vcxproj.user",
+      "bytes": 165,
+      "sha256": "c65b2b1a71dcd26333d8dc209ffeb90a906ddd8bbab6d45dada8e3bc84c30226"
+    },
+    {
+      "relativePath": "app\\build_win.bat",
+      "bytes": 51,
+      "sha256": "293bd63367a025ee6414efb97ad693ca4e8a0a40360e3dbb3ab4147c0af33085"
+    },
+    {
+      "relativePath": "app\\CMakeLists.txt",
+      "bytes": 756,
+      "sha256": "652cd1b46627ee7448fbb827ec4b96f4180e0bd395925438a05c814177a8bb71"
+    },
+    {
+      "relativePath": "app\\FloatMath.cpp",
+      "bytes": 262,
+      "sha256": "f63b0518eea832078558a257d906d0c9b4252a50d77acb7fd5ca376cc71904f3"
+    },
+    {
+      "relativePath": "app\\FloatMath.h",
+      "bytes": 29872,
+      "sha256": "39e733144b64a0ed44c0e41b1a1874bb11fcfdd09e65414c708e19fe5b975fd8"
+    },
+    {
+      "relativePath": "app\\FloatMath.inl",
+      "bytes": 112112,
+      "sha256": "db004a7b736692fc717c414fbedae29a380b33744abea0333787f335182c91cb"
+    },
+    {
+      "relativePath": "app\\InParser.cpp",
+      "bytes": 6263,
+      "sha256": "800606dd55965d5b28da1830e943a496b6f85015ce5ae11c7535db6083bf4128"
+    },
+    {
+      "relativePath": "app\\InParser.h",
+      "bytes": 2986,
+      "sha256": "c28950ed0760b5120b353c6af3e537c535e591368cc216fed065e5600b6d2e8b"
+    },
+    {
+      "relativePath": "app\\SaveUSDA.cpp",
+      "bytes": 11549,
+      "sha256": "e532304af7f481113882c8279e0b31ee35734e3ae2d91fa97d3feb76185b230e"
+    },
+    {
+      "relativePath": "app\\SaveUSDA.h",
+      "bytes": 788,
+      "sha256": "55bda4993dd49b1931bb24749596566f9ab4224d632f9bdf5b31a12c8aa86889"
+    },
+    {
+      "relativePath": "app\\ScopedTime.h",
+      "bytes": 999,
+      "sha256": "38a08e9091c4320bbe53296f71ed0397506b825f6b01b60976f451283ff41315"
+    },
+    {
+      "relativePath": "app\\TestVHACD.cpp",
+      "bytes": 19713,
+      "sha256": "f581720b97810fce58a1694f499e502356978abf7b3fbe2faff0e6a63277917e"
+    },
+    {
+      "relativePath": "app\\TestVHACD.exe",
+      "bytes": 194560,
+      "sha256": "f5318972a81c63444dc3acef9f1fff2df4ef8b4871a8ac767e1227e2d26201a3"
+    },
+    {
+      "relativePath": "app\\TestVHACD.sln",
+      "bytes": 3057,
+      "sha256": "530f10da6c55295a83412ed3da5ce7dd362145f97c4181b02e683cb404e3b702"
+    },
+    {
+      "relativePath": "app\\TestVHACD.vcxproj",
+      "bytes": 26949,
+      "sha256": "875bad39b40b6db7f41a77f509dd26d33277d9980acb7fe29d9dd4e7025111e5"
+    },
+    {
+      "relativePath": "app\\TestVHACD.vcxproj.filters",
+      "bytes": 996,
+      "sha256": "ef77483ada182968ccb77204ffd7256e6b368eac3fc657d1ef03fbd4691bbb05"
+    },
+    {
+      "relativePath": "app\\wavefront.cpp",
+      "bytes": 11068,
+      "sha256": "1e9981624e70b3c132afbd5750b445aae83e35104d2db510537b42fb23a38a4b"
+    },
+    {
+      "relativePath": "app\\wavefront.h",
+      "bytes": 2185,
+      "sha256": "65b1f64cf7d60251c37c840a79934146a2710d67c1f0b5aa941c01b8b5748ae5"
+    },
+    {
+      "relativePath": "app\\ZERO_CHECK.vcxproj",
+      "bytes": 16200,
+      "sha256": "95385d2a22c6a31e1d1485717639e663d3a5f3ae6aa7a696a96e45293006d21a"
+    },
+    {
+      "relativePath": "app\\ZERO_CHECK.vcxproj.filters",
+      "bytes": 499,
+      "sha256": "db857c810f3ebd2869b1cfebe2cd726ffe3fa6c69a431b5105c915a9cf12fde0"
+    },
+    {
+      "relativePath": "app\\meshes\\al.obj",
+      "bytes": 183966,
+      "sha256": "fb15e3e01e369f610eec865796e40d92de5c52ef81db72544d1708878f89eb9f"
+    },
+    {
+      "relativePath": "app\\meshes\\beshon.obj",
+      "bytes": 306529,
+      "sha256": "3dbd68f39fd48d756f5af17d224db1b92e87655d7566e06d04820dfe11129a03"
+    },
+    {
+      "relativePath": "app\\meshes\\blonde.obj",
+      "bytes": 421802,
+      "sha256": "809c08ff3819f642c831013ebd146a779fa8a880039bc35bb8ba8c97b00842c8"
+    },
+    {
+      "relativePath": "app\\meshes\\box-thick.obj",
+      "bytes": 1326,
+      "sha256": "4e85e46d74fce1b060bedeaffcd78bd22898f7f84fa080ed5340800d4ec19ceb"
+    },
+    {
+      "relativePath": "app\\meshes\\bunny.obj",
+      "bytes": 175546,
+      "sha256": "886d2ba4e278f8efac89bd1fc3683857a98e91cb8c32dd862f45e991a3903beb"
+    },
+    {
+      "relativePath": "app\\meshes\\caterpillar.obj",
+      "bytes": 666878,
+      "sha256": "6a3caef4155408be39b29943ba528c3c03ebd5fddfc448d82ce5bcaef1951995"
+    },
+    {
+      "relativePath": "app\\meshes\\character.obj",
+      "bytes": 181692,
+      "sha256": "5a4653c0cbe497a443d1b63eb0bbca566b19df27118e7a0fbf5b0def0b554327"
+    },
+    {
+      "relativePath": "app\\meshes\\cow-nonormals.obj",
+      "bytes": 232997,
+      "sha256": "343c0c359c05206eb8159a1a66e0f8738f0b9717c45b604e0bd931e7990d9278"
+    },
+    {
+      "relativePath": "app\\meshes\\cube-notch.obj",
+      "bytes": 10129,
+      "sha256": "b2ebd20519ee723953882da2324932b5fd5d0283a533d201ee28feaee174ce39"
+    },
+    {
+      "relativePath": "app\\meshes\\cube.obj",
+      "bytes": 2749,
+      "sha256": "366188f41f59f43621b247bb82d06aabedf5f6b5d0e3aea954057679f0720f6d"
+    },
+    {
+      "relativePath": "app\\meshes\\cylinder.obj",
+      "bytes": 6451,
+      "sha256": "943153d246f4fdc641d29773d1ac53d7e8e62f478728042752d60d386654fb8c"
+    },
+    {
+      "relativePath": "app\\meshes\\deer_bound.obj",
+      "bytes": 134391,
+      "sha256": "32663670d4f81948005c3efd337b11238a81fcb6c181fbbd65902be946120789"
+    },
+    {
+      "relativePath": "app\\meshes\\defsphere.obj",
+      "bytes": 2577,
+      "sha256": "9b246005f5f45002a43bbbb017d025d03ca4a60914deed1aa30d8ab4097e776e"
+    },
+    {
+      "relativePath": "app\\meshes\\dino.obj",
+      "bytes": 5486584,
+      "sha256": "8e641c8beaecfa75c47a0f076e16f4f84e694dcca47d82fa18689cc2f5e1679d"
+    },
+    {
+      "relativePath": "app\\meshes\\hips.obj",
+      "bytes": 215455,
+      "sha256": "f30760449f58cbc03549c56a369faaba95b24e58ade0f03073704197c5a4f7f4"
+    },
+    {
+      "relativePath": "app\\meshes\\hornbug.obj",
+      "bytes": 198625,
+      "sha256": "cd93f5d90a40fe393c69045e5076f84c9bfc8e06bacb21103f7fdc38a4fef550"
+    },
+    {
+      "relativePath": "app\\meshes\\horse_walk.obj",
+      "bytes": 162396,
+      "sha256": "7fe3e161ce85c551cb46db89fc4f4fd1c7cc8154867a73bbebd863793ede99fe"
+    },
+    {
+      "relativePath": "app\\meshes\\hose.obj",
+      "bytes": 38490,
+      "sha256": "76a081291bf3ce8b0a39fecb3a077ba264b8273913a6960fd3ff4a7479a99726"
+    },
+    {
+      "relativePath": "app\\meshes\\lamp.obj",
+      "bytes": 227066,
+      "sha256": "81a0e24c8590cde20330ae3f02bf03b2c2695cdd77319a8ef28b7f9a52172bb3"
+    },
+    {
+      "relativePath": "app\\meshes\\mite.obj",
+      "bytes": 3158556,
+      "sha256": "7fe1b2ae12141c252840d29e2ee294bcae4b7248d911cda7ab9fa66ef5f64288"
+    },
+    {
+      "relativePath": "app\\meshes\\model.obj",
+      "bytes": 20849053,
+      "sha256": "a7aa857ae0dafd89f08c57038631876a6380d84ee90d23c4b80c7c4486e16fec"
+    },
+    {
+      "relativePath": "app\\meshes\\ob_chair_gothic.obj",
+      "bytes": 91002,
+      "sha256": "1df8070d7cef2c60128e37b5eda281cabcff09da6d4a5a1f14b88f513d6acb6f"
+    },
+    {
+      "relativePath": "app\\meshes\\ob_chair_wood.obj",
+      "bytes": 24170,
+      "sha256": "4183e31e92fd42fcbbd9cd016862f358f62f8d5497a4ea8bdfc1a8acd22841f9"
+    },
+    {
+      "relativePath": "app\\meshes\\ob_chess_table.obj",
+      "bytes": 107156,
+      "sha256": "fe41e226be53d66fad2c6e481b254a486270a016f34cfc3150a7c1ed75cc9041"
+    },
+    {
+      "relativePath": "app\\meshes\\plaque.obj",
+      "bytes": 39127,
+      "sha256": "49aedc61816419afba5ae726e41fe726025610dbd97134e80de63aa7062aa17a"
+    },
+    {
+      "relativePath": "app\\meshes\\sphere.obj",
+      "bytes": 12578,
+      "sha256": "ddb659ab89de4a232c12989e52f7a9eb8f6345e3120c303a76a2f4624d1c1aea"
+    },
+    {
+      "relativePath": "app\\meshes\\spider.obj",
+      "bytes": 217599,
+      "sha256": "2554d19c39d2eedac38a388be46bba82d7cade8201cb1d46ef79aad697dcc11c"
+    },
+    {
+      "relativePath": "app\\meshes\\teapot.obj",
+      "bytes": 210614,
+      "sha256": "1b5396fedd74b577e32cef41146582c2f2e1a050d5b4915193c0ac1ad4187ed4"
+    },
+    {
+      "relativePath": "app\\meshes\\teddy.obj",
+      "bytes": 91538,
+      "sha256": "e0b5758166bacfeae669cf8fe977dc25381b1ad241e829fd166c3ba24da24df3"
+    },
+    {
+      "relativePath": "app\\meshes\\torus1.obj",
+      "bytes": 18624,
+      "sha256": "fb5172348886180235d6619b48f74aa5e0b4c7a86da25062b9ad6f1cf8578662"
+    },
+    {
+      "relativePath": "app\\meshes\\torus2.obj",
+      "bytes": 18624,
+      "sha256": "6130e45f5be58f04d324c4235a82bea62f47e678b50fcfca081a49c1c53e4092"
+    },
+    {
+      "relativePath": "app\\meshes\\wall.obj",
+      "bytes": 2452,
+      "sha256": "e84252b65f031666cc52a2abccb031bfe044620614341350e1b9353b5dc9924c"
+    },
+    {
+      "relativePath": "doc\\acd.png",
+      "bytes": 178539,
+      "sha256": "d118e304a500ee8b39763cbafb5d9f2fa989ab95134255413e18f2fbb3e2c191"
+    },
+    {
+      "relativePath": "doc\\chvsacd.png",
+      "bytes": 70382,
+      "sha256": "f04683d899bd3ce7e6ac0d43b0ccdcd1d3c65a566457e9caa6fddf6217043833"
+    },
+    {
+      "relativePath": "doc\\ecdvsacd.png",
+      "bytes": 494923,
+      "sha256": "833cff719a5b56781e5f646d3ce446810fa641f55826f5b255e9769223acf564"
+    },
+    {
+      "relativePath": "include\\VHACD.h",
+      "bytes": 259743,
+      "sha256": "02314c575909d656dc67d6e3c38cefc49c4403e8ca1dcb0ab4b05800cee61e1c"
+    }
+  ]
+}

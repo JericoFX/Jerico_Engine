@@ -1,0 +1,14 @@
+{
+  "toolRoot": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+  "sourceRoot": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd",
+  "toolArchiveSHA256": "B34DE2C36AFF2AFAA56B669EA41F9E614A045564CA74FC0B138E17CCEA4880B7",
+  "sourceArchiveSHA256": "029373E6EC5B10D7E29EEFDC5A231FB86C79B76A4A39C58C2727C6729DE28AB7",
+  "toolFiles": 175,
+  "sourceFiles": 238,
+  "sourceByteExactBlobs": 72,
+  "sourceCRLFOnlyBlobs": 166,
+  "status": "ACQUIRED_AUDITED_EXTRACTED_NOT_EXECUTED",
+  "installation": "None; private immutable inputs, no global PATH",
+  "toolLicense": "BSD3 Intel + complete third-party notices retained, primary-equivalent modulo CRLF",
+  "sourceLicense": "MIT Intel; donor sample dependencies remain untouched/unselected"
+}

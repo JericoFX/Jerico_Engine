@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://api.github.com/repos/AcademySoftwareFoundation/OpenColorIO/git/ref/tags/v2.1.1",
+    "status": 200,
+    "location": "",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-tag.json"
+  },
+  {
+    "url": "https://api.github.com/repos/OpenImageIO/oiio/git/ref/tags/v2.3.17.0",
+    "status": 301,
+    "location": "https://api.github.com/repositories/1322284/git/ref/tags/v2.3.17.0",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-tag.json"
+  },
+  {
+    "url": "https://api.github.com/repos/libsndfile/libsamplerate/git/ref/tags/0.2.1",
+    "status": 200,
+    "location": "",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-tag.json"
+  },
+  {
+    "url": "https://api.github.com/repos/boostorg/boost/git/ref/tags/boost-1.76.0",
+    "status": 200,
+    "location": "",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/boost-tag.json"
+  },
+  {
+    "url": "https://api.github.com/repos/libjpeg-turbo/libjpeg-turbo/git/ref/tags/2.1.2",
+    "status": 200,
+    "location": "",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/jpeg-tag.json"
+  }
+]

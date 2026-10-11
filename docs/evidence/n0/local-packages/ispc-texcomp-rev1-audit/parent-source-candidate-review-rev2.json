@@ -1,0 +1,19 @@
+{
+  "decision": "SOURCE CANDIDATE REVIEWED FOR ONE PRODUCER DISPATCH AFTER DRIVER REVIEW",
+  "sourceFiles": 8,
+  "sourceFreezeEntries": 458,
+  "sourceFreezeSHA256": "5A94E4F3E8E84D0ADE4DFD3CDFF9A2027314C465B2B5B78ACD5B48B26E28BD47",
+  "currentFrozenDeltas": 0,
+  "sourceDiffSHA256": "2D2505052AECBDFF77042E27A06A4FF26A5D45D985E0A26A672E453DA86FF8E2",
+  "candidateReceiptSHA256": "3BE5AB9AF994425DC83295F22E09F1C875C51A9726B9A3E7AF1F60E87893C263",
+  "argumentReceiptSHA256": "35B6A7D77269F60E2A067B401980E01C3F4576E2F755D0DE09CFB3B1851127F4",
+  "parentEOLProofSHA256": "1FD6F649BF674089686282B42C703F7F5613BA4A569DF940051AF26277E042E0",
+  "owningProjectSHA256": "69949265FA6B920CC9E54EB1765302FFBA648D9CF317D6D6D0A1D090BC65B94E",
+  "reviewedContract": "Original DLL/importLIB/header, two C++ sources and two ISPC kernels, Release x64, original O2/SSE2/SSE4/AVX/AVX2/fast-math dispatch; private copy only, explicit v143/SDK/Core, /MD default with isolated user/Directory.Build overrides.",
+  "consumerCases": 8,
+  "consumerScope": "26 exports and explicit module path; actual native codecs/profiles, BC1/BC3 decoded constant oracle, HDR modes, output bounds, stride, caller input ownership, border replication. No full decoded quality oracle for BC6H/BC7/ETC1/ASTC, no cross-machine dispatch claim.",
+  "verifierASTErrors": 0,
+  "nativeExecuted": false,
+  "catalogIntegrated": false,
+  "engineAccepted": false
+}

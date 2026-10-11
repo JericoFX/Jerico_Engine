@@ -1,0 +1,111 @@
+{
+  "readOnlyOriginal": true,
+  "sourceArchive": "F:/JericoEngine/Dependencies/archives/o3de-3p-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.tar.gz",
+  "sha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+  "sourceCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "files": [
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Dockerfile",
+      "sha256": "6CB112F00F66CAA2AF7A5510EDE21DA07B90209B0198974933A89A52B69FB555",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Dockerfile",
+      "bytes": 1341
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.linux-aarch64",
+      "sha256": "B9CBADD7EBEA89AE5A245310B6B510621C3EC79BA9E4A5EF9E43DE5AED49107F",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.linux-aarch64",
+      "bytes": 1232
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.linux-x86_64",
+      "sha256": "8D4B3DFD0162309385B3787F9496DD558A1E272C198B5EC184E44CE2A2D50112",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.linux-x86_64",
+      "bytes": 1234
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.mac-arm64",
+      "sha256": "B9CBADD7EBEA89AE5A245310B6B510621C3EC79BA9E4A5EF9E43DE5AED49107F",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.mac-arm64",
+      "bytes": 1232
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.template",
+      "sha256": "5AF4AC28D056C62B7D6587C2C71B6285EA2256D4AF024DF3FB4FD30ACB75EB91",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\Findastc-encoder.cmake.template",
+      "bytes": 1681
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/astcencoder-o3de.patch",
+      "sha256": "549B647FA2F723541C1769CD7227A74E87ADA95DD145E11B828031F3F3F332BC",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\astcencoder-o3de.patch",
+      "bytes": 3839
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build-linux.sh",
+      "sha256": "B98DFA0E9CEEAA99F0036BEE0E3CBEE16E154B3FAD3FD163B2ED62543137E5CF",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build-linux.sh",
+      "bytes": 2724
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_config.json",
+      "sha256": "7F660F80987CC382AF1FC2D9366EDB30BF4BE766B33A99BD34186074AA4BF97E",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_config.json",
+      "bytes": 2147
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_linux.sh",
+      "sha256": "CD57DDCADA02374D462FE728DA6E8F3D9F516168E293ED2FADCF5C422CB2A719",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_linux.sh",
+      "bytes": 794
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_mac.sh",
+      "sha256": "06868B2AA227BE0E247575F029FDDCE3AEA8DECC75D3A1E4823DD326C3E6AA61",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_mac.sh",
+      "bytes": 735
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_mac_arm64.sh",
+      "sha256": "CBE5E1BF2CBC50EEB41BE35C2C12A6414B1AB431EC5D98A5E75DDA26775FAC88",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_mac_arm64.sh",
+      "bytes": 789
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_windows.cmd",
+      "sha256": "C3FC0857B8AD5D94DBB7AA46114CC2122C3E36CEB60F108C34F3780690E40D88",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\build_windows.cmd",
+      "bytes": 610
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/docker_build_astcencoder_linux.sh",
+      "sha256": "260D3D64ADD9CF1026E6AFEF31AA29325094A7335A49347CE6A4B3950CA5FD31",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\docker_build_astcencoder_linux.sh",
+      "bytes": 926
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_linux.sh",
+      "sha256": "20FD404044FEE0F51F71A4C2957A94A3029B055BBEE95AD9403F0BD10345FB82",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_linux.sh",
+      "bytes": 980
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_mac.sh",
+      "sha256": "3AEBED69CFA5C521CABD406FC57A0366EB76CEBD34F32AD41043AC9CBADFD440",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_mac.sh",
+      "bytes": 688
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_mac_arm64.sh",
+      "sha256": "B1AF57805A2325F255214893B8BDA875CE196DB47DDD8464DE3A6E7B010BCB5B",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_mac_arm64.sh",
+      "bytes": 684
+    },
+    {
+      "member": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_windows.cmd",
+      "sha256": "4B18902F10C8E317F15F23DB1BEBC03ACFFD1738AA6E1A4475DFECF7337BD5E7",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\install_windows.cmd",
+      "bytes": 1222
+    }
+  ],
+  "nativeExecuted": false
+}

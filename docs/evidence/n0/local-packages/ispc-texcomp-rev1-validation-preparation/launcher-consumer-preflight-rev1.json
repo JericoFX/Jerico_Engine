@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-11T09:23:02.7366810Z",
+  "pid": 274608,
+  "powerShellVersion": "7.6.5",
+  "edition": "Core",
+  "launcherPath": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-validation-preparation/RunConsumer.ps1"
+  ],
+  "wrapperArgumentCount": 4,
+  "hashes": {
+    "assignment": "61D17229600D38C523CBACC907174C210E397F3B4833A9477BB3C64F664CA67C",
+    "driver": "685C6B5D8CC0F267ECEB738629A249C006CCB532F1A644EF060A1A6C584DBA89",
+    "common": "8858FF1B4A7832596FEF54EA2F3464928FC22AA59A3AD539CAE2366FB8A2E329",
+    "driverFreeze": "75F511CEA9147BA4FE821018CB96C9122F31151AB05090ACA65517CC33DBF2BA",
+    "inputs": "DF45F46828446FE0113777546CFDE2983FC099588404548821C9D24A7B6E8710",
+    "review": "DA4064ECCAAEC14AECF80ECE18C1AA20AC171AFA3E4B784C37CC2703276A915A",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "expectedHashes": {
+    "assignment": "61D17229600D38C523CBACC907174C210E397F3B4833A9477BB3C64F664CA67C",
+    "driver": "685C6B5D8CC0F267ECEB738629A249C006CCB532F1A644EF060A1A6C584DBA89",
+    "common": "8858FF1B4A7832596FEF54EA2F3464928FC22AA59A3AD539CAE2366FB8A2E329",
+    "driverFreeze": "75F511CEA9147BA4FE821018CB96C9122F31151AB05090ACA65517CC33DBF2BA",
+    "inputs": "DF45F46828446FE0113777546CFDE2983FC099588404548821C9D24A7B6E8710",
+    "review": "DA4064ECCAAEC14AECF80ECE18C1AA20AC171AFA3E4B784C37CC2703276A915A",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "inputCount": 490,
+  "packageRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-package-audit\\extracted\\ISPCTexComp-36b80aa-je-rev1-windows",
+  "packagePresent": true,
+  "freshBuild": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-package-consumer",
+  "freshBuildAbsent": true,
+  "freshEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run",
+  "freshEvidenceAbsent": true,
+  "processes": [],
+  "errors": []
+}

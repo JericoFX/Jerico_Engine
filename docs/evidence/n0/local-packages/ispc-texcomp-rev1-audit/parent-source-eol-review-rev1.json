@@ -1,0 +1,1682 @@
+{
+  "decision": "SOURCE PROVENANCE ACCEPTED FOR PRODUCER PREPARATION ONLY",
+  "proofSHA256": "DFA03D0B9E11BBFF63668830EE454B97E01E95817AFC36085B437467348A7234",
+  "sourceCommit": "36b80aac50ea401a9adde44d86712c2241b2acfd",
+  "sourceArchiveSHA256": "029373E6EC5B10D7E29EEFDC5A231FB86C79B76A4A39C58C2727C6729DE28AB7",
+  "sourceFiles": 238,
+  "rawExact": 72,
+  "attributedCRLFComparisonOnly": 166,
+  "owningLibraryRawExact": 8,
+  "snapshotMutated": false,
+  "nativeExecuted": false,
+  "packageAccepted": false,
+  "limitation": "Committed rules and exact remaining bytes verified; archive export mechanism is not established. No bytes were rewritten.",
+  "entries": [
+    {
+      "path": ".gitignore",
+      "bytes": 3431,
+      "rawSHA256": "FB330FCE25E5C6E5687618F0FB5DE38FF0CB9643F04DB1A40DD4093D74F797D5",
+      "primaryGitBlobSHA1": "c480d2c34db2977c931645078c8a77a6fcacef67",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor.pdf",
+      "bytes": 162430,
+      "rawSHA256": "723719C0DA1F32F639729EDBBD7C9AA762A2BB5DF4AB11FCC990AA14BE11B235",
+      "primaryGitBlobSHA1": "635d4ac127861d90bb4960358302fac51defedcf",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/.editorconfig",
+      "bytes": 158,
+      "rawSHA256": "33AFFD76513DFAA9C163FD5349744C03654DCE6898A7334B0E856B420F7629EE",
+      "primaryGitBlobSHA1": "6a8f10a3fe9bb5158acdb498ff8c9fda456d6249",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/.gitattributes",
+      "bytes": 358,
+      "rawSHA256": "988550FA928681F26AAA6E23BCF1B49ECAF5A2743822467C8DA9AFCC27E6265E",
+      "primaryGitBlobSHA1": "efb4018e93c434f9b4f414eaad74572eae024032",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/.gitignore",
+      "bytes": 156,
+      "rawSHA256": "BE9B2BE99AE00FF7562075B679459E9E969BB76594E7A9E80B9E99075AA6DACF",
+      "primaryGitBlobSHA1": "80d9abb62662fc6fb529c828701ef2b0b6239851",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DDSTextureLoader.cpp",
+      "bytes": 62913,
+      "rawSHA256": "94B03641E9276E6E9D3012D433DDCAA96FD01EDD50D1405E47BCE3D5E2C1FFCB",
+      "primaryGitBlobSHA1": "fad0141184e08968dae48cc9781d707c5a3851f0",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DDSTextureLoader.h",
+      "bytes": 4994,
+      "rawSHA256": "63DCD75D694D522DA81D3AD9512A70728CCD6F794CE88F32AB851562019ACB71",
+      "primaryGitBlobSHA1": "0b5cb19d9515445e6d1780b590d4765b1471ca8e",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT.cpp",
+      "bytes": 199568,
+      "rawSHA256": "3930792E8591D993AD9545E24CCED3766FD1F65C190043B385681BB71F0063B0",
+      "primaryGitBlobSHA1": "11285d122cb749df12c063a17fc7fa2b50b6d53c",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT.h",
+      "bytes": 16664,
+      "rawSHA256": "0344299A50BFBBA238023277FE4A88F8A8B196E4DE4EA494D84F5C53744346EB",
+      "primaryGitBlobSHA1": "76242392a0dfd09d855a74b88a783ab495a44d3d",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUTDevice11.cpp",
+      "bytes": 51208,
+      "rawSHA256": "C39F15282F02EAAD8DB7D91D25DF558CECB55ACDDB2A91C5B1BA2284F0DCCBBF",
+      "primaryGitBlobSHA1": "5cb0633f2c1986eccd12b6450588d3cf03abdf19",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUTDevice11.h",
+      "bytes": 9367,
+      "rawSHA256": "3BE3DED9DC77D9A566AB9E3BFB7BFC6F1C093D8788A586805BD04B996358BC15",
+      "primaryGitBlobSHA1": "27507340084ab40d1e9ada2a71053a33d120dcb9",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_2015.vcxproj",
+      "bytes": 15739,
+      "rawSHA256": "D4F17D2D5055E6F35B95227E32C20B4A32674F78C0446C4B4CFED9B548650C16",
+      "primaryGitBlobSHA1": "71c4ea236d19e19507956007e3fc9b37215297cf",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_2015.vcxproj.filters",
+      "bytes": 1153,
+      "rawSHA256": "A3B629E3BFE1081863906E97A513745E931299405A2BEE11D9E2B5301592E992",
+      "primaryGitBlobSHA1": "78f1ab4ef23e6e29a2fee1ec85d8270eeae65478",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_2015_Win10.vcxproj",
+      "bytes": 15992,
+      "rawSHA256": "2318958CF81A2D01DF6D99280528BBA3B88FFFF9EBB286BD44DFB5E565994860",
+      "primaryGitBlobSHA1": "1171fd101d68b6306217042fee4618e6533109b6",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_2015_Win10.vcxproj.filters",
+      "bytes": 1153,
+      "rawSHA256": "A3B629E3BFE1081863906E97A513745E931299405A2BEE11D9E2B5301592E992",
+      "primaryGitBlobSHA1": "78f1ab4ef23e6e29a2fee1ec85d8270eeae65478",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_2017_Win10.vcxproj",
+      "bytes": 16772,
+      "rawSHA256": "427763ABFA1CD67205E9F1980C12A9577089D8F0B0274E759C4F97CDC295DEE9",
+      "primaryGitBlobSHA1": "4b71f85de0da80a3b97cb8f9a753ea7f97db570e",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_2017_Win10.vcxproj.filters",
+      "bytes": 1153,
+      "rawSHA256": "A3B629E3BFE1081863906E97A513745E931299405A2BEE11D9E2B5301592E992",
+      "primaryGitBlobSHA1": "78f1ab4ef23e6e29a2fee1ec85d8270eeae65478",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015.vcxproj",
+      "bytes": 16063,
+      "rawSHA256": "673E70924F7BB54C367A1719C0788F8CE93E48C16CF9B3DF03997216B5772922",
+      "primaryGitBlobSHA1": "8ba13077646fd0abfa215074a28f6f12f55b36d0",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015.vcxproj.filters",
+      "bytes": 859,
+      "rawSHA256": "C5D4F1024BC518B7634DBD32E3AF4698FC5FF7DF65CB87C187F0D7564484EB05",
+      "primaryGitBlobSHA1": "153fbf341d572f7e6006e772786012801191645b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015_Win10.vcxproj",
+      "bytes": 16316,
+      "rawSHA256": "FC8AA29680138C5A367A70006869ADD286708A3D0455E9C441E9E52C684BCD03",
+      "primaryGitBlobSHA1": "98ecdfee5e68906cab1552c1d90d9ecc86d0ed7b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015_Win10.vcxproj.filters",
+      "bytes": 859,
+      "rawSHA256": "C5D4F1024BC518B7634DBD32E3AF4698FC5FF7DF65CB87C187F0D7564484EB05",
+      "primaryGitBlobSHA1": "153fbf341d572f7e6006e772786012801191645b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2017_Win10.vcxproj",
+      "bytes": 17024,
+      "rawSHA256": "AC8D6E58521C7B44F4BC8F411C57C34FEC3D3DDA25B7095278B48E4D67AB2337",
+      "primaryGitBlobSHA1": "9f60f74dc80ff2852dc6820c77289c93195dad75",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2017_Win10.vcxproj.filters",
+      "bytes": 859,
+      "rawSHA256": "C5D4F1024BC518B7634DBD32E3AF4698FC5FF7DF65CB87C187F0D7564484EB05",
+      "primaryGitBlobSHA1": "153fbf341d572f7e6006e772786012801191645b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUTmisc.cpp",
+      "bytes": 48699,
+      "rawSHA256": "4560046AECBB0BDF87CD4D0978276E1660A39FCD8EFE9C499AC1F4AE0EB5BD0C",
+      "primaryGitBlobSHA1": "d23c0e7e1a7dcf31392c9500389ffd6c92499d06",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/DXUTmisc.h",
+      "bytes": 13553,
+      "rawSHA256": "A5C7AE9F8C7589AD457ED35A073B03CFBBBB80567FE37A6D26CD3555C37838F7",
+      "primaryGitBlobSHA1": "3d1d9ad587253bdb4dceb856a3629708bcbb7c80",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/ScreenGrab.cpp",
+      "bytes": 47227,
+      "rawSHA256": "515A463BCADCE083165EC4DD81A9DC8A3572FAAFE349309B2C7884E26AFB5F58",
+      "primaryGitBlobSHA1": "4296091c45270c74989ad6cb8ef077f2c9cbd20f",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/ScreenGrab.h",
+      "bytes": 1570,
+      "rawSHA256": "9DE2974CB0FDFCCB2F1D86C734C975CCA4A136A70025324D067F2D48F6A2F4B3",
+      "primaryGitBlobSHA1": "1f18539492d52637c4e42d0476e7656247411d99",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/WICTextureLoader.cpp",
+      "bytes": 35026,
+      "rawSHA256": "9DA872EB754552C7B0D80208C769DD03087D290478440949959B898283A99462",
+      "primaryGitBlobSHA1": "f74bee454ea8802ebcc4e483360f6af22eb53405",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/WICTextureLoader.h",
+      "bytes": 4815,
+      "rawSHA256": "DBC1DCC321FC0B00CA7F59C6F3B2F1C4405C3C59BABCDE31FB503B062EF0BFA0",
+      "primaryGitBlobSHA1": "8843c33747852aa73d50844a6587d31194226908",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/dxerr.cpp",
+      "bytes": 185692,
+      "rawSHA256": "9D9B53A5679826F7256DF6BCB2009B2B9D586EBC470D1263AC6949CB50C21BD0",
+      "primaryGitBlobSHA1": "4b56fa9e322b9ad0c75b8663d967e908dabec48a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Core/dxerr.h",
+      "bytes": 2971,
+      "rawSHA256": "A2E5C00853534995E4B3BA9566E69FCA8ECD6268A899B2B0418A043B77C39231",
+      "primaryGitBlobSHA1": "d1c55cd30537b36f5e8177f2baa0eaf3750fd453",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/DXUT_2015.sln",
+      "bytes": 3628,
+      "rawSHA256": "1EADBFF0DBEA74954A04D4B86C9946185A9470B1EA8BA72A21445ED47C1C6DF9",
+      "primaryGitBlobSHA1": "c58339af19c1775979952738a2b9078acf2643c7",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/DXUT_2015_Win10.sln",
+      "bytes": 3640,
+      "rawSHA256": "1220429EC9F53995961976374640DB7B43FF87CC96DB89FB13576C043C5017F0",
+      "primaryGitBlobSHA1": "eddd7092653a8aa8bbdef9c45e93d9e092c5021e",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/DXUT_2017_Win10.sln",
+      "bytes": 4091,
+      "rawSHA256": "100945C8C1BF8472E1BE976E24BC4653937ABB8DE1C34198215E6EED5B4560C9",
+      "primaryGitBlobSHA1": "10b8826924ae5435b7bc5d4f11a2f319bb44c3bd",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/DXUT_DirectXTK_2015.sln",
+      "bytes": 5535,
+      "rawSHA256": "C318D608D393FF90F924AD5BF08A7DE3A1DBDA66093BD914E55983C79FEECE0B",
+      "primaryGitBlobSHA1": "e96bdae4c7e7648acba6feed16261b95be5bab98",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/DXUT_DirectXTK_2015_Win10.sln",
+      "bytes": 5172,
+      "rawSHA256": "84A0784F3B048BB945C89EEEBC7B68452DF787AA26B902E74658A433D1F4E0BD",
+      "primaryGitBlobSHA1": "050ce0a59808a75fc127012baa6ea5868d5ec57b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/DXUT_DirectXTK_2017_Win10.sln",
+      "bytes": 5998,
+      "rawSHA256": "F3792D90BDD1637916E49AB5D500A4700B0B6D34E3DDC8B8BC603825808AF468",
+      "primaryGitBlobSHA1": "042ea70ad6191d21e49aa99af99c7bef174b92dc",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/LICENSE",
+      "bytes": 1127,
+      "rawSHA256": "8799AEE5C6F3AB5809047449127F77FF66654BC776E07CFAE99D1BC7EF8E9574",
+      "primaryGitBlobSHA1": "f4494c69d16da1f47fe0822c4f865fd1ce4f9e88",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Media/UI/Font.dds",
+      "bytes": 76128,
+      "rawSHA256": "09396729A1A08F1D091059BF871C847647996825375EDD695B03F840FA0BA5AC",
+      "primaryGitBlobSHA1": "37514f5bf7fdb81efc52766d02bdaec0fecd3061",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Media/UI/dxutcontrols.dds",
+      "bytes": 262272,
+      "rawSHA256": "A811271143F8C75CFD8EEA1F51B436A43ACD0702B605DA1B2C75BA71B0EA666C",
+      "primaryGitBlobSHA1": "b5f52e10af505a56f0f4850202e7c5da27c571dc",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTLockFreePipe.h",
+      "bytes": 9598,
+      "rawSHA256": "2725E1C3FB9C041AB96EA627F8C8F4688D7531654298D6400B4CE5DAFF2E689D",
+      "primaryGitBlobSHA1": "7e947597a1c44c10ea09eab80ad59d2554975a9e",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015.vcxproj",
+      "bytes": 16525,
+      "rawSHA256": "23B48FFB4E9856358ABF8A0B4FE6D911B7F925C1E313DF78E8028A6E8E181F95",
+      "primaryGitBlobSHA1": "b14c76cff7fba77f926dad9aea7ce5d020f8d766",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015.vcxproj.filters",
+      "bytes": 1267,
+      "rawSHA256": "FA664A4E44756C5E731B5E3E52A0079B481689AB09306A163BBBB05906261DB5",
+      "primaryGitBlobSHA1": "1bdbaf9195faee19df889597a75e5605bf8c3b31",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015_Win10.vcxproj",
+      "bytes": 16778,
+      "rawSHA256": "7028D218A1840B18D11B5776A8A695835CD9C30BE85591B0CC0A9F4DC943E688",
+      "primaryGitBlobSHA1": "79dff5a9421d0163bed8e515dc50eac18552d1f1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015_Win10.vcxproj.filters",
+      "bytes": 1267,
+      "rawSHA256": "FA664A4E44756C5E731B5E3E52A0079B481689AB09306A163BBBB05906261DB5",
+      "primaryGitBlobSHA1": "1bdbaf9195faee19df889597a75e5605bf8c3b31",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2017_Win10.vcxproj",
+      "bytes": 17558,
+      "rawSHA256": "F725C001AEC10A6F4704A8BD7A2BE1A3C5DD34CD6FCABE6A5A066B592B56FF46",
+      "primaryGitBlobSHA1": "cd94c9e69f3e1daf9c489150306792edf75a98c0",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2017_Win10.vcxproj.filters",
+      "bytes": 1267,
+      "rawSHA256": "FA664A4E44756C5E731B5E3E52A0079B481689AB09306A163BBBB05906261DB5",
+      "primaryGitBlobSHA1": "1bdbaf9195faee19df889597a75e5605bf8c3b31",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015.vcxproj",
+      "bytes": 16451,
+      "rawSHA256": "B59B86B86D0C9462803B5E09EEE0FEB22CE58EFF82FACB6A2D626C9C2338661C",
+      "primaryGitBlobSHA1": "0560c96f8bd2208583e0c445e7d0e9f190c18313",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015.vcxproj.filters",
+      "bytes": 1183,
+      "rawSHA256": "F8C696C96DBA87E03AEB04C8B605C56B3759373E2E0424EDD80AB15B5D7B8EFD",
+      "primaryGitBlobSHA1": "b959c9a43df5573fcde5775d64a5f0d424afe52b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015_Win10.vcxproj",
+      "bytes": 16704,
+      "rawSHA256": "432BB24EBFCF4A1985BF52CA8195F3E64D272ADF0EEE752B1E0F90415DAF9D9B",
+      "primaryGitBlobSHA1": "71ff1066edfa45b868c797a1215795f6f4e43249",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015_Win10.vcxproj.filters",
+      "bytes": 1183,
+      "rawSHA256": "F8C696C96DBA87E03AEB04C8B605C56B3759373E2E0424EDD80AB15B5D7B8EFD",
+      "primaryGitBlobSHA1": "b959c9a43df5573fcde5775d64a5f0d424afe52b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2017_Win10.vcxproj",
+      "bytes": 17412,
+      "rawSHA256": "E5FEE094F7DE8F0BD1B4FD5ACCD50231CE803C04FAE03FC4810FD467E883B62F",
+      "primaryGitBlobSHA1": "6d5e9a867bdcbd489a678216001d5ff4684ec3cc",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2017_Win10.vcxproj.filters",
+      "bytes": 1183,
+      "rawSHA256": "F8C696C96DBA87E03AEB04C8B605C56B3759373E2E0424EDD80AB15B5D7B8EFD",
+      "primaryGitBlobSHA1": "b959c9a43df5573fcde5775d64a5f0d424afe52b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTcamera.cpp",
+      "bytes": 45826,
+      "rawSHA256": "5400B04E2EB49289906ADD5B4335F9F70665B2C9EC826596C27A0EA5C146AD91",
+      "primaryGitBlobSHA1": "75c885669570db5e645e4d8401675eee60cbd622",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTcamera.h",
+      "bytes": 19994,
+      "rawSHA256": "CCC32C4BA595B82E142A4958537C1C4EAB674D0B00A4FD87BDFEDEB0299D1ED6",
+      "primaryGitBlobSHA1": "251090accaa24a8d246b88a795f107c1c579b2af",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTgui.cpp",
+      "bytes": 219615,
+      "rawSHA256": "2CF5084F5D36821AAC7172130179CE5938B99B0609705C72D1792B8D59B7BF8A",
+      "primaryGitBlobSHA1": "78c910eb7da23ee4775047b44a72066c492b2279",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTgui.h",
+      "bytes": 43289,
+      "rawSHA256": "AFEE8DEF7FB2683D5515085F46421B41F670336CDA268A6A9B51B6DC73E523F9",
+      "primaryGitBlobSHA1": "cc5fabb9af96266c60540c9500e2f5ef70d77e40",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTguiIME.cpp",
+      "bytes": 37347,
+      "rawSHA256": "E836E5316A1D06A23DE3213B82878520B434D798695B609A6BDD7D0D897E64B8",
+      "primaryGitBlobSHA1": "8f75df5c7db89d29151fda3c3ad1162a939c92eb",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTguiIME.h",
+      "bytes": 5993,
+      "rawSHA256": "1376AC3777D82837FEDCB9CA10A1664394695DB7C53923B75EAC0B2B4687E123",
+      "primaryGitBlobSHA1": "5c05c8586ed7d0871425f6a54111c4394fb30450",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTres.cpp",
+      "bytes": 844438,
+      "rawSHA256": "4A8A8064DF349ED12A8CE8193DBDE3B027C53C0480D0079E2B8F8D42FA6A8697",
+      "primaryGitBlobSHA1": "5fb544076fe556db2190a2777e35c054c909261f",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTres.h",
+      "bytes": 541,
+      "rawSHA256": "2295DC899466422244FA8BBF0D9D904AB7085D7C075DB93E23079E9253981F8D",
+      "primaryGitBlobSHA1": "0216b5c23a22a484a26fc584e55b2405183488eb",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTsettingsdlg.cpp",
+      "bytes": 62549,
+      "rawSHA256": "025FB3FC052E7CE531EA20613BCE8B631B54A137017CB1E773549571B99C8E71",
+      "primaryGitBlobSHA1": "bc8f21d75e4f955a575b5826645cb39b95ca32ce",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/DXUTsettingsdlg.h",
+      "bytes": 7448,
+      "rawSHA256": "0BD80FC0FCB9B8743C8CEACAF73F66A79580B68EAC8A9D417A45D309E0237BC2",
+      "primaryGitBlobSHA1": "38f7ace62d7eb6f4efe366b6e751d4c2a5451a2a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/ImeUi.cpp",
+      "bytes": 116694,
+      "rawSHA256": "C19F1C74A6C6B1A40ACEBB65F070FA1BC254998E262791FA7251940C9846B8DD",
+      "primaryGitBlobSHA1": "d2d352e75c0b860f27b7802ac9028f61b91381e6",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/ImeUi.h",
+      "bytes": 4157,
+      "rawSHA256": "876703CE420AD7B7920155769C8A421B73FAA9C8F9DD4729C6893005507338CD",
+      "primaryGitBlobSHA1": "d7cbeaa43f794a3f266deea549a845dc4aa8d3b9",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/SDKmesh.cpp",
+      "bytes": 48621,
+      "rawSHA256": "03D1A258048FCAFE6D084312B523C2071F3910F2ED1FFE984B5FA59022C51A01",
+      "primaryGitBlobSHA1": "11521dd576e3ceedb80357cdd43fa33ad09e9261",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/SDKmesh.h",
+      "bytes": 16978,
+      "rawSHA256": "4298D149025E10839103DF3704EA6E973E075B03C03FC8D42F5C2E47B2C87CB6",
+      "primaryGitBlobSHA1": "a0f13044251b74b13f2d1605c05c0053439f7495",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/SDKmisc.cpp",
+      "bytes": 36098,
+      "rawSHA256": "C277544174DDDAE58DE588122E5159E7EC44DB595262014D3B80C10B6639CA13",
+      "primaryGitBlobSHA1": "943af4745d8691930cba49f252e49dc76442f5c1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/SDKmisc.h",
+      "bytes": 5916,
+      "rawSHA256": "AF3EF68B93D5BBE90B82EFDA7999FF5F08A35642F0BDFB8781A87D69E9D3EF19",
+      "primaryGitBlobSHA1": "0d8c56dd7999958cc9c72f4e0ac09e06681d5d06",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/Optional/directx.ico",
+      "bytes": 25214,
+      "rawSHA256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55",
+      "primaryGitBlobSHA1": "bc43c1b2085df668dffff26d80adcb0ef73f23a9",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DXUT/ReadMe.txt",
+      "bytes": 6839,
+      "rawSHA256": "BD5000F647B843BD15E0C5C62201022558C2075F4A5AD5857692FEC7FDFC6515",
+      "primaryGitBlobSHA1": "8f2149285d7934c58c756e4e205d3b4cfc23bcb3",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.editorconfig",
+      "bytes": 170,
+      "rawSHA256": "1BE1A5B7C6AD70B4A015D9B80B0B1953CC8F68408F612576899EF42F99C74200",
+      "primaryGitBlobSHA1": "927467cfe483016d2a6f09099acc5c4ea5cff8d0",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.gitattributes",
+      "bytes": 358,
+      "rawSHA256": "8DCDB7C72967CE73BFB060BE9E8CF6188D6E2E0A9A29E407A36B932C8EFE6FFF",
+      "primaryGitBlobSHA1": "a2d10b762a87f58d6889e5021d054981e4c4b2f2",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.gitignore",
+      "bytes": 196,
+      "rawSHA256": "094CB83DD3C433D41376A00B6BEC1F4523411DB07DDF0D764B30F77FD6B08795",
+      "primaryGitBlobSHA1": "cb44c879c0105b757a8dbaabae3b73de1a47dd05",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.nuget/directxtex_desktop_2015.nuspec",
+      "bytes": 2814,
+      "rawSHA256": "E2245772BD25F9E12DBBC5ABF07CA70A9B7BCE5780FE069C95A998E03D8A062F",
+      "primaryGitBlobSHA1": "cce7f36786c3fea83c2035e958687ba29ad88d65",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.nuget/directxtex_desktop_2015.targets",
+      "bytes": 882,
+      "rawSHA256": "028158934794BC050EE667CB23928F0AC92F876C70E156367B719EFF11C26BCE",
+      "primaryGitBlobSHA1": "4728a2015c4b55c62ac180b1584f96b0a66563c7",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.nuget/directxtex_uwp.nuspec",
+      "bytes": 3473,
+      "rawSHA256": "9C4833A749593D5C6CFEDBDF8C01ACAD4A77D7DF4A34DE0269BAAF4B9777F386",
+      "primaryGitBlobSHA1": "d63ec1b53f0cad2e6642ed66bcc95737320bf634",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.nuget/directxtex_uwp.targets",
+      "bytes": 882,
+      "rawSHA256": "028158934794BC050EE667CB23928F0AC92F876C70E156367B719EFF11C26BCE",
+      "primaryGitBlobSHA1": "4728a2015c4b55c62ac180b1584f96b0a66563c7",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.nuget/signconfig_desktop_2015.xml",
+      "bytes": 299,
+      "rawSHA256": "A50C42F4D36FD51EF65FD8246EC01B2C9A15BB473E25B7C08A06A63EBCA6F1B0",
+      "primaryGitBlobSHA1": "b0a14397e2407dce3816e76d50a16cedec726ec8",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/.nuget/signconfig_uwp.xml",
+      "bytes": 281,
+      "rawSHA256": "2979597EF9DF375CEF0756E3C1A6A4075AEC9688E7F3B23CBD705A220FA74886",
+      "primaryGitBlobSHA1": "4abfe45f0587ff4ce7c32f3829aed2ee845025f3",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader.cpp",
+      "bytes": 63841,
+      "rawSHA256": "CA5F0500A59D3AC6DC37E7E38E0B149914E9E23437E7FF0DC78E52B70F4B3ADB",
+      "primaryGitBlobSHA1": "dc644d6d8c6acbe55557ab56c31169173d03288b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader.h",
+      "bytes": 4994,
+      "rawSHA256": "63DCD75D694D522DA81D3AD9512A70728CCD6F794CE88F32AB851562019ACB71",
+      "primaryGitBlobSHA1": "0b5cb19d9515445e6d1780b590d4765b1471ca8e",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader12.cpp",
+      "bytes": 51722,
+      "rawSHA256": "FB23F09735BC364EE4D6743E8101CBE445B2FC830C941CF5BC38AE6B11BC85BD",
+      "primaryGitBlobSHA1": "5d629babc82c4e173a1f1ecebbb2b40b1dce256c",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader12.h",
+      "bytes": 3120,
+      "rawSHA256": "9C98CD5BC4163D339DFFDB18158575DC0AF3E521298257C3D97E28DD437CF3FC",
+      "primaryGitBlobSHA1": "cc9f8736a90cd35dc0464f58e8b2a043984f9a58",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/DDSView.rc",
+      "bytes": 1680,
+      "rawSHA256": "276D9368667261BBD255FA5C85DF23485552D99B80BAE74D6E5262BDD77E8979",
+      "primaryGitBlobSHA1": "49efb34697074b30d4f164f461ceffe9bb7b38a0",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2015.vcxproj",
+      "bytes": 15388,
+      "rawSHA256": "0FC4B59ACAB46999372EA8238BD1245142EED48EFFD30AC2F44ABECC025BB9E9",
+      "primaryGitBlobSHA1": "d195424cf5b9093207613085f546563245811501",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2015.vcxproj.filters",
+      "bytes": 703,
+      "rawSHA256": "6CD7CF9F8CC7FE78837F61AEFE4E6645EF3AF3790B58FE85E321E3CDD4428A37",
+      "primaryGitBlobSHA1": "ab6eee79f9b227e3622c446eb26b8b1e5ca242f9",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2017.vcxproj",
+      "bytes": 16409,
+      "rawSHA256": "B66FDA6AC7363D137C349A2B253CDFEDE8C60CA3789153CEC5F7BBAB47B3DD64",
+      "primaryGitBlobSHA1": "9725486d955e2355c34de1f9e4983d3418a876c5",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2017.vcxproj.filters",
+      "bytes": 703,
+      "rawSHA256": "6CD7CF9F8CC7FE78837F61AEFE4E6645EF3AF3790B58FE85E321E3CDD4428A37",
+      "primaryGitBlobSHA1": "ab6eee79f9b227e3622c446eb26b8b1e5ca242f9",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/ddsview.cpp",
+      "bytes": 25258,
+      "rawSHA256": "98F2ACDB1D485B7F3931A6B7F75B906FFA1CB9FB0A42889DA8C3591D319184AA",
+      "primaryGitBlobSHA1": "448b5d774132db3cf0bb0e7c460aa2042fd6711d",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/ddsview.fx",
+      "bytes": 2443,
+      "rawSHA256": "E4B1131AA5BFF1EA0D11FC2C01E441CAA78B36E8CB99FCB04B98610B01DFE3B6",
+      "primaryGitBlobSHA1": "c5683522a0dfdeda4734148be361d551add49f16",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/directx.ico",
+      "bytes": 25214,
+      "rawSHA256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55",
+      "primaryGitBlobSHA1": "bc43c1b2085df668dffff26d80adcb0ef73f23a9",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/hlsl.cmd",
+      "bytes": 434,
+      "rawSHA256": "3666F3A3AF425721CFE3A954B8B81C074C527279344BC7C3D2513D2A3FCF379D",
+      "primaryGitBlobSHA1": "cc7253b6da64d3fd36df21291ac52eb6017aa69c",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps1D.h",
+      "bytes": 6047,
+      "rawSHA256": "5C559CE2D24EA40FC5242F78345A172EE6AB0555A2487DD7943E35CFA2D29314",
+      "primaryGitBlobSHA1": "d9344fdd8a693182f872eef289cad1dfa00567f6",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps1Darray.h",
+      "bytes": 6447,
+      "rawSHA256": "A9887D37796CC15E107744671CEC56FC9FA7FA9BCB232B4389868EF53D877A9A",
+      "primaryGitBlobSHA1": "9f236b0bd8b7134742f409e7675e65cd649c3cf6",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps2D.h",
+      "bytes": 4923,
+      "rawSHA256": "A2AD52C094E86796EC29EDDABE6794FFEBDD7F28A10B2CC9C9FB62FC0E1ECA1D",
+      "primaryGitBlobSHA1": "22740349a98d2d3f14a5b19b3ca39f536b9d1b29",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps2Darray.h",
+      "bytes": 6452,
+      "rawSHA256": "B4F449D8C28F3B48E28EEBB9727DB18E3610008F7BAC3A1A683A57FD1B513684",
+      "primaryGitBlobSHA1": "2104ee3d14b53d29f2ae759ee6350dd81e6169d7",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps3D.h",
+      "bytes": 6657,
+      "rawSHA256": "14AC9B83B8B6FABB5084A2F0EB2646FE03ACF3B6346EFE1BF650F35BA703D236",
+      "primaryGitBlobSHA1": "6e6f1923d9557a62b0ddce17e3aded695790fd32",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/psCube.h",
+      "bytes": 6555,
+      "rawSHA256": "BE973D11E7D97A8CCCDE23A9C5E8B4648927705356B82C5E68EB68326AFAA00A",
+      "primaryGitBlobSHA1": "6cfe845f99ac31a94dfd48b81fc8d1840fc90eec",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DDSView/shaders/vs.h",
+      "bytes": 4356,
+      "rawSHA256": "AA85B11546056555118D70D7F4D58253292D0F1B335A30CEECF130533C412983",
+      "primaryGitBlobSHA1": "0277eaec20959582df1f09c9d433f85ec9316b97",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/BC.cpp",
+      "bytes": 36155,
+      "rawSHA256": "9E739BFCD00E52A535F9DDE5288D9CEB572662AC67681C1DD4760EEC9B3D84D6",
+      "primaryGitBlobSHA1": "4c412fc397bbfa65742d43d43ede363d5347e775",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/BC.h",
+      "bytes": 11818,
+      "rawSHA256": "EDB97C4591AA14DFAB7E388DF707CE61D06CEDC1B7F14E86AE53E8A7332F5149",
+      "primaryGitBlobSHA1": "3d5a0048ad42fbe3d771778b9cfd8e637ffd9bc5",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/BC4BC5.cpp",
+      "bytes": 17587,
+      "rawSHA256": "57C521C0DBD6C2A7DA502BF01DCBC63FD99271794CF83B69DED2B4235205C844",
+      "primaryGitBlobSHA1": "d485bffdc69e8fe24cdd2334ee7e7444a18ffb1d",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/BC6HBC7.cpp",
+      "bytes": 149275,
+      "rawSHA256": "BA36434CC472C2E2F4EC8ACBA44621721B4126A4C815A14FAF350BF198BF5E23",
+      "primaryGitBlobSHA1": "dab6a084f3fdfafb31c3a7afd390b3ddd45012e7",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/BCDirectCompute.cpp",
+      "bytes": 21769,
+      "rawSHA256": "C01AC2E6F474512D4764107DF6E66025C86EFD5FEA9E43DBEB1068CFEC13FC01",
+      "primaryGitBlobSHA1": "fb06a4ad9d981fbc978f250331d6d7c8d1d09b5c",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/BCDirectCompute.h",
+      "bytes": 2830,
+      "rawSHA256": "34C6F107FD258CAFAF9EB424AFC8DBA3191CB56459B667D98EF0DCBC3DAD3886",
+      "primaryGitBlobSHA1": "f231c07eb1f38fcd69391e73e25b966cbfdb5cf6",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DDS.h",
+      "bytes": 10516,
+      "rawSHA256": "9A6DFC09156AD5E7982E23974D5B55C2D9B486AA850557FEFFD1089E593AA369",
+      "primaryGitBlobSHA1": "59a274c4362e9971628951bc5984fe9002fdfc62",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex.h",
+      "bytes": 36241,
+      "rawSHA256": "61D4647A9E859D0774CA632B9E446E2318C5DFF3DCF892EB903E79A485210D11",
+      "primaryGitBlobSHA1": "74273163d91075f9cd3389c9f5a76541e8c6e61a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex.inl",
+      "bytes": 3642,
+      "rawSHA256": "FC1478A4B6255105CB8396D00B9455932CAC54CEB2E7A2A88A7B6AC2E516069A",
+      "primaryGitBlobSHA1": "a45abcd9e69f7cc94637a61e853a90b0da5661de",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexCompress.cpp",
+      "bytes": 29858,
+      "rawSHA256": "09DC045F224B551ED81AD240C2034CAE918DDC61E8D4E2534D44851F50CDACEF",
+      "primaryGitBlobSHA1": "b6ab0560b68bec38948f37e54849a702b8cb10b7",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexCompressGPU.cpp",
+      "bytes": 12550,
+      "rawSHA256": "49172B908E55B5E2F32A7CFAA2FD90EA23A3265F1CA2CD9B064B5D4B90B3532B",
+      "primaryGitBlobSHA1": "799ee55f2c69115ce4733f3f50f7d0997ebf7fb6",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexConvert.cpp",
+      "bytes": 199687,
+      "rawSHA256": "0EB91129B17AC8C89F82326F58A0F681ACE0F3B17962163469A31940DA5C2CAB",
+      "primaryGitBlobSHA1": "4aaa62466787021a0af8e950edfebd0207fc7069",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexD3D11.cpp",
+      "bytes": 32395,
+      "rawSHA256": "293BDA10983E7198FD94073C1BC013268B45B1889FBE10824355BD3A704EAB17",
+      "primaryGitBlobSHA1": "ede4eed50ce87f04c2f8ed8b17abdad8b3e0d71b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexD3D12.cpp",
+      "bytes": 28098,
+      "rawSHA256": "FC39F34A1E2D71A642A797786945F607CA23BCF23EB20F2209E72FA88A201194",
+      "primaryGitBlobSHA1": "579908e1f995f4e122757c7cbe5acc173f0bd1dd",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexDDS.cpp",
+      "bytes": 87544,
+      "rawSHA256": "7AFBC31142CEBBF488C37F1EDE84527D98A9E218B732C1F0E44E294037FD8113",
+      "primaryGitBlobSHA1": "70b4f3415b980215332aa5a92ab6d968535ea442",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexFlipRotate.cpp",
+      "bytes": 13759,
+      "rawSHA256": "5A82E38FF7EF602965C02992207E40D182A62B2F6CBB6E3F8A269A8193BDE12C",
+      "primaryGitBlobSHA1": "2f6d6c090845b17da5816c76fc368af0c8fbb817",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexHDR.cpp",
+      "bytes": 34903,
+      "rawSHA256": "7C540A36B085C451A7622CA0F0DDDF34E1698CF17566BD2E0E850879DAB14306",
+      "primaryGitBlobSHA1": "4d9e9fb283fd065d9da1798ba35f3ecdd4cd545a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexImage.cpp",
+      "bytes": 22828,
+      "rawSHA256": "F19CAE31F1458308B72BD22ED3C31CF6B8DD62CE915725A28C4466FF38D54F66",
+      "primaryGitBlobSHA1": "2ebd9cd6fb0bae3e2f7b0a2402b6fcda6d378186",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexMipmaps.cpp",
+      "bytes": 115193,
+      "rawSHA256": "02B24E6210F0317F9B26F17966D912DB3119EA19AB34DBDD70D6166847D9486F",
+      "primaryGitBlobSHA1": "7cda4bf8419437d84065f81c27405473b9b1db83",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexMisc.cpp",
+      "bytes": 23615,
+      "rawSHA256": "23F2AEAF14AF2120E42D655D023F4F0DD82257F6E601D11C2D1BA5343A722A5D",
+      "primaryGitBlobSHA1": "1f6dfdc21bee273fb96c94cc5d94bb75d99900a3",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexNormalMaps.cpp",
+      "bytes": 12754,
+      "rawSHA256": "259D1BDB91A86F00E691D17D786545A832CFB710554E2BF37B95138492D0BE3C",
+      "primaryGitBlobSHA1": "6c0d72963d239cb7b71caae7712ce41b654019fc",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexP.h",
+      "bytes": 12031,
+      "rawSHA256": "93C9BD83BE82A71979282A10A64C3CEDE6A877CFFD6D91C49297A50AC635589A",
+      "primaryGitBlobSHA1": "dc23846fba9e83828da320abee6a255f0e324a63",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexPMAlpha.cpp",
+      "bytes": 11564,
+      "rawSHA256": "ACFCE0A8D96820319CEB8385503A153C780EC90E08252E3DEA5A8DE1ECBE50E9",
+      "primaryGitBlobSHA1": "acd8d12a9e4b2b945b828bc662a1a3c56b88d127",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexResize.cpp",
+      "bytes": 36751,
+      "rawSHA256": "312E9D6094AB7A3FD242CAE5A97C704127E22BE025F35CDBBD128F42AF3ADDD2",
+      "primaryGitBlobSHA1": "49b38248481ce21e06faaab6fcc4b9db066f11cd",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexTGA.cpp",
+      "bytes": 46699,
+      "rawSHA256": "2C28E3F8503B7E52FE81B09EF925E716FEE38CDA0C7183ED3D081EDD969677E5",
+      "primaryGitBlobSHA1": "6646868069907cc1969ccf795c1526318cb55aee",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexUtil.cpp",
+      "bytes": 47592,
+      "rawSHA256": "0B85AA1A035D4E5C579E10D895441AD194D1DC2D682F2F9B3952150BF19B8BAA",
+      "primaryGitBlobSHA1": "68fc22a8dea36b5f5468d8d7afe2f0079bc3cf0c",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexWIC.cpp",
+      "bytes": 47261,
+      "rawSHA256": "8568DF51CAC0FBE664B4D8D0A1BA9E4E104CA7AC7998BAD8511006C2D8800E90",
+      "primaryGitBlobSHA1": "f5cb6d81dcc1bffdc27f9cebedceda7784ef511f",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015.vcxproj",
+      "bytes": 18442,
+      "rawSHA256": "7B41118010DF285A85F1ED281D136C3CED28F23F6CE44A96C9CAAFCFD4CCEF8A",
+      "primaryGitBlobSHA1": "35c725ffb0ea1bec7138c41e200c4ec09673ce0a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015.vcxproj.filters",
+      "bytes": 5997,
+      "rawSHA256": "C740069BBB21298FEE92658AF4B6C97360361664A1A6CDF9F51D97F19F677542",
+      "primaryGitBlobSHA1": "693d4d11710c802debff9a06b496cad112758636",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015_Win10.vcxproj",
+      "bytes": 18548,
+      "rawSHA256": "0F14E1E8FB00D879BC3F232E917052F4F3CFA8A9AFCE41F59E27AE87E48808BD",
+      "primaryGitBlobSHA1": "b911d518b28728c33a16accec45a4aaf2fcbd462",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015_Win10.vcxproj.filters",
+      "bytes": 6190,
+      "rawSHA256": "B0507FF8F4ECB7FCC2370F9B0055D7F0E4ABD1FED146472E754E9746B4B8CFE7",
+      "primaryGitBlobSHA1": "0b3fb322aeb7e4aa307164fa95ae9b51a01e1ca1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017.vcxproj",
+      "bytes": 19232,
+      "rawSHA256": "1B2BAA11889507CB4CB0D1D34962639AE5E837ACCE45D1AD933BEF1CBEAA6DF6",
+      "primaryGitBlobSHA1": "49fca7d2458adebc286e3cfb2c25040f2d03f744",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017.vcxproj.filters",
+      "bytes": 5997,
+      "rawSHA256": "C740069BBB21298FEE92658AF4B6C97360361664A1A6CDF9F51D97F19F677542",
+      "primaryGitBlobSHA1": "693d4d11710c802debff9a06b496cad112758636",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017_Win10.vcxproj",
+      "bytes": 19259,
+      "rawSHA256": "EBD2CA59D9CBFE0ED8B15C547A198DF9D09EB686C6C7310632EA6683B61E2815",
+      "primaryGitBlobSHA1": "7aaf5a596ec95ba675b05e96253674ba6f9d57a1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017_Win10.vcxproj.filters",
+      "bytes": 6190,
+      "rawSHA256": "B0507FF8F4ECB7FCC2370F9B0055D7F0E4ABD1FED146472E754E9746B4B8CFE7",
+      "primaryGitBlobSHA1": "0b3fb322aeb7e4aa307164fa95ae9b51a01e1ca1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10.vcxproj",
+      "bytes": 22503,
+      "rawSHA256": "DC9AEA9908BF938A4622B114F7F67914E95B3B4D73339E1D2736FDB78A0BCAAF",
+      "primaryGitBlobSHA1": "7bfbe9b7baf82d0ae59aa8b04f438df09e127e60",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10.vcxproj.filters",
+      "bytes": 6865,
+      "rawSHA256": "33435782BE90A010036B4C5B474EB9872A01E645F39D594F580AD3E2801922B8",
+      "primaryGitBlobSHA1": "83c5bb1cf1b7d8282128ec024d428141a722a704",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10_2015.vcxproj",
+      "bytes": 16730,
+      "rawSHA256": "6883EB1ECC55B627A097ED101E150AB4B4987D11C0388ECB5B04D0BB4D3C705E",
+      "primaryGitBlobSHA1": "37152fe25da1fa316d79635f61cac04deeb70399",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10_2015.vcxproj.filters",
+      "bytes": 6865,
+      "rawSHA256": "33435782BE90A010036B4C5B474EB9872A01E645F39D594F580AD3E2801922B8",
+      "primaryGitBlobSHA1": "83c5bb1cf1b7d8282128ec024d428141a722a704",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2015.vcxproj",
+      "bytes": 13186,
+      "rawSHA256": "B1C8A06629C43D657BF91315E3B785387F74D49A87728A1E9B8AA074EAC501F3",
+      "primaryGitBlobSHA1": "70ebc3d535972c7a94c762301bfecf7b18a2968b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2015.vcxproj.filters",
+      "bytes": 6157,
+      "rawSHA256": "424EB8D1A72036CADD9BA7F0985FA66BB6BE273251FF8F9A74A36937C9835240",
+      "primaryGitBlobSHA1": "c06b9016f0c0766715e85e0a8fa28e3257861982",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2017.vcxproj",
+      "bytes": 13361,
+      "rawSHA256": "8421756C89AAF2B721A56BE11C9AA6B159D548516EC398D185EB4DC71F3D0A22",
+      "primaryGitBlobSHA1": "e99953991673a578bf2763eb9f06cb0f87da3123",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2017.vcxproj.filters",
+      "bytes": 6157,
+      "rawSHA256": "424EB8D1A72036CADD9BA7F0985FA66BB6BE273251FF8F9A74A36937C9835240",
+      "primaryGitBlobSHA1": "c06b9016f0c0766715e85e0a8fa28e3257861982",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Filters.h",
+      "bytes": 13745,
+      "rawSHA256": "597DB093F2A01B6B6A1E0FE4701E58A6D341AA43AA0C18E298A45E588E8D6E01",
+      "primaryGitBlobSHA1": "182ee1ec342529bb7f50eb9505e881ba2f4b679a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/BC6HEncode.hlsl",
+      "bytes": 123331,
+      "rawSHA256": "846FB19652F5583D2C539FF3EE06E75CE2EE68E82C845C848F56515D73CDB3E8",
+      "primaryGitBlobSHA1": "cae8f1c8071e7334742ebb0aedfb825124bac0ab",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/BC7Encode.hlsl",
+      "bytes": 76272,
+      "rawSHA256": "8A61146B5F465AB36643C1EDEF0681AF0E1BB8BD0EC983AF3E9DB0F1CBB09DEC",
+      "primaryGitBlobSHA1": "1506ddb29dcd0db4de7b5e841a77c651d30a286e",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/CompileShaders.cmd",
+      "bytes": 1177,
+      "rawSHA256": "BB53EE4DD8C3A9A5C7A346E5C17CFC3E32F5516CA1AA3290254F1F6449CAE37E",
+      "primaryGitBlobSHA1": "acfea5560299960c5b979f33ce402d6377b8a8f9",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_EncodeBlockCS.inc",
+      "bytes": 811740,
+      "rawSHA256": "DD9D4EFE1F32D2AA4AC6354769622198395BF546FE8D7684F8076FC780B523FB",
+      "primaryGitBlobSHA1": "380f63eee91dffe6a1245626f14dd91cdaefa4fe",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_EncodeBlockCS.pdb",
+      "bytes": 380416,
+      "rawSHA256": "929F3B185116A7A9DFF905B6EDE6243119C8DEC4ADE059F0745910E8376B6487",
+      "primaryGitBlobSHA1": "4d153e37aa3a44a6e959e978baab11cd631009f0",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeG10CS.inc",
+      "bytes": 120678,
+      "rawSHA256": "5CF036FC836A5988AD74A72C1334BFE2F6232076B5E71BCCDE153D421AE478D2",
+      "primaryGitBlobSHA1": "18a4e87f8192cbb31573d37bf5af2e10f07a38bb",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeG10CS.pdb",
+      "bytes": 288256,
+      "rawSHA256": "1BFEB4CAFA2B39419E9612ED1AA3D76F4DFD0482586759EF0ABAF5972571E591",
+      "primaryGitBlobSHA1": "831d8513401cb321f902b53e0211da7cfc3708a1",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeLE10CS.inc",
+      "bytes": 182104,
+      "rawSHA256": "E9B4B79DA81A0A07E970E54AF32F20D06C325AADE1606FBE115C56081BD74707",
+      "primaryGitBlobSHA1": "5cac112c6ec7c5b8af5ae90cc910c563f0e38d01",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeLE10CS.pdb",
+      "bytes": 298496,
+      "rawSHA256": "406D62B36E607F34C3A16FF540D30E0A0739BC1CE51B537932E653C6A61F38B5",
+      "primaryGitBlobSHA1": "3a57ff265db617c61472aef560f19947413f0635",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_EncodeBlockCS.inc",
+      "bytes": 372484,
+      "rawSHA256": "7A072D1D9686D167149CDF29E7EF6827A7EC98DE229A0138284059F8DF04C079",
+      "primaryGitBlobSHA1": "a507b18cb708bbfa7f29e0d49caa67fc25114f7a",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_EncodeBlockCS.pdb",
+      "bytes": 228864,
+      "rawSHA256": "4CA9EFEECB3527DD3F608FBE0F2237DAD779F25DE2D7752E21F1A4DF66A532E7",
+      "primaryGitBlobSHA1": "b1565b2e9e78f5a5ed239073fb54d0618a960cc3",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode02CS.inc",
+      "bytes": 146725,
+      "rawSHA256": "1836A35D7FE0B3CFC6F03D580A55BE3565672864632294B8E1A932E2B9AD3B82",
+      "primaryGitBlobSHA1": "d7feffd02e04e945ccba28828ed401b61a8ab615",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode02CS.pdb",
+      "bytes": 189952,
+      "rawSHA256": "EF272BBD1417080CDDE17B7C3471B5CB2B62A257CD6426E027F60E3A957A1EB3",
+      "primaryGitBlobSHA1": "177afe18f8abcd5e6cc502ade801ee7c4c695837",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode137CS.inc",
+      "bytes": 146540,
+      "rawSHA256": "706E153740F3E8D0549876B5E6EFF146CB968C1A18FDE7126842E15F8E252523",
+      "primaryGitBlobSHA1": "1fab63eee6cfc85eb3ded35a1271e8848aa66152",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode137CS.pdb",
+      "bytes": 189952,
+      "rawSHA256": "D2467898723C33C24B32DE6902D09F15A3D9F707B9B863E4CEB3DB0AC9BB64BD",
+      "primaryGitBlobSHA1": "37c86e0086ff3fdcff47f20a08d8b8dd1582ae65",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode456CS.inc",
+      "bytes": 110008,
+      "rawSHA256": "51AE936A55E862B5C603D05F045F65FC35266449D14DACF1527585D9E94189C0",
+      "primaryGitBlobSHA1": "ee016f1923753940c631889b5bc16be865fbd7d7",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode456CS.pdb",
+      "bytes": 183808,
+      "rawSHA256": "D9E99CE69433C4BAD56130B29E4149C50C11188C0C03F0BACBB4645E24DE9495",
+      "primaryGitBlobSHA1": "6d078f0a393519d47f7bb5bedb813f3a0ab9ed16",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/d3dx12.h",
+      "bytes": 146501,
+      "rawSHA256": "B2D0E8979638D4FC331C495B8BDF1DF340141BF54526AD41175ED580853ADDCA",
+      "primaryGitBlobSHA1": "336db132d648c872b05e25f8a0a4999b870926d5",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex/scoped.h",
+      "bytes": 2068,
+      "rawSHA256": "C9758E4A9EA8A191880472815AC834B4784D61F09BA249DF5184EAFD892EB1CF",
+      "primaryGitBlobSHA1": "548e2fd65d72a8ce0410462e5fad6c17ee8d1dac",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2015.sln",
+      "bytes": 6729,
+      "rawSHA256": "EBCBBE5985492EA65E701A82B4400EE7DEF655F214A4A213801F4BD5A5FCB226",
+      "primaryGitBlobSHA1": "53c56364ea33d7947b73e418795647e48529246d",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2015_Win10.sln",
+      "bytes": 1720,
+      "rawSHA256": "6CB7879B6BB21C6407475B8CB1E8D00F8B43CCCB38B5F4DEA6871E2EAFFDD93A",
+      "primaryGitBlobSHA1": "f3ae491bce93aa8f93e7e5dfc2bdd13c1680247f",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2017.sln",
+      "bytes": 7101,
+      "rawSHA256": "10B805402E53B137CAC73646D14FBB8D35A61405AE7FC0BE53C5BC2441D01541",
+      "primaryGitBlobSHA1": "65a2a0b9b922c2cb3722eb3d976ed798b5948348",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2017_Win10.sln",
+      "bytes": 2092,
+      "rawSHA256": "B333D0823CC45E0BDE8592C3656788C99854A02316B879B2624957276825B044",
+      "primaryGitBlobSHA1": "4375834494e64b6389eac2b36fac585c8ed350a3",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_Windows10.sln",
+      "bytes": 2426,
+      "rawSHA256": "16BABC4AEBC21583F0EC83812F3438F157E6B52B34AB12B020B570E4F1AF6A8B",
+      "primaryGitBlobSHA1": "cf9b753f73215087862f87881fa48132cfb3b618",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_Windows10_2015.sln",
+      "bytes": 1683,
+      "rawSHA256": "D82338A39809AEE9D36F827DFEA6B09672A29AC31B0E8811395AF8A8F0E1F408",
+      "primaryGitBlobSHA1": "11dd76d0d7b69d2517eca23aa61af3adb85dfa5f",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_XboxOneXDK_2015.sln",
+      "bytes": 1221,
+      "rawSHA256": "7051BB8D18E0FBEB9D66D74BFD276315B22814462FC42783BE4B1D334AFF761A",
+      "primaryGitBlobSHA1": "2e2f29092562dc6ad8d210d133bdc34103251556",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/DirectXTex_XboxOneXDK_2017.sln",
+      "bytes": 1609,
+      "rawSHA256": "0AFC44DBDC27519BBBE43635C7803FC7C93EE9FC589C9E068761D12C34D1956F",
+      "primaryGitBlobSHA1": "8bf5561738f91cac8958e207a253347604bc3d19",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/LICENSE",
+      "bytes": 1127,
+      "rawSHA256": "8799AEE5C6F3AB5809047449127F77FF66654BC776E07CFAE99D1BC7EF8E9574",
+      "primaryGitBlobSHA1": "f4494c69d16da1f47fe0822c4f865fd1ce4f9e88",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/ReadMe.txt",
+      "bytes": 23548,
+      "rawSHA256": "9B09A184B142E093821BA3D272E41E662A678BB200368FC27EDF1F8DE77D9219",
+      "primaryGitBlobSHA1": "b301b35857bdc29085ed9f955d494f81272a4b18",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab.cpp",
+      "bytes": 47797,
+      "rawSHA256": "0C6F264A6338D81FEDDDF5EDA94F8E4DA96DD0B3EEF30D1276B42BE31F35750E",
+      "primaryGitBlobSHA1": "40f41256b264dcbf255be6a2e581804fa95a5f75",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab.h",
+      "bytes": 1570,
+      "rawSHA256": "9DE2974CB0FDFCCB2F1D86C734C975CCA4A136A70025324D067F2D48F6A2F4B3",
+      "primaryGitBlobSHA1": "1f18539492d52637c4e42d0476e7656247411d99",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab12.cpp",
+      "bytes": 52374,
+      "rawSHA256": "CC94CEAB6A443BCFE9A736F76782699E5227FCFA0BEC679DDC3D26DBFADAD7D5",
+      "primaryGitBlobSHA1": "4faffd20ef5d4bd78da3fb94927df59d11149239",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab12.h",
+      "bytes": 1748,
+      "rawSHA256": "6E0D58185EF79CB8B3C4A8265BA8F22EE74343F18F20C94430AD5B842FB10425",
+      "primaryGitBlobSHA1": "c7864cf7f0d64f64de6dea6ba3180aaac217fc87",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2015.vcxproj",
+      "bytes": 15333,
+      "rawSHA256": "63EA9E10795D07252D4CE690B53A27F259D2CD24333FD8F97DF6357F787FE1E3",
+      "primaryGitBlobSHA1": "bcd7d5cd63c9fd174c3ac7a2dea5e55c5aadf931",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2015.vcxproj.filters",
+      "bytes": 645,
+      "rawSHA256": "B327FF34B3574BA3315557844CA8D53D0BFB7D035B710AE6DB385139D9F0902A",
+      "primaryGitBlobSHA1": "781df7844663e1b3fecea0211a7c9cc0638e9989",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2017.vcxproj",
+      "bytes": 16192,
+      "rawSHA256": "CC27A2CA9B28C4A72DC592630334EB50E820F2E01D8407C06F58B9782F1681CA",
+      "primaryGitBlobSHA1": "b976fa730d79d8ff071990105f99167af9f5db85",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2017.vcxproj.filters",
+      "bytes": 645,
+      "rawSHA256": "B327FF34B3574BA3315557844CA8D53D0BFB7D035B710AE6DB385139D9F0902A",
+      "primaryGitBlobSHA1": "781df7844663e1b3fecea0211a7c9cc0638e9989",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/directx.ico",
+      "bytes": 25214,
+      "rawSHA256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55",
+      "primaryGitBlobSHA1": "bc43c1b2085df668dffff26d80adcb0ef73f23a9",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/texassemble.cpp",
+      "bytes": 66244,
+      "rawSHA256": "7FB1E6A6468A42ADABF387C90B8F6C83271ABF91D14C7B89042F1CA6250A144C",
+      "primaryGitBlobSHA1": "a7bf7f17618a98701b0567c95c13348af373e50f",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texassemble/texassemble.rc",
+      "bytes": 1656,
+      "rawSHA256": "A12C6844AE05F44A4839F0BEF41CAA3CE3ABD385296A42735B3FFC528144F258",
+      "primaryGitBlobSHA1": "5208ce0905643736cc5226454eed135860c1b9e1",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/Texconv.rc",
+      "bytes": 1656,
+      "rawSHA256": "A12C6844AE05F44A4839F0BEF41CAA3CE3ABD385296A42735B3FFC528144F258",
+      "primaryGitBlobSHA1": "5208ce0905643736cc5226454eed135860c1b9e1",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2015.vcxproj",
+      "bytes": 15513,
+      "rawSHA256": "83C5EAFBF838CC5DAB3702D7DE2B5B3B8619A2E649BEB68D5CDD249D69908E93",
+      "primaryGitBlobSHA1": "49a4db1ca49d107e3858a29e0a058c7e41fdfb7b",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2015.vcxproj.filters",
+      "bytes": 637,
+      "rawSHA256": "39ABC017B8ECB3B0198FA6158EB52ADF28FB669C538A51C0826478C5F9D4A8FA",
+      "primaryGitBlobSHA1": "50ba8f92f8bb111068c20786f26b975b8b2821e1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2017.vcxproj",
+      "bytes": 16494,
+      "rawSHA256": "7E2706F57EF1C913C29875E13CBA7E8D68B015BFE2F8D792F6BEF02CD90B701F",
+      "primaryGitBlobSHA1": "8ce02a5c5a08cf182ef52490930204e458a6f442",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2017.vcxproj.filters",
+      "bytes": 637,
+      "rawSHA256": "39ABC017B8ECB3B0198FA6158EB52ADF28FB669C538A51C0826478C5F9D4A8FA",
+      "primaryGitBlobSHA1": "50ba8f92f8bb111068c20786f26b975b8b2821e1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/directx.ico",
+      "bytes": 25214,
+      "rawSHA256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55",
+      "primaryGitBlobSHA1": "bc43c1b2085df668dffff26d80adcb0ef73f23a9",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texconv/texconv.cpp",
+      "bytes": 102471,
+      "rawSHA256": "29A6A2EF0F517443C42F83E2650FA5880C135E6DBCC01F6EE6263E73852FEB40",
+      "primaryGitBlobSHA1": "0c83595549f09a0f226be101e19e6756ba5235ce",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/directx.ico",
+      "bytes": 25214,
+      "rawSHA256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55",
+      "primaryGitBlobSHA1": "bc43c1b2085df668dffff26d80adcb0ef73f23a9",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/texdiag.cpp",
+      "bytes": 177970,
+      "rawSHA256": "4257D7317E77616E3BEC16D3D8FF9B7640B352969DA0328DA5ECA67661EDE0EE",
+      "primaryGitBlobSHA1": "8f17305ccefc0c702d9e516505975ee1e8c565a1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/texdiag.rc",
+      "bytes": 1656,
+      "rawSHA256": "A12C6844AE05F44A4839F0BEF41CAA3CE3ABD385296A42735B3FFC528144F258",
+      "primaryGitBlobSHA1": "5208ce0905643736cc5226454eed135860c1b9e1",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2015.vcxproj",
+      "bytes": 15293,
+      "rawSHA256": "5A51EC6008EF049027958ED832E0D5B34826EA9352F15C3F7EAE818EC924C895",
+      "primaryGitBlobSHA1": "7b6b282dcc6f12c6fe0ddf70a4e8a524f4ea1ab5",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2015.vcxproj.filters",
+      "bytes": 637,
+      "rawSHA256": "EC2EF90A058892C4C9F20EEF06876115006FA0E39C655E580DF53804950D1A29",
+      "primaryGitBlobSHA1": "3a2f907c7e74e1b22710006915fd60b5384fbbda",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2017.vcxproj",
+      "bytes": 16152,
+      "rawSHA256": "6CAB968893FF4E9677BA7CEB0441AFF30185996B4D5E25165D7123BD0F1FF5DF",
+      "primaryGitBlobSHA1": "22bfb7c8e191245745f514838fe12544538fb148",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2017.vcxproj.filters",
+      "bytes": 637,
+      "rawSHA256": "EC2EF90A058892C4C9F20EEF06876115006FA0E39C655E580DF53804950D1A29",
+      "primaryGitBlobSHA1": "3a2f907c7e74e1b22710006915fd60b5384fbbda",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader.cpp",
+      "bytes": 35373,
+      "rawSHA256": "57D1C38CAF0939E701D540E68F940122EB6ECEC9DA69FDE76C3F6950FAA90C89",
+      "primaryGitBlobSHA1": "0b4e954bb7d772a1ce0272c1217f77e861c918f2",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader.h",
+      "bytes": 4815,
+      "rawSHA256": "DBC1DCC321FC0B00CA7F59C6F3B2F1C4405C3C59BABCDE31FB503B062EF0BFA0",
+      "primaryGitBlobSHA1": "8843c33747852aa73d50844a6587d31194226908",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader12.cpp",
+      "bytes": 26255,
+      "rawSHA256": "386EB8BDDE3829825A6FD88017A45183503072C90B249FD82E9DFE1E6500D2C0",
+      "primaryGitBlobSHA1": "f48b130e9ca7ab02e06450d693ea2a99d8be5e34",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader12.h",
+      "bytes": 2756,
+      "rawSHA256": "014B2BBF172ADBD9190E2B2188EC89CF9BD0B6E55FC5E3373AB230F414ACFB5E",
+      "primaryGitBlobSHA1": "ff3e49d379f86767dba8d7e87afb4b947272e4b1",
+      "comparisonOnlyCRLF": true
+    },
+    {
+      "path": "ISPC Texture Compressor/ISPC Texture Compressor.sln",
+      "bytes": 4951,
+      "rawSHA256": "BC6C18BC8F25E4CDD64102BAF4754F1D2B703E54103F38EA2013B3931F591791",
+      "primaryGitBlobSHA1": "d21191a05c8745f9febb268618daa7919b697d66",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/ISPC Texture Compressor.vcxproj",
+      "bytes": 10077,
+      "rawSHA256": "3B1A741C410B5B5DD2A4EB55DB5C11E2AC779B42B6BF4C3392A39E3D1DBBE344",
+      "primaryGitBlobSHA1": "fb9f4b34d04497e4e6828e7ee1a59c82b103b3b0",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/ISPC Texture Compressor.vcxproj.filters",
+      "bytes": 1233,
+      "rawSHA256": "70CC0A05B93C8028EAE4A96952D07C0A6FCF16EBA707F685F5F9478B31EAFEC0",
+      "primaryGitBlobSHA1": "391a035e032cc4d59f84a3632034970224b2d048",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/Media/Images/Desk_21_hdr.dds",
+      "bytes": 4492672,
+      "rawSHA256": "27CEA847FEDFAE0BE7F7A0FCDA39151164FE079B2E6F05F915EA56677B657BEF",
+      "primaryGitBlobSHA1": "aead33d3c4b7b32dff45deed492fcffb30d13774",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/Media/Images/quadTexture_wAlpha_1k.dds",
+      "bytes": 4194432,
+      "rawSHA256": "9547CC9F63E33BA2DFD5C3795965A24EDE23A022ECA8158A25456F4807082035",
+      "primaryGitBlobSHA1": "08634e3e172649d8e695db963aebb9a8f6a6e17a",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/Media/UI/Font.dds",
+      "bytes": 76128,
+      "rawSHA256": "09396729A1A08F1D091059BF871C847647996825375EDD695B03F840FA0BA5AC",
+      "primaryGitBlobSHA1": "37514f5bf7fdb81efc52766d02bdaec0fecd3061",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/StopWatch.cpp",
+      "bytes": 3897,
+      "rawSHA256": "A10130E0D6A7275770D588768FDCCE50CD6DF3863F02780236CD34F4138FEC6F",
+      "primaryGitBlobSHA1": "1297c695a35f8d15137d029a44d272508363f927",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/StopWatch.h",
+      "bytes": 1715,
+      "rawSHA256": "EC002A165F180D2CFC4543EC0A54CF50724EDBD65413D1BAF0810124D2664DD9",
+      "primaryGitBlobSHA1": "d6c050babbf7264bd2642083823a92cb1b615f5b",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/main.cpp",
+      "bytes": 37478,
+      "rawSHA256": "8A8128EC402DD4F870512748D9F5BD11E05C0FC882F56002E72F5F7EFF3A6E42",
+      "primaryGitBlobSHA1": "6e1185bf853d0d26ee6685fc8c51605c15a6cbe0",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/processing.cpp",
+      "bytes": 41770,
+      "rawSHA256": "A63D89E2F2F6BB5994A0C93D1D31EACF7A19FA8E914B5513575C8559A63824D1",
+      "primaryGitBlobSHA1": "b99dbeddcda40d78aba9cc93ea48cf6df45397ce",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/processing.h",
+      "bytes": 5002,
+      "rawSHA256": "49706FFBE0AFEC355F6E2E232A07C99BB498E0AD826C8A8A4A213B2ACCA4B840",
+      "primaryGitBlobSHA1": "12f3fb8aa43315cd87f5bdcfb40642a1a20156f5",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC Texture Compressor/shaders.hlsl",
+      "bytes": 2777,
+      "rawSHA256": "7C94994B80276B402685671F57EB272D55DB2172561E980F72CC5B2AAA00D707",
+      "primaryGitBlobSHA1": "0de30940724e6f46eb433bf7e724a3ce31486cff",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC/linux/.gitignore",
+      "bytes": 2,
+      "rawSHA256": "CDBCAE15105D6B781E620813C79C7E868740D4E9CC53CE6F5FCBBC12387ADF4B",
+      "primaryGitBlobSHA1": "72e8ffc0db8aad71a934dd11e5968bd5109e54b4",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC/osx/.gitignore",
+      "bytes": 2,
+      "rawSHA256": "CDBCAE15105D6B781E620813C79C7E868740D4E9CC53CE6F5FCBBC12387ADF4B",
+      "primaryGitBlobSHA1": "72e8ffc0db8aad71a934dd11e5968bd5109e54b4",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ISPC/win/.gitignore",
+      "bytes": 2,
+      "rawSHA256": "CDBCAE15105D6B781E620813C79C7E868740D4E9CC53CE6F5FCBBC12387ADF4B",
+      "primaryGitBlobSHA1": "72e8ffc0db8aad71a934dd11e5968bd5109e54b4",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "Makefile.linux",
+      "bytes": 1684,
+      "rawSHA256": "4DB93CFF081E43EAC27485A1AB08505540444F351F925F02F2AB28A7E311C65B",
+      "primaryGitBlobSHA1": "6f041b3070bbb52db6dfb56ebb9ab1a6f7e5456a",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "contributing.md",
+      "bytes": 2813,
+      "rawSHA256": "745063CE07C3A9AE348A1239CF8B18A035D9AFAAB8AD2F8926B66BACCB63BB0D",
+      "primaryGitBlobSHA1": "7c00cde4920c05e610ebbb364b8c4ddb2a23f391",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp.xcodeproj/project.pbxproj",
+      "bytes": 11527,
+      "rawSHA256": "BBEC8AF854795FF81DB5FE9848254F8F6F3C43022D1B8E8B8C1A632CF44C10CC",
+      "primaryGitBlobSHA1": "311f89eb4be21ea944767e66ae5ada41a8063708",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "bytes": 135,
+      "rawSHA256": "7F3B00B5C3FDB45242D7B87E1E5C4E25D1FA8129A16C94295ECC4E8EA2235C5F",
+      "primaryGitBlobSHA1": "919434a6254f0e9651f402737811be6634a03e9c",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp.xcodeproj/xcuserdata/aras.xcuserdatad/xcschemes/ispc_texcomp.xcscheme",
+      "bytes": 2894,
+      "rawSHA256": "38EF62901F6A5B297F12DA43C437ADD7ECE34D9E252FB93311EB721ACE5B019F",
+      "primaryGitBlobSHA1": "adcd0dc772035248c2e8a341e1deeebcbebe4ee0",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/ispc_texcomp.cpp",
+      "bytes": 12991,
+      "rawSHA256": "2C87D42A95B405520696F9F316F53900292C766CFE40016B0656A8C680B86DEF",
+      "primaryGitBlobSHA1": "367b9c327bf4766a46ec87331175468613f65d1d",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/ispc_texcomp.def",
+      "bytes": 603,
+      "rawSHA256": "D7942B9DF9132ABCBD23A575629B188724105E61C972C220C44B7FA4FFA16018",
+      "primaryGitBlobSHA1": "30a0e1f947f6c70dab8740f54c11e51398df6e85",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/ispc_texcomp.h",
+      "bytes": 5046,
+      "rawSHA256": "10C016535FA748088CED8FA08FA4D9D65185070C7CF632F2265A9FFD39DD234B",
+      "primaryGitBlobSHA1": "03551b2004acb24f27ba8f12476d05c9254b2cf7",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/ispc_texcomp.vcxproj",
+      "bytes": 11541,
+      "rawSHA256": "69949265FA6B920CC9E54EB1765302FFBA648D9CF317D6D6D0A1D090BC65B94E",
+      "primaryGitBlobSHA1": "0713ed1c394cab661b939758d66724398f68cd2e",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/ispc_texcomp.vcxproj.filters",
+      "bytes": 2173,
+      "rawSHA256": "95C7590DF16971E0891292408D6E59441E25A87D999B806741B589A82320D9F7",
+      "primaryGitBlobSHA1": "7a98ac4243c95d822ff0dd56c6d827deb0db1d72",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/ispc_texcomp_astc.cpp",
+      "bytes": 17096,
+      "rawSHA256": "B4BDFA2834B5BD63E4BE30D4754B6EDA85321ED5F6FF76F82FD27566BD7ADB9F",
+      "primaryGitBlobSHA1": "0adcba3ec8159e48fc493acd6c3d4db8634aef19",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/kernel.ispc",
+      "bytes": 106239,
+      "rawSHA256": "FDC9ED4D363DEAA771FDFEFC5EC75BE8E684A32AD7E83E1518704FB9876D774E",
+      "primaryGitBlobSHA1": "2e86afacda817b3983372edeac34ea7ed7e087eb",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "ispc_texcomp/kernel_astc.ispc",
+      "bytes": 99943,
+      "rawSHA256": "7C9A635C22F28E33A579AAD73CD1074611C78ED201CEF3B04A713EF617DEC1A3",
+      "primaryGitBlobSHA1": "018d206ead1631f59d6955baeda6818f2ccddba3",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "license.txt",
+      "bytes": 1057,
+      "rawSHA256": "C3B1335B5988CD4EB61994987F1F2B01002C88734C727D76A973B1722634757A",
+      "primaryGitBlobSHA1": "6c2d7105a73ae301eba8efb6bc9651a4d04d3243",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "readme.md",
+      "bytes": 3201,
+      "rawSHA256": "C56ABA8B99CD05D5B1A29BB512A32DCAE4645A08609785A2E121B5348D9FFC48",
+      "primaryGitBlobSHA1": "499b09fd552a7c633a85b38cd19427ebd35e804f",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "screenshot.png",
+      "bytes": 361061,
+      "rawSHA256": "3341C03B918D82EE8FD2300C602EA1597AE1D26F8C42AD3E8C0A55349E053042",
+      "primaryGitBlobSHA1": "890a21b0bad54a3e6bb4264bcaa912ec315c8a3e",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "test/build.cmd",
+      "bytes": 1372,
+      "rawSHA256": "D1092A515678ED74799A9C70337C83777DD46EE2E200B7F113C76EE287932809",
+      "primaryGitBlobSHA1": "dbef02b26b6ff2b29031967d798579e5eff20623",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "test/test_astc/test_astc.cpp",
+      "bytes": 7105,
+      "rawSHA256": "4A63926F4141E4E04CE1C40BC47D90809F5213C575471B18F53A6B3E9E7420CB",
+      "primaryGitBlobSHA1": "38c987e9bb91fb70a874d612eefd7a5d4d439547",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "test/test_astc/test_astc.sln",
+      "bytes": 2212,
+      "rawSHA256": "01EE4DF9EA68E733D82F59951EEFFC62BCEC98E668F724E7487E095B4A599DF5",
+      "primaryGitBlobSHA1": "4f5117ff9d08684d785a4d35d5eb85b98590d8db",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "test/test_astc/test_astc.vcxproj",
+      "bytes": 6498,
+      "rawSHA256": "81C009837B4DDB9C1FDBD2A6AABD0022EEFB5FB4EADCF01D07A89C1B5917168D",
+      "primaryGitBlobSHA1": "13c298cc82e617cfe9dd5584d1523ef5989d2d39",
+      "comparisonOnlyCRLF": false
+    },
+    {
+      "path": "test/test_astc/test_astc.vcxproj.filters",
+      "bytes": 604,
+      "rawSHA256": "4805FB55A60564BA448C165336C8BC289D40454517E8E360FCBE2299232DE0EB",
+      "primaryGitBlobSHA1": "44eef82666f48472a5a4852f5d1db1321710e023",
+      "comparisonOnlyCRLF": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: immutable ISPC manifest SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/not-manifest.json
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake:34 (JE_python_verify_file)
+
+

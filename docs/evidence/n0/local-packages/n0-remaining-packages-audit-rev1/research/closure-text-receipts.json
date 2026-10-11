@@ -1,0 +1,82 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9/package_build_list_host_windows.json",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-historical-package-list.json",
+    "bytes": 15219,
+    "sha256": "163E4EF51AA3EB985B6912D260CEF45B8FDFC54C374D7A562C97687FD97DCB99"
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/commits/70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-history-windows-fix.json",
+    "bytes": 28158,
+    "sha256": "DBCFA9BDE16D521458A6E689045504295DDE0AC90D3EA3FB33C160A0432D199C"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9/package-system/openimageio-opencolorio/build_openimageio.py",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-historical-script.py",
+    "bytes": 45064,
+    "sha256": "FB7257640383F23B159F7DDDC87516782ACA1A99D0A4272FCB16C70B8441194A"
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/commits/efb3023b2a29709e09065220c64af8784e7ce575",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-history-2026.json",
+    "bytes": 26171,
+    "sha256": "FBB6070DF8049660912B13312F5EF156C0297D4EDF3CD91398F9C3DDAA1F5869"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/libtexture/CMakeLists.txt",
+    "status": 404,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-libtexture-CMakeLists.txt",
+    "bytes": 14,
+    "sha256": "D5558CD419C8D46BDC958064CB97F963D1EA793866414C025906EC15033512ED"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/THIRD-PARTY.md",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-THIRD-PARTY.md",
+    "bytes": 10535,
+    "sha256": "65AAFC0852F7556F3A0B38043711C622305CF1770ABBF0C048CEB02D28AF5B46"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/683c2af1a687465e6f37ed8213ad387f31b99873/package-system/libsamplerate/build_config.json",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-history-original-build_config.json",
+    "bytes": 4101,
+    "sha256": "40541E902E5F178EBF6C67330EDC571BA2D9E18080ECFF707566676D9C3EB4B3"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/cmake/compiler.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-compiler.cmake",
+    "bytes": 26557,
+    "sha256": "CD31698FE412F02182FC232E7F65706F1F46629B425C43B71AE14281935B2403"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/THIRD-PARTY.md",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-THIRD-PARTY.md",
+    "bytes": 12454,
+    "sha256": "B9FBF3ABE6CFD16F3A04BEA34CAF16663CC3DB9A9FD28316291FC285D49BBB68"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/modules/FindExtPackages.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-FindExtPackages.cmake",
+    "bytes": 3733,
+    "sha256": "2A4CB593B4DCBC19605D8C56AF9312B4990ADA7A6D09EE39A722F2B122A3B245"
+  }
+]

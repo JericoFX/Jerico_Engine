@@ -1,0 +1,28 @@
+{
+  "name": "guard-archive-hash",
+  "utc": "2026-10-11T09:25:50.5329710Z",
+  "PID": 189312,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "-DJE_ISPC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/not-archive.txt",
+    "-DJE_ISPC_SOURCE_ROOT=F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd",
+    "-DJE_ISPC_SOURCE_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/source-immutable-manifest.json",
+    "-DJE_ISPC_TOOL_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+    "-DJE_ISPC_TOOL_ROOT=F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+    "-DJE_ISPC_TOOL_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/tool-immutable-manifest.json",
+    "-DJE_ISPC_VS_ROOT=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+    "-DJE_ISPC_POWERSHELL=C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "-DJE_ISPC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-archive-hash",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake"
+  ],
+  "count": 11,
+  "exitCode": 1,
+  "elapsedSeconds": 0.0396671,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\guards-run\\guard-archive-hash.stdout.raw.log",
+  "stdoutBytes": 0,
+  "stdoutSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\guards-run\\guard-archive-hash.stderr.raw.log",
+  "stderrBytes": 389,
+  "stderrSHA256": "67093F3BAB0B69553CEDDF4BB38E8C8ACC878D79617D4E5A691CD033B7200945"
+}

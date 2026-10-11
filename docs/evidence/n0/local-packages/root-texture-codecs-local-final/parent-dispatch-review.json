@@ -1,0 +1,20 @@
+{
+  "decision": "PARENT ORIGINAL ROOT61 DISPATCH APPROVED; NATIVE NOT RUN",
+  "arguments": 61,
+  "argvUnchanged": true,
+  "frozenInputs": 16868,
+  "onlyReviewedSourceDelta": "Two catalog bindings, exact inverse retained",
+  "cacheFiles": 40,
+  "wheelhouseFiles": 44,
+  "assignmentSHA256": "B5D472C9CB4474B40A6B287AFBE32FC7E1931843CC7228EC0066114CBCBB9A3C",
+  "freezeSHA256": "842A5B6427CD5C76F590DDE0FD049ACEA65E42CDD08B7168C6B10D2F63141F8D",
+  "driverSHA256": "54F87CCC1935E743C61F810F80983501CC0EA96843232EF667306F0AC8BCD3C0",
+  "donorDriverSHA256": "D0876C989526EE283CEFFDF03674C3154740263A0877F7A29A9DE1763DABAA23",
+  "driverInverseExact": true,
+  "nativeStartReceiptCode": "$configureLaunchRequestedUTC=[DateTime]::UtcNow.ToString('o')\n[void]$process.Start()\n$configureNativeStart=[ordered]@{wrapperPID=$PID;nativePID=$process.Id;launchRequestedUTC=$configureLaunchRequestedUTC;nativeProcessStartUTC=$process.StartTime.ToUniversalTime().ToString('o');recordedUTC=[DateTime]::UtcNow.ToString('o');executable=$cmake;executableSHA256=(Get-TaskInputHash -LiteralPath $cmake).Hash;arguments=$arguments;argumentCount=$arguments.Count;assignmentSHA256=$assignmentSha;freezeSHA256=$freezeSha}\n$configureNativeStream=[IO.File]::Open((Join-Path $evidence 'configure-native-start.json'),[IO.FileMode]::CreateNew)\ntry{$configureNativeBytes=[Text.UTF8Encoding]::new($false).GetBytes(($configureNativeStart | ConvertTo-Json -Depth 6)+\"`n\");$configureNativeStream.Write($configureNativeBytes)}finally{$configureNativeStream.Dispose()}\n",
+  "syntaxErrors": 0,
+  "reviewerDiagnostic": "Initial parent inversion assumed CRLF. Measured donor has 424 LF/0 CRLF; corrected inverse uses actual LF. Driver/argv/source unchanged and no native run occurred.",
+  "nativeOwner": "/root/validation_luna",
+  "integrationSHA256": "B56F98A47D4D0BB5B4DA14EF9DE267141A482E97FAD7A2CC83C7BEE57D3371EE",
+  "limits": "Original configure route with source candidates still uncompiled. No engine baseline, Editor/AP/runtime, frames, footprint or effective dependency removal acceptance."
+}

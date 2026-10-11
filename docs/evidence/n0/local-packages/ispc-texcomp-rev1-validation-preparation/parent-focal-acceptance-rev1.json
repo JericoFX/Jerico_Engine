@@ -1,0 +1,124 @@
+{
+  "decision": "ISPCTEXCOMP PRODUCER, ARCHIVE, RELEASE/DEBUG CONSUMERS AND NINE GUARDS ACCEPTED FOR CATALOG INTEGRATION",
+  "acceptedForCatalogIntegration": true,
+  "archiveBytes": 491564,
+  "archiveSHA256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF",
+  "consumerCases": 16,
+  "guardCases": 9,
+  "validationInputs": 490,
+  "currentInputsRehashed": 496,
+  "inputDeltas": 0,
+  "cases": [
+    {
+      "name": "wrong-shell-hash",
+      "expectedDiagnostic": "SHA256 mismatch",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-wrong-shell-hash",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "uri",
+      "expectedDiagnostic": "must not be a URI",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-uri",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "unc",
+      "expectedDiagnostic": "must be an absolute local path",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-unc",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "missing",
+      "expectedDiagnostic": "file is missing",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-missing",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "archive-hash",
+      "expectedDiagnostic": "SHA256 mismatch",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-archive-hash",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "manifest-hash",
+      "expectedDiagnostic": "SHA256 mismatch",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-manifest-hash",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "external-output",
+      "expectedDiagnostic": "output must be beneath",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/Dependencies/ispc-output-forbidden",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    },
+    {
+      "name": "old-output",
+      "expectedDiagnostic": "output must be new",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build",
+      "beforeExists": true,
+      "afterExists": true,
+      "expectedRejection": true
+    },
+    {
+      "name": "wrong-source-root",
+      "expectedDiagnostic": "input file count mismatch",
+      "exitCode": 1,
+      "diagnosticPresent": true,
+      "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-wrong-source-root",
+      "beforeExists": false,
+      "afterExists": false,
+      "expectedRejection": true
+    }
+  ],
+  "guardResultSHA256": "66802FF12FFCC1E3986040FEB7448B14223408F694A2D44486A3B1743AE93EC8",
+  "guardLaunchSHA256": "E65FCB8DEFE60EA23CE75DF9A3187C30D3B935D9302D3D405B18FC8B287E6B2C",
+  "reviews": {
+    "consumerReview": [
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-validation-preparation/parent-consumer-result-review-rev1.json",
+      "8DA3012BBE3532070784C012935FDA10F4C639B04AAA4A71D2597FD6F82892DD"
+    ],
+    "archiveReview": [
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/parent-archive-review-rev1.json",
+      "9717E334F0D797DBAF5AE3BCF5A37F4D9300BC22BADE45E48248ED1FCB8D0BDA"
+    ],
+    "producerReview": [
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev2-preparation/parent-producer-result-review-rev2.json",
+      "C4A4D61122C8B10C8B8B37D8E05DA1CC18EC3B206C7F8205C4FFBF368A4EC950"
+    ]
+  },
+  "guardScope": "Eight outputs absent; old-output directory existence preserved. Native guard rejects before compiler/output. No claim of complete old build-tree before/after manifest.",
+  "warnings": "MSB4011 duplicate empty props and three upstream warning sites, plus ISPC performance diagnostics retained; no source change/suppression.",
+  "limits": "Local codec and archive scope. Actual loaded DLL parent asserted, no path text. Full image quality, ISA forcing/portability, product dependency split, Editor/AP/cook/runtime and footprint not accepted.",
+  "catalogIntegrated": false,
+  "engineAccepted": false
+}

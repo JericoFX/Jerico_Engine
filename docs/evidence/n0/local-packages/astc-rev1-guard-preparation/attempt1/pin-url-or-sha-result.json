@@ -1,0 +1,14 @@
+{
+  "label": "pin-url-or-sha",
+  "scope": "PRODUCER",
+  "nativeExit": 1,
+  "seconds": 0.0289802,
+  "expectedError": "source URL/SHA256 must match the audited 3.2 archive",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pin-url-or-sha"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

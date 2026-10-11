@@ -1,0 +1,13 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+  "argv": [
+    "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+    "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+    "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+    "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+  ],
+  "scope": "PRODUCER"
+}

@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake:16 (message):
+  JE ISPCTexComp: output must be beneath this checkout/build
+
+

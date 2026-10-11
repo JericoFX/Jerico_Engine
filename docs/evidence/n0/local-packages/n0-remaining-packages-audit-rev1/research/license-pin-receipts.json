@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://api.github.com/repos/mm2/Little-CMS/git/tags/abd67449951218a0140bc4968d7d814d91e399a1",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/lcms-annotated-tag.json",
+    "bytes": 656,
+    "sha256": "91C38B176B231EBED11F167AFA960C1352CD9B2FB3C1D756DFDA0F379B39D1BE"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/imageworks/pystring/c2de99deb4f0bd13751f8436400b5e8662301769/LICENSE",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/pystring-LICENSE",
+    "bytes": 1512,
+    "sha256": "7B565D49BE50A0490B38AE69D22F1E93CE9449546A99A8A1EFCAF0AE922B7442"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mm2/Little-CMS/lcms2.2/COPYING",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/lcms-COPYING",
+    "bytes": 1078,
+    "sha256": "C725DAAC91A9259CE5E195683C0EEB797D345035C36AC5BA114C9FA80E11639A"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "status": "PARENT SOURCE/DRIVER REVIEWED FOR ONE PRODUCER",
+  "providerFiles": 9,
+  "freezeCount": 556,
+  "freezeSHA256": "D667AE233DA3874222F85373213A21397C0816B2F920F4DA55F65C10304CDF93",
+  "assignmentSHA256": "E5C710C927F833D273F883EFEC68C6553A4C75A3481EAFF39DA305A3108802D0",
+  "driverSHA256": "7D68BE16F94F7FD15A6FC3C3BDD017A96A1152B7388AFB0FEBF248D1EC369B55",
+  "sourceReview": "All nine provider files read: original four-hunk/two-file patch, exact inverses/hashes, VS2022 v143 SSE4.1 MD/MDd Release/Debug, original CLI and full codec retained. Find preserves original static target/layout, no runtime CLI deploy. Nine native consumer cases/config reviewed, not executed.",
+  "nativeOwner": "/root/validation_luna",
+  "allowedNative": "One -P producer using submitted six literal args. No consumer/guards/Root until real producer archive reviewed.",
+  "licensePayload": "Full source notice files retained in this authoring package; their bytes are package overhead, not measured engine/runtime size.",
+  "engineAccepted": false
+}

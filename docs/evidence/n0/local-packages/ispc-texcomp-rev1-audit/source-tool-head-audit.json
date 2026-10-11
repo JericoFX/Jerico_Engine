@@ -1,0 +1,35 @@
+[
+  {
+    "scheme": "https",
+    "host": "codeload.github.com",
+    "path": "/GameTechDev/ISPCTextureCompressor/tar.gz/36b80aac50ea401a9adde44d86712c2241b2acfd",
+    "query": "",
+    "status": 200,
+    "contentLength": null,
+    "location": "",
+    "automaticRedirects": false,
+    "authorization": false
+  },
+  {
+    "scheme": "https",
+    "host": "github.com",
+    "path": "/ispc/ispc/releases/download/v1.16.1/ispc-v1.16.1-windows.zip",
+    "query": "",
+    "status": 302,
+    "contentLength": 0,
+    "location": "https://release-assets.githubusercontent.com/github-production-release-asset/1931356/3526c4cb-66bf-4d68-a115-4d2036363259?<redacted>",
+    "automaticRedirects": false,
+    "authorization": false
+  },
+  {
+    "scheme": "https",
+    "host": "release-assets.githubusercontent.com",
+    "path": "/github-production-release-asset/1931356/3526c4cb-66bf-4d68-a115-4d2036363259",
+    "query": "<redacted>",
+    "status": 200,
+    "contentLength": 44708214,
+    "location": "",
+    "automaticRedirects": false,
+    "authorization": false
+  }
+]

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="9"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T05:59:36"
+	>
+	<testcase name="JE.LocalPackages.ASTC.ldr8" classname="JE.LocalPackages.ASTC.ldr8" time="0.239535" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC ldr8
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.ldr16" classname="JE.LocalPackages.ASTC.ldr16" time="0.012477" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC ldr16
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.ldr32" classname="JE.LocalPackages.ASTC.ldr32" time="0.0123944" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC ldr32
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.srgb" classname="JE.LocalPackages.ASTC.srgb" time="0.0130312" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC srgb
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.hdr-rgb" classname="JE.LocalPackages.ASTC.hdr-rgb" time="0.0126491" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC hdr-rgb
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.hdr" classname="JE.LocalPackages.ASTC.hdr" time="0.0128929" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC hdr
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.normal" classname="JE.LocalPackages.ASTC.normal" time="0.0123458" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC normal
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.invalid" classname="JE.LocalPackages.ASTC.invalid" time="0.0094498" status="run">
+		<properties/>
+		<system-out>CASE PASS: real ASTC invalid
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ASTC.cli" classname="JE.LocalPackages.ASTC.cli" time="0.0259862" status="run">
+		<properties/>
+		<system-out>astcenc v3.2.0, 64-bit sse4.1+popcnt
+Copyright 2011-2026 Arm Limited, all rights reserved
+</system-out>
+	</testcase>
+</testsuite>

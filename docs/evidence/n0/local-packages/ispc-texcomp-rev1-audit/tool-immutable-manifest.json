@@ -1,0 +1,1407 @@
+{
+  "root": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+  "files": 175,
+  "filesMatchBefore": true,
+  "entries": [
+    {
+      "path": "bin/ispc.exe",
+      "type": "file",
+      "bytes": 75214760,
+      "sha256": "91F687613EFF144125057463255D79DB78960ED1F5FCD487411187F5A8E3323F",
+      "gitBlobSHA1": "a97553ffcd01d4efdfe713ecf69f33bd30af05aa",
+      "archiveCRC32": 2119434040
+    },
+    {
+      "path": "bin/ispcrt.dll",
+      "type": "file",
+      "bytes": 111016,
+      "sha256": "B1A2461DE54865C0C3DC4EE5DE40B0C646F8B3E8BBEBD503EAD6E8B0E38AA1A1",
+      "gitBlobSHA1": "b880216422615db05a6f606028369d823797ca9e",
+      "archiveCRC32": 412948799
+    },
+    {
+      "path": "contrib/ispc.vim",
+      "type": "file",
+      "bytes": 1486,
+      "sha256": "15040C2BA936F22F77DDBC402E0A3BB453CA304689067F897BEED71C36AC81C7",
+      "gitBlobSHA1": "332f77020fbff54f0721a7a22360dde003fd5662",
+      "archiveCRC32": 546796945
+    },
+    {
+      "path": "contrib/ispc.vim.README",
+      "type": "file",
+      "bytes": 326,
+      "sha256": "E2EDDC9468139DE7E63C9F41C09D7DE86435AF69EA23EC51A896E0967CC22218",
+      "gitBlobSHA1": "6299215fbf6a9816b033d864fc141b599c2835cf",
+      "archiveCRC32": 3526199359
+    },
+    {
+      "path": "css/ie.css",
+      "type": "file",
+      "bytes": 152,
+      "sha256": "A8342E23F09FE34F0420AD6453D094689997FD6F5583BA3B98670435DF27C472",
+      "gitBlobSHA1": "82294107e47dab9e455ef74da29747c47af420ac",
+      "archiveCRC32": 1877449196
+    },
+    {
+      "path": "css/style.css",
+      "type": "file",
+      "bytes": 5986,
+      "sha256": "B6F175110321E312B68CDD8006636345922586D4A282D2F8A61E1F9FDEDC093F",
+      "gitBlobSHA1": "e53f917761d3608c8f20de942de04ec458ae6a26",
+      "archiveCRC32": 2090526587
+    },
+    {
+      "path": "examples/common/tasksys.cpp",
+      "type": "file",
+      "bytes": 42202,
+      "sha256": "4A2B0765DC88EAB24CC087F18A78F50521B6479FCA63C3A3E6CE7FA9C02890D8",
+      "gitBlobSHA1": "1c758047cae4ddf4d72679b35cc9a7fb74831621",
+      "archiveCRC32": 117104772
+    },
+    {
+      "path": "examples/common/timing.h",
+      "type": "file",
+      "bytes": 4048,
+      "sha256": "6F3F655C03BAB5037226183331A9E9D89FB7FA23555B7FC3630E60684AF2E59B",
+      "gitBlobSHA1": "c14c3c3ef058056e4f18c5605a5456b4efef1952",
+      "archiveCRC32": 1007259530
+    },
+    {
+      "path": "examples/cpu/aobench/.gitignore",
+      "type": "file",
+      "bytes": 11,
+      "sha256": "C049415EA7AD8F1EAF87EA40E1A4EFC866277942DBE18945AC5E5F5CE35419DC",
+      "gitBlobSHA1": "9264bda4378e54ab72563da0d6e37d626dacf189",
+      "archiveCRC32": 1800196497
+    },
+    {
+      "path": "examples/cpu/aobench/ao.cpp",
+      "type": "file",
+      "bytes": 6274,
+      "sha256": "40C2B44738BD2C05768134AD1A5FFCCA9CCF03B06C06DB7EB555A3DF93EEEABC",
+      "gitBlobSHA1": "e030b8170beac380b0a57db4b1f6f11f9f8d6759",
+      "archiveCRC32": 2850601781
+    },
+    {
+      "path": "examples/cpu/aobench/ao.ispc",
+      "type": "file",
+      "bytes": 8382,
+      "sha256": "A533EF7029E17B16CBB59EF5BE4255B1EB0BB0D1AEA309A0C8C607819C035F34",
+      "gitBlobSHA1": "327bab0ea33584aef36ce53391459a9a11203f90",
+      "archiveCRC32": 2145268006
+    },
+    {
+      "path": "examples/cpu/aobench/ao_serial.cpp",
+      "type": "file",
+      "bytes": 9102,
+      "sha256": "D9E25B8DD37679065B56A0C9F96A594CC3C3F84CBE063FCA150741DA3153A7A0",
+      "gitBlobSHA1": "cdf9d4ce427ff540951110335a3ab9e899bad6b6",
+      "archiveCRC32": 158750206
+    },
+    {
+      "path": "examples/cpu/aobench/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2257,
+      "sha256": "C4833C148D5935436801FF9A8A4912E50B6AB2218BB011FC2ADF796BC897152B",
+      "gitBlobSHA1": "db5f971f87e375eb1cf8ec149c94335e445f655e",
+      "archiveCRC32": 4151412102
+    },
+    {
+      "path": "examples/cpu/aobench_instrumented/.gitignore",
+      "type": "file",
+      "bytes": 11,
+      "sha256": "C049415EA7AD8F1EAF87EA40E1A4EFC866277942DBE18945AC5E5F5CE35419DC",
+      "gitBlobSHA1": "9264bda4378e54ab72563da0d6e37d626dacf189",
+      "archiveCRC32": 1800196497
+    },
+    {
+      "path": "examples/cpu/aobench_instrumented/ao.cpp",
+      "type": "file",
+      "bytes": 3765,
+      "sha256": "32FE319016861223B94FF54F684EF0657828CACAB0ABAE028AFF5838F4A79738",
+      "gitBlobSHA1": "3b7f92b57aaa81e36b86c577472da717377be5f6",
+      "archiveCRC32": 3316652103
+    },
+    {
+      "path": "examples/cpu/aobench_instrumented/ao_instrumented.ispc",
+      "type": "file",
+      "bytes": 11073,
+      "sha256": "AB22D6AF87EBAABE92FD24E0E15F653D6310CEC8ED2222224693A51334C7BE3C",
+      "gitBlobSHA1": "9aff8d053d237fdff3f0bea9c256689375ef2d29",
+      "archiveCRC32": 4164448976
+    },
+    {
+      "path": "examples/cpu/aobench_instrumented/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2508,
+      "sha256": "0231AF6660552EA262EACA8400EC867F25A094F947EDB52C02B01A510E76BDF1",
+      "gitBlobSHA1": "bfcb494a8653b9f4f131412ff604a69512aba09c",
+      "archiveCRC32": 3185492498
+    },
+    {
+      "path": "examples/cpu/aobench_instrumented/instrument.cpp",
+      "type": "file",
+      "bytes": 3269,
+      "sha256": "601384F7D256864B9EE47A676298545DFE781F685E8AFC484B7051E4272637A1",
+      "gitBlobSHA1": "70fe803ddba42c2899eb5345f145fa8ea85a13ea",
+      "archiveCRC32": 2077702698
+    },
+    {
+      "path": "examples/cpu/aobench_instrumented/instrument.h",
+      "type": "file",
+      "bytes": 1838,
+      "sha256": "0BBABEAAA550478C6CE564EADCC2656A048FCCB7F16206E392B0BB84FFFA1879",
+      "gitBlobSHA1": "a2cd6843106c4cbce28a0bdf2d42bb135d9006ae",
+      "archiveCRC32": 2573736819
+    },
+    {
+      "path": "examples/cpu/cmake/AddISPCExample.cmake",
+      "type": "file",
+      "bytes": 3233,
+      "sha256": "EB36DF2AEBCDC61D7925ACB1E64A61AE4CD7B766A86204832E0F085C483CF09F",
+      "gitBlobSHA1": "bb3001e29a51d20513a2d6da500b8bde3177f276",
+      "archiveCRC32": 2386656072
+    },
+    {
+      "path": "examples/cpu/cmake/AddISPCExampleLegacy.cmake",
+      "type": "file",
+      "bytes": 6925,
+      "sha256": "668DF94E6CB13CF6BC2DFEEAC3A9A480D1E3ED797B06E99F64242C20F3BD6B60",
+      "gitBlobSHA1": "c2b0c10f34722e231cf078a5b947ba61138f2864",
+      "archiveCRC32": 3533316200
+    },
+    {
+      "path": "examples/cpu/cmake/AddISPCExampleModern.cmake",
+      "type": "file",
+      "bytes": 4086,
+      "sha256": "F823A11B8F5B3F254EF103D35D196012A0E7B09FE7EC71CF81E4D94DEE9DF7F8",
+      "gitBlobSHA1": "72fa14cdecdadba53533890ec6e7225dfc5dc299",
+      "archiveCRC32": 3283824261
+    },
+    {
+      "path": "examples/cpu/CMakeLists.txt",
+      "type": "file",
+      "bytes": 3169,
+      "sha256": "8CB1712FCA3A388265210FB9F164232C39963036EFA7DBD8F4595BB8D39850F0",
+      "gitBlobSHA1": "ec65b1093563f53480467a67ed56302857d9618e",
+      "archiveCRC32": 1110714516
+    },
+    {
+      "path": "examples/cpu/deferred/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2557,
+      "sha256": "5936A373B620574B7E1EEA6C31E3B76AB74B29E77B2FF1FE1A232250AB45ACB0",
+      "gitBlobSHA1": "0623ecdf8cf5cdc8818baf075b95a93df73f496a",
+      "archiveCRC32": 868450802
+    },
+    {
+      "path": "examples/cpu/deferred/common.cpp",
+      "type": "file",
+      "bytes": 7188,
+      "sha256": "91359E09C9F53FD9004F2151EFC2AF349CEB9953E7FC1BD8F8FD11B9241BD808",
+      "gitBlobSHA1": "f8ca797aad534f9ea753a6de3d0846804e9c5af9",
+      "archiveCRC32": 888288935
+    },
+    {
+      "path": "examples/cpu/deferred/data/pp1280x720.bin",
+      "type": "file",
+      "bytes": 13856920,
+      "sha256": "F2311B0A9C5611555FC138C1B5818E0B275C005DF33D80622A963DCD8974F105",
+      "gitBlobSHA1": "32a6a6aff4c00b699b61c72c8918451f52a16780",
+      "archiveCRC32": 1986458212
+    },
+    {
+      "path": "examples/cpu/deferred/data/pp1920x1200.bin",
+      "type": "file",
+      "bytes": 34592920,
+      "sha256": "C8D7A4506889EB31A496D4CDAFD1762C8E5939C0204FA936F13CF9A665ABC3F4",
+      "gitBlobSHA1": "1bf84c46a48c4e4d1a9d54e5a4d7ccbabab804a3",
+      "archiveCRC32": 1057335598
+    },
+    {
+      "path": "examples/cpu/deferred/deferred.h",
+      "type": "file",
+      "bytes": 3120,
+      "sha256": "405DFA380B53D1F926213838BD6208BF3B2082A4D106E88F5EA0950ED4BD0ADD",
+      "gitBlobSHA1": "f4bc91468144703501217770e26a2b1c869fd5b6",
+      "archiveCRC32": 3284351611
+    },
+    {
+      "path": "examples/cpu/deferred/dynamic_c.cpp",
+      "type": "file",
+      "bytes": 35243,
+      "sha256": "2FFC26E70A7A66D57452A617950BC97188CBEF5039722510B518086F943FF348",
+      "gitBlobSHA1": "99d6adb577e8bc9331670288a8a76d48a9883e67",
+      "archiveCRC32": 1850327823
+    },
+    {
+      "path": "examples/cpu/deferred/kernels.ispc",
+      "type": "file",
+      "bytes": 29241,
+      "sha256": "AE10B5ED3F7EC82641F72AECEF995E77EA89C83D5758615805D2DB36DCC759AD",
+      "gitBlobSHA1": "73135797984b0f6e1ab572605a9ce92de6adcf9d",
+      "archiveCRC32": 4095790803
+    },
+    {
+      "path": "examples/cpu/deferred/main.cpp",
+      "type": "file",
+      "bytes": 4657,
+      "sha256": "06F0C264F188C9F3D2FC3F32B2C09698755A936F6D45753AA21557B5C7362E7F",
+      "gitBlobSHA1": "657aa2538b4cc16b27bbbe9703bec8d2108fdb62",
+      "archiveCRC32": 2650637299
+    },
+    {
+      "path": "examples/cpu/gmres/algorithm.cpp",
+      "type": "file",
+      "bytes": 7521,
+      "sha256": "3F59846740750EA1BFF17513379238A542C1E3E537EF8A76D11366DF884C6D84",
+      "gitBlobSHA1": "2554028ae3637e2e90abd3f132b226e2bda38697",
+      "archiveCRC32": 660189843
+    },
+    {
+      "path": "examples/cpu/gmres/algorithm.h",
+      "type": "file",
+      "bytes": 1979,
+      "sha256": "C901AB08F15EA35AF0B1B3BD6247E90A599AF09CAE8A35F24F7A1D6283E381F3",
+      "gitBlobSHA1": "668faa97c0ea5f262a46f85ba8a68a48dbfd0c3b",
+      "archiveCRC32": 3263816636
+    },
+    {
+      "path": "examples/cpu/gmres/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2735,
+      "sha256": "080B7E588426F62B70E2BC86B499A0018AD69CA69543D9B2C8F4E251B153729F",
+      "gitBlobSHA1": "2098607836c4c6d8d154a522e47db57d77d47ecf",
+      "archiveCRC32": 2703911057
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-18/c-18.mtx",
+      "type": "file",
+      "bytes": 204641,
+      "sha256": "EE8C6F740B6CA9CD6FFCCA80EC7A0BE0F966DA70B4653BC1EDDE4BCDBCC5FD16",
+      "gitBlobSHA1": "d66611d2e604ff9d7008a3d9705795b082bcaedb",
+      "archiveCRC32": 4085710715
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-18/c-18_b.mtx",
+      "type": "file",
+      "bytes": 14951,
+      "sha256": "E7EDB87CD660BD399B975729CC6D06788A38CA8FB78028A23991FA0D213295CB",
+      "gitBlobSHA1": "610ad50c89ffa081a7864734e6ef2785eaa1504a",
+      "archiveCRC32": 3562484166
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-21/c-21.mtx",
+      "type": "file",
+      "bytes": 442266,
+      "sha256": "69C0C86FC90706F4E52BE34D14659171A30775DF3279422773595D841C977E90",
+      "gitBlobSHA1": "9edfb14124edecbf4df7065f83e379c5943acb92",
+      "archiveCRC32": 414485481
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-21/c-21_b.mtx",
+      "type": "file",
+      "bytes": 20726,
+      "sha256": "8A0EC04C8B5540C5A410B390702BF69B1CF9F893B683A081EDCF0A8866CCC0B0",
+      "gitBlobSHA1": "538649ecf05ccb4ddfe45e90b2bb54e9a62da91c",
+      "archiveCRC32": 3619066765
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-22/c-22.mtx",
+      "type": "file",
+      "bytes": 385975,
+      "sha256": "600298A630A3C82AB57B5BB49D5DC14DCEBE001AA14DE973D3CE58F7EE9AC592",
+      "gitBlobSHA1": "da217e4edb1cdd67cd32d07389db6231803b527a",
+      "archiveCRC32": 4014331914
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-22/c-22_b.mtx",
+      "type": "file",
+      "bytes": 21189,
+      "sha256": "1BD891879BFE885850D90BBB095A538900C296D8BB60BBA79777F96F5C2B7105",
+      "gitBlobSHA1": "2516805ec84334eb23503d880432a77c0eeb7165",
+      "archiveCRC32": 3336387480
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-25/c-25.mtx",
+      "type": "file",
+      "bytes": 688164,
+      "sha256": "6E9EAEDD3FF91EFE9F1F8BFCBD71AADDE292BEB8615F4520CEB29CD89343C9D1",
+      "gitBlobSHA1": "af3e677fc5588795f3fd9a575e3bec37d2fb82b5",
+      "archiveCRC32": 1192588316
+    },
+    {
+      "path": "examples/cpu/gmres/data/c-25/c-25_b.mtx",
+      "type": "file",
+      "bytes": 33586,
+      "sha256": "44CBCB3EEDA8972C48DF02F2416F2CB3CCAE43710137C5175FE2C64CCC3A3209",
+      "gitBlobSHA1": "d37b1ff4f30a176a6e593b8eaa0b5b6eeeed08c2",
+      "archiveCRC32": 2940699323
+    },
+    {
+      "path": "examples/cpu/gmres/debug.h",
+      "type": "file",
+      "bytes": 2000,
+      "sha256": "8FCE7B1D6A766418F355222705BD0902FDFE2210C15231ECCF9CB94A54871855",
+      "gitBlobSHA1": "d6a8cec4c4d9f9111576ba127b907496db1dcd80",
+      "archiveCRC32": 205112043
+    },
+    {
+      "path": "examples/cpu/gmres/main.cpp",
+      "type": "file",
+      "bytes": 2858,
+      "sha256": "F2194F47B55B71524EB8038DE45D897DB5B2B5B9F8A2FAC71FC4148535D0473A",
+      "gitBlobSHA1": "f15507ce2b6d4898d0f5ecf3791333b709c8f271",
+      "archiveCRC32": 3074441565
+    },
+    {
+      "path": "examples/cpu/gmres/matrix.cpp",
+      "type": "file",
+      "bytes": 8178,
+      "sha256": "EB92735E7FF42FCD1862555DF006656838B68D3DB94833EB6BC8EFEF400F47EC",
+      "gitBlobSHA1": "c4a533cdd32bf56bf6553049a484335387fc66ea",
+      "archiveCRC32": 3043124673
+    },
+    {
+      "path": "examples/cpu/gmres/matrix.h",
+      "type": "file",
+      "bytes": 7807,
+      "sha256": "DDC8669A7C4878A63FFFF40B429433AF951162F123E10084696DD125189C85CD",
+      "gitBlobSHA1": "8b8c9fe11b918eeb43901b4165923bb2b1a8dd83",
+      "archiveCRC32": 365077869
+    },
+    {
+      "path": "examples/cpu/gmres/matrix.ispc",
+      "type": "file",
+      "bytes": 4440,
+      "sha256": "FD1A69A214CA4CE99C0EFFA77139D2F42BA74BF840B9B26BDEE91AE596C397DC",
+      "gitBlobSHA1": "4cad559108056eefe9b38d016d82b8351d33b7e3",
+      "archiveCRC32": 3302564198
+    },
+    {
+      "path": "examples/cpu/gmres/mmio.c",
+      "type": "file",
+      "bytes": 11476,
+      "sha256": "E9F49F56CEEDACDCF9E47986497E26A2BC4537D1A50395361D78C102EBED7A1B",
+      "gitBlobSHA1": "4623b02f851b42f0ca4e32f3a9635d3cbcfe814f",
+      "archiveCRC32": 3387875436
+    },
+    {
+      "path": "examples/cpu/gmres/mmio.h",
+      "type": "file",
+      "bytes": 4443,
+      "sha256": "2E4A8EE0E285528C6FB21237424FE1BBF7FC92EC6CE29326A107F451AA2569C7",
+      "gitBlobSHA1": "70cff7e2f165aa532ee916545f02f16d804f5670",
+      "archiveCRC32": 1040104624
+    },
+    {
+      "path": "examples/cpu/gmres/util.h",
+      "type": "file",
+      "bytes": 2040,
+      "sha256": "EAEA56399572BBFC25793D69410400115A7F2613A78F821DBBD0F1D5EEDFE3C9",
+      "gitBlobSHA1": "6e72dbed1ee3f240153dfb5b1c90789e18b8eb89",
+      "archiveCRC32": 736523655
+    },
+    {
+      "path": "examples/cpu/mandelbrot/.gitignore",
+      "type": "file",
+      "bytes": 25,
+      "sha256": "852248B21D1EAEFA1BEB179BB0635B1FEEA970E3D0C2280D1AB0AFC10BA2F2B7",
+      "gitBlobSHA1": "2b5d5319c487d8acd8c2ac33906d6955a050d0e3",
+      "archiveCRC32": 3277035123
+    },
+    {
+      "path": "examples/cpu/mandelbrot/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2302,
+      "sha256": "ABED5D57203B69D36A12D49502FC4DC9ABA2CF28B941CB4911F78D23E72549C2",
+      "gitBlobSHA1": "b4a111e344dfe90d7c12d74ef685b4816a82eb3a",
+      "archiveCRC32": 3336915168
+    },
+    {
+      "path": "examples/cpu/mandelbrot/mandelbrot.cpp",
+      "type": "file",
+      "bytes": 4791,
+      "sha256": "763D3FA451C4C93AC43D280C1AEC507646A9C4D62A1F8152037F60E2C5EF1028",
+      "gitBlobSHA1": "1485b78b022ceaac019f57deb9a9594fc8278ca1",
+      "archiveCRC32": 3421466860
+    },
+    {
+      "path": "examples/cpu/mandelbrot/mandelbrot.ispc",
+      "type": "file",
+      "bytes": 3202,
+      "sha256": "B590CF641BEE693CC14EC54FB85D6EF7D557651F28E3F860828F8C571FE33BBC",
+      "gitBlobSHA1": "40097a4bfa7aee1712c1bc53b2082c19573193eb",
+      "archiveCRC32": 1884496513
+    },
+    {
+      "path": "examples/cpu/mandelbrot/mandelbrot_serial.cpp",
+      "type": "file",
+      "bytes": 2478,
+      "sha256": "A17BF72012D95F0E8000E77651F9FBD5DCA410F3D12C066C12C2742811E732F4",
+      "gitBlobSHA1": "18c233d191a0e9d530d708b5fab6cc87f2519f15",
+      "archiveCRC32": 2287785546
+    },
+    {
+      "path": "examples/cpu/mandelbrot_tasks/.gitignore",
+      "type": "file",
+      "bytes": 19,
+      "sha256": "588E693FD30C56FFEE5001B736DCEB76129F13A3EF2F4B06E88BB3EC5E166BBA",
+      "gitBlobSHA1": "20147cf19287c95b947dcae46f82cc04ddc6062d",
+      "archiveCRC32": 2906355507
+    },
+    {
+      "path": "examples/cpu/mandelbrot_tasks/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2332,
+      "sha256": "31D7A3FB7ED859B84D385819BFD7494A59BA889FD20C8B5B54D28D050AEB1DA0",
+      "gitBlobSHA1": "c827d3fec4f3c08865675ef62c1a9261908e4cca",
+      "archiveCRC32": 1220634326
+    },
+    {
+      "path": "examples/cpu/mandelbrot_tasks/mandelbrot_tasks.cpp",
+      "type": "file",
+      "bytes": 5279,
+      "sha256": "F3F0C7F0B69D2A485C7CEF37F3A95E34B92C7846DECC189FE8D453F5B1AC0EC8",
+      "gitBlobSHA1": "9f6eae86d5e655fdc0fe3f7a3938a4f296a4b8e0",
+      "archiveCRC32": 3551426355
+    },
+    {
+      "path": "examples/cpu/mandelbrot_tasks/mandelbrot_tasks.ispc",
+      "type": "file",
+      "bytes": 4152,
+      "sha256": "E00990D0CD5CCE7386C960100464E171FD41218AC2ACC44569194FC30CA1D0FA",
+      "gitBlobSHA1": "24be3a39c9b320a03649bc7de098862c491f7d40",
+      "archiveCRC32": 3141200291
+    },
+    {
+      "path": "examples/cpu/mandelbrot_tasks/mandelbrot_tasks_serial.cpp",
+      "type": "file",
+      "bytes": 2478,
+      "sha256": "A17BF72012D95F0E8000E77651F9FBD5DCA410F3D12C066C12C2742811E732F4",
+      "gitBlobSHA1": "18c233d191a0e9d530d708b5fab6cc87f2519f15",
+      "archiveCRC32": 2287785546
+    },
+    {
+      "path": "examples/cpu/noise/.gitignore",
+      "type": "file",
+      "bytes": 20,
+      "sha256": "FB18C6362FDD4B82F13248BB43320F86818802D561AEB2013C5C3CA779677495",
+      "gitBlobSHA1": "1c2de39fb98bf220dc0326837be68237c2ade598",
+      "archiveCRC32": 4226384100
+    },
+    {
+      "path": "examples/cpu/noise/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2277,
+      "sha256": "9E305F763261FCB57667EFDC9029A146A8A68754EE18D18F9CE74E94B196D53F",
+      "gitBlobSHA1": "3428d80f6fc7ecb3f1af501a0f7744fbec34fea8",
+      "archiveCRC32": 4071278210
+    },
+    {
+      "path": "examples/cpu/noise/noise.cpp",
+      "type": "file",
+      "bytes": 4568,
+      "sha256": "1322A44F1B84C4873FE9509134FB4D2EF29822F38EE2ECCF83A8F6D3618BC0F1",
+      "gitBlobSHA1": "924942b82f5d35c04ca99c5785b996ad9c1a7628",
+      "archiveCRC32": 853081144
+    },
+    {
+      "path": "examples/cpu/noise/noise.ispc",
+      "type": "file",
+      "bytes": 7219,
+      "sha256": "D5CC0E9095E7084FB18D8D21B7C11020925EB6D3F94EC7826EAB9B3031C28E69",
+      "gitBlobSHA1": "9cd7f24960d29177cf90d4dcebe4fb772e21aff1",
+      "archiveCRC32": 1101588021
+    },
+    {
+      "path": "examples/cpu/noise/noise_serial.cpp",
+      "type": "file",
+      "bytes": 7265,
+      "sha256": "8252FC4E2A0A1EDB49B650011EDB2D8540704FA6767D7C7BBE168D8FDE34B8D9",
+      "gitBlobSHA1": "3bea4dcf2a8d2bd759364752e81e205bc255b496",
+      "archiveCRC32": 3721185653
+    },
+    {
+      "path": "examples/cpu/options/.gitignore",
+      "type": "file",
+      "bytes": 9,
+      "sha256": "5E53B5BB11D0592922DAB99B9CAF6F694BE0AB94FE47839AAA61CF22C432C65F",
+      "gitBlobSHA1": "5bee96267d242e8aca1c25d454c70ff5860ddac5",
+      "archiveCRC32": 1023950871
+    },
+    {
+      "path": "examples/cpu/options/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2351,
+      "sha256": "02A742DE7C8F2E6CD26F39F55812E9AFFD900AC9FA1AC091CED49A72016186E4",
+      "gitBlobSHA1": "15be07a241b36adf54df45fccc600d6090541aa3",
+      "archiveCRC32": 3562776239
+    },
+    {
+      "path": "examples/cpu/options/options.cpp",
+      "type": "file",
+      "bytes": 6684,
+      "sha256": "91142CFA2943B60456B5AA96B3219B5B0228C0469FD0D39238C4B15EB784E679",
+      "gitBlobSHA1": "271b307d77f0ab1c3b11b5f0b86315a085086921",
+      "archiveCRC32": 2444537819
+    },
+    {
+      "path": "examples/cpu/options/options.ispc",
+      "type": "file",
+      "bytes": 5643,
+      "sha256": "FB468975D76B265C0238B132A0F1FCFA535566A361948526AA384D0BC12C21F0",
+      "gitBlobSHA1": "55417e23245a809ad60b84bd9772dc17e27c69de",
+      "archiveCRC32": 1168645516
+    },
+    {
+      "path": "examples/cpu/options/options_defs.h",
+      "type": "file",
+      "bytes": 1717,
+      "sha256": "E7CE49D410162508F44A69172727B6B3320A7B2C375B8FD5FBE9FFB7D9A067BD",
+      "gitBlobSHA1": "aea1d82a942ddbd7992824b01a98dd96246c68c5",
+      "archiveCRC32": 377587684
+    },
+    {
+      "path": "examples/cpu/options/options_serial.cpp",
+      "type": "file",
+      "bytes": 3641,
+      "sha256": "434D79860C4E86E11781D948EE04B18330A914FEAB326111EED8F9D407C86BAA",
+      "gitBlobSHA1": "5c0e511e47b2c07657ba72824d7d1a4d1cf522e4",
+      "archiveCRC32": 1040680456
+    },
+    {
+      "path": "examples/cpu/perfbench/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2261,
+      "sha256": "8C2DB705D12B6075C7AB474895587F91D126F87A855CCA15B17335218D10B195",
+      "gitBlobSHA1": "8ce5585f731e072f1264ce346f0aef286045ea39",
+      "archiveCRC32": 4125938815
+    },
+    {
+      "path": "examples/cpu/perfbench/perfbench.cpp",
+      "type": "file",
+      "bytes": 4295,
+      "sha256": "87ABA179B1D26C8C925A47D0DA6205D7F70488232CCD23C22F68FEF55DD7B133",
+      "gitBlobSHA1": "541cf263d44dc043d91914ac4b77f12bf9d960a4",
+      "archiveCRC32": 3843583477
+    },
+    {
+      "path": "examples/cpu/perfbench/perfbench.ispc",
+      "type": "file",
+      "bytes": 7691,
+      "sha256": "F8EA6C52F0F208971B415AF3E24A922AF34DD659A266604E19DF0FBC52011CC0",
+      "gitBlobSHA1": "309a836c8d1a089b306aabdc3bcf5927862a6385",
+      "archiveCRC32": 736641953
+    },
+    {
+      "path": "examples/cpu/perfbench/perfbench_serial.cpp",
+      "type": "file",
+      "bytes": 2470,
+      "sha256": "0EDA303784D895616FBF0EBC33A8658D39B7EBCA43D51FE9C6198A568BAC1DFB",
+      "gitBlobSHA1": "f6f8bbfab9fbe05dbac97cb64896234bef0b8025",
+      "archiveCRC32": 1986214236
+    },
+    {
+      "path": "examples/cpu/README.txt",
+      "type": "file",
+      "bytes": 6221,
+      "sha256": "298DFB95C7E6583B0B4AB70F84A805509332E24061FB06DFC05DEDD3C18BF4C9",
+      "gitBlobSHA1": "0a9ec26775ecb3549743da2e9c8489ce01c8a52d",
+      "archiveCRC32": 59065867
+    },
+    {
+      "path": "examples/cpu/rt/.gitignore",
+      "type": "file",
+      "bytes": 11,
+      "sha256": "698F25CDFBAFE3820735EA146B515A26F42BE6157017956616E8A44D235D751A",
+      "gitBlobSHA1": "d9e797a48b4e5911928ae289c07bead3f8cc66c4",
+      "archiveCRC32": 2199259460
+    },
+    {
+      "path": "examples/cpu/rt/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2648,
+      "sha256": "7E8645BD2EC4C4167E2CC65798165505517E6B09984AC12C363BFBC21A864DAD",
+      "gitBlobSHA1": "6f704e4744162c522124b139d59d64e4313ba78e",
+      "archiveCRC32": 3672686200
+    },
+    {
+      "path": "examples/cpu/rt/cornell.bvh",
+      "type": "file",
+      "bytes": 2208,
+      "sha256": "719D558720419299177BAFAB873EDEBA5869A7114CB7855CCA2D57D307525A93",
+      "gitBlobSHA1": "f7e0f3ddbed80d186b3c1e71fb5cad5319bd9d32",
+      "archiveCRC32": 2112969575
+    },
+    {
+      "path": "examples/cpu/rt/cornell.camera",
+      "type": "file",
+      "bytes": 136,
+      "sha256": "5CF6F23AA9FB68153D6F5CEAFC8E45198B7B3E92C5A0D323F27DE221321C332D",
+      "gitBlobSHA1": "0fec1642ae7a87e2698192b38b7edcc06392f584",
+      "archiveCRC32": 1624266233
+    },
+    {
+      "path": "examples/cpu/rt/rt.cpp",
+      "type": "file",
+      "bytes": 9741,
+      "sha256": "ECFC3625CA11DE501FCF290867D8A85336A8283AADCF54504681079DE6157925",
+      "gitBlobSHA1": "2251c0db4347be10698d98cb3021fbd49af9cb2f",
+      "archiveCRC32": 3969166248
+    },
+    {
+      "path": "examples/cpu/rt/rt.ispc",
+      "type": "file",
+      "bytes": 11439,
+      "sha256": "784E6F70CAB6A274C654ADFB8D2024D18D60C8C6EDAF67C1C2DBC876B43E2803",
+      "gitBlobSHA1": "6bac27f56b70fbc762787be7218815a445901f5f",
+      "archiveCRC32": 3327735578
+    },
+    {
+      "path": "examples/cpu/rt/rt_serial.cpp",
+      "type": "file",
+      "bytes": 9067,
+      "sha256": "5142E83EE969E9CB6490D6B166758A8B319F917CAB17E3E00D624D50790F7735",
+      "gitBlobSHA1": "809b405fb6784c76c41f03d35492195f3cd62c9b",
+      "archiveCRC32": 2449247548
+    },
+    {
+      "path": "examples/cpu/rt/sponza.bvh",
+      "type": "file",
+      "bytes": 6269120,
+      "sha256": "5488471BE63EAEDAFA7234F6CBF8F08E736ABAF0935BF71E3970EA2142D2DD91",
+      "gitBlobSHA1": "e59bde249fe90d6c1009db7eba49b97aaf02a95d",
+      "archiveCRC32": 4259488183
+    },
+    {
+      "path": "examples/cpu/rt/sponza.camera",
+      "type": "file",
+      "bytes": 136,
+      "sha256": "ECD590F8E31D9C8AB180D26AD15CD81B9BB2C1FA1AF178E4653448C1C3B74CD9",
+      "gitBlobSHA1": "7d44ec231051cdab2c3dd9d5febaabe74d402621",
+      "archiveCRC32": 659015222
+    },
+    {
+      "path": "examples/cpu/rt/teapot.bvh",
+      "type": "file",
+      "bytes": 225008,
+      "sha256": "9914EC16E8F8945E3E3274FC045D6CFF9E7BCB9495D92856068CDEBF17910E04",
+      "gitBlobSHA1": "efcd7807931570987968b486b667413a4aa05b1b",
+      "archiveCRC32": 3381619500
+    },
+    {
+      "path": "examples/cpu/rt/teapot.camera",
+      "type": "file",
+      "bytes": 136,
+      "sha256": "660D2081A290A98375FA14407BFF401BE4B9ABFB8FF4345F29817A0388C811F6",
+      "gitBlobSHA1": "9a98e3f64676af05505dfb71e8808e527ff4735d",
+      "archiveCRC32": 3875733656
+    },
+    {
+      "path": "examples/cpu/sgemm/.gitignore",
+      "type": "file",
+      "bytes": 13,
+      "sha256": "8F4BBCD78F4163C94C7E94EB65CD22FB9F7D70A0528BAE4E64651533778BFC91",
+      "gitBlobSHA1": "7fdb5f94ee287e3cf17173b487a213e2eacfd894",
+      "archiveCRC32": 1849367471
+    },
+    {
+      "path": "examples/cpu/sgemm/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2222,
+      "sha256": "00BC7305F9DBAC0534B00430CFF2A121EC41BA0148757E91FC1B7FFBEAE93BF3",
+      "gitBlobSHA1": "efadc21c60074a2f48f74c61699637f4b020b4dd",
+      "archiveCRC32": 740406298
+    },
+    {
+      "path": "examples/cpu/sgemm/SGEMM_kernels.ispc",
+      "type": "file",
+      "bytes": 27304,
+      "sha256": "1AC4BD974E27F8C72CA8386E4823C27E6941D2D9031393D9022BC39EF498F602",
+      "gitBlobSHA1": "3e38a2ecb368af27334660a1f654783c15bd3c0f",
+      "archiveCRC32": 3074141963
+    },
+    {
+      "path": "examples/cpu/sgemm/SGEMM_main.cpp",
+      "type": "file",
+      "bytes": 13148,
+      "sha256": "E7FC4C3F58727D1900C9FF3627F81B05247A2EA461D4DCF81A9D996D5C49F92A",
+      "gitBlobSHA1": "0115494423b4b7a1e508d6e1f8bf8b5c402981f9",
+      "archiveCRC32": 2091641946
+    },
+    {
+      "path": "examples/cpu/simple/.gitignore",
+      "type": "file",
+      "bytes": 14,
+      "sha256": "B650463780D7FC1A079E1964A641576284E101C2A2D33685CB7BF035D4E4E8B2",
+      "gitBlobSHA1": "2cff046bb63731bb70bfdccaf2afe3c29a77c58f",
+      "archiveCRC32": 693216751
+    },
+    {
+      "path": "examples/cpu/simple/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2091,
+      "sha256": "BFAB5765602292D3BFC1AC8EAFAF4F1895D339B8008931C5EDB5E869ABAFDF78",
+      "gitBlobSHA1": "418923b988ac4fe0d8547047defa64ad1ae1663d",
+      "archiveCRC32": 3514528107
+    },
+    {
+      "path": "examples/cpu/simple/simple.cpp",
+      "type": "file",
+      "bytes": 2130,
+      "sha256": "8FEE0D59FFAA4BE2BC533A8EE010E061CE69D13EDF42CB0CECAF0E9229FB327D",
+      "gitBlobSHA1": "6ef6d77efba0587ac2845430bac4ba760d4c3716",
+      "archiveCRC32": 1424834610
+    },
+    {
+      "path": "examples/cpu/simple/simple.ispc",
+      "type": "file",
+      "bytes": 2170,
+      "sha256": "DD92318861CA6058457256C1E80156D7F04F1989A6C338910837CDF669429A70",
+      "gitBlobSHA1": "0f462adaabcb1b388a18114af1c5b87aa89a78fd",
+      "archiveCRC32": 806700060
+    },
+    {
+      "path": "examples/cpu/sort/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2270,
+      "sha256": "E3C23288D9953E6BD4A6E0CCB27588E76BC3774541464E255F42F0FDBD8638EB",
+      "gitBlobSHA1": "1c66d59bb08f3569ff51af293ae1e6de3413160f",
+      "archiveCRC32": 958243719
+    },
+    {
+      "path": "examples/cpu/sort/sort.cpp",
+      "type": "file",
+      "bytes": 4245,
+      "sha256": "26CDDA0239DE9FFF6BB1817F78398E6896931D4359D80F63C3EFBEA186F92FD8",
+      "gitBlobSHA1": "23606770a103022e34ffa0d6af1fbdc919af8c7c",
+      "archiveCRC32": 2659974933
+    },
+    {
+      "path": "examples/cpu/sort/sort.ispc",
+      "type": "file",
+      "bytes": 7027,
+      "sha256": "7726A3EA6D6D64F7CD8C2810A80DA90064A69648738372B82670DCA0E4EF2BD5",
+      "gitBlobSHA1": "434974914c3aa29784d79a509d83c1aa21a8ec16",
+      "archiveCRC32": 3554290770
+    },
+    {
+      "path": "examples/cpu/sort/sort_serial.cpp",
+      "type": "file",
+      "bytes": 2235,
+      "sha256": "535B1ABADF358A26732503A0F5EF82A44101164651DB04CB8956E5955FC0522A",
+      "gitBlobSHA1": "dbfc38175cffb100bbf0f766b9409b5c4f18de3c",
+      "archiveCRC32": 3114907090
+    },
+    {
+      "path": "examples/cpu/stencil/.gitignore",
+      "type": "file",
+      "bytes": 15,
+      "sha256": "3BA4C6A82739B68774DE61F28623C4A4D2EC689AE2559A12F75ADDE1B5C91DBD",
+      "gitBlobSHA1": "b11d7c2a47c28246a71bcd3b63ba8f58b10c2055",
+      "archiveCRC32": 3446632708
+    },
+    {
+      "path": "examples/cpu/stencil/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2285,
+      "sha256": "190B140970B2E24D0E75AB38C32AAB911ADC9B07303BB04022603B74E1C0C33E",
+      "gitBlobSHA1": "9b2e152337739d79951686f29ad4fc466a90b680",
+      "archiveCRC32": 737700991
+    },
+    {
+      "path": "examples/cpu/stencil/stencil.cpp",
+      "type": "file",
+      "bytes": 6292,
+      "sha256": "AFE021CAAA7F0D3EA59322DEEDF805BE6F741F6C7F1411578E0BDE3BA36ED0C5",
+      "gitBlobSHA1": "f5e81277b7ee28e2110afd60d61b7f740a2f1b2a",
+      "archiveCRC32": 3229349127
+    },
+    {
+      "path": "examples/cpu/stencil/stencil.ispc",
+      "type": "file",
+      "bytes": 5354,
+      "sha256": "6602AE955F206CCEBA0198B1FD4AEC23101544893E51C14E69F3C60305BA03EA",
+      "gitBlobSHA1": "56d2dc2c4199eb03b4615839ffb3597c9766af29",
+      "archiveCRC32": 4054438855
+    },
+    {
+      "path": "examples/cpu/stencil/stencil_serial.cpp",
+      "type": "file",
+      "bytes": 3372,
+      "sha256": "8E9A5B114784030B9D871BA7D9DFA9212559D0BCF4C936FD66DA75B83593A682",
+      "gitBlobSHA1": "bd0390cc36869117cafefbbe0e738a5e40b90fee",
+      "archiveCRC32": 1053349025
+    },
+    {
+      "path": "examples/cpu/volume_rendering/.gitignore",
+      "type": "file",
+      "bytes": 19,
+      "sha256": "588E693FD30C56FFEE5001B736DCEB76129F13A3EF2F4B06E88BB3EC5E166BBA",
+      "gitBlobSHA1": "20147cf19287c95b947dcae46f82cc04ddc6062d",
+      "archiveCRC32": 2906355507
+    },
+    {
+      "path": "examples/cpu/volume_rendering/camera.dat",
+      "type": "file",
+      "bytes": 319,
+      "sha256": "F6E9AB222FD410173EB6FCC5CFB796C20128F978CD886897732A3A188C798B4B",
+      "gitBlobSHA1": "1176fdfee35d869a112905b06a8269c0c28497be",
+      "archiveCRC32": 2469680896
+    },
+    {
+      "path": "examples/cpu/volume_rendering/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2542,
+      "sha256": "B492B62F887847A5BEA267F298C5ED8B39A57B291EAEFD2040F8F9BAF83F0001",
+      "gitBlobSHA1": "d8a608aeb9b740406415761ddc317bf3d38ff8b8",
+      "archiveCRC32": 2193937682
+    },
+    {
+      "path": "examples/cpu/volume_rendering/density_highres.vol",
+      "type": "file",
+      "bytes": 22873815,
+      "sha256": "2D3858887CFF8222564119F324B7A4525A30E4A1434635F4E57CE17F1A45B6C4",
+      "gitBlobSHA1": "ea55f69716a5f3819515134e5af6e67a4ed3bf47",
+      "archiveCRC32": 3216379089
+    },
+    {
+      "path": "examples/cpu/volume_rendering/density_lowres.vol",
+      "type": "file",
+      "bytes": 367967,
+      "sha256": "0374C42080CE5D1C93FC7ACB0974769014EDFD45874258AB3155B97CC61A51B0",
+      "gitBlobSHA1": "bd6edbcf624ea48a6d8df1f9f6156503b8c8ce11",
+      "archiveCRC32": 2619736026
+    },
+    {
+      "path": "examples/cpu/volume_rendering/volume.cpp",
+      "type": "file",
+      "bytes": 7710,
+      "sha256": "2DE3552EB0A74C009FE7985A4E36CCFE32F94360D9EB02FCD22AEBDBC89504CC",
+      "gitBlobSHA1": "22a3ed6d8b05ae371fc61e7e7490fd20b59dc125",
+      "archiveCRC32": 3554604389
+    },
+    {
+      "path": "examples/cpu/volume_rendering/volume.ispc",
+      "type": "file",
+      "bytes": 12561,
+      "sha256": "88D896CA9260437DD00DF2E88E4DEBE33C3F053E0DE9192CBA0CAFB72D6C1ECE",
+      "gitBlobSHA1": "021151e7d2a18ba084adae3ab3da9461370da347",
+      "archiveCRC32": 3049050548
+    },
+    {
+      "path": "examples/cpu/volume_rendering/volume_serial.cpp",
+      "type": "file",
+      "bytes": 9817,
+      "sha256": "A2F6D933755BC5443F03C4BE8F43A416AC01019C3088A1C6EC5C910EF1E3F07B",
+      "gitBlobSHA1": "5b3d56990b0a9a5e3544196688245dde4954be8b",
+      "archiveCRC32": 2706044493
+    },
+    {
+      "path": "examples/xpu/aobench/ao.cpp",
+      "type": "file",
+      "bytes": 8428,
+      "sha256": "919888747DE680893AE32AC73718DF07650457C1FD456DE06FE8C5C1F3A9AA4D",
+      "gitBlobSHA1": "3f6131d1aeb4ae32ce8b068aa2eedc4cd4d587df",
+      "archiveCRC32": 2313180141
+    },
+    {
+      "path": "examples/xpu/aobench/aobench.ispc",
+      "type": "file",
+      "bytes": 11043,
+      "sha256": "C6A2E1D2C730FDC3C709851EA342A694EF8AB9EC4DADADD7BCA173D775A869BD",
+      "gitBlobSHA1": "fbf4a9f78c0d1407b9e7e153a45225f192827aaa",
+      "archiveCRC32": 3752691792
+    },
+    {
+      "path": "examples/xpu/aobench/ao_serial.cpp",
+      "type": "file",
+      "bytes": 9120,
+      "sha256": "9CC58CFC1F5A8CC70E1D5620553EB72A472DD4977BA311F8CD082C5E59DDF9ED",
+      "gitBlobSHA1": "5b0ca3a40677a29a7199b15e03ef0f1e5ecab1ad",
+      "archiveCRC32": 680169191
+    },
+    {
+      "path": "examples/xpu/aobench/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2088,
+      "sha256": "2D98506BD3F472DA786F5A719758E2632AA331DF1E9F5EDC4110887243D1E27D",
+      "gitBlobSHA1": "829e8c4f006fb5aaa2b6c68deee6a865420e26a8",
+      "archiveCRC32": 2355293972
+    },
+    {
+      "path": "examples/xpu/cmake/AddPerfExample.cmake",
+      "type": "file",
+      "bytes": 6806,
+      "sha256": "03B947AFB171A3DA6A45588FB8D84ECA2B18D3B30790922821B0593BB6995103",
+      "gitBlobSHA1": "c0954e45c81b649e4689a080965fdeedc6adfda9",
+      "archiveCRC32": 3675190253
+    },
+    {
+      "path": "examples/xpu/cmake/TestDrivers.cmake",
+      "type": "file",
+      "bytes": 3642,
+      "sha256": "E56E635BFCC5EDA1981EE9049FCB9A54A69D07763129521B61892EB66E05DBAB",
+      "gitBlobSHA1": "bf99510a30845450bf00b4edd4cb0a3c20d50ae9",
+      "archiveCRC32": 697005596
+    },
+    {
+      "path": "examples/xpu/CMakeLists.txt",
+      "type": "file",
+      "bytes": 4336,
+      "sha256": "B3DFD932444A841AA1977784408E70DD76B71A8981FD122FEE7D769338FBC59A",
+      "gitBlobSHA1": "f540cc21eb49964a063ed353fe9e698445cfe980",
+      "archiveCRC32": 3944125803
+    },
+    {
+      "path": "examples/xpu/common/common_helpers.h",
+      "type": "file",
+      "bytes": 2201,
+      "sha256": "5CBF8F2EF0102EA214239B4E5D59D9430542E0CAC6CC88443B06EAF9C8DA1C2A",
+      "gitBlobSHA1": "3e453089a995bd2916edaf0cbc386e10f6d99a42",
+      "archiveCRC32": 1405753530
+    },
+    {
+      "path": "examples/xpu/common/L0_helpers.h",
+      "type": "file",
+      "bytes": 7983,
+      "sha256": "D209FAA9FE2977CA64057D0D5FB90CE6C2A55F25135109071D91D89C447EF7A9",
+      "gitBlobSHA1": "9f9db1237c14573e569ba7c18b45934a4aff4cc7",
+      "archiveCRC32": 3140780211
+    },
+    {
+      "path": "examples/xpu/common/share.h",
+      "type": "file",
+      "bytes": 1756,
+      "sha256": "B0AAE625AF3B008F78480E78B83ECA9D788FC3F0BD11B1CAFD8B702B4F8201DE",
+      "gitBlobSHA1": "fd3aa86a9989c9473d69d514bd87243a94797f0f",
+      "archiveCRC32": 3010009601
+    },
+    {
+      "path": "examples/xpu/mandelbrot/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2125,
+      "sha256": "1C3E5A1FFEFFE171AD59DE1D66E16FD6050C27CA2F42194391B0FF84D55BD195",
+      "gitBlobSHA1": "7787c37b70e6af700319755428585677ca6bd329",
+      "archiveCRC32": 3620050793
+    },
+    {
+      "path": "examples/xpu/mandelbrot/mandelbrot.cpp",
+      "type": "file",
+      "bytes": 7725,
+      "sha256": "C0D2ADEB2241B04DD28E2CB1A87ECEBAF9EF874B4E2A91EE0961B519F9D08C51",
+      "gitBlobSHA1": "56238784cc2225ccc42877c2eb25ebbf24b6b9ac",
+      "archiveCRC32": 2501964283
+    },
+    {
+      "path": "examples/xpu/mandelbrot/mandelbrot.ispc",
+      "type": "file",
+      "bytes": 3103,
+      "sha256": "8182EA4C1B613F7ABBAA9F876ED83483DBAADDC98E274D21C87774AB3F8779AC",
+      "gitBlobSHA1": "52bd7bb52c2971b2a1ab4331169d640df4323255",
+      "archiveCRC32": 2271760233
+    },
+    {
+      "path": "examples/xpu/mandelbrot/mandelbrot_serial.cpp",
+      "type": "file",
+      "bytes": 2519,
+      "sha256": "4187945FC4F0CEED43BC8329BB3E05DC66AF0BF966B0A0E2F43FC3B713C6F326",
+      "gitBlobSHA1": "034de493a82815c7565da52643e87a3f21605363",
+      "archiveCRC32": 3978194308
+    },
+    {
+      "path": "examples/xpu/noise/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2008,
+      "sha256": "BC1C85EE840A920C72E27328883C8A53C5030765E49907094FF8F5C85C2427F7",
+      "gitBlobSHA1": "4130d7d050d29816e42d90da8ac9bf4b5778bd17",
+      "archiveCRC32": 2158585419
+    },
+    {
+      "path": "examples/xpu/noise/noise.cpp",
+      "type": "file",
+      "bytes": 6927,
+      "sha256": "0E46778DAF3CE7D0A469487F6DF026B745E1AB1FDD4BE22D3298D0994A589FD3",
+      "gitBlobSHA1": "b3dd117355b0c2d9715048f13288f8679a9594ad",
+      "archiveCRC32": 227102779
+    },
+    {
+      "path": "examples/xpu/noise/noise.ispc",
+      "type": "file",
+      "bytes": 7489,
+      "sha256": "41E488B42673049F18B2DD2D11265A640EDF329B8708D0D1EE087C4AFE7D295E",
+      "gitBlobSHA1": "3d6c7236456bb6bbebb30c4a956eed43cb7eded6",
+      "archiveCRC32": 3456955760
+    },
+    {
+      "path": "examples/xpu/noise/noise_serial.cpp",
+      "type": "file",
+      "bytes": 7260,
+      "sha256": "31A1D89368D69E16F153D59D2AEF86582867D306A39CB8F141BADEFFD181CB16",
+      "gitBlobSHA1": "55135515171120abb14129ad5a1357477b63ecc9",
+      "archiveCRC32": 1687267786
+    },
+    {
+      "path": "examples/xpu/pipeline-dpcpp/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2086,
+      "sha256": "C9458A54512737CA573059E5637C12FE12E195735FCC98FA20DE1E2F99FCFC7D",
+      "gitBlobSHA1": "58afd7506b0a4e6f5fe99d56c40589411e57de6e",
+      "archiveCRC32": 1317720830
+    },
+    {
+      "path": "examples/xpu/pipeline-dpcpp/pipeline-dpcpp.cpp",
+      "type": "file",
+      "bytes": 7643,
+      "sha256": "6EF136D9063F1D8BC74789EBD75B01176C26CD4CD04B07E2667BAF65E1E49D8D",
+      "gitBlobSHA1": "93c1612251717aeea3c94dccf7b0e5d5af5ea188",
+      "archiveCRC32": 2426979862
+    },
+    {
+      "path": "examples/xpu/pipeline-dpcpp/pipeline-dpcpp.hpp",
+      "type": "file",
+      "bytes": 3471,
+      "sha256": "413C5EF306CA2CCD9DC64B0DEE25BF17EC832986DC369A9361F50D8C0DE5EA90",
+      "gitBlobSHA1": "bc2181bd3914c7dfbdab0dc37f0a205162252da7",
+      "archiveCRC32": 844063341
+    },
+    {
+      "path": "examples/xpu/pipeline-dpcpp/pipeline-dpcpp.ispc",
+      "type": "file",
+      "bytes": 2231,
+      "sha256": "B7761B4A54D58F87BC22C64B84A8D423907544F66DB36E54FB7E815F7470AA46",
+      "gitBlobSHA1": "38c28d73143a2e3e1c276d74fbddf93b72c4223d",
+      "archiveCRC32": 2468468367
+    },
+    {
+      "path": "examples/xpu/README.txt",
+      "type": "file",
+      "bytes": 6531,
+      "sha256": "FCDB8394D58F40DD4B7E8F03671B27DBCC05A0EE4727B4B94E053BB21EFFA638",
+      "gitBlobSHA1": "ae81e4c2f4462ce9e23c31e96aeda7d97ac1adf1",
+      "archiveCRC32": 407428125
+    },
+    {
+      "path": "examples/xpu/runner.py.in",
+      "type": "file",
+      "bytes": 4620,
+      "sha256": "C90E047E8BE010895C1D61EF8E9EF505DEF573C78EFB14E9D85765EEF66E5FB8",
+      "gitBlobSHA1": "c37afdea809b34172deccc3ee1eda7ada520fd14",
+      "archiveCRC32": 207526393
+    },
+    {
+      "path": "examples/xpu/sgemm/bench.cpp",
+      "type": "file",
+      "bytes": 2224,
+      "sha256": "30DDC914F069B4E75FDCB8DFB9B58B65EE9E7BB3F131F5B506B6A4F7D4628726",
+      "gitBlobSHA1": "2d154b302a6330e528a01b58a958212e6845ccf1",
+      "archiveCRC32": 449979196
+    },
+    {
+      "path": "examples/xpu/sgemm/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2427,
+      "sha256": "6A4C97C72B5A5BF36B51FC92AB3878EFB1EA9451A6F62224E90609472BCE165C",
+      "gitBlobSHA1": "9f8bd61b7af6ec863ae27bdb11bfd4dfbc45534d",
+      "archiveCRC32": 721408241
+    },
+    {
+      "path": "examples/xpu/sgemm/main.cpp",
+      "type": "file",
+      "bytes": 2598,
+      "sha256": "2530D6602EFF209C367073E9C53AB32CAB4D6AAC82AC00C0D208C65F9D632BA5",
+      "gitBlobSHA1": "5d61a5f0919b9b9cbd9158e579d166171a422c65",
+      "archiveCRC32": 3317990840
+    },
+    {
+      "path": "examples/xpu/sgemm/Matrix.h",
+      "type": "file",
+      "bytes": 6235,
+      "sha256": "72B7186B0A0B311582F129AB8E906F879B145049287E478FDB76ADA5644DDF00",
+      "gitBlobSHA1": "b3a1f128346b5ce83d27de4f9afe3fdf44811c25",
+      "archiveCRC32": 2161062876
+    },
+    {
+      "path": "examples/xpu/sgemm/NaiveCMSgemm_genx.cpp",
+      "type": "file",
+      "bytes": 4761,
+      "sha256": "30A10A29BA8F2D3B97E6090ED57C3517FB785CD25FEAE4272E3289F4D04E3C1A",
+      "gitBlobSHA1": "2d786d7e49100b4bc94ce1d67e6bc8bdb1c00100",
+      "archiveCRC32": 199209099
+    },
+    {
+      "path": "examples/xpu/sgemm/naive_sgemm.ispc",
+      "type": "file",
+      "bytes": 2442,
+      "sha256": "B709BC4F7298CA2CB5A81204700FAC0C21098AA790387202B88C1D4F9D4118B1",
+      "gitBlobSHA1": "8b30f31231b180097e73229f366b40cf7b9f4cc6",
+      "archiveCRC32": 971200504
+    },
+    {
+      "path": "examples/xpu/sgemm/sgemm.cpp",
+      "type": "file",
+      "bytes": 9773,
+      "sha256": "8E8C2456544C0AB48ADF5B48D9320D5DD12152DFF774704A1E6CBED4029819BF",
+      "gitBlobSHA1": "6f95091b001c06a5235e83d7004b1b6ccb658ef3",
+      "archiveCRC32": 882427371
+    },
+    {
+      "path": "examples/xpu/sgemm/sgemm.hpp",
+      "type": "file",
+      "bytes": 2126,
+      "sha256": "3C53455392D0DE594C2F6E974D7A5185B65F61CB17EE928BFDB1F2E55CB27AD1",
+      "gitBlobSHA1": "f4a80dde72b037bfb6a5174f7098f9e49d3ddde8",
+      "archiveCRC32": 1328285031
+    },
+    {
+      "path": "examples/xpu/simple/CMakeLists.txt",
+      "type": "file",
+      "bytes": 1995,
+      "sha256": "C288CD6BB6B51B7E687858E163B3D68DA064AA0D94E7FDECAF7647B8E79E2C2B",
+      "gitBlobSHA1": "9fcc5bac2ce2c001c660c9e8a82b43e86f5987f4",
+      "archiveCRC32": 94146627
+    },
+    {
+      "path": "examples/xpu/simple/simple.cpp",
+      "type": "file",
+      "bytes": 5889,
+      "sha256": "017739066FA18296A4B17DD762C48C58468A0DBCB5F383129C08755B9FD2EE9E",
+      "gitBlobSHA1": "fdcc60a71d2e6c4307142ea2f6287ecd04e28658",
+      "archiveCRC32": 1136991259
+    },
+    {
+      "path": "examples/xpu/simple/simple.ispc",
+      "type": "file",
+      "bytes": 2318,
+      "sha256": "8077C2C13AA190F12DE0223A951C5BD7922CD3491B56C485C5D07FC301E1F5C6",
+      "gitBlobSHA1": "fb401dc37dbb6b250b28dd1e60b716c94c50801f",
+      "archiveCRC32": 2223397181
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2073,
+      "sha256": "85976BE4425638D9728F321EA0860ECFED9FDBAFFF68901A8FBB13D6106B8049",
+      "gitBlobSHA1": "2691541c2ae030cbc8e417aff7eb6eb2ea63298f",
+      "archiveCRC32": 3624617690
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp/simple-dpcpp.cpp",
+      "type": "file",
+      "bytes": 7310,
+      "sha256": "379B9D9FAFACE9C695FA6588591B37DB578FF35A090952FCD235D3B0185BC063",
+      "gitBlobSHA1": "2d5731a9fa3495f7507f20dba41fd0466256a827",
+      "archiveCRC32": 1198847339
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp/simple-dpcpp.hpp",
+      "type": "file",
+      "bytes": 1539,
+      "sha256": "71DD443CC5D7CA2A89F58242517AD9FEC54D0BDF6293F9E3115BD994DD96A069",
+      "gitBlobSHA1": "1ed4bd8530fa9f571330c580a4bc2dbf23e2ee07",
+      "archiveCRC32": 2543787353
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp/simple-dpcpp.ispc",
+      "type": "file",
+      "bytes": 2320,
+      "sha256": "407C3E885FA6BCFF365E9CF6DE7B6E22BC17FF9C12975F9D76D99451FC9EC836",
+      "gitBlobSHA1": "5203890f11d93d7452977e4bfc391d1e69dea3f9",
+      "archiveCRC32": 2220595600
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp-l0/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2090,
+      "sha256": "93F6B05C10BA9ECE0E259B741B852E921853FA5C44D303D4AC98C501A93F17EE",
+      "gitBlobSHA1": "648de24b36eb4a965cf6ffc66aeac51529646616",
+      "archiveCRC32": 2492307016
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp-l0/simple-dpcpp-l0.cpp",
+      "type": "file",
+      "bytes": 8064,
+      "sha256": "227213A855A3E46A80A41AA13A8237BC4444664C3AD628AC97C6820C82CD0237",
+      "gitBlobSHA1": "85b74d9d4e533b13c7f627d647db9693bc178636",
+      "archiveCRC32": 2721612583
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp-l0/simple-dpcpp-l0.hpp",
+      "type": "file",
+      "bytes": 1821,
+      "sha256": "754B715B59DF9D55D4D8EE3BA1F2BD1BAF6F0FE28332881649AE36E5076F7093",
+      "gitBlobSHA1": "8004566212905df47c7e9b5c7a2476618cd29d97",
+      "archiveCRC32": 3534435892
+    },
+    {
+      "path": "examples/xpu/simple-dpcpp-l0/simple-dpcpp-l0.ispc",
+      "type": "file",
+      "bytes": 2320,
+      "sha256": "407C3E885FA6BCFF365E9CF6DE7B6E22BC17FF9C12975F9D76D99451FC9EC836",
+      "gitBlobSHA1": "5203890f11d93d7452977e4bfc391d1e69dea3f9",
+      "archiveCRC32": 2220595600
+    },
+    {
+      "path": "examples/xpu/simple-usm/CMakeLists.txt",
+      "type": "file",
+      "bytes": 2011,
+      "sha256": "31367B83F6691C29E1E9A00111A6CA583A04C6BEA2F2D73002B4A2A41E73D0C1",
+      "gitBlobSHA1": "8ab687d957e985c8cc38a209effd0793a3c908a6",
+      "archiveCRC32": 307575099
+    },
+    {
+      "path": "examples/xpu/simple-usm/simple-usm.cpp",
+      "type": "file",
+      "bytes": 5469,
+      "sha256": "A3D8F3B96E17C6CB51AB477A48C302B069A5298C20A01D924C4057490A5B774A",
+      "gitBlobSHA1": "383b5756558c3328612c4201450e0ec0ac608002",
+      "archiveCRC32": 1725458235
+    },
+    {
+      "path": "examples/xpu/simple-usm/simple-usm.ispc",
+      "type": "file",
+      "bytes": 2299,
+      "sha256": "C5617657253B17BD8F1FCC4AE40CB9F3D6CBB561B8FD824901D4314BD259C27F",
+      "gitBlobSHA1": "6bc972140760f125ac999e63ea7c169d7892599d",
+      "archiveCRC32": 3924031257
+    },
+    {
+      "path": "examples/xpu/TestLists.txt",
+      "type": "file",
+      "bytes": 9575,
+      "sha256": "928D8C497D234456EA1B010AD2BD6362BC2E49D61B3B5F19E8F94A37E834E446",
+      "gitBlobSHA1": "0f7477342016f78710ad1a00b3fb861fc061da5e",
+      "archiveCRC32": 2547332326
+    },
+    {
+      "path": "faq.html",
+      "type": "file",
+      "bytes": 45059,
+      "sha256": "07B887BD600E536A59A31F4733506814A6F99837F2968F4A0C29BB1449F88B85",
+      "gitBlobSHA1": "09080136e457c7985e8f29792f33e743e80188c1",
+      "archiveCRC32": 304817681
+    },
+    {
+      "path": "include/ispcrt/ispcrt.h",
+      "type": "file",
+      "bytes": 4752,
+      "sha256": "C211222C01F7F2CAD30552DE54C16556BB0F20BF707945BD3C76CE9987FB84A6",
+      "gitBlobSHA1": "bfaf40693d0b9308f1c7a6e8995f1903c74e956a",
+      "archiveCRC32": 2802302547
+    },
+    {
+      "path": "include/ispcrt/ispcrt.hpp",
+      "type": "file",
+      "bytes": 16915,
+      "sha256": "3919F807BE31E48E935265740160291BDD9BABFD55AC7C741518C02971DBDA8B",
+      "gitBlobSHA1": "87f7c07c9ea4e78816209d74dbf0a505e3efb487",
+      "archiveCRC32": 52127767
+    },
+    {
+      "path": "include/ispcrt/ispcrt.isph",
+      "type": "file",
+      "bytes": 667,
+      "sha256": "8843B26516A59B4F1CF8A87DC5762ADF7DC0270A2495C9E1C7BB276E5FC91356",
+      "gitBlobSHA1": "da8eab1eb1fe0cbddb160b7f4ca98072c080ebaa",
+      "archiveCRC32": 814739099
+    },
+    {
+      "path": "ispc.html",
+      "type": "file",
+      "bytes": 293620,
+      "sha256": "8408603AD222847EE8B281E9289F2F5D460F7FA32835E2A3EDA61BBAFA851BB8",
+      "gitBlobSHA1": "c245ac5b7c05a0772cd7d9fe73b39009f9d3b45c",
+      "archiveCRC32": 4219794092
+    },
+    {
+      "path": "lib/cmake/ispcrt-1.16.1/Findlevel_zero.cmake",
+      "type": "file",
+      "bytes": 1035,
+      "sha256": "8A8144281D9D8B625E5B03A18C72DDF66E46825E611BAA2D501264E2164FD9A2",
+      "gitBlobSHA1": "2e3008a4546f1a46c0a04138e2982c58fddd9745",
+      "archiveCRC32": 74281754
+    },
+    {
+      "path": "lib/cmake/ispcrt-1.16.1/ispc.cmake",
+      "type": "file",
+      "bytes": 12344,
+      "sha256": "CC273FE003C2A0B4445FE13F4AC30E295542EAFD432719A43A8790BC1B43EA6E",
+      "gitBlobSHA1": "0d52f7817c555d1b48e4a530485586ade05a6c6b",
+      "archiveCRC32": 4226430835
+    },
+    {
+      "path": "lib/cmake/ispcrt-1.16.1/ispcrtConfig.cmake",
+      "type": "file",
+      "bytes": 1693,
+      "sha256": "5F27AEBC0D6FD142F20B8B65B2E272113D165E02007326A9140B675981973F0A",
+      "gitBlobSHA1": "0c29e74ed335c642d196cac28fc68997882b74c9",
+      "archiveCRC32": 2784700394
+    },
+    {
+      "path": "lib/cmake/ispcrt-1.16.1/ispcrt_Exports-release.cmake",
+      "type": "file",
+      "bytes": 1404,
+      "sha256": "3A7F5ADEA4BFF82ED7C9718CEA774AFC9CF75CF1E65D574D4177EB6530A5F0FB",
+      "gitBlobSHA1": "c064326a86d98ea9d8d0d51c5dad832f07aac9c3",
+      "archiveCRC32": 3570414536
+    },
+    {
+      "path": "lib/cmake/ispcrt-1.16.1/ispcrt_Exports.cmake",
+      "type": "file",
+      "bytes": 3930,
+      "sha256": "B154572BE0A298A61F67A561513641F18C747D389E542A49BD613FF6A271EC77",
+      "gitBlobSHA1": "a7df71825e28d0833cc99ae08dcb53e42a014659",
+      "archiveCRC32": 2428144166
+    },
+    {
+      "path": "lib/ispcrt.lib",
+      "type": "file",
+      "bytes": 103130,
+      "sha256": "56E03C584B27F8222E9532A3A5C3929187AC4E6A4DA655A9B3C15B3AFCB6AAF7",
+      "gitBlobSHA1": "e5035a9a86b9c9aed0537e6e3d3192bef14c7bbd",
+      "archiveCRC32": 449520405
+    },
+    {
+      "path": "lib/ispcrt_static.lib",
+      "type": "file",
+      "bytes": 557240,
+      "sha256": "E94F4AD05DAC146BDE806797852A6120379A2AEB0FD60A62741C8E4359A38F9C",
+      "gitBlobSHA1": "3e504d6dcac297fc266af5e87efda3b469121193",
+      "archiveCRC32": 3608591364
+    },
+    {
+      "path": "LICENSE.txt",
+      "type": "file",
+      "bytes": 1543,
+      "sha256": "7BD6323EF5A518001C217C1F054D3CF56C60A803D58773C512D3AC4EDC750620",
+      "gitBlobSHA1": "9317e9f3cbf31de3927db9247751187e7631b71e",
+      "archiveCRC32": 4023656504
+    },
+    {
+      "path": "perfguide.html",
+      "type": "file",
+      "bytes": 40477,
+      "sha256": "2875F5B5E703D4AFF692ADF85E0001A2992257C6D446FC6FFEFD4B0FA0E54E0A",
+      "gitBlobSHA1": "0bb1b5c828deb0b89d359d038d52ec933db68b7e",
+      "archiveCRC32": 191857311
+    },
+    {
+      "path": "ReleaseNotes.txt",
+      "type": "file",
+      "bytes": 59553,
+      "sha256": "915FDF6AB27A0F75EE7AAF68D7EDFB01CF8FE6D3E8B4ED82E9F4EF1487918A9A",
+      "gitBlobSHA1": "f49bac5f3cc26a9584d2781ac3e140f081a78170",
+      "archiveCRC32": 100955792
+    },
+    {
+      "path": "third-party-programs.txt",
+      "type": "file",
+      "bytes": 115626,
+      "sha256": "0699C03656D6BC067D07FB0EE8EF513AA8A05E9E25D70B421C50853555848C88",
+      "gitBlobSHA1": "e6cb8fa8f78c59dde3474e40448ee8f637624a70",
+      "archiveCRC32": 4085174004
+    }
+  ]
+}

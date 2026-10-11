@@ -1,0 +1,39 @@
+{
+  "status": "SOURCE_ONLY_NOT_RUN",
+  "beforeFreezeSHA256": "FD0BF25CD80D3D6F1F1A4579E6EC54285F9F089A8ED795354D08B91381AF1BBC",
+  "afterFreezeSHA256": "5A94E4F3E8E84D0ADE4DFD3CDFF9A2027314C465B2B5B78ACD5B48B26E28BD47",
+  "oldInputs": 456,
+  "oldInputsUnchanged": 453,
+  "changed": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake",
+      "before": "5307BB83AD2B3D40D556C2363C303F1DB8986DB144C86F6554019CD55A241A88",
+      "after": "DBDC7D64FC3F700B79701943535C99C85E0541306CCF44BAC81A6C9A505D06AA"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake",
+      "before": "35746CAA009025F6488E447C43D3EC0CCDE60107D8CBF8F9F1A7C7AD02BF6DDD",
+      "after": "F4FBE6B57D9DB20A4DB3FC4C6E583468F08B815C34EACE66BC359849D0AE5158"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/README.md",
+      "before": "003ED3EA34F4252D7F7FE737B52E0146567A2A340565F3D2C7F15D4D780C905F",
+      "after": "437789C26B3648A2165C612840445AA6C9043F2DEA347CFD7AADFEC1568E6B7C"
+    }
+  ],
+  "added": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/parent-source-eol-review-rev1.json",
+      "role": "audited provenance reference",
+      "bytes": 74688,
+      "sha256": "1FD6F649BF674089686282B42C703F7F5613BA4A569DF940051AF26277E042E0"
+    },
+    {
+      "path": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "role": "audited archive or installed native tool input",
+      "bytes": 301368,
+      "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+    }
+  ],
+  "reason": "Explicit audited PowerShell Core7.6.5 input/hash and native x64 Find guard; README literal arguments updated. No compiler/codec/test change."
+}

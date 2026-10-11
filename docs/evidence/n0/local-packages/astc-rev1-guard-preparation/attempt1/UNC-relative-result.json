@@ -1,0 +1,14 @@
+{
+  "label": "UNC-relative",
+  "scope": "PRODUCER",
+  "nativeExit": 1,
+  "seconds": 0.028849,
+  "expectedError": "JE_ASTC_OUTPUT must be an absolute local path",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/UNC-relative"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

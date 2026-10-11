@@ -1,0 +1,298 @@
+{
+  "kind": "readonly PE/COFF bytes and retained producer logs; no tool/DLL execution",
+  "dll": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-package-audit\\extracted\\ISPCTexComp-36b80aa-je-rev1-windows\\ISPCTexComp\\bin\\ispc_texcomp.dll",
+    "bytes": 1537024,
+    "sha256": "3F6E8AD2AED34192836E39A2458FABC6ED48F937B3679D13A03315C3344F2C28",
+    "machine": "AMD64",
+    "PE": "PE32+",
+    "isDLL": true,
+    "exports": [
+      "CompressBlocksASTC",
+      "CompressBlocksBC1",
+      "CompressBlocksBC3",
+      "CompressBlocksBC6H",
+      "CompressBlocksBC7",
+      "CompressBlocksETC1",
+      "GetProfile_alpha_basic",
+      "GetProfile_alpha_fast",
+      "GetProfile_alpha_slow",
+      "GetProfile_alpha_ultrafast",
+      "GetProfile_alpha_veryfast",
+      "GetProfile_astc_alpha_fast",
+      "GetProfile_astc_alpha_slow",
+      "GetProfile_astc_fast",
+      "GetProfile_basic",
+      "GetProfile_bc6h_basic",
+      "GetProfile_bc6h_fast",
+      "GetProfile_bc6h_slow",
+      "GetProfile_bc6h_veryfast",
+      "GetProfile_bc6h_veryslow",
+      "GetProfile_etc_slow",
+      "GetProfile_fast",
+      "GetProfile_slow",
+      "GetProfile_ultrafast",
+      "GetProfile_veryfast",
+      "ReplicateBorders"
+    ],
+    "exportsMatchOriginalDef": true,
+    "imports": [
+      "MSVCP140.dll",
+      "VCRUNTIME140.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "KERNEL32.dll"
+    ]
+  },
+  "importLibrary": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-package-audit\\extracted\\ISPCTexComp-36b80aa-je-rev1-windows\\ISPCTexComp\\bin\\ispc_texcomp.lib",
+    "bytes": 7666,
+    "sha256": "941E378270612792DB91581123C121F6C8214F3AF32F9C1F2B246D257B034580",
+    "members": [
+      {
+        "name": "/",
+        "bytes": 1562,
+        "kind": "linker table",
+        "machine": null
+      },
+      {
+        "name": "/",
+        "bytes": 1572,
+        "kind": "linker table",
+        "machine": null
+      },
+      {
+        "name": "//",
+        "bytes": 17,
+        "kind": "linker table",
+        "machine": null
+      },
+      {
+        "name": "/0",
+        "bytes": 514,
+        "kind": "COFF object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 255,
+        "kind": "COFF object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 296,
+        "kind": "COFF object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 56,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 55,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 55,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 56,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 55,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 56,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 60,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 59,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 59,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 64,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 63,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 64,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 64,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 58,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 54,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 59,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 58,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 58,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 62,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 62,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 57,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 53,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 53,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 58,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 57,
+        "kind": "import object",
+        "machine": 34404
+      },
+      {
+        "name": "/0",
+        "bytes": 54,
+        "kind": "import object",
+        "machine": 34404
+      }
+    ],
+    "imports": [
+      "CompressBlocksASTC",
+      "CompressBlocksBC1",
+      "CompressBlocksBC3",
+      "CompressBlocksBC6H",
+      "CompressBlocksBC7",
+      "CompressBlocksETC1",
+      "GetProfile_alpha_basic",
+      "GetProfile_alpha_fast",
+      "GetProfile_alpha_slow",
+      "GetProfile_alpha_ultrafast",
+      "GetProfile_alpha_veryfast",
+      "GetProfile_astc_alpha_fast",
+      "GetProfile_astc_alpha_slow",
+      "GetProfile_astc_fast",
+      "GetProfile_basic",
+      "GetProfile_bc6h_basic",
+      "GetProfile_bc6h_fast",
+      "GetProfile_bc6h_slow",
+      "GetProfile_bc6h_veryfast",
+      "GetProfile_bc6h_veryslow",
+      "GetProfile_etc_slow",
+      "GetProfile_fast",
+      "GetProfile_slow",
+      "GetProfile_ultrafast",
+      "GetProfile_veryfast",
+      "ReplicateBorders"
+    ],
+    "importsMatchOriginalDef": true
+  },
+  "CRT": {
+    "observedCompileFlags": "/MD",
+    "compilerCommand": [
+      "         C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /O2 /Oi /GL /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo\"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build/obj/\" /Fd\"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build/obj/vc143.pdb\" /external:W3 /Gd /TP /FC /errorReport:queue ispc_texcomp.cpp ispc_texcomp_astc.cpp"
+    ],
+    "meaning": "This build only; no historical ABI/general mixed CRT acceptance"
+  },
+  "warnings": {
+    "observed": [
+      "0>C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.Targets(60,3): warning MSB4011: \"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\NoOverrides.props\" no se puede volver a importar. Ya se importó en \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Microsoft.Common.props (34,3)\". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "1>kernel_astc.ispc(134,37): warning G8731B2B2: Typecasting to type \"/*unbound*/ unsigned int32 * /*unbound*/\" (variability not specified) from \"uniform\" type \"uniform unsigned int8 * uniform\" results in \"uniform\" variability. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "1>kernel_astc.ispc(1788,15): warning G0E19D4CF: Symbol \"scale\" shadows symbol declared in outer scope. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "1>kernel_astc.ispc(2219,26): warning G8731B2B2: Typecasting to type \"/*unbound*/ unsigned int32 * /*unbound*/\" (variability not specified) from \"uniform\" type \"uniform unsigned int8 * uniform\" results in \"uniform\" variability. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.Targets(60,3): warning MSB4011: \"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\NoOverrides.props\" no se puede volver a importar. Ya se importó en \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Microsoft.Common.props (34,3)\". Lo más probable es que se trate de un error al crear la compilación. Se omitirá esta importación. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "kernel_astc.ispc(134,37): warning G8731B2B2: Typecasting to type \"/*unbound*/ unsigned int32 * /*unbound*/\" (variability not specified) from \"uniform\" type \"uniform unsigned int8 * uniform\" results in \"uniform\" variability. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "kernel_astc.ispc(1788,15): warning G0E19D4CF: Symbol \"scale\" shadows symbol declared in outer scope. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]",
+      "kernel_astc.ispc(2219,26): warning G8731B2B2: Typecasting to type \"/*unbound*/ unsigned int32 * /*unbound*/\" (variability not specified) from \"uniform\" type \"uniform unsigned int8 * uniform\" results in \"uniform\" variability. [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\source-work\\encoder\\ispc_texcomp\\ispc_texcomp.vcxproj]"
+    ],
+    "interpretation": "MSB4011 duplicate empty props import and three upstream ISPC warning sites retained; performance warning text also exists. No source fix or behavior claim."
+  },
+  "nativeConsumer": "NOT_RUN",
+  "sourceMutation": false
+}

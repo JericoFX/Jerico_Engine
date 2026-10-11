@@ -1,0 +1,18 @@
+{
+  "label": "output-existing",
+  "scope": "PRODUCER",
+  "nativeExit": 1,
+  "seconds": 0.0292351,
+  "expectedError": "output must be new",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-existing",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/source-work",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/stage",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/packages"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

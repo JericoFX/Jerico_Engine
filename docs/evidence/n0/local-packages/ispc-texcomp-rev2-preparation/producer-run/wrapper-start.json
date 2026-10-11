@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-11T09:07:01.4241899Z",
+  "PID": 221464,
+  "launcher": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "PowerShell": "7.6.5",
+  "script": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev2-preparation\\RunProducer.ps1",
+  "scriptSHA256": "EC0EC8323A72E6958C24D769F67EF4448E4CFDF3672FA2C38E0CBC040EF98D4A",
+  "workingDirectory": "F:/JericoEngine/JericoEngine",
+  "scope": "Single ISPCTexComp producer, no consumer/guards/Root/retry"
+}

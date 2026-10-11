@@ -1,0 +1,86 @@
+[
+  {
+    "name": "lz4-1.9.4-je-rev1-windows.tar.xz",
+    "bytes": 167540,
+    "sha256": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac",
+    "sidecar": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac *lz4-1.9.4-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "bytes": 7040252,
+    "sha256": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888",
+    "sidecar": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888 *OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+    "bytes": 218928,
+    "sha256": "4c4ae3b71be82837b18090029d7ec49a19af80c12b35008b70a0d6f967acc589",
+    "sidecar": "4c4ae3b71be82837b18090029d7ec49a19af80c12b35008b70a0d6f967acc589 *mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "expat-2.4.2-je-rev1-windows.tar.xz",
+    "bytes": 196028,
+    "sha256": "c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925",
+    "sidecar": "c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925 *expat-2.4.2-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "tiff-4.2.0.15-je-rev1-windows.tar.xz",
+    "bytes": 452948,
+    "sha256": "d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2",
+    "sidecar": "d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2 *tiff-4.2.0.15-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "png-1.6.37-je-rev1-windows.tar.xz",
+    "bytes": 421588,
+    "sha256": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4",
+    "sidecar": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4 *png-1.6.37-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "d3dx12-headers-je-rev1-windows.tar.xz",
+    "bytes": 16652,
+    "sha256": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73",
+    "sidecar": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73 *d3dx12-headers-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "bytes": 6880112,
+    "sha256": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0",
+    "sidecar": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0 *OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz",
+    "bytes": 59403488,
+    "sha256": "1f2d47f5b1a536b7bd27a4beba3860e2c384f6780efcf7a7d2b017bef1ffe53c",
+    "sidecar": "1f2d47f5b1a536b7bd27a4beba3860e2c384f6780efcf7a7d2b017bef1ffe53c *vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+    "bytes": 7352940,
+    "sha256": "62fc6978933215440718d8d810ab5ecf20a36368a8592d12822f902ed0654782",
+    "sidecar": "62fc6978933215440718d8d810ab5ecf20a36368a8592d12822f902ed0654782 *DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "astc-encoder-3.2-je-rev1-windows.tar.xz",
+    "bytes": 1179220,
+    "sha256": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca",
+    "sidecar": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca *astc-encoder-3.2-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  },
+  {
+    "name": "ISPCTexComp-36b80aa-je-rev1-windows.tar.xz",
+    "bytes": 491564,
+    "sha256": "8308677642330694ab1c63c74a7aaabf4a0a9633234f998b12e838cda64008df",
+    "sidecar": "8308677642330694ab1c63c74a7aaabf4a0a9633234f998b12e838cda64008df *ISPCTexComp-36b80aa-je-rev1-windows.tar.xz",
+    "sidecarMatches": true
+  }
+]

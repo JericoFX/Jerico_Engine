@@ -1,0 +1,67 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED",
+  "owner": "Luna assigned exclusively by parent",
+  "scope": "One CMake -P ISPCTexComp producer only",
+  "wrapper": {
+    "launcher": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+    "arguments": [
+      "-NoLogo",
+      "-NoProfile",
+      "-File",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev2-preparation/RunProducer.ps1"
+    ],
+    "count": 4,
+    "scriptSHA256": "EC0EC8323A72E6958C24D769F67EF4448E4CFDF3672FA2C38E0CBC040EF98D4A"
+  },
+  "native": {
+    "executable": "C:/Program Files/CMake/bin/cmake.exe",
+    "executableSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+    "arguments": [
+      "-DJE_ISPC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+      "-DJE_ISPC_SOURCE_ROOT=F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd",
+      "-DJE_ISPC_SOURCE_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/source-immutable-manifest.json",
+      "-DJE_ISPC_TOOL_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+      "-DJE_ISPC_TOOL_ROOT=F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+      "-DJE_ISPC_TOOL_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/tool-immutable-manifest.json",
+      "-DJE_ISPC_VS_ROOT=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+      "-DJE_ISPC_POWERSHELL=C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "-DJE_ISPC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake"
+    ],
+    "count": 11,
+    "workingDirectory": "F:/JericoEngine/JericoEngine",
+    "freshOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build"
+  },
+  "authority": {
+    "sourceFreeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/source-freeze-ispc-texcomp-rev2.json",
+    "sourceFreezeSHA256": "5A94E4F3E8E84D0ADE4DFD3CDFF9A2027314C465B2B5B78ACD5B48B26E28BD47",
+    "argumentFile": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/validation-arguments-rev2.json",
+    "argumentSHA256": "35B6A7D77269F60E2A067B401980E01C3F4576E2F755D0DE09CFB3B1851127F4",
+    "inputs": 458
+  },
+  "outputs": {
+    "evidenceDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev2-preparation/producer-run",
+    "files": [
+      "wrapper-start.json",
+      "preflight-458.json",
+      "native-start.json",
+      "producer.stdout.raw.log",
+      "producer.stderr.raw.log",
+      "postflight-458.json",
+      "producer-result.json"
+    ]
+  },
+  "dispatch": "Parent review and explicit Luna assignment required; no execution during preparation",
+  "excluded": [
+    "Consumer",
+    "guards",
+    "Root",
+    "versions",
+    "retry",
+    "autorepair",
+    "acceptance"
+  ],
+  "resultSemantics": "Native ExitCode/time recorded unchanged; wrapper exits2 for wrapper/input mismatch, native result retained; no PASS inference"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PARENT CURRENT FREEZE/DERIVED ORIGINAL ROOT61; NATIVE NOT RUN",
+  "sourceCount": 16868,
+  "oldSourceCount": 15674,
+  "reviewedCatalogDeltas": [
+    {
+      "beforeSHA256": "ef3cd0c05c25764de725a0d197846be6f0f5ca043a812812e9db5b757733f326",
+      "afterSHA256": "333778663011B38AF79966FAFA55FDA85DB7C29DD58BFE40CA0746754DC62F49",
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "reason": "Parent accepted two texture codec catalog bindings; exact inverse retained",
+      "origin": "Original Root61 current reviewed inputs"
+    },
+    {
+      "beforeSHA256": "EF3CD0C05C25764DE725A0D197846BE6F0F5CA043A812812E9DB5B757733F326",
+      "afterSHA256": "333778663011B38AF79966FAFA55FDA85DB7C29DD58BFE40CA0746754DC62F49",
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "reason": "Parent accepted two texture codec catalog bindings; exact inverse retained",
+      "origin": "Parent accepted ISPC producer/archive/native consumers/guards inputs"
+    }
+  ],
+  "arguments": 61,
+  "argumentsUnchanged": true,
+  "cacheFiles": 40,
+  "wheelhouseFiles": 44,
+  "syntaxErrors": 0,
+  "assignmentSHA256": "B5D472C9CB4474B40A6B287AFBE32FC7E1931843CC7228EC0066114CBCBB9A3C",
+  "freezeSHA256": "842A5B6427CD5C76F590DDE0FD049ACEA65E42CDD08B7168C6B10D2F63141F8D",
+  "donorDriverSHA256": "D0876C989526EE283CEFFDF03674C3154740263A0877F7A29A9DE1763DABAA23",
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-texture-codecs-local-final/run-root-configure-texture-codecs-parent-rev1.ps1",
+  "driverSHA256": "54F87CCC1935E743C61F810F80983501CC0EA96843232EF667306F0AC8BCD3C0",
+  "replacements": [
+    [
+      "root-dxc-local-final",
+      "root-texture-codecs-local-final"
+    ],
+    [
+      "9CF710AFC67CBFF9BF635E5E901911108A17B233940FE6EFBED7C083C48BA2F0",
+      "B5D472C9CB4474B40A6B287AFBE32FC7E1931843CC7228EC0066114CBCBB9A3C"
+    ],
+    [
+      "AF617F8664743B42A80CC17A31475998C2F1A3819BE430C0FD073A4F7696EAA3",
+      "842A5B6427CD5C76F590DDE0FD049ACEA65E42CDD08B7168C6B10D2F63141F8D"
+    ],
+    [
+      "15674",
+      "16868"
+    ],
+    [
+      ".Count -ne 36 -or $wheelFiles.Count -ne 44",
+      ".Count -ne 40 -or $wheelFiles.Count -ne 44"
+    ],
+    [
+      "'DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz')",
+      "'DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz','astc-encoder-3.2-je-rev1-windows.tar.xz','ISPCTexComp-36b80aa-je-rev1-windows.tar.xz')"
+    ]
+  ],
+  "nativeLaunchReceiptAdded": true,
+  "integrationSHA256": "B56F98A47D4D0BB5B4DA14EF9DE267141A482E97FAD7A2CC83C7BEE57D3371EE",
+  "nativeOwner": "/root/validation_luna",
+  "limits": "Original configure only; source candidates still uncompiled; no engine acceptance or dependency footprint improvement."
+}

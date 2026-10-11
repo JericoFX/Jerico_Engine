@@ -1,0 +1,12 @@
+{
+  "executable": "C:/Program Files/CMake/bin/ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "--output-junit",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-consumer-validation/attempt1/ctest-Release.xml"
+  ]
+}

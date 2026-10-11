@@ -1,0 +1,2949 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "sourceInputs": 458,
+  "SDKFiles": 21,
+  "authorityInputs": 11,
+  "count": 490,
+  "entries": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake",
+      "role": "candidate source",
+      "bytes": 8719,
+      "sha256": "DBDC7D64FC3F700B79701943535C99C85E0541306CCF44BAC81A6C9A505D06AA"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake",
+      "role": "candidate source",
+      "bytes": 1880,
+      "sha256": "F4FBE6B57D9DB20A4DB3FC4C6E583468F08B815C34EACE66BC359849D0AE5158"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/NOTICE.txt",
+      "role": "candidate source",
+      "bytes": 571,
+      "sha256": "2F7D03244E746971DA70E60BD676E2452AF46B453C364ECF412AE01E3B459409"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/README.md",
+      "role": "candidate source",
+      "bytes": 5366,
+      "sha256": "437789C26B3648A2165C612840445AA6C9043F2DEA347CFD7AADFEC1568E6B7C"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/RunBuild.cmd.in",
+      "role": "candidate source",
+      "bytes": 1895,
+      "sha256": "C8CDA392B961F43208CD68CD6BECC7CC613BB18431DA181EA47CEC825065989F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/tests/CMakeLists.txt",
+      "role": "candidate source",
+      "bytes": 2025,
+      "sha256": "EF4C9E03BFE159CFCBEBA3B0DE3286F4EC123EFCDD6ADDF073582AD7FCCD99D7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/tests/ISPCTexCompConsumer.cpp",
+      "role": "candidate source",
+      "bytes": 14555,
+      "sha256": "2E6CC9F3E8AE3703527155D78C898CAE0C466AE0220C70106F7D2D9877A2910F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/VerifyInputs.ps1",
+      "role": "candidate source",
+      "bytes": 2789,
+      "sha256": "8A0A48AFABD6CF05519EDD629BAB424E01481AA3182F5EB3CA5BC14F2DC2FDEC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/.gitignore",
+      "role": "immutable encoder source",
+      "bytes": 3431,
+      "sha256": "FB330FCE25E5C6E5687618F0FB5DE38FF0CB9643F04DB1A40DD4093D74F797D5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor.pdf",
+      "role": "immutable encoder source",
+      "bytes": 162430,
+      "sha256": "723719C0DA1F32F639729EDBBD7C9AA762A2BB5DF4AB11FCC990AA14BE11B235"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/.editorconfig",
+      "role": "immutable encoder source",
+      "bytes": 158,
+      "sha256": "33AFFD76513DFAA9C163FD5349744C03654DCE6898A7334B0E856B420F7629EE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/.gitattributes",
+      "role": "immutable encoder source",
+      "bytes": 358,
+      "sha256": "988550FA928681F26AAA6E23BCF1B49ECAF5A2743822467C8DA9AFCC27E6265E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/.gitignore",
+      "role": "immutable encoder source",
+      "bytes": 156,
+      "sha256": "BE9B2BE99AE00FF7562075B679459E9E969BB76594E7A9E80B9E99075AA6DACF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DDSTextureLoader.cpp",
+      "role": "immutable encoder source",
+      "bytes": 62913,
+      "sha256": "94B03641E9276E6E9D3012D433DDCAA96FD01EDD50D1405E47BCE3D5E2C1FFCB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DDSTextureLoader.h",
+      "role": "immutable encoder source",
+      "bytes": 4994,
+      "sha256": "63DCD75D694D522DA81D3AD9512A70728CCD6F794CE88F32AB851562019ACB71"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT.cpp",
+      "role": "immutable encoder source",
+      "bytes": 199568,
+      "sha256": "3930792E8591D993AD9545E24CCED3766FD1F65C190043B385681BB71F0063B0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT.h",
+      "role": "immutable encoder source",
+      "bytes": 16664,
+      "sha256": "0344299A50BFBBA238023277FE4A88F8A8B196E4DE4EA494D84F5C53744346EB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUTDevice11.cpp",
+      "role": "immutable encoder source",
+      "bytes": 51208,
+      "sha256": "C39F15282F02EAAD8DB7D91D25DF558CECB55ACDDB2A91C5B1BA2284F0DCCBBF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUTDevice11.h",
+      "role": "immutable encoder source",
+      "bytes": 9367,
+      "sha256": "3BE3DED9DC77D9A566AB9E3BFB7BFC6F1C093D8788A586805BD04B996358BC15"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 15739,
+      "sha256": "D4F17D2D5055E6F35B95227E32C20B4A32674F78C0446C4B4CFED9B548650C16"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1153,
+      "sha256": "A3B629E3BFE1081863906E97A513745E931299405A2BEE11D9E2B5301592E992"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_2015_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 15992,
+      "sha256": "2318958CF81A2D01DF6D99280528BBA3B88FFFF9EBB286BD44DFB5E565994860"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_2015_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1153,
+      "sha256": "A3B629E3BFE1081863906E97A513745E931299405A2BEE11D9E2B5301592E992"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_2017_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16772,
+      "sha256": "427763ABFA1CD67205E9F1980C12A9577089D8F0B0274E759C4F97CDC295DEE9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_2017_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1153,
+      "sha256": "A3B629E3BFE1081863906E97A513745E931299405A2BEE11D9E2B5301592E992"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16063,
+      "sha256": "673E70924F7BB54C367A1719C0788F8CE93E48C16CF9B3DF03997216B5772922"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 859,
+      "sha256": "C5D4F1024BC518B7634DBD32E3AF4698FC5FF7DF65CB87C187F0D7564484EB05"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16316,
+      "sha256": "FC8AA29680138C5A367A70006869ADD286708A3D0455E9C441E9E52C684BCD03"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2015_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 859,
+      "sha256": "C5D4F1024BC518B7634DBD32E3AF4698FC5FF7DF65CB87C187F0D7564484EB05"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2017_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 17024,
+      "sha256": "AC8D6E58521C7B44F4BC8F411C57C34FEC3D3DDA25B7095278B48E4D67AB2337"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUT_DirectXTK_2017_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 859,
+      "sha256": "C5D4F1024BC518B7634DBD32E3AF4698FC5FF7DF65CB87C187F0D7564484EB05"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUTmisc.cpp",
+      "role": "immutable encoder source",
+      "bytes": 48699,
+      "sha256": "4560046AECBB0BDF87CD4D0978276E1660A39FCD8EFE9C499AC1F4AE0EB5BD0C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/DXUTmisc.h",
+      "role": "immutable encoder source",
+      "bytes": 13553,
+      "sha256": "A5C7AE9F8C7589AD457ED35A073B03CFBBBB80567FE37A6D26CD3555C37838F7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/ScreenGrab.cpp",
+      "role": "immutable encoder source",
+      "bytes": 47227,
+      "sha256": "515A463BCADCE083165EC4DD81A9DC8A3572FAAFE349309B2C7884E26AFB5F58"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/ScreenGrab.h",
+      "role": "immutable encoder source",
+      "bytes": 1570,
+      "sha256": "9DE2974CB0FDFCCB2F1D86C734C975CCA4A136A70025324D067F2D48F6A2F4B3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/WICTextureLoader.cpp",
+      "role": "immutable encoder source",
+      "bytes": 35026,
+      "sha256": "9DA872EB754552C7B0D80208C769DD03087D290478440949959B898283A99462"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/WICTextureLoader.h",
+      "role": "immutable encoder source",
+      "bytes": 4815,
+      "sha256": "DBC1DCC321FC0B00CA7F59C6F3B2F1C4405C3C59BABCDE31FB503B062EF0BFA0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/dxerr.cpp",
+      "role": "immutable encoder source",
+      "bytes": 185692,
+      "sha256": "9D9B53A5679826F7256DF6BCB2009B2B9D586EBC470D1263AC6949CB50C21BD0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Core/dxerr.h",
+      "role": "immutable encoder source",
+      "bytes": 2971,
+      "sha256": "A2E5C00853534995E4B3BA9566E69FCA8ECD6268A899B2B0418A043B77C39231"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/DXUT_2015.sln",
+      "role": "immutable encoder source",
+      "bytes": 3628,
+      "sha256": "1EADBFF0DBEA74954A04D4B86C9946185A9470B1EA8BA72A21445ED47C1C6DF9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/DXUT_2015_Win10.sln",
+      "role": "immutable encoder source",
+      "bytes": 3640,
+      "sha256": "1220429EC9F53995961976374640DB7B43FF87CC96DB89FB13576C043C5017F0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/DXUT_2017_Win10.sln",
+      "role": "immutable encoder source",
+      "bytes": 4091,
+      "sha256": "100945C8C1BF8472E1BE976E24BC4653937ABB8DE1C34198215E6EED5B4560C9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/DXUT_DirectXTK_2015.sln",
+      "role": "immutable encoder source",
+      "bytes": 5535,
+      "sha256": "C318D608D393FF90F924AD5BF08A7DE3A1DBDA66093BD914E55983C79FEECE0B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/DXUT_DirectXTK_2015_Win10.sln",
+      "role": "immutable encoder source",
+      "bytes": 5172,
+      "sha256": "84A0784F3B048BB945C89EEEBC7B68452DF787AA26B902E74658A433D1F4E0BD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/DXUT_DirectXTK_2017_Win10.sln",
+      "role": "immutable encoder source",
+      "bytes": 5998,
+      "sha256": "F3792D90BDD1637916E49AB5D500A4700B0B6D34E3DDC8B8BC603825808AF468"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/LICENSE",
+      "role": "immutable encoder source",
+      "bytes": 1127,
+      "sha256": "8799AEE5C6F3AB5809047449127F77FF66654BC776E07CFAE99D1BC7EF8E9574"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Media/UI/Font.dds",
+      "role": "immutable encoder source",
+      "bytes": 76128,
+      "sha256": "09396729A1A08F1D091059BF871C847647996825375EDD695B03F840FA0BA5AC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Media/UI/dxutcontrols.dds",
+      "role": "immutable encoder source",
+      "bytes": 262272,
+      "sha256": "A811271143F8C75CFD8EEA1F51B436A43ACD0702B605DA1B2C75BA71B0EA666C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTLockFreePipe.h",
+      "role": "immutable encoder source",
+      "bytes": 9598,
+      "sha256": "2725E1C3FB9C041AB96EA627F8C8F4688D7531654298D6400B4CE5DAFF2E689D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16525,
+      "sha256": "23B48FFB4E9856358ABF8A0B4FE6D911B7F925C1E313DF78E8028A6E8E181F95"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1267,
+      "sha256": "FA664A4E44756C5E731B5E3E52A0079B481689AB09306A163BBBB05906261DB5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16778,
+      "sha256": "7028D218A1840B18D11B5776A8A695835CD9C30BE85591B0CC0A9F4DC943E688"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2015_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1267,
+      "sha256": "FA664A4E44756C5E731B5E3E52A0079B481689AB09306A163BBBB05906261DB5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2017_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 17558,
+      "sha256": "F725C001AEC10A6F4704A8BD7A2BE1A3C5DD34CD6FCABE6A5A066B592B56FF46"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_2017_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1267,
+      "sha256": "FA664A4E44756C5E731B5E3E52A0079B481689AB09306A163BBBB05906261DB5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16451,
+      "sha256": "B59B86B86D0C9462803B5E09EEE0FEB22CE58EFF82FACB6A2D626C9C2338661C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1183,
+      "sha256": "F8C696C96DBA87E03AEB04C8B605C56B3759373E2E0424EDD80AB15B5D7B8EFD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16704,
+      "sha256": "432BB24EBFCF4A1985BF52CA8195F3E64D272ADF0EEE752B1E0F90415DAF9D9B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2015_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1183,
+      "sha256": "F8C696C96DBA87E03AEB04C8B605C56B3759373E2E0424EDD80AB15B5D7B8EFD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2017_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 17412,
+      "sha256": "E5FEE094F7DE8F0BD1B4FD5ACCD50231CE803C04FAE03FC4810FD467E883B62F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTOpt_DirectXTK_2017_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1183,
+      "sha256": "F8C696C96DBA87E03AEB04C8B605C56B3759373E2E0424EDD80AB15B5D7B8EFD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTcamera.cpp",
+      "role": "immutable encoder source",
+      "bytes": 45826,
+      "sha256": "5400B04E2EB49289906ADD5B4335F9F70665B2C9EC826596C27A0EA5C146AD91"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTcamera.h",
+      "role": "immutable encoder source",
+      "bytes": 19994,
+      "sha256": "CCC32C4BA595B82E142A4958537C1C4EAB674D0B00A4FD87BDFEDEB0299D1ED6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTgui.cpp",
+      "role": "immutable encoder source",
+      "bytes": 219615,
+      "sha256": "2CF5084F5D36821AAC7172130179CE5938B99B0609705C72D1792B8D59B7BF8A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTgui.h",
+      "role": "immutable encoder source",
+      "bytes": 43289,
+      "sha256": "AFEE8DEF7FB2683D5515085F46421B41F670336CDA268A6A9B51B6DC73E523F9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTguiIME.cpp",
+      "role": "immutable encoder source",
+      "bytes": 37347,
+      "sha256": "E836E5316A1D06A23DE3213B82878520B434D798695B609A6BDD7D0D897E64B8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTguiIME.h",
+      "role": "immutable encoder source",
+      "bytes": 5993,
+      "sha256": "1376AC3777D82837FEDCB9CA10A1664394695DB7C53923B75EAC0B2B4687E123"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTres.cpp",
+      "role": "immutable encoder source",
+      "bytes": 844438,
+      "sha256": "4A8A8064DF349ED12A8CE8193DBDE3B027C53C0480D0079E2B8F8D42FA6A8697"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTres.h",
+      "role": "immutable encoder source",
+      "bytes": 541,
+      "sha256": "2295DC899466422244FA8BBF0D9D904AB7085D7C075DB93E23079E9253981F8D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTsettingsdlg.cpp",
+      "role": "immutable encoder source",
+      "bytes": 62549,
+      "sha256": "025FB3FC052E7CE531EA20613BCE8B631B54A137017CB1E773549571B99C8E71"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/DXUTsettingsdlg.h",
+      "role": "immutable encoder source",
+      "bytes": 7448,
+      "sha256": "0BD80FC0FCB9B8743C8CEACAF73F66A79580B68EAC8A9D417A45D309E0237BC2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/ImeUi.cpp",
+      "role": "immutable encoder source",
+      "bytes": 116694,
+      "sha256": "C19F1C74A6C6B1A40ACEBB65F070FA1BC254998E262791FA7251940C9846B8DD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/ImeUi.h",
+      "role": "immutable encoder source",
+      "bytes": 4157,
+      "sha256": "876703CE420AD7B7920155769C8A421B73FAA9C8F9DD4729C6893005507338CD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/SDKmesh.cpp",
+      "role": "immutable encoder source",
+      "bytes": 48621,
+      "sha256": "03D1A258048FCAFE6D084312B523C2071F3910F2ED1FFE984B5FA59022C51A01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/SDKmesh.h",
+      "role": "immutable encoder source",
+      "bytes": 16978,
+      "sha256": "4298D149025E10839103DF3704EA6E973E075B03C03FC8D42F5C2E47B2C87CB6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/SDKmisc.cpp",
+      "role": "immutable encoder source",
+      "bytes": 36098,
+      "sha256": "C277544174DDDAE58DE588122E5159E7EC44DB595262014D3B80C10B6639CA13"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/SDKmisc.h",
+      "role": "immutable encoder source",
+      "bytes": 5916,
+      "sha256": "AF3EF68B93D5BBE90B82EFDA7999FF5F08A35642F0BDFB8781A87D69E9D3EF19"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/Optional/directx.ico",
+      "role": "immutable encoder source",
+      "bytes": 25214,
+      "sha256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DXUT/ReadMe.txt",
+      "role": "immutable encoder source",
+      "bytes": 6839,
+      "sha256": "BD5000F647B843BD15E0C5C62201022558C2075F4A5AD5857692FEC7FDFC6515"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.editorconfig",
+      "role": "immutable encoder source",
+      "bytes": 170,
+      "sha256": "1BE1A5B7C6AD70B4A015D9B80B0B1953CC8F68408F612576899EF42F99C74200"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.gitattributes",
+      "role": "immutable encoder source",
+      "bytes": 358,
+      "sha256": "8DCDB7C72967CE73BFB060BE9E8CF6188D6E2E0A9A29E407A36B932C8EFE6FFF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.gitignore",
+      "role": "immutable encoder source",
+      "bytes": 196,
+      "sha256": "094CB83DD3C433D41376A00B6BEC1F4523411DB07DDF0D764B30F77FD6B08795"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.nuget/directxtex_desktop_2015.nuspec",
+      "role": "immutable encoder source",
+      "bytes": 2814,
+      "sha256": "E2245772BD25F9E12DBBC5ABF07CA70A9B7BCE5780FE069C95A998E03D8A062F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.nuget/directxtex_desktop_2015.targets",
+      "role": "immutable encoder source",
+      "bytes": 882,
+      "sha256": "028158934794BC050EE667CB23928F0AC92F876C70E156367B719EFF11C26BCE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.nuget/directxtex_uwp.nuspec",
+      "role": "immutable encoder source",
+      "bytes": 3473,
+      "sha256": "9C4833A749593D5C6CFEDBDF8C01ACAD4A77D7DF4A34DE0269BAAF4B9777F386"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.nuget/directxtex_uwp.targets",
+      "role": "immutable encoder source",
+      "bytes": 882,
+      "sha256": "028158934794BC050EE667CB23928F0AC92F876C70E156367B719EFF11C26BCE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.nuget/signconfig_desktop_2015.xml",
+      "role": "immutable encoder source",
+      "bytes": 299,
+      "sha256": "A50C42F4D36FD51EF65FD8246EC01B2C9A15BB473E25B7C08A06A63EBCA6F1B0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/.nuget/signconfig_uwp.xml",
+      "role": "immutable encoder source",
+      "bytes": 281,
+      "sha256": "2979597EF9DF375CEF0756E3C1A6A4075AEC9688E7F3B23CBD705A220FA74886"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader.cpp",
+      "role": "immutable encoder source",
+      "bytes": 63841,
+      "sha256": "CA5F0500A59D3AC6DC37E7E38E0B149914E9E23437E7FF0DC78E52B70F4B3ADB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader.h",
+      "role": "immutable encoder source",
+      "bytes": 4994,
+      "sha256": "63DCD75D694D522DA81D3AD9512A70728CCD6F794CE88F32AB851562019ACB71"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader12.cpp",
+      "role": "immutable encoder source",
+      "bytes": 51722,
+      "sha256": "FB23F09735BC364EE4D6743E8101CBE445B2FC830C941CF5BC38AE6B11BC85BD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSTextureLoader/DDSTextureLoader12.h",
+      "role": "immutable encoder source",
+      "bytes": 3120,
+      "sha256": "9C98CD5BC4163D339DFFDB18158575DC0AF3E521298257C3D97E28DD437CF3FC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/DDSView.rc",
+      "role": "immutable encoder source",
+      "bytes": 1680,
+      "sha256": "276D9368667261BBD255FA5C85DF23485552D99B80BAE74D6E5262BDD77E8979"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 15388,
+      "sha256": "0FC4B59ACAB46999372EA8238BD1245142EED48EFFD30AC2F44ABECC025BB9E9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 703,
+      "sha256": "6CD7CF9F8CC7FE78837F61AEFE4E6645EF3AF3790B58FE85E321E3CDD4428A37"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2017.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16409,
+      "sha256": "B66FDA6AC7363D137C349A2B253CDFEDE8C60CA3789153CEC5F7BBAB47B3DD64"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/DDSView_Desktop_2017.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 703,
+      "sha256": "6CD7CF9F8CC7FE78837F61AEFE4E6645EF3AF3790B58FE85E321E3CDD4428A37"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/ddsview.cpp",
+      "role": "immutable encoder source",
+      "bytes": 25258,
+      "sha256": "98F2ACDB1D485B7F3931A6B7F75B906FFA1CB9FB0A42889DA8C3591D319184AA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/ddsview.fx",
+      "role": "immutable encoder source",
+      "bytes": 2443,
+      "sha256": "E4B1131AA5BFF1EA0D11FC2C01E441CAA78B36E8CB99FCB04B98610B01DFE3B6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/directx.ico",
+      "role": "immutable encoder source",
+      "bytes": 25214,
+      "sha256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/hlsl.cmd",
+      "role": "immutable encoder source",
+      "bytes": 434,
+      "sha256": "3666F3A3AF425721CFE3A954B8B81C074C527279344BC7C3D2513D2A3FCF379D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps1D.h",
+      "role": "immutable encoder source",
+      "bytes": 6047,
+      "sha256": "5C559CE2D24EA40FC5242F78345A172EE6AB0555A2487DD7943E35CFA2D29314"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps1Darray.h",
+      "role": "immutable encoder source",
+      "bytes": 6447,
+      "sha256": "A9887D37796CC15E107744671CEC56FC9FA7FA9BCB232B4389868EF53D877A9A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps2D.h",
+      "role": "immutable encoder source",
+      "bytes": 4923,
+      "sha256": "A2AD52C094E86796EC29EDDABE6794FFEBDD7F28A10B2CC9C9FB62FC0E1ECA1D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps2Darray.h",
+      "role": "immutable encoder source",
+      "bytes": 6452,
+      "sha256": "B4F449D8C28F3B48E28EEBB9727DB18E3610008F7BAC3A1A683A57FD1B513684"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/ps3D.h",
+      "role": "immutable encoder source",
+      "bytes": 6657,
+      "sha256": "14AC9B83B8B6FABB5084A2F0EB2646FE03ACF3B6346EFE1BF650F35BA703D236"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/psCube.h",
+      "role": "immutable encoder source",
+      "bytes": 6555,
+      "sha256": "BE973D11E7D97A8CCCDE23A9C5E8B4648927705356B82C5E68EB68326AFAA00A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DDSView/shaders/vs.h",
+      "role": "immutable encoder source",
+      "bytes": 4356,
+      "sha256": "AA85B11546056555118D70D7F4D58253292D0F1B335A30CEECF130533C412983"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/BC.cpp",
+      "role": "immutable encoder source",
+      "bytes": 36155,
+      "sha256": "9E739BFCD00E52A535F9DDE5288D9CEB572662AC67681C1DD4760EEC9B3D84D6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/BC.h",
+      "role": "immutable encoder source",
+      "bytes": 11818,
+      "sha256": "EDB97C4591AA14DFAB7E388DF707CE61D06CEDC1B7F14E86AE53E8A7332F5149"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/BC4BC5.cpp",
+      "role": "immutable encoder source",
+      "bytes": 17587,
+      "sha256": "57C521C0DBD6C2A7DA502BF01DCBC63FD99271794CF83B69DED2B4235205C844"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/BC6HBC7.cpp",
+      "role": "immutable encoder source",
+      "bytes": 149275,
+      "sha256": "BA36434CC472C2E2F4EC8ACBA44621721B4126A4C815A14FAF350BF198BF5E23"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/BCDirectCompute.cpp",
+      "role": "immutable encoder source",
+      "bytes": 21769,
+      "sha256": "C01AC2E6F474512D4764107DF6E66025C86EFD5FEA9E43DBEB1068CFEC13FC01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/BCDirectCompute.h",
+      "role": "immutable encoder source",
+      "bytes": 2830,
+      "sha256": "34C6F107FD258CAFAF9EB424AFC8DBA3191CB56459B667D98EF0DCBC3DAD3886"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DDS.h",
+      "role": "immutable encoder source",
+      "bytes": 10516,
+      "sha256": "9A6DFC09156AD5E7982E23974D5B55C2D9B486AA850557FEFFD1089E593AA369"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex.h",
+      "role": "immutable encoder source",
+      "bytes": 36241,
+      "sha256": "61D4647A9E859D0774CA632B9E446E2318C5DFF3DCF892EB903E79A485210D11"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex.inl",
+      "role": "immutable encoder source",
+      "bytes": 3642,
+      "sha256": "FC1478A4B6255105CB8396D00B9455932CAC54CEB2E7A2A88A7B6AC2E516069A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexCompress.cpp",
+      "role": "immutable encoder source",
+      "bytes": 29858,
+      "sha256": "09DC045F224B551ED81AD240C2034CAE918DDC61E8D4E2534D44851F50CDACEF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexCompressGPU.cpp",
+      "role": "immutable encoder source",
+      "bytes": 12550,
+      "sha256": "49172B908E55B5E2F32A7CFAA2FD90EA23A3265F1CA2CD9B064B5D4B90B3532B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexConvert.cpp",
+      "role": "immutable encoder source",
+      "bytes": 199687,
+      "sha256": "0EB91129B17AC8C89F82326F58A0F681ACE0F3B17962163469A31940DA5C2CAB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexD3D11.cpp",
+      "role": "immutable encoder source",
+      "bytes": 32395,
+      "sha256": "293BDA10983E7198FD94073C1BC013268B45B1889FBE10824355BD3A704EAB17"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexD3D12.cpp",
+      "role": "immutable encoder source",
+      "bytes": 28098,
+      "sha256": "FC39F34A1E2D71A642A797786945F607CA23BCF23EB20F2209E72FA88A201194"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexDDS.cpp",
+      "role": "immutable encoder source",
+      "bytes": 87544,
+      "sha256": "7AFBC31142CEBBF488C37F1EDE84527D98A9E218B732C1F0E44E294037FD8113"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexFlipRotate.cpp",
+      "role": "immutable encoder source",
+      "bytes": 13759,
+      "sha256": "5A82E38FF7EF602965C02992207E40D182A62B2F6CBB6E3F8A269A8193BDE12C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexHDR.cpp",
+      "role": "immutable encoder source",
+      "bytes": 34903,
+      "sha256": "7C540A36B085C451A7622CA0F0DDDF34E1698CF17566BD2E0E850879DAB14306"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexImage.cpp",
+      "role": "immutable encoder source",
+      "bytes": 22828,
+      "sha256": "F19CAE31F1458308B72BD22ED3C31CF6B8DD62CE915725A28C4466FF38D54F66"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexMipmaps.cpp",
+      "role": "immutable encoder source",
+      "bytes": 115193,
+      "sha256": "02B24E6210F0317F9B26F17966D912DB3119EA19AB34DBDD70D6166847D9486F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexMisc.cpp",
+      "role": "immutable encoder source",
+      "bytes": 23615,
+      "sha256": "23F2AEAF14AF2120E42D655D023F4F0DD82257F6E601D11C2D1BA5343A722A5D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexNormalMaps.cpp",
+      "role": "immutable encoder source",
+      "bytes": 12754,
+      "sha256": "259D1BDB91A86F00E691D17D786545A832CFB710554E2BF37B95138492D0BE3C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexP.h",
+      "role": "immutable encoder source",
+      "bytes": 12031,
+      "sha256": "93C9BD83BE82A71979282A10A64C3CEDE6A877CFFD6D91C49297A50AC635589A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexPMAlpha.cpp",
+      "role": "immutable encoder source",
+      "bytes": 11564,
+      "sha256": "ACFCE0A8D96820319CEB8385503A153C780EC90E08252E3DEA5A8DE1ECBE50E9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexResize.cpp",
+      "role": "immutable encoder source",
+      "bytes": 36751,
+      "sha256": "312E9D6094AB7A3FD242CAE5A97C704127E22BE025F35CDBBD128F42AF3ADDD2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexTGA.cpp",
+      "role": "immutable encoder source",
+      "bytes": 46699,
+      "sha256": "2C28E3F8503B7E52FE81B09EF925E716FEE38CDA0C7183ED3D081EDD969677E5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexUtil.cpp",
+      "role": "immutable encoder source",
+      "bytes": 47592,
+      "sha256": "0B85AA1A035D4E5C579E10D895441AD194D1DC2D682F2F9B3952150BF19B8BAA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTexWIC.cpp",
+      "role": "immutable encoder source",
+      "bytes": 47261,
+      "sha256": "8568DF51CAC0FBE664B4D8D0A1BA9E4E104CA7AC7998BAD8511006C2D8800E90"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 18442,
+      "sha256": "7B41118010DF285A85F1ED281D136C3CED28F23F6CE44A96C9CAAFCFD4CCEF8A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 5997,
+      "sha256": "C740069BBB21298FEE92658AF4B6C97360361664A1A6CDF9F51D97F19F677542"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 18548,
+      "sha256": "0F14E1E8FB00D879BC3F232E917052F4F3CFA8A9AFCE41F59E27AE87E48808BD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2015_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 6190,
+      "sha256": "B0507FF8F4ECB7FCC2370F9B0055D7F0E4ABD1FED146472E754E9746B4B8CFE7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 19232,
+      "sha256": "1B2BAA11889507CB4CB0D1D34962639AE5E837ACCE45D1AD933BEF1CBEAA6DF6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 5997,
+      "sha256": "C740069BBB21298FEE92658AF4B6C97360361664A1A6CDF9F51D97F19F677542"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017_Win10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 19259,
+      "sha256": "EBD2CA59D9CBFE0ED8B15C547A198DF9D09EB686C6C7310632EA6683B61E2815"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Desktop_2017_Win10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 6190,
+      "sha256": "B0507FF8F4ECB7FCC2370F9B0055D7F0E4ABD1FED146472E754E9746B4B8CFE7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 22503,
+      "sha256": "DC9AEA9908BF938A4622B114F7F67914E95B3B4D73339E1D2736FDB78A0BCAAF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 6865,
+      "sha256": "33435782BE90A010036B4C5B474EB9872A01E645F39D594F580AD3E2801922B8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16730,
+      "sha256": "6883EB1ECC55B627A097ED101E150AB4B4987D11C0388ECB5B04D0BB4D3C705E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_Windows10_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 6865,
+      "sha256": "33435782BE90A010036B4C5B474EB9872A01E645F39D594F580AD3E2801922B8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 13186,
+      "sha256": "B1C8A06629C43D657BF91315E3B785387F74D49A87728A1E9B8AA074EAC501F3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 6157,
+      "sha256": "424EB8D1A72036CADD9BA7F0985FA66BB6BE273251FF8F9A74A36937C9835240"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2017.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 13361,
+      "sha256": "8421756C89AAF2B721A56BE11C9AA6B159D548516EC398D185EB4DC71F3D0A22"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/DirectXTex_XboxOneXDK_2017.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 6157,
+      "sha256": "424EB8D1A72036CADD9BA7F0985FA66BB6BE273251FF8F9A74A36937C9835240"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Filters.h",
+      "role": "immutable encoder source",
+      "bytes": 13745,
+      "sha256": "597DB093F2A01B6B6A1E0FE4701E58A6D341AA43AA0C18E298A45E588E8D6E01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/BC6HEncode.hlsl",
+      "role": "immutable encoder source",
+      "bytes": 123331,
+      "sha256": "846FB19652F5583D2C539FF3EE06E75CE2EE68E82C845C848F56515D73CDB3E8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/BC7Encode.hlsl",
+      "role": "immutable encoder source",
+      "bytes": 76272,
+      "sha256": "8A61146B5F465AB36643C1EDEF0681AF0E1BB8BD0EC983AF3E9DB0F1CBB09DEC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/CompileShaders.cmd",
+      "role": "immutable encoder source",
+      "bytes": 1177,
+      "sha256": "BB53EE4DD8C3A9A5C7A346E5C17CFC3E32F5516CA1AA3290254F1F6449CAE37E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_EncodeBlockCS.inc",
+      "role": "immutable encoder source",
+      "bytes": 811740,
+      "sha256": "DD9D4EFE1F32D2AA4AC6354769622198395BF546FE8D7684F8076FC780B523FB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_EncodeBlockCS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 380416,
+      "sha256": "929F3B185116A7A9DFF905B6EDE6243119C8DEC4ADE059F0745910E8376B6487"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeG10CS.inc",
+      "role": "immutable encoder source",
+      "bytes": 120678,
+      "sha256": "5CF036FC836A5988AD74A72C1334BFE2F6232076B5E71BCCDE153D421AE478D2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeG10CS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 288256,
+      "sha256": "1BFEB4CAFA2B39419E9612ED1AA3D76F4DFD0482586759EF0ABAF5972571E591"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeLE10CS.inc",
+      "role": "immutable encoder source",
+      "bytes": 182104,
+      "sha256": "E9B4B79DA81A0A07E970E54AF32F20D06C325AADE1606FBE115C56081BD74707"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC6HEncode_TryModeLE10CS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 298496,
+      "sha256": "406D62B36E607F34C3A16FF540D30E0A0739BC1CE51B537932E653C6A61F38B5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_EncodeBlockCS.inc",
+      "role": "immutable encoder source",
+      "bytes": 372484,
+      "sha256": "7A072D1D9686D167149CDF29E7EF6827A7EC98DE229A0138284059F8DF04C079"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_EncodeBlockCS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 228864,
+      "sha256": "4CA9EFEECB3527DD3F608FBE0F2237DAD779F25DE2D7752E21F1A4DF66A532E7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode02CS.inc",
+      "role": "immutable encoder source",
+      "bytes": 146725,
+      "sha256": "1836A35D7FE0B3CFC6F03D580A55BE3565672864632294B8E1A932E2B9AD3B82"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode02CS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 189952,
+      "sha256": "EF272BBD1417080CDDE17B7C3471B5CB2B62A257CD6426E027F60E3A957A1EB3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode137CS.inc",
+      "role": "immutable encoder source",
+      "bytes": 146540,
+      "sha256": "706E153740F3E8D0549876B5E6EFF146CB968C1A18FDE7126842E15F8E252523"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode137CS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 189952,
+      "sha256": "D2467898723C33C24B32DE6902D09F15A3D9F707B9B863E4CEB3DB0AC9BB64BD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode456CS.inc",
+      "role": "immutable encoder source",
+      "bytes": 110008,
+      "sha256": "51AE936A55E862B5C603D05F045F65FC35266449D14DACF1527585D9E94189C0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/Shaders/Compiled/BC7Encode_TryMode456CS.pdb",
+      "role": "immutable encoder source",
+      "bytes": 183808,
+      "sha256": "D9E99CE69433C4BAD56130B29E4149C50C11188C0C03F0BACBB4645E24DE9495"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/d3dx12.h",
+      "role": "immutable encoder source",
+      "bytes": 146501,
+      "sha256": "B2D0E8979638D4FC331C495B8BDF1DF340141BF54526AD41175ED580853ADDCA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex/scoped.h",
+      "role": "immutable encoder source",
+      "bytes": 2068,
+      "sha256": "C9758E4A9EA8A191880472815AC834B4784D61F09BA249DF5184EAFD892EB1CF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2015.sln",
+      "role": "immutable encoder source",
+      "bytes": 6729,
+      "sha256": "EBCBBE5985492EA65E701A82B4400EE7DEF655F214A4A213801F4BD5A5FCB226"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2015_Win10.sln",
+      "role": "immutable encoder source",
+      "bytes": 1720,
+      "sha256": "6CB7879B6BB21C6407475B8CB1E8D00F8B43CCCB38B5F4DEA6871E2EAFFDD93A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2017.sln",
+      "role": "immutable encoder source",
+      "bytes": 7101,
+      "sha256": "10B805402E53B137CAC73646D14FBB8D35A61405AE7FC0BE53C5BC2441D01541"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_Desktop_2017_Win10.sln",
+      "role": "immutable encoder source",
+      "bytes": 2092,
+      "sha256": "B333D0823CC45E0BDE8592C3656788C99854A02316B879B2624957276825B044"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_Windows10.sln",
+      "role": "immutable encoder source",
+      "bytes": 2426,
+      "sha256": "16BABC4AEBC21583F0EC83812F3438F157E6B52B34AB12B020B570E4F1AF6A8B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_Windows10_2015.sln",
+      "role": "immutable encoder source",
+      "bytes": 1683,
+      "sha256": "D82338A39809AEE9D36F827DFEA6B09672A29AC31B0E8811395AF8A8F0E1F408"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_XboxOneXDK_2015.sln",
+      "role": "immutable encoder source",
+      "bytes": 1221,
+      "sha256": "7051BB8D18E0FBEB9D66D74BFD276315B22814462FC42783BE4B1D334AFF761A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/DirectXTex_XboxOneXDK_2017.sln",
+      "role": "immutable encoder source",
+      "bytes": 1609,
+      "sha256": "0AFC44DBDC27519BBBE43635C7803FC7C93EE9FC589C9E068761D12C34D1956F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/LICENSE",
+      "role": "immutable encoder source",
+      "bytes": 1127,
+      "sha256": "8799AEE5C6F3AB5809047449127F77FF66654BC776E07CFAE99D1BC7EF8E9574"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/ReadMe.txt",
+      "role": "immutable encoder source",
+      "bytes": 23548,
+      "sha256": "9B09A184B142E093821BA3D272E41E662A678BB200368FC27EDF1F8DE77D9219"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab.cpp",
+      "role": "immutable encoder source",
+      "bytes": 47797,
+      "sha256": "0C6F264A6338D81FEDDDF5EDA94F8E4DA96DD0B3EEF30D1276B42BE31F35750E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab.h",
+      "role": "immutable encoder source",
+      "bytes": 1570,
+      "sha256": "9DE2974CB0FDFCCB2F1D86C734C975CCA4A136A70025324D067F2D48F6A2F4B3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab12.cpp",
+      "role": "immutable encoder source",
+      "bytes": 52374,
+      "sha256": "CC94CEAB6A443BCFE9A736F76782699E5227FCFA0BEC679DDC3D26DBFADAD7D5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/ScreenGrab/ScreenGrab12.h",
+      "role": "immutable encoder source",
+      "bytes": 1748,
+      "sha256": "6E0D58185EF79CB8B3C4A8265BA8F22EE74343F18F20C94430AD5B842FB10425"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 15333,
+      "sha256": "63EA9E10795D07252D4CE690B53A27F259D2CD24333FD8F97DF6357F787FE1E3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 645,
+      "sha256": "B327FF34B3574BA3315557844CA8D53D0BFB7D035B710AE6DB385139D9F0902A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2017.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16192,
+      "sha256": "CC27A2CA9B28C4A72DC592630334EB50E820F2E01D8407C06F58B9782F1681CA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/Texassemble_Desktop_2017.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 645,
+      "sha256": "B327FF34B3574BA3315557844CA8D53D0BFB7D035B710AE6DB385139D9F0902A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/directx.ico",
+      "role": "immutable encoder source",
+      "bytes": 25214,
+      "sha256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/texassemble.cpp",
+      "role": "immutable encoder source",
+      "bytes": 66244,
+      "sha256": "7FB1E6A6468A42ADABF387C90B8F6C83271ABF91D14C7B89042F1CA6250A144C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texassemble/texassemble.rc",
+      "role": "immutable encoder source",
+      "bytes": 1656,
+      "sha256": "A12C6844AE05F44A4839F0BEF41CAA3CE3ABD385296A42735B3FFC528144F258"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/Texconv.rc",
+      "role": "immutable encoder source",
+      "bytes": 1656,
+      "sha256": "A12C6844AE05F44A4839F0BEF41CAA3CE3ABD385296A42735B3FFC528144F258"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 15513,
+      "sha256": "83C5EAFBF838CC5DAB3702D7DE2B5B3B8619A2E649BEB68D5CDD249D69908E93"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 637,
+      "sha256": "39ABC017B8ECB3B0198FA6158EB52ADF28FB669C538A51C0826478C5F9D4A8FA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2017.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16494,
+      "sha256": "7E2706F57EF1C913C29875E13CBA7E8D68B015BFE2F8D792F6BEF02CD90B701F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/Texconv_Desktop_2017.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 637,
+      "sha256": "39ABC017B8ECB3B0198FA6158EB52ADF28FB669C538A51C0826478C5F9D4A8FA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/directx.ico",
+      "role": "immutable encoder source",
+      "bytes": 25214,
+      "sha256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texconv/texconv.cpp",
+      "role": "immutable encoder source",
+      "bytes": 102471,
+      "sha256": "29A6A2EF0F517443C42F83E2650FA5880C135E6DBCC01F6EE6263E73852FEB40"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/directx.ico",
+      "role": "immutable encoder source",
+      "bytes": 25214,
+      "sha256": "7BDE34E08A41EFFDC9E211C599CB3213058864C4F07174DE773F31D862816D55"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/texdiag.cpp",
+      "role": "immutable encoder source",
+      "bytes": 177970,
+      "sha256": "4257D7317E77616E3BEC16D3D8FF9B7640B352969DA0328DA5ECA67661EDE0EE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/texdiag.rc",
+      "role": "immutable encoder source",
+      "bytes": 1656,
+      "sha256": "A12C6844AE05F44A4839F0BEF41CAA3CE3ABD385296A42735B3FFC528144F258"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2015.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 15293,
+      "sha256": "5A51EC6008EF049027958ED832E0D5B34826EA9352F15C3F7EAE818EC924C895"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2015.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 637,
+      "sha256": "EC2EF90A058892C4C9F20EEF06876115006FA0E39C655E580DF53804950D1A29"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2017.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 16152,
+      "sha256": "6CAB968893FF4E9677BA7CEB0441AFF30185996B4D5E25165D7123BD0F1FF5DF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/Texdiag/texdiag_Desktop_2017.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 637,
+      "sha256": "EC2EF90A058892C4C9F20EEF06876115006FA0E39C655E580DF53804950D1A29"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader.cpp",
+      "role": "immutable encoder source",
+      "bytes": 35373,
+      "sha256": "57D1C38CAF0939E701D540E68F940122EB6ECEC9DA69FDE76C3F6950FAA90C89"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader.h",
+      "role": "immutable encoder source",
+      "bytes": 4815,
+      "sha256": "DBC1DCC321FC0B00CA7F59C6F3B2F1C4405C3C59BABCDE31FB503B062EF0BFA0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader12.cpp",
+      "role": "immutable encoder source",
+      "bytes": 26255,
+      "sha256": "386EB8BDDE3829825A6FD88017A45183503072C90B249FD82E9DFE1E6500D2C0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/DirectXTex/WICTextureLoader/WICTextureLoader12.h",
+      "role": "immutable encoder source",
+      "bytes": 2756,
+      "sha256": "014B2BBF172ADBD9190E2B2188EC89CF9BD0B6E55FC5E3373AB230F414ACFB5E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/ISPC Texture Compressor.sln",
+      "role": "immutable encoder source",
+      "bytes": 4951,
+      "sha256": "BC6C18BC8F25E4CDD64102BAF4754F1D2B703E54103F38EA2013B3931F591791"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/ISPC Texture Compressor.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 10077,
+      "sha256": "3B1A741C410B5B5DD2A4EB55DB5C11E2AC779B42B6BF4C3392A39E3D1DBBE344"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/ISPC Texture Compressor.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 1233,
+      "sha256": "70CC0A05B93C8028EAE4A96952D07C0A6FCF16EBA707F685F5F9478B31EAFEC0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/Media/Images/Desk_21_hdr.dds",
+      "role": "immutable encoder source",
+      "bytes": 4492672,
+      "sha256": "27CEA847FEDFAE0BE7F7A0FCDA39151164FE079B2E6F05F915EA56677B657BEF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/Media/Images/quadTexture_wAlpha_1k.dds",
+      "role": "immutable encoder source",
+      "bytes": 4194432,
+      "sha256": "9547CC9F63E33BA2DFD5C3795965A24EDE23A022ECA8158A25456F4807082035"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/Media/UI/Font.dds",
+      "role": "immutable encoder source",
+      "bytes": 76128,
+      "sha256": "09396729A1A08F1D091059BF871C847647996825375EDD695B03F840FA0BA5AC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/StopWatch.cpp",
+      "role": "immutable encoder source",
+      "bytes": 3897,
+      "sha256": "A10130E0D6A7275770D588768FDCCE50CD6DF3863F02780236CD34F4138FEC6F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/StopWatch.h",
+      "role": "immutable encoder source",
+      "bytes": 1715,
+      "sha256": "EC002A165F180D2CFC4543EC0A54CF50724EDBD65413D1BAF0810124D2664DD9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/main.cpp",
+      "role": "immutable encoder source",
+      "bytes": 37478,
+      "sha256": "8A8128EC402DD4F870512748D9F5BD11E05C0FC882F56002E72F5F7EFF3A6E42"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/processing.cpp",
+      "role": "immutable encoder source",
+      "bytes": 41770,
+      "sha256": "A63D89E2F2F6BB5994A0C93D1D31EACF7A19FA8E914B5513575C8559A63824D1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/processing.h",
+      "role": "immutable encoder source",
+      "bytes": 5002,
+      "sha256": "49706FFBE0AFEC355F6E2E232A07C99BB498E0AD826C8A8A4A213B2ACCA4B840"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC Texture Compressor/shaders.hlsl",
+      "role": "immutable encoder source",
+      "bytes": 2777,
+      "sha256": "7C94994B80276B402685671F57EB272D55DB2172561E980F72CC5B2AAA00D707"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC/linux/.gitignore",
+      "role": "immutable encoder source",
+      "bytes": 2,
+      "sha256": "CDBCAE15105D6B781E620813C79C7E868740D4E9CC53CE6F5FCBBC12387ADF4B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC/osx/.gitignore",
+      "role": "immutable encoder source",
+      "bytes": 2,
+      "sha256": "CDBCAE15105D6B781E620813C79C7E868740D4E9CC53CE6F5FCBBC12387ADF4B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ISPC/win/.gitignore",
+      "role": "immutable encoder source",
+      "bytes": 2,
+      "sha256": "CDBCAE15105D6B781E620813C79C7E868740D4E9CC53CE6F5FCBBC12387ADF4B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/Makefile.linux",
+      "role": "immutable encoder source",
+      "bytes": 1684,
+      "sha256": "4DB93CFF081E43EAC27485A1AB08505540444F351F925F02F2AB28A7E311C65B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/contributing.md",
+      "role": "immutable encoder source",
+      "bytes": 2813,
+      "sha256": "745063CE07C3A9AE348A1239CF8B18A035D9AFAAB8AD2F8926B66BACCB63BB0D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp.xcodeproj/project.pbxproj",
+      "role": "immutable encoder source",
+      "bytes": 11527,
+      "sha256": "BBEC8AF854795FF81DB5FE9848254F8F6F3C43022D1B8E8B8C1A632CF44C10CC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+      "role": "immutable encoder source",
+      "bytes": 135,
+      "sha256": "7F3B00B5C3FDB45242D7B87E1E5C4E25D1FA8129A16C94295ECC4E8EA2235C5F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp.xcodeproj/xcuserdata/aras.xcuserdatad/xcschemes/ispc_texcomp.xcscheme",
+      "role": "immutable encoder source",
+      "bytes": 2894,
+      "sha256": "38EF62901F6A5B297F12DA43C437ADD7ECE34D9E252FB93311EB721ACE5B019F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/ispc_texcomp.cpp",
+      "role": "immutable encoder source",
+      "bytes": 12991,
+      "sha256": "2C87D42A95B405520696F9F316F53900292C766CFE40016B0656A8C680B86DEF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/ispc_texcomp.def",
+      "role": "immutable encoder source",
+      "bytes": 603,
+      "sha256": "D7942B9DF9132ABCBD23A575629B188724105E61C972C220C44B7FA4FFA16018"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/ispc_texcomp.h",
+      "role": "immutable encoder source",
+      "bytes": 5046,
+      "sha256": "10C016535FA748088CED8FA08FA4D9D65185070C7CF632F2265A9FFD39DD234B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/ispc_texcomp.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 11541,
+      "sha256": "69949265FA6B920CC9E54EB1765302FFBA648D9CF317D6D6D0A1D090BC65B94E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/ispc_texcomp.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 2173,
+      "sha256": "95C7590DF16971E0891292408D6E59441E25A87D999B806741B589A82320D9F7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/ispc_texcomp_astc.cpp",
+      "role": "immutable encoder source",
+      "bytes": 17096,
+      "sha256": "B4BDFA2834B5BD63E4BE30D4754B6EDA85321ED5F6FF76F82FD27566BD7ADB9F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/kernel.ispc",
+      "role": "immutable encoder source",
+      "bytes": 106239,
+      "sha256": "FDC9ED4D363DEAA771FDFEFC5EC75BE8E684A32AD7E83E1518704FB9876D774E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/ispc_texcomp/kernel_astc.ispc",
+      "role": "immutable encoder source",
+      "bytes": 99943,
+      "sha256": "7C9A635C22F28E33A579AAD73CD1074611C78ED201CEF3B04A713EF617DEC1A3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/license.txt",
+      "role": "immutable encoder source",
+      "bytes": 1057,
+      "sha256": "C3B1335B5988CD4EB61994987F1F2B01002C88734C727D76A973B1722634757A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/readme.md",
+      "role": "immutable encoder source",
+      "bytes": 3201,
+      "sha256": "C56ABA8B99CD05D5B1A29BB512A32DCAE4645A08609785A2E121B5348D9FFC48"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/screenshot.png",
+      "role": "immutable encoder source",
+      "bytes": 361061,
+      "sha256": "3341C03B918D82EE8FD2300C602EA1597AE1D26F8C42AD3E8C0A55349E053042"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/test/build.cmd",
+      "role": "immutable encoder source",
+      "bytes": 1372,
+      "sha256": "D1092A515678ED74799A9C70337C83777DD46EE2E200B7F113C76EE287932809"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/test/test_astc/test_astc.cpp",
+      "role": "immutable encoder source",
+      "bytes": 7105,
+      "sha256": "4A63926F4141E4E04CE1C40BC47D90809F5213C575471B18F53A6B3E9E7420CB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/test/test_astc/test_astc.sln",
+      "role": "immutable encoder source",
+      "bytes": 2212,
+      "sha256": "01EE4DF9EA68E733D82F59951EEFFC62BCEC98E668F724E7487E095B4A599DF5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/test/test_astc/test_astc.vcxproj",
+      "role": "immutable encoder source",
+      "bytes": 6498,
+      "sha256": "81C009837B4DDB9C1FDBD2A6AABD0022EEFB5FB4EADCF01D07A89C1B5917168D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd/test/test_astc/test_astc.vcxproj.filters",
+      "role": "immutable encoder source",
+      "bytes": 604,
+      "sha256": "4805FB55A60564BA448C165336C8BC289D40454517E8E360FCBE2299232DE0EB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/bin/ispc.exe",
+      "role": "immutable external compiler input",
+      "bytes": 75214760,
+      "sha256": "91F687613EFF144125057463255D79DB78960ED1F5FCD487411187F5A8E3323F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/bin/ispcrt.dll",
+      "role": "immutable external compiler input",
+      "bytes": 111016,
+      "sha256": "B1A2461DE54865C0C3DC4EE5DE40B0C646F8B3E8BBEBD503EAD6E8B0E38AA1A1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/contrib/ispc.vim",
+      "role": "immutable external compiler input",
+      "bytes": 1486,
+      "sha256": "15040C2BA936F22F77DDBC402E0A3BB453CA304689067F897BEED71C36AC81C7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/contrib/ispc.vim.README",
+      "role": "immutable external compiler input",
+      "bytes": 326,
+      "sha256": "E2EDDC9468139DE7E63C9F41C09D7DE86435AF69EA23EC51A896E0967CC22218"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/css/ie.css",
+      "role": "immutable external compiler input",
+      "bytes": 152,
+      "sha256": "A8342E23F09FE34F0420AD6453D094689997FD6F5583BA3B98670435DF27C472"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/css/style.css",
+      "role": "immutable external compiler input",
+      "bytes": 5986,
+      "sha256": "B6F175110321E312B68CDD8006636345922586D4A282D2F8A61E1F9FDEDC093F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/common/tasksys.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 42202,
+      "sha256": "4A2B0765DC88EAB24CC087F18A78F50521B6479FCA63C3A3E6CE7FA9C02890D8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/common/timing.h",
+      "role": "immutable external compiler input",
+      "bytes": 4048,
+      "sha256": "6F3F655C03BAB5037226183331A9E9D89FB7FA23555B7FC3630E60684AF2E59B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 11,
+      "sha256": "C049415EA7AD8F1EAF87EA40E1A4EFC866277942DBE18945AC5E5F5CE35419DC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench/ao.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 6274,
+      "sha256": "40C2B44738BD2C05768134AD1A5FFCCA9CCF03B06C06DB7EB555A3DF93EEEABC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench/ao.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 8382,
+      "sha256": "A533EF7029E17B16CBB59EF5BE4255B1EB0BB0D1AEA309A0C8C607819C035F34"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench/ao_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 9102,
+      "sha256": "D9E25B8DD37679065B56A0C9F96A594CC3C3F84CBE063FCA150741DA3153A7A0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2257,
+      "sha256": "C4833C148D5935436801FF9A8A4912E50B6AB2218BB011FC2ADF796BC897152B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench_instrumented/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 11,
+      "sha256": "C049415EA7AD8F1EAF87EA40E1A4EFC866277942DBE18945AC5E5F5CE35419DC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench_instrumented/ao.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 3765,
+      "sha256": "32FE319016861223B94FF54F684EF0657828CACAB0ABAE028AFF5838F4A79738"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench_instrumented/ao_instrumented.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 11073,
+      "sha256": "AB22D6AF87EBAABE92FD24E0E15F653D6310CEC8ED2222224693A51334C7BE3C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench_instrumented/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2508,
+      "sha256": "0231AF6660552EA262EACA8400EC867F25A094F947EDB52C02B01A510E76BDF1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench_instrumented/instrument.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 3269,
+      "sha256": "601384F7D256864B9EE47A676298545DFE781F685E8AFC484B7051E4272637A1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/aobench_instrumented/instrument.h",
+      "role": "immutable external compiler input",
+      "bytes": 1838,
+      "sha256": "0BBABEAAA550478C6CE564EADCC2656A048FCCB7F16206E392B0BB84FFFA1879"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/cmake/AddISPCExample.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 3233,
+      "sha256": "EB36DF2AEBCDC61D7925ACB1E64A61AE4CD7B766A86204832E0F085C483CF09F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/cmake/AddISPCExampleLegacy.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 6925,
+      "sha256": "668DF94E6CB13CF6BC2DFEEAC3A9A480D1E3ED797B06E99F64242C20F3BD6B60"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/cmake/AddISPCExampleModern.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 4086,
+      "sha256": "F823A11B8F5B3F254EF103D35D196012A0E7B09FE7EC71CF81E4D94DEE9DF7F8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 3169,
+      "sha256": "8CB1712FCA3A388265210FB9F164232C39963036EFA7DBD8F4595BB8D39850F0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2557,
+      "sha256": "5936A373B620574B7E1EEA6C31E3B76AB74B29E77B2FF1FE1A232250AB45ACB0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/common.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7188,
+      "sha256": "91359E09C9F53FD9004F2151EFC2AF349CEB9953E7FC1BD8F8FD11B9241BD808"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/data/pp1280x720.bin",
+      "role": "immutable external compiler input",
+      "bytes": 13856920,
+      "sha256": "F2311B0A9C5611555FC138C1B5818E0B275C005DF33D80622A963DCD8974F105"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/data/pp1920x1200.bin",
+      "role": "immutable external compiler input",
+      "bytes": 34592920,
+      "sha256": "C8D7A4506889EB31A496D4CDAFD1762C8E5939C0204FA936F13CF9A665ABC3F4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/deferred.h",
+      "role": "immutable external compiler input",
+      "bytes": 3120,
+      "sha256": "405DFA380B53D1F926213838BD6208BF3B2082A4D106E88F5EA0950ED4BD0ADD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/dynamic_c.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 35243,
+      "sha256": "2FFC26E70A7A66D57452A617950BC97188CBEF5039722510B518086F943FF348"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/kernels.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 29241,
+      "sha256": "AE10B5ED3F7EC82641F72AECEF995E77EA89C83D5758615805D2DB36DCC759AD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/deferred/main.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 4657,
+      "sha256": "06F0C264F188C9F3D2FC3F32B2C09698755A936F6D45753AA21557B5C7362E7F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/algorithm.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7521,
+      "sha256": "3F59846740750EA1BFF17513379238A542C1E3E537EF8A76D11366DF884C6D84"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/algorithm.h",
+      "role": "immutable external compiler input",
+      "bytes": 1979,
+      "sha256": "C901AB08F15EA35AF0B1B3BD6247E90A599AF09CAE8A35F24F7A1D6283E381F3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2735,
+      "sha256": "080B7E588426F62B70E2BC86B499A0018AD69CA69543D9B2C8F4E251B153729F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-18/c-18.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 204641,
+      "sha256": "EE8C6F740B6CA9CD6FFCCA80EC7A0BE0F966DA70B4653BC1EDDE4BCDBCC5FD16"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-18/c-18_b.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 14951,
+      "sha256": "E7EDB87CD660BD399B975729CC6D06788A38CA8FB78028A23991FA0D213295CB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-21/c-21.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 442266,
+      "sha256": "69C0C86FC90706F4E52BE34D14659171A30775DF3279422773595D841C977E90"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-21/c-21_b.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 20726,
+      "sha256": "8A0EC04C8B5540C5A410B390702BF69B1CF9F893B683A081EDCF0A8866CCC0B0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-22/c-22.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 385975,
+      "sha256": "600298A630A3C82AB57B5BB49D5DC14DCEBE001AA14DE973D3CE58F7EE9AC592"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-22/c-22_b.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 21189,
+      "sha256": "1BD891879BFE885850D90BBB095A538900C296D8BB60BBA79777F96F5C2B7105"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-25/c-25.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 688164,
+      "sha256": "6E9EAEDD3FF91EFE9F1F8BFCBD71AADDE292BEB8615F4520CEB29CD89343C9D1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/data/c-25/c-25_b.mtx",
+      "role": "immutable external compiler input",
+      "bytes": 33586,
+      "sha256": "44CBCB3EEDA8972C48DF02F2416F2CB3CCAE43710137C5175FE2C64CCC3A3209"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/debug.h",
+      "role": "immutable external compiler input",
+      "bytes": 2000,
+      "sha256": "8FCE7B1D6A766418F355222705BD0902FDFE2210C15231ECCF9CB94A54871855"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/main.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2858,
+      "sha256": "F2194F47B55B71524EB8038DE45D897DB5B2B5B9F8A2FAC71FC4148535D0473A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/matrix.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 8178,
+      "sha256": "EB92735E7FF42FCD1862555DF006656838B68D3DB94833EB6BC8EFEF400F47EC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/matrix.h",
+      "role": "immutable external compiler input",
+      "bytes": 7807,
+      "sha256": "DDC8669A7C4878A63FFFF40B429433AF951162F123E10084696DD125189C85CD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/matrix.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 4440,
+      "sha256": "FD1A69A214CA4CE99C0EFFA77139D2F42BA74BF840B9B26BDEE91AE596C397DC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/mmio.c",
+      "role": "immutable external compiler input",
+      "bytes": 11476,
+      "sha256": "E9F49F56CEEDACDCF9E47986497E26A2BC4537D1A50395361D78C102EBED7A1B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/mmio.h",
+      "role": "immutable external compiler input",
+      "bytes": 4443,
+      "sha256": "2E4A8EE0E285528C6FB21237424FE1BBF7FC92EC6CE29326A107F451AA2569C7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/gmres/util.h",
+      "role": "immutable external compiler input",
+      "bytes": 2040,
+      "sha256": "EAEA56399572BBFC25793D69410400115A7F2613A78F821DBBD0F1D5EEDFE3C9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 25,
+      "sha256": "852248B21D1EAEFA1BEB179BB0635B1FEEA970E3D0C2280D1AB0AFC10BA2F2B7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2302,
+      "sha256": "ABED5D57203B69D36A12D49502FC4DC9ABA2CF28B941CB4911F78D23E72549C2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot/mandelbrot.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 4791,
+      "sha256": "763D3FA451C4C93AC43D280C1AEC507646A9C4D62A1F8152037F60E2C5EF1028"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot/mandelbrot.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 3202,
+      "sha256": "B590CF641BEE693CC14EC54FB85D6EF7D557651F28E3F860828F8C571FE33BBC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot/mandelbrot_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2478,
+      "sha256": "A17BF72012D95F0E8000E77651F9FBD5DCA410F3D12C066C12C2742811E732F4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot_tasks/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 19,
+      "sha256": "588E693FD30C56FFEE5001B736DCEB76129F13A3EF2F4B06E88BB3EC5E166BBA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot_tasks/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2332,
+      "sha256": "31D7A3FB7ED859B84D385819BFD7494A59BA889FD20C8B5B54D28D050AEB1DA0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot_tasks/mandelbrot_tasks.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 5279,
+      "sha256": "F3F0C7F0B69D2A485C7CEF37F3A95E34B92C7846DECC189FE8D453F5B1AC0EC8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot_tasks/mandelbrot_tasks.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 4152,
+      "sha256": "E00990D0CD5CCE7386C960100464E171FD41218AC2ACC44569194FC30CA1D0FA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/mandelbrot_tasks/mandelbrot_tasks_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2478,
+      "sha256": "A17BF72012D95F0E8000E77651F9FBD5DCA410F3D12C066C12C2742811E732F4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/noise/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 20,
+      "sha256": "FB18C6362FDD4B82F13248BB43320F86818802D561AEB2013C5C3CA779677495"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/noise/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2277,
+      "sha256": "9E305F763261FCB57667EFDC9029A146A8A68754EE18D18F9CE74E94B196D53F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/noise/noise.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 4568,
+      "sha256": "1322A44F1B84C4873FE9509134FB4D2EF29822F38EE2ECCF83A8F6D3618BC0F1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/noise/noise.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 7219,
+      "sha256": "D5CC0E9095E7084FB18D8D21B7C11020925EB6D3F94EC7826EAB9B3031C28E69"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/noise/noise_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7265,
+      "sha256": "8252FC4E2A0A1EDB49B650011EDB2D8540704FA6767D7C7BBE168D8FDE34B8D9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/options/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 9,
+      "sha256": "5E53B5BB11D0592922DAB99B9CAF6F694BE0AB94FE47839AAA61CF22C432C65F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/options/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2351,
+      "sha256": "02A742DE7C8F2E6CD26F39F55812E9AFFD900AC9FA1AC091CED49A72016186E4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/options/options.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 6684,
+      "sha256": "91142CFA2943B60456B5AA96B3219B5B0228C0469FD0D39238C4B15EB784E679"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/options/options.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 5643,
+      "sha256": "FB468975D76B265C0238B132A0F1FCFA535566A361948526AA384D0BC12C21F0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/options/options_defs.h",
+      "role": "immutable external compiler input",
+      "bytes": 1717,
+      "sha256": "E7CE49D410162508F44A69172727B6B3320A7B2C375B8FD5FBE9FFB7D9A067BD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/options/options_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 3641,
+      "sha256": "434D79860C4E86E11781D948EE04B18330A914FEAB326111EED8F9D407C86BAA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/perfbench/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2261,
+      "sha256": "8C2DB705D12B6075C7AB474895587F91D126F87A855CCA15B17335218D10B195"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/perfbench/perfbench.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 4295,
+      "sha256": "87ABA179B1D26C8C925A47D0DA6205D7F70488232CCD23C22F68FEF55DD7B133"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/perfbench/perfbench.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 7691,
+      "sha256": "F8EA6C52F0F208971B415AF3E24A922AF34DD659A266604E19DF0FBC52011CC0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/perfbench/perfbench_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2470,
+      "sha256": "0EDA303784D895616FBF0EBC33A8658D39B7EBCA43D51FE9C6198A568BAC1DFB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/README.txt",
+      "role": "immutable external compiler input",
+      "bytes": 6221,
+      "sha256": "298DFB95C7E6583B0B4AB70F84A805509332E24061FB06DFC05DEDD3C18BF4C9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 11,
+      "sha256": "698F25CDFBAFE3820735EA146B515A26F42BE6157017956616E8A44D235D751A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2648,
+      "sha256": "7E8645BD2EC4C4167E2CC65798165505517E6B09984AC12C363BFBC21A864DAD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/cornell.bvh",
+      "role": "immutable external compiler input",
+      "bytes": 2208,
+      "sha256": "719D558720419299177BAFAB873EDEBA5869A7114CB7855CCA2D57D307525A93"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/cornell.camera",
+      "role": "immutable external compiler input",
+      "bytes": 136,
+      "sha256": "5CF6F23AA9FB68153D6F5CEAFC8E45198B7B3E92C5A0D323F27DE221321C332D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/rt.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 9741,
+      "sha256": "ECFC3625CA11DE501FCF290867D8A85336A8283AADCF54504681079DE6157925"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/rt.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 11439,
+      "sha256": "784E6F70CAB6A274C654ADFB8D2024D18D60C8C6EDAF67C1C2DBC876B43E2803"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/rt_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 9067,
+      "sha256": "5142E83EE969E9CB6490D6B166758A8B319F917CAB17E3E00D624D50790F7735"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/sponza.bvh",
+      "role": "immutable external compiler input",
+      "bytes": 6269120,
+      "sha256": "5488471BE63EAEDAFA7234F6CBF8F08E736ABAF0935BF71E3970EA2142D2DD91"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/sponza.camera",
+      "role": "immutable external compiler input",
+      "bytes": 136,
+      "sha256": "ECD590F8E31D9C8AB180D26AD15CD81B9BB2C1FA1AF178E4653448C1C3B74CD9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/teapot.bvh",
+      "role": "immutable external compiler input",
+      "bytes": 225008,
+      "sha256": "9914EC16E8F8945E3E3274FC045D6CFF9E7BCB9495D92856068CDEBF17910E04"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/rt/teapot.camera",
+      "role": "immutable external compiler input",
+      "bytes": 136,
+      "sha256": "660D2081A290A98375FA14407BFF401BE4B9ABFB8FF4345F29817A0388C811F6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sgemm/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 13,
+      "sha256": "8F4BBCD78F4163C94C7E94EB65CD22FB9F7D70A0528BAE4E64651533778BFC91"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sgemm/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2222,
+      "sha256": "00BC7305F9DBAC0534B00430CFF2A121EC41BA0148757E91FC1B7FFBEAE93BF3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sgemm/SGEMM_kernels.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 27304,
+      "sha256": "1AC4BD974E27F8C72CA8386E4823C27E6941D2D9031393D9022BC39EF498F602"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sgemm/SGEMM_main.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 13148,
+      "sha256": "E7FC4C3F58727D1900C9FF3627F81B05247A2EA461D4DCF81A9D996D5C49F92A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/simple/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 14,
+      "sha256": "B650463780D7FC1A079E1964A641576284E101C2A2D33685CB7BF035D4E4E8B2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/simple/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2091,
+      "sha256": "BFAB5765602292D3BFC1AC8EAFAF4F1895D339B8008931C5EDB5E869ABAFDF78"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/simple/simple.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2130,
+      "sha256": "8FEE0D59FFAA4BE2BC533A8EE010E061CE69D13EDF42CB0CECAF0E9229FB327D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/simple/simple.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2170,
+      "sha256": "DD92318861CA6058457256C1E80156D7F04F1989A6C338910837CDF669429A70"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sort/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2270,
+      "sha256": "E3C23288D9953E6BD4A6E0CCB27588E76BC3774541464E255F42F0FDBD8638EB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sort/sort.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 4245,
+      "sha256": "26CDDA0239DE9FFF6BB1817F78398E6896931D4359D80F63C3EFBEA186F92FD8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sort/sort.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 7027,
+      "sha256": "7726A3EA6D6D64F7CD8C2810A80DA90064A69648738372B82670DCA0E4EF2BD5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/sort/sort_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2235,
+      "sha256": "535B1ABADF358A26732503A0F5EF82A44101164651DB04CB8956E5955FC0522A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/stencil/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 15,
+      "sha256": "3BA4C6A82739B68774DE61F28623C4A4D2EC689AE2559A12F75ADDE1B5C91DBD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/stencil/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2285,
+      "sha256": "190B140970B2E24D0E75AB38C32AAB911ADC9B07303BB04022603B74E1C0C33E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/stencil/stencil.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 6292,
+      "sha256": "AFE021CAAA7F0D3EA59322DEEDF805BE6F741F6C7F1411578E0BDE3BA36ED0C5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/stencil/stencil.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 5354,
+      "sha256": "6602AE955F206CCEBA0198B1FD4AEC23101544893E51C14E69F3C60305BA03EA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/stencil/stencil_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 3372,
+      "sha256": "8E9A5B114784030B9D871BA7D9DFA9212559D0BCF4C936FD66DA75B83593A682"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/.gitignore",
+      "role": "immutable external compiler input",
+      "bytes": 19,
+      "sha256": "588E693FD30C56FFEE5001B736DCEB76129F13A3EF2F4B06E88BB3EC5E166BBA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/camera.dat",
+      "role": "immutable external compiler input",
+      "bytes": 319,
+      "sha256": "F6E9AB222FD410173EB6FCC5CFB796C20128F978CD886897732A3A188C798B4B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2542,
+      "sha256": "B492B62F887847A5BEA267F298C5ED8B39A57B291EAEFD2040F8F9BAF83F0001"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/density_highres.vol",
+      "role": "immutable external compiler input",
+      "bytes": 22873815,
+      "sha256": "2D3858887CFF8222564119F324B7A4525A30E4A1434635F4E57CE17F1A45B6C4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/density_lowres.vol",
+      "role": "immutable external compiler input",
+      "bytes": 367967,
+      "sha256": "0374C42080CE5D1C93FC7ACB0974769014EDFD45874258AB3155B97CC61A51B0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/volume.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7710,
+      "sha256": "2DE3552EB0A74C009FE7985A4E36CCFE32F94360D9EB02FCD22AEBDBC89504CC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/volume.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 12561,
+      "sha256": "88D896CA9260437DD00DF2E88E4DEBE33C3F053E0DE9192CBA0CAFB72D6C1ECE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/cpu/volume_rendering/volume_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 9817,
+      "sha256": "A2F6D933755BC5443F03C4BE8F43A416AC01019C3088A1C6EC5C910EF1E3F07B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/aobench/ao.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 8428,
+      "sha256": "919888747DE680893AE32AC73718DF07650457C1FD456DE06FE8C5C1F3A9AA4D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/aobench/aobench.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 11043,
+      "sha256": "C6A2E1D2C730FDC3C709851EA342A694EF8AB9EC4DADADD7BCA173D775A869BD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/aobench/ao_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 9120,
+      "sha256": "9CC58CFC1F5A8CC70E1D5620553EB72A472DD4977BA311F8CD082C5E59DDF9ED"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/aobench/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2088,
+      "sha256": "2D98506BD3F472DA786F5A719758E2632AA331DF1E9F5EDC4110887243D1E27D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/cmake/AddPerfExample.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 6806,
+      "sha256": "03B947AFB171A3DA6A45588FB8D84ECA2B18D3B30790922821B0593BB6995103"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/cmake/TestDrivers.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 3642,
+      "sha256": "E56E635BFCC5EDA1981EE9049FCB9A54A69D07763129521B61892EB66E05DBAB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 4336,
+      "sha256": "B3DFD932444A841AA1977784408E70DD76B71A8981FD122FEE7D769338FBC59A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/common/common_helpers.h",
+      "role": "immutable external compiler input",
+      "bytes": 2201,
+      "sha256": "5CBF8F2EF0102EA214239B4E5D59D9430542E0CAC6CC88443B06EAF9C8DA1C2A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/common/L0_helpers.h",
+      "role": "immutable external compiler input",
+      "bytes": 7983,
+      "sha256": "D209FAA9FE2977CA64057D0D5FB90CE6C2A55F25135109071D91D89C447EF7A9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/common/share.h",
+      "role": "immutable external compiler input",
+      "bytes": 1756,
+      "sha256": "B0AAE625AF3B008F78480E78B83ECA9D788FC3F0BD11B1CAFD8B702B4F8201DE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/mandelbrot/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2125,
+      "sha256": "1C3E5A1FFEFFE171AD59DE1D66E16FD6050C27CA2F42194391B0FF84D55BD195"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/mandelbrot/mandelbrot.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7725,
+      "sha256": "C0D2ADEB2241B04DD28E2CB1A87ECEBAF9EF874B4E2A91EE0961B519F9D08C51"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/mandelbrot/mandelbrot.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 3103,
+      "sha256": "8182EA4C1B613F7ABBAA9F876ED83483DBAADDC98E274D21C87774AB3F8779AC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/mandelbrot/mandelbrot_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2519,
+      "sha256": "4187945FC4F0CEED43BC8329BB3E05DC66AF0BF966B0A0E2F43FC3B713C6F326"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/noise/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2008,
+      "sha256": "BC1C85EE840A920C72E27328883C8A53C5030765E49907094FF8F5C85C2427F7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/noise/noise.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 6927,
+      "sha256": "0E46778DAF3CE7D0A469487F6DF026B745E1AB1FDD4BE22D3298D0994A589FD3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/noise/noise.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 7489,
+      "sha256": "41E488B42673049F18B2DD2D11265A640EDF329B8708D0D1EE087C4AFE7D295E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/noise/noise_serial.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7260,
+      "sha256": "31A1D89368D69E16F153D59D2AEF86582867D306A39CB8F141BADEFFD181CB16"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/pipeline-dpcpp/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2086,
+      "sha256": "C9458A54512737CA573059E5637C12FE12E195735FCC98FA20DE1E2F99FCFC7D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/pipeline-dpcpp/pipeline-dpcpp.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7643,
+      "sha256": "6EF136D9063F1D8BC74789EBD75B01176C26CD4CD04B07E2667BAF65E1E49D8D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/pipeline-dpcpp/pipeline-dpcpp.hpp",
+      "role": "immutable external compiler input",
+      "bytes": 3471,
+      "sha256": "413C5EF306CA2CCD9DC64B0DEE25BF17EC832986DC369A9361F50D8C0DE5EA90"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/pipeline-dpcpp/pipeline-dpcpp.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2231,
+      "sha256": "B7761B4A54D58F87BC22C64B84A8D423907544F66DB36E54FB7E815F7470AA46"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/README.txt",
+      "role": "immutable external compiler input",
+      "bytes": 6531,
+      "sha256": "FCDB8394D58F40DD4B7E8F03671B27DBCC05A0EE4727B4B94E053BB21EFFA638"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/runner.py.in",
+      "role": "immutable external compiler input",
+      "bytes": 4620,
+      "sha256": "C90E047E8BE010895C1D61EF8E9EF505DEF573C78EFB14E9D85765EEF66E5FB8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/bench.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2224,
+      "sha256": "30DDC914F069B4E75FDCB8DFB9B58B65EE9E7BB3F131F5B506B6A4F7D4628726"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2427,
+      "sha256": "6A4C97C72B5A5BF36B51FC92AB3878EFB1EA9451A6F62224E90609472BCE165C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/main.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 2598,
+      "sha256": "2530D6602EFF209C367073E9C53AB32CAB4D6AAC82AC00C0D208C65F9D632BA5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/Matrix.h",
+      "role": "immutable external compiler input",
+      "bytes": 6235,
+      "sha256": "72B7186B0A0B311582F129AB8E906F879B145049287E478FDB76ADA5644DDF00"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/NaiveCMSgemm_genx.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 4761,
+      "sha256": "30A10A29BA8F2D3B97E6090ED57C3517FB785CD25FEAE4272E3289F4D04E3C1A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/naive_sgemm.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2442,
+      "sha256": "B709BC4F7298CA2CB5A81204700FAC0C21098AA790387202B88C1D4F9D4118B1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/sgemm.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 9773,
+      "sha256": "8E8C2456544C0AB48ADF5B48D9320D5DD12152DFF774704A1E6CBED4029819BF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/sgemm/sgemm.hpp",
+      "role": "immutable external compiler input",
+      "bytes": 2126,
+      "sha256": "3C53455392D0DE594C2F6E974D7A5185B65F61CB17EE928BFDB1F2E55CB27AD1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 1995,
+      "sha256": "C288CD6BB6B51B7E687858E163B3D68DA064AA0D94E7FDECAF7647B8E79E2C2B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple/simple.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 5889,
+      "sha256": "017739066FA18296A4B17DD762C48C58468A0DBCB5F383129C08755B9FD2EE9E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple/simple.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2318,
+      "sha256": "8077C2C13AA190F12DE0223A951C5BD7922CD3491B56C485C5D07FC301E1F5C6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2073,
+      "sha256": "85976BE4425638D9728F321EA0860ECFED9FDBAFFF68901A8FBB13D6106B8049"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp/simple-dpcpp.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 7310,
+      "sha256": "379B9D9FAFACE9C695FA6588591B37DB578FF35A090952FCD235D3B0185BC063"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp/simple-dpcpp.hpp",
+      "role": "immutable external compiler input",
+      "bytes": 1539,
+      "sha256": "71DD443CC5D7CA2A89F58242517AD9FEC54D0BDF6293F9E3115BD994DD96A069"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp/simple-dpcpp.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2320,
+      "sha256": "407C3E885FA6BCFF365E9CF6DE7B6E22BC17FF9C12975F9D76D99451FC9EC836"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp-l0/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2090,
+      "sha256": "93F6B05C10BA9ECE0E259B741B852E921853FA5C44D303D4AC98C501A93F17EE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp-l0/simple-dpcpp-l0.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 8064,
+      "sha256": "227213A855A3E46A80A41AA13A8237BC4444664C3AD628AC97C6820C82CD0237"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp-l0/simple-dpcpp-l0.hpp",
+      "role": "immutable external compiler input",
+      "bytes": 1821,
+      "sha256": "754B715B59DF9D55D4D8EE3BA1F2BD1BAF6F0FE28332881649AE36E5076F7093"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-dpcpp-l0/simple-dpcpp-l0.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2320,
+      "sha256": "407C3E885FA6BCFF365E9CF6DE7B6E22BC17FF9C12975F9D76D99451FC9EC836"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-usm/CMakeLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 2011,
+      "sha256": "31367B83F6691C29E1E9A00111A6CA583A04C6BEA2F2D73002B4A2A41E73D0C1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-usm/simple-usm.cpp",
+      "role": "immutable external compiler input",
+      "bytes": 5469,
+      "sha256": "A3D8F3B96E17C6CB51AB477A48C302B069A5298C20A01D924C4057490A5B774A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/simple-usm/simple-usm.ispc",
+      "role": "immutable external compiler input",
+      "bytes": 2299,
+      "sha256": "C5617657253B17BD8F1FCC4AE40CB9F3D6CBB561B8FD824901D4314BD259C27F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/examples/xpu/TestLists.txt",
+      "role": "immutable external compiler input",
+      "bytes": 9575,
+      "sha256": "928D8C497D234456EA1B010AD2BD6362BC2E49D61B3B5F19E8F94A37E834E446"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/faq.html",
+      "role": "immutable external compiler input",
+      "bytes": 45059,
+      "sha256": "07B887BD600E536A59A31F4733506814A6F99837F2968F4A0C29BB1449F88B85"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/include/ispcrt/ispcrt.h",
+      "role": "immutable external compiler input",
+      "bytes": 4752,
+      "sha256": "C211222C01F7F2CAD30552DE54C16556BB0F20BF707945BD3C76CE9987FB84A6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/include/ispcrt/ispcrt.hpp",
+      "role": "immutable external compiler input",
+      "bytes": 16915,
+      "sha256": "3919F807BE31E48E935265740160291BDD9BABFD55AC7C741518C02971DBDA8B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/include/ispcrt/ispcrt.isph",
+      "role": "immutable external compiler input",
+      "bytes": 667,
+      "sha256": "8843B26516A59B4F1CF8A87DC5762ADF7DC0270A2495C9E1C7BB276E5FC91356"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/ispc.html",
+      "role": "immutable external compiler input",
+      "bytes": 293620,
+      "sha256": "8408603AD222847EE8B281E9289F2F5D460F7FA32835E2A3EDA61BBAFA851BB8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/cmake/ispcrt-1.16.1/Findlevel_zero.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 1035,
+      "sha256": "8A8144281D9D8B625E5B03A18C72DDF66E46825E611BAA2D501264E2164FD9A2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/cmake/ispcrt-1.16.1/ispc.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 12344,
+      "sha256": "CC273FE003C2A0B4445FE13F4AC30E295542EAFD432719A43A8790BC1B43EA6E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/cmake/ispcrt-1.16.1/ispcrtConfig.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 1693,
+      "sha256": "5F27AEBC0D6FD142F20B8B65B2E272113D165E02007326A9140B675981973F0A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/cmake/ispcrt-1.16.1/ispcrt_Exports-release.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 1404,
+      "sha256": "3A7F5ADEA4BFF82ED7C9718CEA774AFC9CF75CF1E65D574D4177EB6530A5F0FB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/cmake/ispcrt-1.16.1/ispcrt_Exports.cmake",
+      "role": "immutable external compiler input",
+      "bytes": 3930,
+      "sha256": "B154572BE0A298A61F67A561513641F18C747D389E542A49BD613FF6A271EC77"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/ispcrt.lib",
+      "role": "immutable external compiler input",
+      "bytes": 103130,
+      "sha256": "56E03C584B27F8222E9532A3A5C3929187AC4E6A4DA655A9B3C15B3AFCB6AAF7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/lib/ispcrt_static.lib",
+      "role": "immutable external compiler input",
+      "bytes": 557240,
+      "sha256": "E94F4AD05DAC146BDE806797852A6120379A2AEB0FD60A62741C8E4359A38F9C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/LICENSE.txt",
+      "role": "immutable external compiler input",
+      "bytes": 1543,
+      "sha256": "7BD6323EF5A518001C217C1F054D3CF56C60A803D58773C512D3AC4EDC750620"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/perfguide.html",
+      "role": "immutable external compiler input",
+      "bytes": 40477,
+      "sha256": "2875F5B5E703D4AFF692ADF85E0001A2992257C6D446FC6FFEFD4B0FA0E54E0A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/ReleaseNotes.txt",
+      "role": "immutable external compiler input",
+      "bytes": 59553,
+      "sha256": "915FDF6AB27A0F75EE7AAF68D7EDFB01CF8FE6D3E8B4ED82E9F4EF1487918A9A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows/third-party-programs.txt",
+      "role": "immutable external compiler input",
+      "bytes": 115626,
+      "sha256": "0699C03656D6BC067D07FB0EE8EF513AA8A05E9E25D70B421C50853555848C88"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "role": "engine reference",
+      "bytes": 7461,
+      "sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "role": "engine reference",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "role": "engine reference",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "role": "engine reference",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "role": "engine reference",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "role": "engine reference",
+      "bytes": 6791,
+      "sha256": "EF3CD0C05C25764DE725A0D197846BE6F0F5CA043A812812E9DB5B757733F326"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt",
+      "role": "engine reference",
+      "bytes": 4241,
+      "sha256": "3DD0AEA92B0DA019A4880031E26CF930ACD99A0D3CF7C2B684E3F8423D83FD79"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Compressors/ISPCTextureCompressor.cpp",
+      "role": "engine reference",
+      "bytes": 10487,
+      "sha256": "BFB0011C503AB9D31BC5B4526440099673A8CE18FDE90EC7231C761018A98053"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Compressors/ISPCTextureCompressor.h",
+      "role": "engine reference",
+      "bytes": 1406,
+      "sha256": "FD0418CC74D9E7BF937B95A7E38E6BA355A7752AD3015A583594311E805AC66C"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/recipe-FindISPCTexComp.cmake",
+      "role": "audited provenance reference",
+      "bytes": 1366,
+      "sha256": "98B662DF8A029A007EE1FFAE0A8CA338009EE60401D2E529B437607342A9AF59"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/recipe-build_config.json",
+      "role": "audited provenance reference",
+      "bytes": 919,
+      "sha256": "10559F010E4A536EC524A5C65BB9B705FA665BA3047082B20B15170DFB7C4125"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/recipe-build_windows.bat",
+      "role": "audited provenance reference",
+      "bytes": 1049,
+      "sha256": "A8DA47BF2140424D75CEAACD8AEA09561D83DC4B9967AF0C96916247FB58C0A9"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/recipe-build_package_image.py",
+      "role": "audited provenance reference",
+      "bytes": 10461,
+      "sha256": "9415CECA30D7F0E1DA78249C74E0D40462651B4E41FA28406337C0ACF837DD6F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/recipe-ISPCTexComp_36b80aa.patch",
+      "role": "audited provenance reference",
+      "bytes": 883,
+      "sha256": "57668155007FAF2D6088A64952F09DB5CD60C130580EECD294770B76AC52DB0A"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/upstream-tree.json",
+      "role": "audited provenance reference",
+      "bytes": 76344,
+      "sha256": "FA56736AA251EC6B64136CADF95F637664B171920E58F87A745D1F1B6B509058"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/upstream-commit.json",
+      "role": "audited provenance reference",
+      "bytes": 20094,
+      "sha256": "A3F18F2779FB26448294853FF33D8D5C733CB4B88EF2ADD4A387A6069EEA60DA"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/source-immutable-manifest.json",
+      "role": "audited provenance reference",
+      "bytes": 93772,
+      "sha256": "57F92DEC28E02ED21FC8D496B46668E9F7C8A2C687596197663CE3A8FE3A2B44"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/tool-immutable-manifest.json",
+      "role": "audited provenance reference",
+      "bytes": 52197,
+      "sha256": "C7B2D1E932455EA837BD824B8440DBD7C964A9EE2E5F5AE69E16833E37AF7F6E"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/source-eol-attributes-proof-v3.json",
+      "role": "audited provenance reference",
+      "bytes": 190019,
+      "sha256": "DFA03D0B9E11BBFF63668830EE454B97E01E95817AFC36085B437467348A7234"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/upstream-ISPC Texture Compressor__DXUT__.gitattributes",
+      "role": "audited provenance reference",
+      "bytes": 358,
+      "sha256": "988550FA928681F26AAA6E23BCF1B49ECAF5A2743822467C8DA9AFCC27E6265E"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/upstream-ISPC Texture Compressor__DirectXTex__.gitattributes",
+      "role": "audited provenance reference",
+      "bytes": 358,
+      "sha256": "8DCDB7C72967CE73BFB060BE9E8CF6188D6E2E0A9A29E407A36B932C8EFE6FFF"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/ispc-v1.16.1-release.json",
+      "role": "audited provenance reference",
+      "bytes": 6770,
+      "sha256": "DE961C43BAFF319BB588D53B546876784FEFEF15F6AB9AA5D2F3460770E18FE5"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/ispc-v1.16.1-tag.json",
+      "role": "audited provenance reference",
+      "bytes": 323,
+      "sha256": "00418B6F77C50F8FC7091F260AFAA9FF0DA96A01FB45CA24F78878200A19AF73"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/ispc-v1.16.1-tag-object.json",
+      "role": "audited provenance reference",
+      "bytes": 674,
+      "sha256": "C9059ACBEB34AA5D70F1CE57908ED7410619215BFD2D495F06993243E2C0A9A4"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/source-tool-head-audit.json",
+      "role": "audited provenance reference",
+      "bytes": 1086,
+      "sha256": "621509B2D3C8F809BEAD8C522618109C0F5BFCB3FA8160AF9B6B22C6CA4E7D02"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/source-acquisition.json",
+      "role": "audited provenance reference",
+      "bytes": 1117,
+      "sha256": "D2ADE24E13E58DF2B989BA25153898B54B44E890A36F50103997D34D31F0346A"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/tool-acquisition.json",
+      "role": "audited provenance reference",
+      "bytes": 1500,
+      "sha256": "DF837DCE47037FCD93ABB7D6CEA9EADCC8837DB3ACEC07F597B459BAA0812F3D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/primary-DDSTextureLoader.cpp",
+      "role": "audited provenance reference",
+      "bytes": 61088,
+      "sha256": "F35ADB2E050621E20CA485DB02ED5D578FB0B2315DD092408E43E458A9D3E35A"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/primary-DDSTextureLoader-blob.json",
+      "role": "audited provenance reference",
+      "bytes": 84475,
+      "sha256": "0448D8CEC4F823A2FC98E5B0A5F7C529881DF43F02FD38F64F10F97F4410178F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/parent-source-eol-review-rev1.json",
+      "role": "audited provenance reference",
+      "bytes": 74688,
+      "sha256": "1FD6F649BF674089686282B42C703F7F5613BA4A569DF940051AF26277E042E0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+      "role": "audited archive or installed native tool input",
+      "bytes": 6435298,
+      "sha256": "029373E6EC5B10D7E29EEFDC5A231FB86C79B76A4A39C58C2727C6729DE28AB7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+      "role": "audited archive or installed native tool input",
+      "bytes": 44708214,
+      "sha256": "B34DE2C36AFF2AFAA56B669EA41F9E614A045564CA74FC0B138E17CCEA4880B7"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/vcvarsall.bat",
+      "role": "audited archive or installed native tool input",
+      "bytes": 10524,
+      "sha256": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe",
+      "role": "audited archive or installed native tool input",
+      "bytes": 436024,
+      "sha256": "58FBE0ACAC5265FE9A93ACB291E1DBD50432C4EBF00FF9B9FB4C34BC0F247C73"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "role": "audited archive or installed native tool input",
+      "bytes": 677736,
+      "sha256": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D"
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Microsoft/VC/v170/Microsoft.Cl.Common.props",
+      "role": "audited archive or installed native tool input",
+      "bytes": 14217,
+      "sha256": "9D9C3AA8770DFC7E7430B831252E1EFBAB0799C7CE0D25A03485FF506BED575B"
+    },
+    {
+      "path": "C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "role": "audited archive or installed native tool input",
+      "bytes": 301368,
+      "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/FindISPCTexComp.cmake",
+      "role": "fresh audited SDK payload",
+      "bytes": 1880,
+      "sha256": "F4FBE6B57D9DB20A4DB3FC4C6E583468F08B815C34EACE66BC359849D0AE5158"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/ISPCTexComp/JERecipe.json",
+      "role": "fresh audited SDK payload",
+      "bytes": 522,
+      "sha256": "DE734A3D78E9C1D0F78FC2AD1D3EED5E100C49790C6E9C2BF1EAD5AD2261D6DE"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/ISPCTexComp/bin/ispc_texcomp.dll",
+      "role": "fresh audited SDK payload",
+      "bytes": 1537024,
+      "sha256": "3F6E8AD2AED34192836E39A2458FABC6ED48F937B3679D13A03315C3344F2C28"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/ISPCTexComp/bin/ispc_texcomp.lib",
+      "role": "fresh audited SDK payload",
+      "bytes": 7666,
+      "sha256": "941E378270612792DB91581123C121F6C8214F3AF32F9C1F2B246D257B034580"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/ISPCTexComp/include/ISPC/ispc_texcomp.h",
+      "role": "fresh audited SDK payload",
+      "bytes": 5046,
+      "sha256": "10C016535FA748088CED8FA08FA4D9D65185070C7CF632F2265A9FFD39DD234B"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/ISPCTexComp/license.txt",
+      "role": "fresh audited SDK payload",
+      "bytes": 1057,
+      "sha256": "C3B1335B5988CD4EB61994987F1F2B01002C88734C727D76A973B1722634757A"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/JERequireLocalPath.cmake",
+      "role": "fresh audited SDK payload",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPC-build-tool/LICENSE.txt",
+      "role": "fresh audited SDK payload",
+      "bytes": 1543,
+      "sha256": "7BD6323EF5A518001C217C1F054D3CF56C60A803D58773C512D3AC4EDC750620"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPC-build-tool/third-party-programs.txt",
+      "role": "fresh audited SDK payload",
+      "bytes": 115626,
+      "sha256": "0699C03656D6BC067D07FB0EE8EF513AA8A05E9E25D70B421C50853555848C88"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPCTexComp/source/ispc_texcomp.cpp",
+      "role": "fresh audited SDK payload",
+      "bytes": 12991,
+      "sha256": "2C87D42A95B405520696F9F316F53900292C766CFE40016B0656A8C680B86DEF"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPCTexComp/source/ispc_texcomp.h",
+      "role": "fresh audited SDK payload",
+      "bytes": 5046,
+      "sha256": "10C016535FA748088CED8FA08FA4D9D65185070C7CF632F2265A9FFD39DD234B"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPCTexComp/source/ispc_texcomp_astc.cpp",
+      "role": "fresh audited SDK payload",
+      "bytes": 17096,
+      "sha256": "B4BDFA2834B5BD63E4BE30D4754B6EDA85321ED5F6FF76F82FD27566BD7ADB9F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPCTexComp/source/kernel.ispc",
+      "role": "fresh audited SDK payload",
+      "bytes": 106239,
+      "sha256": "FDC9ED4D363DEAA771FDFEFC5EC75BE8E684A32AD7E83E1518704FB9876D774E"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/ISPCTexComp/source/kernel_astc.ispc",
+      "role": "fresh audited SDK payload",
+      "bytes": 99943,
+      "sha256": "7C9A635C22F28E33A579AAD73CD1074611C78ED201CEF3B04A713EF617DEC1A3"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/O3DE/LICENSE.txt",
+      "role": "fresh audited SDK payload",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "role": "fresh audited SDK payload",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/LICENSES/O3DE/LICENSE_MIT.TXT",
+      "role": "fresh audited SDK payload",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/NOTICE.txt",
+      "role": "fresh audited SDK payload",
+      "bytes": 571,
+      "sha256": "2F7D03244E746971DA70E60BD676E2452AF46B453C364ECF412AE01E3B459409"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/PackageInfo.json",
+      "role": "fresh audited SDK payload",
+      "bytes": 423,
+      "sha256": "37AB36E7E28C97D1202282E14B6CEBEE2F460F23F8659B8E37ACA7F8E9705403"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/README.md",
+      "role": "fresh audited SDK payload",
+      "bytes": 5366,
+      "sha256": "437789C26B3648A2165C612840445AA6C9043F2DEA347CFD7AADFEC1568E6B7C"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted/ISPCTexComp-36b80aa-je-rev1-windows/SHA256SUMS",
+      "role": "fresh audited SDK payload",
+      "bytes": 1981,
+      "sha256": "228AFF91167FD014C4F1E4F755014C275B73285ADBCC24B1C1C48F27CD8B28D6"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build/packages/ISPCTexComp-36b80aa-je-rev1-windows.tar.xz",
+      "role": "artifact or validation authority",
+      "bytes": 491564,
+      "sha256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build/packages/ISPCTexComp-36b80aa-je-rev1-windows.tar.xz.SHA256SUMS",
+      "role": "artifact or validation authority",
+      "bytes": 110,
+      "sha256": "803F8ECF8CD7CF3FCC106EA444FB11E5990165FCD9A654CAA879158505CC4834"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/archive-audit-before-extraction.json",
+      "role": "artifact or validation authority",
+      "bytes": 4941,
+      "sha256": "1853DC9B7556FF305B0C22B45B148D6A2C613B616FEE2DD9D214242F0EC0B9A7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/extracted-package-manifest.json",
+      "role": "artifact or validation authority",
+      "bytes": 4239,
+      "sha256": "7BEDF91D92A87358322536CD56D1808109FF2065E22FDC1B2BE1026B49942950"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/pe-coff-notice-audit.json",
+      "role": "artifact or validation authority",
+      "bytes": 11333,
+      "sha256": "142DEFB3FF5751C899229676D774DCF2A74F7C2222E97CC0A9DDA8A99A6BE657"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/package-audit-summary.json",
+      "role": "artifact or validation authority",
+      "bytes": 505,
+      "sha256": "CFC855F3F36672CD26543456768B407B2F56A9C082ECCB1764D15E26C57F487B"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-audit/audit-reader-receipt.json",
+      "role": "artifact or validation authority",
+      "bytes": 500,
+      "sha256": "FBFDE4AC55494C846525C9EF127E8719F9D2B4F9A94508D65E4017F29EFC27E9"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/source-freeze-ispc-texcomp-rev2.json",
+      "role": "artifact or validation authority",
+      "bytes": 139915,
+      "sha256": "5A94E4F3E8E84D0ADE4DFD3CDFF9A2027314C465B2B5B78ACD5B48B26E28BD47"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-audit/validation-arguments-rev2.json",
+      "role": "artifact or validation authority",
+      "bytes": 5170,
+      "sha256": "35B6A7D77269F60E2A067B401980E01C3F4576E2F755D0DE09CFB3B1851127F4"
+    },
+    {
+      "path": "C:/Program Files/CMake/bin/cmake.exe",
+      "role": "artifact or validation authority",
+      "bytes": 13119048,
+      "sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64"
+    },
+    {
+      "path": "C:/Program Files/CMake/bin/ctest.exe",
+      "role": "artifact or validation authority",
+      "bytes": 14012488,
+      "sha256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "launcher": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherFileVersion": "7.6.5.500",
+  "callerExecutable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "callerPid": 194784,
+  "launchUtc": "2026-10-11T08:49:24.8398660Z",
+  "driverSHA256": "7D68BE16F94F7FD15A6FC3C3BDD017A96A1152B7388AFB0FEBF248D1EC369B55",
+  "assignmentSHA256": "E5C710C927F833D273F883EFEC68C6553A4C75A3481EAFF39DA305A3108802D0",
+  "freezeSHA256": "D667AE233DA3874222F85373213A21397C0816B2F920F4DA55F65C10304CDF93",
+  "sourceFreezeEntries": 556,
+  "attempt1ExistedBeforeLaunch": false,
+  "producerOutputExistedBeforeLaunch": false,
+  "activeCheckoutNativeProcesses": []
+}

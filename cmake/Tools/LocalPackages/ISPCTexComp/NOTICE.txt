@@ -1,0 +1,11 @@
+ISPCTexComp: Copyright (c) 2016-2019 Intel Corporation, MIT license.
+Exact upstream source: GameTechDev/ISPCTextureCompressor
+36b80aac50ea401a9adde44d86712c2241b2acfd.
+Full license and library source notices are included unchanged.
+
+ISPC 1.16.1 is an external build tool, not part of this product payload.
+Its Intel BSD3 license and complete third-party notices are retained for
+build provenance. Neither ispc.exe nor ispcrt.dll is redistributed here.
+
+Local packaging glue: Contributors to the Open 3D Engine Project,
+Apache-2.0 OR MIT; retained original notices apply.

@@ -1,0 +1,11 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+    "--config",
+    "Release",
+    "--parallel",
+    "8"
+  ]
+}

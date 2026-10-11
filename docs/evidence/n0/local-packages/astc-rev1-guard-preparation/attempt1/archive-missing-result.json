@@ -1,0 +1,14 @@
+{
+  "label": "archive-missing",
+  "scope": "PRODUCER",
+  "nativeExit": 1,
+  "seconds": 0.0294432,
+  "expectedError": "ASTC source archive file is missing",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-missing"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

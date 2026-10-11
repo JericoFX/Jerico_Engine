@@ -1,0 +1,72 @@
+[
+  {
+    "source_path": "CMakeLists.txt",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-CMakeLists.txt",
+    "expected_git_blob": "1bdefd40a29e791754cc0cf5de8e7b887c67dda6",
+    "actual_git_blob": "1bdefd40a29e791754cc0cf5de8e7b887c67dda6",
+    "match": true
+  },
+  {
+    "source_path": "src/cmake/externalpackages.cmake",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-externalpackages.cmake",
+    "expected_git_blob": "83a1773f685afb6928d897c166ac18ca1319f7d6",
+    "actual_git_blob": "83a1773f685afb6928d897c166ac18ca1319f7d6",
+    "match": true
+  },
+  {
+    "source_path": "LICENSE.md",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-LICENSE.md",
+    "expected_git_blob": "de10a34492cf9e1b5071676fe3dfad8de093eb2d",
+    "actual_git_blob": "de10a34492cf9e1b5071676fe3dfad8de093eb2d",
+    "match": true
+  },
+  {
+    "source_path": "THIRD-PARTY.md",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-THIRD-PARTY.md",
+    "expected_git_blob": "a5f4b9f7828b808907e88f3af9e37d71f3e4ca62",
+    "actual_git_blob": "a5f4b9f7828b808907e88f3af9e37d71f3e4ca62",
+    "match": true
+  },
+  {
+    "source_path": "src/cmake/compiler.cmake",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-compiler.cmake",
+    "expected_git_blob": "43925e57e0136a43b7ca7609d86217b9a38e5e39",
+    "actual_git_blob": "43925e57e0136a43b7ca7609d86217b9a38e5e39",
+    "match": true
+  },
+  {
+    "source_path": "src/cmake/pythonutils.cmake",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-pythonutils.cmake",
+    "expected_git_blob": "a72552da2ce55543259de2e655e5c50dbb7bc25f",
+    "actual_git_blob": "a72552da2ce55543259de2e655e5c50dbb7bc25f",
+    "match": true
+  },
+  {
+    "source_path": "src/libOpenImageIO/CMakeLists.txt",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-native-CMakeLists.txt",
+    "expected_git_blob": "312ae44c552d45d55f2ecfca023368f3b22ececd",
+    "actual_git_blob": "312ae44c552d45d55f2ecfca023368f3b22ececd",
+    "match": true
+  },
+  {
+    "source_path": "src/libutil/CMakeLists.txt",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-libutil-CMakeLists.txt",
+    "expected_git_blob": "0bda5ebf61f951969af148de5825f56bb62304cd",
+    "actual_git_blob": "0bda5ebf61f951969af148de5825f56bb62304cd",
+    "match": true
+  },
+  {
+    "source_path": "src/include/OpenImageIO/sysutil.h",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-HistoricalSysutil.h",
+    "expected_git_blob": "42815b8568baa48ef1ca50855b25798cd907739c",
+    "actual_git_blob": "42815b8568baa48ef1ca50855b25798cd907739c",
+    "match": true
+  },
+  {
+    "source_path": "src/libutil/sysutil.cpp",
+    "file": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-HistoricalSysutil.cpp",
+    "expected_git_blob": "e39b5fa9be82b2372490f59eed20e3585ceb429c",
+    "actual_git_blob": "e39b5fa9be82b2372490f59eed20e3585ceb429c",
+    "match": true
+  }
+]

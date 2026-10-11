@@ -1,0 +1,15 @@
+{
+  "label": "output-outside-build",
+  "scope": "PRODUCER",
+  "nativeExit": 1,
+  "seconds": 0.0294373,
+  "expectedError": "output must be beneath this checkout/build",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-outside-build",
+    "F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

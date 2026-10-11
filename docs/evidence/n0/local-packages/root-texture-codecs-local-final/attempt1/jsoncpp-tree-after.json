@@ -1,0 +1,1152 @@
+{
+  "name": "jsoncpp-tree-after",
+  "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2",
+  "fileCount": 229,
+  "files": [
+    {
+      "relativePath": ".clang-format",
+      "bytes": 1396,
+      "sha256": "07851f13c9761c0a62c43c245c29ffc463fe2e91e6d9f4c62bc9f22ad20cbc57"
+    },
+    {
+      "relativePath": ".gitignore",
+      "bytes": 404,
+      "sha256": "f2101ba54084ff0a2fb67c10b5d66b8d9b03225145fcc64ee24cca368d32e778"
+    },
+    {
+      "relativePath": ".travis.yml",
+      "bytes": 707,
+      "sha256": "af4e9f96abec9fba259807bb340d0fa0aaa04133b06c39206cba05ba32a0afc4"
+    },
+    {
+      "relativePath": "amalgamate.py",
+      "bytes": 6738,
+      "sha256": "1d13deac3c93e84882bab0d683426b123303c1b37e9de07bfb8fbb82703b1b8f"
+    },
+    {
+      "relativePath": "AUTHORS",
+      "bytes": 48,
+      "sha256": "ff4a4b3673b498ad40c913dfe0e9ec6bdb2340686700ab7290411df45259b112"
+    },
+    {
+      "relativePath": "CMakeLists.txt",
+      "bytes": 5099,
+      "sha256": "bdc96d0d5407b126cbdcbc06644bf171b4b9ac808e1d70efa1d4a9a1e352884d"
+    },
+    {
+      "relativePath": "dev.makefile",
+      "bytes": 972,
+      "sha256": "3eeb6365e4cd9359413314148928895adfc5614c34a68ec39a2334baa6f7bd6b"
+    },
+    {
+      "relativePath": "doxybuild.py",
+      "bytes": 7419,
+      "sha256": "e974b02efb5c9aa8acfc20a8e1c9806362797f16d072268668667f862fdfb489"
+    },
+    {
+      "relativePath": "LICENSE",
+      "bytes": 2665,
+      "sha256": "76c45ece83a26117f86f4e349e7df118708e061e87225328fb478ce1e8b3eb86"
+    },
+    {
+      "relativePath": "makerelease.py",
+      "bytes": 15731,
+      "sha256": "288a4a2ecad8a998fb2f04c91960ead9a39a03a6a62e035b770711e8436a60ea"
+    },
+    {
+      "relativePath": "NEWS.txt",
+      "bytes": 7094,
+      "sha256": "e837b59284775c08cdaf3077e876eaf5cb98dd83a29980758516c98f97a85dc5"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 8156,
+      "sha256": "edf255c6ba5e678bad0f9c94ae3c7a5a3c8308f558433e7ed9ae01fb1c3c5877"
+    },
+    {
+      "relativePath": "SConstruct",
+      "bytes": 9577,
+      "sha256": "498cd2f2ce8c443155176fcbae5e574ac232b715d566b118d158b141472392f7"
+    },
+    {
+      "relativePath": "version",
+      "bytes": 6,
+      "sha256": "a2d5e268fe70979caccd895156b3d33bd61a3cc7e660ab7a5b07066849b3e248"
+    },
+    {
+      "relativePath": "version.in",
+      "bytes": 18,
+      "sha256": "72bde516ea1048f065568f467cb76ffbd42ad6fee2eb32632bedcb814c4a1bfd"
+    },
+    {
+      "relativePath": "devtools\\__init__.py",
+      "bytes": 226,
+      "sha256": "6f10c71f0171bd88942432a3a399f835b1c5e3e68f178141b1b7132bb5b09d28"
+    },
+    {
+      "relativePath": "devtools\\agent_vmw7.json",
+      "bytes": 917,
+      "sha256": "e2946d7c976627c40fb8a2b749f5b228b4e87173559fd59f1960ad2abc160842"
+    },
+    {
+      "relativePath": "devtools\\agent_vmxp.json",
+      "bytes": 607,
+      "sha256": "867966bc02b062c4880b2983d2a6393e1467acdad57ab6ba70311449fd13a9b0"
+    },
+    {
+      "relativePath": "devtools\\antglob.py",
+      "bytes": 7884,
+      "sha256": "3051e628e40243b47a77347cb8652a0301f43fdd556f9340df4f1f5d98097c0f"
+    },
+    {
+      "relativePath": "devtools\\batchbuild.py",
+      "bytes": 11483,
+      "sha256": "3e0b3917aed17cc0cafd5f341532e9f1a36158f7513ea6f0675856ca5f5c4fae"
+    },
+    {
+      "relativePath": "devtools\\fixeol.py",
+      "bytes": 2191,
+      "sha256": "f215f95263bde54b28a4fd946bdbc82cf676ec7b7045624b533f7d0c8ea35ad6"
+    },
+    {
+      "relativePath": "devtools\\licenseupdater.py",
+      "bytes": 3940,
+      "sha256": "6530fdcdb5d5a64a354beaea91479760383cc4948ae74f1fef3d968029e764e2"
+    },
+    {
+      "relativePath": "devtools\\tarball.py",
+      "bytes": 2210,
+      "sha256": "7e279f0a00c712df964138d9d4380d9f2d2feac28ffceffc140e8012bd934df2"
+    },
+    {
+      "relativePath": "doc\\doxyfile.in",
+      "bytes": 100486,
+      "sha256": "d228491a78f425b33a66307fa4af9bdd1d6996b2cbeaf348ffa3b42767509603"
+    },
+    {
+      "relativePath": "doc\\footer.html",
+      "bytes": 22,
+      "sha256": "ede9c309db77a6c7dc2a4e832a8c80044bf1f8568da4c38850b6754350c5f2de"
+    },
+    {
+      "relativePath": "doc\\header.html",
+      "bytes": 600,
+      "sha256": "06e1c490fa0319d369a6a1fbb0d171f8d0a10d0d69bd2beebd406c7db3ade3dd"
+    },
+    {
+      "relativePath": "doc\\jsoncpp.dox",
+      "bytes": 5866,
+      "sha256": "8720d2714434cef807a676a5a564241b9cc43a48d4c56289553bf43cc24accb6"
+    },
+    {
+      "relativePath": "doc\\readme.txt",
+      "bytes": 71,
+      "sha256": "557140d25a4213b1c64ae7663a11a98258f36f4b9c8fca44b710f9359ca36a82"
+    },
+    {
+      "relativePath": "doc\\roadmap.dox",
+      "bytes": 109,
+      "sha256": "448aa510f07ade61d496d3830ba1dc46fa5a685604889d12cab26289d20d6466"
+    },
+    {
+      "relativePath": "doc\\web_doxyfile.in",
+      "bytes": 100482,
+      "sha256": "dbf0b0981ba0654109533751356ffb1bc07f5e2f15b10918cf36beaf625b3943"
+    },
+    {
+      "relativePath": "include\\CMakeLists.txt",
+      "bytes": 108,
+      "sha256": "f1d5282d19c420a1fde83747a4ccc24cd7d81f25aa037082b73c26b13907493f"
+    },
+    {
+      "relativePath": "include\\json\\assertions.h",
+      "bytes": 2203,
+      "sha256": "ecec031f5d40336751b4af9f5f240a6d04ddd90f7ec8bebe0365e61f2b3cf7b1"
+    },
+    {
+      "relativePath": "include\\json\\autolink.h",
+      "bytes": 662,
+      "sha256": "a6d1df45ced13888381ff014fd5f61930061bcfe16d38cd90edc2234b39d6c21"
+    },
+    {
+      "relativePath": "include\\json\\config.h",
+      "bytes": 3860,
+      "sha256": "c0bd8c5d4d9f357f3cd5917d85c3ce447125ec98e2640d54dc5c8f3ee7fd916c"
+    },
+    {
+      "relativePath": "include\\json\\features.h",
+      "bytes": 1718,
+      "sha256": "29468be6ed917d8889493e93a0142430aa560170d41de56182d35f37b1d355c7"
+    },
+    {
+      "relativePath": "include\\json\\forwards.h",
+      "bytes": 758,
+      "sha256": "46fa7154ab8e1fdf3c79b8d00751bf022f4f377b7f1a6babe2b8076464f140c6"
+    },
+    {
+      "relativePath": "include\\json\\json.h",
+      "bytes": 420,
+      "sha256": "4123ba700687838121226a8923aea66918832aad886af3f26ca6718eb0051a6a"
+    },
+    {
+      "relativePath": "include\\json\\reader.h",
+      "bytes": 13217,
+      "sha256": "0d5aed140fd17e08b63d073cbfbb00dcb21919a12402c985a4a70aae53035f13"
+    },
+    {
+      "relativePath": "include\\json\\value.h",
+      "bytes": 26031,
+      "sha256": "0c68c0a0a870eb90805f5af23379e5755e3f7ed9c73c747b1e2acbcf218ebb32"
+    },
+    {
+      "relativePath": "include\\json\\version.h",
+      "bytes": 535,
+      "sha256": "72cc92c9f8e3e7ddab32325d01b6b52782389af7910efa26bf193829988b951f"
+    },
+    {
+      "relativePath": "include\\json\\writer.h",
+      "bytes": 10696,
+      "sha256": "1b225db0e8e30b6481c253f0c0a500cc664d8cdea57311c0137349b6c879918f"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\jsoncpp.sln",
+      "bytes": 2424,
+      "sha256": "20ed46bc0c58971cfd5550e70f2deb92da626c93bdc9e9aa1a907529bdb20551"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\jsontest.vcxproj",
+      "bytes": 5017,
+      "sha256": "032ac6e73a9fce556cd68e48fa81a09fe79413bc2cbfdb8fa473ac48940d15e7"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\jsontest.vcxproj.filters",
+      "bytes": 444,
+      "sha256": "6145949e2e47afde94a555b89ca1c90b2e7e45ba8e0b623abd95521c1bb1e3ae"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\lib_json.vcxproj",
+      "bytes": 7165,
+      "sha256": "c4ae650d156fe3ba3c7c0cc6d6e03a371f65ad11b05d9b4d5682d7652ce5eff3"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\lib_json.vcxproj.filters",
+      "bytes": 1153,
+      "sha256": "680cdd278cf7a6143d3dd7a871ddeb85ace0a5c1408d041983532ff3f0f3986e"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\test_lib_json.vcxproj",
+      "bytes": 5517,
+      "sha256": "6cf00c7211914af61fb8306b5289edf620e16627680e63ad742601fb206cf27d"
+    },
+    {
+      "relativePath": "makefiles\\msvc2010\\test_lib_json.vcxproj.filters",
+      "bytes": 837,
+      "sha256": "092db2679b7c92c6062cd4d30998d9970f124fe15a04f74052228f4ee9ceb55e"
+    },
+    {
+      "relativePath": "makefiles\\vs71\\jsoncpp.sln",
+      "bytes": 2526,
+      "sha256": "5be787c68a7bf3b0505d25d4f84996c13f1ec9e5f48c0ca831334361f8e0ffb9"
+    },
+    {
+      "relativePath": "makefiles\\vs71\\jsontest.vcproj",
+      "bytes": 3112,
+      "sha256": "1055e3906244ce5c5fca7aeb87f243f5b7f08cbf33fa3b285a294948553306ad"
+    },
+    {
+      "relativePath": "makefiles\\vs71\\lib_json.vcproj",
+      "bytes": 5470,
+      "sha256": "936e2da33d989d631fc4b56c86115a8571c4672029c49f01796dd21a7886bb2f"
+    },
+    {
+      "relativePath": "makefiles\\vs71\\test_lib_json.vcproj",
+      "bytes": 3485,
+      "sha256": "55a5b91051f54c856de55f05af6cb6412bd6b2a36bae75cb53d92432c0097cde"
+    },
+    {
+      "relativePath": "pkg-config\\jsoncpp.pc.in",
+      "bytes": 338,
+      "sha256": "2ad2a78e1f0e24d308b55b19ffd9b1df3d94e2a8c4a10195a2091fb815c1e859"
+    },
+    {
+      "relativePath": "scons-tools\\globtool.py",
+      "bytes": 1853,
+      "sha256": "965b96a070e46aa38c909787f07e49c89cac8eee1c7139959760210df60e2235"
+    },
+    {
+      "relativePath": "scons-tools\\srcdist.py",
+      "bytes": 5427,
+      "sha256": "5d2a82a3173c7049963b9b4c98da7b9980e59053b61724d983880a82441c8eaa"
+    },
+    {
+      "relativePath": "scons-tools\\substinfile.py",
+      "bytes": 3510,
+      "sha256": "9e2d794e89d1517499a9b7aed9331737770558da7db5256670911d8fb438f37f"
+    },
+    {
+      "relativePath": "scons-tools\\targz.py",
+      "bytes": 3256,
+      "sha256": "7013b7601a57369bbbba416a598600c9587bf33ec8c10c2217a06761ef056c1e"
+    },
+    {
+      "relativePath": "src\\CMakeLists.txt",
+      "bytes": 149,
+      "sha256": "83bda353fedac99e2b6ff2517375cce8ab801109d11d91d2106855116ff24b9e"
+    },
+    {
+      "relativePath": "src\\jsontestrunner\\CMakeLists.txt",
+      "bytes": 1036,
+      "sha256": "c286b26dc709a37e37ce04ccc4debfbd8637bb81602351d608a7eadd0222786e"
+    },
+    {
+      "relativePath": "src\\jsontestrunner\\main.cpp",
+      "bytes": 9378,
+      "sha256": "67cc9658ba83475092bc06281ba4687f14dd6cda79fbb349987121c250c08647"
+    },
+    {
+      "relativePath": "src\\jsontestrunner\\sconscript",
+      "bytes": 227,
+      "sha256": "75c9468e5407c7d8a86d98239a98e7cc56d55171c1dc2cc74a7c1e162b0cdf06"
+    },
+    {
+      "relativePath": "src\\lib_json\\CMakeLists.txt",
+      "bytes": 3271,
+      "sha256": "3bd80256bfcdf79f0b0db47a5730b333b37d6b2fe4cf4512652459c071dbeffb"
+    },
+    {
+      "relativePath": "src\\lib_json\\json_reader.cpp",
+      "bytes": 56217,
+      "sha256": "6cf6024dce4dac34f4d4b5f23baa51099934c5397f8d6874296890b79ce45c31"
+    },
+    {
+      "relativePath": "src\\lib_json\\json_tool.h",
+      "bytes": 2705,
+      "sha256": "ab1858b842ba58b52dcb7c5d30578b809e9d87cb72be31492196b31db7025d66"
+    },
+    {
+      "relativePath": "src\\lib_json\\json_value.cpp",
+      "bytes": 44999,
+      "sha256": "a8a6ff669ad46282dca49713edb41e3c8b3ebeaa7670d8ad540dbbd8f8bd472f"
+    },
+    {
+      "relativePath": "src\\lib_json\\json_valueiterator.inl",
+      "bytes": 5050,
+      "sha256": "1ba9c89a4d85471e4d157b4ce121aeab55cd02019e38629e9ee4580cdad5a714"
+    },
+    {
+      "relativePath": "src\\lib_json\\json_writer.cpp",
+      "bytes": 33468,
+      "sha256": "80141466cdec2b292bac6d2f6cf16214d6e3a5cb651a7bd20393ee588112f77b"
+    },
+    {
+      "relativePath": "src\\lib_json\\sconscript",
+      "bytes": 146,
+      "sha256": "0416da49e053990e4df794c19631623af616c17d59ca3710f209a67a2a132408"
+    },
+    {
+      "relativePath": "src\\lib_json\\version.h.in",
+      "bytes": 613,
+      "sha256": "4eb4f4ce594ec9904992a53e831530858ce8dd2d56f6963016eca2ab803edeaf"
+    },
+    {
+      "relativePath": "src\\test_lib_json\\CMakeLists.txt",
+      "bytes": 1529,
+      "sha256": "f9debb8ae5eae6767d688c3c0bf31ba82d7735f3ec61d3d8489529e65dfa6c6a"
+    },
+    {
+      "relativePath": "src\\test_lib_json\\jsontest.cpp",
+      "bytes": 12642,
+      "sha256": "0fb22695c627f9e4e329e1ac070512325dc5e9372462974dac694fdad829d8cd"
+    },
+    {
+      "relativePath": "src\\test_lib_json\\jsontest.h",
+      "bytes": 11088,
+      "sha256": "3aff30f0aee0e6b4842b740958d66b3b086d5818c7cd28c1e42aaf0f1c12ca32"
+    },
+    {
+      "relativePath": "src\\test_lib_json\\main.cpp",
+      "bytes": 84751,
+      "sha256": "9a8d188700635d96919dcfbbce7c5aac8fdb99bc79c5b2b5c51d6eaa5b0bac8e"
+    },
+    {
+      "relativePath": "src\\test_lib_json\\sconscript",
+      "bytes": 242,
+      "sha256": "f56b3bb2bdc2af51d16f89b13ecbb3ce256553041bda4d16d261e84c6c044e7f"
+    },
+    {
+      "relativePath": "test\\cleantests.py",
+      "bytes": 466,
+      "sha256": "7a68cd98fefa4fad76d15f9c6c572a5c3461594615fe85414c248351700074cb"
+    },
+    {
+      "relativePath": "test\\generate_expected.py",
+      "bytes": 552,
+      "sha256": "4265e61d54f5d8df7fbe40145b2e9abbaf71b9f9faa2e9bbbee87465ade32cf6"
+    },
+    {
+      "relativePath": "test\\pyjsontestrunner.py",
+      "bytes": 2346,
+      "sha256": "58aa72a8adce110114121bb1e1a5a01983c78b0a636d59a9caee25d4e49ff780"
+    },
+    {
+      "relativePath": "test\\runjsontests.py",
+      "bytes": 7140,
+      "sha256": "011a2e73d876018e316268146d57b3992f512b5e1bb9e46c6dc26e98d789dbc3"
+    },
+    {
+      "relativePath": "test\\rununittests.py",
+      "bytes": 2898,
+      "sha256": "cae0de9f8ca0f6ed8eb2d6dcc82c27eaaee86069e791307002bbb6fdaa234ab9"
+    },
+    {
+      "relativePath": "test\\data\\fail_test_array_01.json",
+      "bytes": 9,
+      "sha256": "ba632e3b0e558d4a4ddd6d94f7e8ee54531de7a906ecced62fcc8556d160b0a1"
+    },
+    {
+      "relativePath": "test\\data\\test_array_01.expected",
+      "bytes": 5,
+      "sha256": "77f07f05766c910ff299e454d73e1c08927574e88a478d8f7c39310c8160c095"
+    },
+    {
+      "relativePath": "test\\data\\test_array_01.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "relativePath": "test\\data\\test_array_02.expected",
+      "bytes": 12,
+      "sha256": "daa5e6d09e5bdb2cb999971f3973013229ed8248967e6ce1db9c417a2b4800c1"
+    },
+    {
+      "relativePath": "test\\data\\test_array_02.json",
+      "bytes": 4,
+      "sha256": "acc07b62f23f458923737c4cd4a66bd05d1e71eb4f384003baaf2dcc760d6349"
+    },
+    {
+      "relativePath": "test\\data\\test_array_03.expected",
+      "bytes": 40,
+      "sha256": "96f1d95dabfae3e3a4c458a1282f7f8a893421bf71de38c7e593280ea4a2383b"
+    },
+    {
+      "relativePath": "test\\data\\test_array_03.json",
+      "bytes": 17,
+      "sha256": "4e633466c855196e49ebc0ad737fdbb24eefb7eeb1fc871d28b571974fe77f4a"
+    },
+    {
+      "relativePath": "test\\data\\test_array_04.expected",
+      "bytes": 41,
+      "sha256": "42b73678b9a915eab2931bc2ed4cea8edc0eb92c55a6270ba7a6cf6183cf4725"
+    },
+    {
+      "relativePath": "test\\data\\test_array_04.json",
+      "bytes": 22,
+      "sha256": "71b9d8d6ca48ad274a199467213caa8cc67afdb142a1ec346366505825e63293"
+    },
+    {
+      "relativePath": "test\\data\\test_array_05.expected",
+      "bytes": 877,
+      "sha256": "bfa9d003e3a9b262ef4bc5db4bfb409ccc6b12de9a0894187204ed709fcc147f"
+    },
+    {
+      "relativePath": "test\\data\\test_array_05.json",
+      "bytes": 387,
+      "sha256": "15e28797a68120e90e101d0d5b56b2b935ce234d491819709b47fa0c67655465"
+    },
+    {
+      "relativePath": "test\\data\\test_array_06.expected",
+      "bytes": 185,
+      "sha256": "d1232ec1eee85314c13212348cbc107ef9e67358c0e53e358720437e2cb00a92"
+    },
+    {
+      "relativePath": "test\\data\\test_array_06.json",
+      "bytes": 173,
+      "sha256": "3cac0040ef2b5210fd58efa66df9ad1b60cf510dbf25138aabe1eea8193b9e9e"
+    },
+    {
+      "relativePath": "test\\data\\test_array_07.expected",
+      "bytes": 31712,
+      "sha256": "9b4d9d3f5e4905353bb9447c237608d061825b79658b827d82ed5f7173a8524d"
+    },
+    {
+      "relativePath": "test\\data\\test_array_07.json",
+      "bytes": 9493,
+      "sha256": "da196295d91bb5ab20dcf850735c3442a8bd08ced3f501e57e848e3f2d830ea8"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_01.expected",
+      "bytes": 12,
+      "sha256": "3dc781528b800233837fac0f93b13e5d8959535e5a8cd5128e86e2d0e3995ed7"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_01.json",
+      "bytes": 11,
+      "sha256": "c67c199595622dfbdc9e415c4a0ad6166eb49cbf74c6aac7bb3e958604d5ecb8"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_02.expected",
+      "bytes": 13,
+      "sha256": "5c0bc69112c7193027799513f934f6d2c2907ce09576bbc7c87f4d611a239202"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_02.json",
+      "bytes": 12,
+      "sha256": "ef4e4e90bc547008c323b3ccbd54c01ff1e0a10f4691c23f96f405e1a2f64039"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_03.expected",
+      "bytes": 14,
+      "sha256": "7042bf2980acf79f7976fb955f9794927e155306ce452920ddb68b08aebaade6"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_03.json",
+      "bytes": 12,
+      "sha256": "83e1254d394a1b14bf2812775e1aa589fff45fbcec0d4ab60e9ac3c32da4fb91"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_04.expected",
+      "bytes": 12,
+      "sha256": "6e976c00b4d56ff0eec449c80e9d45426e64acd82c2f0da9072e33d74cb55f3b"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_04.json",
+      "bytes": 10,
+      "sha256": "ef980df0c86fd16af296ad4a7f4198cc694105f3d018a15895ac86f5fceac11e"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_05.expected",
+      "bytes": 8,
+      "sha256": "e76ff0e208a0410f89fd27e73df52c8a615174c0d14ac8f4d145bff66739f909"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_05.json",
+      "bytes": 6,
+      "sha256": "d08e54f6aa60dc061aad4c6f0ba7b19961b7762c35ea199fa23632b753241db4"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_06.expected",
+      "bytes": 8,
+      "sha256": "29669020f23f4ee10c830567d162cf4c7f88d18762a8789f5f573cb47e136c64"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_06.json",
+      "bytes": 6,
+      "sha256": "e3949a4b725d800a0fe4abecf0429f8f90154826911cca138b05e47bdc683bd2"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_07.expected",
+      "bytes": 9,
+      "sha256": "31fad8dcdd7f246e6988c32b4c62b99571e59f10a8a544c817d8906e5e0efcbc"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_07.json",
+      "bytes": 7,
+      "sha256": "6a1b6c94b811b12562d66c6e2d26cf4f23f4e2ab0568c4366a0b3a217328dff5"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_08.expected",
+      "bytes": 29,
+      "sha256": "a607df4de7b2d5f5ecce55dbc5e9ae7b7d944050beb4ed9e5886ee23b1e48c50"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_08.json",
+      "bytes": 27,
+      "sha256": "3379d484baf5ce8037d032ae46f30af9e84ab1d47db010221317295945a1a0c5"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_09.expected",
+      "bytes": 31,
+      "sha256": "1364b3db582818e17cf4fc5ab6da2f27a05123bf935be43282412d6d865c325c"
+    },
+    {
+      "relativePath": "test\\data\\test_basic_09.json",
+      "bytes": 29,
+      "sha256": "13711768f7473d1dbee93d1b847627899a39263b03a87b41bfc7b0a4e0c4a386"
+    },
+    {
+      "relativePath": "test\\data\\test_comment_00.expected",
+      "bytes": 69,
+      "sha256": "f8782f22360dd7abc4b1936b29f54ac88a8b92341e35f7aa6a927c53b1ed6928"
+    },
+    {
+      "relativePath": "test\\data\\test_comment_00.json",
+      "bytes": 69,
+      "sha256": "20f9d769ce8699c2da5ffefb11e76779486450990383b099c7e1ba3f276cc67e"
+    },
+    {
+      "relativePath": "test\\data\\test_comment_01.expected",
+      "bytes": 146,
+      "sha256": "d3c59292d0335afe7c551794aeecd3e4dca63a839bde7e40fa9759c14ed92d46"
+    },
+    {
+      "relativePath": "test\\data\\test_comment_01.json",
+      "bytes": 206,
+      "sha256": "88a34b209436dba7183a769db3471f828b6ab5efb15b4364c59c2c39bb050444"
+    },
+    {
+      "relativePath": "test\\data\\test_comment_02.expected",
+      "bytes": 421,
+      "sha256": "3793eae3b775e877b883a0ad9ac636332e3d19003ef520dd0f3f2f5275afad77"
+    },
+    {
+      "relativePath": "test\\data\\test_comment_02.json",
+      "bytes": 505,
+      "sha256": "d3515ae647f4a263788f609585335f977ad9e83ae63997d38ef4fc3536d0bd61"
+    },
+    {
+      "relativePath": "test\\data\\test_complex_01.expected",
+      "bytes": 338,
+      "sha256": "b23d99779e167fc193acb933016804dcdbb9d072ccee446dd6b1b283d397745f"
+    },
+    {
+      "relativePath": "test\\data\\test_complex_01.json",
+      "bytes": 247,
+      "sha256": "783808c3460500cf6b260f84e41478b021349c9ced3c87b8a230b82e15d08493"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_01.expected",
+      "bytes": 35,
+      "sha256": "4744d5115a02d86016756ec92d3c59ce287fa05ab097bc4aaeee37264d881066"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_01.json",
+      "bytes": 33,
+      "sha256": "c53c6bd2e0da0a4c79c98a6b6eb16fbd6b8470d01141a2337c3dced1e64b5a56"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_02.expected",
+      "bytes": 36,
+      "sha256": "d7b1b8569b3c98ffe79e322ab2088ec6482f9a8f4f2c4df5a6b48939b073c8ce"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_02.json",
+      "bytes": 34,
+      "sha256": "630cc3905a54938bf8d355a0afce2cb9cf06d9b07abe7828c89f47e181da01a6"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_03.expected",
+      "bytes": 37,
+      "sha256": "4a8bc326ef8589201da7be8cc0fcb6d1e6f26df74b1fbcd49700c0f82c533963"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_03.json",
+      "bytes": 35,
+      "sha256": "accd6692206fb310c1b5fda680196e29b41d6bc02c2f39eeca61a886fdf4f82b"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_04.expected",
+      "bytes": 29,
+      "sha256": "4879bd2723faf1f3fbf651f871a0bc70484e04a8e4719a5e27a757f43661468e"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_04.json",
+      "bytes": 27,
+      "sha256": "511736047f8e03c33917976cf63a442218a273b6e40df63b7f6772eadba46300"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_05.expected",
+      "bytes": 5,
+      "sha256": "58e71e874b2648384e117692cc3a53c34bff05a852957a66a5226cbc1ae49e03"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_05.json",
+      "bytes": 3,
+      "sha256": "5a0a2b76858bf8cc147613f783d84cd22c0047d142ba0d9ce13fcedf953b57ed"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_06_64bits.expected",
+      "bytes": 22,
+      "sha256": "dacadeaaee2257f0aa890190b9740b9e7b4b30d91209e369ba4d14b97be9dd4e"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_06_64bits.json",
+      "bytes": 21,
+      "sha256": "76f153aeaae282d8ef11dd18c8c0e90a525f20936c206cd144e8961591e45575"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_07_64bits.expected",
+      "bytes": 23,
+      "sha256": "b79e26262565797854d099c59c1ffb8366ecc84e0c25a2a96daa6a215579901a"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_07_64bits.json",
+      "bytes": 22,
+      "sha256": "821072bb7399748137189a9f5d032a6a7c8f3568cb3cd487064b8e9c0e4ee9c9"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_08_64bits.expected",
+      "bytes": 23,
+      "sha256": "e09f147729c35ad1fe34ea862e5fbe703aaa562e5fa2290d6c10a068dfd20012"
+    },
+    {
+      "relativePath": "test\\data\\test_integer_08_64bits.json",
+      "bytes": 22,
+      "sha256": "17dc9f57ff8954fd708b04653004b281f2feb1678fe6c90aa159a60cccb61e77"
+    },
+    {
+      "relativePath": "test\\data\\test_large_01.expected",
+      "bytes": 31712,
+      "sha256": "9b4d9d3f5e4905353bb9447c237608d061825b79658b827d82ed5f7173a8524d"
+    },
+    {
+      "relativePath": "test\\data\\test_large_01.json",
+      "bytes": 9493,
+      "sha256": "da196295d91bb5ab20dcf850735c3442a8bd08ced3f501e57e848e3f2d830ea8"
+    },
+    {
+      "relativePath": "test\\data\\test_object_01.expected",
+      "bytes": 5,
+      "sha256": "44c7db60db7e621734900132c421d27de0824539cdc94435b66aa4eaf7a32f63"
+    },
+    {
+      "relativePath": "test\\data\\test_object_01.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "relativePath": "test\\data\\test_object_02.expected",
+      "bytes": 17,
+      "sha256": "9e98db473e4d8b210281f8453e0a3131f5cfa1cca7b19f549ee0aac7de5af01f"
+    },
+    {
+      "relativePath": "test\\data\\test_object_02.json",
+      "bytes": 19,
+      "sha256": "4d5d2e1fd2450cdb62865ab6ad4cda075f8e87e18903cf50476cab4e364ccb1f"
+    },
+    {
+      "relativePath": "test\\data\\test_object_03.expected",
+      "bytes": 50,
+      "sha256": "cbf39bf70ee89de01d8dd4d58f2bc130843165ddce8d86c3aa43ba336890a408"
+    },
+    {
+      "relativePath": "test\\data\\test_object_03.json",
+      "bytes": 64,
+      "sha256": "a58c6d0949656c88e9aee3c1b72e2a7fae0b78293e1876522cf766eb31ce8014"
+    },
+    {
+      "relativePath": "test\\data\\test_object_04.expected",
+      "bytes": 12,
+      "sha256": "2c91a528d6d022191cf6ac2f000885ec730f285d19ce47545f45e18ace8247ae"
+    },
+    {
+      "relativePath": "test\\data\\test_object_04.json",
+      "bytes": 16,
+      "sha256": "b045cfde2167fe7b861e2018ca554dab992efb0e3bd5a18786fc1764ac955207"
+    },
+    {
+      "relativePath": "test\\data\\test_preserve_comment_01.expected",
+      "bytes": 150,
+      "sha256": "827201d8b264b442a424fa4dd931ef31ee3e6eb101207c4999127c19190f8320"
+    },
+    {
+      "relativePath": "test\\data\\test_preserve_comment_01.json",
+      "bytes": 206,
+      "sha256": "c94ae3b13c25ad58f3335964a56d18f98eea3d1b57b86c4eabeaffa7aeee06ac"
+    },
+    {
+      "relativePath": "test\\data\\test_real_01.expected",
+      "bytes": 64,
+      "sha256": "c33823c6a96a0886ad71d087b7b3025eef6dd88616397ed763273f273c5f092d"
+    },
+    {
+      "relativePath": "test\\data\\test_real_01.json",
+      "bytes": 62,
+      "sha256": "bf19a6c513b665d94f3fa521a36e7248d6c7e39f1b04989435962bfc6f2fef3b"
+    },
+    {
+      "relativePath": "test\\data\\test_real_02.expected",
+      "bytes": 73,
+      "sha256": "e6a6aaea446f3f17abc401b173e11dfce9a8a5efebe02ae284835ba3c7a72e11"
+    },
+    {
+      "relativePath": "test\\data\\test_real_02.json",
+      "bytes": 71,
+      "sha256": "a0f28c147988c26a7b0321e06f0c32b70cf6dfe5d9c7b0f4c02512b9f3370bac"
+    },
+    {
+      "relativePath": "test\\data\\test_real_03.expected",
+      "bytes": 73,
+      "sha256": "e6a6aaea446f3f17abc401b173e11dfce9a8a5efebe02ae284835ba3c7a72e11"
+    },
+    {
+      "relativePath": "test\\data\\test_real_03.json",
+      "bytes": 71,
+      "sha256": "a0f28c147988c26a7b0321e06f0c32b70cf6dfe5d9c7b0f4c02512b9f3370bac"
+    },
+    {
+      "relativePath": "test\\data\\test_real_04.expected",
+      "bytes": 26,
+      "sha256": "f22f2a5ebfee7e6e544496d2fcd774a91de3f3330a1e269003fafe015e1af9eb"
+    },
+    {
+      "relativePath": "test\\data\\test_real_04.json",
+      "bytes": 26,
+      "sha256": "338f311848ce83e287b918930c5bfecaa6c0048e28447cdce593b9cc0760fc01"
+    },
+    {
+      "relativePath": "test\\data\\test_real_05.expected",
+      "bytes": 27,
+      "sha256": "42829ac5ecae4d0d470777bfb32a0da3701c698e95068e551aa10a1da635516d"
+    },
+    {
+      "relativePath": "test\\data\\test_real_05.json",
+      "bytes": 27,
+      "sha256": "734df1383d838a9c24b5a435c018272ac4e855460aa44a892a94f3c7fc6986f3"
+    },
+    {
+      "relativePath": "test\\data\\test_real_06.expected",
+      "bytes": 29,
+      "sha256": "f8d2bf0e46f4ab0c958c68e1bb95e75fb58c98e923ccdc2e30508978b1beca6d"
+    },
+    {
+      "relativePath": "test\\data\\test_real_06.json",
+      "bytes": 28,
+      "sha256": "ae921d86c6deef54bc06469d3ff706817643cc6888dd95b37c716ba55ffa45e0"
+    },
+    {
+      "relativePath": "test\\data\\test_real_07.expected",
+      "bytes": 29,
+      "sha256": "abdaa6db44c0bb870170d40406bda1ac9a514b2624af8e0f753613aad4406ded"
+    },
+    {
+      "relativePath": "test\\data\\test_real_07.json",
+      "bytes": 29,
+      "sha256": "5b5a6b2a05743ee353da7088fde6c169eb181bb69e722ab2a6d277d4af493fc0"
+    },
+    {
+      "relativePath": "test\\data\\test_real_08.expected",
+      "bytes": 210,
+      "sha256": "72c91e63378d089f84f2e21b1b26a18d2df19a280d5bc1924e07025979bc33de"
+    },
+    {
+      "relativePath": "test\\data\\test_real_08.json",
+      "bytes": 208,
+      "sha256": "8394ecaba3468a9102f6803c2287778f797ccb8a4a15289fb56a118cc7ae0c03"
+    },
+    {
+      "relativePath": "test\\data\\test_real_09.expected",
+      "bytes": 207,
+      "sha256": "f33535e448b9b5d158959a74a130aa451303c450742a5e091426045ef44d960c"
+    },
+    {
+      "relativePath": "test\\data\\test_real_09.json",
+      "bytes": 218,
+      "sha256": "ad7894b09e8b267f055d37a66795dd9ac2d26d663baa7d6dbe2b8f6f598f77cc"
+    },
+    {
+      "relativePath": "test\\data\\test_real_10.expected",
+      "bytes": 214,
+      "sha256": "ebbd15bb46373ce28ae02dda0b47eaf515d07b82f2f47e175f9dc69682976748"
+    },
+    {
+      "relativePath": "test\\data\\test_real_10.json",
+      "bytes": 212,
+      "sha256": "2b8911292f66af818397099b4f802fc14810dd63d3ec69bd7c15bd6012fb81e4"
+    },
+    {
+      "relativePath": "test\\data\\test_real_11.expected",
+      "bytes": 213,
+      "sha256": "bb5a3e1ad73d90f8c88a8a5e11901f8921ed8377e97f2671c782a87e89cf8f5e"
+    },
+    {
+      "relativePath": "test\\data\\test_real_11.json",
+      "bytes": 223,
+      "sha256": "e876c96179bb9e7ebf0a44b196867e39d1aa50723f74fccd4c215a70a5d70169"
+    },
+    {
+      "relativePath": "test\\data\\test_real_12.expected",
+      "bytes": 53,
+      "sha256": "a2a25aee2c3be39ea97b7060dcdedb5c67a86738b956bd74bc434b01bc7cda57"
+    },
+    {
+      "relativePath": "test\\data\\test_real_12.json",
+      "bytes": 50,
+      "sha256": "dd50fc1100f45737991dcd7a9224dc751be141467762b5f62d8cd63c6f57dad0"
+    },
+    {
+      "relativePath": "test\\data\\test_string_01.expected",
+      "bytes": 98,
+      "sha256": "3ee77d9360068fb6e94d6386667eb2eb5651f42a262440aa1226278cbe733e83"
+    },
+    {
+      "relativePath": "test\\data\\test_string_01.json",
+      "bytes": 99,
+      "sha256": "1f14615c12c9fb4a0dcc691daf2f6207c264147f838723a916d710a4b0fdecaf"
+    },
+    {
+      "relativePath": "test\\data\\test_string_02.expected",
+      "bytes": 1884,
+      "sha256": "e65f0ddcc4124dbfc99a29318b6de9425eda09b28b997394f39f5d6e83f47861"
+    },
+    {
+      "relativePath": "test\\data\\test_string_02.json",
+      "bytes": 1923,
+      "sha256": "3cae2cb030fac7e4c7d573ad1c1da8e467080edab25c6fa6bfffc6428acce859"
+    },
+    {
+      "relativePath": "test\\data\\test_string_03.expected",
+      "bytes": 35,
+      "sha256": "3a6800d4a108fb8281732ff5e6c7e6d4d0b653f6a73f8340e8f448eb820bf3e7"
+    },
+    {
+      "relativePath": "test\\data\\test_string_03.json",
+      "bytes": 37,
+      "sha256": "cc10ec5ead443b571fd21e0656911b177e5bf8b8780f66eb49178701bb6b97e1"
+    },
+    {
+      "relativePath": "test\\data\\test_string_04.expected",
+      "bytes": 15,
+      "sha256": "44b2db505e6054cc288902d345bbd33150b06c005f5e371d636f1e383ec59bd8"
+    },
+    {
+      "relativePath": "test\\data\\test_string_04.json",
+      "bytes": 16,
+      "sha256": "5172719d4d5763da959e68d0da6bcad22103e7f2f7ba6414d81e84bf0bf663ef"
+    },
+    {
+      "relativePath": "test\\data\\test_string_05.expected",
+      "bytes": 45,
+      "sha256": "8e9e07d5e1606d7f1c827ac2883c7b9a9d6b95954532c4acbc2a78741cd03215"
+    },
+    {
+      "relativePath": "test\\data\\test_string_05.json",
+      "bytes": 82,
+      "sha256": "5c4a29014638603583793d3ad484a368fd6e3e438fe80659cf1a6d75ae4f8c4f"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_01.expected",
+      "bytes": 6,
+      "sha256": "cf12e1b6f19cdd9d2a91ee0dd308ed7b64e4ec5bfcc32754318b5421ffbe9af3"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_01.json",
+      "bytes": 8,
+      "sha256": "0aeb95f62766e68469af9ce64f77530be1109235683599a36a2186b9584cbf53"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_02.expected",
+      "bytes": 7,
+      "sha256": "367808997cd9800ed8f8c1ea674a5f39029fefc8b755b45ed9b3bed1d101a556"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_02.json",
+      "bytes": 8,
+      "sha256": "9dff52fa9c14255abd41292e881a4655655731888c35ffe6720653e881cd1d09"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_03.expected",
+      "bytes": 8,
+      "sha256": "dec185493a5059bc9fdf6df325b1b33cfb29995a0855f8380674ece80a8b2070"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_03.json",
+      "bytes": 8,
+      "sha256": "8f25aa9a5ab78e1d2ecfe9363201fa103ee046c3010124dda178a2a6e41662b7"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_04.expected",
+      "bytes": 9,
+      "sha256": "bbbc431c0408043d41127d6fa5a86deab73ca3da16fd6058beb953f4996a7fa8"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_04.json",
+      "bytes": 14,
+      "sha256": "9d231df813d5c2c9ba7043e768d78043eb27262ebdaab8c00ec82ba3bed7124d"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_05.expected",
+      "bytes": 32,
+      "sha256": "c402707058a3207c42cc64a3f756ba4b5ba29f7f8d93e709cc63fce65a2a7b95"
+    },
+    {
+      "relativePath": "test\\data\\test_string_unicode_05.json",
+      "bytes": 28,
+      "sha256": "72b7af314741f7fa270965170ea838465f33666290da26b42064929f61953ffd"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail1.json",
+      "bytes": 60,
+      "sha256": "438b1027386f69e8ff72306d162bba30745cfc3ad99522c06b77093f6b2868b1"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail10.json",
+      "bytes": 58,
+      "sha256": "ffea57a589f965c41b8778f1f0b69a1f4b7a14f072b868389cd6e2d249a33246"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail11.json",
+      "bytes": 29,
+      "sha256": "ba669b02c583cdc66458f9318ec64f2787e1edded69cee94361d9d04bf87b591"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail12.json",
+      "bytes": 31,
+      "sha256": "8033711342b67e573d96916fd820730a0a12ee291bd2e4ae324df3455c3f825f"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail13.json",
+      "bytes": 43,
+      "sha256": "a9235f6b3a47a700d45a8cba0c0b01b62ed4b2fd8a0f10cfe7964bde5e8cc1e0"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail14.json",
+      "bytes": 31,
+      "sha256": "4c353586a59fd208964f41f12547ef9e403520b87e9d9fe73c0bd6951de36933"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail15.json",
+      "bytes": 34,
+      "sha256": "656c4510d2ae41d28f3bb5498a7df7e87652bbbb35a7c7ef7c28d4a3d1d59eae"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail16.json",
+      "bytes": 8,
+      "sha256": "4514053448b28818d0d23041242b0e1705ea0bbf9f2ee84694d4e0100bd90cc4"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail17.json",
+      "bytes": 34,
+      "sha256": "a806d560ae63698f5082c7e51189395be458d1709db63244d26846f5a1e1a91d"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail18.json",
+      "bytes": 50,
+      "sha256": "e663fb0874bda154424bc35b9aff5f61d73d1a8cb926ccf41311827f30456997"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail19.json",
+      "bytes": 22,
+      "sha256": "f262f8944e9f4346e80ccab07d2cc74f95928193210bc7a95c634f665f105b03"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail2.json",
+      "bytes": 17,
+      "sha256": "9dbe48572aa40ff5e44b7b0e691e1b487d37cd4cfb34cf5bb506a5b6e965ec3b"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail20.json",
+      "bytes": 23,
+      "sha256": "beff780d4797749a6180792d96de68b52eafbe3558578e2486b51c0fc384d3f0"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail21.json",
+      "bytes": 32,
+      "sha256": "d786f4c34fc330006cfd6ef9a855d4233ce7ea4ffdce19a1aeb6498ae0341edc"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail22.json",
+      "bytes": 33,
+      "sha256": "dd22ed47b00f7977a8fd058adbf448e7af9b4cf7299c8a11f21298ded07b9e03"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail23.json",
+      "bytes": 20,
+      "sha256": "5b746985dd2a3406e0d457dc38583b5ed26c2691950a10e1e50049a93c924a78"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail24.json",
+      "bytes": 16,
+      "sha256": "0389d0d5920ee2996811974bdcbfe05c9ca0ed79af909704b8485bc86f6eaf25"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail25.json",
+      "bytes": 29,
+      "sha256": "8305373703e9a50e767c42929d22bb69b377cf62a5aeba4dc60bfbf28939411d"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail26.json",
+      "bytes": 38,
+      "sha256": "032ff03c5b7bf611b5015000312a290b6fa7878ccb508c5ed5cc73cb2b649179"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail27.json",
+      "bytes": 14,
+      "sha256": "4a6ce093f89d76306dc76ccb5f6e468fb95c189eaa16d6b6c80954c21b3be635"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail28.json",
+      "bytes": 15,
+      "sha256": "a4a310e88adb621126f6e044f7919728d6fdf1df6a7d5a445e7215539f2ac264"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail29.json",
+      "bytes": 4,
+      "sha256": "cd279aa777afca083b346dbc2b62a1847c24f1556b619b7564842457f8949c93"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail3.json",
+      "bytes": 37,
+      "sha256": "6903daf61af5b38e0bc66d8da4f13631e2c2d03598169fe2d7c45d2504d310b9"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail30.json",
+      "bytes": 5,
+      "sha256": "3f54bdbbd4e3ad547fa457b5810df7c96f2d2c3bc6985e11202ffd1d42116889"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail31.json",
+      "bytes": 7,
+      "sha256": "25981c42fdd25646ab17d57bfaa65e4b2d7b791fdf13840e75c5a9e8f66dec70"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail32.json",
+      "bytes": 40,
+      "sha256": "15388c40b8b3920b49a317f303140234fecaa37d6adc8056f54b8d7d79cfba87"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail33.json",
+      "bytes": 12,
+      "sha256": "df72f007b029ebe06bffcd6083deff92aae557aa172eaf7e2504a3222dc73b60"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail4.json",
+      "bytes": 16,
+      "sha256": "15836776fdc7d0473f68c35c1295e473d57c215af1232b439b28120f674be45f"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail5.json",
+      "bytes": 24,
+      "sha256": "40b23c469b617b09914010ee5c5aa0faa706061f77b4a96b374742c18bb17d42"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail6.json",
+      "bytes": 26,
+      "sha256": "9cac15bfc3db16d965b9074329f4b7b26443fd4ccbf21cc545cc718114cbda20"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail7.json",
+      "bytes": 26,
+      "sha256": "d9b01bb868ba4a6156085744bddf7acf119125aaf40e19e404b284e99b1973e0"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail8.json",
+      "bytes": 16,
+      "sha256": "fbb0928ebab6b0f1aa7b5a7f10453bf89cc7ed56185bd783836ceedeec248ea8"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\fail9.json",
+      "bytes": 22,
+      "sha256": "a3a4796b5ddb6c80e894113c690a75e5290ef109601dee2e277f652bc6d6a163"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\pass1.json",
+      "bytes": 1441,
+      "sha256": "a46f670e9676dd3d5a22ccbd44be74391cd57867f0a20ee9c5bba2c1e9742239"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\pass2.json",
+      "bytes": 52,
+      "sha256": "7f9deff2652df58a02ca676ff9494de3d93f18db64c7f20f9596dffb8c92f187"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\pass3.json",
+      "bytes": 148,
+      "sha256": "45aaef317f170e5490aa4a18cc301f6d5e03ee617980dec1b15403abf6c537f4"
+    },
+    {
+      "relativePath": "test\\jsonchecker\\readme.txt",
+      "bytes": 173,
+      "sha256": "c328f63bf745f377cc79490a3eafaab4e0482a97e4a8cd85b5f381c30304f253"
+    }
+  ]
+}

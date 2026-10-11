@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-11T09:32:29.1207168Z",
+  "pid": 157416,
+  "powerShellVersion": "7.6.5",
+  "edition": "Core",
+  "launcher": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherSHA256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-texture-codecs-local-final/run-root-configure-texture-codecs-parent-rev1.ps1"
+  ],
+  "wrapperArgumentCount": 4,
+  "hashes": {
+    "driver": "54F87CCC1935E743C61F810F80983501CC0EA96843232EF667306F0AC8BCD3C0",
+    "assignment": "B5D472C9CB4474B40A6B287AFBE32FC7E1931843CC7228EC0066114CBCBB9A3C",
+    "freeze": "842A5B6427CD5C76F590DDE0FD049ACEA65E42CDD08B7168C6B10D2F63141F8D",
+    "review": "CE5C407284C9C1272E50AEFD14D924AFB14E36C03E61CEA27CCCCC3CD6E2C458",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "expectedHashes": {
+    "driver": "54F87CCC1935E743C61F810F80983501CC0EA96843232EF667306F0AC8BCD3C0",
+    "assignment": "B5D472C9CB4474B40A6B287AFBE32FC7E1931843CC7228EC0066114CBCBB9A3C",
+    "freeze": "842A5B6427CD5C76F590DDE0FD049ACEA65E42CDD08B7168C6B10D2F63141F8D",
+    "review": "CE5C407284C9C1272E50AEFD14D924AFB14E36C03E61CEA27CCCCC3CD6E2C458",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "nativeArgumentCount": 61,
+  "freezeCount": 16868,
+  "freezeSHA256": "842A5B6427CD5C76F590DDE0FD049ACEA65E42CDD08B7168C6B10D2F63141F8D",
+  "approvedRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+  "rootExists": true,
+  "attempt1": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-texture-codecs-local-final\\attempt1",
+  "attempt1Absent": true,
+  "packageCacheDirectoryCount": 1,
+  "wheelhouseFileCount": 44,
+  "relatedProcesses": [],
+  "errors": [
+    "cache top-level count 1 != 40"
+  ]
+}

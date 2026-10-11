@@ -1,0 +1,61 @@
+{
+  "decision": "ASTC CONSUMERS ACCEPTED; GUARDS AND ROOT INTEGRATION PENDING",
+  "nativeResultSHA256": "C1D3449F558608EC55560F383ABF79FC582A1625C783E774E61D1B4E79DD506E",
+  "launchSHA256": "960B4DD36E91281337AF09B3198F9A9098EC3BE51037A5CC2F5FB0A43666B696",
+  "archiveSHA256": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca",
+  "sourceFreezeSHA256": "AE4E7EB656FEB7D6711EBDE3695C52884C1ADC156AFB6B139B40B94337E2E1EA",
+  "sourceFreezeEntries": 712,
+  "configurations": [
+    {
+      "configuration": "Release",
+      "tests": 9,
+      "failures": 0,
+      "skips": 0,
+      "API8Passed": true,
+      "CLIExpectedVersionRegexPassed": true,
+      "JUnitSHA256": "EB62396FF85282E7678CE036A328DB173CAA87068BEBC1F0B391A590CB8767CB",
+      "LastTestSHA256": "E3FBE5CCE99D492DE978D58A03DA38F775C557B6D5B579E4ABC1633E383449CE"
+    },
+    {
+      "configuration": "Debug",
+      "tests": 9,
+      "failures": 0,
+      "skips": 0,
+      "API8Passed": true,
+      "CLIExpectedVersionRegexPassed": true,
+      "JUnitSHA256": "33548E2384FAA8DC135EF19735D32528ABF8190FA144A006C06862D635301ABE",
+      "LastTestSHA256": "B36D821FA89229ECF443C3B22863E584A3700DA41D351EDB33A736446FA17BE2"
+    }
+  ],
+  "stages": [
+    {
+      "label": "configure",
+      "exitCode": 0,
+      "seconds": 5.9143658
+    },
+    {
+      "label": "build-Release",
+      "exitCode": 0,
+      "seconds": 2.9133776
+    },
+    {
+      "label": "ctest-Release",
+      "exitCode": 0,
+      "seconds": 0.3999994
+    },
+    {
+      "label": "build-Debug",
+      "exitCode": 0,
+      "seconds": 2.7817985
+    },
+    {
+      "label": "ctest-Debug",
+      "exitCode": 0,
+      "seconds": 0.8423374
+    }
+  ],
+  "rawLastTestReview": "Eight API tests report Test Passed; CLI reports Test Pass Reason with expected version regex. JUnit all nine passed. Initial parent literal phrase-count assumption was corrected after inspecting raw log; native inputs/oracles unchanged.",
+  "guardExecuted": false,
+  "catalogIntegrated": false,
+  "engineAccepted": false
+}

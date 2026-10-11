@@ -1,0 +1,146 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/OpenImageIO/oiio/v2.3.17.0/LICENSE.md",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-LICENSE.md",
+    "bytes": 1536,
+    "sha256": "2B224C3BC0BB7FE2C0FEC41A8BC734D8F8E743CFE7C6EBC15C77FED86A68A2A2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/OpenImageIO/oiio/v2.3.17.0/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-CMakeLists.txt",
+    "bytes": 11144,
+    "sha256": "6CEF932B508149CF050BE021C63B273C05A6E808FE9A3AD46A2C565996F0DEC4"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/libsndfile/libsamplerate/0.2.1/COPYING",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-COPYING",
+    "bytes": 1334,
+    "sha256": "2C1F76CE2EFFDDDB425018405D5690C0B1AB4E6976E35296B0A6DB65C5E1A55D"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/LICENSE",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-LICENSE",
+    "bytes": 1485,
+    "sha256": "82A40C52065EE968AA62015735E84378AC11425DB7A233E6A2DCD2C83FC24276"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/libsndfile/libsamplerate/0.2.1/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-CMakeLists.txt",
+    "bytes": 3474,
+    "sha256": "1614975A3C60DD7989AD35B3A33713DB2BD85DAB6A267E09F5C5BE4704E5A888"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/libsndfile/libsamplerate/0.2.1/src/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-src-CMakeLists.txt",
+    "bytes": 4757,
+    "sha256": "9A02CDE4CAAB6A7A71543570BFCCD094AC06FE5B910FA15D957A9BA4C053A408"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/modules/Findyaml-cpp.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-Findyaml-cpp.cmake",
+    "bytes": 8472,
+    "sha256": "7CEAD7DDCBE54F93E117043895C059EB8D602FD834FA6031CDD9D3794814E0BC"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/modules/Findexpat.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-Findexpat.cmake",
+    "bytes": 9522,
+    "sha256": "3933DF9ABA4A5DF602B383C2419586B1EB72E08567F0170085123ADFF61D1E33"
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/commits?path=package-system/libsamplerate/build_config.json&sha=70f0b7b5257bf7cf935bf1cfd270e1b53ccead18&per_page=25",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/recipe-samplerate-history",
+    "bytes": 24000,
+    "sha256": "BA88C295DCDDF964D4AA16A340DF9903B8B4A90E23A1A3671A0B677A796069C4"
+  },
+  {
+    "url": "https://api.github.com/repos/libsndfile/libsamplerate/git/tags/959445ca2c20877fcac627954b4650daf5bf9f20",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/samplerate-annotated-tag",
+    "bytes": 2820,
+    "sha256": "0EAC5417FD71CF777D611331C46447075450807D88688921C36E840712EEF266"
+  },
+  {
+    "url": "https://api.github.com/repositories/1322284/git/ref/tags/v2.3.17.0",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-tag-resolved",
+    "bytes": 389,
+    "sha256": "19B6B21F75EF3F4F6AA5F98F8E08BA551442412D8D7331333B649E0CA4663F2D"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/modules/Findpystring.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-Findpystring.cmake",
+    "bytes": 5228,
+    "sha256": "6B890A5604D94C013B39F22B01BF69322E6B8DE37C6183AC16E69F669A35C7B7"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-CMakeLists.txt",
+    "bytes": 11474,
+    "sha256": "72AEBA61147046057520C14ED467758F83D6CB4C079CF0A34678DA6FC1E61CDD"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/modules/FindImath.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-FindImath.cmake",
+    "bytes": 7863,
+    "sha256": "A39749DB307752BDF6490F8DD7380252AC8B36093EAE337980FF6E31F7E1CE1B"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/ecf021bc0d6f435daacff7c35ccaeef0145df1b9/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/jpeg-CMakeLists.txt",
+    "bytes": 62959,
+    "sha256": "84D1CA5B97B5D684DED0F3ED5A139D59574D2126AF3373451D485F7C855C9C47"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/ecf021bc0d6f435daacff7c35ccaeef0145df1b9/LICENSE.md",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/jpeg-LICENSE.md",
+    "bytes": 5213,
+    "sha256": "7D8683A7F048E715E08B4CADA8B7F0D9A6AB8AFAD88ED09C1143EF764ECBC0F2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/OpenImageIO/oiio/v2.3.17.0/src/cmake/externalpackages.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-externalpackages.cmake",
+    "bytes": 14992,
+    "sha256": "D24454B7B59343D75203E39BC5EB84782804C742F920B927A27521187FAB1E03"
+  },
+  {
+    "url": "https://api.github.com/repos/o3de/3p-package-source/commits?path=package-system/openimageio-opencolorio/build_openimageio.py&sha=70f0b7b5257bf7cf935bf1cfd270e1b53ccead18&per_page=25",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/recipe-oiio-history",
+    "bytes": 92935,
+    "sha256": "70FA5825B5AC16507B5F27E81B3B6FCC981D0FD153CD08F84EB92AAE89901051"
+  }
+]

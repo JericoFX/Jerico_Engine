@@ -1,0 +1,20 @@
+[
+  {
+    "status": 200,
+    "authorization": false,
+    "sha256": "88E0389289A28DB8D937842D890A7EC4953D2295C263997236B05BE4B3B5BD00",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-astc-encoder-3.2-rev1.patch",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/90480ca41d15e1b20a28f90e2f996fd0e5a3a68c/package-system/astc-encoder/astc-encoder-3.2-rev1.patch",
+    "bytes": 2605,
+    "redirects": 0
+  },
+  {
+    "status": 200,
+    "authorization": false,
+    "sha256": "B9D0DDA5F7AE49B0B79CB8A4593998E779643B3E2E8BA8D9F8431EA4B239FBE3",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-.gitattributes",
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/.gitattributes",
+    "bytes": 423,
+    "redirects": 0
+  }
+]

@@ -1,0 +1,22 @@
+ASTC encoder source: ARM-software/astc-encoder tag 3.2, commit
+f32d8d4dd9e06f8986cd5e10f12e199fc023f150; project version 3.2.0.
+Arm library and CLI source are Apache-2.0. Complete original LICENSE.txt
+and compiled source notices are retained. The CLI bundles STB (MIT chosen
+from its dual license), TinyEXR/OpenEXR (BSD-3-Clause), and miniz (Unlicense);
+their full original headers/notices are in LICENSES/ASTC/source-notices.
+Unbuilt GoogleTest and test image assets are not included in this package.
+
+Original O3DE recipe authority: 90480ca41d15e1b20a28f90e2f996fd0e5a3a68c,
+package-system/astc-encoder, package 3.2-rev2. Its patch named
+astc-encoder-3.2-rev1.patch is preserved byte-for-byte and applied only to a
+fresh private source copy with exact contexts, SHA256 and inverse checks.
+Only two upstream CMake files change: dynamic MSVC CRT, /GL-, non-MSVC PIC
+and fat-LTO flags. No codec source/API changes. O3DE glue is Apache-2.0 OR MIT;
+full original O3DE licenses and the recipe patch are retained.
+
+JE adaptation: VS2022/v143 replaces VS2019, preserving Windows x64 SSE4.1,
+full compression/decompression, Release/Debug and /MD and /MDd CRT
+(MultiThreadedDLL / MultiThreadedDebugDLL). The package has a new JE identity
+and a newly measured archive hash; historical binary hash/ABI identity is
+not asserted. CLI is a host debugging tool, not a Runtime deployment.
+Rights/security/product acceptance remain with the integration owner.

@@ -1,0 +1,253 @@
+{
+  "status": "PENDING PARENT REVIEW / LUNA EXECUTION",
+  "nativeExecuted": false,
+  "sourceFreeze": {
+    "count": 712,
+    "sha256": "AE4E7EB656FEB7D6711EBDE3695C52884C1ADC156AFB6B139B40B94337E2E1EA",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-consumer-preparation/source-freeze-astc-consumer.json"
+  },
+  "freshAttempt": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1",
+  "cases": [
+    {
+      "label": "missing-required-argument",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "JE_ASTC_OUTPUT is required",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/missing-required-argument"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "archive-missing",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-missing",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "ASTC source archive file is missing",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-missing"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "archive-hash",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/tiny-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-hash",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "ASTC source archive SHA256 mismatch",
+      "secondaryMissingPath": null,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-hash"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "pin-url-or-sha",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=0000000000000000000000000000000000000000000000000000000000000000",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pin-url-or-sha",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "source URL/SHA256 must match the audited 3.2 archive",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pin-url-or-sha"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "URI",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=file:///F:/JE-never-transfer-astc-output",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "JE_ASTC_OUTPUT must not be a URI",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/URI"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "UNC-relative",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=//JE-never-contact/astc/output",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "JE_ASTC_OUTPUT must be an absolute local path",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/UNC-relative"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "symlink-junction-ancestor",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/output-junction/output",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "JE_ASTC_OUTPUT must not use symlink paths",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/symlink-junction-ancestor",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/junction-target/output"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "output-existing",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "output must be new",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-existing",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/source-work",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/stage",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/packages"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "output-outside-build",
+      "scope": "PRODUCER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+        "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+        "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+        "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+      ],
+      "expectedError": "output must be beneath this checkout/build",
+      "secondaryMissingPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-outside-build",
+        "F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel"
+      ],
+      "fixtureMustStayUnchanged": true
+    },
+    {
+      "label": "pristine-byte-mismatch",
+      "scope": "PATCH-HELPER",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_ASTC_WORK=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/patch-work",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake"
+      ],
+      "expectedError": "ASTC pristine patch input SHA256 mismatch",
+      "secondaryMissingPath": null,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pristine-byte-mismatch"
+      ],
+      "fixtureMustStayUnchanged": true
+    }
+  ],
+  "producerCaseCount": 9,
+  "patchHelperCaseCount": 1,
+  "fixtureSources": {
+    "core": "F:/JericoEngine/Dependencies/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/cmake_core.cmake",
+    "cmake": "F:/JericoEngine/Dependencies/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/CMakeLists.txt"
+  },
+  "fixturePaths": {
+    "missing": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/missing-archive.tar.gz",
+    "target": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/junction-target",
+    "existing": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output",
+    "patchWork": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/patch-work",
+    "junction": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/output-junction",
+    "tiny": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/tiny-archive.tar.gz"
+  },
+  "snapshotMemberships": [
+    {
+      "count": 440,
+      "path": "F:/JericoEngine/Dependencies/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150"
+    },
+    {
+      "count": 63,
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1"
+    },
+    {
+      "count": 63,
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1/packages/astc-encoder-3.2-je-rev1-windows.contents"
+    }
+  ],
+  "pathsMustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/packages",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/source-work",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/stage",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/junction-target/output",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-hash",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-missing",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/missing-required-argument",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-existing",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-outside-build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pin-url-or-sha",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pristine-byte-mismatch",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/symlink-junction-ancestor",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/UNC-relative",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/URI"
+  ],
+  "fixtureDesign": "Only fresh own attempt fixtures: one-byte hash fixture, existing-output retain.txt, private empty junction target, two copied CMake patch inputs with appended mismatch in first. No real archive in producer argv, no production path reuse. Junction targets no snapshots. No cleanup/deletion.",
+  "secondarySafety": "Missing archive backstop for all producer cases except one-byte SHA case. PATCH-HELPER contains no build/download path and checks both fixture files before/after.",
+  "acceptance": false
+}

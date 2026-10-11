@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-11T09:23:19.4569100Z",
+  "PID": 293264,
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "executableSHA256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB",
+  "arguments": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer",
+    "-C",
+    "Debug",
+    "--output-on-failure",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run\\Debug-junit.xml"
+  ],
+  "count": 7
+}

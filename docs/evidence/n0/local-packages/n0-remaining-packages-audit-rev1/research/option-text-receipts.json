@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/include/OpenImageIO/sysutil.h",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-HistoricalSysutil.h",
+    "bytes": 5984,
+    "sha256": "EAD20350E006CF6C34FF895F4746559C2C323269A6BCE75A6C10A59BF4226C5F"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/cmake/checked_find_package.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-checked_find_package.cmake",
+    "bytes": 10141,
+    "sha256": "2DC8630FD6F11F8D6008E86C58D89E9809C54030B50D54E5806CB2B8EE65D004"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/libutil/sysutil.cpp",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-HistoricalSysutil.cpp",
+    "bytes": 18649,
+    "sha256": "ED23D93794CBBDCB411DCD1B6E93F8A76588FB9768F215E69107CD7133862928"
+  }
+]

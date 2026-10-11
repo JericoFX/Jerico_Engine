@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-11T09:25:49.7483929Z",
+  "PID": 310864,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "executableSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+  "arguments": [
+    "-DJE_ISPC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+    "-DJE_ISPC_SOURCE_ROOT=F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd",
+    "-DJE_ISPC_SOURCE_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/source-immutable-manifest.json",
+    "-DJE_ISPC_TOOL_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+    "-DJE_ISPC_TOOL_ROOT=F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+    "-DJE_ISPC_TOOL_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/tool-immutable-manifest.json",
+    "-DJE_ISPC_VS_ROOT=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+    "-DJE_ISPC_POWERSHELL=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+    "-DJE_ISPC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/output-wrong-shell-hash",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake"
+  ],
+  "count": 11
+}

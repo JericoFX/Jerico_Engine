@@ -1,0 +1,28 @@
+{
+  "initialUrl": "https://codeload.github.com/GameTechDev/ISPCTextureCompressor/tar.gz/36b80aac50ea401a9adde44d86712c2241b2acfd",
+  "headChain": [
+    {
+      "host": "codeload.github.com",
+      "path": "/GameTechDev/ISPCTextureCompressor/tar.gz/36b80aac50ea401a9adde44d86712c2241b2acfd",
+      "query": "",
+      "status": 200,
+      "bytes": null,
+      "authorization": false,
+      "autoRedirect": false,
+      "location": ""
+    }
+  ],
+  "get": {
+    "host": "codeload.github.com",
+    "path": "/GameTechDev/ISPCTextureCompressor/tar.gz/36b80aac50ea401a9adde44d86712c2241b2acfd",
+    "query": "",
+    "status": 200,
+    "autoRedirect": false,
+    "authorization": false
+  },
+  "archive": "F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+  "bytes": 6435298,
+  "sha256": "029373E6EC5B10D7E29EEFDC5A231FB86C79B76A4A39C58C2727C6729DE28AB7",
+  "officialDigestAvailable": false,
+  "verification": "TLS official endpoint + exact pinned source commit or release asset/size; measured local SHA256, not claimed published upstream digest"
+}

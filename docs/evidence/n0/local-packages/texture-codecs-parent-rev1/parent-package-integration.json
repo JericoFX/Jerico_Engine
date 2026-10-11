@@ -1,0 +1,124 @@
+{
+  "status": "PARENT FOCAL ASTC/ISPC PACKAGES ACCEPTED AND CATALOG/CACHE INTEGRATED",
+  "packages": [
+    {
+      "sha256": "4EED3F722E8F4CCA60BF14684F22FA351D0D59960ED518BE04CCE30C707949CA",
+      "bytes": 1179220,
+      "oldHash": "17249bfa438afb34e21449865d9c9297471174ae0cea9b2f9def2ee206038295",
+      "archive": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1/packages/astc-encoder-3.2-je-rev1-windows.tar.xz",
+      "name": "astc-encoder-3.2-je-rev1-windows",
+      "oldName": "astc-encoder-3.2-rev2-windows"
+    },
+    {
+      "sha256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF",
+      "bytes": 491564,
+      "oldHash": "b6fa6ea28a2808a9a5524c72c37789c525925e435770f2d94eb2d387360fa2d0",
+      "archive": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build/packages/ISPCTexComp-36b80aa-je-rev1-windows.tar.xz",
+      "name": "ISPCTexComp-36b80aa-je-rev1-windows",
+      "oldName": "ISPCTexComp-36b80aa-rev1-windows"
+    }
+  ],
+  "providerFiles": [
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake",
+      "sha256": "DE056FC46E31274D6068105AD6FA0B266EC30F384AA8B8EBF4BF3F114CE5A060",
+      "bytes": 3719
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/astc-encoder-3.2-rev1.patch",
+      "sha256": "88E0389289A28DB8D937842D890A7EC4953D2295C263997236B05BE4B3B5BD00",
+      "bytes": 2605
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake",
+      "sha256": "F8B4F49E347CCF6D9F2D17CD31C7411466C72326C47A26539E6CA87FB80FE9AF",
+      "bytes": 7697
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/Findastc-encoder.cmake",
+      "sha256": "AAC42E995D9D17356016972BF7B14B190FD19776B69708E2D6A0624A1D421C92",
+      "bytes": 2231
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/NOTICE.txt",
+      "sha256": "6CCEA62946FF7628E34095E5C3B6F68AFB8A1BE2C5BBC515FB2A25357CB5F217",
+      "bytes": 1445
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/PatchHunks.json",
+      "sha256": "1D45ACD2E7674FDB62AFD8187C5FF7D41C72590CD359F84CE518CAD5E3AB2DCA",
+      "bytes": 4385
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/README.md",
+      "sha256": "D2C9B594B027C80869BA9DECF3CBE37ECF65984432B3DC0A3DB1A6DC475D3FC5",
+      "bytes": 3310
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/tests/ASTCEncoderConsumer.cpp",
+      "sha256": "BA069F77C5F806E2F7691482CE4BE7BEF74F77A21D8041F82ED82DF56800E2A0",
+      "bytes": 12145
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ASTCEncoder/tests/CMakeLists.txt",
+      "sha256": "149114A48C3390C66C23C2BE7D7A8BC201D607A749C4248ADEC468CA4701EA61",
+      "bytes": 1949
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake",
+      "sha256": "DBDC7D64FC3F700B79701943535C99C85E0541306CCF44BAC81A6C9A505D06AA",
+      "bytes": 8719
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake",
+      "sha256": "F4FBE6B57D9DB20A4DB3FC4C6E583468F08B815C34EACE66BC359849D0AE5158",
+      "bytes": 1880
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/NOTICE.txt",
+      "sha256": "2F7D03244E746971DA70E60BD676E2452AF46B453C364ECF412AE01E3B459409",
+      "bytes": 571
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/README.md",
+      "sha256": "437789C26B3648A2165C612840445AA6C9043F2DEA347CFD7AADFEC1568E6B7C",
+      "bytes": 5366
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/RunBuild.cmd.in",
+      "sha256": "C8CDA392B961F43208CD68CD6BECC7CC613BB18431DA181EA47CEC825065989F",
+      "bytes": 1895
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/VerifyInputs.ps1",
+      "sha256": "8A0A48AFABD6CF05519EDD629BAB424E01481AA3182F5EB3CA5BC14F2DC2FDEC",
+      "bytes": 2789
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/tests/CMakeLists.txt",
+      "sha256": "EF4C9E03BFE159CFCBEBA3B0DE3286F4EC123EFCDD6ADDF073582AD7FCCD99D7",
+      "bytes": 2025
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/ISPCTexComp/tests/ISPCTexCompConsumer.cpp",
+      "sha256": "2E6CC9F3E8AE3703527155D78C898CAE0C466AE0220C70106F7D2D9877A2910F",
+      "bytes": 14555
+    }
+  ],
+  "providerCount": 17,
+  "astcAcceptanceSHA256": "E5963FEE082AC01F37BDF442B8BFB0F52B8E28111C5752CC9732DB7A969360AA",
+  "ispcAcceptanceSHA256": "30A5E08430D7E980573B13EB2941409686BB11A02A4722BF2D19C87967AC03F8",
+  "cacheFilesBefore": 36,
+  "cacheFilesAfter": 40,
+  "existingCacheFilesBytePreserved": 36,
+  "catalogBeforeSHA256": "EF3CD0C05C25764DE725A0D197846BE6F0F5CA043A812812E9DB5B757733F326",
+  "catalogAfterSHA256": "333778663011B38AF79966FAFA55FDA85DB7C29DD58BFE40CA0746754DC62F49",
+  "catalogInverseExact": true,
+  "astcConsumerCases": 18,
+  "astcGuards": 10,
+  "ispcConsumerCases": 16,
+  "ispcGuards": 9,
+  "limitations": "Focal packages only. Original engine generation, Editor/AP/cook/runtime, Python/AWS/multiplayer absence and effective Tools/Runtime separation remain pending. No product size or performance improvement measured.",
+  "engineAccepted": false,
+  "rootExecuted": false
+}

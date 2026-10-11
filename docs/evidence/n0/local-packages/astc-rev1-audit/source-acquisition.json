@@ -1,0 +1,17 @@
+{
+  "redirects": 0,
+  "historicalPackageHash": "17249bfa438afb34e21449865d9c9297471174ae0cea9b2f9def2ee206038295",
+  "sourceCommit": "f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+  "nativeExecuted": false,
+  "license": "Apache-2.0",
+  "historicalPackageHashIsSourceHash": false,
+  "extracted": false,
+  "bytes": 34228268,
+  "upstreamTag": "3.2",
+  "url": "https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+  "etag": "\"5f84f35225f20884223ea78ebf57169788e697af16e7521dea85fe34797f0b64\"",
+  "status": 200,
+  "authorization": false,
+  "archive": "F:/JericoEngine/Dependencies/archives/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150.tar.gz",
+  "sha256": "291C26FCF20B8E23A6EB1AD4DD75F5AFECF79D316C0477C532DF6D5693291403"
+}

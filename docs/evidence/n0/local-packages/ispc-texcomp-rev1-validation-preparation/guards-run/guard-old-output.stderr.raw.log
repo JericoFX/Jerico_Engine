@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake:19 (message):
+  JE ISPCTexComp: output must be new; previous outputs are preserved
+
+

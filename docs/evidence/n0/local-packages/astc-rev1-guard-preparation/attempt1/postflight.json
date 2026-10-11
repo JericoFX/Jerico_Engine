@@ -1,0 +1,21 @@
+{
+  "fixtureChanges": [],
+  "snapshotMemberships": [
+    {
+      "count": 440,
+      "path": "F:/JericoEngine/Dependencies/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150"
+    },
+    {
+      "count": 63,
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1"
+    },
+    {
+      "count": 63,
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1/packages/astc-encoder-3.2-je-rev1-windows.contents"
+    }
+  ],
+  "sourceChanges": [],
+  "sourceInputCount": 712,
+  "guardFreezeCount": 716,
+  "allOutputSentinelsAbsent": true
+}

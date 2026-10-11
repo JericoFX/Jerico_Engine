@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-11T09:03:26.2900547Z",
+  "kind": "readonly source checks, no driver/native execution",
+  "sourceFreezeSHA256": "5A94E4F3E8E84D0ADE4DFD3CDFF9A2027314C465B2B5B78ACD5B48B26E28BD47",
+  "expected": 458,
+  "currentMatches": 458,
+  "sourceChanges": 0,
+  "parserErrors": 0,
+  "literalArgCount": 11,
+  "literalMatchesAuthority": true,
+  "outputAbsent": true,
+  "runEvidenceAbsent": true,
+  "sourceProviderUnchanged": true,
+  "nativeStatus": "NOT_RUN"
+}

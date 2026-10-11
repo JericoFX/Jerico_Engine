@@ -1,0 +1,26 @@
+{
+  "decision": "PARENT DISPATCH APPROVED; CONSUMER FIRST, GUARDS SEPARATELY; NATIVE NOT RUN",
+  "sourceAndDriverInputsRehashed": 496,
+  "validationInputs": 490,
+  "syntaxErrors": 0,
+  "pins": {
+    "RunConsumer.ps1": "685C6B5D8CC0F267ECEB738629A249C006CCB532F1A644EF060A1A6C584DBA89",
+    "RunGuards.ps1": "4D789E0AAE96A0751CF6DBEB857627EC57680E5982951C148FDBA4A0191416FB",
+    "validation-inputs.json": "DF45F46828446FE0113777546CFDE2983FC099588404548821C9D24A7B6E8710",
+    "driver-freeze.json": "75F511CEA9147BA4FE821018CB96C9122F31151AB05090ACA65517CC33DBF2BA",
+    "CommonExecution.ps1": "8858FF1B4A7832596FEF54EA2F3464928FC22AA59A3AD539CAE2366FB8A2E329",
+    "assignment.json": "61D17229600D38C523CBACC907174C210E397F3B4833A9477BB3C64F664CA67C"
+  },
+  "consumerCases": 8,
+  "configurations": [
+    "Release",
+    "Debug"
+  ],
+  "producerGuards": 9,
+  "review": "All three drivers, literal argv and original guard authority read. Fresh audited extracted SDK; no producer/re-extraction. Byte streams, immediate native exits, JUnit membership, pre/postflight and separate CreateNew receipts retained.",
+  "DLLProof": "Expected copied path/hash recorded; actual loaded DLL parent asserted by frozen source, no path text captured.",
+  "nativeOwner": "/root/validation_luna",
+  "acceptanceOwner": "/root",
+  "engineAccepted": false,
+  "catalogIntegrated": false
+}

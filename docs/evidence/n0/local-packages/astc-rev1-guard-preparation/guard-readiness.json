@@ -1,0 +1,16 @@
+{
+  "status": "PENDING NATIVE GUARD EXECUTION",
+  "nativeExecuted": false,
+  "fixturesCreated": false,
+  "sourceInputCount": 712,
+  "sourceDeltas": 0,
+  "freezeCount": 716,
+  "freezeSHA256": "DA65BCA6F3007F85D6C855E9652DE18825BB7AF873197B053AA661C96D79D5A8",
+  "driverSHA256": "23E38737CC56C935CDA4A21D1D9D86A7687999F9C23A121BF53A3A5D752BCD51",
+  "assignmentSHA256": "586560A210455B04B837C826CD38D1F96E56F4B7584A1C11138B3CD072600709",
+  "cases": 10,
+  "producerCases": 9,
+  "patchHelperCases": 1,
+  "parserErrors": 0,
+  "positiveProducerMayRun": false
+}

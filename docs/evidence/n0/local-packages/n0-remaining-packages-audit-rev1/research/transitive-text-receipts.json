@@ -1,0 +1,90 @@
+[
+  {
+    "url": "https://api.github.com/repos/jbeder/yaml-cpp/git/ref/tags/yaml-cpp-0.6.3",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/yaml-tag.json",
+    "bytes": 363,
+    "sha256": "25A7C15D2B9B4D72C0E736219F2851ED2C5A498CBA5865B1C48C53BD61264ECB"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/modules/Findlcms2.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-Findlcms2.cmake",
+    "bytes": 6218,
+    "sha256": "BD3D6A826335F7E2B2F448EDB6794C80DCCD4F9FAB8815A2833EC1F822EBA939"
+  },
+  {
+    "url": "https://api.github.com/repos/fmtlib/fmt/git/ref/tags/8.0.0",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/fmt-tag.json",
+    "bytes": 323,
+    "sha256": "854FB819BA7DFF956A145AD38264136AD4B7DEE049313AD3866ACBEE5D6A0DA1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/boostorg/boost/ccb2ab3b4384a16deafaa849de509bce2b2cbada/.gitmodules",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/boost-gitmodules",
+    "bytes": 17974,
+    "sha256": "84BE74E303AAF4F4B3936A5EB573B914D8615647AE0340C7B29E0EA4D3964569"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/share/cmake/projects/Buildpystring.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-Buildpystring.cmake",
+    "bytes": 641,
+    "sha256": "2CEFD14AED63D4EAD1C9263F61C17F3C12BDF4EF5CA78E9503A26F31689C7178"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/libOpenImageIO/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-native-CMakeLists.txt",
+    "bytes": 10373,
+    "sha256": "A105D7429DDA48374A7834AFEEBF88F376C5DF2539E452399CBD9DB060904B93"
+  },
+  {
+    "url": "https://api.github.com/repos/imageworks/pystring/git/ref/tags/v1.1.3",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/pystring-tag.json",
+    "bytes": 337,
+    "sha256": "F4F5D403994DB134ACA04E9C92771CE8DFA1230D83E8A71C50D9281CB0DE17E9"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/cmake/modules/FindRobinmap.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-FindRobinmap.cmake",
+    "bytes": 641,
+    "sha256": "E7BD3E1D06A3D6E0B11890FF9A229759786953AAA2DA743CC66B2105ADA6EE0B"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/cmake/modules/Findfmt.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-Findfmt.cmake",
+    "bytes": 884,
+    "sha256": "5FF143E172A0EA4A5083915E79484F003191B64C933F7883735394B7E6DBB76A"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenColorIO/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe/src/CMakeLists.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/ocio-src-CMakeLists.txt",
+    "bytes": 1303,
+    "sha256": "1D99BC4D340143667707539F5625D71BD1A3C99390085D7487D8D0A34DE4B724"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/boostorg/boost/ccb2ab3b4384a16deafaa849de509bce2b2cbada/LICENSE_1_0.txt",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/boost-LICENSE_1_0.txt",
+    "bytes": 1338,
+    "sha256": "C9BFF75738922193E67FA726FA225535870D2AA1059F91452C411736284AD566"
+  }
+]

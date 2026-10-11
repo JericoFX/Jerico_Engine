@@ -141,3 +141,12 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourceNotices.txt -text -whitespace
 /cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/SourcePins.json -text whitespace=cr-at-eol
 /cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/PrivateProvenance.json -text whitespace=cr-at-eol
+# Retain the original pinned ASTC recipe patch bytes, including context whitespace.
+/cmake/Tools/LocalPackages/ASTCEncoder/astc-encoder-3.2-rev1.patch -text -whitespace
+# Keep the six validated ASTC inputs byte exact; retain source whitespace checks.
+/cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/ASTCEncoder/Findastc-encoder.cmake -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/ASTCEncoder/NOTICE.txt -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/ASTCEncoder/PatchHunks.json -text whitespace=cr-at-eol
+/cmake/Tools/LocalPackages/ASTCEncoder/README.md -text whitespace=cr-at-eol

@@ -1,0 +1,156 @@
+{
+  "producerMustNotSucceed": true,
+  "acceptance": false,
+  "expectedCases": 10,
+  "patchHelperCases": 1,
+  "producerCases": 9,
+  "exitCode": 0,
+  "results": [
+    {
+      "label": "missing-required-argument",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0324524,
+      "expectedError": "JE_ASTC_OUTPUT is required",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/missing-required-argument"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "archive-missing",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0294432,
+      "expectedError": "ASTC source archive file is missing",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-missing"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "archive-hash",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0296388,
+      "expectedError": "ASTC source archive SHA256 mismatch",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-hash"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "pin-url-or-sha",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0289802,
+      "expectedError": "source URL/SHA256 must match the audited 3.2 archive",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pin-url-or-sha"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "URI",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0289532,
+      "expectedError": "JE_ASTC_OUTPUT must not be a URI",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/URI"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "UNC-relative",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.028849,
+      "expectedError": "JE_ASTC_OUTPUT must be an absolute local path",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/UNC-relative"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "symlink-junction-ancestor",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0300457,
+      "expectedError": "JE_ASTC_OUTPUT must not use symlink paths",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/symlink-junction-ancestor",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/junction-target/output"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "output-existing",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0292351,
+      "expectedError": "output must be new",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-existing",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/source-work",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/stage",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/packages"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "output-outside-build",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0294373,
+      "expectedError": "output must be beneath this checkout/build",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-outside-build",
+        "F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    },
+    {
+      "label": "pristine-byte-mismatch",
+      "scope": "PATCH-HELPER",
+      "nativeExit": 1,
+      "seconds": 0.0297014,
+      "expectedError": "ASTC pristine patch input SHA256 mismatch",
+      "observedExpectedError": true,
+      "mustRemainAbsent": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pristine-byte-mismatch"
+      ],
+      "outputAbsent": true,
+      "fixtureChanges": [],
+      "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+    }
+  ]
+}

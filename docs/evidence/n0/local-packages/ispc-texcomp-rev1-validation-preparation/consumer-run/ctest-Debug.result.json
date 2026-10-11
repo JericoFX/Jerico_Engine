@@ -1,0 +1,24 @@
+{
+  "name": "ctest-Debug",
+  "utc": "2026-10-11T09:23:19.4569100Z",
+  "PID": 293264,
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "arguments": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer",
+    "-C",
+    "Debug",
+    "--output-on-failure",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run\\Debug-junit.xml"
+  ],
+  "count": 7,
+  "exitCode": 0,
+  "elapsedSeconds": 0.1777625,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run\\ctest-Debug.stdout.raw.log",
+  "stdoutBytes": 1172,
+  "stdoutSHA256": "4C78BBDBF0F499376DC4C5A4BA7FCCCC0C2A680C76C4E1D1F9ABD68C861409CB",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run\\ctest-Debug.stderr.raw.log",
+  "stderrBytes": 0,
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

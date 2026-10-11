@@ -1,0 +1,149 @@
+Start testing: Oct 11 05:59 Hora estándar de Montevideo
+----------------------------------------------------------
+1/9 Testing: JE.LocalPackages.ASTC.ldr8
+1/9 Test: JE.LocalPackages.ASTC.ldr8
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "ldr8"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.ldr8" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC ldr8
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.ldr8" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.ldr8" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/9 Testing: JE.LocalPackages.ASTC.ldr16
+2/9 Test: JE.LocalPackages.ASTC.ldr16
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "ldr16"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.ldr16" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC ldr16
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.ldr16" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.ldr16" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/9 Testing: JE.LocalPackages.ASTC.ldr32
+3/9 Test: JE.LocalPackages.ASTC.ldr32
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "ldr32"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.ldr32" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC ldr32
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.ldr32" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.ldr32" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/9 Testing: JE.LocalPackages.ASTC.srgb
+4/9 Test: JE.LocalPackages.ASTC.srgb
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "srgb"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.srgb" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC srgb
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.srgb" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.srgb" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/9 Testing: JE.LocalPackages.ASTC.hdr-rgb
+5/9 Test: JE.LocalPackages.ASTC.hdr-rgb
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "hdr-rgb"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.hdr-rgb" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC hdr-rgb
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.hdr-rgb" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.hdr-rgb" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/9 Testing: JE.LocalPackages.ASTC.hdr
+6/9 Test: JE.LocalPackages.ASTC.hdr
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "hdr"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.hdr" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC hdr
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.hdr" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.hdr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/9 Testing: JE.LocalPackages.ASTC.normal
+7/9 Test: JE.LocalPackages.ASTC.normal
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "normal"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.normal" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC normal
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.normal" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.normal" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/9 Testing: JE.LocalPackages.ASTC.invalid
+8/9 Test: JE.LocalPackages.ASTC.invalid
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1/Release/JEASTCEncoderConsumer.exe" "invalid"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.invalid" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE PASS: real ASTC invalid
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ASTC.invalid" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.invalid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/9 Testing: JE.LocalPackages.ASTC.cli
+9/9 Test: JE.LocalPackages.ASTC.cli
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1/astc-encoder/bin/Release/astcenc-sse4.1.exe" "-version"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+"JE.LocalPackages.ASTC.cli" start time: Oct 11 05:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+astcenc v3.2.0, 64-bit sse4.1+popcnt
+Copyright 2011-2026 Arm Limited, all rights reserved
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[3[.]2[.]0]
+"JE.LocalPackages.ASTC.cli" end time: Oct 11 05:59 Hora estándar de Montevideo
+"JE.LocalPackages.ASTC.cli" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 11 05:59 Hora estándar de Montevideo

@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake:29 (message):
+  JE local ASTC: source URL/SHA256 must match the audited 3.2 archive
+
+

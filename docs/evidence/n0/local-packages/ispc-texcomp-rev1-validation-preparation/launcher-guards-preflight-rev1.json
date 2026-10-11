@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-11T09:25:45.8183525Z",
+  "pid": 126256,
+  "powerShellVersion": "7.6.5",
+  "edition": "Core",
+  "launcher": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "wrapperArguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-validation-preparation/RunGuards.ps1"
+  ],
+  "wrapperArgumentCount": 4,
+  "hashes": {
+    "assignment": "61D17229600D38C523CBACC907174C210E397F3B4833A9477BB3C64F664CA67C",
+    "driver": "4D789E0AAE96A0751CF6DBEB857627EC57680E5982951C148FDBA4A0191416FB",
+    "common": "8858FF1B4A7832596FEF54EA2F3464928FC22AA59A3AD539CAE2366FB8A2E329",
+    "driverFreeze": "75F511CEA9147BA4FE821018CB96C9122F31151AB05090ACA65517CC33DBF2BA",
+    "inputs": "DF45F46828446FE0113777546CFDE2983FC099588404548821C9D24A7B6E8710",
+    "authority": "35B6A7D77269F60E2A067B401980E01C3F4576E2F755D0DE09CFB3B1851127F4",
+    "review": "DA4064ECCAAEC14AECF80ECE18C1AA20AC171AFA3E4B784C37CC2703276A915A",
+    "consumerReview": "8DA3012BBE3532070784C012935FDA10F4C639B04AAA4A71D2597FD6F82892DD",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "expectedHashes": {
+    "assignment": "61D17229600D38C523CBACC907174C210E397F3B4833A9477BB3C64F664CA67C",
+    "driver": "4D789E0AAE96A0751CF6DBEB857627EC57680E5982951C148FDBA4A0191416FB",
+    "common": "8858FF1B4A7832596FEF54EA2F3464928FC22AA59A3AD539CAE2366FB8A2E329",
+    "driverFreeze": "75F511CEA9147BA4FE821018CB96C9122F31151AB05090ACA65517CC33DBF2BA",
+    "inputs": "DF45F46828446FE0113777546CFDE2983FC099588404548821C9D24A7B6E8710",
+    "authority": "35B6A7D77269F60E2A067B401980E01C3F4576E2F755D0DE09CFB3B1851127F4",
+    "review": "DA4064ECCAAEC14AECF80ECE18C1AA20AC171AFA3E4B784C37CC2703276A915A",
+    "consumerReview": "8DA3012BBE3532070784C012935FDA10F4C639B04AAA4A71D2597FD6F82892DD",
+    "launcher": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139"
+  },
+  "inputCount": 490,
+  "guardCount": 9,
+  "fixtures": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-guards",
+  "fixturesAbsent": true,
+  "freshEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\guards-run",
+  "freshEvidenceAbsent": true,
+  "consumerPrerequisiteStatus": "CONSUMER_CASES_PASSED_ONLY",
+  "processes": [],
+  "errors": []
+}

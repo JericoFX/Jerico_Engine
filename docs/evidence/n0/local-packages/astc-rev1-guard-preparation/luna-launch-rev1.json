@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-11T09:05:15.5651951Z",
+  "pid": 141796,
+  "launcherExecutable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "launcherVersion": "7.6.5",
+  "driver": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-guard-preparation\\RunASTCGuards.ps1",
+  "hashes": {
+    "driver": "23E38737CC56C935CDA4A21D1D9D86A7687999F9C23A121BF53A3A5D752BCD51",
+    "assignment": "586560A210455B04B837C826CD38D1F96E56F4B7584A1C11138B3CD072600709",
+    "freeze": "DA65BCA6F3007F85D6C855E9652DE18825BB7AF873197B053AA661C96D79D5A8",
+    "review": "70C3B2CB4260E762334BE44C1C8AA8901876E96BC34B6EF398B7BE3E8360EDCC"
+  },
+  "assignmentFreshAttempt": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1",
+  "attemptAbsent": true,
+  "outputSentinels": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/astc-negative-outside-build-sentinel",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/build",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/packages",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/source-work",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/existing-output/stage",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/junction-target/output",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-hash",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-missing",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/missing-required-argument",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-existing",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/output-outside-build",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pin-url-or-sha",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pristine-byte-mismatch",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/symlink-junction-ancestor",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/UNC-relative",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/URI",
+      "present": false
+    }
+  ],
+  "relatedProcesses": [],
+  "preflight": "PASS",
+  "nativeInvocationsBeforeRun": 0
+}

@@ -1,0 +1,28 @@
+{
+  "configuration": "Debug",
+  "exitCode": 0,
+  "testCount": 9,
+  "failedOrSkipped": 0,
+  "names": [
+    "JE.LocalPackages.ASTC.cli",
+    "JE.LocalPackages.ASTC.hdr",
+    "JE.LocalPackages.ASTC.hdr-rgb",
+    "JE.LocalPackages.ASTC.invalid",
+    "JE.LocalPackages.ASTC.ldr16",
+    "JE.LocalPackages.ASTC.ldr32",
+    "JE.LocalPackages.ASTC.ldr8",
+    "JE.LocalPackages.ASTC.normal",
+    "JE.LocalPackages.ASTC.srgb"
+  ],
+  "expected": [
+    "JE.LocalPackages.ASTC.cli",
+    "JE.LocalPackages.ASTC.hdr",
+    "JE.LocalPackages.ASTC.hdr-rgb",
+    "JE.LocalPackages.ASTC.invalid",
+    "JE.LocalPackages.ASTC.ldr16",
+    "JE.LocalPackages.ASTC.ldr32",
+    "JE.LocalPackages.ASTC.ldr8",
+    "JE.LocalPackages.ASTC.normal",
+    "JE.LocalPackages.ASTC.srgb"
+  ]
+}

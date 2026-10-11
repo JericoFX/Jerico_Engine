@@ -1,0 +1,48 @@
+{
+  "decision": "CONSUMER DRIVER AND ARCHIVE ACCEPTED FOR ONE LUNA DISPATCH",
+  "pins": {
+    "RunASTCConsumer.ps1": "35946C5C09D3E3F362FBE32122B48CA3895DC03914EBA4768375BC8EBDB3E064",
+    "source-freeze-astc-consumer.json": "AE4E7EB656FEB7D6711EBDE3695C52884C1ADC156AFB6B139B40B94337E2E1EA",
+    "consumer-assignment.json": "2B236F44D0A44887B7636A99B9DACA7B2E89746B27F001DF251B6657D8708F6F",
+    "archive-audit.json": "CEE8CEC1F925604E8F87F710369972C5A70B1CFC44ED258A28C5CCD6C65FFD19",
+    "extraction-manifest.json": "3FA84FA19372BBEC229B2E6F2A67F53FFD6A0E2427F787D2A9CC2D209ADA73E9"
+  },
+  "freezeEntries": 712,
+  "currentFrozenDeltas": 0,
+  "archiveMembers": 63,
+  "manifestHashes": 62,
+  "noticeWitnesses": 56,
+  "driverASTErrors": 0,
+  "configure": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/tests",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_ASTC_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-extracted-rev1"
+  ],
+  "expectedTests": [
+    "JE.LocalPackages.ASTC.ldr8",
+    "JE.LocalPackages.ASTC.ldr16",
+    "JE.LocalPackages.ASTC.ldr32",
+    "JE.LocalPackages.ASTC.srgb",
+    "JE.LocalPackages.ASTC.hdr-rgb",
+    "JE.LocalPackages.ASTC.hdr",
+    "JE.LocalPackages.ASTC.normal",
+    "JE.LocalPackages.ASTC.invalid",
+    "JE.LocalPackages.ASTC.cli"
+  ],
+  "configurations": [
+    "Release",
+    "Debug"
+  ],
+  "nativeScope": "One configure; one build and CTest for each config. No producer, no extraction, no negatives dispatched by this driver.",
+  "producerReviewSHA256": "783A00336C0BE925F03D3C5C404E7C980946D027335D53B740EC10EE603953D5",
+  "engineAccepted": false,
+  "consumerExecuted": false
+}

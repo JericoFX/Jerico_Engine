@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "sha256": "F4E9DFA1FC166CA18D821477A1B19C34845B4595B497E3FDC920AB5B91EC0C8F",
+  "authorization": false,
+  "automaticRedirects": false,
+  "url": "https://api.github.com/repos/ARM-software/astc-encoder/git/ref/tags/3.2",
+  "bytes": 349,
+  "contentType": "application/json; charset=utf-8"
+}

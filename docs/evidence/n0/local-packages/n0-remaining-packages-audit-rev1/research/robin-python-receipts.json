@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/OpenImageIO/14d38284c54bce02f8228ea87cdfa93dc0afda77/src/cmake/pythonutils.cmake",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-pythonutils.cmake",
+    "bytes": 5656,
+    "sha256": "5EC5588A3F427B08AA03D41CF65C8267D47F09F7B0056FDED5A30CB0ED9AA7F0"
+  },
+  {
+    "url": "https://api.github.com/repos/Tessil/robin-map/git/ref/tags/v0.6.2",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/robin-tag.json",
+    "bytes": 341,
+    "sha256": "7E648FF3F71094DD727C99ECF395A9248288DB1C939E8BA479858571A9511929"
+  }
+]

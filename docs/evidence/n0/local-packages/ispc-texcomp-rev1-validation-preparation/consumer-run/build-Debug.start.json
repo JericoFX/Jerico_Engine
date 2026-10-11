@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-11T09:23:16.1943988Z",
+  "PID": 271604,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "executableSHA256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+  "arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer",
+    "--config",
+    "Debug"
+  ],
+  "count": 4
+}

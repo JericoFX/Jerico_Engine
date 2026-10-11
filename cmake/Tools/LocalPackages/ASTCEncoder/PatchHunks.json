@@ -1,0 +1,40 @@
+{
+  "recipeCommit": "90480ca41d15e1b20a28f90e2f996fd0e5a3a68c",
+  "files": [
+    {
+      "exactInverse": true,
+      "hunks": [
+        {
+          "before": "#  under the License.\n#  ----------------------------------------------------------------------------\n\n# Overwrite the LTO flags to force fat LTO; worth 3-4% performance\n# See https://gitlab.kitware.com/cmake/cmake/-/issues/16808\nif(CMAKE_CXX_COMPILER_ID MATCHES \"GNU|Clang\" AND ${CLI})\n    set(CMAKE_CXX_COMPILE_OPTIONS_IPO \"-flto\")\nendif()\n\nif(${DECOMPRESSOR})\n",
+          "after": "#  under the License.\n#  ----------------------------------------------------------------------------\n\n# O3DE change: use \"-flto -ffat-lto-objects\" instead of \"-flto -fno-fat-lto-objects\" for linux since it may remove some functions for static library which leads to undefined symbols\n# Overwrite the LTO flags to force fat LTO; worth 3-4% performance\n# See https://gitlab.kitware.com/cmake/cmake/-/issues/16808\nif(CMAKE_CXX_COMPILER_ID MATCHES \"GNU|Clang\" AND ${CLI})\n    set(CMAKE_CXX_COMPILE_OPTIONS_IPO \"-ffat-lto-objects\")\nendif()\n\nif(${DECOMPRESSOR})\n"
+        }
+      ],
+      "path": "Source/CMakeLists.txt",
+      "afterSHA": "4E425CFF86BB25DEB666EC8F8135E607C8833C32EA08F16B6B6F5839D6420FD7",
+      "beforeSHA": "BE219F76912DD07DAA37A33B3E7E7E39B6DA02C890E4B5F84F703E6F99301B2A"
+    },
+    {
+      "exactInverse": true,
+      "hunks": [
+        {
+          "before": "            $<$<CXX_COMPILER_ID:MSVC>:/EHsc>\n            $<$<CXX_COMPILER_ID:MSVC>:/fp:strict>\n\n            # G++ and Clang++ compiler defines\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wextra>\n",
+          "after": "            $<$<CXX_COMPILER_ID:MSVC>:/EHsc>\n            $<$<CXX_COMPILER_ID:MSVC>:/fp:strict>\n\n            # O3DE change: remove /GL for MSVC build to resolve linking issue            \n            $<$<CXX_COMPILER_ID:MSVC>:/GL->\n\n            # G++ and Clang++ compiler defines\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wextra>\n"
+        },
+        {
+          "before": "            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wshadow>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wdouble-promotion>\n\n            # Hide noise thrown up by Clang 10 and clang-cl\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-unknown-warning-option>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-c++98-compat-pedantic>\n",
+          "after": "            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wshadow>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wdouble-promotion>\n\n            # O3DE change: add PIC to address linking static library issue\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-fPIC>\n\n            # Hide noise thrown up by Clang 10 and clang-cl\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-unknown-warning-option>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-c++98-compat-pedantic>\n"
+        },
+        {
+          "before": "            PROPERTY\n                INTERPROCEDURAL_OPTIMIZATION_RELEASE True)\n\n        # Use a static runtime on MSVC builds (ignored on non-MSVC compilers)\n        set_property(TARGET ${NAME}\n            PROPERTY\n                MSVC_RUNTIME_LIBRARY \"MultiThreaded$<$<CONFIG:Debug>:Debug>\")\n    endif()\n\n    # Set up configuration for SIMD ISA builds\n",
+          "after": "            PROPERTY\n                INTERPROCEDURAL_OPTIMIZATION_RELEASE True)\n\n        # O3DE change: changed from using static runtime to dynamic runtime since O3DE libraries uses dynamic runtime \n        # Use a dynamic runtime on MSVC builds (ignored on non-MSVC compilers)\n        set_property(TARGET ${NAME}\n            PROPERTY\n                MSVC_RUNTIME_LIBRARY \"MultiThreaded$<$<CONFIG:Debug>:Debug>DLL\")\n    endif()\n\n    # Set up configuration for SIMD ISA builds\n"
+        }
+      ],
+      "path": "Source/cmake_core.cmake",
+      "afterSHA": "EECC5233BEDD1D2E6340BB7EDC98D75474019A24DF52EB912F7DB3301292B80F",
+      "beforeSHA": "8DC80B739B4CD7957E136BB75872C9E3C2CBC2229448C4876A5AEA442798A1AA"
+    }
+  ],
+  "originalPackageVersion": "3.2-rev2",
+  "sourceCommit": "f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+  "patchSHA": "88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00"
+}

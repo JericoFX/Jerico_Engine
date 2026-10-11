@@ -1,0 +1,12 @@
+CMake Error at cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake:52 (message):
+  JE ISPCTexComp: immutable input verification failed (1): Exception:
+  F:\JericoEngine\JericoEngine\cmake\Tools\LocalPackages\ISPCTexComp\VerifyInputs.ps1:34
+
+  Line |
+
+    34 |  .  $inputPair.count){throw 'JE ISPCTexComp: input file count mismatch'}
+       |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       | JE ISPCTexComp: input file count mismatch
+
+
+

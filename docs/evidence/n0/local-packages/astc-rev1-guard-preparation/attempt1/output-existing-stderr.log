@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake:22 (message):
+  JE local ASTC: output must be new; existing outputs are preserved
+
+

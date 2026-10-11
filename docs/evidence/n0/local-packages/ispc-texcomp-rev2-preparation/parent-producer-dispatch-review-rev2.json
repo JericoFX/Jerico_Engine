@@ -1,0 +1,30 @@
+{
+  "decision": "ISPCTEXCOMP PRODUCER DRIVER APPROVED; DISPATCH AFTER ASTC NATIVE OWNER RELEASE",
+  "pins": {
+    "driver-freeze.json": "4A32907A0A32A4CC60BBD09941D538C8033BCBB9422D580AED992CA4409C9CE2",
+    "RunProducer.ps1": "EC0EC8323A72E6958C24D769F67EF4448E4CFDF3672FA2C38E0CBC040EF98D4A",
+    "assignment.json": "1AB43CCE6DD28285FC02AF4A94402ED4E807381D0731A902C7BE391BE58B6C11"
+  },
+  "driverFreezeInputs": 464,
+  "sourceFreezeInputs": 458,
+  "currentFrozenDeltas": 0,
+  "driverASTErrors": 0,
+  "nativeArguments": [
+    "-DJE_ISPC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+    "-DJE_ISPC_SOURCE_ROOT=F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd",
+    "-DJE_ISPC_SOURCE_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/source-immutable-manifest.json",
+    "-DJE_ISPC_TOOL_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+    "-DJE_ISPC_TOOL_ROOT=F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+    "-DJE_ISPC_TOOL_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/tool-immutable-manifest.json",
+    "-DJE_ISPC_VS_ROOT=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+    "-DJE_ISPC_POWERSHELL=C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "-DJE_ISPC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake"
+  ],
+  "sourceReviewSHA256": "1D3BC565E97E21A33F3C7822C95307D24004F76F2A803677BE17F57272F2636F",
+  "nativeScope": "One CMake -P ISPCTexComp producer only",
+  "rawStreams": "Separate byte-copy stdout/stderr; immediate native ExitCode with elapsed and wrapper/native PID/start receipt; pre/post458; no retries or repair.",
+  "nativeExecuted": false,
+  "engineAccepted": false
+}

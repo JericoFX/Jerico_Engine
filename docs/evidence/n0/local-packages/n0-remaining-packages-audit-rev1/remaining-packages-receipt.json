@@ -1,0 +1,907 @@
+{
+  "status": "READONLY CURRENT PACKAGE/CALLER INVENTORY; NO CONFIGURE OR ACQUISITION",
+  "nativeExecuted": false,
+  "scope": "Original root61args with JEEditorFixture; current Windows catalog and shared bindings only, not an expanded dependency audit",
+  "arguments": 61,
+  "commonMeaning": "BuiltInPackages.cmake selects Windows file; shared RapidJSON/RapidXML/cityhash/zstd rows are within it, no separate Common package catalog exists",
+  "catalogEntries": 31,
+  "catalogArchivesPresent": 16,
+  "catalogArchivesAbsent": 15,
+  "cacheRootFiles": 36,
+  "cacheArchivePairs": 18,
+  "cacheSidecarMismatches": 0,
+  "catalogArchiveHashMismatches": 0,
+  "priorityAfterCodecs": [
+    "OpenImageIO native library/Tools::Binaries: confirmed enabled source callers, not measured fatal",
+    "libsamplerate: Windows Microphone external composition and calls confirmed, not a project seed or measured fatal"
+  ],
+  "boundaries": [
+    "Catalogue absence does not establish required package. In-tree providers/source overrides supersede five legacy rows.",
+    "Windows excludes Metal/SPIRVCross and external crash reporting/Crashpad by current traits; branch/source evidence is not native graph acceptance.",
+    "AWS rows have no found current Code/Gems CMake consumers and must not be acquired.",
+    "Pyside exists only as historical artifact; Python product composition excluded, no inference of allowed use. OpenImageIO bundle PythonPlugins are not selected by the inspected consumers.",
+    "Microphone is visited by engine composition despite absent fixture seed; actual generated target/link/runtime inclusion unverified.",
+    "Last measured configure stops at ASTC; no claim on next order/fatal or completed generation.",
+    "FetchContent overrides already covered by Root61 are referenced, not re-audited. No downloads, no installation, no source/root/cache modification."
+  ],
+  "bindings": [
+    {
+      "package": "RapidJSON-1.1.0-rev1-multiplatform",
+      "targets": [
+        "RapidJSON"
+      ],
+      "catalogSHA256": "2f5e26ecf86c3b7a262753e7da69ac59928e78e9534361f3d00c1ad5879e4023",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CURRENT_LOCAL_SOURCE_PROVIDER",
+        "note": "Legacy package is not current acquisition path: RapidJSON alias comes from local rapidjson provider and exact FETCHCONTENT_SOURCE_DIR_RAPIDJSON override.",
+        "refs": [
+          "Code/Framework/AzCore/CMakeLists.txt:86",
+          "Code/3rdParty/rapidjson/CMakeLists.txt:8"
+        ]
+      }
+    },
+    {
+      "package": "RapidXML-1.13-rev1-multiplatform",
+      "targets": [
+        "RapidXML"
+      ],
+      "catalogSHA256": "4b7b5651e47cfd019b6b295cc17bb147b65e53073eaab4a0c0d20a37ab74a246",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "IN_TREE_HEADER_PROVIDER",
+        "note": "Existing source provider aliases RapidXML; legacy archive absence is not a current missing provider.",
+        "refs": [
+          "Code/Framework/AzCore/CMakeLists.txt:87",
+          "Code/3rdParty/rapidxml/CMakeLists.txt:8"
+        ]
+      }
+    },
+    {
+      "package": "cityhash-1.1-multiplatform",
+      "targets": [
+        "cityhash"
+      ],
+      "catalogSHA256": "0ace9e6f0b2438c5837510032d2d4109125845c0efd7d807f4561ec905512dd2",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "IN_TREE_STATIC_PROVIDER",
+        "note": "Existing in-tree static target, no archive fetch needed for this binding.",
+        "refs": [
+          "Code/Framework/AzCore/CMakeLists.txt:90",
+          "Code/3rdParty/cityhash/CMakeLists.txt:10"
+        ]
+      }
+    },
+    {
+      "package": "zstd-1.3.5-je-rev1-windows",
+      "targets": [
+        "zstd"
+      ],
+      "catalogSHA256": "672edc4a41e31c6f45675b84a314cf1a31caa75428c543ea67a27253d9588793",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "672EDC4A41E31C6F45675B84A314CF1A31CAA75428C543EA67A27253D9588793",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "expat-2.4.2-je-rev1-windows",
+      "targets": [
+        "expat"
+      ],
+      "catalogSHA256": "c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "C102370257ED28D9F9EA5E61CA10432EDC14E8389AA781380BEAA9B2A8AE6925",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "OpenEXR-3.1.3-je-rev1-windows",
+      "targets": [
+        "OpenEXR",
+        "Imath"
+      ],
+      "catalogSHA256": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": false,
+      "actualArchiveSHA256": "CD06701C7710FCAF68B29D99A1A4E110EA4C274B0656E1CC2182A1A7003F7FA0",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows",
+      "targets": [
+        "DirectXShaderCompilerDxc"
+      ],
+      "catalogSHA256": "62fc6978933215440718d8d810ab5ecf20a36368a8592d12822f902ed0654782",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "SPIRVCross-1.3.275.0-rev1-windows",
+      "targets": [
+        "SPIRVCross"
+      ],
+      "catalogSHA256": "4c18c95834ebff103ff7f39fc814d65276668d2405d91376290f69723f2ab0f7",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "WINDOWS_BRANCH_EXCLUDED",
+        "note": "Tool dependency now lives only in supported Metal branch; Windows false PAL enters stub and returns. Actual Root has not reached Metal yet; static branch evidence only.",
+        "refs": [
+          "Gems/Atom/RHI/Metal/Code/CMakeLists.txt:14",
+          "Gems/Atom/RHI/Metal/Code/CMakeLists.txt:179",
+          "Gems/Atom/RHI/Metal/Code/Source/Platform/Windows/PAL2_windows.cmake:9"
+        ]
+      }
+    },
+    {
+      "package": "tiff-4.2.0.15-je-rev1-windows",
+      "targets": [
+        "TIFF"
+      ],
+      "catalogSHA256": "d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "D54ECD9A2463472E0DF48E9BAFF07744CA1512FE761BC142ADE353B347BF1DD2",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "freetype-2.11.1-je-rev1-windows",
+      "targets": [
+        "Freetype"
+      ],
+      "catalogSHA256": "a6999aa779cd5e37e415eb784188f73763d396eaaca58f5b9485e2a5568b9802",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "A6999AA779CD5E37E415EB784188F73763D396EAACA58F5B9485E2A5568B9802",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "AWSNativeSDK-1.11.288-rev1-windows",
+      "targets": [
+        "AWSNativeSDK"
+      ],
+      "catalogSHA256": "5112bfc8982f240757f22f32f5f761d7d7020d1c77b029ae480c082fa3ae19d4",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CATALOG_ONLY_NO_CURRENT_CMAKE_CONSUMER_FOUND",
+        "note": "No literal consumer found in current Code/Gems CMake. AWS is forbidden product scope; do not acquire merely from catalog.",
+        "refs": [
+          "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake:24"
+        ]
+      }
+    },
+    {
+      "package": "Lua-5.4.4-je-rev1-windows",
+      "targets": [
+        "Lua"
+      ],
+      "catalogSHA256": "d3962b7b84f7fb484f02f639f631db5613f30a6922953ce41ce8344e4b57cbeb",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "D3962B7B84F7FB484F02F639F631DB5613F30A6922953CE41CE8344E4B57CBEB",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "mcpp-2.7.2_az.2-je-rev1-windows",
+      "targets": [
+        "mcpp"
+      ],
+      "catalogSHA256": "4c4ae3b71be82837b18090029d7ec49a19af80c12b35008b70a0d6f967acc589",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "4C4AE3B71BE82837B18090029D7EC49A19AF80C12B35008B70A0D6F967ACC589",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "mikkelsen-1.0.0.4-windows",
+      "targets": [
+        "mikkelsen"
+      ],
+      "catalogSHA256": "872c4d245a1c86139aa929f2b465b63ea4ea55b04ced50309135dd4597457a4e",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CATALOG_ONLY_OBSOLETE_TARGET_NAME",
+        "note": "Actual SceneProcessing target is mikktspace, not mikkelsen, with local source override; no literal mikkelsen CMake consumer found.",
+        "refs": [
+          "Gems/SceneProcessing/Code/CMakeLists.txt:47",
+          "Code/3rdParty/mikktspace/CMakeLists.txt:8"
+        ]
+      }
+    },
+    {
+      "package": "d3dx12-headers-je-rev1-windows",
+      "targets": [
+        "d3dx12"
+      ],
+      "catalogSHA256": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "5BA66C64483F19E72BEEA0D1CCC94AD3E0175E88EC256668FC5B0725727FFB73",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "pyside6-6.11.2-py3.10-rev1-windows",
+      "targets": [
+        "pyside6"
+      ],
+      "catalogSHA256": "cd0272eb5ce46a3437132344a4a6b7022e3aee152da888963cdd9d025cbdf506",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": false,
+      "actualArchiveSHA256": "CD0272EB5CE46A3437132344A4A6B7022E3AEE152DA888963CDD9D025CBDF506",
+      "catalogHashMatches": true,
+      "consumerClassification": "PRESENT_HISTORICAL_ARTIFACT_PRODUCT_COMPOSITION_EXCLUDED"
+    },
+    {
+      "package": "openimageio-opencolorio-2.3.17-rev4-windows",
+      "targets": [
+        "OpenImageIO",
+        "OpenColorIO",
+        "OpenColorIO::Runtime",
+        "OpenImageIO::Tools::Binaries",
+        "OpenImageIO::Tools::PythonPlugins"
+      ],
+      "catalogSHA256": "d542198653b33640268a999de542c9c5adf4a29322ed04858c730bc82eb34b09",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CONFIRMED_ENABLED_SOURCE_CONSUMER_NOT_YET_REACHED_NATIVE",
+        "note": "Windows HOST_TOOLS TRUE; GradientSignal.Editor.Static links native OpenImageIO and CommonFeatures.Editor.Static deploys Tools::Binaries. Both external directories appear in actual Root visit list. No selected native call to OpenColorIO or Tools::PythonPlugins found here: bundle association alone does not authorize Python plugins. Actual future fatal/order still unmeasured.",
+        "refs": [
+          "Gems/GradientSignal/Code/CMakeLists.txt:64",
+          "Gems/GradientSignal/Code/CMakeLists.txt:84",
+          "Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt:119",
+          "Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt:151",
+          "Gems/GradientSignal/Code/Source/Editor/EditorGradientImageCreatorUtils.cpp:32",
+          "Gems/GradientSignal/Code/Source/Editor/EditorGradientImageCreatorUtils.cpp:226"
+        ]
+      }
+    },
+    {
+      "package": "qt-6.11.2-rev1-windows",
+      "targets": [
+        "Qt"
+      ],
+      "catalogSHA256": "f09edc180df0ded92827279c475167be13cbb517de182a5b10ec1337e68dd834",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "F09EDC180DF0DED92827279C475167BE13CBB517DE182A5B10EC1337E68DD834",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "png-1.6.37-je-rev1-windows",
+      "targets": [
+        "PNG"
+      ],
+      "catalogSHA256": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": false,
+      "actualArchiveSHA256": "7D13E9A70172F713F66DAF870A7359191096308EBE501C17121BFB24DBEFE9B4",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "libsamplerate-0.2.1-rev2-windows",
+      "targets": [
+        "libsamplerate"
+      ],
+      "catalogSHA256": "dcf3c11a96f212a52e2c9241abde5c364ee90b0f32fe6eeb6dcdca01d491829f",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CONFIRMED_ENABLED_SOURCE_CONSUMER_NOT_YET_REACHED_NATIVE",
+        "note": "Microphone is an engine external directory in actual visit list. Windows trait is TRUE; static target links libsamplerate, native implementation calls src_new/src_process/src_delete. Not a fixture seed, but current root composition visits this gem and dependency parser resolves literal deps while creating targets. Runtime/game activation or link is not proven.",
+        "refs": [
+          "engine.json:external_subdirectories/Gems/Microphone",
+          "Gems/Microphone/Code/CMakeLists.txt:25",
+          "Gems/Microphone/Code/Source/Platform/Windows/platform_windows.cmake:9",
+          "Gems/Microphone/Code/Source/Platform/Windows/MicrophoneSystemComponent_Windows.cpp:409",
+          "Gems/Microphone/Code/Source/Platform/Windows/MicrophoneSystemComponent_Windows.cpp:635"
+        ]
+      }
+    },
+    {
+      "package": "civetweb-1.8-rev1-windows",
+      "targets": [
+        "civetweb"
+      ],
+      "catalogSHA256": "36d0e58a59bcdb4dd70493fb1b177aa0354c945b06c30416348fd326cf323dd4",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CATALOG_ONLY_NO_CURRENT_CMAKE_CONSUMER_FOUND",
+        "note": "No literal current Code/Gems CMake consumer found; do not classify required from catalog alone.",
+        "refs": [
+          "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake:34"
+        ]
+      }
+    },
+    {
+      "package": "OpenSSL-1.1.1o-je-rev1-windows",
+      "targets": [
+        "OpenSSL"
+      ],
+      "catalogSHA256": "122f6d3a20fd4e8bdc158bccae6014f129be3fac7f16704ef01e75b8a2491888",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "122F6D3A20FD4E8BDC158BCCAE6014F129BE3FAC7F16704EF01E75B8A2491888",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "Crashpad-0.8.0-rev1-windows",
+      "targets": [
+        "Crashpad"
+      ],
+      "catalogSHA256": "d162aa3070147bc0130a44caab02c5fe58606910252caf7f90472bd48d4e31e2",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "WINDOWS_BRANCH_EXCLUDED",
+        "note": "CrashHandler returns because Windows external crash handler trait FALSE. Existing CrashReporting sources do not imply enabled Crashpad binding.",
+        "refs": [
+          "Code/Tools/CrashHandler/CMakeLists.txt:13",
+          "cmake/Platform/Windows/PAL_windows.cmake:21"
+        ]
+      }
+    },
+    {
+      "package": "zlib-1.2.11-je-rev1-windows",
+      "targets": [
+        "ZLIB"
+      ],
+      "catalogSHA256": "4ff69c9c7f99c917afce6d04cdf3fc6f2a65c0038abf2c677ef418182851bef7",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "4FF69C9C7F99C917AFCE6D04CDF3FC6F2A65C0038ABF2C677EF418182851BEF7",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "squish-ccr-deb557d-rev1-windows",
+      "targets": [
+        "squish-ccr"
+      ],
+      "catalogSHA256": "5c3d9fa491e488ccaf802304ad23b932268a2b2846e383f088779962af2bfa84",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CURRENT_LOCAL_SOURCE_PROVIDER",
+        "note": "Exact current source wrapper + prepared patched private source override, no legacy binary package needed. Native integration/build not yet verified.",
+        "refs": [
+          "Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:67",
+          "Code/3rdParty/squish-ccr/CMakeLists.txt:8"
+        ]
+      }
+    },
+    {
+      "package": "astc-encoder-3.2-rev2-windows",
+      "targets": [
+        "astc-encoder"
+      ],
+      "catalogSHA256": "17249bfa438afb34e21449865d9c9297471174ae0cea9b2f9def2ee206038295",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "FOCALLY_ACCEPTED_JE_PACKAGE_PENDING_PARENT_BINDING_INTEGRATION",
+        "note": "Current catalog still legacy; new JE archive accepted focal producer+18consumer+10guards. Parent owns binding/cache update. New archive SHA4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca,1179220B; no original hash claim.",
+        "refs": [
+          "Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:39",
+          "Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:66"
+        ]
+      }
+    },
+    {
+      "package": "ISPCTexComp-36b80aa-rev1-windows",
+      "targets": [
+        "ISPCTexComp"
+      ],
+      "catalogSHA256": "b6fa6ea28a2808a9a5524c72c37789c525925e435770f2d94eb2d387360fa2d0",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CONFIRMED_HOST_TOOL_CONSUMER_OTHER_WRITER_VALIDATION_PENDING",
+        "note": "Concrete host Tools/Editor static dependency. BSP writer owns candidate and current consumer preparation; do not acquire or alter that scope.",
+        "refs": [
+          "Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:19",
+          "Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:69"
+        ]
+      }
+    },
+    {
+      "package": "lz4-1.9.4-je-rev1-windows",
+      "targets": [
+        "lz4"
+      ],
+      "catalogSHA256": "9e7e44c4e9d70307e22da51ecbfb71934770ca0ec7c4077d5ee739c2a21c2eac",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "9E7E44C4E9D70307E22DA51ECBFB71934770CA0EC7C4077D5EE739C2A21C2EAC",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    },
+    {
+      "package": "SQLite-3.37.2-rev1-windows",
+      "targets": [
+        "SQLite"
+      ],
+      "catalogSHA256": "c1658c8ed5cf0e45d4a5da940c6a6d770b76e0f4f57313b70d0fd306885f015e",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CURRENT_LOCAL_SOURCE_PROVIDER",
+        "note": "Current sqlite3.53.4 source override + provider alias SQLite, not legacy3.37.2 binary binding. Original native integration pending.",
+        "refs": [
+          "Code/3rdParty/sqlite/CMakeLists.txt:8",
+          "Code/3rdParty/sqlite/CMakeLists.txt:84"
+        ]
+      }
+    },
+    {
+      "package": "AwsIotDeviceSdkCpp-1.15.2-rev1-windows",
+      "targets": [
+        "AwsIotDeviceSdkCpp"
+      ],
+      "catalogSHA256": "b03475a9f0f7a7e7c90619fba35f1a74fb2b8f4cd33fa07af99f2ae9e0c079dd",
+      "archiveInRootCache": false,
+      "packageDirectoryExists": false,
+      "consumerAssessment": {
+        "status": "CATALOG_ONLY_NO_CURRENT_CMAKE_CONSUMER_FOUND",
+        "note": "No literal current Code/Gems CMake consumer found; AWS forbidden, no acquisition from catalog.",
+        "refs": [
+          "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake:43"
+        ]
+      }
+    },
+    {
+      "package": "vulkan-validationlayers-1.3.261-je-rev1-windows",
+      "targets": [
+        "vulkan-validationlayers"
+      ],
+      "catalogSHA256": "1f2d47f5b1a536b7bd27a4beba3860e2c384f6780efcf7a7d2b017bef1ffe53c",
+      "archiveInRootCache": true,
+      "packageDirectoryExists": true,
+      "actualArchiveSHA256": "1F2D47F5B1A536B7BD27A4BEBA3860E2C384F6780EFCF7A7D2B017BEF1FFE53C",
+      "catalogHashMatches": true,
+      "consumerClassification": "ARCHIVE_PRESENT_NOT_A_NATIVE_ACCEPTANCE_CLAIM"
+    }
+  ],
+  "cacheManifest": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\d3dx12-headers-je-rev1-windows.tar.xz",
+      "bytes": 16652,
+      "sha256": "5BA66C64483F19E72BEEA0D1CCC94AD3E0175E88EC256668FC5B0725727FFB73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\d3dx12-headers-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 105,
+      "sha256": "C3EC14BF9C326D3DB3D94D9958AFD82786FA06DFF137FB751EB98B5592BCA465"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "bytes": 7352940,
+      "sha256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 131,
+      "sha256": "8A9C9F9F562F099559770A5770B1465928471416181CEBC38198B2FEFF2E627E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\expat-2.4.2-je-rev1-windows.tar.xz",
+      "bytes": 196028,
+      "sha256": "C102370257ED28D9F9EA5E61CA10432EDC14E8389AA781380BEAA9B2A8AE6925"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\expat-2.4.2-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 102,
+      "sha256": "B0002B30CCB5CF515EC8455F10FA1A3FE970694DF40928E2E51EFFD689111FAE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\freetype-2.11.1-je-rev1-windows.tar.xz",
+      "bytes": 712192,
+      "sha256": "A6999AA779CD5E37E415EB784188F73763D396EAACA58F5B9485E2A5568B9802"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\freetype-2.11.1-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 106,
+      "sha256": "6D6FF27FDEFA48E7AF3BBCDA4ED503208118E8ECA5958B460F81DF520B7E3C9A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz",
+      "bytes": 313440,
+      "sha256": "D3962B7B84F7FB484F02F639F631DB5613F30A6922953CE41CE8344E4B57CBEB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 100,
+      "sha256": "7FA7B7D0D967BF266922472CC6A037B9EE458911959C37E3F3B836CF4D55AED3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz",
+      "bytes": 167540,
+      "sha256": "9E7E44C4E9D70307E22DA51ECBFB71934770CA0EC7C4077D5EE739C2A21C2EAC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 100,
+      "sha256": "19EE520CAE99C709DDE5A7F0F36E05A1D44FEDE2F6B73CCCB173729AE9680E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+      "bytes": 218928,
+      "sha256": "4C4AE3B71BE82837B18090029D7EC49A19AF80C12B35008B70A0D6F967ACC589"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 106,
+      "sha256": "CC9459D507D0EDA4A65D31AF97E1B4877B19644FF000536247F41D2056CCE95A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+      "bytes": 6880112,
+      "sha256": "CD06701C7710FCAF68B29D99A1A4E110EA4C274B0656E1CC2182A1A7003F7FA0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 104,
+      "sha256": "82E3878178903A246CE8D2D7B60122DDDB8D35F150C0008873980836EB33EFDA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+      "bytes": 7040252,
+      "sha256": "122F6D3A20FD4E8BDC158BCCAE6014F129BE3FAC7F16704EF01E75B8A2491888"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 105,
+      "sha256": "7333812E9A91938D0564EB807DB67B63BB662FA7FD6E71D9856CE368FFA12F21"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\png-1.6.37-je-rev1-windows.tar.xz",
+      "bytes": 421588,
+      "sha256": "7D13E9A70172F713F66DAF870A7359191096308EBE501C17121BFB24DBEFE9B4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\png-1.6.37-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 101,
+      "sha256": "15FFD9EB8A44D8909A3933688825AE50875A3D937895668A53A978FCD7056C64"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+      "bytes": 22663592,
+      "sha256": "CD0272EB5CE46A3437132344A4A6B7022E3AEE152DA888963CDD9D025CBDF506"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 108,
+      "sha256": "6BEBD651D19A6397EA3ABC8E28D9D6467010456085FA7E12B9FE7ECB6C937966"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz",
+      "bytes": 22341204,
+      "sha256": "4370B5870C6B4DA65206F6C8E82CA5540F0F2C60FE4CB2BBBD34DBF1CC7DD2D9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 105,
+      "sha256": "C468957F63BC9AECC776D8ED123FD0B061823E1C51625F34BE8A5627FA70F283"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz",
+      "bytes": 22351228,
+      "sha256": "12E9EB0EC73BB28A683B250A1D702BAD06C963DC8D4C9F4823B8D54871599917"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+      "bytes": 105,
+      "sha256": "243C48858421237BF7ACB0FB571ED458AB552A130DE1F8FA77DE114E8EA092DD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\qt-6.11.2-rev1-windows.tar.xz",
+      "bytes": 201790724,
+      "sha256": "F09EDC180DF0DED92827279C475167BE13CBB517DE182A5B10EC1337E68DD834"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\qt-6.11.2-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 96,
+      "sha256": "DFAEA866C559A9C679D8686887A72D764FBE9D9AA45CE67C2BF410C97FEF4E76"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\tiff-4.2.0.15-je-rev1-windows.tar.xz",
+      "bytes": 452948,
+      "sha256": "D54ECD9A2463472E0DF48E9BAFF07744CA1512FE761BC142ADE353B347BF1DD2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\tiff-4.2.0.15-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 104,
+      "sha256": "D74BC0D7E9624B0F6C5FB1CA2F16DB1AF343EA244B3B9B97B3D26EE6F2A1BE2F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz",
+      "bytes": 59403488,
+      "sha256": "1F2D47F5B1A536B7BD27A4BEBA3860E2C384F6780EFCF7A7D2B017BEF1FFE53C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 122,
+      "sha256": "AE772BEC0E7C1E16253170D12249A200A279625C1B3927B667F6A055C487F992"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zlib-1.2.11-je-rev1-windows.tar.xz",
+      "bytes": 92556,
+      "sha256": "4FF69C9C7F99C917AFCE6D04CDF3FC6F2A65C0038ABF2C677EF418182851BEF7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zlib-1.2.11-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 102,
+      "sha256": "DF554AA6E6CFE58EC7700D21C69B0F513951B05B2E8D0D6369500EF29BF4BEBF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zstd-1.3.5-je-rev1-windows.tar.xz",
+      "bytes": 567544,
+      "sha256": "672EDC4A41E31C6F45675B84A314CF1A31CAA75428C543EA67A27253D9588793"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zstd-1.3.5-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 101,
+      "sha256": "768233F2335AA0655E5B395B1D7554C7AEE2D80E9D3B254C2EC58BCF2A6340AC"
+    }
+  ],
+  "archivePairs": [
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\d3dx12-headers-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\d3dx12-headers-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\expat-2.4.2-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\expat-2.4.2-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\freetype-2.11.1-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\freetype-2.11.1-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\Lua-5.4.4-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\lz4-1.9.4-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\mcpp-2.7.2_az.2-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenSSL-1.1.1o-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\png-1.6.37-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\png-1.6.37-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\pyside6-6.11.2-py3.10-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\python-3.10.13-je-rev3-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\qt-6.11.2-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\qt-6.11.2-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\tiff-4.2.0.15-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\tiff-4.2.0.15-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zlib-1.2.11-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zlib-1.2.11-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    },
+    {
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zstd-1.3.5-je-rev1-windows.tar.xz",
+      "sidecar": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\zstd-1.3.5-je-rev1-windows.tar.xz.SHA256SUMS",
+      "sidecarMatches": true
+    }
+  ],
+  "readWitnesses": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "bytes": 6791,
+      "sha256": "EF3CD0C05C25764DE725A0D197846BE6F0F5CA043A812812E9DB5B757733F326"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/BuiltInPackages.cmake",
+      "bytes": 1534,
+      "sha256": "063552FFB31F78927816CFEC45725292E026FF6326360B61CA5B9F42DF00FE9F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty.cmake",
+      "bytes": 31238,
+      "sha256": "46EFEF4236E7A8ABE60C397719550710EDA0A63795DFFB545D0DAACECF3E04F6"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/LYWrappers.cmake",
+      "bytes": 43177,
+      "sha256": "1C4BB16955E9A4E8BC00306E8F30E267F69EBB57E4CD5A818A6E82EA9486233A"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Subdirectories.cmake",
+      "bytes": 30742,
+      "sha256": "88942754DA4347F5F62A0ADEBC9D485BA3F23DA15F63BEA9FA33056DDFC7FD87"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Platform/Windows/PAL_windows.cmake",
+      "bytes": 2427,
+      "sha256": "5A523373DEA4330B3110C1B9FDFE03172A20038F0B4003C79462003DC4D17AD1"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/engine.json",
+      "bytes": 3758,
+      "sha256": "605D32CCDD7DFA055560BC81EF79E743DC167318683E1E30733A507F3C582226"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/project.json",
+      "bytes": 629,
+      "sha256": "D6F860DFB6501498A7591DCF53520859D22834786E184050D4B7053305367A8D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/GradientSignal/Code/CMakeLists.txt",
+      "bytes": 7024,
+      "sha256": "BDE9E5E2DA75D1E0E8737BE0694662091E57A77E690D6AE0B86543C2CCF5FA4E"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/GradientSignal/Code/Source/Editor/EditorGradientImageCreatorUtils.cpp",
+      "bytes": 12308,
+      "sha256": "FB646678AD3370DF0DC6EA70B1F1EB9C2BDEA08560F17CB2695343D69C6FE39D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt",
+      "bytes": 7945,
+      "sha256": "00E9AF671ACB28252AAC6EC5F0F5FECD9025CCB03638FD1972360526C731D397"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/gem.json",
+      "bytes": 733,
+      "sha256": "797A3699B4A89C751C283FF5D86016F0D9F90627B489DD889A0FC29B810D4BA3"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/CMakeLists.txt",
+      "bytes": 2754,
+      "sha256": "DDDDE76007DF444B20F0F3D9E1F724DA3E83B69D0BD16D788E6A8C181A1A514D"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/Source/Platform/Windows/platform_windows.cmake",
+      "bytes": 273,
+      "sha256": "2D9B1A8596AAB520013D760B4A8A417CCCA347B3E9DFC036FE233455374CCF31"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Microphone/Code/Source/Platform/Windows/MicrophoneSystemComponent_Windows.cpp",
+      "bytes": 32623,
+      "sha256": "336365697EAFE435204B673C4D76BABAA7DABB8F0728E29E8B27545AED9E0D74"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt",
+      "bytes": 4241,
+      "sha256": "3DD0AEA92B0DA019A4880031E26CF930ACD99A0D3CF7C2B684E3F8423D83FD79"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal/Code/CMakeLists.txt",
+      "bytes": 7960,
+      "sha256": "9EF08DC44D2B8C568776A9DD9B239976E67553A801451D6A13D1C838A8504D19"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal/Code/Source/Platform/Windows/PAL2_windows.cmake",
+      "bytes": 269,
+      "sha256": "66EB141F6F8D6B780B85FFB14739C04B79CBB4623B99286DFA229944B8FBAA51"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/CrashHandler/CMakeLists.txt",
+      "bytes": 2400,
+      "sha256": "1546D52C6121258472C436B6825A81B373255D5171112616D9266C34D4696390"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/rapidjson/CMakeLists.txt",
+      "bytes": 1162,
+      "sha256": "9F914DA4A03A405F67BD90EA855994EB57C85FA337D7425E6EAE42F6321BF0A7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/rapidxml/CMakeLists.txt",
+      "bytes": 633,
+      "sha256": "28766CD133D61ADE36EC493EDBA5C361FB7B7F9B016553F9D5A7E19210F5E1BB"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/cityhash/CMakeLists.txt",
+      "bytes": 529,
+      "sha256": "25D1056880DFBAC99D19CBC368798DFB3CFF2B174F865B856C3CF42EC40B3E0C"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/mikktspace/CMakeLists.txt",
+      "bytes": 1161,
+      "sha256": "E28F97F4A04DC1A63C7BD726F3DC26315B0959A79D633E710C11704D3037FB27"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/squish-ccr/CMakeLists.txt",
+      "bytes": 1773,
+      "sha256": "C4B14CC51B83D2D8915756459EB0AB2CC96FF64DB2340BE4D3A025469C08C690"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/sqlite/CMakeLists.txt",
+      "bytes": 2875,
+      "sha256": "3DD06BC002B658CEE1BA3DC70FE15AC67EAF3FBB1C6E02A686C6B3CC0B5058ED"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-dxc-local-final/root-batch-assignment.json",
+      "bytes": 13237,
+      "sha256": "9CF710AFC67CBFF9BF635E5E901911108A17B233940FE6EFBED7C083C48BA2F0"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-dxc-local-final/attempt1/configure.stdout.log",
+      "bytes": 15505,
+      "sha256": "2BA4D572857C5FF1F3C07EF56A0FCE696BD0B36EECDC93064F50FCD336C6655C"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-dxc-local-final/attempt1/configure.stderr.log",
+      "bytes": 1141,
+      "sha256": "EBBBAEDBE735E3F1629BA4E80FAF473B424D367C1D3C668B1122CA84185F94C0"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/parent-guard-result-review-rev1.json",
+      "bytes": 3943,
+      "sha256": "E5963FEE082AC01F37BDF442B8BFB0F52B8E28111C5752CC9732DB7A969360AA"
+    }
+  ]
+}

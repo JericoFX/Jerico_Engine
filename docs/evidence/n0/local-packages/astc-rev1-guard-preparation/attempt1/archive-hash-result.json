@@ -1,0 +1,14 @@
+{
+  "label": "archive-hash",
+  "scope": "PRODUCER",
+  "nativeExit": 1,
+  "seconds": 0.0296388,
+  "expectedError": "ASTC source archive SHA256 mismatch",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/archive-hash"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

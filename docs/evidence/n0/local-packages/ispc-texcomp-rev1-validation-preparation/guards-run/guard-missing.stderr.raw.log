@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: pinned encoder archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-missing-source.tar.gz
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake:26 (JE_python_verify_file)
+
+

@@ -1,0 +1,8 @@
+{
+  "dependencies": "F:/JericoEngine/Dependencies",
+  "archives": "F:/JericoEngine/Dependencies/archives",
+  "name_filter": "openimage|opencolor|oiio|ocio|samplerate|jpeg|boost|yaml|pystring|fmt|lcms",
+  "matching_directories": [],
+  "matching_archives": [],
+  "scope": "Bounded name inventory only, not machine-wide scan; existing recipe archive contains recipe texts, not fetched library sources."
+}

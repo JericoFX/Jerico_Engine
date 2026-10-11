@@ -1,0 +1,10 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "secondaryMissingPath": null,
+  "argv": [
+    "-DJE_ASTC_WORK=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/patch-work",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake"
+  ],
+  "scope": "PATCH-HELPER"
+}

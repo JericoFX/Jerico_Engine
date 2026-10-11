@@ -1,0 +1,641 @@
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake b/cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake
+@@ -0,0 +1,60 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_ASTC_WORK)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_ASTC_WORK}" NORMALIZE JE_WORK_IN_BUILD)
++if(NOT JE_WORK_IN_BUILD OR JE_ASTC_WORK STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE ASTC patch: private work must be beneath this checkout/build")
++endif()
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/astc-encoder-3.2-rev1.patch" "88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00" "original ASTC recipe patch")
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/PatchHunks.json" "1d45acd2e7674fdb62afd8187c5ff7d41c72590cd359f84ce518cad5e3ab2dca" "ASTC patch manifest")
++file(READ "${CMAKE_CURRENT_LIST_DIR}/PatchHunks.json" JE_PATCH)
++# Validate all original bytes, contexts, post-hashes and inverses before either write.
++foreach(JE_INDEX RANGE 0 1)
++    string(JSON JE_PATH GET "${JE_PATCH}" files ${JE_INDEX} path)
++    if(NOT JE_PATH STREQUAL "Source/CMakeLists.txt" AND NOT JE_PATH STREQUAL "Source/cmake_core.cmake")
++        message(FATAL_ERROR "JE ASTC patch: unexpected source path")
++    endif()
++    string(JSON JE_BEFORE_SHA GET "${JE_PATCH}" files ${JE_INDEX} beforeSHA)
++    string(JSON JE_AFTER_SHA GET "${JE_PATCH}" files ${JE_INDEX} afterSHA)
++    JE_python_verify_file("${JE_ASTC_WORK}/${JE_PATH}" "${JE_BEFORE_SHA}" "ASTC pristine patch input")
++    file(READ "${JE_ASTC_WORK}/${JE_PATH}" JE_BEFORE)
++    set(JE_AFTER "${JE_BEFORE}")
++    string(JSON JE_COUNT LENGTH "${JE_PATCH}" files ${JE_INDEX} hunks)
++    math(EXPR JE_LAST "${JE_COUNT} - 1")
++    foreach(JE_HUNK RANGE 0 ${JE_LAST})
++        string(JSON JE_OLD GET "${JE_PATCH}" files ${JE_INDEX} hunks ${JE_HUNK} before)
++        string(JSON JE_NEW GET "${JE_PATCH}" files ${JE_INDEX} hunks ${JE_HUNK} after)
++        string(FIND "${JE_AFTER}" "${JE_OLD}" JE_POSITION)
++        if(JE_POSITION LESS 0)
++            message(FATAL_ERROR "JE ASTC patch: exact hunk context missing")
++        endif()
++        math(EXPR JE_NEXT "${JE_POSITION} + 1")
++        string(SUBSTRING "${JE_AFTER}" ${JE_NEXT} -1 JE_REMAINDER)
++        string(FIND "${JE_REMAINDER}" "${JE_OLD}" JE_DUPLICATE)
++        if(NOT JE_DUPLICATE EQUAL -1)
++            message(FATAL_ERROR "JE ASTC patch: hunk context is not unique")
++        endif()
++        string(REPLACE "${JE_OLD}" "${JE_NEW}" JE_AFTER "${JE_AFTER}")
++    endforeach()
++    set(JE_INVERSE "${JE_AFTER}")
++    foreach(JE_HUNK RANGE ${JE_LAST} 0 -1)
++        string(JSON JE_OLD GET "${JE_PATCH}" files ${JE_INDEX} hunks ${JE_HUNK} before)
++        string(JSON JE_NEW GET "${JE_PATCH}" files ${JE_INDEX} hunks ${JE_HUNK} after)
++        string(REPLACE "${JE_NEW}" "${JE_OLD}" JE_INVERSE "${JE_INVERSE}")
++    endforeach()
++    string(SHA256 JE_ACTUAL_AFTER "${JE_AFTER}")
++    string(TOLOWER "${JE_AFTER_SHA}" JE_EXPECTED_AFTER)
++    if(NOT JE_INVERSE STREQUAL JE_BEFORE OR NOT JE_ACTUAL_AFTER STREQUAL JE_EXPECTED_AFTER)
++        message(FATAL_ERROR "JE ASTC patch: post-hash or exact inverse mismatch")
++    endif()
++    set(JE_PATCH_PATH_${JE_INDEX} "${JE_PATH}")
++    set(JE_PATCH_TEXT_${JE_INDEX} "${JE_AFTER}")
++    set(JE_PATCH_SHA_${JE_INDEX} "${JE_EXPECTED_AFTER}")
++endforeach()
++foreach(JE_INDEX RANGE 0 1)
++    file(CONFIGURE OUTPUT "${JE_ASTC_WORK}/${JE_PATCH_PATH_${JE_INDEX}}" CONTENT "${JE_PATCH_TEXT_${JE_INDEX}}" @ONLY NEWLINE_STYLE UNIX)
++    JE_python_verify_file("${JE_ASTC_WORK}/${JE_PATCH_PATH_${JE_INDEX}}" "${JE_PATCH_SHA_${JE_INDEX}}" "ASTC patched raw bytes")
++endforeach()
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/astc-encoder-3.2-rev1.patch b/cmake/Tools/LocalPackages/ASTCEncoder/astc-encoder-3.2-rev1.patch
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/astc-encoder-3.2-rev1.patch
+@@ -0,0 +1,55 @@
++diff --git a/Source/CMakeLists.txt b/Source/CMakeLists.txt
++index a90fa27..e5ecf8e 100644
++--- a/Source/CMakeLists.txt
+++++ b/Source/CMakeLists.txt
++@@ -15,10 +15,11 @@
++ #  under the License.
++ #  ----------------------------------------------------------------------------
++ 
+++# O3DE change: use "-flto -ffat-lto-objects" instead of "-flto -fno-fat-lto-objects" for linux since it may remove some functions for static library which leads to undefined symbols
++ # Overwrite the LTO flags to force fat LTO; worth 3-4% performance
++ # See https://gitlab.kitware.com/cmake/cmake/-/issues/16808
++ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang" AND ${CLI})
++-    set(CMAKE_CXX_COMPILE_OPTIONS_IPO "-flto")
+++    set(CMAKE_CXX_COMPILE_OPTIONS_IPO "-ffat-lto-objects")
++ endif()
++ 
++ if(${DECOMPRESSOR})
++diff --git a/Source/cmake_core.cmake b/Source/cmake_core.cmake
++index 5ceb521..f6d2426 100644
++--- a/Source/cmake_core.cmake
+++++ b/Source/cmake_core.cmake
++@@ -104,6 +104,9 @@ macro(astcenc_set_properties NAME)
++             $<$<CXX_COMPILER_ID:MSVC>:/EHsc>
++             $<$<CXX_COMPILER_ID:MSVC>:/fp:strict>
++ 
+++            # O3DE change: remove /GL for MSVC build to resolve linking issue            
+++            $<$<CXX_COMPILER_ID:MSVC>:/GL->
+++
++             # G++ and Clang++ compiler defines
++             $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall>
++             $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wextra>
++@@ -112,6 +115,9 @@ macro(astcenc_set_properties NAME)
++             $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wshadow>
++             $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wdouble-promotion>
++ 
+++            # O3DE change: add PIC to address linking static library issue
+++            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-fPIC>
+++
++             # Hide noise thrown up by Clang 10 and clang-cl
++             $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-unknown-warning-option>
++             $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-c++98-compat-pedantic>
++@@ -141,10 +147,11 @@ macro(astcenc_set_properties NAME)
++             PROPERTY
++                 INTERPROCEDURAL_OPTIMIZATION_RELEASE True)
++ 
++-        # Use a static runtime on MSVC builds (ignored on non-MSVC compilers)
+++        # O3DE change: changed from using static runtime to dynamic runtime since O3DE libraries uses dynamic runtime 
+++        # Use a dynamic runtime on MSVC builds (ignored on non-MSVC compilers)
++         set_property(TARGET ${NAME}
++             PROPERTY
++-                MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+++                MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++     endif()
++ 
++     # Set up configuration for SIMD ISA builds
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake b/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake
+@@ -0,0 +1,109 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS SOURCE_ARCHIVE SOURCE_SHA256 SOURCE_URL OUTPUT)
++    if(NOT DEFINED JE_ASTC_${JE_ARGUMENT} OR "${JE_ASTC_${JE_ARGUMENT}}" STREQUAL "")
++        message(FATAL_ERROR "JE local ASTC: JE_ASTC_${JE_ARGUMENT} is required")
++    endif()
++endforeach()
++JE_python_require_local_path(JE_ASTC_SOURCE_ARCHIVE)
++JE_python_require_local_path(JE_ASTC_OUTPUT)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_ASTC_OUTPUT}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR JE_ASTC_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE local ASTC: output must be beneath this checkout/build")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
++    message(FATAL_ERROR "JE local ASTC requires Windows x64 and Visual Studio 2022")
++endif()
++if(EXISTS "${JE_ASTC_OUTPUT}")
++    message(FATAL_ERROR "JE local ASTC: output must be new; existing outputs are preserved")
++endif()
++set(JE_SOURCE_COMMIT "f32d8d4dd9e06f8986cd5e10f12e199fc023f150")
++set(JE_EXPECTED_HASH "291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403")
++set(JE_EXPECTED_URL "https://codeload.github.com/ARM-software/astc-encoder/tar.gz/${JE_SOURCE_COMMIT}")
++string(TOLOWER "${JE_ASTC_SOURCE_SHA256}" JE_SOURCE_HASH)
++if(NOT JE_SOURCE_HASH STREQUAL JE_EXPECTED_HASH OR NOT JE_ASTC_SOURCE_URL STREQUAL JE_EXPECTED_URL)
++    message(FATAL_ERROR "JE local ASTC: source URL/SHA256 must match the audited 3.2 archive")
++endif()
++JE_python_verify_file("${JE_ASTC_SOURCE_ARCHIVE}" "${JE_SOURCE_HASH}" "ASTC source archive")
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/astc-encoder-3.2-rev1.patch" "88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00" "original ASTC recipe patch")
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/PatchHunks.json" "1d45acd2e7674fdb62afd8187c5ff7d41c72590cd359f84ce518cad5e3ab2dca" "ASTC patch manifest")
++
++# Only the pinned, completely audited zero-link archive is extracted into fresh private work.
++set(JE_ASTC_WORK "${JE_ASTC_OUTPUT}/source-work/astc-encoder-${JE_SOURCE_COMMIT}")
++set(JE_BUILD "${JE_ASTC_OUTPUT}/build")
++set(JE_STAGE "${JE_ASTC_OUTPUT}/stage")
++file(MAKE_DIRECTORY "${JE_ASTC_OUTPUT}/source-work")
++file(ARCHIVE_EXTRACT INPUT "${JE_ASTC_SOURCE_ARCHIVE}" DESTINATION "${JE_ASTC_OUTPUT}/source-work")
++JE_python_verify_file("${JE_ASTC_WORK}/CMakeLists.txt" "86f785318c024bbe740ca5ff05982c195a3e4a14a8dc01e663b2e245ea3c2a85" "ASTC source project")
++JE_python_verify_file("${JE_ASTC_WORK}/Source/astcenc.h" "a19c5a0ba650eb7f61c24b29673eee78b0d6f72b5b17426cfe349bd9f82967aa" "ASTC 3.2 API header")
++include("${CMAKE_CURRENT_LIST_DIR}/ApplyASTCPatch.cmake")
++
++function(JE_astc_native JE_LABEL)
++    file(WRITE "${JE_ASTC_OUTPUT}/${JE_LABEL}-argv.txt" "")
++    foreach(JE_ARG IN LISTS ARGN)
++        file(APPEND "${JE_ASTC_OUTPUT}/${JE_LABEL}-argv.txt" "${JE_ARG}\n")
++    endforeach()
++    string(TIMESTAMP JE_START "%Y-%m-%dT%H:%M:%SZ" UTC)
++    execute_process(COMMAND ${ARGN} RESULT_VARIABLE JE_RESULT
++        OUTPUT_FILE "${JE_ASTC_OUTPUT}/${JE_LABEL}-stdout.log" ERROR_FILE "${JE_ASTC_OUTPUT}/${JE_LABEL}-stderr.log")
++    string(TIMESTAMP JE_END "%Y-%m-%dT%H:%M:%SZ" UTC)
++    file(WRITE "${JE_ASTC_OUTPUT}/${JE_LABEL}-result.txt" "start=${JE_START}\nend=${JE_END}\nresult=${JE_RESULT}\n")
++    if(NOT JE_RESULT STREQUAL "0")
++        message(FATAL_ERROR "JE local ASTC ${JE_LABEL} failed (${JE_RESULT}); outputs retained, package not published")
++    endif()
++endfunction()
++JE_astc_native(configure "${CMAKE_COMMAND}" -S "${JE_ASTC_WORK}" -B "${JE_BUILD}"
++    -G "Visual Studio 17 2022" -A x64 -T v143
++    -DISA_SSE41=ON -DISA_AVX2=OFF -DISA_SSE2=OFF -DISA_NEON=OFF -DISA_NONE=OFF -DISA_NATIVE=OFF
++    -DDECOMPRESSOR=OFF -DCLI=ON -DDIAGNOSTICS=OFF -DUNITTEST=OFF -DBUILD_TESTING=OFF)
++foreach(JE_CONFIG IN ITEMS Release Debug)
++    JE_astc_native(build-${JE_CONFIG} "${CMAKE_COMMAND}" --build "${JE_BUILD}" --config ${JE_CONFIG}
++        --target astcenc-sse4.1-static astcenc-sse4.1 --parallel 8)
++    foreach(JE_FILE IN ITEMS astcenc-sse4.1-static.lib astcenc-sse4.1.exe)
++        if(NOT EXISTS "${JE_BUILD}/Source/${JE_CONFIG}/${JE_FILE}")
++            message(FATAL_ERROR "JE local ASTC: expected ${JE_CONFIG} artifact missing: ${JE_FILE}")
++        endif()
++    endforeach()
++endforeach()
++# Stage only after both configurations succeed. No global install, tools download or runtime deploy.
++file(MAKE_DIRECTORY "${JE_STAGE}/astc-encoder/include" "${JE_STAGE}/LICENSES/ASTC" "${JE_STAGE}/LICENSES/O3DE")
++foreach(JE_CONFIG IN ITEMS Release Debug)
++    file(MAKE_DIRECTORY "${JE_STAGE}/astc-encoder/bin/${JE_CONFIG}")
++    file(COPY "${JE_BUILD}/Source/${JE_CONFIG}/astcenc-sse4.1-static.lib" "${JE_BUILD}/Source/${JE_CONFIG}/astcenc-sse4.1.exe"
++        DESTINATION "${JE_STAGE}/astc-encoder/bin/${JE_CONFIG}")
++endforeach()
++file(COPY "${JE_ASTC_WORK}/Source/astcenc.h" DESTINATION "${JE_STAGE}/astc-encoder/include")
++configure_file("${JE_ASTC_WORK}/LICENSE.txt" "${JE_STAGE}/astc-encoder/LICENSE.txt" COPYONLY)
++# Keep full original notices of compiled library/CLI code, including embedded miniz/OpenEXR/STB.
++file(GLOB JE_NOTICE_SOURCES "${JE_ASTC_WORK}/Source/*.cpp" "${JE_ASTC_WORK}/Source/*.h")
++file(COPY ${JE_NOTICE_SOURCES} DESTINATION "${JE_STAGE}/LICENSES/ASTC/source-notices")
++file(COPY "${JE_ASTC_WORK}/LICENSE.txt" DESTINATION "${JE_STAGE}/LICENSES/ASTC")
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/astc-encoder-3.2-rev1.patch" "${CMAKE_CURRENT_LIST_DIR}/PatchHunks.json"
++    DESTINATION "${JE_STAGE}/LICENSES/O3DE/recipe")
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT" "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT" DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/Findastc-encoder.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt" "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake" "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(WRITE "${JE_STAGE}/astc-encoder/JERecipe.json"
++    "{\n  \"sourceVersion\": \"3.2.0\", \"sourceCommit\": \"${JE_SOURCE_COMMIT}\",\n"
++    "  \"historicalRecipeCommit\": \"90480ca41d15e1b20a28f90e2f996fd0e5a3a68c\",\n"
++    "  \"historicalPackageVersion\": \"3.2-rev2\", \"historicalBinaryHashMatch\": false,\n"
++    "  \"generator\": \"Visual Studio 17 2022\", \"toolset\": \"v143\", \"architecture\": \"x64\",\n"
++    "  \"configurations\": [\"Release\",\"Debug\"], \"parallelJobs\": 8,\n"
++    "  \"runtimeLibrary\": \"MultiThreaded$<$<CONFIG:Debug>:Debug>DLL\",\n"
++    "  \"isa\": \"SSE4.1\", \"fullCodec\": true, \"cliDebugTool\": true, \"unitTests\": false,\n"
++    "  \"patchSHA256\": \"88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00\",\n"
++    "  \"patchedSourceCMakeSHA256\": \"4e425cff86bb25deb666ec8f8135e607c8833c32ea08f16b6b6f5839d6420fd7\",\n"
++    "  \"patchedCoreCMakeSHA256\": \"eecc5233bedd1d2e6340bb7edc98d75474019a24df52eb912f7db3301292b80f\"\n}\n")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "astc-encoder-3.2-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_ASTC_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "3.2.0")
++set(JE_PACKAGE_SOURCE_COMMIT "${JE_SOURCE_COMMIT}")
++set(JE_PACKAGE_SOURCE_SHA256 "${JE_SOURCE_HASH}")
++set(JE_PACKAGE_SOURCE_URL "${JE_EXPECTED_URL}")
++set(JE_PACKAGE_LICENSE "Apache-2.0 AND MIT AND BSD-3-Clause AND Unlicense")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/Findastc-encoder.cmake b/cmake/Tools/LocalPackages/ASTCEncoder/Findastc-encoder.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/Findastc-encoder.cmake
+@@ -0,0 +1,34 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(JE_ASTC_ROOT "${CMAKE_CURRENT_LIST_DIR}")
++JE_python_require_local_path(JE_ASTC_ROOT)
++if(NOT WIN32 OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE local ASTC package requires Windows x64")
++endif()
++set(astc-encoder_VERSION 3.2.0)
++set(astc-encoder_INCLUDE_DIR "${JE_ASTC_ROOT}/astc-encoder/include")
++set(astc-encoder_LIBRARY_DIR "${JE_ASTC_ROOT}/astc-encoder/bin")
++set(astc-encoder_LIBRARY_RELEASE "${astc-encoder_LIBRARY_DIR}/Release/astcenc-sse4.1-static.lib")
++set(astc-encoder_LIBRARY_DEBUG "${astc-encoder_LIBRARY_DIR}/Debug/astcenc-sse4.1-static.lib")
++foreach(JE_PATH IN ITEMS astc-encoder_INCLUDE_DIR astc-encoder_LIBRARY_RELEASE astc-encoder_LIBRARY_DEBUG)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++# This API has no version macro. Bind the reported source-project version to its exact header bytes.
++JE_python_verify_file("${astc-encoder_INCLUDE_DIR}/astcenc.h" "a19c5a0ba650eb7f61c24b29673eee78b0d6f72b5b17426cfe349bd9f82967aa" "ASTC 3.2 API header")
++foreach(JE_LIBRARY IN ITEMS astc-encoder_LIBRARY_RELEASE astc-encoder_LIBRARY_DEBUG)
++    if(NOT EXISTS "${${JE_LIBRARY}}" OR IS_DIRECTORY "${${JE_LIBRARY}}")
++        message(FATAL_ERROR "JE ASTC package: required local library missing: ${${JE_LIBRARY}}")
++    endif()
++endforeach()
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(astc-encoder REQUIRED_VARS astc-encoder_INCLUDE_DIR astc-encoder_LIBRARY_RELEASE astc-encoder_LIBRARY_DEBUG VERSION_VAR astc-encoder_VERSION)
++if(NOT TARGET 3rdParty::astc-encoder)
++    add_library(3rdParty::astc-encoder STATIC IMPORTED GLOBAL)
++    set_target_properties(3rdParty::astc-encoder PROPERTIES IMPORTED_LOCATION "${astc-encoder_LIBRARY_RELEASE}" IMPORTED_LOCATION_DEBUG "${astc-encoder_LIBRARY_DEBUG}")
++    if(COMMAND ly_target_include_system_directories)
++        ly_target_include_system_directories(TARGET 3rdParty::astc-encoder INTERFACE "${astc-encoder_INCLUDE_DIR}")
++    else()
++        target_include_directories(3rdParty::astc-encoder SYSTEM INTERFACE "${astc-encoder_INCLUDE_DIR}")
++    endif()
++endif()
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/NOTICE.txt b/cmake/Tools/LocalPackages/ASTCEncoder/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/NOTICE.txt
+@@ -0,0 +1,22 @@
++ASTC encoder source: ARM-software/astc-encoder tag 3.2, commit
++f32d8d4dd9e06f8986cd5e10f12e199fc023f150; project version 3.2.0.
++Arm library and CLI source are Apache-2.0. Complete original LICENSE.txt
++and compiled source notices are retained. The CLI bundles STB (MIT chosen
++from its dual license), TinyEXR/OpenEXR (BSD-3-Clause), and miniz (Unlicense);
++their full original headers/notices are in LICENSES/ASTC/source-notices.
++Unbuilt GoogleTest and test image assets are not included in this package.
++
++Original O3DE recipe authority: 90480ca41d15e1b20a28f90e2f996fd0e5a3a68c,
++package-system/astc-encoder, package 3.2-rev2. Its patch named
++astc-encoder-3.2-rev1.patch is preserved byte-for-byte and applied only to a
++fresh private source copy with exact contexts, SHA256 and inverse checks.
++Only two upstream CMake files change: dynamic MSVC CRT, /GL-, non-MSVC PIC
++and fat-LTO flags. No codec source/API changes. O3DE glue is Apache-2.0 OR MIT;
++full original O3DE licenses and the recipe patch are retained.
++
++JE adaptation: VS2022/v143 replaces VS2019, preserving Windows x64 SSE4.1,
++full compression/decompression, Release/Debug and /MD and /MDd CRT
++(MultiThreadedDLL / MultiThreadedDebugDLL). The package has a new JE identity
++and a newly measured archive hash; historical binary hash/ABI identity is
++not asserted. CLI is a host debugging tool, not a Runtime deployment.
++Rights/security/product acceptance remain with the integration owner.
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/PatchHunks.json b/cmake/Tools/LocalPackages/ASTCEncoder/PatchHunks.json
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/PatchHunks.json
+@@ -0,0 +1,40 @@
++{
++  "recipeCommit": "90480ca41d15e1b20a28f90e2f996fd0e5a3a68c",
++  "files": [
++    {
++      "exactInverse": true,
++      "hunks": [
++        {
++          "before": "#  under the License.\n#  ----------------------------------------------------------------------------\n\n# Overwrite the LTO flags to force fat LTO; worth 3-4% performance\n# See https://gitlab.kitware.com/cmake/cmake/-/issues/16808\nif(CMAKE_CXX_COMPILER_ID MATCHES \"GNU|Clang\" AND ${CLI})\n    set(CMAKE_CXX_COMPILE_OPTIONS_IPO \"-flto\")\nendif()\n\nif(${DECOMPRESSOR})\n",
++          "after": "#  under the License.\n#  ----------------------------------------------------------------------------\n\n# O3DE change: use \"-flto -ffat-lto-objects\" instead of \"-flto -fno-fat-lto-objects\" for linux since it may remove some functions for static library which leads to undefined symbols\n# Overwrite the LTO flags to force fat LTO; worth 3-4% performance\n# See https://gitlab.kitware.com/cmake/cmake/-/issues/16808\nif(CMAKE_CXX_COMPILER_ID MATCHES \"GNU|Clang\" AND ${CLI})\n    set(CMAKE_CXX_COMPILE_OPTIONS_IPO \"-ffat-lto-objects\")\nendif()\n\nif(${DECOMPRESSOR})\n"
++        }
++      ],
++      "path": "Source/CMakeLists.txt",
++      "afterSHA": "4E425CFF86BB25DEB666EC8F8135E607C8833C32EA08F16B6B6F5839D6420FD7",
++      "beforeSHA": "BE219F76912DD07DAA37A33B3E7E7E39B6DA02C890E4B5F84F703E6F99301B2A"
++    },
++    {
++      "exactInverse": true,
++      "hunks": [
++        {
++          "before": "            $<$<CXX_COMPILER_ID:MSVC>:/EHsc>\n            $<$<CXX_COMPILER_ID:MSVC>:/fp:strict>\n\n            # G++ and Clang++ compiler defines\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wextra>\n",
++          "after": "            $<$<CXX_COMPILER_ID:MSVC>:/EHsc>\n            $<$<CXX_COMPILER_ID:MSVC>:/fp:strict>\n\n            # O3DE change: remove /GL for MSVC build to resolve linking issue            \n            $<$<CXX_COMPILER_ID:MSVC>:/GL->\n\n            # G++ and Clang++ compiler defines\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wextra>\n"
++        },
++        {
++          "before": "            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wshadow>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wdouble-promotion>\n\n            # Hide noise thrown up by Clang 10 and clang-cl\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-unknown-warning-option>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-c++98-compat-pedantic>\n",
++          "after": "            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wshadow>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wdouble-promotion>\n\n            # O3DE change: add PIC to address linking static library issue\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-fPIC>\n\n            # Hide noise thrown up by Clang 10 and clang-cl\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-unknown-warning-option>\n            $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wno-c++98-compat-pedantic>\n"
++        },
++        {
++          "before": "            PROPERTY\n                INTERPROCEDURAL_OPTIMIZATION_RELEASE True)\n\n        # Use a static runtime on MSVC builds (ignored on non-MSVC compilers)\n        set_property(TARGET ${NAME}\n            PROPERTY\n                MSVC_RUNTIME_LIBRARY \"MultiThreaded$<$<CONFIG:Debug>:Debug>\")\n    endif()\n\n    # Set up configuration for SIMD ISA builds\n",
++          "after": "            PROPERTY\n                INTERPROCEDURAL_OPTIMIZATION_RELEASE True)\n\n        # O3DE change: changed from using static runtime to dynamic runtime since O3DE libraries uses dynamic runtime \n        # Use a dynamic runtime on MSVC builds (ignored on non-MSVC compilers)\n        set_property(TARGET ${NAME}\n            PROPERTY\n                MSVC_RUNTIME_LIBRARY \"MultiThreaded$<$<CONFIG:Debug>:Debug>DLL\")\n    endif()\n\n    # Set up configuration for SIMD ISA builds\n"
++        }
++      ],
++      "path": "Source/cmake_core.cmake",
++      "afterSHA": "EECC5233BEDD1D2E6340BB7EDC98D75474019A24DF52EB912F7DB3301292B80F",
++      "beforeSHA": "8DC80B739B4CD7957E136BB75872C9E3C2CBC2229448C4876A5AEA442798A1AA"
++    }
++  ],
++  "originalPackageVersion": "3.2-rev2",
++  "sourceCommit": "f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
++  "patchSHA": "88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00"
++}
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/README.md b/cmake/Tools/LocalPackages/ASTCEncoder/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/README.md
+@@ -0,0 +1,50 @@
++# Local ASTC encoder 3.2 provider
++
++This Windows x64 Tools/Editor package preserves `3rdParty::astc-encoder`,
++`astc-encoder/include/astcenc.h`, and Release/Debug static archives plus the
++original debugging CLI in `astc-encoder/bin/{Release,Debug}`. ImageProcessingAtom
++selects it only under `PAL_TRAIT_BUILD_HOST_TOOLS`; the Find module deploys no
++Runtime executable. The codec retains all four profiles, U8/F16/F32,
++normal/alpha swizzles, threading and mip reset. SSE4.1 is required as originally.
++
++Source is the official ARM tag 3.2 commit
++`f32d8d4dd9e06f8986cd5e10f12e199fc023f150`, archive SHA256
++`291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403` at
++`https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150`.
++Only the original O3DE 3.2-rev2 patch is applied, privately. The current newer
++3p patch is not substituted. Upstream CMake minimum is 3.15; there is no policy
++override, acquisition, submodule execution or global installation. GoogleTest
++is unselected (`UNITTEST=OFF`). VS2022/v143 is the sole compiler adaptation.
++
++Producer invocation (Luna owns execution; output must be absent):
++
++```powershell
++& 'C:/Program Files/CMake/bin/cmake.exe' `
++  '-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150.tar.gz' `
++  '-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403' `
++  '-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150' `
++  '-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1' `
++  -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake'
++```
++
++The producer captures configure/build argv, stdout/stderr and result/times,
++builds both original targets with 8 jobs, and stages only after both configs
++succeed. It reuses JECreateLocalPackage unchanged: `packages/astc-encoder-3.2-je-rev1-windows.tar.xz`,
++`.tar.xz.SHA256SUMS`, and `.contents`. Never substitute the legacy artifact/hash.
++
++After the parent audits and privately extracts the real archive, configure
++`tests` with VS2022/x64/v143 and explicit `JE_ASTC_PACKAGE_ROOT` pointing to that
++extraction. Build and run CTest separately in Release and Debug. Each config has
++nine cases: eight API modes and the CLI version. Tests use real nonconstant ASTC
++blocks, all 14 Atom footprints, all profiles/formats, threaded alpha and normal
++swizzles, context reset, and API errors with unchanged sentinel output. The U8
++gradient oracle permits four levels of lossy quantization, while constant/HDR
++roundtrips use 0.008 absolute error. These are proposed native oracles, not
++measured PASS results. Source header SHA binds the reported 3.2.0 version because
++this API has no version macro/query. Native execution and real engine integration
++remain pending; codec tests do not establish Editor visual quality or performance.
++
++Producer guards reject missing args, URI/UNC/link ancestors, reused or out-of-build
++outputs, source pin/hash mismatch and patch mismatch. Patch-context negatives
++exercise ApplyASTCPatch in a private fixture rather than claiming a producer
++case. Fixtures and native dispatch belong to Luna after source review.
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/tests/ASTCEncoderConsumer.cpp b/cmake/Tools/LocalPackages/ASTCEncoder/tests/ASTCEncoderConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/tests/ASTCEncoderConsumer.cpp
+@@ -0,0 +1,195 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++#include <astcenc.h>
++#include <algorithm>
++#include <array>
++#include <cmath>
++#include <cstdint>
++#include <cstdio>
++#include <cstring>
++#include <memory>
++#include <stdexcept>
++#include <string>
++#include <thread>
++#include <vector>
++
++namespace JE::AstcTest
++{
++    void Require(bool condition, const char* message) { if (!condition) { throw std::runtime_error(message); } }
++    void Success(astcenc_error result) { if (result != ASTCENC_SUCCESS) { throw std::runtime_error(astcenc_get_error_string(result)); } }
++    using Context = std::unique_ptr<astcenc_context, decltype(&astcenc_context_free)>;
++    Context Create(astcenc_profile profile, unsigned x, unsigned y, float quality, unsigned flags, unsigned threads)
++    {
++        astcenc_config config{};
++        Success(astcenc_config_init(profile, x, y, 1, quality, flags, &config));
++        astcenc_context* context = nullptr;
++        Success(astcenc_context_alloc(&config, threads, &context));
++        Require(context != nullptr, "allocated actual ASTC context");
++        return Context(context, astcenc_context_free);
++    }
++    float Value(uint8_t value) { return static_cast<float>(value) / 255.0f; }
++    float Value(float value) { return value; }
++    float Value(uint16_t value)
++    {
++        const unsigned exponent = (value >> 10) & 31;
++        Require(exponent != 31, "decoded half remains finite");
++        const float sign = (value & 0x8000) ? -1.0f : 1.0f;
++        return sign * (exponent ? std::ldexp(1.0f + static_cast<float>(value & 1023) / 1024.0f,
++            static_cast<int>(exponent) - 15) : std::ldexp(static_cast<float>(value & 1023), -24));
++    }
++    template<class T>
++    void RoundTrip(astcenc_profile profile, astcenc_type type, const std::array<T, 4>& color,
++        unsigned blockX, unsigned blockY, unsigned threads = 1, bool discardAlpha = false)
++    {
++        constexpr unsigned width = 8, height = 8;
++        auto encoder = Create(profile, blockX, blockY, ASTCENC_PRE_MEDIUM, 0, threads);
++        auto decoder = Create(profile, blockX, blockY, ASTCENC_PRE_MEDIUM, ASTCENC_FLG_DECOMPRESS_ONLY, 1);
++        std::vector<T> pixels(width * height * 4);
++        for (size_t pixel = 0; pixel < width * height; ++pixel) { std::copy(color.begin(), color.end(), pixels.begin() + pixel * 4); }
++        void* plane = pixels.data();
++        astcenc_image input{width, height, 1, type, &plane};
++        const astcenc_swizzle swizzle{ASTCENC_SWZ_R, ASTCENC_SWZ_G, ASTCENC_SWZ_B, discardAlpha ? ASTCENC_SWZ_1 : ASTCENC_SWZ_A};
++        const astcenc_swizzle rgba{ASTCENC_SWZ_R, ASTCENC_SWZ_G, ASTCENC_SWZ_B, ASTCENC_SWZ_A};
++        const size_t blockCount = ((width + blockX - 1) / blockX) * ((height + blockY - 1) / blockY);
++        std::vector<uint8_t> encoded(blockCount * 16, 0xA5);
++        std::vector<astcenc_error> results(threads, ASTCENC_ERR_BAD_PARAM);
++        std::vector<std::thread> workers;
++        for (unsigned index = 0; index < threads; ++index)
++        {
++            workers.emplace_back([&, index] { results[index] = astcenc_compress_image(encoder.get(), &input, &swizzle, encoded.data(), encoded.size(), index); });
++        }
++        for (auto& worker : workers) { worker.join(); }
++        for (auto result : results) { Success(result); }
++        Require(std::any_of(encoded.begin(), encoded.end(), [](uint8_t value) { return value != 0xA5; }), "real ASTC blocks emitted");
++        for (size_t offset = 0; offset < encoded.size(); offset += 16)
++        {
++            astcenc_block_info info{};
++            Success(astcenc_get_block_info(encoder.get(), encoded.data() + offset, &info));
++            Require(!info.is_error_block && info.profile == profile && info.block_x == blockX && info.block_y == blockY,
++                "encoded blocks have the selected profile and footprint");
++        }
++        std::vector<T> decoded(pixels.size());
++        void* outputPlane = decoded.data();
++        astcenc_image output{width, height, 1, type, &outputPlane};
++        Success(astcenc_decompress_image(decoder.get(), encoded.data(), encoded.size(), &output, &rgba, 0));
++        for (size_t index = 0; index < decoded.size(); ++index)
++        {
++            const float expected = discardAlpha && index % 4 == 3 ? 1.0f : Value(color[index % 4]);
++            const float actual = Value(decoded[index]);
++            Require(std::isfinite(actual) && std::fabs(actual - expected) <= 0.008f, "decoded RGBA/HDR values match authored pixels");
++        }
++        // Atom reuses the context for the next mip; both operations must remain usable after reset.
++        Success(astcenc_compress_reset(encoder.get()));
++        Success(astcenc_decompress_reset(decoder.get()));
++        input.dim_x = input.dim_y = 4;
++        output.dim_x = output.dim_y = 4;
++        const size_t mipBytes = ((4 + blockX - 1) / blockX) * ((4 + blockY - 1) / blockY) * 16;
++        workers.clear();
++        for (unsigned index = 0; index < threads; ++index)
++        {
++            workers.emplace_back([&, index] { results[index] = astcenc_compress_image(encoder.get(), &input, &swizzle, encoded.data(), mipBytes, index); });
++        }
++        for (auto& worker : workers) { worker.join(); }
++        for (auto result : results) { Success(result); }
++        Success(astcenc_decompress_image(decoder.get(), encoded.data(), mipBytes, &output, &rgba, 0));
++        Require(std::fabs(Value(decoded[0]) - Value(color[0])) <= 0.008f, "second mip roundtrip after reset");
++    }
++    void Gradient()
++    {
++        auto encoder = Create(ASTCENC_PRF_LDR, 4, 4, ASTCENC_PRE_MEDIUM, 0, 1);
++        auto decoder = Create(ASTCENC_PRF_LDR, 4, 4, ASTCENC_PRE_MEDIUM, ASTCENC_FLG_DECOMPRESS_ONLY, 1);
++        std::array<uint8_t, 256> pixels{}, decoded{};
++        for (unsigned y = 0; y < 8; ++y)
++        {
++            for (unsigned x = 0; x < 8; ++x)
++            {
++                const unsigned offset = (y * 8 + x) * 4;
++                pixels[offset] = pixels[offset + 1] = pixels[offset + 2] = static_cast<uint8_t>(x * 32);
++                pixels[offset + 3] = 255;
++            }
++        }
++        void* plane = pixels.data(); void* outputPlane = decoded.data();
++        astcenc_image input{8, 8, 1, ASTCENC_TYPE_U8, &plane}, output{8, 8, 1, ASTCENC_TYPE_U8, &outputPlane};
++        const astcenc_swizzle rgba{ASTCENC_SWZ_R, ASTCENC_SWZ_G, ASTCENC_SWZ_B, ASTCENC_SWZ_A};
++        std::array<uint8_t, 64> encoded{};
++        Success(astcenc_compress_image(encoder.get(), &input, &rgba, encoded.data(), encoded.size(), 0));
++        for (size_t offset = 0; offset < encoded.size(); offset += 16)
++        {
++            astcenc_block_info info{};
++            Success(astcenc_get_block_info(encoder.get(), encoded.data() + offset, &info));
++            Require(!info.is_error_block && !info.is_constant_block, "spatial gradient exercises actual nonconstant ASTC blocks");
++        }
++        Success(astcenc_decompress_image(decoder.get(), encoded.data(), encoded.size(), &output, &rgba, 0));
++        for (size_t index = 0; index < decoded.size(); ++index)
++        {
++            Require(std::abs(static_cast<int>(decoded[index]) - pixels[index]) <= 4, "lossy grayscale gradient retains spatial values within four U8 levels");
++        }
++    }
++    void Normal()
++    {
++        auto encoder = Create(ASTCENC_PRF_LDR, 4, 4, ASTCENC_PRE_THOROUGH, ASTCENC_FLG_MAP_NORMAL, 1);
++        auto decoder = Create(ASTCENC_PRF_LDR, 4, 4, ASTCENC_PRE_MEDIUM, ASTCENC_FLG_DECOMPRESS_ONLY, 1);
++        std::array<uint8_t, 64> pixels{}, decoded{};
++        for (size_t index = 0; index < pixels.size(); index += 4) { pixels[index] = pixels[index + 1] = 128; pixels[index + 2] = pixels[index + 3] = 255; }
++        void* plane = pixels.data(); void* outputPlane = decoded.data();
++        astcenc_image input{4, 4, 1, ASTCENC_TYPE_U8, &plane}, output{4, 4, 1, ASTCENC_TYPE_U8, &outputPlane};
++        const astcenc_swizzle pack{ASTCENC_SWZ_R, ASTCENC_SWZ_R, ASTCENC_SWZ_R, ASTCENC_SWZ_G};
++        const astcenc_swizzle unpack{ASTCENC_SWZ_R, ASTCENC_SWZ_A, ASTCENC_SWZ_Z, ASTCENC_SWZ_1};
++        std::array<uint8_t, 16> encoded{};
++        Success(astcenc_compress_image(encoder.get(), &input, &pack, encoded.data(), encoded.size(), 0));
++        Success(astcenc_decompress_image(decoder.get(), encoded.data(), encoded.size(), &output, &unpack, 0));
++        for (size_t index = 0; index < decoded.size(); index += 4)
++        {
++            Require(std::abs(static_cast<int>(decoded[index]) - 128) <= 2 && std::abs(static_cast<int>(decoded[index + 1]) - 128) <= 2
++                && decoded[index + 2] >= 253 && decoded[index + 3] == 255, "Atom normal-map RRRG/RAZ1 swizzles preserve XY and reconstruct Z");
++        }
++    }
++    void Invalid()
++    {
++        auto context = Create(ASTCENC_PRF_LDR, 4, 4, ASTCENC_PRE_FAST, 0, 1);
++        std::array<uint8_t, 64> pixels{}; pixels.fill(0x5A);
++        void* plane = pixels.data(); astcenc_image image{4, 4, 1, ASTCENC_TYPE_U8, &plane};
++        const astcenc_swizzle rgba{ASTCENC_SWZ_R, ASTCENC_SWZ_G, ASTCENC_SWZ_B, ASTCENC_SWZ_A};
++        std::array<uint8_t, 16> buffer{}; buffer.fill(0xA5); const auto before = buffer;
++        Require(astcenc_compress_image(context.get(), &image, &rgba, buffer.data(), 15, 0) == ASTCENC_ERR_OUT_OF_MEM && buffer == before,
++            "undersized compressed output rejected without modifying output");
++        const auto pixelBefore = pixels;
++        Require(astcenc_decompress_image(context.get(), buffer.data(), 15, &image, &rgba, 0) == ASTCENC_ERR_OUT_OF_MEM && pixels == pixelBefore,
++            "truncated ASTC data rejected without modifying decoded pixels");
++        auto badSwizzle = rgba; badSwizzle.r = static_cast<astcenc_swz>(999);
++        Require(astcenc_compress_image(context.get(), &image, &badSwizzle, buffer.data(), buffer.size(), 0) == ASTCENC_ERR_BAD_SWIZZLE && buffer == before,
++            "invalid swizzle rejected without modifying output");
++        Require(astcenc_compress_image(context.get(), &image, &rgba, buffer.data(), buffer.size(), 1) == ASTCENC_ERR_BAD_PARAM && buffer == before,
++            "out-of-range worker rejected without modifying output");
++        astcenc_config config{};
++        Require(astcenc_config_init(ASTCENC_PRF_LDR, 3, 3, 1, ASTCENC_PRE_FAST, 0, &config) == ASTCENC_ERR_BAD_BLOCK_SIZE,
++            "unsupported block footprint rejected");
++        Require(std::strlen(astcenc_get_error_string(ASTCENC_ERR_BAD_SWIZZLE)) > 0, "invalid input has an actual diagnostic");
++    }
++}
++int main(int argc, char** argv)
++{
++    try
++    {
++        using namespace JE::AstcTest;
++        Require(argc == 2, "one named native ASTC case required");
++        const std::string mode = argv[1];
++        if (mode == "ldr8")
++        {
++            Gradient();
++            constexpr unsigned footprints[][2] = {{4,4},{5,4},{5,5},{6,5},{6,6},{8,5},{8,6},{10,5},{10,6},{8,8},{10,8},{10,10},{12,10},{12,12}};
++            for (const auto& footprint : footprints) { RoundTrip<uint8_t>(ASTCENC_PRF_LDR, ASTCENC_TYPE_U8, {64,128,192,255}, footprint[0], footprint[1]); }
++            RoundTrip<uint8_t>(ASTCENC_PRF_LDR, ASTCENC_TYPE_U8, {128,64,32,0}, 4, 4, 2, true);
++        }
++        else if (mode == "ldr16") { RoundTrip<uint16_t>(ASTCENC_PRF_LDR, ASTCENC_TYPE_F16, {0x3400,0x3800,0x3A00,0x3C00}, 4, 4); }
++        else if (mode == "ldr32") { RoundTrip<float>(ASTCENC_PRF_LDR, ASTCENC_TYPE_F32, {0.25f,0.5f,0.75f,1.0f}, 4, 4); }
++        else if (mode == "srgb") { RoundTrip<uint8_t>(ASTCENC_PRF_LDR_SRGB, ASTCENC_TYPE_U8, {64,128,192,255}, 4, 4); }
++        else if (mode == "hdr-rgb") { RoundTrip<uint16_t>(ASTCENC_PRF_HDR_RGB_LDR_A, ASTCENC_TYPE_F16, {0x4400,0x4000,0x3800,0x3C00}, 4, 4); }
++        else if (mode == "hdr") { RoundTrip<float>(ASTCENC_PRF_HDR, ASTCENC_TYPE_F32, {4.0f,2.0f,0.5f,2.0f}, 4, 4); }
++        else if (mode == "normal") { Normal(); }
++        else if (mode == "invalid") { Invalid(); }
++        else { throw std::runtime_error("unknown native ASTC case"); }
++        std::printf("CASE PASS: real ASTC %s\n", mode.c_str()); return 0;
++    }
++    catch (const std::exception& error) { std::fprintf(stderr, "CASE FAIL: %s\n", error.what()); return 1; }
++}
+diff --git a/cmake/Tools/LocalPackages/ASTCEncoder/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/ASTCEncoder/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ASTCEncoder/tests/CMakeLists.txt
+@@ -0,0 +1,31 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++foreach(JE_PATH IN ITEMS JE_ASTC_PACKAGE_ROOT CMAKE_BINARY_DIR)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE ASTC consumer output must be beneath this checkout/build")
++endif()
++project(JELocalASTCEncoderConsumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE ASTC consumer requires Windows MSVC x64")
++endif()
++list(PREPEND CMAKE_MODULE_PATH "${JE_ASTC_PACKAGE_ROOT}")
++find_package(astc-encoder 3.2.0 EXACT REQUIRED MODULE)
++add_executable(JEASTCEncoderConsumer ASTCEncoderConsumer.cpp)
++target_compile_features(JEASTCEncoderConsumer PRIVATE cxx_std_17)
++target_compile_options(JEASTCEncoderConsumer PRIVATE /W4)
++target_link_libraries(JEASTCEncoderConsumer PRIVATE 3rdParty::astc-encoder)
++set_property(TARGET JEASTCEncoderConsumer PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++enable_testing()
++foreach(JE_CASE IN ITEMS ldr8 ldr16 ldr32 srgb hdr-rgb hdr normal invalid)
++    add_test(NAME JE.LocalPackages.ASTC.${JE_CASE} COMMAND JEASTCEncoderConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.ASTC.${JE_CASE} PROPERTIES TIMEOUT 120)
++endforeach()
++add_test(NAME JE.LocalPackages.ASTC.cli COMMAND "${JE_ASTC_PACKAGE_ROOT}/astc-encoder/bin/$<IF:$<CONFIG:Debug>,Debug,Release>/astcenc-sse4.1.exe" -version)
++set_tests_properties(JE.LocalPackages.ASTC.cli PROPERTIES TIMEOUT 15 PASS_REGULAR_EXPRESSION "3[.]2[.]0")

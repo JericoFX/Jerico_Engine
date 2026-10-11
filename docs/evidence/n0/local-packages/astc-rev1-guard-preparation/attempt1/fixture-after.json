@@ -1,0 +1,22 @@
+[
+  {
+    "sha256": "6922E93E3827642CE4B883C756B31ABF80036649D3614BF5FCB3ADDA43B8EA32",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-guard-preparation\\attempt1\\fixtures\\tiny-archive.tar.gz",
+    "bytes": 1
+  },
+  {
+    "sha256": "C0540575AD1778B3C0DA9DA8819920A0C8E5DE119CC87BFED30A7C89503626F7",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-guard-preparation\\attempt1\\fixtures\\existing-output\\retain.txt",
+    "bytes": 52
+  },
+  {
+    "sha256": "6B2FC9D6E229B894B50FFB4DF76B19BB4B8A9E16BD477367CF5428BA93167AB8",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-guard-preparation\\attempt1\\fixtures\\patch-work\\Source\\CMakeLists.txt",
+    "bytes": 2090
+  },
+  {
+    "sha256": "8DC80B739B4CD7957E136BB75872C9E3C2CBC2229448C4876A5AEA442798A1AA",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-guard-preparation\\attempt1\\fixtures\\patch-work\\Source\\cmake_core.cmake",
+    "bytes": 9577
+  }
+]

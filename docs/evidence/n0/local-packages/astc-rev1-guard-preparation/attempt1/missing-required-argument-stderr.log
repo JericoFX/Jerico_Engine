@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake:7 (message):
+  JE local ASTC: JE_ASTC_OUTPUT is required
+
+

@@ -1,0 +1,140 @@
+[
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-CMakeLists.txt",
+    "gitBlobMatch": true,
+    "gitBlob": "ad608f1a385ae3e358c546356fa255352cdb0fa9",
+    "sha256": "86F785318C024BBE740CA5FF05982C195A3E4A14A8DC01E663B2E245EA3C2A85",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/CMakeLists.txt",
+    "bytes": 7604
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__CMakeLists.txt",
+    "gitBlobMatch": true,
+    "gitBlob": "a90fa27d9fceb9d9e943b81f736978d1c1a86fda",
+    "sha256": "BE219F76912DD07DAA37A33B3E7E7E39B6DA02C890E4B5F84F703E6F99301B2A",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/CMakeLists.txt",
+    "bytes": 2053
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__cmake_core.cmake",
+    "gitBlobMatch": true,
+    "gitBlob": "5ceb5217c28422976091efe1c82d48c790e1ba94",
+    "sha256": "8DC80B739B4CD7957E136BB75872C9E3C2CBC2229448C4876A5AEA442798A1AA",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/cmake_core.cmake",
+    "bytes": 9577
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__astcenc.h",
+    "gitBlobMatch": true,
+    "gitBlob": "d10beb765393ea263861664c5c0f23737f33c621",
+    "sha256": "A19C5A0BA650EB7F61C24B29673EEE78B0D6F72B5B17426CFE349BD9F82967AA",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/astcenc.h",
+    "bytes": 30890
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-LICENSE.txt",
+    "gitBlobMatch": true,
+    "gitBlob": "b82735a31032440d6bfdaf1a2b8469c0b2629df2",
+    "sha256": "494ACCC32E50EB523A0E384D0AE6D4B702DB867A89D6971216760E92B240EE12",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/LICENSE.txt",
+    "bytes": 10139
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-.gitmodules",
+    "gitBlobMatch": true,
+    "gitBlob": "4ff560c2fd45fbec5e46262702e52b9dac735acd",
+    "sha256": "C5DDF02C76ED1528241621E601ED737757C6F4C144845072CE931182E723BE99",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/.gitmodules",
+    "bytes": 106
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__UnitTest__CMakeLists.txt",
+    "gitBlobMatch": true,
+    "gitBlob": "e1e2d0b4d2b6a0b6f449ab2bbf16a73ae5abfac6",
+    "sha256": "C0BD701EE97357F324E956F3759FEBE7304D1EF8BC6A9F21F0963130C56DC868",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/UnitTest/CMakeLists.txt",
+    "bytes": 1529
+  },
+  {
+    "authorization": false,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\upstream-Source__UnitTest__cmake_core.cmake",
+    "gitBlobMatch": true,
+    "gitBlob": "37607e8564825aec827bb0a70f4c63158e792c99",
+    "sha256": "6265C57F8BCAA3028D0A53A4321919879151EF3BE7F7199094D5C6C19A0D32C7",
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/ARM-software/astc-encoder/f32d8d4dd9e06f8986cd5e10f12e199fc023f150/Source/UnitTest/cmake_core.cmake",
+    "bytes": 3890
+  },
+  {
+    "matchesCurrentRecipe": false,
+    "bytes": 1284,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-build_config.json",
+    "authorization": false,
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/90480ca41d15e1b20a28f90e2f996fd0e5a3a68c/package-system/astc-encoder/build_config.json",
+    "sha256": "8CEFED80394007235C9AB5D5A3403C5BF89029750DBF6653440E91007D21202B"
+  },
+  {
+    "matchesCurrentRecipe": true,
+    "bytes": 610,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-build_windows.cmd",
+    "authorization": false,
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/90480ca41d15e1b20a28f90e2f996fd0e5a3a68c/package-system/astc-encoder/build_windows.cmd",
+    "sha256": "C3FC0857B8AD5D94DBB7AA46114CC2122C3E36CEB60F108C34F3780690E40D88"
+  },
+  {
+    "matchesCurrentRecipe": true,
+    "bytes": 1222,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-install_windows.cmd",
+    "authorization": false,
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/90480ca41d15e1b20a28f90e2f996fd0e5a3a68c/package-system/astc-encoder/install_windows.cmd",
+    "sha256": "4B18902F10C8E317F15F23DB1BEBC03ACFFD1738AA6E1A4475DFECF7337BD5E7"
+  },
+  {
+    "matchesCurrentRecipe": true,
+    "bytes": 1681,
+    "status": 200,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-Findastc-encoder.cmake.template",
+    "authorization": false,
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/90480ca41d15e1b20a28f90e2f996fd0e5a3a68c/package-system/astc-encoder/Findastc-encoder.cmake.template",
+    "sha256": "5AF4AC28D056C62B7D6587C2C71B6285EA2256D4AF024DF3FB4FD30ACB75EB91"
+  },
+  {
+    "matchesCurrentRecipe": false,
+    "bytes": 14,
+    "status": 404,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-audit\\recipe904-astcencoder-o3de.patch",
+    "authorization": false,
+    "redirects": 0,
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/90480ca41d15e1b20a28f90e2f996fd0e5a3a68c/package-system/astc-encoder/astcencoder-o3de.patch",
+    "sha256": "D5558CD419C8D46BDC958064CB97F963D1EA793866414C025906EC15033512ED"
+  }
+]

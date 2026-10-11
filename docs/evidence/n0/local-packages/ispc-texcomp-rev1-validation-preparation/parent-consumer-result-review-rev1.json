@@ -1,0 +1,54 @@
+{
+  "decision": "PARENT ISPCTEXCOMP CONSUMERS ACCEPTED; NINE GUARDS PENDING",
+  "nativeResultSHA256": "01359C293FDF535FD74947EC071BBC88D87D71B99B1AD1D7F80F40AF183637D7",
+  "launchSHA256": "7C5DAA657B890A6DFB97927B90DF1D9B8EF208F608BB9C44896F3B70E832B78F",
+  "configurations": [
+    {
+      "junitSHA256": "9AE14A8C2EB614E2A4064EE9684280B017AE4A8ACD2F550C39920794ABC16057",
+      "configuration": "Release",
+      "tests": 8,
+      "LastTestSHA256": "C82405993C5BD00C8E1A428DDE389634E0FDC327919EB5C78419C1BB630ED852"
+    },
+    {
+      "junitSHA256": "C55514CAE70337B90223DF5556BC9358A7C5589080AD14DD1DBC55DA940D6013",
+      "configuration": "Debug",
+      "tests": 8,
+      "LastTestSHA256": "2B5DE6DD6CD3163EC4F57FA512676C7C358CD658187698DFF29A681A84C13C4A"
+    }
+  ],
+  "nativeStages": [
+    {
+      "name": "configure",
+      "exitCode": 0,
+      "elapsedSeconds": 5.7743398
+    },
+    {
+      "name": "build-Release",
+      "exitCode": 0,
+      "elapsedSeconds": 3.3486842
+    },
+    {
+      "name": "ctest-Release",
+      "exitCode": 0,
+      "elapsedSeconds": 0.1694203
+    },
+    {
+      "name": "build-Debug",
+      "exitCode": 0,
+      "elapsedSeconds": 3.2393308
+    },
+    {
+      "name": "ctest-Debug",
+      "exitCode": 0,
+      "elapsedSeconds": 0.1777625
+    }
+  ],
+  "validationInputs": 490,
+  "currentInputsRehashed": 496,
+  "inputDeltas": 0,
+  "DLLSHA256": "3F6E8AD2AED34192836E39A2458FABC6ED48F937B3679D13A03315C3344F2C28",
+  "DLLProof": "Expected copied path/hash recorded; actual loaded parent==EXE parent asserted by frozen source; literal loaded path not emitted.",
+  "limits": "Local codec API/profile/stride/canary/border checks only; no ISA forcing, full BC6H/BC7/ASTC image quality, portable CRT, Atom/editor/AP/cook/runtime or footprint acceptance.",
+  "engineAccepted": false,
+  "catalogIntegrated": false
+}

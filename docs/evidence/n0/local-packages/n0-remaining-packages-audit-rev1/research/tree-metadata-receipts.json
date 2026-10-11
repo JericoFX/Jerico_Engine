@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://api.github.com/repos/AcademySoftwareFoundation/OpenImageIO/git/trees/14d38284c54bce02f8228ea87cdfa93dc0afda77?recursive=1",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/oiio-tree.json",
+    "bytes": 420229,
+    "sha256": "DE8AA2827C184584AB06D2B80C287DE1961E2E6C854967F615A83D2B8A6D13E5"
+  },
+  {
+    "url": "https://api.github.com/repos/boostorg/boost/git/trees/ccb2ab3b4384a16deafaa849de509bce2b2cbada?recursive=1",
+    "status": 200,
+    "location": "",
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/n0-remaining-packages-audit-rev1/research/boost-tree.json",
+    "bytes": 78217,
+    "sha256": "ADAE29B2684E067CC0D63C632E581CD304C01031CB3D1D5E78A38F39569E71F2"
+  }
+]

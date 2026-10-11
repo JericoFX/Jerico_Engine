@@ -1,0 +1,14 @@
+{
+  "label": "pristine-byte-mismatch",
+  "scope": "PATCH-HELPER",
+  "nativeExit": 1,
+  "seconds": 0.0297014,
+  "expectedError": "ASTC pristine patch input SHA256 mismatch",
+  "observedExpectedError": true,
+  "mustRemainAbsent": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/outputs/pristine-byte-mismatch"
+  ],
+  "outputAbsent": true,
+  "fixtureChanges": [],
+  "status": "PASS REJECTION; PARENT ACCEPTANCE PENDING"
+}

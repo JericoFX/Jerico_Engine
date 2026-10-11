@@ -1,0 +1,21 @@
+{
+  "name": "build-Release",
+  "utc": "2026-10-11T09:23:12.6182725Z",
+  "PID": 304472,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer",
+    "--config",
+    "Release"
+  ],
+  "count": 4,
+  "exitCode": 0,
+  "elapsedSeconds": 3.3486842,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run\\build-Release.stdout.raw.log",
+  "stdoutBytes": 509,
+  "stdoutSHA256": "6A6DD75A170035513ADCAA90290E519DD9AD2D898D94D98ACCEB572F0965CE8A",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-validation-preparation\\consumer-run\\build-Release.stderr.raw.log",
+  "stderrBytes": 0,
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

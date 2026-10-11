@@ -1,0 +1,49 @@
+{
+  "status": "ORIGINAL ROOT61 OFFLINE BLOCKER CONFIRMED; TEXTURE CODEC PACKAGE RESOLUTION VERIFIED",
+  "nativeExit": 1,
+  "elapsedSeconds": 25.296,
+  "nativePID": 150208,
+  "frozenInputs": 16868,
+  "currentInputsRehashed": 16868,
+  "postflightManifests": 41,
+  "unexpectedDeltas": 0,
+  "cacheFiles": 40,
+  "wheelhouseFiles": 44,
+  "enginePackagesBefore": 6589,
+  "enginePackagesAfter": 7261,
+  "attributedPackageAdditions": 672,
+  "payloads": [
+    {
+      "actualByteExact": true,
+      "emptyValidationStamp": true,
+      "name": "astc-encoder-3.2-je-rev1-windows",
+      "payloadFiles": 63
+    },
+    {
+      "actualByteExact": true,
+      "emptyValidationStamp": true,
+      "name": "ISPCTexComp-36b80aa-je-rev1-windows",
+      "payloadFiles": 21
+    },
+    {
+      "actualByteExact": true,
+      "emptyValidationStamp": true,
+      "name": "OpenEXR-3.1.3-je-rev1-windows",
+      "payloadFiles": 585
+    }
+  ],
+  "blocker": "openimageio-opencolorio-2.3.17-rev4-windows",
+  "blockerSHA256": "d542198653b33640268a999de542c9c5adf4a29322ed04858c730bc82eb34b09",
+  "caller": "Gems/GradientSignal/Code/CMakeLists.txt:66",
+  "cmakeParentPeakWorkingSetBytes": 88330240,
+  "memoryScope": "direct CMake parent only; child MSBuild/compiler processes are not aggregated",
+  "nativeResultSHA256": "FEC851B470B5F5E201C02FDC8F2E03805C644333A435EC8CED2022D867A5A20C",
+  "stderrSHA256": "3CF9F8EE5437A388DF7C92E7ED77D15B8B30319E7B204B6E97C94939D635F497",
+  "stdoutSHA256": "4BA471DE51DC7E893C85E9E69587A17FEF19D990C0B8776E0B4F017989182F6C",
+  "nativeStartSHA256": "ABFE64845DCE49B6E6ACD2ECA15299B5340F2D6D60014DCFBA76A68069D05B1D",
+  "launcherSHA256": "B9827BEEB9AE6C6348F4ECDCA90DE983811D6C62C1327BF519DCED523F404416",
+  "preservedPreflightFailureSHA256": "7F09790D6E4E646273E4C260AEEAA8B3FA2C6CE77C12CD26ABBD4DF2080502C8",
+  "attribution": "First launcher metadata counted cache directories and failed before driver/native. Initial RED retained; corrected CreateNew preflight predates actual native PID receipt. Configure executed once.",
+  "limits": "Configuration incomplete; no solution generation, build, Editor/AP/cook/runtime, GPU frame, product RAM/VRAM or effective dependency retirement acceptance.",
+  "engineAccepted": false
+}

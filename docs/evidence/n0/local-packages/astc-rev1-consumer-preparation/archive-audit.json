@@ -1,0 +1,474 @@
+{
+  "status": "STATIC ARCHIVE AUDIT PASSED; NO CODE EXECUTED",
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1\\packages\\astc-encoder-3.2-je-rev1-windows.tar.xz",
+  "archiveSHA256": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca",
+  "archiveBytes": 1179220,
+  "members": 63,
+  "payloadBytes": 8503430,
+  "links": 0,
+  "caseCollisions": 0,
+  "unsafePaths": 0,
+  "manifestEntries": 62,
+  "packageInfo": {
+    "license": "Apache-2.0 AND MIT AND BSD-3-Clause AND Unlicense",
+    "name": "astc-encoder-3.2-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+      "sha256": "291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+      "url": "https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150"
+    },
+    "version": "3.2.0"
+  },
+  "recipe": {
+    "sourceVersion": "3.2.0",
+    "sourceCommit": "f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+    "historicalRecipeCommit": "90480ca41d15e1b20a28f90e2f996fd0e5a3a68c",
+    "historicalPackageVersion": "3.2-rev2",
+    "historicalBinaryHashMatch": false,
+    "generator": "Visual Studio 17 2022",
+    "toolset": "v143",
+    "architecture": "x64",
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "parallelJobs": 8,
+    "runtimeLibrary": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL",
+    "isa": "SSE4.1",
+    "fullCodec": true,
+    "cliDebugTool": true,
+    "unitTests": false,
+    "patchSHA256": "88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00",
+    "patchedSourceCMakeSHA256": "4e425cff86bb25deb666ec8f8135e607c8833c32ea08f16b6b6f5839d6420fd7",
+    "patchedCoreCMakeSHA256": "eecc5233bedd1d2e6340bb7edc98d75474019a24df52eb912f7db3301292b80f"
+  },
+  "binaries": [
+    {
+      "path": "astc-encoder/bin/Release/astcenc-sse4.1.exe",
+      "bytes": 505856,
+      "sha256": "a8a6e3da02817275b878f6ddff3ea56b8fb8354cee3e6d8b66a70c6a321ea276",
+      "structure": {
+        "machine": "0x8664",
+        "peOffset": 248
+      }
+    },
+    {
+      "path": "astc-encoder/bin/Release/astcenc-sse4.1-static.lib",
+      "bytes": 865288,
+      "sha256": "8b6a257755a9ea8ff761bd7b6cdab69d9811822906b66f2b740b408d2fd923e6",
+      "structure": {
+        "machine": "0x8664",
+        "objectCount": 23,
+        "memberNames": [
+          "/0",
+          "/71",
+          "/130",
+          "/194",
+          "/253",
+          "/322",
+          "/394",
+          "/458",
+          "/521",
+          "/585",
+          "/639",
+          "/702",
+          "/754",
+          "/828",
+          "/897",
+          "/949",
+          "/1012",
+          "/1078",
+          "/1141",
+          "/1205",
+          "/1268",
+          "/1329",
+          "/1387"
+        ]
+      }
+    },
+    {
+      "path": "astc-encoder/bin/Debug/astcenc-sse4.1.exe",
+      "bytes": 2012672,
+      "sha256": "bd35471509a22bf39b5aa9fa1fe11773ec423a042c8cca96423def3b65a33d01",
+      "structure": {
+        "machine": "0x8664",
+        "peOffset": 232
+      }
+    },
+    {
+      "path": "astc-encoder/bin/Debug/astcenc-sse4.1-static.lib",
+      "bytes": 3168666,
+      "sha256": "cf80a91f02d031e55cd94648c3cc7a1c348bf83248eade06fadac3418a06cc35",
+      "structure": {
+        "machine": "0x8664",
+        "objectCount": 23,
+        "memberNames": [
+          "/0",
+          "/69",
+          "/126",
+          "/188",
+          "/245",
+          "/312",
+          "/382",
+          "/444",
+          "/505",
+          "/567",
+          "/619",
+          "/680",
+          "/730",
+          "/802",
+          "/869",
+          "/919",
+          "/980",
+          "/1044",
+          "/1105",
+          "/1167",
+          "/1228",
+          "/1287",
+          "/1343"
+        ]
+      }
+    }
+  ],
+  "originalNoticeWitnesses": [
+    {
+      "packagePath": "astc-encoder/include/astcenc.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc.h",
+      "bytes": 30890,
+      "sha256": "a19c5a0ba650eb7f61c24b29673eee78b0d6f72b5b17426cfe349bd9f82967aa"
+    },
+    {
+      "packagePath": "astc-encoder/LICENSE.txt",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\LICENSE.txt",
+      "bytes": 10139,
+      "sha256": "494accc32e50eb523a0e384d0ae6d4b702db867a89d6971216760e92b240ee12"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/LICENSE.txt",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\LICENSE.txt",
+      "bytes": 10139,
+      "sha256": "494accc32e50eb523a0e384d0ae6d4b702db867a89d6971216760e92b240ee12"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc.h",
+      "bytes": 30890,
+      "sha256": "a19c5a0ba650eb7f61c24b29673eee78b0d6f72b5b17426cfe349bd9f82967aa"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_averages_and_directions.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_averages_and_directions.cpp",
+      "bytes": 23734,
+      "sha256": "1b8aee567bd8c0c960378fde34c202d0909e3f635c11bfcd858c26e5f6b069c5"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_block_sizes.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_block_sizes.cpp",
+      "bytes": 35152,
+      "sha256": "035988387763bb8c4bf6c9809dcdf5ad2c2e6b6d64497eac04dc3ec4830708dc"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_color_quantize.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_color_quantize.cpp",
+      "bytes": 58076,
+      "sha256": "35d7d3e6076ff2142c03fe6c301cf7d76abd48a31d7a5ff8c5b703bc349d89c7"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_color_unquantize.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_color_unquantize.cpp",
+      "bytes": 25576,
+      "sha256": "6575116d4430770ef4e4ee9e5201ca324c75105022c5bebc90eeaf7e102e5782"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_compress_symbolic.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_compress_symbolic.cpp",
+      "bytes": 53696,
+      "sha256": "08a253ae8f3372acd587c0a2cf5f45f14c38a8f4115ea77ec33f46ec77477ad7"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_compute_variance.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_compute_variance.cpp",
+      "bytes": 18647,
+      "sha256": "ddada4a6690ca7fb4b5a890eac143ccd77deed2e1a22ebcd3b623787d8adaede"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_decompress_symbolic.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_decompress_symbolic.cpp",
+      "bytes": 12749,
+      "sha256": "c625807a3d6e9bf471aa574d5b3bdd2f7a7c5663109263a6327a8c828c058ea2"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_diagnostic_trace.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_diagnostic_trace.cpp",
+      "bytes": 4877,
+      "sha256": "1a7362762110dc386548ca837e1832f491781e891aca64194785a9ba9af42dee"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_diagnostic_trace.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_diagnostic_trace.h",
+      "bytes": 6296,
+      "sha256": "45d283e041fe6d74bd7e9c5900402d0f4cf645aecb7e20aede41c125c192de3e"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_entry.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_entry.cpp",
+      "bytes": 39637,
+      "sha256": "3792f9858514cb9f9900834bb48ed0ce9a1c2cd221ef595941d390a5ac0a8459"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_find_best_partitioning.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_find_best_partitioning.cpp",
+      "bytes": 24735,
+      "sha256": "ec4704e4950cf932ed6eb6c13c4419204b0be88529218cfc6768c911e05b607b"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_ideal_endpoints_and_weights.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_ideal_endpoints_and_weights.cpp",
+      "bytes": 50036,
+      "sha256": "53b7f199226fbd5e989cbac29a217aea59d4220d86f4ede1f29a7a6e427c96c9"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_image.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_image.cpp",
+      "bytes": 12297,
+      "sha256": "0b187139cffe4b526ff862cc571b522ffa7ca7c06d07156aabe8535c9984dca5"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_integer_sequence.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_integer_sequence.cpp",
+      "bytes": 22143,
+      "sha256": "7e574dd1cdedb7a9eb219cd94b13ca99b11dd41a0690503b73a66d6e48754578"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_internal.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_internal.h",
+      "bytes": 85891,
+      "sha256": "0342dbac0dcdcc089a97bc1f3338468e3eb849b9a26460e44bb03dd00ffe6c9a"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_mathlib.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_mathlib.cpp",
+      "bytes": 1446,
+      "sha256": "9b207409e5026eb509c95ec31db70dd33183e5153ef9286e4ac18dc6eee39b6f"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_mathlib.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_mathlib.h",
+      "bytes": 10241,
+      "sha256": "8a4a68529f437b252823b5cfa26b6574dc83ca6c2ca12aa320bb6e3363efc64f"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_mathlib_softfloat.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_mathlib_softfloat.cpp",
+      "bytes": 15303,
+      "sha256": "6d756e06aef85161764d932ab58f955d36e6f2508bc0382e1178763dd5d23a99"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_partition_tables.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_partition_tables.cpp",
+      "bytes": 9946,
+      "sha256": "f1f5b1a13cd7bf4052ce93d10c164f6990e25e35904042fd6ee77ebd56e1f8d6"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_percentile_tables.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_percentile_tables.cpp",
+      "bytes": 54935,
+      "sha256": "d201234e89185af8ca6520753a6764fab8f19edd08c2baa70a33066bc03228cc"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_pick_best_endpoint_format.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_pick_best_endpoint_format.cpp",
+      "bytes": 44120,
+      "sha256": "7eb36348f255a3f62e53068769d02542db8f65d4390a14b9255c8e463f50f7a9"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_platform_isa_detection.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_platform_isa_detection.cpp",
+      "bytes": 4244,
+      "sha256": "c7bd870b7d1b32a1587ca2e4feccb9aff1c79890a589c94bab68a28b01624610"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_quantization.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_quantization.cpp",
+      "bytes": 37233,
+      "sha256": "740920fbc5bb1550967c30c6bf2df7d724841aed0c3b037feb03b4fa5df9aa4b"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_symbolic_physical.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_symbolic_physical.cpp",
+      "bytes": 14096,
+      "sha256": "50c444c9e0af7462336f34d623502f6edbe816645435af860c735a9a38f73e36"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_vecmathlib.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib.h",
+      "bytes": 15315,
+      "sha256": "1aefe32a0efba21bbb629b8bf01f625552260e89d6e03cbf16e682b81a9a4280"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_vecmathlib_avx2_8.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_avx2_8.h",
+      "bytes": 24941,
+      "sha256": "0baf68dea52cc3b0363cd3ebb3d694e9224991465fc44845f736e342615bea2d"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_vecmathlib_common_4.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_common_4.h",
+      "bytes": 8274,
+      "sha256": "30550877d96bfb33be994b83efd1c05f4f4cd893eb9d7642d34d2a160b78ca6d"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_vecmathlib_neon_4.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_neon_4.h",
+      "bytes": 20896,
+      "sha256": "8de4201f42d5dbccb080a2835dfd1819f14c2a6f04e1bc4c2402da65ebdbf79e"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_vecmathlib_none_4.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_none_4.h",
+      "bytes": 24077,
+      "sha256": "24b6e565a6486c37cbc81efa0d53f1607a10266052c7c951932df7c6bec9ea65"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_vecmathlib_sse_4.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_vecmathlib_sse_4.h",
+      "bytes": 24638,
+      "sha256": "56b1a57d2fb9b1de15f531f299d57aaf35d59a260ce1a836d15c68ace7e7251c"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_weight_align.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_weight_align.cpp",
+      "bytes": 24681,
+      "sha256": "d9673e3db3b26968d8a5640a5a7f3ee91f64fb693280ea9bd21c61f919f61bfe"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenc_weight_quant_xfer_tables.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenc_weight_quant_xfer_tables.cpp",
+      "bytes": 6524,
+      "sha256": "31346501e492257b012c0b8cc33f4eff8d1cc76d984177d9795b241f888f67dd"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_error_metrics.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_error_metrics.cpp",
+      "bytes": 10523,
+      "sha256": "bc24ad4f35cc69d17010b6b508e71fd06ca88e4848ff9e96164728c34c1e119d"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_image.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_image.cpp",
+      "bytes": 10587,
+      "sha256": "77d069cb169f6339203e121482a0fc06ee689b32d0705e7fb7be95f0b1595b50"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_image_external.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_image_external.cpp",
+      "bytes": 1756,
+      "sha256": "63113b0d334c688924bbc3559d9814fbbd160ec7acc5a91e988feb15fef58474"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_image_load_store.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_image_load_store.cpp",
+      "bytes": 71590,
+      "sha256": "b82399c8efcd1ebcb3685ad5de504e7d90265bbf08bc94e6b8c44e85bcbf1f9f"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_internal.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_internal.h",
+      "bytes": 9517,
+      "sha256": "544188f8aa69d7eb540e2e6017bf466a61d946d031341dedbbe7f38dbe5c7264"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_platform_dependents.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_platform_dependents.cpp",
+      "bytes": 5038,
+      "sha256": "a19a132f130da96bff22695f887a85c7c2c82cc563123ff7827211fb68bc5d29"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_toplevel.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_toplevel.cpp",
+      "bytes": 49780,
+      "sha256": "9a87ab45ebdacb490f12aea3007ad634fdd111b00058bbe6f4b11d0d24e49376"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/astcenccli_toplevel_help.cpp",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\astcenccli_toplevel_help.cpp",
+      "bytes": 25384,
+      "sha256": "a571d548add759f045c1456ffca66d4ee17b8481014d9929d142904886e3c2a7"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/stb_image.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\stb_image.h",
+      "bytes": 278901,
+      "sha256": "aacb50b4069700f745f5032c09fd0cf229db9b557fe59b2dd524075540fc5065"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/stb_image_write.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\stb_image_write.h",
+      "bytes": 71181,
+      "sha256": "b0d05f271d2e6e835e9bb47ceecc14356a693bbbc0b9623cd489af628d067c32"
+    },
+    {
+      "packagePath": "LICENSES/ASTC/source-notices/tinyexr.h",
+      "source": "F:\\JericoEngine\\Dependencies\\astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150\\Source\\tinyexr.h",
+      "bytes": 481656,
+      "sha256": "90ed53f3b785f0fb729859001f34fab5c5bb8d28526736f629c5a44b6975f1fd"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/LICENSE.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "source": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "source": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/recipe/astc-encoder-3.2-rev1.patch",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\astc-encoder-3.2-rev1.patch",
+      "bytes": 2605,
+      "sha256": "88e0389289a28db8d937842d890a7ec4953d2295c263997236b05be4b3b5bd00"
+    },
+    {
+      "packagePath": "LICENSES/O3DE/recipe/PatchHunks.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\PatchHunks.json",
+      "bytes": 4385,
+      "sha256": "1d45acd2e7674fdb62afd8187c5ff7d41c72590cd359f84ce518cad5e3ab2dca"
+    },
+    {
+      "packagePath": "Findastc-encoder.cmake",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\Findastc-encoder.cmake",
+      "bytes": 2231,
+      "sha256": "aac42e995d9d17356016972bf7b14b190fd19776b69708e2d6a0624a1d421c92"
+    },
+    {
+      "packagePath": "NOTICE.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\NOTICE.txt",
+      "bytes": 1445,
+      "sha256": "6ccea62946ff7628e34095e5c3b6f68afb8a1be2c5bbc515fb2a25357cb5f217"
+    },
+    {
+      "packagePath": "README.md",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\ASTCEncoder\\README.md",
+      "bytes": 3310,
+      "sha256": "d2c9b594b027c80869ba9decf3cbe37ecf65984432b3dc0a3db1a6dc475d3fc5"
+    },
+    {
+      "packagePath": "JERequireLocalPath.cmake",
+      "source": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    }
+  ],
+  "extractionRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-native-extracted-rev1",
+  "nativeExecuted": false
+}

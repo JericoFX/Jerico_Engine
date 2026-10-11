@@ -1,0 +1,152 @@
+{
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-build\\packages\\ISPCTexComp-36b80aa-je-rev1-windows.tar.xz",
+  "sha256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF",
+  "bytes": 491564,
+  "files": 21,
+  "links": 0,
+  "caseCollisions": 0,
+  "allRegular": true,
+  "contentManifestCovered": 20,
+  "producerPayloadByteExact": true,
+  "licenseAndSourceNoticesExact": 9,
+  "toolExecutableRedistributed": false,
+  "packageInfo": {
+    "license": "MIT",
+    "name": "ISPCTexComp-36b80aa-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "36b80aac50ea401a9adde44d86712c2241b2acfd",
+      "sha256": "029373e6ec5b10d7e29eefdc5a231fb86c79b76a4a39c58c2727c6729de28ab7",
+      "url": "https://codeload.github.com/GameTechDev/ISPCTextureCompressor/tar.gz/36b80aac50ea401a9adde44d86712c2241b2acfd"
+    },
+    "version": "36b80aa"
+  },
+  "entries": [
+    {
+      "path": "FindISPCTexComp.cmake",
+      "type": "regular",
+      "bytes": 1880,
+      "sha256": "F4FBE6B57D9DB20A4DB3FC4C6E583468F08B815C34EACE66BC359849D0AE5158"
+    },
+    {
+      "path": "ISPCTexComp/JERecipe.json",
+      "type": "regular",
+      "bytes": 522,
+      "sha256": "DE734A3D78E9C1D0F78FC2AD1D3EED5E100C49790C6E9C2BF1EAD5AD2261D6DE"
+    },
+    {
+      "path": "ISPCTexComp/bin/ispc_texcomp.dll",
+      "type": "regular",
+      "bytes": 1537024,
+      "sha256": "3F6E8AD2AED34192836E39A2458FABC6ED48F937B3679D13A03315C3344F2C28"
+    },
+    {
+      "path": "ISPCTexComp/bin/ispc_texcomp.lib",
+      "type": "regular",
+      "bytes": 7666,
+      "sha256": "941E378270612792DB91581123C121F6C8214F3AF32F9C1F2B246D257B034580"
+    },
+    {
+      "path": "ISPCTexComp/include/ISPC/ispc_texcomp.h",
+      "type": "regular",
+      "bytes": 5046,
+      "sha256": "10C016535FA748088CED8FA08FA4D9D65185070C7CF632F2265A9FFD39DD234B"
+    },
+    {
+      "path": "ISPCTexComp/license.txt",
+      "type": "regular",
+      "bytes": 1057,
+      "sha256": "C3B1335B5988CD4EB61994987F1F2B01002C88734C727D76A973B1722634757A"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "type": "regular",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "LICENSES/ISPC-build-tool/LICENSE.txt",
+      "type": "regular",
+      "bytes": 1543,
+      "sha256": "7BD6323EF5A518001C217C1F054D3CF56C60A803D58773C512D3AC4EDC750620"
+    },
+    {
+      "path": "LICENSES/ISPC-build-tool/third-party-programs.txt",
+      "type": "regular",
+      "bytes": 115626,
+      "sha256": "0699C03656D6BC067D07FB0EE8EF513AA8A05E9E25D70B421C50853555848C88"
+    },
+    {
+      "path": "LICENSES/ISPCTexComp/source/ispc_texcomp.cpp",
+      "type": "regular",
+      "bytes": 12991,
+      "sha256": "2C87D42A95B405520696F9F316F53900292C766CFE40016B0656A8C680B86DEF"
+    },
+    {
+      "path": "LICENSES/ISPCTexComp/source/ispc_texcomp.h",
+      "type": "regular",
+      "bytes": 5046,
+      "sha256": "10C016535FA748088CED8FA08FA4D9D65185070C7CF632F2265A9FFD39DD234B"
+    },
+    {
+      "path": "LICENSES/ISPCTexComp/source/ispc_texcomp_astc.cpp",
+      "type": "regular",
+      "bytes": 17096,
+      "sha256": "B4BDFA2834B5BD63E4BE30D4754B6EDA85321ED5F6FF76F82FD27566BD7ADB9F"
+    },
+    {
+      "path": "LICENSES/ISPCTexComp/source/kernel.ispc",
+      "type": "regular",
+      "bytes": 106239,
+      "sha256": "FDC9ED4D363DEAA771FDFEFC5EC75BE8E684A32AD7E83E1518704FB9876D774E"
+    },
+    {
+      "path": "LICENSES/ISPCTexComp/source/kernel_astc.ispc",
+      "type": "regular",
+      "bytes": 99943,
+      "sha256": "7C9A635C22F28E33A579AAD73CD1074611C78ED201CEF3B04A713EF617DEC1A3"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "type": "regular",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "type": "regular",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "type": "regular",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "NOTICE.txt",
+      "type": "regular",
+      "bytes": 571,
+      "sha256": "2F7D03244E746971DA70E60BD676E2452AF46B453C364ECF412AE01E3B459409"
+    },
+    {
+      "path": "PackageInfo.json",
+      "type": "regular",
+      "bytes": 423,
+      "sha256": "37AB36E7E28C97D1202282E14B6CEBEE2F460F23F8659B8E37ACA7F8E9705403"
+    },
+    {
+      "path": "README.md",
+      "type": "regular",
+      "bytes": 5366,
+      "sha256": "437789C26B3648A2165C612840445AA6C9043F2DEA347CFD7AADFEC1568E6B7C"
+    },
+    {
+      "path": "SHA256SUMS",
+      "type": "regular",
+      "bytes": 1981,
+      "sha256": "228AFF91167FD014C4F1E4F755014C275B73285ADBCC24B1C1C48F27CD8B28D6"
+    }
+  ]
+}

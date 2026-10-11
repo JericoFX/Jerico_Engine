@@ -1,0 +1,29 @@
+{
+  "wrapperStartUTC": "2026-10-11T09:07:01.4241899Z",
+  "wrapperEndUTC": "2026-10-11T09:07:30.8323831Z",
+  "wrapperPID": 221464,
+  "nativeAttempted": true,
+  "nativePID": 163508,
+  "nativeStartUTC": "2026-10-11T09:07:02.1685154Z",
+  "nativeExitCode": 0,
+  "nativeElapsedSeconds": 27.986035,
+  "preflightMatches": 458,
+  "postflightMatches": 458,
+  "inputs": 458,
+  "wrapperFailure": null,
+  "rawLogs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev2-preparation\\producer-run\\producer.stdout.raw.log",
+      "bytes": 262,
+      "sha256": "49435AD487EA7E269F6625EFE2BF4AB6DF4B5BE2F7CBDC886D8B4A4ED3F13C2D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev2-preparation\\producer-run\\producer.stderr.raw.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "output": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build",
+  "outputRetained": true,
+  "scope": "Producer only; no consumer/guards/Root; no retries; no acceptance claim"
+}

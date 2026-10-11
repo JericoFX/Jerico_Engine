@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: ASTC pristine patch input SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/patch-work/Source/CMakeLists.txt
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake:22 (JE_python_verify_file)
+
+

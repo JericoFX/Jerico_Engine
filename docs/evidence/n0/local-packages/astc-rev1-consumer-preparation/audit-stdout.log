@@ -1,0 +1,91 @@
+{
+  "status": "STATIC ARCHIVE AUDIT PASSED; NO CODE EXECUTED",
+  "members": 63,
+  "payloadBytes": 8503430,
+  "notices": 56,
+  "archiveSHA256": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca",
+  "binaries": [
+    {
+      "path": "astc-encoder/bin/Release/astcenc-sse4.1.exe",
+      "bytes": 505856,
+      "structure": {
+        "machine": "0x8664",
+        "peOffset": 248
+      }
+    },
+    {
+      "path": "astc-encoder/bin/Release/astcenc-sse4.1-static.lib",
+      "bytes": 865288,
+      "structure": {
+        "machine": "0x8664",
+        "objectCount": 23,
+        "memberNames": [
+          "/0",
+          "/71",
+          "/130",
+          "/194",
+          "/253",
+          "/322",
+          "/394",
+          "/458",
+          "/521",
+          "/585",
+          "/639",
+          "/702",
+          "/754",
+          "/828",
+          "/897",
+          "/949",
+          "/1012",
+          "/1078",
+          "/1141",
+          "/1205",
+          "/1268",
+          "/1329",
+          "/1387"
+        ]
+      }
+    },
+    {
+      "path": "astc-encoder/bin/Debug/astcenc-sse4.1.exe",
+      "bytes": 2012672,
+      "structure": {
+        "machine": "0x8664",
+        "peOffset": 232
+      }
+    },
+    {
+      "path": "astc-encoder/bin/Debug/astcenc-sse4.1-static.lib",
+      "bytes": 3168666,
+      "structure": {
+        "machine": "0x8664",
+        "objectCount": 23,
+        "memberNames": [
+          "/0",
+          "/69",
+          "/126",
+          "/188",
+          "/245",
+          "/312",
+          "/382",
+          "/444",
+          "/505",
+          "/567",
+          "/619",
+          "/680",
+          "/730",
+          "/802",
+          "/869",
+          "/919",
+          "/980",
+          "/1044",
+          "/1105",
+          "/1167",
+          "/1228",
+          "/1287",
+          "/1343"
+        ]
+      }
+    }
+  ]
+}

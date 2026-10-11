@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "sha256": "D8FC0D78DCDCD88E75FF1037AE3079D96B97899DD123AE092B0D25EE49526C23",
+  "authorization": false,
+  "automaticRedirects": false,
+  "url": "https://api.github.com/repos/ARM-software/astc-encoder/git/trees/f32d8d4dd9e06f8986cd5e10f12e199fc023f150?recursive=1",
+  "bytes": 124377,
+  "contentType": "application/json; charset=utf-8"
+}

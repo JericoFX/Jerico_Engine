@@ -1,0 +1,97 @@
+{
+  "decision": "ASTC PRODUCER, ARCHIVE, RELEASE/DEBUG CONSUMERS AND TEN GUARDS ACCEPTED FOR CATALOG INTEGRATION",
+  "nativeSummarySHA256": "93E0B16C0D2A462A368416FB5963519882D5DA7FB1CF1C0A04C6EEA204DB3F70",
+  "postflightSHA256": "D277ADBC7284FF55EC006D4998BCC7E0B48CF2B575C0EA5171A8B71790E3477D",
+  "launchSHA256": "96F05E020F3FC7A315F55C3B0B8768199731755F1EA22C0B2B7AC10AAE221710",
+  "cases": [
+    {
+      "label": "missing-required-argument",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0324524,
+      "diagnostic": "JE_ASTC_OUTPUT is required",
+      "stderrSHA256": "C427C4CA66A30C01063B5FB67ABB221BF360674D3EFE600A491D2600E728FC1D"
+    },
+    {
+      "label": "archive-missing",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0294432,
+      "diagnostic": "ASTC source archive file is missing",
+      "stderrSHA256": "EE1311E3520C66C4ED36AB2195EA4A9021210697039254B8347F320261263707"
+    },
+    {
+      "label": "archive-hash",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0296388,
+      "diagnostic": "ASTC source archive SHA256 mismatch",
+      "stderrSHA256": "CDFBB12D1AEFA000175CBBDE5CC30CF4561F46115C397B32664731D3FBB42816"
+    },
+    {
+      "label": "pin-url-or-sha",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0289802,
+      "diagnostic": "source URL/SHA256 must match the audited 3.2 archive",
+      "stderrSHA256": "1384CDFFA019C56C4ECD62B0EDD2BB23C65358DE3B6019B6AAEF15EF0236908F"
+    },
+    {
+      "label": "URI",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0289532,
+      "diagnostic": "JE_ASTC_OUTPUT must not be a URI",
+      "stderrSHA256": "F4501EF372B4CBEEB8ED443AD1AE555FB898374A45FD133A2B747E0427620349"
+    },
+    {
+      "label": "UNC-relative",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.028849,
+      "diagnostic": "JE_ASTC_OUTPUT must be an absolute local path",
+      "stderrSHA256": "8D9CB79D1269601EDB7A9B0BC10A40F09442F755F6DC5613BA3ED2BB0CC05995"
+    },
+    {
+      "label": "symlink-junction-ancestor",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0300457,
+      "diagnostic": "JE_ASTC_OUTPUT must not use symlink paths",
+      "stderrSHA256": "62CF42FF373691E34515EE18BB6EB0F48EE5C69C758A9C1B93FACBC8532E2628"
+    },
+    {
+      "label": "output-existing",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0292351,
+      "diagnostic": "output must be new",
+      "stderrSHA256": "97990226B6D136E845EC27A1544D33B0F2157C273F41733C4F81558437F9A48A"
+    },
+    {
+      "label": "output-outside-build",
+      "scope": "PRODUCER",
+      "nativeExit": 1,
+      "seconds": 0.0294373,
+      "diagnostic": "output must be beneath this checkout/build",
+      "stderrSHA256": "581083F458EC3B5A4D907FA9263A217A177EDEBF2D4593FADF70C90BE721B5FB"
+    },
+    {
+      "label": "pristine-byte-mismatch",
+      "scope": "PATCH-HELPER",
+      "nativeExit": 1,
+      "seconds": 0.0297014,
+      "diagnostic": "ASTC pristine patch input SHA256 mismatch",
+      "stderrSHA256": "A218E05E262C10169890C192E04E8C0E8794712402D24E602D8ECA8DB25904FB"
+    }
+  ],
+  "sourceFreezeEntries": 712,
+  "guardFreezeEntries": 716,
+  "inputDeltas": 0,
+  "fixtureDeltas": 0,
+  "producerReviewSHA256": "783A00336C0BE925F03D3C5C404E7C980946D027335D53B740EC10EE603953D5",
+  "consumerReviewSHA256": "625F15BCEB069E6A81ABF1A01D8A884FB76721618CD9EEB94DAAD344214346A6",
+  "attributionLimitation": "Luna reports first invalid launch preflight was replaced before native execution and original JSON was not preserved. Corrected receipt, native case argv/logs/results and immutable inputs support this focal guard result; initial failed metadata cannot be independently reviewed. No unchanged native rerun.",
+  "catalogIntegrated": false,
+  "engineAccepted": false
+}

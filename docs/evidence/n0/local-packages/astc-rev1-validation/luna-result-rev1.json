@@ -1,0 +1,76 @@
+{
+  "status": "PRODUCER ONLY COMPLETED; PARENT REVIEW REQUIRED",
+  "nativeLaunchReceipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-validation\\luna-launch-rev1.json",
+  "driverExit": 0,
+  "producer": {
+    "nativeExit": 0,
+    "elapsedSeconds": 42.5441579,
+    "producerOnly": true,
+    "executable": "C:/Program Files/CMake/bin/cmake.exe",
+    "arguments": [
+      "-DJE_ASTC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/astc-encoder-f32d8d4dd9e06f8986cd5e10f12e199fc023f150.tar.gz",
+      "-DJE_ASTC_SOURCE_SHA256=291c26fcf20b8e23a6eb1ad4dd75f5afecf79d316c0477c532df6d5693291403",
+      "-DJE_ASTC_SOURCE_URL=https://codeload.github.com/ARM-software/astc-encoder/tar.gz/f32d8d4dd9e06f8986cd5e10f12e199fc023f150",
+      "-DJE_ASTC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-local-rev1",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake"
+    ],
+    "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-rev1-validation\\attempt1\\stdout.log",
+    "stderrBytes": 0,
+    "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1",
+    "phaseResults": [
+      {
+        "phase": "configure",
+        "record": "start=2026-10-11T08:49:26Z\r\nend=2026-10-11T08:49:36Z\r\nresult=0",
+        "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1\\configure-stdout.log",
+        "stderrBytes": 0
+      },
+      {
+        "phase": "build-Release",
+        "record": "start=2026-10-11T08:49:36Z\r\nend=2026-10-11T08:49:52Z\r\nresult=0",
+        "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1\\build-Release-stdout.log",
+        "stderrBytes": 0
+      },
+      {
+        "phase": "build-Debug",
+        "record": "start=2026-10-11T08:49:52Z\r\nend=2026-10-11T08:50:05Z\r\nresult=0",
+        "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1\\build-Debug-stdout.log",
+        "stderrBytes": 0
+      }
+    ]
+  },
+  "sourceFreeze": {
+    "expectedEntries": 556,
+    "preflightCount": 556,
+    "preflightDeltas": [],
+    "postflightCount": 556,
+    "postflightDeltas": []
+  },
+  "archive": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1\\packages\\astc-encoder-3.2-je-rev1-windows.tar.xz",
+    "bytes": 1179220,
+    "sha256": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca",
+    "sidecar": "4eed3f722e8f4cca60bf14684f22fa351d0d59960ed518be04cce30c707949ca *astc-encoder-3.2-je-rev1-windows.tar.xz",
+    "producerFilesList": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\astc-local-rev1\\packages\\astc-encoder-3.2-je-rev1-windows.files",
+    "producerFilesListLines": 63,
+    "firstEntries": [
+      "--add-file=Findastc-encoder.cmake",
+      "--add-file=JERequireLocalPath.cmake",
+      "--add-file=LICENSES/ASTC/LICENSE.txt",
+      "--add-file=LICENSES/ASTC/source-notices/astcenc.h",
+      "--add-file=LICENSES/ASTC/source-notices/astcenc_averages_and_directions.cpp",
+      "--add-file=LICENSES/ASTC/source-notices/astcenc_block_sizes.cpp",
+      "--add-file=LICENSES/ASTC/source-notices/astcenc_color_quantize.cpp",
+      "--add-file=LICENSES/ASTC/source-notices/astcenc_color_unquantize.cpp"
+    ],
+    "note": "The .files list records package input entries; this assignment did not run an independent tar-member audit."
+  },
+  "consumerExecuted": false,
+  "guardsExecuted": false,
+  "rootConfigureExecuted": false,
+  "acceptance": false,
+  "observations": [
+    "ASTC package .files list contains 63 --add-file entries; this assignment did not independently parse the tar archive.",
+    "Release build logged MSVC warning D9025 twice: /GL was overridden by /GL-. No stderr output; configure, Release and Debug recorded result=0."
+  ]
+}

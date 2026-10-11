@@ -1,0 +1,10 @@
+{
+  "status": "INITIAL_STAGED_RAW_VERIFICATION_REJECTED",
+  "exitCode": 1,
+  "diagnostic": "Staged raw SHA mismatch: cmake/Tools/LocalPackages/ASTCEncoder/ApplyASTCPatch.cmake",
+  "captureScope": "Actual tool/session result; no claim of a preserved original raw stderr file",
+  "cause": "core.autocrlf=true normalized44CRbytes in six ASTC inputs",
+  "sourceChanged": false,
+  "nativeRerun": false,
+  "repair": "Six exact -text whitespace=cr-at-eol rules; selective restage; expected hashes unchanged"
+}

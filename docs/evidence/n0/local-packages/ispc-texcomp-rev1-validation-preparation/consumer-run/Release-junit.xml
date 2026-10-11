@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="8"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T06:23:16"
+	>
+	<testcase name="JE.LocalPackages.ISPCTexComp.exports" classname="JE.LocalPackages.ISPCTexComp.exports" time="0.0266072" status="run">
+		<properties/>
+		<system-out>PASS exports
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.bc1" classname="JE.LocalPackages.ISPCTexComp.bc1" time="0.0073181" status="run">
+		<properties/>
+		<system-out>PASS bc1
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.bc3" classname="JE.LocalPackages.ISPCTexComp.bc3" time="0.007344" status="run">
+		<properties/>
+		<system-out>PASS bc3
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.bc6h" classname="JE.LocalPackages.ISPCTexComp.bc6h" time="0.0138618" status="run">
+		<properties/>
+		<system-out>PASS bc6h
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.bc7" classname="JE.LocalPackages.ISPCTexComp.bc7" time="0.0243703" status="run">
+		<properties/>
+		<system-out>PASS bc7
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.etc1" classname="JE.LocalPackages.ISPCTexComp.etc1" time="0.0080449" status="run">
+		<properties/>
+		<system-out>PASS etc1
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.astc" classname="JE.LocalPackages.ISPCTexComp.astc" time="0.0179326" status="run">
+		<properties/>
+		<system-out>PASS astc
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.ISPCTexComp.borders" classname="JE.LocalPackages.ISPCTexComp.borders" time="0.0075958" status="run">
+		<properties/>
+		<system-out>PASS borders
+</system-out>
+	</testcase>
+</testsuite>

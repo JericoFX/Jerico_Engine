@@ -1,0 +1,21 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+    Start 1: JE.LocalPackages.ISPCTexComp.exports
+1/8 Test #1: JE.LocalPackages.ISPCTexComp.exports ...   Passed    0.03 sec
+    Start 2: JE.LocalPackages.ISPCTexComp.bc1
+2/8 Test #2: JE.LocalPackages.ISPCTexComp.bc1 .......   Passed    0.01 sec
+    Start 3: JE.LocalPackages.ISPCTexComp.bc3
+3/8 Test #3: JE.LocalPackages.ISPCTexComp.bc3 .......   Passed    0.01 sec
+    Start 4: JE.LocalPackages.ISPCTexComp.bc6h
+4/8 Test #4: JE.LocalPackages.ISPCTexComp.bc6h ......   Passed    0.01 sec
+    Start 5: JE.LocalPackages.ISPCTexComp.bc7
+5/8 Test #5: JE.LocalPackages.ISPCTexComp.bc7 .......   Passed    0.02 sec
+    Start 6: JE.LocalPackages.ISPCTexComp.etc1
+6/8 Test #6: JE.LocalPackages.ISPCTexComp.etc1 ......   Passed    0.01 sec
+    Start 7: JE.LocalPackages.ISPCTexComp.astc
+7/8 Test #7: JE.LocalPackages.ISPCTexComp.astc ......   Passed    0.02 sec
+    Start 8: JE.LocalPackages.ISPCTexComp.borders
+8/8 Test #8: JE.LocalPackages.ISPCTexComp.borders ...   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Total Test time (real) =   0.14 sec

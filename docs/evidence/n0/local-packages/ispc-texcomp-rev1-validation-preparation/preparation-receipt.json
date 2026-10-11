@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-11T09:18:30.5234565Z",
+  "sourceStatus": "HOLD8 unchanged, 458/458",
+  "producerStatus": "Luna0/27.986035s, independent archive/data audit closed",
+  "SDKFiles": 21,
+  "PEexports": 26,
+  "importLibraryObjects": 26,
+  "CRT": "Observed /MD Release DLL, Debug consumer compatibility pending",
+  "consumer": "16 cases NOT_RUN",
+  "guards": "9 expected rejections NOT_RUN",
+  "PSSyntax": "3 scripts parsed with zero errors, not executed",
+  "reader": "Authorized external CPython SHA6235…9D6E, -I -B and PYTHONDONTWRITEBYTECODE=1, stdlib tar/hash/JSON only",
+  "sourceWrites": 0,
+  "archiveSHA256": "8308677642330694AB1C63C74A7AAABF4A0A9633234F998B12E838CDA64008DF",
+  "auditFiles": [
+    "archive-audit-before-extraction.json",
+    "extracted-package-manifest.json",
+    "pe-coff-notice-audit.json"
+  ]
+}

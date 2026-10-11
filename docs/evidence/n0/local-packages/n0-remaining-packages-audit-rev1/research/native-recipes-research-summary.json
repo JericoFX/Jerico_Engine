@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "status": "READ_ONLY_RESEARCH_COMPLETE; SOURCE_ACQUISITION_AND_NATIVE_VALIDATION_NOT_RUN",
+  "scope": "Original Windows recipe research for source-enabled JEEditorFixture Root candidates. This does not identify the next actual fatal.",
+  "source_authority": "o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "existing_recipe_archive": {
+    "path": "F:/JericoEngine/Dependencies/archives/o3de-3p-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.tar.gz",
+    "bytes": 1125538,
+    "sha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042"
+  },
+  "catalogue_candidates": [
+    {
+      "name": "openimageio-opencolorio-2.3.17-rev4-windows",
+      "sha256": "d542198653b33640268a999de542c9c5adf4a29322ed04858c730bc82eb34b09",
+      "consumers": [
+        "Gems/GradientSignal/Code/CMakeLists.txt:64,84 GradientSignal.Editor.Static -> 3rdParty::OpenImageIO",
+        "Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt:119,151 CommonFeaturesAtom.Editor.Static -> 3rdParty::OpenImageIO::Tools::Binaries"
+      ],
+      "classification": "Tools/Editor under PAL_TRAIT_BUILD_HOST_TOOLS, not demonstrated Runtime dependency",
+      "runtime_api": "EditorGradientImageCreatorUtils.cpp:226 ImageOutput::create; :234 ImageSpec; :235 open; :246 write_image; :254 close; UINT8/UINT16/FLOAT and progress callback",
+      "tools_execution": "Imported native tool deployment is confirmed. No direct invocation found in these owning source directories; six tools cannot be considered all executed."
+    },
+    {
+      "name": "libsamplerate-0.2.1-rev2-windows",
+      "sha256": "dcf3c11a96f212a52e2c9241abde5c364ee90b0f32fe6eeb6dcdca01d491829f",
+      "consumer": "Gems/Microphone/Code/CMakeLists.txt:25 Windows PAL_TRAIT_MICROPHONE_USES_LIBSAMPLERATE TRUE",
+      "runtime_api": "MicrophoneSystemComponent_Windows.cpp:384 src_short_to_float_array; :399-409 streaming src_process with end_of_input=0 and sample-rate ratio; :478 src_float_to_short_array; :635 src_new(SRC_SINC_MEDIUM_QUALITY); :667 src_delete",
+      "classification": "Native Microphone static target can participate in game/runtime, not gated as editor-only. Root visits its engine external directory; enabled game gem/link/device execution remains unproven."
+    }
+  ],
+  "recipe_history": {
+    "oiio_windows_reference_commit": "70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9",
+    "oiio_reference_date": "2023-01-26",
+    "oiio_reference": "Its Windows build list explicitly selects 2.3.17-rev4; commit fixes Find Debug/Release and deploys Release DLLs for native tools. It is a historical recipe witness, not proof of the legacy binary build origin/hash.",
+    "ocio_find_vs_70f0": "byte identical",
+    "oiio_find_vs_70f0": "Only Linux aarch64 Python binding path conditional differs; Windows native paths/tokens preserved.",
+    "later_2026_commit": "efb3023b2a29709e09065220c64af8784e7ce575",
+    "later_2026_changes": [
+      "two clang16 Mac-named Boost source patches applied unconditionally by current script",
+      "BUILD_FMT_FORCE=ON added",
+      "CMAKE_POLICY_VERSION_MINIMUM=3.5 added to old producers",
+      "darwin-arm64 support"
+    ],
+    "decision": "Do not silently attribute 2026 patches/options to the 2023 Windows rev4 recipe; use historical native recipe as baseline and record any compatibility adaptation separately.",
+    "samplerate_reference_commit": "683c2af1a687465e6f37ed8213ad387f31b99873",
+    "samplerate_reference_date": "2021-07-20",
+    "samplerate_reference": "Windows 0.2.1-rev2 exists in this original config with VS16 2019, Release only, target samplerate, no additional definitions/link options/libraries. Current70f0 retains these settings and adds later policy/WebAssembly/Mac ARM64 metadata."
+  },
+  "sources": [
+    {
+      "name": "libsamplerate",
+      "version": "0.2.1",
+      "commit": "a147b6dc4046deda22b2aa772b348717de772e2b",
+      "repository": "https://github.com/libsndfile/libsamplerate",
+      "candidate_archive_url": "https://codeload.github.com/libsndfile/libsamplerate/tar.gz/a147b6dc4046deda22b2aa772b348717de772e2b",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "BSD-2-Clause",
+      "notice_files": "COPYING",
+      "consumer": "Microphone native C API"
+    },
+    {
+      "name": "OpenImageIO",
+      "version": "2.3.17.0",
+      "commit": "14d38284c54bce02f8228ea87cdfa93dc0afda77",
+      "repository": "https://github.com/AcademySoftwareFoundation/OpenImageIO",
+      "candidate_archive_url": "https://codeload.github.com/AcademySoftwareFoundation/OpenImageIO/tar.gz/14d38284c54bce02f8228ea87cdfa93dc0afda77",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "BSD-3-Clause plus embedded notices",
+      "notice_files": "LICENSE.md/THIRD-PARTY.md",
+      "consumer": "GradientSignal image writer and six OIIO tools"
+    },
+    {
+      "name": "OpenColorIO",
+      "version": "2.1.1",
+      "commit": "32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+      "repository": "https://github.com/AcademySoftwareFoundation/OpenColorIO",
+      "candidate_archive_url": "https://codeload.github.com/AcademySoftwareFoundation/OpenColorIO/tar.gz/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "BSD-3-Clause plus embedded notices",
+      "notice_files": "LICENSE/THIRD-PARTY.md",
+      "consumer": "native OIIO dependency; original eight OCIO tools"
+    },
+    {
+      "name": "libjpeg-turbo",
+      "version": "2.1.2",
+      "commit": "ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+      "repository": "https://github.com/libjpeg-turbo/libjpeg-turbo",
+      "candidate_archive_url": "https://codeload.github.com/libjpeg-turbo/libjpeg-turbo/tar.gz/ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "IJG AND BSD-3-Clause AND Zlib",
+      "notice_files": "LICENSE.md/README.ijg",
+      "consumer": "OIIO JPEG input/output"
+    },
+    {
+      "name": "yaml-cpp",
+      "version": "0.6.3",
+      "commit": "9a3624205e8774953ef18f57067b3426c1c5ada6",
+      "repository": "https://github.com/jbeder/yaml-cpp",
+      "candidate_archive_url": "https://codeload.github.com/jbeder/yaml-cpp/tar.gz/9a3624205e8774953ef18f57067b3426c1c5ada6",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "MIT",
+      "notice_files": "LICENSE",
+      "consumer": "native OCIO config parsing"
+    },
+    {
+      "name": "pystring",
+      "version": "1.1.3",
+      "commit": "c2de99deb4f0bd13751f8436400b5e8662301769",
+      "repository": "https://github.com/imageworks/pystring",
+      "candidate_archive_url": "https://codeload.github.com/imageworks/pystring/tar.gz/c2de99deb4f0bd13751f8436400b5e8662301769",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "BSD-3-Clause",
+      "notice_files": "LICENSE",
+      "consumer": "native C++ OCIO strings, not Python interpreter or binding"
+    },
+    {
+      "name": "fmt",
+      "version": "8.0.0",
+      "commit": "9e8b86fd2d9806672cc73133d21780dd182bfd24",
+      "repository": "https://github.com/fmtlib/fmt",
+      "candidate_archive_url": "https://codeload.github.com/fmtlib/fmt/tar.gz/9e8b86fd2d9806672cc73133d21780dd182bfd24",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "MIT",
+      "notice_files": "LICENSE.rst",
+      "consumer": "OIIO formatting headers"
+    },
+    {
+      "name": "robin-map",
+      "version": "0.6.2",
+      "commit": "908ccf9f039a0e50813544c0444ca664ca292d7c",
+      "repository": "https://github.com/Tessil/robin-map",
+      "candidate_archive_url": "https://codeload.github.com/Tessil/robin-map/tar.gz/908ccf9f039a0e50813544c0444ca664ca292d7c",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "MIT",
+      "notice_files": "LICENSE",
+      "consumer": "required by OIIO root CMake:165"
+    },
+    {
+      "name": "Little-CMS",
+      "version": "2.2",
+      "commit": "401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+      "repository": "https://github.com/mm2/Little-CMS",
+      "candidate_archive_url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+      "head_status": 200,
+      "redirects": 0,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "archive_bytes": null,
+      "license": "MIT",
+      "notice_files": "COPYING",
+      "consumer": "OCIO_BUILD_APPS=ON / ociobakelut only"
+    },
+    {
+      "name": "Boost",
+      "version": "1.76.0",
+      "commit": "ccb2ab3b4384a16deafaa849de509bce2b2cbada",
+      "repository": "https://github.com/boostorg/boost",
+      "license": "BSL-1.0",
+      "notice_files": "LICENSE_1_0.txt plus notices of selected submodules",
+      "build_components": [
+        "filesystem",
+        "atomic",
+        "thread",
+        "system",
+        "headers",
+        "date_time",
+        "chrono"
+      ],
+      "link": "static",
+      "threading": "multi",
+      "configurations": [
+        "Release",
+        "Debug"
+      ],
+      "gitlink_count": 156,
+      "primary_tree_truncated": false,
+      "candidate_archive_url": null,
+      "archive_get_performed": false,
+      "archive_sha256": null,
+      "gap": "Superproject codeload is incomplete. Audit a complete official 1.76.0 source release or the pinned submodule closure before acquisition; none selected/acquired here."
+    }
+  ],
+  "existing_native_dependencies": [
+    "ZLIB1.2.11",
+    "OpenEXR3.1.3 and Imath3.1.3",
+    "TIFF4.2.0.15",
+    "PNG1.6.37",
+    "Expat2.4.2",
+    "Freetype2.11.1"
+  ],
+  "native_recipe": {
+    "samplerate": {
+      "target": "samplerate",
+      "cmake_minimum_literal": "3.1..3.18",
+      "language": "C99",
+      "build_shared_libs": "OFF by default; not overridden by original recipe",
+      "configurations": [
+        "Release"
+      ],
+      "generator": "Visual Studio 16 2019",
+      "patches": [],
+      "sinc_converters": "FAST/MEDIUM/BEST all ON; preserve medium used by Microphone and original complete C API",
+      "find_target": "3rdParty::libsamplerate INTERFACE IMPORTED GLOBAL",
+      "layout": [
+        "libsamplerate/include/samplerate.h",
+        "libsamplerate/lib/samplerate.lib"
+      ],
+      "transitive_native_libraries_windows": [],
+      "tests_examples": "Root defaults BUILD_TESTING/EXAMPLES ON, but original build selects samplerate only. SndFile optional search occurs only for examples/tests; no reason to acquire it for native library. A future isolated library-only producer may disable those explicitly while preserving converters.",
+      "crt": "Original has no CRT override; CMake/MSVC Release default /MD is inferred, not measured from the unavailable legacy archive."
+    },
+    "oiio": {
+      "configuration": "Release+Debug shared libraries, C++17, LINKSTATIC=ON for private dependencies",
+      "generator": "Original Windows does not pass -G; ambient CMake generator selected it. VS2022/v143 would be explicit new JE adaptation, not historical toolchain proof.",
+      "patches": [
+        "disable_rpath_use_link_path.patch -> src/cmake/compiler.cmake",
+        "Windows disable_boost_stacktrace.patch -> sysutil.h/sysutil.cpp, avoids dbgeng dependency"
+      ],
+      "source_mutations": [
+        "remove src/cmake/modules/FindOpenColorIO.cmake only in private copy",
+        "fmt macro clones/checkouts source/ext/fmt",
+        "robin-map macro clones/checkouts source/ext/robin-map"
+      ],
+      "optional_off": [
+        "OpenGL",
+        "Qt5",
+        "BZip2",
+        "FFmpeg",
+        "Field3D",
+        "DCMTK",
+        "OpenJPEG",
+        "Libheif",
+        "Libsquish",
+        "Nuke",
+        "OpenCV",
+        "OpenVDB",
+        "Ptex",
+        "R3DSDK",
+        "WebP",
+        "TBB"
+      ],
+      "ambient_gap": "Recipe prose excludes Camera RAW and GIF, but code does not pass USE_LibRaw=OFF/USE_GIF=OFF; optional checked_find_package calls could discover ambient packages. Future hermetic producer must enforce declared exclusions, not provision them opportunistically.",
+      "offline_required": "Prepopulate pinned fmt8.0.0 and robin-map0.6.2 private header trees; BUILD_MISSING_FMT=OFF/BUILD_FMT_FORCE=OFF and BUILD_MISSING_ROBINMAP=OFF/BUILD_ROBINMAP_FORCE=OFF prevent Git fallback. Paths/header hashes remain mandatory and native semantics unchanged.",
+      "library_layout": [
+        "OpenImageIO/include/OpenImageIO",
+        "OpenImageIO/bin/OpenImageIO.dll",
+        "OpenImageIO/bin/OpenImageIO_Util.dll",
+        "OpenImageIO/bin/OpenImageIO_d.dll",
+        "OpenImageIO/bin/OpenImageIO_Util_d.dll",
+        "matching import .lib under OpenImageIO/lib"
+      ],
+      "targets": [
+        "3rdParty::OpenImageIO",
+        "3rdParty::OpenImageIO_Util",
+        "3rdParty::OpenImageIO::Tools::Binaries"
+      ],
+      "native_release_tools": [
+        "iconvert.exe",
+        "idiff.exe",
+        "igrep.exe",
+        "iinfo.exe",
+        "maketx.exe",
+        "oiiotool.exe"
+      ]
+    },
+    "ocio": {
+      "configuration": "Release+Debug shared, C++17, hidden visibility; OCIO_BUILD_APPS ON, OPENFX/TESTS/GPU_TESTS/DOCS OFF; SSE default ON",
+      "library_layout": [
+        "OpenColorIO/include",
+        "OpenColorIO/bin/OpenColorIO_2_1.dll",
+        "OpenColorIO/bin/OpenColorIOd_2_1.dll",
+        "OpenColorIO/lib/OpenColorIO.lib",
+        "OpenColorIO/lib/OpenColorIOd.lib"
+      ],
+      "private_dependencies": "yaml-cpp0.6.3 static /MD or /MDd; pystring1.1.3 static; local Expat2.4.2 and Imath3.1.3 satisfy minimum2.2.8/3.1.2",
+      "app_dependency": "lcms2.2 static built using OCIO share/cmake/projects/Buildlcms2.cmake; C++11 cap for old lcms tools, not main C++17 library. Required only with OCIO_BUILD_APPS ON.",
+      "native_release_tools": [
+        "ociobakelut",
+        "ociocheck",
+        "ociochecklut",
+        "ocioconvert",
+        "ociolutimage",
+        "ociomakeclf",
+        "ocioperf",
+        "ociowrite"
+      ],
+      "consumer_boundary": "OIIO Tools::Binaries links OCIO Runtime, not OCIO Tools::Binaries. Keep original OCIO apps for equivalent native bundle; removal of unselected tools is a separate parent scope decision.",
+      "offline_required": "Explicit local native dependencies plus OCIO_INSTALL_EXT_PACKAGES=NONE, preserve Find target versions/headers and private Release/Debug links. Original MISSING uses ExternalProject Git clones for missing deps.",
+      "build_order": "Native OCIO first without OIIO; OIIO against local OCIO; rebuild OCIO apps with OIIO, Debug before Release so shipped tools are Release."
+    },
+    "python": {
+      "historical": "Release builds OIIO and OCIO Python bindings; Debug OFF. Script runner enforces Python3.10.5 and downloads it. Historical PythonPlugins and pybind11 are separate routes.",
+      "product_decision": "No Python bindings/plugins/runtime or pybind11 to acquire/distribute. Native pystring is C++ and remains required.",
+      "native_only_switches": [
+        "USE_PYTHON=OFF",
+        "OCIO_BUILD_PYTHON=OFF",
+        "OCIO_BUILD_DOCS=OFF"
+      ],
+      "source_proof": "OIIO checked_find_package honors USE_PYTHON OFF; OCIO FindExtPackages Python/pybind11 branch is guarded by BUILD_PYTHON or DOCS. No required native codegen Python identified in inspected files."
+    },
+    "jpeg": {
+      "configuration": "Release static, ENABLE_SHARED OFF, WITH_JAVA0, PIC ON, SIMD default ON",
+      "nasm": "Recipe checks nasm -v before build. Preserve existing local audited assembler/SIMD; no installer or downgrade chosen. NASM availability/provisioning remains an explicit future tool witness gap.",
+      "notice": "Full LICENSE.md + README.ijg; binary documentation must acknowledge Independent JPEG Group, plus BSD and SIMD Zlib notices."
+    }
+  },
+  "legal": {
+    "acceptance": "No legal/productive redistribution decision made",
+    "must_preserve": [
+      "original O3DE Apache-2.0 OR MIT glue and patches",
+      "libsamplerate COPYING",
+      "OIIO LICENSE.md and full THIRD-PARTY.md",
+      "OCIO LICENSE and full THIRD-PARTY.md",
+      "Boost BSL and selected headers/library notices",
+      "JPEG-Turbo LICENSE.md, README.ijg and SIMD notices",
+      "yaml-cpp MIT",
+      "pystring BSD3",
+      "fmt MIT",
+      "robin-map MIT",
+      "LittleCMS MIT if original OCIO apps retained",
+      "native dependency provider notices, especially FreeType chosen license"
+    ],
+    "bundled_notices": "OIIO THIRD-PARTY includes BSD/MIT/Apache2 with LLVM exception/BSL/Zlib/Unlicense/public-domain derived components; OCIO embedded MD5/string/sampleICC/from_chars notices must be kept in full. Main BSD labels do not summarize the entire bundle.",
+    "recipe_notice_gap": "Original distribution/LICENSE.TXT references privatedeps/LibJPEGTurbo/share/doc/... while build script copies LICENSE.md directly into privatedeps/LibJPEGTurbo. Any new package notice index must point to files actually present."
+  },
+  "limits": [
+    "No package archives/binaries acquired; no SHA256 or size fabricated. HEAD200 is availability only.",
+    "No CMake/compiler/tests/native tools/Git/installer executed. Only original local recipe tar inspected as data and official metadata/texts read.",
+    "No provider/source/catalogue/cache/global doc/ISPC/ASTC input edited.",
+    "OIIO source tree1619 entries zero gitlinks; 10 critical raw blobs match primary pinned tree; this is not an acquired source archive audit.",
+    "Boost complete-source acquisition remains a concrete gap; NASM local witness and native Find compatibility with JE dependency providers still require approved preparation and native validation.",
+    "Root61 next fatal remains unknown until parent/Luna original configure; source composition is not engine/link/runtime acceptance."
+  ]
+}

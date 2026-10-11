@@ -1,0 +1,131 @@
+Start testing: Oct 11 06:23 Hora estándar de Montevideo
+----------------------------------------------------------
+1/8 Testing: JE.LocalPackages.ISPCTexComp.exports
+1/8 Test: JE.LocalPackages.ISPCTexComp.exports
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "exports"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.exports" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS exports
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.exports" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.exports" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/8 Testing: JE.LocalPackages.ISPCTexComp.bc1
+2/8 Test: JE.LocalPackages.ISPCTexComp.bc1
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "bc1"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.bc1" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS bc1
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.bc1" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.bc1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: JE.LocalPackages.ISPCTexComp.bc3
+3/8 Test: JE.LocalPackages.ISPCTexComp.bc3
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "bc3"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.bc3" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS bc3
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.bc3" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.bc3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: JE.LocalPackages.ISPCTexComp.bc6h
+4/8 Test: JE.LocalPackages.ISPCTexComp.bc6h
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "bc6h"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.bc6h" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS bc6h
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.bc6h" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.bc6h" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/8 Testing: JE.LocalPackages.ISPCTexComp.bc7
+5/8 Test: JE.LocalPackages.ISPCTexComp.bc7
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "bc7"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.bc7" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS bc7
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.bc7" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.bc7" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/8 Testing: JE.LocalPackages.ISPCTexComp.etc1
+6/8 Test: JE.LocalPackages.ISPCTexComp.etc1
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "etc1"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.etc1" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS etc1
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.etc1" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.etc1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/8 Testing: JE.LocalPackages.ISPCTexComp.astc
+7/8 Test: JE.LocalPackages.ISPCTexComp.astc
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "astc"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.astc" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS astc
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.astc" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.astc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: JE.LocalPackages.ISPCTexComp.borders
+8/8 Test: JE.LocalPackages.ISPCTexComp.borders
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer/Release/JEISPCTexCompConsumer.exe" "borders"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-package-consumer
+"JE.LocalPackages.ISPCTexComp.borders" start time: Oct 11 06:23 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS borders
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.ISPCTexComp.borders" end time: Oct 11 06:23 Hora estándar de Montevideo
+"JE.LocalPackages.ISPCTexComp.borders" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 11 06:23 Hora estándar de Montevideo

@@ -1,0 +1,127 @@
+{
+  "status": "IMPLEMENTED_SOURCE_ONLY_NOT_RUN",
+  "scope": "cmake/Tools/LocalPackages/ISPCTexComp",
+  "sourceFiles": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake",
+      "role": "candidate source",
+      "bytes": 8686,
+      "sha256": "5307BB83AD2B3D40D556C2363C303F1DB8986DB144C86F6554019CD55A241A88"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/FindISPCTexComp.cmake",
+      "role": "candidate source",
+      "bytes": 1755,
+      "sha256": "35746CAA009025F6488E447C43D3EC0CCDE60107D8CBF8F9F1A7C7AD02BF6DDD"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/NOTICE.txt",
+      "role": "candidate source",
+      "bytes": 571,
+      "sha256": "2F7D03244E746971DA70E60BD676E2452AF46B453C364ECF412AE01E3B459409"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/README.md",
+      "role": "candidate source",
+      "bytes": 5239,
+      "sha256": "003ED3EA34F4252D7F7FE737B52E0146567A2A340565F3D2C7F15D4D780C905F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/RunBuild.cmd.in",
+      "role": "candidate source",
+      "bytes": 1895,
+      "sha256": "C8CDA392B961F43208CD68CD6BECC7CC613BB18431DA181EA47CEC825065989F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/tests/CMakeLists.txt",
+      "role": "candidate source",
+      "bytes": 2025,
+      "sha256": "EF4C9E03BFE159CFCBEBA3B0DE3286F4EC123EFCDD6ADDF073582AD7FCCD99D7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/tests/ISPCTexCompConsumer.cpp",
+      "role": "candidate source",
+      "bytes": 14555,
+      "sha256": "2E6CC9F3E8AE3703527155D78C898CAE0C466AE0220C70106F7D2D9877A2910F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/VerifyInputs.ps1",
+      "role": "candidate source",
+      "bytes": 2789,
+      "sha256": "8A0A48AFABD6CF05519EDD629BAB424E01481AA3182F5EB3CA5BC14F2DC2FDEC"
+    }
+  ],
+  "sourceLinesAdded": 632,
+  "sourceLinesDeleted": 0,
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit\\source-freeze-ispc-texcomp-rev1.json",
+    "sha256": "FD0BF25CD80D3D6F1F1A4579E6EC54285F9F089A8ED795354D08B91381AF1BBC",
+    "count": 456,
+    "array": "entries"
+  },
+  "diff": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit\\source-diff-rev1.patch",
+    "sha256": "2F0691A3BA0E1A15CF53F6D9289A153F71263F80EED8502AEB714BAA2CAE64CA"
+  },
+  "arguments": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit\\validation-arguments-rev1.json",
+    "sha256": "C649B2BD4C324EC3C567C281D77794E986DADF6AEF45650C8FB92A0951B05D1A"
+  },
+  "pinChecks": [
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+      "literal": "029373e6ec5b10d7e29eefdc5a231fb86c79b76a4a39c58c2727c6729de28ab7",
+      "actual": "029373E6EC5B10D7E29EEFDC5A231FB86C79B76A4A39C58C2727C6729DE28AB7",
+      "matches": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+      "literal": "b34de2c36aff2afaa56b669ea41f9e614a045564ca74fc0b138e17ccea4880b7",
+      "actual": "B34DE2C36AFF2AFAA56B669EA41F9E614A045564CA74FC0B138E17CCEA4880B7",
+      "matches": true
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/vcvarsall.bat",
+      "literal": "ee67e4181ae2578b7842f9f1549a7f66e2166638fa544ce6838d9e9033a02275",
+      "actual": "EE67E4181AE2578B7842F9F1549A7F66E2166638FA544CE6838D9E9033A02275",
+      "matches": true
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe",
+      "literal": "58fbe0acac5265fe9a93acb291e1dbd50432c4ebf00ff9b9fb4c34bc0f247c73",
+      "actual": "58FBE0ACAC5265FE9A93ACB291E1DBD50432C4EBF00FF9B9FB4C34BC0F247C73",
+      "matches": true
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "literal": "88c8344236a27a6e727e0a8edc49aaa2690bdc7a9464b9d18cc7abe70a9f1c0d",
+      "actual": "88C8344236A27A6E727E0A8EDC49AAA2690BDC7A9464B9D18CC7ABE70A9F1C0D",
+      "matches": true
+    },
+    {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Microsoft/VC/v170/Microsoft.Cl.Common.props",
+      "literal": "9d9c3aa8770dfc7e7430b831252e1efbab0799c7ce0d25a03485ff506bed575b",
+      "actual": "9D9C3AA8770DFC7E7430B831252E1EFBAB0799C7CE0D25A03485FF506BED575B",
+      "matches": true
+    }
+  ],
+  "staticChecks": {
+    "PSsyntax": "ParseFile zero errors; not executed",
+    "archiveManifests": "238 source plus 175 tool raw hashes/sizes unchanged",
+    "EOL": "attributed comparison only; snapshots unmodified",
+    "nativeBuild": "NOT_RUN",
+    "consumerCases": "8 NOT_RUN",
+    "guardCases": "8 NOT_RUN",
+    "target": "Gem::ImageProcessingAtom.Editor.Static / 3rdParty::ISPCTexComp",
+    "originalExports": 26
+  },
+  "limitations": [
+    "No original Atom/editor/AP/cook/runtime acceptance",
+    "No full image-quality decoder oracle for BC6H/BC7/ETC1/ASTC",
+    "No ISA forcing or cross-machine dispatch proof",
+    "External ISPC binary has measured official-release SHA256; upstream digest unavailable",
+    "New v143 source build does not prove historical package ABI",
+    "Release /MD SDK and Debug /MDd consumer require native evidence; no general mixed-CRT claim"
+  ],
+  "previousReceipts": "Acquisition/audit RED/v2/v3 kept unchanged; no source normalization or unrelated provider mutation"
+}

@@ -1,0 +1,7 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/tests/CMakeLists.txt
+  ASTCEncoderConsumer.cpp
+  JEASTCEncoderConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\astc-native-consumer-rev1\Release\JEASTCEncoderConsumer.exe
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ASTCEncoder/tests/CMakeLists.txt

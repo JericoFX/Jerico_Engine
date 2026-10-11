@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: ASTC source archive SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-rev1-guard-preparation/attempt1/fixtures/tiny-archive.tar.gz
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake:31 (JE_python_verify_file)
+
+

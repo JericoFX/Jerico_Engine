@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/ASTCEncoder/BuildASTCEncoderPackage.cmake:16 (message):
+  JE local ASTC: output must be beneath this checkout/build
+
+

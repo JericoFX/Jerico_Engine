@@ -1,0 +1,128 @@
+[
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libsamplerate/Findlibsamplerate.cmake.template",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\libsamplerate\\Findlibsamplerate.cmake.template",
+    "bytes": 1253,
+    "sha256": "7F89D3350D4129F9B3A64A8CD9A577BE5BD96523036462C913DAFE8BE59A5F7F"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libsamplerate/build_config.json",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\libsamplerate\\build_config.json",
+    "bytes": 3687,
+    "sha256": "44DD3C2BA45359BE99E254437EA296419FF14A8507387785C95F69BB3E6A6972"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/LICENSE.TXT",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\LICENSE.TXT",
+    "bytes": 254,
+    "sha256": "D941FCDA405BB70EE96D56AFC62D870DC0A0477AF6DFD40BC13C3C9EF466AF18"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/build_openimageio.py",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\build_openimageio.py",
+    "bytes": 47118,
+    "sha256": "2D3765A5EC95DB85CBC553917268C8C9564FF847CB5F4BC38EF37F5DDA10C87C"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/clang16_mac_boost_container_hash.patch",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\clang16_mac_boost_container_hash.patch",
+    "bytes": 508,
+    "sha256": "74FBB80C8286C8A671759F545ACE6F496EF6D3DA61E67E734BB8BFA44934FA53"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/clang16_mac_boost_numeric.patch",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\clang16_mac_boost_numeric.patch",
+    "bytes": 4167,
+    "sha256": "1A8889E391F555BE2246179DAFEB2A3532CA83491E7E6F0F882494C4E04F2114"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/custom_find_files/FindOpenColorIO.cmake",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\custom_find_files\\FindOpenColorIO.cmake",
+    "bytes": 2481,
+    "sha256": "F56F6546448F07B91310D9BC91A855A7095B1338CAEC457C39CE4CBF4DF4A970"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/custom_find_files/FindOpenImageIO.cmake",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\custom_find_files\\FindOpenImageIO.cmake",
+    "bytes": 1186,
+    "sha256": "E8E5428A0447947A0185592CB7DEF5ADDADD7030B202E44AC7D5CD8D2FFF4FD4"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/disable_boost_stacktrace.patch",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\disable_boost_stacktrace.patch",
+    "bytes": 1752,
+    "sha256": "96592E3ED619BE9C28FDAC35A5DE0009AF838DBD94EBA9381D92554A7EF78AFA"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/disable_rpath_use_link_path.patch",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\disable_rpath_use_link_path.patch",
+    "bytes": 541,
+    "sha256": "BC11E1C8448A4830EF7C73EA191D2D4FBA3F4046B73560EEB7D32ACCEFE12363"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/FindOpenColorIO.cmake",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\distribution\\FindOpenColorIO.cmake",
+    "bytes": 7562,
+    "sha256": "9452998F21F07DB2EE1789CDED1E014B37E295AEC0AD986F437BBA07FE719643"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/FindOpenImageIO.cmake",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\distribution\\FindOpenImageIO.cmake",
+    "bytes": 10901,
+    "sha256": "45E94967AEB4531C5DBA3C3DF2C98F941ACD2EAFB4AFB47F1F100B6A57F57D09"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/LICENSE.TXT",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\distribution\\LICENSE.TXT",
+    "bytes": 746,
+    "sha256": "BB67E21C7AE64A9D7EFB88893A8124CC8A5A34368ED44BC6F7E39D489A5D8042"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/README.md",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\distribution\\README.md",
+    "bytes": 322,
+    "sha256": "701B48868205C2AF91C78CFCFC5A7C6FAB0D15F8899DF314AB5F0E0D9FD95FE2"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/linux_pthreads_fix.patch",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\linux_pthreads_fix.patch",
+    "bytes": 545,
+    "sha256": "7952F454CE2F6D98FE9D344D9C6C293E5902233F6DA4D439EA19D79DFB0D5E54"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/readme.md",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\readme.md",
+    "bytes": 571,
+    "sha256": "CD5B96536159B6D4D31F936DDF3D637E0511F822AC0737EB93F64401A665CC6C"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/.gitignore",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\test\\.gitignore",
+    "bytes": 62,
+    "sha256": "6DFFDDC9F9C4C6EE7E4FF70DD5FE52C6E9B4CEF9297A9A076437D4EC388BD56F"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/CMakeLists.txt",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\test\\CMakeLists.txt",
+    "bytes": 816,
+    "sha256": "39B6FA596A77DDEA909A5D89E789F968DCD46F939C3962C64708B741DDFF1C17"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/base_Log2-48nits_16_LUT.exr",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\test\\base_Log2-48nits_16_LUT.exr",
+    "bytes": 1038,
+    "sha256": "155B3BA516D77FCFC9A77A7E96ACBF450759D87EE7F042730D1D75B0F2628902"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/python_tests.py",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\test\\python_tests.py",
+    "bytes": 1895,
+    "sha256": "731C63E8C8A33A220A2B599DB44E46FE3FF4A9321CE9C5318A307E5149815BCE"
+  },
+  {
+    "archiveMember": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/test_OpenImageIO.cpp",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\n0-remaining-packages-audit-rev1\\research\\openimageio-opencolorio\\test\\test_OpenImageIO.cpp",
+    "bytes": 3941,
+    "sha256": "E1473BB60CB48CA29E28C8EE011D3C7C6CFCA081AD0F064A4C3258C187EC1969"
+  }
+]

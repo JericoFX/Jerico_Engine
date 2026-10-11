@@ -1,0 +1,120 @@
+{
+  "status": "NOT_RUN",
+  "producer": {
+    "arguments": [
+      "-DJE_ISPC_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd.tar.gz",
+      "-DJE_ISPC_SOURCE_ROOT=F:/JericoEngine/Dependencies/ispc-texcomp-36b80aac50ea401a9adde44d86712c2241b2acfd",
+      "-DJE_ISPC_SOURCE_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/source-immutable-manifest.json",
+      "-DJE_ISPC_TOOL_ARCHIVE=F:/JericoEngine/Dependencies/archives/ispc-v1.16.1-windows.zip",
+      "-DJE_ISPC_TOOL_ROOT=F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+      "-DJE_ISPC_TOOL_MANIFEST=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\ispc-texcomp-rev1-audit/tool-immutable-manifest.json",
+      "-DJE_ISPC_VS_ROOT=C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools",
+      "-DJE_ISPC_POWERSHELL=C:/Users/Jerico/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "-DJE_ISPC_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/BuildISPCTexCompPackage.cmake"
+    ],
+    "count": 11,
+    "freshOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build"
+  },
+  "consumer": {
+    "arguments": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ISPCTexComp/tests",
+      "-B",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-DJE_ISPC_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build/packages/ISPCTexComp-36b80aa-je-rev1-windows.contents"
+    ],
+    "count": 9,
+    "buildRelease": [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer",
+      "--config",
+      "Release"
+    ],
+    "testRelease": [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer",
+      "-C",
+      "Release",
+      "--output-on-failure"
+    ],
+    "buildDebug": [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer",
+      "--config",
+      "Debug"
+    ],
+    "testDebug": [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-consumer",
+      "-C",
+      "Debug",
+      "--output-on-failure"
+    ]
+  },
+  "guards": [
+    {
+      "name": "wrong-shell-hash",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "argument": "JE_ISPC_POWERSHELL",
+      "expected": "SHA256 mismatch"
+    },
+    {
+      "name": "uri",
+      "value": "https://example.invalid/ispc",
+      "argument": "JE_ISPC_TOOL_ROOT",
+      "expected": "must not be a URI"
+    },
+    {
+      "name": "unc",
+      "value": "//localhost/share/encoder",
+      "argument": "JE_ISPC_SOURCE_ROOT",
+      "expected": "must be an absolute local path"
+    },
+    {
+      "name": "missing",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-missing-source.tar.gz",
+      "argument": "JE_ISPC_SOURCE_ARCHIVE",
+      "expected": "file is missing"
+    },
+    {
+      "name": "archive-hash",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/not-archive.txt",
+      "argument": "JE_ISPC_SOURCE_ARCHIVE",
+      "expected": "SHA256 mismatch",
+      "fixture": "new local text fixture, never mutate immutable archive"
+    },
+    {
+      "name": "manifest-hash",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-guards/not-manifest.json",
+      "argument": "JE_ISPC_TOOL_MANIFEST",
+      "expected": "SHA256 mismatch",
+      "fixture": "new local JSON fixture, never mutate audited manifest"
+    },
+    {
+      "name": "external-output",
+      "value": "F:/JericoEngine/Dependencies/ispc-output-forbidden",
+      "argument": "JE_ISPC_OUTPUT",
+      "expected": "output must be beneath"
+    },
+    {
+      "name": "old-output",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/ispc-texcomp-rev1-build",
+      "argument": "JE_ISPC_OUTPUT",
+      "expected": "output must be new",
+      "fixture": "only after successful producer or create a distinct guard-owned directory"
+    },
+    {
+      "name": "wrong-source-root",
+      "value": "F:/JericoEngine/Dependencies/tools/ispc-v1.16.1-windows",
+      "argument": "JE_ISPC_SOURCE_ROOT",
+      "expected": "input file count mismatch"
+    }
+  ],
+  "guardRule": "Replace one -D argument in the exact producer list; fresh output for each guard, except old-output. Fail before output/tool execution. Fixtures only under own new guards directory."
+}

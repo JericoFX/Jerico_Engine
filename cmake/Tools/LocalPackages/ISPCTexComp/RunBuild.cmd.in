@@ -1,0 +1,41 @@
+@echo off
+setlocal
+rem No inherited compiler switches, user property sheets, GCC or Python PATH.
+set "PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem"
+set "CL="
+set "_CL_="
+set "LINK="
+set "_LINK_="
+set "INCLUDE="
+set "LIB="
+set "LIBPATH="
+set "EXTERNAL_INCLUDE="
+set "VSINSTALLDIR="
+set "VCINSTALLDIR="
+set "DevEnvDir="
+set "VCToolsVersion="
+set "VCToolsInstallDir="
+set "WindowsSdkDir="
+set "WindowsSDKVersion="
+set "UCRTVersion="
+set "UniversalCRTSdkDir="
+set "MSBuildSDKsPath="
+set "MSBuildExtensionsPath="
+set "MSBuildExtensionsPath32="
+set "MSBuildExtensionsPath64="
+set "MSBuildUserExtensionsPath="
+set "VCTargetsPath="
+for /f "tokens=1 delims==" %%V in ('set __VSCMD 2^>nul') do set "%%V="
+for /f "tokens=1 delims==" %%V in ('set __VCVARS 2^>nul') do set "%%V="
+for /f "tokens=1 delims==" %%V in ('set VSCMD_ 2^>nul') do set "%%V="
+set "VSCMD_SKIP_SENDTELEMETRY=1"
+call "@JE_NATIVE_VCVARS@" x64 10.0.26100.0 -vcvars_ver=14.44
+if errorlevel 1 exit /b %errorlevel%
+if not "%VCToolsVersion%"=="14.44.35207" exit /b 2
+if not "%WindowsSDKVersion%"=="10.0.26100.0\" exit /b 3
+> "@JE_NATIVE_OUTPUT@\native-environment.txt" echo VCToolsVersion=%VCToolsVersion%
+>> "@JE_NATIVE_OUTPUT@\native-environment.txt" echo WindowsSDKVersion=%WindowsSDKVersion%
+cd /d "@JE_NATIVE_WORK@\ispc_texcomp"
+if errorlevel 1 exit /b %errorlevel%
+"@JE_NATIVE_MSBUILD@" "@JE_NATIVE_WORK@\ispc_texcomp\ispc_texcomp.vcxproj" /t:Build /m /nologo /v:normal /nr:false /bl:"@JE_NATIVE_OUTPUT@\build.binlog" /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143 /p:VCToolsVersion=14.44.35207 /p:WindowsTargetPlatformVersion=10.0.26100.0 /p:VCTargetsPath="@JE_ISPC_VS_ROOT@/MSBuild/Microsoft/VC/v170/" /p:OutDir="@JE_BIN@/" /p:IntDir="@JE_INT@/" /p:UserRootDir="@JE_EMPTY_USER@/" /p:DirectoryBuildPropsPath="@JE_EMPTY_PROPS@" /p:DirectoryBuildTargetsPath="@JE_EMPTY_PROPS@"
+exit /b %errorlevel%

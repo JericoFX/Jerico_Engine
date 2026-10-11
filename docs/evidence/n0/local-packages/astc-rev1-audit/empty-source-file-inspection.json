@@ -1,0 +1,10 @@
+{
+  "nativeExecuted": false,
+  "allowedHandling": "Skip stream copy only when regular entry Length equals0; materialize zero-byte regular file; retain SHA256/Gitblob/type/path guards",
+  "members": [
+    "Test/Data/empty.unk",
+    "Test/testlib/__init__.py"
+  ],
+  "cause": ".NET TarReader exposes null DataStream for regular empty files; Length0 and primary Gitblob must still verify",
+  "status": "STATIC TAR READER EDGE CASE; EXTRACTION NOT STARTED"
+}

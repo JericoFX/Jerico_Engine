@@ -1,0 +1,23 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/astc-native-consumer-rev1
+    Start 1: JE.LocalPackages.ASTC.ldr8
+1/9 Test #1: JE.LocalPackages.ASTC.ldr8 .......   Passed    0.24 sec
+    Start 2: JE.LocalPackages.ASTC.ldr16
+2/9 Test #2: JE.LocalPackages.ASTC.ldr16 ......   Passed    0.01 sec
+    Start 3: JE.LocalPackages.ASTC.ldr32
+3/9 Test #3: JE.LocalPackages.ASTC.ldr32 ......   Passed    0.01 sec
+    Start 4: JE.LocalPackages.ASTC.srgb
+4/9 Test #4: JE.LocalPackages.ASTC.srgb .......   Passed    0.01 sec
+    Start 5: JE.LocalPackages.ASTC.hdr-rgb
+5/9 Test #5: JE.LocalPackages.ASTC.hdr-rgb ....   Passed    0.01 sec
+    Start 6: JE.LocalPackages.ASTC.hdr
+6/9 Test #6: JE.LocalPackages.ASTC.hdr ........   Passed    0.01 sec
+    Start 7: JE.LocalPackages.ASTC.normal
+7/9 Test #7: JE.LocalPackages.ASTC.normal .....   Passed    0.01 sec
+    Start 8: JE.LocalPackages.ASTC.invalid
+8/9 Test #8: JE.LocalPackages.ASTC.invalid ....   Passed    0.01 sec
+    Start 9: JE.LocalPackages.ASTC.cli
+9/9 Test #9: JE.LocalPackages.ASTC.cli ........   Passed    0.03 sec
+
+100% tests passed, 0 tests failed out of 9
+
+Total Test time (real) =   0.38 sec
