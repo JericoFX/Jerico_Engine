@@ -1,0 +1,932 @@
+{
+  "repository": "KhronosGroup/SPIRV-Headers",
+  "commit": "3469b164e25cee24435029a569933cb42578db5d",
+  "archiveSHA256": "1dc0550f1dd5655c6560e1082c4a06e6a0161cbeb2f0f496453892fbbf3c2d7e",
+  "root": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d",
+  "entryCount": 117,
+  "fileCount": 98,
+  "fileBytes": 3186153.0,
+  "linkCount": 0,
+  "paxMetadata": [
+    {
+      "comment": "3469b164e25cee24435029a569933cb42578db5d",
+      "name": "pax_global_header",
+      "materialized": false,
+      "type": "GlobalExtendedAttributes"
+    }
+  ],
+  "violations": [],
+  "pinnedPrimaryTextComparisons": [
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "4a74b4ce309057f9cb954200bb504e44a52ef719bedca68ccd811169a77397a1",
+      "path": "CMakeLists.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "9b243f6f0bf44e295ff411a0f7b7642d1d0dff7cdc42507e9f7206f439e51b5a",
+      "path": "LICENSE"
+    }
+  ],
+  "fullPrimaryGitTree": "NOT YET AVAILABLE; measured Gitblobs are not claimed as primary-tree matches",
+  "entries": [
+    {
+      "path": "",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".gitattributes",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 72,
+      "sha256": "0bfa620beefedeab026b247a8282e483c225b491f5d7c5bbee741fbbb9e62b81",
+      "measuredGitBlobSHA1": "3fa5aaf16554f550a2602e177f1e731fdac26e47"
+    },
+    {
+      "path": ".github",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/.github/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/workflows",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/.github/workflows/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/workflows/presubmit.yml",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/.github/workflows/presubmit.yml",
+      "type": "RegularFile",
+      "bytes": 3994,
+      "sha256": "badfe8f65fdf9a1b320aa4c870e916506fd501e42743e9c74891b662fb68fb1f",
+      "measuredGitBlobSHA1": "306f50ee575f37b94f5932ecc6230a77f7c869f9"
+    },
+    {
+      "path": ".gitignore",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/.gitignore",
+      "type": "RegularFile",
+      "bytes": 20,
+      "sha256": "02ef26c1818fbf294636d85c15deb9bf59c82bc4df27c56f79184171234c1bd3",
+      "measuredGitBlobSHA1": "f33592c908c0875e2dcd6806e6e2df4f42c3f84b"
+    },
+    {
+      "path": "BUILD.bazel",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/BUILD.bazel",
+      "type": "RegularFile",
+      "bytes": 4626,
+      "sha256": "ddd96e23def7533a6c45d0582603959c5d9cc94c3e5bad9bee19c25d1464128c",
+      "measuredGitBlobSHA1": "c898ade80a924754b9361bb6dffb3f623cfb2611"
+    },
+    {
+      "path": "BUILD.gn",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/BUILD.gn",
+      "type": "RegularFile",
+      "bytes": 1930,
+      "sha256": "f2885ca1b08c5b34446ad39afcadf2487a9155a7749948f218ece46054d1fb47",
+      "measuredGitBlobSHA1": "be3f43b3f1e07b16a1ccc95f4ef3b5cb1b130640"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 3247,
+      "sha256": "4a74b4ce309057f9cb954200bb504e44a52ef719bedca68ccd811169a77397a1",
+      "measuredGitBlobSHA1": "e3d76d9446b4f3d7b2daea1375f743938c76dda0"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/CODE_OF_CONDUCT.md",
+      "type": "RegularFile",
+      "bytes": 280,
+      "sha256": "a25e58cd66a9543e1500db9a5c3c027e874893ad1a264530bf26eb10918b5d80",
+      "measuredGitBlobSHA1": "a11610bd300bc0ad8135cda4ccc581dda85e0e57"
+    },
+    {
+      "path": "LICENSE",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/LICENSE",
+      "type": "RegularFile",
+      "bytes": 1309,
+      "sha256": "9b243f6f0bf44e295ff411a0f7b7642d1d0dff7cdc42507e9f7206f439e51b5a",
+      "measuredGitBlobSHA1": "47974f8ce39c18b2809be2131cdd6f8a699c5a5a"
+    },
+    {
+      "path": "README.md",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/README.md",
+      "type": "RegularFile",
+      "bytes": 7735,
+      "sha256": "19a4a100883106908eb0333604a16d8e5164de4954b9c0cc4dcb2f4e55871bba",
+      "measuredGitBlobSHA1": "8c7039f7d11163dc320e9e774dc111edf50260b3"
+    },
+    {
+      "path": "WORKSPACE",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/WORKSPACE",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "measuredGitBlobSHA1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "cmake",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/cmake/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "cmake/SPIRV-Headers.pc.in",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/cmake/SPIRV-Headers.pc.in",
+      "type": "RegularFile",
+      "bytes": 194,
+      "sha256": "4b4feafea8ed648cd513ca2bf70a28e907324b317b4095092262981ab4e9a3a7",
+      "measuredGitBlobSHA1": "843b0a7e7a621b7ba18399dc904727b85fd6851a"
+    },
+    {
+      "path": "include",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/spirv",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/spirv/1.0",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/spirv/1.0/GLSL.std.450.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/GLSL.std.450.h",
+      "type": "RegularFile",
+      "bytes": 4127,
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "measuredGitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8"
+    },
+    {
+      "path": "include/spirv/1.0/OpenCL.std.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/OpenCL.std.h",
+      "type": "RegularFile",
+      "bytes": 4788,
+      "sha256": "1bf64f1224a5368b7ae8182a5f9ebb29ebda56c43ddf1a387220c248a4963e49",
+      "measuredGitBlobSHA1": "19a6688490c76d13c77eb59843120eee7684f46e"
+    },
+    {
+      "path": "include/spirv/1.0/extinst.glsl.std.450.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/extinst.glsl.std.450.grammar.json",
+      "type": "RegularFile",
+      "bytes": 14747,
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "measuredGitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80"
+    },
+    {
+      "path": "include/spirv/1.0/extinst.opencl.std.100.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/extinst.opencl.std.100.grammar.json",
+      "type": "RegularFile",
+      "bytes": 29376,
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "measuredGitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.core.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.core.grammar.json",
+      "type": "RegularFile",
+      "bytes": 164356,
+      "sha256": "0ee6f4207abffdfb13cd0ef3f3166eb56c58282df970325f87371538b98c2b55",
+      "measuredGitBlobSHA1": "f3cfc4c299bffa83e69163d3429cc7ee19e5e14d"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.cs",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.cs",
+      "type": "RegularFile",
+      "bytes": 30372,
+      "sha256": "7ae09b3799f6d533765d1f321a4f2e2fce46e48ded27308d5bd3adffb1b4ec42",
+      "measuredGitBlobSHA1": "de325cc4aad5bfc2f8f5c50ac8e3c0c254b6e337"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.h",
+      "type": "RegularFile",
+      "bytes": 33460,
+      "sha256": "2d5012f7c72d90550f288d9a8f7d8bf4fab85522d42b9e25240d68bac5bbda7b",
+      "measuredGitBlobSHA1": "bd5a9b9593aa4fd5725c07bd0deec6bbc9bdfec2"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.hpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.hpp",
+      "type": "RegularFile",
+      "bytes": 30970,
+      "sha256": "6a788efe40b59ae770bed56072b9c65cb2d998a0ccc706e849082835ecf7ab26",
+      "measuredGitBlobSHA1": "e98a89cee74b5ce077eac5f8c4836acfa784f045"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.hpp11",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.hpp11",
+      "type": "RegularFile",
+      "bytes": 25436,
+      "sha256": "a7d79fd03dd5a8e7a2b543415e804d0f47fa0c68d13bc3b2163caadcf7a5c938",
+      "measuredGitBlobSHA1": "8896e81b7c40ab422787dac4a8b3cda9032f65e1"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.json",
+      "type": "RegularFile",
+      "bytes": 39137,
+      "sha256": "0d65e97a7ddb2e987fef1e58bf0ff32de2c9475c1e9aa7557c88dd7b37906206",
+      "measuredGitBlobSHA1": "9b0a8f3de2840d0816f4fae09d1ba19bfa07c07b"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.lua",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.lua",
+      "type": "RegularFile",
+      "bytes": 25964,
+      "sha256": "02828ad5fba2cb80313cbc888ab8e5a97bb46071b078073c5e5c48ae8ec6d6a0",
+      "measuredGitBlobSHA1": "2bd33ba082b7f99f4da151ed980ec0a7640e4746"
+    },
+    {
+      "path": "include/spirv/1.0/spirv.py",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.0/spirv.py",
+      "type": "RegularFile",
+      "bytes": 27578,
+      "sha256": "f26b9f9ed7df9c95004953662547c26b63ccda8a04e4260a883a6c891e4e1be5",
+      "measuredGitBlobSHA1": "8a200e7655f8486150be7afbe2848b4046c1524d"
+    },
+    {
+      "path": "include/spirv/1.1",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/spirv/1.1/GLSL.std.450.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/GLSL.std.450.h",
+      "type": "RegularFile",
+      "bytes": 4127,
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "measuredGitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8"
+    },
+    {
+      "path": "include/spirv/1.1/OpenCL.std.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/OpenCL.std.h",
+      "type": "RegularFile",
+      "bytes": 4788,
+      "sha256": "1bf64f1224a5368b7ae8182a5f9ebb29ebda56c43ddf1a387220c248a4963e49",
+      "measuredGitBlobSHA1": "19a6688490c76d13c77eb59843120eee7684f46e"
+    },
+    {
+      "path": "include/spirv/1.1/extinst.glsl.std.450.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/extinst.glsl.std.450.grammar.json",
+      "type": "RegularFile",
+      "bytes": 14747,
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "measuredGitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80"
+    },
+    {
+      "path": "include/spirv/1.1/extinst.opencl.std.100.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/extinst.opencl.std.100.grammar.json",
+      "type": "RegularFile",
+      "bytes": 29376,
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "measuredGitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.core.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.core.grammar.json",
+      "type": "RegularFile",
+      "bytes": 169138,
+      "sha256": "1c1fdaf1c7f5a5e43368e9058158f9dfa8818fa2af9690969479eafdd3a312e8",
+      "measuredGitBlobSHA1": "c142e60a1750476bab9c4c85a33d5035eb32334e"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.cs",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.cs",
+      "type": "RegularFile",
+      "bytes": 31200,
+      "sha256": "35b7d6589f7af7ddfc7cb767087ed91bc995e9cbdcd10720c87ff017908ade9e",
+      "measuredGitBlobSHA1": "99194e51450382108b0650b004419099fcfe9104"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.h",
+      "type": "RegularFile",
+      "bytes": 34331,
+      "sha256": "bff97d2f7597ed7e7e179cd989e92746e3baba2244b4845cf81fc3a1e0199475",
+      "measuredGitBlobSHA1": "971c3be6d25db99494e0f2ff78bf64b87c99ad25"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.hpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.hpp",
+      "type": "RegularFile",
+      "bytes": 31775,
+      "sha256": "ad8ba5758ef28fc5cecbc2a7b794f3ee6f3aa06f4b5c05c6bd07e65ae0c14395",
+      "measuredGitBlobSHA1": "c26ac1f26c6d6d9667adde4e0ac4ff7e9a067144"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.hpp11",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.hpp11",
+      "type": "RegularFile",
+      "bytes": 26087,
+      "sha256": "56600c2401e908e17828fcba3a5a6605116e7050892d171978318a7d5097d22f",
+      "measuredGitBlobSHA1": "992d43b5f5426f265c1b2967a06465457a27a2db"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.json",
+      "type": "RegularFile",
+      "bytes": 40057,
+      "sha256": "ca2fcda12f1f74521a0be893fbf21c286ed492f0052f48fb5b9f656dcd3c2550",
+      "measuredGitBlobSHA1": "4c18e0192a365ef2021f6540e390de8f85350e9a"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.lua",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.lua",
+      "type": "RegularFile",
+      "bytes": 26704,
+      "sha256": "7c3799f2b35d7ef50f601f921373bf41774d4ba5d6d5b6f07e77e876d4970150",
+      "measuredGitBlobSHA1": "ad34e0abe9d587b401e613b24280148dae51fae1"
+    },
+    {
+      "path": "include/spirv/1.1/spirv.py",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.1/spirv.py",
+      "type": "RegularFile",
+      "bytes": 28362,
+      "sha256": "80b42128a214bb2639f3f459a2550347dec71eedd96028f48d5c529fb1d063aa",
+      "measuredGitBlobSHA1": "519a59710d192975db1d67aec6cf552168995367"
+    },
+    {
+      "path": "include/spirv/1.2",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/spirv/1.2/GLSL.std.450.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/GLSL.std.450.h",
+      "type": "RegularFile",
+      "bytes": 4127,
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "measuredGitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8"
+    },
+    {
+      "path": "include/spirv/1.2/OpenCL.std.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/OpenCL.std.h",
+      "type": "RegularFile",
+      "bytes": 4788,
+      "sha256": "1bf64f1224a5368b7ae8182a5f9ebb29ebda56c43ddf1a387220c248a4963e49",
+      "measuredGitBlobSHA1": "19a6688490c76d13c77eb59843120eee7684f46e"
+    },
+    {
+      "path": "include/spirv/1.2/extinst.glsl.std.450.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/extinst.glsl.std.450.grammar.json",
+      "type": "RegularFile",
+      "bytes": 14747,
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "measuredGitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80"
+    },
+    {
+      "path": "include/spirv/1.2/extinst.opencl.std.100.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/extinst.opencl.std.100.grammar.json",
+      "type": "RegularFile",
+      "bytes": 29376,
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "measuredGitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.core.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.core.grammar.json",
+      "type": "RegularFile",
+      "bytes": 170540,
+      "sha256": "3e04cd2830b382dbbc58bed98bec73d0a90937208fc3219a9a57b3a1149c1d52",
+      "measuredGitBlobSHA1": "393ee3c8497d7574098ce499aab0180275324aa4"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.cs",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.cs",
+      "type": "RegularFile",
+      "bytes": 31407,
+      "sha256": "2a8650a17c7684cf7c7331555c58d6a66a2600fd9b0b8eda8ab0c24b7ca1f422",
+      "measuredGitBlobSHA1": "493303d6ab0827e9ed01daea6e4488e2855fe482"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.h",
+      "type": "RegularFile",
+      "bytes": 34567,
+      "sha256": "6ded440f20b37749d24b5381580e8fc2399131b7eaeafdab620c131c70f751f5",
+      "measuredGitBlobSHA1": "7c6d884d8e491688df2a6238c4dc50a6cb0f3d5f"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.hpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.hpp",
+      "type": "RegularFile",
+      "bytes": 31993,
+      "sha256": "112cbd9795fbc1a200f6945192c37bbad44d87b26a7f3d03e5eb1e8a47431168",
+      "measuredGitBlobSHA1": "57bd97a0210976528d4fd00173a9fac5ce9b40fb"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.hpp11",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.hpp11",
+      "type": "RegularFile",
+      "bytes": 26246,
+      "sha256": "c57d150216560dd5d960efedda1ee410b15d6730574e2156651de6a93a8bea6b",
+      "measuredGitBlobSHA1": "7a875fdb1665ac5975b89509a39f76319bf0781e"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.json",
+      "type": "RegularFile",
+      "bytes": 40318,
+      "sha256": "c305c77c0a57f1abeaae3cd016e2abfb00399931de13453716bb8a65c1524e37",
+      "measuredGitBlobSHA1": "9c0ff0a43e32c8fe0b18db2a073885abb2aff203"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.lua",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.lua",
+      "type": "RegularFile",
+      "bytes": 26887,
+      "sha256": "51f16765ddd90f66f7a08dc29e4fb0d182634b76a1dc2216915d3794d8e3e155",
+      "measuredGitBlobSHA1": "0de507d5c913840ffdd911a43183ed6408005376"
+    },
+    {
+      "path": "include/spirv/1.2/spirv.py",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/1.2/spirv.py",
+      "type": "RegularFile",
+      "bytes": 28557,
+      "sha256": "bd950f3969acb714f97d39a7139e5143ad476bd4337fae9a3aac835f387d9aa6",
+      "measuredGitBlobSHA1": "cefee4d66ac43ae1143f0c7eba943176b65240c5"
+    },
+    {
+      "path": "include/spirv/spir-v.xml",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/spir-v.xml",
+      "type": "RegularFile",
+      "bytes": 21071,
+      "sha256": "8e4f273ff8f08021a40a089798824b1655e1380c5ac2bc565289d00da19cdf2b",
+      "measuredGitBlobSHA1": "b6cad390c1735322f08aea0af0f38285b7046d09"
+    },
+    {
+      "path": "include/spirv/unified1",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/spirv/unified1/AMD_gcn_shader.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/AMD_gcn_shader.h",
+      "type": "RegularFile",
+      "bytes": 1875,
+      "sha256": "922aa9408ddcd848649de14ae3e02a32b6adefab729ce5af221952bd1ef5e2f6",
+      "measuredGitBlobSHA1": "80165ae5c0aebf3e3a8c754ca55e727abcfe316c"
+    },
+    {
+      "path": "include/spirv/unified1/AMD_shader_ballot.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/AMD_shader_ballot.h",
+      "type": "RegularFile",
+      "bytes": 1967,
+      "sha256": "9c95c540630897af919a467c09440cb04fcd01496e8549c135b562b1a2489d3e",
+      "measuredGitBlobSHA1": "8a8bb6eced851e3dff5ff2d98e19b9502f9b8679"
+    },
+    {
+      "path": "include/spirv/unified1/AMD_shader_explicit_vertex_parameter.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/AMD_shader_explicit_vertex_parameter.h",
+      "type": "RegularFile",
+      "bytes": 1986,
+      "sha256": "b9039befe325b98e731f9c8b98b0f210bce0f3471b3372b0df82883173b77a26",
+      "measuredGitBlobSHA1": "12b6480f13c9fb9c2ab302ff52c2f874d4653fe9"
+    },
+    {
+      "path": "include/spirv/unified1/AMD_shader_trinary_minmax.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/AMD_shader_trinary_minmax.h",
+      "type": "RegularFile",
+      "bytes": 2228,
+      "sha256": "f8162f36f169ee8acf79517434bba88937e1f6d82131d7ea739be127836fe82c",
+      "measuredGitBlobSHA1": "1b14997d27b8a95ae50d5aca4672c1d540f39f02"
+    },
+    {
+      "path": "include/spirv/unified1/DebugInfo.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/DebugInfo.h",
+      "type": "RegularFile",
+      "bytes": 4709,
+      "sha256": "89e697068df8d162384e4160af282ae2b730a4842f98119170edd900a2f22588",
+      "measuredGitBlobSHA1": "4657556bf00d82c18aa282e859b8f1462d513e59"
+    },
+    {
+      "path": "include/spirv/unified1/GLSL.std.450.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/GLSL.std.450.h",
+      "type": "RegularFile",
+      "bytes": 4127,
+      "sha256": "20f32378793c5f416bc0704f44345c2a14c99cba3f411e3beaf1bcea372d58ba",
+      "measuredGitBlobSHA1": "54cc00e9a88822aeee4e2f3ecec28de012955bb8"
+    },
+    {
+      "path": "include/spirv/unified1/NonSemanticClspvReflection.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/NonSemanticClspvReflection.h",
+      "type": "RegularFile",
+      "bytes": 4529,
+      "sha256": "adae4943134e4c22932a256c11f7665a1531aa1885cad469bd20e1d76c3f5527",
+      "measuredGitBlobSHA1": "1a31549296809caf2fbbfdb2862ba55df8540dab"
+    },
+    {
+      "path": "include/spirv/unified1/NonSemanticDebugBreak.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/NonSemanticDebugBreak.h",
+      "type": "RegularFile",
+      "bytes": 1854,
+      "sha256": "bdcf2b0bfd97c26c72398b39b160cc5f8e29b46ae268a936b1ff44c98a3a39a3",
+      "measuredGitBlobSHA1": "6ec2b5bb3983e4cb7cd0e766c4d4bd4cd600303f"
+    },
+    {
+      "path": "include/spirv/unified1/NonSemanticDebugPrintf.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/NonSemanticDebugPrintf.h",
+      "type": "RegularFile",
+      "bytes": 1863,
+      "sha256": "d7562ed52341d4619ca2f384ca7190d6faef7cc18897d96cd3e3ef95c5448aa1",
+      "measuredGitBlobSHA1": "83796d75e56afc2f02409f81759678457cd70f71"
+    },
+    {
+      "path": "include/spirv/unified1/NonSemanticShaderDebugInfo100.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/NonSemanticShaderDebugInfo100.h",
+      "type": "RegularFile",
+      "bytes": 7913,
+      "sha256": "59c2fe95a2aff71f03ea0f1a71ca83dcff306248cef2ee99a192da633989b821",
+      "measuredGitBlobSHA1": "c52f32f80908b5b391808e62080f4c2b011de5d1"
+    },
+    {
+      "path": "include/spirv/unified1/OpenCL.std.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/OpenCL.std.h",
+      "type": "RegularFile",
+      "bytes": 9883,
+      "sha256": "c624790ac247e9a81f8681a4fb75cfb888cea20777874e0292ddf09d1c42da00",
+      "measuredGitBlobSHA1": "2745e30df3b6395aa1454e31053727ea0021cdbf"
+    },
+    {
+      "path": "include/spirv/unified1/OpenCLDebugInfo100.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/OpenCLDebugInfo100.h",
+      "type": "RegularFile",
+      "bytes": 6097,
+      "sha256": "0d841058ba4877f7e7793f77a71808dc0c3b662361400d2cef8b63998cfaf35d",
+      "measuredGitBlobSHA1": "e3847c902b6a73cbae3d70811a4b0f1d316f3ce7"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.debuginfo.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.debuginfo.grammar.json",
+      "type": "RegularFile",
+      "bytes": 17321,
+      "sha256": "2b21bd98f4cf07fadc3e37ab44b9d081b3c1cfe7277e9e85b3cdcabd69338461",
+      "measuredGitBlobSHA1": "7d6e8e5b31d833f484d5cbb8219b7dce961f48c5"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.glsl.std.450.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.glsl.std.450.grammar.json",
+      "type": "RegularFile",
+      "bytes": 14747,
+      "sha256": "3bcf78c13b71a9ebba51e890c55f41a5e0f47ba283bc7c08fd7e1344ea5f47a6",
+      "measuredGitBlobSHA1": "3d9f39e76c9c3d30ac0eb013d79a9e74f8317b80"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.nonsemantic.clspvreflection.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.nonsemantic.clspvreflection.grammar.json",
+      "type": "RegularFile",
+      "bytes": 12769,
+      "sha256": "64ae93087f2cd25fec723e591e3ffbd201c8b928f07538e495d60fc1e00874cb",
+      "measuredGitBlobSHA1": "d6499cce1119df179d30ee9950a9d25fd8c2e0c4"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.nonsemantic.debugbreak.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.nonsemantic.debugbreak.grammar.json",
+      "type": "RegularFile",
+      "bytes": 109,
+      "sha256": "1d30fb3a054592f8d749dff42ad4aa4f695bd5f0d4a9cadc70694a1d0cafe23b",
+      "measuredGitBlobSHA1": "ae288833811da558523a29b951f6d12edaed78ea"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.nonsemantic.debugprintf.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.nonsemantic.debugprintf.grammar.json",
+      "type": "RegularFile",
+      "bytes": 254,
+      "sha256": "cee40052315c2eb05472f8eaf6b89a2103924f60960de38b91176daa676a0b06",
+      "measuredGitBlobSHA1": "71fa7112cfedd63e8ea2abde0ec8feed8657549c"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.nonsemantic.shader.debuginfo.100.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.nonsemantic.shader.debuginfo.100.grammar.json",
+      "type": "RegularFile",
+      "bytes": 20683,
+      "sha256": "8be1971b1146be103b2f84a1b07837e9c6d7c05411360cfe80fb7bb55c2477e9",
+      "measuredGitBlobSHA1": "f3621b0b4f8763b97b54d7c542019249c8e00a85"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.opencl.debuginfo.100.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.opencl.debuginfo.100.grammar.json",
+      "type": "RegularFile",
+      "bytes": 19772,
+      "sha256": "2442c2382cfff86d9a2c299cbe3a5b5e80975f012bb635495c707eac252c0965",
+      "measuredGitBlobSHA1": "699fe40369819dba9a856c26e9e435f03504ebf7"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.opencl.std.100.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.opencl.std.100.grammar.json",
+      "type": "RegularFile",
+      "bytes": 29376,
+      "sha256": "b6be3248af8e6150332ec5d9df2e578b364d588c762533831b7550f607a73ff8",
+      "measuredGitBlobSHA1": "4fe45060bb98aca6769d21f9006f859d05f707d0"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.spv-amd-gcn-shader.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.spv-amd-gcn-shader.grammar.json",
+      "type": "RegularFile",
+      "bytes": 535,
+      "sha256": "7b972dba987f7c1fbe45576b6c8519e44ceca376e72149cce6ced715036ea931",
+      "measuredGitBlobSHA1": "e18251bba1b2259347e3a28ab286bfedff8f099e"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.spv-amd-shader-ballot.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.spv-amd-shader-ballot.grammar.json",
+      "type": "RegularFile",
+      "bytes": 1065,
+      "sha256": "e157110872680641caf4f0c85a87c4fd6f938cf44ee2e86aed08e1ad05e10239",
+      "measuredGitBlobSHA1": "62a470eeb658526afe1b9d33c4c37ff1401873d0"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.spv-amd-shader-explicit-vertex-parameter.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.spv-amd-shader-explicit-vertex-parameter.grammar.json",
+      "type": "RegularFile",
+      "bytes": 329,
+      "sha256": "bc1a31468a8bc0f0181f1f9df5670c681a73508e6f5b20c15542afda84e1e9fa",
+      "measuredGitBlobSHA1": "e156b1b6f8170d07a48833437b7ffe0995426fc0"
+    },
+    {
+      "path": "include/spirv/unified1/extinst.spv-amd-shader-trinary-minmax.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/extinst.spv-amd-shader-trinary-minmax.grammar.json",
+      "type": "RegularFile",
+      "bytes": 2620,
+      "sha256": "c00616ee0b00eeec3710fd32dbc26959fcaee50ae7ce3add4d216755c1d48efa",
+      "measuredGitBlobSHA1": "c681976fe9249223f32f22fed03826c9e7439c41"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.bf",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.bf",
+      "type": "RegularFile",
+      "bytes": 76563,
+      "sha256": "edf811218e03aa913c5b43ebd0fc425e855e003a1e9727de15c6f3342d11be95",
+      "measuredGitBlobSHA1": "495d1851a7464f482300d09f286fa862f251fa5f"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.core.grammar.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.core.grammar.json",
+      "type": "RegularFile",
+      "bytes": 486561,
+      "sha256": "775d6a48d33cb752964954838ecc30971014704e5a1697f3052864c8acd0c0d3",
+      "measuredGitBlobSHA1": "3ca127665be353c16c65aa118e197edb756ff40f"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.cs",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.cs",
+      "type": "RegularFile",
+      "bytes": 75160,
+      "sha256": "989ef9a8788882e319a59f24b11d301695b252d7ca2ed0f85269c1b4d4ccf0fe",
+      "measuredGitBlobSHA1": "1e6f0fcaf427c8b283333a552795328d2d71b1f8"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.h",
+      "type": "RegularFile",
+      "bytes": 143302,
+      "sha256": "194a985f5a65705b8949b53642d0de580b8dfbb13bd9d623e0b1fa995f0a5c40",
+      "measuredGitBlobSHA1": "50eb986a88e1083211982b7d1641f1d581ef45a3"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.hpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.hpp",
+      "type": "RegularFile",
+      "bytes": 139915,
+      "sha256": "b9e01ff86f0e7cf9a579b425a3c4f3c1592ff80fd87ab4e48aacafb111c3d976",
+      "measuredGitBlobSHA1": "072373a10f5cd069aec377085025960258597428"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.hpp11",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.hpp11",
+      "type": "RegularFile",
+      "bytes": 130114,
+      "sha256": "cda8e2c907d9a4b8872e157230c63a7889203c720091c2b9292f5a44c91b4450",
+      "measuredGitBlobSHA1": "9788e8b1c91b4cedd0fc2658112819e7e1b7bfe1"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.json",
+      "type": "RegularFile",
+      "bytes": 90512,
+      "sha256": "f224fa9f61425e48d9da6040197a2a210b99b1454135f7e1ee00dfc22ea9d446",
+      "measuredGitBlobSHA1": "b449ef0ec1987b0ef767b6f5fb9971431d23f663"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.lua",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.lua",
+      "type": "RegularFile",
+      "bytes": 66577,
+      "sha256": "c73e78297ff56c01d9857dd98b4a1c0ee0f7751f41c66762a8a1bb200ed9b53c",
+      "measuredGitBlobSHA1": "858fc5d55e33a818c19bd7478f908f2a86aa6be8"
+    },
+    {
+      "path": "include/spirv/unified1/spirv.py",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spirv.py",
+      "type": "RegularFile",
+      "bytes": 70174,
+      "sha256": "befac14ff5936c349cb0895b3483535e15cef2933d9fd836b6f7b96d6c0217db",
+      "measuredGitBlobSHA1": "e4550d167e12d98e4799783c8288ad72450b1d43"
+    },
+    {
+      "path": "include/spirv/unified1/spv.d",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/include/spirv/unified1/spv.d",
+      "type": "RegularFile",
+      "bytes": 59640,
+      "sha256": "4688d02c062bf43a3c147c2bbb9a083878516ea93838e97820355ac72aa32e3e",
+      "measuredGitBlobSHA1": "fac4d46dd566c73fd5f64583ac29aeefd7199840"
+    },
+    {
+      "path": "tests",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 1925,
+      "sha256": "29882382b3a76ec00e2013fa4e9798810a0379ae79c6cdda8d122ca025329b17",
+      "measuredGitBlobSHA1": "6d8609028a5a9547d80ffe8dfe9ca5f005633db8"
+    },
+    {
+      "path": "tests/example.cpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/example.cpp",
+      "type": "RegularFile",
+      "bytes": 1675,
+      "sha256": "0cae2c3f16ee284115befecbae0a925fc5fb83d826ecadc49f8c6725b693cd2d",
+      "measuredGitBlobSHA1": "d79b62f225eacdf4710e4fd10d455e9c130db951"
+    },
+    {
+      "path": "tests/find_package",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/find_package/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/find_package/CMakeLists.txt",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/find_package/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 608,
+      "sha256": "7057839164f238cb360c55c8308835e3618c8b18a5f7252c231cf8aeb0736df0",
+      "measuredGitBlobSHA1": "4735db5b64d5db58fa2b03f3295192f25b3fc90e"
+    },
+    {
+      "path": "tests/pkg_config",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/pkg_config/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/pkg_config/CMakeLists.txt",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tests/pkg_config/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 582,
+      "sha256": "4fd5cd62855344c86a85cc63aa3b2efcff5cbb5d5559904a1dce344d5c7508dd",
+      "measuredGitBlobSHA1": "b2897e288a22c3511a3bd25b05ea1baf97589add"
+    },
+    {
+      "path": "tools",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tools/buildHeaders",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tools/buildHeaders/CMakeLists.txt",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 553,
+      "sha256": "dd49601ca13c80f2ae20da8582df1c8c6f6b0c9019fe2974527d3832297fe828",
+      "measuredGitBlobSHA1": "fa7ef50face45eecbaf552a500745d24fbbe64c9"
+    },
+    {
+      "path": "tools/buildHeaders/bin",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/bin/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tools/buildHeaders/bin/generate_language_headers.py",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/bin/generate_language_headers.py",
+      "type": "RegularFile",
+      "bytes": 8793,
+      "sha256": "a8e8b322f9de7c5203c879ea10f29a496fc905a5dcd63c62fb9f4930dfd3080e",
+      "measuredGitBlobSHA1": "c56780c1cba88e0728f033b64e69e42472e18cd4"
+    },
+    {
+      "path": "tools/buildHeaders/bin/makeExtinstHeaders.py",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/bin/makeExtinstHeaders.py",
+      "type": "RegularFile",
+      "bytes": 1426,
+      "sha256": "daba4884757fc7ba52b9d12a2bcf982ced1d5d906e75381413a9f099a6d986a9",
+      "measuredGitBlobSHA1": "8852d19c8a7d9f682ddf8c655f5fb18fa3aaf15c"
+    },
+    {
+      "path": "tools/buildHeaders/bin/makeHeaders",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/bin/makeHeaders",
+      "type": "RegularFile",
+      "bytes": 200,
+      "sha256": "7183c048c6dea334c45a8a60ba550cb924b2da2d0509ca6501436ca7020777be",
+      "measuredGitBlobSHA1": "7b4959ea07cee225f9f02613ebb90336f6cc7540"
+    },
+    {
+      "path": "tools/buildHeaders/header.cpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/header.cpp",
+      "type": "RegularFile",
+      "bytes": 37075,
+      "sha256": "b004da0960d35bb4d10188b4c378613ac9662ef812880eecf25b4ef5288045b9",
+      "measuredGitBlobSHA1": "4ee358b5d4d8a8117fba1aba43595d89fa1821d8"
+    },
+    {
+      "path": "tools/buildHeaders/header.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/header.h",
+      "type": "RegularFile",
+      "bytes": 2041,
+      "sha256": "4230fc60950a18b78710f769e7e04ea5537d8f72a655d27c7a17b18732682584",
+      "measuredGitBlobSHA1": "1dd6e67b2c76c1a47b2b8e4a3dd8b4f5234a646b"
+    },
+    {
+      "path": "tools/buildHeaders/jsonToSpirv.cpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsonToSpirv.cpp",
+      "type": "RegularFile",
+      "bytes": 27018,
+      "sha256": "1eb8644500973e8ccb8a6dbb0c9091ff82d491fa75739eac7de1e64f77dced64",
+      "measuredGitBlobSHA1": "1f2cb779de41205a8fc01a052589bc446fd14100"
+    },
+    {
+      "path": "tools/buildHeaders/jsonToSpirv.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsonToSpirv.h",
+      "type": "RegularFile",
+      "bytes": 10748,
+      "sha256": "0c3fa69599f008fa3d87d0950fb4e8452c78c551c4e1ea51bb73a5fccf14ad11",
+      "measuredGitBlobSHA1": "a5db3a27a8dc1f07c964ae05d30a15b6e9c3eb9e"
+    },
+    {
+      "path": "tools/buildHeaders/jsoncpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsoncpp/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tools/buildHeaders/jsoncpp/dist",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsoncpp/dist/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tools/buildHeaders/jsoncpp/dist/json",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsoncpp/dist/json/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tools/buildHeaders/jsoncpp/dist/json/json-forwards.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsoncpp/dist/json/json-forwards.h",
+      "type": "RegularFile",
+      "bytes": 8963,
+      "sha256": "4cc0abfdab70d048d8a8e34d9176c5e17be9da833d7d59e7221f7625ed1a889b",
+      "measuredGitBlobSHA1": "ccbdb2b13c3843ae6e0465a25acd5fc72cff649a"
+    },
+    {
+      "path": "tools/buildHeaders/jsoncpp/dist/json/json.h",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsoncpp/dist/json/json.h",
+      "type": "RegularFile",
+      "bytes": 65874,
+      "sha256": "421fcfe4d5db3436950ce090e44cf32e3c1e88e2b4437423903d3a04f7f00385",
+      "measuredGitBlobSHA1": "e01991e0f7585831fc7da3e703a8e5a627d65893"
+    },
+    {
+      "path": "tools/buildHeaders/jsoncpp/dist/jsoncpp.cpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/jsoncpp/dist/jsoncpp.cpp",
+      "type": "RegularFile",
+      "bytes": 147998,
+      "sha256": "53b7bc4bc70a44e2bf76535f95f048e6d0e8c1d6ac3d4d7f4f6558a8fbe6c86e",
+      "measuredGitBlobSHA1": "130491404012e340b0e71f4be52d5afc269058cc"
+    },
+    {
+      "path": "tools/buildHeaders/main.cpp",
+      "archivePath": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d/tools/buildHeaders/main.cpp",
+      "type": "RegularFile",
+      "bytes": 4511,
+      "sha256": "d014849c5c2ebc5e4373820295ecaaf3e954b305e81ca5478cad351b8e7298a9",
+      "measuredGitBlobSHA1": "9a5971408cfd6e3839cadd536fcbd7d17526b584"
+    }
+  ]
+}

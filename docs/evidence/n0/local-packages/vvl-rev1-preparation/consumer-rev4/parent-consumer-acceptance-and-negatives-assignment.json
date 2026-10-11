@@ -1,0 +1,26 @@
+{
+  "status": "PARENT ACTUAL LOG/JUNIT REVIEW; NEGATIVES NATIVE ASSIGNMENT",
+  "originalProducerExit": 0,
+  "originalExtractionExit": 0,
+  "correctedConsumerExits": [
+    0,
+    0,
+    0
+  ],
+  "testCases": 4,
+  "failures": 0,
+  "skipped": 0,
+  "packageFiles": 35,
+  "fixtureFiles": 5,
+  "sourceInputCount": 6471,
+  "retainedRed": true,
+  "archiveRebuild": false,
+  "focalConsumer": "PASS",
+  "packageAcceptance": "Pending11guards and parent final review",
+  "nativeOwner": "Luna",
+  "negativeCommands": 11,
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/RunVvlNegativesParentRev2.ps1",
+  "driverSHA256": "749503F482E9DAC999976336285DA42590D9822D29E28A9B153192F3A50F4F32",
+  "freezeSHA256": "ABE7DE1FB29A4A1296337F756A7AFC4F0E65514948AE8A45A6E99F21F7DF34F2",
+  "review": "Actual4CaseJUnit and LastTest reviewed; exact invalidflags VUID plus runtimePASS both configurations. Generated CTest runtime ENVIRONMENT emptyprivate path only. Strict callback/explicit archived layer intact."
+}

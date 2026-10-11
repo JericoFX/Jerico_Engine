@@ -1,0 +1,33 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-rev1-consumer\package\vulkan-validationlayers\lib\release\VkLayer_khronos_validation.dll
+
+File Type: DLL
+
+  Section contains the following exports for VkLayer_khronos_validation.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+           5 number of functions
+           5 number of names
+
+    ordinal hint RVA      name
+
+          1    0 00AEDAA0 vkEnumerateInstanceExtensionProperties = ?EnumerateInstanceExtensionProperties@vulkan_layer_chassis@@YA?AW4VkResult@@PEBDPEAIPEAUVkExtensionProperties@@@Z (enum VkResult __cdecl vulkan_layer_chassis::EnumerateInstanceExtensionProperties(char const *,unsigned int *,struct VkExtensionProperties *))
+          2    1 00AED9E0 vkEnumerateInstanceLayerProperties = ?EnumerateInstanceLayerProperties@vulkan_layer_chassis@@YA?AW4VkResult@@PEAIPEAUVkLayerProperties@@@Z (enum VkResult __cdecl vulkan_layer_chassis::EnumerateInstanceLayerProperties(unsigned int *,struct VkLayerProperties *))
+          3    2 00B48490 vkGetDeviceProcAddr = vkGetDeviceProcAddr
+          4    3 00B48480 vkGetInstanceProcAddr = vkGetInstanceProcAddr
+          5    4 00B484A0 vkNegotiateLoaderLayerInterfaceVersion = vkNegotiateLoaderLayerInterfaceVersion
+
+  Summary
+
+      104000 .data
+       3F000 .pdata
+      4A8000 .rdata
+       31000 .reloc
+        1000 .rsrc
+     103A000 .text

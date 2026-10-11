@@ -1,0 +1,9 @@
+{
+  "label": "existing-output",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0331059,
+  "expectedError": "output exists; retained attempts are never overwritten",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

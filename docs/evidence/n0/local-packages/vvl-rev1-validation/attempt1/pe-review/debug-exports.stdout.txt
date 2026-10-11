@@ -1,0 +1,36 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-rev1-consumer\package\vulkan-validationlayers\lib\debug\VkLayer_khronos_validation.dll
+
+File Type: DLL
+
+  Section contains the following exports for VkLayer_khronos_validation.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+           5 number of functions
+           5 number of names
+
+    ordinal hint RVA      name
+
+          1    0 0006CBDE vkEnumerateInstanceExtensionProperties = @ILT+441305(vkEnumerateInstanceExtensionProperties)
+          2    1 0003E531 vkEnumerateInstanceLayerProperties = @ILT+251180(vkEnumerateInstanceLayerProperties)
+          3    2 0004FB1F vkGetDeviceProcAddr = @ILT+322330(vkGetDeviceProcAddr)
+          4    3 00076AD0 vkGetInstanceProcAddr = @ILT+481995(vkGetInstanceProcAddr)
+          5    4 0003B615 vkNegotiateLoaderLayerInterfaceVersion = @ILT+239120(vkNegotiateLoaderLayerInterfaceVersion)
+
+  Summary
+
+        1000 .00cfg
+      14F000 .data
+        6000 .idata
+      456000 .pdata
+     2DCF000 .rdata
+       95000 .reloc
+        1000 .rsrc
+     3238000 .text
+        1000 .tls

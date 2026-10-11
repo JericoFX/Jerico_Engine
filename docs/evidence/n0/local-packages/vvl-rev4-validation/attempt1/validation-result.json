@@ -1,0 +1,31 @@
+{
+  "sourceChanges": [],
+  "ctestCases": [
+    "JE.LocalPackages.VVL.release.exports",
+    "JE.LocalPackages.VVL.release.runtime",
+    "JE.LocalPackages.VVL.debug.exports",
+    "JE.LocalPackages.VVL.debug.runtime"
+  ],
+  "commands": [
+    {
+      "label": "configure",
+      "nativeExit": 0,
+      "elapsedSeconds": 5.8598038,
+      "scope": "FOCAL VVL CONSUMER; NOT ROOT/EDITOR ACCEPTANCE"
+    },
+    {
+      "label": "build",
+      "nativeExit": 0,
+      "elapsedSeconds": 2.7328812,
+      "scope": "FOCAL VVL CONSUMER; NOT ROOT/EDITOR ACCEPTANCE"
+    },
+    {
+      "label": "ctest",
+      "nativeExit": 0,
+      "elapsedSeconds": 4.3141588,
+      "scope": "FOCAL VVL CONSUMER; NOT ROOT/EDITOR ACCEPTANCE"
+    }
+  ],
+  "status": "FOCAL FOUR CASES PASS; PARENT/GUARDS/ROOT/EDITOR PENDING",
+  "packageRebuilt": false
+}

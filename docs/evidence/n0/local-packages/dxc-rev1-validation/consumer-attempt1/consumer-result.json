@@ -1,0 +1,30 @@
+{
+  "engineAccepted": false,
+  "changedPaths": [],
+  "rootExecuted": false,
+  "cases": [],
+  "payloadStatus": "PASS",
+  "nativeResults": {
+    "archiveAudit": {
+      "nativeExit": 0,
+      "elapsedSeconds": 0.4777378
+    },
+    "extraction": {
+      "nativeExit": 0,
+      "elapsedSeconds": 0.4783017
+    },
+    "configure": {
+      "nativeExit": 0,
+      "elapsedSeconds": 5.8874876
+    },
+    "build": {
+      "nativeExit": 0,
+      "elapsedSeconds": 3.9452816
+    },
+    "ctest": {
+      "nativeExit": 8,
+      "elapsedSeconds": 0.1512941
+    }
+  },
+  "status": "FAIL; RETAIN ACTUAL RESULTS"
+}

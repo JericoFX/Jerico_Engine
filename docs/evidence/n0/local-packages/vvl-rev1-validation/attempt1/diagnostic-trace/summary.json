@@ -1,0 +1,18 @@
+[
+  {
+    "label": "configure",
+    "nativeExit": 0,
+    "elapsedSeconds": 5.8047633,
+    "stdoutBytes": 610,
+    "stderrBytes": 479,
+    "status": "PASS"
+  },
+  {
+    "label": "build",
+    "nativeExit": 1,
+    "elapsedSeconds": 0.1517685,
+    "stdoutBytes": 175,
+    "stderrBytes": 0,
+    "status": "FAIL"
+  }
+]

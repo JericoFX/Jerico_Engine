@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: audited external Python3 generation tool file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/missing-python.exe
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake:43 (JE_python_verify_file)
+
+

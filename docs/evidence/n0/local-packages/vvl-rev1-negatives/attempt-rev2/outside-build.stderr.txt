@@ -1,0 +1,4 @@
+CMake Error at cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake:18 (message):
+  JE VVL: output must be beneath this checkout/build
+
+

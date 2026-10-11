@@ -1,0 +1,261 @@
+--- a/Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp
++++ b/Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp
+@@ -100,6 +100,7 @@
+ AZ_PUSH_DISABLE_WARNING(4127, "-Wunknown-warning-option") // Conditional expression is constant.
+ AZ_PUSH_DISABLE_WARNING(, "-Wdeprecated-literal-operator") // OpenMesh\Core\Geometry\Vector11T.hh uses deprecated literal operator
+ #include <OpenMesh/Core/IO/MeshIO.hh>
++#include <OpenMesh/Core/IO/OMFormat.hh>
+ #include <OpenMesh/Core/IO/SR_binary.hh>
+ #include <OpenMesh/Core/IO/importer/ImporterT.hh>
+ #include <OpenMesh/Core/Mesh/Traits.hh>
+@@ -111,6 +112,125 @@
+ AZ_POP_DISABLE_WARNING
+ AZ_POP_DISABLE_WARNING
+ 
++namespace JE::BSP
++{
++    namespace
++    {
++        // Preflight the two identity chunks: OMReader warns/skips a bad custom block
++        // without failing the read. Geometry and polygon decoding remain OpenMesh's.
++        bool ValidateSurfaceChunks(const std::string& bytes, const char* highName, const char* lowName)
++        {
++            namespace IO = OpenMesh::IO;
++            namespace Format = OpenMesh::IO::OMFormat;
++            using Chunk = Format::Chunk;
++            std::stringstream input(bytes);
++            input >> std::noskipws;
++            const bool swap = OpenMesh::Endian::local() == OpenMesh::Endian::MSB;
++            const auto available = [&]() -> size_t
++            {
++                const auto position = input.tellg();
++                return position < 0 ? 0 : bytes.size() - static_cast<size_t>(position);
++            };
++            const auto skip = [&](size_t count)
++            {
++                if (count > available()) { return false; }
++                input.seekg(static_cast<std::streamoff>(count), std::ios_base::cur);
++                return input.good();
++            };
++            const auto readName = [&](Chunk::PropertyName& name)
++            {
++                if (available() == 0) { return false; }
++                const auto length = static_cast<size_t>(static_cast<unsigned char>(input.peek()));
++                if (length + 1 > available()) { return false; }
++                return IO::restore(input, name, swap) == length + 1 && input.good() && name.size() == length;
++            };
++            Format::Header header{};
++            if (available() < Format::header_size() || !IO::restore(input, header, swap) || !input.good() ||
++                header.magic_[0] != 'O' || header.magic_[1] != 'M' ||
++                (header.mesh_ != 'T' && header.mesh_ != 'Q' && header.mesh_ != 'P') ||
++                header.version_ > Format::mk_version(2, 2)) { return false; }
++            bool highSeen = false;
++            bool lowSeen = false;
++            while (available() != 0)
++            {
++                Chunk::Header chunk{};
++                if (available() < Format::chunk_header_size() || !IO::restore(input, chunk, swap) || !input.good()) { return false; }
++                if (chunk.entity_ == Chunk::Entity_Sentinel) { return !chunk.name_ && available() == 0 && highSeen == lowSeen; }
++                uint64_t count = 0;
++                switch (chunk.entity_)
++                {
++                case Chunk::Entity_Vertex: count = header.n_vertices_; break;
++                case Chunk::Entity_Face: count = header.n_faces_; break;
++                case Chunk::Entity_Edge: count = header.n_edges_; break;
++                case Chunk::Entity_Halfedge: count = static_cast<uint64_t>(header.n_edges_) * 2; break;
++                case Chunk::Entity_Mesh: count = 1; break;
++                default: return false;
++                }
++                Chunk::PropertyName name;
++                if (chunk.name_ && !readName(name)) { return false; }
++                const bool isHigh = name == highName;
++                const bool isLow = name == lowName;
++                if ((isHigh || isLow) && (chunk.entity_ != Chunk::Entity_Face || chunk.type_ != Chunk::Type_Custom)) { return false; }
++                if (chunk.type_ == Chunk::Type_Custom)
++                {
++                    Chunk::PropertyName type;
++                    if (header.version_ > Format::mk_version(2, 1) && !readName(type)) { return false; }
++                    Chunk::esize_t blockSize = 0;
++                    if (available() < IO::size_of<Chunk::esize_t>() || !IO::restore(input, blockSize, swap) || !input.good()) { return false; }
++                    if (isHigh || isLow)
++                    {
++                        bool& seen = isHigh ? highSeen : lowSeen;
++                        if (seen || type != IO::binary<uint64_t>::type_identifier() ||
++                            static_cast<uint64_t>(blockSize) != static_cast<uint64_t>(header.n_faces_) * IO::size_of<uint64_t>()) { return false; }
++                        seen = true;
++                    }
++                    if (!skip(blockSize)) { return false; }
++                    continue;
++                }
++                // OMFormat::scalar_size has integer/float widths reversed in OpenMesh 11.
++                // Use the original enum meanings and IO sizes, matching OMReader/OMWriter.
++                size_t scalarSize = 0;
++                if (chunk.float_)
++                {
++                    switch (chunk.bits_)
++                    {
++                    case Chunk::Float_32: scalarSize = IO::size_of<float>(); break;
++                    case Chunk::Float_64: scalarSize = IO::size_of<double>(); break;
++                    default: return false; // OMReader position/normal paths do not support Float_128.
++                    }
++                }
++                else
++                {
++                    switch (chunk.bits_)
++                    {
++                    case Chunk::Integer_8: scalarSize = IO::size_of<uint8_t>(); break;
++                    case Chunk::Integer_16: scalarSize = IO::size_of<uint16_t>(); break;
++                    case Chunk::Integer_32: scalarSize = IO::size_of<uint32_t>(); break;
++                    case Chunk::Integer_64: scalarSize = IO::size_of<uint64_t>(); break;
++                    }
++                }
++                if (scalarSize == 0) { return false; }
++                if (chunk.entity_ == Chunk::Entity_Face && chunk.type_ == Chunk::Type_Topology && header.version_ < Format::mk_version(2, 0))
++                {
++                    // Match OMReader's old indexed-face topology, including variable polygons.
++                    for (uint64_t face = 0; face < count; ++face)
++                    {
++                        size_t vertices = header.mesh_ == 'T' ? 3 : 4;
++                        if (header.mesh_ == 'P' && (available() < IO::size_of<uint16_t>() ||
++                            !IO::restore(input, vertices, Chunk::Integer_16, swap) || !input.good())) { return false; }
++                        if (vertices > available() / scalarSize || !skip(vertices * scalarSize)) { return false; }
++                    }
++                    continue;
++                }
++                const size_t vectorSize = Format::dimensions(chunk) * scalarSize;
++                if (count > available() / vectorSize || !skip(static_cast<size_t>(count) * vectorSize)) { return false; }
++            }
++            // Preserve upstream complete-chunk EOF behavior for older .om versions.
++            return header.version_ <= Format::mk_version(2, 1) && highSeen == lowSeen;
++        }
++    }
++}
++
+ AZ_DECLARE_BUDGET_SHARED(AzToolsFramework);
+ namespace OpenMesh
+ {
+@@ -3573,6 +3693,8 @@
+             AZStd::lock_guard lg(g_omSerializationLock);
+             OpenMesh::IO::Options options{OpenMesh::IO::Options::FaceTexCoord | OpenMesh::IO::Options::FaceNormal | OpenMesh::IO::Options::Custom};
+             const std::string sourceBytes{std::istreambuf_iterator<char>(input), std::istreambuf_iterator<char>()};
++            if (sourceBytes.empty()) { return ReadResult::Empty; }
++            if (!JE::BSP::ValidateSurfaceChunks(sourceBytes, SurfaceIdHighProp, SurfaceIdLowProp)) { return ReadResult::Error; }
+             std::stringstream sourceStream(sourceBytes);
+             sourceStream >> std::noskipws;
+             auto candidate = CreateWhiteBoxMesh();
+--- a/Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h
++++ b/Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h
+@@ -783,7 +783,7 @@
+         //! Take an input stream of bytes and create a white box mesh from the deserialized data.
+         //! @return Will return ReadResult::Full if the white box mesh stream was filled with data and
+         //! the white box mesh was initialized, ReadResult::Empty if white box mesh stream did not contain
++        //! any data (the existing white box mesh is preserved) or ReadResult::Error if any error was encountered
+-        //! any data (white box mesh will be left empty) or ReadResult::Error if any error was encountered
+         //! during deserialization.
+         //! @note A white box mesh must have been created first.
+         ReadResult ReadMesh(WhiteBoxMesh& whiteBox, const WhiteBoxMeshStream& input);
+@@ -791,7 +791,7 @@
+         //! Take an input stream and create a white box mesh from the deserialized data.
+         //! @return Will return ReadResult::Full if the white box mesh stream was filled with data and
+         //! the white box mesh was initialized, ReadResult::Empty if white box mesh stream did not contain
++        //! any data (the existing white box mesh is preserved) or ReadResult::Error if any error was encountered
+-        //! any data (white box mesh will be left empty) or ReadResult::Error if any error was encountered
+         //! during deserialization.
+         //! @note The input stream must not skip white space characters (std::noskipws must be set on the stream).
+         //! Old .om files without surface properties derive stable UUIDs from the original
+--- a/Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp
++++ b/Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp
+@@ -86,6 +86,93 @@
+         }
+     }
+ 
++    TEST_F(WhiteBoxTestFixture, DamagedSurfacePropertyChunksPreserveDestination)
++    {
++        namespace Api = WhiteBox::Api;
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        Api::WhiteBoxMeshStream snapshot;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, snapshot));
++        for (const char* name : {"je-surface-id-high", "je-surface-id-low"})
++        {
++            // Mutate a known-good writer fixture; production validation walks chunk headers.
++            const AZStd::string propertyName(name);
++            const auto found = AZStd::search(snapshot.begin(), snapshot.end(), propertyName.begin(), propertyName.end());
++            ASSERT_NE(found, snapshot.end());
++            const size_t nameOffset = static_cast<size_t>(found - snapshot.begin());
++            ASSERT_GE(nameOffset, 3);
++            ASSERT_EQ(snapshot[nameOffset - 1], propertyName.size());
++            const size_t typeOffset = nameOffset + propertyName.size();
++            const size_t sizeOffset = typeOffset + 1 + snapshot[typeOffset];
++            ASSERT_LE(sizeOffset + 4, snapshot.size());
++            uint32_t dataSize = 0;
++            for (unsigned int i = 0; i < 4; ++i) { dataSize |= static_cast<uint32_t>(snapshot[sizeOffset + i]) << (i * 8); }
++            ASSERT_EQ(dataSize, Api::MeshFaceCount(*m_whiteBox) * sizeof(uint64_t));
++            const size_t payloadEnd = sizeOffset + 4 + dataSize;
++            ASSERT_LE(payloadEnd, snapshot.size());
++            auto expectRejected = [&](const Api::WhiteBoxMeshStream& damaged)
++            {
++                EXPECT_EQ(Api::ReadMesh(*m_whiteBox, damaged), Api::ReadResult::Error);
++                Api::WhiteBoxMeshStream after;
++                EXPECT_TRUE(Api::WriteMesh(*m_whiteBox, after));
++                EXPECT_EQ(after, snapshot);
++            };
++            auto missingPayload = snapshot;
++            missingPayload.erase(missingPayload.begin() + sizeOffset + 4, missingPayload.begin() + payloadEnd);
++            for (size_t i = 0; i < 4; ++i) { missingPayload[sizeOffset + i] = 0; }
++            expectRejected(missingPayload); // OpenMesh otherwise warns, skips and accepts a zero half.
++            auto wrongType = snapshot;
++            ASSERT_EQ(wrongType[typeOffset], 8);
++            wrongType[typeOffset + 5] = '3';
++            wrongType[typeOffset + 6] = '2'; // A registered, but incorrect uint32_t storage type.
++            expectRejected(wrongType);
++            auto duplicate = snapshot;
++            const Api::WhiteBoxMeshStream chunk(snapshot.begin() + nameOffset - 3, snapshot.begin() + payloadEnd);
++            duplicate.insert(duplicate.begin() + payloadEnd, chunk.begin(), chunk.end());
++            expectRejected(duplicate);
++            auto oversized = snapshot;
++            for (size_t i = 0; i < 4; ++i) { oversized[sizeOffset + i] = 0xff; }
++            expectRejected(oversized);
++            auto truncated = snapshot;
++            truncated.resize(payloadEnd - 1);
++            expectRejected(truncated);
++        }
++    }
++
++    TEST_F(WhiteBoxTestFixture, EmptyInputsPreserveDestinationButSerializedEmptyMeshReplacesIt)
++    {
++        namespace Api = WhiteBox::Api;
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        Api::WhiteBoxMeshStream snapshot;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, snapshot));
++        EXPECT_EQ(Api::ReadMesh(*m_whiteBox, Api::WhiteBoxMeshStream{}), Api::ReadResult::Empty);
++        std::stringstream empty;
++        empty >> std::noskipws;
++        EXPECT_EQ(Api::ReadMesh(*m_whiteBox, empty), Api::ReadResult::Empty);
++        Api::WhiteBoxMeshStream after;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, after));
++        EXPECT_EQ(after, snapshot);
++        auto emptyMesh = Api::CreateWhiteBoxMesh();
++        Api::WhiteBoxMeshStream serializedEmpty;
++        ASSERT_TRUE(Api::WriteMesh(*emptyMesh, serializedEmpty));
++        ASSERT_FALSE(serializedEmpty.empty());
++        EXPECT_EQ(Api::ReadMesh(*m_whiteBox, serializedEmpty), Api::ReadResult::Full);
++        EXPECT_EQ(Api::MeshFaceCount(*m_whiteBox), 0);
++    }
++
++    TEST_F(WhiteBoxTestFixture, SurfaceIdentityAllowsAnEntireZeroHalf)
++    {
++        namespace Api = WhiteBox::Api;
++        const auto polygons = Api::InitializeAsUnitCube(*m_whiteBox);
++        const auto id = AZ::Uuid::CreateString("{00000000-0000-0000-0123-456789ABCDEF}");
++        ASSERT_FALSE(id.IsNull());
++        for (const auto face : polygons.front().m_faceHandles) { Api::SetFaceSurfaceId(*m_whiteBox, face, id); }
++        Api::WhiteBoxMeshStream bytes;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, bytes));
++        auto restored = Api::CreateWhiteBoxMesh();
++        ASSERT_EQ(Api::ReadMesh(*restored, bytes), Api::ReadResult::Full);
++        for (const auto face : polygons.front().m_faceHandles) { EXPECT_EQ(Api::FaceSurfaceId(*restored, face), id); }
++    }
++
+     TEST_F(WhiteBoxTestFixture, SurfaceIdentityAndCornerUVsSurviveCodecAndClone)
+     {
+         namespace Api = WhiteBox::Api;

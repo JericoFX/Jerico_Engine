@@ -1,0 +1,31 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev3-consumer/build
+    Start 1: JE.LocalPackages.VVL.release.exports
+1/4 Test #1: JE.LocalPackages.VVL.release.exports ...   Passed    0.06 sec
+    Start 2: JE.LocalPackages.VVL.release.runtime
+2/4 Test #2: JE.LocalPackages.VVL.release.runtime ...***Failed    0.45 sec
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\ActionRecorder\vulkan_x64\MirillisActionVulkanLayer.json
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\FPS Monitor\tools\fpsmonvk64.json
+VVL VUID-VkInstanceCreateInfo-flags-parameter: Validation Error: [ VUID-VkInstanceCreateInfo-flags-parameter ] Object 0: VK_NULL_HANDLE, type = VK_OBJECT_TYPE_DEVICE; | MessageID = 0x2bfcfba1 | vkCreateInstance: value of pCreateInfo->flags contains flag bits that are not recognized members of VkInstanceCreateFlagBits The Vulkan spec states: flags must be a valid combination of VkInstanceCreateFlagBits values (https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VUID-VkInstanceCreateInfo-flags-parameter)
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\ActionRecorder\vulkan_x64\MirillisActionVulkanLayer.json
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\FPS Monitor\tools\fpsmonvk64.json
+CASE FAIL: valid instance creation
+
+    Start 3: JE.LocalPackages.VVL.debug.exports
+3/4 Test #3: JE.LocalPackages.VVL.debug.exports .....   Passed    0.91 sec
+    Start 4: JE.LocalPackages.VVL.debug.runtime
+4/4 Test #4: JE.LocalPackages.VVL.debug.runtime .....***Failed    2.95 sec
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\ActionRecorder\vulkan_x64\MirillisActionVulkanLayer.json
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\FPS Monitor\tools\fpsmonvk64.json
+VVL VUID-VkInstanceCreateInfo-flags-parameter: Validation Error: [ VUID-VkInstanceCreateInfo-flags-parameter ] Object 0: VK_NULL_HANDLE, type = VK_OBJECT_TYPE_DEVICE; | MessageID = 0x2bfcfba1 | vkCreateInstance: value of pCreateInfo->flags contains flag bits that are not recognized members of VkInstanceCreateFlagBits The Vulkan spec states: flags must be a valid combination of VkInstanceCreateFlagBits values (https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VUID-VkInstanceCreateInfo-flags-parameter)
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\ActionRecorder\vulkan_x64\MirillisActionVulkanLayer.json
+VVL Loader Message: loader_get_json: Failed to open JSON file F:\SteamLibrary\steamapps\common\FPS Monitor\tools\fpsmonvk64.json
+CASE FAIL: valid instance creation
+
+
+50% tests passed, 2 tests failed out of 4
+
+Total Test time (real) =   4.39 sec
+
+The following tests FAILED:
+	  2 - JE.LocalPackages.VVL.release.runtime (Failed)
+	  4 - JE.LocalPackages.VVL.debug.runtime (Failed)

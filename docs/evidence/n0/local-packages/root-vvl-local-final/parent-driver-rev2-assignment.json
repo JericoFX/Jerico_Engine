@@ -1,0 +1,18 @@
+{
+  "status": "PARENT ACTUAL DRIVER DIFF REVIEW; ASSIGN ONE ROOT NATIVE CONFIGURE",
+  "rev1NativeExecuted": false,
+  "rev1DriverSHA256": "54147C92D9E5F495DABA20A155F369B0157ACF2B238C1C7D5DF288A0DF4F333A",
+  "rev2DriverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-vvl-local-final/run-root-configure-vvl-parent-rev2.ps1",
+  "rev2DriverSHA256": "BAC177F29A387A8F6C01A4733AC9C37DD008C24D211BFBD46B846EDFA8FB8492",
+  "hashHelper": "Script local SHA256 stream; same exact SHA comparisons/inventories/guards,8 independent sample comparisons incl2largest inputs",
+  "semanticInverseToRev1": true,
+  "noPreflightPostflightReduced": true,
+  "syntaxErrors": 0,
+  "arguments": 61,
+  "sourceCount": 15597,
+  "freezeSHA256": "C92B8061F8E5E0FB48FBD419DBCB51DA2689355C6F9322B6A9282F4B73FF8A2E",
+  "assignmentSHA256": "7C4BAE03D9641E44F1AE0A4F7DD615081A357DBBAB176FFE5A2FCF55438D572A",
+  "nativeOwner": "Luna",
+  "scope": "Toolversion then originalofflineconfigure; no enginebuild/acceptance; actualfailure and postflight retained",
+  "review": "Rev1 actual diff reviewed against donor: freshoutput/newfreeze,cache34,VVLpair,explicitCMakeSHA and exit. Rev2 only streamhash implementation to avoid PowerShell cmdlet overhead."
+}

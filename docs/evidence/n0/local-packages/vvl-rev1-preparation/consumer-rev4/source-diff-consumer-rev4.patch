@@ -1,0 +1,50 @@
+--- a/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/CMakeLists.txt
++++ b/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/CMakeLists.txt
+@@ -29,1 +29,8 @@
+-enable_testing()
++enable_testing()
++set(JE_EMPTY_IMPLICIT_LAYER_PATH "${CMAKE_CURRENT_BINARY_DIR}/je-vvl-empty-implicit-layers")
++JE_python_require_local_path(JE_EMPTY_IMPLICIT_LAYER_PATH)
++file(MAKE_DIRECTORY "${JE_EMPTY_IMPLICIT_LAYER_PATH}")
++file(GLOB JE_IMPLICIT_LAYER_CONTENTS LIST_DIRECTORIES true "${JE_EMPTY_IMPLICIT_LAYER_PATH}/*")
++if(JE_IMPLICIT_LAYER_CONTENTS)
++    message(FATAL_ERROR "JE VVL consumer implicit layer directory must be empty")
++endif()
+@@ -36,1 +43,5 @@
+-        set_tests_properties(JE.LocalPackages.VVL.${JE_CONFIG}.${JE_CASE} PROPERTIES TIMEOUT 60)
++        set_tests_properties(JE.LocalPackages.VVL.${JE_CONFIG}.${JE_CASE} PROPERTIES TIMEOUT 60)
++        if(JE_CASE STREQUAL "runtime")
++            set_tests_properties(JE.LocalPackages.VVL.${JE_CONFIG}.${JE_CASE} PROPERTIES
++                ENVIRONMENT "VK_IMPLICIT_LAYER_PATH=${JE_EMPTY_IMPLICIT_LAYER_PATH}")
++        endif()
+--- a/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/VulkanValidationLayersConsumer.cpp
++++ b/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/VulkanValidationLayersConsumer.cpp
+@@ -69,1 +69,1 @@
+-        // A raw layer forwards unknown queries through an initialized dispatch chain.
++        // A raw layer forwards unknown queries through an initialized dispatch chain.
+@@ -115,1 +115,1 @@
+-        Require(create && enumerate, "real loader global entry points");
++        Require(create && enumerate, "real loader global entry points");
+@@ -162,1 +162,1 @@
+-        Require(getInstance(instance, "JE_missing_function") == nullptr, "loader unknown instance entry point rejection");
++        Require(getInstance(instance, "JE_missing_function") == nullptr, "loader unknown instance entry point rejection");
+--- a/cmake/Tools/LocalPackages/VulkanValidationLayers/README.md
++++ b/cmake/Tools/LocalPackages/VulkanValidationLayers/README.md
+@@ -48,6 +48,11 @@
+-The exports case checks all five actual exports, the exact layer/API version,
+-enumeration truncation, rejection of an unknown layer/function, and the
+-original version1/version2 loader negotiation behavior. The runtime case
+-loads the archived pair through the existing Vulkan loader, requires the
+-exact `VUID-VkInstanceCreateInfo-flags-parameter` plus rejection for malformed
+-flags, then creates/destroys a valid instance. Failure to load the actual
++The exports case checks all five actual exports, the exact layer/API version,
++enumeration truncation, rejection of an unknown layer, the valid global
++`vkCreateInstance` query, and original version1/version2 loader negotiation.
++The runtime case loads the archived pair through the existing Vulkan loader,
++checks unknown-function rejection for both a global NULL query and a valid
++instance, requires the exact `VUID-VkInstanceCreateInfo-flags-parameter` plus
++rejection for malformed flags, then creates/destroys a valid instance.
++CTest gives only the runtime cases an empty private `VK_IMPLICIT_LAYER_PATH`
++under the consumer build directory, isolating unrelated inherited implicit
++manifests while preserving the explicit package layer and all error checks.
++Failure to load the actual

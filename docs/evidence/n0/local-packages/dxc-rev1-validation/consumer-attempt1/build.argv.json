@@ -1,0 +1,14 @@
+{
+  "workingDirectory": "F:/JericoEngine/JericoEngine",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-native-consumer-rev1",
+    "--config",
+    "Release",
+    "--target",
+    "JEDirectXShaderCompilerDxcConsumer",
+    "--parallel",
+    "6"
+  ]
+}

@@ -1,0 +1,380 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/CMakeLists.txt
+  Generate info tables for SPIR-V vunified1 core instructions and operands.
+  Generate enum-string mapping for SPIR-V vunified1.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate tables based on the SPIR-V XML registry.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate language specific header for DebugInfo.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate language specific header for NonSemanticShaderDebugInfo100.
+  Generate language specific header for OpenCLDebugInfo100.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate extended instruction tables for opencl.debuginfo.100.
+  Generate extended instruction tables for nonsemantic.clspvreflection.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate extended instruction tables for debuginfo.
+  Generate extended instruction tables for nonsemantic.shader.debuginfo.100.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate extended instruction tables for spv-amd-gcn-shader.
+  Generate extended instruction tables for spv-amd-shader-ballot.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate extended instruction tables for spv-amd-shader-explicit-vertex-parameter.
+  Generate extended instruction tables for spv-amd-shader-trinary-minmax.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Update build-version.inc in the SPIRV-Tools build directory (if necessary).
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Generate info tables for GLSL extended instructions and operands vunified1.
+  Generate info tables for OpenCL extended instructions and operands vunified1.
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/CMakeLists.txt
+  pch_source.cpp
+  pch_source.cpp
+  bit_vector.cpp
+  parse_number.cpp
+  string_utils.cpp
+  assembly_grammar.cpp
+  bit_vector.cpp
+  parse_number.cpp
+  string_utils.cpp
+  assembly_grammar.cpp
+  binary.cpp
+  diagnostic.cpp
+  disassemble.cpp
+  binary.cpp
+  diagnostic.cpp
+  disassemble.cpp
+  enum_string_mapping.cpp
+  ext_inst.cpp
+  enum_string_mapping.cpp
+  extensions.cpp
+  libspirv.cpp
+  ext_inst.cpp
+  name_mapper.cpp
+  opcode.cpp
+  extensions.cpp
+  operand.cpp
+  libspirv.cpp
+  name_mapper.cpp
+  opcode.cpp
+  operand.cpp
+  parsed_operand.cpp
+  print.cpp
+  parsed_operand.cpp
+  print.cpp
+  software_version.cpp
+  spirv_endian.cpp
+  spirv_fuzzer_options.cpp
+  spirv_optimizer_options.cpp
+  spirv_reducer_options.cpp
+  spirv_target_env.cpp
+  spirv_validator_options.cpp
+  table.cpp
+  text.cpp
+  software_version.cpp
+  spirv_endian.cpp
+  spirv_fuzzer_options.cpp
+  spirv_optimizer_options.cpp
+  spirv_reducer_options.cpp
+  spirv_target_env.cpp
+  spirv_validator_options.cpp
+  text_handler.cpp
+  table.cpp
+  text.cpp
+  text_handler.cpp
+  validate.cpp
+  validate.cpp
+  validate_adjacency.cpp
+  validate_annotation.cpp
+  validate_adjacency.cpp
+  validate_arithmetics.cpp
+  validate_annotation.cpp
+  validate_arithmetics.cpp
+  validate_atomics.cpp
+  validate_atomics.cpp
+  validate_barriers.cpp
+  validate_barriers.cpp
+  validate_bitwise.cpp
+  validate_builtins.cpp
+  validate_bitwise.cpp
+  validate_capability.cpp
+  validate_builtins.cpp
+  validate_capability.cpp
+  validate_cfg.cpp
+  validate_composites.cpp
+  validate_cfg.cpp
+  validate_constants.cpp
+  validate_conversion.cpp
+  validate_composites.cpp
+  validate_constants.cpp
+  validate_conversion.cpp
+  validate_debug.cpp
+  validate_decorations.cpp
+  validate_derivatives.cpp
+  validate_debug.cpp
+  validate_extensions.cpp
+  validate_decorations.cpp
+  validate_derivatives.cpp
+  validate_extensions.cpp
+  validate_execution_limitations.cpp
+  validate_function.cpp
+  validate_execution_limitations.cpp
+  validate_id.cpp
+  validate_function.cpp
+  validate_image.cpp
+  validate_id.cpp
+  validate_image.cpp
+  validate_interfaces.cpp
+  validate_interfaces.cpp
+  validate_instruction.cpp
+  validate_instruction.cpp
+  validate_layout.cpp
+  validate_literals.cpp
+  validate_layout.cpp
+  validate_logicals.cpp
+  validate_literals.cpp
+  validate_memory.cpp
+  validate_logicals.cpp
+  validate_memory_semantics.cpp
+  validate_memory.cpp
+  validate_memory_semantics.cpp
+  validate_mesh_shading.cpp
+  validate_misc.cpp
+  validate_mode_setting.cpp
+  validate_mesh_shading.cpp
+  validate_misc.cpp
+  validate_mode_setting.cpp
+  validate_non_uniform.cpp
+  validate_primitives.cpp
+  validate_non_uniform.cpp
+  validate_ray_query.cpp
+  validate_ray_tracing.cpp
+  validate_primitives.cpp
+  validate_ray_tracing_reorder.cpp
+  validate_ray_query.cpp
+  validate_ray_tracing.cpp
+  validate_scopes.cpp
+  validate_small_type_uses.cpp
+  validate_ray_tracing_reorder.cpp
+  validate_scopes.cpp
+  validate_type.cpp
+  validate_small_type_uses.cpp
+  basic_block.cpp
+  validate_type.cpp
+  basic_block.cpp
+  construct.cpp
+  function.cpp
+  construct.cpp
+  function.cpp
+  instruction.cpp
+  instruction.cpp
+  validation_state.cpp
+  validation_state.cpp
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/build/Release/spirv-tools/source/Release/SPIRV-Tools-shared.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/build/Release/spirv-tools/source/Release/SPIRV-Tools-shared.exp
+  SPIRV-Tools-static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\Release\SPIRV-Tools.lib
+  SPIRV-Tools-shared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\Release\SPIRV-Tools-shared.dll
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/opt/CMakeLists.txt
+  pch_source_opt.cpp
+  fix_func_call_arguments.cpp
+  aggressive_dead_code_elim_pass.cpp
+  amd_ext_to_khr.cpp
+  analyze_live_input_pass.cpp
+  basic_block.cpp
+  block_merge_pass.cpp
+  block_merge_util.cpp
+  build_module.cpp
+  ccp_pass.cpp
+  cfg_cleanup_pass.cpp
+  cfg.cpp
+  code_sink.cpp
+  combine_access_chains.cpp
+  compact_ids_pass.cpp
+  composite.cpp
+  const_folding_rules.cpp
+  constants.cpp
+  control_dependence.cpp
+  convert_to_sampled_image_pass.cpp
+  convert_to_half_pass.cpp
+  copy_prop_arrays.cpp
+  dataflow.cpp
+  dead_branch_elim_pass.cpp
+  dead_insert_elim_pass.cpp
+  dead_variable_elimination.cpp
+  decoration_manager.cpp
+  debug_info_manager.cpp
+  def_use_manager.cpp
+  desc_sroa.cpp
+  desc_sroa_util.cpp
+  dominator_analysis.cpp
+  dominator_tree.cpp
+  eliminate_dead_constant_pass.cpp
+  eliminate_dead_functions_pass.cpp
+  eliminate_dead_functions_util.cpp
+  eliminate_dead_io_components_pass.cpp
+  eliminate_dead_members_pass.cpp
+  eliminate_dead_output_stores_pass.cpp
+  feature_manager.cpp
+  fix_storage_class.cpp
+  flatten_decoration_pass.cpp
+  fold.cpp
+  folding_rules.cpp
+  fold_spec_constant_op_and_composite_pass.cpp
+  freeze_spec_constant_value_pass.cpp
+  function.cpp
+  graphics_robust_access_pass.cpp
+  if_conversion.cpp
+  inline_exhaustive_pass.cpp
+  inline_opaque_pass.cpp
+  inline_pass.cpp
+  inst_bindless_check_pass.cpp
+  inst_buff_addr_check_pass.cpp
+  inst_debug_printf_pass.cpp
+  instruction.cpp
+  instruction_list.cpp
+  instrument_pass.cpp
+  interface_var_sroa.cpp
+  interp_fixup_pass.cpp
+  ir_context.cpp
+  ir_loader.cpp
+  licm_pass.cpp
+  liveness.cpp
+  local_access_chain_convert_pass.cpp
+  local_redundancy_elimination.cpp
+  local_single_block_elim_pass.cpp
+  local_single_store_elim_pass.cpp
+  loop_dependence.cpp
+  loop_dependence_helpers.cpp
+  loop_descriptor.cpp
+  loop_fission.cpp
+  loop_fusion.cpp
+  loop_fusion_pass.cpp
+  loop_peeling.cpp
+  loop_utils.cpp
+  loop_unroller.cpp
+  loop_unswitch_pass.cpp
+  mem_pass.cpp
+  merge_return_pass.cpp
+  module.cpp
+  optimizer.cpp
+  pass.cpp
+  pass_manager.cpp
+  private_to_local_pass.cpp
+  propagator.cpp
+  reduce_load_size.cpp
+  redundancy_elimination.cpp
+  register_pressure.cpp
+  relax_float_ops_pass.cpp
+  remove_dontinline_pass.cpp
+  remove_duplicates_pass.cpp
+  remove_unused_interface_variables_pass.cpp
+  replace_desc_array_access_using_var_index.cpp
+  replace_invalid_opc.cpp
+  scalar_analysis.cpp
+  scalar_analysis_simplification.cpp
+  scalar_replacement_pass.cpp
+  set_spec_constant_default_value_pass.cpp
+  simplification_pass.cpp
+  spread_volatile_semantics.cpp
+  ssa_rewrite_pass.cpp
+  strength_reduction_pass.cpp
+  strip_debug_info_pass.cpp
+  strip_nonsemantic_info_pass.cpp
+  struct_cfg_analysis.cpp
+  type_manager.cpp
+  types.cpp
+  unify_const_pass.cpp
+  upgrade_memory_model.cpp
+  value_number_table.cpp
+  vector_dce.cpp
+  workaround1209.cpp
+  wrap_opkill.cpp
+  SPIRV-Tools-opt.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\opt\Release\SPIRV-Tools-opt.lib
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/lint/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/diff/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/reduce/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/source/link/CMakeLists.txt
+  diff.cpp
+  linker.cpp
+  pch_source_reduce.cpp
+  change_operand_reduction_opportunity.cpp
+  change_operand_to_undef_reduction_opportunity.cpp
+  conditional_branch_to_simple_conditional_branch_opportunity_finder.cpp
+  conditional_branch_to_simple_conditional_branch_reduction_opportunity.cpp
+  merge_blocks_reduction_opportunity.cpp
+  merge_blocks_reduction_opportunity_finder.cpp
+  operand_to_const_reduction_opportunity_finder.cpp
+  operand_to_undef_reduction_opportunity_finder.cpp
+  operand_to_dominating_id_reduction_opportunity_finder.cpp
+  reducer.cpp
+  reduction_opportunity.cpp
+  reduction_opportunity_finder.cpp
+  reduction_pass.cpp
+  reduction_util.cpp
+  remove_block_reduction_opportunity.cpp
+  remove_block_reduction_opportunity_finder.cpp
+  remove_function_reduction_opportunity.cpp
+  remove_function_reduction_opportunity_finder.cpp
+  remove_instruction_reduction_opportunity.cpp
+  remove_selection_reduction_opportunity.cpp
+  remove_selection_reduction_opportunity_finder.cpp
+  remove_struct_member_reduction_opportunity.cpp
+  remove_unused_instruction_reduction_opportunity_finder.cpp
+  remove_unused_struct_member_reduction_opportunity_finder.cpp
+  simple_conditional_branch_to_branch_opportunity_finder.cpp
+  SPIRV-Tools-link.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\link\Release\SPIRV-Tools-link.lib
+  simple_conditional_branch_to_branch_reduction_opportunity.cpp
+  linter.cpp
+  divergence_analysis.cpp
+  lint_divergent_derivatives.cpp
+  structured_construct_to_block_reduction_opportunity.cpp
+  structured_construct_to_block_reduction_opportunity_finder.cpp
+  structured_loop_to_selection_reduction_opportunity.cpp
+  structured_loop_to_selection_reduction_opportunity_finder.cpp
+  SPIRV-Tools-diff.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\diff\Release\SPIRV-Tools-diff.lib
+  SPIRV-Tools-reduce.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\reduce\Release\SPIRV-Tools-reduce.lib
+  SPIRV-Tools-lint.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\spirv-tools\source\lint\Release\SPIRV-Tools-lint.lib
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-tools/SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74/CMakeLists.txt
+  1>
+  -- Install configuration: "Release"
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools-opt.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-opt/cmake/SPIRV-Tools-optTargets.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-opt/cmake/SPIRV-Tools-optTargets-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-opt/cmake/SPIRV-Tools-optConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools-reduce.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-reduce/cmake/SPIRV-Tools-reduceTarget.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-reduce/cmake/SPIRV-Tools-reduceTarget-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-reduce/cmake/SPIRV-Tools-reduceConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools-link.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-link/cmake/SPIRV-Tools-linkTargets.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-link/cmake/SPIRV-Tools-linkTargets-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-link/cmake/SPIRV-Tools-linkConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools-lint.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-lint/cmake/SPIRV-Tools-lintTargets.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-lint/cmake/SPIRV-Tools-lintTargets-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-lint/cmake/SPIRV-Tools-lintConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools-diff.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-diff/cmake/SPIRV-Tools-diffTargets.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-diff/cmake/SPIRV-Tools-diffTargets-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools-diff/cmake/SPIRV-Tools-diffConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/SPIRV-Tools-shared.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/bin/SPIRV-Tools-shared.dll
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools/cmake/SPIRV-ToolsTarget.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools/cmake/SPIRV-ToolsTarget-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/SPIRV-Tools/cmake/SPIRV-ToolsConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/include/spirv-tools/libspirv.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/include/spirv-tools/libspirv.hpp
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/include/spirv-tools/optimizer.hpp
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/include/spirv-tools/linker.hpp
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/include/spirv-tools/instrument.hpp
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/pkgconfig/SPIRV-Tools.pc
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-tools/lib/pkgconfig/SPIRV-Tools-shared.pc

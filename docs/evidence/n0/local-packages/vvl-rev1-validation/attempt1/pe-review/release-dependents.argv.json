@@ -1,0 +1,8 @@
+{
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-validation\\attempt1\\pe-review",
+  "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+  "argv": [
+    "/dependents",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.dll"
+  ]
+}

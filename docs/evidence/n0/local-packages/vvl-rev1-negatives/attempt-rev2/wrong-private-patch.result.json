@@ -1,0 +1,9 @@
+{
+  "label": "wrong-private-patch",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0297337,
+  "expectedError": "pristine SPIRV version generator SHA256 mismatch",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

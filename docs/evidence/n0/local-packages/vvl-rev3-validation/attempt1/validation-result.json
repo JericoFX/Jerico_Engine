@@ -1,0 +1,26 @@
+{
+  "ctestCases": null,
+  "packageRebuilt": false,
+  "status": "FAIL; RETAIN ACTUAL RESULTS",
+  "sourceChanges": [],
+  "commands": [
+    {
+      "label": "configure",
+      "nativeExit": 0,
+      "elapsedSeconds": 5.8164098,
+      "scope": "FOCAL VVL CONSUMER; NOT ROOT/EDITOR ACCEPTANCE"
+    },
+    {
+      "label": "build",
+      "nativeExit": 0,
+      "elapsedSeconds": 2.7206154,
+      "scope": "FOCAL VVL CONSUMER; NOT ROOT/EDITOR ACCEPTANCE"
+    },
+    {
+      "label": "ctest",
+      "nativeExit": 8,
+      "elapsedSeconds": 4.4237855,
+      "scope": "FOCAL VVL CONSUMER; NOT ROOT/EDITOR ACCEPTANCE"
+    }
+  ]
+}

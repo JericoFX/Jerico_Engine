@@ -1,0 +1,9 @@
+{
+  "label": "missing-archive",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0367886,
+  "expectedError": "vvl exact source archive file is missing",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

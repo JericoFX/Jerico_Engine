@@ -1,0 +1,8 @@
+{
+  "label": "extract-produced-archive",
+  "nativeExit": 0,
+  "elapsedSeconds": 3.6699865,
+  "sampledNativeProcessPeakWorkingSetBytes": 20307968,
+  "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+  "status": "PASS"
+}

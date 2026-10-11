@@ -1,0 +1,551 @@
+{
+  "repository": "KhronosGroup/Vulkan-Utility-Libraries",
+  "commit": "79d5fb108be1a013135d3aa9a88c38f0b0608e87",
+  "archiveSHA256": "e95eebeb3c42e0c965c5d1486a5e1187976614492c18c786618e20d1b05aaffb",
+  "root": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87",
+  "entryCount": 66,
+  "fileCount": 48,
+  "fileBytes": 766919.0,
+  "linkCount": 0,
+  "paxMetadata": [
+    {
+      "comment": "79d5fb108be1a013135d3aa9a88c38f0b0608e87",
+      "name": "pax_global_header",
+      "materialized": false,
+      "type": "GlobalExtendedAttributes"
+    }
+  ],
+  "violations": [],
+  "pinnedPrimaryTextComparisons": [
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "49bb825a08b61a8f9d40e609b59d849a3900df8a776eace30c00168bc61e15c7",
+      "path": "CMakeLists.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "69760673abf91cfd0280ae73739a29c078f493804d9016a122b3b189b48ad6e6",
+      "path": "LICENSE.md"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "c962f8876d9b1ed0d5c3679bd39e5e10e5daef6e266b6074112dc8c5e065e2a2",
+      "path": "include/CMakeLists.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "path": "LICENSES/Apache-2.0.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "a2cf57b7e4da59e0ebe8fa7cc6328a90cdb16d9af2b34b41f292e3e06d9c89c2",
+      "path": "scripts/CMakeLists.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "646b4eb15ce1662a9e75c34e6016628a427a20e1552d1ab7313eab92f01e9dce",
+      "path": "src/CMakeLists.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "589a3109a1766adcefcb547eeebf323af1dd38257358f6118823cc4d0e5fc44e",
+      "path": "src/layer/CMakeLists.txt"
+    }
+  ],
+  "fullPrimaryGitTree": "NOT YET AVAILABLE; measured Gitblobs are not claimed as primary-tree matches",
+  "entries": [
+    {
+      "path": "",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".clang-format",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.clang-format",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "3401a22ec43430c6c753b13b153ba0b566cbbd75da4278234b3a038f64ea1efd",
+      "measuredGitBlobSHA1": "5655ec2421ff7db6b96a1e9597bf374c2fea27f4"
+    },
+    {
+      "path": ".github",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.github/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/workflows",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.github/workflows/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.github/workflows/ci.yml",
+      "type": "RegularFile",
+      "bytes": 2696,
+      "sha256": "6a7753c7d602ef57fe15737094874c4281daac4a9acf3793cb591620edbdad63",
+      "measuredGitBlobSHA1": "1e69892b1d1498406947dbd89073391ac4b3071d"
+    },
+    {
+      "path": ".gitignore",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.gitignore",
+      "type": "RegularFile",
+      "bytes": 197,
+      "sha256": "8bc41959d95b14ecf23b3f6b3cca2b449685c2d359acd8f773463483c741ae33",
+      "measuredGitBlobSHA1": "400987e3886f39b44c0ed2b5763a901d36a7203c"
+    },
+    {
+      "path": ".reuse",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.reuse/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".reuse/dep5",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/.reuse/dep5",
+      "type": "RegularFile",
+      "bytes": 371,
+      "sha256": "5e20204c46cd8de038ee1176c6a72e9453efb20fe2eb6601fb0609f9bebf74c7",
+      "measuredGitBlobSHA1": "5d336fe3e8ceba9df2792cba1e348bbfb1412550"
+    },
+    {
+      "path": "BUILD.gn",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/BUILD.gn",
+      "type": "RegularFile",
+      "bytes": 632,
+      "sha256": "c24be587a8bdb5dc0dd4fce77e17ec118a719eb84a38594b5eb15bbbdf7725f1",
+      "measuredGitBlobSHA1": "8dfa4476783646eeea87497b3e76bc5e9d257b62"
+    },
+    {
+      "path": "BUILD.md",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/BUILD.md",
+      "type": "RegularFile",
+      "bytes": 1501,
+      "sha256": "4c5f930f4e949452e6fd137da753a98d82154900b3c89cfa5fafd2400bb7c450",
+      "measuredGitBlobSHA1": "85e420a1d26148d471373ab103a508df52ff9a65"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 1760,
+      "sha256": "49bb825a08b61a8f9d40e609b59d849a3900df8a776eace30c00168bc61e15c7",
+      "measuredGitBlobSHA1": "bf8c147ae5cc3ef9fd788da5a0132badbc42edd4"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/CODE_OF_CONDUCT.md",
+      "type": "RegularFile",
+      "bytes": 426,
+      "sha256": "2d05e796249e7c8ef5e6f41a56381952021b0a6ff701011555c4be2f6e0da8d9",
+      "measuredGitBlobSHA1": "1374e00194aa944df2e0982f9f9b32fd16adb65f"
+    },
+    {
+      "path": "LICENSE.md",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/LICENSE.md",
+      "type": "RegularFile",
+      "bytes": 304,
+      "sha256": "69760673abf91cfd0280ae73739a29c078f493804d9016a122b3b189b48ad6e6",
+      "measuredGitBlobSHA1": "9c0c5d000ba2720b6594a4fc58dc940dd60a57c1"
+    },
+    {
+      "path": "LICENSES",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/LICENSES/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/LICENSES/Apache-2.0.txt",
+      "type": "RegularFile",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "measuredGitBlobSHA1": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "README.md",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/README.md",
+      "type": "RegularFile",
+      "bytes": 172,
+      "sha256": "95612a450b040d52b9351d42a45eeef7e851f011a1f7b24251abee03538c778f",
+      "measuredGitBlobSHA1": "2a1ad52cfa021cd9c7b0f5d1084032f2bc269dfe"
+    },
+    {
+      "path": "docs",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/docs/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "docs/generated_code.md",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/docs/generated_code.md",
+      "type": "RegularFile",
+      "bytes": 876,
+      "sha256": "cd0812ad67484025e22dcf539d47b9898f0fb94ad22c78d155f268933a2ae6e0",
+      "measuredGitBlobSHA1": "69c8b1f5d241c3ebf81dac7b01a78a74a6afd770"
+    },
+    {
+      "path": "docs/vulkan_layer_settings.md",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/docs/vulkan_layer_settings.md",
+      "type": "RegularFile",
+      "bytes": 177,
+      "sha256": "56e02fd005118397754fe518247a69089644239112715a4b228ca552f5f1cf63",
+      "measuredGitBlobSHA1": "6cd7c055c109b3cda5630c9b79f83f44f11d2133"
+    },
+    {
+      "path": "include",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 401,
+      "sha256": "c962f8876d9b1ed0d5c3679bd39e5e10e5daef6e266b6074112dc8c5e065e2a2",
+      "measuredGitBlobSHA1": "afaed037c3a2efdc9c1a21c711c0a839b3852450"
+    },
+    {
+      "path": "include/vulkan",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/vulkan/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/vulkan/layer",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/vulkan/layer/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/vulkan/layer/vk_layer_settings.h",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/vulkan/layer/vk_layer_settings.h",
+      "type": "RegularFile",
+      "bytes": 1490,
+      "sha256": "20bf0adbac3890ec01634812ebbc6a5d90ab7b5c7487225a5fdda4ff4a13c1e9",
+      "measuredGitBlobSHA1": "c9e55fb06f3fccf97769ab86bd6436f552cdda35"
+    },
+    {
+      "path": "include/vulkan/layer/vk_layer_settings.hpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/vulkan/layer/vk_layer_settings.hpp",
+      "type": "RegularFile",
+      "bytes": 2828,
+      "sha256": "4f9aac09d83b14d9fce3a766c5cf0a9a19ce49b5254fd7e449febb6d09ae1230",
+      "measuredGitBlobSHA1": "bed8239af5e2bfc0e9fadd485bb9907f11a55a7e"
+    },
+    {
+      "path": "include/vulkan/layer/vk_layer_settings_ext.h",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/vulkan/layer/vk_layer_settings_ext.h",
+      "type": "RegularFile",
+      "bytes": 2846,
+      "sha256": "fc4b03cb780473d259cdb150a5647f95bcda2c8e8330fc33c9ffa667d1cb6154",
+      "measuredGitBlobSHA1": "8e91f0763209b97cc3e2df18ca1af5919e0468a2"
+    },
+    {
+      "path": "include/vulkan/vk_enum_string_helper.h",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/include/vulkan/vk_enum_string_helper.h",
+      "type": "RegularFile",
+      "bytes": 473960,
+      "sha256": "8237fd96c73345ee78305b1bc63556e4f5838674e0a40616cbafaacbd9000c57",
+      "measuredGitBlobSHA1": "6e6c0f02f8f84fb1fc562f4455d8de9ca005ecad"
+    },
+    {
+      "path": "scripts",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "scripts/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 4307,
+      "sha256": "a2cf57b7e4da59e0ebe8fa7cc6328a90cdb16d9af2b34b41f292e3e06d9c89c2",
+      "measuredGitBlobSHA1": "4ce30b988026b7a92c5c888a1edadf7817801981"
+    },
+    {
+      "path": "scripts/generate_source.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generate_source.py",
+      "type": "RegularFile",
+      "bytes": 4157,
+      "sha256": "584d9db511ddd6367a05ebc815dcd18a368ddcb7c7873fbb41a0d6590c87478b",
+      "measuredGitBlobSHA1": "fa5d2f0c921a29ff1734d7b7ef087e8e0a30f724"
+    },
+    {
+      "path": "scripts/generators",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generators/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "scripts/generators/base_generator.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generators/base_generator.py",
+      "type": "RegularFile",
+      "bytes": 34802,
+      "sha256": "3d4d4d26a934e9aa4235a8587baf3a488b8f2e5432c510a3e8d6f7dd158f12a9",
+      "measuredGitBlobSHA1": "5134ed2c11b596eb75709b922d216b167703545d"
+    },
+    {
+      "path": "scripts/generators/dispatch_table_helper_generator.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generators/dispatch_table_helper_generator.py",
+      "type": "RegularFile",
+      "bytes": 6600,
+      "sha256": "674cd3ff74c6fa67f0bf59766afdb34fa48a7ad608ca745ab9f37e3f9c1c2bdd",
+      "measuredGitBlobSHA1": "fca1c4b2128615bc03c546e5cf095b1d61a63ab7"
+    },
+    {
+      "path": "scripts/generators/enum_string_helper_generator.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generators/enum_string_helper_generator.py",
+      "type": "RegularFile",
+      "bytes": 4626,
+      "sha256": "62d55fb4502ad0e1393e3b918b9d59d3001cae469ac96a73a01c795418184c83",
+      "measuredGitBlobSHA1": "718b04ce4529d5671b9a28374274b4ea066aecd6"
+    },
+    {
+      "path": "scripts/generators/layer_dispatch_table_generator.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generators/layer_dispatch_table_generator.py",
+      "type": "RegularFile",
+      "bytes": 2024,
+      "sha256": "c3bef31e5717fb92757f749f99a24adb83d1fa52aa91b17c6bed69a725478705",
+      "measuredGitBlobSHA1": "97f7515400b3da00f426c6a216929ae1584f4682"
+    },
+    {
+      "path": "scripts/generators/vulkan_object.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/generators/vulkan_object.py",
+      "type": "RegularFile",
+      "bytes": 12539,
+      "sha256": "53537a015e61d3aa05b6d040c6370a777ad2759e503ce28ce13b413a8d6da8a3",
+      "measuredGitBlobSHA1": "b5741e6e2e22da9d800bb2656778702a68db3f1a"
+    },
+    {
+      "path": "scripts/known_good.json",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/known_good.json",
+      "type": "RegularFile",
+      "bytes": 995,
+      "sha256": "25a5b0158ea5a366527eed366f21936997579742a426574bbd06bc92c48bf7de",
+      "measuredGitBlobSHA1": "0cf8daae057881a2ebd654e655acb487c4d0538d"
+    },
+    {
+      "path": "scripts/update_deps.py",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/scripts/update_deps.py",
+      "type": "RegularFile",
+      "bytes": 27436,
+      "sha256": "4a582211b5f7c7c18b88ada52e0833ec2c0aaf6ad5e62b2a3896d27682c39b2b",
+      "measuredGitBlobSHA1": "86b857b6e735ab81c3a64fe7e7a00f15b8ed264f"
+    },
+    {
+      "path": "src",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "src/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 169,
+      "sha256": "646b4eb15ce1662a9e75c34e6016628a427a20e1552d1ab7313eab92f01e9dce",
+      "measuredGitBlobSHA1": "4176ca8b0546a52bf218bae968a8da1d3c8c281e"
+    },
+    {
+      "path": "src/layer",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "src/layer/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 892,
+      "sha256": "589a3109a1766adcefcb547eeebf323af1dd38257358f6118823cc4d0e5fc44e",
+      "measuredGitBlobSHA1": "e28e0a100aa173bb22a2474015e982fadb097882"
+    },
+    {
+      "path": "src/layer/layer_settings_manager.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/layer_settings_manager.cpp",
+      "type": "RegularFile",
+      "bytes": 11328,
+      "sha256": "9a0e0023c6fdee930ea59763dbce4d47319fd7c0253d0d8c54ef7e4985548b33",
+      "measuredGitBlobSHA1": "a9a6010144a5701fed702028ef65fbc4cab4c986"
+    },
+    {
+      "path": "src/layer/layer_settings_manager.hpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/layer_settings_manager.hpp",
+      "type": "RegularFile",
+      "bytes": 1798,
+      "sha256": "ba3e20ecda1cc47175c7ba518aa19e18a99dd0b28713be9adf10752fa5995327",
+      "measuredGitBlobSHA1": "7c09439d33a32bb45881b28bc62bfeb970bf4e84"
+    },
+    {
+      "path": "src/layer/layer_settings_util.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/layer_settings_util.cpp",
+      "type": "RegularFile",
+      "bytes": 7779,
+      "sha256": "b19d913aa40ea46361dff94adf9b278530cd9f6ceeb24de84ba786e28d5fc603",
+      "measuredGitBlobSHA1": "1b8226dc50876a75eb0d7ea0f8182e5a254733a7"
+    },
+    {
+      "path": "src/layer/layer_settings_util.hpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/layer_settings_util.hpp",
+      "type": "RegularFile",
+      "bytes": 1927,
+      "sha256": "912613bac45729043cb5495ae8c01e2bdb26be0319c59afe277ecfdf47663f6e",
+      "measuredGitBlobSHA1": "621110670fc2e54b0646ba7f22fba0f1b90b20bd"
+    },
+    {
+      "path": "src/layer/vk_layer_settings.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/vk_layer_settings.cpp",
+      "type": "RegularFile",
+      "bytes": 27103,
+      "sha256": "dba9ea3c514a9166f2de07faf292dcd24096f0690566c79ef961cc97d183c4a1",
+      "measuredGitBlobSHA1": "e6b4977f5f06256982386e03b4a93669580c7ed6"
+    },
+    {
+      "path": "src/layer/vk_layer_settings_helper.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/vk_layer_settings_helper.cpp",
+      "type": "RegularFile",
+      "bytes": 9460,
+      "sha256": "5d1880b34e7118d39120fcff8b1db6634b286d2c2e9ba861fb1bab147b8211ac",
+      "measuredGitBlobSHA1": "cd795bbf2490b5d3e95ad6a7399c3f6e82e4e67f"
+    },
+    {
+      "path": "tests",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 197,
+      "sha256": "fcb21ca9b3d7f6484502ac4b60a981f8d8ccd9d621883455017813254bb139af",
+      "measuredGitBlobSHA1": "2825faab78868010bd4b0670dcaa336193f5b43b"
+    },
+    {
+      "path": "tests/add_subdirectory",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/add_subdirectory/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/add_subdirectory/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/add_subdirectory/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 909,
+      "sha256": "26626f44a305124fda90c53ac8a6bc8e7c7a0d658090de1ab6eb2830f7d6cf94",
+      "measuredGitBlobSHA1": "650608cd071fa9f9b3da541e8ee668db75a591b5"
+    },
+    {
+      "path": "tests/add_subdirectory/client.c",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/add_subdirectory/client.c",
+      "type": "RegularFile",
+      "bytes": 524,
+      "sha256": "84d2e02cc1ca8d7191721a8abc8b9147f0ccfea49c904a9f0d9ddd6475847a50",
+      "measuredGitBlobSHA1": "8b97174eca3b09822646e12a7c1dac6963f3bb2a"
+    },
+    {
+      "path": "tests/find_package",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/find_package/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/find_package/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/find_package/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 881,
+      "sha256": "8a81517f2e8269e953e1007cce209d53e45f66de385cb7f60bb0e3b6e43b32de",
+      "measuredGitBlobSHA1": "ff38a7d7621bf6bf4bc658b5f0a29ed07689bfdd"
+    },
+    {
+      "path": "tests/generated",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/generated/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/generated/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/generated/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 574,
+      "sha256": "3b1799c417791984029eccb39d9d3b9047835790374de47ae71eff3c3fb5e5ca",
+      "measuredGitBlobSHA1": "2e01845a677ba59a04d5a23f46f0d1b34d700a01"
+    },
+    {
+      "path": "tests/generated/vk_enum_string_helper.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/generated/vk_enum_string_helper.cpp",
+      "type": "RegularFile",
+      "bytes": 235,
+      "sha256": "261bf31bedab89c69e6e68a182e496396d004406973193eac20f9e43e16d2e58",
+      "measuredGitBlobSHA1": "f6505e383dd8830644b1b5f16b0998c85a30a0c4"
+    },
+    {
+      "path": "tests/layer",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/layer/CMakeLists.txt",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 2838,
+      "sha256": "90886ec8961b5ab9673ae604070aa3232a588d960cd11612fb60084883defa8b",
+      "measuredGitBlobSHA1": "0bb4c39f853560b944a73c6f3d6e080fdf5b645c"
+    },
+    {
+      "path": "tests/layer/test_setting_api.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/test_setting_api.cpp",
+      "type": "RegularFile",
+      "bytes": 22265,
+      "sha256": "3f8bd4a22c8d124c7c5451c3d809342c53617580520043cf2e51742c23e9e1b7",
+      "measuredGitBlobSHA1": "249dbdb45fcb29675a8e934fca180ac8f58720be"
+    },
+    {
+      "path": "tests/layer/test_setting_cast.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/test_setting_cast.cpp",
+      "type": "RegularFile",
+      "bytes": 14322,
+      "sha256": "4462a9536b57df50b4ba489a5c817d663e85652b8a1acc5cb766cef8cca46ea1",
+      "measuredGitBlobSHA1": "2ec2421e8e87d201eadcded2f73a10900a7cdd7b"
+    },
+    {
+      "path": "tests/layer/test_setting_cpp.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/test_setting_cpp.cpp",
+      "type": "RegularFile",
+      "bytes": 19551,
+      "sha256": "27d7aac37f2d1405eca8efe662749d0db986eb2282dec7c81a63aeb12c777285",
+      "measuredGitBlobSHA1": "aa277c1f6a5576d19c895c44a35377964556cefa"
+    },
+    {
+      "path": "tests/layer/test_setting_env.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/test_setting_env.cpp",
+      "type": "RegularFile",
+      "bytes": 13047,
+      "sha256": "a4acb7c71002701e7f771b491daf78a2812ecec44b47034f4be6fca78b6195ab",
+      "measuredGitBlobSHA1": "34a2195837bade4d10c211af8a384b6db95866ef"
+    },
+    {
+      "path": "tests/layer/test_setting_file.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/test_setting_file.cpp",
+      "type": "RegularFile",
+      "bytes": 13315,
+      "sha256": "f16a1eda9d888b9f0718ba5bf259ee43f71a7345356db46aa75579d5a888ed3e",
+      "measuredGitBlobSHA1": "4c37bb10cb6bb240bdb1d49e35cb07ee581571b7"
+    },
+    {
+      "path": "tests/layer/test_setting_util.cpp",
+      "archivePath": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/tests/layer/test_setting_util.cpp",
+      "type": "RegularFile",
+      "bytes": 18004,
+      "sha256": "84adcb16abfc3361966ccc6ae6261c1f3ebe17ba09e14402fc4b27ee76190c2e",
+      "measuredGitBlobSHA1": "78d00e4f60cf1cf47f3f0d2113b2f08d984d867f"
+    }
+  ]
+}

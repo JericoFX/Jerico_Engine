@@ -1,0 +1,14 @@
+--- a/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/VulkanValidationLayersConsumer.cpp
++++ b/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/VulkanValidationLayersConsumer.cpp
+@@ -69,1 +69,2 @@
+-        Require(getInstance(VK_NULL_HANDLE, "JE_missing_function") == nullptr, "unknown entry point rejection");
++        // A raw layer forwards unknown queries through an initialized dispatch chain.
++        Require(getInstance(VK_NULL_HANDLE, "vkCreateInstance") != nullptr, "layer global create entry point");
+@@ -114,1 +115,2 @@
+-        Require(create && enumerate, "real loader global entry points");
++        Require(create && enumerate, "real loader global entry points");
++        Require(getInstance(VK_NULL_HANDLE, "JE_missing_function") == nullptr, "loader unknown global entry point rejection");
+@@ -160,1 +162,2 @@
+-        const auto destroy = reinterpret_cast<PFN_vkDestroyInstance>(getInstance(instance, "vkDestroyInstance"));
++        Require(getInstance(instance, "JE_missing_function") == nullptr, "loader unknown instance entry point rejection");
++        const auto destroy = reinterpret_cast<PFN_vkDestroyInstance>(getInstance(instance, "vkDestroyInstance"));

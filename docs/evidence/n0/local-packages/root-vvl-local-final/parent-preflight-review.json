@@ -1,0 +1,59 @@
+{
+  "status": "PARENT CURRENT FREEZE AND DERIVED DRIVER REVIEW; NATIVE NOT RUN",
+  "sourceCount": 15597,
+  "oldSourceCount": 15529,
+  "reviewedDeltas": [
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "beforeSHA256": "2d8c84c9bb2c8eff7ecd5a6df3aa5b22bc67ee2cc761e3e696319a6a3da346e5",
+      "beforeBytes": 6788,
+      "afterSHA256": "787C1CD917DE63F52FAE25B3825C9AE4E1DE18B65EA042CC0211482C594FA00A",
+      "afterBytes": 6788,
+      "reason": "Reviewed WhiteBox UV/provenance rev2 or accepted VVL catalog row"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp",
+      "beforeSHA256": "0cad2ef8ef08e60dc1aa19e9d5b3b97d669617331edf7bfd6497a10509ad37ba",
+      "beforeBytes": 37936,
+      "afterSHA256": "A999EED6CF4F9E175FD106A51546747425EEA7A04DBC4E90403239208FE79027",
+      "afterBytes": 44368,
+      "reason": "Reviewed WhiteBox UV/provenance rev2 or accepted VVL catalog row"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h",
+      "beforeSHA256": "2544fa3f7a098b966889df83c1fd4c131db8786123031206fd16568a819e4660",
+      "beforeBytes": 4606,
+      "afterSHA256": "406D675C9DDC0763D39458EB026B97825A9E735BDFC2499A51C509A5054D0F7F",
+      "afterBytes": 4891,
+      "reason": "Reviewed WhiteBox UV/provenance rev2 or accepted VVL catalog row"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+      "beforeSHA256": "2c9d69c0fc6cfea04b2e23bdf3d22c5862c191eef9a7342c8dc1538b0a6c853b",
+      "beforeBytes": 79343,
+      "afterSHA256": "FDC95FEF6CFE6AB1F0D6EFABBB4F4CA61797F25F1BD0C6AE9A03681CA90B9A7F",
+      "afterBytes": 79246,
+      "reason": "Reviewed WhiteBox UV/provenance rev2 or accepted VVL catalog row"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp",
+      "beforeSHA256": "379462f1b6d38785f05aa85c8c8a9fb079c00e0bf410bd0e4461cd00f2ec45b0",
+      "beforeBytes": 109454,
+      "afterSHA256": "4B66BEB59AD76F4D343FA13985437A7736F284BAEFE8F87385D55F14CF13D9FF",
+      "afterBytes": 130740,
+      "reason": "Reviewed WhiteBox UV/provenance rev2 or accepted VVL catalog row"
+    }
+  ],
+  "arguments": 61,
+  "argumentsUnchanged": true,
+  "cacheFiles": 34,
+  "wheelhouseFiles": 44,
+  "assignmentSHA256": "7C4BAE03D9641E44F1AE0A4F7DD615081A357DBBAB176FFE5A2FCF55438D572A",
+  "freezeSHA256": "C92B8061F8E5E0FB48FBD419DBCB51DA2689355C6F9322B6A9282F4B73FF8A2E",
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-vvl-local-final/run-root-configure-vvl-parent-rev1.ps1",
+  "driverSHA256": "54147C92D9E5F495DABA20A155F369B0157ACF2B238C1C7D5DF288A0DF4F333A",
+  "syntaxErrors": 0,
+  "nativeOwner": "Luna",
+  "review": "Accepted VVL cache/catalog; actual WhiteBox27 witnesses; originaloffline61argv and all donor pre/post snapshots preserved. Explicit audited CMake and nativeexit propagated.",
+  "limits": "Local Python/WhiteBox/SMC candidates uncompiled. Root configure is not baseline HEAD, Editor or runtime."
+}

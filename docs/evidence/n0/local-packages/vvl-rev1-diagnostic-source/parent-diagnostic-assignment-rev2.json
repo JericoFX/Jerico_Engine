@@ -1,0 +1,35 @@
+{
+  "status": "PARENT APPROVED PRIVATE DIAGNOSTIC ONLY",
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-diagnostic-source/RunVvlDiagnosticParentRev2.ps1",
+  "driverSHA256": "2ABC1A49DA3FD6B51A8FDB60E87BEE2CE3587E0C9AD9004BB187D2D0EF57C71C",
+  "nativeOwner": "Luna",
+  "nativeCommands": 3,
+  "configurationArguments": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-diagnostic-source",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-diagnostic-build-rev2",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_VVL_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package",
+    "-DJE_VVL_HEADERS_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/acquisition/headers/snapshot",
+    "-DJE_VVL_LOADER=C:/Windows/System32/vulkan-1.dll",
+    "-DJE_VVL_LOADER_SHA256=0419974F00E82A3D619077BA414DA265A774F8DB9D45AD93BC1843F44B2C2C1F"
+  ],
+  "sourceInputsFrozen": 6471,
+  "packageFilesFrozen": 35,
+  "diagnosticWitnesses": 4,
+  "syntaxErrors": 0,
+  "freshOutputs": [
+    "vvl-rev1-diagnostic-build-rev2",
+    "vvl-rev1-validation/attempt1/diagnostic-trace-rev2"
+  ],
+  "priorAttempt": "Preserved: configure targeted VULKAN_HEADERS due split -D arguments; exit0 is not diagnostic PASS, build1, executable NOT_RUN",
+  "packageRebuild": false,
+  "sourceModifications": false,
+  "acceptance": false
+}

@@ -1,0 +1,8 @@
+{
+  "label": "consumer-configure",
+  "nativeExit": 0,
+  "elapsedSeconds": 6.1015108,
+  "sampledNativeProcessPeakWorkingSetBytes": 22917120,
+  "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+  "status": "PASS"
+}

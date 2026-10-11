@@ -1,0 +1,62 @@
+[
+  {
+    "label": "debug-dependents",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.0180117,
+    "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.dll",
+    "dllSHA256": "8BC7972E4572E2EEDDA82B334DA0A34017A28156560341D428197B4F6692B29A",
+    "stdoutBytes": 669,
+    "stderrBytes": 0
+  },
+  {
+    "label": "debug-exports",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.037517,
+    "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.dll",
+    "dllSHA256": "8BC7972E4572E2EEDDA82B334DA0A34017A28156560341D428197B4F6692B29A",
+    "stdoutBytes": 1312,
+    "stderrBytes": 0
+  },
+  {
+    "label": "debug-headers",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.0392814,
+    "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.dll",
+    "dllSHA256": "8BC7972E4572E2EEDDA82B334DA0A34017A28156560341D428197B4F6692B29A",
+    "stdoutBytes": 7408,
+    "stderrBytes": 0
+  },
+  {
+    "label": "release-dependents",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.0184738,
+    "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.dll",
+    "dllSHA256": "E978226AE955A0C183489A63DDAE93788362967A80ACD14554968A239EE8FE32",
+    "stdoutBytes": 898,
+    "stderrBytes": 0
+  },
+  {
+    "label": "release-exports",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.0330643,
+    "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.dll",
+    "dllSHA256": "E978226AE955A0C183489A63DDAE93788362967A80ACD14554968A239EE8FE32",
+    "stdoutBytes": 1595,
+    "stderrBytes": 0
+  },
+  {
+    "label": "release-headers",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.0377852,
+    "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.dll",
+    "dllSHA256": "E978226AE955A0C183489A63DDAE93788362967A80ACD14554968A239EE8FE32",
+    "stdoutBytes": 6200,
+    "stderrBytes": 0
+  }
+]

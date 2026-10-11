@@ -1,0 +1,24 @@
+{
+  "status": "IMPLEMENTED NOT NATIVELY VERIFIED",
+  "sourceFileCount": 10,
+  "sourceBytes": 921353.0,
+  "sourceDiff": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\source-diff-vvl-rev1-rev2.patch",
+    "bytes": 943460,
+    "sha256": "70bc5e788407fecdd2be32f4063305e94da015595db546b0d411c30f1c56f1eb",
+    "role": "new-files textual diff; bytes remain authoritative in freeze"
+  },
+  "sourceArchiveCount": 7,
+  "snapshotFileCount": 2785,
+  "primaryGitBlobMatches": 2785,
+  "priorAuditVerified": 85,
+  "firstTarAuditPreserved": "PAX global comment metadata rejected by first inspector; revision2 accepts only exact commit comment and never materializes metadata",
+  "patch": "Only private SPIRV-Tools version-description line; before/after SHA and exact inverse preserved",
+  "productPython": false,
+  "buildGenerationPython": "Previously audited external CPython3.10.13 JE rev3 build-generation tool, not deployed",
+  "features": "Release+Debug, C++17, allocator/hash ON, tests/updater/codegen OFF; original Release pair deployment",
+  "helperChanged": false,
+  "sharedConfigurationChanged": false,
+  "nativeExecuted": false,
+  "acceptance": "PENDING PARENT REVIEW / LUNA NATIVE / ROOT / EDITOR"
+}

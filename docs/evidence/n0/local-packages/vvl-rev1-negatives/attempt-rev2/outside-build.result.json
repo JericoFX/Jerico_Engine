@@ -1,0 +1,9 @@
+{
+  "label": "outside-build",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0297678,
+  "expectedError": "output must be beneath this checkout/build",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

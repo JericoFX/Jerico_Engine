@@ -1,0 +1,42 @@
+{
+  "status": "PARENT SOURCE REVIEW ACCEPTED FOR FOCAL NATIVE EXECUTION; NOT COMPILED",
+  "checkedInputs": 6471,
+  "expectedInputs": 6471,
+  "sourceFiles": 10,
+  "mismatches": [],
+  "candidateWitnesses": {
+    "source-freeze-vvl-provider-rev1-rev2.json": "C516374E93BED5F7B829A92CD0356D25A96A7289A9C17BE2D2FAA590AA3F90E3",
+    "validation-assignment-vvl-rev1-rev2.json": "AF316CA5C13A937819B9B729AF5E249569C54013FF766BDC7CFD2779E127CA93",
+    "source-diff-vvl-rev1-rev2.patch": "70BC5E788407FECDD2BE32F4063305E94DA015595DB546B0D411C30F1C56F1EB"
+  },
+  "toolWitnesses": [
+    {
+      "path": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "bytes": 13119048,
+      "sha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+      "fileVersion": "4.3.4"
+    },
+    {
+      "path": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "bytes": 301368,
+      "sha256": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+      "fileVersion": "7.6.5.500"
+    },
+    {
+      "path": "C:\\Windows\\System32\\vulkan-1.dll",
+      "bytes": 1740728,
+      "sha256": "0419974F00E82A3D619077BA414DA265A774F8DB9D45AD93BC1843F44B2C2C1F",
+      "fileVersion": "1.4.350.0"
+    }
+  ],
+  "sourceReview": [
+    "Reviewed final producer, wrapper, Find, private provenance patch, seven pins, README, NOTICE and native consumer.",
+    "Seven primary archives match selected original dependency closure; immutable source trees were verified independently.",
+    "CPython3.10.13 rev3 is the audited external code-generation tool only; bytecode writes disabled.",
+    "Release and Debug builds retained; original release-pair deployment; SPIRV shared auxiliary and Python not packaged.",
+    "Fresh private outputs; direct local inputs; no updater/download/global installation.",
+    "Consumer tests real DLL exports, real loader rejection and valid Vulkan instance; no Editor/frame acceptance."
+  ],
+  "nativeOwner": "Luna",
+  "nativeStatus": "NOT RUN"
+}

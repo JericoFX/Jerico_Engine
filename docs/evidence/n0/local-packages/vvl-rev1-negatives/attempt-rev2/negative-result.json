@@ -1,0 +1,109 @@
+{
+  "sourceInputs": 6471,
+  "changedPaths": [],
+  "results": [
+    {
+      "label": "missing-archive",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0367886,
+      "expectedError": "vvl exact source archive file is missing",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "changed-archive",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0576115,
+      "expectedError": "vvl exact source archive SHA256 mismatch",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "missing-tool",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.1181234,
+      "expectedError": "audited external Python3 generation tool file is missing",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "changed-tool-pin",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.1041876,
+      "expectedError": "audited external Python3 generation tool SHA256 mismatch",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "remote-uri",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0366186,
+      "expectedError": "must not be a URI",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "unc",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0323398,
+      "expectedError": "must be an absolute local path",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "junction",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0330705,
+      "expectedError": "must not use symlink paths",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "existing-output",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0331059,
+      "expectedError": "output exists; retained attempts are never overwritten",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "outside-build",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0297678,
+      "expectedError": "output must be beneath this checkout/build",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "wrong-private-patch",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.0297337,
+      "expectedError": "pristine SPIRV version generator SHA256 mismatch",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    },
+    {
+      "label": "wrong-package-version",
+      "nativeExit": 1,
+      "elapsedSeconds": 1.7144226,
+      "expectedError": "Found unsuitable version",
+      "observedExpectedError": true,
+      "outputCondition": true,
+      "status": "PASS REJECTION"
+    }
+  ],
+  "sourceChanges": [],
+  "packageFiles": 35,
+  "status": "FOCAL REJECTIONS PASS; PARENT REVIEW PENDING",
+  "fixtureChecks": 5
+}

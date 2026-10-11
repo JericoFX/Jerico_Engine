@@ -1,0 +1,11 @@
+[
+  "C:/Program Files/CMake/bin/cmake.exe",
+  "--build",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/build/Release/vvl",
+  "--config",
+  "Release",
+  "--target",
+  "vvl",
+  "--parallel",
+  "2"
+]

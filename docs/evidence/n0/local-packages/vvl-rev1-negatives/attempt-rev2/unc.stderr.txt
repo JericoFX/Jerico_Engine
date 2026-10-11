@@ -1,0 +1,6 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_VVL_ARCHIVES_ROOT must be an absolute local path
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake:12 (JE_python_require_local_path)
+
+

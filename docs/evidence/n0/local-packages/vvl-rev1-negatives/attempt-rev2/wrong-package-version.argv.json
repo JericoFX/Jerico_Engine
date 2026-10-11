@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/wrong-version",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/wrong-version-build"
+  ],
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

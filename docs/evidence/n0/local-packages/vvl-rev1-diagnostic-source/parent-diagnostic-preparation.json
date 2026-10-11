@@ -1,0 +1,32 @@
+{
+  "status": "PRIVATE DIAGNOSTIC ONLY; NOT RUN",
+  "sourceRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-diagnostic-source",
+  "traceStatements": 14,
+  "traceRemovalByteExact": true,
+  "wrapperInverseExact": true,
+  "packageRebuildRequired": false,
+  "productSourcesModified": false,
+  "hypothesis": "All four failing cases call Exports first; flushed stage trace will identify the first native call before AV",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\VulkanValidationLayers\\tests\\VulkanValidationLayersConsumer.cpp",
+      "bytes": 9126,
+      "sha256": "53FDA14F06E763F4EF420300C63ABE90DD38A741E70A7C0908A71262F0C04DA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\VulkanValidationLayers\\tests\\CMakeLists.txt",
+      "bytes": 2310,
+      "sha256": "8EE41928A18BA6E3F182B2817C078BA25FF7DEA397F1843269819DBDD3D171F6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-diagnostic-source\\VulkanValidationLayersConsumer.cpp",
+      "bytes": 11281,
+      "sha256": "8952B0DD5F760BC1C92D4C5ED68B3A040E81A1D0CD90C9DBB59ADC5F264DF896"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-diagnostic-source\\CMakeLists.txt",
+      "bytes": 2321,
+      "sha256": "090907F6F89DEFA9CDE8EC21623334358BB66254F4C5556DD87E217B421318BD"
+    }
+  ]
+}

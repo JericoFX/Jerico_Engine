@@ -1,0 +1,22 @@
+[
+  "C:/Program Files/CMake/bin/cmake.exe",
+  "-S",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/spirv-headers/SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d",
+  "-B",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/build/Release/spirv-headers",
+  "-G",
+  "Visual Studio 17 2022",
+  "-A",
+  "x64",
+  "-T",
+  "v143",
+  "-DCMAKE_CONFIGURATION_TYPES:STRING=Release",
+  "-DCMAKE_BUILD_TYPE:STRING=Release",
+  "-DCMAKE_MSVC_RUNTIME_LIBRARY:STRING=MultiThreadedDLL",
+  "-DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF",
+  "-DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY=OFF",
+  "-DUPDATE_DEPS=OFF",
+  "-DBUILD_TESTS=OFF",
+  "-DPython3_EXECUTABLE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+  "-DCMAKE_INSTALL_PREFIX:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/spirv-headers"
+]

@@ -1,0 +1,101 @@
+{
+  "sourceNoticeBlockCount": 1110,
+  "originalRecipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "sources": [
+    {
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-ValidationLayers/tar.gz/a228e25346a931c791714977becb48b6702ec118",
+      "repository": "KhronosGroup/Vulkan-ValidationLayers",
+      "archiveRoot": "Vulkan-ValidationLayers-a228e25346a931c791714977becb48b6702ec118",
+      "archiveRelativePath": "vvl/vvl-a228e25346a931c791714977becb48b6702ec118.tar.gz",
+      "cmakeSHA256": "834e9acaa10152e55f489a2476f0e138d8509f34c8fa02d4165b18b74d635e05",
+      "ref": "v1.3.261",
+      "sha256": "107ad92b5610395d37c7533d716f9ce7e23b86d9cede749711c8f437581ee6a5",
+      "id": "vvl",
+      "commit": "a228e25346a931c791714977becb48b6702ec118",
+      "bytes": 4865118
+    },
+    {
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/450ead13e1064584da027d91192bd7bfb724640f",
+      "repository": "KhronosGroup/Vulkan-Headers",
+      "archiveRoot": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f",
+      "archiveRelativePath": "headers/headers-450ead13e1064584da027d91192bd7bfb724640f.tar.gz",
+      "cmakeSHA256": "076cfed4026f6a825b7cd8d52c25d51a64064e635f164cdd812f699bcf221196",
+      "ref": "v1.3.261",
+      "sha256": "f7ad077cd85c9236d588662aa36643027dcb26e27203b3e39b6245b52477fc6a",
+      "id": "headers",
+      "commit": "450ead13e1064584da027d91192bd7bfb724640f",
+      "bytes": 2046470
+    },
+    {
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Utility-Libraries/tar.gz/79d5fb108be1a013135d3aa9a88c38f0b0608e87",
+      "repository": "KhronosGroup/Vulkan-Utility-Libraries",
+      "archiveRoot": "Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87",
+      "archiveRelativePath": "utility/utility-79d5fb108be1a013135d3aa9a88c38f0b0608e87.tar.gz",
+      "cmakeSHA256": "49bb825a08b61a8f9d40e609b59d849a3900df8a776eace30c00168bc61e15c7",
+      "ref": "v1.3.261",
+      "sha256": "e95eebeb3c42e0c965c5d1486a5e1187976614492c18c786618e20d1b05aaffb",
+      "id": "utility",
+      "commit": "79d5fb108be1a013135d3aa9a88c38f0b0608e87",
+      "bytes": 92943
+    },
+    {
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Headers/tar.gz/3469b164e25cee24435029a569933cb42578db5d",
+      "repository": "KhronosGroup/SPIRV-Headers",
+      "archiveRoot": "SPIRV-Headers-3469b164e25cee24435029a569933cb42578db5d",
+      "archiveRelativePath": "spirv-headers/spirv-headers-3469b164e25cee24435029a569933cb42578db5d.tar.gz",
+      "cmakeSHA256": "4a74b4ce309057f9cb954200bb504e44a52ef719bedca68ccd811169a77397a1",
+      "ref": "3469b164e25cee24435029a569933cb42578db5d",
+      "sha256": "1dc0550f1dd5655c6560e1082c4a06e6a0161cbeb2f0f496453892fbbf3c2d7e",
+      "id": "spirv-headers",
+      "commit": "3469b164e25cee24435029a569933cb42578db5d",
+      "bytes": 455678
+    },
+    {
+      "url": "https://codeload.github.com/KhronosGroup/SPIRV-Tools/tar.gz/04cdb2d344706052c7a2d359294e830ebac63e74",
+      "repository": "KhronosGroup/SPIRV-Tools",
+      "archiveRoot": "SPIRV-Tools-04cdb2d344706052c7a2d359294e830ebac63e74",
+      "archiveRelativePath": "spirv-tools/spirv-tools-04cdb2d344706052c7a2d359294e830ebac63e74.tar.gz",
+      "cmakeSHA256": "1a88f5aa8cb041777d99866602d9be4285a0853c87ab5230c96cd14c3b6911b0",
+      "ref": "04cdb2d344706052c7a2d359294e830ebac63e74",
+      "sha256": "5b4b9d18f5bab680fae254f92fa942241fe328c42cd5f028c83cb791e5847a08",
+      "id": "spirv-tools",
+      "commit": "04cdb2d344706052c7a2d359294e830ebac63e74",
+      "bytes": 3119720
+    },
+    {
+      "url": "https://codeload.github.com/martinus/robin-hood-hashing/tar.gz/9145f963d80d6a02f0f96a47758050a89184a3ed",
+      "repository": "martinus/robin-hood-hashing",
+      "archiveRoot": "robin-hood-hashing-9145f963d80d6a02f0f96a47758050a89184a3ed",
+      "archiveRelativePath": "robin/robin-9145f963d80d6a02f0f96a47758050a89184a3ed.tar.gz",
+      "cmakeSHA256": "4605cb61375edf4b539aad3ff227aed9568721c70e18eac8a4103c4d92a8adfa",
+      "ref": "3.11.5",
+      "sha256": "2ec51a99f9446cb60843391e05c9bf8a1e040a7f5e67e5db9e78fc9e9dc87f9b",
+      "id": "robin",
+      "commit": "9145f963d80d6a02f0f96a47758050a89184a3ed",
+      "bytes": 177234
+    },
+    {
+      "url": "https://codeload.github.com/microsoft/mimalloc/tar.gz/91ba1f374da66e624841f53f6659da3a8f8f93ea",
+      "repository": "microsoft/mimalloc",
+      "archiveRoot": "mimalloc-91ba1f374da66e624841f53f6659da3a8f8f93ea",
+      "archiveRelativePath": "mimalloc/mimalloc-91ba1f374da66e624841f53f6659da3a8f8f93ea.tar.gz",
+      "cmakeSHA256": "31e405c04c968262ad842ccf10d83eba6f0d0c6b682315e6dac77b744b8c8bfa",
+      "ref": "v2.0.7",
+      "sha256": "923998a8b225569c1500572154f73f7c7f7756ae8a32e9a60f3713d5f5d101c5",
+      "id": "mimalloc",
+      "commit": "91ba1f374da66e624841f53f6659da3a8f8f93ea",
+      "bytes": 1137708
+    }
+  ],
+  "schemaVersion": 1,
+  "version": "1.3.261",
+  "spirvProvenancePatch": {
+    "afterSHA256": "021ef8f618ec1a11c8ec0dd63fb6c661af3eaac2ab00dc6199e2efe20acf65c6",
+    "after": "description = \"04cdb2d344706052c7a2d359294e830ebac63e74 (archive)\"",
+    "before": "description = describe(repo_path)",
+    "onlyPrivateCopy": true,
+    "inverseByteExact": true,
+    "beforeSHA256": "417a730bde8a2ddaf27c95db16a8c9d923edba27a2ecfd2196c0d3d6ec641515"
+  },
+  "sourceNoticeSHA256": "11596f7d85b612a6c2b911a337bb8f1e837c3bc7e5f7af70c27eed7f8e17069b"
+}

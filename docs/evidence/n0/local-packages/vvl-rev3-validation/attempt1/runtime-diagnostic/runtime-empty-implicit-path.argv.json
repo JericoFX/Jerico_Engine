@@ -1,0 +1,12 @@
+{
+  "processEnvironmentOverrides": {
+    "VK_IMPLICIT_LAYER_PATH": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev3-validation/attempt1/runtime-diagnostic/empty-implicit-layers"
+  },
+  "argv": [
+    "runtime",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+    "C:/Windows/System32/vulkan-1.dll"
+  ],
+  "workingDirectory": "F:/JericoEngine/JericoEngine",
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-runtime-diagnostic-build/Release/JEVulkanValidationLayersConsumer.exe"
+}

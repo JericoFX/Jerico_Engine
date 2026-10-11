@@ -1,0 +1,931 @@
+--- a/Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h
++++ b/Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h
+@@ -37,7 +37,8 @@
+             };
+ 
+             //! Convert a white box mesh to an indexed triangle mesh, transforming all
+-            //! positions by the given transform. Shared vertices are welded.
++            //! positions by the given transform. Shared positions are welded; corner UVs and
++            //! the complete opaque UUID128 surface keys are retained. Invalid input returns an empty mesh.
+             JE::BSP::Csg::TriangleMesh ToTriangleMesh(const WhiteBoxMesh& whiteBox, const AZ::Transform& transform);
+ 
+             //! Reconstruct the world-space position of a triangle-mesh vertex.
+@@ -47,7 +48,7 @@
+             AZ::Vector3 TriangleNormal(const JE::BSP::Csg::TriangleMesh& triangleMesh, size_t triangleIndex);
+ 
+             //! Group triangles into connected coplanar regions; each region becomes one
+-            //! white box polygon (interior edges hidden).
++            //! white box polygon (interior edges hidden). Surface IDs and corner UV seams bound each region.
+             AZStd::vector<AZStd::vector<size_t>> GroupCoplanarTriangles(const JE::BSP::Csg::TriangleMesh& triangleMesh);
+ 
+             //! Twice the signed area of triangle (a, b, c); > 0 when CCW.
+@@ -82,7 +83,8 @@
+             AZ::Vector3 GroupNormal(const JE::BSP::Csg::TriangleMesh& mesh, const AZStd::vector<size_t>& group);
+ 
+             //! Replace the contents of the white box mesh with the given triangle mesh.
+-            void RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const JE::BSP::Csg::TriangleMesh& triangleMesh);
++            //! Build a candidate and commit only on success; invalid attributes preserve the current mesh.
++            bool RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const JE::BSP::Csg::TriangleMesh& triangleMesh);
+         } // namespace Detail
+     } // namespace Api
+ } // namespace WhiteBox
+--- a/Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp
++++ b/Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp
+@@ -25,6 +25,64 @@
+ 
+ #include <cmath>
+ 
++namespace JE::BSP
++{
++    namespace
++    {
++        Csg::SurfaceKey EncodeSurfaceId(const AZ::Uuid& id)
++        {
++            uint64_t words[2]{};
++            for (size_t word = 0; word < 2; ++word)
++            {
++                for (size_t byte = 0; byte < 8; ++byte)
++                {
++                    words[word] = (words[word] << 8) | static_cast<uint64_t>(id.begin()[word * 8 + byte]);
++                }
++            }
++            return {words[0], words[1]};
++        }
++
++        AZ::Uuid DecodeSurfaceId(const Csg::SurfaceKey& key)
++        {
++            AZ::Uuid id;
++            const uint64_t words[] = {key.m_namespace, key.m_surface};
++            for (size_t word = 0; word < 2; ++word)
++            {
++                for (size_t byte = 0; byte < 8; ++byte)
++                {
++                    id.begin()[word * 8 + byte] = static_cast<AZStd::byte>((words[word] >> ((7 - byte) * 8)) & 0xff);
++                }
++            }
++            return id;
++        }
++
++        bool ValidAttributedMesh(const Csg::TriangleMesh& mesh)
++        {
++            if (mesh.m_positions.size() % 3 != 0 || mesh.m_indices.empty() || mesh.m_indices.size() % 3 != 0 ||
++                mesh.m_cornerUVs.size() != mesh.m_indices.size() * 2 || mesh.m_surfaceKeys.size() != mesh.TriangleCount())
++            {
++                return false;
++            }
++            for (const uint32_t index : mesh.m_indices)
++            {
++                if (index >= mesh.VertexCount()) { return false; }
++            }
++            for (const double value : mesh.m_positions)
++            {
++                if (!std::isfinite(value) || !std::isfinite(static_cast<float>(value))) { return false; }
++            }
++            for (const double value : mesh.m_cornerUVs)
++            {
++                if (!std::isfinite(value) || !std::isfinite(static_cast<float>(value))) { return false; }
++            }
++            for (const auto& key : mesh.m_surfaceKeys)
++            {
++                if (key.m_namespace == 0 && key.m_surface == 0) { return false; }
++            }
++            return true;
++        }
++    }
++}
+ namespace WhiteBox
+ {
+     namespace Api
+@@ -44,22 +102,31 @@
+             // positions by the given transform
+             JE::BSP::Csg::TriangleMesh ToTriangleMesh(const WhiteBoxMesh& whiteBox, const AZ::Transform& transform)
+             {
+-                const Faces faces = MeshFaces(whiteBox);
+-
++                const FaceHandles faces = MeshFaceHandles(whiteBox);
+                 JE::BSP::Csg::TriangleMesh triangleMesh;
+                 triangleMesh.m_positions.reserve(faces.size() * 9);
+                 triangleMesh.m_indices.reserve(faces.size() * 3);
++                triangleMesh.m_cornerUVs.reserve(faces.size() * 6);
++                triangleMesh.m_surfaceKeys.reserve(faces.size());
+ 
+                 uint32_t index = 0;
+-                for (const Face& face : faces)
++                for (const FaceHandle face : faces)
+                 {
+-                    for (const AZ::Vector3& position : face)
++                    const AZ::Uuid surfaceId = FaceSurfaceId(whiteBox, face);
++                    const auto halfedges = FaceHalfedgeHandles(whiteBox, face);
++                    if (surfaceId.IsNull() || halfedges.size() != 3) { return {}; }
++                    triangleMesh.m_surfaceKeys.push_back(JE::BSP::EncodeSurfaceId(surfaceId));
++                    for (const HalfedgeHandle halfedge : halfedges)
+                     {
+-                        const AZ::Vector3 transformedPosition = transform.TransformPoint(position);
++                        const AZ::Vector3 transformedPosition = transform.TransformPoint(HalfedgeVertexPositionAtTip(whiteBox, halfedge));
++                        const AZ::Vector2 uv = HalfedgeUV(whiteBox, halfedge);
++                        if (!transformedPosition.IsFinite() || !uv.IsFinite()) { return {}; }
+                         triangleMesh.m_positions.push_back(transformedPosition.GetX());
+                         triangleMesh.m_positions.push_back(transformedPosition.GetY());
+                         triangleMesh.m_positions.push_back(transformedPosition.GetZ());
+                         triangleMesh.m_indices.push_back(index++);
++                        triangleMesh.m_cornerUVs.push_back(uv.GetX());
++                        triangleMesh.m_cornerUVs.push_back(uv.GetY());
+                     }
+                 }
+ 
+@@ -91,6 +158,28 @@
+             AZStd::vector<AZStd::vector<size_t>> GroupCoplanarTriangles(const JE::BSP::Csg::TriangleMesh& triangleMesh)
+             {
+                 const size_t triangleCount = triangleMesh.TriangleCount();
++                const bool attributed = !triangleMesh.m_cornerUVs.empty() || !triangleMesh.m_surfaceKeys.empty();
++                if (attributed && !JE::BSP::ValidAttributedMesh(triangleMesh)) { return {}; }
++                const auto sharesChart = [&](size_t a, size_t b, uint32_t edgeStart, uint32_t edgeEnd)
++                {
++                    if (!attributed) { return true; }
++                    if (triangleMesh.m_surfaceKeys[a] != triangleMesh.m_surfaceKeys[b]) { return false; }
++                    for (const uint32_t vertex : {edgeStart, edgeEnd})
++                    {
++                        size_t cornerA = 0;
++                        size_t cornerB = 0;
++                        while (triangleMesh.m_indices[a * 3 + cornerA] != vertex) { ++cornerA; }
++                        while (triangleMesh.m_indices[b * 3 + cornerB] != vertex) { ++cornerB; }
++                        for (size_t axis = 0; axis < 2; ++axis)
++                        {
++                            // Compare at the precision of the stored OpenMesh corner UVs;
++                            // no epsilon can erase an authored discontinuity.
++                            if (static_cast<float>(triangleMesh.m_cornerUVs[(a * 3 + cornerA) * 2 + axis]) !=
++                                static_cast<float>(triangleMesh.m_cornerUVs[(b * 3 + cornerB) * 2 + axis])) { return false; }
++                        }
++                    }
++                    return true;
++                };
+ 
+                 // undirected edge (low vertex index, high vertex index) -> adjacent triangles
+                 using EdgeKey = AZStd::pair<uint32_t, uint32_t>;
+@@ -141,7 +230,7 @@
+ 
+                             for (const size_t neighborTriangle : neighbors)
+                             {
+-                                if (!visited[neighborTriangle] &&
++                                if (!visited[neighborTriangle] && sharesChart(triangleIndex, neighborTriangle, v0, v1) &&
+                                     triangleNormals[triangleIndex].Dot(triangleNormals[neighborTriangle]) >
+                                         CoplanarNormalDotThreshold)
+                                 {
+@@ -720,9 +809,10 @@
+             }
+ 
+             // replace the contents of the white box mesh with the given triangle mesh
+-            void RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const JE::BSP::Csg::TriangleMesh& triangleMesh)
++            bool RebuildFromTriangleMesh(WhiteBoxMesh& whiteBox, const JE::BSP::Csg::TriangleMesh& triangleMesh)
+             {
+-                Clear(whiteBox);
++                if (!JE::BSP::ValidAttributedMesh(triangleMesh)) { return false; }
++                auto candidate = CreateWhiteBoxMesh();
+ 
+                 // Add only the vertices that survive cleanup, on first use.
+                 AZStd::unordered_map<uint32_t, VertexHandle> handleOf;
+@@ -733,7 +823,7 @@
+                     {
+                         return it->second;
+                     }
+-                    const VertexHandle h = AddVertex(whiteBox, TriangleMeshPosition(triangleMesh, globalIndex));
++                    const VertexHandle h = AddVertex(*candidate, TriangleMeshPosition(triangleMesh, globalIndex));
+                     handleOf.emplace(globalIndex, h);
+                     return h;
+                 };
+@@ -747,6 +837,7 @@
+                 // uses Manifold's (correct) triangulation grouped into faces. Flip the
+                 // flag to re-enable. The 'if' (not 'if constexpr') keeps the cleanup
+                 // code compiled/referenced.
++                // Re-triangulation would also need an explicit corner-attribute remap.
+                 constexpr bool EnableCoplanarCleanup = false;
+ 
+                 AZStd::vector<AZStd::vector<AZStd::array<uint32_t, 3>>> cleaned(groups.size());
+@@ -791,11 +882,36 @@
+                             FaceVertHandles{ handleFor(t[0]), handleFor(t[1]), handleFor(t[2]) });
+                     }
+ 
+-                    AddPolygon(whiteBox, faceVertHandlesList);
++                    const AZ::Uuid surfaceId = JE::BSP::DecodeSurfaceId(triangleMesh.m_surfaceKeys[groups[gi][0]]);
++                    const PolygonHandle polygon = AddPolygon(*candidate, faceVertHandlesList, surfaceId);
++                    if (polygon.m_faceHandles.size() != groups[gi].size()) { return false; }
++                    for (size_t faceIndex = 0; faceIndex < polygon.m_faceHandles.size(); ++faceIndex)
++                    {
++                        const size_t triangle = groups[gi][faceIndex];
++                        for (const auto halfedge : FaceHalfedgeHandles(*candidate, polygon.m_faceHandles[faceIndex]))
++                        {
++                            const auto position = HalfedgeVertexPositionAtTip(*candidate, halfedge);
++                            size_t corner = 0;
++                            size_t matches = 0;
++                            for (size_t sourceCorner = 0; sourceCorner < 3; ++sourceCorner)
++                            {
++                                if (position == TriangleMeshPosition(triangleMesh, triangleMesh.m_indices[triangle * 3 + sourceCorner]))
++                                {
++                                    corner = sourceCorner;
++                                    ++matches;
++                                }
++                            }
++                            if (matches != 1) { return false; }
++                            SetHalfedgeUV(*candidate, halfedge, AZ::Vector2(
++                                static_cast<float>(triangleMesh.m_cornerUVs[(triangle * 3 + corner) * 2]),
++                                static_cast<float>(triangleMesh.m_cornerUVs[(triangle * 3 + corner) * 2 + 1])));
++                        }
++                    }
+                 }
+ 
+-                CalculateNormals(whiteBox);
+-                CalculatePlanarUVs(whiteBox);
++                CalculateNormals(*candidate);
++                ReplaceMesh(whiteBox, AZStd::move(candidate));
++                return true;
+             }
+         } // namespace Detail
+ 
+@@ -839,9 +955,7 @@
+                     "the current mesh is preserved.");
+                 return false;
+             }
+-            Detail::RebuildFromTriangleMesh(whiteBox, result);
+-
+-            return true;
++            return Detail::RebuildFromTriangleMesh(whiteBox, result);
+         }
+     } // namespace Api
+ } // namespace WhiteBox
+--- a/Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp
++++ b/Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp
+@@ -16,6 +16,7 @@
+ #include <AzCore/Math/Matrix3x4.h>
+ #include <AzCore/Math/MathStringConversions.h>
+ #include <AzCore/Math/Transform.h>
++#include <AzCore/Math/Uuid.h>
+ #include <AzCore/Math/Vector2.h>
+ #include <AzCore/Math/Vector3.h>
+ #include <AzCore/std/containers/map.h>
+@@ -28,7 +29,31 @@
+ #include <AzCore/std/string/conversions.h>
+ #include <AzToolsFramework/ViewportSelection/EditorSelectionUtil.h>
+ #include <WhiteBox/WhiteBoxToolApi.h>
++#include <iterator>
+ 
++namespace JE::BSP
++{
++    namespace
++    {
++        AZ::Uuid LegacySurfaceId(const AZ::Uuid& contentSeed, uint64_t ordinal)
++        {
++            // Explicit bytes keep the derivation independent of host integer endianness.
++            AZStd::array<AZStd::byte, 32> data{};
++            constexpr char domain[] = "JEWBv1";
++            for (size_t i = 0; i < sizeof(domain) - 1; ++i)
++            {
++                data[i] = static_cast<AZStd::byte>(domain[i]);
++            }
++            AZStd::copy(contentSeed.begin(), contentSeed.end(), data.begin() + 8);
++            for (size_t i = 0; i < 8; ++i)
++            {
++                data[24 + i] = static_cast<AZStd::byte>((ordinal >> ((7 - i) * 8)) & 0xff);
++            }
++            return AZ::Uuid::CreateData(data);
++        }
++    }
++}
++
+ namespace OpenMesh
+ {
+     // Overload methods need to be declared before including OpenMesh so their definitions are found
+@@ -249,6 +274,9 @@
+     using VertexBoolPropertyHandle = OpenMesh::VPropHandleT<bool>;
+     // unique string to lookup the vertex custom property via get_property_handle
+     static const char* const VertexHiddenProp = "vertex-hidden-props";
++    using SurfacePropertyHandle = OpenMesh::FPropHandleT<uint64_t>;
++    static const char* const SurfaceIdHighProp = "je-surface-id-high";
++    static const char* const SurfaceIdLowProp = "je-surface-id-low";
+ } // namespace WhiteBox
+ 
+ namespace OpenMesh::IO
+@@ -584,6 +612,18 @@
+             whiteBox.mesh.request_halfedge_texcoords2D();
+         }
+ 
++        static void EnsureSurfaceProperties(WhiteBoxMesh& whiteBox)
++        {
++            for (const char* name : {SurfaceIdHighProp, SurfaceIdLowProp})
++            {
++                SurfacePropertyHandle handle;
++                if (!whiteBox.mesh.get_property_handle(handle, name))
++                {
++                    whiteBox.mesh.add_property(handle, name);
++                }
++                whiteBox.mesh.property(handle).set_persistent(true);
++            }
++        }
+         WhiteBoxMeshPtr CreateWhiteBoxMesh()
+         {
+             auto whiteBox = WhiteBoxMeshPtr(aznew WhiteBoxMesh());
+@@ -1946,6 +1986,50 @@
+             return whiteBox.mesh.normal(om_fh(faceHandle));
+         }
+ 
++        AZ::Uuid FaceSurfaceId(const WhiteBoxMesh& whiteBox, const FaceHandle faceHandle)
++        {
++            SurfacePropertyHandle high;
++            SurfacePropertyHandle low;
++            if (!whiteBox.mesh.get_property_handle(high, SurfaceIdHighProp) ||
++                !whiteBox.mesh.get_property_handle(low, SurfaceIdLowProp))
++            {
++                return AZ::Uuid::CreateNull();
++            }
++            AZ::Uuid id;
++            const uint64_t words[] = {whiteBox.mesh.property(high, om_fh(faceHandle)), whiteBox.mesh.property(low, om_fh(faceHandle))};
++            for (size_t word = 0; word < 2; ++word)
++            {
++                for (size_t byte = 0; byte < 8; ++byte)
++                {
++                    id.begin()[word * 8 + byte] = static_cast<AZStd::byte>((words[word] >> ((7 - byte) * 8)) & 0xff);
++                }
++            }
++            return id;
++        }
++
++        void SetFaceSurfaceId(WhiteBoxMesh& whiteBox, const FaceHandle faceHandle, const AZ::Uuid& surfaceId)
++        {
++            EnsureSurfaceProperties(whiteBox);
++            SurfacePropertyHandle high;
++            SurfacePropertyHandle low;
++            whiteBox.mesh.get_property_handle(high, SurfaceIdHighProp);
++            whiteBox.mesh.get_property_handle(low, SurfaceIdLowProp);
++            uint64_t words[2]{};
++            for (size_t word = 0; word < 2; ++word)
++            {
++                for (size_t byte = 0; byte < 8; ++byte)
++                {
++                    words[word] = (words[word] << 8) | static_cast<uint64_t>(surfaceId.begin()[word * 8 + byte]);
++                }
++            }
++            whiteBox.mesh.property(high, om_fh(faceHandle)) = words[0];
++            whiteBox.mesh.property(low, om_fh(faceHandle)) = words[1];
++        }
++
++        void SetHalfedgeUV(WhiteBoxMesh& whiteBox, const HalfedgeHandle halfedgeHandle, const AZ::Vector2& uv)
++        {
++            whiteBox.mesh.set_texcoord2D(om_heh(halfedgeHandle), uv);
++        }
+         AZ::Vector2 HalfedgeUV(const WhiteBoxMesh& whiteBox, const HalfedgeHandle halfedgeHandle)
+         {
+             AZ_PROFILE_FUNCTION(AzToolsFramework);
+@@ -2491,6 +2575,11 @@
+ 
+         PolygonHandle AddPolygon(WhiteBoxMesh& whiteBox, const FaceVertHandlesList& faceVertHandles)
+         {
++            return AddPolygon(whiteBox, faceVertHandles, AZ::Uuid::CreateRandom());
++        }
++
++        PolygonHandle AddPolygon(WhiteBoxMesh& whiteBox, const FaceVertHandlesList& faceVertHandles, const AZ::Uuid& surfaceId)
++        {
+             WHITEBOX_LOG("White Box", "AddPolygon [%s]", ToString(faceVertHandles).c_str());
+             AZ_PROFILE_FUNCTION(AzToolsFramework);
+ 
+@@ -2528,6 +2617,11 @@
+                 }
+             }
+ 
++            for (const auto faceHandle : polygon)
++            {
++                SetFaceSurfaceId(whiteBox, wb_fh(faceHandle), surfaceId);
++            }
++
+             PolygonHandle polygonHandle = PolygonHandleFromInternal(polygon);
+ 
+             auto& polygonProps = whiteBox.mesh.property(polygonPropsHandle);
+@@ -3227,6 +3321,17 @@
+                     allFacesToRemove.end(), polygonHandleToRemove.m_faceHandles.cbegin(), polygonHandleToRemove.m_faceHandles.cend());
+             }
+ 
++            // Garbage collection invalidates handles. Capture lineage in the same order
++            // as BuildNewVertexFaceHandles before removing/recreating the source faces.
++            const auto captureIds = [&whiteBox](const PolygonHandle& polygon)
++            {
++                AZStd::vector<AZ::Uuid> ids;
++                for (const auto face : polygon.m_faceHandles) { ids.push_back(FaceSurfaceId(whiteBox, face)); }
++                return ids;
++            };
++            const auto topSurfaceIds = captureIds(polygonHandle);
++            AZStd::vector<AZStd::vector<AZ::Uuid>> restoredSurfaceIds;
++            for (const auto& polygon : polygonHandlesToRemove) { restoredSurfaceIds.push_back(captureIds(polygon)); }
+             // remove all faces that were already there
+             // note: it is very important to not use the existing polygon handle after remove
+             // has been called as this will invalidate all existing face handles
+@@ -3236,7 +3341,7 @@
+             // re-add existing adjacent polygons
+             for (const auto& verts : vertsForExistingAdjacentPolygons)
+             {
+-                polygonHandlesToRestore.push_back(AddPolygon(whiteBox, verts));
++                polygonHandlesToRestore.push_back(AddPolygon(whiteBox, verts, restoredSurfaceIds[polygonHandlesToRestore.size()][0]));
+             }
+ 
+             AZ_Assert(
+@@ -3250,6 +3355,10 @@
+                 RestoredPolygonHandlePair restoredPair;
+                 restoredPair.m_before = polygonHandlesToRemove[index];
+                 restoredPair.m_after = polygonHandlesToRestore[index];
++                for (size_t face = 0; face < restoredPair.m_after.m_faceHandles.size(); ++face)
++                {
++                    SetFaceSurfaceId(whiteBox, restoredPair.m_after.m_faceHandles[face], restoredSurfaceIds[index][face]);
++                }
+ 
+                 appendedPolygonHandles.m_restoredPolygonHandles.push_back(AZStd::move(restoredPair));
+             }
+@@ -3261,7 +3370,11 @@
+             }
+ 
+             // add top polygon
+-            PolygonHandle newPolygonHandle = AddPolygon(whiteBox, topFacesToAdd);
++            PolygonHandle newPolygonHandle = AddPolygon(whiteBox, topFacesToAdd, topSurfaceIds[0]);
++            for (size_t face = 0; face < newPolygonHandle.m_faceHandles.size(); ++face)
++            {
++                SetFaceSurfaceId(whiteBox, newPolygonHandle.m_faceHandles[face], topSurfaceIds[face]);
++            }
+ 
+             // add new adjacent polygons
+             for (const auto& verts : vertsForNewAdjacentPolygons)
+@@ -3459,7 +3572,61 @@
+             // OpenMesh 11.x + requires you to specify "Custom" options to read custom properties such as our polygons or those will be skipped
+             AZStd::lock_guard lg(g_omSerializationLock);
+             OpenMesh::IO::Options options{OpenMesh::IO::Options::FaceTexCoord | OpenMesh::IO::Options::FaceNormal | OpenMesh::IO::Options::Custom};
+-            return OpenMesh::IO::read_mesh(whiteBox.mesh, input, ".om", options) ? ReadResult::Full : ReadResult::Error;
++            const std::string sourceBytes{std::istreambuf_iterator<char>(input), std::istreambuf_iterator<char>()};
++            std::stringstream sourceStream(sourceBytes);
++            sourceStream >> std::noskipws;
++            auto candidate = CreateWhiteBoxMesh();
++            if (!OpenMesh::IO::read_mesh(candidate->mesh, sourceStream, ".om", options))
++            {
++                return ReadResult::Error;
++            }
++            SurfacePropertyHandle high;
++            SurfacePropertyHandle low;
++            const bool hasHigh = candidate->mesh._get_fprop(SurfaceIdHighProp) != nullptr;
++            const bool hasLow = candidate->mesh._get_fprop(SurfaceIdLowProp) != nullptr;
++            if (hasHigh != hasLow || (hasHigh &&
++                (!candidate->mesh.get_property_handle(high, SurfaceIdHighProp) || !candidate->mesh.get_property_handle(low, SurfaceIdLowProp))))
++            {
++                return ReadResult::Error;
++            }
++            if (!hasHigh)
++            {
++                // Hash the original bytes once. Walk face order, not the unordered polygon
++                // map: the first face of each polygon defines its stable legacy ordinal.
++                const AZ::Uuid seed = AZ::Uuid::CreateData(
++                    reinterpret_cast<const AZStd::byte*>(sourceBytes.data()), sourceBytes.size());
++                EnsureSurfaceProperties(*candidate);
++                AZStd::vector<bool> assigned(candidate->mesh.n_faces(), false);
++                uint64_t ordinal = 0;
++                for (const auto face : MeshFaceHandles(*candidate))
++                {
++                    if (assigned[face.Index()]) { continue; }
++                    const AZ::Uuid id = JE::BSP::LegacySurfaceId(seed, ordinal++);
++                    const auto polygon = FacePolygonHandle(*candidate, face);
++                    if (polygon.m_faceHandles.empty()) { return ReadResult::Error; }
++                    for (const auto polygonFace : polygon.m_faceHandles)
++                    {
++                        if (polygonFace.Index() < 0 || static_cast<size_t>(polygonFace.Index()) >= assigned.size() || assigned[polygonFace.Index()])
++                        {
++                            return ReadResult::Error;
++                        }
++                        SetFaceSurfaceId(*candidate, polygonFace, id);
++                        assigned[polygonFace.Index()] = true;
++                    }
++                }
++            }
++            EnsureSurfaceProperties(*candidate);
++            for (const auto face : MeshFaceHandles(*candidate))
++            {
++                if (FaceSurfaceId(*candidate, face).IsNull()) { return ReadResult::Error; }
++            }
++            ReplaceMesh(whiteBox, AZStd::move(candidate));
++            return ReadResult::Full;
++        }
++
++        void ReplaceMesh(WhiteBoxMesh& destination, WhiteBoxMeshPtr candidate)
++        {
++            destination = AZStd::move(*candidate);
+         }
+ 
+         WhiteBoxMeshPtr CloneMesh(const WhiteBoxMesh& whiteBox)
+--- a/Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h
++++ b/Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h
+@@ -8,6 +8,7 @@
+ 
+ #pragma once
+ 
++#include <AzCore/Math/Uuid.h>
+ #include <AzCore/Math/Vector2.h>
+ #include <AzCore/Math/Vector3.h>
+ #include <AzCore/std/containers/array.h>
+@@ -455,6 +456,11 @@
+         //! Return the normal associated with the given face handle.
+         //! @note The face handle passed in must be known to exist in the mesh otherwise the call will fail.
+         AZ::Vector3 FaceNormal(const WhiteBoxMesh& whiteBox, FaceHandle faceHandle);
++        //! Opaque caller-owned UUID128 surface lineage. Its complete bytes map to the two
++        //! JE CSG key words; these are not an allocator namespace or OpenMesh face index.
++        //! Snapshot clones preserve IDs. New authored polygons receive fresh IDs.
++        AZ::Uuid FaceSurfaceId(const WhiteBoxMesh& whiteBox, FaceHandle faceHandle);
++        void SetFaceSurfaceId(WhiteBoxMesh& whiteBox, FaceHandle faceHandle, const AZ::Uuid& surfaceId);
+ 
+         //! Return all vertex positions for a given face handle.
+         //! @note The face handle passed in must be known to exist in the mesh otherwise the call will fail.
+@@ -473,6 +479,9 @@
+         //! Return the texture coordinate (uv) associated with the given halfedge handle.
+         AZ::Vector2 HalfedgeUV(const WhiteBoxMesh& whiteBox, HalfedgeHandle halfedgeHandle);
+ 
++        //! Set an authored corner UV; shared positions may have different UVs.
++        void SetHalfedgeUV(WhiteBoxMesh& whiteBox, HalfedgeHandle halfedgeHandle, const AZ::Vector2& uv);
++
+         //! Return the vertex position at the tip of the half edge.
+         AZ::Vector3 HalfedgeVertexPositionAtTip(const WhiteBoxMesh& whiteBox, HalfedgeHandle halfedgeHandle);
+ 
+@@ -604,6 +613,9 @@
+         //! @note faceVertHandles should have at least one faceVertHandle.
+         PolygonHandle AddPolygon(WhiteBoxMesh& whiteBox, const FaceVertHandlesList& faceVertHandles);
+ 
++        //! Rebuild/restore triangles with inherited surface lineage without minting a new ID.
++        PolygonHandle AddPolygon(WhiteBoxMesh& whiteBox, const FaceVertHandlesList& faceVertHandles, const AZ::Uuid& surfaceId);
++
+         //! Create a three sided (triangle) polygon from three VertexHandles.
+         //! Each VertexHandle represents an individual Vertex in the Polygon (3 vertex handles forming a Face/Triangle).
+         //! @return The newly added PolygonHandle.
+@@ -782,6 +794,9 @@
+         //! any data (white box mesh will be left empty) or ReadResult::Error if any error was encountered
+         //! during deserialization.
+         //! @note The input stream must not skip white space characters (std::noskipws must be set on the stream).
++        //! Old .om files without surface properties derive stable UUIDs from the original
++        //! byte content and polygon ordinal; the next WriteMesh persists those full IDs.
++        //! Malformed/partial surface properties return Error without replacing the mesh.
+         ReadResult ReadMesh(WhiteBoxMesh& whiteBox, std::istream& input);
+ 
+         //! Take a white box mesh and write it out to a stream of bytes.
+@@ -791,6 +806,9 @@
+         //! Clones the white box mesh object into a new mesh.
+         //! @return Will return null if any error was encountered during serialization, otherwise the cloned mesh.
+         WhiteBoxMeshPtr CloneMesh(const WhiteBoxMesh& whiteBox);
++
++        //! Commit a fully constructed candidate without serialization or regenerating attributes.
++        void ReplaceMesh(WhiteBoxMesh& destination, WhiteBoxMeshPtr candidate);
+ 
+         //! Writes the white box mesh to an obj file at the specified path.
+         //! @return Will return false if any error was encountered during serialization, true otherwise.
+--- a/Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp
++++ b/Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp
+@@ -8,20 +8,334 @@
+ 
+ #include "WhiteBoxTestFixtures.h"
+ #include "WhiteBoxTestUtil.h"
++#include "Core/WhiteBoxCsg.h"
+ 
+ #include <AzCore/Math/Transform.h>
+ #include <AzCore/Memory/SystemAllocator.h>
+ #include <AzCore/UnitTest/TestTypes.h>
++#include <AzCore/std/algorithm.h>
+ #include <AzCore/std/containers/array.h>
+ #include <AzCore/std/containers/vector.h>
+ #include <AzQtComponents/Utilities/QtPluginPaths.h>
+ #include <AzTest/AzTest.h>
+ #include <AzToolsFramework/UnitTest/AzToolsFrameworkTestHelpers.h>
+ #include <QApplication>
++#include <limits>
+ #include <WhiteBox/WhiteBoxToolApi.h>
+ 
+ namespace UnitTest
+ {
++    namespace
++    {
++        AZ::Vector2 AuthoredUV(const AZ::Vector3& p, float offset)
++        {
++            return AZ::Vector2(offset + 11.0f + 2.0f * p.GetX() + 3.0f * p.GetY() + 5.0f * p.GetZ(),
++                offset - 9.0f - 4.0f * p.GetX() + 7.0f * p.GetY() - p.GetZ());
++        }
++
++        void AuthorUVs(WhiteBox::WhiteBoxMesh& mesh, float offset)
++        {
++            namespace Api = WhiteBox::Api;
++            for (const auto face : Api::MeshFaceHandles(mesh))
++            {
++                for (const auto halfedge : Api::FaceHalfedgeHandles(mesh, face))
++                {
++                    Api::SetHalfedgeUV(mesh, halfedge, AuthoredUV(Api::HalfedgeVertexPositionAtTip(mesh, halfedge), offset));
++                }
++            }
++        }
++
++        // Remove a named custom-property chunk from a real OpenMesh 2.2 stream.
++        // OMWriter writes header16, name8/string, type8/string, block-size32 and data.
++        // This exercises the production legacy reader without adding a legacy writer API.
++        bool RemoveSurfaceProperty(WhiteBox::Api::WhiteBoxMeshStream& bytes, const char* name)
++        {
++            const AZStd::string propertyName(name);
++            const auto found = AZStd::search(bytes.begin(), bytes.end(), propertyName.begin(), propertyName.end());
++            if (found == bytes.end())
++            {
++                return false;
++            }
++            const size_t nameOffset = static_cast<size_t>(found - bytes.begin());
++            if (nameOffset < 3 || static_cast<size_t>(bytes[nameOffset - 1]) != propertyName.size())
++            {
++                return false;
++            }
++            size_t cursor = nameOffset + propertyName.size();
++            if (cursor >= bytes.size())
++            {
++                return false;
++            }
++            cursor += 1 + bytes[cursor]; // storage type
++            if (cursor + 4 > bytes.size())
++            {
++                return false;
++            }
++            uint32_t dataSize = 0;
++            for (unsigned int i = 0; i < 4; ++i)
++            {
++                dataSize |= static_cast<uint32_t>(bytes[cursor + i]) << (i * 8);
++            }
++            const size_t end = cursor + 4 + dataSize;
++            if (end > bytes.size())
++            {
++                return false;
++            }
++            bytes.erase(bytes.begin() + nameOffset - 3, bytes.begin() + end);
++            return true;
++        }
++    }
++
++    TEST_F(WhiteBoxTestFixture, SurfaceIdentityAndCornerUVsSurviveCodecAndClone)
++    {
++        namespace Api = WhiteBox::Api;
++        const auto polygons = Api::InitializeAsUnitCube(*m_whiteBox);
++        AuthorUVs(*m_whiteBox, 23.0f);
++        const auto authoredId = AZ::Uuid::CreateString("{01234567-89AB-CDEF-FEDC-BA9876543210}");
++        for (const auto face : polygons[0].m_faceHandles)
++        {
++            Api::SetFaceSurfaceId(*m_whiteBox, face, authoredId);
++        }
++        Api::WhiteBoxMeshStream stream;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, stream));
++        auto restored = Api::CreateWhiteBoxMesh();
++        ASSERT_EQ(Api::ReadMesh(*restored, stream), Api::ReadResult::Full);
++        auto clone = Api::CloneMesh(*restored);
++        ASSERT_NE(clone, nullptr);
++        for (const auto* mesh : {restored.get(), clone.get()})
++        {
++            for (const auto face : Api::MeshFaceHandles(*mesh))
++            {
++                EXPECT_EQ(Api::FaceSurfaceId(*mesh, face), Api::FaceSurfaceId(*m_whiteBox, face));
++                EXPECT_FALSE(Api::FaceSurfaceId(*mesh, face).IsNull());
++                for (const auto halfedge : Api::FaceHalfedgeHandles(*mesh, face))
++                {
++                    EXPECT_TRUE(Api::HalfedgeUV(*mesh, halfedge).IsClose(
++                        AuthoredUV(Api::HalfedgeVertexPositionAtTip(*mesh, halfedge), 23.0f), 1e-5f));
++                }
++            }
++        }
++        EXPECT_EQ(Api::FaceSurfaceId(*restored, polygons[0].m_faceHandles[0]), authoredId);
++        EXPECT_NE(Api::FaceSurfaceId(*restored, polygons[0].m_faceHandles[0]),
++            Api::FaceSurfaceId(*restored, polygons[1].m_faceHandles[0]));
++    }
++
++    TEST_F(WhiteBoxTestFixture, LegacySurfaceIdentityIsDeterministicAndThenPersisted)
++    {
++        namespace Api = WhiteBox::Api;
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        AuthorUVs(*m_whiteBox, 17.0f);
++        Api::WhiteBoxMeshStream legacy;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, legacy));
++        ASSERT_TRUE(RemoveSurfaceProperty(legacy, "je-surface-id-high"));
++        ASSERT_TRUE(RemoveSurfaceProperty(legacy, "je-surface-id-low"));
++        const auto original = legacy;
++        auto first = Api::CreateWhiteBoxMesh();
++        auto second = Api::CreateWhiteBoxMesh();
++        ASSERT_EQ(Api::ReadMesh(*first, legacy), Api::ReadResult::Full);
++        ASSERT_EQ(Api::ReadMesh(*second, legacy), Api::ReadResult::Full);
++        EXPECT_EQ(legacy, original);
++        Api::WhiteBoxMeshStream upgraded;
++        ASSERT_TRUE(Api::WriteMesh(*first, upgraded));
++        auto reopened = Api::CreateWhiteBoxMesh();
++        ASSERT_EQ(Api::ReadMesh(*reopened, upgraded), Api::ReadResult::Full);
++        for (const auto face : Api::MeshFaceHandles(*first))
++        {
++            const auto id = Api::FaceSurfaceId(*first, face);
++            EXPECT_FALSE(id.IsNull());
++            EXPECT_EQ(id, Api::FaceSurfaceId(*second, face));
++            EXPECT_EQ(id, Api::FaceSurfaceId(*reopened, face));
++            for (const auto halfedge : Api::FaceHalfedgeHandles(*reopened, face))
++            {
++                EXPECT_TRUE(Api::HalfedgeUV(*reopened, halfedge).IsClose(
++                    AuthoredUV(Api::HalfedgeVertexPositionAtTip(*reopened, halfedge), 17.0f), 1e-5f));
++            }
++        }
++        AuthorUVs(*m_whiteBox, 18.0f);
++        Api::WhiteBoxMeshStream otherLegacy;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, otherLegacy));
++        ASSERT_TRUE(RemoveSurfaceProperty(otherLegacy, "je-surface-id-high"));
++        ASSERT_TRUE(RemoveSurfaceProperty(otherLegacy, "je-surface-id-low"));
++        auto otherContent = Api::CreateWhiteBoxMesh();
++        ASSERT_EQ(Api::ReadMesh(*otherContent, otherLegacy), Api::ReadResult::Full);
++        EXPECT_NE(Api::FaceSurfaceId(*first, Api::FaceHandle(0)), Api::FaceSurfaceId(*otherContent, Api::FaceHandle(0)));
++
++        const auto polygons = Api::MeshPolygonHandles(*first);
++        ASSERT_EQ(polygons.size(), 6);
++        AZStd::vector<AZ::Uuid> polygonIds;
++        for (const auto& polygon : polygons)
++        {
++            ASSERT_EQ(polygon.m_faceHandles.size(), 2);
++            const auto id = Api::FaceSurfaceId(*first, polygon.m_faceHandles[0]);
++            EXPECT_EQ(AZStd::find(polygonIds.begin(), polygonIds.end(), id), polygonIds.end());
++            polygonIds.push_back(id);
++            EXPECT_EQ(Api::FaceSurfaceId(*first, polygon.m_faceHandles[0]), Api::FaceSurfaceId(*first, polygon.m_faceHandles[1]));
++        }
++    }
++
++    TEST_F(WhiteBoxTestFixture, NewPolygonsInRelatedClonesHaveDistinctIdentity)
++    {
++        namespace Api = WhiteBox::Api;
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        auto clone = Api::CloneMesh(*m_whiteBox);
++        ASSERT_NE(clone, nullptr);
++        AZStd::vector<AZ::Uuid> newIds;
++        for (auto* mesh : {m_whiteBox.get(), clone.get()})
++        {
++            const auto a = Api::AddVertex(*mesh, AZ::Vector3(2, 0, 0));
++            const auto b = Api::AddVertex(*mesh, AZ::Vector3(3, 0, 0));
++            const auto c = Api::AddVertex(*mesh, AZ::Vector3(2, 1, 0));
++            const auto polygon = Api::AddTriPolygon(*mesh, a, b, c);
++            ASSERT_EQ(polygon.m_faceHandles.size(), 1);
++            newIds.push_back(Api::FaceSurfaceId(*mesh, polygon.m_faceHandles[0]));
++        }
++        EXPECT_FALSE(newIds[0].IsNull());
++        EXPECT_FALSE(newIds[1].IsNull());
++        EXPECT_NE(newIds[0], newIds[1]);
++        EXPECT_EQ(Api::FaceSurfaceId(*m_whiteBox, Api::FaceHandle(0)), Api::FaceSurfaceId(*clone, Api::FaceHandle(0)));
++    }
++
++    TEST_F(WhiteBoxTestFixture, AttributedBooleansKeepSourceChartsAndIdentityThroughChain)
++    {
++        namespace Api = WhiteBox::Api;
++        for (const auto operation : {Api::BooleanOperation::Union, Api::BooleanOperation::Intersection, Api::BooleanOperation::Subtraction})
++        {
++            Api::Clear(*m_whiteBox);
++            Api::InitializeAsUnitCube(*m_whiteBox);
++            auto operand = Api::CreateWhiteBoxMesh();
++            Api::InitializeAsUnitCube(*operand);
++            AuthorUVs(*m_whiteBox, 0.0f);
++            AuthorUVs(*operand, 100.0f);
++            AZStd::vector<AZ::Uuid> targetIds;
++            AZStd::vector<AZ::Uuid> operandIds;
++            for (const auto face : Api::MeshFaceHandles(*m_whiteBox)) { targetIds.push_back(Api::FaceSurfaceId(*m_whiteBox, face)); }
++            for (const auto face : Api::MeshFaceHandles(*operand)) { operandIds.push_back(Api::FaceSurfaceId(*operand, face)); }
++            Api::WhiteBoxMeshStream operandBefore;
++            ASSERT_TRUE(Api::WriteMesh(*operand, operandBefore));
++            const AZ::Vector3 shift(0.5f, 0.0f, 0.0f);
++            ASSERT_TRUE(Api::ApplyMeshBoolean(*m_whiteBox, *operand, AZ::Transform::CreateTranslation(shift), operation));
++            const auto checkResult = [&]()
++            {
++                bool sawTarget = false;
++                bool sawOperand = false;
++                for (const auto face : Api::MeshFaceHandles(*m_whiteBox))
++                {
++                    const auto id = Api::FaceSurfaceId(*m_whiteBox, face);
++                    const bool fromTarget = AZStd::find(targetIds.begin(), targetIds.end(), id) != targetIds.end();
++                    const bool fromOperand = AZStd::find(operandIds.begin(), operandIds.end(), id) != operandIds.end();
++                    ASSERT_NE(fromTarget, fromOperand);
++                    sawTarget |= fromTarget;
++                    sawOperand |= fromOperand;
++                    for (const auto halfedge : Api::FaceHalfedgeHandles(*m_whiteBox, face))
++                    {
++                        const auto local = Api::HalfedgeVertexPositionAtTip(*m_whiteBox, halfedge) - (fromOperand ? shift : AZ::Vector3::CreateZero());
++                        EXPECT_TRUE(Api::HalfedgeUV(*m_whiteBox, halfedge).IsClose(AuthoredUV(local, fromOperand ? 100.0f : 0.0f), 1e-4f));
++                    }
++                }
++                EXPECT_TRUE(sawTarget);
++                EXPECT_TRUE(sawOperand);
++            };
++            checkResult();
++            if (operation == Api::BooleanOperation::Union)
++            {
++                auto roundtrip = Api::CloneMesh(*m_whiteBox);
++                ASSERT_NE(roundtrip, nullptr);
++                Api::ReplaceMesh(*m_whiteBox, AZStd::move(roundtrip));
++                ASSERT_TRUE(Api::ApplyMeshBoolean(*m_whiteBox, *operand, AZ::Transform::CreateTranslation(shift), Api::BooleanOperation::Union));
++                checkResult();
++            }
++            Api::WhiteBoxMeshStream operandAfter;
++            ASSERT_TRUE(Api::WriteMesh(*operand, operandAfter));
++            EXPECT_EQ(operandBefore, operandAfter);
++        }
++    }
++
++    TEST_F(WhiteBoxTestFixture, CoplanarGroupingPreservesSurfaceAndUVSeams)
++    {
++        namespace Api = WhiteBox::Api;
++        JE::BSP::Csg::TriangleMesh triangles;
++        triangles.m_positions = {0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0};
++        triangles.m_indices = {0, 1, 2, 0, 2, 3};
++        triangles.m_cornerUVs = {0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1};
++        triangles.m_surfaceKeys = {{0x0123456789abcdefULL, 0xfedcba9876543210ULL}, {0x0123456789abcdefULL, 0xfedcba9876543210ULL}};
++        EXPECT_EQ(Api::Detail::GroupCoplanarTriangles(triangles).size(), 1);
++        triangles.m_cornerUVs[6] = 500;
++        EXPECT_EQ(Api::Detail::GroupCoplanarTriangles(triangles).size(), 2);
++        ASSERT_TRUE(Api::Detail::RebuildFromTriangleMesh(*m_whiteBox, triangles));
++        EXPECT_EQ(Api::MeshPolygonHandles(*m_whiteBox).size(), 2);
++        const auto converted = Api::Detail::ToTriangleMesh(*m_whiteBox, AZ::Transform::CreateIdentity());
++        EXPECT_EQ(converted.m_cornerUVs.size(), 12);
++        bool foundSeam = false;
++        for (const double value : converted.m_cornerUVs) { foundSeam |= value == 500.0; }
++        EXPECT_TRUE(foundSeam);
++        triangles.m_cornerUVs[6] = 0;
++        triangles.m_surfaceKeys[1].m_surface = 42;
++        EXPECT_EQ(Api::Detail::GroupCoplanarTriangles(triangles).size(), 2);
++    }
++
++    TEST_F(WhiteBoxTestFixture, FailedAttributedOperationsAndReadsPreserveSnapshot)
++    {
++        namespace Api = WhiteBox::Api;
++        Api::InitializeAsUnitCube(*m_whiteBox);
++        AuthorUVs(*m_whiteBox, 19.0f);
++        Api::WhiteBoxMeshStream before;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, before));
++        auto partial = before;
++        ASSERT_TRUE(RemoveSurfaceProperty(partial, "je-surface-id-low"));
++        EXPECT_EQ(Api::ReadMesh(*m_whiteBox, partial), Api::ReadResult::Error);
++        JE::BSP::Csg::TriangleMesh invalid;
++        invalid.m_positions = {0, 0, 0, 1, 0, 0, 0, 1, 0};
++        invalid.m_indices = {0, 1, 99};
++        invalid.m_cornerUVs = {0, 0, 1, 0, 0, 1};
++        invalid.m_surfaceKeys = {{1, 2}};
++        EXPECT_FALSE(Api::Detail::RebuildFromTriangleMesh(*m_whiteBox, invalid));
++        invalid.m_indices[2] = 2;
++        invalid.m_cornerUVs.pop_back();
++        EXPECT_FALSE(Api::Detail::RebuildFromTriangleMesh(*m_whiteBox, invalid));
++        invalid.m_cornerUVs.push_back(1);
++        invalid.m_cornerUVs[0] = std::numeric_limits<double>::infinity();
++        EXPECT_FALSE(Api::Detail::RebuildFromTriangleMesh(*m_whiteBox, invalid));
++        invalid.m_cornerUVs[0] = 0;
++        invalid.m_surfaceKeys.clear();
++        EXPECT_FALSE(Api::Detail::RebuildFromTriangleMesh(*m_whiteBox, invalid));
++        auto badOperand = Api::CloneMesh(*m_whiteBox);
++        ASSERT_NE(badOperand, nullptr);
++        const auto halfedge = Api::FaceHalfedgeHandles(*badOperand, Api::FaceHandle(0))[0];
++        Api::SetHalfedgeUV(*badOperand, halfedge, AZ::Vector2(std::numeric_limits<float>::quiet_NaN(), 0.0f));
++        EXPECT_FALSE(Api::ApplyMeshBoolean(*m_whiteBox, *badOperand, AZ::Transform::CreateIdentity(), Api::BooleanOperation::Union));
++        Api::WhiteBoxMeshStream after;
++        ASSERT_TRUE(Api::WriteMesh(*m_whiteBox, after));
++        EXPECT_EQ(before, after);
++    }
++
++    TEST_F(WhiteBoxTestFixture, ExtrusionAndFaceSplitRetainInheritedSurfaceIdentity)
++    {
++        namespace Api = WhiteBox::Api;
++        const auto polygons = Api::InitializeAsUnitCube(*m_whiteBox);
++        const auto topId = Api::FaceSurfaceId(*m_whiteBox, polygons[0].m_faceHandles[0]);
++        AZStd::vector<AZ::Uuid> originalIds;
++        for (const auto& polygon : polygons) { originalIds.push_back(Api::FaceSurfaceId(*m_whiteBox, polygon.m_faceHandles[0])); }
++        const auto result = Api::TranslatePolygonAppendAdvanced(*m_whiteBox, polygons[0], 0.5f);
++        for (const auto face : result.m_appendedPolygonHandle.m_faceHandles) { EXPECT_EQ(Api::FaceSurfaceId(*m_whiteBox, face), topId); }
++        bool sawNewWall = false;
++        for (const auto face : Api::MeshFaceHandles(*m_whiteBox))
++        {
++            const auto id = Api::FaceSurfaceId(*m_whiteBox, face);
++            EXPECT_FALSE(id.IsNull());
++            sawNewWall |= AZStd::find(originalIds.begin(), originalIds.end(), id) == originalIds.end();
++        }
++        EXPECT_TRUE(sawNewWall);
++        const auto splitFace = result.m_appendedPolygonHandle.m_faceHandles[0];
++        const auto faces = Api::FaceVertexHandles(*m_whiteBox, splitFace);
++        const auto point = (Api::VertexPosition(*m_whiteBox, faces[0]) + Api::VertexPosition(*m_whiteBox, faces[1]) + Api::VertexPosition(*m_whiteBox, faces[2])) / 3.0f;
++        const auto splitVertex = Api::SplitFace(*m_whiteBox, splitFace, point);
++        for (const auto halfedge : Api::VertexOutgoingHalfedgeHandles(*m_whiteBox, splitVertex))
++        {
++            const auto face = Api::HalfedgeFaceHandle(*m_whiteBox, halfedge);
++            ASSERT_TRUE(face.IsValid());
++            EXPECT_EQ(Api::FaceSurfaceId(*m_whiteBox, face), topId);
++        }
++    }
+     TEST(WhiteBoxTest, HandlesInitializedInvalid)
+     {
+         namespace Api = WhiteBox::Api;
+--- a/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp
++++ b/Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp
+@@ -236,7 +236,6 @@
+         }
+ 
+         Api::CalculateNormals(*targetMesh);
+-        Api::CalculatePlanarUVs(*targetMesh);
+ 
+         SerializeWhiteBox();
+         RebuildWhiteBox();
+@@ -525,7 +524,6 @@
+         if (Api::ApplyMeshBoolean(*evaluated, *sourceMesh, operandTransform, m_booleanOperation))
+         {
+             Api::CalculateNormals(*evaluated);
+-            Api::CalculatePlanarUVs(*evaluated);
+             m_displayMesh = AZStd::move(evaluated);
+         }
+         // on failure (no overlap) m_displayMesh stays null -> falls back to the base.

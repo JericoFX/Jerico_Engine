@@ -1,0 +1,51 @@
+[
+  {
+    "id": "vvl",
+    "bytes": 4865118,
+    "sha256": "107ad92b5610395d37c7533d716f9ce7e23b86d9cede749711c8f437581ee6a5",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\vvl\\vvl-a228e25346a931c791714977becb48b6702ec118.tar.gz"
+  },
+  {
+    "id": "headers",
+    "bytes": 2046470,
+    "sha256": "f7ad077cd85c9236d588662aa36643027dcb26e27203b3e39b6245b52477fc6a",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\headers\\headers-450ead13e1064584da027d91192bd7bfb724640f.tar.gz"
+  },
+  {
+    "id": "utility",
+    "bytes": 92943,
+    "sha256": "e95eebeb3c42e0c965c5d1486a5e1187976614492c18c786618e20d1b05aaffb",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\utility\\utility-79d5fb108be1a013135d3aa9a88c38f0b0608e87.tar.gz"
+  },
+  {
+    "id": "spirv-headers",
+    "bytes": 455678,
+    "sha256": "1dc0550f1dd5655c6560e1082c4a06e6a0161cbeb2f0f496453892fbbf3c2d7e",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\spirv-headers\\spirv-headers-3469b164e25cee24435029a569933cb42578db5d.tar.gz"
+  },
+  {
+    "id": "spirv-tools",
+    "bytes": 3119720,
+    "sha256": "5b4b9d18f5bab680fae254f92fa942241fe328c42cd5f028c83cb791e5847a08",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\spirv-tools\\spirv-tools-04cdb2d344706052c7a2d359294e830ebac63e74.tar.gz"
+  },
+  {
+    "id": "robin",
+    "bytes": 177234,
+    "sha256": "2ec51a99f9446cb60843391e05c9bf8a1e040a7f5e67e5db9e78fc9e9dc87f9b",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\robin\\robin-9145f963d80d6a02f0f96a47758050a89184a3ed.tar.gz"
+  },
+  {
+    "id": "mimalloc",
+    "bytes": 1137708,
+    "sha256": "923998a8b225569c1500572154f73f7c7f7756ae8a32e9a60f3713d5f5d101c5",
+    "status": "ACQUIRED_PENDING_TAR_AUDIT",
+    "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\mimalloc\\mimalloc-91ba1f374da66e624841f53f6659da3a8f8f93ea.tar.gz"
+  }
+]

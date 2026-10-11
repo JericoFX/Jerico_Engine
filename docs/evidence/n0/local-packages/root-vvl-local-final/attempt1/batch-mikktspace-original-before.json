@@ -1,0 +1,22 @@
+{
+  "name": "batch-mikktspace-original-before",
+  "path": "F:\\JericoEngine\\Dependencies\\mikktspace-3e895b49d05ea07e4c2133156cfa94369e19e409",
+  "fileCount": 3,
+  "files": [
+    {
+      "relativePath": "mikktspace.c",
+      "bytes": 57439,
+      "sha256": "de87e74107df766ce68108801262bd8d53899414236b59810509a8fc2a51e288"
+    },
+    {
+      "relativePath": "mikktspace.h",
+      "bytes": 8209,
+      "sha256": "17fc433894f24c73753d548086cc4d8c5c0379f4a6edfb98b5da243e4f0bc3d0"
+    },
+    {
+      "relativePath": "README.md",
+      "bytes": 156,
+      "sha256": "295d4e37ac1980e1f811c340f618ffa68fc10bf906b34bc93a64c6960351bdfc"
+    }
+  ]
+}

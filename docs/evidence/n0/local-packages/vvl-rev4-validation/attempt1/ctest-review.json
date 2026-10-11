@@ -1,0 +1,16 @@
+{
+  "nativeExit": 0,
+  "cases": [
+    "JE.LocalPackages.VVL.release.exports",
+    "JE.LocalPackages.VVL.release.runtime",
+    "JE.LocalPackages.VVL.debug.exports",
+    "JE.LocalPackages.VVL.debug.runtime"
+  ],
+  "expectedCases": [
+    "JE.LocalPackages.VVL.release.exports",
+    "JE.LocalPackages.VVL.release.runtime",
+    "JE.LocalPackages.VVL.debug.exports",
+    "JE.LocalPackages.VVL.debug.runtime"
+  ],
+  "problemCount": 0
+}

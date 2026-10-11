@@ -1,0 +1,21 @@
+{
+  "processEnvironmentOverrides": {},
+  "argv": [
+    "-S",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-runtime-diagnostic-source",
+    "-B",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-runtime-diagnostic-build",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_VVL_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package",
+    "-DJE_VVL_HEADERS_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/acquisition/headers/snapshot",
+    "-DJE_VVL_LOADER=C:/Windows/System32/vulkan-1.dll",
+    "-DJE_VVL_LOADER_SHA256=0419974F00E82A3D619077BA414DA265A774F8DB9D45AD93BC1843F44B2C2C1F"
+  ],
+  "workingDirectory": "F:/JericoEngine/JericoEngine",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

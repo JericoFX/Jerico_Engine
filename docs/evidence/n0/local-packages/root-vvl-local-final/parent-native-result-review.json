@@ -1,0 +1,43 @@
+{
+  "status": "PARENT ACTUAL ROOT LOGS AND POSTFLIGHT REVIEW",
+  "nativeExit": 1,
+  "elapsedSeconds": 29.274,
+  "arguments": 61,
+  "rootFreeze": 15597,
+  "rootDelta": 0,
+  "cacheBefore": 34,
+  "cacheAfter": 34,
+  "wheelsBefore": 44,
+  "wheelsAfter": 44,
+  "sourceSnapshotsWithoutDeltas": 39,
+  "packageExtractions": [
+    {
+      "name": "mcpp-2.7.2_az.2-je-rev1-windows",
+      "files": 20,
+      "actualBytesMatchAcceptedExtraction": true,
+      "additionalStamp": 1
+    },
+    {
+      "name": "vulkan-validationlayers-1.3.261-je-rev1-windows",
+      "files": 35,
+      "actualBytesMatchAcceptedExtraction": true,
+      "additionalStamp": 1
+    }
+  ],
+  "enginePackagesBefore": 6516,
+  "enginePackagesAfter": 6573,
+  "engineAddedFiles": 57,
+  "externalPythonEditableChanges": [
+    "changed-or-added:venv\\31e81382\\Lib\\site-packages\\atom-rpi-tools.egg-link",
+    "changed-or-added:venv\\31e81382\\Lib\\site-packages\\easy-install.pth",
+    "changed-or-added:venv\\31e81382\\packages\\pip_installs\\atom_rpi_tools.stamp"
+  ],
+  "pythonProductDeployment": "Not proven; only externalbuild venv changed, no editor/enginebuild",
+  "firstFatal": "Offline DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows SHA224a34691a17234c2294202368d9756635f11d66ac9bc528f929d84cf4acac8e",
+  "cmakeParentPeakWorkingSetBytes": 76017664,
+  "memoryScope": "direct CMake parent only; child MSBuild/compiler processes are not aggregated",
+  "rootGeneration": "Incomplete",
+  "engineBuild": "NOT_RUN",
+  "EditorRuntimeFrames": "NOT_RUN",
+  "retryAllowed": "Only after reviewed/provisioned missingDXC inputs; no unchanged retry"
+}

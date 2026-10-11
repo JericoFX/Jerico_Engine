@@ -1,0 +1,28 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-rev1-consumer\package\vulkan-validationlayers\lib\debug\VkLayer_khronos_validation.dll
+
+File Type: DLL
+
+  Image has the following dependencies:
+
+    ADVAPI32.dll
+    KERNEL32.dll
+    MSVCP140D.dll
+    VCRUNTIME140D.dll
+    VCRUNTIME140_1D.dll
+    ucrtbased.dll
+
+  Summary
+
+        1000 .00cfg
+      14F000 .data
+        6000 .idata
+      456000 .pdata
+     2DCF000 .rdata
+       95000 .reloc
+        1000 .rsrc
+     3238000 .text
+        1000 .tls

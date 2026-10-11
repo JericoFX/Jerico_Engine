@@ -1,0 +1,9 @@
+{
+  "label": "junction",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0330705,
+  "expectedError": "must not use symlink paths",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

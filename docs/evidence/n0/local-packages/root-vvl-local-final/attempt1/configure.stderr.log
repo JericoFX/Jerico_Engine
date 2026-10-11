@@ -1,0 +1,26 @@
+CMake Error at cmake/3rdPartyPackages.cmake:331 (message):
+  JE package unavailable offline:
+  DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows
+
+  SHA256: 224a34691a17234c2294202368d9756635f11d66ac9bc528f929d84cf4acac8e
+
+  Archive:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows.tar.xz
+
+  Unpack:
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-rev3-windows
+
+  Local roots: ;
+
+  Provision the pinned package independently in the local cache or a local
+  file:/// root; remote fallback is disabled.
+Call Stack (most recent call first):
+  cmake/3rdPartyPackages.cmake:562 (ly_package_internal_download_package)
+  cmake/3rdPartyPackages.cmake:655 (ly_force_download_package)
+  cmake/3rdPartyPackages.cmake:767 (ly_enable_package)
+  cmake/3rdParty.cmake:73 (ly_download_associated_package)
+  cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  cmake/LYWrappers.cmake:321 (ly_parse_third_party_dependencies)
+  Gems/Atom/Asset/Shader/Code/CMakeLists.txt:89 (ly_add_target)
+
+

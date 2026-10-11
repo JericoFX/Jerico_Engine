@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="4"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="4"
+	timestamp="2026-10-11T03:23:46"
+	>
+	<testcase name="JE.LocalPackages.VVL.release.exports" classname="JE.LocalPackages.VVL.release.exports" time="0.0611234" status="run">
+		<properties/>
+		<system-out>CASE exports PASS: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.VVL.release.runtime" classname="JE.LocalPackages.VVL.release.runtime" time="0.330844" status="run">
+		<properties/>
+		<system-out>VVL VUID-VkInstanceCreateInfo-flags-parameter: Validation Error: [ VUID-VkInstanceCreateInfo-flags-parameter ] Object 0: VK_NULL_HANDLE, type = VK_OBJECT_TYPE_DEVICE; | MessageID = 0x2bfcfba1 | vkCreateInstance: value of pCreateInfo-&gt;flags contains flag bits that are not recognized members of VkInstanceCreateFlagBits The Vulkan spec states: flags must be a valid combination of VkInstanceCreateFlagBits values (https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VUID-VkInstanceCreateInfo-flags-parameter)
+CASE runtime PASS: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.VVL.debug.exports" classname="JE.LocalPackages.VVL.debug.exports" time="0.909473" status="run">
+		<properties/>
+		<system-out>CASE exports PASS: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/vulkan-validationlayers/lib/debug/VkLayer_khronos_validation.dll
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.VVL.debug.runtime" classname="JE.LocalPackages.VVL.debug.runtime" time="2.95803" status="run">
+		<properties/>
+		<system-out>VVL VUID-VkInstanceCreateInfo-flags-parameter: Validation Error: [ VUID-VkInstanceCreateInfo-flags-parameter ] Object 0: VK_NULL_HANDLE, type = VK_OBJECT_TYPE_DEVICE; | MessageID = 0x2bfcfba1 | vkCreateInstance: value of pCreateInfo-&gt;flags contains flag bits that are not recognized members of VkInstanceCreateFlagBits The Vulkan spec states: flags must be a valid combination of VkInstanceCreateFlagBits values (https://www.khronos.org/registry/vulkan/specs/1.3-extensions/html/vkspec.html#VUID-VkInstanceCreateInfo-flags-parameter)
+CASE runtime PASS: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/vulkan-validationlayers/lib/debug/VkLayer_khronos_validation.dll
+</system-out>
+	</testcase>
+</testsuite>

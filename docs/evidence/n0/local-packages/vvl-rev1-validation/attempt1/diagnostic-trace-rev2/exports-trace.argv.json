@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "exports",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+    "C:/Windows/System32/vulkan-1.dll"
+  ],
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-diagnostic-build-rev2/Release/JEVulkanValidationLayersConsumer.exe",
+  "workingDirectory": "F:/JericoEngine/JericoEngine"
+}

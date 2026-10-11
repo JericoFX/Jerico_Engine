@@ -1,0 +1,22 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/utility/Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/src/layer/CMakeLists.txt
+  vk_layer_settings.cpp
+  vk_layer_settings_helper.cpp
+  layer_settings_manager.cpp
+  layer_settings_util.cpp
+  Generando código...
+  VulkanLayerSettings.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\utility\src\layer\Release\VulkanLayerSettings.lib
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/utility/Vulkan-Utility-Libraries-79d5fb108be1a013135d3aa9a88c38f0b0608e87/CMakeLists.txt
+  1>
+  -- Install configuration: "Release"
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/include/vulkan
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/include/vulkan/layer
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/include/vulkan/layer/vk_layer_settings.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/include/vulkan/layer/vk_layer_settings.hpp
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/include/vulkan/layer/vk_layer_settings_ext.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/include/vulkan/vk_enum_string_helper.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/lib/VulkanLayerSettings.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/lib/cmake/VulkanUtilityLibraries/VulkanUtilityLibrariesConfig.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/utility/lib/cmake/VulkanUtilityLibraries/VulkanUtilityLibrariesConfig-release.cmake

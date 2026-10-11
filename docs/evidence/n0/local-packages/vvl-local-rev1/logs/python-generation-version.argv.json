@@ -1,0 +1,6 @@
+[
+  "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+  "-I",
+  "-c",
+  "print(__import__('sys').version) or __import__('sys').exit(0 if __import__('sys').version_info >= (3, 10) else 1)"
+]

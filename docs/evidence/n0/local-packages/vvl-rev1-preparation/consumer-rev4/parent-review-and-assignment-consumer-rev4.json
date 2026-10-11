@@ -1,0 +1,19 @@
+{
+  "status": "PARENT SOURCE REVIEW; CONSUMER-ONLY NATIVE ASSIGNMENT",
+  "checkedInputs": 6471,
+  "providerInputs": 10,
+  "packageFiles": 35,
+  "actualDiffSHA256": "E4DCE5AF861EBE2A00E926770806426AF688DE04C83C3F7BCDC1E355D5746B6F",
+  "freezeSHA256": "ABE7DE1FB29A4A1296337F756A7AFC4F0E65514948AE8A45A6E99F21F7DF34F2",
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/consumer-rev4/RunVvlConsumerParentRev4.ps1",
+  "driverSHA256": "8DF8E5F5FEB41A10694DF16072BF443F7F6AC5417DAB2456B29F717DAEE17E7E",
+  "syntaxErrors": 0,
+  "nativeOwner": "Luna",
+  "nativeCommands": 3,
+  "expectedCTestCases": 4,
+  "nativeExecuted": false,
+  "archiveRebuild": false,
+  "review": "Only runtime CTest environment isolates unrelated implicit layers. Explicit package VkLayer, strict error count, VUID and unknown loader queries retained. CPP changes remove exactly3CR. Source README corrected; packaged README historical.",
+  "evidence": "A/B diagnostic same binary returned VK_SUCCESS in both environments; inherited2 stale manifests/errors, private empty path0errors and runtime exit0.",
+  "acceptance": "Four exact real cases and unchanged6471+35 inputs required; negatives/Root/Editor pending."
+}

@@ -1,0 +1,8 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: pristine SPIRV version generator SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/wrong-patch/utils/update_build_version.py
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/VulkanValidationLayers/ApplySpirvToolsProvenance.cmake:6 (JE_python_verify_file)
+  build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/wrong-patch.cmake:4 (JE_vvl_apply_spirv_provenance)
+
+

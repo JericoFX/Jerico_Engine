@@ -1,0 +1,192 @@
+{
+  "status": "PARENT PREPARED; NOT RUN",
+  "commands": [
+    {
+      "label": "missing-archive",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-missing-archive",
+        "-DJE_VVL_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/empty-archives",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "vvl exact source archive file is missing",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-missing-archive"
+    },
+    {
+      "label": "changed-archive",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-changed-archive",
+        "-DJE_VVL_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/changed-archives",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "vvl exact source archive SHA256 mismatch",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-changed-archive"
+    },
+    {
+      "label": "missing-tool",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-missing-tool",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/missing-python.exe",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "audited external Python3 generation tool file is missing",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-missing-tool"
+    },
+    {
+      "label": "changed-tool-pin",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-changed-tool-pin",
+        "-DJE_VVL_PYTHON_SHA256=0000000000000000000000000000000000000000000000000000000000000000",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "audited external Python3 generation tool SHA256 mismatch",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-changed-tool-pin"
+    },
+    {
+      "label": "remote-uri",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-remote-uri",
+        "-DJE_VVL_ARCHIVES_ROOT=https://invalid.example/vvl",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "must not be a URI",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-remote-uri"
+    },
+    {
+      "label": "unc",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-unc",
+        "-DJE_VVL_ARCHIVES_ROOT=//invalid.example/never-contacted/vvl",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "must be an absolute local path",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-unc"
+    },
+    {
+      "label": "junction",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-junction",
+        "-DJE_VVL_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/archive-junction",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "must not use symlink paths",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-junction"
+    },
+    {
+      "label": "existing-output",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-existing-output",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/existing-output",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "output exists; retained attempts are never overwritten",
+      "outputMustRemainAbsent": null
+    },
+    {
+      "label": "outside-build",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/je-vvl-negative-never-created",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/je-vvl-negative-never-created",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ],
+      "expectedError": "output must be beneath this checkout/build",
+      "outputMustRemainAbsent": "F:/JericoEngine/JericoEngine/je-vvl-negative-never-created"
+    },
+    {
+      "label": "wrong-private-patch",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-P",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/wrong-patch.cmake"
+      ],
+      "expectedError": "pristine SPIRV version generator SHA256 mismatch",
+      "outputMustRemainAbsent": null
+    },
+    {
+      "label": "wrong-package-version",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-S",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/wrong-version",
+        "-B",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/wrong-version-build"
+      ],
+      "expectedError": "Found unsuitable version",
+      "outputMustRemainAbsent": null
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-negatives\\fixtures\\existing-output\\retain.txt",
+      "bytes": 41,
+      "sha256": "37A6A138FC13DC12F09E95B9F5E7E0C4AF35233EA5111A3A193A4863C241E45A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-negatives\\fixtures\\wrong-patch\\utils\\update_build_version.py",
+      "bytes": 6380,
+      "sha256": "F7047EB7EDD15CF711E15A282229E898E52A2F79EB3505593E5BB5EBBED60601"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-negatives\\fixtures\\wrong-patch.cmake",
+      "bytes": 393,
+      "sha256": "C6A9B46EC310A56042AD87356C9789894DBCB6F6F66767DCCE0FB716A3AFC6DD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-negatives\\fixtures\\wrong-version\\CMakeLists.txt",
+      "bytes": 271,
+      "sha256": "1A699DF7975FDE6E6AB514535A6538E777EC4B6A8186D6A5E97107732CB58074"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-negatives\\fixtures\\changed-archives\\vvl\\vvl-a228e25346a931c791714977becb48b6702ec118.tar.gz",
+      "bytes": 4865119,
+      "sha256": "72B169E1BB7A82EAA6A3475EB05023FA89EAA613104CC125572F41AC5B4854B0"
+    }
+  ],
+  "nativeOwner": "Luna",
+  "precondition": "Producer and extracted-package consumer completed with exit0 and frozen inputs unchanged",
+  "limit": "Negative configure failures prove rejection only; no engine/Editor acceptance"
+}

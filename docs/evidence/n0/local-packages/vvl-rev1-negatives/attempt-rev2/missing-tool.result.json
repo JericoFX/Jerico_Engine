@@ -1,0 +1,9 @@
+{
+  "label": "missing-tool",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.1181234,
+  "expectedError": "audited external Python3 generation tool file is missing",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

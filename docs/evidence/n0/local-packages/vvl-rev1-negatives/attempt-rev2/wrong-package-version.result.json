@@ -1,0 +1,9 @@
+{
+  "label": "wrong-package-version",
+  "nativeExit": 1,
+  "elapsedSeconds": 1.7144226,
+  "expectedError": "Found unsuitable version",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

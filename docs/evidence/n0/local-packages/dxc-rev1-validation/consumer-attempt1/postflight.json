@@ -1,0 +1,28 @@
+{
+  "sourceInputs": 23348,
+  "status": "PASS",
+  "extraInputs": [
+    {
+      "path": "C:/Program Files/CMake/bin/ctest.exe",
+      "bytes": 14012488,
+      "sha256": "73BAACBEB272CA6F40422B4F789403390AF678BEB491783CEF1727D69CD3E1CB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\dxc-rev1-preparation\\RunDxcConsumerParentRev1.ps1",
+      "bytes": 18439,
+      "sha256": "FD1C6425575B9A87680E07784BA97DCAADCCF89E76EC29F1FF7CAB1E19B8499B"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz",
+      "bytes": 7352940,
+      "sha256": "62FC6978933215440718D8D810AB5ECF20A36368A8592D12822F902ED0654782"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 131,
+      "sha256": "8A9C9F9F562F099559770A5770B1465928471416181CEBC38198B2FEFF2E627E"
+    }
+  ],
+  "changes": [],
+  "toolchainInputs": 44
+}

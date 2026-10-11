@@ -1,0 +1,30 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-consumer-rev1
+    Start 1: JE.LocalPackages.DXC.dxil
+1/4 Test #1: JE.LocalPackages.DXC.dxil ........***Failed    0.04 sec
+CASE FAIL: compiler1.8 API version
+
+    Start 2: JE.LocalPackages.DXC.spirv
+2/4 Test #2: JE.LocalPackages.DXC.spirv .......***Failed    0.02 sec
+CASE FAIL: compiler1.8 API version
+
+    Start 3: JE.LocalPackages.DXC.invalid
+3/4 Test #3: JE.LocalPackages.DXC.invalid .....***Failed    0.02 sec
+CASE FAIL: compiler1.8 API version
+
+    Start 4: JE.LocalPackages.DXC.dxsc
+4/4 Test #4: JE.LocalPackages.DXC.dxsc ........***Failed    0.02 sec
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/RunDxsc.cmake:15 (message):
+  JE DXSC requires real compiled DXIL and fresh output
+
+
+
+
+0% tests passed, 4 tests failed out of 4
+
+Total Test time (real) =   0.12 sec
+
+The following tests FAILED:
+	  1 - JE.LocalPackages.DXC.dxil (Failed)
+	  2 - JE.LocalPackages.DXC.spirv (Failed)
+	  3 - JE.LocalPackages.DXC.invalid (Failed)
+	  4 - JE.LocalPackages.DXC.dxsc (Failed)

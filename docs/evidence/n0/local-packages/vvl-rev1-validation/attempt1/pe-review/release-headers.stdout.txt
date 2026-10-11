@@ -1,0 +1,171 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-rev1-consumer\package\vulkan-validationlayers\lib\release\VkLayer_khronos_validation.dll
+
+PE signature found
+
+File Type: DLL
+
+FILE HEADER VALUES
+            8664 machine (x64)
+               6 number of sections
+        6ACB2131 time date stamp Sun Oct 11 02:40:01 2026
+               0 file pointer to symbol table
+               0 number of symbols
+              F0 size of optional header
+            2022 characteristics
+                   Executable
+                   Application can handle large (>2GB) addresses
+                   DLL
+
+OPTIONAL HEADER VALUES
+             20B magic # (PE32+)
+           14.44 linker version
+         1039E00 size of code
+          61AA00 size of initialized data
+               0 size of uninitialized data
+          FD3F44 entry point (0000000180FD3F44) _DllMainCRTStartup
+            1000 base of code
+       180000000 image base (0000000180000000 to 0000000181657FFF)
+            1000 section alignment
+             200 file alignment
+            6.00 operating system version
+            0.00 image version
+            6.00 subsystem version
+               0 Win32 version
+         1658000 size of image
+             400 size of headers
+               0 checksum
+               3 subsystem (Windows CUI)
+             160 DLL characteristics
+                   High Entropy Virtual Addresses
+                   Dynamic base
+                   NX compatible
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+         14DF730 [     114] RVA [size] of Export Directory
+         14DF844 [     118] RVA [size] of Import Directory
+         1626000 [     1E0] RVA [size] of Resource Directory
+         15E7000 [   3EA0C] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+         1627000 [   30C04] RVA [size] of Base Relocation Directory
+         143D4D0 [      70] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+         143D580 [      28] RVA [size] of Thread Storage Directory
+         143D390 [     140] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+         103B000 [     940] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+ 1039D0F virtual size
+    1000 virtual address (0000000180001000 to 000000018103AD0E)
+ 1039E00 size of raw data
+     400 file pointer to raw data (00000400 to 0103A1FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+SECTION HEADER #2
+  .rdata name
+  4A783A virtual size
+ 103B000 virtual address (000000018103B000 to 00000001814E2839)
+  4A7A00 size of raw data
+ 103A200 file pointer to raw data (0103A200 to 014E1BFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        Time Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    6ACB2131 cv            B0 01458414  1457614    Format: RSDS, {43A10285-8608-445F-A49A-E7BDFE66F710}, 1, F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\vvl\upstream\layers\Release\VkLayer_khronos_validation.pdb
+    6ACB2131 feat          14 014584C4  14576C4    Counts: Pre-VC++ 11.00=0, C/C++=342, /GS=342, /sdl=0, guardN=34
+    6ACB2131 coffgrp      3DC 014584D8  14576D8    4C544347 (LTCG)
+    6ACB2131 iltcg          0 00000000        0
+
+SECTION HEADER #3
+   .data name
+  1033B4 virtual size
+ 14E3000 virtual address (00000001814E3000 to 00000001815E63B3)
+   8B600 size of raw data
+ 14E1C00 file pointer to raw data (014E1C00 to 0156D1FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #4
+  .pdata name
+   3EA0C virtual size
+ 15E7000 virtual address (00000001815E7000 to 0000000181625A0B)
+   3EC00 size of raw data
+ 156D200 file pointer to raw data (0156D200 to 015ABDFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #5
+   .rsrc name
+     1E0 virtual size
+ 1626000 virtual address (0000000181626000 to 00000001816261DF)
+     200 size of raw data
+ 15ABE00 file pointer to raw data (015ABE00 to 015ABFFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+SECTION HEADER #6
+  .reloc name
+   30C04 virtual size
+ 1627000 virtual address (0000000181627000 to 0000000181657C03)
+   30E00 size of raw data
+ 15AC000 file pointer to raw data (015AC000 to 015DCDFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42000040 flags
+         Initialized Data
+         Discardable
+         Read Only
+
+  Summary
+
+      104000 .data
+       3F000 .pdata
+      4A8000 .rdata
+       31000 .reloc
+        1000 .rsrc
+     103A000 .text

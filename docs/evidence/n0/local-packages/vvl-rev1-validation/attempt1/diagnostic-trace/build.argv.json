@@ -1,0 +1,14 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-diagnostic-build",
+    "--config",
+    "Release",
+    "--target",
+    "JEVulkanValidationLayersConsumer",
+    "--parallel",
+    "2"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine"
+}

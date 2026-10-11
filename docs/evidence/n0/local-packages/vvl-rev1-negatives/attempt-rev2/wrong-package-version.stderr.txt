@@ -1,0 +1,10 @@
+CMake Error at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:290 (message):
+  Could NOT find vulkan-validationlayers: Found unsuitable version "1.3.261",
+  but required is exact version "1.3.262" (found
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package)
+Call Stack (most recent call first):
+  C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:652 (_FPHSA_FAILURE_MESSAGE)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package/Findvulkan-validationlayers.cmake:32 (find_package_handle_standard_args)
+  CMakeLists.txt:4 (find_package)
+
+

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "squish-ccr",
+    "immutableFiles": 186,
+    "patchedPrivateFiles": 186,
+    "expectedPatchedFiles": 11,
+    "baselineErrors": []
+  },
+  {
+    "name": "assimp",
+    "immutableFiles": 3116,
+    "patchedPrivateFiles": 3116,
+    "expectedPatchedFiles": 1,
+    "baselineErrors": []
+  },
+  {
+    "name": "tinyusdz_repo",
+    "immutableFiles": 2271,
+    "patchedPrivateFiles": 2271,
+    "expectedPatchedFiles": 2,
+    "baselineErrors": []
+  }
+]

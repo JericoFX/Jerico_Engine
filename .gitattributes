@@ -136,3 +136,5 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 # Preserve the unmodified package utility from pinned o3de/3p-package-source 70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.
 # Adapted Find modules, producer, hooks and tests retain whitespace checks.
 /cmake/Tools/LocalPackages/OpenEXR/o3de_package_utilities.cmake -text -whitespace
+/cmake/Tools/LocalPackages/VulkanValidationLayers/SourceNotices.txt -text -whitespace
+/cmake/Tools/LocalPackages/VulkanValidationLayers/SourcePins.json -text whitespace=cr-at-eol

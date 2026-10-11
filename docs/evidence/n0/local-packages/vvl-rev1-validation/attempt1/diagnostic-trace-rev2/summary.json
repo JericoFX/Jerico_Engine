@@ -1,0 +1,26 @@
+{
+  "inputChanges": [],
+  "status": "PRIVATE DIAGNOSTIC RESULTS ONLY; PARENT MUST EXAMINE TRACE",
+  "sourceModified": false,
+  "commands": [
+    {
+      "label": "configure",
+      "nativeExit": 0,
+      "elapsedSeconds": 5.847204,
+      "scope": "PRIVATE DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    },
+    {
+      "label": "build",
+      "nativeExit": 0,
+      "elapsedSeconds": 2.7295644,
+      "scope": "PRIVATE DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    },
+    {
+      "label": "exports-trace",
+      "nativeExit": -1073741819,
+      "elapsedSeconds": 0.4049698,
+      "scope": "PRIVATE DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    }
+  ],
+  "packageRebuilt": false
+}

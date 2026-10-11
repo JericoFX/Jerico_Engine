@@ -1,0 +1,47 @@
+{
+  "status": "FAIL; PRESERVE ACTUAL RESULTS",
+  "commands": [
+    {
+      "label": "producer",
+      "nativeExit": 0,
+      "elapsedSeconds": 924.5554544,
+      "sampledNativeProcessPeakWorkingSetBytes": 14516224,
+      "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+      "status": "PASS"
+    },
+    {
+      "label": "extract-produced-archive",
+      "nativeExit": 0,
+      "elapsedSeconds": 3.6699865,
+      "sampledNativeProcessPeakWorkingSetBytes": 20307968,
+      "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+      "status": "PASS"
+    },
+    {
+      "label": "consumer-configure",
+      "nativeExit": 0,
+      "elapsedSeconds": 6.1015108,
+      "sampledNativeProcessPeakWorkingSetBytes": 22917120,
+      "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+      "status": "PASS"
+    },
+    {
+      "label": "consumer-build",
+      "nativeExit": 0,
+      "elapsedSeconds": 2.7588743,
+      "sampledNativeProcessPeakWorkingSetBytes": 16338944,
+      "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+      "status": "PASS"
+    },
+    {
+      "label": "consumer-ctest",
+      "nativeExit": 8,
+      "elapsedSeconds": 3.6093692,
+      "sampledNativeProcessPeakWorkingSetBytes": 15060992,
+      "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+      "status": "FAIL"
+    }
+  ],
+  "changedPaths": [],
+  "inputsChecked": 6471
+}

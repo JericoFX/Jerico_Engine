@@ -1,0 +1,7 @@
+CMake Error at cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: vvl exact source archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/fixtures/empty-archives/vvl/vvl-a228e25346a931c791714977becb48b6702ec118.tar.gz
+Call Stack (most recent call first):
+  cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake:38 (JE_python_verify_file)
+
+

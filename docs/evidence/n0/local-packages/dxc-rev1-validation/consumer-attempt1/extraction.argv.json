@@ -1,0 +1,10 @@
+{
+  "workingDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-native-extracted-rev1",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "argv": [
+    "-E",
+    "tar",
+    "xf",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-local-rev1/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows.tar.xz"
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "vvl",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  },
+  {
+    "id": "headers",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  },
+  {
+    "id": "utility",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  },
+  {
+    "id": "spirv-headers",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  },
+  {
+    "id": "spirv-tools",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  },
+  {
+    "id": "robin",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  },
+  {
+    "id": "mimalloc",
+    "error": "Tar has 1 violations; not extracted",
+    "status": "FAILED_PRESERVED"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "-E",
+    "tar",
+    "xJf",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/packages/vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz"
+  ],
+  "workingDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

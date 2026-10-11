@@ -1,0 +1,99 @@
+{
+  "status": "PREPARED NOT RUN; parent review and Luna dispatch required",
+  "nativeOwner": "Luna",
+  "commands": [
+    {
+      "label": "producer",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-DJE_VVL_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/acquisition",
+        "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+        "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+        "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1",
+        "-P",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+      ]
+    },
+    {
+      "label": "extract-produced-archive",
+      "precondition": "Create the new package working directory only after producer exit0; never overwrite",
+      "workingDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-E",
+        "tar",
+        "xJf",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/packages/vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz"
+      ]
+    },
+    {
+      "label": "consumer-configure",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "-S",
+        "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/tests",
+        "-B",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/build",
+        "-G",
+        "Visual Studio 17 2022",
+        "-A",
+        "x64",
+        "-T",
+        "v143",
+        "-DJE_VVL_PACKAGE_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/package",
+        "-DJE_VVL_HEADERS_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/acquisition/headers/snapshot",
+        "-DJE_VVL_LOADER=C:/Windows/System32/vulkan-1.dll",
+        "-DJE_VVL_LOADER_SHA256=0419974f00e82a3d619077ba414da265a774f8db9d45ad93bc1843f44b2c2c1f"
+      ]
+    },
+    {
+      "label": "consumer-build",
+      "executable": "C:/Program Files/CMake/bin/cmake.exe",
+      "argv": [
+        "--build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/build",
+        "--config",
+        "Release",
+        "--target",
+        "JEVulkanValidationLayersConsumer",
+        "--parallel",
+        "2"
+      ]
+    },
+    {
+      "label": "consumer-ctest",
+      "executable": "C:/Program Files/CMake/bin/ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/build",
+        "-C",
+        "Release",
+        "--output-on-failure",
+        "-R",
+        "^JE\\.LocalPackages\\.VVL\\."
+      ]
+    }
+  ],
+  "sourceRoot": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers",
+  "outputMustBeFresh": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1",
+  "consumerOutputMustBeFresh": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer",
+  "nativeCases": [
+    "release.exports",
+    "release.runtime",
+    "debug.exports",
+    "debug.runtime"
+  ],
+  "producerNegatives": [
+    "missing or changed source archive/hash before output creation",
+    "remote/UNC/symlink input before I/O",
+    "existing output retained byte-identically",
+    "wrong private SPIRV patch witness rejected"
+  ],
+  "capture": "Capture each argv/stdout/stderr/native exit immediately, before another native call; retain failures and postflight all frozen inputs",
+  "limits": [
+    "No native execution by writer",
+    "No catalogue/cache/root changes",
+    "No certification of redistribution rights",
+    "Native consumer does not prove Editor rendering or frame performance"
+  ]
+}

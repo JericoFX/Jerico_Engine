@@ -1,0 +1,9 @@
+{
+  "label": "unc",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0323398,
+  "expectedError": "must be an absolute local path",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

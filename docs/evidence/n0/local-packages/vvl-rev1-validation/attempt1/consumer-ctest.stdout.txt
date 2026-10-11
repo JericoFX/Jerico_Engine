@@ -1,0 +1,23 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-consumer/build
+    Start 1: JE.LocalPackages.VVL.release.exports
+1/4 Test #1: JE.LocalPackages.VVL.release.exports ...***Exception: SegFault  0.50 sec
+
+    Start 2: JE.LocalPackages.VVL.release.runtime
+2/4 Test #2: JE.LocalPackages.VVL.release.runtime ...***Exception: SegFault  0.35 sec
+
+    Start 3: JE.LocalPackages.VVL.debug.exports
+3/4 Test #3: JE.LocalPackages.VVL.debug.exports .....***Exception: SegFault  1.39 sec
+
+    Start 4: JE.LocalPackages.VVL.debug.runtime
+4/4 Test #4: JE.LocalPackages.VVL.debug.runtime .....***Exception: SegFault  1.31 sec
+
+
+0% tests passed, 4 tests failed out of 4
+
+Total Test time (real) =   3.58 sec
+
+The following tests FAILED:
+	  1 - JE.LocalPackages.VVL.release.exports (SEGFAULT)
+	  2 - JE.LocalPackages.VVL.release.runtime (SEGFAULT)
+	  3 - JE.LocalPackages.VVL.debug.exports (SEGFAULT)
+	  4 - JE.LocalPackages.VVL.debug.runtime (SEGFAULT)

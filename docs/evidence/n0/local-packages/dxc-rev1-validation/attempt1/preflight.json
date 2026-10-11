@@ -1,0 +1,12 @@
+{
+  "toolchainInputs": 44,
+  "fourMembershipRoots": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition/dxc/snapshot",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition/spirv-headers/snapshot",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/dxc-rev1-preparation/acquisition/spirv-tools/snapshot",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/Lib"
+  ],
+  "status": "PASS",
+  "changes": [],
+  "sourceInputs": 23348
+}

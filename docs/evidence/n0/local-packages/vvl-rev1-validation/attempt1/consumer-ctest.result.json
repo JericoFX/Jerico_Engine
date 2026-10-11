@@ -1,0 +1,8 @@
+{
+  "label": "consumer-ctest",
+  "nativeExit": 8,
+  "elapsedSeconds": 3.6093692,
+  "sampledNativeProcessPeakWorkingSetBytes": 15060992,
+  "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+  "status": "FAIL"
+}

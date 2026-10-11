@@ -1,0 +1,10 @@
+{
+  "label": "release-exports",
+  "nativeExit": 0,
+  "elapsedSeconds": 0.0330643,
+  "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+  "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.dll",
+  "dllSHA256": "E978226AE955A0C183489A63DDAE93788362967A80ACD14554968A239EE8FE32",
+  "stdoutBytes": 1595,
+  "stderrBytes": 0
+}

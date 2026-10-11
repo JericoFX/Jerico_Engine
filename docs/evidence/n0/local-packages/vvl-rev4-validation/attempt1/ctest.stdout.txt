@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev4-consumer/build
+    Start 1: JE.LocalPackages.VVL.release.exports
+1/4 Test #1: JE.LocalPackages.VVL.release.exports ...   Passed    0.06 sec
+    Start 2: JE.LocalPackages.VVL.release.runtime
+2/4 Test #2: JE.LocalPackages.VVL.release.runtime ...   Passed    0.33 sec
+    Start 3: JE.LocalPackages.VVL.debug.exports
+3/4 Test #3: JE.LocalPackages.VVL.debug.exports .....   Passed    0.91 sec
+    Start 4: JE.LocalPackages.VVL.debug.runtime
+4/4 Test #4: JE.LocalPackages.VVL.debug.runtime .....   Passed    2.96 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   4.28 sec

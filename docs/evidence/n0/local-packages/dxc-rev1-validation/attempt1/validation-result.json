@@ -1,0 +1,15 @@
+{
+  "producer": {
+    "elapsedSeconds": 477.6464506,
+    "parentSamples": 473,
+    "parallelJobs": 6,
+    "peakParentWorkingSetBytes": 14417920,
+    "scope": "Dependency producer only; no consumer/Root/Editor acceptance",
+    "memoryScope": "Only outer CMake producer; excludes native child processes and engine",
+    "nativeExit": 0
+  },
+  "changedPaths": [],
+  "status": "PRODUCER FINISHED; PARENT/CONSUMER/GUARDS/ROOT REQUIRED",
+  "rootExecuted": false,
+  "consumerExecuted": false
+}

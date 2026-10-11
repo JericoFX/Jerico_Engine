@@ -1,0 +1,9 @@
+{
+  "label": "remote-uri",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.0366186,
+  "expectedError": "must not be a URI",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

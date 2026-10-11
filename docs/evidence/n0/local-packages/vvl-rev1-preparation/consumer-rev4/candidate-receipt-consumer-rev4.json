@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\VulkanValidationLayers\\tests\\CMakeLists.txt",
+      "beforeSHA256": "8ee41928a18ba6e3f182b2817c078ba25ff7dea397f1843269819dbdd3d171f6",
+      "beforeBytes": 2310,
+      "afterSHA256": "cc35d120bd246f35d45bd51d44599e0e51f7918bea055a0b4a96216dbe6057b8",
+      "afterBytes": 2964,
+      "inverseByteExact": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\VulkanValidationLayers\\tests\\VulkanValidationLayersConsumer.cpp",
+      "beforeSHA256": "eb567b84cc8e4e8e48438540fc82bebb096267f0f9ce73f1666ccd4eac21fa53",
+      "beforeBytes": 9465,
+      "afterSHA256": "b2800af909e37450e46d163cc79cd7ac32a9211ebb32446be449bbc54ba3fa1b",
+      "afterBytes": 9462,
+      "inverseByteExact": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\VulkanValidationLayers\\README.md",
+      "beforeSHA256": "3fec8a624334eef5aca62388a0bf890d098f6043202aef0996f8ffccd964a67e",
+      "beforeBytes": 3883,
+      "afterSHA256": "c910ef755c39a94c415bd114399bead93f93c590981debc32af121876a8004dd",
+      "afterBytes": 4217,
+      "inverseByteExact": true
+    }
+  ],
+  "inputCount": 6471,
+  "sourceCount": 10,
+  "unexpectedDeltas": 0,
+  "nativeExecuted": false,
+  "historicalRev3Preserved": true,
+  "eolCorrection": "Rev3 preservation claim was incorrect: original CPP had0CRLF/183LF, rev3 had3CRLF/183LF; rev4 removes exactly those3CR, yielding0CRLF/186LF. No semantic CPP changes.",
+  "runtimeIsolation": "Only CTest runtime ENVIRONMENT VK_IMPLICIT_LAYER_PATH points at an empty private build directory. No global environment/registry change or suppressed diagnostic.errors.",
+  "packageArchiveRebuilt": false,
+  "packagedReadmeHistorical": true,
+  "status": "SOURCE REVIEW READY; native consumer validation pending"
+}

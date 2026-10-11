@@ -1,0 +1,44 @@
+[
+  {
+    "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h",
+    "sha256": "2544FA3F7A098B966889DF83C1FD4C131DB8786123031206FD16568A819E4660",
+    "bytes": 4606,
+    "crlf": 88,
+    "lf": 0
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp",
+    "sha256": "0CAD2EF8EF08E60DC1AA19E9D5B3B97D669617331EDF7BFD6497A10509AD37BA",
+    "bytes": 37936,
+    "crlf": 847,
+    "lf": 0
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp",
+    "sha256": "5010CD445F0D41C694EB6F2730EA01EDE3FA3541CA5DF526523898B271792414",
+    "bytes": 159594,
+    "crlf": 3575,
+    "lf": 0
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h",
+    "sha256": "A7CCF4CDF02FA7D996B56F62E54FDCB5E2AE11D5658402640A35015E42F0A77D",
+    "bytes": 49012,
+    "crlf": 821,
+    "lf": 0
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp",
+    "sha256": "379462F1B6D38785F05AA85C8C8A9FB079C00E0BF410BD0E4461CD00F2EC45B0",
+    "bytes": 109454,
+    "crlf": 2390,
+    "lf": 0
+  },
+  {
+    "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+    "sha256": "2C9D69C0FC6CFEA04B2E23BDF3D22C5862C191EEF9A7342C8DC1538B0A6C853B",
+    "bytes": 79343,
+    "crlf": 1691,
+    "lf": 0
+  }
+]

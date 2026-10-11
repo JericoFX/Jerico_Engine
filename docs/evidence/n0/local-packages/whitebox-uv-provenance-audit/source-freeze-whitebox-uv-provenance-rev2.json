@@ -1,0 +1,159 @@
+{
+  "revision": 2,
+  "checkout": "F:\\JericoEngine\\JericoEngine",
+  "status": "SOURCE_FROZEN_NATIVE_NOT_RUN",
+  "scope": "WhiteBox adapter corner UV and opaque UUID128 surface provenance",
+  "historicalFreeze": "source-freeze-whitebox-uv-provenance-rev1.json",
+  "historicalFreezeSha256": "97B7B759048E429A1EBEDA775C73230EC550933B9CCDEA093BE1B2A603646E76",
+  "files": [
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.h",
+      "sha256": "406D675C9DDC0763D39458EB026B97825A9E735BDFC2499A51C509A5054D0F7F",
+      "bytes": 4891,
+      "beforeSha256": "2544FA3F7A098B966889DF83C1FD4C131DB8786123031206FD16568A819E4660",
+      "rev1Sha256": "406D675C9DDC0763D39458EB026B97825A9E735BDFC2499A51C509A5054D0F7F"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsg.cpp",
+      "sha256": "A999EED6CF4F9E175FD106A51546747425EEA7A04DBC4E90403239208FE79027",
+      "bytes": 44368,
+      "beforeSha256": "0CAD2EF8EF08E60DC1AA19E9D5B3B97D669617331EDF7BFD6497A10509AD37BA",
+      "rev1Sha256": "A999EED6CF4F9E175FD106A51546747425EEA7A04DBC4E90403239208FE79027"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxToolApi.cpp",
+      "sha256": "51F0F9250DF532BF3EE4D57B899EA137116BFA82BE6CEDB59BE4270D0F4B1108",
+      "bytes": 174627,
+      "beforeSha256": "5010CD445F0D41C694EB6F2730EA01EDE3FA3541CA5DF526523898B271792414",
+      "rev1Sha256": "835D8EB6F9B260A978CEE839430C2711F28DF7F7875D722FF67C0076D6E9DAE3"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Include/WhiteBox/WhiteBoxToolApi.h",
+      "sha256": "9A251232FEEA99F7FA1BBBB6DA7ED0C204105D3717A0CF2B1E1C9FE509F13E69",
+      "bytes": 50392,
+      "beforeSha256": "A7CCF4CDF02FA7D996B56F62E54FDCB5E2AE11D5658402640A35015E42F0A77D",
+      "rev1Sha256": "26B28049AF087716564B4A3F9748AF3614E53FED33BAA19ECABAD3261BC58248"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/WhiteBoxTest.cpp",
+      "sha256": "4B66BEB59AD76F4D343FA13985437A7736F284BAEFE8F87385D55F14CF13D9FF",
+      "bytes": 130740,
+      "beforeSha256": "379462F1B6D38785F05AA85C8C8A9FB079C00E0BF410BD0E4461CD00F2EC45B0",
+      "rev1Sha256": "69F062BDFB62B00D4CD1B6E40FB4B0FF533163CDFEE2EFB0FA046BF9D662C14D"
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/EditorWhiteBoxComponent.cpp",
+      "sha256": "FDC95FEF6CFE6AB1F0D6EFABBB4F4CA61797F25F1BD0C6AE9A03681CA90B9A7F",
+      "bytes": 79246,
+      "beforeSha256": "2C9D69C0FC6CFEA04B2E23BDF3D22C5862C191EEF9A7342C8DC1538B0A6C853B",
+      "rev1Sha256": "FDC95FEF6CFE6AB1F0D6EFABBB4F4CA61797F25F1BD0C6AE9A03681CA90B9A7F"
+    }
+  ],
+  "referenceInputs": [
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.h",
+      "sha256": "A32B8E20DB0A5B0D449CBA2683E5E2BA2F946393B5F51CB847CDA9F6547C4608",
+      "bytes": 4276
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Core/WhiteBoxCsgCore.cpp",
+      "sha256": "90E675FADDEC3DF5E0B3AC73304A01478A6702F3B4963C92761AB69DDC6C2099",
+      "bytes": 15998
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Tests/CSG/WhiteBoxCsgCoreTest.cpp",
+      "sha256": "3E0C8BD358AE0805DB50B1DAC36DC9E2141655896393A8FD7AFCD27986E94A47",
+      "bytes": 26648
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Math/Uuid.h",
+      "sha256": "6D716FC18042888EB170043CF92F0638AF7569FF8C4FFF4DBBFBCE333349105B",
+      "bytes": 9539
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Math/Uuid.inl",
+      "sha256": "95D9C5903CFE6F5A066D7D8DDB2F695F7A4BCAD08504CB84A7FCE4FD87EEC0CC",
+      "bytes": 16953
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetUndoCommand.cpp",
+      "sha256": "B9A472488A0039F93E54CDECDA31CE566D30DAEB8C5974EEB9248B948ACC9122",
+      "bytes": 1827
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Asset/WhiteBoxMeshAssetHandler.cpp",
+      "sha256": "5EF7BA6E747AFFE281404094AC23292F22474080C189EFD215F8D861372B1896",
+      "bytes": 6129
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Asset/EditorWhiteBoxMeshAsset.cpp",
+      "sha256": "180F6C3B01B8FAE7BD48700BF755D097E21C5F913644A3D7FCC86485FC922058",
+      "bytes": 12121
+    },
+    {
+      "path": "Gems/WhiteBox/Code/Source/Rendering/WhiteBoxRenderData.cpp",
+      "sha256": "B0CF803F40789D6590D6298F6C7A8AC94C699A0EAA7434B0075FA0BB4E3FE29A",
+      "bytes": 3231
+    },
+    {
+      "path": "Gems/WhiteBox/Code/CMakeLists.txt",
+      "sha256": "DABAFD5E87BC188368CB723E3E6C1C02936F53574645D36971718C50CA7B9634",
+      "bytes": 6999
+    },
+    {
+      "path": "Gems/WhiteBox/Code/whitebox_editor_tests_supported_files.cmake",
+      "sha256": "3C9642FB11B2B02B1A8F33077960109C1964C3B36A659DE46199DFE9719B6F00",
+      "bytes": 614
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/IO/reader/OMReader.cc",
+      "sha256": "DC1BAA988F5540BBC2F3CD74813FDD7D87E05934F84F06BCAF74318C767475FA",
+      "bytes": 28150
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/IO/writer/OMWriter.cc",
+      "sha256": "2CA2F1F26017EA7F1F0DBE456EB654975A46DEC21EFCE342D6849CDED90B7D8F",
+      "bytes": 24013
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/IO/OMFormat.hh",
+      "sha256": "ABDC4A9A1117DFBA04984C0B7E96E016D99CF9B91A4952B1908240EB79A7672A",
+      "bytes": 22602
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/IO/SR_binary_spec.hh",
+      "sha256": "7A6CF3E01C7884B0A181A78B77397F2BF60C14FC9A78C5F0984EBE41CCFC87C5",
+      "bytes": 17130
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/Utils/PropertyCreator.cc",
+      "sha256": "3E3E17C112E5295FC610E7362B16542B123FDDBE3983D57735FDFC7BF08E8A00",
+      "bytes": 6855
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/Mesh/TriMeshT.hh",
+      "sha256": "F6D0B1FCE194CA9EE51941CD60B0FA540977B54B19446319CD0AA3FD829AAA93",
+      "bytes": 16833
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/Mesh/TriConnectivity.cc",
+      "sha256": "275D73CD626545C5E4F7B6F88050C3B943D7FF286CBA5E0A0E5E8C4EE738C716",
+      "bytes": 15858
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/IO/StoreRestore.hh",
+      "sha256": "4A748BC75FCBED671C407576BEB43EF7226EBD1CFDFB6401CE4354D9247E29AE",
+      "bytes": 5809
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/Utils/Endian.hh",
+      "sha256": "E09BAB63D3CF0BB97CBA8F2FD9B7E26D8FF7B4A92349C6703724F222F86438DA",
+      "bytes": 4533
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0/src/OpenMesh/Core/Utils/Property.hh",
+      "sha256": "0DF014F5F245FB4EBCDC10BCAAA29E905658BE86153228A52CD82D0377DB192E",
+      "bytes": 16615
+    }
+  ]
+}

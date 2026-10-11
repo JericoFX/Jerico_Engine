@@ -1,0 +1,24 @@
+{
+  "status": "PARENT SOURCE REVIEWED; NATIVE/PRODUCT ACCEPTANCE PENDING",
+  "revision": 2,
+  "checkedInputs": 27,
+  "sources": 6,
+  "references": 21,
+  "freezeSHA256": "0049D2383BDE7FB182A0D540E535C926DE2BEDCD56223F9578A29D1DF65F20A4",
+  "deltaSHA256": "44880CDB58E3DC7E787B20C178A5E8B8FC6DEB59FC54A9EC5D050841DC87A9CB",
+  "actualDeltaFullyRead": true,
+  "scope": "ToolApi cpp122 lines, header contract2/2, tests87 lines; other3rev1 sources unchanged",
+  "findings": [
+    "Atomic read preflight uses original OMFormat framing/restore, validates both UUID128 custom chunks without rejecting zero halves",
+    "Original reader warns/skips wrong-sized custom block, so original read return alone cannot establish identity preservation",
+    "Empty stream contract now matches original empty vector without altering destination; serialized empty mesh remains Full replacement",
+    "Original UV corner mapping+surface UUID128 persistence+Csg grouping kept; no extra renderer/ECS/material authority"
+  ],
+  "staticDiffCheckExit": 0,
+  "regressionsAuthored": 10,
+  "nativeRed": "NOT_RUN",
+  "nativeGreen": "NOT_RUN",
+  "legacyArchiveArtifact": "NOT_FOUND; old framing source-reviewed, native corpus pending",
+  "guiUndoSaveReopenRuntime": "NOT_RUN",
+  "owner": "Parent integration, BSP writer sources, Luna native validation"
+}

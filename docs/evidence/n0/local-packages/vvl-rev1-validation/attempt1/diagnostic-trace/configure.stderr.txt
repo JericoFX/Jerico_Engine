@@ -1,0 +1,21 @@
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-diagnostic-source"
+
+
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-rev1-consumer\package"
+
+
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    JE_VVL_HEADERS_ROOT
+    JE_VVL_LOADER
+    JE_VVL_LOADER_SHA256
+    JE_VVL_PACKAGE_ROOT
+
+

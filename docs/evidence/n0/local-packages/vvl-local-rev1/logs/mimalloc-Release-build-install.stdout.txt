@@ -1,0 +1,32 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/mimalloc/mimalloc-91ba1f374da66e624841f53f6659da3a8f8f93ea/CMakeLists.txt
+  stats.c
+  random.c
+  os.c
+  bitmap.c
+  arena.c
+  segment-cache.c
+  segment.c
+  page.c
+  alloc.c
+  alloc-aligned.c
+  alloc-posix.c
+  heap.c
+  options.c
+  init.c
+  Generando código...
+  mimalloc-static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\vvl-local-rev1\build\Release\mimalloc\Release\mimalloc-static.lib
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/source-work/mimalloc/mimalloc-91ba1f374da66e624841f53f6659da3a8f8f93ea/CMakeLists.txt
+  1>
+  -- Install configuration: "Release"
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/lib/mimalloc-2.0/mimalloc-static.lib
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/lib/cmake/mimalloc-2.0/mimalloc.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/lib/cmake/mimalloc-2.0/mimalloc-release.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/include/mimalloc-2.0/mimalloc.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/include/mimalloc-2.0/mimalloc-override.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/include/mimalloc-2.0/mimalloc-new-delete.h
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/lib/cmake/mimalloc-2.0/mimalloc-config.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/lib/cmake/mimalloc-2.0/mimalloc-config-version.cmake
+  -- Installing: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1/install/Release/mimalloc/lib/pkgconfig/mimalloc.pc

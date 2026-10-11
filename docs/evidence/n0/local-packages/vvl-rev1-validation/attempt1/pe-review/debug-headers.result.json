@@ -1,0 +1,10 @@
+{
+  "label": "debug-headers",
+  "nativeExit": 0,
+  "elapsedSeconds": 0.0392814,
+  "dumpbinSHA256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+  "dllPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-consumer\\package\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.dll",
+  "dllSHA256": "8BC7972E4572E2EEDDA82B334DA0A34017A28156560341D428197B4F6692B29A",
+  "stdoutBytes": 7408,
+  "stderrBytes": 0
+}

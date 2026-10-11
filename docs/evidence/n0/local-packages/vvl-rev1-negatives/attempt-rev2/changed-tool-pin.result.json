@@ -1,0 +1,9 @@
+{
+  "label": "changed-tool-pin",
+  "nativeExit": 1,
+  "elapsedSeconds": 0.1041876,
+  "expectedError": "audited external Python3 generation tool SHA256 mismatch",
+  "observedExpectedError": true,
+  "outputCondition": true,
+  "status": "PASS REJECTION"
+}

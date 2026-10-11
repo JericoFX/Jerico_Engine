@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "historicalFreeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\source-freeze-vvl-provider-rev1-rev2.json",
+  "source": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/tests/VulkanValidationLayersConsumer.cpp",
+  "beforeSha256": "53FDA14F06E763F4EF420300C63ABE90DD38A741E70A7C0908A71262F0C04DA2",
+  "afterSha256": "eb567b84cc8e4e8e48438540fc82bebb096267f0f9ce73f1666ccd4eac21fa53",
+  "afterBytes": 9465,
+  "sourceCount": 10,
+  "inputCount": 6471,
+  "authorizedDeltaCount": 1,
+  "inverseByteExact": true,
+  "encodingAndCrlfPreserved": true,
+  "demonstratedFailure": "Native AV 0xC0000005 at TRACE12 direct layer getInstance(NULL, JE_missing_function).",
+  "internalCause": "Inferred without stack: unknown layer query forwards through dispatch-key access before a chain exists.",
+  "fix": "Direct layer queries known global vkCreateInstance; real loader rejects unknown global NULL and valid-instance queries.",
+  "preserved": [
+    "API1.3.261",
+    "five exports",
+    "enumeration/truncation",
+    "unknown layer",
+    "negotiation1/2",
+    "exact invalid-flags VUID and VK_ERROR_VALIDATION_FAILED_EXT",
+    "valid instance creation/destruction without errors"
+  ],
+  "primarySources": [
+    "https://docs.vulkan.org/refpages/latest/refpages/source/vkGetInstanceProcAddr.html",
+    "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Loader/main/docs/LoaderLayerInterface.md"
+  ],
+  "status": "SOURCE REVIEW READY; native consumer rebuild/tests pending Luna; provider archive/DLLs unchanged."
+}

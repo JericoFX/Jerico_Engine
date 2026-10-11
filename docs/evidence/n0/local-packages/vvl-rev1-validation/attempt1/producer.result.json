@@ -1,0 +1,8 @@
+{
+  "label": "producer",
+  "nativeExit": 0,
+  "elapsedSeconds": 924.5554544,
+  "sampledNativeProcessPeakWorkingSetBytes": 14516224,
+  "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+  "status": "PASS"
+}

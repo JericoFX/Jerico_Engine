@@ -1,0 +1,58 @@
+[
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\vvl\\snapshot",
+    "pinnedTextCount": 13,
+    "fileCount": 487,
+    "sha256": "107ad92b5610395d37c7533d716f9ce7e23b86d9cede749711c8f437581ee6a5",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "vvl"
+  },
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\headers\\snapshot",
+    "pinnedTextCount": 4,
+    "fileCount": 75,
+    "sha256": "f7ad077cd85c9236d588662aa36643027dcb26e27203b3e39b6245b52477fc6a",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "headers"
+  },
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\utility\\snapshot",
+    "pinnedTextCount": 7,
+    "fileCount": 48,
+    "sha256": "e95eebeb3c42e0c965c5d1486a5e1187976614492c18c786618e20d1b05aaffb",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "utility"
+  },
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\spirv-headers\\snapshot",
+    "pinnedTextCount": 2,
+    "fileCount": 98,
+    "sha256": "1dc0550f1dd5655c6560e1082c4a06e6a0161cbeb2f0f496453892fbbf3c2d7e",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "spirv-headers"
+  },
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\spirv-tools\\snapshot",
+    "pinnedTextCount": 11,
+    "fileCount": 1667,
+    "sha256": "5b4b9d18f5bab680fae254f92fa942241fe328c42cd5f028c83cb791e5847a08",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "spirv-tools"
+  },
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\robin\\snapshot",
+    "pinnedTextCount": 2,
+    "fileCount": 140,
+    "sha256": "2ec51a99f9446cb60843391e05c9bf8a1e040a7f5e67e5db9e78fc9e9dc87f9b",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "robin"
+  },
+  {
+    "snapshotPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\acquisition\\mimalloc\\snapshot",
+    "pinnedTextCount": 2,
+    "fileCount": 270,
+    "sha256": "923998a8b225569c1500572154f73f7c7f7756ae8a32e9a60f3713d5f5d101c5",
+    "status": "TAR_SAFE_EXTRACT_VERIFIED",
+    "id": "mimalloc"
+  }
+]

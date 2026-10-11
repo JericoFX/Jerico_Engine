@@ -1,0 +1,734 @@
+{
+  "repository": "KhronosGroup/Vulkan-Headers",
+  "commit": "450ead13e1064584da027d91192bd7bfb724640f",
+  "archiveSHA256": "f7ad077cd85c9236d588662aa36643027dcb26e27203b3e39b6245b52477fc6a",
+  "root": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f",
+  "entryCount": 90,
+  "fileCount": 75,
+  "fileBytes": 24136278.0,
+  "linkCount": 0,
+  "paxMetadata": [
+    {
+      "comment": "450ead13e1064584da027d91192bd7bfb724640f",
+      "name": "pax_global_header",
+      "materialized": false,
+      "type": "GlobalExtendedAttributes"
+    }
+  ],
+  "violations": [],
+  "pinnedPrimaryTextComparisons": [
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "076cfed4026f6a825b7cd8d52c25d51a64064e635f164cdd812f699bcf221196",
+      "path": "CMakeLists.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "ac24e5ea920e4318e4d02c4086ae51f53cfb03feed06c18df1019e7ada1ec7bc",
+      "path": "LICENSE.md"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "path": "LICENSES/Apache-2.0.txt"
+    },
+    {
+      "archiveMatch": true,
+      "expectedSHA256": "1ca3502222d967f3be5751c55f6b7ee735b5383909c3b501495f54b216dbf227",
+      "path": "LICENSES/MIT.txt"
+    }
+  ],
+  "fullPrimaryGitTree": "NOT YET AVAILABLE; measured Gitblobs are not claimed as primary-tree matches",
+  "entries": [
+    {
+      "path": "",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".gitattributes",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 594,
+      "sha256": "7bdc16faa9cd50c8820067db6b14c2242a915c6d8bb5cf8756debfb493739de0",
+      "measuredGitBlobSHA1": "41eae3715412d26a287dc8529b7b1f92c881562a"
+    },
+    {
+      "path": ".github",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.github/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.github/ISSUE_TEMPLATE/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.github/ISSUE_TEMPLATE/bug_report.md",
+      "type": "RegularFile",
+      "bytes": 1170,
+      "sha256": "6865255445f93c958c4794a02941909d53762404feaefc3d5861990aab2681d4",
+      "measuredGitBlobSHA1": "7d78ab855aa2aebe4cf86d80b71b93376787b7b5"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.github/pull_request_template.md",
+      "type": "RegularFile",
+      "bytes": 577,
+      "sha256": "3f588656da2e57428f6781a65e0059b574c1799b4fe45e2ae4b7cd3bf680db3a",
+      "measuredGitBlobSHA1": "c7def69cdfd7c81622965656e3ee06f8eb1c2f30"
+    },
+    {
+      "path": ".github/workflows",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.github/workflows/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.github/workflows/ci.yml",
+      "type": "RegularFile",
+      "bytes": 2465,
+      "sha256": "be89e296a02833c20731273c7c3f13eaa3e86c500ff0c846af113f2f99ae81a5",
+      "measuredGitBlobSHA1": "82bf6af8e147f9984aca83b316606b9bc973d8a0"
+    },
+    {
+      "path": ".gitignore",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.gitignore",
+      "type": "RegularFile",
+      "bytes": 231,
+      "sha256": "479ba1bae78c0b81ee6387284b55b5643e9c5f0795a585decb5c42069e4c0edb",
+      "measuredGitBlobSHA1": "7f6900b726371fcc106b817b1fd7b848579bda2f"
+    },
+    {
+      "path": ".reuse",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.reuse/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": ".reuse/dep5",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/.reuse/dep5",
+      "type": "RegularFile",
+      "bytes": 655,
+      "sha256": "08f1c8637b59c757a18ce67a4c764133b850b50e18aeaae28610ae61cb3ea7d7",
+      "measuredGitBlobSHA1": "c17fc8d61c5d988728faabf6db6efdc3c9f7029c"
+    },
+    {
+      "path": "BUILD.gn",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/BUILD.gn",
+      "type": "RegularFile",
+      "bytes": 1783,
+      "sha256": "e594c49b765922d69c59f7589f2d4f05d29ec04e50d29ec0cfdd202b94f746a0",
+      "measuredGitBlobSHA1": "8a05777f59cd6096f3b4a9cf8eab762642aabd21"
+    },
+    {
+      "path": "BUILD.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/BUILD.md",
+      "type": "RegularFile",
+      "bytes": 1127,
+      "sha256": "ea832c10dab646a82b49cdb6f012c375c425185e30aadebd5e26875e9350520a",
+      "measuredGitBlobSHA1": "70a635eb96352e116526679c80c1ce346f60b958"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 2877,
+      "sha256": "076cfed4026f6a825b7cd8d52c25d51a64064e635f164cdd812f699bcf221196",
+      "measuredGitBlobSHA1": "5d9317f31c962971abca75b6d148f628f3ec0017"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.adoc",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/CODE_OF_CONDUCT.adoc",
+      "type": "RegularFile",
+      "bytes": 369,
+      "sha256": "118a9963d8011a2e6939eb021f8170fa39f764be3a8dc844f2a3f94c79044aba",
+      "measuredGitBlobSHA1": "bd635bb9153538f35a8def037d09c6c4fe0c9ff4"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/CONTRIBUTING.md",
+      "type": "RegularFile",
+      "bytes": 1071,
+      "sha256": "866db919251a03f6e4f704931c069b18593de16e7379a63e035cab9ededcf439",
+      "measuredGitBlobSHA1": "6de905ce93130a47bf1bb5486e478fa206d90385"
+    },
+    {
+      "path": "INTEGRATION.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/INTEGRATION.md",
+      "type": "RegularFile",
+      "bytes": 8790,
+      "sha256": "4b6073902ba1f6f0462037e928fa0203cd488573b46524593c786da056be1404",
+      "measuredGitBlobSHA1": "c7cd8854f37b26551deed45519b2a2f4e9864b7f"
+    },
+    {
+      "path": "LICENSE.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/LICENSE.md",
+      "type": "RegularFile",
+      "bytes": 458,
+      "sha256": "ac24e5ea920e4318e4d02c4086ae51f53cfb03feed06c18df1019e7ada1ec7bc",
+      "measuredGitBlobSHA1": "d6a0648b652ade1defb1eb481643d2f8d14828b5"
+    },
+    {
+      "path": "LICENSES",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/LICENSES/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/LICENSES/Apache-2.0.txt",
+      "type": "RegularFile",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "measuredGitBlobSHA1": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "LICENSES/MIT.txt",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/LICENSES/MIT.txt",
+      "type": "RegularFile",
+      "bytes": 1084,
+      "sha256": "1ca3502222d967f3be5751c55f6b7ee735b5383909c3b501495f54b216dbf227",
+      "measuredGitBlobSHA1": "8495fe9e901b430947d54980af7c77c0bb8a6221"
+    },
+    {
+      "path": "README.md",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/README.md",
+      "type": "RegularFile",
+      "bytes": 1893,
+      "sha256": "90e69a0de9dd4aeb1bbf1c4abb5b3c329cd3b90b080927d717a48247b8c03548",
+      "measuredGitBlobSHA1": "b2e830fc5b7edd2b230e337b51023fef7db47083"
+    },
+    {
+      "path": "include",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/vk_video",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codec_h264std.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codec_h264std.h",
+      "type": "RegularFile",
+      "bytes": 13804,
+      "sha256": "efca10db88e71ed05f8f226d1bb329343b1f3930ee5f672106c64386effc40c2",
+      "measuredGitBlobSHA1": "a23789c68ade5dd3df984ed2e0cec2664a769ebf"
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codec_h264std_decode.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codec_h264std_decode.h",
+      "type": "RegularFile",
+      "bytes": 2722,
+      "sha256": "d03e2d6ffc56bb02018e73e702194e934a1dd378914308ee70fb000b1172fda9",
+      "measuredGitBlobSHA1": "dd24112e2cfab41a2715582ad762774a8f3c79e9"
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codec_h264std_encode.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codec_h264std_encode.h",
+      "type": "RegularFile",
+      "bytes": 6877,
+      "sha256": "37bb2a40581777fc9dcc08dbd85099852f61c764fd21ea254516a10e9a70d2fb",
+      "measuredGitBlobSHA1": "2e0d706f6cb9a76840fe746c14037c0be4704641"
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codec_h265std.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codec_h265std.h",
+      "type": "RegularFile",
+      "bytes": 23367,
+      "sha256": "83f530db374f62cff28cfd163634cd078571ae28d4a73747e66c436ddedb069b",
+      "measuredGitBlobSHA1": "793bdbcff97956afc5660a0103812f1f6a29c5e8"
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codec_h265std_decode.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codec_h265std_decode.h",
+      "type": "RegularFile",
+      "bytes": 2428,
+      "sha256": "8da70c557b48945b7bfe6f218c8cbad572e4f8dc9ac1f897d708e7d5b19e0bef",
+      "measuredGitBlobSHA1": "75cf4d0946fdfba8a4afd41f99498d662d3eee03"
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codec_h265std_encode.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codec_h265std_encode.h",
+      "type": "RegularFile",
+      "bytes": 7619,
+      "sha256": "186227c57fb2c0715e2c7c71f54f6feb960711a3b21729b51f206df6e1c0e645",
+      "measuredGitBlobSHA1": "25740398a403d65d4f7205504ed8432339d64592"
+    },
+    {
+      "path": "include/vk_video/vulkan_video_codecs_common.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vk_video/vulkan_video_codecs_common.h",
+      "type": "RegularFile",
+      "bytes": 660,
+      "sha256": "9dfec31888134f08f058e73d497dda73e50e4db225adb358d1146d9c72ffea95",
+      "measuredGitBlobSHA1": "6568975ee3efa942e98cd963e3efea4661e64314"
+    },
+    {
+      "path": "include/vulkan",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "include/vulkan/vk_icd.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vk_icd.h",
+      "type": "RegularFile",
+      "bytes": 8164,
+      "sha256": "6c80200a7fcc4c7da3170ef9dc674eab142c92767bfc9733c98649bce78aecb9",
+      "measuredGitBlobSHA1": "59204a3419f53b7e4a3610377791d52705a2c65e"
+    },
+    {
+      "path": "include/vulkan/vk_layer.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vk_layer.h",
+      "type": "RegularFile",
+      "bytes": 7073,
+      "sha256": "861cd0ea24c7d81b935e5726520d184dbbc00e571f9089e17a723ccbbc1944e2",
+      "measuredGitBlobSHA1": "19d88fce4bac25a66ced1cb79a909dd702d2ab88"
+    },
+    {
+      "path": "include/vulkan/vk_platform.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vk_platform.h",
+      "type": "RegularFile",
+      "bytes": 2828,
+      "sha256": "c2aa81456e5d24f5931f9b2052aaeb85d1a6362abac9ee5fb2029a57579e03a7",
+      "measuredGitBlobSHA1": "ed67a6004a890946484e410ced014e4b0cbf6b5e"
+    },
+    {
+      "path": "include/vulkan/vulkan.cppm",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan.cppm",
+      "type": "RegularFile",
+      "bytes": 142839,
+      "sha256": "75fa26188c1fc1782f3eef5db45eca10597613ef721e0048612805c99bc3800c",
+      "measuredGitBlobSHA1": "cc693b8d4361dd19ec65683c7f1e0ae17eed75c8"
+    },
+    {
+      "path": "include/vulkan/vulkan.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan.h",
+      "type": "RegularFile",
+      "bytes": 1555,
+      "sha256": "74d7a953a9e02b0f8c6edb8dd3304428ad9cfb14697e50bd5da46c7666717787",
+      "measuredGitBlobSHA1": "426cff58d72c9628d05ad03dca2f9cb37efd3395"
+    },
+    {
+      "path": "include/vulkan/vulkan.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan.hpp",
+      "type": "RegularFile",
+      "bytes": 742470,
+      "sha256": "faa2d624c5bdc886c49f53d79c26b82ee9e260dfc402b4392def3a0b26a67af8",
+      "measuredGitBlobSHA1": "03789305bffd76ab8bc8d9443b51ab286b1308ef"
+    },
+    {
+      "path": "include/vulkan/vulkan_android.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_android.h",
+      "type": "RegularFile",
+      "bytes": 5058,
+      "sha256": "ced5cfa276c201d5e6234e1eeeb2f6f8cced0cd656bbe24578963c5bce8f201c",
+      "measuredGitBlobSHA1": "d86f43f2d212b470f82541756662c4c6570d76af"
+    },
+    {
+      "path": "include/vulkan/vulkan_beta.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_beta.h",
+      "type": "RegularFile",
+      "bytes": 40623,
+      "sha256": "3572fe6119579fa46e884011fa69dda2262956b7158a4cfb8bbcbc7b9b184107",
+      "measuredGitBlobSHA1": "f00ed3ff1fb3ba3173b0bd7261966fe8c0079860"
+    },
+    {
+      "path": "include/vulkan/vulkan_core.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_core.h",
+      "type": "RegularFile",
+      "bytes": 921393,
+      "sha256": "ea9e294cfef7dab9da343d7ede39cb9fdc44ec2d3176e6bd72f498cd72e6c942",
+      "measuredGitBlobSHA1": "c5748581342d5d07bbc0d16d2c54376cf3bf9048"
+    },
+    {
+      "path": "include/vulkan/vulkan_directfb.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_directfb.h",
+      "type": "RegularFile",
+      "bytes": 1866,
+      "sha256": "c9bb11fcd3aa8c33b96d3124e5e9f73c6a2aebaeef4a013be83443762cc1d8e3",
+      "measuredGitBlobSHA1": "1f11a08273629f602f8235ba3aa2302c10b8c3fe"
+    },
+    {
+      "path": "include/vulkan/vulkan_enums.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_enums.hpp",
+      "type": "RegularFile",
+      "bytes": 423067,
+      "sha256": "05738b77413b4c2293168abdf536fb4b94b10bc5eb321624ca77a70615454116",
+      "measuredGitBlobSHA1": "bac993339bee1354a3838cb340b1afbef8e2d96d"
+    },
+    {
+      "path": "include/vulkan/vulkan_extension_inspection.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_extension_inspection.hpp",
+      "type": "RegularFile",
+      "bytes": 94864,
+      "sha256": "ef2cae3feaa3b0e32b8f14ed458959303afaaa2c6eecb95221e2a3fe59a80b4b",
+      "measuredGitBlobSHA1": "548a32fc277b758f4a7d08f69b6da7833aa49d21"
+    },
+    {
+      "path": "include/vulkan/vulkan_format_traits.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_format_traits.hpp",
+      "type": "RegularFile",
+      "bytes": 307251,
+      "sha256": "2a02c19afebf586939e7627dada049fd4c90b9081656171caf0f7959e826cefa",
+      "measuredGitBlobSHA1": "16cbabba543c837635ccb8af8647ac44ba99f3bf"
+    },
+    {
+      "path": "include/vulkan/vulkan_fuchsia.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_fuchsia.h",
+      "type": "RegularFile",
+      "bytes": 12470,
+      "sha256": "724857c1a344b2c243e86d6d6d96640198c93ca310b9581305b45c86243788e6",
+      "measuredGitBlobSHA1": "76e1564832ee8c90fc0d2fce5508abdda7668d3b"
+    },
+    {
+      "path": "include/vulkan/vulkan_funcs.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_funcs.hpp",
+      "type": "RegularFile",
+      "bytes": 1472333,
+      "sha256": "b6b56b41c766cf216ac9982b773ae8d5597907e37975878b786cdcd05fd3cfc5",
+      "measuredGitBlobSHA1": "1ab87369d8cc490ee17fc4d4ac55196358ee7f93"
+    },
+    {
+      "path": "include/vulkan/vulkan_ggp.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_ggp.h",
+      "type": "RegularFile",
+      "bytes": 1896,
+      "sha256": "b21a71222c9609feb7875464fec92a39074b73a2af851a5066dde4d6079a425e",
+      "measuredGitBlobSHA1": "9783aa3b38b40f047e51f9c1e507a5e5a6503c73"
+    },
+    {
+      "path": "include/vulkan/vulkan_handles.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_handles.hpp",
+      "type": "RegularFile",
+      "bytes": 1008647,
+      "sha256": "788675aa3c5135b6978369ca82f2c10adce708729e508c13becf6502d02c1e88",
+      "measuredGitBlobSHA1": "9e7304f90a95286783c9755f039e5809baa4d0e7"
+    },
+    {
+      "path": "include/vulkan/vulkan_hash.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_hash.hpp",
+      "type": "RegularFile",
+      "bytes": 749578,
+      "sha256": "9791e638b6769c03d37353a0a353658a5067965715f087c16b752c4746a11b29",
+      "measuredGitBlobSHA1": "d19482480708454d73e80b7bcc889c5d5fea9a65"
+    },
+    {
+      "path": "include/vulkan/vulkan_ios.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_ios.h",
+      "type": "RegularFile",
+      "bytes": 1309,
+      "sha256": "665500172ce57efc0d77acf8cb5c697d25b12acca31d79f5ada054f9c598b731",
+      "measuredGitBlobSHA1": "211429ff4566d910e466cbea591ae236565f12d6"
+    },
+    {
+      "path": "include/vulkan/vulkan_macos.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_macos.h",
+      "type": "RegularFile",
+      "bytes": 1341,
+      "sha256": "6adbf0b445e2f61546abddaf79923ea568eb761e85dbdfcfec001a4719b76c8e",
+      "measuredGitBlobSHA1": "c6509cc8cf3397b2365bf6c4b37de788537bde3e"
+    },
+    {
+      "path": "include/vulkan/vulkan_metal.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_metal.h",
+      "type": "RegularFile",
+      "bytes": 5807,
+      "sha256": "9759072ad1565cc62d61437241d927b1bfff6efb76efbf44026b5944d085aba7",
+      "measuredGitBlobSHA1": "94563a003a2ad16af981e3e3fd1ec80607f3fe2a"
+    },
+    {
+      "path": "include/vulkan/vulkan_raii.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_raii.hpp",
+      "type": "RegularFile",
+      "bytes": 1261459,
+      "sha256": "4bcf290e98b39cbda87d67b7baa0df698232e92875d3f691e329472bb145561d",
+      "measuredGitBlobSHA1": "f065519ebfe4b411e5b24a24869fcb9957944b3c"
+    },
+    {
+      "path": "include/vulkan/vulkan_screen.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_screen.h",
+      "type": "RegularFile",
+      "bytes": 4064,
+      "sha256": "abaa428076fe7392bab876dc3c483e265e163f90cf19db015bcbce748be183f5",
+      "measuredGitBlobSHA1": "981738f738541b2cd4ff03bce5d282ceac276e7a"
+    },
+    {
+      "path": "include/vulkan/vulkan_static_assertions.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_static_assertions.hpp",
+      "type": "RegularFile",
+      "bytes": 611670,
+      "sha256": "d91be7e1da57b784ad2f95e67e39eb3cb6165a64582674d3b0d5b21de48425d6",
+      "measuredGitBlobSHA1": "1fb34dbc258ec181c99543d45a75d2add74e8acf"
+    },
+    {
+      "path": "include/vulkan/vulkan_structs.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_structs.hpp",
+      "type": "RegularFile",
+      "bytes": 5052767,
+      "sha256": "114d18ceb93babf3a56a02c438f1911a3d6036102283329c4ed54689fdc4001e",
+      "measuredGitBlobSHA1": "8ffe8f2e680e8a452f7450bd0de1edc6ef2221af"
+    },
+    {
+      "path": "include/vulkan/vulkan_to_string.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_to_string.hpp",
+      "type": "RegularFile",
+      "bytes": 436470,
+      "sha256": "8a03868b05feedb31ebf10ce6a28b019cab94f20acde54385cd673371a5cf4f9",
+      "measuredGitBlobSHA1": "3eac3e833fdf33e3a9ce2f24a506e5179237766f"
+    },
+    {
+      "path": "include/vulkan/vulkan_vi.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_vi.h",
+      "type": "RegularFile",
+      "bytes": 1282,
+      "sha256": "db98fcfc9291e467252ee1e8908715d4fad255780c8a44bb74893f2165ea54ba",
+      "measuredGitBlobSHA1": "c9227e82268e38d1ab08d43834a309bc6af53ea9"
+    },
+    {
+      "path": "include/vulkan/vulkan_video.hpp",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_video.hpp",
+      "type": "RegularFile",
+      "bytes": 150252,
+      "sha256": "857fe444d0cb9b1defa9bfc88e54a17b3052117c16282ceafcf78403b2648096",
+      "measuredGitBlobSHA1": "746593827027d1d78d7ebe7b14342a809a277e5a"
+    },
+    {
+      "path": "include/vulkan/vulkan_wayland.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_wayland.h",
+      "type": "RegularFile",
+      "bytes": 1866,
+      "sha256": "3728578b8d6d98f6f3d20672406f869253eeacae8546a9d9577bca5c63a88d12",
+      "measuredGitBlobSHA1": "c93b21787254653c908c0e52b7618d5dadd1a7c8"
+    },
+    {
+      "path": "include/vulkan/vulkan_win32.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_win32.h",
+      "type": "RegularFile",
+      "bytes": 15112,
+      "sha256": "b244e2f11a601bc7d5af3d3236d9dde695f72dcc226a5f7ccd18dcfede3bcb28",
+      "measuredGitBlobSHA1": "fae3b8532c5fc9b9e2c6dbfb777bed2f9d520573"
+    },
+    {
+      "path": "include/vulkan/vulkan_xcb.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_xcb.h",
+      "type": "RegularFile",
+      "bytes": 1880,
+      "sha256": "916a08cbec6c2793db630a747c7d07ae5434a2adad341e53cb24e1c59eab406b",
+      "measuredGitBlobSHA1": "de7405524a9790e7a6f09b506e471e18778fcf06"
+    },
+    {
+      "path": "include/vulkan/vulkan_xlib.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_xlib.h",
+      "type": "RegularFile",
+      "bytes": 1861,
+      "sha256": "03d5c575fc18df41afbb807b2e4b7a9040eb00e43314a619cabed858fd803631",
+      "measuredGitBlobSHA1": "1aa632f2efbe602a678be374c318399340d0eaa9"
+    },
+    {
+      "path": "include/vulkan/vulkan_xlib_xrandr.h",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/include/vulkan/vulkan_xlib_xrandr.h",
+      "type": "RegularFile",
+      "bytes": 1411,
+      "sha256": "3fd2782fdbda3f4f12f5eb17f3696ff459d3e33e7368f62acb4ab9e566fffd16",
+      "measuredGitBlobSHA1": "e164ffc91e7ecfe8fd87d4a11f0e1cad28792ca2"
+    },
+    {
+      "path": "registry",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "registry/apiconventions.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/apiconventions.py",
+      "type": "RegularFile",
+      "bytes": 556,
+      "sha256": "22b0da8c17933f4ff3284dce18bba6b2b6bb623955238a8db0f4795ce1695c58",
+      "measuredGitBlobSHA1": "d170dd40b8caac3fe6dc9cb55d8bc86869006f71"
+    },
+    {
+      "path": "registry/cgenerator.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/cgenerator.py",
+      "type": "RegularFile",
+      "bytes": 23406,
+      "sha256": "a938e90d26b3f9a77eb08d5d7986caed4e8931bb804a93d89e6b5b9f7766db10",
+      "measuredGitBlobSHA1": "ef8d68137c0acaf0816e6f92342a15cdab34efe0"
+    },
+    {
+      "path": "registry/generator.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/generator.py",
+      "type": "RegularFile",
+      "bytes": 54518,
+      "sha256": "7e05cd245f7d11428a1bcfb461e26cf837b8bf579f7f755c0b2b4c7924039f48",
+      "measuredGitBlobSHA1": "669e5d689e87cc2c7a67f6ae3e1a3bbe90dc6fe9"
+    },
+    {
+      "path": "registry/genvk.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/genvk.py",
+      "type": "RegularFile",
+      "bytes": 46720,
+      "sha256": "6439a58240806fe030433d851094f1d32774a342371fe60b0b932457d50d4494",
+      "measuredGitBlobSHA1": "71e6baf79d9d36150ded6acc18062319e3bdac62"
+    },
+    {
+      "path": "registry/parse_dependency.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/parse_dependency.py",
+      "type": "RegularFile",
+      "bytes": 13724,
+      "sha256": "96880ee172f292717c304650064ed2e3d4691600e80d240040f44222b0441186",
+      "measuredGitBlobSHA1": "313b3c08306d852d34dc29e39ea66ba324458b93"
+    },
+    {
+      "path": "registry/profiles",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/profiles/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "registry/profiles/VP_KHR_roadmap_2022.json",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/profiles/VP_KHR_roadmap_2022.json",
+      "type": "RegularFile",
+      "bytes": 17250,
+      "sha256": "03adc6234dea5ae5a938e8f45078c2c644f73d2b16ef75995cfef004674f860a",
+      "measuredGitBlobSHA1": "b528ecac1c34feb6a80bfa649c85acba264303bb"
+    },
+    {
+      "path": "registry/reg.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/reg.py",
+      "type": "RegularFile",
+      "bytes": 85123,
+      "sha256": "4c9c7a50f52a82473da0e72826b6671becf9611dd2b3d176781b8b85dff6732e",
+      "measuredGitBlobSHA1": "4b5a80f7139b7c554d22768b11dea5bdabed8fc2"
+    },
+    {
+      "path": "registry/spec_tools",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/spec_tools/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "registry/spec_tools/conventions.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/spec_tools/conventions.py",
+      "type": "RegularFile",
+      "bytes": 13950,
+      "sha256": "b1daa4e4bbdb551dd932defc57f1aab337b3dfa6f82298790f03c504f5a4ac95",
+      "measuredGitBlobSHA1": "faca3a27d843959b54a0b1d110d691b7d26bdae4"
+    },
+    {
+      "path": "registry/spec_tools/util.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/spec_tools/util.py",
+      "type": "RegularFile",
+      "bytes": 2143,
+      "sha256": "7b95384293fbac32fd8508fb106ccb615fc6d06d07caa76685cb5fb8e6d42f45",
+      "measuredGitBlobSHA1": "bf25845081a1ecafe73728199217ea66020c6136"
+    },
+    {
+      "path": "registry/stripAPI.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/stripAPI.py",
+      "type": "RegularFile",
+      "bytes": 1692,
+      "sha256": "e8a60ddcbb0ca57aa9393db587d02cf01843c7648b155f3440099729532cc52a",
+      "measuredGitBlobSHA1": "ea37f59e7b20b8dc2d27440366d56f81a997700a"
+    },
+    {
+      "path": "registry/validusage.json",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/validusage.json",
+      "type": "RegularFile",
+      "bytes": 7797783,
+      "sha256": "ca7db6ecb0baa302098ad8a2d7232ebc8ca284087db9494acaf6eba2645d2dc4",
+      "measuredGitBlobSHA1": "cbea59d9ae492d4336ef2e1e68171250a4647f74"
+    },
+    {
+      "path": "registry/video.xml",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/video.xml",
+      "type": "RegularFile",
+      "bytes": 122105,
+      "sha256": "d8ad134230c626d6c800be898845b599d1f033bbfa2346f87bfac300a20897ab",
+      "measuredGitBlobSHA1": "bb534c39e6d662188f3359e99ef210a72c01c563"
+    },
+    {
+      "path": "registry/vk.xml",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/vk.xml",
+      "type": "RegularFile",
+      "bytes": 2356880,
+      "sha256": "bc9a08e6a0c2b8ee4b32bb39aad27f827514dd582e460acbf1e446839c8b933c",
+      "measuredGitBlobSHA1": "28669af380d3b9dc45f7cbf3bb1fb8da0f6d654a"
+    },
+    {
+      "path": "registry/vkconventions.py",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/registry/vkconventions.py",
+      "type": "RegularFile",
+      "bytes": 10866,
+      "sha256": "cef118b4f3e0e290ced56556511ae6b66352dc4b2fdf2929dcb2d17965936804",
+      "measuredGitBlobSHA1": "b4e79666cfafc6d1d002b8d4456f760b5bdc96be"
+    },
+    {
+      "path": "tests",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 1029,
+      "sha256": "f0cd281889f43626c83205548c5d91bf36d82d3302166571fd4817dd39254727",
+      "measuredGitBlobSHA1": "6b3181e09b1aba7119c4a57df373147c1f601ef7"
+    },
+    {
+      "path": "tests/add_subdirectory",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/add_subdirectory/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/add_subdirectory/CMakeLists.txt",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/add_subdirectory/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 815,
+      "sha256": "c06499c4ec37c6a0f1bc88c731323d0395953fbccc1edc08129b85280983ed5d",
+      "measuredGitBlobSHA1": "286c36e81d21a17014fa26299cafec1e5249485f"
+    },
+    {
+      "path": "tests/find_package",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/find_package/",
+      "type": "Directory",
+      "bytes": 0
+    },
+    {
+      "path": "tests/find_package/CMakeLists.txt",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/find_package/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 749,
+      "sha256": "4598ca70990cc7467351f3a6eb5eca3ed72b9cf647081b1f0b44fc4e89ae4c3d",
+      "measuredGitBlobSHA1": "c1a9900fac4e9da1ca8b289ddc3b0409cbfcd645"
+    },
+    {
+      "path": "tests/vk_icd.c",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/vk_icd.c",
+      "type": "RegularFile",
+      "bytes": 230,
+      "sha256": "e8cd5f9cda40f9692b99f3b97b2bd8e91ef3a03541fd4ba170efb7d326382402",
+      "measuredGitBlobSHA1": "de29d360576a80f31189be01812ee6ad0649fe78"
+    },
+    {
+      "path": "tests/vk_layer.c",
+      "archivePath": "Vulkan-Headers-450ead13e1064584da027d91192bd7bfb724640f/tests/vk_layer.c",
+      "type": "RegularFile",
+      "bytes": 234,
+      "sha256": "19ebaa65d9fa87c922aa06b589701b312f464d86904d03af0be0def439aec6e9",
+      "measuredGitBlobSHA1": "490beb3a78318294c4c04d9e9e0547ef2f10d25d"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+TRACE 1 BEFORE Module layer(dll);
+TRACE 2 BEFORE const auto getInstance = layer.Proc<PFN_vkGetInstanceProcAddr>(vkGetInstanceProcAddr);
+TRACE 3 BEFORE const auto getDevice = layer.Proc<PFN_vkGetDeviceProcAddr>(vkGetDeviceProcAddr);
+TRACE 4 BEFORE const auto enumerate = layer.Proc<PFN_vkEnumerateInstanceLayerProperties>(vkEnumerateInstanceLayerProperties);
+TRACE 5 BEFORE const auto extensions = layer.Proc<PFN_vkEnumerateInstanceExtensionProperties>(vkEnumerateInstanceExtensionProperties);
+TRACE 6 BEFORE const auto negotiate = layer.Proc<PFN_vkNegotiateLoaderLayerInterfaceVersion>(vkNegotiateLoaderLayerInterfaceVersion);
+TRACE 7 BEFORE Require(enumerate(&count, nullptr) == VK_SUCCESS && count == 1, layer count);
+TRACE 8 BEFORE Require(enumerate(&count, &properties) == VK_SUCCESS && count == 1, layer enumeration);
+TRACE 9 BEFORE Require(enumerate(&count, &properties) == VK_INCOMPLETE && count == 0, short enumeration buffer);
+TRACE 10 BEFORE Require(extensions(JE.missing.layer, &count, nullptr) == VK_ERROR_LAYER_NOT_PRESENT, unknown layer rejection);
+TRACE 11 BEFORE Require(extensions(LayerName, &count, nullptr) == VK_SUCCESS && count > 0, real layer extensions);
+TRACE 12 BEFORE Require(getInstance(VK_NULL_HANDLE, JE_missing_function) == nullptr, unknown entry point rejection);

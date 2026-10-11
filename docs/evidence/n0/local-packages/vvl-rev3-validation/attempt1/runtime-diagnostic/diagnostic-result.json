@@ -1,0 +1,35 @@
+{
+  "registryModified": false,
+  "status": "PRIVATE A/B DIAGNOSTIC; PARENT MUST REVIEW REAL VkResult/ERROR COUNT",
+  "globalEnvironmentModified": false,
+  "implicitIsolation": "Per child process only; same package explicit VVL remains active",
+  "packageRebuilt": false,
+  "changes": [],
+  "productSourceModified": false,
+  "commands": [
+    {
+      "label": "configure",
+      "nativeExit": 0,
+      "elapsedSeconds": 5.7924268,
+      "scope": "PRIVATE RUNTIME DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    },
+    {
+      "label": "build",
+      "nativeExit": 0,
+      "elapsedSeconds": 2.816878,
+      "scope": "PRIVATE RUNTIME DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    },
+    {
+      "label": "runtime-inherited",
+      "nativeExit": 1,
+      "elapsedSeconds": 0.368819,
+      "scope": "PRIVATE RUNTIME DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    },
+    {
+      "label": "runtime-empty-implicit-path",
+      "nativeExit": 0,
+      "elapsedSeconds": 0.3379337,
+      "scope": "PRIVATE RUNTIME DIAGNOSTIC, NOT PACKAGE ACCEPTANCE"
+    }
+  ]
+}

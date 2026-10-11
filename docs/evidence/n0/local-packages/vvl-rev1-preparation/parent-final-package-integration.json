@@ -1,0 +1,42 @@
+{
+  "status": "FOCAL VVL PACKAGE ACCEPTED AND INTEGRATED; ROOT/EDITOR PENDING",
+  "actualSourceReview": true,
+  "producerExit": 0,
+  "producerSeconds": 924.5554544,
+  "extractedFiles": 35,
+  "manifestPayloadHashes": 34,
+  "consumerRev4Cases": 4,
+  "failures": 0,
+  "skipped": 0,
+  "negativeCases": 11,
+  "sourceFreeze6471Unchanged": true,
+  "fixture5Unchanged": true,
+  "PE": "Release/Debug x64,5exports, CRT+Windows imports; no Python/SPIRVshared/mimallocDLL/loader imports",
+  "packageArchiveSHA256": "1F2D47F5B1A536B7BD27A4BEBA3860E2C384F6780EFCF7A7D2B017BEF1FFE53C",
+  "archiveBytes": 59403488,
+  "copies": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-local-rev1\\packages\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz",
+      "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz",
+      "bytes": 59403488,
+      "sha256": "1F2D47F5B1A536B7BD27A4BEBA3860E2C384F6780EFCF7A7D2B017BEF1FFE53C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-local-rev1\\packages\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz.SHA256SUMS",
+      "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 122,
+      "sha256": "AE772BEC0E7C1E16253170D12249A200A279625C1B3927B667F6A055C487F992"
+    }
+  ],
+  "cacheBefore": 32,
+  "cacheAfter": 34,
+  "catalogPath": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+  "catalogBeforeSHA256": "2D8C84C9BB2C8EFF7ECD5A6DF3AA5B22BC67EE2CC761E3E696319A6A3DA346E5",
+  "catalogAfterSHA256": "787C1CD917DE63F52FAE25B3825C9AE4E1DE18B65EA042CC0211482C594FA00A",
+  "catalogRowCount": 1,
+  "catalogByteInverse": true,
+  "originalRedRetained": true,
+  "packagedREADME": "Historical original consumer description; sourceREADME corrected without rebuilding archive",
+  "shipping": "OriginalFind deploysRelease pair everyengineconfig; Editor/Tools/Runtime separation remains pending",
+  "product": "No Engine/Editor rendering/frames accepted"
+}

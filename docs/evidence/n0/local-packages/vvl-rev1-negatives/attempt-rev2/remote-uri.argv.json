@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "-DJE_VVL_ARCHIVES_ROOT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation/acquisition",
+    "-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe",
+    "-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e",
+    "-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-negatives/not-created-remote-uri",
+    "-DJE_VVL_ARCHIVES_ROOT=https://invalid.example/vvl",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake"
+  ],
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

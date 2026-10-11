@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="4"
+	failures="4"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-11T04:27:10"
+	>
+	<testcase name="JE.LocalPackages.DXC.dxil" classname="JE.LocalPackages.DXC.dxil" time="0.0425445" status="fail">
+		<failure message="Failed"/>
+		<properties/>
+		<system-out>CASE FAIL: compiler1.8 API version
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.DXC.spirv" classname="JE.LocalPackages.DXC.spirv" time="0.0151375" status="fail">
+		<failure message="Failed"/>
+		<properties/>
+		<system-out>CASE FAIL: compiler1.8 API version
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.DXC.invalid" classname="JE.LocalPackages.DXC.invalid" time="0.0152411" status="fail">
+		<failure message="Failed"/>
+		<properties/>
+		<system-out>CASE FAIL: compiler1.8 API version
+</system-out>
+	</testcase>
+	<testcase name="JE.LocalPackages.DXC.dxsc" classname="JE.LocalPackages.DXC.dxsc" time="0.0213337" status="fail">
+		<failure message="Failed"/>
+		<properties/>
+		<system-out>CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/DirectXShaderCompilerDxc/tests/RunDxsc.cmake:15 (message):
+  JE DXSC requires real compiled DXIL and fresh output
+
+
+</system-out>
+	</testcase>
+</testsuite>

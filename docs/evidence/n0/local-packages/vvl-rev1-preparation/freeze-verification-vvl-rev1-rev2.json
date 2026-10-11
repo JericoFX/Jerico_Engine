@@ -1,0 +1,25 @@
+{
+  "inputCount": 6471,
+  "matched": 6471,
+  "changed": [],
+  "sourceFiles": 10,
+  "immutableFiles": 2785,
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\source-freeze-vvl-provider-rev1-rev2.json",
+    "bytes": 2487029,
+    "sha256": "c516374e93bed5f7b829a92cd0356d25a96a7289a9c17be2d2faa590aa3f90e3",
+    "role": "final provider freeze"
+  },
+  "bareFreeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\source-freeze-vvl-provider-rev1-rev2-bare.json",
+    "bytes": 2406241,
+    "sha256": "cb413f29dc36e7d1872d6ff6408b4575a242052113d9ce10026261556cb5cd5e",
+    "role": "deduplicated bare freeze"
+  },
+  "assignment": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\vvl-rev1-preparation\\validation-assignment-vvl-rev1-rev2.json",
+    "bytes": 4236,
+    "sha256": "af316ca5c13a937819b9b729af5e249569c54013ff766bdc7cfd2779e127ca93",
+    "role": "proposed native commands, NOT RUN"
+  }
+}

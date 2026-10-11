@@ -1,0 +1,61 @@
+# Local Vulkan Validation Layers 1.3.261
+
+This producer preserves the selected original Windows layer contract. It
+creates `vulkan-validationlayers-1.3.261-je-rev1-windows.tar.xz` and its real
+SHA sidecar using the shared JE local package helper. It accepts only the
+seven exact local archives in `SourcePins.json`, an explicit local Python3
+generation executable/hash, and a fresh output beneath this checkout/build.
+It never acquires sources or runs `update_deps.py`, Git, a SDK installer,
+upstream VVL code generation, or a global installation.
+
+Release and Debug each use private config packages and the original
+robin-hood/mimalloc features. The wrapper checks real config-specific
+imported static-library locations under that configuration's private
+install directory before building `vvl`. Native argv, exits, stdout/stderr
+and whole-second timings are retained under `OUTPUT/logs`. A failure leaves
+diagnostic work, does not produce a ready stamp, and never copies partial
+results into a shared cache. `package-ready.json` denotes production only;
+it does not denote consumer, Root or Editor acceptance.
+
+The runtime layout is `vulkan-validationlayers/lib/{release,debug}` with
+matching `VkLayer_khronos_validation.dll` and JSON. The original Find target
+is `3rdParty::vulkan-validationlayers`, an imported global interface target
+that deploys the **Release** pair to the executable directory for every
+engine configuration. SPIRV shared auxiliaries and Python are not deployed.
+
+Only Luna executes these commands after the parent freezes/reviews inputs.
+Use the current audited archives root and fresh output. Example for this
+checkout (the executable SHA is the independently read local witness):
+
+```powershell
+cmake `
+  '-DJE_VVL_ARCHIVES_ROOT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev1-preparation/acquisition' `
+  '-DJE_VVL_PYTHON=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows/python/python.exe' `
+  '-DJE_VVL_PYTHON_SHA256=6235abe2248c14ad86dfe00dbb7bc2396eb4b91f663412c211905e279bce9d6e' `
+  '-DJE_VVL_OUTPUT=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-local-rev1' `
+  -P 'F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/BuildVulkanValidationLayersPackage.cmake'
+```
+
+Extract the produced archive into a **new** consumer package directory;
+test that extracted payload, rather than using the source build directory.
+Configure `tests/` with VS2022/v143 x64 and explicit local paths:
+`JE_VVL_PACKAGE_ROOT`, `JE_VVL_HEADERS_ROOT` (the audited Headers snapshot),
+`JE_VVL_LOADER` (the existing permitted Windows Vulkan loader), and
+`JE_VVL_LOADER_SHA256`. Consumer build output must also be under checkout/build.
+Build `JEVulkanValidationLayersConsumer` in Release, then run its four CTest
+cases: Release/Debug exports and Release/Debug real-loader runtime.
+
+The exports case checks all five actual exports, the exact layer/API version,
+enumeration truncation, rejection of an unknown layer/function, and the
+original version1/version2 loader negotiation behavior. The runtime case
+loads the archived pair through the existing Vulkan loader, requires the
+exact `VUID-VkInstanceCreateInfo-flags-parameter` plus rejection for malformed
+flags, then creates/destroys a valid instance. Failure to load the actual
+DLL/driver or to create that instance is a test failure, not a skipped pass.
+No GPU renderer, replacement Vulkan implementation or mock layer is involved.
+
+Current source preparation is verified separately; compilation and all four
+native cases are pending. Required producer negatives include missing or
+changed source/tool pins, remote/UNC/symlink paths, existing output and a
+wrong private-patch witness. Root target generation and real Editor Vulkan
+rendering/frames remain separate acceptance gates.

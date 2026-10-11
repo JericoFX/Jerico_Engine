@@ -1,0 +1,351 @@
+[
+  {
+    "manifest": "root-freeze",
+    "beforeCount": 15597,
+    "afterCount": 15597,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googlebenchmark-freeze",
+    "beforeCount": 174,
+    "afterCount": 174,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googletest-freeze",
+    "beforeCount": 260,
+    "afterCount": 260,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "mcpp-freeze",
+    "beforeCount": 17,
+    "afterCount": 17,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "splash-freeze",
+    "beforeCount": 6,
+    "afterCount": 6,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "splash-rcc-output",
+    "beforeCount": 1,
+    "afterCount": 1,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "sqlite-root-inputs",
+    "beforeCount": 8,
+    "afterCount": 8,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "root-package-cache",
+    "beforeCount": 34,
+    "afterCount": 34,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "wheelhouse",
+    "beforeCount": 44,
+    "afterCount": 44,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "mimalloc-source-before",
+    "beforeCount": 382,
+    "afterCount": 382,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "rapidjson-source-before",
+    "beforeCount": 313,
+    "afterCount": 313,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googlebenchmark-tree-before",
+    "beforeCount": 173,
+    "afterCount": 173,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googletest-tree-before",
+    "beforeCount": 252,
+    "afterCount": 252,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "antlr4-tree-before",
+    "beforeCount": 2296,
+    "afterCount": 2296,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "jsoncpp-tree-before",
+    "beforeCount": 229,
+    "afterCount": 229,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "cli11-tree-before",
+    "beforeCount": 304,
+    "afterCount": 304,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-xxhash-original-before",
+    "beforeCount": 87,
+    "afterCount": 87,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-D3D12MemoryAllocator-original-before",
+    "beforeCount": 292,
+    "afterCount": 292,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-meshoptimizer-original-before",
+    "beforeCount": 112,
+    "afterCount": 112,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-squish-ccr-original-before",
+    "beforeCount": 186,
+    "afterCount": 186,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-squish-ccr-private-before",
+    "beforeCount": 186,
+    "afterCount": 186,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-sse2neon-original-before",
+    "beforeCount": 41,
+    "afterCount": 41,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-mikktspace-original-before",
+    "beforeCount": 3,
+    "afterCount": 3,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-ogg-original-before",
+    "beforeCount": 125,
+    "afterCount": 125,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-vorbis-original-before",
+    "beforeCount": 417,
+    "afterCount": 417,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-miniaudio-original-before",
+    "beforeCount": 192,
+    "afterCount": 192,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-v-hacd-original-before",
+    "beforeCount": 62,
+    "afterCount": 62,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-RecastNavigation-original-before",
+    "beforeCount": 156,
+    "afterCount": 156,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-assimp-original-before",
+    "beforeCount": 3116,
+    "afterCount": 3116,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-assimp-private-before",
+    "beforeCount": 3116,
+    "afterCount": 3116,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-tinyusdz_repo-original-before",
+    "beforeCount": 2271,
+    "afterCount": 2271,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "batch-tinyusdz_repo-private-before",
+    "beforeCount": 2271,
+    "afterCount": 2271,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "sqlite-source-before",
+    "beforeCount": 4,
+    "afterCount": 4,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "manifold-original-before",
+    "beforeCount": 378,
+    "afterCount": 378,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "manifold-private-before",
+    "beforeCount": 378,
+    "afterCount": 378,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "clipper-original-before",
+    "beforeCount": 223,
+    "afterCount": 223,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "clipper-private-before",
+    "beforeCount": 223,
+    "afterCount": 223,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "openmesh-original-before",
+    "beforeCount": 611,
+    "afterCount": 611,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "openmesh-private-before",
+    "beforeCount": 611,
+    "afterCount": 611,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "python-rev3-before",
+    "beforeCount": 10400,
+    "afterCount": 10402,
+    "deltaCount": 3,
+    "deltas": [
+      "changed-or-added:venv\\31e81382\\Lib\\site-packages\\atom-rpi-tools.egg-link",
+      "changed-or-added:venv\\31e81382\\Lib\\site-packages\\easy-install.pth",
+      "changed-or-added:venv\\31e81382\\packages\\pip_installs\\atom_rpi_tools.stamp"
+    ]
+  },
+  {
+    "manifest": "engine-packages-before",
+    "beforeCount": 6516,
+    "afterCount": 6573,
+    "deltaCount": 57,
+    "deltas": [
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows.stamp",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows.stamp",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\Findmcpp.cmake",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\JERequireLocalPath.cmake",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\NOTICE.txt",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\PackageInfo.json",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\SHA256SUMS",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\mcpp\\README.original",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\mcpp\\source-notices.txt",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_APACHE2.TXT",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_MIT.TXT",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\O3DE\\LICENSE.txt",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\O3DE\\mcpp_2.7.2_az.patch",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\LICENSES\\O3DE\\visualc.mak.original",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\JERecipe.json",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\LICENSE",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\McppPatchManifest.json",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\include\\mcpp_lib.h",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\include\\mcpp_out.h",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\lib\\mcpp.exe",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\lib\\mcpp0.dll",
+      "changed-or-added:mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\lib\\mcpp0.lib",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\Findvulkan-validationlayers.cmake",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\JERequireLocalPath.cmake",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\NOTICE.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\PackageInfo.json",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\README.md",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\SHA256SUMS",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\SourceNotices.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\headers\\LICENSE.md",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\headers\\LICENSES\\Apache-2.0.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\headers\\LICENSES\\MIT.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\mimalloc\\LICENSE",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_APACHE2.TXT",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\O3DE\\LICENSE_MIT.TXT",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\O3DE\\LICENSE.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\robin\\LICENSE",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\spirv-headers\\LICENSE",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\spirv-tools\\LICENSE",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\utility\\LICENSE.md",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\utility\\LICENSES\\Apache-2.0.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\LICENSES\\vvl\\LICENSE.txt",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\JERecipe.json",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.dll",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.exp",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.json",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.lib",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_khronos_validation.pdb",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_utils.lib",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\debug\\VkLayer_utils.pdb",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.dll",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.exp",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.json",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.lib",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_khronos_validation.pdb",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_utils.lib",
+      "changed-or-added:vulkan-validationlayers-1.3.261-je-rev1-windows\\vulkan-validationlayers\\lib\\release\\VkLayer_utils.pdb"
+    ]
+  }
+]

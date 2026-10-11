@@ -1,0 +1,8 @@
+{
+  "label": "consumer-build",
+  "nativeExit": 0,
+  "elapsedSeconds": 2.7588743,
+  "sampledNativeProcessPeakWorkingSetBytes": 16338944,
+  "memoryScope": "Only invoked native process, not descendant builds or engine; null means not sampled",
+  "status": "PASS"
+}

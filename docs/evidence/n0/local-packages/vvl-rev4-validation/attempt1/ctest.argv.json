@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev4-consumer/build",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "--output-junit",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-rev4-validation/attempt1/ctest.junit.xml"
+  ],
+  "executable": "C:/Program Files/CMake/bin/ctest.exe",
+  "workingDirectory": "F:/JericoEngine/JericoEngine"
+}

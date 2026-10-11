@@ -1,0 +1,25 @@
+{
+  "status": "PRIVATE RESULT/ERROR-COUNT DIAGNOSTIC ONLY",
+  "originalConsumerSHA256": "EB567B84CC8E4E8E48438540FC82BEBB096267F0F9CE73F1666CCD4EAC21FA53",
+  "traceInverseByteExact": true,
+  "callsToCreatePreserved": true,
+  "assertionUnchanged": true,
+  "hypothesis": "Stale implicit manifests send loader general errors to callback, possibly errors!=0 despite successful creation; preserve errors and global registry",
+  "variants": "Same exe/assertions, inherited implicit discovery versus private empty VK_IMPLICIT_LAYER_PATH; explicit package VVL remains active",
+  "primaryInterface": "https://raw.githubusercontent.com/KhronosGroup/Vulkan-Loader/main/docs/LoaderLayerInterface.md",
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-runtime-diagnostic-source/VulkanValidationLayersConsumer.cpp",
+      "bytes": 9688,
+      "sha256": "17FC1DC3D39C9BB1B0269A4B8812A84B4C0DCADA7B6D92D22DB514692013A450"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/vvl-runtime-diagnostic-source/CMakeLists.txt",
+      "bytes": 2321,
+      "sha256": "090907F6F89DEFA9CDE8EC21623334358BB66254F4C5556DD87E217B421318BD"
+    }
+  ],
+  "productModified": false,
+  "upstreamRebuild": false,
+  "nativeOwner": "Luna"
+}
