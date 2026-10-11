@@ -1,0 +1,22 @@
+{
+  "LY_PACKAGE_UNPACK_PATH": {
+    "present": false,
+    "host": null
+  },
+  "LY_PACKAGE_SERVER_URLS": {
+    "present": false,
+    "host": null
+  },
+  "LY_PACKAGE_DOWNLOAD_CACHE_LOCATION": {
+    "present": false,
+    "host": null
+  },
+  "PIP_EXTRA_INDEX_URL": {
+    "present": false,
+    "host": null
+  },
+  "PIP_INDEX_URL": {
+    "present": false,
+    "host": null
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation",
+  "arguments": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\consumer",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "--verbose"
+  ],
+  "executable": "C:/Program Files/CMake/bin/ctest.exe"
+}

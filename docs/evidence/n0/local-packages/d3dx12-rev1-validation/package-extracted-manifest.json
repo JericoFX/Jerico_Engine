@@ -1,0 +1,72 @@
+[
+  {
+    "path": "Findd3dx12.cmake",
+    "bytes": 1529,
+    "sha256": "de91621b8ab603d06749a32c55528502e6e3f792c7413077feec37d916b7942b"
+  },
+  {
+    "path": "JERequireLocalPath.cmake",
+    "bytes": 1982,
+    "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+  },
+  {
+    "path": "LICENSES/O3DE/LICENSE.txt",
+    "bytes": 1502,
+    "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+  },
+  {
+    "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+    "bytes": 11557,
+    "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+  },
+  {
+    "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+    "bytes": 1074,
+    "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+  },
+  {
+    "path": "LICENSES/O3DE/OriginalFindd3dx12.cmake",
+    "bytes": 614,
+    "sha256": "a8c0cdb1770c4470570c601fb1f817f79a23f0dafecebe6b4fae946e37580ad0"
+  },
+  {
+    "path": "LICENSES/O3DE/OriginalPackageInfo.json",
+    "bytes": 198,
+    "sha256": "cdaf233596a2423c47a009a7fb53de31252b9b4b39163532a2a2e333132dc24d"
+  },
+  {
+    "path": "NOTICE.txt",
+    "bytes": 1754,
+    "sha256": "0289735ddc9e5fa5df182a3bd2e06c3cd8f8a97ec178ef5e74cc6071fc2d26c2"
+  },
+  {
+    "path": "PackageInfo.json",
+    "bytes": 415,
+    "sha256": "98f9cf5639aa733474ee6ba1fa9dfc4dbd9874fd828250836dd70d825e52c779"
+  },
+  {
+    "path": "README.md",
+    "bytes": 3371,
+    "sha256": "4cc713ad9ede1e8aa10d4c2dcbabc6767c91dafd68fb4e239ef8e210e6d5e281"
+  },
+  {
+    "path": "d3dx12/JERecipe.json",
+    "bytes": 558,
+    "sha256": "2294a3ab10ff9f3012a1c4a6524e0387d0af5e8bd57a7368ea6412dc57eb36a6"
+  },
+  {
+    "path": "d3dx12/include/d3dx12.h",
+    "bytes": 56537,
+    "sha256": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273"
+  },
+  {
+    "path": "d3dx12/license.txt",
+    "bytes": 1073,
+    "sha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d"
+  },
+  {
+    "path": "SHA256SUMS",
+    "bytes": 1183,
+    "sha256": "45de02dfea8e9aac3ea2a79e1f47e524d68c6f6a0c558afd10454f98b1a07287"
+  }
+]

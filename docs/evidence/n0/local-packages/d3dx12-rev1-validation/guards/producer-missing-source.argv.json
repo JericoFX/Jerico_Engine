@@ -1,0 +1,8 @@
+[
+  "-DJE_D3DX12_SOURCE_ARCHIVE=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\missing-source.tar.gz",
+  "-DJE_D3DX12_SOURCE_SHA256=f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+  "-DJE_D3DX12_SOURCE_URL=https://codeload.github.com/o3de/3p-package-source/tar.gz/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "-DJE_D3DX12_OUTPUT=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\producer-missing-output",
+  "-P",
+  "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\BuildD3dx12Package.cmake"
+]

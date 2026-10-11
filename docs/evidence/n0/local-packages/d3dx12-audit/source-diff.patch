@@ -1,0 +1,350 @@
+diff --git a/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake b/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake
+@@ -0,0 +1,78 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++# Stage the original single-header provider; no compiler, acquisition or upstream CMake.
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS SOURCE_ARCHIVE SOURCE_SHA256 SOURCE_URL OUTPUT)
++    if(NOT DEFINED JE_D3DX12_${JE_ARGUMENT} OR "${JE_D3DX12_${JE_ARGUMENT}}" STREQUAL "")
++        message(FATAL_ERROR "JE local d3dx12: JE_D3DX12_${JE_ARGUMENT} is required")
++    endif()
++endforeach()
++JE_python_require_local_path(JE_D3DX12_SOURCE_ARCHIVE)
++JE_python_require_local_path(JE_D3DX12_OUTPUT)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_D3DX12_OUTPUT}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR JE_D3DX12_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE local d3dx12: output must be beneath this checkout/build")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
++    message(FATAL_ERROR "JE local d3dx12 package requires Windows")
++endif()
++if(EXISTS "${JE_D3DX12_OUTPUT}")
++    message(FATAL_ERROR "JE local d3dx12: output already exists; retained outputs are never overwritten")
++endif()
++set(JE_SOURCE_COMMIT "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18")
++set(JE_EXPECTED_HASH "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042")
++set(JE_EXPECTED_URL "https://codeload.github.com/o3de/3p-package-source/tar.gz/${JE_SOURCE_COMMIT}")
++string(TOLOWER "${JE_D3DX12_SOURCE_SHA256}" JE_SOURCE_HASH)
++if(NOT JE_SOURCE_HASH STREQUAL JE_EXPECTED_HASH OR NOT JE_D3DX12_SOURCE_URL STREQUAL JE_EXPECTED_URL)
++    message(FATAL_ERROR "JE local d3dx12: source URL/SHA256 must match the audited O3DE source archive")
++endif()
++JE_python_verify_file("${JE_D3DX12_SOURCE_ARCHIVE}" "${JE_SOURCE_HASH}" "d3dx12 O3DE source archive")
++
++set(JE_ARCHIVE_ROOT "3p-package-source-${JE_SOURCE_COMMIT}")
++set(JE_WORK "${JE_D3DX12_OUTPUT}/source-work/${JE_ARCHIVE_ROOT}/package-system/d3dx12-windows")
++set(JE_STAGE "${JE_D3DX12_OUTPUT}/stage")
++file(MAKE_DIRECTORY "${JE_D3DX12_OUTPUT}/source-work")
++# Entire archive audited; extract only four byte-pinned regular files, zero links.
++file(ARCHIVE_EXTRACT INPUT "${JE_D3DX12_SOURCE_ARCHIVE}" DESTINATION "${JE_D3DX12_OUTPUT}/source-work"
++    PATTERNS "${JE_ARCHIVE_ROOT}/package-system/d3dx12-windows/*")
++JE_python_verify_file("${JE_WORK}/d3dx12/include/d3dx12.h"
++    "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273" "original d3dx12 header")
++JE_python_verify_file("${JE_WORK}/d3dx12/license.txt"
++    "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d" "Microsoft MIT license")
++JE_python_verify_file("${JE_WORK}/Findd3dx12.cmake"
++    "a8c0cdb1770c4470570c601fb1f817f79a23f0dafecebe6b4fae946e37580ad0" "original O3DE Findd3dx12")
++JE_python_verify_file("${JE_WORK}/PackageInfo.json"
++    "cdaf233596a2423c47a009a7fb53de31252b9b4b39163532a2a2e333132dc24d" "original O3DE metadata")
++file(MAKE_DIRECTORY "${JE_STAGE}/d3dx12/include" "${JE_STAGE}/LICENSES/O3DE")
++configure_file("${JE_WORK}/d3dx12/include/d3dx12.h" "${JE_STAGE}/d3dx12/include/d3dx12.h" COPYONLY)
++configure_file("${JE_WORK}/d3dx12/license.txt" "${JE_STAGE}/d3dx12/license.txt" COPYONLY)
++configure_file("${JE_WORK}/Findd3dx12.cmake" "${JE_STAGE}/LICENSES/O3DE/OriginalFindd3dx12.cmake" COPYONLY)
++configure_file("${JE_WORK}/PackageInfo.json" "${JE_STAGE}/LICENSES/O3DE/OriginalPackageInfo.json" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/Findd3dx12.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt"
++    "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake"
++    "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT"
++    "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT" DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++file(WRITE "${JE_STAGE}/d3dx12/JERecipe.json"
++    "{\n  \"sourceRepository\": \"o3de/3p-package-source\",\n"
++    "  \"sourceCommit\": \"${JE_SOURCE_COMMIT}\", \"upstreamMicrosoftRevision\": null,\n"
++    "  \"originalPackageName\": \"d3dx12-headers-rev1-windows\",\n"
++    "  \"headerSHA256\": \"632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273\",\n"
++    "  \"licenseSHA256\": \"fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d\",\n"
++    "  \"headerModified\": false, \"libraryType\": \"INTERFACE\",\n"
++    "  \"sdkHeaders\": \"Installed Windows SDK d3d12.h; not redistributed\",\n"
++    "  \"historicalPackageHashMatch\": \"not asserted\"\n}\n")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "d3dx12-headers-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_D3DX12_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "headers-je-rev1")
++set(JE_PACKAGE_SOURCE_COMMIT "${JE_SOURCE_COMMIT}")
++set(JE_PACKAGE_LICENSE "MIT")
++set(JE_PACKAGE_SOURCE_SHA256 "${JE_SOURCE_HASH}")
++set(JE_PACKAGE_SOURCE_URL "${JE_EXPECTED_URL}")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+diff --git a/cmake/Tools/LocalPackages/d3dx12/Findd3dx12.cmake b/cmake/Tools/LocalPackages/d3dx12/Findd3dx12.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/d3dx12/Findd3dx12.cmake
+@@ -0,0 +1,27 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# For complete copyright and license terms please see the LICENSE at the root of this distribution.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++# Adapted from o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18,
++# package-system/d3dx12-windows/Findd3dx12.cmake. Header API is unmodified.
++
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(JE_D3DX12_ROOT "${CMAKE_CURRENT_LIST_DIR}")
++JE_python_require_local_path(JE_D3DX12_ROOT)
++if(NOT WIN32 OR (DEFINED CMAKE_SIZEOF_VOID_P AND NOT CMAKE_SIZEOF_VOID_P EQUAL 8))
++    message(FATAL_ERROR "JE local d3dx12 package requires Windows x64")
++endif()
++set(d3dx12_INCLUDE_DIR "${JE_D3DX12_ROOT}/d3dx12/include")
++set(JE_D3DX12_HEADER "${d3dx12_INCLUDE_DIR}/d3dx12.h")
++JE_python_verify_file("${JE_D3DX12_HEADER}"
++    "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273" "original d3dx12 header")
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(d3dx12 REQUIRED_VARS d3dx12_INCLUDE_DIR)
++if(NOT TARGET 3rdParty::d3dx12)
++    add_library(3rdParty::d3dx12 INTERFACE IMPORTED GLOBAL)
++    if(COMMAND ly_target_include_system_directories)
++        ly_target_include_system_directories(TARGET 3rdParty::d3dx12 INTERFACE "${d3dx12_INCLUDE_DIR}")
++    else()
++        target_include_directories(3rdParty::d3dx12 SYSTEM INTERFACE "${d3dx12_INCLUDE_DIR}")
++    endif()
++endif()
++message(STATUS "Using JE local original d3dx12 header from ${JE_D3DX12_ROOT}")
+diff --git a/cmake/Tools/LocalPackages/d3dx12/NOTICE.txt b/cmake/Tools/LocalPackages/d3dx12/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/d3dx12/NOTICE.txt
+@@ -0,0 +1,29 @@
++JE local d3dx12 header package
++
++Original payload authority: o3de/3p-package-source commit
++70f0b7b5257bf7cf935bf1cfd270e1b53ccead18,
++package-system/d3dx12-windows, d3dx12-headers-rev1-windows.
++The original single d3dx12.h is preserved byte for byte, including the
++Microsoft copyright/MIT notice and O3DE AZ_COMPILER_CLANG diagnostic guards.
++The exact full Microsoft MIT license is included as d3dx12/license.txt.
++The original O3DE Find and metadata are retained as inactive provenance
++under LICENSES/O3DE along with the O3DE Apache-2.0/MIT license texts.
++
++Microsoft's DirectX-Headers repository is the homepage recorded by the
++original package. That record does not establish an upstream Microsoft
++commit, tag or semantic version for this adapted header. PackageInfo's
++source.commit identifies the actual O3DE source repository, not Microsoft;
++source.sha256 identifies its exact acquired archive. No revision is invented.
++
++JE adapts only local-path validation and the Find module's standalone
++include-directory fallback. The API and INTERFACE IMPORTED GLOBAL target
++3rdParty::d3dx12, include path d3dx12/include, and d3dx12_INCLUDE_DIR remain.
++The dependency on installed Windows SDK d3d12.h remains; SDK headers and
++libraries are not redistributed, acquired or installed by this producer.
++No upstream build, Git, Python, remote fallback or global install runs.
++
++d3dx12-headers-je-rev1-windows carries a new measured package hash, not the
++historical binary-package hash. Native consumer tests cover SDK-compatible
++descriptor helper behavior without creating a device or executing GPU work.
++They do not certify the DX12 renderer, visual performance, Editor runtime,
++full redistribution rights or driver/hardware compatibility.
+diff --git a/cmake/Tools/LocalPackages/d3dx12/README.md b/cmake/Tools/LocalPackages/d3dx12/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/d3dx12/README.md
+@@ -0,0 +1,51 @@
++# Local original d3dx12 headers
++
++Preserve the header-only Windows provider required by Atom RHI DX12:
++`3rdParty::d3dx12` (`INTERFACE IMPORTED GLOBAL`), `d3dx12_INCLUDE_DIR` and
++`d3dx12/include/d3dx12.h`. No new API, alias, DLL or SDK implementation.
++The exact header source is the O3DE 3p archive at commit
++`70f0b7b5257bf7cf935bf1cfd270e1b53ccead18`; its original metadata does not
++identify a Microsoft commit/tag. `NOTICE.txt` preserves that distinction.
++
++Four explicit producer inputs are required. Local absolute paths, source
++URL/hash and a new output under this checkout's build are checked before
++writing. Only the four audited files beneath the archive's literal
++`package-system/d3dx12-windows/` subtree are extracted; each is hash checked.
++The producer copies the unmodified header/license and uses JECreateLocalPackage.
++It invokes no compiler, upstream CMake, download, installer or Git command.
++
++Proposed commands for the assigned validation owner; not execution evidence:
++
++```powershell
++$repo = 'F:/JericoEngine/JericoEngine'
++$output = "$repo/build/n0-validation/local-packages/d3dx12-rev1-validation/d3dx12-local-v1"
++cmake '-DJE_D3DX12_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/o3de-3p-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.tar.gz' '-DJE_D3DX12_SOURCE_SHA256=f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042' '-DJE_D3DX12_SOURCE_URL=https://codeload.github.com/o3de/3p-package-source/tar.gz/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18' "-DJE_D3DX12_OUTPUT=$output" -P "$repo/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake"
++if ($LASTEXITCODE -ne 0) { throw 'Producer failed' }
++$package = "$repo/build/n0-validation/local-packages/d3dx12-rev1-validation/extracted"
++if (Test-Path -LiteralPath $package) { throw 'Consumer extraction must be new' }
++New-Item -ItemType Directory -Path $package | Out-Null
++Push-Location $package
++try {
++    cmake -E tar xJf "$output/packages/d3dx12-headers-je-rev1-windows.tar.xz"
++    if ($LASTEXITCODE -ne 0) { throw 'Package extraction failed' }
++} finally { Pop-Location }
++$consumer = "$repo/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer"
++cmake -S "$repo/cmake/Tools/LocalPackages/d3dx12/tests" -B $consumer -G 'Visual Studio 17 2022' -A x64 -T v143 "-DJE_D3DX12_PACKAGE_ROOT=$package"
++cmake --build $consumer --config Release
++ctest --test-dir $consumer -C Release --output-on-failure
++cmake --build $consumer --config Debug
++ctest --test-dir $consumer -C Debug --output-on-failure
++```
++
++The standalone C++ consumer uses the installed Windows SDK and nine actual
++helper types used by Atom's DX12 Device/CommandList/Image/ImagePool/upload
++consumers. It checks upload/default heap access, buffer/clear/range descriptors,
++copy footprints/indices/boxes, boxed/packed tile regions and subresource
++index/decomposition. No GPU device, resource, driver or render result is tested.
++Verify the produced archive hash and its extracted SHA256SUMS separately.
++
++Focal refusals before output creation: missing/remote/UNC/relative source,
++wrong hash or URL, output outside checkout/build, existing output. Lookup must
++reject missing/modified header and remote/UNC package roots before declaration.
++Windows SDK availability/compatibility is tested only by the native consumer;
++configuration or package creation alone is not DX12/Editor PASS.
+diff --git a/cmake/Tools/LocalPackages/d3dx12/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/d3dx12/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/d3dx12/tests/CMakeLists.txt
+@@ -0,0 +1,41 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_D3DX12_PACKAGE_ROOT)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_BUILD_IN_CHECKOUT)
++if(NOT JE_BUILD_IN_CHECKOUT OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE d3dx12 consumer build must be beneath this checkout/build")
++endif()
++if(NOT EXISTS "${JE_D3DX12_PACKAGE_ROOT}/Findd3dx12.cmake")
++    message(FATAL_ERROR "JE_D3DX12_PACKAGE_ROOT must contain the extracted JE Findd3dx12.cmake")
++endif()
++set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreadedDLL)
++set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Native SDK consumer configurations" FORCE)
++project(JELocalD3dx12Consumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE d3dx12 consumer requires Windows MSVC x64 and its installed SDK")
++endif()
++message(STATUS "JE d3dx12 SDK: ${CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION}")
++list(PREPEND CMAKE_MODULE_PATH "${JE_D3DX12_PACKAGE_ROOT}")
++find_package(d3dx12 REQUIRED MODULE)
++get_target_property(JE_IMPORTED_TYPE 3rdParty::d3dx12 TYPE)
++get_target_property(JE_IMPORTED_INCLUDE 3rdParty::d3dx12 INTERFACE_INCLUDE_DIRECTORIES)
++if(NOT JE_IMPORTED_TYPE STREQUAL "INTERFACE_LIBRARY"
++    OR NOT JE_IMPORTED_INCLUDE STREQUAL "${JE_D3DX12_PACKAGE_ROOT}/d3dx12/include")
++    message(FATAL_ERROR "JE d3dx12 consumer resolved a different provider")
++endif()
++add_executable(JED3dx12Consumer D3dx12Consumer.cpp)
++target_compile_features(JED3dx12Consumer PRIVATE cxx_std_17)
++target_compile_definitions(JED3dx12Consumer PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX)
++target_compile_options(JED3dx12Consumer PRIVATE /W4 /WX)
++target_link_libraries(JED3dx12Consumer PRIVATE 3rdParty::d3dx12)
++enable_testing()
++foreach(JE_CASE IN ITEMS resources copies tiles)
++    add_test(NAME JE.LocalPackages.d3dx12.${JE_CASE} COMMAND JED3dx12Consumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.d3dx12.${JE_CASE} PROPERTIES TIMEOUT 30)
++endforeach()
+diff --git a/cmake/Tools/LocalPackages/d3dx12/tests/D3dx12Consumer.cpp b/cmake/Tools/LocalPackages/d3dx12/tests/D3dx12Consumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/d3dx12/tests/D3dx12Consumer.cpp
+@@ -0,0 +1,94 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++
++#include <Windows.h>
++#include <d3dx12.h>
++#include <cstring>
++#include <iostream>
++#include <string>
++#include <type_traits>
++
++static_assert(sizeof(void*) == 8);
++static_assert(std::is_base_of_v<D3D12_RESOURCE_DESC, CD3DX12_RESOURCE_DESC>);
++static_assert(sizeof(D3D12_RESOURCE_DESC) == sizeof(CD3DX12_RESOURCE_DESC));
++static_assert(sizeof(D3D12_TEXTURE_COPY_LOCATION) == sizeof(CD3DX12_TEXTURE_COPY_LOCATION));
++
++namespace JE::LocalPackages::D3dx12
++{
++    bool Resources()
++    {
++        // Same descriptor APIs used by AsyncUploadQueue, Device and HeapAllocator.
++        const CD3DX12_HEAP_PROPERTIES upload(D3D12_HEAP_TYPE_UPLOAD);
++        const CD3DX12_HEAP_PROPERTIES defaults(D3D12_HEAP_TYPE_DEFAULT);
++        const CD3DX12_HEAP_DESC heap(65536, D3D12_HEAP_TYPE_DEFAULT, 0, D3D12_HEAP_FLAG_ALLOW_ONLY_BUFFERS);
++        const auto buffer = CD3DX12_RESOURCE_DESC::Buffer(4096);
++        const CD3DX12_RANGE mapped(0, 4096);
++        const FLOAT color[] = { 0.25f, 0.5f, 0.75f, 1.0f };
++        const CD3DX12_CLEAR_VALUE rgba(DXGI_FORMAT_R16G16B16A16_FLOAT, color);
++        const CD3DX12_CLEAR_VALUE depth(DXGI_FORMAT_D32_FLOAT_S8X24_UINT, 0.5f, 7);
++        return upload.IsCPUAccessible() && !defaults.IsCPUAccessible()
++            && upload.Type == D3D12_HEAP_TYPE_UPLOAD && upload.CPUPageProperty == D3D12_CPU_PAGE_PROPERTY_UNKNOWN
++            && upload.MemoryPoolPreference == D3D12_MEMORY_POOL_UNKNOWN
++            && upload.CreationNodeMask == 1 && upload.VisibleNodeMask == 1
++            && heap.SizeInBytes == 65536 && heap.Properties == defaults && heap.Alignment == 0
++            && heap.Flags == D3D12_HEAP_FLAG_ALLOW_ONLY_BUFFERS
++            && buffer.Dimension == D3D12_RESOURCE_DIMENSION_BUFFER && buffer.Width == 4096
++            && buffer.Height == 1 && buffer.DepthOrArraySize == 1 && buffer.MipLevels == 1
++            && buffer.Format == DXGI_FORMAT_UNKNOWN && buffer.SampleDesc.Count == 1
++            && buffer.Layout == D3D12_TEXTURE_LAYOUT_ROW_MAJOR && buffer.Flags == D3D12_RESOURCE_FLAG_NONE
++            && mapped.Begin == 0 && mapped.End == 4096
++            && rgba.Format == DXGI_FORMAT_R16G16B16A16_FLOAT && std::memcmp(rgba.Color, color, sizeof(color)) == 0
++            && depth.Format == DXGI_FORMAT_D32_FLOAT_S8X24_UINT && depth.DepthStencil.Depth == 0.5f
++            && depth.DepthStencil.Stencil == 7;
++    }
++
++    bool Copies()
++    {
++        // Build the copy descriptors used by CommandList/ImagePool without a GPU resource.
++        const D3D12_PLACED_SUBRESOURCE_FOOTPRINT footprint{ 512, { DXGI_FORMAT_R8G8B8A8_UNORM, 8, 4, 1, 256 } };
++        const CD3DX12_TEXTURE_COPY_LOCATION placed(nullptr, footprint);
++        const CD3DX12_TEXTURE_COPY_LOCATION indexed(nullptr, 9);
++        const CD3DX12_BOX box(1, 2, 3, 9, 6, 4);
++        return placed.pResource == nullptr && placed.Type == D3D12_TEXTURE_COPY_TYPE_PLACED_FOOTPRINT
++            && placed.PlacedFootprint.Offset == 512 && placed.PlacedFootprint.Footprint.Format == DXGI_FORMAT_R8G8B8A8_UNORM
++            && placed.PlacedFootprint.Footprint.Width == 8 && placed.PlacedFootprint.Footprint.Height == 4
++            && placed.PlacedFootprint.Footprint.Depth == 1 && placed.PlacedFootprint.Footprint.RowPitch == 256
++            && indexed.pResource == nullptr && indexed.Type == D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX
++            && indexed.SubresourceIndex == 9 && box.left == 1 && box.top == 2 && box.front == 3
++            && box.right == 9 && box.bottom == 6 && box.back == 4;
++    }
++
++    bool Tiles()
++    {
++        // Image's tiled-resource coordinate/region constructors and subresource indexing.
++        const CD3DX12_TILED_RESOURCE_COORDINATE coordinate(2, 3, 4, 5);
++        const CD3DX12_TILE_REGION_SIZE boxed(24, TRUE, 2, 3, 4);
++        const CD3DX12_TILE_REGION_SIZE packed(7, FALSE, 0, 0, 0);
++        auto texture = CD3DX12_RESOURCE_DESC::Tex2D(DXGI_FORMAT_D24_UNORM_S8_UINT, 256, 128, 3, 4,
++            1, 0, D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL);
++        const UINT index = texture.CalcSubresource(2, 1, 1);
++        UINT mip = 0;
++        UINT array = 0;
++        UINT plane = 0;
++        D3D12DecomposeSubresource(index, 4, 3, mip, array, plane);
++        return coordinate.X == 2 && coordinate.Y == 3 && coordinate.Z == 4 && coordinate.Subresource == 5
++            && boxed.NumTiles == 24 && boxed.UseBox == TRUE && boxed.Width == 2 && boxed.Height == 3 && boxed.Depth == 4
++            && packed.NumTiles == 7 && packed.UseBox == FALSE && packed.Width == 0 && packed.Height == 0 && packed.Depth == 0
++            && texture.Depth() == 1 && texture.ArraySize() == 3 && texture.MipLevels == 4
++            && index == 18 && mip == 2 && array == 1 && plane == 1;
++    }
++}
++
++int main(int argc, char** argv)
++{
++    if (argc != 2)
++    {
++        return 1;
++    }
++    const std::string test = argv[1];
++    const bool passed = test == "resources" ? JE::LocalPackages::D3dx12::Resources()
++        : test == "copies" ? JE::LocalPackages::D3dx12::Copies()
++        : test == "tiles" && JE::LocalPackages::D3dx12::Tiles();
++    std::cout << "CASE " << test << ": " << (passed ? "PASS" : "FAIL") << '\n';
++    return passed ? 0 : 1;
++}

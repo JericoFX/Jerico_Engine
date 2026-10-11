@@ -1,0 +1,77 @@
+{
+  "status": "native candidate package plus standalone consumer validation completed; parent acceptance pending",
+  "producer": {
+    "nativeExit": 0,
+    "elapsed": "202,319s",
+    "archiveSha256": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0",
+    "archiveBytes": 6880112,
+    "archiveSidecarMatched": true
+  },
+  "payload": {
+    "archiveMembers": 585,
+    "regularFiles": 585,
+    "links": 0,
+    "unsafePaths": 0,
+    "manifestEntries": 584,
+    "manifestMatched": 584,
+    "unlistedFiles": 0,
+    "packageInfo": {
+      "license": "BSD-3-Clause",
+      "name": "OpenEXR-3.1.3-je-rev1-windows",
+      "schemaVersion": 1,
+      "source": {
+        "commit": "697cc449cc589ed780acda88e79e6145ddcd121f",
+        "sha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+        "url": "https://codeload.github.com/AcademySoftwareFoundation/openexr/tar.gz/697cc449cc589ed780acda88e79e6145ddcd121f"
+      },
+      "version": "3.1.3"
+    }
+  },
+  "consumer": {
+    "configureExit": 0,
+    "configureElapsed": "11,727s",
+    "packageRoot": "fresh archive extraction, not producer stage",
+    "buildAndCTest": [
+      {
+        "buildExit": 0,
+        "buildElapsed": "2,974s",
+        "configuration": "Release",
+        "ctestExit": 0,
+        "allSixPassed": true,
+        "ctestElapsed": "0,129s",
+        "rawCtestLog": "consumer-ctest-Release.stdout.log"
+      },
+      {
+        "buildExit": 0,
+        "buildElapsed": "2,894s",
+        "configuration": "Debug",
+        "ctestExit": 0,
+        "allSixPassed": true,
+        "ctestElapsed": "0,896s",
+        "rawCtestLog": "consumer-ctest-Debug.stdout.log"
+      }
+    ],
+    "debugLinkWarningCount": 1,
+    "debugLinkWarning": [
+      "LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-consumer-rev2\\JE_OpenEXRConsumer.vcxproj]"
+    ],
+    "releaseLinkWarningCount": 0,
+    "debugLastTestCopy": "LastTest-Debug.log",
+    "releaseLastTestCapture": "full native CTest stdout retained; Release LastTest.log was overwritten by subsequent Debug CTest before being copied"
+  },
+  "guards": {
+    "count": 10,
+    "result": "all ten requested diagnostics reached; see guard-suite-summary.json",
+    "openexrExactCompilerIdCompile": true
+  },
+  "inputs": {
+    "freezeEntries": 1182,
+    "freezeMatched": 1182,
+    "zlibEntries": 4,
+    "zlibMatched": 4,
+    "freezeSha256": "7745DC711AC2F20AE812108434D5F338B7FCD88E0A3793496B8DB8BC664B8163",
+    "openexrSourceArchiveSha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+    "imathSourceArchiveSha256": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3"
+  },
+  "scopeLimit": "Package/consumer evidence only; no engine, Editor, Asset Processor or runtime acceptance. Package identity remains rev1."
+}

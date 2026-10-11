@@ -1,0 +1,82 @@
+[
+  {
+    "file": "COPYRIGHT",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/COPYRIGHT",
+    "status": 200,
+    "bytes": 1146,
+    "sha256": "FBD6FED7938541D2C809C0826225FC85E551FDBFA8732B10F0C87E0847ACAFD7",
+    "gitBlob": "8282186151e224ac83d9990805062ff7b8effa00",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "FindTIFF.cmake",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/FindTIFF.cmake",
+    "status": 200,
+    "bytes": 3100,
+    "sha256": "B5E194C77D072CE5977B5B97A15E403DE3501E4C7BD1459B0667E7E4A1D8E9C6",
+    "gitBlob": "b5fa0a8fed0bbf173f9b09c0b89bc372eb03eb24",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "PackageInfo.json",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/PackageInfo.json",
+    "status": 200,
+    "bytes": 174,
+    "sha256": "093337775CB1369E97E466B03E5CD39A45C3D916BAB5EEBC95A76F081DA14625",
+    "gitBlob": "4752ef3aeaf57674a2b2ddc6c5410efc19ab97bf",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "build_config.json",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_config.json",
+    "status": 200,
+    "bytes": 4289,
+    "sha256": "B691C56A0393094D27C970EABBAA8FBA7135BD51487AF9D78DEEA969653ADB61",
+    "gitBlob": "98bf58caf6bafc11dc96d1b2245ec363781ad0c5",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "build_tiff_windows.cmd",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_tiff_windows.cmd",
+    "status": 200,
+    "bytes": 1090,
+    "sha256": "D87E0C0CFD4C7442785C73287857BF6947F0BDF5402536BD58E4522D87E3C933",
+    "gitBlob": "4d6ff1ff1ada5ac4ef34e059a9321b53b963528d",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "install_tiff_windows.cmd",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/install_tiff_windows.cmd",
+    "status": 200,
+    "bytes": 982,
+    "sha256": "FC4D47C3DF48DA598EE5DBC14735C67768547063B69A57054F9750652C185EED",
+    "gitBlob": "e7e15c51a482dcad7a2a751c3cc3ac7011cee4bb",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "test_tiff_windows.cmd",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test_tiff_windows.cmd",
+    "status": 200,
+    "bytes": 731,
+    "sha256": "4FA4DE81D5E66451B5B05C83CC84CEC1EFA4DAD89AE81C3D8D3F2A594C6F0788",
+    "gitBlob": "69697f4b7aa8fa67a07bb8c8818430d7aecdb913",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "o3de_patch.patch",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/o3de_patch.patch",
+    "status": 200,
+    "bytes": 1908,
+    "sha256": "7D80DF4A02A6B3BA8F27CD3D8554B39A3B3E3202FCD86378337AB453EC05ECD5",
+    "gitBlob": "6e98b4f930b8c85d4ff6858970b2dc39c44d5f50",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  }
+]

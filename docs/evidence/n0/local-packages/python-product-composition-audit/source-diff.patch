@@ -1,0 +1,154 @@
+--- a/engine.json
++++ b/engine.json
+@@ -31,42 +31,39 @@
+         "Gems/DebugDraw",
+         "Gems/DevTextures",
+         "Gems/DiffuseProbeGrid",
+-        "Gems/EditorPythonBindings",
+-        "Gems/EMotionFX",
+-        "Gems/ExpressionEvaluation",
+-        "Gems/FastNoise",
+-        "Gems/GameState",
+-        "Gems/GameStateSamples",
+-        "Gems/Gestures",
+-        "Gems/GradientSignal",
+-        "Gems/GraphCanvas",
+-        "Gems/GraphModel",
+-        "Gems/ImGui",
+-        "Gems/InAppPurchases",
+-        "Gems/LandscapeCanvas",
+-        "Gems/LmbrCentral",
+-        "Gems/LocalUser",
+-        "Gems/LyShine",
+-        "Gems/LyShineExamples",
+-        "Gems/Maestro",
+-        "Gems/Meshlets",
+-        "Gems/MessagePopup",
+-        "Gems/Microphone",
+-        "Gems/MiniAudio",
+-        "Gems/MotionMatching",
+-        "Gems/Multiplayer",
+-        "Gems/MultiplayerCompression",
+-        "Gems/NvCloth",
+-        "Gems/OpenParticleSystem",
+-        "Gems/PhysX/Common",
+-        "Gems/PhysX/Core/PhysX5",
+-        "Gems/PhysX/Debug/PhysX5",
+-        "Gems/Prefab/PrefabBuilder",
+-        "Gems/Presence",
+-        "Gems/PrimitiveAssets",
+-        "Gems/Profiler",
+-        "Gems/PythonAssetBuilder",
+-        "Gems/QtForPython",
++        "Gems/EMotionFX",
++        "Gems/ExpressionEvaluation",
++        "Gems/FastNoise",
++        "Gems/GameState",
++        "Gems/GameStateSamples",
++        "Gems/Gestures",
++        "Gems/GradientSignal",
++        "Gems/GraphCanvas",
++        "Gems/GraphModel",
++        "Gems/ImGui",
++        "Gems/InAppPurchases",
++        "Gems/LandscapeCanvas",
++        "Gems/LmbrCentral",
++        "Gems/LocalUser",
++        "Gems/LyShine",
++        "Gems/LyShineExamples",
++        "Gems/Maestro",
++        "Gems/Meshlets",
++        "Gems/MessagePopup",
++        "Gems/Microphone",
++        "Gems/MiniAudio",
++        "Gems/MotionMatching",
++        "Gems/Multiplayer",
++        "Gems/MultiplayerCompression",
++        "Gems/NvCloth",
++        "Gems/OpenParticleSystem",
++        "Gems/PhysX/Common",
++        "Gems/PhysX/Core/PhysX5",
++        "Gems/PhysX/Debug/PhysX5",
++        "Gems/Prefab/PrefabBuilder",
++        "Gems/Presence",
++        "Gems/PrimitiveAssets",
++        "Gems/Profiler",
+         "Gems/RecastNavigation",
+         "Gems/RemoteTools",
+         "Gems/SaveData",
+--- a/Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg
++++ b/Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg
+@@ -317,13 +317,6 @@
+                         "AutoLoad": false
+                     }
+                 }
+-            },
+-            "PythonAssetBuilder": {
+-                "Targets": {
+-                    "PythonAssetBuilder.Editor": {
+-                        "AutoLoad": false
+-                    }
+-                }
+             }
+         }
+     }
+--- a/Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg
++++ b/Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg
+@@ -303,13 +303,6 @@
+                         "AutoLoad": false
+                     }
+                 }
+-            },
+-            "PythonAssetBuilder": {
+-                "Targets": {
+-                    "PythonAssetBuilder.Editor": {
+-                        "AutoLoad": false
+-                    }
+-                }
+             }
+         }
+     }
+--- a/Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg
++++ b/Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg
+@@ -303,13 +303,6 @@
+                         "AutoLoad": false
+                     }
+                 }
+-            },
+-            "PythonAssetBuilder": {
+-                "Targets": {
+-                    "PythonAssetBuilder.Editor": {
+-                        "AutoLoad": false
+-                    }
+-                }
+             }
+         }
+     }
+--- a/Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg
++++ b/Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg
+@@ -303,13 +303,6 @@
+                         "AutoLoad": false
+                     }
+                 }
+-            },
+-            "PythonAssetBuilder": {
+-                "Targets": {
+-                    "PythonAssetBuilder.Editor": {
+-                        "AutoLoad": false
+-                    }
+-                }
+             }
+         }
+     }
+--- a/Gems/AtomLyIntegration/gem.json
++++ b/Gems/AtomLyIntegration/gem.json
+@@ -40,8 +40,7 @@
+         "CommonFeatures",
+         "EditorModeFeedback",
+         "EMotionFXAtom",
+-        "ImguiAtom",
+-        "TechnicalArt/DccScriptingInterface"
++        "ImguiAtom"
+     ]
+ }
+ 

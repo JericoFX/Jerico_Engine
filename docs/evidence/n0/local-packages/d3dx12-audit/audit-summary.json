@@ -1,0 +1,135 @@
+{
+  "sourceRepository": "o3de/3p-package-source",
+  "sourceCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "sourceURL": "https://codeload.github.com/o3de/3p-package-source/tar.gz/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+  "sourceArchive": "F:/JericoEngine/Dependencies/archives/o3de-3p-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.tar.gz",
+  "sourceArchiveBytes": 1125538,
+  "sourceArchiveSHA256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+  "headStatus": 200,
+  "getStatus": 200,
+  "authorization": false,
+  "redirects": 0,
+  "archiveEntries": 671,
+  "archiveFiles": 566,
+  "archiveFileBytes": 5714714,
+  "gitBlobMatches": 566,
+  "archiveLinks": 0,
+  "archivePathCollisions": 0,
+  "extraction": "only package-system/d3dx12-windows subtree",
+  "snapshot": "F:/JericoEngine/Dependencies/d3dx12-headers-o3de-70f0b7b5",
+  "subtreeFiles": 4,
+  "subtreeBytes": 58422,
+  "subtreeLinks": 0,
+  "header": {
+    "microsoftCopyright": true,
+    "sha256": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273",
+    "upstreamMicrosoftRevision": null,
+    "includes": [
+      "d3d12.h"
+    ],
+    "authority": "Exact adapted header embedded in original O3DE recipe, AZ_COMPILER_CLANG guards preserved",
+    "bytes": 56537,
+    "modified": false,
+    "path": "d3dx12/include/d3dx12.h",
+    "gitBlobSHA1": "d07f9641e14d128aa129677e796af586738cf439"
+  },
+  "license": {
+    "sha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+    "bytes": 1073,
+    "identifier": "MIT",
+    "licenseTextsPreserved": true,
+    "copyright": "Microsoft Corporation",
+    "o3deGlue": "Apache-2.0 OR MIT",
+    "path": "d3dx12/license.txt"
+  },
+  "originalPackage": {
+    "noUpstreamTagOrCommitInOriginalMetadata": true,
+    "name": "d3dx12-headers-rev1-windows",
+    "sha256": "088c637159fba4a3e4c0cf08fb4921906fd4cca498939bd239db7c54b5b2f804",
+    "microsoftHomepage": "https://github.com/microsoft/DirectX-Headers"
+  },
+  "newPackage": {
+    "sourceCommitNamesO3DE": true,
+    "name": "d3dx12-headers-je-rev1-windows",
+    "sha256": "PENDING PRODUCER EXECUTION"
+  },
+  "interface": {
+    "type": "INTERFACE IMPORTED GLOBAL",
+    "publicVariable": "d3dx12_INCLUDE_DIR",
+    "target": "3rdParty::d3dx12",
+    "includeDir": "d3dx12/include",
+    "dll": false,
+    "sourcePatched": false,
+    "newAliases": [],
+    "upstreamCmakeExecuted": false,
+    "binaryLibrary": false
+  },
+  "consumers": [
+    "Gems/Atom/RHI/DX12/Code/CMakeLists.txt:134",
+    "Source/Platform/Windows/RHI/DX12_Windows.h:24",
+    "AsyncUploadQueue",
+    "Device",
+    "HeapAllocator",
+    "CommandList",
+    "Conversions",
+    "Image",
+    "ImagePool",
+    "QueryPool"
+  ],
+  "nativeConsumer": {
+    "sdkHeaderSHA256": "8a9bd0528b5dac27bb00ae8a90f005db3ea557166bde88713fa2c4731d0f9f55",
+    "sdkHeader": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\d3d12.h",
+    "gpuWorkExecuted": false,
+    "typeApis": [
+      "CD3DX12_HEAP_PROPERTIES",
+      "CD3DX12_HEAP_DESC",
+      "CD3DX12_RESOURCE_DESC",
+      "CD3DX12_RANGE",
+      "CD3DX12_CLEAR_VALUE",
+      "CD3DX12_TEXTURE_COPY_LOCATION",
+      "CD3DX12_BOX",
+      "CD3DX12_TILED_RESOURCE_COORDINATE",
+      "CD3DX12_TILE_REGION_SIZE"
+    ],
+    "sdkWitnessIsNotFullToolchainFreeze": true,
+    "cases": [
+      "resources",
+      "copies",
+      "tiles"
+    ],
+    "gpuDeviceCreated": false,
+    "inlineFunctions": [
+      "D3D12CalcSubresource",
+      "D3D12DecomposeSubresource"
+    ],
+    "sdkVersionWitness": "10.0.26100.0",
+    "sdkHeaderBytes": 1570652,
+    "configurations": [
+      "Release",
+      "Debug"
+    ]
+  },
+  "guardExpectations": [
+    "remote/UNC/relative source or output rejected before writing",
+    "wrong source URL/SHA rejected before writing",
+    "missing archive rejected before writing",
+    "existing output and outside-build output rejected",
+    "missing/modified header and remote/UNC package root rejected"
+  ],
+  "validation": {
+    "guards": "NOT EXECUTED",
+    "native": "NOT EXECUTED",
+    "editor": "PENDING",
+    "producer": "NOT EXECUTED",
+    "dx12Renderer": "PENDING"
+  },
+  "limits": [
+    "Exact Microsoft upstream revision not established; source commit names O3DE",
+    "No package hash match with historical package",
+    "Installed Windows SDK not redistributed/provisioned",
+    "No GPU/renderer/performance/legal acceptance claimed"
+  ],
+  "freeze": "source-freeze-writer12.json",
+  "diff": "source-diff.patch",
+  "preservation": "preservation-expat14.json"
+}

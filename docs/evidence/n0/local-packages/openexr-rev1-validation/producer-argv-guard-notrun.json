@@ -1,0 +1,14 @@
+{
+  "status": "NOT_RUN",
+  "nativeCmakeInvoked": false,
+  "failedBeforeProcessStart": "Output assignment mismatch",
+  "diagnostic": "validation JSON stores output path with forward slashes while runner compared against a backslash literal",
+  "runnerSha256": "5674caef0982e93662f45b328d43aee5eaff73f5139846f713b551d54fc8fac3",
+  "preservedRunner": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev1-validation\\run-producer-argv-guard-notrun.ps1",
+  "preservedRunnerSha256": "5674caef0982e93662f45b328d43aee5eaff73f5139846f713b551d54fc8fac3",
+  "producerOutputExists": false,
+  "freezeCount": 1182,
+  "freezeMatches": true,
+  "zlibInputCount": 4,
+  "zlibInputsMatch": true
+}

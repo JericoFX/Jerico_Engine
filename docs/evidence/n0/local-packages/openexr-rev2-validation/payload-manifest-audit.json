@@ -1,0 +1,23 @@
+{
+  "extractionRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\extracted\\OpenEXR-3.1.3-je-rev1-windows",
+  "manifestPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\extracted\\OpenEXR-3.1.3-je-rev1-windows\\SHA256SUMS",
+  "manifestEntries": 584,
+  "manifestMatched": 584,
+  "treeRegularFileCount": 585,
+  "manifestPathMissing": 0,
+  "unlistedFiles": 0,
+  "unlistedFilePaths": [],
+  "mismatches": [],
+  "sourcePackageInfo": {
+    "license": "BSD-3-Clause",
+    "name": "OpenEXR-3.1.3-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "697cc449cc589ed780acda88e79e6145ddcd121f",
+      "sha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/openexr/tar.gz/697cc449cc589ed780acda88e79e6145ddcd121f"
+    },
+    "version": "3.1.3"
+  },
+  "licenseFiles": 1
+}

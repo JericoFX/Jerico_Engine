@@ -1,0 +1,11 @@
+{
+  "name": "producer-unc-output",
+  "argvCount": 6,
+  "nativeExit": 1,
+  "elapsedSeconds": 0.022,
+  "expectedText": "must be an absolute local path",
+  "diagnosticMatched": true,
+  "checkedPath": "//server/share/openexr-invalid",
+  "mustBeAbsent": false,
+  "pathAbsent": true
+}

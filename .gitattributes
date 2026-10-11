@@ -131,3 +131,8 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /cmake/Tools/LocalPackages/Lua/lua_5.4.4_o3de.patch -text -whitespace
 /cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch -text -whitespace
 /cmake/Tools/LocalPackages/mcpp/visualc.mak.original -text -whitespace
+/cmake/Tools/LocalPackages/Expat/expat_2.4.2.patch -text -whitespace
+/cmake/Tools/LocalPackages/TIFF/o3de_patch.patch -text -whitespace
+# Preserve the unmodified package utility from pinned o3de/3p-package-source 70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.
+# Adapted Find modules, producer, hooks and tests retain whitespace checks.
+/cmake/Tools/LocalPackages/OpenEXR/o3de_package_utilities.cmake -text -whitespace

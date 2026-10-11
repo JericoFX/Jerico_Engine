@@ -1,0 +1,27 @@
+[
+  {
+    "name": "experimental-c11atomics-configure",
+    "nativeExit": 0,
+    "elapsedSeconds": 7.499
+  },
+  {
+    "name": "experimental-c11atomics-build-Debug",
+    "nativeExit": 0,
+    "elapsedSeconds": 3.041
+  },
+  {
+    "name": "experimental-c11atomics-run-Debug",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.06
+  },
+  {
+    "name": "experimental-c11atomics-build-Release",
+    "nativeExit": 0,
+    "elapsedSeconds": 3.208
+  },
+  {
+    "name": "experimental-c11atomics-run-Release",
+    "nativeExit": 0,
+    "elapsedSeconds": 0.048
+  }
+]

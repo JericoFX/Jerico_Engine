@@ -1,0 +1,51 @@
+Start testing: Oct 10 23:11 Hora estándar de Montevideo
+----------------------------------------------------------
+1/3 Testing: JE.LocalPackages.d3dx12.resources
+1/3 Test: JE.LocalPackages.d3dx12.resources
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer/Debug/JED3dx12Consumer.exe" "resources"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer
+"JE.LocalPackages.d3dx12.resources" start time: Oct 10 23:11 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE resources: PASS
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.d3dx12.resources" end time: Oct 10 23:11 Hora estándar de Montevideo
+"JE.LocalPackages.d3dx12.resources" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: JE.LocalPackages.d3dx12.copies
+2/3 Test: JE.LocalPackages.d3dx12.copies
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer/Debug/JED3dx12Consumer.exe" "copies"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer
+"JE.LocalPackages.d3dx12.copies" start time: Oct 10 23:11 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE copies: PASS
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.d3dx12.copies" end time: Oct 10 23:11 Hora estándar de Montevideo
+"JE.LocalPackages.d3dx12.copies" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: JE.LocalPackages.d3dx12.tiles
+3/3 Test: JE.LocalPackages.d3dx12.tiles
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer/Debug/JED3dx12Consumer.exe" "tiles"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/consumer
+"JE.LocalPackages.d3dx12.tiles" start time: Oct 10 23:11 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE tiles: PASS
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.d3dx12.tiles" end time: Oct 10 23:11 Hora estándar de Montevideo
+"JE.LocalPackages.d3dx12.tiles" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 23:11 Hora estándar de Montevideo

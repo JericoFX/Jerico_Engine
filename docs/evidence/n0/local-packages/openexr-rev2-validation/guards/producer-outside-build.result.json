@@ -1,0 +1,11 @@
+{
+  "name": "producer-outside-build",
+  "argvCount": 6,
+  "nativeExit": 1,
+  "elapsedSeconds": 0.026,
+  "expectedText": "output must be beneath this checkout/build",
+  "diagnosticMatched": true,
+  "checkedPath": "F:\\JericoEngine\\Dependencies\\je-openexr-invalid-output",
+  "mustBeAbsent": true,
+  "pathAbsent": true
+}

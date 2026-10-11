@@ -1,0 +1,116 @@
+{
+  "sourceRepository": "https://github.com/libexpat/libexpat",
+  "sourceCommit": "e26a263aa9182d1e4552cd615857f0f61df3ba42",
+  "sourceTag": "R_2_4_2",
+  "sourceArchive": "F:/JericoEngine/Dependencies/archives/expat-e26a263aa9182d1e4552cd615857f0f61df3ba42.tar.gz",
+  "sourceArchiveSHA256": "a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057",
+  "sourceArchiveBytes": 8309600,
+  "sourceURL": "https://codeload.github.com/libexpat/libexpat/tar.gz/e26a263aa9182d1e4552cd615857f0f61df3ba42",
+  "headStatus": 200,
+  "getStatus": 200,
+  "redirects": 0,
+  "authorization": false,
+  "primaryGitBlobsVerified": 153,
+  "normalFilesVerified": 152,
+  "sourceSubtreeSnapshot": "F:/JericoEngine/Dependencies/expat-2.4.2-e26a263aa9182d1e4552cd615857f0f61df3ba42-subtree",
+  "subtreeFiles": 127,
+  "subtreeBytes": 1528677,
+  "subtreeLinks": 0,
+  "omittedRootLink": {
+    "path": "README.md",
+    "gitBlobSHA1": "11ddc587ddc574bf9ac6e6ab881aaf18429b7444",
+    "target": "expat/README.md",
+    "materialized": false
+  },
+  "historicalFullNormalFileSnapshotPreserved": "F:/JericoEngine/Dependencies/expat-2.4.2-e26a263aa9182d1e4552cd615857f0f61df3ba42",
+  "originalRecipe": "o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat",
+  "originalPackageName": "expat-2.4.2-rev2-windows",
+  "originalPackageSHA256": "748d08f21f5339757059a7887e72b52d15e954c549245c638b0b05bd5961e307",
+  "packageName": "expat-2.4.2-je-rev1-windows",
+  "packageHash": "PENDING BUILD",
+  "consumer": "Code/Legacy/CrySystem/XML/xml.cpp",
+  "interface": {
+    "zlib": false,
+    "largeSize": false,
+    "cli": false,
+    "contextBytes": 1024,
+    "toolset": "v143 adaptation from VS2019",
+    "targets": [
+      "3rdParty::expat",
+      "expat::expat",
+      "EXPAT::EXPAT"
+    ],
+    "dll": false,
+    "libbsd": false,
+    "namespaces": true,
+    "dtd": true,
+    "headers": [
+      "expat.h",
+      "expat_external.h",
+      "expat_config.h"
+    ],
+    "windowsEntropy": "CRT rand_s",
+    "configuration": "Release for all consumers",
+    "compileDefinitions": [
+      "XML_STATIC"
+    ],
+    "charType": "char",
+    "type": "STATIC",
+    "archive": "expat/lib/libexpatMD.lib",
+    "runtime": "MD"
+  },
+  "patch": {
+    "change": "CMake minimum 3.1.3 to 3.8.0 only",
+    "path": "expat_2.4.2.patch",
+    "patchedSHA256": "d2f6e71b0209468048cec60c9981be7367b911d99517dd0b3b76da91dc489203",
+    "pristineSHA256": "81c57f446bc10dd184c4817f107f3a15f86eea0f270eec7f8d164f484f6d655b",
+    "sha256": "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483",
+    "immutableSourceModified": false
+  },
+  "closure": {
+    "globalInstall": false,
+    "cmakeReads": [
+      "CMakeLists.txt",
+      "ConfigureChecks.cmake",
+      "expat_config.h.cmake",
+      "cmake/expat-config.cmake.in",
+      "Changes",
+      "AUTHORS"
+    ],
+    "upstreamTestDownload": "wget w3.org only in EXPAT_BUILD_TOOLS AND NOT MSVC, inactive",
+    "sourceWrites": "Private CMakeLists minimum patch only; generated files in binary dir",
+    "gitCommands": false,
+    "thirdPartyAcquisition": false
+  },
+  "licenses": {
+    "glue": "Apache-2.0 OR MIT, root texts preserved",
+    "buildSystem": "Upstream CMakeLists identifies BSD KDE buildsystem license; complete original attribution/file retained, no invented legal certification",
+    "library": "MIT (full COPYING and per-file notices preserved)",
+    "siphash": "CC0 (full siphash.h notice preserved)"
+  },
+  "validation": {
+    "editor": "PENDING",
+    "nativeConsumer": "NOT EXECUTED",
+    "cases": [
+      "streaming",
+      "namespaces",
+      "errors",
+      "memory"
+    ],
+    "root": "PENDING EXPAT INTEGRATION BY PARENT",
+    "producer": "NOT EXECUTED",
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "guards": "NOT EXECUTED"
+  },
+  "limits": [
+    "Expat2.4.2 baseline is old; no security-upgrade approval",
+    "No original binary hash/ABI equivalence asserted",
+    "No Editor/native-engine PASS",
+    "CMake/compiler owner is Luna only"
+  ],
+  "freeze": "source-freeze-writer14.json",
+  "diff": "source-diff.patch"
+}

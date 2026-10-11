@@ -1,0 +1,15 @@
+{
+  "changedInput": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/ApplyTiffRecipePatch.cmake",
+  "beforeSha256": "FEA21BA4686303D2AB981420187CC5FCAE8DCA3AF8F59AF81154975012C6CDA9",
+  "afterSha256": "2A4567DE03785D39EB0E3E617573951262DC67AB377A358D42BB9D4FCB96E96C",
+  "oldLine": "file(WRITE \"${JE_PATCH_FILE}\" \"${JE_PATCH_TEXT}\")",
+  "newLine": "file(CONFIGURE OUTPUT \"${JE_PATCH_FILE}\" CONTENT \"${JE_PATCH_TEXT}\" @ONLY NEWLINE_STYLE UNIX)",
+  "reason": "Parent reviewed Windows mcpp native RED demonstrates CMake file WRITE newline translation; preserve exact LF postpatch SHA via file CONFIGURE UNIX",
+  "patchContextUnchanged": true,
+  "patchExpectedHashesUnchanged": true,
+  "otherFrozenInputsMatch": 662,
+  "previousFreezePreserved": "source-freeze-tiff-candidate.json",
+  "newFreeze": "source-freeze-tiff-candidate-v2.json",
+  "newFreezeSha256": "1F103DDA160910E2FC36CA45F908DDD19BAEBF12BE35EF0928B1F6C12587ADDC",
+  "cmakeOrTestsExecuted": false
+}

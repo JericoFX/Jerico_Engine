@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "owner": "/root/dependency_writer",
+  "status": "PENDING PARENT REVIEW AND LUNA NATIVE EXECUTION",
+  "ownedSourceCount": 6,
+  "inputCount": 12,
+  "aggregateSHA256": "4c7eb20fa7e7d4a3b1de9aba2211d378a6adf4c84c300cdab13ff4e9bce6fd5f",
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake",
+      "role": "owned-source",
+      "bytes": 5215,
+      "sha256": "87296c897ed8e392e3fd854336a0026328e242d3cff717b83d1d547ecb1b7fde",
+      "utf8Bom": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/Findd3dx12.cmake",
+      "role": "owned-source",
+      "bytes": 1529,
+      "sha256": "de91621b8ab603d06749a32c55528502e6e3f792c7413077feec37d916b7942b",
+      "utf8Bom": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/NOTICE.txt",
+      "role": "owned-source",
+      "bytes": 1754,
+      "sha256": "0289735ddc9e5fa5df182a3bd2e06c3cd8f8a97ec178ef5e74cc6071fc2d26c2",
+      "utf8Bom": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/README.md",
+      "role": "owned-source",
+      "bytes": 3371,
+      "sha256": "4cc713ad9ede1e8aa10d4c2dcbabc6767c91dafd68fb4e239ef8e210e6d5e281",
+      "utf8Bom": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/tests/CMakeLists.txt",
+      "role": "owned-source",
+      "bytes": 2389,
+      "sha256": "5569011a20257aef71df3ebf65ef963fd1866056ec1a10dd75f4e63aa7935a70",
+      "utf8Bom": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/tests/D3dx12Consumer.cpp",
+      "role": "owned-source",
+      "bytes": 5305,
+      "sha256": "00a7d885665300aeb0c0ce3083da34c3802128b325622d7b52f6d7e0adfbed3c",
+      "utf8Bom": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "role": "shared-readonly-input",
+      "bytes": 7461,
+      "sha256": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "role": "shared-readonly-input",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "role": "shared-readonly-input",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "role": "shared-readonly-input",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "role": "shared-readonly-input",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/o3de-3p-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.tar.gz",
+      "role": "shared-readonly-input",
+      "bytes": 1125538,
+      "sha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042"
+    }
+  ]
+}

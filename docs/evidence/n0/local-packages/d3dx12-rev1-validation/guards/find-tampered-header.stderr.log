@@ -1,0 +1,8 @@
+CMake Error at F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/find-tampered-root/JERequireLocalPath.cmake:42 (message):
+  JE local Python: original d3dx12 header SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/find-tampered-root/d3dx12/include/d3dx12.h
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/find-tampered-root/Findd3dx12.cmake:15 (JE_python_verify_file)
+  CMakeLists.txt:25 (find_package)
+
+

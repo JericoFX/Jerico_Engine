@@ -1,0 +1,14 @@
+[
+  {
+    "path": "CMakeLists.txt",
+    "sha256": "23BD675A35504234B665FD79ED29D340B6C120744DA49209B9436FFAA11F24D8",
+    "downloads": 0,
+    "executeProcesses": 3
+  },
+  {
+    "path": "contrib/pngminus/CMakeLists.txt",
+    "sha256": "F30E92CAC4053C3435E2B4A87D07EF69F00DC137D9003681DBA533A38CB6253F",
+    "downloads": 0,
+    "executeProcesses": 0
+  }
+]

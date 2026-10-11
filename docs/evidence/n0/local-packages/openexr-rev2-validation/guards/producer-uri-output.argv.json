@@ -1,0 +1,8 @@
+[
+  "-DJE_OPENEXR_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+  "-DJE_OPENEXR_IMATH_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+  "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+  "-DJE_OPENEXR_OUTPUT:STRING=https://example.invalid/openexr",
+  "-P",
+  "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake"
+]

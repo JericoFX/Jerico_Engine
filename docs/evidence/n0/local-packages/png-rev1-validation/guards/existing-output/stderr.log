@@ -1,0 +1,4 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake:24 (message):
+  JE local PNG: output must be new; existing outputs are preserved
+
+

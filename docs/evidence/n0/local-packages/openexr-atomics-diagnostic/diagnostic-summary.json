@@ -1,0 +1,69 @@
+{
+  "diagnostic": "MSVC C11 atomic support",
+  "scope": "Harness-only isolated C probe; no OpenEXR package rebuild",
+  "cmake": "4.3.4",
+  "msvc": "19.44.35228.0",
+  "vctools": "14.44.35207",
+  "freezePath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/source-freeze-openexr-candidate.json",
+  "freezeExpectedSha256": "20FEED8A0C7AEF75930D37D54381C4A93658E2425C7BF169AFED68894DDECEB0",
+  "freezeEntries": 1182,
+  "freezeMatched": 1182,
+  "freezeMismatches": 0,
+  "zlibFreezeEntriesMatched": 8,
+  "sourceFact": "OpenEXR includes cmake/LibraryDefine.cmake; OpenEXRLibraryDefine.cmake contains private c_std_11 but is not included",
+  "probe": "atomic_uintptr_t init/store/load",
+  "variants": [
+    {
+      "flags": "No /std:c11",
+      "debugBuild": 1,
+      "error": "C atomics require C11 or later",
+      "configure": 0,
+      "releaseBuild": 1,
+      "name": "default"
+    },
+    {
+      "flags": "/std:c11",
+      "debugBuild": 1,
+      "error": "C atomic support is not enabled",
+      "configure": 0,
+      "releaseBuild": 1,
+      "name": "private-c_std_11-feature"
+    },
+    {
+      "flags": "/std:c11",
+      "debugBuild": 1,
+      "error": "C atomic support is not enabled",
+      "configure": 0,
+      "releaseBuild": 1,
+      "name": "explicit-C_STANDARD-11-required-extensions-off"
+    },
+    {
+      "runtimeLibraries": "Debug MultiThreadedDebugDLL (/MDd); Release MultiThreadedDLL (/MD)",
+      "releaseBuild": 0,
+      "configure": 0,
+      "debugRun": 0,
+      "releaseRun": 0,
+      "name": "explicit-C_STANDARD-11-plus-experimental-c11atomics",
+      "flags": "/std:c11 /experimental:c11atomics",
+      "debugBuild": 0
+    }
+  ],
+  "experimentalDurationsSeconds": {
+    "configure": 7.499,
+    "debugBuild": 3.041,
+    "debugRun": 0.06,
+    "releaseBuild": 3.208,
+    "releaseRun": 0.048
+  },
+  "notes": [
+    "Initial harness guard was NOT_RUN and is not a CMake result.",
+    "The successful variant is evidence for the isolated toolchain probe only; it is not an OpenEXR package fix or acceptance."
+  ],
+  "harnessSha256": {
+    "project\\CMakeLists.txt": "2184C55E3BCD28F0A00E66E4D6699775BA7B745DD94C56107D09B2FFF8170BF3",
+    "project\\atomic_probe.c": "14B5207BA14497136FAA50CC2148D2F5462AB11CB154786BC2DCD85812423732",
+    "run-atomic-probes.ps1": "7A98B0527BF9F80B8EF891E899AA4F2D59668A3960A945D19A92CB408ACAB32F",
+    "run-experimental-probe.ps1": "037B5BF29401CF17D145A53D64A009489F2C49CCB5A9B3C5FA31AEE084B67062",
+    "source-observation.json": "10C69119DE679370E17039A7F11DCDE75F9748F337125AF171F9387EB5CA86F3"
+  }
+}

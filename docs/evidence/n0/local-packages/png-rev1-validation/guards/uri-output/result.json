@@ -1,0 +1,10 @@
+{
+  "case": "uri-output",
+  "exitCode": 1,
+  "elapsedSeconds": 0.036,
+  "expectedDiagnostic": "must not be a URI",
+  "diagnosticMatched": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\uri-output\\output",
+  "outputExists": false,
+  "outputWasExpectedExisting": false
+}

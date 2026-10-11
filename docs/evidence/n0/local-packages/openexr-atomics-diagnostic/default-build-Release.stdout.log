@@ -1,0 +1,49 @@
+Change Dir: 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/default'
+
+Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" JEAtomicProbe.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+Compilación iniciada a las 10/10/2026 23:45:09.
+
+Proyecto "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\JEAtomicProbe.vcxproj" en nodo 1 (destinos predeterminados).
+El proyecto "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\JEAtomicProbe.vcxproj" (1) está compilando "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\ZERO_CHECK.vcxproj" (2) en el nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "x64\Release\ZERO_CHECK\".
+  La salida estructurada está habilitada. El formato del diagnóstico del compilador reflejará la jerarquía de errores. Consulte https://aka.ms/cpp/structured-output para obtener más detalles.
+  Creando directorio "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\".
+InitializeBuildStatus:
+  Se creará "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+  Aplicando tarea Touch a "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+CustomBuild:
+  1>Checking Build System
+FinalizeBuildStatus:
+  Se eliminará el archivo "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Compilación del proyecto terminada "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\ZERO_CHECK.vcxproj" (destinos predeterminados).
+PrepareForBuild:
+  La salida estructurada está habilitada. El formato del diagnóstico del compilador reflejará la jerarquía de errores. Consulte https://aka.ms/cpp/structured-output para obtener más detalles.
+  Creando directorio "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\Release\".
+  Creando directorio "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\".
+InitializeBuildStatus:
+  Se creará "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+  Aplicando tarea Touch a "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\unsuccessfulbuild".
+CustomBuild:
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/project/CMakeLists.txt
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /nologo /W1 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /MD /Fo"JEAtomicProbe.dir\Release\\" /Fd"JEAtomicProbe.dir\Release\vc143.pdb" /external:W1 /TC /errorReport:queue "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\project\atomic_probe.c"
+  atomic_probe.c
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime_c11_stdatomic.h(16,1): error C1189: #error:  "C atomics require C11 or later" [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\JEAtomicProbe.vcxproj]
+  (compilando archivo de origen "../project/atomic_probe.c")
+  
+Compilación del proyecto terminada "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\JEAtomicProbe.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\JEAtomicProbe.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime_c11_stdatomic.h(16,1): error C1189: #error:  "C atomics require C11 or later" [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\default\JEAtomicProbe.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:02.17
+

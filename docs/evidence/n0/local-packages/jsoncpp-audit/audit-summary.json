@@ -1,0 +1,203 @@
+{
+  "status": "AUDITED SOURCE; ORIGINAL ROOT/NATIVE INTEGRATION PENDING",
+  "version": "1.6.2",
+  "commit": "24682e37bf1425455b45e7db69dbdbcd30aec7dd",
+  "archive": "F:/JericoEngine/Dependencies/archives/jsoncpp-1.6.2.tar.gz",
+  "archiveBytes": 198824,
+  "archiveSHA256": "c40e5a2583df633b904525305bda40b622d9971fee1ece7ce48ca723a4907d36",
+  "sourceRoot": "F:/JericoEngine/Dependencies/jsoncpp-1.6.2",
+  "override": "-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2",
+  "license": "Public Domain OR MIT; source LICENSE and original wrapper LICENSE.txt intact",
+  "snapshot": {
+    "archiveMembers": 247,
+    "bytes": 792661,
+    "links": 0,
+    "files": 229,
+    "extractionHashesMatched": 229,
+    "gitBlobsMatched": 229
+  },
+  "selectedWrapper": {
+    "dll": "No JSON_DLL/JSON_DLL_BUILD set by wrapper",
+    "target": "3rdParty::jsoncpp",
+    "closureFiles": 17,
+    "translationUnitBytes": 134684.0,
+    "type": "STATIC",
+    "thirdPartyRuntime": "C++ standard library only; CPPTL macros disabled",
+    "upstreamCMake": "NO_ADD_SUBDIR creates SOURCE_SUBDIR no-add-subdir; absent in audited archive",
+    "publicHeaders": 10,
+    "exceptions": "O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS",
+    "translationUnits": 3,
+    "privateIncludes": 2,
+    "sourceWrites": "Original upstream CMake2.8.5 would rewrite source version.h/version and run postbuild tests; it is not selected",
+    "scripts": "Historical Python/SCons/amalgamation/doc scripts not selected or executed",
+    "producer": "None: exact local source override uses original engine wrapper",
+    "int64": "JSON_HAS_INT64 enabled by original config.h"
+  },
+  "consumers": {
+    "targets": [
+      "AZ::ShaderCompiler",
+      "AZ::Azslc"
+    ],
+    "functionality": "Json::Value object/array reflection, append integer numthreads and shader option arrays, ostream JSON encoding in --ia/--om/--srg/--options paths",
+    "buildHostToolsOnly": true,
+    "references": [
+      "ShaderCompiler/CMakeLists.txt:8,24,44",
+      "AzslcBackend.h:13",
+      "AzslcReflection.cpp:249-315,389-396,633",
+      "Main.cpp:365,368,371,374,717,761"
+    ]
+  },
+  "checksProposed": {
+    "behavior": "Original Azslc --ia on versioned compute-entries.azsl; JSON parses, four CS entry names/numthreads and VS entry match source. Native execution still pending target generation.",
+    "limits": "No auxiliary replacement target/provider; no performance measurements, shader GPU execution or Editor acceptance",
+    "root": "Next Root invocation preserves all offline guards and adds only exact JSONCPP override",
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "buildTargets": [
+      "jsoncpp",
+      "Azslc"
+    ]
+  },
+  "closureInputs": [
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\src\\lib_json\\json_reader.cpp",
+      "bytes": 56217,
+      "sha256": "6cf6024dce4dac34f4d4b5f23baa51099934c5397f8d6874296890b79ce45c31"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\src\\lib_json\\json_value.cpp",
+      "bytes": 44999,
+      "sha256": "a8a6ff669ad46282dca49713edb41e3c8b3ebeaa7670d8ad540dbbd8f8bd472f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\src\\lib_json\\json_writer.cpp",
+      "bytes": 33468,
+      "sha256": "80141466cdec2b292bac6d2f6cf16214d6e3a5cb651a7bd20393ee588112f77b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\src\\lib_json\\json_tool.h",
+      "bytes": 2705,
+      "sha256": "ab1858b842ba58b52dcb7c5d30578b809e9d87cb72be31492196b31db7025d66"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\src\\lib_json\\json_valueiterator.inl",
+      "bytes": 5050,
+      "sha256": "1ba9c89a4d85471e4d157b4ce121aeab55cd02019e38629e9ee4580cdad5a714"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\LICENSE",
+      "bytes": 2665,
+      "sha256": "76c45ece83a26117f86f4e349e7df118708e061e87225328fb478ce1e8b3eb86"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\version",
+      "bytes": 6,
+      "sha256": "a2d5e268fe70979caccd895156b3d33bd61a3cc7e660ab7a5b07066849b3e248"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\assertions.h",
+      "bytes": 2203,
+      "sha256": "ecec031f5d40336751b4af9f5f240a6d04ddd90f7ec8bebe0365e61f2b3cf7b1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\autolink.h",
+      "bytes": 662,
+      "sha256": "a6d1df45ced13888381ff014fd5f61930061bcfe16d38cd90edc2234b39d6c21"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\config.h",
+      "bytes": 3860,
+      "sha256": "c0bd8c5d4d9f357f3cd5917d85c3ce447125ec98e2640d54dc5c8f3ee7fd916c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\features.h",
+      "bytes": 1718,
+      "sha256": "29468be6ed917d8889493e93a0142430aa560170d41de56182d35f37b1d355c7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\forwards.h",
+      "bytes": 758,
+      "sha256": "46fa7154ab8e1fdf3c79b8d00751bf022f4f377b7f1a6babe2b8076464f140c6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\json.h",
+      "bytes": 420,
+      "sha256": "4123ba700687838121226a8923aea66918832aad886af3f26ca6718eb0051a6a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\reader.h",
+      "bytes": 13217,
+      "sha256": "0d5aed140fd17e08b63d073cbfbb00dcb21919a12402c985a4a70aae53035f13"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\value.h",
+      "bytes": 26031,
+      "sha256": "0c68c0a0a870eb90805f5af23379e5755e3f7ed9c73c747b1e2acbcf218ebb32"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\version.h",
+      "bytes": 535,
+      "sha256": "72cc92c9f8e3e7ddab32325d01b6b52782389af7910efa26bf193829988b951f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2\\include\\json\\writer.h",
+      "bytes": 10696,
+      "sha256": "1b225db0e8e30b6481c253f0c0a500cc664d8cdea57311c0137349b6c879918f"
+    }
+  ],
+  "rootReadOnlyInputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\jsoncpp\\CMakeLists.txt",
+      "bytes": 1173,
+      "sha256": "ea03ce67a4f89d363ff1a13d4d4eb10e19a0cdffb085fecdf8b8d16eb6c8bb5f"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\jsoncpp\\files.cmake",
+      "bytes": 406,
+      "sha256": "e289aeba927f40bdbc20f525c72c4b5fb2fadc012653d7dd77019867a1cf9da1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\jsoncpp\\LICENSE.txt",
+      "bytes": 2711,
+      "sha256": "b206c25effd679a4d2c1706e1a41adda1e07bb1cfd507f211c61917af668ec2e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\jsoncpp\\PackageInfo.json",
+      "bytes": 436,
+      "sha256": "fa5ffa20d4e490333b6b695c35c35f1858a2a6966b0f0ba08135e02982019e5c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\CMakeLists.txt",
+      "bytes": 1417,
+      "sha256": "87d3ddd482be254403df48b384575bf11f0fdf6787d6a8cca3dcf47632e6117c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\Source\\AzslcBackend.h",
+      "bytes": 10631,
+      "sha256": "3d8a73535edb9493c384fff14ad2bb47e8fda584242a2d23b094348e3254f0f2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\Source\\AzslcBackend.cpp",
+      "bytes": 40339,
+      "sha256": "67e9f029d8c37fe26d1128d70cc51dfae7c810a1233a7ca239c0d6ec60da1107"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\Source\\AzslcReflection.cpp",
+      "bytes": 58710,
+      "sha256": "035aa5200359045ee68632a29a0a5632dcc8784b3e6de1ffcdc6f0bf1c393ad5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\Source\\Main.cpp",
+      "bytes": 35502,
+      "sha256": "1fcb60e40f51e68771445f4b301686564483c65411cfff9252860f601601ebca"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\Tests\\Advanced\\compute-entries.azsl",
+      "bytes": 865,
+      "sha256": "5734774536373fa8fdb24c18e19474b6110200b41f1b590022a46fbf9072e9a7"
+    }
+  ],
+  "sourceManifest": "source-tree-manifest.json"
+}

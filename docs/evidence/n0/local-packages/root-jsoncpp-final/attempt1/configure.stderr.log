@@ -1,0 +1,15 @@
+CMake Error at cmake/3rdPartyPackages.cmake:952 (message):
+  JE FetchContent unavailable offline: cli11
+
+  Pin: c6ea6b2e5608b3ea8617999bd5f47420c71b2ebdb8dc4767c1034d1da5785711
+  37bb6edc5317e99af72ef48405e65d9ca5218861
+
+  Archive cache:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/cli11
+
+  Provision a pinned local archive or set FETCHCONTENT_SOURCE_DIR_CLI11 to
+  audited local sources; remote and Git fallback are disabled.
+Call Stack (most recent call first):
+  Code/3rdParty/cli11/CMakeLists.txt:8 (o3de_fetch_content)
+
+

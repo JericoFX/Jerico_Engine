@@ -1,0 +1,10 @@
+{
+  "case": "missing-archive",
+  "exitCode": 1,
+  "elapsedSeconds": 0.045,
+  "expectedDiagnostic": "file is missing",
+  "diagnosticMatched": false,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\missing-archive\\output",
+  "outputExists": false,
+  "outputWasExpectedExisting": false
+}

@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "status": "FROZEN candidate; native build/behavior pending Luna and parent acceptance",
+  "ownership": "cmake/Tools/LocalPackages/OpenEXR and own openexr-audit receipts only",
+  "selectedConsumer": {
+    "target": "Gem::ImageProcessingAtom.Editor.Static",
+    "dependency": "3rdParty::OpenEXR PUBLIC",
+    "source": "Gems/Atom/Asset/ImageProcessingAtom/Code/Source/ImageLoader/ExrLoader.cpp",
+    "readAudit": "selected-consumer-source-audit.json",
+    "callerCompiled": false,
+    "latestRootFatal": "not claimed"
+  },
+  "originalRecipe": {
+    "repository": "o3de/3p-package-source",
+    "commit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "path": "package-system/OpenEXR",
+    "windowsPackage": "OpenEXR-3.1.3-rev5-windows",
+    "historicalPackageSha256": "bff6dc78412bb1b04ded243753bee36e9229fdaf9a9e1fa85b1059238fba4c9b",
+    "inputReceipt": "recipe-input-receipts.json",
+    "recipeFiles": 6,
+    "fiveDirectoryBlobsVerified": true,
+    "originalImathTag": "v3.1.3 in upstream cmake/OpenEXRSetup.cmake"
+  },
+  "sources": [
+    {
+      "project": "OpenEXR",
+      "tag": "v3.1.3",
+      "commit": "697cc449cc589ed780acda88e79e6145ddcd121f",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/openexr/tar.gz/697cc449cc589ed780acda88e79e6145ddcd121f",
+      "snapshot": "F:/JericoEngine/Dependencies/openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+      "archiveBytes": 20326313,
+      "archiveSha256": "5ED17A3BE8AE029E26A7314A2D41E6FEBC2102CEF1EAFB1FFE6C0550EA1993BE",
+      "archiveMembers": 891,
+      "files": 836,
+      "payloadBytes": 35630867,
+      "links": 0,
+      "collisions": 0,
+      "lfsPointers": 0,
+      "readOnly": true,
+      "manifest": "openexr/immutable-source-manifest.json"
+    },
+    {
+      "project": "Imath",
+      "tag": "v3.1.3",
+      "commit": "6dc0820482aeb24a22f520d7b165a410589648c3",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/Imath/tar.gz/6dc0820482aeb24a22f520d7b165a410589648c3",
+      "snapshot": "F:/JericoEngine/Dependencies/Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+      "archiveBytes": 571142,
+      "archiveSha256": "52AEB73F94911A4E107D0A2870EC98D7EB9D3907D25238B12E496C71A5FCA4A3",
+      "archiveMembers": 346,
+      "files": 319,
+      "payloadBytes": 3338739,
+      "links": 0,
+      "collisions": 0,
+      "lfsPointers": 0,
+      "readOnly": true,
+      "manifest": "Imath/immutable-source-manifest.json"
+    }
+  ],
+  "acquisition": {
+    "headBeforeGet": true,
+    "destinations": "official ASWF codeload; direct200",
+    "credentials": "none",
+    "autoRedirect": false,
+    "awsCloudfrontS3": false,
+    "archiveAuditBeforeExtraction": true,
+    "sourceVersionSubstitution": false
+  },
+  "legal": {
+    "OpenEXR": "BSD-3-Clause",
+    "Imath": "BSD-3-Clause",
+    "DwaChoice": "BSD3 + DreamWorks Additional IP Rights Grant (OpenEXR standard scope); full PATENTS preserved including alternative Apache2 text",
+    "licenses": [
+      {
+        "path": "F:/JericoEngine/Dependencies/openexr-697cc449cc589ed780acda88e79e6145ddcd121f/LICENSE.md",
+        "sha256": "84853C91D4C2E0310741D4773469D98BB93E61029608E0BA0882A3FFFDF330BD"
+      },
+      {
+        "path": "F:/JericoEngine/Dependencies/Imath-6dc0820482aeb24a22f520d7b165a410589648c3/LICENSE.md",
+        "sha256": "C20236D3B39FD20EBA8E3D1FB3B892A5483DF2E7D8D61BF43F165D3FAC22F601"
+      },
+      {
+        "path": "F:/JericoEngine/Dependencies/openexr-697cc449cc589ed780acda88e79e6145ddcd121f/PATENTS",
+        "sha256": "7F5DEE333A82CAB38B3567B85EC52A74487A5B2A8F4097EB8B4071C892C47B12"
+      }
+    ],
+    "fullLibraryContributorNotices": true,
+    "O3DERootLicensesPreserved": true
+  },
+  "offlineClosure": {
+    "cmakeFilesScanned": 61,
+    "receipt": "cmake-closure-audit.json",
+    "upstreamFallbacks": [
+      "OpenEXRSetup zlib ExternalProject if ZLIB target missing",
+      "OpenEXRSetup Imath FetchContent if Imath target missing"
+    ],
+    "closure": "Native Imath built/staged first; post-project OpenEXR include requires exact local ZLIB+Imath targets before upstream fallbacks; FULLY_DISCONNECTED ON",
+    "python": "PYTHON OFF preserves original recipe choice; src/python subtree not configured",
+    "sourcePatches": [],
+    "features": "Threading, all compressors, half lookup, namespaces and ABI suffixes remain upstream defaults",
+    "otherTools": "No Git/acquisition/interpreter execution/global installation in producer",
+    "toolchain": "VS2022 x64 v143",
+    "configs": [
+      "Debug /MDd",
+      "Release /MD"
+    ],
+    "zlib": "existing exact JE1.2.11 Release /MD",
+    "mixedDebugCrtLimit": "Must report actual Debug diagnostics; no general CRT compatibility claim"
+  },
+  "newPackage": {
+    "name": "OpenEXR-3.1.3-je-rev1-windows",
+    "version": "3.1.3",
+    "hash": "PENDING actual Luna producer",
+    "stage": "fresh output/stage/OpenEXR include/lib/exported configs",
+    "originalAliases": [
+      "3rdParty::OpenEXRConfig",
+      "3rdParty::IexConfig",
+      "3rdParty::IlmThreadConfig",
+      "3rdParty::Iex",
+      "3rdParty::IlmThread",
+      "3rdParty::OpenEXRCore",
+      "3rdParty::OpenEXRUtil",
+      "3rdParty::OpenEXR",
+      "3rdParty::Imath",
+      "3rdParty::ImathConfig"
+    ],
+    "nativeNamespacesPreserved": true,
+    "upstreamExportConfigsRetained": true,
+    "systemIncludeAndConfigMappingOriginalUtility": true,
+    "zlibLink": "ZLIB::ZLIB",
+    "imathProvenance": "OpenEXR/JEImathSource.json"
+  },
+  "preparedValidation": {
+    "executed": false,
+    "argvReceipt": "validation-arguments.json",
+    "producerArgvCount": 6,
+    "consumerConfigureArgvCount": 12,
+    "testCases": [
+      "Identity",
+      "Half",
+      "Float",
+      "FillAlpha",
+      "Errors",
+      "NativeFile"
+    ],
+    "configurations": [
+      "Release",
+      "Debug"
+    ],
+    "expectedCtests": 12,
+    "negativeGuardCases": 10,
+    "checks": "Core linked version; Imath half bits/denormal; zlib version; HDR HALF/FLOAT lossless5codecs; missing alpha fill; stream bounds; truncation/magic errors and recovery; real native scanline file",
+    "engineAtomicityClaim": false
+  },
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-freeze-openexr-candidate.json",
+    "sha256": "20FEED8A0C7AEF75930D37D54381C4A93658E2425C7BF169AFED68894DDECEB0",
+    "inputs": 1182,
+    "candidate": [
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake",
+        "bytes": 8137,
+        "sha256": "09911D43A32129B2A9CDE35EADDF2E90B0139FE2DFC9211933D07915A3C8A2E2"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/FindImath.cmake",
+        "bytes": 1724,
+        "sha256": "0837B72EF5853DB21E7543A7CA40BD00B428B7F36B9FD7143921B7685016DD9F"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/FindOpenEXR.cmake",
+        "bytes": 3600,
+        "sha256": "8574ECC7D2A4381CB2152939181C9A1AAFEAFCB76862AEDF0DFD81E94D79A899"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/NOTICE.txt",
+        "bytes": 1635,
+        "sha256": "E089F376477C87AB6D488351D83E8BAA706FD548E4C2C85DE851650F3241CA84"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/o3de_package_utilities.cmake",
+        "bytes": 7812,
+        "sha256": "3AD96820838B920B6491FF7826E339980D4E6C2906C04C4ADE6C5C46D7C383E0"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/OfflineDependencies.cmake",
+        "bytes": 722,
+        "sha256": "11731185025F490E78B96F5211DF830AFA42B52B4BE7CC7B7B3EDC4EDAD01F21"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/README.md",
+        "bytes": 7046,
+        "sha256": "808833D301EC7C4568ACD772DCA76A4EE57A12A0BBDEE44A6E60DADAAA05257E"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/tests/CMakeLists.txt",
+        "bytes": 3349,
+        "sha256": "F5A0045BD8AD43DC2588977E94E03CC7C58025CCFA84D058337EED48CD242A21"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/tests/OpenEXRConsumer.cpp",
+        "bytes": 10006,
+        "sha256": "7B1C0C2908E6E504F7B88C187B401D5AF92408C2D7F9FD2C455E05B1E1D13C91"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/VerifyZlibInput.cmake",
+        "bytes": 1192,
+        "sha256": "E77BBA3D839247C97F802D3394526255B582522FF212A6E0A359789466873B42"
+      }
+    ]
+  },
+  "limitations": [
+    "No native CMake/build/CTest/tool execution by writer",
+    "Engine loader/Editor/AP/cook/runtime unverified",
+    "No historical binary equivalence claim",
+    "Historical library security maintenance debt retained without silent upgrade",
+    "OpenEXR candidate is selected transitively, not asserted as latest root fatal"
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "file": "FindPNG.cmake",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/FindPNG.cmake",
+    "status": 200,
+    "bytes": 3079,
+    "sha256": "C6082D38F3E0A4AE9FC9585BDC5CD93310460DB7557A96528CFC2EC685FDAEC2",
+    "gitBlob": "6da800269393bb39d8c273352a8f18426ecbce35",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "build_config.json",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/build_config.json",
+    "status": 200,
+    "bytes": 5208,
+    "sha256": "28A7256BCD4D258836D810F593D93E70B60B64209ECDBE52A12795FF388D408B",
+    "gitBlob": "64208362ce7d7a74ed70a7ecb18f78e190957c7d",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "readme.txt",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/readme.txt",
+    "status": 200,
+    "bytes": 70,
+    "sha256": "CCA452A0931C21A8CF1F55976FC01CF7EDAE2AC71EB9D40296D01DE7F7A0E91D",
+    "gitBlob": "c5c7af20c2b33eccbe79025aad6e827e682981d0",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  },
+  {
+    "file": "test_png_windows.cmd",
+    "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test_png_windows.cmd",
+    "status": 200,
+    "bytes": 849,
+    "sha256": "78ECB856AB7B85891802515E51AF22B88A8BF9FA789414395EC10550B1F57BEA",
+    "gitBlob": "12ab5b499a6147dd331a37e98fa83173d812f439",
+    "redirectsFollowed": false,
+    "credentials": "none"
+  }
+]

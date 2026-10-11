@@ -1,0 +1,83 @@
+Start testing: Oct 10 23:06 Hora estándar de Montevideo
+----------------------------------------------------------
+1/5 Testing: JE.LocalPackages.PNG.Identity
+1/5 Test: JE.LocalPackages.PNG.Identity
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1/Debug/JE_PngConsumer.exe" "Identity"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1
+"JE.LocalPackages.PNG.Identity" start time: Oct 10 23:06 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PNG Identity PASS
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.PNG.Identity" end time: Oct 10 23:06 Hora estándar de Montevideo
+"JE.LocalPackages.PNG.Identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: JE.LocalPackages.PNG.Roundtrip
+2/5 Test: JE.LocalPackages.PNG.Roundtrip
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1/Debug/JE_PngConsumer.exe" "Roundtrip"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1
+"JE.LocalPackages.PNG.Roundtrip" start time: Oct 10 23:06 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PNG Roundtrip PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.PNG.Roundtrip" end time: Oct 10 23:06 Hora estándar de Montevideo
+"JE.LocalPackages.PNG.Roundtrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: JE.LocalPackages.PNG.Transforms
+3/5 Test: JE.LocalPackages.PNG.Transforms
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1/Debug/JE_PngConsumer.exe" "Transforms"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1
+"JE.LocalPackages.PNG.Transforms" start time: Oct 10 23:06 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PNG Transforms PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.PNG.Transforms" end time: Oct 10 23:06 Hora estándar de Montevideo
+"JE.LocalPackages.PNG.Transforms" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: JE.LocalPackages.PNG.Interlace
+4/5 Test: JE.LocalPackages.PNG.Interlace
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1/Debug/JE_PngConsumer.exe" "Interlace"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1
+"JE.LocalPackages.PNG.Interlace" start time: Oct 10 23:06 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PNG Interlace PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.PNG.Interlace" end time: Oct 10 23:06 Hora estándar de Montevideo
+"JE.LocalPackages.PNG.Interlace" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: JE.LocalPackages.PNG.Errors
+5/5 Test: JE.LocalPackages.PNG.Errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1/Debug/JE_PngConsumer.exe" "Errors"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1
+"JE.LocalPackages.PNG.Errors" start time: Oct 10 23:06 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PNG Errors PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.PNG.Errors" end time: Oct 10 23:06 Hora estándar de Montevideo
+"JE.LocalPackages.PNG.Errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 23:06 Hora estándar de Montevideo

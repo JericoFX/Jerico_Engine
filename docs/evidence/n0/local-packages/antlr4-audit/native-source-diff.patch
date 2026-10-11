@@ -1,0 +1,297 @@
+diff --git a/cmake/Tools/LocalPackages/ANTLR4/README.md b/cmake/Tools/LocalPackages/ANTLR4/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ANTLR4/README.md
+@@ -0,0 +1,73 @@
++# Audited ANTLR4 source override and native AZSL consumer
++
++The selected engine wrapper consumes ANTLR4 commit
++`8e6fd9147b3c9d36b60e2b6656871a55227efb1b`, version `4.13.2`, BSD-3-Clause.
++The original archive SHA256 is
++`c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed`.
++It is distinct from the Git commit. No new binary package or producer is needed.
++
++The audited immutable local source is:
++
++```text
++F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b
++```
++
++The parent adds this exact argument to its approved original Root configure:
++
++```text
++-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b
++```
++
++The upstream archive has no root CMakeLists.txt. The original engine wrapper
++copies 171 headers and compiles its existing 136-file C++ list as static target
++`antlr4` / `3rdParty::antlr4`, with `ANTLR4CPP_STATIC`, exceptions and native
++`Threads::Threads`. It does not enter upstream `runtime/Cpp` CMake. That separate
++upstream build would default to a GoogleTest download and has optional Java demos
++and different CRT defaults. It must not be substituted for the selected wrapper.
++
++ShaderCompiler already contains the ANTLR 4.13.2-generated AZSL lexer/parser.
++`Generate.ps1` is a manual generator that downloads an antlr.org JAR and runs Java;
++it is neither needed nor executed here. No Java, Python or GoogleTest is acquired.
++The BSD license and every source copyright notice remain in the immutable source;
++the original engine wrapper's LICENSE.txt/PackageInfo.json are unchanged.
++
++Source acquisition, safe tar inspection, every official Git blob comparison,
++extraction checksums and the precise original source/header manifest are under
++`build/n0-validation/local-packages/antlr4-audit`. Root and native execution remain
++pending. Once Root generates targets, the parent prefers compilation of original
++`antlr4` and `Azslc` targets to prove integration.
++
++## Separate focused native consumer
++
++This auxiliary harness uses the original runtime filelist/static macro/header
++layout and the existing generated AZSL sources. It checks a shader's declaration
++tree and listener callbacks, token channel/UTF-8 comments, malformed shader
++diagnostic/exception/recovery, Unicode stream code points/seek/roundtrip and invalid
++UTF-8. It checks the actual runtime version, not a substitute interpreter.
++It is not a replacement for original target integration or shader semantic/code
++generation acceptance. No test framework or upstream generator is involved.
++
++Prepared commands for the sole assigned validator, not executed by the writer:
++
++```powershell
++$jeEngine = 'F:/JericoEngine/JericoEngine'
++$jeNativeBuild = "$jeEngine/build/n0-validation/local-packages/antlr4-azsl-native-v1"
++cmake -S "$jeEngine/cmake/Tools/LocalPackages/ANTLR4/tests" -B $jeNativeBuild `
++  -G 'Visual Studio 17 2022' -A x64 -T 'v143,host=x64' `
++  '-DJE_ANTLR4_SOURCE_ROOT=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b' `
++  '-DJE_ANTLR4_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz'
++$jeConfigureExit = $LASTEXITCODE
++if ($jeConfigureExit -ne 0) { throw "ANTLR4 native configure failed: $jeConfigureExit" }
++foreach ($jeConfig in 'Release', 'Debug') {
++  cmake --build $jeNativeBuild --config $jeConfig --target JEANTLR4AZSLConsumer
++  $jeBuildExit = $LASTEXITCODE
++  if ($jeBuildExit -ne 0) { throw "ANTLR4 native build failed: $jeBuildExit" }
++  ctest --test-dir $jeNativeBuild -C $jeConfig --output-on-failure
++  $jeTestExit = $LASTEXITCODE
++  if ($jeTestExit -ne 0) { throw "ANTLR4 native tests failed: $jeTestExit" }
++}
++```
++
++These inputs and refusal guards prepare validation; they do not establish a
++successful engine build, working Editor, rendered shader, complete redistribution
++rights or product acceptance. The parent owns review and acceptance.
+diff --git a/cmake/Tools/LocalPackages/ANTLR4/tests/AZSLConsumer.cpp b/cmake/Tools/LocalPackages/ANTLR4/tests/AZSLConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ANTLR4/tests/AZSLConsumer.cpp
+@@ -0,0 +1,153 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++
++#include "antlr4-runtime.h"
++#include "azslLexer.h"
++#include "azslParser.h"
++#include "azslParserBaseListener.h"
++#include <iostream>
++#include <stdexcept>
++#include <string>
++
++#ifndef ANTLR4CPP_STATIC
++#error The original shader compiler requires the static ANTLR4 runtime interface.
++#endif
++
++namespace JE::LocalPackages
++{
++    void Require(bool condition, const char* message)
++    {
++        if (!condition) { throw std::runtime_error(message); }
++    }
++
++    class ErrorListener final : public antlr4::BaseErrorListener
++    {
++    public:
++        size_t count = 0;
++        size_t line = 0;
++        std::string message;
++        void syntaxError(antlr4::Recognizer*, antlr4::Token*, size_t errorLine,
++            size_t, const std::string& errorMessage, std::exception_ptr) override
++        {
++            ++count;
++            line = errorLine;
++            message = errorMessage;
++            // The original AzslParserEventListener aborts invalid input likewise.
++            throw antlr4::ParseCancellationException(errorMessage);
++        }
++    };
++
++    class ShapeListener final : public azslParserBaseListener
++    {
++    public:
++        size_t structs = 0;
++        size_t variables = 0;
++        size_t functions = 0;
++        void enterStructDefinition(azslParser::StructDefinitionContext*) override { ++structs; }
++        void enterVariableDeclarationStatement(azslParser::VariableDeclarationStatementContext*) override { ++variables; }
++        void enterFunctionDefinition(azslParser::FunctionDefinitionContext*) override { ++functions; }
++    };
++
++    void ParseShader()
++    {
++        const std::string shader =
++            "// UTF-8 comment: \xC3\xB1\n"
++            "struct Fixture { float4 value; };\n"
++            "float gain = 2.0;\n"
++            "float4 Shade(float4 position) { return position * gain; }\n";
++        antlr4::ANTLRInputStream input(shader);
++        azslLexer lexer(&input);
++        ErrorListener errors;
++        lexer.removeErrorListeners();
++        lexer.addErrorListener(&errors);
++        antlr4::CommonTokenStream tokens(&lexer);
++        tokens.fill();
++        Require(lexer.getNumberOfSyntaxErrors() == 0, "AZSL lexical errors");
++        bool gain = false, comment = false;
++        for (antlr4::Token* token : tokens.getTokens())
++        {
++            if (token->getText() == "gain")
++            {
++                gain = true;
++                Require(token->getType() == azslLexer::Identifier, "gain identifier token type");
++            }
++            if (token->getText().find("\xC3\xB1") != std::string::npos)
++            {
++                comment = true;
++                Require(token->getChannel() != antlr4::Token::DEFAULT_CHANNEL, "comment leaked into parser channel");
++            }
++        }
++        Require(gain && comment, "identifier/UTF-8 comment tokens missing");
++        tokens.seek(0);
++        azslParser parser(&tokens);
++        parser.removeErrorListeners();
++        parser.addErrorListener(&errors);
++        azslParser::CompilationUnitContext* tree = parser.compilationUnit();
++        Require(tree && tree->Declarations.size() == 3 && tree->EOF(), "AZSL declarations/EOF");
++        Require(parser.getNumberOfSyntaxErrors() == 0 && errors.count == 0, "AZSL parser errors");
++        ShapeListener listener;
++        antlr4::tree::ParseTreeWalker::DEFAULT.walk(&listener, tree);
++        Require(listener.structs == 1 && listener.functions == 1 && listener.variables == 2,
++            "AZSL parse tree shape/listener callbacks");
++    }
++
++    void RejectShader()
++    {
++        antlr4::ANTLRInputStream input("float4 Broken(float4 position) {\nreturn position + ;\n}\n");
++        azslLexer lexer(&input);
++        antlr4::CommonTokenStream tokens(&lexer);
++        azslParser parser(&tokens);
++        ErrorListener errors;
++        parser.removeErrorListeners();
++        parser.addErrorListener(&errors);
++        bool rejected = false;
++        try { parser.compilationUnit(); }
++        catch (const antlr4::ParseCancellationException& error)
++        {
++            rejected = true;
++            Require(std::string(error.what()).size() > 0, "parser exception diagnostic missing");
++        }
++        Require(rejected && errors.count == 1 && errors.line == 2 && !errors.message.empty(),
++            "malformed AZSL was accepted or lost its line/diagnostic");
++        ParseShader(); // A failed parse must not poison generated shared ATN caches.
++    }
++
++    void UnicodeStream()
++    {
++        const std::string text = "A\xC3\xB1\xF0\x9F\x98\x80";
++        antlr4::ANTLRInputStream input(text);
++        Require(input.size() == 3 && input.LA(1) == 'A', "UTF-8 code point size");
++        input.consume();
++        Require(input.LA(1) == 0xF1, "UTF-8 two-byte code point");
++        const size_t position = input.index();
++        input.consume();
++        Require(input.LA(1) == 0x1F600, "UTF-8 supplementary code point");
++        input.seek(position);
++        Require(input.LA(1) == 0xF1 && input.toString() == text, "seek/UTF-8 roundtrip");
++        bool rejected = false;
++        try { antlr4::ANTLRInputStream invalid(std::string("\xC0\xAF", 2)); }
++        catch (const antlr4::IllegalArgumentException&) { rejected = true; }
++        Require(rejected, "overlong UTF-8 sequence accepted");
++    }
++}
++
++int main(int argc, char** argv)
++{
++    try
++    {
++        JE::LocalPackages::Require(argc == 2, "usage: consumer CASE");
++        JE::LocalPackages::Require(antlr4::RuntimeMetaData::getRuntimeVersion() == "4.13.2", "runtime version pin");
++        const std::string test = argv[1];
++        if (test == "shader") { JE::LocalPackages::ParseShader(); }
++        else if (test == "invalid") { JE::LocalPackages::RejectShader(); }
++        else if (test == "unicode") { JE::LocalPackages::UnicodeStream(); }
++        else { throw std::runtime_error("unknown CASE"); }
++        std::cout << "CASE " << test << " PASS\n";
++        return 0;
++    }
++    catch (const std::exception& error)
++    {
++        std::cerr << "ANTLR4 AZSL consumer: " << error.what() << '\n';
++        return 1;
++    }
++}
+diff --git a/cmake/Tools/LocalPackages/ANTLR4/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/ANTLR4/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/ANTLR4/tests/CMakeLists.txt
+@@ -0,0 +1,56 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++foreach(JE_PATH IN ITEMS JE_ANTLR4_SOURCE_ROOT JE_ANTLR4_SOURCE_ARCHIVE CMAKE_BINARY_DIR)
++    JE_python_require_local_path(${JE_PATH})
++endforeach()
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_BUILD_IN_CHECKOUT)
++if(NOT JE_BUILD_IN_CHECKOUT OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE ANTLR4 consumer build must be beneath this checkout/build")
++endif()
++JE_python_verify_file("${JE_ANTLR4_SOURCE_ARCHIVE}"
++    "c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed" "original ANTLR4 source archive")
++set(antlr4_runtime_source_dir "${JE_ANTLR4_SOURCE_ROOT}/runtime/Cpp/runtime/src")
++if(NOT EXISTS "${antlr4_runtime_source_dir}/antlr4-runtime.h")
++    message(FATAL_ERROR "JE ANTLR4 audited C++ source root is missing")
++endif()
++set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Native consumer configurations" FORCE)
++set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
++project(JELocalANTLR4AZSLConsumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE ANTLR4 consumer requires Windows MSVC x64")
++endif()
++set(THREADS_PREFER_PTHREAD_FLAG TRUE)
++find_package(Threads REQUIRED)
++# Use the exact original runtime filelist, static macro and copied-header layout.
++# This auxiliary build is separate from the original engine target integration.
++include("${JE_ENGINE_ROOT}/Code/3rdParty/antlr4/files.cmake")
++add_library(antlr4 STATIC ${FILES})
++add_library(3rdParty::antlr4 ALIAS antlr4)
++target_compile_features(antlr4 PUBLIC cxx_std_17)
++target_compile_definitions(antlr4 PUBLIC ANTLR4CPP_STATIC)
++target_compile_options(antlr4 PRIVATE /w /EHsc)
++target_link_libraries(antlr4 PUBLIC Threads::Threads)
++set(JE_INCLUDE "${CMAKE_CURRENT_BINARY_DIR}/Include")
++file(COPY "${antlr4_runtime_source_dir}/" DESTINATION "${JE_INCLUDE}" FILES_MATCHING PATTERN "*.h")
++target_include_directories(antlr4 SYSTEM PRIVATE "${antlr4_runtime_source_dir}" PUBLIC "${JE_INCLUDE}")
++set(JE_GRAMMAR "${JE_ENGINE_ROOT}/Code/Tools/ShaderCompiler/Source/Grammar")
++add_executable(JEANTLR4AZSLConsumer AZSLConsumer.cpp
++    "${JE_GRAMMAR}/azslLexer.cpp" "${JE_GRAMMAR}/azslParser.cpp"
++    "${JE_GRAMMAR}/azslParserListener.cpp" "${JE_GRAMMAR}/azslParserBaseListener.cpp")
++target_compile_features(JEANTLR4AZSLConsumer PRIVATE cxx_std_17)
++target_compile_options(JEANTLR4AZSLConsumer PRIVATE /W4 /WX /EHsc)
++set_source_files_properties("${JE_GRAMMAR}/azslLexer.cpp" "${JE_GRAMMAR}/azslParser.cpp"
++    "${JE_GRAMMAR}/azslParserListener.cpp" "${JE_GRAMMAR}/azslParserBaseListener.cpp"
++    PROPERTIES COMPILE_OPTIONS /W0)
++target_include_directories(JEANTLR4AZSLConsumer SYSTEM PRIVATE "${JE_GRAMMAR}")
++target_link_libraries(JEANTLR4AZSLConsumer PRIVATE 3rdParty::antlr4)
++enable_testing()
++foreach(JE_CASE IN ITEMS shader invalid unicode)
++    add_test(NAME JE.LocalPackages.ANTLR4.${JE_CASE} COMMAND JEANTLR4AZSLConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.ANTLR4.${JE_CASE} PROPERTIES TIMEOUT 30)
++endforeach()

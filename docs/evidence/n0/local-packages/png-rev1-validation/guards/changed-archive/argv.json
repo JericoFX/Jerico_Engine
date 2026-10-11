@@ -1,0 +1,11 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "arguments": [
+    "-DJE_PNG_SOURCE_ARCHIVE:FILEPATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\changed-archive-input\\png-tampered.tar.gz",
+    "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+    "-DJE_PNG_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\changed-archive\\output",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\changed-archive"
+}

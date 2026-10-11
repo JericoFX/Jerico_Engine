@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/packages/png-1.6.37-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\png-1.6.37-je-rev1-windows.tar.xz",
+    "bytes": 421588,
+    "sha256": "7D13E9A70172F713F66DAF870A7359191096308EBE501C17121BFB24DBEFE9B4"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/packages/png-1.6.37-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\png-1.6.37-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 101,
+    "sha256": "15FFD9EB8A44D8909A3933688825AE50875A3D937895668A53A978FCD7056C64"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/packages/png-1.6.37-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\png-1.6.37-je-rev1-windows.tar.xz",
+    "bytes": 421588,
+    "sha256": "7D13E9A70172F713F66DAF870A7359191096308EBE501C17121BFB24DBEFE9B4"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/packages/png-1.6.37-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\png-1.6.37-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 101,
+    "sha256": "15FFD9EB8A44D8909A3933688825AE50875A3D937895668A53A978FCD7056C64"
+  }
+]

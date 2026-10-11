@@ -1,0 +1,12 @@
+{
+  "name": "producer-changed-openexr",
+  "argvCount": 6,
+  "nativeExit": 1,
+  "elapsedSeconds": 0.117,
+  "expectedText": "SHA256 mismatch",
+  "diagnosticMatched": true,
+  "checkedPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\guards\\output-changed-openexr",
+  "mustBeAbsent": true,
+  "pathExists": false,
+  "pathCondition": true
+}

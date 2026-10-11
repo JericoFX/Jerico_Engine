@@ -1,0 +1,34 @@
+[
+  {
+    "before": "'build/n0-validation/local-packages/root-jsoncpp-final'",
+    "after": "'build/n0-validation/local-packages/root-cli11-final'"
+  },
+  {
+    "before": "'build/n0-validation/local-packages/root-jsoncpp-final/root-jsoncpp-assignment.json'",
+    "after": "'build/n0-validation/local-packages/root-cli11-final/root-cli11-assignment.json'"
+  },
+  {
+    "before": "'build/n0-validation/local-packages/root-jsoncpp-final/source-freeze-root-jsoncpp.json'",
+    "after": "'build/n0-validation/local-packages/root-cli11-final/source-freeze-root-cli11.json'"
+  },
+  {
+    "before": "544A7A75222108044CCBE42737569BC7173EAFE0444B153C1D02D63D099A51C2",
+    "after": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53"
+  },
+  {
+    "before": "2C8496737E9D90609E47761EFDC8C7A6AF4D30BEE7BBC7BA28CDF857120526B8",
+    "after": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292"
+  },
+  {
+    "before": "$arguments.Count -ne 47 -or $freeze.Count -ne 2203",
+    "after": "$arguments.Count -ne 48 -or $freeze.Count -ne 2532"
+  },
+  {
+    "before": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2') { throw 'exact local JSONCpp override missing' }",
+    "after": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2') { throw 'exact local JSONCpp override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2') { throw 'exact local CLI11 override missing' }"
+  },
+  {
+    "before": "    @{name='jsoncpp-tree-before';path='F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2'},",
+    "after": "    @{name='jsoncpp-tree-before';path='F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2'},\n    @{name='cli11-tree-before';path='F:\\JericoEngine\\Dependencies\\cli11-2.6.2'},"
+  }
+]

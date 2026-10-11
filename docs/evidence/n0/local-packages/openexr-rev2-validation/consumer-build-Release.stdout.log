@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/tests/CMakeLists.txt
+  OpenEXRConsumer.cpp
+  JE_OpenEXRConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-consumer-rev2\Release\JE_OpenEXRConsumer.exe

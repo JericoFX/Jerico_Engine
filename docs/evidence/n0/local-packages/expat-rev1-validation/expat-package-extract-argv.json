@@ -1,0 +1,10 @@
+{
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\extracted",
+  "arguments": [
+    "-E",
+    "tar",
+    "xJf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\expat-local-v1\\packages\\expat-2.4.2-je-rev1-windows.tar.xz"
+  ],
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

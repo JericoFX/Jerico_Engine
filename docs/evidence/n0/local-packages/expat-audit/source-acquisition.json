@@ -1,0 +1,13 @@
+{
+  "url": "https://codeload.github.com/libexpat/libexpat/tar.gz/e26a263aa9182d1e4552cd615857f0f61df3ba42",
+  "archive": "F:\\JericoEngine\\Dependencies\\archives\\expat-e26a263aa9182d1e4552cd615857f0f61df3ba42.tar.gz",
+  "sourceCommit": "e26a263aa9182d1e4552cd615857f0f61df3ba42",
+  "tag": "R_2_4_2",
+  "headStatus": 200,
+  "getStatus": 200,
+  "redirects": 0,
+  "authorization": false,
+  "bytes": 8309600,
+  "sha256": "a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057",
+  "expectedLegacyPackageHashIsNotSourceHash": true
+}

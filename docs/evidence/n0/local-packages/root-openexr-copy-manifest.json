@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2\\packages\\OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "bytes": 6880112,
+    "sha256": "CD06701C7710FCAF68B29D99A1A4E110EA4C274B0656E1CC2182A1A7003F7FA0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2\\packages\\OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 104,
+    "sha256": "82E3878178903A246CE8D2D7B60122DDDB8D35F150C0008873980836EB33EFDA"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2\\packages\\OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "bytes": 6880112,
+    "sha256": "CD06701C7710FCAF68B29D99A1A4E110EA4C274B0656E1CC2182A1A7003F7FA0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2\\packages\\OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 104,
+    "sha256": "82E3878178903A246CE8D2D7B60122DDDB8D35F150C0008873980836EB33EFDA"
+  }
+]

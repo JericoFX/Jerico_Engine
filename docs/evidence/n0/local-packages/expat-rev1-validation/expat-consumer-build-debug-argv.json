@@ -1,0 +1,10 @@
+{
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation",
+  "arguments": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\consumer",
+    "--config",
+    "Debug"
+  ],
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

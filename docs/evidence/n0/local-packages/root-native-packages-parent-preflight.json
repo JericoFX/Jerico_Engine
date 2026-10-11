@@ -1,0 +1,31 @@
+{
+  "sourceCount": 444,
+  "argvCount": 45,
+  "cacheCount": 30,
+  "oldRootDeltas": [
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "beforeSHA256": "c3ba4b0f24d4c11a3e479bab869ca90d390e350f01dff2e7a78f489b610685b2",
+      "afterSHA256": "d6c7fab5bc7f22e5fb25d6856bafb1e2ca074f1fe859c94bd91338e687825b35"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/README.md",
+      "beforeSHA256": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61",
+      "afterSHA256": "98dc785b63af86d3ac6da454680c054dd554a1e274298f6b2284143e75b07ec6"
+    }
+  ],
+  "currentMcppDocumentationDelta": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/README.md",
+      "beforeSHA256": "78f9e1c8f62d496225bd9f2b3aaf3a63ff2b78a95427d5c980a325edc1843d61",
+      "afterSHA256": "98dc785b63af86d3ac6da454680c054dd554a1e274298f6b2284143e75b07ec6"
+    }
+  ],
+  "assignmentSHA256": "DF6EC8FA0BE69BD19B0D76B378FF429D090CFDA110788525E3C6CAE85068D36C",
+  "freezeSHA256": "CAD89C5B29770A34F165EC51D1D9A5DB2577EB867A0C636BBB57314976417DE6",
+  "mcppFreezeSHA256": "99A6E519ABB8E7E39C7DE401DBAD1E86D57C07A55A83C656646ABB8177A45361",
+  "driverPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/original-engine-native-packages-configure/run-root-configure-native-packages.ps1",
+  "driverSHA256": "61BFFEB337B4EE19FCDB37A94B0BFECE760692EAA86E6C50BF853605D6588FC8",
+  "driverParserErrors": 0,
+  "nativeInvocation": "NOT_RUN; assigned to Luna after parent diff review"
+}

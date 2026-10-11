@@ -1,0 +1,15 @@
+{
+  "originalURL": "https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.6.2.tar.gz",
+  "effectiveURL": "https://codeload.github.com/open-source-parsers/jsoncpp/tar.gz/refs/tags/1.6.2",
+  "headStatus": 200,
+  "getStatus": 200,
+  "autoRedirect": false,
+  "authentication": false,
+  "bytes": 198824,
+  "sha256": "c40e5a2583df633b904525305bda40b622d9971fee1ece7ce48ca723a4907d36",
+  "matchesOriginalConsumer": true,
+  "commit": "24682e37bf1425455b45e7db69dbdbcd30aec7dd",
+  "tag": "1.6.2",
+  "license": "Public Domain OR MIT",
+  "archive": "F:/JericoEngine/Dependencies/archives/jsoncpp-1.6.2.tar.gz"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.6.2.tar.gz",
+    "status": 302,
+    "contentLength": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/open-source-parsers/jsoncpp/tar.gz/refs/tags/1.6.2",
+    "authentication": false,
+    "autoRedirect": false
+  },
+  {
+    "url": "https://codeload.github.com/open-source-parsers/jsoncpp/tar.gz/refs/tags/1.6.2",
+    "status": 200,
+    "contentLength": null,
+    "etag": "\"edfae1b3f414602ee3f693abd585dc0f340ea7cbf67a32b3b793cefb2408e05c\"",
+    "location": "",
+    "authentication": false,
+    "autoRedirect": false
+  }
+]

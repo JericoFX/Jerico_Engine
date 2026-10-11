@@ -1,0 +1,24 @@
+[
+  {
+    "repository": "JericoFX/JericoEngine2",
+    "commit": "304d9d2e13704e4967e82a8d5a13a5a506be01d4",
+    "tree": "300d83e5fe4082b399fa16063916bf5705add2a2",
+    "sourcePath": "docs/JERICOEDITOR_MASTER.md",
+    "gitBlobSha1": "e35f62b5d56bc89ffe30dd6fd4c99df75a53cd43",
+    "bytes": 9992,
+    "sha256": "049F72E149C1E5C95B17558E54D267ADC812BE389DA168E950FA0BC93CF2E527",
+    "localReadonlyCopy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\donor-JERICOEDITOR_MASTER.md",
+    "method": "gh API read exact blob; no checkout, auth output or raster download"
+  },
+  {
+    "repository": "JericoFX/JericoEngine2",
+    "commit": "304d9d2e13704e4967e82a8d5a13a5a506be01d4",
+    "tree": "300d83e5fe4082b399fa16063916bf5705add2a2",
+    "sourcePath": "docs/JERICOEDITOR_VISUAL_DESIGN.md",
+    "gitBlobSha1": "b6a125dfa4c7f424554eb5ef48252d7d9e609836",
+    "bytes": 7336,
+    "sha256": "E02D6F7520F5BA664E750B07FFC84F9D65666CB5D0EE5C7CB97BE67483D21EA7",
+    "localReadonlyCopy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\donor-JERICOEDITOR_VISUAL_DESIGN.md",
+    "method": "gh API read exact blob; no checkout, auth output or raster download"
+  }
+]

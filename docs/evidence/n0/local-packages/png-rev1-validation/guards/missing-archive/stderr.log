@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: audited v1.6.37 commit archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1-validation/guards/missing-archive-input/not-present.tar.gz
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake:29 (JE_python_verify_file)
+
+

@@ -1,0 +1,12 @@
+{
+  "executable": "C:/Program Files/CMake/bin/ctest.exe",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation",
+  "arguments": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+    "-C",
+    "Release",
+    "--output-on-failure",
+    "--verbose"
+  ]
+}

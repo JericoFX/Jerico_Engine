@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:9 (message):
+  JE local Python: JE_EXPAT_SOURCE_ARCHIVE must not be a URI
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake:11 (JE_python_require_local_path)
+
+

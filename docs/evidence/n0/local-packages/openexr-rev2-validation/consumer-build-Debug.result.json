@@ -1,0 +1,17 @@
+{
+  "name": "consumer-build-Debug",
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argvCount": 6,
+  "argv": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+    "--config",
+    "Debug",
+    "--target",
+    "JE_OpenEXRConsumer"
+  ],
+  "nativeExit": 0,
+  "elapsedSeconds": 2.894,
+  "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\consumer-build-Debug.stdout.log",
+  "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\consumer-build-Debug.stderr.log"
+}

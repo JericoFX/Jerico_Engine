@@ -1,0 +1,4 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake:16 (message):
+  JE local OpenEXR: output must be beneath this checkout/build
+
+

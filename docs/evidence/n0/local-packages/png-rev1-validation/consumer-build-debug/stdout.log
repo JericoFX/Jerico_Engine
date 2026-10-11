@@ -1,0 +1,7 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests/CMakeLists.txt
+  PngConsumer.cpp
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\png-consumer-rev1\JE_PngConsumer.vcxproj]
+  JE_PngConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\png-consumer-rev1\Debug\JE_PngConsumer.exe

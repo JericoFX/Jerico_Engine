@@ -1,0 +1,24 @@
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-rev2-validation\extracted\OpenEXR-3.1.3-je-rev1-windows"
+
+
+CMake Error at CMakeLists.txt:4 (find_package):
+  No "FindOpenEXR.cmake" found in CMAKE_MODULE_PATH.
+
+
+CMake Warning (dev) at CMakeLists.txt:4 (find_package):
+  FindOpenEXR.cmake must either be part of this project itself, in this case
+  adjust CMAKE_MODULE_PATH so that it points to the correct location inside
+  its source tree.
+
+  Or it must be installed by a package which has already been found via
+  find_package().  In this case make sure that package has indeed been found
+  and adjust CMAKE_MODULE_PATH to contain the location where that package has
+  installed FindOpenEXR.cmake.  This must be a location provided by that
+  package.  This error in general means that the buildsystem of this project
+  is relying on a Find-module without ensuring that it is actually available.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+

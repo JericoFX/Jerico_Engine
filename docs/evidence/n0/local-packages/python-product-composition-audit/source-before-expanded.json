@@ -1,0 +1,32 @@
+[
+  {
+    "bytes": 3930,
+    "path": "engine.json",
+    "sha256": "E1B8302687385076CDA9F20660A4958DBB919AF3C3A1630B8B796A6127AE824D"
+  },
+  {
+    "bytes": 10012,
+    "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg",
+    "sha256": "A6687C0813DBE83A3387EEE98C6CF927B98CC1CE30AAF43DD78EDB651D47BDE7"
+  },
+  {
+    "bytes": 9602,
+    "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg",
+    "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+  },
+  {
+    "bytes": 9602,
+    "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg",
+    "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+  },
+  {
+    "bytes": 9602,
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg",
+    "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+  },
+  {
+    "path": "Gems/AtomLyIntegration/gem.json",
+    "sha256": "5F4C117DBA1FAEBD773570A3233C766E572C7FFEEF23D4165E52F8B4BF875FA3",
+    "bytes": 1465
+  }
+]

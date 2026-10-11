@@ -1,0 +1,177 @@
+[
+  {
+    "file": "CMakeLists.txt",
+    "bytes": 25487,
+    "sha256": "93666CE64AEB2E02542C0F912AF818D3C5308030548F8023DAAC2BDD5FDF439E",
+    "downloadCalls": 0,
+    "executeProcessCalls": 1
+  },
+  {
+    "file": "build/CMakeLists.txt",
+    "bytes": 1258,
+    "sha256": "899E9F6BD5DABFA812B4B5AA8F7BBAE49A3668132D149D381B17D613C0613609",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/CMakeLists.txt",
+    "bytes": 1475,
+    "sha256": "0315BA681C4CEDB5B00BF4DEE10BF687DF2725ABE6C9F704CE4FDFD3272D297D",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/addtiffo/CMakeLists.txt",
+    "bytes": 1781,
+    "sha256": "991EA068AAFA68104388487C2E7494777A85D86A71C3D068FE08EB372DAB8840",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/dbs/CMakeLists.txt",
+    "bytes": 2140,
+    "sha256": "6D40C70E064A15CDFC779C1C8D9D954BE1B3C66C671C6EBBE7D2149AD4CFCD18",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/dbs/xtiff/CMakeLists.txt",
+    "bytes": 1300,
+    "sha256": "D810AD13341A56162915645904BE0A3F98677F1743B2E641B75F2C8A8D14EEC5",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/iptcutil/CMakeLists.txt",
+    "bytes": 1513,
+    "sha256": "DC147C8CF37EED0A0F03A82C9855BB93EBAAC9E86C28F1DF713FDC64ADAAD740",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/mfs/CMakeLists.txt",
+    "bytes": 1274,
+    "sha256": "399675EFE1DC5FC6F27A6D0231C86F6BC24A0CC136F2AC00858FCF4E4B53A6E5",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/pds/CMakeLists.txt",
+    "bytes": 1336,
+    "sha256": "148AD38A85ED073909669A62D1ED4366B1628AD8069983E5299F5AD6E0B80587",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/ras/CMakeLists.txt",
+    "bytes": 1285,
+    "sha256": "07780E754643F8DC5FDD19DCE5090C83636881A6C8E19578781DED04DF7B74A8",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/stream/CMakeLists.txt",
+    "bytes": 1293,
+    "sha256": "EDB5AF13D11957ABECB0A5BC68B2F6492807B2A07A1D66AE862D0CF2C288C1C2",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/tags/CMakeLists.txt",
+    "bytes": 1324,
+    "sha256": "4E841391206271FCB13752FE1114D52132407E94CEA179B5AC68C5AC6556CF96",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "contrib/win_dib/CMakeLists.txt",
+    "bytes": 1329,
+    "sha256": "3C7801BA92E3FD5135975CBFDD5F7DDB815E73C71DEF75A1D8126703554A3217",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "html/CMakeLists.txt",
+    "bytes": 2253,
+    "sha256": "50BB88DDC1611AD4D49A5A08CD7DF4DF8C96E1418F7E1B572E437BF483F4ABB7",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "html/images/CMakeLists.txt",
+    "bytes": 1547,
+    "sha256": "B66859278B78432658D3C03DDFE843B94D6E05DF72575BE14E8329127B11C9D3",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "html/man/CMakeLists.txt",
+    "bytes": 3460,
+    "sha256": "7B97B62AD4D27B233BA0C136725A28A789374F9CA3898E5E72EE7E8F3C325265",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "html/man/HtmlDoc.cmake",
+    "bytes": 2147,
+    "sha256": "9C2F08ADB1F4D7C7E96FC5B1DE86FC185FCA04BE603B511B34D82EC1A6ED9621",
+    "downloadCalls": 0,
+    "executeProcessCalls": 1
+  },
+  {
+    "file": "libtiff/CMakeLists.txt",
+    "bytes": 5013,
+    "sha256": "9EB1D7097135EC55E00F286C64BD6C1D5A94DD8027539A06C69F50B0CD56B541",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "man/CMakeLists.txt",
+    "bytes": 2717,
+    "sha256": "3CE6D2B59138CB0F47C087FC319FEBF73EC7285E7DE4CC647F8962A44D6F22DE",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "port/CMakeLists.txt",
+    "bytes": 2250,
+    "sha256": "CBEE8DDA2EB3E3B7481B439E4180F3D7CB6E4F596CCD50493C082565A77A8C6B",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "test/CMakeLists.txt",
+    "bytes": 16178,
+    "sha256": "74B7948B39687F7CAB2651790DDDAC36D4B9FB6EDAB7A6B8AB9D22D6A10ECF76",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "test/TiffSplitTest.cmake",
+    "bytes": 1599,
+    "sha256": "43F4141551E5B3F9A3CC557E278C9F900BBEE95B66EDE147AE38D88C104A6D61",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "test/TiffTest.cmake",
+    "bytes": 2348,
+    "sha256": "9A2683B86770E4D3B9B9CEA8DCD2A8A61F5DCCBD51950448D002AC9758FA97A8",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  },
+  {
+    "file": "test/TiffTestCommon.cmake",
+    "bytes": 4354,
+    "sha256": "1D5D14A92490B72803A726411D2E3B94BB23F691B1D298BA6CAA76644458F333",
+    "downloadCalls": 0,
+    "executeProcessCalls": 4
+  },
+  {
+    "file": "tools/CMakeLists.txt",
+    "bytes": 4703,
+    "sha256": "339F1BD536F37807CE7847A2993692927470B27B5163E0E4116595665786C061",
+    "downloadCalls": 0,
+    "executeProcessCalls": 0
+  }
+]

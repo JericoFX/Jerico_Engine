@@ -1,0 +1,150 @@
+{
+  "packageArchive": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\d3dx12-local-v1\\packages\\d3dx12-headers-je-rev1-windows.tar.xz",
+    "bytes": 16652,
+    "sha256": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73"
+  },
+  "packageMembers": [
+    {
+      "path": "Findd3dx12.cmake",
+      "expected": "de91621b8ab603d06749a32c55528502e6e3f792c7413077feec37d916b7942b",
+      "actual": "de91621b8ab603d06749a32c55528502e6e3f792c7413077feec37d916b7942b",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "expected": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "actual": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "expected": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "actual": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "expected": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "actual": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "expected": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "actual": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "LICENSES/O3DE/OriginalFindd3dx12.cmake",
+      "expected": "a8c0cdb1770c4470570c601fb1f817f79a23f0dafecebe6b4fae946e37580ad0",
+      "actual": "a8c0cdb1770c4470570c601fb1f817f79a23f0dafecebe6b4fae946e37580ad0",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "LICENSES/O3DE/OriginalPackageInfo.json",
+      "expected": "cdaf233596a2423c47a009a7fb53de31252b9b4b39163532a2a2e333132dc24d",
+      "actual": "cdaf233596a2423c47a009a7fb53de31252b9b4b39163532a2a2e333132dc24d",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "NOTICE.txt",
+      "expected": "0289735ddc9e5fa5df182a3bd2e06c3cd8f8a97ec178ef5e74cc6071fc2d26c2",
+      "actual": "0289735ddc9e5fa5df182a3bd2e06c3cd8f8a97ec178ef5e74cc6071fc2d26c2",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "PackageInfo.json",
+      "expected": "98f9cf5639aa733474ee6ba1fa9dfc4dbd9874fd828250836dd70d825e52c779",
+      "actual": "98f9cf5639aa733474ee6ba1fa9dfc4dbd9874fd828250836dd70d825e52c779",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "README.md",
+      "expected": "4cc713ad9ede1e8aa10d4c2dcbabc6767c91dafd68fb4e239ef8e210e6d5e281",
+      "actual": "4cc713ad9ede1e8aa10d4c2dcbabc6767c91dafd68fb4e239ef8e210e6d5e281",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "d3dx12/JERecipe.json",
+      "expected": "2294a3ab10ff9f3012a1c4a6524e0387d0af5e8bd57a7368ea6412dc57eb36a6",
+      "actual": "2294a3ab10ff9f3012a1c4a6524e0387d0af5e8bd57a7368ea6412dc57eb36a6",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "d3dx12/include/d3dx12.h",
+      "expected": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273",
+      "actual": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273",
+      "match": true,
+      "isReparsePoint": false
+    },
+    {
+      "path": "d3dx12/license.txt",
+      "expected": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+      "actual": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+      "match": true,
+      "isReparsePoint": false
+    }
+  ],
+  "packageFileCount": 13,
+  "allPackageHashesMatch": true,
+  "sourceHeaderSha256": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273",
+  "packageHeaderSha256": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273",
+  "headerByteIdenticalBySha": true,
+  "sourceLicenseSha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+  "packageLicenseSha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d",
+  "licenseByteIdenticalBySha": true,
+  "metadata": {
+    "license": "MIT",
+    "name": "d3dx12-headers-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+      "sha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+      "url": "https://codeload.github.com/o3de/3p-package-source/tar.gz/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18"
+    },
+    "version": "headers-je-rev1"
+  },
+  "vcxprojSha256": "99f8be6cdd0f4fe9be3bb128cbb8ef3e66db062aaf1ffb68bc4ee2c06bd8b9fe",
+  "vcxprojProperties": [
+    {
+      "condition": "'$(Configuration)|$(Platform)'=='Debug|x64'",
+      "runtimeLibrary": "MultiThreadedDLL",
+      "warningLevel": "Level4",
+      "treatWarningAsError": "true",
+      "additionalOptions": "%(AdditionalOptions) /external:I \"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/extracted/d3dx12-headers-je-rev1-windows/d3dx12/include\"",
+      "includes": null
+    },
+    {
+      "condition": "'$(Configuration)|$(Platform)'=='Release|x64'",
+      "runtimeLibrary": "MultiThreadedDLL",
+      "warningLevel": "Level4",
+      "treatWarningAsError": "true",
+      "additionalOptions": "%(AdditionalOptions) /external:I \"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/extracted/d3dx12-headers-je-rev1-windows/d3dx12/include\"",
+      "includes": null
+    }
+  ],
+  "executables": [
+    {
+      "configuration": "Release",
+      "bytes": 18432,
+      "sha256": "b55befe53b0e0b70694ea5779a264d3cfcef71d99e7f3e6ea9a04ce0f999482c"
+    },
+    {
+      "configuration": "Debug",
+      "bytes": 78848,
+      "sha256": "2282a337b0dd577a43c978f2f8849b6ef5c34313122a30f382afa11f74a71615"
+    }
+  ]
+}

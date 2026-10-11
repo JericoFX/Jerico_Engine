@@ -1,0 +1,4593 @@
+[
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\LICENSE.txt",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\antlr4-common.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\antlr4-runtime.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRErrorListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRErrorListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRErrorStrategy.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRErrorStrategy.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRFileStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRFileStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRInputStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ANTLRInputStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ActionTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ActionTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\AmbiguityInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\AmbiguityInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ArrayPredictionContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ArrayPredictionContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATN.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATN.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNConfig.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNConfig.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNConfigSet.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNConfigSet.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNDeserializationOptions.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNDeserializationOptions.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNDeserializer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNDeserializer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNSimulator.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNSimulator.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNState.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNStateType.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNStateType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ATNType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\AtomTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\AtomTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\BasicBlockStartState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\BasicState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\BlockEndState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\BlockStartState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ContextSensitivityInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ContextSensitivityInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\DecisionEventInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\DecisionEventInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\DecisionInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\DecisionInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\DecisionState.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\DecisionState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\EpsilonTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\EpsilonTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ErrorInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ErrorInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\HashUtils.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerActionExecutor.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerActionExecutor.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerActionType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerATNConfig.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerATNConfig.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerATNSimulator.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerATNSimulator.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerChannelAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerChannelAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerCustomAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerCustomAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerIndexedCustomAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerIndexedCustomAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerModeAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerModeAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerMoreAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerMoreAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerPopModeAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerPopModeAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerPushModeAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerPushModeAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerSkipAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerSkipAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerTypeAction.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LexerTypeAction.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LL1Analyzer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LL1Analyzer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LookaheadEventInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LookaheadEventInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\LoopEndState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\NotSetTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\NotSetTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\OrderedATNConfigSet.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\OrderedATNConfigSet.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ParseInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ParseInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ParserATNSimulator.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ParserATNSimulator.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ParserATNSimulatorOptions.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PlusBlockStartState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PlusLoopbackState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PrecedencePredicateTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PrecedencePredicateTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredicateEvalInfo.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredicateEvalInfo.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredicateTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredicateTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContextCache.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContextCache.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContextMergeCache.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContextMergeCache.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContextMergeCacheOptions.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionContextType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionMode.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\PredictionMode.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ProfilingATNSimulator.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\ProfilingATNSimulator.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\RangeTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\RangeTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\RuleStartState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\RuleStopState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\RuleTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\RuleTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SemanticContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SemanticContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SemanticContextType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SerializedATNView.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SetTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SetTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SingletonPredictionContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\SingletonPredictionContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\StarBlockStartState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\StarLoopbackState.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\StarLoopbackState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\StarLoopEntryState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\TokensStartState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\Transition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\Transition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\TransitionType.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\TransitionType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\WildcardTransition.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\atn\\WildcardTransition.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\BailErrorStrategy.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\BailErrorStrategy.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\BaseErrorListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\BaseErrorListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\BufferedTokenStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\BufferedTokenStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CharStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CharStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CommonToken.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CommonToken.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CommonTokenFactory.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CommonTokenFactory.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CommonTokenStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\CommonTokenStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ConsoleErrorListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ConsoleErrorListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\DefaultErrorStrategy.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\DefaultErrorStrategy.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\DFA.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\DFA.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\DFASerializer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\DFASerializer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\DFAState.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\DFAState.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\LexerDFASerializer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\dfa\\LexerDFASerializer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\DiagnosticErrorListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\DiagnosticErrorListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Exceptions.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Exceptions.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\FailedPredicateException.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\FailedPredicateException.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\FlatHashMap.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\FlatHashSet.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\InputMismatchException.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\InputMismatchException.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\internal\\Synchronization.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\internal\\Synchronization.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\InterpreterRuleContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\InterpreterRuleContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\IntStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\IntStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Lexer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Lexer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\LexerInterpreter.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\LexerInterpreter.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\LexerNoViableAltException.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\LexerNoViableAltException.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ListTokenSource.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ListTokenSource.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\InterpreterDataReader.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\InterpreterDataReader.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\Interval.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\Interval.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\IntervalSet.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\IntervalSet.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\MurmurHash.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\MurmurHash.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\Predicate.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\misc\\Predicate.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\NoViableAltException.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\NoViableAltException.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Parser.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Parser.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ParserInterpreter.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ParserInterpreter.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ParserRuleContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ParserRuleContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ProxyErrorListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\ProxyErrorListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RecognitionException.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RecognitionException.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Recognizer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Recognizer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RuleContext.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RuleContext.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RuleContextWithAltNum.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RuleContextWithAltNum.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RuntimeMetaData.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\RuntimeMetaData.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Any.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Any.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Arrays.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Arrays.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\BitSet.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Casts.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\CPPUtils.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\CPPUtils.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Declarations.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\StringUtils.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\StringUtils.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Unicode.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Utf8.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\support\\Utf8.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Token.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Token.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenFactory.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenSource.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenSource.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenStreamRewriter.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\TokenStreamRewriter.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\AbstractParseTreeVisitor.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ErrorNode.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ErrorNodeImpl.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ErrorNodeImpl.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\IterativeParseTreeWalker.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\IterativeParseTreeWalker.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTree.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTree.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeProperty.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeType.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeVisitor.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeVisitor.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeWalker.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\ParseTreeWalker.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\Chunk.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\Chunk.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\ParseTreeMatch.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\ParseTreeMatch.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\ParseTreePattern.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\ParseTreePattern.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\ParseTreePatternMatcher.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\ParseTreePatternMatcher.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\RuleTagToken.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\RuleTagToken.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\TagChunk.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\TagChunk.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\TextChunk.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\TextChunk.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\TokenTagToken.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\pattern\\TokenTagToken.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\TerminalNode.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\TerminalNodeImpl.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\TerminalNodeImpl.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\Trees.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\Trees.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPath.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPath.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathLexer.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathLexer.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathLexerErrorListener.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathLexerErrorListener.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathRuleAnywhereElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathRuleAnywhereElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathRuleElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathRuleElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathTokenAnywhereElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathTokenAnywhereElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathTokenElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathTokenElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathWildcardAnywhereElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathWildcardAnywhereElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathWildcardElement.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\tree\\xpath\\XPathWildcardElement.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\UnbufferedCharStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\UnbufferedCharStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\UnbufferedTokenStream.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\UnbufferedTokenStream.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Version.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Vocabulary.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\Vocabulary.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\WritableToken.cpp",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\runtime\\src\\WritableToken.h",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b\\runtime\\Cpp\\VERSION",
+    "origins": [
+      "antlr-consumed309"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\Dependencies\\archives\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\AssetImporter\\group_icon.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\AssetImporter\\mesh_on.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\Browse_on.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\error_icon.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\remove.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Editor\\Icons\\PropertyEditor\\reset_icon.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\console.font",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\default-ui.font",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\default.font",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\hud.font",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\Vera.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Assets\\Engine\\Fonts\\VeraMono.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\Gem\\PythonTests\\EditorPythonTestTools\\setup.py",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\antlr4-audit\\audit-summary.json",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\antlr4-audit\\root-source-manifest.json",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\antlr4-audit\\source-freeze-root10.json",
+    "origins": [
+      "antlr-root10-receipt"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\antlr4-audit\\source-tar-audit.json",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\FindGoogleBenchmark.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\Python_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdPartyPackages.cmake",
+    "origins": [
+      "root444",
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\CalculateEnginePathId.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Gems.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\LYPython.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\LySet.cmake",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\LYTestWrappers.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Platform\\Windows\\PAL_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Projects.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\BuildD3dx12Package.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\Findd3dx12.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\d3dx12\\tests\\D3dx12Consumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\BuildExpatPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\expat_2.4.2.patch",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\Findexpat.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Expat\\tests\\ExpatConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\JECreateLocalPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\ApplyLuaPatch.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\BuildLuaPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\FindLua.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\LICENSE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\lua_5.4.4_o3de.patch",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Lua\\tests\\LuaConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\BuildLz4Package.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\Findlz4.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\LZ4\\tests\\Lz4Consumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\ApplyMcppPatch.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\BuildMcppPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\Findmcpp.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\mcpp_2.7.2_az.patch",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\McppPatchManifest.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\tests\\McppConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\mcpp\\visualc.mak.original",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\BuildOpenSSLPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\FindOpenSSL.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\RunOpenSSLBuild.cmd.in",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\OpenSSLFirst.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\RunGuardTests.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\tests\\WindowsFirst.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenSSL\\VerifyPerlInput.ps1",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\BuildPngPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\FindPNG.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\tests\\PngConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\PNG\\VerifyZlibInput.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\BuildPythonPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\FindPython.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\JERequireLocalPath.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\python-config-version.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\python-config.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\PythonEmbed.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\RunRuntimeTest.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Python\\tests\\RuntimeTest.py",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\tests\\SQLiteConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\SQLite\\VerifySQLiteSource.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\ApplyTiffRecipePatch.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\BuildTiffPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\FindTIFF.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\o3de_patch.patch",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\tests\\TiffConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\TIFF\\VerifyZlibInput.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\BuildZstdPackage.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\Findzstd.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\Zstd\\tests\\ZstdConsumer.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\antlr4\\CMakeLists.txt",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\antlr4\\files.cmake",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\antlr4\\LICENSE.txt",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\antlr4\\PackageInfo.json",
+    "origins": [
+      "antlr-root10"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\files.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\LICENSE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\mimalloc\\PackageInfo.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\rapidjson\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\rapidjson\\PackageInfo.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\files.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\LICENSE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\PackageInfo.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Commands\\CommandManager.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Controls\\ReflectedPropertyControl\\resources\\apply.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Controls\\ReflectedPropertyControl\\resources\\file_browse.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Core\\EditorActionsHandler.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEdit.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CryEditPy.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\editor_lib_files.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\IEditorImpl.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Lib\\Tests\\test_EditorPythonBindings.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\main.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\display_info.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-11.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-12.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-13.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-14.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-15.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-16.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-17.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-18.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-19.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-20.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-22.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-23.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-24.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\edit_mode_toolbar-25.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\editwithbutton_dark.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\hide_helpers.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\maximize.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\misc_toolbar-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\object_toolbar-10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\ObjSelection.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\proceduralmaterial_toolbar.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-11.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-12.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-13.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-14.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-15.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-16.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-17.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow\\standard_views_toolbar-18.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\o3de_logo.svg",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ProjectSettingsTool\\icons\\group_closed.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ProjectSettingsTool\\icons\\group_open.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorEventsBus.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\PythonEditorFuncs.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_disabled.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_offline.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_online.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\ball_pending.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\cvar_dark.bmp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Open_Hidden.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Open_Hover.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Open.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Partial_Open.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Partial_Slash.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Slash_Hidden.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Slash_Hover.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Eye_Slash.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\folder.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\o3de_editor.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Disabled_Hover.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Disabled.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Enabled_Hover.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Enabled.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Partial_Disabled.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Padlock_Partial_Enabled.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\Preferences_03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\tree_view_folder.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\res\\tree_view_level.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\splashscreen_background.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.qrc",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.ui",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolBox.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\ToolsConfigPage.ui",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\bmp00016_00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\bmp00016_01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\clapperboard_cancel.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\clapperboard_ready.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_11.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_12.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_13.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_14.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_15.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\spline_edit_bar_16.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\trackview_keys_03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-11.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvkeys-12.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvmain-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-11.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-12.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-13.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-14.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-15.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-16.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-17.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-18.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-19.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-20.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-21.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-22.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-23.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-24.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-25.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-26.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-27.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-28.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvnodes-29.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-03.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-04.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-05.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-06.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-07.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-08.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-09.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvplay-10.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvview-00.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvview-01.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\TrackView\\tvview-02.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\WelcomeScreen\\DefaultProjectImage.png",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzFramework\\AzFramework\\ProjectManager\\ProjectManager.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Bold.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-BoldItalic.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-ExtraBold.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-ExtraBoldItalic.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Italic.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Light.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-LightItalic.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Regular.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-Semibold.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzQtComponents\\AzQtComponents\\Components\\Fonts\\Open_Sans\\OpenSans-SemiboldItalic.ttf",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\3rdParty\\Findgoogletest.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\3rdParty\\Installer\\Findgoogletest.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\AzTest\\AzTest.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\AzTest\\AzTest.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\launcher_generator.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Platform\\Windows\\launcher_project_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Resources\\GameSDK.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilder.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\ui\\style\\o3de_assetprocessor.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\Platform\\Windows\\AssetProcessorBatch.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ProjectManager\\Resources\\ProjectManager-Icon.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\engine.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt",
+    "origins": [
+      "spirvcross-runtime-move2"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\checker_basecolor.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_basecolor.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_iblglobalcm.dds",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_normal.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_roughness.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_skyboxcm.dds",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\LTC\\ltc_amp_lutrg32f.dds",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\LTC\\ltc_mat_lutrgba32f.dds",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\AreaTex.dds",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\DepthOfField_PencilMap_35mmFilm.bmp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\PostProcessing\\SearchTex.dds",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\Code\\CMakeLists.txt",
+    "origins": [
+      "spirvcross-runtime-move2"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Tools\\setup.py",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Application\\AtomToolsApplication.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Util\\Util.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Include\\AtomToolsFramework\\Window\\AtomToolsMainWindow.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\AssetBrowser\\AtomToolsAssetBrowserInteractions.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\AtomToolsFrameworkModule.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Util\\Util.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Window\\AtomToolsMainWindow.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\Platform\\Windows\\tool_dependencies_windows.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\Window\\ShaderManagementConsoleTableView.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\FindManifold.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\FindOpenMesh.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\Installer\\FindManifold.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\3rdParty\\Installer\\FindOpenMesh.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_ddn.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_diff.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Assets\\textures\\uvs\\_dev_UV_debug_spec.tif",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsg.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsg.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Core\\WhiteBoxCsgCore.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEEditorFixtureAuthoring.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEEditorFixtureAuthoring.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxDefaultShapes.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\Editor\\JEWhiteBoxDefaultShapes.h",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxComponent.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Source\\EditorWhiteBoxSystemComponent.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\JEEditorAuthoringTest.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\Tests\\WhiteBoxTest.cpp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\whitebox_editor_supported_files.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\Code\\whitebox_editor_tests_supported_files.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox\\gem.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\LICENSE_APACHE2.TXT",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\LICENSE_MIT.TXT",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\LICENSE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\.gitignore",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\materials\\WhiteBoxDefault.material",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\autoexec.cfg",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\cmake\\EngineFinder.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\CMakeLists.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Config\\shader_global_build_options.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\LICENSE_APACHE2.TXT",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\LICENSE_MIT.TXT",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\LICENSE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\NOTICE.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Platform\\Windows\\windows_project.cmake",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Platform\\Windows\\windows_project.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Registry\\assetprocessor_settings.setreg",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Resources\\GameSDK.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Resources\\Splash.bmp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\ShaderLib\\README.md",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\ShaderLib\\scenesrg.srgi",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\ShaderLib\\viewsrg.srgi",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\python\\python.cmd",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\python\\python.sh",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\python\\requirements-build.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\python\\requirements.txt",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\scripts\\o3de\\setup.py",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\Resources\\GameSDK.ico",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\Resources\\Splash.bmp",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Tools\\LyTestTools\\setup.py",
+    "origins": [
+      "root444"
+    ]
+  },
+  {
+    "fullPath": "F:\\JericoEngine\\JericoEngine\\Tools\\RemoteConsole\\ly_remote_console\\setup.py",
+    "origins": [
+      "root444"
+    ]
+  }
+]

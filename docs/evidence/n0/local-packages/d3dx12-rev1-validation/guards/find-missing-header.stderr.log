@@ -1,0 +1,8 @@
+CMake Error at F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/find-missing-root/JERequireLocalPath.cmake:37 (message):
+  JE local Python: original d3dx12 header file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/find-missing-root/d3dx12/include/d3dx12.h
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/find-missing-root/Findd3dx12.cmake:15 (JE_python_verify_file)
+  CMakeLists.txt:25 (find_package)
+
+

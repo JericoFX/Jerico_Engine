@@ -1,0 +1,8 @@
+{
+  "case": "uri",
+  "exitCode": 1,
+  "elapsedSeconds": 0.031,
+  "expectedDiagnostic": "must not be a URI",
+  "diagnosticMatched": true,
+  "outputExists": false
+}

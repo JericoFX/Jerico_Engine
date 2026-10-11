@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/tests/CMakeLists.txt
+  D3dx12Consumer.cpp
+  JED3dx12Consumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\d3dx12-rev1-validation\consumer\Release\JED3dx12Consumer.exe

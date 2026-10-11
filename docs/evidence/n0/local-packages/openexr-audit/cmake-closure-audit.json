@@ -1,0 +1,456 @@
+[
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "CMakeLists.txt",
+    "bytes": 4516,
+    "sha256": "14FB83B8630B6E3D2DB738133E4B1D83CFDCD83585C61A7EBD767005465AD6DC",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/clang-format.cmake",
+    "bytes": 2317,
+    "sha256": "9D9CF06524F71BD68577FE33F62B1C807CC40ABEB09DD65F390A55C719A51207",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/CMakeLists.txt",
+    "bytes": 8003,
+    "sha256": "4B46B12EC07F4D30BDC44CC2E9FB11E70AB08DE23787A71DABA74D0452E69AF3",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/FindSphinx.cmake",
+    "bytes": 469,
+    "sha256": "B7156BC63E0BC79C136648D8461196B2160B75288B60F18D5F63EA125EB330CB",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/JoinPaths.cmake",
+    "bytes": 843,
+    "sha256": "25138E4626C09423CBDD900EF9FF1B5B4BC94E3F2814FDBCE97A85696FAA4E85",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/LibraryDefine.cmake",
+    "bytes": 4131,
+    "sha256": "99ED7E6FED17142407B7EAE5EC4230DD009B02819399020B511ACBAFCE7DC9B0",
+    "relevantLines": [
+      "    install(CODE \"execute_process(COMMAND ${CMAKE_COMMAND} -E chdir \\\"\\$ENV\\{DESTDIR\\}${CMAKE_INSTALL_FULL_LIBDIR}\\\" ${CMAKE_COMMAND} -E create_symlink ${verlibname} ${baselibname})\")"
+    ]
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/OpenEXRConfig.cmake.in",
+    "bytes": 411,
+    "sha256": "10C11CF170DE6C5E7ADCEC8D4C0675ED7D475965FAA4A58D6A8FC76A6F15BE14",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/OpenEXRLibraryDefine.cmake",
+    "bytes": 3367,
+    "sha256": "AD7D4EA5806E15AA30FC07C3ED3EF6B791597D69A1A55DDE424FA6C7BA3175C0",
+    "relevantLines": [
+      "    install(CODE \"execute_process(COMMAND ${CMAKE_COMMAND} -E chdir \\\"\\$ENV\\{DESTDIR\\}${CMAKE_INSTALL_FULL_LIBDIR}\\\" ${CMAKE_COMMAND} -E create_symlink ${verlibname} ${baselibname})\")"
+    ]
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/OpenEXRSetup.cmake",
+    "bytes": 12202,
+    "sha256": "3884E70C04D5468E6DA8B1812B13C3A23C56FDA6B20FB96979AF4A72A284D82E",
+    "relevantLines": [
+      "  # FetchContent as we do for Imath below. There may be a way, but",
+      "  include(ExternalProject)",
+      "  ExternalProject_Add(zlib_external",
+      "    GIT_REPOSITORY \"https://github.com/madler/zlib.git\"",
+      "  include(FetchContent)",
+      "  FetchContent_Declare(Imath",
+      "    GIT_REPOSITORY ${IMATH_REPO}",
+      "  FetchContent_GetProperties(Imath)",
+      "    FetchContent_Populate(Imath)"
+    ]
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/SampleCTestScript.cmake",
+    "bytes": 2312,
+    "sha256": "0A896EE2BE0E674255A48F14630AE645DE0E6C352727CBAB3A2225A3482861BE",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/Toolchain-Linux-VFX_Platform15.cmake",
+    "bytes": 1292,
+    "sha256": "8B8C7E422F36E428361BE86AFC503C9D528CEFFCAC654E5D605370C3BF50076F",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "cmake/Toolchain-mingw.cmake",
+    "bytes": 1127,
+    "sha256": "62CB270ED976401916A5CA313D0DC2A6132B48E15C10CB38A50F08E9D63104A9",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "docs/CMakeLists.txt",
+    "bytes": 1836,
+    "sha256": "AD01D1D9F01FF309EC6A2292EB429660ABF325462E0CECF4CABB5CCE3418F954",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/CMakeLists.txt",
+    "bytes": 534,
+    "sha256": "9E9DC02AA2779FD50D02E617F35B538029F7F48E9BB44EC3B222D5982890F92C",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exr2aces/CMakeLists.txt",
+    "bytes": 471,
+    "sha256": "0709AD18A99EDE45E6CD1BA183E94B6993B6E9435BCF078773BC6217CF9BEAF7",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrcheck/CMakeLists.txt",
+    "bytes": 458,
+    "sha256": "F856574197228DB9D936559CD6900F1CDD03EF00FF70811141E8CAAAD15EB5FB",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrenvmap/CMakeLists.txt",
+    "bytes": 593,
+    "sha256": "D67EAE1929A001F8841BE61935BC6986C7FF153D3F46A52953CCEA9043127926",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrheader/CMakeLists.txt",
+    "bytes": 476,
+    "sha256": "D0D80ECCD3660B2AF0513959FF21CBA4081DFDF7AD886A749B94B54B0EC518A4",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrinfo/CMakeLists.txt",
+    "bytes": 466,
+    "sha256": "ACCE3842DD035FBAE43FB47EF99CB121F76E06F7ACBE8CA55F83882147A6F4D4",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrmakepreview/CMakeLists.txt",
+    "bytes": 522,
+    "sha256": "29CAFF2981A52DA7B53B1F444326DEAE6FE9DA47788C402C7430B7D6BEB4CD0B",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrmaketiled/CMakeLists.txt",
+    "bytes": 527,
+    "sha256": "976244D3A28AA980C18367805E59B8809A046BCD541A6961FB630F7A92A5943D",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrmultipart/CMakeLists.txt",
+    "bytes": 499,
+    "sha256": "BB98F9EFFAF8083427079AA3C5B1524BC22EA8802A182DBD5E9AAE7B31E68783",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrmultiview/CMakeLists.txt",
+    "bytes": 526,
+    "sha256": "2FA8F24984BBA3E3A5DADD4312CBA475D0FFF56C5D72A7B07199A5C618870EF9",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/bin/exrstdattr/CMakeLists.txt",
+    "bytes": 481,
+    "sha256": "AC2AD14DD8F6F892B961662B3C95021514638215F5B6FCE38E0E6DA515035AD5",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/examples/CMakeLists.txt",
+    "bytes": 1373,
+    "sha256": "24B8E5317269F349032A183C83A01DC9217E2E55A586E4EB399081C79D2F0846",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/lib/CMakeLists.txt",
+    "bytes": 241,
+    "sha256": "BBD5B8501BC78ADD6DE9B6EBA9C361435E2CD973C7E593A679DD64708332FB69",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/lib/Iex/CMakeLists.txt",
+    "bytes": 526,
+    "sha256": "6C644A8BC453E4656F5307EE0020DD42135B7EB5614250981A2BAFAD84FB9C2E",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/lib/IlmThread/CMakeLists.txt",
+    "bytes": 719,
+    "sha256": "C9ED61C3D5F7D31A44A2D09BFFE29492E56DB330448C0D612FAD0CFDDE91AFB8",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/lib/OpenEXR/CMakeLists.txt",
+    "bytes": 4639,
+    "sha256": "1B216883A5E3E546F0DC8F13A0F0BB7B52642E2B5683653C65FE0395BB534200",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/lib/OpenEXRCore/CMakeLists.txt",
+    "bytes": 2055,
+    "sha256": "BF6D0C60F07D0526AF9022B806DE4E56F297F0D9E2C39177FCA564A63209669A",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/lib/OpenEXRUtil/CMakeLists.txt",
+    "bytes": 1015,
+    "sha256": "5DC9FC3D70D3BFC21DD4F50DC68C0E8ACD1EAF9452F521E1DD83EA5E1FE4FAF2",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/test/CMakeLists.txt",
+    "bytes": 350,
+    "sha256": "88729D4B7922B14916F4E50CF729DB28C2D3278D18D8FCFBFF4FCA46691A1B39",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/test/IexTest/CMakeLists.txt",
+    "bytes": 605,
+    "sha256": "E55D29D411D4CB00F2288F193A0D6F15FE6230B90662BC3DFB7D545F6E446448",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/test/OpenEXRCoreTest/CMakeLists.txt",
+    "bytes": 2748,
+    "sha256": "D110CA667306784177ABFDA494F50D291031EB1EDF45CBDEFC59CF9186295F3D",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/test/OpenEXRFuzzTest/CMakeLists.txt",
+    "bytes": 1260,
+    "sha256": "F219EB2C5ED1172A735C62A981999511340D94DDF22D306794CF831118E0B627",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/test/OpenEXRTest/CMakeLists.txt",
+    "bytes": 3351,
+    "sha256": "51B6A8FABD4C0EA4358DCCC30EDCE2E10E799F36F90322452832CF30762C1DAA",
+    "relevantLines": []
+  },
+  {
+    "project": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f",
+    "path": "src/test/OpenEXRUtilTest/CMakeLists.txt",
+    "bytes": 887,
+    "sha256": "6ADB02523D70ED9DA3B2115ADDE1C929DB50E916F3D068230D3135406B37D303",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "CMakeLists.txt",
+    "bytes": 3863,
+    "sha256": "D95731CB0551A7C2D400C86D290E12156C69FFCA8163D126180F1353E5D78169",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "cmake/clang-format.cmake",
+    "bytes": 2313,
+    "sha256": "28385438E50592EA010CFA95C01A13A07F55B1889FDE6DE6D0D16CD8B4B74FAD",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "cmake/FindSphinx.cmake",
+    "bytes": 469,
+    "sha256": "B7156BC63E0BC79C136648D8461196B2160B75288B60F18D5F63EA125EB330CB",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "cmake/SampleCTestScript.cmake",
+    "bytes": 2308,
+    "sha256": "9DAA21EF6D185FECB6E8597AF25425E2D3650ECF5689A9560F022878EE1D897D",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "cmake/Toolchain-Linux-VFX_Platform21.cmake",
+    "bytes": 1288,
+    "sha256": "2751DE3A45624CA21925C28A6CAD285DA4E01C09DD2A3826EDFCF1FDFF377B51",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "cmake/Toolchain-mingw.cmake",
+    "bytes": 1123,
+    "sha256": "356A37B087158BE54B9455057CF96B997DFE96782024AB87BE2BF37DF6A06D17",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "config/CMakeLists.txt",
+    "bytes": 2599,
+    "sha256": "86CF467861B6D38367BF435E07441750EA4284D2402B0556B10260F988987AD9",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "config/ImathConfig.cmake.in",
+    "bytes": 125,
+    "sha256": "5E17FA25A87231C52DECE571CE586B6E97DCAD037345ECB7065336BDC0AEEC07",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "config/ImathSetup.cmake",
+    "bytes": 5856,
+    "sha256": "5E25289ACC495C37E731DFDEAD3AECE4962CCBA524B96A39124FBEDDF64ADA52",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "config/LibraryDefine.cmake",
+    "bytes": 4598,
+    "sha256": "99773F8BDF009DD0C0886B1CC867EA9210FAF54F1C6122CE61AC0D8BD0B90C86",
+    "relevantLines": [
+      "      install(CODE \"execute_process(COMMAND ${CMAKE_COMMAND} -E chdir \\\"\\$ENV\\{DESTDIR\\}${CMAKE_INSTALL_FULL_BINDIR}\\\" ${CMAKE_COMMAND} -E create_symlink ${verlibname} ${baselibname})\")",
+      "      install(CODE \"execute_process(COMMAND ${CMAKE_COMMAND} -E chdir \\\"\\$ENV\\{DESTDIR\\}${CMAKE_INSTALL_FULL_LIBDIR}\\\" ${CMAKE_COMMAND} -E create_symlink ${verlibname} ${baselibname})\")"
+    ]
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "docs/CMakeLists.txt",
+    "bytes": 1824,
+    "sha256": "8A700123247F10FF2EB289620F6E6AD05BEE07EC505B7952713A52F7F5D9B5E1",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "docs/examples/CMakeLists.txt",
+    "bytes": 488,
+    "sha256": "019940D09C7BA3FA3A74AAEA4A9B62D04ADF2E1A132E2BA2DCC2C3C80C95936E",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/Imath/CMakeLists.txt",
+    "bytes": 922,
+    "sha256": "F767782B20977A27352F519445DD333985F675FB1C2C2E0E1DC7B8C5BFA17AE0",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/ImathTest/CMakeLists.txt",
+    "bytes": 2786,
+    "sha256": "33B03A5A9FD30A0DA80D1F3844C7F3AD612D6A4982DE30306849846EE76A0541",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/CMakeLists.txt",
+    "bytes": 9743,
+    "sha256": "3F0BC9ADBBF0CA3693741064F7D3ABA5B7469BB85B39BE510D7FB720BBCF69FD",
+    "relevantLines": [
+      "find_package(Python COMPONENTS Interpreter Development)",
+      "  find_package(Python2 COMPONENTS Interpreter Development)",
+      "  find_package(Python3 COMPONENTS Interpreter Development)",
+      "      execute_process("
+    ]
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/config/CMakeLists.txt",
+    "bytes": 1996,
+    "sha256": "FFCBBB99F5DB543D7376A7541F571650699EF9A0692C50BC6F7884E9CEA7DF8E",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/config/ModuleDefine.cmake",
+    "bytes": 6228,
+    "sha256": "D54B0D3CDB61FBC25279337D61226D8E4B69DBC5923945150CB3210A87EE7047",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/config/NumPyLocate.cmake",
+    "bytes": 4099,
+    "sha256": "D5187C80B3BEF40619E84C40167F7FDD1CEAD8D5107461D845BFA34D42AA7301",
+    "relevantLines": [
+      "  execute_process(",
+      "    execute_process(",
+      "  execute_process(",
+      "    execute_process("
+    ]
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/config/PyImathSetup.cmake",
+    "bytes": 837,
+    "sha256": "6AB7FF5B03C003F3D40CB811CC0BC64FFF2BE34AF3A72818D2A982B3A8C30FFB",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/PyImath/CMakeLists.txt",
+    "bytes": 2051,
+    "sha256": "B58233ED18346B7E1F049A26B70230B274FD4ADA9569B9CA40B531813492DE0D",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/PyImathNumpy/CMakeLists.txt",
+    "bytes": 1749,
+    "sha256": "AF0AF4F0536297A0A61900A3C0132ADFB8CB1ECAA911A0C43DD35EE30CE23A45",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/PyImathNumpyTest/CMakeLists.txt",
+    "bytes": 767,
+    "sha256": "F939FDE5B840103175D0FD7F28C0D84664FEE5FFF806B5F379E7FA45771F5299",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/PyImathSpeedTest/CMakeLists.txt",
+    "bytes": 584,
+    "sha256": "D91F3C71AFC8B3A009D0FAED0994B4B0B6096121597F046B79C5953688C17C44",
+    "relevantLines": []
+  },
+  {
+    "project": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3",
+    "path": "src/python/PyImathTest/CMakeLists.txt",
+    "bytes": 737,
+    "sha256": "B63B8C5CC71AA5C69C52BABDB23EB73681573ABF24A64CB4398FCF91C125C5C8",
+    "relevantLines": []
+  }
+]

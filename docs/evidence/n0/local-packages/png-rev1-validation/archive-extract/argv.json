@@ -1,0 +1,10 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\extracted",
+  "arguments": [
+    "-E",
+    "tar",
+    "xJf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1\\packages\\png-1.6.37-je-rev1-windows.tar.xz"
+  ]
+}

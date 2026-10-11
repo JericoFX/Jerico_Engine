@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "SOURCE PROVISIONED AND FROZEN; ROOT/NATIVE EXECUTION PENDING",
+  "source": {
+    "repository": "https://github.com/antlr/antlr4",
+    "commit": "8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+    "commitVerifiedByPrimaryApi": true,
+    "originalUrl": "https://github.com/antlr/antlr4/archive/8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz",
+    "originalHeadStatus": 302,
+    "finalUrl": "https://codeload.github.com/antlr/antlr4/tar.gz/8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+    "finalHeadStatus": 200,
+    "getStatus": 200,
+    "autoRedirect": false,
+    "authorization": false,
+    "archive": "F:/JericoEngine/Dependencies/archives/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz",
+    "bytes": 4174703,
+    "sha256": "c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed",
+    "root": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+    "members": 2581,
+    "files": 2296,
+    "fileBytes": 12304802.0,
+    "links": 0,
+    "gitBlobMatches": 2296,
+    "extractionHashesMatched": true
+  },
+  "sourceOverride": "-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+  "version": "4.13.2",
+  "license": "BSD-3-Clause",
+  "licensePath": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/LICENSE.txt",
+  "originalWrapper": "Code/3rdParty/antlr4/CMakeLists.txt",
+  "interface": {
+    "target": "3rdParty::antlr4",
+    "actualBuildTarget": "antlr4",
+    "static": true,
+    "definitions": [
+      "ANTLR4CPP_STATIC"
+    ],
+    "runtimeSources": 136,
+    "copiedHeaders": 171,
+    "includeLayout": "binary Code/3rdParty/antlr4/Include recursively preserving original header layout",
+    "requiredLibraries": [
+      "Threads::Threads (Windows native threading; no external provider)"
+    ],
+    "exceptions": "Original O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS",
+    "crt": "Inherited original engine configuration; no upstream WITH_STATIC_CRT option used"
+  },
+  "closure": {
+    "sourceRootCMakeListsExists": false,
+    "rootFetchContentBehavior": "No upstream root CMakeLists; provision source only, then original manual C++ filelist target",
+    "upstreamCppCMakeInvoked": false,
+    "upstreamCppCMakeRisk": "runtime/Cpp/runtime/CMakeLists.txt defaults ANTLR_BUILD_CPP_TESTS ON and fetches googletest v1.16.0; runtime/Cpp/CMakeLists.txt demo requires Java and static CRT defaults ON. These files are not in the selected wrapper path.",
+    "generator": "Code/Tools/ShaderCompiler/Source/Grammar/Generate.ps1 is manual, downloads antlr.org/antlr-4.13.2-complete.jar and runs Java; no build target/script reference found",
+    "generatedGrammar": "Existing azslLexer/azslParser sources generated ANTLR4.13.2 used as-is",
+    "javaRequired": false,
+    "pythonRequired": false,
+    "googletestRequired": false,
+    "sourceWritesByWrapper": false,
+    "binaryWrites": "Header copy into owned engine binary Include; usual compiler/build outputs"
+  },
+  "consumer": "Code/Tools/ShaderCompiler/CMakeLists.txt: AZ::ShaderCompiler and AZ::Azslc require original runtime; generated lexer/CommonTokenStream/parser.compilationUnit/error listener/AST walker",
+  "nextValidation": {
+    "root": "Parent adds exact source override to approved original Root argv",
+    "nativeTargets": [
+      "antlr4",
+      "Azslc"
+    ],
+    "preferOriginalIntegration": true,
+    "auxiliary": "Minimal generated-AZSL parser consumer separate, not a prerequisite to Root configure",
+    "executedByWriter": false
+  },
+  "limits": [
+    "No new package identity/tar/producer is needed or created",
+    "Original wrapper/catalog/helpers remain unmodified",
+    "No Java JAR/Python/GoogleTest acquired or executed",
+    "No CMake/compiler/build/tests by writer",
+    "License retained; full product redistribution and Engine/Editor/shader semantics acceptance not asserted"
+  ]
+}

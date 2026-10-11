@@ -1,0 +1,96 @@
+{
+  "status": "FINAL DERIVATION; PARENT REVIEW/DISPATCH PENDING; NO NATIVE EXECUTION",
+  "sourceGroups": {
+    "approved-root765": {
+      "validated": 765,
+      "added": 765,
+      "duplicates": 0
+    },
+    "openexr-v2-1182": {
+      "validated": 1182,
+      "added": 1177,
+      "duplicates": 5
+    },
+    "openexr-provenance5": {
+      "validated": 5,
+      "added": 5,
+      "duplicates": 0
+    },
+    "accepted-package-copy-witness8": {
+      "validated": 8,
+      "added": 6,
+      "duplicates": 2
+    }
+  },
+  "rawInputCount": 1960,
+  "uniqueInputCount": 1953,
+  "deduplicatedCount": 7,
+  "approvedDeltas": [
+    {
+      "origin": "approved-root765",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "beforeBytes": 6787,
+      "beforeSHA256": "d6c7fab5bc7f22e5fb25d6856bafb1e2ca074f1fe859c94bd91338e687825b35",
+      "afterBytes": 6788,
+      "afterSHA256": "2d8c84c9bb2c8eff7ecd5a6df3aa5b22bc67ee2cc761e3e696319a6a3da346e5",
+      "reason": "Parent accepted OpenEXR catalogue entry"
+    },
+    {
+      "origin": "openexr-v2-1182",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\README.md",
+      "beforeBytes": 8472,
+      "beforeSHA256": "52CC81F75C4C916441FE55ECF65F30308E5535AB0F4EEAE82E85422C69A17AA1",
+      "afterBytes": 9501,
+      "afterSHA256": "3a2a380acfff140b67396e93e6254e4e4ef00063a4984f8aab22e813d9a45a6f",
+      "reason": "Parent status-only documentation update after OpenEXR freeze"
+    }
+  ],
+  "argumentsCount": 46,
+  "cacheCount": 32,
+  "wheelhouseCount": 44,
+  "newCacheFiles": [
+    "OpenEXR-3.1.3-je-rev1-windows.tar.xz",
+    "OpenEXR-3.1.3-je-rev1-windows.tar.xz.SHA256SUMS"
+  ],
+  "acceptedPackagePairs": 8,
+  "originalDriverSHA256": "61BFFEB337B4EE19FCDB37A94B0BFECE760692EAA86E6C50BF853605D6588FC8",
+  "priorDriverSHA256": "35E0BC2660E568AC9B42332FBFC53564089F9E9F596B3AD5B647F6F3F4F5FC95",
+  "driverSHA256": "5FD4EDAEC14E30405C612ECEC36FE9AF38A1DF7A562413C535EC196FB866FA6E",
+  "assignmentSHA256": "2BBE66DB2F75D8D223BBFC61F6CD8E1A9A26C7219D2812301046078EA195DCCF",
+  "freezeSHA256": "36CED3BAE28693DCAD99F89356B5ED2C72657C5B6CFE1A56DA6AE0A0A83D532E",
+  "driverChanges": [
+    {
+      "before": "'build/n0-validation/local-packages/root-antlr-preparation'",
+      "after": "'build/n0-validation/local-packages/root-antlr-openexr-final'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-antlr-preparation/root-antlr-candidate-assignment.json'",
+      "after": "'build/n0-validation/local-packages/root-antlr-openexr-final/root-antlr-openexr-assignment.json'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-antlr-preparation/source-freeze-root-candidate.json'",
+      "after": "'build/n0-validation/local-packages/root-antlr-openexr-final/source-freeze-root-final.json'"
+    },
+    {
+      "before": "8F5F992B62124FC223D4E42C40734B0FC1012370D4137F9C60C487684CC07BE9",
+      "after": "2BBE66DB2F75D8D223BBFC61F6CD8E1A9A26C7219D2812301046078EA195DCCF"
+    },
+    {
+      "before": "B665B0E78D833396D0D47615060F05ADFA489BEF4827408A1E161975A1B8F294",
+      "after": "36CED3BAE28693DCAD99F89356B5ED2C72657C5B6CFE1A56DA6AE0A0A83D532E"
+    },
+    {
+      "before": "$arguments.Count -ne 46 -or $freeze.Count -ne 765",
+      "after": "$arguments.Count -ne 46 -or $freeze.Count -ne 1953"
+    },
+    {
+      "before": "$cache }).Count -ne 30 -or $wheelFiles.Count -ne 44",
+      "after": "$cache }).Count -ne 32 -or $wheelFiles.Count -ne 44"
+    },
+    {
+      "before": "'d3dx12-headers-je-rev1-windows.tar.xz')",
+      "after": "'d3dx12-headers-je-rev1-windows.tar.xz','OpenEXR-3.1.3-je-rev1-windows.tar.xz')"
+    }
+  ],
+  "preserved": "Original guards, 46 exact argv/order, full ANTLR before/after tree, all existing before/after manifests, full pristine three-private-copy preflight, environment isolation, process measurements/postflight. Only cache count/packagePairs/paths/hashes/freeze count change from approved driver."
+}

@@ -1,0 +1,6 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests/CMakeLists.txt
+  PngConsumer.cpp
+  JE_PngConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\png-consumer-rev1\Release\JE_PngConsumer.exe

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-11",
+  "reviewer": "parent",
+  "inputsVerified": 2532,
+  "driverChangesReviewed": 8,
+  "previous47ArgumentsPreserved": true,
+  "driverRestoresPreviousBytes": true,
+  "scope": "Dispatch one original offline configure to Luna; no engine/link/runtime acceptance",
+  "artifactSHA256": {
+    "root-cli11-assignment.json": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53",
+    "source-freeze-root-cli11.json": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292",
+    "run-root-configure-cli11.ps1": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41"
+  }
+}

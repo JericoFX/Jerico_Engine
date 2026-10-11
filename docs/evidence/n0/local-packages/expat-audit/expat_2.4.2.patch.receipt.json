@@ -1,0 +1,12 @@
+{
+  "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/expat_2.4.2.patch",
+  "headStatus": 200,
+  "getStatus": 200,
+  "automaticRedirects": false,
+  "authentication": false,
+  "bytes": 475,
+  "sha256": "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483",
+  "gitBlob": "61f2d776797d83f768a2d106457d03db6f6e355e",
+  "expectedGitBlob": "61f2d776797d83f768a2d106457d03db6f6e355e",
+  "gitBlobMatched": true
+}

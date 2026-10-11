@@ -1,0 +1,11 @@
+{
+  "name": "producer-uri-output",
+  "argvCount": 6,
+  "nativeExit": 1,
+  "elapsedSeconds": 0.019,
+  "expectedText": "must not be a URI",
+  "diagnosticMatched": true,
+  "checkedPath": "https://example.invalid/openexr",
+  "mustBeAbsent": false,
+  "pathAbsent": true
+}

@@ -1,0 +1,15 @@
+{
+  "originalURL": "https://github.com/CLIUtils/CLI11/archive/refs/tags/v2.6.2.tar.gz",
+  "effectiveURL": "https://codeload.github.com/CLIUtils/CLI11/tar.gz/refs/tags/v2.6.2",
+  "headStatus": 200,
+  "getStatus": 200,
+  "autoRedirect": false,
+  "authentication": false,
+  "bytes": 1381808,
+  "sha256": "c6ea6b2e5608b3ea8617999bd5f47420c71b2ebdb8dc4767c1034d1da5785711",
+  "matchesOriginalConsumer": true,
+  "commit": "37bb6edc5317e99af72ef48405e65d9ca5218861",
+  "tag": "v2.6.2",
+  "license": "BSD-3-Clause",
+  "archive": "F:/JericoEngine/Dependencies/archives/cli11-2.6.2.tar.gz"
+}

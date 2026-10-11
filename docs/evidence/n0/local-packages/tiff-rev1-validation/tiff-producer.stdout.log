@@ -1,0 +1,232 @@
+-- Building tiff version 4.2.0
+-- libtiff library version 5.6.0
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Performing Test C_FLAG_W3
+-- Performing Test C_FLAG_W3 - Success
+-- Performing Test HAVE_LD_VERSION_SCRIPT
+-- Performing Test HAVE_LD_VERSION_SCRIPT - Failed
+-- Looking for assert.h
+-- Looking for assert.h - found
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - not found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for io.h
+-- Looking for io.h - found
+-- Looking for search.h
+-- Looking for search.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for strings.h
+-- Looking for strings.h - not found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - not found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - not found
+-- Performing Test C_HAS_inline
+-- Performing Test C_HAS_inline - Success
+-- Performing Test TIME_WITH_SYS_TIME
+-- Performing Test TIME_WITH_SYS_TIME - Failed
+-- Performing Test TM_IN_SYS_TIME
+-- Performing Test TM_IN_SYS_TIME - Success
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of signed int
+-- Check size of signed int - done
+-- Check size of unsigned int
+-- Check size of unsigned int - done
+-- Check size of signed long
+-- Check size of signed long - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Check size of signed long long
+-- Check size of signed long long - done
+-- Check size of unsigned long long
+-- Check size of unsigned long long - done
+-- Check size of unsigned char *
+-- Check size of unsigned char * - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ptrdiff_t
+-- Check size of ptrdiff_t - done
+-- Looking for mmap
+-- Looking for mmap - not found
+-- Looking for setmode
+-- Looking for setmode - not found
+-- Looking for snprintf
+-- Looking for snprintf - found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - not found
+-- Looking for strtol
+-- Looking for strtol - found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for strtoul
+-- Looking for strtoul - found
+-- Looking for strtoull
+-- Looking for strtoull - found
+-- Looking for getopt
+-- Looking for getopt - not found
+-- Looking for lfind
+-- Looking for lfind - found
+-- CMAKE_HOST_SYSTEM_PROCESSOR set to AMD64
+-- HOST_FILLORDER set to FILLORDER_LSB2MSB
+-- HOST_BIG_ENDIAN set to 0
+-- HAVE_IEEEFP set to 1
+-- Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/lib/zlibstatic.lib (found version "1.2.11")
+-- Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents
+-- Looking for jbg_newlen
+-- Looking for jbg_newlen - not found
+-- Found OpenGL: opengl32
+-- Could NOT find GLUT (missing: GLUT_glut_LIBRARY GLUT_INCLUDE_DIR) 
+-- Looking for GL/gl.h
+-- Looking for GL/gl.h - not found
+-- Looking for GL/glu.h
+-- Looking for GL/glu.h - not found
+-- Looking for GL/glut.h
+-- Looking for GL/glut.h - not found
+-- Looking for GLUT/glut.h
+-- Looking for GLUT/glut.h - not found
+-- Looking for OpenGL/gl.h
+-- Looking for OpenGL/gl.h - not found
+-- Looking for OpenGL/glu.h
+-- Looking for OpenGL/glu.h - not found
+-- 
+-- Libtiff is now configured for 
+-- 
+--   Installation directory:             C:/Program Files/tiff
+--   Documentation directory:            C:/Program Files/tiff/share/doc/tiff
+--   C compiler:                         C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+--   C++ compiler:                       
+--   Build shared libraries:             OFF
+--   Enable linker symbol versioning:    FALSE
+--   Support Microsoft Document Imaging: ON
+--   Use win32 IO:                       TRUE
+-- 
+--  Support for internal codecs:
+--   CCITT Group 3 & 4 algorithms:       ON
+--   Macintosh PackBits algorithm:       ON
+--   LZW algorithm:                      ON
+--   ThunderScan 4-bit RLE algorithm:    ON
+--   NeXT 2-bit RLE algorithm:           ON
+--   LogLuv high dynamic range encoding: ON
+-- 
+--  Support for external codecs:
+--   ZLIB support:                       ON (requested) TRUE (availability)
+--   libdeflate support:                 OFF (requested) FALSE (availability)
+--   Pixar log-format algorithm:         OFF (requested) FALSE (availability)
+--   JPEG support:                       OFF (requested)  (availability)
+--   Old JPEG support:                   OFF (requested)  (availability)
+--   JPEG 8/12 bit dual mode:            OFF (requested) FALSE (availability)
+--   ISO JBIG support:                   OFF (requested) FALSE (availability)
+--   LZMA2 support:                      OFF (requested)  (availability)
+--   ZSTD support:                       OFF (requested)  (availability)
+--   WEBP support:                       OFF (requested) FALSE (availability)
+-- 
+--   C++ support:                        OFF (requested) FALSE (availability)
+-- 
+--   OpenGL support:                     FALSE
+-- 
+-- Configuring done (93.7s)
+-- Generating done (0.3s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1/build
+Versi├│n de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1/source-work/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/CMakeLists.txt
+  tif_aux.c
+  tif_close.c
+  tif_codec.c
+  tif_color.c
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_codec.c(117,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+  tif_compress.c
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_compress.c(209,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+  tif_dir.c
+  tif_dirinfo.c
+  tif_dirread.c
+  tif_dirwrite.c
+  tif_dumpmode.c
+  tif_error.c
+  tif_extension.c
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_extension.c(105,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+  tif_fax3.c
+  tif_fax3sm.c
+  tif_flush.c
+  tif_getimage.c
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(82,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(93,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(98,17): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(111,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(122,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(146,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(156,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(162,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(171,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(179,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(184,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(189,33): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(198,33): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(207,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(305,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(355,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(363,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(373,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(387,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(424,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(434,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(439,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(447,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(457,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(462,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(473,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(484,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_getimage.c(489,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+  tif_jbig.c
+  tif_jpeg.c
+  tif_jpeg_12.c
+  tif_luv.c
+  Generando c├│digo...
+  Compilando...
+  tif_lzma.c
+  tif_lzw.c
+  tif_next.c
+  tif_ojpeg.c
+  tif_open.c
+F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\source-work\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99\libtiff\tif_open.c(125,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\tiff.vcxproj]
+  tif_packbits.c
+  tif_pixarlog.c
+  tif_predict.c
+  tif_print.c
+  tif_read.c
+  tif_strip.c
+  tif_swab.c
+  tif_thunder.c
+  tif_tile.c
+  tif_version.c
+  tif_warning.c
+  tif_webp.c
+  tif_write.c
+  tif_zip.c
+  tif_zstd.c
+  Generando c├│digo...
+  Compilando...
+  tif_win32.c
+  dummy.c
+  getopt.c
+  strcasecmp.c
+  Generando c├│digo...
+  tiff.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\tiff-rev1\build\libtiff\Release\tiff.lib
+-- JE local package archive: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1/packages/tiff-4.2.0.15-je-rev1-windows.tar.xz
+-- JE local package SHA256: d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2

@@ -1,0 +1,16 @@
+{
+  "reason": "Documentation-only native acceptance receipt after freeze, producer/tests/upstream/archive unchanged",
+  "baselineCount": 1182,
+  "deltas": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/README.md",
+      "beforeBytes": 8472,
+      "afterBytes": 9501,
+      "beforeSHA256": "52CC81F75C4C916441FE55ECF65F30308E5535AB0F4EEAE82E85422C69A17AA1",
+      "afterSHA256": "3A2A380ACFFF140B67396E93E6254E4E4EF00063A4984F8AAB22E813D9A45A6F"
+    }
+  ],
+  "packageSha256": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0",
+  "cacheCount": 32,
+  "catalogueSHA256": "2D8C84C9BB2C8EFF7ECD5A6DF3AA5B22BC67EE2CC761E3E696319A6A3DA346E5"
+}

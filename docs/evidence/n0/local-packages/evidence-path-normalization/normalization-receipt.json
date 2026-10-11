@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-11",
+  "cause": "Optional folder loop passed mixed separators to raw dictionary keys; previous CSV reload canonicalized them and exposed identical duplicates",
+  "beforeCsvSHA256": "2BDC97CC5425C65684F2E313F3A6903BC2988E0E17782FFD15E6EC12BDA9FEBB",
+  "oldHelperSHA256": "E27803EADF4DB347671943D438B3B1493C5ABF0631389192B61B5EFCBD26BF16",
+  "newHelperSHA256": "3D0F3BDB0CD09439D24D1730AA4129E47A6CCF57496C31C42CE2BDFFCEA23C36",
+  "red": {
+    "canonicalDestinations": 2,
+    "conflictingSourceRejected": true
+  },
+  "green": {
+    "canonicalDestinations": 1,
+    "conflictingSourceRejected": true
+  },
+  "allCopiedFilesVerified": 3610,
+  "uniqueFiles": 3550,
+  "identicalDuplicateRowsCoalesced": 60,
+  "sourceEvidenceBytesMutated": 0,
+  "beforeCsvPreserved": "copy-manifest-before.csv",
+  "nativeProcessesExecuted": 0
+}

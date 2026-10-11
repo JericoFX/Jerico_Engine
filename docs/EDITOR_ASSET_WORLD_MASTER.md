@@ -10,6 +10,39 @@ No un editor nuevo aislado ni pantallas mock para demostrar productividad. Cambi
 
 Primera prueba: cuarto+corredor, cut de puerta/ventana, caras/UV/material, Undo/Redo/Save/reopen y mesh runtime. WhiteBox/Manifold CSG es base real a probar; modelar un cubo no acredita BSP completo. Herramientas avanzadas entran por operación persistente, no todo el algoritmo de golpe.
 
+### 1.1. Hammer 2 + Jerico custom — SPECIFIED/DESIGN
+
+El detalle visual recuperado es **SPECIFIED/DESIGN**: no acredita implementación, captura del Editor ni producto verificado. Procedencia: `JericoFX/JericoEngine2@304d9d2e13704e4967e82a8d5a13a5a506be01d4`, `docs/JERICOEDITOR_MASTER.md` (blob `e35f62b5d56bc89ffe30dd6fd4c99df75a53cd43`) y `docs/JERICOEDITOR_VISUAL_DESIGN.md` (blob `b6a125dfa4c7f424554eb5ef48252d7d9e609836`). GOAL vigente conserva la claridad Hammer/Source 2 y la identidad Jerico custom, con el Editor Qt6 real y Atom adaptado; las decisiones históricas de Python/plugins productivos, Diligent o Vulkan-only quedan sustituidas.
+
+La jerarquía distingue menú de aplicación, tabs de workspace, herramientas del workspace y tabs de cada panel. Se permiten tres capas compactas de chrome donde sean útiles: aplicación/contexto, menú y herramientas. Outliner/World/Assets/paletas a la izquierda, superficie de trabajo o viewport dominante al centro, Inspector a la derecha y docks inferiores con tabs de contenido, Output/Problems, graph, Simulation, Profiler y timeline/curvas según contexto; status bar persistente. Paneles delimitados, bordes finos fríos, profundidad tonal leve y controles casi cuadrados/radio pequeño facilitan lectura; no una superficie densa sin separaciones ni tarjetas grandes. [MASTER:35–63](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_MASTER.md#L35-L63), [VISUAL:5–55 y 161–170](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L5-L170).
+
+Docking/layouts persistentes, DPI y varios monitores pertenecen a esa misma aplicación. Cambiar workspace cambia paneles, herramientas y overlays, conservando documento/scene/World, selección, viewport compartido y stack de transacciones; no crea autoridades paralelas. El viewport conserva gramática de navegación, outline de selección, colores de gizmo, jerarquía de grid, header, nombres Perspective/Orthographic, modos Lit/Debug y feedback de status. Geometry admite vistas ortográficas sincronizadas cuando sean útiles, sobre el mismo contexto. [MASTER:9–17 y 51–63](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_MASTER.md#L9-L63), [VISUAL:57–69 y 121–122](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L57-L122).
+
+Tokens exactos de la paleta histórica; los overlays del dominio no cambian el chrome global. [VISUAL:19–41](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L19-L41).
+
+| Rol | Color | Rol | Color |
+|---|---|---|---|
+| Shell | `#081420` | Surface | `#0D1A26` |
+| Panel | `#112334` | Raised | `#162C40` |
+| Border | `#24465D` | Primary cyan | `#00C8E8` |
+| Active orange | `#FF9418` | Selection | `#FFB347` |
+| Primary text | `#E8EEF4` | Secondary text | `#AEBBC6` |
+| Muted text | `#748897` | Grid minor | `#173347` |
+| Grid major | `#29536B` | Success | `#2BC76F` |
+| Warning | `#F3B43F` | Error | `#EF5350` |
+| Axis X | `#EF5350` | Axis Y | `#42D37A` |
+| Axis Z | `#42A5F5` | — | — |
+
+Densidad aproximada al **100% de escala**, no medidas ya verificadas del Editor: toolbar/control **28–30 px**, filas compactas tree/table **22–24 px**, lista estándar **26–30 px**, tab strip **28–30 px**, separación de panel **6–8 px** y de grupo **8–12 px**. DPI preserva estas relaciones. El donante no fija aquí tamaños de fuente, anchos mínimos ni combinaciones de shortcuts: no inventarlos. [VISUAL:71–81](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L71-L81).
+
+Una capa de estilo/widgets/delegates Jerico compartida cubre tabs, árboles, secciones del Inspector, vector/transform, pickers de assets, campos color/material, sliders/números, búsqueda, tiles, icon buttons, validación/busy y drag/drop; QSS por sí solo no cumple ese contrato. El Inspector orientado a componentes expone **Entity Components** mediante el sistema de propiedades/reflection común. Todos los controles mantienen estados **Idle/Hover/Pressed/Focused/Disabled/Busy/Warning/Error/Success**, con foco de teclado visible independientemente del hover. La presentación Jerico debe ser más clara, separada y fácil de recorrer que Cry/Sandbox, reteniendo productividad y separación de tareas Hammer, sin clonarlo. [VISUAL:83–99, 136–144 y 161–170](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L83-L170).
+
+Scene combina Outliner/Entity Palette, viewport, Inspector y Output/Problems/Profiler; Materials combina biblioteca, preview PBR/graph y parámetros de superficie/capas; Geometry combina jerarquía/stack de acciones, perspectiva/ortho, Inspector y operación/diff/volúmenes. La velocidad de autoría recuperada comprende brushes aditivos/sustractivos, selección cara/arista/vértice, extrude/inset, bevel/chamfer, slice/knife/loop, bridge/fill, puertas/ventanas/arcos/escaleras, spline extrusion, conversión a mesh/assembly, material por cara y UV, con operaciones no destructivas donde sea práctico. Grid/snap y demás operaciones siguen el master procedural vigente; aquí no se agrega un mapa de teclas. [VISUAL:101–122](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L101-L122), [MASTER:165–182](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_MASTER.md#L165-L182).
+
+La autoridad visual declarada en el pin es `images/40_jericoeditor_blueprint_reference_board.jpg`, `images/41_jerico_brand_icon_reference.jpg`, `images/40_jericoeditor_scene_blueprint.png`, `images/41_jericoeditor_physics_blueprint.png` y `images/42_jericoeditor_materials_blueprint.png`. La marca de aplicación es la **J modular metálica naranja + blanca** suministrada; los iconos funcionales de herramientas/componentes son una familia coherente distinta. Los SVG `30_*` a `39_*` sólo describen layout/cobertura. Los blueprints se traducen a Qt6 y contratos reales, no se copian como screenshots; sus anotaciones exteriores/cotas no son chrome del producto. En este rescate se verificaron los textos/blobs y la presencia de esas referencias, **sin descargar ni inspeccionar sus píxeles**. La lectura visual pendiente y los nombres M10.5/VISUAL_REFERENCE no localizados se registran en la fila JERICOEDITOR del mapa de migración. [VISUAL:147–182](https://github.com/JericoFX/JericoEngine2/blob/304d9d2e13704e4967e82a8d5a13a5a506be01d4/docs/JERICOEDITOR_VISUAL_DESIGN.md#L147-L182).
+
+La recuperación documental no adelanta aceptación: primero cuarto/corredor, puerta/ventana, material/UV por cara y Undo/Redo/Save/reopen reales en este Editor; después su cook/launcher. Apariencia, kernel CSG o configuración aislada no prueban ese flujo ni el diseño visible. Capturas y comportamiento del Editor siguen pendientes.
+
 ## 2. Transacciones y automatización
 
 Selection/context→preview/diff→validate→transaction→modelo canónico→invalidation→notificación. Cancel/fallo no publican mitad de scene. Undo/Redo y overrides en instancias/prefabs respetan ownership. No escribir scene file a escondidas desde un panel.

@@ -1,0 +1,62 @@
+{
+  "status": "AUDITED SOURCE READY; ROOT/NATIVE EXECUTION PENDING",
+  "version": "2.6.2",
+  "commit": "37bb6edc5317e99af72ef48405e65d9ca5218861",
+  "license": "BSD-3-Clause; complete immutable LICENSE retained",
+  "archive": "F:/JericoEngine/Dependencies/archives/cli11-2.6.2.tar.gz",
+  "archiveBytes": 1381808,
+  "archiveSHA256": "c6ea6b2e5608b3ea8617999bd5f47420c71b2ebdb8dc4767c1034d1da5785711",
+  "sourceRoot": "F:/JericoEngine/Dependencies/cli11-2.6.2",
+  "override": "-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2",
+  "snapshot": {
+    "gitBlobsMatched": 304,
+    "bytes": 2886775,
+    "files": 304,
+    "members": 337,
+    "links": 0,
+    "extractionHashesMatched": 304
+  },
+  "wrapper": {
+    "type": "HEADERONLY",
+    "rootCMake": "NO_ADD_SUBDIR skips upstream CMake/tests/docs/single-header tooling",
+    "consumer": "AZ::Azslc/Main.cpp:9,318-458 CLI::App add_option/add_flag parse/CLI::ParseError exit",
+    "target": "3rdParty::cli11",
+    "compiledTranslationUnits": 0,
+    "headerBytes": 494538.0,
+    "copiedHeaders": 28,
+    "ABI": "Original C++ header configuration and exceptions preserved; no new compiled ABI/shared library/runtime"
+  },
+  "checks": {
+    "status": "PENDING LUNA ASSIGNMENT; no auxiliary library/target or runtime behavior claimed",
+    "native": "Build original Azslc after target generation; reuse jsoncpp-audit/CheckAzslcReflection.ps1 for --ia valid argv and shader failure. Also --help should exit0 and --je-invalid-option should reject with nonzero/diagnostic.",
+    "root": "Only CLI11 exact local override appended to prior47 argv"
+  },
+  "rootReadOnlyInputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\cli11\\CMakeLists.txt",
+      "bytes": 996,
+      "sha256": "dd3f6d188a640382d4c3ebd0a4e214b964efe218b2cebc3a6cbfd82204a77be2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\cli11\\PackageInfo.json",
+      "bytes": 402,
+      "sha256": "9bfe885f3ce5f8f41c0627e3105476429a89b089ca9f0161441fca9eac494d90"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\cli11\\LICENSE.txt",
+      "bytes": 1609,
+      "sha256": "34ecb2974726bc904eacf5c40db91e8f17801170f53d5c56d31415a51689b516"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\CMakeLists.txt",
+      "bytes": 1417,
+      "sha256": "87d3ddd482be254403df48b384575bf11f0fdf6787d6a8cca3dcf47632e6117c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\ShaderCompiler\\Source\\Main.cpp",
+      "bytes": 35502,
+      "sha256": "1fcb60e40f51e68771445f4b301686564483c65411cfff9252860f601601ebca"
+    }
+  ],
+  "sourceManifest": "source-tree-manifest.json"
+}

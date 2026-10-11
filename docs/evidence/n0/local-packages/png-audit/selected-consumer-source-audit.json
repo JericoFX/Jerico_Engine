@@ -1,0 +1,27 @@
+[
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Utils/Code/CMakeLists.txt",
+    "bytes": 2192,
+    "sha256": "F9009EB023816ED9723183A7F28BCFAC6B3B82A65A95CB59C15584AE76BFC6D1"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Utils/Code/Source/PngFile.cpp",
+    "bytes": 14762,
+    "sha256": "E5FCA343B587AD71C9D48418855BC333AEF11225A162F6BE77940FCD4F8FAA42"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Utils/Code/Include/Atom/Utils/PngFile.h",
+    "bytes": 4660,
+    "sha256": "C86FC494EAA12AFF591BD080E3E6CB9B679F44151EC10CDDEE5BDBC64240913C"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+    "bytes": 6787,
+    "sha256": "C3BA4B0F24D4C11A3E479BAB869CA90D390E350F01DFF2E7A78F489B610685B2"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/cmake/Platform/Common/MSVC/Configurations_msvc.cmake",
+    "bytes": 15478,
+    "sha256": "A5A5EF8542A1E624ADC886547F2BBECE35174664323AD39315DED0D51EE40ED3"
+  }
+]

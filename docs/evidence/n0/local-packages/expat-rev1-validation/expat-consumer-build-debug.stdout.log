@@ -1,0 +1,7 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/tests/CMakeLists.txt
+  ExpatConsumer.cpp
+  JEExpatConsumer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\expat-rev1-validation\consumer\Debug\JEExpatConsumer.exe
+  Building Custom Rule F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/tests/CMakeLists.txt

@@ -1,0 +1,99 @@
+Start testing: Oct 10 23:58 Hora estándar de Montevideo
+----------------------------------------------------------
+1/6 Testing: JE.LocalPackages.OpenEXR.Identity
+1/6 Test: JE.LocalPackages.OpenEXR.Identity
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/Debug/JE_OpenEXRConsumer.exe" "Identity"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2
+"JE.LocalPackages.OpenEXR.Identity" start time: Oct 10 23:58 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS Identity
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenEXR.Identity" end time: Oct 10 23:58 Hora estándar de Montevideo
+"JE.LocalPackages.OpenEXR.Identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: JE.LocalPackages.OpenEXR.Half
+2/6 Test: JE.LocalPackages.OpenEXR.Half
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/Debug/JE_OpenEXRConsumer.exe" "Half"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2
+"JE.LocalPackages.OpenEXR.Half" start time: Oct 10 23:58 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS Half
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenEXR.Half" end time: Oct 10 23:58 Hora estándar de Montevideo
+"JE.LocalPackages.OpenEXR.Half" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: JE.LocalPackages.OpenEXR.Float
+3/6 Test: JE.LocalPackages.OpenEXR.Float
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/Debug/JE_OpenEXRConsumer.exe" "Float"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2
+"JE.LocalPackages.OpenEXR.Float" start time: Oct 10 23:58 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS Float
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenEXR.Float" end time: Oct 10 23:58 Hora estándar de Montevideo
+"JE.LocalPackages.OpenEXR.Float" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: JE.LocalPackages.OpenEXR.FillAlpha
+4/6 Test: JE.LocalPackages.OpenEXR.FillAlpha
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/Debug/JE_OpenEXRConsumer.exe" "FillAlpha"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2
+"JE.LocalPackages.OpenEXR.FillAlpha" start time: Oct 10 23:58 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS FillAlpha
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenEXR.FillAlpha" end time: Oct 10 23:58 Hora estándar de Montevideo
+"JE.LocalPackages.OpenEXR.FillAlpha" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: JE.LocalPackages.OpenEXR.Errors
+5/6 Test: JE.LocalPackages.OpenEXR.Errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/Debug/JE_OpenEXRConsumer.exe" "Errors"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2
+"JE.LocalPackages.OpenEXR.Errors" start time: Oct 10 23:58 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS Errors
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenEXR.Errors" end time: Oct 10 23:58 Hora estándar de Montevideo
+"JE.LocalPackages.OpenEXR.Errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: JE.LocalPackages.OpenEXR.NativeFile
+6/6 Test: JE.LocalPackages.OpenEXR.NativeFile
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/Debug/JE_OpenEXRConsumer.exe" "NativeFile" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2/consumer-native-Debug.exr"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2
+"JE.LocalPackages.OpenEXR.NativeFile" start time: Oct 10 23:58 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+PASS NativeFile
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.OpenEXR.NativeFile" end time: Oct 10 23:58 Hora estándar de Montevideo
+"JE.LocalPackages.OpenEXR.NativeFile" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 23:58 Hora estándar de Montevideo

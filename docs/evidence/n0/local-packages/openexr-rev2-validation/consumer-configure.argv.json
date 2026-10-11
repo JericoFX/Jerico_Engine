@@ -1,0 +1,14 @@
+[
+  "-S",
+  "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/tests",
+  "-B",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+  "-G",
+  "Visual Studio 17 2022",
+  "-A",
+  "x64",
+  "-T",
+  "v143",
+  "-DJE_OPENEXR_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\extracted\\OpenEXR-3.1.3-je-rev1-windows",
+  "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents"
+]

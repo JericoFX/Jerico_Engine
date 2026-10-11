@@ -1,0 +1,12 @@
+{
+  "name": "producer-missing-zlib",
+  "argvCount": 6,
+  "nativeExit": 1,
+  "elapsedSeconds": 0.02,
+  "expectedText": "complete local JE zlib package is required",
+  "diagnosticMatched": true,
+  "checkedPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\guards\\output-missing-zlib",
+  "mustBeAbsent": true,
+  "pathExists": false,
+  "pathCondition": true
+}

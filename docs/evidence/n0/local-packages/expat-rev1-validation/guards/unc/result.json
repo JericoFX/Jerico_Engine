@@ -1,0 +1,8 @@
+{
+  "case": "unc",
+  "exitCode": 1,
+  "elapsedSeconds": 0.029,
+  "expectedDiagnostic": "must be an absolute local path",
+  "diagnosticMatched": true,
+  "outputExists": false
+}

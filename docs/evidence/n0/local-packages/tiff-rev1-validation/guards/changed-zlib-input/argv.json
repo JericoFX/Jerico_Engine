@@ -1,0 +1,11 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "arguments": [
+    "-DJE_TIFF_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz",
+    "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-zlib-root",
+    "-DJE_TIFF_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-zlib-output",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/BuildTiffPackage.cmake"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-zlib-input"
+}

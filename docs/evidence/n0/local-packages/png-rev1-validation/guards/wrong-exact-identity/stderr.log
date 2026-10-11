@@ -1,0 +1,10 @@
+CMake Error at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:290 (message):
+  Could NOT find PNG: Found unsuitable version "1.6.37", but required is
+  exact version "1.6.38" (found
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1-validation/extracted/png/lib/libpng16_static.lib)
+Call Stack (most recent call first):
+  C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:652 (_FPHSA_FAILURE_MESSAGE)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1-validation/extracted/FindPNG.cmake:43 (find_package_handle_standard_args)
+  CMakeLists.txt:4 (find_package)
+
+

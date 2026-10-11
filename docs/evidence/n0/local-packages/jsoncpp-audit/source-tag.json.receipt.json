@@ -1,0 +1,14 @@
+{
+  "head": {
+    "url": "https://api.github.com/repos/open-source-parsers/jsoncpp/git/ref/tags/1.6.2",
+    "status": 200,
+    "contentLength": 357,
+    "etag": "W/\"267a15b5d80d2e3bd7284f9abf424ecde678282f0dba47d1ae93eb45527fb75d\"",
+    "location": "",
+    "authentication": false,
+    "autoRedirect": false
+  },
+  "getStatus": 200,
+  "bytes": 357,
+  "sha256": "267a15b5d80d2e3bd7284f9abf424ecde678282f0dba47d1ae93eb45527fb75d"
+}

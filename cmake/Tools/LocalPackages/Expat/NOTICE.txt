@@ -1,0 +1,29 @@
+JE local Expat 2.4.2 Windows package
+
+Library source: libexpat/libexpat tag R_2_4_2, commit
+e26a263aa9182d1e4552cd615857f0f61df3ba42. Source and public headers retain
+the complete upstream MIT notices; expat/COPYING is included unmodified.
+SipHash in lib/siphash.h carries the CC0 Public Domain Dedication and its
+original author/history notice, preserved with the other library sources.
+Upstream CMakeLists.txt identifies the BSD license for KDE buildsystem files;
+its full copyright list and file are preserved under LICENSES/Expat.
+
+O3DE glue and recipe: o3de/3p-package-source commit
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/expat, originally
+2.4.2-rev2. The original patch only raises the upstream CMake minimum from
+3.1.3 to 3.8.0. Its exact bytes are preserved; only a private work copy is
+patched. O3DE notices and Apache-2.0/MIT license texts are included.
+
+JE adaptation uses installed Visual Studio 2022 v143 rather than VS2019.
+The library remains static Release /MD, char, DTD/namespace enabled,
+1024 context bytes, with XML_STATIC exported to its consumers. No DLL,
+CLI, examples, tests or fuzzers are built or packaged. No source acquisition,
+Git command, Python, upstream test downloader or global install is executed.
+
+The source archive's root README.md symlink -> expat/README.md is excluded
+from work extraction; the audited expat subtree contains zero links.
+expat-2.4.2-je-rev1-windows has its own measured archive hash. It does not
+claim the historical package's hash, binary compatibility, security approval,
+full redistribution certification or Engine/Editor validation. Expat 2.4.2
+is retained as the original authoring baseline, separately from CPython's
+Expat 2.4.6; this recipe does not imply that either old version is secure.

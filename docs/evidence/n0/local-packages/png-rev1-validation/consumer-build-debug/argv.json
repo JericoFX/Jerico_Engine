@@ -1,0 +1,12 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation",
+  "arguments": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+    "--config",
+    "Debug",
+    "--target",
+    "JE_PngConsumer"
+  ]
+}

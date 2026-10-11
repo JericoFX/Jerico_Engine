@@ -1,0 +1,10 @@
+CMake Error at C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:129 (message):
+  FindThreads only works if either C or CXX language is enabled
+Call Stack (most recent call first):
+  C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)
+  C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2-validation/extracted/OpenEXR-3.1.3-je-rev1-windows/OpenEXR/lib/cmake/OpenEXR/OpenEXRConfig.cmake:32 (find_dependency)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2-validation/extracted/OpenEXR-3.1.3-je-rev1-windows/FindOpenEXR.cmake:43 (find_package)
+  CMakeLists.txt:5 (find_package)
+
+

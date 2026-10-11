@@ -1,0 +1,9 @@
+{
+  "case": "wrong-exact-PNG-1.6.38",
+  "exitCode": 1,
+  "elapsedSeconds": 2.012,
+  "diagnosticMatched": true,
+  "binaryCompilationAttempted": false,
+  "buildDirectoryExists": true,
+  "stderr": "CMake Error at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:290 (message):\n  Could NOT find PNG: Found unsuitable version \"1.6.37\", but required is\n  exact version \"1.6.38\" (found\n  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1-validation/extracted/png/lib/libpng16_static.lib)\nCall Stack (most recent call first):\n  C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:652 (_FPHSA_FAILURE_MESSAGE)\n  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1-validation/extracted/FindPNG.cmake:43 (find_package_handle_standard_args)\n  CMakeLists.txt:4 (find_package)\n\n\n"
+}

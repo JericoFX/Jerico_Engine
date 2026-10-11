@@ -1,0 +1,92 @@
+[
+  {
+    "name": "producer-unc-source-path",
+    "nativeExit": 1,
+    "expectedDiagnostic": "must be an absolute local path",
+    "diagnosticMatched": true,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\producer-path-output",
+    "outputExists": false,
+    "result": "PASS",
+    "elapsedSeconds": 0.042
+  },
+  {
+    "name": "producer-wrong-hash",
+    "nativeExit": 1,
+    "expectedDiagnostic": "source URL/SHA256 must match the audited O3DE source archive",
+    "diagnosticMatched": false,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\producer-hash-output",
+    "outputExists": false,
+    "result": "NOT_PASS",
+    "elapsedSeconds": 0.04
+  },
+  {
+    "name": "producer-wrong-url",
+    "nativeExit": 1,
+    "expectedDiagnostic": "source URL/SHA256 must match the audited O3DE source archive",
+    "diagnosticMatched": false,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\producer-url-output",
+    "outputExists": false,
+    "result": "NOT_PASS",
+    "elapsedSeconds": 0.04
+  },
+  {
+    "name": "producer-missing-source",
+    "nativeExit": 1,
+    "expectedDiagnostic": "source archive file is missing",
+    "diagnosticMatched": true,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\producer-missing-output",
+    "outputExists": false,
+    "result": "PASS",
+    "elapsedSeconds": 0.04
+  },
+  {
+    "name": "producer-existing-output",
+    "nativeExit": 1,
+    "expectedDiagnostic": "output already exists; retained outputs are never overwritten",
+    "diagnosticMatched": false,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\producer-existing-output",
+    "outputExists": true,
+    "result": "NOT_PASS",
+    "elapsedSeconds": 0.041
+  },
+  {
+    "name": "producer-outside-build-output",
+    "nativeExit": 1,
+    "expectedDiagnostic": "output must be beneath this checkout/build",
+    "diagnosticMatched": true,
+    "outputPath": "F:/JericoEngine/Dependencies/je-d3dx12-invalid-output",
+    "outputExists": false,
+    "result": "PASS",
+    "elapsedSeconds": 0.039
+  },
+  {
+    "name": "find-missing-header",
+    "nativeExit": 1,
+    "expectedDiagnostic": "file is missing",
+    "diagnosticMatched": true,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\find-missing-build",
+    "outputExists": true,
+    "result": "PASS",
+    "elapsedSeconds": 6.505
+  },
+  {
+    "name": "find-tampered-header",
+    "nativeExit": 1,
+    "expectedDiagnostic": "SHA256 mismatch",
+    "diagnosticMatched": true,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\find-tampered-build",
+    "outputExists": true,
+    "result": "PASS",
+    "elapsedSeconds": 6.424
+  },
+  {
+    "name": "find-unc-package-root",
+    "nativeExit": 1,
+    "expectedDiagnostic": "must be an absolute local path",
+    "diagnosticMatched": true,
+    "outputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards\\find-unc-build",
+    "outputExists": true,
+    "result": "PASS",
+    "elapsedSeconds": 0.046
+  }
+]

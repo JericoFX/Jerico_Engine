@@ -1,0 +1,3323 @@
+{
+  "schemaVersion": 1,
+  "scope": "TIFF candidate source/archive/immutable snapshot/original recipe/helpers/zlib inputs and O3DE notices; no native validation executed",
+  "candidateFiles": 9,
+  "inputCount": 663,
+  "entries": [
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/.appveyor.yml",
+      "bytes": 5569,
+      "sha256": "505A625691C53553B926F9E44687CF207ADEA91D61B1B0834EF5098824228970"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/.gitignore",
+      "bytes": 1202,
+      "sha256": "CF7E694477DF33CE10724F17BFB3EA23ED07BD115132CE22995C6B3E93C54037"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/.gitlab-ci.yml",
+      "bytes": 746,
+      "sha256": "8F7F2436F3A8090B9621BB5D07FD0D0C582D6174DF5F284D21637C43E4D67D37"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/.travis.yml",
+      "bytes": 397,
+      "sha256": "FE15FEEF030CA7A5D7E5FCF2A9AE7915D04687534B85711AB8B78860F0A40529"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/html/man/bmp2tiff.1.html",
+      "bytes": 3570,
+      "sha256": "81D4387D8D8D2F2B75E53B3CAD019EC15E08B89860A01942493E82F7C9855696"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/html/man/gif2tiff.1.html",
+      "bytes": 3893,
+      "sha256": "0865CB6E90683DDB599E0E1389AADA872B566221CCE5822E6DDB29819D6D1D3D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/html/man/ras2tiff.1.html",
+      "bytes": 4056,
+      "sha256": "E03D686F74ED3DB274EBB859CDF60A9E937FA9CEFBFE2E768A8258932837674E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/html/man/sgi2tiff.1.html",
+      "bytes": 4036,
+      "sha256": "6692D6D604157BAC0C56A042DA9F514CA035FE4B8CD0CF6C8D426946248F3905"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/html/man/tiffsv.1.html",
+      "bytes": 6184,
+      "sha256": "93F34945518BC27B660121BF90D770FCA00734221CB6FD699B06B67A6D39B43E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/man/bmp2tiff.1",
+      "bytes": 2708,
+      "sha256": "748E34C2C47B1BA0E9A14C6277A466597CFE3A40A17DB7B0049988BEDF07F955"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/man/gif2tiff.1",
+      "bytes": 2552,
+      "sha256": "BC9C10999EE0DDFCF4744350470EFF4C8B107600FB9DFE7B49F416D07E1B4626"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/man/ras2tiff.1",
+      "bytes": 2952,
+      "sha256": "15F8DD6C0FCBDD6F62A97D48098E37D162048A70AC3F7F1AF1AA23A367F3A52C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/man/sgi2tiff.1",
+      "bytes": 2782,
+      "sha256": "8A3A21B759915B4BD13F2EF4F554E101FBBDFAC8DF833A1278F555BD735374C7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/man/tiffsv.1",
+      "bytes": 4088,
+      "sha256": "4C5ADCE7CEC6D681A5B78FBB5C580D831625CB3B3D59BB7A808D2ADB203F3149"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/bmp2tiff.c",
+      "bytes": 33869,
+      "sha256": "CC8C5B8D9EAD8BAA6D6FE866A7F16250E15D62AD16CB89FFB0DBB8041DBC87A6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/gif2tiff.c",
+      "bytes": 15445,
+      "sha256": "CC2ACCC05DF3BE9DB87860D420D8BDD7EBC4950B5C899D13FCE92408B7E42E98"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/ras2tiff.c",
+      "bytes": 9878,
+      "sha256": "C7D5C741461C54913F661FAED1A214FC4CA4A58564156F84AF7C375DB1D99D74"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/rasterfile.h",
+      "bytes": 1765,
+      "sha256": "F245EA5ABB00FB46588B481BE982B84819BA1D3A97296B2E6895E138D969D5FB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/sgi2tiff.c",
+      "bytes": 8985,
+      "sha256": "4D6509E784C6A5D88C05BF5FDB9D3549C427EBDD65763B925F73B9CF3C8DBA9A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/sgisv.c",
+      "bytes": 8640,
+      "sha256": "0A1876DD7BD307FFB7FFF050457857DF8D121D6CE82E8337A3854C14942FB49D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/archive/tools/ycbcr.c",
+      "bytes": 4223,
+      "sha256": "642AAC53A943367814A0BAFA6007871D00A3EF0F93E0F74DF1A4EAFF338C8130"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/autogen.sh",
+      "bytes": 120,
+      "sha256": "010CF76DD8D2DE455A62DAF070C55C5449BC110240B0630F463F6A5819C1365D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/build/CMakeLists.txt",
+      "bytes": 1258,
+      "sha256": "899E9F6BD5DABFA812B4B5AA8F7BBAE49A3668132D149D381B17D613C0613609"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/build/gitlab-ci",
+      "bytes": 2279,
+      "sha256": "506792D7C27941BD75124C27A55CFDBEC40844EF90494F17987F615976D821B0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/build/Makefile.am",
+      "bytes": 1317,
+      "sha256": "8B08E6F5E4F185A9BF055F56EAD0FB7FE656A212A0FFB795D1FB1C213A5BA83D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/build/README",
+      "bytes": 118,
+      "sha256": "9B117AB56CF84D59FDC1F7F0559265312D4BDFC9B908ADF7E37D43C8EB3DCDD3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/build/travis-ci",
+      "bytes": 3429,
+      "sha256": "159D3F75ACFCB614F59C5FEAFFF755067BC0CF4034E3E12999CE3F7622D5023C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/ChangeLog",
+      "bytes": 392000,
+      "sha256": "A390C43750A206AE926765A7378E16846DF2929E9915F5318AB757DF854D2F85"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/CMakeLists.txt",
+      "bytes": 25487,
+      "sha256": "93666CE64AEB2E02542C0F912AF818D3C5308030548F8023DAAC2BDD5FDF439E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/COMMITTERS",
+      "bytes": 439,
+      "sha256": "9EED27E853ED17A8026A0B9FD019169F8B1FA9380DA97863FB792658050519C6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/configure.ac",
+      "bytes": 43456,
+      "sha256": "6CE4ABB49CC638EDC1FE6D8DEA88E6A3B66FC6B8CD745D279A8353399D1A17B6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/configure.com",
+      "bytes": 36526,
+      "sha256": "CD05A41313DD3FE3B629D037BC8364C8A65AA6ACAF9018C6B90E92D912AA1051"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/addtiffo.c",
+      "bytes": 6278,
+      "sha256": "44F6C3E222031D6FC046FED88DA9187328C455D97197DA1800C411F9BDC49412"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/CMakeLists.txt",
+      "bytes": 1781,
+      "sha256": "991EA068AAFA68104388487C2E7494777A85D86A71C3D068FE08EB372DAB8840"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/Makefile.am",
+      "bytes": 1535,
+      "sha256": "01867559252368713EDC6C4E332CF63297EC797C3969AF6301F9D7DB37AA6780"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/Makefile.vc",
+      "bytes": 633,
+      "sha256": "744B792AD35742C2C0C3C2C6EB1478FF7E961113AC31912FFAAB22D70F96D6F8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/README",
+      "bytes": 4563,
+      "sha256": "E0E0B77D9895F1FC284F24436396EE08E10738FD7C45B01196454B0C8BEB7D9A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/tif_overview.c",
+      "bytes": 38291,
+      "sha256": "7A9212C0586E4A845F4F3FE6AF8F8A37A0ED3588DBEC1233233CDD4FCB6C2FA7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/tif_ovrcache.c",
+      "bytes": 13671,
+      "sha256": "93A8BB80B5EC6EC82310C4DA468350B7E944D4A3E14B6F5FD543782C80D37825"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/addtiffo/tif_ovrcache.h",
+      "bytes": 3556,
+      "sha256": "25BB7CBF0678E93BB9076824C005D0AE4565E3AF16781B9E952A563F5E27C494"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/CMakeLists.txt",
+      "bytes": 1475,
+      "sha256": "0315BA681C4CEDB5B00BF4DEE10BF687DF2725ABE6C9F704CE4FDFD3272D297D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/CMakeLists.txt",
+      "bytes": 2140,
+      "sha256": "6D40C70E064A15CDFC779C1C8D9D954BE1B3C66C671C6EBBE7D2149AD4CFCD18"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/Makefile.am",
+      "bytes": 1729,
+      "sha256": "A0313FAC218CAE7D49D1A844AEEC3D14857515520DCE6693C896EC1CB99899E0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/README",
+      "bytes": 160,
+      "sha256": "5CA1890C3CC8716F49B7CA59AFDA19A6687636EBA23FC0813B8D121C67CB5723"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/tiff-bi.c",
+      "bytes": 2783,
+      "sha256": "658FFD69C0239A4D62EE1369204DABF72FC9AE5D64E1491A22FEC72CEC578F3C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/tiff-grayscale.c",
+      "bytes": 4327,
+      "sha256": "2AA141AE2EAC3DD7261914683102EE4D0AD19C024079A6A4E2C2A2E00DBC8CA8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/tiff-palette.c",
+      "bytes": 7723,
+      "sha256": "9C989879CAEA6AD4A171325595E6FA9E5774E4403B81C865B47B916EFC3A5F1C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/tiff-rgb.c",
+      "bytes": 6443,
+      "sha256": "7DB7E287B48A83155BD9EEBC3774979C631C9A7B7AA10DEC4F02558649547DE3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/xtiff/CMakeLists.txt",
+      "bytes": 1300,
+      "sha256": "D810AD13341A56162915645904BE0A3F98677F1743B2E641B75F2C8A8D14EEC5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/xtiff/Makefile.am",
+      "bytes": 1650,
+      "sha256": "53B37AEE9C110AE96CC21659D48DC4928D11B108F03AA8E952B55080EED04336"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/xtiff/patchlevel.h",
+      "bytes": 107,
+      "sha256": "60AEB31CD3E811CDCF8B79030D04D486D4CBAFC1B3641A425EC9853B06BA6F18"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/xtiff/README",
+      "bytes": 313,
+      "sha256": "BF7CADCAE50CB2054AC9BF2BC9545FFC33AEC4052C9DEDE2AD23ACD4FEEEBDD8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/xtiff/xtiff.c",
+      "bytes": 41914,
+      "sha256": "F5491E5430F4F0727483C35E680F6CD4683C3AC0261C3883276F461B53BF31C5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/dbs/xtiff/xtifficon.h",
+      "bytes": 976,
+      "sha256": "9C3BA8EBEB240872B340047F6DB4D147E7849F923876EDB9606829E9C104241B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/iptcutil/CMakeLists.txt",
+      "bytes": 1513,
+      "sha256": "DC147C8CF37EED0A0F03A82C9855BB93EBAAC9E86C28F1DF713FDC64ADAAD740"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/iptcutil/iptcutil.c",
+      "bytes": 23040,
+      "sha256": "BB4542E9681806D3077A8B9F4621B1CA464619BF58C0C581BE67A70EFA74429E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/iptcutil/Makefile.am",
+      "bytes": 1500,
+      "sha256": "556294109A656B0CF38F69701B3674C3845419DCB0D29F9F05A53B8AA536172D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/iptcutil/README",
+      "bytes": 1179,
+      "sha256": "D324414E0DCB4968FB23BC92CD4C8348478CF030945A340C98D113A5C0D77C99"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/iptcutil/test.iptc",
+      "bytes": 1107,
+      "sha256": "5E06252FB4EBF94ACCED11C6497F899CA736BAC380DFC5A0295910DF192C605A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/iptcutil/test.txt",
+      "bytes": 2106,
+      "sha256": "E76EE011212B8796C92981E3AFA942D51C0F9494641E5B6EEFFE32742FC5DBC5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/Makefile.am",
+      "bytes": 1368,
+      "sha256": "DB0CD294F3653CCC3DE25D54DC269C4F91FBDD489B92CD402423AAA143524374"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/mfs/CMakeLists.txt",
+      "bytes": 1274,
+      "sha256": "399675EFE1DC5FC6F27A6D0231C86F6BC24A0CC136F2AC00858FCF4E4B53A6E5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/mfs/Makefile.am",
+      "bytes": 1316,
+      "sha256": "EE26A221CC1017671E633704B5B372088D8259188AEB28275CD6BD24F5571FC9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/mfs/mfs_file.c",
+      "bytes": 15071,
+      "sha256": "C780538E70D18554916E9BCFC48214C9E52DDFBB77599E57AC81817189371115"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/mfs/README",
+      "bytes": 1342,
+      "sha256": "03F41095A7A7C3C4B7FD75C5C6960422262B591382A508423DCE175BEBF9852C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/oss-fuzz/build.sh",
+      "bytes": 2914,
+      "sha256": "B9BD4C0A965AF37A92CFE6556B77911F7573B6FB8AB3AECC9E3FA0A6E26FCF02"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/oss-fuzz/tiff_read_rgba_fuzzer.cc",
+      "bytes": 5378,
+      "sha256": "4FC97B4E1ABD601677EAF90BA17E639B4F19B93708AB71701818F098C7182BE3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/CMakeLists.txt",
+      "bytes": 1336,
+      "sha256": "148AD38A85ED073909669A62D1ED4366B1628AD8069983E5299F5AD6E0B80587"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/Makefile.am",
+      "bytes": 1381,
+      "sha256": "048B6DEC86A1D2A22F47B8664C31D90D106DAD3832F289E8139CF82B4272BDA3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/README",
+      "bytes": 4619,
+      "sha256": "7852A75DF3A3154E85239F8D7EC4C838F46B0AB32244240D7735A700C8859B55"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/tif_imageiter.c",
+      "bytes": 15830,
+      "sha256": "E4F67CF4CE5F267EDEF097DA92FE4954DD376131B21E9D2CA7CF5E8B917D9294"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/tif_imageiter.h",
+      "bytes": 2170,
+      "sha256": "ABB916187AE54E82494349C7CBE8FBC80249331FAE10C99823BEEA9DF8AE959C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/tif_pdsdirread.c",
+      "bytes": 32180,
+      "sha256": "CA7DBFB10F61287B0167D31537BB7B9C02A0AF56723E77F385FFD3C4774CC890"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/pds/tif_pdsdirwrite.c",
+      "bytes": 29922,
+      "sha256": "ADFA9687AFB1DE47A2240B4A8B223B3FA5DCB2F13320569D12302EA7E97A650A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/ras/CMakeLists.txt",
+      "bytes": 1285,
+      "sha256": "07780E754643F8DC5FDD19DCE5090C83636881A6C8E19578781DED04DF7B74A8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/ras/Makefile.am",
+      "bytes": 1328,
+      "sha256": "1391B11D20BEC1E8282D5A3D8FEA98B40669C7B96DC3D86C49CB44A05FFDC446"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/ras/ras2tif.c",
+      "bytes": 6764,
+      "sha256": "4C7579A130DB179AA5B314DFED2FD0267CC4F8F1F6EF12805EF4C7BEC562993A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/ras/README",
+      "bytes": 328,
+      "sha256": "CD7D5871DD139521459E4E116E9271F784ECCA6FD23DFF37163D9529E786C8C7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/ras/tif2ras.c",
+      "bytes": 9030,
+      "sha256": "10E688969B878EB5A192F1C52130BBEFC886FFFBD4A218972D84DA909DA1534F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/README",
+      "bytes": 67,
+      "sha256": "4E95E2C73FDA2DF57B89E3CA6D9A0B33BF5F634D0F6711553A7EEC79C3A5C7BA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/stream/CMakeLists.txt",
+      "bytes": 1293,
+      "sha256": "EDB5AF13D11957ABECB0A5BC68B2F6492807B2A07A1D66AE862D0CF2C288C1C2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/stream/Makefile.am",
+      "bytes": 1336,
+      "sha256": "7E4B77335C2849A5578DA70B7260671E799B57F54A965ED482BF902B52A8434E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/stream/README",
+      "bytes": 1543,
+      "sha256": "C42DE3EBDC04E508D448C13EB68467BCD69068D4CE2517A3B6381FE61C5FBBF5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/stream/tiffstream.cpp",
+      "bytes": 4593,
+      "sha256": "F1391206107CD4F12CEB12ACBB1A764FEA9A0D04DCCEE08E3E839E2D57092032"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/stream/tiffstream.h",
+      "bytes": 1448,
+      "sha256": "40189FA28DB76A16CE53459D6F06C968189570C10E83607252BFF5B5CD5FBEFC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/CMakeLists.txt",
+      "bytes": 1324,
+      "sha256": "4E841391206271FCB13752FE1114D52132407E94CEA179B5AC68C5AC6556CF96"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/listtif.c",
+      "bytes": 611,
+      "sha256": "D1B4580776C54B8FCEB3AD854E87AD0F3E6F53B8E056A139CFD4EDEB981F5BA6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/Makefile.am",
+      "bytes": 1369,
+      "sha256": "7A61D657B465AD33D1AE41DD1D73722C63283FFFAB6DF7B3744466B99303161A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/maketif.c",
+      "bytes": 1613,
+      "sha256": "F8A92E30FD33691BF4C8C80FBD2CCAB6CFEE24AC0649365C2501E0B0A647054F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/README",
+      "bytes": 4853,
+      "sha256": "37A2A47399BC81BC37158F88FA907C60C7E281447C4BE20854B534E3710D43A0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/xtif_dir.c",
+      "bytes": 8391,
+      "sha256": "59DCCAA349B470BA77282257D6CD45ED660C24CD3ABE34B23C841D017CA0394F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/xtiffio.h",
+      "bytes": 1508,
+      "sha256": "205FC6E44960B9EB49B0B766A1C8CC56E7D1EC8C5190C6FBFA269AE748EF21E3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/tags/xtiffiop.h",
+      "bytes": 2055,
+      "sha256": "F197AF0BB3896483468FE14FDCB79211FA09E237DD9EA5E2A33748F631420ED2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/CMakeLists.txt",
+      "bytes": 1329,
+      "sha256": "3C7801BA92E3FD5135975CBFDD5F7DDB815E73C71DEF75A1D8126703554A3217"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/Makefile.am",
+      "bytes": 1374,
+      "sha256": "234E38512CDCED8204B5FDAB652570AE4FE4ED038E78449C2A1FAF0F89A42C60"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/Makefile.w95",
+      "bytes": 3167,
+      "sha256": "FFD5FA6F83F90A30262400348DB66069A26510E9EC58CF6546E8C272249D53A6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/README.tiff2dib",
+      "bytes": 1567,
+      "sha256": "4976A8EEB37C211D385FFE2FD2A5A879D7919C85C7C8ECD322F3E73C30A4DC22"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/README.Tiffile",
+      "bytes": 1237,
+      "sha256": "6152C3F2F936E7C60D942E94719BAF0D824CA2CDDC4052BB35DE6AAD7068A8F2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/tiff2dib.c",
+      "bytes": 11105,
+      "sha256": "4340CD0D64D08DD0786282CD1F7022673CF3CC8B727CFC30B6EE8823A353D104"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/contrib/win_dib/Tiffile.cpp",
+      "bytes": 13070,
+      "sha256": "4F55B5FBC46CF95BDA517F173449160B104C6F20D3F84320F0A65321400506A5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/COPYRIGHT",
+      "bytes": 1146,
+      "sha256": "FBD6FED7938541D2C809C0826225FC85E551FDBFA8732B10F0C87E0847ACAFD7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/HOWTO-RELEASE",
+      "bytes": 4991,
+      "sha256": "B7CDFDD4C8D67B6D54E6BAA4F1E7E3BF0F4F6BDC242AFC06BBFE565AB1F49A62"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/HOWTO-SECURITY-RELEASE",
+      "bytes": 816,
+      "sha256": "6F508549F423AA63A67354D05BED4676A44266A65C6D126994D53C2731226E62"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/addingtags.html",
+      "bytes": 11883,
+      "sha256": "9C4C15B35308786BCF097A700217719101216A8E397C11AA5B086EE554EF477C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bigtiffdesign.html",
+      "bytes": 3527,
+      "sha256": "73AC58B30E5F0B509769C904DA757FD7F110F07B3F296FEB901F8EDC9C82E0DE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bigtiffpr_images/esri.png",
+      "bytes": 10281,
+      "sha256": "0B08FE2974039C735B3721CD5407C8E6D37597121A46A51EF327B03932ABF823"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bigtiffpr_images/leica.png",
+      "bytes": 6451,
+      "sha256": "C9EE55E89A357360856BC74A9BD1A36DC2F3CF9124D55C4286559818CDE0DF31"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bigtiffpr_images/safe.png",
+      "bytes": 10285,
+      "sha256": "D90A295292D448734A4604A8FE1ACE96DDB8413D213D4946452CFD36F5CBFB83"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bigtiffpr_images/weogeo.png",
+      "bytes": 4160,
+      "sha256": "F63327B4A89230C80FA845C76318486371DA12079CA9D4329FCDD868298B1216"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bigtiffpr.html",
+      "bytes": 5184,
+      "sha256": "10A8D936D59B02313DF795ABE9164C054F6BACA247616D88001EB6A0A8E73E98"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/BigTIFFProposal.html",
+      "bytes": 6705,
+      "sha256": "80215AB5E47BA7CEF8BC78C0E28C2552B049F1F0C2150043BC5FFB9B76792200"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/bugs.html",
+      "bytes": 2530,
+      "sha256": "570B120CBAE81777494FE5B2AF455BC89D89A212C0DD6BF9566AEEC4D3A8289B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/build.html",
+      "bytes": 33495,
+      "sha256": "3F1F7E4E021F41E480E2B15DBDDB096909A307DC2447D4161A22A8974EECE175"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/CMakeLists.txt",
+      "bytes": 2253,
+      "sha256": "50BB88DDC1611AD4D49A5A08CD7DF4DF8C96E1418F7E1B572E437BF483F4ABB7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/contrib.html",
+      "bytes": 3850,
+      "sha256": "B93A14311FADEB97E5706DB8E8BA6F2338B4E61222D4E1F2C8448486E98019E5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/document.html",
+      "bytes": 1697,
+      "sha256": "01B605E67B530ED67B27CA92AB50F3164A5DB8F36CAE2E76CC24D3D8CDE38577"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images.html",
+      "bytes": 1182,
+      "sha256": "FDA3010E68F509ABE5A44AAE11DFB7B7D72908C72D05D12A176C35FFA0C276F1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/back.gif",
+      "bytes": 1000,
+      "sha256": "2183DEF97C23FBDC52D9480F6440AE4A48BA2EF50820CB0391D21AC063227703"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/bali.jpg",
+      "bytes": 26152,
+      "sha256": "57FBCE241665DF2822435F44322637200AACFE1A7F6148B980C2A2CCA58C6BBD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/cat.gif",
+      "bytes": 12477,
+      "sha256": "ED2814EEEF7E921C3147D331A1E31BACEF5EC590097843E7F0316412EE20C953"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/CMakeLists.txt",
+      "bytes": 1547,
+      "sha256": "B66859278B78432658D3C03DDFE843B94D6E05DF72575BE14E8329127B11C9D3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/cover.jpg",
+      "bytes": 20189,
+      "sha256": "DFD70D65EB33DEA306DA1A307FB9F72630A21250BF728B41529762B12D0295E7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/cramps.gif",
+      "bytes": 13137,
+      "sha256": "9BB21338AE3863DCFC9BDE1AC24C497A8791D9392F90D82EFB745BACB7F7E362"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/dave.gif",
+      "bytes": 8220,
+      "sha256": "2A08404EA8E5F50524C8830EA75F7055D36953089ED3E4F62B1656078B30F46D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/info.gif",
+      "bytes": 131,
+      "sha256": "B8D71C204132C07C0EDF6587B8BD95C018618BA12A510B68F42B039745E636E1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/jello.jpg",
+      "bytes": 13744,
+      "sha256": "2C41ADA2948B00667E0F7347BA7A9EBE8534049808F921C6837A8832FE869306"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/jim.gif",
+      "bytes": 14493,
+      "sha256": "D260032455466BAE854B9D2721BB3B937DD6FEE1BDFB864E614869FBEDDEAB03"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/Makefile.am",
+      "bytes": 1578,
+      "sha256": "7995478B5348EFC171C268CCE42BB9D69D06BA3A729F5612805B4F9E9A536682"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/note.gif",
+      "bytes": 264,
+      "sha256": "25A93FA3FB4EB402C4A08B68B8D3F39C9C44A2DA9CD7D81CD1E76D96E102E256"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/oxford.gif",
+      "bytes": 6069,
+      "sha256": "CF30C0BE907027287A1B9FD76D60DA18BDE6CC231928510D40852283DC666E51"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/quad.jpg",
+      "bytes": 23904,
+      "sha256": "36A886608CA0DDE3501BDF46FCDFA10E40739A1D78CA17ACBD60E08C1610D824"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/ring.gif",
+      "bytes": 4275,
+      "sha256": "778F692D0429B8B619EADC19F61EE21437CC67FD81FEA7576E9D378EF17B183F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/smallliz.jpg",
+      "bytes": 16463,
+      "sha256": "7E29AC5DFAAB783EA2B144EE67833C7A07E83E60098FF4988CC71A73C9A5FAF9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/strike.gif",
+      "bytes": 5610,
+      "sha256": "FD9BD5D12EF19B77162D1F3519A79712514DC03C9978B710482B6E66C2C1C68F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/images/warning.gif",
+      "bytes": 287,
+      "sha256": "DCD5415FB41476D261752969A610C8287CB8D9C50BD1A8FF1C8A1AFBEE22F7D9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/index.html",
+      "bytes": 4932,
+      "sha256": "5660B082C210A5980FA6D91C91AF674B828EB7C7C00C20824E46E57F6351BB34"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/internals.html",
+      "bytes": 19355,
+      "sha256": "EB61D5CD5A6D556D5552A60480EB1495D4AB5FCFD3ACEE29329950ACCC578F0D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/intro.html",
+      "bytes": 2500,
+      "sha256": "0CF84CDB875064ACE5332100D174262EC12A1491C4A576E152550C605E5E62C4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/libtiff.html",
+      "bytes": 37322,
+      "sha256": "E3F3C7F58DBA1FF9AD8F6CBDA4FE40EA4BED01B14B1691A0773519B50DDBF48F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/Makefile.am",
+      "bytes": 2434,
+      "sha256": "13EC5E00C38D1E48A85A91FEDAC8BD25CDC7900D41806B710190A4A2615D5F68"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/CMakeLists.txt",
+      "bytes": 3460,
+      "sha256": "7B97B62AD4D27B233BA0C136725A28A789374F9CA3898E5E72EE7E8F3C325265"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/fax2ps.1.html",
+      "bytes": 7741,
+      "sha256": "3152E5F5C3485EC418335899391D4BCD83E712C6130BD844201A093D494770D7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/fax2tiff.1.html",
+      "bytes": 14713,
+      "sha256": "8DA7C30CBF0BF088D69E660A4E99162AAEE8422A3AFC261CA87D5C317927F3F6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/HtmlDoc.cmake",
+      "bytes": 2147,
+      "sha256": "9C2F08ADB1F4D7C7E96FC5B1DE86FC185FCA04BE603B511B34D82EC1A6ED9621"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/index.html",
+      "bytes": 3826,
+      "sha256": "A54C41971462B3917B751E72B80078E370BEA1CD3C3D32F151349B931B378E41"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/libtiff.3tiff.html",
+      "bytes": 24576,
+      "sha256": "007E50D69A596A022CA1CCBFF293DB6BD73620C7C192A3F8C2B155CBE0B307A9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/Makefile.am",
+      "bytes": 3649,
+      "sha256": "82537607D3E81FCAE5FFBB651903F49BE6E558CA9DCBD8449B2491C8703FC6E3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/pal2rgb.1.html",
+      "bytes": 5244,
+      "sha256": "5CE6B0788ACB7A28B0A4FB9260C010CE6CBBE9F32D65CBC714DA2DB27BC17625"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/ppm2tiff.1.html",
+      "bytes": 3979,
+      "sha256": "535C817E6E3C177D08E2F60DD37DBD1C0C0405F612F8CAFF352B33B5A7A0D14C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/raw2tiff.1.html",
+      "bytes": 12746,
+      "sha256": "0F69782DF79E795EAB14EF853899DEF5C15D52631D4C65E713CCBA210BDB1DD7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/rgb2ycbcr.1.html",
+      "bytes": 4243,
+      "sha256": "DCEF5CB0FF6CE00D76D3F21BAE12D689EB49AB6DB91E7CDDA8803DFC0E62E9DA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/thumbnail.1.html",
+      "bytes": 4068,
+      "sha256": "FB5C1294E12217FAF896E6B15ED8AF9AA0E97C57B272CB98D25244AE79FB1EFD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiff2bw.1.html",
+      "bytes": 4057,
+      "sha256": "AAF531C5DF35DDE8458318A44D1C3705B1F0630639A1E99B75AF6168231A2162"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiff2pdf.1.html",
+      "bytes": 17942,
+      "sha256": "3FD1E27B5C9704DCD401C9B2B9698D41155440537429CC1829213967FE3509FF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiff2ps.1.html",
+      "bytes": 15016,
+      "sha256": "AA5B2B517B040705424D95EE4A7045B1A1D40439093056F68B194157A03D4030"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiff2rgba.1.html",
+      "bytes": 4588,
+      "sha256": "C43C55E3D19D42332854ED0B719F62A246A353F74AC1F415E8EAA1EC298BF021"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFbuffer.3tiff.html",
+      "bytes": 3880,
+      "sha256": "C388DC1A66F7DFD680857C604EE72F1DBF99F4CD630F8E6E1AC8C22D56C83D8C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFClose.3tiff.html",
+      "bytes": 2479,
+      "sha256": "3C6B47E6739E0E6C9F531C09B57055586C9D11E2C7C421C186CA2CDA623775F7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffcmp.1.html",
+      "bytes": 4401,
+      "sha256": "8F52DB3B873824E6A9B68F3B965A1990582F901C127D7AEDEE7024A114460959"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFcodec.3tiff.html",
+      "bytes": 3700,
+      "sha256": "9DE9F44426963E50C5BA0A8941F579C7EAC49B59C5B872221EE342892E47FF56"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFcolor.3tiff.html",
+      "bytes": 22763,
+      "sha256": "14BFEE1CA73461E647CA937FA943D3600531B9CA376E8E1F68CEB0FB1543CE81"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffcp.1.html",
+      "bytes": 15754,
+      "sha256": "2EC5B5F17689F4F6C0499F8071E659BD77E4F449442997E7A74816D0DEE5014C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffcrop.1.html",
+      "bytes": 20402,
+      "sha256": "851D71D8CA5A326A066A9DCBD087D16321AA6D70120CE90A27AE04D4A50630C2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFDataWidth.3tiff.html",
+      "bytes": 2556,
+      "sha256": "79E450B45C107805ACF1F9E94CBE4D0F8F77DFA9240EE5C8A57887AB7570B056"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffdither.1.html",
+      "bytes": 5789,
+      "sha256": "69724022A745E74A05B6F688B2A126A7FBF8F3BC762E3CADC579FA8F6B8438E4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffdump.1.html",
+      "bytes": 4416,
+      "sha256": "ACB7A0C0D2B5D72EE5293116D6272B0F36E2BBBAEB910CECDC163F4CBBAF4D2C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFError.3tiff.html",
+      "bytes": 3247,
+      "sha256": "0E35301706D2B99CD1357A942CAD75AD1C9D943F9A78CFFB39B0BAC0E1A08920"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFieldDataType.3tiff.html",
+      "bytes": 2182,
+      "sha256": "1B2610E543E9E1164467D6F2F128B79691FC47C274CF43BCB09796AC521FC4F6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFieldName.3tiff.html",
+      "bytes": 2127,
+      "sha256": "AAA4AED7E739B82FBEC44E30381617091282FFA845BA2F96BEBE49D13B621C39"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFieldPassCount.3tiff.html",
+      "bytes": 2612,
+      "sha256": "E92104FC4D7A462FDC44FB41A933DFC20FB16889BA2AAB1B1295039A1F35367B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFieldReadCount.3tiff.html",
+      "bytes": 2820,
+      "sha256": "509F0F6DAD14044E26BE16BC0AAD959BAAB579D648DD5443D2DC19BFC8225AEC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFieldTag.3tiff.html",
+      "bytes": 2249,
+      "sha256": "6CED76E0A72B3618FAC5BB5440D3A2294458100B44067C97D0AFCEA0CBE49417"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFieldWriteCount.3tiff.html",
+      "bytes": 3144,
+      "sha256": "7AADB62191D9B40DAA33DE477BD4264C01860DA5B4729DA68D5874CFCB6BA5FD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFFlush.3tiff.html",
+      "bytes": 3345,
+      "sha256": "86D1FE1FD930CB5ECD0D37F1D97B8383324C3079F84C054049DD2ABA90EC8541"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFGetField.3tiff.html",
+      "bytes": 33458,
+      "sha256": "6542D499DDA6E573E2F660C10B6947F014C83E66BA8F5A99CB1E5978242A2592"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffgt.1.html",
+      "bytes": 12753,
+      "sha256": "BEC60B1A5DB8028597E22D575A263EABC69D07694D03121A9F7F7A32FD110599"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffinfo.1.html",
+      "bytes": 4454,
+      "sha256": "D65B265428C0089B2CE384A4C22A10D4F383C815BF8985FD733AB030DFB4DC5C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffmedian.1.html",
+      "bytes": 5154,
+      "sha256": "61D9B08BADDD2A26FFA55BC4BCAB32921ABF530A733E056701B7584DDF41F4F1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFmemory.3tiff.html",
+      "bytes": 3569,
+      "sha256": "51CC544FE770D9F7F3877A38A8ED93EC413F7D5A3ADDC3305FBE35552F54CA0D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFOpen.3tiff.html",
+      "bytes": 13700,
+      "sha256": "2695D4B1EE1593EF6D6D16A5707527A6867CE3B38067C4CAD48272ADC2472C01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFPrintDirectory.3tiff.html",
+      "bytes": 4733,
+      "sha256": "505DB69F664A26E7DF1CC543453530136003EF7C015A9452E8F07CE43EFEEFC0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFquery.3tiff.html",
+      "bytes": 5166,
+      "sha256": "7517AA871A2DFA0BA40BD5108D69586A592A7D65CE71C175A23EEFB37E3C7A04"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadDirectory.3tiff.html",
+      "bytes": 8106,
+      "sha256": "BF5F6869AE566FE1B62934BDBB012BC6854CC491CD7B06B44868B03F0C2A4D86"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadEncodedStrip.3tiff.html",
+      "bytes": 4299,
+      "sha256": "B0ED853FEE8C3061FFA2303A3E2DCC34A534A8547717C41C54B8EFD8F23DDC04"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadEncodedTile.3tiff.html",
+      "bytes": 4133,
+      "sha256": "1B59A919D54B2B0DECA365ACCE6FE5D870D9F5F87254FCC49089822CE5580420"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadRawStrip.3tiff.html",
+      "bytes": 3340,
+      "sha256": "7F67970A7C0B632F9746873BCA586FA722A125E88A6EF9F98F5DAB9543591745"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadRawTile.3tiff.html",
+      "bytes": 3425,
+      "sha256": "76DE27118A65D2763BE4B8DFA23F886029A5AC26D136F50A4502D34C0885DAEF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadRGBAImage.3tiff.html",
+      "bytes": 10482,
+      "sha256": "D33E6D556AE5676E570B850B363E037B8BD41F57CF304DDAA7DBF452900B88A3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadRGBAStrip.3tiff.html",
+      "bytes": 7481,
+      "sha256": "14F56A3F7F38183B8A3BBDF00A547321F4B2F01CD25BD130201ACC28E7A856D7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadRGBATile.3tiff.html",
+      "bytes": 8477,
+      "sha256": "26503C116225E89964226F5A663A3F7AEE9E21C86D545419843BD3E3C73AAAAD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadScanline.3tiff.html",
+      "bytes": 5257,
+      "sha256": "CC458CEFE778C27CDBFBF6D3FC68B79FDD24866E5F6EA639A0618357D360270F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFReadTile.3tiff.html",
+      "bytes": 4278,
+      "sha256": "E3EEFCAE4AC2876AB132C3B662966BA3A7A7DB69A6AEB73984F4DA3B510062D4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFRGBAImage.3tiff.html",
+      "bytes": 12310,
+      "sha256": "4FB34A68F4BEDABA9983C7352AF2A99BA7FF3CF06A3E1597611423A8549CD92A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffset.1.html",
+      "bytes": 4920,
+      "sha256": "026DB5EE4927F33C5D40B9FBFB1579287E378811CA9D78FB2F520035F98B17DE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFSetDirectory.3tiff.html",
+      "bytes": 3828,
+      "sha256": "77A73C8D0F4EE66979ACB3F2733983E10D6D42A8A5375333F7FA81C9E8F0766F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFSetField.3tiff.html",
+      "bytes": 31093,
+      "sha256": "63688CC5B87F916B75C1B56FFBD3EB2BA030201BE205E8DEBDA681DB562482D4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFsize.3tiff.html",
+      "bytes": 2748,
+      "sha256": "B2B0094F31071439C80E648779821A1245CD741046146684EF9194E8731AA850"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/tiffsplit.1.html",
+      "bytes": 2927,
+      "sha256": "542F0432D412A071B233E6AB5C4EE6B91D2B362B038F61ECE06FE70F2E383CC1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFstrip.3tiff.html",
+      "bytes": 4356,
+      "sha256": "89D46BC3EE8087E3B51E3795E2EB918F6F2B4B228B565B89D715B2793E0EE966"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFswab.3tiff.html",
+      "bytes": 3492,
+      "sha256": "D468D83484AD4AECA8BC841036F1FC9DDA926F77EF55D38B5C64627EFDEDB68E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFtile.3tiff.html",
+      "bytes": 5014,
+      "sha256": "155C83EE67835B3ACCAAF4CA0DD12CA39AA71BBE1B5D7AEE0A87A76406574745"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWarning.3tiff.html",
+      "bytes": 3353,
+      "sha256": "3B44CB6A67B7745A11164561A03B2C87540B8867817EF51DA5ADB8510BDF4903"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteDirectory.3tiff.html",
+      "bytes": 6485,
+      "sha256": "81C97BC39F96B55C78895A70E7739CE310560D6E875EB5B8F26236ECCEAC41B3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteEncodedStrip.3tiff.html",
+      "bytes": 5093,
+      "sha256": "B7185D1DD5FEBC365E572FFF373818553D6D007571E6FB4982CAB6E7343817F4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteEncodedTile.3tiff.html",
+      "bytes": 4894,
+      "sha256": "21E224B1DAF755319FA70D76C3B94A1B8B4D4C389516A0F0A6630D5643427114"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteRawStrip.3tiff.html",
+      "bytes": 4511,
+      "sha256": "9260DF6CBF8308DB74B02683748427C51FEB25AD1D6E3733BB409439B77D9CF5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteRawTile.3tiff.html",
+      "bytes": 3978,
+      "sha256": "8DA9283627F3D04C71E88012DEC99EA4A2F155E0A61B686C3399419453A6F948"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteScanline.3tiff.html",
+      "bytes": 7387,
+      "sha256": "EF43B1C6E5C101515A1959A8B056FCA7B5FFAE7903CA663D428EEF0F528F4687"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/man/TIFFWriteTile.3tiff.html",
+      "bytes": 3638,
+      "sha256": "E8EB90DB0253BCE04A670D210811D6BFC57074E6E5C822E1634584A17CD3F3B4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/misc.html",
+      "bytes": 3941,
+      "sha256": "C9B12F047AB7041ED692187B29C1DE568922257EE2FB146325CB071954FE7E3F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/support.html",
+      "bytes": 17614,
+      "sha256": "349E63E16A266C79EFA5FB55138AAA4B4C2FADDB54A0D8C827798407A67E8693"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/TIFFTechNote2.html",
+      "bytes": 35698,
+      "sha256": "9742EAC7BC1C975170456812D801D7C4E9AFD474269BD62912591A8B76FF6D5A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/tools.html",
+      "bytes": 5673,
+      "sha256": "48EF1AB1C086B181113E7C425D015F561C69296C832F87EFC8F959805C7E5883"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta007.html",
+      "bytes": 3964,
+      "sha256": "0FE0241FCC0715F75967FFB5489C91778B65E2D831422E898884A46DCA229F51"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta016.html",
+      "bytes": 4092,
+      "sha256": "620F223F4288A16E46531062F61B2A72574D10D3203CDF597B20D8A08B4A838F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta018.html",
+      "bytes": 2716,
+      "sha256": "02F1B8F97F056C38DC9C2AE99B0BF0B87A07F9F3AFD96BD67A45CE85DD58492F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta024.html",
+      "bytes": 5407,
+      "sha256": "6C2188DF68973C4ECDB95EDDFE7782814F41A0BC803F8327F1F819CC9414AAF2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta028.html",
+      "bytes": 6051,
+      "sha256": "2950DBF7EC579F9EC5FA36873828F96C78E9D0EC1A93BF68E7B4589533F5E404"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta029.html",
+      "bytes": 2838,
+      "sha256": "B7BA3C054CFD49864A205AF95F5B2D39AFCDE1BCD479378707534EAE83F48EF2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta031.html",
+      "bytes": 3394,
+      "sha256": "B36175DF78CB59B4594EB4A4E88417A01E96CAFF24519DC177BA1C2A6B306B34"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta032.html",
+      "bytes": 2763,
+      "sha256": "153B2B2EAB3536329F21AB0ADD1D5C6CEDD36DA153B0B655A9029808D48323EF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta033.html",
+      "bytes": 2357,
+      "sha256": "DF4977BD02D5691F8BC6BBB9D442975DBF386DEC6DFE0CE707C7161A82034E20"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta034.html",
+      "bytes": 2230,
+      "sha256": "FA07B1E1CEFBFEB954CE56B52939C7E64CB02DDCD6C3D984CC5890BBCFC7299E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta035.html",
+      "bytes": 1861,
+      "sha256": "C0E1909E287CAD97CD2D057EE1C6C04CD95CAE7E6A78F4B456D105B87C42510F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.4beta036.html",
+      "bytes": 4636,
+      "sha256": "7DFFD514B8A7423720B25324061527DEE8EFEBE2A64E4E8079A0CD5A9349E31D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.1.html",
+      "bytes": 2242,
+      "sha256": "21BE6572A17BEC15F071BF69E2AE46CD981A02EB1A1270240815468F5E2AFC88"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.2.html",
+      "bytes": 3344,
+      "sha256": "2AA6353BECC8D7A3AEE8EB8259A8502A1507A0F06455BB665DC513D6E00C179B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.3.html",
+      "bytes": 4331,
+      "sha256": "F67E3F8A8EEF2FC4D945C7B1133C2EB9293A7CF65229A08502C3F0C4BC7DEE23"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.4.html",
+      "bytes": 2447,
+      "sha256": "3E66CBF46353EDF805C5FA49E81541A196BF4B7DBCF821B12CDD0097C4B94B46"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.5.html",
+      "bytes": 5070,
+      "sha256": "72A41422BFDD895A7F0C27C48043D48CD665F1D08F20EC971552FC8598BD9E19"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.6-beta.html",
+      "bytes": 6191,
+      "sha256": "11E0EC5E9322D225D6C88EA8B1BCED73FAF715CF463B7843751CD6293D78CF05"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.5.7.html",
+      "bytes": 10092,
+      "sha256": "1A3ADA9AAB369BBCA50FFBA955897CDBC6B40C686CB1CE8DF10119A9037967B4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.6.0.html",
+      "bytes": 16847,
+      "sha256": "0B2FB3ED81884E02A3E4F2DD096EB9DE75333760C73DE4B1DAC34BE49918F2B7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.6.1.html",
+      "bytes": 6888,
+      "sha256": "074A076B70E6A5646D4FB9725128D37871C78BFF1597711CC5FA6788E5F3778E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.0.html",
+      "bytes": 4223,
+      "sha256": "8AEF248ECE9E95A5F4DD5BD6FBDE403E0DF6A7B60464130A376913C245BFE87D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.0alpha.html",
+      "bytes": 9163,
+      "sha256": "9DA9A12531C908A13577D9B22A5688CD74F751C4DBEAD518D19A6850D61E19E8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.0beta.html",
+      "bytes": 5025,
+      "sha256": "B264CCBA53CD04638C0558AEC8F364653FED95234F9E65DE22109E571A84B6FD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.0beta2.html",
+      "bytes": 3684,
+      "sha256": "F3E3734A7BB1EFE39971B2A190FC94F5C033E7B04A25B22252C3832E376BC0E7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.1.html",
+      "bytes": 8260,
+      "sha256": "031CA936F4D7D6D9ACC9F7ADB52ED93ACE73F7754E134ED3DACC755C644125C0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.2.html",
+      "bytes": 8088,
+      "sha256": "CEE5A8FB8175DAAEF6EDA5996C1324F1889C7FDF757DD7E205AFFF837786149C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.3.html",
+      "bytes": 8319,
+      "sha256": "F5590BFEC52DF0C84F497FCF8B92A65EC7EB13622B2B99CBAEB25A9C61731BB9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.7.4.html",
+      "bytes": 4328,
+      "sha256": "BE73BEB17187DBAB1D64FD9AE4DF0352BE3D091A3D512048ED2AD44235F37634"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.8.0.html",
+      "bytes": 6895,
+      "sha256": "8E88430E082A811CF524B8FEBCDFFF82D465B4D112F5814BD15D9320C2798CBA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.8.1.html",
+      "bytes": 8122,
+      "sha256": "C455E49B8DF9E3A8071204BEDF955A75453FDB39DC9B9B334785372F30FE851C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.8.2.html",
+      "bytes": 4353,
+      "sha256": "6E21241D3D34A4F9A483582CE751D43B7B15413D46201F0BA6EF27AAB4266D53"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.0.html",
+      "bytes": 9686,
+      "sha256": "75D935A8DDDE55EB05728384A8CA95EA6D8C4C808099CDF018ED2205C1AFD9CD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.0beta.html",
+      "bytes": 11784,
+      "sha256": "284FA4EC6B2770A3BA70AB0DE5DE6FDB94B967D4915713D75A3021F53697AA08"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.1.html",
+      "bytes": 3258,
+      "sha256": "DA133325BF103A805091E9BAA9C5CE8706AF6F264B8D9F68652143477CF0A370"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.2.html",
+      "bytes": 3461,
+      "sha256": "277933A5A2F979888F0266D8111DE45BFB7CBCB6FFF85A52D278944FF4C5DE24"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.3.html",
+      "bytes": 5098,
+      "sha256": "7C2389C1594638D59559BB0C6A8F86B524066EEB04F97B19848DA07AF7312733"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.4.html",
+      "bytes": 3718,
+      "sha256": "225006F1C7DD2761565388ED816899559352C64F7E50A36DE7D7515FDAFFC975"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v3.9.5.html",
+      "bytes": 9700,
+      "sha256": "010F29673A1F39431A22A2581F1CBD00487DBFF899C3010AB491929710BBA727"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.0.html",
+      "bytes": 10821,
+      "sha256": "FC8C29C0421814171B1606DA3632F9E626B470F6C3791510308B6965DE2618A6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.1.html",
+      "bytes": 3107,
+      "sha256": "0AC66999FE23674A262E0D68336FFD5DEEDBA31D1C0C5759174D0B190BACFE6D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.10.html",
+      "bytes": 12431,
+      "sha256": "3B1B499BEFE260DAB84C5B5AB51FF38760DB31C2500F2F35CF492CB5B59378F0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.2.html",
+      "bytes": 3081,
+      "sha256": "87792255A8082D6126A4209C0EA58E507271B2888747A45A2CA424E70F528534"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.3.html",
+      "bytes": 3525,
+      "sha256": "81215727E72126F82C53FBF92717A2148186D1BF0F922681119DA6BD73CB663C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.4.html",
+      "bytes": 8260,
+      "sha256": "BF6DF32388E5AF8663C9E73458B893C20E953B49D1D3A21D9159A5768E426619"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.4beta.html",
+      "bytes": 13307,
+      "sha256": "D5FD868E9F793F4276D3C3E8712D752051A2514DF112824AC24AC829F1040E44"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.5.html",
+      "bytes": 4437,
+      "sha256": "9C88CB763E3D252F18C250F50EB6DD41BF88BA37BE89665D136A7510BF3AF3F0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.6.html",
+      "bytes": 3908,
+      "sha256": "4BCE7AD8D63E852A721F0624A311416DEE679E73E97B792E203ADA0D0DFBD4D7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.7.html",
+      "bytes": 17475,
+      "sha256": "374801DB73902B0BA0694C8B8608B0B16DBA7E60DA56D3B7E3FDCD750FD15D34"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.8.html",
+      "bytes": 18796,
+      "sha256": "0D018F567841B10A3B034D0915003D715D21565BBB6E2A54CEC0744D8E816941"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.0.9.html",
+      "bytes": 18188,
+      "sha256": "9E28D9E6A1DECBF953F3576D97C7D63F7F48AE6D222FD4ED550D5BD0D98F677E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.1.0.html",
+      "bytes": 5947,
+      "sha256": "0C2E52CCCF17A94489F37FAB55D3582DBAF8EE81CB6CD5371009F31A99F8E89C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/html/v4.2.0.html",
+      "bytes": 6076,
+      "sha256": "657561834A95FDC9F3C282488D515DA99096306DC8A10EE63862EBC37EDD41C7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff-4.pc.in",
+      "bytes": 251,
+      "sha256": "998CD401212F5DD649EDD3A79171933136EB89B3B460DE5AE40667157B174CEE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/CMakeLists.txt",
+      "bytes": 5013,
+      "sha256": "9EB1D7097135EC55E00F286C64BD6C1D5A94DD8027539A06C69F50B0CD56B541"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/libtiff.def",
+      "bytes": 3353,
+      "sha256": "996F347B6F8C2691B4664DBA8BDE6FD2DE73A97302A8ECC0C57FC880CA2A10C9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/libtiff.map",
+      "bytes": 34,
+      "sha256": "96FBDFE467F62737D02F02DA188ACD3BD7165E7860ADB54943217A5C7AED6C75"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/libtiffxx.map",
+      "bytes": 36,
+      "sha256": "EF9FE3C6F69EA55D6A26F2C931E58229130AE9840311E7649DA966F36B323A9B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/Makefile.am",
+      "bytes": 3735,
+      "sha256": "F033A10DAA9146288AB303870D4297E90ABB7D6B34EE5B53AD176A6186238080"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/Makefile.lcc",
+      "bytes": 3010,
+      "sha256": "81E9D3697DC35E4724BDFD977DE48AF683B2397842BF82CB418EF983DF3E808A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/Makefile.vc",
+      "bytes": 2692,
+      "sha256": "7729A93DE4A60D6F71E613041122D8908F88D12B5A091E01BD36EF3322B7EA71"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/mkg3states.c",
+      "bytes": 9543,
+      "sha256": "A75C1B21A7233FABB42690096F4F6EB398D345E5DA26F3C00D0975FABAFE0B17"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/mkspans.c",
+      "bytes": 2288,
+      "sha256": "80CFCC3E4438EBF7C9993DFA58BA5DE70DDC217CBF3ACDE472FF7D94DD43D6C9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/SConstruct",
+      "bytes": 2139,
+      "sha256": "7C4378BC224CA848C537CE1A75B2B1A5CBEC1701472DE96A32F4F30CA1CAEFDC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/t4.h",
+      "bytes": 11321,
+      "sha256": "51876A996E2FF7DC5212F3BBC7CFF6833A61B1311ED4E795269EA38D65CDC568"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_aux.c",
+      "bytes": 11014,
+      "sha256": "AF0AB26748070C2E7E229E6E77B02549FA77DC2DB592E51B481151ACE6ED16FF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_close.c",
+      "bytes": 4070,
+      "sha256": "45F207837063FD27B5821153F6E9F91B713EB0F075B5328AF86C3CA6B8FBB735"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_codec.c",
+      "bytes": 5149,
+      "sha256": "BEDC492D72825AB972090FB8BB4D0A13F594BF7C236C210961205A7A715F6594"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_color.c",
+      "bytes": 9489,
+      "sha256": "1D6AF3F4A6A3B0BD2BBAB70C61DE5963A68B4D5B859B372F6F857724701A2445"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_compress.c",
+      "bytes": 7886,
+      "sha256": "390E117269D546675E1CCA75D1627CE472A29D94DEB179227A12BF7B85F8622D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_config.h-vms",
+      "bytes": 1221,
+      "sha256": "319DF260D13D97390684EA78BE6279C3F50E03D73C6B0A22A4260C58CA724EC4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_config.h.cmake.in",
+      "bytes": 7054,
+      "sha256": "53341BBE61BA7D2651D9B462F66749F36A3DD5B776C28B5AE70C3EB49DE043BE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_config.vc.h",
+      "bytes": 3537,
+      "sha256": "0453644E0ABF9B3BA3CD2F2172B403CCDECCAACBBEE812BE29F03E6146FD5851"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_config.wince.h",
+      "bytes": 1780,
+      "sha256": "B128DAA1FA8076C17CAEA913C658171566702DC9D9ECD2E72FE67847A0675F5E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_dir.c",
+      "bytes": 53826,
+      "sha256": "FFAB237E780D586F9BD4778355FB4EE575ABC811968739F4E28104E50BB7FE99"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_dir.h",
+      "bytes": 11526,
+      "sha256": "8F62FB1B0F9E50876F367D89FB20D776A711C25D7C8029E8BB35BA5F59CFD6F4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_dirinfo.c",
+      "bytes": 63639,
+      "sha256": "DC83B3D3A6ED64D704B9E942CCE0F33CE7DE3868E0DC92A6393AA3E11744B725"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_dirread.c",
+      "bytes": 173166,
+      "sha256": "F79F76191AEA1A103BD5AF531C1A931785EE41DD96C6916A4A375DE5036643B6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_dirwrite.c",
+      "bytes": 117411,
+      "sha256": "958ED43C8FF466903BFD324F4A084318F0D657DE53E38DB86F89DA1E74889CE1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_dumpmode.c",
+      "bytes": 3789,
+      "sha256": "CFBDF204075950B5E6B04266953A4947B6461B205DF85B1A2EF37D968DFC4392"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_error.c",
+      "bytes": 2339,
+      "sha256": "890F0435D8342E22F5D1362AC5A60B75FC327BB0AD19B31B90C087B57923D281"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_extension.c",
+      "bytes": 3186,
+      "sha256": "BFEA0BE4F6C0FE4A4F11593C60D1FFD8794F88C866D66922673A32C578F92AE7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_fax3.c",
+      "bytes": 48050,
+      "sha256": "D2DC6C2D343CD94885FB676C43B5703F6EBFCBFA0E026D38EDD1814294F7F1B6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_fax3.h",
+      "bytes": 18068,
+      "sha256": "FE39F280B85EC46D38660F4B143D23759A84AD474C3FA6CA54A7BE68E0225462"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_fax3sm.c",
+      "bytes": 104760,
+      "sha256": "7484907F2BD8A2439F582158E2EEEF7F209780A411EA07E1B88CE74FA0CBBC75"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_flush.c",
+      "bytes": 5950,
+      "sha256": "35366C5C4B3F150173D6AFA424D754FEF3507F21299616551BC3C696C4825BCF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_getimage.c",
+      "bytes": 81135,
+      "sha256": "2602A747F744F1E8FFB856FB640B670E6DF48C0C0F297BF100256DF610FE8CD9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_jbig.c",
+      "bytes": 6072,
+      "sha256": "997BFC04A78389ECEDD046C8F2FD4BAFAF0A6ED7C4961CD1D494D97988A8D1C8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_jpeg_12.c",
+      "bytes": 1742,
+      "sha256": "80A0756DE58D80977C9264108197446BD134D1EAE9673575E4F80E72ED4BC3C1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_jpeg.c",
+      "bytes": 81026,
+      "sha256": "E80270B7F893F47BF2B4F07F347F069E61AEE3361648EFDDDCFB62C21F35BEA5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_luv.c",
+      "bytes": 45045,
+      "sha256": "3EB6DE6A3F1FF8CD891592EC96129B91272CB6386D38465A56613FF7E93122AB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_lzma.c",
+      "bytes": 13537,
+      "sha256": "5F4A68FA06B4F0429165728A1EFF5996F58584A892A1C8483BFFC8C3FFB507E4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_lzw.c",
+      "bytes": 33515,
+      "sha256": "D7FA65D356ADBE96DE923040A9440A02473C890DFD0E5B93A3CA02033650C6B9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_next.c",
+      "bytes": 4927,
+      "sha256": "2E53763E1FC7A75487978734DD55709E93BAAACDF5D86B1811CBB72517E9B490"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_ojpeg.c",
+      "bytes": 80853,
+      "sha256": "06A9717E1AAC0156D76EB5A3DBFD7501BEA41299989B6CECF1AF1402C62AD8FE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_open.c",
+      "bytes": 18669,
+      "sha256": "5B2B67049B1BBC0E7D056EBD6BE403BD5E05EB17D7CB9FC6C540BFD5BE27B61C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_packbits.c",
+      "bytes": 7524,
+      "sha256": "EC8F6CCDB3FD56207E68A1C875B7A24EEBDD77852854147B2481C37055956F4D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_pixarlog.c",
+      "bytes": 43718,
+      "sha256": "54BD6413AFD3B1BBB5D962C0FFD974D2927391981FE56C0C2803C19F685E8AA0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_predict.c",
+      "bytes": 24384,
+      "sha256": "5341EF6527F804F4658B6473FDC545419E01B0FF3257C1D31D647863CC989D01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_predict.h",
+      "bytes": 2940,
+      "sha256": "A60BA5A496A8F7FA4CA6DB9F9287D9B92CD740626D1B574BCDC170F000F98B97"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_print.c",
+      "bytes": 21088,
+      "sha256": "11D09A077DBDE158E590FFF7EFB6F59593218F6B22A34E18CCC672281529CB5C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_read.c",
+      "bytes": 53779,
+      "sha256": "48D118F24805C46202E2BF32F4E834D9E430E5AC6A8055AEE6788D117A8E6F48"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_stream.cxx",
+      "bytes": 11610,
+      "sha256": "484454C73B92ADF17F858D70B020F059B83E8D8E9829CB042D779604F3A64B7B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_strip.c",
+      "bytes": 10989,
+      "sha256": "2884377E35530681004C5F261BC72C1BFD46E5802F4294C9833F8309C9FFBC24"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_swab.c",
+      "bytes": 9773,
+      "sha256": "944AE88F488B2FC319072B66F7E49235E32B6CB30C2392E37E71B082B44649D3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_thunder.c",
+      "bytes": 6433,
+      "sha256": "6000D83150C0B3D2F99CAB20B86253AB518E30F4D0A12D3649EA2318704426E3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_tile.c",
+      "bytes": 8733,
+      "sha256": "DD251BE9A04122469140E3151E51B57B08000DFC65BD31A950D979F737D90CC7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_unix.c",
+      "bytes": 8338,
+      "sha256": "2EE31651EF3C6EF685E0834EFD9F694EACB23C44618779247B548B4F68C6D5D2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_version.c",
+      "bytes": 1439,
+      "sha256": "C7FECAE0B3EE6DCB03CE63D7D8AD18558742290AE078DA0DD18F88AF0CEC1FE1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_vms.c",
+      "bytes": 14322,
+      "sha256": "FD31095334ED23BFCC888B0D6411DF48A8AE28C8A9A38AF3BD94A3D21D19D798"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_warning.c",
+      "bytes": 2374,
+      "sha256": "667F4B39526EF19CF93E3B993D45D245C3F93E3C4637BC92C1470DF408A4BC5E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_webp.c",
+      "bytes": 19349,
+      "sha256": "06587714CFD6DA919A3EB31471C61977BF1F42C7FF7AE4F8E7BFDD7F8BDBB506"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_win32.c",
+      "bytes": 10283,
+      "sha256": "F1FC2A9C6983CB84AFAF1EFB00FC7542B20565EDA59B4E2152F3B0F3B5A50886"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_wince.c",
+      "bytes": 7997,
+      "sha256": "B76514837FE54ACFE3A48AAD8645574772EACB78CF65DAE696A6791E74A0B66A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_write.c",
+      "bytes": 27917,
+      "sha256": "016A49C793B3760B9F79D9B79B878BF8C9CCDC301BE73DCA018E52A6B4D62750"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_zip.c",
+      "bytes": 22044,
+      "sha256": "09EC66E74992ED57A02C3EAD2F5716C03553393A42EAB7F2C6C73CD5C4CEBFAA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tif_zstd.c",
+      "bytes": 13298,
+      "sha256": "21BA27EDC7A4001550D43787BDA40535C465C781EB6E4D0025ED788E0853893E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiff.h",
+      "bytes": 46642,
+      "sha256": "5F5EE2A0A0825268153A69B917784BEA793CBCF4E647E516265439A2FE0418AE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffconf.h-vms",
+      "bytes": 2537,
+      "sha256": "31AAFFA65F4428B6B714AF5D5FB553FFEA9EC365BF88F8750894853D6252818F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffconf.h.cmake.in",
+      "bytes": 3377,
+      "sha256": "543AAA18E08C1BB2A2D72903BE572CFD6B49F5241D921DABE55721721F81CAB9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffconf.h.in",
+      "bytes": 2974,
+      "sha256": "F919AF6AC356D98EC71BB51ED846F3353BF5B16BEDF95C5734909E5B3AA3A51B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffconf.vc.h",
+      "bytes": 3667,
+      "sha256": "1AD29D62F3C738C44C8DA131068ABBE6EAF718A3FEBF7BD182419CB2B95567D2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffconf.wince.h",
+      "bytes": 3041,
+      "sha256": "06356869B0FC46B0BE2441C900985413B00B553BCE128D157001B32FD4F833CA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffio.h",
+      "bytes": 23916,
+      "sha256": "2B18CA6509F8BC60B25244B8B816B8F277BC0893725A7468D9B7A9C3BB86F74C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffio.hxx",
+      "bytes": 1658,
+      "sha256": "776E689A09032D88734605CDCBB5A16C94E493D420CFA9A3C76027E2FFEF4368"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffiop.h",
+      "bytes": 20616,
+      "sha256": "EFDBB1AF50EE6843CFD54CF750DA08E86608EA388D24C3B2D984A37C990A048C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffvers.h",
+      "bytes": 410,
+      "sha256": "268547346DB260475CB87E412C7827740CBC3CE1A00A5921241B1748D20CDC30"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/tiffvers.h.in",
+      "bytes": 432,
+      "sha256": "4BDC6CB35C68CF3B2FCE3CC126B1DCCDEF04D5E4B476420D96D2C4EA95E3D853"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff/uvcode.h",
+      "bytes": 5641,
+      "sha256": "A3F20294E5D6164EAE7A1F6C4874DC4C97F3111718C69B9ABF0E92F063087E0E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/m4/acinclude.m4",
+      "bytes": 32837,
+      "sha256": "BE55984A64324FC8483FFF2448C5094E9277C48D433A3801E15FC768A8771FD7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/m4/ice_find_athena.m4",
+      "bytes": 5179,
+      "sha256": "7B0AC79FB3AFB6AC20A02A4A359E727164AF95B6FA8B64442020055BBE82E883"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/Makefile.am",
+      "bytes": 3194,
+      "sha256": "501C2EDAE376993FDBE80C6E1EECF3362FD3EEACF7493D37C111DC06CDC43EBB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/Makefile.vc",
+      "bytes": 1722,
+      "sha256": "BF7AEA2B28495658C009A6D13A9C2351832A3CC7479593201FED8BCD38572A66"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/CMakeLists.txt",
+      "bytes": 2717,
+      "sha256": "3CE6D2B59138CB0F47C087FC319FEBF73EC7285E7DE4CC647F8962A44D6F22DE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/fax2ps.1",
+      "bytes": 4676,
+      "sha256": "4CCF5E694297EEA1FAAF30B429A2890A41937230E26D7F3FE6A7189453C46C71"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/fax2tiff.1",
+      "bytes": 7906,
+      "sha256": "90DD52212632B6E6561C167EEDC15F368B82162E65535911DED9D7134C274F11"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/libtiff.3tiff",
+      "bytes": 18803,
+      "sha256": "5D8A2C672E941708B597AB62F7AB3C8D7953C7A32819685B51F9832FAB18D7EA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/Makefile.am",
+      "bytes": 2630,
+      "sha256": "AD075DF55194B1203278B27F3DE94A10ABA04017F98A1D87DE917C2E96D4E6DF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/pal2rgb.1",
+      "bytes": 3255,
+      "sha256": "8947A360E1BF17826EFD30FEA519882AD2E79F6F778997D21D0386B1D5687C54"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/ppm2tiff.1",
+      "bytes": 2913,
+      "sha256": "3909C5E74749CEE2D6D05375952D2592209C33CD38680466E38D0011A8E65A27"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/raw2tiff.1",
+      "bytes": 5385,
+      "sha256": "4300580C2C89D29EC1D15EDF5623C5463FF20B7E773A8FC125BBC77526E9678C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/rgb2ycbcr.1",
+      "bytes": 3052,
+      "sha256": "8638AE975BD331AE4EDCF28C1A83D0803BBA29AE592719B447ECC6D53B9115EA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/thumbnail.1",
+      "bytes": 2846,
+      "sha256": "577BB154A118A3ECA7C4DCC136DC1F29FC907893230EC5DC2DCEE67DF8B11F76"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiff2bw.1",
+      "bytes": 2754,
+      "sha256": "EFB5C2D45C0098DD950EC6EFA9C073E2A9288E204F28BA8F61F0E19D006307CC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiff2pdf.1",
+      "bytes": 7141,
+      "sha256": "EF0B6781D24F06F75671E0651CFFC17D3D341210622EB9B339AF777FC1D5C34C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiff2ps.1",
+      "bytes": 7726,
+      "sha256": "A2E36ECA602E61808CEB79B7551F84F05136DCF6E2844F8BF77D0AD852DCBAE3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiff2rgba.1",
+      "bytes": 3559,
+      "sha256": "FBF28DD061A201651C71C71F6BD31C4184B6FCBB5D49C220F299D7F8753DC5D4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFbuffer.3tiff",
+      "bytes": 3197,
+      "sha256": "DB987B24F747BF184A5AEDE9B2BEE75584AAE8E58DF1073679C32F76A1CB2016"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFClose.3tiff",
+      "bytes": 1971,
+      "sha256": "7C999ECD98EDDE569CE355664A248AC08244B45D788244C7990B15A87E2A02CA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffcmp.1",
+      "bytes": 2783,
+      "sha256": "61EA0A7B68A2E47BD92E8C803ABB55DFCC16C34AA2EFE4575EDB14B0FDBF379C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFcodec.3tiff",
+      "bytes": 3026,
+      "sha256": "DF907F10ACF999CC0660CD6CE3A86EB6DCBEF873B7E6E7F0DF77A979B07329E9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFcolor.3tiff",
+      "bytes": 7825,
+      "sha256": "BBFC87101815F24348A13E33F11F270F1D7FD5A99EE031D5720C09B2FA15B674"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffcp.1",
+      "bytes": 9359,
+      "sha256": "3C6950012BBF9464616EEAE8148B616A0414590D21DA0D5069B4E49C38610013"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffcrop.1",
+      "bytes": 22741,
+      "sha256": "6244C57D1677B8BDCBF97DB5963A9B5E10013DE03ACF1FDD1336C7E120752A51"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFDataWidth.3tiff",
+      "bytes": 2039,
+      "sha256": "DA800ECEA98C626065B3342212D9CC0418D5F32F99C67F269A8F85EBAB8E6969"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffdither.1",
+      "bytes": 3847,
+      "sha256": "CF1DC3BCFDC82B59DBDA25BC093C0E6C1FF57052674038F3F9B126EC6D92FCFB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffdump.1",
+      "bytes": 2798,
+      "sha256": "DF2CDF8FEB6AC8005D635B5452920E63EF4491A13322B86C99AF0E18517A83FC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFError.3tiff",
+      "bytes": 2570,
+      "sha256": "FC99111F7329AE01E37AF0A87BDA08B7B2B589F466CC65563BF038134C5CAC2C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFieldDataType.3tiff",
+      "bytes": 1876,
+      "sha256": "1A6CC623D959A1A17DF6B5B636A01D560BEC4E3FCB545D6078C9461FC369A065"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFieldName.3tiff",
+      "bytes": 1829,
+      "sha256": "AC597B169DD387AA4CBD73183A8A8D95B2D3D5ED7BFA1C2683868BCD4E8F43E3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFieldPassCount.3tiff",
+      "bytes": 2234,
+      "sha256": "7FAC1DBA2F2D713DFDB4F169829A55B7372B4A6C69063E5034C8E2865AB7B7B1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFieldReadCount.3tiff",
+      "bytes": 2474,
+      "sha256": "1C1146DEF93C479D108ACC6EA6EBE0640E99A46E6848815C01CC18FBCABA0CCD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFieldTag.3tiff",
+      "bytes": 1947,
+      "sha256": "10660B8322510570E0E0044CE7075012E8D8F5A02FB796909EAD47690C9D592B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFieldWriteCount.3tiff",
+      "bytes": 2739,
+      "sha256": "0F0A4F9F429765F2CFD57911D12E928A1416A47381FAEEB76D97F69BD66BB3A5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFFlush.3tiff",
+      "bytes": 2470,
+      "sha256": "5B4EA8E9D177EFDA5FFA4818C2C8E471F6E7C346E67D2C03A0F5870A05D05917"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFGetField.3tiff",
+      "bytes": 8014,
+      "sha256": "41322FAD252ACC6EBD3A4D01E95020BB02717F60735E86DE381B27A439B74036"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffgt.1",
+      "bytes": 6631,
+      "sha256": "2A8F234ECA81BCFF6E2E29C947419FD7AE629515A8AA169EB8D210139C9CE5F3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffinfo.1",
+      "bytes": 2666,
+      "sha256": "33F26DCE5FBE1FD479F6B5FE35ACAB4B44285393D179B343DAA8231F1300C7CA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffmedian.1",
+      "bytes": 3327,
+      "sha256": "E804A48BA273B9E533475C622AE3766B0534FE0FE42F27B090FDBAA3FA6E262B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFmemory.3tiff",
+      "bytes": 2881,
+      "sha256": "3DB25ABACD50E4D8E02EAE4749D12B059E44AF45A72F3CC14F05D18592CE0B22"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFOpen.3tiff",
+      "bytes": 10024,
+      "sha256": "78923C05F9023D4AB881E164F43067404A8F584B166279824C5BBA46DFD03453"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFPrintDirectory.3tiff",
+      "bytes": 2489,
+      "sha256": "1678E10897799640A2C71D1AD1CF6593A79807287340C276FAAB4BDEB3DD04D7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFquery.3tiff",
+      "bytes": 4288,
+      "sha256": "D9C053B9AFE30FFCDC21FF807929407A8897AED2F99C12A03791CC249B3AA555"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadDirectory.3tiff",
+      "bytes": 6109,
+      "sha256": "C5744550C9E7B02CF9A17316647E493C9330685F750BAB142EF0D204986611DF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadEncodedStrip.3tiff",
+      "bytes": 2976,
+      "sha256": "7CD246179475557B5563ECB6607A018854FA2BAE7BC529EAE2C0872ABE479BB0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadEncodedTile.3tiff",
+      "bytes": 2920,
+      "sha256": "27A4EBAE1A68EBA72F53C215E5ECB380D4E6AC4F8FA858708D008843E5070E6D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadRawStrip.3tiff",
+      "bytes": 2436,
+      "sha256": "E405C0CA883D3B7EE62EF8666FABCB58A82478C36EA1400839182A1F9A78B518"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadRawTile.3tiff",
+      "bytes": 2518,
+      "sha256": "7CF2FC82A9460A5DAE917147990E1CA990BDD6BEC4673EE740F0E82DEE85702A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadRGBAImage.3tiff",
+      "bytes": 6635,
+      "sha256": "C910D9D1DF959E6ED4BB2D91340CDDEEB796270548D92176B237992E01720F6A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadRGBAStrip.3tiff",
+      "bytes": 5731,
+      "sha256": "BDEDA97FFD4B485A6CB6EE540D81C7D2FAF6C5A517BE5E2F76DCE54B0C249548"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadRGBATile.3tiff",
+      "bytes": 5765,
+      "sha256": "9CB6DA5B808B28ACCFE6ADB5E9271B2609D71C4696546ACD522E1BB14F8A2F91"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadScanline.3tiff",
+      "bytes": 3768,
+      "sha256": "73BE3B49CD90934BB6D81B2376224389D3253CD030D391EEA0F32429094C1E1B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFReadTile.3tiff",
+      "bytes": 3083,
+      "sha256": "5792838A1BC6A450C4CD8205F43DCCF6D2FCFA4988C8B9AAC1BFAE6754BF2C66"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFRGBAImage.3tiff",
+      "bytes": 9235,
+      "sha256": "FEAD27204CE6F3161DEAB725FCE258F5329DA7CA61E866209191BCA328183C74"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffset.1",
+      "bytes": 2754,
+      "sha256": "A482CC106D5BCA962FDD45CA92CA6978C55F5C0CE344C830A53D98F5419B9630"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFSetDirectory.3tiff",
+      "bytes": 2819,
+      "sha256": "F86C761BD6C3943E15BEE4B13C5D34A1EB4601CF7036234C1CBA8EDB8BEC4C0F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFSetField.3tiff",
+      "bytes": 7095,
+      "sha256": "10D437217C99F6A4ABA2522FB433CDEE8782FFE8DA8C223BB4FF653B51CD6449"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFsize.3tiff",
+      "bytes": 2180,
+      "sha256": "D10CC906ECF3406E4DD71058B3B6BD2BB9C87D682D78DD16941E5592A213414C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/tiffsplit.1",
+      "bytes": 2108,
+      "sha256": "75A384D2E04F0E7B47E4E3E1043242AC0FDBBAEC59183B2B5156D376F9B698F9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFstrip.3tiff",
+      "bytes": 3594,
+      "sha256": "F036D66D617E7962917F1D663E54032C07CC0DDAFD84CBDAC138B00B4FE09440"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFswab.3tiff",
+      "bytes": 2856,
+      "sha256": "4B40EB5F73EBF78F09711652C08903FF0FDB083E3654530328A4C3D8BFEB1165"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFtile.3tiff",
+      "bytes": 4110,
+      "sha256": "AB2E6B7671C08FB5CE40143F25C3BC3EA34DD0B1D889BCA9DAF1BCCB751B7D4E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWarning.3tiff",
+      "bytes": 2634,
+      "sha256": "6BAD5A43AB2754B5DE6E5DB89B057D8BAE64700F568CC3B415E1A5B59854D1FC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteDirectory.3tiff",
+      "bytes": 5296,
+      "sha256": "C322D46FAB0E367DB3772BD402F158F40426FE807F5522134C946D8EB1DF731D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteEncodedStrip.3tiff",
+      "bytes": 3535,
+      "sha256": "2D5BEED759D25BF3CCBDD3D86BDF4E7BF0E582029445ACE8D0F459B5ED418B3D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteEncodedTile.3tiff",
+      "bytes": 3381,
+      "sha256": "5DCAB21D274BD9CADE5539CAC4D69482100DDD04275AF46117904715FB7892D6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteRawStrip.3tiff",
+      "bytes": 3156,
+      "sha256": "0BFEB594AD2AC960A5AAE24CDE3922CC25746A9727A50F187F69072606245C32"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteRawTile.3tiff",
+      "bytes": 2912,
+      "sha256": "6A87A1E35E4A539B6AED2F3A7B1A18618119EB205DC31685B1A7AECA32FC0546"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteScanline.3tiff",
+      "bytes": 5586,
+      "sha256": "8A7F6D5DD16B87E5624C6716754E306143832A11653B7195F2943698261CB47D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/man/TIFFWriteTile.3tiff",
+      "bytes": 2715,
+      "sha256": "36720CAAB99D4DAE2374ED6B100DDA4336D110A4FA015A916C07A382063E62E1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/nmake.opt",
+      "bytes": 6209,
+      "sha256": "88649785221531EE7C8C6862A4E2C1466B0F46AB4A4FE19E60A808BCB5DD1847"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/_strtol.h",
+      "bytes": 4790,
+      "sha256": "040444FDDADDC17355ECA5A08B4B43F6185AE8F5123A2B5F62E9B6957A8480F2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/_strtoul.h",
+      "bytes": 3723,
+      "sha256": "CAC1951EE4D821B2073EBD8B2D769FD09F4201B8A05E771BC136C83CD9AAC93E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/CMakeLists.txt",
+      "bytes": 2250,
+      "sha256": "CBEE8DDA2EB3E3B7481B439E4180F3D7CB6E4F596CCD50493C082565A77A8C6B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/dummy.c",
+      "bytes": 137,
+      "sha256": "12F02FE0EDE111E04156F449A3B1CED2CEB9EDAD262C45224787FD0406EF9F51"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/getopt.c",
+      "bytes": 3967,
+      "sha256": "FA837796754D90DB24DA367A6014A269D643283DD9978F92F2BE83E040CD9051"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/lfind.c",
+      "bytes": 2278,
+      "sha256": "C62C936077CF0E48BB15BDC5977055B1B8A9A8C3FD5F659A2714AA6632BC486B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/libport.h",
+      "bytes": 2278,
+      "sha256": "24C4A1786D669A3D6576C1CDF454BAE40BDC973B1D4583DDFB664C90A264CD53"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/Makefile.am",
+      "bytes": 1466,
+      "sha256": "15F2CA005ED7AC8B7C74426DFB80A07E02F1DACE35DB7EB544A6D7BCFAC59935"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/Makefile.vc",
+      "bytes": 1987,
+      "sha256": "DD4B5E99B92416C104A6AA42BD2CE10C61686796384B1F41918E4D61541B3C24"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/snprintf.c",
+      "bytes": 882,
+      "sha256": "95742718DE4BF211695039EB48A1ABE239D92F177FC6A145D1F7125119357302"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/strcasecmp.c",
+      "bytes": 2096,
+      "sha256": "0BCECA770AA14B5B6E711126E0F69F6BBEF70B2D36D1188EC3125A0E923D0ED1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/strtol.c",
+      "bytes": 1792,
+      "sha256": "D4028D41B7F24F30F7D0B05F7532D86AA379C30508619E659C316CD7D26C9EB1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/strtoll.c",
+      "bytes": 1780,
+      "sha256": "13CA2DEA4D8856EA69FB2F5C52618594BA24FA7498597D041AD4794AF4458251"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/strtoul.c",
+      "bytes": 1783,
+      "sha256": "D9EFE18D897A3DDC89D26EFAFCBA33D418D109B256FE74AB59C5E01CDCADCFCB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/port/strtoull.c",
+      "bytes": 1790,
+      "sha256": "A7055234358AE4B82B0E466958B7ACA8C2A7B5621B0A40B1D0E3B7F537610924"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/README.md",
+      "bytes": 2632,
+      "sha256": "80770640DE9B4063F40E5467040FF9D6E7BAE69E28F9AF6DBB1D76C7BCAF5D23"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/RELEASE-DATE",
+      "bytes": 9,
+      "sha256": "D39C7A293ACAD6F6F13F6ABE0E798FDFEC127298AA9083CACAE813C28008460A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/SConstruct",
+      "bytes": 5896,
+      "sha256": "5FC634C7DA7388A88393443B82A0C3C19D776896F43D954FA5C7685A77726F5C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/ascii_tag.c",
+      "bytes": 5152,
+      "sha256": "2DFC56F5A6979042358D754385D159E7FAA172DC76FB360F98C52A4E249EFCA5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/check_tag.c",
+      "bytes": 2430,
+      "sha256": "62124B64150B498CDE201A62D779F3C9086603583DC0A53B073C5548FC68B497"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/CMakeLists.txt",
+      "bytes": 16178,
+      "sha256": "74B7948B39687F7CAB2651790DDDAC36D4B9FB6EDAB7A6B8AB9D22D6A10ECF76"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/common.sh",
+      "bytes": 3156,
+      "sha256": "2D96104EB84855486231C4AC63EEF8B0BD46CF45CA81D52F4F98E632A3CCD127"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/custom_dir_EXIF_231.c",
+      "bytes": 58960,
+      "sha256": "3033DB70F7DF24366D9711E452F2CFB296744AFD023CC9B53A110FD9F5092AC1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/custom_dir.c",
+      "bytes": 7254,
+      "sha256": "5859EB0132A6D4959454A3B1323B47DC5D7CB241F60F1FDBDE9CA0CA0BA78821"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/defer_strile_loading.c",
+      "bytes": 10132,
+      "sha256": "BAEC043F08B750ADFA705178DD68B236F14B3408D4A2A0768ABD1E97431E36D2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/defer_strile_writing.c",
+      "bytes": 6555,
+      "sha256": "9F79AF24B0C389833522F0638DFC87E4D98829261EDD235E530F279C92F7FC26"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/fax2tiff.sh",
+      "bytes": 427,
+      "sha256": "A56BE46F4F2032C7FB29E78220CFF638FCAD345634957BC529D813B049504898"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/deflate-last-strip-extra-data.tiff",
+      "bytes": 12789,
+      "sha256": "031AA7E15C2DFB21FE2FDD89EFF88C4505C306F641BE8B98F3666707D698B5AE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/logluv-3c-16b.tiff",
+      "bytes": 166,
+      "sha256": "A042E969B1F6EE47703E5187BDAC782510023906CD99FDB81AD41E510F4C457D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/lzw-single-strip.tiff",
+      "bytes": 76264,
+      "sha256": "9CBFF8FBE7A487DA5D56E7E7566C0F3984E7092A3B1CCFE6BC1461449D008E4E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/minisblack-1c-16b.tiff",
+      "bytes": 47733,
+      "sha256": "4B158802CB0926445CA0E61A43E9AAD16290C63950457466992D53F3E2843A02"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/minisblack-1c-8b.pgm",
+      "bytes": 23722,
+      "sha256": "48CF4B9AF76ED39B860BE8F89030EFEF02435EABBD59642E387A8C9B8069CD72"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/minisblack-1c-8b.tiff",
+      "bytes": 24001,
+      "sha256": "7993664077EA8898704D15128E563D9DDD9C85376B3E8B42B0865A2BA71EE175"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/minisblack-2c-8b-alpha.tiff",
+      "bytes": 4068,
+      "sha256": "6FCB5238FB9BD583CD78B27C51B16492D17D4768032F9EE1ED10F2D2F45730C9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/miniswhite-1c-1b.g3",
+      "bytes": 9687,
+      "sha256": "800A933D11D2485EBE99875791CF1CE431B6B66FC7CC68BDDAE60C4F0C497C6D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/miniswhite-1c-1b.pbm",
+      "bytes": 3031,
+      "sha256": "80950AC73F1E59B84DB100517F22AE91DA5BC2F8A9AFD2603217AB6BC3E4F3AE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/miniswhite-1c-1b.tiff",
+      "bytes": 3289,
+      "sha256": "9B303EC8E0DC83E9099AF6A8C0D837772CAAD953D72995AD34E2F842FB66E83F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/ojpeg_chewey_subsamp21_multi_strip.tiff",
+      "bytes": 39752,
+      "sha256": "FA829625035ED42A71D3BAF0C4148903808B7C16C5E3A5A97A86909A969A57CB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/ojpeg_single_strip_no_rowsperstrip.tiff",
+      "bytes": 8258,
+      "sha256": "BB4E0C9436DA88030DE5BB4F1042326FB15593D81650CFB6C51BE800059CA032"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/ojpeg_zackthecat_subsamp22_single_strip.tiff",
+      "bytes": 8258,
+      "sha256": "0D31F2ACB25BFBDE4D79975572369C3E4BEA8E978FC1935075A545E3F8321B6E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/palette-1c-1b.tiff",
+      "bytes": 3312,
+      "sha256": "A5793C7369C07EDA42C81B492661EC15511B7082DF7B4EB728130AC6BAEC4FE4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/palette-1c-4b.tiff",
+      "bytes": 12322,
+      "sha256": "148FC93D0EFFB9287AA93552EFABE913A6C60093940A129D9C96B48EBE6A933F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/palette-1c-8b.tiff",
+      "bytes": 25548,
+      "sha256": "9EF8051E9AA19F7439FDEC77C7E5BDFFEF442572937287A83B5938BD02464286"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/quad-lzw-compat.tiff",
+      "bytes": 214342,
+      "sha256": "081118D951224D9909B105BB75F9667FD817E7B95122D141E91B43604DACD78B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/quad-tile.jpg.tiff",
+      "bytes": 27576,
+      "sha256": "657062ADA721390508C93606E2D7A33295722A171BE65F55AA578F4AEEB96DB4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/README.txt",
+      "bytes": 780,
+      "sha256": "E750B164EA0B1B4F119955F25B91B4D22378F61BB5F2C246C551674EECD06CB7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/rgb-3c-16b.ppm",
+      "bytes": 142305,
+      "sha256": "164DE1122FF23A1D101FD584DA5461FBD1C75E6F0C194DCB72760840D2C01E0B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/rgb-3c-16b.tiff",
+      "bytes": 142670,
+      "sha256": "31FF3A1F416CB7281ACFBCBB4B56EE8BB94E9F91489602FF2806E5A49ABC03C0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/rgb-3c-8b.ppm",
+      "bytes": 71136,
+      "sha256": "67B1A84936EF6CB3E383AEA5BF96EE24C2D16C5D82E405138F92C7A0F059F378"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/rgb-3c-8b.tiff",
+      "bytes": 71470,
+      "sha256": "21A751D4D6CAD3903E4833DB726C1B645FC88A1161EFFFCABAF9CE9C8C8F7084"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/images/testfax4.tiff",
+      "bytes": 39637,
+      "sha256": "42DF253CEF26450582D4810FF237CB1A1725CCE9A27AFB50EA89AA42B3E172B9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/long_tag.c",
+      "bytes": 4246,
+      "sha256": "205D9CAB53F3F83EA6E77AAA7B5BB953803CEE523C068888B2646F47625876DC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/Makefile.am",
+      "bytes": 12406,
+      "sha256": "1133D8DD7AE90FDD20E0DF2099B9DD31E6C187EF552A0B5708C0D86DC1005CCF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/ppm2tiff_pbm.sh",
+      "bytes": 173,
+      "sha256": "AFB991F6A19F400A29B462DFC6AF4AAB6EA70A3EA10D478C34C19D30E2DFEFBE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/ppm2tiff_pgm.sh",
+      "bytes": 173,
+      "sha256": "D4FA2782F839380838CE7E7A78EA157B0EAC9B9EDCB32769AC3BF918B1DAF431"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/ppm2tiff_ppm.sh",
+      "bytes": 305,
+      "sha256": "7BD79092AC45ACED5E642446529743907C32D7121272AD56BF387ACCE229B068"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/rational_precision2double.c",
+      "bytes": 43399,
+      "sha256": "EB86B099DBED8149C323BD362B030E745C1F02D7560B22EFA33CBC2666E9C65B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/raw_decode.c",
+      "bytes": 9293,
+      "sha256": "DCFEEB10C7469FE498E96CEF0A2A2CECE98CAF0DEDF6E291E5BD652BC9A7E96B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/refs/o-deflate-last-strip-extra-data.tiff",
+      "bytes": 12560,
+      "sha256": "21173B8EC7EF4D463C7E8F9FB8800EE1137C0411BC07273C87BF37394AA6CB64"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/refs/o-testfax4.tiff",
+      "bytes": 106326,
+      "sha256": "E0C4D51726BB2B521820A491A809B022EE415A617B26F4EEBD7B4E1DD4012461"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/refs/o-tiff2ps-EPS1.ps",
+      "bytes": 6599,
+      "sha256": "2EC7D55F89B123312C59A74A16E82AD5AA99FFF2E503EBA9BACC79837C612315"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/refs/o-tiff2ps-PS1.ps",
+      "bytes": 6629,
+      "sha256": "0AA50A31F94EA41EEA280C7E73730C0E8841306E40F8060CF72586584FCBCCEC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/refs/o-tiff2ps-PS2.ps",
+      "bytes": 4912,
+      "sha256": "0D280091A27BBF04665DAD920B37B068EFC53C144BA8EF2E0546CAAD751F3EF8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/refs/o-tiff2ps-PS3.ps",
+      "bytes": 4912,
+      "sha256": "E2B7CE36F1C93A5CA26533D85AEA1672CFBCE1F4C7D8EB56BDE57EB801CFDE23"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/rewrite_tag.c",
+      "bytes": 10272,
+      "sha256": "1309F205A9A891A2332A8A0BEAC30AEC96CB0C9A6CE681E712B0117031B48F5B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/short_tag.c",
+      "bytes": 5804,
+      "sha256": "E4B4B37F94327D030C720BC72B26226BF5A6CC2FB6D48FF34B4A14C5BDC08999"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/strip_rw.c",
+      "bytes": 4897,
+      "sha256": "168BCEB8DD3ED73F052F73F7950A7091E0D4A6C5F606727FE30896D7BE8F641C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/strip.c",
+      "bytes": 8071,
+      "sha256": "6EDB908155B7517F753A7B021776D80A80D105023C7336E4B23645C2EE5EEFE0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/test_arrays.c",
+      "bytes": 49059,
+      "sha256": "32624AB6BE7EB6CE53CFDCBB30989B75111AD4042B2CF44A134390FFF3C2BA78"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/test_arrays.h",
+      "bytes": 1982,
+      "sha256": "7E4B4EC037B8516CE868E1130821A9532AE52BFFD2E7F664EB30F345DB50C4CC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/testdeflatelaststripextradata.sh",
+      "bytes": 1440,
+      "sha256": "E51F7F3C923880EDE60297B89AB0DA61BAA9D2F1F036066321A2F1FD3CB636C6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/testfax4.sh",
+      "bytes": 683,
+      "sha256": "B6874392C9FC6F0953E56BBA77A0470BEEB2758AF2BD0D7827D86D33E8DE0A9D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/testtypes.c",
+      "bytes": 1857,
+      "sha256": "4B6240BECD46FFE39017CF97519C3E9400CEF020ED36A8F2BDB06F536112B2E0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-logluv-3c-16b.sh",
+      "bytes": 229,
+      "sha256": "FE6F05986D8EC84500F155507D5C3383FAB3100C76A268E56580278A2F2DF32A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-lzw-single-strip.sh",
+      "bytes": 235,
+      "sha256": "EFF1E8545DE72164412E6D6E901FBE7CBD98B628B41344FA5D7F0750E159C5EC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-minisblack-1c-16b.sh",
+      "bytes": 237,
+      "sha256": "697485363B079CC5325E5E27283CAC4F02A5908EB0AAA95427B755CE0F598E1A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-minisblack-1c-8b.sh",
+      "bytes": 235,
+      "sha256": "D4CADF2237D5DFC59C8FDA1A4189A0D82FE24F50B873033A1B5F0CC15CE4AE5D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-minisblack-2c-8b-alpha.sh",
+      "bytes": 247,
+      "sha256": "945B212F88E37604AADD8B1AFA5C3BF5568C523D771DE5BFCDCC5136C8CDA8B0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-miniswhite-1c-1b.sh",
+      "bytes": 235,
+      "sha256": "11B3A77821AD1CEA39C27F1DBD5201C7348873D9258362B15C4D18944AC30FA3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-ojpeg_chewey_subsamp21_multi_strip.sh",
+      "bytes": 271,
+      "sha256": "1BC27B2B865024F7AFAF0D1DA040E5B86EEC3CD27F3331C1B6A53032917D1073"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-ojpeg_zackthecat_subsamp22_single_strip.sh",
+      "bytes": 281,
+      "sha256": "869D447487C9540FB928B9E9729E852A37563354CCBFEB28DCF30149E761306E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-palette-1c-1b.sh",
+      "bytes": 229,
+      "sha256": "378783BD3A811E4A6F6EFED34C4BB4B221F3B6679B6EC78B74DA8499ABEEC99D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-palette-1c-4b.sh",
+      "bytes": 229,
+      "sha256": "E7EDD924EB901C1C5CB732E86CD309270F427CFB512505CFA87E11C0739AE8C5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-palette-1c-8b.sh",
+      "bytes": 229,
+      "sha256": "BC1FB98DFDE796907C04A4970DD2B858D541678A00CBB88CC9AD4C339989517F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-quad-lzw-compat.sh",
+      "bytes": 233,
+      "sha256": "458BBD869A0777B371A3DFF570C39D6742299D6183BC5E8469EB945E71BD194F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-quad-tile.jpg.sh",
+      "bytes": 229,
+      "sha256": "751B99D860BAA6EEA54A907BE8F22C05724C033730195D2B4719673C254B5CE1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-quad-tile.jpg.t1iff.sh",
+      "bytes": 236,
+      "sha256": "63B658008A3C3886EF4EDAA646A9C5EE2F73EF001407CDE79677A1C53AA6CA8C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-rgb-3c-16b.sh",
+      "bytes": 223,
+      "sha256": "423BB15491424F63AF778EFA330E34E8EAA24824DF1E5E8C306276F6B872DCE2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2bw-rgb-3c-8b.sh",
+      "bytes": 221,
+      "sha256": "654816B553A1577FA8377EC4F5060801B86A5AC96336CC9A855591A00BB37DA1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2pdf.sh",
+      "bytes": 143,
+      "sha256": "599067AA70AF5D9264D6F2A9475A756355739B729875BB377EB6AD46FB40002A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2ps-EPS1.sh",
+      "bytes": 300,
+      "sha256": "099F0E32ED29FCBAD74A18C3062FD4A13043F74899A09C9FDC099E3FAB5A8E8F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2ps-PS1.sh",
+      "bytes": 373,
+      "sha256": "830C988D3849B7D299CA9945C12052D201479D7A0C8A282A7FC74A1A0E942483"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2ps-PS2.sh",
+      "bytes": 289,
+      "sha256": "CF750D4C63A03BCBC56F7B4D12F895D48D5650AD1EC8CA48AA50B3F70949A370"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2ps-PS3.sh",
+      "bytes": 289,
+      "sha256": "8C5C431E7E1526657F10A59D1D48849ED4373E6E777C590E025E9786CCCA0536"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-logluv-3c-16b.sh",
+      "bytes": 233,
+      "sha256": "A6F7A670B930E9ABBBBFB26B65AF4BA1BF8CF3A4D1AC6ED6A7F6743307A4A8DF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-lzw-single-strip.sh",
+      "bytes": 239,
+      "sha256": "11BC3916E28F5E2032DD80470048912F17149129C6ED7012BE2EFCEEB9B3844D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-minisblack-1c-16b.sh",
+      "bytes": 241,
+      "sha256": "57ADC35FC491DD0471A572D66DB9756944E42D92D665305E7699A05862946037"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-minisblack-1c-8b.sh",
+      "bytes": 239,
+      "sha256": "BAAEDAEAC7824FDA7A55B1438FD3EFF1B8A92EDC92700F87DE42AAA465B0B68F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-minisblack-2c-8b-alpha.sh",
+      "bytes": 251,
+      "sha256": "D0ACFDDB2FAC94208A626E192349536DDA60419673E1BDF0D4BDAE2A3BC54974"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-miniswhite-1c-1b.sh",
+      "bytes": 239,
+      "sha256": "90BD05004E39FC680D813DBC5A871612FE04CACA5E893958CD545C1CB1A84F87"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-ojpeg_chewey_subsamp21_multi_strip.sh",
+      "bytes": 275,
+      "sha256": "946B8CE4C79A7F0D1DA01902596ED382DBE0DADB3B917643AF0E79285AEBCE45"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-ojpeg_single_strip_no_rowsperstrip.sh",
+      "bytes": 275,
+      "sha256": "6DE7F0E11A862A9EDCF15CDF5A3FC3E4AB0F22E9E972E955732BCBACEA3983AB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-ojpeg_zackthecat_subsamp22_single_strip.sh",
+      "bytes": 285,
+      "sha256": "C2AE410800796BDFB9B09675D695768C964664A1280ADC9ABAE5C2CF5880A8E3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-palette-1c-1b.sh",
+      "bytes": 233,
+      "sha256": "822BA22037D2808905E819C73E2FF91079B152EC15AC6054C7D8F3342725BB04"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-palette-1c-4b.sh",
+      "bytes": 233,
+      "sha256": "3EAE08099E9B32A97A92F6E46D04B446B827969AA2E5A00F318EBF51180AF3B1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-palette-1c-8b.sh",
+      "bytes": 233,
+      "sha256": "097425D8D035DE2DBF6EE3267D0B72483AB394D9528DB2896B0F484D3EC494D4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-quad-lzw-compat.sh",
+      "bytes": 237,
+      "sha256": "7E7E3169937B87B58F7E38EAB697D0327E1943FA21101907E71A9BB8B4E5110F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-quad-tile.jpg.sh",
+      "bytes": 233,
+      "sha256": "805FF32451F1F499B8E297C76A2AE0D51C32C7A2DF10EA9242F2BA6CF5AB39AC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-quad-tile.jpg.t1iff.sh",
+      "bytes": 240,
+      "sha256": "46C76A742C2BF3F3F0BF9365C45E41803D5F6A8BBB6CC10BC7CA9735C3E64472"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-rgb-3c-16b.sh",
+      "bytes": 227,
+      "sha256": "5E3AE4FF99CD08BF307F7A08C842CD1B001FEB9FB0E279620CEDB15CBD1BD47D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiff2rgba-rgb-3c-8b.sh",
+      "bytes": 225,
+      "sha256": "A5DE408AD68F707FBD1BAC392C959453F78F5080EEB05FC0CB342389D6BC9428"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-g3-1d-fill.sh",
+      "bytes": 239,
+      "sha256": "DBA4B763D9CFAE0417E0660C4D68D50DB60DF2AF4C0DF2F2BC69610FD98DD594"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-g3-1d.sh",
+      "bytes": 202,
+      "sha256": "3B56E4C0F8F8B9246E57DB119F6416974214E40B984B42629A2E1FDD9BF0636F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-g3-2d-fill.sh",
+      "bytes": 240,
+      "sha256": "373A1131BC9BA7D35B414308148D0CBE540F68AA8ACC0D2F7962B04BBF0317B7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-g3-2d.sh",
+      "bytes": 202,
+      "sha256": "F99687A9874848EF41AE60A8BF7C789091AD25885B33A4CC2AB7506014AF5317"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-g3.sh",
+      "bytes": 168,
+      "sha256": "A8D17AD1C52C27B6D6CFE6DD47F9F137F4445606971C653B8764E9D2F5396C22"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-g4.sh",
+      "bytes": 168,
+      "sha256": "1527770F38BCB92FEA2839F16384D221FFE12D42B5EFCB13BD329A40CE69CC3B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-logluv.sh",
+      "bytes": 288,
+      "sha256": "07435D74FD03AD4D99FB1E764F3311C10FB6E71918143A5863F21E1546996DCF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-lzw-compat.sh",
+      "bytes": 188,
+      "sha256": "D4073771094BE200046A6FE3DE2A0EC377E1D24A33DBD2433EDCA68005919D4E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-lzw-scanline-decode.sh",
+      "bytes": 195,
+      "sha256": "14B990F7A699ED266470C6B2DE11F86C2B1067F8B7B232AFB1256BA9DFB90F31"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-split-join.sh",
+      "bytes": 569,
+      "sha256": "C3293064D4B5695A5CB01374EB7761529258B0EE18BBCFEF07CEFB47633FB044"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-split.sh",
+      "bytes": 402,
+      "sha256": "73DF270039C264B2FDB9118162C7F38C63B51DEC9294812C15537078EF4BDD28"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcp-thumbnail.sh",
+      "bytes": 279,
+      "sha256": "F354F67CBCD87EB04CABEB799BE023775F7EBABE1315A48B40FD7107D223A7CA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-logluv-3c-16b.sh",
+      "bytes": 250,
+      "sha256": "8328F69EDA27279C6B9C1E74D9C6DDE7D0751C234A3ED79D993EF79683AA408A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-lzw-single-strip.sh",
+      "bytes": 256,
+      "sha256": "40826D92D167CA75CE07FB0B6671F540D7641A35DF2826202091BF9E0E837D32"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-minisblack-1c-16b.sh",
+      "bytes": 258,
+      "sha256": "121A6CF4F3422260C166C11901329C48632228913B70385FD95F6E81B5AD1E83"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-minisblack-1c-8b.sh",
+      "bytes": 256,
+      "sha256": "21C3AA3B04014FB26D4EC31B07EE4F412AEE16B7D7CBC10F24FA5E8C2100C386"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-minisblack-2c-8b-alpha.sh",
+      "bytes": 268,
+      "sha256": "2909F8D5BEF2BC55303103E372A31E0519BF98B2CE2EAA19F8210550B36C36D6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-miniswhite-1c-1b.sh",
+      "bytes": 256,
+      "sha256": "E169A64557E810A88CBE6EC52185E15436DDB469122D5E525B74BA69EDE22FEB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-ojpeg_chewey_subsamp21_multi_strip.sh",
+      "bytes": 292,
+      "sha256": "90CC28B35BF44917EB79EDD1E792B690BA48271F8B0B891E673B668B6E3437A2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-ojpeg_zackthecat_subsamp22_single_strip.sh",
+      "bytes": 302,
+      "sha256": "5738CEB04E7598E0F69B98AFE900A17A24EBC6F30B8B0A9DAAC4D0CED236958D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-palette-1c-1b.sh",
+      "bytes": 250,
+      "sha256": "1AF6BE1C00FA220BA930F5941D57B539EDB78E4F0B293B41F287FC4461A5A197"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-palette-1c-4b.sh",
+      "bytes": 250,
+      "sha256": "94109E5445865989F6175A506A461B0BC7BF7473F33FAF13C539251D9E5412AD"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-palette-1c-8b.sh",
+      "bytes": 250,
+      "sha256": "B5ACFF72C8BEBE19CE8ADABF5BE3CF709A5DC8131823C8FA1F0DDFF9711AFD01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-quad-lzw-compat.sh",
+      "bytes": 254,
+      "sha256": "DD6C68876C9AAA2417ED6AB83C2D6A3ED310EB5D6B6A93D20E45DC40B1262D69"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-quad-tile.jpg.sh",
+      "bytes": 250,
+      "sha256": "9787F3B9C1CDEFEDB2DDD3B84855950C1F30D3FBC895A440BD4504779AC16019"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-quad-tile.jpg.t1iff.sh",
+      "bytes": 257,
+      "sha256": "6B111024E75311B2708CA1208EAF8DD783E3AB4C3D7FDFF68D1FDA74A5FD53A6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-rgb-3c-16b.sh",
+      "bytes": 244,
+      "sha256": "EEEAFD36E4CA7DA57AE5A62BDF2DC68F5727AF264B6E717A9DC0D711A70408AB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-doubleflip-rgb-3c-8b.sh",
+      "bytes": 242,
+      "sha256": "CAAB541DF64A6ACBCED90F0D1FA1DC328BDD69C998633CBA7472DAE884DB2468"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-logluv-3c-16b.sh",
+      "bytes": 264,
+      "sha256": "C21894EB52BF744B6A258F00C4D9193AD2A198D688C3085C81A97938976A9DD4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-lzw-single-strip.sh",
+      "bytes": 270,
+      "sha256": "5F9AA42B341F89F10E1D18FA21392CE0F88D66010B4A2FEC8308B8E2A33694C5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-minisblack-1c-16b.sh",
+      "bytes": 272,
+      "sha256": "C4A6B1774CE519E1AFDE9B6E9023CFC1AE61D608C1B1B418DB5847C3F1C6399A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-minisblack-1c-8b.sh",
+      "bytes": 270,
+      "sha256": "06FF644AEF8B68425BBE7E75A200D5CFAD460FE4431C9532A65B92E2E6226DE1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-minisblack-2c-8b-alpha.sh",
+      "bytes": 282,
+      "sha256": "B25EA5F293E09E729E18C8AC447B137EE94740B355A9AC9AE384B1CC337A6C5B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-miniswhite-1c-1b.sh",
+      "bytes": 270,
+      "sha256": "34CD7F90D69D1D90642ED188712F79CAFFAB42AE8B684D92DDA8CBA8B9CB1580"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-ojpeg_chewey_subsamp21_multi_strip.sh",
+      "bytes": 306,
+      "sha256": "67DE4CD16D05F7544EEEB94F470CE116B66AE59EA83EB450BA36F429A97655CE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-ojpeg_zackthecat_subsamp22_single_strip.sh",
+      "bytes": 316,
+      "sha256": "93AFA9DB3EBC5916F751B88CD173D6D69EA525057A67DDAC6FFE9B5CF8D5DC33"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-palette-1c-1b.sh",
+      "bytes": 264,
+      "sha256": "A7C66E161A559E0F9BE2799C3FEFFE73DF0C0D6049A264C183FF04BAF14EFD88"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-palette-1c-4b.sh",
+      "bytes": 264,
+      "sha256": "5EA5AF6DB13B7A3E35FC179606C2881420AD1176C05A09248BCE584264801C90"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-palette-1c-8b.sh",
+      "bytes": 264,
+      "sha256": "2C9B2C793BFBF08B7FDDD7234B7D99685B86772B7DEE2E1C81EA6F65F07B190A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-quad-lzw-compat.sh",
+      "bytes": 268,
+      "sha256": "DD53875A60F8B52C4AC8EA49F9E4AC122E5173026288E8FFA81F5DEC105DB570"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-quad-tile.jpg.sh",
+      "bytes": 264,
+      "sha256": "68075231D13B73A884BC63ED916C9B4742AAF3169DD7540226E9C31F07D198A3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-quad-tile.jpg.t1iff.sh",
+      "bytes": 271,
+      "sha256": "2AF272DC7185ACABD96A671EBCB60D1FE045B035D3B89B37CEA7D6B89590357A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-rgb-3c-16b.sh",
+      "bytes": 258,
+      "sha256": "4EB78AAB7328F21405B4397089468529E826672C9C323BEAE306CE5DA8E5F682"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extract-rgb-3c-8b.sh",
+      "bytes": 256,
+      "sha256": "48D4FFDD0AC601B4B75EE9FD701D60F8E456518DBCFA796DD5FDC1EE42E00C72"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-logluv-3c-16b.sh",
+      "bytes": 260,
+      "sha256": "942E525E85E76C02F58A24E04D52DE5B930DC937399B88DE511DE81600233AAB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-lzw-single-strip.sh",
+      "bytes": 266,
+      "sha256": "49985E8705D7D6BAE443BB3F1E843109C6971FCFD80BE2EDBA1DEA2D1D866259"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-minisblack-1c-16b.sh",
+      "bytes": 268,
+      "sha256": "9D35290B0041DBD1E02FCA9EDDE0759435A6214F5260DD42E5FA2B69C51FCB7A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-minisblack-1c-8b.sh",
+      "bytes": 266,
+      "sha256": "4ECB84E1A21D12A84A687A430863D393698283BF8F78B67FCAA831691E101EA7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-minisblack-2c-8b-alpha.sh",
+      "bytes": 278,
+      "sha256": "49FC35E391876D8BA4D865072AB5DBB1EC525EAF1BFD5034467ECAC0152B4339"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-miniswhite-1c-1b.sh",
+      "bytes": 266,
+      "sha256": "44BD5664C8DE4D59BC075B147B580F5D1491AD189ADDBA3FDC96D4863F17D8F8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-ojpeg_chewey_subsamp21_multi_strip.sh",
+      "bytes": 302,
+      "sha256": "6BFBAA70D60B096C554C00F323646913571CFDE555B3E9FA2AF23F792AB76184"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-ojpeg_zackthecat_subsamp22_single_strip.sh",
+      "bytes": 312,
+      "sha256": "221B0EBE0E2C8AA332860FBA4DB44BE57A967917086CFD0D6ADCA444BDA63C24"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-palette-1c-1b.sh",
+      "bytes": 260,
+      "sha256": "B07D34573DD9B3FD5C1A1BE1F86B1CA0432E41F04DF40E23233C92F69D080077"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-palette-1c-4b.sh",
+      "bytes": 260,
+      "sha256": "92B27E68389D47931725FB630A77F49DD5C0F7C55A438AA8E78B65D080F45C05"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-palette-1c-8b.sh",
+      "bytes": 260,
+      "sha256": "C6D6C75E7A45A37F26119693DC1AFD97E88D19A26F82018AF65AF66D766A0564"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-quad-lzw-compat.sh",
+      "bytes": 264,
+      "sha256": "837016E19BF38D87E9F281E0BD2C8E0F9BD7ECF987C13EFDC29CDD2B90023735"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-quad-tile.jpg.sh",
+      "bytes": 260,
+      "sha256": "3F278D20D730AF38ED6237EC4FE41585AEC2525DD1475A04B40D296EAFBC2AEC"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-quad-tile.jpg.t1iff.sh",
+      "bytes": 267,
+      "sha256": "09442A2AB75EABEE0F1F2D4AF719BF8DE61338B0A8600CE0C380EB390D513046"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-rgb-3c-16b.sh",
+      "bytes": 254,
+      "sha256": "0B2E5FBB8E7227264611B48446E8DCDEAD6C4A7D28815BA9259706822A0214CB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-extractz14-rgb-3c-8b.sh",
+      "bytes": 252,
+      "sha256": "234627071AFC259693C5F2D14F7A9AE1ECE05D6199A6DC522FFE2FEA804BB353"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-logluv-3c-16b.sh",
+      "bytes": 240,
+      "sha256": "BC64BEDB077282848B4644C4CB6404B16CCEEEF7D3EB4F6711D20DBFE4F43559"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-lzw-single-strip.sh",
+      "bytes": 246,
+      "sha256": "F38C9C1BD047853914F4A26D0A39AD7C5870E81C6026491B6D918956DCAB590D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-minisblack-1c-16b.sh",
+      "bytes": 248,
+      "sha256": "F5AF6CECF7766C445E34D2E0E968A42B3AD19235F6620508910AA3050B6BC4D3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-minisblack-1c-8b.sh",
+      "bytes": 246,
+      "sha256": "5744EED6A23DFFECA1253E9508E5DACB25AFC4969381FB2C824B609A4F94CE1F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-minisblack-2c-8b-alpha.sh",
+      "bytes": 258,
+      "sha256": "88F8996B423CB54DEC43BCB30E4A8D8949854506A3D3BF12593D05736F02B9A1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-miniswhite-1c-1b.sh",
+      "bytes": 246,
+      "sha256": "00A583E2EBE131A71BBE3B09D4FB0BA2CD726D6810DD5B337EDD51AA48E26FE7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-ojpeg_chewey_subsamp21_multi_strip.sh",
+      "bytes": 282,
+      "sha256": "5C991770CAA3CC933BEF41A23305446C16179B354FBE7AE411E3F438DB4C4272"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-ojpeg_zackthecat_subsamp22_single_strip.sh",
+      "bytes": 292,
+      "sha256": "987D045A6A14D72F1FEB55725D54571347C17F6AE7BFFCC904E6006DE43D4E16"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-palette-1c-1b.sh",
+      "bytes": 240,
+      "sha256": "AAEDDF278AB304B0C45B2E59CBCEA8451FF9621842DF69DFBDFC2E8CD48C13D7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-palette-1c-4b.sh",
+      "bytes": 240,
+      "sha256": "740B619D537A8196FEDA4947027DAFEAB9D36BF7FF0790D29A08171DF0963F4A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-palette-1c-8b.sh",
+      "bytes": 240,
+      "sha256": "CEC3796B0FA2F7DAA60D8F9F1C9D8CDE73FA96D9382A86A2159A47B912EB36B6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-quad-lzw-compat.sh",
+      "bytes": 244,
+      "sha256": "9D55CF66D9388C7BC87DEBBF7AB6476BC540DDE2E35CAD4BE73E853BBABB2AC0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-quad-tile.jpg.sh",
+      "bytes": 240,
+      "sha256": "747C1DACB6B5EF036A423CA216B39341824AA121F4E23A7C9CF28C09AB5F883E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-quad-tile.jpg.t1iff.sh",
+      "bytes": 247,
+      "sha256": "796F02D9FC64D4BC9B0A72A5083E0743749AC1FC355CAC33BBB9FC641919DE97"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-rgb-3c-16b.sh",
+      "bytes": 234,
+      "sha256": "DA76676C23DA8B8F7C6091EA65A290E2D50DCC89F351ACAF3D0952A55D5F369F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffcrop-R90-rgb-3c-8b.sh",
+      "bytes": 232,
+      "sha256": "302C1DA4284D7BCAA0BB81F88DFC8F74C63646A7BE5B65D0EE056BCB8C0B2324"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffdump.sh",
+      "bytes": 126,
+      "sha256": "6AF87C5CEF0EED426903001D00ADA53F687FBA73EFEDDB8745EB050F2C6089D2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tiffinfo.sh",
+      "bytes": 145,
+      "sha256": "A5BFFEC25A037729FDCC9A6350E6C46956D20856A126B46A8F873EF43A76388B"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/TiffSplitTest.cmake",
+      "bytes": 1599,
+      "sha256": "43F4141551E5B3F9A3CC557E278C9F900BBEE95B66EDE147AE38D88C104A6D61"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/TiffTest.cmake",
+      "bytes": 2348,
+      "sha256": "9A2683B86770E4D3B9B9CEA8DCD2A8A61F5DCCBD51950448D002AC9758FA97A8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/tifftest.h",
+      "bytes": 1522,
+      "sha256": "AC4019115BC40FF6BB0B6E1D58D36AC3B047C03239A22F20C218B3A60325165A"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/test/TiffTestCommon.cmake",
+      "bytes": 4354,
+      "sha256": "1D5D14A92490B72803A726411D2E3B94BB23F691B1D298BA6CAA76644458F333"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tiff.spec",
+      "bytes": 2147,
+      "sha256": "222F50BE2C2407A490664E868A9AB98560B95398C75ACDA2220579E194D61E77"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/TODO",
+      "bytes": 345,
+      "sha256": "863E1ED2759171363CD7A87C3CF17B7F7ADE090B72A117A92DD916E42586D51C"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/CMakeLists.txt",
+      "bytes": 4703,
+      "sha256": "339F1BD536F37807CE7847A2993692927470B27B5163E0E4116595665786C061"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/fax2ps.c",
+      "bytes": 13842,
+      "sha256": "8457DDDF2E7944A3062D76B2F0AFDBF5AC8FEC3876435E75BF231AD67E1F9714"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/fax2tiff.c",
+      "bytes": 14659,
+      "sha256": "1123A450DF696129A368555B1F53E37DCBC9778BE5C372CF6F0AA502E88D85DF"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/Makefile.am",
+      "bytes": 3558,
+      "sha256": "F64BFE056C6E69878CCBB133099C944245907F130B8DBC79FBEA26D0ECA86D93"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/Makefile.lcc",
+      "bytes": 4136,
+      "sha256": "33F79789E152F4858274EB742252E92845D47D9E4D444376B115CDCD452AB752"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/Makefile.vc",
+      "bytes": 1877,
+      "sha256": "A724882B0B23159C17CB11C6D858FF066F0F4C1D056234CF67840AD8481B6616"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/pal2rgb.c",
+      "bytes": 14173,
+      "sha256": "AAA8A531CBCA224C99165A54501FAFAF36BDF29713D3B31524D4F9BE3E9F406D"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/ppm2tiff.c",
+      "bytes": 12743,
+      "sha256": "B94DCF34D1658A5EE6BFE16D6531559954EDEA33EA4D41F4436FF7B08844C3FA"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/raw2tiff.c",
+      "bytes": 21741,
+      "sha256": "95309BCB0D91631A7A679E2038D857D61397EFAA6B0B698F21E6CEB98B334243"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/rgb2ycbcr.c",
+      "bytes": 11191,
+      "sha256": "440C7C867E7002304A8EEB8CEB10C9E67F993A628B64E57857F274AB4C339A53"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/thumbnail.c",
+      "bytes": 18849,
+      "sha256": "1732D198D4D618BD0A055CFD70DF276434DBD944460642C85F29811915B89635"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiff2bw.c",
+      "bytes": 15446,
+      "sha256": "4723CFA58131C62F848B7463E68E89A1F6CD56F02341C3AE66AD9BF31A043E20"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiff2pdf.c",
+      "bytes": 177763,
+      "sha256": "FDFC7AD8E6E975F3ADE0622793BD1C96D8998BE98E335585414C5DC58C540D1E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiff2ps.c",
+      "bytes": 101419,
+      "sha256": "34089BD4861B88D11CDCC1A2049654B961DB04425385C06CA011BC848F1996E0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiff2rgba.c",
+      "bytes": 16373,
+      "sha256": "83547D970AD035B2875F5D08B8286D69E8783BE2C7186721ECB7455E2DE23F06"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffcmp.c",
+      "bytes": 18512,
+      "sha256": "7114D726F20F065B4F5FFCF5FD9E01E45156DBD712E4391E54F2082D5AAB1F5E"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffcp.c",
+      "bytes": 55674,
+      "sha256": "5900D26C60A3559BC81E70174382E14E18065E3A80FE6731AAF731CC0F25A7F5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffcrop.c",
+      "bytes": 305771,
+      "sha256": "CF5B116CE201003E33C43D39A51837436806B84A36E188DB78BCEAB875FA6485"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffdither.c",
+      "bytes": 9481,
+      "sha256": "476CCA7D20CA0D868488E4C0349FD5E9706C87BF99B168609EA93CE18BE9649F"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffdump.c",
+      "bytes": 23717,
+      "sha256": "0BFDA8155642F31E67CE2B7F46D76E08928372F0E9761FDBD510C0C9B67BA453"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffgt.c",
+      "bytes": 15581,
+      "sha256": "2B068E7DC76A2CDB1BC5286238DD71EF33D38A818C030AED8B8D271152E1BCBB"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffinfo.c",
+      "bytes": 13645,
+      "sha256": "9C472DEE5B4F77AD8E8F8F2A8A2EF527AC5A22D6D98C68EFEDEA835CEC31AFCE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffinfoce.c",
+      "bytes": 11724,
+      "sha256": "4865998F32BF7F72872B08CD8865E5BF3960C82F03AE2CBE977D867EF3313478"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffmedian.c",
+      "bytes": 24784,
+      "sha256": "BE603373EBC94D16CC6E1345A39D978B931EBF5540C7084A75726D638A7A4F50"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffset.c",
+      "bytes": 15452,
+      "sha256": "30CCB1F449995C6232C5FBC83AFED2F660987E4F3CF82B2E85AC81E5DB0F3FD7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/tools/tiffsplit.c",
+      "bytes": 8590,
+      "sha256": "61B33FAC5F0F00EE44AA451F43CF52390F3AF559D23BAB65AA8890F76E0474AE"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/VERSION",
+      "bytes": 6,
+      "sha256": "8FB33DADBE981CF5847DF269C10C2A3FE107F2B269D5CCB6DB37D1F61FFC3BBA"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz",
+      "bytes": 2334809,
+      "sha256": "CCE672D2F5941759573CB3904CC8F00F065D54A3689A80719229E961D6A324C8"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/build_config.json",
+      "bytes": 4289,
+      "sha256": "B691C56A0393094D27C970EABBAA8FBA7135BD51487AF9D78DEEA969653ADB61"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/build_tiff_windows.cmd",
+      "bytes": 1090,
+      "sha256": "D87E0C0CFD4C7442785C73287857BF6947F0BDF5402536BD58E4522D87E3C933"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/COPYRIGHT",
+      "bytes": 1146,
+      "sha256": "FBD6FED7938541D2C809C0826225FC85E551FDBFA8732B10F0C87E0847ACAFD7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/FindTIFF.cmake",
+      "bytes": 3100,
+      "sha256": "B5E194C77D072CE5977B5B97A15E403DE3501E4C7BD1459B0667E7E4A1D8E9C6"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/install_tiff_windows.cmd",
+      "bytes": 982,
+      "sha256": "FC4D47C3DF48DA598EE5DBC14735C67768547063B69A57054F9750652C185EED"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/o3de_patch.patch",
+      "bytes": 1908,
+      "sha256": "7D80DF4A02A6B3BA8F27CD3D8554B39A3B3E3202FCD86378337AB453EC05ECD5"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/PackageInfo.json",
+      "bytes": 174,
+      "sha256": "093337775CB1369E97E466B03E5CD39A45C3D916BAB5EEBC95A76F081DA14625"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/recipe-original/test_tiff_windows.cmd",
+      "bytes": 731,
+      "sha256": "4FA4DE81D5E66451B5B05C83CC84CEC1EFA4DAD89AE81C3D8D3F2A594C6F0788"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/FindZLIB.cmake",
+      "bytes": 2084,
+      "sha256": "B2662EB8469BAD3C2CF93E3EA797E3DF53C49AB4A9A1CE4C2AC119F7EF19BBD0"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/include/zconf.h",
+      "bytes": 16885,
+      "sha256": "7F4E7F02C4C1B7EF830A8B4331E1BA04F34E97F2C0DCDD81F967FF16FD5EE6D0"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/include/zlib.h",
+      "bytes": 96239,
+      "sha256": "4DDC82B4AF931AB55F44D977BDE81BFBC4151B5DCDCCC03142831A301B5EC3C8"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/lib/zlibstatic.lib",
+      "bytes": 188206,
+      "sha256": "00842F0C5BE67674DA3A0C1369DA818FFEFF1DEA4F805BEB06DD50F84D5A4FC1"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "bytes": 7461,
+      "sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/ApplyTiffRecipePatch.cmake",
+      "bytes": 4130,
+      "sha256": "FEA21BA4686303D2AB981420187CC5FCAE8DCA3AF8F59AF81154975012C6CDA9"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/BuildTiffPackage.cmake",
+      "bytes": 6797,
+      "sha256": "010F083B44CAB9CDC7D3753F3F688544D0BD4EE9D3E42D752BDDED5184F6DB30"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/FindTIFF.cmake",
+      "bytes": 3065,
+      "sha256": "50CBC71B081CF6FFB7D94240955F10CC7E700FD38F9A51CC060770E0EC9B0522"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/NOTICE.txt",
+      "bytes": 1445,
+      "sha256": "CB1094271A287C1251DA440DE3C7D19BE1F21AEEBF9D7787617089C16BB53A9A"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/o3de_patch.patch",
+      "bytes": 1908,
+      "sha256": "7D80DF4A02A6B3BA8F27CD3D8554B39A3B3E3202FCD86378337AB453EC05ECD5"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/README.md",
+      "bytes": 4914,
+      "sha256": "2243702A90F01E4EF5A9DE5C3D967CD52661C65D533C27784DDB71D3B19E698F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/tests/CMakeLists.txt",
+      "bytes": 2372,
+      "sha256": "54CC10EA8B058CB97FCF7D4946B095555C9D7005AEE04816D53FFEE587BED797"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/tests/TiffConsumer.cpp",
+      "bytes": 15858,
+      "sha256": "59C7F85C0C809743F11AA7392AD18C660DBE098A25CEE66F4B871A2B0E68A113"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/VerifyZlibInput.cmake",
+      "bytes": 1188,
+      "sha256": "ACF00EEF997C8E01ED0A9C2029DDEAE1DAAE4A1E51A02C6642E96762CB536D96"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+    }
+  ]
+}

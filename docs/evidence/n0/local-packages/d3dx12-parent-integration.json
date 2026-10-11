@@ -1,0 +1,20 @@
+{
+  "package": "d3dx12-headers-je-rev1-windows",
+  "packageBytes": 16652,
+  "packageSHA256": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73",
+  "sourceSHA256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+  "copyCount": 4,
+  "copyManifestSHA256": "6932E3000EA90A20DFF53936A76941E4B760111FFD5FDE2F54202D8B95261D30",
+  "catalogueBefore": "0F6C989F3431591A0832BA0EEB7DD9DBAA3D0B7690B8CF5C5BBBD89EC98F8A71",
+  "catalogueAfter": "D6C7FAB5BC7F22E5FB25D6856BAFB1E2CA074F1FE859C94BD91338E687825B35",
+  "nativeCases": "Release3/3 Debug3/3",
+  "sdk": "10.0.26100.0",
+  "guards": "6 producer plus 3 lookup expected rejections; 3 extra identical producer attempts were unnecessary harness repetitions",
+  "frozenInputs": 12,
+  "frozenInputsMatch": true,
+  "readmeChangedOnlyAfterNativeValidation": true,
+  "engineAcceptance": "PENDING",
+  "gpuAcceptance": "NOT_TESTED",
+  "lookupCompilerDiscovery": "missing/tampered header cases perform CMake compiler discovery before Find rejection",
+  "outsideTemporaryFile": "Own script outside checkout preserved after exact-file deletion was automatically rejected; no bypass"
+}

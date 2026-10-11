@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "owner": "/root/dependency_writer",
+  "status": "NATIVE CONSUMER PREPARED; PENDING PARENT REVIEW AND LUNA EXECUTION",
+  "ownedSourceCount": 3,
+  "inputCount": 15,
+  "aggregateSHA256": "4765658e92580dd5db41cb1497908dd4d21421a3f36cec1be65a29491a45fbf8",
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ANTLR4/README.md",
+      "role": "owned-source",
+      "bytes": 3976,
+      "sha256": "5e114206934e3c824d36ab37e2c231295ca4296e7c622ff6729c3d10ee3f8f9d"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ANTLR4/tests/AZSLConsumer.cpp",
+      "role": "owned-source",
+      "bytes": 6241,
+      "sha256": "b1b99c47fd06a45e96107a78a1bfab8d9fa1e08c90cbf3fb50c687e13599c7de"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/ANTLR4/tests/CMakeLists.txt",
+      "role": "owned-source",
+      "bytes": 3432,
+      "sha256": "1e3e23b7851207743a374d28c7b93fadbcb146116ed8c34beee3cf7643a4ba19"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslLexer.cpp",
+      "role": "read-only-native-input",
+      "bytes": 157269,
+      "sha256": "6b1b2d917cc388a90a686b56923c02dea8da55ab4e523d69fc51da381134c2b4"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslLexer.h",
+      "role": "read-only-native-input",
+      "bytes": 8822,
+      "sha256": "c8092ca7fb6384d067b96d730e704762cfd8cf708a2692cfd6021f39ab4aa171"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslParser.cpp",
+      "role": "read-only-native-input",
+      "bytes": 536933,
+      "sha256": "9915ba87d26568ce65e299bff63935547d4dcfacf8545e3f84f25d3b3b59119e"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslParser.h",
+      "role": "read-only-native-input",
+      "bytes": 142096,
+      "sha256": "00e97a1f9cedf6c529c4cd92fb6b700b0a0f4f49bd63162f52b39fcd7a2376fe"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslParserListener.cpp",
+      "role": "read-only-native-input",
+      "bytes": 311,
+      "sha256": "139078124d803026643550823340e9242740df70457861e3e7c3a2a4243fa6a4"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslParserListener.h",
+      "role": "read-only-native-input",
+      "bytes": 31035,
+      "sha256": "8c7dd5aa7827984c34ced84def9cbc70f11c972e349d436a7a379159bdd2c144"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslParserBaseListener.cpp",
+      "role": "read-only-native-input",
+      "bytes": 315,
+      "sha256": "855049f9693b64ed301f621de2bc61566bc3d76718a066517507f355c3f5c26e"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Grammar/azslParserBaseListener.h",
+      "role": "read-only-native-input",
+      "bytes": 35848,
+      "sha256": "a8ce9a5e6d01e4a0b5f100cc7c11d2fd4388e94d5edf1beb30658ee0ff083b66"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "role": "read-only-native-input",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/antlr4/files.cmake",
+      "role": "read-only-native-input",
+      "bytes": 8431,
+      "sha256": "cbdb5231d6411f9c2dec0b3565ce507fc69f3da0e7d02c6cc64eb43341ca5ec5"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/antlr4-audit/root-source-manifest.json",
+      "role": "read-only-native-input",
+      "bytes": 96255,
+      "sha256": "60e661cd3ebf35c12da71f64a16db9611b75b245c1906f9aaad919b1049eddc7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz",
+      "role": "read-only-native-input",
+      "bytes": 4174703,
+      "sha256": "c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed"
+    }
+  ]
+}

@@ -1,0 +1,4182 @@
+[
+  {
+    "path": ".bazelrc",
+    "bytes": 269,
+    "sha256": "81EAE3B66B36FE089533C3EA7BCC4B5B1A01C923EB8F563C420F16FD5175E2B5"
+  },
+  {
+    "path": ".bazelversion",
+    "bytes": 6,
+    "sha256": "3B10B6AD566EADBCACADB33C591F1EC629593D6ADF47442E56E0F61996829EF7"
+  },
+  {
+    "path": ".clang-format",
+    "bytes": 3541,
+    "sha256": "7DD1406A4C6F7A8A6DE5250D62D42F53605CFB62C686DF5BCDB78E980BD9A26F"
+  },
+  {
+    "path": ".github/workflows/analysis_workflow.yml",
+    "bytes": 7474,
+    "sha256": "C4D2DE41DD7912F3FA8853712B0F578A66E428880AE2A9F99D21DD3EE7D83D41"
+  },
+  {
+    "path": ".github/workflows/bazel_build.yml",
+    "bytes": 1274,
+    "sha256": "D0ABF44D14ADDB216EED7F05E51B8AC1CD6A81A31FD4C5D11D5A4E12C1583BD4"
+  },
+  {
+    "path": ".github/workflows/ci_workflow.yml",
+    "bytes": 16802,
+    "sha256": "FE653BD2FE2085B35BD8D58581139EFF022C04B41132B1285FA00FEB4D6B8162"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 806,
+    "sha256": "C6CF83DBF690E2A318045F8C7BA7F0E8C11DC13EB7C4368DF4745BC230781B2D"
+  },
+  {
+    "path": "ASWF/charter/OpenEXR-Technical-Charter.md",
+    "bytes": 13493,
+    "sha256": "653BCE904674A8250905A923668B487553A17CBF8F73E227305C0F44EE9D89FF"
+  },
+  {
+    "path": "ASWF/images/aswf.png",
+    "bytes": 7787,
+    "sha256": "F57C65F5CCF5F7CADAF1011014ECFC7960949CA5D9A8C0E75CE543904A593AB3"
+  },
+  {
+    "path": "ASWF/images/openexr-logo.jpg",
+    "bytes": 18378,
+    "sha256": "F81F68E460E6D7CB5DAF41328261620B5B1AA15E4A970E9E399A2D5CA6F513E6"
+  },
+  {
+    "path": "ASWF/proposal/OpenEXR-Adoption-Proposal.md",
+    "bytes": 9116,
+    "sha256": "83860409202D2AE0CE1C0797E5666D09256E832E1BE0028D8A6B3ED29647643F"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-05-02.md",
+    "bytes": 2020,
+    "sha256": "75490F7E6702AB9555F80684AD6D6699B64239F6F6AEE1DCA28D52187C678BA0"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-05-09.md",
+    "bytes": 1616,
+    "sha256": "CE8F2EC312673138CF1D75CEB8F430F9A8D8BED35880D63B4A92842F4D598594"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-06-13.md",
+    "bytes": 4105,
+    "sha256": "05CAF23AD0FC130381E44C6D3C8487FF41A096DD324CA79C03271487DB50FFEF"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-06-20.md",
+    "bytes": 1436,
+    "sha256": "BD0BED2B790841003503B55039006AF6F0982E9FAAAA9370977C8A308DCD60CD"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-06-27.md",
+    "bytes": 2564,
+    "sha256": "EF24FD6D2917CADE2CA889DFF5BAFF7A536511A2F1969B8BE553E24E1F20B8B3"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-07-11.md",
+    "bytes": 1952,
+    "sha256": "E835955BF312177CAD02129BCD3160B8E3D34DB66068DBB496384EDF17371474"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-07-18.md",
+    "bytes": 4310,
+    "sha256": "C830906F1D05AA9E3E4DC2FECBA7EACE20A372F42F74416160447B9864360AF9"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-07-25.md",
+    "bytes": 2173,
+    "sha256": "9C949212346C83C61BBCADB7C45F04439DB6290C4F0BF66323E62D1FA4B95C43"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-08-08.md",
+    "bytes": 3353,
+    "sha256": "E438E720004C12227F75AFFDE3E8FA195A23A784C999E5B87C9231815879EE28"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-08-16.md",
+    "bytes": 1236,
+    "sha256": "7618DA6EA4B8BDA196149A6ECA5E69A204A4AA1BF6EBD04AB9BB1F371C24FA1B"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-08-22.md",
+    "bytes": 1937,
+    "sha256": "ACFD0B712D63E55907B28B715BDF9003D50FAADBAAFAD067F5E0DD9C35194B21"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-08-29.md",
+    "bytes": 1771,
+    "sha256": "16169E83EC0EA86DC4DCA60564AE8E4B628B0C9B41AE5C5C0C39DAE241F313D4"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-09-05.md",
+    "bytes": 1234,
+    "sha256": "16AC4704EA7ED76AF293A57CF54E195E3DEECB944B452C133924C0079F0C48C3"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-09-12.md",
+    "bytes": 471,
+    "sha256": "F198F9D4CCFD03B4A36A086522F0C55551C51C1E3C06E402E0EB20808EA670F8"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-09-17.md",
+    "bytes": 1445,
+    "sha256": "4ACA8A546438DE21A5E9ABDFE6F455EE6B09D68796868675D8901DFF24F58BF8"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-09-19.md",
+    "bytes": 1445,
+    "sha256": "EC802670E631BC679E92FE4A1F5F7A274481C563023519F31231201469A46F08"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-09-26.md",
+    "bytes": 3288,
+    "sha256": "D093B80B975B5AE402AF62CC23CFB006421F54AAFBE0A9555B3714334AC2BD22"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-10-03.md",
+    "bytes": 1656,
+    "sha256": "EB3F51D4E0006FC5BC1EF55ACAD5DD6B122433BD3AE4CFA96C9A22C00D1291C6"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-10-17.md",
+    "bytes": 2192,
+    "sha256": "B357F4BF5D5C4640C1D6A6F6F6F20E02B26ADEC7A4CE059B77C74B57C6453C4D"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-10-24.md",
+    "bytes": 2490,
+    "sha256": "8658A7328BDB4EAFBA7E5DB94AC09E0A73C51BF8E31E3B283EFD2985DCDFCD74"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-11-15.md",
+    "bytes": 1385,
+    "sha256": "CBF81CD69EC0551F36C47A8A299225955FC317CA59C98554F7CF4E881D39C93A"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2019-11-21.md",
+    "bytes": 1172,
+    "sha256": "5EEF05B132228BD6BA8938BCCCCC6B76CFAC586B6171F9BD1C644BE42DDDDDFD"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-01-09.md",
+    "bytes": 496,
+    "sha256": "4C8F3180D5221ECF6874AAF6E3EEEF52E9642AB33EB217C9DE4AFAE6BCC120D2"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-01-16.md",
+    "bytes": 1362,
+    "sha256": "83C889ACEC1CBD33AC8B2C67C65970DB6838E37A49289560BC13252F914E7AD2"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-02-06.md",
+    "bytes": 1343,
+    "sha256": "784E95F4DBC39F3BE3E822C075B46B5D53A746430FE047354AD2402EA5208BE0"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-02-20.md",
+    "bytes": 802,
+    "sha256": "15A7F73C175C43D37973B27ADC0590476471A5F8575FDB274FE41940B373A879"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-02-27.md",
+    "bytes": 1064,
+    "sha256": "26AE6B3D58BD78FFAEEEC9E504B26AE29DC1E3E7F1B973637CF167C1232A8D81"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-03-05.md",
+    "bytes": 960,
+    "sha256": "86BBC4B8616C1581BF8DB949813535C5E40181856EF09284D68CBC5558C774FB"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-04-02.md",
+    "bytes": 755,
+    "sha256": "A348853E05DCD9F6FE1BACE586485A4A15DE72471EE60955213E35AB16525186"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-04-16.md",
+    "bytes": 1063,
+    "sha256": "069648389B844412C0B7831E7FA152ED3A98C7F1FAC535D24675C12CEFF6CB20"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-04-23.md",
+    "bytes": 1899,
+    "sha256": "45AEF3DE0A899F6B293A8A55CE821BD849EF8DD236B335F9B40B2EE80135EB30"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-05-14.md",
+    "bytes": 689,
+    "sha256": "A1F0EE72A829AA2C85E8E07D655D83BB9928B399E6FB4835C642B6E414E60404"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-05-21.md",
+    "bytes": 2793,
+    "sha256": "E21AC49F8056025C6FD12FDC55ECBD4B8BC4A660EEEBAAB5F078CE46FA5B7C3D"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-06-04.md",
+    "bytes": 2242,
+    "sha256": "F7D7184A5291D7EBFCF1D0D778EC8031E9B477D0E0BD4D8092E1A490FFC028A1"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-06-18.md",
+    "bytes": 3091,
+    "sha256": "127D756245B1F0ACB395529866F3E188F73D1BA4BBB40DA2F1AB3A0F469D7C77"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-07-16.md",
+    "bytes": 4659,
+    "sha256": "10D39BA288E957451623DDCE3A496C1C52A846244E5210E15F22592ED55B9B9C"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-07-30.md",
+    "bytes": 5469,
+    "sha256": "1AE2A893B9E3FC13E38B1F4398138B3D9195A7175C531E5E711B762F67167789"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-08-13.md",
+    "bytes": 1483,
+    "sha256": "A5CEE8F576EDB14DDE443C374F52DC7EC76727249A6FFAC4249FCA951110D942"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-08-27.md",
+    "bytes": 2002,
+    "sha256": "CD7E51FAA8187FCD956577C8F70FF89AFEF02428AB3927E9CC69BB239ADFBE19"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-09-10.md",
+    "bytes": 3339,
+    "sha256": "FE6ABD43F2FEFE717D185A2DD5DA15AAC35B5526E4CEF305EDEDE65978763690"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-09-24.md",
+    "bytes": 1240,
+    "sha256": "E08225B2BBF2122D96B5FC8FF4AD839A20288D289BC2EB86AAE0C33CE2E1C59A"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-10-08.md",
+    "bytes": 3367,
+    "sha256": "2E01E99723245950B39B6BFAF3472C2D7A751D590DAB3B69F4B3E93FAE6D81E6"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-10-22.md",
+    "bytes": 6806,
+    "sha256": "B456D2CB9222A86783E384DBD2A92A3AFF39ECD9139D0FC4AAB41E43A871B4DD"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-11-05.md",
+    "bytes": 2708,
+    "sha256": "4E4D29976A85A49957801CEB4F7660050C548EBE2F4E0CAA9FA785D93C24E1DA"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-11-19.md",
+    "bytes": 4335,
+    "sha256": "2EFF3B85B64F6B28C43A8C1E1E47E41CB5FE0612D93AB24F8A8A26A76892D1E4"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-12-03.md",
+    "bytes": 4060,
+    "sha256": "18ABE664BC281C8588B8D63912567B4826D4661F70F36168011C273DCE0A7BCB"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2020-12-17.md",
+    "bytes": 5340,
+    "sha256": "D3EA7FDC99706066E687187915D4FC864FBA8B15F3226EC17087394DD4D89ADA"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-01-14.md",
+    "bytes": 5264,
+    "sha256": "228D9F9EB483AE841A2C1423DC8FC9F020B85C4730C4F1276E3BD72123914846"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-01-28.md",
+    "bytes": 2598,
+    "sha256": "B027B328BA6A2293C006805FA2D271AD0E29D5DD4A57FDF3D5A0F6996C50B59B"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-02-11.md",
+    "bytes": 2030,
+    "sha256": "72631D70A6593DA72196C3EF3B24CA984330E274327AC5B698E1F1222375E608"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-02-25.md",
+    "bytes": 2220,
+    "sha256": "44A3D7A8C29422DBD8D1FB4DAE12EBDEA1E4CA95FB2D3D1F563CA4808861F46C"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-03-11.md",
+    "bytes": 2426,
+    "sha256": "37D0927B8F3FEB699A703D1CEF6C36894320FB5338C366B7E605EB177838609E"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-03-25.md",
+    "bytes": 3924,
+    "sha256": "8E9D0F6C7D3D9731F196FB902E1577BDFF5B1CAB91F26B6B449C805B0FEEE7E1"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-04-07.md",
+    "bytes": 3492,
+    "sha256": "2C9FBB355AE343E43AC8F9512028B979177587913EA57947F4CA4D884B137ADD"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-04-22.md",
+    "bytes": 3891,
+    "sha256": "D1F3279B0C0D376B6E9810925EAA55A59866005E4AA6253887379D10F1FF3D12"
+  },
+  {
+    "path": "ASWF/tsc-meetings/2021-05-06.md",
+    "bytes": 4611,
+    "sha256": "B4E525893A497C9E63D3D40650FFF0EA535615F5F6B751380BE29DF026A3060F"
+  },
+  {
+    "path": "BUILD.bazel",
+    "bytes": 16296,
+    "sha256": "5629BA458811A382C5C7A25C89AFC6F0BE756FEC158134F3E3D70E874E6C5382"
+  },
+  {
+    "path": "CHANGES.md",
+    "bytes": 345628,
+    "sha256": "A84EB17E343FC8B4EF6667331F2A540717C96D7D92BCF000DFF5657300D48DA9"
+  },
+  {
+    "path": "CMakeLists.txt",
+    "bytes": 4516,
+    "sha256": "14FB83B8630B6E3D2DB738133E4B1D83CFDCD83585C61A7EBD767005465AD6DC"
+  },
+  {
+    "path": "CODEOWNERS",
+    "bytes": 389,
+    "sha256": "039A7D7DDC9D8E04758F38AA680C847B645476C5258E8CAB141B34BCADAAE4A4"
+  },
+  {
+    "path": "CODE_OF_CONDUCT.md",
+    "bytes": 2075,
+    "sha256": "A614720FBB5217583E12EFDC4D41AE666C247711A26C175A3ABF59D1100111C9"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "bytes": 19919,
+    "sha256": "3B830A8F6CCCED21B142E135635DCE889A047D69BD26B6E41FC2011E76B0A2D9"
+  },
+  {
+    "path": "CONTRIBUTORS.md",
+    "bytes": 1165,
+    "sha256": "34FC7C7842B7DFC4C12FBE3C85E87F6F7453CFBD8A80D7254604DF529D28E93F"
+  },
+  {
+    "path": "Contrib/DtexToExr/AUTHORS",
+    "bytes": 67,
+    "sha256": "001EA4855801E70DEEF7213CA2F3C5FA8B709B31B36873D19A69E2F4A334A89B"
+  },
+  {
+    "path": "Contrib/DtexToExr/ChangeLog",
+    "bytes": 454,
+    "sha256": "D23C44A923ED4D7CDF19A63FDC5A88ED98CC67FF90FCB5A6136AA5291E6D3B4B"
+  },
+  {
+    "path": "Contrib/DtexToExr/DtexToExr.cpp",
+    "bytes": 18022,
+    "sha256": "00206E9E2B0BCC3280CDAE044A6BB46C7454296CB882CA25005771DDF85B21FD"
+  },
+  {
+    "path": "Contrib/DtexToExr/Makefile.test",
+    "bytes": 1458,
+    "sha256": "0E4FB15035551B994C75224EAF547EF03F43A5FF2FA0831283F3D13AB91AD194"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxBaseDeepHelper.h",
+    "bytes": 7904,
+    "sha256": "F0BF7B8EAE4412A53C736831E1B4CCEDECF78E4E0F307641A016B98E2D15C338"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxDeepOutPixel.h",
+    "bytes": 2862,
+    "sha256": "E6E1147B509B820D9FADC81246FC8DCF63512A91371DDE775E5061EEEDF5CE21"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxDeepOutRow.h",
+    "bytes": 7538,
+    "sha256": "6012EF69871CAA02410DFBDAC26C34CC2C8B3F7C2B1D1EE5147558B84C8C1A27"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxDeepUtils.cpp",
+    "bytes": 3744,
+    "sha256": "37842FF5863DCB2E15ECF21BB9DB77458EB99AD54AECA5ED5038CE39A011E136"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxDeepUtils.h",
+    "bytes": 18324,
+    "sha256": "ADDDFE2440762CE8C5E1ECBFA0D5967CD8E2E669D84CC3D99426EF58D81E3850"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxFourChanDeepRgba.h",
+    "bytes": 15507,
+    "sha256": "F54B31E213ABB69F0A5D29DE9D36A9A40FA28A6D34D657BB741AF33407232CB5"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxOneChanDeepAlpha.h",
+    "bytes": 11183,
+    "sha256": "9CD86D4FA50C39646D215E3BA4F1AD15C77EA8F467F1EF8DC6890AE5925EDF32"
+  },
+  {
+    "path": "Contrib/DtexToExr/PxOneChanDeepOpacity.h",
+    "bytes": 15282,
+    "sha256": "FCAE9527BFBE72C00E33B4E5E43FE4C21C4CEC351636CB5912C1861D72D27073"
+  },
+  {
+    "path": "Contrib/DtexToExr/README",
+    "bytes": 4226,
+    "sha256": "A51D513E1731BB22CE57D1043936EFCDBCAD63C3FF0D612FB5937AFA4A9104ED"
+  },
+  {
+    "path": "Contrib/DtexToExr/bootstrap",
+    "bytes": 1509,
+    "sha256": "38F823D1343A23B0403E5A40CA1F69C1C1F0A277A16654D928421BB1953F1FD1"
+  },
+  {
+    "path": "Contrib/DtexToExr/configure.ac",
+    "bytes": 5344,
+    "sha256": "540A2F5F1F47F3D96BA8A634FC67370BDA9B64EE5D7C7A80BD7634F026FC2797"
+  },
+  {
+    "path": "Contrib/DtexToExr/m4/compilelinkrun.m4",
+    "bytes": 5990,
+    "sha256": "2BED363D6566F2626517BBF42892330789F26DF96B9C8B82BCE100DA2266AA28"
+  },
+  {
+    "path": "Contrib/DtexToExr/m4/path.pkgconfig.m4",
+    "bytes": 4355,
+    "sha256": "081C34947169E4A616B181B0B571C681D3E4A903645412720937A4DAC569E462"
+  },
+  {
+    "path": "Contrib/DtexToExr/m4/threads.m4",
+    "bytes": 10606,
+    "sha256": "685387A3DC1DB76FBE50DD0618FC5C990227198C94B51DE9C301F6206826F17C"
+  },
+  {
+    "path": "Contrib/NuGet/OpenEXR-msvc-x64-build.nuget.bat",
+    "bytes": 3182,
+    "sha256": "9A599E19EBE3A35D0642EA0B3748D4F96F4C60F5F19A9538D41610DCFF8EAD49"
+  },
+  {
+    "path": "Contrib/NuGet/OpenEXR-msvc-x64.nuspec",
+    "bytes": 628,
+    "sha256": "FFAE1B1F189C9E1379951D8B498CF07751FAC2CF8F68F7BE445CB0C2F4FD5ACE"
+  },
+  {
+    "path": "Contrib/NuGet/OpenEXR-msvc-x64.targets",
+    "bytes": 1866,
+    "sha256": "E79DB34F22230B465B1934101BF3EB7388D1DA91E56C977EEB4DB27D5BE5C011"
+  },
+  {
+    "path": "Contrib/NuGet/OpenEXR-msvc-x86-build.nuget.bat",
+    "bytes": 3340,
+    "sha256": "943046D0DA3B507E66A4A8B8EFB42327C71C17DB3DC8E55EEB40CC3D8F21DE5D"
+  },
+  {
+    "path": "Contrib/NuGet/OpenEXR-msvc-x86.nuspec",
+    "bytes": 628,
+    "sha256": "49F1109E89BD04BE5EEE9667FE9BD8CB2D2FFBD6028156068FD57195FE76FB73"
+  },
+  {
+    "path": "Contrib/NuGet/OpenEXR-msvc-x86.targets",
+    "bytes": 1874,
+    "sha256": "241789BC127B6D212C03744CF705976E85134DC7DFFCF7993CEDB5C1DD3E61A3"
+  },
+  {
+    "path": "GOVERNANCE.md",
+    "bytes": 5496,
+    "sha256": "6F041D518B4E9DB8175D2AEEE7788D300F372685E22C5EB41195AD51D379A670"
+  },
+  {
+    "path": "INSTALL.md",
+    "bytes": 11503,
+    "sha256": "BED1C35CA6D3BE88D5BC1728380F2F72A56394250F358C80DE86B1E35D650B87"
+  },
+  {
+    "path": "LICENSE.md",
+    "bytes": 1501,
+    "sha256": "84853C91D4C2E0310741D4773469D98BB93E61029608E0BA0882A3FFFDF330BD"
+  },
+  {
+    "path": "PATENTS",
+    "bytes": 13721,
+    "sha256": "7F5DEE333A82CAB38B3567B85EC52A74487A5B2A8F4097EB8B4071C892C47B12"
+  },
+  {
+    "path": "README.md",
+    "bytes": 9341,
+    "sha256": "5C0610071CC1B3815D1540093EDBBF000589FF8B3FC837748E7CEDCED21E5C12"
+  },
+  {
+    "path": "SECURITY.md",
+    "bytes": 4896,
+    "sha256": "09ED138CF2660101F155DF3B5F340F467A51C426E63537F2384F38EE452C8A60"
+  },
+  {
+    "path": "WORKSPACE.bazel",
+    "bytes": 107,
+    "sha256": "13D5A199E7DFA9EFD3455652FB5C541E5DC5EF94E2554A0EC0361B3AEB7FB0B5"
+  },
+  {
+    "path": "bazel/example/BUILD.bazel",
+    "bytes": 178,
+    "sha256": "7F3D244F18C2A5822DDFD175E15DF806699932671E9AEEF0FDD3629069F16DA3"
+  },
+  {
+    "path": "bazel/example/main.cpp",
+    "bytes": 1509,
+    "sha256": "EDA89B30AA86BF0BD33FD43234FE3FEE70054CCF916CAA698D30EAFC2B157152"
+  },
+  {
+    "path": "bazel/third_party/Imath.BUILD",
+    "bytes": 2590,
+    "sha256": "B360BD16825424DB97C5F29283E2D197BC5E230EDD8299181B53A8277338620F"
+  },
+  {
+    "path": "bazel/third_party/generate_header.bzl",
+    "bytes": 805,
+    "sha256": "BB2E6AE1F12BB9C8242BB2B52000F5181EB24257F3EF58637C73DCB19DB0F3FE"
+  },
+  {
+    "path": "bazel/third_party/openexr_deps.bzl",
+    "bytes": 1404,
+    "sha256": "7869A8D174C2501A689B37ACAAE6B27AFFB5125A206BE4C02970CC552C2038BA"
+  },
+  {
+    "path": "bazel/third_party/zlib.BUILD",
+    "bytes": 3462,
+    "sha256": "21257BF271CF87DBE6082971C124480221C05B04A0292864B2CBEA976F586F4B"
+  },
+  {
+    "path": "cmake/CMakeLists.txt",
+    "bytes": 8003,
+    "sha256": "4B46B12EC07F4D30BDC44CC2E9FB11E70AB08DE23787A71DABA74D0452E69AF3"
+  },
+  {
+    "path": "cmake/FindSphinx.cmake",
+    "bytes": 469,
+    "sha256": "B7156BC63E0BC79C136648D8461196B2160B75288B60F18D5F63EA125EB330CB"
+  },
+  {
+    "path": "cmake/IexConfig.h.in",
+    "bytes": 614,
+    "sha256": "D242C11C4C8C41AD80B1B1FCC8233E0C47BA343E875AE9DD76F5593E2D24C5C0"
+  },
+  {
+    "path": "cmake/IexConfigInternal.h.in",
+    "bytes": 277,
+    "sha256": "B71BCC75732C9991A6413A46AAF1692B366FDA8E455BF9651A84DFFA9F8EB3D2"
+  },
+  {
+    "path": "cmake/IlmThreadConfig.h.in",
+    "bytes": 1089,
+    "sha256": "99C9DD1897A38BB7D28418D76CCBEE0036A8259789216F33B4F4B8C48018DA6B"
+  },
+  {
+    "path": "cmake/JoinPaths.cmake",
+    "bytes": 843,
+    "sha256": "25138E4626C09423CBDD900EF9FF1B5B4BC94E3F2814FDBCE97A85696FAA4E85"
+  },
+  {
+    "path": "cmake/LibraryDefine.cmake",
+    "bytes": 4131,
+    "sha256": "99ED7E6FED17142407B7EAE5EC4230DD009B02819399020B511ACBAFCE7DC9B0"
+  },
+  {
+    "path": "cmake/OpenEXR.pc.in",
+    "bytes": 594,
+    "sha256": "D46BC7B7C6508EBB402E606AB9DD398EB7ADD96BBE73FE4CDC4D95A268B303E3"
+  },
+  {
+    "path": "cmake/OpenEXRConfig.cmake.in",
+    "bytes": 411,
+    "sha256": "10C11CF170DE6C5E7ADCEC8D4C0675ED7D475965FAA4A58D6A8FC76A6F15BE14"
+  },
+  {
+    "path": "cmake/OpenEXRConfig.h.in",
+    "bytes": 5791,
+    "sha256": "B93F245FC889386233A1880DBDC43F9653011F4FB609DF51D813CDA78C64F54A"
+  },
+  {
+    "path": "cmake/OpenEXRConfigInternal.h.in",
+    "bytes": 1215,
+    "sha256": "A7CD043C21DBC4909C4AA086523A38AA9A680BF58BC310158D3C8B5EEF664026"
+  },
+  {
+    "path": "cmake/OpenEXRLibraryDefine.cmake",
+    "bytes": 3367,
+    "sha256": "AD7D4EA5806E15AA30FC07C3ED3EF6B791597D69A1A55DDE424FA6C7BA3175C0"
+  },
+  {
+    "path": "cmake/OpenEXRSetup.cmake",
+    "bytes": 12202,
+    "sha256": "3884E70C04D5468E6DA8B1812B13C3A23C56FDA6B20FB96979AF4A72A284D82E"
+  },
+  {
+    "path": "cmake/SampleCTestScript.cmake",
+    "bytes": 2312,
+    "sha256": "0A896EE2BE0E674255A48F14630AE645DE0E6C352727CBAB3A2225A3482861BE"
+  },
+  {
+    "path": "cmake/Toolchain-Linux-VFX_Platform15.cmake",
+    "bytes": 1292,
+    "sha256": "8B8C7E422F36E428361BE86AFC503C9D528CEFFCAC654E5D605370C3BF50076F"
+  },
+  {
+    "path": "cmake/Toolchain-mingw.cmake",
+    "bytes": 1127,
+    "sha256": "62CB270ED976401916A5CA313D0DC2A6132B48E15C10CB38A50F08E9D63104A9"
+  },
+  {
+    "path": "cmake/clang-format.cmake",
+    "bytes": 2317,
+    "sha256": "9D9CF06524F71BD68577FE33F62B1C807CC40ABEB09DD65F390A55C719A51207"
+  },
+  {
+    "path": "docs/CMakeLists.txt",
+    "bytes": 1836,
+    "sha256": "AD01D1D9F01FF309EC6A2292EB429660ABF325462E0CECF4CABB5CCE3418F954"
+  },
+  {
+    "path": "docs/Doxyfile.in",
+    "bytes": 1756,
+    "sha256": "57F3BB74043C7DAE30B2E2039FD60FFEA50C199CCE097B22D03E1BCF4F9CE3F2"
+  },
+  {
+    "path": "docs/InterpretingDeepPixels.rst",
+    "bytes": 28874,
+    "sha256": "76AD7AABC177FEEEC56F9E267A0CC57FCD8F040BA12D7D8E8BE4461CC87C0B18"
+  },
+  {
+    "path": "docs/MultiViewOpenEXR.rst",
+    "bytes": 8679,
+    "sha256": "AE1A2E76534E63F191A68125D575D9A55A3A87F0C140DB34102699F152947960"
+  },
+  {
+    "path": "docs/OpenEXRCoreAPI.rst",
+    "bytes": 17504,
+    "sha256": "FA01F65BFEEC220C7B21EB18B116CD99059BB27E8E46C132590478EC29E7B818"
+  },
+  {
+    "path": "docs/OpenEXRFileLayout.rst",
+    "bytes": 52925,
+    "sha256": "6EAD875A969E4FBB5056D1450F06A8002C65103D0FBA4D76A79E4147507DE26D"
+  },
+  {
+    "path": "docs/ReadingAndWritingImageFiles.rst",
+    "bytes": 77553,
+    "sha256": "02497A065E1084E16A1A08D473F191F9C7A35C7EDB34D8F23BE0F1D25CD8FE24"
+  },
+  {
+    "path": "docs/StandardOptionalAttributes.rst",
+    "bytes": 7267,
+    "sha256": "C5EBD4C4EE09733DDFD5A6D4E8EDCE17A8D60BF2D37D8F799FB8C57D9F1C247A"
+  },
+  {
+    "path": "docs/SymbolVisibility.md",
+    "bytes": 6458,
+    "sha256": "EA9BD24AD216C90B26BEFDC599B405828AEE80BF1D2B41704FD8B14238E64FA3"
+  },
+  {
+    "path": "docs/TechnicalIntroduction.rst",
+    "bytes": 55467,
+    "sha256": "F3ADE8111CAD3E4EE1CF64BE0DA30ED31752E4D0EE7607C8A341FB64A0F0D4C7"
+  },
+  {
+    "path": "docs/TheoryDeepPixels.rst",
+    "bytes": 21495,
+    "sha256": "94085943E54EA722C764477BFCEA5603DF8664DE42A235E2353676622D6A60C6"
+  },
+  {
+    "path": "docs/conf.py",
+    "bytes": 9448,
+    "sha256": "21CE88C4AC19133F3D7ADFBF2B5D4867FC6981AC2336AD22EBD9F4AC67DD1FC1"
+  },
+  {
+    "path": "docs/images/InterpretingDeepPixels1.png",
+    "bytes": 29928,
+    "sha256": "241C5A63BFAD45D311C7130AEB4DFE8D917DFC151C5B0177604A443152AF32CD"
+  },
+  {
+    "path": "docs/images/InterpretingDeepPixels2.png",
+    "bytes": 29353,
+    "sha256": "C28D911B1AB095A61DEE65EB351431185B631893C9C7EAE9E6BC70E7EF336329"
+  },
+  {
+    "path": "docs/images/InterpretingDeepPixels3.png",
+    "bytes": 37950,
+    "sha256": "C2B59291D38DFD4734E9CDA0DC92C16611C94E76AB2D649EF9DE95577E3B1810"
+  },
+  {
+    "path": "docs/images/cubeMap.big.png",
+    "bytes": 37146,
+    "sha256": "DD599E70AED34FFE0A4E09DA6ED24CFEE389B1C1326EEEC3A8322A977FD9ABF1"
+  },
+  {
+    "path": "docs/images/cubeMap.png",
+    "bytes": 10557,
+    "sha256": "EB5D9CF7EB890F4F2F5B79348394071A03B0B859A0E54C060668FBD4F4C69E07"
+  },
+  {
+    "path": "docs/images/drawing.png",
+    "bytes": 824,
+    "sha256": "8286E9775EB04D4E84F0CCA9FF3244EF4E3E808126CC8717F049E8370DF1561E"
+  },
+  {
+    "path": "docs/images/envcube.png",
+    "bytes": 37146,
+    "sha256": "DD599E70AED34FFE0A4E09DA6ED24CFEE389B1C1326EEEC3A8322A977FD9ABF1"
+  },
+  {
+    "path": "docs/images/latlong.png",
+    "bytes": 48302,
+    "sha256": "EC3782186348CDA7AF5E40345B327FA645BA9083D0894B1D30C19E3A0861065A"
+  },
+  {
+    "path": "docs/images/latlongMap.big.png",
+    "bytes": 48302,
+    "sha256": "EC3782186348CDA7AF5E40345B327FA645BA9083D0894B1D30C19E3A0861065A"
+  },
+  {
+    "path": "docs/images/latlongMap.png",
+    "bytes": 12355,
+    "sha256": "1F31FDA6D44271A258A214A22BC33E1818B3EC9ADB9072CBCFBEED383D6E98BB"
+  },
+  {
+    "path": "docs/images/openexr-logo.jpg",
+    "bytes": 18378,
+    "sha256": "F81F68E460E6D7CB5DAF41328261620B5B1AA15E4A970E9E399A2D5CA6F513E6"
+  },
+  {
+    "path": "docs/images/openexr-stacked-color.png",
+    "bytes": 27580,
+    "sha256": "2A660B1BEE701A9627DCFE92BAE46A6F2160ACD4835E464328D733A051E2062C"
+  },
+  {
+    "path": "docs/images/screenwin.big.png",
+    "bytes": 94498,
+    "sha256": "579C4FF99109CE502D5B8E20536031355FC431E6DA0179D506BE79CEB3FFC017"
+  },
+  {
+    "path": "docs/images/screenwin.png",
+    "bytes": 27233,
+    "sha256": "BBCD693BC12DC3ABE92838012B7AF1C8651F427F7FC0DEDF69AB7DDBE9189D4D"
+  },
+  {
+    "path": "docs/images/tiles.big.png",
+    "bytes": 962184,
+    "sha256": "26E2A2D485BBDAF2E7526E0E424374E6F6A34E0CE1BD4B5E550840FD15FE1B4F"
+  },
+  {
+    "path": "docs/images/tiles.png",
+    "bytes": 140528,
+    "sha256": "D5BCB4E20B5A89171564FE489806B970A4D75BE6D27823D23FF08026C0002398"
+  },
+  {
+    "path": "docs/images/twosamples.png",
+    "bytes": 4160,
+    "sha256": "D1DEA92D725C7F5E7C9FC6890B928980E47DA014915E808111C0A9AAF8E2A9A0"
+  },
+  {
+    "path": "docs/images/windowExample1.big.png",
+    "bytes": 628585,
+    "sha256": "4716EB4923B08033639BF4DAE9A3699E35477F54737230EC41C99F6936914DD5"
+  },
+  {
+    "path": "docs/images/windowExample1.png",
+    "bytes": 97171,
+    "sha256": "B1DFD233BF64CEB9C7FE8DC87E73F718C106304A2C0E46CBD285C5A60C61DD34"
+  },
+  {
+    "path": "docs/images/windowExample2.big.png",
+    "bytes": 105580,
+    "sha256": "C1B6F9F1496EA6EBE09E576972E56E28F4F364645DA214E73887C556C47ED238"
+  },
+  {
+    "path": "docs/images/windowExample2.png",
+    "bytes": 22491,
+    "sha256": "93C076E03A5FE81850420E74D8FE8B1A794352491A43B4FD7EB4BB2D46759C83"
+  },
+  {
+    "path": "docs/index.rst",
+    "bytes": 3514,
+    "sha256": "4ABE7271A2A1AF8E56CBAC808268B6E26475C4AA49AF51AD6DCDA0B88418D75C"
+  },
+  {
+    "path": "docs/requirements.txt",
+    "bytes": 8,
+    "sha256": "8AA551C9E4726AA353F6254C321FDCFDABC6BBFFC980D5CC9583447950D518A0"
+  },
+  {
+    "path": "docs/source_images/blobs.png",
+    "bytes": 162348,
+    "sha256": "6A9EB758BDBAF966F02E376D252BD3FD9DE45A76FD4EE4D9322878B49AFAF9DC"
+  },
+  {
+    "path": "docs/source_images/cubeMap.fig",
+    "bytes": 5970,
+    "sha256": "494FBE08BF74F064A552A2FE8104843D822A64B0BB51387AFD3B15D3FD7E55B5"
+  },
+  {
+    "path": "docs/source_images/dataDisplayWindow.fig",
+    "bytes": 67871,
+    "sha256": "8FA1110953EF60894E3F8EC2B0F84ED59876F196F348ED053063CC7C16575223"
+  },
+  {
+    "path": "docs/source_images/kapaa.png",
+    "bytes": 628163,
+    "sha256": "126C75910489EB11DEE5177EE3FD23C7ACF10285ACFB69E88E6A80867338EE53"
+  },
+  {
+    "path": "docs/source_images/latlongMap.fig",
+    "bytes": 4139,
+    "sha256": "5B6AC2B1CE3C576775860CD84C6B15282ACAEB1937A35DA1F7074088B1FA8630"
+  },
+  {
+    "path": "docs/source_images/screenwin.fig",
+    "bytes": 6005,
+    "sha256": "8240FD447457CBD93E141329E97B2687E8BC5EE988F262A8ABBCA22F81E01011"
+  },
+  {
+    "path": "docs/source_images/still.png",
+    "bytes": 965200,
+    "sha256": "8BD05B483E48A06ED75BE9F83DF7B4EB6548F964B572F1B6617C67FC30E5195F"
+  },
+  {
+    "path": "docs/source_images/tiles.fig",
+    "bytes": 4781,
+    "sha256": "874D9CD3B2019EE848337C726C35EB2A3D3263DDDA1E7D2375EFAEC4AAB04E12"
+  },
+  {
+    "path": "docs/source_images/windowExample1.fig",
+    "bytes": 1932,
+    "sha256": "7AF239D16988EF8BAA1F062B586F4F78E4B5D0438DFAC4F88625FABCC79F6D81"
+  },
+  {
+    "path": "docs/source_images/windowExample2.fig",
+    "bytes": 2015,
+    "sha256": "94C1654AF2AEBDC654C9B06B043A8799C9B4BA22A7BB2BAA24922EE14351F43B"
+  },
+  {
+    "path": "docs/src/file.cpp",
+    "bytes": 2472,
+    "sha256": "3160FC0AED1E54F487954604F5E0D1567F0F2806ECE211F65484E45ADFB68685"
+  },
+  {
+    "path": "docs/src/makePreviewImage.cpp",
+    "bytes": 839,
+    "sha256": "4DA3096CAE382111023C387770BE19F47719B3C785680C100FF361062BCDC74A"
+  },
+  {
+    "path": "docs/src/mergeOverlappingSamples.cpp",
+    "bytes": 2274,
+    "sha256": "889918F5D97BB5C23DB07BF5795ADF316FC8B9824A5DBD9B7EEB03989F3219BF"
+  },
+  {
+    "path": "docs/src/readDeepScanlineFile.cpp",
+    "bytes": 2836,
+    "sha256": "997A52A8443A2781FF2A11A466E818D39CF709AAEF3BDF4E547919121D1490DE"
+  },
+  {
+    "path": "docs/src/readDeepTiledFile.cpp",
+    "bytes": 2801,
+    "sha256": "CE385BABD6C3C5B2C12B42A55191C67FE4F7B7D9136B326DD7B33AD538C4DB1F"
+  },
+  {
+    "path": "docs/src/readGZ1.cpp",
+    "bytes": 2467,
+    "sha256": "598CBA2A41C22288F9881C7FCA598F9B4468A4AC7543F79C01F71189099EBA34"
+  },
+  {
+    "path": "docs/src/readGZ2.cpp",
+    "bytes": 956,
+    "sha256": "727993D652AD5115870A799826EEBD0DC892FDA8F417832C23E37DD1D9F9FAD5"
+  },
+  {
+    "path": "docs/src/readHeader.cpp",
+    "bytes": 518,
+    "sha256": "1BB6B2CB03B1562C528EA8F86E5871EF9433EE032D557FFE5387BB80DEEB2A2B"
+  },
+  {
+    "path": "docs/src/readRgba1.cpp",
+    "bytes": 449,
+    "sha256": "F4F331C986251A0F3CDCB99459BEAD89B198DE0B476E2B76EB2A77032BE9FB0D"
+  },
+  {
+    "path": "docs/src/readRgba2.cpp",
+    "bytes": 497,
+    "sha256": "1CAADDE33B4713C5E29EF62061BBA0F42D163BF54633F82322C4930297CEE404"
+  },
+  {
+    "path": "docs/src/readRgbaFILE.cpp",
+    "bytes": 509,
+    "sha256": "59F0B92562AD1164B837FCA880C3D30E101340C0F888D453D462164502D02787"
+  },
+  {
+    "path": "docs/src/readTiled1.cpp",
+    "bytes": 987,
+    "sha256": "2BD0C6E95D39EFAEB51F39813049A69FD2E5668864D76F79A0981FCAB20E7C47"
+  },
+  {
+    "path": "docs/src/readTiledRgba1.cpp",
+    "bytes": 497,
+    "sha256": "36D69B9F986488AD69CAFAEE277FDA028B8A4179C6E938843379BECB710A58EF"
+  },
+  {
+    "path": "docs/src/splitVolumeSample.cpp",
+    "bytes": 2490,
+    "sha256": "3B78712141C2EA18D037B0312FE190DE9DA66094F5AF2EBAFCEE292A05650E03"
+  },
+  {
+    "path": "docs/src/writeDeepScanlineFile.cpp",
+    "bytes": 2860,
+    "sha256": "DC848E06B0EA621C8140A4875AD7623F79336A7E7347A115B316CD675B4A8F11"
+  },
+  {
+    "path": "docs/src/writeDeepTiledFile.cpp",
+    "bytes": 2802,
+    "sha256": "6D1FBB48D45A076C82CCEADF35B20E1415B5A65F0900985FD3ACCE4FC2B16AB1"
+  },
+  {
+    "path": "docs/src/writeGZ1.cpp",
+    "bytes": 1408,
+    "sha256": "B3ED258000A49768F2E1CE6061EEB8A5B68E4791E5B73451EADD4C4145E9E96D"
+  },
+  {
+    "path": "docs/src/writeGZ2.cpp",
+    "bytes": 1130,
+    "sha256": "7EAF4B9D7B78211F2DBB4F71E298FB786F0DE06358F42E2F68C2D33BECC87223"
+  },
+  {
+    "path": "docs/src/writeRgba1.cpp",
+    "bytes": 291,
+    "sha256": "2203E2114FC975329CD54A3356ADEBF55D140C47B6C84532D47C5A139DA62807"
+  },
+  {
+    "path": "docs/src/writeRgba2.cpp",
+    "bytes": 411,
+    "sha256": "4C531418E384FDF88016133F0B6B952235FF1C9C4B66EB5A08BEAC23C0C26001"
+  },
+  {
+    "path": "docs/src/writeRgba3.cpp",
+    "bytes": 499,
+    "sha256": "CC9415A0E6AFEF0B5852C92B6E7BF3DD55CD1970B0435587D98049E01784355F"
+  },
+  {
+    "path": "docs/src/writeRgbaMT.cpp",
+    "bytes": 299,
+    "sha256": "19F4F6BD6CDD3F0D57D354FA6DBC42E3B36649EF02B74BF0D2E993983EFB88F5"
+  },
+  {
+    "path": "docs/src/writeRgbaWithPreview1.cpp",
+    "bytes": 686,
+    "sha256": "ECE8FA7AB0C283BADE958E127B26BDBCB19AAC33678B282151697C16B0A3F764"
+  },
+  {
+    "path": "docs/src/writeRgbaWithPreview2.cpp",
+    "bytes": 1176,
+    "sha256": "356444AB8B7E1E531B5C76D9249CEB1A5519B43F798A9649EE7257351883E969"
+  },
+  {
+    "path": "docs/src/writeTiled1.cpp",
+    "bytes": 1252,
+    "sha256": "81ADAE49BD13CBAA29967D0AB7EC25669D684700B49969C398B6C2A2F1D06DA1"
+  },
+  {
+    "path": "docs/src/writeTiledRgbaMIP1.cpp",
+    "bytes": 856,
+    "sha256": "96E889B3F8D4B54B22591A814DB2B84CF08451F56E390FA0CC2547246A1FE36C"
+  },
+  {
+    "path": "docs/src/writeTiledRgbaMIP2.cpp",
+    "bytes": 1114,
+    "sha256": "553B8D99D5ECB823017E4C7A9FE5E0AC06AB2BD7821A3F4DB123E3E985ABBCA7"
+  },
+  {
+    "path": "docs/src/writeTiledRgbaONE1.cpp",
+    "bytes": 723,
+    "sha256": "B5B62811A8C4BD17E9B5CB0781885ADAEE87B95B51E95032565658512BA2BDB4"
+  },
+  {
+    "path": "docs/src/writeTiledRgbaONE2.cpp",
+    "bytes": 1285,
+    "sha256": "0BA9CF042BD51A67FA060FB26FFA6921549AA85CFBEE346228F429D6F17CD326"
+  },
+  {
+    "path": "docs/src/writeTiledRgbaRIP1.cpp",
+    "bytes": 927,
+    "sha256": "BDCC9C6231D816501BE052930E1EF595B7C241C95EAD8629C9F941F90A15D207"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_boost.sh",
+    "bytes": 755,
+    "sha256": "29C3155A26D5D5955C7B59BB067584539FC5F4FAC8B2B7045EEE66BBB136C367"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_cmake.sh",
+    "bytes": 383,
+    "sha256": "EED0F2B38E6F4CEBE34D5D79C857B8B9998159FCE09B60E0EDF2A99E0C2FD67F"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_gdb.sh",
+    "bytes": 369,
+    "sha256": "DCCA84DD6B3376FA2D1CF0E46CD09FD6764BDE1FD5B8333C9EB0EC96D366702A"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_six.sh",
+    "bytes": 326,
+    "sha256": "E00BC21DB3B99DB3EA04CC759C396411B5D1AC1C26319CA09DAEE48BEA8C7CAC"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_sonar.sh",
+    "bytes": 716,
+    "sha256": "4FC471915F5BA0764E082AD3424EB52890774E555396CF0C2D62BD3246AADED8"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_valgrind.sh",
+    "bytes": 621,
+    "sha256": "6A9E402E63A74E0415DB6DC4BF05C48011DB0C16E56B06682ABE2B8452C5B035"
+  },
+  {
+    "path": "share/ci/scripts/linux/log_valgrind.sh",
+    "bytes": 309,
+    "sha256": "4077E5762F5FEA3FEA76B3ED65AFF196B5353F7FF6F6EBD06C787CDBE6229B7F"
+  },
+  {
+    "path": "share/ci/scripts/linux/run_gcov.sh",
+    "bytes": 407,
+    "sha256": "42FA78BEF1EF27F80248F2FBB60DF1581BF80A245BA8694DCC50D20056266C95"
+  },
+  {
+    "path": "share/ci/scripts/linux/validate_openexr_libs.sh",
+    "bytes": 3021,
+    "sha256": "666588262FF3997078E6D5F691F2907D752FFC1815E076BB47DE8362ECD2261D"
+  },
+  {
+    "path": "share/ci/scripts/macos/install_boost.sh",
+    "bytes": 114,
+    "sha256": "3D3DCB177A40BE9567936C188170872B4E83D769A2F7AE0E5EF75B46D98D0989"
+  },
+  {
+    "path": "share/ci/scripts/macos/install_python.sh",
+    "bytes": 1140,
+    "sha256": "55723B8AA4B15100E70F2AB6093CD46680C56619CA76C440BD7E9289484D4119"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_boost.ps1",
+    "bytes": 2065,
+    "sha256": "B4CA0BD8A9D24F2C167D66C5B8F8108A437868B6884FFFF77F185DCBADBF1A13"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_cmake.ps1",
+    "bytes": 452,
+    "sha256": "00A93E59639C05D25097505D4CD67D6F6106DC16AD5204476DFB02BDFAE68A5E"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_python.ps1",
+    "bytes": 1115,
+    "sha256": "A4FEDD6005B733523C7E799482E873CBDB0553018D1F240BD8DEC9178FFCB9FF"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_zlib.ps1",
+    "bytes": 1220,
+    "sha256": "B9D83EFCCF5751F22384064238F9F327018584BA6E8F03009F70137E13BA5F38"
+  },
+  {
+    "path": "sonar-project.properties",
+    "bytes": 923,
+    "sha256": "4CB18DE22A7D9FD8561D4DA3E03B6E87183E417E75AD520C4912E2DE65E9CB65"
+  },
+  {
+    "path": "src/bin/.cproject",
+    "bytes": 12072,
+    "sha256": "F0BF07F72168BAAB0EB705319F58B88C1C335A9D3EE179EE1A9027C588FB1805"
+  },
+  {
+    "path": "src/bin/.gitignore",
+    "bytes": 446,
+    "sha256": "8908939EEC5F5EF2BE2BF9B8736B85A74F979E9E63271ECB396ABE7334073A06"
+  },
+  {
+    "path": "src/bin/.project",
+    "bytes": 2337,
+    "sha256": "C45C2A2645A20259C19DED9853CE149467DE4B06C0208CB28EB2E242DD9991AD"
+  },
+  {
+    "path": "src/bin/CMakeLists.txt",
+    "bytes": 534,
+    "sha256": "9E9DC02AA2779FD50D02E617F35B538029F7F48E9BB44EC3B222D5982890F92C"
+  },
+  {
+    "path": "src/bin/exr2aces/CMakeLists.txt",
+    "bytes": 471,
+    "sha256": "0709AD18A99EDE45E6CD1BA183E94B6993B6E9435BCF078773BC6217CF9BEAF7"
+  },
+  {
+    "path": "src/bin/exr2aces/main.cpp",
+    "bytes": 3788,
+    "sha256": "594F93975C9B2D2686A292DBED946AAE6FF219857F8EA3D8718F5155C690E39B"
+  },
+  {
+    "path": "src/bin/exrbuild/exrbuild.cpp",
+    "bytes": 13513,
+    "sha256": "9A11DDCA31327858E363A14D8F3CC75BB4772DCFB86CA86D4A1CA338455D678A"
+  },
+  {
+    "path": "src/bin/exrcheck/CMakeLists.txt",
+    "bytes": 458,
+    "sha256": "F856574197228DB9D936559CD6900F1CDD03EF00FF70811141E8CAAAD15EB5FB"
+  },
+  {
+    "path": "src/bin/exrcheck/main.cpp",
+    "bytes": 4142,
+    "sha256": "BCC85D237D1ACCE41229B89FFD443C2FAD181179F8DEF40BE68C5FE2C6D99C1A"
+  },
+  {
+    "path": "src/bin/exrenvmap/CMakeLists.txt",
+    "bytes": 593,
+    "sha256": "D67EAE1929A001F8841BE61935BC6986C7FF153D3F46A52953CCEA9043127926"
+  },
+  {
+    "path": "src/bin/exrenvmap/EnvmapImage.cpp",
+    "bytes": 5003,
+    "sha256": "DA7B6E871E1385ED48C252D607DD91600C17350A8B6E597AFB41D5AA95E3DEBA"
+  },
+  {
+    "path": "src/bin/exrenvmap/EnvmapImage.h",
+    "bytes": 1455,
+    "sha256": "73F22835EAB05728A2CE948B4E1D789CB025C16B44A4953932C4518058EDC561"
+  },
+  {
+    "path": "src/bin/exrenvmap/blurImage.cpp",
+    "bytes": 9277,
+    "sha256": "4AF846F1A6017D97E5FA394A7A147B1790F8B41A41F0CFFF415999DAAF232E6D"
+  },
+  {
+    "path": "src/bin/exrenvmap/blurImage.h",
+    "bytes": 810,
+    "sha256": "D65CA6372F5C3C79625D9FEB00941C1ADD7D700FE85BE082AF75E59EF93A4384"
+  },
+  {
+    "path": "src/bin/exrenvmap/main.cpp",
+    "bytes": 13617,
+    "sha256": "349A0E1AA431EF0345BE5132219D5CCCF36C02E6EB8C99C9501A9EEB5B6E99D7"
+  },
+  {
+    "path": "src/bin/exrenvmap/makeCubeMap.cpp",
+    "bytes": 6653,
+    "sha256": "62B71F17300A3BCAFDFF1821E31693C1132D9D68716CE4F8D4CE1998B9B67BC9"
+  },
+  {
+    "path": "src/bin/exrenvmap/makeCubeMap.h",
+    "bytes": 983,
+    "sha256": "6541052EFA8054E43E5735DB67FBD2E6C08DBA2B36B63CFB756C5DF8A317F12A"
+  },
+  {
+    "path": "src/bin/exrenvmap/makeLatLongMap.cpp",
+    "bytes": 2701,
+    "sha256": "636A912D3F2B435D0366A19B567C86F5F8D340EBBBC3206A993AE1E0A6E337EB"
+  },
+  {
+    "path": "src/bin/exrenvmap/makeLatLongMap.h",
+    "bytes": 1073,
+    "sha256": "47C0CDA25F7B79836293C770C874B9473DEC646049A6502B284DCADEFFF235E9"
+  },
+  {
+    "path": "src/bin/exrenvmap/namespaceAlias.h",
+    "bytes": 377,
+    "sha256": "0771CAD9B47AE373B580EF3398FDF4DF2EA93072690AADC780EA3A548CC105A2"
+  },
+  {
+    "path": "src/bin/exrenvmap/readInputImage.cpp",
+    "bytes": 5384,
+    "sha256": "5DF352587024D4B23913B45B9CC9CAA98C7C287855EF67325B4E7560BD9745F8"
+  },
+  {
+    "path": "src/bin/exrenvmap/readInputImage.h",
+    "bytes": 872,
+    "sha256": "F6E5510EE32D0D99F633DE29BA8137F23E2421A719C3C624C3D43FFEA8E92807"
+  },
+  {
+    "path": "src/bin/exrenvmap/resizeImage.cpp",
+    "bytes": 2812,
+    "sha256": "9B13CBFBF004371504D17BF6A60C2CA8F3BF8B272A39320FC27BA1DF1C4E4AFB"
+  },
+  {
+    "path": "src/bin/exrenvmap/resizeImage.h",
+    "bytes": 905,
+    "sha256": "4584A23802FD4FB51603A7BA9C82D33ABD380519926E03436B9B0BC46AED9FF8"
+  },
+  {
+    "path": "src/bin/exrheader/CMakeLists.txt",
+    "bytes": 476,
+    "sha256": "D0D80ECCD3660B2AF0513959FF21CBA4081DFDF7AD886A749B94B54B0EC518A4"
+  },
+  {
+    "path": "src/bin/exrheader/main.cpp",
+    "bytes": 14560,
+    "sha256": "CEBBD73DFF5A009764F46144AD5162D5107EC45B062461F66954AA22F67C73BB"
+  },
+  {
+    "path": "src/bin/exrinfo/CMakeLists.txt",
+    "bytes": 466,
+    "sha256": "ACCE3842DD035FBAE43FB47EF99CB121F76E06F7ACBE8CA55F83882147A6F4D4"
+  },
+  {
+    "path": "src/bin/exrinfo/main.c",
+    "bytes": 3409,
+    "sha256": "FAE3531626361256CE9F3387417DE3D171F19D9AEB6EE29503221648F04A8378"
+  },
+  {
+    "path": "src/bin/exrmakepreview/CMakeLists.txt",
+    "bytes": 522,
+    "sha256": "29CAFF2981A52DA7B53B1F444326DEAE6FE9DA47788C402C7430B7D6BEB4CD0B"
+  },
+  {
+    "path": "src/bin/exrmakepreview/main.cpp",
+    "bytes": 3060,
+    "sha256": "B8D2042501F02B023693C764E18E06CE0442C9680A3F23705111E212B544FE53"
+  },
+  {
+    "path": "src/bin/exrmakepreview/makePreview.cpp",
+    "bytes": 3591,
+    "sha256": "35CD4584F94B8842B9DDF9CF7CDA22ABB18289C94D1AAF0022650084EE626AB8"
+  },
+  {
+    "path": "src/bin/exrmakepreview/makePreview.h",
+    "bytes": 538,
+    "sha256": "9E58A77883BB887D782875F31A6C7E5B70CF3D379EA8D86FE0D5980419D6FBF5"
+  },
+  {
+    "path": "src/bin/exrmaketiled/CMakeLists.txt",
+    "bytes": 527,
+    "sha256": "976244D3A28AA980C18367805E59B8809A046BCD541A6961FB630F7A92A5943D"
+  },
+  {
+    "path": "src/bin/exrmaketiled/Image.cpp",
+    "bytes": 1754,
+    "sha256": "249949AFE73C0B59A4D8ED1049C961F47B7CA542211B66F49979D08297B8A307"
+  },
+  {
+    "path": "src/bin/exrmaketiled/Image.h",
+    "bytes": 4584,
+    "sha256": "CB538E5604539016BBFEED4A924AD3B0832AC857FE688CFB852A2DDD9378ACF4"
+  },
+  {
+    "path": "src/bin/exrmaketiled/main.cpp",
+    "bytes": 9358,
+    "sha256": "ACC2EE310DDB1069B9B821F141032402804949AE6ED416C2A6A55A39B506CF68"
+  },
+  {
+    "path": "src/bin/exrmaketiled/makeTiled.cpp",
+    "bytes": 19467,
+    "sha256": "19EC93D97B39080E6EA4BFF6B2625A05843D7183F911C6F4ECFF5A0531A33EB5"
+  },
+  {
+    "path": "src/bin/exrmaketiled/makeTiled.h",
+    "bytes": 1213,
+    "sha256": "7A0301F59413BABCA60BBF6A359405B3865E72F839146B572A64505DF63AFBB2"
+  },
+  {
+    "path": "src/bin/exrmaketiled/namespaceAlias.h",
+    "bytes": 377,
+    "sha256": "C3AAC829B9309312CB73904C1764F87D3DCFF02DCEAF2B4A56179E2A397AD478"
+  },
+  {
+    "path": "src/bin/exrmultipart/CMakeLists.txt",
+    "bytes": 499,
+    "sha256": "BB98F9EFFAF8083427079AA3C5B1524BC22EA8802A182DBD5E9AAE7B31E68783"
+  },
+  {
+    "path": "src/bin/exrmultipart/exrmultipart.cpp",
+    "bytes": 21587,
+    "sha256": "7C1FCA30CC782D05E1CEF945B89A4A6DE13FA34FE00FE6505D48F45D3CA3BEA7"
+  },
+  {
+    "path": "src/bin/exrmultiview/CMakeLists.txt",
+    "bytes": 526,
+    "sha256": "2FA8F24984BBA3E3A5DADD4312CBA475D0FFF56C5D72A7B07199A5C618870EF9"
+  },
+  {
+    "path": "src/bin/exrmultiview/Image.cpp",
+    "bytes": 1838,
+    "sha256": "6447463AF347ECBEB1BD9E8410425B446EAF400225667D74E872481801F27BEC"
+  },
+  {
+    "path": "src/bin/exrmultiview/Image.h",
+    "bytes": 4819,
+    "sha256": "AD12F2ABD47E590AE42D1B0B4E96019FF51D0FB29B11FCD8742186973831FB7F"
+  },
+  {
+    "path": "src/bin/exrmultiview/main.cpp",
+    "bytes": 4223,
+    "sha256": "A8843C49E79238A8BD4AEFFF20EBE0A3E6105CB83C53C0D83E041028A8E472E0"
+  },
+  {
+    "path": "src/bin/exrmultiview/makeMultiView.cpp",
+    "bytes": 3173,
+    "sha256": "26BEE134A3A6029A06E2A2589FD07FDE131EBE9548842D6576F79B9D0E9D6A04"
+  },
+  {
+    "path": "src/bin/exrmultiview/makeMultiView.h",
+    "bytes": 727,
+    "sha256": "0C7A855B6E0210109EF7DCA05A999E88C630D79875128C48AB6D40017DB93FC4"
+  },
+  {
+    "path": "src/bin/exrmultiview/namespaceAlias.h",
+    "bytes": 377,
+    "sha256": "C3AAC829B9309312CB73904C1764F87D3DCFF02DCEAF2B4A56179E2A397AD478"
+  },
+  {
+    "path": "src/bin/exrstdattr/CMakeLists.txt",
+    "bytes": 481,
+    "sha256": "AC2AD14DD8F6F892B961662B3C95021514638215F5B6FCE38E0E6DA515035AD5"
+  },
+  {
+    "path": "src/bin/exrstdattr/main.cpp",
+    "bytes": 22146,
+    "sha256": "64278EC8BB6E2148A7B9741FB8BEEF30C6A83F2CDC5B7BBE876B61E7E7D27DBB"
+  },
+  {
+    "path": "src/examples/CMakeLists.txt",
+    "bytes": 1373,
+    "sha256": "24B8E5317269F349032A183C83A01DC9217E2E55A586E4EB399081C79D2F0846"
+  },
+  {
+    "path": "src/examples/drawImage.cpp",
+    "bytes": 8298,
+    "sha256": "D9311C287F5E29E290FFF71B75BBA07D8897ECEE7B87488AC1200892A8347ED0"
+  },
+  {
+    "path": "src/examples/drawImage.h",
+    "bytes": 1300,
+    "sha256": "6F42E135C1A5481705142B93B3C25DDC8DE190152A8E966FBE68201EA3864D0A"
+  },
+  {
+    "path": "src/examples/generalInterfaceExamples.cpp",
+    "bytes": 7543,
+    "sha256": "8A520666F906D9BE9C1FFEBC15B04055810DF8E964E97148E2F58E9BAD679C3F"
+  },
+  {
+    "path": "src/examples/generalInterfaceExamples.h",
+    "bytes": 137,
+    "sha256": "AE7F5E6A0AC8412169C085C0CC0F5195EDF5261EB2C1EA311BC275F1DA0D9A81"
+  },
+  {
+    "path": "src/examples/generalInterfaceTiledExamples.cpp",
+    "bytes": 3190,
+    "sha256": "F7CB9EBBE2856CBA3BC20D6A87D017B9C0B770B78507F0FB777CD2E81B720FE4"
+  },
+  {
+    "path": "src/examples/generalInterfaceTiledExamples.h",
+    "bytes": 136,
+    "sha256": "6E05BDAC1AECDBCFB9D6BFDF4C665BE52923E114B4D9879EF74F3FE41180B450"
+  },
+  {
+    "path": "src/examples/lowLevelIoExamples.cpp",
+    "bytes": 5325,
+    "sha256": "98C1EC4D9BC66C8553AF63193683D20186C5D3A7469E7388D2E0543EF6BFE168"
+  },
+  {
+    "path": "src/examples/lowLevelIoExamples.h",
+    "bytes": 125,
+    "sha256": "2B1711590372A558CF296C2B8B7327E6F3B1165C74ACF2F105C0C0B9DBE3EB94"
+  },
+  {
+    "path": "src/examples/main.cpp",
+    "bytes": 727,
+    "sha256": "D7192D454A9D0B946AD5C2614A27357BD136A7EE85F611203851CD1B54A5A32C"
+  },
+  {
+    "path": "src/examples/namespaceAlias.h",
+    "bytes": 253,
+    "sha256": "80FE958A1DA79F1AF3AA66E3258002A41C80AB60ECA1C0F45E3947C6342662F5"
+  },
+  {
+    "path": "src/examples/previewImageExamples.cpp",
+    "bytes": 4924,
+    "sha256": "0F421F08D38316808A584F1EB3A13F9C9CBF8F179431F937E08AD91F6A09466D"
+  },
+  {
+    "path": "src/examples/previewImageExamples.h",
+    "bytes": 133,
+    "sha256": "8640B99A07F5B7D2ED16FDD01B33C3807E634F1A5F19BFF38D81D085E1768910"
+  },
+  {
+    "path": "src/examples/rgbaInterfaceExamples.cpp",
+    "bytes": 5772,
+    "sha256": "5D7830003446156FC950899DFE7465F33504DC5C01D9E6A8A8600A6372EE8B0C"
+  },
+  {
+    "path": "src/examples/rgbaInterfaceExamples.h",
+    "bytes": 134,
+    "sha256": "45F878A61BE6D0898A2C6403F838F683276C807793AF0BD61AF9719037E1DCB6"
+  },
+  {
+    "path": "src/examples/rgbaInterfaceTiledExamples.cpp",
+    "bytes": 9586,
+    "sha256": "23BD738D3A35025593EDC16B22C8E267527F76866BF1DD4654E28F446D096B31"
+  },
+  {
+    "path": "src/examples/rgbaInterfaceTiledExamples.h",
+    "bytes": 139,
+    "sha256": "471D60CEFE7B0A0CE210C1CD276EB7E9B28093A4F846EE9EDB7CD4606BD54FE2"
+  },
+  {
+    "path": "src/lib/.gitignore",
+    "bytes": 182,
+    "sha256": "F6F24DBB473EEE31409F3FDA12BEE20E6CA771CEA4FF67A6A195B8CAFBF61DDA"
+  },
+  {
+    "path": "src/lib/CMakeLists.txt",
+    "bytes": 241,
+    "sha256": "BBD5B8501BC78ADD6DE9B6EBA9C361435E2CD973C7E593A679DD64708332FB69"
+  },
+  {
+    "path": "src/lib/Iex/CMakeLists.txt",
+    "bytes": 526,
+    "sha256": "6C644A8BC453E4656F5307EE0020DD42135B7EB5614250981A2BAFAD84FB9C2E"
+  },
+  {
+    "path": "src/lib/Iex/Iex.h",
+    "bytes": 701,
+    "sha256": "5B35527F5853DF3C125D5C41518F9930C85E898C19E79B3676635110C6A1AC4B"
+  },
+  {
+    "path": "src/lib/Iex/IexBaseExc.cpp",
+    "bytes": 12628,
+    "sha256": "A554D33582C39137DB26DB88878F6892DACA00E6EF04EDB2746BB4E622F9E5A3"
+  },
+  {
+    "path": "src/lib/Iex/IexBaseExc.h",
+    "bytes": 8444,
+    "sha256": "82458A7CCE448392F5B66B4C6A32A7151979A201AB21BF9F1C4FCE21717DDCAF"
+  },
+  {
+    "path": "src/lib/Iex/IexErrnoExc.h",
+    "bytes": 8325,
+    "sha256": "D7363E866F6C1E4FABC3F9C7D7F9F6EA31B6B5F4E2B1F65E2C348981FBC7E244"
+  },
+  {
+    "path": "src/lib/Iex/IexExport.h",
+    "bytes": 911,
+    "sha256": "6D8286948C6B5A030D4CD3E3C821F1CD59079CCFE4BD59F386FE965CC0FD8354"
+  },
+  {
+    "path": "src/lib/Iex/IexForward.h",
+    "bytes": 3526,
+    "sha256": "CD15C411B0081C8568E203DEB89FC229F2B2A3B7C7336274728FCB20C17D1494"
+  },
+  {
+    "path": "src/lib/Iex/IexMacros.h",
+    "bytes": 4449,
+    "sha256": "0F26BF27B8B5C3F29EA024A228665889A816050A92990FB95ED3BD74F2ADAD84"
+  },
+  {
+    "path": "src/lib/Iex/IexMathExc.h",
+    "bytes": 846,
+    "sha256": "F90CF7F26B235FCA90AE21305C7C1ED9A3C2734BBFB3FF99FE08E130CAFB36F9"
+  },
+  {
+    "path": "src/lib/Iex/IexMathFloatExc.cpp",
+    "bytes": 1730,
+    "sha256": "29309F98995EF3516CCACE1456665257ED6CC19EFE8AB13A24D7881463D5CAF6"
+  },
+  {
+    "path": "src/lib/Iex/IexMathFloatExc.h",
+    "bytes": 2668,
+    "sha256": "61DAF405E175391F7CCFE19C9AF828CC649C9A9C1C6887E6CE5A4BE6104E0C5C"
+  },
+  {
+    "path": "src/lib/Iex/IexMathFpu.cpp",
+    "bytes": 12039,
+    "sha256": "1B10630E7D17EC6B66FFA854366D9A37087DEFEF60C641DC97B9777356532138"
+  },
+  {
+    "path": "src/lib/Iex/IexMathFpu.h",
+    "bytes": 1704,
+    "sha256": "2C9CA4B75C42A76F51CA586DFD8DCC817AAF54133E4D0F6779BE61905713431A"
+  },
+  {
+    "path": "src/lib/Iex/IexMathIeeeExc.h",
+    "bytes": 699,
+    "sha256": "470549F0041E2AAA1431E5355B4579BD4916789A18E82B2237605271C4E86D55"
+  },
+  {
+    "path": "src/lib/Iex/IexNamespace.h",
+    "bytes": 2703,
+    "sha256": "6131332127338FD281100F28E2A5DD251C85D2271887CB940889D332AC0489CC"
+  },
+  {
+    "path": "src/lib/Iex/IexThrowErrnoExc.cpp",
+    "bytes": 15446,
+    "sha256": "BF7F6D583828664B15C75DA62B840839C0733659747AC09EB261BE495468BA47"
+  },
+  {
+    "path": "src/lib/Iex/IexThrowErrnoExc.h",
+    "bytes": 1780,
+    "sha256": "A83C2D82D6E33AB973E3C6DEEA3F1385CCB34DB7EDE6523AE24791A26340E443"
+  },
+  {
+    "path": "src/lib/IlmThread/CMakeLists.txt",
+    "bytes": 719,
+    "sha256": "C9ED61C3D5F7D31A44A2D09BFFE29492E56DB330448C0D612FAD0CFDDE91AFB8"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThread.cpp",
+    "bytes": 1761,
+    "sha256": "053710CCDE93125B3EDE50D89FF8DCCF3E34FDCD743A4E71752EBD5D80EBC6A1"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThread.h",
+    "bytes": 3280,
+    "sha256": "47E73D78557106F059D73335DFB5C507F17782E080378D0D9D32C4D54519A62C"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadExport.h",
+    "bytes": 1122,
+    "sha256": "EBD123F7B1B8396D64D1A710F448397BC01A69B76D7A38F85698350BC31FC735"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadForward.h",
+    "bytes": 606,
+    "sha256": "16859D5C43B966751B0B41760C3D6DB16135D75C6583BB0C03D4B1A8A7769381"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadMutex.h",
+    "bytes": 1876,
+    "sha256": "A9AB121E57E9DD0F954BC55B6DF555B221D553E9C5E16BD56AC420E6C717C847"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadNamespace.h",
+    "bytes": 2961,
+    "sha256": "1BF0420B3673C7FDF010C0F1C6BCBF87FB548C19AC8B7EABA513825A04374381"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadPool.cpp",
+    "bytes": 17881,
+    "sha256": "4211053CBF09D1EB93739DB4DDF4DD65116B46B6A67F255A654138DE14864147"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadPool.h",
+    "bytes": 7022,
+    "sha256": "38F9CC3B8AA894F64E75B75B4B8AB91DAC2BAFF9D30F7B75C542BC7DAD8EC8EE"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadSemaphore.cpp",
+    "bytes": 768,
+    "sha256": "7B77D7B91FB0E9EBB4AEFE17E65F6A7B39E6D0085E79FB332FE9892F5ACE185B"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadSemaphore.h",
+    "bytes": 2110,
+    "sha256": "FB410780917460EFA2F2959EDB5118BBF79F08BF70E5CC463ED1BBE4BB2AFB7B"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadSemaphoreOSX.cpp",
+    "bytes": 1435,
+    "sha256": "6B9074EA0D4A483E7C9C8467CCD742D2342EC19C5C94BB0DA652CA0A2E23A6C9"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadSemaphorePosix.cpp",
+    "bytes": 1463,
+    "sha256": "F48AC17F3CF74BC07BB61D021E5711CB4021406B022A1ECF081223360740EC22"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadSemaphorePosixCompat.cpp",
+    "bytes": 1723,
+    "sha256": "CEB8099C9A7F3962C862C919249B575F0D6D05CC6188174CA864F70833AC53A8"
+  },
+  {
+    "path": "src/lib/IlmThread/IlmThreadSemaphoreWin32.cpp",
+    "bytes": 2345,
+    "sha256": "86F7A0F25F1894A686B56879B7C2A2BFB4A5CEA718A350217F8C3E2A4C09348B"
+  },
+  {
+    "path": "src/lib/OpenEXR/CMakeLists.txt",
+    "bytes": 4639,
+    "sha256": "1B216883A5E3E546F0DC8F13A0F0BB7B52642E2B5683653C65FE0395BB534200"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfAcesFile.cpp",
+    "bytes": 12104,
+    "sha256": "B219C81E691B066564CB737404C910E3A4315E389D9AC600B762D001F32EC666"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfAcesFile.h",
+    "bytes": 9574,
+    "sha256": "A5005037E79F35927B7C873D7ECAA8E84C4E01EB1B807F5B87CFE51AD87BF3AF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfArray.h",
+    "bytes": 5398,
+    "sha256": "003CA1C72B319E3B65035CA6C0A5941ABE818F6A3AA7FE4A6F04A817C7E287D2"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfAttribute.cpp",
+    "bytes": 2445,
+    "sha256": "351CB7F5C58277631E4A61C3456E318932AD171DE69D86AB4D0ABF027D632258"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfAttribute.h",
+    "bytes": 9594,
+    "sha256": "723FC8751659F3A23DF76981768958023DBD1954694B951A319CE42175F620DE"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfAutoArray.h",
+    "bytes": 1432,
+    "sha256": "EBA91A82497237D9BE1F3F71AC2DF3886A63F642B094A90BFCCE46858BC0A55D"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfB44Compressor.cpp",
+    "bytes": 24019,
+    "sha256": "68FEE9730DC03CC3181200919CB214C4AC1FBBC926EEA122802F3CADC43547CB"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfB44Compressor.h",
+    "bytes": 2256,
+    "sha256": "6C98B720B469302D90D090FEFAD2705ED1CB7E55AF56CEA11BABA9461598152C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfBoxAttribute.cpp",
+    "bytes": 2603,
+    "sha256": "7BA544EB9AA684A41F6BFC60A448088D87003D4E9DC0A8D4046F94114478EE3C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfBoxAttribute.h",
+    "bytes": 937,
+    "sha256": "E8918AFA19D55E9A9569F1A978914EFBA0A48520ADF2EE30861CF1100FBB483F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCRgbaFile.cpp",
+    "bytes": 24969,
+    "sha256": "D624AA951C00464BF0AE9B143062C35E56CBD8B0AF69AC46D4752F65021B2AE7"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCRgbaFile.h",
+    "bytes": 11454,
+    "sha256": "044958991F052FBB532EEA969BA03AA1037B58EB53BCBFADAA205729FEE0AE71"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChannelList.cpp",
+    "bytes": 5156,
+    "sha256": "35391EC566380DEBF52DAAAE5625337F75AE803F1362657B14FCE0AF0B2ADC6B"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChannelList.h",
+    "bytes": 10403,
+    "sha256": "9D9803AB6A7D85FDCAD677EF63F5CBA8D5EA66AA2B45F6083D0E8151212171B3"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChannelListAttribute.cpp",
+    "bytes": 3338,
+    "sha256": "48FFD8B8173871EEBECD1AA3F68328DFF9CE01195BFD3141C914509983288623"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChannelListAttribute.h",
+    "bytes": 851,
+    "sha256": "E345B4692313E2D26C80B86F3436B4063FDFF24FDCD2ED5C09FF8BA95323BE72"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCheckedArithmetic.h",
+    "bytes": 3023,
+    "sha256": "27F1D5A5EB7AC19D6FD9E8527A5B5DA95E4ED12C2B97088DD8E580B5E45E270A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChromaticities.cpp",
+    "bytes": 4233,
+    "sha256": "F37484133AF1A9511367A07313F209B6447EB6B1D2BAB51BCA149EF984DE4CBE"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChromaticities.h",
+    "bytes": 2922,
+    "sha256": "484A1BF200180561B2F719F0F6492DAF797D718B2EF2DCBE562E92EE2A1A1B27"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChromaticitiesAttribute.cpp",
+    "bytes": 1926,
+    "sha256": "0A8F1427BBB5FBE189340AC178218A95A74B6BC8A872DA34AE462F27E78CA081"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfChromaticitiesAttribute.h",
+    "bytes": 821,
+    "sha256": "1A39313F041563359D40BE304DDB1D50823E4F716F0114F9FBB92F1C14F4DBD5"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompositeDeepScanLine.cpp",
+    "bytes": 16857,
+    "sha256": "DC96F9384E62B3F1998AAA70C90A36AC3FFC8238C1ABFD33891E092B767B120A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompositeDeepScanLine.h",
+    "bytes": 4164,
+    "sha256": "E6F218CAB4B3C344C0EA9ACC2BBA5B6DDE619B4896FEC6020D4486877416CC58"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompression.h",
+    "bytes": 2003,
+    "sha256": "BD130FC81A9E96D1FD3B417CD48CA79355E6F1DB87E376E0DB9D9FFB43D87C4E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompressionAttribute.cpp",
+    "bytes": 1993,
+    "sha256": "7A73B4416E4041D969B36E83ED2A6C38280FEE83D4A8D64ACDD74FAFF24DB593"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompressionAttribute.h",
+    "bytes": 798,
+    "sha256": "4BCF813A7E5DED2F2AE18F0C10F28FF351DDB185C2A6092A57D1CB123910403F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompressor.cpp",
+    "bytes": 5106,
+    "sha256": "3E8F4FD9C735CC49DAFFF7B18451287CB2947299C9F4A5BCCEE99FC56E2CAE83"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfCompressor.h",
+    "bytes": 6990,
+    "sha256": "CAEC514495ED30DC975876AF341ABCC96D68764C0A9B23E6DC6F63516FA091A9"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfConvert.cpp",
+    "bytes": 1956,
+    "sha256": "E2EEC79F3F1D33FD81725E840175D6D8CBFC69CC4EF1EC866B2A5FD8E3251677"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfConvert.h",
+    "bytes": 1776,
+    "sha256": "AD68D7DDD6168F3C2B0EEECA0EFF485A1CA93D27E20F62CB9F7354ECE2E8D0C4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepCompositing.cpp",
+    "bytes": 1990,
+    "sha256": "E6B30405010F01D8F1F4204E18B574290806A2B40D7DA27E4F96450C000CBC6B"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepCompositing.h",
+    "bytes": 4532,
+    "sha256": "317F1FEE6E7FEA5EBFAE0348A34235F9241B4590A87A550D55353CF8B5E93DD3"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepFrameBuffer.cpp",
+    "bytes": 3559,
+    "sha256": "9374240FBD2C0D47C1BF499953F0804318BB93CC4D9EF757B41866EFD5FED083"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepFrameBuffer.h",
+    "bytes": 7837,
+    "sha256": "2E2153D0875F0D19D694486D02987ECB7412ED705DEA3E375664BD282692D57B"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepImageState.h",
+    "bytes": 2086,
+    "sha256": "6E3FA15189C3EDA5DF9343636489ABCB9B83ADFBD731B6608DFB3D0D4B10FA9E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepImageStateAttribute.cpp",
+    "bytes": 1516,
+    "sha256": "48981EACBA90FEEB32F11A4178252915F1E6D6F09340B982D3F70BDD0C0DC2FC"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepImageStateAttribute.h",
+    "bytes": 849,
+    "sha256": "089C0DD34CAA0D56511E2863670B362F20737CDA7967444CA135847F77A71E2B"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineInputFile.cpp",
+    "bytes": 69522,
+    "sha256": "440A63743D1705AE9C1B84786DCA6E117ED3C70136C7E1D68CA9B89CC3C758D3"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineInputFile.h",
+    "bytes": 10281,
+    "sha256": "02F4CCC32CFDC709E8F63D91C831C14C9F41B598E1AC650BB0EFC5D9CD70DD73"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineInputPart.cpp",
+    "bytes": 2507,
+    "sha256": "50D59E98688287A58F36FC410A6A27D17718056CCE69B2C5C2F834D9106F6AB4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineInputPart.h",
+    "bytes": 5466,
+    "sha256": "01079029E5ACD39D8172E60BEE405F5A5F37C0B4E930D439D48C3F5F2A85BD19"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineOutputFile.cpp",
+    "bytes": 49520,
+    "sha256": "7A0FDE314FD428942E7074CA3068FEFB6A8CCD654D9EFFA6633F937E668DF0AA"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineOutputFile.h",
+    "bytes": 8168,
+    "sha256": "E1579F1D7EF5E1B9B5919521F884FD315CEF1296C0DD2B53A877D4AF7CE9261F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineOutputPart.cpp",
+    "bytes": 1371,
+    "sha256": "2B1070E3DC9C23D4F20794A299DB2B16F053FAA9A1EF97C7CDE5C77B1AA12DF7"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepScanLineOutputPart.h",
+    "bytes": 5011,
+    "sha256": "F3C87D3273C9F4F80E75407768909B8D4F33C1C0D5D4C777DF25DFB59F29EBA9"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledInputFile.cpp",
+    "bytes": 62093,
+    "sha256": "2A5B7F63713B9ADB725E35462B38AC630A3524079FD84F7696A60C2C0E7A7845"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledInputFile.h",
+    "bytes": 15208,
+    "sha256": "539A2DF7B9A0CE446C69AE7F13250A12AE6BFE7AC97C6CC122606C7751ABDB93"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledInputPart.cpp",
+    "bytes": 4252,
+    "sha256": "237DB898943C92198C569C55641B0F04AB05EC4799C8C69F8AC33DC48E59C52E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledInputPart.h",
+    "bytes": 12325,
+    "sha256": "A47FB65FEE9B1E974E0F9E215CAFE234C346CA06D035BD3124B6CAE985BFB99A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledOutputFile.cpp",
+    "bytes": 61229,
+    "sha256": "C5574F7FFEB518773BAF12773BF43761044CD69755FB421711465F4D030BF548"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledOutputFile.h",
+    "bytes": 17343,
+    "sha256": "827B21AF1BCB79D6B260EA8805A27AECABF7DFABE620C9BA9FFFACA90B84F0F7"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledOutputPart.cpp",
+    "bytes": 3798,
+    "sha256": "8C460AE59C5CB1D91B245F0B1D2481614BA2DABA83604040D6319C2A023D6F9C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDeepTiledOutputPart.h",
+    "bytes": 13905,
+    "sha256": "84FC5EC89F41D5AAB8120BA245549F8F68F06148CFC7DC9A0716D2F825FEBEAD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDoubleAttribute.cpp",
+    "bytes": 772,
+    "sha256": "2FA1875452E0FEC078E9471BDA0B060EE3A4B0AD0871446E684C154055084FC4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDoubleAttribute.h",
+    "bytes": 694,
+    "sha256": "D45D26DA964D259FFF2830ACE6E490C97A81D73B90004BF9FE2C8208492F9469"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDwaCompressor.cpp",
+    "bytes": 105761,
+    "sha256": "BF6E8E242BCB43DB47EC7F74895CEBA26B09157644ABB467453CCBCEE7F8CA32"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDwaCompressor.h",
+    "bytes": 5845,
+    "sha256": "473DBE3A531D8734E795DF7B423E60723E5863E16D7C49C0E7EDE4D6EB36B55F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfDwaCompressorSimd.h",
+    "bytes": 81397,
+    "sha256": "C3B411C2BC672BE4A67D12D12CFE9D635979709C446999B5398BEFBF86657D52"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfEnvmap.cpp",
+    "bytes": 5534,
+    "sha256": "D8560C14DF7EE675B7E81C16A3E59B75F184D1800C7F747501423473892A5D96"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfEnvmap.h",
+    "bytes": 9901,
+    "sha256": "034160B3D64C7703E4328BA49A115FDC8E0984D0A0B9950750EBBF18E493FF9E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfEnvmapAttribute.cpp",
+    "bytes": 1426,
+    "sha256": "71AA5A5DFABFA27136090EE1553C77C69A24BBAE7D4457ADCF7982578C068724"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfEnvmapAttribute.h",
+    "bytes": 779,
+    "sha256": "2D92FF642DD8197560AF31E82070A665D27F6C2F0AF58B14B267CF65D945D562"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfExport.h",
+    "bytes": 2138,
+    "sha256": "86A2704822DD1203AEFBD78B02D160C260A8C9CF7FA442A974358ED50F38A7DD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFastHuf.cpp",
+    "bytes": 21829,
+    "sha256": "6D0FA95C63772E7E31FC36F64D0749B01966B841B7EF9838E48196A815688DAF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFastHuf.h",
+    "bytes": 4697,
+    "sha256": "BAEF3FD58439497AD0E2FE13016E6426E1C0A38ED8703CF16BB322E2741CD9D6"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFloatAttribute.cpp",
+    "bytes": 767,
+    "sha256": "5A4FA47CD389FE38BCF8ED8E28CB0E96B4CFEF05716C20F878DBB07087126E94"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFloatAttribute.h",
+    "bytes": 714,
+    "sha256": "0C116516EEB20EFB981D8817AA5EDAC3DC0BA6128C896F2A876446D9A002DA35"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFloatVectorAttribute.cpp",
+    "bytes": 1412,
+    "sha256": "DB7A240B629A4942456A96B76BB585EFE861A879316A83AE58E0A681BB564994"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFloatVectorAttribute.h",
+    "bytes": 879,
+    "sha256": "047BD2580D47F7D1029ACDB47D5DE4CBDD779317C3B6050CC86F520B36D5460D"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfForward.h",
+    "bytes": 2630,
+    "sha256": "6D51DE897D2D0BE39749FB1633D318A650A23FE03B977112F26186CA9BF974ED"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFrameBuffer.cpp",
+    "bytes": 5912,
+    "sha256": "85F443FBC1DE80E30EE89A69EE83550A58B8AB4E5D3AF76D67F52CB2D82ED595"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFrameBuffer.h",
+    "bytes": 10279,
+    "sha256": "26CEE09EBA00D2D4B411355D4FAC32B5ACB61D84F4E73918ABCFA4AF407C5359"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFramesPerSecond.cpp",
+    "bytes": 1030,
+    "sha256": "F71C8216E7928FA0CC1A8A53DB980E95395FE1861298AB3C68FC98C45D70AAB0"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfFramesPerSecond.h",
+    "bytes": 2192,
+    "sha256": "335E486F64595F34C8477E8E08C2E92D822E3E86FC2C57002A19DD1CB0088DCB"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfGenericInputFile.cpp",
+    "bytes": 1528,
+    "sha256": "854E83331CF211F8F818E0B70A7C367EB4E03A2CB3764DD936B4874267DE88E6"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfGenericInputFile.h",
+    "bytes": 616,
+    "sha256": "7771B343DE5CBD6B4F3F22444074A22B2EC4D16032A40267849D0DE09A641ECC"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfGenericOutputFile.cpp",
+    "bytes": 2282,
+    "sha256": "8B90ACCB67C39B72E16FF6F9768516FF00631CDA59B202BA7987390CF6F2B2EF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfGenericOutputFile.h",
+    "bytes": 777,
+    "sha256": "10AD725594778F805E9B3B0E544CED2B427DE655CCE7222DF8A40AED1E942CAA"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfHeader.cpp",
+    "bytes": 36033,
+    "sha256": "23BD29335876717D0C6074273FCBB804ED63AA81FC45200731797BA8A7B18297"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfHeader.h",
+    "bytes": 20086,
+    "sha256": "6C55B17A539A8F7463F327BBECCBCCB81CD7DE6B50842137A957CFC465792AB1"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfHuf.cpp",
+    "bytes": 23828,
+    "sha256": "9B7DD6EE62DCCB5A0D2CD503809764DD93FE12474933B44D1685794A0A5C6DA7"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfHuf.h",
+    "bytes": 1236,
+    "sha256": "6E1F83A99E76E35369E00EFBF516B683228BEAD7CF33C9EB36B4E91546EEB34B"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIDManifest.cpp",
+    "bytes": 47167,
+    "sha256": "89A970508B35E352632FB96B67BC67E508BFDF5A140E6A00D933C5896F64E372"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIDManifest.h",
+    "bytes": 14324,
+    "sha256": "9298D29A995491E9837BF2C588DCDD47F08000D73C39FBE9D903372A6A8FD2ED"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIDManifestAttribute.cpp",
+    "bytes": 2016,
+    "sha256": "E12659D3F62DB9DB2DB3E8C07CD7D713F080066BCAA12880B8C944C3FA8717C0"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIDManifestAttribute.h",
+    "bytes": 809,
+    "sha256": "DEB441569C5C00CCDFCAD73825B0D213965D6F77F2BA6554E20245D48BA8478D"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIO.cpp",
+    "bytes": 1139,
+    "sha256": "97B34F0EAE776E43FC5DD06882BDD13B26E5F196101FEAE4F50A64C6BEA9C45E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIO.h",
+    "bytes": 6176,
+    "sha256": "03632D06C0B0BBAF706F48E4FE224D13A9C7EBFBA695461B958CEC6E1E988E49"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputFile.cpp",
+    "bytes": 28158,
+    "sha256": "317C233B370214B007AB0C34FDFC3CD0D400FE4433C07ECAFB51D5074C986E11"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputFile.h",
+    "bytes": 7739,
+    "sha256": "A255ED10B4490D9FBBC07A6223040E1FF8BC2418D8F91E160D9D78342845BD36"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputPart.cpp",
+    "bytes": 1731,
+    "sha256": "A1343F3CBAF2D644033F1C4AD8B4FFEA05DC74A993884D62ED98CCC7F5CD3AD0"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputPart.h",
+    "bytes": 2240,
+    "sha256": "7B3EDB4D5DA1F1278E8CF1E9303189906C1BF30790F2F6120277F57FC5A45B82"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputPartData.cpp",
+    "bytes": 571,
+    "sha256": "9AB56E8274F2061E3FA541B14218B4E0FE75EB18AA85D21D1F63FB88A869BFCD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputPartData.h",
+    "bytes": 818,
+    "sha256": "CF936455381D30BA9F8711D694D72B64B4B64B09F799B95AD51EA4D175FA1D15"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInputStreamMutex.h",
+    "bytes": 667,
+    "sha256": "F13AC0A214D1509A19AC3CCBEF6F60F952FBE15ECADA0DB2FC3E927F686FCCED"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfInt64.h",
+    "bytes": 764,
+    "sha256": "316F4CD3F9A0CC6F9F6F6D25CF090D2A5BC7FD67BD565B7E942539B2CB147C64"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIntAttribute.cpp",
+    "bytes": 868,
+    "sha256": "B6C0419A605DA7428801FA9329F406BEEBEB6AB7CF0B348FFB5BCB60A9958C54"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfIntAttribute.h",
+    "bytes": 699,
+    "sha256": "D544696BE749C4EBEC3B370FCD42E22EFA78EE53DBAF0C0C90A1F77D5EB14E5F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfKeyCode.cpp",
+    "bytes": 3575,
+    "sha256": "8C086C9BC771652AE2D1A96609B65A00D652F0363DBB62B56B8241E080D9E6BA"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfKeyCode.h",
+    "bytes": 3613,
+    "sha256": "D341FCC54B1A97A1D5D44AF0E6993D95A24010E91057B625957D6D28B1D7F5C3"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfKeyCodeAttribute.cpp",
+    "bytes": 1982,
+    "sha256": "0727B78FE9B5D6CE218EEE914DC6EFE551A0D5F08ED9D63589CA0A1296DCBB45"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfKeyCodeAttribute.h",
+    "bytes": 819,
+    "sha256": "12D832D82670247499C48E770FD11ACC6179C974192022DCD4DB7EEE4E6A8723"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfLineOrder.h",
+    "bytes": 826,
+    "sha256": "E29679CF05A166A4CC6FC927AD05E2D1924F13DFA77EAE535AF53F34CDAAD32A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfLineOrderAttribute.cpp",
+    "bytes": 1708,
+    "sha256": "FD78935A08EF41E7D901A0F120A198036CA55184F4241AE90D3F6115871ACCAB"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfLineOrderAttribute.h",
+    "bytes": 832,
+    "sha256": "F0C0508C46E3665DF9DD47B3167438D9E12C912A3C3E3BAC9B2E6E271D18315D"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfLut.cpp",
+    "bytes": 2868,
+    "sha256": "D356DA065BCE455167FB66A0071A79746D5DC25EC36019DB70CDE849A5AEEB2C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfLut.h",
+    "bytes": 3559,
+    "sha256": "2F56A7DCD8BBA8168CE505F8CF4648A393F8B00B450B18D11981E02BAAC7BA7C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMatrixAttribute.cpp",
+    "bytes": 7311,
+    "sha256": "B6C92911540AB1DDEF4A5AB1DAF352F7238674B364F0715D674A1FC199262F7F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMatrixAttribute.h",
+    "bytes": 1510,
+    "sha256": "C94C5DA79F433312700BF8B288C8A6090CD2C4273BBC35FAC4C7CEA8FC9D89E9"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMisc.cpp",
+    "bytes": 62988,
+    "sha256": "91702C39FB423F322AAA120F750C116EFE8849F71042CB98FCDA518C2F123B98"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMisc.h",
+    "bytes": 15147,
+    "sha256": "A36D9A68771057130A259889CC507CC0F416D58F6760FD4E19EAAD6E507192DF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMultiPartInputFile.cpp",
+    "bytes": 26626,
+    "sha256": "9E5D5B6B23A8D8E1079BECAD2995000DECF5158711965A04930392ABC643315D"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMultiPartInputFile.h",
+    "bytes": 3090,
+    "sha256": "5493ACCBC91AB14D840EBD7354BBD8ED84A3A0DD5CCD5185C0B7F2AAB7A1A887"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMultiPartOutputFile.cpp",
+    "bytes": 15649,
+    "sha256": "D110232569287648EFF16220A980633D33DAC6112C3417F0849BCEBE0615D5AD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMultiPartOutputFile.h",
+    "bytes": 2910,
+    "sha256": "5BE0F91D4C28432D91EB881226B8EA20EF32DE642810BACE3DA6BA10C7840246"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMultiView.cpp",
+    "bytes": 8026,
+    "sha256": "5C583AFD507571AC0C8D20F5FBB034E29FEBF01A1A2DA304759093E681E3E85F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfMultiView.h",
+    "bytes": 4830,
+    "sha256": "3FC08D082F089E705A4A472B084261D1EBEF63A52D069DD01C6813A8A3D071FA"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfName.h",
+    "bytes": 2717,
+    "sha256": "D703DC4D85CFBB16E6846F375E6F3DA2D1779E5FA994829E9FE32BA6C65141DF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfNamespace.h",
+    "bytes": 2876,
+    "sha256": "D7FF8DCA4F9BEDDB7177A659F6C7F0B21E9B606AE73A2E4FC6D5F3D548772C10"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOpaqueAttribute.cpp",
+    "bytes": 2178,
+    "sha256": "8E7F30D734060BAA94EAEA0E0B45EC56CC1BEE3F8654EC0ED89CF5B067EDE6E2"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOpaqueAttribute.h",
+    "bytes": 2304,
+    "sha256": "6B6FDA25F10B8E7BBD5F096F87FDA279D2CD6C1E485EEBC1AD37F2E5B5D4352A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOptimizedPixelReading.h",
+    "bytes": 23028,
+    "sha256": "DC2500F2F0864541E74AA0ED664CA98FD20B3476FC7096780031224A63C7D9B4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputFile.cpp",
+    "bytes": 39194,
+    "sha256": "D3BDA46C77F16798418EF1FBDF5553322F879397C7B25EF3D468443718EFDAF6"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputFile.h",
+    "bytes": 8392,
+    "sha256": "9252BC1D20C57D2130BBB59AFB1EC344AFDB69C2015B41A7C4622486ABE203BA"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputPart.cpp",
+    "bytes": 1337,
+    "sha256": "5F7023179D705BD8A33846A0A94154986A95D016CB7131B5ABA492A6CD7C0927"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputPart.h",
+    "bytes": 1524,
+    "sha256": "3773BA690EEAD2596F4E0F252F4A33D4C0932D7A7A131650644C4BA7B7A35C9A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputPartData.cpp",
+    "bytes": 553,
+    "sha256": "86BACFBBB62E5B6E3B2C884D80B2932997A2D51A8CD1747C9B232B38C0E25EBE"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputPartData.h",
+    "bytes": 787,
+    "sha256": "6A3DD212B97C33F17979F1CEA0CC10435C9DDA50BB6D581FACF6B3D5C0ED40FD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfOutputStreamMutex.h",
+    "bytes": 670,
+    "sha256": "F6981D0150509A5034C939C2E56B02B5233713923F69F84700813261F4159798"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPartHelper.h",
+    "bytes": 6213,
+    "sha256": "51D4EB589A9BC2069C73226888ED294B7CFAAB0414C57C3F52D7E40B91D5280C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPartType.cpp",
+    "bytes": 705,
+    "sha256": "0CBCA1CCED5D6B918306C959AD9596A25587AF7F7353F5F9A76CA8DF36187EFD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPartType.h",
+    "bytes": 777,
+    "sha256": "59D33BEABF6D05673BFC6DFBE81A913D6EFCF16EBFBB6E53BE7389927AAD6650"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPixelType.h",
+    "bytes": 742,
+    "sha256": "A302D4D30F0D69B84D3CE9A79753D0F0ED5FDBB4A8D1CBF761E7525B28CEF8EE"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPizCompressor.cpp",
+    "bytes": 13724,
+    "sha256": "09BCE132076FFEA781014840B48CBDD014ADD362EF863ADEF7A0D8ACE0FF6D57"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPizCompressor.h",
+    "bytes": 2215,
+    "sha256": "B1945A4AD66C49DCE3D41021CB713481DE40308F186BD66FED9C8494B894A950"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPreviewImage.cpp",
+    "bytes": 1691,
+    "sha256": "F4D354F5653397ABAF35219144AE1426671F13F7343DBD4E5B2637ED7F722F77"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPreviewImage.h",
+    "bytes": 3180,
+    "sha256": "8350CA43657164FE422C2740A57693533EE5F3302DFF6B42A46B6EDFE4CF1513"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPreviewImageAttribute.cpp",
+    "bytes": 2499,
+    "sha256": "AF00BD65E0D4DB3504FB413CB5940F7C85F099D49279A9D80CD2A9546B188794"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPreviewImageAttribute.h",
+    "bytes": 857,
+    "sha256": "41B2F81F3D89AB7520E4361B757C8E35DF08D2EEC74530A104C6D8853542521A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPxr24Compressor.cpp",
+    "bytes": 11186,
+    "sha256": "80D3095E8C08501D6618C9324086E0270E2F65B0CA4CB93D6634532A51C12475"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfPxr24Compressor.h",
+    "bytes": 2151,
+    "sha256": "55ACC945865A7948BEA61B6019C129165060F78DB2E35F1425750F0C7B35BD86"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRational.cpp",
+    "bytes": 1540,
+    "sha256": "90674FFE6A3BDC0678F8CDF0CD11228FA099B990B8510597B45EC7C408ABEF60"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRational.h",
+    "bytes": 1570,
+    "sha256": "68665EF04DBF468F942E1927C8F928A95F80D11082181E3F38165EFB8D13713D"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRationalAttribute.cpp",
+    "bytes": 1298,
+    "sha256": "A95A04B794EAE908A8AE46853CACF4175CFD9C77702F7BB80E5870A510BAC032"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRationalAttribute.h",
+    "bytes": 772,
+    "sha256": "759CC62A6A9E1F9DA6385B824580B87B9347EF4E71D1E96BF2E107A67E1D364A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRgba.h",
+    "bytes": 1347,
+    "sha256": "C87C560F68AE7CD3D72E3B1C385CD89FADDA3FC9B15F6CDABD9B3DE1781B52F4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRgbaFile.cpp",
+    "bytes": 30811,
+    "sha256": "8EB5D0987F24E0595C0A9C74210396C662CB7BF8060CF343A0183FF6A8C708B2"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRgbaFile.h",
+    "bytes": 12559,
+    "sha256": "BE27449D65B38ACC6CBA40C2EDEE60C082358CBB53C2876F526D07FDF6B71920"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRgbaYca.cpp",
+    "bytes": 10571,
+    "sha256": "7B7907539FA3E9751F62FFB33BC2D5B674266A886BB325DCF40E1F416941B8F6"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRgbaYca.h",
+    "bytes": 6578,
+    "sha256": "7375F4161AFC847646E9D9B3C16B57B157B498DDFB98F5312C7568EEF1D0E6CD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRle.cpp",
+    "bytes": 2556,
+    "sha256": "647B0784553FE1F9190D6E2DBE424B86C3ADAFEB245C575CA9B77E1081F98802"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRle.h",
+    "bytes": 824,
+    "sha256": "C2D3DADFF21BB01331675B92952F36D7D985887C9CA8FBF89B0E17CF3CF86BE7"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRleCompressor.cpp",
+    "bytes": 3169,
+    "sha256": "AC3F763C14521B6FBE3580BAF4608AC01AA4226E0EEBA23A40AF803B8FD645EB"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfRleCompressor.h",
+    "bytes": 1291,
+    "sha256": "573A26AB520ADBC84D105E835FA1E7B8BEF39523DEC6AD688670584034D9F928"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfScanLineInputFile.cpp",
+    "bytes": 53284,
+    "sha256": "06905F0E0EFF1649CF4AA25DC07626B5973F9723719A67E2710D9EB6F01652D4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfScanLineInputFile.h",
+    "bytes": 6432,
+    "sha256": "E702A2546B2FD5A81F78B3C451D8334388684E3A32A947C028D82CADDB710D87"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfSimd.h",
+    "bytes": 1174,
+    "sha256": "16229A0351E934DC921B8B9176D36D78B92057506BFB254405C59B40B353C7E0"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStandardAttributes.cpp",
+    "bytes": 3650,
+    "sha256": "8CDA6464ACA2D21EFA86D61B34F116772D86CBABD509DE6CE1E79FBBD4875B44"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStandardAttributes.h",
+    "bytes": 13685,
+    "sha256": "0F99956F2E99EB66519487FA4596302BC32EAEEF92033C2BBD2396D02399C854"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStdIO.cpp",
+    "bytes": 7963,
+    "sha256": "23F4799B519D0318376B5C6BD2B24768BA6262F8C4FA4FA05D3C0D4A496668C4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStdIO.h",
+    "bytes": 5334,
+    "sha256": "14C65C53A7A58E23CCF8F64DC2D7A6846CB63BFB600455F6055AC29434DDD79E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStringAttribute.cpp",
+    "bytes": 1455,
+    "sha256": "DF1463B17800EA3CDDD81679D3A02216624B6F9B3010F13A8CD3CAF24A0FBB46"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStringAttribute.h",
+    "bytes": 749,
+    "sha256": "58F95B3174C6621EA05522CAF7F4C21D26009A89EC975FDE9ABA081525F3A1B6"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStringVectorAttribute.cpp",
+    "bytes": 2052,
+    "sha256": "8176F3DAA243C751467251DA7879459639B403CB2F21617CFBEDE5845DFC97A4"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfStringVectorAttribute.h",
+    "bytes": 934,
+    "sha256": "83B9F0CC1070716EE936CE757490384839A9EFB4993F7A65DD66048222230D21"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfSystemSpecific.cpp",
+    "bytes": 2951,
+    "sha256": "A0B214748C2AE467A66CA89F6DEE1FF3AAC1A01501C58D5B0BCFDC6FE1F3B0D1"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfSystemSpecific.h",
+    "bytes": 2769,
+    "sha256": "04E154BA34D32E9414246345893088A532FA171A222885EC9EA9326BC9AAEB80"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTestFile.cpp",
+    "bytes": 3533,
+    "sha256": "982FF9986D6AF1175FD773BE04BAC8D08D7366C7C45EAAEF7EE780AAF38B7D4E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTestFile.h",
+    "bytes": 1892,
+    "sha256": "1A7C34CE2DC5EB5DFDC0501E9B2D27B7C0E5DF77C50E739CD99B93E91D2CCDFD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfThreading.cpp",
+    "bytes": 714,
+    "sha256": "D41E60C96EBFD07F4EF96C325ECC09870CF00C82CE32B166FE014EC41974B1A0"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfThreading.h",
+    "bytes": 2652,
+    "sha256": "3A218BC9E9E5B85E3FEA67988624D64B58B9F77C46EC8A214EF5CB803F0A275B"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTileDescription.h",
+    "bytes": 1573,
+    "sha256": "38BEB8A3DF4B7A882F3FE2197F3F4386339A9EF261CD69DE3C3579468E9D2C47"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTileDescriptionAttribute.cpp",
+    "bytes": 2195,
+    "sha256": "79B0651028DEB5BFEB29FB4D02AEF39F14607C56F4DD509444FCBB2E83A0A31E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTileDescriptionAttribute.h",
+    "bytes": 877,
+    "sha256": "6B3743156C1D74E545DF22817E0BE54873327CC76F57DC415D43325FA3F799DF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTileOffsets.cpp",
+    "bytes": 13708,
+    "sha256": "06A712D9CF228F01C45B7706BE0162B061BFDE735B9F3ED61AE0ECBD8E98B8BF"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTileOffsets.h",
+    "bytes": 3009,
+    "sha256": "6E9BEC8DFDD7FF2237E632CBA88B802140299D035C9F8D1686C9DBD2BE24B931"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledInputFile.cpp",
+    "bytes": 44851,
+    "sha256": "0B6D9C979016521A17C70BC5B5B243881AC5B530F2A712EFB124AFD374CDAE59"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledInputFile.h",
+    "bytes": 13009,
+    "sha256": "7B7CFC0E2CFF018F3D14785E73DC63EAC0C4F4EDFE084498377217C1B3930214"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledInputPart.cpp",
+    "bytes": 3164,
+    "sha256": "DCD5D7E12012FDB14E455991D4721679AC0D4C0F5C6DFF60DEB0F3E113EA649A"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledInputPart.h",
+    "bytes": 3448,
+    "sha256": "1D52B9D5EB0383270E11F33102055B3D8E5E21F27332FF7EA1303AF2DCDDBA62"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledMisc.cpp",
+    "bytes": 8599,
+    "sha256": "36866EB8D3562FE1253E98B9F6AB7F818D07DE07B39B195F573BE9A388D1243E"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledMisc.h",
+    "bytes": 2110,
+    "sha256": "4FE696C3EA0103D6BB3D33ED12F3456F9BFDF2C6EB31353640195E1E70613CBC"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledOutputFile.cpp",
+    "bytes": 47502,
+    "sha256": "A838EECBF5BE803845400B9629F28B0A283D1187EC67C49D202EA937CA1A3BC8"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledOutputFile.h",
+    "bytes": 17110,
+    "sha256": "94FB01F62FFC39F39E3EF0D77A720D4A0207E748A472BB61EFB57BBE2585D876"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledOutputPart.cpp",
+    "bytes": 3471,
+    "sha256": "18273D6FF15433726FBF684C32FA4856DEABEBF63A06F9855741C3E0249E079C"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledOutputPart.h",
+    "bytes": 3691,
+    "sha256": "0E1D6542107BE3CFFE232599B4C2C0FAAEE2406E7C50443BB57B0FBF4BE1CB86"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledRgbaFile.cpp",
+    "bytes": 23515,
+    "sha256": "3915CACCEE9E48AE4F4B55D94BCE0D7549729E9DD0BBFD6FA8FD3013BC915A94"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTiledRgbaFile.h",
+    "bytes": 16045,
+    "sha256": "44259B7CF8184D840D4A813D3545BEED6371C00A6275DE413571EC585DF92E45"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTimeCode.cpp",
+    "bytes": 7122,
+    "sha256": "68D4BA8BE10B9B08A003DB52A254F09CE9AD88D141E3E792DB6A8A53938D86E2"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTimeCode.h",
+    "bytes": 6014,
+    "sha256": "FA181F69FA27AA6FA89C8F76C428774B8A440441ED0CB7C7518A8E2468129DAD"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTimeCodeAttribute.cpp",
+    "bytes": 1398,
+    "sha256": "196227CDD847D21649A3D7C267BD85D55BF3C1FBE0704E3FED5FF6634712E6E1"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfTimeCodeAttribute.h",
+    "bytes": 828,
+    "sha256": "A1E1BC92E4BA923E187262389A5F0956D60A44C2824E352FDE8A30B1CEEEBB82"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfVecAttribute.cpp",
+    "bytes": 4855,
+    "sha256": "79020EB8D83BCF6827EEFFEE14CB9F1D02D4C3DAE90F78D410D9FFA0A56FF7FE"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfVecAttribute.h",
+    "bytes": 1874,
+    "sha256": "610E34E7AC135AC139E0F204F8BFD4FFC27FF9A4F7690D2DC2ACC876980DB52F"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfVersion.cpp",
+    "bytes": 665,
+    "sha256": "C399C88E3EB72E1F7B2F1E7CFBC221FCE095F0773CF624F2F7F409A38A25B7E5"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfVersion.h",
+    "bytes": 3127,
+    "sha256": "B22C148CC2EE598BD5FFB76AECB0B98309951F98B1BE8E67913F83B664E4AF32"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfWav.cpp",
+    "bytes": 6354,
+    "sha256": "15370B235B01D0EFDF63598D0DB911CD1D39DBB3F4BFFA921F096964F4BE9BAE"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfWav.h",
+    "bytes": 1098,
+    "sha256": "292202957750CC6008216FAABD599AA9635DD1BC4CADE7155EB1533198768984"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfXdr.h",
+    "bytes": 14981,
+    "sha256": "D920ABF5F1F1EAC5AA9A810B272B068916CD2ACF0B3048E72EC573BCF8E870B9"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfZip.cpp",
+    "bytes": 6206,
+    "sha256": "FD4B0634CF926104DB95309A0DAE32C204CEA360EB16B1FA8BA2D43364CC4700"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfZip.h",
+    "bytes": 1312,
+    "sha256": "00D5C55146D73BF6ADA4F8F6B989962E8769103036515B706421E8C31B818419"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfZipCompressor.cpp",
+    "bytes": 1795,
+    "sha256": "3D4D854706E6AAF24670CA7B6FE3DD0A1C5EFCA09F3D1153CCB01015CBFF7EC6"
+  },
+  {
+    "path": "src/lib/OpenEXR/ImfZipCompressor.h",
+    "bytes": 1156,
+    "sha256": "28912D2233D769D039785022DC913193CE1929D83CBF2500E2B9A9CD56B271CF"
+  },
+  {
+    "path": "src/lib/OpenEXR/b44ExpLogTable.cpp",
+    "bytes": 1861,
+    "sha256": "20E51A6C1652149F1E34339F0DA406BC101267B7963079DC4CB9A3171F51CE14"
+  },
+  {
+    "path": "src/lib/OpenEXR/b44ExpLogTable.h",
+    "bytes": 1130642,
+    "sha256": "AAE64D4B710C4FC8D58711AAFF0C9AD5168E7D90B276E2A56F55090DC0402C8E"
+  },
+  {
+    "path": "src/lib/OpenEXR/dwaLookups.cpp",
+    "bytes": 16071,
+    "sha256": "9DB3E9661077AA6A13112A55FA0AB20FD46BE90A091EC8D65BF260A2B79A30EA"
+  },
+  {
+    "path": "src/lib/OpenEXR/dwaLookups.h",
+    "bytes": 6258948,
+    "sha256": "091B84D1488E3B90DE3C270F85223B5877ECA404E22430CAB0CA8F79EF5098B2"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/CMakeLists.txt",
+    "bytes": 2055,
+    "sha256": "BF6D0C60F07D0526AF9022B806DE4E56F297F0D9E2C39177FCA564A63209669A"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/attributes.c",
+    "bytes": 33412,
+    "sha256": "3F1BB9C2B2F7B2495E9E73C73B6D8229C2AEEC6B5C283439F85E873C9453C2FA"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/backward_compatibility.h",
+    "bytes": 683,
+    "sha256": "5A79C2533FEACD3748CD8A1CDD77E6AF36432708B7D6AFCCECF3CDD247982D8F"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/base.c",
+    "bytes": 5600,
+    "sha256": "8A82C1D2874D1037E525A5F2D81F4B82D3B4EBCEC19436A8D331D86EF20EB074"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/channel_list.c",
+    "bytes": 7715,
+    "sha256": "B93B20E8A26135252DAED10C93B6D4CCF0A3164ED05FB197447F37146151D515"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/chunk.c",
+    "bytes": 59533,
+    "sha256": "C8228C732E7CFAA2F4FC2FBC9FE9AAD17F21634441CF82F719AB65E3EB3D1A9D"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/coding.c",
+    "bytes": 8748,
+    "sha256": "60A681F7CF725C826C3D3BACD7E14A952182F882E672F1B60B6FBC30B9134BD9"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/context.c",
+    "bytes": 18444,
+    "sha256": "B4DCE74A921A1546A8418F99CA7FC1B9B5B529C32AF3E3E231B8DABF11690D57"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/debug.c",
+    "bytes": 12895,
+    "sha256": "74684CF5031C15BB8D5D116F3A46C8E665ADF9DF4E1AB291CCF80A489A014A68"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/decoding.c",
+    "bytes": 23966,
+    "sha256": "9F330F1973BE21ED477828CF16C689230BE739C0F74EE897D62D79FCC537EF88"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/encoding.c",
+    "bytes": 16152,
+    "sha256": "1783E67CEF6BCFD2423F4D21C1DC151D9DFC47EFD9EF8CF3CB5B7B957DD85C5A"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/float_vector.c",
+    "bytes": 3577,
+    "sha256": "FF9A3C2FDC143F295CE203D462B5B60D4CCD7D344BC615997856CEB540ABF85C"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_attr.h",
+    "bytes": 4720,
+    "sha256": "54D9141DEDCC8A448877F19865124C508D2448EA000A7A03E6A9C9C076A40DBA"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_b44.c",
+    "bytes": 18936,
+    "sha256": "7D796BC8175E4826E346A1252F91332BADAFCC5AF42DE043AE1C5258248E0292"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_b44_table.c",
+    "bytes": 1130890,
+    "sha256": "5CD980937B79E0E1CEB0EA23141030E8BB7C053E7E8210E6DBCA43ACF2C2D043"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_channel_list.h",
+    "bytes": 1648,
+    "sha256": "0C133517A03FF09B33EB863B67C31F53EFDDC2DDFC938CF4D0445F0871E40074"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_coding.h",
+    "bytes": 7894,
+    "sha256": "ABCFEE1FCFA923BC6CB0C3FD595B0939BA3420FB24DA56E577DFFC9964BD49DE"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_compress.h",
+    "bytes": 899,
+    "sha256": "701736B2C344F5263F5DE3AE8B0B75F0D25D060A03A52977C7343D824CFAB02E"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_constants.h",
+    "bytes": 951,
+    "sha256": "957DBEEB48C3D5EC0E83789E46512D8AF4BFED80BFC057B5D373E0B31BB5A4B6"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_decompress.h",
+    "bytes": 2527,
+    "sha256": "C5BF02B8C3D9F2B678F14F006ECFC1AD6CA5B571B0507C4FDBF3996BC4F8A4FA"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_dwa.c",
+    "bytes": 2200,
+    "sha256": "FD880F97B3C7E3B6F84870AC706E8200A57FC55007710CFFF76F0A2DD06D4673"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_file.h",
+    "bytes": 1639,
+    "sha256": "66012DCC335D738338773DFB874ED10520D704F16373346EFA56F9AEB2771327"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_float_vector.h",
+    "bytes": 1420,
+    "sha256": "6DFF7E365B39504DC7145C2F6A0092A7EBEC8AB4D45888DCBACCE37FD15E1B55"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_huf.c",
+    "bytes": 29419,
+    "sha256": "6A88E61E26D1A5B91B705D91311909A441B2829AEB89A251CE8C163FEA6E432D"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_huf.h",
+    "bytes": 789,
+    "sha256": "24EA40E5753AA2EA1E874E9D997FBF594BA8036A6050DBF3FBC30C152A59AFF7"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_memory.h",
+    "bytes": 386,
+    "sha256": "7BC6607BE184F8D86430A3BBFE51DD6208F06F25AB265E8B9C65549753E4FE1E"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_opaque.h",
+    "bytes": 1959,
+    "sha256": "68AD9904D4914D9C4A0CCE8F264EC4726BD67558E6D2606C1F2FFBD64AD162BC"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_piz.c",
+    "bytes": 17742,
+    "sha256": "283D17626820CCCE71EF640A90367708E9C3D030CE9A8C8DDAC63DAC5985AF03"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_posix_file_impl.h",
+    "bytes": 12519,
+    "sha256": "3695B45226076F8EF6E795671AA18FABEA027CD41C6C09F785D3743C7E37CCE6"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_preview.h",
+    "bytes": 1741,
+    "sha256": "47740FA72C11731C92825049788E10C98338B0E5FB421F79969B75499E654473"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_pxr24.c",
+    "bytes": 13073,
+    "sha256": "74821586A7A88752F07BBD6251FC53CA4F2F05C721BA5B618D429E83CEA80948"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_rle.c",
+    "bytes": 5449,
+    "sha256": "DF9122F2B92A7405AFD09F91C7A8BC9EB530E7D565A852B5AB12972C5B807C4B"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_string.h",
+    "bytes": 2519,
+    "sha256": "DA7973A00A5346F5482506C9A06B0502DED441DF48884834C2F953D7761F8EA3"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_string_vector.h",
+    "bytes": 2827,
+    "sha256": "FAA9565A911AB5E6C9ECDAF3E2C5F5F88AE74E65D79006555EF4E0B49AB01744"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_structs.c",
+    "bytes": 14149,
+    "sha256": "F214400283B108F8EC96416DB6BBAF458FD705A049D36B353CF9EDF685970483"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_structs.h",
+    "bytes": 12962,
+    "sha256": "98BE67D9374B8FC88EE0E33CDC02A97E271EA893BA5D146BF7FA8748DD98BD47"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_win32_file_impl.h",
+    "bytes": 13204,
+    "sha256": "5EB3DE193555C46938D8E25F2DA193994F4DC823931240FF5E03643A6B18DA31"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_xdr.h",
+    "bytes": 5628,
+    "sha256": "97AC66F1ED33E53440A1AF2B59B9A7D9AE1275EE42918C096D445086DA3850E5"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/internal_zip.c",
+    "bytes": 7665,
+    "sha256": "DBDF1DF91AD693A921757DEF0340DD9A9B2003074D3A1BA8093526921898A4FF"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/memory.c",
+    "bytes": 1174,
+    "sha256": "2CEFF7E4509CE66F5FD4BF1215789E7939BA10CC5AB3E022C7B7F5D03E24CD03"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/opaque.c",
+    "bytes": 8560,
+    "sha256": "DD57AEA38F72E44FCCB3B576D9E3A357466DE0B26CB271F802141C590FE11892"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr.h",
+    "bytes": 484,
+    "sha256": "8AE632CD7F002C7C5CCA20DE6950EC11E6382C8274BD40C1FB41F0E3C22931D8"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_attr.h",
+    "bytes": 16457,
+    "sha256": "242E22ED278EB70532BC9C1F302EDD3667A88EFFA69AA38BDC338A87AD4649D9"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_base.h",
+    "bytes": 6547,
+    "sha256": "03BB30ED51F0D4E1E3EEA272FE3AC9E447DBA7919A117C6E83DB72A411DD0C75"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_chunkio.h",
+    "bytes": 4602,
+    "sha256": "6870EF2AAE0F3916882DC7B337B96A72D18B449046A809FF38A5C7F8FB687445"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_coding.h",
+    "bytes": 4325,
+    "sha256": "A8748C9625C7CD07DB278C19F69B9EEF364269125396E8D50AC9750D063D711B"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_conf.h",
+    "bytes": 1036,
+    "sha256": "D1FF110F7DA560E47907D168BCCDAE84E7D28D1A81ACBBA98F9B10D3C0C4841C"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_context.h",
+    "bytes": 19216,
+    "sha256": "99244013B76F320120E600F6C44976CF359CAAC7B532F84E93FF9E33B270A538"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_debug.h",
+    "bytes": 481,
+    "sha256": "F5EECFF5C2E29266AEB9759DB555733D8BEABBF3F630CC7822DA8EAEC18907F6"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_decode.h",
+    "bytes": 11601,
+    "sha256": "82989FF8388D5ACD59B3CFED9192E3FC889F46C3655731A44DC51326E4ED5FB8"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_encode.h",
+    "bytes": 12561,
+    "sha256": "ECE7B8476D96231CAD23505C12B90CD071F2B0497A06A317F7D10D72DD56FB91"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_errors.h",
+    "bytes": 2273,
+    "sha256": "ABE231D769828CC41809268A3B75F13A1E02AFCADF7D246A326A5D76976414A9"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_part.h",
+    "bytes": 27818,
+    "sha256": "EECFDBB4FE1459D9AC3D378DF59DAF2DE8FA3BE61346CB0BA4398D762457FCA8"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/openexr_std_attr.h",
+    "bytes": 897,
+    "sha256": "D206F22D8D59E4EE71620E5159BA96B8AA58215654F279707FD38AD70B279767"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/pack.c",
+    "bytes": 7529,
+    "sha256": "C25F944692626EE469BB82C1B3419B0368E9647EBC23CB46C58781EC3E0A43B3"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/parse_header.c",
+    "bytes": 76361,
+    "sha256": "58C3F8116CD8F24F44AEB578594E1FFA0EC5FF0697B1F05E10E0A4FA245B0F28"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/part.c",
+    "bytes": 14299,
+    "sha256": "50E2E011465BB01EC56B4B3E8D07BE04B40FCAA7949F375BA00C63B32B9B940B"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/part_attr.c",
+    "bytes": 76921,
+    "sha256": "F7008CB6664DB865097E6E86AA3396186FAFE0EC3E2E3263ED7F32F7A9BDF58A"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/preview.c",
+    "bytes": 2145,
+    "sha256": "0689DCF7FCDB222FCCB49B73142665D40F73259662F1C2B7E281CE60B4868F72"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/std_attr.c",
+    "bytes": 129,
+    "sha256": "6FBD473E6166682EDF65272E7AFA2FFA398C9FC83F8B2CB16264437901809E96"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/string.c",
+    "bytes": 6446,
+    "sha256": "E7974CF068558691FB685311AFA072B13CE8CA327AA64D86AC7C8FCC43E8E5C1"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/string_vector.c",
+    "bytes": 7050,
+    "sha256": "7BCB7C0E473DEB773CB592F16E900BDC15A59EAE5EE2BE8EB0886987A11376B8"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/unpack.c",
+    "bytes": 49264,
+    "sha256": "ED2872CE695140D95A6FEB9D8F4708C997258D3BFAEC8C9077DC5A1C46308950"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/validation.c",
+    "bytes": 16301,
+    "sha256": "D00CDA1A2D98E91D9553AA255952596DABAA44C650C6EFC83B704542BDD879D0"
+  },
+  {
+    "path": "src/lib/OpenEXRCore/write_header.c",
+    "bytes": 18816,
+    "sha256": "042E2188B1FFBDF39D5BFFB2A34DAF3B0B8B1A26DADCE669BB9663B6C1D3AE26"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/CMakeLists.txt",
+    "bytes": 1015,
+    "sha256": "5DC9FC3D70D3BFC21DD4F50DC68C0E8ACD1EAF9452F521E1DD83EA5E1FE4FAF2"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfCheckFile.cpp",
+    "bytes": 48522,
+    "sha256": "5C53434F884E466B4626B686196E939D1D9ECD641C0B4A830AA6335AEB86BF15"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfCheckFile.h",
+    "bytes": 1605,
+    "sha256": "93FDBACF516173F14FA56E8C598D37D68C01AEE78549B76E6DB9B930D9981C5D"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImage.cpp",
+    "bytes": 1529,
+    "sha256": "9557D7417E3454AC676241A6656D411005F53278DBE28102DD69FC0840BB96B9"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImage.h",
+    "bytes": 1706,
+    "sha256": "756E124D1D67D9762DEAB0550B6F95F12C2B534CBF2843FE2EF6183B17720CE4"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImageChannel.cpp",
+    "bytes": 8793,
+    "sha256": "0BD21C63E9D32EAEEF27DF3FE08F41931713F9CECD5AC36C574FEDA6C0DFE7D3"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImageChannel.h",
+    "bytes": 8444,
+    "sha256": "44250D579D3C32453EF101DD9DCDAFE95D3E8FC06C583277C9B3DD142B9C97B4"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImageIO.cpp",
+    "bytes": 10066,
+    "sha256": "BEF91979D8DDCCA4D12426C5CEC91822A567F95D20703FD0D6B21471D8014581"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImageIO.h",
+    "bytes": 5462,
+    "sha256": "EC878B20FA65D585FEDA979EDB160B642E3AD2E7EE885BA41AB8C3B1C22E4BB5"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImageLevel.cpp",
+    "bytes": 6216,
+    "sha256": "C33E637B098253DC65E7935832735BC232005AC1DBBAEE317A6B7B75B6A287D0"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfDeepImageLevel.h",
+    "bytes": 10298,
+    "sha256": "D6A1D4E09262F86AA89DB6526AD81CE5D515680C5934CC50B2D28834DC89B8BE"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImage.cpp",
+    "bytes": 1529,
+    "sha256": "53BF91D1262AF9AA58251566BD67AE8349DA9F946270E301304ADD9162BC4467"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImage.h",
+    "bytes": 1704,
+    "sha256": "43A4D2782250341A104D91B483DE7A29FA13E5D3F0810E18D66B5A4630A7D43A"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImageChannel.cpp",
+    "bytes": 3189,
+    "sha256": "667DC3131A7514E811BEB1A484641D379AFB549D13A22947699B7D5B1D1C9F5D"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImageChannel.h",
+    "bytes": 6494,
+    "sha256": "A23A2BFADE1FAE1BAD8147E8EDB719A11509B2BB559A589ABB53950796B669FB"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImageIO.cpp",
+    "bytes": 8467,
+    "sha256": "C23206D85A9FE427E5E0A5085543A8420A1EE107A1DDC28073BAFB77B3939136"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImageIO.h",
+    "bytes": 5436,
+    "sha256": "65781439E3897712F585BB893C8E1D0D990973CEA3688A6D22EC9875A40A42DA"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImageLevel.cpp",
+    "bytes": 4515,
+    "sha256": "C0F7ACF36D8FC694DD36D332B80F2E7DC2101CE3C24F16060FEB90E975D34718"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfFlatImageLevel.h",
+    "bytes": 9111,
+    "sha256": "4A0C390202B79E994E40A015E36E27E29A0DA0BBAF56312F3E0CE88B11CABE2E"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImage.cpp",
+    "bytes": 13278,
+    "sha256": "F7E1761CEDA9A679B4114E3A124CF70B47C3BE2DDF6A3249A672C4AF99EBAE74"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImage.h",
+    "bytes": 12295,
+    "sha256": "D7FF1380FF532912885DA8B34E74BB8CA191C68B1DD5818367B12AD2E56DDBA1"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageChannel.cpp",
+    "bytes": 2863,
+    "sha256": "F062AED014B7A8B563C0A9E30CB92C4AD0A70985A1E9DD9E5DC7B1E485BE0899"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageChannel.h",
+    "bytes": 3021,
+    "sha256": "AD7D14B6AA1B35E26238C7D2D9871153F51228A3E61037E14640974FB0E7A1A3"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageChannelRenaming.h",
+    "bytes": 1391,
+    "sha256": "70A1EA89479CCDD0ACBF71EB3C614ABDDC28C6CAE129940A6F1B2155FAF93C93"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageDataWindow.cpp",
+    "bytes": 1393,
+    "sha256": "318371AC3A9C9D284D4925895EC23367B08F12CCF18C026694C5325E02EDF492"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageDataWindow.h",
+    "bytes": 1112,
+    "sha256": "9B6AD06DF0FEFAA2B5B4ACE7EB7E852179FA1CDCDFF4DA06AC7E6CBC17C9265A"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageIO.cpp",
+    "bytes": 3159,
+    "sha256": "46B19BAADB5A9018CA2E3465DCEA900E3D66E33595CCA3819F10694F7E65D74E"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageIO.h",
+    "bytes": 2560,
+    "sha256": "AF7780A29DEDD6DC74BEC2E4F484DF20511AEE370B74BC910672BF97F3B032A6"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageLevel.cpp",
+    "bytes": 2129,
+    "sha256": "543F56F279DA31CA4A61324D3408AF3F501A581D639C8554C03543803CBBE89D"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfImageLevel.h",
+    "bytes": 2870,
+    "sha256": "01AF31E4C3FEA0AE2AB122B19492C0CF2E5D832EFCECAB37ACF25FC721151283"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfSampleCountChannel.cpp",
+    "bytes": 8516,
+    "sha256": "9E940F7E8C52786771DAC5811D5EA69D7431F6A4D47CCC54E1DA1E65195A92ED"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfSampleCountChannel.h",
+    "bytes": 10587,
+    "sha256": "CD9A7B5DE3822282C8382C9B7EFCE82DFB26060C56CA58EFC0133953E14F6C13"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/ImfUtilExport.h",
+    "bytes": 2101,
+    "sha256": "AFEED36B567A8581A9F0F7CA8B505042DE634ABEED1C6D335A69F74F367448B7"
+  },
+  {
+    "path": "src/lib/OpenEXRUtil/README",
+    "bytes": 10142,
+    "sha256": "99024565ED3963C38B8537BBA3CDF8A60D3C26E02915A208E1467876BE6138C5"
+  },
+  {
+    "path": "src/test/CMakeLists.txt",
+    "bytes": 350,
+    "sha256": "88729D4B7922B14916F4E50CF729DB28C2D3278D18D8FCFBFF4FCA46691A1B39"
+  },
+  {
+    "path": "src/test/IexTest/CMakeLists.txt",
+    "bytes": 605,
+    "sha256": "E55D29D411D4CB00F2288F193A0D6F15FE6230B90662BC3DFB7D545F6E446448"
+  },
+  {
+    "path": "src/test/IexTest/main.cpp",
+    "bytes": 326,
+    "sha256": "1677A4D350B12B2FD7E2AC9DEF2EFE6E75E78EA288A1A9CFB713C12769C26772"
+  },
+  {
+    "path": "src/test/IexTest/testBaseExc.cpp",
+    "bytes": 11718,
+    "sha256": "D04DEF593969D8895396D427DE40387A93E99AF94D0A4A8E591E301DEB70A424"
+  },
+  {
+    "path": "src/test/IexTest/testBaseExc.h",
+    "bytes": 125,
+    "sha256": "9AF3C720FF489508352B43395DDA3F975960C77BF2E94C04DC5B46AF1479DA1D"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/CMakeLists.txt",
+    "bytes": 2748,
+    "sha256": "D110CA667306784177ABFDA494F50D291031EB1EDF45CBDEFC59CF9186295F3D"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/base_units.cpp",
+    "bytes": 9706,
+    "sha256": "BB8F53BAAA76AD2EC46D957EE59385FE1B7769BD0B4BB9D5433F21F093C1CF00"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/base_units.h",
+    "bytes": 411,
+    "sha256": "31AA02ACBC2B36803D6784EA4754DE2427BAB745B63C6041CA97C8892DD04B45"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/compression.cpp",
+    "bytes": 45176,
+    "sha256": "F48AD2DFFE8D13DC7DAF1F4B127DC44EC113E1D69B30E06BF99CF9D39AD8B964"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/compression.h",
+    "bytes": 1013,
+    "sha256": "DCB88A0D27844054F9CE4F4A45EB4962F3F2034EA36B5E03CB5F67EDA4AF6CC5"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/deep.cpp",
+    "bytes": 16685,
+    "sha256": "7CF42FD82AB29A572F7DFA563FA06C3E451B2B151CD36AD1526AEB5FDBD8BB09"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/deep.h",
+    "bytes": 363,
+    "sha256": "10B5616EFFADF257FCA757616BF75DBFF4C1344D2F715687D20A36BD996E6146"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/general_attr.cpp",
+    "bytes": 68316,
+    "sha256": "6E26ADC8CD8AD509AFC2DB2F669F9341EB97B91411468CB6B7D8D9BDFEB4302A"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/general_attr.h",
+    "bytes": 746,
+    "sha256": "2D302F93DF0B9EF3898A79695F69C784FBF8E9070992C65856E8D6AB538C6051"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/main.cpp",
+    "bytes": 8772,
+    "sha256": "9E2FD19ECEF3FC4C602FFEB9164EA99878AC18BC7D7F12DD632239E701644BF5"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/performance.cpp",
+    "bytes": 20105,
+    "sha256": "7CBAFC3C32D526E249303EF41D3481F9B690B860DF4744D0DB5CB4DA609DE81C"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/read.cpp",
+    "bytes": 21442,
+    "sha256": "C1A63F78460C0A5DCD8AF3009F7B0163448976533042739A012FD6A1551D66A1"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/read.h",
+    "bytes": 780,
+    "sha256": "7CF5D1F50DAF9FC983763368B9DED9FBD1BF41EFB992DA9795A2A1011AFD4462"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/test_value.h",
+    "bytes": 5598,
+    "sha256": "3331D701A66404AFE892DEDEB71C8A46E7346417A7E0FD4A84A1A23F26DFE27D"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/write.cpp",
+    "bytes": 53449,
+    "sha256": "FFA65F3CDC6361E497D0D7F1CDC407B686C13E8CCA9C73A38AB4CB7F2B8C5912"
+  },
+  {
+    "path": "src/test/OpenEXRCoreTest/write.h",
+    "bytes": 871,
+    "sha256": "99D25AAF40FB81089FBA62E5E7B988F2D84961BDAFFBA42C563EC7AC1BDFFE69"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/CMakeLists.txt",
+    "bytes": 1260,
+    "sha256": "F219EB2C5ED1172A735C62A981999511340D94DDF22D306794CF831118E0B627"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/fuzzFile.cpp",
+    "bytes": 4380,
+    "sha256": "2BDDF18691EC4FA50712EF1695BADDB9ABCEB9DA8B2E66FA55EE50C4FE6D24BD"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/fuzzFile.h",
+    "bytes": 388,
+    "sha256": "59D4F8C6F0E1F4D5099F445994639253241F91EBB718E1943A843BD604E0D6CF"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/main.cpp",
+    "bytes": 3708,
+    "sha256": "3F592A22D7B71582D2DC8C12C0C1EF324A8AE8D07454EC1FD1651060E2560B5B"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/oss-fuzz/openexr_exrcheck_fuzzer.cc",
+    "bytes": 517,
+    "sha256": "7353B42F78CB90BE1D86DF375D4819B8DF6EB2DB59B0697DFCAC217BF57560B4"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzDeepScanLines.cpp",
+    "bytes": 13627,
+    "sha256": "7932602353A2D8D63E3323D25C7164AD59883D0A627293D7893D6EA740136476"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzDeepScanLines.h",
+    "bytes": 153,
+    "sha256": "098F4FF52DB7DDE12219AFFBEAE8C2B7BE3422AD290AF9FA0A576435F23CD6B6"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzDeepTiles.cpp",
+    "bytes": 17106,
+    "sha256": "DEA3F3A48EA8B7189A0969DDE00397B0DD14E339D4C7C7C611B7F6BDF5425318"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzDeepTiles.h",
+    "bytes": 149,
+    "sha256": "FE15C1518CD8CE44F240AF26F5A13C649DD719175A8A52FE5EF7DA53153E460D"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzScanLines.cpp",
+    "bytes": 6222,
+    "sha256": "7889E8CE76472C79BAF8F5C63190BF789CDCD48201CB2F2EC37CE269A8196E4A"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzScanLines.h",
+    "bytes": 149,
+    "sha256": "C48F89AAB11793927CEECE6A40D0960DD478B9BFBD9FCF654D223CA492DB4220"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzTiles.cpp",
+    "bytes": 11561,
+    "sha256": "4C6750717AD346B4BF597656CA1FD2697673395BC0FD74564FF913CBFAC9F584"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/testFuzzTiles.h",
+    "bytes": 145,
+    "sha256": "72D9F51E4B08CE27F23190D5C24FDCC6E42C3EE3F83705F824BDF6D9FFD4FAC1"
+  },
+  {
+    "path": "src/test/OpenEXRFuzzTest/tmpDir.h",
+    "bytes": 242,
+    "sha256": "C8521791170DE2FF2A661B0FCCA65247409708E77E940CB9CD2AF2396718B41B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/CMakeLists.txt",
+    "bytes": 3351,
+    "sha256": "51B6A8FABD4C0EA4358DCCC30EDCE2E10E799F36F90322452832CF30762C1DAA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/TestUtilFStream.h",
+    "bytes": 3974,
+    "sha256": "187C4E33704833FC0ADB78E8EE8262D948D5804985CB9C608DC7C7A84079F808"
+  },
+  {
+    "path": "src/test/OpenEXRTest/bswap_32.h",
+    "bytes": 720,
+    "sha256": "D5B512AA71A4E6A554D02E77D055F82935B447B80667D340DC76E8E18760DB12"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_b44.exr",
+    "bytes": 523975,
+    "sha256": "73EB4F84073EBED4237BF9B7E2962349D27CE79FBF9C414B8970B6D325F7D800"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_b44_piz.exr",
+    "bytes": 1395014,
+    "sha256": "57B7B2A86B00FFEFC0C0B396EFE769AE42553DE08CF2E4191BC9320762734023"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_bad_bounds_piz.exr",
+    "bytes": 4785,
+    "sha256": "6CA527C250F7AD8276615149A770619F5379DE0CDC0B61B8600968F21D01592B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_bad_neg_bounds_pxr24.exr",
+    "bytes": 3401,
+    "sha256": "8E950D4BBD642DCBE7CCED525355F80E4B3688EF18A6BCF7E5A48FE9A59A09D0"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_bad_pos_bounds_piz.exr",
+    "bytes": 569,
+    "sha256": "332382B8DC59A63E6586150DC9370D957C41C34DC3C9A891C45DE0482172EA01"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_bad_pos_bounds_pxr24.exr",
+    "bytes": 231,
+    "sha256": "87F67B15218927FCE613B53B1C723B286BD64F6CE2803B6B87C5189B0D7FD059"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_dwaa_piz.exr",
+    "bytes": 1216707,
+    "sha256": "F73C5C44BD6B1A1540D7576A00623094AE827166A46D3C41D8A3CDC53ECDFB95"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_dwaa_v1.exr",
+    "bytes": 353726,
+    "sha256": "2625DA5943C9ED15F8EA7AF992EE65021A09F4F50F8BA1C5C6D7BC433C87C66D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_dwaa_v2.exr",
+    "bytes": 354122,
+    "sha256": "A2B2DFABC95698F35D1924149A9799ED3C5A6CEE3E547A9116250917BD5E9AA3"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_dwab_piz.exr",
+    "bytes": 1216778,
+    "sha256": "2D838471FA90BD0707011E8B616BC3997EEF31D45EF665DD7B14DAD95F2014C7"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_dwab_v1.exr",
+    "bytes": 327937,
+    "sha256": "0DD4C31F1E0F7136F87173590F83B36BA6DA9B0F54C8D2D560E442EC9FE67B22"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_dwab_v2.exr",
+    "bytes": 327991,
+    "sha256": "20CB8CEA5C7C3520EAFA3BE3BD8C6E55B0BCE0E7AC1586BC943F61189D481BFA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_early_eof_piz.exr",
+    "bytes": 740,
+    "sha256": "1346E1F0994579DF8074447CBCE73FA39046174F46F74CEBDBE1FBA62D7AF70E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_invalid_unknown.exr",
+    "bytes": 786,
+    "sha256": "1D662A5F57F36ABF9DD131A49C482FD8968A812613C0291F4E4FBD31F68303BA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_none.exr",
+    "bytes": 3180931,
+    "sha256": "2BA46760FB9D9DDE5200853DABDC6F901D4F0A9C48B700FE395B2ED2A9582ABD"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_piz.exr",
+    "bytes": 1204121,
+    "sha256": "921FDF42F7C8E36BB9B755C4027FAEC2EC2ACA3BCD4BDFD47A0052F4FFC96021"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_rle.exr",
+    "bytes": 1926494,
+    "sha256": "8585088F9D2C351BD279A0E5B28E964DDD8FE4E7D286919FD055EF73131D1E20"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_short_decode_piz.exr",
+    "bytes": 3147,
+    "sha256": "AC0E79D1806BF5D687DCA12893C84B21FC08E6982F9E4AC19139AF637005A714"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_zip.exr",
+    "bytes": 1180708,
+    "sha256": "B51491F94C30896E038AB13286922D75F36F65A42533A8C9ACAC72B81B1A84A8"
+  },
+  {
+    "path": "src/test/OpenEXRTest/comp_zips.exr",
+    "bytes": 1304760,
+    "sha256": "2CFD57ED8DFA012F45FDFDAD20675A7B09A541B85BCEBD1E9E8E5536038D7A65"
+  },
+  {
+    "path": "src/test/OpenEXRTest/compareB44.cpp",
+    "bytes": 6762,
+    "sha256": "70913E4ADA6EE17DE100B2079E0C9306A7F17DC3D80D3AF0C0B087F0C7DBAD21"
+  },
+  {
+    "path": "src/test/OpenEXRTest/compareB44.h",
+    "bytes": 630,
+    "sha256": "B605557CC3FD8406F812D8A1AF6EC70294D23A41651B18495B86A0416EEBF048"
+  },
+  {
+    "path": "src/test/OpenEXRTest/compareDwa.cpp",
+    "bytes": 2994,
+    "sha256": "5BD90EDE730227A494D56ACDE4845892C543BDDF4BBADEAA2B43B88E9412C83A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/compareDwa.h",
+    "bytes": 567,
+    "sha256": "5F66CC6C45A687DB59B24CDC17D1C39F5A18C09D51826E6C09E0FE985D8C7301"
+  },
+  {
+    "path": "src/test/OpenEXRTest/compareFloat.cpp",
+    "bytes": 823,
+    "sha256": "39B6F49D16A508892DC5162CD5F3C8855933E24FE3B8E2DEAB72B6F5A3994570"
+  },
+  {
+    "path": "src/test/OpenEXRTest/compareFloat.h",
+    "bytes": 237,
+    "sha256": "12CA4032C691209A94F6E6EED362455CF81281A66BC8E1FAC35BC238832AED7B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/invalid.exr",
+    "bytes": 30,
+    "sha256": "AA45007E3F5088784ACD45D85EB736105796EFF13067AAA4250CDFF65D23208C"
+  },
+  {
+    "path": "src/test/OpenEXRTest/invalid_shared_attrs_multipart.exr",
+    "bytes": 2015,
+    "sha256": "8FA2EA4A073007303972FD4447BCFB1F37C5FFB2A15F862A0EABB06EE6E01814"
+  },
+  {
+    "path": "src/test/OpenEXRTest/lineOrder_decreasing.exr",
+    "bytes": 144543,
+    "sha256": "7943EA5E88CE0AE29AE8732175F3640B44176BFE3C13E7A712B46B0D560E01A5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/lineOrder_increasing.exr",
+    "bytes": 144543,
+    "sha256": "0E86AA5B626D51E47F0BD3A9EBBFC6CFB45461D8C268021794B6718615AD6280"
+  },
+  {
+    "path": "src/test/OpenEXRTest/main.cpp",
+    "bytes": 8793,
+    "sha256": "894BC554DD4EF0A81CF386979DDBCF7D2121A536C6598271AABDC7B8A8610378"
+  },
+  {
+    "path": "src/test/OpenEXRTest/random.cpp",
+    "bytes": 786,
+    "sha256": "8E08F832DC395D13142CD42C4A57BDA211C6A01D758C7095764337CF05B40CBE"
+  },
+  {
+    "path": "src/test/OpenEXRTest/random.h",
+    "bytes": 316,
+    "sha256": "FA9DD30A838715E18011EC13DDAF2107DD556E8A6F8C63995A1178459CBDA0D4"
+  },
+  {
+    "path": "src/test/OpenEXRTest/scanline_with_deepscanline_type.exr",
+    "bytes": 8339,
+    "sha256": "C814F95EAC340DE312A4866A1D27B7BDB50629DFC388D08A21B0E7D8FB766CD2"
+  },
+  {
+    "path": "src/test/OpenEXRTest/scanline_with_deeptiled_type.exr",
+    "bytes": 8336,
+    "sha256": "B15A16E31459F7711B5795FEB1E79F09C2FD0F960B3E813AB54173FF0CAA1B54"
+  },
+  {
+    "path": "src/test/OpenEXRTest/scanline_with_tiledimage_type.exr",
+    "bytes": 8360,
+    "sha256": "213CFF7FEC74F73C53A52121730BD4022432B860612A62ACE7AE24E1B2081EF0"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testAttributes.cpp",
+    "bytes": 20505,
+    "sha256": "FD020FED12697B7EAF7A3AECABBDEAFB16287173EF367B9B17C182CE06F4E544"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testAttributes.h",
+    "bytes": 175,
+    "sha256": "68CBF6CC595A34007975D146A6437CEB4BA136EEC99249DA401B443E2551366B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testB44ExpLogTable.cpp",
+    "bytes": 1105,
+    "sha256": "7B6F2DD21688FF1EBD4B7F9D85BF318C53460EFCF26D3AF2835693BDF8DE427E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testB44ExpLogTable.h",
+    "bytes": 149,
+    "sha256": "B7086F90768EDB8206541021E93FE05B70113BF933C5FD1422187EAB80B5653E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testBackwardCompatibility.cpp",
+    "bytes": 10748,
+    "sha256": "C521C0913878B84AD50FD2E4804F8D44B28928D7AEEF9E929E87AFDD1D2F8B15"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testBackwardCompatibility.h",
+    "bytes": 302,
+    "sha256": "0401E13ED2B02E21459CA8CE8719894DE871921AEA7791B5134B2905FC8AC6B5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testBadTypeAttributes.cpp",
+    "bytes": 11316,
+    "sha256": "32263B0C259A24B98517A25895F51A7C561BC00AE630CF1B8CA8F24B717E1DCE"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testBadTypeAttributes.h",
+    "bytes": 276,
+    "sha256": "F62C8D9B82BD466EAA28DA54CC4884C7C36E2FA38B17ED7EAF20BE6F5A7DD74E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testChannels.cpp",
+    "bytes": 5399,
+    "sha256": "619DCE7426A4D5F0DCDB9E21AD0CFBBAA0AEC5E3296550E0559AFC2E00607230"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testChannels.h",
+    "bytes": 173,
+    "sha256": "A4FE263D949E506E123C10FF4C5ED42645BAC3C4C4A574E52A3AB5A769CEAD23"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCompositeDeepScanLine.cpp",
+    "bytes": 21933,
+    "sha256": "AC10C8A8306F76946E5D7A5751967D31459CCECB7F15397B84DE47251B5942BF"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCompositeDeepScanLine.h",
+    "bytes": 323,
+    "sha256": "D6D8C69C05F6EB1DA9E0C5511C41DE2A11EED2AD46C5CEA6E8AB4A66FE20FE1A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCompression.cpp",
+    "bytes": 14071,
+    "sha256": "3D73E142151C0556A8611F08EF1F2DA117A56C3E536C6CF0832F38CA6CD146AF"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCompression.h",
+    "bytes": 176,
+    "sha256": "C034E3C115DD8DEF7287512C524B7621009BA793EF55C0A4661691D200B60CBA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testConversion.cpp",
+    "bytes": 9613,
+    "sha256": "D67AF0371BDECC1005AB0C23F1EA3A42E6C1DCD88C494942E1B08632D28154FB"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testConversion.h",
+    "bytes": 174,
+    "sha256": "D363FE529A6AB41F47CAA669533FDBDFAC15278D80B8A702047792B9637CF7FC"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyDeepScanLine.cpp",
+    "bytes": 14661,
+    "sha256": "E7B54B0DA31ABF24FEAAE626CEFC719525CD0F17FC86E098D8EE7E1594E76FDE"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyDeepScanLine.h",
+    "bytes": 280,
+    "sha256": "3916C66AEC3E914D8842F63681CE631CFD1D46B58F251E073D88A9C8B42AAEDA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyDeepTiled.cpp",
+    "bytes": 18606,
+    "sha256": "62781535A3C72F615B39E102141CC4F7AAB210F0104F40A2FD206B2821627644"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyDeepTiled.h",
+    "bytes": 269,
+    "sha256": "E3AAD5E5817FAF10E12BA3598C58CEC5F3F8C0511D295601E885734266C62E4C"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyMultiPartFile.cpp",
+    "bytes": 33285,
+    "sha256": "14456662E7E5FA36AF27B5CB523ADF9C76A345B4EABDC462CA97C48C8693A13F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyMultiPartFile.h",
+    "bytes": 285,
+    "sha256": "A63D466B954920962002A52C588DAB765E38F7BBBAF2A3271DB99B228F20E729"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyPixels.cpp",
+    "bytes": 4793,
+    "sha256": "E07850CF08E7DBCA038E30CD82171A6F8784667C8861394205CDCAF9F514AA49"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCopyPixels.h",
+    "bytes": 175,
+    "sha256": "14DAFAB08A6B9C66D708CCA50A296FB6987C096F0D8EB2DC2BF2FB285C09A9E3"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCustomAttributes.cpp",
+    "bytes": 5266,
+    "sha256": "AB46DE9833AD2128A3636AF133152004301165ADBBF4E18E83609EBF9A06C74D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testCustomAttributes.h",
+    "bytes": 181,
+    "sha256": "9BDC01D348A60D35416C8C151F044C9431B1F43A1D518E63CD360F4A1B41F88D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepScanLineBasic.cpp",
+    "bytes": 20776,
+    "sha256": "BBFA09E6D22223842D4D624063E8FA1235F39077D902D63949D6BD85EF236238"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepScanLineBasic.h",
+    "bytes": 284,
+    "sha256": "63D5542757DA3F8818EE1778437827CA1587691F19F574B02AA335F662D158B5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepScanLineHuge.cpp",
+    "bytes": 13575,
+    "sha256": "0100B52739A5C97502CC39AA988213BD82010BC3265DD4A2B6139A201307FD84"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepScanLineHuge.h",
+    "bytes": 262,
+    "sha256": "C91ECC80D5F914F093997B302D306E3A839E51B8AA857DB68341141FC6D91671"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepScanLineMultipleRead.cpp",
+    "bytes": 5163,
+    "sha256": "560EDE5929507F502E1D1D0B4CEFDCB22C27795E789985B39B0DC0623179CD53"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepScanLineMultipleRead.h",
+    "bytes": 330,
+    "sha256": "05A7E85036A94059F3486AE4B54401E8018735C19A03F7D1B1A7801034A899A9"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepTiledBasic.cpp",
+    "bytes": 35209,
+    "sha256": "412BCF5D91BEF2C83195E42E88C05E7E0ABF5334886C18CC7421DBA99F67EA8F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDeepTiledBasic.h",
+    "bytes": 273,
+    "sha256": "58E732BC736553288640491F6B0269BDBF6C5CE80CA27A7C421DDDFC941BEA94"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDwaCompressorSimd.cpp",
+    "bytes": 15711,
+    "sha256": "55140E08BA51B9279EFDBA6194A47AF9D6CBE67429FBDFC2C0B5CF3981EA414D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDwaCompressorSimd.h",
+    "bytes": 303,
+    "sha256": "49DA81E7E0338287F407AEA77765948A10E38A5269F774DE3C708588146FC0C9"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDwaLookups.cpp",
+    "bytes": 13079,
+    "sha256": "75AF901000A376F1305150DA194A16AAD8BE9D9BD54891AEF2C7BAF3E2303EF8"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testDwaLookups.h",
+    "bytes": 144,
+    "sha256": "C3215CCC6EB7EF1F40CB28026A9CAC9A03C0B5A3617F52EE219D5B7EF1FEA332"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testExistingStreams.cpp",
+    "bytes": 20701,
+    "sha256": "D156A6F3C082BFA036B09269EF6E69B796D4FAFE37B829452A08B1F5E8963149"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testExistingStreams.h",
+    "bytes": 178,
+    "sha256": "F4320F115EF22F71021EFAE8075DC4A3628297FBBE80F4AE8EAF16ADB6CB6AF6"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testFutureProofing.cpp",
+    "bytes": 44587,
+    "sha256": "43181BE25F6FFDF8904204D4532FEA4C8E3F1B935D7ADE9874202B26DA619767"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testFutureProofing.h",
+    "bytes": 267,
+    "sha256": "B41223D407F6CC25B78A260E2A43AEB70392438DF8FA150B202353AB503A9A46"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testHuf.cpp",
+    "bytes": 8315,
+    "sha256": "5904AD6EBC9739E9DAD9C4A9508C5E99F0C8A27ED87C8C75EE8CF931732FB945"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testHuf.h",
+    "bytes": 168,
+    "sha256": "9E7F511CC10B0CEF6301BE265E96473758285AE40531DF1FD4FFA1DD43E6406A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testIDManifest.cpp",
+    "bytes": 18887,
+    "sha256": "AC6F9F4F0BFDCE36B25BED9AC1128734DED9C29C0F136C13166A359639C660D5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testIDManifest.h",
+    "bytes": 227,
+    "sha256": "1313C5ECEB5D5B41126345316DDBBFFF3138C5AB316DAD36CCF2A0D57880E17A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testInputPart.cpp",
+    "bytes": 20950,
+    "sha256": "BA4E4D5A604CC65A5B9F8C7EB87709CD15DFC3DC315D9ABE0D982E6634FB7B9F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testInputPart.h",
+    "bytes": 253,
+    "sha256": "9513892F75CF48339A6BD39BC36065196D99A2D6EDBBE71108636724FCF27E3F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testIsComplete.cpp",
+    "bytes": 3006,
+    "sha256": "E99D028B8BBF2240AED222D7609BE0DC0AA1AA1A908F1DF5E92728F3BAD14B3B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testIsComplete.h",
+    "bytes": 176,
+    "sha256": "E7818E44F9A91FEE4551CCD89CD8898804CA0721B8A180860644CA0C6CFCDC62"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testLargeDataWindowOffsets.cpp",
+    "bytes": 11520,
+    "sha256": "C2293F01D6DEF0DC13FC58AB58D60A40DE0A79E8FA4984B632392C1A7FC281BC"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testLargeDataWindowOffsets.h",
+    "bytes": 277,
+    "sha256": "89928A12550CD8CAF71FFECF533DF132BE2A03175F0059DD11754FE4AAF0F99A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testLineOrder.cpp",
+    "bytes": 4419,
+    "sha256": "12290C2921D15DF084CD0B9FB62C42E93D4950C7D17FA5A17328428E63362A3A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testLineOrder.h",
+    "bytes": 174,
+    "sha256": "FA3F2FAFCFFCF5AB4D82EF6F19CBB55C35049F51A382295C472FE7341DCC70B5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testLut.cpp",
+    "bytes": 3829,
+    "sha256": "EC162EB070D0D55C2A8B0FB255F2C7EB3683881F088C3820AAC044150CA2FE8B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testLut.h",
+    "bytes": 168,
+    "sha256": "EE238143CE4C39D5CB18AC173A719F7E54E63D22FF1EF2A0A4C0E960297C0AE2"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMagic.cpp",
+    "bytes": 2508,
+    "sha256": "82051409C2ECEA6C87FCEC915E274AAAACE0913ED6B860246CCECCEA1082B1D1"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMagic.h",
+    "bytes": 166,
+    "sha256": "13FAD4B6F3A6DA707E967FF451CB6D918577C896C731DB1CD99D757C28A9C57C"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMalformedImages.cpp",
+    "bytes": 3474,
+    "sha256": "59D9B5ADF1C6F862B49BB2CC205A24C4485A7193975B12B66538880C2E306207"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMalformedImages.h",
+    "bytes": 176,
+    "sha256": "8044D29A01D5BD9B6E650DAF1008D29DC73695FDEA1613A1492E76A5E78BE74E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartApi.cpp",
+    "bytes": 22825,
+    "sha256": "D8B5733E2A64D9ACE304CCAA2415BF499A6E998A913AFEF746CFF61908173CE5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartApi.h",
+    "bytes": 265,
+    "sha256": "06CEC194229B50253373FFB4133489E5FFE44423C59B23E9FA6D36A7DD21336B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartFileMixingBasic.cpp",
+    "bytes": 50806,
+    "sha256": "E5A640923ADDFC9BA23A78E7C47DC0F546233847B280DA59E0C6FB07FA41DE7B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartFileMixingBasic.h",
+    "bytes": 313,
+    "sha256": "BD01FBE74A0E0324E4AB645F0B32218BDE86DFACFF7A524688FC660492780344"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartSharedAttributes.cpp",
+    "bytes": 14410,
+    "sha256": "57AFB2EBA02C4DD965748BA5D6A233886EE53BE5D5EC6643AC9FDA7B20171CFD"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartSharedAttributes.h",
+    "bytes": 319,
+    "sha256": "04991959135C21501D9E1BBE13E4903D930A515C0062303B1AB6984C8C131573"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartThreading.cpp",
+    "bytes": 25974,
+    "sha256": "898FA44E891552F1BAB54FB92A3A22CE774D21FC95ABD85ED92951E254499729"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiPartThreading.h",
+    "bytes": 289,
+    "sha256": "07DBE8EF71C3EB42F7C4872554F99441D8A40C7D42D1D07811F09B86BA3E2961"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiScanlinePartThreading.cpp",
+    "bytes": 11617,
+    "sha256": "3D502B736F57773E1993A6540D7FACA5ACB551EF85BC0C8AB523E4EEDDD1EA23"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiScanlinePartThreading.h",
+    "bytes": 321,
+    "sha256": "502F9F3CA1F0F29E67CCE8DFB6B5465332455C42C916C6B085DD470B5F677E4E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiTiledPartThreading.cpp",
+    "bytes": 15341,
+    "sha256": "FFF7A65FA72CFEED71AD2EEABCC0F3EE2916354B56DA0EA84802860FF9A8B361"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiTiledPartThreading.h",
+    "bytes": 309,
+    "sha256": "94D31C0C4A5F6C6944D1EB8622A3F617A1C019B70AE614F80E9C0776436120D1"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiView.cpp",
+    "bytes": 10644,
+    "sha256": "58B7ACA4C9C500F5C2E128C13F23348D9BA9C18AB7CACAB1B5D6E5FF68ECF56B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testMultiView.h",
+    "bytes": 196,
+    "sha256": "8ADF13308B21AA1592F6C892DE756C4EDA75A1BA7A489E541793CB732FB340AA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testNativeFormat.cpp",
+    "bytes": 8801,
+    "sha256": "7402A1D5816377C0B9D180DCF8D082C296200F2B57DC834ACE149E17F3506D7B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testNativeFormat.h",
+    "bytes": 175,
+    "sha256": "CBCDC7FE6B5348F69481EBD6B82B19B9BD13D27FE71D52EFF5A7E939ABCF1640"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testOptimized.cpp",
+    "bytes": 17818,
+    "sha256": "366E902E119DFB6F9C56148260C9F16124A2B3E70F955259A680999E2742408A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testOptimized.h",
+    "bytes": 172,
+    "sha256": "5BE2F7AE7CD246BC31181C7EA541A452451E61C4D67760C39E83FA7AFD536D81"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testOptimizedInterleavePatterns.cpp",
+    "bytes": 21701,
+    "sha256": "07CC461A8BA92CBB9D0BFFF1839E7653D40537A95FB02E06F9B680278A18BCA9"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testOptimizedInterleavePatterns.h",
+    "bytes": 290,
+    "sha256": "C5B29DB2989FA15BBE4F0DA056D334D5E0D1C5734E74922573636382A3590637"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testPartHelper.cpp",
+    "bytes": 3709,
+    "sha256": "1EC60BBD4CA1B016FD1186F207931DB9213C35F5A870535B519411472C4B329A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testPartHelper.h",
+    "bytes": 278,
+    "sha256": "3648B1A06B1FC1FEF12D47892E04872B75D36420A1C011E30E7609B5E53CCE26"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testPreviewImage.cpp",
+    "bytes": 5016,
+    "sha256": "82F54EE91F66C8D102421EE5486C19CB80EC3173497664CEE11C0ECF73AFCC9D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testPreviewImage.h",
+    "bytes": 176,
+    "sha256": "BC533B3160E656A38507A4A2947C53EB273F8B4A872B990AE2A9CF71F33F11CD"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testRgba.cpp",
+    "bytes": 13457,
+    "sha256": "199818036404A0FFF825D7F5CAD9E344C4B2E2A09D135202B3108F6B1692B587"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testRgba.h",
+    "bytes": 169,
+    "sha256": "9D3C7621796AACB8A732E7DA195F12AE57F0B4E2A11179BB7A35C69490FB238E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testRgbaThreading.cpp",
+    "bytes": 6172,
+    "sha256": "B16B8B1874D22276B964DF43EDB7CDE0FEA9D902C84BCC6616815D57DA0EF4CA"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testRgbaThreading.h",
+    "bytes": 178,
+    "sha256": "4040044FA54749A6B4E8337199B971198A8062260488301AC8CA62BA85C06774"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testRle.cpp",
+    "bytes": 2195,
+    "sha256": "35EF783632022FA04AEA93A91F11F0BF04AEEB97C4D5FA47C85AD555B940F13F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testRle.h",
+    "bytes": 246,
+    "sha256": "7B191DA74C9282F7090966ACF08CCEE6AFADC195EAC20BB7970D614FD4976C22"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testSampleImages.cpp",
+    "bytes": 4072,
+    "sha256": "2EA26060BCA340BD8828C0F07F11EFD3D43567F6CA3320BCE0D8434F287DF195"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testSampleImages.h",
+    "bytes": 177,
+    "sha256": "5A2E92D5A4B717AF82998C4037A27869193AC38BB9B0B450CC26925EA39C8802"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testScanLineApi.cpp",
+    "bytes": 23482,
+    "sha256": "4DDC686C53FBF226658929036DF393DEE0C84C4747B9C72A15C9D4F0B2E8CCEC"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testScanLineApi.h",
+    "bytes": 174,
+    "sha256": "2F68DB824BCBD404A81381599988F4C57E3CF36EFC91396251CE902FBD2F8E3D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testSharedFrameBuffer.cpp",
+    "bytes": 7308,
+    "sha256": "6CF03C75D835A25A32B1ECC8A12111A031E1646A0730688F696F8A0F049A8D37"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testSharedFrameBuffer.h",
+    "bytes": 182,
+    "sha256": "61883AAB0C82F943AF8FE17C1597B339300E56144944BBA87896094ABFC350A5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testStandardAttributes.cpp",
+    "bytes": 24741,
+    "sha256": "ACBA77601829155DA0CCCA08DD8A045130016689292DEB6AB22DF3D85A51034C"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testStandardAttributes.h",
+    "bytes": 182,
+    "sha256": "F361317B6640C2CC1B04D4A64A7CF0F792024D90ED7DE1D5546A3EA8BC68E960"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledCompression.cpp",
+    "bytes": 15985,
+    "sha256": "D31E5AE4D39321E68ACBEC19D22A6707194CED60E8B89C4A4F1A8CD4404FBE3B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledCompression.h",
+    "bytes": 179,
+    "sha256": "7E92C7016B438AB78326BC7FD02F5A2383633A4976D004EEEBA708481D4363D3"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledCopyPixels.cpp",
+    "bytes": 15575,
+    "sha256": "08214213AC62D92825A6208521038D1AE0F3B681079818245929E73B320870A1"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledCopyPixels.h",
+    "bytes": 178,
+    "sha256": "B025CB32D7665C42511C4584F73F2D9E411AE33B7381342A4793E250ECCA441F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledLineOrder.cpp",
+    "bytes": 20165,
+    "sha256": "CEA4B07274885BEC7C24AFBB392D5A6EBB446AAE63712C434984493927DD6E60"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledLineOrder.h",
+    "bytes": 177,
+    "sha256": "358227983A408038E9A54FCE5FACCD11AA830EED8AAB41C69F28032381ACE52B"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledRgba.cpp",
+    "bytes": 23766,
+    "sha256": "DEA70CC8D6DF3603C0D934175843E7941103BECF3824322B3C46F722BB8031CD"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledRgba.h",
+    "bytes": 172,
+    "sha256": "4B0D23CA43A62C3D2B7973FC4008EFACD042C820C95475401E33F0AAC5717EA5"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledYa.cpp",
+    "bytes": 3473,
+    "sha256": "10C31FEEB519E807839938D9785F0EF1A1F7F9E2DFE6697C763F943300446B8D"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testTiledYa.h",
+    "bytes": 169,
+    "sha256": "C0D97D89D435441404C48DECF172A7E541BA039A3ED455061E203C9E8BCBFDE6"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testWav.cpp",
+    "bytes": 5082,
+    "sha256": "2927CEF3ECD079594ADA6F923F0D777B0520D6943179914750B6FB1994F0D43F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testWav.h",
+    "bytes": 168,
+    "sha256": "FD4EF7EEC8DB5B291FFC22EBCBEA9328DB884D3E126EE524BB932A2AD619878A"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testXdr.cpp",
+    "bytes": 5864,
+    "sha256": "3014C213496E748D0E9A67E705DF25A142E46A73FB9EE463392AEED07C0C9312"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testXdr.h",
+    "bytes": 168,
+    "sha256": "C70782A4398930BCC7E843E1918FD37812809331FF3B71F5FD5365C9A1987145"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testYca.cpp",
+    "bytes": 5159,
+    "sha256": "8DC98B697E02BFACF14A363157F35A0F1A8B2307BF121778646FF0E9A33C98C3"
+  },
+  {
+    "path": "src/test/OpenEXRTest/testYca.h",
+    "bytes": 165,
+    "sha256": "12992E490B72AB1483B7FCC3DBB17917E1C010A7C90CF46E4FF495D477F1C768"
+  },
+  {
+    "path": "src/test/OpenEXRTest/test_native1.exr",
+    "bytes": 524747,
+    "sha256": "ED21329BFBC07FB00E51DD1FDB97B4EDB4AEFB3F624C4511709641673AF8EBF9"
+  },
+  {
+    "path": "src/test/OpenEXRTest/test_native2.exr",
+    "bytes": 1049035,
+    "sha256": "B9D65600DA0BC51C46BC4256A34335213BD6BA8ECF01296E2EF18600D823074E"
+  },
+  {
+    "path": "src/test/OpenEXRTest/tiled.exr",
+    "bytes": 480,
+    "sha256": "0D67368F6B19C13E51B904FA7DFE0EE733297A4E55C15586D4191CBF7788F4D8"
+  },
+  {
+    "path": "src/test/OpenEXRTest/tiled_with_deepscanline_type.exr",
+    "bytes": 30705,
+    "sha256": "1761891AD96814B3A0B5CBBC19AD564DF551ADEB0A50A3E95E7E73A2B1CB1DAE"
+  },
+  {
+    "path": "src/test/OpenEXRTest/tiled_with_deeptile_type.exr",
+    "bytes": 30702,
+    "sha256": "6B4DB9E1519514A7B48CB3BFA5993B574A588AA791901393F555912E4B7B4DF6"
+  },
+  {
+    "path": "src/test/OpenEXRTest/tiled_with_scanlineimage_type.exr",
+    "bytes": 30738,
+    "sha256": "C8F3802D0438B6E4818B8326652FD942C39768FAB33E1F6B51DEF7431AC07946"
+  },
+  {
+    "path": "src/test/OpenEXRTest/tmpDir.h",
+    "bytes": 625,
+    "sha256": "4866F1BCB9B3120E3B80D81E0E4208BA41E93701C91A084E61D821D4B6A95CA7"
+  },
+  {
+    "path": "src/test/OpenEXRTest/v1.7.test.1.exr",
+    "bytes": 29411,
+    "sha256": "4A4B8F8572033184AC808CEDA31A350D1C8ABCF8742F3A1694DDC7BC109E878F"
+  },
+  {
+    "path": "src/test/OpenEXRTest/v1.7.test.interleaved.exr",
+    "bytes": 169107,
+    "sha256": "0CA2BF0732A3799CA8ADD88A73592AAFD7BBB5B93F53EC56529036B894411FCE"
+  },
+  {
+    "path": "src/test/OpenEXRTest/v1.7.test.planar.exr",
+    "bytes": 279503,
+    "sha256": "5D9B2550DB3CCAA1CAE24348D08402B36C02D225FA154E745630C43464FA9935"
+  },
+  {
+    "path": "src/test/OpenEXRTest/v1.7.test.tiled.exr",
+    "bytes": 261605,
+    "sha256": "9B764CBB7BAB0842638CE8AB668D8CBF317444E94A194CC1C0BCDA4D063BA953"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/CMakeLists.txt",
+    "bytes": 887,
+    "sha256": "6ADB02523D70ED9DA3B2115ADDE1C929DB50E916F3D068230D3135406B37D303"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/main.cpp",
+    "bytes": 2288,
+    "sha256": "E1958B6BDF61C1CDB094E816CD5A0B8EE593359CEE7E7BB30621DEC0210CC5A8"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/testDeepImage.cpp",
+    "bytes": 18888,
+    "sha256": "DF6CCEC2A0AF5D69703633004BF682BD5F4B00F4686B40D1CDA1FB9D7C86A08F"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/testDeepImage.h",
+    "bytes": 174,
+    "sha256": "A29947F183439B21A3EC8F56B03221F80770E2B0269ECFB94B359291EBC19342"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/testFlatImage.cpp",
+    "bytes": 16081,
+    "sha256": "A503EE33F520755EA3B8ABEF8560A0C17EDF15106A2D9CD4588DF0CEEB103673"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/testFlatImage.h",
+    "bytes": 174,
+    "sha256": "496859EAFABB925B85555DDC646365F3657F2073822BAF63889A277D3958B299"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/testIO.cpp",
+    "bytes": 5459,
+    "sha256": "0DE2F4A6A53406A55E9FD379F1BFBA117B009E7A5E31CFEA7FAF728198FC61A0"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/testIO.h",
+    "bytes": 167,
+    "sha256": "23DAC4FD1EA93D850BDE07F2CDE0D185B86027811A83357864F55995B8015089"
+  },
+  {
+    "path": "src/test/OpenEXRUtilTest/tmpDir.h",
+    "bytes": 625,
+    "sha256": "4866F1BCB9B3120E3B80D81E0E4208BA41E93701C91A084E61D821D4B6A95CA7"
+  },
+  {
+    "path": "util/reformat.sh",
+    "bytes": 354,
+    "sha256": "901CAB3219AE0EAAAF033805448704EEFAF058937664DA194A1C6F5B23FB1479"
+  }
+]

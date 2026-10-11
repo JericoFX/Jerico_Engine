@@ -1,0 +1,14 @@
+{
+  "method": "GET",
+  "url": "https://gitlab.com/libtiff/libtiff/-/archive/4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz",
+  "status": 200,
+  "redirectsFollowed": false,
+  "credentials": "none",
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-audit\\libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz",
+  "bytes": 2334809,
+  "sha256": "CCE672D2F5941759573CB3904CC8F00F065D54A3689A80719229E961D6A324C8",
+  "tag": "v4.2.0",
+  "tagObject": "846d7d97f3254adf388993b195a8079068c22beb",
+  "commit": "4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99",
+  "sourcePinOrigin": "Official GitLab tag API resolved commit; source archive SHA256 measured after manual direct acquisition; distinct from historical package SHA"
+}

@@ -1,0 +1,8 @@
+[
+  "--build",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\consumer",
+  "--config",
+  "Release",
+  "--target",
+  "JED3dx12Consumer"
+]

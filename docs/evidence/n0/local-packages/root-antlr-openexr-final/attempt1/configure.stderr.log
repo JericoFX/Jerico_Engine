@@ -1,0 +1,15 @@
+CMake Error at cmake/3rdPartyPackages.cmake:952 (message):
+  JE FetchContent unavailable offline: jsoncpp
+
+  Pin: c40e5a2583df633b904525305bda40b622d9971fee1ece7ce48ca723a4907d36
+  24682e37bf1425455b45e7db69dbdbcd30aec7dd
+
+  Archive cache:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/jsoncpp
+
+  Provision a pinned local archive or set FETCHCONTENT_SOURCE_DIR_JSONCPP to
+  audited local sources; remote and Git fallback are disabled.
+Call Stack (most recent call first):
+  Code/3rdParty/jsoncpp/CMakeLists.txt:8 (o3de_fetch_content)
+
+

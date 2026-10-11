@@ -1,0 +1,77 @@
+{
+  "status": "STATIC FINAL DERIVATION VERIFIED; NATIVE EXECUTION PENDING PARENT/LUNA DISPATCH",
+  "inputsVerified": 2532,
+  "priorArgumentsExactlyPreserved": 47,
+  "argumentsAppended": 1,
+  "sourceDeltasOnlyApproved": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "beforeBytes": 3930,
+      "beforeSHA256": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+      "afterBytes": 3827,
+      "afterSHA256": "0bf845bedef7f84dcf51f5ec986fe0b7ad6fefccb7b4e823c260d062240618a3",
+      "reason": "Parent-reviewed exclusion of Python Gem product composition; six-file receipt pinned"
+    }
+  ],
+  "cache32": true,
+  "wheelhouse44": true,
+  "acceptedPackagePairs": 8,
+  "parser": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\run-root-configure-cli11.ps1",
+      "errors": 0,
+      "sha256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\DeriveRootCli11.ps1",
+      "errors": 0,
+      "sha256": "358CBF45549EB3775E3AC7CBB363ABE1D6E92A3B45424CDFBC810CBF98118CE0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\jsoncpp-audit\\CheckAzslcReflection.ps1",
+      "errors": 0,
+      "sha256": "907F876AEABE3A7AEDEC52513B423B3ADA092DB0A3B9DCD04DC6F314207487F6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\VerifyRootCli11.ps1",
+      "errors": 0,
+      "sha256": "A1DD5CB4F1A13250A7CFBFC65E0562F293FC8934100E62BEF2A2EA1380E6000A"
+    }
+  ],
+  "reverseDiffToOriginalSHA61BFF": true,
+  "driverLFNoBOM": true,
+  "fullPrivateCopyComparison": [
+    {
+      "name": "Manifold",
+      "source": "F:/JericoEngine/Dependencies/manifold-3.5.1",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\manifold-3.5.1-root",
+      "sourceFiles": 378,
+      "copyFiles": 378,
+      "deltaCount": 0,
+      "deltas": []
+    },
+    {
+      "name": "Clipper2",
+      "source": "F:/JericoEngine/Dependencies/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+      "sourceFiles": 223,
+      "copyFiles": 223,
+      "deltaCount": 0,
+      "deltas": []
+    },
+    {
+      "name": "OpenMesh",
+      "source": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\OpenMesh-11.0.0-root",
+      "sourceFiles": 611,
+      "copyFiles": 611,
+      "deltaCount": 0,
+      "deltas": []
+    }
+  ],
+  "immutableFullTreesBeforeAfter": "ANTLR4, JSONCpp and CLI11 preserved in driver treePaths, manifests and postflight loop",
+  "nativeProcessesExecuted": 0,
+  "driverSHA256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+  "assignmentSHA256": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53",
+  "freezeSHA256": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292"
+}

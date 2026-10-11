@@ -1,0 +1,45 @@
+{
+  "archiveSHA256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+  "subtree": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/",
+  "files": 4,
+  "bytes": 58422.0,
+  "links": 0,
+  "members": [
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/Findd3dx12.cmake",
+      "type": "RegularFile",
+      "bytes": 614,
+      "sha256": "a8c0cdb1770c4470570c601fb1f817f79a23f0dafecebe6b4fae946e37580ad0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 198,
+      "sha256": "cdaf233596a2423c47a009a7fb53de31252b9b4b39163532a2a2e333132dc24d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12/include/d3dx12.h",
+      "type": "RegularFile",
+      "bytes": 56537,
+      "sha256": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12/license.txt",
+      "type": "RegularFile",
+      "bytes": 1073,
+      "sha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d"
+    }
+  ]
+}

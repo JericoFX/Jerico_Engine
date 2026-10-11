@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "scope": "local d3dx12 package producer and standalone native consumer validation",
+  "producer": {
+    "nativeExit": 0,
+    "sourceArchiveSha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+    "sourceFreezeBeforePath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/producer-inputs-before.json",
+    "sourceFreezeAfterPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/producer-inputs-after.json",
+    "sourceFreezePostCount": 12,
+    "sourceFreezePostAllMatch": true,
+    "elapsedSeconds": 0.268
+  },
+  "package": {
+    "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\d3dx12-local-v1\\packages\\d3dx12-headers-je-rev1-windows.tar.xz",
+    "archiveBytes": 16652,
+    "packageArchiveSha256": "5ba66c64483f19e72beea0d1ccc94ad3e0175e88ec256668fc5b0725727ffb73",
+    "manifestEntryCount": 13,
+    "manifestMatchesAll": true,
+    "archiveMembersCount": 14,
+    "archiveObservedMembersAreRegularFiles": true,
+    "extractRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\extracted\\d3dx12-headers-je-rev1-windows",
+    "metadata": {
+      "license": "MIT",
+      "name": "d3dx12-headers-je-rev1-windows",
+      "schemaVersion": 1,
+      "source": {
+        "commit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+        "sha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+        "url": "https://codeload.github.com/o3de/3p-package-source/tar.gz/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18"
+      },
+      "version": "headers-je-rev1"
+    },
+    "headerAndLicenseByteExactToAuditedSource": true
+  },
+  "consumer": {
+    "configureExit": 0,
+    "releaseBuildExit": 0,
+    "releaseCTestExit": 0,
+    "releasePassed3": true,
+    "debugBuildExit": 0,
+    "debugCTestExit": 0,
+    "debugPassed3": true,
+    "generator": "Visual Studio 17 2022",
+    "platform": "x64",
+    "toolset": "v143",
+    "windowsSdk": "10.0.26100.0",
+    "windowsSdkD3D12HeaderSha256": "8a9bd0528b5dac27bb00ae8a90f005db3ea557166bde88713fa2c4731d0f9f55",
+    "releaseLastTest": "LastTest-Release.log",
+    "debugLastTest": "LastTest-Debug.log"
+  },
+  "guards": {
+    "count": 9,
+    "allExpectedRejectionsVerified": true,
+    "cases": [
+      {
+        "guard": "producer-unc-source-path",
+        "initialAttemptResult": "PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": false,
+        "correctedEvidencePath": null,
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": null
+      },
+      {
+        "guard": "producer-wrong-hash",
+        "initialAttemptResult": "NOT_PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": true,
+        "correctedEvidencePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards-diagnostic-corrected\\wrong-hash.stderr.log",
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": true
+      },
+      {
+        "guard": "producer-wrong-url",
+        "initialAttemptResult": "NOT_PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": true,
+        "correctedEvidencePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards-diagnostic-corrected\\wrong-url.stderr.log",
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": true
+      },
+      {
+        "guard": "producer-missing-source",
+        "initialAttemptResult": "PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": false,
+        "correctedEvidencePath": null,
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": null
+      },
+      {
+        "guard": "producer-existing-output",
+        "initialAttemptResult": "NOT_PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": true,
+        "correctedEvidencePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards-diagnostic-corrected\\existing-output.stderr.log",
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": true
+      },
+      {
+        "guard": "producer-outside-build-output",
+        "initialAttemptResult": "PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": false,
+        "correctedEvidencePath": null,
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": null
+      },
+      {
+        "guard": "find-missing-header",
+        "initialAttemptResult": "PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": false,
+        "correctedEvidencePath": null,
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": null
+      },
+      {
+        "guard": "find-tampered-header",
+        "initialAttemptResult": "PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": false,
+        "correctedEvidencePath": null,
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": null
+      },
+      {
+        "guard": "find-unc-package-root",
+        "initialAttemptResult": "PASS",
+        "initialNativeExit": 1,
+        "initialDiagnosticWasReflowed": false,
+        "correctedEvidencePath": null,
+        "finalResult": "PASS",
+        "correctedNativeExit": 1,
+        "sentinelIntact": null
+      }
+    ]
+  },
+  "limitations": [
+    "No GPU device, renderer, Editor, driver runtime, or image was exercised.",
+    "The upstream metadata identifies O3DE source commit 70f0b7b5257bf7cf935bf1cfd270e1b53ccead18; it records no Microsoft upstream commit or revision.",
+    "First guard assertion pass misclassified three line-wrapped CMake diagnostics; corrected evidence is in guards-diagnostic-corrected and preserves the initial logs."
+  ],
+  "evidenceRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation"
+}

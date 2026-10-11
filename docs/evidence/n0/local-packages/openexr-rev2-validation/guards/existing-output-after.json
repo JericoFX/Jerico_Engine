@@ -1,0 +1,237 @@
+[
+  {
+    "path": "BuildOpenEXRPackage.cmake.v2.before",
+    "bytes": 8137,
+    "sha": "09911d43a32129b2a9cde35eaddf2e90b0139fe2dfc9211933d07915a3c8a2e2"
+  },
+  {
+    "path": "cmake-closure-audit.json",
+    "bytes": 17031,
+    "sha": "fb4bdda1d1d223abdccecce02a87d7548beb7c3452c165f804651074d715a3f7"
+  },
+  {
+    "path": "GetPrimaryInput.ps1",
+    "bytes": 1707,
+    "sha": "84c743b7d1fa9fa1c5593ba97b443f0818e98e233b4fc5c817c838d5c4f14563"
+  },
+  {
+    "path": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+    "bytes": 571142,
+    "sha": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3"
+  },
+  {
+    "path": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz.get-receipt.json",
+    "bytes": 338,
+    "sha": "b3643b2e72aa1c636b02879aec6f0fdc1ac5a709eed777abd24c2759e0a1af4b"
+  },
+  {
+    "path": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz.head-receipt.json",
+    "bytes": 238,
+    "sha": "4775e464ea9931e59a16be725c1d1a8468e33f749072e306a09e757526aa62b3"
+  },
+  {
+    "path": "imath-tag.json",
+    "bytes": 371,
+    "sha": "eb5959cb0e29385a003f96f56924b2154aeebd8e45bf6dcc6dd94e2d6d9328d8"
+  },
+  {
+    "path": "imath-tag.json.get-receipt.json",
+    "bytes": 308,
+    "sha": "520d43a4572a727abd96db525c32a1773a219052c33d8bb944683dc010e72009"
+  },
+  {
+    "path": "Imath\\archive-manifest-before-extraction.json",
+    "bytes": 61421,
+    "sha": "591e8c93c30de705f538f6212551932e549672bebaab2ab3d6548d57003bd31e"
+  },
+  {
+    "path": "Imath\\AuditAndExtract.ps1",
+    "bytes": 4647,
+    "sha": "3ab2a8253e438834bb80cd14bbbf99ccc8b943ca2a070197e7b30bd6779bc397"
+  },
+  {
+    "path": "Imath\\immutable-source-manifest.json",
+    "bytes": 54422,
+    "sha": "b5e045372fd7fad69a8ef1ecaa004acbb1790479fe4631f2e99edeeb5d1ac829"
+  },
+  {
+    "path": "Imath\\source-manifest-before-extraction.json",
+    "bytes": 50624,
+    "sha": "7dcc5dc8681190ec13dd0eac5e9956d5c1fa00dea7aa8ea2e2680de4ad74d75c"
+  },
+  {
+    "path": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+    "bytes": 20326313,
+    "sha": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be"
+  },
+  {
+    "path": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz.get-receipt.json",
+    "bytes": 342,
+    "sha": "c1e909a155f4f43f732c32489b517d8aefe2f8cd228831fcaeb449bcdac10563"
+  },
+  {
+    "path": "openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz.head-receipt.json",
+    "bytes": 240,
+    "sha": "f97d66a7ef4d2c9aba7d4cb08876a0bee453db23715c667033851560b567fba5"
+  },
+  {
+    "path": "openexr-audit-summary.json",
+    "bytes": 9561,
+    "sha": "881b21a4071ec3cabe71a354da9bb04ffdacec79214c237dfb001909f7be1bf3"
+  },
+  {
+    "path": "openexr-tag.json",
+    "bytes": 371,
+    "sha": "047bba4087dee7e649450a49d7798f908349ad4740efe62b8b0c2dd3a2d29a5e"
+  },
+  {
+    "path": "openexr-tag.json.get-receipt.json",
+    "bytes": 310,
+    "sha": "9e16eabc279c94616063116f5aa23d9259229f391453aa181b9fb61d2933e6c7"
+  },
+  {
+    "path": "openexr\\archive-manifest-before-extraction.json",
+    "bytes": 164430,
+    "sha": "cb79464ebc973e40b224794bbf3b41535120b254bdab63d19e290e383113664b"
+  },
+  {
+    "path": "openexr\\AuditAndExtract.ps1",
+    "bytes": 4653,
+    "sha": "366309f815df14440832bd8e02993290dc922a2a90fab3ecd78161f71a7a4ce4"
+  },
+  {
+    "path": "openexr\\immutable-source-manifest.json",
+    "bytes": 146225,
+    "sha": "3a3d7b6e7662bc5b6ec048f93a40bc20ca2a83b3e18bd9d55d119adfc4a3277e"
+  },
+  {
+    "path": "openexr\\source-manifest-before-extraction.json",
+    "bytes": 137250,
+    "sha": "d65dba1aa4eb9cb1883573cdee7cdde8beb2b7c822afcfa64e7f34072354cfbd"
+  },
+  {
+    "path": "README.md.v2.before",
+    "bytes": 7046,
+    "sha": "808833d301ec7c4568acd772dca76a4ee57a12a0bbdee44a6e60dadaaa05257e"
+  },
+  {
+    "path": "recipe-build_config.json",
+    "bytes": 4781,
+    "sha": "491fd6cf1286fe20e68061ea661b1be57297e551913283df44ba2565c0b10291"
+  },
+  {
+    "path": "recipe-build_config.json.get-receipt.json",
+    "bytes": 367,
+    "sha": "2b2e256c75189ecfec0bb3f8eba9b96a27527bd5c7deee862e198b6c1e35feca"
+  },
+  {
+    "path": "recipe-directory-metadata.json",
+    "bytes": 12423,
+    "sha": "b52191e0ce9d79de2884fb4abe97f5fc70e80f0ec8802a8d6b90c214a079d7b4"
+  },
+  {
+    "path": "recipe-directory-metadata.json.get-receipt.json",
+    "bytes": 358,
+    "sha": "2af19664d00cd3f6253604abafe85f11388a27ecf181dc85fa186a617e25d9f7"
+  },
+  {
+    "path": "recipe-FindImath.cmake",
+    "bytes": 1356,
+    "sha": "6943a0dc4536b555cfaa458b213be29bc676c337fb6d5b641eb345d5ee67f45b"
+  },
+  {
+    "path": "recipe-FindImath.cmake.get-receipt.json",
+    "bytes": 365,
+    "sha": "7d7d93abae4c1fbb0fcf2e082db80d8f7bc79b10d496825b5780fe1814d952aa"
+  },
+  {
+    "path": "recipe-FindOpenEXR.cmake",
+    "bytes": 2818,
+    "sha": "4753ac0d88bca3279788637421983304dfb6b1c65571d4b4a33b685260d1a613"
+  },
+  {
+    "path": "recipe-FindOpenEXR.cmake.get-receipt.json",
+    "bytes": 367,
+    "sha": "a20fe6c368485444d103e872ab22a55495d66db1a625eee228123b47f40c5788"
+  },
+  {
+    "path": "recipe-input-receipts.json",
+    "bytes": 2041,
+    "sha": "969ebbddbcfcb04c03ce45092fe479c220f2c86a7b809149ced140c2906d536a"
+  },
+  {
+    "path": "recipe-o3de_package_utilities.cmake",
+    "bytes": 7812,
+    "sha": "3ad96820838b920b6491ff7826e339980d4e6c2906c04c4ade6c5c46d7c383e0"
+  },
+  {
+    "path": "recipe-o3de_package_utilities.cmake.get-receipt.json",
+    "bytes": 369,
+    "sha": "81168e645148262f100f50036650d7f96e3a7257bddcea26340322a2a5856852"
+  },
+  {
+    "path": "recipe-README.md",
+    "bytes": 1182,
+    "sha": "ac4ef2c0dcac69e551b3b93f17e2e1d7b03855ebe8be1b59afad0a5e63ae256a"
+  },
+  {
+    "path": "recipe-README.md.get-receipt.json",
+    "bytes": 359,
+    "sha": "5793b89444ca33c8bc068cce64a85162e0a6e6e93feea964f1a052826482a553"
+  },
+  {
+    "path": "recipe-test_openexr_windows.cmd",
+    "bytes": 855,
+    "sha": "eed9a61447d0768b88d39a66303bd8111c9ba7c6039a6a6840a2811ccad66574"
+  },
+  {
+    "path": "recipe-test_openexr_windows.cmd.get-receipt.json",
+    "bytes": 373,
+    "sha": "7b0ca2f2f9a27dd8dbc45d55980d6522af46b3618ba2695aecdb639a9ea414e9"
+  },
+  {
+    "path": "selected-consumer-source-audit.json",
+    "bytes": 1402,
+    "sha": "f33e7e2211db72b071d5517b954f917719d42b16ad45e61a893a22059134e287"
+  },
+  {
+    "path": "source-change-receipt-v2.json",
+    "bytes": 2541,
+    "sha": "708a13cfc2e3f8686b0dcea4c13414009af7c85d5e673f0cffe8c73d3d4a20e8"
+  },
+  {
+    "path": "source-diff-v2.patch",
+    "bytes": 9362,
+    "sha": "ad682fab43f697cd6b1d7914df1263cdf5b87bfb12ae42c9f5422d9d62c239ed"
+  },
+  {
+    "path": "source-freeze-openexr-candidate-v2.json",
+    "bytes": 295465,
+    "sha": "7745dc711ac2f20ae812108434d5f338b7fcd88e0a3793496b8db8bc664b8163"
+  },
+  {
+    "path": "source-freeze-openexr-candidate.json",
+    "bytes": 295467,
+    "sha": "20feed8a0c7aef75930d37d54381c4a93658e2425c7bf169afed68894ddeceb0"
+  },
+  {
+    "path": "upstream-OpenEXRSetup.cmake",
+    "bytes": 12202,
+    "sha": "3884e70c04d5468e6da8b1812b13c3a23c56fda6b20fb96979af4a72a284d82e"
+  },
+  {
+    "path": "upstream-OpenEXRSetup.cmake.get-receipt.json",
+    "bytes": 329,
+    "sha": "1b93d84dd50e5084b4a6e0f02ff91bbabf4a7da95eaa0a6fdb64005dd1c1ce73"
+  },
+  {
+    "path": "validation-arguments-v2.json",
+    "bytes": 5625,
+    "sha": "0d219066133d2a20ee8756acec2f1d06df0eb1e2c34084f950d07d0943345880"
+  },
+  {
+    "path": "validation-arguments.json",
+    "bytes": 5625,
+    "sha": "cfbbc4fe19fb2aa964957055a7ce16576a4675fcedaa1cd69ff9430b47b33f94"
+  }
+]

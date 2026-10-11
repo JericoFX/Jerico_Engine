@@ -1,0 +1,12 @@
+{
+  "exitCode": 0,
+  "elapsedSeconds": 106.736,
+  "cpuSeconds": 0.266,
+  "peakWorkingSetBytes": null,
+  "memoryScope": "cmake.exe parent process only, not child MSBuild/cl/link",
+  "stdoutBytes": 21694,
+  "stderrBytes": 732,
+  "outputExists": true,
+  "frozenInputCount": 663,
+  "frozenInputsMatch": true
+}

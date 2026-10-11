@@ -1,0 +1,42 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- The ASM compiler identification is MSVC
+-- Found assembler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/lib/zlibstatic.lib (found version "1.2.11")
+-- Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents
+-- Performing Test HAVE_LD_VERSION_SCRIPT
+-- Performing Test HAVE_LD_VERSION_SCRIPT - Failed
+-- Performing Test HAVE_SOLARIS_LD_VERSION_SCRIPT
+-- Performing Test HAVE_SOLARIS_LD_VERSION_SCRIPT - Failed
+-- Configuring done (9.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/build
+Versi├│n de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/source-work/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/CMakeLists.txt
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/source-work/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/CMakeLists.txt
+  png.c
+  pngerror.c
+  pngget.c
+  pngmem.c
+  pngpread.c
+  pngread.c
+  pngrio.c
+  pngrtran.c
+  pngrutil.c
+  pngset.c
+  pngtrans.c
+  pngwio.c
+  pngwrite.c
+  pngwtran.c
+  pngwutil.c
+  Generando c├│digo...
+  png_static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\png-rev1\build\Release\libpng16_static.lib
+-- JE local package archive: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/packages/png-1.6.37-je-rev1-windows.tar.xz
+-- JE local package SHA256: 7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4

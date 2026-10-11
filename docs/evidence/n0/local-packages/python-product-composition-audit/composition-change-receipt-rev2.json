@@ -1,0 +1,82 @@
+{
+  "nativeValidation": "NOT RUN; parent review and Luna configure/link/runtime remain pending",
+  "sourceChangesFromRevision1": 0,
+  "causeVerified": "Old common-prefix/suffix diff generation represented unchanged interior lines as removals/additions; source bytes had not been normalized",
+  "originalSnapshotsVerified": 6,
+  "newDiff": "source-diff-rev2.patch",
+  "engineReconstructedFromOriginalBytes": true,
+  "newFreeze": "source-freeze-python-composition-rev2.json",
+  "arrayName": "files",
+  "postflightRevision1Matches": 6,
+  "historicalArtifactsPreserved": [
+    "source-before.json",
+    "source-before-expanded.json",
+    "source-diff.patch",
+    "source-freeze-python-composition.json",
+    "composition-change-receipt.json"
+  ],
+  "revision": 2,
+  "files": [
+    {
+      "afterSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+      "originalSHA256": "E1B8302687385076CDA9F20660A4958DBB919AF3C3A1630B8B796A6127AE824D",
+      "removedBytes": 103.0,
+      "equalsOriginalMinusApprovedBytes": true,
+      "path": "engine.json",
+      "proof": "Three complete original CRLF lines; all other original line byte segments concatenated without decoding/reencoding",
+      "originalBytes": 3930,
+      "afterBytes": 3827
+    },
+    {
+      "afterSHA256": "B49C40BE47E7232DC0211C0DCD8D56A6ECD157720590A719449A9A38D27E01E0",
+      "originalSHA256": "A6687C0813DBE83A3387EEE98C6CF927B98CC1CE30AAF43DD78EDB651D47BDE7",
+      "removedBytes": 220,
+      "equalsOriginalMinusApprovedBytes": true,
+      "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg",
+      "proof": "Only the approved composition member and required preceding comma/newline; every other byte copied unchanged",
+      "originalBytes": 10012,
+      "afterBytes": 9792
+    },
+    {
+      "afterSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "originalSHA256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF",
+      "removedBytes": 220,
+      "equalsOriginalMinusApprovedBytes": true,
+      "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg",
+      "proof": "Only the approved composition member and required preceding comma/newline; every other byte copied unchanged",
+      "originalBytes": 9602,
+      "afterBytes": 9382
+    },
+    {
+      "afterSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "originalSHA256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF",
+      "removedBytes": 220,
+      "equalsOriginalMinusApprovedBytes": true,
+      "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg",
+      "proof": "Only the approved composition member and required preceding comma/newline; every other byte copied unchanged",
+      "originalBytes": 9602,
+      "afterBytes": 9382
+    },
+    {
+      "afterSHA256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "originalSHA256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF",
+      "removedBytes": 220,
+      "equalsOriginalMinusApprovedBytes": true,
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg",
+      "proof": "Only the approved composition member and required preceding comma/newline; every other byte copied unchanged",
+      "originalBytes": 9602,
+      "afterBytes": 9382
+    },
+    {
+      "afterSHA256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988",
+      "originalSHA256": "5F4C117DBA1FAEBD773570A3233C766E572C7FFEEF23D4165E52F8B4BF875FA3",
+      "removedBytes": 47,
+      "equalsOriginalMinusApprovedBytes": true,
+      "path": "Gems/AtomLyIntegration/gem.json",
+      "proof": "Only the approved composition member and required preceding comma/newline; every other byte copied unchanged",
+      "originalBytes": 1465,
+      "afterBytes": 1418
+    }
+  ],
+  "fileCount": 6
+}

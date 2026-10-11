@@ -1,0 +1,7 @@
+{
+  "stage": "consumer build/test guard",
+  "status": "NOT_RUN",
+  "nativeInvocations": 0,
+  "reason": "The first guard compared JSON forward-slash paths to PowerShell backslash paths as raw strings. No build or CTest process was launched.",
+  "correction": "Normalize only path argv elements with GetFullPath and OrdinalIgnoreCase; pass the original assigned JSON argv unchanged to native processes."
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "status": "Candidate frozen for parent review; native validation pending Luna",
+  "selectedConsumer": {
+    "target": "Gem::Atom_Utils.Static",
+    "dependency": "3rdParty::PNG PUBLIC",
+    "implementation": "Gems/Atom/Utils/Code/Source/PngFile.cpp",
+    "sourceAudit": "selected-consumer-source-audit.json",
+    "nativeValidationLinksEngineTarget": false
+  },
+  "historicalPackage": {
+    "name": "png-1.6.37-rev2-windows",
+    "sha256": "e16539a0fff26ac9ef80dd11ef0103eca91745519eacd41d41d96911c173589f",
+    "recipeRepository": "o3de/3p-package-source",
+    "recipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "directory": "package-system/libpng",
+    "patches": []
+  },
+  "source": {
+    "version": "1.6.37",
+    "tag": "v1.6.37",
+    "commit": "a40189cf881e9f0db80511c382292a5604c3c3d1",
+    "originalSourceforgeAndOfficialGithubTagMatch": true,
+    "url": "https://codeload.github.com/pnggroup/libpng/tar.gz/a40189cf881e9f0db80511c382292a5604c3c3d1",
+    "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-audit\\libpng-a40189cf881e9f0db80511c382292a5604c3c3d1.tar.gz",
+    "bytes": 1509763,
+    "sha256": "ED747514984FDDF095142AA85E983111F13D64B877B1065ED0D990F7ADB31EB7",
+    "immutableSnapshot": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1",
+    "archiveEntries": 532,
+    "regularFiles": 493,
+    "payloadBytes": 5934144,
+    "links": 0,
+    "collisions": 0,
+    "lfsPointers": 0,
+    "autoRedirect": false,
+    "credentials": "none",
+    "acquisitionReceipt": "source-acquisition.json",
+    "manifestBeforeExtraction": "source-manifest-before-extraction.json",
+    "manifestAfterExtraction": "immutable-source-manifest.json"
+  },
+  "legal": {
+    "license": "libpng-2.0",
+    "fullHistoricalNotices": true,
+    "preserved": [
+      "LICENSE",
+      "AUTHORS",
+      "TRADEMARK",
+      "library and architecture source/header notices",
+      "official prebuilt header",
+      "O3DE Apache2/MIT notices"
+    ],
+    "licenseSha256": "BF5E22B9DCE8464064AE17A48EA1133C3369AC9E1D80EF9E320E5219AA14EA9B"
+  },
+  "closure": {
+    "cmakeFilesReviewed": 6,
+    "downloadCommands": 0,
+    "receipt": "cmake-closure-audit-complete.json",
+    "originalDependency": "zlib 1.2.11",
+    "currentDependency": "zlib-1.2.11-je-rev1-windows",
+    "toolchain": "VS2022 x64 v143",
+    "library": "Release static /MD",
+    "features": "Original PNG_STATIC=ON; PNG_SHARED/TESTS/DEBUG=OFF; PIC TRUE; C++17; BUILD_SHARED_LIBS=OFF; PNG_ARM_NEON=on; hardware defaults retained",
+    "awk": "AWK-NOTFOUND explicitly selects official upstream Windows full prebuilt configuration, approved by parent",
+    "prebuiltHeaderSha256": "3FC519A430E8F5BE8B3962483E054373536CEAE432168CE171B5C5E19B4694A3",
+    "generatedHeaderBytesPreserved": true,
+    "policy": "Compatibility minimum 3.5 only in producer child configure; upstream source unchanged",
+    "sourcePatches": [],
+    "install": "none"
+  },
+  "package": {
+    "name": "png-1.6.37-je-rev1-windows",
+    "version": "1.6.37",
+    "sha256": "PENDING actual Luna producer",
+    "aliases": [
+      "PNG::PNG",
+      "3rdParty::PNG"
+    ],
+    "headers": [
+      "png/include/png.h",
+      "png/include/pngconf.h",
+      "png/include/pnglibconf.h"
+    ],
+    "library": "png/lib/libpng16_static.lib",
+    "linkInterface": "ZLIB::ZLIB",
+    "metadata": "Real source commit/url/hash; no reuse of historical package SHA"
+  },
+  "preparedValidation": {
+    "cases": [
+      "Identity",
+      "Roundtrip",
+      "Transforms",
+      "Interlace",
+      "Errors"
+    ],
+    "configurations": [
+      "Release /MD",
+      "Debug /MDd"
+    ],
+    "totalCases": 10,
+    "negativeGuards": 8,
+    "allocatorCleanup": true,
+    "oracleAudit": "transform-oracle-source-audit.json",
+    "argumentReceipt": "validation-arguments.json",
+    "executed": false
+  },
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-audit\\source-freeze-png-candidate.json",
+    "sha256": "4DB39EDF21D605D64DA4F6E85CD9613B4023EC3C4687CB3AB02E358178FEB838",
+    "inputs": 514,
+    "candidateFiles": [
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake",
+        "bytes": 7200,
+        "sha256": "1A038819B93232499D513999C08B5DA719A19D7A0A3949AE33AAF760F7501597"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/FindPNG.cmake",
+        "bytes": 3176,
+        "sha256": "CE190B5CC887B590EAA37A268F310497BDD6FA235B15493952AC227E84C61018"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/NOTICE.txt",
+        "bytes": 1505,
+        "sha256": "C0C114E9B6B437F592C5E417EAFFC93CCFD692D58057F12542E51440F3923290"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/README.md",
+        "bytes": 5662,
+        "sha256": "DA29332FA8EDBE64FD25A9557362A75F7E7845636C759D05960E6942897E06F7"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests/CMakeLists.txt",
+        "bytes": 2242,
+        "sha256": "2A097107C923DAADB890513CFE89F1EABD1C85E277EF62E6136FB1E8585A3438"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests/PngConsumer.cpp",
+        "bytes": 13873,
+        "sha256": "1999081B6F7C2DF2E3F5F94F415B8D970965AE7493AAC4510C69C5FE04B40F24"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/VerifyZlibInput.cmake",
+        "bytes": 1187,
+        "sha256": "85DD1B979E0811B9B9F09D5EEAC706C6E88D557F8E6378E31A1B5A3769A5B2F2"
+      }
+    ]
+  },
+  "limitations": [
+    "Native compilation and behavior pending Luna",
+    "Editor/Asset Processor/cook/image integration/runtime unverified",
+    "Historical binary ABI equivalence not asserted",
+    "Historical libpng/zlib security maintenance debt retained without silent upgrade"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "status": "STATIC FINAL DERIVATION VERIFIED; NATIVE EXECUTION PENDING PARENT/LUNA DISPATCH",
+  "inputsVerified": 1953,
+  "argumentsExactlyPreserved": 46,
+  "sourceDeltasOnlyApproved": [
+    {
+      "origin": "approved-root765",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "beforeBytes": 6787,
+      "beforeSHA256": "d6c7fab5bc7f22e5fb25d6856bafb1e2ca074f1fe859c94bd91338e687825b35",
+      "afterBytes": 6788,
+      "afterSHA256": "2d8c84c9bb2c8eff7ecd5a6df3aa5b22bc67ee2cc761e3e696319a6a3da346e5",
+      "reason": "Parent accepted OpenEXR catalogue entry"
+    },
+    {
+      "origin": "openexr-v2-1182",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\README.md",
+      "beforeBytes": 8472,
+      "beforeSHA256": "52CC81F75C4C916441FE55ECF65F30308E5535AB0F4EEAE82E85422C69A17AA1",
+      "afterBytes": 9501,
+      "afterSHA256": "3a2a380acfff140b67396e93e6254e4e4ef00063a4984f8aab22e813d9a45a6f",
+      "reason": "Parent status-only documentation update after OpenEXR freeze"
+    }
+  ],
+  "cache32": true,
+  "wheelhouse44": true,
+  "acceptedPackagePairs": 8,
+  "parser": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\run-root-configure-antlr-openexr.ps1",
+      "errors": 0,
+      "sha256": "5FD4EDAEC14E30405C612ECEC36FE9AF38A1DF7A562413C535EC196FB866FA6E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\DeriveFinalRoot.ps1",
+      "errors": 0,
+      "sha256": "1E3726D8C72EDBE40EC49272BDE37B7F22D679112B945A38046CA23C8B1830B2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\VerifyFinalRoot.ps1",
+      "errors": 0,
+      "sha256": "C0B7315D3E312FEE6753477DC126FDA21DFF78619221462EE2FF930C0AE6DC69"
+    }
+  ],
+  "reverseDiffToOriginalSHA61BFF": true,
+  "driverLFNoBOM": true,
+  "fullPrivateCopyComparison": [
+    {
+      "name": "Manifold",
+      "source": "F:/JericoEngine/Dependencies/manifold-3.5.1",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\manifold-3.5.1-root",
+      "sourceFiles": 378,
+      "copyFiles": 378,
+      "deltaCount": 0,
+      "deltas": []
+    },
+    {
+      "name": "Clipper2",
+      "source": "F:/JericoEngine/Dependencies/clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\clipper2-46f639177fe418f9689e8ddb74f08a870c71f5b4-root",
+      "sourceFiles": 223,
+      "copyFiles": 223,
+      "deltaCount": 0,
+      "deltas": []
+    },
+    {
+      "name": "OpenMesh",
+      "source": "F:/JericoEngine/Dependencies/OpenMesh-11.0.0",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\source-work\\OpenMesh-11.0.0-root",
+      "sourceFiles": 611,
+      "copyFiles": 611,
+      "deltaCount": 0,
+      "deltas": []
+    }
+  ],
+  "antlrFullTreeBeforeAfter": "Preserved in driver treePaths, manifests and postflight loop",
+  "nativeProcessesExecuted": 0,
+  "driverSHA256": "5FD4EDAEC14E30405C612ECEC36FE9AF38A1DF7A562413C535EC196FB866FA6E",
+  "assignmentSHA256": "2BBE66DB2F75D8D223BBFC61F6CD8E1A9A26C7219D2812301046078EA195DCCF",
+  "freezeSHA256": "36CED3BAE28693DCAD99F89356B5ED2C72657C5B6CFE1A56DA6AE0A0A83D532E"
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Two owned documents only; no source/build/configuration/Git mutation",
+  "donorCommit": "304d9d2e13704e4967e82a8d5a13a5a506be01d4",
+  "status": "SPECIFIED/DESIGN; no Editor/product verification",
+  "masterChange": {
+    "insertedLines": 33,
+    "firstLine": 13,
+    "lastLine": 45,
+    "originalTextPreserved": true
+  },
+  "mapChange": {
+    "line": 29,
+    "onlyOwnedRowChanged": true
+  },
+  "palette": {
+    "exactOrderedDonorEntries": 19,
+    "matching": true
+  },
+  "rasterDownload": false,
+  "rasterPixelInspection": false,
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\EDITOR_ASSET_WORLD_MASTER.md",
+      "beforeSHA256": "31A8FAC9012EB6E598B7B7FCEFF9DBC6748801A6CBE22BFD2EFD244B159ECB77",
+      "afterSHA256": "901E365341F5B19AE45F779A40F924FDE4673B7449762F918AB598594F9EFFF6",
+      "bytes": 14089,
+      "utf8Bom": false,
+      "crlfOnly": true,
+      "unownedTextByteEquivalent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\migration\\LEGACY_REQUIREMENT_MAP.md",
+      "beforeSHA256": "08BA38119E7AB8793E9178EAB174F5F645CA381BF336307AE89BC9981C614255",
+      "afterSHA256": "C93C89B742568829F1EA8A30A8FB800E95E6DA99EA480DA667B4DBE963C3C691",
+      "bytes": 5774,
+      "utf8Bom": false,
+      "crlfOnly": true,
+      "unownedTextByteEquivalent": true
+    }
+  ]
+}

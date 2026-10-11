@@ -1,0 +1,1566 @@
+{
+  "name": "googletest-freeze-after",
+  "fileCount": 260,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\3rdParty\\Findgoogletest.cmake",
+      "exists": true,
+      "bytes": 4337,
+      "sha256": "c6a5911b6aa580f943a8fd5dc95c729ac09aa2a97ce5b90954001dd7d1d7e85d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\3rdParty\\Installer\\Findgoogletest.cmake",
+      "exists": true,
+      "bytes": 1523,
+      "sha256": "225240388e4acc7feaa260b11ba0a911227b51577b88671720b1c237f5951e09"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 1532,
+      "sha256": "4854b342be179d41389dd08b7bfe422e79d9c5462b26b03e1a91e307929e308d"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\AzTest\\AzTest.h",
+      "exists": true,
+      "bytes": 22514,
+      "sha256": "d5019dd8a3214d3fed6dcae07b07632e64c608c1f1d8c4859ce68a77512ef110"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzTest\\AzTest\\AzTest.cpp",
+      "exists": true,
+      "bytes": 13627,
+      "sha256": "17e73de834ebe57bd8558ea96747abd0928ffee7ea16253434eb5e8bfca99a99"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYTestWrappers.cmake",
+      "exists": true,
+      "bytes": 29426,
+      "sha256": "6348c0d845bb847bb9bf8ce84774778d662e54b5ae5aad7fd80340388cfd91ef"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Platform\\Windows\\PAL_windows.cmake",
+      "exists": true,
+      "bytes": 2427,
+      "sha256": "5a523373dea4330b3110c1b9fdfe03172a20038f0b4003c79462003dc4d17ad1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\googletest-audit\\googletest-v1.18.0.tar.gz",
+      "exists": true,
+      "bytes": 894741,
+      "sha256": "6e3191c1455468b3fc35a417fb565c1c5071aee1b7e7f85e30cf48a98d37d8b5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\.clang-format",
+      "exists": true,
+      "bytes": 116,
+      "sha256": "c633edfbce3467938eaf46698fbc7e76a9360b1731f9ebe0901a5b8bf73ce61f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\.github\\ISSUE_TEMPLATE\\00-bug_report.yml",
+      "exists": true,
+      "bytes": 2064,
+      "sha256": "9888e2aeb18a1e60ad2acc38081d41a8cb0f60e9a70906943d2c12c1921ee294"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\.github\\ISSUE_TEMPLATE\\10-feature_request.yml",
+      "exists": true,
+      "bytes": 1058,
+      "sha256": "25e8cb371274cad759d54c0b52527c295c57176e8b1cfe68f9cecbd7ad28be85"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\.github\\ISSUE_TEMPLATE\\config.yml",
+      "exists": true,
+      "bytes": 175,
+      "sha256": "1fae8928ab838af5520e31878aa641d3aa67102f8b1ee281085e61dd19a6951e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\.gitignore",
+      "exists": true,
+      "bytes": 1623,
+      "sha256": "409d12c79ca37942a8eae85f0d003b3b7c799a5bb69ee599d6837b3f2ce25b1b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\BUILD.bazel",
+      "exists": true,
+      "bytes": 7445,
+      "sha256": "b877b65b650b5b71e13205e406cae6c5594174326dd8708511e7f0ae021e75aa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 986,
+      "sha256": "e75c65d8fc992b3fbc0bdab9669944996166ca64dd4383e2f2eca2ecc345dbd9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\CONTRIBUTING.md",
+      "exists": true,
+      "bytes": 5690,
+      "sha256": "f3ebba9e9dcf173b241a09082c73bccb0f2ea742ae9d7892bbaedaf928bca007"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\CONTRIBUTORS",
+      "exists": true,
+      "bytes": 2293,
+      "sha256": "71fa46171dd98c44962614c158c0529053932a8a3fe2a6beca2dec2a6de890ca"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\LICENSE",
+      "exists": true,
+      "bytes": 1475,
+      "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\MODULE.bazel",
+      "exists": true,
+      "bytes": 2701,
+      "sha256": "00f855225d5746ca0d59965b09762e278b7259a6dfb7840d1b034ab60e72921e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\README.md",
+      "exists": true,
+      "bytes": 5270,
+      "sha256": "22794795ee6fcaf99c49a3a05a4fbeb8937cb31b6e300b919139a5970646857e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\WORKSPACE",
+      "exists": true,
+      "bytes": 2656,
+      "sha256": "1b457aeac2380b9dbd53266254778ad13e52195855c8975ae7d5dcb81bfaa942"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\WORKSPACE.bzlmod",
+      "exists": true,
+      "bytes": 1794,
+      "sha256": "00690112b98e9b4568e3e32cfe603e61b06d8d0c6c77eba9253bc4153f63a730"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\ci\\linux-presubmit.sh",
+      "exists": true,
+      "bytes": 6291,
+      "sha256": "6614aa8bce475f358b4fcf46d8c6f4e677b6f1e3b4f91425785573e153e992c9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\ci\\macos-presubmit.sh",
+      "exists": true,
+      "bytes": 3354,
+      "sha256": "5ff44733c20337076e57d4e7397bce4ca7a3e469428b53b220c87a184454f559"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\ci\\windows-presubmit.bat",
+      "exists": true,
+      "bytes": 2508,
+      "sha256": "853c4215a804313aaca1a235537239e9567b9c0d47d97a58226c28441f7fc24b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\_config.yml",
+      "exists": true,
+      "bytes": 18,
+      "sha256": "ff26aa23f015c13c6c85d0b973330f4e11c51794c6a50487883c8a66d9530508"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\_data\\navigation.yml",
+      "exists": true,
+      "bytes": 1200,
+      "sha256": "2728f14a111bb4c2b7fa7618c8019554ab373dc490c197b4badeb84a78349208"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\_layouts\\default.html",
+      "exists": true,
+      "bytes": 2187,
+      "sha256": "ba51bb5cdb7118a6cd5477d5dc22d0681ec65d2ad87fe38c5773cfc4dfc6e849"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\_sass\\main.scss",
+      "exists": true,
+      "bytes": 2915,
+      "sha256": "53e2147753341447abb0f3d74e84560a4de2b8e29e6c1239789b1d0c5cd469c1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\advanced.md",
+      "exists": true,
+      "bytes": 90878,
+      "sha256": "abe795a580cdbdc866cd18018cf47dcef53ff3fe65406c94618938d68cdabb73"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\assets\\css\\style.scss",
+      "exists": true,
+      "bytes": 56,
+      "sha256": "4da022ea5bafa7139d6aef85505ffffe77839b4f005081c5135d3a97552398cf"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\community_created_documentation.md",
+      "exists": true,
+      "bytes": 342,
+      "sha256": "85733bd4cb72279283ca8e1388b0f9f4a11b8d837988c8874034212dc6f51d84"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\faq.md",
+      "exists": true,
+      "bytes": 28216,
+      "sha256": "a7f74f1404479fe681ddf580abd500377f38fb09c3e687e465817ac45a76da19"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\gmock_cheat_sheet.md",
+      "exists": true,
+      "bytes": 7379,
+      "sha256": "dad7293ca744a323b838e5e5bf8b0c0f0660e289c4a40217b0ebe3fedb097435"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\gmock_cook_book.md",
+      "exists": true,
+      "bytes": 152129,
+      "sha256": "09353c1b6ff6ca3a2e48b49890c208d59aae8960be4dc1a72f7e76aac1f20b37"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\gmock_faq.md",
+      "exists": true,
+      "bytes": 14980,
+      "sha256": "92a3a2d9b357f1449979b3fe3c04a34f9c7dfc844b25c4aea39266b27b4c8744"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\gmock_for_dummies.md",
+      "exists": true,
+      "bytes": 29227,
+      "sha256": "48d80b4cd378cf4793b880edee3f6cb7a508d1c012e90c6864c5b6b371f4a2c3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\index.md",
+      "exists": true,
+      "bytes": 1034,
+      "sha256": "3fca44bd2ef18506689e23fc5014fef0ab47a57981fcb640291963038918fc21"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\pkgconfig.md",
+      "exists": true,
+      "bytes": 4981,
+      "sha256": "c70761323f2cb698977e42312e797f1890588efc4c135f5ca92606463c7a6d88"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\platforms.md",
+      "exists": true,
+      "bytes": 343,
+      "sha256": "0a588eb2b287b90ca6d362dd3d559bcbb7a35cdb77c37ee32fc80940331ffd45"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\primer.md",
+      "exists": true,
+      "bytes": 19101,
+      "sha256": "03d756ab11521933cb59ef9bc081e7524e79c2dfbea496f6583ec166f819c26e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\quickstart-bazel.md",
+      "exists": true,
+      "bytes": 5042,
+      "sha256": "d517b9bea74ae28f5fe4f8ced75359d7d0b1c82037fb03f1c737505da432f00d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\quickstart-cmake.md",
+      "exists": true,
+      "bytes": 5097,
+      "sha256": "89b9c27dd2251b3a06270e2bd4e1be6ac818af8edc858b69f43e4bb045b36c4e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\reference\\actions.md",
+      "exists": true,
+      "bytes": 7020,
+      "sha256": "6f7da96d0115afd7241199e63b09ec733c5e020d031f8934dab516ef308b1f12"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\reference\\assertions.md",
+      "exists": true,
+      "bytes": 21975,
+      "sha256": "cd6a289478485d86a84e033cf523487bcd91141d73bf4f02bad651dba1121353"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\reference\\matchers.md",
+      "exists": true,
+      "bytes": 23614,
+      "sha256": "e95ce5a967120ed3e7c747474fc5343122690d506d4e39ed234d6b1e73934dce"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\reference\\mocking.md",
+      "exists": true,
+      "bytes": 21135,
+      "sha256": "25478d36fea73d8447ed794b0418f4e8b9e74d1da57880cae9d8d87e54df6653"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\reference\\testing.md",
+      "exists": true,
+      "bytes": 49054,
+      "sha256": "44c56c6198c6736bf2dc27c47391e4d481be70b36839e3c0073f273894d52d2b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\docs\\samples.md",
+      "exists": true,
+      "bytes": 1116,
+      "sha256": "084a0ee108f253e8606000ce61efe3ef4f5157c981a0f2512c8734bb7605186a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\fake_fuchsia_sdk.bzl",
+      "exists": true,
+      "bytes": 1974,
+      "sha256": "46f122fcd82f1cd41a6d87201fb5820a075a45b4ca1fec99feab1686a48a7b93"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 7928,
+      "sha256": "cda00ac19ac56a5e43fa7efbf4feca85ac9aaf353ff21b56a0f710501b677a21"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\README.md",
+      "exists": true,
+      "bytes": 1537,
+      "sha256": "67ca218ed2b098ee9750e83a6231e4aa3b3ab122409554c2eb0eb8627e02cc88"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\cmake\\gmock.pc.in",
+      "exists": true,
+      "bytes": 347,
+      "sha256": "2b868f0f34f26700bd038e76566377a6f53b574cd439f71edf58bc0ce9cc291d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\cmake\\gmock_main.pc.in",
+      "exists": true,
+      "bytes": 354,
+      "sha256": "618ab7f1042294f59209154513ff9b87c1fab895eda2a565a14ab4c4211ccc22"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\docs\\README.md",
+      "exists": true,
+      "bytes": 139,
+      "sha256": "b5841a39d3a80b39a13da379ab8c2cb4e91b5b3fbe1bc3092d0dd409cea511f1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-actions.h",
+      "exists": true,
+      "bytes": 92362,
+      "sha256": "3de6a0bec0bc9414db2ea556256725576a7c59b278c5406589b80e003739b54f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-cardinalities.h",
+      "exists": true,
+      "bytes": 6146,
+      "sha256": "4e025ac1af96c151cadce849fc5d4b8ae98d50e94bfbce43a622f0c7ca1a0c4e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-function-mocker.h",
+      "exists": true,
+      "bytes": 25796,
+      "sha256": "1c7f47551aace89c30eb88563d4b1f147bdd368c25e10c1744673c4945c558c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-matchers.h",
+      "exists": true,
+      "bytes": 229651,
+      "sha256": "0f346ccca643539ee2b6b4bf5d23b33f8f3786d63c573e58cca473d5d2e1ba3c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-more-actions.h",
+      "exists": true,
+      "bytes": 38344,
+      "sha256": "76db139ecd8af4272f979fa996e06ef52ba21d7cb1c6dc7f476fbbec1b3bac1f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-more-matchers.h",
+      "exists": true,
+      "bytes": 4847,
+      "sha256": "1372c8d8e59ab18cbe207dc733a9ae74e1e19fb572196a917bdccb7e3c3eff75"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-nice-strict.h",
+      "exists": true,
+      "bytes": 10984,
+      "sha256": "e6bf6a280eead716adf6b26a80d4da2f04c380e095eb7e43e1fa855182c6c62e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock-spec-builders.h",
+      "exists": true,
+      "bytes": 82174,
+      "sha256": "213fdcdf74b59c55146a26a2950aa46163403220749fc53ff5b46ca51b836755"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\gmock.h",
+      "exists": true,
+      "bytes": 3954,
+      "sha256": "de3d73bc68ecffacc4935db34ea651b436cf4394ce61fb100b5dab1a5ff155d7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\custom\\README.md",
+      "exists": true,
+      "bytes": 510,
+      "sha256": "1ecdc0c1b9a6b4ce7a9411dfb50c3b8aced2aa03d42e67ee0377a7a201d5ff64"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\custom\\gmock-generated-actions.h",
+      "exists": true,
+      "bytes": 314,
+      "sha256": "8efd16064b3e19d98726a15f8bc40daa593576e4a190b2e8b95a6fee7242c36f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\custom\\gmock-matchers.h",
+      "exists": true,
+      "bytes": 1918,
+      "sha256": "b6d245e95f0649a85aa7e29457f437da4c2f1fbadb0402cfc40f680159de510f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\custom\\gmock-port.h",
+      "exists": true,
+      "bytes": 1953,
+      "sha256": "ee2cc87202e75759cfd98a5d657c69ee864e492a2c63584586938da81ab84995"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\gmock-internal-utils.h",
+      "exists": true,
+      "bytes": 19628,
+      "sha256": "0bf0f7349820e0f5e09b5d8fb7d0dec3cb22b32ecebc4b058322c2e7000cf5aa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\gmock-port.h",
+      "exists": true,
+      "bytes": 6266,
+      "sha256": "5cd6674d1cefd9c496a741d7b0f52934e9de866afdd1e2902eb6c121c6763d96"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\include\\gmock\\internal\\gmock-pp.h",
+      "exists": true,
+      "bytes": 19661,
+      "sha256": "57344340fec3a87f24976722dedfda0b3015ea69642aa3d46846e862153f63a9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock-all.cc",
+      "exists": true,
+      "bytes": 2107,
+      "sha256": "166fc3f915d7abcb66f2b1d5cb31c13237838d3464d4de3015dcac00b9d354cd"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock-cardinalities.cc",
+      "exists": true,
+      "bytes": 5330,
+      "sha256": "2203e2d2a37d96a97e06a9b9c20d516fbecc964f1e37d9d3029d774dff7abc43"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock-internal-utils.cc",
+      "exists": true,
+      "bytes": 9461,
+      "sha256": "074141149004dcf323af27f149511d5a035b34adce230ac37e032d21a139da24"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock-matchers.cc",
+      "exists": true,
+      "bytes": 18644,
+      "sha256": "3d770fbfe37641b2e9f005c7ec5ada5daa7462794f7ce70a48c23e512c262f4a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock-spec-builders.cc",
+      "exists": true,
+      "bytes": 29365,
+      "sha256": "a95753dbc49f5c87817aad548b1597f46794ca1f119f943c13e2d9b14c1450f0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock.cc",
+      "exists": true,
+      "bytes": 8547,
+      "sha256": "1376daf6387eac94b5afaf2dfbf2e3aac098b5f97985f3f5660ab3f7d4948452"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\src\\gmock_main.cc",
+      "exists": true,
+      "bytes": 3092,
+      "sha256": "6c6f3fe5baaf769d384503793c3f44a59e1796bafe58f1eb37012944eb75bc18"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\BUILD.bazel",
+      "exists": true,
+      "bytes": 3349,
+      "sha256": "10e87d2b72e51f162a0bc853f8077fb43d42424b4170c2f432033ebe1842fa8c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-actions_test.cc",
+      "exists": true,
+      "bytes": 73828,
+      "sha256": "ca4b8c4bfeadb2f183a283d52223ce27ded856e417da76eac869276c9da73bb3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-cardinalities_test.cc",
+      "exists": true,
+      "bytes": 12174,
+      "sha256": "b3f7ee571baf1b3a51d595a290bf16f8acc7498c2dd962c356aec622e5d606c0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-function-mocker_test.cc",
+      "exists": true,
+      "bytes": 39820,
+      "sha256": "7aa4eaa0e89da466f6e6d349b4bd6e237afcaf87b461fbed7c315327bc57d421"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-internal-utils_test.cc",
+      "exists": true,
+      "bytes": 28441,
+      "sha256": "fba9776516c5b2033f5d03c80277a6662e735d7cb3d420116ec076d70c748534"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-matchers-arithmetic_test.cc",
+      "exists": true,
+      "bytes": 60268,
+      "sha256": "2495e1ab7372beb719b54b8715bee30ca8da4fdfc7566a6aada905daa54fdbaf"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-matchers-comparisons_test.cc",
+      "exists": true,
+      "bytes": 83037,
+      "sha256": "54ed136e81a690b7b1dfd315ce3a363f05a29657060c5421e943ca61a48666ac"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-matchers-containers_test.cc",
+      "exists": true,
+      "bytes": 114761,
+      "sha256": "c8a943ff848856ed1c1bd5cd02cb8358212276d82050434f3d24b2eb7726e3cc"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-matchers-misc_test.cc",
+      "exists": true,
+      "bytes": 63896,
+      "sha256": "d76e0661695e28f60bef31cfa726806f7286f3c8c96068d7e6ab94e2579b734e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-matchers_test.h",
+      "exists": true,
+      "bytes": 6255,
+      "sha256": "183a18834ca02c9e344c7359e087e6fdba5fd32e60507cf10933e031e415820b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-more-actions_test.cc",
+      "exists": true,
+      "bytes": 55422,
+      "sha256": "20bbc7ae4f644f95b05228ba0e071f6fb5c42564aa0b9fa8a51c5f5f3006b508"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-nice-strict_test.cc",
+      "exists": true,
+      "bytes": 15676,
+      "sha256": "b9b49198e446579a5def2240c92536d92938bddfa5a4da86da97ebffdd84aedc"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-port_test.cc",
+      "exists": true,
+      "bytes": 1977,
+      "sha256": "b2f1c109d03bc6ab56ab2883ba39b95311396f41b6c65c0ffb24c417586c126a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-pp-string_test.cc",
+      "exists": true,
+      "bytes": 8788,
+      "sha256": "f3a39ce6e12c3e492ffe80ded1fdc4e47476f93ebfd14e040a2b44e29c84a858"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-pp_test.cc",
+      "exists": true,
+      "bytes": 3675,
+      "sha256": "163e0fe140d35154b51a7e8694a70b0172cec74e7806f16507081862adcf1b45"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock-spec-builders_test.cc",
+      "exists": true,
+      "bytes": 74718,
+      "sha256": "bbe37bc7e16cebf4891c3f31128684cfaa1081790f624caec964c9c91c19cba5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_all_test.cc",
+      "exists": true,
+      "bytes": 2491,
+      "sha256": "9a1bb869f4a9e3d0ab4c46ffb02a06921fa056ba3b6b6a4d645575786d312325"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_ex_test.cc",
+      "exists": true,
+      "bytes": 3300,
+      "sha256": "c740195caad5ae8fa6515025eab17c9fbd389fdc28b7d6207c84872595648b58"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_leak_test.py",
+      "exists": true,
+      "bytes": 4070,
+      "sha256": "f36dbd28f52a8b47efc02dd94505ba48763118c9d9d401baecadba5bcaa7c661"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_leak_test_.cc",
+      "exists": true,
+      "bytes": 3284,
+      "sha256": "de4a9e06266e32f55f5df21f48846c2b66bc9f1f9cbc8de6e79efedb4923bd94"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_link2_test.cc",
+      "exists": true,
+      "bytes": 1875,
+      "sha256": "12b8a096de85bc917854311913b33255b06ef2eadd89b8a3eda3b26509cc7e3d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_link_test.cc",
+      "exists": true,
+      "bytes": 1875,
+      "sha256": "ec9000a2997b2a8fcaef341c17c3206bc768712fbd87afa057fae5dd9c9b4613"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_link_test.h",
+      "exists": true,
+      "bytes": 19854,
+      "sha256": "5c94777148dae79412e945e3582bdc3cabe8316e42faba38f33cb57987fddd7b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_output_test.py",
+      "exists": true,
+      "bytes": 6334,
+      "sha256": "8641a64778d99b90e1e86979dfd570404d6304656d71b82484abdf81089147b5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_output_test_.cc",
+      "exists": true,
+      "bytes": 8440,
+      "sha256": "3f8333120e2e05aff438d01688541cfc8595455e3aad20e742bf8f8aab9913d5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_output_test_golden.txt",
+      "exists": true,
+      "bytes": 13629,
+      "sha256": "292338581cf5ad2a5e2ee46a9aee4b876439ef07a474e116d9bb7f5d2549b363"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_stress_test.cc",
+      "exists": true,
+      "bytes": 7246,
+      "sha256": "410e4dacf26acd1e784866f1dc19402fbd39a18c0e9c3b69a8e554da00ddaaf2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_test.cc",
+      "exists": true,
+      "bytes": 6414,
+      "sha256": "89de35a7b0d48c638e754af150b19e1a894bb824b09fc8aa53b5f3764ded7f5e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googlemock\\test\\gmock_test_utils.py",
+      "exists": true,
+      "bytes": 3108,
+      "sha256": "4083ad7864550033a5946601b5ec8ca0c4b5765ab3d4aa86df83883aea113b14"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\CMakeLists.txt",
+      "exists": true,
+      "bytes": 11920,
+      "sha256": "7815c2a8b21eabcb0d90924ef45dfa800f5ecb98049228635dc5c3b926a6a3e7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\README.md",
+      "exists": true,
+      "bytes": 8958,
+      "sha256": "1da1e47d7e41f80cee747cac67be1b09739fda7f6a859a164057405b54326c84"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\cmake\\Config.cmake.in",
+      "exists": true,
+      "bytes": 361,
+      "sha256": "fc19cf148c0fa1bc5e8829c6ba0200887082b0a39374b69d4837ebb90c306858"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\cmake\\gtest.pc.in",
+      "exists": true,
+      "bytes": 311,
+      "sha256": "8ca81f72a08ac32ff60f47ffa9ae745c7c3ed5cbc3b39c6e02b35254ab13c8fb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\cmake\\gtest_main.pc.in",
+      "exists": true,
+      "bytes": 354,
+      "sha256": "9daee2aac5ed3908062d36738298f272a457e913aa6ce29deea34352ff1b6462"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\cmake\\internal_utils.cmake",
+      "exists": true,
+      "bytes": 15534,
+      "sha256": "cd259fb1d71d18b2bbe6dd3debdcd09e3287369fff3168ca61f4ddf48f118c18"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\cmake\\libgtest.la.in",
+      "exists": true,
+      "bytes": 499,
+      "sha256": "c0c8c340bd113c0d2284c63c5b9243112bcfa2bc512af17fa1ae496b2999df27"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\docs\\README.md",
+      "exists": true,
+      "bytes": 139,
+      "sha256": "b5841a39d3a80b39a13da379ab8c2cb4e91b5b3fbe1bc3092d0dd409cea511f1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-assertion-result.h",
+      "exists": true,
+      "bytes": 9569,
+      "sha256": "c6264d766e880c30452da03c1cf783230f7152233612f13cebff6177f6527cec"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-death-test.h",
+      "exists": true,
+      "bytes": 14945,
+      "sha256": "d70139e593088f79c9f25ba528ce212fab3cdf9c350fb3cceaa91e1e94d6af00"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-matchers.h",
+      "exists": true,
+      "bytes": 35443,
+      "sha256": "7116aca6c9c224d8015bf74866e21994231f972a1af3bfceb6dc88e13e48690f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-message.h",
+      "exists": true,
+      "bytes": 9133,
+      "sha256": "26f2e9ea9dc21b63eb78d4d3eed423ed00f28bdc6fccc735cff94da0e9c8c55f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-param-test.h",
+      "exists": true,
+      "bytes": 26376,
+      "sha256": "7a246e017cb84010ae4bad5b6f789fb16941b4e46a130ffb8de9f328fa19ee78"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-printers.h",
+      "exists": true,
+      "bytes": 44558,
+      "sha256": "69428a5fa909fd7f8f3bfe1d4f1a8be9a260375bceab738b8813fa4c2f5c9ff4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-spi.h",
+      "exists": true,
+      "bytes": 12871,
+      "sha256": "490f165098688c18d053a4ba57b2812bd97535b90af514f5a916116a230374ef"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-test-part.h",
+      "exists": true,
+      "bytes": 7228,
+      "sha256": "2ba7bcb638f82889a619d52a5e28d4f9dc0aefd718a590beabd35cce8c27550a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest-typed-test.h",
+      "exists": true,
+      "bytes": 15837,
+      "sha256": "d5c7a2853a4f250cd172f7d4218298f6aa9aa2df219210231e4877cd91bc7790"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest.h",
+      "exists": true,
+      "bytes": 93202,
+      "sha256": "c6f886e33c2e426d6f634112b12b0041aa0bad85b9f897be853b083c14aea169"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest_pred_impl.h",
+      "exists": true,
+      "bytes": 12783,
+      "sha256": "85e850e735a42ebb5f9a01a018708c1c0b9b7d83c94b14b7d5d29512c00b6ffd"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\gtest_prod.h",
+      "exists": true,
+      "bytes": 2502,
+      "sha256": "3c6301ef533db8686e474dd5a0de4d98a31cbb630e2273f712472d1be25aa261"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\custom\\README.md",
+      "exists": true,
+      "bytes": 1269,
+      "sha256": "608ec5ac574a6e64e4fc2f4bce2cfc7ff753a04d6822d6ff96e43fff51c6ccc1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\custom\\gtest-port.h",
+      "exists": true,
+      "bytes": 1873,
+      "sha256": "5e06747c9e8b86e9d841fabd61c2f045b2bb1133716f127be4a963ced1c44e01"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\custom\\gtest-printers.h",
+      "exists": true,
+      "bytes": 2094,
+      "sha256": "b95afda2426e8c4f09c11d3296d522fb336b248c0da7e078388db4bb072c2166"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\custom\\gtest.h",
+      "exists": true,
+      "bytes": 1858,
+      "sha256": "21d20a1c64ea38c20c4b12337c261a1a18989d2a30710a83dfb5cd9a3bb3c55e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-death-test-internal.h",
+      "exists": true,
+      "bytes": 14178,
+      "sha256": "5a81ad35daf1049940c677b38c908945040cc25f07366b3ddf577ce72d8c44f1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-filepath.h",
+      "exists": true,
+      "bytes": 10566,
+      "sha256": "584be91365316bf97fa7e3fd9f21f595919c48691f0c87071d2b7f739aaabcc0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-internal.h",
+      "exists": true,
+      "bytes": 62069,
+      "sha256": "57b904e1b1763a9ac5f381db3717a92e285e707adf093d0f17c5cfc9603a6f34"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-param-util.h",
+      "exists": true,
+      "bytes": 40004,
+      "sha256": "869ec29efd36f14b75446b06de5bd58491da2b77575d092e67cab3583bb10e7a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-port-arch.h",
+      "exists": true,
+      "bytes": 4452,
+      "sha256": "58ca63b3540d7752466cd34b6c87f9fb5605f5aa620fdabe0179e82f0c12e556"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-port.h",
+      "exists": true,
+      "bytes": 88992,
+      "sha256": "19d5e5bfcba9fb952e46352218d626f6e1778ed5f6186cc6770bcfc7d8a672d0"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-string.h",
+      "exists": true,
+      "bytes": 7328,
+      "sha256": "794b59f7afd2fbfb9fdfd133244903b4904e39d16d45253a85f1b89c196285ac"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\include\\gtest\\internal\\gtest-type-util.h",
+      "exists": true,
+      "bytes": 7324,
+      "sha256": "94336b1703807db6d9d2b729b5a30cf53016fd236b14774af118467d27f94ad8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\prime_tables.h",
+      "exists": true,
+      "bytes": 4327,
+      "sha256": "e66c0ee36090584a006ad1cd3f64b2e755e204a8d19295b05c30284f9206c405"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample1.cc",
+      "exists": true,
+      "bytes": 2471,
+      "sha256": "663ac4c10de9fd37b0352533506d5c114b2fa6e1431d63cad840bd627577cc9b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample1.h",
+      "exists": true,
+      "bytes": 1919,
+      "sha256": "14967e01473758779a4908a29578a1fb0696dfe2075f5e10ecd3454c32402e2a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample10_unittest.cc",
+      "exists": true,
+      "bytes": 4961,
+      "sha256": "fc3b7eb729bb7c33e07d7826a34b396a6e4eda87e4bdde2b412a3a1fd5ce6d43"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample1_unittest.cc",
+      "exists": true,
+      "bytes": 5108,
+      "sha256": "1a57023b773211d970f1d715eda7a68dd457252c3741288a02e5bb45c2b2c828"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample2.cc",
+      "exists": true,
+      "bytes": 2258,
+      "sha256": "2d895439f245dfc502e9429b1bc666a41b7f5e1ba241bd7b089561dd7f5dc7f2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample2.h",
+      "exists": true,
+      "bytes": 2981,
+      "sha256": "dc7708619ff5643fa3577a2551f2dead573c1c18069ce3b82d80a4c58aa3fb46"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample2_unittest.cc",
+      "exists": true,
+      "bytes": 3906,
+      "sha256": "9b8cda9e3035419f39ad866fe7c2d03030cadf9faf30b63311af9b2c431ac0eb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample3-inl.h",
+      "exists": true,
+      "bytes": 5376,
+      "sha256": "4f857c01ad41b13f14e7cfdf06948bd3ef1a781db7e28fe906f3558533a65d8a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample3_unittest.cc",
+      "exists": true,
+      "bytes": 5352,
+      "sha256": "1f43a554d614e13854cf2d607607581a018c0a518a71a71ff09517af75a1e775"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample4.cc",
+      "exists": true,
+      "bytes": 2105,
+      "sha256": "5fe120050730a5aa37d53cb486786053d19f70aceb7876812e3b76f5ba3151fd"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample4.h",
+      "exists": true,
+      "bytes": 2132,
+      "sha256": "c63416b0f80627ab7ff8168dc0d9dbcbdeb4181dc71c6f304ca5883eb623c739"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample4_unittest.cc",
+      "exists": true,
+      "bytes": 1995,
+      "sha256": "eb85a42c3515c41c24b445a09789fad137aabe968ae31df48df71cc959ccfe76"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample5_unittest.cc",
+      "exists": true,
+      "bytes": 6578,
+      "sha256": "af80c7b8255e5384c52e3688b7b6ae3459fbb50ee888ed7b4d9049d6ac25fbd4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample6_unittest.cc",
+      "exists": true,
+      "bytes": 8858,
+      "sha256": "fb138a4949e11026a2898b3b3cfa33d863d1ea0de6c33e08fe4e1f7c8b846520"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample7_unittest.cc",
+      "exists": true,
+      "bytes": 4616,
+      "sha256": "44cebd81a92fa5bf914137014f6913aac95341307fd2e0fef0aa80d8be8b61f8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample8_unittest.cc",
+      "exists": true,
+      "bytes": 6210,
+      "sha256": "20506c4a371e2cf11d341e1b61eb564a7a84fd358db03c955dfa96868163e9fa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\samples\\sample9_unittest.cc",
+      "exists": true,
+      "bytes": 5834,
+      "sha256": "66e830e1cd61bbcc8117ebce7c631ed6c23411e167537a84fbbd6a527cea16e2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-all.cc",
+      "exists": true,
+      "bytes": 2201,
+      "sha256": "972d3016860f9aa6452e078cf77406290fb7003b66fd6c0744a030bd1c323606"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-assertion-result.cc",
+      "exists": true,
+      "bytes": 3009,
+      "sha256": "dbd2235676dcc0ef6409108a4041e05442fc6895735a5561d71151e6a14296bb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-death-test.cc",
+      "exists": true,
+      "bytes": 62728,
+      "sha256": "2881240c49961c095505f3c044483a79ef1c32e413e19630af7508d67994f619"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-filepath.cc",
+      "exists": true,
+      "bytes": 15726,
+      "sha256": "b3d0011edbb81f782b88aac6ea20d04b24050e5738b3b2240a22033f675cb71f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-internal-inl.h",
+      "exists": true,
+      "bytes": 48264,
+      "sha256": "78f0a388ae762649c892e517f3ca0fde01751bf44daf11ca9903d1773f618f58"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-matchers.cc",
+      "exists": true,
+      "bytes": 3647,
+      "sha256": "09ea657c7bae257d42d5ed103a48570cfbf3068288db998b734838c1aa588de9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-port.cc",
+      "exists": true,
+      "bytes": 50252,
+      "sha256": "cd1ded969cc861946f5e8a7e33367e14dd3228cb29aa6f3ae68c1dff792b1ea1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-printers.cc",
+      "exists": true,
+      "bytes": 18593,
+      "sha256": "12908a4f1fff494821c920135da5af524fa2c816d74dca25deed38c1f02ffef1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-test-part.cc",
+      "exists": true,
+      "bytes": 4064,
+      "sha256": "9acddbbe251f0516a92da1f55d8edd06c66c8fdeca382460d57340ad594f76f2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest-typed-test.cc",
+      "exists": true,
+      "bytes": 3823,
+      "sha256": "b92e70b2d7ee3b86328162cbda269a28de4ce67f0e8d9beec5ec2c73a93ba006"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest.cc",
+      "exists": true,
+      "bytes": 269288,
+      "sha256": "2ab4f150bce21851e645f90ef759a1d01d8bcd964513f5fa9f393232f7fe0116"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\src\\gtest_main.cc",
+      "exists": true,
+      "bytes": 2430,
+      "sha256": "3836c1ce7c4829c44a30f368d888ae3bed218437d61d102c50c0db4afca33b3f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\BUILD.bazel",
+      "exists": true,
+      "bytes": 16592,
+      "sha256": "9153f8ffb5445112bdfcae6b0b49a8ebb4920ccb8725647caed81ed5059de477"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\custom\\gmock_dynamic_cast_message_test.proto",
+      "exists": true,
+      "bytes": 141,
+      "sha256": "84953451a05d39f572326dde31171950d4e8017d45d4a29b44eedb4bdcac4d2b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-break-on-failure-unittest.py",
+      "exists": true,
+      "bytes": 6926,
+      "sha256": "f9c39f98f99c22e08b3a19ab87b27fce346bcec4986cbedc9bb1cd5b0ebb3d60"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-break-on-failure-unittest_.cc",
+      "exists": true,
+      "bytes": 3252,
+      "sha256": "6fa8635e945a6b853a8c35e1977700df6b29038c84639753d8cc43b42a4687d9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-catch-exceptions-test.py",
+      "exists": true,
+      "bytes": 10424,
+      "sha256": "a3be4ae2749f768b974bb5f74f74fffd32a469efcac3b4262029e207d11aa31c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-catch-exceptions-test_.cc",
+      "exists": true,
+      "bytes": 8380,
+      "sha256": "662671bf0fadc414e53c7aad8f67ed647a745ae6a03b2ff40514eb858aeeb318"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-color-test.py",
+      "exists": true,
+      "bytes": 5170,
+      "sha256": "27a3800a9df930086c8d6f9d566107b042d04aa25e55ae179224574406308e30"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-color-test_.cc",
+      "exists": true,
+      "bytes": 2503,
+      "sha256": "3e30c3315c00b3713b724e30ed9e45caf6df2a4dc7820e063eae57451ad3368e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-death-test-test.cc",
+      "exists": true,
+      "bytes": 47939,
+      "sha256": "fb1ea0f6d2e4618ea92e1f95483279abac5814cb551a3d435c25fcb6ef1bcc74"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-death-test_ex_test.cc",
+      "exists": true,
+      "bytes": 3559,
+      "sha256": "ad9a905f8f96e654f7e0a879d80d5b2d2c69db91b2d7f24c959c05d89ad9fe49"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-env-var-test.py",
+      "exists": true,
+      "bytes": 4173,
+      "sha256": "275be9f2288fadbc7cfee1c7c8ba2a491bdcb23971c1cd45da5349b42caa9b9a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-env-var-test_.cc",
+      "exists": true,
+      "bytes": 3702,
+      "sha256": "d9756472759a0ae9aef3885399571d8630205f46f4b112dcee8a990f6dc46c3c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-fail-if-no-test-linked-test-with-disabled-test_.cc",
+      "exists": true,
+      "bytes": 1801,
+      "sha256": "4e73ea7af401a86c9dd67effc04a343f3b2a4661315bdac5c9b7866710f784a8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-fail-if-no-test-linked-test-with-enabled-test_.cc",
+      "exists": true,
+      "bytes": 1791,
+      "sha256": "5deaa161d72f00872dde4e84d749e27bcb232966167c13177c3e4d0ab1737b3a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-fail-if-no-test-linked-test.py",
+      "exists": true,
+      "bytes": 6178,
+      "sha256": "148d0ad9ed528b70b57bcc83627a1dd25e7333950087526d1f0ed69b723991a1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-fail-if-no-test-selected-test.py",
+      "exists": true,
+      "bytes": 3713,
+      "sha256": "0868f56c64ca39184a3fb3bc31fb83aeddab8d61a85b67c5a1ec401e3d0e17d7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-failfast-unittest.py",
+      "exists": true,
+      "bytes": 14376,
+      "sha256": "78814b70614536b3492905693c403c231ef6632d4bbc4bcc049aee721bc5526c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-failfast-unittest_.cc",
+      "exists": true,
+      "bytes": 5594,
+      "sha256": "fd0c51773155bd540ffb3fac3f867eaf900a59d0b9792dc513f29e2588e8aa40"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-filepath-test.cc",
+      "exists": true,
+      "bytes": 23708,
+      "sha256": "7320135c3ed11f45a33d5b938142e0fc46a81d654a5c66b7018c472c39598645"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-filter-unittest.py",
+      "exists": true,
+      "bytes": 24018,
+      "sha256": "a05805073e4ad3d518fb4f30ddae0bdc7d19c8c9b3c44ebefb55669cc593374c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-filter-unittest_.cc",
+      "exists": true,
+      "bytes": 3435,
+      "sha256": "f27852e15571a0a7e8761cb8e847cb45d1a0469f363178cd84e0d22e8955f54b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-global-environment-unittest.py",
+      "exists": true,
+      "bytes": 4889,
+      "sha256": "b333bcf17d116c7afbd8f142e61b4cef19ce0b0dd6c83b847ad5ff777c957b11"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-global-environment-unittest_.cc",
+      "exists": true,
+      "bytes": 2286,
+      "sha256": "07467d18c2f121ca9770fbfcdf4003522abf11e662f712d54c07b835c17ebb89"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-json-outfiles-test.py",
+      "exists": true,
+      "bytes": 5829,
+      "sha256": "bd9b0c356c8580e82aa2599a781fc2af30600462c0d7975c19c4a52c668d0f67"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-json-output-unittest.py",
+      "exists": true,
+      "bytes": 30681,
+      "sha256": "0250389061511fbca3da51a243c0a364366f1f763049bd1f53576e9fc53f803d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-list-tests-unittest.py",
+      "exists": true,
+      "bytes": 6555,
+      "sha256": "656eb7e5e70dad3f4de320c20c866b0050f3160b9a13486c9363039cfa1bc43b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-list-tests-unittest_.cc",
+      "exists": true,
+      "bytes": 4743,
+      "sha256": "f683375bce246c1d44630cdd51f361ce6395bb77f386eaed0d97c6c5af2ff028"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-listener-test.cc",
+      "exists": true,
+      "bytes": 24321,
+      "sha256": "52b35d326c585282661630c431e00e76461ab12d31ad8499cfe0e4d9937150a3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-message-test.cc",
+      "exists": true,
+      "bytes": 5830,
+      "sha256": "c64bef324fb5f5240804f3fb122126d88f5435c8ad9d058d8d08b3647f414a16"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-options-test.cc",
+      "exists": true,
+      "bytes": 8079,
+      "sha256": "b90aa14207b558de4f1ea09b7d949cebdd62725c3a9466bc07a4560c2d3d657b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-output-test-golden-lin.txt",
+      "exists": true,
+      "bytes": 42974,
+      "sha256": "a3c3b5c1b51003fa2370f6e81fc3b9b6b52278bf634b7f3e1a65a0d282d049c4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-output-test.py",
+      "exists": true,
+      "bytes": 12703,
+      "sha256": "7956c65877624086b3ce1180d0dc58bd24d2413b9b687e5b00641022ec106028"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-output-test_.cc",
+      "exists": true,
+      "bytes": 36407,
+      "sha256": "617d9805a77267d85d7d907092d2a31725bf9a4cddae312c5de47da0b737dbb5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test-invalid-name1-test.py",
+      "exists": true,
+      "bytes": 2398,
+      "sha256": "6ca6ef83ddb2a3e656a46181046e7f208e6f7c2d71dd72f47305036d97a4539b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test-invalid-name1-test_.cc",
+      "exists": true,
+      "bytes": 1995,
+      "sha256": "9038e2ed7538539be4406ebe2b0c587dbb4d87826402de0c7a4c7b073c6b8f24"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test-invalid-name2-test.py",
+      "exists": true,
+      "bytes": 2352,
+      "sha256": "6e10415b90dc5260dc468785340bfc935502e9ec8be28eb7c93e55dfc47231fe"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test-invalid-name2-test_.cc",
+      "exists": true,
+      "bytes": 2129,
+      "sha256": "48e7bead30404dc5723d7d7175bb55d83f67f25154642208f04b1bd4624f1f2e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test-test.cc",
+      "exists": true,
+      "bytes": 45469,
+      "sha256": "a2daba0680766095f16ed3161ca01b23eee703bb8858497abdad959564b1cda9"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test-test.h",
+      "exists": true,
+      "bytes": 2280,
+      "sha256": "23c1266879efb4d5be27090016f5693a9cc66bd21252e4831f3bfcde4306f307"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-param-test2-test.cc",
+      "exists": true,
+      "bytes": 2768,
+      "sha256": "8897922b0f357ab63575a53c18aeef2dce903459263764c9fb079a057c2196d2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-port-test.cc",
+      "exists": true,
+      "bytes": 41150,
+      "sha256": "b46b418b8734c629cd8f4a799d3db744e6110f82ea916b2b258ffbc6a173c986"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-printers-test.cc",
+      "exists": true,
+      "bytes": 70046,
+      "sha256": "b3ad484c0adb346d161bda120f2c7ae8b65d49a7ea3aec90f14e488309429fb8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-setuptestsuite-test.py",
+      "exists": true,
+      "bytes": 2294,
+      "sha256": "ada1927131c16cc4a715e335ee931cbe389c9c162e2ee3386e5cf935776a102b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-setuptestsuite-test_.cc",
+      "exists": true,
+      "bytes": 1942,
+      "sha256": "ec85df1e74de9538a41efc88562b7842a795ec65f43fa4c13d21a748eaa9d7c7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-shuffle-test.py",
+      "exists": true,
+      "bytes": 12701,
+      "sha256": "e1ef7c2cfe77fcb8e61b14c98d1bded060b50caea5ceda5efb3cda4067815398"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-shuffle-test_.cc",
+      "exists": true,
+      "bytes": 3192,
+      "sha256": "e2309b8938e1715e6363fdacfab017d762a4ffb9fb205ae9dff655b47e6d9eac"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-test-part-test.cc",
+      "exists": true,
+      "bytes": 7829,
+      "sha256": "d8e907356dcbbc2b88ed94a698e150c3ed2fffd8b489c9729ebeb40ec31b612a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-throw-on-failure-test.py",
+      "exists": true,
+      "bytes": 5495,
+      "sha256": "973d74c9cfe09b92b12670e9b923110e4fb6652f9c6caa82b11de52feac2c0d8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-throw-on-failure-test_.cc",
+      "exists": true,
+      "bytes": 3013,
+      "sha256": "84b7eda12fd3b7f084751ce39e66eb8449d75a70edb99923b36915d467d7abc6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-uninitialized-test.py",
+      "exists": true,
+      "bytes": 2501,
+      "sha256": "77b3f5d1a79965aa5fe848f003886a7515e89cd09dd8464ea7e453a25a740825"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\googletest-uninitialized-test_.cc",
+      "exists": true,
+      "bytes": 1875,
+      "sha256": "6472d016e4eb161b297c7a275a965cbcc7773246b0a6f9db085b66dc9efed5d2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest-typed-test2_test.cc",
+      "exists": true,
+      "bytes": 1954,
+      "sha256": "00196db2a1ab4341c8a37d5da67bc9fd0f4ced0bf88c06879af06f8ed8b5a089"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest-typed-test_test.cc",
+      "exists": true,
+      "bytes": 14090,
+      "sha256": "55c7deb4402920ade495e1e46941cbb04439c7ea472db74f6b9bfc4855d1e144"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest-typed-test_test.h",
+      "exists": true,
+      "bytes": 2393,
+      "sha256": "57f80230edde9892bfd9539933a60df09c88d3a9b4dc3301d731e1fd21f7be20"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest-unittest-api_test.cc",
+      "exists": true,
+      "bytes": 13047,
+      "sha256": "47c96ae5d6d41d451085f0f8fcdfc9ea6132767f62f02073719714c98a353a3d"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_all_test.cc",
+      "exists": true,
+      "bytes": 2239,
+      "sha256": "70e2f2c78d7a6470eb93d795b08860ed8cb8726356b3c70a151a3eb99f9206e2"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_assert_by_exception_test.cc",
+      "exists": true,
+      "bytes": 3842,
+      "sha256": "cfa262b39f8506c00d26765db7301753d7e278014e4f49730145c6c711d0c753"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_dirs_test.cc",
+      "exists": true,
+      "bytes": 2939,
+      "sha256": "bb00d2c44e9a8c66b478dea9758ce574716fac7727ad6c540a4087b286387e9b"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_environment_test.cc",
+      "exists": true,
+      "bytes": 6501,
+      "sha256": "166a3a993c7ba32c82ec72efd12a5db28b85b5b1e363ef3821a42f6889ef81f6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_help_test.py",
+      "exists": true,
+      "bytes": 6132,
+      "sha256": "15a69b3e54e82e552a7326c31edbed29d69e90c426ff86885577aa2a0c7c3301"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_help_test_.cc",
+      "exists": true,
+      "bytes": 2090,
+      "sha256": "5676ca4380b139d91f8e0e63d88cc8ae930552b96ac1d3d610c7743d5f3e2689"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_json_test_utils.py",
+      "exists": true,
+      "bytes": 2648,
+      "sha256": "638fa883626291e16e395d2c564753b4751ca39ab9a0c2d259e76eb074bb1658"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_list_output_unittest.py",
+      "exists": true,
+      "bytes": 9497,
+      "sha256": "2f21f4d5a3ff27f9d8de963f729ae50265c8b133662f16fb75a99eaf7ec62fe4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_list_output_unittest_.cc",
+      "exists": true,
+      "bytes": 3197,
+      "sha256": "55d89c8dc18058950ffba1ea0263aaa2ccaa67557738f984412c8be9099fb07a"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_main_unittest.cc",
+      "exists": true,
+      "bytes": 1839,
+      "sha256": "1eb66daf8d572afd5b3bae242106138462a80041d4bd5df7753ed30ee2d7860f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_no_test_unittest.cc",
+      "exists": true,
+      "bytes": 2403,
+      "sha256": "b97c35d17695fe4eca95c905fd00f8acc325a291e9fd76bb551151037ebe1f75"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_pred_impl_unittest.cc",
+      "exists": true,
+      "bytes": 69752,
+      "sha256": "e10307a78ef1ee5e21d5eb0a7e04e93c6ebd4f75dfbe43101408242e2bbb376f"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_premature_exit_test.cc",
+      "exists": true,
+      "bytes": 4312,
+      "sha256": "046f98ae4bbb94a74f4d395bceb9a5a9840657d56c6caaef31b2d1615fe796b4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_prod_test.cc",
+      "exists": true,
+      "bytes": 2147,
+      "sha256": "7fd832ab39cf8253d15707bae177903e194a713a25e96dcecda19fb34b7d66fa"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_repeat_test.cc",
+      "exists": true,
+      "bytes": 7668,
+      "sha256": "c403370d6e53032ae02500c53d27150849c44e76efb5e8271e95182597aa8f8c"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_skip_check_output_test.py",
+      "exists": true,
+      "bytes": 2417,
+      "sha256": "9433aace586a15486efcf70627f3fbf6c2d0c720a0c66bb8eec1621e6c23dc69"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_skip_environment_check_output_test.py",
+      "exists": true,
+      "bytes": 2231,
+      "sha256": "ecb5542c89620318b72a4fd067cae17751d3cdb742bb1b6d37a558bc3a4030e7"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_skip_in_environment_setup_test.cc",
+      "exists": true,
+      "bytes": 2070,
+      "sha256": "06e4bbe5dda9b0d45a1264628e1c73a3a205bf588127815cce7207fea38041ae"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_skip_test.cc",
+      "exists": true,
+      "bytes": 2001,
+      "sha256": "7f5e45763e32efaa4e6ae0e1dad67149732a28c1ea81fbdd4477e6b57d4931d3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_sole_header_test.cc",
+      "exists": true,
+      "bytes": 2173,
+      "sha256": "dca2f6f55ac7643a65f168f96429cfdbd2ee8db917ca3d652e788271af24e8f6"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_stress_test.cc",
+      "exists": true,
+      "bytes": 9345,
+      "sha256": "26720613671ac522cba3300cc41f3846be259b6ca77864498bf560b92c5f3cfb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_test_macro_stack_footprint_test.cc",
+      "exists": true,
+      "bytes": 3871,
+      "sha256": "24fd73ca9ca9f6245adfc4fd24c8087f6b56b1d786547af5defe9a31df9f87f1"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_test_utils.py",
+      "exists": true,
+      "bytes": 8146,
+      "sha256": "3e9d2b955b14b02aa8ca46f389e5c3c5fd87ac7e12346688d531881769461938"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_testbridge_test.py",
+      "exists": true,
+      "bytes": 2495,
+      "sha256": "40d524ac9fc1a9a6edc6290f8f9d19c7fabbe5163fa4d4c75dda2f7a35ee8940"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_testbridge_test_.cc",
+      "exists": true,
+      "bytes": 1922,
+      "sha256": "a3e91df65fc564677a59e6a07db1518ed7f17a07d9045967601305167cfafb9e"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_throw_on_failure_ex_test.cc",
+      "exists": true,
+      "bytes": 3395,
+      "sha256": "1f95e8638edec0c04c11c7cc58af713ceddf87f7cb12769db5ee52789039cbd5"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_unittest.cc",
+      "exists": true,
+      "bytes": 268418,
+      "sha256": "b7432cf258803e51c5bce3b4c890b7499a639e7a0d81e6f2708f2c242e2c6f21"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_xml_outfile1_test_.cc",
+      "exists": true,
+      "bytes": 1955,
+      "sha256": "83ac5bea33ccd68ea618e9784b9f5e92b45d4a586176c47939808298e29c1e21"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_xml_outfile2_test_.cc",
+      "exists": true,
+      "bytes": 2835,
+      "sha256": "bb251f744a972f83301e387fb454a275b3b13d5dc4cf6b1f63b4d295ffbe4dc8"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_xml_outfiles_test.py",
+      "exists": true,
+      "bytes": 5961,
+      "sha256": "e36f99dc5ef6c14ed7b2f0996cf42a976da63d954653e7b10df36282a1c5c0b4"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_xml_output_unittest.py",
+      "exists": true,
+      "bytes": 25170,
+      "sha256": "1e07245c27ea7de3140287dc9319207d38c9c21873f42ffd88545eb6bcbf2659"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_xml_output_unittest_.cc",
+      "exists": true,
+      "bytes": 7007,
+      "sha256": "376abefc5c311da4365e508b496cb5dbd66027eda79ff2df598d96c8b6d785cb"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\gtest_xml_test_utils.py",
+      "exists": true,
+      "bytes": 10192,
+      "sha256": "0bd9b28874cfb4bfd0f6697f40614160f462d7d4e365585c9eaf3f82d3678890"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\production.cc",
+      "exists": true,
+      "bytes": 1675,
+      "sha256": "3b0f49f1f9b65e24abcaf0b6b551222460f8feca4806f35c5d77a720ea133d16"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest\\test\\production.h",
+      "exists": true,
+      "bytes": 2131,
+      "sha256": "e21b142901a4abb5e2be4736aabe85a7601040a345e84609aae7f708516c3aa3"
+    },
+    {
+      "path": "F:\\JericoEngine\\Dependencies\\googletest-v1.18.0\\googletest_deps.bzl",
+      "exists": true,
+      "bytes": 1872,
+      "sha256": "8f181496ae6d4125f4890746f04bb22867af22c31141f0b0351d14fe7a4b049c"
+    }
+  ]
+}

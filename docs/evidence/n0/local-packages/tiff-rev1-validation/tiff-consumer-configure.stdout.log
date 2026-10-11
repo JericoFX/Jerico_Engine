@@ -1,0 +1,14 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The CXX compiler identification is MSVC 19.44.35228.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/lib/zlibstatic.lib (found suitable exact version "1.2.11")
+-- Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents
+-- Found TIFF: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1-validation/extracted/tiff/lib/tiff.lib (found suitable exact version "4.2.0.15")
+-- Using JE local TIFF from F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1-validation/extracted
+-- Configuring done (5.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1

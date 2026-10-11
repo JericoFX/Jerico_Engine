@@ -1,0 +1,1065 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/expat-e26a263aa9182d1e4552cd615857f0f61df3ba42.tar.gz",
+  "archiveSHA256": "a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057",
+  "entries": 174,
+  "files": 152,
+  "fileBytes": 85673060.0,
+  "links": 1,
+  "linksMaterialized": 0,
+  "omittedSourceLink": "README.md",
+  "pathCaseCollisions": 0,
+  "destination": "F:/JericoEngine/Dependencies/expat-2.4.2-e26a263aa9182d1e4552cd615857f0f61df3ba42",
+  "extractionHashesMatched": true,
+  "license": "Copyright (c) 1998-2000 Thai Open Source Software Center Ltd and Clark Cooper\nCopyright (c) 2001-2019 Expat maintainers\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+  "gitBlobMatches": 152,
+  "primaryTreeFiles": 153,
+  "members": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/dependabot.yml",
+      "type": "RegularFile",
+      "bytes": 1728,
+      "sha256": "51715200bebc6c624a67cf7595b754814c0b4697fe49cf164c4238c78f8cbef3"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/autotools-cmake.yml",
+      "type": "RegularFile",
+      "bytes": 6096,
+      "sha256": "3963cbe4265812aaac750d6299302bf9a57fcc56d89c713eb163a2c04fa357b0"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/coverage.yml",
+      "type": "RegularFile",
+      "bytes": 2873,
+      "sha256": "7e61807b46a4f9fed8f41aedb4c98240854c6b5890f9136438013f6973d0dead"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/cppcheck.yml",
+      "type": "RegularFile",
+      "bytes": 1943,
+      "sha256": "ad5e78aa6069ad9f99eb7ccc4b86d0e16059c2f9574b1d1ef28e38728c854b6d"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/data",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/data/expat_config_h_cmake__expected.txt",
+      "type": "RegularFile",
+      "bytes": 495,
+      "sha256": "8385d637f3c280ce1a38dde52165420f9cee7b9a0b449418412f136690b75878"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/data/expat_config_h_in__expected.txt",
+      "type": "RegularFile",
+      "bytes": 552,
+      "sha256": "cf2b77587cd22d26eeced9f2fc58f4fbe6aa349c87efdfa400c51a4624430a2d"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/data/exported-symbols.txt",
+      "type": "RegularFile",
+      "bytes": 1624,
+      "sha256": "9e57fd81a88659b4e49f9c2a2f9208da660dabd44fb1ac9583d160d0dd2427e1"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/expat_config_h.yml",
+      "type": "RegularFile",
+      "bytes": 2745,
+      "sha256": "6eefc9e582125d2745b482bd76d38ed12ca3ff6e37c80b1398677f178dbaba22"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/linux.yml",
+      "type": "RegularFile",
+      "bytes": 4938,
+      "sha256": "b1ebd1e88f3640d51296097aec5e9ea7c743e524216f441899e6e676b33db7a9"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/macos.yml",
+      "type": "RegularFile",
+      "bytes": 2537,
+      "sha256": "f1efca52c0c3b22c852181bfc54ee99829e0e9d32de72fe6561773c1e892f775"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/scripts",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/scripts/list-shared-library-symbols.sh",
+      "type": "RegularFile",
+      "bytes": 1703,
+      "sha256": "c7e01e6f0d5729faab5fecf6d8c18c08506289000825f2a2d6433ee2753ff914"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/scripts/list_exported_macros.sh",
+      "type": "RegularFile",
+      "bytes": 1610,
+      "sha256": "cf3f584723b7ab67553bd7df404501ed0cf69795cd6ce88f4dc8351497cca18b"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/scripts/mass-cppcheck.sh",
+      "type": "RegularFile",
+      "bytes": 2141,
+      "sha256": "3b9abd3862017843afd8287238780cca78a4c72ce56b0a9274d3480f2f71befd"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.github/workflows/valid-xml.yml",
+      "type": "RegularFile",
+      "bytes": 2144,
+      "sha256": "82392c18b3c7e1fad54362909605c4b39c73ca2e0d41e7f6d8a00668bddeb25a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.gitignore",
+      "type": "RegularFile",
+      "bytes": 360,
+      "sha256": "fd2925a45afa2d893b8d8222cd028cc5e575648e1e9a2bfdca6f38054a70f6c5"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.mailmap",
+      "type": "RegularFile",
+      "bytes": 845,
+      "sha256": "8debe6ff50c84882ef7cc07a2f4bd878c996a73e113f829cefd8d0177cfbf34a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/.travis.sh",
+      "type": "RegularFile",
+      "bytes": 2780,
+      "sha256": "bed179ccf1b2291e9bbf3c2fc3e08bd5e1c320a972906180ba5c84029fd2b31f"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/Brewfile",
+      "type": "RegularFile",
+      "bytes": 208,
+      "sha256": "494c9a40f3905ed2761ec7f967f95d781b6b2dede5336512946dd980e4b1015a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/README.md",
+      "type": "SymbolicLink",
+      "bytes": 0,
+      "sha256": null,
+      "target": "expat/README.md",
+      "gitBlobSHA1": "11ddc587ddc574bf9ac6e6ab881aaf18429b7444",
+      "extracted": false
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/appveyor.yml",
+      "type": "RegularFile",
+      "bytes": 4444,
+      "sha256": "f65ec8d1a188f49170ec67be98121ea9ea3c3306324dd90bd71ef61f93ad2e05"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/.clang-format",
+      "type": "RegularFile",
+      "bytes": 5217,
+      "sha256": "c6e017277a89b696405de6dd509a518dbe55f6cdd91a736f79f31dec7bea01e9"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/.gitignore",
+      "type": "RegularFile",
+      "bytes": 479,
+      "sha256": "fa65460f0dfe4cb2befaa80195a63c685e0644e4b407683f880d4897a6541eb3"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/AUTHORS",
+      "type": "RegularFile",
+      "bytes": 142,
+      "sha256": "59f14371c6b75912cfebb46e6247ee5146766e803a0365b124e5d3011e7d0877"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/CMake.README",
+      "type": "RegularFile",
+      "bytes": 1723,
+      "sha256": "482e81acb7617863542219cf30c83f6388dc97ee8bbfd2b998e2ef052e464328"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 30665,
+      "sha256": "81c57f446bc10dd184c4817f107f3a15f86eea0f270eec7f8d164f484f6d655b"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/COPYING",
+      "type": "RegularFile",
+      "bytes": 1144,
+      "sha256": "8c6b5b6de8fae20b317f4992729abc0e520bfba4c7606cd1e9eeb87418eebdec"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/Changes",
+      "type": "RegularFile",
+      "bytes": 50268,
+      "sha256": "8602dd227dbe3b082919996e245cfffe2f264ccac76c6b368fbefc124eabeaa5"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/ConfigureChecks.cmake",
+      "type": "RegularFile",
+      "bytes": 2244,
+      "sha256": "f78709ec4c24402838681ee6ad5bc72944d7fb2f7fdc05bb81e8e19211cb9005"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 5364,
+      "sha256": "164696b38d091d9ad382ddc9d7340ee394b3b1616fcd791eb7e449a31e30ac0a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/README.md",
+      "type": "RegularFile",
+      "bytes": 8794,
+      "sha256": "a08cd57f066fab3f35cccc9e98f6114fdaf5cebae7d0249daa7f252561776d40"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/acinclude.m4",
+      "type": "RegularFile",
+      "bytes": 371,
+      "sha256": "011cd4d5332e7ac2448ad4ed99d74d06af314b9b287fc69b9cbae6b301f78d4e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/apply-clang-format.sh",
+      "type": "RegularFile",
+      "bytes": 2100,
+      "sha256": "aed6523723bdfbba864989cd2e729b4c5e3bdc16d8cef5bd9abf3f2bb63c3683"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/buildconf.sh",
+      "type": "RegularFile",
+      "bytes": 2764,
+      "sha256": "60384d57b3d1421f8e1d2148d212c2c7f2af37345e95fe75cbaf40db981ea1e5"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/clean_coverage.sh",
+      "type": "RegularFile",
+      "bytes": 1776,
+      "sha256": "3662caf7ed16b54b11db3ae799f700b3b63edd3789e6e5b45eb55a55ca0b2def"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/.gitignore",
+      "type": "RegularFile",
+      "bytes": 69,
+      "sha256": "b59f62ed0a2a9e7ad14abfd3aa41cf4b2d1d63918a31bba80b58e1752ba9e1ea"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/.gitignore",
+      "type": "RegularFile",
+      "bytes": 50,
+      "sha256": "9d98eaea3e2dfc91e46b81793bc752d4070a2956f2945a6d94d1ea2a8ee255af"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/expat-config-version.cmake.in",
+      "type": "RegularFile",
+      "bytes": 2974,
+      "sha256": "0e154831e95837511af2674baf8076b17c38be667dc4c31cada98ee4a82e1b4b"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/expat-noconfig__linux.cmake.in",
+      "type": "RegularFile",
+      "bytes": 921,
+      "sha256": "d055ae09c21d3617626f92246356b6e46d81f57bbf1f115ebe03fa141a0ce2bc"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/expat-noconfig__macos.cmake.in",
+      "type": "RegularFile",
+      "bytes": 937,
+      "sha256": "0ec7b5d5eebc66e7f49c33ca2017fecc68b83ed41b9bac27850644689b42a878"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/expat-noconfig__windows.cmake.in",
+      "type": "RegularFile",
+      "bytes": 932,
+      "sha256": "e83e89fa99b98a2acc15c1434888c9d14e34d1ed0f39a33610951b6c31b99181"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/expat-package-init.cmake",
+      "type": "RegularFile",
+      "bytes": 879,
+      "sha256": "2b4ffc7c625b15268bb3961b2752950120c713b5d811a40845bf9f2a87b8eaa0"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/autotools/expat.cmake",
+      "type": "RegularFile",
+      "bytes": 3406,
+      "sha256": "33f6a2347cbd45ba317bfe5c2d2c434cfd55624a96eb118797a4afbb8fb43edc"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/expat-config.cmake.in",
+      "type": "RegularFile",
+      "bytes": 2888,
+      "sha256": "737c28c075eab9fd576ad22a68c8d880281d83240d6e08372afda2cf3acac733"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/cmake/mingw-toolchain.cmake",
+      "type": "RegularFile",
+      "bytes": 1638,
+      "sha256": "ed6e9d048d90d72209cc760f1dda9948e9f6f7b72353db1dcaafbb57096668e5"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/configure-ac-style.md",
+      "type": "RegularFile",
+      "bytes": 1571,
+      "sha256": "ddc33ba384570215427ed52664d3f38a0823dd799ab8066ebea18d88220a73fc"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/configure.ac",
+      "type": "RegularFile",
+      "bytes": 16649,
+      "sha256": "b83b2f7a558736bc75971a0e25ff5c6f570e65ca5bec8a52f1a481134a1da061"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/.gitignore",
+      "type": "RegularFile",
+      "bytes": 108,
+      "sha256": "36aa1949c2b223e6c1a2bb594a72279ec0fcba7e886c0b755408efb9b708fc31"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/ax-append-compile-flags.m4",
+      "type": "RegularFile",
+      "bytes": 1765,
+      "sha256": "ecbcac20f9872c57e7615d57874b3798b809288a48602b790b2977446e272323"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/ax-append-flag.m4",
+      "type": "RegularFile",
+      "bytes": 1552,
+      "sha256": "392cb0e965351b1d6a9847cf165dc4092fb1853fd63dbe010ac8b21c286f5e16"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/ax-append-link-flags.m4",
+      "type": "RegularFile",
+      "bytes": 1711,
+      "sha256": "087c9c6fc74fa72c3cb77a21de75b6488cd3f360ae4771056dacdf7b66cc0eca"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/ax-check-compile-flag.m4",
+      "type": "RegularFile",
+      "bytes": 3499,
+      "sha256": "35905eea68500c1cb91e089e017868ef63720ba3fa522aa32e9266749952f89c"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/ax-check-link-flag.m4",
+      "type": "RegularFile",
+      "bytes": 1956,
+      "sha256": "c335b90e218fdc064e67003706c9192ca779c83720c4b369254caad6c5a78be3"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/ax-require-defined.m4",
+      "type": "RegularFile",
+      "bytes": 1218,
+      "sha256": "d870b21e817747c6a61a9dd72e06ea45f87e012c7a1a9aa5ff90cd3af89b3774"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/expat.m4",
+      "type": "RegularFile",
+      "bytes": 1442,
+      "sha256": "5067500c6315a078c38008d7a9ca667dd4c24ede5415d14f0da43dd12ff1a3e1"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/expatcfg-compiler-supports-visibility.m4",
+      "type": "RegularFile",
+      "bytes": 1456,
+      "sha256": "3b2120f3a155c544347dad20af9167558ce3fc3639a16966163e5f3aeb76b791"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/conftools/get-version.sh",
+      "type": "RegularFile",
+      "bytes": 2381,
+      "sha256": "78aa7ce4329e456db6a4ad4f2a9992afb8abfdb947d756cdd9b97bc57a4d6171"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/coverage.sh",
+      "type": "RegularFile",
+      "bytes": 8661,
+      "sha256": "c250eb714d472b6af5cf98f2dccb0916f39c5c55387277f67847c90d20244192"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/distribute.sh",
+      "type": "RegularFile",
+      "bytes": 1955,
+      "sha256": "838190961bdcfdc65f98bdcbc06859c959087965306da81ee4c18ece788742a1"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/.gitignore",
+      "type": "RegularFile",
+      "bytes": 18,
+      "sha256": "8272913e96b4c4e61b329664f9717176efa0255731fae32ab7dd670cf2d048fe"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 2221,
+      "sha256": "7c7cd1a4ab1ff035c51230032a56f36e43f86fd9b95404dbeaedbd15ffdadb9c"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/ok.min.css",
+      "type": "RegularFile",
+      "bytes": 15844,
+      "sha256": "56a38492f2b1f6b5cff0c2abba99262fd3790dfa27f5dc5ffc24781a44260eb1"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/reference.html",
+      "type": "RegularFile",
+      "bytes": 103458,
+      "sha256": "d5c98ff79e893174564ecd4d91eca0b98ddfcc954b99978b4a6f2993e85959f6"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/style.css",
+      "type": "RegularFile",
+      "bytes": 1952,
+      "sha256": "f406460bc73980118d8d15186daa51918d52752562641e27d19eb453c0c0817e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/valid-xhtml10.png",
+      "type": "RegularFile",
+      "bytes": 1981,
+      "sha256": "85f3c1f9d8988cd0b31d1159abd212cd56c825da58976e7b842412bad2d63ae1"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/doc/xmlwf.xml",
+      "type": "RegularFile",
+      "bytes": 17710,
+      "sha256": "20bd1cb3569519a52fe270eb89e6cc0729075fa4f8b5875983ee9ff1a607c1d8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/examples",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/examples/.gitignore",
+      "type": "RegularFile",
+      "bytes": 71,
+      "sha256": "e816551333b9e6153b52659c9b91bb7112e5297a59b070cfaab96267c00d78a0"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/examples/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1781,
+      "sha256": "569f33c131894cf30df8935e9dc9343986e2802f75309c08479da85ff155d8d8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/examples/elements.c",
+      "type": "RegularFile",
+      "bytes": 3623,
+      "sha256": "56b81408ecb916417c9ff2d7d490e6b6a75ddfbec539147232d764091d4989c5"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/examples/outline.c",
+      "type": "RegularFile",
+      "bytes": 3539,
+      "sha256": "87f59f5768cb6b9a74c2fb84cd00654862370c7f6eb1c4eac377335f8d0c8369"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/expat.pc.cmake",
+      "type": "RegularFile",
+      "bytes": 500,
+      "sha256": "8ce77379736d51a0865c220c5f7d10441ad83ec2f01f2a433b6a76f7f31bf9e9"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/expat.pc.in",
+      "type": "RegularFile",
+      "bytes": 260,
+      "sha256": "2fa04ee46c105ded2c814f67f705e4afe4e9684c8ce850ff3bc9bfb810208ac8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/expat_config.h.cmake",
+      "type": "RegularFile",
+      "bytes": 3399,
+      "sha256": "adde3e2bc48d6593b3ff8949dc200f141b8c3b8f105b9c8c0a6dde1cc6544f0d"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/fix-xmltest-log.sh",
+      "type": "RegularFile",
+      "bytes": 2192,
+      "sha256": "ef0022521358afd8d21e77c055200896a4ae31b71fc9e75f62d2d2485f9b2311"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/fuzz",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/fuzz/.gitignore",
+      "type": "RegularFile",
+      "bytes": 12,
+      "sha256": "b14122d2b7159d0d65c04aa99a1089c887ad7e616f22a039c536249679b2a315"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/fuzz/xml_parse_fuzzer.c",
+      "type": "RegularFile",
+      "bytes": 1975,
+      "sha256": "cf401a09d7281a3a173a6cbbf3a9df5b81c1a648ad36cec9f4d4b9c60da24b3e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/fuzz/xml_parsebuffer_fuzzer.c",
+      "type": "RegularFile",
+      "bytes": 2049,
+      "sha256": "80c56ac96beb531769ef0f60ee5304e2aba3c29cf28d05c463491c63ceff9574"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/gennmtab",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/gennmtab/.gitignore",
+      "type": "RegularFile",
+      "bytes": 27,
+      "sha256": "61548ae4af97cbbeb338325d3bd1c223fc28db78dae3fb9c1c3fdb59755c2f39"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/gennmtab/gennmtab.c",
+      "type": "RegularFile",
+      "bytes": 10398,
+      "sha256": "09b6c9d87f5f85ee6b82dd5fcbd9b4e5393ceff0eee87d5767b894aa3354ea1a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/.gitignore",
+      "type": "RegularFile",
+      "bytes": 188,
+      "sha256": "b907f24d7726d2b5228ff00807cd8545a32e17f3378b3e98feacc227acf667c4"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 2710,
+      "sha256": "434420fb16c6c2d545741eb8a1f67d9ca1352a79fccbf8c665f978d70361afbe"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/ascii.h",
+      "type": "RegularFile",
+      "bytes": 3682,
+      "sha256": "42f8b392c70366743eacbc60ce021389ccaa333598dd49eef6ee5c93698ca205"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/asciitab.h",
+      "type": "RegularFile",
+      "bytes": 3520,
+      "sha256": "1cc0ae749019fc0e488cd1cf245f6beaa6d4f7c55a1fc797e5aa40a408bc266b"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/expat.h",
+      "type": "RegularFile",
+      "bytes": 42636,
+      "sha256": "82d9bf2c5e1dfa11f2dd2fa62d270cf83d8606f27727f2a3141c364a1bba1562"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/expat_external.h",
+      "type": "RegularFile",
+      "bytes": 6029,
+      "sha256": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/iasciitab.h",
+      "type": "RegularFile",
+      "bytes": 3590,
+      "sha256": "ad8b01e9f323cc4208bcd22241df383d7e8641fe3c8b3415aa513de82531f89f"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/internal.h",
+      "type": "RegularFile",
+      "bytes": 5808,
+      "sha256": "0f621aec813b3521114a34588ce2bca8ade58301c790fcc3ef246c2ccf1dca4e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/latin1tab.h",
+      "type": "RegularFile",
+      "bytes": 3573,
+      "sha256": "eab66226da100372e01e42e1cbcd8ac2bbbb5c1b5f95d735289cc85c7a8fc2ba"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/libexpat.def",
+      "type": "RegularFile",
+      "bytes": 2298,
+      "sha256": "2ae4dfe52f759bd2e667fa8bb050ba3a7368e2c503965189d928296a8cc2a724"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/libexpatw.def",
+      "type": "RegularFile",
+      "bytes": 2298,
+      "sha256": "2ae4dfe52f759bd2e667fa8bb050ba3a7368e2c503965189d928296a8cc2a724"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/nametab.h",
+      "type": "RegularFile",
+      "bytes": 9044,
+      "sha256": "67dcf415d37a4b692a6a8bb46f990c02d83f2ef3d01a65cd61c8594a084246f2"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/siphash.h",
+      "type": "RegularFile",
+      "bytes": 13072,
+      "sha256": "95172f931786521478afeef8acdd921ef712300600450207b17332cf494bf92e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/utf8tab.h",
+      "type": "RegularFile",
+      "bytes": 3522,
+      "sha256": "8cd26bd461d334d5e1caedb3af4518d401749f2fc66d56208542b29085159c18"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/winconfig.h",
+      "type": "RegularFile",
+      "bytes": 1931,
+      "sha256": "3c71cea9a6174718542331971a35db317902b2433be9d8dd1cb24239b635c0cc"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmlparse.c",
+      "type": "RegularFile",
+      "bytes": 266993,
+      "sha256": "1caa83883eb79cb6afe71b9f3460f4872566f974bfc040ade0b8fb7f994efcca"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmlrole.c",
+      "type": "RegularFile",
+      "bytes": 35489,
+      "sha256": "b456826602602eb3377d36c547b1e723931fd945f74874328596148189822035"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmlrole.h",
+      "type": "RegularFile",
+      "bytes": 4669,
+      "sha256": "2b5d674be6ef20c7e3f69295176d75e68c5616e4dfce0a186fdd5e2ed8315f7a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmltok.c",
+      "type": "RegularFile",
+      "bytes": 54862,
+      "sha256": "a6e6c96cf228c970e050534c6de6540c55efae672dd7d70c7ff0e7b4290c91ae"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmltok.h",
+      "type": "RegularFile",
+      "bytes": 12838,
+      "sha256": "4299a03828b98bfe47ec6809f6e279252954a9a911dc7e0f19551bd74e3af971"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmltok_impl.c",
+      "type": "RegularFile",
+      "bytes": 53275,
+      "sha256": "fdffe2b80eddeebed392d5642021dc73840b1f0c2c13a676c385d41066e374e9"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmltok_impl.h",
+      "type": "RegularFile",
+      "bytes": 3431,
+      "sha256": "97ee5d2a120aa096fdc7efd701384ba956de3a38a05a16fc8a66f8537e10d263"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/lib/xmltok_ns.c",
+      "type": "RegularFile",
+      "bytes": 4635,
+      "sha256": "e47d7f87421237852f16e0a9620665db984da829d6ec38cb92c9d60b16a8113e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/memory-sanitizer-blacklist.txt",
+      "type": "RegularFile",
+      "bytes": 310,
+      "sha256": "7a92d097fa822a1b95051c346756f961b49dfcadbf0af6dbc5c2e11e474a49c8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/qa.sh",
+      "type": "RegularFile",
+      "bytes": 8074,
+      "sha256": "dc2c731756b2ab870ac44252dba24f0fa0292e302ad40fc77b94af6f0c0d9e35"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/run.sh.in",
+      "type": "RegularFile",
+      "bytes": 1611,
+      "sha256": "098c0072c7b7713d276f2c7d392aca3a03381199f34a0cef198c3e18e66ca5e8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/test-driver-wrapper.sh",
+      "type": "RegularFile",
+      "bytes": 1937,
+      "sha256": "12920081aa7372a0c8e1e23e69daa570239e8412b318a971ec70fb63a3c478f8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/.gitignore",
+      "type": "RegularFile",
+      "bytes": 111,
+      "sha256": "d641e927f623412f9bb32d88d7d428d613976514efe81f51fcafc8bfa5087ac8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 2453,
+      "sha256": "746f23d874ccb626a55c832fcc704dcf6ae226c7f811791c02657f0fe7d7b293"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/README.txt",
+      "type": "RegularFile",
+      "bytes": 570,
+      "sha256": "9ac098806529277219a29870ed2ef979d340f24e781cfe72dde9bce9c1d5d691"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/benchmark",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/benchmark/.gitignore",
+      "type": "RegularFile",
+      "bytes": 11,
+      "sha256": "8741ed039254170eea89f755874eba5c1444e473ee370834a47dcede9fa4963d"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/benchmark/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 1751,
+      "sha256": "6fb985f9fec190a56d174c7bc6c771204329986505b3a4c76753d56db49c69ba"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/benchmark/README.txt",
+      "type": "RegularFile",
+      "bytes": 548,
+      "sha256": "2880002b547c1af1d51c8bb86dc80ed0dc4c61b3e05e6a37266f54c1a48380bf"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/benchmark/benchmark.c",
+      "type": "RegularFile",
+      "bytes": 4461,
+      "sha256": "ae62bb0f2a5a539964e0745ddece7cc9a6e1cfd2a4aa5fd24bc621b6d02bf5a3"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/chardata.c",
+      "type": "RegularFile",
+      "bytes": 3299,
+      "sha256": "36c72eb41e2cc1641bbe4b720758d6be1d78f637ce15d893c173a11e071edf40"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/chardata.h",
+      "type": "RegularFile",
+      "bytes": 2284,
+      "sha256": "20c193c884f40c6f8c7214b26607256285f24378bc3559418d84ee7abf238b29"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/memcheck.c",
+      "type": "RegularFile",
+      "bytes": 5394,
+      "sha256": "431ab1280e92752bb7fffb611ccd6ced22f9e6ce4660dacd703996590e1c7d87"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/memcheck.h",
+      "type": "RegularFile",
+      "bytes": 2189,
+      "sha256": "5171b2636033997305bc6950be6f5a83178062537c8546879ed154818270b9b0"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/minicheck.c",
+      "type": "RegularFile",
+      "bytes": 6525,
+      "sha256": "0cb3097787bdee8463f474a39e355d73385770eaa7a570497a96f3c8dd82711f"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/minicheck.h",
+      "type": "RegularFile",
+      "bytes": 4237,
+      "sha256": "add7a34626eaeb2a7f23ef4618891d8f15a0c1937c179b25b9c966e406ec27d0"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/runtests.c",
+      "type": "RegularFile",
+      "bytes": 476708,
+      "sha256": "aff61ad550f3ad808312e6de157fdc820f2ce101da4997f28f3dce6c4c26509d"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/runtestspp.cpp",
+      "type": "RegularFile",
+      "bytes": 1783,
+      "sha256": "28764377925b13cb22aacb1da83e301d8d7362a55776349d16f7867b85acb677"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/structdata.c",
+      "type": "RegularFile",
+      "bytes": 4624,
+      "sha256": "d82a8d0a828f79d2c80fa2a5c827f595c556ef3bc950418eab8437322b85d691"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/structdata.h",
+      "type": "RegularFile",
+      "bytes": 2402,
+      "sha256": "a4a8bca984139e456153ea1755050d9d38b0e79c23a45d0387161d2dfe401216"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/udiffer.py",
+      "type": "RegularFile",
+      "bytes": 2370,
+      "sha256": "4f6b61e2e5042652358797d7682f9bfbbf4727698d6d7c3b5bbdfd8aa45d5f43"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/xmltest.log.expected",
+      "type": "RegularFile",
+      "bytes": 398,
+      "sha256": "89393e902b1df423c067691b6bea1e06483a68bb5926be83bcf075eca61e2b1e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/tests/xmltest.sh",
+      "type": "RegularFile",
+      "bytes": 5279,
+      "sha256": "3ff29bdff19a792cfb1f02ba344532700f74c455b14f395c220995806ec8cb01"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/win32",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/win32/.gitignore",
+      "type": "RegularFile",
+      "bytes": 97,
+      "sha256": "2dd1c83c2bf2c5fc79f0c0f10d4b53794ddb7ee8fc319c50472202c33d8d3e02"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/win32/MANIFEST.txt",
+      "type": "RegularFile",
+      "bytes": 1120,
+      "sha256": "cfb4be675979c27dc2fd68f20b17c3c91ef07a86ef2ab03d0e2259ce74518947"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/win32/README.txt",
+      "type": "RegularFile",
+      "bytes": 1899,
+      "sha256": "29daf510684cc1774cf6beddfcecad81bad84894c6c0edb9fe7e24dd9b018d30"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/win32/build_expat_iss.bat",
+      "type": "RegularFile",
+      "bytes": 3980,
+      "sha256": "9f302ee46dc15ba60c824f2fdab4d7a4c93bb705225cf090787b4b2b23cacea4"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/win32/expat.iss",
+      "type": "RegularFile",
+      "bytes": 5880,
+      "sha256": "68979b126cb17d3e3b47d6b313a518dc609669b0f188e9c76c57bf71e0a20d8c"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/.gitignore",
+      "type": "RegularFile",
+      "bytes": 55,
+      "sha256": "153804bf0c21f853bbe5a2e280c821030b1c5308bb9826bf63723881a5bfed39"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/Makefile.am",
+      "type": "RegularFile",
+      "bytes": 2010,
+      "sha256": "9bad46ca7af79cb640275871baefecdb0b94b2136b6b2d9c678652646bb4e102"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/codepage.c",
+      "type": "RegularFile",
+      "bytes": 3180,
+      "sha256": "48496fb3a226701a1b7c1295a3394ae580a1f254f57f0973278fb401fc73d84e"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/codepage.h",
+      "type": "RegularFile",
+      "bytes": 1832,
+      "sha256": "fa862dd29ae33acd54a71edb4f1c7ee2836d7fcddde11f5949630533bb0ad8d3"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/ct.c",
+      "type": "RegularFile",
+      "bytes": 4583,
+      "sha256": "fb223fd0493c481879fcf855fd6fdf1edf2956cb520cd534bd5b2f95450e7860"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/filemap.h",
+      "type": "RegularFile",
+      "bytes": 2378,
+      "sha256": "46c4905001f8257851ffb03b8731a1e71882b0d081f04605d9c751f39615e55a"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/readfilemap.c",
+      "type": "RegularFile",
+      "bytes": 4278,
+      "sha256": "1a4c07d61a5129607b0c8fd4a5c64fe1901f9cb08187bb80fbbcafd4994c345f"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/unixfilemap.c",
+      "type": "RegularFile",
+      "bytes": 3296,
+      "sha256": "0a9fa12030848c854e3c766f5505a901c4bccd46437d1b1af881373934a65f5c"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/win32filemap.c",
+      "type": "RegularFile",
+      "bytes": 3756,
+      "sha256": "b9f8b04eb88cbd85cc38dae9ba63ed5654056b8f124d4011d48f3b67361a4c0c"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlfile.c",
+      "type": "RegularFile",
+      "bytes": 8295,
+      "sha256": "6bb89c12113f0cf51548e299de6d5a3a8f3ab5366a76b32c350b14f56f62f504"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlfile.h",
+      "type": "RegularFile",
+      "bytes": 2085,
+      "sha256": "b7992041cff83f6ab2cace4d607c52d7f11759fe7207c82a7db6b57bce1a434c"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlmime.c",
+      "type": "RegularFile",
+      "bytes": 5019,
+      "sha256": "a369d434714863e4cab18b1b5696bd381e144f0fc204fba01ff23100b9c24232"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlmime.h",
+      "type": "RegularFile",
+      "bytes": 2173,
+      "sha256": "1e786f9316329ca95d5330dd1716eab361ccd9a2c9726747db357c5e2f83efd8"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmltchar.h",
+      "type": "RegularFile",
+      "bytes": 2836,
+      "sha256": "6b8c6deee065850997ba7b60fb8be76661e4d55e4bf723064f1c2066bd5ea288"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlwf.c",
+      "type": "RegularFile",
+      "bytes": 36824,
+      "sha256": "ba7f4a3f3aecc92177beed574d436e5d1dc4fa5fbe8d008f5728a04241fa0dd4"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlwf_helpgen.py",
+      "type": "RegularFile",
+      "bytes": 5283,
+      "sha256": "bb570e38f0b0f99c6686c74e07dc273efa78e0c8e794b2615896746dd4300ec7"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/xmlwf/xmlwf_helpgen.sh",
+      "type": "RegularFile",
+      "bytes": 1717,
+      "sha256": "480ebbb48a38d8f553882c0ac9b4000b44e9c836e3477ef2aff09aaa07bc04f2"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/README.txt",
+      "type": "RegularFile",
+      "bytes": 254,
+      "sha256": "4c3dcce234da09a9acca32d041b24c2822d004a3b81ec1fa8f82fdf94aa49cb2"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/largefiles",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/largefiles/README.txt",
+      "type": "RegularFile",
+      "bytes": 1403,
+      "sha256": "a9b585e30cba971ddac06bb5ad98d92a49d6b32ee93fda2fdd42f9b07938766f"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/largefiles/nes96.xml",
+      "type": "RegularFile",
+      "bytes": 2961535,
+      "sha256": "ad5d5a8569d4dbd43b733e2195b5f79d9f4321fc83f3768e98183a572278ed27"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/largefiles/ns_att_test.xml",
+      "type": "RegularFile",
+      "bytes": 35651895,
+      "sha256": "faf73117317879c60b1cb7dbe4552aeb4139eef2fe9fd9dfafa3a00f16ce1862"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/largefiles/recset.xml",
+      "type": "RegularFile",
+      "bytes": 30326041,
+      "sha256": "54375b15ec21cf5402cc1fa0d8a8813807fba6ef1f5dad2c7b9da6794a1edae5"
+    },
+    {
+      "path": "libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/testdata/largefiles/wordnet_glossary-20010201.rdf",
+      "type": "RegularFile",
+      "bytes": 15161489,
+      "sha256": "7298a749b13a21e2045d575f4a5625de47850ff1c13e9a6670de9680052daae2"
+    }
+  ]
+}

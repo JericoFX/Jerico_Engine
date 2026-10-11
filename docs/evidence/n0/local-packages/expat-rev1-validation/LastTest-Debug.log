@@ -1,0 +1,67 @@
+Start testing: Oct 10 22:54 Hora estándar de Montevideo
+----------------------------------------------------------
+1/4 Testing: JE.LocalPackages.Expat.streaming
+1/4 Test: JE.LocalPackages.Expat.streaming
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer/Debug/JEExpatConsumer.exe" "streaming"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+"JE.LocalPackages.Expat.streaming" start time: Oct 10 22:54 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE streaming: PASS
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Expat.streaming" end time: Oct 10 22:54 Hora estándar de Montevideo
+"JE.LocalPackages.Expat.streaming" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: JE.LocalPackages.Expat.namespaces
+2/4 Test: JE.LocalPackages.Expat.namespaces
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer/Debug/JEExpatConsumer.exe" "namespaces"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+"JE.LocalPackages.Expat.namespaces" start time: Oct 10 22:54 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE namespaces: PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Expat.namespaces" end time: Oct 10 22:54 Hora estándar de Montevideo
+"JE.LocalPackages.Expat.namespaces" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: JE.LocalPackages.Expat.errors
+3/4 Test: JE.LocalPackages.Expat.errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer/Debug/JEExpatConsumer.exe" "errors"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+"JE.LocalPackages.Expat.errors" start time: Oct 10 22:54 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE errors: PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Expat.errors" end time: Oct 10 22:54 Hora estándar de Montevideo
+"JE.LocalPackages.Expat.errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: JE.LocalPackages.Expat.memory
+4/4 Test: JE.LocalPackages.Expat.memory
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer/Debug/JEExpatConsumer.exe" "memory"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+"JE.LocalPackages.Expat.memory" start time: Oct 10 22:54 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+CASE memory: PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.Expat.memory" end time: Oct 10 22:54 Hora estándar de Montevideo
+"JE.LocalPackages.Expat.memory" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 22:54 Hora estándar de Montevideo

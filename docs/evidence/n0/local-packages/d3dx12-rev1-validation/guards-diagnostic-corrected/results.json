@@ -1,0 +1,32 @@
+[
+  {
+    "name": "wrong-hash",
+    "nativeExit": 1,
+    "expectedDiagnostic": "source URL/SHA256 must match the audited O3DE source archive",
+    "diagnosticMatched": true,
+    "outputExists": false,
+    "sentinelIntact": true,
+    "result": "PASS",
+    "elapsedSeconds": 0.046
+  },
+  {
+    "name": "wrong-url",
+    "nativeExit": 1,
+    "expectedDiagnostic": "source URL/SHA256 must match the audited O3DE source archive",
+    "diagnosticMatched": true,
+    "outputExists": false,
+    "sentinelIntact": true,
+    "result": "PASS",
+    "elapsedSeconds": 0.045
+  },
+  {
+    "name": "existing-output",
+    "nativeExit": 1,
+    "expectedDiagnostic": "output already exists; retained outputs are never overwritten",
+    "diagnosticMatched": true,
+    "outputExists": true,
+    "sentinelIntact": true,
+    "result": "PASS",
+    "elapsedSeconds": 0.044
+  }
+]

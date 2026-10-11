@@ -1,0 +1,90 @@
+{
+  "status": "READY FOR PARENT REVIEW; NO NATIVE EXECUTION",
+  "sourceGroups": {
+    "reviewed-root1953": {
+      "validated": 1953,
+      "added": 1953,
+      "duplicates": 0
+    },
+    "jsoncpp-snapshot229": {
+      "validated": 229,
+      "added": 229,
+      "duplicates": 0
+    },
+    "jsoncpp-original-wrapper-consumers10": {
+      "validated": 10,
+      "added": 10,
+      "duplicates": 0
+    },
+    "jsoncpp-provenance-and-check11": {
+      "validated": 11,
+      "added": 11,
+      "duplicates": 0
+    }
+  },
+  "rawInputCount": 2203,
+  "uniqueInputCount": 2203,
+  "deduplicatedCount": 0,
+  "approvedDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\FindImath.cmake",
+      "beforeBytes": 1724,
+      "beforeSHA256": "0837b72ef5853db21e7543a7ca40bd00b428b7f36b9fd7143921b7685016dd9f",
+      "afterBytes": 1718,
+      "afterSHA256": "8d6943660b969394da20ce1467f7a0479b5da0eb1679b3db99d882c974637328",
+      "reason": "Parent removed trailing spaces only; normalization receipt pinned"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenEXR\\FindOpenEXR.cmake",
+      "beforeBytes": 3600,
+      "beforeSHA256": "8574ecc7d2a4381cb2152939181c9a1aafeafcb76862aedf0dfd81e94d79a899",
+      "afterBytes": 3595,
+      "afterSHA256": "767b82230223b555ad7458b20fccf0a0b29ac1adddb092096df01b07c1ee0f2c",
+      "reason": "Parent removed trailing spaces only; normalization receipt pinned"
+    }
+  ],
+  "argumentsCount": 47,
+  "cacheCount": 32,
+  "wheelhouseCount": 44,
+  "acceptedPackagePairs": 8,
+  "priorDriverSHA256": "5FD4EDAEC14E30405C612ECEC36FE9AF38A1DF7A562413C535EC196FB866FA6E",
+  "driverSHA256": "448ADBC86F5DCA42CB006E7C5A0DA7ADEE0BA1623E50E8ED89093BD6F88CF95A",
+  "assignmentSHA256": "544A7A75222108044CCBE42737569BC7173EAFE0444B153C1D02D63D099A51C2",
+  "freezeSHA256": "2C8496737E9D90609E47761EFDC8C7A6AF4D30BEE7BBC7BA28CDF857120526B8",
+  "driverChanges": [
+    {
+      "before": "'build/n0-validation/local-packages/root-antlr-openexr-final'",
+      "after": "'build/n0-validation/local-packages/root-jsoncpp-final'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-antlr-openexr-final/root-antlr-openexr-assignment.json'",
+      "after": "'build/n0-validation/local-packages/root-jsoncpp-final/root-jsoncpp-assignment.json'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-antlr-openexr-final/source-freeze-root-final.json'",
+      "after": "'build/n0-validation/local-packages/root-jsoncpp-final/source-freeze-root-jsoncpp.json'"
+    },
+    {
+      "before": "2BBE66DB2F75D8D223BBFC61F6CD8E1A9A26C7219D2812301046078EA195DCCF",
+      "after": "544A7A75222108044CCBE42737569BC7173EAFE0444B153C1D02D63D099A51C2"
+    },
+    {
+      "before": "36CED3BAE28693DCAD99F89356B5ED2C72657C5B6CFE1A56DA6AE0A0A83D532E",
+      "after": "2C8496737E9D90609E47761EFDC8C7A6AF4D30BEE7BBC7BA28CDF857120526B8"
+    },
+    {
+      "before": "$arguments.Count -ne 46 -or $freeze.Count -ne 1953",
+      "after": "$arguments.Count -ne 47 -or $freeze.Count -ne 2203"
+    },
+    {
+      "before": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b') { throw 'exact local ANTLR4 override missing' }",
+      "after": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b') { throw 'exact local ANTLR4 override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2') { throw 'exact local JSONCpp override missing' }"
+    },
+    {
+      "before": "    @{name='antlr4-tree-before';path='F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b'},",
+      "after": "    @{name='antlr4-tree-before';path='F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b'},\n    @{name='jsoncpp-tree-before';path='F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2'},"
+    }
+  ],
+  "preserved": "All instrumentation, offline/process environment guards, cache32/packagePairs8, exact prior46 argv, private-source preflight, existing snapshot before/after and postflight. Adds only JSONCpp argv guard/full immutable tree.",
+  "unverified": "No Root/native build run; Metal composition not yet reached or validated"
+}

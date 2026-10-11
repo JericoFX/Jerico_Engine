@@ -1,0 +1,44 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\recipe-build_config.json",
+    "bytes": 4781,
+    "sha256": "491FD6CF1286FE20E68061EA661B1BE57297E551913283DF44BA2565C0B10291",
+    "gitBlob": "bdac8aa26dd481ef165237e4af69664829ede185",
+    "directoryMetadataMatched": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\recipe-FindImath.cmake",
+    "bytes": 1356,
+    "sha256": "6943A0DC4536B555CFAA458B213BE29BC676C337FB6D5B641EB345D5EE67F45B",
+    "gitBlob": "227689c08054c8b084eac5fe0bc2c6dc6a356b17",
+    "directoryMetadataMatched": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\recipe-FindOpenEXR.cmake",
+    "bytes": 2818,
+    "sha256": "4753AC0D88BCA3279788637421983304DFB6B1C65571D4B4A33B685260D1A613",
+    "gitBlob": "84bdd1e4736041c531ad360ba3a74032fa4ffc92",
+    "directoryMetadataMatched": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\recipe-o3de_package_utilities.cmake",
+    "bytes": 7812,
+    "sha256": "3AD96820838B920B6491FF7826E339980D4E6C2906C04C4ADE6C5C46D7C383E0",
+    "gitBlob": "80d42e55f10c579c36d46599e3fec9e30c9262bb",
+    "directoryMetadataMatched": false
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\recipe-README.md",
+    "bytes": 1182,
+    "sha256": "AC4EF2C0DCAC69E551B3B93F17E2E1D7B03855EBE8BE1B59AFAD0A5E63AE256A",
+    "gitBlob": "82e39348b8cbb38cdd4b9d34d362c61be8fc6a9a",
+    "directoryMetadataMatched": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\recipe-test_openexr_windows.cmd",
+    "bytes": 855,
+    "sha256": "EED9A61447D0768B88D39A66303BD8111C9BA7C6039A6A6840A2811CCAD66574",
+    "gitBlob": "8fcd49d60d83ece2cf28c5430cfe68aa545dde36",
+    "directoryMetadataMatched": true
+  }
+]

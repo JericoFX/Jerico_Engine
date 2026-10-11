@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://github.com/CLIUtils/CLI11/archive/refs/tags/v2.6.2.tar.gz",
+    "status": 302,
+    "contentLength": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/CLIUtils/CLI11/tar.gz/refs/tags/v2.6.2",
+    "authentication": false,
+    "autoRedirect": false
+  },
+  {
+    "url": "https://codeload.github.com/CLIUtils/CLI11/tar.gz/refs/tags/v2.6.2",
+    "status": 200,
+    "contentLength": null,
+    "etag": "\"cbab48c012d9ba5ea21518eb5158fd7c90f1e791070da7cf4a472ffdc36a298d\"",
+    "location": "",
+    "authentication": false,
+    "autoRedirect": false
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "before": "'build/n0-validation/local-packages/original-engine-native-packages-configure'",
+    "after": "'build/n0-validation/local-packages/root-antlr-preparation'"
+  },
+  {
+    "before": "'build/n0-validation/local-packages/root-native-packages-assignment.json'",
+    "after": "'build/n0-validation/local-packages/root-antlr-preparation/root-antlr-candidate-assignment.json'"
+  },
+  {
+    "before": "'build/n0-validation/local-packages/source-freeze-root-native-packages.json'",
+    "after": "'build/n0-validation/local-packages/root-antlr-preparation/source-freeze-root-candidate.json'"
+  },
+  {
+    "before": "DF6EC8FA0BE69BD19B0D76B378FF429D090CFDA110788525E3C6CAE85068D36C",
+    "after": "8F5F992B62124FC223D4E42C40734B0FC1012370D4137F9C60C487684CC07BE9"
+  },
+  {
+    "before": "CAD89C5B29770A34F165EC51D1D9A5DB2577EB867A0C636BBB57314976417DE6",
+    "after": "B665B0E78D833396D0D47615060F05ADFA489BEF4827408A1E161975A1B8F294"
+  },
+  {
+    "before": "$arguments.Count -ne 45 -or $freeze.Count -ne 444",
+    "after": "$arguments.Count -ne 46 -or $freeze.Count -ne 765"
+  },
+  {
+    "before": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=F:/JericoEngine/Dependencies/googletest-v1.18.0') { throw 'exact local GoogleTest override missing' }",
+    "after": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=F:/JericoEngine/Dependencies/googletest-v1.18.0') { throw 'exact local GoogleTest override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b') { throw 'exact local ANTLR4 override missing' }"
+  },
+  {
+    "before": "    @{name='googletest-tree-before';path='F:\\JericoEngine\\Dependencies\\googletest-v1.18.0'},",
+    "after": "    @{name='googletest-tree-before';path='F:\\JericoEngine\\Dependencies\\googletest-v1.18.0'},\n    @{name='antlr4-tree-before';path='F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b'},"
+  }
+]

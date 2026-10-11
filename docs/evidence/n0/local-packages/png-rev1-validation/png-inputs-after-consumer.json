@@ -1,0 +1,3090 @@
+{
+  "allMatch": true,
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/aclocal.m4",
+      "sha256": "13462EE255991CFE106DEBFFFA99017668E06679C5170D2B7BF0FD65E98AB6FB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/ANNOUNCE",
+      "sha256": "6146D40A524EF8321517E608F210DA2C585CE3FC104D5E47CCE9927043E3C268",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/arm/arm_init.c",
+      "sha256": "77C0A5638BDF2737D9AE4B90BD31F39AC8B4FE62ECA634D7ABEFF8CAA7574C97",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/arm/filter_neon_intrinsics.c",
+      "sha256": "FE7C1EB355918F8A81B6CBBB1A2A7549A693CF3EEA67CB369A04F41C315DB50E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/arm/filter_neon.S",
+      "sha256": "FA5750987AD542BF75F5FB94B268DB07A443C03DAA34F0C652ADA49769BB8E2C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/arm/palette_neon_intrinsics.c",
+      "sha256": "E779CC22B472FB5053E06E41BCAC3980D0706B41475F631BD15CB9BBBE81C3E9",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/AUTHORS",
+      "sha256": "E00D9011379C516A6FA5E21B1D9119C7B5FE91177C9EC0F1F362C886E45771AB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/autogen.sh",
+      "sha256": "99A8F65EF29A26002F6F73BC5D21DC85761B7A02BA22C907F3B5F8229F51A2F2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/CHANGES",
+      "sha256": "0F5DACA036B454C90C933BCB64673EE166B1D7851D1D524D1D46F5A9F681C94F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/CMakeLists.txt",
+      "sha256": "23BD675A35504234B665FD79ED29D340B6C120744DA49209B9436FFAA11F24D8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/compile",
+      "sha256": "CF686B3CB1F8F8FFC4F0295671F2FCE476F6187E98A456DD2B71EC0C1D2A407C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/config.guess",
+      "sha256": "5B075CF337B7F5AE0FEE6882F46D94DD7FA4045B24CA9D71BA0169F979F868AD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/config.h.in",
+      "sha256": "D7645B12A391F7FB9A5D93C5C57C27BB06BAE82D61E14ED2C2CEE6A7DF68003D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/config.sub",
+      "sha256": "2CF32747EF7D6B24138C77A53F8BF5EC2A11FCD962E5A5F62ED5C55E05F3BE54",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/configure",
+      "sha256": "C28DEDAE70A6F382976CC5B54D9DC41C1832FFDE15D573023D9C1A50825C540A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/configure.ac",
+      "sha256": "3084E50AEA36A564A0474E71CD5E62DD3A5D0285149C0309791BA277A259F3E5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/arm-neon/android-ndk.c",
+      "sha256": "3CAB01553BADA7BB71F62CE158133D640856AE245E3F69D8FD9B1FCD6D078471",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/arm-neon/linux-auxv.c",
+      "sha256": "C6964D9C7D98A419610AED8964D9FCFA26D40D224D7790BF9B41339AC537A362",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/arm-neon/linux.c",
+      "sha256": "4986D09317860D4A28125FECF12DC6C2BC19AC87DA4DF69B6BA7C9C3AFB0A991",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/arm-neon/README",
+      "sha256": "1D6C6AF98B4B93E9F7C888079DAF64C519F50D299F31EE031BB8D5D0DF3CC0FD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/pngcp.dfa",
+      "sha256": "BCF972B9CBC9C636F6D360FDEACF04B7629A0FD96B31D8F8AA5CC5A9545F5EF4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/read.dfa",
+      "sha256": "2BA3CC900FC804CAF573AE51E9C8DDF22E9F6A6B35FCDB632C60263B5A9D076A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/README",
+      "sha256": "729CD5AF93945EBB9F4659407379D35B61D2D5D2ED85FAFBEF5E9AAEC245CE1D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/s_read.dfa",
+      "sha256": "04BFB5A100254A47A84667CD7947DBB5B9CAA0E9D6A853CAF62C9D94FC2F9F1F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/s_write.dfa",
+      "sha256": "CE77527F5D8A3AC180390CDC117C3E6157AB2FBB465E00F8A400924B9233A1EC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/simple.dfa",
+      "sha256": "23E3E607888C6E4742D767CB1B491A40A7AC6CC0247EBF5787ABC3DAA5626828",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/conftest/write.dfa",
+      "sha256": "CCBF3D992F4A63613588D344ECBB4243B60C951FB4B05E3D50E58B8C2F7EDE1A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/examples/iccfrompng.c",
+      "sha256": "EA802347DFAE03B9388EDA4737722E58C4480EA6163B5EA5B387089F1F1FB18A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/examples/pngpixel.c",
+      "sha256": "2E15B34CACED3B7C6416A53E60C325DBB8758F89691CCDD5FA7BECB62FFD3BD0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/examples/pngtopng.c",
+      "sha256": "097A5602313061FEB74A6618AC8D84E754D3DB1F06A0ACBC9742E5B37BBA331E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/examples/README.txt",
+      "sha256": "E9B4D576AE0D0ED186B80FA989FC98DA390ADF80E49CD357B1157238A935671E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/examples/simpleover.c",
+      "sha256": "B9BE0CAABDF52BCD083BE9A19EC8E89BF38A55453E5E4CEAFDA89B5D91D47321",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/COPYING",
+      "sha256": "D6CB0E9E560F51085556949A84AF12B79A00F10AB8B66C752537FAF7CD665572",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/LICENSE",
+      "sha256": "B6A03C1803EB58FFB1F1278D5C7D4096C4C116E66DCE8A7553E8C77D163C3438",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/Makefile.mingw32",
+      "sha256": "3F30D00D4DF92DCEC0C8D0DD527D7D4C842B371B8AF31065907603CBE12CC005",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/Makefile.sgi",
+      "sha256": "1C14FA991463578D22B523FA8C3587B40474008AC23D3EB27E49B441E487EBAC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/Makefile.unx",
+      "sha256": "BCAE47092DE9E9623B3ECDF9DE6BB5B9454CEB22FAAF47F6EF35D1B222A71FEE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/Makefile.w32",
+      "sha256": "B3FAF8F697E85F0236FB063180102C8FBE66BCE63B995522CBAB0DD5A2C8481A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/makevms.com",
+      "sha256": "4A49B7FC0D911FED8DEAB7FEC5FA2B1E311F0B5E6BBBE1C69DC6080A022F8A08",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/README",
+      "sha256": "2DCE8A3E0753F3BBAC3EDF502323BD59CBCC05F742FE71F5667481CF91EB7C15",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/readpng.c",
+      "sha256": "890827FD946133628925099A1BA7AD79312C5A738553B3CCC6E6CA814298CA0B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/readpng.h",
+      "sha256": "ACF554E1345113A96C76F7079D881CC3F83E962B9A2951A14DDB1989FA57A869",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/readpng2.c",
+      "sha256": "43CAC90CF4BBA6AB0A6D20A99523FA6051BED682742BD9CB8789A97E5CCC9A3F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/readpng2.h",
+      "sha256": "2458824EB84D122CFA8D7F062EA2A3196E27BB0FF49A5C9B13AAF22AA1DFA98F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/readppm.c",
+      "sha256": "63ADA3C7CD067DEBCD3F280EDCA249A41271FC74DD1F5DAEA8E1D8F60DFD89C5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/rpng-win.c",
+      "sha256": "2BB03C06C367D3250A692C1E93CEB12A7EE9E6473176646F5BF4ED0A7CB41562",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/rpng-x.c",
+      "sha256": "9BE6EBE45D691E30F286AF9EDC5005C3A34684B15DC1D31E09FACEEF6DF7DAA5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/rpng2-win.c",
+      "sha256": "3E7001F001B6E693E9380C98585F128A9464E731382CFBED0330B14BDB5F7567",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/rpng2-x.c",
+      "sha256": "626181E2045FA7280C9EBFD093366F6A6B0D3CFF822090C43ADFF26697102079",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/toucan.png",
+      "sha256": "9813E3A499EB5145C88DEC52327DE8493362155F43CED42737CAAD513DB94DE7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/wpng.c",
+      "sha256": "1D88F124291953E19417506EAD97370B384E5CE3A0427812C37A97D6D4040CA4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/writepng.c",
+      "sha256": "97D1B1DCD761ECFEAF806FD8D128C5934B00D88AAEA6A357A35751950DB88272",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/gregbook/writepng.h",
+      "sha256": "DDA3073320239FA065376AA3478F143E808BA180E165CAD5ED9F8D82707367A1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/fakepng.c",
+      "sha256": "019701122197EDBEBFA23A9FDB55A42F492583D2B878CEAD5A13BA3BD58E2080",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/gentests.sh",
+      "sha256": "6E73E03652A89A84076215B0066D30A2E1C8FEC8CEDB4927D7C1FC946FB726D7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/makepng.c",
+      "sha256": "BAE19CF48AAE368C2F190A942ADB69F5BB2A1853FC961DDB32D549834324D12D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/pngimage.c",
+      "sha256": "72480836B3E867C11AC13D504AEFD611EF6749F17CD18B1FB4A1CB2ED97FB06B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/pngstest-errors.h",
+      "sha256": "4667169FECA0DB47E1879E19390F81E6CBAA6EE3F66D6A65726E8151F71D691F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/pngstest.c",
+      "sha256": "649D331302AAEDD19FE23315E35C9DDC95A608EEC734B0EA6946189FC4F805F4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/pngunknown.c",
+      "sha256": "9BF0F080CC7DFA0362ACA06106AA57CB9DC012F4D6DDA453DDA6E5A370EA412F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/pngvalid.c",
+      "sha256": "B8674EA58CDFE83BC3B30A2B91EA738A66648AFFD7C997DCACF44B3F9F688833",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/readpng.c",
+      "sha256": "5F95E6657EFF9E13EDBF7A79D8360145FD9406BA904ADD61D652DFC5F35FF999",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/tarith.c",
+      "sha256": "55B238197FF08E774F2907358C7E79604EB146097E19DC8B96A4B6C55BADC11D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/libtests/timepng.c",
+      "sha256": "38BFD1A8C36970D3F020A1A2D879F20CA3CB59A99DC526A4CD39BA535BB1FE04",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/mips-msa/linux.c",
+      "sha256": "AAC8E846A9C96AF93CA88934580AF9A8766713A6629BCAF29FF171517053E802",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/mips-msa/README",
+      "sha256": "FC391DF4169934C34AFF694DCB5E7C91F6805E76B191BDCE91C87C2AA56902D6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/oss-fuzz/build.sh",
+      "sha256": "4AED28BCDC45AC020C8065B01931F14D8FBAB6A8B40C4C871865173151334337",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/oss-fuzz/Dockerfile",
+      "sha256": "CC9E49AB4C4FC6120BCFA4E7FB4BCAC8B594928599594DFFB81ED9D656E731A7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/oss-fuzz/libpng_read_fuzzer.cc",
+      "sha256": "2CBC5240BB39FD35930CFA352873A90EC8DAF07BB4DC56B936CE61C6CEAACF22",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/oss-fuzz/libpng_read_fuzzer.options",
+      "sha256": "40917518E475742C298E8D368CC16D6F39C43E8FFE72B6F704727E2A7CABAB41",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/oss-fuzz/png.dict",
+      "sha256": "1EA21A58E2EBA2730C88CC1CBA158EA464249DA0F99690C8AE77BAA39C20285C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/oss-fuzz/README.txt",
+      "sha256": "917B1EEC3FE0717067DC79B9F3BE5E110BC2EFC37CF3AE44F055FA57E04B98DC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/decoder/makefile",
+      "sha256": "8661C0A9D4724C5F2B8DBFEE2BC85AB996889D3048B7BD0D2F5835B2DECED1A4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/decoder/pngusr.dfa",
+      "sha256": "ACF3401E55289666EF25F83646F51FE9301C238ECABDA8FFAB4C2A3368CB57A5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/decoder/pngusr.h",
+      "sha256": "A571ABA01273AB18703380FCA3C0150B388DAF246B7750013696EE873F8D138B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/decoder/README",
+      "sha256": "19040552CC84806D87ECC58EC948A6C45D8FC2909061E3F478744F238BF7A110",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/encoder/makefile",
+      "sha256": "731D09DC58135B6130E438366EC227563E7D01294F2F3894547EF6ECDD9689CB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/encoder/pngusr.dfa",
+      "sha256": "6895DBB5E28064E9F78252E6F136A1B4D5CBF78B6F5EC3B4B1D5287E67BD5A14",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/encoder/pngusr.h",
+      "sha256": "DD0EE94F5D113F9329610397AF25ACECAFC34A6F6E481CB22165AC586955DE5A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/encoder/README",
+      "sha256": "246B10D6643875424F24EC090C2118D488950CF1C73BEAF959CDCDD70BCA3F9C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/preader/makefile",
+      "sha256": "7E596B1EA23CA90585522B6CF561302116A486AE86BFDA2AA50D148D3360ECAF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/preader/pngusr.dfa",
+      "sha256": "CD8794315648D8CA0116557B4881B12727240A147415B1DC0996B05645D4B0BF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/preader/pngusr.h",
+      "sha256": "D20077D3961444951A80C3A62112AE72E9ED3F54044C191A154AA15587570C63",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/preader/README",
+      "sha256": "FC821F87CD6C6AB8E49E957EC493B6FB3B51663B0A438E7747664EA289E9113E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminim/README",
+      "sha256": "C204A5C68CDE141BBECDE2E6691768ED9FC42B7FD6CC7DC6D8A34A9B88C64D0D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/CHANGES.txt",
+      "sha256": "A3C9C0B8DB9DB0905767C7EB36BB187710B7E2DF3B18500AE3593497EC5648E2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/CMakeLists.txt",
+      "sha256": "F30E92CAC4053C3435E2B4A87D07EF69F00DC137D9003681DBA533A38CB6253F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/LICENSE.txt",
+      "sha256": "71778DE2E263E60E18D6E0112E65FC7229E90E4DC0D2B8E06640E442125A6DBE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/Makefile",
+      "sha256": "E2B72D69783D01F1E9D45317896788954C03979F5E643EAD4D847FB943680D51",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/makevms.com",
+      "sha256": "EA54C1A96AC21FBB66849C3FC14CD8EBE539DB977878941FAA0DF8BC875E3260",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/png2pnm.bat",
+      "sha256": "24E9689992C3A86241040BB141F04F4F467D5AD4D251E7B26B131FDA9E0A038E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/png2pnm.c",
+      "sha256": "A253AD5D1356B246D9C44A6ED80AE0577D45189F973C8A03FD4F3D6F78C08260",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/png2pnm.sh",
+      "sha256": "542B03979F78605009020AA2D6D4301CB5B926494C4A8F00D31244264EEFA409",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/pngminus.bat",
+      "sha256": "2EB0DE22A0E6404A0E76863879249DF019D766907BF3E54A4437A4AFF7AE0796",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/pngminus.sh",
+      "sha256": "062BE4D9894D06A98041AAFC32E4C787369C7C84B7C173802F315B70A61E72E1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/pnm2png.bat",
+      "sha256": "817EF4DA49BC211C686B7D9ADAF5AA953F368A30B859E2B514A927F9783956E5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/pnm2png.c",
+      "sha256": "82C761194EC604FA4F3413D3FF0435ED3699A2FC4BD79F1319BDECC681517937",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/pnm2png.sh",
+      "sha256": "0FFDDC5A5DEF5244D1225B844E3ABA2EFDBE24F52AB5E8F373B5D45EED1B2117",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngminus/README.txt",
+      "sha256": "403FA7F685F6C45997592B141D3E77C65C667C91FC48C188F82C782FD58B2946",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/bad_interlace_conversions.txt",
+      "sha256": "29C1FE911A2D32AFECB61EF00F6CDEB86F5A7549187B60218FA6AE1968805646",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn0g01.png",
+      "sha256": "C23C1848002082E128F533DC3C24A49FC57329293CC1468CC9DC36339B1ABCAC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn0g02.png",
+      "sha256": "833DD137AB757D1AAA138148D82F3EE8109EFB423A80918F47C7889B56FD8E83",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn0g04.png",
+      "sha256": "4E0CC6742BB06CFA379323266F699A54DC483BF735288E68527D94B4F97C1F30",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn0g08.png",
+      "sha256": "85B19FCDA452D6CBF02F570C353CFA9E47C29237F2FC8F0114DEB6CD0B23F97A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn0g16.png",
+      "sha256": "F26EB27E99300829C42C0832ACD26FA499E0F317CB4D6F165E6663024B16BF6C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn2c08.png",
+      "sha256": "ECEA1EF4A001A999CE9B82D18ABF47401EB92998708B306B6C9A8AC3A6A9A2C8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn2c16.png",
+      "sha256": "71179D2905AADB86ADC25DE7F737869B52E80E154C5335F5E6B614942515B2D4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn3p01.png",
+      "sha256": "D3831BA7C495E0FB20EBF03BD7CF02766C1DC5F1A09DD1F3336E536AC9F1CD42",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn3p02.png",
+      "sha256": "784508D49BE8187C6E0126F942CCE65202616384F7D0A3A112D8CE01C6C8A413",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn3p04.png",
+      "sha256": "96E34367290E1776AA4B5971272D6DF136CF530BACED82C63569B56ADC021B16",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn3p08.png",
+      "sha256": "ECA1DB90338A8481E4D3F2469BEFA06D7564534E9323B6A8040ED0CDD281D952",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn4a08.png",
+      "sha256": "377A67510B4CCC74CDCCE14847B02035E75CCAB36E9D8E00586C4C24D1AE385A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn4a16.png",
+      "sha256": "51896523625B1FFEA7464E954E13CFFF1C596C8E2C46925270DC408315E7FE71",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn6a08.png",
+      "sha256": "756A03364C02E3C9F85D6F4029EB3CEF2488C081DC537D46E102BEBCB9E02732",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/basn6a16.png",
+      "sha256": "569040D3237A5552935A44B8BBE165CF02AFE0D71CAF30FBA81955922AC9373F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbbn0g01.png",
+      "sha256": "401B527775E56254434BA0ACBDF25111823B2C8812665665E36B420F4532831F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbbn0g02.png",
+      "sha256": "7F75074FB427B8B2342B504012F272C52E82A27474CF65C2F6B19B05CD67B2E6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbbn0g04.png",
+      "sha256": "C5E7EEAFFA677BFAC002EE968A0423E0FEA3BE7701D39CCD6A015DF1D2D85E40",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbbn2c16.png",
+      "sha256": "8FCFD031A5B716201854FDAB25691FEED6CD3ED7B713A51B94E1F43FC63FE0C1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbbn3p08.png",
+      "sha256": "8EB43A6020FDA8ED7C8C9B88B974EF794EE8452DB29212AE7E5C11003BFD76A3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbgn2c16.png",
+      "sha256": "49711EE271F96099521B83B75D58ED2F76D42ED46CB3C06656FDE2CAD697CF59",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbgn3p08.png",
+      "sha256": "6F798628935A021FE446DCE3D62861D1F7369AAF01BAD10DAA4917C5ABCCAD7D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbrn2c08.png",
+      "sha256": "8223D8B0C5F84B149F0C1F0E1F658346E07FCBD03FFC02B2E9EEEA1481EB19BF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbwn0g16.png",
+      "sha256": "01E86F108B244BDEE4D72E384ACED8A62369965CA2993EE6EF88F131C647F7D1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbwn3p08.png",
+      "sha256": "978B28CEC43BD219517083B63661BB30A7B9CDF9FD4476AB4E70844565980D51",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftbyn3p08.png",
+      "sha256": "7B4EB64B4BD7EB36417752873DDACA027CE77A07F474B2AF569F4EEA1E984111",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftp0n0g08.png",
+      "sha256": "A253E055D8CD94049CD95E9392E7AA60F3D5C922A8F0CCCB84762B0C5F547545",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftp0n2c08.png",
+      "sha256": "5DCED3FDE56B950E61CE86F4AD54458336F66389CE8CA68524D4FD8EC546FF5B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftp0n3p08.png",
+      "sha256": "DA40DDB18BD45DB32ED03DC89E2250B096D808EFE975A88477E4F5A91A4677C9",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ftp1n3p08.png",
+      "sha256": "50BC927FE6CF1816454A7C27F8C743734BE8DB45E37E5EE3EDE540F4E895E6C5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn0g08.png",
+      "sha256": "75387BEC61EA3FE41CD25045378683ED9BCD34A5A02F7DD77DA60235B28DAC3B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn0g16.png",
+      "sha256": "DBD3442BACED21B4A8FEDFBB6AFF4092C3CA9130C5D08EC89CE7DD8D02166139",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn2c08.png",
+      "sha256": "67AC80581C63559889A9F5D5BA8F70AB1E77D304A2E54B916DD23953BF7D3FC7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn2c16.png",
+      "sha256": "7DCF933F1920C4564756596A8B2B7118D0DD4394F95173E32A79C5275E3C9D0E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn3p08.png",
+      "sha256": "B91D91EEEE3EFEF90BF9A4730422C3E39A07D163AFBA8567AB870AB91418D1C8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn4a08.png",
+      "sha256": "CF7543F7077D3FAB986E03B73808FE68173A56D20CF1457B50D0E4EF05391694",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn4a16.png",
+      "sha256": "11B160D4EC5B43B430F7587BEE0F01A6EC5A9087B0F611D90805DFF4F9E25B8D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn6a08.png",
+      "sha256": "30E559DE4768346E8F55B340B0F29CA17B259E2DA2DE614F1FB21D4F747DD396",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/ibasn6a16.png",
+      "sha256": "35EEA9E75F8A4ABB003A5F6C265078EF779856C75F5D68FDA26EC55F322F497D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbbn2c16.png",
+      "sha256": "733A3F940D41B320AE884BA74339BC94EC8AD5F5A37479EA23B19C1E7B0D0274",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbbn3p08.png",
+      "sha256": "4DD0EF44D942AA43FDD57A4A56C794201D27B2F6228008927DB0A4F3D469BFFB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbgn2c16.png",
+      "sha256": "733A3F940D41B320AE884BA74339BC94EC8AD5F5A37479EA23B19C1E7B0D0274",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbgn3p08.png",
+      "sha256": "4DD0EF44D942AA43FDD57A4A56C794201D27B2F6228008927DB0A4F3D469BFFB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbrn2c08.png",
+      "sha256": "D98223A9A3084F34609BB5DBF55B5CA156559743240BEF3406466775A9950E9D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbwn0g16.png",
+      "sha256": "8367D01B7D0F926F6C89D6E545735A50CD35815BA7C13367AD5B0489069BD735",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbwn3p08.png",
+      "sha256": "4DD0EF44D942AA43FDD57A4A56C794201D27B2F6228008927DB0A4F3D469BFFB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftbyn3p08.png",
+      "sha256": "4DD0EF44D942AA43FDD57A4A56C794201D27B2F6228008927DB0A4F3D469BFFB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftp0n0g08.png",
+      "sha256": "497C7E4BABCA68371B11291BDBB4D682E397DC586D0DABAD5CD349DA76CF2BB7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftp0n2c08.png",
+      "sha256": "DA119C4C2C4AA520AE32473D6F789D5F0602AE9F39C033971CDC6A95A29BFBAA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftp0n3p08.png",
+      "sha256": "C3D318F544FE2A54BD252BFFFFD1C4C5F79CB3D0F863B9BD12052D88FBF1BF3B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/iftp1n3p08.png",
+      "sha256": "4DD0EF44D942AA43FDD57A4A56C794201D27B2F6228008927DB0A4F3D469BFFB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/ibasn0g01.png",
+      "sha256": "03C0C52FB162AA247817B982A4378220BE36543C5249C5953B4981BB44376A0D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/ibasn0g02.png",
+      "sha256": "8DCBB64630B4D8950DFA915B633FCC86ABC152FE110938C0D2EA3C3468E6E630",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/ibasn0g04.png",
+      "sha256": "A6162CD894D3BDA80DAB0E20CE256EBB60457757B7D28159A1584CE7D12CD4D0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/ibasn3p01.png",
+      "sha256": "6283A61B1F7344C0CFA741076D6AED4A16A6BC5582E81DB8DD7374A34230B0DF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/ibasn3p02.png",
+      "sha256": "8818C654FAAFBD3C19A9584BFC93FA45BD413E550B513D2BA8B57E907B2ACC72",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/ibasn3p04.png",
+      "sha256": "7A7331A28190B89AAFEF3C8E41D9D65659B1939FA87A14446570373B1832C865",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/iftbbn0g01.png",
+      "sha256": "1EEA6F2448E9D3F4365B34D1F849C057C7199564F18CECAD07C3A362926B11DB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/iftbbn0g02.png",
+      "sha256": "82324D48B769628D4D8A4B6E7830C6D7DC778E5656D6E1E7556F4E53737A1DFC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/iftbbn0g04.png",
+      "sha256": "47D393150DE4CEC7152F1ED61EA25BCA9DE628865E37AD735E7F162C58340916",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/interlaced/README",
+      "sha256": "A1A95D9394275CB8C2FDCA33AEA8D947B5414ACD66B1CF9F14A0ABC583BA4EFF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/pngsuite/README",
+      "sha256": "5EFE36F32A7AE167EB9F2541A47691FBAFA2608F848689D3071BE0780F062881",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/powerpc-vsx/linux_aux.c",
+      "sha256": "600FA03269BC1D2A1A058DCEB4620A3BC0B569BB77171535E273865B0751223C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/powerpc-vsx/linux.c",
+      "sha256": "155F74B408955BED18366590C908BEEA465F63149DF814CB5EE24C4540C0A8D8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/powerpc-vsx/README",
+      "sha256": "61B41632624430EAFA40619DC0FAC743C21D7817B1B0CA1670ECD876F39D1AE1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/README.txt",
+      "sha256": "961FE8F79C2A9DCFED27A84E62E436A0755D4E2643F496C422C4141D207A5A02",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/bad_iCCP.png",
+      "sha256": "0C1EC5ECE28D8574E80A3842939E8939F3451C71E8B2E013DCF26A80D292168E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/badadler.png",
+      "sha256": "3614BBE9494F6374567CBF897E022A16ABB8EDD3F166745CE73A2F472EEF6136",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/badcrc.png",
+      "sha256": "EC5B6A711EA2325404EA56575DF2F8A28292E5EF15A950F42A1D39CE06A6A96A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/empty_ancillary_chunks.png",
+      "sha256": "BDC133D532C03CDAA6B6A8188A722C3845D4B2F76E89C63E1C70C1BF6A364BE7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_bKGD_chunk.png",
+      "sha256": "082AEB6B4AB247FEF9BA5D4E45807942878326298D1DF625B605D1DA0801F454",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_cHRM_chunk.png",
+      "sha256": "AC630E5172BAEDE942F4B6129C8B12468B5C723E443CD8A470EDEA2A8EFA1B5D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_eXIf_chunk.png",
+      "sha256": "DEF32EBAC5A7C25AE469C5EB228D71F78D746EDBBC088BCAB13E3AEFCF92AF23",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_gAMA_chunk.png",
+      "sha256": "C645113DE3AB585B92E0C0F626761F18271F65C60844230071F2632FE4F70895",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_hIST_chunk.png",
+      "sha256": "132F6A3BEF3964FF05BAD7F35F585D18680FA21ACD4F9B2E51B7FE665AABC713",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_iCCP_chunk.png",
+      "sha256": "81EFDCB97E6261332EE2D6D6C0761D3A51A22A5F432DA87D2CDB579629FE98E5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_IDAT.png",
+      "sha256": "E5080BAEC5E30C020CC75A16534FFA906AC1130234C511D774E0305408021B9C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_iTXt_chunk.png",
+      "sha256": "CF52CBAC99198BAF5E72E0D1423DE217AA9CFF327981356AB20E9B47D32AB0FD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_juNk_safe_to_copy.png",
+      "sha256": "85325CB6BC93BF513AEA184F610F856F306278AD6BEDD98935A0A96D9416D5F0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_juNK_unsafe_to_copy.png",
+      "sha256": "8F9EF7F8931919FC8A73D896FF2E3BD5CF233141DC6B7801E4FBE7C0C7B4037B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_pCAL_chunk.png",
+      "sha256": "AA551AF23F38A4477025A66A81C0D60A8CD5BBF20DAED3526B1427C89EF7666B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_pHYs_chunk.png",
+      "sha256": "96057FE3351AAFD59BA490C08EDEFCE40A1F2D03B168973AD97A34D0BE9D9EC3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_sCAL_chunk.png",
+      "sha256": "8C10F1D5CC9EFA236A9A9DDC337ECCA60D877C5D496FF0864BF044F446B88C3A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_sPLT_chunk.png",
+      "sha256": "0E1B57826471471792D4F36FC5A6F14F0C91D3D2A3D96AAF4EF59AF941EC838D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_sRGB_chunk.png",
+      "sha256": "985DF4412486A50B1738D0152E177CF6CB70063081C8475D0B72CA33F8E1C708",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_sTER_chunk.png",
+      "sha256": "10B7EBF8AF5730F6886B433742BDDAB4949FA08188BB2E3CD5DEA186839762C4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_tEXt_chunk.png",
+      "sha256": "0C9F65CA8FF8E756B834E624AF837B2C97CF91E42671C7042FC937C0CE677A14",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_tIME_chunk.png",
+      "sha256": "60CC784EEBA739354001E1023DE7553A78CC32D6C5554C297F12D74B6E458F67",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/crashers/huge_zTXt_chunk.png",
+      "sha256": "B5B9231E7464FFD30D681829BAA032160137672C4D783885D765C4C87222917E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-1.8-tRNS.png",
+      "sha256": "83F2309FE4EA2C06109A9FA8B0A507AC58BA5B7D41B0C1CDA13138C4A7622CB8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-1.8.png",
+      "sha256": "3D173DCEC82B8C878BF65DFEE7799D05FAD0117B68CCF56D260FA5F1EDDC42DA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-linear-tRNS.png",
+      "sha256": "106F15335FB98D96149113F79657F2C1BDF3E939B2E8D6BE8A4C94C995E9F931",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-linear.png",
+      "sha256": "1BC53E1E00C6E21E0BD1D7CF40904948366303F98C7FF6A4463D142B4802385D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-sRGB-tRNS.png",
+      "sha256": "17CF26259F3BA6A6B70F9FF972996DFC83F73E95A7486DC3CBA9699C8473C6D1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-sRGB.png",
+      "sha256": "44C5D094008A2388B4D3088B261EB2AF668CC800F4D11FCB828FC24E47913A19",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1-tRNS.png",
+      "sha256": "2E31D68E0073B66C8077F5DB7CBDE1DC7EDCF0A66839B1330B9CC972F4F7A604",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-1.png",
+      "sha256": "C747F0A2B921C64C2AC85E58A44710A1559A87AA8D9FFB26FC7CB616A085EBFD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-1.8-tRNS.png",
+      "sha256": "5B7B3179A4AD997F1D12AE020CB28536D89E71086118BD93E5774CD2DE14E236",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-1.8.png",
+      "sha256": "5B7B3179A4AD997F1D12AE020CB28536D89E71086118BD93E5774CD2DE14E236",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-linear-tRNS.png",
+      "sha256": "4F079601662E06FA01DBBFB09A6E0E5D154E084F52E97ABC4F9C142EC3AFF755",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-linear.png",
+      "sha256": "4F079601662E06FA01DBBFB09A6E0E5D154E084F52E97ABC4F9C142EC3AFF755",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-sRGB-tRNS.png",
+      "sha256": "7528A538E8CA97F49569DC58616314EFA113AAC96E959F168DD1AA91FD6D4F5E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-sRGB.png",
+      "sha256": "7528A538E8CA97F49569DC58616314EFA113AAC96E959F168DD1AA91FD6D4F5E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16-tRNS.png",
+      "sha256": "F150B76C824E4870322D6564A214A8EF00B4B100D5FD6F5BA551F6F242005BCC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-16.png",
+      "sha256": "F150B76C824E4870322D6564A214A8EF00B4B100D5FD6F5BA551F6F242005BCC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-1.8-tRNS.png",
+      "sha256": "2339A4DA318D49E1F7AB1881893801D4597FCD1BB34B6A0A566E1B88829F6343",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-1.8.png",
+      "sha256": "409565119D3783E9F31637871FD39BBDF55BAB0991DD593324461B85475B76F5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-linear-tRNS.png",
+      "sha256": "314690B2ED9949B3C0B9DB646BEC9E1BBDCD2460960A80816B19F57F9679D463",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-linear.png",
+      "sha256": "24F8AA3B3F28A693C58E92AF8BA1240244894886E64CE36FB5CA4F0B33E799B4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-sRGB-tRNS.png",
+      "sha256": "E51C60E394FB8AB61E6550F6EF3B167D61F610B2E1C58983B8FF2FA80F0677D6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-sRGB.png",
+      "sha256": "61910A8564FF4251E7DBC8F2043F85B981817F36C0C3FD2CC0DCFBA90468056F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2-tRNS.png",
+      "sha256": "C36D10C8498BBE148BC44D41E0243137E47B07402DFB8E58978D1A9B5029CABC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-2.png",
+      "sha256": "9578CB4D1FC771B10A1E7C048D78CD22E39098F915513DD6885B7AC596D0C476",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-1.8-tRNS.png",
+      "sha256": "6CF0E2DCAEEEB7746401DB10630604E3B5B5CBF958C1DA5DE69371C0208C9203",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-1.8.png",
+      "sha256": "9921E23CB5A23980FDA74AC5A09C786608C7D8C33CFE07CA5BD715609ADF0BA6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-linear-tRNS.png",
+      "sha256": "0AAA42F91DD242A144E49C1BB896C170CC5261D9B04EB299EA1BB7BAF25A606E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-linear.png",
+      "sha256": "160E41E774B6C1DE8F247CD76F959BB5B1033A2E99F9F2AB57F20380F18BA2BD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-sRGB-tRNS.png",
+      "sha256": "B61A35601140C6BFF052EF32D1DF2287DF23BB9244853392E06DC362B5EFE39F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-sRGB.png",
+      "sha256": "AE1BE17BF3F6C4F9E918A78CBAD376854F4F76580CA56583829B466EC74FCDA4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4-tRNS.png",
+      "sha256": "217248C079A0ED7896803A2BF5D9719B6060EF898314A5F6AB898C6C4349F341",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-4.png",
+      "sha256": "480042992A4AACE736B7F85E3957EEB5F00CBA6F403D1A299A0041B06D442012",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-1.8-tRNS.png",
+      "sha256": "CE8031E8A126ECBBBC7DB125BCD257050E8243DE2B58FC70F6D72133F29D5C35",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-1.8.png",
+      "sha256": "EC9D366875F40F08B13BBC5F8FD679D97BD1221D98D1358FD7CEC1107697F353",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-linear-tRNS.png",
+      "sha256": "A2A557651DB88D89072293202D53CCB52FE126CFD4DBD5C5EEF21BB896D7BD24",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-linear.png",
+      "sha256": "1E92F0D4BCA22C8857D99608027A1E1BE45A93EFE22D2A7D2626C49A7A462961",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-sRGB-tRNS.png",
+      "sha256": "538A6040F599C19DBFA652728A39BB3E4CAAB04E08F03556CA5A6397D5D96B68",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-sRGB.png",
+      "sha256": "98475C6238165FD682DDBFB937AD9CCFBCEB7ED31DD6F82DF6B538A1FC8B5CB8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8-tRNS.png",
+      "sha256": "6E14DCE9350FC40F7EE542D1DC788FBF6C1C0178515EA8B76FFA0B18BCF54E8A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-8.png",
+      "sha256": "5C52E4295AF12673CAF6E9BB5B690A4A50DDF807EC9DDCCEEF4D1D5AB5B914A4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-16-1.8.png",
+      "sha256": "5F13D6371DB68D41D3564465CB7FA781585966C27BF53FFDDFBBBA67FF6F33CE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-16-linear.png",
+      "sha256": "2C4C428CAF6B37BC16FB1A8DCAEE2765114195ECA7FD995053DBE5803636E53C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-16-sRGB.png",
+      "sha256": "F6810AE417083DE5FBCFE9375B1C98892C389EFCAE9726C89DABBCFC6554D394",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-16.png",
+      "sha256": "DC3444BD2457C7C3414359BED6F05D1A5B84C08186B3B54A9AB4A4C503775F63",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-8-1.8.png",
+      "sha256": "3FCACD9656324B5FC86D35DB1975292013DC10C789080E1693A100E544EB4536",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-8-linear.png",
+      "sha256": "92F93403A4337E88A441D7AC99BCE62EA74DF0C7766476397C5A476C214F54A5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-8-sRGB.png",
+      "sha256": "02EDD1E34627DE45FE9268237BE35DC108776A19F6B6B8714E790E843FF3770D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/gray-alpha-8.png",
+      "sha256": "C0E327F49E2B0DEDA69811CDF20D36F2FF54F9335E11647755AD4473A6F1408A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/makepngs.sh",
+      "sha256": "DD98D977C9488599A8C91C94670C38196AF1534BF3E89692C082773F22FF6F7E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-1.8-tRNS.png",
+      "sha256": "B4CF6A8C47E460A1A4AD29EC2916269D213CD3DD772F1F4DCDB468367234C22B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-1.8.png",
+      "sha256": "5C39A0828FF4465C0EE94A1A2FDAD3F9C48F5872FFE9F03346CCD5AF123F1ADB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-linear-tRNS.png",
+      "sha256": "85B8E3FDC8F8F2CF428AA9E17D97BE9BCA6505CA6A1B7AE959493561513CF1F4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-linear.png",
+      "sha256": "E178AA539CCE738E48FF3EA5F89DF613B145CD11E5FA92B7EDF603F6C07AB117",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-sRGB-tRNS.png",
+      "sha256": "714616FFFFF6390217351421F090278445006DDB6001EE26F6FADC60DBCED4A6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-sRGB.png",
+      "sha256": "EDF70BE4BE4A8FD9ED389D08CFF57187D30BDE76BC84E9792213460896E95095",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1-tRNS.png",
+      "sha256": "682529F498010270F8CA43AAAC3C6EC201E1D7F7D6C25CE4208AA8FA5419967F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-1.png",
+      "sha256": "D7C22FED3B7C656A01EB341120D9A2C2CD385999FF8AD92861EAEE77332F2A29",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-1.8-tRNS.png",
+      "sha256": "FCB00B3D3483DD39DA6300BAD6F69C99E73FEAFC7F949090C676B026217371E9",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-1.8.png",
+      "sha256": "1EF69808E99C802C3E9ACF9DF4C746EF56213A182B0E4EDC7533F04700B00F72",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-linear-tRNS.png",
+      "sha256": "528FCB15D455644F10B29764EA803C7D7A4C805CC8C472E81E6816A0BD8E9421",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-linear.png",
+      "sha256": "106005D948CE3BF2E98B63B8C6B101211AB75CE09E81AB49A55A609F01A574E7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-sRGB-tRNS.png",
+      "sha256": "83617B93C4CEAE9D189D4F525AEA06482C597EE00D27ED2EC94A9339D16701CA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-sRGB.png",
+      "sha256": "25348858E2C849A810D52CBD3CA5753627B3FAEF68A4ACFA4323538DCFB1D8DF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2-tRNS.png",
+      "sha256": "F965AA727B47AAA90F72B9F0BE8280DFA6BC3DB2B63B5F61873E7B1E21EAC18C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-2.png",
+      "sha256": "E28B2664C9B82A67EBA425D2FA28B8810FCEC2D9583F4CFFEA987CF40707EC05",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-1.8-tRNS.png",
+      "sha256": "5BF570C503F6A61DBA15650AAA0A0E5811B67BF16C4AE6406BE80425FFF8E8E0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-1.8.png",
+      "sha256": "851647F2626636281C4B12FDD818FC6F3EA991CCA1FCBD8B00FFEA06F9AF55D3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-linear-tRNS.png",
+      "sha256": "EE2D0BD72FF9603E15F5F859AB2A772B4A147D20AB4287D1BC1858F19882E8A2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-linear.png",
+      "sha256": "45AB6301361D74C977B06A48EC20F07416C379181C0B20D9EFFC178904A156A5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-sRGB-tRNS.png",
+      "sha256": "B3B48702322C452194BAC9CF6636980330F1CF3447372AC8EF3571A1AE80B46B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-sRGB.png",
+      "sha256": "D102574A943AFA20A71719CE0C057AADC301BC53AA3CF93D172D037520A9D9B7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4-tRNS.png",
+      "sha256": "413A87AEC95575901FB82E00868F440B926DF17F2FFE54A41B9AD0A55C2BEC9F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-4.png",
+      "sha256": "A55A9EBE7D8B5E1CDAE732F2869D7CA5895D2F646CA1155D4DA732F6350F779B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-1.8-tRNS.png",
+      "sha256": "F29DDB4399DDDAFC811ACD720A9A3F40664DFD1D8263F1397A329FC1EBAC4281",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-1.8.png",
+      "sha256": "0CD86A57DE1413269B2474682DCD487FF0AAF1D8B7F1305483DF42A69F58AFCF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-linear-tRNS.png",
+      "sha256": "8E9292DBE39AD9FF8652F325ACFD47F72D81FCB10206B4813507D9090A88D585",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-linear.png",
+      "sha256": "0090CB6D1BA6AE49D0612104AB2ECD0B284D20550A8AA62ED9FC92EC440C2DE0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-sRGB-tRNS.png",
+      "sha256": "7E1465ED17F633B6DDE5DA989A44D910B815FFA78E77892864AB2E2AC56D6261",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-sRGB.png",
+      "sha256": "C9BF765B2EBF3E29D9B017A752A8B98E961F28053D1413D329C269762E3391FA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8-tRNS.png",
+      "sha256": "4B7760D6C0D44763B35253C44CF821845525E0EC3322FB469E6A9FC2B27476B1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/palette-8.png",
+      "sha256": "9FAAA11262E79C423E51AADF7115AA2632787B2F657B1ABF2E562E33ED51FB7D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-1.8-tRNS.png",
+      "sha256": "EFFA3BDE0F578E4E650288219AD157D32F2AB89C7580BFC9B69A7B23D1D80283",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-1.8.png",
+      "sha256": "EFFA3BDE0F578E4E650288219AD157D32F2AB89C7580BFC9B69A7B23D1D80283",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-linear-tRNS.png",
+      "sha256": "F1CF85C2B1C3A5798849365C6E69F0B9A0E27EBEEF5515067EFB3B6325C903ED",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-linear.png",
+      "sha256": "F1CF85C2B1C3A5798849365C6E69F0B9A0E27EBEEF5515067EFB3B6325C903ED",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-sRGB-tRNS.png",
+      "sha256": "5E97879A1C29411E0B0CE45B0D3C46A12346E7B71780B84AD192014F26B2BC55",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-sRGB.png",
+      "sha256": "5E97879A1C29411E0B0CE45B0D3C46A12346E7B71780B84AD192014F26B2BC55",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16-tRNS.png",
+      "sha256": "77A6388EED4C26761B1B45ECA905F88A9267B2A3324FB4606D3E253F431F56D1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-16.png",
+      "sha256": "77A6388EED4C26761B1B45ECA905F88A9267B2A3324FB4606D3E253F431F56D1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-1.8-tRNS.png",
+      "sha256": "CCB82ECB0653DEAD1E0040AE2F3AF1AB77911236D1E064B81A6F0C854B0EAC46",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-1.8.png",
+      "sha256": "327589867A6A3A21FE17FFC55B29F34CEB8446CF87BC4435C80AA098D8AE7B4A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-linear-tRNS.png",
+      "sha256": "E13DB73750B7E03ED838BFFE4E09EF7108ECA63B7B9623ECDCACC67BF1ED2AFC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-linear.png",
+      "sha256": "3146D648D36F1E5242630C176B799F1DAE0D3A43B3569E0EDE008393F0674D6D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-sRGB-tRNS.png",
+      "sha256": "22539BEAA7EB2C3DE9F75DB214B1BE06A0A8EB61558F53052181B8CCFE412349",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-sRGB.png",
+      "sha256": "4F94DFDB92ACAEFFAB3AFF43FBAF935FE0E5816566792B56A75A9F8802028E7E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8-tRNS.png",
+      "sha256": "42D6F96DA278FA6264A9E267CAA4CBFC75DDF0734EF67187E4C4B2D29E2D26FC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-8.png",
+      "sha256": "3407F9F64AE6D26DD41AEA534732465DA0F8E9F9C8BD7BCE91EE97FD2DADF4E0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-16-1.8.png",
+      "sha256": "DBC6DBD15B7C2826BFB7EF8207A18A962B14D1CBB3B6D9A83B3D09DEDE19DBFE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-16-linear.png",
+      "sha256": "56C640FD72BC0EEB057BA67C87010F5538A7E99EA8572151E39EAB0FFCAA3FCA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-16-sRGB.png",
+      "sha256": "F287DC434A985A9478AADC0F8FE6C6053899EA61735EC15F41DB47816BD184D3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-16.png",
+      "sha256": "3AD2152EE0DE2AAA8745757A9FF5E90A30B6E84365BD90F450286EB2734BD78A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-8-1.8.png",
+      "sha256": "C0CB7269692C2B307CD72989CAEFF43C3654BE18FF485855DDAE5E40461803B8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-8-linear.png",
+      "sha256": "EB5A2B9B4055A9F138BCB0D9595C6D18771DE98CE0D4AE6563FA965A29BB1CB4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-8-sRGB.png",
+      "sha256": "DB1AEC1B05BCEF91031EBCAF9E8139867585F15136348126112B2F5D210FF86D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/testpngs/rgb-alpha-8.png",
+      "sha256": "B9E359C8C77848CF4621FF1AE7BB033A1933044D4CA85E132B1E262E87B80A25",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/checksum-icc.c",
+      "sha256": "D53F0677AB7D0DDBE4730D9EA8EC66FD1A529952C15937C146B9A11D3EDEB205",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/chkfmt",
+      "sha256": "4DE594F79DA1727EB44BAAE1D4EF88C9AC25C53F99CCD64019E66DEB8E00C4EB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/cvtcolor.c",
+      "sha256": "D3DB07DE09FFF6CF9E813A81070694D3941AA71A4C9FAFBEBCA4F1FF95F141A2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/genpng.c",
+      "sha256": "48B8DEE0B804F20C1745B5B04C5A6D4CB907C345FC12D066669067E74ECD8D77",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/intgamma.sh",
+      "sha256": "CEB8E66BD40955D4A3E79A8BC2BC8A8DF6EC3BCEB7995D54EAD59BE47D79CD30",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/makesRGB.c",
+      "sha256": "D7DCD128BDA263F52855B73FE764BD352FDDAB3911ACFE716BC4D01693E795DF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/png-fix-itxt.c",
+      "sha256": "DBD2888BE966A8BC4CB8D1E35E78D2BC9D5202BD4224468CB0CD1BC824A10E4A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/pngcp.c",
+      "sha256": "5B7B91F36017F820FF09DDE7777629C1026349B50482162E78DC407A74AB3846",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/pngfix.c",
+      "sha256": "6023884B4AA029BCC19C212FB135B273790CEBB34DCEF68DD10D5C1F8950E150",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/README.txt",
+      "sha256": "DBBFB52B1D0A1FCE57E00E9F4F1A2BA96A5E8261E17756232B05186CD810B268",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/reindent",
+      "sha256": "ADF46F9D702C6D33B21A2E7BF89C0A7EB9D24CB5EF11CA914D41E6659B3B7468",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/tools/sRGB.h",
+      "sha256": "A6441218BB172F5E0B9B8354462ACBC3D6550C797BB7EBFC841347AC11DF80B7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/cexcept.h",
+      "sha256": "C4619441C43D8E9DB674EE8EAEFD1F66325584D08F00E40E72261F5F0648ECEC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/PngFile.c",
+      "sha256": "D3411406BFC61C1DEABEBA034D0BCF047981BA793B591A8A9F06BB40C0CEE234",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/PngFile.h",
+      "sha256": "7AE986E6AB7CB27C3C2F24CCF89A22DC75777CBADA927CBE8528EC8444799AEB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/README.txt",
+      "sha256": "441FAF9EB6E23857E216ABEEA1F5AEDD89C594ECC5AE9F0DC4B5047B732B2993",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/resource.h",
+      "sha256": "81C419886773576F9F9C02891437C14CEB7EA3DD825AB41CAC1B0D2270216147",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/VisualPng.c",
+      "sha256": "C7F0A4FA13C0B9E1216E19CFB67312CB476CCEFCE598209826CFF40FC8DB685D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/VisualPng.dsp",
+      "sha256": "8DB20718A8E865326E7C705C0E999EFC5407038AB2595589A54961DB091264DE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/VisualPng.dsw",
+      "sha256": "15A0C35692C77CB9E2CCE2893E70631A3906E157E6B01DA13F493850D9CF4C66",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/VisualPng.ico",
+      "sha256": "879B9013A27086540FBB94731CA2C83F4B404659B014689FA9D6F17C3251E46F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/VisualPng.png",
+      "sha256": "AC61CC20E8EA21FA6C0CA301F141BF9761645B8A8715585D9052E8407DDC3DEB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/contrib/visupng/VisualPng.rc",
+      "sha256": "3E03C903345EF738D7607A5BA86139BB377C80F30E572C52478EA5E640FF8A98",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/depcomp",
+      "sha256": "561B133CBB3D0806480302A72EF4FDA57E3546107DEC6BC570F01C8E52DED09F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/example.c",
+      "sha256": "82B0815B6BDE29198F8DE1E4EBC1A6C681F34F137E4F9C187E578ACB233F817C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/INSTALL",
+      "sha256": "65E32E796F7E6C4E83114ED5AFC3992C78CF57016EF4EBFBFE5565634BA99CBB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/install-sh",
+      "sha256": "618B9AFE95659E12966F090232B2E713946F1C162915C8385DFFF71F34EACD58",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/intel/filter_sse2_intrinsics.c",
+      "sha256": "326FF8DAAE853217A012217777F432D504F62D9F9C3B938C6374185285293EAB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/intel/intel_init.c",
+      "sha256": "42718BD9A6B66FA6544890098E7B5AE9ABF0503BBB351C31F3C1058469E4AF3C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/libpng-config.in",
+      "sha256": "03225B535108C4031CBAB5C7A1FDD8A60EDB4806D01E8C2CE80C1B8DD36E2883",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/libpng-manual.txt",
+      "sha256": "2E7715977D4B92F91B5B36558914BE90988F59EC2DCDA9DC8EFBE842BBCDE0DB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/libpng.3",
+      "sha256": "D38170FFA126EFD48863A3C224AFF72E86EE2FD73DD21E3DCEA6533BC0BB44C4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/libpng.pc.in",
+      "sha256": "5E51311E6029C62BD63BCE25B25C74C82B661FF6EF798E2611B80FF780CBAC8F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/libpngpf.3",
+      "sha256": "C8D33FBAD152826E192563686244C351872426917A56029A684B66C913BE643C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/LICENSE",
+      "sha256": "BF5E22B9DCE8464064AE17A48EA1133C3369AC9E1D80EF9E320E5219AA14EA9B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/ltmain.sh",
+      "sha256": "34FFAA53E9BECCCCE1CEE4F149A3B1CBBA3C4CDA06AB7DFAF1AE905EA4B2C0E3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/Makefile.am",
+      "sha256": "E456936DEF8FC2FD3CFA7D757FE7879DC1D9258D37BA474631F74BF15B293FDD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/Makefile.in",
+      "sha256": "4373EAA3E55AF0479EF994F6CCDA1C57DEBD195FF8DB4B7477F8B27E6AB9D32B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/mips/filter_msa_intrinsics.c",
+      "sha256": "618AE3B5C150E24FD1AF7B80B07AB99E2DC1F9CD86D0418D65E2829E5DC9102F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/mips/mips_init.c",
+      "sha256": "A24C4EB23A6CEE7395A597379BE95B836B3D4A143B888B9B4E2EC126A9BC5BD6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/missing",
+      "sha256": "387D0E5E99A2574F38D58CEDAC996C3FC720B4A86A03EB87F36D7852B4E80204",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/png.5",
+      "sha256": "C12FE9B24313754DFE3F61076C46E0D7796B0CDFB1AD5D81BE5CAF7D8CF16434",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/png.c",
+      "sha256": "076016C5C68222B59B3634BF4730DBF5E0D11825FB077E1FCEBFFF1802E9B41F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/png.h",
+      "sha256": "F8E248049A97831F5E9FB24EC0C7C6B7CACB3B3BA7303300B4F5B2B90BAE3C40",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngbar.jpg",
+      "sha256": "DAC6B8AECEF465935B9445B8F134AE0D66069F01D0B05FCDB42F6FDF45972F7B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngbar.png",
+      "sha256": "A0D210E0261EB720677C61B59245B653EB3182CC0E089282971443397527F89A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngconf.h",
+      "sha256": "0BA884E89C5BFA8F86AD9286FEDC4D26BB6F51F0DBA7AAAF67E70BAA6FD17A30",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngdebug.h",
+      "sha256": "58941A11DAEEE436541B19684F711EFC84354E9C36A3BE274315A412BE219E45",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngerror.c",
+      "sha256": "EFF6D2C20C58C2ACE633AAE6E2A0CAFEFC0A81C1E8F7A3717B0AFCD1266AF6E3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngget.c",
+      "sha256": "EDEE02D7D95D99A6AB94660C91D47B39F037F3CA3883F97EB7F8AFF37A976661",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pnginfo.h",
+      "sha256": "87CB3EFC4DCF22B46F2A01225D5C6EEA7722753D85CB4E6F69CC48BB61B7687C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngmem.c",
+      "sha256": "9DE067F559B202F63BE02E26CC6BD6E320131727DE5533EB51728B50AF5C4B3B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngnow.png",
+      "sha256": "3198A5D8F197D6B45A7124390C245A886BE0BE9B8E7891CFC7525AD65FBEB0A9",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngpread.c",
+      "sha256": "408D18C3226201A1FC6433FAE88B9B28C5A2DEF2462DCEB5B6952A787ED77282",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngpriv.h",
+      "sha256": "CFD75FF2FAD5095512437787DFBE178FE746C31C2F84D247796455FBEE42DE2F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngread.c",
+      "sha256": "04DA40A295A22C6B151B91A20940D2A6D0F98287DCC548A10E4AF24B82A595A7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngrio.c",
+      "sha256": "E82F31B39701AA872F9C38A66E98D3D58FA2C681E2D027543404D5E52312A92D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngrtran.c",
+      "sha256": "13CDED3E936938EBF42C75DDAC7C853094D3B5FA614495ADA1F81540D36CDB31",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngrutil.c",
+      "sha256": "60FCCDEA9DB5574A3783DEAA1C7E55C4EAF63A2CF1E2CC183DFA3644B4276FE2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngset.c",
+      "sha256": "C05F540E61C84F448F0EBFDAC21414F621788436BA83CFF28B2624141B66A738",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngstruct.h",
+      "sha256": "47C8D2BDFE616D6316785A420512EABF8746BB1B56E7B2E8CB1B2AAD3D75EC63",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngtest.c",
+      "sha256": "EEC118620F24A6603523395CD1EB65D7AD71118D3A918BFCA2B0AF810074587F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngtest.png",
+      "sha256": "546F711F1F5B493AD7A79A5EC0C37F30E35F59BE97B92731A9DDB01A225DF5D8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngtrans.c",
+      "sha256": "7897D8E254C4A4D5B4531217BF91383C4F82AD542458EFA9530ACF56C9B3B39B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngusr.dfa",
+      "sha256": "064423707D7981D1477F20DA3EC5852079CE09236DA49BDB7E524111CD684C7C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngwio.c",
+      "sha256": "C598DB8A3D4232C23418199C047A784A735307DD655486FCB7D4EDC34B753418",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngwrite.c",
+      "sha256": "C8024698FFB538565AFEB5615512DCC6E7205FCDAE4F46AFACC420E7CBDA8CAE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngwtran.c",
+      "sha256": "81A5E4EA609250ECEE20C8587AA429A3CB728D2197A1B96841A34807032FAE60",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/pngwutil.c",
+      "sha256": "433A3451E9398D3DD6AF4AE10727AC62692B150CF785DE21C4C919EB16C729F5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/powerpc/filter_vsx_intrinsics.c",
+      "sha256": "4EAF07FA65666EB5EDD27C937E0090C55811147816F7D9FF38681DB700BE3D0E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/powerpc/powerpc_init.c",
+      "sha256": "44B2404B43C4A358748129B446B7F119C6A4B8CC4924B89BD5E9D37CEAA783FB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/owatcom/libpng.tgt",
+      "sha256": "10AE0AED1FE4B3013F99F7BBD5A81699A73BBF7D459C424799C0F5F8387605E3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/owatcom/libpng.wpj",
+      "sha256": "72B084812585ADA86522122FD6AB2068CE5B983883BFA8EE3C98FB6B9F177A95",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/owatcom/pngconfig.mak",
+      "sha256": "11EAF037E3CC1292423064B4A3B2BF5337ACC54DB100BB8BBA60D49D9557B2B9",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/owatcom/pngstest.tgt",
+      "sha256": "029861EF755CCB92C248CF0DB0FEBE892C1F0761387148A7CD71F32B34C50E22",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/owatcom/pngtest.tgt",
+      "sha256": "A38682AA0E53998BAE5BB9DBEDFDBE77D066F9CE12D0DA72B53AD3131C04762A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/owatcom/pngvalid.tgt",
+      "sha256": "9CFF66C909622067C63C8618FA5D2927167046365083C3DACB26D6DA6DF2C8D0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/libpng.sln",
+      "sha256": "F324452926D8011CDD2EC605369F389E50106628CA29924C984DF87F7F02BFCC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/libpng.vcproj",
+      "sha256": "C296E11F894194BFA7BFB3CCC1995A57D5A704DE75F0F1A019F9CBCCF413E706",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/pngtest.vcproj",
+      "sha256": "8B204903867E59D90AB285BEAB1C977A0BE3806CE61FABB27AA79B77E70BAA03",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/PRJ0041.mak",
+      "sha256": "E13EA694F472B819E9A77A94FBFB77B39227125E418463291FE3B00CDA754C9F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/README_zlib.txt",
+      "sha256": "50AAE87CCB273D03BC54E4B20DBC2B4D3FCC523CB3F411C4A028908E0587E2DE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/README.txt",
+      "sha256": "6EA48B2B051362F546D11E4EF0D1656CC67788BD2A08A25DDC6B8BEDA3B68D62",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/visualc71/zlib.vcproj",
+      "sha256": "E5D2ADDC212C43F859C9A977B7806A414EF3D3AD3D0C5E7DFB15109537E7E670",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/libpng/libpng.vcxproj",
+      "sha256": "B07A6C6783F12313F6791E19DC57D7A37B7ED05FA697F987042AF8CEA9680AEB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/pnglibconf/pnglibconf.vcxproj",
+      "sha256": "BF9849A97B0B0DB40464C423BAF6C03BB9E520D2415E5BAB9C806A9017C82E4E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/pngstest/pngstest.vcxproj",
+      "sha256": "91B30834F2550E149837C64C4E464F25751E1007CFDA03EEF847716FF9A9F45E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/pngtest/pngtest.vcxproj",
+      "sha256": "09C1ADCF4908EDAE03D2B341EC2A0BAC7F2F3542D6783961A96222383F1D661A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/pngunknown/pngunknown.vcxproj",
+      "sha256": "702981CCE6660D562956AF79BE70CC37081483CBB1D96E57F73280EEF991A1C0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/pngvalid/pngvalid.vcxproj",
+      "sha256": "BA479A02E3892772330AED45D24FB6A88AA6AE02076B9E01686E1A9FA743162C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/README.txt",
+      "sha256": "B9AF89E48A9C2A23EC2EA42FD15A3D039C8B99D09F9EA65B99CA81505C790444",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/vstudio.sln",
+      "sha256": "EC8FC6BD9E1F89EFBC315E0FDF5FD7EECBB7FB7638F482EBEEAE3CE516CF78EB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/zlib.props",
+      "sha256": "67C3E32C4A55E9766384F953A2D115011CCB18777EF6360A9572C00A99226907",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/projects/vstudio/zlib/zlib.vcxproj",
+      "sha256": "268D4E1DE0E44DFEB68A5546EF106D50C20840321C708BEAD082124996CE471B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/README",
+      "sha256": "10AFE3D5B455164D261F1D65B9AB7DB7BFFFFAB9825920B48458DA15813815F5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/checksym.awk",
+      "sha256": "506E043CFEDB5E47D77D6A6A5B94F0533185E32CD76F23FCE5CE3C5E492E31A7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/descrip.mms",
+      "sha256": "937E255A11EB049ACBE7F3A18D5769D627CB6D500650F89CEB788D64E5850D6E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/dfn.awk",
+      "sha256": "3E9AD17FB65DA2D438CE505378B4523B70013AB48D4539E8FE2B9E528C34BF71",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/genchk.cmake.in",
+      "sha256": "B49208055DF1B96A87F24E191EC31514E706E94AA7C76EF293E556F1EF01FBE8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/genout.cmake.in",
+      "sha256": "AA303597CBEA086D552317560D5816A240750DD74119E13B9FBA4ED2F831BA20",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/gensrc.cmake.in",
+      "sha256": "B83745B8D8680CF74755B43BB016A666FE45CB65345B5A43D3BE8D93CEA7B205",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/intprefix.c",
+      "sha256": "2493E5AF28099DAB055E08A6A8E14663515A5C4569B31418D2E50592FE3CEE4E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/libpng-config-body.in",
+      "sha256": "28A2FA8A623AF007EAFBB09429AF0759584C3C633A74A2A7253D412F2A458D89",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/libpng-config-head.in",
+      "sha256": "134CF82638702A213D9AD2AC2E85B037CD94A866C2D77E0D5D4354827D6DD319",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/libpng.pc.in",
+      "sha256": "0E05054856C0F19A1AC791FC70D3E2171D69BC81FDDB89AA4A990EB3808D0EC8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/libtool.m4",
+      "sha256": "94EBC155F41E96E5CB8762A2661E0D39426274E1B2B930BFB6D99C680A041C58",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/lt~obsolete.m4",
+      "sha256": "26FA3285C35DD6AB00ED1E466BA92A17E4655E01897731EC18A587A4CF5E4F8D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/ltoptions.m4",
+      "sha256": "E77EBBA8361B36F14B4D0927173A034B98C5D05049697A9DED84D85EB99A7990",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/ltsugar.m4",
+      "sha256": "5A6735CDA60E0BA0D1B706C0EF648F5D096298DA46DAEFD9CDECDB6A0F4584D3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/ltversion.m4",
+      "sha256": "A27B754709DE61575197BF5A980696C98AE49DA3F92F0DE8EE7F42DD543B7465",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/macro.lst",
+      "sha256": "50EB2FD1F9FEA0DEF8C07E5B16399EA174AF5088625AB9F59EC74BD1109E934C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.32sunu",
+      "sha256": "7805930AB706B4EBF80B0E43A0690404D59B3FFF01DA81CA954DA49D8122AE48",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.64sunu",
+      "sha256": "0738B2C5A4F79AA35CA2D2C0BB36DD38B66BBF974318ED3A3BD735488B0CD43D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.acorn",
+      "sha256": "4B283A1C50BA1A974A74A20A8BBD74AF74C8863A8A860A5877FAA56E727F962A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.aix",
+      "sha256": "35D7D684F8F42C7F55560AE65B500F956E9FA7A964B65998B8698027153218AE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.amiga",
+      "sha256": "13A4DA7809260A83ED8BA56F45280F5FE7FF64FFC5AE7F9B13E5BB6BCF280611",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.atari",
+      "sha256": "8A881491B932E2F151F6CCF29D98C804D87A90D55035921C965F6B99D9938B4A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.bc32",
+      "sha256": "99016C0817E432446C1AE4E4F1AA0E81CBDE407A0021EAF211819EDB3591A57D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.beos",
+      "sha256": "9038D3431DF18A8D342E01EC7FF2FC73F5AE83ABA5FA0809F6156646960EA9A0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.cegcc",
+      "sha256": "5AB9E4B904A539CBA77D988CAA967FB9EAA567C877179C6718301836225CE837",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.clang",
+      "sha256": "96E2AB2B2E0EEF94CAB735D3C0F21D00F844B3AA391A54AAAB0906E6426030C5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.clang-asan",
+      "sha256": "08F31709DE5452B5A66CDA5F0B65E8069D417CEE46891B01F3C6EF71E1DE7A7E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.darwin",
+      "sha256": "C688F05F9723866957C1D8159C1A475447F14F98E1BB71B718EF0E35286D00EA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.dec",
+      "sha256": "C5CB83429B8285C4DEA76E65CE6AFB2A8F1AD44FD60692F1C222E8477E82F579",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.dj2",
+      "sha256": "02CB8A502942A405040B8BF70D3CEBB3286E8BD0542BD01A6117C0E0F6E174B1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.freebsd",
+      "sha256": "AEC63B63CCA7677CBD9B65BEECE879D41967DEFCE9083D2946087762FD931CE4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.gcc",
+      "sha256": "45D4FC527A61B43FB13EC1DF6FBA6B14495F922DF358149E6F77360B4EC0B318",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.gcc-asan",
+      "sha256": "D18944FC9DDDFB500A570160122EFC4001171B540CAE1311B361510321EE5829",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.hp64",
+      "sha256": "9311775BD7A0B69DB8EF1B94621C8657EA89813BC2A95CBC998887B077B602A3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.hpgcc",
+      "sha256": "37CD5A248F9D14D8335DF8760B13CA696D22AFE2E28FEC64281B53955879E235",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.hpux",
+      "sha256": "46C95FBFC37789E911758B6467108C3695E9C051CC7DCA139FF175DD576BE471",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.ibmc",
+      "sha256": "3B14DB61C3905941E44A241FEC9D72D98A0FA1493C5A2A8DA7F2EBADFC782B62",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.intel",
+      "sha256": "21383A256C79920EB2D59ED68B035B69BD79321F90154BFDE778D2FB69779576",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.linux",
+      "sha256": "E4EA714DDAFDC2639807B9E70D44985816339CAB681B64E2554C6AE20A29922A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.linux-opt",
+      "sha256": "E10FA1C5055135BE1E1DF750CA4555711EF0C3E816BB4A842F1B3DDDC8B6F1DF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.mips",
+      "sha256": "3B30097482D4917B6D19E0BDEA932A229EB576DD2840991A23671A8B13978093",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.msys",
+      "sha256": "788BC2FF628128F9C6880A6E7F770B266F635AA9BDF542385D5999C1C901CBEF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.netbsd",
+      "sha256": "414F0A0DED5B3BF9D3C57537BA146A6F5B079BF1B89D42EBB054614D2B28EF9B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.openbsd",
+      "sha256": "4531805EF1249E8100EB753C2FF7B764F7E0E72DF5CFE791E3EDA3A90AA747CF",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.sco",
+      "sha256": "82F922906A4FC0BBA1FB01F0C2EFA6E001F9EA20B4ABAD8E3AD7069387C065B6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.sggcc",
+      "sha256": "D9F113351F49AFB19921215A5DFA2220BB6CFE9D5F90F232731014CB5F449516",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.sgi",
+      "sha256": "C4965CDFAD5E470204E56DB842B8260917665211AE2E80888FB46A80F0EC420C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.so9",
+      "sha256": "C5C1D0BF27DF9EF4D1F11EF27BAC88635B823BE4B2D84B0870EE19DFC260A029",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.solaris",
+      "sha256": "B3F80D50CF9918D525D57A340D52276FEF992E59DB2219B0F22D060A532CDC19",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.std",
+      "sha256": "5E8AA31B427B1D232DE4D0049205997E95889DBDBC1127FF0B665A190E678CB6",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.sunos",
+      "sha256": "D8259DDF1BD13F01996D9AAD3997F6F4C3AD4ECA928107F9C13074BB835D5B57",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makefile.vcwin32",
+      "sha256": "E0F3C4BDDC580052FE89575C8133F38DBFEDFAFECE947AA0A6A42367F7D72385",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/makevms.com",
+      "sha256": "97CE330A2BB1E8B8B9204D3637E4A10EBBDBBE7AB8814BA11990A0DD19D9D3D8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/options.awk",
+      "sha256": "FD7CAA04E79CEC7C32133FAD752D688DE4233D720840E15B5EA7349677814939",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/pnglibconf.dfa",
+      "sha256": "AC3252475A5B6896C6D06B78E89A139D2312CDD31DB5860BAD0D9AC46387087F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/pnglibconf.h.prebuilt",
+      "sha256": "3FC519A430E8F5BE8B3962483E054373536CEAE432168CE171B5C5E19B4694A3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/pnglibconf.mak",
+      "sha256": "5610734C12A82F79112E2E340EDC47AD0B102179F28CEF69CACCE47BCF022AFB",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/pngwin.rc",
+      "sha256": "01C7CA452FDA9DB1FB0C3F1D8B0084902882C3B47370A7121BF5067E0A830BED",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/prefix.c",
+      "sha256": "1795EA9C310E52A0B66905AB2DF493F4166229262AB27B3EE26FD26BEBB82DF8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/README.txt",
+      "sha256": "B650088EBD19D0F0BEF83FB1F81CA2E0970E2C0C1B5ADF1541DE6584AF023CAD",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/SCOPTIONS.ppc",
+      "sha256": "C372CE5EC69906DE29755DF05EBEC4074B36A3B29A73BCBB982EAEE2C15E35F3",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/smakefile.ppc",
+      "sha256": "F35E8535AAA24F69B873C229C7D13FF8F36258B7DBBDED05FDD767597A93683C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/sym.c",
+      "sha256": "87AFCB67A44C611D25A3465100CFEFD10B95C1502AC3F2FFFCD20C8297F9DA32",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/symbols.c",
+      "sha256": "35FB7E6912D42E8CB453C4716147A8B065A21337492651BE58852B9121198EB4",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/symbols.def",
+      "sha256": "982CCB7F8D7C882B07A11F01C3E6ABCFB5A86752C1A3C896E70901280E099E6E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/test.cmake.in",
+      "sha256": "7D0FCA6737DC1C09839CF1B2B2752ADBD3F9BDC830599314DD98884A3656DB00",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/vers.c",
+      "sha256": "F13ACC57A136D0DC02C6F5D2AB12F660775411444DF487557060740DCA245E97",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/test-driver",
+      "sha256": "C20C14E985DD15C6B4BA7E7ACB7B9295CD17A72D3B1ABC8FA2B71471D2242B4A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngimage-full",
+      "sha256": "0730592EC39A577AC5443972A66FCA7A60CEFBF42FF245DCE0A3A237397520E5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngimage-quick",
+      "sha256": "02BDFA55B0DAE7C2D90B976ABB07CF834E250EFA14A235E41EEE92FC371C787A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest",
+      "sha256": "F11C4618D8E088E930D4B0FC4EC247B1B4676D1C64A1BD4AAC4FD5718C81C773",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-1.8",
+      "sha256": "FE641C6FD93CF41D47AA0C8EF706E2778BFE31D2178363F65BD3AAD6FAD3E893",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-1.8-alpha",
+      "sha256": "9CF340964510934FBF941CC7F94BD3487DD1CBB34762032436D642AEF57EFCD1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-linear",
+      "sha256": "B10502511557BA48894EA49DD7DDD78B9A49D487DE17C779BC8F0FC922668E45",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-linear-alpha",
+      "sha256": "21313BAC9340AC9C984A5248043165EA135903CE958671524BD43ED5677E7D04",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-none",
+      "sha256": "FDF0D87FD8B7BA93D3CCD92B6C8B31641F5A202490710A66A033CFDC18E1BD80",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-none-alpha",
+      "sha256": "C1D520D72AFB9931DBBC99BCBE00DBDEDD66DC507857F3B483566D2A4DC98A5B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-sRGB",
+      "sha256": "FF35EFC1679D163620BF991983E10E51C768C504420016601D6520E580C863BC",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngstest-sRGB-alpha",
+      "sha256": "D901A6D13C7961D3FE3DFDEC53109CE5B1F2F24FA10F9A61C2630B97B6745784",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngtest",
+      "sha256": "63EF1705D840B128F9B1A5A03B60B73E3E2492887D42106DCDB6D8E3E743B2A2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngtest-badpngs",
+      "sha256": "3158F6F62F82CB9EBB1CC8A3E4D0EB34A4BD780512D5E79DC749163B67B9E0C5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-discard",
+      "sha256": "454A6EBD1A1BCB839CEE5E48287C8D47EB77951C3D529B165A6FA36557E9DC38",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-IDAT",
+      "sha256": "DB0E73C2E6AEBC3DE4CB264EE54C1A9CB717036D111FCDB70D031EA99710DD95",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-if-safe",
+      "sha256": "C93E983853DA0AF6D70B6C7C39B0299A128E1D8EDDB65EBB0CCA0E8EEF907EC9",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-sAPI",
+      "sha256": "19E4CAF2F4B791E89605FF186AA2F9E5ADC2040EE0C192DF5E67754EEA1FDD49",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-save",
+      "sha256": "3B246BC3D0DFE2D2C73746E2769DBD92241D32BB921A817DD7AAFCF42EF68B76",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-sTER",
+      "sha256": "25350E69EEC0EBB3FC802F25880BBB6D0BE3AF121444FE2ADD8BB2C446F95B97",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngunknown-vpAg",
+      "sha256": "77C24060E291E055FCC2ADD83391D0FFB0D8ED9A93C68A64F909FEABB3D8D14C",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-16-to-8",
+      "sha256": "0FB9F23365CE7081F038BF0240473F6AFD292BB2D0BACB533EF64293582F0ECE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-alpha-mode",
+      "sha256": "553C5C1B7B5145616E7B4CBAECCBD2C2CB45FC0C6B7FEFFA96ABDC6CBBB3CAC5",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-background",
+      "sha256": "DD2E8CFB6AF7BEDD0A6DE40A604A229D3B5F57B7C1E9C83AFA38D2966732C06A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-expand16-alpha-mode",
+      "sha256": "A4E1EFA1BA35F41682F98E4AADB953CEC935D8F89318EF7601FEB8C5026984ED",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-expand16-background",
+      "sha256": "53ED9FF8B566D9154D5FB2A0C3C4ADEBDB133A7BDD21DF8013ED276ABCC44B6E",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-expand16-transform",
+      "sha256": "98B632FB0D873D63AF217E2ABEBEE03E30A09BC8A8A7F1DCD24B30E77550D105",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-sbit",
+      "sha256": "9F74FC590646A0E40F7E61C597F7EF99DAF1E8EB19F68580C66F9C21592E01E1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-threshold",
+      "sha256": "B1024C489A39EF49F708BD14C6BB30800BB526A5595949C5A7107E924733E20B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-gamma-transform",
+      "sha256": "823B855E144475E83EB155DE5DFF467A624472C8B0983ADBDF7DE7F240CEBC96",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-progressive-interlace-standard",
+      "sha256": "8C0C003E6FF9D255169521E441E7DD5ED2DBC286DCCB25C876C92AE02B413363",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-progressive-size",
+      "sha256": "EE6E6104E29D544214184203928D4BABAF8F9422153A44ED82656302509ED854",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-progressive-standard",
+      "sha256": "70BF05831C00A0E6536A36CD1E9F6C0F69AC155E3C168D7664EEE79019976491",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-standard",
+      "sha256": "33BF8E14DFBBEA3718F3E592B252B5612B3BC17A1C188F9578C4C49A19B26ECE",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/tests/pngvalid-transform",
+      "sha256": "80C41EEB5C4580D120CC43CD45B6D8B371E675AA612A601D866AA281F47FF764",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/TODO",
+      "sha256": "0207FAD4E633E252ABEE1A9B0695220F1AA25E7940575FC1DF3FD9D221F3DF5A",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/TRADEMARK",
+      "sha256": "9C47B01500B4324091D85E3CA3335ADBDF6966858DD124F9FE85BCD1F705880B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1.tar.gz",
+      "sha256": "ED747514984FDDF095142AA85E983111F13D64B877B1065ED0D990F7ADB31EB7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit/recipe-original/build_config.json",
+      "sha256": "28A7256BCD4D258836D810F593D93E70B60B64209ECDBE52A12795FF388D408B",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit/recipe-original/FindPNG.cmake",
+      "sha256": "C6082D38F3E0A4AE9FC9585BDC5CD93310460DB7557A96528CFC2EC685FDAEC2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit/recipe-original/readme.txt",
+      "sha256": "CCA452A0931C21A8CF1F55976FC01CF7EDAE2AC71EB9D40296D01DE7F7A0E91D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit/recipe-original/test_png_windows.cmd",
+      "sha256": "78ECB856AB7B85891802515E51AF22B88A8BF9FA789414395EC10550B1F57BEA",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/FindZLIB.cmake",
+      "sha256": "B2662EB8469BAD3C2CF93E3EA797E3DF53C49AB4A9A1CE4C2AC119F7EF19BBD0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/include/zconf.h",
+      "sha256": "7F4E7F02C4C1B7EF830A8B4331E1BA04F34E97F2C0DCDD81F967FF16FD5EE6D0",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/include/zlib.h",
+      "sha256": "4DDC82B4AF931AB55F44D977BDE81BFBC4151B5DCDCCC03142831A301B5EC3C8",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/lib/zlibstatic.lib",
+      "sha256": "00842F0C5BE67674DA3A0C1369DA818FFEFF1DEA4F805BEB06DD50F84D5A4FC1",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake",
+      "sha256": "1A038819B93232499D513999C08B5DA719A19D7A0A3949AE33AAF760F7501597",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/FindPNG.cmake",
+      "sha256": "CE190B5CC887B590EAA37A268F310497BDD6FA235B15493952AC227E84C61018",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/NOTICE.txt",
+      "sha256": "C0C114E9B6B437F592C5E417EAFFC93CCFD692D58057F12542E51440F3923290",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/README.md",
+      "sha256": "DA29332FA8EDBE64FD25A9557362A75F7E7845636C759D05960E6942897E06F7",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests/CMakeLists.txt",
+      "sha256": "2A097107C923DAADB890513CFE89F1EABD1C85E277EF62E6136FB1E8585A3438",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests/PngConsumer.cpp",
+      "sha256": "1999081B6F7C2DF2E3F5F94F415B8D970965AE7493AAC4510C69C5FE04B40F24",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/VerifyZlibInput.cmake",
+      "sha256": "85DD1B979E0811B9B9F09D5EEAC706C6E88D557F8E6378E31A1B5A3769A5B2F2",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "matchesFreeze": true,
+      "matchesBefore": true
+    }
+  ],
+  "inputCount": 514
+}

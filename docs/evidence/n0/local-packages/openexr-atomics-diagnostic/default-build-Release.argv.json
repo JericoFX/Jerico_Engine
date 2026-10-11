@@ -1,0 +1,9 @@
+[
+  "--build",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default",
+  "--config",
+  "Release",
+  "--target",
+  "JEAtomicProbe",
+  "--verbose"
+]

@@ -1,0 +1,16 @@
+{
+  "name": "consumer-ctest-Release",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argvCount": 5,
+  "argv": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+    "-C",
+    "Release",
+    "--output-on-failure"
+  ],
+  "nativeExit": 0,
+  "elapsedSeconds": 0.129,
+  "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\consumer-ctest-Release.stdout.log",
+  "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\consumer-ctest-Release.stderr.log"
+}

@@ -1,0 +1,8 @@
+[
+  "--build",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+  "--config",
+  "Debug",
+  "--target",
+  "JE_OpenEXRConsumer"
+]

@@ -1,0 +1,4 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake:18 (message):
+  JE local d3dx12: output must be beneath this checkout/build
+
+

@@ -1,0 +1,10 @@
+{
+  "arguments": [
+    "-E",
+    "tar",
+    "xJf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1\\packages\\tiff-4.2.0.15-je-rev1-windows.tar.xz"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\extracted",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

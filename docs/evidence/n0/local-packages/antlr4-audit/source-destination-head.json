@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/antlr/antlr4/archive/8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz",
+    "method": "HEAD",
+    "status": 302,
+    "bytes": 0,
+    "etag": "",
+    "location": "https://codeload.github.com/antlr/antlr4/tar.gz/8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+    "authorization": false,
+    "autoRedirect": false
+  },
+  {
+    "url": "https://codeload.github.com/antlr/antlr4/tar.gz/8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+    "method": "HEAD",
+    "status": 200,
+    "bytes": null,
+    "etag": "\"6f778f38f215cc0f6647cea2bb819702533e8030f72b7584ea9cc873041c2a1f\"",
+    "location": null,
+    "authorization": false,
+    "autoRedirect": false
+  }
+]

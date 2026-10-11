@@ -1,0 +1,9 @@
+{
+  "name": "find-v3-wrong-exact-openexr",
+  "nativeExit": 1,
+  "expectedVersion": "3.1.3",
+  "requestedExactVersion": "3.1.4",
+  "diagnosticMatched": true,
+  "vcxprojCount": 0,
+  "reason": "First LANGUAGES NONE attempt NOTPASS: FindThreads requires C/CXX; corrected evidence harness enabled CXX and reached the version diagnostic. No target/library build."
+}

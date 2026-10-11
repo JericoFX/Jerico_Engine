@@ -1,0 +1,10 @@
+{
+  "case": "unc-output",
+  "exitCode": 1,
+  "elapsedSeconds": 0.033,
+  "expectedDiagnostic": "must be an absolute local path",
+  "diagnosticMatched": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\unc-output\\output",
+  "outputExists": false,
+  "outputWasExpectedExisting": false
+}

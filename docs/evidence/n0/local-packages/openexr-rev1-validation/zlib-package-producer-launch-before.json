@@ -1,0 +1,34 @@
+[
+  {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/FindZLIB.cmake",
+    "expectedBytes": 2084,
+    "actualBytes": 2084,
+    "expectedSha256": "B2662EB8469BAD3C2CF93E3EA797E3DF53C49AB4A9A1CE4C2AC119F7EF19BBD0",
+    "actualSha256": "b2662eb8469bad3c2cf93e3ea797e3df53c49ab4a9a1ce4c2ac119f7ef19bbd0",
+    "match": true
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/include/zconf.h",
+    "expectedBytes": 16885,
+    "actualBytes": 16885,
+    "expectedSha256": "7F4E7F02C4C1B7EF830A8B4331E1BA04F34E97F2C0DCDD81F967FF16FD5EE6D0",
+    "actualSha256": "7f4e7f02c4c1b7ef830a8b4331e1ba04f34e97f2c0dcdd81f967ff16fd5ee6d0",
+    "match": true
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/include/zlib.h",
+    "expectedBytes": 96239,
+    "actualBytes": 96239,
+    "expectedSha256": "4DDC82B4AF931AB55F44D977BDE81BFBC4151B5DCDCCC03142831A301B5EC3C8",
+    "actualSha256": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8",
+    "match": true
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents/zlib/lib/zlibstatic.lib",
+    "expectedBytes": 188206,
+    "actualBytes": 188206,
+    "expectedSha256": "00842F0C5BE67674DA3A0C1369DA818FFEFF1DEA4F805BEB06DD50F84D5A4FC1",
+    "actualSha256": "00842f0c5be67674da3a0c1369da818ffeff1dea4f805beb06dd50f84d5a4fc1",
+    "match": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "case": "existing-output",
+  "exitCode": 1,
+  "elapsedSeconds": 0.033,
+  "expectedDiagnostic": "output must be new; existing outputs are preserved",
+  "diagnosticMatched": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\existing-output\\sentinel-output",
+  "outputExists": true,
+  "outputWasExpectedExisting": true
+}

@@ -1,0 +1,115 @@
+Start testing: Oct 10 23:00 Hora estándar de Montevideo
+----------------------------------------------------------
+1/7 Testing: JE.LocalPackages.TIFF.Identity
+1/7 Test: JE.LocalPackages.TIFF.Identity
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "Identity"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.Identity" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF Identity PASS
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.Identity" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.Identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: JE.LocalPackages.TIFF.Codecs
+2/7 Test: JE.LocalPackages.TIFF.Codecs
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "Codecs"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.Codecs" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF Codecs PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.Codecs" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.Codecs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: JE.LocalPackages.TIFF.Scanlines
+3/7 Test: JE.LocalPackages.TIFF.Scanlines
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "Scanlines"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.Scanlines" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF Scanlines PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.Scanlines" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.Scanlines" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: JE.LocalPackages.TIFF.Tiles
+4/7 Test: JE.LocalPackages.TIFF.Tiles
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "Tiles"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.Tiles" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF Tiles PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.Tiles" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.Tiles" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: JE.LocalPackages.TIFF.Float
+5/7 Test: JE.LocalPackages.TIFF.Float
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "Float"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.Float" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF Float PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.Float" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.Float" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: JE.LocalPackages.TIFF.Errors
+6/7 Test: JE.LocalPackages.TIFF.Errors
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "Errors"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.Errors" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF Errors PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.Errors" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.Errors" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: JE.LocalPackages.TIFF.NativeFile
+7/7 Test: JE.LocalPackages.TIFF.NativeFile
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/Release/JE_TiffConsumer.exe" "NativeFile" "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1/native-file-roundtrip.tif"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1
+"JE.LocalPackages.TIFF.NativeFile" start time: Oct 10 23:00 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+TIFF NativeFile PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"JE.LocalPackages.TIFF.NativeFile" end time: Oct 10 23:00 Hora estándar de Montevideo
+"JE.LocalPackages.TIFF.NativeFile" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 23:00 Hora estándar de Montevideo

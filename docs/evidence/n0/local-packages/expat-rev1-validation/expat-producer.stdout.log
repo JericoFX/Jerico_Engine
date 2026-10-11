@@ -1,0 +1,98 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - not found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for memory.h
+-- Looking for memory.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stdlib.h
+-- Looking for stdlib.h - found
+-- Looking for strings.h
+-- Looking for strings.h - not found
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - not found
+-- Looking for getpagesize
+-- Looking for getpagesize - not found
+-- Looking for mmap
+-- Looking for mmap - not found
+-- Looking for getrandom
+-- Looking for getrandom - not found
+-- Looking for arc4random_buf
+-- Looking for arc4random_buf - not found
+-- Looking for arc4random
+-- Looking for arc4random - not found
+-- Looking for 4 include files stdlib.h, ..., float.h
+-- Looking for 4 include files stdlib.h, ..., float.h - found
+-- Looking for off_t
+-- Looking for off_t - not found
+-- Looking for size_t
+-- Looking for size_t - not found
+-- Performing Test HAVE_SYSCALL_GETRANDOM
+-- Performing Test HAVE_SYSCALL_GETRANDOM - Failed
+-- Performing Test FLAG_NO_STRICT_ALIASING
+-- Performing Test FLAG_NO_STRICT_ALIASING - Failed
+-- Performing Test FLAG_VISIBILITY
+-- Performing Test FLAG_VISIBILITY - Failed
+-- Looking for cos in m
+-- Looking for cos in m - not found
+-- ===========================================================================
+-- 
+-- Configuration
+--   Generator .................. Visual Studio 17 2022
+--   Build types ................ Release
+--   Prefix ..................... C:/Program Files/JELocalExpat
+--   Shared libraries ........... OFF
+--   Static CRT ................. OFF
+--   Character type ............. char (UTF-8)
+-- 
+--   Build documentation ........ OFF
+--   Build examples ............. OFF
+--   Build fuzzers .............. OFF
+--   Build tests ................ OFF
+--   Build tools (xmlwf) ........ OFF
+--   Build pkg-config file ...... OFF
+--   Install files .............. ON
+-- 
+--   Features
+--     // Advanced options, changes not advised
+--     Attributes info .......... OFF
+--     Context bytes ............ 1024
+--     DTD support .............. ON
+--     Large size ............... OFF
+--     Minimum size ............. OFF
+--     Namespace support ........ ON
+-- 
+--   Entropy sources
+--     rand_s ................... ON
+-- 
+-- ===========================================================================
+-- Configuring done (50.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/build
+Versi├│n de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/source-work/libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/CMakeLists.txt
+  xmlparse.c
+  xmlrole.c
+  xmltok.c
+  Generando c├│digo...
+  expat.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\expat-rev1-validation\expat-local-v1\build\lib\libexpatMD.lib
+-- JE local package archive: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/packages/expat-2.4.2-je-rev1-windows.tar.xz
+-- JE local package SHA256: c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925

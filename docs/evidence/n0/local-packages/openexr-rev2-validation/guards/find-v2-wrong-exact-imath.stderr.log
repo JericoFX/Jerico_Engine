@@ -1,0 +1,10 @@
+CMake Error at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:290 (message):
+  Could NOT find Imath: Found unsuitable version "3.1.3", but required is
+  exact version "3.1.4" (found
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2-validation/extracted/OpenEXR-3.1.3-je-rev1-windows/OpenEXR/lib/cmake/Imath)
+Call Stack (most recent call first):
+  C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:652 (_FPHSA_FAILURE_MESSAGE)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2-validation/extracted/OpenEXR-3.1.3-je-rev1-windows/FindImath.cmake:21 (find_package_handle_standard_args)
+  CMakeLists.txt:4 (find_package)
+
+

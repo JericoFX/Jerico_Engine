@@ -1,0 +1,31 @@
+{
+  "arrayNameInFreeze": "files",
+  "cause": "Initial diff generator used one common-prefix/common-suffix hunk and marked retained interior lines removed/readded; this check distinguishes source bytes from diff presentation",
+  "removed": [
+    {
+      "text": "        \"Gems/EditorPythonBindings\",",
+      "terminator": "CRLF",
+      "bytes": 38,
+      "line": 34
+    },
+    {
+      "text": "        \"Gems/PythonAssetBuilder\",",
+      "terminator": "CRLF",
+      "bytes": 36,
+      "line": 68
+    },
+    {
+      "text": "        \"Gems/QtForPython\",",
+      "terminator": "CRLF",
+      "bytes": 29,
+      "line": 69
+    }
+  ],
+  "expectedBytes": 3827,
+  "beforeBytes": 3930,
+  "currentSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+  "expectedSHA256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+  "removedBytes": 103.0,
+  "currentEqualsOriginalMinusThreeCompleteLines": true,
+  "beforeLineCount": 135
+}

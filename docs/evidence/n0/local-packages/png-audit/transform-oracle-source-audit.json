@@ -1,0 +1,22 @@
+{
+  "claim": "Packing+gray-to-RGB expected gray2 levels0/85/170/255, since upstream gray-to-RGB invokes gray1/2/4 expansion before conversion",
+  "source": "pngrtran.c",
+  "function": "png_set_gray_to_rgb",
+  "line": 955,
+  "exactRelevantLines": [
+    "png_set_gray_to_rgb(png_structrp png_ptr)",
+    "{",
+    "   png_debug(1, \"in png_set_gray_to_rgb\");",
+    "",
+    "   if (png_rtran_ok(png_ptr, 0) == 0)",
+    "      return;",
+    "",
+    "   /* Because rgb must be 8 bits or more: */",
+    "   png_set_expand_gray_1_2_4_to_8(png_ptr);",
+    "   png_ptr->transformations |= PNG_GRAY_TO_RGB;",
+    "}",
+    "#endif"
+  ],
+  "oracleEstablishedFromSourceBeforeFreeze": true,
+  "nativeExecution": false
+}

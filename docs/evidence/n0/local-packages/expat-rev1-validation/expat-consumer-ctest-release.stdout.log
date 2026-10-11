@@ -1,0 +1,44 @@
+UpdateCTestConfiguration  from :F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer/DartConfiguration.tcl
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: JE.LocalPackages.Expat.streaming
+
+1: Test command: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\expat-rev1-validation\consumer\Release\JEExpatConsumer.exe "streaming"
+1: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+1: Test timeout computed to be: 30
+1: CASE streaming: PASS
+1/4 Test #1: JE.LocalPackages.Expat.streaming ....   Passed    0.03 sec
+test 2
+    Start 2: JE.LocalPackages.Expat.namespaces
+
+2: Test command: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\expat-rev1-validation\consumer\Release\JEExpatConsumer.exe "namespaces"
+2: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+2: Test timeout computed to be: 30
+2: CASE namespaces: PASS
+2/4 Test #2: JE.LocalPackages.Expat.namespaces ...   Passed    0.01 sec
+test 3
+    Start 3: JE.LocalPackages.Expat.errors
+
+3: Test command: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\expat-rev1-validation\consumer\Release\JEExpatConsumer.exe "errors"
+3: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+3: Test timeout computed to be: 30
+3: CASE errors: PASS
+3/4 Test #3: JE.LocalPackages.Expat.errors .......   Passed    0.01 sec
+test 4
+    Start 4: JE.LocalPackages.Expat.memory
+
+4: Test command: F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\expat-rev1-validation\consumer\Release\JEExpatConsumer.exe "memory"
+4: Working Directory: F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/consumer
+4: Test timeout computed to be: 30
+4: CASE memory: PASS
+4/4 Test #4: JE.LocalPackages.Expat.memory .......   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.07 sec

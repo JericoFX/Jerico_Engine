@@ -1,0 +1,11 @@
+{
+  "license": "MIT",
+  "name": "d3dx12-headers-je-rev1-windows",
+  "schemaVersion": 1,
+  "source": {
+    "commit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "sha256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+    "url": "https://codeload.github.com/o3de/3p-package-source/tar.gz/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18"
+  },
+  "version": "headers-je-rev1"
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "Only BuildOpenEXRPackage.cmake and README.md changed",
+  "originalFreeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-freeze-openexr-candidate.json",
+    "sha256": "20FEED8A0C7AEF75930D37D54381C4A93658E2425C7BF169AFED68894DDECEB0",
+    "preserved": true
+  },
+  "freezeV2": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-freeze-openexr-candidate-v2.json",
+    "sha256": "7745DC711AC2F20AE812108434D5F338B7FCD88E0A3793496B8DB8BC664B8163",
+    "count": 1182,
+    "changed": 2,
+    "unchanged": 1180
+  },
+  "changedInputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake",
+      "beforeBytes": 8137,
+      "afterBytes": 8434,
+      "beforeSHA256": "09911D43A32129B2A9CDE35EADDF2E90B0139FE2DFC9211933D07915A3C8A2E2",
+      "afterSHA256": "FDB92E25F9E7B7338ECFB65A32570415FE3E343CC57FE89FC8AB375902C5DF57"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/README.md",
+      "beforeBytes": 7046,
+      "afterBytes": 8472,
+      "beforeSHA256": "808833D301EC7C4568ACD772DCA76A4EE57A12A0BBDEE44A6E60DADAAA05257E",
+      "afterSHA256": "52CC81F75C4C916441FE55ECF65F30308E5535AB0F4EEAE82E85422C69A17AA1"
+    }
+  ],
+  "probeSummary": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/diagnostic-summary.json",
+    "sha256": "9891E1044EF2C9A8CA5BFCE2737295E9D5F9D7C7C8173067F42D795BE765C2FD",
+    "scope": "Native isolated atomics probe only"
+  },
+  "diff": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-diff-v2.patch",
+    "sha256": "AD682FAB43F697CD6B1D7914DF1263CDF5B87BFB12AE42C9F5422D9D62C239ED"
+  },
+  "argv": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\validation-arguments-v2.json",
+    "sha256": "0D219066133D2A20EE8756ACEC2F1D06DF0EB1E2C34084F950D07D0943345880",
+    "producerCount": 6,
+    "consumerCount": 12,
+    "negativeGuardsUnchanged": true,
+    "producerOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2",
+    "consumerOutput": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2"
+  },
+  "writerExecutedCMakeBuildTest": false,
+  "status": "Frozen for parent review; OpenEXR package NOT VERIFIED"
+}

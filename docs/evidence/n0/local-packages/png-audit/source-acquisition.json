@@ -1,0 +1,15 @@
+{
+  "method": "GET",
+  "url": "https://codeload.github.com/pnggroup/libpng/tar.gz/a40189cf881e9f0db80511c382292a5604c3c3d1",
+  "status": 200,
+  "bytes": 1509763,
+  "sha256": "ED747514984FDDF095142AA85E983111F13D64B877B1065ED0D990F7ADB31EB7",
+  "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-audit\\libpng-a40189cf881e9f0db80511c382292a5604c3c3d1.tar.gz",
+  "tag": "v1.6.37",
+  "commit": "a40189cf881e9f0db80511c382292a5604c3c3d1",
+  "originalSourceforgeTagCommitMatched": true,
+  "githubRepository": "pnggroup/libpng official",
+  "redirectsFollowed": false,
+  "credentials": "none",
+  "sourceShaOrigin": "New measured SHA of official commit archive, distinct from historical package SHA"
+}

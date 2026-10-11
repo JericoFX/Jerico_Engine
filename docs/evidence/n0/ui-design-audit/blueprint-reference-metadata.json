@@ -1,0 +1,49 @@
+{
+  "repository": "JericoFX/JericoEngine2",
+  "commit": "304d9d2e13704e4967e82a8d5a13a5a506be01d4",
+  "tree": "300d83e5fe4082b399fa16063916bf5705add2a2",
+  "method": "Pinned GitHub tree metadata only; no raster blobs requested",
+  "references": [
+    {
+      "path": "images/40_jericoeditor_blueprint_reference_board.jpg",
+      "blobSHA1": "2156164e37dde576089a4474a9a3879b2c9cbb17",
+      "bytes": 8714,
+      "mode": "100644",
+      "pixelsDownloaded": false,
+      "pixelsInspected": false
+    },
+    {
+      "path": "images/40_jericoeditor_scene_blueprint.png",
+      "blobSHA1": "856aed2111dc11bf0fbc44befe17b20599470dbc",
+      "bytes": 2242480,
+      "mode": "100644",
+      "pixelsDownloaded": false,
+      "pixelsInspected": false
+    },
+    {
+      "path": "images/41_jerico_brand_icon_reference.jpg",
+      "blobSHA1": "25580527a8924ad56dc9a281fec6abb732425225",
+      "bytes": 8274,
+      "mode": "100644",
+      "pixelsDownloaded": false,
+      "pixelsInspected": false
+    },
+    {
+      "path": "images/41_jericoeditor_physics_blueprint.png",
+      "blobSHA1": "687b22bce728652666c4f27f55facf202d65949e",
+      "bytes": 2160183,
+      "mode": "100644",
+      "pixelsDownloaded": false,
+      "pixelsInspected": false
+    },
+    {
+      "path": "images/42_jericoeditor_materials_blueprint.png",
+      "blobSHA1": "5a2d62497b24ad7a2ac7aa91cc5f427ad27b830a",
+      "bytes": 2166301,
+      "mode": "100644",
+      "pixelsDownloaded": false,
+      "pixelsInspected": false
+    }
+  ],
+  "legacyNameMatches": []
+}

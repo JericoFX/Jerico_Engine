@@ -1,0 +1,8 @@
+{
+  "executable": "C:/Windows/system32/tar.exe",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation",
+  "arguments": [
+    "-tvf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1\\packages\\png-1.6.37-je-rev1-windows.tar.xz"
+  ]
+}

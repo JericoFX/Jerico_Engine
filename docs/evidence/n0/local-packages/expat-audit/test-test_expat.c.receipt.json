@@ -1,0 +1,12 @@
+{
+  "url": "https://raw.githubusercontent.com/o3de/3p-package-source/70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test/test_expat.c",
+  "headStatus": 200,
+  "getStatus": 200,
+  "automaticRedirects": false,
+  "authentication": false,
+  "bytes": 1386,
+  "sha256": "81738c9ff9134be6febfd6cd7541cae0b2bce81f5fd3382c166bedbdeaa76471",
+  "gitBlob": "4eca82c8a849b949f6751151677b256afc5d4d1d",
+  "expectedGitBlob": "4eca82c8a849b949f6751151677b256afc5d4d1d",
+  "gitBlobMatched": true
+}

@@ -1,0 +1,14 @@
+{
+  "head": {
+    "url": "https://api.github.com/repos/CLIUtils/CLI11/git/commits/37bb6edc5317e99af72ef48405e65d9ca5218861",
+    "status": 200,
+    "contentLength": 2617,
+    "etag": "W/\"f5ad22c11d996c2688e4b855e6603713c48a89798b39cad6e2eb63628c163e69\"",
+    "location": "",
+    "authentication": false,
+    "autoRedirect": false
+  },
+  "getStatus": 200,
+  "bytes": 2617,
+  "sha256": "f5ad22c11d996c2688e4b855e6603713c48a89798b39cad6e2eb63628c163e69"
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "reviewer": "parent",
+  "acceptance": "Source scope accepted for next original configure only; link/deploy/runtime NOT VERIFIED",
+  "actualDiffReviewed": true,
+  "verifiedFiles": 6,
+  "inputFreeze": "1A2CFBA5065746932558F96D8F47D4E267FB42C2F96500BCA8332295D9DF770C",
+  "receipt": "C2F632FE622145DB71694AA5FF3B04419C46E49E38601AD275754854688DE52C",
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "bytes": 3827,
+      "sha256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg",
+      "bytes": 9792,
+      "sha256": "B49C40BE47E7232DC0211C0DCD8D56A6ECD157720590A719449A9A38D27E01E0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg",
+      "bytes": 9382,
+      "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg",
+      "bytes": 9382,
+      "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg",
+      "bytes": 9382,
+      "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+      "bytes": 1418,
+      "sha256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988"
+    }
+  ]
+}

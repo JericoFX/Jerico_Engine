@@ -1,0 +1,8 @@
+{
+  "status": "NOT_RUN",
+  "nativeInvocations": 0,
+  "reason": "Harness rejected its own pre-created evidence directory because the script itself occupied it",
+  "scriptSha256": "f1fbc674585943ddc74592e10c85a579d41a36f7427b136f6e44207fbb68cba3",
+  "onlyExistingItem": "run-atomic-probes.ps1",
+  "sourceOrPackageModified": false
+}

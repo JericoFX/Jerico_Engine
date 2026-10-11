@@ -1,0 +1,47 @@
+{
+  "scope": "UI design recovery; two owned docs plus six provenance/delta outputs",
+  "count": 8,
+  "status": "Frozen for parent review, not product acceptance",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\EDITOR_ASSET_WORLD_MASTER.md",
+      "bytes": 14089,
+      "sha256": "901E365341F5B19AE45F779A40F924FDE4673B7449762F918AB598594F9EFFF6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\migration\\LEGACY_REQUIREMENT_MAP.md",
+      "bytes": 5774,
+      "sha256": "C93C89B742568829F1EA8A30A8FB800E95E6DA99EA480DA667B4DBE963C3C691"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\donor-JERICOEDITOR_MASTER.md",
+      "bytes": 9992,
+      "sha256": "049F72E149C1E5C95B17558E54D267ADC812BE389DA168E950FA0BC93CF2E527"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\donor-JERICOEDITOR_VISUAL_DESIGN.md",
+      "bytes": 7336,
+      "sha256": "E02D6F7520F5BA664E750B07FFC84F9D65666CB5D0EE5C7CB97BE67483D21EA7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\donor-provenance.json",
+      "bytes": 1225,
+      "sha256": "886E2B9EE722942AD36A51DE30F79FE53E34391C8A4CD57B02E4195C45DC8EFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\blueprint-reference-metadata.json",
+      "bytes": 1570,
+      "sha256": "2F77370519C169E3A0DC57ECD0C5579E7C733225A3F518EDE238EDC33E753F95"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\doc-change-receipt.json",
+      "bytes": 1380,
+      "sha256": "56D24379CE8986FD740DFB7957B5803322E40E987DE29088D128A9736A0D171D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ui-design-audit\\owned-documents.diff",
+      "bytes": 8619,
+      "sha256": "B0F694554EB2C6F89595B05E3B1D3EC9DD680A8354DF69EA514141C8953F7C4F"
+    }
+  ]
+}

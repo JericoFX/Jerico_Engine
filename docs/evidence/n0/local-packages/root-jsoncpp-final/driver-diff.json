@@ -1,0 +1,34 @@
+[
+  {
+    "before": "'build/n0-validation/local-packages/root-antlr-openexr-final'",
+    "after": "'build/n0-validation/local-packages/root-jsoncpp-final'"
+  },
+  {
+    "before": "'build/n0-validation/local-packages/root-antlr-openexr-final/root-antlr-openexr-assignment.json'",
+    "after": "'build/n0-validation/local-packages/root-jsoncpp-final/root-jsoncpp-assignment.json'"
+  },
+  {
+    "before": "'build/n0-validation/local-packages/root-antlr-openexr-final/source-freeze-root-final.json'",
+    "after": "'build/n0-validation/local-packages/root-jsoncpp-final/source-freeze-root-jsoncpp.json'"
+  },
+  {
+    "before": "2BBE66DB2F75D8D223BBFC61F6CD8E1A9A26C7219D2812301046078EA195DCCF",
+    "after": "544A7A75222108044CCBE42737569BC7173EAFE0444B153C1D02D63D099A51C2"
+  },
+  {
+    "before": "36CED3BAE28693DCAD99F89356B5ED2C72657C5B6CFE1A56DA6AE0A0A83D532E",
+    "after": "2C8496737E9D90609E47761EFDC8C7A6AF4D30BEE7BBC7BA28CDF857120526B8"
+  },
+  {
+    "before": "$arguments.Count -ne 46 -or $freeze.Count -ne 1953",
+    "after": "$arguments.Count -ne 47 -or $freeze.Count -ne 2203"
+  },
+  {
+    "before": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b') { throw 'exact local ANTLR4 override missing' }",
+    "after": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_ANTLR4:PATH=F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b') { throw 'exact local ANTLR4 override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2') { throw 'exact local JSONCpp override missing' }"
+  },
+  {
+    "before": "    @{name='antlr4-tree-before';path='F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b'},",
+    "after": "    @{name='antlr4-tree-before';path='F:\\JericoEngine\\Dependencies\\antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b'},\n    @{name='jsoncpp-tree-before';path='F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2'},"
+  }
+]

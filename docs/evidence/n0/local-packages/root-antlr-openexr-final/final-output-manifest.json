@@ -1,0 +1,56 @@
+{
+  "status": "FROZEN DERIVATION OUTPUT RECEIPT; PARENT REVIEW/DISPATCH PENDING; NO NATIVE EXECUTION",
+  "inputCount": 10,
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\cache32-manifest.json",
+      "bytes": 8373,
+      "sha256": "0ae274dd0867653f7d9a2a5c7f3d1fcf546a08b6cdea5a0d124d6b4de1a21769"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\derivation-proof.json",
+      "bytes": 4111,
+      "sha256": "cddc0c7a6192c85d2e0f8fd41c88a01a077bb26333970fd5c56625a3d69ec0a3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\DeriveFinalRoot.ps1",
+      "bytes": 12217,
+      "sha256": "1e3726d8c72edbe40ec49272bde37b7f22d679112b945a38046ca23c8b1830b2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\driver-diff.json",
+      "bytes": 1453,
+      "sha256": "c3b3943255bee7a7bd3314a6b877edf0d5aedbcd5239be9531c7fa5f583f0bba"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\merge-origin-manifest.json",
+      "bytes": 377450,
+      "sha256": "4e8fc2ff9de4aa5419e6d5940cc248d280cbd059110ff3145e0bb4fc8fb59a53"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\root-antlr-openexr-assignment.json",
+      "bytes": 9047,
+      "sha256": "2bbe66db2f75d8d223bbfc61f6cd8e1a9a26c7219d2812301046078ea195dccf"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\run-root-configure-antlr-openexr.ps1",
+      "bytes": 26826,
+      "sha256": "5fd4edaec14e30405c612ecec36fe9af38a1df7a562413c535ec196fb866fa6e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\source-freeze-root-final.json",
+      "bytes": 443626,
+      "sha256": "36ced3bae28693dcad99f89356b5ed2c72657c5b6cfe1a56da6ae0a0a83d532e"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\static-verification.json",
+      "bytes": 3542,
+      "sha256": "ef21d440b7d4451dd5dc85abac6b21d376f03228cea086454d0e2e0ca3d0b9cc"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-openexr-final\\VerifyFinalRoot.ps1",
+      "bytes": 6258,
+      "sha256": "c0b7315d3e312fee6753477dc126fda21dff78619221462ee2ff930c0ae6dc69"
+    }
+  ]
+}

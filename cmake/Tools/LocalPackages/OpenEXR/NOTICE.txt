@@ -1,0 +1,28 @@
+OpenEXR 3.1.3 and Imath 3.1.3 local Windows reconstruction
+
+Copyright Contributors to the OpenEXR Project. Full BSD-3-Clause licenses
+are preserved separately in LICENSES/OpenEXR/LICENSE.md and
+LICENSES/Imath/LICENSE.md. Complete contributor notices in library source
+files are retained under the corresponding source-notices directories,
+including Pixar and DreamWorks compressor notices. OpenEXR/PATENTS is
+preserved in full: DreamWorks DWA files use the BSD-3-Clause option together
+with its Additional IP Rights Grant for the OpenEXR standard. The alternate
+Apache-2.0 text remains present in PATENTS. No compressor is removed.
+
+The O3DE recipe/glue is Apache-2.0 OR MIT. Its full root notices/licenses
+are preserved under LICENSES/O3DE. Original exported configuration files
+and the package utility are retained; Find changes restrict resolution to
+this local payload and the audited zlib dependency.
+
+Recipe origin: o3de/3p-package-source at
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/OpenEXR.
+OpenEXR v3.1.3 commit: 697cc449cc589ed780acda88e79e6145ddcd121f.
+Imath v3.1.3 commit: 6dc0820482aeb24a22f520d7b165a410589648c3.
+Official primary commit archives are independently audited and hashed.
+Imath provenance is also recorded in OpenEXR/JEImathSource.json.
+
+The historical OpenEXR-3.1.3-rev5-windows package hash is not reused.
+This new OpenEXR-3.1.3-je-rev1-windows payload is built with VS2022 v143
+and has a new measured artifact hash. Namespaces, library versions and
+features remain upstream defaults; historical binary equivalence is not
+asserted. zlib remains a separately licensed and supplied dependency.

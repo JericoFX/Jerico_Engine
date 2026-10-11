@@ -1,0 +1,592 @@
+{
+  "archiveSHA256": "d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2",
+  "archiveBytes": 452948,
+  "memberCount": 90,
+  "members": [
+    "FindTIFF.cmake",
+    "JERequireLocalPath.cmake",
+    "LICENSES/O3DE/LICENSE.txt",
+    "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+    "LICENSES/O3DE/LICENSE_MIT.TXT",
+    "LICENSES/TIFF/COPYRIGHT",
+    "LICENSES/TIFF/o3de_patch.patch",
+    "LICENSES/TIFF/recipe-patch-receipt.json",
+    "LICENSES/TIFF/source-notices/libtiff/mkg3states.c",
+    "LICENSES/TIFF/source-notices/libtiff/mkspans.c",
+    "LICENSES/TIFF/source-notices/libtiff/t4.h",
+    "LICENSES/TIFF/source-notices/libtiff/tif_aux.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_close.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_codec.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_color.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_compress.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_config.vc.h",
+    "LICENSES/TIFF/source-notices/libtiff/tif_config.wince.h",
+    "LICENSES/TIFF/source-notices/libtiff/tif_dir.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_dir.h",
+    "LICENSES/TIFF/source-notices/libtiff/tif_dirinfo.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_dirread.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_dirwrite.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_dumpmode.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_error.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_extension.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_fax3.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_fax3.h",
+    "LICENSES/TIFF/source-notices/libtiff/tif_fax3sm.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_flush.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_getimage.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_jbig.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_jpeg.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_jpeg_12.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_luv.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_lzma.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_lzw.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_next.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_ojpeg.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_open.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_packbits.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_pixarlog.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_predict.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_predict.h",
+    "LICENSES/TIFF/source-notices/libtiff/tif_print.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_read.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_strip.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_swab.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_thunder.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_tile.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_unix.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_version.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_vms.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_warning.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_webp.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_win32.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_wince.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_write.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_zip.c",
+    "LICENSES/TIFF/source-notices/libtiff/tif_zstd.c",
+    "LICENSES/TIFF/source-notices/libtiff/tiff.h",
+    "LICENSES/TIFF/source-notices/libtiff/tiffconf.vc.h",
+    "LICENSES/TIFF/source-notices/libtiff/tiffconf.wince.h",
+    "LICENSES/TIFF/source-notices/libtiff/tiffio.h",
+    "LICENSES/TIFF/source-notices/libtiff/tiffiop.h",
+    "LICENSES/TIFF/source-notices/libtiff/tiffvers.h",
+    "LICENSES/TIFF/source-notices/libtiff/uvcode.h",
+    "LICENSES/TIFF/source-notices/port/_strtol.h",
+    "LICENSES/TIFF/source-notices/port/_strtoul.h",
+    "LICENSES/TIFF/source-notices/port/dummy.c",
+    "LICENSES/TIFF/source-notices/port/getopt.c",
+    "LICENSES/TIFF/source-notices/port/lfind.c",
+    "LICENSES/TIFF/source-notices/port/libport.h",
+    "LICENSES/TIFF/source-notices/port/snprintf.c",
+    "LICENSES/TIFF/source-notices/port/strcasecmp.c",
+    "LICENSES/TIFF/source-notices/port/strtol.c",
+    "LICENSES/TIFF/source-notices/port/strtoll.c",
+    "LICENSES/TIFF/source-notices/port/strtoul.c",
+    "LICENSES/TIFF/source-notices/port/strtoull.c",
+    "NOTICE.txt",
+    "PackageInfo.json",
+    "README.md",
+    "tiff/COPYRIGHT",
+    "tiff/JERecipe.json",
+    "tiff/include/tiff.h",
+    "tiff/include/tiffconf.h",
+    "tiff/include/tiffio.h",
+    "tiff/include/tiffvers.h",
+    "tiff/lib/tiff.lib",
+    "SHA256SUMS"
+  ],
+  "linkEntryCount": 0,
+  "manifestEntryCount": 89,
+  "verifiedPayload": [
+    {
+      "path": "FindTIFF.cmake",
+      "bytes": 3065,
+      "sha256": "50cbc71b081cf6ffb7d94240955f10cc7e700fd38f9a51cc060770e0ec9b0522"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "LICENSES/TIFF/COPYRIGHT",
+      "bytes": 1146,
+      "sha256": "fbd6fed7938541d2c809c0826225fc85e551fdbfa8732b10f0c87e0847acafd7"
+    },
+    {
+      "path": "LICENSES/TIFF/o3de_patch.patch",
+      "bytes": 1908,
+      "sha256": "7d80df4a02a6b3ba8f27cd3d8554b39a3b3e3202fcd86378337ab453ec05ecd5"
+    },
+    {
+      "path": "LICENSES/TIFF/recipe-patch-receipt.json",
+      "bytes": 348,
+      "sha256": "3ef25ba896152a5063107ed1860b79186bdddce009b7d78685300a29590956bd"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/mkg3states.c",
+      "bytes": 9543,
+      "sha256": "a75c1b21a7233fabb42690096f4f6eb398d345e5da26f3c00d0975fabafe0b17"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/mkspans.c",
+      "bytes": 2288,
+      "sha256": "80cfcc3e4438ebf7c9993dfa58ba5de70ddc217cbf3acde472ff7d94dd43d6c9"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/t4.h",
+      "bytes": 11321,
+      "sha256": "51876a996e2ff7dc5212f3bbc7cff6833a61b1311ed4e795269ea38d65cdc568"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_aux.c",
+      "bytes": 11014,
+      "sha256": "af0ab26748070c2e7e229e6e77b02549fa77dc2db592e51b481151ace6ed16ff"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_close.c",
+      "bytes": 4070,
+      "sha256": "45f207837063fd27b5821153f6e9f91b713eb0f075b5328af86c3ca6b8fbb735"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_codec.c",
+      "bytes": 5149,
+      "sha256": "bedc492d72825ab972090fb8bb4d0a13f594bf7c236c210961205a7a715f6594"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_color.c",
+      "bytes": 9489,
+      "sha256": "1d6af3f4a6a3b0bd2bbab70c61de5963a68b4d5b859b372f6f857724701a2445"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_compress.c",
+      "bytes": 7886,
+      "sha256": "390e117269d546675e1cca75d1627ce472a29d94deb179227a12bf7b85f8622d"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_config.vc.h",
+      "bytes": 3537,
+      "sha256": "0453644e0abf9b3ba3cd2f2172b403ccdeccaacbbee812be29f03e6146fd5851"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_config.wince.h",
+      "bytes": 1780,
+      "sha256": "b128daa1fa8076c17caea913c658171566702dc9d9ecd2e72fe67847a0675f5e"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_dir.c",
+      "bytes": 53826,
+      "sha256": "ffab237e780d586f9bd4778355fb4ee575abc811968739f4e28104e50bb7fe99"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_dir.h",
+      "bytes": 11526,
+      "sha256": "8f62fb1b0f9e50876f367d89fb20d776a711c25d7c8029e8bb35ba5f59cfd6f4"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_dirinfo.c",
+      "bytes": 63639,
+      "sha256": "dc83b3d3a6ed64d704b9e942cce0f33ce7de3868e0dc92a6393aa3e11744b725"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_dirread.c",
+      "bytes": 173166,
+      "sha256": "f79f76191aea1a103bd5af531c1a931785ee41dd96c6916a4a375de5036643b6"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_dirwrite.c",
+      "bytes": 117411,
+      "sha256": "958ed43c8ff466903bfd324f4a084318f0d657de53e38db86f89da1e74889ce1"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_dumpmode.c",
+      "bytes": 3789,
+      "sha256": "cfbdf204075950b5e6b04266953a4947b6461b205df85b1a2ef37d968dfc4392"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_error.c",
+      "bytes": 2339,
+      "sha256": "890f0435d8342e22f5d1362ac5a60b75fc327bb0ad19b31b90c087b57923d281"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_extension.c",
+      "bytes": 3186,
+      "sha256": "bfea0be4f6c0fe4a4f11593c60d1ffd8794f88c866d66922673a32c578f92ae7"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_fax3.c",
+      "bytes": 48050,
+      "sha256": "d2dc6c2d343cd94885fb676c43b5703f6ebfcbfa0e026d38edd1814294f7f1b6"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_fax3.h",
+      "bytes": 18068,
+      "sha256": "fe39f280b85ec46d38660f4b143d23759a84ad474c3fa6ca54a7be68e0225462"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_fax3sm.c",
+      "bytes": 104760,
+      "sha256": "7484907f2bd8a2439f582158e2eeef7f209780a411ea07e1b88ce74fa0cbbc75"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_flush.c",
+      "bytes": 5950,
+      "sha256": "35366c5c4b3f150173d6afa424d754fef3507f21299616551bc3c696c4825bcf"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_getimage.c",
+      "bytes": 81135,
+      "sha256": "2602a747f744f1e8ffb856fb640b670e6df48c0c0f297bf100256df610fe8cd9"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_jbig.c",
+      "bytes": 6072,
+      "sha256": "997bfc04a78389ecedd046c8f2fd4bafaf0a6ed7c4961cd1d494d97988a8d1c8"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_jpeg.c",
+      "bytes": 81026,
+      "sha256": "e80270b7f893f47bf2b4f07f347f069e61aee3361648efdddcfb62c21f35bea5"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_jpeg_12.c",
+      "bytes": 1742,
+      "sha256": "80a0756de58d80977c9264108197446bd134d1eae9673575e4f80e72ed4bc3c1"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_luv.c",
+      "bytes": 45045,
+      "sha256": "3eb6de6a3f1ff8cd891592ec96129b91272cb6386d38465a56613ff7e93122ab"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_lzma.c",
+      "bytes": 13537,
+      "sha256": "5f4a68fa06b4f0429165728a1eff5996f58584a892a1c8483bffc8c3ffb507e4"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_lzw.c",
+      "bytes": 33515,
+      "sha256": "d7fa65d356adbe96de923040a9440a02473c890dfd0e5b93a3ca02033650c6b9"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_next.c",
+      "bytes": 4927,
+      "sha256": "2e53763e1fc7a75487978734dd55709e93baaacdf5d86b1811cbb72517e9b490"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_ojpeg.c",
+      "bytes": 80853,
+      "sha256": "06a9717e1aac0156d76eb5a3dbfd7501bea41299989b6cecf1af1402c62ad8fe"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_open.c",
+      "bytes": 18669,
+      "sha256": "5b2b67049b1bbc0e7d056ebd6be403bd5e05eb17d7cb9fc6c540bfd5be27b61c"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_packbits.c",
+      "bytes": 7524,
+      "sha256": "ec8f6ccdb3fd56207e68a1c875b7a24eebdd77852854147b2481c37055956f4d"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_pixarlog.c",
+      "bytes": 43718,
+      "sha256": "54bd6413afd3b1bbb5d962c0ffd974d2927391981fe56c0c2803c19f685e8aa0"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_predict.c",
+      "bytes": 24384,
+      "sha256": "5341ef6527f804f4658b6473fdc545419e01b0ff3257c1d31d647863cc989d01"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_predict.h",
+      "bytes": 2940,
+      "sha256": "a60ba5a496a8f7fa4ca6db9f9287d9b92cd740626d1b574bcdc170f000f98b97"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_print.c",
+      "bytes": 21088,
+      "sha256": "11d09a077dbde158e590fff7efb6f59593218f6b22a34e18ccc672281529cb5c"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_read.c",
+      "bytes": 53779,
+      "sha256": "48d118f24805c46202e2bf32f4e834d9e430e5ac6a8055aee6788d117a8e6f48"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_strip.c",
+      "bytes": 10989,
+      "sha256": "2884377e35530681004c5f261bc72c1bfd46e5802f4294c9833f8309c9ffbc24"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_swab.c",
+      "bytes": 9773,
+      "sha256": "944ae88f488b2fc319072b66f7e49235e32b6cb30c2392e37e71b082b44649d3"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_thunder.c",
+      "bytes": 6433,
+      "sha256": "6000d83150c0b3d2f99cab20b86253ab518e30f4d0a12d3649ea2318704426e3"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_tile.c",
+      "bytes": 8733,
+      "sha256": "dd251be9a04122469140e3151e51b57b08000dfc65bd31a950d979f737d90cc7"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_unix.c",
+      "bytes": 8338,
+      "sha256": "2ee31651ef3c6ef685e0834efd9f694eacb23c44618779247b548b4f68c6d5d2"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_version.c",
+      "bytes": 1439,
+      "sha256": "c7fecae0b3ee6dcb03ce63d7d8ad18558742290ae078da0dd18f88af0cec1fe1"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_vms.c",
+      "bytes": 14322,
+      "sha256": "fd31095334ed23bfcc888b0d6411df48a8ae28c8a9a38af3bd94a3d21d19d798"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_warning.c",
+      "bytes": 2374,
+      "sha256": "667f4b39526ef19cf93e3b993d45d245c3f93e3c4637bc92c1470df408a4bc5e"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_webp.c",
+      "bytes": 19349,
+      "sha256": "06587714cfd6da919a3eb31471c61977bf1f42c7ff7ae4f8e7bfdd7f8bdbb506"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_win32.c",
+      "bytes": 10283,
+      "sha256": "f1fc2a9c6983cb84afaf1efb00fc7542b20565eda59b4e2152f3b0f3b5a50886"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_wince.c",
+      "bytes": 7997,
+      "sha256": "b76514837fe54acfe3a48aad8645574772eacb78cf65dae696a6791e74a0b66a"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_write.c",
+      "bytes": 27917,
+      "sha256": "016a49c793b3760b9f79d9b79b878bf8c9ccdc301be73dca018e52a6b4d62750"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_zip.c",
+      "bytes": 22044,
+      "sha256": "09ec66e74992ed57a02c3ead2f5716c03553393a42eab7f2c6c73cd5c4cebfaa"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tif_zstd.c",
+      "bytes": 13298,
+      "sha256": "21ba27edc7a4001550d43787bda40535c465c781eb6e4d0025ed788e0853893e"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tiff.h",
+      "bytes": 46642,
+      "sha256": "5f5ee2a0a0825268153a69b917784bea793cbcf4e647e516265439a2fe0418ae"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tiffconf.vc.h",
+      "bytes": 3667,
+      "sha256": "1ad29d62f3c738c44c8da131068abbe6eaf718a3febf7bd182419cb2b95567d2"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tiffconf.wince.h",
+      "bytes": 3041,
+      "sha256": "06356869b0fc46b0be2441c900985413b00b553bce128d157001b32fd4f833ca"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tiffio.h",
+      "bytes": 23916,
+      "sha256": "2b18ca6509f8bc60b25244b8b816b8f277bc0893725a7468d9b7a9c3bb86f74c"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tiffiop.h",
+      "bytes": 20616,
+      "sha256": "efdbb1af50ee6843cfd54cf750da08e86608ea388d24c3b2d984a37c990a048c"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/tiffvers.h",
+      "bytes": 410,
+      "sha256": "268547346db260475cb87e412c7827740cbc3ce1a00a5921241b1748d20cdc30"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/libtiff/uvcode.h",
+      "bytes": 5641,
+      "sha256": "a3f20294e5d6164eae7a1f6c4874dc4c97f3111718c69b9abf0e92f063087e0e"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/_strtol.h",
+      "bytes": 4790,
+      "sha256": "040444fddaddc17355eca5a08b4b43f6185ae8f5123a2b5f62e9b6957a8480f2"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/_strtoul.h",
+      "bytes": 3723,
+      "sha256": "cac1951ee4d821b2073ebd8b2d769fd09f4201b8a05e771bc136c83cd9aac93e"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/dummy.c",
+      "bytes": 137,
+      "sha256": "12f02fe0ede111e04156f449a3b1ced2ceb9edad262c45224787fd0406ef9f51"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/getopt.c",
+      "bytes": 3967,
+      "sha256": "fa837796754d90db24da367a6014a269d643283dd9978f92f2be83e040cd9051"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/lfind.c",
+      "bytes": 2278,
+      "sha256": "c62c936077cf0e48bb15bdc5977055b1b8a9a8c3fd5f659a2714aa6632bc486b"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/libport.h",
+      "bytes": 2278,
+      "sha256": "24c4a1786d669a3d6576c1cdf454bae40bdc973b1d4583ddfb664c90a264cd53"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/snprintf.c",
+      "bytes": 882,
+      "sha256": "95742718de4bf211695039eb48a1abe239d92f177fc6a145d1f7125119357302"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/strcasecmp.c",
+      "bytes": 2096,
+      "sha256": "0bceca770aa14b5b6e711126e0f69f6bbef70b2d36d1188ec3125a0e923d0ed1"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/strtol.c",
+      "bytes": 1792,
+      "sha256": "d4028d41b7f24f30f7d0b05f7532d86aa379c30508619e659c316cd7d26c9eb1"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/strtoll.c",
+      "bytes": 1780,
+      "sha256": "13ca2dea4d8856ea69fb2f5c52618594ba24fa7498597d041ad4794af4458251"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/strtoul.c",
+      "bytes": 1783,
+      "sha256": "d9efe18d897a3ddc89d26efafcba33d418d109b256fe74ab59c5e01cdcadcfcb"
+    },
+    {
+      "path": "LICENSES/TIFF/source-notices/port/strtoull.c",
+      "bytes": 1790,
+      "sha256": "a7055234358ae4b82b0e466958b7aca8c2a7b5621b0a40b1d0e3b7f537610924"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 1445,
+      "sha256": "cb1094271a287c1251da440de3c7d19be1f21aeebf9d7787617089c16bb53a9a"
+    },
+    {
+      "path": "PackageInfo.json",
+      "bytes": 521,
+      "sha256": "8d3d4ff4a2cc9d3a17406de0d184a43c1043f29c388eb5e7d846c6ec32e741e6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4914,
+      "sha256": "2243702a90f01e4ef5a9de5c3d967cd52661c65d533c27784ddb71d3b19e698f"
+    },
+    {
+      "path": "tiff/COPYRIGHT",
+      "bytes": 1146,
+      "sha256": "fbd6fed7938541d2c809c0826225fc85e551fdbfa8732b10f0c87e0847acafd7"
+    },
+    {
+      "path": "tiff/JERecipe.json",
+      "bytes": 616,
+      "sha256": "be100495f1f8abdc92889c5a452a51655e0eaac3d43b12a67a5635909228093f"
+    },
+    {
+      "path": "tiff/include/tiff.h",
+      "bytes": 46642,
+      "sha256": "5f5ee2a0a0825268153a69b917784bea793cbcf4e647e516265439a2fe0418ae"
+    },
+    {
+      "path": "tiff/include/tiffconf.h",
+      "bytes": 3405,
+      "sha256": "4e7094ab261d2db602098fa46a3314f147431d670a677eca77c82ec2ba4beae2"
+    },
+    {
+      "path": "tiff/include/tiffio.h",
+      "bytes": 23916,
+      "sha256": "2b18ca6509f8bc60b25244b8b816b8f277bc0893725a7468d9b7a9c3bb86f74c"
+    },
+    {
+      "path": "tiff/include/tiffvers.h",
+      "bytes": 410,
+      "sha256": "268547346db260475cb87e412c7827740cbc3ce1a00a5921241b1748d20cdc30"
+    },
+    {
+      "path": "tiff/lib/tiff.lib",
+      "bytes": 1120562,
+      "sha256": "b669f83995b4a21ed88fc0f2a714a5dbcc7e78276b3e4bb0e6180cded7a7fbcf"
+    }
+  ],
+  "packageInfo": {
+    "license": "libtiff AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-TIFF-LZW-Berkeley",
+    "name": "tiff-4.2.0.15-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99",
+      "sha256": "cce672d2f5941759573cb3904cc8f00f065d54a3689a80719229e961d6a324c8",
+      "url": "https://gitlab.com/libtiff/libtiff/-/archive/4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz"
+    },
+    "version": "4.2.0.15"
+  },
+  "recipe": {
+    "upstreamVersion": "4.2.0",
+    "originalPackageVersion": "4.2.0.15-rev3",
+    "recipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "generator": "Visual Studio 17 2022",
+    "toolset": "v143",
+    "architecture": "x64",
+    "configuration": "Release",
+    "runtimeLibrary": "MultiThreadedDLL",
+    "static": true,
+    "cxx": false,
+    "zlib": "1.2.11",
+    "internalCodecs": [
+      "ccitt",
+      "packbits",
+      "lzw",
+      "thunder",
+      "next",
+      "logluv",
+      "mdi"
+    ],
+    "externalDisabledByOriginalRecipe": [
+      "jpeg",
+      "old-jpeg",
+      "pixarlog",
+      "lzma",
+      "webp",
+      "jbig",
+      "zstd",
+      "jpeg12",
+      "libdeflate"
+    ],
+    "historicalBinaryCompatibility": "not asserted"
+  },
+  "reparsePointCount": 0
+}

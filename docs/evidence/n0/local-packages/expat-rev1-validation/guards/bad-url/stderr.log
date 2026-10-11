@@ -1,0 +1,5 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake:30 (message):
+  JE local Expat: source URL/SHA256 must match the audited R_2_4_2 commit
+  archive
+
+

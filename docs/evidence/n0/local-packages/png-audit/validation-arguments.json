@@ -1,0 +1,128 @@
+{
+  "validationOwner": "Luna after parent source review",
+  "producer": {
+    "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "argvCount": 5,
+    "argv": [
+      "-DJE_PNG_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1.tar.gz",
+      "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+      "-DJE_PNG_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake"
+    ],
+    "outputMustBeAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1"
+  },
+  "consumerConfigure": {
+    "argvCount": 12,
+    "argv": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/tests",
+      "-B",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_PNG_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1/packages/png-1.6.37-je-rev1-windows.contents",
+      "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents"
+    ],
+    "outputMustBeAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1"
+  },
+  "consumerBuild": {
+    "argv": [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+      "--config",
+      "Release",
+      "--target",
+      "JE_PngConsumer"
+    ],
+    "argvCount": 6
+  },
+  "consumerTest": {
+    "executable": "ctest",
+    "argv": [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+      "-C",
+      "Release",
+      "--output-on-failure"
+    ],
+    "expectedTests": 5,
+    "argvCount": 5
+  },
+  "negativeGuards": [
+    {
+      "case": "UNC output",
+      "changeArgument": "JE_PNG_OUTPUT",
+      "value": "//server/share/png-invalid",
+      "expect": "local-path rejection, no output/tools"
+    },
+    {
+      "case": "URI output",
+      "changeArgument": "JE_PNG_OUTPUT",
+      "value": "https://example.invalid/png",
+      "expect": "URI rejection, no output/tools"
+    },
+    {
+      "case": "output outside checkout build",
+      "changeArgument": "JE_PNG_OUTPUT",
+      "value": "F:/JericoEngine/Dependencies/png-invalid-output",
+      "expect": "build-root rejection, no output/tools"
+    },
+    {
+      "case": "existing output",
+      "changeArgument": "JE_PNG_OUTPUT",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-audit",
+      "expect": "new output required, existing receipts preserved"
+    },
+    {
+      "case": "missing archive",
+      "changeArgument": "JE_PNG_SOURCE_ARCHIVE",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-missing-source.tar.gz",
+      "expect": "missing audited archive, no output/tools"
+    },
+    {
+      "case": "changed archive bytes",
+      "instruction": "Luna prepares a separate local archive copy with one changed byte; never modify frozen archive",
+      "expect": "SHA mismatch, no output/tools"
+    },
+    {
+      "case": "missing/changed zlib input",
+      "instruction": "Luna prepares a separate package-root fixture missing or changing one pinned input; frozen zlib untouched",
+      "expect": "input missing/SHA mismatch, no output/tools"
+    },
+    {
+      "case": "wrong EXACT PNG identity",
+      "instruction": "Use extracted real package with find_package(PNG 1.6.38 EXACT REQUIRED MODULE) in a build-only harness",
+      "expect": "version mismatch, no native compilation"
+    }
+  ],
+  "consumerBuildDebug": {
+    "argvCount": 6,
+    "argv": [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+      "--config",
+      "Debug",
+      "--target",
+      "JE_PngConsumer"
+    ]
+  },
+  "consumerTestDebug": {
+    "executable": "ctest",
+    "argvCount": 5,
+    "argv": [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-consumer-rev1",
+      "-C",
+      "Debug",
+      "--output-on-failure"
+    ],
+    "expectedTests": 5
+  },
+  "dispatch": "Luna only; pass the argv array directly and verify count/values before execution; never concatenate arrays with + inside a comma expression",
+  "status": "PREPARED ONLY; no CMake/build/tests executed by writer"
+}

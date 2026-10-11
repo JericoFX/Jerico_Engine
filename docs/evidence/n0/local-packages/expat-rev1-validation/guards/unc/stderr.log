@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_EXPAT_SOURCE_ARCHIVE must be an absolute local path
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake:11 (JE_python_require_local_path)
+
+

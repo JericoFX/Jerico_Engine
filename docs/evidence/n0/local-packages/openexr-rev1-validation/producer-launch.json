@@ -1,0 +1,17 @@
+{
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "executableSha256": "1aa884bf1f4949327fffcc8ee4a97c2d684bdc1d0a64b71f01dc16321c7fbc64",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev1-validation",
+  "argumentCount": 6,
+  "arguments": [
+    "-DJE_OPENEXR_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+    "-DJE_OPENEXR_IMATH_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+    "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+    "-DJE_OPENEXR_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev1",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake"
+  ],
+  "sourceArchiveSha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+  "imathArchiveSha256": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3",
+  "freezeCount": 1182
+}

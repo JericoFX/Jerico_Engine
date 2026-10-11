@@ -1,0 +1,89 @@
+{
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake",
+      "bytes": 7246,
+      "sha256": "0fb4e8face4e5b931153ab7bc37f924bf7f96106a15980dbd54bc303abe4a238",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/CMakeLists.txt",
+      "bytes": 2378,
+      "sha256": "99014c9ff13795703f6beb1d97f26a97e265def9f71502942260207897824092",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/expat_2.4.2.patch",
+      "bytes": 475,
+      "sha256": "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/Findexpat.cmake",
+      "bytes": 2960,
+      "sha256": "11851ad84b86034c98ede5b86607d0084c1a059d82ed28f9786e93f3857e7121",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/NOTICE.txt",
+      "bytes": 1802,
+      "sha256": "d9efa5b171b11d722b845194359289c409458f394180862a7854424e7f95bf0c",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/README.md",
+      "bytes": 3270,
+      "sha256": "19e5543d1b71dc919b8e38e6175df4d066d804ad26eaded836722d27434194ad",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/tests/CMakeLists.txt",
+      "bytes": 2172,
+      "sha256": "34a5073622cd2758804bc68b768262424c18a74ec279f0c9a15141096be5262c",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/tests/ExpatConsumer.cpp",
+      "bytes": 10020,
+      "sha256": "7490108cb751bbb709ee45ad606b4ecf0f337ce966cad98d87048593e5cc4daa",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+      "bytes": 7461,
+      "sha256": "adb8601d690d3ff8e37f1e8e1897790ce94a1e1361b32270e4959886a8bd3382",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f",
+      "matchesFreeze": true
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/expat-e26a263aa9182d1e4552cd615857f0f61df3ba42.tar.gz",
+      "bytes": 8309600,
+      "sha256": "a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057",
+      "matchesFreeze": true
+    }
+  ],
+  "inputCount": 14
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "default-configure",
+    "nativeExit": 0,
+    "elapsedSeconds": 7.758,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default-configure.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default-configure.stderr.log"
+  },
+  {
+    "name": "default-build-Debug",
+    "nativeExit": 1,
+    "elapsedSeconds": 2.958,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default-build-Debug.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default-build-Debug.stderr.log"
+  },
+  {
+    "name": "default-build-Release",
+    "nativeExit": 1,
+    "elapsedSeconds": 2.946,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default-build-Release.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\default-build-Release.stderr.log"
+  },
+  {
+    "name": "private-c-std-11-feature-configure",
+    "nativeExit": 0,
+    "elapsedSeconds": 7.808,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\private-c-std-11-feature-configure.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\private-c-std-11-feature-configure.stderr.log"
+  },
+  {
+    "name": "private-c-std-11-feature-build-Debug",
+    "nativeExit": 1,
+    "elapsedSeconds": 3.227,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\private-c-std-11-feature-build-Debug.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\private-c-std-11-feature-build-Debug.stderr.log"
+  },
+  {
+    "name": "private-c-std-11-feature-build-Release",
+    "nativeExit": 1,
+    "elapsedSeconds": 3.014,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\private-c-std-11-feature-build-Release.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\private-c-std-11-feature-build-Release.stderr.log"
+  },
+  {
+    "name": "explicit-c-standard-11-configure",
+    "nativeExit": 0,
+    "elapsedSeconds": 7.89,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-configure.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-configure.stderr.log"
+  },
+  {
+    "name": "explicit-c-standard-11-build-Debug",
+    "nativeExit": 1,
+    "elapsedSeconds": 3.111,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-build-Debug.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-build-Debug.stderr.log"
+  },
+  {
+    "name": "explicit-c-standard-11-build-Release",
+    "nativeExit": 1,
+    "elapsedSeconds": 3.053,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-build-Release.stdout.log",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-build-Release.stderr.log"
+  }
+]

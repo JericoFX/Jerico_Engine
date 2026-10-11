@@ -1,0 +1,10 @@
+{
+  "case": "existing-output",
+  "exitCode": 1,
+  "elapsedSeconds": 0.04,
+  "expectedDiagnostic": "output must be new; existing outputs are preserved",
+  "diagnosticMatched": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-audit",
+  "outputExists": true,
+  "outputWasExpectedExisting": true
+}

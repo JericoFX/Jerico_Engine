@@ -1,0 +1,14 @@
+{
+  "head": {
+    "url": "https://api.github.com/repos/open-source-parsers/jsoncpp/git/commits/24682e37bf1425455b45e7db69dbdbcd30aec7dd",
+    "status": 200,
+    "contentLength": 1245,
+    "etag": "W/\"ed32366d96c6796ae5a0c7522d39751e550b00ac5484370de5344628d4cc46f0\"",
+    "location": "",
+    "authentication": false,
+    "autoRedirect": false
+  },
+  "getStatus": 200,
+  "bytes": 1245,
+  "sha256": "ed32366d96c6796ae5a0c7522d39751e550b00ac5484370de5344628d4cc46f0"
+}

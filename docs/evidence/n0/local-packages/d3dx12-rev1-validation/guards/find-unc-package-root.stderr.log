@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:13 (message):
+  JE local Python: JE_D3DX12_PACKAGE_ROOT must be an absolute local path
+Call Stack (most recent call first):
+  CMakeLists.txt:6 (JE_python_require_local_path)
+
+

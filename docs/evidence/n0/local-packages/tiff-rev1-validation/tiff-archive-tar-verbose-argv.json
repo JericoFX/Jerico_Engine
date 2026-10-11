@@ -1,0 +1,8 @@
+{
+  "arguments": [
+    "-tvf",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1\\packages\\tiff-4.2.0.15-je-rev1-windows.tar.xz"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation",
+  "executable": "C:/Windows/system32/tar.exe"
+}

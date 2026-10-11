@@ -1,0 +1,143 @@
+{
+  "validationOwner": "Luna after parent review",
+  "status": "PREPARED ONLY; no CMake/build/test executed",
+  "dispatch": "Pass argv arrays directly, checking counts and values before native execution; no array concatenation within comma expressions",
+  "producer": {
+    "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "argvCount": 6,
+    "argv": [
+      "-DJE_OPENEXR_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+      "-DJE_OPENEXR_IMATH_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+      "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+      "-DJE_OPENEXR_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake"
+    ],
+    "outputMustBeAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2"
+  },
+  "consumerConfigure": {
+    "argvCount": 12,
+    "argv": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/tests",
+      "-B",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_OPENEXR_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2/packages/OpenEXR-3.1.3-je-rev1-windows.contents",
+      "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents"
+    ],
+    "outputMustBeAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2"
+  },
+  "consumerBuild": [
+    {
+      "argvCount": 6,
+      "argv": [
+        "--build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+        "--config",
+        "Release",
+        "--target",
+        "JE_OpenEXRConsumer"
+      ]
+    },
+    {
+      "argvCount": 6,
+      "argv": [
+        "--build",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+        "--config",
+        "Debug",
+        "--target",
+        "JE_OpenEXRConsumer"
+      ]
+    }
+  ],
+  "consumerTest": [
+    {
+      "executable": "ctest",
+      "argvCount": 5,
+      "argv": [
+        "--test-dir",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+        "-C",
+        "Release",
+        "--output-on-failure"
+      ],
+      "expectedTests": 6
+    },
+    {
+      "executable": "ctest",
+      "argvCount": 5,
+      "argv": [
+        "--test-dir",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+        "-C",
+        "Debug",
+        "--output-on-failure"
+      ],
+      "expectedTests": 6
+    }
+  ],
+  "negativeGuards": [
+    {
+      "case": "UNC output",
+      "changeArgument": "JE_OPENEXR_OUTPUT",
+      "value": "//server/share/openexr-invalid",
+      "expect": "local-path rejection before output/tools"
+    },
+    {
+      "case": "URI output",
+      "changeArgument": "JE_OPENEXR_OUTPUT",
+      "value": "https://example.invalid/openexr",
+      "expect": "URI rejection before output/tools"
+    },
+    {
+      "case": "output outside checkout build",
+      "changeArgument": "JE_OPENEXR_OUTPUT",
+      "value": "F:/JericoEngine/Dependencies/openexr-invalid-output",
+      "expect": "build-root rejection before output/tools"
+    },
+    {
+      "case": "existing output",
+      "changeArgument": "JE_OPENEXR_OUTPUT",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit",
+      "expect": "new output required; all existing receipts preserved"
+    },
+    {
+      "case": "missing OpenEXR archive",
+      "changeArgument": "JE_OPENEXR_SOURCE_ARCHIVE",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-missing.tar.gz",
+      "expect": "archive missing before output/tools"
+    },
+    {
+      "case": "changed OpenEXR archive",
+      "instruction": "Luna prepares a separate changed archive fixture; never modify frozen archive",
+      "expect": "SHA mismatch before output/tools"
+    },
+    {
+      "case": "missing/changed Imath archive",
+      "instruction": "Separate missing-path or changed archive fixture; never modify frozen archive",
+      "expect": "missing/SHA mismatch before output/tools"
+    },
+    {
+      "case": "missing/changed zlib input",
+      "instruction": "Separate package-root fixture missing/changing a pinned input; frozen zlib untouched",
+      "expect": "missing/SHA mismatch before output/tools"
+    },
+    {
+      "case": "wrong EXACT OpenEXR version",
+      "instruction": "Use real extracted payload in build-only harness with find_package(OpenEXR 3.1.4 EXACT REQUIRED MODULE)",
+      "expect": "version mismatch; no native compilation"
+    },
+    {
+      "case": "wrong EXACT Imath version",
+      "instruction": "Use real extracted payload in build-only harness with find_package(Imath 3.1.4 EXACT REQUIRED MODULE)",
+      "expect": "version mismatch; no native compilation"
+    }
+  ]
+}

@@ -1,0 +1,2024 @@
+[
+  {
+    "path": "pax_global_header",
+    "type": "GlobalExtendedAttributes"
+  },
+  {
+    "path": "Imath-6dc0820482aeb24a22f520d7b165a410589648c3/",
+    "type": "Directory"
+  },
+  {
+    "path": ".clang-format",
+    "type": "RegularFile",
+    "bytes": 3515,
+    "sha256": "1867916D7C1315FEC87E22D2825FD357F9AB2DDE8F954490FB7F6E1D0EF2CBD8"
+  },
+  {
+    "path": ".git-blame-ignore-revs",
+    "type": "RegularFile",
+    "bytes": 164,
+    "sha256": "C5F1301E89B1FCCCB56C375A48A520C8490C63F29019CC16E085183F204539C3"
+  },
+  {
+    "path": ".github",
+    "type": "Directory"
+  },
+  {
+    "path": ".github/workflows",
+    "type": "Directory"
+  },
+  {
+    "path": ".github/workflows/analysis_workflow.yml",
+    "type": "RegularFile",
+    "bytes": 4842,
+    "sha256": "674B306ECC82071B40F523C5E847A1990081A8F50C1C40335AE0B26821FCA376"
+  },
+  {
+    "path": ".github/workflows/ci_workflow.yml",
+    "type": "RegularFile",
+    "bytes": 17191,
+    "sha256": "01C5A3F65EDAA2C7F584BFE8F4679F2AC9E297A60F516B332F7B60C91017F41F"
+  },
+  {
+    "path": ".gitignore",
+    "type": "RegularFile",
+    "bytes": 25,
+    "sha256": "359484EBDF970003FE466EE9CF37762812E91135D8CAD4262956B77612E2BD6C"
+  },
+  {
+    "path": "CHANGES.md",
+    "type": "RegularFile",
+    "bytes": 19045,
+    "sha256": "8844A604F675BF98706D41AF64C33FC4F1E49CF68B39695A46EF0CED11813608"
+  },
+  {
+    "path": "CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 3863,
+    "sha256": "D95731CB0551A7C2D400C86D290E12156C69FFCA8163D126180F1353E5D78169"
+  },
+  {
+    "path": "CODE_OF_CONDUCT.md",
+    "type": "RegularFile",
+    "bytes": 2108,
+    "sha256": "CB66363CFDA8C470173E51E0E85DE011BCD868971ADF0C4E48C31ADD8CDDD15B"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "type": "RegularFile",
+    "bytes": 15700,
+    "sha256": "4835BC82213566F2DB7CDC34C55350DA5229EA18BD5323C1758C2DA144CD738C"
+  },
+  {
+    "path": "CONTRIBUTORS.md",
+    "type": "RegularFile",
+    "bytes": 661,
+    "sha256": "119D70A13FF504D952B08C0C8F7BF337310B3FE1E5BB27BECFCA1A84A3AEAC4E"
+  },
+  {
+    "path": "INSTALL.md",
+    "type": "RegularFile",
+    "bytes": 12143,
+    "sha256": "87B4C0AB5F69C408363455224C9397E81B0733ECE6F56189B7D93D2171FFAED9"
+  },
+  {
+    "path": "LICENSE.md",
+    "type": "RegularFile",
+    "bytes": 1497,
+    "sha256": "C20236D3B39FD20EBA8E3D1FB3B892A5483DF2E7D8D61BF43F165D3FAC22F601"
+  },
+  {
+    "path": "README.md",
+    "type": "RegularFile",
+    "bytes": 5780,
+    "sha256": "FB21F04C9274BC8B53676D5823C7893E854CC5F7240C36439D0C00ED9E7FE67C"
+  },
+  {
+    "path": "SECURITY.md",
+    "type": "RegularFile",
+    "bytes": 576,
+    "sha256": "60352440CC0CBDD27657CCB3276D917DB94A31E2A6CAEF4A812958F4B228DAAB"
+  },
+  {
+    "path": "cmake",
+    "type": "Directory"
+  },
+  {
+    "path": "cmake/FindSphinx.cmake",
+    "type": "RegularFile",
+    "bytes": 469,
+    "sha256": "B7156BC63E0BC79C136648D8461196B2160B75288B60F18D5F63EA125EB330CB"
+  },
+  {
+    "path": "cmake/SampleCTestScript.cmake",
+    "type": "RegularFile",
+    "bytes": 2308,
+    "sha256": "9DAA21EF6D185FECB6E8597AF25425E2D3650ECF5689A9560F022878EE1D897D"
+  },
+  {
+    "path": "cmake/Toolchain-Linux-VFX_Platform21.cmake",
+    "type": "RegularFile",
+    "bytes": 1288,
+    "sha256": "2751DE3A45624CA21925C28A6CAD285DA4E01C09DD2A3826EDFCF1FDFF377B51"
+  },
+  {
+    "path": "cmake/Toolchain-mingw.cmake",
+    "type": "RegularFile",
+    "bytes": 1123,
+    "sha256": "356A37B087158BE54B9455057CF96B997DFE96782024AB87BE2BF37DF6A06D17"
+  },
+  {
+    "path": "cmake/clang-format.cmake",
+    "type": "RegularFile",
+    "bytes": 2313,
+    "sha256": "28385438E50592EA010CFA95C01A13A07F55B1889FDE6DE6D0D16CD8B4B74FAD"
+  },
+  {
+    "path": "config",
+    "type": "Directory"
+  },
+  {
+    "path": "config/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 2599,
+    "sha256": "86CF467861B6D38367BF435E07441750EA4284D2402B0556B10260F988987AD9"
+  },
+  {
+    "path": "config/Imath.pc.in",
+    "type": "RegularFile",
+    "bytes": 433,
+    "sha256": "F18D9A08079877F8AA513B04C0B50EA50C89010F037B5DEDA5E846D6DFC4F1C9"
+  },
+  {
+    "path": "config/ImathConfig.cmake.in",
+    "type": "RegularFile",
+    "bytes": 125,
+    "sha256": "5E17FA25A87231C52DECE571CE586B6E97DCAD037345ECB7065336BDC0AEEC07"
+  },
+  {
+    "path": "config/ImathConfig.h.in",
+    "type": "RegularFile",
+    "bytes": 5624,
+    "sha256": "158B955F3C0E7AD9AC31F96AB4FFA6EBD9451DF249D53EAC4E488B9159C6EED7"
+  },
+  {
+    "path": "config/ImathSetup.cmake",
+    "type": "RegularFile",
+    "bytes": 5856,
+    "sha256": "5E25289ACC495C37E731DFDEAD3AECE4962CCBA524B96A39124FBEDDF64ADA52"
+  },
+  {
+    "path": "config/LibraryDefine.cmake",
+    "type": "RegularFile",
+    "bytes": 4598,
+    "sha256": "99773F8BDF009DD0C0886B1CC867EA9210FAF54F1C6122CE61AC0D8BD0B90C86"
+  },
+  {
+    "path": "docs",
+    "type": "Directory"
+  },
+  {
+    "path": "docs/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 1824,
+    "sha256": "8A700123247F10FF2EB289620F6E6AD05BEE07EC505B7952713A52F7F5D9B5E1"
+  },
+  {
+    "path": "docs/Doxyfile.in",
+    "type": "RegularFile",
+    "bytes": 1149,
+    "sha256": "85942D09FEE1BE6B57AD918DB7A5B86BB3DDC1685DF61733DB4E7D8007779F61"
+  },
+  {
+    "path": "docs/Makefile",
+    "type": "RegularFile",
+    "bytes": 6814,
+    "sha256": "F29DEE0531628505748C3CBCD58B69B6ED3DC57E334028C24ED440B0300F1D33"
+  },
+  {
+    "path": "docs/PortingGuide2-3.md",
+    "type": "RegularFile",
+    "bytes": 18272,
+    "sha256": "101627797C5434CF3BE245D685198492EFFE07DDFDD32218A0EE51B30EFFDCC6"
+  },
+  {
+    "path": "docs/classes",
+    "type": "Directory"
+  },
+  {
+    "path": "docs/classes/Box.rst",
+    "type": "RegularFile",
+    "bytes": 1122,
+    "sha256": "4D45FCAC33F981255A447A4BE0BEA27E60E34E863D4273DC5B58F634FE2CB11D"
+  },
+  {
+    "path": "docs/classes/Color3.rst",
+    "type": "RegularFile",
+    "bytes": 839,
+    "sha256": "1B19DB7591BD04192DC2C5647B8CEC497C684EA0C32A7B1CA64A7F29274CBA6A"
+  },
+  {
+    "path": "docs/classes/Color4.rst",
+    "type": "RegularFile",
+    "bytes": 960,
+    "sha256": "38BDC1973B1DFBD80D6B1F82070B3730ABFCC857FABFDBC390EAC72FB2F88F18"
+  },
+  {
+    "path": "docs/classes/Euler.rst",
+    "type": "RegularFile",
+    "bytes": 749,
+    "sha256": "4A7E39C8CE7A268BF8D86A13EE83737EEB5CD63CD577B8889253E043EBC8F07A"
+  },
+  {
+    "path": "docs/classes/Frustum.rst",
+    "type": "RegularFile",
+    "bytes": 432,
+    "sha256": "F0CD85DE6B4B5FA93176793CCABFAAC0FBA13607DF1F6181C38C0CCDFED6E294"
+  },
+  {
+    "path": "docs/classes/Interval.rst",
+    "type": "RegularFile",
+    "bytes": 654,
+    "sha256": "5FD90F0D15B9C88F94BDD7DC7FDF0861729A2B4EFC3837A3E76825C2B770AB5C"
+  },
+  {
+    "path": "docs/classes/Line3.rst",
+    "type": "RegularFile",
+    "bytes": 649,
+    "sha256": "E34C6EF672BEB354E0ABC9A5D82C24B340DF6261FC85A905A64CEFA572F54D66"
+  },
+  {
+    "path": "docs/classes/Matrix22.rst",
+    "type": "RegularFile",
+    "bytes": 637,
+    "sha256": "E627BCD3E4D216AF5E4C609CF6940F1205D6E78285E010A7542EE359294B484A"
+  },
+  {
+    "path": "docs/classes/Matrix33.rst",
+    "type": "RegularFile",
+    "bytes": 630,
+    "sha256": "536EC36EB3326C5E47B69DBADA32755DBC6A6DFC070F4515FE8E1E8C681AF127"
+  },
+  {
+    "path": "docs/classes/Matrix44.rst",
+    "type": "RegularFile",
+    "bytes": 634,
+    "sha256": "2D18C9F8697FDBE7B71FAF4DB56731960DE9D3D36BB9BEE497EDEE99A80D2B4F"
+  },
+  {
+    "path": "docs/classes/Plane3.rst",
+    "type": "RegularFile",
+    "bytes": 492,
+    "sha256": "263A413A306B7DF880A6F34D3B1CE1F08C8FBA7BF622FBD8863A5ACF07CDD74D"
+  },
+  {
+    "path": "docs/classes/Quat.rst",
+    "type": "RegularFile",
+    "bytes": 441,
+    "sha256": "B7003318FD1C57F2ED3660038C9C06E6043B0AE31B2E315DA0623D31D4C45D10"
+  },
+  {
+    "path": "docs/classes/Rand32.rst",
+    "type": "RegularFile",
+    "bytes": 283,
+    "sha256": "495DCD30F9762DD8812462D581AC46D741BC7704312FFDE9666E083095D9A1FA"
+  },
+  {
+    "path": "docs/classes/Rand48.rst",
+    "type": "RegularFile",
+    "bytes": 318,
+    "sha256": "6BEE903AED07D1D84462CDDCB666B01C52DD9706997FFBB5CCBD320EEB8D69F6"
+  },
+  {
+    "path": "docs/classes/Shear6.rst",
+    "type": "RegularFile",
+    "bytes": 448,
+    "sha256": "1BE392069FA9D6476545217843CD64599239599256E29C6E25ED2FC79D157457"
+  },
+  {
+    "path": "docs/classes/Sphere3.rst",
+    "type": "RegularFile",
+    "bytes": 388,
+    "sha256": "14DD995162A01AD9583762292D41C97D1BF818C09648C344527E7FE1769A9A6D"
+  },
+  {
+    "path": "docs/classes/Vec2.rst",
+    "type": "RegularFile",
+    "bytes": 1023,
+    "sha256": "EE37CFA1DD1777FDD63E35521DCC4E47A028430C6049A2D35B7E89472BF14946"
+  },
+  {
+    "path": "docs/classes/Vec3.rst",
+    "type": "RegularFile",
+    "bytes": 1022,
+    "sha256": "B71DA18A3152BD5CC93D90734B1701CC42483CD4ED5C60D5D0A8620D8A3C953E"
+  },
+  {
+    "path": "docs/classes/Vec4.rst",
+    "type": "RegularFile",
+    "bytes": 1021,
+    "sha256": "59875947551035B8B18A3EF788CE439F14C8A4A5D87C361F8B7595061DDEA49B"
+  },
+  {
+    "path": "docs/classes/half.rst",
+    "type": "RegularFile",
+    "bytes": 709,
+    "sha256": "A715BE9C22B69572D941AF66083DEA639BC055C3CDFFCBAA3574E98E3F8C2FBF"
+  },
+  {
+    "path": "docs/conf.py",
+    "type": "RegularFile",
+    "bytes": 9427,
+    "sha256": "240872AE7C0126A071F8B25B324546C10DE51036FB25BBC6F72E798F52EB0C7C"
+  },
+  {
+    "path": "docs/examples",
+    "type": "Directory"
+  },
+  {
+    "path": "docs/examples/Box.cpp",
+    "type": "RegularFile",
+    "bytes": 543,
+    "sha256": "FF0E8E6683BE2E6068D262647AD64D3FEC6E11CFFB2A22F95090D36410E5DBF7"
+  },
+  {
+    "path": "docs/examples/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 488,
+    "sha256": "019940D09C7BA3FA3A74AAEA4A9B62D04ADF2E1A132E2BA2DCC2C3C80C95936E"
+  },
+  {
+    "path": "docs/examples/Color3.cpp",
+    "type": "RegularFile",
+    "bytes": 266,
+    "sha256": "BCFC14D9A698862C287F0350B5F667AD070F4CF13B7ECC76B33AEEE1B01400F8"
+  },
+  {
+    "path": "docs/examples/Color4.cpp",
+    "type": "RegularFile",
+    "bytes": 334,
+    "sha256": "7EF99C612669FBDE8BF61165EFA6DC815FAC493F5F757F71C5E5575F4089AE0C"
+  },
+  {
+    "path": "docs/examples/Euler.cpp",
+    "type": "RegularFile",
+    "bytes": 571,
+    "sha256": "3DD2BFEDC29005DE12D5840A568C46970657CD957F6AF18037FB8A819C805AC2"
+  },
+  {
+    "path": "docs/examples/Frustum.cpp",
+    "type": "RegularFile",
+    "bytes": 499,
+    "sha256": "152AE89355F08E6D26171B87B81A9CBFBF1F060B4085403831C1E7C227770F47"
+  },
+  {
+    "path": "docs/examples/Interval.cpp",
+    "type": "RegularFile",
+    "bytes": 313,
+    "sha256": "9CF4D70F7982A7ACDCC3BCF1C5B15FCA9B6447720D37D55B392A32104B86373A"
+  },
+  {
+    "path": "docs/examples/Line3.cpp",
+    "type": "RegularFile",
+    "bytes": 550,
+    "sha256": "F136AD3CDF58999D4D006372B22D97E0B2708C8C24180C2B0E805E239FF05995"
+  },
+  {
+    "path": "docs/examples/Matrix22.cpp",
+    "type": "RegularFile",
+    "bytes": 516,
+    "sha256": "912CE1206D9DE9610E071B06D22FF4D3B93E8EDF668610CF398467B3DB252835"
+  },
+  {
+    "path": "docs/examples/Matrix33.cpp",
+    "type": "RegularFile",
+    "bytes": 529,
+    "sha256": "CFCB79E1EBFF61333DDE23F6D96D740511EAC1F6261A3602A505A720D23AA190"
+  },
+  {
+    "path": "docs/examples/Matrix44.cpp",
+    "type": "RegularFile",
+    "bytes": 721,
+    "sha256": "4D29A02AC087AEB1C0648ED7E6C6E7246883AA2CFCF73C7D6CC4EA909C0D54AD"
+  },
+  {
+    "path": "docs/examples/Plane3.cpp",
+    "type": "RegularFile",
+    "bytes": 420,
+    "sha256": "AF57D5FE2B860CA2EE68E6CF49232B536F63D797632D2CFAC1793859E819B6FE"
+  },
+  {
+    "path": "docs/examples/Quat.cpp",
+    "type": "RegularFile",
+    "bytes": 279,
+    "sha256": "05FF6DB2F980B945B92BFF5EB547295FB1998C4C6EE258D74E7594CD7E5C48AF"
+  },
+  {
+    "path": "docs/examples/Shear6.cpp",
+    "type": "RegularFile",
+    "bytes": 201,
+    "sha256": "1363B2D1493BEF987405EEBC5356B86512827192788F32D9AF4E0F1ECE19E1AF"
+  },
+  {
+    "path": "docs/examples/Sphere3.cpp",
+    "type": "RegularFile",
+    "bytes": 491,
+    "sha256": "28167D0FB9E0B92EFD4CA34A7180BE9657E4D87C5654CEC5F06743441C0D6B8C"
+  },
+  {
+    "path": "docs/examples/Vec2.cpp",
+    "type": "RegularFile",
+    "bytes": 310,
+    "sha256": "207C81A20ABCF0752700C009E2206B1E0FFBF6F0F3AFC468E639FB59FD3D5D70"
+  },
+  {
+    "path": "docs/examples/Vec3.cpp",
+    "type": "RegularFile",
+    "bytes": 332,
+    "sha256": "F128740B30BFF31C5DB700DA22C07C1ED2DF8B01F25718B87024226EC1AFAA1B"
+  },
+  {
+    "path": "docs/examples/Vec4.cpp",
+    "type": "RegularFile",
+    "bytes": 354,
+    "sha256": "8EA364BE0401BEED5807455F264B6E94CA9C4C3CAC2D18E675D5CF3D4ABD4D3D"
+  },
+  {
+    "path": "docs/examples/gl.cpp",
+    "type": "RegularFile",
+    "bytes": 148,
+    "sha256": "8679C4DBCC978031FED536F616AF7F29831FE46BAE46562A8C35AA64CD8C1685"
+  },
+  {
+    "path": "docs/examples/half.c",
+    "type": "RegularFile",
+    "bytes": 150,
+    "sha256": "39790C09687741E412BEF0DC815E14F0E943F102F165D77E4859B3A1A98301F2"
+  },
+  {
+    "path": "docs/examples/half.cpp",
+    "type": "RegularFile",
+    "bytes": 153,
+    "sha256": "C5A7AC1C0E26F30A52B05DADF237F767375FFD1F0631EF9C7A13A550320C5EF2"
+  },
+  {
+    "path": "docs/examples/main.cpp",
+    "type": "RegularFile",
+    "bytes": 1028,
+    "sha256": "349013C3F55604F4FCB9AB786F547509986A976F726C1804411884F580F14E2E"
+  },
+  {
+    "path": "docs/float.rst",
+    "type": "RegularFile",
+    "bytes": 121,
+    "sha256": "D14A9C6329B5AA85216BFE3057879D6CB7BCE371610CDAD01D8A2909DBC2BF5D"
+  },
+  {
+    "path": "docs/functions",
+    "type": "Directory"
+  },
+  {
+    "path": "docs/functions/box.rst",
+    "type": "RegularFile",
+    "bytes": 577,
+    "sha256": "1706077892A3F7D13E7284A6E36C24352105023E67E0B1ABD8B042A41ECE456A"
+  },
+  {
+    "path": "docs/functions/color.rst",
+    "type": "RegularFile",
+    "bytes": 725,
+    "sha256": "479D9CB7C52F2A4B416F1EB9C7C2CC89311D678B4EE9FABA2378AB603C3BD22D"
+  },
+  {
+    "path": "docs/functions/frame.rst",
+    "type": "RegularFile",
+    "bytes": 285,
+    "sha256": "A0CCCD541C6BD768BDE5BD156EB0E635DDB23425989AEB245E74C7E94D7B2DDC"
+  },
+  {
+    "path": "docs/functions/gl.rst",
+    "type": "RegularFile",
+    "bytes": 1187,
+    "sha256": "1884E6C524456DB0CDCA5ECB07A79FBF495FB024A6A6AEA11743D5226AF247D3"
+  },
+  {
+    "path": "docs/functions/glu.rst",
+    "type": "RegularFile",
+    "bytes": 258,
+    "sha256": "29CBB81192345A5BDFDA469AD3E937F5A365490856788C647545718509AEDA7C"
+  },
+  {
+    "path": "docs/functions/half_c.rst",
+    "type": "RegularFile",
+    "bytes": 436,
+    "sha256": "3990D5249245243C1777EB7CC0A16237938D2E95D1683EE0CEA9D36838725DF4"
+  },
+  {
+    "path": "docs/functions/line.rst",
+    "type": "RegularFile",
+    "bytes": 559,
+    "sha256": "EC6CA1354F94D200D136111D5F16858E323FED58C5CFC12B59B225D5512ABDA8"
+  },
+  {
+    "path": "docs/functions/matrix.rst",
+    "type": "RegularFile",
+    "bytes": 4326,
+    "sha256": "BF831E37EB57EA7A85A4B56E8FEC56B9CB39C1703049C5129D4716944C72A966"
+  },
+  {
+    "path": "docs/functions/random.rst",
+    "type": "RegularFile",
+    "bytes": 602,
+    "sha256": "82B8D2ADAEA242D8CA2482FFC71E31C6F870D2B5BD11EF390BD676786D51536C"
+  },
+  {
+    "path": "docs/functions/roots.rst",
+    "type": "RegularFile",
+    "bytes": 313,
+    "sha256": "71F809239264E248F1C0975267B1CD0A6B9EE5E8E37D65D37165A36848FC2249"
+  },
+  {
+    "path": "docs/functions/vec.rst",
+    "type": "RegularFile",
+    "bytes": 277,
+    "sha256": "63FCE66D5F8FB4C13F00E62E45542F091AD1E0C61E7EF43C9CDA1A8909381D1B"
+  },
+  {
+    "path": "docs/half_conversion.rst",
+    "type": "RegularFile",
+    "bytes": 2508,
+    "sha256": "B5E7A227611F163D78586B9CF670714519E2AC05C01207D6449AD4449020D57A"
+  },
+  {
+    "path": "docs/half_limits.rst",
+    "type": "RegularFile",
+    "bytes": 70,
+    "sha256": "E6C367C4C3E6FFFA75FA893A91B0EF2E894550E214694CC03123B9442198B0A5"
+  },
+  {
+    "path": "docs/images",
+    "type": "Directory"
+  },
+  {
+    "path": "docs/images/imath-logo-black.png",
+    "type": "RegularFile",
+    "bytes": 3287,
+    "sha256": "BF59B4A8B4D183DBB5A7BC53B6EBC2802072194326D3CCE9D699E3ED1498D1A0"
+  },
+  {
+    "path": "docs/images/imath-logo-blue.png",
+    "type": "RegularFile",
+    "bytes": 3869,
+    "sha256": "3908B29700FFA499C0433312E6B034B94ED7BC05D790C835EA171CD65713E1D6"
+  },
+  {
+    "path": "docs/images/imath-logo-white.png",
+    "type": "RegularFile",
+    "bytes": 3348,
+    "sha256": "919291B6C12940F5977EF356AEC01156CD1ADE521E01E2B03AA5F22AE231B746"
+  },
+  {
+    "path": "docs/index.rst",
+    "type": "RegularFile",
+    "bytes": 1748,
+    "sha256": "5EBB89F2441B3714B28580FE726407B6531897FF084FBDDB28090579E2B41EA7"
+  },
+  {
+    "path": "docs/install.rst",
+    "type": "RegularFile",
+    "bytes": 2442,
+    "sha256": "4969A8EBDE60D94110D5168578D7FF1FB321BC15FC8E726289E65BED567DC23E"
+  },
+  {
+    "path": "docs/intro.rst",
+    "type": "RegularFile",
+    "bytes": 4231,
+    "sha256": "F16B90CEF7BBC9F2EE7F9CF32C4EBD29BCF50767E93216B86DE0D55E65E4C2F0"
+  },
+  {
+    "path": "docs/requirements.txt",
+    "type": "RegularFile",
+    "bytes": 24,
+    "sha256": "C17CBFF7BE6A003C7611C8756FC44ACDF33BE6EB004609EEBEC71ECE2C196B5A"
+  },
+  {
+    "path": "share",
+    "type": "Directory"
+  },
+  {
+    "path": "share/ci",
+    "type": "Directory"
+  },
+  {
+    "path": "share/ci/scripts",
+    "type": "Directory"
+  },
+  {
+    "path": "share/ci/scripts/linux",
+    "type": "Directory"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_boost.sh",
+    "type": "RegularFile",
+    "bytes": 755,
+    "sha256": "29C3155A26D5D5955C7B59BB067584539FC5F4FAC8B2B7045EEE66BBB136C367"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_cmake.sh",
+    "type": "RegularFile",
+    "bytes": 383,
+    "sha256": "EED0F2B38E6F4CEBE34D5D79C857B8B9998159FCE09B60E0EDF2A99E0C2FD67F"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_gdb.sh",
+    "type": "RegularFile",
+    "bytes": 369,
+    "sha256": "DCCA84DD6B3376FA2D1CF0E46CD09FD6764BDE1FD5B8333C9EB0EC96D366702A"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_six.sh",
+    "type": "RegularFile",
+    "bytes": 326,
+    "sha256": "E00BC21DB3B99DB3EA04CC759C396411B5D1AC1C26319CA09DAEE48BEA8C7CAC"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_sonar.sh",
+    "type": "RegularFile",
+    "bytes": 716,
+    "sha256": "4FC471915F5BA0764E082AD3424EB52890774E555396CF0C2D62BD3246AADED8"
+  },
+  {
+    "path": "share/ci/scripts/linux/install_valgrind.sh",
+    "type": "RegularFile",
+    "bytes": 621,
+    "sha256": "6A9E402E63A74E0415DB6DC4BF05C48011DB0C16E56B06682ABE2B8452C5B035"
+  },
+  {
+    "path": "share/ci/scripts/linux/log_valgrind.sh",
+    "type": "RegularFile",
+    "bytes": 309,
+    "sha256": "4077E5762F5FEA3FEA76B3ED65AFF196B5353F7FF6F6EBD06C787CDBE6229B7F"
+  },
+  {
+    "path": "share/ci/scripts/linux/run_gcov.sh",
+    "type": "RegularFile",
+    "bytes": 407,
+    "sha256": "42FA78BEF1EF27F80248F2FBB60DF1581BF80A245BA8694DCC50D20056266C95"
+  },
+  {
+    "path": "share/ci/scripts/macos",
+    "type": "Directory"
+  },
+  {
+    "path": "share/ci/scripts/macos/install_boost.sh",
+    "type": "RegularFile",
+    "bytes": 114,
+    "sha256": "3D3DCB177A40BE9567936C188170872B4E83D769A2F7AE0E5EF75B46D98D0989"
+  },
+  {
+    "path": "share/ci/scripts/macos/install_python.sh",
+    "type": "RegularFile",
+    "bytes": 1140,
+    "sha256": "55723B8AA4B15100E70F2AB6093CD46680C56619CA76C440BD7E9289484D4119"
+  },
+  {
+    "path": "share/ci/scripts/windows",
+    "type": "Directory"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_boost.ps1",
+    "type": "RegularFile",
+    "bytes": 2065,
+    "sha256": "B4CA0BD8A9D24F2C167D66C5B8F8108A437868B6884FFFF77F185DCBADBF1A13"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_cmake.ps1",
+    "type": "RegularFile",
+    "bytes": 452,
+    "sha256": "00A93E59639C05D25097505D4CD67D6F6106DC16AD5204476DFB02BDFAE68A5E"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_python.ps1",
+    "type": "RegularFile",
+    "bytes": 1115,
+    "sha256": "A4FEDD6005B733523C7E799482E873CBDB0553018D1F240BD8DEC9178FFCB9FF"
+  },
+  {
+    "path": "share/ci/scripts/windows/install_zlib.ps1",
+    "type": "RegularFile",
+    "bytes": 1220,
+    "sha256": "B9D83EFCCF5751F22384064238F9F327018584BA6E8F03009F70137E13BA5F38"
+  },
+  {
+    "path": "sonar-project.properties",
+    "type": "RegularFile",
+    "bytes": 864,
+    "sha256": "ED9286C9B8B703CF4B2CF4F64C0D0640D00FFBA94EBF14553BCAFB23DEE98D1D"
+  },
+  {
+    "path": "src",
+    "type": "Directory"
+  },
+  {
+    "path": "src/Imath",
+    "type": "Directory"
+  },
+  {
+    "path": "src/Imath/.cvsignore",
+    "type": "RegularFile",
+    "bytes": 165,
+    "sha256": "DD8D6AD52B91F659E8E2B4FA14BA79C6C800967FDB5FE0CCB1CB6C3E77F0D541"
+  },
+  {
+    "path": "src/Imath/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 922,
+    "sha256": "F767782B20977A27352F519445DD333985F675FB1C2C2E0E1DC7B8C5BFA17AE0"
+  },
+  {
+    "path": "src/Imath/ImathBox.h",
+    "type": "RegularFile",
+    "bytes": 24182,
+    "sha256": "C35706740E215352FAB9251D5CDF9A34B68B97539D32AADC5F2CE7BE4445B304"
+  },
+  {
+    "path": "src/Imath/ImathBoxAlgo.h",
+    "type": "RegularFile",
+    "bytes": 23507,
+    "sha256": "23DE8F4C72902BE693A7C6D1C41CE1EF06C0E29C951114DDBB5147E252908996"
+  },
+  {
+    "path": "src/Imath/ImathColor.h",
+    "type": "RegularFile",
+    "bytes": 18731,
+    "sha256": "49793BFC8E636C30E1E12D23D93EA391BE1110F1AA8C335D6F9A4D5AAF339F6D"
+  },
+  {
+    "path": "src/Imath/ImathColorAlgo.cpp",
+    "type": "RegularFile",
+    "bytes": 3723,
+    "sha256": "B365B896A6B58C46FB7833D7939D8AAD51DB52FBB13CF661588E326A21855772"
+  },
+  {
+    "path": "src/Imath/ImathColorAlgo.h",
+    "type": "RegularFile",
+    "bytes": 8004,
+    "sha256": "0C4F89F3F6BC9B363467AF8FDA230557FFD52E6B2D5F6E7BAB2FD3D44073D8DA"
+  },
+  {
+    "path": "src/Imath/ImathEuler.h",
+    "type": "RegularFile",
+    "bytes": 26930,
+    "sha256": "45FC8AB2FB93479776E1DC6E6992C5DD4567592FF100CC024348C0BA81859703"
+  },
+  {
+    "path": "src/Imath/ImathExport.h",
+    "type": "RegularFile",
+    "bytes": 2132,
+    "sha256": "EA4893E470C083B3FB7604574C7E93CA409578D6EA5BB66517EE79000721506A"
+  },
+  {
+    "path": "src/Imath/ImathForward.h",
+    "type": "RegularFile",
+    "bytes": 2291,
+    "sha256": "E2AC76A1A6ADEC4C60A3BB3635E48DE981B9836551FB297948679DEB8362C835"
+  },
+  {
+    "path": "src/Imath/ImathFrame.h",
+    "type": "RegularFile",
+    "bytes": 5938,
+    "sha256": "78836037CAD731D98E29EA671EE5503AC5E37C92DDAB9CDA932425B91FFE9984"
+  },
+  {
+    "path": "src/Imath/ImathFrustum.h",
+    "type": "RegularFile",
+    "bytes": 30291,
+    "sha256": "E4CC5A2D79F204C50FE7563712C70DE0E9F1806648BFBB645D4D2112D7EED7DE"
+  },
+  {
+    "path": "src/Imath/ImathFrustumTest.h",
+    "type": "RegularFile",
+    "bytes": 11955,
+    "sha256": "C24165BC83F3A995DAEBCDC422BCA7815D6A982FE7C23FC0C75F528AA999B08C"
+  },
+  {
+    "path": "src/Imath/ImathFun.cpp",
+    "type": "RegularFile",
+    "bytes": 2869,
+    "sha256": "E788CD816E41DDA2EC690540B7CACE0EE7D8B96AD805033E2CD07AFE5F9DB4A9"
+  },
+  {
+    "path": "src/Imath/ImathFun.h",
+    "type": "RegularFile",
+    "bytes": 5365,
+    "sha256": "3A244E0D6AC36926656AB4A357A11BB7DC9AC1F04A27EA9C08BD13F354A64875"
+  },
+  {
+    "path": "src/Imath/ImathGL.h",
+    "type": "RegularFile",
+    "bytes": 3849,
+    "sha256": "13D8369A119D5A17BE4D53A25895CFC072B86CDA6A6A2501D3D58AC310059083"
+  },
+  {
+    "path": "src/Imath/ImathGLU.h",
+    "type": "RegularFile",
+    "bytes": 628,
+    "sha256": "4AE59136773C3BC8481541C7B3CCAB11B18FF6258A44241FA31EF193F6489ED6"
+  },
+  {
+    "path": "src/Imath/ImathInt64.h",
+    "type": "RegularFile",
+    "bytes": 1107,
+    "sha256": "EE211D0AB36019C0C787B6256C448C7017A6B3D9DFB69D016BBC46762D37BAFF"
+  },
+  {
+    "path": "src/Imath/ImathInterval.h",
+    "type": "RegularFile",
+    "bytes": 6851,
+    "sha256": "B0AEA0E8ADECBC00E99E634B08240D7FF60320E5DEE3910D8F4ECF0C2B907608"
+  },
+  {
+    "path": "src/Imath/ImathLine.h",
+    "type": "RegularFile",
+    "bytes": 4389,
+    "sha256": "1DE362FD8233B05769EAB203232934FD211D52BBB120ABFFDDF44E3046C4FA95"
+  },
+  {
+    "path": "src/Imath/ImathLineAlgo.h",
+    "type": "RegularFile",
+    "bytes": 5661,
+    "sha256": "77585B7C111F0A7BA9C0151E5F854FEE7DE0FC2265E561C22FC9B13B96EE3CF4"
+  },
+  {
+    "path": "src/Imath/ImathMath.h",
+    "type": "RegularFile",
+    "bytes": 4873,
+    "sha256": "4CDA383CDB3D369C730CD4298443320A5B6B990A1250FA6C45C185541F169230"
+  },
+  {
+    "path": "src/Imath/ImathMatrix.h",
+    "type": "RegularFile",
+    "bytes": 133554,
+    "sha256": "7FA5E7D5F64DC97E4BC7BD7CAD4AEF5C8AA422D2D2F321AB9560340C46E2E191"
+  },
+  {
+    "path": "src/Imath/ImathMatrixAlgo.cpp",
+    "type": "RegularFile",
+    "bytes": 42195,
+    "sha256": "58AD96D1A9CF60FD12B403448B50B13EF80FBBE762503BBCC96124DEEDB76291"
+  },
+  {
+    "path": "src/Imath/ImathMatrixAlgo.h",
+    "type": "RegularFile",
+    "bytes": 46851,
+    "sha256": "0BF09B1E37C19BC39A6AFD23B96F01DACFF37384964552597C84F5340F0109A2"
+  },
+  {
+    "path": "src/Imath/ImathNamespace.h",
+    "type": "RegularFile",
+    "bytes": 3048,
+    "sha256": "09F6DC5FADC97D2AF0307B4E9D540E9DFCB913EE8150C2B83E4F5BCF7219C7C7"
+  },
+  {
+    "path": "src/Imath/ImathPlane.h",
+    "type": "RegularFile",
+    "bytes": 7123,
+    "sha256": "731BA536EA598869F40F079F41BBD3653B7FA5F84B753296CB28262BB87F7339"
+  },
+  {
+    "path": "src/Imath/ImathPlatform.h",
+    "type": "RegularFile",
+    "bytes": 1944,
+    "sha256": "3F38A97F8FCE95D80750DA3669A1A584D68A5EA57BE80D9F9E1C1363412FE5B3"
+  },
+  {
+    "path": "src/Imath/ImathQuat.h",
+    "type": "RegularFile",
+    "bytes": 26751,
+    "sha256": "CFE0077272E799CF12BB4D96C227E3F758B955E85E43707051E4E963292B36DF"
+  },
+  {
+    "path": "src/Imath/ImathRandom.cpp",
+    "type": "RegularFile",
+    "bytes": 4377,
+    "sha256": "1D4C05EE84F56033C8B350A7BB0C869C74D6DB82548138AAD8515011F40101E0"
+  },
+  {
+    "path": "src/Imath/ImathRandom.h",
+    "type": "RegularFile",
+    "bytes": 6797,
+    "sha256": "5CD5846D4AA5ECC73301D09B7F239E907B4B1D9291E01C2760537EEE6FAF21E4"
+  },
+  {
+    "path": "src/Imath/ImathRoots.h",
+    "type": "RegularFile",
+    "bytes": 5059,
+    "sha256": "9C7D462F177B2621D77A0578C9A5044FAF7AAEAC6760849C37575B2227ECE976"
+  },
+  {
+    "path": "src/Imath/ImathShear.h",
+    "type": "RegularFile",
+    "bytes": 18484,
+    "sha256": "529EBD51A914F6F4B4995E2BA892CEB71F6F892DC6785250E210A89C55C8FE2A"
+  },
+  {
+    "path": "src/Imath/ImathSphere.h",
+    "type": "RegularFile",
+    "bytes": 3658,
+    "sha256": "5194325DAAE7969E28A9457627ACC2588B11181DE470D91D6E09BCE5A1CB2228"
+  },
+  {
+    "path": "src/Imath/ImathTypeTraits.h",
+    "type": "RegularFile",
+    "bytes": 7631,
+    "sha256": "A356F658B0B7901DC91E579B8E300456EE4D0C8A37AD3BE43E39801468D53D0E"
+  },
+  {
+    "path": "src/Imath/ImathVec.h",
+    "type": "RegularFile",
+    "bytes": 63946,
+    "sha256": "E0A74CA47814BE9B08E8BE249AE71A3460B70AD714F40A7D5AE1FB709DA7640A"
+  },
+  {
+    "path": "src/Imath/ImathVecAlgo.h",
+    "type": "RegularFile",
+    "bytes": 2573,
+    "sha256": "7428EB1B9A1B72E33B2706D419C02C2F5C85C925FD1BA863EC417C0C343BF0AD"
+  },
+  {
+    "path": "src/Imath/half.cpp",
+    "type": "RegularFile",
+    "bytes": 2724,
+    "sha256": "70BFC545F021752D21FE8A966A7567BEE50143F13F5BD49E67DD538B6F8132F4"
+  },
+  {
+    "path": "src/Imath/half.h",
+    "type": "RegularFile",
+    "bytes": 23992,
+    "sha256": "0723761F1AC1C7889B253A84AA482FA0220A72102B039C47933CD21B96E3350B"
+  },
+  {
+    "path": "src/Imath/halfFunction.h",
+    "type": "RegularFile",
+    "bytes": 3616,
+    "sha256": "A87555DE3B79ABA24457E05E180BE381F7C945E353F75FE743E2C5E6D3AC2DA3"
+  },
+  {
+    "path": "src/Imath/halfLimits.h",
+    "type": "RegularFile",
+    "bytes": 2903,
+    "sha256": "DCD01C0BB21F1E0DC683B2576F61B0A362674CA10892A26EE4DC0BA7DEE24A7C"
+  },
+  {
+    "path": "src/Imath/toFloat.cpp",
+    "type": "RegularFile",
+    "bytes": 2637,
+    "sha256": "5F419A11C2C06D4E9C593A2F641A884B7F4CF3BFBC0C1CB522A4F734C30146A5"
+  },
+  {
+    "path": "src/Imath/toFloat.h",
+    "type": "RegularFile",
+    "bytes": 999633,
+    "sha256": "E01C8A1A9F13CD51402C60378C3C4D29A6001EB72809B0F60AC1BF1DABCF583D"
+  },
+  {
+    "path": "src/ImathTest",
+    "type": "Directory"
+  },
+  {
+    "path": "src/ImathTest/.cvsignore",
+    "type": "RegularFile",
+    "bytes": 165,
+    "sha256": "DD8D6AD52B91F659E8E2B4FA14BA79C6C800967FDB5FE0CCB1CB6C3E77F0D541"
+  },
+  {
+    "path": "src/ImathTest/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 2786,
+    "sha256": "33B03A5A9FD30A0DA80D1F3844C7F3AD612D6A4982DE30306849846EE76A0541"
+  },
+  {
+    "path": "src/ImathTest/eLut.h",
+    "type": "RegularFile",
+    "bytes": 4113,
+    "sha256": "600261A1BA8D7D51F79E9DC9A174806B5DB91E5A9EC9A8FF6437EDB6A87DF783"
+  },
+  {
+    "path": "src/ImathTest/half_c_main.c",
+    "type": "RegularFile",
+    "bytes": 5979,
+    "sha256": "FA0243B4FD3732996FE475EE3CDEA320329632EB01AA8F840F7E5DD7A9D839AA"
+  },
+  {
+    "path": "src/ImathTest/half_perf_test.cpp",
+    "type": "RegularFile",
+    "bytes": 10427,
+    "sha256": "C04C460EC678787547DC1857921175BF4DEE202CD5837AC6A8C7D6B457A34A4A"
+  },
+  {
+    "path": "src/ImathTest/main.cpp",
+    "type": "RegularFile",
+    "bytes": 2452,
+    "sha256": "5FC41A3B7F354CAB4839D66FA7E36E92A929EB25B32784284B8C40A31BE941D0"
+  },
+  {
+    "path": "src/ImathTest/testArithmetic.cpp",
+    "type": "RegularFile",
+    "bytes": 1100,
+    "sha256": "8A5DC5A02E5972FACA155A3E8EE6F870199162445C7BDEE6DA1D6DB8A3A1E9E6"
+  },
+  {
+    "path": "src/ImathTest/testArithmetic.h",
+    "type": "RegularFile",
+    "bytes": 121,
+    "sha256": "E2FFC193E5F402895D50049465A7DB58B01FA980DCF718525E3088D24C518E26"
+  },
+  {
+    "path": "src/ImathTest/testBitPatterns.cpp",
+    "type": "RegularFile",
+    "bytes": 15678,
+    "sha256": "F5A1F8D8496F5C011DF1560591FC1AC850FAD9559400C42E9D8BA776C948D3F0"
+  },
+  {
+    "path": "src/ImathTest/testBitPatterns.h",
+    "type": "RegularFile",
+    "bytes": 122,
+    "sha256": "058B46BB550E8000C2679847DB92062359AF1E1F11FB0290D173C645AD06C673"
+  },
+  {
+    "path": "src/ImathTest/testBox.cpp",
+    "type": "RegularFile",
+    "bytes": 33484,
+    "sha256": "2B44AEF5D5F68E7758C8E670867421665B5C57B90B9216F7FBE782BF058DB54C"
+  },
+  {
+    "path": "src/ImathTest/testBox.h",
+    "type": "RegularFile",
+    "bytes": 114,
+    "sha256": "4E2A150B84939428C3DBAAFF6986B87361314707843E279C3AB78F6A0E93600A"
+  },
+  {
+    "path": "src/ImathTest/testBoxAlgo.cpp",
+    "type": "RegularFile",
+    "bytes": 26360,
+    "sha256": "64E0C76908EE4579967539A99203ECF5FA338E94CB2D546D1577B0308E64C814"
+  },
+  {
+    "path": "src/ImathTest/testBoxAlgo.h",
+    "type": "RegularFile",
+    "bytes": 118,
+    "sha256": "4387C9BFEBC6100CF36FE96FF4938CB5715BD9FA8A1135C84A33D65E6BD56308"
+  },
+  {
+    "path": "src/ImathTest/testClassification.cpp",
+    "type": "RegularFile",
+    "bytes": 4096,
+    "sha256": "3269CF45356D37E534D053679D956F680483FEE10BD6250D6248B0849A41BDC0"
+  },
+  {
+    "path": "src/ImathTest/testClassification.h",
+    "type": "RegularFile",
+    "bytes": 125,
+    "sha256": "81D623EAF77AB84532B792CA7383BA53A72A0D2E11D1E6B95CEBFFB3E1E4F132"
+  },
+  {
+    "path": "src/ImathTest/testColor.cpp",
+    "type": "RegularFile",
+    "bytes": 5346,
+    "sha256": "CEFB4203B4CAF0770EFB5A90F7A90F1348E1E11EF222A8502800D92EA1637BE7"
+  },
+  {
+    "path": "src/ImathTest/testColor.h",
+    "type": "RegularFile",
+    "bytes": 116,
+    "sha256": "C4FA571F6CB995357884DE2CF70824F015A72546623515FC2972AC52F53B203C"
+  },
+  {
+    "path": "src/ImathTest/testError.cpp",
+    "type": "RegularFile",
+    "bytes": 4398,
+    "sha256": "2F71AD972334F8C9C7D7986D95273DFC59F51C519520786D684AEF2C12171927"
+  },
+  {
+    "path": "src/ImathTest/testError.h",
+    "type": "RegularFile",
+    "bytes": 202,
+    "sha256": "9A9168869606BC92F0D919A8E84978A9213A90D3D9188B93EC0BAC77A73CF105"
+  },
+  {
+    "path": "src/ImathTest/testExtractEuler.cpp",
+    "type": "RegularFile",
+    "bytes": 5799,
+    "sha256": "9A4D402F0AC7F05F5F729B521516E85D88F93E5BEF4B3521EB3F3EAF074CF3FF"
+  },
+  {
+    "path": "src/ImathTest/testExtractEuler.h",
+    "type": "RegularFile",
+    "bytes": 123,
+    "sha256": "62F7868FE7A6C100A0E8D48A88767B19250ABEED68A2B798FA78CBAA6396C2C5"
+  },
+  {
+    "path": "src/ImathTest/testExtractSHRT.cpp",
+    "type": "RegularFile",
+    "bytes": 8468,
+    "sha256": "56C830F0EFB4E2235EE1FF1C050422B410BEB3F045BE56D237F45F4DFEBEF334"
+  },
+  {
+    "path": "src/ImathTest/testExtractSHRT.h",
+    "type": "RegularFile",
+    "bytes": 122,
+    "sha256": "2C283C7E18D18B0448AAC860204729A5631812C68199F9263B59546C3559BC45"
+  },
+  {
+    "path": "src/ImathTest/testFrustum.cpp",
+    "type": "RegularFile",
+    "bytes": 14607,
+    "sha256": "3B743CC73BF741140C1F67117C00C512612B198CE5351BE168F3469A3FDFD0E1"
+  },
+  {
+    "path": "src/ImathTest/testFrustum.h",
+    "type": "RegularFile",
+    "bytes": 118,
+    "sha256": "70835292B33D2C4FDC55108A31B67B61AF03D0588F73EB1893345D92EF43C6FD"
+  },
+  {
+    "path": "src/ImathTest/testFrustumTest.cpp",
+    "type": "RegularFile",
+    "bytes": 5925,
+    "sha256": "EE5E5C5C583792E671473F82569AFD25D285E8E2CB402210B18C100F035FD852"
+  },
+  {
+    "path": "src/ImathTest/testFrustumTest.h",
+    "type": "RegularFile",
+    "bytes": 122,
+    "sha256": "236D71EC8B16FCC5A3FF68AB89FB97A254A3D4EA4897EE2FEF774C17CFC32C06"
+  },
+  {
+    "path": "src/ImathTest/testFun.cpp",
+    "type": "RegularFile",
+    "bytes": 10058,
+    "sha256": "41121D0D29CEC85BA3E3E871ED2D37A42F9B1B5FD1BB091B7267EF5B73F5F572"
+  },
+  {
+    "path": "src/ImathTest/testFun.h",
+    "type": "RegularFile",
+    "bytes": 114,
+    "sha256": "4E291C7EC3F144678BFF5F6FFB4A653915B26567EB6EF88740677EE400D60B32"
+  },
+  {
+    "path": "src/ImathTest/testFunction.cpp",
+    "type": "RegularFile",
+    "bytes": 1614,
+    "sha256": "ADD752C7B9DC82DB2D8D886DE6C588B43519468F2537CE520365164BF1B64C23"
+  },
+  {
+    "path": "src/ImathTest/testFunction.h",
+    "type": "RegularFile",
+    "bytes": 119,
+    "sha256": "9DC84FA065D40B294967164A889DB17BDC3147B396E76E2881CEDF35C4F7AE07"
+  },
+  {
+    "path": "src/ImathTest/testInterop.cpp",
+    "type": "RegularFile",
+    "bytes": 27469,
+    "sha256": "59B50E61AC740B92A53215552F32B70BDBD18753D883470CC5C0780D8A7726FA"
+  },
+  {
+    "path": "src/ImathTest/testInterop.h",
+    "type": "RegularFile",
+    "bytes": 118,
+    "sha256": "2E23AE67A703EFBADB39ACE50052A6DA0F9490364ADE996C9B2F682B9311807D"
+  },
+  {
+    "path": "src/ImathTest/testInterval.cpp",
+    "type": "RegularFile",
+    "bytes": 17140,
+    "sha256": "E37A04B39B40D10E3657BA52C9657D04A9B14892F90D2B8C03030F9BEDF862DE"
+  },
+  {
+    "path": "src/ImathTest/testInterval.h",
+    "type": "RegularFile",
+    "bytes": 118,
+    "sha256": "AB92F1E95C37F3364E77973E907E2C8153790764AA88AD0347C775194E80C396"
+  },
+  {
+    "path": "src/ImathTest/testInvert.cpp",
+    "type": "RegularFile",
+    "bytes": 3001,
+    "sha256": "7211FF518738FFA0F6DAB3B7BBEDA35C8DC290D7058328E3C8B5754F7B8C5FD0"
+  },
+  {
+    "path": "src/ImathTest/testInvert.h",
+    "type": "RegularFile",
+    "bytes": 117,
+    "sha256": "ADF1BA3C792AFBA597BB01BFF694315D3B416A899E7392A6E0CD8DAFC1C6F354"
+  },
+  {
+    "path": "src/ImathTest/testJacobiEigenSolver.cpp",
+    "type": "RegularFile",
+    "bytes": 8411,
+    "sha256": "63E1F877C529055A6C95B17B87196A2C97FD43F4E092358BB8972ED71424785C"
+  },
+  {
+    "path": "src/ImathTest/testJacobiEigenSolver.h",
+    "type": "RegularFile",
+    "bytes": 128,
+    "sha256": "95965E7B173D0EF4795906D919F0A5526D7C24F7DF79195B716BC2DCC6978994"
+  },
+  {
+    "path": "src/ImathTest/testLimits.cpp",
+    "type": "RegularFile",
+    "bytes": 5030,
+    "sha256": "6354A10A682BD88D361B67FB60D96A69945E181DE2178C44A9EC0C30A8C1181C"
+  },
+  {
+    "path": "src/ImathTest/testLimits.h",
+    "type": "RegularFile",
+    "bytes": 140,
+    "sha256": "B8A18F2680F538C1FE5F420176BF5B9866E0DA526FD530AF9B1D4EADBF324703"
+  },
+  {
+    "path": "src/ImathTest/testLineAlgo.cpp",
+    "type": "RegularFile",
+    "bytes": 11899,
+    "sha256": "2D34C4D3DC02A5BF2C80354D570B8C1BA9762A5B849C11CBDE737F50D301133D"
+  },
+  {
+    "path": "src/ImathTest/testLineAlgo.h",
+    "type": "RegularFile",
+    "bytes": 119,
+    "sha256": "02317517AC64444647412F44FE426CFE6864D7F10E714C124E5600247B629BA1"
+  },
+  {
+    "path": "src/ImathTest/testMatrix.cpp",
+    "type": "RegularFile",
+    "bytes": 24140,
+    "sha256": "19824FA584A1B55626242A68F4EF7ACAA28CF5530180AB454AE701A05E887879"
+  },
+  {
+    "path": "src/ImathTest/testMatrix.h",
+    "type": "RegularFile",
+    "bytes": 117,
+    "sha256": "97EEB233BB9C912E21CA71C4451FAD3A19338A3609B1210673664545BB9159FF"
+  },
+  {
+    "path": "src/ImathTest/testMiscMatrixAlgo.cpp",
+    "type": "RegularFile",
+    "bytes": 7844,
+    "sha256": "4A3F1DD2880B252958713C42E26C788285412CBE8C8531F24C19CD71FC5C2B5E"
+  },
+  {
+    "path": "src/ImathTest/testMiscMatrixAlgo.h",
+    "type": "RegularFile",
+    "bytes": 125,
+    "sha256": "A4E531A0AD78AFB7E315A8FAD279A25FF5EC6B2BE0F4ED76A31C4A8A53F3EE9A"
+  },
+  {
+    "path": "src/ImathTest/testProcrustes.cpp",
+    "type": "RegularFile",
+    "bytes": 14976,
+    "sha256": "9117489FF0D754D60A7F9A66CB4E61A865BC63D0A739DA6B4CE0260964781078"
+  },
+  {
+    "path": "src/ImathTest/testProcrustes.h",
+    "type": "RegularFile",
+    "bytes": 121,
+    "sha256": "8864DB029CF638EC1917B39BC291259B4F283B3003F26ED347A54247DE8BF570"
+  },
+  {
+    "path": "src/ImathTest/testQuat.cpp",
+    "type": "RegularFile",
+    "bytes": 5034,
+    "sha256": "A777657CC5457C086EF90B7D29BA5EE2419925C2FE20BBBCBC64E77A25D40F1A"
+  },
+  {
+    "path": "src/ImathTest/testQuat.h",
+    "type": "RegularFile",
+    "bytes": 115,
+    "sha256": "6EAD3583F33D33F65B4535073B39A62BF9492A0281177856F8D0B358B3C29EFD"
+  },
+  {
+    "path": "src/ImathTest/testQuatSetRotation.cpp",
+    "type": "RegularFile",
+    "bytes": 4261,
+    "sha256": "FBE44CAF2C689A77F2489B82637DF058197A4B2B6CA37AEAC1DE68ADD1152543"
+  },
+  {
+    "path": "src/ImathTest/testQuatSetRotation.h",
+    "type": "RegularFile",
+    "bytes": 126,
+    "sha256": "4772571ABDFE7BEE9E66A060690ED4237977EDF9CEB8B1AAC6B46BB1974A51E4"
+  },
+  {
+    "path": "src/ImathTest/testQuatSlerp.cpp",
+    "type": "RegularFile",
+    "bytes": 3853,
+    "sha256": "5FAC2E8BB179F8548656CD3AA94F273BED6560CBE552EE85691F149B472322C4"
+  },
+  {
+    "path": "src/ImathTest/testQuatSlerp.h",
+    "type": "RegularFile",
+    "bytes": 120,
+    "sha256": "38C1ADFBD6660A5CC0586FC06D3BD6620B5F9A437C6AF931F11FD9D980AC647E"
+  },
+  {
+    "path": "src/ImathTest/testRandom.cpp",
+    "type": "RegularFile",
+    "bytes": 5315,
+    "sha256": "CE1F7290D171C973BB70975847744B693F7A176FA18B85D8C566BAB53AE4A10A"
+  },
+  {
+    "path": "src/ImathTest/testRandom.h",
+    "type": "RegularFile",
+    "bytes": 117,
+    "sha256": "8D060A95F71DC964FF2F18B1D25890A1CA635E3B442974EC05C6C1753D336357"
+  },
+  {
+    "path": "src/ImathTest/testRoots.cpp",
+    "type": "RegularFile",
+    "bytes": 5927,
+    "sha256": "8E67045038914A49CBCEF9908C89A683338D7D1A55170CE77898394DBF2262DC"
+  },
+  {
+    "path": "src/ImathTest/testRoots.h",
+    "type": "RegularFile",
+    "bytes": 116,
+    "sha256": "B141616F90C848706AD03BB6317CCD803A2418505F2B0883E89B1630962BD93A"
+  },
+  {
+    "path": "src/ImathTest/testShear.cpp",
+    "type": "RegularFile",
+    "bytes": 6701,
+    "sha256": "7CD90F228E66582FC056730E9C97A6200F87C869EDBFE1A42F3FC50476048C20"
+  },
+  {
+    "path": "src/ImathTest/testShear.h",
+    "type": "RegularFile",
+    "bytes": 116,
+    "sha256": "6C522E61C56D00FD005C72B0733B2B4D61A986035473B53422A6CBEC43B8B6B0"
+  },
+  {
+    "path": "src/ImathTest/testSize.cpp",
+    "type": "RegularFile",
+    "bytes": 597,
+    "sha256": "D8D1D6E0A1C2D8930614AC140D770087F112D68F02FEA06D467E6F3441EF42C2"
+  },
+  {
+    "path": "src/ImathTest/testSize.h",
+    "type": "RegularFile",
+    "bytes": 115,
+    "sha256": "4CD7AC5885ECEF8C80168419AE2447F1F36197B4683021C387C88C09F3051FA2"
+  },
+  {
+    "path": "src/ImathTest/testTinySVD.cpp",
+    "type": "RegularFile",
+    "bytes": 13086,
+    "sha256": "5CE2E919D968E8E0A8ED747449AC3BEC2654A4D8AD1F737CA10ADBA0C2BA46EC"
+  },
+  {
+    "path": "src/ImathTest/testTinySVD.h",
+    "type": "RegularFile",
+    "bytes": 118,
+    "sha256": "0189D33E2A655B1CF462ED1B52535F48FA25A7ECAEFCE0AA3A82101748CE6462"
+  },
+  {
+    "path": "src/ImathTest/testToFloat.cpp",
+    "type": "RegularFile",
+    "bytes": 3000,
+    "sha256": "2083EDC3740BD48B47E834F2E789B6BDFA2C2287392962646CFB5BD07E24858F"
+  },
+  {
+    "path": "src/ImathTest/testToFloat.h",
+    "type": "RegularFile",
+    "bytes": 118,
+    "sha256": "B81B602B2BF8CFA5A9EBA6750C035F78285516570F241A23D074FC0DFD93A461"
+  },
+  {
+    "path": "src/ImathTest/testVec.cpp",
+    "type": "RegularFile",
+    "bytes": 9810,
+    "sha256": "8306861DED6E1A102AB2CD2458FC875029288FFDCA4B88FDB620949A37B0B939"
+  },
+  {
+    "path": "src/ImathTest/testVec.h",
+    "type": "RegularFile",
+    "bytes": 114,
+    "sha256": "96764087B3A26641E8E6D768CD5F677EDF39806C1487294813AE119AE3D71352"
+  },
+  {
+    "path": "src/python",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 9743,
+    "sha256": "3F0BC9ADBBF0CA3693741064F7D3ABA5B7469BB85B39BE510D7FB720BBCF69FD"
+  },
+  {
+    "path": "src/python/PyImath.pc.in",
+    "type": "RegularFile",
+    "bytes": 480,
+    "sha256": "F3503F6C5057068CB9C4DF6B9EF90393C9A5C2F7C250F3E779196E7F2E6EC340"
+  },
+  {
+    "path": "src/python/PyImath",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/PyImath/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 2051,
+    "sha256": "B58233ED18346B7E1F049A26B70230B274FD4ADA9569B9CA40B531813492DE0D"
+  },
+  {
+    "path": "src/python/PyImath/PyImath.cpp",
+    "type": "RegularFile",
+    "bytes": 1397,
+    "sha256": "FB3939D834FE3919F7E443F1A6C5E170D6616D6BC92593E5D6B1E023F979ACD3"
+  },
+  {
+    "path": "src/python/PyImath/PyImath.h",
+    "type": "RegularFile",
+    "bytes": 1318,
+    "sha256": "1EF5487E6AC3ADED6CAB13DA11C1CC996FBD183E0A1204CC5AF918E7B48D580C"
+  },
+  {
+    "path": "src/python/PyImath/PyImathAPI.h",
+    "type": "RegularFile",
+    "bytes": 2448,
+    "sha256": "312CF69AE7433E93784DD93F7BD91372586EC9A5505DF878E2C7EF931AD51A10"
+  },
+  {
+    "path": "src/python/PyImath/PyImathAutovectorize.cpp",
+    "type": "RegularFile",
+    "bytes": 6108,
+    "sha256": "C71EF0151ECB4249AEDC6F29DC45F67E0340AF8C4002F322AF0B6B5B33C9D172"
+  },
+  {
+    "path": "src/python/PyImath/PyImathAutovectorize.h",
+    "type": "RegularFile",
+    "bytes": 123012,
+    "sha256": "051906D6BFEB90B3E6321EE8A6DF9C88ADD30EAA62B15E301AC44AC284BC4873"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBasicTypes.cpp",
+    "type": "RegularFile",
+    "bytes": 3763,
+    "sha256": "2039EC1730F55485ED5CE0698DF5FB21EDD1CBB67D2B4D2C8B3ECF9ED240C9A8"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBasicTypes.h",
+    "type": "RegularFile",
+    "bytes": 284,
+    "sha256": "BCEC84CB8903F82573428C61B587A8077F12A7F612A2C80AAF507562575679E5"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBox.cpp",
+    "type": "RegularFile",
+    "bytes": 16404,
+    "sha256": "3F3FABADCA3450A8DF6F59EBEC7CAD84626D72BB371FC0E00B364613CE9D4722"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBox.h",
+    "type": "RegularFile",
+    "bytes": 6180,
+    "sha256": "6B929561131A60E23415ECFFC3FA232D7E304A126A4FA0D82CEB34156B9850EE"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBox2Array.cpp",
+    "type": "RegularFile",
+    "bytes": 1579,
+    "sha256": "54B06F98FBC567166D44430B418FDFC68DE0F47E12061A167F5D8A37E17D0285"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBox3Array.cpp",
+    "type": "RegularFile",
+    "bytes": 1579,
+    "sha256": "0A17B1509EB881967F78BB03DC352B157B0A61012B86997EE41CB2B5E6155941"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBoxArrayImpl.h",
+    "type": "RegularFile",
+    "bytes": 2243,
+    "sha256": "9C511FBA7909E817A21FC2594BB8BBE856F7B21BDF77F87947458F609C1A6BAE"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBufferProtocol.cpp",
+    "type": "RegularFile",
+    "bytes": 13716,
+    "sha256": "AAD68979219ED80B1542F375ABE64A95D3141DDB5D171A8BBBE61DD1C8B4B630"
+  },
+  {
+    "path": "src/python/PyImath/PyImathBufferProtocol.h",
+    "type": "RegularFile",
+    "bytes": 572,
+    "sha256": "FFC720085566F4C4C2B983BDD5FDF852C53383E5986E93EC84101C3A96507AA1"
+  },
+  {
+    "path": "src/python/PyImath/PyImathColor.h",
+    "type": "RegularFile",
+    "bytes": 7460,
+    "sha256": "1C904F4DCAD25A2D743A39D2755A5F260F911D6C1C6D170F1750E0E2A1A1D893"
+  },
+  {
+    "path": "src/python/PyImath/PyImathColor3.cpp",
+    "type": "RegularFile",
+    "bytes": 17821,
+    "sha256": "2960339A8A4D48680E736997592AAD2CE8907DB4C81D7DE34702F3A6D99CE9E0"
+  },
+  {
+    "path": "src/python/PyImath/PyImathColor3ArrayImpl.h",
+    "type": "RegularFile",
+    "bytes": 1585,
+    "sha256": "C227F075738084B8C307945BDEB59C61DDA0830ADC42A96B2537FB78E385F52B"
+  },
+  {
+    "path": "src/python/PyImath/PyImathColor4.cpp",
+    "type": "RegularFile",
+    "bytes": 19140,
+    "sha256": "79EFB6D4386F56FF1B4B37E0ED2F479B7D15583E3F98F8263EBC613546CF5C07"
+  },
+  {
+    "path": "src/python/PyImath/PyImathColor4Array2DImpl.h",
+    "type": "RegularFile",
+    "bytes": 20162,
+    "sha256": "C40C941C9B233540EC6B2975CC2F9711CB57AFEC947751B856566C20295B3ED8"
+  },
+  {
+    "path": "src/python/PyImath/PyImathColor4ArrayImpl.h",
+    "type": "RegularFile",
+    "bytes": 1644,
+    "sha256": "6EA67FB9E6C7D76AE41C0457B581EB002BA2651E172D47023EC4979ACA7C23DE"
+  },
+  {
+    "path": "src/python/PyImath/PyImathDecorators.h",
+    "type": "RegularFile",
+    "bytes": 911,
+    "sha256": "8C4474CD2205D3D43F836F16667EF66EC71D07A4DD93BCC32EDEAB66F7232EF1"
+  },
+  {
+    "path": "src/python/PyImath/PyImathEuler.cpp",
+    "type": "RegularFile",
+    "bytes": 25747,
+    "sha256": "3701E8854B0D8CE758D1422D1FFAA6E18CAF0CA40C53BE15A8787406D843F7E3"
+  },
+  {
+    "path": "src/python/PyImath/PyImathEuler.h",
+    "type": "RegularFile",
+    "bytes": 2357,
+    "sha256": "647DA2BE9A9191A686D85E6E1FE6E4C759FBD3DDEEBAFB088BA74E68CF2B39C6"
+  },
+  {
+    "path": "src/python/PyImath/PyImathExport.h",
+    "type": "RegularFile",
+    "bytes": 711,
+    "sha256": "827D1022F51784D6D894F30EFDA38F67F4B37B901BF76D3D5795D6559C4D2F97"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedArray.cpp",
+    "type": "RegularFile",
+    "bytes": 1150,
+    "sha256": "B4681E0A253557BD16F02640F3D1829CB49257666EC98EAC49C678B48351F0BF"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedArray.h",
+    "type": "RegularFile",
+    "bytes": 27914,
+    "sha256": "7B7F16CFC01526F0FFD2CE237C0FCF3BC2D90504E57CFC4D0DF7E0BC8C3E0E26"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedArray2D.h",
+    "type": "RegularFile",
+    "bytes": 38317,
+    "sha256": "C1B6B088B5011B0A35B4A8F6A93075A0DB27734A3D52E0EAD6B9F99DAB8385EA"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedArrayTraits.h",
+    "type": "RegularFile",
+    "bytes": 11595,
+    "sha256": "66D6DE75B78EDAE707955F494B1CAE7450DF840E75C3D1F4729F55974D5FA4B6"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedMatrix.h",
+    "type": "RegularFile",
+    "bytes": 24656,
+    "sha256": "70A2FB7D915F8C489025B845E28DFEF27EB885B237EF722F46AA94D2D50CC72A"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedVArray.cpp",
+    "type": "RegularFile",
+    "bytes": 23920,
+    "sha256": "1D7738A3FB2C192F4D873E6690D31B9D511A930C6131842463BE984208F012B6"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFixedVArray.h",
+    "type": "RegularFile",
+    "bytes": 5930,
+    "sha256": "279223CBFF31CD2849C3F1A7AA19F9993F25DB1FA3F2CF8EDE48A39CF1914CFC"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFrustum.cpp",
+    "type": "RegularFile",
+    "bytes": 14505,
+    "sha256": "2E33CE8BB6B6156FB1BC78B393B8B865BCB361F1667C793CDC70761E4F5A5F5E"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFrustum.h",
+    "type": "RegularFile",
+    "bytes": 2183,
+    "sha256": "927CD8D94540DBE31729FB6DAEE74D2E73EFA3BC845C9F6CBD67A38124A41F92"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFun.cpp",
+    "type": "RegularFile",
+    "bytes": 8039,
+    "sha256": "B60DED583407DF55994264D3B14F06FCE16F33D34D6882A4CBD6AFA687ED29CE"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFun.h",
+    "type": "RegularFile",
+    "bytes": 268,
+    "sha256": "7AA12275B312EBFA7B1DF3E6F46F86C22266B76F41A8E153D0EEB601DAA6E7A3"
+  },
+  {
+    "path": "src/python/PyImath/PyImathFunOperators.h",
+    "type": "RegularFile",
+    "bytes": 5882,
+    "sha256": "05784742060DFE0A1888F9297A9338847AA7071143C8EFED7AF3385D5F386D12"
+  },
+  {
+    "path": "src/python/PyImath/PyImathLine.cpp",
+    "type": "RegularFile",
+    "bytes": 14426,
+    "sha256": "5B7B578C55C4D5B8521DE8B5BE478EB8B055B851B0630EF5B171E58BC79C0430"
+  },
+  {
+    "path": "src/python/PyImath/PyImathLine.h",
+    "type": "RegularFile",
+    "bytes": 1875,
+    "sha256": "25E83C64A4C83BAE97358EF509D399E338EBDF8C0D990C95C815D241800DABA5"
+  },
+  {
+    "path": "src/python/PyImath/PyImathM44Array.cpp",
+    "type": "RegularFile",
+    "bytes": 668,
+    "sha256": "68C1F6961CE3C6BE495B0084AB1C9D7404A4CC054FD64A2CD8FA021EB4A5D52D"
+  },
+  {
+    "path": "src/python/PyImath/PyImathM44Array.h",
+    "type": "RegularFile",
+    "bytes": 1036,
+    "sha256": "B892AC915791457CC50D1785C22FB87BD1228D6B35E5AC8D94AB91A0D8DDD3BC"
+  },
+  {
+    "path": "src/python/PyImath/PyImathMathExc.h",
+    "type": "RegularFile",
+    "bytes": 507,
+    "sha256": "3DDEECA168386CD76B0A7EB1D4B9DD88DB308B6EEDDB786D59145D960D19EA06"
+  },
+  {
+    "path": "src/python/PyImath/PyImathMatrix.h",
+    "type": "RegularFile",
+    "bytes": 5884,
+    "sha256": "C27DB49651ACBBBBE86CD457EBD009B38F6C5C4BE7CE21B266B0F29DDC9CA90E"
+  },
+  {
+    "path": "src/python/PyImath/PyImathMatrix22.cpp",
+    "type": "RegularFile",
+    "bytes": 21912,
+    "sha256": "5F90AFFA5E4B0F1867A4A21992E6DDBF47917B26110A9606DE70FC6F463AA86D"
+  },
+  {
+    "path": "src/python/PyImath/PyImathMatrix33.cpp",
+    "type": "RegularFile",
+    "bytes": 40513,
+    "sha256": "4FA02A87DD5F7AFCB2B5A7553C7D5C3DED6A9A6719B7C0F752AD57AE6812E611"
+  },
+  {
+    "path": "src/python/PyImath/PyImathMatrix44.cpp",
+    "type": "RegularFile",
+    "bytes": 49261,
+    "sha256": "28665DB263FA25FBE74860344A4F3631C9F1B280469E4D6D78CD2AFB77B42F63"
+  },
+  {
+    "path": "src/python/PyImath/PyImathOperators.h",
+    "type": "RegularFile",
+    "bytes": 10240,
+    "sha256": "190F28968B99F56F3FFDD563E6246EAB5236EACBEA1D64ABE2994487BC3FBE9D"
+  },
+  {
+    "path": "src/python/PyImath/PyImathPlane.cpp",
+    "type": "RegularFile",
+    "bytes": 15654,
+    "sha256": "86D243C7C353C56DD237DDAC379DA86624B917D3530EB4ABE552936A520C66D5"
+  },
+  {
+    "path": "src/python/PyImath/PyImathPlane.h",
+    "type": "RegularFile",
+    "bytes": 1920,
+    "sha256": "BAB02A1462C7B0EC1802DF83EB5AD4441A5BE04C3AD5B9400409157601D38E4F"
+  },
+  {
+    "path": "src/python/PyImath/PyImathQuat.cpp",
+    "type": "RegularFile",
+    "bytes": 32238,
+    "sha256": "93321D74E1975E731FF974A1D881F5C0D8BF5D5B1979EED26D32E6DD4138A49A"
+  },
+  {
+    "path": "src/python/PyImath/PyImathQuat.h",
+    "type": "RegularFile",
+    "bytes": 4033,
+    "sha256": "A373AA4381546B8F6534E5BD2523F37DDF3E0A57D3C0AAD2BC49A4B06612D279"
+  },
+  {
+    "path": "src/python/PyImath/PyImathQuatOperators.h",
+    "type": "RegularFile",
+    "bytes": 885,
+    "sha256": "F55D0C280ABE7D1CA31CCC0538BAC57CD0D39540C79D0E39C1E4985089AB5DF8"
+  },
+  {
+    "path": "src/python/PyImath/PyImathRandom.cpp",
+    "type": "RegularFile",
+    "bytes": 14163,
+    "sha256": "E13CF6DB39A79FE88287B4B1FF7A5ADA2E774E2F3D50D1879F59B0C75CEFCAFF"
+  },
+  {
+    "path": "src/python/PyImath/PyImathRandom.h",
+    "type": "RegularFile",
+    "bytes": 681,
+    "sha256": "93DCC6A9DBF3225822E9E7BA2276191726F0324BAEF6C78572BC4872A3DE4F61"
+  },
+  {
+    "path": "src/python/PyImath/PyImathShear.cpp",
+    "type": "RegularFile",
+    "bytes": 14097,
+    "sha256": "0C737156FF9068C695814E4FEE3C96A1007477667DE930ADC9EE14B5323CCE55"
+  },
+  {
+    "path": "src/python/PyImath/PyImathShear.h",
+    "type": "RegularFile",
+    "bytes": 3831,
+    "sha256": "2E8014BA9C1B99D978A968DAD257F3B58E685C96E67703966039E608343A5F6A"
+  },
+  {
+    "path": "src/python/PyImath/PyImathStringArray.cpp",
+    "type": "RegularFile",
+    "bytes": 12939,
+    "sha256": "484B36508AEAC9F7DE4A9DD567EA18E858CD1F013BD94C32F4E13D9621093C3C"
+  },
+  {
+    "path": "src/python/PyImath/PyImathStringArray.h",
+    "type": "RegularFile",
+    "bytes": 3449,
+    "sha256": "178015FD07612D18737416A576EDBCCA289E19A71F8D94D80AE57A113058FA44"
+  },
+  {
+    "path": "src/python/PyImath/PyImathStringArrayRegister.h",
+    "type": "RegularFile",
+    "bytes": 303,
+    "sha256": "548D37B8522F6F3E9768E9F696415EB7331FDBE463506DA4A073670930D345E0"
+  },
+  {
+    "path": "src/python/PyImath/PyImathStringTable.cpp",
+    "type": "RegularFile",
+    "bytes": 2607,
+    "sha256": "79F0736BE355A8AD46FACD6CE025B4B90AE839BCD064AA6C0877679099D30840"
+  },
+  {
+    "path": "src/python/PyImath/PyImathStringTable.h",
+    "type": "RegularFile",
+    "bytes": 3750,
+    "sha256": "F995633344DF9ECBAFAAD2968E9A2CB3C05B6D3431678BDCFD724E440FA1A87A"
+  },
+  {
+    "path": "src/python/PyImath/PyImathTask.cpp",
+    "type": "RegularFile",
+    "bytes": 1169,
+    "sha256": "54C16422E9C7BFF8B816E4827BF1D4A1EB587ABF6C6598C680083E9CEB7EB82D"
+  },
+  {
+    "path": "src/python/PyImath/PyImathTask.h",
+    "type": "RegularFile",
+    "bytes": 936,
+    "sha256": "12C8516ADBA5F2AD5C00F97590188CB1BBBC4738AF6AC404C63B8C054AEF4BAB"
+  },
+  {
+    "path": "src/python/PyImath/PyImathUtil.cpp",
+    "type": "RegularFile",
+    "bytes": 1728,
+    "sha256": "F165A5A7A02AE8B974A76F37DB6B6BB04DFD4B8B2605A022C07B1F7C3582AB3E"
+  },
+  {
+    "path": "src/python/PyImath/PyImathUtil.h",
+    "type": "RegularFile",
+    "bytes": 5578,
+    "sha256": "4AA2505F15A72D2AF0C2EDD263DD4C73C59FDFAFC174BB7A7E3A3ABEE61ED2F4"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec.h",
+    "type": "RegularFile",
+    "bytes": 17714,
+    "sha256": "719218B8C9B7B62569AD00D5354BD4DE7E15CF1995AFDFF4D959753EA6465990"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec2Impl.h",
+    "type": "RegularFile",
+    "bytes": 33276,
+    "sha256": "74B6CAEB8676F9588A98AF99F33704C2ADE63EC6FE11189E672EF6ACBAE72007"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec2fd.cpp",
+    "type": "RegularFile",
+    "bytes": 1689,
+    "sha256": "0E36E52ED2EB7B3908116663C13684896F7CC566C4298A4C7E12D7CAFAF0ED5D"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec2si.cpp",
+    "type": "RegularFile",
+    "bytes": 1756,
+    "sha256": "BAA4A236566E839AAD4F43D8AFFE1D8C1E1EE11666A7ABAAF45064E086A8B95B"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec3ArrayImpl.h",
+    "type": "RegularFile",
+    "bytes": 6257,
+    "sha256": "904B432A9A0B2B48872407037577034D6188388AACC8D3143DB164085210F99C"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec3Impl.h",
+    "type": "RegularFile",
+    "bytes": 27260,
+    "sha256": "1F56D677005F8C8F7C1A9888FD2B99E0E0A6F6E08B2992ED2B88090C976B50E7"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec3fd.cpp",
+    "type": "RegularFile",
+    "bytes": 1794,
+    "sha256": "6A26814DB060336AB84657268A921BF06A8A2BE3FC6826B068D9A2FFA75C43B7"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec3si.cpp",
+    "type": "RegularFile",
+    "bytes": 1251,
+    "sha256": "7B11AE9DC0FD9AFD91F2047DE5AF30490D49C634727D50041807B335BFC6A1E7"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec3siArray.cpp",
+    "type": "RegularFile",
+    "bytes": 1449,
+    "sha256": "2C8BAF94568A04B6F69443FFA5275D1F5028D8AA042198835F998D053B10103C"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec4ArrayImpl.h",
+    "type": "RegularFile",
+    "bytes": 5611,
+    "sha256": "E28AD375BA7AAE0EDDD69F46FF001D49E800F46D8881E06FF6B485C46ED8CB04"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec4Impl.h",
+    "type": "RegularFile",
+    "bytes": 27427,
+    "sha256": "2E0432F3FF183C33937AEDA69DFE106D3E25B24A3AD54CB4BECD9C28250504D1"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec4fd.cpp",
+    "type": "RegularFile",
+    "bytes": 1823,
+    "sha256": "4FF1967E999EC05D4E297EC6C182E96D33B67D70AFA7170C0262D4FD09424407"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec4si.cpp",
+    "type": "RegularFile",
+    "bytes": 1251,
+    "sha256": "B699921CD866C276AEE087B96A8278D66EA419070CD998691B0D1DB3AE9B0AB8"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVec4siArray.cpp",
+    "type": "RegularFile",
+    "bytes": 1469,
+    "sha256": "F0EC26FEC562EBF2F260E8D8D82188B19DF197AFCC791938044EA53E54C7BE6D"
+  },
+  {
+    "path": "src/python/PyImath/PyImathVecOperators.h",
+    "type": "RegularFile",
+    "bytes": 1820,
+    "sha256": "5B0BD4B72602C1C0D828516B5D9D24593C782FB06C9071EF2E1829A913B1E552"
+  },
+  {
+    "path": "src/python/PyImath/imathmodule.cpp",
+    "type": "RegularFile",
+    "bytes": 27766,
+    "sha256": "BC2FFA8B845F499CCA004D28C91B1BB71BFCD51704CC3C90CEC043C7A35721CA"
+  },
+  {
+    "path": "src/python/PyImath/varraySemantics.txt",
+    "type": "RegularFile",
+    "bytes": 6425,
+    "sha256": "669539DA941D8E06403623893B0206C0E138BD5A48CFAFC5D7E51DF5BDD876DE"
+  },
+  {
+    "path": "src/python/PyImathNumpy",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/PyImathNumpy/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 1749,
+    "sha256": "AF0AF4F0536297A0A61900A3C0132ADFB8CB1ECAA911A0C43DD35EE30CE23A45"
+  },
+  {
+    "path": "src/python/PyImathNumpy/imathnumpymodule.cpp",
+    "type": "RegularFile",
+    "bytes": 8548,
+    "sha256": "FFDCBD23D441F3F17866321DB8E23D1A0B1C4686551C0FE7DA166CB85005EBE8"
+  },
+  {
+    "path": "src/python/PyImathNumpyTest",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/PyImathNumpyTest/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 767,
+    "sha256": "F939FDE5B840103175D0FD7F28C0D84664FEE5FFF806B5F379E7FA45771F5299"
+  },
+  {
+    "path": "src/python/PyImathNumpyTest/pyImathNumpyTest.in",
+    "type": "RegularFile",
+    "bytes": 12674,
+    "sha256": "976FA751F30D2A392938F12922226A22EE98AAC47B86C6B9486887D497CDA62D"
+  },
+  {
+    "path": "src/python/PyImathSpeedTest",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/PyImathSpeedTest/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 584,
+    "sha256": "D91F3C71AFC8B3A009D0FAED0994B4B0B6096121597F046B79C5953688C17C44"
+  },
+  {
+    "path": "src/python/PyImathSpeedTest/pyImathSpeedTest.in",
+    "type": "RegularFile",
+    "bytes": 5783,
+    "sha256": "9FA5B8B7501E5A29139E6DD97FF681C9DF62A0691DCE5ADE101F7B15E1AFC73D"
+  },
+  {
+    "path": "src/python/PyImathTest",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/PyImathTest/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 737,
+    "sha256": "B63B8C5CC71AA5C69C52BABDB23EB73681573ABF24A64CB4398FCF91C125C5C8"
+  },
+  {
+    "path": "src/python/PyImathTest/pyImathTest.in",
+    "type": "RegularFile",
+    "bytes": 241815,
+    "sha256": "727B53FEA47C69AD0505CAA92DFE66E95565FA415FFAC001A13F9953C93138BE"
+  },
+  {
+    "path": "src/python/README.md",
+    "type": "RegularFile",
+    "bytes": 875,
+    "sha256": "53F75DF6599F32CFD33765AC0E72A584A4C0885C5C7F2225CEC88B3611F5A899"
+  },
+  {
+    "path": "src/python/config",
+    "type": "Directory"
+  },
+  {
+    "path": "src/python/config/CMakeLists.txt",
+    "type": "RegularFile",
+    "bytes": 1996,
+    "sha256": "FFCBBB99F5DB543D7376A7541F571650699EF9A0692C50BC6F7884E9CEA7DF8E"
+  },
+  {
+    "path": "src/python/config/ModuleDefine.cmake",
+    "type": "RegularFile",
+    "bytes": 6228,
+    "sha256": "D54B0D3CDB61FBC25279337D61226D8E4B69DBC5923945150CB3210A87EE7047"
+  },
+  {
+    "path": "src/python/config/NumPyLocate.cmake",
+    "type": "RegularFile",
+    "bytes": 4099,
+    "sha256": "D5187C80B3BEF40619E84C40167F7FDD1CEAD8D5107461D845BFA34D42AA7301"
+  },
+  {
+    "path": "src/python/config/PyImathConfig.h.in",
+    "type": "RegularFile",
+    "bytes": 802,
+    "sha256": "BD0D57ABE1BAC4F0A60D101B405810C592FF68E5B69E0F74625A35AB5DA7E1F3"
+  },
+  {
+    "path": "src/python/config/PyImathSetup.cmake",
+    "type": "RegularFile",
+    "bytes": 837,
+    "sha256": "6AB7FF5B03C003F3D40CB811CC0BC64FFF2BE34AF3A72818D2A982B3A8C30FFB"
+  }
+]

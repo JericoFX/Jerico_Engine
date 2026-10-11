@@ -1,0 +1,175 @@
+{
+  "status": "READY FOR PARENT REVIEW; NO NATIVE EXECUTION",
+  "sourceGroups": {
+    "reviewed-root2203": {
+      "validated": 2203,
+      "added": 2203,
+      "duplicates": 0
+    },
+    "parent-reviewed-python-composition6": {
+      "validated": 6,
+      "added": 5,
+      "duplicates": 1
+    },
+    "cli11-snapshot304": {
+      "validated": 304,
+      "added": 304,
+      "duplicates": 0
+    },
+    "cli11-original-wrapper-consumers5": {
+      "validated": 5,
+      "added": 3,
+      "duplicates": 2
+    },
+    "cli11-provenance-and-composition-receipts17": {
+      "validated": 17,
+      "added": 17,
+      "duplicates": 0
+    }
+  },
+  "rawInputCount": 2535,
+  "uniqueInputCount": 2532,
+  "deduplicatedCount": 3,
+  "approvedDeltas": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "beforeBytes": 3930,
+      "beforeSHA256": "e1b8302687385076cda9f20660a4958dbb919af3c3a1630b8b796a6127ae824d",
+      "afterBytes": 3827,
+      "afterSHA256": "0bf845bedef7f84dcf51f5ec986fe0b7ad6fefccb7b4e823c260d062240618a3",
+      "reason": "Parent-reviewed exclusion of Python Gem product composition; six-file receipt pinned"
+    }
+  ],
+  "approvedCompositionChanges": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "before": {
+        "bytes": 3930,
+        "path": "engine.json",
+        "sha256": "E1B8302687385076CDA9F20660A4958DBB919AF3C3A1630B8B796A6127AE824D"
+      },
+      "after": {
+        "bytes": 3827,
+        "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+        "matchesRevision1": true,
+        "sha256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3"
+      }
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg",
+      "before": {
+        "bytes": 9602,
+        "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg",
+        "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+      },
+      "after": {
+        "bytes": 9382,
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg",
+        "matchesRevision1": true,
+        "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+      }
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg",
+      "before": {
+        "bytes": 10012,
+        "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg",
+        "sha256": "A6687C0813DBE83A3387EEE98C6CF927B98CC1CE30AAF43DD78EDB651D47BDE7"
+      },
+      "after": {
+        "bytes": 9792,
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg",
+        "matchesRevision1": true,
+        "sha256": "B49C40BE47E7232DC0211C0DCD8D56A6ECD157720590A719449A9A38D27E01E0"
+      }
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg",
+      "before": {
+        "bytes": 9602,
+        "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg",
+        "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+      },
+      "after": {
+        "bytes": 9382,
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg",
+        "matchesRevision1": true,
+        "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+      }
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg",
+      "before": {
+        "bytes": 9602,
+        "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg",
+        "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+      },
+      "after": {
+        "bytes": 9382,
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg",
+        "matchesRevision1": true,
+        "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B"
+      }
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+      "before": {
+        "path": "Gems/AtomLyIntegration/gem.json",
+        "sha256": "5F4C117DBA1FAEBD773570A3233C766E572C7FFEEF23D4165E52F8B4BF875FA3",
+        "bytes": 1465
+      },
+      "after": {
+        "bytes": 1418,
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+        "matchesRevision1": true,
+        "sha256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988"
+      }
+    }
+  ],
+  "parentApprovalReceipt": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/python-product-composition-audit/parent-review-rev2.json",
+  "parentApprovalSHA256": "1A89257BA09E563046DEE86487473C5BFA13055FE3984D7197D468C69C59FF33",
+  "argumentsCount": 48,
+  "cacheCount": 32,
+  "wheelhouseCount": 44,
+  "acceptedPackagePairs": 8,
+  "priorDriverSHA256": "448ADBC86F5DCA42CB006E7C5A0DA7ADEE0BA1623E50E8ED89093BD6F88CF95A",
+  "driverSHA256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41",
+  "assignmentSHA256": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53",
+  "freezeSHA256": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292",
+  "driverChanges": [
+    {
+      "before": "'build/n0-validation/local-packages/root-jsoncpp-final'",
+      "after": "'build/n0-validation/local-packages/root-cli11-final'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-jsoncpp-final/root-jsoncpp-assignment.json'",
+      "after": "'build/n0-validation/local-packages/root-cli11-final/root-cli11-assignment.json'"
+    },
+    {
+      "before": "'build/n0-validation/local-packages/root-jsoncpp-final/source-freeze-root-jsoncpp.json'",
+      "after": "'build/n0-validation/local-packages/root-cli11-final/source-freeze-root-cli11.json'"
+    },
+    {
+      "before": "544A7A75222108044CCBE42737569BC7173EAFE0444B153C1D02D63D099A51C2",
+      "after": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53"
+    },
+    {
+      "before": "2C8496737E9D90609E47761EFDC8C7A6AF4D30BEE7BBC7BA28CDF857120526B8",
+      "after": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292"
+    },
+    {
+      "before": "$arguments.Count -ne 47 -or $freeze.Count -ne 2203",
+      "after": "$arguments.Count -ne 48 -or $freeze.Count -ne 2532"
+    },
+    {
+      "before": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2') { throw 'exact local JSONCpp override missing' }",
+      "after": "if ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_JSONCPP:PATH=F:/JericoEngine/Dependencies/jsoncpp-1.6.2') { throw 'exact local JSONCpp override missing' }\nif ($arguments -notcontains '-DFETCHCONTENT_SOURCE_DIR_CLI11:PATH=F:/JericoEngine/Dependencies/cli11-2.6.2') { throw 'exact local CLI11 override missing' }"
+    },
+    {
+      "before": "    @{name='jsoncpp-tree-before';path='F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2'},",
+      "after": "    @{name='jsoncpp-tree-before';path='F:\\JericoEngine\\Dependencies\\jsoncpp-1.6.2'},\n    @{name='cli11-tree-before';path='F:\\JericoEngine\\Dependencies\\cli11-2.6.2'},"
+    }
+  ],
+  "preserved": "All instrumentation, offline/process environment guards, cache32/packagePairs8, exact prior47 argv, private-source preflight, existing snapshot before/after and postflight. Adds only CLI11 argv guard/full immutable tree.",
+  "unverified": "No Root/native build run; removal of Python Gem composition and Metal composition not yet configured or runtime-validated"
+}

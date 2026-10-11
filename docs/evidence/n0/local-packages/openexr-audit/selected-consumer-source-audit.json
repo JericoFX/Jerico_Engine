@@ -1,0 +1,34 @@
+{
+  "target": "Gem::ImageProcessingAtom.Editor.Static",
+  "publicDependency": "3rdParty::OpenEXR",
+  "legacyCatalogue": "OpenEXR-3.1.3-rev5-windows / Imath associated",
+  "exrLoaderApi": [
+    "isOpenExrFile classification rejects tiled/deep/multipart",
+    "InputFile/isComplete/Header/dataWindow/ChannelList",
+    "HALF/FLOAT FrameBuffer/Slice/default alpha1",
+    "readPixels"
+  ],
+  "engineTargetCompiled": false,
+  "entries": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\ImageProcessingAtom\\Code\\CMakeLists.txt",
+      "bytes": 4241,
+      "sha256": "3DD0AEA92B0DA019A4880031E26CF930ACD99A0D3CF7C2B684E3F8423D83FD79"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\ImageProcessingAtom\\Code\\Source\\ImageLoader\\ExrLoader.cpp",
+      "bytes": 7748,
+      "sha256": "E19BE452B5F6992FB579AE990F6B5AEE08C0E4648C60DDD5F840AC2B9CE09767"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "bytes": 6787,
+      "sha256": "D6C7FAB5BC7F22E5FB25D6856BAFB1E2CA074F1FE859C94BD91338E687825B35"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Platform\\Common\\MSVC\\Configurations_msvc.cmake",
+      "bytes": 15478,
+      "sha256": "A5A5EF8542A1E624ADC886547F2BBECE35174664323AD39315DED0D51EE40ED3"
+    }
+  ]
+}

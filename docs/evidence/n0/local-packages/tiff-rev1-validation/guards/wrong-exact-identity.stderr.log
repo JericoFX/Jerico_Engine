@@ -1,0 +1,10 @@
+CMake Error at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:290 (message):
+  Could NOT find TIFF: Found unsuitable version "4.2.0.15", but required is
+  exact version "4.3" (found
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1-validation/extracted/tiff/lib/tiff.lib)
+Call Stack (most recent call first):
+  C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:652 (_FPHSA_FAILURE_MESSAGE)
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1-validation/extracted/FindTIFF.cmake:49 (find_package_handle_standard_args)
+  CMakeLists.txt:4 (find_package)
+
+

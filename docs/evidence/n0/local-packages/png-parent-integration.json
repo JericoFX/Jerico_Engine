@@ -1,0 +1,20 @@
+{
+  "package": "png-1.6.37-je-rev1-windows",
+  "packageBytes": 421588,
+  "packageSHA256": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4",
+  "sourceSHA256": "ed747514984fddf095142aa85e983111f13d64b877b1065ed0d990f7adb31eb7",
+  "copyCount": 4,
+  "copyManifestSHA256": "D1457DCC20E3B68B161676E28D2C423C5C1ECAE39BB294EA6642DA2B503E130F",
+  "catalogueBefore": "0EB40B5B83D015362DF363FB51351EA7AE35D773D2B26759D3D00634EE44C79F",
+  "catalogueAfter": "0F6C989F3431591A0832BA0EEB7DD9DBAA3D0B7690B8CF5C5BBBD89EC98F8A71",
+  "nativeCases": "Release5/5 Debug5/5",
+  "debugLinkerWarning": "LNK4098; /MDd consumer vs Release /MD PNG/zlib; passing focal cases are not general cross-CRT acceptance",
+  "guards": "7 producer expected rejections plus wrong EXACT lookup",
+  "frozenInputs": 514,
+  "frozenInputsMatch": true,
+  "readmeChangedOnlyAfterNativeValidation": true,
+  "prebuiltNormalizedTextExact": true,
+  "prebuiltSourceByteMatch": false,
+  "engineAcceptance": "PENDING",
+  "parentIntegrationHarnessNote": "Initial pre-copy audit incorrectly used array Count on scalar zero link/reparse counts; it stopped before copies/catalogue mutation. Corrected scalar check then integrated without native rerun."
+}

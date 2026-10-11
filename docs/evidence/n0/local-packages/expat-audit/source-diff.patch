@@ -1,0 +1,647 @@
+diff --git a/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake b/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake
+@@ -0,0 +1,110 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++foreach(JE_ARGUMENT IN ITEMS SOURCE_ARCHIVE SOURCE_SHA256 SOURCE_URL OUTPUT)
++    if(NOT DEFINED JE_EXPAT_${JE_ARGUMENT} OR "${JE_EXPAT_${JE_ARGUMENT}}" STREQUAL "")
++        message(FATAL_ERROR "JE local Expat: JE_EXPAT_${JE_ARGUMENT} is required")
++    endif()
++endforeach()
++JE_python_require_local_path(JE_EXPAT_SOURCE_ARCHIVE)
++JE_python_require_local_path(JE_EXPAT_OUTPUT)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_EXPAT_OUTPUT}" NORMALIZE JE_OUTPUT_IN_BUILD)
++if(NOT JE_OUTPUT_IN_BUILD OR JE_EXPAT_OUTPUT STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE local Expat: output must be beneath this checkout/build")
++endif()
++if(NOT CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
++    message(FATAL_ERROR "JE local Expat requires Windows x64 and Visual Studio 2022")
++endif()
++if(EXISTS "${JE_EXPAT_OUTPUT}")
++    message(FATAL_ERROR "JE local Expat: output already exists; retained outputs are never overwritten")
++endif()
++set(JE_SOURCE_COMMIT "e26a263aa9182d1e4552cd615857f0f61df3ba42")
++set(JE_EXPECTED_HASH "a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057")
++set(JE_EXPECTED_URL "https://codeload.github.com/libexpat/libexpat/tar.gz/${JE_SOURCE_COMMIT}")
++string(TOLOWER "${JE_EXPAT_SOURCE_SHA256}" JE_SOURCE_HASH)
++if(NOT JE_SOURCE_HASH STREQUAL JE_EXPECTED_HASH OR NOT JE_EXPAT_SOURCE_URL STREQUAL JE_EXPECTED_URL)
++    message(FATAL_ERROR "JE local Expat: source URL/SHA256 must match the audited R_2_4_2 commit archive")
++endif()
++JE_python_verify_file("${JE_EXPAT_SOURCE_ARCHIVE}" "${JE_SOURCE_HASH}" "Expat source archive")
++JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/expat_2.4.2.patch"
++    "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483" "original Expat recipe patch")
++
++set(JE_ARCHIVE_ROOT "libexpat-${JE_SOURCE_COMMIT}")
++set(JE_WORK "${JE_EXPAT_OUTPUT}/source-work/${JE_ARCHIVE_ROOT}/expat")
++set(JE_BUILD "${JE_EXPAT_OUTPUT}/build")
++set(JE_STAGE "${JE_EXPAT_OUTPUT}/stage")
++file(MAKE_DIRECTORY "${JE_EXPAT_OUTPUT}/source-work")
++# The pinned archive's sole symlink is root/README.md -> expat/README.md.
++# Extract only the audited expat subtree (127 regular files, zero links).
++file(ARCHIVE_EXTRACT INPUT "${JE_EXPAT_SOURCE_ARCHIVE}" DESTINATION "${JE_EXPAT_OUTPUT}/source-work"
++    PATTERNS "${JE_ARCHIVE_ROOT}/expat/*")
++JE_python_verify_file("${JE_WORK}/CMakeLists.txt"
++    "81c57f446bc10dd184c4817f107f3a15f86eea0f270eec7f8d164f484f6d655b" "pristine Expat CMake source")
++file(READ "${JE_WORK}/CMakeLists.txt" JE_CMAKE_SOURCE)
++string(REGEX MATCHALL "cmake_minimum_required\\(VERSION 3\\.1\\.3\\)" JE_HUNKS "${JE_CMAKE_SOURCE}")
++list(LENGTH JE_HUNKS JE_HUNK_COUNT)
++if(NOT JE_HUNK_COUNT EQUAL 1)
++    message(FATAL_ERROR "JE local Expat: original minimum-version patch hunk must occur exactly once")
++endif()
++string(REPLACE "cmake_minimum_required(VERSION 3.1.3)" "cmake_minimum_required(VERSION 3.8.0)"
++    JE_CMAKE_PATCHED "${JE_CMAKE_SOURCE}")
++# Preserve upstream LF bytes; Windows file(WRITE) changes the raw patch hash.
++file(CONFIGURE OUTPUT "${JE_WORK}/CMakeLists.txt" CONTENT "${JE_CMAKE_PATCHED}" @ONLY NEWLINE_STYLE UNIX)
++JE_python_verify_file("${JE_WORK}/CMakeLists.txt"
++    "d2f6e71b0209468048cec60c9981be7367b911d99517dd0b3b76da91dc489203" "patched Expat CMake source")
++execute_process(COMMAND "${CMAKE_COMMAND}" -S "${CMAKE_CURRENT_LIST_DIR}" -B "${JE_BUILD}"
++    -G "Visual Studio 17 2022" -A x64 -T v143 "-DJE_EXPAT_WORK:PATH=${JE_WORK}"
++    RESULT_VARIABLE JE_CONFIGURE_RESULT)
++if(NOT JE_CONFIGURE_RESULT EQUAL 0)
++    message(FATAL_ERROR "JE local Expat configure failed (${JE_CONFIGURE_RESULT}); outputs retained")
++endif()
++execute_process(COMMAND "${CMAKE_COMMAND}" --build "${JE_BUILD}" --target expat --config Release
++    RESULT_VARIABLE JE_BUILD_RESULT)
++if(NOT JE_BUILD_RESULT EQUAL 0)
++    message(FATAL_ERROR "JE local Expat build failed (${JE_BUILD_RESULT}); outputs retained")
++endif()
++if(NOT EXISTS "${JE_BUILD}/lib/libexpatMD.lib" OR NOT EXISTS "${JE_BUILD}/upstream/expat_config.h")
++    message(FATAL_ERROR "JE local Expat: expected Release archive/generated header is missing")
++endif()
++file(MAKE_DIRECTORY "${JE_STAGE}/expat/include" "${JE_STAGE}/expat/lib" "${JE_STAGE}/LICENSES/Expat")
++file(COPY "${JE_WORK}/lib/expat.h" "${JE_WORK}/lib/expat_external.h" "${JE_BUILD}/upstream/expat_config.h"
++    DESTINATION "${JE_STAGE}/expat/include")
++file(COPY "${JE_BUILD}/lib/libexpatMD.lib" DESTINATION "${JE_STAGE}/expat/lib")
++configure_file("${JE_WORK}/COPYING" "${JE_STAGE}/expat/COPYING" COPYONLY)
++configure_file("${JE_WORK}/COPYING" "${JE_STAGE}/LICENSES/Expat/COPYING" COPYONLY)
++# Preserve all compiled/include copyright notices, including SipHash's CC0 notice.
++file(GLOB JE_SOURCE_NOTICES "${JE_WORK}/lib/*.c" "${JE_WORK}/lib/*.h")
++file(COPY ${JE_SOURCE_NOTICES} DESTINATION "${JE_STAGE}/LICENSES/Expat/library")
++configure_file("${JE_WORK}/CMakeLists.txt" "${JE_STAGE}/LICENSES/Expat/patched-CMakeLists.txt" COPYONLY)
++configure_file("${JE_WORK}/ConfigureChecks.cmake" "${JE_STAGE}/LICENSES/Expat/ConfigureChecks.cmake" COPYONLY)
++file(COPY "${CMAKE_CURRENT_LIST_DIR}/Findexpat.cmake" "${CMAKE_CURRENT_LIST_DIR}/NOTICE.txt"
++    "${CMAKE_CURRENT_LIST_DIR}/README.md" DESTINATION "${JE_STAGE}")
++configure_file("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake"
++    "${JE_STAGE}/JERequireLocalPath.cmake" COPYONLY)
++file(COPY "${JE_ENGINE_ROOT}/LICENSE.txt" "${JE_ENGINE_ROOT}/LICENSE_APACHE2.TXT"
++    "${JE_ENGINE_ROOT}/LICENSE_MIT.TXT" "${CMAKE_CURRENT_LIST_DIR}/expat_2.4.2.patch"
++    DESTINATION "${JE_STAGE}/LICENSES/O3DE")
++file(WRITE "${JE_STAGE}/expat/JERecipe.json"
++    "{\n  \"recipeCommit\": \"70f0b7b5257bf7cf935bf1cfd270e1b53ccead18\",\n"
++    "  \"originalPackageVersion\": \"2.4.2-rev2\", \"sourceTag\": \"R_2_4_2\",\n"
++    "  \"patchSHA256\": \"685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483\",\n"
++    "  \"patchedCMakeSHA256\": \"d2f6e71b0209468048cec60c9981be7367b911d99517dd0b3b76da91dc489203\",\n"
++    "  \"originalGenerator\": \"Visual Studio 16 2019\", \"toolset\": \"v143\",\n"
++    "  \"configuration\": \"Release\", \"runtimeLibrary\": \"MultiThreadedDLL\",\n"
++    "  \"static\": true, \"charType\": \"char\", \"dtd\": true, \"namespace\": true,\n"
++    "  \"contextBytes\": 1024, \"largeSize\": false, \"tools\": false,\n"
++    "  \"omittedArchiveLink\": \"README.md -> expat/README.md\",\n"
++    "  \"historicalBinaryCompatibility\": \"not asserted\"\n}\n")
++set(JE_PACKAGE_STAGE "${JE_STAGE}")
++set(JE_PACKAGE_NAME "expat-2.4.2-je-rev1-windows")
++set(JE_PACKAGE_OUTPUT "${JE_EXPAT_OUTPUT}/packages")
++set(JE_PACKAGE_VERSION "2.4.2")
++set(JE_PACKAGE_SOURCE_COMMIT "${JE_SOURCE_COMMIT}")
++set(JE_PACKAGE_LICENSE "MIT AND CC0-1.0")
++set(JE_PACKAGE_SOURCE_SHA256 "${JE_SOURCE_HASH}")
++set(JE_PACKAGE_SOURCE_URL "${JE_EXPECTED_URL}")
++include("${CMAKE_CURRENT_LIST_DIR}/../JECreateLocalPackage.cmake")
+diff --git a/cmake/Tools/LocalPackages/Expat/CMakeLists.txt b/cmake/Tools/LocalPackages/Expat/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/CMakeLists.txt
+@@ -0,0 +1,40 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_EXPAT_WORK)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++foreach(JE_PATH IN ITEMS JE_EXPAT_WORK CMAKE_BINARY_DIR)
++    cmake_path(IS_PREFIX JE_BUILD_ROOT "${${JE_PATH}}" NORMALIZE JE_PATH_IN_BUILD)
++    if(NOT JE_PATH_IN_BUILD OR "${${JE_PATH}}" STREQUAL JE_BUILD_ROOT)
++        message(FATAL_ERROR "JE local Expat: ${JE_PATH} must be beneath this checkout/build")
++    endif()
++endforeach()
++JE_python_verify_file("${JE_EXPAT_WORK}/CMakeLists.txt"
++    "d2f6e71b0209468048cec60c9981be7367b911d99517dd0b3b76da91dc489203" "patched Expat CMake source")
++set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreadedDLL)
++set(CMAKE_POLICY_DEFAULT_CMP0091 NEW)
++set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
++set(CMAKE_CONFIGURATION_TYPES Release CACHE STRING "Release package producer" FORCE)
++set(CMAKE_CXX_STANDARD 17)
++project(JELocalExpat LANGUAGES C)
++if(NOT MSVC OR NOT WIN32 OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8
++    OR NOT CMAKE_GENERATOR STREQUAL "Visual Studio 17 2022"
++    OR NOT CMAKE_VS_PLATFORM_NAME STREQUAL "x64" OR NOT CMAKE_VS_PLATFORM_TOOLSET STREQUAL "v143")
++    message(FATAL_ERROR "JE local Expat requires Visual Studio 2022 Windows x64 v143")
++endif()
++set(BUILD_SHARED_LIBS OFF CACHE BOOL "Original static Expat recipe" FORCE)
++foreach(JE_OPTION IN ITEMS BUILD_DOCS BUILD_EXAMPLES BUILD_FUZZERS BUILD_TESTS BUILD_TOOLS BUILD_PKGCONFIG
++    SHARED_LIBS MSVC_STATIC_CRT ATTR_INFO LARGE_SIZE MIN_SIZE)
++    set(EXPAT_${JE_OPTION} OFF CACHE BOOL "Original Windows Expat baseline" FORCE)
++endforeach()
++set(EXPAT_CHAR_TYPE char CACHE STRING "CrySystem char API" FORCE)
++set(EXPAT_DTD ON CACHE BOOL "Original DTD support" FORCE)
++set(EXPAT_NS ON CACHE BOOL "Original namespace support" FORCE)
++set(EXPAT_CONTEXT_BYTES 1024 CACHE STRING "Original parse context" FORCE)
++add_subdirectory("${JE_EXPAT_WORK}" "${CMAKE_CURRENT_BINARY_DIR}/upstream")
++set_target_properties(expat PROPERTIES MSVC_RUNTIME_LIBRARY MultiThreadedDLL
++    ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_BINARY_DIR}/lib")
+diff --git a/cmake/Tools/LocalPackages/Expat/expat_2.4.2.patch b/cmake/Tools/LocalPackages/Expat/expat_2.4.2.patch
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/expat_2.4.2.patch
+@@ -0,0 +1,13 @@
++diff --git a/expat/CMakeLists.txt b/expat/CMakeLists.txt
++index 7e5b9590..1895a874 100644
++--- a/expat/CMakeLists.txt
+++++ b/expat/CMakeLists.txt
++@@ -32,7 +32,7 @@
++ # Unlike most of Expat,
++ # this file is copyrighted under the BSD-license for buildsystem files of KDE.
++ 
++-cmake_minimum_required(VERSION 3.1.3)
+++cmake_minimum_required(VERSION 3.8.0)
++ 
++ # This allows controlling documented build time switches
++ # when Expat is pulled in using the add_subdirectory function, e.g.
+diff --git a/cmake/Tools/LocalPackages/Expat/Findexpat.cmake b/cmake/Tools/LocalPackages/Expat/Findexpat.cmake
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/Findexpat.cmake
+@@ -0,0 +1,59 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# For complete copyright and license terms please see the LICENSE at the root of this distribution.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++# Adapted from o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18,
++# package-system/expat/Findexpat.cmake. Release C archive serves all configurations.
++
++include("${CMAKE_CURRENT_LIST_DIR}/JERequireLocalPath.cmake")
++set(JE_EXPAT_ROOT "${CMAKE_CURRENT_LIST_DIR}")
++JE_python_require_local_path(JE_EXPAT_ROOT)
++if(NOT WIN32 OR (DEFINED CMAKE_SIZEOF_VOID_P AND NOT CMAKE_SIZEOF_VOID_P EQUAL 8))
++    message(FATAL_ERROR "JE local Expat package requires Windows x64")
++endif()
++set(EXPAT_VERSION_STRING "2.4.2")
++set(EXPAT_VERSION "2.4.2")
++set(expat_VERSION "2.4.2")
++set(EXPAT_LIBRARY "${JE_EXPAT_ROOT}/expat/lib/libexpatMD.lib")
++set(EXPAT_INCLUDE_DIR "${JE_EXPAT_ROOT}/expat/include")
++JE_python_require_local_path(EXPAT_LIBRARY)
++JE_python_require_local_path(EXPAT_INCLUDE_DIR)
++if(NOT EXISTS "${EXPAT_LIBRARY}")
++    set(EXPAT_LIBRARY EXPAT_LIBRARY-NOTFOUND)
++endif()
++foreach(JE_HEADER IN ITEMS expat.h expat_external.h expat_config.h)
++    set(JE_HEADER_PATH "${JE_EXPAT_ROOT}/expat/include/${JE_HEADER}")
++    JE_python_require_local_path(JE_HEADER_PATH)
++    if(NOT EXISTS "${JE_HEADER_PATH}")
++        set(EXPAT_INCLUDE_DIR EXPAT_INCLUDE_DIR-NOTFOUND)
++    endif()
++endforeach()
++if(EXPAT_INCLUDE_DIR)
++    file(READ "${EXPAT_INCLUDE_DIR}/expat.h" JE_EXPAT_HEADER)
++    if(NOT JE_EXPAT_HEADER MATCHES "#define[ \t]+XML_MAJOR_VERSION[ \t]+2([ \t\r\n]|$)"
++        OR NOT JE_EXPAT_HEADER MATCHES "#define[ \t]+XML_MINOR_VERSION[ \t]+4([ \t\r\n]|$)"
++        OR NOT JE_EXPAT_HEADER MATCHES "#define[ \t]+XML_MICRO_VERSION[ \t]+2([ \t\r\n]|$)")
++        message(FATAL_ERROR "JE local Expat: headers must be exactly 2.4.2")
++    endif()
++endif()
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(expat REQUIRED_VARS EXPAT_LIBRARY EXPAT_INCLUDE_DIR VERSION_VAR expat_VERSION)
++set(EXPAT_FOUND "${expat_FOUND}")
++set(expat_LIBRARY "${EXPAT_LIBRARY}")
++set(EXPAT_LIBRARIES "${EXPAT_LIBRARY}")
++set(expat_INCLUDE_DIR "${EXPAT_INCLUDE_DIR}")
++set(EXPAT_INCLUDE_DIRS "${EXPAT_INCLUDE_DIR}")
++if(NOT expat_FOUND OR TARGET 3rdParty::expat)
++    return()
++endif()
++add_library(expat::expat STATIC IMPORTED GLOBAL)
++set_target_properties(expat::expat PROPERTIES IMPORTED_LINK_INTERFACE_LANGUAGES "C"
++    IMPORTED_LOCATION "${EXPAT_LIBRARY}")
++target_compile_definitions(expat::expat INTERFACE XML_STATIC)
++if(COMMAND ly_target_include_system_directories)
++    ly_target_include_system_directories(TARGET expat::expat INTERFACE "${EXPAT_INCLUDE_DIR}")
++else()
++    target_include_directories(expat::expat SYSTEM INTERFACE "${EXPAT_INCLUDE_DIR}")
++endif()
++add_library(3rdParty::expat ALIAS expat::expat)
++add_library(EXPAT::EXPAT ALIAS expat::expat)
++message(STATUS "Using JE local Expat 2.4.2 from ${JE_EXPAT_ROOT}")
+diff --git a/cmake/Tools/LocalPackages/Expat/NOTICE.txt b/cmake/Tools/LocalPackages/Expat/NOTICE.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/NOTICE.txt
+@@ -0,0 +1,29 @@
++JE local Expat 2.4.2 Windows package
++
++Library source: libexpat/libexpat tag R_2_4_2, commit
++e26a263aa9182d1e4552cd615857f0f61df3ba42. Source and public headers retain
++the complete upstream MIT notices; expat/COPYING is included unmodified.
++SipHash in lib/siphash.h carries the CC0 Public Domain Dedication and its
++original author/history notice, preserved with the other library sources.
++Upstream CMakeLists.txt identifies the BSD license for KDE buildsystem files;
++its full copyright list and file are preserved under LICENSES/Expat.
++
++O3DE glue and recipe: o3de/3p-package-source commit
++70f0b7b5257bf7cf935bf1cfd270e1b53ccead18, package-system/expat, originally
++2.4.2-rev2. The original patch only raises the upstream CMake minimum from
++3.1.3 to 3.8.0. Its exact bytes are preserved; only a private work copy is
++patched. O3DE notices and Apache-2.0/MIT license texts are included.
++
++JE adaptation uses installed Visual Studio 2022 v143 rather than VS2019.
++The library remains static Release /MD, char, DTD/namespace enabled,
++1024 context bytes, with XML_STATIC exported to its consumers. No DLL,
++CLI, examples, tests or fuzzers are built or packaged. No source acquisition,
++Git command, Python, upstream test downloader or global install is executed.
++
++The source archive's root README.md symlink -> expat/README.md is excluded
++from work extraction; the audited expat subtree contains zero links.
++expat-2.4.2-je-rev1-windows has its own measured archive hash. It does not
++claim the historical package's hash, binary compatibility, security approval,
++full redistribution certification or Engine/Editor validation. Expat 2.4.2
++is retained as the original authoring baseline, separately from CPython's
++Expat 2.4.6; this recipe does not imply that either old version is secure.
+diff --git a/cmake/Tools/LocalPackages/Expat/README.md b/cmake/Tools/LocalPackages/Expat/README.md
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/README.md
+@@ -0,0 +1,49 @@
++# Local Expat 2.4.2 Windows package
++
++Rebuild the original Windows 2.4.2-rev2 interface from the audited tag commit,
++using installed VS2022 x64 v143. Static Release `/MD` supplies all consumer
++configurations through `3rdParty::expat`, `expat::expat` and `EXPAT::EXPAT`.
++The payload is `expat/include/{expat.h,expat_external.h,expat_config.h}` and
++`expat/lib/libexpatMD.lib`, plus complete notices and package metadata.
++
++The producer requires four explicit inputs and a new output beneath this
++checkout's `build`. It validates local paths, the exact source URL/hash and
++original recipe patch before creating output. It extracts only the audited
++`libexpat-e26a263aa9182d1e4552cd615857f0f61df3ba42/expat/*` subtree, verifies
++the pristine/patched CMake byte hashes, and builds only upstream `expat`.
++Failed/new outputs remain available for inspection; no overwrite or download.
++
++Commands for the assigned validation owner (not execution evidence):
++
++```powershell
++$repo = 'F:/JericoEngine/JericoEngine'
++$output = "$repo/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1"
++cmake '-DJE_EXPAT_SOURCE_ARCHIVE=F:/JericoEngine/Dependencies/archives/expat-e26a263aa9182d1e4552cd615857f0f61df3ba42.tar.gz' '-DJE_EXPAT_SOURCE_SHA256=a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057' '-DJE_EXPAT_SOURCE_URL=https://codeload.github.com/libexpat/libexpat/tar.gz/e26a263aa9182d1e4552cd615857f0f61df3ba42' "-DJE_EXPAT_OUTPUT=$output" -P "$repo/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake"
++$package = "$repo/build/n0-validation/local-packages/expat-rev1-validation/extracted"
++if (Test-Path -LiteralPath $package) { throw 'Consumer extraction must be new' }
++New-Item -ItemType Directory -Path $package | Out-Null
++Push-Location $package
++try {
++    cmake -E tar xJf "$output/packages/expat-2.4.2-je-rev1-windows.tar.xz"
++    if ($LASTEXITCODE -ne 0) { throw 'Package extraction failed' }
++} finally { Pop-Location }
++$consumer = "$repo/build/n0-validation/local-packages/expat-rev1-validation/consumer"
++cmake -S "$repo/cmake/Tools/LocalPackages/Expat/tests" -B $consumer -G 'Visual Studio 17 2022' -A x64 -T v143 "-DJE_EXPAT_PACKAGE_ROOT=$package"
++cmake --build $consumer --config Release
++ctest --test-dir $consumer -C Release --output-on-failure
++cmake --build $consumer --config Debug
++ctest --test-dir $consumer -C Debug --output-on-failure
++```
++
++Validate archive extraction/manifest too; `.contents` alone does not establish
++archive integrity. Four native cases exercise actual streaming UTF-8/internal
++entities, namespaces, malformed/external-entity rejection and reset recovery,
++custom allocator ownership and parser-buffer APIs. Every case checks exact
++runtime 2.4.2/features/ABI and that parser destruction frees custom allocations.
++The external callback deliberately rejects input without opening any file/URL.
++
++Focal producer refusals: remote/UNC or relative source/output, missing archive,
++wrong hash/URL, output outside build, existing output; all must fail before
++configure/build/output creation. Package lookup must fail for missing header
++or library, version mismatch and remote/UNC package roots. The authoring
++baseline is not a security upgrade, historical binary match or Editor PASS.
+diff --git a/cmake/Tools/LocalPackages/Expat/tests/CMakeLists.txt b/cmake/Tools/LocalPackages/Expat/tests/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/tests/CMakeLists.txt
+@@ -0,0 +1,38 @@
++# Copyright (c) Contributors to the Open 3D Engine Project.
++# SPDX-License-Identifier: Apache-2.0 OR MIT
++
++cmake_minimum_required(VERSION 3.24)
++include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
++JE_python_require_local_path(JE_EXPAT_PACKAGE_ROOT)
++JE_python_require_local_path(CMAKE_BINARY_DIR)
++get_filename_component(JE_ENGINE_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../../../.." ABSOLUTE)
++set(JE_BUILD_ROOT "${JE_ENGINE_ROOT}/build")
++cmake_path(IS_PREFIX JE_BUILD_ROOT "${CMAKE_BINARY_DIR}" NORMALIZE JE_BUILD_IN_CHECKOUT)
++if(NOT JE_BUILD_IN_CHECKOUT OR CMAKE_BINARY_DIR STREQUAL JE_BUILD_ROOT)
++    message(FATAL_ERROR "JE Expat consumer build must be beneath this checkout/build")
++endif()
++if(NOT EXISTS "${JE_EXPAT_PACKAGE_ROOT}/Findexpat.cmake")
++    message(FATAL_ERROR "JE_EXPAT_PACKAGE_ROOT must contain the extracted local Findexpat.cmake")
++endif()
++set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreadedDLL)
++set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Consume Release C archive in both configurations" FORCE)
++project(JELocalExpatConsumer LANGUAGES CXX)
++if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
++    message(FATAL_ERROR "JE Expat consumer requires Windows MSVC x64")
++endif()
++list(PREPEND CMAKE_MODULE_PATH "${JE_EXPAT_PACKAGE_ROOT}")
++find_package(expat 2.4.2 EXACT REQUIRED MODULE)
++get_target_property(JE_IMPORTED_LIBRARY 3rdParty::expat IMPORTED_LOCATION)
++if(NOT JE_IMPORTED_LIBRARY STREQUAL "${JE_EXPAT_PACKAGE_ROOT}/expat/lib/libexpatMD.lib"
++    OR NOT TARGET expat::expat OR NOT TARGET EXPAT::EXPAT)
++    message(FATAL_ERROR "JE Expat consumer resolved a different archive/interface")
++endif()
++add_executable(JEExpatConsumer ExpatConsumer.cpp)
++target_compile_features(JEExpatConsumer PRIVATE cxx_std_17)
++target_compile_options(JEExpatConsumer PRIVATE /W4 /WX)
++target_link_libraries(JEExpatConsumer PRIVATE 3rdParty::expat)
++enable_testing()
++foreach(JE_CASE IN ITEMS streaming namespaces errors memory)
++    add_test(NAME JE.LocalPackages.Expat.${JE_CASE} COMMAND JEExpatConsumer ${JE_CASE})
++    set_tests_properties(JE.LocalPackages.Expat.${JE_CASE} PROPERTIES TIMEOUT 30)
++endforeach()
+diff --git a/cmake/Tools/LocalPackages/Expat/tests/ExpatConsumer.cpp b/cmake/Tools/LocalPackages/Expat/tests/ExpatConsumer.cpp
+new file mode 100644
+--- /dev/null
++++ b/cmake/Tools/LocalPackages/Expat/tests/ExpatConsumer.cpp
+@@ -0,0 +1,269 @@
++// Copyright (c) Contributors to the Open 3D Engine Project.
++// SPDX-License-Identifier: Apache-2.0 OR MIT
++
++#include <expat.h>
++#include <cstdlib>
++#include <cstring>
++#include <iostream>
++#include <string>
++#include <type_traits>
++#include <unordered_set>
++#include <vector>
++
++#ifndef XML_STATIC
++#error The engine consumes static Expat with XML_STATIC.
++#endif
++static_assert(XML_MAJOR_VERSION == 2 && XML_MINOR_VERSION == 4 && XML_MICRO_VERSION == 2);
++static_assert(std::is_same_v<XML_Char, char> && std::is_same_v<XML_Index, long>);
++static_assert(sizeof(void*) == 8 && sizeof(XML_Size) == 4);
++
++namespace JE::LocalPackages::Expat
++{
++    std::unordered_set<void*> Allocations;
++    size_t AllocationCalls = 0;
++    bool OwnershipError = false;
++
++    void* XMLCALL Allocate(size_t size)
++    {
++        void* pointer = std::malloc(size);
++        if (pointer)
++        {
++            Allocations.insert(pointer);
++            ++AllocationCalls;
++        }
++        return pointer;
++    }
++
++    void* XMLCALL Reallocate(void* pointer, size_t size)
++    {
++        if (!pointer)
++        {
++            return Allocate(size);
++        }
++        if (Allocations.erase(pointer) != 1)
++        {
++            OwnershipError = true;
++            return nullptr;
++        }
++        void* replacement = std::realloc(pointer, size);
++        if (replacement)
++        {
++            Allocations.insert(replacement);
++        }
++        else if (size != 0)
++        {
++            Allocations.insert(pointer);
++        }
++        return replacement;
++    }
++
++    void XMLCALL Free(void* pointer)
++    {
++        if (pointer)
++        {
++            if (Allocations.erase(pointer) != 1)
++            {
++                OwnershipError = true;
++                return;
++            }
++            std::free(pointer);
++        }
++    }
++
++    struct Document
++    {
++        XML_Parser parser{};
++        std::vector<std::string> starts;
++        std::vector<std::string> ends;
++        std::vector<std::string> attributes;
++        std::string text;
++        XML_Size firstLine{};
++        int externalCalls{};
++    };
++
++    void XMLCALL Start(void* data, const XML_Char* name, const XML_Char** attributes)
++    {
++        auto& document = *static_cast<Document*>(data);
++        if (document.starts.empty())
++        {
++            document.firstLine = XML_GetCurrentLineNumber(document.parser);
++        }
++        document.starts.emplace_back(name);
++        for (size_t index = 0; attributes[index]; index += 2)
++        {
++            document.attributes.emplace_back(attributes[index]);
++            document.attributes.emplace_back(attributes[index + 1]);
++        }
++    }
++
++    void XMLCALL End(void* data, const XML_Char* name)
++    {
++        static_cast<Document*>(data)->ends.emplace_back(name);
++    }
++
++    void XMLCALL Text(void* data, const XML_Char* text, int length)
++    {
++        static_cast<Document*>(data)->text.append(text, static_cast<size_t>(length));
++    }
++
++    int XMLCALL RejectExternal(XML_Parser parser, const XML_Char*, const XML_Char*, const XML_Char*, const XML_Char*)
++    {
++        ++static_cast<Document*>(XML_GetUserData(parser))->externalCalls;
++        return XML_STATUS_ERROR; // Never open a file or URL supplied by XML.
++    }
++
++    void SetHandlers(Document& document)
++    {
++        XML_SetUserData(document.parser, &document);
++        XML_SetElementHandler(document.parser, Start, End);
++        XML_SetCharacterDataHandler(document.parser, Text);
++        XML_SetExternalEntityRefHandler(document.parser, RejectExternal);
++    }
++
++    bool Baseline()
++    {
++        const auto version = XML_ExpatVersionInfo();
++        bool dtd = false;
++        bool namespaces = false;
++        bool context = false;
++        for (const XML_Feature* feature = XML_GetFeatureList(); feature->feature != XML_FEATURE_END; ++feature)
++        {
++            dtd = dtd || feature->feature == XML_FEATURE_DTD;
++            namespaces = namespaces || feature->feature == XML_FEATURE_NS;
++            context = context || (feature->feature == XML_FEATURE_CONTEXT_BYTES && feature->value == 1024);
++            if (feature->feature == XML_FEATURE_UNICODE || feature->feature == XML_FEATURE_LARGE_SIZE)
++            {
++                return false;
++            }
++        }
++        return version.major == 2 && version.minor == 4 && version.micro == 2
++            && std::strcmp(XML_ExpatVersion(), "expat_2.4.2") == 0 && dtd && namespaces && context;
++    }
++
++    bool Streaming(Document& document)
++    {
++        const std::string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
++            "<!DOCTYPE room [<!ENTITY label 'door'>]>\n"
++            "<room id=\"caf\xC3\xA9\"><wall>&label; &amp; &#x1F642;</wall></room>";
++        if (XML_SetEncoding(document.parser, "utf-8") != XML_STATUS_OK)
++        {
++            return false;
++        }
++        for (size_t index = 0; index < xml.size(); ++index)
++        {
++            if (XML_Parse(document.parser, xml.data() + index, 1, index + 1 == xml.size()) != XML_STATUS_OK)
++            {
++                return false;
++            }
++        }
++        return document.starts == std::vector<std::string>{ "room", "wall" }
++            && document.ends == std::vector<std::string>{ "wall", "room" }
++            && document.attributes == std::vector<std::string>{ "id", "caf\xC3\xA9" }
++            && document.text == "door & \xF0\x9F\x99\x82" && document.firstLine == 3;
++    }
++
++    bool Namespaces(Document& document)
++    {
++        const char* xml = "<room xmlns=\"urn:je\" xmlns:o=\"urn:other\" o:id=\"7\"><o:wall/></room>";
++        return XML_Parse(document.parser, xml, static_cast<int>(std::strlen(xml)), 1) == XML_STATUS_OK
++            && document.starts == std::vector<std::string>{ "urn:je|room", "urn:other|wall" }
++            && document.ends == std::vector<std::string>{ "urn:other|wall", "urn:je|room" }
++            && document.attributes == std::vector<std::string>{ "urn:other|id", "7" };
++    }
++
++    bool Errors(Document& document)
++    {
++        struct Invalid { const char* xml; XML_Error error; };
++        const Invalid cases[] = {
++            { "<room>\n<wall></room>", XML_ERROR_TAG_MISMATCH },
++            { "<room>", XML_ERROR_NO_ELEMENTS },
++            { "<room>\xC3\x28</room>", XML_ERROR_INVALID_TOKEN },
++            { "<!DOCTYPE room [<!ENTITY ext SYSTEM 'file:///JE-never-read.xml'>]><room>&ext;</room>",
++                XML_ERROR_EXTERNAL_ENTITY_HANDLING }
++        };
++        for (const auto& invalid : cases)
++        {
++            if (!XML_ParserReset(document.parser, "utf-8"))
++            {
++                return false;
++            }
++            document.starts.clear();
++            document.ends.clear();
++            document.text.clear();
++            SetHandlers(document);
++            if (XML_Parse(document.parser, invalid.xml, static_cast<int>(std::strlen(invalid.xml)), 1) != XML_STATUS_ERROR
++                || XML_GetErrorCode(document.parser) != invalid.error
++                || !XML_ErrorString(XML_GetErrorCode(document.parser)) || XML_GetCurrentLineNumber(document.parser) < 1)
++            {
++                return false;
++            }
++        }
++        if (document.externalCalls != 1 || !XML_ParserReset(document.parser, "utf-8"))
++        {
++            return false;
++        }
++        document.starts.clear();
++        document.ends.clear();
++        document.text.clear();
++        SetHandlers(document);
++        const char* valid = "<recovered>valid</recovered>";
++        return XML_Parse(document.parser, valid, static_cast<int>(std::strlen(valid)), 1) == XML_STATUS_OK
++            && XML_GetErrorCode(document.parser) == XML_ERROR_NONE
++            && document.starts == std::vector<std::string>{ "recovered" } && document.text == "valid";
++    }
++
++    bool Memory(Document& document)
++    {
++        void* allocation = XML_MemMalloc(document.parser, 32);
++        if (!allocation)
++        {
++            return false;
++        }
++        std::memset(allocation, 0x5A, 32);
++        void* grown = XML_MemRealloc(document.parser, allocation, 4096);
++        if (!grown)
++        {
++            XML_MemFree(document.parser, allocation);
++            return false;
++        }
++        const bool retained = static_cast<unsigned char*>(grown)[31] == 0x5A;
++        XML_MemFree(document.parser, grown);
++        const std::string xml = "<room>" + std::string(100000, 'x') + "</room>";
++        void* buffer = XML_GetBuffer(document.parser, static_cast<int>(xml.size()));
++        if (!buffer)
++        {
++            return false;
++        }
++        std::memcpy(buffer, xml.data(), xml.size());
++        return retained && XML_ParseBuffer(document.parser, static_cast<int>(xml.size()), 1) == XML_STATUS_OK
++            && document.starts == std::vector<std::string>{ "room" } && document.text == std::string(100000, 'x');
++    }
++}
++
++int main(int argc, char** argv)
++{
++    using namespace JE::LocalPackages::Expat;
++    if (argc != 2 || !Baseline())
++    {
++        std::cerr << "Expat consumer requires one case and exact 2.4.2 char/DTD/NS/context ABI\n";
++        return 1;
++    }
++    const std::string test = argv[1];
++    const XML_Memory_Handling_Suite suite{ Allocate, Reallocate, Free };
++    const char separator = '|';
++    Document document;
++    document.parser = XML_ParserCreate_MM(nullptr, &suite, test == "namespaces" ? &separator : nullptr);
++    if (!document.parser)
++    {
++        return 1;
++    }
++    SetHandlers(document);
++    const bool passed = test == "streaming" ? Streaming(document)
++        : test == "namespaces" ? Namespaces(document)
++        : test == "errors" ? Errors(document)
++        : test == "memory" && Memory(document);
++    XML_ParserFree(document.parser);
++    const bool owned = AllocationCalls > 0 && Allocations.empty() && !OwnershipError;
++    std::cout << "CASE " << test << ": " << (passed && owned ? "PASS" : "FAIL") << '\n';
++    return passed && owned ? 0 : 1;
++}

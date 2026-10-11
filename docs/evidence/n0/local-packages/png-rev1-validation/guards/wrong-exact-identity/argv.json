@@ -1,0 +1,12 @@
+{
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "arguments": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\wrong-exact-source",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\wrong-exact-build",
+    "-DJE_PNG_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\extracted",
+    "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\png-rev1-validation\\guards\\wrong-exact-identity"
+}

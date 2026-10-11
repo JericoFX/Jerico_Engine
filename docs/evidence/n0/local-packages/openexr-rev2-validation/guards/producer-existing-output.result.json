@@ -1,0 +1,11 @@
+{
+  "name": "producer-existing-output",
+  "argvCount": 6,
+  "nativeExit": 1,
+  "elapsedSeconds": 0.026,
+  "expectedText": "output must be new; existing outputs are preserved",
+  "diagnosticMatched": true,
+  "checkedPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit",
+  "mustBeAbsent": false,
+  "pathAbsent": true
+}

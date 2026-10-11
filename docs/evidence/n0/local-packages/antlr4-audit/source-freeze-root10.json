@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "owner": "/root/dependency_writer",
+  "status": "SOURCE OVERRIDE READY; ROOT EXECUTION PENDING",
+  "sourceRoot": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+  "ownedSources": 0,
+  "consumedImmutableInputs": 309,
+  "rootReadOnlyInputs": 10,
+  "aggregateSHA256": "924f0dedb4ca8f7844e9667b5a3cd41a02d564e3a422c9245c83501ed9f6ea3d",
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/Dependencies/archives/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b.tar.gz",
+      "bytes": 4174703,
+      "sha256": "c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/antlr4-audit/root-source-manifest.json",
+      "bytes": 96255,
+      "sha256": "60e661cd3ebf35c12da71f64a16db9611b75b245c1906f9aaad919b1049eddc7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/antlr4-audit/source-tar-audit.json",
+      "bytes": 689808,
+      "sha256": "6b9721a5eae263d2d6775d7050e8d9a7f476c285012cc777dc978160cd7cfe82"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/antlr4-audit/audit-summary.json",
+      "bytes": 3998,
+      "sha256": "1fab34c4b6acd3607408adddd40fe085d3c914c94829ab7a2e90a9d5b1fd44f7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/antlr4/CMakeLists.txt",
+      "bytes": 1701,
+      "sha256": "d190abe17f5e6a8760573b0a97000364d01cac263d99196379f6edd468f9a5c7"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/antlr4/files.cmake",
+      "bytes": 8431,
+      "sha256": "cbdb5231d6411f9c2dec0b3565ce507fc69f3da0e7d02c6cc64eb43341ca5ec5"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/antlr4/LICENSE.txt",
+      "bytes": 1508,
+      "sha256": "8f33d11a53aff76f7d72b0348e35e725e9708aef4bce0a6dcd1708a38d670466"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Code/3rdParty/antlr4/PackageInfo.json",
+      "bytes": 470,
+      "sha256": "173e7bf9f63263b8cb598979e38592ada9fc2646359d7cc6859bdfc3f375f00c"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdPartyPackages.cmake",
+      "bytes": 50533,
+      "sha256": "b5893a9216005ec9e186c09134996b586adaecdc9cdc5a185d9553f114883aac"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/LySet.cmake",
+      "bytes": 1681,
+      "sha256": "d5e669c155618e16a8096100f0f211e1de8b25f16b5e769af4f7ca6a56445253"
+    }
+  ],
+  "sourceManifest": "root-source-manifest.json"
+}

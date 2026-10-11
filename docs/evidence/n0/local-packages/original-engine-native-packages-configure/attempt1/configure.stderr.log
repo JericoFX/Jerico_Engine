@@ -1,0 +1,15 @@
+CMake Error at cmake/3rdPartyPackages.cmake:952 (message):
+  JE FetchContent unavailable offline: antlr4
+
+  Pin: c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed
+  8e6fd9147b3c9d36b60e2b6656871a55227efb1b
+
+  Archive cache:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/antlr4
+
+  Provision a pinned local archive or set FETCHCONTENT_SOURCE_DIR_ANTLR4 to
+  audited local sources; remote and Git fallback are disabled.
+Call Stack (most recent call first):
+  Code/3rdParty/antlr4/CMakeLists.txt:8 (o3de_fetch_content)
+
+

@@ -1,0 +1,95 @@
+{
+  "expectedCases": 10,
+  "cases": [
+    {
+      "name": "UNC output",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-unc-output",
+      "detail": "absolute local path required"
+    },
+    {
+      "name": "URI output",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-uri-output",
+      "detail": "URI rejected"
+    },
+    {
+      "name": "output outside build",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-outside-build",
+      "detail": "beneath checkout/build required; destination remains absent"
+    },
+    {
+      "name": "existing output",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-existing-output-corrected-review.json",
+      "detail": "new output required; audit directory 47/47 file hashes unchanged"
+    },
+    {
+      "name": "missing OpenEXR archive",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-missing-openexr-fixed-output",
+      "detail": "archive missing; fresh output absent; the first attempt reused existing rev2 output and is NOTPASS"
+    },
+    {
+      "name": "changed OpenEXR archive",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-changed-openexr",
+      "detail": "SHA256 mismatch on mutated copy; source archive untouched; output absent"
+    },
+    {
+      "name": "missing Imath archive",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-missing-imath",
+      "detail": "archive missing; output absent"
+    },
+    {
+      "name": "missing zlib input",
+      "exit": 1,
+      "matched": true,
+      "evidence": "producer-missing-zlib",
+      "detail": "complete local JE zlib package required; output absent"
+    },
+    {
+      "name": "wrong EXACT Imath",
+      "exit": 1,
+      "matched": true,
+      "evidence": "find-v2-wrong-exact-imath",
+      "detail": "found 3.1.3, requested exact 3.1.4; no compiler project"
+    },
+    {
+      "name": "wrong EXACT OpenEXR",
+      "exit": 1,
+      "matched": true,
+      "evidence": "find-v3-wrong-exact-openexr-corrected-result.json",
+      "detail": "found 3.1.3, requested exact 3.1.4; CMake CompilerIdCXX compiled, but no consumer/OpenEXR target build"
+    }
+  ],
+  "nativeRejectedCases": 10,
+  "diagnosticMatchedCases": 10,
+  "initialNonPassAttempts": [
+    {
+      "name": "missing OpenEXR archive",
+      "reason": "the first guard retained producer output path openexr-rev2, so it rejected existing output before checking the missing archive",
+      "evidence": "producer-missing-openexr.result.json"
+    },
+    {
+      "name": "wrong EXACT OpenEXR",
+      "reason": "initial LANGUAGES NONE harness stopped in FindThreads; a malformed -D path vector also produced no Find module; corrected CXX harness reached requested version mismatch",
+      "evidence": "find-wrong-exact-openexr.stderr.log; find-v3-wrong-exact-openexr.stderr.log"
+    },
+    {
+      "name": "wrong EXACT Imath",
+      "reason": "earlier malformed -D path vector did not run the intended version check; LANGUAGES NONE corrected probe reached exact mismatch",
+      "evidence": "find-wrong-exact-imath.stderr.log; find-v2-wrong-exact-imath.stderr.log"
+    }
+  ],
+  "scopeLimit": "OpenEXR EXACT rejection config had CMake CompilerIdCXX compile probe; no package/consumer target build."
+}

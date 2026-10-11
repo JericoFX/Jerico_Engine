@@ -1,0 +1,44 @@
+[
+  {
+    "path": "CMakeLists.txt",
+    "bytes": 33825,
+    "sha256": "23BD675A35504234B665FD79ED29D340B6C120744DA49209B9436FFAA11F24D8",
+    "downloads": 0,
+    "executeProcesses": 3
+  },
+  {
+    "path": "contrib/pngminus/CMakeLists.txt",
+    "bytes": 629,
+    "sha256": "F30E92CAC4053C3435E2B4A87D07EF69F00DC137D9003681DBA533A38CB6253F",
+    "downloads": 0,
+    "executeProcesses": 0
+  },
+  {
+    "path": "scripts/genchk.cmake.in",
+    "bytes": 1424,
+    "sha256": "B49208055DF1B96A87F24E191EC31514E706E94AA7C76EF293E556F1EF01FBE8",
+    "downloads": 0,
+    "executeProcesses": 1
+  },
+  {
+    "path": "scripts/genout.cmake.in",
+    "bytes": 3208,
+    "sha256": "AA303597CBEA086D552317560D5816A240750DD74119E13B9FBA4ED2F831BA20",
+    "downloads": 0,
+    "executeProcesses": 2
+  },
+  {
+    "path": "scripts/gensrc.cmake.in",
+    "bytes": 5114,
+    "sha256": "B83745B8D8680CF74755B43BB016A666FE45CB65345B5A43D3BE8D93CEA7B205",
+    "downloads": 0,
+    "executeProcesses": 7
+  },
+  {
+    "path": "scripts/test.cmake.in",
+    "bytes": 991,
+    "sha256": "7D0FCA6737DC1C09839CF1B2B2752ADBD3F9BDC830599314DD98884A3656DB00",
+    "downloads": 0,
+    "executeProcesses": 2
+  }
+]

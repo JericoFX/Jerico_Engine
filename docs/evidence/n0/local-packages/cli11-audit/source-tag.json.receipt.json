@@ -1,0 +1,14 @@
+{
+  "head": {
+    "url": "https://api.github.com/repos/CLIUtils/CLI11/git/ref/tags/v2.6.2",
+    "status": 200,
+    "contentLength": 337,
+    "etag": "W/\"6b3307851fed8a46466fda419091741d9a7655c44f321d0de56a49576b20ca0e\"",
+    "location": "",
+    "authentication": false,
+    "autoRedirect": false
+  },
+  "getStatus": 200,
+  "bytes": 337,
+  "sha256": "6b3307851fed8a46466fda419091741d9a7655c44f321d0de56a49576b20ca0e"
+}

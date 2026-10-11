@@ -1,0 +1,52 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\derivation-proof.json",
+    "bytes": 8122,
+    "sha256": "81EAFBE7620CC93385F2DA78B819735496417FF43919A4B29AA609232144FB2F"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\DeriveRootCli11.ps1",
+    "bytes": 11301,
+    "sha256": "358CBF45549EB3775E3AC7CBB363ABE1D6E92A3B45424CDFBC810CBF98118CE0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\driver-diff.json",
+    "bytes": 1917,
+    "sha256": "7C5E301413A30B3E74C7076C844F9A0EB96CA06D2483A1A9FBF999A62F3F92B9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\merge-origin-manifest.json",
+    "bytes": 473906,
+    "sha256": "7D7FF1AE9F6A053D1C07C39FBF72C6D04E874BA7C8984EF8D9B970A177C17350"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\remaining-fetchcontent-preparation.json",
+    "bytes": 10553,
+    "sha256": "DD14159B86B9FBDEBF2F5E202A1D930F8A09E41CD7CFDBAF29EBB4C4AA02F077"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\root-cli11-assignment.json",
+    "bytes": 11222,
+    "sha256": "699B4DDF5F094FC1A8834FD2FC986264DE1EE59AD05AD2341180C8038F775C53"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\run-root-configure-cli11.ps1",
+    "bytes": 27278,
+    "sha256": "85C9883998921D17BA4C7DF70B185C6C686EDA5B89B9A5576DA4A2DA50F64C41"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\source-freeze-root-cli11.json",
+    "bytes": 562672,
+    "sha256": "5134492C5F6C397BDD6C2F533BB2D5A0C6830CA7F9A4F7915684C186395C2292"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\static-verification.json",
+    "bytes": 3309,
+    "sha256": "B55844983257B271FB8D88A0D7A528913550CBD6DB981806D77627EF484FE94A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-cli11-final\\VerifyRootCli11.ps1",
+    "bytes": 6646,
+    "sha256": "A1DD5CB4F1A13250A7CFBFC65E0562F293FC8934100E62BEF2A2EA1380E6000A"
+  }
+]

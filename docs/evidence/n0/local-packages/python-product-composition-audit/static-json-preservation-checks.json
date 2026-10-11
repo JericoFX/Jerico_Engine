@@ -1,0 +1,32 @@
+[
+  {
+    "check": "All JSON data unchanged except approved composition entries",
+    "passed": true,
+    "path": "engine.json"
+  },
+  {
+    "check": "All JSON data unchanged except approved composition entries",
+    "passed": true,
+    "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg"
+  },
+  {
+    "check": "All JSON data unchanged except approved composition entries",
+    "passed": true,
+    "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg"
+  },
+  {
+    "check": "All JSON data unchanged except approved composition entries",
+    "passed": true,
+    "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg"
+  },
+  {
+    "check": "All JSON data unchanged except approved composition entries",
+    "passed": true,
+    "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg"
+  },
+  {
+    "check": "All JSON data unchanged except approved composition entries",
+    "passed": true,
+    "path": "Gems/AtomLyIntegration/gem.json"
+  }
+]

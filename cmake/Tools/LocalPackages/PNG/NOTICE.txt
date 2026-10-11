@@ -1,0 +1,26 @@
+PNG local rebuild notice
+
+Source: official libpng v1.6.37 tag, commit
+a40189cf881e9f0db80511c382292a5604c3c3d1.
+The original SourceForge recipe tag and the official pnggroup/libpng GitHub
+tag both resolve to this same commit. No Git clone or submodules are used.
+Archive SHA256: ed747514984fddf095142aa85e983111f13d64b877b1065ed0d990f7adb31eb7.
+
+This software uses the PNG Reference Library by the PNG Reference Library
+Authors, including Cosmin Truta, Glenn Randers-Pehrson, Andreas Dilger and
+Guy Eric Schalnat / Group 42. Upstream LICENSE preserves the complete PNG
+Reference Library License version 2, historical version 1 text, and the full
+contributing-author acknowledgements. AUTHORS and TRADEMARK are preserved.
+Complete library source/header notices, including optional architecture
+implementations, are retained under LICENSES/PNG/source-notices.
+
+The library source is unmodified. Its generated pnglibconf.h uses the official
+upstream scripts/pnglibconf.h.prebuilt fallback. This is an explicit build
+choice for Windows without external awk, preserving the supplied full API.
+
+Original O3DE integration recipe:
+o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng.
+O3DE integration licensing is preserved in LICENSES/O3DE. Zlib 1.2.11 is a
+separate local linked package with its own complete licence notices.
+This new Windows x64/v143 package has a new measured SHA after build; binary
+compatibility with the historical PNG 1.6.37-rev2 package is not asserted.

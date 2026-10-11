@@ -1,0 +1,8 @@
+{
+  "case": "bad-hash",
+  "exitCode": 1,
+  "elapsedSeconds": 0.029,
+  "expectedDiagnostic": "source URL/SHA256 must match",
+  "diagnosticMatched": true,
+  "outputExists": false
+}

@@ -1,0 +1,23 @@
+{
+  "name": "find-wrong-exact-imath",
+  "argvCount": 12,
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\guards\\version-probes\\imath",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\guards\\find-wrong-exact-imath-build",
+    "-G",
+    "Visual Studio 17 2022",
+    "-A",
+    "x64",
+    "-T",
+    "v143",
+    "-DJE_OPENEXR_PACKAGE_ROOT:PATH=",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\extracted\\OpenEXR-3.1.3-je-rev1-windows"
+  ],
+  "nativeExit": 1,
+  "elapsedSeconds": 1.702,
+  "compilerProjectsPresent": 0,
+  "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\guards\\find-wrong-exact-imath.stdout.log",
+  "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation\\guards\\find-wrong-exact-imath.stderr.log"
+}

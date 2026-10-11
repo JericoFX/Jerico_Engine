@@ -1,0 +1,25 @@
+TIFF local rebuild notice
+
+Source: libtiff official v4.2.0 tag, commit
+4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99 at gitlab.com/libtiff/libtiff.
+Archive SHA256: cce672d2f5941759573cb3904cc8f00f065d54a3689a80719229e961d6a324c8.
+
+Original O3DE Windows recipe and patch:
+o3de/3p-package-source@70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff.
+Original package identity 4.2.0.15-rev3 is not a distinct upstream release;
+the linked library and headers identify libtiff 4.2.0.
+
+The payload preserves COPYRIGHT and complete source/header notices from
+libtiff/ and port/ in LICENSES/TIFF/source-notices. These include the
+libtiff permissions, Greg Ward Larson and Frank D. Cringle attribution,
+BSD-3-Clause UC Berkeley notices, BSD-2-Clause DragonFly/Citrus notices,
+and the separate Berkeley LZW acknowledgement condition in tif_lzw.c.
+This software includes software developed by the University of California,
+Berkeley. The LZW code credits James A. Woods, Spencer Thomas and Joseph Orost.
+The separate Berkeley LZW text is retained as LicenseRef-TIFF-LZW-Berkeley;
+this label does not replace its full original permission or disclaimer.
+
+Zlib 1.2.11 remains a separate linked local package, with its own notices.
+O3DE integration/recipe licensing is preserved in LICENSES/O3DE; the original
+O3DE patch is included unchanged. No compatibility with the historic AWS
+binary is asserted. This new package has a new SHA256 measured after build.

@@ -1,0 +1,1865 @@
+{
+  "schemaVersion": 1,
+  "sourceRoot": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+  "sourceCommit": "8e6fd9147b3c9d36b60e2b6656871a55227efb1b",
+  "archiveSHA256": "c52fb2a90ae082ab5b5ec6b41f6c0e66f691962e4b4f772580e5da678fe51fed",
+  "runtimeSources": 136,
+  "copiedHeaders": 171,
+  "sourceRootCMakeListsExists": false,
+  "inputs": [
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRErrorListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 285,
+      "sha256": "eba0f4f8dc6edf282ba855d356f7fa6a126a2a7fb2bec8830965027a3dc9db6d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRErrorStrategy.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 285,
+      "sha256": "ba291928e4f26e49fe83e18f78ef4c040a7918cc79d52397a01888a4b442ca0a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRFileStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 600,
+      "sha256": "22554956f960448b08d196ab1ca48f11c4bea91d67eb347a543702defe6d3a96"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRInputStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4432,
+      "sha256": "1509c65556ad3d8b4371089cbe61bb2f00a1c84ebf691f4c03e637c65a15afc5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/BailErrorStrategy.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1844,
+      "sha256": "81a9b3c554b366b12410574d352654eeb2ae8a88b3dffbab60d09fb14835b78b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/BaseErrorListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1240,
+      "sha256": "40af22ff924630a2e9bc09a4a607bbc79dd82c62371ac3421e97eb71f876bf7d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/BufferedTokenStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 10103,
+      "sha256": "6701a90c8ae107e51b61aad5d71c7fe2302b0d5dd151d465c36229b73ed56b8c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CharStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 281,
+      "sha256": "da5c80f9a9d077597d2dd57c0d68451576fc5348401d24feffb6f6cabbe461b7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CommonToken.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4580,
+      "sha256": "c6ef7b18de339be085e8b850dccf888fbbb1aa0f279ea3b9a77a1e448f48fb9c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CommonTokenFactory.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1401,
+      "sha256": "425e4df9fec7800056bf24c40724314099f9f394cc9b4ac653bfd5571b2bcddf"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CommonTokenStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1813,
+      "sha256": "cfb8003a1cbc00b5c9971878f72f6f385ff116a26f7e699ec812f4d242667d74"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ConsoleErrorListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 674,
+      "sha256": "2fb631bbd248253099b135647c1d46acce52a78cf94bbed2bf98bd5918814630"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/DefaultErrorStrategy.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 11998,
+      "sha256": "63a6487a99cb3cea8c34cbf98b38c8ff5b0748fa2102989df5ce68fa44c3024a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/DiagnosticErrorListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 3566,
+      "sha256": "a5149945b9bd1924d688dc5ab55897176081892552abb6428b79db4feacfe929"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Exceptions.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2191,
+      "sha256": "a6638410848f726fdc8f414ca9eda8d31f73c46e564c90d505b63dc403aff380"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/FailedPredicateException.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1918,
+      "sha256": "ecd2fad19d9d0d2a6e4a57ac0f28b111faec65c8891474e0cc13d91f1aa70b50"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/InputMismatchException.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 559,
+      "sha256": "6d0d2bf3f4ede6df269f070cb6260d7c68ffabfbec89b3f6bb601a33fe04f665"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/IntStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 368,
+      "sha256": "1b9232e13830aca128e98c0f300ed06cff1b189e894849fe46eee259159bd368"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/InterpreterRuleContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 634,
+      "sha256": "832452252c8fa67383cd4b918f0071e733ab021899b44375037f83e8143fc2fc"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Lexer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 7017,
+      "sha256": "3b73359ed50b92234ec6aae1d2452a712a609c93a376cb343c31a05fa306723b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/LexerInterpreter.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1922,
+      "sha256": "8c02768c9b42232779b6afd68f51804635dd43bd556f442c92c9e7d70e4635a0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/LexerNoViableAltException.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1271,
+      "sha256": "23a98bf589de25c1f19504541b6bd8259c2bd2cfa4c21072cabbeaaaa02f1132"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ListTokenSource.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2513,
+      "sha256": "529dffb6938acc2f6de29354e35ae98dd44a97410f31f5dfe41985db559ddab9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/NoViableAltException.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1631,
+      "sha256": "f4c8e4b3420e653fe3603bbff1728b742652b1ffda0d779728be1bc31f530dd4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Parser.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 19479,
+      "sha256": "6c9f4f1fe80e71fce7c62532892b463d391bcf142718284a715b6fbe28548bf2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ParserInterpreter.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 10712,
+      "sha256": "b4e3aaaf353e96481da6ab291bfedd9a714e7e6465401cf8cad1d0e43a50b70a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ParserRuleContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4007,
+      "sha256": "e53d308105b176f6966a7137047522dcb78530e3984b30dc5a0df2102e2b0eca"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ProxyErrorListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2067,
+      "sha256": "587eaad86b76a46e086b1848bde32a9128824cb34016028a784e97ab207849ae"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RecognitionException.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1981,
+      "sha256": "1ceba59ae99175c2c0ba294527b721f36d08e9895d18c7eaa865191fcf017d11"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Recognizer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4723,
+      "sha256": "25c89b73998f63d8c10ac55237af8a22d206d075343f989dc0ba31a82c0ba168"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RuleContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 3721,
+      "sha256": "897dcac3957562b1e33674963dafd43f836a2b593bc8cae1b87729515acea255"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RuleContextWithAltNum.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 744,
+      "sha256": "bbc481a5540a3340bf785c98034d9469c2fd094a67d5c13716e31d09365c2ef0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RuntimeMetaData.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2128,
+      "sha256": "e9cfe1743735075d8ac604c29f3a7d342b693767be9ae016f1b081e7c0b88e92"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Token.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 246,
+      "sha256": "875a5ad9fdbb3ea6e096acf14b341d1e1c988dec78b8cd5acb7e9afd170778c6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenSource.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 264,
+      "sha256": "8148727292dc59684d806c14cf4a1b3843ad05030cfffde5b22977a09659e7c7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 284,
+      "sha256": "7ea8c4cc32de9e4130b81b54c4f4382af4888b0c5def79b5c6c5790367b77ec1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenStreamRewriter.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 15058,
+      "sha256": "489d42a726993709efc7f15464c67bf2315ddcbe8d278aee001cb50ea2a365cf"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/UnbufferedCharStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 5951,
+      "sha256": "b3c5c14557553297528f83c8a1a9c54a69e5780c621b6ce0d1c99ddb71185d90"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/UnbufferedTokenStream.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 7587,
+      "sha256": "c55ce8ff5d43ae31856fea8732325258fc7180b51c9037bdfe574deea8269f40"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Vocabulary.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2004,
+      "sha256": "d444ba4f3560e7c45522882937aa5deae6e5d920ac027a495efd03b5a83b56a5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/WritableToken.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 270,
+      "sha256": "61b55388df76e322cb2b53341c2eb4840187ffd9751359ef46a1a77c2cf095fd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATN.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4257,
+      "sha256": "e9e9d0c4c8a88b1bcc4126c1dfb3413d8d8231cb9dcb054fb2299fb22cafd9c1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNConfig.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4286,
+      "sha256": "213c301b00b616ae84360b1a8356053b6921f245ba4dcfa18840e8004ae324f5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNConfigSet.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 6647,
+      "sha256": "c4099318d2238d21caab9b93a457e5958cb8ca22029199cab914eaf12bc4cbe4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNDeserializationOptions.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1306,
+      "sha256": "57a09c8ed1ecc8ddf92b249381fd5e8126ce7c4d4fe9a5f5394fd47b740e63ac"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNDeserializer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 21709,
+      "sha256": "be629cb91f67b71aba8c278fc22b09911529d9bd989f41ce4090a44d63a88cd9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNSimulator.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1279,
+      "sha256": "78b09b6b016f88dc9bd37802879d8e05442969a81df276a172716f84fd0e2a64"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNState.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1594,
+      "sha256": "eea4354fb8a991db6d5b568c110db749211a94cde063646f7a8380316092aab0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNStateType.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1008,
+      "sha256": "f4d024ccde000cc9ccf2c45f84c82f3e83fec86963a3e0f4b4e03060505602aa"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ActionTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1336,
+      "sha256": "b1087dde9a2de8a1ff8713f9ff2129ea4ace05285bb1fbb003fcdbd6ca355e8f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/AmbiguityInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 623,
+      "sha256": "7c7b4eae8901d06c498749e7ca0bcd776b75b675ab8cb9d74fb55c08ba4311ca"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ArrayPredictionContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4349,
+      "sha256": "cc438fa7486d7aa9ba39ac565733a1fec64dfaca73d69030fbbd480b7216d9ff"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/AtomTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 935,
+      "sha256": "f21698843132f4415b6692541809950a55b48969688894a366a000e527d88fe5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ContextSensitivityInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 539,
+      "sha256": "e767354e73a4f502d3dead586bd7af9bde6e95441309576083b2bdd0bac86097"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/DecisionEventInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 580,
+      "sha256": "4506ca49915f535d9f6751c6a7c774d8df32ef44f75e86a3b4bc2be73ff7bb81"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/DecisionInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 990,
+      "sha256": "e01ef702a630d442d34008737fba1b3b27671c3f6a02842c7709f7203f91963e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/DecisionState.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 386,
+      "sha256": "b4d02cbeb70b6c4863a179af030c7404ee2f616f9dd2b812e0ba1d5a1f865aa8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/EpsilonTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1091,
+      "sha256": "5fdb6422182fe4f696ca141adfe003b2314d912aa45b76732e3532de3ccf5425"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ErrorInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 546,
+      "sha256": "fdf6eead532c38990c8cd19f4b1f8e4ccfcf27d8cf04e43d14867cb6c44df50b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LL1Analyzer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 7467,
+      "sha256": "a3316845fb4b41628505a29c97cda2a6c7953ecb210aa2bd5558c44812b6c4af"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerATNConfig.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 3041,
+      "sha256": "b0d85a74f6862d75724d745e6edc89caa0e1daf3b65151908adf6100b367b83a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerATNSimulator.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 22233,
+      "sha256": "8ca75eb7ce6ac58043b42d8390829fa901ad7ffe84c42bb276dc62d2af088022"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 361,
+      "sha256": "9dbd40bfe6e9ad1eb81304a65e688b88a5071f53eb0ce7747cb6f9d25316e4b0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerActionExecutor.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4150,
+      "sha256": "be1733bd09d75aaf4991707276bce79a8a6b6b048a334a864225ee1a2810babf"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerChannelAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1361,
+      "sha256": "9e3d04a283551a63cd7ea6a58c24cf9181ee268df551498dbb6992d37ae24378"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerCustomAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1610,
+      "sha256": "b1de6098696261a92f74ccd9e8d3f4732ba91aa68b4b0480ecf1e49fe2ded76d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerIndexedCustomAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1885,
+      "sha256": "acda8929df1af6cbdf784f3f8c250d4b5781a548c3adbbe4feb0d32bb3ab019a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerModeAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1324,
+      "sha256": "d7c4169c58b53948acd201d826daa61f748282d6a56fb5dc2ec1aa4f70124910"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerMoreAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1059,
+      "sha256": "678022c96192854fe21e76c0028c6617761c10d6391f31e9c3df80d8b31df5b2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerPopModeAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1092,
+      "sha256": "3ce91fd552ace98bbbec0e83becd327608538726a35e633f407ab9dfcc126fbb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerPushModeAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1366,
+      "sha256": "8c73281dde837cfe97e07b8d96be61bcd2262ed5f8122dd94855244a5bd05472"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerSkipAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1059,
+      "sha256": "50a4025feb4a1fe96e7b2ed9ed8ed01dd0c0ea8b19a78b21bc2943f3fe7ad196"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerTypeAction.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1324,
+      "sha256": "288f2ff4dfccaa90e8c9b7b2499678402f162c6e6efb168a98d76caf281251e8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LookaheadEventInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 603,
+      "sha256": "cd721526fa600e66b2e78c943067d7c25d4af59b80ec6746e5ba2270b410d92d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/NotSetTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 956,
+      "sha256": "e81b480c2ded1395244818ced1462600d6b37dfe3108c4420a9f047e834637a9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/OrderedATNConfigSet.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 503,
+      "sha256": "0ce1434356fddd52c6d127ca6a28038702e5c4cec309d4e468c7ecd59d3f3239"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ParseInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2826,
+      "sha256": "af7eb03739a4458941d55d8790cc6765757edb991a6614a979df652e90eef119"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ParserATNSimulator.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 53401,
+      "sha256": "2833924262c3573d38c3e6d7de1af1475aa12203f2f58b59ab0317b72184ac8d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PrecedencePredicateTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1014,
+      "sha256": "6083e0c3f299e9ab8bf35abcafc29ede634aa8eded839be5b68182a133096e5b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredicateEvalInfo.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 750,
+      "sha256": "92d8f0a7a1024414137792a1c2f0efa35682bd2e7b3b718be60d0ce32fff91a8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredicateTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1122,
+      "sha256": "70f59fda4dee0aa0489a738becec5408cb087c1482044fcbf73ac1889d2cb05f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 21212,
+      "sha256": "907d74b550ade21dcad8adcc01a2583a8d43dd545b5b940ef36a4010bbd7e5fb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContextCache.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2425,
+      "sha256": "64e1ed15b670cffcf59818a134a0f723061badf1b22ca619b561ab08ce72c10b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContextMergeCache.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 5470,
+      "sha256": "360bf764b08bb58f0d8c45fef45404be27e4f00abd5201852639b869a96980dd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionMode.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 6046,
+      "sha256": "c24bfab9d95e64cb6553f6d3f7282e78ee648ea825d8c65382eb8c7a8fb2358e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ProfilingATNSimulator.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 8016,
+      "sha256": "c6e38780ac763c14a498eed840b2f74d516d9bcd302c6a2acb10474ac884117d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/RangeTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 986,
+      "sha256": "a37a279d6d64089c9bf061d274b7dd8d2649e6a78ce5498f60cf9e6bba36c388"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/RuleTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1270,
+      "sha256": "4b613efd393a864fbf3fe68d655e320a357b7b6e10027da39d662141fda1c4eb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SemanticContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 15098,
+      "sha256": "17b05476341c8d757807f7e4401ee5860366bd351bb41241b441457f9070e952"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SetTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1012,
+      "sha256": "6b207723fff1eaa8d534ef51be24aa28653519b667c4c4ed2693f5547eceb1bb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SingletonPredictionContext.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2990,
+      "sha256": "0d3ca8aa42016c93338359a099d41d11cc249cd9c8cbf01c1c9944d66ab35c33"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/StarLoopbackState.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 674,
+      "sha256": "18cb3c4a4439dbcdc5c22f06c39919f6ed532b572106c048fc655831b204b629"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/Transition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1018,
+      "sha256": "3d4d356496ee7ddc6029f07f940ffff36e641cd77481515c03ab666a19cf3469"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/TransitionType.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 748,
+      "sha256": "c69d27c9599098c17c42ca8a21d00094b4e9d96f67703673f3da6e8df15dc24c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/WildcardTransition.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 749,
+      "sha256": "1cf8b80d9df633eb2fd928a50c4052b0d7b1800e70e83dbae8aa61484b491588"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/DFA.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2961,
+      "sha256": "352b70fcdfaaf5ee869ada412927fea6903e4263d453c2ac6f8de5bef056736b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/DFASerializer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1800,
+      "sha256": "04b72dbe5d7bfc93c12b0463e1854bcd6e6949af14a24a4e99b18ec699230b25"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/DFAState.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1564,
+      "sha256": "2b010205b0d1a6ceed50840c0fe221103cef429a61efdc82886aac8d6f74ab8b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/LexerDFASerializer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 546,
+      "sha256": "2b3e7eeb90f5170ea20a1a8e7285b43fd75d1683a42dbc6bd492cf5d736ef36a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/internal/Synchronization.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2721,
+      "sha256": "ca82bd4ef21221b205338581b474e9d9eeabc981f0cf8d6db5787c2ab731928a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/InterpreterDataReader.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 3172,
+      "sha256": "3b3fafd14c6fddca8406adf87ab874b088696ec0748af0200acb7085642620ac"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/Interval.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1708,
+      "sha256": "38176cce7a67f37ccaa9d89f362737446bdac0319e88a1df6daca6d6c562f1c4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/IntervalSet.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 13375,
+      "sha256": "330ca26d61f0e5c0794f9d5155cf0ac4f866fc500f01b44bf05e0e4e929577d3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/MurmurHash.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 2847,
+      "sha256": "3708005c5861f118778cb44b3b16a9104f59bad972eadfcc5346affcd525e888"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/Predicate.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 71,
+      "sha256": "09713132a5f6267486f9077119c933dcdd545fc754bebc9cca63e71f98a3a292"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Any.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 242,
+      "sha256": "358d5a98c1dd950a0fb17d1cd4cdd44a26eba56d9825e4a5116e537c296b6e0f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Arrays.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1021,
+      "sha256": "018082f2c9bed6139c388fc679db2dbbf8bb361b11c43f230653954d4c462b39"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/CPPUtils.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 4947,
+      "sha256": "bebfccb54e1099c7b720b7c0b480dd44298846edc855234d1574d36be6697470"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/StringUtils.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 942,
+      "sha256": "2e2ac6157a683c05e0bc343f2365f8ebae5edd4bca3f6f049cc5ad2c1df23d03"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Utf8.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 8807,
+      "sha256": "4cb58d3e2b525ed6cf105e0541b41381cb717546f99dd239ceb778e05d5c3152"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ErrorNodeImpl.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1292,
+      "sha256": "60829d565925ebf9df8af15d4d893707f403aa83eadf0204bbba85d64188d09a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/IterativeParseTreeWalker.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1962,
+      "sha256": "483e8f09df1b760f87bd1579cb387a13e6906308e36a4e79ceb142a40429217e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTree.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 349,
+      "sha256": "71e9222f44f94d595eab07f0ea3f01f97cf10e0a707465cb4db4f88025e13574"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 288,
+      "sha256": "77407b190fb152ec92ba67ea934272feaa25214faaf96fb0c4de0af48dd003ab"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeVisitor.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 285,
+      "sha256": "2f5d90699cd8fb9050dbe41614eef8ae3bbcfe47b77db370ec0e867d3194b639"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeWalker.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1381,
+      "sha256": "0d404974b0590035547f1a9ebdad5568ce9826c2840477eff6d3c0314b50b381"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/TerminalNodeImpl.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1318,
+      "sha256": "2a97fe03025294bf50a75da8dccdacc3bb2d616f4bc62b340f51734675fa8041"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/Trees.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 6973,
+      "sha256": "bed012c904fe2172833804d7448698c89509d9cdd668aab384d5aab32e0e02c1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/Chunk.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 274,
+      "sha256": "660b2b3def3dcbd403959f3cfda46f9726b62ba6088940fbf0fcde9fce2460da"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/ParseTreeMatch.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1919,
+      "sha256": "c49565b0cf0c93e32e2da78569f599003f90735c7240e6e4ddc242ac05c1be0f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/ParseTreePattern.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1836,
+      "sha256": "ddda826c7db1e12eb7535fcad366942eb03f08d1fd0b533ea012852720fc53d1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/ParseTreePatternMatcher.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 12730,
+      "sha256": "1dee6895f7fba0f1458522c9bf476d419a490459eeaed1d23526ff0668848e07"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/RuleTagToken.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1884,
+      "sha256": "140b1b4ee49cc06cdf34db762eb0fad02489c5670c4e9644fa8bf5309a79908c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/TagChunk.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 829,
+      "sha256": "ae7308f653e477551498049297ea44358aae9f8d8240b5da57a52303e7842527"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/TextChunk.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 641,
+      "sha256": "de7cc68f2d435d46a8f45ef96bb2e7cd9faf1b570ad6394cc25d40f6872d3abd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/TokenTagToken.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 977,
+      "sha256": "8db5c875f8772f38b47295e543b2b28d0c6c6d8faebc11073379ff0c67311128"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPath.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 5128,
+      "sha256": "1c10aaa008ce0a2e3b6ce5d2675163f833c4585494864f5ec41d899413298a4a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 783,
+      "sha256": "1414a6e27957629b587449505f237084f65d232a9fe1f0f112e8f79af7acd38b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathLexer.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 6175,
+      "sha256": "305fb934edb10d0b18b7a783c695a7b8b55be4b61755b89f8c5125120240e669"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathLexerErrorListener.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 583,
+      "sha256": "4330ad2c70a1266fb735df5ac2e5106f02c1f03d269bf8f09758cf9e7f5a1b3e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathRuleAnywhereElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 683,
+      "sha256": "89068b45e87484d19caecf5865ab761b63ddb689bf543dcb88b863b950f00588"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathRuleElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1021,
+      "sha256": "29874d6e173b2cc302abd12fc62080c0da6ff189d7db72fce67254c9f8dc199a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathTokenAnywhereElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 683,
+      "sha256": "7632d5b63523c472fa92222044c7146765c1bcb09619bbe412698a9c4944487e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathTokenElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 1109,
+      "sha256": "72b82e73fe6919caf43677d9802844a61790bc14560b223c1428198b258322d3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathWildcardAnywhereElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 683,
+      "sha256": "b5cd53a2960641911fdfa59760b43ff9bcb42a1879a622517edc217f6ab14c9a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathWildcardElement.cpp",
+      "role": "original-files.cmake-source",
+      "bytes": 639,
+      "sha256": "116190a3ffbffcf52f2cc554749e52a0c6b63271bfb8ccea17fb1a5bf4a59dd6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/antlr4-common.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2560,
+      "sha256": "5d769c4f1173c8c7717949e3f21ce052835d58ff2623d8be8cab6020650ae8ed"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/antlr4-runtime.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5584,
+      "sha256": "ea3766232f97cedafcc6dd5d9e784e3ed22d196692a6a51473ec9adbffd24806"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRErrorListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 8479,
+      "sha256": "10ebef779d25775a06a02e960cc66caa381bfd0c69cff48adb5b02d6df5c39bd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRErrorStrategy.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5333,
+      "sha256": "ec4a02b039135e94ff4c0d3fdf16107f0015d2997dbae1a5af1794ad1b99c9aa"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRFileStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1074,
+      "sha256": "0bf07344e9a647027c0d6a491b359be0e130ff1400ebb5db8422fef203b1eb01"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ANTLRInputStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2634,
+      "sha256": "c2d7d2306b6b5b8ad241465f5c1e86daefb852d21ea4a970cceb91183a0eead4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ActionTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1202,
+      "sha256": "bc735f6e20275602225180b22d1a7a59c8e58b44413f00087d624f0860808195"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/AmbiguityInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3341,
+      "sha256": "ed03fd9f7ff92831742bd5083e013c3c6bea1ad9d2da972434501569e4c6a801"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ArrayPredictionContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1982,
+      "sha256": "7175255809552222cedbbb39b9323a8cd91e89adccbd1355b5c45832067681f9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATN.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4983,
+      "sha256": "cff0b2414050af9bb1128dceea5ff5d2b81cb30cd72619f2d22a9f4b251bea12"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNConfig.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5619,
+      "sha256": "8198efd20d399c23efe4aba455930d97838c9004ae3d763a9d55ef9bb0a7beb6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNConfigSet.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5293,
+      "sha256": "f33c16bf9339ad452d5267a47c3272749d43855e1fe1c1b16ed4c37aca406c15"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNDeserializationOptions.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1302,
+      "sha256": "72fd630a7cacc971707cd3aa3eeac721b79cce6c973bad26132c7bd1c78d8e9e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNDeserializer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 899,
+      "sha256": "4ba668001ba9ca5ebb1d793f47f7f08dc16f3ad028185430bfb66c7ef8399cbd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNSimulator.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2788,
+      "sha256": "8b3eb850017b4bbb2d128bcb563c07e1bf0fe800401caa05896cee34a0476558"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4474,
+      "sha256": "88a988771f0cf9de175dec65acbd336e90423dfe21d10845d98ca9ad373176b6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNStateType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 796,
+      "sha256": "124e5f740a86a55dbe2537b360f81fed1764eb5bc98004e52a4ec10f3d02e04d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ATNType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 439,
+      "sha256": "f4ab16d9de4ebf92ac93e2eaa79a5eec25fc7b31a75ccc067dbf134fd7953917"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/AtomTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1212,
+      "sha256": "b9fb2585da083ea4d28202a1833367d175d6d4006cc115b3013474fc2bf93f3f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/BasicBlockStartState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 785,
+      "sha256": "e5e6447dd91eafcb7de523b3383d87e3c42842c22e36279b321d861dcdaf095e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/BasicState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 706,
+      "sha256": "be24ba2a284482aa1beda9bf95aa2c1ce62e3ceda15a666258688f2b1562f9c1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/BlockEndState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 819,
+      "sha256": "0070d1dec50a6e1054b9e4c629ff4d7b705bd4a2072741019d5b35fb0d2102af"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/BlockStartState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 936,
+      "sha256": "7330e07d372bcbc9d0918e1ed11cc778fb56634d9e735a306a4e1988bbf3bf33"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ContextSensitivityInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2169,
+      "sha256": "f14696c2bb08f031d75419cc5ef6e36315e3e7a7ed51f5688dcd875dae28fa50"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/DecisionEventInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2478,
+      "sha256": "a428e32cc71a6f88a48c590a0cfe9b3c02d86dcd76db047e4398858ee367d867"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/DecisionInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 9844,
+      "sha256": "8215c219beb93598227d92b1d6081e2402b30e0339ed26a2793a11eb8b18115c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/DecisionState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1027,
+      "sha256": "783f1a941b3bf329157af7653881a1b28a27633c8ead9eb6d1df2fee268799d3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/EpsilonTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1500,
+      "sha256": "01bc449d35899ad2157e48a6865e0e1a6da3e6c88b434a0de5cb7f878a460fd5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ErrorInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1907,
+      "sha256": "a45be2aaf511d4590c42ec57eb46752b93df89335b155ecc656bc6ec679adf4c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/HashUtils.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 416,
+      "sha256": "aaa715f6345b3e63fb96d6ddb033a1737df476f2e016ae1a8e8a29c0f31b43a3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3531,
+      "sha256": "2a3858bfc51f3317c02af5173cd0267677134e793572c696721e7362a8cdc14b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerActionExecutor.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 6214,
+      "sha256": "6f32eed19dcbbb1ae6ad3515692273fd24a2ebc2749e48348ea7e5fb75862c6f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerActionType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1479,
+      "sha256": "7dad9db6d45a86c01a87eba0effc23a36dbb6a5025d1523dbe4024f41aa25eb9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerATNConfig.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1730,
+      "sha256": "7df67f80e12f1db4705471a11aae420e94ae87a83ba0bf7798c05a690f2281fb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerATNSimulator.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 8930,
+      "sha256": "0cde48b241d34a9924eba69efbffa159615715336c01827978edc0835ccc3b94"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerChannelAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1972,
+      "sha256": "8fd6a41d770c7dfbc43a296dcaf261615d614301e67c6c491523cf8ec1cc7a5f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerCustomAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2836,
+      "sha256": "774867fd32d9ae98ec101e1c2d0a120d6ad69304371b7bac3869cae81d73099a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerIndexedCustomAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3110,
+      "sha256": "2d82def9461e36e1b78e6d39c0ac90baf98ad64742f7bdf9bd6621f1f395caf8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerModeAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1844,
+      "sha256": "c0f198387b42b06f2baa38d2be27990fe82b480397b40810860b51e5840bb2df"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerMoreAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1765,
+      "sha256": "0313d8b72e110b9e16e9c78f89b6c3e7c06ed2f7839963ed92bf5fb7531068aa"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerPopModeAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1799,
+      "sha256": "c1b2aa24cb08779e9a34aaccf183622b9744969d5283dc53534867afd7dc3b25"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerPushModeAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1881,
+      "sha256": "4c4431e8d766008fafaae1ed795a6c7df2bd987c03602983326e470a374ca8b4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerSkipAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1728,
+      "sha256": "9755ef0fa28fae00d2cf6e26fd841b1734419b965522812c4e6007f32c3de98c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LexerTypeAction.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1781,
+      "sha256": "215ef0f11368cdfc0c0618d0a27d5a5f0df0d4a055d8b86c4b45a7fe48a05b0e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LL1Analyzer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3395,
+      "sha256": "c99701a49aaf43b890fcf1a07c7644b81d904693fdeeccf804c50e295ce75ef1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LookaheadEventInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1960,
+      "sha256": "9eb3585770d2911ad892d0aee1b4b5e536e6f018ff1296ea6a29159850fe5659"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/LoopEndState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 793,
+      "sha256": "6201ce8b303618796c0a74222ef74bf301351932edd679e447eb628223424bed"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/NotSetTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 990,
+      "sha256": "84588f15ece0f6523dd7e1279da27c2d93355933c1e4deadb8295e4b2ba00baf"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/OrderedATNConfigSet.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 677,
+      "sha256": "4db07073d0e41526affd3d5a27dae4148704e0b98944186735cf435820ecf5c7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ParseInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3729,
+      "sha256": "e05a44f8fded819de62f5b9feb67e32c491736af377206a423de4d015c6839c8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ParserATNSimulator.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 45834,
+      "sha256": "b27e28c5033facfcdbfbccfc3e062b8789b4a622d88ffebc96bf1662e04fd126"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ParserATNSimulatorOptions.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2324,
+      "sha256": "40e1e656368ef2e767a22be10d8acacd5640607e01b871e77ec005a5d0cc48a9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PlusBlockStartState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1135,
+      "sha256": "be3fbbecccb82058e0cea69663241ba2f16244428b1f9781e328e95c431bd608"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PlusLoopbackState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 925,
+      "sha256": "ebf1d3721e92f3ef4f4788cd03253e03cac3915e95f9cc0d0028a95105cda9cd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PrecedencePredicateTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1327,
+      "sha256": "da8ae5f646a64f0389edccc7a0d5db0882109c382c442940f5c0bce6a2c58237"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredicateEvalInfo.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2931,
+      "sha256": "21e8035ba428aab792d7e38c91d20338377c4a7182d8c3eff9939fd582fc8102"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredicateTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1814,
+      "sha256": "3373b42735b161cf432ee603625a9edd05df79bc86aaf80b3ed1e0a1ee741254"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 9273,
+      "sha256": "b1af34fd66f5ca1f6ad6dedc768256674843abc1b78c1c490904ef318b562a39"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContextCache.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2784,
+      "sha256": "7876978e76e44f60964f6ca594a88454b689442528d31ebd1353cd1cb2ccf360"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContextMergeCache.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4097,
+      "sha256": "b14368c74bb723d4302764d947cced7037462b2ad3b84476678c03bbdfef5d54"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContextMergeCacheOptions.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2602,
+      "sha256": "dce4e8984e62796327d3eeb0fabd11edbc0f137b5af0602e335bb22b984ba2b1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionContextType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 423,
+      "sha256": "6a735c16974f6f063ce3aea1a7fc5448b8e88ed8b5f5398659a90c33369c83b4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/PredictionMode.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 21106,
+      "sha256": "664df94bc7e1f7cf58a260fa821c914743f41d9511b192c64ef4484df6f6dfc4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/ProfilingATNSimulator.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3000,
+      "sha256": "287c46198df1778888c4eb6acd8a2396a1cb98383cad9704806f93d3f7213dbd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/RangeTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1072,
+      "sha256": "b6bdb79593e412a3198280638a0239664ddee1b27b78753d01e6fef8e9bc5da2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/RuleStartState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 803,
+      "sha256": "b326650e28d4678ee16a3b04834e09739651582dac1a0a68e396ffb324d779c6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/RuleStopState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 968,
+      "sha256": "8472bdb6b95d5961c5abd7607ebdc613f90157d606733547a940db51555bf0f7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/RuleTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1582,
+      "sha256": "710ddf83ecfeada6e71542b4b8a406e199cf2fecc205f8d998e983abc7464417"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SemanticContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 9112,
+      "sha256": "4d7ac8289535a590b2b4cbbe730f680de1b5ad53a1fbd2372ebb6a018dc9f43c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SemanticContextType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 451,
+      "sha256": "661b589329feb2bef06b9ac366ff2a69269989a9d408954e82af23de5384892e"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SerializedATNView.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3246,
+      "sha256": "8b786c3381fd5f4febf0783ef565334ddc1120e8f9c1839d694ef150308ecc6b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SetTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1414,
+      "sha256": "759cb35d23c2c07ecb5448f619749a22edeef1a3d768859b764d372ea73befdd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/SingletonPredictionContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1898,
+      "sha256": "1d4cdbb424c1b1823851d67d18640fc4bedca406965a993d4fbb4546f6c7e204"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/StarBlockStartState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 837,
+      "sha256": "a1916910677eb9f89f947af3834950ef189c14fe6443f411480736c85c44c639"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/StarLoopbackState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 790,
+      "sha256": "d4f56a8bbbdd4b79437606a8e0f9ad271b9a7ed2b6d56c34bfc4a229bf55dbd5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/StarLoopEntryState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1223,
+      "sha256": "09265870448cc5bdc87baf4f0519b273856928ac0194eff5bea3054f7720c6cb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/TokensStartState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 845,
+      "sha256": "7db19bb8541a8c2b69de514c0b55880ecbfe37a2db62fb84fcc8917ad50615f9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/Transition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2272,
+      "sha256": "3b6eb7b1c4c16e597e43fe7b4b26712402e04fc94dd3fef118c546d9e08438b2"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/TransitionType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 778,
+      "sha256": "6f4d40883fe6be062fc16b4d2ba37b9708bf36cd985fb81da7e0af4e78620445"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/atn/WildcardTransition.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 945,
+      "sha256": "bb9c52ab95a28a2785f66818646a9dae85b40e5af5ef3b6b46d6c9d17d4052aa"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/BailErrorStrategy.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2526,
+      "sha256": "6af6feab8d31f2ae4117acd8857b8f5f5051f2f1b4e34d2b73f2839de676c921"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/BaseErrorListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1449,
+      "sha256": "04e9baa7f6c75664abf858b04a9737c1fd6a83c90f82b4a9ae4a9622026386b1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/BufferedTokenStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 8040,
+      "sha256": "02eaf886e2a71a02a3ac59d2aa9b75e36c15942ea716b5d45d643e50af9dd500"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CharStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1525,
+      "sha256": "81068ceb06b14157655eaabcbdbbf80571a42f164722f43c8d29025c27003a62"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CommonToken.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4884,
+      "sha256": "fc61729e4b6ccb25b69324d66c0f443641959b832bc8f149d55ea1d6c1e48316"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CommonTokenFactory.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2649,
+      "sha256": "934a451a343a7e3faf06e5b84d30f5551efdc7c6b9a68cf604cf3fe56ee25613"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/CommonTokenStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2754,
+      "sha256": "e3158073e511a9ca82ac2bc43e9b4b19dd5223b1d75149cadb90a58b3eb562fb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ConsoleErrorListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1156,
+      "sha256": "fc7494d50f20551543a38d25183e8b252d393c3713d5f7213e62d0dc5a34acaf"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/DefaultErrorStrategy.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 20374,
+      "sha256": "9bb25b0ef9c097e15aa9bda0a155dd2c9c5a3d66a2bce98b3442688cf1a6380f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/DFA.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3152,
+      "sha256": "95f82a0c98374bf4b1e5f6bf254c7b53ec8b3036f054270aa4e61f1e117970c3"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/DFASerializer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 836,
+      "sha256": "9ccd5163cd7eb751a422dd7653c82f4d4ee3025bf33de4cb0967978eaafe6946"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/DFAState.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 6160,
+      "sha256": "bfea377d8f05b986b901556ed7a7153089b603ad55ed0446da237db3c3e670c0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/dfa/LexerDFASerializer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 597,
+      "sha256": "fe8605a0526c5fc7ad204d1c643ed4b7ab7156d38601b640584dbba2dea735b6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/DiagnosticErrorListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3640,
+      "sha256": "95a90aa1b39aeec818a422e0d98a6a3525fc523bea457f86021a96e22c03f634"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Exceptions.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3963,
+      "sha256": "8fdf1a0a43d7fa9f1b5f250185884949f44339a602522f0c591b3d8c555966ee"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/FailedPredicateException.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1160,
+      "sha256": "53929825f9e66f8d7c315e2217733057b34c5591733f9d6aeaa2a111cd45358a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/FlatHashMap.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2786,
+      "sha256": "859cad1a3687bfda1d73f5d79b0064565659d9e44285073dafce11040bce06f0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/FlatHashSet.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2676,
+      "sha256": "cd6bcc5987ebb23191db7331eb7eb1b23dde0c84c8e3da402110ee439f4ef79f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/InputMismatchException.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 819,
+      "sha256": "8837c49db650b759d0b076542aa9254430e3858b83c66c5580b5a144a41898ed"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/internal/Synchronization.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5499,
+      "sha256": "66adf2a2897e8226b9d58000f5a1926c8f0f6cae653480b3c30240a0f7323955"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/InterpreterRuleContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1642,
+      "sha256": "b5bebff4f9e769db1e0d0007897bab85bd8617bdbf54d4ac1b23882569e02286"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/IntStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 10306,
+      "sha256": "1fc366a41e24dcda6848e4cef414e90020c79ee4780da480eff74fa66b8e0f28"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Lexer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 7101,
+      "sha256": "9217107b284bdb86114c4d52e5439565d1c6693c42bbab69d3c1c51724644385"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/LexerInterpreter.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1588,
+      "sha256": "3209db6f1069e601d71a834f7524bd2832f54b24aa0871184084a0fc89baf20a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/LexerNoViableAltException.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 980,
+      "sha256": "87c7616b5ca630a08f371ecfda4802f2029b1f9cc427ef63b3b427aadeec22d9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ListTokenSource.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3866,
+      "sha256": "c4a3eb0a7e055540b6d142c719e11778ad3c8ba46f9392c62969e6c147bfb3dd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/InterpreterDataReader.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1043,
+      "sha256": "f628da7ee8446b557e3d4862140986fd28e24e61e3726ea386e28b3423a490b6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/Interval.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3046,
+      "sha256": "815b4fce59fd0eb7ca7dfe56d268f9d3eb4633a38037f316882d031652d2a04f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/IntervalSet.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 6560,
+      "sha256": "c687ca9a44001e9b5e7ecf6347ea3193d0c693c1acedf8a95a12cf6487c1e30b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/MurmurHash.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3632,
+      "sha256": "0c84418aaa5a20e6de8263eb7cbe8951ed48380152e7fc0e1e8c7907085fa2f0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/misc/Predicate.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 446,
+      "sha256": "a4b549df36b63cdf8cef392f0e22f23a3b7a61f859a3e0b87d68d5b57db529b4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/NoViableAltException.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1729,
+      "sha256": "30d6a06372efd73ee03b05d4593cb0f5ecd9ff3fa6978965811be558612cfec6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Parser.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 19492,
+      "sha256": "4fe1405afec07b1f3617d934271b7f52a1c4927b30e3eb2ff200c894e69328e5"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ParserInterpreter.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 7296,
+      "sha256": "6cfc2cb719910319b30faa28d2a797a5bedc71628c338eb3e974b47433e10150"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ParserRuleContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5807,
+      "sha256": "bfc577ea5e0498008d8add0974b62d91bf969d104ee83ad3a903310e8be60a29"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/ProxyErrorListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1737,
+      "sha256": "016cf2e1dcca7508862e359fd64bcffee03a2931084994ff6a754ce4ec17f9df"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RecognitionException.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4083,
+      "sha256": "cc5bb2e7b30aa6951b49ab34b7176e72228a7423dbdbe9f70604c9a574eb003a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Recognizer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5922,
+      "sha256": "67770f5ae5316487a3d55ae2a1268c0d0eb5b3b8d30e09a3d150be3a43f31df8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RuleContext.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5548,
+      "sha256": "c23ed95a40babe868275f45e50cfd31f87e45e909785f6f9122b723684ddb9fb"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RuleContextWithAltNum.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1015,
+      "sha256": "2d1cf5e1054482784fdf35a41e766adaef523466837258e1cde11749e8f60da6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/RuntimeMetaData.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 7411,
+      "sha256": "b8b3b334dd3be393496f624413a41a7b294a3faf8d6b7e280692efbca6250614"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Any.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 370,
+      "sha256": "e263547a088c3a8df6fade2b9ecd43be4e73bef27f4441af7e9cce4a31ca0cb1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Arrays.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3693,
+      "sha256": "f3bc59fc77d10df32d6b6e741bd3d8905f261b73832e7d43a75ff1ec985d6898"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/BitSet.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1902,
+      "sha256": "8cf43ca9045479e8dc235dd5ceb7574eaeeb977885a2550e3bfbdea0935ed2c8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Casts.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1195,
+      "sha256": "90f3a9b5185f5c3de32d8965552fe96a569a95ce2be8433d507df72fd39e5c26"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/CPPUtils.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2692,
+      "sha256": "ebe9f83b2b1c7f77a07acf6c0433012eacb583132522a42d27f654a909295a47"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Declarations.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4122,
+      "sha256": "0651bd955aea67edc894fcdbe2d4c0baab02f9e038d442815fa7ba4951f085d9"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/StringUtils.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 466,
+      "sha256": "5178a11c8b361abf3484dd16a4dcb4eb0a5b5605c7a0a6d9c27f7b609a8d2b73"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Unicode.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 723,
+      "sha256": "ebac8b2e76913548c72dd736725c0acfd476a5429ffbce17951bd8c413d9aa7a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/support/Utf8.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2186,
+      "sha256": "58005a84b755ff03c8818b6fb1a98f23ae2bf212228fe122378aac3709de773b"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Token.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3544,
+      "sha256": "f067eb376bf437e031bc76774d9eb54e2cc224e4df60fb20f3d93442f0c8720f"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenFactory.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1291,
+      "sha256": "699b051335d6e5bc66ced1e0a17471bef84d2b4ea677ff9d556e153a2d158315"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenSource.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3940,
+      "sha256": "0f496f42ef4879fcf724fa4a6d06545745d53796b344e3cd3081a7443bf4e276"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 6209,
+      "sha256": "da2aea8c57e4fabea1c0f9c871ed91e96597aa304cd640c56c9dcd5ea6a73e71"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/TokenStreamRewriter.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 12624,
+      "sha256": "ee83edc65f29b2989719b699c3a7d0eadc97b59b1976288378f5c400c9000f91"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/AbstractParseTreeVisitor.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5683,
+      "sha256": "0d670dda1e30f0a6d2e1db8558e22868f36af0576c02fe2c5500745e25166b56"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ErrorNode.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 736,
+      "sha256": "72a521fd191c91fc561c06b18363239248b86ebd6f285b0450e65c7a94489864"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ErrorNodeImpl.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1461,
+      "sha256": "fe32b2ca7924c9c9b59e47ceeeabb3fc9bd1bd0aa0da17494c006fb58dcc048c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/IterativeParseTreeWalker.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2116,
+      "sha256": "e09cf20509e70be4f2009513d706580fc0ffb62d5a814d21e85deb56528a1618"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTree.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4314,
+      "sha256": "6519513e9f07bc6294951ba3e9d7e45a1f78df40f2b7daba68adba8950f5ec52"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1213,
+      "sha256": "0f1c5ec1167528b3b3d77ddd284d591652c79a8a84bb3b1a649063ddc60d830c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeProperty.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1434,
+      "sha256": "4edb3125b780507e611b336c311245cd2cd8d6af0fb487cf9f083221a45ff4cd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeType.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 430,
+      "sha256": "0f71f0512acbd12450b582b991aeffc1f116f4dae4707f0f1330b7178cdb484d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeVisitor.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2239,
+      "sha256": "01f81227e280ce36ee303d57f4a1a1da2c6e5cb3d7feb1608d728d2248abf9f4"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/ParseTreeWalker.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2031,
+      "sha256": "c0ab6baebebc4dedcecaeba4047e31a6175808dada2e64130ea17ac8f744ed6a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/Chunk.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1478,
+      "sha256": "72f9465f9abf5eb3dff3f8f5d2c7dde2718201ae91a731344be174a6920c1c35"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/ParseTreeMatch.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 5819,
+      "sha256": "a12229cd93f17159d102235b38d6a767c54cd7ed01d877603230d0a4952e5e76"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/ParseTreePattern.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4420,
+      "sha256": "c080aac78c86e495c78b6ac751e39260305d411e1303801347f25fda57b709af"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/ParseTreePatternMatcher.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 8848,
+      "sha256": "ed45605f5bac4b23b7405333d5ea0c4db64739afb23b1f663b48b31df1e155cc"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/RuleTagToken.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4718,
+      "sha256": "a76ae3789f1feddeef1582a94dd1e574a302e687bfc0f66f2e562bf8d159f712"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/TagChunk.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3068,
+      "sha256": "62426eb9e68916af11bca94da55f735dda792d49558b5cc6177ed9d75612a3ad"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/TextChunk.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1502,
+      "sha256": "7c169fa4562099fc397ffe9ef42fdf1f4d3a24bf7ab047bdc46f517f568c0d66"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/pattern/TokenTagToken.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2815,
+      "sha256": "73bb4dd3fe54ddba47aaa9d45678737eaebd41015cf1204cb8b42ba60f2ab305"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/TerminalNode.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1223,
+      "sha256": "c66351e5005bd145f8d744581bf2f0849aa392337e84aa6c231cb8f358a9cdbd"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/TerminalNodeImpl.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1062,
+      "sha256": "373a36ea029d097fe840ac502d50e6509cfdeb0431cbf9e3a4d12a3016351ff1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/Trees.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 3142,
+      "sha256": "b3d3af1a76b6ddaf7629d868127e63f27f830d35fe0963f7be5bd495d01edfd8"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPath.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2897,
+      "sha256": "3c6ded5838d53fa93fc62e8c5e4f7d6001e15b5e8c099913497115e15c41e998"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1065,
+      "sha256": "a7d8878d636422c4a10eca4778db1896dd42840eab7c5a1ed51a06ee245f41a0"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathLexer.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 1404,
+      "sha256": "b2df162db06701cf7bc7bc65974a549185445f96232f1186f082a99f62e8e773"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathLexerErrorListener.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 731,
+      "sha256": "9779dae3c789f357cb8b768cefa43c748bf4c52ca77add02c35b506fa8cc0566"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathRuleAnywhereElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 764,
+      "sha256": "a5fc4aca5929bc06e14f448d24bc194fe54ef23d28c6883471438391600465de"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathRuleElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 694,
+      "sha256": "024dee257fb0c984d51696f05724194fcf8876e63825af1dd9d8117c04bd8bf7"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathTokenAnywhereElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 686,
+      "sha256": "92c4bf70df50f4629e544bfbc6ddf8251d705e433c6bea04e675fd258376bc40"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathTokenElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 697,
+      "sha256": "16ad4ac69fdf9c41f697b5404f709820f312ee4f3d7bd69c1069483ba484ed2d"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathWildcardAnywhereElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 595,
+      "sha256": "97547661875f8c66207e5117d2d79e7ade5e346296e93f2cd61c114762d62e94"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/tree/xpath/XPathWildcardElement.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 579,
+      "sha256": "4b1fcdd14cf393074a10c537d405744502fe039a11e5bd2cdb27fb086c7ae1d1"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/UnbufferedCharStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4442,
+      "sha256": "076c354b7487ecd8d4d5782b252034d9bbb6cfb5ce091c093778a7661786e605"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/UnbufferedTokenStream.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 4268,
+      "sha256": "f092263bbac5ee6e51b73f72a6f372f56308cbbb16246d2964e68825f53f696a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Version.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 2105,
+      "sha256": "83c955a49ce96c4d58962732669f55b79e241198aa09e3cee0b3265fa266d69a"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/Vocabulary.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 7021,
+      "sha256": "c06b7f7c3a4039986d3ce1458aed9fb283101a0e9351c8a6e7ab87d24acae5b6"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/runtime/src/WritableToken.h",
+      "role": "original-wrapper-copied-header",
+      "bytes": 741,
+      "sha256": "1508b042f2faea88962bf82dcc57cd79682d0dcebd9d3ce6fccf4d1500018a29"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/LICENSE.txt",
+      "role": "source-version-license",
+      "bytes": 1480,
+      "sha256": "3db1fb3ee79a4b4f9918fc4d0f6133bf18a3cf787f126cd22f8aa9b862281c0c"
+    },
+    {
+      "path": "F:/JericoEngine/Dependencies/antlr4-8e6fd9147b3c9d36b60e2b6656871a55227efb1b/runtime/Cpp/VERSION",
+      "role": "source-version-license",
+      "bytes": 7,
+      "sha256": "fbd6c0b234162c9fe53ce32aab764a48525f169b595533b4171e7ee4d5344dc0"
+    }
+  ]
+}

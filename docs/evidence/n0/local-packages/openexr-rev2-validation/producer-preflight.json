@@ -1,0 +1,42 @@
+{
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-freeze-openexr-candidate-v2.json",
+  "freezeSha256": "7745DC711AC2F20AE812108434D5F338B7FCD88E0A3793496B8DB8BC664B8163",
+  "argumentsPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\validation-arguments-v2.json",
+  "argumentsSha256": "0D219066133D2A20EE8756ACEC2F1D06DF0EB1E2C34084F950D07D0943345880",
+  "inputCount": 1182,
+  "matched": 1182,
+  "zlibBlobCount": 4,
+  "zlibMatched": 4,
+  "producerArgumentCount": 6,
+  "producerArguments": [
+    "-DJE_OPENEXR_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+    "-DJE_OPENEXR_IMATH_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+    "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+    "-DJE_OPENEXR_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev2-validation",
+  "cmake": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "cmakeSha256": "1AA884BF1F4949327FFFCC8EE4A97C2D684BDC1D0A64B71F01DC16321C7FBC64",
+  "outputPath": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2",
+  "outputAbsent": true,
+  "archiveEntries": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/Imath-6dc0820482aeb24a22f520d7b165a410589648c3.tar.gz",
+      "expectedBytes": 571142,
+      "actualBytes": 571142,
+      "expectedSha256": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3",
+      "actualSha256": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3",
+      "match": true
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/openexr-697cc449cc589ed780acda88e79e6145ddcd121f.tar.gz",
+      "expectedBytes": 20326313,
+      "actualBytes": 20326313,
+      "expectedSha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+      "actualSha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+      "match": true
+    }
+  ]
+}

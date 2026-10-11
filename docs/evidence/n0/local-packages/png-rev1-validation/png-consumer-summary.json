@@ -1,0 +1,51 @@
+{
+  "packageArchiveSHA256": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4",
+  "archiveMembers": 51,
+  "payloadCount": 50,
+  "links": 0,
+  "packageInfo": {
+    "license": "libpng-2.0",
+    "name": "png-1.6.37-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "a40189cf881e9f0db80511c382292a5604c3c3d1",
+      "sha256": "ed747514984fddf095142aa85e983111f13d64b877b1065ed0d990f7adb31eb7",
+      "url": "https://codeload.github.com/pnggroup/libpng/tar.gz/a40189cf881e9f0db80511c382292a5604c3c3d1"
+    },
+    "version": "1.6.37"
+  },
+  "recipe": {
+    "upstreamVersion": "1.6.37",
+    "originalPackageVersion": "1.6.37-rev2",
+    "recipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "generator": "Visual Studio 17 2022",
+    "toolset": "v143",
+    "architecture": "x64",
+    "configuration": "Release",
+    "runtimeLibrary": "MultiThreadedDLL",
+    "PNG_SHARED": false,
+    "PNG_TESTS": false,
+    "PNG_DEBUG": false,
+    "PNG_STATIC": true,
+    "PIC": true,
+    "PNG_ARM_NEON": "on (upstream applies only to ARM)",
+    "configurationHeader": "upstream scripts/pnglibconf.h.prebuilt via explicit AWK-NOTFOUND fallback",
+    "policyCompatibilityMinimum": "3.5 (producer configure only)",
+    "zlib": "1.2.11",
+    "sourcePatches": [],
+    "historicalBinaryCompatibility": "not asserted"
+  },
+  "prebuiltHeader": {
+    "sourcePrebuiltPath": "F:/JericoEngine/Dependencies/libpng-a40189cf881e9f0db80511c382292a5604c3c3d1/scripts/pnglibconf.h.prebuilt",
+    "sourcePrebuiltExists": true,
+    "packagedHeaderHash": "f6868db3625a3339eea2ca3e1ea40ddc33068bd79527f48810a6d7a2a5d1b4a0",
+    "packagedHeaderBytes": 7830,
+    "sourcePrebuiltHash": "3fc519a430e8f5be8b3962483e054373536ceae432168ce171b5c5e19b4694a3",
+    "matchesPrebuilt": false
+  },
+  "configureExit": 0,
+  "releaseTests": "100% tests passed, 0 tests failed out of 5",
+  "debugTests": "100% tests passed, 0 tests failed out of 5",
+  "freezeInputs": 514,
+  "freezeMatches": true
+}

@@ -1,0 +1,79 @@
+{
+  "status": "SOURCE CANDIDATE FROZEN; NOT CONFIGURED OR BUILT",
+  "scope": "TIFF only; PNG remains read-only preliminary audit, Expat separate owner",
+  "historicalPackage": {
+    "name": "tiff-4.2.0.15-rev3-windows",
+    "sha256": "c6000a906e6d2a0816b652e93dfbeab41c9ed73cdd5a613acd53e553d0510b60",
+    "newArtifactEquivalent": false
+  },
+  "source": {
+    "tag": "v4.2.0",
+    "tagObject": "846d7d97f3254adf388993b195a8079068c22beb",
+    "commit": "4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99",
+    "url": "https://gitlab.com/libtiff/libtiff/-/archive/4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz",
+    "sha256": "cce672d2f5941759573cb3904cc8f00f065d54a3689a80719229e961d6a324c8",
+    "archiveBytes": 2334809,
+    "snapshot": "F:/JericoEngine/Dependencies/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99",
+    "members": 668,
+    "files": 636,
+    "directories": 30,
+    "globalMetadataEntries": 1,
+    "payloadBytes": 6553004,
+    "links": 0,
+    "collisions": 0,
+    "lfsPointers": 0,
+    "redirects": 0,
+    "immutablePostflightAllMatch": true
+  },
+  "recipe": {
+    "repositoryCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "path": "package-system/tiff",
+    "packageVersion": "4.2.0.15-rev3",
+    "upstreamVersion": "4.2.0",
+    "upstreamVersionConstant": 20201219,
+    "patchHunks": 2,
+    "sourceWrites": "only producer fresh private extraction",
+    "patchBefore": "93666ce64aeb2e02542c0f912af818d3c5308030548f8023daac2bdd5fdf439e",
+    "patchAfter": "908b1ec9438d1cefccd100da5a75fad1485a612a358033caa524bd4faf7a8f29",
+    "cmakeClosureScripts": 25,
+    "downloadsOrFetchCalls": 0,
+    "executeCalls": "UNIX date; explicit doc groff script; CTest helper binaries, all outside Windows target tiff configure/build path"
+  },
+  "dependency": {
+    "onlyExternalLibrary": "zlib 1.2.11 JE local rebuild",
+    "package": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+    "pinnedInputs": 4,
+    "newDepsRequired": [],
+    "crt": "VS upstream default /MD and engine Release /MD; candidate explicit MultiThreadedDLL",
+    "disabledExternal": "Only original recipe options: jpeg old-jpeg pixarlog lzma webp jbig zstd jpeg12 libdeflate cxx",
+    "internal": "Original defaults on: ccitt packbits lzw thunder next logluv mdi"
+  },
+  "legal": {
+    "rootLicense": "COPYRIGHT, libtiff",
+    "extra": "BSD3 UC Berkeley port; BSD2 DragonFly/Citrus port; LZW Berkeley acknowledgement condition; Larson and Cringle attribution",
+    "payloadNotices": "COPYRIGHT plus complete libtiff/ and port/ C/H source notices; explicit Berkeley acknowledgement; exact O3DE patch and root licenses",
+    "upstreamCopyrightSha256": "FBD6FED7938541D2C809C0826225FC85E551FDBFA8732B10F0C87E0847ACAFD7"
+  },
+  "consumers": [
+    "Legacy::CrySystem.Static PRIVATE3rdParty::TIFF (Code/Legacy/CrySystem/CMakeLists.txt:29)",
+    "Gem::Atom_Feature_Common.Private.Object PUBLIC3rdParty::TIFF (Gems/Atom/Feature/Common/Code/CMakeLists.txt:38); TiffFrameCaptureOutput actual TIFFOpen/writeScanline float/native storage",
+    "Gem::ImageProcessingAtom.Editor.Static PUBLIC3rdParty::TIFF (Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt:68); TIFFLoader LoadImageFromTIFF + readScanline/readTile + numeric/GeoTIFF tags"
+  ],
+  "candidate": {
+    "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF",
+    "files": 9,
+    "name": "tiff-4.2.0.15-je-rev1-windows",
+    "packageHash": "PENDING real build/archive by Luna",
+    "aliases": [
+      "TIFF::TIFF",
+      "3rdParty::TIFF"
+    ],
+    "interface": "ZLIB::ZLIB",
+    "sourceFreeze": "source-freeze-tiff-candidate.json",
+    "inputCount": 663,
+    "freezeSha256": "BC3226A9D2143F954CB60078375A7AD2EAAE964044B29D51F8901E9A2BE7750F",
+    "validationCommands": "validation-arguments.json",
+    "tests": 7,
+    "productAcceptance": "NONE; Editor/AssetProcessor/native engine not built by this candidate"
+  }
+}

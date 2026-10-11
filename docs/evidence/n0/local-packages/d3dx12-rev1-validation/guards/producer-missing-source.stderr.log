@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: d3dx12 O3DE source archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/guards/missing-source.tar.gz
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/d3dx12/BuildD3dx12Package.cmake:33 (JE_python_verify_file)
+
+

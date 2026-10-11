@@ -1,0 +1,604 @@
+{
+  "engineSeeds": [
+    "Atom_Bootstrap",
+    "AtomShader",
+    "AtomViewportDisplayInfo",
+    "Camera",
+    "CommonFeaturesAtom",
+    "EditorModeFeedback",
+    "Maestro",
+    "PrefabBuilder",
+    "SceneProcessing"
+  ],
+  "projectSeeds": [
+    "Atom",
+    "CameraFramework",
+    "ImGui",
+    "WhiteBox",
+    "PhysX5",
+    "PrimitiveAssets",
+    "PrefabBuilder"
+  ],
+  "engineExternalRoots": 83,
+  "engineExternalFlattened": 115,
+  "orderedExternalCount": 115,
+  "sourceAlgorithm": "Subdirectories.cmake:32-133,304-362,456-520",
+  "scope": "Static dependency-first inference from repository metadata only; native VERBOSE order/branch execution remains pending. No user manifest or arbitrary external cache additions reproduced.",
+  "order": [
+    {
+      "index": 0,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\DX12",
+      "gem": "Atom_RHI_DX12"
+    },
+    {
+      "index": 1,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal",
+      "gem": "Atom_RHI_Metal"
+    },
+    {
+      "index": 2,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan",
+      "gem": "Atom_RHI_Vulkan"
+    },
+    {
+      "index": 3,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Null",
+      "gem": "Atom_RHI_Null"
+    },
+    {
+      "index": 4,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI",
+      "gem": "Atom_RHI"
+    },
+    {
+      "index": 5,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI",
+      "gem": "Atom_RPI"
+    },
+    {
+      "index": 6,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap",
+      "gem": "Atom_Bootstrap"
+    },
+    {
+      "index": 7,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader",
+      "gem": "AtomShader"
+    },
+    {
+      "index": 8,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayInfo",
+      "gem": "AtomViewportDisplayInfo"
+    },
+    {
+      "index": 9,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera",
+      "gem": "Camera"
+    },
+    {
+      "index": 10,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\LmbrCentral",
+      "gem": "LmbrCentral"
+    },
+    {
+      "index": 11,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui",
+      "gem": "ImGui"
+    },
+    {
+      "index": 12,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common",
+      "gem": "Atom_Feature_Common"
+    },
+    {
+      "index": 13,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\SurfaceData",
+      "gem": "SurfaceData"
+    },
+    {
+      "index": 14,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\ImageProcessingAtom",
+      "gem": "ImageProcessingAtom"
+    },
+    {
+      "index": 15,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\GradientSignal",
+      "gem": "GradientSignal"
+    },
+    {
+      "index": 16,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphCanvas",
+      "gem": "GraphCanvas"
+    },
+    {
+      "index": 17,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphModel",
+      "gem": "GraphModel"
+    },
+    {
+      "index": 18,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework",
+      "gem": "AtomToolsFramework"
+    },
+    {
+      "index": 19,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures",
+      "gem": "CommonFeaturesAtom"
+    },
+    {
+      "index": 20,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback",
+      "gem": "EditorModeFeedback"
+    },
+    {
+      "index": 21,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera",
+      "gem": "Atom_Component_DebugCamera"
+    },
+    {
+      "index": 22,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas",
+      "gem": "MaterialCanvas"
+    },
+    {
+      "index": 23,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor",
+      "gem": "MaterialEditor"
+    },
+    {
+      "index": 24,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas",
+      "gem": "PassCanvas"
+    },
+    {
+      "index": 25,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole",
+      "gem": "ShaderManagementConsole"
+    },
+    {
+      "index": 26,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom",
+      "gem": "ImguiAtom"
+    },
+    {
+      "index": 27,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools",
+      "gem": "AtomImGuiTools"
+    },
+    {
+      "index": 28,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomRenderOptions",
+      "gem": "AtomRenderOptions"
+    },
+    {
+      "index": 29,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\EMotionFX",
+      "gem": "EMotionFX"
+    },
+    {
+      "index": 30,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EMotionFXAtom",
+      "gem": "EMotionFX_Atom"
+    },
+    {
+      "index": 31,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont",
+      "gem": "AtomFont"
+    },
+    {
+      "index": 32,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons",
+      "gem": "AtomViewportDisplayIcons"
+    },
+    {
+      "index": 33,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge",
+      "gem": "Atom_AtomBridge"
+    },
+    {
+      "index": 34,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom",
+      "gem": "Atom"
+    },
+    {
+      "index": 35,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Maestro",
+      "gem": "Maestro"
+    },
+    {
+      "index": 36,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder",
+      "gem": "PrefabBuilder"
+    },
+    {
+      "index": 37,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneProcessing",
+      "gem": "SceneProcessing"
+    },
+    {
+      "index": 38,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Achievements",
+      "gem": "Achievements"
+    },
+    {
+      "index": 39,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AFR",
+      "gem": "AFR"
+    },
+    {
+      "index": 40,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Compression",
+      "gem": "Compression"
+    },
+    {
+      "index": 41,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Archive",
+      "gem": "Archive"
+    },
+    {
+      "index": 42,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AssetValidation",
+      "gem": "AssetValidation"
+    },
+    {
+      "index": 43,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\Sponza",
+      "gem": "Sponza"
+    },
+    {
+      "index": 44,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\ReferenceMaterials",
+      "gem": "ReferenceMaterials"
+    },
+    {
+      "index": 45,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent",
+      "gem": "AtomContent"
+    },
+    {
+      "index": 46,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\TestData",
+      "gem": "Atom_TestData"
+    },
+    {
+      "index": 47,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration",
+      "gem": "AtomLyIntegration"
+    },
+    {
+      "index": 48,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\EditorPythonBindings",
+      "gem": "EditorPythonBindings"
+    },
+    {
+      "index": 49,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\QtForPython",
+      "gem": "QtForPython"
+    },
+    {
+      "index": 50,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\TechnicalArt\\DccScriptingInterface",
+      "gem": "DccScriptingInterface"
+    },
+    {
+      "index": 51,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomTressFX",
+      "gem": "AtomTressFX"
+    },
+    {
+      "index": 52,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\AudioSystem",
+      "gem": "AudioSystem"
+    },
+    {
+      "index": 53,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\BarrierInput",
+      "gem": "BarrierInput"
+    },
+    {
+      "index": 54,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework",
+      "gem": "CameraFramework"
+    },
+    {
+      "index": 55,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\CertificateManager",
+      "gem": "CertificateManager"
+    },
+    {
+      "index": 56,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\CrashReporting",
+      "gem": "CrashReporting"
+    },
+    {
+      "index": 57,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\CustomAssetExample",
+      "gem": "CustomAssetExample"
+    },
+    {
+      "index": 58,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\DebugDraw",
+      "gem": "DebugDraw"
+    },
+    {
+      "index": 59,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\DevTextures",
+      "gem": "DevTextures"
+    },
+    {
+      "index": 60,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\DiffuseProbeGrid",
+      "gem": "DiffuseProbeGrid"
+    },
+    {
+      "index": 61,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ExpressionEvaluation",
+      "gem": "ExpressionEvaluation"
+    },
+    {
+      "index": 62,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\FastNoise",
+      "gem": "FastNoise"
+    },
+    {
+      "index": 63,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\GameState",
+      "gem": "GameState"
+    },
+    {
+      "index": 64,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\LocalUser",
+      "gem": "LocalUser"
+    },
+    {
+      "index": 65,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\TextureAtlas",
+      "gem": "TextureAtlas"
+    },
+    {
+      "index": 66,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\UiBasics",
+      "gem": "UiBasics"
+    },
+    {
+      "index": 67,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShine",
+      "gem": "LyShine"
+    },
+    {
+      "index": 68,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\SaveData",
+      "gem": "SaveData"
+    },
+    {
+      "index": 69,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\MessagePopup",
+      "gem": "MessagePopup"
+    },
+    {
+      "index": 70,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShineExamples",
+      "gem": "LyShineExamples"
+    },
+    {
+      "index": 71,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\GameStateSamples",
+      "gem": "GameStateSamples"
+    },
+    {
+      "index": 72,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Gestures",
+      "gem": "Gestures"
+    },
+    {
+      "index": 73,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\InAppPurchases",
+      "gem": "InAppPurchases"
+    },
+    {
+      "index": 74,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\LandscapeCanvas",
+      "gem": "LandscapeCanvas"
+    },
+    {
+      "index": 75,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Meshlets",
+      "gem": "Meshlets"
+    },
+    {
+      "index": 76,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Microphone",
+      "gem": "Microphone"
+    },
+    {
+      "index": 77,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\MiniAudio",
+      "gem": "MiniAudio"
+    },
+    {
+      "index": 78,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching",
+      "gem": "MotionMatching"
+    },
+    {
+      "index": 79,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Common",
+      "gem": "PhysXCommon"
+    },
+    {
+      "index": 80,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Core\\PhysX5",
+      "gem": "PhysX5"
+    },
+    {
+      "index": 81,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer",
+      "gem": "Multiplayer"
+    },
+    {
+      "index": 82,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptEvents",
+      "gem": "ScriptEvents"
+    },
+    {
+      "index": 83,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvas",
+      "gem": "ScriptCanvas"
+    },
+    {
+      "index": 84,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Multiplayer_ScriptCanvas",
+      "gem": "Multiplayer_ScriptCanvas"
+    },
+    {
+      "index": 85,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\MultiplayerCompression",
+      "gem": "MultiplayerCompression"
+    },
+    {
+      "index": 86,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\NvCloth",
+      "gem": "NvCloth"
+    },
+    {
+      "index": 87,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\OpenParticleSystem",
+      "gem": "OpenParticleSystem"
+    },
+    {
+      "index": 88,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\PhysX5",
+      "gem": "PhysX5Debug"
+    },
+    {
+      "index": 89,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Presence",
+      "gem": "Presence"
+    },
+    {
+      "index": 90,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets",
+      "gem": "PrimitiveAssets"
+    },
+    {
+      "index": 91,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler",
+      "gem": "Profiler"
+    },
+    {
+      "index": 92,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\PythonAssetBuilder",
+      "gem": "PythonAssetBuilder"
+    },
+    {
+      "index": 93,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\RecastNavigation",
+      "gem": "RecastNavigation"
+    },
+    {
+      "index": 94,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\RemoteTools",
+      "gem": "RemoteTools"
+    },
+    {
+      "index": 95,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneLoggingExample",
+      "gem": "SceneLoggingExample"
+    },
+    {
+      "index": 96,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptAutomation",
+      "gem": "ScriptAutomation"
+    },
+    {
+      "index": 97,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper",
+      "gem": "ScriptCanvasDeveloper"
+    },
+    {
+      "index": 98,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasPhysics",
+      "gem": "ScriptCanvasPhysics"
+    },
+    {
+      "index": 99,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasTesting",
+      "gem": "ScriptCanvasTesting"
+    },
+    {
+      "index": 100,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptedEntityTweener",
+      "gem": "ScriptedEntityTweener"
+    },
+    {
+      "index": 101,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\SkyAtmosphere",
+      "gem": "SkyAtmosphere"
+    },
+    {
+      "index": 102,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Stars",
+      "gem": "Stars"
+    },
+    {
+      "index": 103,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera",
+      "gem": "StartingPointCamera"
+    },
+    {
+      "index": 104,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointInput",
+      "gem": "StartingPointInput"
+    },
+    {
+      "index": 105,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointMovement",
+      "gem": "StartingPointMovement"
+    },
+    {
+      "index": 106,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer",
+      "gem": "Streamer"
+    },
+    {
+      "index": 107,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer\\StreamerProfiler",
+      "gem": "StreamerProfiler"
+    },
+    {
+      "index": 108,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Terrain",
+      "gem": "Terrain"
+    },
+    {
+      "index": 109,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\TestAssetBuilder",
+      "gem": "TestAssetBuilder"
+    },
+    {
+      "index": 110,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\TickBusOrderViewer",
+      "gem": "TickBusOrderViewer"
+    },
+    {
+      "index": 111,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\Vegetation",
+      "gem": "Vegetation"
+    },
+    {
+      "index": 112,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\VideoPlaybackFramework",
+      "gem": "VideoPlaybackFramework"
+    },
+    {
+      "index": 113,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\VirtualGamepad",
+      "gem": "VirtualGamepad"
+    },
+    {
+      "index": 114,
+      "directory": "F:\\JericoEngine\\JericoEngine\\Gems\\WhiteBox",
+      "gem": "WhiteBox"
+    }
+  ]
+}

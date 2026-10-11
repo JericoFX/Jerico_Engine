@@ -1,0 +1,8 @@
+{
+  "upstreamFeatureFile": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-rev1\\source-work\\openexr-697cc449cc589ed780acda88e79e6145ddcd121f\\cmake\\OpenEXRLibraryDefine.cmake",
+  "privateC11FeaturePresent": true,
+  "upstreamCStandardPropertyPresent": false,
+  "msvcHeader": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\include\\vcruntime_c11_stdatomic.h",
+  "msvcHeaderSha256": "93a6e051c5a5c9a86149fc1cd892806a136393cce8c5532ed5c298a6b87cfbc6",
+  "msvcHeaderCondition": "__STDC_VERSION__ < 201112L triggers C1189"
+}

@@ -1,0 +1,27 @@
+{
+  "createdUtc": "2026-10-11T03:18:29.5717935Z",
+  "files": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/FindImath.cmake",
+      "beforeBytes": 1724,
+      "beforeSHA256": "0837b72ef5853db21e7543a7ca40bd00b428b7f36b9fd7143921b7685016dd9f",
+      "afterBytes": 1718,
+      "afterSHA256": "8d6943660b969394da20ce1467f7a0479b5da0eb1679b3db99d882c974637328",
+      "originalCopy": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/pre-whitespace-FindImath.cmake",
+      "change": "Trailing tabs/spaces only; identical remaining text, order and line endings",
+      "scope": "Current authored Find modules; previously validated immutable archive is unchanged"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/FindOpenEXR.cmake",
+      "beforeBytes": 3600,
+      "beforeSHA256": "8574ecc7d2a4381cb2152939181c9a1aafeafcb76862aedf0dfd81e94d79a899",
+      "afterBytes": 3595,
+      "afterSHA256": "767b82230223b555ad7458b20fccf0a0b29ac1adddb092096df01b07c1ee0f2c",
+      "originalCopy": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-audit/pre-whitespace-FindOpenEXR.cmake",
+      "change": "Trailing tabs/spaces only; identical remaining text, order and line endings",
+      "scope": "Current authored Find modules; previously validated immutable archive is unchanged"
+    }
+  ],
+  "nativeArchiveSHA256": "cd06701c7710fcaf68b29d99a1a4e110ea4c274b0656e1cc2182a1a7003f7fa0",
+  "newBuildClaim": false
+}

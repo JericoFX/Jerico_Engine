@@ -1,0 +1,6 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/VerifyZlibInput.cmake:7 (message):
+  JE local OpenEXR: complete local JE zlib package is required
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake:11 (include)
+
+

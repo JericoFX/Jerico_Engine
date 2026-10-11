@@ -1,0 +1,96 @@
+{
+  "count": 9,
+  "allExpectedRejectionsVerified": true,
+  "cases": [
+    {
+      "guard": "producer-unc-source-path",
+      "initialAttemptResult": "PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": false,
+      "correctedEvidencePath": null,
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": null
+    },
+    {
+      "guard": "producer-wrong-hash",
+      "initialAttemptResult": "NOT_PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": true,
+      "correctedEvidencePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards-diagnostic-corrected\\wrong-hash.stderr.log",
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": true
+    },
+    {
+      "guard": "producer-wrong-url",
+      "initialAttemptResult": "NOT_PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": true,
+      "correctedEvidencePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards-diagnostic-corrected\\wrong-url.stderr.log",
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": true
+    },
+    {
+      "guard": "producer-missing-source",
+      "initialAttemptResult": "PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": false,
+      "correctedEvidencePath": null,
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": null
+    },
+    {
+      "guard": "producer-existing-output",
+      "initialAttemptResult": "NOT_PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": true,
+      "correctedEvidencePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\d3dx12-rev1-validation\\guards-diagnostic-corrected\\existing-output.stderr.log",
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": true
+    },
+    {
+      "guard": "producer-outside-build-output",
+      "initialAttemptResult": "PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": false,
+      "correctedEvidencePath": null,
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": null
+    },
+    {
+      "guard": "find-missing-header",
+      "initialAttemptResult": "PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": false,
+      "correctedEvidencePath": null,
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": null
+    },
+    {
+      "guard": "find-tampered-header",
+      "initialAttemptResult": "PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": false,
+      "correctedEvidencePath": null,
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": null
+    },
+    {
+      "guard": "find-unc-package-root",
+      "initialAttemptResult": "PASS",
+      "initialNativeExit": 1,
+      "initialDiagnosticWasReflowed": false,
+      "correctedEvidencePath": null,
+      "finalResult": "PASS",
+      "correctedNativeExit": 1,
+      "sentinelIntact": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/packages/expat-2.4.2-je-rev1-windows.tar.xz",
+    "destination": "F:/JericoEngine/Dependencies/archives/expat-2.4.2-je-rev1-windows.tar.xz",
+    "bytes": 196028,
+    "sha256": "C102370257ED28D9F9EA5E61CA10432EDC14E8389AA781380BEAA9B2A8AE6925"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/packages/expat-2.4.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:/JericoEngine/Dependencies/archives/expat-2.4.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 102,
+    "sha256": "B0002B30CCB5CF515EC8455F10FA1A3FE970694DF40928E2E51EFFD689111FAE"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/packages/expat-2.4.2-je-rev1-windows.tar.xz",
+    "destination": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/expat-2.4.2-je-rev1-windows.tar.xz",
+    "bytes": 196028,
+    "sha256": "C102370257ED28D9F9EA5E61CA10432EDC14E8389AA781380BEAA9B2A8AE6925"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/expat-rev1-validation/expat-local-v1/packages/expat-2.4.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "destination": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/expat-2.4.2-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 102,
+    "sha256": "B0002B30CCB5CF515EC8455F10FA1A3FE970694DF40928E2E51EFFD689111FAE"
+  }
+]

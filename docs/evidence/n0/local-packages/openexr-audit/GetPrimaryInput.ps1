@@ -1,0 +1,8 @@
+param([Parameter(Mandatory=$true)][string]$Url,[Parameter(Mandatory=$true)][string]$Name,[switch]$Head)
+$ErrorActionPreference='Stop'
+$uri=[Uri]$Url
+if($uri.Scheme -ne 'https' -or $uri.Host -notin @('api.github.com','raw.githubusercontent.com','codeload.github.com')){throw 'Unapproved primary host'}
+$handler=[Net.Http.HttpClientHandler]::new();$handler.AllowAutoRedirect=$false
+$client=[Net.Http.HttpClient]::new($handler);$client.DefaultRequestHeaders.UserAgent.ParseAdd('JE-offline-source-audit')
+$method=if($Head){[Net.Http.HttpMethod]::Head}else{[Net.Http.HttpMethod]::Get}
+try{$request=[Net.Http.HttpRequestMessage]::new($method,$uri);$response=$client.SendAsync($request).GetAwaiter().GetResult();$status=[int]$response.StatusCode;$location=if($response.Headers.Location){$response.Headers.Location.ToString()}else{$null};if($location){throw 'Redirect requires separate manual destination audit'};if($status -ne 200){throw "HTTP $status"};$receipt=[ordered]@{url=$Url;method=$method.Method;status=$status;location=$location;autoRedirect=$false;credentials='none'};if(-not$Head){$path=Join-Path $PSScriptRoot $Name;if(Test-Path -LiteralPath $path){throw 'Destination exists'};$bytes=$response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();[IO.File]::WriteAllBytes($path,$bytes);$receipt.bytes=$bytes.Length;$receipt.sha256=(Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash};$receiptPath=Join-Path $PSScriptRoot ($Name+'.'+$method.Method.ToLowerInvariant()+'-receipt.json');if(Test-Path -LiteralPath $receiptPath){throw 'Receipt exists'};$receipt|ConvertTo-Json|Set-Content -LiteralPath $receiptPath -Encoding utf8;$receipt|ConvertTo-Json}finally{$client.Dispose();$handler.Dispose()}

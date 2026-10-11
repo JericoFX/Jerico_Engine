@@ -1,0 +1,12 @@
+{
+  "archiveSHA256": "d54ecd9a2463472e0df48e9baff07744ca1512fe761bc142ade353b347bf1dd2",
+  "archiveMembers": 90,
+  "payloads": 89,
+  "links": 0,
+  "configureExit": 0,
+  "buildExit": 0,
+  "ctestExit": 0,
+  "ctestSummary": "100% tests passed, 0 tests failed out of 7",
+  "freezeInputs": 663,
+  "freezeMatches": true
+}

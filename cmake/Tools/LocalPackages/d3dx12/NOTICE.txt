@@ -1,0 +1,29 @@
+JE local d3dx12 header package
+
+Original payload authority: o3de/3p-package-source commit
+70f0b7b5257bf7cf935bf1cfd270e1b53ccead18,
+package-system/d3dx12-windows, d3dx12-headers-rev1-windows.
+The original single d3dx12.h is preserved byte for byte, including the
+Microsoft copyright/MIT notice and O3DE AZ_COMPILER_CLANG diagnostic guards.
+The exact full Microsoft MIT license is included as d3dx12/license.txt.
+The original O3DE Find and metadata are retained as inactive provenance
+under LICENSES/O3DE along with the O3DE Apache-2.0/MIT license texts.
+
+Microsoft's DirectX-Headers repository is the homepage recorded by the
+original package. That record does not establish an upstream Microsoft
+commit, tag or semantic version for this adapted header. PackageInfo's
+source.commit identifies the actual O3DE source repository, not Microsoft;
+source.sha256 identifies its exact acquired archive. No revision is invented.
+
+JE adapts only local-path validation and the Find module's standalone
+include-directory fallback. The API and INTERFACE IMPORTED GLOBAL target
+3rdParty::d3dx12, include path d3dx12/include, and d3dx12_INCLUDE_DIR remain.
+The dependency on installed Windows SDK d3d12.h remains; SDK headers and
+libraries are not redistributed, acquired or installed by this producer.
+No upstream build, Git, Python, remote fallback or global install runs.
+
+d3dx12-headers-je-rev1-windows carries a new measured package hash, not the
+historical binary-package hash. Native consumer tests cover SDK-compatible
+descriptor helper behavior without creating a device or executing GPU work.
+They do not certify the DX12 renderer, visual performance, Editor runtime,
+full redistribution rights or driver/hardware compatibility.

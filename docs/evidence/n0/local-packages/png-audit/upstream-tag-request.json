@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "url": "https://api.github.com/repos/pnggroup/libpng/git/ref/tags/v1.6.37",
+  "status": 200,
+  "location": null,
+  "redirectsFollowed": false,
+  "credentials": "none"
+}

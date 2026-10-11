@@ -1,0 +1,124 @@
+{
+  "before": [
+    {
+      "bytes": 3930,
+      "path": "engine.json",
+      "sha256": "E1B8302687385076CDA9F20660A4958DBB919AF3C3A1630B8B796A6127AE824D"
+    },
+    {
+      "bytes": 10012,
+      "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg",
+      "sha256": "A6687C0813DBE83A3387EEE98C6CF927B98CC1CE30AAF43DD78EDB651D47BDE7"
+    },
+    {
+      "bytes": 9602,
+      "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg",
+      "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+    },
+    {
+      "bytes": 9602,
+      "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg",
+      "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+    },
+    {
+      "bytes": 9602,
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg",
+      "sha256": "A67369BA73F49AE2E843AF8AFF4616C849E93C0C432D8568E2F0FE6A196345AF"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/gem.json",
+      "sha256": "5F4C117DBA1FAEBD773570A3233C766E572C7FFEEF23D4165E52F8B4BF875FA3",
+      "bytes": 1465
+    }
+  ],
+  "pending": [
+    "Native configure/link/deploy/runtime proof by assigned Luna and parent acceptance",
+    "B38 specialized ShaderManagementConsole automation/native port gaps remain",
+    "Historical AutomatedTesting project explicitly selects removed Python Gems and is not this native fixture",
+    "Historical ScriptOnlyProject/PythonToolGem templates still describe Python integrations outside the current native product"
+  ],
+  "changes": [
+    "engine.json removes EditorPythonBindings, QtForPython, PythonAssetBuilder external branches",
+    "Four AtomTools gem_autoload settings remove PythonAssetBuilder AutoLoad=false entries only",
+    "AtomLyIntegration/gem.json removes the DccScriptingInterface external branch only"
+  ],
+  "scope": "Source composition only",
+  "execution": "No CMake, build, CTest, pip, interpreter, install or Git execution",
+  "preserved": [
+    "SceneAPI and AssetProcessor native composition",
+    "Other AtomLyIntegration siblings and four tool registry entries",
+    "B38 source freeze matches 38/38",
+    "Historical Gem implementation and VM-dependent tests remain as source outside this product composition",
+    "Editor native BehaviorContext API tests remain in editor_lib_test_files.cmake",
+    "External CPython build/codegen tools and provider files untouched"
+  ],
+  "encodingChecks": [
+    {
+      "path": "engine.json",
+      "lineEndingStylePreserved": true,
+      "utf8BomPreserved": true
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg",
+      "lineEndingStylePreserved": true,
+      "utf8BomPreserved": true
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg",
+      "lineEndingStylePreserved": true,
+      "utf8BomPreserved": true
+    },
+    {
+      "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg",
+      "lineEndingStylePreserved": true,
+      "utf8BomPreserved": true
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg",
+      "lineEndingStylePreserved": true,
+      "utf8BomPreserved": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/gem.json",
+      "lineEndingStylePreserved": true,
+      "utf8BomPreserved": true
+    }
+  ],
+  "after": [
+    {
+      "sha256": "0BF845BEDEF7F84DCF51F5EC986FE0B7AD6FEFCCB7B4E823C260D062240618A3",
+      "bytes": 3827,
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json"
+    },
+    {
+      "sha256": "B49C40BE47E7232DC0211C0DCD8D56A6ECD157720590A719449A9A38D27E01E0",
+      "bytes": 9792,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg"
+    },
+    {
+      "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "bytes": 9382,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg"
+    },
+    {
+      "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "bytes": 9382,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg"
+    },
+    {
+      "sha256": "9B2187C7B41F34B459F387864D933D840D0042B9812E95D190DCDBE11E7F966B",
+      "bytes": 9382,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg"
+    },
+    {
+      "sha256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988",
+      "bytes": 1418,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json"
+    }
+  ],
+  "cause": [
+    "Engine external_subdirectories are recursively collected independent of active project Gem seeds",
+    "DccScriptingInterface was reachable through AtomLyIntegration/gem.json and invokes update_pip_requirements before adding Code",
+    "PythonAssetBuilder links PUBLIC 3rdParty::Python and EditorPythonBindings.Static"
+  ]
+}

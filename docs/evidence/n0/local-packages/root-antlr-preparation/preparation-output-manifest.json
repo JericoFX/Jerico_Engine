@@ -1,0 +1,70 @@
+{
+  "status": "PREPARATORY OUTPUT HASH RECEIPT; NOT FINAL ROOT FREEZE; PARENT REVIEW REQUIRED",
+  "inputCount": 11,
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\baseline444-deltas.json",
+      "bytes": 282,
+      "sha256": "21d3b55e8c173e36648ea47340bae5a1d5363f430dc30cc820b0f88e6cc1747c"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\cache30-preparation-manifest.json",
+      "bytes": 7848,
+      "sha256": "daf56e7549b53b50dcab88ba89e8a3b23d6c153696aa82ee5eb2cc35fbfe9284"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\driver-diff.json",
+      "bytes": 2061,
+      "sha256": "79de3a6f6e2392fa15536cb0b68c0f36e59c1fe1c17f9199bc897df2c8a51217"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\merge-origin-manifest.json",
+      "bytes": 137567,
+      "sha256": "d835e9b3bd36e28ab64198325654011badac94cb50384b5bce00cf8a0f3dd821"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\preparation-proof.json",
+      "bytes": 3721,
+      "sha256": "72ef598dd575365ac97ebe4fb8561fb2d87ea7d6d553602fd49562bb84a7abb8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\PrepareRootAntlr.ps1",
+      "bytes": 10803,
+      "sha256": "d7217fc04cf1d15030a37a0c2350906479e40215b6684d2fb7dfab3341b288cd"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\root-antlr-candidate-assignment.json",
+      "bytes": 6569,
+      "sha256": "8f5f992b62124fc223d4e42c40734b0fc1012370d4137f9c60c487684cc07be9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\run-root-configure-antlr-candidate.ps1",
+      "bytes": 26786,
+      "sha256": "35e0bc2660e568ac9b42332fbfc53564089f9e9f596b3ad5b647f6f3f4f5fc95"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\source-freeze-root-candidate.json",
+      "bytes": 158481,
+      "sha256": "b665b0e78d833396d0d47615060f05adfa489bef4827408a1e161975a1b8f294"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\static-verification.json",
+      "bytes": 2500,
+      "sha256": "efb6f0fb024f2e137a5fa7f544ec163b110361791304356b4b925cf65888daa0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\VerifyPreparation.ps1",
+      "bytes": 4842,
+      "sha256": "039eba2e701b642d2ef531a2dcaf6700c51748462f874600e780cebd5822b55a"
+    }
+  ],
+  "duplicateInputs": [
+    {
+      "fullPath": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdPartyPackages.cmake",
+      "origins": [
+        "root444",
+        "antlr-root10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "case": "changed-archive",
+  "exitCode": 1,
+  "elapsedSeconds": 0.044,
+  "expectedDiagnostic": "SHA256 mismatch",
+  "diagnosticMatched": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-archive\\output",
+  "outputExists": false
+}

@@ -1,0 +1,53 @@
+{
+  "status": "STATIC PREPARATION VERIFIED; NO NATIVE PROCESS EXECUTED; NOT FINAL FOR DISPATCH",
+  "mergedInputsVerified": 765,
+  "originalArgumentsPreserved": 45,
+  "appendedArguments": 1,
+  "antlrConsumedInputs": 309,
+  "driverExactReverseDiff": true,
+  "driverChangeCount": 8,
+  "driverLFNoBOM": true,
+  "parserChecks": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\run-root-configure-antlr-candidate.ps1",
+      "errors": 0,
+      "sha256": "35E0BC2660E568AC9B42332FBFC53564089F9E9F596B3AD5B647F6F3F4F5FC95"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\PrepareRootAntlr.ps1",
+      "errors": 0,
+      "sha256": "D7217FC04CF1D15030A37A0C2350906479E40215B6684D2FB7DFAB3341B288CD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-antlr-preparation\\VerifyPreparation.ps1",
+      "errors": 0,
+      "sha256": "039EBA2E701B642D2EF531A2DCAF6700C51748462F874600E780CEBD5822B55A"
+    }
+  ],
+  "privateGeneratedFilesReadOnlyCheck": [
+    {
+      "name": "Manifold",
+      "relativePath": "src/csg_tree.h",
+      "originalSHA256": "EBCEC03AED52E3A05C7FF2ECE61E4E547BCFC194339C88521C77BEE58BF9741C",
+      "copySHA256": "EBCEC03AED52E3A05C7FF2ECE61E4E547BCFC194339C88521C77BEE58BF9741C",
+      "equal": true
+    },
+    {
+      "name": "Manifold",
+      "relativePath": "src/edge_op.cpp",
+      "originalSHA256": "C18884A2ACFC052752D3236A58CE3DB3FD5B96E9F9D8FA55DB15EE55DE5C9025",
+      "copySHA256": "C18884A2ACFC052752D3236A58CE3DB3FD5B96E9F9D8FA55DB15EE55DE5C9025",
+      "equal": true
+    },
+    {
+      "name": "Clipper2",
+      "relativePath": "CPP/Clipper2Lib/include/clipper2/clipper.version.h",
+      "originalSHA256": "0D636F1599B09743496D5C15C7DCB5BC3101BD423D6745BF17E480EDBFFCCDAC",
+      "copySHA256": "0D636F1599B09743496D5C15C7DCB5BC3101BD423D6745BF17E480EDBFFCCDAC",
+      "equal": true
+    }
+  ],
+  "privateCopyScope": "Only the three known generated files checked here; full pristine private-copy equality remains an unchanged mandatory driver preflight. No private copy was reset or changed.",
+  "cache30SHA256": "DAF56E7549B53B50DCAB88BA89E8A3B23D6C153696AA82EE5EB2CC35FBFE9284",
+  "futureDispatch": "Parent review/final freeze required. Cache32/OpenEXR/catalogue updates require new assignment, source freeze and driver hashes."
+}

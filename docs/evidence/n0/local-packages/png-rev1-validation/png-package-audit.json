@@ -1,0 +1,345 @@
+{
+  "archiveSHA256": "7d13e9a70172f713f66daf870a7359191096308ebe501c17121bfb24dbefe9b4",
+  "archiveBytes": 421588,
+  "memberCount": 51,
+  "members": [
+    "FindPNG.cmake",
+    "JERequireLocalPath.cmake",
+    "LICENSES/O3DE/LICENSE.txt",
+    "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+    "LICENSES/O3DE/LICENSE_MIT.TXT",
+    "LICENSES/PNG/AUTHORS",
+    "LICENSES/PNG/LICENSE",
+    "LICENSES/PNG/TRADEMARK",
+    "LICENSES/PNG/source-notices/arm/arm_init.c",
+    "LICENSES/PNG/source-notices/arm/filter_neon.S",
+    "LICENSES/PNG/source-notices/arm/filter_neon_intrinsics.c",
+    "LICENSES/PNG/source-notices/arm/palette_neon_intrinsics.c",
+    "LICENSES/PNG/source-notices/intel/filter_sse2_intrinsics.c",
+    "LICENSES/PNG/source-notices/intel/intel_init.c",
+    "LICENSES/PNG/source-notices/mips/filter_msa_intrinsics.c",
+    "LICENSES/PNG/source-notices/mips/mips_init.c",
+    "LICENSES/PNG/source-notices/png.c",
+    "LICENSES/PNG/source-notices/png.h",
+    "LICENSES/PNG/source-notices/pngconf.h",
+    "LICENSES/PNG/source-notices/pngdebug.h",
+    "LICENSES/PNG/source-notices/pngerror.c",
+    "LICENSES/PNG/source-notices/pngget.c",
+    "LICENSES/PNG/source-notices/pnginfo.h",
+    "LICENSES/PNG/source-notices/pngmem.c",
+    "LICENSES/PNG/source-notices/pngpread.c",
+    "LICENSES/PNG/source-notices/pngpriv.h",
+    "LICENSES/PNG/source-notices/pngread.c",
+    "LICENSES/PNG/source-notices/pngrio.c",
+    "LICENSES/PNG/source-notices/pngrtran.c",
+    "LICENSES/PNG/source-notices/pngrutil.c",
+    "LICENSES/PNG/source-notices/pngset.c",
+    "LICENSES/PNG/source-notices/pngstruct.h",
+    "LICENSES/PNG/source-notices/pngtest.c",
+    "LICENSES/PNG/source-notices/pngtrans.c",
+    "LICENSES/PNG/source-notices/pngwio.c",
+    "LICENSES/PNG/source-notices/pngwrite.c",
+    "LICENSES/PNG/source-notices/pngwtran.c",
+    "LICENSES/PNG/source-notices/pngwutil.c",
+    "LICENSES/PNG/source-notices/powerpc/filter_vsx_intrinsics.c",
+    "LICENSES/PNG/source-notices/powerpc/powerpc_init.c",
+    "LICENSES/PNG/source-notices/scripts/pnglibconf.h.prebuilt",
+    "NOTICE.txt",
+    "PackageInfo.json",
+    "README.md",
+    "png/JERecipe.json",
+    "png/LICENSE",
+    "png/include/png.h",
+    "png/include/pngconf.h",
+    "png/include/pnglibconf.h",
+    "png/lib/libpng16_static.lib",
+    "SHA256SUMS"
+  ],
+  "links": 0,
+  "manifestCount": 50,
+  "payload": [
+    {
+      "path": "FindPNG.cmake",
+      "bytes": 3176,
+      "sha256": "ce190b5cc887b590eaa37a268f310497bdd6fa235b15493952ac227e84c61018"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "LICENSES/PNG/AUTHORS",
+      "bytes": 1098,
+      "sha256": "e00d9011379c516a6fa5e21b1d9119c7b5fe91177c9ec0f1f362c886e45771ab"
+    },
+    {
+      "path": "LICENSES/PNG/LICENSE",
+      "bytes": 5345,
+      "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b"
+    },
+    {
+      "path": "LICENSES/PNG/TRADEMARK",
+      "bytes": 343,
+      "sha256": "9c47b01500b4324091d85e3ca3335adbdf6966858dd124f9fe85bcd1f705880b"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/arm/arm_init.c",
+      "bytes": 4682,
+      "sha256": "77c0a5638bdf2737d9ae4b90bd31f39ac8b4fe62eca634d7abeff8caa7574c97"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/arm/filter_neon.S",
+      "bytes": 8352,
+      "sha256": "fa5750987ad542bf75f5fb94b268db07a443c03daa34f0c652ada49769bb8e2c"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/arm/filter_neon_intrinsics.c",
+      "bytes": 11814,
+      "sha256": "fe7c1eb355918f8a81b6cbbb1a2a7549a693cf3eea67cb369a04f41c315db50e"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/arm/palette_neon_intrinsics.c",
+      "bytes": 4608,
+      "sha256": "e779cc22b472fb5053e06e41bcac3980d0706b41475f631bd15cb9bbbe81c3e9"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/intel/filter_sse2_intrinsics.c",
+      "bytes": 11326,
+      "sha256": "326ff8daae853217a012217777f432d504f62d9f9c3b938c6374185285293eab"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/intel/intel_init.c",
+      "bytes": 1793,
+      "sha256": "42718bd9a6b66fa6544890098e7b5ae9abf0503bbb351c31f3c1058469e4af3c"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/mips/filter_msa_intrinsics.c",
+      "bytes": 29474,
+      "sha256": "618ae3b5c150e24fd1af7b80b07ab99e2dc1f9cd86d0418d65e2829e5dc9102f"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/mips/mips_init.c",
+      "bytes": 4340,
+      "sha256": "a24c4eb23a6cee7395a597379be95b836b3d4a143b888b9b4e2ec126a9bc5bd6"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/png.c",
+      "bytes": 157413,
+      "sha256": "076016c5c68222b59b3634bf4730dbf5e0d11825fb077e1fcebfff1802e9b41f"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/png.h",
+      "bytes": 142860,
+      "sha256": "f8e248049a97831f5e9fb24ec0c7c6b7cacb3b3ba7303300b4f5b2b90bae3c40"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngconf.h",
+      "bytes": 22846,
+      "sha256": "0ba884e89c5bfa8f86ad9286fedc4d26bb6f51f0dba7aaaf67e70baa6fd17a30"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngdebug.h",
+      "bytes": 5319,
+      "sha256": "58941a11daeee436541b19684f711efc84354e9c36a3be274315a412be219e45"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngerror.c",
+      "bytes": 29168,
+      "sha256": "eff6d2c20c58c2ace633aae6e2a0cafefc0a81c1e8f7a3717b0afcd1266af6e3"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngget.c",
+      "bytes": 34032,
+      "sha256": "edee02d7d95d99a6ab94660c91d47b39f037f3ca3883f97eb7f8aff37a976661"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pnginfo.h",
+      "bytes": 12514,
+      "sha256": "87cb3efc4dcf22b46f2a01225d5c6eea7722753d85cb4e6f69cc48bb61b7687c"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngmem.c",
+      "bytes": 8323,
+      "sha256": "9de067f559b202f63be02e26cc6bd6e320131727de5533eb51728b50af5c4b3b"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngpread.c",
+      "bytes": 31706,
+      "sha256": "408d18c3226201a1fc6433fae88b9b28c5a2def2462dceb5b6952a787ed77282"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngpriv.h",
+      "bytes": 89768,
+      "sha256": "cfd75ff2fad5095512437787dfbe178fe746c31c2f84d247796455fbee42de2f"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngread.c",
+      "bytes": 142337,
+      "sha256": "04da40a295a22c6b151b91a20940d2a6d0f98287dcc548a10e4af24b82a595a7"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngrio.c",
+      "bytes": 3898,
+      "sha256": "e82f31b39701aa872f9c38a66e98d3d58fa2c681e2d027543404d5e52312a92d"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngrtran.c",
+      "bytes": 167439,
+      "sha256": "13cded3e936938ebf42c75ddac7c853094d3b5fa614495ada1f81540d36cdb31"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngrutil.c",
+      "bytes": 147465,
+      "sha256": "60fccdea9db5574a3783deaa1c7e55c4eaf63a2cf1e2cc183dfa3644b4276fe2"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngset.c",
+      "bytes": 51373,
+      "sha256": "c05f540e61c84f448f0ebfdac21414f621788436ba83cff28b2624141b66a738"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngstruct.h",
+      "bytes": 20198,
+      "sha256": "47c8d2bdfe616d6316785a420512eabf8746bb1b56e7b2e8cb1b2aad3d75ec63"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngtest.c",
+      "bytes": 62815,
+      "sha256": "eec118620f24a6603523395cd1eb65d7ad71118d3a918bfca2b0af810074587f"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngtrans.c",
+      "bytes": 25240,
+      "sha256": "7897d8e254c4a4d5b4531217bf91383c4f82ad542458efa9530acf56c9b3b39b"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngwio.c",
+      "bytes": 5601,
+      "sha256": "c598db8a3d4232c23418199c047a784a735307dd655486fcb7d4edc34b753418"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngwrite.c",
+      "bytes": 76428,
+      "sha256": "c8024698ffb538565afeb5615512dcc6e7205fcdae4f46afacc420e7cbda8cae"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngwtran.c",
+      "bytes": 15337,
+      "sha256": "81a5e4ea609250ecee20c8587aa429a3cb728d2197a1b96841a34807032fae60"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/pngwutil.c",
+      "bytes": 80350,
+      "sha256": "433a3451e9398d3dd6af4ae10727ac62692b150cf785de21c4c919eb16c729f5"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/powerpc/filter_vsx_intrinsics.c",
+      "bytes": 25418,
+      "sha256": "4eaf07fa65666eb5edd27c937e0090c55811147816f7d9ff38681db700be3d0e"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/powerpc/powerpc_init.c",
+      "bytes": 4305,
+      "sha256": "44b2404b43c4a358748129b446b7f119c6a4b8cc4924b89bd5e9d37ceaa783fb"
+    },
+    {
+      "path": "LICENSES/PNG/source-notices/scripts/pnglibconf.h.prebuilt",
+      "bytes": 7611,
+      "sha256": "3fc519a430e8f5be8b3962483e054373536ceae432168ce171b5c5e19b4694a3"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 1505,
+      "sha256": "c0c114e9b6b437f592c5e417eaffc93ccfd692d58057f12542e51440f3923290"
+    },
+    {
+      "path": "PackageInfo.json",
+      "bytes": 402,
+      "sha256": "3bf64ff23b6c56347d9cf7c0083a143e77cdcb0aa56486786dd53ee843e15f24"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5662,
+      "sha256": "da29332fa8edbe64fd25a9557362a75f7e7845636c759d05960e6942897e06f7"
+    },
+    {
+      "path": "png/JERecipe.json",
+      "bytes": 706,
+      "sha256": "fd39ee888bb9f81677566f7d5e39732ac00c8daf7e5e3181bbb72ee0a0f4a7f0"
+    },
+    {
+      "path": "png/LICENSE",
+      "bytes": 5345,
+      "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b"
+    },
+    {
+      "path": "png/include/png.h",
+      "bytes": 142860,
+      "sha256": "f8e248049a97831f5e9fb24ec0c7c6b7cacb3b3ba7303300b4f5b2b90bae3c40"
+    },
+    {
+      "path": "png/include/pngconf.h",
+      "bytes": 22846,
+      "sha256": "0ba884e89c5bfa8f86ad9286fedc4d26bb6f51f0dba7aaaf67e70baa6fd17a30"
+    },
+    {
+      "path": "png/include/pnglibconf.h",
+      "bytes": 7830,
+      "sha256": "f6868db3625a3339eea2ca3e1ea40ddc33068bd79527f48810a6d7a2a5d1b4a0"
+    },
+    {
+      "path": "png/lib/libpng16_static.lib",
+      "bytes": 670266,
+      "sha256": "5a4d939f136f674d9e7a7b819544e9d4b0ef99daf8f3b8c3ad20bbdf3af392b0"
+    }
+  ],
+  "packageInfo": {
+    "license": "libpng-2.0",
+    "name": "png-1.6.37-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "a40189cf881e9f0db80511c382292a5604c3c3d1",
+      "sha256": "ed747514984fddf095142aa85e983111f13d64b877b1065ed0d990f7adb31eb7",
+      "url": "https://codeload.github.com/pnggroup/libpng/tar.gz/a40189cf881e9f0db80511c382292a5604c3c3d1"
+    },
+    "version": "1.6.37"
+  },
+  "recipe": {
+    "upstreamVersion": "1.6.37",
+    "originalPackageVersion": "1.6.37-rev2",
+    "recipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "generator": "Visual Studio 17 2022",
+    "toolset": "v143",
+    "architecture": "x64",
+    "configuration": "Release",
+    "runtimeLibrary": "MultiThreadedDLL",
+    "PNG_SHARED": false,
+    "PNG_TESTS": false,
+    "PNG_DEBUG": false,
+    "PNG_STATIC": true,
+    "PIC": true,
+    "PNG_ARM_NEON": "on (upstream applies only to ARM)",
+    "configurationHeader": "upstream scripts/pnglibconf.h.prebuilt via explicit AWK-NOTFOUND fallback",
+    "policyCompatibilityMinimum": "3.5 (producer configure only)",
+    "zlib": "1.2.11",
+    "sourcePatches": [],
+    "historicalBinaryCompatibility": "not asserted"
+  },
+  "reparsePoints": 0
+}

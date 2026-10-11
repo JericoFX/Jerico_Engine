@@ -1,0 +1,177 @@
+[
+  {
+    "manifest": "root-freeze",
+    "beforeCount": 2532,
+    "afterCount": 2532,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googlebenchmark-freeze",
+    "beforeCount": 174,
+    "afterCount": 174,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googletest-freeze",
+    "beforeCount": 260,
+    "afterCount": 260,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "mcpp-freeze",
+    "beforeCount": 17,
+    "afterCount": 17,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "splash-freeze",
+    "beforeCount": 6,
+    "afterCount": 6,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "splash-rcc-output",
+    "beforeCount": 1,
+    "afterCount": 1,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "sqlite-root-inputs",
+    "beforeCount": 8,
+    "afterCount": 8,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "root-package-cache",
+    "beforeCount": 32,
+    "afterCount": 32,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "wheelhouse",
+    "beforeCount": 44,
+    "afterCount": 44,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "mimalloc-source-before",
+    "beforeCount": 382,
+    "afterCount": 382,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "rapidjson-source-before",
+    "beforeCount": 313,
+    "afterCount": 313,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googlebenchmark-tree-before",
+    "beforeCount": 173,
+    "afterCount": 173,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "googletest-tree-before",
+    "beforeCount": 252,
+    "afterCount": 252,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "antlr4-tree-before",
+    "beforeCount": 2296,
+    "afterCount": 2296,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "jsoncpp-tree-before",
+    "beforeCount": 229,
+    "afterCount": 229,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "cli11-tree-before",
+    "beforeCount": 304,
+    "afterCount": 304,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "sqlite-source-before",
+    "beforeCount": 4,
+    "afterCount": 4,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "manifold-original-before",
+    "beforeCount": 378,
+    "afterCount": 378,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "manifold-private-before",
+    "beforeCount": 378,
+    "afterCount": 378,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "clipper-original-before",
+    "beforeCount": 223,
+    "afterCount": 223,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "clipper-private-before",
+    "beforeCount": 223,
+    "afterCount": 223,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "openmesh-original-before",
+    "beforeCount": 611,
+    "afterCount": 611,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "openmesh-private-before",
+    "beforeCount": 611,
+    "afterCount": 611,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "python-rev3-before",
+    "beforeCount": 10400,
+    "afterCount": 10400,
+    "deltaCount": 0,
+    "deltas": []
+  },
+  {
+    "manifest": "engine-packages-before",
+    "beforeCount": 6501,
+    "afterCount": 6501,
+    "deltaCount": 0,
+    "deltas": []
+  }
+]

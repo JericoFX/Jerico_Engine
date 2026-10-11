@@ -1,0 +1,12 @@
+{
+  "arguments": [
+    "-DJE_EXPAT_SOURCE_ARCHIVE:STRING=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\guards\\missing-archive\\not-present.tar.gz",
+    "-DJE_EXPAT_SOURCE_SHA256:STRING=a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057",
+    "-DJE_EXPAT_SOURCE_URL:STRING=https://codeload.github.com/libexpat/libexpat/tar.gz/e26a263aa9182d1e4552cd615857f0f61df3ba42",
+    "-DJE_EXPAT_OUTPUT:PATH=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\guards\\missing-archive\\output",
+    "-P",
+    "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Expat/BuildExpatPackage.cmake"
+  ],
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\guards\\missing-archive"
+}

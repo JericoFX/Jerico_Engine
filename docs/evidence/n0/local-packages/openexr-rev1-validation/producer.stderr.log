@@ -1,0 +1,13 @@
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    FETCHCONTENT_FULLY_DISCONNECTED
+    OPENEXR_BUILD_EXAMPLES
+    OPENEXR_RUN_FUZZ_TESTS
+    PYTHON
+
+
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake:90 (message):
+  JE local OpenEXR Debug build failed (1); outputs retained
+
+

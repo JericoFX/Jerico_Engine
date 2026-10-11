@@ -1,0 +1,12 @@
+{
+  "package": "expat-2.4.2-je-rev1-windows",
+  "packageBytes": 196028,
+  "packageSHA256": "c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925",
+  "copyCount": 4,
+  "copyManifestSHA256": "67A63C8F284EBCAB632E531CC0C751DD54B8D31609EE77B1867654A3FC92EAD1",
+  "catalogueBefore": "C3BA4B0F24D4C11A3E479BAB869CA90D390E350F01DFF2E7A78F489B610685B2",
+  "catalogueAfter": "CFFE89BA668BA19D079A3EC1400736D107AF5D27381B7EFB47984D6FC7109996",
+  "nativeCases": "Release4/4 Debug4/4",
+  "guards": "8 expected rejections; outside preexisting-output harness caveat; symlink NOT_RUN",
+  "engineAcceptance": "PENDING"
+}

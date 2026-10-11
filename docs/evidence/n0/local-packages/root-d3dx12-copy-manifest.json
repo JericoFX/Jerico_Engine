@@ -1,0 +1,26 @@
+[
+  {
+    "sha256": "5BA66C64483F19E72BEEA0D1CCC94AD3E0175E88EC256668FC5B0725727FFB73",
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/d3dx12-local-v1/packages/d3dx12-headers-je-rev1-windows.tar.xz",
+    "bytes": 16652,
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\d3dx12-headers-je-rev1-windows.tar.xz"
+  },
+  {
+    "sha256": "C3EC14BF9C326D3DB3D94D9958AFD82786FA06DFF137FB751EB98B5592BCA465",
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/d3dx12-local-v1/packages/d3dx12-headers-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 105,
+    "destination": "F:\\JericoEngine\\Dependencies\\archives\\d3dx12-headers-je-rev1-windows.tar.xz.SHA256SUMS"
+  },
+  {
+    "sha256": "5BA66C64483F19E72BEEA0D1CCC94AD3E0175E88EC256668FC5B0725727FFB73",
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/d3dx12-local-v1/packages/d3dx12-headers-je-rev1-windows.tar.xz",
+    "bytes": 16652,
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\d3dx12-headers-je-rev1-windows.tar.xz"
+  },
+  {
+    "sha256": "C3EC14BF9C326D3DB3D94D9958AFD82786FA06DFF137FB751EB98B5592BCA465",
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/d3dx12-rev1-validation/d3dx12-local-v1/packages/d3dx12-headers-je-rev1-windows.tar.xz.SHA256SUMS",
+    "bytes": 105,
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-package-cache\\d3dx12-headers-je-rev1-windows.tar.xz.SHA256SUMS"
+  }
+]

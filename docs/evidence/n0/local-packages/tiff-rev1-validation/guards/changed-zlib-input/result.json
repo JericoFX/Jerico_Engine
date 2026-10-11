@@ -1,0 +1,9 @@
+{
+  "case": "changed-zlib-input",
+  "exitCode": 1,
+  "elapsedSeconds": 0.037,
+  "expectedDiagnostic": "zlib 1.2.11 header SHA256 mismatch",
+  "diagnosticMatched": true,
+  "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-zlib-output",
+  "outputExists": false
+}

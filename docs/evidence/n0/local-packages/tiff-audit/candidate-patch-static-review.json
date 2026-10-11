@@ -1,0 +1,6 @@
+{
+  "check": "Static exact embedded hunk equality (PowerShell text only, CMake not run)",
+  "hunks": 2,
+  "postSha256": "908B1EC9438D1CEFCCD100DA5A75FAD1485A612A358033CAA524BD4FAF7A8F29",
+  "immutableWritten": false
+}

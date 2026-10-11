@@ -1,0 +1,37 @@
+[
+  {
+    "path": "F:/JericoEngine/JericoEngine/Code/Legacy/CrySystem/CMakeLists.txt",
+    "bytes": 1680,
+    "sha256": "83C3946E6A5F722CFCADBE6BA352D4DF526273C973E160844E3D9581F5F30252"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Code/CMakeLists.txt",
+    "bytes": 6879,
+    "sha256": "D7854B6425C94703F48FEE173984D15DBF8833B26915A366840202E261419B07"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Code/Source/FrameCaptureSystemComponent.cpp",
+    "bytes": 48255,
+    "sha256": "99724B651342377C80D7453B4D6F7556EA43411CFAAA4A3963E43458F611F826"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/Code/CMakeLists.txt",
+    "bytes": 4241,
+    "sha256": "3DD0AEA92B0DA019A4880031E26CF930ACD99A0D3CF7C2B684E3F8423D83FD79"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/ImageLoader/TIFFLoader.cpp",
+    "bytes": 23638,
+    "sha256": "8850447470A2BF23142192C2415C57CE1C136F52B562691A363E53339D13E58B"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+    "bytes": 6787,
+    "sha256": "C3BA4B0F24D4C11A3E479BAB869CA90D390E350F01DFF2E7A78F489B610685B2"
+  },
+  {
+    "path": "F:/JericoEngine/JericoEngine/cmake/Platform/Common/MSVC/Configurations_msvc.cmake",
+    "bytes": 15478,
+    "sha256": "A5A5EF8542A1E624ADC886547F2BBECE35174664323AD39315DED0D51EE40ED3"
+  }
+]

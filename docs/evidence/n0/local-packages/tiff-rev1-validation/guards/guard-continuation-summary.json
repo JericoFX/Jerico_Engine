@@ -1,0 +1,82 @@
+{
+  "remainingProducerGuardCount": 3,
+  "producerGuards": [
+    {
+      "case": "missing-archive-corrected",
+      "exitCode": 1,
+      "elapsedSeconds": 0.036,
+      "expectedDiagnostic": "file is missing",
+      "diagnosticMatched": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\missing-archive-corrected\\output",
+      "outputExists": false
+    },
+    {
+      "case": "changed-archive",
+      "exitCode": 1,
+      "elapsedSeconds": 0.044,
+      "expectedDiagnostic": "SHA256 mismatch",
+      "diagnosticMatched": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-archive\\output",
+      "outputExists": false
+    },
+    {
+      "case": "changed-zlib-input",
+      "exitCode": 1,
+      "elapsedSeconds": 0.037,
+      "expectedDiagnostic": "zlib 1.2.11 header SHA256 mismatch",
+      "diagnosticMatched": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\tiff-rev1-validation\\guards\\changed-zlib-output",
+      "outputExists": false
+    }
+  ],
+  "wrongExactIdentity": {
+    "case": "wrong-exact-tiff-4.3",
+    "exitCode": 1,
+    "elapsedSeconds": 1.71,
+    "diagnosticMatched": true,
+    "expectedVersion": "4.3 EXACT",
+    "actualVersion": "4.2.0.15",
+    "binaryCompilationAttempted": false,
+    "buildDirectoryExists": true
+  },
+  "archiveSHA256": "cce672d2f5941759573cb3904cc8f00f065d54a3689a80719229e961d6a324c8",
+  "zlibBefore": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\FindZLIB.cmake",
+      "sha256": "b2662eb8469bad3c2cf93e3ea797e3df53c49ab4a9a1ce4c2ac119f7ef19bbd0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\zlib\\include\\zlib.h",
+      "sha256": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\zlib\\include\\zconf.h",
+      "sha256": "7f4e7f02c4c1b7ef830a8b4331e1ba04f34e97f2c0dcdd81f967ff16fd5ee6d0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\zlib\\lib\\zlibstatic.lib",
+      "sha256": "00842f0c5be67674da3a0c1369da818ffeff1dea4f805beb06dd50f84d5a4fc1"
+    }
+  ],
+  "zlibAfter": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\FindZLIB.cmake",
+      "sha256": "b2662eb8469bad3c2cf93e3ea797e3df53c49ab4a9a1ce4c2ac119f7ef19bbd0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\zlib\\include\\zlib.h",
+      "sha256": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\zlib\\include\\zconf.h",
+      "sha256": "7f4e7f02c4c1b7ef830a8b4331e1ba04f34e97f2c0dcdd81f967ff16fd5ee6d0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\zlib-rev1\\packages\\zlib-1.2.11-je-rev1-windows.contents\\zlib\\lib\\zlibstatic.lib",
+      "sha256": "00842f0c5be67674da3a0c1369da818ffeff1dea4f805beb06dd50f84d5a4fc1"
+    }
+  ],
+  "outsideOutputStillAbsent": true,
+  "existingTiffAuditStillPresent": true,
+  "wrongExactDidNotCompile": true
+}

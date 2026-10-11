@@ -1,0 +1,9 @@
+[
+  "--build",
+  "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-atomics-diagnostic\\explicit-c-standard-11-experimental",
+  "--config",
+  "Debug",
+  "--target",
+  "JEAtomicProbe",
+  "--verbose"
+]

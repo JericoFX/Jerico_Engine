@@ -1,0 +1,7 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:37 (message):
+  JE local Python: audited Imath v3.1.3 archive file is missing:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-rev2-validation/guards/missing-imath.tar.gz
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/OpenEXR/BuildOpenEXRPackage.cmake:30 (JE_python_verify_file)
+
+

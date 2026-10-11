@@ -1,0 +1,10 @@
+{
+  "nativeExit": 1,
+  "expectedDiagnostic": "output must be new; existing outputs are preserved",
+  "diagnosticMatched": true,
+  "existingPathPresentAfter": true,
+  "fileCountBefore": 47,
+  "fileCountAfter": 47,
+  "fileHashesUnchanged": true,
+  "nativeLog": "producer-existing-output.stderr.log"
+}

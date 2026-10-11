@@ -1,0 +1,8 @@
+CMake Error at F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/Python/JERequireLocalPath.cmake:42 (message):
+  JE local Python: zlib 1.2.11 header SHA256 mismatch:
+  F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/png-rev1-validation/guards/changed-zlib-root/zlib/include/zlib.h
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/VerifyZlibInput.cmake:12 (JE_python_verify_file)
+  F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/PNG/BuildPngPackage.cmake:13 (include)
+
+

@@ -1,0 +1,101 @@
+{
+  "validationOwner": "Luna after parent source review",
+  "producer": {
+    "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "argvCount": 5,
+    "argv": [
+      "-DJE_TIFF_SOURCE_ARCHIVE:FILEPATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit/libtiff-4862b0d7bcc786304ff4e8c31e8d5ccfb868fb99.tar.gz",
+      "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents",
+      "-DJE_TIFF_OUTPUT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1",
+      "-P",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/BuildTiffPackage.cmake"
+    ],
+    "outputMustBeAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1"
+  },
+  "consumerConfigure": {
+    "argvCount": 12,
+    "argv": [
+      "-S",
+      "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/TIFF/tests",
+      "-B",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1",
+      "-G",
+      "Visual Studio 17 2022",
+      "-A",
+      "x64",
+      "-T",
+      "v143",
+      "-DJE_TIFF_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-rev1/packages/tiff-4.2.0.15-je-rev1-windows.contents",
+      "-DJE_ZLIB_PACKAGE_ROOT:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/zlib-rev1/packages/zlib-1.2.11-je-rev1-windows.contents"
+    ],
+    "outputMustBeAbsent": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1"
+  },
+  "consumerBuild": {
+    "argv": [
+      "--build",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1",
+      "--config",
+      "Release",
+      "--target",
+      "JE_TiffConsumer"
+    ]
+  },
+  "consumerTest": {
+    "executable": "ctest",
+    "argv": [
+      "--test-dir",
+      "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-consumer-rev1",
+      "-C",
+      "Release",
+      "--output-on-failure"
+    ],
+    "expectedTests": 7
+  },
+  "negativeGuards": [
+    {
+      "case": "UNC output",
+      "changeArgument": "JE_TIFF_OUTPUT",
+      "value": "//server/share/tiff-invalid",
+      "expect": "local-path rejection, no output/tools"
+    },
+    {
+      "case": "URI output",
+      "changeArgument": "JE_TIFF_OUTPUT",
+      "value": "https://example.invalid/tiff",
+      "expect": "URI rejection, no output/tools"
+    },
+    {
+      "case": "output outside checkout build",
+      "changeArgument": "JE_TIFF_OUTPUT",
+      "value": "F:/JericoEngine/Dependencies/tiff-invalid-output",
+      "expect": "build-root rejection, no output/tools"
+    },
+    {
+      "case": "existing output",
+      "changeArgument": "JE_TIFF_OUTPUT",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-audit",
+      "expect": "new output required, existing receipts preserved"
+    },
+    {
+      "case": "missing archive",
+      "changeArgument": "JE_TIFF_SOURCE_ARCHIVE",
+      "value": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/tiff-missing-source.tar.gz",
+      "expect": "missing audited archive, no output/tools"
+    },
+    {
+      "case": "changed archive bytes",
+      "instruction": "Luna prepares a separate local archive copy with one changed byte; never modify frozen archive",
+      "expect": "SHA mismatch, no output/tools"
+    },
+    {
+      "case": "missing/changed zlib input",
+      "instruction": "Luna prepares a separate package-root fixture missing or changing one pinned input; frozen zlib untouched",
+      "expect": "input missing/SHA mismatch, no output/tools"
+    },
+    {
+      "case": "wrong EXACT TIFF identity",
+      "instruction": "Use extracted real package with find_package(TIFF 4.3 EXACT REQUIRED MODULE) in a build-only harness",
+      "expect": "version mismatch, no native compilation"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\openexr-audit\\source-freeze-openexr-candidate-v2.json",
+  "freezeSha256": "7745DC711AC2F20AE812108434D5F338B7FCD88E0A3793496B8DB8BC664B8163",
+  "entries": 1182,
+  "matched": 1182,
+  "mismatches": [],
+  "zlibEntries": 4,
+  "zlibMatched": 4,
+  "openexrArchiveSha": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+  "imathArchiveSha": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3"
+}

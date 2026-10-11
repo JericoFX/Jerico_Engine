@@ -1,0 +1,267 @@
+{
+  "archivePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\expat-rev1-validation\\expat-local-v1\\packages\\expat-2.4.2-je-rev1-windows.tar.xz",
+  "archiveBytes": 196028,
+  "archiveSHA256": "c102370257ed28d9f9ea5e61ca10432edc14e8389aa781380beaa9b2a8ae6925",
+  "archiveMemberCount": 38,
+  "archiveMembers": [
+    "Findexpat.cmake",
+    "JERequireLocalPath.cmake",
+    "LICENSES/Expat/COPYING",
+    "LICENSES/Expat/ConfigureChecks.cmake",
+    "LICENSES/Expat/library/ascii.h",
+    "LICENSES/Expat/library/asciitab.h",
+    "LICENSES/Expat/library/expat.h",
+    "LICENSES/Expat/library/expat_external.h",
+    "LICENSES/Expat/library/iasciitab.h",
+    "LICENSES/Expat/library/internal.h",
+    "LICENSES/Expat/library/latin1tab.h",
+    "LICENSES/Expat/library/nametab.h",
+    "LICENSES/Expat/library/siphash.h",
+    "LICENSES/Expat/library/utf8tab.h",
+    "LICENSES/Expat/library/winconfig.h",
+    "LICENSES/Expat/library/xmlparse.c",
+    "LICENSES/Expat/library/xmlrole.c",
+    "LICENSES/Expat/library/xmlrole.h",
+    "LICENSES/Expat/library/xmltok.c",
+    "LICENSES/Expat/library/xmltok.h",
+    "LICENSES/Expat/library/xmltok_impl.c",
+    "LICENSES/Expat/library/xmltok_impl.h",
+    "LICENSES/Expat/library/xmltok_ns.c",
+    "LICENSES/Expat/patched-CMakeLists.txt",
+    "LICENSES/O3DE/LICENSE.txt",
+    "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+    "LICENSES/O3DE/LICENSE_MIT.TXT",
+    "LICENSES/O3DE/expat_2.4.2.patch",
+    "NOTICE.txt",
+    "PackageInfo.json",
+    "README.md",
+    "expat/COPYING",
+    "expat/JERecipe.json",
+    "expat/include/expat.h",
+    "expat/include/expat_config.h",
+    "expat/include/expat_external.h",
+    "expat/lib/libexpatMD.lib",
+    "SHA256SUMS"
+  ],
+  "tarLinkEntryCount": 0,
+  "manifestEntryCount": 37,
+  "verifiedPayload": [
+    {
+      "path": "Findexpat.cmake",
+      "bytes": 2960,
+      "sha256": "11851ad84b86034c98ede5b86607d0084c1a059d82ed28f9786e93f3857e7121"
+    },
+    {
+      "path": "JERequireLocalPath.cmake",
+      "bytes": 1982,
+      "sha256": "4b74565484ac8ea233d6d899e74d3128e1023b92f20da3be2ccb540effa05143"
+    },
+    {
+      "path": "LICENSES/Expat/COPYING",
+      "bytes": 1144,
+      "sha256": "8c6b5b6de8fae20b317f4992729abc0e520bfba4c7606cd1e9eeb87418eebdec"
+    },
+    {
+      "path": "LICENSES/Expat/ConfigureChecks.cmake",
+      "bytes": 2244,
+      "sha256": "f78709ec4c24402838681ee6ad5bc72944d7fb2f7fdc05bb81e8e19211cb9005"
+    },
+    {
+      "path": "LICENSES/Expat/library/ascii.h",
+      "bytes": 3682,
+      "sha256": "42f8b392c70366743eacbc60ce021389ccaa333598dd49eef6ee5c93698ca205"
+    },
+    {
+      "path": "LICENSES/Expat/library/asciitab.h",
+      "bytes": 3520,
+      "sha256": "1cc0ae749019fc0e488cd1cf245f6beaa6d4f7c55a1fc797e5aa40a408bc266b"
+    },
+    {
+      "path": "LICENSES/Expat/library/expat.h",
+      "bytes": 42636,
+      "sha256": "82d9bf2c5e1dfa11f2dd2fa62d270cf83d8606f27727f2a3141c364a1bba1562"
+    },
+    {
+      "path": "LICENSES/Expat/library/expat_external.h",
+      "bytes": 6029,
+      "sha256": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3"
+    },
+    {
+      "path": "LICENSES/Expat/library/iasciitab.h",
+      "bytes": 3590,
+      "sha256": "ad8b01e9f323cc4208bcd22241df383d7e8641fe3c8b3415aa513de82531f89f"
+    },
+    {
+      "path": "LICENSES/Expat/library/internal.h",
+      "bytes": 5808,
+      "sha256": "0f621aec813b3521114a34588ce2bca8ade58301c790fcc3ef246c2ccf1dca4e"
+    },
+    {
+      "path": "LICENSES/Expat/library/latin1tab.h",
+      "bytes": 3573,
+      "sha256": "eab66226da100372e01e42e1cbcd8ac2bbbb5c1b5f95d735289cc85c7a8fc2ba"
+    },
+    {
+      "path": "LICENSES/Expat/library/nametab.h",
+      "bytes": 9044,
+      "sha256": "67dcf415d37a4b692a6a8bb46f990c02d83f2ef3d01a65cd61c8594a084246f2"
+    },
+    {
+      "path": "LICENSES/Expat/library/siphash.h",
+      "bytes": 13072,
+      "sha256": "95172f931786521478afeef8acdd921ef712300600450207b17332cf494bf92e"
+    },
+    {
+      "path": "LICENSES/Expat/library/utf8tab.h",
+      "bytes": 3522,
+      "sha256": "8cd26bd461d334d5e1caedb3af4518d401749f2fc66d56208542b29085159c18"
+    },
+    {
+      "path": "LICENSES/Expat/library/winconfig.h",
+      "bytes": 1931,
+      "sha256": "3c71cea9a6174718542331971a35db317902b2433be9d8dd1cb24239b635c0cc"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmlparse.c",
+      "bytes": 266993,
+      "sha256": "1caa83883eb79cb6afe71b9f3460f4872566f974bfc040ade0b8fb7f994efcca"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmlrole.c",
+      "bytes": 35489,
+      "sha256": "b456826602602eb3377d36c547b1e723931fd945f74874328596148189822035"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmlrole.h",
+      "bytes": 4669,
+      "sha256": "2b5d674be6ef20c7e3f69295176d75e68c5616e4dfce0a186fdd5e2ed8315f7a"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmltok.c",
+      "bytes": 54862,
+      "sha256": "a6e6c96cf228c970e050534c6de6540c55efae672dd7d70c7ff0e7b4290c91ae"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmltok.h",
+      "bytes": 12838,
+      "sha256": "4299a03828b98bfe47ec6809f6e279252954a9a911dc7e0f19551bd74e3af971"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmltok_impl.c",
+      "bytes": 53275,
+      "sha256": "fdffe2b80eddeebed392d5642021dc73840b1f0c2c13a676c385d41066e374e9"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmltok_impl.h",
+      "bytes": 3431,
+      "sha256": "97ee5d2a120aa096fdc7efd701384ba956de3a38a05a16fc8a66f8537e10d263"
+    },
+    {
+      "path": "LICENSES/Expat/library/xmltok_ns.c",
+      "bytes": 4635,
+      "sha256": "e47d7f87421237852f16e0a9620665db984da829d6ec38cb92c9d60b16a8113e"
+    },
+    {
+      "path": "LICENSES/Expat/patched-CMakeLists.txt",
+      "bytes": 30665,
+      "sha256": "d2f6e71b0209468048cec60c9981be7367b911d99517dd0b3b76da91dc489203"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE.txt",
+      "bytes": 1502,
+      "sha256": "b6b5890af83000f2e87eaae73afc69415ac59ef1e470bd542b537245951e744d"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "LICENSES/O3DE/expat_2.4.2.patch",
+      "bytes": 475,
+      "sha256": "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 1802,
+      "sha256": "d9efa5b171b11d722b845194359289c409458f394180862a7854424e7f95bf0c"
+    },
+    {
+      "path": "PackageInfo.json",
+      "bytes": 409,
+      "sha256": "11e08dc94d8fe12cb76b26f69ac7a6b5ff7b5f9e84e60ec16971767a5586f51e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3270,
+      "sha256": "19e5543d1b71dc919b8e38e6175df4d066d804ad26eaded836722d27434194ad"
+    },
+    {
+      "path": "expat/COPYING",
+      "bytes": 1144,
+      "sha256": "8c6b5b6de8fae20b317f4992729abc0e520bfba4c7606cd1e9eeb87418eebdec"
+    },
+    {
+      "path": "expat/JERecipe.json",
+      "bytes": 692,
+      "sha256": "2d903a9dcc32146d81c1b1dedaf9dbad4fc13cd3894ec02dc5f485e6e105ffa0"
+    },
+    {
+      "path": "expat/include/expat.h",
+      "bytes": 42636,
+      "sha256": "82d9bf2c5e1dfa11f2dd2fa62d270cf83d8606f27727f2a3141c364a1bba1562"
+    },
+    {
+      "path": "expat/include/expat_config.h",
+      "bytes": 3340,
+      "sha256": "50f8ae4ca0b4167e30227c6ad19f668304b16e39ac68d87e2dd9223db2c5155d"
+    },
+    {
+      "path": "expat/include/expat_external.h",
+      "bytes": 6029,
+      "sha256": "7ca9ed28dd5e08eac425931894fabd4c876db8f4be26f9b9a33c2e4f70a0d6c3"
+    },
+    {
+      "path": "expat/lib/libexpatMD.lib",
+      "bytes": 458740,
+      "sha256": "d0e967d6febc9083ed16abd145039b48ce2ce1306414fe9c76544ade7960f055"
+    }
+  ],
+  "packageInfo": {
+    "license": "MIT AND CC0-1.0",
+    "name": "expat-2.4.2-je-rev1-windows",
+    "schemaVersion": 1,
+    "source": {
+      "commit": "e26a263aa9182d1e4552cd615857f0f61df3ba42",
+      "sha256": "a6130cab18d9df124dbfe4045f57f8c2180811c35d37bc357a42cff61afa4057",
+      "url": "https://codeload.github.com/libexpat/libexpat/tar.gz/e26a263aa9182d1e4552cd615857f0f61df3ba42"
+    },
+    "version": "2.4.2"
+  },
+  "recipe": {
+    "recipeCommit": "70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+    "originalPackageVersion": "2.4.2-rev2",
+    "sourceTag": "R_2_4_2",
+    "patchSHA256": "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483",
+    "patchedCMakeSHA256": "d2f6e71b0209468048cec60c9981be7367b911d99517dd0b3b76da91dc489203",
+    "originalGenerator": "Visual Studio 16 2019",
+    "toolset": "v143",
+    "configuration": "Release",
+    "runtimeLibrary": "MultiThreadedDLL",
+    "static": true,
+    "charType": "char",
+    "dtd": true,
+    "namespace": true,
+    "contextBytes": 1024,
+    "largeSize": false,
+    "tools": false,
+    "omittedArchiveLink": "README.md -> expat/README.md",
+    "historicalBinaryCompatibility": "not asserted"
+  },
+  "noReparsePoints": true
+}

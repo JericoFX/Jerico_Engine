@@ -1,0 +1,51 @@
+{
+  "status": "READY FOR PARENT REVIEW/DISPATCH; NATIVE EXECUTION PENDING",
+  "inputCount": 9,
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\derivation-proof.json",
+      "bytes": 4505,
+      "sha256": "15cf327a94f1747236e65384cee4d87097bdfb43d34ba3a7d2d77950e106c402"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\DeriveRootJsonCpp.ps1",
+      "bytes": 9893,
+      "sha256": "af3e7eebdd3aba9b0f43a5de226beb2b738c05e0a684b40c1e5ece16afaefd91"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\driver-diff.json",
+      "bytes": 2089,
+      "sha256": "60bb852e4a12ae92717fb4456bb42310b5bb343396cca63655b47f3425788302"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\merge-origin-manifest.json",
+      "bytes": 421520,
+      "sha256": "de2e8e988d15986dae0f629fa4c4b2241109b4c5b709945622a616e5b4633216"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\root-jsoncpp-assignment.json",
+      "bytes": 10268,
+      "sha256": "544a7a75222108044ccbe42737569bc7173eafe0444b153c1d02d63d099a51c2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\run-root-configure-jsoncpp.ps1",
+      "bytes": 27051,
+      "sha256": "448adbc86f5dca42cb006e7c5a0da7adee0ba1623e50e8ed89093bd6f88cf95a"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\source-freeze-root-jsoncpp.json",
+      "bytes": 495279,
+      "sha256": "2c8496737e9d90609e47761efdc8c7a6af4d30bee7bbc7ba28cdf857120526b8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\static-verification.json",
+      "bytes": 3779,
+      "sha256": "8c9dbcab381b0ca3c397ca6748f0f703b2405519497318617803f4b19e095e35"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\root-jsoncpp-final\\VerifyRootJsonCpp.ps1",
+      "bytes": 6494,
+      "sha256": "88d27bc41ce660a8b9760ebf6f424d71118065de673063fe5bf3ce85e2011915"
+    }
+  ]
+}

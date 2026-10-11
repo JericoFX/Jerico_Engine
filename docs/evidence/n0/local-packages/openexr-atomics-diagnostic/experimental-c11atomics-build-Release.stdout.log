@@ -1,0 +1,47 @@
+Change Dir: 'F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/explicit-c-standard-11-experimental'
+
+Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" JEAtomicProbe.vcxproj /p:Configuration=Release /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+Compilación iniciada a las 10/10/2026 23:46:57.
+
+Proyecto "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\JEAtomicProbe.vcxproj" en nodo 1 (destinos predeterminados).
+El proyecto "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\JEAtomicProbe.vcxproj" (1) está compilando "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\ZERO_CHECK.vcxproj" (2) en el nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "x64\Release\ZERO_CHECK\".
+  La salida estructurada está habilitada. El formato del diagnóstico del compilador reflejará la jerarquía de errores. Consulte https://aka.ms/cpp/structured-output para obtener más detalles.
+  Creando directorio "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\".
+InitializeBuildStatus:
+  Se creará "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+  Aplicando tarea Touch a "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+CustomBuild:
+  1>Checking Build System
+FinalizeBuildStatus:
+  Se eliminará el archivo "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Compilación del proyecto terminada "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\ZERO_CHECK.vcxproj" (destinos predeterminados).
+PrepareForBuild:
+  La salida estructurada está habilitada. El formato del diagnóstico del compilador reflejará la jerarquía de errores. Consulte https://aka.ms/cpp/structured-output para obtener más detalles.
+  Creando directorio "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\Release\".
+  Creando directorio "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\".
+InitializeBuildStatus:
+  Se creará "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\unsuccessfulbuild" porque se especificó "AlwaysCreate".
+  Aplicando tarea Touch a "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\unsuccessfulbuild".
+CustomBuild:
+  Building Custom Rule F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/project/CMakeLists.txt
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /nologo /W1 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /MD /std:c11 /Fo"JEAtomicProbe.dir\Release\\" /Fd"JEAtomicProbe.dir\Release\vc143.pdb" /external:W1 /TC /errorReport:queue  /experimental:c11atomics "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\project\atomic_probe.c"
+  atomic_probe.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\Release\JEAtomicProbe.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/explicit-c-standard-11-experimental/Release/JEAtomicProbe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-atomics-diagnostic/explicit-c-standard-11-experimental/Release/JEAtomicProbe.lib" /MACHINE:X64  /machine:x64 JEAtomicProbe.dir\Release\atomic_probe.obj
+  JEAtomicProbe.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\Release\JEAtomicProbe.exe
+FinalizeBuildStatus:
+  Se eliminará el archivo "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "JEAtomicProbe.dir\Release\JEAtomicProbe.tlog\JEAtomicProbe.lastbuildstate".
+Compilación del proyecto terminada "F:\JericoEngine\JericoEngine\build\n0-validation\local-packages\openexr-atomics-diagnostic\explicit-c-standard-11-experimental\JEAtomicProbe.vcxproj" (destinos predeterminados).
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:02.38
+

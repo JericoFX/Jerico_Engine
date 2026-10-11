@@ -1,0 +1,4046 @@
+{
+  "archive": "F:/JericoEngine/Dependencies/archives/o3de-3p-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18.tar.gz",
+  "archiveSHA256": "f69edb8bdf9d3dcd83cf296db31130f4d16c82efb9b4cdebd76c8035ccaa6042",
+  "entries": 671,
+  "files": 566,
+  "fileBytes": 5714714.0,
+  "links": 0,
+  "linksMaterialized": 0,
+  "pathCaseCollisions": 0,
+  "destination": "F:/JericoEngine/Dependencies/d3dx12-headers-o3de-70f0b7b5",
+  "extractionHashesMatched": true,
+  "license": "Copyright (c) Microsoft Corporation.\n\nMIT License\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+  "gitBlobMatches": 566,
+  "primaryTreeFiles": 566,
+  "snapshotSubtree": "package-system/d3dx12-windows/",
+  "subtreeLinks": 0,
+  "subtreeFiles": 4,
+  "members": [
+    {
+      "path": "pax_global_header",
+      "type": "GlobalExtendedAttributes",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 65,
+      "sha256": "52445409561e92046dd89e61c21368b7e36292db1a133b492dd99f698a92474f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.github",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.github/workflows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.github/workflows/build-container.yaml",
+      "type": "RegularFile",
+      "bytes": 4448,
+      "sha256": "648b7c5dc38bae6a5dddaa046ad6cea8fd9d44061fbcb1b4fa75c551d410b9cf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.github/workflows/build-package.yaml",
+      "type": "RegularFile",
+      "bytes": 14322,
+      "sha256": "1a2dec4a160fbc9cf299379e4a6904c323f7b670f4df085012287e87bcc3c142"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.github/workflows/promote-packages.yaml",
+      "type": "RegularFile",
+      "bytes": 7947,
+      "sha256": "488664033a7bc888b89acc0f14925bd0cfbbca5f5739e3b1985d31fd9ab6b916"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/.gitignore",
+      "type": "RegularFile",
+      "bytes": 142,
+      "sha256": "6dbab2b09dcf1cb1bd8fdac2b5f32044febdd38287056f867c1240e7a9b4a532"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE.txt",
+      "type": "RegularFile",
+      "bytes": 1397,
+      "sha256": "7baf161ee65f42bf606072b6d8e71582c3d2c7b62f6b56e9d7ffa01ee82784db"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE_APACHE2.TXT",
+      "type": "RegularFile",
+      "bytes": 11557,
+      "sha256": "59dd59cfbd4a7f5af07ad841a11a1865b609e4c1edc68b415a241f3dc0de1244"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/LICENSE_MIT.TXT",
+      "type": "RegularFile",
+      "bytes": 1074,
+      "sha256": "c6ef1cac3abc6c48b4eb9d847f1b886f77cad441f7360f6c5554a32f380d796f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/NOTICES.txt",
+      "type": "RegularFile",
+      "bytes": 504980,
+      "sha256": "d876252474bf51a6f31ef4ecd585adf82fc72f054853663152c57197c44e8ff4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/README.md",
+      "type": "RegularFile",
+      "bytes": 17244,
+      "sha256": "f436f7d0716d39fba9859139f0afa77bfea8f8456f0942db9a367c06ebddd371"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/SPDX-Licenses.csv",
+      "type": "RegularFile",
+      "bytes": 5014,
+      "sha256": "d1ab5f21495938461b24f4c196ddc86c67364e641cb2413633e0b87b7da87b6a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/SPDX-Licenses.json",
+      "type": "RegularFile",
+      "bytes": 10220,
+      "sha256": "59b2eb8b7002d25907ba3e554eb293718b3a5a5d8fdcd0fa68ec02253a9f6f11"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/builders",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/builders/__init__.py",
+      "type": "RegularFile",
+      "bytes": 214,
+      "sha256": "1ad77f3d3dd0569a37cfb0d7ae255112e873ef19a06d6dd8c0ea113189d165cc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/builders/monkeypatch_tempdir_cleanup.py",
+      "type": "RegularFile",
+      "bytes": 1047,
+      "sha256": "76661dcfd11e8aa7d8e2d078e97728e73733ea25b7dc26a87f27274d0b68d19e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/builders/vcpkgbuilder.py",
+      "type": "RegularFile",
+      "bytes": 9118,
+      "sha256": "022dfdaa2682431eba3762a1c6d8223b2ec0dc1d1f248211d2c59afd62fbbe78"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/FindPackageName.cmake.in",
+      "type": "RegularFile",
+      "bytes": 416,
+      "sha256": "8fab607ba5ac5f8266f91f5555386f596a403bd8628c28887b68faa53c6f9eb4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/PackageInfo.json.in",
+      "type": "RegularFile",
+      "bytes": 202,
+      "sha256": "78386a364e4b8974f5176e64ad24434a50c30cd69da61ff51c77e1588f811a15"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/PackageName-config.cmake.in",
+      "type": "RegularFile",
+      "bytes": 1021,
+      "sha256": "2fd430f3ef6f606cc6904920a19228666d4d6e2092a8bdefef2e84969e6e8ac6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/Android",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/Android/Toolchain_android.cmake",
+      "type": "RegularFile",
+      "bytes": 4943,
+      "sha256": "c174b0614b22bfa083cf52e481531558560c598f47db844e82236356db0127c5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/Mac",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/Mac/Toolchain_mac.cmake",
+      "type": "RegularFile",
+      "bytes": 799,
+      "sha256": "b89e643be2c9a93a2040c95ebd284a000b4137f5960ad81ea9ff5804ea285dff"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/iOS",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/iOS/SDK_ios.cmake",
+      "type": "RegularFile",
+      "bytes": 656,
+      "sha256": "38314b83368b4af587cd717e531716e2bf02be803611fb84dc08974fd1801385"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/Platform/iOS/Toolchain_ios.cmake",
+      "type": "RegularFile",
+      "bytes": 782,
+      "sha256": "652798833c52fe5922651fcc64d58920f0bdc4403b16f68b5aee2aeeb18cb744"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/o3de_package_utilities.cmake",
+      "type": "RegularFile",
+      "bytes": 7812,
+      "sha256": "3ad96820838b920b6491ff7826e339980d4e6c2906c04c4ade6c5c46d7c383e0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/cmake/package.cmake",
+      "type": "RegularFile",
+      "bytes": 2373,
+      "sha256": "2719ba828b0eaf12e67211af5a398e60129c3ff4d9beafd41f6ad923c14691ce"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/extras",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/extras/archive_downloader.py",
+      "type": "RegularFile",
+      "bytes": 6827,
+      "sha256": "74b9d18d48f7f8e8b2a8286f52157949829f42f8d02a75706eded73f4eaad774"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/extras/package_downloader.py",
+      "type": "RegularFile",
+      "bytes": 10925,
+      "sha256": "346640b6a16f2da64798b467730696b05c7febd6f05dcbfbe2ed2930853ebc39"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/extras/pull_and_build_from_git.py",
+      "type": "RegularFile",
+      "bytes": 78403,
+      "sha256": "9acaf60a361b30a6ece7c451fde9e19defb295bd612a01cdca135ae5384864bd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/__init__.py",
+      "type": "RegularFile",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_ValidatePackages.py",
+      "type": "RegularFile",
+      "bytes": 3977,
+      "sha256": "7e3977022208f8867245799ca337e6731d0e10e31b9ef4667eed88d9720a031b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/custom_license",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/custom_license/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 162,
+      "sha256": "adf0c24b2eef59f8c9ce95c36760705b17d9c5f13ff72e40936f31544863f297"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/custom_license/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 548,
+      "sha256": "11acaaeea119ab933b2a3960432901896d4aa81343b108789a04af7d0e738fd2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/custom_license/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "5f2b00e5ab725ba1f493724dce362020c91ad01665737b3a4ebd0de9ccf0c26a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/custom_license/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 161,
+      "sha256": "03b43e3018abcc93fe5c5d236f1b0d245426646eb4da5e91342efba2561f4073"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/extra_content_file",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/extra_content_file/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 155,
+      "sha256": "835612e3a7ff1501a4c5393d247c0949b7d396a71f54bd7efd15174e8b70591d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/extra_content_file/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 536,
+      "sha256": "6eb7a3e4880cc8fd3984efbaa6563ee7322a2a48183906234bd794b2b90e6dd8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/extra_content_file/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "c41760ba1f56f823c727c018f94755f7c02fca3c7e6c4ab14103c571015220af"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/extra_content_file/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 242,
+      "sha256": "43b8667d016117a8eac98b26a9b45c2f19bce97fe61ea2f80cb040602863540a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/invalid_spdx_license",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/invalid_spdx_license/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 158,
+      "sha256": "47277d9c68810e31a4ee9b2a80f561304f1fd065969dee686e45e11f3fd13b52"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/invalid_spdx_license/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 564,
+      "sha256": "107f9f8e0a5d65d4ed90e2051bbd690925b63d3b93ec08544a4b6d3f98371cbf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/invalid_spdx_license/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "ded8ca7e84206c6aaead7862a412c9bc2fd4c00578a6b3ee2e0fbd4a72b98bc6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/invalid_spdx_license/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 161,
+      "sha256": "79be3b3595c056cce9d437e82cd84f49d62f097847616d606aac5c9dca4ef324"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/minimal_good",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/minimal_good/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 147,
+      "sha256": "e0ab20ccc9d3e39235c2ec9119db0d2d8319ae63159ae14520e8cfa66e2d8e7b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/minimal_good/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 452,
+      "sha256": "e090da2fb52e3a291238aba8fd45b6b63e647fe1c0f2069a3e8af774171f8b4b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/minimal_good/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "398d4636d61a779eb3c362e0b67812d67b4ff24f5422e5c79c6984bd5b9f49e5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/minimal_good/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 161,
+      "sha256": "3d180ea47f01652cd829b0c5b3c7d531fde20452e18d7a0bfe604e953fd049f2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_file",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_file/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 157,
+      "sha256": "e440640730ff4dd64cb410431e91f65154e26688eaa1b5fe9bbd569d48be8817"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_file/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 620,
+      "sha256": "93e6ec819bb09e338151fcfbc99025fbda9aa396651a790306b0c29a9d401ece"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_file/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "0be97c717f8efcb7dea76f499892c8e73f4a3d216feffa6c9e62fe3bb2ec3c0f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_file/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 400,
+      "sha256": "40b3609699b928281d6562d9886ed7bbc2e9bface802d480eca141e0f5123ec6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_hash",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_hash/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 157,
+      "sha256": "165f0be37e661c625c34add617943e862070a1e36f9eb6f7d572e91da6452b38"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_hash/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 320,
+      "sha256": "5209e7a61a8f4c19f9b805e44709b7266ff6dd1c71d879069169b0b86461a919"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_hash/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "d0e0621383c358f871e1ffee673ae4df90abe5dc49c4991062afe5a37b1953e5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_content_hash/package.tar.xz.contents.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "d0e0621383c358f871e1ffee673ae4df90abe5dc49c4991062afe5a37b1953e5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_license_file",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_license_file/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "ed8942db35d80987613bcaa6b78116dcf1881aae1ba8d5fd71228222f2d53c05"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_license_file/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 380,
+      "sha256": "91636de486d918094d59b7c156dbc50078e054ec0a878e7ddfe375d4bae50889"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_license_file/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "d380ad2fdefcf650d889e965d01d1735b470a172ace7f894844dabb5c4fa868c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/missing_license_file/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 83,
+      "sha256": "16c6af72148bb8fd8b93f8f7bd8d22836882388f63f7e3c421bdbc30a54db014"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/normal_package",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/normal_package/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 146,
+      "sha256": "6e3bd672c8b3ef0be5bf5871e109ba2261ea062d547d71b52264af45a6617062"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/normal_package/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 584,
+      "sha256": "f6cee148cb6613b2e11af3572782e5d1b58ea3639dfa4f772083c08887231ca0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/normal_package/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "d3dc1b64f1d87ab9149e4c3261780bc38f6af847903acf27c47234272a2bf6df"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/normal_package/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 331,
+      "sha256": "352be31d4932842de6f0abc80aab85679e756294b1078b4bf6b5295639c356ea"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/package_symlink",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/package_symlink/package.PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 147,
+      "sha256": "31ab73b10df03ba496ef692fcc9aa3c166bc02ad2d6c7686ff967790c4c60484"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/package_symlink/package.tar.xz",
+      "type": "RegularFile",
+      "bytes": 604,
+      "sha256": "26eab3f27697238bb4f3cd6a83edcdd46a0ca35894c5b545fd18635cb3c08f1a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/package_symlink/package.tar.xz.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 81,
+      "sha256": "0fff9982ef9d0b90e4729084508ca4195d5ef41160833956fcf6560652370b0a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/Tests/test_packages/package_symlink/package.tar.xz.content.SHA256SUMS",
+      "type": "RegularFile",
+      "bytes": 421,
+      "sha256": "042d077455dab38f4b1f01acd5524164b278c0d56e224f79bb0a5a731775d74b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/build_all_packages.py",
+      "type": "RegularFile",
+      "bytes": 6521,
+      "sha256": "f5799b84a3e85d8dd8e4a987e933693ee986b11c15ec87c6b8c5a03caef0d4fc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/build_package.py",
+      "type": "RegularFile",
+      "bytes": 4004,
+      "sha256": "4b4d9164fd5424c907178b8faaa78dd958a650e49ba1a4094699ced886c16fe3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/common.py",
+      "type": "RegularFile",
+      "bytes": 20815,
+      "sha256": "eabd1d1a696a7a9b25de810e7fce87681656bbcf88fcd32ad2d6098e7df4032b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/compare_buckets.py",
+      "type": "RegularFile",
+      "bytes": 6013,
+      "sha256": "0004736b2022bd3e96d2abded8dcfbd261c9e97bdee968b15b9d317cc3a7d568"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/find_package_on_server.py",
+      "type": "RegularFile",
+      "bytes": 5216,
+      "sha256": "ec8a63f56cc72bcdb98f205c9a005f3b54e2d6ffa6dc18b4c23e659a0b0eafc3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/list_packages.py",
+      "type": "RegularFile",
+      "bytes": 670,
+      "sha256": "cd4115e22788770afe58de1f7d6077c20ac9c310088fc41d064f26cf56163196"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/pack_package.py",
+      "type": "RegularFile",
+      "bytes": 7036,
+      "sha256": "b96c6680e11ae57d9254015ca6a88df62b83c6a5ff98ef9db1cb36709c87c99a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/package.py",
+      "type": "RegularFile",
+      "bytes": 6940,
+      "sha256": "902a85463e85b53b61df0b2447d0e2f1be5496014aa8b0afbfdfee0276e09e72"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/packaging/upload_all_packages.py",
+      "type": "RegularFile",
+      "bytes": 3621,
+      "sha256": "cc3cb1b13cf664d15a5381fdf0f69fc6457ebfa99790e48874c7f4fd26703b9a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg/triplets",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg/triplets/arm64-android-static.cmake",
+      "type": "RegularFile",
+      "bytes": 294,
+      "sha256": "96bae8fb53f9e4414db9ae0837b0f935bd69eb36d9eb4b672481b6e87b3c2e76"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg/triplets/arm64-android.cmake",
+      "type": "RegularFile",
+      "bytes": 295,
+      "sha256": "6900bf2a9a3455b670573a89b46874b8e1376b4f0a1b2e25f8c1ac941423a47c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg/triplets/arm64-ios-dynamic.cmake",
+      "type": "RegularFile",
+      "bytes": 140,
+      "sha256": "086a8d3fdb977be3e2e9057b1c18fe031f607330f46e12b57d92f03ad67d09e8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg/triplets/x64-linux-shared.cmake",
+      "type": "RegularFile",
+      "bytes": 138,
+      "sha256": "aca4dbcbd14a30b7d75de57d8994742e459ab725608f14bdafa7387c17cf9afd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/Scripts/vcpkg/triplets/x64-windows-static.cmake",
+      "type": "RegularFile",
+      "bytes": 176,
+      "sha256": "5c1a1b755a724571e923976db685ca68227f5f1ffba099173182f5f2f8a2c260"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/.gitignore",
+      "type": "RegularFile",
+      "bytes": 345,
+      "sha256": "9d70bab2ecb0186e95624865f335bb7431a1754f8b765fce7541a97c2bc1b268"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 1748,
+      "sha256": "395299a1a6f7fff995ae897f1d1e53fa9dc294d0253f3d11190e3888f5f16bc7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/FindAWSGameLiftServerSDK.cmake.Linux",
+      "type": "RegularFile",
+      "bytes": 2368,
+      "sha256": "95b9e04b209f1df63c09f711ce4d94bf05f5a382a921aa96605a1d322887f7ff"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/FindAWSGameLiftServerSDK.cmake.Windows",
+      "type": "RegularFile",
+      "bytes": 2423,
+      "sha256": "dc653d561c127b92c39ef831d251515cd58018aeeae55b6ba232e2870e8936fe"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/README.md",
+      "type": "RegularFile",
+      "bytes": 1542,
+      "sha256": "234ad79e3bddebc029b076cd6879ed4364963a8c02ecd109b4293774c2f5a720"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 6835,
+      "sha256": "0430f510f8f47128a3c47ce0cacd1321e36894d304dd7a516963e9bc37464224"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1923,
+      "sha256": "911951d69efaf0d004f53c706a024d77c0b6e871ce9e6b29325e94adc80e517f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 14638,
+      "sha256": "674b7b676e428db82dd4f0b1750ba7ccee91a18fd7e32903127c136a590a818a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/docker_build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 3251,
+      "sha256": "10af8a3bd57f0120a9940cd77ebb3cf29d3b020437ad0cac8efaa5d522cd3210"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/install-linux.sh",
+      "type": "RegularFile",
+      "bytes": 950,
+      "sha256": "b0252d98c7367536266b69e589c0456d689415deffdd371314292d6630e5b9ef"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/test-linux.sh",
+      "type": "RegularFile",
+      "bytes": 1264,
+      "sha256": "fda8537b09a502e21e575c0292552f8171300223aafcc0af16f62e85977ac66d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 1577,
+      "sha256": "e43791b9075650d0856e209038824b4eace9f833a70b2529957a9f6386e65e26"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSGameLiftServerSDK/test/test_AWSGameLiftServer.cpp",
+      "type": "RegularFile",
+      "bytes": 752,
+      "sha256": "1342735ac79e74c729211837817d3b4e489f90790db5c34664b3c972b3093827"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/AWSNativeSDK-1.11.288-android.patch",
+      "type": "RegularFile",
+      "bytes": 745,
+      "sha256": "7b51b1f4649ac28d208c93ba2d21fd2194462357221ce7550f09f9fea4cb59ef"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 2142,
+      "sha256": "68dddc21117a243832420ba66179bdbdc24c82ab189d83a0294d210c2c858d49"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/FindAWSNativeSDK.cmake.Android",
+      "type": "RegularFile",
+      "bytes": 12571,
+      "sha256": "c5f9ee484dc388a434e2c7c223df4f6fd882582993133dfcec924d17a277025a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/FindAWSNativeSDK.cmake.Linux",
+      "type": "RegularFile",
+      "bytes": 9869,
+      "sha256": "202c30e54ca43de5ccbc71cbbcf795ba0e639275cb00a81efa4bbb96b47b30a5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/FindAWSNativeSDK.cmake.Mac",
+      "type": "RegularFile",
+      "bytes": 9763,
+      "sha256": "e9d1225d9c4a0df38d1971a4e7c947187d46a6d29cf44fc8aed4989e1f752c09"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/FindAWSNativeSDK.cmake.Windows",
+      "type": "RegularFile",
+      "bytes": 10819,
+      "sha256": "d910712d93d6284374825a1625958d173471ec7d090889abac30ecdc048c3f13"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/FindAWSNativeSDK.cmake.iOS",
+      "type": "RegularFile",
+      "bytes": 8866,
+      "sha256": "c1720d392823d33c606cc37a16a6779243ac15e8ccd68a27f3bebf096e885e07"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/README.md",
+      "type": "RegularFile",
+      "bytes": 6033,
+      "sha256": "fafb7b688f181479ac9820874d393f217e439ba48ea138166ee290e4bcc96471"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 7186,
+      "sha256": "5bfe242ee8c24ea7f2089cdd6eb27e03678f8ecb8e163a90831b76f954fb6582"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/build_AWSNativeSDK_android.cmd",
+      "type": "RegularFile",
+      "bytes": 2755,
+      "sha256": "094d21e650aff6d29351ed0007ee386e4e43e7204b3a166d4d7ff40d36ac7b09"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/build_AWSNativeSDK_ios.sh",
+      "type": "RegularFile",
+      "bytes": 2905,
+      "sha256": "019d74df61c8a760a8069e76095d100fec571739009a3314197c908dce378cff"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/build_AWSNativeSDK_mac.sh",
+      "type": "RegularFile",
+      "bytes": 2369,
+      "sha256": "845f4d4460d11c626f9d4a009caa24bba67b7fb17f984e1fbb066d52c838e5f4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/build_AWSNativeSDK_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 2266,
+      "sha256": "8fc5aed3e66838c56777a2e5f5af2d23f5fa9b691f903cd7bd4e08b127d148e8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/build_config.json",
+      "type": "RegularFile",
+      "bytes": 3539,
+      "sha256": "9fd87481f271633899a4f61ce5530cd92e3f71da32d7ae7ae901cc247019450e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/docker_build_aws_sdk.sh",
+      "type": "RegularFile",
+      "bytes": 5488,
+      "sha256": "39bc390a5c3a578843b818e7094da7852820f123838d4a2d08c8881bb7d5bfc0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/install-linux.sh",
+      "type": "RegularFile",
+      "bytes": 1142,
+      "sha256": "e5149c88ef810d10d3170ab8af4310beaacdfd05d3865f71787fa71c1dca1b41"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/install_AWSNativeSDK_android.cmd",
+      "type": "RegularFile",
+      "bytes": 3175,
+      "sha256": "9b3a8b66eda090acbc537f29a634949590cb5f8c16dfab7fe7e1ae08e02f06f8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/install_AWSNativeSDK_ios.sh",
+      "type": "RegularFile",
+      "bytes": 1855,
+      "sha256": "b85b131c1d0b74945ae72c69ba3686f4870da89268d078a56d6afa6ae11b400b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/install_AWSNativeSDK_mac.sh",
+      "type": "RegularFile",
+      "bytes": 2424,
+      "sha256": "e0538b8c28fb124de8b5993e4194266296db46fb268ece7f9bc3570c7827f6c9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AWSNativeSDK/install_AWSNativeSDK_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 3412,
+      "sha256": "762c8b50422484fffa8b110489f3639e8e1079584bace3754aa0c1f8fbbe979a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AwsIotDeviceSdkCpp",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AwsIotDeviceSdkCpp/FindAwsIotDeviceSdkCpp.cmake.template",
+      "type": "RegularFile",
+      "bytes": 2543,
+      "sha256": "9bfbedf4ab46627bd114de27e32a75ee1ff182103ea951b1c091d62d40c53b68"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AwsIotDeviceSdkCpp/aws-iot-device-sdk-cpp-v2-v1.15.2.patch",
+      "type": "RegularFile",
+      "bytes": 2202,
+      "sha256": "5c8decba00b6148e5cd5b2ce636bb4a387133ea1c4783f6cdd0e3f1ce7c2eddc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AwsIotDeviceSdkCpp/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4320,
+      "sha256": "54c6f0d76322fb40a15c2b671af3041bd34e810a1ece30ddf1cb7d47cbcb642c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/AwsIotDeviceSdkCpp/readme.txt",
+      "type": "RegularFile",
+      "bytes": 1692,
+      "sha256": "3e2ae0c9fb21fd4b55ce824867785735419fb1a7f9c82ed31b2f89416b5e0834"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Blast",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Blast/FindBlast.cmake",
+      "type": "RegularFile",
+      "bytes": 4588,
+      "sha256": "7c8542c9a54344a6bddd6c25ddacdea6cf943d001bd6539267267aa67a1f484e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Blast/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 7227,
+      "sha256": "3f31a87875ab0bf612f3cf57b921559c6331680c85f6d7937b3c45db26c11010"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Crashpad",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Crashpad/FindCrashpad_linux.cmake.template",
+      "type": "RegularFile",
+      "bytes": 3784,
+      "sha256": "2dfd50a92cb2b53716e615a3980ba426ed76cfca9bb106fad5233ff787867944"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Crashpad/FindCrashpad_windows.cmake.template",
+      "type": "RegularFile",
+      "bytes": 4140,
+      "sha256": "2de40be629ab094220591362e18fb67f0e1c6a9df7a70828cf714bab94ded9cf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Crashpad/add_o3de_handler_extensions.patch",
+      "type": "RegularFile",
+      "bytes": 12238,
+      "sha256": "77c2abc7c8e300447780e8eda05638d6737b9221acc928e1f1d40b0cda7a3d8f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Crashpad/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 6014,
+      "sha256": "2d2c96230521ee88ede3299c390f8db1efff2847ec0775bd0e3061cb28a0d2e5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/DirectXShaderCompiler",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/DirectXShaderCompiler/FindDirectXShaderCompilerDxc.cmake.Linux",
+      "type": "RegularFile",
+      "bytes": 1200,
+      "sha256": "ca0d93977e0c0e2c605b2a8933614c88a26068895959fb284750e2f52e2bca14"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/DirectXShaderCompiler/FindDirectXShaderCompilerDxc.cmake.Mac",
+      "type": "RegularFile",
+      "bytes": 1203,
+      "sha256": "ab8144e91f69652d4f04c0f8a3aa9a42ac359cae7501bc3056a9949949a3d138"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/DirectXShaderCompiler/FindDirectXShaderCompilerDxc.cmake.Windows",
+      "type": "RegularFile",
+      "bytes": 902,
+      "sha256": "f6471c42e3f6e860f0f5b198d1c7bf7571eee071600054e9f42f602d37e06897"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/DirectXShaderCompiler/build_config.json",
+      "type": "RegularFile",
+      "bytes": 6544,
+      "sha256": "4d8182221e04dae2a55e4f91b1eeb299d4138d11dfd3a948015db7f42826fa67"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/Dockerfile.linux",
+      "type": "RegularFile",
+      "bytes": 812,
+      "sha256": "66ba1ed52001ca152e0866597c27f20138264c7314c0c8324d5184ab4b0dccdc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/FindISPCTexComp.cmake",
+      "type": "RegularFile",
+      "bytes": 1366,
+      "sha256": "98b662df8a029a007ee1ffae0a8ca338009ee60401d2e529b437607342a9af59"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/ISPCTexComp_36b80aa-mac-arm64.patch",
+      "type": "RegularFile",
+      "bytes": 2586,
+      "sha256": "fbc3924a735ce9d61ef9a237f1bdc895c4d8cd06dae3407a1092ed2e442111ba"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/ISPCTexComp_36b80aa.patch",
+      "type": "RegularFile",
+      "bytes": 883,
+      "sha256": "57668155007faf2d6088a64952f09db5cd60c130580eecd294770b76ac52db0a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/build_config.json",
+      "type": "RegularFile",
+      "bytes": 919,
+      "sha256": "10559f010e4a536ec524a5c65bb9b705fa665ba3047082b20b15170dfb7c4125"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 4179,
+      "sha256": "ef92a80a2d6088305526caca25bc9f158a9d2f3f6f5868b8e409f1a3514c2825"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 10461,
+      "sha256": "9415ceca30d7f0e1da78249c74e0d40462651b4e41fa28406337c0acf837dd6f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/build_windows.bat",
+      "type": "RegularFile",
+      "bytes": 1049,
+      "sha256": "a8da47bf2140424d75ceaacd8aea09561d83dc4b9967af0c96916247fb58c0a9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/docker_build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 472,
+      "sha256": "fb0cf697425d9d4787fbffb05dbf53eea2d90c2ed3e0e5d240db8a88b7c925c0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/install_linux.sh",
+      "type": "RegularFile",
+      "bytes": 542,
+      "sha256": "ee1773c20ef2fce3a690869d64f18d6fa1cca73c8125955adbd75e3451eb80fe"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/ISPCTexComp/ispc_linux_patch_arm64.txt",
+      "type": "RegularFile",
+      "bytes": 654,
+      "sha256": "68fabbf2964a07390386cde347707b1eafc6def5f2dea56ebd2f67d1400ba6cf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Lua",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Lua/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 993,
+      "sha256": "5bd5423c7af3794d388550737d45b8565a98c9119ae9a5167a3c8862dd7ff320"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Lua/FindLua.cmake",
+      "type": "RegularFile",
+      "bytes": 1026,
+      "sha256": "556b58dff119a5c13ae40dd929e7ef14c2704dc8ac7d495b74516371037fb5ee"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Lua/LICENSE.txt",
+      "type": "RegularFile",
+      "bytes": 1066,
+      "sha256": "febc37f75a55cb0c3255ffb76e73304bbc832d7aa5a29483bc7003215b9ba2c2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Lua/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2887,
+      "sha256": "977813a89b26a3540da302dc0aedc85d9c17af2c059505a6e153bac9c722939a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Lua/lua_5.4.4_o3de.patch",
+      "type": "RegularFile",
+      "bytes": 1958,
+      "sha256": "5a8921ff20845030ccdfc3bc67f7797fe2339eb0e54a93c1089e748ea698120d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/FindNvCloth.cmake",
+      "type": "RegularFile",
+      "bytes": 2472,
+      "sha256": "35488b0886e8c01b03ba54b52906943f5fd697646afc0c44eefc1701d23ab95c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/FindNvCloth.cmake.mac",
+      "type": "RegularFile",
+      "bytes": 1511,
+      "sha256": "1844677504440b35029c551bc6c1745ae923a9e44bbe34e9d291ecceb7c0ead0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/build_config.json",
+      "type": "RegularFile",
+      "bytes": 849,
+      "sha256": "4b90d6150bbef6a9273ae503081bac5e34c200ae979a772b37fff460df5bee72"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/build_mac_arm64.sh",
+      "type": "RegularFile",
+      "bytes": 919,
+      "sha256": "b8d2d8e819d6e602cef6f79e514192c42e33e1e9bc17d4fbbf1afb6eaae92c69"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 10499,
+      "sha256": "2c15484b6332f17374f7dce1485ecfd5b31ee6214b7ece181059359c3217c6ad"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/install_mac_arm64.sh",
+      "type": "RegularFile",
+      "bytes": 1288,
+      "sha256": "f273e5fc3dceae4add4890f197c2852b1234300828ab82d29e7d70ed2d6621ad"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/NvCloth/nvcloth_mac_arm64.patch",
+      "type": "RegularFile",
+      "bytes": 11160,
+      "sha256": "bded3a1831da16b568bcf5fb6b359f6a7a2bf9a5b2ac2bfce4620a60b73305d1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/FindImath.cmake",
+      "type": "RegularFile",
+      "bytes": 1356,
+      "sha256": "6943a0dc4536b555cfaa458b213be29bc676c337fb6d5b641eb345d5ee67f45b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/FindOpenEXR.cmake",
+      "type": "RegularFile",
+      "bytes": 2818,
+      "sha256": "4753ac0d88bca3279788637421983304dfb6b1c65571d4b4a33b685260d1a613"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/README.md",
+      "type": "RegularFile",
+      "bytes": 1182,
+      "sha256": "ac4ef2c0dcac69e551b3b93f17e2e1d7b03855ebe8be1b59afad0a5e63ae256a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4781,
+      "sha256": "491fd6cf1286fe20e68061ea661b1be57297e551913283df44ba2565c0b10291"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 889,
+      "sha256": "e8863e92bbd92b8b3a7ae44234d161ee30eb5e1383e8efe8f36f2ec95997bf77"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test/atom_brdf.exr",
+      "type": "RegularFile",
+      "bytes": 105676,
+      "sha256": "6f78f59cc3134138ebfbdba590e3388e3bdd5d2441021e2ce9cfd0ea57cfeba2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test/base_Log2-48nits_16_LUT.exr",
+      "type": "RegularFile",
+      "bytes": 1038,
+      "sha256": "155b3ba516d77fcfc9a77a7e96acbf450759d87ee7f042730d1d75b0f2628902"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test/test_openexr.cpp",
+      "type": "RegularFile",
+      "bytes": 1743,
+      "sha256": "1754851818455db3e9775b0a96c9be11b5f781175957ecec402edc58621c06b1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test_openexr_android.cmd",
+      "type": "RegularFile",
+      "bytes": 1124,
+      "sha256": "1458aa949a4a126b4fe260ff36c8fc7f10414f3c61f4acb78c4d8f23bb59d331"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test_openexr_ios.sh",
+      "type": "RegularFile",
+      "bytes": 746,
+      "sha256": "b82dafefc2e91ed1486bcec9c705de0fa627cb60405d4e6ee515665dc7eab5c5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test_openexr_linux.sh",
+      "type": "RegularFile",
+      "bytes": 1184,
+      "sha256": "bae4eebaec0ec70b409b4dbb4975bdf5f3301c6481230849b22d2db9d4c9fdc6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test_openexr_mac.sh",
+      "type": "RegularFile",
+      "bytes": 783,
+      "sha256": "20b9c4c4cf073c854ab83dff9a9f60723b16e83b8bb152d521922b98f864e7a5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test_openexr_mac_3_4.sh",
+      "type": "RegularFile",
+      "bytes": 817,
+      "sha256": "8684f07392e128dbb88371067e95fcbf833a8da82a88a94ba04a78bdf070d518"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenEXR/test_openexr_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 855,
+      "sha256": "eed9a61447d0768b88d39a66303bd8111c9ba7c6039a6a6840a2811ccad66574"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh/FindOpenMesh.cmake.NonWindows",
+      "type": "RegularFile",
+      "bytes": 932,
+      "sha256": "4d94e13a4152c8e68486cab8bb6f0c3bd65b37f70511a6f9873b60bbfbd16b34"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh/FindOpenMesh.cmake.Windows",
+      "type": "RegularFile",
+      "bytes": 1120,
+      "sha256": "b0f229ab4e4770043ef99f55365fb22a0135fd5394535110cf39e9a82107dc85"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2132,
+      "sha256": "8671590935aa94b45064d6317d51385f052ae3de9e63da9c91116cc86e910358"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh/build_openmesh_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 801,
+      "sha256": "bc9b14fc9481e26a5f76de9c971fe5b1b147a16ca2a17cc5acb59c9bcc3c21e6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh/install_openmesh_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 1570,
+      "sha256": "6921609960c92a507cbbf222a9691a70ea0281a85d47e8495bb839205e82a77e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenMesh/openmesh-o3de.patch",
+      "type": "RegularFile",
+      "bytes": 6953,
+      "sha256": "764b0e17e47d0b512bcdcf045d37dac935f19aeef5807a87b1ede9ec45640de9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 182,
+      "sha256": "80a2c77e82ad6522f6468b76f3c73cdfea4970a8ffe0509c012a329c3296692f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 1692,
+      "sha256": "2bc548bedc191e1d46f0172990f95a5edef4b9db903d2f1880a606fb9f5cdca6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/FindOpenSSL.cmake.template",
+      "type": "RegularFile",
+      "bytes": 3603,
+      "sha256": "dcd823ced135bb8eaf1f7913ab28841d68b2c4ecb06638bbea1ac9fa48f39b69"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 6632,
+      "sha256": "8b1a1e7d7583285e116cedde9e67e9c2e1066ee312862d6952e379b097d2c7ed"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/build-mac.sh",
+      "type": "RegularFile",
+      "bytes": 1180,
+      "sha256": "b86f1918934b0219a25e42645100428645289fc9e400b2a08b8f5f3846fe1008"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2137,
+      "sha256": "cf245c50c2cfb8bc415e78234914c22d80aa128b9e3363d39047fa69590c133d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 3866,
+      "sha256": "d592d4992d063a8169595467d51db922b8bea687dbc01f18fa1f7426e50b1eb1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/docker_build_openssl.sh",
+      "type": "RegularFile",
+      "bytes": 1582,
+      "sha256": "8c66ff0fc9200d4398a1e60536dee5e94d219125257b62ba219bec3460d041f4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/install-linux.sh",
+      "type": "RegularFile",
+      "bytes": 1535,
+      "sha256": "2cf3f27166a073eee8e4ea2fa3a5d73b214b41d8580dfe813bbb8e3d270fd35b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test-linux.sh",
+      "type": "RegularFile",
+      "bytes": 1557,
+      "sha256": "cdef08bcfa33809dbbc0932655cc1d7a0d004ed89a211e8ce07b15880bc0fc9d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 571,
+      "sha256": "e6cd6fa3815562e14e8debd38b72b613c5192d86c0e1ea537c2feeb5ebc9db02"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test/test_OpenSSL.c",
+      "type": "RegularFile",
+      "bytes": 4005,
+      "sha256": "a47faf232dfd757c4a0adc5f0e77983f4b1d768dbd1c7cadc0eccc2847dc1758"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test_OpenSSL_android.cmd",
+      "type": "RegularFile",
+      "bytes": 884,
+      "sha256": "675721b31952fd332fe008a88199eaea73ab2c0057f4dfd325c22f3952daddd8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test_OpenSSL_ios.sh",
+      "type": "RegularFile",
+      "bytes": 802,
+      "sha256": "18bdd87bd34520f52422634e9df83684c18320ec6e09e3e01ca129c01e024b87"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test_OpenSSL_mac.sh",
+      "type": "RegularFile",
+      "bytes": 890,
+      "sha256": "8287f5f49f8b5bf4d7e2c6bb6e87b1431c853995f34245151c1ffc5e5ecaffd5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test_OpenSSL_wasm32.cmd",
+      "type": "RegularFile",
+      "bytes": 260,
+      "sha256": "73c5be7367e3d7e75af15ee3364630b93add4bd0a79abeb40cbcc761c1027f23"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenSSL/test_OpenSSL_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 1815,
+      "sha256": "a10e6b6e581491d3fa2561195b6304e30ac448ea3d12eb77526a2f9a1ab9a270"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenXR",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenXR/FindOpenXR.cmake",
+      "type": "RegularFile",
+      "bytes": 1170,
+      "sha256": "d6f2e18cfdb8b5ffca53ffb23d740debe80980c5fcda7cc191805270fe6e196a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/OpenXR/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1805,
+      "sha256": "1fb9eacc88c458f2c695c602a5cbede2ab77a2476e7dc905eeadabeef23512d7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/Build-physx-profile-config.patch",
+      "type": "RegularFile",
+      "bytes": 16038,
+      "sha256": "9943d77cd107a9081fdbc35c8e8404549e3de1324f65831c14128eb1c22f4b91"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/FindPhysX.cmake.mac",
+      "type": "RegularFile",
+      "bytes": 4759,
+      "sha256": "0bb80e38f40e6b1749c3cbe5398823a119bce6145251791cd89cfcfc63e36353"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/FindPhysX.cmake.template",
+      "type": "RegularFile",
+      "bytes": 4776,
+      "sha256": "e96e40c80f7983de5c0267e99d2c9ebb7464670a32feeabe00ef3447aaa4786e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/FindPhysX_ios.cmake.template",
+      "type": "RegularFile",
+      "bytes": 2181,
+      "sha256": "b9be9fa9608cfed15cd3fc35447ad07f8f516408e1842cc93705e11a8b9d79e4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/build-darwin-arm64.sh",
+      "type": "RegularFile",
+      "bytes": 1831,
+      "sha256": "c36feee454d991c7d0654beb6e0fc86509060fc7a3d33a7912fbb9bd8414bb2d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/build_config.json",
+      "type": "RegularFile",
+      "bytes": 839,
+      "sha256": "69902e0e17016f5d2c6c478479f63c24717a527b0eb4e981b602fa33c5940136"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 6739,
+      "sha256": "92652d0765967478e741bf6a4a411532e504bb877a8362e043e321a4d711b548"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/install-darwin-arm64.sh",
+      "type": "RegularFile",
+      "bytes": 2294,
+      "sha256": "b2e2011f63e41888aa01d07ea3799ef966543e1c03755c927a9f1524322cca38"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX/mac_arm64.patch",
+      "type": "RegularFile",
+      "bytes": 23168,
+      "sha256": "4bea8044aba61e197cd1dae30b669f624aaafe5495d4886946bbdad15e666f78"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/FindPhysX5.cmake",
+      "type": "RegularFile",
+      "bytes": 4548,
+      "sha256": "b6a388cc200e83cc907e508e39c71958e8bb113f1339dd6397c23a727b1db649"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/FindPhysX5_ios.cmake",
+      "type": "RegularFile",
+      "bytes": 2041,
+      "sha256": "f06e594d89680b6bf6500abf404efcd9d8d7bb40d944892b6277e8748b199d0f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/build-darwin-arm64.sh",
+      "type": "RegularFile",
+      "bytes": 2715,
+      "sha256": "b3077173c9eef338b540c98f6dd358ce387c08b51dc5c9dcb8da8a62c68cdd17"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/build_config.json",
+      "type": "RegularFile",
+      "bytes": 763,
+      "sha256": "54e9cf01835b6f5aeb5c6d12a65ac5f03ba095af4700fcc1287e44f2e9f1f88d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/build_fix.patch",
+      "type": "RegularFile",
+      "bytes": 1910,
+      "sha256": "1cf2b2357ccbedc2fab4034c0af6c9ec45f6e25ec362925e5385fde65c72d920"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 16974,
+      "sha256": "3b478b7db72b1933f6ca12d5661a88b6bdeba446121cbb250ae336184f5bd80a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/install-darwin-arm64.sh",
+      "type": "RegularFile",
+      "bytes": 2058,
+      "sha256": "14c13bf10d8aa30e2a5d94b124a53cc4a520a7ae245967b1965de39c02b94961"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/PhysX5/physx5_mac.patch",
+      "type": "RegularFile",
+      "bytes": 69715,
+      "sha256": "ee87a25a481a7691393a1461b688c5bd34d4447d75a92ef40c5124eacf04a35c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/FindQt.cmake",
+      "type": "RegularFile",
+      "bytes": 18449,
+      "sha256": "ec26a213cc6cf203f103120656be18ae2593c8290008a5ef41418d15cb043e95"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/FindQt.cmake.mac",
+      "type": "RegularFile",
+      "bytes": 10479,
+      "sha256": "df6542fbea4baf5fa898f42355b9ebae14f130a672d7d8f35f2654593009eddd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/LICENSE",
+      "type": "RegularFile",
+      "bytes": 8257,
+      "sha256": "4159bed2f46079f782f768e26ef3f6cbd33ec373196be83caa859b4e72ffbb87"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Linux",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Linux/QtPlugin_linux.cmake",
+      "type": "RegularFile",
+      "bytes": 3736,
+      "sha256": "2afc6eb0a85c0197dedf24c6797d8efee6f3d73c4ac4244c89ec035dfd011732"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Linux/Qt_linux.cmake",
+      "type": "RegularFile",
+      "bytes": 855,
+      "sha256": "9f8e396035bf6d71ce69d451406da5e46711acb5bd1f76c02a195f1383f30a51"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Mac",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Mac/QtPlugin_mac.cmake",
+      "type": "RegularFile",
+      "bytes": 1322,
+      "sha256": "935536a0ef86d08f2fa156ce11188ef852e43b0cb75b8e9627650dec3115b03d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Mac/Qt_mac.cmake",
+      "type": "RegularFile",
+      "bytes": 420,
+      "sha256": "42973e0cb21c0dd47c81a86f9a3411eb05335a31606995473518bd9725f46e2d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Windows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Windows/QtPlugin_windows.cmake",
+      "type": "RegularFile",
+      "bytes": 1529,
+      "sha256": "2e702577ba92b3bccc3b686312a3da4ef224b53f1e6d748e7e0a9cb2fb73cb42"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/Platform/Windows/Qt_windows.cmake",
+      "type": "RegularFile",
+      "bytes": 525,
+      "sha256": "9273721b3fa99f618498c7ffeb3926318c67765c165a62c18c595a07b901a220"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/QT-NOTICE.TXT",
+      "type": "RegularFile",
+      "bytes": 465,
+      "sha256": "05654e53e9faa949cc08ae03ee0ad9a04a34e3b7d0b325e3fd0ae84f9c314c3f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/README.md",
+      "type": "RegularFile",
+      "bytes": 3127,
+      "sha256": "853b7b8b7d5c63248336deeff1d81b401d16f87f9d2800c882e14eef41c76cb9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/build-darwin-arm64.sh",
+      "type": "RegularFile",
+      "bytes": 3016,
+      "sha256": "77206c53cd058758eab6d42639156302feebdf5552662a065009af7efde7013e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/build-darwin.sh",
+      "type": "RegularFile",
+      "bytes": 3517,
+      "sha256": "fbb8a6be333924b748497b24f4839fd183a4c2bb499b0b3ccca4f032cf909ecd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 2182,
+      "sha256": "e06d993a3fc345ccec4cea31dfce946992e2d87f2d3a9f2134aa0ccaffc7d286"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/build-windows.bat",
+      "type": "RegularFile",
+      "bytes": 2015,
+      "sha256": "a0bd7481da7d618b8867371273ba518ef55f5d31ab7575ec76403c5447b88be0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4347,
+      "sha256": "5f416225116fbdacd49630fc010b2c3870499c9674fd9563e073c1bab8209e65"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/copy_platform_cmakes.py",
+      "type": "RegularFile",
+      "bytes": 1628,
+      "sha256": "2b2c17c8f25c71354236d153f7f17c7a17ddef2da029d5edea76a973de0f2086"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/qt-mac.patch",
+      "type": "RegularFile",
+      "bytes": 495,
+      "sha256": "fa2817ce7667572bf1299bba85f16161c1ac6553292c2044cf0f0077f03b5ce8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/Qt/recursion-check.patch",
+      "type": "RegularFile",
+      "bytes": 983,
+      "sha256": "ff3669df69c02c2995071e951d79f35b2a4620a23b7fbccdb6b0daf30db835ca"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidJSON",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidJSON/FindRapidJSON.cmake.template",
+      "type": "RegularFile",
+      "bytes": 569,
+      "sha256": "a08ad0cc6d9677bb730df54c625fcec14853533cab3b244f8e64ba95e1463504"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidJSON/build_config.json",
+      "type": "RegularFile",
+      "bytes": 635,
+      "sha256": "c82e775db8935658aecd2ffb1d7c8df05db4c0454d552b7b673745160693848d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidJSON/copy_rapidjson_includes.bat",
+      "type": "RegularFile",
+      "bytes": 130,
+      "sha256": "2f37a4988a95871dec1caa5316e29f7e578dff8ec9df46a8fbdae33e04908fce"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidJSON/license.txt",
+      "type": "RegularFile",
+      "bytes": 5152,
+      "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/FindRapidXML.cmake",
+      "type": "RegularFile",
+      "bytes": 584,
+      "sha256": "d096fba93c16f8fa14df08407ac51096c65fd082a00f855ade49e378a97c69ca"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 203,
+      "sha256": "9aa223ba018474a128d0eb70ab88514e1b9b4d32bf39880aaf0311710b8c4567"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include/rapidxml",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include/rapidxml/license.txt",
+      "type": "RegularFile",
+      "bytes": 2752,
+      "sha256": "6094a09542ee0835df4c212203ae0a19c93b47a24d78ccf4951b0282268570ae"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include/rapidxml/rapidxml.h",
+      "type": "RegularFile",
+      "bytes": 120231,
+      "sha256": "a8b08e98bb1bbcb43d5259a5bc48251a1c98ea23eb5b0fd43eeee414946fe931"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include/rapidxml/rapidxml_iterators.h",
+      "type": "RegularFile",
+      "bytes": 4320,
+      "sha256": "c637da38dcb23d387d231c4f7a26ed89644deaff8061a2fbf30507ba521037ef"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include/rapidxml/rapidxml_print.h",
+      "type": "RegularFile",
+      "bytes": 15683,
+      "sha256": "9ec29ccba212eef3f580ea6fea413027e2cc2056f6f422b8a1473bc11d475b52"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/RapidXML-multiplatform/RapidXML/include/rapidxml/rapidxml_utils.h",
+      "type": "RegularFile",
+      "bytes": 1601,
+      "sha256": "731454ba99fe44b8315ffb4a463d29b2fb2f220acaf337ceb5f6da5abcdfc94a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 1735,
+      "sha256": "c1d5fa975e1a0cc93d02298602d344fe1f88bdf9536a07eb64ee9308056fbd69"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/FindSPIRVCross.cmake.Linux",
+      "type": "RegularFile",
+      "bytes": 787,
+      "sha256": "89d39e7c4bb03e20947b19ff2e2d5b77a0d19204433944a34fe00fd64f5e340b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/FindSPIRVCross.cmake.Mac",
+      "type": "RegularFile",
+      "bytes": 788,
+      "sha256": "0376e32e5f321ade3f70032a6c0021c1de367ca5adc8c6cf17dabfcecc7c9a78"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/FindSPIRVCross.cmake.Windows",
+      "type": "RegularFile",
+      "bytes": 792,
+      "sha256": "beff0cd6a0438b9e08aad72377e6305483f7873eea872079ea301339256c2917"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 6495,
+      "sha256": "f09a8b02c3671d4f15d289aa3b9534bfb8aed8121ebd9e9d5606716119699cc2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4125,
+      "sha256": "270b66be630af2a72a11db9775c12b99e2d93b818b002631f7c87fae6458a46a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/docker_build_spirvcross.sh",
+      "type": "RegularFile",
+      "bytes": 2054,
+      "sha256": "46b8239c940aae5c8bc963459ba69ec270430ad645b228f03516ed598712bb2e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/SPIRVCross/install_linux.sh",
+      "type": "RegularFile",
+      "bytes": 881,
+      "sha256": "d793b9388c2e0a7d20ca258ea0ab311561fbb2c755ae2605c70ab4ee6d9071d7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 1636,
+      "sha256": "4722e1ea6d5541d1ae71572ce5b9140aecc3178ac8433cf74e830dbd7aad8482"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/Findassimp.cmake",
+      "type": "RegularFile",
+      "bytes": 3707,
+      "sha256": "0ca23e7be058a6b9abe8c3dcdf69ed9fd0ec7c1132faad6a5900431fd5132c78"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/O3DE-fixes-applied-on-top-of-v5.1.6.patch",
+      "type": "RegularFile",
+      "bytes": 6680,
+      "sha256": "97300906c87951bd7cb1698e6b2e940b1e8f27e734353f60e14aa38285d9b5d3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/O3DE-fixes-applied-on-top-of-v5.2.5.patch",
+      "type": "RegularFile",
+      "bytes": 8932,
+      "sha256": "51692aca0b952f8a5c176c79e3c661af4e31d7af352dac72d8d3ec7ebcc466ad"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 163,
+      "sha256": "aa8c8d1f3917a653a345c25301cb9941018dfceee6b1b90da560c06f04b93e76"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/build-linux-aarch64.sh",
+      "type": "RegularFile",
+      "bytes": 409,
+      "sha256": "8c72f0fd13bb5f1ead9d88efe3441ce5299940e9803188432d6f33ea2cc316df"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/build-linux-x86.sh",
+      "type": "RegularFile",
+      "bytes": 401,
+      "sha256": "5dc380b3c902e0a05ce6384e0884fa180c950e152e8c36a8198cf3092ef517a6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 2710,
+      "sha256": "6a6cda0bf144ccf37768bcef2fb0a50af5496402fa8832e4c782915e4e90fb82"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/build_assimp_unix_like.sh",
+      "type": "RegularFile",
+      "bytes": 1464,
+      "sha256": "a13f1f9cfc3f05c2db293f8b4e11a98f2ce49bce9ef7c16f4d2f4a2210ca378e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/build_assimp_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 1535,
+      "sha256": "8beb5de113fee276cfce798a6262cb2eecd6ba7738e2ad270324b0f1e3daa374"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/build_config.json",
+      "type": "RegularFile",
+      "bytes": 3078,
+      "sha256": "631d00005f8e02c797a0a5eb3738f96e7993bbd5880661604adc1de917b0727b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/docker_build_assimp_linux.sh",
+      "type": "RegularFile",
+      "bytes": 2704,
+      "sha256": "a3a87ed7c000154ed64ef4625d9310e4e45a94d853c76605ee603e4c941cfdc0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/install_assimp_linux.json",
+      "type": "RegularFile",
+      "bytes": 166,
+      "sha256": "dc2dfa508870554335479a9435b5ff6887810f0ed65d22ba0e24123d30d72a72"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/install_assimp_mac.json",
+      "type": "RegularFile",
+      "bytes": 223,
+      "sha256": "a3cc38c3186e80464eee7910903485836dbff85a000a66ff17b014bf5256f8be"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/install_assimp_windows.json",
+      "type": "RegularFile",
+      "bytes": 379,
+      "sha256": "5e14283a718b92a221ba0c486cdd92de50948060352872ff466bbb0cf040305d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/test_assimp_linux.sh",
+      "type": "RegularFile",
+      "bytes": 442,
+      "sha256": "285b0dbeb86678c8186711d35523e8f8efde7182fa44c94ade155c100c86cf41"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/test_assimp_mac.sh",
+      "type": "RegularFile",
+      "bytes": 438,
+      "sha256": "b03033b6635f599f152f790e6c2744bf70e5c9171d064e5eb83e0b3ccc7eabcd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/test_assimp_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 623,
+      "sha256": "81ad30fbc4182d61d5a88911191060682bf769bdb7a55b4b40117f06af38853c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/assimp/usd_animations-on-top-of-v5.4.3.patch",
+      "type": "RegularFile",
+      "bytes": 55954,
+      "sha256": "ea1cec16b3e93c06dc52b80ad0e05a0912afd988a10e4b02bcae566dae8ad087"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 1341,
+      "sha256": "6cb112f00f66caa2af7a5510ede21da07b90209b0198974933a89a52b69fb555"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.linux-aarch64",
+      "type": "RegularFile",
+      "bytes": 1232,
+      "sha256": "b9cbadd7ebea89ae5a245310b6b510621c3ec79ba9e4a5ef9e43de5aed49107f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.linux-x86_64",
+      "type": "RegularFile",
+      "bytes": 1234,
+      "sha256": "8d4b3dfd0162309385b3787f9496dd558a1e272c198b5ec184e44ce2a2d50112"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.mac-arm64",
+      "type": "RegularFile",
+      "bytes": 1232,
+      "sha256": "b9cbadd7ebea89ae5a245310b6b510621c3ec79ba9e4a5ef9e43de5aed49107f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/Findastc-encoder.cmake.template",
+      "type": "RegularFile",
+      "bytes": 1681,
+      "sha256": "5af4ac28d056c62b7d6587c2c71b6285ea2256d4af024df3fb4fd30acb75eb91"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/astcencoder-o3de.patch",
+      "type": "RegularFile",
+      "bytes": 3839,
+      "sha256": "549b647fa2f723541c1769cd7227a74e87ada95dd145e11b828031f3f3f332bc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 2724,
+      "sha256": "b98dfa0e9ceeaa99f0036bee0e3cbee16e154b3fad3fd163b2ed62543137e5cf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2147,
+      "sha256": "7f660f80987cc382af1fc2d9366edb30bf4be766b33a99bd34186074aa4bf97e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 794,
+      "sha256": "cd57ddcada02374d462fe728da6e8f3d9f516168e293ed2fadcf5c422cb2a719"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_mac.sh",
+      "type": "RegularFile",
+      "bytes": 735,
+      "sha256": "06868b2aa227be0e247575f029fddce3aea8decc75d3a1e4823dd326c3e6aa61"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_mac_arm64.sh",
+      "type": "RegularFile",
+      "bytes": 789,
+      "sha256": "cbe5e1bf2cbc50eeb41be35c2c12a6414b1ab431ec5d98a5e75dda26775fac88"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/build_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 610,
+      "sha256": "c3fc0857b8ad5d94dbb7aa46114cc2122c3e36ceb60f108c34f3780690e40d88"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/docker_build_astcencoder_linux.sh",
+      "type": "RegularFile",
+      "bytes": 926,
+      "sha256": "260d3d64add9cf1026e6afef31aa29325094a7335a49347ce6a4b3950ca5fd31"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_linux.sh",
+      "type": "RegularFile",
+      "bytes": 980,
+      "sha256": "20fd404044fee0f51f71a4c2957a94a3029b055bbee95ad9403f0bd10345fb82"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_mac.sh",
+      "type": "RegularFile",
+      "bytes": 688,
+      "sha256": "3aebed69cfa5c521cabd406fc57a0366eb76cebd34f32ad41043ac9cbadfd440"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_mac_arm64.sh",
+      "type": "RegularFile",
+      "bytes": 684,
+      "sha256": "b1af57805a2325f255214893b8bda875ce196db47ddd8464de3a6e7b010bcb5b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/astc-encoder/install_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 1222,
+      "sha256": "4b18902f10c8e317f15f23db1bebc03acffd1738aa6e1a4475dfecf7337bd5e7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/.gitignore",
+      "type": "RegularFile",
+      "bytes": 4,
+      "sha256": "a6864eb339b0e1f6e00d75293a8840abf069a2c0fe82e6e53af6ac099793c1d5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/Findazslc.cmake.Linux",
+      "type": "RegularFile",
+      "bytes": 773,
+      "sha256": "233d90d003d07987acee1b42bef39f6ea4abb029f14eb249b8dafaa627c0ee64"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/Findazslc.cmake.Mac",
+      "type": "RegularFile",
+      "bytes": 773,
+      "sha256": "233d90d003d07987acee1b42bef39f6ea4abb029f14eb249b8dafaa627c0ee64"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/Findazslc.cmake.Windows",
+      "type": "RegularFile",
+      "bytes": 781,
+      "sha256": "ab7b3ae35c17f86348c677fc3a038b549901fae2bc297fec9e38b987c5275719"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/azslc-20260124-mac.patch",
+      "type": "RegularFile",
+      "bytes": 426,
+      "sha256": "12eb641d5e741a9f01cec8eaf9e75fca20d2ceaac26018a0911f5521f5f83dd1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/build_azslc_linux.sh",
+      "type": "RegularFile",
+      "bytes": 288,
+      "sha256": "3e5382be2b7b5d947bc26f17c30e7132e683e75c2197e69d0dde97cf267dd386"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/build_azslc_mac.sh",
+      "type": "RegularFile",
+      "bytes": 288,
+      "sha256": "3e5382be2b7b5d947bc26f17c30e7132e683e75c2197e69d0dde97cf267dd386"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/build_azslc_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 410,
+      "sha256": "057ba3052ce8bdb71784c232d9737e0f3ce7d0d7036adca52738751f8fb9e018"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1341,
+      "sha256": "e66b04df9f4b6583cffb1379cbfe91f8f56ceb2eed39ebbd02bc3ef44b2c056c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/install_azslc_linux.sh",
+      "type": "RegularFile",
+      "bytes": 550,
+      "sha256": "ebd4aabfef563e4f9093e336bf2a6d20e42833484c417aa34f9812e57e2c09fc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/install_azslc_mac.sh",
+      "type": "RegularFile",
+      "bytes": 550,
+      "sha256": "ebd4aabfef563e4f9093e336bf2a6d20e42833484c417aa34f9812e57e2c09fc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/azslc/install_azslc_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 925,
+      "sha256": "c2ceccc30f0fd816ee1952cd2635ade4c3bf9296f641a426b6c5a24fe62e4aaf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/COPYING",
+      "type": "RegularFile",
+      "bytes": 1110,
+      "sha256": "3ed00dd93c75655599456c83cba2f69c6824fd53f24fc24206ba27b65057709d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/Dockerfile.linux",
+      "type": "RegularFile",
+      "bytes": 969,
+      "sha256": "193ede6580fd8c430c4a5d8ea8bbc51dcc2acb9c5301b5e793c8f5e66804acde"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/Findcityhash.cmake",
+      "type": "RegularFile",
+      "bytes": 2753,
+      "sha256": "a998e30adba0e4a4d8a5753ecf3b25780d906e06a731123582f6f63cc837083e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/Findcityhash.cmake.linux",
+      "type": "RegularFile",
+      "bytes": 1237,
+      "sha256": "3c9790e046016f9cb4e52231e0464eae104657c5484a0bff3608ef290a6d72b4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/Findcityhash.cmake.mac",
+      "type": "RegularFile",
+      "bytes": 925,
+      "sha256": "fa8a15fb6c1893ab510dbf04619c1a4c603bf4c7c35df1911ad9c79744edd64e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/README",
+      "type": "RegularFile",
+      "bytes": 7521,
+      "sha256": "2f8fbccbf4d0435c53f9072c3a0adeaa263f8fbf07d0a39d3b0945876a246cc0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/build_cityhash_linux.sh",
+      "type": "RegularFile",
+      "bytes": 671,
+      "sha256": "7c2ee704c1d84f0366c21284df8ed8c497854d798ec198ae560f694c86b45474"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/build_cityhash_mac.sh",
+      "type": "RegularFile",
+      "bytes": 925,
+      "sha256": "09b183c6fd831b2eeaf8389ba4db4f60d1485c67d774bc0a3908278f5033ceac"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1181,
+      "sha256": "4cd73720c89487d702487ecff678deb90f820d88e8543eefdcd51521db38e9d3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 2586,
+      "sha256": "5a83055464e772b785d8226090703a79b6233753df6e40d6e869bb56aebd8b42"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 6316,
+      "sha256": "26d9340993d82703fae86ba79fa35209d3994b1d2a74521db48a32e1d9cf60ca"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/city-test.cc",
+      "type": "RegularFile",
+      "bytes": 103281,
+      "sha256": "88393413944a7341536f9368666da86ac8c6b446485e867358efc85600e70ee1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/city.cc",
+      "type": "RegularFile",
+      "bytes": 19355,
+      "sha256": "a20fe95c141e7e88718f33efb0b9bdedf0508c89f57a7478d1a8ce8917fa6cb1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/city.h",
+      "type": "RegularFile",
+      "bytes": 4898,
+      "sha256": "0a65d60f1742e215e1cedd7fa081895c2bee7afdbe56b86870e63fd0536c5297"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/citycrc.h",
+      "type": "RegularFile",
+      "bytes": 1862,
+      "sha256": "4be7527f517b6744e70b3ae163125e908b5f5d660ed53740a33b93a6663bf7dd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/install_cityhash_mac.sh",
+      "type": "RegularFile",
+      "bytes": 366,
+      "sha256": "436c852fd7b5f71ee218716b8ad4bd0151c6f88b7e2e9faf644dac877693415c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/cityhash/install_linux.sh",
+      "type": "RegularFile",
+      "bytes": 476,
+      "sha256": "f6192e486a0c7ca686892b560780d3d1aa70af0e204bdbce9c56d3548534d93a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/Findd3dx12.cmake",
+      "type": "RegularFile",
+      "bytes": 614,
+      "sha256": "a8c0cdb1770c4470570c601fb1f817f79a23f0dafecebe6b4fae946e37580ad0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 198,
+      "sha256": "cdaf233596a2423c47a009a7fb53de31252b9b4b39163532a2a2e333132dc24d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12/include/d3dx12.h",
+      "type": "RegularFile",
+      "bytes": 56537,
+      "sha256": "632dfbbb8c4683dc28569c9eaf5805c1caa059c730246bcd6235100062ff0273"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/d3dx12-windows/d3dx12/license.txt",
+      "type": "RegularFile",
+      "bytes": 1073,
+      "sha256": "fd532481d828e13a0b13ccb598e02338a3617740675a862ee6bdc1541b68e93d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/Findexpat.cmake",
+      "type": "RegularFile",
+      "bytes": 3185,
+      "sha256": "9818bdb485358fcd60bfd5edd0e4a350a365680e663e246a1fb21672466d5263"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/Findexpat_2_7_3.cmake",
+      "type": "RegularFile",
+      "bytes": 3185,
+      "sha256": "656f225b8b33564c44878262c796a747db6ede24034fcaff791b6c281ade56e0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/build_config.json",
+      "type": "RegularFile",
+      "bytes": 3380,
+      "sha256": "3a6fba88033105a9d120624e03d6244ca1d01e00460b38b5224f34a6b74833cd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/expat_2.4.2.patch",
+      "type": "RegularFile",
+      "bytes": 475,
+      "sha256": "685f13076bd02b2323ab756adfdb4ad57bf229888ec793c503efb378ca51d483"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 758,
+      "sha256": "a8190b7b6ca4f4e39eef8732a7f9840818f584ba020cf7d5d648c1b18b571a2d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test/example_file.xml",
+      "type": "RegularFile",
+      "bytes": 256,
+      "sha256": "f895ce5a3ebd538716b10c5946719321296b70d00bcc5e83cb87fd3a0e1e47e1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test/test_expat.c",
+      "type": "RegularFile",
+      "bytes": 1386,
+      "sha256": "81738c9ff9134be6febfd6cd7541cae0b2bce81f5fd3382c166bedbdeaa76471"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test_expat_android.cmd",
+      "type": "RegularFile",
+      "bytes": 961,
+      "sha256": "23ab6226ccfdb3ba5fbc9e6bff91a32da11f4d2442f5218bf66b4983daa3b682"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test_expat_ios.sh",
+      "type": "RegularFile",
+      "bytes": 679,
+      "sha256": "9dea0a17e1481f1b309091019ab469626cb11d5bb8397efcba54514885387d5b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test_expat_linux.sh",
+      "type": "RegularFile",
+      "bytes": 542,
+      "sha256": "c5da9ed0de3fdb3fcfce8b8e5953483475a512878a55ebe917542b0b181a62d0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test_expat_mac.sh",
+      "type": "RegularFile",
+      "bytes": 625,
+      "sha256": "824b2030616b658b5fb2034f87483c927fa1a4382069fc2d75aedf9f0767cbda"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/expat/test_expat_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 876,
+      "sha256": "3a319c8cbeaa3983841089b4b17d295670ef57d3976de5173424469dc83425a4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/FindFreetype.cmake",
+      "type": "RegularFile",
+      "bytes": 4079,
+      "sha256": "48c309253a5459fb31bcc332571fc4c62a34ef60b3007afa627ece8b2f9cef1b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4304,
+      "sha256": "c061c707e917281b3d7346bd7db1cada06922775730de52b45bf41e8772b27f8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 788,
+      "sha256": "ac44e0ad7d3b88406a264964d65e3005fe3525df9324df5e042ce7fa4b98c833"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test/test_Freetype.c",
+      "type": "RegularFile",
+      "bytes": 1267,
+      "sha256": "5ae72887159b30e06aa8c5df7cb4d4db72544e8bc384e410637d38274d62d6db"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test_Freetype_android.cmd",
+      "type": "RegularFile",
+      "bytes": 958,
+      "sha256": "5f20b771e336f76f1c041a0978575d16f1e5da79f49a821a59911a9b91132221"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test_Freetype_ios.sh",
+      "type": "RegularFile",
+      "bytes": 704,
+      "sha256": "887329f353de5903e43e0e45edb7c86ace4c92ac15e1cbb70dec045adf56b502"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test_Freetype_linux.sh",
+      "type": "RegularFile",
+      "bytes": 512,
+      "sha256": "1acf85691ec60e9e4c7c5156dd0926c0e644727e4f88b98d3af550bd125d238d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test_Freetype_mac.sh",
+      "type": "RegularFile",
+      "bytes": 630,
+      "sha256": "dd139ca3d90eada4a563f6296a2286c58d29e7608bfe3896a75383b2e9b9a8b3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/freetype/test_Freetype_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 857,
+      "sha256": "aeb701b6e51a1b6f21d8d5ea6c4b15b16ca5936dea0d4ebc975c0e89f3f7e95d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/Findglad.cmake",
+      "type": "RegularFile",
+      "bytes": 550,
+      "sha256": "f54043563e714e50b644c0c7901ca171a4dc6fd338071bd38389c7246d08dc9e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 178,
+      "sha256": "3cb0fb37bf4b60ec6255811f2a0f86f76fbecf86cd6d536403dc07ffe9ea680b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/LICENSE",
+      "type": "RegularFile",
+      "bytes": 3014,
+      "sha256": "21478db58068f8920b09b92a56424ede96999ffe132f36450e6a84dee275b4bd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include/glad",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include/glad/egl.h",
+      "type": "RegularFile",
+      "bytes": 160055,
+      "sha256": "e183c4512cd33190f6448cceb472107c7e4abe19786a0ae4b44743763927c44b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include/glad/gl.h",
+      "type": "RegularFile",
+      "bytes": 1727856,
+      "sha256": "fb62edc464b662ecf7f4c5b28e0b6ae4fc38ed1f35e540fd972841d32f683bb9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include/glad/gles2.h",
+      "type": "RegularFile",
+      "bytes": 609522,
+      "sha256": "183a0dfcda977d2b672fa0c4eaef3caa10ce97798f1821b7edeb90794721e378"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include/glad/glx.h",
+      "type": "RegularFile",
+      "bytes": 104535,
+      "sha256": "87a2f58fd5a3f3618b9f44f871b930d0231d853bbb1c6096ebf2188f3663d04f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/glad-multiplatform/glad/include/glad/wgl.h",
+      "type": "RegularFile",
+      "bytes": 91868,
+      "sha256": "c2f76f0a027b5e93c20245f96ae5cdb78726350e5d227be2df6f457321c7dc18"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 1826,
+      "sha256": "da78193c15b6728408f6f87a79d2cd891023959c12291f6b6dc62ca7f73e57e6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/FindGoogleBenchmark.cmake.template",
+      "type": "RegularFile",
+      "bytes": 1622,
+      "sha256": "23fd05c11da9c9ac7959e92a0f6229808754989026db41a6ff50a3cedd2bee96"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/FindGoogleBenchmarkRelOnly.cmake.template",
+      "type": "RegularFile",
+      "bytes": 1240,
+      "sha256": "102f63853c4e9e3afe7a9f2fb972a051484b31b14bdbb0b5da64c3c348c02e7a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 2855,
+      "sha256": "e72d783e12ed71f7e007a6daa988d8b0a2299958fe209ca7ab076bb0009ced6d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/build_config.json",
+      "type": "RegularFile",
+      "bytes": 5723,
+      "sha256": "6c1f384156699efd04ef86d86994081e4b004af4f46a1bc63a21df66688f2f78"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/docker_build_googlebenchmark_linux.sh",
+      "type": "RegularFile",
+      "bytes": 1398,
+      "sha256": "4bb0d2541125c4e744a1457860879aa2c07f41466f2cf3f5a79ebcd6bea2c44e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googlebenchmark/package-linux.sh",
+      "type": "RegularFile",
+      "bytes": 364,
+      "sha256": "40cf9bc9a8e35dae85dcdd740f17f2e584e5c11fb8d5abc37f0551d5571807ed"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googletest",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googletest/Findgoogletest.cmake.template",
+      "type": "RegularFile",
+      "bytes": 5395,
+      "sha256": "295e528ad69b10cd58870747ab4823d6a1cf26e92808db273421f90524363194"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googletest/FindgoogletestRelOnly.cmake.template",
+      "type": "RegularFile",
+      "bytes": 3873,
+      "sha256": "6cf86015550804df04581d9154f761177c91b6f5e22afd246fe93d152375ff13"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googletest/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4979,
+      "sha256": "cab5a8a462e2f65368cfbcb233370ba70f34c95a2389029e935f72a129af1894"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/googletest/googletest-release-1.8.1.patch",
+      "type": "RegularFile",
+      "bytes": 4665,
+      "sha256": "72c795ed10620d23d4e3fb917e2d89938ca8963c9019f0b293d6f1fc502f20f0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/FindPNG.cmake",
+      "type": "RegularFile",
+      "bytes": 3079,
+      "sha256": "c6082d38f3e0a4ae9fc9585bdc5cd93310460db7557a96528cfc2ec685fdaec2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/build_config.json",
+      "type": "RegularFile",
+      "bytes": 5208,
+      "sha256": "28a7256bcd4d258836d810f593d93e70b60b64209ecdbe52a12795ff388d408b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/build_libpng_android.cmd",
+      "type": "RegularFile",
+      "bytes": 1175,
+      "sha256": "3f7a9c08f7be18430babb5317906df7e3b767cad2b9799ac739c0367e6f7b24e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/install_libpng_android.cmd",
+      "type": "RegularFile",
+      "bytes": 1102,
+      "sha256": "d5f11c6e3933935e1c377807100017b8d50671ce237c94a207df7bdd454bd645"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/readme.txt",
+      "type": "RegularFile",
+      "bytes": 70,
+      "sha256": "cca452a0931c21a8cf1f55976fc01cf7edae2ac71eb9d40296d01de7f7a0e91d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 738,
+      "sha256": "4a140fe226304efd45bbb51e9b674744b7d984e8cc72a0312dac960984af468a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test/test_png.c",
+      "type": "RegularFile",
+      "bytes": 653,
+      "sha256": "d6b31a5001ad9c38cbcd74272bb2d8ce44e32ea2b03cdeefd32859d684d69857"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test_png_android.cmd",
+      "type": "RegularFile",
+      "bytes": 960,
+      "sha256": "e5d06fa83d52b4885b3089e1d54cb4e4a174af7206f5950de7acc68527b22aef"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test_png_ios.sh",
+      "type": "RegularFile",
+      "bytes": 716,
+      "sha256": "39db741bc7f0541f54935c81cf474fb15c40489b8a81f2ef5a341a18abfb34b3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test_png_linux.sh",
+      "type": "RegularFile",
+      "bytes": 507,
+      "sha256": "a9aff0ec02cd288d54e11ab09614d6f1b8ca657cd2ccb6cc182b70c54a3c5646"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test_png_mac.sh",
+      "type": "RegularFile",
+      "bytes": 632,
+      "sha256": "505c1b4457ce0414fd82d41c16264cae10b9ddfcc7acc61b12ef21b3d60bea8c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libpng/test_png_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 849,
+      "sha256": "78ecb856ab7b85891802515e51af22b88a8bf9fa789414395ec10550b1f57bea"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libsamplerate",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libsamplerate/Findlibsamplerate.cmake.template",
+      "type": "RegularFile",
+      "bytes": 1253,
+      "sha256": "7f89d3350d4129f9b3a64a8cd9a577be5bd96523036462c913dafe8be59a5f7f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/libsamplerate/build_config.json",
+      "type": "RegularFile",
+      "bytes": 3687,
+      "sha256": "44dd3c2ba45359be99e254437ea296419ff14a8507387785c95f69bb3e6a6972"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Dockerfile.aarch64",
+      "type": "RegularFile",
+      "bytes": 1006,
+      "sha256": "93d560e72a69ff7f7d1e5e47d65258bf464ec2e7d86da5e8453b26cda245c500"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Dockerfile.x86_64",
+      "type": "RegularFile",
+      "bytes": 1004,
+      "sha256": "6d4f54846f2ef29105b96722a6b8d84f178aaaa85931c0baf73159dd784a7548"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/Findlz4.cmake",
+      "type": "RegularFile",
+      "bytes": 1237,
+      "sha256": "396a4a0d9154b57b9ebe28bbb4542f69a9efc277ba4a1c58d82ff31e5453dbff"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/LICENSE",
+      "type": "RegularFile",
+      "bytes": 635,
+      "sha256": "2949fcf758d3c9bcb05f8393ca42cadfa15be04eb4ae4b3327c4ad7957511e1b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-archlinux.sh",
+      "type": "RegularFile",
+      "bytes": 5236,
+      "sha256": "b3d4b69a55fe5b2f171e8af4801436967f4b953a1f6df5aeaa29a9b10d18ec47"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux-aarch64.sh",
+      "type": "RegularFile",
+      "bytes": 538,
+      "sha256": "b340e49585487af9608229c9684104e8568898d6feef080239df4c6145e4092a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux-x86_64.sh",
+      "type": "RegularFile",
+      "bytes": 526,
+      "sha256": "696aaeff2edffb1af00582eb52cf29fdc2b001b393c535010a7507258a496d58"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 5343,
+      "sha256": "225e945148f9ea448b31685a8c1f25b355da38bb86dffe1cc92c561d54a5096f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2779,
+      "sha256": "07693dea63a155a00c8368f982bc3765cfae821d1a0255add0774b6327b6503c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/docker_build_lz4_linux.sh",
+      "type": "RegularFile",
+      "bytes": 980,
+      "sha256": "80a8c2dc6d4703ed6e397df699c7428450d87558a262f9edfc87a04921026d61"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/lz4/package-linux.sh",
+      "type": "RegularFile",
+      "bytes": 335,
+      "sha256": "5b56230f81c31b498ff792bf02a8dae66c25e90cc2385e0f0c19835a584655ca"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mcpp",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mcpp/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 33,
+      "sha256": "d1dd9e0535cd6c919ad18f9d6b90340e2b25f9172fc1d309d6f4d12983f28612"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mcpp/Findmcpp.cmake.template",
+      "type": "RegularFile",
+      "bytes": 1123,
+      "sha256": "25d59bd7292fd253420e2d35f488cf29d0b728e4325c3944d152d22b6fb91e99"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mcpp/get_and_build_mcpp.py",
+      "type": "RegularFile",
+      "bytes": 16976,
+      "sha256": "fcb7ba4c12a5eb90ae2e77fbee42bf5efbe49682044cbb101002d3af567d21b5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mcpp/mcpp_2.7.2_az.patch",
+      "type": "RegularFile",
+      "bytes": 20693,
+      "sha256": "0ff3e85879ccb0f987e4d08acd6f6bdb34a71e08d463e2dec69028e11a66635c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mcpp/visualc.mak",
+      "type": "RegularFile",
+      "bytes": 4712,
+      "sha256": "a35dc1b5c93acf904ebbad69065125ff93f1b2905d822ae518aa6593fb000c7f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen/.gitignore",
+      "type": "RegularFile",
+      "bytes": 7,
+      "sha256": "d3e542f0a2e03d102428bb708f6e8e5a55cd9b872dad0add7025568297fbd817"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 728,
+      "sha256": "b0f0e63e71653f40b08f2f3a9d23929759a62fd1e2c3a54165008f7906e6b435"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen/LICENSE.txt",
+      "type": "RegularFile",
+      "bytes": 862,
+      "sha256": "9ae731b25215baa2b2d6047bf537fb2312f2003a6a05d3d4552010455b1e9fb0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 3338,
+      "sha256": "50733ce37b683ce954e774c2ed137424220e168df1ce4c4521cbae206a04723f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen/mikktspace.cpp",
+      "type": "RegularFile",
+      "bytes": 58380,
+      "sha256": "afcab600307d27e609064ff32cea1cbba95f174f05e250f20414f8152f18749d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/mikkelsen/mikktspace.h",
+      "type": "RegularFile",
+      "bytes": 8147,
+      "sha256": "f976f29f0b9ca26b9b70f962c95f7778122a087a97c148988a643aa8971bac7a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/LICENSE.TXT",
+      "type": "RegularFile",
+      "bytes": 254,
+      "sha256": "d941fcda405bb70ee96d56afc62d870dc0a0477af6dfd40bc13c3c9ef466af18"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/build_openimageio.py",
+      "type": "RegularFile",
+      "bytes": 47118,
+      "sha256": "2d3765a5ec95db85cbc553917268c8c9564ff847cb5f4bc38ef37f5dda10c87c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/clang16_mac_boost_container_hash.patch",
+      "type": "RegularFile",
+      "bytes": 508,
+      "sha256": "74fbb80c8286c8a671759f545ace6f496ef6d3da61e67e734bb8bfa44934fa53"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/clang16_mac_boost_numeric.patch",
+      "type": "RegularFile",
+      "bytes": 4167,
+      "sha256": "1a8889e391f555be2246179dafeb2a3532ca83491e7e6f0f882494c4e04f2114"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/custom_find_files",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/custom_find_files/FindOpenColorIO.cmake",
+      "type": "RegularFile",
+      "bytes": 2481,
+      "sha256": "f56f6546448f07b91310d9bc91a855a7095b1338caec457c39ce4cbf4df4a970"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/custom_find_files/FindOpenImageIO.cmake",
+      "type": "RegularFile",
+      "bytes": 1186,
+      "sha256": "e8e5428a0447947a0185592cb7def5addadd7030b202e44ac7d5cd8d2fff4fd4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/disable_boost_stacktrace.patch",
+      "type": "RegularFile",
+      "bytes": 1752,
+      "sha256": "96592e3ed619be9c28fdac35a5de0009af838dbd94eba9381d92554a7ef78afa"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/disable_rpath_use_link_path.patch",
+      "type": "RegularFile",
+      "bytes": 541,
+      "sha256": "bc11e1c8448a4830ef7c73ea191d2d4fba3f4046b73560eeb7d32accefe12363"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/FindOpenColorIO.cmake",
+      "type": "RegularFile",
+      "bytes": 7562,
+      "sha256": "9452998f21f07db2ee1789cded1e014b37e295aec0ad986f437bba07fe719643"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/FindOpenImageIO.cmake",
+      "type": "RegularFile",
+      "bytes": 10901,
+      "sha256": "45e94967aeb4531c5dba3c3df2c98f941acd2eafb4afb47f1f100b6a57f57d09"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/LICENSE.TXT",
+      "type": "RegularFile",
+      "bytes": 746,
+      "sha256": "bb67e21c7ae64a9d7efb88893a8124cc8a5a34368ed44bc6f7e39d489a5d8042"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/distribution/README.md",
+      "type": "RegularFile",
+      "bytes": 322,
+      "sha256": "701b48868205c2af91c78cfcfc5a7c6fab0d15f8899df314ab5f0e0d9fd95fe2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/linux_pthreads_fix.patch",
+      "type": "RegularFile",
+      "bytes": 545,
+      "sha256": "7952f454ce2f6d98fe9d344d9c6c293e5902233f6da4d439ea19d79dfb0d5e54"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/readme.md",
+      "type": "RegularFile",
+      "bytes": 571,
+      "sha256": "cd5b96536159b6d4d31f936ddf3d637e0511f822ac0737eb93f64401a665cc6c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/.gitignore",
+      "type": "RegularFile",
+      "bytes": 62,
+      "sha256": "6dffddc9f9c4c6ee7e4ff70dd5fe52c6e9b4cef9297a9a076437d4ec388bd56f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 816,
+      "sha256": "39b6fa596a77ddea909a5d89e789f968dcd46f939c3962c64708b741ddff1c17"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/base_Log2-48nits_16_LUT.exr",
+      "type": "RegularFile",
+      "bytes": 1038,
+      "sha256": "155b3ba516d77fcfc9a77a7e96acbf450759d87ee7f042730d1d75b0f2628902"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/python_tests.py",
+      "type": "RegularFile",
+      "bytes": 1895,
+      "sha256": "731c63e8c8a33a220a2b599db44e46fe3ff4a9321ce9c5318a307e5149815bce"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/openimageio-opencolorio/test/test_OpenImageIO.cpp",
+      "type": "RegularFile",
+      "bytes": 3941,
+      "sha256": "e1473bb60cb48ca29e28c8ee011d3c7c6cfca081ad0f064a4c3258c187ec1969"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/poly2tri",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/poly2tri/Findpoly2tri.cmake",
+      "type": "RegularFile",
+      "bytes": 1654,
+      "sha256": "4e9b4e2db445a40e72e092cf88d48398f8cbf827f4930b4b0d0e491d16929b7b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/poly2tri/build-poly2tri-jhasse-repo.patch",
+      "type": "RegularFile",
+      "bytes": 1360,
+      "sha256": "47c02a9fbda7510f85a25ab406dc64aee50699d1812722a10d0cf199db98defb"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/poly2tri/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 3365,
+      "sha256": "e4311045be8f8a263b57a128ffd28ab8b012f7c6bb315435bfa964c7a33e90f6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pybind11",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pybind11/Findpybind11.cmake",
+      "type": "RegularFile",
+      "bytes": 815,
+      "sha256": "69128b985f307b21ee6e6f8779c208242e4e2602fab87cb3bf3f7afa41aa762a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pybind11/build_config.json",
+      "type": "RegularFile",
+      "bytes": 580,
+      "sha256": "ff354b7583304a3136bd342c515a9dd4b0e0741d44152c4504631f84af6fbb36"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 3467,
+      "sha256": "bc9200ea24fc90760cd079c87f6a5860e06e4cd77056ece41abae0a9ed807599"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/Findpyside2.cmake",
+      "type": "RegularFile",
+      "bytes": 11094,
+      "sha256": "211f49d4a39fc898486deaccf0d46c6525062c9d83a60d669809ce37e9e9ee50"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/LICENSES.txt",
+      "type": "RegularFile",
+      "bytes": 67820,
+      "sha256": "b7adb668e4ccbfa6e0bb293092ebe708523d4a1c8b53d562b11d4fce022b4fa5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/README.md",
+      "type": "RegularFile",
+      "bytes": 80,
+      "sha256": "6ac2cf03723a8bdfefe2d94a52a2c8d44ccef2658950b210b8fb9a855a42cde7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/__init__.py",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 7473,
+      "sha256": "8ac6176c0a1f540ea4b1c5e3c38d379db82ab5e14d70247c4ac6840ef7e90193"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2779,
+      "sha256": "ee3a474f5be016cc7399659206dea185390c3f490611575ad505476d26854164"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/build_windows.bat",
+      "type": "RegularFile",
+      "bytes": 3858,
+      "sha256": "6a48be87e310e3f5ba07199e462c14d2eae052d1e4a0c298f6ec2d303d02e00a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/docker_build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 5216,
+      "sha256": "671a479bde3fac439b50fc241e814f3b643c92222783e4ec0e49658924425131"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/package_linux.sh",
+      "type": "RegularFile",
+      "bytes": 704,
+      "sha256": "a128bca5f5c418d072f84ea1233d4f3724734fe0847863e239a66bf66714f482"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/package_windows.bat",
+      "type": "RegularFile",
+      "bytes": 5469,
+      "sha256": "9445b6866808a285a7dcd827069653d5e2654b264cec153e4271428a7a7b84c7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/pyside2-5.15.2.1.patch",
+      "type": "RegularFile",
+      "bytes": 9505,
+      "sha256": "bfbac7bb0c352bc87636087cc47157c07de691e35aa490729e178ab6b2204e1d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/pyside2-tools.patch",
+      "type": "RegularFile",
+      "bytes": 1186,
+      "sha256": "a990d22bea7b146e6abd40acb97cf7ad17d99138a01703c783549c8a1c9d4ca1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside2/setup.py",
+      "type": "RegularFile",
+      "bytes": 1372,
+      "sha256": "501dc70438d24f97fea9f851258a18107ceb5e854f441144c874f9fee7a684dc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/Findpyside6.cmake",
+      "type": "RegularFile",
+      "bytes": 10443,
+      "sha256": "05f496ff41516cde8e16f6f9ee2800a5e75d9aff78e65967a2305714c16aa7a4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/__init__.py",
+      "type": "RegularFile",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2462,
+      "sha256": "a9c024476529c5058b9b413e270270c79843e6be7b9641dba90bf83c27b3b247"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 2443,
+      "sha256": "45c82fcc62f54bb2760ac82a51b881f698be16cf48b886725d28ec94c3eee145"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/build_mac.sh",
+      "type": "RegularFile",
+      "bytes": 2318,
+      "sha256": "b996afe9a511c850f8d055441fa16dd570841cc1aa3e8064a810ce4a4967501e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/build_windows.bat",
+      "type": "RegularFile",
+      "bytes": 2756,
+      "sha256": "aa2ccfe03f36d6b3462e965eb70a32ed3dd6cd138d292bc8fe8d7328aa2655bb"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/package_linux.sh",
+      "type": "RegularFile",
+      "bytes": 2618,
+      "sha256": "2218a3057dbe457182e4352447d4d160e1c1158d51be269a2d35732dac574e9a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/package_mac.sh",
+      "type": "RegularFile",
+      "bytes": 2313,
+      "sha256": "ac4433e317f3c0db0ca4f9f79ca61970c82b835fc9290b95fe7bc09af4862e83"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/package_windows.bat",
+      "type": "RegularFile",
+      "bytes": 2802,
+      "sha256": "ab4bcf38c4c6db963beb49d92ecb79c8060c3138ec9e6c1afc00ab6ab56bd685"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/pyside6.patch",
+      "type": "RegularFile",
+      "bytes": 3683,
+      "sha256": "f01588a94aec64f9adc63c8e0a460b53ba621bc3339240bfb8bce02b0fc7af61"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/pyside6/setup.py",
+      "type": "RegularFile",
+      "bytes": 1369,
+      "sha256": "8c580932999021f00a1324f61cc6b6e108fbe03b6dcd1af0bbe703aa5e6fda51"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 2223,
+      "sha256": "ac0cb8350595064ccc832656277086947d44fc3235da199ac6324e3e865a14b9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/FindPython.cmake.linux",
+      "type": "RegularFile",
+      "bytes": 391,
+      "sha256": "615b4df891981650483a9de83cf195f8afea7c4c6526062f7f366046dae186c9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 7033,
+      "sha256": "34b83344967c5ddacd598084abf7524856406231c11c25f57f498739fc237cf9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1937,
+      "sha256": "d068f450849364d59f692e52ad97c3a61adff196c9a1008db651ad8d24e093f6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/build_package_image.py",
+      "type": "RegularFile",
+      "bytes": 2127,
+      "sha256": "c858c54d98abca472bbb2da59309d6539da2eccd2685ef57a0b931742c06d703"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64/.gitignore",
+      "type": "RegularFile",
+      "bytes": 14,
+      "sha256": "ce6d798ed21623c04ddc5d8965b9580bdd8b38e7ff5e7379ce93bd88607b4b76"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64/FindPython.cmake",
+      "type": "RegularFile",
+      "bytes": 3153,
+      "sha256": "9f7c31ba8e0383924105033d7968ac6294efb572c750db6f3af53de0fd46a431"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 160,
+      "sha256": "b6248e33c8226209b32dc33da9eb1fa87a7d52d6674a892a030aae50ec6aa157"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64/make-python.sh",
+      "type": "RegularFile",
+      "bytes": 9492,
+      "sha256": "0dbe5203661e275fea7d0490e73f143128a9402df0100e5f0ba2367aa217c708"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64/open3d_patch.patch",
+      "type": "RegularFile",
+      "bytes": 2892,
+      "sha256": "601ba3ea1de4e190e2aca56e27f36f8445a686ce9c3fff95952d17df5ffc4379"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_arm64/open3d_python.patch",
+      "type": "RegularFile",
+      "bytes": 8089,
+      "sha256": "3f7bc20f38f2fd3905495a2ca30763a3d04c6824c79153d284c6226af4923d15"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64/.gitignore",
+      "type": "RegularFile",
+      "bytes": 14,
+      "sha256": "ce6d798ed21623c04ddc5d8965b9580bdd8b38e7ff5e7379ce93bd88607b4b76"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64/FindPython.cmake",
+      "type": "RegularFile",
+      "bytes": 3153,
+      "sha256": "9f7c31ba8e0383924105033d7968ac6294efb572c750db6f3af53de0fd46a431"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 157,
+      "sha256": "8f9cfd395f4c13a1efbdd7247e3becf2ba2f8b73767882320608816c930560c3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64/make-python.sh",
+      "type": "RegularFile",
+      "bytes": 8489,
+      "sha256": "826325ca95c2cdc7b4ab76733d97bd7b49c4b09d8cdc5a33ec919521cd31946e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64/open3d_patch.patch",
+      "type": "RegularFile",
+      "bytes": 2524,
+      "sha256": "f551e560d41bb63194cb1b859b7de68889439f7cfe3ea9002e30fb5beac882e2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/darwin_x64/open3d_python.patch",
+      "type": "RegularFile",
+      "bytes": 5743,
+      "sha256": "ec9318de8749416c0fc763b81214203259091a65616b74738379d92a705fcf05"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/docker_build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 5117,
+      "sha256": "a3644975c266f096d23106c33e7e62f435ad620e72dcd2c432f52bc6a3411c3b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/.gitignore",
+      "type": "RegularFile",
+      "bytes": 15,
+      "sha256": "d392b961224304b0df8ef2dd018240372ab2793e64c808f51f4b202c667286ae"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/FindPython.cmake",
+      "type": "RegularFile",
+      "bytes": 391,
+      "sha256": "615b4df891981650483a9de83cf195f8afea7c4c6526062f7f366046dae186c9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 163,
+      "sha256": "1163f229811e81fc9df563e1549e2bb089fbeceed344282963ccc81b1514c9e7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/make-python.sh",
+      "type": "RegularFile",
+      "bytes": 7366,
+      "sha256": "aa9930ab8747012d2da058d1f870e79673dd216332e72e9b5fa165cefe511cd0"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/open3d_bzip2.patch",
+      "type": "RegularFile",
+      "bytes": 339,
+      "sha256": "2dda33b1aa1bdb2ed5900cc537a31608f2ef19ad1661d03098ad5107b31f24a9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/python-config-version.cmake",
+      "type": "RegularFile",
+      "bytes": 1018,
+      "sha256": "38444836d487c322b4a2c342e8cf431234599b353dcb6193283ef08986080d48"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/linux_x64/python-config.cmake",
+      "type": "RegularFile",
+      "bytes": 3918,
+      "sha256": "000b4468254c91756b0ded779107b5f519ca530af4440149e25554039f5b9792"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/package-linux.sh",
+      "type": "RegularFile",
+      "bytes": 738,
+      "sha256": "4655b5ce18a1e215a437ec123413440b470b6d006e81781f8ecacdfa839247bb"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/quick_validate_python.py",
+      "type": "RegularFile",
+      "bytes": 576,
+      "sha256": "a9e06398ed1fa212990bdf9eebb246f649b809278b71379a0920f5e0b1ed8a85"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/test-linux.sh",
+      "type": "RegularFile",
+      "bytes": 966,
+      "sha256": "9cbbba079ab7b303010e9a0658f8851e924d1a2fe07d534a56c5e53c8081f9a1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/.gitignore",
+      "type": "RegularFile",
+      "bytes": 16,
+      "sha256": "bbf22f4e83ba597631119f3f59caabe0faa0d8a2260727dc8718ef6818ea64ec"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/FindPython.cmake",
+      "type": "RegularFile",
+      "bytes": 392,
+      "sha256": "dc3ee4c7c616e3e7419586d4f65a0fdfcffcfeee96b67b7f75ebfadfaf51d795"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 169,
+      "sha256": "a401592a6a55d57cf8fd38fd448fbd2020dae0e91cd93f785718773fdd777dde"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/build_python.bat",
+      "type": "RegularFile",
+      "bytes": 4931,
+      "sha256": "8abe9a9a4c8749166ada8389721aa95ea5e60a8ff59c7eb9148021fde7e81319"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/open3d_python.patch",
+      "type": "RegularFile",
+      "bytes": 2017,
+      "sha256": "188c88b9403bdf35466f4c559cf14f55305a55b3aef5161fd22ff76244a5e058"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/python-config-version.cmake",
+      "type": "RegularFile",
+      "bytes": 1018,
+      "sha256": "38444836d487c322b4a2c342e8cf431234599b353dcb6193283ef08986080d48"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/python/win_x64/python-config.cmake",
+      "type": "RegularFile",
+      "bytes": 3469,
+      "sha256": "5ba73f99bcdce81fbe18e14aa8c512eabe5215371ca111ec338e9aa625f72407"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/Dockerfile",
+      "type": "RegularFile",
+      "bytes": 4341,
+      "sha256": "ad054f00e79751f4ab1f069560df5eb9c1eea27582f6251f5bb481ab850613f3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/Findsdformat.cmake.template",
+      "type": "RegularFile",
+      "bytes": 7574,
+      "sha256": "fefffd633cce9459bfd3d02853e654bef0fa3a9a6da6dd5c9f0f4ae58c4b850a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/build-archlinux.sh",
+      "type": "RegularFile",
+      "bytes": 1506,
+      "sha256": "57261391063c594ac0ece608ed6581ff1c8ffd2af70ded6978291eac7c355fb7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/build-host-os.sh",
+      "type": "RegularFile",
+      "bytes": 706,
+      "sha256": "229e753bf938a98472375a67df2b9da6cc8d9a263ac2c25356227a712de612e9"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 4741,
+      "sha256": "a35ec7b3521ec89d585774bc8d8ba2459eb48e6e485d708cc73afc04bbd3eeb3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/build-ubuntu.sh",
+      "type": "RegularFile",
+      "bytes": 1657,
+      "sha256": "3070120b57b41323469232ec99ba26e8de8b79e9ab5671a2aaf549f081b098cf"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1398,
+      "sha256": "21be11c9c42d8e17f383754795fc29ba2ff2afc2cf4a594047ef08928f81060e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/docker_build_sdformat.sh",
+      "type": "RegularFile",
+      "bytes": 9232,
+      "sha256": "ef95aa27d104baea40bdf2664226eb76e5156baac150fcc457aef590311b02dd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/fortify.patch",
+      "type": "RegularFile",
+      "bytes": 1675,
+      "sha256": "60c37423a095e55d73818333fa32a6221187f99fe039562d70d377ca2201d4ae"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/install-linux.sh",
+      "type": "RegularFile",
+      "bytes": 2525,
+      "sha256": "908f88093d359ac1328457026d83e1fddf12acf32c1d5317e67fd5a683e34829"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/test-linux.sh",
+      "type": "RegularFile",
+      "bytes": 1164,
+      "sha256": "5b71c95c601bf2c371819fe652384cd00465563a3355f6a9fd5a096316431866"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 483,
+      "sha256": "0027681802945ffe20abc9be9557dbd90c1c2f7486bfec7f0979167a7cfd7410"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sdformat/test/test_sdformat.cpp",
+      "type": "RegularFile",
+      "bytes": 1350,
+      "sha256": "5450c3b544c052abc5544c07e10007be4e10df5a183602978d0255e1f7843a28"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/FindSQLite.cmake",
+      "type": "RegularFile",
+      "bytes": 1042,
+      "sha256": "547480cc70280cc839aedcbdc8101a0e1b737e57c974cf3178d62e8938bce8dd"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1283,
+      "sha256": "abc6283f82ec9883216b2288397de86fca4b7f7a82fcf163d1d230fb06bc1bc7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/build_unix_like.sh",
+      "type": "RegularFile",
+      "bytes": 858,
+      "sha256": "7f29c37ceb67eb89d3457953af83392bf03e64529b10b2cffa8f5f95d3ce4075"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/build_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 801,
+      "sha256": "f7a708f9f7db6ec9027c461c8729bc9247397c4106f206ff7c713923620ef355"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/copyright.txt",
+      "type": "RegularFile",
+      "bytes": 3682,
+      "sha256": "f2376b9555b986e551d2ff886aa421a3660eeada260718ebd3adf4763766e339"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/package_unix_like.sh",
+      "type": "RegularFile",
+      "bytes": 881,
+      "sha256": "d793b9388c2e0a7d20ca258ea0ab311561fbb2c755ae2605c70ab4ee6d9071d7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/sqlite/package_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 795,
+      "sha256": "e236b3f51ffb52e05ec12c40efad523995be4468708059bbef455e3f1773c815"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 4124,
+      "sha256": "62a31ded600ffff0a356ae34d606076d3025b12d2c152cb9843124a5c4a9727f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/Dockerfile.aarch64",
+      "type": "RegularFile",
+      "bytes": 1330,
+      "sha256": "1a8a2de32f97b0343e5703a634cf3c86fccbdac99ec3e09fa1ade7f67e4363aa"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/Dockerfile.x86_64",
+      "type": "RegularFile",
+      "bytes": 1037,
+      "sha256": "7076f95ec8b615f8214da5effe01ddef562918c8163f226e497609bf4ee1eb6b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/Findsquish-ccr.cmake",
+      "type": "RegularFile",
+      "bytes": 1577,
+      "sha256": "abb2ab5c454f1ba651b2a8492f0d366f4df694eb6be0f30b541129b7ba31381c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/LICENSE.txt",
+      "type": "RegularFile",
+      "bytes": 1551,
+      "sha256": "c0160e146ec5b3931c8741ba55b310b74ef095c47385fad8c5c821b4daa7ba34"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/build-linux.sh",
+      "type": "RegularFile",
+      "bytes": 4873,
+      "sha256": "ba28f02d2ab990f86fdad48d7d66a56f5489ca5535701464a219635ee4ff7fea"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/build-mac-arm64.sh",
+      "type": "RegularFile",
+      "bytes": 1255,
+      "sha256": "e1e8a72f219f9804afcddf328f5120835fcfaacabe558af250e28b406529361c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/build_config.json",
+      "type": "RegularFile",
+      "bytes": 2526,
+      "sha256": "fb3296f2b92de755371a632a6ca6d9ed37cd03867901b9e79fe318c54cd057ec"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/docker_build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 939,
+      "sha256": "6c1d614ea62b4819e8c3a82e2c3e0126dbf438c89f3400afa7951acdcd4532f7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/package-linux.sh",
+      "type": "RegularFile",
+      "bytes": 424,
+      "sha256": "7259472ce0eae18cf62420983dc962275d37a36e839f25cc773307da877ff48f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/squish-ccr-deb557d-mac-rev1.patch",
+      "type": "RegularFile",
+      "bytes": 69640,
+      "sha256": "86011ac6d66ec0a4582f65b6d536734a134cf3354a52dbdc03299d18b245228c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/squish-ccr/squish-ccr-deb557d-rev1.patch",
+      "type": "RegularFile",
+      "bytes": 69640,
+      "sha256": "86011ac6d66ec0a4582f65b6d536734a134cf3354a52dbdc03299d18b245228c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/COPYRIGHT",
+      "type": "RegularFile",
+      "bytes": 1146,
+      "sha256": "fbd6fed7938541d2c809c0826225fc85e551fdbfa8732b10f0c87e0847acafd7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/FindTIFF.cmake",
+      "type": "RegularFile",
+      "bytes": 3100,
+      "sha256": "b5e194c77d072ce5977b5b97a15e403de3501e4c7bd1459b0667e7e4a1d8e9c6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 174,
+      "sha256": "093337775cb1369e97e466b03e5cd39a45c3d916bab5eebc95a76f081da14625"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_config.json",
+      "type": "RegularFile",
+      "bytes": 4289,
+      "sha256": "b691c56a0393094d27c970eabbaa8fba7135bd51487af9d78deea969653adb61"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_tiff_android.cmd",
+      "type": "RegularFile",
+      "bytes": 1209,
+      "sha256": "42ac414066bac203523afe9571c5c6d75fd388b84357330227370113edb00081"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_tiff_ios.sh",
+      "type": "RegularFile",
+      "bytes": 1054,
+      "sha256": "b36a2ad5c114712663225bd92dbfcd31ec50fe6f189a5f2ba1bfcee56e4aeea8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_tiff_linux.sh",
+      "type": "RegularFile",
+      "bytes": 971,
+      "sha256": "9adef18300f25fb80f02bd29b0942d8d97fa30bef8c7dc82a8499ff14b7a3525"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_tiff_mac.sh",
+      "type": "RegularFile",
+      "bytes": 1011,
+      "sha256": "ef8dbb4cfb86a941acde9dd847dd32371046d8e8516389e7427a4f843e1881a3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/build_tiff_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 1090,
+      "sha256": "d87e0c0cfd4c7442785c73287857bf6947f0bdf5402536bd58e4522d87e3c933"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/install_tiff_android.cmd",
+      "type": "RegularFile",
+      "bytes": 976,
+      "sha256": "d6ffbeb025fab1b4b9dda1cb519479b8a1eca386f0700e157f75270f3f74dbb7"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/install_tiff_ios.sh",
+      "type": "RegularFile",
+      "bytes": 914,
+      "sha256": "0cf8da6685afc57a6584e0b07ab831c1fad818cf4d89fd79d2cd4b3776f81ace"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/install_tiff_linux.sh",
+      "type": "RegularFile",
+      "bytes": 897,
+      "sha256": "f389a3061f208d1b5c7b46d99daaa98b5c988b75bb60021385bc20e6cd785384"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/install_tiff_mac.sh",
+      "type": "RegularFile",
+      "bytes": 906,
+      "sha256": "dbfbe81013798cb2693b9d8fa9f63dfbc3280c9ccfc615235b66d81cf06e4630"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/install_tiff_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 982,
+      "sha256": "fc4d47c3df48da598ee5dbc14735c67768547063b69a57054f9750652c185eed"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/o3de_patch.patch",
+      "type": "RegularFile",
+      "bytes": 1908,
+      "sha256": "7d80df4a02a6b3ba8f27cd3d8554b39a3b3e3202fcd86378337ab453ec05ecd5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test/CMakeLists.txt",
+      "type": "RegularFile",
+      "bytes": 748,
+      "sha256": "79bc6eac64a9ed4a92d9e2a41fc8cf5a287339e789a8e6c7056f77346daa4ff5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test/test_tiff.c",
+      "type": "RegularFile",
+      "bytes": 533,
+      "sha256": "d51ccc71e60c138faa6b9da51242ef2e62dfc162c6e2dd61ab9808057be06d29"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test_tiff_android.cmd",
+      "type": "RegularFile",
+      "bytes": 954,
+      "sha256": "816b5d89b430c7c4dac7e6c5440dabb7eed9dc90846a341e1b6523c43341d62f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test_tiff_ios.sh",
+      "type": "RegularFile",
+      "bytes": 694,
+      "sha256": "7c0bfb359fcf90062d0bb436629d4dc46998406fd6ded8125e4154b865a0cb2a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test_tiff_linux.sh",
+      "type": "RegularFile",
+      "bytes": 508,
+      "sha256": "1e2ae37ed0127180fcf1038766280e1210c3ea2bbc502559bae74f271cbf235f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test_tiff_mac.sh",
+      "type": "RegularFile",
+      "bytes": 622,
+      "sha256": "c68d5514cffc7cce0c740414c67055a7157a98b3c2bbe11f2538cbe33598619c"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/tiff/test_tiff_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 731,
+      "sha256": "4fa4de81d5e66451b5b05c83cc84cec1efa4dad89ae81c3d8d3f2a594c6f0788"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/Dockerfile.linux",
+      "type": "RegularFile",
+      "bytes": 2184,
+      "sha256": "1b3eb950c2726552ed7abf117b2853e65fd1ad2b1b0341a80d2f72d47ed418f6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/Findvulkan-validationlayers.cmake",
+      "type": "RegularFile",
+      "bytes": 992,
+      "sha256": "b00fe0962f7b3aedb0e8c41db3af2eb57007bcdbd9d838b6317d27682516fe73"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/build_config.json",
+      "type": "RegularFile",
+      "bytes": 1951,
+      "sha256": "7280b38bd4007cbb325eb4f3916efd56eb87d9c8dfd639c75ef8c6caa9d3f782"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/build_linux.sh",
+      "type": "RegularFile",
+      "bytes": 2610,
+      "sha256": "644fb705f4f0395ac08a590dcc291db68da557846d9e2dbf48732b2c30cbb603"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/build_vulkan_validation_linux.sh",
+      "type": "RegularFile",
+      "bytes": 1023,
+      "sha256": "ba1e4cf7faba916d86e9b9aa8ae12f53406240b2aad39887ad7b4d9045221ba3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/build_vulkan_validation_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 1475,
+      "sha256": "937e05373a1a140e58b8719bbc17a75bfbe386c86074cddf146647471031dbf3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/install_vulkan_validation_linux.sh",
+      "type": "RegularFile",
+      "bytes": 502,
+      "sha256": "4ab9e982fc059759f1eb7ffd6c1830778106944f7d668c8817eb6dabeeb5aef1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/vulkan-validationlayers/install_vulkan_validation_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 788,
+      "sha256": "9b534d24826485da7ed811057567cc9549398990716e765f7ef3560d754ef0ce"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/Findxxhash.cmake",
+      "type": "RegularFile",
+      "bytes": 671,
+      "sha256": "1b1d318cb7c6d3034c171bea275e4d91cd1598e069084a514ca324650310c487"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/PackageInfo.json",
+      "type": "RegularFile",
+      "bytes": 193,
+      "sha256": "4ab8583c7406b90b338e369fa6646f44dc8790a84ec9667b166cfc29408f314e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/xxhash",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/xxhash/include",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/xxhash/include/xxhash",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/xxhash/include/xxhash/LICENSE.txt",
+      "type": "RegularFile",
+      "bytes": 2228,
+      "sha256": "9da63520e9293d82c4b1613be5c84058cadb82b02f5972179bad13731d589910"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/xxhash/include/xxhash/xxh3.h",
+      "type": "RegularFile",
+      "bytes": 109234,
+      "sha256": "a8738f1d14feddac358b1722913222998867a6d45da4e2d5d3a3ea4ebad0812a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/xxhash-multiplatform/xxhash/include/xxhash/xxhash.h",
+      "type": "RegularFile",
+      "bytes": 74772,
+      "sha256": "3f3e98b837ead9b0607d589f3df6ddf720cb7dd3a9b0abe9276a1b1b23388f6b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/.gitattributes",
+      "type": "RegularFile",
+      "bytes": 34,
+      "sha256": "44a9f0d6b84f1266267e4c498acaf7644529e8f7f05efc84c47318c47a96a5d1"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/FindZLIB.cmake",
+      "type": "RegularFile",
+      "bytes": 2823,
+      "sha256": "9cea6175cecc7377aba547c607e5ebd8dba81b3816358d4431416a5d4e16c20b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/FindZLIB_1_3_1.cmake",
+      "type": "RegularFile",
+      "bytes": 2820,
+      "sha256": "0ac8c588f2a643712f4847f78108e75b7884e267cda947d3176ebde4592f7c35"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/LICENSE",
+      "type": "RegularFile",
+      "bytes": 1531,
+      "sha256": "464352f7afcece608041241e20b28e8006ae170446898e9713fb076323d1487d"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/build_config.json",
+      "type": "RegularFile",
+      "bytes": 3138,
+      "sha256": "184f8b745f2d32644c006821a8908e8259397b2ecc3ba29967e0a9e6cd908b1f"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/build_zlib_android.cmd",
+      "type": "RegularFile",
+      "bytes": 753,
+      "sha256": "cc655414db0a50b839b1244dca6511a310ced360924ceee44fb90c1a5c63158e"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/build_zlib_ios.sh",
+      "type": "RegularFile",
+      "bytes": 574,
+      "sha256": "0e19661e9eaa2c7b9a7a90ef8bd64701ebe066580e467b20da7fa27d67ebbbfc"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/build_zlib_linux.sh",
+      "type": "RegularFile",
+      "bytes": 886,
+      "sha256": "9a16a662c382e8bf2ec34fc57fdc96bd126d36e1ab16c9b542326ef9851b38ff"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/build_zlib_mac.sh",
+      "type": "RegularFile",
+      "bytes": 574,
+      "sha256": "a98076ca35dbcb56eb89142d8ad6666620d543eeb95041070299c247aae4d494"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/build_zlib_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 482,
+      "sha256": "317be3db4d28fe06e26f150647f52c417f86fee96e44eb6da533daaa1a5df694"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/emscripten-alias-fix.patch",
+      "type": "RegularFile",
+      "bytes": 509,
+      "sha256": "7ab2605a3da6abbac15ff3eeec41e2d76869c0a0df83260d5659eda1a19169f8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/install_zlib_android.cmd",
+      "type": "RegularFile",
+      "bytes": 736,
+      "sha256": "cacee5462e1eae7693b42e6401cb4d267250c0a819bc4b529fb281066f63c992"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/install_zlib_ios.sh",
+      "type": "RegularFile",
+      "bytes": 739,
+      "sha256": "da830113b46d7fb66df5a042792c9a55b8eed420e54617974e7887861612aa31"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/install_zlib_linux.sh",
+      "type": "RegularFile",
+      "bytes": 721,
+      "sha256": "3493fe328e2d7ba77b5203fc8db33a267c2b4c5a1fe479a5f01408395f814c8a"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/install_zlib_mac.sh",
+      "type": "RegularFile",
+      "bytes": 729,
+      "sha256": "3643551b88605d03fc8bb18252931dff8f9a9c3dd475dcda43895e959593934b"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zlib/install_zlib_windows.cmd",
+      "type": "RegularFile",
+      "bytes": 760,
+      "sha256": "500cbdfeee3d104b45fadb0edfcd6e2ee58da2ea1a101a1992544a266308bef4"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zstd",
+      "type": "Directory",
+      "bytes": 0,
+      "sha256": null
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zstd/Findzstd.cmake.mac",
+      "type": "RegularFile",
+      "bytes": 819,
+      "sha256": "4dd28e3843660965549d53bc4e689691051e1cd0a8fc61aa9b419cdb921909f2"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zstd/build_config.json",
+      "type": "RegularFile",
+      "bytes": 693,
+      "sha256": "aea8d4dce451565ab30aaafb7a1ef25392efc98c2110f4ca768e54d5f2acce96"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zstd/build_zstd_mac.sh",
+      "type": "RegularFile",
+      "bytes": 751,
+      "sha256": "6cfdcbd2959a01363971873c2ba3dc19fa1c7303709f942c66fecaa78a0f0531"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package-system/zstd/install_zstd_mac.sh",
+      "type": "RegularFile",
+      "bytes": 423,
+      "sha256": "223b5e57186ab4cc4b6d04a3ae00bee82cc5d5eed05d068315b46513b339cea5"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package.bat",
+      "type": "RegularFile",
+      "bytes": 533,
+      "sha256": "48c4f0c922b061c54ae483ab1eb120d3ebd752d3fb17fbacc2519920613f48c8"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package.sh",
+      "type": "RegularFile",
+      "bytes": 650,
+      "sha256": "d83df6c368a77a8b3d5abc3f8c9123eb6af50bd5f450056670ecbb79d80b9b15"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package_build_list_host_darwin-arm64.json",
+      "type": "RegularFile",
+      "bytes": 8096,
+      "sha256": "bfc98596bf01f28f88aec922d843ebd16f9048149fa841a2a34639db08c47489"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package_build_list_host_darwin.json",
+      "type": "RegularFile",
+      "bytes": 11746,
+      "sha256": "1c33e5438f3ff81326b01c9eb64a5af3836a9e7889e9b8cc10267c734585d740"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package_build_list_host_linux-aarch64.json",
+      "type": "RegularFile",
+      "bytes": 10409,
+      "sha256": "00b5ee69e0034d91ab79aeb49a3a81f19ac629a45d77287357c2d96a0f3193c3"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package_build_list_host_linux.json",
+      "type": "RegularFile",
+      "bytes": 12510,
+      "sha256": "5b3139a31e6efe66c93a3a09b9f3fe04943c7509830780ee91447801b2ea48d6"
+    },
+    {
+      "path": "3p-package-source-70f0b7b5257bf7cf935bf1cfd270e1b53ccead18/package_build_list_host_windows.json",
+      "type": "RegularFile",
+      "bytes": 16827,
+      "sha256": "eb1eeb50f2ecabe28d6ecc699efb35c8fbd843e7823fadeff7c0759567f28285"
+    }
+  ]
+}

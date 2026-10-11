@@ -1,0 +1,7 @@
+[
+  "--test-dir",
+  "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/openexr-consumer-rev2",
+  "-C",
+  "Debug",
+  "--output-on-failure"
+]

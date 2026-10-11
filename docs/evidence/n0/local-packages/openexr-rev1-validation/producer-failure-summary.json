@@ -1,0 +1,20 @@
+{
+  "nativeExit": 1,
+  "elapsed": "142,720s",
+  "firstFailure": "MSVC C1189 in vcruntime_c11_stdatomic.h: C atomics require C11 or later",
+  "target": "OpenEXRCore.vcxproj",
+  "configuration": "Debug",
+  "producerFatal": "JE local OpenEXR Debug build failed (1); outputs retained",
+  "sourceOpenExrArchiveSha256": "5ed17a3be8ae029e26a7314a2d41e6febc2102cef1eafb1ffe6c0550ea1993be",
+  "sourceImathArchiveSha256": "52aeb73f94911a4e107d0a2870ec98d7eb9d3907d25238b12e496c71a5fca4a3",
+  "freezeCount": 1182,
+  "freezeAllMatch": true,
+  "zlibInputCount": 4,
+  "zlibInputsMatch": true,
+  "partialOutputPreserved": true,
+  "packageArchiveProduced": false,
+  "stdout": "producer.stdout.log",
+  "stderr": "producer.stderr.log",
+  "consumerAndGuards": "NOT RUN because producer failed",
+  "buildOutputRetained": true
+}

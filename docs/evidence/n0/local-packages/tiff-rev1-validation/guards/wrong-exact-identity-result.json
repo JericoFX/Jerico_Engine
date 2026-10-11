@@ -1,0 +1,10 @@
+{
+  "case": "wrong-exact-tiff-4.3",
+  "exitCode": 1,
+  "elapsedSeconds": 1.71,
+  "diagnosticMatched": true,
+  "expectedVersion": "4.3 EXACT",
+  "actualVersion": "4.2.0.15",
+  "binaryCompilationAttempted": false,
+  "buildDirectoryExists": true
+}
