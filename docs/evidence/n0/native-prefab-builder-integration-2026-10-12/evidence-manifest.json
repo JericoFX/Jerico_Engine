@@ -1,0 +1,282 @@
+[
+  {
+    "path": "integrated-freeze-rev1.json",
+    "bytes": 11730,
+    "sha256": "20C03FD7ED34E65C2E4264B9C387F8FD1F18D6E82A6E3758F54BDE42264125A9"
+  },
+  {
+    "path": "integrated-freeze-rev2.json",
+    "bytes": 11730,
+    "sha256": "CA59514237ADC56DA3D87417B37CC221F2DD51E95268BA09DAAFA29EADF84A45"
+  },
+  {
+    "path": "obsolete-products-removal.json",
+    "bytes": 927,
+    "sha256": "DB86767693B9EDC67D36288A4CF75471FDCD6DD723FBAB3747A200D502AB58BE"
+  },
+  {
+    "path": "removed-source-paths.json",
+    "bytes": 1587,
+    "sha256": "4822B7EF775E3C1B2C34BA0633B8414400C9B52D0CDCE3E282EF72DCBBA1ADCD"
+  },
+  {
+    "path": "baseline-luna/activation-authority-autoload-addendum.json",
+    "bytes": 1858,
+    "sha256": "0EA7A9B646A30CA36DFE73C5A6081383A4E7E538B32D42E8D20D60B8D407F5CF"
+  },
+  {
+    "path": "baseline-luna/activation-authority-current-source.json",
+    "bytes": 2971,
+    "sha256": "F78CE1FF9EDB6481E8CC8D52DD65B361FD2FA97140BE5332BA91AAC6A7CBA9E8"
+  },
+  {
+    "path": "baseline-luna/baseline.json",
+    "bytes": 20322,
+    "sha256": "05C273F554E45AC76475A4C7406FC0B46547590A2829B1D3EA6A1F035255DE1F"
+  },
+  {
+    "path": "dx12-attempt1/Game.log",
+    "bytes": 2880,
+    "sha256": "40753D9C873A1BED806C24944AD7D027A574EE9A887802F7FE2141ADD645DC1B"
+  },
+  {
+    "path": "dx12-attempt1/launch.json",
+    "bytes": 758,
+    "sha256": "853C1481BCB590124565CA7C2B098A00D87A9176ABFA953B7EEE2FF5C55B3AB7"
+  },
+  {
+    "path": "dx12-attempt1/loaded-modules.json",
+    "bytes": 20504,
+    "sha256": "0CE25E2A0FA1E780CC41F2519FD0500671ADCB321FC9AC0ED520687108DF07B9"
+  },
+  {
+    "path": "dx12-attempt1/network-result.json",
+    "bytes": 275,
+    "sha256": "448BF51E48472A663B7A5A80DD93239B6A4C1ECFBD48E11596EF039FD6FDC9EE"
+  },
+  {
+    "path": "dx12-attempt1/runtime.jpg",
+    "bytes": 95408,
+    "sha256": "76C68DC8BBB08C039314F2BF5372EC79E90779548089204F2676173F8BCBFAA1"
+  },
+  {
+    "path": "dx12-attempt1/startup-samples.json",
+    "bytes": 3251,
+    "sha256": "C94CE3E55255814B46713F5351BAC745B497CD1A266A72D8649E84E1188375ED"
+  },
+  {
+    "path": "dx12-attempt1/visual-result.json",
+    "bytes": 182,
+    "sha256": "5BF326D44515C18FF9658CA7A553B0A1889FB411B91FAE098E522FF88FFEA2D7"
+  },
+  {
+    "path": "editor-vulkan-attempt1/after-undo-save.jpg",
+    "bytes": 163555,
+    "sha256": "EC201B37FD3D86A31F78CFFE2392DA6CCDB92134C2F08B96668AC095FEAADA10"
+  },
+  {
+    "path": "editor-vulkan-attempt1/Editor.log",
+    "bytes": 6119,
+    "sha256": "5C0C91EBFA97B110C83AE2E75BB595160C07AB3180A846555B1D536834F47801"
+  },
+  {
+    "path": "editor-vulkan-attempt1/launch.json",
+    "bytes": 472,
+    "sha256": "4879C90CFB26E9E5655DD13D20E6C7B560F66E67B833ADC625A334C2F4C63FA9"
+  },
+  {
+    "path": "editor-vulkan-attempt1/loaded-modules.json",
+    "bytes": 30088,
+    "sha256": "706500EBD1D17C5883908881A0046913696D9C1A178BA1CFE1EAD6702827812B"
+  },
+  {
+    "path": "editor-vulkan-attempt1/procedural-prefab-instantiated.jpg",
+    "bytes": 192333,
+    "sha256": "E950E98C467DD1578333F64A90B7788FC0ACE872045A7499AB57DFEB8B5730B4"
+  },
+  {
+    "path": "editor-vulkan-attempt1/result.json",
+    "bytes": 524,
+    "sha256": "EF9929E76ED6FD9A530C7D8D134EF8F394E42B9B26B4217BD9949927B2050D77"
+  },
+  {
+    "path": "editor-vulkan-attempt1/scene-reopened.jpg",
+    "bytes": 157595,
+    "sha256": "F0CD2299F449528B2B1BFB4F6C4A301FE4B41485AD64A519A9E2F8E7EF669272"
+  },
+  {
+    "path": "native-attempt2/build-result.json",
+    "bytes": 220,
+    "sha256": "4FF2F19BFDDD6862A0AA7D70F4A7D34AD8992FEBEE289F71659CFD46A0A7AE32"
+  },
+  {
+    "path": "native-attempt2/build.stdout.txt",
+    "bytes": 21140,
+    "sha256": "2572356ACD9FE5484E72B7FE509D64B3CF08C70EDE5CBB1216EA0B5CDEC39F9F"
+  },
+  {
+    "path": "native-attempt2/configure-result.json",
+    "bytes": 227,
+    "sha256": "547A6AB342C4D9223E0EB734278B45A9060FE92AE1596B1CD5A6AB2E126BA128"
+  },
+  {
+    "path": "native-attempt2/current-product-registry-scan.json",
+    "bytes": 2707,
+    "sha256": "53BD2498CA665C08054DE2C6EB6D9D0425BC4D77D8DB3088FA9E95C742D91E3A"
+  },
+  {
+    "path": "native-attempt3/AZ_SerializeContextTools.Tests.xml",
+    "bytes": 641,
+    "sha256": "69698F0D199E0FADB34008BF36DB73922A86B6106904740B246A6D416BE716CE"
+  },
+  {
+    "path": "native-attempt3/binary-baseline-comparison.json",
+    "bytes": 8513,
+    "sha256": "902463D0854DAE70572B7EBF652D4FFB5A4996EC15DAE06C5DB9BCB0DD627442"
+  },
+  {
+    "path": "native-attempt3/build-result.json",
+    "bytes": 221,
+    "sha256": "743F8EA11B98317A9E0929D3093C750F1FCA98AE5E7B76F9606C69143B59DB3D"
+  },
+  {
+    "path": "native-attempt3/build.stdout.txt",
+    "bytes": 111474,
+    "sha256": "4D0094CA12A94C9CEC85AE4FF16C8727F92FAC674C68045C9A2ADA703CE14DD6"
+  },
+  {
+    "path": "native-attempt3/ctest-result.json",
+    "bytes": 217,
+    "sha256": "A263CFCF6EAE5C36B6C8C9C40BB0C33AFEBD8615E792C340BDEC70C45B0FDD08"
+  },
+  {
+    "path": "native-attempt3/ctest.stdout.txt",
+    "bytes": 715,
+    "sha256": "F52C1CA9491A436D4461219063FEF4F826C80B97A07A03F350BD3B817CF69110"
+  },
+  {
+    "path": "native-attempt3/JE_PrefabBuilder.Tests.xml",
+    "bytes": 7675,
+    "sha256": "46150D65CA8D8A6C23A41C5471F18A4BC81F155BB1104B8FA7B45E1A32A8FE33"
+  },
+  {
+    "path": "native-attempt3/junit-summary.json",
+    "bytes": 2188,
+    "sha256": "32BF48F59EBA8E5B8E1425E5F6B1AA9A2FBD80D83CBCD20A311CBBDB138E6431"
+  },
+  {
+    "path": "native-attempt3/LastTest.log",
+    "bytes": 26499,
+    "sha256": "14611E38BBD525BF48B370CF6542B3553BF846EAA258DBCB090C8B07AFE23FF1"
+  },
+  {
+    "path": "native-attempt3/Legacy_EditorLib.Tests.xml",
+    "bytes": 24869,
+    "sha256": "A43252E549BD45A0D29D9D9F7CBD80E7C90C011096F3AB4D0E0973930AF7D88A"
+  },
+  {
+    "path": "native-attempt3/pe-imports-summary.json",
+    "bytes": 1518,
+    "sha256": "E0787F9F1E1D1C534EA242109F285A725BDAF55D96AB861416E2B80C4E15A270"
+  },
+  {
+    "path": "native-attempt3/postflight-registry-corrected.json",
+    "bytes": 5809,
+    "sha256": "852040617971B200ED281E616B9F4188944096A431A9DA9349CB7E85C7D7FC6C"
+  },
+  {
+    "path": "native-attempt3/PrefabBuilder.dumpbin.stdout.txt",
+    "bytes": 6502,
+    "sha256": "561F3609F74992A677EC2991AE625247B3FBC273DE0440B4E30D19B3DCA5F2AF"
+  },
+  {
+    "path": "native-attempt3/validation-summary.json",
+    "bytes": 3346,
+    "sha256": "AD43B756E55E58009C027926C58C0BE42ACB2F4E047459A31EA33B79527BBBE8"
+  },
+  {
+    "path": "parent/content-baseline.json",
+    "bytes": 1245,
+    "sha256": "608624B8D38BDA06C8660BF69DA7806CFD8E7167F0E9AE7E33A84F1943180C64"
+  },
+  {
+    "path": "parent/procedural-fixture.json",
+    "bytes": 615,
+    "sha256": "345037BF17A5E1C75C92DD8A5D669642BC7601FE6CFB0A9F76A4A02572742590"
+  },
+  {
+    "path": "parent/reprocess-prefabs.txt",
+    "bytes": 313,
+    "sha256": "CC24A6CE1593292982C83B1C99C88CE36DCABB3F5CDC4B057FEEFC64A9F340B9"
+  },
+  {
+    "path": "recook-attempt1/close-result.json",
+    "bytes": 397,
+    "sha256": "D623989086DA875F7336C25C1A30A48D685C4D3EF67ABC50DC3D496976169ABB"
+  },
+  {
+    "path": "recook-attempt1/launch.json",
+    "bytes": 799,
+    "sha256": "88F61C017980481FEC04D282EB519AAC75A581BC8DD5A8CCC0FFFCFA5E0D4959"
+  },
+  {
+    "path": "recook-attempt1/loaded-modules.json",
+    "bytes": 267597,
+    "sha256": "BA0D0CC78E144662A74F108C1AA496A835E4459ECDC49C4BB0366D8927479B42"
+  },
+  {
+    "path": "recook-attempt1/products.json",
+    "bytes": 7229,
+    "sha256": "039E4EC0C0B7F4105AE7657B6A81E93C35662E22ED686FD0C8D16A5F88D857F7"
+  },
+  {
+    "path": "recook-attempt1/scene-hashes.json",
+    "bytes": 1679,
+    "sha256": "3A4961A893ACB2E73BB01FB2D4FC3B915C0C062BEB25612D82B6D03953FBB828"
+  },
+  {
+    "path": "recook-attempt1/stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "recook-attempt1/stdout.log",
+    "bytes": 82716,
+    "sha256": "3EEAA8D3EF7606F642F578ACB177F192F6B6688EDF851563424B63E18FD51642"
+  },
+  {
+    "path": "vulkan-attempt1/Game.log",
+    "bytes": 2882,
+    "sha256": "63FB1616D4D9DB5BEA89C7624BD168E08AD9405D880EE37CBA2652430417CC5D"
+  },
+  {
+    "path": "vulkan-attempt1/launch.json",
+    "bytes": 760,
+    "sha256": "1C29B0564559B28EC945F731B4638EC146550ED387313F852F0A0E4CD1BAA108"
+  },
+  {
+    "path": "vulkan-attempt1/loaded-modules.json",
+    "bytes": 20326,
+    "sha256": "0DBBAA68B47B99455BAA1D040A7CE63FD0A1EB5DFA428755FE665AF6A973E847"
+  },
+  {
+    "path": "vulkan-attempt1/network-result.json",
+    "bytes": 275,
+    "sha256": "25A99C64EB47728DA7987A9FA145A6A8C13C01E79646EF9032BE983426BD5E73"
+  },
+  {
+    "path": "vulkan-attempt1/runtime.jpg",
+    "bytes": 95780,
+    "sha256": "601A34AB3019B852AA188339A8C054373937F86168B8DFDE6FF3FABE56B36560"
+  },
+  {
+    "path": "vulkan-attempt1/startup-samples.json",
+    "bytes": 3253,
+    "sha256": "0F56ADF75C165B8F1584D6AA240EF516AC92D48A2E6623E95685BC5B3B538EE3"
+  },
+  {
+    "path": "vulkan-attempt1/visual-result.json",
+    "bytes": 182,
+    "sha256": "0C0FCA9F8BBDBEC0AB13D8BDFDC27DBE57CF6C993244E929BB04D423CE5B5772"
+  }
+]

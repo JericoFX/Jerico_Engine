@@ -6,4 +6,5 @@
 #
 #
 
-add_subdirectory(PrefabBuilder)
+# Historical entry only; implementation and registration are composed natively.
+message(FATAL_ERROR "PrefabBuilder is absorbed into JE::PrefabBuilder; remove its Gem activation.")

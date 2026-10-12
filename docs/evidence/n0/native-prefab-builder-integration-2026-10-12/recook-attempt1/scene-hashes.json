@@ -1,0 +1,34 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+    "bytes": 349143,
+    "lastWriteTimeUtc": "2026-10-12T00:15:02.6425731Z",
+    "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+    "beforeSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+    "unchanged": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+    "bytes": 349567,
+    "lastWriteTimeUtc": "2026-10-12T09:21:02.2324577Z",
+    "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+    "beforeSha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+    "unchanged": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\levels\\jeeditorfixture\\jeeditorfixture.spawnable",
+    "bytes": 72509,
+    "lastWriteTimeUtc": "2026-10-12T10:00:46.1170514Z",
+    "sha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+    "beforeSha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+    "unchanged": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\levels\\jenativeintegration\\jenativeintegration.spawnable",
+    "bytes": 72509,
+    "lastWriteTimeUtc": "2026-10-12T10:00:46.3257644Z",
+    "sha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+    "beforeSha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+    "unchanged": true
+  }
+]

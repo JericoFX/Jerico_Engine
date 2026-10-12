@@ -1,0 +1,49 @@
+{
+  "capturedUtc": "2026-10-12T10:00:16.5750993Z",
+  "ctestExit": 0,
+  "suites": [
+    {
+      "suite": "JE::PrefabBuilder.Tests.main::TEST_RUN",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_PrefabBuilder.Tests.xml",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\JE_PrefabBuilder.Tests.xml",
+      "caseCount": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 7675,
+      "sha256": "46150D65CA8D8A6C23A41C5471F18A4BC81F155BB1104B8FA7B45E1A32A8FE33"
+    },
+    {
+      "suite": "Legacy::EditorLib.Tests.main::TEST_RUN",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Legacy_EditorLib.Tests.xml",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\Legacy_EditorLib.Tests.xml",
+      "caseCount": 72,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 24869,
+      "sha256": "A43252E549BD45A0D29D9D9F7CBD80E7C90C011096F3AB4D0E0973930AF7D88A"
+    },
+    {
+      "suite": "AZ::SerializeContextTools.Tests.main::TEST_RUN",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\AZ_SerializeContextTools.Tests.xml",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\AZ_SerializeContextTools.Tests.xml",
+      "caseCount": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "bytes": 641,
+      "sha256": "69698F0D199E0FADB34008BF36DB73922A86B6106904740B246A6D416BE716CE"
+    }
+  ],
+  "totalCases": 95.0,
+  "totalFailures": 0.0,
+  "totalErrors": 0.0,
+  "totalSkipped": 0.0,
+  "lastTest": {
+    "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\LastTest.log",
+    "bytes": 26499,
+    "sha256": "14611E38BBD525BF48B370CF6542B3553BF846EAA258DBCB090C8B07AFE23FF1"
+  },
+  "ctestOutputSha256": "F52C1CA9491A436D4461219063FEF4F826C80B97A07A03F350BD3B817CF69110"
+}

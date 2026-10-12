@@ -1,0 +1,350 @@
+Start testing: Oct 12 06:59 Hora estándar de Montevideo
+----------------------------------------------------------
+18/103 Testing: Legacy::EditorLib.Tests.main::TEST_RUN
+18/103 Test: Legacy::EditorLib.Tests.main::TEST_RUN
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe" "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll" "AzRunUnitTests" "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Legacy_EditorLib.Tests.xml" "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Code/Editor
+"Legacy::EditorLib.Tests.main::TEST_RUN" start time: Oct 12 06:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Code\Editor
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 72 tests from 19 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from ViewportTitleDlgPythonBindingsFixture
+[ RUN      ] ViewportTitleDlgPythonBindingsFixture.ViewportTitleDlgCommands_ApiExists
+[       OK ] ViewportTitleDlgPythonBindingsFixture.ViewportTitleDlgCommands_ApiExists (760 ms)
+[----------] 1 test from ViewportTitleDlgPythonBindingsFixture (760 ms total)
+
+[----------] 1 test from DisplaySettingsPythonBindingsFixture
+[ RUN      ] DisplaySettingsPythonBindingsFixture.DisplaySettingsEditorCommands_ApiExists
+[       OK ] DisplaySettingsPythonBindingsFixture.DisplaySettingsEditorCommands_ApiExists (120 ms)
+[----------] 1 test from DisplaySettingsPythonBindingsFixture (120 ms total)
+
+[----------] 6 tests from DisplaySettingsComponentFixture
+[ RUN      ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ApiExists
+[       OK ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ApiExists (121 ms)
+[ RUN      ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToFlagsAllUnset
+[       OK ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToFlagsAllUnset (119 ms)
+[ RUN      ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToFlagsAllSet
+[       OK ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToFlagsAllSet (118 ms)
+[ RUN      ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToSettingsAllSet
+[       OK ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToSettingsAllSet (118 ms)
+[ RUN      ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToSettingsAllUnset
+[       OK ] DisplaySettingsComponentFixture.DisplaySettingsComponent_ConvertToSettingsAllUnset (118 ms)
+[ RUN      ] DisplaySettingsComponentFixture.DisplaySettingsState_ToString
+[       OK ] DisplaySettingsComponentFixture.DisplaySettingsState_ToString (116 ms)
+[----------] 6 tests from DisplaySettingsComponentFixture (714 ms total)
+
+[----------] 4 tests from ViewportManipulatorControllerFixture
+[ RUN      ] ViewportManipulatorControllerFixture.AnEventIsNotPropagatedToTheViewportWhenAManipulatorHandlesItFirst
+[       OK ] ViewportManipulatorControllerFixture.AnEventIsNotPropagatedToTheViewportWhenAManipulatorHandlesItFirst (2 ms)
+[ RUN      ] ViewportManipulatorControllerFixture.ChangingFocusDoesNotClearInput
+[       OK ] ViewportManipulatorControllerFixture.ChangingFocusDoesNotClearInput (203 ms)
+[ RUN      ] ViewportManipulatorControllerFixture.ApplicationStateChangeDoesClearInput
+[       OK ] ViewportManipulatorControllerFixture.ApplicationStateChangeDoesClearInput (16 ms)
+[ RUN      ] ViewportManipulatorControllerFixture.DoubleClickIsNotRegisteredIfMouseDeltaHasMovedMoreThanDeadzoneInClickInterval
+[       OK ] ViewportManipulatorControllerFixture.DoubleClickIsNotRegisteredIfMouseDeltaHasMovedMoreThanDeadzoneInClickInterval (2 ms)
+[----------] 4 tests from ViewportManipulatorControllerFixture (225 ms total)
+
+[----------] 6 tests from ModularViewportCameraControllerFixture
+[ RUN      ] ModularViewportCameraControllerFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithVaryingDeltaTime
+[       OK ] ModularViewportCameraControllerFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithVaryingDeltaTime (76 ms)
+[ RUN      ] ModularViewportCameraControllerFixture.MouseMovementOrientatesCameraWhenCursorIsCaptured
+[       OK ] ModularViewportCameraControllerFixture.MouseMovementOrientatesCameraWhenCursorIsCaptured (3 ms)
+[ RUN      ] ModularViewportCameraControllerFixture.CameraDoesNotContinueToRotateGivenNoInputWhenCaptured
+[       OK ] ModularViewportCameraControllerFixture.CameraDoesNotContinueToRotateGivenNoInputWhenCaptured (1 ms)
+[ RUN      ] ModularViewportCameraControllerFixture.CameraDoesNotStutterAfterWidgetIsMoved
+[       OK ] ModularViewportCameraControllerFixture.CameraDoesNotStutterAfterWidgetIsMoved (1 ms)
+[ RUN      ] ModularViewportCameraControllerFixture.CameraModifersAreDetectedWhenViewportIsNotInFocus
+[       OK ] ModularViewportCameraControllerFixture.CameraModifersAreDetectedWhenViewportIsNotInFocus (1 ms)
+[ RUN      ] ModularViewportCameraControllerFixture.CameraSystemStopsMovingWhenViewportLosesFocus
+[       OK ] ModularViewportCameraControllerFixture.CameraSystemStopsMovingWhenViewportLosesFocus (22 ms)
+[----------] 6 tests from ModularViewportCameraControllerFixture (105 ms total)
+
+[----------] 18 tests from EditorCameraFixture
+[ RUN      ] EditorCameraFixture.ModularViewportCameraControllerReferenceFrameUpdatedWhenViewportEntityisChanged
+[       OK ] EditorCameraFixture.ModularViewportCameraControllerReferenceFrameUpdatedWhenViewportEntityisChanged (200 ms)
+[ RUN      ] EditorCameraFixture.TrackingTransformIsTrueAfterTransformIsTracked
+[       OK ] EditorCameraFixture.TrackingTransformIsTrueAfterTransformIsTracked (90 ms)
+[ RUN      ] EditorCameraFixture.TrackingTransformIsFalseAfterTransformIsStoppedBeingTracked
+[       OK ] EditorCameraFixture.TrackingTransformIsFalseAfterTransformIsStoppedBeingTracked (92 ms)
+[ RUN      ] EditorCameraFixture.InterpolateToTransform
+[       OK ] EditorCameraFixture.InterpolateToTransform (88 ms)
+[ RUN      ] EditorCameraFixture.InterpolateToTransformWithReferenceSpaceSet
+[       OK ] EditorCameraFixture.InterpolateToTransformWithReferenceSpaceSet (89 ms)
+[ RUN      ] EditorCameraFixture.BeginningCameraInterpolationReturnsTrue
+[       OK ] EditorCameraFixture.BeginningCameraInterpolationReturnsTrue (89 ms)
+[ RUN      ] EditorCameraFixture.CameraInterpolationIsNotInterruptedIfGoingToTheSameTransform
+[       OK ] EditorCameraFixture.CameraInterpolationIsNotInterruptedIfGoingToTheSameTransform (92 ms)
+[ RUN      ] EditorCameraFixture.CameraInterpolationCanBeInterruptedIfGoingToDifferentTransform
+[       OK ] EditorCameraFixture.CameraInterpolationCanBeInterruptedIfGoingToDifferentTransform (92 ms)
+[ RUN      ] EditorCameraFixture.CameraInterpolationCanBeginAfterAnInterpolationCompletes
+[       OK ] EditorCameraFixture.CameraInterpolationCanBeginAfterAnInterpolationCompletes (90 ms)
+[ RUN      ] EditorCameraFixture.CameraCannotInterpolateToSamePositionWithoutMovingFromIt
+[       OK ] EditorCameraFixture.CameraCannotInterpolateToSamePositionWithoutMovingFromIt (89 ms)
+[ RUN      ] EditorCameraFixture.CameraInterpolatesToTransformWhenGoToPositionInstantlyIsOff
+[       OK ] EditorCameraFixture.CameraInterpolatesToTransformWhenGoToPositionInstantlyIsOff (92 ms)
+[ RUN      ] EditorCameraFixture.CameraChangesImmediatelyWhenGoToPositionInstantlyIsOn
+[       OK ] EditorCameraFixture.CameraChangesImmediatelyWhenGoToPositionInstantlyIsOn (91 ms)
+[ RUN      ] EditorCameraFixture.CameraInterpolatesToTransform
+[       OK ] EditorCameraFixture.CameraInterpolatesToTransform (90 ms)
+[ RUN      ] EditorCameraFixture.CameraInterpolatesToTransformWithZeroDurationAfterUpdate
+[       OK ] EditorCameraFixture.CameraInterpolatesToTransformWithZeroDurationAfterUpdate (90 ms)
+[ RUN      ] EditorCameraFixture.CameraDoesNotInterpolateToTransformWithZeroDurationAndNoUpdate
+[       OK ] EditorCameraFixture.CameraDoesNotInterpolateToTransformWithZeroDurationAndNoUpdate (90 ms)
+[ RUN      ] EditorCameraFixture.CameraSettingsRegistryValuesCanBeModified
+[       OK ] EditorCameraFixture.CameraSettingsRegistryValuesCanBeModified (92 ms)
+[ RUN      ] EditorCameraFixture.CameraSettingsRegistryValuesCanBeReset
+[       OK ] EditorCameraFixture.CameraSettingsRegistryValuesCanBeReset (93 ms)
+[ RUN      ] EditorCameraFixture.CameraSettingsRegistryInputValuesCanBeReset
+[       OK ] EditorCameraFixture.CameraSettingsRegistryInputValuesCanBeReset (92 ms)
+[----------] 18 tests from EditorCameraFixture (1750 ms total)
+
+[----------] 2 tests from GotoPositionPitchConstraintsTest
+[ RUN      ] GotoPositionPitchConstraintsTest.GoToPositionPitchIsSetToPlusOrMinusNinetyDegrees
+[       OK ] GotoPositionPitchConstraintsTest.GoToPositionPitchIsSetToPlusOrMinusNinetyDegrees (0 ms)
+[ RUN      ] GotoPositionPitchConstraintsTest.GoToPositionPitchClampsFinalPitchValueWithTolerance
+[       OK ] GotoPositionPitchConstraintsTest.GoToPositionPitchClampsFinalPitchValueWithTolerance (0 ms)
+[----------] 2 tests from GotoPositionPitchConstraintsTest (0 ms total)
+
+[----------] 3 tests from EditorViewportCamera
+[ RUN      ] EditorViewportCamera.CalculateGoToEntityTransformHandlesNormalCaseLookingForward
+[       OK ] EditorViewportCamera.CalculateGoToEntityTransformHandlesNormalCaseLookingForward (0 ms)
+[ RUN      ] EditorViewportCamera.CalculateGoToEntityTransformHandlesDegenerateCaseLookingDown
+[       OK ] EditorViewportCamera.CalculateGoToEntityTransformHandlesDegenerateCaseLookingDown (0 ms)
+[ RUN      ] EditorViewportCamera.CalculateGoToEntityTransformHandlesDegenerateCaseLookingUp
+[       OK ] EditorViewportCamera.CalculateGoToEntityTransformHandlesDegenerateCaseLookingUp (0 ms)
+[----------] 3 tests from EditorViewportCamera (0 ms total)
+
+[----------] 6 tests from AzAssetBrowserRequestHandlerFixture
+[ RUN      ] AzAssetBrowserRequestHandlerFixture.DragEnterTest
+[       OK ] AzAssetBrowserRequestHandlerFixture.DragEnterTest (3 ms)
+[ RUN      ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_NoDefaultBehavior_DoesNotSpawnAnything
+[       OK ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_NoDefaultBehavior_DoesNotSpawnAnything (0 ms)
+[ RUN      ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_SpawnsOneEntity
+[       OK ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_SpawnsOneEntity (0 ms)
+[ RUN      ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_PrioritySystemWorks
+[       OK ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_PrioritySystemWorks (0 ms)
+[ RUN      ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_MultiSelect
+[       OK ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_MultiSelect (0 ms)
+[ RUN      ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_OverridableByHandlers
+[       OK ] AzAssetBrowserRequestHandlerFixture.DragEnterTest_DragSource_WithDefaultBehavior_OverridableByHandlers (0 ms)
+[----------] 6 tests from AzAssetBrowserRequestHandlerFixture (7 ms total)
+
+[----------] 5 tests from LegacryDeprecationHelper
+[ RUN      ] LegacryDeprecationHelper.TestLegacyMatrix44_HMatrixConversion
+[       OK ] LegacryDeprecationHelper.TestLegacyMatrix44_HMatrixConversion (0 ms)
+[ RUN      ] LegacryDeprecationHelper.TestLegacyMatrix33_CreateFromEulerAngles
+[       OK ] LegacryDeprecationHelper.TestLegacyMatrix33_CreateFromEulerAngles (0 ms)
+[ RUN      ] LegacryDeprecationHelper.TestLegacyMatrix33_GetEulerAngles
+[       OK ] LegacryDeprecationHelper.TestLegacyMatrix33_GetEulerAngles (0 ms)
+[ RUN      ] LegacryDeprecationHelper.TestLegacyColor_ToU32
+[       OK ] LegacryDeprecationHelper.TestLegacyColor_ToU32 (0 ms)
+[ RUN      ] LegacryDeprecationHelper.TestLegacyColor_FromU32
+[       OK ] LegacryDeprecationHelper.TestLegacyColor_FromU32 (0 ms)
+[----------] 5 tests from LegacryDeprecationHelper (0 ms total)
+
+[----------] 3 tests from CryEditPythonBindingsFixture
+[ RUN      ] CryEditPythonBindingsFixture.CryEditCommands_ApiExists
+[       OK ] CryEditPythonBindingsFixture.CryEditCommands_ApiExists (119 ms)
+[ RUN      ] CryEditPythonBindingsFixture.CryEditCheckoutDialogCommands_ApiExists
+[       OK ] CryEditPythonBindingsFixture.CryEditCheckoutDialogCommands_ApiExists (120 ms)
+[ RUN      ] CryEditPythonBindingsFixture.CryEditPython_IdleWaitFramesWorks
+[       OK ] CryEditPythonBindingsFixture.CryEditPython_IdleWaitFramesWorks (669 ms)
+[----------] 3 tests from CryEditPythonBindingsFixture (909 ms total)
+
+[----------] 1 test from CryEditDocPythonBindingsFixture
+[ RUN      ] CryEditDocPythonBindingsFixture.CryEditDocEditorCommands_ApiExists
+[       OK ] CryEditDocPythonBindingsFixture.CryEditDocEditorCommands_ApiExists (123 ms)
+[----------] 1 test from CryEditDocPythonBindingsFixture (123 ms total)
+
+[----------] 7 tests from EditorPythonBindingsFixture
+[ RUN      ] EditorPythonBindingsFixture.EditorUtilityCommands_ApiExists
+[       OK ] EditorPythonBindingsFixture.EditorUtilityCommands_ApiExists (121 ms)
+[ RUN      ] EditorPythonBindingsFixture.EditorPythonBindingsComponent_ApiExists
+[       OK ] EditorPythonBindingsFixture.EditorPythonBindingsComponent_ApiExists (120 ms)
+[ RUN      ] EditorPythonBindingsFixture.EditorUtilityCommands_set_cvar_integer
+[       OK ] EditorPythonBindingsFixture.EditorUtilityCommands_set_cvar_integer (124 ms)
+[ RUN      ] EditorPythonBindingsFixture.EditorUtilityCommands_set_cvar_float
+[       OK ] EditorPythonBindingsFixture.EditorUtilityCommands_set_cvar_float (120 ms)
+[ RUN      ] EditorPythonBindingsFixture.EditorUtilityCommands_set_cvar_string
+[       OK ] EditorPythonBindingsFixture.EditorUtilityCommands_set_cvar_string (120 ms)
+[ RUN      ] EditorPythonBindingsFixture.EditorUtilityCommands_get_cvar
+[       OK ] EditorPythonBindingsFixture.EditorUtilityCommands_get_cvar (120 ms)
+[ RUN      ] EditorPythonBindingsFixture.EditorUtilityCommands_run_console
+[       OK ] EditorPythonBindingsFixture.EditorUtilityCommands_run_console (122 ms)
+[----------] 7 tests from EditorPythonBindingsFixture (852 ms total)
+
+[----------] 2 tests from TestWarningAbsorber
+[ RUN      ] TestWarningAbsorber.Test
+[       OK ] TestWarningAbsorber.Test (0 ms)
+[ RUN      ] TestWarningAbsorber.NullWindow
+[       OK ] TestWarningAbsorber.NullWindow (0 ms)
+[----------] 2 tests from TestWarningAbsorber (0 ms total)
+
+[----------] 1 test from MainWindowPythonBindingsFixture
+[ RUN      ] MainWindowPythonBindingsFixture.MainWindowEditorCommands_ApiExists
+[       OK ] MainWindowPythonBindingsFixture.MainWindowEditorCommands_ApiExists (117 ms)
+[----------] 1 test from MainWindowPythonBindingsFixture (117 ms total)
+
+[----------] 1 test from TrackViewPythonBindingsFixture
+[ RUN      ] TrackViewPythonBindingsFixture.TrackViewEditorCommands_ApiExists
+[       OK ] TrackViewPythonBindingsFixture.TrackViewEditorCommands_ApiExists (117 ms)
+[----------] 1 test from TrackViewPythonBindingsFixture (117 ms total)
+
+[----------] 1 test from TrackViewComponentFixture
+[ RUN      ] TrackViewComponentFixture.TrackViewComponent_ApiExists
+[       OK ] TrackViewComponentFixture.TrackViewComponent_ApiExists (120 ms)
+[----------] 1 test from TrackViewComponentFixture (120 ms total)
+
+[----------] 1 test from ViewPanePythonBindingsFixture
+[ RUN      ] ViewPanePythonBindingsFixture.ViewPaneCommands_ApiExists
+[       OK ] ViewPanePythonBindingsFixture.ViewPaneCommands_ApiExists (121 ms)
+[----------] 1 test from ViewPanePythonBindingsFixture (121 ms total)
+
+[----------] 3 tests from All/ModularViewportCameraControllerDeltaTimeParamFixture
+[ RUN      ] All/ModularViewportCameraControllerDeltaTimeParamFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithFixedDeltaTime/0
+[       OK ] All/ModularViewportCameraControllerDeltaTimeParamFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithFixedDeltaTime/0 (71 ms)
+[ RUN      ] All/ModularViewportCameraControllerDeltaTimeParamFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithFixedDeltaTime/1
+[       OK ] All/ModularViewportCameraControllerDeltaTimeParamFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithFixedDeltaTime/1 (72 ms)
+[ RUN      ] All/ModularViewportCameraControllerDeltaTimeParamFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithFixedDeltaTime/2
+[       OK ] All/ModularViewportCameraControllerDeltaTimeParamFixture.MouseMovementDoesNotAccumulateExcessiveDriftInModularViewportCameraWithFixedDeltaTime/2 (71 ms)
+[----------] 3 tests from All/ModularViewportCameraControllerDeltaTimeParamFixture (215 ms total)
+
+[----------] Global test environment tear-down
+[==========] 72 tests from 19 test suites ran. (6263 ms total)
+[  PASSED  ] 72 tests.
+OKAY AzRunUnitTests() returned 0
+Returning code: 0
+<end of output>
+Test time =   6.55 sec
+----------------------------------------------------------
+Test Passed.
+"Legacy::EditorLib.Tests.main::TEST_RUN" end time: Oct 12 06:59 Hora estándar de Montevideo
+"Legacy::EditorLib.Tests.main::TEST_RUN" time elapsed: 00:00:06
+----------------------------------------------------------
+
+29/103 Testing: AZ::SerializeContextTools.Tests.main::TEST_RUN
+29/103 Test: AZ::SerializeContextTools.Tests.main::TEST_RUN
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/SerializeContextTools.Tests.exe" "AzRunUnitTests" "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/AZ_SerializeContextTools.Tests.xml" "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Code/Tools/SerializeContextTools
+"AZ::SerializeContextTools.Tests.main::TEST_RUN" start time: Oct 12 06:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SerializeContextToolsFixture
+[ RUN      ] SerializeContextToolsFixture.SerializeContextTools_HelpOption_Works
+[       OK ] SerializeContextToolsFixture.SerializeContextTools_HelpOption_Works (284 ms)
+[----------] 1 test from SerializeContextToolsFixture (284 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (284 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"AZ::SerializeContextTools.Tests.main::TEST_RUN" end time: Oct 12 06:59 Hora estándar de Montevideo
+"AZ::SerializeContextTools.Tests.main::TEST_RUN" time elapsed: 00:00:00
+----------------------------------------------------------
+
+102/103 Testing: JE::PrefabBuilder.Tests.main::TEST_RUN
+102/103 Test: JE::PrefabBuilder.Tests.main::TEST_RUN
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe" "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/PrefabBuilder.Tests.dll" "AzRunUnitTests" "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/JE_PrefabBuilder.Tests.xml" "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/Assets/PrefabBuilder
+"JE::PrefabBuilder.Tests.main::TEST_RUN" start time: Oct 12 06:59 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Assets\PrefabBuilder
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/PrefabBuilder.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/PrefabBuilder.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/PrefabBuilder.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 22 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from NativePrefabBuilder
+[ RUN      ] NativePrefabBuilder.FactoryPreservesDescriptorIdentitiesAndTagDrivenActivation
+[       OK ] NativePrefabBuilder.FactoryPreservesDescriptorIdentitiesAndTagDrivenActivation (0 ms)
+[----------] 1 test from NativePrefabBuilder (0 ms total)
+
+[----------] 6 tests from PrefabBuilderTests
+[ RUN      ] PrefabBuilderTests.SourceDependencies
+[       OK ] PrefabBuilderTests.SourceDependencies (165 ms)
+[ RUN      ] PrefabBuilderTests.ProductDependencies
+[       OK ] PrefabBuilderTests.ProductDependencies (99 ms)
+[ RUN      ] PrefabBuilderTests.FingerprintTest
+[       OK ] PrefabBuilderTests.FingerprintTest (97 ms)
+[ RUN      ] PrefabBuilderTests.PrefabGroup_FindsRequiredReflection_True
+[       OK ] PrefabBuilderTests.PrefabGroup_FindsRequiredReflection_True (96 ms)
+[ RUN      ] PrefabBuilderTests.PrefabGroup_JsonWithPrefabArbitraryPrefab_Works
+[       OK ] PrefabBuilderTests.PrefabGroup_JsonWithPrefabArbitraryPrefab_Works (95 ms)
+[ RUN      ] PrefabBuilderTests.PrefabGroup_InvalidPrefabJson_Detected
+[       OK ] PrefabBuilderTests.PrefabGroup_InvalidPrefabJson_Detected (97 ms)
+[----------] 6 tests from PrefabBuilderTests (652 ms total)
+
+[----------] 2 tests from PrefabBuilderBehaviorTests
+[ RUN      ] PrefabBuilderBehaviorTests.PrefabGroup_PrefabGroupClass_Exists
+[       OK ] PrefabBuilderBehaviorTests.PrefabGroup_PrefabGroupClass_Exists (108 ms)
+[ RUN      ] PrefabBuilderBehaviorTests.PrefabGroup_PrefabGroupAssignment_Works
+[       OK ] PrefabBuilderBehaviorTests.PrefabGroup_PrefabGroupAssignment_Works (107 ms)
+[----------] 2 tests from PrefabBuilderBehaviorTests (216 ms total)
+
+[----------] 10 tests from PrefabBehaviorTests
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_EmptyContextIgnored_Works
+[       OK ] PrefabBehaviorTests.PrefabBehavior_EmptyContextIgnored_Works (98 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_SimplePrefab_Works
+[       OK ] PrefabBehaviorTests.PrefabBehavior_SimplePrefab_Works (99 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_UpdateManifestWithEmptyScene_DoesNotFail
+[       OK ] PrefabBehaviorTests.PrefabBehavior_UpdateManifestWithEmptyScene_DoesNotFail (96 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_UpdateManifestWithEmptyScene_Ignored
+[       OK ] PrefabBehaviorTests.PrefabBehavior_UpdateManifestWithEmptyScene_Ignored (96 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_UpdateManifestMockScene_CreatesPrefab
+[       OK ] PrefabBehaviorTests.PrefabBehavior_UpdateManifestMockScene_CreatesPrefab (103 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_EntityHierarchy_MatchesSceneNodeHierarchy
+[       OK ] PrefabBehaviorTests.PrefabBehavior_EntityHierarchy_MatchesSceneNodeHierarchy (97 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_UpdateManifest_ToggleWorks
+[       OK ] PrefabBehaviorTests.PrefabBehavior_UpdateManifest_ToggleWorks (95 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_IgnoreActors_ToggleTrueReturnsIgnored
+[       OK ] PrefabBehaviorTests.PrefabBehavior_IgnoreActors_ToggleTrueReturnsIgnored (95 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_IgnoreActors_ToggleTrueReturnsSuccessWhenNoActorDetected
+[       OK ] PrefabBehaviorTests.PrefabBehavior_IgnoreActors_ToggleTrueReturnsSuccessWhenNoActorDetected (95 ms)
+[ RUN      ] PrefabBehaviorTests.PrefabBehavior_IgnoreActors_ToggleFalseReturnsSuccess
+[       OK ] PrefabBehaviorTests.PrefabBehavior_IgnoreActors_ToggleFalseReturnsSuccess (95 ms)
+[----------] 10 tests from PrefabBehaviorTests (973 ms total)
+
+[----------] 3 tests from DefaultProceduralPrefabGroupTests
+[ RUN      ] DefaultProceduralPrefabGroupTests.ScripContext_PrefabGroupNotificationBus_ClassExists
+[       OK ] DefaultProceduralPrefabGroupTests.ScripContext_PrefabGroupNotificationBus_ClassExists (111 ms)
+[ RUN      ] DefaultProceduralPrefabGroupTests.ScripContext_PrefabGroupEventBus_ClassApiExists
+[       OK ] DefaultProceduralPrefabGroupTests.ScripContext_PrefabGroupEventBus_ClassApiExists (107 ms)
+[ RUN      ] DefaultProceduralPrefabGroupTests.PrefabGroupEventBus_GeneratePrefabGroupManifestUpdates_HasProceduralMeshGroupRule
+[       OK ] DefaultProceduralPrefabGroupTests.PrefabGroupEventBus_GeneratePrefabGroupManifestUpdates_HasProceduralMeshGroupRule (108 ms)
+[----------] 3 tests from DefaultProceduralPrefabGroupTests (327 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 5 test suites ran. (2171 ms total)
+[  PASSED  ] 22 tests.
+OKAY AzRunUnitTests() returned 0
+Returning code: 0
+<end of output>
+Test time =   2.24 sec
+----------------------------------------------------------
+Test Passed.
+"JE::PrefabBuilder.Tests.main::TEST_RUN" end time: Oct 12 06:59 Hora estándar de Montevideo
+"JE::PrefabBuilder.Tests.main::TEST_RUN" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Oct 12 06:59 Hora estándar de Montevideo
+
+FRAMEWORK_googletest =   9.15 sec*proc
+
+SUITE_main =   9.15 sec*proc
+

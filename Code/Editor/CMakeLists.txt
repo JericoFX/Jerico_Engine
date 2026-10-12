@@ -105,6 +105,7 @@ ly_add_target(
             AZ::SceneUI
             JE::Geometry.Authoring
             JE::EditorCamera
+            JE::PrefabBuilder
             JE::EditorMaterials
             Gem::Atom_Feature_Common.Public
             Gem::Atom_RPI.Edit

@@ -1,0 +1,33 @@
+{
+  "capturedUtc": "2026-10-12T09:38:20.3106049Z",
+  "scope": "read-only supplement; baseline.json preserved",
+  "sceneCoreActivation": "Code/Tools/SceneAPI/SceneCore/DllMain.cpp:227-235 builds the Scene Behaviors entity using BehaviorComponent::TYPEINFO_Uuid; DllMain.cpp:327-330 exports Activate which calls SceneAPI::SceneCore::Activate.",
+  "discovery": "Code/Tools/SceneAPI/SceneCore/Components/Utilities/EntityConstructor.cpp:38-54 gets SerializeContext, EnumerateDerived(baseComponentType), creates each reflected type id, then Init/Activate. A registered descriptor is sufficient for this discovery path; no required-system-component registration is needed.",
+  "autoloadQualification": [
+    {
+      "editorAutoLoadFalse": true,
+      "buildersAutoLoadFalse": true,
+      "lines": "111-119",
+      "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg"
+    },
+    {
+      "editorAutoLoadFalse": true,
+      "buildersAutoLoadFalse": true,
+      "lines": "111-119",
+      "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg"
+    },
+    {
+      "editorAutoLoadFalse": true,
+      "buildersAutoLoadFalse": true,
+      "lines": "111-119",
+      "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg"
+    },
+    {
+      "editorAutoLoadFalse": true,
+      "buildersAutoLoadFalse": true,
+      "lines": "111-119",
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg"
+    }
+  ],
+  "qualification": "cmake_dependencies entries in disabled AtomTools products are not proof of module loading; these four tools should not be explicitly built for this change. Check only current product registries for the active Editor/AP/APBatch/AssetBuilder/SerializeContextTools/GameLauncher host set."
+}

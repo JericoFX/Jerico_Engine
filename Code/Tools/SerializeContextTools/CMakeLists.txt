@@ -23,6 +23,7 @@ ly_add_target(
             JE::Geometry.Authoring
             JE::EditorMaterials
             JE::EditorCamera
+            JE::PrefabBuilder
         PRIVATE
             AZ::AzCore
             AZ::AzFramework

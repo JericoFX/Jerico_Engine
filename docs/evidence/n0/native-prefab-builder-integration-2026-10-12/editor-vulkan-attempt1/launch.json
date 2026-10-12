@@ -1,0 +1,12 @@
+{
+  "arguments": [
+    "--project-path",
+    "\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"",
+    "--rhi=vulkan",
+    "--skipWelcomeScreen",
+    "\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab\""
+  ],
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "startedUtc": "2026-10-12T10:02:07.4249414Z",
+  "pid": 11996
+}

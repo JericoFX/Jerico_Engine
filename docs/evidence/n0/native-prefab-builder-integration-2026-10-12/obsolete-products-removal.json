@@ -1,0 +1,19 @@
+{
+  "paths": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.Builders.dll",
+      "bytes": 1199104,
+      "sha256": "F54479CC433CE488ACB6F320E8BFEF5276637DFB61985F936D57DE9E36D16C24"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.Builders.pdb",
+      "bytes": 41480192,
+      "sha256": "D93C6FF874CDE1642CDDDEE60F260E059824518EA65AC7EFBDA505BB926F1983"
+    }
+  ],
+  "scope": "Only obsolete PrefabBuilder Gem DLL/PDB in current build profile; native module/tests and all other builds preserved.",
+  "removed": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.Builders.dll",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.Builders.pdb"
+  ]
+}

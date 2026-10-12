@@ -1,0 +1,111 @@
+<07:02:09> BackupNameAttachment=" Build(0) 12 Oct 26 (07 02 09)"  -- used by backup system
+<07:02:09> Log Started at Mon Oct 12 07:02:09 2026
+<07:02:09> Built on Oct 11 2026 18:12:26
+<07:02:09> Running 64 bit Windows version
+<07:02:09> FileVersion: 0.0.0.0
+<07:02:09> ProductVersion: 0.0.0.0
+<07:02:09> Using Microsoft (tm) C++ Standard Library implementation
+<07:02:09> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<07:02:09> Project Name: JEEditorFixture
+
+<07:02:09> [Warning] Config file game.cfg not found!
+<07:02:09> creating CVarGroups from directory 'Config/CVarGroups' ...
+<07:02:09> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<07:02:09> GameName: JEEditorFixture
+<07:02:09> BuildTime: Oct 11 2026 18:12:26
+<07:02:09> > g_languageAudio : en-US
+
+<07:02:09> Running without any Audio Engine!
+
+<07:02:09> Audio System is initialized and ready!
+
+<07:02:09> Initializing additional systems
+
+<07:02:09> Using FreeType 2.11.1
+<07:02:09> Current Language: Spanish 
+<07:02:09> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<07:02:09> Local time is 07:02:09 10/12/26, system running for 3436 minutes
+<07:02:09> 32679MB phys. memory installed, 17660MB paging available
+<07:02:09> Current display mode is 1920x1080x32, (Unknown graphics card)
+<07:02:09> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<07:02:09> --------------------------------------------------------------------------------
+<07:02:09> > r_streamingImagePoolBudgetMb : 0
+
+<07:02:09> > r_streamingImageMipBias : 0
+
+<07:02:09> (RPI system) - System assets initialized
+
+<07:02:09> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<07:02:09> sys_localization_folder = Localization
+<07:02:09> (SceneAPI) - AssImp Import Context was registered.
+
+<07:02:09> (EMotionFX) - -----------------------------------------------
+
+<07:02:09> (EMotionFX) - EMotion Studio Core - Information
+
+<07:02:09> (EMotionFX) - -----------------------------------------------
+
+<07:02:09> (EMotionFX) - Compilation date: Oct 12 2026
+
+<07:02:09> (EMotionFX) - -----------------------------------------------
+
+<07:02:09> (EMotionFX) - EMotion Studio initialized...
+
+<07:02:10> > r_shadowCascadeExtrusionAmount : -1
+
+<07:02:10> > r_enablePerMeshShaderOptionFlags : false
+
+<07:02:10> > r_meshInstancingEnabled : false
+
+<07:02:10> > r_meshInstancingEnabledForTransparentObjects : false
+
+<07:02:10> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<07:02:10> [Warning] (Az Console) - attempted to assign out of range value -32
+<07:02:12> [Warning] XML reader: Can't open file (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/Sandbox/Macros.xml)
+<07:02:12> Document created
+<07:02:12> Adding '*$tmp*' to ignore masks for changed files.
+<07:02:12> [Warning] (Application) - 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+<07:02:12> Engine initialized, took 3.98s.
+<07:02:12> [CONSOLE] Executing console command 'exec editor_autoexec.cfg'
+<07:02:12> Executing console batch file (try game,config,root): "@products@/editor_autoexec.cfg" not found!
+<07:02:12> [CONSOLE] Executing console command 'exec editor.cfg'
+<07:02:12> Executing console batch file (try game,config,root): "@products@/editor.cfg" not found!
+<07:02:12> [CONSOLE] Executing console command 'exec user.cfg'
+<07:02:12> Executing console batch file (try game,config,root): "user.cfg" found in game/config/ ...
+<07:02:12> Opening level levels/jenativeintegration/jenativeintegration.spawnable
+<07:02:12> Loading from F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab...
+<07:02:12> ---- Start: Game Engine level load
+<07:02:12> Loading map 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration' into engine...
+<07:02:12> ---- End: Game Engine level load (0 seconds)
+<07:02:12> ---- Start: Post Load
+<07:02:12> ---- End: Post Load (0 seconds)
+<07:02:12> [LevelLoadTime] Level F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration loaded in 0 seconds
+<07:02:12> -----------------------------------------------------------
+<07:02:12> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab
+<07:02:12> Level loading time: 0.04 seconds
+<07:02:12> -----------------------------------------------------------
+<07:02:12> (RHI) - ****************************************************************
+
+<07:02:12> (RHI) -                     Registering vulkan RHI                          
+
+<07:02:12> (RHI) - ****************************************************************
+
+<07:02:12> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:bb8 which does not exist in the catalog and cannot be loaded.
+<07:02:12> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:7d0 which does not exist in the catalog and cannot be loaded.
+<07:02:12> [Error] (PassFactory) - FAILED TO CREATE PASS [DiffuseProbeGridUpdatePass]. Could not find pass template [DiffuseProbeGridUpdatePassTemplate]
+<07:02:12> > r_shadowCascadeExtrusionAmount : -1
+
+<07:02:12> > r_enablePerMeshShaderOptionFlags : false
+
+<07:02:12> > r_meshInstancingEnabled : false
+
+<07:02:12> > r_meshInstancingEnabledForTransparentObjects : false
+
+<07:02:12> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<07:02:12> [Warning] (Az Console) - attempted to assign out of range value -48
+<07:03:35> [Error] (Prefab) - Failed to find AssetId for prefab Cache/pc/assets/nativeprefabbuilder/nativeprefabcube_fbx.procprefab
+<07:04:44> (CUndoManager) - (Undo: 2, Redo: 0) - Undo last operation: 'Modify Property'
+<07:04:52> (CUndoManager) - (Undo: 1, Redo: 1) - Undo last operation: 'Instantiate Prefab'

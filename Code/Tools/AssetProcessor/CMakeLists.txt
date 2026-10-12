@@ -44,6 +44,7 @@ ly_add_target(
             AZ::AssetBuilder.Static
             JE::Geometry.Authoring
             JE::EditorCamera
+            JE::PrefabBuilder
             JE::EditorMaterials
             ${additional_dependencies}
 )

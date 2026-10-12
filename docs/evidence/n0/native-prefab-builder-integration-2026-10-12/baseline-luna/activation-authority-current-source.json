@@ -1,0 +1,58 @@
+{
+  "capturedUtc": "2026-10-12T09:39:37.1570910Z",
+  "scope": "read-only current source qualification supplement; original baseline preserved",
+  "currentSourceEvidence": [
+    {
+      "relativePath": "Engine/Assets/PrefabBuilder/Source/PrefabBuilderModule.cpp",
+      "bytes": 683,
+      "sha256": "1D317A207B419C917CE62B2BD090A5C3CA60755F5DE8156C1CC868543E991075"
+    },
+    {
+      "relativePath": "Engine/Assets/PrefabBuilder/Source/PrefabBuilderComponent.cpp",
+      "bytes": 15392,
+      "sha256": "D1099B40BA1D602883F4CD42DA0CD4FB7E6638A69BE38B5C458DF8125A58F6E3"
+    },
+    {
+      "relativePath": "Engine/Assets/PrefabBuilder/Source/PrefabGroup/PrefabGroupBehavior.cpp",
+      "bytes": 25365,
+      "sha256": "EA9CB0BCE7A57153E6DA22C83AD0DF1825BA855CD24C2DC43F80EF1486895D91"
+    },
+    {
+      "relativePath": "Engine/Assets/PrefabBuilder/Include/JE/Assets/Prefab/PrefabGroup/PrefabGroupBehavior.h",
+      "bytes": 2333,
+      "sha256": "72B95E654D6E659679A1677EF0E9D4AFF23D32452D3DDBD10B384861832E9F38"
+    },
+    {
+      "relativePath": "Engine/Assets/PrefabBuilder/CMakeLists.txt",
+      "bytes": 1129,
+      "sha256": "9471DCBA98DCA8E0ED97073DDC3B3C1864D0212B1B39F1253F42794288F8654A"
+    },
+    {
+      "relativePath": "Gems/Prefab/PrefabBuilder/CMakeLists.txt",
+      "bytes": 206,
+      "sha256": "486EA2226F401007CF9FA56571562C219A8323D3BA6315DCB36A775C2489DF69"
+    },
+    {
+      "relativePath": "Code/Tools/SceneAPI/SceneCore/DllMain.cpp",
+      "bytes": 16755,
+      "sha256": "1741288C0FD1436DCC5A8054E3AE1DA651C66A098692B1F702C25D8588A32801"
+    },
+    {
+      "relativePath": "Code/Tools/SceneAPI/SceneCore/Components/Utilities/EntityConstructor.cpp",
+      "bytes": 4665,
+      "sha256": "7D60400190737C58C5564D0CC68AA2FE141C8E79DD67C18CD93B0D04C81D9F71"
+    },
+    {
+      "relativePath": "Code/Framework/AzCore/AzCore/Component/ComponentApplication.cpp",
+      "bytes": 85874,
+      "sha256": "C9CBCC77DDD938BF8F0CBAB98E503F0FBF25B5902D80475A24BBBF343E5B13CA"
+    }
+  ],
+  "facts": [
+    "Current module is Engine/Assets/PrefabBuilder/Source/PrefabBuilderModule.cpp; it inserts PrefabBuilderComponent and PrefabGroupBehavior descriptors into m_descriptors (lines 9-13).",
+    "PrefabBuilderComponent::Reflect sets AssetBuilder SystemComponentTags and Activate registers the *.prefab builder.",
+    "PrefabGroupBehavior::Reflect serializes it as derived from SceneCore::BehaviorComponent; EntityConstructor enumerates derived SerializeContext classes when SceneCore Activate builds the Scene Behaviors entity.",
+    "Gems/Prefab/PrefabBuilder/CMakeLists.txt is historical metadata and returns; current implementation is under Engine/Assets/PrefabBuilder.",
+    "The four AtomTools autoload overlays mark PrefabBuilder.Builders and PrefabBuilder.Editor AutoLoad=false. Do not infer module load from their cmake_dependencies records. The runner scans active product registries only."
+  ]
+}

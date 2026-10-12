@@ -1,0 +1,124 @@
+{
+  "capturedUtc": "2026-10-12T10:01:42.3210333Z",
+  "note": "Supplement: attempt3 reused attempt2 configure, so registry hashes are compared against attempt2 scan rather than a duplicated attempt3 configure output.",
+  "freezeSha256": "CA59514237ADC56DA3D87417B37CC221F2DD51E95268BA09DAAFA29EADF84A45",
+  "sourceFreezeMatches": 52,
+  "sourceFreezeCount": 52,
+  "sourceFreezeMismatches": 0,
+  "cachePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+  "cacheSha256": "2C441A88B89016B02A73E6D412DA77532EB7100F25DDB399481527EC760E9549",
+  "cacheChecks": [
+    {
+      "line": "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "present": true
+    },
+    {
+      "line": "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "present": true
+    },
+    {
+      "line": "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "present": true
+    },
+    {
+      "line": "LY_PACKAGE_SERVER_URLS:STRING=",
+      "present": true
+    },
+    {
+      "line": "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "present": true
+    },
+    {
+      "line": "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+      "present": true
+    }
+  ],
+  "registryBaselinePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt2\\current-product-registry-scan.json",
+  "registryChecks": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.editor.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "4E776B60F1D6B5643A30913778761B87366CDF5635F24910881FC2303E4C083B",
+      "currentSha256": "4E776B60F1D6B5643A30913778761B87366CDF5635F24910881FC2303E4C083B",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessor.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "currentSha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "currentSha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbuilder.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "currentSha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.serializecontexttools.setreg",
+      "currentExists": false,
+      "attempt2Exists": false,
+      "attempt2Sha256": null,
+      "currentSha256": null,
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "currentSha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "588B791352AA17A315F303A438A10F4BE6F63C70F93EB067F33B45A5B58E7176",
+      "currentSha256": "588B791352AA17A315F303A438A10F4BE6F63C70F93EB067F33B45A5B58E7176",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "588B791352AA17A315F303A438A10F4BE6F63C70F93EB067F33B45A5B58E7176",
+      "currentSha256": "588B791352AA17A315F303A438A10F4BE6F63C70F93EB067F33B45A5B58E7176",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "currentExists": true,
+      "attempt2Exists": true,
+      "attempt2Sha256": "57CB33BACA13013BC4CB2DA83C055FDEA16843572F2793F6137A526A3BC83EAE",
+      "currentSha256": "57CB33BACA13013BC4CB2DA83C055FDEA16843572F2793F6137A526A3BC83EAE",
+      "sameAsAttempt2": true,
+      "staleBuilderReferences": []
+    }
+  ],
+  "registryIdenticalCount": 9,
+  "registryCount": 9,
+  "staleRegistryReferences": [],
+  "activeProcesses": []
+}

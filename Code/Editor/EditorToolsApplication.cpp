@@ -12,6 +12,7 @@
 
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
+#include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Editor/Materials/MaterialsRegistration.h>
 
 // Qt
@@ -115,6 +116,7 @@ namespace EditorInternal
         AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
         outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
+        outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
         outModules.emplace_back(JE::Editor::CreateMaterialsModule());
     }
 

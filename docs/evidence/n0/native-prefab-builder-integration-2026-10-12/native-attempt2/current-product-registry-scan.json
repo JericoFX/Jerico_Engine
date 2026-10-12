@@ -1,0 +1,55 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.editor.setreg",
+    "exists": true,
+    "sha256": "4E776B60F1D6B5643A30913778761B87366CDF5635F24910881FC2303E4C083B",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessor.setreg",
+    "exists": true,
+    "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+    "exists": true,
+    "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbuilder.setreg",
+    "exists": true,
+    "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.serializecontexttools.setreg",
+    "exists": false,
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+    "exists": true,
+    "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+    "exists": true,
+    "sha256": "588B791352AA17A315F303A438A10F4BE6F63C70F93EB067F33B45A5B58E7176",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+    "exists": true,
+    "sha256": "588B791352AA17A315F303A438A10F4BE6F63C70F93EB067F33B45A5B58E7176",
+    "staleBuilderReferences": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+    "exists": true,
+    "sha256": "57CB33BACA13013BC4CB2DA83C055FDEA16843572F2793F6137A526A3BC83EAE",
+    "staleBuilderReferences": []
+  }
+]

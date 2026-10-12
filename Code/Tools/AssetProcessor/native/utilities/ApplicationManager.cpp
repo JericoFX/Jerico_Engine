@@ -10,6 +10,7 @@
 
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
+#include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 #include <JE/Editor/Materials/MaterialsRegistration.h>
 
@@ -223,6 +224,7 @@ void AssetProcessorAZApplication::CreateStaticModules(AZStd::vector<AZ::Module*>
     AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
     outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
     outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
+    outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
 }
 
 void AssetProcessorAZApplication::RegisterCoreComponents()
@@ -497,7 +499,7 @@ void ApplicationManager::PopulateApplicationDependencies()
     // any of those should cause AP to drop.
     for (QString pathName : { "CrySystem",
                                      "SceneCore", "SceneData",
-                                     "SceneBuilder", "AzQtComponents"
+                                     "SceneBuilder", "AzQtComponents", "PrefabBuilder"
                                      })
     {
         QString pathWithPlatformExtension = pathName + QString(AZ_DYNAMIC_LIBRARY_EXTENSION);

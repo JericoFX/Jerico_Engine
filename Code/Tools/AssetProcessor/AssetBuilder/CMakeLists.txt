@@ -22,6 +22,7 @@ ly_add_target(
                 AZ::AssetBuilderSDK
                 JE::Geometry.Authoring
                 JE::EditorCamera
+                JE::PrefabBuilder
                 JE::EditorMaterials
 )
 

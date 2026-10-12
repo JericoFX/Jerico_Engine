@@ -1,0 +1,43 @@
+{
+  "capturedUtc": "2026-10-12T10:00:53.5086091Z",
+  "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+  "dumpbinSha256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+  "scope": "PE headers and dependents of current package/runtime module and geometry binaries; baseline binary inventory has sizes/hashes only, no import captures",
+  "results": [
+    {
+      "file": "PrefabBuilder.Builders.dll",
+      "bytes": 1199104,
+      "sha256": "F54479CC433CE488ACB6F320E8BFEF5276637DFB61985F936D57DE9E36D16C24",
+      "exit": 0,
+      "stdoutBytes": 6520
+    },
+    {
+      "file": "PrefabBuilder.dll",
+      "bytes": 1296384,
+      "sha256": "215A85ADF5BA17C94F395A0472D63CF2E3C310FBF656B198A27A4FED9EA91153",
+      "exit": 0,
+      "stdoutBytes": 6502
+    },
+    {
+      "file": "PrefabBuilder.Tests.dll",
+      "bytes": 1206272,
+      "sha256": "D32803B34D2D07C2B8CCE65E216BA9F01FA14503741481D6AC240521021635B8",
+      "exit": 0,
+      "stdoutBytes": 6681
+    },
+    {
+      "file": "Geometry.dll",
+      "bytes": 742912,
+      "sha256": "8203D3A588AD17D2D722CAA02C72262A3DAE61A077556166F0E698E6E8D3D398",
+      "exit": 0,
+      "stdoutBytes": 6466
+    },
+    {
+      "file": "Geometry.Authoring.dll",
+      "bytes": 4922880,
+      "sha256": "377048AA9300DD4F5583FCA4570D8C2F5BF7D894C462FF9E44BAD8CE997ABD42",
+      "exit": 0,
+      "stdoutBytes": 6712
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "productCount": 21,
+  "method": "Explicit termination of owned AP/child processes after idle; not a graceful-shutdown acceptance",
+  "builderPids": [
+    269368,
+    184652,
+    216268,
+    32084,
+    29436,
+    260172,
+    84128,
+    319120,
+    246944,
+    306004
+  ],
+  "apPid": 83520,
+  "utc": "2026-10-12T10:05:53.4979861Z",
+  "sceneHashReceipt": "scene-hashes.json"
+}

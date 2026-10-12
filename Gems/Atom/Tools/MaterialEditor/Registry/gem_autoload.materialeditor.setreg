@@ -108,16 +108,6 @@
                     }
                 }
             },
-            "PrefabBuilder": {
-                "Targets": {
-                    "PrefabBuilder.Builders": {
-                        "AutoLoad": false
-                    },
-                    "PrefabBuilder.Editor": {
-                        "AutoLoad": false
-                    }
-                }
-            },
             "SceneProcessing": {
                 "Targets": {
                     "SceneProcessing.Editor": {

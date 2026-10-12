@@ -1,0 +1,11 @@
+{
+  "source": "Gems/Atom/Tools/MaterialEditor/Assets/MaterialEditor/ViewportModels/Cube.fbx",
+  "sourcePin": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+  "sourceReceipt": "build/n0-validation/material-critical-assets-recovery-rev1/origin-manifest.json",
+  "copy": "Projects/JEEditorFixture/Assets/NativePrefabBuilder/NativePrefabCube.fbx",
+  "bytes": 30656,
+  "sha256": "9C9E212AD50C78CD759156F4F47BF5C9FE61149472648DFD467341895F6ED914",
+  "purpose": "Exercise default procedural prefab generation through existing SceneAPI; no .assetinfo copied",
+  "networkDownloads": 0,
+  "status": "NOT_PROCESSED"
+}

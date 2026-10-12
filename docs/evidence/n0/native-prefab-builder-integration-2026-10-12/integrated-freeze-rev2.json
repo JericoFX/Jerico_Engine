@@ -1,0 +1,262 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\.gitattributes",
+    "bytes": 9614,
+    "sha256": "C90119F6FE295CAA4AF47441322427ABECB53738695B4BAB877D1EC1B3E1956A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+    "bytes": 1830,
+    "sha256": "4F458C3938F3FE891532EDB7F7363FE60ABD010BE9FEB735C6CB4F0653BB87A8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+    "bytes": 7607,
+    "sha256": "BB9DD26E5A7B0F5063CC77BA6FF18C08B470523B9D00D90D29A6CC308A9AD000"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+    "bytes": 14180,
+    "sha256": "2C2EA08A32832F7B13AD59F1BB9C99BA62429A5B89ACA9578707A3BC7BE248EE"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+    "bytes": 10421,
+    "sha256": "C161CBA217CCE75C19B91D29F8A809D9015401481A5B5610212405FE2E89F6C7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt",
+    "bytes": 2581,
+    "sha256": "08523906A1EF8A8FCE77A0C5E17CB1DBED72C59C882EB40A31B698FE894C9B92"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt",
+    "bytes": 9807,
+    "sha256": "95232FD185B35E766B7C053E128893FD71EE3B45A04DEB15165C59B195E34534"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+    "bytes": 32503,
+    "sha256": "DE54F0CB7DE458A8A7A2DA411442FD47956EA4CEA2591C58FD502D5B73B51B15"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SerializeContextTools\\Application.cpp",
+    "bytes": 9062,
+    "sha256": "77617E940AF22F7B5AF407DE2E276066872D6297C15401BCD0FC42AC1BA60657"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SerializeContextTools\\CMakeLists.txt",
+    "bytes": 1882,
+    "sha256": "E46FBB761A756BEF3835FFF576AF4D58F10B29DB074E0863017D7ED490B4381E"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+    "bytes": 3637,
+    "sha256": "767A031C266A974B89ED51CD5DD87AE7065B9638EA2A4E87D4D96D95A411FC94"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\CMakeLists.txt",
+    "bytes": 1129,
+    "sha256": "9471DCBA98DCA8E0ED97073DDC3B3C1864D0212B1B39F1253F42794288F8654A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabBuilderComponent.h",
+    "bytes": 3672,
+    "sha256": "125827BA170B0E8D9FCB78DAB0529030F3B799755F15BDC7A4209FFA43B59D24"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabBuilderExports.h",
+    "bytes": 362,
+    "sha256": "E1ABA45432BC26374793846870ACCB154DF922573CF9E837835F1D2B7C846D72"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabBuilderModule.h",
+    "bytes": 793,
+    "sha256": "81A0154605B1217CBF4342676C09D5EE8B64C63A8D26DEE13FEE27FCDEDFA0A2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabGroup\\DefaultProceduralPrefab.h",
+    "bytes": 5199,
+    "sha256": "220D52DF812D8ADDEFD5931B608444F8B39FAC03D2A9859D384D9E282A1F9486"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabGroup\\IPrefabGroup.h",
+    "bytes": 878,
+    "sha256": "82B9BA75030335FB5AD4EDAF43DD035382EB90D05AFB1A69AF94FDB7747CCFAF"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabGroup\\PrefabGroup.h",
+    "bytes": 3378,
+    "sha256": "FDE21265A1C61DE7C6E4E62CAC97B3EDA8E99B031C39702F6294AB47667470F4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabGroup\\PrefabGroupBehavior.h",
+    "bytes": 2333,
+    "sha256": "72B95E654D6E659679A1677EF0E9D4AFF23D32452D3DDBD10B384861832E9F38"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabGroup\\PrefabGroupBus.h",
+    "bytes": 2834,
+    "sha256": "642E2587E7B5D5D501C056C75CBBA85BFB3A2641ACDA7C5AFCDDE374D011844B"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Include\\JE\\Assets\\Prefab\\PrefabGroup\\ProceduralAssetHandler.h",
+    "bytes": 1510,
+    "sha256": "5D013F6AAFDE87A38E5349B19896B3452BDFDA42360A5C01C241D5F9D33FFC6D"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\prefabbuilder_files.cmake",
+    "bytes": 941,
+    "sha256": "6A74FBC1FF03AA7C661C58215369B64AA88C2BED4518C163B2D9F75EF47B919B"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\prefabbuilder_tests_files.cmake",
+    "bytes": 513,
+    "sha256": "F98FC75F1EF72FF8AC9ACAEFD3FB557BCF427E2F8A19187F56303534EE6E0D7B"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabBuilderComponent.cpp",
+    "bytes": 15352,
+    "sha256": "237D7AE60B0FEADFA7B6ED421580F56D3825C7C091DFDCA4E055869BCB73C289"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabBuilderModule.cpp",
+    "bytes": 683,
+    "sha256": "1D317A207B419C917CE62B2BD090A5C3CA60755F5DE8156C1CC868543E991075"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabGroup\\DefaultProceduralPrefab.cpp",
+    "bytes": 26851,
+    "sha256": "569C221AC793D841FD4FEA89B9D624B67A7F37BD7D63A09C4F7874AF0FD75B48"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabGroup\\PrefabGroup.cpp",
+    "bytes": 8271,
+    "sha256": "E71918181EBF4011F6354675704A6D1C0C5730F544068F5FB63083D131CD01DB"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabGroup\\PrefabGroupBehavior.cpp",
+    "bytes": 25365,
+    "sha256": "EA9CB0BCE7A57153E6DA22C83AD0DF1825BA855CD24C2DC43F80EF1486895D91"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabGroup\\PrefabGroupBus.cpp",
+    "bytes": 372,
+    "sha256": "9BA5F570ED6BF3EB19094A3420D7CD7C62EC6BAA1F70BE66711B15B153AE7522"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Source\\PrefabGroup\\ProceduralAssetHandler.cpp",
+    "bytes": 10990,
+    "sha256": "6CF9A44C7727962F90A4E7DF308D9B819E65B7248EC0DD436446C9F0A52C8F52"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabBuilderModuleTests.cpp",
+    "bytes": 1313,
+    "sha256": "94A71B41AB0855B269B65AE63569AD1EDA0C933658203D56FF94CC59FFD8F9A0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabBuilderTests.cpp",
+    "bytes": 9942,
+    "sha256": "5FCDF89F9B4F5DF6735FC0E07EFCA8455939FCA94F217813315FE21D725EA82D"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabBuilderTests.h",
+    "bytes": 4050,
+    "sha256": "BE87FC95DAFB128C77E58E9CA7084E28C9C66BC88D18D820BC05BE38BB59D4A2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabGroup\\DefaultProceduralPrefabGroupTests.cpp",
+    "bytes": 5763,
+    "sha256": "102DDD4B8FA2E466C86E478147B07D732DAE1E08C8EEEAD1520DA8241F083175"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabGroup\\PrefabBehaviorTestMocks.cpp",
+    "bytes": 4720,
+    "sha256": "DD367CEA86F9BC2ED8527D8935E6188EDF3883A30C9C5FB78352957DBA51DC65"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabGroup\\PrefabBehaviorTestMocks.h",
+    "bytes": 2275,
+    "sha256": "CC57634413A257415D58D9D7ED2247D722167F7E7A15FFF8D08FAD941922F6DC"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabGroup\\PrefabBehaviorTests.cpp",
+    "bytes": 22724,
+    "sha256": "E7FFE2040D9D229AE9DBF419998CB1DD7485D4A88EF60B8DCDFA8B1584F26D38"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabGroup\\PrefabBehaviorTests.inl",
+    "bytes": 4456,
+    "sha256": "FB1EA72AA4E8E63426462D94179238DEFFCEAD619F44B26518B31626BD280C39"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\PrefabBuilder\\Tests\\PrefabGroup\\PrefabGroupTests.cpp",
+    "bytes": 7284,
+    "sha256": "B4B8B40BA21D90F100FD96F023C9B541BFEAAE8444018C8ECAE0AE0150833FC0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+    "bytes": 483,
+    "sha256": "347B39F8EEF751CC3EF3CEED13370D3EC8E1745174CA57DBC9C8EC20748F492F"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg",
+    "bytes": 8856,
+    "sha256": "60EE009167205E641B3E1989EE47E8AAD5F49BBF307F7F0A2A967504A14A3D39"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg",
+    "bytes": 9266,
+    "sha256": "DBA6F310D578FD6A62A3451524CC8987A4CEA5954ECA6289ADC5B619E8732504"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg",
+    "bytes": 8856,
+    "sha256": "60EE009167205E641B3E1989EE47E8AAD5F49BBF307F7F0A2A967504A14A3D39"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg",
+    "bytes": 8856,
+    "sha256": "60EE009167205E641B3E1989EE47E8AAD5F49BBF307F7F0A2A967504A14A3D39"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\CMakeLists.txt",
+    "bytes": 404,
+    "sha256": "52782ABA188726F65ECCD9A83DB89CDFA5F63C4E93ED4C59D1F957E1AF912EF9"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder\\CMakeLists.txt",
+    "bytes": 206,
+    "sha256": "486EA2226F401007CF9FA56571562C219A8323D3BA6315DCB36A775C2489DF69"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\NativePrefabBuilder\\NativePrefabCube.fbx",
+    "bytes": 30656,
+    "sha256": "9C9E212AD50C78CD759156F4F47BF5C9FE61149472648DFD467341895F6ED914"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\NativePrefabBuilder\\README.md",
+    "bytes": 1007,
+    "sha256": "27E7F6A91E2E328AB1B3E0ECEBA9353661D0086A64995132F5484606334D3A67"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+    "bytes": 566,
+    "sha256": "31855B82598A15BB29BD3E01EF461960F292648FAECB4095DDB480B9CDD23EE6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+    "bytes": 11716,
+    "sha256": "EA4B3C475A941ACA43ED883138FFBB899A6D1082C9388E5DE969E811082E31FF"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+    "bytes": 1138,
+    "sha256": "B833698269A21008BFB6D501F7A8CCBA46385FA659E6EF8E6EC071C75F3731E6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+    "bytes": 1122,
+    "sha256": "D8C6BD69491B20224AA3A2B1CB6BF45D7D5F03EA32FE62933CCC797C120284A5"
+  }
+]

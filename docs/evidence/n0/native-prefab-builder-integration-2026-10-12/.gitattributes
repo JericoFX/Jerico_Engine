@@ -1,0 +1,4 @@
+# Preserve raw compiler diagnostic bytes, including whitespace-only caret context.
+/native-attempt2/build.stdout.txt -text -whitespace
+# Keep the bounded visual evidence in Git without inherited LFS destinations.
+*.jpg -filter -diff -merge -text

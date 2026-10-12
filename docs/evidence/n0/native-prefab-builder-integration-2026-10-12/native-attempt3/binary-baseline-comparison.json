@@ -1,0 +1,204 @@
+{
+  "capturedUtc": "2026-10-12T10:01:23.5932021Z",
+  "baselinePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\baseline-luna\\baseline.json",
+  "baselineSha256": "05C273F554E45AC76475A4C7406FC0B46547590A2829B1D3EA6A1F035255DE1F",
+  "baselineScope": "baseline has selected binary size/hash/registry data, but no PE import logs",
+  "currentBinaries": [
+    {
+      "name": "PrefabBuilder.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.Builders.dll",
+      "existsNow": true,
+      "bytes": 1199104,
+      "sha256": "F54479CC433CE488ACB6F320E8BFEF5276637DFB61985F936D57DE9E36D16C24",
+      "baselineEntryPresent": true,
+      "baselineExists": true,
+      "baselineBytes": 1199104,
+      "baselineSha256": "F54479CC433CE488ACB6F320E8BFEF5276637DFB61985F936D57DE9E36D16C24",
+      "sameHashAsBaseline": true
+    },
+    {
+      "name": "PrefabBuilder.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+      "existsNow": true,
+      "bytes": 1296384,
+      "sha256": "215A85ADF5BA17C94F395A0472D63CF2E3C310FBF656B198A27A4FED9EA91153",
+      "baselineEntryPresent": false,
+      "baselineExists": null,
+      "baselineBytes": null,
+      "baselineSha256": null,
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "PrefabBuilder.Tests.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.Tests.dll",
+      "existsNow": true,
+      "bytes": 1206272,
+      "sha256": "D32803B34D2D07C2B8CCE65E216BA9F01FA14503741481D6AC240521021635B8",
+      "baselineEntryPresent": true,
+      "baselineExists": false,
+      "baselineBytes": null,
+      "baselineSha256": null,
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "EditorLib.Tests.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorLib.Tests.dll",
+      "existsNow": true,
+      "bytes": 5007360,
+      "sha256": "1AE7A5E5760794A0398E83DFBF21322DF0EE0A58F1C2BF52B52F63BAEE6E5B9C",
+      "baselineEntryPresent": false,
+      "baselineExists": null,
+      "baselineBytes": null,
+      "baselineSha256": null,
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "SerializeContextTools.Tests.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SerializeContextTools.Tests.dll",
+      "existsNow": false,
+      "baselineEntryPresent": false,
+      "baselineExists": null,
+      "baselineBytes": null,
+      "baselineSha256": null
+    },
+    {
+      "name": "Geometry.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll",
+      "existsNow": true,
+      "bytes": 742912,
+      "sha256": "8203D3A588AD17D2D722CAA02C72262A3DAE61A077556166F0E698E6E8D3D398",
+      "baselineEntryPresent": false,
+      "baselineExists": null,
+      "baselineBytes": null,
+      "baselineSha256": null,
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "Geometry.Authoring.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll",
+      "existsNow": true,
+      "bytes": 4922880,
+      "sha256": "377048AA9300DD4F5583FCA4570D8C2F5BF7D894C462FF9E44BAD8CE997ABD42",
+      "baselineEntryPresent": false,
+      "baselineExists": null,
+      "baselineBytes": null,
+      "baselineSha256": null,
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "Editor.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "existsNow": true,
+      "bytes": 171520,
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704",
+      "baselineEntryPresent": true,
+      "baselineExists": true,
+      "baselineBytes": 171520,
+      "baselineSha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704",
+      "sameHashAsBaseline": true
+    },
+    {
+      "name": "AssetProcessor.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "existsNow": true,
+      "bytes": 6668288,
+      "sha256": "B32F020E354CBAE641501C8C28DF9FDE03E4A0F8B7B2000EDFEDE88F14FC5A66",
+      "baselineEntryPresent": true,
+      "baselineExists": true,
+      "baselineBytes": 6668288,
+      "baselineSha256": "A78FE143ED0C6877D1D0E615090CA6308B35E8A4C8C1000F174BAB7D28A03FE2",
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "AssetProcessorBatch.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "existsNow": true,
+      "bytes": 5894656,
+      "sha256": "96AD45448C588007A545705B939DD4C089D76004A9EB23ED7E438692EAB0A8DC",
+      "baselineEntryPresent": true,
+      "baselineExists": true,
+      "baselineBytes": 5894656,
+      "baselineSha256": "F41F40E07028C8B5FB8C98D5958B1EBD12424AFB6CE253930F923EFCB2B0C306",
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "AssetBuilder.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "existsNow": true,
+      "bytes": 2789376,
+      "sha256": "60CFF17C09C8D8E102B8A1D975B9E00CEB1F59D071B9CA1EF543A1C824929F86",
+      "baselineEntryPresent": true,
+      "baselineExists": true,
+      "baselineBytes": 2789376,
+      "baselineSha256": "333D89EE4F999CF075BD9784F19C1ACF2C4C99C8C6E5F36AC4DFE59BCFFADAFF",
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "SerializeContextTools.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SerializeContextTools.exe",
+      "existsNow": true,
+      "bytes": 442368,
+      "sha256": "CC805465E561A58B1CF3AAD8DFB46E5AC92E59E2BD8141817E5524CDA5AE6D2E",
+      "baselineEntryPresent": true,
+      "baselineExists": true,
+      "baselineBytes": 442368,
+      "baselineSha256": "259B00BC5C94A7C6CAAD9892B44769C58B8249B30AC1AA855668AE7BB344F758",
+      "sameHashAsBaseline": false
+    },
+    {
+      "name": "JEEditorFixture.GameLauncher.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+      "existsNow": true,
+      "bytes": 1483776,
+      "sha256": "8B066EED699226A01D3D44293524F7E6F79007DF8142D6FA57DF84D2BCA07CA1",
+      "baselineEntryPresent": false,
+      "baselineExists": null,
+      "baselineBytes": null,
+      "baselineSha256": null,
+      "sameHashAsBaseline": false
+    }
+  ],
+  "dumpbinScope": {
+    "capturedUtc": "2026-10-12T10:00:53.5086091Z",
+    "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+    "dumpbinSha256": "12A1CD87238BD66DFDB788B4FCDCB91CE4B3F81236AAB12A7A29E5AE1D85AF50",
+    "scope": "PE headers and dependents of current package/runtime module and geometry binaries; baseline binary inventory has sizes/hashes only, no import captures",
+    "results": [
+      {
+        "file": "PrefabBuilder.Builders.dll",
+        "bytes": 1199104,
+        "sha256": "F54479CC433CE488ACB6F320E8BFEF5276637DFB61985F936D57DE9E36D16C24",
+        "exit": 0,
+        "stdoutBytes": 6520
+      },
+      {
+        "file": "PrefabBuilder.dll",
+        "bytes": 1296384,
+        "sha256": "215A85ADF5BA17C94F395A0472D63CF2E3C310FBF656B198A27A4FED9EA91153",
+        "exit": 0,
+        "stdoutBytes": 6502
+      },
+      {
+        "file": "PrefabBuilder.Tests.dll",
+        "bytes": 1206272,
+        "sha256": "D32803B34D2D07C2B8CCE65E216BA9F01FA14503741481D6AC240521021635B8",
+        "exit": 0,
+        "stdoutBytes": 6681
+      },
+      {
+        "file": "Geometry.dll",
+        "bytes": 742912,
+        "sha256": "8203D3A588AD17D2D722CAA02C72262A3DAE61A077556166F0E698E6E8D3D398",
+        "exit": 0,
+        "stdoutBytes": 6466
+      },
+      {
+        "file": "Geometry.Authoring.dll",
+        "bytes": 4922880,
+        "sha256": "377048AA9300DD4F5583FCA4570D8C2F5BF7D894C462FF9E44BAD8CE997ABD42",
+        "exit": 0,
+        "stdoutBytes": 6712
+      }
+    ]
+  }
+}

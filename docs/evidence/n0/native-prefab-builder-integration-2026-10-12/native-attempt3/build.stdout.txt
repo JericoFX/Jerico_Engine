@@ -1,0 +1,927 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  jsoncpp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\jsoncpp.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  OpenSSL_md5.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenSSL_md5.lib
+  D3D12MemoryAllocator.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\D3D12MA.lib
+  squish-ccr.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\squish-ccr.lib
+  antlr4.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\antlr4.lib
+  mikktspace.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mikktspace.lib
+  assimp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\assimp-vc143-mt.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  PhysX.NumericalMethods.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX.NumericalMethods.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  Atom_RHI_Vulkan.Glad.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Glad.Static.lib
+  ShaderCompiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ShaderCompiler.lib
+  Azslc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\azslc.exe
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  Profiler.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Profiler.Static.lib
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  ImGui.ImGuiLYUtils.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.ImGuiLYUtils.lib
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  Atom_RHI_DX12.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Reflect.lib
+  Atom_RHI_Metal.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Private.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Atom_RHI_Null.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Reflect.lib
+  ProfilerImGui.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerImGui.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  ImGui.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.Static.lib
+  LmbrCentral.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Static.lib
+  PhysX5.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Static.lib
+  Atom_RHI.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RHI-bd15122d\Code\Atom_RHI.Private.Object.dir\profile\Atom_RHI.Private.Object.lib
+  Atom_RHI_Null.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Private.Static.lib
+  Atom_RHI_DX12.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Private.Static.lib
+  Atom_RHI_Metal.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Builders.dll
+  Atom_RHI_Vulkan.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Reflect.lib
+  Atom_RHI_Null.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Private.dll
+  Atom_RHI.Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Profiler.lib
+  Atom_RHI_DX12.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Private.dll
+  Atom_RHI.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_AtomBridge.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_AtomBridge.Static.lib
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RHI_Vulkan.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Private.Static.lib
+  AtomFont.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+  AudioSystem.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Private.Object.lib
+  AtomViewportDisplayInfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+  Atom_RPI.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Editor.Private.Object.dir\profile\Atom_RPI.Editor.Private.Object.lib
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  Atom_RHI_Vulkan.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+  Atom_Bootstrap.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Bootstrap.dll
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  Atom_Component_DebugCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Component_DebugCamera.dll
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  AtomRenderOptions.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomRenderOptions.Editor.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  SurfaceData.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SurfaceData.Static.lib
+  SDKWrapper.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SDKWrapper.lib
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  EditorCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCore.dll
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  ImguiAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImguiAtom.Static.lib
+  AtomViewportDisplayIcons.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayIcons.Editor.dll
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  Atom_RHI_Vulkan.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Builders.Static.lib
+  Atom_RHI_DX12.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Builders.Static.lib
+  GradientSignal.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Static.lib
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  SceneBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneBuilder.Static.lib
+  SceneUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneUI.dll
+  ImageProcessingAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImageProcessingAtom.Editor.Static.lib
+  AtomImGuiTools.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomImGuiTools.Static.lib
+  CommonFeaturesAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Static.lib
+  ImguiAtom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImguiAtom.dll
+  EditorModeFeedback.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EditorModeFeedback.Editor.Static.lib
+  AtomImGuiTools.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomImGuiTools.dll
+  LmbrCentral.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Editor.Static.lib
+  SceneProcessing.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneProcessing.Editor.Static.lib
+  PhysX5.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Editor.Static.lib
+  ImageProcessingAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImageProcessingAtom.Editor.dll
+  Atom_RHI_Null.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Builders.Static.lib
+  Atom_RHI_Vulkan.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Builders.dll
+  Atom_RHI_DX12.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Builders.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  EditorModeFeedback.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorModeFeedback.Editor.dll
+  LmbrCentral.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.Editor.dll
+  SceneProcessing.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneProcessing.Editor.dll
+  Atom_RPI.Builders.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Builders.Private.Object.dir\profile\Atom_RPI.Builders.Private.Object.lib
+  PhysX5.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Editor.Gem.dll
+  AtomShader.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomShader.Static.lib
+  Atom_RPI.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Editor.dll
+  Atom_RHI_Null.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Builders.dll
+  GraphCanvas.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphCanvas.Editor.dll
+  AudioSystem.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Editor.Private.Object.lib
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  Maestro.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Maestro.Static.lib
+  GradientSignal.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Editor.Static.lib
+  Maestro.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.Editor.dll
+  SurfaceData.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.Editor.dll
+  GradientSignal.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.Editor.dll
+  ImGui.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.Editor.dll
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  Atom_Feature_Common.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Builders.dll
+  AtomShader.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomShader.Builders.dll
+  GraphModel.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphModel.Editor.dll
+  Atom_Feature_Common.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Editor.dll
+  Atom_RPI.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Builders.dll
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  EMotionFXStaticLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFXStaticLib.lib
+  AudioSystem.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.Editor.dll
+  AtomToolsFramework.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomToolsFramework.Editor.dll
+  EMotionFX.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX.Editor.Static.lib
+  CommonFeaturesAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Editor.Static.lib
+  EMotionFX.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.Editor.dll
+  CommonFeaturesAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CommonFeaturesAtom.Editor.dll
+  EMotionFX_Atom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX_Atom.Static.lib
+  EMotionFX_Atom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.Editor.dll
+  Atom_AtomBridge.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_AtomBridge.Editor.dll
+  Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Profiler.dll
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  CrySystem.XMLBinary.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CrySystem.XMLBinary.lib
+  LuaIDE.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LuaIDE.exe
+  RemoteConsoleCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\RemoteConsoleCore.lib
+  SceneBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneBuilder.dll
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  PrefabGroup.cpp
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  CrySystem.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CrySystem.Static.lib
+  CrySystem.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CrySystem.dll
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  PassCanvas.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PassCanvas.exe
+  ShaderManagementConsole.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ShaderManagementConsole.exe
+  MaterialCanvas.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\MaterialCanvas.exe
+  MaterialEditor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\MaterialEditor.exe
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/PrefabBuilder.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/PrefabBuilder.exp
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  Copying EditorLib runtime dependencies to output...
+  unity_33_cxx.cxx
+  unity_32_cxx.cxx
+  unity_31_cxx.cxx
+  unity_29_cxx.cxx
+  unity_30_cxx.cxx
+  unity_23_cxx.cxx
+  unity_26_cxx.cxx
+  unity_27_cxx.cxx
+  unity_25_cxx.cxx
+  unity_24_cxx.cxx
+  unity_22_cxx.cxx
+  unity_18_cxx.cxx
+  unity_19_cxx.cxx
+  unity_16_cxx.cxx
+  unity_21_cxx.cxx
+  unity_17_cxx.cxx
+  unity_20_cxx.cxx
+  unity_28_cxx.cxx
+  unity_0_cxx.cxx
+  unity_15_cxx.cxx
+  AssetBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilder.Static.lib
+  Copying AssetBuilder runtime dependencies to output...
+  unity_2_cxx.cxx
+  unity_3_cxx.cxx
+  unity_4_cxx.cxx
+  AssetBuilderComponent.cpp
+  unity_7_cxx.cxx
+  unity_11_cxx.cxx
+  unity_34_cxx.cxx
+  unity_5_cxx.cxx
+  unity_14_cxx.cxx
+  unity_6_cxx.cxx
+  unity_8_cxx.cxx
+  unity_10_cxx.cxx
+  unity_1_cxx.cxx
+  unity_12_cxx.cxx
+  unity_9_cxx.cxx
+  unity_0_cxx.cxx
+  JobsModel.cpp
+  unity_13_cxx.cxx
+  unity_4_cxx.cxx
+  unity_6_cxx.cxx
+  unity_1_cxx.cxx
+  qrc_resources_AssetImporter.cpp
+  unity_2_cxx.cxx
+  qrc_resources_MainWindow.cpp
+  unity_0_cxx.cxx
+  ApplicationManager.cpp
+  unity_8_cxx.cxx
+  unity_7_cxx.cxx
+  unity_5_cxx.cxx
+  unity_3_cxx.cxx
+  AssetProcessor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetProcessor.Static.lib
+  unity_0_cxx.cxx
+  AssetBuilderApplication.cpp
+  AffineParts.cpp
+  TrackViewPythonFuncs.cpp
+  AssetBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetBuilder.exe
+  Copying AssetProcessor runtime dependencies to output...
+  AssetProcessorBuildTarget.cpp
+  unity_4_cxx.cxx
+  unity_3_cxx.cxx
+  unity_0_cxx.cxx
+  qrc_resources_LayoutConfigDialog.cpp
+  unity_1_cxx.cxx
+  qrc_resources_LevelFileDialog.cpp
+  qrc_resources_ConsoleSCB.cpp
+  unity_5_cxx.cxx
+  unity_2_cxx.cxx
+  qrc_resources_NewLevelDialog.cpp
+  qrc_resources_StartupLogoDialog.cpp
+  qrc_resources_TrackViewDialog.cpp
+  qrc_resources_WelcomeScreenDialog.cpp
+  qrc_resources_ProjectSettingsTool.cpp
+  qrc_resources_AssetProcessor.cpp
+  unity_6_cxx.cxx
+  CryEdit.cpp
+  AssetProcessor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetProcessor.exe
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/EditorLib.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/EditorLib.exp
+  EditorLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorLib.dll
+  Copying Editor runtime dependencies to output...
+  Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Editor.exe
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  mikktspace.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mikktspace.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  D3D12MemoryAllocator.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\D3D12MA.lib
+  OpenSSL_md5.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenSSL_md5.lib
+  assimp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\assimp-vc143-mt.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  squish-ccr.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\squish-ccr.lib
+  jsoncpp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\jsoncpp.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  Atom_RHI_Vulkan.Glad.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Glad.Static.lib
+  PhysX.NumericalMethods.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX.NumericalMethods.lib
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  antlr4.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\antlr4.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  Profiler.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Profiler.Static.lib
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  ShaderCompiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ShaderCompiler.lib
+  Atom_RHI_Metal.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Private.dll
+  Atom_RHI_Null.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Reflect.lib
+  Atom_RHI_DX12.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Reflect.lib
+  Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Profiler.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  Azslc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\azslc.exe
+  Atom_RHI_Vulkan.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Reflect.lib
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RHI.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RHI-bd15122d\Code\Atom_RHI.Private.Object.dir\profile\Atom_RHI.Private.Object.lib
+  Atom_RHI_Metal.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Builders.dll
+  Atom_RHI_Null.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Private.Static.lib
+  LmbrCentral.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Static.lib
+  Atom_RHI.Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Profiler.lib
+  Atom_RHI_DX12.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Private.Static.lib
+  PhysX5.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Static.lib
+  Atom_RHI.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  ImGui.ImGuiLYUtils.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.ImGuiLYUtils.lib
+  Atom_RHI_Vulkan.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Private.Static.lib
+  ImGui.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.Static.lib
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  AtomViewportDisplayInfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+  AudioSystem.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Private.Object.lib
+  Atom_RHI_Null.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Private.dll
+  Atom_RPI.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Editor.Private.Object.dir\profile\Atom_RPI.Editor.Private.Object.lib
+  Atom_Component_DebugCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Component_DebugCamera.dll
+  Atom_AtomBridge.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_AtomBridge.Static.lib
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  Atom_RHI_Vulkan.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+  AtomFont.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  Atom_Bootstrap.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Bootstrap.dll
+  SDKWrapper.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SDKWrapper.lib
+  Atom_RHI_DX12.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Private.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  AtomViewportDisplayIcons.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayIcons.Editor.dll
+  AtomRenderOptions.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomRenderOptions.Editor.dll
+  EditorCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCore.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  Atom_RPI.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Editor.dll
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  Atom_RHI_Null.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Builders.Static.lib
+  AtomShader.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomShader.Static.lib
+  ImageProcessingAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImageProcessingAtom.Editor.Static.lib
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  Atom_RHI_Vulkan.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Builders.Static.lib
+  Atom_RHI_DX12.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Builders.Static.lib
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  Atom_RPI.Builders.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Builders.Private.Object.dir\profile\Atom_RPI.Builders.Private.Object.lib
+  Atom_RHI_DX12.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Builders.dll
+  LmbrCentral.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Editor.Static.lib
+  GraphCanvas.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphCanvas.Editor.dll
+  Atom_RHI_Null.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Builders.dll
+  SceneUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneUI.dll
+  AudioSystem.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Editor.Private.Object.lib
+  SceneBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneBuilder.Static.lib
+  Atom_RPI.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Builders.dll
+  AudioSystem.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.Editor.dll
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  ImageProcessingAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImageProcessingAtom.Editor.dll
+  SurfaceData.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SurfaceData.Static.lib
+  Atom_RHI_Vulkan.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Builders.dll
+  LmbrCentral.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.Editor.dll
+  AtomShader.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomShader.Builders.dll
+  SceneProcessing.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneProcessing.Editor.Static.lib
+  Maestro.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Maestro.Static.lib
+  SurfaceData.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.Editor.dll
+  GradientSignal.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Static.lib
+  ImGui.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.Editor.dll
+  ImguiAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImguiAtom.Static.lib
+  GraphModel.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphModel.Editor.dll
+  Maestro.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.Editor.dll
+  Atom_Feature_Common.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Editor.dll
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  Atom_Feature_Common.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Builders.dll
+  GradientSignal.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Editor.Static.lib
+  AtomImGuiTools.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomImGuiTools.Static.lib
+  ImguiAtom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImguiAtom.dll
+  CommonFeaturesAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Static.lib
+  AtomImGuiTools.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomImGuiTools.dll
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  GradientSignal.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.Editor.dll
+  EditorModeFeedback.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EditorModeFeedback.Editor.Static.lib
+  CommonFeaturesAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Editor.Static.lib
+  PhysX5.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Editor.Static.lib
+  EMotionFXStaticLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFXStaticLib.lib
+  PhysX5.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Editor.Gem.dll
+  EditorModeFeedback.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorModeFeedback.Editor.dll
+  CommonFeaturesAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CommonFeaturesAtom.Editor.dll
+  SceneProcessing.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneProcessing.Editor.dll
+  AtomToolsFramework.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomToolsFramework.Editor.dll
+  EMotionFX.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX.Editor.Static.lib
+  EMotionFX.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.Editor.dll
+  EMotionFX_Atom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX_Atom.Static.lib
+  EMotionFX_Atom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.Editor.dll
+  Atom_AtomBridge.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_AtomBridge.Editor.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  SceneBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneBuilder.dll
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  AssetBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilder.Static.lib
+  AssetBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetBuilder.exe
+  AssetProcessor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetProcessor.Static.lib
+  AssetProcessor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetProcessor.exe
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  squish-ccr.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\squish-ccr.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  mikktspace.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mikktspace.lib
+  OpenSSL_md5.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenSSL_md5.lib
+  D3D12MemoryAllocator.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\D3D12MA.lib
+  jsoncpp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\jsoncpp.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  Atom_RHI_Vulkan.Glad.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Glad.Static.lib
+  PhysX.NumericalMethods.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX.NumericalMethods.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  antlr4.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\antlr4.lib
+  assimp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\assimp-vc143-mt.lib
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  ShaderCompiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ShaderCompiler.lib
+  Azslc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\azslc.exe
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  Profiler.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Profiler.Static.lib
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RHI_DX12.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Reflect.lib
+  Atom_RHI_Null.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Reflect.lib
+  LmbrCentral.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Static.lib
+  Atom_RHI_Vulkan.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Reflect.lib
+  Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Profiler.dll
+  ImGui.ImGuiLYUtils.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.ImGuiLYUtils.lib
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  ImGui.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.Static.lib
+  Atom_RHI_Metal.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Private.dll
+  Atom_RHI_Vulkan.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Private.Static.lib
+  Atom_RHI.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RHI-bd15122d\Code\Atom_RHI.Private.Object.dir\profile\Atom_RHI.Private.Object.lib
+  Atom_RHI_Metal.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Builders.dll
+  Atom_RHI_Null.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Private.Static.lib
+  Atom_RHI_Null.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Private.dll
+  Atom_RHI.Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Profiler.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  Atom_Bootstrap.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Bootstrap.dll
+  AtomViewportDisplayInfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  Atom_RHI_Vulkan.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+  Atom_RHI.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+  AudioSystem.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Private.Object.lib
+  Atom_RPI.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Editor.Private.Object.dir\profile\Atom_RPI.Editor.Private.Object.lib
+  PhysX5.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Static.lib
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  Atom_AtomBridge.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_AtomBridge.Static.lib
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  Atom_Component_DebugCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Component_DebugCamera.dll
+  SurfaceData.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SurfaceData.Static.lib
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  SDKWrapper.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SDKWrapper.lib
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  AtomRenderOptions.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomRenderOptions.Editor.dll
+  Atom_RHI_Null.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Builders.Static.lib
+  EditorCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCore.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  Atom_RHI_DX12.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Builders.Static.lib
+  ImguiAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImguiAtom.Static.lib
+  ImageProcessingAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImageProcessingAtom.Editor.Static.lib
+  Atom_RPI.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Editor.dll
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  ImguiAtom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImguiAtom.dll
+  LmbrCentral.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Editor.Static.lib
+  AtomFont.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+  AtomImGuiTools.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomImGuiTools.Static.lib
+  Atom_RHI_Vulkan.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Builders.Static.lib
+  AudioSystem.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Editor.Private.Object.lib
+  AtomImGuiTools.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomImGuiTools.dll
+  AtomShader.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomShader.Static.lib
+  Atom_RHI_DX12.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Builders.dll
+  AudioSystem.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.Editor.dll
+  AtomViewportDisplayIcons.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayIcons.Editor.dll
+  ImageProcessingAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImageProcessingAtom.Editor.dll
+  Atom_RHI_DX12.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Private.Static.lib
+  AtomShader.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomShader.Builders.dll
+  LmbrCentral.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.Editor.dll
+  GradientSignal.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Static.lib
+  Atom_RHI_DX12.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Private.dll
+  Atom_RHI_Vulkan.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Builders.dll
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  GraphCanvas.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphCanvas.Editor.dll
+  GradientSignal.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Editor.Static.lib
+  Maestro.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Maestro.Static.lib
+  Atom_RHI_Null.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Builders.dll
+  ImGui.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.Editor.dll
+  SurfaceData.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.Editor.dll
+  Maestro.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.Editor.dll
+  GradientSignal.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.Editor.dll
+  GraphModel.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphModel.Editor.dll
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  Atom_RPI.Builders.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Builders.Private.Object.dir\profile\Atom_RPI.Builders.Private.Object.lib
+  SceneUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneUI.dll
+  SceneBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneBuilder.Static.lib
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  CommonFeaturesAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Static.lib
+  Atom_Feature_Common.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Builders.dll
+  Atom_RPI.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Builders.dll
+  Atom_Feature_Common.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Editor.dll
+  EditorModeFeedback.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EditorModeFeedback.Editor.Static.lib
+  PhysX5.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Editor.Static.lib
+  EMotionFXStaticLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFXStaticLib.lib
+  EditorModeFeedback.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorModeFeedback.Editor.dll
+  SceneProcessing.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneProcessing.Editor.Static.lib
+  SceneProcessing.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneProcessing.Editor.dll
+  PhysX5.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Editor.Gem.dll
+  EMotionFX.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX.Editor.Static.lib
+  CommonFeaturesAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Editor.Static.lib
+  AtomToolsFramework.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomToolsFramework.Editor.dll
+  CommonFeaturesAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CommonFeaturesAtom.Editor.dll
+  EMotionFX.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.Editor.dll
+  EMotionFX_Atom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX_Atom.Static.lib
+  EMotionFX_Atom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.Editor.dll
+  Atom_AtomBridge.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_AtomBridge.Editor.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  SceneBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneBuilder.dll
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  AssetBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilder.Static.lib
+  AssetProcessor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetProcessor.Static.lib
+  AssetBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetBuilder.exe
+  AssetProcessorBatchBuildTarget.cpp
+  unity_0_cxx.cxx
+  AssetProcessorBatch.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetProcessorBatch.Static.lib
+  Copying AssetProcessorBatch runtime dependencies to output...
+  AssetProcessorBatchBuildTarget.cpp
+  unity_0_cxx.cxx
+  AssetProcessorBatch.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetProcessorBatch.exe
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  mikktspace.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mikktspace.lib
+  OpenSSL_md5.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenSSL_md5.lib
+  D3D12MemoryAllocator.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\D3D12MA.lib
+  jsoncpp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\jsoncpp.lib
+  squish-ccr.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\squish-ccr.lib
+  antlr4.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\antlr4.lib
+  assimp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\assimp-vc143-mt.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  Atom_RHI_Vulkan.Glad.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Glad.Static.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  PhysX.NumericalMethods.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX.NumericalMethods.lib
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  ShaderCompiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ShaderCompiler.lib
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Profiler.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Profiler.Static.lib
+  LmbrCentral.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Static.lib
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  ImGui.ImGuiLYUtils.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.ImGuiLYUtils.lib
+  Atom_RHI_Metal.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Private.dll
+  Atom_RHI_DX12.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Reflect.lib
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  Atom_RHI_Null.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Reflect.lib
+  Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Profiler.dll
+  Atom_RHI.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RHI-bd15122d\Code\Atom_RHI.Private.Object.dir\profile\Atom_RHI.Private.Object.lib
+  Atom_RHI_Null.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Private.Static.lib
+  Atom_RHI.Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Profiler.lib
+  Atom_RHI_Metal.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Metal.Builders.dll
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  ImGui.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.Static.lib
+  Atom_RHI.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  Atom_AtomBridge.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_AtomBridge.Static.lib
+  Atom_RHI_DX12.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Private.Static.lib
+  Atom_Bootstrap.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Bootstrap.dll
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  Atom_Component_DebugCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Component_DebugCamera.dll
+  AtomFont.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+  PhysX5.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Static.lib
+  AudioSystem.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Private.Object.lib
+  Atom_RHI_Null.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Private.dll
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RHI_Vulkan.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Reflect.lib
+  AtomViewportDisplayInfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+  Atom_RPI.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Editor.Private.Object.dir\profile\Atom_RPI.Editor.Private.Object.lib
+  Atom_RHI_Vulkan.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Private.Static.lib
+  Azslc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\azslc.exe
+  Atom_RHI_Vulkan.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+  Atom_RHI_DX12.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Private.dll
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  SurfaceData.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SurfaceData.Static.lib
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  AtomViewportDisplayIcons.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayIcons.Editor.dll
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  SDKWrapper.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SDKWrapper.lib
+  EditorCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCore.dll
+  ImguiAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImguiAtom.Static.lib
+  GradientSignal.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Static.lib
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  AtomRenderOptions.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomRenderOptions.Editor.dll
+  ImguiAtom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImguiAtom.dll
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  Atom_RHI_Vulkan.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Builders.Static.lib
+  ImageProcessingAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImageProcessingAtom.Editor.Static.lib
+  Atom_RHI_DX12.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Builders.Static.lib
+  CommonFeaturesAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Static.lib
+  AtomImGuiTools.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomImGuiTools.Static.lib
+  Atom_RHI_Null.Builders.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Builders.Static.lib
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  ImageProcessingAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImageProcessingAtom.Editor.dll
+  EditorModeFeedback.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EditorModeFeedback.Editor.Static.lib
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  AtomShader.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomShader.Static.lib
+  GraphCanvas.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphCanvas.Editor.dll
+  AudioSystem.Editor.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Editor.Private.Object.lib
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  GraphModel.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GraphModel.Editor.dll
+  Atom_RHI_Null.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Builders.dll
+  Atom_RPI.Builders.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RPI-86831dc8\Code\Atom_RPI.Builders.Private.Object.dir\profile\Atom_RPI.Builders.Private.Object.lib
+  SceneBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneBuilder.Static.lib
+  SceneUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneUI.dll
+  Atom_Feature_Common.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Editor.dll
+  Atom_RPI.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Builders.dll
+  AtomImGuiTools.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomImGuiTools.dll
+  EditorModeFeedback.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorModeFeedback.Editor.dll
+  Atom_RPI.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Editor.dll
+  AudioSystem.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.Editor.dll
+  SceneProcessing.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SceneProcessing.Editor.Static.lib
+  LmbrCentral.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Editor.Static.lib
+  PhysX5.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Editor.Static.lib
+  SceneBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneBuilder.dll
+  Atom_RHI_DX12.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Builders.dll
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  SceneProcessing.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneProcessing.Editor.dll
+  LmbrCentral.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.Editor.dll
+  AtomShader.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomShader.Builders.dll
+  SurfaceData.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.Editor.dll
+  ImGui.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.Editor.dll
+  GradientSignal.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Editor.Static.lib
+  Maestro.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Maestro.Static.lib
+  Atom_RHI_Vulkan.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Builders.dll
+  GradientSignal.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.Editor.dll
+  CommonFeaturesAtom.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Editor.Static.lib
+  AtomToolsFramework.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomToolsFramework.Editor.dll
+  EMotionFXStaticLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFXStaticLib.lib
+  Maestro.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.Editor.dll
+  CommonFeaturesAtom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CommonFeaturesAtom.Editor.dll
+  Atom_Feature_Common.Builders.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Builders.dll
+  PhysX5.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Editor.Gem.dll
+  EMotionFX.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX.Editor.Static.lib
+  EMotionFX.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.Editor.dll
+  EMotionFX_Atom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX_Atom.Static.lib
+  EMotionFX_Atom.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.Editor.dll
+  Atom_AtomBridge.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_AtomBridge.Editor.dll
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  AssetBuilder.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilder.Static.lib
+  AssetBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AssetBuilder.exe
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  unity_0_cxx.cxx
+  SerializeContextTools.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Code\Tools\SerializeContextTools\SerializeContextTools.Private.Object.dir\profile\SerializeContextTools.Private.Object.lib
+  Copying SerializeContextTools runtime dependencies to output...
+  unity_0_cxx.cxx
+  SerializeContextTools.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SerializeContextTools.exe
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  D3D12MemoryAllocator.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\D3D12MA.lib
+  OpenSSL_md5.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenSSL_md5.lib
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  Atom_RHI_Vulkan.Glad.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Glad.Static.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  Profiler.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Profiler.Static.lib
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  Atom_RHI_DX12.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Reflect.lib
+  Atom_RHI_Null.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Reflect.lib
+  Atom_RHI_Vulkan.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Reflect.lib
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  Atom_RHI.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\RHI-bd15122d\Code\Atom_RHI.Private.Object.dir\profile\Atom_RHI.Private.Object.lib
+  Atom_RHI_Null.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Null.Private.Static.lib
+  ImGui.ImGuiLYUtils.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.ImGuiLYUtils.lib
+  Atom_RHI_Vulkan.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_Vulkan.Private.Static.lib
+  Atom_RHI.Profiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Profiler.lib
+  ProfilerImGui.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerImGui.dll
+  Atom_RHI_DX12.Private.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI_DX12.Private.Static.lib
+  Atom_RHI_Vulkan.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+  Atom_RHI_DX12.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_DX12.Private.dll
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  Atom_AtomBridge.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_AtomBridge.Static.lib
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  Atom_Bootstrap.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Bootstrap.dll
+  AtomViewportDisplayInfo.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+  Atom_RHI.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+  Atom_Component_DebugCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Component_DebugCamera.dll
+  ImGui.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImGui.Static.lib
+  Atom_RHI_Null.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Null.Private.dll
+  AtomFont.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+  AudioSystem.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AudioSystem.Private.Object.lib
+  LmbrCentral.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Static.lib
+  Atom_RPI.Private.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Private.dll
+  AudioSystem.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.dll
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  LmbrCentral.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.dll
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  Maestro.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Maestro.Static.lib
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  SurfaceData.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SurfaceData.Static.lib
+  PhysX5.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\PhysX5.Static.lib
+  SurfaceData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.dll
+  Maestro.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.dll
+  ImguiAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ImguiAtom.Static.lib
+  ImGui.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.dll
+  GradientSignal.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Static.lib
+  ImguiAtom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImguiAtom.dll
+  AtomImGuiTools.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomImGuiTools.Static.lib
+  GradientSignal.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.dll
+  CommonFeaturesAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Static.lib
+  PhysX5.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Gem.dll
+  CommonFeaturesAtom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CommonFeaturesAtom.dll
+  EMotionFXStaticLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFXStaticLib.lib
+  Atom_Feature_Common.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.dll
+  AtomImGuiTools.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomImGuiTools.dll
+  EMotionFX.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX.Static.lib
+  EMotionFX.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.dll
+  EMotionFX_Atom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EMotionFX_Atom.Static.lib
+  EMotionFX_Atom.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.dll
+  Atom_AtomBridge.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_AtomBridge.dll
+  AzGameFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzGameFramework.lib
+  CrySystem.XMLBinary.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CrySystem.XMLBinary.lib
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  RemoteConsoleCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\RemoteConsoleCore.lib
+  Launcher.Game.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Launcher.Game.Static.lib
+  Launcher.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Launcher.Static.lib
+  CrySystem.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CrySystem.Static.lib
+  CrySystem.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CrySystem.dll
+  JEEditorFixture.GameLauncher.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\JEEditorFixture.GameLauncher.exe
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  AzTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTestShared.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  AzToolsFrameworkTestCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFrameworkTestCommon.lib
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  Copying PrefabBuilder.Tests runtime dependencies to output...
+  Building Custom Rule F:/JericoEngine/JericoEngine/Engine/Assets/PrefabBuilder/CMakeLists.txt
+  PrefabGroupTests.cpp
+  PrefabBuilderTests.cpp
+  PrefabBehaviorTests.cpp
+  DefaultProceduralPrefabGroupTests.cpp
+  PrefabBehaviorTestMocks.cpp
+  PrefabBuilderModuleTests.cpp
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/PrefabBuilder.Tests.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/PrefabBuilder.Tests.exp
+  PrefabBuilder.Tests.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.Tests.dll
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  LmbrCentral.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Static.lib
+  LmbrCentral.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  AzCoreTestCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzCoreTestCommon.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  AzTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTestShared.lib
+  AzFrameworkTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzFrameworkTestShared.lib
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  AzToolsFrameworkTestCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFrameworkTestCommon.lib
+  EditorCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCore.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  LmbrCentral.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\LmbrCentral.Editor.Static.lib
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  LmbrCentral.Editor.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.Editor.dll
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  SurfaceData.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\SurfaceData.Static.lib
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  GradientSignal.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GradientSignal.Static.lib
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  SceneUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneUI.dll
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  CommonFeaturesAtom.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CommonFeaturesAtom.Static.lib
+  EditorModeFeedback.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\EditorModeFeedback.Editor.Static.lib
+  EditorLib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorLib.dll
+  Copying EditorLib.Tests runtime dependencies to output...
+  EditorLib.Tests.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorLib.Tests.dll
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  Clipper2.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Clipper2.lib
+  OpenMeshCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\OpenMeshCore.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  manifold.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\manifold.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  ImGui.imguilib.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ImGui.imguilib.dll
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  Atom_Component_DebugCamera.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Component_DebugCamera.Static.lib
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  WorldCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  GraphCanvasWidgets.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphCanvasWidgets.lib
+  Atom_Feature_Common.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Feature_Common.Private.Object.lib
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  Atom_Feature_Common.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+  GraphModel.Editor.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\GraphModel.Editor.Static.lib
+  RenderMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  Geometry.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+  PrefabBuilder.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PrefabBuilder.dll
+  Geometry.Authoring.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.Authoring.dll
+  AtomToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AtomToolsFramework.Static.lib
+  EditorCamera.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorCamera.dll
+  EditorMaterials.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorMaterials.dll
+  SerializeContextTools.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Code\Tools\SerializeContextTools\SerializeContextTools.Private.Object.dir\profile\SerializeContextTools.Private.Object.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTestShared.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  AzToolsFrameworkTestCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFrameworkTestCommon.lib
+  Copying SerializeContextTools.Tests runtime dependencies to output...
+  unity_0_cxx.cxx
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/SerializeContextTools.Tests.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/SerializeContextTools.Tests.exp
+  SerializeContextTools.Tests.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SerializeContextTools.Tests.exe

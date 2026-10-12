@@ -1,0 +1,14 @@
+{
+  "pid": 83520,
+  "startedUtc": "2026-10-12T10:00:31.8710318Z",
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+  "arguments": [
+    "--start-hidden",
+    "--engine-path=\"F:\\JericoEngine\\JericoEngine\"",
+    "--project-path=\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"",
+    "--reprocessFileList=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\parent\\reprocess-prefabs.txt\""
+  ],
+  "exeSha256": "B32F020E354CBAE641501C8C28DF9FDE03E4A0F8B7B2000EDFEDE88F14FC5A66",
+  "prefabBuilderSha256": "215A85ADF5BA17C94F395A0472D63CF2E3C310FBF656B198A27A4FED9EA91153",
+  "reprocessListSha256": "CC24A6CE1593292982C83B1C99C88CE36DCABB3F5CDC4B057FEEFC64A9F340B9"
+}

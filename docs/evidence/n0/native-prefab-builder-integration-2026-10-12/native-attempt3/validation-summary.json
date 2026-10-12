@@ -1,0 +1,68 @@
+{
+  "capturedUtc": "2026-10-12T10:02:22.0093357Z",
+  "configure": {
+    "origin": "reused successful configure phase from native-attempt2",
+    "exitCode": 0,
+    "elapsedSeconds": 57.8452995,
+    "attempt2RegistryPreflight": "9/9 unchanged vs attempt2, 0 stale PrefabBuilder.Builders refs"
+  },
+  "build": {
+    "exitCode": 0,
+    "elapsedSeconds": 330.070191,
+    "targetCount": 9,
+    "targets": [
+      "Editor",
+      "AssetProcessor",
+      "AssetProcessorBatch",
+      "AssetBuilder",
+      "SerializeContextTools",
+      "JEEditorFixture.GameLauncher",
+      "PrefabBuilder.Tests",
+      "EditorLib.Tests",
+      "SerializeContextTools.Tests"
+    ],
+    "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\build.stdout.txt",
+    "logSha256": "4D0094CA12A94C9CEC85AE4FF16C8727F92FAC674C68045C9A2ADA703CE14DD6"
+  },
+  "ctest": {
+    "inventoryExitCode": 0,
+    "inventoryExpectedCount": 3,
+    "inventoryActual": [
+      "Legacy::EditorLib.Tests.main::TEST_RUN",
+      "AZ::SerializeContextTools.Tests.main::TEST_RUN",
+      "JE::PrefabBuilder.Tests.main::TEST_RUN"
+    ],
+    "inventoryValidationCorrected": "ctest-inventory-validation-corrected.json",
+    "testExitCode": 0,
+    "elapsedSeconds": 9.2253351,
+    "totalCases": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\ctest.stdout.txt",
+    "stdoutSha256": "F52C1CA9491A436D4461219063FEF4F826C80B97A07A03F350BD3B817CF69110",
+    "junitSummaryPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\junit-summary.json",
+    "junitSummarySha256": "32BF48F59EBA8E5B8E1425E5F6B1AA9A2FBD80D83CBCD20A311CBBDB138E6431"
+  },
+  "postflight": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\postflight-registry-corrected.json",
+    "sha256": "852040617971B200ED281E616B9F4188944096A431A9DA9349CB7E85C7D7FC6C",
+    "freezeMatches": "52/52",
+    "registryMatches": "9/9 vs attempt2",
+    "cachePins": "6/6",
+    "activeNativeProcesses": 0
+  },
+  "binaryEvidence": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\binary-baseline-comparison.json",
+    "sha256": "902463D0854DAE70572B7EBF652D4FFB5A4996EC15DAE06C5DB9BCB0DD627442",
+    "importsPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-prefab-builder-rev1\\native-attempt3\\pe-imports-summary.json",
+    "importsSha256": "E0787F9F1E1D1C534EA242109F285A725BDAF55D96AB861416E2B80C4E15A270",
+    "dumpbinExitCode": 0,
+    "baselineLimit": "Earlier baseline records sizes and hashes but not imports; baseline-to-current host binary differences are cumulative across attempt2 and attempt3.",
+    "staleOldModule": "PrefabBuilder.Builders.dll remains physically present and unchanged at 1,199,104 bytes / F54479CC433CE488ACB6F320E8BFEF5276637DFB61985F936D57DE9E36D16C24; current product registries contain no references."
+  },
+  "attempt2FailurePreserved": {
+    "firstError": "PrefabGroup.cpp:179-180 AZ::BehaviorValueProperty macro prefix C2589/C2062",
+    "attempt1Preserved": true
+  }
+}
