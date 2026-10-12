@@ -159,3 +159,6 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /cmake/Tools/LocalPackages/PhysX/official-build-helpers/NvidiaBuildOptions.cmake -text -whitespace
 /cmake/Tools/LocalPackages/PhysX/official-build-helpers/README.md -text -whitespace
 /cmake/Tools/LocalPackages/PhysX/official-build-helpers/SetOutputPaths.cmake -text -whitespace
+# Ship the two audited original fixture launcher resources without inherited LFS endpoints.
+/Projects/JEEditorFixture/Resources/GameSDK.ico -filter -diff -merge -text
+/Projects/JEEditorFixture/Resources/Splash.bmp -filter -diff -merge -text

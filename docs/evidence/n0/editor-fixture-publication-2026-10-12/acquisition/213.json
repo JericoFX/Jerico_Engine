@@ -1,0 +1,41 @@
+{
+  "index": 213,
+  "source_path": "Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+  "expected_sha256": "5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7",
+  "expected_bytes": 793918,
+  "checkout_materialized": false,
+  "head": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+    "method": "HEAD",
+    "utc": "2026-10-10T23:31:13.412970+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "793918",
+      "ETag": "\"5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7\"",
+      "Location": null
+    }
+  },
+  "get": {
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+    "method": "GET",
+    "utc": "2026-10-10T23:31:13.780971+00:00",
+    "status": 200,
+    "final_url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Atom/Feature/Common/Assets/Textures/Default/default_basecolor.tif",
+    "authorization": false,
+    "automatic_redirects": false,
+    "headers": {
+      "Content-Type": "image/tiff",
+      "Content-Length": "793918",
+      "ETag": "\"5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7\"",
+      "Location": null
+    }
+  },
+  "actual_sha256": "5e9e1371fb108a057d246935b01374f2bb86ae0b126bae471176ce62284eacd7",
+  "actual_bytes": 793918,
+  "destination": "F:\\JericoEngine\\Dependencies\\assets\\n0-original-editor\\Gems\\Atom\\Feature\\Common\\Assets\\Textures\\Default\\default_basecolor.tif",
+  "status": "acquired and byte verified"
+}

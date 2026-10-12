@@ -1,0 +1,24 @@
+JEEditorFixture retains the ScriptOnlyProject and EngineFinder templates from
+the Open 3D Engine Project. Its native WhiteBox authoring action adapts the
+original WhiteBoxInit.py / CsgDemo.py flow and fixture author_room.py guards.
+Copyright (c) Contributors to the Open 3D Engine Project.
+SPDX-License-Identifier: Apache-2.0 OR MIT
+The full upstream license notice is preserved in LICENSE.txt. Original shader
+and CMake license blocks are retained. Native component type identities in the
+minimal prefab are retained from the original start.prefab; the project UUID
+is new. Geometry dimensions/operations follow the existing RoomCorridorFixture
+in Gems/WhiteBox/Code/Tests/CSG/WhiteBoxCsgCoreTest.cpp.
+
+The project-authored material contains constant StandardPBR properties, with
+no parent material or texture references. The WhiteBox renderer's fixed
+materials/whiteboxdefault.azmaterial lookup requires this project-local path;
+the template's higher project scan-folder priority selects it without modifying
+Gem sources. Asset Processor product selection and real rendering are pending.
+
+Original template GameSDK.ico and Splash.bmp are preserved byte for byte after
+manual acquisition and SHA256 verification. Example models/HDR images remain
+excluded. The original engine Editor splashscreen_background.png is unavailable
+(HTTP 404); no substitute is provided. StandardPBR/Atom shader, font and other
+engine asset closure has not been cooked or visually validated by this project
+preparation. The native action/shape ports retain upstream O3DE license notices;
+historical scripts are preserved outside the fixture's product execution path.

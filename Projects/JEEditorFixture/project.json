@@ -1,0 +1,25 @@
+{
+  "project_name": "JEEditorFixture",
+  "version": "1.0.0",
+  "project_id": "{F63AAB68-D01D-46FC-892A-BD9B5828A7CE}",
+  "origin": "JericoEngine in-tree Editor fixture",
+  "license": "Apache-2.0 OR MIT",
+  "display_name": "JE Editor Fixture",
+  "summary": "Native WhiteBox room, corridor and openings for real Editor validation.",
+  "script_only": true,
+  "canonical_tags": [
+    "Project"
+  ],
+  "user_tags": [
+    "JEEditorFixture"
+  ],
+  "engine": "o3de",
+  "gem_names": [
+    "Atom",
+    "CameraFramework",
+    "ImGui",
+    "PhysX5",
+    "PrimitiveAssets",
+    "PrefabBuilder"
+  ]
+}
