@@ -1,0 +1,189 @@
+{
+  "endedUtc": "2026-10-12T15:15:23.1382595Z",
+  "exitCode": 0,
+  "inputCount": 126,
+  "postflightMismatches": 0,
+  "phases": [
+    {
+      "phase": "configure",
+      "startedUtc": "2026-10-12T15:11:37.3325468Z",
+      "finishedUtc": "2026-10-12T15:13:58.9374824Z",
+      "elapsedSeconds": 141.605,
+      "pid": 169948,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "-S",
+        "F:\\JericoEngine\\JericoEngine",
+        "-B",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\configure.stdout.log",
+      "stdoutSha256": "75E3D94E91404853E057908C41E38CCC886B049810522A16CECE8DD3B04EDFE8",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\configure.stderr.log",
+      "stderrSha256": "EAE78D81117939632167B1C182E11CE1242206450AB4094A6B8E040F10E63419"
+    },
+    {
+      "phase": "build-focal",
+      "startedUtc": "2026-10-12T15:13:58.9735056Z",
+      "finishedUtc": "2026-10-12T15:14:17.7365546Z",
+      "elapsedSeconds": 18.763,
+      "pid": 291740,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "EditorRenderIntegration.Tests",
+        "--parallel",
+        "6"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\build-focal.stdout.log",
+      "stdoutSha256": "634974397EFC7E7205DA50AF901325CDB79352C01D0569FE81017A2D62AEAE4D",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\build-focal.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-inventory",
+      "startedUtc": "2026-10-12T15:14:17.7524918Z",
+      "finishedUtc": "2026-10-12T15:14:18.5278784Z",
+      "elapsedSeconds": 0.775,
+      "pid": 254452,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(JE::EditorRenderIntegration\\.Tests\\.main::TEST_RUN)$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\focal-inventory.stdout.log",
+      "stdoutSha256": "D4366C888F9DC49FC930FB743C0E15706BABADEB6045A845B7A236E8D0593A80",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\focal-inventory.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-JE__EditorRenderIntegration.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T15:14:18.5446816Z",
+      "finishedUtc": "2026-10-12T15:14:18.6741621Z",
+      "elapsedSeconds": 0.129,
+      "pid": 219324,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^JE::EditorRenderIntegration\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\focal-test-JE__EditorRenderIntegration.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "9C90784E814664D3BE00FA1E7C9D7CEC0BC38DC5BD19FFF0E7C043EB8461E050",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\focal-test-JE__EditorRenderIntegration.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "build-hosts",
+      "startedUtc": "2026-10-12T15:14:18.6800369Z",
+      "finishedUtc": "2026-10-12T15:15:16.8514760Z",
+      "elapsedSeconds": 58.171,
+      "pid": 222116,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "AssetProcessor",
+        "AssetProcessorBatch",
+        "AssetBuilder",
+        "--parallel",
+        "6"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\build-hosts.stdout.log",
+      "stdoutSha256": "9CDDC10AAC0CEC576D33F1F37869F51BB5CC5FBFC2D678E2739A57B22BA7A930",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\build-hosts.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-inventory",
+      "startedUtc": "2026-10-12T15:15:16.8593382Z",
+      "finishedUtc": "2026-10-12T15:15:16.9247624Z",
+      "elapsedSeconds": 0.065,
+      "pid": 217016,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(JE::EditorCamera\\.Tests\\.main::TEST_RUN|Legacy::EditorLib\\.Tests\\.main::TEST_RUN)$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\host-inventory.stdout.log",
+      "stdoutSha256": "DC4240EC458F2A4A9A835566998A116C40D9493E5A51EA25FDDA7C585584A414",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\host-inventory.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-test-JE__EditorCamera.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T15:15:16.9325018Z",
+      "finishedUtc": "2026-10-12T15:15:17.2271368Z",
+      "elapsedSeconds": 0.295,
+      "pid": 192772,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^JE::EditorCamera\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\host-test-JE__EditorCamera.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "3764CB3AA5687D63DFB40E05AADE2FB6105E65DCA56D258781605A6F9C91362F",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\host-test-JE__EditorCamera.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T15:15:17.2320244Z",
+      "finishedUtc": "2026-10-12T15:15:23.0536242Z",
+      "elapsedSeconds": 5.822,
+      "pid": 305640,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Legacy::EditorLib\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "3AB9FF3831A96F4E6041A5670B8FBBA8678DE6E1EA3EC6D862EE4BB282174205",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "fatal": null
+}

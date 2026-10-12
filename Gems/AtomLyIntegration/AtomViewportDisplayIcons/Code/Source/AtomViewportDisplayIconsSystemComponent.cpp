@@ -33,7 +33,7 @@
 #include <Atom/RPI.Reflect/Asset/AssetUtils.h>
 #include <Atom/RPI.Public/Image/StreamingImagePool.h>
 
-#include <AtomBridge/PerViewportDynamicDrawInterface.h>
+#include <JE/Render/Integration/PerViewportDynamicDrawInterface.h>
 
 #include <QDir>
 #include <QFileInfo>
@@ -97,7 +97,7 @@ namespace AZ::Render
         Data::AssetBus::Handler::BusDisconnect();
         Bootstrap::NotificationBus::Handler::BusDisconnect();
 
-        AZ::AtomBridge::PerViewportDynamicDrawInterface* perViewportDynamicDrawInterface = AtomBridge::PerViewportDynamicDraw::Get();
+        JE::Render::Integration::PerViewportDynamicDrawInterface* perViewportDynamicDrawInterface = JE::Render::Integration::PerViewportDynamicDraw::Get();
         if (!perViewportDynamicDrawInterface)
         {
             return;
@@ -166,7 +166,7 @@ namespace AZ::Render
 
     RHI::Ptr<RPI::DynamicDrawContext> AtomViewportDisplayIconsSystemComponent::GetDynamicDrawContextForViewport(AzFramework::ViewportId viewportId)
     {
-        AZ::AtomBridge::PerViewportDynamicDrawInterface* perViewportDynamicDrawInterface = AtomBridge::PerViewportDynamicDraw::Get();
+        JE::Render::Integration::PerViewportDynamicDrawInterface* perViewportDynamicDrawInterface = JE::Render::Integration::PerViewportDynamicDraw::Get();
         if (!perViewportDynamicDrawInterface)
         {
             return {};
@@ -477,7 +477,7 @@ namespace AZ::Render
     {
         // Once the shader is loaded, register it with the dynamic draw context
         Data::Asset<RPI::ShaderAsset> shaderAsset = asset;
-        AtomBridge::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(m_drawContextName, [shaderAsset](RPI::Ptr<RPI::DynamicDrawContext> dynamicDraw)
+        JE::Render::Integration::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(m_drawContextName, [shaderAsset](RPI::Ptr<RPI::DynamicDrawContext> dynamicDraw)
             {
                 AZ_Assert(shaderAsset->IsReady(), "Attempting to register the AtomViewportDisplayIconsSystemComponent"
                     " dynamic draw context before the shader asset is loaded. The shader should be loaded first"

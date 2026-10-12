@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_REVIEWED_NATIVE_VERIFIED_PRODUCT_VALIDATION_INCOMPLETE",
+  "utc": "2026-10-12T15:31:22.1299998Z",
+  "scope": "Native render hosts and debug camera",
+  "review": [
+    "Camera C++ moved diffs inspected ignoring indentation; namespace/SDK qualification and explicit exports preserve logic and UUIDs",
+    "Bridge logical diff existing implementation inspected; modules now native factories, editor-only async loader separated, inherited service strings retained",
+    "Parent hosts compose debug and runtime-or-authoring module once; headless graphical guard preserved",
+    "Font/Icons consume header-only shared Interface contract preserving UUID; no code-link backedge",
+    "Host remaining-module lists match supported Windows/Linux dependencies; unsupported Metal/mobile omitted intentionally",
+    "Six Camera plus four runtime Integration plus one authoring Integration tests reviewed; real GPU/navigation/text and XR not covered by these fixtures",
+    "AtomFont legacy test is EXPECT_EQ(1,1), excluded as non-discriminating; text coverage requires real UI"
+  ],
+  "freezeSha256": "B5F2F7465B34EF63DAA49330ACD03BCBAC198CF184950FF367808DB34C3288BD",
+  "limitations": [
+    "Product validation incomplete: MaterialEditor and standalone Vulkan pending for current slice. Windows Editor Vulkan and DX12 standalone observed; DX12 normal launcher closure still pending.",
+    "Bootstrap and remaining rendering Gems still explicit dependencies; material workspace not yet hosted inside Editor.",
+    "Manual UV reprojection guard remains; never Reset All UVs.",
+    "VR/Linux and shipping package not validated by this Windows build."
+  ],
+  "nativeFindings": [
+    "Attempt1: test CameraRequests member pointers target wrong interface; real bus Events resolves CameraComponentRequests; protected Transform lifecycle needs test adapter",
+    "Attempt2: Entity::CreateComponent requires AZ_TYPE_INFO for the test adapter; production unchanged",
+    "Attempt3: malformed CLI string-array target; no C++ compiled",
+    "Attempt4: migrated flat namespace AtomDebugDisplayViewportInterface.cpp lost one closing brace; source review did not detect this. Exact forward/inverse patch checks are not semantic/compiler verification.",
+    "Attempt5: RenderIntegration.Tests missed the private Bootstrap.Headers dependency required by the included implementation header; production targets were unchanged.",
+    "Camera isolated CTest: heap corruption came from default delete on a plain structure deserialized through the SystemAllocator factory. Stack storage plus LoadObjectFromStreamInPlace retains all five field assertions; camera suite now exits 0 with 9 cases.",
+    "Attempt6: fresh configure and focal build exit 0, camera 9 and runtime integration 4 cases exit 0. Editor factory case passes but DLL shutdown aborts at Environment.h:413; this remains an unresolved native test failure, not acceptance.",
+    "Attempt7: LeakDetectionFixture fixes reflected generic type cleanup before allocator shutdown; EditorIntegration process now exits0, preserving schema assertions.",
+    "Attempt8 and real AP2: parent reviewed CreateAssetProcessingModule and both AP/Builder consumers. Same editor module UUID/three descriptors, empty required components only for asset hosts. Authoring retains required bridge; component RHI service requirements unchanged. Two factory tests exit0. Actual recook preserves identities and both spawnables.",
+    "Manual Escape: user correction plus live Editor.log and post-exit screenshot confirm game-mode exit; no source repair justified.",
+    "Final review: inherited Icons dependency is loaded in AP/Builder only through Load/CreateClass/RegisterComponentDescriptors (ComponentApplication.cpp1617-1635), not ActivateEntity. Hypothesis of new missing AtomBridge/RPI services in dynamic module activation is not reproduced and is inconsistent with this call path. Actual AP2 recook succeeds; no speculative repair or repeat build. Transitive graphics DLL isolation remains open."
+  ]
+}

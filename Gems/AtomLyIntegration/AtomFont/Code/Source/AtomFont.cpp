@@ -864,7 +864,7 @@ void AZ::AtomFont::OnAssetReady(Data::Asset<Data::AssetData> asset)
 {
     Data::Asset<RPI::ShaderAsset> shaderAsset = asset;
 
-    AZ::AtomBridge::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(
+    JE::Render::Integration::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(
         AZ::Name(AZ::AtomFontDynamicDrawContextName),
         [shaderAsset](RPI::Ptr<RPI::DynamicDrawContext> drawContext)
         {

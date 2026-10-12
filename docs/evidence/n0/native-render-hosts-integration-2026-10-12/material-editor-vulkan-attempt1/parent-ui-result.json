@@ -1,0 +1,15 @@
+{
+  "pid": 217468,
+  "legacyBridgeDebugCameraPythonObserved": false,
+  "authoredEdits": false,
+  "preview": "Shaderball / Neutral Urban visible",
+  "backend": "Vulkan",
+  "scope": "Visible preview and module loading only; not material Save/reopen or full workspace acceptance",
+  "cameraNavigation": "Synthetic scroll and drag did not show displacement; not verified",
+  "menuResponded": true,
+  "nativeModules": [
+    "WorldCamera.dll",
+    "RenderIntegration.dll",
+    "EditorRenderIntegration.dll"
+  ]
+}

@@ -6,12 +6,10 @@
 #
 #
 
-# The "AtomLyIntegration" Gem will alias the real Atom_AtomBridge target variants
-ly_create_alias(NAME AtomLyIntegration.Clients NAMESPACE Gem TARGETS Gem::Atom_AtomBridge.Clients)
-ly_create_alias(NAME AtomLyIntegration.Servers NAMESPACE Gem TARGETS Gem::Atom_AtomBridge.Servers)
-ly_create_alias(NAME AtomLyIntegration.HeadlessServers NAMESPACE Gem TARGETS Gem::Atom_AtomBridge.HeadlessServers)
-ly_create_alias(NAME AtomLyIntegration.Unified NAMESPACE Gem TARGETS Gem::Atom_AtomBridge.Unified)
+# Transitional discovery for the remaining renderer Gems; integration is composed natively.
+include(${LY_ROOT_FOLDER}/Engine/Render/Integration/render_integration_dependencies.cmake)
+ly_create_alias(NAME AtomLyIntegration.Clients NAMESPACE Gem TARGETS JE::RenderIntegration ${JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES})
 if(PAL_TRAIT_BUILD_HOST_TOOLS)
-    ly_create_alias(NAME AtomLyIntegration.Builders NAMESPACE Gem TARGETS Gem::Atom_AtomBridge.Builders)
-    ly_create_alias(NAME AtomLyIntegration.Tools    NAMESPACE Gem TARGETS Gem::Atom_AtomBridge.Tools)
+    ly_create_alias(NAME AtomLyIntegration.Builders NAMESPACE Gem TARGETS JE::EditorRenderIntegration ${JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES})
+    ly_create_alias(NAME AtomLyIntegration.Tools    NAMESPACE Gem TARGETS JE::EditorRenderIntegration ${JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES})
 endif()

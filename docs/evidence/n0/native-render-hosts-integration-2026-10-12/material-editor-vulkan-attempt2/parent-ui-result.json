@@ -1,0 +1,13 @@
+{
+  "remainingProductProcessIds": [
+    null
+  ],
+  "backend": "Vulkan",
+  "sourceRepairNeededForZoom": false,
+  "shutdownLogLimitation": "JSON Serialization Unable to retrieve context information at12:49:07; process disappearance does not prove error-free shutdown",
+  "pid": 254324,
+  "processAbsentAfterManualClose": true,
+  "utc": "2026-10-12T15:49:44.0549222Z",
+  "manualObservation": "User confirmed physical mouse wheel changes zoom and closed window with X",
+  "exitCode": "not captured"
+}

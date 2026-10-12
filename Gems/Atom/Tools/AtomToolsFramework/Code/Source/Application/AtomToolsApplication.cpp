@@ -8,6 +8,8 @@
 #include <Atom/RPI.Edit/Common/AssetUtils.h>
 #include <JE/Debug/Profiler/ProfilerModule.h>
 #include <JE/Render/Debug/RenderDebugModule.h>
+#include <JE/World/Camera/Debug/DebugCameraModule.h>
+#include <JE/Editor/RenderIntegration/RenderIntegrationModule.h>
 #include <Atom/RPI.Public/RPISystemInterface.h>
 #include <AtomToolsFramework/Application/AtomToolsApplication.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -166,6 +168,8 @@ namespace AtomToolsFramework
         outModules.emplace_back(JE::Debug::Profiler::CreateVisualModule());
         outModules.emplace_back(JE::Render::Debug::CreateViewportModule());
         outModules.emplace_back(JE::Render::Debug::CreateToolsModule());
+        outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
+        outModules.emplace_back(JE::Editor::RenderIntegration::CreateAuthoringModule());
     }
 
     void AtomToolsApplication::StartCommon(AZ::Entity* systemEntity)

@@ -26,7 +26,7 @@
 #include <AzFramework/Scene/SceneSystemInterface.h>
 
 #include <Atom/RPI.Public/DynamicDraw/DynamicDrawContext.h>
-#include <AtomBridge/PerViewportDynamicDrawInterface.h>
+#include <JE/Render/Integration/PerViewportDynamicDrawInterface.h>
 
 namespace AZ
 {

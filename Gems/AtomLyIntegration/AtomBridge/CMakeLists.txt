@@ -6,6 +6,5 @@
 #
 #
 
-o3de_gem_setup("Atom_AtomBridge")
-
-add_subdirectory(Code)
+# Historical entry only; the native owner is composed by the engine hosts.
+message(FATAL_ERROR "Atom_AtomBridge is absorbed into JE::RenderIntegration; remove its Gem activation.")

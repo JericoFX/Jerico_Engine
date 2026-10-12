@@ -1,5 +1,13 @@
 # Libro de errores y aprendizaje de JericoEngine
 
+## O-39 — Pruebas de serialización: asignador y cierre del módulo (2026-10-12)
+
+RED cámara: NoClipPropertiesRoundTripPreservesAllFiveValues termina en 0xc0000374. La estructura no tiene AZ_CLASS_ALLOCATOR: InstanceFactory<T,false,false> la crea con azmalloc/SystemAllocator, pero el unique_ptr de la prueba usaba delete. Carga in-place sobre una variable local conserva los cinco valores y UUID sin liberar con otro asignador. GREEN attempt6: WorldCamera9 casos, proceso exit0; producción intacta.
+
+RED editor: su único caso registra PASS y AzRunUnitTests devuelve0, pero el proceso aborta0xc0000409 en Environment.h:413 después de Returning code0. SerializeContext desregistra su contexto sin limpiar todos los GenericClassInfo globales. Cambiar únicamente TEST a TEST_F con LeakDetectionFixture añade Cleanup antes del cierre y comprobación de fugas; cuerpo/assertions intactos. GREEN attempt7: build0/13.110s, CTest0/0.127s, XML1/1. El resultado demuestra que la limpieza del fixture resuelve esta reproducción; no se obtuvo stack del destructor final, por lo que su identidad exacta sigue sin demostrar. No se modificó producción ni se suprimieron asserts.
+
+Evidencia: build/n0-validation/native-render-hosts-rev1/camera-test-attempt1 y native-attempt{6,7}, con XMLs y postflight125. Prevención: respetar la pareja creación/destrucción del serializer; reutilizar fixtures que limpian reflexión antes del asignador; exigir exit real del proceso además del XML. Estas pruebas no acreditan navegación, render ni cierre del editor de producto.
+
 ## O-38 — Vulkan acepta un dominio de presentación como reloj host (2026-10-12)
 
 RED: activar GPU TimestampView en la habitación Vulkan termina en AV del driver. CDB live captura device y función válidos, segundo timeDomain=1000208000 y pNext=null. InitializeTimeDomains admitía cualquier dominio no-device; PRESENT_STAGE_LOCAL_EXT exige datos de swapchain adicionales (Khronos VUID12227). La corrección sólo admite MONOTONIC, MONOTONIC_RAW y QUERY_PERFORMANCE_COUNTER, conserva prioridad RAW, reinicia sentinel y evita calibración sin reloj host válido. Build focal exit0/20.993s; GREEN real muestra tiempos por pasada y timeline sin AV. No se desactivó el profiler ni se actualizó el SDK. No se atribuye el defecto a la integración ImGui sin probar el binario anterior. Evidencia: docs/evidence/n0/native-imgui-integration-2026-10-12. Prevención: los enums de capacidades pueden incorporar valores nuevos; no interpretar todo valor desconocido como una capacidad compatible. Comprobar argumentos reales antes de culpar al driver.

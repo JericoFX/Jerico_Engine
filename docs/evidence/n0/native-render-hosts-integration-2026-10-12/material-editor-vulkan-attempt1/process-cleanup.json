@@ -1,0 +1,19 @@
+{
+  "reason": "Window closed via File Exit, process remained after 10s; terminated only owned verified test process tree",
+  "normalExitVerified": false,
+  "pids": [
+    217468,
+    86372,
+    143600,
+    172160,
+    258256,
+    83748,
+    202396,
+    290936,
+    237072,
+    96452,
+    316524,
+    141132
+  ],
+  "utc": "2026-10-12T15:39:30.2718163Z"
+}

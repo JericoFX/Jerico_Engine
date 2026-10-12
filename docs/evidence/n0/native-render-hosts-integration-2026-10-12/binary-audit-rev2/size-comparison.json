@@ -1,0 +1,85 @@
+{
+  "baselineManifest": "F:/JericoEngine/JericoEngine/build/n0-validation/native-render-hosts-rev1/baseline/size-baseline.json",
+  "baselineSHA256": "545824BAC8D6D38CA8D7FF7307121A4612EC3B52DCA8DA98013FE7131CB4D71D",
+  "baselineRetired": [
+    {
+      "name": "WorldCamera.dll",
+      "bytes": 771072,
+      "sha256": "15BBBB3CA301F88CF0DE55F2574D5ECF151D778F3A59097E1A078244A1CDBF3E",
+      "lastWriteUtc": "2026-10-12T08:27:45.1837843Z"
+    },
+    {
+      "name": "WorldCamera.pdb",
+      "bytes": 21196800,
+      "sha256": "D40829FD1CF1069B98F056F3F06CEF81B007A32DF5F1A5EDE0E47987C29AD125",
+      "lastWriteUtc": "2026-10-12T08:27:45.1859258Z"
+    },
+    {
+      "name": "Atom_AtomBridge.dll",
+      "bytes": 496128,
+      "sha256": "E60FDFD402E933A5A7D8ED50D4CDE1C096B49EB0CCCE8E4C430CF565E04B8ECA"
+    },
+    {
+      "name": "Atom_AtomBridge.pdb",
+      "bytes": 26374144,
+      "sha256": "4AEBA6499ECF0521B4E3BAA0EBB728C05B02F923F41793251157BCF00F9CE2C1"
+    },
+    {
+      "name": "Atom_AtomBridge.Editor.dll",
+      "bytes": 1030144,
+      "sha256": "CD684F5F9CF554BCC33B2EC4F6B97D1D263362FF6CCA9F16A573B3ACD8FDBAD3"
+    },
+    {
+      "name": "Atom_AtomBridge.Editor.pdb",
+      "bytes": 33099776,
+      "sha256": "D37FD3B7B418854B5BB5254B9C989E5870A8AF43A341A588DA8A3A818F10E5B2"
+    },
+    {
+      "name": "Atom_Component_DebugCamera.dll",
+      "bytes": 497664,
+      "sha256": "A3F2FBD91ADB403651BB208472BD033CAC1A8B7E3BEF0C00F9CE6BE6902007C3"
+    },
+    {
+      "name": "Atom_Component_DebugCamera.pdb",
+      "bytes": 22228992,
+      "sha256": "EF31599781932A3EDE047E4C17BB4522870EA51348DF5B9FD484E3133227B7D1"
+    }
+  ],
+  "currentNative": [
+    {
+      "name": "WorldCamera.dll",
+      "bytes": 1360384,
+      "sha256": "2529C13FD95C626A0BD8D0D409A95AB9CB6DCD00E538ED0F51EEA6E8EE23EAC9"
+    },
+    {
+      "name": "WorldCamera.pdb",
+      "bytes": 31305728,
+      "sha256": "BEE6D37FAB8162D1EB1EB4B54A39F19C140E221F05E67F8E5B359C0C14AFCDD6"
+    },
+    {
+      "name": "RenderIntegration.dll",
+      "bytes": 613888,
+      "sha256": "D3EF8C336DD585AC39DBC82B53042C6E431E9F7697A718C911FB84928F5CF797"
+    },
+    {
+      "name": "RenderIntegration.pdb",
+      "bytes": 25366528,
+      "sha256": "6E4986C86DEC5321009C16B1B8AF88D4092ACBF8CE2DD64A138DDA5926271087"
+    },
+    {
+      "name": "EditorRenderIntegration.dll",
+      "bytes": 721920,
+      "sha256": "43217F6F058BACA9D90A2E445CD18679F7C399F9EA64C849D8B519E1DE939F76"
+    },
+    {
+      "name": "EditorRenderIntegration.pdb",
+      "bytes": 22794240,
+      "sha256": "4D282388BCC3C49DF3E191C354B893457EFB69A9C9BC0F74ECD2066B4A5472D0"
+    }
+  ],
+  "baselineDLLBytes": 2795008.0,
+  "currentDLLBytes": 2696192.0,
+  "baselinePDBBytes": 102899712.0,
+  "currentPDBBytes": 79466496.0,
+  "scope": "Active prior Bridge runtime/editor plus DebugCamera and prior WorldCamera versus native Runtime/Editor Integration plus enlarged WorldCamera. Disabled Headless DLL excluded from size cohort; Bootstrap unchanged owner excluded. Local Profile outputs only, no shipping savings claim."
+}

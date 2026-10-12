@@ -20,8 +20,8 @@
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
-#include <Atom/Component/DebugCamera/CameraComponent.h>
-#include <Atom/Component/DebugCamera/NoClipControllerComponent.h>
+#include <JE/World/Camera/Debug/CameraComponent.h>
+#include <JE/World/Camera/Debug/NoClipControllerComponent.h>
 
 #include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>

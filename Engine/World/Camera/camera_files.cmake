@@ -18,4 +18,20 @@ set(FILES
     Source/CameraViewRegistrationBus.cpp
     Source/CameraRigComponent.cpp
     Source/CameraModule.cpp
+    Include/JE/World/Camera/Debug/ArcBallControllerBus.h
+    Include/JE/World/Camera/Debug/ArcBallControllerComponent.h
+    Include/JE/World/Camera/Debug/CameraComponent.h
+    Include/JE/World/Camera/Debug/CameraControllerBus.h
+    Include/JE/World/Camera/Debug/CameraControllerComponent.h
+    Include/JE/World/Camera/Debug/DebugCameraModule.h
+    Include/JE/World/Camera/Debug/NoClipControllerBus.h
+    Include/JE/World/Camera/Debug/NoClipControllerComponent.h
+    Source/Debug/ArcBallControllerComponent.cpp
+    Source/Debug/CameraComponent.cpp
+    Source/Debug/CameraControllerComponent.cpp
+    Source/Debug/DebugCameraBus.cpp
+    Source/Debug/DebugCameraModule.cpp
+    Source/Debug/DebugCameraUtils.cpp
+    Source/Debug/DebugCameraUtils.h
+    Source/Debug/NoClipControllerComponent.cpp
 )

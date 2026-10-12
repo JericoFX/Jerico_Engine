@@ -1,0 +1,112 @@
+<12:17:54> BackupNameAttachment=" Build(0) 12 Oct 26 (12 17 54)"  -- used by backup system
+<12:17:54> Log Started at Mon Oct 12 12:17:54 2026
+<12:17:54> Built on Oct 11 2026 18:12:26
+<12:17:54> Running 64 bit Windows version
+<12:17:54> FileVersion: 0.0.0.0
+<12:17:54> ProductVersion: 0.0.0.0
+<12:17:54> Using Microsoft (tm) C++ Standard Library implementation
+<12:17:54> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<12:17:54> Project Name: JEEditorFixture
+
+<12:17:54> [Warning] Config file game.cfg not found!
+<12:17:54> creating CVarGroups from directory 'Config/CVarGroups' ...
+<12:17:54> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<12:17:54> GameName: JEEditorFixture
+<12:17:54> BuildTime: Oct 11 2026 18:12:26
+<12:17:54> > g_languageAudio : en-US
+
+<12:17:54> Running without any Audio Engine!
+
+<12:17:54> Audio System is initialized and ready!
+
+<12:17:54> Initializing additional systems
+
+<12:17:54> Using FreeType 2.11.1
+<12:17:54> Current Language: Spanish 
+<12:17:54> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<12:17:54> Local time is 12:17:54 10/12/26, system running for 3751 minutes
+<12:17:54> 32679MB phys. memory installed, 22193MB paging available
+<12:17:54> Current display mode is 1920x1080x32, (Unknown graphics card)
+<12:17:54> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<12:17:54> --------------------------------------------------------------------------------
+<12:17:54> > r_streamingImagePoolBudgetMb : 0
+
+<12:17:54> > r_streamingImageMipBias : 0
+
+<12:17:54> (RPI system) - System assets initialized
+
+<12:17:54> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<12:17:54> sys_localization_folder = Localization
+<12:17:54> (SceneAPI) - AssImp Import Context was registered.
+
+<12:17:54> (EMotionFX) - -----------------------------------------------
+
+<12:17:54> (EMotionFX) - EMotion Studio Core - Information
+
+<12:17:54> (EMotionFX) - -----------------------------------------------
+
+<12:17:54> (EMotionFX) - Compilation date: Oct 12 2026
+
+<12:17:54> (EMotionFX) - -----------------------------------------------
+
+<12:17:54> (EMotionFX) - EMotion Studio initialized...
+
+<12:17:54> > r_shadowCascadeExtrusionAmount : -1
+
+<12:17:54> > r_enablePerMeshShaderOptionFlags : false
+
+<12:17:54> > r_meshInstancingEnabled : false
+
+<12:17:54> > r_meshInstancingEnabledForTransparentObjects : false
+
+<12:17:54> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<12:17:54> [Warning] (Az Console) - attempted to assign out of range value -112
+<12:17:56> [Warning] XML reader: Can't open file (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/Sandbox/Macros.xml)
+<12:17:56> Document created
+<12:17:56> Adding '*$tmp*' to ignore masks for changed files.
+<12:17:56> [Warning] (Application) - 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+<12:17:56> Engine initialized, took 11.09s.
+<12:17:56> [CONSOLE] Executing console command 'exec editor_autoexec.cfg'
+<12:17:56> Executing console batch file (try game,config,root): "@products@/editor_autoexec.cfg" not found!
+<12:17:56> [CONSOLE] Executing console command 'exec editor.cfg'
+<12:17:56> Executing console batch file (try game,config,root): "@products@/editor.cfg" not found!
+<12:17:56> [CONSOLE] Executing console command 'exec user.cfg'
+<12:17:56> Executing console batch file (try game,config,root): "user.cfg" found in game/config/ ...
+<12:17:56> Opening level levels/jenativeintegration/jenativeintegration.spawnable
+<12:17:56> Loading from F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab...
+<12:17:56> ---- Start: Game Engine level load
+<12:17:56> Loading map 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration' into engine...
+<12:17:56> ---- End: Game Engine level load (0 seconds)
+<12:17:56> ---- Start: Post Load
+<12:17:56> ---- End: Post Load (0 seconds)
+<12:17:56> [LevelLoadTime] Level F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration loaded in 0 seconds
+<12:17:56> -----------------------------------------------------------
+<12:17:56> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab
+<12:17:56> Level loading time: 0.05 seconds
+<12:17:56> -----------------------------------------------------------
+<12:17:57> (RHI) - ****************************************************************
+
+<12:17:57> (RHI) -                     Registering vulkan RHI                          
+
+<12:17:57> (RHI) - ****************************************************************
+
+<12:17:57> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:bb8 which does not exist in the catalog and cannot be loaded.
+<12:17:57> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:7d0 which does not exist in the catalog and cannot be loaded.
+<12:17:57> [Error] (PassFactory) - FAILED TO CREATE PASS [DiffuseProbeGridUpdatePass]. Could not find pass template [DiffuseProbeGridUpdatePassTemplate]
+<12:17:57> > r_shadowCascadeExtrusionAmount : -1
+
+<12:17:57> > r_enablePerMeshShaderOptionFlags : false
+
+<12:17:57> > r_meshInstancingEnabled : false
+
+<12:17:57> > r_meshInstancingEnabledForTransparentObjects : false
+
+<12:17:57> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<12:17:57> [Warning] (Az Console) - attempted to assign out of range value -128
+<12:20:42> Entered game mode
+<12:20:42> (Spawnables) - Entities from new root spawnable 'Root.spawnable' are ready (generation: 0).
+
+<12:24:30> Exited game mode

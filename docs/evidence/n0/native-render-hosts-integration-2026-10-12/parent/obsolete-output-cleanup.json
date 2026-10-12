@@ -1,0 +1,61 @@
+{
+  "liveProcessIds": [
+    39244,
+    48028,
+    80452,
+    85948,
+    135924,
+    155068,
+    226232,
+    237192,
+    311240,
+    324040,
+    281292,
+    254324
+  ],
+  "scope": "Only eight retired Bridge/DebugCamera own build outputs; no source or historical checkout",
+  "status": "deleted-and-absence-verified",
+  "bytes": 108418048.0,
+  "entries": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.dll",
+      "bytes": 496128,
+      "sha256": "E60FDFD402E933A5A7D8ED50D4CDE1C096B49EB0CCCE8E4C430CF565E04B8ECA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.pdb",
+      "bytes": 26374144,
+      "sha256": "4AEBA6499ECF0521B4E3BAA0EBB728C05B02F923F41793251157BCF00F9CE2C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.Editor.dll",
+      "bytes": 1030144,
+      "sha256": "CD684F5F9CF554BCC33B2EC4F6B97D1D263362FF6CCA9F16A573B3ACD8FDBAD3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.Editor.pdb",
+      "bytes": 33099776,
+      "sha256": "D37FD3B7B418854B5BB5254B9C989E5870A8AF43A341A588DA8A3A818F10E5B2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.Headless.dll",
+      "bytes": 496128,
+      "sha256": "2D2CCC89F29A5F13A4D091FC0F936F0CADCA36DA9BDB574685433EE297D99CA4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.Headless.pdb",
+      "bytes": 24195072,
+      "sha256": "A32F501E8F032BB8E1712C6EE8637A64DFF24A75B98DE1D85C6DB0E1B1849929"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Component_DebugCamera.dll",
+      "bytes": 497664,
+      "sha256": "A3F2FBD91ADB403651BB208472BD033CAC1A8B7E3BEF0C00F9CE6BE6902007C3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Component_DebugCamera.pdb",
+      "bytes": 22228992,
+      "sha256": "EF31599781932A3EDE047E4C17BB4522870EA51348DF5B9FD484E3133227B7D1"
+    }
+  ]
+}

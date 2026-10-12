@@ -1,0 +1,33 @@
+{
+  "capturedUtc": "2026-10-12T15:30:16.4018073Z",
+  "editorPid": 34104,
+  "backend": "Vulkan",
+  "scene": "JENativeIntegration",
+  "enteredGameMode": "12:20:42",
+  "exitedGameMode": "12:24:30",
+  "manualEscape": "User confirmed second physical Escape exited game; first was consumed by computer control",
+  "logConfirmsExit": true,
+  "sourceFixNeeded": false,
+  "sceneHashes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    }
+  ],
+  "evidence": [
+    "editor-before-navigation.png",
+    "editor-after-navigation.png",
+    "editor-game-mode.png",
+    "editor-after-manual-escape.png",
+    "Editor.after-manual-escape.log",
+    "loaded-modules.json"
+  ],
+  "scope": "Scene rendered in game; editor camera navigation and text observed. Manual exit corroborated by log and post-exit capture. No Save or authored edits performed.",
+  "limits": "347 pre-existing failed assets; thumbnail missing references and DiffuseProbeGrid template error remain. No performance acceptance. MaterialEditor and standalone Vulkan pending."
+}

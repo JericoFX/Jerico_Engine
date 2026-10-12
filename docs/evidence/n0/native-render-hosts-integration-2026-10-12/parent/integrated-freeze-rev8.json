@@ -1,0 +1,703 @@
+{
+  "status": "FROZEN_FOR_NATIVE_VALIDATION",
+  "capturedUtc": "2026-10-12T15:10:37.3481365Z",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\Gem\\Code\\CMakeLists.txt",
+      "bytes": 2582,
+      "sha256": "6B872486B0FACA0D19617D6B61A8EF60C1E8AA86C32229CDF72DAC07E903A280"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "bytes": 6795,
+      "sha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYWrappers.cmake",
+      "bytes": 43916,
+      "sha256": "30D7CD12513386B39C89B23AA4CE94E907A376CF0C6C300F9FF19D211E9DA5B4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+      "bytes": 2875,
+      "sha256": "3DD06BC002B658CEE1BA3DC70FE15AC67EAF3FBB1C6E02A686C6B3CC0B5058ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+      "bytes": 7764,
+      "sha256": "C65967CC7F5D70D1C112FC606F5F7A9ED6DADEB0B937EC8D70023E5BEF9C134B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+      "bytes": 14901,
+      "sha256": "A7F80B2A4B3E1EA74ADE38FF6AD1F41C15B9EA2C9D67FC03DD1E4B8D2CCE9D48"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\CMakeLists.txt",
+      "bytes": 4587,
+      "sha256": "815DAF88CC3BD1EE53F29CD2A09029E1EB2B446D3A35B803722C3E08A0E08D55"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp",
+      "bytes": 33051,
+      "sha256": "6BB973F907A9B45184AEC37123E7472C75B7B700DF39567CCA5548EB5D6E2EB1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+      "bytes": 10932,
+      "sha256": "6B151E536B8DC36A4E86E1DA51757F38C0863C3FB07F7E9EA21C68EB26DB30F7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt",
+      "bytes": 2728,
+      "sha256": "E14B6833347ADB33D14769CF7DD1CA65D9D75D602ABCB40897AE5D7F723C96E4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt",
+      "bytes": 9938,
+      "sha256": "B0285972B46A3339208C3293945C6629236A9D17628145448BECC69CB610225E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+      "bytes": 33014,
+      "sha256": "B7FF36A907EA08CFDF54E24D538CAE7F4BAFB8BCA29A7DC43DA7A80D6103A96E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\CMakeLists.txt",
+      "bytes": 1131,
+      "sha256": "051E9A5AEFFCA9F5A70620A22010FAB58395FDA25D08C2A2C2C9710187145086"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Include\\JE\\Editor\\RenderIntegration\\AssetProcessingModule.h",
+      "bytes": 454,
+      "sha256": "773B09A4B4D7E258C3FAB9637038842E6F7B8077EC3BA495E9E8B669FB1500BA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Include\\JE\\Editor\\RenderIntegration\\RenderIntegrationExports.h",
+      "bytes": 417,
+      "sha256": "AC74853AF36C75AAAC0CEBDED7FCF24CF8A272631808F805247D1ED01BDFF8F5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Include\\JE\\Editor\\RenderIntegration\\RenderIntegrationModule.h",
+      "bytes": 352,
+      "sha256": "27BE154DA54ADEA4AE1D56D9CB8E513DAF9A677111B560539C7F2D191CA571A1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\render_integration_files.cmake",
+      "bytes": 507,
+      "sha256": "153CA6B1E8FBFF007B60CF57BE124E89DE506F79ECA7F300A0AFBE5E5CC4D908"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\render_integration_tests_files.cmake",
+      "bytes": 152,
+      "sha256": "C4A6C3C7E99A26D23D0B92AD911FC5FE5BEC38F3264AB9343E78927C871D3EA8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Source\\AssetCollectionAsyncLoaderTestComponent.cpp",
+      "bytes": 13748,
+      "sha256": "6826411735DA1FC2C79D98B304EC5E53C3EF940BF215CAAE56F1054018968F44"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Source\\AssetCollectionAsyncLoaderTestComponent.h",
+      "bytes": 6709,
+      "sha256": "194177402FDA684BE5A044FA5DC6760E8454B5C1D2558010F9273334ACB24428"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Source\\AtomBridgeEditorModule.cpp",
+      "bytes": 2072,
+      "sha256": "291490A8B42E7FEF07BAF854EB24EB7D165EB6D75A688C4A4F24C21FFAC5CFC5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Source\\RenderIntegrationBus.cpp",
+      "bytes": 316,
+      "sha256": "CB87C96D101606459F5B2147AB05711210D2CE33B9201F9863F81A4D7E4351B7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Tests\\RenderIntegrationTests.cpp",
+      "bytes": 4675,
+      "sha256": "A2AD2A592A40DBFC8CDCAEE76733986FA3956AEC576983E2C01030462D0D0B45"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+      "bytes": 651,
+      "sha256": "2CCFF2BA7D9322671A10C0FAE515E1DB071089CB35D560DF3D81EC28D4B2B911"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.azsl",
+      "bytes": 2554,
+      "sha256": "3574891834A0BA3893FBBBC17EDE70E6CDD6314EB82A80B1F26621C37FE8EE4B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shader",
+      "bytes": 779,
+      "sha256": "A63BF98EC7229F4864917483869031D8B5A09C549671321F17BD102065A01DA4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shadervariantlist",
+      "bytes": 595,
+      "sha256": "BE757B46A200045DD9C34CBA27C493553DCA8DB3CFB4BADDE36123B8051F9384"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\CMakeLists.txt",
+      "bytes": 1674,
+      "sha256": "83856D5B6DCBD7BEDC6E31C1E354839BCD07208457ACE97B416C09964E035703"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\AtomBridgeBus.h",
+      "bytes": 1176,
+      "sha256": "F36136ED24A3346A31DFE37B1F0E695E342E60C3D19CCA252B4F71544531F699"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\FlyCameraInputBus.h",
+      "bytes": 1138,
+      "sha256": "0711B660CDB19AC5E5216937EE83C40AD9425D074767396175FEBCDCEBB98063"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\PerViewportDynamicDrawInterface.h",
+      "bytes": 2068,
+      "sha256": "10FA090CC42BFD524ED5E6F9040A5C90A6500E931485C3A809BE0B6CE1B54A58"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\RenderIntegrationExports.h",
+      "bytes": 389,
+      "sha256": "CB537D6189BA5D34CDE1BB1A3F6D5A6328AB4EFFEFF550880EBBA87998CAF0DD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\RenderIntegrationModule.h",
+      "bytes": 1008,
+      "sha256": "A681A9CF1EFD3DC8BE8B46520A703E49CEA65F3F2E40C822629C0B6AA5F4505B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\render_integration_dependencies.cmake",
+      "bytes": 2447,
+      "sha256": "4A7F971E9D94E8AD6B3935C7FDA209623036DFA7D766E43631518D14DFB79C92"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\render_integration_files.cmake",
+      "bytes": 539,
+      "sha256": "6D148B8E8F86DFC32B81C6A7670198AE195AC128BC3AA337ABB75592A7EACFEF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\render_integration_public_files.cmake",
+      "bytes": 419,
+      "sha256": "4EA427530D6C105258EA7FEEC8D9AE532A20DEE2DF6C7E1B05BF1FB116D2D870"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\render_integration_tests_files.cmake",
+      "bytes": 152,
+      "sha256": "C4A6C3C7E99A26D23D0B92AD911FC5FE5BEC38F3264AB9343E78927C871D3EA8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\AtomBridgeModule.cpp",
+      "bytes": 1282,
+      "sha256": "96B09B02B52E50EA91558C95AE27891386981ED8CCA8833A25D2C94161080495"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\AtomBridgeSystemComponent.cpp",
+      "bytes": 8312,
+      "sha256": "1F2C95E218A20FB1A462F0AA493639B54CD8B883EF875B23D93C236ED0DC72AB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\AtomBridgeSystemComponent.h",
+      "bytes": 3648,
+      "sha256": "AC04B503D12B94D25FB3FEC475DA232479E0ABD19ADF490C90B74C5C89651B10"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\AtomDebugDisplayViewportInterface.cpp",
+      "bytes": 65634,
+      "sha256": "689B5414E46A0A376EF3907D8FC494440F502C43CBCE709D910BEF3117F25811"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\AtomDebugDisplayViewportInterface.h",
+      "bytes": 19949,
+      "sha256": "D8099F40F218F829B9F3DBB86AF7DD9E325EB960715730A993BE834C01B2C9F8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\FlyCameraInputComponent.cpp",
+      "bytes": 19570,
+      "sha256": "0BBFE4BF1E7771AC531D05D5EA829507496BF43A5D9D7C234451E26DF6DE25FD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\FlyCameraInputComponent.h",
+      "bytes": 3786,
+      "sha256": "7FF109E10B3338E40940951CF9BEA75118D766240C9721694E944F5065671FB1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\PerViewportDynamicDrawManager.cpp",
+      "bytes": 4557,
+      "sha256": "AD00039C43EB5625F04A218CFD29A5B8F722C3971519E21267A4DF14FE603E39"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\PerViewportDynamicDrawManager.h",
+      "bytes": 1976,
+      "sha256": "3A8019E2AE50C12BD0B4262644782574933A109E552CA8218C5B0385564055C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\RenderIntegrationBus.cpp",
+      "bytes": 440,
+      "sha256": "E584C226F9AD5714D3DA819B19E6FF4B01D6AA52B82951ACAB0E8BBFB32F7535"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Tests\\RenderIntegrationTests.cpp",
+      "bytes": 8427,
+      "sha256": "6C60E302CFDEEA2FBE5F26238E8D62FBCAF0828BF115D9CF5BE4BA47A3013120"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\Camera\\Editor\\Icons\\Components\\Camera.svg",
+      "bytes": 2304,
+      "sha256": "412B6AEC2D4ED30F9A373081D5C582E2D7F3259A8562468F32EFA545EFADA898"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\Camera\\Editor\\Icons\\Components\\Disabled\\Camera_white.png",
+      "bytes": 589,
+      "sha256": "B1E48ABC27F70735344F12A7044B523EF64E7AD0FF4E8C5B8572832BBA06792C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\Camera\\Editor\\Icons\\Components\\Viewport\\Camera.svg",
+      "bytes": 3601,
+      "sha256": "999630E0BA0C324A0DBD3040A9D5190879EC69F8F7CA2D4D395A27996B476E9B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\CameraRig.svg",
+      "bytes": 5645,
+      "sha256": "6B01908BF1002AB39CADBEDBFC900FA5CA718F8789DD26DABCEC04A0875840D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\Disabled\\Camera_rig_white.png",
+      "bytes": 580,
+      "sha256": "92FAE863FB604422C387E0AE7E623C5AC4F4BD8F8FBEEB60F1F4293FF10A2999"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\FlyCameraInput.svg",
+      "bytes": 5053,
+      "sha256": "4E670220C13D1B24D338E64E45454C9C8B526C3C4D44B5B264BC529D26C14619"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\Viewport\\CameraRig.png",
+      "bytes": 4224,
+      "sha256": "D99943A2D6D971F27C03887D34A105A052F618949986BB2B4B06165FFC4FE5C4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\Viewport\\FlyCameraInput.svg",
+      "bytes": 6352,
+      "sha256": "B220407CE23A486B5F104745784A619211565FC8E0BFD1E680A191AF8CFF8DE9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\camera_files.cmake",
+      "bytes": 1681,
+      "sha256": "CF0C01C2D87009E0E6A56CA8EC827AA0ABE4FBA574C513D5B364DF0916F51B6D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\camera_tests_files.cmake",
+      "bytes": 71,
+      "sha256": "0BC1C6AC4E668C61DB79134348E06D75160AA5E970C611A4677DDADEB19D42A2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\CMakeLists.txt",
+      "bytes": 930,
+      "sha256": "C400E5D342679466FC03DA15B2FCA901FC1D998063A701E7EBC62070123C8B6B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraComponent.h",
+      "bytes": 1729,
+      "sha256": "80E7DA1ACB2A7837385EE6DD445A6240229F31F964CA4343E285C83C72DA7962"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraComponentController.h",
+      "bytes": 9327,
+      "sha256": "D1F0448DE6CCDA0A6ED5A270257E8E956DBFB2D35DE5BD2EF7BA6CAC8C2EF199"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraComponentConverters.h",
+      "bytes": 588,
+      "sha256": "E012BCA78092F1398A463D673F797258DC7D694D481A925DF2D569AE4C6DEFD2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraExports.h",
+      "bytes": 354,
+      "sha256": "0673AC15339A55EC6113EB70CCD1B3765CB81CA629C3C3A868F9147C071DEFFC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraModule.h",
+      "bytes": 677,
+      "sha256": "A673D548B5E47AD4696A66853EEEC7504B4CD9D13F83B32E677C0DC643CC8426"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraRigComponent.h",
+      "bytes": 2659,
+      "sha256": "98255D8341BDF4167C7BF2F854CF6C70EC3318F2C6AC51A9F8A1DF0AA5149DBC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraSystemComponent.h",
+      "bytes": 2372,
+      "sha256": "9452B06B0CEB8D8E7D2F95AAECFC161F476C7ABADB5BFC990F52AEE2AE9D9C94"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraViewRegistrationBus.h",
+      "bytes": 1166,
+      "sha256": "E9A7F5C573A29D8BFE0B76A335EC43BE243CB967A238267E9FE436E884EA0801"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\ArcBallControllerBus.h",
+      "bytes": 2371,
+      "sha256": "B2DBF54AA5BE88D6F459058098AEB6D1C175868855F7595F19A88DDBE4D45C2C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\ArcBallControllerComponent.h",
+      "bytes": 3261,
+      "sha256": "CD30DDBF13B8EF5B989227D88F54AB3B9543F11A43A938152662BBBDDCEBA29F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\CameraComponent.h",
+      "bytes": 5903,
+      "sha256": "02B64BFC6725ACA56C1CDD579579E67C673763FAEAD5EC9E133416C2608502CB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\CameraControllerBus.h",
+      "bytes": 2762,
+      "sha256": "9F7A9DB36FAD0AD42EB94EEEB59F02EC931AFB3A6AEF56089B71F6FF7006EFAC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\CameraControllerComponent.h",
+      "bytes": 2346,
+      "sha256": "B4AD3B6CF6EE045E4BD134C04F13F7F07831F7E639CD0F81CF48D5F7FA8F6657"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\DebugCameraModule.h",
+      "bytes": 771,
+      "sha256": "AC6F6FB3887C3A9BB783B44C8D6D0DC32BB2F7F545CD284F435BC8A958FC9D78"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\NoClipControllerBus.h",
+      "bytes": 3092,
+      "sha256": "1A8D8F80F4CBA9BAB7DDFF467B7014E7F612D45771752B1E2836F0D1F313CE5C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\Debug\\NoClipControllerComponent.h",
+      "bytes": 4096,
+      "sha256": "A1939D661DFD8C1104EE47E6E5D895AFEF849E7582F6019C2A7C44B6E031A451"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraLookAtBehavior.h",
+      "bytes": 1252,
+      "sha256": "B29A6CB4E8D2BA26A7B2F60204EBF17F47B53CB4E226270A4E64E677460F42BE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraSubComponent.h",
+      "bytes": 1136,
+      "sha256": "12829D166BEDFAAD9CD6DACDA16ABAE99E4D6ED579A742972B6FE27DDEC20083"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraTargetAcquirer.h",
+      "bytes": 1152,
+      "sha256": "75BA2208C993DD48384A7EE1B5EB26BB01E7F164948CE7005A7294D283FC05ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraTransformBehavior.h",
+      "bytes": 1423,
+      "sha256": "ADFC00E63693745D18B95DAFC5BDADA4D4529430AB75A63E925970339F56F4BD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraComponent.cpp",
+      "bytes": 6459,
+      "sha256": "BF9FDBBF1667D732F1604F6724A6C73A538D867D26D235621865321954B91430"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraComponentController.cpp",
+      "bytes": 35291,
+      "sha256": "81863A5AF0AA2527206F07A18DE5432196A8BDDEB6841F46E3E4BE62BD653A13"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraComponentConverter.cpp",
+      "bytes": 4431,
+      "sha256": "1574A6B0D7B454EB818A56D385DCEC0560A078A461CCFE6CA183747557D18298"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraModule.cpp",
+      "bytes": 862,
+      "sha256": "28917CEAE10EEB2A678B61F8883470CF88E3F1089DD92AC178659CFF67703BCD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraRigComponent.cpp",
+      "bytes": 9612,
+      "sha256": "9DF32DE33DA21DC417A8416D3F2DB4CE5A619FF7CEA3191DD47C2D37F669819E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraSystemComponent.cpp",
+      "bytes": 4227,
+      "sha256": "CE3BC27EBC07F6BAA44608ACF1A47483E289D36871B9318064E73BE12C8DCFB7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraViewRegistrationBus.cpp",
+      "bytes": 274,
+      "sha256": "DAFEA37083D1CD643FED219CBA8824BD5162FB69B4E950A0E955D34CAC0E7C39"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\ArcBallControllerComponent.cpp",
+      "bytes": 18221,
+      "sha256": "7971B41995086FBBDA2D4A41373E824E40B30230FEC1AAD328141AA5B889B271"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\CameraComponent.cpp",
+      "bytes": 14480,
+      "sha256": "689F26A1D73A3171DA8619EA594D9D8D22546D04958BBDB423DE10E2AA3EEF23"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\CameraControllerComponent.cpp",
+      "bytes": 2597,
+      "sha256": "69541ECDA7540BAB1D3EBCF91FFE77AF93E3F4DBD811107C995F698CF5B6F34E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\DebugCameraBus.cpp",
+      "bytes": 715,
+      "sha256": "6199E1D715DF8A53387E98E76EB8433C88DCF7EA58A6C254DDCCC987A03E83C2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\DebugCameraModule.cpp",
+      "bytes": 942,
+      "sha256": "85FCEF1943EF0CB051B436BB60ADDA288EDBF9A998F77F82610809934A8A2A8E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\DebugCameraUtils.cpp",
+      "bytes": 930,
+      "sha256": "FD048779AD521C7A436E82D2C35AB887E50B44379145F57A6570DFB95830A4EE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\DebugCameraUtils.h",
+      "bytes": 442,
+      "sha256": "5C0C699A8F3F3ED4EEB098E755CB7B168876A51B186D49B3961FFE10F85B6976"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\Debug\\NoClipControllerComponent.cpp",
+      "bytes": 20967,
+      "sha256": "7FFACE9484F9B7A59E697BFEDF437D79504FBD13524C35C0C54CC640228A65B1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Tests\\CameraModuleTests.cpp",
+      "bytes": 4678,
+      "sha256": "FF1DFD6A5B3FF717FB7A9043037AC3A00717186886A591646904A6F6132C55E9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Tests\\DebugCameraTests.cpp",
+      "bytes": 10627,
+      "sha256": "EC8FEFC5212E39DAE554CA31C6AE9893FE11061AFF0CB5F45DF8A2552A5A55D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt",
+      "bytes": 5117,
+      "sha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\CMakeLists.txt",
+      "bytes": 1053,
+      "sha256": "F80694A2819B7C539108993B08B42C849449C91A51F5EE2C60E4D0573053E16B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\CMakeLists.txt",
+      "bytes": 254,
+      "sha256": "C643803A2BBF9BB8D20B71ABEF1B78D38A293FA298DE6EE83D6437291A498D3B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\gem.json",
+      "bytes": 1614,
+      "sha256": "F90EB083A26BE669E73B9BD79B85680120DD3456607A51FA11583B2303F3C968"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\Code\\CMakeLists.txt",
+      "bytes": 7960,
+      "sha256": "9EF08DC44D2B8C568776A9DD9B239976E67553A801451D6A13D1C838A8504D19"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt",
+      "bytes": 3683,
+      "sha256": "4705B7084B8E864BDEF60401F62E2F6A339AF70F75DF889F98A57C9A2E9A0E00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+      "bytes": 27035,
+      "sha256": "B65E98FCC1A55B5C151CD1A0B6C57D15C61A1DF52C0A3E11198B63DCC6072881"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\EntityPreviewViewport\\EntityPreviewViewportContent.cpp",
+      "bytes": 4808,
+      "sha256": "049C517BA454136D1240D85D8659A767330446EA2078E589365F2051EB15A74A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\gem.json",
+      "bytes": 743,
+      "sha256": "E1FD99CCF33085BBCE8050A7BA22D20A9A2E88D9B4DF9D98815BCAAA0F376CC9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\gem.json",
+      "bytes": 743,
+      "sha256": "2A976C491179A54C1355D0574ECDBCC148C635AEEBD334FDF79E40FAECF3AF72"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\gem.json",
+      "bytes": 732,
+      "sha256": "9315F0AAFB6C7801080C2302DD9C8BBA7A75296522BB9D25BE42AEC9336897A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\gem.json",
+      "bytes": 761,
+      "sha256": "1B93D12A90783BC794BAAF6FA890C2E9A0B3183980B8B00684615774DD01D346"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\CMakeLists.txt",
+      "bytes": 405,
+      "sha256": "6A6CB42D575B20A9A72F6AC52D25036419C35FD55D9406042632E41A76CBFC6D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont\\Code\\CMakeLists.txt",
+      "bytes": 1856,
+      "sha256": "8CAEBF3E9960F6443271915895DA6D05C3B4894756EFA70DC3B55D9667D11B77"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont\\Code\\Include\\AtomLyIntegration\\AtomFont\\AtomFont.h",
+      "bytes": 6516,
+      "sha256": "8915EF654ADD10391CC153E9629D29B651172F3C366D54F23D29A94BE8C6E411"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont\\Code\\Source\\AtomFont.cpp",
+      "bytes": 33741,
+      "sha256": "772FC97ACAD61B6F96FF22A737E0B63CCCC399CD3A8FDFC5926F876EAC9A82E1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont\\Code\\Source\\FFont.cpp",
+      "bytes": 58442,
+      "sha256": "32086074E137037609F68C71B461629B895CED8E06D4BA7A5B8C7ADE8DCDBE7F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons\\Code\\CMakeLists.txt",
+      "bytes": 1245,
+      "sha256": "932B26A1C265EEF844CC89B468118D50E3D98A1F3936323D6792A8B06F6BB148"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons\\Code\\Source\\AtomViewportDisplayIconsSystemComponent.cpp",
+      "bytes": 23292,
+      "sha256": "0752A4E01690691C0E38A3488DE12B6CA2918105431B64CB880EAB7377F0055E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CMakeLists.txt",
+      "bytes": 881,
+      "sha256": "6B8BE4C7A7E52FB3EFAA6BC53275E9D1DA8C23139AA028E5207B308908E47232"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EMotionFXAtom\\Code\\CMakeLists.txt",
+      "bytes": 2332,
+      "sha256": "68721432D5919452BA05E745E5FE9625D8214EBD7E87CDAD9E40C33BEAF89A74"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EMotionFXAtom\\Code\\Tools\\EMStudio\\AnimViewportRenderer.cpp",
+      "bytes": 19913,
+      "sha256": "E34757FA524FFDF520E28EC818D98D23BE8300AB93D0FAF9D0831C9BD50E2727"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+      "bytes": 1595,
+      "sha256": "3F4DF3DF5C3E3CB50E6650ED63AC7576E69B8BFE7D1DB5EEA11EFBBF64C7C16C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\OpenParticleSystem\\Tools\\CMakeLists.txt",
+      "bytes": 1760,
+      "sha256": "B2898239701C9FBF205495946F34686EBFC5970826B877385CB99805F10B7ADE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\OpenParticleSystem\\Tools\\OpenParticleSystemEditor\\Viewport\\OpenParticleViewportRenderer.cpp",
+      "bytes": 29480,
+      "sha256": "1DC31E85C97EDADF91F4D2ECA0ECE8B74FB4C8FE88CC1D52625C8F791703B8A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Registry\\render_integration_assetprocessor.setreg",
+      "bytes": 504,
+      "sha256": "1964BFD13F6628B49EA791236BF1B17192D950E27A9066B5E6B5A266F893ABDE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\Gem\\CMakeLists.txt",
+      "bytes": 4238,
+      "sha256": "9BC1C8984FBDD4452E7174149C8A72395F01D90C7D97ED5E631AD21C6BD4E06D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\MinimalProject\\Template\\Gem\\CMakeLists.txt",
+      "bytes": 4236,
+      "sha256": "4EE89C46BD44BB0C0F64CF8D6686D738BE96C74C065BCC2738EFC3C9685B0353"
+    }
+  ],
+  "retiredPaths": [
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\gem.json",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\preview.png",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\atom_component_debugcamera_files.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\atom_component_debugcamera_shared_files.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\CMakeLists.txt",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\ArcBallControllerBus.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\ArcBallControllerComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\CameraComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\CameraControllerBus.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\CameraControllerComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\NoClipControllerBus.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Include\\Atom\\Component\\DebugCamera\\NoClipControllerComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\ArcBallControllerComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\CameraComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\CameraControllerComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\DebugCameraUtils.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\DebugCameraUtils.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\Module.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Component\\DebugCamera\\Code\\Source\\NoClipControllerComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Include\\AtomBridge\\AtomBridgeBus.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Include\\AtomBridge\\FlyCameraInputBus.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Include\\AtomBridge\\PerViewportDynamicDrawInterface.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomBridgeSystemComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomBridgeSystemComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomDebugDisplayViewportInterface.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomDebugDisplayViewportInterface.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\FlyCameraInputComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\FlyCameraInputComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\PerViewportDynamicDrawManager.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\PerViewportDynamicDrawManager.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomBridgeModule.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomBridgeModule.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Editor\\AssetCollectionAsyncLoaderTestComponent.h",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Editor\\AssetCollectionAsyncLoaderTestComponent.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\AtomBridgeEditorModule.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Assets\\Shaders\\SimpleTextured.azsl",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Assets\\Shaders\\SimpleTextured.shader",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Assets\\Shaders\\SimpleTextured.shadervariantlist",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\atombridge_editor_files.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\atombridge_files.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\atombridge_shared_files.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Android\\additional_android_runtime_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Android\\additional_android_tool_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Emscripten\\additional_emscripten_runtime_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Emscripten\\additional_emscripten_tool_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\iOS\\additional_ios_runtime_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\iOS\\additional_ios_tool_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Linux\\additional_linux_runtime_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Linux\\additional_linux_tool_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Mac\\additional_mac_runtime_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Mac\\additional_mac_tool_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Windows\\additional_windows_runtime_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\Source\\Platform\\Windows\\additional_windows_tool_deps.cmake",
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json"
+  ],
+  "writerFreezes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\camera\\source-freeze-rev4.json",
+      "sha256": "1B2F3063D3CF0F20C87F0F7BAAC4B110AF078229F3BC8EF20DC66AD5A6EC2A0D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\bridge\\source-freeze-rev8.json",
+      "sha256": "768953AF91886AFE6DA09547830526907528A865401E449B188F6CEF763327AF"
+    }
+  ]
+}

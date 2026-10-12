@@ -40,7 +40,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             AZ::AzGameFramework
-            Gem::Atom_AtomBridge.Static
+            JE::RenderIntegration.Public
 )
 
 ly_add_target(

@@ -1,0 +1,8 @@
+{
+  "scope": "Sampled TCP/UDP endpoints and Editor/AP absence; parent must still inspect visible render. Process left running for UI verification.",
+  "durationSeconds": 26.3182846,
+  "prefabUnchanged": true,
+  "sampleCount": 20,
+  "badSamples": 0,
+  "pid": 25188
+}

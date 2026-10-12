@@ -31,6 +31,7 @@ ly_add_target(
             JE::DebugImGui
             JE::ProfilerView
             JE::RenderDebug
+            JE::RenderIntegration
             JE::RenderMaterials
             Legacy::CryCommon
 )

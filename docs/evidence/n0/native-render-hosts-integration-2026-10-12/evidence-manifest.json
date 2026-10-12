@@ -1,0 +1,222 @@
+[
+  {
+    "path": "parent/integrated-freeze-rev8.json",
+    "bytes": 37390,
+    "sha256": "B5F2F7465B34EF63DAA49330ACD03BCBAC198CF184950FF367808DB34C3288BD"
+  },
+  {
+    "path": "parent/continuation-verification.json",
+    "bytes": 3832,
+    "sha256": "7E40A44AC307B1B05D769C1A4CE7A220E24C4FB2A1F78EF63D954AF71B318457"
+  },
+  {
+    "path": "parent/source-review.json",
+    "bytes": 4069,
+    "sha256": "3C00778A31AC91FB22E23A1E228E8DE0523A6ACA2C641E77CB3D68D9A511C030"
+  },
+  {
+    "path": "camera/source-freeze-rev4.json",
+    "bytes": 11686,
+    "sha256": "1B2F3063D3CF0F20C87F0F7BAAC4B110AF078229F3BC8EF20DC66AD5A6EC2A0D"
+  },
+  {
+    "path": "bridge/source-freeze-rev8.json",
+    "bytes": 40341,
+    "sha256": "768953AF91886AFE6DA09547830526907528A865401E449B188F6CEF763327AF"
+  },
+  {
+    "path": "native-attempt8/summary.json",
+    "bytes": 8843,
+    "sha256": "B0E3C4CC00904DB3A85EDA70B3DF34274E804607327451E339962050C74FDC6F"
+  },
+  {
+    "path": "native-attempt8/JE_EditorRenderIntegration.Tests.xml",
+    "bytes": 989,
+    "sha256": "671E81F8C31F85F9F829199CDEA3D434C67722FB08820A7A4B8F0EFFDB50D2DD"
+  },
+  {
+    "path": "native-attempt8/JE_EditorCamera.Tests.xml",
+    "bytes": 2399,
+    "sha256": "BC97D38957B9E0CC1664E9DDD902CAA77EB705B190FB624FA76A10216FC68948"
+  },
+  {
+    "path": "native-attempt8/Legacy_EditorLib.Tests.xml",
+    "bytes": 24873,
+    "sha256": "02F7A02649823375299B7CCDE222D3244B666150F69735BDCC49E05ABCB07314"
+  },
+  {
+    "path": "native-attempt6/JE_WorldCamera.Tests.xml",
+    "bytes": 3324,
+    "sha256": "2CA135552EA993C2BF65638026BDB36056197CB33433BC08C91806284109381C"
+  },
+  {
+    "path": "native-attempt6/JE_RenderIntegration.Tests.xml",
+    "bytes": 1584,
+    "sha256": "84456FAF8D3B8C6BF93F43E37D3B916613893ABE80DC41824520C51EC7713009"
+  },
+  {
+    "path": "binary-audit-rev2/audit-summary.json",
+    "bytes": 52046,
+    "sha256": "97E9F79551D772D6809FCBB22AF171FDD45241D762FC27762D97B926657026E9"
+  },
+  {
+    "path": "binary-audit-rev2/size-comparison.json",
+    "bytes": 3130,
+    "sha256": "785650B5764B72C26A1A9714EC3E16E65C927932E2304892901554BFC45DCD83"
+  },
+  {
+    "path": "assetprocessor-attempt1/process-exit.json",
+    "bytes": 72,
+    "sha256": "7BE837291FA8EB78CF77DD2BD38B4116B2BB986F8ABFA3F14BFD468114C50EA7"
+  },
+  {
+    "path": "assetprocessor-attempt2/process-exit.json",
+    "bytes": 72,
+    "sha256": "F3067A712E6FAFEE93ED266BCD2A99296EA91A7F8F2229F2458ACBD379F37D5B"
+  },
+  {
+    "path": "assetprocessor-attempt2/parent-cook-result.json",
+    "bytes": 3032,
+    "sha256": "918471AE1B4059477598923319A658AC96E0A5DC67E637C0204BBF940B9212FB"
+  },
+  {
+    "path": "editor-vulkan-attempt1/parent-ui-result.json",
+    "bytes": 1501,
+    "sha256": "24E5554B4AE8A965FC15A1E5531BD4F90D5E3FE185DF4E64277B182B158725D8"
+  },
+  {
+    "path": "editor-vulkan-attempt1/Editor.after-manual-escape.log",
+    "bytes": 5972,
+    "sha256": "A9196A75EBC2FC9AA7D70695302C63A03BC70E19B58A3D2ECA7238902E3F4B9C"
+  },
+  {
+    "path": "editor-vulkan-attempt1/editor-game-mode.png",
+    "bytes": 179973,
+    "sha256": "A4771219BD42C42221BD8E06C4F6EEDE34F2B8BEDE5EF701164F3B178DC1396F"
+  },
+  {
+    "path": "editor-vulkan-attempt1/editor-after-manual-escape.png",
+    "bytes": 168433,
+    "sha256": "25A747FAD97B3D492267778E9845211ACD7A0C8F678224865C9E88591D8289E8"
+  },
+  {
+    "path": "dx12-attempt1/parent-ui-result.json",
+    "bytes": 397,
+    "sha256": "BF079081F5DF761887CA07F546A1757859399F37AEC5DAEDD029A9EAC9F4BCBD"
+  },
+  {
+    "path": "dx12-attempt1/network-result.json",
+    "bytes": 274,
+    "sha256": "E3012ED7D9D1E3E5647A7DF53D2783CAFD2F5EFAE68FDE1518499CC6E26BF956"
+  },
+  {
+    "path": "dx12-attempt1/scene-original.png",
+    "bytes": 95361,
+    "sha256": "986830732BC6BD9C1CDB18CAD3E171BEA0E42CBD42E39ED3F0F5EC215A2FD4D3"
+  },
+  {
+    "path": "assetprocessor-attempt1/stdout.log",
+    "bytes": 102878,
+    "sha256": "9D7E31AD99172BD06D622A5280DAA8129B443A8AA14D9A50EE093556F26596F3"
+  },
+  {
+    "path": "assetprocessor-attempt2/stdout.log",
+    "bytes": 85654,
+    "sha256": "0F5D7DDDE905B3E23A7347E5011287B1B9B1EDDB28EEB51EFF462EE286EBE3A4"
+  },
+  {
+    "path": "assetprocessor-attempt2/stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "editor-vulkan-attempt1/Editor.final.log",
+    "bytes": 6146,
+    "sha256": "22C5059A3B232537C08BA285068D9FBD61095B5B24CC576834EAE41AB99A3F6E"
+  },
+  {
+    "path": "material-editor-vulkan-attempt1/launch.json",
+    "bytes": 410,
+    "sha256": "D491429CEDE99AF94D05076F3CA3907EE32E45DB78E0B91825C6AC86C8B78425"
+  },
+  {
+    "path": "material-editor-vulkan-attempt1/loaded-modules.json",
+    "bytes": 32229,
+    "sha256": "FC164F0CCA536AC621061AA18B19E7F199E98BCB3B6A968717ADD785256A7C1B"
+  },
+  {
+    "path": "material-editor-vulkan-attempt1/preview-original.png",
+    "bytes": 104610,
+    "sha256": "49581003D66A2841C3B0338A82C7C8E6B4864633A4B4D27F0478F86A9CB18E1B"
+  },
+  {
+    "path": "material-editor-vulkan-attempt1/parent-ui-result.json",
+    "bytes": 522,
+    "sha256": "C4AD447A942E8514DE9C0CAB93ADC65E1D1032ADDC9C93A8D6BC089934D26D79"
+  },
+  {
+    "path": "material-editor-vulkan-attempt1/MaterialEditor.final.log",
+    "bytes": 363524,
+    "sha256": "E53DA3FD1386E68E8F1886BF0E0D7A34718CEFFBCF598EB9BC00729404A60352"
+  },
+  {
+    "path": "material-editor-vulkan-attempt1/process-cleanup.json",
+    "bytes": 372,
+    "sha256": "0E1E338E710173CC2EF5B97D3F66DD463BC1F8DEC2BD2F84C035801991522DCD"
+  },
+  {
+    "path": "vulkan-attempt1/launch.json",
+    "bytes": 760,
+    "sha256": "677C23F3DA4E28DD8D29482AD1CC96E21192A6B79BC2EDE61117CB21AE6D1BFA"
+  },
+  {
+    "path": "vulkan-attempt1/loaded-modules.json",
+    "bytes": 20103,
+    "sha256": "4F1C4DA420C548DD4BA6214CA8451B3B0E72293EE699AC6EDDD5C073418A43DC"
+  },
+  {
+    "path": "vulkan-attempt1/network-result.json",
+    "bytes": 275,
+    "sha256": "2C5B51143E92017DC694FC086FC143482CEEC5AB9C3BF0DB417A05A9356227B2"
+  },
+  {
+    "path": "vulkan-attempt1/startup-samples.json",
+    "bytes": 3256,
+    "sha256": "06F80F7678AAE50F6F13029DD055E37B57C950530BD4FE7A048D73D6814988C3"
+  },
+  {
+    "path": "vulkan-attempt1/scene-original.png",
+    "bytes": 96207,
+    "sha256": "06DF50A11CFA2B32A5A53538CC0B484D05B9C8B4D89928C7A809BDA3FE271141"
+  },
+  {
+    "path": "vulkan-attempt1/Game.log",
+    "bytes": 2882,
+    "sha256": "DF590ECCA13FD023A8547B1844C7EC749ED0A843725CCBD952E5911BB2161002"
+  },
+  {
+    "path": "vulkan-attempt1/parent-ui-result.json",
+    "bytes": 615,
+    "sha256": "A524AD10C0A47863AD69D58C162CEAC1C6087C8A7CC8156CBEFD7C5542168BA1"
+  },
+  {
+    "path": "parent/obsolete-output-cleanup.json",
+    "bytes": 2412,
+    "sha256": "1B8B688C212F69E766E6A64BD696F8640212CD8A7735F7223408BAA492345DF2"
+  },
+  {
+    "path": "material-editor-vulkan-attempt2/launch.json",
+    "bytes": 339,
+    "sha256": "26DB1E480133BF06475F6054121A4CAB52926950C91405EC226DC1373EC027AF"
+  },
+  {
+    "path": "material-editor-vulkan-attempt2/parent-ui-result.json",
+    "bytes": 511,
+    "sha256": "C399538C4C890BD2739B3B02C87E734194642175D69CE2206429F71D8164D0D2"
+  },
+  {
+    "path": "material-editor-vulkan-attempt2/MaterialEditor.final.log",
+    "bytes": 411664,
+    "sha256": "7EAAC92413476CDC54F705B6FB007A71A6E770B6747D8B98ED01CB0D8A89EAE4"
+  }
+]

@@ -1,0 +1,15 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve existing source GUIDs and relative shader paths used by AtomFont.
+                "ScanFolder gemassets-{6B28626A-53A5-5C93-8CA5-C410C6A8359F}": {
+                    "watch": "@ENGINEROOT@/Engine/Render/Integration/Assets",
+                    "display": "Engine/Render/Integration",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

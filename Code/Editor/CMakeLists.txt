@@ -105,6 +105,8 @@ ly_add_target(
             AZ::SceneUI
             JE::Geometry.Authoring
             JE::EditorCamera
+            JE::WorldCamera
+            JE::EditorRenderIntegration
             JE::PrefabBuilder
             JE::DebugImGui
             JE::ProfilerView

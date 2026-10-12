@@ -26,7 +26,7 @@ ly_add_target(
             Gem::Atom_RHI.Reflect
             Gem::Atom_RPI.Public
         PUBLIC
-            Gem::Atom_AtomBridge.Static
+            JE::RenderIntegration.Public
 )
 
 # Inject the gem name into the Module source file

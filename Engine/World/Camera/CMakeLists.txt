@@ -19,5 +19,6 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         FILES_CMAKE camera_tests_files.cmake
         BUILD_DEPENDENCIES PRIVATE AZ::AzTestShared AZ::AzTest JE::WorldCamera
     )
+    set_target_properties(WorldCamera.Tests PROPERTIES UNITY_BUILD OFF)
     ly_add_googletest(NAME JE::WorldCamera.Tests)
 endif()

@@ -1,0 +1,90 @@
+{
+  "capturedUtc": "2026-10-12T15:30:05.7362292Z",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\parent\\integrated-freeze-rev8.json",
+  "freezeSha256": "B5F2F7465B34EF63DAA49330ACD03BCBAC198CF184950FF367808DB34C3288BD",
+  "freezeInputCount": 126,
+  "freezeInputMismatches": 0,
+  "retiredPathCount": 55,
+  "retiredPathsPresent": 0,
+  "attempt8SummaryExit": 0,
+  "attempt8SummaryPostflightMismatches": 0,
+  "xmlSuiteCount": 5,
+  "uniqueTestcaseCount": 93,
+  "xmlFailureCount": 0.0,
+  "xmlErrorCount": 0.0,
+  "xmlSkippedCount": 0.0,
+  "xml": [
+    {
+      "suite": "JE::WorldCamera.Tests.main::TEST_RUN",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt6\\JE_WorldCamera.Tests.xml",
+      "sha256": "2CA135552EA993C2BF65638026BDB36056197CB33433BC08C91806284109381C",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "JE::RenderIntegration.Tests.main::TEST_RUN",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt6\\JE_RenderIntegration.Tests.xml",
+      "sha256": "84456FAF8D3B8C6BF93F43E37D3B916613893ABE80DC41824520C51EC7713009",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "JE::EditorRenderIntegration.Tests.main::TEST_RUN",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\JE_EditorRenderIntegration.Tests.xml",
+      "sha256": "671E81F8C31F85F9F829199CDEA3D434C67722FB08820A7A4B8F0EFFDB50D2DD",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "JE::EditorCamera.Tests.main::TEST_RUN",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\JE_EditorCamera.Tests.xml",
+      "sha256": "BC97D38957B9E0CC1664E9DDD902CAA77EB705B190FB624FA76A10216FC68948",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "Legacy::EditorLib.Tests.main::TEST_RUN",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\native-attempt8\\Legacy_EditorLib.Tests.xml",
+      "sha256": "02F7A02649823375299B7CCDE222D3244B666150F69735BDCC49E05ABCB07314",
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "productBinariesUnchanged": true,
+  "productBinaries": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll",
+      "beforeBytes": 1360384,
+      "afterBytes": 1360384,
+      "beforeSha256": "2529C13FD95C626A0BD8D0D409A95AB9CB6DCD00E538ED0F51EEA6E8EE23EAC9",
+      "afterSha256": "2529C13FD95C626A0BD8D0D409A95AB9CB6DCD00E538ED0F51EEA6E8EE23EAC9",
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll",
+      "beforeBytes": 613888,
+      "afterBytes": 613888,
+      "beforeSha256": "D3EF8C336DD585AC39DBC82B53042C6E431E9F7697A718C911FB84928F5CF797",
+      "afterSha256": "D3EF8C336DD585AC39DBC82B53042C6E431E9F7697A718C911FB84928F5CF797",
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+      "beforeBytes": 1485824,
+      "afterBytes": 1485824,
+      "beforeSha256": "9015C2953027CB246B67497B9FABAF9696133A4EC70A4BEC32D87ACC59F77006",
+      "afterSha256": "9015C2953027CB246B67497B9FABAF9696133A4EC70A4BEC32D87ACC59F77006",
+      "unchanged": true
+    }
+  ]
+}

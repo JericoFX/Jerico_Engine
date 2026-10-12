@@ -34,6 +34,8 @@
 #include <JE/Debug/Profiler/ProfilerModule.h>
 #if !defined(JE_LAUNCHER_HEADLESS)
 #include <JE/Render/Debug/RenderDebugModule.h>
+#include <JE/World/Camera/Debug/DebugCameraModule.h>
+#include <JE/Render/Integration/RenderIntegrationModule.h>
 #endif
 #include <JE/Render/Materials/MaterialsRegistration.h>
 
@@ -79,6 +81,8 @@ namespace JE::Runtime
             outModules.emplace_back(JE::Debug::Profiler::CreateVisualModule());
             outModules.emplace_back(JE::Render::Debug::CreateViewportModule());
             outModules.emplace_back(JE::Render::Debug::CreateToolsModule());
+            outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
+            outModules.emplace_back(JE::Render::Integration::CreateRuntimeModule());
 #endif
         }
     };

@@ -1,0 +1,16 @@
+{
+  "pid": 238868,
+  "limits": "Static visual verification only; no motion/frame pacing benchmark or shipping package acceptance",
+  "visible": "Room corridor doorway floor and legible Vulkan overlay",
+  "networkSamples": 20,
+  "backend": "Vulkan",
+  "closure": "Alt+F4 did not close; confirmed live after 10s and terminated owned PID",
+  "normalCloseVerified": false,
+  "nativeModules": [
+    "WorldCamera.dll",
+    "RenderIntegration.dll"
+  ],
+  "sceneSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "utc": "2026-10-12T15:41:31.1949907Z",
+  "badNetworkSamples": 0
+}

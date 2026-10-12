@@ -10,6 +10,8 @@
 
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
+#include <JE/World/Camera/Debug/DebugCameraModule.h>
+#include <JE/Editor/RenderIntegration/AssetProcessingModule.h>
 #include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Debug/ImGui/ImGuiModule.h>
 #include <JE/Debug/Profiler/ProfilerModule.h>
@@ -226,6 +228,8 @@ void AssetProcessorAZApplication::CreateStaticModules(AZStd::vector<AZ::Module*>
     AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
     outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
     outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
+    outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
+    outModules.emplace_back(JE::Editor::RenderIntegration::CreateAssetProcessingModule());
     outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
     outModules.emplace_back(JE::Debug::CreateToolsModule());
     outModules.emplace_back(JE::Debug::Profiler::CreateCaptureModule());

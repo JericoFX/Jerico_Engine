@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Component/DebugCamera/CameraComponent.h>
+#include <JE/World/Camera/Debug/CameraComponent.h>
 #include <Atom/RPI.Public/RenderPipeline.h>
 #include <Atom/RPI.Public/Scene.h>
 #include <Atom/RPI.Public/ViewportContext.h>
@@ -31,13 +31,13 @@ namespace AtomToolsFramework
 
         // Configure camera
         m_cameraEntity =
-            CreateEntity("CameraEntity", { azrtti_typeid<AzFramework::TransformComponent>(), azrtti_typeid<AZ::Debug::CameraComponent>() });
+            CreateEntity("CameraEntity", { azrtti_typeid<AzFramework::TransformComponent>(), azrtti_typeid<JE::World::Camera::Debug::CameraComponent>() });
 
-        AZ::Debug::CameraComponentConfig cameraConfig(windowContext);
+        JE::World::Camera::Debug::CameraComponentConfig cameraConfig(windowContext);
         cameraConfig.m_fovY = AZ::Constants::HalfPi;
         cameraConfig.m_depthNear = 0.01f;
         m_cameraEntity->Deactivate();
-        m_cameraEntity->FindComponent(azrtti_typeid<AZ::Debug::CameraComponent>())->SetConfiguration(cameraConfig);
+        m_cameraEntity->FindComponent(azrtti_typeid<JE::World::Camera::Debug::CameraComponent>())->SetConfiguration(cameraConfig);
         m_cameraEntity->Activate();
 
         EntityPreviewViewportSettingsNotificationBus::Handler::BusConnect(m_toolId);

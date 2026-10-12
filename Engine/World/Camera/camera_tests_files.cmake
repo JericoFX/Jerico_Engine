@@ -1,1 +1,2 @@
-set(FILES Tests/CameraModuleTests.cpp)
+set(FILES Tests/CameraModuleTests.cpp
+    Tests/DebugCameraTests.cpp)

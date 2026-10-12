@@ -1,0 +1,13 @@
+{
+  "observedScene": true,
+  "backend": "dx12",
+  "nativeModules": [
+    "WorldCamera.dll",
+    "RenderIntegration.dll"
+  ],
+  "screenshot": "scene-original.png",
+  "normalExitVerified": false,
+  "cleanup": "Terminate exact owned PID after two Alt+F4 attempts (second after confirmed focus) left it responding and rendering",
+  "pid": 25188,
+  "utc": "2026-10-12T15:10:51.6595358Z"
+}

@@ -1,0 +1,272 @@
+{
+  "status": "HOLD_SOURCE_ONLY_NATIVE_NOT_RUN",
+  "root": "F:/JericoEngine/JericoEngine",
+  "inputs": [
+    {
+      "path": "Engine/World/Camera/Assets/Camera/Editor/Icons/Components/Camera.svg",
+      "bytes": 2304,
+      "sha256": "412B6AEC2D4ED30F9A373081D5C582E2D7F3259A8562468F32EFA545EFADA898"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/Camera/Editor/Icons/Components/Disabled/Camera_white.png",
+      "bytes": 589,
+      "sha256": "B1E48ABC27F70735344F12A7044B523EF64E7AD0FF4E8C5B8572832BBA06792C"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/Camera/Editor/Icons/Components/Viewport/Camera.svg",
+      "bytes": 3601,
+      "sha256": "999630E0BA0C324A0DBD3040A9D5190879EC69F8F7CA2D4D395A27996B476E9B"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/CameraRig.svg",
+      "bytes": 5645,
+      "sha256": "6B01908BF1002AB39CADBEDBFC900FA5CA718F8789DD26DABCEC04A0875840D2"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Disabled/Camera_rig_white.png",
+      "bytes": 580,
+      "sha256": "92FAE863FB604422C387E0AE7E623C5AC4F4BD8F8FBEEB60F1F4293FF10A2999"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/FlyCameraInput.svg",
+      "bytes": 5053,
+      "sha256": "4E670220C13D1B24D338E64E45454C9C8B526C3C4D44B5B264BC529D26C14619"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Viewport/CameraRig.png",
+      "bytes": 4224,
+      "sha256": "D99943A2D6D971F27C03887D34A105A052F618949986BB2B4B06165FFC4FE5C4"
+    },
+    {
+      "path": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Viewport/FlyCameraInput.svg",
+      "bytes": 6352,
+      "sha256": "B220407CE23A486B5F104745784A619211565FC8E0BFD1E680A191AF8CFF8DE9"
+    },
+    {
+      "path": "Engine/World/Camera/camera_files.cmake",
+      "bytes": 1681,
+      "sha256": "CF0C01C2D87009E0E6A56CA8EC827AA0ABE4FBA574C513D5B364DF0916F51B6D"
+    },
+    {
+      "path": "Engine/World/Camera/camera_tests_files.cmake",
+      "bytes": 71,
+      "sha256": "0BC1C6AC4E668C61DB79134348E06D75160AA5E970C611A4677DDADEB19D42A2"
+    },
+    {
+      "path": "Engine/World/Camera/CMakeLists.txt",
+      "bytes": 930,
+      "sha256": "C400E5D342679466FC03DA15B2FCA901FC1D998063A701E7EBC62070123C8B6B"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraComponent.h",
+      "bytes": 1729,
+      "sha256": "80E7DA1ACB2A7837385EE6DD445A6240229F31F964CA4343E285C83C72DA7962"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraComponentController.h",
+      "bytes": 9327,
+      "sha256": "D1F0448DE6CCDA0A6ED5A270257E8E956DBFB2D35DE5BD2EF7BA6CAC8C2EF199"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraComponentConverters.h",
+      "bytes": 588,
+      "sha256": "E012BCA78092F1398A463D673F797258DC7D694D481A925DF2D569AE4C6DEFD2"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraExports.h",
+      "bytes": 354,
+      "sha256": "0673AC15339A55EC6113EB70CCD1B3765CB81CA629C3C3A868F9147C071DEFFC"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraModule.h",
+      "bytes": 677,
+      "sha256": "A673D548B5E47AD4696A66853EEEC7504B4CD9D13F83B32E677C0DC643CC8426"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraRigComponent.h",
+      "bytes": 2659,
+      "sha256": "98255D8341BDF4167C7BF2F854CF6C70EC3318F2C6AC51A9F8A1DF0AA5149DBC"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraSystemComponent.h",
+      "bytes": 2372,
+      "sha256": "9452B06B0CEB8D8E7D2F95AAECFC161F476C7ABADB5BFC990F52AEE2AE9D9C94"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/CameraViewRegistrationBus.h",
+      "bytes": 1166,
+      "sha256": "E9A7F5C573A29D8BFE0B76A335EC43BE243CB967A238267E9FE436E884EA0801"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/ArcBallControllerBus.h",
+      "bytes": 2371,
+      "sha256": "B2DBF54AA5BE88D6F459058098AEB6D1C175868855F7595F19A88DDBE4D45C2C"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/ArcBallControllerComponent.h",
+      "bytes": 3261,
+      "sha256": "CD30DDBF13B8EF5B989227D88F54AB3B9543F11A43A938152662BBBDDCEBA29F"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/CameraComponent.h",
+      "bytes": 5903,
+      "sha256": "02B64BFC6725ACA56C1CDD579579E67C673763FAEAD5EC9E133416C2608502CB"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/CameraControllerBus.h",
+      "bytes": 2762,
+      "sha256": "9F7A9DB36FAD0AD42EB94EEEB59F02EC931AFB3A6AEF56089B71F6FF7006EFAC"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/CameraControllerComponent.h",
+      "bytes": 2346,
+      "sha256": "B4AD3B6CF6EE045E4BD134C04F13F7F07831F7E639CD0F81CF48D5F7FA8F6657"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/DebugCameraModule.h",
+      "bytes": 771,
+      "sha256": "AC6F6FB3887C3A9BB783B44C8D6D0DC32BB2F7F545CD284F435BC8A958FC9D78"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/NoClipControllerBus.h",
+      "bytes": 3092,
+      "sha256": "1A8D8F80F4CBA9BAB7DDFF467B7014E7F612D45771752B1E2836F0D1F313CE5C"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/Debug/NoClipControllerComponent.h",
+      "bytes": 4096,
+      "sha256": "A1939D661DFD8C1104EE47E6E5D895AFEF849E7582F6019C2A7C44B6E031A451"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/ICameraLookAtBehavior.h",
+      "bytes": 1252,
+      "sha256": "B29A6CB4E8D2BA26A7B2F60204EBF17F47B53CB4E226270A4E64E677460F42BE"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/ICameraSubComponent.h",
+      "bytes": 1136,
+      "sha256": "12829D166BEDFAAD9CD6DACDA16ABAE99E4D6ED579A742972B6FE27DDEC20083"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/ICameraTargetAcquirer.h",
+      "bytes": 1152,
+      "sha256": "75BA2208C993DD48384A7EE1B5EB26BB01E7F164948CE7005A7294D283FC05ED"
+    },
+    {
+      "path": "Engine/World/Camera/Include/JE/World/Camera/ICameraTransformBehavior.h",
+      "bytes": 1423,
+      "sha256": "ADFC00E63693745D18B95DAFC5BDADA4D4529430AB75A63E925970339F56F4BD"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraComponent.cpp",
+      "bytes": 6459,
+      "sha256": "BF9FDBBF1667D732F1604F6724A6C73A538D867D26D235621865321954B91430"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraComponentController.cpp",
+      "bytes": 35291,
+      "sha256": "81863A5AF0AA2527206F07A18DE5432196A8BDDEB6841F46E3E4BE62BD653A13"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraComponentConverter.cpp",
+      "bytes": 4431,
+      "sha256": "1574A6B0D7B454EB818A56D385DCEC0560A078A461CCFE6CA183747557D18298"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraModule.cpp",
+      "bytes": 862,
+      "sha256": "28917CEAE10EEB2A678B61F8883470CF88E3F1089DD92AC178659CFF67703BCD"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraRigComponent.cpp",
+      "bytes": 9612,
+      "sha256": "9DF32DE33DA21DC417A8416D3F2DB4CE5A619FF7CEA3191DD47C2D37F669819E"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraSystemComponent.cpp",
+      "bytes": 4227,
+      "sha256": "CE3BC27EBC07F6BAA44608ACF1A47483E289D36871B9318064E73BE12C8DCFB7"
+    },
+    {
+      "path": "Engine/World/Camera/Source/CameraViewRegistrationBus.cpp",
+      "bytes": 274,
+      "sha256": "DAFEA37083D1CD643FED219CBA8824BD5162FB69B4E950A0E955D34CAC0E7C39"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/ArcBallControllerComponent.cpp",
+      "bytes": 18221,
+      "sha256": "7971B41995086FBBDA2D4A41373E824E40B30230FEC1AAD328141AA5B889B271"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/CameraComponent.cpp",
+      "bytes": 14480,
+      "sha256": "689F26A1D73A3171DA8619EA594D9D8D22546D04958BBDB423DE10E2AA3EEF23"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/CameraControllerComponent.cpp",
+      "bytes": 2597,
+      "sha256": "69541ECDA7540BAB1D3EBCF91FFE77AF93E3F4DBD811107C995F698CF5B6F34E"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/DebugCameraBus.cpp",
+      "bytes": 715,
+      "sha256": "6199E1D715DF8A53387E98E76EB8433C88DCF7EA58A6C254DDCCC987A03E83C2"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/DebugCameraModule.cpp",
+      "bytes": 942,
+      "sha256": "85FCEF1943EF0CB051B436BB60ADDA288EDBF9A998F77F82610809934A8A2A8E"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/DebugCameraUtils.cpp",
+      "bytes": 930,
+      "sha256": "FD048779AD521C7A436E82D2C35AB887E50B44379145F57A6570DFB95830A4EE"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/DebugCameraUtils.h",
+      "bytes": 442,
+      "sha256": "5C0C699A8F3F3ED4EEB098E755CB7B168876A51B186D49B3961FFE10F85B6976"
+    },
+    {
+      "path": "Engine/World/Camera/Source/Debug/NoClipControllerComponent.cpp",
+      "bytes": 20967,
+      "sha256": "7FFACE9484F9B7A59E697BFEDF437D79504FBD13524C35C0C54CC640228A65B1"
+    },
+    {
+      "path": "Engine/World/Camera/Tests/CameraModuleTests.cpp",
+      "bytes": 4678,
+      "sha256": "FF1DFD6A5B3FF717FB7A9043037AC3A00717186886A591646904A6F6132C55E9"
+    },
+    {
+      "path": "Engine/World/Camera/Tests/DebugCameraTests.cpp",
+      "bytes": 10627,
+      "sha256": "EC8FEFC5212E39DAE554CA31C6AE9893FE11061AFF0CB5F45DF8A2552A5A55D2"
+    },
+    {
+      "path": "Gems/Atom/Component/DebugCamera/CMakeLists.txt",
+      "bytes": 254,
+      "sha256": "C643803A2BBF9BB8D20B71ABEF1B78D38A293FA298DE6EE83D6437291A498D3B"
+    }
+  ],
+  "retiredPaths": [
+    "Gems/Atom/Component/DebugCamera/gem.json",
+    "Gems/Atom/Component/DebugCamera/preview.png",
+    "Gems/Atom/Component/DebugCamera/Code/atom_component_debugcamera_files.cmake",
+    "Gems/Atom/Component/DebugCamera/Code/atom_component_debugcamera_shared_files.cmake",
+    "Gems/Atom/Component/DebugCamera/Code/CMakeLists.txt",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/ArcBallControllerBus.h",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/ArcBallControllerComponent.h",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/CameraComponent.h",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/CameraControllerBus.h",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/CameraControllerComponent.h",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/NoClipControllerBus.h",
+    "Gems/Atom/Component/DebugCamera/Code/Include/Atom/Component/DebugCamera/NoClipControllerComponent.h",
+    "Gems/Atom/Component/DebugCamera/Code/Source/ArcBallControllerComponent.cpp",
+    "Gems/Atom/Component/DebugCamera/Code/Source/CameraComponent.cpp",
+    "Gems/Atom/Component/DebugCamera/Code/Source/CameraControllerComponent.cpp",
+    "Gems/Atom/Component/DebugCamera/Code/Source/DebugCameraUtils.cpp",
+    "Gems/Atom/Component/DebugCamera/Code/Source/DebugCameraUtils.h",
+    "Gems/Atom/Component/DebugCamera/Code/Source/Module.cpp",
+    "Gems/Atom/Component/DebugCamera/Code/Source/NoClipControllerComponent.cpp"
+  ]
+}

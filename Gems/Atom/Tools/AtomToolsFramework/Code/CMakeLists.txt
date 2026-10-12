@@ -38,8 +38,9 @@ ly_add_target(
             AZ::AzToolsFramework
             JE::ProfilerView
             JE::RenderDebug
+            JE::EditorRenderIntegration
             Gem::Atom_Bootstrap.Headers
-            Gem::Atom_Component_DebugCamera.Static
+            JE::WorldCamera
             Gem::Atom_Feature_Common
             Gem::Atom_Feature_Common.Public
             Gem::Atom_RHI.Public
@@ -68,7 +69,6 @@ ly_add_target(
             Gem::${gem_name}.Static
     RUNTIME_DEPENDENCIES
         Gem::Atom_Bootstrap
-        Gem::Atom_Component_DebugCamera
         Gem::Atom_Feature_Common.Editor
         Gem::Atom_RHI.Private
         Gem::Atom_RHI_Null.Private

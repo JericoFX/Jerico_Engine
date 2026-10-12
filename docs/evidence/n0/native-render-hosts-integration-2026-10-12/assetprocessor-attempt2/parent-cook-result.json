@@ -1,0 +1,69 @@
+{
+  "sources": 5,
+  "sourceIdentityMismatches": [],
+  "products": 29,
+  "spawnables": [
+    {
+      "name": "pc/levels/jeeditorfixture/jeeditorfixture.spawnable",
+      "sha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+      "unchanged": true
+    },
+    {
+      "name": "pc/levels/jenativeintegration/jenativeintegration.spawnable",
+      "sha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+      "unchanged": true
+    }
+  ],
+  "scanFolders": [
+    {
+      "ScanFolderID": 82,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Engine/Render/Integration/Assets",
+      "DisplayName": "Engine/Render/Integration",
+      "PortableKey": "gemassets-{6B28626A-53A5-5C93-8CA5-C410C6A8359F}",
+      "IsRoot": 0
+    }
+  ],
+  "jobLogs": [
+    {
+      "source": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "runKey": 35022,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\assetprocessor-attempt2\\JobLogs\\JEEditorFixture.prefab-3005589644-35022.log",
+      "sha256": "897CA924AB85A8DB2C155648A8BE4CD877C61BACE6ECACEAE9B2C616E4EDFAAC",
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "source": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "runKey": 35032,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\assetprocessor-attempt2\\JobLogs\\JENativeIntegration.prefab-2639614019-35032.log",
+      "sha256": "5FE3663C62D33D61A87BA690A4FCC0A3A8D0EF295D71DEF9EFD14649CAB46AF3",
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "source": "shaders/simpletextured.hashedvariantlist",
+      "runKey": 34226,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\assetprocessor-attempt2\\JobLogs\\simpletextured.hashedvariantlist-2692590997-34226.log",
+      "sha256": "84F90CDE657E137EB17040224349DE157F0531153D2659181B507AD264566913",
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "source": "Shaders/SimpleTextured.shader",
+      "runKey": 35026,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\assetprocessor-attempt2\\JobLogs\\SimpleTextured.shader-3527917682-35026.log",
+      "sha256": "C7C7C47D550DD6324835A84D28843030CEB378F47B800E4DC05F591D83F03F99",
+      "warnings": 3,
+      "errors": 0
+    },
+    {
+      "source": "Shaders/SimpleTextured.shadervariantlist",
+      "runKey": 33572,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-hosts-rev1\\assetprocessor-attempt2\\JobLogs\\SimpleTextured.shadervariantlist-2416692515-33572.log",
+      "sha256": "865924C6E770101646E92D9BD6EE123C539F33BB246B73FF3012B8205D89E897",
+      "warnings": 0,
+      "errors": 0
+    }
+  ],
+  "limits": "Shader has3encodingwarnings; builder disconnect errors occur after App quit requested. No module activation errors observed; global asset backlog not accepted."
+}

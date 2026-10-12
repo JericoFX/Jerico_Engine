@@ -73,7 +73,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::EMotionFX.Editor.Static
                 Gem::AtomToolsFramework.Static
                 Gem::AtomToolsFramework.Editor
-                Gem::Atom_Component_DebugCamera.Static
+                JE::WorldCamera
                 Gem::Atom_Feature_Common.Public
                 Gem::CommonFeaturesAtom.Static
         RUNTIME_DEPENDENCIES

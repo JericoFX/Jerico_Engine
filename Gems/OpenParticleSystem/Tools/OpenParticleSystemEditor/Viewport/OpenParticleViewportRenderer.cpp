@@ -24,12 +24,12 @@
 #include <Atom/RPI.Public/Material/Material.h>
 #include <Atom/RPI.Public/Image/StreamingImage.h>
 
-#include <Atom/Component/DebugCamera/CameraComponent.h>
+#include <JE/World/Camera/Debug/CameraComponent.h>
 #include <Atom/Feature/PostProcessing/PostProcessingConstants.h>
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
-#include <Atom/Component/DebugCamera/NoClipControllerComponent.h>
+#include <JE/World/Camera/Debug/NoClipControllerComponent.h>
 
 #include <Atom/Feature/Utils/LightingPreset.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
@@ -234,10 +234,10 @@ namespace OpenParticleSystemEditor
         AZ_Assert(m_cameraEntity != nullptr, "Failed to create camera entity.");
 
         // Add debug camera and controller components
-        AZ::Debug::CameraComponentConfig cameraConfig(m_windowContext);
+        JE::World::Camera::Debug::CameraComponentConfig cameraConfig(m_windowContext);
         cameraConfig.m_fovY = AZ::Constants::HalfPi;
         cameraConfig.m_depthNear = DepthNear;
-        m_cameraComponent = m_cameraEntity->CreateComponent(azrtti_typeid<AZ::Debug::CameraComponent>());
+        m_cameraComponent = m_cameraEntity->CreateComponent(azrtti_typeid<JE::World::Camera::Debug::CameraComponent>());
         m_cameraComponent->SetConfiguration(cameraConfig);
         m_cameraEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         m_cameraEntity->Init();

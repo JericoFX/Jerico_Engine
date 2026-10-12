@@ -22,6 +22,8 @@ ly_add_target(
                 AZ::AssetBuilderSDK
                 JE::Geometry.Authoring
                 JE::EditorCamera
+                JE::WorldCamera
+                JE::EditorRenderIntegration
                 JE::PrefabBuilder
                 JE::DebugImGui
                 JE::ProfilerCapture

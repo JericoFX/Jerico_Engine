@@ -21,7 +21,6 @@
         "Asset/ImageProcessingAtom",
         "Asset/Shader",
         "Bootstrap",
-        "Component/DebugCamera",
         "Feature/Common",
         "RHI",
         "RPI",
@@ -35,7 +34,6 @@
         "Atom_Feature_Common",
         "AtomShader",
         "Atom_Bootstrap",
-        "Atom_Component_DebugCamera",
         "Atom_RHI",
         "Atom_RPI",
         "AtomToolsFramework",
@@ -43,6 +41,13 @@
         "MaterialEditor",
         "PassCanvas",
         "ShaderManagementConsole",
-        "Atom_AtomBridge"
+        "Atom_RHI_Null",
+        "AtomRenderOptions",
+        "CommonFeaturesAtom",
+        "EMotionFX_Atom",
+        "AtomFont",
+        "AtomViewportDisplayInfo",
+        "ImageProcessingAtom",
+        "AtomViewportDisplayIcons"
     ]
 }

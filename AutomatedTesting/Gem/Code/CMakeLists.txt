@@ -27,7 +27,7 @@ ly_add_target(
             Gem::Multiplayer.Unified
         PRIVATE
             AZ::AzCore
-            Gem::Atom_AtomBridge.Static
+            JE::RenderIntegration.Public
             Gem::Multiplayer.Unified.Static
     AUTOGEN_RULES
         *.AutoComponent.xml,AutoComponent_Header.jinja,$path/$fileprefix.AutoComponent.h
