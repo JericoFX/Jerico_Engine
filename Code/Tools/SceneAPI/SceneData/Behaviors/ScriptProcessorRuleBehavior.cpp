@@ -424,9 +424,17 @@ namespace AZ::SceneAPI::Behaviors
     {
         using namespace AzToolsFramework;
 
+        auto defaultScript = FindMatchingDefaultScript(context.GetScene());
+        auto scriptRules = Containers::MakeDerivedFilterView<DataTypes::IScriptProcessorRule>(
+            context.GetScene().GetManifest().GetValueStorage());
+        // A native manifest without a requested script does not require a Python host.
+        if (!defaultScript && scriptRules.begin() == scriptRules.end() && m_eventHandler->m_pythonScriptStack.empty())
+        {
+            return true;
+        }
+
         if (LoadPython())
         {
-            auto defaultScript = FindMatchingDefaultScript(context.GetScene());
             if (defaultScript)
             {
                 SignalScriptForExportEvent(context, defaultScript.value());
@@ -502,12 +510,20 @@ namespace AZ::SceneAPI::Behaviors
             return Events::ProcessingResult::Ignored;
         }
 
+        auto defaultScript = FindMatchingDefaultScript(scene);
+        auto scriptRules = Containers::MakeDerivedFilterView<DataTypes::IScriptProcessorRule>(
+            scene.GetManifest().GetValueStorage());
+        // Discover manifest scripts after running the default script, which may add a rule.
+        if (!defaultScript && scriptRules.begin() == scriptRules.end() && m_eventHandler->m_pythonScriptStack.empty())
+        {
+            return Events::ProcessingResult::Ignored;
+        }
+
         if (LoadPython())
         {
             AZStd::string manifestUpdate;
             Events::ProcessingResult fallbackResult = Events::ProcessingResult::Failure;
 
-            auto defaultScript = FindMatchingDefaultScript(scene);
             if (defaultScript)
             {
                 SignalScriptForUpdateManifest(scene, manifestUpdate, defaultScript.value());

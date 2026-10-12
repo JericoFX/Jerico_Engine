@@ -12,6 +12,7 @@
 #include <SceneAPI/SceneCore/Containers/Scene.h>
 #include <SceneAPI/SceneCore/DataTypes/Rules/IScriptProcessorRule.h>
 #include <SceneAPI/SceneCore/Containers/Utilities/Filters.h>
+#include <SceneAPI/SceneCore/Events/ExportProductList.h>
 #include <SceneAPI/SceneData/ReflectionRegistrar.h>
 #include <SceneAPI/SceneData/Rules/CoordinateSystemRule.h>
 #include <SceneAPI/SceneData/Behaviors/ScriptProcessorRuleBehavior.h>
@@ -351,6 +352,50 @@ namespace AZ
             EXPECT_THAT(jsonText.c_str(), ::testing::HasSubstr(R"(2.0)"));
             EXPECT_THAT(jsonText.c_str(), ::testing::HasSubstr(R"(3.0)"));
             EXPECT_THAT(jsonText.c_str(), ::testing::HasSubstr(R"("scale": 10.0)"));
+        }
+
+        TEST_F(SceneManifest_JSON, ScriptProcessorRule_NativeManifestUpdateAndExport_DoNotAccessPython)
+        {
+            using namespace SceneAPI::Containers;
+            using namespace SceneAPI::Events;
+
+            PrepareMockPythonInterface();
+            EXPECT_CALL(m_data->m_editorPythonEventsInterface, IsPythonActive()).Times(0);
+            EXPECT_CALL(m_data->m_editorPythonEventsInterface, StartPython(::testing::_)).Times(0);
+            EXPECT_CALL(m_data->m_editorPythonEventsInterface, StopPython(::testing::_)).Times(0);
+            EXPECT_CALL(m_data->m_editorPythonEventsInterface, ExecuteWithLock(::testing::_)).Times(0);
+            EXPECT_CALL(m_data->m_niceMockEditorPythonRunnerRequestBus, ExecuteByFilename(::testing::_)).Times(0);
+
+            Scene scene("native");
+            auto coordinateRule = AZStd::make_shared<AZ::SceneAPI::SceneData::CoordinateSystemRule>();
+            coordinateRule->SetUseAdvancedData(true);
+            coordinateRule->SetOriginNodeName("native_origin");
+            coordinateRule->SetTranslation(AZ::Vector3(1.0f, 2.0f, 3.0f));
+            coordinateRule->SetScale(2.0f);
+
+            SceneAPI::Behaviors::ScriptProcessorRuleBehavior behavior;
+            behavior.Activate();
+            EXPECT_EQ(
+                behavior.UpdateManifest(scene, AssetImportRequest::Update, AssetImportRequest::Generic),
+                ProcessingResult::Ignored);
+            EXPECT_TRUE(scene.GetManifest().IsEmpty());
+
+            EXPECT_TRUE(scene.GetManifest().AddEntry(coordinateRule));
+            EXPECT_EQ(
+                behavior.UpdateManifest(scene, AssetImportRequest::Update, AssetImportRequest::Generic),
+                ProcessingResult::Ignored);
+            ExportProductList products;
+            PreExportEventContext context(products, AZStd::string("unused"), scene, "pc");
+            EXPECT_EQ(SceneAPI::Events::Process(context), ProcessingResult::Success);
+            behavior.Deactivate();
+
+            ASSERT_EQ(scene.GetManifest().GetEntryCount(), 1);
+            EXPECT_EQ(scene.GetManifest().GetValue(0), coordinateRule);
+            EXPECT_TRUE(coordinateRule->GetUseAdvancedData());
+            EXPECT_EQ(coordinateRule->GetOriginNodeName(), "native_origin");
+            EXPECT_TRUE(coordinateRule->GetTranslation().IsClose(AZ::Vector3(1.0f, 2.0f, 3.0f), 0.0f));
+            EXPECT_FLOAT_EQ(coordinateRule->GetScale(), 2.0f);
+            EXPECT_TRUE(products.GetProducts().empty());
         }
 
         TEST_F(SceneManifest_JSON, ScriptProcessorRule_LoadWithEmptyScriptFilename_ReturnsEarly)
