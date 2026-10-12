@@ -6,8 +6,5 @@
 #
 #
 
-# Add the PrimitiveAssets Asset-only gem as a Builder variant
-# This will export its "SourcePaths" to the generated "cmake_dependencies.<project>.assetbuilder.setreg"
-if(PAL_TRAIT_BUILD_HOST_TOOLS)
-    ly_create_alias(NAME PrimitiveAssets.Builders NAMESPACE Gem)
-endif()
+# Historical entry only; native engine content replaces Gem activation.
+message(FATAL_ERROR "PrimitiveAssets content is absorbed into Engine/Assets/Primitives; remove its Gem activation.")

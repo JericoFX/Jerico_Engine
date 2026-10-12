@@ -1,0 +1,268 @@
+{
+  "capturedUtc": "2026-10-12T10:21:39.095353+00:00",
+  "readOnlyConnection": "sqlite3 URI mode=ro plus PRAGMA query_only=ON; WAL present and readable",
+  "sqliteVersion": "3.50.4",
+  "dbFiles": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite",
+      "exists": true,
+      "bytes": 9023488,
+      "sha256": "11E05D4CFE11C3DAF999978995214E400B20DA7C0CEE11505C9A99093B120BB0",
+      "lastWriteUtc": "2026-10-12T10:00:45.971146+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite-wal",
+      "exists": true,
+      "bytes": 11873872,
+      "sha256": "AD98746B0E4C2AFF07183DB360396C8947D81EE3682177EA40D456CEA1ED8FBE",
+      "lastWriteUtc": "2026-10-12T10:05:04.598902+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite-shm",
+      "exists": true,
+      "bytes": 32768,
+      "sha256": "8A928C29A42865BCBDDE101C52BABA0CCBFA5320126A17BE782222A7CB621B22",
+      "lastWriteUtc": "2026-10-12T10:21:39.093311+00:00"
+    }
+  ],
+  "matchedScanFolders": [
+    {
+      "ScanFolderID": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 93,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Registry",
+      "DisplayName": "Registry",
+      "PortableKey": "gemregistry-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "IsRoot": 0
+    }
+  ],
+  "sourceCountsByFolder": {
+    "92": 9,
+    "93": 0
+  },
+  "matchedSources": [
+    {
+      "SourceID": 900,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Box_1x1.fbx",
+      "SourceGuidHex": "C15CD465958956ED945F8416FA4798A3"
+    },
+    {
+      "SourceID": 1412,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Box_1x1_MiddleGrey.material",
+      "SourceGuidHex": "7E8872C14F89587095482FC8427813F2"
+    },
+    {
+      "SourceID": 901,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Cylinder_1x1.fbx",
+      "SourceGuidHex": "F322592F43BC50E7903CCC231846093F"
+    },
+    {
+      "SourceID": 1413,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Cylinder_1x1_MiddleGrey.material",
+      "SourceGuidHex": "4432E987D1AA548AAC26A8FDE959FEDB"
+    },
+    {
+      "SourceID": 902,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Sphere_1x1.fbx",
+      "SourceGuidHex": "1EE46427D1C25698B30DB4CCF46B15CD"
+    },
+    {
+      "SourceID": 1411,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Sphere_1x1_MiddleGrey.material",
+      "SourceGuidHex": "DDD10F7C94B7533DA225ED1744A63CFE"
+    },
+    {
+      "SourceID": 1400,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Textures/_Primitives/Middle_Gray_Checker.tif",
+      "SourceGuidHex": "35E180DEBC79572888147442B3CFE142"
+    },
+    {
+      "SourceID": 1407,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Textures/_Primitives/Middle_Gray_Checker_ddn.tif",
+      "SourceGuidHex": "240B404B4C01520098732527E8A9F69C"
+    },
+    {
+      "SourceID": 1406,
+      "ScanFolderPK": 92,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Textures/_Primitives/Middle_Gray_Checker_spec.tif",
+      "SourceGuidHex": "4F904B085C13539893AFD814CDBC22C3"
+    }
+  ],
+  "productsAndJobs": [
+    {
+      "SourceID": 900,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Box_1x1.fbx",
+      "ProductID": null,
+      "ProductName": null,
+      "SubID": null,
+      "AssetTypeHex": "",
+      "LegacyGuidHex": "",
+      "JobID": 913,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 2,
+      "ErrorCount": 4,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 1412,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Box_1x1_MiddleGrey.material",
+      "ProductID": 7171,
+      "ProductName": "pc/objects/_primitives/_box_1x1_middlegrey.azmaterial",
+      "SubID": 0,
+      "AssetTypeHex": "522C7BE0501D463E92C615184A2B7AD8",
+      "LegacyGuidHex": "C08DF729B0BD5812B77ADE8CFCAE29C0",
+      "JobID": 1472,
+      "JobKey": "Material Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "ErrorCount": 0,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 901,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Cylinder_1x1.fbx",
+      "ProductID": null,
+      "ProductName": null,
+      "SubID": null,
+      "AssetTypeHex": "",
+      "LegacyGuidHex": "",
+      "JobID": 914,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 2,
+      "ErrorCount": 4,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 1413,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Cylinder_1x1_MiddleGrey.material",
+      "ProductID": 7172,
+      "ProductName": "pc/objects/_primitives/_cylinder_1x1_middlegrey.azmaterial",
+      "SubID": 0,
+      "AssetTypeHex": "522C7BE0501D463E92C615184A2B7AD8",
+      "LegacyGuidHex": "ABDA0D59A32A5324BB68E33FF3C99455",
+      "JobID": 1473,
+      "JobKey": "Material Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "ErrorCount": 0,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 902,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Sphere_1x1.fbx",
+      "ProductID": null,
+      "ProductName": null,
+      "SubID": null,
+      "AssetTypeHex": "",
+      "LegacyGuidHex": "",
+      "JobID": 915,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 2,
+      "ErrorCount": 4,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 1411,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Objects/_Primitives/_Sphere_1x1_MiddleGrey.material",
+      "ProductID": 7170,
+      "ProductName": "pc/objects/_primitives/_sphere_1x1_middlegrey.azmaterial",
+      "SubID": 0,
+      "AssetTypeHex": "522C7BE0501D463E92C615184A2B7AD8",
+      "LegacyGuidHex": "DBA34D5014935A8D8D8193F1CD44B180",
+      "JobID": 1471,
+      "JobKey": "Material Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "ErrorCount": 0,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 1400,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Textures/_Primitives/Middle_Gray_Checker.tif",
+      "ProductID": null,
+      "ProductName": null,
+      "SubID": null,
+      "AssetTypeHex": "",
+      "LegacyGuidHex": "",
+      "JobID": 1460,
+      "JobKey": "Image Compile: TIF",
+      "Platform": "pc",
+      "Status": 2,
+      "ErrorCount": 1,
+      "WarningCount": 9
+    },
+    {
+      "SourceID": 1407,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Textures/_Primitives/Middle_Gray_Checker_ddn.tif",
+      "ProductID": null,
+      "ProductName": null,
+      "SubID": null,
+      "AssetTypeHex": "",
+      "LegacyGuidHex": "",
+      "JobID": 1467,
+      "JobKey": "Image Compile: TIF",
+      "Platform": "pc",
+      "Status": 2,
+      "ErrorCount": 1,
+      "WarningCount": 3
+    },
+    {
+      "SourceID": 1406,
+      "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "SourceName": "Textures/_Primitives/Middle_Gray_Checker_spec.tif",
+      "ProductID": null,
+      "ProductName": null,
+      "SubID": null,
+      "AssetTypeHex": "",
+      "LegacyGuidHex": "",
+      "JobID": 1466,
+      "JobKey": "Image Compile: TIF",
+      "Platform": "pc",
+      "Status": 2,
+      "ErrorCount": 1,
+      "WarningCount": 3
+    }
+  ]
+}

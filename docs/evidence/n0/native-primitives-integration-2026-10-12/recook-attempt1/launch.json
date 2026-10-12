@@ -1,0 +1,13 @@
+{
+  "pid": 89420,
+  "startedUtc": "2026-10-12T10:30:10.9709022Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+  "arguments": [
+    "--start-hidden",
+    "--engine-path=\"F:\\JericoEngine\\JericoEngine\"",
+    "--project-path=\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"",
+    "--reprocessFileList=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\recook-attempt1\\reprocess-sources.txt\""
+  ],
+  "exeSha256": "B32F020E354CBAE641501C8C28DF9FDE03E4A0F8B7B2000EDFEDE88F14FC5A66",
+  "frozenInputs": 24
+}

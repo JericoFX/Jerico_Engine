@@ -1,0 +1,4 @@
+*.jpg -filter -diff -merge -text
+# Preserve raw configure output bytes; source and authored documentation retain checks.
+configure-attempt1/configure.stdout.txt -text -whitespace
+configure-attempt1/configure.stderr.txt -text -whitespace

@@ -1,0 +1,178 @@
+~~1791801049492~~1~~000000000003BA00~~Builder::RunJob~~Request started builder [23C00C522399499E8287701ED764B15C - 9] task (process) Objects/_Primitives/_Box_1x1.fbx 
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 59592921 capacityBytes = 55834574848
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Loading scene.
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049502~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Matching ImportContextProvider (registered 1) suitable for extension: .fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneBuilder: Using 'AssImp' Import Context Provider for file: F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: AssImpSceneWrapper::LoadSceneFromFile F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has a texture with absolute path 'D:\Amazon_Game_Studios\lyengine\branches\GameTemplates\dev\SamplesProject\Objects\_Primitives\textures\_Prim_Grid.tif'. This path will not be resolved, this texture will not be found or used by this material.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049503~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has no associated texture.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [File] = F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets/Objects/_Primitives/_Box_1x1.fbx
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [SceneAPI Node Name] = mesh0_root_0_
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Node Name] = mesh0_root_0_
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Node Type] = MeshData
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Importer] = Material
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Material Index] = 0
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Material Name] = _Box_1x1__1__MiddleGrey__physNone
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Material _Box_1x1__1__MiddleGrey__physNone has a texture with absolute path 'D:\Amazon_Game_Studios\lyengine\branches\GameTemplates\dev\SamplesProject\Objects\_Primitives\textures\_Prim_Grid.tif'. This path will not be resolved, this texture will not be found or used by this material.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Creating generate entities.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Preparing for generation.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Generating...
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Generating LODs...
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Generating additions...
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Cannot use source scene tangents as there are none in the asset for mesh 'mesh0_root_0_' for uv set 0. Defaulting to generating tangents using MikkT.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Simplifying scene...
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Optimized mesh 'mesh0_root_0_': Original: 682899800100 vertices -> optimized: 682899800088 vertices, 66.67% of the original (hasBlendShapes=No)
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Finalizing generation process.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Processing scene.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Creating export entities.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Preparing for export.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Exporting...
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Exporter] = PhysX
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Group Name] = _Box_1x1
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Attempting to fit primitive shape to mesh mesh0_root_0_.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Exporter] = PhysX
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Group Name] = _Box_1x1
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Attempting to fit Box primitive.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Exporter] = PhysX
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Group Name] = _Box_1x1
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Achieved minimal objective function value 0 with (distance term, volume term) = (0, 8).
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Exporter] = PhysX
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Group Name] = _Box_1x1
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~Success: Successfully fitted Box primitive to mesh mesh0_root_0_.
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Code/Source/Material/MaterialConverterSystemComponent.cpp(128): 'auto __cdecl AZ::Render::MaterialConverterSystemComponent::ConvertMaterial::<lambda_1>::operator ()(const char *,const char *,enum AZ::SceneAPI::DataTypes::IMaterialData::TextureMapType) const'
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1791801049513~~1~~000000000003BA00~~AssetBuilder~~W: AtomFeatureCommon: Could not find asset 'D:\Amazon_Game_Studios\lyengine\branches\GameTemplates\dev\SamplesProject\Objects\_Primitives\textures\_Prim_Grid.tif' for 'baseColor'
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Mesh group] = _Box_1x1
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Using mesh 'RootNode._Box_1x1.mesh0_root_0___Box_1x1_optimized'
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Mesh group] = _Box_1x1
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~Atom Model Builder:         Merging meshes...
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Finalizing export process.
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Collecting and registering products.
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {E4FE2933-3DE1-5B71-8E08-1440CA359C3C}+0x3329fee4 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1.fbx.pxmesh (type {7A2871B9-5EAB-4DE0-A901-B0D2C6920DDB})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x95b144e0 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1__Box_1x1__1__MiddleGrey__physNone_16198325857791591648.fbx.azmaterial (type {522C7BE0-501D-463E-92C6-15184A2B7AD8})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x106f9676 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0_index.fbx.azbuffer (type {F6C5EA8A-1DB3-456E-B970-B6E2AB262AED})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x10d22295 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0_POSITION0.fbx.azbuffer (type {F6C5EA8A-1DB3-456E-B970-B6E2AB262AED})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x10598a8f - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0_NORMAL0.fbx.azbuffer (type {F6C5EA8A-1DB3-456E-B970-B6E2AB262AED})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x1040d691 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0_UV0.fbx.azbuffer (type {F6C5EA8A-1DB3-456E-B970-B6E2AB262AED})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x10365ddd - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0_TANGENT0.fbx.azbuffer (type {F6C5EA8A-1DB3-456E-B970-B6E2AB262AED})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x108cf010 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0_BITANGENT0.fbx.azbuffer (type {F6C5EA8A-1DB3-456E-B970-B6E2AB262AED})
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049712~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x10086470 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1_lod0.fbx.azlod (type {65B5A801-B9B9-4160-9CB4-D40DAA50B15C})
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~C: [Output folder] = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-QwJIPy
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~C: [Platform] = pc
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Listed product: {C15CD465-9589-56ED-945F-8416FA4798A3}+0x10f216d9 - F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-QwJIPy\_Box_1x1.fbx.azmodel (type {2C7477B6-69C5-45BE-8163-BCD6A275B6D8})
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~SceneAPI: Finalizing scene processing.
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 73776455 capacityBytes = 57982058496; allocated change = 14183534
+~~1791801049714~~1~~000000000003BA00~~AssetBuilder~~S: 0 errors, 1 warnings
+~~1791801049714~~1~~000000000003BA00~~Builder::RunJob~~Request stopped builder [23C00C522399499E8287701ED764B15C - 9] task (process) Objects/_Primitives/_Box_1x1.fbx 

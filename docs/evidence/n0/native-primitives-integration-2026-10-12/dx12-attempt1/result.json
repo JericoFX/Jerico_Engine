@@ -1,0 +1,5 @@
+{
+  "status": "NOT_LAUNCHED",
+  "utc": "2026-10-12T10:42:09.4657961Z",
+  "cause": "Previous Vulkan process still exiting immediately after Stop-Process; guard rejected before Start-Process. Verified no product process remained before attempt2."
+}

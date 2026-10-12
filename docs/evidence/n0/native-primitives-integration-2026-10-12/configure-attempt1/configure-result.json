@@ -1,0 +1,13 @@
+{
+  "startUtc": "2026-10-12T10:26:36.6749068Z",
+  "endUtc": "2026-10-12T10:28:33.1035415Z",
+  "pid": 273848,
+  "elapsedSeconds": 116.4274655,
+  "exitCode": 0,
+  "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\configure-attempt1\\configure.stdout.txt",
+  "stdoutBytes": 82324,
+  "stdoutSha256": "3ABD55C46D60B34EA4218B2FCB07D2E48CD086AD912023464CCA4C719332CEEE",
+  "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\configure-attempt1\\configure.stderr.txt",
+  "stderrBytes": 1084,
+  "stderrSha256": "EAE78D81117939632167B1C182E11CE1242206450AB4094A6B8E040F10E63419"
+}

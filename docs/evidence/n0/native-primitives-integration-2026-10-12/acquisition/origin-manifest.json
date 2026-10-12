@@ -1,0 +1,35 @@
+[
+  {
+    "source": "Gems/PrimitiveAssets/Assets/Objects/_Primitives/_Box_1x1.fbx",
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/PrimitiveAssets/Assets/Objects/_Primitives/_Box_1x1.fbx",
+    "redirectsAllowed": false,
+    "httpStatus": 200,
+    "sha256": "55113D9B09C3FE9CD8E659C49F1DACDEB0A81FF4524B6797A6BC45E1EA187C2D",
+    "bytes": 22368,
+    "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:55113d9b09c3fe9cd8e659c49f1dacdeb0a81ff4524b6797a6bc45e1ea187c2d\nsize 22368\n",
+    "downloadUtc": "2026-10-12T10:20:00.2510569Z",
+    "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\acquisition\\_Box_1x1.fbx"
+  },
+  {
+    "source": "Gems/PrimitiveAssets/Assets/Objects/_Primitives/_Cylinder_1x1.fbx",
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/PrimitiveAssets/Assets/Objects/_Primitives/_Cylinder_1x1.fbx",
+    "redirectsAllowed": false,
+    "httpStatus": 200,
+    "sha256": "ADAAA0C27BD6B080DB1F58B333AA2B3E9A47205B450ADEF707317918C6D4DBD8",
+    "bytes": 20144,
+    "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:adaaa0c27bd6b080db1f58b333aa2b3e9a47205b450adef707317918c6d4dbd8\nsize 20144\n",
+    "downloadUtc": "2026-10-12T10:20:00.6370105Z",
+    "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\acquisition\\_Cylinder_1x1.fbx"
+  },
+  {
+    "source": "Gems/PrimitiveAssets/Assets/Objects/_Primitives/_Sphere_1x1.fbx",
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/PrimitiveAssets/Assets/Objects/_Primitives/_Sphere_1x1.fbx",
+    "redirectsAllowed": false,
+    "httpStatus": 200,
+    "sha256": "AAAB426846C2B981F42431CF015DAFCBDE15515B4A488BA0D43DA2059786C18F",
+    "bytes": 28528,
+    "pointer": "version https://git-lfs.github.com/spec/v1\noid sha256:aaab426846c2b981f42431cf015dafcbde15515b4a488ba0d43da2059786c18f\nsize 28528\n",
+    "downloadUtc": "2026-10-12T10:20:01.0704671Z",
+    "localPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\acquisition\\_Sphere_1x1.fbx"
+  }
+]

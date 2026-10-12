@@ -1,0 +1,20 @@
+{
+  "editorExitedAfterAltF4": true,
+  "editorPid": 250424,
+  "utc": "2026-10-12T10:41:05.7088065Z",
+  "remainingOwned": [],
+  "apShutdown": "Explicit Stop-Process after completed jobs; not a graceful-shutdown acceptance",
+  "terminatedOwnedPids": [
+    262448,
+    22380,
+    109324,
+    324568,
+    265552,
+    298888,
+    121156,
+    204884,
+    209436,
+    23936,
+    89420
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1_MiddleGrey.material",
+    "bytes": 657,
+    "sha256": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx",
+    "bytes": 22368,
+    "sha256": "55113D9B09C3FE9CD8E659C49F1DACDEB0A81FF4524B6797A6BC45E1EA187C2D"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx.assetinfo",
+    "bytes": 1669,
+    "sha256": "1829644251606DAC0896CAB19526691C49468D404685F151CEA900CB2E00CD45"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1_MiddleGrey.material",
+    "bytes": 657,
+    "sha256": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx",
+    "bytes": 20144,
+    "sha256": "ADAAA0C27BD6B080DB1F58B333AA2B3E9A47205B450ADEF707317918C6D4DBD8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx.assetinfo",
+    "bytes": 1367,
+    "sha256": "DCAB7B99093C1339D506D4F6234CE9D60C233850EC0DE24DDD999246CD194EF0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1_MiddleGrey.material",
+    "bytes": 692,
+    "sha256": "9D1FFF4EC93ABCC85083BEF1240D01B660D1E33FCF834D4AE0AF824710A334C6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx",
+    "bytes": 28528,
+    "sha256": "AAAB426846C2B981F42431CF015DAFCBDE15515B4A488BA0D43DA2059786C18F"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx.assetinfo",
+    "bytes": 1388,
+    "sha256": "042C81D56F661192D6CE127F4CEA746155C9FA498BB080C48471B6BF4C4CDA76"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_ddn.tif",
+    "bytes": 793918,
+    "sha256": "1B56097F0DF01DA7ED49311462002F5E1A61B8496306C7AB3B12E17C27AFB28A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_spec.tif",
+    "bytes": 810996,
+    "sha256": "BA52FF6D59F50B4B5DEA6E266572C9E7FEB92D5FD85BD0738E0D07D42D234BF7"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker.tif",
+    "bytes": 810620,
+    "sha256": "57D6744696768F9FB8A5FE5FEE9AA36FEE1EB87A9DBC1E60D4A35ED3C39D68E6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+    "bytes": 3604,
+    "sha256": "86DE511FD5A6841D2D0C5FD45CD6CEBCA4B2882C12DC4200CB993D360CA3812B"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+    "bytes": 1802,
+    "sha256": "AB9DF2550DC56CA86EA7DAB46639CEA845E79C25F30BAEA440685443885C9FC8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+    "bytes": 1110,
+    "sha256": "D94E72F6F8D665E8629C410DA8C57B5B408602C163A7DCC1C29618DE9F741560"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+    "bytes": 1094,
+    "sha256": "3D7DD11464736525FA05AD203EDC6FFDA9C9C3D119A6DC3F99E016701838A6EB"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+    "bytes": 542,
+    "sha256": "0B84C02CC3B1721204FFBC6288550CFA76F999FBA0299DD6F48377CBD6DF6BC8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\CMakeLists.txt",
+    "bytes": 413,
+    "sha256": "560DFA8F556EBBA013BBE61AF05B31500EF6603FE8BDEAA8563348C5A21A6E7C"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\CMakeLists.txt",
+    "bytes": 237,
+    "sha256": "C662B7784860A783992B171C55F293D9668336766CD39F42E22FE3CE7B45E3A3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Registry\\primitives_assetprocessor.setreg",
+    "bytes": 521,
+    "sha256": "B139CBD730F7F9E8E3566944E4F65CF97B1815FA885C17AC218A93D986579707"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\.gitattributes",
+    "bytes": 9880,
+    "sha256": "8B439D852D6A76E470271B7C58A7DCD31E6218682D5FB9F5EEB0FD6C935922A1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+    "bytes": 519,
+    "sha256": "CCD1A9E4C0F3F44F5BB38618A30FDBC57964EE60C56F7DF975C133100F077A51"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\README.md",
+    "bytes": 941,
+    "sha256": "76A158AA28A42BD413AA7C7DB760D25F7C48DB50D3B25084CC4BC90F7E4678A0"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+    "bytes": 11791,
+    "sha256": "CBBA2EA33F2D749E83424D37CB8212D96C10F1CAA005C75AF15F9869089CFF06"
+  }
+]

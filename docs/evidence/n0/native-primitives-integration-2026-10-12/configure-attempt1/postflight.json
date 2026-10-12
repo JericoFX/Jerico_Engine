@@ -1,0 +1,415 @@
+{
+  "capturedUtc": "2026-10-12T10:29:40.8537698Z",
+  "configureResult": {
+    "startUtc": "2026-10-12T10:26:36.6749068Z",
+    "endUtc": "2026-10-12T10:28:33.1035415Z",
+    "pid": 273848,
+    "elapsedSeconds": 116.4274655,
+    "exitCode": 0,
+    "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\configure-attempt1\\configure.stdout.txt",
+    "stdoutBytes": 82324,
+    "stdoutSha256": "3ABD55C46D60B34EA4218B2FCB07D2E48CD086AD912023464CCA4C719332CEEE",
+    "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\configure-attempt1\\configure.stderr.txt",
+    "stderrBytes": 1084,
+    "stderrSha256": "EAE78D81117939632167B1C182E11CE1242206450AB4094A6B8E040F10E63419"
+  },
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\integrated-freeze.json",
+  "freezeSha256": "9FC4A31EF239A32FDA42842099C35DCF047A5C0160611FA2EBB0E132156D1D38",
+  "inputPostChecks": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1_MiddleGrey.material",
+      "expectedBytes": 657,
+      "actualBytes": 657,
+      "expectedSha256": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB",
+      "actualSha256": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx",
+      "expectedBytes": 22368,
+      "actualBytes": 22368,
+      "expectedSha256": "55113D9B09C3FE9CD8E659C49F1DACDEB0A81FF4524B6797A6BC45E1EA187C2D",
+      "actualSha256": "55113D9B09C3FE9CD8E659C49F1DACDEB0A81FF4524B6797A6BC45E1EA187C2D",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx.assetinfo",
+      "expectedBytes": 1669,
+      "actualBytes": 1669,
+      "expectedSha256": "1829644251606DAC0896CAB19526691C49468D404685F151CEA900CB2E00CD45",
+      "actualSha256": "1829644251606DAC0896CAB19526691C49468D404685F151CEA900CB2E00CD45",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1_MiddleGrey.material",
+      "expectedBytes": 657,
+      "actualBytes": 657,
+      "expectedSha256": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB",
+      "actualSha256": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx",
+      "expectedBytes": 20144,
+      "actualBytes": 20144,
+      "expectedSha256": "ADAAA0C27BD6B080DB1F58B333AA2B3E9A47205B450ADEF707317918C6D4DBD8",
+      "actualSha256": "ADAAA0C27BD6B080DB1F58B333AA2B3E9A47205B450ADEF707317918C6D4DBD8",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx.assetinfo",
+      "expectedBytes": 1367,
+      "actualBytes": 1367,
+      "expectedSha256": "DCAB7B99093C1339D506D4F6234CE9D60C233850EC0DE24DDD999246CD194EF0",
+      "actualSha256": "DCAB7B99093C1339D506D4F6234CE9D60C233850EC0DE24DDD999246CD194EF0",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1_MiddleGrey.material",
+      "expectedBytes": 692,
+      "actualBytes": 692,
+      "expectedSha256": "9D1FFF4EC93ABCC85083BEF1240D01B660D1E33FCF834D4AE0AF824710A334C6",
+      "actualSha256": "9D1FFF4EC93ABCC85083BEF1240D01B660D1E33FCF834D4AE0AF824710A334C6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx",
+      "expectedBytes": 28528,
+      "actualBytes": 28528,
+      "expectedSha256": "AAAB426846C2B981F42431CF015DAFCBDE15515B4A488BA0D43DA2059786C18F",
+      "actualSha256": "AAAB426846C2B981F42431CF015DAFCBDE15515B4A488BA0D43DA2059786C18F",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx.assetinfo",
+      "expectedBytes": 1388,
+      "actualBytes": 1388,
+      "expectedSha256": "042C81D56F661192D6CE127F4CEA746155C9FA498BB080C48471B6BF4C4CDA76",
+      "actualSha256": "042C81D56F661192D6CE127F4CEA746155C9FA498BB080C48471B6BF4C4CDA76",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_ddn.tif",
+      "expectedBytes": 793918,
+      "actualBytes": 793918,
+      "expectedSha256": "1B56097F0DF01DA7ED49311462002F5E1A61B8496306C7AB3B12E17C27AFB28A",
+      "actualSha256": "1B56097F0DF01DA7ED49311462002F5E1A61B8496306C7AB3B12E17C27AFB28A",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_spec.tif",
+      "expectedBytes": 810996,
+      "actualBytes": 810996,
+      "expectedSha256": "BA52FF6D59F50B4B5DEA6E266572C9E7FEB92D5FD85BD0738E0D07D42D234BF7",
+      "actualSha256": "BA52FF6D59F50B4B5DEA6E266572C9E7FEB92D5FD85BD0738E0D07D42D234BF7",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker.tif",
+      "expectedBytes": 810620,
+      "actualBytes": 810620,
+      "expectedSha256": "57D6744696768F9FB8A5FE5FEE9AA36FEE1EB87A9DBC1E60D4A35ED3C39D68E6",
+      "actualSha256": "57D6744696768F9FB8A5FE5FEE9AA36FEE1EB87A9DBC1E60D4A35ED3C39D68E6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "expectedBytes": 3604,
+      "actualBytes": 3604,
+      "expectedSha256": "86DE511FD5A6841D2D0C5FD45CD6CEBCA4B2882C12DC4200CB993D360CA3812B",
+      "actualSha256": "86DE511FD5A6841D2D0C5FD45CD6CEBCA4B2882C12DC4200CB993D360CA3812B",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+      "expectedBytes": 1802,
+      "actualBytes": 1802,
+      "expectedSha256": "AB9DF2550DC56CA86EA7DAB46639CEA845E79C25F30BAEA440685443885C9FC8",
+      "actualSha256": "AB9DF2550DC56CA86EA7DAB46639CEA845E79C25F30BAEA440685443885C9FC8",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+      "expectedBytes": 1110,
+      "actualBytes": 1110,
+      "expectedSha256": "D94E72F6F8D665E8629C410DA8C57B5B408602C163A7DCC1C29618DE9F741560",
+      "actualSha256": "D94E72F6F8D665E8629C410DA8C57B5B408602C163A7DCC1C29618DE9F741560",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+      "expectedBytes": 1094,
+      "actualBytes": 1094,
+      "expectedSha256": "3D7DD11464736525FA05AD203EDC6FFDA9C9C3D119A6DC3F99E016701838A6EB",
+      "actualSha256": "3D7DD11464736525FA05AD203EDC6FFDA9C9C3D119A6DC3F99E016701838A6EB",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+      "expectedBytes": 542,
+      "actualBytes": 542,
+      "expectedSha256": "0B84C02CC3B1721204FFBC6288550CFA76F999FBA0299DD6F48377CBD6DF6BC8",
+      "actualSha256": "0B84C02CC3B1721204FFBC6288550CFA76F999FBA0299DD6F48377CBD6DF6BC8",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\CMakeLists.txt",
+      "expectedBytes": 413,
+      "actualBytes": 413,
+      "expectedSha256": "560DFA8F556EBBA013BBE61AF05B31500EF6603FE8BDEAA8563348C5A21A6E7C",
+      "actualSha256": "560DFA8F556EBBA013BBE61AF05B31500EF6603FE8BDEAA8563348C5A21A6E7C",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\CMakeLists.txt",
+      "expectedBytes": 237,
+      "actualBytes": 237,
+      "expectedSha256": "C662B7784860A783992B171C55F293D9668336766CD39F42E22FE3CE7B45E3A3",
+      "actualSha256": "C662B7784860A783992B171C55F293D9668336766CD39F42E22FE3CE7B45E3A3",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Registry\\primitives_assetprocessor.setreg",
+      "expectedBytes": 521,
+      "actualBytes": 521,
+      "expectedSha256": "B139CBD730F7F9E8E3566944E4F65CF97B1815FA885C17AC218A93D986579707",
+      "actualSha256": "B139CBD730F7F9E8E3566944E4F65CF97B1815FA885C17AC218A93D986579707",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\.gitattributes",
+      "expectedBytes": 9880,
+      "actualBytes": 9880,
+      "expectedSha256": "8B439D852D6A76E470271B7C58A7DCD31E6218682D5FB9F5EEB0FD6C935922A1",
+      "actualSha256": "8B439D852D6A76E470271B7C58A7DCD31E6218682D5FB9F5EEB0FD6C935922A1",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+      "expectedBytes": 519,
+      "actualBytes": 519,
+      "expectedSha256": "CCD1A9E4C0F3F44F5BB38618A30FDBC57964EE60C56F7DF975C133100F077A51",
+      "actualSha256": "CCD1A9E4C0F3F44F5BB38618A30FDBC57964EE60C56F7DF975C133100F077A51",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\README.md",
+      "expectedBytes": 941,
+      "actualBytes": 941,
+      "expectedSha256": "76A158AA28A42BD413AA7C7DB760D25F7C48DB50D3B25084CC4BC90F7E4678A0",
+      "actualSha256": "76A158AA28A42BD413AA7C7DB760D25F7C48DB50D3B25084CC4BC90F7E4678A0",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+      "expectedBytes": 11791,
+      "actualBytes": 11791,
+      "expectedSha256": "CBBA2EA33F2D749E83424D37CB8212D96C10F1CAA005C75AF15F9869089CFF06",
+      "actualSha256": "CBBA2EA33F2D749E83424D37CB8212D96C10F1CAA005C75AF15F9869089CFF06",
+      "matches": true
+    }
+  ],
+  "inputMatchCount": 24,
+  "inputMismatchCount": 0,
+  "cacheAfter": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "bytes": 118671,
+    "sha256": "2C441A88B89016B02A73E6D412DA77532EB7100F25DDB399481527EC760E9549"
+  },
+  "binaryAfter": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "bytes": 171520,
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "bytes": 6668288,
+      "sha256": "B32F020E354CBAE641501C8C28DF9FDE03E4A0F8B7B2000EDFEDE88F14FC5A66"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "bytes": 5894656,
+      "sha256": "96AD45448C588007A545705B939DD4C089D76004A9EB23ED7E438692EAB0A8DC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "bytes": 2789376,
+      "sha256": "60CFF17C09C8D8E102B8A1D975B9E00CEB1F59D071B9CA1EF543A1C824929F86"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+      "bytes": 1483776,
+      "sha256": "8B066EED699226A01D3D44293524F7E6F79007DF8142D6FA57DF84D2BCA07CA1"
+    }
+  ],
+  "binaryComparison": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "beforeBytes": 171520,
+      "afterBytes": 171520,
+      "beforeSha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704",
+      "afterSha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704",
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "beforeBytes": 6668288,
+      "afterBytes": 6668288,
+      "beforeSha256": "B32F020E354CBAE641501C8C28DF9FDE03E4A0F8B7B2000EDFEDE88F14FC5A66",
+      "afterSha256": "B32F020E354CBAE641501C8C28DF9FDE03E4A0F8B7B2000EDFEDE88F14FC5A66",
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "beforeBytes": 5894656,
+      "afterBytes": 5894656,
+      "beforeSha256": "96AD45448C588007A545705B939DD4C089D76004A9EB23ED7E438692EAB0A8DC",
+      "afterSha256": "96AD45448C588007A545705B939DD4C089D76004A9EB23ED7E438692EAB0A8DC",
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "beforeBytes": 2789376,
+      "afterBytes": 2789376,
+      "beforeSha256": "60CFF17C09C8D8E102B8A1D975B9E00CEB1F59D071B9CA1EF543A1C824929F86",
+      "afterSha256": "60CFF17C09C8D8E102B8A1D975B9E00CEB1F59D071B9CA1EF543A1C824929F86",
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+      "beforeBytes": 1483776,
+      "afterBytes": 1483776,
+      "beforeSha256": "8B066EED699226A01D3D44293524F7E6F79007DF8142D6FA57DF84D2BCA07CA1",
+      "afterSha256": "8B066EED699226A01D3D44293524F7E6F79007DF8142D6FA57DF84D2BCA07CA1",
+      "unchanged": true
+    }
+  ],
+  "sourceScanfolderRegistry": {
+    "path": "F:\\JericoEngine\\JericoEngine\\Registry\\primitives_assetprocessor.setreg",
+    "sha256": "B139CBD730F7F9E8E3566944E4F65CF97B1815FA885C17AC218A93D986579707",
+    "newScanRootPresent": true,
+    "oldGemAssetRootPresent": false,
+    "watchLine": "\"watch\": \"@ENGINEROOT@/Engine/Assets/Primitives/Assets\","
+  },
+  "activeProductRegistries": [
+    {
+      "name": "cmake_dependencies.assetprocessor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessor.setreg",
+      "bytes": 10424,
+      "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.assetprocessorbatch.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+      "bytes": 10424,
+      "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "bytes": 9387,
+      "sha256": "21A26F6BDD2004A379E3533D39227357B99FE80E5E1B477814869DD828A7E52C",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "bytes": 9387,
+      "sha256": "21A26F6BDD2004A379E3533D39227357B99FE80E5E1B477814869DD828A7E52C",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "bytes": 9387,
+      "sha256": "21A26F6BDD2004A379E3533D39227357B99FE80E5E1B477814869DD828A7E52C",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.editor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+      "bytes": 9191,
+      "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 6124,
+      "sha256": "3B847CB605FF9C7E7B3D47F16CFA6B4DC91BB92E636E969262BFA0C250CBFC3E",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 5564,
+      "sha256": "57CB33BACA13013BC4CB2DA83C055FDEA16843572F2793F6137A526A3BC83EAE",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+      "bytes": 9191,
+      "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "bytes": 9191,
+      "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+      "bytes": 9191,
+      "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+      "bytes": 9191,
+      "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+      "oldGemAssetPathPresent": false,
+      "newNativeAssetPathPresent": false,
+      "primitiveAssetsBuilderEntryPresent": false
+    }
+  ],
+  "serverReleaseHistoricalRegistriesExcluded": [
+    "cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+    "cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+    "cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+    "cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+    "cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+    "cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg"
+  ],
+  "configureProcessesAfter": [],
+  "assetDatabaseValidation": "Not run here; preconfigure DB baseline is retained, AP is parent-operated and awaited"
+}

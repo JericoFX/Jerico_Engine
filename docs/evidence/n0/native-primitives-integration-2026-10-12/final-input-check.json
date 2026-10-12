@@ -1,0 +1,146 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1_MiddleGrey.material",
+    "hash": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB",
+    "bytes": 657,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx",
+    "hash": "55113D9B09C3FE9CD8E659C49F1DACDEB0A81FF4524B6797A6BC45E1EA187C2D",
+    "bytes": 22368,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx.assetinfo",
+    "hash": "1829644251606DAC0896CAB19526691C49468D404685F151CEA900CB2E00CD45",
+    "bytes": 1669,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1_MiddleGrey.material",
+    "hash": "D050B81E74FD0786688122356408AC2A87FDA7E8BDA61D8144558B8666BA34FB",
+    "bytes": 657,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx",
+    "hash": "ADAAA0C27BD6B080DB1F58B333AA2B3E9A47205B450ADEF707317918C6D4DBD8",
+    "bytes": 20144,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx.assetinfo",
+    "hash": "DCAB7B99093C1339D506D4F6234CE9D60C233850EC0DE24DDD999246CD194EF0",
+    "bytes": 1367,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1_MiddleGrey.material",
+    "hash": "9D1FFF4EC93ABCC85083BEF1240D01B660D1E33FCF834D4AE0AF824710A334C6",
+    "bytes": 692,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx",
+    "hash": "AAAB426846C2B981F42431CF015DAFCBDE15515B4A488BA0D43DA2059786C18F",
+    "bytes": 28528,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx.assetinfo",
+    "hash": "042C81D56F661192D6CE127F4CEA746155C9FA498BB080C48471B6BF4C4CDA76",
+    "bytes": 1388,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_ddn.tif",
+    "hash": "1B56097F0DF01DA7ED49311462002F5E1A61B8496306C7AB3B12E17C27AFB28A",
+    "bytes": 793918,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_spec.tif",
+    "hash": "BA52FF6D59F50B4B5DEA6E266572C9E7FEB92D5FD85BD0738E0D07D42D234BF7",
+    "bytes": 810996,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker.tif",
+    "hash": "57D6744696768F9FB8A5FE5FEE9AA36FEE1EB87A9DBC1E60D4A35ED3C39D68E6",
+    "bytes": 810620,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+    "hash": "86DE511FD5A6841D2D0C5FD45CD6CEBCA4B2882C12DC4200CB993D360CA3812B",
+    "bytes": 3604,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+    "hash": "AB9DF2550DC56CA86EA7DAB46639CEA845E79C25F30BAEA440685443885C9FC8",
+    "bytes": 1802,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+    "hash": "D94E72F6F8D665E8629C410DA8C57B5B408602C163A7DCC1C29618DE9F741560",
+    "bytes": 1110,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+    "hash": "3D7DD11464736525FA05AD203EDC6FFDA9C9C3D119A6DC3F99E016701838A6EB",
+    "bytes": 1094,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+    "hash": "0B84C02CC3B1721204FFBC6288550CFA76F999FBA0299DD6F48377CBD6DF6BC8",
+    "bytes": 542,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\CMakeLists.txt",
+    "hash": "560DFA8F556EBBA013BBE61AF05B31500EF6603FE8BDEAA8563348C5A21A6E7C",
+    "bytes": 413,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\CMakeLists.txt",
+    "hash": "C662B7784860A783992B171C55F293D9668336766CD39F42E22FE3CE7B45E3A3",
+    "bytes": 237,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Registry\\primitives_assetprocessor.setreg",
+    "hash": "B139CBD730F7F9E8E3566944E4F65CF97B1815FA885C17AC218A93D986579707",
+    "bytes": 521,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\.gitattributes",
+    "hash": "8B439D852D6A76E470271B7C58A7DCD31E6218682D5FB9F5EEB0FD6C935922A1",
+    "bytes": 9880,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+    "hash": "CCD1A9E4C0F3F44F5BB38618A30FDBC57964EE60C56F7DF975C133100F077A51",
+    "bytes": 519,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\README.md",
+    "hash": "76A158AA28A42BD413AA7C7DB760D25F7C48DB50D3B25084CC4BC90F7E4678A0",
+    "bytes": 941,
+    "match": true
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+    "hash": "CBBA2EA33F2D749E83424D37CB8212D96C10F1CAA005C75AF15F9869089CFF06",
+    "bytes": 11791,
+    "match": true
+  }
+]

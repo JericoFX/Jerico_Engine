@@ -1,0 +1,14 @@
+[
+  {
+    "attempt": "vulkan-attempt1",
+    "moduleCount": 126,
+    "unexpectedAuthoringModules": [],
+    "runtimeClosure": "Parent Stop-Process after capture, normal shutdown not accepted"
+  },
+  {
+    "attempt": "dx12-attempt2",
+    "moduleCount": 126,
+    "unexpectedAuthoringModules": [],
+    "runtimeClosure": "Parent Stop-Process after capture, normal shutdown not accepted"
+  }
+]

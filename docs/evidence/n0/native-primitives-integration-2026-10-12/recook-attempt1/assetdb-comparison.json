@@ -1,0 +1,667 @@
+{
+  "capturedUtc": "2026-10-12T10:31:15.8781981Z",
+  "baselinePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\baseline\\primitiveassets-assetdb-baseline.json",
+  "baselineSha256": "528ADDCCB8C48BB4F40112A88EC06627A25CB998018691B19829E4A6AA7F0AFD",
+  "afterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\recook-attempt1\\assetdb-after.json",
+  "afterSha256": "1504D22C9ABAA76724C290E339B337EC338E3829B3F3733FD9C182C4FB3E64E1",
+  "afterReadOnly": "sqlite3 URI mode=ro plus PRAGMA query_only=ON; WAL present and readable",
+  "sourceFolderChange": {
+    "baselineScanFolders": [
+      {
+        "ScanFolderID": 92,
+        "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "DisplayName": "Assets",
+        "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "IsRoot": 0
+      },
+      {
+        "ScanFolderID": 93,
+        "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Registry",
+        "DisplayName": "Registry",
+        "PortableKey": "gemregistry-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "IsRoot": 0
+      }
+    ],
+    "afterScanFolders": [
+      {
+        "ScanFolderID": 92,
+        "ScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "DisplayName": "Engine/Assets/Primitives",
+        "PortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "IsRoot": 0
+      }
+    ],
+    "expectedNativeScanfolderPresent": true,
+    "expectedPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+    "baselineMatchedSourceCount": 9,
+    "afterMatchedSourceCount": 9,
+    "sourceComparisons": [
+      {
+        "sourceName": "Objects/_Primitives/_Box_1x1.fbx",
+        "beforeSourceId": 900,
+        "afterSourceId": 900,
+        "sourceIdStable": true,
+        "beforeGuid": "C15CD465958956ED945F8416FA4798A3",
+        "afterGuid": "C15CD465958956ED945F8416FA4798A3",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Objects/_Primitives/_Box_1x1_MiddleGrey.material",
+        "beforeSourceId": 1412,
+        "afterSourceId": 1412,
+        "sourceIdStable": true,
+        "beforeGuid": "7E8872C14F89587095482FC8427813F2",
+        "afterGuid": "7E8872C14F89587095482FC8427813F2",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Objects/_Primitives/_Cylinder_1x1.fbx",
+        "beforeSourceId": 901,
+        "afterSourceId": 901,
+        "sourceIdStable": true,
+        "beforeGuid": "F322592F43BC50E7903CCC231846093F",
+        "afterGuid": "F322592F43BC50E7903CCC231846093F",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Objects/_Primitives/_Cylinder_1x1_MiddleGrey.material",
+        "beforeSourceId": 1413,
+        "afterSourceId": 1413,
+        "sourceIdStable": true,
+        "beforeGuid": "4432E987D1AA548AAC26A8FDE959FEDB",
+        "afterGuid": "4432E987D1AA548AAC26A8FDE959FEDB",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Objects/_Primitives/_Sphere_1x1.fbx",
+        "beforeSourceId": 902,
+        "afterSourceId": 902,
+        "sourceIdStable": true,
+        "beforeGuid": "1EE46427D1C25698B30DB4CCF46B15CD",
+        "afterGuid": "1EE46427D1C25698B30DB4CCF46B15CD",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Objects/_Primitives/_Sphere_1x1_MiddleGrey.material",
+        "beforeSourceId": 1411,
+        "afterSourceId": 1411,
+        "sourceIdStable": true,
+        "beforeGuid": "DDD10F7C94B7533DA225ED1744A63CFE",
+        "afterGuid": "DDD10F7C94B7533DA225ED1744A63CFE",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Textures/_Primitives/Middle_Gray_Checker.tif",
+        "beforeSourceId": 1400,
+        "afterSourceId": 1400,
+        "sourceIdStable": true,
+        "beforeGuid": "35E180DEBC79572888147442B3CFE142",
+        "afterGuid": "35E180DEBC79572888147442B3CFE142",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Textures/_Primitives/Middle_Gray_Checker_ddn.tif",
+        "beforeSourceId": 1407,
+        "afterSourceId": 1407,
+        "sourceIdStable": true,
+        "beforeGuid": "240B404B4C01520098732527E8A9F69C",
+        "afterGuid": "240B404B4C01520098732527E8A9F69C",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      },
+      {
+        "sourceName": "Textures/_Primitives/Middle_Gray_Checker_spec.tif",
+        "beforeSourceId": 1406,
+        "afterSourceId": 1406,
+        "sourceIdStable": true,
+        "beforeGuid": "4F904B085C13539893AFD814CDBC22C3",
+        "afterGuid": "4F904B085C13539893AFD814CDBC22C3",
+        "guidStable": true,
+        "beforePortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "afterPortableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+        "portableKeyStable": true,
+        "beforeScanFolder": "F:/JericoEngine/JericoEngine/Gems/PrimitiveAssets/Assets",
+        "afterScanFolder": "F:/JericoEngine/JericoEngine/Engine/Assets/Primitives/Assets",
+        "scanFolderPathMigrated": true,
+        "afterScanFolderId": 92
+      }
+    ],
+    "allSourceIdsStable": true,
+    "allGuidsStable": true,
+    "allPortableKeysStable": true,
+    "allAfterSourcesUseScanfolder92": true
+  },
+  "jobsAndProducts": [
+    {
+      "sourceId": 900,
+      "sourceName": "Objects/_Primitives/_Box_1x1.fbx",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1.fbx.abdata.json",
+          "SubID": 4194304,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1.fbx.azmodel",
+          "SubID": 284301017,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1.fbx.pxmesh",
+          "SubID": 858390244,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1__box_1x1__1__middlegrey__physnone_16198325857791591648.fbx.azmaterial",
+          "SubID": -1783544608,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0.fbx.azlod",
+          "SubID": 268985456,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0_bitangent0.fbx.azbuffer",
+          "SubID": 277671952,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0_index.fbx.azbuffer",
+          "SubID": 275748470,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0_normal0.fbx.azbuffer",
+          "SubID": 274303631,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0_position0.fbx.azbuffer",
+          "SubID": 282206869,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0_tangent0.fbx.azbuffer",
+          "SubID": 271998429,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_lod0_uv0.fbx.azbuffer",
+          "SubID": 272684689,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 1
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 913,
+          "jobKey": "Scene compilation",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 1,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 901,
+      "sourceName": "Objects/_Primitives/_Cylinder_1x1.fbx",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1.fbx.abdata.json",
+          "SubID": 4194304,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1.fbx.azmodel",
+          "SubID": 276443623,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1.fbx.pxmesh",
+          "SubID": 87459996,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lambert3_10605252722126846652.fbx.azmaterial",
+          "SubID": 1738373820,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0.fbx.azlod",
+          "SubID": 273355147,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0_bitangent0.fbx.azbuffer",
+          "SubID": 280114112,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0_index.fbx.azbuffer",
+          "SubID": 283042515,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0_normal0.fbx.azbuffer",
+          "SubID": 272705975,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0_position0.fbx.azbuffer",
+          "SubID": 278063140,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0_tangent0.fbx.azbuffer",
+          "SubID": 280034784,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_lod0_uv0.fbx.azbuffer",
+          "SubID": 278679367,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 914,
+          "jobKey": "Scene compilation",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 902,
+      "sourceName": "Objects/_Primitives/_Sphere_1x1.fbx",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1.fbx.abdata.json",
+          "SubID": 4194304,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1.fbx.azmodel",
+          "SubID": 274434668,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1.fbx.pxmesh",
+          "SubID": 1801833720,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lambert3_10605252722126846652.fbx.azmaterial",
+          "SubID": 1738373820,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0.fbx.azlod",
+          "SubID": 278545413,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0_bitangent0.fbx.azbuffer",
+          "SubID": 280838710,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0_index.fbx.azbuffer",
+          "SubID": 271103672,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0_normal0.fbx.azbuffer",
+          "SubID": 273577408,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0_position0.fbx.azbuffer",
+          "SubID": 271708357,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0_tangent0.fbx.azbuffer",
+          "SubID": 272307747,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_lod0_uv0.fbx.azbuffer",
+          "SubID": 278330025,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 915,
+          "jobKey": "Scene compilation",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 1412,
+      "sourceName": "Objects/_Primitives/_Box_1x1_MiddleGrey.material",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/objects/_primitives/_box_1x1_middlegrey.azmaterial",
+          "SubID": 0,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 1472,
+          "jobKey": "Material Builder",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 1413,
+      "sourceName": "Objects/_Primitives/_Cylinder_1x1_MiddleGrey.material",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/objects/_primitives/_cylinder_1x1_middlegrey.azmaterial",
+          "SubID": 0,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 1473,
+          "jobKey": "Material Builder",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 1411,
+      "sourceName": "Objects/_Primitives/_Sphere_1x1_MiddleGrey.material",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/objects/_primitives/_sphere_1x1_middlegrey.azmaterial",
+          "SubID": 0,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 1471,
+          "jobKey": "Material Builder",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 1400,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker.tif",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker.tif.1002.imagemipchain",
+          "SubID": 1002,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker.tif.abdata.json",
+          "SubID": 4195304,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker.tif.streamingimage",
+          "SubID": 1000,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 1460,
+          "jobKey": "Image Compile: TIF",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 1407,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker_ddn.tif",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_ddn.tif.1002.imagemipchain",
+          "SubID": 1002,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_ddn.tif.1003.imagemipchain",
+          "SubID": 1003,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_ddn.tif.abdata.json",
+          "SubID": 4195304,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_ddn.tif.streamingimage",
+          "SubID": 1000,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 1467,
+          "jobKey": "Image Compile: TIF",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    },
+    {
+      "sourceId": 1406,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker_spec.tif",
+      "jobCount": 1,
+      "products": [
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_spec.tif.1002.imagemipchain",
+          "SubID": 1002,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_spec.tif.abdata.json",
+          "SubID": 4195304,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        },
+        {
+          "ProductName": "pc/textures/_primitives/middle_gray_checker_spec.tif.streamingimage",
+          "SubID": 1000,
+          "Status": 4,
+          "ErrorCount": 0,
+          "WarningCount": 0
+        }
+      ],
+      "jobs": [
+        {
+          "jobId": 1466,
+          "jobKey": "Image Compile: TIF",
+          "status": 4,
+          "errorCount": 0,
+          "warningCount": 0,
+          "productCount": 0
+        }
+      ]
+    }
+  ],
+  "allAfterJobsSucceeded": true
+}

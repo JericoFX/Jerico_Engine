@@ -1,0 +1,15 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve the original scan-folder database identity and relative source paths.
+                "ScanFolder gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}": {
+                    "watch": "@ENGINEROOT@/Engine/Assets/Primitives/Assets",
+                    "display": "Engine/Assets/Primitives",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

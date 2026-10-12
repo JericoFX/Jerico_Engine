@@ -1,0 +1,135 @@
+{
+  "status": "IMPLEMENTED_NOT_CONFIGURED_HOLD",
+  "fileCount": 20,
+  "retiredAssetCount": 12,
+  "sourceFreezeSHA256": "5D7F7AEDE2B0C2358DCF6D8FC419CCE303517AE092A0F782614A77A0BA004205",
+  "diffSHA256": "E8CE6147EC9689157D42E98B4E7F06868E6C4E740D63E36D42F0E45C28F77D32",
+  "textProofs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "inverseByteExact": true,
+      "forwardByteExact": true,
+      "uuidPreserved": true,
+      "beforeCRLF": 126,
+      "afterCRLF": 125,
+      "beforeBareLF": 0,
+      "afterBareLF": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+      "inverseByteExact": true,
+      "forwardByteExact": true,
+      "uuidPreserved": true,
+      "beforeCRLF": 71,
+      "afterCRLF": 70,
+      "beforeBareLF": 0,
+      "afterBareLF": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+      "inverseByteExact": true,
+      "forwardByteExact": true,
+      "uuidPreserved": true,
+      "beforeCRLF": 42,
+      "afterCRLF": 41,
+      "beforeBareLF": 0,
+      "afterBareLF": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+      "inverseByteExact": true,
+      "forwardByteExact": true,
+      "uuidPreserved": true,
+      "beforeCRLF": 40,
+      "afterCRLF": 39,
+      "beforeBareLF": 0,
+      "afterBareLF": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+      "inverseByteExact": true,
+      "forwardByteExact": true,
+      "uuidPreserved": true,
+      "beforeCRLF": 23,
+      "afterCRLF": 22,
+      "beforeBareLF": 0,
+      "afterBareLF": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\CMakeLists.txt",
+      "inverseByteExact": true,
+      "forwardByteExact": true,
+      "uuidPreserved": true,
+      "beforeCRLF": 13,
+      "afterCRLF": 10,
+      "beforeBareLF": 0,
+      "afterBareLF": 0
+    }
+  ],
+  "movedAssetPayloadChecks": 12,
+  "byteExactMetadataMoves": 6,
+  "pointerMaterializations": 6,
+  "preservedHistoricalGem": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\gem.json",
+      "sha256": "C2A989F660374EDC360FB16A10219A7FB113FF0CB12AA52F702B406BCC926C04",
+      "bytes": 761
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\preview.png",
+      "sha256": "6D772860E5576CD53D457F35E861A1D7179106B567922E5DA90091BAD49BCD47",
+      "bytes": 129
+    }
+  ],
+  "sourceReferences": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\baseline\\primitiveassets-assetdb-baseline.json",
+      "sha256": "528ADDCCB8C48BB4F40112A88EC06627A25CB998018691B19829E4A6AA7F0AFD",
+      "bytes": 9217
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\acquisition\\origin-manifest.json",
+      "sha256": "AB3179596327DE3D53ACC1CAE974314D3EC648197CF40C848143367C91B6B0AE",
+      "bytes": 2273
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\PlatformConfiguration.cpp",
+      "sha256": "DAE4ECFD3B74D3BAD23638D2F433F6E0C8A1B65566E57FD6FD29BACAAB53FFFA",
+      "bytes": 92188
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzCore\\AzCore\\Math\\Uuid.inl",
+      "sha256": "95D9C5903CFE6F5A066D7D8DDB2F695F7A4BCAD08504CB84A7FCE4FD87EEC0CC",
+      "bytes": 16953
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Install.cmake",
+      "sha256": "8EEEFE0A1C82D738EC7770A7E695EAA7D4D793CCBAAAD365E8504F69969CE3D4",
+      "bytes": 7630
+    }
+  ],
+  "scanIdentity": {
+    "portableKey": "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+    "baselineScanFolderID": 92,
+    "baselineSourceCount": 9,
+    "newRoot": "Engine/Assets/Primitives/Assets",
+    "relativePathsPreserved": true
+  },
+  "consumers": [
+    "AutomatedTesting/Levels/Simple/Simple.prefab",
+    "AutomatedTesting/Levels/Navigation/NavigationSample/CityPortion.prefab",
+    "AutomatedTesting/Gem/PythonTests/Physics/tests/EntityComponentTests/PhysX_Mesh_Collider_Component_CRUD.py",
+    "Legacy vegetation tests and excluded multiplayer sample references remain unchanged."
+  ],
+  "nextGate": [
+    "Parent/Luna configure: no PrimitiveAssets Gem or Builders alias; native scan source path only.",
+    "AP reprocess 3 FBX,3 TIFF,3 materials using existing native Scene/Image/Material builders; require valid mesh/collider/material/image products, no Python.",
+    "Compare 9 SourceName/SourceGuid records and legacy group UUIDs against original DB baseline; inspect native content on a real Editor entity with mesh/material/collider."
+  ],
+  "limitations": [
+    "No configure/build/cook/runtime was executed by writer; source identity continuity must be checked after AP migration.",
+    "Parent owns Engine/CMakeLists,root .gitattributes and fixture README; these are not in this 20-file source freeze.",
+    "Gem metadata/preview remain historical, including its 129-byte preview LFS pointer; no active engine content depends on it.",
+    "MaterialType still references the existing Atom_Feature_Common StandardPBR owner; this cut absorbs PrimitiveAssets only."
+  ]
+}

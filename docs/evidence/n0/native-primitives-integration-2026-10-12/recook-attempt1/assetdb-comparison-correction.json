@@ -1,0 +1,250 @@
+{
+  "capturedUtc": "2026-10-12T10:31:33.5621744Z",
+  "purpose": "Correct product counts computed from the actual ProductID rows per JobID; see original assetdb-comparison.json for full source identity comparisons",
+  "assetdbAfterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\recook-attempt1\\assetdb-after.json",
+  "assetdbAfterSha256": "1504D22C9ABAA76724C290E339B337EC338E3829B3F3733FD9C182C4FB3E64E1",
+  "matchedSources": 9,
+  "matchedProducts": 46,
+  "distinctJobs": 9,
+  "jobSummaries": [
+    {
+      "sourceId": 900,
+      "sourceName": "Objects/_Primitives/_Box_1x1.fbx",
+      "jobId": 913,
+      "jobKey": "Scene compilation",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 1,
+      "productCount": 11,
+      "products": [
+        "pc/objects/_primitives/_box_1x1.fbx.abdata.json",
+        "pc/objects/_primitives/_box_1x1.fbx.azmodel",
+        "pc/objects/_primitives/_box_1x1.fbx.pxmesh",
+        "pc/objects/_primitives/_box_1x1__box_1x1__1__middlegrey__physnone_16198325857791591648.fbx.azmaterial",
+        "pc/objects/_primitives/_box_1x1_lod0.fbx.azlod",
+        "pc/objects/_primitives/_box_1x1_lod0_bitangent0.fbx.azbuffer",
+        "pc/objects/_primitives/_box_1x1_lod0_index.fbx.azbuffer",
+        "pc/objects/_primitives/_box_1x1_lod0_normal0.fbx.azbuffer",
+        "pc/objects/_primitives/_box_1x1_lod0_position0.fbx.azbuffer",
+        "pc/objects/_primitives/_box_1x1_lod0_tangent0.fbx.azbuffer",
+        "pc/objects/_primitives/_box_1x1_lod0_uv0.fbx.azbuffer"
+      ]
+    },
+    {
+      "sourceId": 901,
+      "sourceName": "Objects/_Primitives/_Cylinder_1x1.fbx",
+      "jobId": 914,
+      "jobKey": "Scene compilation",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 11,
+      "products": [
+        "pc/objects/_primitives/_cylinder_1x1.fbx.abdata.json",
+        "pc/objects/_primitives/_cylinder_1x1.fbx.azmodel",
+        "pc/objects/_primitives/_cylinder_1x1.fbx.pxmesh",
+        "pc/objects/_primitives/_cylinder_1x1_lambert3_10605252722126846652.fbx.azmaterial",
+        "pc/objects/_primitives/_cylinder_1x1_lod0.fbx.azlod",
+        "pc/objects/_primitives/_cylinder_1x1_lod0_bitangent0.fbx.azbuffer",
+        "pc/objects/_primitives/_cylinder_1x1_lod0_index.fbx.azbuffer",
+        "pc/objects/_primitives/_cylinder_1x1_lod0_normal0.fbx.azbuffer",
+        "pc/objects/_primitives/_cylinder_1x1_lod0_position0.fbx.azbuffer",
+        "pc/objects/_primitives/_cylinder_1x1_lod0_tangent0.fbx.azbuffer",
+        "pc/objects/_primitives/_cylinder_1x1_lod0_uv0.fbx.azbuffer"
+      ]
+    },
+    {
+      "sourceId": 902,
+      "sourceName": "Objects/_Primitives/_Sphere_1x1.fbx",
+      "jobId": 915,
+      "jobKey": "Scene compilation",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 11,
+      "products": [
+        "pc/objects/_primitives/_sphere_1x1.fbx.abdata.json",
+        "pc/objects/_primitives/_sphere_1x1.fbx.azmodel",
+        "pc/objects/_primitives/_sphere_1x1.fbx.pxmesh",
+        "pc/objects/_primitives/_sphere_1x1_lambert3_10605252722126846652.fbx.azmaterial",
+        "pc/objects/_primitives/_sphere_1x1_lod0.fbx.azlod",
+        "pc/objects/_primitives/_sphere_1x1_lod0_bitangent0.fbx.azbuffer",
+        "pc/objects/_primitives/_sphere_1x1_lod0_index.fbx.azbuffer",
+        "pc/objects/_primitives/_sphere_1x1_lod0_normal0.fbx.azbuffer",
+        "pc/objects/_primitives/_sphere_1x1_lod0_position0.fbx.azbuffer",
+        "pc/objects/_primitives/_sphere_1x1_lod0_tangent0.fbx.azbuffer",
+        "pc/objects/_primitives/_sphere_1x1_lod0_uv0.fbx.azbuffer"
+      ]
+    },
+    {
+      "sourceId": 1400,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker.tif",
+      "jobId": 1460,
+      "jobKey": "Image Compile: TIF",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 3,
+      "products": [
+        "pc/textures/_primitives/middle_gray_checker.tif.1002.imagemipchain",
+        "pc/textures/_primitives/middle_gray_checker.tif.abdata.json",
+        "pc/textures/_primitives/middle_gray_checker.tif.streamingimage"
+      ]
+    },
+    {
+      "sourceId": 1406,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker_spec.tif",
+      "jobId": 1466,
+      "jobKey": "Image Compile: TIF",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 3,
+      "products": [
+        "pc/textures/_primitives/middle_gray_checker_spec.tif.1002.imagemipchain",
+        "pc/textures/_primitives/middle_gray_checker_spec.tif.abdata.json",
+        "pc/textures/_primitives/middle_gray_checker_spec.tif.streamingimage"
+      ]
+    },
+    {
+      "sourceId": 1407,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker_ddn.tif",
+      "jobId": 1467,
+      "jobKey": "Image Compile: TIF",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 4,
+      "products": [
+        "pc/textures/_primitives/middle_gray_checker_ddn.tif.1002.imagemipchain",
+        "pc/textures/_primitives/middle_gray_checker_ddn.tif.1003.imagemipchain",
+        "pc/textures/_primitives/middle_gray_checker_ddn.tif.abdata.json",
+        "pc/textures/_primitives/middle_gray_checker_ddn.tif.streamingimage"
+      ]
+    },
+    {
+      "sourceId": 1411,
+      "sourceName": "Objects/_Primitives/_Sphere_1x1_MiddleGrey.material",
+      "jobId": 1471,
+      "jobKey": "Material Builder",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 1,
+      "products": [
+        "pc/objects/_primitives/_sphere_1x1_middlegrey.azmaterial"
+      ]
+    },
+    {
+      "sourceId": 1412,
+      "sourceName": "Objects/_Primitives/_Box_1x1_MiddleGrey.material",
+      "jobId": 1472,
+      "jobKey": "Material Builder",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 1,
+      "products": [
+        "pc/objects/_primitives/_box_1x1_middlegrey.azmaterial"
+      ]
+    },
+    {
+      "sourceId": 1413,
+      "sourceName": "Objects/_Primitives/_Cylinder_1x1_MiddleGrey.material",
+      "jobId": 1473,
+      "jobKey": "Material Builder",
+      "status": 4,
+      "errorCount": 0,
+      "warningCount": 0,
+      "productCount": 1,
+      "products": [
+        "pc/objects/_primitives/_cylinder_1x1_middlegrey.azmaterial"
+      ]
+    }
+  ],
+  "fbxOutputSummary": [
+    {
+      "sourceId": 900,
+      "sourceName": "Objects/_Primitives/_Box_1x1.fbx",
+      "productCount": 11,
+      "hasAzmodel": true,
+      "hasPxmesh": true,
+      "hasAzlod": true,
+      "allProductsStatus4": true
+    },
+    {
+      "sourceId": 901,
+      "sourceName": "Objects/_Primitives/_Cylinder_1x1.fbx",
+      "productCount": 11,
+      "hasAzmodel": true,
+      "hasPxmesh": true,
+      "hasAzlod": true,
+      "allProductsStatus4": true
+    },
+    {
+      "sourceId": 902,
+      "sourceName": "Objects/_Primitives/_Sphere_1x1.fbx",
+      "productCount": 11,
+      "hasAzmodel": true,
+      "hasPxmesh": true,
+      "hasAzlod": true,
+      "allProductsStatus4": true
+    }
+  ],
+  "tiffOutputSummary": [
+    {
+      "sourceId": 1400,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker.tif",
+      "productCount": 3,
+      "hasStreamingImage": true,
+      "mipchainCount": 1,
+      "allProductsStatus4": true
+    },
+    {
+      "sourceId": 1407,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker_ddn.tif",
+      "productCount": 4,
+      "hasStreamingImage": true,
+      "mipchainCount": 2,
+      "allProductsStatus4": true
+    },
+    {
+      "sourceId": 1406,
+      "sourceName": "Textures/_Primitives/Middle_Gray_Checker_spec.tif",
+      "productCount": 3,
+      "hasStreamingImage": true,
+      "mipchainCount": 1,
+      "allProductsStatus4": true
+    }
+  ],
+  "standaloneMaterialSummary": [
+    {
+      "sourceId": 1412,
+      "sourceName": "Objects/_Primitives/_Box_1x1_MiddleGrey.material",
+      "productCount": 1,
+      "productNames": [
+        "pc/objects/_primitives/_box_1x1_middlegrey.azmaterial"
+      ],
+      "success": true
+    },
+    {
+      "sourceId": 1413,
+      "sourceName": "Objects/_Primitives/_Cylinder_1x1_MiddleGrey.material",
+      "productCount": 1,
+      "productNames": [
+        "pc/objects/_primitives/_cylinder_1x1_middlegrey.azmaterial"
+      ],
+      "success": true
+    },
+    {
+      "sourceId": 1411,
+      "sourceName": "Objects/_Primitives/_Sphere_1x1_MiddleGrey.material",
+      "productCount": 1,
+      "productNames": [
+        "pc/objects/_primitives/_sphere_1x1_middlegrey.azmaterial"
+      ],
+      "success": true
+    }
+  ],
+  "allJobsStatus4NoErrors": true
+}

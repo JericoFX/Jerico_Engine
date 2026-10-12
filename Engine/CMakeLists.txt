@@ -4,6 +4,7 @@
 add_subdirectory(Render/Materials)
 add_subdirectory(Geometry)
 add_subdirectory(World/Camera)
+add_subdirectory(Assets/Primitives)
 
 if(PAL_TRAIT_BUILD_HOST_TOOLS)
     add_subdirectory(Assets/PrefabBuilder)

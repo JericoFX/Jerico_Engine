@@ -1,0 +1,853 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: 
+-- Initializing O3DE CMake system...
+--   CompilerLauncher: Not configured
+--   No restricted path found in engine.json, using default: F:/JericoEngine/JericoEngine/restricted
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_EXCEPTIONS=PUBLIC;/EHsc
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_EXPORT_SYMBOLS=
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_WARNINGS=PRIVATE;/W0
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_DEPRECATED_ENUM_ENUM_CONVERSION=PRIVATE;/Wv:18
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_ENABLE_FAST_MATH=/fp:fast
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_ENABLE_FAST_MATH=PRIVATE;/fp:fast
+--   Current compiler/arch sets O3DE_COMPILE_OPTION_DISABLE_FAST_MATH=/fp:precise
+--   Current compiler/arch sets O3DE_TARGET_COMPILE_OPTION_DISABLE_FAST_MATH=PRIVATE;/fp:precise
+--   Checking downloaded package zlib-1.2.11-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Checking downloaded package freetype-2.11.1-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Checking downloaded package qt-6.11.2-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+--   Checking downloaded package python-3.10.13-je-rev3-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows
+--   Using Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/31e81382
+-- Executing CMake scripts...
+--   Using package mimalloc 3.5.2 (MIT)
+--   Checking downloaded package Lua-5.4.4-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows
+--   Using package rapidjson 1.1.0 (MIT)
+--   Checking downloaded package zstd-1.3.5-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows
+--   Using package googlebenchmark v1.7.0 (Apache-2.0)
+--   Checking downloaded package lz4-1.9.4-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-je-rev1-windows
+--   Using package googletest v1.18.0 (BSD-3-Clause)
+--   Using package sqlite 3.53.4 (blessing)
+--   Checking downloaded package OpenSSL-1.1.1o-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenSSL-1.1.1o-je-rev1-windows
+--   Checking downloaded package expat-2.4.2-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Using JE local Expat 2.4.2 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Checking downloaded package tiff-4.2.0.15-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/tiff-4.2.0.15-je-rev1-windows
+--   Using package antlr4 4.13.2 (BSD-3-Clause)
+--   Using package jsoncpp 1.6.2 (Public Domain OR MIT)
+--   Using package cli11 2.6.2 (BSD-3-Clause)
+--   Using package assimp v6.0.4 (Custom BSD-3-Clause)
+--   Using package xxhash 0.8.3 (BSD-2-Clause)
+--   Note: ly_enable_gems called with no PROJECT_NAME name, applying to all projects: 
+     - GEMS     Atom_Bootstrap;AtomShader;AtomViewportDisplayInfo;AudioSystem;CommonFeaturesAtom;EditorModeFeedback;Maestro;Profiler;SceneProcessing 
+     - GEM_FILE 
+--   add_subdirectory will be called on the following external subdirectories in order:
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/DX12
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Vulkan
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Null
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RHI
+--   F:/JericoEngine/JericoEngine/Gems/Atom/RPI
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Bootstrap
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Asset/Shader
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayInfo
+--   F:/JericoEngine/JericoEngine/Gems/LmbrCentral
+--   F:/JericoEngine/JericoEngine/Gems/AudioSystem
+--   F:/JericoEngine/JericoEngine/Gems/ImGui
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common
+--   F:/JericoEngine/JericoEngine/Gems/SurfaceData
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom
+--   F:/JericoEngine/JericoEngine/Gems/GradientSignal
+--   F:/JericoEngine/JericoEngine/Gems/GraphCanvas
+--   F:/JericoEngine/JericoEngine/Gems/GraphModel
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Component/DebugCamera
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialCanvas
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas
+--   F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/ImguiAtom
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomImGuiTools
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomRenderOptions
+--   F:/JericoEngine/JericoEngine/Gems/EMotionFX
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EMotionFXAtom
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomFont
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayIcons
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomBridge
+--   F:/JericoEngine/JericoEngine/Gems/Atom
+--   F:/JericoEngine/JericoEngine/Gems/Maestro
+--   F:/JericoEngine/JericoEngine/Gems/Profiler
+--   F:/JericoEngine/JericoEngine/Gems/SceneProcessing
+--   F:/JericoEngine/JericoEngine/Projects/JEEditorFixture
+--   F:/JericoEngine/JericoEngine/Gems/PhysX/Common
+--   F:/JericoEngine/JericoEngine/Gems/PhysX/Core/PhysX5
+--   F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/DX12/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/DX12/restricted
+--   Using package D3D12MemoryAllocator v3.2.0 (MIT)
+--   Checking downloaded package d3dx12-headers-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/d3dx12-headers-je-rev1-windows
+--   Using JE local original d3dx12 header from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/d3dx12-headers-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Metal/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Vulkan/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Vulkan/restricted
+--   Checking downloaded package vulkan-validationlayers-1.3.261-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.3.261-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Null/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Null/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RHI/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RHI/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/RPI/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/RPI/restricted
+--   Using package meshoptimizer v1.2 (MIT)
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Bootstrap/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Bootstrap/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Asset/Shader/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Asset/Shader/restricted
+--   Checking downloaded package mcpp-2.7.2_az.2-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/mcpp-2.7.2_az.2-je-rev1-windows
+--   Checking downloaded package DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayInfo/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayInfo/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/LmbrCentral/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/LmbrCentral/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AudioSystem/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AudioSystem/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/ImGui/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/ImGui/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/SurfaceData/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/SurfaceData/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Asset/ImageProcessingAtom/restricted
+--   Checking downloaded package astc-encoder-3.2-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/astc-encoder-3.2-je-rev1-windows
+--   Using package squish-ccr 2.00-alpha2 (MIT)
+--   Using package sse2neon v1.9.1 (MIT)
+--   Checking downloaded package ISPCTexComp-36b80aa-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/ISPCTexComp-36b80aa-je-rev1-windows
+--   Checking downloaded package OpenEXR-3.1.3-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenEXR-3.1.3-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/GradientSignal/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/GradientSignal/restricted
+--   Checking downloaded package openimageio-opencolorio-2.3.17-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows
+--   Checking downloaded package png-1.6.37-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/png-1.6.37-je-rev1-windows
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/GraphCanvas/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/GraphCanvas/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/GraphModel/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/GraphModel/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Component/DebugCamera/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Component/DebugCamera/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialCanvas/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialCanvas/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/ImguiAtom/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/ImguiAtom/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomImGuiTools/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomImGuiTools/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomRenderOptions/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomRenderOptions/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/EMotionFX/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/EMotionFX/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EMotionFXAtom/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EMotionFXAtom/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomFont/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomFont/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayIcons/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomViewportDisplayIcons/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomBridge/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/AtomBridge/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Maestro/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Maestro/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/Profiler/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/Profiler/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/SceneProcessing/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/SceneProcessing/restricted
+--   Using package mikktspace 1.0 (Zlib)
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/PhysX/Common/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/PhysX/Common/restricted
+--   No restricted found in F:/JericoEngine/JericoEngine/Gems/PhysX/Core/PhysX5/gem.json, using default: F:/JericoEngine/JericoEngine/Gems/PhysX/Core/PhysX5/restricted
+--   Checking downloaded package PhysX-5.1.1-je-cpu-rev2-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/PhysX-5.1.1-je-cpu-rev2-windows
+--   Checking downloaded package poly2tri-7f0487a-je-rev1-windows because LY_PACKAGE_VALIDATE_PACKAGE is TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/poly2tri-7f0487a-je-rev1-windows
+--   Using package v-hacd v4.1.0 (BSD-3-Clause)
+--   Using package OpenMesh v11.0 (BSD-3-Clause)
+--   JE Geometry Authoring uses Manifold v3.5.1 (Apache-2.0) https://github.com/elalish/manifold.git
+--       - Manifold provides the CSG boolean operations (Api::MeshBoolean).
+-- Finishing up configuration...
+--   Adding gem dependencies for "JEEditorFixture.GameLauncher" associated with the Gem variants of "Clients"
+--   Gem "AtomShader" does not expose a variant of Clients
+--   Gem "EditorModeFeedback" does not expose a variant of Clients
+--   Gem "SceneProcessing" does not expose a variant of Clients
+--   Gem "Atom_RPI" does not expose a variant of Clients
+--   Gem "Atom_RHI" does not expose a variant of Clients
+--   Gem "Atom_RHI_DX12" does not expose a variant of Clients
+--   Gem "Atom_RHI_Metal" does not expose a variant of Clients
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Clients
+--   Gem "Atom_RHI_Null" does not expose a variant of Clients
+--   Gem "Atom_Feature_Common" does not expose a variant of Clients
+--   Gem "AtomToolsFramework" does not expose a variant of Clients
+--   Gem "ImageProcessingAtom" does not expose a variant of Clients
+--   Gem "GraphCanvas" does not expose a variant of Clients
+--   Gem "GraphModel" does not expose a variant of Clients
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Clients
+--   Gem "MaterialCanvas" does not expose a variant of Clients
+--   Gem "MaterialEditor" does not expose a variant of Clients
+--   Gem "PassCanvas" does not expose a variant of Clients
+--   Gem "ShaderManagementConsole" does not expose a variant of Clients
+--   Gem "AtomImGuiTools" does not expose a variant of Clients
+--   Gem "AtomRenderOptions" does not expose a variant of Clients
+--   Gem "EMotionFX_Atom" does not expose a variant of Clients
+--   Gem "ImguiAtom" does not expose a variant of Clients
+--   Gem "AtomFont" does not expose a variant of Clients
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Clients
+--   Gem "Atom_Feature_Common" does not expose a variant of Clients
+--   Gem "AtomShader" does not expose a variant of Clients
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Clients
+--   Gem "Atom_RHI" does not expose a variant of Clients
+--   Gem "Atom_RPI" does not expose a variant of Clients
+--   Gem "AtomToolsFramework" does not expose a variant of Clients
+--   Gem "MaterialCanvas" does not expose a variant of Clients
+--   Gem "MaterialEditor" does not expose a variant of Clients
+--   Gem "PassCanvas" does not expose a variant of Clients
+--   Gem "ShaderManagementConsole" does not expose a variant of Clients
+--   Gem "Atom_RHI_DX12" does not expose a variant of Clients
+--   Gem "Atom_RHI_Metal" does not expose a variant of Clients
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Clients
+--   Gem "Atom_RHI_Null" does not expose a variant of Clients
+--   Gem "GraphCanvas" does not expose a variant of Clients
+--   Gem "GraphModel" does not expose a variant of Clients
+--   Gem "ImageProcessingAtom" does not expose a variant of Clients
+--   Gem "AtomImGuiTools" does not expose a variant of Clients
+--   Gem "AtomRenderOptions" does not expose a variant of Clients
+--   Gem "EMotionFX_Atom" does not expose a variant of Clients
+--   Gem "ImguiAtom" does not expose a variant of Clients
+--   Gem "AtomFont" does not expose a variant of Clients
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Clients
+--   Gem "PhysXCommon" does not expose a variant of Clients
+--   Adding gem dependencies for "Editor" associated with the Gem variants of "Tools"
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "PhysXCommon" does not expose a variant of Tools
+--   Adding gem dependencies for "AssetBuilder" associated with the Gem variants of "Builders"
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Adding gem dependencies for "AssetProcessor" associated with the Gem variants of "Builders"
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Adding gem dependencies for "AssetProcessorBatch" associated with the Gem variants of "Builders"
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Adding gem dependencies for "AssetBundlerBatch" associated with the Gem variants of "Builders"
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Adding gem dependencies for "AssetBundler" associated with the Gem variants of "Builders"
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Gem "Atom_Bootstrap" does not expose a variant of Builders
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Builders
+--   Gem "Atom_RHI" does not expose a variant of Builders
+--   Gem "ImageProcessingAtom" does not expose a variant of Builders
+--   Gem "AtomImGuiTools" does not expose a variant of Builders
+--   Gem "AtomRenderOptions" does not expose a variant of Builders
+--   Gem "EMotionFX_Atom" does not expose a variant of Builders
+--   Gem "ImguiAtom" does not expose a variant of Builders
+--   Gem "AtomFont" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of Builders
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Builders
+--   Adding gem dependencies for "LuaIDE" associated with the Gem variants of "LuaTools"
+--   Gem "Atom_Bootstrap" does not expose a variant of LuaTools
+--   Gem "AtomShader" does not expose a variant of LuaTools
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of LuaTools
+--   Gem "AudioSystem" does not expose a variant of LuaTools
+--   Gem "CommonFeaturesAtom" does not expose a variant of LuaTools
+--   Gem "EditorModeFeedback" does not expose a variant of LuaTools
+--   Gem "Maestro" does not expose a variant of LuaTools
+--   Gem "Profiler" does not expose a variant of LuaTools
+--   Gem "SceneProcessing" does not expose a variant of LuaTools
+--   Gem "Atom_RPI" does not expose a variant of LuaTools
+--   Gem "Atom_RHI" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_DX12" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_Metal" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_Null" does not expose a variant of LuaTools
+--   Gem "LmbrCentral" does not expose a variant of LuaTools
+--   Gem "Atom_Feature_Common" does not expose a variant of LuaTools
+--   Gem "GradientSignal" does not expose a variant of LuaTools
+--   Gem "SurfaceData" does not expose a variant of LuaTools
+--   Gem "AtomToolsFramework" does not expose a variant of LuaTools
+--   Gem "ImGui" does not expose a variant of LuaTools
+--   Gem "ImageProcessingAtom" does not expose a variant of LuaTools
+--   Gem "GraphCanvas" does not expose a variant of LuaTools
+--   Gem "GraphModel" does not expose a variant of LuaTools
+--   Gem "Atom" does not expose a variant of LuaTools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of LuaTools
+--   Gem "MaterialCanvas" does not expose a variant of LuaTools
+--   Gem "MaterialEditor" does not expose a variant of LuaTools
+--   Gem "PassCanvas" does not expose a variant of LuaTools
+--   Gem "ShaderManagementConsole" does not expose a variant of LuaTools
+--   Gem "Atom_AtomBridge" does not expose a variant of LuaTools
+--   Gem "AtomImGuiTools" does not expose a variant of LuaTools
+--   Gem "AtomRenderOptions" does not expose a variant of LuaTools
+--   Gem "EMotionFX_Atom" does not expose a variant of LuaTools
+--   Gem "ImguiAtom" does not expose a variant of LuaTools
+--   Gem "AtomFont" does not expose a variant of LuaTools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of LuaTools
+--   Gem "EMotionFX" does not expose a variant of LuaTools
+--   Gem "Atom" does not expose a variant of LuaTools
+--   Gem "ImGui" does not expose a variant of LuaTools
+--   Gem "PhysX5" does not expose a variant of LuaTools
+--   Gem "Atom_Feature_Common" does not expose a variant of LuaTools
+--   Gem "AtomShader" does not expose a variant of LuaTools
+--   Gem "Atom_Bootstrap" does not expose a variant of LuaTools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of LuaTools
+--   Gem "Atom_RHI" does not expose a variant of LuaTools
+--   Gem "Atom_RPI" does not expose a variant of LuaTools
+--   Gem "AtomToolsFramework" does not expose a variant of LuaTools
+--   Gem "MaterialCanvas" does not expose a variant of LuaTools
+--   Gem "MaterialEditor" does not expose a variant of LuaTools
+--   Gem "PassCanvas" does not expose a variant of LuaTools
+--   Gem "ShaderManagementConsole" does not expose a variant of LuaTools
+--   Gem "Atom_AtomBridge" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_DX12" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_Metal" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of LuaTools
+--   Gem "Atom_RHI_Null" does not expose a variant of LuaTools
+--   Gem "LmbrCentral" does not expose a variant of LuaTools
+--   Gem "GraphCanvas" does not expose a variant of LuaTools
+--   Gem "GraphModel" does not expose a variant of LuaTools
+--   Gem "ImageProcessingAtom" does not expose a variant of LuaTools
+--   Gem "CommonFeaturesAtom" does not expose a variant of LuaTools
+--   Gem "GradientSignal" does not expose a variant of LuaTools
+--   Gem "SurfaceData" does not expose a variant of LuaTools
+--   Gem "AtomImGuiTools" does not expose a variant of LuaTools
+--   Gem "AtomRenderOptions" does not expose a variant of LuaTools
+--   Gem "EMotionFX_Atom" does not expose a variant of LuaTools
+--   Gem "ImguiAtom" does not expose a variant of LuaTools
+--   Gem "AtomFont" does not expose a variant of LuaTools
+--   Gem "AtomViewportDisplayInfo" does not expose a variant of LuaTools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of LuaTools
+--   Gem "EMotionFX" does not expose a variant of LuaTools
+--   Gem "PhysXCommon" does not expose a variant of LuaTools
+--   Adding gem dependencies for "MaterialCanvas" associated with the Gem variants of "Tools"
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "PhysXCommon" does not expose a variant of Tools
+--   Adding gem dependencies for "MaterialEditor" associated with the Gem variants of "Tools"
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "PhysXCommon" does not expose a variant of Tools
+--   Adding gem dependencies for "PassCanvas" associated with the Gem variants of "Tools"
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "PhysXCommon" does not expose a variant of Tools
+--   Adding gem dependencies for "ShaderManagementConsole" associated with the Gem variants of "Tools"
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "Atom_Feature_Common" does not expose a variant of Tools
+--   Gem "AtomShader" does not expose a variant of Tools
+--   Gem "Atom_Bootstrap" does not expose a variant of Tools
+--   Gem "Atom_Component_DebugCamera" does not expose a variant of Tools
+--   Gem "Atom_RHI" does not expose a variant of Tools
+--   Gem "Atom_RPI" does not expose a variant of Tools
+--   Gem "AtomToolsFramework" does not expose a variant of Tools
+--   Gem "MaterialCanvas" does not expose a variant of Tools
+--   Gem "MaterialEditor" does not expose a variant of Tools
+--   Gem "PassCanvas" does not expose a variant of Tools
+--   Gem "ShaderManagementConsole" does not expose a variant of Tools
+--   Gem "Atom_RHI_DX12" does not expose a variant of Tools
+--   Gem "Atom_RHI_Metal" does not expose a variant of Tools
+--   Gem "Atom_RHI_Vulkan" does not expose a variant of Tools
+--   Gem "Atom_RHI_Null" does not expose a variant of Tools
+--   Gem "ImageProcessingAtom" does not expose a variant of Tools
+--   Gem "AtomImGuiTools" does not expose a variant of Tools
+--   Gem "AtomRenderOptions" does not expose a variant of Tools
+--   Gem "EMotionFX_Atom" does not expose a variant of Tools
+--   Gem "ImguiAtom" does not expose a variant of Tools
+--   Gem "AtomFont" does not expose a variant of Tools
+--   Gem "AtomViewportDisplayIcons" does not expose a variant of Tools
+--   Gem "PhysXCommon" does not expose a variant of Tools
+--   prefix=,target=JEEditorFixture.GameLauncher,variant=Clients has direct load dependencies of Atom_Bootstrap.Clients;AtomViewportDisplayInfo.Clients;AudioSystem.Clients;CommonFeaturesAtom.Clients;Maestro.Clients;Profiler.Clients;LmbrCentral.Clients;GradientSignal.Clients;SurfaceData.Clients;ImGui.Clients;Atom.Clients;Atom_AtomBridge.Clients;EMotionFX.Clients
+--   Gem Target "Atom_Bootstrap.Clients" has direct manually added dependencies of: Atom_Bootstrap
+--     Gem Target "Atom_Bootstrap" has load dependencies of: 
+--   Gem Target "Atom_Bootstrap.Clients" has load dependencies of: Atom_Bootstrap
+--   Gem Target "AtomViewportDisplayInfo.Clients" has direct manually added dependencies of: AtomViewportDisplayInfo
+--     Gem Target "AtomViewportDisplayInfo" has load dependencies of: 
+--   Gem Target "AtomViewportDisplayInfo.Clients" has load dependencies of: AtomViewportDisplayInfo
+--   Gem Target "AudioSystem.Clients" has direct manually added dependencies of: AudioSystem
+--     Gem Target "AudioSystem" has load dependencies of: 
+--   Gem Target "AudioSystem.Clients" has load dependencies of: AudioSystem
+--   Gem Target "CommonFeaturesAtom.Clients" has direct manually added dependencies of: CommonFeaturesAtom;GradientSignal.Clients
+--     Gem Target "CommonFeaturesAtom" has direct manually added dependencies of: Gem::Atom_RPI.Private
+--       Gem Target "Atom_RPI.Private" has direct manually added dependencies of: Gem::Atom_RHI.Private
+--         Gem Target "Atom_RHI.Private" has load dependencies of: 
+--       Gem Target "Atom_RPI.Private" has load dependencies of: Atom_RHI.Private
+--     Gem Target "CommonFeaturesAtom" has load dependencies of: Atom_RHI.Private;Atom_RPI.Private
+--     Gem Target "GradientSignal.Clients" has direct manually added dependencies of: GradientSignal
+--       Gem Target "GradientSignal" has direct manually added dependencies of: Gem::LmbrCentral
+--         Gem Target "LmbrCentral" has load dependencies of: 
+--       Gem Target "GradientSignal" has load dependencies of: LmbrCentral
+--     Gem Target "GradientSignal.Clients" has load dependencies of: LmbrCentral;GradientSignal
+--   Gem Target "CommonFeaturesAtom.Clients" has load dependencies of: Atom_RHI.Private;Atom_RPI.Private;CommonFeaturesAtom;LmbrCentral;GradientSignal;GradientSignal.Clients
+--   Gem Target "Maestro.Clients" has direct manually added dependencies of: Maestro
+--     Gem Target "Maestro" has direct manually added dependencies of: Gem::LmbrCentral
+--     Gem Target "Maestro" has load dependencies of: LmbrCentral
+--   Gem Target "Maestro.Clients" has load dependencies of: LmbrCentral;Maestro
+--   Gem Target "Profiler.Clients" has direct manually added dependencies of: ProfilerImGui
+--     Gem Target "ProfilerImGui" has direct manually added dependencies of: Gem::ImGui.imguilib
+--     Gem Target "ProfilerImGui" has load dependencies of: 
+--   Gem Target "Profiler.Clients" has load dependencies of: ProfilerImGui
+--   Gem Target "LmbrCentral.Clients" has direct manually added dependencies of: LmbrCentral
+--   Gem Target "LmbrCentral.Clients" has load dependencies of: LmbrCentral
+--   Gem Target "SurfaceData.Clients" has direct manually added dependencies of: SurfaceData
+--     Gem Target "SurfaceData" has direct manually added dependencies of: Gem::LmbrCentral
+--     Gem Target "SurfaceData" has load dependencies of: LmbrCentral
+--   Gem Target "SurfaceData.Clients" has load dependencies of: LmbrCentral;SurfaceData
+--   Gem Target "ImGui.Clients" has direct manually added dependencies of: ImGui
+--     Gem Target "ImGui" has direct manually added dependencies of: Gem::LmbrCentral
+--     Gem Target "ImGui" has load dependencies of: LmbrCentral
+--   Gem Target "ImGui.Clients" has load dependencies of: LmbrCentral;ImGui
+--   Gem Target "Atom.Clients" has direct manually added dependencies of: Atom_AtomBridge.Clients
+--     Gem Target "Atom_AtomBridge.Clients" has direct manually added dependencies of: Atom_AtomBridge
+--       Gem Target "Atom_AtomBridge" has direct manually added dependencies of: Gem::AtomFont;Gem::AtomImGuiTools;Gem::AtomViewportDisplayInfo;Gem::Atom_Bootstrap;Gem::Atom_Component_DebugCamera;Gem::Atom_Feature_Common;Gem::Atom_RHI.Private;Gem::Atom_RHI_DX12.Private;Gem::Atom_RHI_Null.Private;Gem::Atom_RHI_Vulkan.Private;Gem::Atom_RPI.Private;Gem::CommonFeaturesAtom;Gem::EMotionFX_Atom;Gem::ImguiAtom
+--         Gem Target "AtomFont" has load dependencies of: 
+--         Gem Target "AtomImGuiTools" has load dependencies of: 
+--         Gem Target "Atom_Component_DebugCamera" has load dependencies of: 
+--         Gem Target "Atom_Feature_Common" has direct manually added dependencies of: Gem::Atom_RHI_DX12.Private;Gem::Atom_RHI_Null.Private;Gem::Atom_RHI_Vulkan.Private
+--           Gem Target "Atom_RHI_DX12.Private" has load dependencies of: 
+--           Gem Target "Atom_RHI_Null.Private" has load dependencies of: 
+--           Gem Target "Atom_RHI_Vulkan.Private" has load dependencies of: 
+--         Gem Target "Atom_Feature_Common" has load dependencies of: Atom_RHI_DX12.Private;Atom_RHI_Null.Private;Atom_RHI_Vulkan.Private
+--         Gem Target "EMotionFX_Atom" has direct manually added dependencies of: Gem::EMotionFX
+--           Gem Target "EMotionFX" has direct manually added dependencies of: Gem::LmbrCentral
+--           Gem Target "EMotionFX" has load dependencies of: LmbrCentral
+--         Gem Target "EMotionFX_Atom" has load dependencies of: LmbrCentral;EMotionFX
+--         Gem Target "ImguiAtom" has load dependencies of: 
+--       Gem Target "Atom_AtomBridge" has load dependencies of: AtomFont;AtomImGuiTools;AtomViewportDisplayInfo;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Null.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common;Atom_RHI.Private;Atom_RPI.Private;CommonFeaturesAtom;LmbrCentral;EMotionFX;EMotionFX_Atom;ImguiAtom
+--     Gem Target "Atom_AtomBridge.Clients" has load dependencies of: AtomFont;AtomImGuiTools;AtomViewportDisplayInfo;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Null.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common;Atom_RHI.Private;Atom_RPI.Private;CommonFeaturesAtom;LmbrCentral;EMotionFX;EMotionFX_Atom;ImguiAtom;Atom_AtomBridge
+--   Gem Target "Atom.Clients" has load dependencies of: AtomFont;AtomImGuiTools;AtomViewportDisplayInfo;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Null.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common;Atom_RHI.Private;Atom_RPI.Private;CommonFeaturesAtom;LmbrCentral;EMotionFX;EMotionFX_Atom;ImguiAtom;Atom_AtomBridge;Atom_AtomBridge.Clients
+--   Gem Target "EMotionFX.Clients" has direct manually added dependencies of: EMotionFX
+--   Gem Target "EMotionFX.Clients" has load dependencies of: LmbrCentral;EMotionFX
+--   prefix=JEEditorFixture,target=JEEditorFixture.GameLauncher,variant=Clients has direct load dependencies of Atom.Clients;ImGui.Clients;PhysX5.Clients;Atom_Bootstrap.Clients;Atom_AtomBridge.Clients;LmbrCentral.Clients;CommonFeaturesAtom.Clients;GradientSignal.Clients;SurfaceData.Clients;AtomViewportDisplayInfo.Clients;EMotionFX.Clients
+--   Gem Target "PhysX5.Clients" has direct manually added dependencies of: PhysX5
+--     Gem Target "PhysX5" has direct manually added dependencies of: Gem::LmbrCentral
+--     Gem Target "PhysX5" has load dependencies of: LmbrCentral
+--   Gem Target "PhysX5.Clients" has load dependencies of: LmbrCentral;PhysX5
+--   prefix=,target=Editor,variant=Tools has direct load dependencies of AtomViewportDisplayInfo.Tools;AudioSystem.Tools;CommonFeaturesAtom.Tools;EditorModeFeedback.Tools;Maestro.Tools;Profiler.Tools;SceneProcessing.Tools;LmbrCentral.Tools;GradientSignal.Tools;SurfaceData.Tools;ImGui.Tools;GraphCanvas.Tools;GraphModel.Tools;Atom.Tools;Atom_AtomBridge.Tools;EMotionFX.Tools
+--   Gem Target "AtomViewportDisplayInfo.Tools" has direct manually added dependencies of: AtomViewportDisplayInfo
+--   Gem Target "AtomViewportDisplayInfo.Tools" has load dependencies of: AtomViewportDisplayInfo
+--   Gem Target "AudioSystem.Tools" has direct manually added dependencies of: AudioSystem.Editor
+--     Gem Target "AudioSystem.Editor" has load dependencies of: 
+--   Gem Target "AudioSystem.Tools" has load dependencies of: AudioSystem.Editor
+--   Gem Target "CommonFeaturesAtom.Tools" has direct manually added dependencies of: CommonFeaturesAtom.Editor;GradientSignal.Tools
+--     Gem Target "CommonFeaturesAtom.Editor" has load dependencies of: 
+--     Gem Target "GradientSignal.Tools" has direct manually added dependencies of: GradientSignal.Editor
+--       Gem Target "GradientSignal.Editor" has direct manually added dependencies of: Gem::LmbrCentral.Editor
+--         Gem Target "LmbrCentral.Editor" has load dependencies of: 
+--       Gem Target "GradientSignal.Editor" has load dependencies of: LmbrCentral.Editor
+--     Gem Target "GradientSignal.Tools" has load dependencies of: LmbrCentral.Editor;GradientSignal.Editor
+--   Gem Target "CommonFeaturesAtom.Tools" has load dependencies of: CommonFeaturesAtom.Editor;LmbrCentral.Editor;GradientSignal.Editor;GradientSignal.Tools
+--   Gem Target "EditorModeFeedback.Tools" has direct manually added dependencies of: EditorModeFeedback.Editor
+--     Gem Target "EditorModeFeedback.Editor" has load dependencies of: 
+--   Gem Target "EditorModeFeedback.Tools" has load dependencies of: EditorModeFeedback.Editor
+--   Gem Target "Maestro.Tools" has direct manually added dependencies of: Maestro.Editor
+--     Gem Target "Maestro.Editor" has direct manually added dependencies of: Gem::LmbrCentral.Editor
+--     Gem Target "Maestro.Editor" has load dependencies of: LmbrCentral.Editor
+--   Gem Target "Maestro.Tools" has load dependencies of: LmbrCentral.Editor;Maestro.Editor
+--   Gem Target "Profiler.Tools" has direct manually added dependencies of: ProfilerImGui
+--   Gem Target "Profiler.Tools" has load dependencies of: ProfilerImGui
+--   Gem Target "SceneProcessing.Tools" has direct manually added dependencies of: SceneProcessing.Editor
+--     Gem Target "SceneProcessing.Editor" has direct manually added dependencies of: AZ::SceneCore;AZ::SceneData;AZ::SceneUI
+--     Gem Target "SceneProcessing.Editor" has load dependencies of: 
+--   Gem Target "SceneProcessing.Tools" has load dependencies of: SceneProcessing.Editor
+--   Gem Target "LmbrCentral.Tools" has direct manually added dependencies of: LmbrCentral.Editor
+--   Gem Target "LmbrCentral.Tools" has load dependencies of: LmbrCentral.Editor
+--   Gem Target "SurfaceData.Tools" has direct manually added dependencies of: SurfaceData.Editor
+--     Gem Target "SurfaceData.Editor" has direct manually added dependencies of: Gem::LmbrCentral.Editor
+--     Gem Target "SurfaceData.Editor" has load dependencies of: LmbrCentral.Editor
+--   Gem Target "SurfaceData.Tools" has load dependencies of: LmbrCentral.Editor;SurfaceData.Editor
+--   Gem Target "ImGui.Tools" has direct manually added dependencies of: ImGui.Editor
+--     Gem Target "ImGui.Editor" has direct manually added dependencies of: Gem::LmbrCentral.Editor
+--     Gem Target "ImGui.Editor" has load dependencies of: LmbrCentral.Editor
+--   Gem Target "ImGui.Tools" has load dependencies of: LmbrCentral.Editor;ImGui.Editor
+--   Gem Target "GraphCanvas.Tools" has direct manually added dependencies of: GraphCanvas.Editor
+--     Gem Target "GraphCanvas.Editor" has direct manually added dependencies of: 3rdParty::Qt::Xml;AZ::AzQtComponents
+--     Gem Target "GraphCanvas.Editor" has load dependencies of: 
+--   Gem Target "GraphCanvas.Tools" has load dependencies of: GraphCanvas.Editor
+--   Gem Target "GraphModel.Tools" has direct manually added dependencies of: GraphModel.Editor
+--     Gem Target "GraphModel.Editor" has direct manually added dependencies of: Gem::GraphCanvas.Editor
+--     Gem Target "GraphModel.Editor" has load dependencies of: GraphCanvas.Editor
+--   Gem Target "GraphModel.Tools" has load dependencies of: GraphCanvas.Editor;GraphModel.Editor
+--   Gem Target "Atom.Tools" has direct manually added dependencies of: Atom_AtomBridge.Tools
+--     Gem Target "Atom_AtomBridge.Tools" has direct manually added dependencies of: Atom_AtomBridge.Editor
+--       Gem Target "Atom_AtomBridge.Editor" has direct manually added dependencies of: Gem::AtomFont;Gem::AtomImGuiTools;Gem::AtomRenderOptions.Editor;Gem::AtomShader.Builders;Gem::AtomToolsFramework.Editor;Gem::AtomViewportDisplayIcons.Editor;Gem::AtomViewportDisplayInfo;Gem::Atom_Bootstrap;Gem::Atom_Component_DebugCamera;Gem::Atom_Feature_Common.Builders;Gem::Atom_Feature_Common.Editor;Gem::Atom_RHI.Private;Gem::Atom_RHI_DX12.Builders;Gem::Atom_RHI_DX12.Private;Gem::Atom_RHI_Metal.Builders;Gem::Atom_RHI_Metal.Private;Gem::Atom_RHI_Null.Builders;Gem::Atom_RHI_Null.Private;Gem::Atom_RHI_Vulkan.Builders;Gem::Atom_RHI_Vulkan.Private;Gem::Atom_RPI.Builders;Gem::Atom_RPI.Editor;Gem::CommonFeaturesAtom.Editor;Gem::EMotionFX_Atom.Editor;Gem::ImageProcessingAtom.Editor;Gem::ImguiAtom;Gem::MaterialCanvas.Builders;Gem::MaterialEditor.Builders;Gem::PassCanvas.Builders;Gem::ShaderManagementConsole.Builders
+--         Gem Target "AtomRenderOptions.Editor" has load dependencies of: 
+--         Gem Target "AtomShader.Builders" has direct manually added dependencies of: 3rdParty::DirectXShaderCompilerDxc;AZ::Azslc
+--         Gem Target "AtomShader.Builders" has load dependencies of: 
+--         Gem Target "AtomToolsFramework.Editor" has direct manually added dependencies of: Gem::Atom_Bootstrap;Gem::Atom_Component_DebugCamera;Gem::Atom_Feature_Common.Editor;Gem::Atom_RHI.Private;Gem::Atom_RHI_Null.Private;Gem::Atom_RPI.Editor;Gem::GraphCanvas.Editor;Gem::GraphCanvasWidgets;Gem::GraphModel.Editor;Gem::ImageProcessingAtom.Editor
+--           Gem Target "Atom_Feature_Common.Editor" has direct manually added dependencies of: Gem::Atom_RHI_DX12.Private;Gem::Atom_RHI_Metal.Private;Gem::Atom_RHI_Vulkan.Private
+--             Gem Target "Atom_RHI_Metal.Private" has load dependencies of: 
+--           Gem Target "Atom_Feature_Common.Editor" has load dependencies of: Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private
+--           Gem Target "Atom_RPI.Editor" has direct manually added dependencies of: Gem::Atom_RHI.Private
+--           Gem Target "Atom_RPI.Editor" has load dependencies of: Atom_RHI.Private
+--           Gem Target "ImageProcessingAtom.Editor" has load dependencies of: 
+--         Gem Target "AtomToolsFramework.Editor" has load dependencies of: Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common.Editor;Atom_RHI.Private;Atom_RHI_Null.Private;Atom_RPI.Editor;GraphCanvas.Editor;GraphModel.Editor;ImageProcessingAtom.Editor
+--         Gem Target "AtomViewportDisplayIcons.Editor" has load dependencies of: 
+--         Gem Target "Atom_Feature_Common.Builders" has direct manually added dependencies of: Gem::Atom_RHI.Private;Gem::Atom_RHI_DX12.Builders;Gem::Atom_RHI_Metal.Builders;Gem::Atom_RHI_Vulkan.Builders
+--           Gem Target "Atom_RHI_DX12.Builders" has load dependencies of: 
+--           Gem Target "Atom_RHI_Metal.Builders" has load dependencies of: 
+--           Gem Target "Atom_RHI_Vulkan.Builders" has load dependencies of: 
+--         Gem Target "Atom_Feature_Common.Builders" has load dependencies of: Atom_RHI.Private;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders
+--         Gem Target "Atom_RHI_Null.Builders" has load dependencies of: 
+--         Gem Target "Atom_RPI.Builders" has load dependencies of: 
+--         Gem Target "EMotionFX_Atom.Editor" has direct manually added dependencies of: Gem::EMotionFX.Editor
+--           Gem Target "EMotionFX.Editor" has direct manually added dependencies of: Gem::LmbrCentral.Editor
+--           Gem Target "EMotionFX.Editor" has load dependencies of: LmbrCentral.Editor
+--         Gem Target "EMotionFX_Atom.Editor" has load dependencies of: LmbrCentral.Editor;EMotionFX.Editor
+--         Gem Target "MaterialCanvas.Builders" has load dependencies of: 
+--         Gem Target "MaterialEditor.Builders" has load dependencies of: 
+--         Gem Target "PassCanvas.Builders" has load dependencies of: 
+--         Gem Target "ShaderManagementConsole.Builders" has load dependencies of: 
+--       Gem Target "Atom_AtomBridge.Editor" has load dependencies of: AtomFont;AtomImGuiTools;AtomRenderOptions.Editor;AtomShader.Builders;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common.Editor;Atom_RHI.Private;Atom_RHI_Null.Private;Atom_RPI.Editor;GraphCanvas.Editor;GraphModel.Editor;ImageProcessingAtom.Editor;AtomToolsFramework.Editor;AtomViewportDisplayIcons.Editor;AtomViewportDisplayInfo;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_Feature_Common.Builders;Atom_RHI_Null.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;LmbrCentral.Editor;EMotionFX.Editor;EMotionFX_Atom.Editor;ImguiAtom;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders
+--     Gem Target "Atom_AtomBridge.Tools" has load dependencies of: AtomFont;AtomImGuiTools;AtomRenderOptions.Editor;AtomShader.Builders;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common.Editor;Atom_RHI.Private;Atom_RHI_Null.Private;Atom_RPI.Editor;GraphCanvas.Editor;GraphModel.Editor;ImageProcessingAtom.Editor;AtomToolsFramework.Editor;AtomViewportDisplayIcons.Editor;AtomViewportDisplayInfo;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_Feature_Common.Builders;Atom_RHI_Null.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;LmbrCentral.Editor;EMotionFX.Editor;EMotionFX_Atom.Editor;ImguiAtom;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Editor
+--   Gem Target "Atom.Tools" has load dependencies of: AtomFont;AtomImGuiTools;AtomRenderOptions.Editor;AtomShader.Builders;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common.Editor;Atom_RHI.Private;Atom_RHI_Null.Private;Atom_RPI.Editor;GraphCanvas.Editor;GraphModel.Editor;ImageProcessingAtom.Editor;AtomToolsFramework.Editor;AtomViewportDisplayIcons.Editor;AtomViewportDisplayInfo;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_Feature_Common.Builders;Atom_RHI_Null.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;LmbrCentral.Editor;EMotionFX.Editor;EMotionFX_Atom.Editor;ImguiAtom;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Editor;Atom_AtomBridge.Tools
+--   Gem Target "EMotionFX.Tools" has direct manually added dependencies of: EMotionFX.Editor
+--   Gem Target "EMotionFX.Tools" has load dependencies of: LmbrCentral.Editor;EMotionFX.Editor
+--   prefix=JEEditorFixture,target=Editor,variant=Tools has direct load dependencies of Atom.Tools;ImGui.Tools;PhysX5.Tools;Atom_AtomBridge.Tools;LmbrCentral.Tools;GraphCanvas.Tools;GraphModel.Tools;CommonFeaturesAtom.Tools;GradientSignal.Tools;SurfaceData.Tools;AtomViewportDisplayInfo.Tools;EMotionFX.Tools
+--   Gem Target "PhysX5.Tools" has direct manually added dependencies of: PhysX5.Editor
+--     Gem Target "PhysX5.Editor" has load dependencies of: 
+--   Gem Target "PhysX5.Tools" has load dependencies of: PhysX5.Editor
+--   prefix=,target=AssetBuilder,variant=Builders has direct load dependencies of AtomShader.Builders;AudioSystem.Builders;CommonFeaturesAtom.Builders;EditorModeFeedback.Builders;Maestro.Builders;Profiler.Builders;SceneProcessing.Builders;Atom_RPI.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;Atom_Feature_Common.Builders;GradientSignal.Builders;SurfaceData.Builders;AtomToolsFramework.Builders;ImGui.Builders;GraphCanvas.Builders;GraphModel.Builders;Atom.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;EMotionFX.Builders
+--   Gem Target "AudioSystem.Builders" has direct manually added dependencies of: AudioSystem.Editor
+--   Gem Target "AudioSystem.Builders" has load dependencies of: AudioSystem.Editor
+--   Gem Target "CommonFeaturesAtom.Builders" has direct manually added dependencies of: Atom_Feature_Common.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;GradientSignal.Builders
+--     Gem Target "GradientSignal.Builders" has direct manually added dependencies of: GradientSignal.Editor
+--     Gem Target "GradientSignal.Builders" has load dependencies of: LmbrCentral.Editor;GradientSignal.Editor
+--   Gem Target "CommonFeaturesAtom.Builders" has load dependencies of: Atom_RHI.Private;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_Feature_Common.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;LmbrCentral.Editor;GradientSignal.Editor;GradientSignal.Builders
+--   Gem Target "EditorModeFeedback.Builders" has direct manually added dependencies of: EditorModeFeedback.Editor
+--   Gem Target "EditorModeFeedback.Builders" has load dependencies of: EditorModeFeedback.Editor
+--   Gem Target "Maestro.Builders" has direct manually added dependencies of: Maestro.Editor
+--   Gem Target "Maestro.Builders" has load dependencies of: LmbrCentral.Editor;Maestro.Editor
+--   Gem Target "Profiler.Builders" has direct manually added dependencies of: Profiler
+--     Gem Target "Profiler" has load dependencies of: 
+--   Gem Target "Profiler.Builders" has load dependencies of: Profiler
+--   Gem Target "SceneProcessing.Builders" has direct manually added dependencies of: SceneProcessing.Editor
+--   Gem Target "SceneProcessing.Builders" has load dependencies of: SceneProcessing.Editor
+--   Gem Target "LmbrCentral.Builders" has direct manually added dependencies of: LmbrCentral.Editor
+--   Gem Target "LmbrCentral.Builders" has load dependencies of: LmbrCentral.Editor
+--   Gem Target "SurfaceData.Builders" has direct manually added dependencies of: SurfaceData.Editor
+--   Gem Target "SurfaceData.Builders" has load dependencies of: LmbrCentral.Editor;SurfaceData.Editor
+--   Gem Target "AtomToolsFramework.Builders" has load dependencies of: 
+--   Gem Target "ImGui.Builders" has direct manually added dependencies of: ImGui.Editor
+--   Gem Target "ImGui.Builders" has load dependencies of: LmbrCentral.Editor;ImGui.Editor
+--   Gem Target "GraphCanvas.Builders" has direct manually added dependencies of: GraphCanvas.Editor
+--   Gem Target "GraphCanvas.Builders" has load dependencies of: GraphCanvas.Editor
+--   Gem Target "GraphModel.Builders" has direct manually added dependencies of: GraphModel.Editor
+--   Gem Target "GraphModel.Builders" has load dependencies of: GraphCanvas.Editor;GraphModel.Editor
+--   Gem Target "Atom.Builders" has direct manually added dependencies of: Atom_AtomBridge.Builders
+--     Gem Target "Atom_AtomBridge.Builders" has direct manually added dependencies of: Atom_AtomBridge.Editor
+--     Gem Target "Atom_AtomBridge.Builders" has load dependencies of: AtomFont;AtomImGuiTools;AtomRenderOptions.Editor;AtomShader.Builders;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common.Editor;Atom_RHI.Private;Atom_RHI_Null.Private;Atom_RPI.Editor;GraphCanvas.Editor;GraphModel.Editor;ImageProcessingAtom.Editor;AtomToolsFramework.Editor;AtomViewportDisplayIcons.Editor;AtomViewportDisplayInfo;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_Feature_Common.Builders;Atom_RHI_Null.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;LmbrCentral.Editor;EMotionFX.Editor;EMotionFX_Atom.Editor;ImguiAtom;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Editor
+--   Gem Target "Atom.Builders" has load dependencies of: AtomFont;AtomImGuiTools;AtomRenderOptions.Editor;AtomShader.Builders;Atom_Bootstrap;Atom_Component_DebugCamera;Atom_RHI_DX12.Private;Atom_RHI_Metal.Private;Atom_RHI_Vulkan.Private;Atom_Feature_Common.Editor;Atom_RHI.Private;Atom_RHI_Null.Private;Atom_RPI.Editor;GraphCanvas.Editor;GraphModel.Editor;ImageProcessingAtom.Editor;AtomToolsFramework.Editor;AtomViewportDisplayIcons.Editor;AtomViewportDisplayInfo;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_Feature_Common.Builders;Atom_RHI_Null.Builders;Atom_RPI.Builders;CommonFeaturesAtom.Editor;LmbrCentral.Editor;EMotionFX.Editor;EMotionFX_Atom.Editor;ImguiAtom;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Editor;Atom_AtomBridge.Builders
+--   Gem Target "EMotionFX.Builders" has direct manually added dependencies of: EMotionFX.Editor
+--   Gem Target "EMotionFX.Builders" has load dependencies of: LmbrCentral.Editor;EMotionFX.Editor
+--   prefix=JEEditorFixture,target=AssetBuilder,variant=Builders has direct load dependencies of Atom.Builders;ImGui.Builders;PhysX5.Builders;Atom_Feature_Common.Builders;AtomShader.Builders;Atom_RPI.Builders;AtomToolsFramework.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;GraphCanvas.Builders;GraphModel.Builders;CommonFeaturesAtom.Builders;GradientSignal.Builders;SurfaceData.Builders;EMotionFX.Builders;PhysXCommon.Builders
+--   Gem Target "PhysX5.Builders" has direct manually added dependencies of: PhysX5.Editor
+--   Gem Target "PhysX5.Builders" has load dependencies of: PhysX5.Editor
+--   Gem Target "PhysXCommon.Builders" has load dependencies of: 
+--   prefix=,target=AssetProcessor,variant=Builders has direct load dependencies of AtomShader.Builders;AudioSystem.Builders;CommonFeaturesAtom.Builders;EditorModeFeedback.Builders;Maestro.Builders;Profiler.Builders;SceneProcessing.Builders;Atom_RPI.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;Atom_Feature_Common.Builders;GradientSignal.Builders;SurfaceData.Builders;AtomToolsFramework.Builders;ImGui.Builders;GraphCanvas.Builders;GraphModel.Builders;Atom.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;EMotionFX.Builders
+--   prefix=JEEditorFixture,target=AssetProcessor,variant=Builders has direct load dependencies of Atom.Builders;ImGui.Builders;PhysX5.Builders;Atom_Feature_Common.Builders;AtomShader.Builders;Atom_RPI.Builders;AtomToolsFramework.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;GraphCanvas.Builders;GraphModel.Builders;CommonFeaturesAtom.Builders;GradientSignal.Builders;SurfaceData.Builders;EMotionFX.Builders;PhysXCommon.Builders
+--   prefix=,target=AssetProcessorBatch,variant=Builders has direct load dependencies of AtomShader.Builders;AudioSystem.Builders;CommonFeaturesAtom.Builders;EditorModeFeedback.Builders;Maestro.Builders;Profiler.Builders;SceneProcessing.Builders;Atom_RPI.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;Atom_Feature_Common.Builders;GradientSignal.Builders;SurfaceData.Builders;AtomToolsFramework.Builders;ImGui.Builders;GraphCanvas.Builders;GraphModel.Builders;Atom.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;EMotionFX.Builders
+--   prefix=JEEditorFixture,target=AssetProcessorBatch,variant=Builders has direct load dependencies of Atom.Builders;ImGui.Builders;PhysX5.Builders;Atom_Feature_Common.Builders;AtomShader.Builders;Atom_RPI.Builders;AtomToolsFramework.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;GraphCanvas.Builders;GraphModel.Builders;CommonFeaturesAtom.Builders;GradientSignal.Builders;SurfaceData.Builders;EMotionFX.Builders;PhysXCommon.Builders
+--   prefix=,target=AssetBundlerBatch,variant=Builders has direct load dependencies of AtomShader.Builders;AudioSystem.Builders;CommonFeaturesAtom.Builders;EditorModeFeedback.Builders;Maestro.Builders;Profiler.Builders;SceneProcessing.Builders;Atom_RPI.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;Atom_Feature_Common.Builders;GradientSignal.Builders;SurfaceData.Builders;AtomToolsFramework.Builders;ImGui.Builders;GraphCanvas.Builders;GraphModel.Builders;Atom.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;EMotionFX.Builders
+--   prefix=JEEditorFixture,target=AssetBundlerBatch,variant=Builders has direct load dependencies of Atom.Builders;ImGui.Builders;PhysX5.Builders;Atom_Feature_Common.Builders;AtomShader.Builders;Atom_RPI.Builders;AtomToolsFramework.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;GraphCanvas.Builders;GraphModel.Builders;CommonFeaturesAtom.Builders;GradientSignal.Builders;SurfaceData.Builders;EMotionFX.Builders;PhysXCommon.Builders
+--   prefix=,target=AssetBundler,variant=Builders has direct load dependencies of AtomShader.Builders;AudioSystem.Builders;CommonFeaturesAtom.Builders;EditorModeFeedback.Builders;Maestro.Builders;Profiler.Builders;SceneProcessing.Builders;Atom_RPI.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;Atom_Feature_Common.Builders;GradientSignal.Builders;SurfaceData.Builders;AtomToolsFramework.Builders;ImGui.Builders;GraphCanvas.Builders;GraphModel.Builders;Atom.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;EMotionFX.Builders
+--   prefix=JEEditorFixture,target=AssetBundler,variant=Builders has direct load dependencies of Atom.Builders;ImGui.Builders;PhysX5.Builders;Atom_Feature_Common.Builders;AtomShader.Builders;Atom_RPI.Builders;AtomToolsFramework.Builders;MaterialCanvas.Builders;MaterialEditor.Builders;PassCanvas.Builders;ShaderManagementConsole.Builders;Atom_AtomBridge.Builders;Atom_RHI_DX12.Builders;Atom_RHI_Metal.Builders;Atom_RHI_Vulkan.Builders;Atom_RHI_Null.Builders;LmbrCentral.Builders;GraphCanvas.Builders;GraphModel.Builders;CommonFeaturesAtom.Builders;GradientSignal.Builders;SurfaceData.Builders;EMotionFX.Builders;PhysXCommon.Builders
+--   prefix=,target=MaterialCanvas,variant=Tools has direct load dependencies of AtomViewportDisplayInfo.Tools;AudioSystem.Tools;CommonFeaturesAtom.Tools;EditorModeFeedback.Tools;Maestro.Tools;Profiler.Tools;SceneProcessing.Tools;LmbrCentral.Tools;GradientSignal.Tools;SurfaceData.Tools;ImGui.Tools;GraphCanvas.Tools;GraphModel.Tools;Atom.Tools;Atom_AtomBridge.Tools;EMotionFX.Tools
+--   prefix=JEEditorFixture,target=MaterialCanvas,variant=Tools has direct load dependencies of Atom.Tools;ImGui.Tools;PhysX5.Tools;Atom_AtomBridge.Tools;LmbrCentral.Tools;GraphCanvas.Tools;GraphModel.Tools;CommonFeaturesAtom.Tools;GradientSignal.Tools;SurfaceData.Tools;AtomViewportDisplayInfo.Tools;EMotionFX.Tools
+--   prefix=,target=MaterialEditor,variant=Tools has direct load dependencies of AtomViewportDisplayInfo.Tools;AudioSystem.Tools;CommonFeaturesAtom.Tools;EditorModeFeedback.Tools;Maestro.Tools;Profiler.Tools;SceneProcessing.Tools;LmbrCentral.Tools;GradientSignal.Tools;SurfaceData.Tools;ImGui.Tools;GraphCanvas.Tools;GraphModel.Tools;Atom.Tools;Atom_AtomBridge.Tools;EMotionFX.Tools
+--   prefix=JEEditorFixture,target=MaterialEditor,variant=Tools has direct load dependencies of Atom.Tools;ImGui.Tools;PhysX5.Tools;Atom_AtomBridge.Tools;LmbrCentral.Tools;GraphCanvas.Tools;GraphModel.Tools;CommonFeaturesAtom.Tools;GradientSignal.Tools;SurfaceData.Tools;AtomViewportDisplayInfo.Tools;EMotionFX.Tools
+--   prefix=,target=PassCanvas,variant=Tools has direct load dependencies of AtomViewportDisplayInfo.Tools;AudioSystem.Tools;CommonFeaturesAtom.Tools;EditorModeFeedback.Tools;Maestro.Tools;Profiler.Tools;SceneProcessing.Tools;LmbrCentral.Tools;GradientSignal.Tools;SurfaceData.Tools;ImGui.Tools;GraphCanvas.Tools;GraphModel.Tools;Atom.Tools;Atom_AtomBridge.Tools;EMotionFX.Tools
+--   prefix=JEEditorFixture,target=PassCanvas,variant=Tools has direct load dependencies of Atom.Tools;ImGui.Tools;PhysX5.Tools;Atom_AtomBridge.Tools;LmbrCentral.Tools;GraphCanvas.Tools;GraphModel.Tools;CommonFeaturesAtom.Tools;GradientSignal.Tools;SurfaceData.Tools;AtomViewportDisplayInfo.Tools;EMotionFX.Tools
+--   prefix=,target=ShaderManagementConsole,variant=Tools has direct load dependencies of AtomViewportDisplayInfo.Tools;AudioSystem.Tools;CommonFeaturesAtom.Tools;EditorModeFeedback.Tools;Maestro.Tools;Profiler.Tools;SceneProcessing.Tools;LmbrCentral.Tools;GradientSignal.Tools;SurfaceData.Tools;ImGui.Tools;GraphCanvas.Tools;GraphModel.Tools;Atom.Tools;Atom_AtomBridge.Tools;EMotionFX.Tools
+--   prefix=JEEditorFixture,target=ShaderManagementConsole,variant=Tools has direct load dependencies of Atom.Tools;ImGui.Tools;PhysX5.Tools;Atom_AtomBridge.Tools;LmbrCentral.Tools;GraphCanvas.Tools;GraphModel.Tools;CommonFeaturesAtom.Tools;GradientSignal.Tools;SurfaceData.Tools;AtomViewportDisplayInfo.Tools;EMotionFX.Tools
+--   Computing Runtime Dependencies (files to copy to the target's output directory)...
+-- CPack Package Version: 2.8.0
+-- Packaging is not supported for this platform/configuration
+-- Asset Processor: excluding in-tree build dir 'build/n0-validation/original-engine/' (overlay: F:/JericoEngine/JericoEngine/user/Registry/asset_processor_exclude_build_n0_validation_original_engine.setreg)
+-- Configuring done (84.9s)
+-- Generating done (30.8s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine

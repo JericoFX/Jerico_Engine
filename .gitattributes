@@ -168,3 +168,7 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Viewport/CameraRig.png -filter -diff -merge -text
 # Native prefab integration fixture: audited original bytes, without inherited LFS endpoints.
 /Projects/JEEditorFixture/Assets/NativePrefabBuilder/NativePrefabCube.fbx -filter -diff -merge -text
+
+# Native primitive source assets: audited original payloads, no inherited LFS endpoint.
+/Engine/Assets/Primitives/Assets/Objects/_Primitives/*.fbx -filter -diff -merge -text
+/Engine/Assets/Primitives/Assets/Textures/_Primitives/*.tif -filter -diff -merge -text

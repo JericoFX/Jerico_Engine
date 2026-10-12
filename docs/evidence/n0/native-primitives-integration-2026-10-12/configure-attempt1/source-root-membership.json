@@ -1,0 +1,26 @@
+{
+  "capturedUtc": "2026-10-12T10:30:34.2844124Z",
+  "purpose": "Clarifies path-existence flag from registry-cache-review.json with actual file membership",
+  "oldGemAssetsRoot": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\Assets",
+  "oldGemAssetsDirectoryExists": true,
+  "oldGemAssetsFileCount": 0,
+  "oldGemAssetFiles": [],
+  "nativeEngineAssetsRoot": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets",
+  "nativeEngineAssetsDirectoryExists": true,
+  "nativeEngineAssetFileCount": 12,
+  "nativeEngineAssetFiles": [
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1_MiddleGrey.material",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Box_1x1.fbx.assetinfo",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1_MiddleGrey.material",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Cylinder_1x1.fbx.assetinfo",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1_MiddleGrey.material",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Objects\\_Primitives\\_Sphere_1x1.fbx.assetinfo",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_ddn.tif",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker_spec.tif",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets\\Textures\\_Primitives\\Middle_Gray_Checker.tif"
+  ],
+  "note": "Old Gem Assets directory exists but contains zero files; native Engine scanroot contains the 12 files represented in the 24-input freeze."
+}

@@ -1,0 +1,154 @@
+{
+  "capturedUtc": "2026-10-12T10:30:14.5153270Z",
+  "configureResultPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-primitives-rev1\\configure-attempt1\\configure-result.json",
+  "configureResultSha256": "344F46B3B0404BB1B57F099EDF9B9EEFD9F9EFF412C156E18E1E15BE75C639D1",
+  "stdoutSha256": "3ABD55C46D60B34EA4218B2FCB07D2E48CD086AD912023464CCA4C719332CEEE",
+  "stderrSha256": "EAE78D81117939632167B1C182E11CE1242206450AB4094A6B8E040F10E63419",
+  "cacheAfter": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "2C441A88B89016B02A73E6D412DA77532EB7100F25DDB399481527EC760E9549",
+    "checks": [
+      {
+        "exactLine": "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+        "present": true
+      },
+      {
+        "exactLine": "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+        "present": true
+      },
+      {
+        "exactLine": "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+        "present": true
+      },
+      {
+        "exactLine": "LY_PACKAGE_SERVER_URLS:STRING=",
+        "present": true
+      },
+      {
+        "exactLine": "O3DE_EXTERNAL_SUBDIRS:STRING=",
+        "present": true
+      },
+      {
+        "exactLine": "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+        "present": true
+      }
+    ],
+    "allSixExact": true
+  },
+  "generatedRegistryScan": {
+    "directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry",
+    "setregFileCount": 31,
+    "needles": [
+      "Gems/PrimitiveAssets/Assets",
+      "Engine/Assets/Primitives/Assets",
+      "gemassets-{1F8BBF64-19E3-5BFD-8922-325C343ED743}",
+      "PrimitiveAssets"
+    ],
+    "matches": [],
+    "matchCount": 0,
+    "activeProductRegistries": [
+      {
+        "name": "cmake_dependencies.assetprocessor.setreg",
+        "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.assetprocessorbatch.setreg",
+        "sha256": "CE8392112594D786053B1E03D0604E22D00D9A027D29694609D0464D8FF2F942",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+        "sha256": "21A26F6BDD2004A379E3533D39227357B99FE80E5E1B477814869DD828A7E52C",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+        "sha256": "21A26F6BDD2004A379E3533D39227357B99FE80E5E1B477814869DD828A7E52C",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+        "sha256": "21A26F6BDD2004A379E3533D39227357B99FE80E5E1B477814869DD828A7E52C",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.editor.setreg",
+        "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+        "sha256": "3B847CB605FF9C7E7B3D47F16CFA6B4DC91BB92E636E969262BFA0C250CBFC3E",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+        "sha256": "57CB33BACA13013BC4CB2DA83C055FDEA16843572F2793F6137A526A3BC83EAE",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+        "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+        "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+        "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      },
+      {
+        "name": "cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+        "sha256": "01728A5427E857C6CB970675C74C11652750ECD5F79B13759EA8E78533175BCA",
+        "containsOldGemPath": false,
+        "containsNativeRoot": false,
+        "containsGemName": false
+      }
+    ],
+    "historicalServerReleaseRegistriesExcluded": [
+      "cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg"
+    ]
+  },
+  "sourceScanfolder": {
+    "path": "F:\\JericoEngine\\JericoEngine\\Registry\\primitives_assetprocessor.setreg",
+    "sha256": "B139CBD730F7F9E8E3566944E4F65CF97B1815FA885C17AC218A93D986579707",
+    "watchLine": "\"watch\": \"@ENGINEROOT@/Engine/Assets/Primitives/Assets\",",
+    "nativeAssetsDirectory": "F:\\JericoEngine\\JericoEngine\\Engine\\Assets\\Primitives\\Assets",
+    "nativeAssetsDirectoryExists": true,
+    "oldGemSourceFolder": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\Assets",
+    "oldGemSourceFolderExists": true
+  },
+  "assetDatabase": "AssetProcessor has not yet been run by this validation; DB scanfolder/source/product validation remains parent-operated"
+}
