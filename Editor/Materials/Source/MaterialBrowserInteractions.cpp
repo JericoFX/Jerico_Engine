@@ -16,6 +16,9 @@
 #include <AtomToolsFramework/Document/CreateDocumentDialog.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzCore/IO/FileIO.h>
+#include <AzCore/IO/Path/Path.h>
+#include <AzCore/IO/SystemFile.h>
+#include <QMessageBox>
 #include <AzCore/std/string/wildcard.h>
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
@@ -79,55 +82,7 @@ namespace JE
                 { "Material_Creator", "Material", QIcon(),
                   [&](const AZStd::string& fullSourceFolderNameInCallback, [[maybe_unused]] const AZ::Uuid& sourceUUID)
                   {
-                      const AZStd::string defaultMaterialType =
-                          AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
-                              "/O3DE/Atom/MaterialEditor/DefaultMaterialType",
-                              "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype"));
-
-                      QWidget* mainWindow = nullptr;
-                      AzToolsFramework::EditorRequests::Bus::BroadcastResult(
-                          mainWindow, &AzToolsFramework::EditorRequests::Bus::Events::GetMainWindow);
-
-                      CreateDocumentDialog dialog(
-                          QObject::tr("Create Material"),
-                          QObject::tr("Select Material Type"),
-                          fullSourceFolderNameInCallback.empty() ? QObject::tr("Select Material Path") : QString(),
-                          fullSourceFolderNameInCallback.c_str(),
-                          { "material" },
-                          defaultMaterialType.c_str(),
-                          [](const AZStd::string& path)
-                          {
-                              return IsDocumentPathEditable(path) &&
-                                  path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialTypeExtensionWithDot);
-                          },
-                          mainWindow);
-
-                      dialog.adjustSize();
-
-                      if (dialog.exec() == QDialog::Accepted && !dialog.m_sourcePath.isEmpty() && !dialog.m_targetPath.isEmpty())
-                      {
-                          uint32_t defaultMaterialVersion = 5;
-                          const char* fullSourcePath = dialog.m_sourcePath.toUtf8().constData();
-                          auto materialTypeSourceData = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(fullSourcePath);
-
-                          if (materialTypeSourceData.IsSuccess())
-                          {
-                              defaultMaterialVersion = materialTypeSourceData.GetValue().m_version;
-                          }
-                          AZ::RPI::MaterialSourceData materialData;
-                          materialData.m_materialTypeVersion = defaultMaterialVersion;
-                          materialData.m_materialType = AtomToolsFramework::GetPathToExteralReference(
-                              dialog.m_targetPath.toUtf8().constData(), dialog.m_sourcePath.toUtf8().constData());
-                          dialog.m_sourcePath.toUtf8().constData();
-                          materialData.m_parentMaterial = "";
-                          AZ::RPI::JsonUtils::SaveObjectToFile(dialog.m_targetPath.toUtf8().constData(), materialData);
-                          AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotificationBus::Event(
-                              AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::FileCreationNotificationBusId,
-                              &AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::HandleAssetCreatedInEditor,
-                              dialog.m_targetPath.toUtf8().constData(),
-                              AZ::Crc32(),
-                              false);
-                      }
+                      CreateMaterial(fullSourceFolderNameInCallback);
                   } });
 
             creators.push_back(
@@ -170,6 +125,111 @@ namespace JE
                               false);
                       }
                   } });
+        }
+
+        AZStd::string MaterialBrowserInteractions::CreateMaterial(
+            const AZStd::string& initialFolder, const AZStd::string& initialMaterialType)
+        {
+            const AZStd::string materialType = initialMaterialType.empty()
+                ? AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
+                      "/O3DE/Atom/MaterialEditor/DefaultMaterialType",
+                      "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype"))
+                : initialMaterialType;
+            QWidget* mainWindow = nullptr;
+            AzToolsFramework::EditorRequests::Bus::BroadcastResult(
+                mainWindow, &AzToolsFramework::EditorRequests::Bus::Events::GetMainWindow);
+            AtomToolsFramework::CreateDocumentDialog dialog(
+                QObject::tr("Create Material"), QObject::tr("Select Material Type"),
+                initialFolder.empty() ? QObject::tr("Select Material Path") : QString(),
+                initialFolder.c_str(), {"material"}, materialType.c_str(),
+                [](const AZStd::string& path)
+                {
+                    return AtomToolsFramework::IsDocumentPathEditable(path) &&
+                        path.ends_with(EditorMaterialComponentUtil::MaterialTypeExtensionWithDot);
+                }, mainWindow);
+            dialog.adjustSize();
+            if (dialog.exec() != QDialog::Accepted)
+            {
+                return {};
+            }
+
+            // Keep both strings alive through loading, serialization and the asset creation notification.
+            const AZStd::string sourcePath = dialog.m_sourcePath.toUtf8().constData();
+            AZStd::string targetPath = dialog.m_targetPath.toUtf8().constData();
+            if (!AtomToolsFramework::ValidateDocumentPath(targetPath))
+            {
+                QMessageBox::critical(mainWindow, QObject::tr("Create Material"), QObject::tr("The material destination is not editable."));
+                return {};
+            }
+            auto result = CreateMaterialSourceFile(sourcePath, targetPath);
+            if (!result.IsSuccess())
+            {
+                QMessageBox::critical(mainWindow, QObject::tr("Create Material"), QString::fromUtf8(result.GetError().c_str()));
+                return {};
+            }
+            AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotificationBus::Event(
+                AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::FileCreationNotificationBusId,
+                &AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::HandleAssetCreatedInEditor,
+                targetPath.c_str(), AZ::Crc32(), false);
+            return targetPath;
+        }
+
+        AZ::Outcome<void, AZStd::string> MaterialBrowserInteractions::CreateMaterialSourceFile(
+            const AZStd::string& materialTypePath, const AZStd::string& materialPath)
+        {
+            const AZStd::string sourcePath = AtomToolsFramework::GetPathWithoutAlias(materialTypePath);
+            if (!AZ::IO::PathView(sourcePath).IsAbsolute() ||
+                !sourcePath.ends_with(EditorMaterialComponentUtil::MaterialTypeExtensionWithDot) ||
+                !AZ::IO::PathView(materialPath).IsAbsolute() ||
+                !materialPath.ends_with(EditorMaterialComponentUtil::MaterialExtensionWithDot))
+            {
+                return AZ::Failure(AZStd::string("Select an absolute .materialtype source and a .material destination."));
+            }
+            if (AZ::IO::SystemFile::Exists(materialPath.c_str()))
+            {
+                return AZ::Failure(AZStd::string("The material destination already exists."));
+            }
+            auto materialType = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(sourcePath);
+            if (!materialType.IsSuccess())
+            {
+                return AZ::Failure(AZStd::string("Failed to load the selected material type."));
+            }
+            AZ::RPI::MaterialSourceData materialData;
+            materialData.m_materialTypeVersion = materialType.GetValue().m_version;
+            materialData.m_materialType = AtomToolsFramework::GetPathToExteralReference(materialPath, sourcePath);
+            materialData.m_parentMaterial.clear();
+
+            // Preserve the unwrapped .material schema and check the actual write, not only serialization.
+            rapidjson::Document document;
+            document.SetObject();
+            AZ::JsonSerializerSettings settings;
+            AZ::RPI::JsonReportingHelper reporting;
+            reporting.Attach(settings);
+            AZ::JsonSerialization::Store(document, document.GetAllocator(), materialData, settings);
+            if (reporting.ErrorsReported())
+            {
+                return AZ::Failure(AZStd::string("Failed to serialize the material source."));
+            }
+            AZStd::string contents;
+            auto serialized = AZ::JsonSerializationUtils::WriteJsonString(document, contents);
+            if (!serialized.IsSuccess())
+            {
+                return serialized;
+            }
+            AZ::IO::SystemFile output;
+            if (!output.Open(materialPath.c_str(), AZ::IO::SystemFile::SF_OPEN_WRITE_ONLY | AZ::IO::SystemFile::SF_OPEN_CREATE_NEW))
+            {
+                return AZ::Failure(AZStd::string("Failed to create the material destination. Existing files are not overwritten."));
+            }
+            const auto written = output.Write(contents.data(), contents.size());
+            output.Close();
+            if (written != contents.size())
+            {
+                // This operation exclusively created the file; never remove a pre-existing destination.
+                AZ::IO::SystemFile::Delete(materialPath.c_str());
+                return AZ::Failure(AZStd::string("Failed to write the complete material source."));
+            }
+            return AZ::Success();
         }
 
         bool MaterialBrowserInteractions::HandlesSource(AZStd::string_view fileName) const

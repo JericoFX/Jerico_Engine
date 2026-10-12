@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include <JE/Editor/Materials/Base.h>
+#include <AzCore/EBus/EBus.h>
 #include <Atom/RPI.Public/Material/Material.h>
 #include <Atom/RPI.Reflect/Material/MaterialAsset.h>
 
@@ -20,12 +22,12 @@ namespace AZ
     } // namespace RPI
 } // namespace AZ
 
-namespace MaterialEditor
+namespace JE::Editor
 {
     //! UVs are processed in a property group but will be handled differently.
     static constexpr const char UvGroupName[] = "uvSets";
 
-    class MaterialDocumentRequests : public AZ::EBusTraits
+    class JE_EDITOR_MATERIALS_API MaterialDocumentRequests : public AZ::EBusTraits
     {
     public:
         static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Multiple;
@@ -53,4 +55,6 @@ namespace MaterialEditor
     };
 
     using MaterialDocumentRequestBus = AZ::EBus<MaterialDocumentRequests>;
-} // namespace MaterialEditor
+} // namespace JE::Editor
+
+AZ_DECLARE_EBUS_MULTI_ADDRESS(JE_EDITOR_MATERIALS_API, JE::Editor::MaterialDocumentRequests);

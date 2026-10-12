@@ -1,0 +1,33 @@
+{
+  "status": "DX12_EXISTING_MATERIAL_PASS_CREATION_ALIAS_RED",
+  "verifiedUtc": "2026-10-12T18:05:21.2901310Z",
+  "editorPid": 199664,
+  "editorExited": true,
+  "backend": "dx12",
+  "existingMaterial": {
+    "factorAfterDiscard": "default 1; field omitted",
+    "selectionRetained": "5353023507883795700",
+    "colorPicker": "PASS",
+    "closeDiscard": "PASS",
+    "saveAndVisibleAssetReload": "PASS"
+  },
+  "materialTypeCreation": {
+    "outputAbsent": true,
+    "cancel": "PASS",
+    "create": "FAIL: source alias rejected by absolute path guard"
+  },
+  "sceneHashes": [
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "Hash": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "Hash": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    }
+  ],
+  "limitations": [
+    "No visual parity or performance acceptance between backends",
+    "Material creation requires alias fix and real UI replay"
+  ]
+}

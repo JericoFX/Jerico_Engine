@@ -23,19 +23,95 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Document/MaterialDocument.h>
+#include <JE/Editor/Materials/Document/MaterialDocument.h>
+#include <AzToolsFramework/API/ToolsApplicationAPI.h>
+#include <AzToolsFramework/Undo/UndoSystem.h>
 
-namespace MaterialEditor
+AZ_INSTANTIATE_EBUS_MULTI_ADDRESS(JE_EDITOR_MATERIALS_API, JE::Editor::MaterialDocumentRequests);
+
+namespace JE::Editor
 {
+    namespace
+    {
+        using PropertyValueMap = AZStd::unordered_map<AZ::Name, AZStd::any>;
+
+        // Resolve the retained session document at replay time. Commands never own a document pointer.
+        bool RestoreDocumentSnapshot(const AZ::Uuid& documentId, const AZStd::string& sourcePath,
+            const PropertyValueMap& expectedValues, const PropertyValueMap& values)
+        {
+            auto* document = AtomToolsFramework::AtomToolsDocumentRequestBus::FindFirstHandler(documentId);
+            auto* material = MaterialDocumentRequestBus::FindFirstHandler(documentId);
+            if (!document || !material || sourcePath.empty() || document->GetAbsolutePath() != sourcePath)
+            {
+                AZ_Error("MaterialDocument", false, "Cannot replay material edit: document was destroyed, closed, or changed source path.");
+                return false;
+            }
+
+            // A material type may change during source reload. Validate every property before applying any delta.
+            for (const auto& [name, value] : values)
+            {
+                const auto& current = material->GetPropertyValue(name.GetStringView());
+                if (current.empty() || current.type() != value.type())
+                {
+                    AZ_Error("MaterialDocument", false, "Cannot replay material edit: property '%s' is missing or changed type.", name.GetCStr());
+                    return false;
+                }
+                const auto expected = expectedValues.find(name);
+                if (expected == expectedValues.end() || !AtomToolsFramework::ArePropertyValuesEqual(current, expected->second))
+                {
+                    AZ_Error("MaterialDocument", false, "Cannot replay material edit: property '%s' changed outside the retained history.", name.GetCStr());
+                    return false;
+                }
+            }
+            for (const auto& [name, value] : values)
+            {
+                MaterialDocumentRequestBus::Event(documentId, &MaterialDocumentRequestBus::Events::SetPropertyValue,
+                    name.GetStringView(), value);
+            }
+            return true;
+        }
+
+        class MaterialDocumentUndo final : public AzToolsFramework::UndoSystem::URSequencePoint
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(MaterialDocumentUndo, AZ::SystemAllocator);
+
+            MaterialDocumentUndo(const AZ::Uuid& documentId, const AZStd::string& sourcePath,
+                PropertyValueMap undoValues, PropertyValueMap redoValues)
+                : URSequencePoint("Edit Material Document")
+                , m_documentId(documentId)
+                , m_sourcePath(sourcePath)
+                , m_undoValues(AZStd::move(undoValues))
+                , m_redoValues(AZStd::move(redoValues))
+            {
+            }
+
+            bool Changed() const override { return !m_undoValues.empty(); }
+            void Undo() override { RestoreDocumentSnapshot(m_documentId, m_sourcePath, m_redoValues, m_undoValues); }
+            void Redo() override { RestoreDocumentSnapshot(m_documentId, m_sourcePath, m_undoValues, m_redoValues); }
+
+        private:
+            const AZ::Uuid m_documentId;
+            const AZStd::string m_sourcePath;
+            const PropertyValueMap m_undoValues;
+            const PropertyValueMap m_redoValues;
+        };
+    }
+
     void MaterialDocument::Reflect(AZ::ReflectContext* context)
     {
         if (auto serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<MaterialDocument, AtomToolsFramework::AtomToolsDocument>()
-                ->Version(0);
+            if (serialize->IsRemovingReflection() || !serialize->FindClassData(azrtti_typeid<MaterialDocument>()))
+            {
+                serialize->Class<MaterialDocument, AtomToolsFramework::AtomToolsDocument>()
+                    ->Version(0);
+            }
         }
 
-        if (auto behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context))
+        if (auto behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context);
+            behaviorContext && (behaviorContext->IsRemovingReflection() ||
+                behaviorContext->m_ebuses.find("MaterialDocumentRequestBus") == behaviorContext->m_ebuses.end()))
         {
             behaviorContext->EBus<MaterialDocumentRequestBus>("MaterialDocumentRequestBus")
                 ->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Common)
@@ -46,8 +122,10 @@ namespace MaterialEditor
         }
     }
 
-    MaterialDocument::MaterialDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo)
+    MaterialDocument::MaterialDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo,
+        HistoryOwner historyOwner)
         : AtomToolsFramework::AtomToolsDocument(toolId, documentTypeInfo)
+        , m_historyOwner(historyOwner)
     {
         MaterialDocumentRequestBus::Handler::BusConnect(m_id);
     }
@@ -140,12 +218,12 @@ namespace MaterialEditor
         return property->GetValue();
     }
 
-    AtomToolsFramework::DocumentTypeInfo MaterialDocument::BuildDocumentTypeInfo()
+    AtomToolsFramework::DocumentTypeInfo MaterialDocument::BuildDocumentTypeInfo(HistoryOwner historyOwner)
     {
         AtomToolsFramework::DocumentTypeInfo documentType;
         documentType.m_documentTypeName = "Material";
-        documentType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo) {
-            return aznew MaterialDocument(toolId, documentTypeInfo); };
+        documentType.m_documentFactoryCallback = [historyOwner](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo) {
+            return aznew MaterialDocument(toolId, documentTypeInfo, historyOwner); };
         documentType.m_supportedExtensionsToCreate.push_back({ "Material Type", AZ::RPI::MaterialTypeSourceData::Extension });
         documentType.m_supportedExtensionsToCreate.push_back({ "Material", AZ::RPI::MaterialSourceData::Extension });
         documentType.m_supportedExtensionsToOpen.push_back({ "Material Type", AZ::RPI::MaterialTypeSourceData::Extension });
@@ -313,6 +391,20 @@ namespace MaterialEditor
 
     bool MaterialDocument::BeginEdit()
     {
+        if (m_historyOwner == HistoryOwner::Editor)
+        {
+            AzToolsFramework::UndoSystem::UndoStack* stack = nullptr;
+            AzToolsFramework::ToolsApplicationRequestBus::BroadcastResult(stack,
+                &AzToolsFramework::ToolsApplicationRequestBus::Events::GetUndoStack);
+            bool replaying = false;
+            AzToolsFramework::ToolsApplicationRequestBus::BroadcastResult(replaying,
+                &AzToolsFramework::ToolsApplicationRequestBus::Events::IsDuringUndoRedo);
+            if (!stack || replaying || m_absolutePath.empty())
+            {
+                AZ_Error("MaterialDocument", false, "Material edit requires an open document and an available Editor Undo stack outside replay.");
+                return false;
+            }
+        }
         // Save the current properties as a momento for undo before any changes are applied
         m_propertyValuesBeforeEdit.clear();
         TraverseGroups(m_groups, [this](auto& group) {
@@ -345,9 +437,29 @@ namespace MaterialEditor
 
         if (!propertyValuesForUndo.empty() && !propertyValuesForRedo.empty())
         {
-            AddUndoRedoHistory(
-                [this, propertyValuesForUndo]() { RestorePropertyValues(propertyValuesForUndo); },
-                [this, propertyValuesForRedo]() { RestorePropertyValues(propertyValuesForRedo); });
+            if (m_historyOwner == HistoryOwner::Editor)
+            {
+                AzToolsFramework::UndoSystem::UndoStack* stack = nullptr;
+                AzToolsFramework::ToolsApplicationRequestBus::BroadcastResult(stack,
+                    &AzToolsFramework::ToolsApplicationRequestBus::Events::GetUndoStack);
+                if (!stack)
+                {
+                    RestorePropertyValues(propertyValuesForUndo);
+                    m_propertyValuesBeforeEdit.clear();
+                    AZ_Error("MaterialDocument", false, "Material edit cancelled: Editor Undo stack is unavailable.");
+                    return false;
+                }
+                AzToolsFramework::ScopedUndoBatch undoBatch("Edit Material Document");
+                auto* command = aznew MaterialDocumentUndo(m_id, m_absolutePath,
+                    AZStd::move(propertyValuesForUndo), AZStd::move(propertyValuesForRedo));
+                command->SetParent(undoBatch.GetUndoBatch());
+            }
+            else
+            {
+                AddUndoRedoHistory(
+                    [this, propertyValuesForUndo]() { RestorePropertyValues(propertyValuesForUndo); },
+                    [this, propertyValuesForRedo]() { RestorePropertyValues(propertyValuesForRedo); });
+            }
         }
 
         m_propertyValuesBeforeEdit.clear();
@@ -1062,4 +1174,4 @@ namespace MaterialEditor
         });
         return result;
     }
-} // namespace MaterialEditor
+} // namespace JE::Editor

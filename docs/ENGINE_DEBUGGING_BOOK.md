@@ -1,5 +1,24 @@
 # Libro de errores y aprendizaje de JericoEngine
 
+## O-40 — Traslado de MaterialDocument: cierre de namespace y fixture RTTI (2026-10-12)
+
+Attempt1 de native-material-workspace-rev1: configure exit0/82.290s, focal build exit1/53.641s. El header trasladado acababa con un namespace sin cuerpo por reemplazo textual del comentario de cierre; produjo C2059 en NamedEntityId y cascadas hash/EditorContext. Reparación delimitada al sufijo del header; attempt2 compila EditorMaterials.dll y elimina esas cascadas, sin alterar functors ni aliases.
+
+Attempt2 falla sólo al compilar la prueba factory: azrtti_cast desde AtomToolsDocumentRequests, interfaz sin AZ_TYPE_INFO. Se verifica la fábrica mediante Requests API, nombre de documento y bus nativo; UUID/reflection se mantienen. No agregar RTTI al motor para satisfacer un fixture. Attempt3 asignado; tests/hosts/UI aún pendientes. Los dos fallos de compilación no son RED funcional ni pruebas de regresión pasadas. Evidencia local build/n0-validation/native-material-workspace-rev1/attempt1 y attempt2; inputs169 intactos después de cada intento.
+
+Diagnóstico de lifetime: attempt3 compila y pasa 11 casos MaterialDocument; Workspace aborta en destrucción. BareInspector pasa, SelectedInspector reproduce AV sin Workspace. Pila en workspace-debugger identifica guardado SettingsRegistry desde destructor Inspector y reporter JSON. La reflexión ausente se añadió al fixture pero diagnostic6 sigue fallando (0xC0000005, asignación de 140704592467040 bytes). Código Store mutable persiste callback con referencia a scratchBuffer local; SetObject reutiliza settings miembro. Copia por operación propuesta, todavía sin GREEN. No atribuir el crash a Qt/allocator sin evidencia ni desactivar guardado para ocultarlo. Consumidor .materialtype se integra antes de aceptación; limitación heredada de Reopen ante cambio de tipo en schema sigue pendiente.
+
+GREEN focal attempt5: build exit0/23.034s y suite22/22 sin fallos/errores/skips. SelectedInspector aislado pasó en attempt4; producción usa settings locales y fixture incluye JSON serializers+Inspector. Test de reporter conserva10warnings explícitos mediante OnPreWarning, con unreflectionRAII; macro anterior contaba asserts, no warnings. No presentar este ajuste de prueba como defecto de motor. Freeze rev5/176 intacto. Start-Process -Wait retuvo árbol por mspdbsrv del build; PID propio identificado y cerrado permitió capturar exit0 original, sin rebuild. Runners siguientes esperan PID con WaitForExit, no árbol. Hosts/UI todavía pendientes.
+
+
+UI Vulkan RED tras gates253/253: panel nativo abrió sin proceso MaterialEditor; mixedUndo/Redo, Save, Cancel y close/reopen conservando historial comprobados. Abrir selector de color termina AV0xC0000005 escribiendo0x28, QPixmap::detach -> QPainter::begin -> MakeAlphaBrush -> PaletteView. Dump/log/capturas en editor-vulkan-attempt1. alpha-background.png actual es pointerLFS128B, payload esperado207B; no afirmar todavía que el recurso nulo basta para explicar AV. Se diagnostica con dump y reproducción focal antes de editar C++. Escena no guardada e intacta; material propio sí guardado y AP lo procesó. Recarga visible y DX12 pendientes.
+
+
+Causa de color confirmada por recurso nulo: PNG era pointer LFS; recuperar payload207B exacto desde GitHub permitido hace pasar dos regresiones y selector real en Vulkan/DX12. qrc customcommand no declara imágenes como dependencias: rebuild inicial dejó pointer embebido; se conservó y retiró sólo qrc generado para regenerarlo, sin tocar paquete Qt. Materiales24/24 y EditorLib72/72 GREEN. Creación por UI encuentra segundo defecto: AssetSelectionComboBox retorna alias del tipo y CreateMaterialSourceFile exige absoluto antes de resolver; corregir sólo origen con helper existente, destino estricto y CREATE_NEW intactos. Evidencia color-picker-green-attempt2 y editor-dx12-attempt1. Creación sigue RED hasta reproducción GREEN.
+
+Alias GREEN confirmado:25/25Materiales+72/72EditorLib; UI DX12 crea StandardPBRversion5, APprocesa y panelabre/reabre sin proceso externo. Source tipo intacto. Aviso externo tras propia creación pendienteUX; no bloqueó ni perdió documento. Validación y capturas docs/evidence/n0/native-material-workspace-2026-10-12.
+
+
 ## O-39 — Pruebas de serialización: asignador y cierre del módulo (2026-10-12)
 
 RED cámara: NoClipPropertiesRoundTripPreservesAllFiveValues termina en 0xc0000374. La estructura no tiene AZ_CLASS_ALLOCATOR: InstanceFactory<T,false,false> la crea con azmalloc/SystemAllocator, pero el unique_ptr de la prueba usaba delete. Carga in-place sobre una variable local conserva los cinco valores y UUID sin liberar con otro asignador. GREEN attempt6: WorldCamera9 casos, proceso exit0; producción intacta.

@@ -32,7 +32,9 @@ namespace JE
 {
     namespace Editor
     {
-        //! System component that manages launching and maintaining connections with the material editor.
+        class MaterialWorkspaceSession;
+
+        //! System component that owns the native material workspace session.
         class JE_EDITOR_MATERIALS_API EditorMaterialSystemComponent final
             : public AZ::Component
             , public AZ::EntitySystemBus::Handler
@@ -47,6 +49,9 @@ namespace JE
         {
         public:
             AZ_COMPONENT(EditorMaterialSystemComponent, "{96652157-DA0B-420F-B49C-0207C585144C}");
+
+            EditorMaterialSystemComponent();
+            ~EditorMaterialSystemComponent() override;
 
             static void Reflect(AZ::ReflectContext* context);
 
@@ -91,6 +96,7 @@ namespace JE
 
             // AztoolsFramework::EditorEvents::Bus::Handler overrides...
             void NotifyRegisterViews() override;
+            void NotifyMainWindowInitialized(QMainWindow* mainWindow) override;
 
             // AzToolsFramework::ToolsApplicationNotificationBus::Handler overrides...
             void AfterEntitySelectionChanged(const AzToolsFramework::EntityIdList& newlySelectedEntities, const AzToolsFramework::EntityIdList&) override;
@@ -101,6 +107,8 @@ namespace JE
 
             void PurgePreviews();
 
+            AZStd::unique_ptr<MaterialWorkspaceSession> m_workspaceSession;
+            bool m_workspacePaneRegistered = false;
             AZStd::unique_ptr<MaterialBrowserInteractions> m_materialBrowserInteractions;
             AZStd::unordered_set<AZStd::pair<AZ::EntityId, JE::Render::MaterialAssignmentId>> m_materialPreviewRequests;
             AZStd::unordered_map<AZ::EntityId, AZStd::unordered_map<JE::Render::MaterialAssignmentId, QPixmap>> m_materialPreviews;

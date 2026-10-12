@@ -1,0 +1,47 @@
+{
+  "status": "NATIVE_256_PASS_MATERIAL_WORKSPACE_UI_VERIFIED",
+  "freeze": "parent/integrated-freeze-rev9-alias-green.json",
+  "freezeSHA256": "DF2D575DE758994A83653D88A99A28E13314F004815525B101779A30A9290F62",
+  "focal": {
+    "evidence": "alias-green-attempt1",
+    "tests": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredUI": [
+    "Vulkan: open material in editor with no separate MaterialEditor process",
+    "Global chronological entity/material Undo and Redo",
+    "Save and reopen; AP updates scene while selection retained",
+    "Close and reopen pane retains document and history",
+    "Application close Cancel and Save/Discard paths",
+    "DX12: same integrated workspace on real scene",
+    "Material type creation and Cancel leave original type intact"
+  ],
+  "limits": [
+    "Standalone MaterialEditor and MaterialCanvas retirement not complete",
+    "Dependency schema type changes during Reopen remain inherited open issue",
+    "No global shipping-size or performance acceptance",
+    "Linux Vulkan and VR not verified"
+  ],
+  "hosts": {
+    "settingsRegistryTests": 159,
+    "failures": 0,
+    "editorLibTests": 72,
+    "evidence": "native-attempt5/hosts-result.json"
+  },
+  "ui": {
+    "evidence": [
+      "editor-vulkan-attempt1/ui-result.json",
+      "editor-vulkan-attempt2/ui-result.json",
+      "editor-dx12-attempt1/ui-result.json",
+      "editor-dx12-attempt2/ui-result.json"
+    ],
+    "status": "Required workspace flows verified across recorded attempts",
+    "limits": [
+      "External modification prompt after own creation remains UX issue",
+      "Not complete engine/Gem integration or renderer parity"
+    ],
+    "finalAttributeChange": "Only screenshot storage exception after native freeze; no native input changed"
+  }
+}

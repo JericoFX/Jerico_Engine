@@ -12,7 +12,7 @@
 #include <MaterialEditorApplication.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 
-#include <Document/MaterialDocument.h>
+#include <JE/Editor/Materials/Document/MaterialDocument.h>
 #include <Window/MaterialEditorMainWindow.h>
 
 #if defined(EXTERNAL_CRASH_REPORTING)
@@ -73,7 +73,7 @@ namespace MaterialEditor
     void MaterialEditorApplication::Reflect(AZ::ReflectContext* context)
     {
         Base::Reflect(context);
-        MaterialDocument::Reflect(context);
+        JE::Editor::MaterialDocument::Reflect(context);
     }
 
     const char* MaterialEditorApplication::GetCurrentConfigurationName() const
@@ -92,7 +92,7 @@ namespace MaterialEditor
         Base::StartCommon(systemEntity);
 
         // Overriding default document type info to provide a custom view
-        auto documentTypeInfo = MaterialDocument::BuildDocumentTypeInfo();
+        auto documentTypeInfo = JE::Editor::MaterialDocument::BuildDocumentTypeInfo();
         documentTypeInfo.m_documentViewFactoryCallback = [this]([[maybe_unused]] const AZ::Crc32& toolId, const AZ::Uuid& documentId) {
             auto emptyWidget = new QWidget(m_window.get());
             emptyWidget->setContentsMargins(0, 0, 0, 0);

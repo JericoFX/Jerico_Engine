@@ -11,9 +11,6 @@ set(FILES
     Source/MaterialEditorApplication.cpp
     Source/main.cpp
 
-    Source/Document/MaterialDocument.cpp
-    Source/Document/MaterialDocument.h
-    Source/Document/MaterialDocumentRequestBus.h
     Source/Window/MaterialEditor.qrc
 
     Source/Window/MaterialEditorMainWindow.cpp

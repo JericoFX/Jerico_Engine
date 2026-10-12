@@ -1,0 +1,26 @@
+{
+  "status": "UI_PARTIAL_COLOR_PICKER_CRASH",
+  "editorPid": 324276,
+  "backend": "Vulkan",
+  "passed": [
+    "Material Editor action opens native pane without standalone MaterialEditor.exe",
+    "Global Undo entity then material; Redo material then entity",
+    "Selection preserved during mixed history",
+    "Save writes baseColor.factor 0.34 to owned material",
+    "Application close Cancel retains modified material",
+    "Pane close/reopen retains document and global Undo"
+  ],
+  "pending": [
+    "Saved material visible recook on BSP",
+    "Fresh process reopen",
+    "DX12 integration",
+    "Material type creation UI",
+    "Application Save/Discard paths"
+  ],
+  "failure": "Opening base-color color picker caused AV 0xC0000005 write 0x28 in QPixmap::detach, via MakeAlphaBrush/PaletteView paint",
+  "sceneSaved": false,
+  "sceneSHA256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+  "materialSHA256": "51A2851964D38B718DD01F20D663B14736B762A07206842221B8A1C7D0A908D8",
+  "materialOnDiskFactor": 0.3400000035762787,
+  "note": "Only owned test material saved. Entity rename undone; unsaved default/surface1 assignments lost on crash. No Reset UV."
+}

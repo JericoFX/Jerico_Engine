@@ -172,3 +172,9 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 # Native primitive source assets: audited original payloads, no inherited LFS endpoint.
 /Engine/Assets/Primitives/Assets/Objects/_Primitives/*.fbx -filter -diff -merge -text
 /Engine/Assets/Primitives/Assets/Textures/_Primitives/*.tif -filter -diff -merge -text
+
+# Native material color picker: audited original PNG, without inherited LFS endpoint.
+/Code/Framework/AzQtComponents/AzQtComponents/Components/img/UI20/alpha-background.png -filter -diff -merge -text
+
+# Original screenshots for the native material workspace acceptance.
+/docs/evidence/n0/native-material-workspace-2026-10-12/*.png -filter -diff -merge -text

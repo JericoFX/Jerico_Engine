@@ -39,6 +39,7 @@ ly_add_target(
         PRIVATE
             Gem::CommonFeaturesAtom.Static
             JE::RenderMaterials
+            JE::EditorMaterials
             Gem::AtomToolsFramework.Editor
             JE::EditorCamera
             Gem::AtomToolsFramework.Static
@@ -55,10 +56,6 @@ ly_set_gem_variant_to_load(TARGETS MaterialEditor VARIANTS Tools)
 # Add a 'builders' alias to allow the MaterialEditor root gem path to be added to the generated
 # cmake_dependencies.<project>.assetprocessor.setreg to allow the asset scan folder for it to be added
 ly_create_alias(NAME MaterialEditor.Builders NAMESPACE Gem)
-
-# Add build dependency to Editor for the MaterialEditor application since
-# Editor opens up the MaterialEditor
-ly_add_dependencies(Editor Gem::MaterialEditor)
 
 # Inject the project path into the MaterialEditor VS debugger command arguments if the build system being invoked
 # in a project centric view

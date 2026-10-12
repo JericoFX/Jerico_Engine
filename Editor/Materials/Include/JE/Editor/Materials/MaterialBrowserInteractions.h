@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
+#include <AzCore/Outcome/Outcome.h>
 
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <AzToolsFramework/SourceControl/SourceControlAPI.h>
@@ -39,6 +40,12 @@ namespace JE
 
             MaterialBrowserInteractions();
             ~MaterialBrowserInteractions();
+
+            //! Choose the final path before opening a document or recording edits. Empty on cancellation or failure.
+            static AZStd::string CreateMaterial(const AZStd::string& initialFolder, const AZStd::string& initialMaterialType = {});
+            //! Write a new material source without overwriting an existing destination.
+            static AZ::Outcome<void, AZStd::string> CreateMaterialSourceFile(
+                const AZStd::string& materialTypePath, const AZStd::string& materialPath);
 
         private:
             //! AssetBrowserInteractionNotificationBus::Handler overrides...

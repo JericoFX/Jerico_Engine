@@ -3,6 +3,8 @@
 
 set(FILES
     Include/JE/Editor/Materials/Base.h
+    Include/JE/Editor/Materials/Document/MaterialDocument.h
+    Include/JE/Editor/Materials/Document/MaterialDocumentRequestBus.h
     Include/JE/Editor/Materials/EditorMaterialComponent.h
     Include/JE/Editor/Materials/EditorMaterialComponentExporter.h
     Include/JE/Editor/Materials/EditorMaterialComponentInspector.h
@@ -17,6 +19,11 @@ set(FILES
     Include/JE/Editor/Materials/MaterialsRegistration.h
     Include/JE/Editor/Materials/SharedPreviewContent.h
     Source/EditorMaterialComponent.cpp
+    Source/Document/MaterialDocument.cpp
+    Source/Workspace/MaterialWorkspaceSession.cpp
+    Source/Workspace/MaterialWorkspaceSession.h
+    Source/Workspace/MaterialWorkspaceWidget.cpp
+    Source/Workspace/MaterialWorkspaceWidget.h
     Source/EditorMaterialComponentExporter.cpp
     Source/EditorMaterialComponentInspector.cpp
     Source/EditorMaterialComponentSerializer.cpp

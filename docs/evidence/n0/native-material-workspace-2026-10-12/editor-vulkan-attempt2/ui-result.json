@@ -1,0 +1,25 @@
+{
+  "status": "VULKAN_COLOR_PICKER_AND_RELOAD_PASS",
+  "pid": 111528,
+  "backend": "Vulkan",
+  "passed": [
+    "Fresh process reopened saved factor 0.34",
+    "Color picker opens, paints and edits twice without AV",
+    "LOD0 surface2 assigned owned material; red room visible",
+    "Save green material recooked and changed visible BSP while entity3546086835508380847 remained selected",
+    "Application close Save writes factor1; process exits normally",
+    "Original and copied prefab hashes unchanged; own temporary assignments discarded"
+  ],
+  "evidence": [
+    "01-reopened-saved-material.png",
+    "02-color-picker-working.png",
+    "03-bsp-red-material.png",
+    "04-bsp-green-reloaded-selection-retained.png",
+    "05-close-save-material.png"
+  ],
+  "limits": [
+    "No performance benchmark",
+    "Materialtype creation UI and DX12 pending"
+  ],
+  "materialSha256": "CA1DA0CC7DB82EEFAE6C244BAF54D84C22AC0E3B53CC6DF9C4E318295671FAEA"
+}

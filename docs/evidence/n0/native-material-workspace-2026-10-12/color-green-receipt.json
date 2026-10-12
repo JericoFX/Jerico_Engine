@@ -1,0 +1,93 @@
+{
+  "postflight": {
+    "utc": "2026-10-12T17:47:20.6366631Z",
+    "freezeSha256": "67A8451FDD6730376E815B74CC3B674602781F61AB6D0BC668C8D22CA024C481",
+    "expectedCount": 181,
+    "checked": 181,
+    "matches": 181,
+    "nonmatches": 0
+  },
+  "artifacts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Code\\Framework\\AzQtComponents\\AzQtComponents_autogen\\include\\AzQtComponents\\Components\\qrc_resources_resources.cpp",
+      "bytes": 12566800,
+      "lastWriteUtc": "2026-10-12T17:45:15.4666127Z",
+      "sha256": "058CC0F719EA704A73059CF57FEFB63C197C2704BE47594947462ED21FF03F44"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll",
+      "bytes": 4408832,
+      "lastWriteUtc": "2026-10-12T17:45:17.7752851Z",
+      "sha256": "8C75CBA4C415A5BEDFB9620C3FD42E3D001DCED419163CFABBBC8F76D4F85759"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.Tests.dll",
+      "bytes": 2990080,
+      "lastWriteUtc": "2026-10-12T17:37:55.7961617Z",
+      "sha256": "7DF3CF01F51EC757B8BA6532899F7D4754685ED905FF0028A0D2ACD7556F639F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "bytes": 171520,
+      "lastWriteUtc": "2026-10-11T21:35:58.0228058Z",
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    }
+  ],
+  "activeRelevantProcesses": [
+    {
+      "ProcessId": 294992,
+      "Name": "MSBuild.exe",
+      "ParentProcessId": 313348,
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 172112,
+      "Name": "MSBuild.exe",
+      "ParentProcessId": 313348,
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 198780,
+      "Name": "MSBuild.exe",
+      "ParentProcessId": 313348,
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 245016,
+      "Name": "MSBuild.exe",
+      "ParentProcessId": 313348,
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 81720,
+      "Name": "MSBuild.exe",
+      "ParentProcessId": 313348,
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    }
+  ],
+  "tests": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorMaterials.Tests.xml",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "AD9AA0317718AEEF836336817952EF04AD7BC561D99E82BCBAC7210E1EB33118"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Legacy_EditorLib.Tests.xml",
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "C9CD340780177D5CB70F121CF51E6378681B20BA09C8058838C65356EBD335A6"
+    }
+  ]
+}

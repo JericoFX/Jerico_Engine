@@ -8,6 +8,7 @@
 
 #pragma once
 
+#include <JE/Editor/Materials/Base.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/RTTI/RTTI.h>
@@ -18,12 +19,14 @@
 #include <Atom/RPI.Reflect/Material/MaterialAsset.h>
 #include <AtomToolsFramework/Document/AtomToolsDocument.h>
 #include <AtomToolsFramework/DynamicProperty/DynamicPropertyGroup.h>
-#include <Document/MaterialDocumentRequestBus.h>
+#include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
 
-namespace MaterialEditor
+namespace UnitTest { class MaterialDocumentTests; }
+
+namespace JE::Editor
 {
     //! MaterialDocument provides an API for modifying and saving material document properties.
-    class MaterialDocument
+    class JE_EDITOR_MATERIALS_API MaterialDocument
         : public AtomToolsFramework::AtomToolsDocument
         , public MaterialDocumentRequestBus::Handler
         , public AZ::SystemTickBus::Handler
@@ -35,12 +38,16 @@ namespace MaterialEditor
 
         static void Reflect(AZ::ReflectContext* context);
 
+        //! Editor history belongs to the host session; standalone tools retain document-local history.
+        enum class HistoryOwner { Standalone, Editor };
+
         MaterialDocument() = default;
-        MaterialDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo);
+        MaterialDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo,
+            HistoryOwner historyOwner = HistoryOwner::Standalone);
         virtual ~MaterialDocument();
 
         // AtomToolsFramework::AtomToolsDocument overrides...
-        static AtomToolsFramework::DocumentTypeInfo BuildDocumentTypeInfo();
+        static AtomToolsFramework::DocumentTypeInfo BuildDocumentTypeInfo(HistoryOwner historyOwner = HistoryOwner::Standalone);
         AtomToolsFramework::DocumentObjectInfoVector GetObjectInfo() const override;
         bool Open(const AZStd::string& loadPath) override;
         bool Save() override;
@@ -60,6 +67,8 @@ namespace MaterialEditor
         const AZStd::any& GetPropertyValue(const AZStd::string& propertyId) const override;
 
     private:
+        friend class UnitTest::MaterialDocumentTests;
+        const HistoryOwner m_historyOwner = HistoryOwner::Standalone;
 
         // Predicate for evaluating properties
         using PropertyFilterFunction = AZStd::function<bool(const AtomToolsFramework::DynamicProperty&)>;
@@ -144,4 +153,4 @@ namespace MaterialEditor
         // Dummy default value returned whenever a property cannot be located
         AZStd::any m_invalidValue;
     };
-} // namespace MaterialEditor
+} // namespace JE::Editor

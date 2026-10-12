@@ -32,8 +32,12 @@
 #include <AzToolsFramework/Editor/ActionManagerIdentifiers/EditorMenuIdentifiers.h>
 #include <Editor/LyViewPaneNames.h>
 #include <JE/Editor/Materials/EditorMaterialComponentInspector.h>
+#include <JE/Editor/Materials/EditorMaterialComponentUtil.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponent.h>
 #include <JE/Editor/Materials/SharedPreviewContent.h>
+#include <JE/Editor/Materials/Document/MaterialDocument.h>
+#include <AzToolsFramework/API/EditorWindowRequestBus.h>
+#include "Workspace/MaterialWorkspaceWidget.h"
 
 // Disables warning messages triggered by the Qt library
 // 4251: class needs to have dll-interface to be used by clients of class
@@ -43,6 +47,7 @@ AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option")
 #include <QApplication>
 #include <QDockWidget>
 #include <QImage>
+#include <QMainWindow>
 #include <QObject>
 #include <QPixmap>
 #include <QProcessEnvironment>
@@ -61,9 +66,11 @@ namespace JE
 {
     namespace Editor
     {
-        //! Main system component for the Atom Common Feature Gem's editor/tools module.
+        EditorMaterialSystemComponent::EditorMaterialSystemComponent() = default;
+        EditorMaterialSystemComponent::~EditorMaterialSystemComponent() = default;
         void EditorMaterialSystemComponent::Reflect(AZ::ReflectContext* context)
         {
+            MaterialDocument::Reflect(context);
             if (AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context))
             {
                 serialize->Class<EditorMaterialSystemComponent, AZ::Component>()
@@ -71,7 +78,7 @@ namespace JE
 
                 if (AZ::EditContext* ec = serialize->GetEditContext())
                 {
-                    ec->Class<EditorMaterialSystemComponent>(QT_TRANSLATE_NOOP("AtomLyIntegration", "EditorMaterialSystemComponent"), QT_TRANSLATE_NOOP("AtomLyIntegration", "System component that manages launching and maintaining connections the material editor."))
+                    ec->Class<EditorMaterialSystemComponent>(QT_TRANSLATE_NOOP("AtomLyIntegration", "EditorMaterialSystemComponent"), QT_TRANSLATE_NOOP("AtomLyIntegration", "System component that manages the native material workspace."))
                         ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
                         ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                         ;
@@ -106,6 +113,16 @@ namespace JE
 
         void EditorMaterialSystemComponent::Activate()
         {
+            auto documentType = MaterialDocument::BuildDocumentTypeInfo(MaterialDocument::HistoryOwner::Editor);
+            // Editing existing materials preserves document paths and their global undo identity.
+            documentType.m_supportedExtensionsToOpen = {{"Material", "material"}};
+            documentType.m_supportedExtensionsToCreate.clear();
+            m_workspaceSession = AZStd::make_unique<MaterialWorkspaceSession>(documentType);
+            QWidget* mainWindow = nullptr;
+            AzToolsFramework::EditorWindowRequestBus::BroadcastResult(
+                mainWindow, &AzToolsFramework::EditorWindowRequests::GetAppMainWindow);
+            m_workspaceSession->SetMainWindow(mainWindow);
+
             AZ::EntitySystemBus::Handler::BusConnect();
             EditorMaterialSystemComponentNotificationBus::Handler::BusConnect();
             EditorMaterialSystemComponentRequestBus::Handler::BusConnect();
@@ -126,6 +143,13 @@ namespace JE
 
         void EditorMaterialSystemComponent::Deactivate()
         {
+            if (m_workspacePaneRegistered)
+            {
+                AzToolsFramework::UnregisterViewPane(MaterialWorkspaceWidget::PaneName);
+                m_workspacePaneRegistered = false;
+            }
+            m_workspaceSession.reset();
+
             AZ::EntitySystemBus::Handler::BusDisconnect();
             EditorMaterialSystemComponentNotificationBus::Handler::BusDisconnect();
             EditorMaterialSystemComponentRequestBus::Handler::BusDisconnect();
@@ -144,24 +168,24 @@ namespace JE
 
         void EditorMaterialSystemComponent::OpenMaterialEditor(const AZStd::string& sourcePath)
         {
-            QStringList arguments;
-            arguments.append(QString(R"("%1")").arg(sourcePath.c_str()));
-
-            // Use the same RHI as the main editor
-            AZ::Name apiName = AZ::RHI::Factory::Get().GetName();
-            if (!apiName.IsEmpty())
+            AZStd::string materialPath = sourcePath;
+            if (materialPath.ends_with(EditorMaterialComponentUtil::MaterialTypeExtensionWithDot))
             {
-                arguments.append(QString("--rhi=%1").arg(apiName.GetCStr()));
+                // Choose the final path before creating a document or any global undo commands.
+                materialPath = MaterialBrowserInteractions::CreateMaterial({}, materialPath);
+                if (materialPath.empty())
+                {
+                    return;
+                }
             }
-
-            AZ::IO::FixedMaxPathString projectPath(AZ::Utils::GetProjectPath());
-            if (!projectPath.empty())
+            AzToolsFramework::OpenViewPane(MaterialWorkspaceWidget::PaneName);
+            if (!materialPath.empty())
             {
-                arguments.append(QString(R"(--project-path="%1")").arg(projectPath.c_str()));
+                if (auto* workspace = AzToolsFramework::GetViewPaneWidget<MaterialWorkspaceWidget>(MaterialWorkspaceWidget::PaneName))
+                {
+                    workspace->OpenDocument(materialPath);
+                }
             }
-
-            AZ_TracePrintf("MaterialComponent", "Launching Material Editor");
-            AtomToolsFramework::LaunchTool("MaterialEditor", arguments);
         }
 
         void EditorMaterialSystemComponent::OpenMaterialCanvas(const AZStd::string& sourcePath)
@@ -345,6 +369,17 @@ namespace JE
 
         void EditorMaterialSystemComponent::NotifyRegisterViews()
         {
+            AzToolsFramework::ViewPaneOptions workspaceOptions;
+            workspaceOptions.canHaveMultipleInstances = false;
+            workspaceOptions.preferedDockingArea = Qt::RightDockWidgetArea;
+            workspaceOptions.paneRect = QRect(50, 50, 600, 1000);
+            AzToolsFramework::RegisterViewPane<MaterialWorkspaceWidget>(MaterialWorkspaceWidget::PaneName,
+                LyViewPane::CategoryTools, workspaceOptions, [this](QWidget* parent) -> QWidget*
+                {
+                    return new MaterialWorkspaceWidget(*m_workspaceSession, parent);
+                });
+            m_workspacePaneRegistered = true;
+
             AzToolsFramework::ViewPaneOptions inspectorOptions;
             inspectorOptions.canHaveMultipleInstances = true;
             inspectorOptions.preferedDockingArea = Qt::NoDockWidgetArea;
@@ -355,6 +390,11 @@ namespace JE
                 "Material Instance Editor", LyViewPane::CategoryTools, inspectorOptions);
         }
         
+        void EditorMaterialSystemComponent::NotifyMainWindowInitialized(QMainWindow* mainWindow)
+        {
+            m_workspaceSession->SetMainWindow(mainWindow);
+        }
+
         void EditorMaterialSystemComponent::AfterEntitySelectionChanged(const AzToolsFramework::EntityIdList& newlySelectedEntities, const AzToolsFramework::EntityIdList&)
         {
             if (newlySelectedEntities.size() == 1)

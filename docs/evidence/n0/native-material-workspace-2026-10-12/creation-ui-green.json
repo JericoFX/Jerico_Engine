@@ -1,0 +1,27 @@
+{
+  "status": "MATERIALTYPE_CREATION_UI_PASS",
+  "backend": "dx12",
+  "editorPid": 83464,
+  "editorExited": true,
+  "materialTypeUnchanged": true,
+  "materialTypeSHA256": "4F2F1CBA8F28E6335959CEAF310E0622D65E4533F68562C5600B7779995CF7F1",
+  "source": {
+    "materialType": "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype",
+    "materialTypeVersion": 5
+  },
+  "createdSourceSHA256": "65FAFC37C85608A5FA14EE50484EBCF53D336930C2D09759C98F46582240D34F",
+  "assetProcessor": "Processed pc Material Builder; see AP_GUI.log",
+  "nativeWorkspaceOpened": true,
+  "separateMaterialEditorObserved": false,
+  "reopen": "Own creation triggered external modification prompt; Yes reopened successfully",
+  "sceneHashes": [
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "Hash": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "Hash": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    }
+  ]
+}

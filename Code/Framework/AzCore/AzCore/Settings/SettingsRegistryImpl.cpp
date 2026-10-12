@@ -565,8 +565,10 @@ namespace AZ
         if (pointer.IsValid())
         {
             rapidjson::Value store;
+            // Store may install a reporter tied to its stack and resolve contexts; keep these per operation.
+            JsonSerializerSettings serializationSettings = m_serializationSettings;
             JsonSerializationResult::ResultCode jsonResult = JsonSerialization::Store(store, m_settings.GetAllocator(),
-                value, nullptr, valueTypeID, m_serializationSettings);
+                value, nullptr, valueTypeID, serializationSettings);
             if (jsonResult.GetProcessing() != JsonSerializationResult::Processing::Halted)
             {
                 SettingsType anchorType;

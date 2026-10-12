@@ -27,7 +27,7 @@
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AzFramework/Components/NonUniformScaleComponent.h>
 #include <AzFramework/Components/TransformComponent.h>
-#include <Document/MaterialDocumentRequestBus.h>
+#include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
 #include <Window/MaterialEditorViewportContent.h>
 
 namespace MaterialEditor
@@ -127,7 +127,8 @@ namespace MaterialEditor
     void MaterialEditorViewportContent::OnDocumentOpened([[maybe_unused]] const AZ::Uuid& documentId)
     {
        AZ::Data::Instance<AZ::RPI::Material> materialInstance;
-        MaterialDocumentRequestBus::EventResult(materialInstance, documentId, &MaterialDocumentRequestBus::Events::GetInstance);
+        JE::Editor::MaterialDocumentRequestBus::EventResult(
+            materialInstance, documentId, &JE::Editor::MaterialDocumentRequestBus::Events::GetInstance);
 
         JE::Render::MaterialAssignmentMap materials;
         auto& materialAssignment = materials[JE::Render::DefaultMaterialAssignmentId];

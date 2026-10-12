@@ -6,7 +6,7 @@ ly_add_target(
     NAMESPACE JE
     AUTOMOC
     FILES_CMAKE materials_files.cmake
-    INCLUDE_DIRECTORIES PUBLIC Include
+    INCLUDE_DIRECTORIES PRIVATE Source PUBLIC Include
     COMPILE_DEFINITIONS PRIVATE JE_EDITOR_MATERIALS_EXPORTS
     BUILD_DEPENDENCIES
         PUBLIC
@@ -23,3 +23,17 @@ ly_add_target(
 )
 
 set_target_properties(EditorMaterials PROPERTIES UNITY_BUILD OFF)
+
+if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
+    ly_add_target(
+        NAME EditorMaterials.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
+        NAMESPACE JE
+        AUTOMOC
+        FILES_CMAKE materials_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Source
+        BUILD_DEPENDENCIES
+            PRIVATE JE::EditorMaterials AZ::AzToolsFramework AZ::AzTest AZ::AzTestShared
+    )
+    set_target_properties(EditorMaterials.Tests PROPERTIES UNITY_BUILD OFF)
+    ly_add_googletest(NAME JE::EditorMaterials.Tests)
+endif()
