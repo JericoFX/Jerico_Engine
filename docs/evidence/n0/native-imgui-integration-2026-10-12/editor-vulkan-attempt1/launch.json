@@ -1,0 +1,9 @@
+{
+  "pid": 97036,
+  "startedUtc": "2026-10-12T11:49:00.9275210Z",
+  "exeHash": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704",
+  "sceneHash": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+  "commandLine": "\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe\" --project-path \"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\" --rhi=vulkan --skipWelcomeScreen \"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab\"",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "receipt": "Initial launch succeeded, receipt writer corrected after invalid PowerShell parameter; not relaunched"
+}

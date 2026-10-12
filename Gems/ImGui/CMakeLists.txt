@@ -1,12 +1,4 @@
-#
 # Copyright (c) Contributors to the Open 3D Engine Project.
-# For complete copyright and license terms please see the LICENSE at the root of this distribution.
-#
 # SPDX-License-Identifier: Apache-2.0 OR MIT
-#
-#
 
-o3de_gem_setup("ImGui")
-
-add_subdirectory(Code)
-
+message(FATAL_ERROR "ImGui is a native JE::DebugImGui subsystem. Compose its host factory; Gem activation is retired.")

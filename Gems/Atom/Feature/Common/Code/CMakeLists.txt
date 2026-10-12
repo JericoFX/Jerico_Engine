@@ -34,10 +34,10 @@ ly_add_target(
             AZ::AzFramework
             Gem::Atom_RPI.Public
             Gem::Atom_Utils.Static
-            Gem::ImGui.imguilib
+            JE::DearImGui
             3rdParty::TIFF
     RUNTIME_DEPENDENCIES
-        Gem::ImGui.imguilib
+        JE::DearImGui
 )
 
 ly_add_target(

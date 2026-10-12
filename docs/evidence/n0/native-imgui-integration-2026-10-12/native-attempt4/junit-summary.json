@@ -1,0 +1,41 @@
+{
+  "recordedUtc": "2026-10-12T11:43:23.0537343Z",
+  "gtestReports": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Legacy_EditorLib.Tests.xml",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\native-attempt4\\Legacy_EditorLib.Tests.xml",
+      "bytes": 24871,
+      "sha256": "5C8C73120CEB373D4325A674FB2F6731B475BA017D7C320E82E25A24CA5BB26C",
+      "tests": 72,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "skipped": 0,
+      "histogramCases": []
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_DebugImGui.Tests.xml",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\native-attempt4\\JE_DebugImGui.Tests.xml",
+      "bytes": 2373,
+      "sha256": "CFAB4094BF4ACB38AD255B66CB1BEEC8AEE5EC4378E66431414EAD4203F2B090",
+      "tests": 6,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "skipped": 0,
+      "histogramCases": [
+        "HistogramKeepsBoundedHistoryInBothDirectionsAndProducesDrawData",
+        "HistogramGroupReusesAnExistingNamedHistory"
+      ]
+    }
+  ],
+  "ctestJunit": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\native-attempt4\\ctest-junit.xml",
+    "bytes": 3062,
+    "sha256": "0847ECA1E43CB69A3F3270A6196005ABB29A081912BEB12685802F77567177BD"
+  },
+  "lastTest": {
+    "sha256": "8845F959215A8F56B8F8CE02FA2276754D2DDCE8DA8CB252DCCFF54BF3E72B18",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\native-attempt4\\LastTest.log"
+  }
+}

@@ -60,14 +60,14 @@ namespace ScriptCanvas::Developer
     void SystemComponent::Activate()
     {
 #ifdef IMGUI_ENABLED
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
 #endif // IMGUI_ENABLED
     }
 
     void SystemComponent::Deactivate()
     {
 #ifdef IMGUI_ENABLED
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
 #endif 
     }
 

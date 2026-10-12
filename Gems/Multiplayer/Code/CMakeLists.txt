@@ -232,7 +232,7 @@ ly_add_target(
             AZ::AzNetworking
             Gem::Atom_Feature_Common.Public
             Gem::${gem_name}.Client.Static
-            Gem::ImGui.Static
+            JE::DebugImGui
 )
 
 ly_add_target(
@@ -253,7 +253,7 @@ ly_add_target(
             AZ::AzNetworking
             Gem::Atom_Feature_Common.Public
             Gem::${gem_name}.Unified.Static
-            Gem::ImGui.Static
+            JE::DebugImGui
 )
 
 # Inject the gem name into the Module source file

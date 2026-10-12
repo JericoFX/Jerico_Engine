@@ -173,13 +173,6 @@
                     }
                 }
             },
-            "ImGui": {
-                "Targets": {
-                    "ImGui.Editor": {
-                        "AutoLoad": false
-                    }
-                }
-            },
             "Gestures": {
                 "Targets": {
                     "Gestures": {

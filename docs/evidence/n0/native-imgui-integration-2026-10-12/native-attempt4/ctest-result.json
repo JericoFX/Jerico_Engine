@@ -1,0 +1,12 @@
+{
+  "phase": "ctest",
+  "exitCode": 0,
+  "startedUtc": "2026-10-12T11:42:45.4439524Z",
+  "finishedUtc": "2026-10-12T11:42:51.0561070Z",
+  "elapsedSeconds": 5.6121546,
+  "stdoutBytes": 547,
+  "stderrBytes": 0,
+  "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\native-attempt4\\ctest.stdout.txt",
+  "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\native-attempt4\\ctest.stdout.stderr.txt",
+  "pid": 128544
+}

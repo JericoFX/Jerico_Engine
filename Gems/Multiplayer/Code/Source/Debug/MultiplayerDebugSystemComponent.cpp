@@ -21,7 +21,7 @@
 #include <Multiplayer/MultiplayerPerformanceStats.h>
 #include <Multiplayer/MultiplayerMetrics.h>
 #include <Atom/Feature/ImGui/SystemBus.h>
-#include <ImGuiContextScope.h>
+#include <JE/Debug/ImGui/ImGuiContextScope.h>
 #include <imgui/imgui.h>
 #include <imgui/imgui_internal.h>
 
@@ -62,7 +62,7 @@ namespace Multiplayer
     {
 #ifdef IMGUI_ENABLED
         AZ::ComponentApplicationBus::Broadcast(&AZ::ComponentApplicationRequests::QueryApplicationType, m_applicationType);
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
         m_networkMetrics = AZStd::make_unique<MultiplayerDebugNetworkMetrics>();
         m_multiplayerMetrics = AZStd::make_unique<MultiplayerDebugMultiplayerMetrics>();
 #endif
@@ -71,7 +71,7 @@ namespace Multiplayer
     void MultiplayerDebugSystemComponent::Deactivate()
     {
 #ifdef IMGUI_ENABLED
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
         m_auditTrailElems.clear();
         m_committedAuditTrail.clear();
         m_pendingAuditTrail.clear();

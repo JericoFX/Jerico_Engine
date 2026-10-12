@@ -22,7 +22,7 @@
 
 #ifdef IMGUI_ENABLED
 #include <imgui/imgui.h>
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 #endif // #ifdef IMGUI_ENABLED
 
 namespace PhysXDebug
@@ -110,7 +110,7 @@ namespace PhysXDebug
         , public AZ::TickBus::Handler
         , public CrySystemEventBus::Handler
 #ifdef IMGUI_ENABLED
-        , public ImGui::ImGuiUpdateListenerBus::Handler
+        , public JE::Debug::ImGuiUpdateListenerBus::Handler
 #endif // IMGUI_ENABLED
     {
     public:

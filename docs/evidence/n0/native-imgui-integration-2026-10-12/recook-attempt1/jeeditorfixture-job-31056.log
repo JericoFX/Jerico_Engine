@@ -1,0 +1,19 @@
+~~1791807205014~~1~~00000000000289D0~~Builder::RunJob~~Request started builder [469E7E02B10348388839AF793A3F2C27 - 10] task (process) Levels/JEEditorFixture/JEEditorFixture.prefab 
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 59458217 capacityBytes = 53687091200
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder: Loading Prefab in 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEEditorFixture/JEEditorFixture.prefab'.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~C: [Stack config] = GameObjectCreation
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder: Sending Prefab to the processor stack.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~C: [Stack config] = GameObjectCreation
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder: Finalizing products.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~C: [Stack config] = GameObjectCreation
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder:     Serializing Prefab product 'JEEditorFixture.spawnable'.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~C: [Stack config] = GameObjectCreation
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder:     Storing Prefab product 'JEEditorFixture.spawnable'.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder: Cleaning up.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~Prefab Builder: Prefab processing completed.
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 59327543 capacityBytes = 53687091200; allocated change = -130674
+~~1791807205036~~1~~00000000000289D0~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1791807205039~~1~~00000000000289D0~~Builder::RunJob~~Request stopped builder [469E7E02B10348388839AF793A3F2C27 - 10] task (process) Levels/JEEditorFixture/JEEditorFixture.prefab 

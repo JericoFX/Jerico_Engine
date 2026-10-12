@@ -35,7 +35,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PUBLIC
             AZ::AzCore
-            Gem::ImGui.imguilib
+            JE::DearImGui
 )
 
 # Here add ${gem_name} target, it depends on the Private Object library and Public API interface

@@ -1,0 +1,89 @@
+{
+  "capturedUtc": "2026-10-12T12:11:55.5335665Z",
+  "listPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\recook-attempt1\\reprocess-prefabs.txt",
+  "listSha256": "CCB749065EDF8741D1CB746734980D6814BCB2F2427D9C5E42B3246C78766319",
+  "listLines": [
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab"
+  ],
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "exists": true,
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+      "lastWriteUtc": "2026-10-12T00:15:02.6425731Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "exists": true,
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+      "lastWriteUtc": "2026-10-12T10:40:09.2110011Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\levels\\jeeditorfixture\\jeeditorfixture.spawnable",
+      "exists": true,
+      "bytes": 72509,
+      "sha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+      "lastWriteUtc": "2026-10-12T10:00:46.1170514Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\levels\\jenativeintegration\\jenativeintegration.spawnable",
+      "exists": true,
+      "bytes": 72509,
+      "sha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+      "lastWriteUtc": "2026-10-12T10:00:46.3257644Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "exists": true,
+      "bytes": 6669312,
+      "sha256": "6A9EA6EA90043C185FB574D8CC4B5FF1DFD8371912C7F5A42C24558FF8554681",
+      "lastWriteUtc": "2026-10-12T11:29:16.6816582Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+      "exists": true,
+      "bytes": 1296384,
+      "sha256": "215A85ADF5BA17C94F395A0472D63CF2E3C310FBF656B198A27A4FED9EA91153",
+      "lastWriteUtc": "2026-10-12T09:53:38.9147290Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+      "exists": true,
+      "bytes": 952320,
+      "sha256": "FDD5A3F4B3376AD296CEAB9F11F17E1D563C9EA218D91F890C83CD46A14F7B21",
+      "lastWriteUtc": "2026-10-12T11:42:35.8264191Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+      "exists": true,
+      "bytes": 737792,
+      "sha256": "EE6D8BC50CFE3F8C63BF4C8776C3322A528A2DECEED983BC783D591FCD2029BC",
+      "lastWriteUtc": "2026-10-12T11:08:40.0631233Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.dll",
+      "exists": true,
+      "bytes": 633344,
+      "sha256": "7DBAFABEA3A0516840BA89ED3CFE7ECE6E6203CFC9A4604C7F16AD2AF2393970",
+      "lastWriteUtc": "2026-10-11T21:13:35.2835885Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.Editor.dll",
+      "exists": true,
+      "bytes": 637952,
+      "sha256": "D2BA58751E3906DF01E3612BD5EBB87B417C7B88893F1465D1070779D20D1FD5",
+      "lastWriteUtc": "2026-10-11T21:03:36.5140385Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.imguilib.dll",
+      "exists": true,
+      "bytes": 822784,
+      "sha256": "608DAB8FC528A20817DC577A09DB2144BEB7B09606AFD67443F873580F4FDDE0",
+      "lastWriteUtc": "2026-10-11T19:48:52.1706198Z"
+    }
+  ],
+  "processes": null
+}

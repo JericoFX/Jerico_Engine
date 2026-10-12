@@ -91,14 +91,14 @@ namespace Profiler
     void ProfilerImGuiSystemComponent::Activate()
     {
 #if defined(IMGUI_ENABLED)
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
 #endif // defined(IMGUI_ENABLED)
     }
 
     void ProfilerImGuiSystemComponent::Deactivate()
     {
 #if defined(IMGUI_ENABLED)
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
 #endif // defined(IMGUI_ENABLED)
     }
 

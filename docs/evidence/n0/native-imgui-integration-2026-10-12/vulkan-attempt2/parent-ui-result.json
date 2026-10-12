@@ -1,0 +1,14 @@
+{
+  "closed": "AltF4 did not exit; parent terminated exact owned PID",
+  "status": "GPU_TIMESTAMP_AND_TIMELINE_RENDERED_NO_CRASH",
+  "pid": 103804,
+  "originalHash": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "backend": "vulkan",
+  "scope": "Real UI regression GREEN; 1.98ms single sample is not a performance benchmark. CPU host domain value not recaptured under debugger.",
+  "captures": [
+    "gpu-timestamps.jpg",
+    "gpu-timeline.jpg"
+  ],
+  "vulkanDllHash": "0E54D0C5E6BB8C8E89D95F9E451A4E92E714FA0A233192222C61EF822935363F",
+  "copyHash": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+}

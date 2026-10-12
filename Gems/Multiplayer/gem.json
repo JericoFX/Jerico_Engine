@@ -25,7 +25,6 @@
     "dependencies": [
         "PhysX",
         "CertificateManager",
-        "Atom_Feature_Common",
-        "ImGui"
+        "Atom_Feature_Common"
     ]
 }

@@ -1,0 +1,112 @@
+{
+  "recordedUtc": "2026-10-12T11:56:52.2670439Z",
+  "scope": "Single parent-triggered Vulkan GPU TimestampView call captured at the indirect calibrated-timestamps callsite; no source/build changes.",
+  "cdbPid": 82112,
+  "targetPid": 53540,
+  "cdbExitCode": 1,
+  "processesAfterDebuggerQuit": [],
+  "preCall": {
+    "symbol": "Atom_RHI_Vulkan_Private!AZ::Vulkan::Device::GetCalibratedTimestamp+0xa9",
+    "this": "0x0000057e26c03000",
+    "nativeDevice": "0x0000057e28410050",
+    "count": 2,
+    "timestampInfos": "0x000000fc3e967d68",
+    "timestampsOutput": "0x000000fc3e967d50",
+    "maxDeviationPointer": "0x000000fc3e967d60",
+    "maxDeviationInitialRaw": "0x0000057e26c00310",
+    "loaderContext": "0x0000026ba908b6d0",
+    "hostTimeDomainRaw": "0x3b9df680",
+    "hostTimeDomainDecimal": 1000208000,
+    "calibratedTimestampsFunctionPointer": "0x00007ff825e369d0",
+    "functionPointerSymbol": "nvoglv64!vkEnumerateInstanceVersion+0x250",
+    "timestampInfoEntries": [
+      {
+        "sTypeRaw": "0x3b9d98c0",
+        "pNext": "0x0",
+        "timeDomain": "0x00000000",
+        "index": 0
+      },
+      {
+        "sTypeRaw": "0x3b9d98c0",
+        "pNext": "0x0",
+        "timeDomain": "0x3b9df680",
+        "index": 1
+      }
+    ]
+  },
+  "exception": {
+    "chance": "second chance",
+    "code": "0xc0000005",
+    "faultAddress": "0x00007ff825f26a17",
+    "symbol": "nvoglv64!vkGetInstanceProcAddr+0xef8e7",
+    "instruction": "mov rax,qword ptr [rdx+10h]",
+    "rdx": "0x0",
+    "readAddress": "0x10",
+    "stackFrames": [
+      "nvoglv64!vkGetInstanceProcAddr+0xef8e7",
+      "Atom_RHI_Vulkan_Private!AZ::Vulkan::Device::GetCalibratedTimestamp+0xac",
+      "AtomImGuiTools!AZ::Render::ImGuiTimestampView::DrawTimestampWindow+0x6e9",
+      "AtomImGuiTools!AZ::Render::ImGuiGpuProfiler::Draw+0x17e",
+      "AtomImGuiTools::AtomImGuiToolsSystemComponent::OnImGuiUpdate+0x9d"
+    ]
+  },
+  "relevantSource": {
+    "deviceCpp": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\RHI\\Device.cpp",
+    "line": 1232,
+    "behavior": "Second VkCalibratedTimestampInfoEXT passes m_hostTimeDomain with pNext=0; InitializeTimeDomains accepts non-device domains except CLOCK_MONOTONIC_RAW_EXT without classifying extension-specific domains."
+  },
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\diagnostic-gpu-timestamp\\live-attempt1\\cdb-session.log",
+      "bytes": 42115,
+      "sha256": "6F0D20AC6AE18DAFBC07D149034C1AFED64F2613AE79C44BA23A3DAAD4CCB89F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\diagnostic-gpu-timestamp\\live-attempt1\\cdb-commands.txt",
+      "bytes": 428,
+      "sha256": "5F4CAE2A1F57BD0AB209BE743B8D301C142D527E05FC20D940AFE4F9930A4C89"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\diagnostic-gpu-timestamp\\live-attempt1\\launch-receipt.json",
+      "bytes": 1811,
+      "sha256": "FEC7093A1AB3615BED08BEAD8E02F47228A394F15065BF068B02978772F56A72"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\diagnostic-gpu-timestamp\\live-attempt1\\error-live.dmp",
+      "bytes": 2179279620,
+      "sha256": "6AC021D6CEEA5D8544B0F2F9E50B9759ED0A345D3EC3DB3672B795587CAB53B4"
+    }
+  ],
+  "modules": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+      "bytes": 1917440,
+      "sha256": "7DD55A944BBCC87B97163868AAE4E4D6C8310DD57021557F79586F34D7A3CAD7",
+      "version": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.pdb",
+      "bytes": 24629248,
+      "sha256": "3ADD63C79FCE44DD0AEBD7CB6E2543860028A84444C828EA9835AB687528FA71",
+      "version": null
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+      "bytes": 540672,
+      "sha256": "EDEB33F6735C3074B5736831A085C40CC5C6860FF5F7E91A11E58E5709B0FBF1",
+      "version": null
+    },
+    {
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvoglv64.dll",
+      "bytes": 48639720,
+      "sha256": "693F471A56BB374FF04CEFBF4A67A082974A32627D5145F5B1F2D6418736CF6A",
+      "version": "32.0.16.1692"
+    }
+  ],
+  "limits": [
+    "The live call shows actual device/dispatch pointers are non-null; crash was inside the driver after invocation.",
+    "Second timeDomain raw value is 0x3b9df680; parent identified it as VK_TIME_DOMAIN_PRESENT_STAGE_LOCAL_EXT (1000208000), whose extension-specific timestamp-info requires pNext data.",
+    "CDB could not retrieve .ecxr at second-chance stop (HRESULT 0x8000FFFF), but current register context and stack were logged; full dump was written.",
+    "CDB exit code 1 is debugger/session termination after dump and q, not a product exit code."
+  ]
+}

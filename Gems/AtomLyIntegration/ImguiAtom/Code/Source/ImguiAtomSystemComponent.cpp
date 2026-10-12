@@ -14,7 +14,7 @@
 #include <Atom/RPI.Public/ViewportContext.h>
 
 #if defined(IMGUI_ENABLED)
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 #endif
 
 namespace AZ
@@ -83,7 +83,7 @@ namespace AZ
         {
 #if defined(IMGUI_ENABLED)
             InitializeViewportSizeIfNeeded();
-            ImGui::IImGuiManager* imguiManager = AZ::Interface<ImGui::IImGuiManager>().Get();
+            JE::Debug::IImGuiManager* imguiManager = AZ::Interface<JE::Debug::IImGuiManager>().Get();
             if (imguiManager != nullptr)
             {
                 ImDrawData* drawData = imguiManager->GetImguiDrawData();
@@ -98,7 +98,7 @@ namespace AZ
         void ImguiAtomSystemComponent::OnViewportSizeChanged([[maybe_unused]] AzFramework::WindowSize size)
         {
 #if defined(IMGUI_ENABLED)
-            ImGui::ImGuiManagerBus::Broadcast([this, size](ImGui::ImGuiManagerBus::Events* imgui)
+            JE::Debug::ImGuiManagerBus::Broadcast([this, size](JE::Debug::ImGuiManagerBus::Events* imgui)
             {
                 imgui->OverrideRenderWindowSize(size.m_width, size.m_height);
                 // ImGuiManagerListenerBus may not have been connected when this system component is activated
@@ -118,7 +118,7 @@ namespace AZ
         void ImguiAtomSystemComponent::OnViewportDpiScalingChanged([[maybe_unused]] float dpiScale)
         {
 #if defined(IMGUI_ENABLED)
-            ImGui::ImGuiManagerBus::Broadcast(&ImGui::ImGuiManagerBus::Events::SetDpiScalingFactor, dpiScale);
+            JE::Debug::ImGuiManagerBus::Broadcast(&JE::Debug::ImGuiManagerBus::Events::SetDpiScalingFactor, dpiScale);
 #endif //define(IMGUI_ENABLED)
         }
     }

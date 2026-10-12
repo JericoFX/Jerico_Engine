@@ -1,0 +1,23 @@
+{
+  "capturedUtc": "2026-10-12T12:19:48.4252044Z",
+  "apPid": 283452,
+  "apPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+  "apParentPid": 101144,
+  "closeMainWindowReturned": false,
+  "apCloseMethod": "Stop-Process after CloseMainWindow returned False",
+  "ownedBuilderPids": [
+    116120,
+    292556,
+    292884,
+    315688,
+    175320,
+    309708,
+    49432,
+    216408,
+    198024,
+    284216
+  ],
+  "buildersStopped": [],
+  "apRemaining": false,
+  "remainingOwnedBuilders": []
+}

@@ -18,14 +18,14 @@
 #include <EMotionFX/Source/EMotionFXConfig.h>
 
 #include <imgui/imgui.h>
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 #include <ImGuiMonitorBus.h>
-#include <LYImGuiUtils/HistogramGroup.h>
+#include <JE/Debug/ImGui/HistogramGroup.h>
 
 namespace EMotionFX::MotionMatching
 {
     class EMFX_API ImGuiMonitor
-        : public ImGui::ImGuiUpdateListenerBus::Handler
+        : public JE::Debug::ImGuiUpdateListenerBus::Handler
         , public ImGuiMonitorRequestBus::Handler
     {
     public:
@@ -35,7 +35,7 @@ namespace EMotionFX::MotionMatching
         ImGuiMonitor();
         ~ImGuiMonitor();
 
-        // ImGui::ImGuiUpdateListenerBus::Handler
+        // JE::Debug::ImGuiUpdateListenerBus::Handler
         void OnImGuiUpdate() override;
         void OnImGuiMainMenuUpdate() override;
 
@@ -48,8 +48,8 @@ namespace EMotionFX::MotionMatching
         void SetKdTreeInfo(const ImGuiMonitorRequests::KdTreeInfo& info) override { m_kdTreeInfo = info; }
 
     private:
-        ImGui::LYImGuiUtils::HistogramGroup m_performanceStats;
-        ImGui::LYImGuiUtils::HistogramGroup m_featureCosts;
+        JE::Debug::HistogramGroup m_performanceStats;
+        JE::Debug::HistogramGroup m_featureCosts;
 
         ImGuiMonitorRequests::FrameDatabaseInfo m_frameDatabaseInfo;
         ImGuiMonitorRequests::FeatureMatrixInfo m_featurMatrixInfo;

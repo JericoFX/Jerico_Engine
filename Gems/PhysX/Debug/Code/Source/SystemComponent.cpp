@@ -235,7 +235,7 @@ namespace PhysXDebug
         AZ::TickBus::Handler::BusConnect();
         CrySystemEventBus::Handler::BusConnect();
 #ifdef IMGUI_ENABLED
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
 #endif // IMGUI_ENABLED
 #ifdef PHYSXDEBUG_GEM_EDITOR
         if (auto* sceneInterface = AZ::Interface<AzPhysics::SceneInterface>::Get())
@@ -252,7 +252,7 @@ namespace PhysXDebug
         m_sceneFinishSimHandler.Disconnect();
 #endif // PHYSXDEBUG_GEM_EDITOR
 #ifdef IMGUI_ENABLED
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
 #endif // IMGUI_ENABLED
         CrySystemEventBus::Handler::BusDisconnect();
         AZ::TickBus::Handler::BusDisconnect();

@@ -1,0 +1,64 @@
+{
+  "recordedUtc": "2026-10-12T12:07:38.3727465Z",
+  "processesAfter": [
+    {
+      "ProcessId": 103700,
+      "ParentProcessId": 163936,
+      "Name": "MSBuild.exe",
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 127864,
+      "ParentProcessId": 163936,
+      "Name": "MSBuild.exe",
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 322164,
+      "ParentProcessId": 163936,
+      "Name": "MSBuild.exe",
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 149528,
+      "ParentProcessId": 163936,
+      "Name": "MSBuild.exe",
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    },
+    {
+      "ProcessId": 65776,
+      "ParentProcessId": 163936,
+      "Name": "MSBuild.exe",
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "CommandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" /noautoresponse /nologo /nodemode:1 /nodeReuse:true /low:false"
+    }
+  ],
+  "sourceSha256": "A6C6E2A75B1CFFD7E76492C793B4F8CB07334977D6F364AEDF41FD602D45F815",
+  "freezeSha256": "128E1B90B41CD497E24A3884D9C823C10B1BEB3CEAE3ADCF116C59AD69D219D2",
+  "target": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+    "bytes": 1917440,
+    "sha256": "0E54D0C5E6BB8C8E89D95F9E451A4E92E714FA0A233192222C61EF822935363F"
+  },
+  "pdb": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.pdb",
+    "bytes": 26021888,
+    "sha256": "A9C7238C0E6BF287B1B852E7103AAD057291CE17864DEEAC9A9A3368F66E68EB"
+  },
+  "logs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\build-attempt1\\stdout.log",
+      "bytes": 1887,
+      "sha256": "A661AD3181C2C043E70DED345F65FB28E9E3CB91EDA094151AE3C9BAD7E1D708"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\build-attempt1\\stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

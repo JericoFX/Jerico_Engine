@@ -17,7 +17,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PUBLIC
             AZ::AzCore
-            Gem::ImGui.Static
+            JE::DebugImGui
             Gem::Atom_Feature_Common.Public
 )
 

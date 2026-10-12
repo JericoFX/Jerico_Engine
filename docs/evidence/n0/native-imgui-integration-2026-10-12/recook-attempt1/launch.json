@@ -1,0 +1,18 @@
+{
+  "startedUtc": "2026-10-12T12:12:46.7999834Z",
+  "pid": 283452,
+  "parentProcessId": 101144,
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+  "commandLine": "\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe\" --start-hidden --engine-path=\"F:\\JericoEngine\\JericoEngine\" --project-path=\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\" --reprocessFileList=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\recook-attempt1\\reprocess-prefabs.txt\"",
+  "arguments": [
+    "--start-hidden",
+    "--engine-path=\"F:\\JericoEngine\\JericoEngine\"",
+    "--project-path=\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"",
+    "--reprocessFileList=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\recook-attempt1\\reprocess-prefabs.txt\""
+  ],
+  "exeSha256": "6A9EA6EA90043C185FB574D8CC4B5FF1DFD8371912C7F5A42C24558FF8554681",
+  "reprocessList": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\recook-attempt1\\reprocess-prefabs.txt",
+  "reprocessListSha256": "CCB749065EDF8741D1CB746734980D6814BCB2F2427D9C5E42B3246C78766319",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\recook-attempt1\\assetprocessor.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\recook-attempt1\\assetprocessor.stderr.log"
+}

@@ -14,7 +14,7 @@
 #include <Atom/RHI/FrameGraphAttachmentDatabase.h>
 #include <Atom/RHI/ImageScopeAttachment.h>
 #include <Atom/RHI/BufferScopeAttachment.h>
-namespace ImGui
+namespace JE::Debug
 {
     #ifndef ImGuiMouseButton_Left
         #define ImGuiMouseButton_Left 0
@@ -569,7 +569,7 @@ namespace ImGui
         bool m_showGrid = true;
     };
 }
-static ImGui::ImGuiFrameVisualizerWindow* visualizerWindow = nullptr;
+static JE::Debug::ImGuiFrameVisualizerWindow* visualizerWindow = nullptr;
 namespace AZ::Render
 {
     //! Draw the frame graph.
@@ -577,7 +577,7 @@ namespace AZ::Render
     {
         if (!visualizerWindow)
         {
-            visualizerWindow = new ImGui::ImGuiFrameVisualizerWindow("Frame Visualizer", 1920, 1080);
+            visualizerWindow = new JE::Debug::ImGuiFrameVisualizerWindow("Frame Visualizer", 1920, 1080);
         }
         if (visualizerWindow)
         {

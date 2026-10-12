@@ -20,8 +20,8 @@
 
 #ifdef IMGUI_ENABLED
 #   include <imgui/imgui.h>
-#   include <ImGuiBus.h>
-#   include <LYImGuiUtils/HistogramContainer.h>
+#   include <JE/Debug/ImGui/ImGuiBus.h>
+#   include <JE/Debug/ImGui/HistogramContainer.h>
 #endif
 
 namespace Multiplayer
@@ -30,7 +30,7 @@ namespace Multiplayer
         : public AZ::Component
         , public AZ::Interface<IMultiplayerDebug>::Registrar
 #ifdef IMGUI_ENABLED
-        , public ImGui::ImGuiUpdateListenerBus::Handler
+        , public JE::Debug::ImGuiUpdateListenerBus::Handler
 #endif
     {
     public:
@@ -66,7 +66,7 @@ namespace Multiplayer
         //! @}
 
 #ifdef IMGUI_ENABLED
-        //! ImGui::ImGuiUpdateListenerBus overrides
+        //! JE::Debug::ImGuiUpdateListenerBus overrides
         //! @{
         void OnImGuiMainMenuUpdate() override;
         void OnImGuiUpdate() override;

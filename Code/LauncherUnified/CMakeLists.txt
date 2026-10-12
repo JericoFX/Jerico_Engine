@@ -28,6 +28,7 @@ ly_add_target(
             AZ::AzGameFramework
             JE::Geometry
             JE::WorldCamera
+            JE::DebugImGui
             JE::RenderMaterials
             Legacy::CryCommon
 )
@@ -50,6 +51,7 @@ ly_add_target(
             AZ::AzGameFramework.Headless
             JE::Geometry
             JE::WorldCamera
+            JE::DebugImGui
             JE::RenderMaterials
             Legacy::CryCommon
 )

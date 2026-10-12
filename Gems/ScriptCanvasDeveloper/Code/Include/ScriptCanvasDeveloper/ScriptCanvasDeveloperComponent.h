@@ -11,14 +11,14 @@
 #include <AzCore/Component/Component.h>
 
 #include <ScriptCanvas/PerformanceStatistician.h>
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 
 
 namespace ScriptCanvas::Developer
 {
     class SystemComponent
         : public AZ::Component
-        , public ImGui::ImGuiUpdateListenerBus::Handler
+        , public JE::Debug::ImGuiUpdateListenerBus::Handler
     {
     public:
         AZ_COMPONENT(SystemComponent, "{46BDD372-8E86-4C0F-B12C-DC271C5DCED1}");

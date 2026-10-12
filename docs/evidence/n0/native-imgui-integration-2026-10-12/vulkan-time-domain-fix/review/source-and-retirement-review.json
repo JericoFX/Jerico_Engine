@@ -1,0 +1,158 @@
+{
+  "status": "READ_ONLY_SOURCE_REVIEW_NO_FINDINGS",
+  "source": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\RHI\\Device.cpp",
+  "sha256": "A6C6E2A75B1CFFD7E76492C793B4F8CB07334977D6F364AEDF41FD602D45F815",
+  "reviewedDiff": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\source-diff-exact.patch",
+  "cases": [
+    {
+      "case": "RAW before other known host domains",
+      "sourceReason": "RAW selected; subsequent known domains rejected by != RAW guard",
+      "result": "RAW preserved"
+    },
+    {
+      "case": "RAW after MONOTONIC/QPC",
+      "sourceReason": "RAW allowed while previous host not RAW",
+      "result": "RAW selected"
+    },
+    {
+      "case": "unknown-only with DEVICE",
+      "sourceReason": "Unknown enums excluded from explicit host whitelist",
+      "result": "Sentinel, zero fallback, no driver call"
+    },
+    {
+      "case": "device-only",
+      "sourceReason": "No known host assigned",
+      "result": "Sentinel, zero fallback"
+    },
+    {
+      "case": "known host without DEVICE",
+      "sourceReason": "deviceTimeDomainFound false resets selected host",
+      "result": "Sentinel, zero fallback"
+    },
+    {
+      "case": "repeated initialization",
+      "sourceReason": "Host sentinel reset before enumeration; no previous host retained",
+      "result": "Selection recomputed"
+    },
+    {
+      "case": "extension unavailable after reinitialization",
+      "sourceReason": "GetCalibratedTimestamp checks extension regardless of previous host member",
+      "result": "Zero fallback, no driver call"
+    }
+  ],
+  "limits": "Cases are source reasoning, not native regression execution. Existing zero return denotes unavailable calibration, not valid timestamps. Parent UI GREEN reused; no rerun. Existing GetCalibratedTimestampsEXT result handling unchanged.",
+  "buildReceipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\build-attempt1\\result.json",
+  "buildReceiptSHA256": "1F968673D94DFFF093051A8D29FC6B9BFEC1300151E338909A7B56AD45A32730",
+  "vulkan": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+    "sha256": "0E54D0C5E6BB8C8E89D95F9E451A4E92E714FA0A233192222C61EF822935363F",
+    "imports": [
+      "Dump of file F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+      "Atom_RHI.Public.dll",
+      "Atom_RHI.Reflect.dll",
+      "AzCore.dll",
+      "KERNEL32.dll",
+      "MSVCP140.dll",
+      "VCRUNTIME140.dll",
+      "VCRUNTIME140_1.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll"
+    ],
+    "retiredImports": [],
+    "importsIdenticalToPreviousAudit": true,
+    "raw": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\review\\vulkan-current.dependents.txt"
+  },
+  "retirementProposal": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\binary-audit\\residual-retirement-proposal.json",
+  "retirementSHA256": "2015EE13456C464164E620987A1C6267A1949A4EA828BE7BB4C7E2EB87653CFA",
+  "retirementRehash": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.dll",
+      "sha256": "7DBAFABEA3A0516840BA89ED3CFE7ECE6E6203CFC9A4604C7F16AD2AF2393970",
+      "bytes": 633344,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.pdb",
+      "sha256": "C19495C54D2DC6C64C44F943522D0783A17019780A8B9BE4E44D7EA6B5751AE1",
+      "bytes": 19140608,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.Editor.dll",
+      "sha256": "D2BA58751E3906DF01E3612BD5EBB87B417C7B88893F1465D1070779D20D1FD5",
+      "bytes": 637952,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.Editor.pdb",
+      "sha256": "F62A120681549A3DACC3D1908BA3799A87C284A44CD2EF6F8D4B3167233D315F",
+      "bytes": 19247104,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.imguilib.dll",
+      "sha256": "608DAB8FC528A20817DC577A09DB2144BEB7B09606AFD67443F873580F4FDDE0",
+      "bytes": 822784,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.imguilib.pdb",
+      "sha256": "520F2A9FD9D5DC6AD12C0F2918A0BEDF9955EA66C9BB3269E88C884DAF9DAA52",
+      "bytes": 2920448,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Headless.dll",
+      "sha256": "35C53EDBCCB01EBBFC005C87BDFEE3858F02A8A6A00698226EC8681BE2CC7069",
+      "bytes": 4824064,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Headless.pdb",
+      "sha256": "46C0705462F70FBC1F38385E272C5E6FBE88D3F29DFBBB8B15BC5519C55439F7",
+      "bytes": 60248064,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "sha256": "B5640637FB7E40AE9C6749EFEB01C1DCB2557941AD93E59085DB1BCC20B4B379",
+      "bytes": 6208,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "sha256": "CA9A5122E0C1D23B9B104DAB5904C0B0AAE496DE962B473F4A2B90D71FA387FE",
+      "bytes": 6094,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "sha256": "5B5FA2B1D2FC93C8867FE140BDC45519EF85E4BE6038E3F986F9CAED7871358B",
+      "bytes": 6385,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "sha256": "4744AD964A70C23039F0CCB1FAD892286593AF40499BC2072DE4549922242456",
+      "bytes": 6244,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "sha256": "7F96ADD6DC07039B520D506A71F15262DEC629F63545CF8F3C93373C2BE6D0F8",
+      "bytes": 6130,
+      "unchanged": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "sha256": "7220FA8CB0C443F797C31557CDD47C23F493AAA75AE499007C81D59C7DA1E36A",
+      "bytes": 6130,
+      "unchanged": true
+    }
+  ],
+  "retirementStillValidForSameBoundedScope": true
+}

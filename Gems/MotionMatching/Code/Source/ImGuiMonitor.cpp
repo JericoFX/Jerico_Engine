@@ -22,13 +22,13 @@ namespace EMotionFX::MotionMatching
         m_featureCosts.SetName("Feature Costs");
         m_featureCosts.SetHistogramBinCount(100);
 
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
         ImGuiMonitorRequestBus::Handler::BusConnect();
     }
 
     ImGuiMonitor::~ImGuiMonitor()
     {
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
         ImGuiMonitorRequestBus::Handler::BusDisconnect();
     }
 

@@ -1,0 +1,24 @@
+--- a/Gems/Atom/RHI/Vulkan/Code/Source/RHI/Device.cpp
++++ b/Gems/Atom/RHI/Vulkan/Code/Source/RHI/Device.cpp
+@@ -1221,2 +1221,3 @@
+-            if (!static_cast<const PhysicalDevice&>(GetPhysicalDevice())
+-                     .IsOptionalDeviceExtensionSupported(OptionalDeviceExtension::CalibratedTimestamps))
++            if (m_hostTimeDomain == VK_TIME_DOMAIN_MAX_ENUM_KHR ||
++                !static_cast<const PhysicalDevice&>(GetPhysicalDevice())
++                     .IsOptionalDeviceExtensionSupported(OptionalDeviceExtension::CalibratedTimestamps))
+@@ -1240,3 +1241,4 @@
+-        void Device::InitializeTimeDomains()
+-        {
+-            auto timeDomains{
++        void Device::InitializeTimeDomains()
++        {
++            m_hostTimeDomain = VK_TIME_DOMAIN_MAX_ENUM_KHR;
++            auto timeDomains{
+@@ -1254,2 +1256,5 @@
+-                // we prioritize VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT of the host time domains
+-                else if (m_hostTimeDomain != VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT)
++                // Only host clocks are valid with the null pNext below; prefer CLOCK_MONOTONIC_RAW.
++                else if ((timeDomain == VK_TIME_DOMAIN_CLOCK_MONOTONIC_EXT ||
++                          timeDomain == VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT ||
++                          timeDomain == VK_TIME_DOMAIN_QUERY_PERFORMANCE_COUNTER_EXT) &&
++                         m_hostTimeDomain != VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT)

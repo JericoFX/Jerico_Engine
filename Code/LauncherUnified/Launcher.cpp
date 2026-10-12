@@ -30,6 +30,7 @@
 
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/World/Camera/CameraModule.h>
+#include <JE/Debug/ImGui/ImGuiModule.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 
 #include <ISystem.h>
@@ -67,6 +68,7 @@ namespace JE::Runtime
             AzGameFramework::GameApplication::CreateStaticModules(outModules);
             outModules.emplace_back(JE::Geometry::CreateRuntimeModule());
             outModules.emplace_back(JE::World::Camera::CreateRuntimeModule());
+            outModules.emplace_back(JE::Debug::CreateRuntimeModule());
         }
     };
 }

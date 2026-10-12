@@ -13,8 +13,8 @@
 
 #ifdef IMGUI_ENABLED
 #   include <imgui/imgui.h>
-#   include <ImGuiBus.h>
-#   include <LYImGuiUtils/HistogramContainer.h>
+#   include <JE/Debug/ImGui/ImGuiBus.h>
+#   include <JE/Debug/ImGui/HistogramContainer.h>
 #endif
 
 namespace Multiplayer
@@ -29,7 +29,7 @@ namespace Multiplayer
         struct NetworkMetricDisplay
         {
             int64_t m_lastValue = 0;
-            ImGui::LYImGuiUtils::HistogramContainer m_histogram;
+            JE::Debug::HistogramContainer m_histogram;
         };
         AZStd::unordered_map<AZ::Name, NetworkMetricDisplay> m_sendHistograms;
         AZStd::unordered_map<AZ::Name, NetworkMetricDisplay> m_recvHistograms;

@@ -1,0 +1,355 @@
+[
+  {
+    "capturedUtc": "2026-10-12T12:13:33.8731329Z",
+    "pid": 283452,
+    "processName": "AssetProcessor",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:33.9125960Z",
+    "pid": 116120,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:33.9483957Z",
+    "pid": 292556,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:33.9823224Z",
+    "pid": 292884,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.0169072Z",
+    "pid": 315688,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.0511285Z",
+    "pid": 175320,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.0852964Z",
+    "pid": 309708,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.1195198Z",
+    "pid": 49432,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.1540623Z",
+    "pid": 216408,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.1937265Z",
+    "pid": 198024,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  },
+  {
+    "capturedUtc": "2026-10-12T12:13:34.2275552Z",
+    "pid": 284216,
+    "processName": "AssetBuilder",
+    "modules": [
+      {
+        "name": "PrefabBuilder.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll",
+        "bytes": 1384448
+      },
+      {
+        "name": "DebugImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+        "bytes": 974848
+      },
+      {
+        "name": "DearImGui.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+        "bytes": 770048
+      },
+      {
+        "name": "AtomImGuiTools.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+        "bytes": 565248
+      },
+      {
+        "name": "ImguiAtom.dll",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+        "bytes": 225280
+      }
+    ],
+    "moduleReadError": null
+  }
+]

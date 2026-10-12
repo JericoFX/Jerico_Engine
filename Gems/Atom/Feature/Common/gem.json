@@ -16,7 +16,6 @@
     "documentation_url": "",
     "dependencies": [
         "Atom_RPI",
-        "ImGui",
         "Atom_RHI"
     ]
 }

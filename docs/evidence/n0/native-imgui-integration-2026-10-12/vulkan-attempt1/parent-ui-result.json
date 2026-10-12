@@ -1,0 +1,10 @@
+{
+  "failureCapture": "gpu-timestamp-crash.jpg",
+  "scope": "No performance acceptance; no current Editor test; original prefab unchanged",
+  "backend": "vulkan",
+  "status": "CPU_MENU_AND_ROOM_VERIFIED_GPU_TIMESTAMPS_CRASH",
+  "closed": "Crash dialog No clicked; process exited",
+  "fault": "Device::GetCalibratedTimestamp called from ImGuiTimestampView; access violation in NVIDIA Vulkan driver",
+  "pid": 319644,
+  "capture": "cpu-profiler.jpg"
+}

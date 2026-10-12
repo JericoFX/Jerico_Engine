@@ -44,11 +44,11 @@ namespace Multiplayer
             {
                 AZ::CVarFixedString sendName = name.GetCStr();
                 sendName += " Send (Bytes/Sec)";
-                sendHistogram.m_histogram.Init(sendName.c_str(), 250, ImGui::LYImGuiUtils::HistogramContainer::ViewType::Histogram, true, 0.0f, 100.0f);
+                sendHistogram.m_histogram.Init(sendName.c_str(), 250, JE::Debug::HistogramContainer::ViewType::Histogram, true, 0.0f, 100.0f);
 
                 AZ::CVarFixedString recvName = name.GetCStr();
                 recvName += " Receive (Bytes/Sec)";
-                recvHistogram.m_histogram.Init(recvName.c_str(), 250, ImGui::LYImGuiUtils::HistogramContainer::ViewType::Histogram, true, 0.0f, 100.0f);
+                recvHistogram.m_histogram.Init(recvName.c_str(), 250, JE::Debug::HistogramContainer::ViewType::Histogram, true, 0.0f, 100.0f);
             }
 
             sendHistogram.m_histogram.PushValue(aznumeric_cast<float>(metrics.m_sendBytes - sendHistogram.m_lastValue));

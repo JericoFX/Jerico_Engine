@@ -21,7 +21,7 @@
 #include <AzCore/Interface/Interface.h>
 
 #include <Atom/Feature/ImGui/SystemBus.h>
-#include <ImGuiContextScope.h>
+#include <JE/Debug/ImGui/ImGuiContextScope.h>
 #include <imgui/imgui.h>
 
 using namespace AzFramework;
@@ -103,14 +103,14 @@ namespace AZ
             return;
         }
 
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
         AZ::Debug::TraceMessageBus::Handler::BusConnect();
     }
 
     DebugConsole::~DebugConsole()
     {
         AZ::Debug::TraceMessageBus::Handler::BusDisconnect();
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
     }
 
     void DebugConsole::OnImGuiMainMenuUpdate()

@@ -1,0 +1,846 @@
+{
+  "status": "FROZEN_FOR_NATIVE_VALIDATION",
+  "capturedUtc": "2026-10-12T11:41:12.5463910Z",
+  "base": "178078e8aff1747174ce782d5d148a1e6703d58a",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+      "bytes": 1784,
+      "sha256": "425F2C5FA61B3876CA650AB401815B0A459FE9359315BC5EBBD68C105CC78878"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "bytes": 6795,
+      "sha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYWrappers.cmake",
+      "bytes": 43916,
+      "sha256": "30D7CD12513386B39C89B23AA4CE94E907A376CF0C6C300F9FF19D211E9DA5B4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\CMakeLists.txt",
+      "bytes": 9856,
+      "sha256": "3ED2BB0C2AB40ADDDC6F0073C0D848941C64793C864D3D28E15D2C8C4DDBDD15"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+      "bytes": 2875,
+      "sha256": "3DD06BC002B658CEE1BA3DC70FE15AC67EAF3FBB1C6E02A686C6B3CC0B5058ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+      "bytes": 7635,
+      "sha256": "EA7701875100FD828C713FB3EBE1F8F4B24F69AA98E5BCFB138D510F18490B23"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+      "bytes": 14287,
+      "sha256": "39CCB3EA4837BA923319BF8D6EA14560E2E8F235005915DA0A5230F3580B891F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\MainWindow.cpp",
+      "bytes": 40364,
+      "sha256": "C6848B3F35CDDE0434C15A0025D1D075D9E53E48CC5811834985203D87B949E3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.cpp",
+      "bytes": 3600,
+      "sha256": "7B3D8D3353AAED24DDFAA5A7BE899736C372B6656AE004F5B59E3C0B94AD9CEC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.h",
+      "bytes": 1408,
+      "sha256": "256A61DA331ADEC67EBC176D99DF81B8ABB67C1A5EE0BA3CBBBB92D041AFDBF4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\StartupLogoDialog.qrc",
+      "bytes": 114,
+      "sha256": "984B0C725144CDF8A4B0215D5D7982B1E4A66A94357279E205D125C267AB2F8E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\Style\\Editor.qss",
+      "bytes": 6761,
+      "sha256": "49DE0E21183B48F96820FA9A796235589D262DDBF16CA2EB081881F3A2403F6B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\CMakeLists.txt",
+      "bytes": 4404,
+      "sha256": "B6A6106A2855C4726F698F3C80EFBDB2FD19DA7AF1DE19DD16CB3312148399D0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp",
+      "bytes": 32255,
+      "sha256": "75FF2AE629D2B0A39D3A65F1A2CCCD6589E872D1C3DC32F8BF198CAD828958BC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+      "bytes": 10524,
+      "sha256": "ABF3BFE13ED07A545334403D63FA2CC25AF8546F5DEEBC851C475219DE6C0C76"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt",
+      "bytes": 2613,
+      "sha256": "15521E527BFA4F994CBB10A406EAC94B8D27F4E21621CC0E83C580788375DFA9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt",
+      "bytes": 9835,
+      "sha256": "DDBC8DB85A29926A529757E13F94F785E6D4C74799334121F13574C1AE586CC6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+      "bytes": 32606,
+      "sha256": "52D031CE3718B7928417B664922CF2F07C3EBD4545C96392B711D2E0D7111106"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "bytes": 3581,
+      "sha256": "3C4D3FE9AA43185D999CB940E4DAB60492287E7AB6B34D7EF072FF829B1DC1D8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+      "bytes": 549,
+      "sha256": "5CBEA946FACD8D2EA9EA6D6C92837B720014E42C52C4482C2DC4BDC296D69F89"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\CMakeLists.txt",
+      "bytes": 2044,
+      "sha256": "6C720DFAADBA1B01E8DC53E1A36DF2E0D376BE38B87D4ACCF129E9CD4C6B681E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\dear_imgui_files.cmake",
+      "bytes": 476,
+      "sha256": "9D9B69226C7D82A2CA359BC1AD0E19FC896C09834CD2DF6159A759C680103083"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\debug_imgui_files.cmake",
+      "bytes": 1281,
+      "sha256": "70CBE590BD6254D247BDD9584445306FAF9258B4D65478A9DD334404DCFF0DD5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\debug_imgui_tests_files.cmake",
+      "bytes": 137,
+      "sha256": "1E2EB75A4771F166506B24DB8ABF89E695CD3009EB6F9D90D4FE2012A96F76A7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\.editorconfig",
+      "bytes": 812,
+      "sha256": "77435571A6FAEEB649E9EED4FBDE358E4D7E2C29014AA4D0AF5D104ACAA35ADA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imconfig.h",
+      "bytes": 9399,
+      "sha256": "BB6BCF8D63E7B832BE023280D276A69CAE4CAE48C7AAF14A277B61DFD15FAECF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui_demo.cpp",
+      "bytes": 395695,
+      "sha256": "AAA082EE47D8B5B241378349910D60C62A2DCCCB7CA936EDA984889883B48994"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui_draw.cpp",
+      "bytes": 203427,
+      "sha256": "CC23121D445CE212E91A0944A585A22409F3C4145BD5A3A9D8EB4E4F86C5ED9B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui_internal.h",
+      "bytes": 188232,
+      "sha256": "CAAE37BD1E491F92C378294D52ADEE84946BEDBF9CF7A52B7981EAC548BB74CD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui_tables.cpp",
+      "bytes": 213230,
+      "sha256": "05E0355244E008753F843D5FE2862632D7AC7EEE332A75DF9AFA9E376CD09577"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui_widgets.cpp",
+      "bytes": 397663,
+      "sha256": "7307892161379E9240C704409346E7745D29FA6226193089D4580B1786AD77C2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui.cpp",
+      "bytes": 576866,
+      "sha256": "0F85EA25FA53E9495B0A1239675A66AE58A98DDE14E8B4CBB7A4661480CF89E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imgui.h",
+      "bytes": 275149,
+      "sha256": "FA70FC50443030AFCDA8FD885C13FA02CB083CBE75747061AC0F1123F4270257"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imstb_rectpack.h",
+      "bytes": 21179,
+      "sha256": "8FCE55CFBC72773903C0A4BE75B7EE72B55B6253E11F2936769F8CBDE11DA876"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imstb_textedit.h",
+      "bytes": 56370,
+      "sha256": "5DD517584886E43DFBA59E8D3D2F2E1AD3A83EC1BEE9E55153627DA03766B01B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\imstb_truetype.h",
+      "bytes": 197392,
+      "sha256": "9D753CC5D17E950EA0F04094E15235D615CE039706161A55F370F1B4FC539BC9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\LICENSE.txt",
+      "bytes": 1104,
+      "sha256": "E06A3394FFBDE6FEE1AE1B6273D7F5CB2BBF1BAA7074858AE00211210107C9CB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\cpp\\imgui_stdlib.cpp",
+      "bytes": 3215,
+      "sha256": "B18F2348ED312634C1B53FAB0C4A62948A92452C697B12674FC0A3DA05140FE5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\cpp\\imgui_stdlib.h",
+      "bytes": 1222,
+      "sha256": "B8F0750279973EC63BA282137BF2A9A367A6A96B61DFA0C713C0F0C9BE096506"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\cpp\\README.txt",
+      "bytes": 463,
+      "sha256": "5DFF6631775970B16A260AF34886373B1C05809D66B644FE9DDA010F3D92F13D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\debuggers\\imgui.gdb",
+      "bytes": 567,
+      "sha256": "981AE4FF74EEC41DF38F66115813E9C4E4A8829D3A7CC801FE4B697F2E7B9C95"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\debuggers\\imgui.natstepfilter",
+      "bytes": 1305,
+      "sha256": "614B15CEFF227927F625FD228B0A7E731A9BB74154B6FB7D1465891CD580F037"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\debuggers\\imgui.natvis",
+      "bytes": 1917,
+      "sha256": "CF0E39AE67D2BB3524B46F52FAC269239F5FE840F75F11E2B86494834CFFC79A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\debuggers\\README.txt",
+      "bytes": 503,
+      "sha256": "E1C19E24BF4BF5C19D4A1B5F3D138167F2E8FD9610BCC4D5834FC75093EA46F4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\binary_to_compressed_c.cpp",
+      "bytes": 13761,
+      "sha256": "C37CE2CEDF87A055BF03098A103B5D2EDB1507BC536F5BCCFB19BE4CF26E4C8A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\Cousine-Regular.ttf",
+      "bytes": 130,
+      "sha256": "5EC00A481FE2ADE7428E36F2CA713E1C27B533236B7B881538C9E4829ACBD18C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\DroidSans.ttf",
+      "bytes": 131,
+      "sha256": "9E1E4E680A63C72D1947A08AC1A3FCDD6E6B8451EAE64C11062CF38473386AEB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\Karla-Regular.ttf",
+      "bytes": 130,
+      "sha256": "4E776445230492274707601330638BE34EC37F0E9260A9963A82B40897142B5C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\ProggyClean.ttf",
+      "bytes": 130,
+      "sha256": "4CDD3788465ECDEAC49B52118F21A0FD085CCF20423872EB6D1C333525020BC2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\ProggyTiny.ttf",
+      "bytes": 130,
+      "sha256": "4F283C7EA552460CB62995E2F79F2B73AD50DBAF88B92E4DD23751F776AC41A0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\fonts\\Roboto-Medium.ttf",
+      "bytes": 131,
+      "sha256": "10A993A044AE5816B6712D2D5AA846815582212C94E64CD36746EA1E351E0739"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\freetype\\imgui_freetype.cpp",
+      "bytes": 38314,
+      "sha256": "D91C4094A6491A1A53BEC289959A103F9B0413D01C1A2A5DE62197CAA849A770"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\freetype\\imgui_freetype.h",
+      "bytes": 3594,
+      "sha256": "FE49E995BF23C6B4EBEF81AFD7F248CBEAF3E10A0DEE1E3072BD0A67404B978E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\freetype\\README.md",
+      "bytes": 1432,
+      "sha256": "B983B977602667C8EE20F5DC2B5E0D262F19012DA0B5D95F07ABD69788F7D74A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\README.txt",
+      "bytes": 1021,
+      "sha256": "BFFD92257236935C07002CD01626DFD0D8EEA5BA7D11EE8D83FB670B88746795"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\External\\ImGui\\v1.82\\imgui\\misc\\single_file\\imgui_single_file.h",
+      "bytes": 769,
+      "sha256": "7A875558695050C56D77F53CA4E0A910C6661D672938772989487FC5B3C90EBF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\CurveEditor.h",
+      "bytes": 3317,
+      "sha256": "2204C470B041F6B0F280D02190EA503D87B5FFA2C1A6D2D551A61DDB32A67D24"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\HistogramContainer.h",
+      "bytes": 5769,
+      "sha256": "7714C20F1911AF6E5FBB7C97B125A97DDF7B935B9EB4E5BB594FA428CB6F6080"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\HistogramGroup.h",
+      "bytes": 2000,
+      "sha256": "30EE8C9ED74362E0B1AF600FC372B42EE62085EF1B70AFC1C23A8E53DF7F3AB7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\ImGuiBus.h",
+      "bytes": 13611,
+      "sha256": "CDA17B408FC6A8C525B359D08DB8B158AA92C74A60E1CA365EDE39DFC8041C6B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\ImGuiContextScope.h",
+      "bytes": 1572,
+      "sha256": "4390C981A3A35FAB47B0A06858C01A810F27C01F72CA485B37C6DE3DB3BCC7E3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\ImGuiDrawHelpers.h",
+      "bytes": 1400,
+      "sha256": "D0830D5026AB2D8822A906A7172E8A6CAA28133BF51A7522D00E8DC86E27B948"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\ImGuiExports.h",
+      "bytes": 349,
+      "sha256": "E58AE1720CFB780059CBA87C7C671AE5552DEC30276353EF53DE4812BEFE1BB4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\ImGuiModule.h",
+      "bytes": 1324,
+      "sha256": "856B0CBCE484AB82F0BA799F97E24D07D362201CA350E152B8BCFCA80385613B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Include\\JE\\Debug\\ImGui\\OtherActiveImGuiBus.h",
+      "bytes": 874,
+      "sha256": "1E98D8288C4888A8037925B7898F8A7CDF7CF3223D1F15DA5ACB41FDF893B7BA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\CurveEditor.cpp",
+      "bytes": 18498,
+      "sha256": "085C38C45552A26422E2512909139737E49BB98B405CC97D7784706C0EE33C71"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\ImGuiBus.cpp",
+      "bytes": 994,
+      "sha256": "781CD41BE4810AE89B1675735316C990A6B11D8DB1D5E7DA9AE62B9972FC3ED9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\ImGuiColorDefines.h",
+      "bytes": 1870,
+      "sha256": "123E6D1257652B3275E4877A9B761D26651207E56CD26229D60F327BC39FE674"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\ImGuiManager.cpp",
+      "bytes": 41875,
+      "sha256": "CDE42D63084844A25C97EAB592048720DE840DF3233055BA7736DA60D24B85E9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\ImGuiManager.h",
+      "bytes": 5812,
+      "sha256": "4690DDBB2B197AC6E2E4413DF2016C36335EC355622ABAB49342463EC5C63F1F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\ImGuiModule.cpp",
+      "bytes": 1622,
+      "sha256": "1AFEE19728B789C1335FE227FF9080E2858C2296878243187066CB2FBFA8FE61"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiInputMonitor.cpp",
+      "bytes": 5870,
+      "sha256": "36353E0CBF93DB1A5A3863E62AFB514A7ED084D785475C62CBA47C1CE167AA66"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiInputMonitor.h",
+      "bytes": 1223,
+      "sha256": "AC7A45F35832575C85F5ECDE913700B545691146DD2197DBAA32C927CAEBF460"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYAssetExplorer.cpp",
+      "bytes": 29359,
+      "sha256": "A2D0CE79FC2D75593D8DA432D26DE356556DE6BDF344E848043AEB7B1C6E6EFA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYAssetExplorer.h",
+      "bytes": 4909,
+      "sha256": "DADDDAB759F8C6C3EC1DCDE7ECA1FFE6581C399B4B5B01B0EB9452FA6BB82298"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYCameraMonitor.cpp",
+      "bytes": 10997,
+      "sha256": "97B3A5BD7A27ADE0B4DB8E4BA875F3DB80577C7754EFC3A087CA4E45FB3C117B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYCameraMonitor.h",
+      "bytes": 3448,
+      "sha256": "D3C6854E449904CABDE51E59994B29268BA78FD2DE7B8E8188D082C2B07F72BF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYCommonMenu.cpp",
+      "bytes": 44651,
+      "sha256": "6F53A44A98E933909ABA3048DE6FB58B16F10002B0E0811F923DC5D0087FE2EA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYCommonMenu.h",
+      "bytes": 2504,
+      "sha256": "1C4D51247CE3BEB3EC884C155C7DA5896511BF26633889E883B82E8139E2FE75"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYEntityOutliner.cpp",
+      "bytes": 60687,
+      "sha256": "00F35FA10EA46BA8AD25DA7EC6B4685F840036F0B044A0E369071A3DCC62BAF9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYCommonMenu\\ImGuiLYEntityOutliner.h",
+      "bytes": 7578,
+      "sha256": "40395A2C9722C289AAE6E02D83F32515A4DE2B4950E327F677D8C47305C4FAA3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYImGuiUtils\\HistogramContainer.cpp",
+      "bytes": 9282,
+      "sha256": "A83D9F772E2015F79D9B2014C332251D672B088C75D1C99161EA380ECF310E52"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYImGuiUtils\\HistogramGroup.cpp",
+      "bytes": 3247,
+      "sha256": "8A2CCE981F2BA9447F94BCE82B988103F9DF5282E4030CD858D2425847D7F492"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\LYImGuiUtils\\ImGuiDrawHelpers.cpp",
+      "bytes": 2936,
+      "sha256": "ADFA5FE831FCDAC9CC5679F50E9105517FD68846F73D4F05A43D5798E5BD6D06"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Android\\imgui_android.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Android\\platform_android_files.cmake",
+      "bytes": 236,
+      "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Android\\platform_android.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Emscripten\\imgui_emscripten.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Emscripten\\platform_emscripten_files.cmake",
+      "bytes": 236,
+      "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Emscripten\\platform_emscripten.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\iOS\\imgui_ios.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\iOS\\platform_ios_files.cmake",
+      "bytes": 236,
+      "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\iOS\\platform_ios.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Linux\\imgui_linux.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Linux\\platform_linux_files.cmake",
+      "bytes": 236,
+      "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Linux\\platform_linux.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Mac\\imgui_mac.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Mac\\platform_mac_files.cmake",
+      "bytes": 236,
+      "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Mac\\platform_mac.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Windows\\imgui_windows.cmake",
+      "bytes": 317,
+      "sha256": "03F932DB031DD1F04233D0B3BA7FAB49819048556AAA296655EE7B879BBB47FE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Windows\\platform_windows_files.cmake",
+      "bytes": 236,
+      "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Source\\Platform\\Windows\\platform_windows.cmake",
+      "bytes": 222,
+      "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\ImGui\\Tests\\ImGuiTests.cpp",
+      "bytes": 8085,
+      "sha256": "7245BD5FA18B2F56F2DCE1327828F0853A3D1D4F109A4D0C2FE8F36D851AA520"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt",
+      "bytes": 5117,
+      "sha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Code\\CMakeLists.txt",
+      "bytes": 6867,
+      "sha256": "44FBD6664952BCC1963E1AF04463D1110FB158620F3BBD61D76E1F946354AA4D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\gem.json",
+      "bytes": 589,
+      "sha256": "E4D851684394DC0ED340C13D9A83AC9CA92D6078C3525EFB71FB7A1A839CF980"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\Code\\CMakeLists.txt",
+      "bytes": 7960,
+      "sha256": "9EF08DC44D2B8C568776A9DD9B239976E67553A801451D6A13D1C838A8504D19"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Registry\\gem_autoload.materialcanvas.setreg",
+      "bytes": 8662,
+      "sha256": "03AFA42E25893C2A27C19F92F362295DEC797D3C740C6CFFB000C2D74133B2D4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Registry\\gem_autoload.materialeditor.setreg",
+      "bytes": 9072,
+      "sha256": "8066DFAF29672031F57FBCCF6293F5617050A2BE10C71C0E934F9C21B2570C10"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Registry\\gem_autoload.passcanvas.setreg",
+      "bytes": 8662,
+      "sha256": "03AFA42E25893C2A27C19F92F362295DEC797D3C740C6CFFB000C2D74133B2D4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Registry\\gem_autoload.shadermanagementconsole.setreg",
+      "bytes": 8662,
+      "sha256": "03AFA42E25893C2A27C19F92F362295DEC797D3C740C6CFFB000C2D74133B2D4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt",
+      "bytes": 2186,
+      "sha256": "442C44E6D35FC80F87D7ED56A38BFBF6E0DC58D6F2EEDBAE3C75EA96F02FD8B8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiFrameVisualizer.inl",
+      "bytes": 25394,
+      "sha256": "E0610ED088CF727CB0BA7AE682C5D1A2A060D4646D652B33894918D2C936D894"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "bytes": 7063,
+      "sha256": "D7AEBC367E608BE8EEF4E2FB0C8E2FF270F17992D800BEB9DB625ED7EB470123"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.h",
+      "bytes": 3004,
+      "sha256": "3CB9860A415C3F4723EBA4645B61C521E9C0A5A8EB39ACFF49A70F40D6EC78DA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\CMakeLists.txt",
+      "bytes": 1136,
+      "sha256": "DD2370C0270A5C3F34A483AB7E1CF0A514CD6389FFC4D794FCB3F92FA8C9417A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.cpp",
+      "bytes": 13407,
+      "sha256": "23325186740DF4601EE7E724231B8103EB50CCC2F6539B3393C3D48AF66B9913"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.h",
+      "bytes": 4836,
+      "sha256": "75D3CCF206A0BD5EEB0A6EE64B205FC297A25033A5E7889A222C456CF909CFD8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.cpp",
+      "bytes": 5051,
+      "sha256": "92DE9E374AC4E0746324B4F7F8FD49A0F6064CD534E76962D97B1FE00801FC75"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\gem.json",
+      "bytes": 558,
+      "sha256": "7AF4D1EFFECE8CA0C9CA865E9EBCFF184EE09BC549433426763BA3EAEEDCBFB2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui\\CMakeLists.txt",
+      "bytes": 230,
+      "sha256": "D46AF24F9758C20FE91A1415F0C9EFBF7C38632095BFD9253734482B3B7286D8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\CMakeLists.txt",
+      "bytes": 5355,
+      "sha256": "7EC63F55C5C0218649E46F17216D1032445260BEF8A6CD2A8A923F5AF97B9D84"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\Source\\ImGuiMonitor.cpp",
+      "bytes": 4334,
+      "sha256": "18F9EC11799D6B34D8694E1B5219F5E66C9740638E4C43FA8EF30BFB7F0C10AD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\Source\\ImGuiMonitor.h",
+      "bytes": 2183,
+      "sha256": "816F45D1B6DE25A1191CE23413E8A8A3686C681584E3CD6258A0CACC9241D208"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Code\\CMakeLists.txt",
+      "bytes": 13162,
+      "sha256": "FA4DB72B6E4EF80033AA8A8707A7BA612D48589125D15C612A48601158746643"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Code\\Source\\Debug\\MultiplayerDebugNetworkMetrics.cpp",
+      "bytes": 11743,
+      "sha256": "3FBDF6EFA03AAA81A841712E911943BADFD35F09379BCC08437EB316F835FA21"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Code\\Source\\Debug\\MultiplayerDebugNetworkMetrics.h",
+      "bytes": 966,
+      "sha256": "477B461FA48588CF3A199548ED267DD8E920F260331BCD3279D33E63C9286DEE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Code\\Source\\Debug\\MultiplayerDebugSystemComponent.cpp",
+      "bytes": 20740,
+      "sha256": "A96BFC156C4156FF329588D38123C3EC5C93822B071EE7E89DC293D48B59723B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Code\\Source\\Debug\\MultiplayerDebugSystemComponent.h",
+      "bytes": 3766,
+      "sha256": "9B18E045F9EE432AC4481B66FCE8F1AD542CED546C71D98594ADB674C45BC46E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\gem.json",
+      "bytes": 873,
+      "sha256": "3618AB72592360C6297ADBC0E7AED4FD7FA1FDA1C532D89D63D614031B996205"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\Code\\Source\\SystemComponent.cpp",
+      "bytes": 51430,
+      "sha256": "C4FF8CC996612D4B99CEEC32709B93D7C393BA1AE266525C97CFE53F93859145"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\Code\\Source\\SystemComponent.h",
+      "bytes": 9303,
+      "sha256": "E18B712C3EEAD81D5966F6CCB55E83D0B84DE2AF05D5F60626AE921127E8AD5D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\PhysX5\\CMakeLists.txt",
+      "bytes": 4169,
+      "sha256": "E8B64EA573DF548B917EEC045C0523595B440CB5BAB634B074BD0A714BA9D2E0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\PhysX5\\gem.json",
+      "bytes": 881,
+      "sha256": "1F27FAD8735C80CEF0624CFFD73DA36F1A53170D2FF21241890384ABD51585FC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\CMakeLists.txt",
+      "bytes": 2245,
+      "sha256": "7FE8A7E0198AF74921883DCBB9F19B3590C6975D4A7CE77715326BC0D22AF323"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerImGuiSystemComponent.cpp",
+      "bytes": 4521,
+      "sha256": "3B91E2925314B57680F6848448EE6601A0CAA1880585B64DC16239797ACAFCC3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerImGuiSystemComponent.h",
+      "bytes": 2316,
+      "sha256": "8D9E792BDC7037B5F29A7FA86461DDFAC662439037CC5EB85A12368FBCC34CCF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\gem.json",
+      "bytes": 587,
+      "sha256": "A7949F78B66B7CBF784DFF71224CF8989DEA086AAC68C64480F1511FFFE4B903"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper\\Code\\CMakeLists.txt",
+      "bytes": 3638,
+      "sha256": "07DEAA9E74A9D348ABBCFB361CB3D14F2EF8D50BE9A4084ED2B08D1AC3FEE91F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper\\Code\\Include\\ScriptCanvasDeveloper\\ScriptCanvasDeveloperComponent.h",
+      "bytes": 1602,
+      "sha256": "F052FA0B541C8B84E293D412C4FE45861660B388D73AC9B44EC2D7EEBFB04739"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper\\Code\\Source\\ScriptCanvasDeveloperComponent.cpp",
+      "bytes": 2736,
+      "sha256": "3AF89761D51C7CEAC09288582FC475488486CA9C50EC690C6A803DB48752FA4E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer\\StreamerProfiler\\Code\\CMakeLists.txt",
+      "bytes": 4246,
+      "sha256": "FD08C1697E987E61CD8148482B283201827B61709A4C96FF89839EB8DA57670F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+      "bytes": 528,
+      "sha256": "1CF011E5FFB4AB0AE941CF625D95458D9FCD8B597D07256AC05FFC5B2C88B516"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+      "bytes": 11918,
+      "sha256": "EA5F35AC6CABC6C40A3A50F594568EDC25B9C89837387E2055A7F1A4055A1429"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+      "bytes": 1092,
+      "sha256": "22A3386FBE7C204AF5126C9CAE4E896BA64D1D57935644D854364A17596467B9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\MinimalProject\\Template\\project.json",
+      "bytes": 696,
+      "sha256": "2C3BA308873EAC0D1E0BD735493C7429E9A5BDB591E29FAC464E11DBC902B6ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+      "bytes": 1076,
+      "sha256": "6885ECB488A27DEE7B99413E03ABDB822BFB0168F3D02572B768E84327A78E02"
+    }
+  ],
+  "requiredAbsent": [
+    "Gems/ImGui/Code/CMakeLists.txt",
+    "Gems/ImGui/Code/Editor/ImGuiEditorWindowModule.cpp",
+    "Gems/ImGui/Code/imgui_common_files.cmake",
+    "Gems/ImGui/Code/imgui_editor_files.cmake",
+    "Gems/ImGui/Code/imgui_game_files.cmake",
+    "Gems/ImGui/Code/imgui_game_no-op_files.cmake",
+    "Gems/ImGui/Code/imgui_lib_files.cmake",
+    "Gems/ImGui/Code/imgui_lyutils_static_files.cmake",
+    "Gems/ImGui/Code/imgui_shared_files.cmake",
+    "Gems/ImGui/Code/Include/ImGuiBus.h",
+    "Gems/ImGui/Code/Include/ImGuiContextScope.h",
+    "Gems/ImGui/Code/Include/LYImGuiUtils/HistogramContainer.h",
+    "Gems/ImGui/Code/Include/LYImGuiUtils/HistogramGroup.h",
+    "Gems/ImGui/Code/Include/LYImGuiUtils/ImGuiDrawHelpers.h",
+    "Gems/ImGui/Code/Include/OtherActiveImGuiBus.h",
+    "Gems/ImGui/Code/Source/ImGuiColorDefines.h",
+    "Gems/ImGui/Code/Source/ImGuiGem.cpp",
+    "Gems/ImGui/Code/Source/ImGuiGem.h",
+    "Gems/ImGui/Code/Source/ImGuiManager.cpp",
+    "Gems/ImGui/Code/Source/ImGuiManager.h",
+    "Gems/ImGui/Code/Source/ImGuiNoOpStubModule.cpp",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiInputMonitor.cpp",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiInputMonitor.h",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYAssetExplorer.cpp",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYAssetExplorer.h",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYCameraMonitor.cpp",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYCameraMonitor.h",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYCommonMenu.cpp",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYCommonMenu.h",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYEntityOutliner.cpp",
+    "Gems/ImGui/Code/Source/LYCommonMenu/ImGuiLYEntityOutliner.h",
+    "Gems/ImGui/Code/Source/LYImGuiUtils/HistogramContainer.cpp",
+    "Gems/ImGui/Code/Source/LYImGuiUtils/HistogramGroup.cpp",
+    "Gems/ImGui/Code/Source/LYImGuiUtils/ImGuiDrawHelpers.cpp",
+    "Gems/ImGui/Code/Source/Platform/Android/imgui_android.cmake",
+    "Gems/ImGui/Code/Source/Platform/Android/platform_android_files.cmake",
+    "Gems/ImGui/Code/Source/Platform/Android/platform_android.cmake",
+    "Gems/ImGui/Code/Source/Platform/Emscripten/imgui_emscripten.cmake",
+    "Gems/ImGui/Code/Source/Platform/Emscripten/platform_emscripten_files.cmake",
+    "Gems/ImGui/Code/Source/Platform/Emscripten/platform_emscripten.cmake",
+    "Gems/ImGui/Code/Source/Platform/iOS/imgui_ios.cmake",
+    "Gems/ImGui/Code/Source/Platform/iOS/platform_ios_files.cmake",
+    "Gems/ImGui/Code/Source/Platform/iOS/platform_ios.cmake",
+    "Gems/ImGui/Code/Source/Platform/Linux/imgui_linux.cmake",
+    "Gems/ImGui/Code/Source/Platform/Linux/platform_linux_files.cmake",
+    "Gems/ImGui/Code/Source/Platform/Linux/platform_linux.cmake",
+    "Gems/ImGui/Code/Source/Platform/Mac/imgui_mac.cmake",
+    "Gems/ImGui/Code/Source/Platform/Mac/platform_mac_files.cmake",
+    "Gems/ImGui/Code/Source/Platform/Mac/platform_mac.cmake",
+    "Gems/ImGui/Code/Source/Platform/Windows/imgui_windows.cmake",
+    "Gems/ImGui/Code/Source/Platform/Windows/platform_windows_files.cmake",
+    "Gems/ImGui/Code/Source/Platform/Windows/platform_windows.cmake",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/.editorconfig",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imconfig.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_demo.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_draw.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_internal.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_tables.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_user.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_user.inl",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_widgets.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imgui.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imstb_rectpack.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imstb_textedit.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/imstb_truetype.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/LICENSE.txt",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/cpp/imgui_stdlib.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/cpp/imgui_stdlib.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/cpp/README.txt",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.gdb",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.natstepfilter",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.natvis",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/README.txt",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/binary_to_compressed_c.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Cousine-Regular.ttf",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/DroidSans.ttf",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Karla-Regular.ttf",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/ProggyClean.ttf",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/ProggyTiny.ttf",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Roboto-Medium.ttf",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/freetype/imgui_freetype.cpp",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/freetype/imgui_freetype.h",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/freetype/README.md",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/README.txt",
+    "Gems/ImGui/External/ImGui/v1.82/imgui/misc/single_file/imgui_single_file.h"
+  ],
+  "vendorHeadPairs": 50,
+  "parentDelta": "drawing-test-fix-delta.json",
+  "expectedCTestNames": [
+    "JE::DebugImGui.Tests.main::TEST_RUN",
+    "Legacy::EditorLib.Tests.main::TEST_RUN"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-12T11:43:42.6266566Z",
+  "pid": 319644,
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+  "exeSha256": "7013102BACD867A6B88D9576F3D6CEEB2E79C6D9274E6D5FC7917326C5B5DD41",
+  "prefabSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "crySystemSha256": "4E026F4A3770607419221C81D2F2EBE04BBBD0A2BE3F0EC6F3E38CEB1CC75095",
+  "arguments": [
+    "--project-path",
+    "\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"",
+    "--rhi=vulkan",
+    "--bg_ConnectToAssetProcessor=false",
+    "--regset=/Amazon/AzCore/Bootstrap/wait_for_connect=0",
+    "--regset=/Amazon/AzCore/Bootstrap/remote_filesystem=0"
+  ]
+}

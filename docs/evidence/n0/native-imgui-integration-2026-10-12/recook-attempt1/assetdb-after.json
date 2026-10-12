@@ -1,0 +1,284 @@
+{
+  "capturedUtc": "2026-10-12T12:19:37.304666+00:00",
+  "jobColumns": [
+    {
+      "cid": 0,
+      "name": "JobID",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "SourcePK",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "JobKey",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "Fingerprint",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "Platform",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "BuilderGuid",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "Status",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "JobRunKey",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "FailureCauseSourcePK",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 9,
+      "name": "FailureCauseFingerprint",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 10,
+      "name": "FirstFailLogTime",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 11,
+      "name": "FirstFailLogFile",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 12,
+      "name": "LastFailLogTime",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 13,
+      "name": "LastFailLogFile",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 14,
+      "name": "LastLogTime",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 15,
+      "name": "LastLogFile",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 16,
+      "name": "ErrorCount",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 17,
+      "name": "WarningCount",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "productColumns": [
+    {
+      "cid": 0,
+      "name": "ProductID",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "JobPK",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "ProductName",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "SubID",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "AssetType",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "LegacyGuid",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "Hash",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "Flags",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": "1",
+      "pk": 0
+    }
+  ],
+  "targetJobs": [
+    {
+      "SourceID": 1433,
+      "SourceName": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "JobID": 1493,
+      "SourcePK": 1433,
+      "JobKey": "Prefabs",
+      "Fingerprint": -716914902,
+      "Platform": "pc",
+      "BuilderGuid": "A2E0791C46074363A7FD73D01ED49660",
+      "Status": 4,
+      "JobRunKey": 31056,
+      "FailureCauseSourcePK": -1,
+      "FailureCauseFingerprint": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791807178043,
+      "LastLogFile": "@log@/JobLogs/Levels/JEEditorFixture/JEEditorFixture.prefab-3005589644-31056.log",
+      "ErrorCount": 0,
+      "WarningCount": 0
+    },
+    {
+      "SourceID": 1454,
+      "SourceName": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "JobID": 1514,
+      "SourcePK": 1454,
+      "JobKey": "Prefabs",
+      "Fingerprint": 767268875,
+      "Platform": "pc",
+      "BuilderGuid": "A2E0791C46074363A7FD73D01ED49660",
+      "Status": 4,
+      "JobRunKey": 31058,
+      "FailureCauseSourcePK": -1,
+      "FailureCauseFingerprint": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791807178064,
+      "LastLogFile": "@log@/JobLogs/Levels/JENativeIntegration/JENativeIntegration.prefab-2639614019-31058.log",
+      "ErrorCount": 0,
+      "WarningCount": 0
+    }
+  ],
+  "spawnables": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\levels\\jeeditorfixture\\jeeditorfixture.spawnable",
+      "exists": true,
+      "bytes": 72509,
+      "sha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+      "lastWriteUtc": "2026-10-12T12:12:58.033809+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\levels\\jenativeintegration\\jenativeintegration.spawnable",
+      "exists": true,
+      "bytes": 72509,
+      "sha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+      "lastWriteUtc": "2026-10-12T12:12:58.043659+00:00"
+    }
+  ],
+  "db": {
+    "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite",
+    "exists": true,
+    "bytes": 9007104,
+    "sha256": "EC8989E17C23BECD5784D41ED949F6C987CA4A6336C706DBEE5E8A287060E8BF",
+    "lastWriteUtc": "2026-10-12T12:12:57.253169+00:00"
+  }
+}

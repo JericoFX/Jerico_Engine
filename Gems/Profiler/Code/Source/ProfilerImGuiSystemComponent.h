@@ -18,7 +18,7 @@
 #include <AzCore/Component/Component.h>
 
 #if defined(IMGUI_ENABLED)
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 #include <imgui/imgui.h>
 #endif // defined(IMGUI_ENABLED)
 
@@ -28,7 +28,7 @@ namespace Profiler
         : public AZ::Component
 #if defined(IMGUI_ENABLED)
         , public ProfilerImGuiRequests
-        , public ImGui::ImGuiUpdateListenerBus::Handler
+        , public JE::Debug::ImGuiUpdateListenerBus::Handler
 #endif // defined(IMGUI_ENABLED)
     {
     public:

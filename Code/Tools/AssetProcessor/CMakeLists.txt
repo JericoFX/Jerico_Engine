@@ -45,6 +45,7 @@ ly_add_target(
             JE::Geometry.Authoring
             JE::EditorCamera
             JE::PrefabBuilder
+            JE::DebugImGui
             JE::EditorMaterials
             ${additional_dependencies}
 )

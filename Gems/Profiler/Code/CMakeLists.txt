@@ -63,9 +63,9 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             Gem::${gem_name}.Static
-            Gem::ImGui.imguilib
+            JE::DebugImGui
     RUNTIME_DEPENDENCIES
-        Gem::ImGui.imguilib
+        JE::DebugImGui
 )
 
 # Inject the gem name into the Module source file

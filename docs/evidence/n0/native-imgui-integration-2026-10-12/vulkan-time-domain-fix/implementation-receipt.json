@@ -1,0 +1,33 @@
+{
+  "status": "HOLD_SOURCE_ONLY_GREEN_NOT_RUN",
+  "source": "Gems/Atom/RHI/Vulkan/Code/Source/RHI/Device.cpp",
+  "afterSha256": "A6C6E2A75B1CFFD7E76492C793B4F8CB07334977D6F364AEDF41FD602D45F815",
+  "beforeSha256": "AEEF77AA972BD6EE6B23B48E1B84B9B94E93EF1A9279DE0C6F8378731A36A8EC",
+  "diff": "source-diff-exact.patch",
+  "diffSha256": "B36B89571F8A5F214F7BD575B6378676D1A97C7D5164DDABC1E7519ECCA17BFB",
+  "redEvidence": "build/n0-validation/native-imgui-rev1/diagnostic-gpu-timestamp/live-attempt1/live-result.json",
+  "redEvidenceSha256": "96DD496F62465C1A651861EF1B90335EC4C2936472CD8475BF85AC241D139F43",
+  "cause": "Existing selection admitted PRESENT_STAGE_LOCAL_EXT 1000208000 as a host clock with null pNext; live call faults in driver.",
+  "primaryContract": "https://docs.vulkan.org/refpages/latest/refpages/source/VkCalibratedTimestampInfoKHR.html",
+  "VUID": "VUID-VkCalibratedTimestampInfoKHR-timeDomain-12227",
+  "changes": [
+    "Reset host sentinel on each InitializeTimeDomains invocation",
+    "Allow only MONOTONIC, MONOTONIC_RAW and QUERY_PERFORMANCE_COUNTER domains reported by the device, preserving RAW priority and device-domain requirement",
+    "Return the existing zero pair before driver call if host sentinel or calibrated-timestamp extension unavailable"
+  ],
+  "redRepro": [
+    "Existing ProbeRuntime.ps1 Vulkan launcher path and live-attempt1/launch-receipt.json preserve original launch inputs",
+    "In native ImGui GPU Profiler open GPU timestamp view; captured second domain=1000208000,pNext=0 then AV"
+  ],
+  "greenPending": [
+    "Luna build same targets and configurations after parent freeze",
+    "Parent reruns same Vulkan launcher and GPU timestamp view; valid host domain only, no AV, real profiler remains active",
+    "Confirm unavailable/no known host/device domains leave sentinel and zero fallback without driver call",
+    "Static selection cases RAW before/after other known domains; unknown-only; device-only; repeated initialization; no-device all retain RAW preference or sentinel as appropriate"
+  ],
+  "limits": [
+    "No native build, test, product launch or GPU measurements run by this writer",
+    "No SDK, profiler, queue, renderer, result conversion or error tolerances changed",
+    "No claim that normalized zero fallback represents successful calibration"
+  ]
+}

@@ -89,7 +89,7 @@
 #include "AzAssetBrowser/AzAssetBrowserWindow.h"
 #include "AssetEditor/AssetEditorWindow.h"
 
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 #include <LmbrCentral/Audio/AudioSystemComponentBus.h>
 #include <Editor/EditorViewportCamera.h>

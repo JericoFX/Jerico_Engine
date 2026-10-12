@@ -1,0 +1,22 @@
+{
+  "backend": "vulkan",
+  "pid": 97036,
+  "retiredModules": [],
+  "limitations": "347 existing failed assets shown by AP; missing DiffuseProbeGridUpdatePassTemplate; three fixed_string512 asserts from profiling OpenMesh restore signature on leaving game mode; two DynamicDrawContext pipeline warnings at close. No source repair claimed for these. No geometry/material edits or UV reset. Vulkan timestamp failure separate.",
+  "nativeModules": [
+    {
+      "ModuleName": "DebugImGui.dll",
+      "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+      "ModuleMemorySize": 974848
+    },
+    {
+      "ModuleName": "DearImGui.dll",
+      "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+      "ModuleMemorySize": 770048
+    }
+  ],
+  "status": "EDITOR_GAME_MODE_CPU_PROFILER_VERIFIED",
+  "originalHash": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "sceneHash": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+  "closed": "Editor and auto-started AP/builders exited after AltF4; CIM verifies absence"
+}

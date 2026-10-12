@@ -1,0 +1,617 @@
+[
+  {
+    "ModuleName": "JEEditorFixture.GameLauncher.exe",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+    "ModuleMemorySize": 1503232
+  },
+  {
+    "ModuleName": "ntdll.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "ModuleMemorySize": 2519040
+  },
+  {
+    "ModuleName": "KERNEL32.DLL",
+    "FileName": "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "ModuleMemorySize": 831488
+  },
+  {
+    "ModuleName": "KERNELBASE.dll",
+    "FileName": "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "ModuleMemorySize": 4198400
+  },
+  {
+    "ModuleName": "ucrtbase.dll",
+    "FileName": "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "ModuleMemorySize": 1359872
+  },
+  {
+    "ModuleName": "USER32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\USER32.dll",
+    "ModuleMemorySize": 1929216
+  },
+  {
+    "ModuleName": "VCRUNTIME140.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll",
+    "ModuleMemorySize": 180224
+  },
+  {
+    "ModuleName": "win32u.dll",
+    "FileName": "C:\\WINDOWS\\System32\\win32u.dll",
+    "ModuleMemorySize": 159744
+  },
+  {
+    "ModuleName": "GDI32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\GDI32.dll",
+    "ModuleMemorySize": 176128
+  },
+  {
+    "ModuleName": "WorldCamera.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll",
+    "ModuleMemorySize": 823296
+  },
+  {
+    "ModuleName": "Geometry.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll",
+    "ModuleMemorySize": 778240
+  },
+  {
+    "ModuleName": "DebugImGui.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+    "ModuleMemorySize": 974848
+  },
+  {
+    "ModuleName": "gdi32full.dll",
+    "FileName": "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "ModuleMemorySize": 1212416
+  },
+  {
+    "ModuleName": "msvcp_win.dll",
+    "FileName": "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "ModuleMemorySize": 667648
+  },
+  {
+    "ModuleName": "RenderMaterials.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll",
+    "ModuleMemorySize": 2301952
+  },
+  {
+    "ModuleName": "AzFramework.NativeUI.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll",
+    "ModuleMemorySize": 1097728
+  },
+  {
+    "ModuleName": "MSVCP140.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll",
+    "ModuleMemorySize": 643072
+  },
+  {
+    "ModuleName": "AzCore.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll",
+    "ModuleMemorySize": 18518016
+  },
+  {
+    "ModuleName": "ADVAPI32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "ModuleMemorySize": 765952
+  },
+  {
+    "ModuleName": "msvcrt.dll",
+    "FileName": "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "ModuleMemorySize": 692224
+  },
+  {
+    "ModuleName": "sechost.dll",
+    "FileName": "C:\\WINDOWS\\System32\\sechost.dll",
+    "ModuleMemorySize": 688128
+  },
+  {
+    "ModuleName": "RPCRT4.dll",
+    "FileName": "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "ModuleMemorySize": 1146880
+  },
+  {
+    "ModuleName": "SHELL32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\SHELL32.dll",
+    "ModuleMemorySize": 7979008
+  },
+  {
+    "ModuleName": "Atom_RPI.Public.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+    "ModuleMemorySize": 8155136
+  },
+  {
+    "ModuleName": "WS2_32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "ModuleMemorySize": 528384
+  },
+  {
+    "ModuleName": "DearImGui.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+    "ModuleMemorySize": 770048
+  },
+  {
+    "ModuleName": "AzFramework.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll",
+    "ModuleMemorySize": 22142976
+  },
+  {
+    "ModuleName": "Atom_RHI.Reflect.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll",
+    "ModuleMemorySize": 3256320
+  },
+  {
+    "ModuleName": "VCRUNTIME140_1.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll",
+    "ModuleMemorySize": 49152
+  },
+  {
+    "ModuleName": "CRYPT32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "ModuleMemorySize": 1568768
+  },
+  {
+    "ModuleName": "ole32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\ole32.dll",
+    "ModuleMemorySize": 1679360
+  },
+  {
+    "ModuleName": "MSVCP140_ATOMIC_WAIT.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll",
+    "ModuleMemorySize": 90112
+  },
+  {
+    "ModuleName": "combase.dll",
+    "FileName": "C:\\WINDOWS\\System32\\combase.dll",
+    "ModuleMemorySize": 3710976
+  },
+  {
+    "ModuleName": "VERSION.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+    "ModuleMemorySize": 45056
+  },
+  {
+    "ModuleName": "OLEAUT32.dll",
+    "FileName": "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+    "ModuleMemorySize": 888832
+  },
+  {
+    "ModuleName": "Atom_RHI.Public.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll",
+    "ModuleMemorySize": 2121728
+  },
+  {
+    "ModuleName": "bcrypt.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+    "ModuleMemorySize": 172032
+  },
+  {
+    "ModuleName": "IMM32.DLL",
+    "FileName": "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "ModuleMemorySize": 200704
+  },
+  {
+    "ModuleName": "bcryptprimitives.dll",
+    "FileName": "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "ModuleMemorySize": 704512
+  },
+  {
+    "ModuleName": "windows.storage.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll",
+    "ModuleMemorySize": 9097216
+  },
+  {
+    "ModuleName": "SHCORE.dll",
+    "FileName": "C:\\WINDOWS\\System32\\SHCORE.dll",
+    "ModuleMemorySize": 1019904
+  },
+  {
+    "ModuleName": "shlwapi.dll",
+    "FileName": "C:\\WINDOWS\\System32\\shlwapi.dll",
+    "ModuleMemorySize": 417792
+  },
+  {
+    "ModuleName": "profapi.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\profapi.dll",
+    "ModuleMemorySize": 167936
+  },
+  {
+    "ModuleName": "CRYPTSP.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll",
+    "ModuleMemorySize": 110592
+  },
+  {
+    "ModuleName": "rsaenh.dll",
+    "FileName": "C:\\WINDOWS\\system32\\rsaenh.dll",
+    "ModuleMemorySize": 233472
+  },
+  {
+    "ModuleName": "CRYPTBASE.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.dll",
+    "ModuleMemorySize": 49152
+  },
+  {
+    "ModuleName": "Atom_Bootstrap.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Bootstrap.dll",
+    "ModuleMemorySize": 364544
+  },
+  {
+    "ModuleName": "AtomViewportDisplayInfo.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayInfo.dll",
+    "ModuleMemorySize": 253952
+  },
+  {
+    "ModuleName": "AudioSystem.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AudioSystem.dll",
+    "ModuleMemorySize": 929792
+  },
+  {
+    "ModuleName": "Atom_RHI.Private.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Private.dll",
+    "ModuleMemorySize": 339968
+  },
+  {
+    "ModuleName": "Atom_RPI.Private.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Private.dll",
+    "ModuleMemorySize": 266240
+  },
+  {
+    "ModuleName": "CommonFeaturesAtom.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\CommonFeaturesAtom.dll",
+    "ModuleMemorySize": 6295552
+  },
+  {
+    "ModuleName": "Atom_Feature_Common.Public.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll",
+    "ModuleMemorySize": 1531904
+  },
+  {
+    "ModuleName": "LmbrCentral.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\LmbrCentral.dll",
+    "ModuleMemorySize": 4579328
+  },
+  {
+    "ModuleName": "GradientSignal.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GradientSignal.dll",
+    "ModuleMemorySize": 3485696
+  },
+  {
+    "ModuleName": "Maestro.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Maestro.dll",
+    "ModuleMemorySize": 2396160
+  },
+  {
+    "ModuleName": "ProfilerImGui.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerImGui.dll",
+    "ModuleMemorySize": 479232
+  },
+  {
+    "ModuleName": "SurfaceData.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SurfaceData.dll",
+    "ModuleMemorySize": 1126400
+  },
+  {
+    "ModuleName": "AtomFont.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomFont.dll",
+    "ModuleMemorySize": 1015808
+  },
+  {
+    "ModuleName": "AtomImGuiTools.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+    "ModuleMemorySize": 565248
+  },
+  {
+    "ModuleName": "Atom_Component_DebugCamera.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Component_DebugCamera.dll",
+    "ModuleMemorySize": 524288
+  },
+  {
+    "ModuleName": "Atom_RHI_DX12.Private.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_DX12.Private.dll",
+    "ModuleMemorySize": 1474560
+  },
+  {
+    "ModuleName": "dxgi.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll",
+    "ModuleMemorySize": 1290240
+  },
+  {
+    "ModuleName": "d3d12.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll",
+    "ModuleMemorySize": 143360
+  },
+  {
+    "ModuleName": "powrprof.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "ModuleMemorySize": 385024
+  },
+  {
+    "ModuleName": "UMPDC.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "ModuleMemorySize": 86016
+  },
+  {
+    "ModuleName": "Atom_RHI_Null.Private.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll",
+    "ModuleMemorySize": 245760
+  },
+  {
+    "ModuleName": "Atom_RHI_Vulkan.Private.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+    "ModuleMemorySize": 1949696
+  },
+  {
+    "ModuleName": "Atom_Feature_Common.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.dll",
+    "ModuleMemorySize": 4993024
+  },
+  {
+    "ModuleName": "EMotionFX.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX.dll",
+    "ModuleMemorySize": 7720960
+  },
+  {
+    "ModuleName": "EMotionFX_Atom.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX_Atom.dll",
+    "ModuleMemorySize": 983040
+  },
+  {
+    "ModuleName": "ImguiAtom.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+    "ModuleMemorySize": 225280
+  },
+  {
+    "ModuleName": "Atom_AtomBridge.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_AtomBridge.dll",
+    "ModuleMemorySize": 524288
+  },
+  {
+    "ModuleName": "PhysX5.Gem.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PhysX5.Gem.dll",
+    "ModuleMemorySize": 7987200
+  },
+  {
+    "ModuleName": "kernel.appcore.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "ModuleMemorySize": 110592
+  },
+  {
+    "ModuleName": "SspiCli.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\SspiCli.dll",
+    "ModuleMemorySize": 299008
+  },
+  {
+    "ModuleName": "icu.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\icu.dll",
+    "ModuleMemorySize": 2744320
+  },
+  {
+    "ModuleName": "XInput9_1_0.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\XInput9_1_0.dll",
+    "ModuleMemorySize": 36864
+  },
+  {
+    "ModuleName": "uxtheme.dll",
+    "FileName": "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "ModuleMemorySize": 684032
+  },
+  {
+    "ModuleName": "clbcatq.dll",
+    "FileName": "C:\\WINDOWS\\System32\\clbcatq.dll",
+    "ModuleMemorySize": 712704
+  },
+  {
+    "ModuleName": "amsi.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\amsi.dll",
+    "ModuleMemorySize": 118784
+  },
+  {
+    "ModuleName": "USERENV.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "ModuleMemorySize": 212992
+  },
+  {
+    "ModuleName": "MpOav.dll",
+    "FileName": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\MpOav.dll",
+    "ModuleMemorySize": 671744
+  },
+  {
+    "ModuleName": "dxcore.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll",
+    "ModuleMemorySize": 278528
+  },
+  {
+    "ModuleName": "directxdatabasehelper.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\directxdatabasehelper.dll",
+    "ModuleMemorySize": 389120
+  },
+  {
+    "ModuleName": "cfgmgr32.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\cfgmgr32.dll",
+    "ModuleMemorySize": 335872
+  },
+  {
+    "ModuleName": "D3D12Core.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\D3D12Core.dll",
+    "ModuleMemorySize": 3518464
+  },
+  {
+    "ModuleName": "msasn1.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\msasn1.dll",
+    "ModuleMemorySize": 77824
+  },
+  {
+    "ModuleName": "cryptnet.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\cryptnet.dll",
+    "ModuleMemorySize": 241664
+  },
+  {
+    "ModuleName": "wldp.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\wldp.dll",
+    "ModuleMemorySize": 528384
+  },
+  {
+    "ModuleName": "drvstore.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\drvstore.dll",
+    "ModuleMemorySize": 1548288
+  },
+  {
+    "ModuleName": "devobj.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\devobj.dll",
+    "ModuleMemorySize": 192512
+  },
+  {
+    "ModuleName": "wintrust.dll",
+    "FileName": "C:\\WINDOWS\\System32\\wintrust.dll",
+    "ModuleMemorySize": 532480
+  },
+  {
+    "ModuleName": "imagehlp.dll",
+    "FileName": "C:\\WINDOWS\\System32\\imagehlp.dll",
+    "ModuleMemorySize": 131072
+  },
+  {
+    "ModuleName": "nvspcap64.dll",
+    "FileName": "C:\\WINDOWS\\system32\\nvspcap64.dll",
+    "ModuleMemorySize": 1495040
+  },
+  {
+    "ModuleName": "ntmarta.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+    "ModuleMemorySize": 221184
+  },
+  {
+    "ModuleName": "vulkan-1.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\vulkan-1.dll",
+    "ModuleMemorySize": 1769472
+  },
+  {
+    "ModuleName": "windows.staterepositorycore.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\windows.staterepositorycore.dll",
+    "ModuleMemorySize": 122880
+  },
+  {
+    "ModuleName": "nvoglv64.dll",
+    "FileName": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvoglv64.dll",
+    "ModuleMemorySize": 48934912
+  },
+  {
+    "ModuleName": "SETUPAPI.dll",
+    "FileName": "C:\\WINDOWS\\System32\\SETUPAPI.dll",
+    "ModuleMemorySize": 4747264
+  },
+  {
+    "ModuleName": "WTSAPI32.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll",
+    "ModuleMemorySize": 172032
+  },
+  {
+    "ModuleName": "nvgpucomp64.dll",
+    "FileName": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvgpucomp64.dll",
+    "ModuleMemorySize": 110788608
+  },
+  {
+    "ModuleName": "WinTypes.dll",
+    "FileName": "C:\\Windows\\System32\\WinTypes.dll",
+    "ModuleMemorySize": 1482752
+  },
+  {
+    "ModuleName": "rometadata.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\rometadata.dll",
+    "ModuleMemorySize": 233472
+  },
+  {
+    "ModuleName": "dwmapi.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll",
+    "ModuleMemorySize": 188416
+  },
+  {
+    "ModuleName": "nvrtum64.dll",
+    "FileName": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvrtum64.dll",
+    "ModuleMemorySize": 46346240
+  },
+  {
+    "ModuleName": "nvcuda64.dll",
+    "FileName": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvcuda64.dll",
+    "ModuleMemorySize": 11837440
+  },
+  {
+    "ModuleName": "nvobjectloader64.dll",
+    "FileName": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvobjectloader64.dll",
+    "ModuleMemorySize": 15052800
+  },
+  {
+    "ModuleName": "MSCTF.dll",
+    "FileName": "C:\\WINDOWS\\System32\\MSCTF.dll",
+    "ModuleMemorySize": 1425408
+  },
+  {
+    "ModuleName": "textinputframework.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\textinputframework.dll",
+    "ModuleMemorySize": 1335296
+  },
+  {
+    "ModuleName": "CoreMessaging.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\CoreMessaging.dll",
+    "ModuleMemorySize": 1224704
+  },
+  {
+    "ModuleName": "CoreUIComponents.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\CoreUIComponents.dll",
+    "ModuleMemorySize": 3035136
+  },
+  {
+    "ModuleName": "CrySystem.dll",
+    "FileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\CrySystem.dll",
+    "ModuleMemorySize": 1155072
+  },
+  {
+    "ModuleName": "nvapi64.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\nvapi64.dll",
+    "ModuleMemorySize": 561152
+  },
+  {
+    "ModuleName": "nvapi64_impl.dll",
+    "FileName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvapi64_impl.dll",
+    "ModuleMemorySize": 5840896
+  },
+  {
+    "ModuleName": "WINMM.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "ModuleMemorySize": 225280
+  },
+  {
+    "ModuleName": "DispBroker.dll",
+    "FileName": "C:\\Windows\\System32\\DispBroker.dll",
+    "ModuleMemorySize": 585728
+  },
+  {
+    "ModuleName": "opengl32.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\opengl32.dll",
+    "ModuleMemorySize": 1097728
+  },
+  {
+    "ModuleName": "GLU32.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\GLU32.dll",
+    "ModuleMemorySize": 233472
+  },
+  {
+    "ModuleName": "nvppex.dll",
+    "FileName": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvppex.dll",
+    "ModuleMemorySize": 7499776
+  },
+  {
+    "ModuleName": "WINSTA.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\WINSTA.dll",
+    "ModuleMemorySize": 417792
+  },
+  {
+    "ModuleName": "XInput1_4.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\XInput1_4.dll",
+    "ModuleMemorySize": 110592
+  },
+  {
+    "ModuleName": "inputhost.dll",
+    "FileName": "C:\\WINDOWS\\SYSTEM32\\inputhost.dll",
+    "ModuleMemorySize": 1974272
+  }
+]

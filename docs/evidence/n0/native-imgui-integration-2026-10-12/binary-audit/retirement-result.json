@@ -1,0 +1,123 @@
+{
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.dll",
+      "relativePath": "ImGui.dll",
+      "bytes": 633344,
+      "sha256": "7DBAFABEA3A0516840BA89ED3CFE7ECE6E6203CFC9A4604C7F16AD2AF2393970",
+      "lastWriteUtc": "2026-10-11T21:13:35.2835885Z",
+      "reason": "Retired Gem/vendor implementation pair, native replacements audited separately"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.pdb",
+      "relativePath": "ImGui.pdb",
+      "bytes": 19140608,
+      "sha256": "C19495C54D2DC6C64C44F943522D0783A17019780A8B9BE4E44D7EA6B5751AE1",
+      "lastWriteUtc": "2026-10-11T21:13:35.2865807Z",
+      "reason": "Retired Gem/vendor implementation pair, native replacements audited separately"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.Editor.dll",
+      "relativePath": "ImGui.Editor.dll",
+      "bytes": 637952,
+      "sha256": "D2BA58751E3906DF01E3612BD5EBB87B417C7B88893F1465D1070779D20D1FD5",
+      "lastWriteUtc": "2026-10-11T21:03:36.5140385Z",
+      "reason": "Retired Gem/vendor implementation pair, native replacements audited separately"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.Editor.pdb",
+      "relativePath": "ImGui.Editor.pdb",
+      "bytes": 19247104,
+      "sha256": "F62A120681549A3DACC3D1908BA3799A87C284A44CD2EF6F8D4B3167233D315F",
+      "lastWriteUtc": "2026-10-11T21:03:36.5160705Z",
+      "reason": "Retired Gem/vendor implementation pair, native replacements audited separately"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.imguilib.dll",
+      "relativePath": "ImGui.imguilib.dll",
+      "bytes": 822784,
+      "sha256": "608DAB8FC528A20817DC577A09DB2144BEB7B09606AFD67443F873580F4FDDE0",
+      "lastWriteUtc": "2026-10-11T19:48:52.1706198Z",
+      "reason": "Retired Gem/vendor implementation pair, native replacements audited separately"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImGui.imguilib.pdb",
+      "relativePath": "ImGui.imguilib.pdb",
+      "bytes": 2920448,
+      "sha256": "520F2A9FD9D5DC6AD12C0F2918A0BEDF9955EA66C9BB3269E88C884DAF9DAA52",
+      "lastWriteUtc": "2026-10-11T19:48:52.1727715Z",
+      "reason": "Retired Gem/vendor implementation pair, native replacements audited separately"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Headless.dll",
+      "relativePath": "Atom_Feature_Common.Headless.dll",
+      "bytes": 4824064,
+      "sha256": "35C53EDBCCB01EBBFC005C87BDFEE3858F02A8A6A00698226EC8681BE2CC7069",
+      "lastWriteUtc": "2026-10-11T23:56:45.6880434Z",
+      "reason": "Unselected stale Headless binary imports retired vendor; target still declared, not current shipping graph"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Headless.pdb",
+      "relativePath": "Atom_Feature_Common.Headless.pdb",
+      "bytes": 60248064,
+      "sha256": "46C0705462F70FBC1F38385E272C5E6FBE88D3F29DFBBB8B15BC5519C55439F7",
+      "lastWriteUtc": "2026-10-11T23:56:45.6960776Z",
+      "reason": "Unselected stale Headless binary imports retired vendor; target still declared, not current shipping graph"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "relativePath": "Registry\\cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "bytes": 6208,
+      "sha256": "B5640637FB7E40AE9C6749EFEB01C1DCB2557941AD93E59085DB1BCC20B4B379",
+      "lastWriteUtc": "2026-10-11T19:42:57.5292455Z",
+      "reason": "Stale generated profile for platform-excluded Server/HeadlessServer/Unified launcher"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "relativePath": "Registry\\cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "bytes": 6094,
+      "sha256": "CA9A5122E0C1D23B9B104DAB5904C0B0AAE496DE962B473F4A2B90D71FA387FE",
+      "lastWriteUtc": "2026-10-11T19:42:57.5162801Z",
+      "reason": "Stale generated profile for platform-excluded Server/HeadlessServer/Unified launcher"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "relativePath": "Registry\\cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "bytes": 6385,
+      "sha256": "5B5FA2B1D2FC93C8867FE140BDC45519EF85E4BE6038E3F986F9CAED7871358B",
+      "lastWriteUtc": "2026-10-11T19:42:57.5425213Z",
+      "reason": "Stale generated profile for platform-excluded Server/HeadlessServer/Unified launcher"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "relativePath": "Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "bytes": 6244,
+      "sha256": "4744AD964A70C23039F0CCB1FAD892286593AF40499BC2072DE4549922242456",
+      "lastWriteUtc": "2026-10-11T19:33:09.7380203Z",
+      "reason": "Stale generated profile for platform-excluded Server/HeadlessServer/Unified launcher"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "relativePath": "Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "bytes": 6130,
+      "sha256": "7F96ADD6DC07039B520D506A71F15262DEC629F63545CF8F3C93373C2BE6D0F8",
+      "lastWriteUtc": "2026-10-11T19:33:09.7326955Z",
+      "reason": "Stale generated profile for platform-excluded Server/HeadlessServer/Unified launcher"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "relativePath": "Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "bytes": 6130,
+      "sha256": "7220FA8CB0C443F797C31557CDD47C23F493AAA75AE499007C81D59C7DA1E36A",
+      "lastWriteUtc": "2026-10-11T19:33:09.7445254Z",
+      "reason": "Stale generated profile for platform-excluded Server/HeadlessServer/Unified launcher"
+    }
+  ],
+  "utc": "2026-10-12T12:16:08.7378663Z",
+  "loadedBeforeRemoval": [],
+  "proposalSha256": "2015EE13456C464164E620987A1C6267A1949A4EA828BE7BB4C7E2EB87653CFA",
+  "bytes": 108511559.0,
+  "status": "EXACT_ARTIFACTS_REMOVED",
+  "scope": "Exact obsolete build files only. Native replacements retained. Headless source/target and unrelated older launchers retained.",
+  "count": 14
+}

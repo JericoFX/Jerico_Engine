@@ -45,11 +45,11 @@ ly_add_target(
             ${physxdebug_dependency}
             Legacy::CryCommon
             Gem::PhysX5
-            Gem::ImGui.imguilib
-            Gem::ImGui
+            JE::DearImGui
+            JE::DebugImGui
     RUNTIME_DEPENDENCIES
         Gem::PhysX5
-        Gem::ImGui
+        JE::DebugImGui
 )
 
 ########################################################################################
@@ -101,11 +101,11 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Legacy::Editor.Headers
                 AZ::AzToolsFramework
                 Gem::PhysX5.Editor
-                Gem::ImGui.imguilib
-                Gem::ImGui.Editor
+                JE::DearImGui
+                JE::DebugImGui
         RUNTIME_DEPENDENCIES
             Gem::PhysX5.Editor
-            Gem::ImGui.Editor
+            JE::DebugImGui
     )
     # use the ${gem_name}.Editor module in dev tools:
     ly_create_alias(NAME ${gem_name}.Builders NAMESPACE Gem TARGETS Gem::${gem_name}.Editor)

@@ -1,0 +1,11 @@
+{
+  "status": "CPU_AND_GPU_PANELS_RENDERED",
+  "captures": [
+    "cpu-profiler.jpg",
+    "gpu-timestamps.jpg"
+  ],
+  "backend": "dx12",
+  "pid": 247700,
+  "closed": "AltF4 did not exit; parent terminated exact owned PID",
+  "scope": "GPU timing value 2.4700ms is a single UI sample, not benchmark; original prefab unchanged"
+}

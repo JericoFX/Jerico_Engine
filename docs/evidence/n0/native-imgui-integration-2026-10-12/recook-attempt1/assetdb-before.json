@@ -1,0 +1,112 @@
+{
+  "capturedUtc": "2026-10-12T12:12:29.160195+00:00",
+  "mode": "read-only sqlite URI plus PRAGMA query_only=ON",
+  "dbFiles": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite",
+      "exists": true,
+      "bytes": 9007104,
+      "sha256": "BA7C2D8592E886D3723FC46E81D58FB1DF70C9402B742A334F331CF319B05D7A",
+      "lastWriteUtc": "2026-10-12T11:49:18.824408+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite-wal",
+      "exists": true,
+      "bytes": 9920992,
+      "sha256": "C79477A61148BF426F03A9D3753D9FD320FAE83060F2D43270F908A1BCD14B27",
+      "lastWriteUtc": "2026-10-12T11:49:19.343369+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite-shm",
+      "exists": true,
+      "bytes": 32768,
+      "sha256": "A9B2C8E4909B975EE0A5A9F6AFDAB034189CA7FCF8863F3EFE4E3EA9EFBB1626",
+      "lastWriteUtc": "2026-10-12T12:12:29.157314+00:00"
+    }
+  ],
+  "scanFolders": [
+    {
+      "ScanFolderID": 1,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/Intermediate Assets",
+      "DisplayName": "Intermediate Assets",
+      "PortableKey": "Intermediate Assets",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 2,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+      "DisplayName": "JEEditorFixture",
+      "PortableKey": "Project/Assets",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 3,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/ShaderLib",
+      "DisplayName": "Project/ShaderLib",
+      "PortableKey": "Project/ShaderLib",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 4,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Shaders",
+      "DisplayName": "Project/Shaders",
+      "PortableKey": "Project/Shaders",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 5,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Registry",
+      "DisplayName": "Project/Registry",
+      "PortableKey": "Project/Registry",
+      "IsRoot": 0
+    }
+  ],
+  "sources": [
+    {
+      "SourceID": 1433,
+      "ScanFolderPK": 2,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+      "PortableKey": "Project/Assets",
+      "SourceName": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "SourceGuidHex": "AEA149F7F894520482DEDADFFC92C91E"
+    },
+    {
+      "SourceID": 1454,
+      "ScanFolderPK": 2,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+      "PortableKey": "Project/Assets",
+      "SourceName": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "SourceGuidHex": "C6A6F90DAA115042A650BD8400B5CFF5"
+    }
+  ],
+  "jobsAndProducts": [
+    {
+      "SourceName": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "SourceID": 1433,
+      "JobID": 1493,
+      "JobKey": "Prefabs",
+      "Platform": "pc",
+      "Status": 4,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "ProductID": 7175,
+      "ProductName": "pc/levels/jeeditorfixture/jeeditorfixture.spawnable",
+      "SubID": 324364723,
+      "AssetTypeHex": "855E3021D3054845B28420C3F7FDF16B"
+    },
+    {
+      "SourceName": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "SourceID": 1454,
+      "JobID": 1514,
+      "JobKey": "Prefabs",
+      "Platform": "pc",
+      "Status": 4,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "ProductID": 7261,
+      "ProductName": "pc/levels/jenativeintegration/jenativeintegration.spawnable",
+      "SubID": 285885652,
+      "AssetTypeHex": "855E3021D3054845B28420C3F7FDF16B"
+    }
+  ]
+}

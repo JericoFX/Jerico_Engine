@@ -1,0 +1,21 @@
+{
+  "finishedUtc": "2026-10-12T12:07:30.4965448Z",
+  "nativeExitCode": 0,
+  "elapsedSeconds": 20.9927523,
+  "targetAfter": {
+    "sha256": "0E54D0C5E6BB8C8E89D95F9E451A4E92E714FA0A233192222C61EF822935363F",
+    "lastWriteUtc": "2026-10-12T12:07:30.3657972Z",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+    "bytes": 1917440
+  },
+  "pdbAfter": {
+    "sha256": "A9C7238C0E6BF287B1B852E7103AAD057291CE17864DEEAC9A9A3368F66E68EB",
+    "lastWriteUtc": "2026-10-12T12:07:30.3741020Z",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.pdb",
+    "bytes": 26021888
+  },
+  "sourceAfterSha256": "A6C6E2A75B1CFFD7E76492C793B4F8CB07334977D6F364AEDF41FD602D45F815",
+  "freezeAfterSha256": "128E1B90B41CD497E24A3884D9C823C10B1BEB3CEAE3ADCF116C59AD69D219D2",
+  "stdoutPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\build-attempt1\\stdout.log",
+  "stderrPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-imgui-rev1\\vulkan-time-domain-fix\\build-attempt1\\stderr.log"
+}

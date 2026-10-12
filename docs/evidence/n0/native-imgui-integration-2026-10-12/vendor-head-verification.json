@@ -1,0 +1,352 @@
+[
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Android/imgui_android.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Android/imgui_android.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Android/platform_android_files.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Android/platform_android_files.cmake",
+    "headBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "currentBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Android/platform_android.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Android/platform_android.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Emscripten/imgui_emscripten.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Emscripten/imgui_emscripten.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Emscripten/platform_emscripten_files.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Emscripten/platform_emscripten_files.cmake",
+    "headBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "currentBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Emscripten/platform_emscripten.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Emscripten/platform_emscripten.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/iOS/imgui_ios.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/iOS/imgui_ios.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/iOS/platform_ios_files.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/iOS/platform_ios_files.cmake",
+    "headBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "currentBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/iOS/platform_ios.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/iOS/platform_ios.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Linux/imgui_linux.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Linux/imgui_linux.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Linux/platform_linux_files.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Linux/platform_linux_files.cmake",
+    "headBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "currentBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Linux/platform_linux.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Linux/platform_linux.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Mac/imgui_mac.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Mac/imgui_mac.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Mac/platform_mac_files.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Mac/platform_mac_files.cmake",
+    "headBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "currentBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Mac/platform_mac.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Mac/platform_mac.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Windows/imgui_windows.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Windows/imgui_windows.cmake",
+    "headBlob": "bea2cfc38bea0d60fd3e8e3a3b407b5ec505f3e8",
+    "currentBlob": "bea2cfc38bea0d60fd3e8e3a3b407b5ec505f3e8",
+    "sha256": "03F932DB031DD1F04233D0B3BA7FAB49819048556AAA296655EE7B879BBB47FE"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Windows/platform_windows_files.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Windows/platform_windows_files.cmake",
+    "headBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "currentBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+    "sha256": "92979CF6B75404293D00B672836285542BC6BA8AE3EC2AABDCF7C03E726D4E36"
+  },
+  {
+    "source": "Gems/ImGui/Code/Source/Platform/Windows/platform_windows.cmake",
+    "destination": "Engine/Debug/ImGui/Source/Platform/Windows/platform_windows.cmake",
+    "headBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "currentBlob": "5cd1fb5a224ab7e1b26430a48bfcfe2adaf6deac",
+    "sha256": "F37A012CCCED15FA4447AF11A2BEA01F71AE1A4020EFEDBDD17D938C0C229044"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/.editorconfig",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/.editorconfig",
+    "headBlob": "c6dc600aa618dfac95fa7efa232714629ea2c23d",
+    "currentBlob": "c6dc600aa618dfac95fa7efa232714629ea2c23d",
+    "sha256": "77435571A6FAEEB649E9EED4FBDE358E4D7E2C29014AA4D0AF5D104ACAA35ADA"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imconfig.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imconfig.h",
+    "headBlob": "79e8c9e450939889cb6d5a4b8c6faab2a94dff91",
+    "currentBlob": "79e8c9e450939889cb6d5a4b8c6faab2a94dff91",
+    "sha256": "BB6BCF8D63E7B832BE023280D276A69CAE4CAE48C7AAF14A277B61DFD15FAECF"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_demo.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui_demo.cpp",
+    "headBlob": "3af6f6a826961783373e504d90c9ccdf6d033334",
+    "currentBlob": "3af6f6a826961783373e504d90c9ccdf6d033334",
+    "sha256": "AAA082EE47D8B5B241378349910D60C62A2DCCCB7CA936EDA984889883B48994"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_draw.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui_draw.cpp",
+    "headBlob": "99d24732cef3db9d4c42a46ab6c965cb6b318d25",
+    "currentBlob": "99d24732cef3db9d4c42a46ab6c965cb6b318d25",
+    "sha256": "CC23121D445CE212E91A0944A585A22409F3C4145BD5A3A9D8EB4E4F86C5ED9B"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_internal.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui_internal.h",
+    "headBlob": "cf194c1e3f2f01312d5b3039f554349827a834d0",
+    "currentBlob": "cf194c1e3f2f01312d5b3039f554349827a834d0",
+    "sha256": "CAAE37BD1E491F92C378294D52ADEE84946BEDBF9CF7A52B7981EAC548BB74CD"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_tables.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui_tables.cpp",
+    "headBlob": "86ff69767f092e4c404518588be27d1ed71fd41e",
+    "currentBlob": "86ff69767f092e4c404518588be27d1ed71fd41e",
+    "sha256": "05E0355244E008753F843D5FE2862632D7AC7EEE332A75DF9AFA9E376CD09577"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui_widgets.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui_widgets.cpp",
+    "headBlob": "edbdd21cb702e996bf4c0ce80d073d0be02060c7",
+    "currentBlob": "edbdd21cb702e996bf4c0ce80d073d0be02060c7",
+    "sha256": "7307892161379E9240C704409346E7745D29FA6226193089D4580B1786AD77C2"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui.cpp",
+    "headBlob": "78e983404a305bfd993d647e74baaddd8391f3a1",
+    "currentBlob": "78e983404a305bfd993d647e74baaddd8391f3a1",
+    "sha256": "0F85EA25FA53E9495B0A1239675A66AE58A98DDE14E8B4CBB7A4661480CF89E7"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imgui.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imgui.h",
+    "headBlob": "99218bc271c48919a44b9d2a8303ae58b6b93d72",
+    "currentBlob": "99218bc271c48919a44b9d2a8303ae58b6b93d72",
+    "sha256": "FA70FC50443030AFCDA8FD885C13FA02CB083CBE75747061AC0F1123F4270257"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imstb_rectpack.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imstb_rectpack.h",
+    "headBlob": "ff2a85df42bc63c41a2bf910b3c0061f5854a28f",
+    "currentBlob": "ff2a85df42bc63c41a2bf910b3c0061f5854a28f",
+    "sha256": "8FCE55CFBC72773903C0A4BE75B7EE72B55B6253E11F2936769F8CBDE11DA876"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imstb_textedit.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imstb_textedit.h",
+    "headBlob": "7644670975c9afb25aba3d5f78f1322842593147",
+    "currentBlob": "7644670975c9afb25aba3d5f78f1322842593147",
+    "sha256": "5DD517584886E43DFBA59E8D3D2F2E1AD3A83EC1BEE9E55153627DA03766B01B"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/imstb_truetype.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/imstb_truetype.h",
+    "headBlob": "fc815d74522399e0e5780d84ab1bdf7c0aa6b237",
+    "currentBlob": "fc815d74522399e0e5780d84ab1bdf7c0aa6b237",
+    "sha256": "9D753CC5D17E950EA0F04094E15235D615CE039706161A55F370F1B4FC539BC9"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/LICENSE.txt",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/LICENSE.txt",
+    "headBlob": "780533dcb26115e96e7fc8a51a832534ac3270e2",
+    "currentBlob": "780533dcb26115e96e7fc8a51a832534ac3270e2",
+    "sha256": "E06A3394FFBDE6FEE1AE1B6273D7F5CB2BBF1BAA7074858AE00211210107C9CB"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/README.txt",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/README.txt",
+    "headBlob": "b4ce89f0384d8973e46588cc3a4d4210f08f7d05",
+    "currentBlob": "b4ce89f0384d8973e46588cc3a4d4210f08f7d05",
+    "sha256": "BFFD92257236935C07002CD01626DFD0D8EEA5BA7D11EE8D83FB670B88746795"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/cpp/imgui_stdlib.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/cpp/imgui_stdlib.cpp",
+    "headBlob": "cb1fe1743d8e39a3ab99acec8b32b5238267533e",
+    "currentBlob": "cb1fe1743d8e39a3ab99acec8b32b5238267533e",
+    "sha256": "B18F2348ED312634C1B53FAB0C4A62948A92452C697B12674FC0A3DA05140FE5"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/cpp/imgui_stdlib.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/cpp/imgui_stdlib.h",
+    "headBlob": "f860b0c780b2f9b7fa052de321914dda1c2f6f24",
+    "currentBlob": "f860b0c780b2f9b7fa052de321914dda1c2f6f24",
+    "sha256": "B8F0750279973EC63BA282137BF2A9A367A6A96B61DFA0C713C0F0C9BE096506"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/cpp/README.txt",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/cpp/README.txt",
+    "headBlob": "8d5982e0ed9f6342056e014d99d1e6e2d347eb35",
+    "currentBlob": "8d5982e0ed9f6342056e014d99d1e6e2d347eb35",
+    "sha256": "5DFF6631775970B16A260AF34886373B1C05809D66B644FE9DDA010F3D92F13D"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.gdb",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.gdb",
+    "headBlob": "000ff6eb915bdb38a2e77f7e06041439ce3d580f",
+    "currentBlob": "000ff6eb915bdb38a2e77f7e06041439ce3d580f",
+    "sha256": "981AE4FF74EEC41DF38F66115813E9C4E4A8829D3A7CC801FE4B697F2E7B9C95"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.natstepfilter",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.natstepfilter",
+    "headBlob": "efd1957b2f776bd86028359bdb82f6714f40479a",
+    "currentBlob": "efd1957b2f776bd86028359bdb82f6714f40479a",
+    "sha256": "614B15CEFF227927F625FD228B0A7E731A9BB74154B6FB7D1465891CD580F037"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.natvis",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/imgui.natvis",
+    "headBlob": "13b636008546bd2cbf5c835806d9c0c45811bdf8",
+    "currentBlob": "13b636008546bd2cbf5c835806d9c0c45811bdf8",
+    "sha256": "CF0E39AE67D2BB3524B46F52FAC269239F5FE840F75F11E2B86494834CFFC79A"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/README.txt",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/debuggers/README.txt",
+    "headBlob": "3f4ba83e3c15cea9954f0c240ee1a01873d8522e",
+    "currentBlob": "3f4ba83e3c15cea9954f0c240ee1a01873d8522e",
+    "sha256": "E1C19E24BF4BF5C19D4A1B5F3D138167F2E8FD9610BCC4D5834FC75093EA46F4"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/binary_to_compressed_c.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/binary_to_compressed_c.cpp",
+    "headBlob": "441c8f67c2e696a1165bfaa2254be11d6093d95d",
+    "currentBlob": "441c8f67c2e696a1165bfaa2254be11d6093d95d",
+    "sha256": "C37CE2CEDF87A055BF03098A103B5D2EDB1507BC536F5BCCFB19BE4CF26E4C8A"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Cousine-Regular.ttf",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Cousine-Regular.ttf",
+    "headBlob": "fdca7dc8c2ef30a4b4b4f8fe25a4a0a445a6b0c9",
+    "currentBlob": "fdca7dc8c2ef30a4b4b4f8fe25a4a0a445a6b0c9",
+    "sha256": "5EC00A481FE2ADE7428E36F2CA713E1C27B533236B7B881538C9E4829ACBD18C"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/DroidSans.ttf",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/DroidSans.ttf",
+    "headBlob": "bda4cb008d8623c5d96f9a865a9d631b289121f0",
+    "currentBlob": "bda4cb008d8623c5d96f9a865a9d631b289121f0",
+    "sha256": "9E1E4E680A63C72D1947A08AC1A3FCDD6E6B8451EAE64C11062CF38473386AEB"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Karla-Regular.ttf",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Karla-Regular.ttf",
+    "headBlob": "2f5f2adc37af748c47964555b0350deb3ab10179",
+    "currentBlob": "2f5f2adc37af748c47964555b0350deb3ab10179",
+    "sha256": "4E776445230492274707601330638BE34EC37F0E9260A9963A82B40897142B5C"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/ProggyClean.ttf",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/ProggyClean.ttf",
+    "headBlob": "bf372a12cb0ea14f9a22d7237c3ec08cb4d8b3e3",
+    "currentBlob": "bf372a12cb0ea14f9a22d7237c3ec08cb4d8b3e3",
+    "sha256": "4CDD3788465ECDEAC49B52118F21A0FD085CCF20423872EB6D1C333525020BC2"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/ProggyTiny.ttf",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/ProggyTiny.ttf",
+    "headBlob": "672f4c07ff134418558ba64b3d7440e566c95194",
+    "currentBlob": "672f4c07ff134418558ba64b3d7440e566c95194",
+    "sha256": "4F283C7EA552460CB62995E2F79F2B73AD50DBAF88B92E4DD23751F776AC41A0"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Roboto-Medium.ttf",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/fonts/Roboto-Medium.ttf",
+    "headBlob": "02435fc56596fdc41410a3ec236de41d89ec44fb",
+    "currentBlob": "02435fc56596fdc41410a3ec236de41d89ec44fb",
+    "sha256": "10A993A044AE5816B6712D2D5AA846815582212C94E64CD36746EA1E351E0739"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/freetype/imgui_freetype.cpp",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/freetype/imgui_freetype.cpp",
+    "headBlob": "c4120778b486d5071490e68a7bcc41ba3fea1969",
+    "currentBlob": "c4120778b486d5071490e68a7bcc41ba3fea1969",
+    "sha256": "D91C4094A6491A1A53BEC289959A103F9B0413D01C1A2A5DE62197CAA849A770"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/freetype/imgui_freetype.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/freetype/imgui_freetype.h",
+    "headBlob": "713e4639e101061f28a63f4ab2be89909e098ab5",
+    "currentBlob": "713e4639e101061f28a63f4ab2be89909e098ab5",
+    "sha256": "FE49E995BF23C6B4EBEF81AFD7F248CBEAF3E10A0DEE1E3072BD0A67404B978E"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/freetype/README.md",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/freetype/README.md",
+    "headBlob": "a3db3534522e8e14d936e1ded584355a306217ef",
+    "currentBlob": "a3db3534522e8e14d936e1ded584355a306217ef",
+    "sha256": "B983B977602667C8EE20F5DC2B5E0D262F19012DA0B5D95F07ABD69788F7D74A"
+  },
+  {
+    "source": "Gems/ImGui/External/ImGui/v1.82/imgui/misc/single_file/imgui_single_file.h",
+    "destination": "Engine/Debug/ImGui/External/ImGui/v1.82/imgui/misc/single_file/imgui_single_file.h",
+    "headBlob": "6c1fb369fc2079e70be4f0ce63fb06aa2cd8d9e1",
+    "currentBlob": "6c1fb369fc2079e70be4f0ce63fb06aa2cd8d9e1",
+    "sha256": "7A875558695050C56D77F53CA4E0A910C6661D672938772989487FC5B3C90EBF"
+  }
+]

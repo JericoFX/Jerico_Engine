@@ -13,7 +13,7 @@
 #include <CrySystemBus.h>
 
 #if defined(IMGUI_ENABLED)
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 #include <imgui/imgui.h>
 #include <Atom/Utils/ImGuiGpuProfiler.h>
 #include <Atom/Utils/ImGuiMaterialDetails.h>
@@ -30,7 +30,7 @@ namespace AtomImGuiTools
     class AtomImGuiToolsSystemComponent
         : public AZ::Component
 #if defined(IMGUI_ENABLED)
-        , public ImGui::ImGuiUpdateListenerBus::Handler
+        , public JE::Debug::ImGuiUpdateListenerBus::Handler
         , public AtomImGuiToolsRequestBus::Handler
 #endif
         , public CrySystemEventBus::Handler

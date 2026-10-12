@@ -1,0 +1,66 @@
+{
+  "capturedUtc": "2026-10-12T11:34:29.5876558Z",
+  "buildExitCode": 0,
+  "targets": [
+    {
+      "target": "DebugImGui.Tests",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.Tests.dll\r"
+    },
+    {
+      "target": "Editor",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe\r"
+    },
+    {
+      "target": "AssetProcessor",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe\r"
+    },
+    {
+      "target": "AssetProcessorBatch",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe\r"
+    },
+    {
+      "target": "AssetBuilder",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe\r"
+    },
+    {
+      "target": "JEEditorFixture.GameLauncher",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe\r"
+    },
+    {
+      "target": "MaterialEditor",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialEditor.exe\r"
+    },
+    {
+      "target": "MaterialCanvas",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialCanvas.exe\r"
+    },
+    {
+      "target": "PassCanvas",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PassCanvas.exe\r"
+    },
+    {
+      "target": "ShaderManagementConsole",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ShaderManagementConsole.exe\r"
+    },
+    {
+      "target": "EditorLib.Tests",
+      "found": true,
+      "output": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorLib.Tests.dll\r"
+    }
+  ],
+  "missingTargets": [],
+  "warningCount": 1,
+  "warnings": [
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(617,5): warning MSB5018: No se pudo eliminar el archivo temporal \"C:\\Users\\Jerico\\AppData\\Local\\Temp\\MSBuildTemp\\tmp323469abca774978bff427cdf861267a.rsp\". El proceso no puede obtener acceso al archivo 'C:\\Users\\Jerico\\AppData\\Local\\Temp\\MSBuildTemp\\tmp323469abca774978bff427cdf861267a.rsp' porque está siendo utilizado en otro proceso.  [F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\EMotionFX-210aa102\\Code\\EMotionFXStaticLib.vcxproj]"
+  ]
+}

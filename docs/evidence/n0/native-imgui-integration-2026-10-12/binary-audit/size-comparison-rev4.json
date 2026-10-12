@@ -1,0 +1,28 @@
+{
+  "scope": "Refresh after three restored UI literals; no public header, ABI or dependent target changes",
+  "exitCode": 0,
+  "current": [
+    {
+      "name": "DebugImGui.dll",
+      "sha256": "FDD5A3F4B3376AD296CEAB9F11F17E1D563C9EA218D91F890C83CD46A14F7B21",
+      "bytes": 952320
+    },
+    {
+      "name": "DebugImGui.pdb",
+      "sha256": "89A0A21019DB6646218310B0556DF4DEFEFE44B682148327ED4C0CDFDDF5B85D",
+      "bytes": 25030656
+    },
+    {
+      "name": "DearImGui.dll",
+      "sha256": "EE6D8BC50CFE3F8C63BF4C8776C3322A528A2DECEED983BC783D591FCD2029BC",
+      "bytes": 737792
+    },
+    {
+      "name": "DearImGui.pdb",
+      "sha256": "E005D360FA6A8EB3D09351F0B1B984CD2A6B33BF23837877739884572AA5DE3F",
+      "bytes": 2732032
+    }
+  ],
+  "dllTotal": 1690112.0,
+  "pdbTotal": 27762688.0
+}

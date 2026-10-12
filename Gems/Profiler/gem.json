@@ -17,6 +17,5 @@
     "icon_path": "preview.png",
     "requirements": "",
     "dependencies": [
-        "ImGui"
     ]
 }

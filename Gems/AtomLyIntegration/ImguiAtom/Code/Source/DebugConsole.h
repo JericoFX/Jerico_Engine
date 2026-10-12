@@ -19,7 +19,7 @@
 
 #ifdef IMGUI_ENABLED
 #   include <imgui/imgui.h>
-#   include <ImGuiBus.h>
+#   include <JE/Debug/ImGui/ImGuiBus.h>
 #endif
 
 struct ImGuiInputTextCallbackData;
@@ -39,7 +39,7 @@ namespace AZ
     //! - The fourth finger press on a touch screen.
     class DebugConsole
         : public AZ::Debug::TraceMessageBus::Handler
-        , public ImGui::ImGuiUpdateListenerBus::Handler
+        , public JE::Debug::ImGuiUpdateListenerBus::Handler
     {
         //! The default maximum number of entries to display in the debug log.
         static constexpr int DefaultMaxEntriesToDisplay = 1028;
@@ -68,7 +68,7 @@ namespace AZ
         bool OnPreWarning(const char* window, const char* fileName, int line, const char* func, const char* message) override;
         bool OnPrintf(const char* window, const char* message) override;
 
-        //! ImGui::ImGuiUpdateListenerBus overrides
+        //! JE::Debug::ImGuiUpdateListenerBus overrides
         //! @{
         void OnImGuiMainMenuUpdate() override;
         void OnImGuiUpdate() override;

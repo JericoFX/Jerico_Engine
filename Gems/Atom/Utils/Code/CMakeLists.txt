@@ -24,7 +24,7 @@ ly_add_target(
         PUBLIC
             Gem::Atom_RHI.Reflect
             Gem::Atom_RPI.Public
-            Gem::ImGui.imguilib
+            JE::DearImGui
             3rdParty::PNG
             Gem::ProfilerImGui
 )

@@ -1218,7 +1218,8 @@ namespace AZ
 
         AZStd::pair<uint64_t, uint64_t> Device::GetCalibratedTimestamp([[maybe_unused]] RHI::HardwareQueueClass queueClass)
         {
-            if (!static_cast<const PhysicalDevice&>(GetPhysicalDevice())
+            if (m_hostTimeDomain == VK_TIME_DOMAIN_MAX_ENUM_KHR ||
+                !static_cast<const PhysicalDevice&>(GetPhysicalDevice())
                      .IsOptionalDeviceExtensionSupported(OptionalDeviceExtension::CalibratedTimestamps))
             {
                 return { 0ull, AZStd::chrono::microseconds().count() };
@@ -1239,6 +1240,7 @@ namespace AZ
 
         void Device::InitializeTimeDomains()
         {
+            m_hostTimeDomain = VK_TIME_DOMAIN_MAX_ENUM_KHR;
             auto timeDomains{
                 static_cast<const PhysicalDevice&>(GetPhysicalDevice()).GetCalibratedTimeDomains(m_loaderContext->GetContext())
             };
@@ -1251,8 +1253,11 @@ namespace AZ
                 {
                     deviceTimeDomainFound = true;
                 }
-                // we prioritize VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT of the host time domains
-                else if (m_hostTimeDomain != VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT)
+                // Only host clocks are valid with the null pNext below; prefer CLOCK_MONOTONIC_RAW.
+                else if ((timeDomain == VK_TIME_DOMAIN_CLOCK_MONOTONIC_EXT ||
+                          timeDomain == VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT ||
+                          timeDomain == VK_TIME_DOMAIN_QUERY_PERFORMANCE_COUNTER_EXT) &&
+                         m_hostTimeDomain != VK_TIME_DOMAIN_CLOCK_MONOTONIC_RAW_EXT)
                 {
                     m_hostTimeDomain = timeDomain;
                 }

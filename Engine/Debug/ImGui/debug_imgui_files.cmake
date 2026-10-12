@@ -1,0 +1,32 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+set(FILES
+    Include/JE/Debug/ImGui/ImGuiExports.h
+    Include/JE/Debug/ImGui/ImGuiModule.h
+    Include/JE/Debug/ImGui/ImGuiBus.h
+    Include/JE/Debug/ImGui/ImGuiContextScope.h
+    Include/JE/Debug/ImGui/OtherActiveImGuiBus.h
+    Include/JE/Debug/ImGui/HistogramContainer.h
+    Include/JE/Debug/ImGui/HistogramGroup.h
+    Include/JE/Debug/ImGui/ImGuiDrawHelpers.h
+    Include/JE/Debug/ImGui/CurveEditor.h
+    Source/ImGuiModule.cpp
+    Source/ImGuiBus.cpp
+    Source/ImGuiManager.h
+    Source/ImGuiManager.cpp
+    Source/ImGuiColorDefines.h
+    Source/CurveEditor.cpp
+    Source/LYCommonMenu/ImGuiInputMonitor.h
+    Source/LYCommonMenu/ImGuiInputMonitor.cpp
+    Source/LYCommonMenu/ImGuiLYCommonMenu.h
+    Source/LYCommonMenu/ImGuiLYCommonMenu.cpp
+    Source/LYCommonMenu/ImGuiLYAssetExplorer.h
+    Source/LYCommonMenu/ImGuiLYAssetExplorer.cpp
+    Source/LYCommonMenu/ImGuiLYCameraMonitor.h
+    Source/LYCommonMenu/ImGuiLYCameraMonitor.cpp
+    Source/LYCommonMenu/ImGuiLYEntityOutliner.h
+    Source/LYCommonMenu/ImGuiLYEntityOutliner.cpp
+    Source/LYImGuiUtils/HistogramContainer.cpp
+    Source/LYImGuiUtils/HistogramGroup.cpp
+    Source/LYImGuiUtils/ImGuiDrawHelpers.cpp
+)

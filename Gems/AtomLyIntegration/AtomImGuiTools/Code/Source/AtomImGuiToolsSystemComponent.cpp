@@ -15,7 +15,7 @@
 #include <Atom/RHI.Profiler/GraphicsProfilerBus.h>
 #include <Atom/RPI.Public/Pass/PassSystemInterface.h>
 #include <AzFramework/Components/ConsoleBus.h>
-#include <ImGuiBus.h>
+#include <JE/Debug/ImGui/ImGuiBus.h>
 
 #include <AzFramework/Translation/TranslationDef.h>
 
@@ -62,7 +62,7 @@ namespace AtomImGuiTools
     void AtomImGuiToolsSystemComponent::Activate()
     {
 #if defined(IMGUI_ENABLED)
-        ImGui::ImGuiUpdateListenerBus::Handler::BusConnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusConnect();
         AtomImGuiToolsRequestBus::Handler::BusConnect();
 
         // load switchable render pipeline paths from setting registry
@@ -80,7 +80,7 @@ namespace AtomImGuiTools
     {
 #if defined(IMGUI_ENABLED)
         m_imguiPassTree.Reset();
-        ImGui::ImGuiUpdateListenerBus::Handler::BusDisconnect();
+        JE::Debug::ImGuiUpdateListenerBus::Handler::BusDisconnect();
         AtomImGuiToolsRequestBus::Handler::BusDisconnect();
 #endif
 
@@ -167,7 +167,7 @@ namespace AtomImGuiTools
         {
             m_imguiMaterialDetails.OpenDialog();
             m_showMaterialDetails = true;
-            ImGui::ImGuiManagerBus::Broadcast(&ImGui::IImGuiManager::ToggleToImGuiVisibleState, ImGui::DisplayState::Visible);
+            JE::Debug::ImGuiManagerBus::Broadcast(&JE::Debug::IImGuiManager::ToggleToImGuiVisibleState, JE::Debug::DisplayState::Visible);
         }
     }
 

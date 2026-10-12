@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Win32-MSBuild"
+	tests="2"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="DESKTOP-288HHOD"
+	time="5"
+	timestamp="2026-10-12T08:42:45"
+	>
+	<testcase name="Legacy::EditorLib.Tests.main::TEST_RUN" classname="Legacy::EditorLib.Tests.main::TEST_RUN" time="5.50881" status="run">
+		<properties>
+			<property name="cmake_labels" value="FRAMEWORK_googletest;SUITE_main"/>
+		</properties>
+		<system-out>cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Code\Editor
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 72 tests from 19 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from ViewportTitleDlgPythonBindingsFixture
+[ RUN      ] ViewportTitleDlgPythonBindingsFixture.ViewportTitleDlgCommands_ApiExists
+[       OK ] ViewportTitleDlgPythonBindingsFixture.ViewportTitleDlgCommands_ApiExists (147 ms)
+[----------] 1 test from ViewportTitleDlgPythonBindingsFixture (147 ms total)
+
+[----------] 1 test from DisplaySettingsPythonBindingsFi...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="JE::DebugImGui.Tests.main::TEST_RUN" classname="JE::DebugImGui.Tests.main::TEST_RUN" time="0.0429978" status="run">
+		<properties>
+			<property name="cmake_labels" value="FRAMEWORK_googletest;SUITE_main"/>
+		</properties>
+		<system-out>cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Debug\ImGui
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/DebugImGui.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/DebugImGui.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/DebugImGui.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 6 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from NativeImGuiTests
+[ RUN      ] NativeImGuiTests.FactoriesPreserveModuleIdentitiesWithoutSystemComponents
+[       OK ] NativeImGuiTests.FactoriesPreserveModuleIdentitiesWithoutSystemComponents (0 ms)
+[----------] 1 test from NativeImGuiTests (0 ms total)
+
+[----------] 1 test from NativeImGuiLifecycleTests
+[ RUN      ] NativeImGuiLifecycleTests.Or...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

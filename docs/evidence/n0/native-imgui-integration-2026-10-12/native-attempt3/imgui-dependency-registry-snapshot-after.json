@@ -1,0 +1,68 @@
+[
+  {
+    "file": "cmake_dependencies.editor.setreg",
+    "exists": true,
+    "sha256": "BC246B06F0F2DA87FE9D4950B52CFB2710B58243A5DE82BF891DA24A841269A2",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.assetprocessor.setreg",
+    "exists": true,
+    "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.assetprocessorbatch.setreg",
+    "exists": true,
+    "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.assetbuilder.setreg",
+    "exists": true,
+    "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+    "exists": true,
+    "sha256": "A7EFDA598A0C02531C8AAB63EA952E58058DDF8B96BE07763722ED3C86E53E32",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+    "exists": true,
+    "sha256": "F31CC8F80D15FEF388A6CF9D9ED86058558ED734E875F19A110CEDBBBFD57E27",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+    "exists": true,
+    "sha256": "F31CC8F80D15FEF388A6CF9D9ED86058558ED734E875F19A110CEDBBBFD57E27",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+    "exists": true,
+    "sha256": "F31CC8F80D15FEF388A6CF9D9ED86058558ED734E875F19A110CEDBBBFD57E27",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+    "exists": true,
+    "sha256": "F31CC8F80D15FEF388A6CF9D9ED86058558ED734E875F19A110CEDBBBFD57E27",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.assetbundler.setreg",
+    "exists": true,
+    "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+    "imguiTargets": []
+  },
+  {
+    "file": "cmake_dependencies.assetbundlerbatch.setreg",
+    "exists": true,
+    "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+    "imguiTargets": []
+  }
+]
