@@ -1,0 +1,542 @@
+{
+  "capturedUtc": "2026-10-12T12:24:23.6459981Z",
+  "requestedHead": "895d973c98 (parent-supplied baseline identifier; no Git command run per assignment)",
+  "repository": "F:\\JericoEngine\\JericoEngine",
+  "configuration": "Profile",
+  "binaryDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile",
+  "activeProductProcessSnapshot": [],
+  "artifacts": [
+    {
+      "name": "AtomImGuiTools.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+      "bytes": 540672,
+      "sha256": "EDEB33F6735C3074B5736831A085C40CC5C6860FF5F7E91A11E58E5709B0FBF1",
+      "lastWriteUtc": "2026-10-12T11:16:26.7397849Z"
+    },
+    {
+      "name": "AtomImGuiTools.pdb",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.pdb",
+      "bytes": 23465984,
+      "sha256": "DBC982EF4E196424DA65AC8620D37F4A1D3CEB481915866F22396C55C4C9A5FC",
+      "lastWriteUtc": "2026-10-12T11:16:26.7437741Z"
+    },
+    {
+      "name": "ImguiAtom.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+      "bytes": 199680,
+      "sha256": "4BA513B73F3C61E80CEA998F630DEDE0609BC4E63C6B4489D46211852EE5BAE3",
+      "lastWriteUtc": "2026-10-12T11:15:52.4164498Z"
+    },
+    {
+      "name": "ImguiAtom.pdb",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.pdb",
+      "bytes": 20934656,
+      "sha256": "E8645C8441D891AF81996DF7C5A03B336202983A5179BB6EE84D564E9AA6992A",
+      "lastWriteUtc": "2026-10-12T11:15:52.4194424Z"
+    },
+    {
+      "name": "Profiler.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Profiler.dll",
+      "bytes": 249856,
+      "sha256": "A32DE7D7DF1BE072AF28E4F37A5F6A1316BD89715FDAC956BC12F4ADDBAAE054",
+      "lastWriteUtc": "2026-10-11T21:11:29.0340109Z"
+    },
+    {
+      "name": "Profiler.pdb",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Profiler.pdb",
+      "bytes": 6000640,
+      "sha256": "6F50D326CEFF2E2AA837DEB4F62CFF76665F37598ADAE9320F5D790089DFA51A",
+      "lastWriteUtc": "2026-10-11T21:11:29.0360054Z"
+    },
+    {
+      "name": "ProfilerImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerImGui.dll",
+      "bytes": 451584,
+      "sha256": "EC9A4F41FB72591FD80B15999D22BB3F813C9A96C37A148ABA586B02AFCA170A",
+      "lastWriteUtc": "2026-10-12T11:13:10.8442017Z"
+    },
+    {
+      "name": "ProfilerImGui.pdb",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerImGui.pdb",
+      "bytes": 9547776,
+      "sha256": "15EB702E9503EAE663944A2595440F7B355A4927227B3136E6AEB2FEA170533E",
+      "lastWriteUtc": "2026-10-12T11:13:10.8462032Z"
+    }
+  ],
+  "directImports": [
+    {
+      "name": "Profiler.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Profiler.dll",
+      "dependencies": [
+        "AzCore.dll",
+        "KERNEL32.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll"
+      ],
+      "dumpbinExitCode": 0
+    },
+    {
+      "name": "ProfilerImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerImGui.dll",
+      "dependencies": [
+        "DebugImGui.dll",
+        "DearImGui.dll",
+        "AzCore.dll",
+        "KERNEL32.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll"
+      ],
+      "dumpbinExitCode": 0
+    },
+    {
+      "name": "ImguiAtom.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImguiAtom.dll",
+      "dependencies": [
+        "DebugImGui.dll",
+        "DearImGui.dll",
+        "Atom_RPI.Public.dll",
+        "AzCore.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll"
+      ],
+      "dumpbinExitCode": 0
+    },
+    {
+      "name": "AtomImGuiTools.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomImGuiTools.dll",
+      "dependencies": [
+        "DebugImGui.dll",
+        "Atom_RPI.Public.dll",
+        "Atom_RHI.Public.dll",
+        "Atom_RHI.Reflect.dll",
+        "AzFramework.dll",
+        "DearImGui.dll",
+        "AzCore.dll",
+        "KERNEL32.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll"
+      ],
+      "dumpbinExitCode": 0
+    }
+  ],
+  "dumpbinPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+  "registryInterpretation": "Generated cmake_dependencies.<host>.setreg dependency/module manifests for the selected Profile hosts; they show module associations but do not prove runtime load by themselves.",
+  "registries": [
+    {
+      "host": "editor",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.editor.setreg",
+      "sha256": "BC246B06F0F2DA87FE9D4950B52CFB2710B58243A5DE82BF891DA24A841269A2",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "ProfilerImGui",
+              "modules": [
+                "ProfilerImGui.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Tools",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "assetprocessor",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessor.setreg",
+      "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "Profiler",
+              "modules": [
+                "Profiler.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Builders",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "assetprocessorbatch",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+      "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "Profiler",
+              "modules": [
+                "Profiler.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Builders",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "assetbuilder",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbuilder.setreg",
+      "sha256": "2620B01A2189AC884237C025BE2EB9F1C050FF4A1CD11AF1C3ECFC6A4C9C23B7",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "Profiler",
+              "modules": [
+                "Profiler.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Builders",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "jeeditorfixture_gamelauncher",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "sha256": "A7EFDA598A0C02531C8AAB63EA952E58058DDF8B96BE07763722ED3C86E53E32",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "ProfilerImGui",
+              "modules": [
+                "ProfilerImGui.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Clients",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "materialeditor",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialeditor.setreg",
+      "sha256": "BC246B06F0F2DA87FE9D4950B52CFB2710B58243A5DE82BF891DA24A841269A2",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "ProfilerImGui",
+              "modules": [
+                "ProfilerImGui.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Tools",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "materialcanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialcanvas.setreg",
+      "sha256": "BC246B06F0F2DA87FE9D4950B52CFB2710B58243A5DE82BF891DA24A841269A2",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "ProfilerImGui",
+              "modules": [
+                "ProfilerImGui.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Tools",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "passcanvas",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.passcanvas.setreg",
+      "sha256": "BC246B06F0F2DA87FE9D4950B52CFB2710B58243A5DE82BF891DA24A841269A2",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "ProfilerImGui",
+              "modules": [
+                "ProfilerImGui.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Tools",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "host": "shadermanagementconsole",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.shadermanagementconsole.setreg",
+      "sha256": "BC246B06F0F2DA87FE9D4950B52CFB2710B58243A5DE82BF891DA24A841269A2",
+      "gemTargets": [
+        {
+          "gem": "Profiler",
+          "targets": [
+            {
+              "target": "ProfilerImGui",
+              "modules": [
+                "ProfilerImGui.dll"
+              ]
+            },
+            {
+              "target": "Profiler.Tools",
+              "modules": []
+            }
+          ]
+        },
+        {
+          "gem": "ImguiAtom",
+          "targets": [
+            {
+              "target": "ImguiAtom",
+              "modules": [
+                "ImguiAtom.dll"
+              ]
+            }
+          ]
+        },
+        {
+          "gem": "AtomImGuiTools",
+          "targets": [
+            {
+              "target": "AtomImGuiTools",
+              "modules": [
+                "AtomImGuiTools.dll"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

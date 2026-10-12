@@ -18,7 +18,7 @@
 #include <AzCore/std/containers/variant.h>
 #include <AzCore/std/string/string.h>
 
-#include <Profiler/ImGuiTreemap.h>
+#include <JE/Debug/Profiler/ImGuiTreemap.h>
 
 namespace AZ
 {
@@ -332,8 +332,8 @@ namespace AZ
             AZStd::vector<AZ::RHI::MemoryStatistics::Pool> m_savedPools;
             AZStd::vector<AZ::RHI::MemoryStatistics::Heap> m_savedHeaps;
 
-            Profiler::ImGuiTreemap* m_hostTreemap = nullptr;
-            Profiler::ImGuiTreemap* m_deviceTreemap = nullptr;
+            JE::Debug::Profiler::ImGuiTreemap* m_hostTreemap = nullptr;
+            JE::Debug::Profiler::ImGuiTreemap* m_deviceTreemap = nullptr;
             bool m_showHostTreemap = false;
             bool m_showDeviceTreemap = false;
 

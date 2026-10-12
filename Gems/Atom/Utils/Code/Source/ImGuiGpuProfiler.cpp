@@ -17,7 +17,7 @@
 #include <Atom/RPI.Public/RPISystemInterface.h>
 #include <Atom/RPI.Public/Scene.h>
 
-#include <Profiler/ImGuiTreemap.h>
+#include <JE/Debug/Profiler/ImGuiTreemap.h>
 #include <imgui/imgui_internal.h>
 
 #include <AzCore/IO/SystemFile.h>
@@ -1284,7 +1284,7 @@ namespace AZ
         {
             if (m_hostTreemap)
             {
-                if (auto treemapFactory = Profiler::ImGuiTreemapFactory::Interface::Get())
+                if (auto treemapFactory = JE::Debug::Profiler::ImGuiTreemapFactory::Interface::Get())
                 {
                     treemapFactory->Destroy(m_hostTreemap);
                     treemapFactory->Destroy(m_deviceTreemap);
@@ -1815,7 +1815,7 @@ namespace AZ
         {
             if (!m_hostTreemap)
             {
-                if (auto treemapFactory = Profiler::ImGuiTreemapFactory::Interface::Get())
+                if (auto treemapFactory = JE::Debug::Profiler::ImGuiTreemapFactory::Interface::Get())
                 {
                     m_hostTreemap = &treemapFactory->Create(AZ::Name{ "Atom Host Memory Treemap" }, "MiB");
                     m_hostTreemap->AddMask("Hide Unused", 0);
@@ -1826,7 +1826,7 @@ namespace AZ
 
             if (m_hostTreemap)
             {
-                using Profiler::TreemapNode;
+                using JE::Debug::Profiler::TreemapNode;
                 AZStd::vector<TreemapNode> hostNodes;
                 AZStd::vector<TreemapNode> deviceNodes;
 

@@ -1,0 +1,266 @@
+{
+  "capturedUtc": "2026-10-12T13:20:58.4770683Z",
+  "apAlive": true,
+  "children": [
+    {
+      "ProcessId": 33876,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"6608A87427E54B9B9BC13A544911E450\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 --register -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 213836,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"5F8A28C8030940EBB8896183C731CFE0\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 217832,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"5330FC91D03C4564B8D379DC73C45904\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 322752,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"6C7ABE775DF34F3899C00562D73FF993\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 96184,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"1E0732D4C908495FA477A1B1AA4C0398\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 163684,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"63794FA0F440408094F23D1942D9CA0E\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 165500,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"E95FAA4FB8E540B5A45144C344CAF60A\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 185256,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"CE49D4930E8D46F981C2CB8F5721C23E\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 167512,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"E9251E1ED4204C57B7607AB13716F1A6\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "ProcessId": 274368,
+      "ParentProcessId": 211456,
+      "Name": "AssetBuilder.exe",
+      "CommandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"507FDBE0347E42949D96E369C63A3010\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45643 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    }
+  ],
+  "modules": [
+    {
+      "processId": 211456,
+      "processName": "AssetProcessor",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 211456,
+      "processName": "AssetProcessor",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 211456,
+      "processName": "AssetProcessor",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 33876,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 33876,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 33876,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 213836,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 213836,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 213836,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 217832,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 217832,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 217832,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 322752,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 322752,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 322752,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 96184,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 96184,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 96184,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 163684,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 163684,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 163684,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 165500,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 165500,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 165500,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 185256,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 185256,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 185256,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 167512,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 167512,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 167512,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "processId": 274368,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerCapture.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "processId": 274368,
+      "processName": "AssetBuilder",
+      "moduleName": "RenderDebug.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "processId": 274368,
+      "processName": "AssetBuilder",
+      "moduleName": "ProfilerView.dll",
+      "fileName": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    }
+  ]
+}

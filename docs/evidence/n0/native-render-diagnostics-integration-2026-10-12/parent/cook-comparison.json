@@ -1,0 +1,156 @@
+{
+  "sources": [
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "idStable": true,
+      "guidStable": true
+    },
+    {
+      "source": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "idStable": true,
+      "guidStable": true
+    },
+    {
+      "source": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "idStable": true,
+      "guidStable": true
+    }
+  ],
+  "products": [
+    {
+      "product": "pc/levels/jeeditorfixture/jeeditorfixture.spawnable",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/levels/jenativeintegration/jenativeintegration.spawnable",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.azslin",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.ia.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.om.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.srg.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.options.json",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.bindingdep.json",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.hlsl",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_dx12_0.azshadervariant",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.azslin",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.ia.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.om.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.srg.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.options.json",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.bindingdep.json",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null.hlsl",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_null_0.azshadervariant",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.azslin",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.ia.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.om.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.srg.json",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.options.json",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.bindingdep.json",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.hlsl",
+      "idStable": true,
+      "hashStable": false
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan_0.azshadervariant",
+      "idStable": true,
+      "hashStable": true
+    },
+    {
+      "product": "pc/shaders/imguiatom/imguiatom.azshader",
+      "idStable": true,
+      "hashStable": false
+    }
+  ]
+}

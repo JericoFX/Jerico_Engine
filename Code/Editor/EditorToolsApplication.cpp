@@ -14,6 +14,8 @@
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Debug/ImGui/ImGuiModule.h>
+#include <JE/Debug/Profiler/ProfilerModule.h>
+#include <JE/Render/Debug/RenderDebugModule.h>
 #include <JE/Editor/Materials/MaterialsRegistration.h>
 
 // Qt
@@ -119,6 +121,9 @@ namespace EditorInternal
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
         outModules.emplace_back(JE::Debug::CreateToolsModule());
+        outModules.emplace_back(JE::Debug::Profiler::CreateVisualModule());
+        outModules.emplace_back(JE::Render::Debug::CreateViewportModule());
+        outModules.emplace_back(JE::Render::Debug::CreateToolsModule());
         outModules.emplace_back(JE::Editor::CreateMaterialsModule());
     }
 

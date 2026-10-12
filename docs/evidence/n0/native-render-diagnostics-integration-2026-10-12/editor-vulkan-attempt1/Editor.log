@@ -1,0 +1,114 @@
+<10:26:15> BackupNameAttachment=" Build(0) 12 Oct 26 (10 26 15)"  -- used by backup system
+<10:26:15> Log Started at Mon Oct 12 10:26:15 2026
+<10:26:15> Built on Oct 11 2026 18:12:26
+<10:26:15> Running 64 bit Windows version
+<10:26:15> FileVersion: 0.0.0.0
+<10:26:15> ProductVersion: 0.0.0.0
+<10:26:15> Using Microsoft (tm) C++ Standard Library implementation
+<10:26:15> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<10:26:15> Project Name: JEEditorFixture
+
+<10:26:15> [Warning] Config file game.cfg not found!
+<10:26:15> creating CVarGroups from directory 'Config/CVarGroups' ...
+<10:26:15> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<10:26:15> GameName: JEEditorFixture
+<10:26:15> BuildTime: Oct 11 2026 18:12:26
+<10:26:15> > g_languageAudio : en-US
+
+<10:26:15> Running without any Audio Engine!
+
+<10:26:15> Audio System is initialized and ready!
+
+<10:26:15> Initializing additional systems
+
+<10:26:15> Using FreeType 2.11.1
+<10:26:15> Current Language: Spanish 
+<10:26:15> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<10:26:15> Local time is 10:26:15 10/12/26, system running for 3640 minutes
+<10:26:15> 32679MB phys. memory installed, 19479MB paging available
+<10:26:15> Current display mode is 1920x1080x32, (Unknown graphics card)
+<10:26:15> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<10:26:15> --------------------------------------------------------------------------------
+<10:26:15> > r_streamingImagePoolBudgetMb : 0
+
+<10:26:15> > r_streamingImageMipBias : 0
+
+<10:26:16> (RPI system) - System assets initialized
+
+<10:26:16> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<10:26:16> sys_localization_folder = Localization
+<10:26:16> (SceneAPI) - AssImp Import Context was registered.
+
+<10:26:16> (EMotionFX) - -----------------------------------------------
+
+<10:26:16> (EMotionFX) - EMotion Studio Core - Information
+
+<10:26:16> (EMotionFX) - -----------------------------------------------
+
+<10:26:16> (EMotionFX) - Compilation date: Oct 12 2026
+
+<10:26:16> (EMotionFX) - -----------------------------------------------
+
+<10:26:16> (EMotionFX) - EMotion Studio initialized...
+
+<10:26:16> > r_shadowCascadeExtrusionAmount : -1
+
+<10:26:16> > r_enablePerMeshShaderOptionFlags : false
+
+<10:26:16> > r_meshInstancingEnabled : false
+
+<10:26:16> > r_meshInstancingEnabledForTransparentObjects : false
+
+<10:26:16> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<10:26:16> [Warning] (Az Console) - attempted to assign out of range value 48
+<10:26:18> [Warning] XML reader: Can't open file (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/Sandbox/Macros.xml)
+<10:26:18> Document created
+<10:26:18> Adding '*$tmp*' to ignore masks for changed files.
+<10:26:18> [Warning] (Application) - 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+<10:26:19> Engine initialized, took 12.61s.
+<10:26:19> [CONSOLE] Executing console command 'exec editor_autoexec.cfg'
+<10:26:19> Executing console batch file (try game,config,root): "@products@/editor_autoexec.cfg" not found!
+<10:26:19> [CONSOLE] Executing console command 'exec editor.cfg'
+<10:26:19> Executing console batch file (try game,config,root): "@products@/editor.cfg" not found!
+<10:26:19> [CONSOLE] Executing console command 'exec user.cfg'
+<10:26:19> Executing console batch file (try game,config,root): "user.cfg" found in game/config/ ...
+<10:26:19> Opening level levels/jenativeintegration/jenativeintegration.spawnable
+<10:26:19> Loading from F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab...
+<10:26:19> ---- Start: Game Engine level load
+<10:26:19> Loading map 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration' into engine...
+<10:26:19> ---- End: Game Engine level load (0 seconds)
+<10:26:19> ---- Start: Post Load
+<10:26:19> ---- End: Post Load (0 seconds)
+<10:26:19> [LevelLoadTime] Level F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration loaded in 0 seconds
+<10:26:19> -----------------------------------------------------------
+<10:26:19> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab
+<10:26:19> Level loading time: 0.09 seconds
+<10:26:19> -----------------------------------------------------------
+<10:26:19> (RHI) - ****************************************************************
+
+<10:26:19> (RHI) -                     Registering vulkan RHI                          
+
+<10:26:19> (RHI) - ****************************************************************
+
+<10:26:19> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:bb8 which does not exist in the catalog and cannot be loaded.
+<10:26:19> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:7d0 which does not exist in the catalog and cannot be loaded.
+<10:26:19> [Error] (PassFactory) - FAILED TO CREATE PASS [DiffuseProbeGridUpdatePass]. Could not find pass template [DiffuseProbeGridUpdatePassTemplate]
+<10:26:19> > r_shadowCascadeExtrusionAmount : -1
+
+<10:26:19> > r_enablePerMeshShaderOptionFlags : false
+
+<10:26:19> > r_meshInstancingEnabled : false
+
+<10:26:19> > r_meshInstancingEnabledForTransparentObjects : false
+
+<10:26:19> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<10:26:19> [Warning] (Az Console) - attempted to assign out of range value 32
+<10:26:47> Entered game mode
+<10:26:47> (Spawnables) - Entities from new root spawnable 'Root.spawnable' are ready (generation: 0).
+
+<10:27:34> Exited game mode
+<10:32:43> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext
+<10:32:43> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext

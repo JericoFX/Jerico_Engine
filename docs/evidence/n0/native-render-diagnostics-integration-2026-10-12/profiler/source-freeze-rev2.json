@@ -1,0 +1,126 @@
+{
+  "status": "HOLD_SOURCE_ONLY_NATIVE_NOT_RUN",
+  "root": "F:/JericoEngine/JericoEngine",
+  "inputs": [
+    {
+      "path": "Engine/Debug/Profiler/CMakeLists.txt",
+      "bytes": 1285,
+      "sha256": "E65D490290E04AB863565448F1E5291E8730AFA094C64E5317EA3AEF4E5ADBDC"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Include/JE/Debug/Profiler/CpuProfiler.h",
+      "bytes": 10748,
+      "sha256": "B1844986F9E392C2F80455A23F5DFC41C85344DBA8A9EB03272EAA76E3DBA3AE"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Include/JE/Debug/Profiler/ImGuiTreemap.h",
+      "bytes": 6639,
+      "sha256": "B7405073339FB76A01C7333D0E2634D898E28FAFEDA79FAF1992067B70A9BB46"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Include/JE/Debug/Profiler/ProfilerExports.h",
+      "bytes": 546,
+      "sha256": "7B027AA88178A9DEABB6E2551BA03401642BCFECFF135E67FDED1D29DD42E772"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Include/JE/Debug/Profiler/ProfilerImGuiBus.h",
+      "bytes": 952,
+      "sha256": "AE943CAA01C7136A9A1A27A9030B0FF77F18D6F05275705B03C1B457D4387470"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Include/JE/Debug/Profiler/ProfilerModule.h",
+      "bytes": 1167,
+      "sha256": "03BB9EC1575E42DE43CD8145196856C64EF646F790F11F061C5AA9B9F97671A6"
+    },
+    {
+      "path": "Engine/Debug/Profiler/profiler_capture_files.cmake",
+      "bytes": 389,
+      "sha256": "B86A20F193990C6FE67109C21093634B32FF40621F709E832265EBAF97E80C1A"
+    },
+    {
+      "path": "Engine/Debug/Profiler/profiler_tests_files.cmake",
+      "bytes": 140,
+      "sha256": "C11AEEFB6489A93378B82E6608BC0335234957D1018792B42A707E3E6708B165"
+    },
+    {
+      "path": "Engine/Debug/Profiler/profiler_view_files.cmake",
+      "bytes": 623,
+      "sha256": "BDAE6E0FDE65BE32CE4CBD6D2062FBD568E0A11F92A9E407DF0CD6FF98435488"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/CpuProfiler.cpp",
+      "bytes": 18239,
+      "sha256": "649C7E9719BFC42749F1102F8352E5A7013D7AA4EAC904EBEE25E1F75F95B038"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ImGuiCpuProfiler.cpp",
+      "bytes": 54184,
+      "sha256": "9F10962ACD373CD70AF5DBB1483364DE99CB780DC7B78FB80F1AB1031E4F9EB8"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ImGuiCpuProfiler.h",
+      "bytes": 9757,
+      "sha256": "AF4F179D7C53E543549A99AF68D2B5204AE2FA8A694BDB7C4C2012EE6C8EF9F0"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ImGuiHeapMemoryProfiler.cpp",
+      "bytes": 4703,
+      "sha256": "8BB928BF0E19ACACA5AA2FCF172A87F6A127556345E444D689DF981AF9046203"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ImGuiHeapMemoryProfiler.h",
+      "bytes": 697,
+      "sha256": "136971CEF5AAD590AF56E8F8368B9ADD23E3471EB0CD703697A82450C9842A07"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ImGuiTreemap.cpp",
+      "bytes": 25181,
+      "sha256": "615BF57F94E7A1F797E421BCC4A03508F2A37D7A144E2C3D3A70EB28F1A4F562"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ImGuiTreemapImpl.h",
+      "bytes": 3122,
+      "sha256": "7DE9747708FA130D6ABDCC2CB3C33781979DF12342BAD89C42684CDBC19F36D8"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ProfilerImGuiModule.cpp",
+      "bytes": 812,
+      "sha256": "2C2D96396305C4472A0DF022D8469B987D98D4402B82C60E1EF2B0A2DA257191"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ProfilerImGuiSystemComponent.cpp",
+      "bytes": 4543,
+      "sha256": "16ED2AC0439F6EA6583589554CCAC2F37030E466352E95ABB8AF45BBA69C1D1F"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ProfilerImGuiSystemComponent.h",
+      "bytes": 2418,
+      "sha256": "F1305E1353FABECB30E0FBA9457487ECEEB8BA6913D02BB4F23AB686FC1B0699"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ProfilerModule.cpp",
+      "bytes": 619,
+      "sha256": "5D40A8E8C9F9DDC54648BCE203E7E205382AF5EEBA3A64EB8D6532F7FE7E43E6"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ProfilerSystemComponent.cpp",
+      "bytes": 9038,
+      "sha256": "CFD3006F20716D7B90E51810CDA3B8C5E20797862B6C32E61B98DC9252C9ABBC"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Source/ProfilerSystemComponent.h",
+      "bytes": 2117,
+      "sha256": "D4A3EFB714538DCBF3E917DF1286A717FDF6ACE0965C2D12BE1AFDD5A60BD6F3"
+    },
+    {
+      "path": "Engine/Debug/Profiler/Tests/ProfilerTests.cpp",
+      "bytes": 14456,
+      "sha256": "B42E9485540A8A7ED6FCD6929DB55471CC50677E5C2B83B16518AC7FBD4C69A0"
+    },
+    {
+      "path": "Gems/Profiler/CMakeLists.txt",
+      "bytes": 286,
+      "sha256": "6F7F68CF9984B4A2ED1856335EC3DD1764FE4AEFE09D4FA1BECE66576A61A08B"
+    }
+  ]
+}

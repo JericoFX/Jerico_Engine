@@ -56,7 +56,6 @@
         "Gems/PhysX/Core/PhysX5",
         "Gems/PhysX/Debug/PhysX5",
         "Gems/Presence",
-        "Gems/Profiler",
         "Gems/RecastNavigation",
         "Gems/RemoteTools",
         "Gems/SaveData",
@@ -93,7 +92,6 @@
         "CommonFeaturesAtom",
         "EditorModeFeedback",
         "Maestro",
-        "Profiler",
         "SceneProcessing"
     ],
     "projects": [

@@ -21,25 +21,21 @@
     "dependencies": [
         "Atom_AtomBridge",
         "AtomFont",
-        "AtomImGuiTools",
         "AtomRenderOptions",
         "AtomViewportDisplayIcons",
         "AtomViewportDisplayInfo",
         "CommonFeaturesAtom",
         "EditorModeFeedback",
-        "EMotionFX_Atom",
-        "ImguiAtom"
+        "EMotionFX_Atom"
     ],
     "external_subdirectories": [
         "AtomBridge",
         "AtomFont",
-        "AtomImGuiTools",
         "AtomRenderOptions",
         "AtomViewportDisplayIcons",
         "AtomViewportDisplayInfo",
         "CommonFeatures",
         "EditorModeFeedback",
-        "EMotionFXAtom",
-        "ImguiAtom"
+        "EMotionFXAtom"
     ]
 }

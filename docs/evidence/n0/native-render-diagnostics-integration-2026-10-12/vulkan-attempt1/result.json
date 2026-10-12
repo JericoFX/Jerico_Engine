@@ -1,0 +1,4 @@
+{
+  "reason": "Previous owned DX12 process still exiting immediately after Stop-Process; startup guard rejected. Subsequent process inventory empty.",
+  "status": "NOT_LAUNCHED"
+}

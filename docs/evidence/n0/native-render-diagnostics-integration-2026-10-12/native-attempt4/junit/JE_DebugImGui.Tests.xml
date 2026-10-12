@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="0.016" timestamp="2026-10-12T10:15:30.995" name="AllTests">
+  <testsuite name="NativeImGuiTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.006" timestamp="2026-10-12T10:15:30.996">
+    <testcase name="FactoriesPreserveModuleIdentitiesWithoutSystemComponents" file="F:\JericoEngine\JericoEngine\Engine\Debug\ImGui\Tests\ImGuiTests.cpp" line="20" status="run" result="completed" time="0.006" timestamp="2026-10-12T10:15:30.996" classname="NativeImGuiTests" />
+  </testsuite>
+  <testsuite name="NativeImGuiLifecycleTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.005" timestamp="2026-10-12T10:15:31.002">
+    <testcase name="OriginalCryLifecycleCreatesOneContextAndSharedManagerThenDisconnects" file="F:\JericoEngine\JericoEngine\Engine\Debug\ImGui\Tests\ImGuiTests.cpp" line="66" status="run" result="completed" time="0.005" timestamp="2026-10-12T10:15:31.002" classname="NativeImGuiLifecycleTests" />
+  </testsuite>
+  <testsuite name="NativeImGuiDrawingTests" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-10-12T10:15:31.007">
+    <testcase name="ContextScopeRestoresTheSharedDearImGuiContext" file="F:\JericoEngine\JericoEngine\Engine\Debug\ImGui\Tests\ImGuiTests.cpp" line="117" status="run" result="completed" time="0." timestamp="2026-10-12T10:15:31.007" classname="NativeImGuiDrawingTests" />
+    <testcase name="HistogramKeepsBoundedHistoryInBothDirectionsAndProducesDrawData" file="F:\JericoEngine\JericoEngine\Engine\Debug\ImGui\Tests\ImGuiTests.cpp" line="129" status="run" result="completed" time="0.001" timestamp="2026-10-12T10:15:31.008" classname="NativeImGuiDrawingTests" />
+    <testcase name="HistogramGroupReusesAnExistingNamedHistory" file="F:\JericoEngine\JericoEngine\Engine\Debug\ImGui\Tests\ImGuiTests.cpp" line="154" status="run" result="completed" time="0." timestamp="2026-10-12T10:15:31.009" classname="NativeImGuiDrawingTests" />
+    <testcase name="CurveCoordinateConversionPreservesCornersAndInteriorPoints" file="F:\JericoEngine\JericoEngine\Engine\Debug\ImGui\Tests\ImGuiTests.cpp" line="169" status="run" result="completed" time="0." timestamp="2026-10-12T10:15:31.010" classname="NativeImGuiDrawingTests" />
+  </testsuite>
+</testsuites>

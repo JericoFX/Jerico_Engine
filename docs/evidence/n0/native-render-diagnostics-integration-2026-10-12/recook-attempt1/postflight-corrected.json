@@ -1,0 +1,945 @@
+{
+  "capturedUtc": "2026-10-12T13:26:03.3036023Z",
+  "supersedes": "final-result.json freezePostflight only; initial receipt used invalid root-prefix for absolute paths",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\parent\\integrated-freeze-rev2.json",
+  "freezeSha256": "5FAFEBABACF9041B7B8789C24BBA2A945DD7E9A77212A2C95386542F2E0134D6",
+  "inputCount": 78,
+  "present": 78,
+  "matching": 78,
+  "mismatching": 0,
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\CMakeLists.txt",
+      "expectedBytes": 1285,
+      "actualBytes": 1285,
+      "expectedSha256": "E65D490290E04AB863565448F1E5291E8730AFA094C64E5317EA3AEF4E5ADBDC",
+      "actualSha256": "E65D490290E04AB863565448F1E5291E8730AFA094C64E5317EA3AEF4E5ADBDC",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\CpuProfiler.h",
+      "expectedBytes": 10748,
+      "actualBytes": 10748,
+      "expectedSha256": "B1844986F9E392C2F80455A23F5DFC41C85344DBA8A9EB03272EAA76E3DBA3AE",
+      "actualSha256": "B1844986F9E392C2F80455A23F5DFC41C85344DBA8A9EB03272EAA76E3DBA3AE",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ImGuiTreemap.h",
+      "expectedBytes": 6639,
+      "actualBytes": 6639,
+      "expectedSha256": "B7405073339FB76A01C7333D0E2634D898E28FAFEDA79FAF1992067B70A9BB46",
+      "actualSha256": "B7405073339FB76A01C7333D0E2634D898E28FAFEDA79FAF1992067B70A9BB46",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerExports.h",
+      "expectedBytes": 546,
+      "actualBytes": 546,
+      "expectedSha256": "7B027AA88178A9DEABB6E2551BA03401642BCFECFF135E67FDED1D29DD42E772",
+      "actualSha256": "7B027AA88178A9DEABB6E2551BA03401642BCFECFF135E67FDED1D29DD42E772",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerImGuiBus.h",
+      "expectedBytes": 952,
+      "actualBytes": 952,
+      "expectedSha256": "AE943CAA01C7136A9A1A27A9030B0FF77F18D6F05275705B03C1B457D4387470",
+      "actualSha256": "AE943CAA01C7136A9A1A27A9030B0FF77F18D6F05275705B03C1B457D4387470",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerModule.h",
+      "expectedBytes": 1167,
+      "actualBytes": 1167,
+      "expectedSha256": "03BB9EC1575E42DE43CD8145196856C64EF646F790F11F061C5AA9B9F97671A6",
+      "actualSha256": "03BB9EC1575E42DE43CD8145196856C64EF646F790F11F061C5AA9B9F97671A6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_capture_files.cmake",
+      "expectedBytes": 389,
+      "actualBytes": 389,
+      "expectedSha256": "B86A20F193990C6FE67109C21093634B32FF40621F709E832265EBAF97E80C1A",
+      "actualSha256": "B86A20F193990C6FE67109C21093634B32FF40621F709E832265EBAF97E80C1A",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_tests_files.cmake",
+      "expectedBytes": 140,
+      "actualBytes": 140,
+      "expectedSha256": "C11AEEFB6489A93378B82E6608BC0335234957D1018792B42A707E3E6708B165",
+      "actualSha256": "C11AEEFB6489A93378B82E6608BC0335234957D1018792B42A707E3E6708B165",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_view_files.cmake",
+      "expectedBytes": 623,
+      "actualBytes": 623,
+      "expectedSha256": "BDAE6E0FDE65BE32CE4CBD6D2062FBD568E0A11F92A9E407DF0CD6FF98435488",
+      "actualSha256": "BDAE6E0FDE65BE32CE4CBD6D2062FBD568E0A11F92A9E407DF0CD6FF98435488",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\CpuProfiler.cpp",
+      "expectedBytes": 18239,
+      "actualBytes": 18239,
+      "expectedSha256": "649C7E9719BFC42749F1102F8352E5A7013D7AA4EAC904EBEE25E1F75F95B038",
+      "actualSha256": "649C7E9719BFC42749F1102F8352E5A7013D7AA4EAC904EBEE25E1F75F95B038",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.cpp",
+      "expectedBytes": 54184,
+      "actualBytes": 54184,
+      "expectedSha256": "9F10962ACD373CD70AF5DBB1483364DE99CB780DC7B78FB80F1AB1031E4F9EB8",
+      "actualSha256": "9F10962ACD373CD70AF5DBB1483364DE99CB780DC7B78FB80F1AB1031E4F9EB8",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.h",
+      "expectedBytes": 9757,
+      "actualBytes": 9757,
+      "expectedSha256": "AF4F179D7C53E543549A99AF68D2B5204AE2FA8A694BDB7C4C2012EE6C8EF9F0",
+      "actualSha256": "AF4F179D7C53E543549A99AF68D2B5204AE2FA8A694BDB7C4C2012EE6C8EF9F0",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.cpp",
+      "expectedBytes": 4703,
+      "actualBytes": 4703,
+      "expectedSha256": "8BB928BF0E19ACACA5AA2FCF172A87F6A127556345E444D689DF981AF9046203",
+      "actualSha256": "8BB928BF0E19ACACA5AA2FCF172A87F6A127556345E444D689DF981AF9046203",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.h",
+      "expectedBytes": 697,
+      "actualBytes": 697,
+      "expectedSha256": "136971CEF5AAD590AF56E8F8368B9ADD23E3471EB0CD703697A82450C9842A07",
+      "actualSha256": "136971CEF5AAD590AF56E8F8368B9ADD23E3471EB0CD703697A82450C9842A07",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemap.cpp",
+      "expectedBytes": 25181,
+      "actualBytes": 25181,
+      "expectedSha256": "615BF57F94E7A1F797E421BCC4A03508F2A37D7A144E2C3D3A70EB28F1A4F562",
+      "actualSha256": "615BF57F94E7A1F797E421BCC4A03508F2A37D7A144E2C3D3A70EB28F1A4F562",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemapImpl.h",
+      "expectedBytes": 3122,
+      "actualBytes": 3122,
+      "expectedSha256": "7DE9747708FA130D6ABDCC2CB3C33781979DF12342BAD89C42684CDBC19F36D8",
+      "actualSha256": "7DE9747708FA130D6ABDCC2CB3C33781979DF12342BAD89C42684CDBC19F36D8",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiModule.cpp",
+      "expectedBytes": 812,
+      "actualBytes": 812,
+      "expectedSha256": "2C2D96396305C4472A0DF022D8469B987D98D4402B82C60E1EF2B0A2DA257191",
+      "actualSha256": "2C2D96396305C4472A0DF022D8469B987D98D4402B82C60E1EF2B0A2DA257191",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.cpp",
+      "expectedBytes": 4543,
+      "actualBytes": 4543,
+      "expectedSha256": "16ED2AC0439F6EA6583589554CCAC2F37030E466352E95ABB8AF45BBA69C1D1F",
+      "actualSha256": "16ED2AC0439F6EA6583589554CCAC2F37030E466352E95ABB8AF45BBA69C1D1F",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.h",
+      "expectedBytes": 2418,
+      "actualBytes": 2418,
+      "expectedSha256": "F1305E1353FABECB30E0FBA9457487ECEEB8BA6913D02BB4F23AB686FC1B0699",
+      "actualSha256": "F1305E1353FABECB30E0FBA9457487ECEEB8BA6913D02BB4F23AB686FC1B0699",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerModule.cpp",
+      "expectedBytes": 619,
+      "actualBytes": 619,
+      "expectedSha256": "5D40A8E8C9F9DDC54648BCE203E7E205382AF5EEBA3A64EB8D6532F7FE7E43E6",
+      "actualSha256": "5D40A8E8C9F9DDC54648BCE203E7E205382AF5EEBA3A64EB8D6532F7FE7E43E6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.cpp",
+      "expectedBytes": 9038,
+      "actualBytes": 9038,
+      "expectedSha256": "CFD3006F20716D7B90E51810CDA3B8C5E20797862B6C32E61B98DC9252C9ABBC",
+      "actualSha256": "CFD3006F20716D7B90E51810CDA3B8C5E20797862B6C32E61B98DC9252C9ABBC",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.h",
+      "expectedBytes": 2117,
+      "actualBytes": 2117,
+      "expectedSha256": "D4A3EFB714538DCBF3E917DF1286A717FDF6ACE0965C2D12BE1AFDD5A60BD6F3",
+      "actualSha256": "D4A3EFB714538DCBF3E917DF1286A717FDF6ACE0965C2D12BE1AFDD5A60BD6F3",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Tests\\ProfilerTests.cpp",
+      "expectedBytes": 14456,
+      "actualBytes": 14456,
+      "expectedSha256": "B42E9485540A8A7ED6FCD6929DB55471CC50677E5C2B83B16518AC7FBD4C69A0",
+      "actualSha256": "B42E9485540A8A7ED6FCD6929DB55471CC50677E5C2B83B16518AC7FBD4C69A0",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\CMakeLists.txt",
+      "expectedBytes": 286,
+      "actualBytes": 286,
+      "expectedSha256": "6F7F68CF9984B4A2ED1856335EC3DD1764FE4AEFE09D4FA1BECE66576A61A08B",
+      "actualSha256": "6F7F68CF9984B4A2ED1856335EC3DD1764FE4AEFE09D4FA1BECE66576A61A08B",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+      "expectedBytes": 1763,
+      "actualBytes": 1763,
+      "expectedSha256": "500201F2C7B0C6DF6BFC1265902BDAE56AB3B491448999F262242B3D0D03570F",
+      "actualSha256": "500201F2C7B0C6DF6BFC1265902BDAE56AB3B491448999F262242B3D0D03570F",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Source\\EditorMaterialSystemComponent.cpp",
+      "expectedBytes": 24502,
+      "actualBytes": 24502,
+      "expectedSha256": "5A77BB14356CE5D81DF432BE2365604B4991A944253DE2FD5F6E359ADE56D9F3",
+      "actualSha256": "5A77BB14356CE5D81DF432BE2365604B4991A944253DE2FD5F6E359ADE56D9F3",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "expectedBytes": 3534,
+      "actualBytes": 3534,
+      "expectedSha256": "2CBA6AF02E8021065AF74BD040C7FBB1C34C505B7C4EB77165BDB63EA94469D6",
+      "actualSha256": "2CBA6AF02E8021065AF74BD040C7FBB1C34C505B7C4EB77165BDB63EA94469D6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+      "expectedBytes": 1546,
+      "actualBytes": 1546,
+      "expectedSha256": "0B852D5F80247933BF8C2D66A991AFEE94F2299E4B1A2B4F2C8A2C4129FCDD04",
+      "actualSha256": "0B852D5F80247933BF8C2D66A991AFEE94F2299E4B1A2B4F2C8A2C4129FCDD04",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+      "expectedBytes": 745,
+      "actualBytes": 745,
+      "expectedSha256": "A8E164EA70660905D0B47F5D2CDAA9B9AA194FE11D1C4E9A724B344B720F4A12",
+      "actualSha256": "A8E164EA70660905D0B47F5D2CDAA9B9AA194FE11D1C4E9A724B344B720F4A12",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\CMakeLists.txt",
+      "expectedBytes": 1450,
+      "actualBytes": 1450,
+      "expectedSha256": "7C2694819F40DFF892C2C528C655C4373A1ED3A67990A8DD4CE335F2B0299D0C",
+      "actualSha256": "7C2694819F40DFF892C2C528C655C4373A1ED3A67990A8DD4CE335F2B0299D0C",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\AtomImGuiToolsBus.h",
+      "expectedBytes": 1688,
+      "actualBytes": 1688,
+      "expectedSha256": "7B2A5F937FB5A2D469B0F3DEB72EE10947F20D1696A67AA70980A608219555C9",
+      "actualSha256": "7B2A5F937FB5A2D469B0F3DEB72EE10947F20D1696A67AA70980A608219555C9",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugExports.h",
+      "expectedBytes": 353,
+      "actualBytes": 353,
+      "expectedSha256": "E94F6DC9736C1EEB1AE2C95C5FE638D9317D57B33B8FFB3B286BFBBFB3A865DA",
+      "actualSha256": "E94F6DC9736C1EEB1AE2C95C5FE638D9317D57B33B8FFB3B286BFBBFB3A865DA",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugModule.h",
+      "expectedBytes": 355,
+      "actualBytes": 355,
+      "expectedSha256": "94631E909857F314691D646819B3E55FD6236B564C62A02937DD68FBB9179B67",
+      "actualSha256": "94631E909857F314691D646819B3E55FD6236B564C62A02937DD68FBB9179B67",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_files.cmake",
+      "expectedBytes": 529,
+      "actualBytes": 529,
+      "expectedSha256": "6D4ABC5F271F113DD1145F2CD27182D167A4FDA745AD4CD474B1CABC0629B7ED",
+      "actualSha256": "6D4ABC5F271F113DD1145F2CD27182D167A4FDA745AD4CD474B1CABC0629B7ED",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_public_files.cmake",
+      "expectedBytes": 262,
+      "actualBytes": 262,
+      "expectedSha256": "440A161500035BAC838FDB92D86B8A0438FF16C1F2B18E131E8E7AE8F7CE26AA",
+      "actualSha256": "440A161500035BAC838FDB92D86B8A0438FF16C1F2B18E131E8E7AE8F7CE26AA",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_tests_files.cmake",
+      "expectedBytes": 143,
+      "actualBytes": 143,
+      "expectedSha256": "6A4C18D6BDAE7908F5369816CD6223E4911F12B2E42E8142E85C1ED20BAB0255",
+      "actualSha256": "6A4C18D6BDAE7908F5369816CD6223E4911F12B2E42E8142E85C1ED20BAB0255",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsBus.cpp",
+      "expectedBytes": 357,
+      "actualBytes": 357,
+      "expectedSha256": "A9B1C90E619FF1914136DD2380CB906511DA63A2FFAF2ABFFC711B658F9F1279",
+      "actualSha256": "A9B1C90E619FF1914136DD2380CB906511DA63A2FFAF2ABFFC711B658F9F1279",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsModule.cpp",
+      "expectedBytes": 1406,
+      "actualBytes": 1406,
+      "expectedSha256": "BB53EDC62794E4EFB2573DEFEB439EEB16949FEFA25AAB5D4F3140B4382521A9",
+      "actualSha256": "BB53EDC62794E4EFB2573DEFEB439EEB16949FEFA25AAB5D4F3140B4382521A9",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "expectedBytes": 7236,
+      "actualBytes": 7236,
+      "expectedSha256": "879CCE7185F6B51D162B8402EF6ADB880A93ED5155B1D5BDFC6A75DF081855D9",
+      "actualSha256": "879CCE7185F6B51D162B8402EF6ADB880A93ED5155B1D5BDFC6A75DF081855D9",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.h",
+      "expectedBytes": 3062,
+      "actualBytes": 3062,
+      "expectedSha256": "477C6364B92B4C58B6DF5E290054283C363EBDD0EF8037FDD1DCFDFCDEF1C64D",
+      "actualSha256": "477C6364B92B4C58B6DF5E290054283C363EBDD0EF8037FDD1DCFDFCDEF1C64D",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.cpp",
+      "expectedBytes": 13545,
+      "actualBytes": 13545,
+      "expectedSha256": "99E823A711EFD8541EC12103F5B7347ADE6F4D1CC0BB40005CFDDDD8C4336CEB",
+      "actualSha256": "99E823A711EFD8541EC12103F5B7347ADE6F4D1CC0BB40005CFDDDD8C4336CEB",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.h",
+      "expectedBytes": 4866,
+      "actualBytes": 4866,
+      "expectedSha256": "855FFB81A76C77AB7C1F57B570E523536E12FE987C1E3F80945CA2CA27831235",
+      "actualSha256": "855FFB81A76C77AB7C1F57B570E523536E12FE987C1E3F80945CA2CA27831235",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomModule.cpp",
+      "expectedBytes": 1368,
+      "actualBytes": 1368,
+      "expectedSha256": "6CADD0DD552ECD472D9FCE0610E679DCECBF42C27CD8F26747F615ABF52C361C",
+      "actualSha256": "6CADD0DD552ECD472D9FCE0610E679DCECBF42C27CD8F26747F615ABF52C361C",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.cpp",
+      "expectedBytes": 5031,
+      "actualBytes": 5031,
+      "expectedSha256": "E666DE3A1FF3B32150166BE1A583CDFFF5B8D512042A4EB22D134997D1B2E44A",
+      "actualSha256": "E666DE3A1FF3B32150166BE1A583CDFFF5B8D512042A4EB22D134997D1B2E44A",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.h",
+      "expectedBytes": 2038,
+      "actualBytes": 2038,
+      "expectedSha256": "725D197C3E679AC85C7686A33B2C65304D0C6EC6873BED115BD792083BDB131D",
+      "actualSha256": "725D197C3E679AC85C7686A33B2C65304D0C6EC6873BED115BD792083BDB131D",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.cpp",
+      "expectedBytes": 1369,
+      "actualBytes": 1369,
+      "expectedSha256": "61FA8806C1B5D4305761F4CAE8305A38C004EAC23E19A11725A5BD2B26ED1FF6",
+      "actualSha256": "61FA8806C1B5D4305761F4CAE8305A38C004EAC23E19A11725A5BD2B26ED1FF6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.h",
+      "expectedBytes": 1167,
+      "actualBytes": 1167,
+      "expectedSha256": "EF02BB2EB56719A438500DEB98E8A4FFB72D0A6D1524FB01101A98BD4D5FAD14",
+      "actualSha256": "EF02BB2EB56719A438500DEB98E8A4FFB72D0A6D1524FB01101A98BD4D5FAD14",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Tests\\RenderDebugTests.cpp",
+      "expectedBytes": 6304,
+      "actualBytes": 6304,
+      "expectedSha256": "F03DC7682A4954F0C3FA1D957DCA12561FBDDF661900B81C9BDCA33057A4B02F",
+      "actualSha256": "F03DC7682A4954F0C3FA1D957DCA12561FBDDF661900B81C9BDCA33057A4B02F",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt",
+      "expectedBytes": 2184,
+      "actualBytes": 2184,
+      "expectedSha256": "0ED4DA50B3C6ABEE85804DEDE08765F73C4BCAA64533FABF98BC52D3B1C4ECC8",
+      "actualSha256": "0ED4DA50B3C6ABEE85804DEDE08765F73C4BCAA64533FABF98BC52D3B1C4ECC8",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiGpuProfiler.h",
+      "expectedBytes": 15767,
+      "actualBytes": 15767,
+      "expectedSha256": "4ECE9FD4BA7FB4496B7C9DF99FD6E2187CC01459E4E1EA01127B07042697ECB1",
+      "actualSha256": "4ECE9FD4BA7FB4496B7C9DF99FD6E2187CC01459E4E1EA01127B07042697ECB1",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Source\\ImGuiGpuProfiler.cpp",
+      "expectedBytes": 107935,
+      "actualBytes": 107935,
+      "expectedSha256": "BF258453317FE65011F350FAFB22F52B7C31ADEFEDFE0B524124A288F129AF79",
+      "actualSha256": "BF258453317FE65011F350FAFB22F52B7C31ADEFEDFE0B524124A288F129AF79",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt",
+      "expectedBytes": 5956,
+      "actualBytes": 5956,
+      "expectedSha256": "82A6ABEEE7BB40404251F2CE9D2A301A10643B6F8C59F4B403A7FADD2E54439B",
+      "actualSha256": "82A6ABEEE7BB40404251F2CE9D2A301A10643B6F8C59F4B403A7FADD2E54439B",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json",
+      "expectedBytes": 1069,
+      "actualBytes": 1069,
+      "expectedSha256": "DDF4BE316B4F8F4ED4C6A6F23CE8019019C4B3C8E7244A610376F44B15E580C9",
+      "actualSha256": "DDF4BE316B4F8F4ED4C6A6F23CE8019019C4B3C8E7244A610376F44B15E580C9",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\CMakeLists.txt",
+      "expectedBytes": 403,
+      "actualBytes": 403,
+      "expectedSha256": "2F7BF1D446114DFDEC6AEEBE99F6D80E5B3827FEE400DAF2488A537E65B745E4",
+      "actualSha256": "2F7BF1D446114DFDEC6AEEBE99F6D80E5B3827FEE400DAF2488A537E65B745E4",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+      "expectedBytes": 8073,
+      "actualBytes": 8073,
+      "expectedSha256": "8CBE1F4F36580DFAAE8DEE0BB14D29E1917E202A1ACD865039677D0A5A96AFFE",
+      "actualSha256": "8CBE1F4F36580DFAAE8DEE0BB14D29E1917E202A1ACD865039677D0A5A96AFFE",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.cpp",
+      "expectedBytes": 48554,
+      "actualBytes": 48554,
+      "expectedSha256": "9ED929014AF443A87CE0B55EF9DC006EABA535FB1E21FCEEE5060A08C9DACED2",
+      "actualSha256": "9ED929014AF443A87CE0B55EF9DC006EABA535FB1E21FCEEE5060A08C9DACED2",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.h",
+      "expectedBytes": 11391,
+      "actualBytes": 11391,
+      "expectedSha256": "F19E4DC9F9C581AE2089D1E6924E67FEFE4C15AED1902D3D4A1F6BD08B0D57AE",
+      "actualSha256": "F19E4DC9F9C581AE2089D1E6924E67FEFE4C15AED1902D3D4A1F6BD08B0D57AE",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+      "expectedBytes": 1320,
+      "actualBytes": 1320,
+      "expectedSha256": "4A85921D5D1B1FE09D363B2E0F518D3942ACCC817749460E9215CF81A78B4B5D",
+      "actualSha256": "4A85921D5D1B1FE09D363B2E0F518D3942ACCC817749460E9215CF81A78B4B5D",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\CMakeLists.txt",
+      "expectedBytes": 398,
+      "actualBytes": 398,
+      "expectedSha256": "D6A0D62EC28C6D1A3F020FE871CF224B2F05DF5183739A91B935BE72C77D8D82",
+      "actualSha256": "D6A0D62EC28C6D1A3F020FE871CF224B2F05DF5183739A91B935BE72C77D8D82",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\CMakeLists.txt",
+      "expectedBytes": 5348,
+      "actualBytes": 5348,
+      "expectedSha256": "61033E0C41A460F39C660F7454E900D55D9635EAF00332F306EC732D876868B1",
+      "actualSha256": "61033E0C41A460F39C660F7454E900D55D9635EAF00332F306EC732D876868B1",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Registry\\render_debug_assetprocessor.setreg",
+      "expectedBytes": 490,
+      "actualBytes": 490,
+      "expectedSha256": "B28C368669ED1DDEE62E4DDCE2361443206CEE9261850FA6DE2D229F687BB50D",
+      "actualSha256": "B28C368669ED1DDEE62E4DDCE2361443206CEE9261850FA6DE2D229F687BB50D",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+      "expectedBytes": 613,
+      "actualBytes": 613,
+      "expectedSha256": "FB2DEC3464682874376A7EC0855FDC33944D57E76A7C37A32A356C2F8F4E0C11",
+      "actualSha256": "FB2DEC3464682874376A7EC0855FDC33944D57E76A7C37A32A356C2F8F4E0C11",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+      "expectedBytes": 7694,
+      "actualBytes": 7694,
+      "expectedSha256": "F1E4F927074E3152E4AC5890330F371BD2E67DCA4AE8AD2BDA1F162952655EA9",
+      "actualSha256": "F1E4F927074E3152E4AC5890330F371BD2E67DCA4AE8AD2BDA1F162952655EA9",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+      "expectedBytes": 14610,
+      "actualBytes": 14610,
+      "expectedSha256": "B9596D13B0CC0DE64B268EB425DA8A32CD700C0CC32F872F437915D8764AB48F",
+      "actualSha256": "B9596D13B0CC0DE64B268EB425DA8A32CD700C0CC32F872F437915D8764AB48F",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\CMakeLists.txt",
+      "expectedBytes": 4552,
+      "actualBytes": 4552,
+      "expectedSha256": "77BF518704A1D7B7CAE36127E37F27AFF32FF2A777E3294DBCDD10B46436BD93",
+      "actualSha256": "77BF518704A1D7B7CAE36127E37F27AFF32FF2A777E3294DBCDD10B46436BD93",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp",
+      "expectedBytes": 32766,
+      "actualBytes": 32766,
+      "expectedSha256": "D5CE3F8CCFA92F92067462F461AEC54A443C188F70D6CA55D577EFAFAF0A78B0",
+      "actualSha256": "D5CE3F8CCFA92F92067462F461AEC54A443C188F70D6CA55D577EFAFAF0A78B0",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt",
+      "expectedBytes": 9868,
+      "actualBytes": 9868,
+      "expectedSha256": "436CE504F7411BD89C8D7C2808A65A65133E55C905A92410FC5778AF41001828",
+      "actualSha256": "436CE504F7411BD89C8D7C2808A65A65133E55C905A92410FC5778AF41001828",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+      "expectedBytes": 32727,
+      "actualBytes": 32727,
+      "expectedSha256": "570A0D88779A03F7AE9665EAE00A9B6847D3388C75D33A558644E2B8A0ACEEA6",
+      "actualSha256": "570A0D88779A03F7AE9665EAE00A9B6847D3388C75D33A558644E2B8A0ACEEA6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt",
+      "expectedBytes": 2650,
+      "actualBytes": 2650,
+      "expectedSha256": "5E9306CEB57A5D46BF976A3F9A3BCD65061B5765B0ECC791908FBA3A9F25510A",
+      "actualSha256": "5E9306CEB57A5D46BF976A3F9A3BCD65061B5765B0ECC791908FBA3A9F25510A",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+      "expectedBytes": 10645,
+      "actualBytes": 10645,
+      "expectedSha256": "7B7F7F04E333C3A8D0D3F8D7397CCD488D32DC5AE19B2F3304AE72EDE4C1CBC0",
+      "actualSha256": "7B7F7F04E333C3A8D0D3F8D7397CCD488D32DC5AE19B2F3304AE72EDE4C1CBC0",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt",
+      "expectedBytes": 3706,
+      "actualBytes": 3706,
+      "expectedSha256": "7E8D3E433E5B42562C18B7C72B1307D39EB499D36967B10BD242B34B7E5081BD",
+      "actualSha256": "7E8D3E433E5B42562C18B7C72B1307D39EB499D36967B10BD242B34B7E5081BD",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+      "expectedBytes": 26744,
+      "actualBytes": 26744,
+      "expectedSha256": "CBFF05635168134E4707DB74C824CC860BA5F3E508DD2D9A124EC8FE19657C0D",
+      "actualSha256": "CBFF05635168134E4707DB74C824CC860BA5F3E508DD2D9A124EC8FE19657C0D",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\CMakeLists.txt",
+      "expectedBytes": 797,
+      "actualBytes": 797,
+      "expectedSha256": "EB7D05FB3511D40B598E9898EDA3BE87C90A1F1F9B16CD3B7BA7265242478123",
+      "actualSha256": "EB7D05FB3511D40B598E9898EDA3BE87C90A1F1F9B16CD3B7BA7265242478123",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+      "expectedBytes": 2875,
+      "actualBytes": 2875,
+      "expectedSha256": "3DD06BC002B658CEE1BA3DC70FE15AC67EAF3FBB1C6E02A686C6B3CC0B5058ED",
+      "actualSha256": "3DD06BC002B658CEE1BA3DC70FE15AC67EAF3FBB1C6E02A686C6B3CC0B5058ED",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt",
+      "expectedBytes": 5117,
+      "actualBytes": 5117,
+      "expectedSha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93",
+      "actualSha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\Code\\CMakeLists.txt",
+      "expectedBytes": 7960,
+      "actualBytes": 7960,
+      "expectedSha256": "9EF08DC44D2B8C568776A9DD9B239976E67553A801451D6A13D1C838A8504D19",
+      "actualSha256": "9EF08DC44D2B8C568776A9DD9B239976E67553A801451D6A13D1C838A8504D19",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+      "expectedBytes": 6795,
+      "actualBytes": 6795,
+      "expectedSha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3",
+      "actualSha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYWrappers.cmake",
+      "expectedBytes": 43916,
+      "actualBytes": 43916,
+      "expectedSha256": "30D7CD12513386B39C89B23AA4CE94E907A376CF0C6C300F9FF19D211E9DA5B4",
+      "actualSha256": "30D7CD12513386B39C89B23AA4CE94E907A376CF0C6C300F9FF19D211E9DA5B4",
+      "matches": true
+    }
+  ],
+  "processesRemainingFromRecook": [],
+  "assetDbAfterPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\recook-attempt1\\assetdb-after-poll1.json",
+  "sourceCount": 3,
+  "sourceKeys": [
+    {
+      "sourceName": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "sourceId": 863,
+      "sourceGuid": "3CED4FBC4201565793372CE948B86CD2",
+      "scanFolderPK": 72,
+      "portableKey": "gemassets-{5F77588E-3D20-5D96-925B-EDE8E58351B5}"
+    },
+    {
+      "sourceName": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "sourceId": 1433,
+      "sourceGuid": "AEA149F7F894520482DEDADFFC92C91E",
+      "scanFolderPK": 2,
+      "portableKey": "Project/Assets"
+    },
+    {
+      "sourceName": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "sourceId": 1454,
+      "sourceGuid": "C6A6F90DAA115042A650BD8400B5CFF5",
+      "scanFolderPK": 2,
+      "portableKey": "Project/Assets"
+    }
+  ],
+  "jobCount": 3,
+  "jobs": [
+    {
+      "sourceName": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "jobRunKey": 31870,
+      "status": 4,
+      "errors": 0,
+      "warnings": 0,
+      "lastLogTime": 1791811239549,
+      "lastLogFile": "@log@/JobLogs/Levels/JEEditorFixture/JEEditorFixture.prefab-3005589644-31870.log"
+    },
+    {
+      "sourceName": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "jobRunKey": 31872,
+      "status": 4,
+      "errors": 0,
+      "warnings": 0,
+      "lastLogTime": 1791811239552,
+      "lastLogFile": "@log@/JobLogs/Levels/JENativeIntegration/JENativeIntegration.prefab-2639614019-31872.log"
+    },
+    {
+      "sourceName": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "jobRunKey": 31874,
+      "status": 4,
+      "errors": 0,
+      "warnings": 3,
+      "lastLogTime": 1791811241050,
+      "lastLogFile": "@log@/JobLogs/Shaders/ImGuiAtom/ImGuiAtom.shader-3893273555-31874.log"
+    }
+  ],
+  "productCount": 27,
+  "missingProducts": 0,
+  "productShaMismatches": 0,
+  "products": [
+    {
+      "source": "Levels/JEEditorFixture/JEEditorFixture.prefab",
+      "product": "pc/levels/jeeditorfixture/jeeditorfixture.spawnable",
+      "exists": true,
+      "bytes": 72509,
+      "assetDbSha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+      "fileSha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+      "matches": true
+    },
+    {
+      "source": "Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "product": "pc/levels/jenativeintegration/jenativeintegration.spawnable",
+      "exists": true,
+      "bytes": 72509,
+      "assetDbSha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+      "fileSha256": "1DB1496945913CF000C81A2DA8EB2CB2D455C7261C7CCD864A432043FFF1FFC1",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.azslin",
+      "exists": true,
+      "bytes": 69850,
+      "assetDbSha256": "64DDD937C5087F7FAA698FC28F9951F72632CAC476F3B3C054EAADA134C32A79",
+      "fileSha256": "64DDD937C5087F7FAA698FC28F9951F72632CAC476F3B3C054EAADA134C32A79",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.ia.json",
+      "exists": true,
+      "bytes": 1842,
+      "assetDbSha256": "4B8678047AF7A31CADF761BB46DF1822ACC7CB68FDF9B02F3B3B7D2BD9B361CF",
+      "fileSha256": "4B8678047AF7A31CADF761BB46DF1822ACC7CB68FDF9B02F3B3B7D2BD9B361CF",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.om.json",
+      "exists": true,
+      "bytes": 532,
+      "assetDbSha256": "D22B53273D28792348F32B6C716DC7B5A66B1D3F3574675D8DF5D1384F52AE8D",
+      "fileSha256": "D22B53273D28792348F32B6C716DC7B5A66B1D3F3574675D8DF5D1384F52AE8D",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.srg.json",
+      "exists": true,
+      "bytes": 2010,
+      "assetDbSha256": "6F9877C635DFD611FB0A81F5D1538A4A3674E1927FEB73FDC0AE15CE47C5AFD7",
+      "fileSha256": "6F9877C635DFD611FB0A81F5D1538A4A3674E1927FEB73FDC0AE15CE47C5AFD7",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.options.json",
+      "exists": true,
+      "bytes": 119,
+      "assetDbSha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "fileSha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.bindingdep.json",
+      "exists": true,
+      "bytes": 844,
+      "assetDbSha256": "17F67BD364C3DED1D21A1ED008E7507B2EF9DB344DAB5BD6A9F398F03D1CEB64",
+      "fileSha256": "17F67BD364C3DED1D21A1ED008E7507B2EF9DB344DAB5BD6A9F398F03D1CEB64",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12.hlsl",
+      "exists": true,
+      "bytes": 45875,
+      "assetDbSha256": "3E6E6CB19CA83401930C1EE7280D06001364F6A6A735F4D31D315D0C4E1E9506",
+      "fileSha256": "3E6E6CB19CA83401930C1EE7280D06001364F6A6A735F4D31D315D0C4E1E9506",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_dx12_0.azshadervariant",
+      "exists": true,
+      "bytes": 9730,
+      "assetDbSha256": "AA91E1CDA25ED8493FFD395E2D875EC4EB2761C65B3E31D8BAFB36A71BF54D6B",
+      "fileSha256": "AA91E1CDA25ED8493FFD395E2D875EC4EB2761C65B3E31D8BAFB36A71BF54D6B",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.azslin",
+      "exists": true,
+      "bytes": 69821,
+      "assetDbSha256": "32E9C6B416425E8136AA604EA13F19A5B6F84F69A180BA7DDE30D3C9843E913F",
+      "fileSha256": "32E9C6B416425E8136AA604EA13F19A5B6F84F69A180BA7DDE30D3C9843E913F",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.ia.json",
+      "exists": true,
+      "bytes": 1842,
+      "assetDbSha256": "53810E55B5E3AEF4D82AF97F9E217FAB6DADE2C5CC9A3834FAD78C9F1293EAB1",
+      "fileSha256": "53810E55B5E3AEF4D82AF97F9E217FAB6DADE2C5CC9A3834FAD78C9F1293EAB1",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.om.json",
+      "exists": true,
+      "bytes": 532,
+      "assetDbSha256": "27EE86533C5B597DECB9DAA44441F0C173C6479984D4F6F9AAB0EC1A26FD0F55",
+      "fileSha256": "27EE86533C5B597DECB9DAA44441F0C173C6479984D4F6F9AAB0EC1A26FD0F55",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.srg.json",
+      "exists": true,
+      "bytes": 2010,
+      "assetDbSha256": "7E2E62B78D64D9A3FDF9E721D2CC18F0484CAE3F55B66B1FF7015C5EE8C82519",
+      "fileSha256": "7E2E62B78D64D9A3FDF9E721D2CC18F0484CAE3F55B66B1FF7015C5EE8C82519",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.options.json",
+      "exists": true,
+      "bytes": 119,
+      "assetDbSha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "fileSha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.bindingdep.json",
+      "exists": true,
+      "bytes": 844,
+      "assetDbSha256": "17F67BD364C3DED1D21A1ED008E7507B2EF9DB344DAB5BD6A9F398F03D1CEB64",
+      "fileSha256": "17F67BD364C3DED1D21A1ED008E7507B2EF9DB344DAB5BD6A9F398F03D1CEB64",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null.hlsl",
+      "exists": true,
+      "bytes": 45847,
+      "assetDbSha256": "153C53C0EA261E381E1E54262C62F4B690454A7CD74F916BE447624B9CF25699",
+      "fileSha256": "153C53C0EA261E381E1E54262C62F4B690454A7CD74F916BE447624B9CF25699",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_null_0.azshadervariant",
+      "exists": true,
+      "bytes": 558,
+      "assetDbSha256": "D16EB4142CCA64556D9BFE7B7599B77E155EE4D517116C2A5BDA1600CDA7ED37",
+      "fileSha256": "D16EB4142CCA64556D9BFE7B7599B77E155EE4D517116C2A5BDA1600CDA7ED37",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.azslin",
+      "exists": true,
+      "bytes": 69918,
+      "assetDbSha256": "1D707D5C3E4E0910AB111FB6E5A14D189BF403C95E49292A7F27EE18AE59DE03",
+      "fileSha256": "1D707D5C3E4E0910AB111FB6E5A14D189BF403C95E49292A7F27EE18AE59DE03",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.ia.json",
+      "exists": true,
+      "bytes": 1844,
+      "assetDbSha256": "D4CA32E6444137E313C3D4FC04A7F2F9850BAE14D78E31DB1CD1CDD8AF86BD14",
+      "fileSha256": "D4CA32E6444137E313C3D4FC04A7F2F9850BAE14D78E31DB1CD1CDD8AF86BD14",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.om.json",
+      "exists": true,
+      "bytes": 534,
+      "assetDbSha256": "6DF2EAF0CE72D7D6F05FBD7849C5EFED27891F1CFAEA38043B2182398E03457E",
+      "fileSha256": "6DF2EAF0CE72D7D6F05FBD7849C5EFED27891F1CFAEA38043B2182398E03457E",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.srg.json",
+      "exists": true,
+      "bytes": 2014,
+      "assetDbSha256": "909E7A43A7AFC2630EED057E4061615944FEDDDF08A6799CF7B0278718528677",
+      "fileSha256": "909E7A43A7AFC2630EED057E4061615944FEDDDF08A6799CF7B0278718528677",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.options.json",
+      "exists": true,
+      "bytes": 119,
+      "assetDbSha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "fileSha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.bindingdep.json",
+      "exists": true,
+      "bytes": 844,
+      "assetDbSha256": "A2E82D82FF2A45CAD6D549588E4D5828EC688D26B5416F32FD4C6A061E6C5D27",
+      "fileSha256": "A2E82D82FF2A45CAD6D549588E4D5828EC688D26B5416F32FD4C6A061E6C5D27",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan.hlsl",
+      "exists": true,
+      "bytes": 45881,
+      "assetDbSha256": "97732982008A77088AC3328117C549A47CF394E7A77FB44FAC9E0B44905A856A",
+      "fileSha256": "97732982008A77088AC3328117C549A47CF394E7A77FB44FAC9E0B44905A856A",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom_vulkan_0.azshadervariant",
+      "exists": true,
+      "bytes": 3690,
+      "assetDbSha256": "33104BA7FB540DE151835A2A2EC6F014910C01B676D8920CF9FEA0017BBF7D4C",
+      "fileSha256": "33104BA7FB540DE151835A2A2EC6F014910C01B676D8920CF9FEA0017BBF7D4C",
+      "matches": true
+    },
+    {
+      "source": "Shaders/ImGuiAtom/ImGuiAtom.shader",
+      "product": "pc/shaders/imguiatom/imguiatom.azshader",
+      "exists": true,
+      "bytes": 32972,
+      "assetDbSha256": "F3C5F1AD5F51110B4798293BBB89FBD8A98F92C131DF1DC29EBEA1C69C960DC1",
+      "fileSha256": "F3C5F1AD5F51110B4798293BBB89FBD8A98F92C131DF1DC29EBEA1C69C960DC1",
+      "matches": true
+    }
+  ],
+  "apTermination": "AP CloseMainWindow returned false; own AP was force-stopped after the three requested jobs completed. All 10 owned AssetBuilder children had exited before forced stop; no owned process remains.",
+  "limitations": [
+    "The shader job completed with 0 errors and 3 C.UTF-8 encoding warnings.",
+    "16 shader products changed from previous AssetDB and 9 were byte-identical; no cause asserted. Prefab products were byte-identical."
+  ]
+}

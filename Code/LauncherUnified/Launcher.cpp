@@ -31,6 +31,10 @@
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/World/Camera/CameraModule.h>
 #include <JE/Debug/ImGui/ImGuiModule.h>
+#include <JE/Debug/Profiler/ProfilerModule.h>
+#if !defined(JE_LAUNCHER_HEADLESS)
+#include <JE/Render/Debug/RenderDebugModule.h>
+#endif
 #include <JE/Render/Materials/MaterialsRegistration.h>
 
 #include <ISystem.h>
@@ -69,6 +73,13 @@ namespace JE::Runtime
             outModules.emplace_back(JE::Geometry::CreateRuntimeModule());
             outModules.emplace_back(JE::World::Camera::CreateRuntimeModule());
             outModules.emplace_back(JE::Debug::CreateRuntimeModule());
+#if defined(JE_LAUNCHER_HEADLESS)
+            outModules.emplace_back(JE::Debug::Profiler::CreateCaptureModule());
+#else
+            outModules.emplace_back(JE::Debug::Profiler::CreateVisualModule());
+            outModules.emplace_back(JE::Render::Debug::CreateViewportModule());
+            outModules.emplace_back(JE::Render::Debug::CreateToolsModule());
+#endif
         }
     };
 }

@@ -271,7 +271,7 @@ namespace AZ
             const auto entityContextId = FindOwningContextId(entityId);
             MeshComponentRequestBus::Handler::BusConnect(entityId);
             MeshHandleStateRequestBus::Handler::BusConnect(entityId);
-            AtomImGuiTools::AtomImGuiMeshCallbackBus::Handler::BusConnect(entityId);
+            JE::Render::Debug::AtomImGuiMeshCallbackBus::Handler::BusConnect(entityId);
             TransformNotificationBus::Handler::BusConnect(entityId);
             JE::Render::MaterialConsumerRequestBus::Handler::BusConnect(entityId);
             JE::Render::MaterialComponentNotificationBus::Handler::BusConnect(entityId);
@@ -299,7 +299,7 @@ namespace AZ
             TransformNotificationBus::Handler::BusDisconnect();
             MeshComponentRequestBus::Handler::BusDisconnect();
             MeshHandleStateRequestBus::Handler::BusDisconnect();
-            AtomImGuiTools::AtomImGuiMeshCallbackBus::Handler::BusDisconnect();
+            JE::Render::Debug::AtomImGuiMeshCallbackBus::Handler::BusDisconnect();
 
             m_nonUniformScaleChangedHandler.Disconnect();
 

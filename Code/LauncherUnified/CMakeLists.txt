@@ -29,6 +29,8 @@ ly_add_target(
             JE::Geometry
             JE::WorldCamera
             JE::DebugImGui
+            JE::ProfilerView
+            JE::RenderDebug
             JE::RenderMaterials
             Legacy::CryCommon
 )
@@ -36,6 +38,7 @@ ly_add_target(
 ly_add_target(
     NAME Launcher.Headless.Static STATIC
     NAMESPACE AZ
+    COMPILE_DEFINITIONS PRIVATE JE_LAUNCHER_HEADLESS=1
     FILES_CMAKE
         launcher_files.cmake
         ${pal_dir}/platform_${PAL_PLATFORM_NAME_LOWERCASE}_files.cmake
@@ -52,6 +55,7 @@ ly_add_target(
             JE::Geometry
             JE::WorldCamera
             JE::DebugImGui
+            JE::ProfilerCapture
             JE::RenderMaterials
             Legacy::CryCommon
 )

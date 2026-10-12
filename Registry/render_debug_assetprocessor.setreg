@@ -1,0 +1,15 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve the original source database identity and relative asset paths.
+                "ScanFolder gemassets-{5F77588E-3D20-5D96-925B-EDE8E58351B5}": {
+                    "watch": "@ENGINEROOT@/Engine/Render/Debug/Assets",
+                    "display": "Engine/Render/Debug",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

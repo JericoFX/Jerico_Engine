@@ -1,0 +1,8 @@
+{
+  "forced": true,
+  "render": true,
+  "reason": "Parent closes owned runtime after visual checks; normal launcher shutdown remains open",
+  "cpu": true,
+  "gpuTimestampAndTimeline": true,
+  "pid": 166140
+}

@@ -11,7 +11,7 @@
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
 #include <Atom/RPI.Public/Model/Model.h>
 #include <Atom/Feature/LightingChannel/LightingChannelConfiguration.h>
-#include <AtomLyIntegration/AtomImGuiTools/AtomImGuiToolsBus.h>
+#include <JE/Render/Debug/AtomImGuiToolsBus.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
@@ -65,7 +65,7 @@ namespace AZ
         class MeshComponentController final
             : private MeshComponentRequestBus::Handler
             , private MeshHandleStateRequestBus::Handler
-            , private AtomImGuiTools::AtomImGuiMeshCallbackBus::Handler
+            , private JE::Render::Debug::AtomImGuiMeshCallbackBus::Handler
             , public AzFramework::BoundsRequestBus::Handler
             , public AzFramework::VisibleGeometryRequestBus::Handler
             , public AzFramework::RenderGeometry::IntersectionRequestBus::Handler
@@ -106,7 +106,7 @@ namespace AZ
             AZStd::string GetModelAssetPath() const override;
             AZ::Data::Instance<RPI::Model> GetModel() const override;
 
-            // AtomImGuiTools::AtomImGuiMeshCallbackBus::Handler overrides ...
+            // JE::Render::Debug::AtomImGuiMeshCallbackBus::Handler overrides ...
             const RPI::MeshDrawPacketLods* GetDrawPackets() const override;
 
             // MeshHandleStateRequestBus overrides ...

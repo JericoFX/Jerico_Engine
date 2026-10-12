@@ -1,0 +1,113 @@
+{
+  "capturedUtc": "2026-10-12T12:35:17.0263430Z",
+  "comparisonReference": "HEAD 895d973c98 (provided by parent; read-only git diff HEAD used on the 11 owned paths)",
+  "reviewedPaths": [
+    {
+      "path": "Engine/CMakeLists.txt",
+      "sha256": "FB2DEC3464682874376A7EC0855FDC33944D57E76A7C37A32A356C2F8F4E0C11"
+    },
+    {
+      "path": "Code/Editor/CMakeLists.txt",
+      "sha256": "F1E4F927074E3152E4AC5890330F371BD2E67DCA4AE8AD2BDA1F162952655EA9"
+    },
+    {
+      "path": "Code/Editor/EditorToolsApplication.cpp",
+      "sha256": "B9596D13B0CC0DE64B268EB425DA8A32CD700C0CC32F872F437915D8764AB48F"
+    },
+    {
+      "path": "Code/LauncherUnified/CMakeLists.txt",
+      "sha256": "31B6372C3C645D7B2243062EB0EDF653BF89000CAD17EAA4DB6D0DCC61DE88DD"
+    },
+    {
+      "path": "Code/LauncherUnified/Launcher.cpp",
+      "sha256": "AFC93AA110D5D55D8966C7E91AC4511D166B298AD69F42B744B91CC4D0A16534"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/CMakeLists.txt",
+      "sha256": "436CE504F7411BD89C8D7C2808A65A65133E55C905A92410FC5778AF41001828"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+      "sha256": "570A0D88779A03F7AE9665EAE00A9B6847D3388C75D33A558644E2B8A0ACEEA6"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/CMakeLists.txt",
+      "sha256": "5E9306CEB57A5D46BF976A3F9A3BCD65061B5765B0ECC791908FBA3A9F25510A"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+      "sha256": "7B7F7F04E333C3A8D0D3F8D7397CCD488D32DC5AE19B2F3304AE72EDE4C1CBC0"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+      "sha256": "7E8D3E433E5B42562C18B7C72B1307D39EB499D36967B10BD242B34B7E5081BD"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+      "sha256": "CBFF05635168134E4707DB74C824CC860BA5F3E508DD2D9A124EC8FE19657C0D"
+    }
+  ],
+  "facts": [
+    {
+      "kind": "host-wiring",
+      "fact": "Editor, Unified Launcher, and AtomTools base append the visual Profiler module plus RenderDebug viewport and tools modules; AP and AssetBuilder append Profiler Capture only.",
+      "references": [
+        "Code/Editor/EditorToolsApplication.cpp:124-126",
+        "Code/LauncherUnified/Launcher.cpp:74-76",
+        "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp:166-168",
+        "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp:231",
+        "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp:131"
+      ]
+    },
+    {
+      "kind": "module-call-cardinality",
+      "fact": "Each of the four concrete AtomTools applications calls its base CreateStaticModules once; no second insertion appears in those overrides.",
+      "references": [
+        "Gems/Atom/Tools/MaterialEditor/Code/Source/MaterialEditorApplication.cpp:69",
+        "Gems/Atom/Tools/MaterialCanvas/Code/Source/MaterialCanvasApplication.cpp:91",
+        "Gems/Atom/Tools/PassCanvas/Code/Source/PassCanvasApplication.cpp:86",
+        "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/ShaderManagementConsoleApplication.cpp:75"
+      ]
+    },
+    {
+      "kind": "confirmed-headless-risk",
+      "fact": "Launcher.Headless.Static compiles the common launcher_files.cmake, which includes Launcher.cpp. Launcher.cpp appends visual Profiler and RenderDebug modules without a headless guard, while O3DE_HEADLESS_SERVER only sets GameApplication headless true at line 476. The target is selected for HeadlessServerLauncher. CreateViewportModule produces ImguiAtomModule, whose required system component accesses ViewportContextRequests and asserts when absent during Activate. Thus the current static-module path can activate a viewport-dependent module in a headless server.",
+      "references": [
+        "Code/LauncherUnified/CMakeLists.txt:39-58",
+        "Code/LauncherUnified/launcher_files.cmake:11-12",
+        "Code/LauncherUnified/launcher_generator.cmake:23",
+        "Code/LauncherUnified/Launcher.cpp:68-76",
+        "Code/LauncherUnified/Launcher.cpp:476-478",
+        "Engine/Render/Debug/Source/ImguiAtomModule.cpp:32-43",
+        "Engine/Render/Debug/Source/ImguiAtomSystemComponent.cpp:49-51"
+      ]
+    },
+    {
+      "kind": "lifecycle",
+      "fact": "ComponentApplication defaults m_loadStaticModules=true; LoadStaticModules calls virtual CreateStaticModules unless the monolithic callback is supplied. This confirms the headless factory path is reachable in the ordinary non-monolithic startup as well.",
+      "references": [
+        "Code/Framework/AzCore/AzCore/Component/ComponentApplication.h:152",
+        "Code/Framework/AzCore/AzCore/Component/ComponentApplication.cpp:1475-1489"
+      ]
+    },
+    {
+      "kind": "registry-limitation",
+      "fact": "The earlier generated cmake_dependencies profile registries list module associations but do not prove runtime loading; no runtime verification was part of this host review.",
+      "references": [
+        "build/n0-validation/native-render-diagnostics-rev1/baseline/baseline.json"
+      ]
+    },
+    {
+      "kind": "unresolved",
+      "fact": "Host review cannot establish coexistence/duplicate descriptor behavior between native Profiler factories and the legacy dynamic Profiler/ProfilerImGui modules from CMake dependency manifests alone; confirm the final post-configure registry/load path before acceptance.",
+      "references": [
+        "build/n0-validation/native-render-diagnostics-rev1/baseline/baseline.json"
+      ]
+    }
+  ],
+  "conclusions": [
+    "No duplicate static factory insertion was observed in the reviewed Editor, AP/Builder, or AtomTools host methods.",
+    "Concrete headless viewport activation risk needs resolution/confirmation before claiming all launcher variants are safe.",
+    "No compile or runtime tests were run in this read-only assignment."
+  ]
+}

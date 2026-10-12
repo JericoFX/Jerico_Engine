@@ -1,0 +1,23 @@
+{
+  "changes": [
+    {
+      "afterSha256": "8C121281BD987040B0AEDCB218F828A72A43BC46D51284535E118E718A9C0F87",
+      "beforeSha256": "BB53EDC62794E4EFB2573DEFEB439EEB16949FEFA25AAB5D4F3140B4382521A9",
+      "path": "Engine/Render/Debug/Source/AtomImGuiToolsModule.cpp",
+      "change": "Only redundant blank line at end of file removed; no token or line number changes in program"
+    },
+    {
+      "afterSha256": "9475A8AEC5E5E8E47BB38329F35883C5F51A057A56CB2544DD403B075281E020",
+      "beforeSha256": "6CADD0DD552ECD472D9FCE0610E679DCECBF42C27CD8F26747F615ABF52C361C",
+      "path": "Engine/Render/Debug/Source/ImguiAtomModule.cpp",
+      "change": "Only redundant blank line at end of file removed; no token or line number changes in program"
+    },
+    {
+      "afterSha256": "291B426288246BD5A96CB7C9AF1004F0DE8D8F527097ADB354947FECC5A04709",
+      "beforeSha256": "C6C6AF97F1811DA18870873DC64F74B651C3A1A642DBD52B7E218AC9AEAB2F11",
+      "path": "docs/evidence/n0/native-render-diagnostics-integration-2026-10-12/RunNativeAttempt4.ps1",
+      "change": "Only redundant blank line at end of file removed; no token or line number changes in program"
+    }
+  ],
+  "validationReuse": "EOF-only whitespace changes do not alter compiled code; no CMake/input logic changes. Original validated freezes retained; current hashes in this receipt."
+}

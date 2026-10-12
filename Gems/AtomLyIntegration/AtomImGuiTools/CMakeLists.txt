@@ -6,6 +6,5 @@
 #
 #
 
-o3de_gem_setup("AtomImGuiTools")
-
-add_subdirectory(Code)
+# Historical entry only; implementation and registration are composed natively.
+message(FATAL_ERROR "AtomImGuiTools is absorbed into JE::RenderDebug; remove its Gem activation.")

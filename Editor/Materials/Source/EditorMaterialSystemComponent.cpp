@@ -12,7 +12,7 @@
 #include <Atom/RPI.Reflect/Asset/AssetUtils.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentNotificationBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
-#include <AtomLyIntegration/AtomImGuiTools/AtomImGuiToolsBus.h>
+#include <JE/Render/Debug/AtomImGuiToolsBus.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewRendererCaptureRequest.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewRendererInterface.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -359,11 +359,11 @@ namespace JE
         {
             if (newlySelectedEntities.size() == 1)
             {
-                AtomImGuiTools::AtomImGuiToolsRequestBus::Broadcast(&AtomImGuiTools::AtomImGuiToolsRequests::ShowMaterialShaderDetailsForEntity, newlySelectedEntities[0], false);
+                JE::Render::Debug::AtomImGuiToolsRequestBus::Broadcast(&JE::Render::Debug::AtomImGuiToolsRequests::ShowMaterialShaderDetailsForEntity, newlySelectedEntities[0], false);
             }
             else
             {
-                AtomImGuiTools::AtomImGuiToolsRequestBus::Broadcast(&AtomImGuiTools::AtomImGuiToolsRequests::ShowMaterialShaderDetailsForEntity, AZ::EntityId{}, false);
+                JE::Render::Debug::AtomImGuiToolsRequestBus::Broadcast(&JE::Render::Debug::AtomImGuiToolsRequests::ShowMaterialShaderDetailsForEntity, AZ::EntityId{}, false);
             }
         }
 

@@ -1,0 +1,16 @@
+{
+  "pid": 177880,
+  "startedUtc": "2026-10-12T13:26:05.2120392Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "arguments": [
+    "--project-path",
+    "\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"",
+    "--rhi=vulkan",
+    "--skipWelcomeScreen",
+    "\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab\""
+  ],
+  "scene": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+  "sceneSha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+  "editorExeSha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704",
+  "editorLibSha256": "70A943BB50D25BC90C781303B632F7F418C65944F5961C8906F642E783DF19F0"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "SOURCE_REVIEWED_NATIVE_VALIDATION_PENDING",
+  "capturedUtc": "2026-10-12T12:46:40.2393396Z",
+  "inputsFreeze": "EF91AC9DBE6E9EBD805CB9DA9CEBBA682E6684911988AE6CE3322E2D2B084248",
+  "reviewed": [
+    "profiler/moved-source.patch",
+    "adapters/logical-diff.patch",
+    "parent-owned host composition",
+    "ProfilerTests.cpp",
+    "RenderDebugTests.cpp"
+  ],
+  "decisions": [
+    "Each graphical host selects one visual profiler factory including capture; AP and AssetBuilder select capture only.",
+    "AtomUtils depends on ProfilerView; profiler owners do not depend on Atom.",
+    "Material request and mesh callback buses have a shared explicit export owner.",
+    "Original module/component/serializer identities preserved; literal/long format repair addresses previous real fixed_string assertion.",
+    "Headless launcher source guard resolves prior review finding without enabling server targets."
+  ],
+  "limitations": [
+    "Capture-only module composition does not establish absence of transitively loaded visual DLLs.",
+    "No new native or UI acceptance yet.",
+    "Original authored UV reprojection guard remains; no Reset All UVs.",
+    "Inherited TLS shutdown/reinitialization behavior remains outside this slice; no garbled-label fix claimed."
+  ]
+}

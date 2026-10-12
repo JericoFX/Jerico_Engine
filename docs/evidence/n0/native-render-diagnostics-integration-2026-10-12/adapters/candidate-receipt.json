@@ -1,0 +1,49 @@
+{
+  "status": "IMPLEMENTED_NOT_COMPILED_HOLD",
+  "fileCount": 37,
+  "retiredCount": 22,
+  "referenceCount": 37,
+  "freezeSHA256": "C5BC8E3A318C1EEC35B99CA276C942540139AB17DD45758EB8D673AD11BF745A",
+  "logicalDiffSHA256": "7257D5B03F73694E662A2BE02040A598A76F72C4063873CD71E2045A45ADD06E",
+  "textReviewSHA256": "6CFE6FEB7BA2E6F3985C8B99930717D959050E58A395A93CBBD800F3C756FADF",
+  "factories": [
+    "JE::Render::Debug::CreateViewportModule()",
+    "JE::Render::Debug::CreateToolsModule()"
+  ],
+  "factoryHeader": "JE/Render/Debug/RenderDebugModule.h",
+  "targets": [
+    "JE::RenderDebug",
+    "JE::RenderDebug.Public",
+    "JE::RenderDebug.Tests"
+  ],
+  "graph": [
+    "RenderDebug.Public -> AzCore + Atom_RPI.Public; no implementation backedge",
+    "RenderDebug -> RenderDebug.Public + AzFramework + CryCommon + DebugImGui + Atom_Feature_Common.Public + Atom_Utils.Static",
+    "Atom_Utils.Static -> ProfilerView -> ProfilerCapture + DebugImGui",
+    "CommonFeatures.Static -> RenderDebug; EditorMaterials -> RenderDebug added by parent"
+  ],
+  "preserved": [
+    "Two original module UUIDs and component UUIDs; reflected component names/version0/services",
+    "Vendor ImGui APIs and existing Atom default viewport renderer",
+    "Two shader sources byte exact; original gemassets portable key 5F77588E-3D20-5D96-925B-EDE8E58351B5",
+    "Registry/profiler.setreg CaptureLocation key remains unchanged"
+  ],
+  "tests": [
+    "ViewportFactoryPreservesIdentityAndCommonServiceRequirement",
+    "ToolsFactoryPreservesIdentityWithoutViewportServiceRequirement",
+    "ToolsLifecycleDisconnectsAndReconnectsTheSharedRequestBus (IMGUI_ENABLED)",
+    "MaterialDetailsRoutesDrawPacketsBySelectedEntityAndHandlesDisconnection"
+  ],
+  "nextGates": [
+    "Parent review plus Luna non-unity build/link of owner and affected hosts/consumers",
+    "Run JE::RenderDebug.Tests and JE::Profiler.Tests; no test executed by writer",
+    "Real Editor/launcher menu, material shader details, viewport DPI/render-pass and profiler timelines; inspect host modules"
+  ],
+  "limitations": [
+    "Factory/service/bus tests do not prove GPU draw or timeline correctness",
+    "AP/Builder capture-only factories do not imply absence of transitively loaded RenderDebug/ProfilerView DLLs",
+    "Two retired Gem top CMake files fail closed; preview images remain historical and unactivated",
+    "Parent owns Engine/hosts and EditorMaterials CMake; sibling owns native Profiler implementation",
+    "No source, native build/test, configuration or Git acceptance claimed"
+  ]
+}

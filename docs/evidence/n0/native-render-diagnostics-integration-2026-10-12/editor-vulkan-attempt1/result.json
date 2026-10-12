@@ -1,0 +1,13 @@
+{
+  "limitations": [
+    "Existing DiffuseProbeGridUpdatePass template error",
+    "Garbled ScopeProducer labels remain",
+    "No performance benchmark",
+    "Shutdown DynamicDrawContext warnings"
+  ],
+  "cpuGameExit": "Observed successful CtrlG exit with CPU profiler active; no fixed_string assertion in full Editor.log",
+  "originalSceneSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "editorExited": true,
+  "sceneSha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+  "gpu": "Observed Vulkan timestamp table, timeline and captured device memory treemap"
+}

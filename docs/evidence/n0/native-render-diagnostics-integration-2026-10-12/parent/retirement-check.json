@@ -1,0 +1,182 @@
+{
+  "capturedUtc": "2026-10-12T12:48:29.3193635Z",
+  "count": 44,
+  "retired": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Include\\AtomLyIntegration\\AtomImGuiTools\\AtomImGuiToolsBus.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomModule.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsModule.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\CMakeLists.txt",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_shared_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\gem.json",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_public_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_shared_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\CMakeLists.txt",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\gem.json",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\gem.json",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\preview.png",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\CMakeLists.txt",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\profiler_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\profiler_imgui_shared_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\profiler_shared_files.cmake",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Include\\Profiler\\ImGuiTreemap.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Include\\Profiler\\ProfilerImGuiBus.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\CpuProfiler.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\CpuProfiler.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ImGuiCpuProfiler.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ImGuiCpuProfiler.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ImGuiHeapMemoryProfiler.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ImGuiHeapMemoryProfiler.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ImGuiTreemap.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ImGuiTreemapImpl.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerImGuiModule.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerImGuiSystemComponent.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerImGuiSystemComponent.h",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerModule.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerSystemComponent.cpp",
+      "absent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\Code\\Source\\ProfilerSystemComponent.h",
+      "absent": true
+    }
+  ]
+}

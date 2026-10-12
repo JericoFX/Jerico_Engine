@@ -46,6 +46,7 @@ ly_add_target(
             JE::EditorCamera
             JE::PrefabBuilder
             JE::DebugImGui
+            JE::ProfilerCapture
             JE::EditorMaterials
             ${additional_dependencies}
 )

@@ -21,7 +21,7 @@ ly_add_target(
         INTERFACE
             Gem::Atom_Feature_Common.Public
             JE::RenderMaterials
-            Gem::AtomImGuiTools.Public
+            JE::RenderDebug.Public
 )
 
 # Add alias that references the "AtomLyIntegration_CommonFeatures.Public" for backwards compatibility
@@ -50,6 +50,7 @@ ly_add_target(
             Gem::Atom_Feature_Common.Public
             JE::RenderMaterials
             Gem::Atom_Bootstrap.Headers
+            JE::RenderDebug
 )
 
 # Add alias that references the "AtomLyIntegration_CommonFeatures.Static" name for backwards compatibility

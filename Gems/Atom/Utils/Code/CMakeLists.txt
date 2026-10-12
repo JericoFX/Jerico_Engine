@@ -26,7 +26,7 @@ ly_add_target(
             Gem::Atom_RPI.Public
             JE::DearImGui
             3rdParty::PNG
-            Gem::ProfilerImGui
+            JE::ProfilerView
 )
 
 if(PAL_TRAIT_BUILD_HOST_TOOLS)

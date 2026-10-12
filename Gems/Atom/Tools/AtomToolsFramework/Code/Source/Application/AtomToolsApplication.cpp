@@ -6,6 +6,8 @@
  */
 
 #include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Debug/Profiler/ProfilerModule.h>
+#include <JE/Render/Debug/RenderDebugModule.h>
 #include <Atom/RPI.Public/RPISystemInterface.h>
 #include <AtomToolsFramework/Application/AtomToolsApplication.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -161,7 +163,9 @@ namespace AtomToolsFramework
         Base::CreateStaticModules(outModules);
         outModules.push_back(aznew AzToolsFramework::AzToolsFrameworkModule);
         outModules.push_back(aznew AzFramework::AzFrameworkNativeUIModule());
-
+        outModules.emplace_back(JE::Debug::Profiler::CreateVisualModule());
+        outModules.emplace_back(JE::Render::Debug::CreateViewportModule());
+        outModules.emplace_back(JE::Render::Debug::CreateToolsModule());
     }
 
     void AtomToolsApplication::StartCommon(AZ::Entity* systemEntity)

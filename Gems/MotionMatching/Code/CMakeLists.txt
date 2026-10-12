@@ -22,7 +22,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::EMotionFXStaticLib
-            Gem::ImguiAtom.Static
+            JE::DebugImGui
 )
 
 # Here add ${gem_name} target, it depends on the ${gem_name}.Static

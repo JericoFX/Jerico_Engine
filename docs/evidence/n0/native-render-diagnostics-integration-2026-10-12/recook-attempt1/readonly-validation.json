@@ -1,0 +1,771 @@
+{
+  "capturedUtc": "2026-10-12T13:34:31.4269775Z",
+  "scope": "Readonly review only; no native process launched",
+  "recookModules": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\recook-attempt1\\modules-live-1.json",
+    "sha256": "80F5F3DBE44A906D64C575D046F8263D2F9905FE02571A2D05827EB40651FA63",
+    "capturedUtc": "2026-10-12T13:20:58.4770683Z",
+    "processGroups": [
+      {
+        "processName": "AssetBuilder",
+        "processCount": 10,
+        "moduleLoads": 30
+      },
+      {
+        "processName": "AssetProcessor",
+        "processCount": 1,
+        "moduleLoads": 3
+      }
+    ],
+    "distinctModuleNames": [
+      "ProfilerCapture.dll",
+      "ProfilerView.dll",
+      "RenderDebug.dll"
+    ],
+    "capturedEntryCount": 33,
+    "limit": "This is the recorded selected-module capture, not an exhaustive Windows module enumeration; absence of Qt/Python from this capture is not evidence they were not loaded."
+  },
+  "binaryAudit": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\binary-audit\\audit-summary.json",
+    "sha256": "49CEF57FDE4E708912AC01CEB8AC51D86DDE81FE68DEDAC4E8647492FEDF0561",
+    "status": "DATA_AUDIT_COMPLETE_NO_PRODUCT_EXECUTION",
+    "scanCount": 129,
+    "dllCount": 120,
+    "hostCount": 9,
+    "requiredOutputCount": 12,
+    "retiredImportFindingCount": 0,
+    "hosts": [
+      {
+        "name": "AssetProcessor.exe",
+        "exit": 0,
+        "inputUnchanged": true,
+        "dependencies": [
+          "Geometry.Authoring.dll",
+          "EditorCamera.dll",
+          "PrefabBuilder.dll",
+          "EditorMaterials.dll",
+          "Qt6Network.dll",
+          "AzToolsFramework.dll",
+          "AzFramework.NativeUI.dll",
+          "AzQtComponents.dll",
+          "Qt6Widgets.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "RenderMaterials.dll",
+          "DebugImGui.dll",
+          "ProfilerCapture.dll",
+          "AzFramework.dll",
+          "AzCore.dll",
+          "USER32.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "SHELL32.dll"
+        ],
+        "retiredImports": []
+      },
+      {
+        "name": "AssetProcessorBatch.exe",
+        "exit": 0,
+        "inputUnchanged": true,
+        "dependencies": [
+          "Geometry.Authoring.dll",
+          "EditorCamera.dll",
+          "PrefabBuilder.dll",
+          "EditorMaterials.dll",
+          "Qt6Network.dll",
+          "AzToolsFramework.dll",
+          "AzFramework.NativeUI.dll",
+          "AzQtComponents.dll",
+          "Qt6Gui.dll",
+          "Qt6Core.dll",
+          "RenderMaterials.dll",
+          "DebugImGui.dll",
+          "ProfilerCapture.dll",
+          "AzFramework.dll",
+          "AzCore.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll"
+        ],
+        "retiredImports": []
+      },
+      {
+        "name": "AssetBuilder.exe",
+        "exit": 0,
+        "inputUnchanged": true,
+        "dependencies": [
+          "Qt6Core.dll",
+          "AzCore.dll",
+          "AzToolsFramework.dll",
+          "Geometry.Authoring.dll",
+          "EditorCamera.dll",
+          "PrefabBuilder.dll",
+          "EditorMaterials.dll",
+          "AzFramework.NativeUI.dll",
+          "RenderMaterials.dll",
+          "DebugImGui.dll",
+          "ProfilerCapture.dll",
+          "AzFramework.dll",
+          "KERNEL32.dll",
+          "MSVCP140.dll",
+          "VCRUNTIME140.dll",
+          "VCRUNTIME140_1.dll",
+          "api-ms-win-crt-stdio-l1-1-0.dll",
+          "api-ms-win-crt-heap-l1-1-0.dll",
+          "api-ms-win-crt-string-l1-1-0.dll",
+          "api-ms-win-crt-locale-l1-1-0.dll",
+          "api-ms-win-crt-math-l1-1-0.dll",
+          "api-ms-win-crt-convert-l1-1-0.dll",
+          "api-ms-win-crt-runtime-l1-1-0.dll"
+        ],
+        "retiredImports": []
+      }
+    ],
+    "limit": "All DLLs present are inspected to discover direct consumers, including stale inactive artifacts and tests. Import tables do not prove runtime module loading. No binary deletion or rebuild."
+  },
+  "tests": {
+    "files": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\native-attempt4\\junit\\JE_DebugImGui.Tests.xml",
+        "sha256": "4C0B5DB9DF1677D3D9D192DDEC43BD3EA8638D84B7E9141F082BAC1189CAB4CD",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\native-attempt4\\junit\\JE_Profiler.Tests.xml",
+        "sha256": "8EFC6F0DFE6DBD2D48CE10BDBCDC8B4CFE07464D7DACF07328F7A3B923437C80",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\native-attempt4\\junit\\JE_RenderDebug.Tests.xml",
+        "sha256": "F85154FC1D41672ED49CBC5A06FEA6821B34052B9526EBB5E19F5206CB9FDAC7",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\native-attempt4\\junit\\Legacy_EditorLib.Tests.xml",
+        "sha256": "1DA426393F8C187D13AEA2732749FCE2AA7BAC1F1E32A08096E3088CB390E098",
+        "tests": 72,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "total": 88,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "freezes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\parent\\integrated-freeze-rev2.json",
+      "manifestSha256": "5FAFEBABACF9041B7B8789C24BBA2A945DD7E9A77212A2C95386542F2E0134D6",
+      "entries": 78,
+      "present": 78,
+      "mismatches": 0,
+      "retiredCount": 0,
+      "inputChecks": [
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\CpuProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ImGuiTreemap.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerExports.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerImGuiBus.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerModule.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_capture_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_tests_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_view_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\CpuProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemap.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemapImpl.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Tests\\ProfilerTests.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Source\\EditorMaterialSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\AtomImGuiToolsBus.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugExports.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugModule.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_public_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_tests_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsBus.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Tests\\RenderDebugTests.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiGpuProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Source\\ImGuiGpuProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Registry\\render_debug_assetprocessor.setreg",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\cmake\\LYWrappers.cmake",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\profiler\\source-freeze-rev2.json",
+      "manifestSha256": "DE70DB939B0EBE8E5C4D0ED25F0DA8320F37C04F12B2E4E1A738D5140F1497AA",
+      "entries": 24,
+      "present": 24,
+      "mismatches": 0,
+      "retiredCount": 0,
+      "inputChecks": [
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\CpuProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ImGuiTreemap.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerExports.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerImGuiBus.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerModule.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_capture_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_tests_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_view_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\CpuProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemap.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemapImpl.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Tests\\ProfilerTests.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\CMakeLists.txt",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\source-freeze.json",
+      "manifestSha256": "C5BC8E3A318C1EEC35B99CA276C942540139AB17DD45758EB8D673AD11BF745A",
+      "entries": 37,
+      "present": 37,
+      "mismatches": 0,
+      "retiredCount": 22,
+      "inputChecks": [
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Source\\EditorMaterialSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\AtomImGuiToolsBus.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugExports.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugModule.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_public_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_tests_files.cmake",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsBus.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomModule.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Tests\\RenderDebugTests.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiGpuProfiler.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Source\\ImGuiGpuProfiler.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.cpp",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.h",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\CMakeLists.txt",
+          "matches": true
+        },
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\Registry\\render_debug_assetprocessor.setreg",
+          "matches": true
+        }
+      ]
+    }
+  ]
+}

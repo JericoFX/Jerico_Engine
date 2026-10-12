@@ -1,0 +1,48 @@
+{
+  "status": "HOLD_SOURCE_ONLY_NATIVE_NOT_RUN",
+  "inputCount": 24,
+  "nativeFiles": 23,
+  "sourceFreezeSha256": "0FCA7278DE5CC72D1F5014E0E25ED8E774CE8659C985029F152FBFDA6FA2D0D6",
+  "logicalDiffSha256": "5B379F78C58627C491EC1E41687BCD0EFB50E52873341C8D76ED2A35D6BC34CA",
+  "originalInputs": 23,
+  "originalPreimagesByteExact": true,
+  "movedSourcePairs": 16,
+  "retiredInputs": 22,
+  "targets": [
+    "JE::ProfilerCapture",
+    "JE::ProfilerView",
+    "JE::Profiler.Tests"
+  ],
+  "expectedCTest": "JE::Profiler.Tests.main::TEST_RUN",
+  "testsAuthored": 6,
+  "testsRun": 0,
+  "factories": [
+    "JE::Debug::Profiler::CreateCaptureModule",
+    "JE::Debug::Profiler::CreateVisualModule"
+  ],
+  "factoryHeader": "JE/Debug/Profiler/ProfilerModule.h",
+  "modules": [
+    "4A286414-B387-4D20-9A7E-2F792755B769",
+    "5946991E-A96C-4E7A-A9B3-605E3C8EC3CB"
+  ],
+  "preserved": "Nine module/component/interface/serializer UUID declarations; all class macro names, services, fields and versions unchanged. Original AZ::Debug interfaces and SystemTick lifecycle remain their owners; no second capture instance per host.",
+  "exports": "Capture public methods, shared components/modules, cached region/hash/serializer APIs and visual public interfaces. Private thread_local storage is not exported. No EXPORT_ALL_SYMBOLS and no-unity on all native targets.",
+  "ownership": "Capture one shared/monolithic library; View links Capture and DebugImGui, no Atom dependency. Host selects one factory; visual factory includes capture descriptor.",
+  "demonstratedCause": "Original BeginRegion fixed_string<512>::format_arg asserted on a 638-character OpenMesh signature in the Editor. GroupRegionName already used AZ::Name and remains unchanged. Missing va_end corrected only on the formatting path.",
+  "repair": "Literal names bypass formatting; formatted <=512 retain fixed buffer, longer formatted names use AZStd::string. Region text is interned once per recorded event as before, with full identity; shared prefix long-name and transient input tests exercise real recording plus original JSON wrapper/schema.",
+  "originalRed": "build/n0-validation/native-imgui-rev1/editor-vulkan-attempt1/Editor.log:116-126; original native assertion serves RED. New tests have NOT_RUN status and were not executed against old code.",
+  "costs": "No per-event dynamic formatting allocation for literal markers, but new AZ::Name intern entries may allocate as before; formatted long-name allocation and formatting measurement are not benchmarked. No performance acceptance claimed.",
+  "limits": [
+    "No configure/build/test/Git by writer. Parent/Luna own native and UI acceptance.",
+    "No repair claimed for garbled labels: group pointer lifetime remains original static-literal/module-lifetime contract.",
+    "Existing delayed frame capture, TLS shutdown/reinitialization and other inherited behavior unchanged. Tests record on a fresh joined thread per recording case and explicitly keep NameDictionary alive.",
+    "Visual case conditional on IMGUI_ENABLED; original release policy remains provided by DebugImGui.",
+    "No assets/builders/scanroots in this Gem; preview and metadata retired with exact private preimages, no legacy Gem activation or aliases."
+  ],
+  "externalConsumers": [
+    "Gems/Atom/Utils/Code/CMakeLists.txt",
+    "Gems/Atom/Utils/Code/Include/Atom/Utils/ImGuiGpuProfiler.h",
+    "Gems/Atom/Utils/Code/Source/ImGuiGpuProfiler.cpp"
+  ],
+  "externalOwner": "dependency_writer; hosts/central composition owned by parent, not included in this freeze"
+}

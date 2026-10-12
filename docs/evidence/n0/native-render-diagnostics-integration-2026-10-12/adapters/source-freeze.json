@@ -1,0 +1,527 @@
+{
+  "status": "IMPLEMENTED_NOT_COMPILED_HOLD",
+  "fileCount": 37,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+      "bytes": 1763,
+      "sha256": "500201F2C7B0C6DF6BFC1265902BDAE56AB3B491448999F262242B3D0D03570F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Source\\EditorMaterialSystemComponent.cpp",
+      "bytes": 24502,
+      "sha256": "5A77BB14356CE5D81DF432BE2365604B4991A944253DE2FD5F6E359ADE56D9F3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "bytes": 3534,
+      "sha256": "2CBA6AF02E8021065AF74BD040C7FBB1C34C505B7C4EB77165BDB63EA94469D6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+      "bytes": 1546,
+      "sha256": "0B852D5F80247933BF8C2D66A991AFEE94F2299E4B1A2B4F2C8A2C4129FCDD04"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+      "bytes": 745,
+      "sha256": "A8E164EA70660905D0B47F5D2CDAA9B9AA194FE11D1C4E9A724B344B720F4A12"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\CMakeLists.txt",
+      "bytes": 1450,
+      "sha256": "7C2694819F40DFF892C2C528C655C4373A1ED3A67990A8DD4CE335F2B0299D0C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\AtomImGuiToolsBus.h",
+      "bytes": 1688,
+      "sha256": "7B2A5F937FB5A2D469B0F3DEB72EE10947F20D1696A67AA70980A608219555C9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugExports.h",
+      "bytes": 353,
+      "sha256": "E94F6DC9736C1EEB1AE2C95C5FE638D9317D57B33B8FFB3B286BFBBFB3A865DA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugModule.h",
+      "bytes": 355,
+      "sha256": "94631E909857F314691D646819B3E55FD6236B564C62A02937DD68FBB9179B67"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_files.cmake",
+      "bytes": 529,
+      "sha256": "6D4ABC5F271F113DD1145F2CD27182D167A4FDA745AD4CD474B1CABC0629B7ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_public_files.cmake",
+      "bytes": 262,
+      "sha256": "440A161500035BAC838FDB92D86B8A0438FF16C1F2B18E131E8E7AE8F7CE26AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_tests_files.cmake",
+      "bytes": 143,
+      "sha256": "6A4C18D6BDAE7908F5369816CD6223E4911F12B2E42E8142E85C1ED20BAB0255"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsBus.cpp",
+      "bytes": 357,
+      "sha256": "A9B1C90E619FF1914136DD2380CB906511DA63A2FFAF2ABFFC711B658F9F1279"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsModule.cpp",
+      "bytes": 1406,
+      "sha256": "BB53EDC62794E4EFB2573DEFEB439EEB16949FEFA25AAB5D4F3140B4382521A9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "bytes": 7236,
+      "sha256": "879CCE7185F6B51D162B8402EF6ADB880A93ED5155B1D5BDFC6A75DF081855D9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.h",
+      "bytes": 3062,
+      "sha256": "477C6364B92B4C58B6DF5E290054283C363EBDD0EF8037FDD1DCFDFCDEF1C64D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.cpp",
+      "bytes": 13545,
+      "sha256": "99E823A711EFD8541EC12103F5B7347ADE6F4D1CC0BB40005CFDDDD8C4336CEB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.h",
+      "bytes": 4866,
+      "sha256": "855FFB81A76C77AB7C1F57B570E523536E12FE987C1E3F80945CA2CA27831235"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomModule.cpp",
+      "bytes": 1368,
+      "sha256": "6CADD0DD552ECD472D9FCE0610E679DCECBF42C27CD8F26747F615ABF52C361C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.cpp",
+      "bytes": 5031,
+      "sha256": "E666DE3A1FF3B32150166BE1A583CDFFF5B8D512042A4EB22D134997D1B2E44A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.h",
+      "bytes": 2038,
+      "sha256": "725D197C3E679AC85C7686A33B2C65304D0C6EC6873BED115BD792083BDB131D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.cpp",
+      "bytes": 1369,
+      "sha256": "61FA8806C1B5D4305761F4CAE8305A38C004EAC23E19A11725A5BD2B26ED1FF6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.h",
+      "bytes": 1167,
+      "sha256": "EF02BB2EB56719A438500DEB98E8A4FFB72D0A6D1524FB01101A98BD4D5FAD14"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Tests\\RenderDebugTests.cpp",
+      "bytes": 6304,
+      "sha256": "F03DC7682A4954F0C3FA1D957DCA12561FBDDF661900B81C9BDCA33057A4B02F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt",
+      "bytes": 2184,
+      "sha256": "0ED4DA50B3C6ABEE85804DEDE08765F73C4BCAA64533FABF98BC52D3B1C4ECC8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiGpuProfiler.h",
+      "bytes": 15767,
+      "sha256": "4ECE9FD4BA7FB4496B7C9DF99FD6E2187CC01459E4E1EA01127B07042697ECB1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Source\\ImGuiGpuProfiler.cpp",
+      "bytes": 107935,
+      "sha256": "BF258453317FE65011F350FAFB22F52B7C31ADEFEDFE0B524124A288F129AF79"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt",
+      "bytes": 5956,
+      "sha256": "82A6ABEEE7BB40404251F2CE9D2A301A10643B6F8C59F4B403A7FADD2E54439B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json",
+      "bytes": 1069,
+      "sha256": "DDF4BE316B4F8F4ED4C6A6F23CE8019019C4B3C8E7244A610376F44B15E580C9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\CMakeLists.txt",
+      "bytes": 403,
+      "sha256": "2F7BF1D446114DFDEC6AEEBE99F6D80E5B3827FEE400DAF2488A537E65B745E4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+      "bytes": 8073,
+      "sha256": "8CBE1F4F36580DFAAE8DEE0BB14D29E1917E202A1ACD865039677D0A5A96AFFE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.cpp",
+      "bytes": 48554,
+      "sha256": "9ED929014AF443A87CE0B55EF9DC006EABA535FB1E21FCEEE5060A08C9DACED2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.h",
+      "bytes": 11391,
+      "sha256": "F19E4DC9F9C581AE2089D1E6924E67FEFE4C15AED1902D3D4A1F6BD08B0D57AE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+      "bytes": 1320,
+      "sha256": "4A85921D5D1B1FE09D363B2E0F518D3942ACCC817749460E9215CF81A78B4B5D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\CMakeLists.txt",
+      "bytes": 398,
+      "sha256": "D6A0D62EC28C6D1A3F020FE871CF224B2F05DF5183739A91B935BE72C77D8D82"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\CMakeLists.txt",
+      "bytes": 5348,
+      "sha256": "61033E0C41A460F39C660F7454E900D55D9635EAF00332F306EC732D876868B1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Registry\\render_debug_assetprocessor.setreg",
+      "bytes": 490,
+      "sha256": "B28C368669ED1DDEE62E4DDCE2361443206CEE9261850FA6DE2D229F687BB50D"
+    }
+  ],
+  "retiredCount": 22,
+  "retired": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.h",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.h",
+      "beforeSHA256": "75D3CCF206A0BD5EEB0A6EE64B205FC297A25033A5E7889A222C456CF909CFD8",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.h"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.cpp",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.cpp",
+      "beforeSHA256": "23325186740DF4601EE7E724231B8103EB50CCC2F6539B3393C3D48AF66B9913",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.cpp"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.h",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.h",
+      "beforeSHA256": "64FF2C436E48F935A964AC5610E36681C8361A6C97E7B8229C3CEAFD4D6F3903",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.h"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.cpp",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.cpp",
+      "beforeSHA256": "92DE9E374AC4E0746324B4F7F8FD49A0F6064CD534E76962D97B1FE00801FC75",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.cpp"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.h",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.h",
+      "beforeSHA256": "79B4C96901D0696F2C866679208DECDA8BC793C4AC1E0016C98861AE064A32C2",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.h"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.cpp",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.cpp",
+      "beforeSHA256": "DCDDA98F67B8667C8E81AF96143802876B62623C039A971386BFD5D270C64214",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.cpp"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.h",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.h",
+      "beforeSHA256": "3CB9860A415C3F4723EBA4645B61C521E9C0A5A8EB39ACFF49A70F40D6EC78DA",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.h"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "beforeSHA256": "D7AEBC367E608BE8EEF4E2FB0C8E2FF270F17992D800BEB9DB625ED7EB470123",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.cpp"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Include\\AtomLyIntegration\\AtomImGuiTools\\AtomImGuiToolsBus.h",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Include\\AtomLyIntegration\\AtomImGuiTools\\AtomImGuiToolsBus.h",
+      "beforeSHA256": "847854AD4B0BF0536A98F4FEBBC334B5383AECA2151174CD9824C5C7301E5A24",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\AtomImGuiToolsBus.h"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomModule.cpp",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomModule.cpp",
+      "beforeSHA256": "9FCB0EE8FBD82A3607543C13E34A3C7DE370397563B06921470773CD33DAC682",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomModule.cpp"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsModule.cpp",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsModule.cpp",
+      "beforeSHA256": "BD0FDA9EB70F8ED22344E06920A2F3B47B6C1188C0B4E5CE77D073FBCA42F738",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsModule.cpp"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+      "beforeSHA256": "A8E164EA70660905D0B47F5D2CDAA9B9AA194FE11D1C4E9A724B344B720F4A12",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+      "beforeSHA256": "0B852D5F80247933BF8C2D66A991AFEE94F2299E4B1A2B4F2C8A2C4129FCDD04",
+      "destination": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\CMakeLists.txt",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\CMakeLists.txt",
+      "beforeSHA256": "DD2370C0270A5C3F34A483AB7E1CF0A514CD6389FFC4D794FCB3F92FA8C9417A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_files.cmake",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_files.cmake",
+      "beforeSHA256": "8E5D099FD859076183E30003D4F2EE667886F2BE6712628A180F87F9A79F73A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_shared_files.cmake",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_shared_files.cmake",
+      "beforeSHA256": "A5D945347F01319E1FB78DA1797414FD80679C2B024EBB36B510DA0124E24D9E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\gem.json",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\gem.json",
+      "beforeSHA256": "7AF4D1EFFECE8CA0C9CA865E9EBCFF184EE09BC549433426763BA3EAEEDCBFB2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_files.cmake",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_files.cmake",
+      "beforeSHA256": "2E589CCEEBA82DECBDBC80157BE97F4A1CADCE1DC785A0AF725D1051ABEC26E5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_public_files.cmake",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_public_files.cmake",
+      "beforeSHA256": "9BB3009243521CC44350D33C6D96015C5CB1EAFB1B2FF47741D945EBB0C64B24"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_shared_files.cmake",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_shared_files.cmake",
+      "beforeSHA256": "EE5026B4C78F8EFA46B2E37CD964116BBC1699EB2B08B79B62E3AA71E86E039F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\CMakeLists.txt",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\CMakeLists.txt",
+      "beforeSHA256": "7232776EAF6BB7A6E374EF266F863F1026C59B37B79A5A7334599054E864020E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\gem.json",
+      "action": "retired",
+      "preimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\gem.json",
+      "beforeSHA256": "59775BC73CE3FAD47FCA19329B4706A1D7D2E6FAD45FBB702E2CEB5624B8E0AB"
+    }
+  ],
+  "referenceCount": 37,
+  "referenceInputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\AutomatedTesting\\project.json",
+      "bytes": 1784,
+      "sha256": "425F2C5FA61B3876CA650AB401815B0A459FE9359315BC5EBBD68C105CC78878"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Editor\\Materials\\Source\\EditorMaterialSystemComponent.cpp",
+      "bytes": 24507,
+      "sha256": "2851EB8C5FA47B9D7D81A7B2D2E20B8E4002711907D567B1BF0157B95AF2E045"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\engine.json",
+      "bytes": 3581,
+      "sha256": "3C4D3FE9AA43185D999CB940E4DAB60492287E7AB6B34D7EF072FF829B1DC1D8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt",
+      "bytes": 2186,
+      "sha256": "442C44E6D35FC80F87D7ED56A38BFBF6E0DC58D6F2EEDBAE3C75EA96F02FD8B8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiGpuProfiler.h",
+      "bytes": 15736,
+      "sha256": "778FD3E75B711E09DDA028FC597CA9BC852D62518207710998DDE336F93268DD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\Atom\\Utils\\Code\\Source\\ImGuiGpuProfiler.cpp",
+      "bytes": 107893,
+      "sha256": "C9533E77CAC394A8C8FAFB06B53C48A537F5DD6AC8E822758DB7161A3F0B6614"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt",
+      "bytes": 6123,
+      "sha256": "DC3EC3264954F2229A8CCC8B39BB0B0F9F4BA14BEF1E124B33F817D786596CFA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json",
+      "bytes": 1118,
+      "sha256": "D5CB1B5F120B65E744D81D832606B462CA95D9271CF8BB07681979910745AA0A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\CMakeLists.txt",
+      "bytes": 282,
+      "sha256": "526BE39C34F94A47D5BF97DE92C1FC98685145D22CA3D2B4539E5323432203DE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_files.cmake",
+      "bytes": 420,
+      "sha256": "2E589CCEEBA82DECBDBC80157BE97F4A1CADCE1DC785A0AF725D1051ABEC26E5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_public_files.cmake",
+      "bytes": 302,
+      "sha256": "9BB3009243521CC44350D33C6D96015C5CB1EAFB1B2FF47741D945EBB0C64B24"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\atomimguitools_shared_files.cmake",
+      "bytes": 273,
+      "sha256": "EE5026B4C78F8EFA46B2E37CD964116BBC1699EB2B08B79B62E3AA71E86E039F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\CMakeLists.txt",
+      "bytes": 1362,
+      "sha256": "7232776EAF6BB7A6E374EF266F863F1026C59B37B79A5A7334599054E864020E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Include\\AtomLyIntegration\\AtomImGuiTools\\AtomImGuiToolsBus.h",
+      "bytes": 1401,
+      "sha256": "847854AD4B0BF0536A98F4FEBBC334B5383AECA2151174CD9824C5C7301E5A24"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsModule.cpp",
+      "bytes": 1496,
+      "sha256": "BD0FDA9EB70F8ED22344E06920A2F3B47B6C1188C0B4E5CE77D073FBCA42F738"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.cpp",
+      "bytes": 7063,
+      "sha256": "D7AEBC367E608BE8EEF4E2FB0C8E2FF270F17992D800BEB9DB625ED7EB470123"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\AtomImGuiToolsSystemComponent.h",
+      "bytes": 3004,
+      "sha256": "3CB9860A415C3F4723EBA4645B61C521E9C0A5A8EB39ACFF49A70F40D6EC78DA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.cpp",
+      "bytes": 1380,
+      "sha256": "DCDDA98F67B8667C8E81AF96143802876B62623C039A971386BFD5D270C64214"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\Code\\Source\\MaterialShaderDetailsController.h",
+      "bytes": 1092,
+      "sha256": "79B4C96901D0696F2C866679208DECDA8BC793C4AC1E0016C98861AE064A32C2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\AtomImGuiTools\\gem.json",
+      "bytes": 596,
+      "sha256": "59775BC73CE3FAD47FCA19329B4706A1D7D2E6FAD45FBB702E2CEB5624B8E0AB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt",
+      "bytes": 8048,
+      "sha256": "1ADD7347B6D9D4DD680E91DFD7DFD96612511E5F71B24ABFD54DF1E00449845E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.cpp",
+      "bytes": 48548,
+      "sha256": "58E10A8BC67C202CCA9F24BB4D39FFF7E365A59A1275EDB2A0E2B6137EEF735D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.h",
+      "bytes": 11402,
+      "sha256": "9673AB1155266EB018828079DF5AB264D1141A6E52E750CE8C9B67FFE81AD9F0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\gem.json",
+      "bytes": 1418,
+      "sha256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl",
+      "bytes": 1546,
+      "sha256": "0B852D5F80247933BF8C2D66A991AFEE94F2299E4B1A2B4F2C8A2C4129FCDD04"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader",
+      "bytes": 745,
+      "sha256": "A8E164EA70660905D0B47F5D2CDAA9B9AA194FE11D1C4E9A724B344B720F4A12"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\CMakeLists.txt",
+      "bytes": 277,
+      "sha256": "1E0945AEAA9A9EAD5C04F7B9A79E892AF88D402DB666680C999F21999C7CF1AE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\CMakeLists.txt",
+      "bytes": 1136,
+      "sha256": "DD2370C0270A5C3F34A483AB7E1CF0A514CD6389FFC4D794FCB3F92FA8C9417A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_files.cmake",
+      "bytes": 372,
+      "sha256": "8E5D099FD859076183E30003D4F2EE667886F2BE6712628A180F87F9A79F73A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\imguiatom_shared_files.cmake",
+      "bytes": 268,
+      "sha256": "A5D945347F01319E1FB78DA1797414FD80679C2B024EBB36B510DA0124E24D9E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.cpp",
+      "bytes": 13407,
+      "sha256": "23325186740DF4601EE7E724231B8103EB50CCC2F6539B3393C3D48AF66B9913"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\DebugConsole.h",
+      "bytes": 4836,
+      "sha256": "75D3CCF206A0BD5EEB0A6EE64B205FC297A25033A5E7889A222C456CF909CFD8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomModule.cpp",
+      "bytes": 1468,
+      "sha256": "9FCB0EE8FBD82A3607543C13E34A3C7DE370397563B06921470773CD33DAC682"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.cpp",
+      "bytes": 5051,
+      "sha256": "92DE9E374AC4E0746324B4F7F8FD49A0F6064CD534E76962D97B1FE00801FC75"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\Code\\Source\\ImguiAtomSystemComponent.h",
+      "bytes": 2101,
+      "sha256": "64FF2C436E48F935A964AC5610E36681C8361A6C97E7B8229C3CEAFD4D6F3903"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\AtomLyIntegration\\ImguiAtom\\gem.json",
+      "bytes": 558,
+      "sha256": "7AF4D1EFFECE8CA0C9CA865E9EBCFF184EE09BC549433426763BA3EAEEDCBFB2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\adapters\\before\\Gems\\MotionMatching\\Code\\CMakeLists.txt",
+      "bytes": 5355,
+      "sha256": "7EC63F55C5C0218649E46F17216D1032445260BEF8A6CD2A8A923F5AF97B9D84"
+    }
+  ]
+}

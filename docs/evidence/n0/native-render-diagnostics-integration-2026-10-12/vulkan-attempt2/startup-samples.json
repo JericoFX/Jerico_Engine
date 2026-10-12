@@ -1,0 +1,162 @@
+[
+  {
+    "elapsedSeconds": 0.7532577,
+    "workingSetBytes": 381079552,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 424898560
+  },
+  {
+    "elapsedSeconds": 2.0253568,
+    "workingSetBytes": 599748608,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 2044420096
+  },
+  {
+    "elapsedSeconds": 3.2765802,
+    "workingSetBytes": 602411008,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 2045267968
+  },
+  {
+    "elapsedSeconds": 4.5398435,
+    "workingSetBytes": 595931136,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1764978688
+  },
+  {
+    "elapsedSeconds": 5.8110668,
+    "workingSetBytes": 596619264,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1754341376
+  },
+  {
+    "elapsedSeconds": 7.0572878,
+    "workingSetBytes": 597004288,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1754431488
+  },
+  {
+    "elapsedSeconds": 8.3124438,
+    "workingSetBytes": 597069824,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1754431488
+  },
+  {
+    "elapsedSeconds": 9.5650553,
+    "workingSetBytes": 595779584,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1740181504
+  },
+  {
+    "elapsedSeconds": 10.8123909,
+    "workingSetBytes": 595836928,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1740247040
+  },
+  {
+    "elapsedSeconds": 12.0525706,
+    "workingSetBytes": 595841024,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1740247040
+  },
+  {
+    "elapsedSeconds": 13.2999834,
+    "workingSetBytes": 595845120,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1740247040
+  },
+  {
+    "elapsedSeconds": 14.5610076,
+    "workingSetBytes": 593883136,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1733947392
+  },
+  {
+    "elapsedSeconds": 15.8418191,
+    "workingSetBytes": 593887232,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1733947392
+  },
+  {
+    "elapsedSeconds": 17.1036587,
+    "workingSetBytes": 593956864,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1733951488
+  },
+  {
+    "elapsedSeconds": 18.3727022,
+    "workingSetBytes": 593973248,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1734017024
+  },
+  {
+    "elapsedSeconds": 19.6442901,
+    "workingSetBytes": 589602816,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1729490944
+  },
+  {
+    "elapsedSeconds": 20.907994,
+    "workingSetBytes": 589602816,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1729490944
+  },
+  {
+    "elapsedSeconds": 22.1548665,
+    "workingSetBytes": 589606912,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1729556480
+  },
+  {
+    "elapsedSeconds": 23.4040575,
+    "workingSetBytes": 589684736,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1729622016
+  },
+  {
+    "elapsedSeconds": 24.7180288,
+    "workingSetBytes": 589692928,
+    "tools": [],
+    "tcp": [],
+    "udp": [],
+    "privateBytes": 1729687552
+  }
+]

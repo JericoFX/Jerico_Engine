@@ -18,6 +18,8 @@ ly_add_target(
             Gem::CommonFeaturesAtom.Public
             Legacy::Editor.Headers
             Legacy::CryCommon
+        PRIVATE
+            JE::RenderDebug
 )
 
 set_target_properties(EditorMaterials PROPERTIES UNITY_BUILD OFF)

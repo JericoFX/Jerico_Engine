@@ -107,6 +107,8 @@ ly_add_target(
             JE::EditorCamera
             JE::PrefabBuilder
             JE::DebugImGui
+            JE::ProfilerView
+            JE::RenderDebug
             JE::EditorMaterials
             Gem::Atom_Feature_Common.Public
             Gem::Atom_RPI.Edit

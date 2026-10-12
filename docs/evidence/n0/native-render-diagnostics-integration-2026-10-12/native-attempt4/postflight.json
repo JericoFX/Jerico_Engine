@@ -1,0 +1,401 @@
+{
+  "capturedUtc": "2026-10-12T13:15:37.5077799Z",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-diagnostics-rev1\\parent\\integrated-freeze-rev2.json",
+  "freezeSha256": "5FAFEBABACF9041B7B8789C24BBA2A945DD7E9A77212A2C95386542F2E0134D6",
+  "inputCount": 78,
+  "inputs": {
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\CMakeLists.txt": {
+      "bytes": 1285,
+      "sha256": "E65D490290E04AB863565448F1E5291E8730AFA094C64E5317EA3AEF4E5ADBDC"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\CpuProfiler.h": {
+      "bytes": 10748,
+      "sha256": "B1844986F9E392C2F80455A23F5DFC41C85344DBA8A9EB03272EAA76E3DBA3AE"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ImGuiTreemap.h": {
+      "bytes": 6639,
+      "sha256": "B7405073339FB76A01C7333D0E2634D898E28FAFEDA79FAF1992067B70A9BB46"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerExports.h": {
+      "bytes": 546,
+      "sha256": "7B027AA88178A9DEABB6E2551BA03401642BCFECFF135E67FDED1D29DD42E772"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerImGuiBus.h": {
+      "bytes": 952,
+      "sha256": "AE943CAA01C7136A9A1A27A9030B0FF77F18D6F05275705B03C1B457D4387470"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Include\\JE\\Debug\\Profiler\\ProfilerModule.h": {
+      "bytes": 1167,
+      "sha256": "03BB9EC1575E42DE43CD8145196856C64EF646F790F11F061C5AA9B9F97671A6"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_capture_files.cmake": {
+      "bytes": 389,
+      "sha256": "B86A20F193990C6FE67109C21093634B32FF40621F709E832265EBAF97E80C1A"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_tests_files.cmake": {
+      "bytes": 140,
+      "sha256": "C11AEEFB6489A93378B82E6608BC0335234957D1018792B42A707E3E6708B165"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\profiler_view_files.cmake": {
+      "bytes": 623,
+      "sha256": "BDAE6E0FDE65BE32CE4CBD6D2062FBD568E0A11F92A9E407DF0CD6FF98435488"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\CpuProfiler.cpp": {
+      "bytes": 18239,
+      "sha256": "649C7E9719BFC42749F1102F8352E5A7013D7AA4EAC904EBEE25E1F75F95B038"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.cpp": {
+      "bytes": 54184,
+      "sha256": "9F10962ACD373CD70AF5DBB1483364DE99CB780DC7B78FB80F1AB1031E4F9EB8"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiCpuProfiler.h": {
+      "bytes": 9757,
+      "sha256": "AF4F179D7C53E543549A99AF68D2B5204AE2FA8A694BDB7C4C2012EE6C8EF9F0"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.cpp": {
+      "bytes": 4703,
+      "sha256": "8BB928BF0E19ACACA5AA2FCF172A87F6A127556345E444D689DF981AF9046203"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiHeapMemoryProfiler.h": {
+      "bytes": 697,
+      "sha256": "136971CEF5AAD590AF56E8F8368B9ADD23E3471EB0CD703697A82450C9842A07"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemap.cpp": {
+      "bytes": 25181,
+      "sha256": "615BF57F94E7A1F797E421BCC4A03508F2A37D7A144E2C3D3A70EB28F1A4F562"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ImGuiTreemapImpl.h": {
+      "bytes": 3122,
+      "sha256": "7DE9747708FA130D6ABDCC2CB3C33781979DF12342BAD89C42684CDBC19F36D8"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiModule.cpp": {
+      "bytes": 812,
+      "sha256": "2C2D96396305C4472A0DF022D8469B987D98D4402B82C60E1EF2B0A2DA257191"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.cpp": {
+      "bytes": 4543,
+      "sha256": "16ED2AC0439F6EA6583589554CCAC2F37030E466352E95ABB8AF45BBA69C1D1F"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerImGuiSystemComponent.h": {
+      "bytes": 2418,
+      "sha256": "F1305E1353FABECB30E0FBA9457487ECEEB8BA6913D02BB4F23AB686FC1B0699"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerModule.cpp": {
+      "bytes": 619,
+      "sha256": "5D40A8E8C9F9DDC54648BCE203E7E205382AF5EEBA3A64EB8D6532F7FE7E43E6"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.cpp": {
+      "bytes": 9038,
+      "sha256": "CFD3006F20716D7B90E51810CDA3B8C5E20797862B6C32E61B98DC9252C9ABBC"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Source\\ProfilerSystemComponent.h": {
+      "bytes": 2117,
+      "sha256": "D4A3EFB714538DCBF3E917DF1286A717FDF6ACE0965C2D12BE1AFDD5A60BD6F3"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Debug\\Profiler\\Tests\\ProfilerTests.cpp": {
+      "bytes": 14456,
+      "sha256": "B42E9485540A8A7ED6FCD6929DB55471CC50677E5C2B83B16518AC7FBD4C69A0"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Profiler\\CMakeLists.txt": {
+      "bytes": 286,
+      "sha256": "6F7F68CF9984B4A2ED1856335EC3DD1764FE4AEFE09D4FA1BECE66576A61A08B"
+    },
+    "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json": {
+      "bytes": 1763,
+      "sha256": "500201F2C7B0C6DF6BFC1265902BDAE56AB3B491448999F262242B3D0D03570F"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Source\\EditorMaterialSystemComponent.cpp": {
+      "bytes": 24502,
+      "sha256": "5A77BB14356CE5D81DF432BE2365604B4991A944253DE2FD5F6E359ADE56D9F3"
+    },
+    "F:\\JericoEngine\\JericoEngine\\engine.json": {
+      "bytes": 3534,
+      "sha256": "2CBA6AF02E8021065AF74BD040C7FBB1C34C505B7C4EB77165BDB63EA94469D6"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.azsl": {
+      "bytes": 1546,
+      "sha256": "0B852D5F80247933BF8C2D66A991AFEE94F2299E4B1A2B4F2C8A2C4129FCDD04"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Assets\\Shaders\\ImGuiAtom\\ImGuiAtom.shader": {
+      "bytes": 745,
+      "sha256": "A8E164EA70660905D0B47F5D2CDAA9B9AA194FE11D1C4E9A724B344B720F4A12"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\CMakeLists.txt": {
+      "bytes": 1450,
+      "sha256": "7C2694819F40DFF892C2C528C655C4373A1ED3A67990A8DD4CE335F2B0299D0C"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\AtomImGuiToolsBus.h": {
+      "bytes": 1688,
+      "sha256": "7B2A5F937FB5A2D469B0F3DEB72EE10947F20D1696A67AA70980A608219555C9"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugExports.h": {
+      "bytes": 353,
+      "sha256": "E94F6DC9736C1EEB1AE2C95C5FE638D9317D57B33B8FFB3B286BFBBFB3A865DA"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Include\\JE\\Render\\Debug\\RenderDebugModule.h": {
+      "bytes": 355,
+      "sha256": "94631E909857F314691D646819B3E55FD6236B564C62A02937DD68FBB9179B67"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_files.cmake": {
+      "bytes": 529,
+      "sha256": "6D4ABC5F271F113DD1145F2CD27182D167A4FDA745AD4CD474B1CABC0629B7ED"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_public_files.cmake": {
+      "bytes": 262,
+      "sha256": "440A161500035BAC838FDB92D86B8A0438FF16C1F2B18E131E8E7AE8F7CE26AA"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\render_debug_tests_files.cmake": {
+      "bytes": 143,
+      "sha256": "6A4C18D6BDAE7908F5369816CD6223E4911F12B2E42E8142E85C1ED20BAB0255"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsBus.cpp": {
+      "bytes": 357,
+      "sha256": "A9B1C90E619FF1914136DD2380CB906511DA63A2FFAF2ABFFC711B658F9F1279"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsModule.cpp": {
+      "bytes": 1406,
+      "sha256": "BB53EDC62794E4EFB2573DEFEB439EEB16949FEFA25AAB5D4F3140B4382521A9"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.cpp": {
+      "bytes": 7236,
+      "sha256": "879CCE7185F6B51D162B8402EF6ADB880A93ED5155B1D5BDFC6A75DF081855D9"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\AtomImGuiToolsSystemComponent.h": {
+      "bytes": 3062,
+      "sha256": "477C6364B92B4C58B6DF5E290054283C363EBDD0EF8037FDD1DCFDFCDEF1C64D"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.cpp": {
+      "bytes": 13545,
+      "sha256": "99E823A711EFD8541EC12103F5B7347ADE6F4D1CC0BB40005CFDDDD8C4336CEB"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\DebugConsole.h": {
+      "bytes": 4866,
+      "sha256": "855FFB81A76C77AB7C1F57B570E523536E12FE987C1E3F80945CA2CA27831235"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomModule.cpp": {
+      "bytes": 1368,
+      "sha256": "6CADD0DD552ECD472D9FCE0610E679DCECBF42C27CD8F26747F615ABF52C361C"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.cpp": {
+      "bytes": 5031,
+      "sha256": "E666DE3A1FF3B32150166BE1A583CDFFF5B8D512042A4EB22D134997D1B2E44A"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\ImguiAtomSystemComponent.h": {
+      "bytes": 2038,
+      "sha256": "725D197C3E679AC85C7686A33B2C65304D0C6EC6873BED115BD792083BDB131D"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.cpp": {
+      "bytes": 1369,
+      "sha256": "61FA8806C1B5D4305761F4CAE8305A38C004EAC23E19A11725A5BD2B26ED1FF6"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Source\\MaterialShaderDetailsController.h": {
+      "bytes": 1167,
+      "sha256": "EF02BB2EB56719A438500DEB98E8A4FFB72D0A6D1524FB01101A98BD4D5FAD14"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Debug\\Tests\\RenderDebugTests.cpp": {
+      "bytes": 6304,
+      "sha256": "F03DC7682A4954F0C3FA1D957DCA12561FBDDF661900B81C9BDCA33057A4B02F"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\CMakeLists.txt": {
+      "bytes": 2184,
+      "sha256": "0ED4DA50B3C6ABEE85804DEDE08765F73C4BCAA64533FABF98BC52D3B1C4ECC8"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Include\\Atom\\Utils\\ImGuiGpuProfiler.h": {
+      "bytes": 15767,
+      "sha256": "4ECE9FD4BA7FB4496B7C9DF99FD6E2187CC01459E4E1EA01127B07042697ECB1"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Utils\\Code\\Source\\ImGuiGpuProfiler.cpp": {
+      "bytes": 107935,
+      "sha256": "BF258453317FE65011F350FAFB22F52B7C31ADEFEDFE0B524124A288F129AF79"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\Code\\CMakeLists.txt": {
+      "bytes": 5956,
+      "sha256": "82A6ABEEE7BB40404251F2CE9D2A301A10643B6F8C59F4B403A7FADD2E54439B"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomBridge\\gem.json": {
+      "bytes": 1069,
+      "sha256": "DDF4BE316B4F8F4ED4C6A6F23CE8019019C4B3C8E7244A610376F44B15E580C9"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomImGuiTools\\CMakeLists.txt": {
+      "bytes": 403,
+      "sha256": "2F7BF1D446114DFDEC6AEEBE99F6D80E5B3827FEE400DAF2488A537E65B745E4"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\CMakeLists.txt": {
+      "bytes": 8073,
+      "sha256": "8CBE1F4F36580DFAAE8DEE0BB14D29E1917E202A1ACD865039677D0A5A96AFFE"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.cpp": {
+      "bytes": 48554,
+      "sha256": "9ED929014AF443A87CE0B55EF9DC006EABA535FB1E21FCEEE5060A08C9DACED2"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Source\\Mesh\\MeshComponentController.h": {
+      "bytes": 11391,
+      "sha256": "F19E4DC9F9C581AE2089D1E6924E67FEFE4C15AED1902D3D4A1F6BD08B0D57AE"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json": {
+      "bytes": 1320,
+      "sha256": "4A85921D5D1B1FE09D363B2E0F518D3942ACCC817749460E9215CF81A78B4B5D"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\ImguiAtom\\CMakeLists.txt": {
+      "bytes": 398,
+      "sha256": "D6A0D62EC28C6D1A3F020FE871CF224B2F05DF5183739A91B935BE72C77D8D82"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\Code\\CMakeLists.txt": {
+      "bytes": 5348,
+      "sha256": "61033E0C41A460F39C660F7454E900D55D9635EAF00332F306EC732D876868B1"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Registry\\render_debug_assetprocessor.setreg": {
+      "bytes": 490,
+      "sha256": "B28C368669ED1DDEE62E4DDCE2361443206CEE9261850FA6DE2D229F687BB50D"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt": {
+      "bytes": 613,
+      "sha256": "FB2DEC3464682874376A7EC0855FDC33944D57E76A7C37A32A356C2F8F4E0C11"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt": {
+      "bytes": 7694,
+      "sha256": "F1E4F927074E3152E4AC5890330F371BD2E67DCA4AE8AD2BDA1F162952655EA9"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp": {
+      "bytes": 14610,
+      "sha256": "B9596D13B0CC0DE64B268EB425DA8A32CD700C0CC32F872F437915D8764AB48F"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\CMakeLists.txt": {
+      "bytes": 4552,
+      "sha256": "77BF518704A1D7B7CAE36127E37F27AFF32FF2A777E3294DBCDD10B46436BD93"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp": {
+      "bytes": 32766,
+      "sha256": "D5CE3F8CCFA92F92067462F461AEC54A443C188F70D6CA55D577EFAFAF0A78B0"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt": {
+      "bytes": 9868,
+      "sha256": "436CE504F7411BD89C8D7C2808A65A65133E55C905A92410FC5778AF41001828"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp": {
+      "bytes": 32727,
+      "sha256": "570A0D88779A03F7AE9665EAE00A9B6847D3388C75D33A558644E2B8A0ACEEA6"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt": {
+      "bytes": 2650,
+      "sha256": "5E9306CEB57A5D46BF976A3F9A3BCD65061B5765B0ECC791908FBA3A9F25510A"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp": {
+      "bytes": 10645,
+      "sha256": "7B7F7F04E333C3A8D0D3F8D7397CCD488D32DC5AE19B2F3304AE72EDE4C1CBC0"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\CMakeLists.txt": {
+      "bytes": 3706,
+      "sha256": "7E8D3E433E5B42562C18B7C72B1307D39EB499D36967B10BD242B34B7E5081BD"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp": {
+      "bytes": 26744,
+      "sha256": "CBFF05635168134E4707DB74C824CC860BA5F3E508DD2D9A124EC8FE19657C0D"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\CMakeLists.txt": {
+      "bytes": 797,
+      "sha256": "EB7D05FB3511D40B598E9898EDA3BE87C90A1F1F9B16CD3B7BA7265242478123"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Code\\3rdParty\\sqlite\\CMakeLists.txt": {
+      "bytes": 2875,
+      "sha256": "3DD06BC002B658CEE1BA3DC70FE15AC67EAF3FBB1C6E02A686C6B3CC0B5058ED"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\Shader\\Code\\CMakeLists.txt": {
+      "bytes": 5117,
+      "sha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93"
+    },
+    "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\Code\\CMakeLists.txt": {
+      "bytes": 7960,
+      "sha256": "9EF08DC44D2B8C568776A9DD9B239976E67553A801451D6A13D1C838A8504D19"
+    },
+    "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake": {
+      "bytes": 6795,
+      "sha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3"
+    },
+    "F:\\JericoEngine\\JericoEngine\\cmake\\LYWrappers.cmake": {
+      "bytes": 43916,
+      "sha256": "30D7CD12513386B39C89B23AA4CE94E907A376CF0C6C300F9FF19D211E9DA5B4"
+    }
+  },
+  "mismatches": [],
+  "activeProcesses": [],
+  "phases": [
+    {
+      "phase": "build-focal-tests",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T12:54:03.1858487Z",
+      "finishedUtc": "2026-10-12T12:56:20.8178428Z",
+      "elapsedSeconds": 137.625331,
+      "stdoutBytes": 7249,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "ctest-focal-inventory",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T12:56:20.8400015Z",
+      "finishedUtc": "2026-10-12T12:56:21.7238739Z",
+      "elapsedSeconds": 0.8575034,
+      "testNames": [
+        "JE::Profiler.Tests.main::TEST_RUN",
+        "JE::RenderDebug.Tests.main::TEST_RUN"
+      ]
+    },
+    {
+      "phase": "ctest-focal-JE__Profiler.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T12:56:21.7276609Z",
+      "finishedUtc": "2026-10-12T12:56:22.0641586Z",
+      "elapsedSeconds": 0.3354415,
+      "stdoutBytes": 405,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "ctest-focal-JE__RenderDebug.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T12:56:22.0648960Z",
+      "finishedUtc": "2026-10-12T12:56:22.2063908Z",
+      "elapsedSeconds": 0.1406592,
+      "stdoutBytes": 411,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "build-hosts",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T12:56:22.2071262Z",
+      "finishedUtc": "2026-10-12T13:15:30.5675818Z",
+      "elapsedSeconds": 1148.3544188,
+      "stdoutBytes": 175026,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "ctest-host-inventory",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T13:15:30.5740165Z",
+      "finishedUtc": "2026-10-12T13:15:30.7042778Z",
+      "elapsedSeconds": 0.1282097,
+      "testNames": [
+        "Legacy::EditorLib.Tests.main::TEST_RUN",
+        "JE::DebugImGui.Tests.main::TEST_RUN"
+      ]
+    },
+    {
+      "phase": "ctest-host-JE__DebugImGui.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T13:15:30.7045683Z",
+      "finishedUtc": "2026-10-12T13:15:31.0254408Z",
+      "elapsedSeconds": 0.3200524,
+      "stdoutBytes": 409,
+      "stderrBytes": 0
+    },
+    {
+      "phase": "ctest-host-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "startedUtc": "2026-10-12T13:15:31.0260550Z",
+      "finishedUtc": "2026-10-12T13:15:37.5074273Z",
+      "elapsedSeconds": 6.4806731,
+      "stdoutBytes": 413,
+      "stderrBytes": 0
+    }
+  ],
+  "fatal": null
+}

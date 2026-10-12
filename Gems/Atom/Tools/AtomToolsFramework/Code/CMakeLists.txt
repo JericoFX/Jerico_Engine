@@ -36,6 +36,8 @@ ly_add_target(
             AZ::AzCore
             AZ::AzQtComponents
             AZ::AzToolsFramework
+            JE::ProfilerView
+            JE::RenderDebug
             Gem::Atom_Bootstrap.Headers
             Gem::Atom_Component_DebugCamera.Static
             Gem::Atom_Feature_Common
