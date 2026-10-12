@@ -1,6 +1,6 @@
 # Material Workspace nativo — 2026-10-12
 
-Estado: vertical Material Workspace verificado localmente; publicación focal pendiente. N0/GOAL permanecen abiertos.
+Estado: vertical Material Workspace verificado localmente; fuente publicada en development 60aa85c3d9cd2f0a13907af7cc2ba9353902ff11, SHA remoto verificado. N0/GOAL permanecen abiertos.
 
 MaterialDocument, su bus y sesión viven en JE::Editor, dentro de EditorMaterials. La acción Material Editor abre un panel del editor existente, comparte viewport y Undo/Redo global con las entidades. El panel conserva documentos e historial al cerrarse; cerrar la aplicación ofrece Save/Discard/Cancel. Se retiró la dependencia que obligaba a construir MaterialEditor.exe con Editor. El host standalone temporal comparte el documento nativo; MaterialCanvas todavía abre otro proceso. Este corte no acredita retirada completa de Gems ni ejecutables.
 
