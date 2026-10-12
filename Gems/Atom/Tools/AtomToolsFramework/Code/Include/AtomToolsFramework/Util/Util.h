@@ -24,7 +24,6 @@ AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option") // disable warnin
 AZ_POP_DISABLE_WARNING
 
 class QImage;
-class QMenu;
 class QMimeData;
 class QWidget;
 
@@ -317,12 +316,6 @@ namespace AtomToolsFramework
 
     //! Returns a list of all asset safe folders except for those set to be ignored, cache and intermediate asset folders.
     AZStd::vector<AZStd::string> GetSupportedSourceFolders();
-
-    //! Add menu actions for scripts specified in the settings registry
-    //! @param menu The menu where the actions will be inserted
-    //! @param registryKey The path to the registry setting where script categories are registered
-    //! @param arguments The list of arguments passed into the script when executed
-    void AddRegisteredScriptToMenu(QMenu* menu, const AZStd::string& registryKey, const AZStd::vector<AZStd::string>& arguments);
 
     //! Reflect utility functions to behavior context
     void ReflectUtilFunctions(AZ::ReflectContext* context);

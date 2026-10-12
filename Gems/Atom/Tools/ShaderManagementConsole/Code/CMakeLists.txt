@@ -18,6 +18,17 @@ if(NOT PAL_TRAIT_ATOM_SHADER_MANAGEMENT_CONSOLE_APPLICATION_SUPPORTED)
     return()
 endif()
 
+if(PAL_TRAIT_BUILD_TESTS_SUPPORTED AND PAL_TRAIT_BUILD_HOST_TOOLS)
+    ly_add_target(
+        NAME ShaderManagementConsole.VariantGenerator.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
+        NAMESPACE Gem
+        FILES_CMAKE Tests/shadervariantgenerator_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Source
+        BUILD_DEPENDENCIES PRIVATE AZ::AzTest AZ::AzTestShared Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
+    )
+    ly_add_googletest(NAME Gem::ShaderManagementConsole.VariantGenerator.Tests LABELS REQUIRES_tiaf)
+endif()
+
 ly_add_target(
     NAME ShaderManagementConsole APPLICATION
     NAMESPACE Gem

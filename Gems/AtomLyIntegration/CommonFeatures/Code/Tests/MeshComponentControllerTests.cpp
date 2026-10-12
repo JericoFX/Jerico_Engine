@@ -7,6 +7,8 @@
  */
 
 #include <AzTest/AzTest.h>
+#include <AzCore/Asset/AssetManager.h>
+#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
 #include <AzToolsFramework/ActionManager/Action/ActionManagerInternalInterface.h>
 #include <AzToolsFramework/ActionManager/HotKey/HotKeyManagerInternalInterface.h>
 #include <AzToolsFramework/ActionManager/Menu/MenuManagerInternalInterface.h>
@@ -84,6 +86,12 @@ namespace UnitTest
 
             m_intersectionNotificationDetector.Disconnect();
 
+            auto* serializeContext = GetApplication()->GetSerializeContext();
+            serializeContext->EnableRemoveReflection();
+            m_editorMeshComponentDescriptor->Reflect(serializeContext);
+            m_meshComponentDescriptor->Reflect(serializeContext);
+            serializeContext->DisableRemoveReflection();
+
             m_meshComponentDescriptor.reset();
             m_editorMeshComponentDescriptor.reset();
         }
@@ -93,6 +101,67 @@ namespace UnitTest
         AZStd::unique_ptr<AZ::ComponentDescriptor> m_editorMeshComponentDescriptor;
         IntersectionNotificationDetector m_intersectionNotificationDetector;
     };
+
+    TEST_F(MeshComponentControllerFixture, InvalidModelAssetIdDoesNotDereferenceMissingAssetData)
+    {
+        UnitTest::ErrorHandler loadFailure("Could not load");
+        UnitTest::ErrorHandler notQueued("BlockUntilLoadComplete must be called after an asset has been queued for load");
+        UnitTest::ErrorHandler featureProcessorNotFound("Unable to find a MeshFeatureProcessorInterface on the entityId.");
+        m_entity->Deactivate();
+        m_entity->CreateComponent<AZ::Render::MeshComponent>();
+        m_entity->Activate();
+        ASSERT_TRUE(AZ::Render::MeshComponentRequestBus::HasHandlers(m_entity->GetId()));
+
+        AZ::Render::MeshComponentRequestBus::Event(
+            m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId, AZ::Data::AssetId{});
+
+        AZ::Data::AssetId actualAssetId;
+        AZ::Data::Asset<const AZ::RPI::ModelAsset> actualAsset;
+        AZ::Render::MeshComponentRequestBus::EventResult(
+            actualAssetId, m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAssetId);
+        AZ::Render::MeshComponentRequestBus::EventResult(
+            actualAsset, m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+        EXPECT_FALSE(actualAssetId.IsValid());
+        EXPECT_FALSE(actualAsset.IsReady());
+        m_entity->Deactivate();
+        EXPECT_EQ(loadFailure.GetExpectedErrorCount(), 1);
+        EXPECT_EQ(notQueued.GetExpectedErrorCount(), 1);
+        // AssetData assertions remain unsuppressed: the old operator-> readiness query must fail this test.
+    }
+
+    TEST_F(MeshComponentControllerFixture, UnavailableModelProductPreservesRequestedAssetIdWithoutDereferencingAssetData)
+    {
+        const AZ::Data::AssetId modelAssetId(AZ::Uuid::CreateRandom(), 0);
+        ASSERT_EQ(AZ::Data::AssetManager::Instance().GetHandler(azrtti_typeid<AZ::RPI::ModelAsset>()), nullptr);
+        // Use the native generic handler and AssetManager, with no catalog entry or fallback preview model.
+        auto modelHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::AssetHandler<AZ::RPI::ModelAsset>>();
+        UnitTest::ErrorHandler missingProduct("GetAsset called for asset which does not exist in asset catalog");
+        UnitTest::ErrorHandler loadFailure("Could not load");
+        UnitTest::ErrorHandler notQueued("BlockUntilLoadComplete must be called after an asset has been queued for load");
+        {
+            UnitTest::ErrorHandler featureProcessorNotFound("Unable to find a MeshFeatureProcessorInterface on the entityId.");
+            m_entity->Deactivate();
+            m_entity->CreateComponent<AZ::Render::MeshComponent>();
+            m_entity->Activate();
+            ASSERT_TRUE(AZ::Render::MeshComponentRequestBus::HasHandlers(m_entity->GetId()));
+            AZ::Render::MeshComponentRequestBus::Event(
+                m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId, modelAssetId);
+
+            AZ::Data::AssetId actualAssetId;
+            AZ::Data::Asset<const AZ::RPI::ModelAsset> actualAsset;
+            AZ::Render::MeshComponentRequestBus::EventResult(
+                actualAssetId, m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAssetId);
+            AZ::Render::MeshComponentRequestBus::EventResult(
+                actualAsset, m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+            EXPECT_EQ(actualAssetId, modelAssetId);
+            EXPECT_FALSE(actualAsset.IsReady());
+            m_entity->Deactivate();
+            EXPECT_EQ(loadFailure.GetExpectedErrorCount(), 1);
+            EXPECT_EQ(notQueued.GetExpectedErrorCount(), 1);
+            EXPECT_GT(missingProduct.GetExpectedWarningCount(), 0);
+        }
+        AZ::Data::AssetManager::Instance().DispatchEvents();
+    }
 
     TEST_F(MeshComponentControllerFixture, IntersectionNotificationBusIsNotifiedWhenMeshComponentControllerTransformIsModified)
     {

@@ -40,7 +40,6 @@
         "CommonFeatures",
         "EditorModeFeedback",
         "EMotionFXAtom",
-        "ImguiAtom",
-        "TechnicalArt/DccScriptingInterface"
+        "ImguiAtom"
     ]
 }

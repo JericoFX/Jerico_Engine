@@ -67,7 +67,6 @@ namespace AtomToolsFramework
 
         void BuildDockingMenu();
         void BuildLayoutsMenu();
-        void BuildScriptsMenu();
 
         static constexpr const char* ToolLayoutSettingsKey = "/O3DE/AtomToolsFramework/MainWindow/Layouts/Tool";
         static constexpr const char* UserLayoutSettingsKey = "/O3DE/AtomToolsFramework/MainWindow/Layouts/User";

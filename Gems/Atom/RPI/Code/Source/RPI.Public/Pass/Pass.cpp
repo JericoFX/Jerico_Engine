@@ -1686,6 +1686,17 @@ namespace AZ
             return false;
         }
 
+        bool Pass::CancelPendingReadback(const AZStd::shared_ptr<AttachmentReadback>& expectedReadback)
+        {
+            if (!expectedReadback || m_attachmentReadback != expectedReadback)
+            {
+                return false;
+            }
+
+            m_attachmentReadback = nullptr;
+            return true;
+        }
+
         void Pass::UpdateReadbackAttachment(FramePrepareParams params, bool beforeAddScopes)
         {
             if (beforeAddScopes == (m_readbackOption == PassAttachmentReadbackOption::Input) && m_attachmentReadback)

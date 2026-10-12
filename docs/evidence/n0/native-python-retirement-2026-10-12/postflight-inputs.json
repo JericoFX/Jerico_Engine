@@ -1,0 +1,500 @@
+{
+  "capturedUtc": "2026-10-12T07:20:02.7071169Z",
+  "count": 82,
+  "matches": 82,
+  "nonmatches": [],
+  "inputs": [
+    {
+      "path": "Code/Editor/CMakeLists.txt",
+      "expectedSha256": "67B4365EBE3BB5F7F1BC96F4C2C8C14984F04D9DC85749793E2F135ABEA29400",
+      "actualSha256": "67B4365EBE3BB5F7F1BC96F4C2C8C14984F04D9DC85749793E2F135ABEA29400",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/Commands/CommandManager.cpp",
+      "expectedSha256": "7D249A74DEC1E1A6E306FA11B7953D840AC9DC72FA7494ACC2973211A8AB9D9C",
+      "actualSha256": "7D249A74DEC1E1A6E306FA11B7953D840AC9DC72FA7494ACC2973211A8AB9D9C",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/Core/EditorActionsHandler.cpp",
+      "expectedSha256": "BF5EF58BBE1B46B8065EFBC4A09FFCE838ECD22923F796D5608E3B8DBF183A4B",
+      "actualSha256": "BF5EF58BBE1B46B8065EFBC4A09FFCE838ECD22923F796D5608E3B8DBF183A4B",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/CryEdit.cpp",
+      "expectedSha256": "A86557A3648C44A6B16EA730DC970ED0FF3952FDD04D2DB255A56ADE8E4E7460",
+      "actualSha256": "A86557A3648C44A6B16EA730DC970ED0FF3952FDD04D2DB255A56ADE8E4E7460",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/CryEdit.h",
+      "expectedSha256": "CA12AAE7222524610A305B48E20CF8BCB19F4324CEDF16589C766ED82F4F1F5C",
+      "actualSha256": "CA12AAE7222524610A305B48E20CF8BCB19F4324CEDF16589C766ED82F4F1F5C",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/CryEditPy.cpp",
+      "expectedSha256": "9414D0E0285171005DA9560EE7864DD98E7B3B82FBD1D4948728E53468E2A3C1",
+      "actualSha256": "9414D0E0285171005DA9560EE7864DD98E7B3B82FBD1D4948728E53468E2A3C1",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/IEditorImpl.cpp",
+      "expectedSha256": "15C2EE3F76D2728F9271A945CF684755C2F6D94D2642EE691E727D4DC41D3F25",
+      "actualSha256": "15C2EE3F76D2728F9271A945CF684755C2F6D94D2642EE691E727D4DC41D3F25",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/IEditorImpl.h",
+      "expectedSha256": "324A4D61E2564746BE012EF9EC8E88D18AB76B3F680AC57D096652CDCE3AC47F",
+      "actualSha256": "324A4D61E2564746BE012EF9EC8E88D18AB76B3F680AC57D096652CDCE3AC47F",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/Lib/Tests/test_EditorPythonBindings.cpp",
+      "expectedSha256": "5778ED7BFBA52282B7D015CB7845C5454F7D9FFD7CDE5980C9183C40D62EC406",
+      "actualSha256": "5778ED7BFBA52282B7D015CB7845C5454F7D9FFD7CDE5980C9183C40D62EC406",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/MainWindow.cpp",
+      "expectedSha256": "75FA95F0F3B0F354808F6F50009057BCA140BD85DCF3D2ABFF104265A4B15BC3",
+      "actualSha256": "75FA95F0F3B0F354808F6F50009057BCA140BD85DCF3D2ABFF104265A4B15BC3",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/PythonEditorEventsBus.h",
+      "expectedSha256": "285C347DAE880B7830266B3152F5F330B934870E3D63F48AF528F519EA89A3C1",
+      "actualSha256": "285C347DAE880B7830266B3152F5F330B934870E3D63F48AF528F519EA89A3C1",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/PythonEditorFuncs.cpp",
+      "expectedSha256": "A955FB5A0099F0C111CE6B460020BE53A7966109AB124805C811422B449CA6DE",
+      "actualSha256": "A955FB5A0099F0C111CE6B460020BE53A7966109AB124805C811422B449CA6DE",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/PythonEditorFuncs.h",
+      "expectedSha256": "BD329E7EBACBB92C22B4B49F45F20D4867CEA074C05C6684F4533D477B12DB0C",
+      "actualSha256": "BD329E7EBACBB92C22B4B49F45F20D4867CEA074C05C6684F4533D477B12DB0C",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/ToolBox.cpp",
+      "expectedSha256": "3AFC7857A5C2F02DE71FD1CD74AC005ABC4EC0326DD0249A1600BB347EAE8FE7",
+      "actualSha256": "3AFC7857A5C2F02DE71FD1CD74AC005ABC4EC0326DD0249A1600BB347EAE8FE7",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/ToolBox.h",
+      "expectedSha256": "B69727E20C41B6B45AB72D97BF7BC75EE825A3D3CE4BB32797CD62B984735F86",
+      "actualSha256": "B69727E20C41B6B45AB72D97BF7BC75EE825A3D3CE4BB32797CD62B984735F86",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/ToolsConfigPage.cpp",
+      "expectedSha256": "448D1683CA30BA435D089C15FBEE7B21D80F54DF6BC84BC0DD1C0B26B846015F",
+      "actualSha256": "448D1683CA30BA435D089C15FBEE7B21D80F54DF6BC84BC0DD1C0B26B846015F",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/ToolsConfigPage.h",
+      "expectedSha256": "763C13337668731CF02E9F330F642EFF19F5F47703CFF55F73CBF91BB6500734",
+      "actualSha256": "763C13337668731CF02E9F330F642EFF19F5F47703CFF55F73CBF91BB6500734",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/ToolsConfigPage.ui",
+      "expectedSha256": "158A8172118B1C325CC961C87D18823E736D14B510FA1EB16137582A0EF894DF",
+      "actualSha256": "158A8172118B1C325CC961C87D18823E736D14B510FA1EB16137582A0EF894DF",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/editor_lib_files.cmake",
+      "expectedSha256": "49CEF54E1EAF61419E56334094F70228DA4D8D3F8D4B4F738F3166DD9E58492C",
+      "actualSha256": "49CEF54E1EAF61419E56334094F70228DA4D8D3F8D4B4F738F3166DD9E58492C",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Editor/main.cpp",
+      "expectedSha256": "264D1497DC7D8294B6160193F1C71E92322552EB77F877B0804E5304976619BA",
+      "actualSha256": "264D1497DC7D8294B6160193F1C71E92322552EB77F877B0804E5304976619BA",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Framework/AzFramework/AzFramework/ProjectManager/ProjectManager.h",
+      "expectedSha256": "B62119405057B955A174D203B5BE101E0B15F274848B11082BD337B7014E84C2",
+      "actualSha256": "B62119405057B955A174D203B5BE101E0B15F274848B11082BD337B7014E84C2",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/LauncherUnified/launcher_generator.cmake",
+      "expectedSha256": "551AD3E35B0708AFB92A7712527344BB937C0AFE637AF53DD192E96CFC40DDD5",
+      "actualSha256": "551AD3E35B0708AFB92A7712527344BB937C0AFE637AF53DD192E96CFC40DDD5",
+      "status": "MATCH"
+    },
+    {
+      "path": "Code/Tools/CMakeLists.txt",
+      "expectedSha256": "7927173627AFDAA7EF3CB9D538255E356ACA0E91430734CC0EF069D30C4848DE",
+      "actualSha256": "7927173627AFDAA7EF3CB9D538255E356ACA0E91430734CC0EF069D30C4848DE",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Include/Atom/Feature/ColorGrading/LutGenerationCaptureBus.h",
+      "expectedSha256": "232E2FF9D1553FD8EF05F426BD50DC4C1AB19625686A68A2D557CCC870ABF2EA",
+      "actualSha256": "232E2FF9D1553FD8EF05F426BD50DC4C1AB19625686A68A2D557CCC870ABF2EA",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Include/Atom/Feature/LookupTable/LookupTableAsset.h",
+      "expectedSha256": "81E80B61AD58773EE2D824F08EF5D2C70F904D3204F09E22942D63FB070948A3",
+      "actualSha256": "81E80B61AD58773EE2D824F08EF5D2C70F904D3204F09E22942D63FB070948A3",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Include/Atom/Feature/Utils/FrameCaptureBus.h",
+      "expectedSha256": "674D4F4905E8EF9A9FC4ABAFB1461F2641F1799D9285D5762FF788696A6C4298",
+      "actualSha256": "674D4F4905E8EF9A9FC4ABAFB1461F2641F1799D9285D5762FF788696A6C4298",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/ColorGrading/LutGenerationPass.cpp",
+      "expectedSha256": "74D1B30F9F542F07584DAEF62C9D4191317D89A1277D3DB46CB3F556061D6F68",
+      "actualSha256": "74D1B30F9F542F07584DAEF62C9D4191317D89A1277D3DB46CB3F556061D6F68",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/ColorGrading/LutGenerationPass.h",
+      "expectedSha256": "22B6BB32A9BC7A6242E3F0638F25811AF954E01ECF2CEB26739619D1EF90B843",
+      "actualSha256": "22B6BB32A9BC7A6242E3F0638F25811AF954E01ECF2CEB26739619D1EF90B843",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/FrameCaptureSystemComponent.cpp",
+      "expectedSha256": "83945FDAA57D7113CD81D338527BCCDCC4F3A5F622B92BD65E49EFF3EAEFCC49",
+      "actualSha256": "83945FDAA57D7113CD81D338527BCCDCC4F3A5F622B92BD65E49EFF3EAEFCC49",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/FrameCaptureSystemComponent.h",
+      "expectedSha256": "AFE047AEEF2D583835ACA3909D7CFC19003191309B6D2F7D043AA4FB51A3E3D2",
+      "actualSha256": "AFE047AEEF2D583835ACA3909D7CFC19003191309B6D2F7D043AA4FB51A3E3D2",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/LookupTable/LookupTableAsset.h",
+      "expectedSha256": "96462C4A9E9D4481A842BDD17504E98B45F93B99F9F2C9D599153F345707E9A3",
+      "actualSha256": "96462C4A9E9D4481A842BDD17504E98B45F93B99F9F2C9D599153F345707E9A3",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/PostProcess/ColorGrading/HDRColorGradingSettings.cpp",
+      "expectedSha256": "2F8290149E644EDB4992EA23A8D20DB3D6E77B4D433063204947AF62DC10DEAB",
+      "actualSha256": "2F8290149E644EDB4992EA23A8D20DB3D6E77B4D433063204947AF62DC10DEAB",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Tests/HDRColorGradingSettingsTests.cpp",
+      "expectedSha256": "016A95CC78C0324252FD07806DD15D309F0EF80F4DD76837600E9A6D1C91317D",
+      "actualSha256": "016A95CC78C0324252FD07806DD15D309F0EF80F4DD76837600E9A6D1C91317D",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Tests/LutGenerationCaptureTests.cpp",
+      "expectedSha256": "DC0D941CBF580902E053FA4B1FB20EE1E553DCCA505DC1DA65FD4B5732ED5720",
+      "actualSha256": "DC0D941CBF580902E053FA4B1FB20EE1E553DCCA505DC1DA65FD4B5732ED5720",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/atom_feature_common_files.cmake",
+      "expectedSha256": "12DE7E97A82313803A749E5E36B19154CEC136A011DDFC1F83C14DB65557F33F",
+      "actualSha256": "12DE7E97A82313803A749E5E36B19154CEC136A011DDFC1F83C14DB65557F33F",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/atom_feature_common_public_files.cmake",
+      "expectedSha256": "E5C50D777FA9420B7677C9B6FCB5B92099FDA73CFFE57B57E4D2A8E2063E3D60",
+      "actualSha256": "E5C50D777FA9420B7677C9B6FCB5B92099FDA73CFFE57B57E4D2A8E2063E3D60",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/atom_feature_common_tests_files.cmake",
+      "expectedSha256": "AAF5D37597BCE8BA0E228D0B6ADF6BDF784F6D3DF724850E88EAEAA6C70BFD9C",
+      "actualSha256": "AAF5D37597BCE8BA0E228D0B6ADF6BDF784F6D3DF724850E88EAEAA6C70BFD9C",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Public/Pass/AttachmentReadback.h",
+      "expectedSha256": "D1104AE73F3E8F88E8E7FEB47DD50058DFEE176AF5FDAA870812234CFEA0EA1D",
+      "actualSha256": "D1104AE73F3E8F88E8E7FEB47DD50058DFEE176AF5FDAA870812234CFEA0EA1D",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Public/Pass/Pass.h",
+      "expectedSha256": "261447BEB6C4BBA1038E0AE432552209C02E000747BFD07859FEF82406003BE1",
+      "actualSha256": "261447BEB6C4BBA1038E0AE432552209C02E000747BFD07859FEF82406003BE1",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Public/Pass/Pass.cpp",
+      "expectedSha256": "AE3DE46E657EA75793D0DE09B598EF160876FA61E6C58202A865D5031F530E60",
+      "actualSha256": "AE3DE46E657EA75793D0DE09B598EF160876FA61E6C58202A865D5031F530E60",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+      "expectedSha256": "077E1AA31BAE7EAE83389EAFDF1C0C2E928757DB54C68C8CBE22771553F96A0F",
+      "actualSha256": "077E1AA31BAE7EAE83389EAFDF1C0C2E928757DB54C68C8CBE22771553F96A0F",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Include/AtomToolsFramework/Application/AtomToolsApplication.h",
+      "expectedSha256": "E9E801ED0B92E2070651AA48A5E6A0CD9501519CF9A822E4139D70D2275C4E15",
+      "actualSha256": "E9E801ED0B92E2070651AA48A5E6A0CD9501519CF9A822E4139D70D2275C4E15",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Include/AtomToolsFramework/Util/Util.h",
+      "expectedSha256": "88F8EA44812A4B9F99E57B82C9B353F28809576A5873AE3DB987351494DBD7AA",
+      "actualSha256": "88F8EA44812A4B9F99E57B82C9B353F28809576A5873AE3DB987351494DBD7AA",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Include/AtomToolsFramework/Window/AtomToolsMainWindow.h",
+      "expectedSha256": "E5E0F3698E10905B4D9E119BD5C56C8D693C3788957C5191D7BBAF8D75E302A6",
+      "actualSha256": "E5E0F3698E10905B4D9E119BD5C56C8D693C3788957C5191D7BBAF8D75E302A6",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+      "expectedSha256": "B306B3B5E8A0B42C6C4B90E9C993DF3CD28300783794CFAD3906CEFE11C82FE9",
+      "actualSha256": "B306B3B5E8A0B42C6C4B90E9C993DF3CD28300783794CFAD3906CEFE11C82FE9",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/AssetBrowser/AtomToolsAssetBrowserInteractions.cpp",
+      "expectedSha256": "343089D47D9567D4306A834844FBBB80C830EE070B3EF9084762754DEBE144E5",
+      "actualSha256": "343089D47D9567D4306A834844FBBB80C830EE070B3EF9084762754DEBE144E5",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/AtomToolsFrameworkModule.h",
+      "expectedSha256": "992F7356565FB11C5509603B294770E3618EDA521AD7B4D2C60E4F12D85326D2",
+      "actualSha256": "992F7356565FB11C5509603B294770E3618EDA521AD7B4D2C60E4F12D85326D2",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Util/Util.cpp",
+      "expectedSha256": "F10345BCEF2A20B8FFB769DEF731470B4CA6F0F96A27A74F3F54F7BA751C80CD",
+      "actualSha256": "F10345BCEF2A20B8FFB769DEF731470B4CA6F0F96A27A74F3F54F7BA751C80CD",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Window/AtomToolsMainWindow.cpp",
+      "expectedSha256": "FAC992191F9E59366404F108FF6F8B415E829F7FB46E873F8C06909675D52B82",
+      "actualSha256": "FAC992191F9E59366404F108FF6F8B415E829F7FB46E873F8C06909675D52B82",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialCanvas/Code/Source/Platform/Windows/tool_dependencies_windows.cmake",
+      "expectedSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "actualSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialCanvas/Registry/gem_autoload.materialcanvas.setreg",
+      "expectedSha256": "D178E7D90E53C070F892297FEF1EC2E96C95A1007E70440F5F288D6DEAA531AC",
+      "actualSha256": "D178E7D90E53C070F892297FEF1EC2E96C95A1007E70440F5F288D6DEAA531AC",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialEditor/Code/Source/Platform/Windows/tool_dependencies_windows.cmake",
+      "expectedSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "actualSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialEditor/Registry/gem_autoload.materialeditor.setreg",
+      "expectedSha256": "67B8A874FC2B635D7390E21EBE761493BFF6A449AF98619E0E9A590F828ABCF9",
+      "actualSha256": "67B8A874FC2B635D7390E21EBE761493BFF6A449AF98619E0E9A590F828ABCF9",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/PassCanvas/Code/Source/Platform/Windows/tool_dependencies_windows.cmake",
+      "expectedSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "actualSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/PassCanvas/Registry/gem_autoload.passcanvas.setreg",
+      "expectedSha256": "D178E7D90E53C070F892297FEF1EC2E96C95A1007E70440F5F288D6DEAA531AC",
+      "actualSha256": "D178E7D90E53C070F892297FEF1EC2E96C95A1007E70440F5F288D6DEAA531AC",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "expectedSha256": "AC4195FBAA6691891E1222D9F00F2A62633D9CECE8083598D6B91B0949D15FC8",
+      "actualSha256": "AC4195FBAA6691891E1222D9F00F2A62633D9CECE8083598D6B91B0949D15FC8",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.cpp",
+      "expectedSha256": "DB43509C5DBE15567B8D00050EAF1DD20FB1CCE36DFD5B221077655C301FAFE7",
+      "actualSha256": "DB43509C5DBE15567B8D00050EAF1DD20FB1CCE36DFD5B221077655C301FAFE7",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Data/ShaderVariantListGenerator.h",
+      "expectedSha256": "F0455E11D9948A8755BE16A248E49E909D69A35C86BA33A4DFDB8BB350044502",
+      "actualSha256": "F0455E11D9948A8755BE16A248E49E909D69A35C86BA33A4DFDB8BB350044502",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp",
+      "expectedSha256": "036516CE7BD19962B1CA940A599965EB322D409591501B606A077EE417AF4A59",
+      "actualSha256": "036516CE7BD19962B1CA940A599965EB322D409591501B606A077EE417AF4A59",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.h",
+      "expectedSha256": "11D685F716E86206F660BCAE5AEB5431DF13E2A9E3BF09701A192495985FF33D",
+      "actualSha256": "11D685F716E86206F660BCAE5AEB5431DF13E2A9E3BF09701A192495985FF33D",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Platform/Windows/tool_dependencies_windows.cmake",
+      "expectedSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "actualSha256": "A02C0760F98EEF43D7A66C556AB0A13FE0AEB4346D3EFF3A0B03E6845BD3B550",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleTableView.cpp",
+      "expectedSha256": "CE9BCF718D4298A9EDE1C1194290E7A9427FB912B8125404259B004638320FA7",
+      "actualSha256": "CE9BCF718D4298A9EDE1C1194290E7A9427FB912B8125404259B004638320FA7",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.cpp",
+      "expectedSha256": "D2888D6348B5A81D45FF1A1C400A30749F979E05E332AEE5BE1AB3E7EDCD23F0",
+      "actualSha256": "D2888D6348B5A81D45FF1A1C400A30749F979E05E332AEE5BE1AB3E7EDCD23F0",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Window/ShaderManagementConsoleWindow.h",
+      "expectedSha256": "3882F75E356CFB12A4BECCEB49D89ED52E0FEF7C161AB8244F8C6ACFF9803662",
+      "actualSha256": "3882F75E356CFB12A4BECCEB49D89ED52E0FEF7C161AB8244F8C6ACFF9803662",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/ShaderVariantListGeneratorTests.cpp",
+      "expectedSha256": "BD6BF74E50FF3E2EF508D473F5E2ADF804020CC7AB7E4C000B44DC63CA03C4CF",
+      "actualSha256": "BD6BF74E50FF3E2EF508D473F5E2ADF804020CC7AB7E4C000B44DC63CA03C4CF",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Tests/shadervariantgenerator_tests_files.cmake",
+      "expectedSha256": "A9841DA616EBF79D1AFFB5BA0D3A15C8F4CDCEE465CFD69A0D903BE6E91B4810",
+      "actualSha256": "A9841DA616EBF79D1AFFB5BA0D3A15C8F4CDCEE465CFD69A0D903BE6E91B4810",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/shadermanagementconsole_files.cmake",
+      "expectedSha256": "0805D4463C028638734080523190E6156FA877FB17C06235ADE4DC5B1FC049D7",
+      "actualSha256": "0805D4463C028638734080523190E6156FA877FB17C06235ADE4DC5B1FC049D7",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Registry/gem_autoload.shadermanagementconsole.setreg",
+      "expectedSha256": "D178E7D90E53C070F892297FEF1EC2E96C95A1007E70440F5F288D6DEAA531AC",
+      "actualSha256": "D178E7D90E53C070F892297FEF1EC2E96C95A1007E70440F5F288D6DEAA531AC",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/PostProcess/ColorGrading/EditorHDRColorGradingComponent.cpp",
+      "expectedSha256": "191FE41C1BF351FC448FC6D0F920693A0D67468730E943C9B71C788D771A65E9",
+      "actualSha256": "191FE41C1BF351FC448FC6D0F920693A0D67468730E943C9B71C788D771A65E9",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/PostProcess/ColorGrading/EditorHDRColorGradingComponent.h",
+      "expectedSha256": "9996EB75A5EDA39E0CDAEF5F1C6EB6AA6633C802837D20A315F2F3CA5A5A50D2",
+      "actualSha256": "9996EB75A5EDA39E0CDAEF5F1C6EB6AA6633C802837D20A315F2F3CA5A5A50D2",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/PostProcess/ColorGrading/JEEditorLutWriter.cpp",
+      "expectedSha256": "92276908F97BE97CC7F780E3139D050A153F0859D112FB8111A1A76D20CB97BF",
+      "actualSha256": "92276908F97BE97CC7F780E3139D050A153F0859D112FB8111A1A76D20CB97BF",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/PostProcess/ColorGrading/JEEditorLutWriter.h",
+      "expectedSha256": "E7BDF39F7CC8F7195A0C5B8439909EFBECC96DCC7316101D20C50A5F61BE74A0",
+      "actualSha256": "E7BDF39F7CC8F7195A0C5B8439909EFBECC96DCC7316101D20C50A5F61BE74A0",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Tests/EditorHDRColorGradingComponentTests.cpp",
+      "expectedSha256": "512B69FA56342B1569106722AE187AFC5B8A436E859C7A03279E35635D5DF468",
+      "actualSha256": "512B69FA56342B1569106722AE187AFC5B8A436E859C7A03279E35635D5DF468",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Tests/JEEditorLutWriterTests.cpp",
+      "expectedSha256": "F6073356639932BFFF4033941680216F4233883FAFECB0FCBF4DBBDD18E593D3",
+      "actualSha256": "F6073356639932BFFF4033941680216F4233883FAFECB0FCBF4DBBDD18E593D3",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Tests/MeshComponentControllerTests.cpp",
+      "expectedSha256": "CC1A99FA2D06A67FF003D4DEB958F1356A894AEAC27DB0CBE9302E93E5CD388A",
+      "actualSha256": "CC1A99FA2D06A67FF003D4DEB958F1356A894AEAC27DB0CBE9302E93E5CD388A",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/atomlyintegration_commonfeatures_editor_files.cmake",
+      "expectedSha256": "E45C3DED32A794964C1F01ABD93DA3EED607500D87CCDA6C78FC3FC5E23F90E4",
+      "actualSha256": "E45C3DED32A794964C1F01ABD93DA3EED607500D87CCDA6C78FC3FC5E23F90E4",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/atomlyintegration_commonfeatures_editor_test_files.cmake",
+      "expectedSha256": "B4FAFE475A4A46206B39099DD1138BA7BE061E0ADA008715FBAECC7D63D41B4E",
+      "actualSha256": "B4FAFE475A4A46206B39099DD1138BA7BE061E0ADA008715FBAECC7D63D41B4E",
+      "status": "MATCH"
+    },
+    {
+      "path": "Gems/AtomLyIntegration/gem.json",
+      "expectedSha256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988",
+      "actualSha256": "60A8EBC36F665B7895CADD16250456EDEEE119B8DD041114E249B20D0D947988",
+      "status": "MATCH"
+    },
+    {
+      "path": "Templates/DefaultProject/Template/project.json",
+      "expectedSha256": "F7984F0D72F3588E8C42D10FBC34BCDA2829241621DA26CFD746744B8AC5B69A",
+      "actualSha256": "F7984F0D72F3588E8C42D10FBC34BCDA2829241621DA26CFD746744B8AC5B69A",
+      "status": "MATCH"
+    },
+    {
+      "path": "cmake/Platform/Linux/PAL_linux.cmake",
+      "expectedSha256": "5D32F6EEF881E64B3F33C9F0940CDF7EF94109DB35384DFD5B754E0EEE09DA70",
+      "actualSha256": "5D32F6EEF881E64B3F33C9F0940CDF7EF94109DB35384DFD5B754E0EEE09DA70",
+      "status": "MATCH"
+    },
+    {
+      "path": "cmake/Platform/Windows/PAL_windows.cmake",
+      "expectedSha256": "EAC63C642EC802FADEDA7131FD294A46EBE17E5ACED240AB5207145D68E4C651",
+      "actualSha256": "EAC63C642EC802FADEDA7131FD294A46EBE17E5ACED240AB5207145D68E4C651",
+      "status": "MATCH"
+    },
+    {
+      "path": "engine.json",
+      "expectedSha256": "1ABBC07B836DAFCE639C0755688CB5AA3C22722F7BC565092FCE600CA316CD66",
+      "actualSha256": "1ABBC07B836DAFCE639C0755688CB5AA3C22722F7BC565092FCE600CA316CD66",
+      "status": "MATCH"
+    }
+  ]
+}

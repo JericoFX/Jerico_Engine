@@ -82,16 +82,6 @@ namespace AzToolsFramework
         virtual void ExitSimulationMode() = 0;
 
         /*
-        * Runs a script file. A relative path from the editor user folder or an absolute path should be given as an argument.
-        */
-        virtual void RunFile(const char* pFile) = 0;
-
-        /*
-        * Runs a script file with parameters. A relative path from the editor user folder or an absolute path should be given as an argument. The arguments should be separated by whitespace.
-        */
-        virtual void RunFileParameters(const char* pFile, const char* pArguments) = 0;
-
-        /*
         * Executes a given string as an editor command.
         */
         virtual void ExecuteCommand(const char* cmdline) = 0;

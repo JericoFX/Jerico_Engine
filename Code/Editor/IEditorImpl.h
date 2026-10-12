@@ -265,7 +265,6 @@ protected:
     bool m_bShowStatusText;
     bool m_bInitialized;
     bool m_bExiting;
-    static void CmdPy(IConsoleCmdArgs* pArgs);
 
     Editor::EditorQtApplication* const m_QtApplication = nullptr;
 

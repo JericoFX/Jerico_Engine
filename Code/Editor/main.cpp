@@ -6,16 +6,32 @@
  *
  */
 
+#include <AzCore/IO/Path/Path.h>
+#include <AzCore/IO/SystemFile.h>
 #include <AzCore/Memory/OSAllocator.h>
 #include <AzCore/Module/DynamicModuleHandle.h>
+#include <AzCore/Utils/Utils.h>
 #include <AzFramework/ProjectManager/ProjectManager.h>
 
 int main(int argc, char* argv[])
 {
     const AZ::Debug::Trace tracer;
-    // Verify a project path can be found, launch the project manager and shut down otherwise
-    if (AzFramework::ProjectManager::CheckProjectPathProvided(argc, argv) == AzFramework::ProjectManager::ProjectPathCheckResult::ProjectManagerLaunched)
+    const auto projectRootPath = AzFramework::ProjectManager::FindProjectPath(argc, argv);
+    if (projectRootPath.empty())
     {
+        constexpr const char* message = "No project path was provided or detected.\nPlease provide a --project-path argument.";
+        AZ_Error("Editor", false, "%s", message);
+        AZ::Utils::NativeErrorMessageBox("Project not found", message);
+        return 2;
+    }
+    const AZ::IO::FixedMaxPath projectJsonPath = projectRootPath / "project.json";
+    if (!AZ::IO::SystemFile::Exists(projectJsonPath.c_str()))
+    {
+        char message[2048];
+        azsnprintf(message, sizeof(message), "No project was found at '%s'.\nPlease provide a valid --project-path argument.",
+            projectJsonPath.c_str());
+        AZ_Error("Editor", false, "%s", message);
+        AZ::Utils::NativeErrorMessageBox("Project not found", message);
         return 2;
     }
     using CryEditMain = int (*)(int, char*[]);

@@ -37,6 +37,8 @@ AZ_POP_DISABLE_WARNING
 #include <QClipboard>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QFileDialog>
+#include <QFileInfo>
 #include <QDialogButtonBox>
 #include <QUrlQuery>
 #include <QThread>
@@ -47,6 +49,7 @@ AZ_POP_DISABLE_WARNING
 #include <AzCore/Component/ComponentApplicationLifecycle.h>
 #include <AzCore/Module/Environment.h>
 #include <AzCore/RTTI/BehaviorContext.h>
+#include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <AzCore/StringFunc/StringFunc.h>
@@ -60,7 +63,6 @@ AZ_POP_DISABLE_WARNING
 // AzFramework
 #include <AzFramework/Components/CameraBus.h>
 #include <AzFramework/Process/ProcessWatcher.h>
-#include <AzFramework/ProjectManager/ProjectManager.h>
 #include <AzFramework/Spawnable/RootSpawnableInterface.h>
 #include <AzFramework/Network/SocketConnection.h>
 
@@ -72,11 +74,8 @@ AZ_POP_DISABLE_WARNING
 #include <AzToolsFramework/UI/UICore/ProgressShield.hxx>
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
 #include <AzToolsFramework/ViewportSelection/EditorTransformComponentSelectionRequestBus.h>
-#include <AzToolsFramework/API/EditorPythonConsoleBus.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <AzToolsFramework/Entity/PrefabEditorEntityOwnershipInterface.h>
-#include <AzToolsFramework/PythonTerminal/ScriptHelpDialog.h>
 #include <AzToolsFramework/Viewport/LocalViewBookmarkLoader.h>
 
 // AzQtComponents
@@ -125,7 +124,6 @@ AZ_POP_DISABLE_WARNING
 
 #include "Util/AutoDirectoryRestoreFileDialog.h"
 #include "Util/EditorAutoLevelLoadTest.h"
-#include <AzToolsFramework/PythonTerminal/ScriptHelpDialog.h>
 
 #include "LevelFileDialog.h"
 #include "LevelIndependentFileMan.h"
@@ -387,14 +385,10 @@ public:
     bool m_bConsoleMode = false;
     bool m_bNullRenderer = false;
     bool m_bDeveloperMode = false;
-    bool m_bRunPythonScript = false;
-    bool m_bRunPythonTestScript = false;
     bool m_bShowVersionInfo = false;
     QString m_strFileName;
     QString m_appRoot;
     QString m_logFile;
-    QString m_pythonArgs;
-    QString m_pythonTestCase;
     QString m_execFile;
     QString m_execLineCmd;
 
@@ -424,8 +418,6 @@ public:
             { "BatchMode", m_bConsoleMode },
             { "NullRenderer", m_bNullRenderer },
             { "devmode", m_bDeveloperMode },
-            { "runpython", m_bRunPythonScript },
-            { "runpythontest", m_bRunPythonTestScript },
             { "version", m_bShowVersionInfo },
             { "NSDocumentRevisionsDebugMode", nsDocumentRevisionsDebugMode},
             { "skipWelcomeScreenDialog", m_bSkipWelcomeScreenDialog},
@@ -438,8 +430,6 @@ public:
         QString dummyString;
         const std::vector<std::pair<CommandLineStringOption, QString&> > stringOptions = {
             {{"logfile", "File name of the log file to write out to.", "logfile"}, m_logFile},
-            {{"runpythonargs", "Command-line argument string to pass to the python script if --runpython or --runpythontest was used.", "runpythonargs"}, m_pythonArgs},
-            {{"pythontestcase", "Test case name of python test script if --runpythontest was used.", "pythontestcase"}, m_pythonTestCase},
             {{"exec", "cfg file to run on startup, used for systems like automation", "exec"}, m_execFile},
             {{"rhi", "Command-line argument to force which rhi to use", "rhi"}, dummyString },
             {{"rhi-device-validation", "Command-line argument to configure rhi validation", "rhi-device-validation"}, dummyString },
@@ -839,8 +829,6 @@ void CCryEditApp::InitFromCommandLine(CEditCommandLineInfo& cmdInfo)
     m_bTestMode |= cmdInfo.m_bTest;
 
     m_bSkipWelcomeScreenDialog = cmdInfo.m_bSkipWelcomeScreenDialog || !cmdInfo.m_execFile.isEmpty() || !cmdInfo.m_execLineCmd.isEmpty() || cmdInfo.m_bAutotestMode;
-    m_bRunPythonTestScript = cmdInfo.m_bRunPythonTestScript;
-    m_bRunPythonScript = cmdInfo.m_bRunPythonScript || cmdInfo.m_bRunPythonTestScript;
     m_execFile = cmdInfo.m_execFile;
     m_execLineCmd = cmdInfo.m_execLineCmd;
     m_bAutotestMode = cmdInfo.m_bAutotestMode || cmdInfo.m_bConsoleMode;
@@ -848,7 +836,7 @@ void CCryEditApp::InitFromCommandLine(CEditCommandLineInfo& cmdInfo)
     // Do we have a passed filename ?
     if (!cmdInfo.m_strFileName.isEmpty())
     {
-        if (!m_bRunPythonScript && IsPreviewableFileType(cmdInfo.m_strFileName.toUtf8().constData()))
+        if (IsPreviewableFileType(cmdInfo.m_strFileName.toUtf8().constData()))
         {
             m_bPreviewMode = true;
             azstrncpy(m_sPreviewFile, _MAX_PATH, cmdInfo.m_strFileName.toUtf8().constData(), _MAX_PATH);
@@ -1037,7 +1025,6 @@ void CCryEditApp::InitLevel(const CEditCommandLineInfo& cmdInfo)
         QString levelName;
         bool isLevelNameValid = false;
         bool doLevelNeedLoading = true;
-        const bool runningPythonScript = cmdInfo.m_bRunPythonScript || cmdInfo.m_bRunPythonTestScript;
 
         AZ::EBusLogicalResult<bool, AZStd::logical_or<bool> > skipStartupUIProcess(false);
         AzToolsFramework::EditorEvents::Bus::BroadcastResult(
@@ -1050,7 +1037,6 @@ void CCryEditApp::InitLevel(const CEditCommandLineInfo& cmdInfo)
                 isLevelNameValid = false;
                 doLevelNeedLoading = true;
                 if (gSettings.bShowDashboardAtStartup
-                    && !runningPythonScript
                     && !m_bConsoleMode
                     && !m_bSkipWelcomeScreenDialog
                     && !m_bPreviewMode
@@ -1254,249 +1240,6 @@ bool CCryEditApp::ConnectToAssetProcessor() const
     return false;
 }
 
-//! This handles the normal logging of Python output in the Editor by outputting
-//! the data to both the Editor Console and the Editor.log file
-struct CCryEditApp::PythonOutputHandler
-    : public AzToolsFramework::EditorPythonConsoleNotificationBus::Handler
-{
-    PythonOutputHandler()
-    {
-        AzToolsFramework::EditorPythonConsoleNotificationBus::Handler::BusConnect();
-    }
-
-    ~PythonOutputHandler() override
-    {
-        AzToolsFramework::EditorPythonConsoleNotificationBus::Handler::BusDisconnect();
-    }
-
-    int GetOrder() override
-    {
-        return 0;
-    }
-
-    void OnTraceMessage([[maybe_unused]] AZStd::string_view message) override
-    {
-        AZ_TracePrintf("python_test", "%.*s", static_cast<int>(message.size()), message.data());
-    }
-
-    void OnErrorMessage([[maybe_unused]] AZStd::string_view message) override
-    {
-        AZ_Error("python_test", false, "%.*s", static_cast<int>(message.size()), message.data());
-    }
-
-    void OnExceptionMessage([[maybe_unused]] AZStd::string_view message) override
-    {
-        AZ_Error("python_test", false, "EXCEPTION: %.*s", static_cast<int>(message.size()), message.data());
-    }
-};
-
-//! Outputs Python test script print() to stdout
-//! If an exception happens in a Python test script, the process terminates
-struct PythonTestOutputHandler final
-    : public CCryEditApp::PythonOutputHandler
-{
-    PythonTestOutputHandler() = default;
-    ~PythonTestOutputHandler() override = default;
-
-    void OnTraceMessage(AZStd::string_view message) override
-    {
-        PythonOutputHandler::OnTraceMessage(message);
-        printf("%.*s\n", static_cast<int>(message.size()), message.data());
-    }
-
-    void OnErrorMessage(AZStd::string_view message) override
-    {
-        PythonOutputHandler::OnErrorMessage(message);
-        printf("ERROR: %.*s\n", static_cast<int>(message.size()), message.data());
-    }
-
-    void OnExceptionMessage(AZStd::string_view message) override
-    {
-        PythonOutputHandler::OnExceptionMessage(message);
-        printf("EXCEPTION: %.*s\n", static_cast<int>(message.size()), message.data());
-    }
-};
-
-void CCryEditApp::RunInitPythonScript(CEditCommandLineInfo& cmdInfo)
-{
-    if (cmdInfo.m_bRunPythonTestScript)
-    {
-        m_pythonOutputHandler = AZStd::make_shared<PythonTestOutputHandler>();
-    }
-    else
-    {
-        m_pythonOutputHandler = AZStd::make_shared<PythonOutputHandler>();
-    }
-
-    using namespace AzToolsFramework;
-    if (cmdInfo.m_bRunPythonScript || cmdInfo.m_bRunPythonTestScript)
-    {
-        // Separates the compound string of semicolon separated values into a vector of values
-        const auto extractSeparatedValues = [](const AZStd::string& compoundValues)
-        {
-            AZStd::vector<AZStd::string_view> values;
-            AZ::StringFunc::TokenizeVisitor(
-                compoundValues.c_str(),
-                [&values](AZStd::string_view elem)
-                {
-                    values.push_back(elem);
-                },
-                ';',
-                false /* keepEmptyStrings */
-            );
-
-            return values;
-        };
-
-        // Reads the contents of the specified file and returns a string of said contents
-        const auto readFileContents = [](const AZStd::string& path) -> AZStd::string
-        {
-            const auto fileSize = AZ::IO::SystemFile::Length(path.c_str());
-            if (fileSize == 0)
-            {
-                return "";
-            }
-
-            AZStd::vector<char> buffer(fileSize + 1);
-            buffer[fileSize] = '\0';
-            if (!AZ::IO::SystemFile::Read(path.c_str(), buffer.data()))
-            {
-                return "";
-            }
-
-            return AZStd::string(buffer.begin(), buffer.end());
-        };
-
-        // We support specifying multiple files in the cmdline by separating them with ';'
-        // If a semicolon list of .py files is provided we look at the arg string
-        AZStd::string scriptFileStr;
-        if (cmdInfo.m_strFileName.endsWith(".py"))
-        {
-            // cmdInfo data is only available on startup, copy it
-            scriptFileStr = cmdInfo.m_strFileName.toUtf8().constData();
-        }
-        else if (cmdInfo.m_strFileName.endsWith(".txt"))
-        {
-            // Otherwise, we look to see if we can read the file for test modules
-            // The file is expected to contain a single semicolon separated string of Editor pytest modules
-            if (scriptFileStr = readFileContents(cmdInfo.m_strFileName.toUtf8().data()); scriptFileStr.empty())
-            {
-                AZ_Error(
-                    "RunInitPythonScript",
-                    false, "Failed to read the file containing a semi colon separated list of python modules");
-                return;
-            }
-        }
-        else
-        {
-            AZ_Error("RunInitPythonScript", false, "Failed to read Python files from --runpythontest arg. "
-                "Expects a semi colon separated list of python modules or a file containing a semi colon separated list of python modules");
-            return;
-        }
-
-        // Extract the discrete python script files
-        const auto fileList = extractSeparatedValues(scriptFileStr);
-
-        if (cmdInfo.m_pythonArgs.length() > 0 || cmdInfo.m_bRunPythonTestScript)
-        {
-            QByteArray pythonArgsStr = cmdInfo.m_pythonArgs.toUtf8();
-            AZStd::vector<AZStd::string_view> pythonArgs;
-            AZ::StringFunc::TokenizeVisitor(pythonArgsStr.constData(),
-                [&pythonArgs](AZStd::string_view elem)
-                {
-                    pythonArgs.push_back(elem);
-                }, ' '
-            );
-
-            if (cmdInfo.m_bRunPythonTestScript)
-            {
-                // We support specifying multiple test case names in the cmdline by separating them
-                // with ';', either in a text file or as a string
-                AZStd::string testCaseStr;
-                if (cmdInfo.m_pythonTestCase.endsWith(".txt"))
-                {
-                    // A path to the file containing the test case names has been provided as the argument
-                    if (testCaseStr = readFileContents(cmdInfo.m_pythonTestCase.toUtf8().data()); testCaseStr.empty())
-                    {
-                        AZ_Error(
-                            "RunInitPythonScript",
-                            false,
-                            "Failed to read Python files from --pythontestcase arg. "
-                            "Expects a semi colon separated list of python test case names or a file containing a semi colon separated list of "
-                            "python test case names");
-                        return;
-                    }
-                }
-                else
-                {
-                    // Test case names have been passed as the argument
-                    testCaseStr = cmdInfo.m_pythonTestCase.toUtf8().data();
-                }
-
-                // Extract the discrete python test case names
-                const auto testCaseList = extractSeparatedValues(testCaseStr);
-
-                // The number of python script files must match the number of test case names for the test case names
-                // to properly correlate with their invoking scripts
-                if (fileList.size() != testCaseList.size())
-                {
-                    AZ_Error(
-                        "RunInitPythonScript",
-                        false,
-                        "The number of supplied test scripts (%zu) did not match the number of supplied test case names (%zu)",
-                        fileList.size(), testCaseList.size());
-                    return;
-                }
-
-                bool success = true;
-                auto ExecuteByFilenamesTests = [&pythonArgs, &fileList, &testCaseList, &success](EditorPythonRunnerRequests* pythonRunnerRequests)
-                {
-                    for (int i = 0; i < fileList.size(); ++i)
-                    {
-                        bool cur_success = pythonRunnerRequests->ExecuteByFilenameAsTest(fileList[i], testCaseList[i], pythonArgs);
-                        success = success && cur_success;
-                    }
-                };
-                EditorPythonRunnerRequestBus::Broadcast(ExecuteByFilenamesTests);
-
-                if (success)
-                {
-                    // Close the editor gracefully as the test has completed
-                    GetIEditor()->GetDocument()->SetModifiedFlag(false);
-                    QTimer::singleShot(0, qApp, &QApplication::closeAllWindows);
-                }
-                else
-                {
-                    // Close down the application with 0xF exit code indicating failure of the test
-                    AZ::Debug::Trace::Terminate(0xF);
-                }
-            }
-            else
-            {
-                auto ExecuteByFilenamesWithArgs = [&pythonArgs, &fileList](EditorPythonRunnerRequests* pythonRunnerRequests)
-                {
-                    for (AZStd::string_view filename : fileList)
-                    {
-                        pythonRunnerRequests->ExecuteByFilenameWithArgs(filename, pythonArgs);
-                    }
-                };
-                EditorPythonRunnerRequestBus::Broadcast(ExecuteByFilenamesWithArgs);
-            }
-        }
-        else
-        {
-            auto ExecuteByFilenames = [&fileList](EditorPythonRunnerRequests* pythonRunnerRequests)
-            {
-                for (AZStd::string_view filename : fileList)
-                {
-                    pythonRunnerRequests->ExecuteByFilename(filename);
-                }
-            };
-            EditorPythonRunnerRequestBus::Broadcast(ExecuteByFilenames);
-        }
-    }
-}
-
 /////////////////////////////////////////////////////////////////////////////
 // CCryEditApp initialization
 bool CCryEditApp::InitInstance()
@@ -1654,19 +1397,6 @@ bool CCryEditApp::InitInstance()
     SetEditorWindowTitle(nullptr, AZ::Utils::GetProjectDisplayName().c_str(), nullptr);
     m_pEditor->InitFinished();
 
-    CCryEditApp::OutputStartupMessage(QString("Activating Python..."));
-
-    // Make sure Python is started before we attempt to restore the Editor layout, since the user
-    // might have custom view panes in the saved layout that will need to be registered.
-    auto editorPythonEventsInterface = AZ::Interface<AzToolsFramework::EditorPythonEventsInterface>::Get();
-    if (editorPythonEventsInterface)
-    {
-        editorPythonEventsInterface->StartPython();
-    }
-
-    CCryEditApp::OutputStartupMessage(QString("")); // add a blank line so that python is not blamed for anything that happens here
-
-
     if (!GetIEditor()->IsInConsolewMode())
     {
         bool restoreDefaults = !mainWindowWrapper->restoreGeometryFromSettings();
@@ -1723,8 +1453,6 @@ bool CCryEditApp::InitInstance()
         [[maybe_unused]] bool ok = GetIEditor()->GetCommandManager()->GetUIInfo("editor.open_lnm_editor", uiInfo);
         assert(ok);
     }
-
-    RunInitPythonScript(cmdInfo);
 
     return true;
 }
@@ -2149,7 +1877,7 @@ int CCryEditApp::IdleProcessing(bool bBackgroundUpdate)
     int res = 0;
     if (bIsAppWindow || m_bForceProcessIdle || m_bKeepEditorActive
         // Automated tests must always keep the editor active, or they can get stuck
-        || m_bAutotestMode || m_bRunPythonTestScript)
+        || m_bAutotestMode)
     {
         res = 1;
         bActive = true;
@@ -2378,33 +2106,70 @@ void CCryEditApp::OnPreferences()
 
 void CCryEditApp::OnOpenProjectManagerSettings()
 {
-    OpenProjectManager("UpdateProject");
-}
-
-void CCryEditApp::OnOpenProjectManagerNew()
-{
-    OpenProjectManager("CreateProject");
+    QtViewPaneManager::instance()->OpenPane(LyViewPane::ProjectSettingsTool);
 }
 
 void CCryEditApp::OnOpenProjectManager()
 {
-    OpenProjectManager("Projects");
-}
-
-void CCryEditApp::OpenProjectManager(const AZStd::string& screen)
-{
-    // provide the current project path for in case we want to update the project
-    AZ::IO::FixedMaxPathString projectPath = AZ::Utils::GetProjectPath();
-
-    const AZStd::vector<AZStd::string> commandLineOptions {
-        "--screen", screen,
-        "--project-path", AZStd::string::format(R"("%s")", projectPath.c_str()) };
-
-    bool launchSuccess = AzFramework::ProjectManager::LaunchProjectManager(commandLineOptions);
-    if (!launchSuccess)
+    const QString selectedFile = QFileDialog::getOpenFileName(
+        AzToolsFramework::GetActiveWindow(), QObject::tr("Open Project"),
+        QString::fromUtf8(AZ::Utils::GetProjectPath().c_str()), QObject::tr("Project (project.json)"));
+    if (selectedFile.isEmpty())
     {
-        QMessageBox::critical(AzToolsFramework::GetActiveWindow(), QObject::tr("Failed to launch O3DE Project Manager"), QObject::tr("Failed to find or start the O3dE Project Manager"));
+        return;
     }
+
+    const QFileInfo projectFile(selectedFile);
+    const QByteArray projectFilePath = projectFile.absoluteFilePath().toUtf8();
+    auto projectJson = AZ::JsonSerializationUtils::ReadJsonFile(projectFilePath.constData());
+    if (!projectFile.isFile() || projectFile.fileName() != "project.json" || !projectJson.IsSuccess()
+        || !projectJson.GetValue().IsObject() || !projectJson.GetValue().HasMember("project_name")
+        || !projectJson.GetValue()["project_name"].IsString()
+        || projectJson.GetValue()["project_name"].GetStringLength() == 0)
+    {
+        QMessageBox::critical(AzToolsFramework::GetActiveWindow(), QObject::tr("Invalid Project"),
+            QObject::tr("Select an existing project.json with a valid project_name."));
+        return;
+    }
+
+    const QString projectPath = projectFile.absolutePath();
+    const QString executablePath = QCoreApplication::applicationFilePath();
+    const QString enginePath = QString::fromUtf8(AZ::Utils::GetEnginePath().c_str());
+    // ProcessLauncher invokes the executable directly. Its string arguments use Windows-style quotes.
+    for (const auto& path : { projectPath, executablePath, enginePath })
+    {
+        if (path.contains('"') || path.contains('\r') || path.contains('\n'))
+        {
+            QMessageBox::critical(AzToolsFramework::GetActiveWindow(), QObject::tr("Invalid Project Path"),
+                QObject::tr("The selected path cannot be passed to the Editor."));
+            return;
+        }
+    }
+    if (!QFileInfo(executablePath).isFile())
+    {
+        QMessageBox::critical(AzToolsFramework::GetActiveWindow(), QObject::tr("Editor Not Found"),
+            QObject::tr("The current Editor executable could not be found."));
+        return;
+    }
+    if (GetIEditor()->GetDocument() && !GetIEditor()->GetDocument()->SaveModified())
+    {
+        return;
+    }
+
+    AzFramework::ProcessLauncher::ProcessLaunchInfo processLaunchInfo;
+    processLaunchInfo.m_processExecutableString = executablePath.toUtf8().constData();
+    processLaunchInfo.m_commandlineParameters = AZStd::string::format(
+        R"("%s" --project-path "%s" --engine-path "%s")",
+        executablePath.toUtf8().constData(), projectPath.toUtf8().constData(), enginePath.toUtf8().constData());
+    processLaunchInfo.m_workingDirectory = projectPath.toUtf8().constData();
+    if (!AzFramework::ProcessLauncher::LaunchUnwatchedProcess(processLaunchInfo))
+    {
+        QMessageBox::critical(AzToolsFramework::GetActiveWindow(), QObject::tr("Failed to Open Project"),
+            QObject::tr("The Editor could not be started for the selected project."));
+        return;
+    }
+
+    QTimer::singleShot(0, MainWindow::instance(), &MainWindow::close);
 }
 
 
@@ -2797,27 +2562,6 @@ bool CCryEditApp::CreateLevel(bool& wasCreateLevelOperationCancelled)
 }
 
 //////////////////////////////////////////////////////////////////////////
-void CCryEditApp::OnNewComponent()
-{
-    AZ::IO::FixedMaxPath enginePath = AZ::Utils::GetEnginePath();
-    AZ::IO::FixedMaxPath projectPath = AZ::Utils::GetProjectPath();
-    AZ::IO::FixedMaxPath scriptPath = enginePath / "Tools" / "ClassCreationWizard" / "ClassWizard.py";
-
-    if (!AZ::IO::SystemFile::Exists(scriptPath.c_str()))
-    {
-        AZ_Error("ClassWizard", false, "ClassWizard.py script not found at: %s", scriptPath.c_str());
-        return;
-    }
-
-    AZStd::vector<AZStd::string_view> scriptArgs = { "--engine-path", enginePath.c_str(), "--project-path", projectPath.c_str() };
-
-    AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-        &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs,
-        AZStd::string_view(scriptPath.c_str()),
-        scriptArgs);
-}
-
-//////////////////////////////////////////////////////////////////////////
 void CCryEditApp::OnOpenLevel()
 {
     CLevelFileDialog levelFileDialog(true);
@@ -2953,12 +2697,6 @@ void CCryEditApp::OnToolsLogMemoryUsage()
 void CCryEditApp::OnCustomizeKeyboard()
 {
     MainWindow::instance()->OnCustomizeToolbar();
-}
-
-//////////////////////////////////////////////////////////////////////////
-void CCryEditApp::OnToolsScriptHelp()
-{
-    AzToolsFramework::CScriptHelpDialog::GetInstance()->show();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -3482,7 +3220,7 @@ extern "C" int AZ_DLL_EXPORT CryEditMain(int argc, char* argv[])
     const bool is_automated_test = AZStd::any_of(qArgs.begin(), qArgs.end(),
         [](const QString& elem)
         {
-            return elem.endsWith("autotest_mode") || elem.endsWith("runpythontest");
+            return elem.endsWith("autotest_mode");
         }
     );
 

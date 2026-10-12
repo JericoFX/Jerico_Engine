@@ -1,0 +1,18 @@
+{
+  "startedUtc": "2026-10-12T07:20:24.4257203Z",
+  "finishedUtc": "2026-10-12T07:20:30.1881415Z",
+  "pid": 298756,
+  "exitCode": 0,
+  "elapsedSeconds": 5.754,
+  "arguments": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "-R",
+    "^(Legacy::EditorLib.Tests.main::TEST_RUN|Gem::ShaderManagementConsole.VariantGenerator.Tests.main::TEST_RUN)$",
+    "--output-on-failure"
+  ],
+  "stdoutSha256": "FC2946E22E941459A343E8D4FDB67FC8ED3BB86DD343484CD3CDEFAD60A90AA9",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

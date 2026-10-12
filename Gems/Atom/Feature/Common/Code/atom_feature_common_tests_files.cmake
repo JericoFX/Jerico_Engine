@@ -10,6 +10,8 @@ set(FILES
     Mocks/MockMeshFeatureProcessor.h
     Tests/CommonTest.cpp
     Tests/FrameCaptureOutputTests.cpp
+    Tests/HDRColorGradingSettingsTests.cpp
+    Tests/LutGenerationCaptureTests.cpp
     Tests/LookModificationSettingsTests.cpp
     Tests/CoreLights/ShadowmapAtlasTest.cpp
     Tests/IndexedDataVectorTests.cpp

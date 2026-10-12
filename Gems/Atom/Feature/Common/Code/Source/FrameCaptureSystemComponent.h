@@ -56,6 +56,8 @@ namespace AZ
                 const AZStd::string& slotName,
                 RPI::PassAttachmentReadbackOption option) override;
 
+            bool CancelPendingCapture(FrameCaptureId captureId) override;
+
             // FrameCaptureTestRequestBus overrides ...
             void SetScreenshotFolder(const AZStd::string& screenshotFolder) override;
             void SetTestEnvPath(const AZStd::string& envPath) override;
@@ -83,6 +85,7 @@ namespace AZ
                 CaptureState(CaptureState&& rhs);
                 void Reset();
                 AZStd::shared_ptr<AZ::RPI::AttachmentReadback> m_readback;
+                RPI::Ptr<RPI::Pass> m_pendingReadbackPass;
                 AZStd::string m_outputFilePath;
 
                 AZStd::atomic<FrameCaptureResult> m_result = FrameCaptureResult::None; // use atomic as this is written and read on different threads.

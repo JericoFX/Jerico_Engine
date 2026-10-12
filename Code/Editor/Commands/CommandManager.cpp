@@ -11,14 +11,6 @@
 
 #include "CommandManager.h"
 
-#include <AzToolsFramework/PythonTerminal/ScriptTermDialog.h>
-
-// Editor
-#include "QtViewPaneManager.h"
-
-// AzToolsFramework
-#include <AzToolsFramework/PythonTerminal/ScriptTermDialog.h>
-
 CAutoRegisterCommandHelper* CAutoRegisterCommandHelper::s_pFirst = nullptr;
 CAutoRegisterCommandHelper* CAutoRegisterCommandHelper::s_pLast = nullptr;
 
@@ -440,58 +432,6 @@ void CEditorCommandManager::LogCommand(const AZStd::string& fullCmdName, const C
     }
 
     CLogFile::WriteLine(cmdLine.c_str());
-
-    if (IsCommandAvailableInScripting(fullCmdName) == false)
-    {
-        return;
-    }
-
-    /// If this same command is also available in the script system,
-    /// log this to the script terminal, too.
-
-    // First, recreate a command line to be compatible to the script system.
-    cmdLine = fullCmdName;
-    cmdLine += "(";
-
-    for (int i = 0; i < args.GetArgCount(); ++i)
-    {
-        bool bString = args.IsStringArg(i);
-
-        if (bString)
-        {
-            cmdLine += "\"";
-        }
-
-        cmdLine += args.GetArg(i);
-
-        if (bString)
-        {
-            cmdLine += "\"";
-        }
-
-        if (i < args.GetArgCount() - 1)
-        {
-            cmdLine += ",";
-        }
-    }
-
-    cmdLine += ")";
-
-    // Then, register it to the terminal.
-    QtViewPane* scriptTermPane = QtViewPaneManager::instance()->GetPane(SCRIPT_TERM_WINDOW_NAME);
-    if (!scriptTermPane)
-    {
-        return;
-    }
-    AzToolsFramework::CScriptTermDialog* pScriptTermDialog = qobject_cast<AzToolsFramework::CScriptTermDialog*>(scriptTermPane->Widget());
-
-    if (pScriptTermDialog)
-    {
-        AZStd::string text = "> ";
-        text += cmdLine;
-        text += "\r\n";
-        pScriptTermDialog->AppendText(text.c_str());
-    }
 }
 
 QString CEditorCommandManager::ExecuteAndLogReturn(CCommand* pCommand, const CCommand::CArgs& args)

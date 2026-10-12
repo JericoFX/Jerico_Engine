@@ -160,7 +160,6 @@ ly_add_target(
     RUNTIME_DEPENDENCIES
         Legacy::CrySystem
         Legacy::EditorLib
-        ProjectManager
 )
 
 ly_set_gem_variant_to_load(TARGETS Editor VARIANTS Tools)

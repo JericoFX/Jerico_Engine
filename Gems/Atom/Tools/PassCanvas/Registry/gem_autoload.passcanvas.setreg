@@ -296,13 +296,6 @@
                         "AutoLoad": false
                     }
                 }
-            },
-            "PythonAssetBuilder": {
-                "Targets": {
-                    "PythonAssetBuilder.Editor": {
-                        "AutoLoad": false
-                    }
-                }
             }
         }
     }

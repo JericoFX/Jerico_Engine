@@ -128,8 +128,8 @@ namespace EditorPythonBindingsUnitTests
         EXPECT_TRUE(behaviorContext->m_methods.find("is_in_game_mode") != behaviorContext->m_methods.end());
         EXPECT_TRUE(behaviorContext->m_methods.find("exit_game_mode") != behaviorContext->m_methods.end());
 
-        EXPECT_TRUE(behaviorContext->m_methods.find("run_file") != behaviorContext->m_methods.end());
-        EXPECT_TRUE(behaviorContext->m_methods.find("run_file_parameters") != behaviorContext->m_methods.end());
+        EXPECT_TRUE(behaviorContext->m_methods.find("run_file") == behaviorContext->m_methods.end());
+        EXPECT_TRUE(behaviorContext->m_methods.find("run_file_parameters") == behaviorContext->m_methods.end());
         EXPECT_TRUE(behaviorContext->m_methods.find("execute_command") != behaviorContext->m_methods.end());
 
         EXPECT_TRUE(behaviorContext->m_methods.find("message_box") != behaviorContext->m_methods.end());
@@ -163,25 +163,28 @@ namespace EditorPythonBindingsUnitTests
         AZ::BehaviorContext* behaviorContext = m_app.GetBehaviorContext();
         ASSERT_TRUE(behaviorContext);
 
+        AzToolsFramework::PythonEditorComponent::Reflect(behaviorContext);
+
         auto itPythonEditorBus = behaviorContext->m_ebuses.find("PythonEditorBus");
+        ASSERT_NE(itPythonEditorBus, behaviorContext->m_ebuses.end());
         if (itPythonEditorBus != behaviorContext->m_ebuses.end())
         {
             AZ::BehaviorEBus* behaviorBus = itPythonEditorBus->second;
+            ASSERT_NE(behaviorBus, nullptr);
             EXPECT_TRUE(behaviorBus->m_events.find("GetCVar") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("SetCVar") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("SetCVarFromString") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("SetCVarFromInteger") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("SetCVarFromFloat") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("PyRunConsole") != behaviorBus->m_events.end());
+            EXPECT_TRUE(behaviorBus->m_events.find("RunConsole") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("EnterGameMode") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("IsInGameMode") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("ExitGameMode") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("EnterSimulationMode") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("IsInSimulationMode") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("ExitSimulationMode") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("RunLua") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("RunFile") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("RunFileParameters") != behaviorBus->m_events.end());
+            EXPECT_TRUE(behaviorBus->m_events.find("RunFile") == behaviorBus->m_events.end());
+            EXPECT_TRUE(behaviorBus->m_events.find("RunFileParameters") == behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("ExecuteCommand") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("MessageBoxOkCancel") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("MessageBoxYesNo") != behaviorBus->m_events.end());
@@ -197,11 +200,6 @@ namespace EditorPythonBindingsUnitTests
             EXPECT_TRUE(behaviorBus->m_events.find("Redo") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("DrawLabel") != behaviorBus->m_events.end());
             EXPECT_TRUE(behaviorBus->m_events.find("ComboBox") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("SetHidemaskAll") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("SetHidemaskNone") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("SetHidemaskInvert") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("SetHidemask") != behaviorBus->m_events.end());
-            EXPECT_TRUE(behaviorBus->m_events.find("GetHidemask") != behaviorBus->m_events.end());
         }
     }
 

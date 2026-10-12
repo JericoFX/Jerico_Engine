@@ -9,6 +9,7 @@
 #pragma once
 
 #include <PostProcessing/HDRColorGradingPass.h>
+#include <Atom/Feature/ColorGrading/LutGenerationCaptureBus.h>
 #include <Atom/RPI.Public/Shader/Shader.h>
 #include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
 #include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
@@ -43,6 +44,9 @@ namespace AZ
         private:
             // Set viewport scissor based on output LUT resolution
             void SetViewportScissorFromImageSize(const RHI::Size& imageSize);
+
+            JE::ColorGrading::LutGenerationCaptureMetadata m_frameEncoding;
+            bool m_frameEncodingValid = false;
 
             RHI::ShaderInputNameIndex m_lutResolutionIndex = "m_lutResolution";
             RHI::ShaderInputNameIndex m_lutShaperTypeIndex = "m_shaperType";

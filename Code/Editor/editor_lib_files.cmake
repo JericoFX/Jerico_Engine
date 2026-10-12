@@ -455,9 +455,6 @@ set(FILES
     NewLevelDialog.h
     NewLevelDialog.ui
     NewLevelDialog.qrc
-    Dialogs/PythonScriptsDialog.cpp
-    Dialogs/PythonScriptsDialog.h
-    Dialogs/PythonScriptsDialog.ui
     Dialogs/Generic/UserOptions.cpp
     Dialogs/Generic/UserOptions.h
     EditorFileMonitor.cpp

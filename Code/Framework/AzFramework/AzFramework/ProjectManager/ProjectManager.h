@@ -21,6 +21,10 @@ namespace AzFramework::ProjectManager
         ProjectPathFound = 1
     };
 
+    //! Resolve the project path using the command line and native settings registry.
+    //! Does not launch the Project Manager.
+    AZF_API AZ::IO::FixedMaxPath FindProjectPath(const int argc, char* argv[]);
+
     //! Check for a project name, if not found, attempts to launch project manager and returns false
     //! @param argc the number of arguments in argv
     //! @param argv arguments provided to this executable

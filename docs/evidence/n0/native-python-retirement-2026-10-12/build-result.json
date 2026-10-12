@@ -1,0 +1,24 @@
+{
+  "startedUtc": "2026-10-12T07:18:13.5357144Z",
+  "finishedUtc": "2026-10-12T07:19:53.0002340Z",
+  "pid": 185964,
+  "exitCode": 0,
+  "elapsedSeconds": 99.454,
+  "arguments": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "Editor",
+    "ShaderManagementConsole",
+    "EditorLib.Tests",
+    "ShaderManagementConsole.VariantGenerator.Tests",
+    "Atom_Feature_Common.Tests",
+    "CommonFeaturesAtom.Editor.Tests",
+    "--parallel",
+    "6"
+  ],
+  "stdoutSha256": "2FF9164EDC0EFA4915A49EBC70606E84D114F5E02AFA1AB2166D9C1983667640",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

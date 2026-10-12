@@ -9,8 +9,10 @@
 #pragma once
 
 #include <AzCore/Component/TickBus.h>
+#include <AzCore/std/smart_ptr/shared_ptr.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
 #include <Atom/Feature/Utils/FrameCaptureBus.h>
+#include <Atom/Feature/ColorGrading/LutGenerationCaptureBus.h>
 #include <PostProcess/ColorGrading/HDRColorGradingComponent.h>
 #include <AtomLyIntegration/CommonFeatures/PostProcess/ColorGrading/EditorHDRColorGradingBus.h>
 
@@ -18,16 +20,14 @@ namespace AZ
 {
     namespace Render
     {
-        static constexpr const char* const TempTiffFilePath{ "@usercache@/LutGeneration/SavedLut_%s.tiff" };
         static constexpr const char* const GeneratedLutRelativePath = { "LutGeneration/SavedLut_%s" };
-        static constexpr const char* const TiffToAzassetPythonScriptPath{ "@gemroot:Atom_Feature_Common@/Editor/Scripts/ColorGrading/tiff_to_3dl_azasset.py" };
-        static constexpr const char* const ActivateLutAssetPythonScriptPath{ "@gemroot:Atom_Feature_Common@/Editor/Scripts/ColorGrading/activate_lut_asset.py" };
 
         class EditorHDRColorGradingComponent final
             : public AzToolsFramework::Components::
                   EditorComponentAdapter<HDRColorGradingComponentController, HDRColorGradingComponent, HDRColorGradingComponentConfig>
             , private TickBus::Handler
             , private FrameCaptureNotificationBus::Handler
+            , private JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler
             , private EditorHDRColorGradingRequestBus::Handler
         {
         public:
@@ -52,6 +52,8 @@ namespace AZ
             // FrameCaptureNotificationBus overrides ...
             void OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info) override;
 
+            void OnLutGenerationCapture(const JE::ColorGrading::LutGenerationCaptureMetadata& metadata) override;
+
             //! EditorHDRColorGradingRequestBus overrides...
             void GenerateLutAsync() override;
             void ActivateLutAsync() override;
@@ -61,11 +63,19 @@ namespace AZ
 
             bool GetGeneratedLutVisibilitySettings();
 
-            bool m_waitOneFrame = false;
-            AZStd::string m_currentTiffFilePath;
-            AZStd::string m_currentLutFilePath;
+            void CancelOperation();
+            void FailOperation(const AZStd::string& error);
+            bool BeginAssetWait(const AZStd::string& absolutePath, bool activate);
+
+            struct LutOperation;
+            AZStd::shared_ptr<LutOperation> m_operation;
 
             AZStd::string m_generatedLutAbsolutePath;
+            // Encoding belongs to the generated source, independent of later HDR configuration edits.
+            bool m_generatedLutMetadataValid = false;
+            ShaperPresetType m_generatedLutShaper = ShaperPresetType::None;
+            float m_generatedLutMinimumExposure = 0.0f;
+            float m_generatedLutMaximumExposure = 0.0f;
         };
     } // namespace Render
 } // namespace AZ

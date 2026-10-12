@@ -568,6 +568,7 @@ namespace AZ
                 return AZ::Failure(error);
             }
 
+            captureState->m_pendingReadbackPass = pass;
             m_inProgressCaptures.push_back(captureHandle);
 
             FrameCaptureId frameId = captureHandle.GetCaptureStateIndex();
@@ -609,6 +610,51 @@ namespace AZ
             return InternalCapturePassAttachment("", captureCallback, passHierarchy, slotName, option);
         }
 
+        bool FrameCaptureSystemComponent::CancelPendingCapture(FrameCaptureId captureId)
+        {
+            if (captureId == InvalidFrameCaptureId)
+            {
+                return false;
+            }
+
+            for (CaptureHandle captureHandle : m_inProgressCaptures)
+            {
+                if (captureHandle.GetCaptureStateIndex() != captureId)
+                {
+                    continue;
+                }
+
+                AZStd::scoped_lock<CaptureHandle> scope_lock(captureHandle);
+                CaptureState* capture = captureHandle.GetCaptureState();
+                if (!capture || !capture->m_pendingReadbackPass ||
+                    !capture->m_pendingReadbackPass->CancelPendingReadback(capture->m_readback))
+                {
+                    return false;
+                }
+
+                // The pass still held this reservation, so no readback scopes were submitted.
+                // Never reset a readback or replace its callback after the pass has submitted it.
+                capture->m_readback->SetCallback({});
+                capture->m_readback->Reset();
+                capture->Reset();
+
+                // CaptureHandle contains const members; preserve queue order without assigning handles.
+                const size_t pendingCount = m_inProgressCaptures.size();
+                for (size_t index = 0; index < pendingCount; ++index)
+                {
+                    CaptureHandle remaining(m_inProgressCaptures.front());
+                    m_inProgressCaptures.pop_front();
+                    if (remaining.GetCaptureStateIndex() != captureId)
+                    {
+                        m_inProgressCaptures.push_back(remaining);
+                    }
+                }
+                m_idleCaptures.push_back(captureHandle);
+                return true;
+            }
+            return false;
+        }
+
         void FrameCaptureSystemComponent::OnSystemTick()
         {
             // inProgressCaptures is in capture submit order, loop over the captures until we find an unfinished one.
@@ -628,6 +674,7 @@ namespace AZ
                 {
                     break;
                 }
+                capture->m_pendingReadbackPass = nullptr;
                 FrameCaptureNotificationBus::Event(captureHandle.GetCaptureStateIndex(), &FrameCaptureNotificationBus::Events::OnFrameCaptureFinished, capture->m_result, capture->m_latestCaptureInfo.c_str());
                 m_inProgressCaptures.pop_front();
                 m_idleCaptures.push_back(captureHandle);
@@ -810,6 +857,7 @@ namespace AZ
 
         FrameCaptureSystemComponent::CaptureState::CaptureState(CaptureState&& other)
         : m_readback(AZStd::move(other.m_readback))
+        , m_pendingReadbackPass(AZStd::move(other.m_pendingReadbackPass))
         , m_outputFilePath(AZStd::move(other.m_outputFilePath))
         , m_latestCaptureInfo(AZStd::move(other.m_latestCaptureInfo))
 
@@ -825,6 +873,7 @@ namespace AZ
         void FrameCaptureSystemComponent::CaptureState::Reset()
         {
             //m_readback->Reset();
+            m_pendingReadbackPass = nullptr;
             m_outputFilePath.clear();
             m_latestCaptureInfo.clear();
             m_result = FrameCaptureResult::None;

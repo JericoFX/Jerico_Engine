@@ -31,6 +31,15 @@ namespace AZ
             if (GetEnabled())
             {
                 target->m_enabled = m_enabled;
+                // Keep the generation tuple coherent at the existing discrete blend threshold.
+                if (alpha >= 0.5f)
+                {
+                    target->SetGenerateLut(GetGenerateLut());
+                    target->SetLutResolution(GetLutResolution());
+                    target->SetShaperPresetType(GetShaperPresetType());
+                    target->SetCustomMinExposure(GetCustomMinExposure());
+                    target->SetCustomMaxExposure(GetCustomMaxExposure());
+                }
                 
 #define AZ_GFX_BOOL_PARAM(NAME, MEMBER_NAME, DefaultValue) ;
 #define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue) ;

@@ -90,6 +90,10 @@ namespace AZ
                 const AZStd::vector<AZStd::string>& passHierarchy,
                 const AZStd::string& slotName,
                 RPI::PassAttachmentReadbackOption option) = 0;
+            //! Cancels only a pass attachment capture whose readback is still reserved by its pass.
+            //! Call on the main thread. A successful cancellation emits no callback or completion notification.
+            //! Returns false for an invalid/inactive id or an already submitted capture; its GPU work is left untouched.
+            virtual bool CancelPendingCapture(FrameCaptureId captureId) = 0;
         };
         using FrameCaptureRequestBus = EBus<FrameCaptureRequests>;
 

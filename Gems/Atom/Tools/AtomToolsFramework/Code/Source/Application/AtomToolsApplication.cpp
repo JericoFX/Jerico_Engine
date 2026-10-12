@@ -20,8 +20,6 @@
 #include <AzFramework/IO/LocalFileIO.h>
 #include <AzFramework/Network/AssetProcessorConnection.h>
 #include <AzFramework/StringFunc/StringFunc.h>
-#include <AzToolsFramework/API/EditorPythonConsoleBus.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 #include <AzToolsFramework/ActionManager/ActionManagerSystemComponent.h>
 #include <AzToolsFramework/Asset/AssetSystemComponent.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserComponent.h>
@@ -77,7 +75,6 @@ namespace AtomToolsFramework
         m_instance = {};
         m_styleManager.reset();
         AzToolsFramework::AssetDatabase::AssetDatabaseRequestsBus::Handler::BusDisconnect();
-        AzToolsFramework::EditorPythonConsoleNotificationBus::Handler::BusDisconnect();
     }
 
     void AtomToolsApplication::CreateReflectionManager()
@@ -107,7 +104,7 @@ namespace AtomToolsFramework
 
         if (auto behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context))
         {
-            // This will put these methods into the 'azlmbr.atomtools.general' module
+            // Group native automation methods in the general reflection module
             auto addGeneral = [](AZ::BehaviorContext::GlobalMethodBuilder methodBuilder)
             {
                 methodBuilder->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Automation)
@@ -116,16 +113,16 @@ namespace AtomToolsFramework
             };
 
             addGeneral(behaviorContext->Method(
-                "idle_wait_frames", &AtomToolsApplication::PyIdleWaitFrames, nullptr,
+                "idle_wait_frames", &AtomToolsApplication::IdleWaitFrames, nullptr,
                 "Waits idling for a frames. Primarily used for auto-testing."));
             addGeneral(behaviorContext->Method(
-                "exit", &AtomToolsApplication::PyExit, nullptr,
+                "exit", &AtomToolsApplication::ExitApplication, nullptr,
                 "Exit application. Primarily used for auto-testing."));
             addGeneral(behaviorContext->Method(
-                "crash", &AtomToolsApplication::PyCrash, nullptr,
+                "crash", &AtomToolsApplication::CrashApplication, nullptr,
                 "Crashes the application, useful for testing crash reporting and other automation tools."));
             addGeneral(behaviorContext->Method(
-                "test_output", &AtomToolsApplication::PyTestOutput, nullptr,
+                "test_output", &AtomToolsApplication::TestOutput, nullptr,
                 "Report test information."));
         }
     }
@@ -169,8 +166,6 @@ namespace AtomToolsFramework
 
     void AtomToolsApplication::StartCommon(AZ::Entity* systemEntity)
     {
-        AzToolsFramework::EditorPythonConsoleNotificationBus::Handler::BusConnect();
-
         Base::StartCommon(systemEntity);
 
         // Before serializing data to the log file, determine if it should be cleared first.
@@ -208,18 +203,9 @@ namespace AtomToolsFramework
 
         m_assetBrowserInteractions.reset(aznew AtomToolsFramework::AtomToolsAssetBrowserInteractions);
 
-        auto editorPythonEventsInterface = AZ::Interface<AzToolsFramework::EditorPythonEventsInterface>::Get();
-        if (editorPythonEventsInterface)
-        {
-            // The PythonSystemComponent does not call StartPython to allow for lazy python initialization, so start it here
-            // The PythonSystemComponent will call StopPython when it deactivates, so we do not need our own corresponding call to
-            // StopPython
-            editorPythonEventsInterface->StartPython();
-        }
-
         // Handle command line options for setting up a test environment that should not be affected forwarding commands from other
         // instances of an application
-        if (m_commandLine.HasSwitch("autotest_mode") || m_commandLine.HasSwitch("runpythontest"))
+        if (m_commandLine.HasSwitch("autotest_mode"))
         {
             // Nullroute all stdout to null for automated tests, this way we make sure
             // that the test result output is not polluted with unrelated output data.
@@ -266,7 +252,6 @@ namespace AtomToolsFramework
         // Handler for serializing legacy user settings
         UnloadSettings();
 
-        AzToolsFramework::EditorPythonConsoleNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::AssetDatabase::AssetDatabaseRequestsBus::Handler::BusDisconnect();
         AzFramework::AssetSystemRequestBus::Broadcast(&AzFramework::AssetSystem::AssetSystemRequests::StartDisconnectingAssetProcessor);
 
@@ -454,83 +439,7 @@ namespace AtomToolsFramework
             });
         }
 
-        // Process command line options for running one or more python scripts on startup
-        const size_t pythonScriptCount = commandLine.GetNumSwitchValues("runpython");
-        AZStd::vector<AZStd::string_view> pythonScripts;
-        pythonScripts.reserve(pythonScriptCount);
-        for (size_t pythonScriptIndex = 0; pythonScriptIndex < pythonScriptCount; ++pythonScriptIndex)
-        {
-            pythonScripts.push_back(commandLine.GetSwitchValue("runpython", pythonScriptIndex));
-        }
-
-        const size_t pythonTestScriptCount = commandLine.GetNumSwitchValues("runpythontest");
-        AZStd::vector<AZStd::string_view> pythonTestScripts;
-        pythonTestScripts.reserve(pythonTestScriptCount);
-        for (size_t pythonTestScriptIndex = 0; pythonTestScriptIndex < pythonTestScriptCount; ++pythonTestScriptIndex)
-        {
-            pythonTestScripts.push_back(commandLine.GetSwitchValue("runpythontest", pythonTestScriptIndex));
-        }
-
-        const char* pythonArgSwitchName = "runpythonargs";
-        const size_t pythonArgCount = commandLine.GetNumSwitchValues(pythonArgSwitchName);
-        AZStd::vector<AZStd::string_view> pythonArgs;
-        pythonArgs.reserve(pythonArgCount);
-        for (size_t pythonArgIndex = 0; pythonArgIndex < pythonArgCount; ++pythonArgIndex)
-        {
-            pythonArgs.push_back(commandLine.GetSwitchValue(pythonArgSwitchName, pythonArgIndex));
-        }
-
-        const char* pythonTestCaseSwitchName = "runpythontestcase";
-        const size_t pythonTestCaseCount = commandLine.GetNumSwitchValues(pythonTestCaseSwitchName);
-        AZStd::vector<AZStd::string_view> pythonTestCases;
-        pythonTestCases.reserve(pythonTestCaseCount);
-        for (size_t pythonTestCaseIndex = 0; pythonTestCaseIndex < pythonTestCaseCount; ++pythonTestCaseIndex)
-        {
-            pythonTestCases.push_back(commandLine.GetSwitchValue(pythonTestCaseSwitchName, pythonTestCaseIndex));
-        }
-
-        // The number of test case strings must be identical to the number of test scripts even if they are empty
-        pythonTestCases.resize(pythonTestScripts.size());
-
-        if (!pythonTestScripts.empty())
-        {
-            bool success = true;
-            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                [&](AzToolsFramework::EditorPythonRunnerRequests* pythonRunnerRequests)
-                {
-                    for (int i = 0; i < pythonTestScripts.size(); ++i)
-                    {
-                        bool cur_success =
-                            pythonRunnerRequests->ExecuteByFilenameAsTest(pythonTestScripts[i], pythonTestCases[i], pythonArgs);
-                        success = success && cur_success;
-                    }
-                });
-
-            if (success)
-            {
-                AzFramework::ApplicationRequests::Bus::Broadcast(&AzFramework::ApplicationRequests::ExitMainLoop);
-            }
-            else
-            {
-                // Close down the application with 0xF exit code indicating failure of the test
-                AZ::Debug::Trace::Terminate(0xF);
-            }
-        }
-
-        if (!pythonScripts.empty())
-        {
-            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                [&](AzToolsFramework::EditorPythonRunnerRequests* pythonRunnerRequests)
-                {
-                    for (const auto& filename : pythonScripts)
-                    {
-                        pythonRunnerRequests->ExecuteByFilenameWithArgs(filename, pythonArgs);
-                    }
-                });
-        }
-
         if (commandLine.HasSwitch("autotest_mode") ||
-            commandLine.HasSwitch("runpythontest") ||
             commandLine.HasSwitch("exitaftercommands"))
         {
             AzFramework::ApplicationRequests::Bus::Broadcast(&AzFramework::ApplicationRequests::ExitMainLoop);
@@ -631,35 +540,7 @@ namespace AtomToolsFramework
         appType.m_maskValue = AZ::ApplicationTypeQuery::Masks::Tool;
     }
 
-    void AtomToolsApplication::OnTraceMessage([[maybe_unused]] AZStd::string_view message)
-    {
-#if defined(AZ_ENABLE_TRACING)
-        AZStd::vector<AZStd::string> lines;
-        AzFramework::StringFunc::Tokenize(
-            message, lines, "\n",
-            false, // Keep empty strings
-            false // Keep space strings
-        );
-
-        for (auto& line : lines)
-        {
-            AZ_TracePrintf(m_targetName.c_str(), "Python: %s\n", line.c_str());
-        }
-#endif
-    }
-
-    void AtomToolsApplication::OnErrorMessage(AZStd::string_view message)
-    {
-        // Use AZ_TracePrintf instead of AZ_Error or AZ_Warning to avoid all the metadata noise
-        OnTraceMessage(message);
-    }
-
-    void AtomToolsApplication::OnExceptionMessage([[maybe_unused]] AZStd::string_view message)
-    {
-        AZ_Error(m_targetName.c_str(), false, "Python: " AZ_STRING_FORMAT, AZ_STRING_ARG(message));
-    }
-
-    void AtomToolsApplication::PyIdleWaitFrames(uint32_t frames)
+    void AtomToolsApplication::IdleWaitFrames(uint32_t frames)
     {
         // Create a child event loop that takes control of updating the application for a set number of frames.
         // When executed from a script, this continues to update the application but allows the script to pause until the number of frames
@@ -687,17 +568,17 @@ namespace AtomToolsFramework
         loop.exec();
     }
 
-    void AtomToolsApplication::PyExit()
+    void AtomToolsApplication::ExitApplication()
     {
         AzFramework::ApplicationRequests::Bus::Broadcast(&AzFramework::ApplicationRequests::ExitMainLoop);
     }
 
-    void AtomToolsApplication::PyCrash()
+    void AtomToolsApplication::CrashApplication()
     {
         AZ_Crash();
     }
 
-    void AtomToolsApplication::PyTestOutput(const AZStd::string& output)
+    void AtomToolsApplication::TestOutput(const AZStd::string& output)
     {
         AtomToolsApplication::GetInstance()->PrintAlways(output);
     }

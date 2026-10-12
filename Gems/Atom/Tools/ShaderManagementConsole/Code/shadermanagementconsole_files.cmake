@@ -7,6 +7,8 @@
 #
 
 set(FILES
+    Source/Data/ShaderVariantListGenerator.cpp
+    Source/Data/ShaderVariantListGenerator.h
     Source/Data/ShaderVariantStatisticData.cpp
     Source/Data/ShaderVariantStatisticData.h
     

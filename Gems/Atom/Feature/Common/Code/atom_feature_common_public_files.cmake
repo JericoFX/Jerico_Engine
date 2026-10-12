@@ -13,6 +13,9 @@ set(FILES
     Include/Atom/Feature/Automation/AtomAutomationBus.h
     Include/Atom/Feature/Base.h
     Include/Atom/Feature/ColorGrading/LutResolution.h
+    Include/Atom/Feature/ColorGrading/LutGenerationCaptureBus.h
+    Include/Atom/Feature/LookupTable/LookupTableAsset.h
+    Source/LookupTable/LookupTableAsset.cpp
     Include/Atom/Feature/CoreLights/CapsuleLightFeatureProcessorInterface.h
     Include/Atom/Feature/CoreLights/CoreLightsConstants.h
     Include/Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h

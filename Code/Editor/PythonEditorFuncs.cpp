@@ -20,7 +20,6 @@
 
 // AzToolsFramework
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 #include <AzToolsFramework/Entity/EditorEntityContextBus.h>
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
 
@@ -212,109 +211,6 @@ namespace
     void PyRunConsole(const char* text)
     {
         GetIEditor()->GetSystem()->GetIConsole()->ExecuteString(text);
-    }
-
-    //////////////////////////////////////////////////////////////////////////
-    bool GetPythonScriptPath(const char* pFile, QString& path)
-    {
-        bool bRelativePath = true;
-        AZStd::string drive;
-        AZStd::string dir;
-        AZStd::string filename;
-        AZStd::string ext;
-
-        [[maybe_unused]] bool ret =
-            AZ::StringFunc::Path::Split(pFile,
-                                        &drive,    /* AZStd::string* pDstDriveOut */
-                                        &dir,      /* AZStd::string* pDstFolderPathOut */
-                                        &filename, /* AZStd::string* pDstNameOut */
-                                        &ext       /* AZStd::string* pDstExtensionOut */
-                                        );
-        AZ_Assert(ret, "Failed to split file path: %s", pFile);
-
-        if (drive.length() != 0)
-        {
-            bRelativePath = false;
-        }
-
-        if (bRelativePath)
-        {
-            // Try to open from user folder
-            QString userSandboxFolder = Path::GetResolvedUserSandboxFolder();
-            Path::ConvertBackSlashToSlash(userSandboxFolder);
-            path = userSandboxFolder + pFile;
-
-            // If not found try editor folder
-            if (!CFileUtil::FileExists(path))
-            {
-                AZ::IO::FixedMaxPathString engineRoot = AZ::Utils::GetEnginePath();
-                QDir engineDir = !engineRoot.empty() ? QDir(QString(engineRoot.c_str())) : QDir::current();
-
-                QString scriptFolder = engineDir.absoluteFilePath("Assets/Editor/Scripts/");
-                Path::ConvertBackSlashToSlash(scriptFolder);
-                path = scriptFolder + pFile;
-
-                if (!CFileUtil::FileExists(path))
-                {
-                    QString error = QString("Could not find '%1'\n in '%2'\n or '%3'\n").arg(pFile).arg(userSandboxFolder).arg(scriptFolder);
-                    AZ_Warning("python", false, error.toUtf8().data());
-                    return false;
-                }
-            }
-        }
-        else
-        {
-            path = pFile;
-            if (!CFileUtil::FileExists(path))
-            {
-                QString error = QString("Could not find '") + pFile + "'\n";
-                AZ_Warning("python", false, error.toUtf8().data());
-                return false;
-            }
-        }
-
-        Path::ConvertBackSlashToSlash(path);
-        return true;
-    }
-
-    //////////////////////////////////////////////////////////////////////////
-    void GetPythonArgumentsVector(const char* pArguments, QStringList& inputArguments)
-    {
-        if (pArguments == nullptr)
-        {
-            return;
-        }
-
-        inputArguments = QString(pArguments).split(" ", Qt::SkipEmptyParts);
-    }
-
-    //////////////////////////////////////////////////////////////////////////
-    void PyRunFileWithParameters(const char* pFile, const char* pArguments)
-    {
-        QString path;
-        QStringList inputArguments;
-        GetPythonArgumentsVector(pArguments, inputArguments);
-        if (GetPythonScriptPath(pFile, path))
-        {
-            AZStd::vector<AZStd::string_view> argList;
-            argList.reserve(inputArguments.size() + 1);
-            QByteArray p = path.toUtf8();
-
-            QVector<QByteArray> argData;
-            argData.reserve(inputArguments.count());
-            for (auto iter = inputArguments.begin(); iter != inputArguments.end(); ++iter)
-            {
-                argData.push_back(iter->toLatin1());
-                argList.push_back(argData.last().data());
-            }
-            using namespace AzToolsFramework;
-            EditorPythonRunnerRequestBus::Broadcast(&AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs, p.data(), argList);
-        }
-    }
-
-    void PyRunFile(const char* pFile)
-    {
-        PyRunFileWithParameters(pFile, nullptr);
     }
 
     //////////////////////////////////////////////////////////////////////////
@@ -907,8 +803,6 @@ namespace AzToolsFramework
                 ->Event("EnterSimulationMode", &EditorLayerPythonRequestBus::Events::EnterSimulationMode)
                 ->Event("IsInSimulationMode", &EditorLayerPythonRequestBus::Events::IsInSimulationMode)
                 ->Event("ExitSimulationMode", &EditorLayerPythonRequestBus::Events::ExitSimulationMode)
-                ->Event("RunFile", &EditorLayerPythonRequestBus::Events::RunFile)
-                ->Event("RunFileParameters", &EditorLayerPythonRequestBus::Events::RunFileParameters)
                 ->Event("ExecuteCommand", &EditorLayerPythonRequestBus::Events::ExecuteCommand)
                 ->Event("MessageBoxOkCancel", &EditorLayerPythonRequestBus::Events::MessageBoxOkCancel)
                 ->Event("MessageBoxYesNo", &EditorLayerPythonRequestBus::Events::MessageBoxYesNo)
@@ -996,16 +890,6 @@ namespace AzToolsFramework
     void PythonEditorComponent::ExitSimulationMode()
     {
         return PyExitSimulationMode();
-    }
-
-    void PythonEditorComponent::RunFile(const char *pFile)
-    {
-        return PyRunFile(pFile);
-    }
-
-    void PythonEditorComponent::RunFileParameters(const char* pFile, const char* pArguments)
-    {
-        return PyRunFileWithParameters(pFile, pArguments);
     }
 
     void PythonEditorComponent::ExecuteCommand(const char* cmdline)
@@ -1112,8 +996,6 @@ namespace AzToolsFramework
             addLegacyGeneral(behaviorContext->Method("enter_simulation_mode", PyEnterSimulationMode, nullptr, "Enters the editor AI/Physics simulation mode."));
             addLegacyGeneral(behaviorContext->Method("is_in_simulation_mode", PyIsInSimulationMode, nullptr, "Queries if the editor is currently in the AI/Physics simulation mode or not."));
             addLegacyGeneral(behaviorContext->Method("exit_simulation_mode", PyExitSimulationMode, nullptr, "Exits the editor AI/Physics simulation mode."));
-            addLegacyGeneral(behaviorContext->Method("run_file", PyRunFile, nullptr, "Runs a script file. A relative path from the editor user folder or an absolute path should be given as an argument."));
-            addLegacyGeneral(behaviorContext->Method("run_file_parameters", PyRunFileWithParameters, nullptr, "Runs a script file with parameters. A relative path from the editor user folder or an absolute path should be given as an argument. The arguments should be separated by whitespace."));
             addLegacyGeneral(behaviorContext->Method("execute_command", PyExecuteCommand, nullptr, "Executes a given string as an editor command."));
 
             addLegacyGeneral(behaviorContext->Method("message_box", PyMessageBox, nullptr, "Shows a confirmation message box with ok|cancel and shows a custom message."));

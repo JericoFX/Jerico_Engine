@@ -16,7 +16,6 @@
 #include <QMessageBox>
 
 // AzToolsFramework
-#include <AzToolsFramework/API/EditorPythonConsoleBus.h>
 
 // AzQtComponents
 #include <AzQtComponents/Components/Widgets/TabWidget.h>
@@ -31,7 +30,6 @@
 
 namespace
 {
-    QColor COLOR_FOR_EDITOR_COMMAND = QColor(0, 255, 0);
     QColor COLOR_FOR_CONSOLE_COMMAND = QColor(0, 0, 255);
     QColor COLOR_FOR_TOGGLE_COMMAND = QColor(128, 0, 255);
     QColor COLOR_FOR_INVALID_COMMAND = QColor(255, 0, 0);
@@ -232,7 +230,7 @@ public:
             switch (command->m_type)
             {
             case CToolBoxCommand::eT_SCRIPT_COMMAND:
-                return QVariant::fromValue(COLOR_FOR_EDITOR_COMMAND);
+                return QVariant::fromValue(COLOR_FOR_INVALID_COMMAND);
             case CToolBoxCommand::eT_CONSOLE_COMMAND:
                 return command->m_bVariableToggle ? QVariant::fromValue(COLOR_FOR_TOGGLE_COMMAND) : QVariant::fromValue(COLOR_FOR_CONSOLE_COMMAND);
             default:
@@ -505,7 +503,6 @@ void CToolsConfigPage::OnInitDialog()
     connect(m_ui->m_selectIcon, &QPushButton::clicked, this, &CToolsConfigPage::OnSelectMacroIcon);
     connect(m_ui->m_clearIcon, &QPushButton::clicked, this, &CToolsConfigPage::OnClearMacroIcon);
     connect(m_ui->m_console, &QRadioButton::clicked, this, &CToolsConfigPage::OnConsoleCmd);
-    connect(m_ui->m_script, &QRadioButton::clicked, this, &CToolsConfigPage::OnScriptCmd);
 
     connect(m_ui->m_macroList->selectionModel(), &QItemSelectionModel::currentChanged, this, &CToolsConfigPage::OnSelchangeMacroList);
     connect(m_ui->m_buttonMacroNew, &QToolButton::clicked, this, &CToolsConfigPage::OnNewMacroItem);
@@ -519,7 +516,6 @@ void CToolsConfigPage::OnInitDialog()
     connect(m_ui->m_buttonCommandDown, &QToolButton::clicked, this, &CToolsConfigPage::OnMoveCommandItemDown);
     connect(m_ui->m_buttonCommandDelete, &QToolButton::clicked, this, &CToolsConfigPage::OnDeleteCommandItem);
 
-    m_consoleOrScript = 1;  // To force the change in the next line
     OnConsoleCmd();
 
     // To ensure the proper disabling of controls
@@ -580,6 +576,8 @@ void CToolsConfigPage::OnNewMacroItem()
 void CToolsConfigPage::OnSelchangeCommandList()
 {
     auto commandIndex = m_ui->m_commandList->currentIndex();
+    m_ui->m_macroCmd->setReadOnly(false);
+    m_ui->m_macroCmd->setToolTip({});
 
     if (!commandIndex.isValid())
     {
@@ -589,19 +587,21 @@ void CToolsConfigPage::OnSelchangeCommandList()
         m_ui->m_toggleVar->setEnabled(false);
         m_ui->m_toggleVar->setChecked(false);
         m_ui->m_console->setEnabled(false);
-        m_ui->m_script->setEnabled(false);
     }
     else
     {
         m_ui->m_assignCommand->setEnabled(true);
         m_ui->m_macroCmd->setEnabled(true);
         m_ui->m_console->setEnabled(true);
-        m_ui->m_script->setEnabled(true);
         CToolBoxCommand* pCommand = commandIndex.data(Qt::UserRole).value<CToolBoxCommand*>();
         if (pCommand->m_type == CToolBoxCommand::eT_SCRIPT_COMMAND)
         {
             m_ui->m_macroCmd->setText(pCommand->m_text);
-            OnScriptCmd();
+            m_ui->m_macroCmd->setReadOnly(true);
+            m_ui->m_macroCmd->setToolTip(tr("Legacy Python commands are unsupported. Delete this command to replace it with a native console command."));
+            m_ui->m_assignCommand->setEnabled(false);
+            m_ui->m_console->setEnabled(false);
+            m_ui->m_toggleVar->setEnabled(false);
         }
         else if (pCommand->m_type == CToolBoxCommand::eT_CONSOLE_COMMAND)
         {
@@ -636,17 +636,13 @@ void CToolsConfigPage::OnAssignCommand()
     if (commandIndex.isValid())
     {
         CToolBoxCommand* pCommand = commandIndex.data(Qt::UserRole).value<CToolBoxCommand*>();
-        pCommand->m_type = m_consoleOrScript ? CToolBoxCommand::eT_SCRIPT_COMMAND
-            : CToolBoxCommand::eT_CONSOLE_COMMAND;
+        if (pCommand->m_type == CToolBoxCommand::eT_SCRIPT_COMMAND)
+        {
+            return;
+        }
+        pCommand->m_type = CToolBoxCommand::eT_CONSOLE_COMMAND;
         pCommand->m_text = m_ui->m_macroCmd->text();
-        if (pCommand->m_type == CToolBoxCommand::eT_CONSOLE_COMMAND)
-        {
-            pCommand->m_bVariableToggle = m_ui->m_toggleVar->isChecked();
-        }
-        else
-        {
-            pCommand->m_bVariableToggle = false;
-        }
+        pCommand->m_bVariableToggle = m_ui->m_toggleVar->isChecked();
 
         m_commandModel->setData(commandIndex, QVariant::fromValue(pCommand), Qt::UserRole);
     }
@@ -746,55 +742,11 @@ void CToolsConfigPage::FillConsoleCmds()
 }
 
 //////////////////////////////////////////////////////////////////////////
-void CToolsConfigPage::FillScriptCmds()
-{
-    // Add module names to the auto-completion list.
-    QStringList commands;
-
-    using namespace AzToolsFramework;
-    EditorPythonConsoleInterface* editorPythonConsoleInterface = AZ::Interface<EditorPythonConsoleInterface>::Get();
-    if (editorPythonConsoleInterface)
-    {
-        EditorPythonConsoleInterface::GlobalFunctionCollection globalFunctionCollection;
-        editorPythonConsoleInterface->GetGlobalFunctionList(globalFunctionCollection);
-        commands.reserve(static_cast<int>(globalFunctionCollection.size()));
-        for (const EditorPythonConsoleInterface::GlobalFunction& globalFunction : globalFunctionCollection)
-        {
-            const QString fullCmd = QString("%1.%2()").arg(globalFunction.m_moduleName.data()).arg(globalFunction.m_functionName.data());
-            commands.push_back(fullCmd);
-        }
-    }
-
-    m_completionModel->setStringList(commands);
-}
-
-//////////////////////////////////////////////////////////////////////////
 void CToolsConfigPage::OnConsoleCmd()
 {
     m_ui->m_console->setChecked(true);
-    if (m_consoleOrScript == 0)
-    {
-        return;
-    }
-
-    m_consoleOrScript = 0;
     FillConsoleCmds();
     m_ui->m_toggleVar->setEnabled(true);
-    m_ui->m_toggleVar->setChecked(false);
-}
-
-//////////////////////////////////////////////////////////////////////////
-void CToolsConfigPage::OnScriptCmd()
-{
-    m_ui->m_script->setChecked(true);
-    if (m_consoleOrScript == 1)
-    {
-        return;
-    }
-
-    m_consoleOrScript = 1;
-    FillScriptCmds();
-    m_ui->m_toggleVar->setEnabled(false);
     m_ui->m_toggleVar->setChecked(false);
 }
 

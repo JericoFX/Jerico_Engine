@@ -289,6 +289,10 @@ namespace AZ
             bool ReadbackAttachment(AZStd::shared_ptr<AttachmentReadback> readback, uint32_t readbackIndex, const Name& slotName
                 , PassAttachmentReadbackOption option = PassAttachmentReadbackOption::Output, const RHI::ImageSubresourceRange* mipsRange = nullptr);
 
+            //! Releases only the pending reservation matching expectedReadback, before it is submitted to the frame graph.
+            //! Must be called on the main thread. Returns false without changing an already submitted or different readback.
+            bool CancelPendingReadback(const AZStd::shared_ptr<AttachmentReadback>& expectedReadback);
+
             //! Returns whether the Timestamp queries is enabled/disabled for this pass
             bool IsTimestampQueryEnabled() const { return m_flags.m_timestampQueryEnabled; }
 

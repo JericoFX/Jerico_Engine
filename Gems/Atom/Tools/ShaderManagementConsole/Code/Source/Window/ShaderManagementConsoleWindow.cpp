@@ -9,14 +9,18 @@
 #include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
 #include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
 #include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <Atom/RPI.Edit/Common/JsonUtils.h>
 #include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <AtomToolsFramework/Debug/TraceRecorder.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <AtomToolsFramework/Util/Util.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
 #include <AzCore/Utils/Utils.h>
 
 #include <Data/ShaderVariantStatisticData.h>
+#include <Data/ShaderVariantListGenerator.h>
 #include <Document/ShaderManagementConsoleDocumentRequestBus.h>
 #include <Window/ShaderManagementConsoleWindow.h>
 #include <Window/ShaderManagementConsoleStatisticView.h>
@@ -29,6 +33,11 @@
 #include <QWindow>
 #include <QMessageBox>
 #include <QMenuBar>
+#include <QCoreApplication>
+#include <QFileInfo>
+#include <QScopedValueRollback>
+#include <AzCore/std/algorithm.h>
+#include <limits>
 
 namespace ShaderManagementConsole
 {
@@ -151,6 +160,10 @@ namespace ShaderManagementConsole
     {
         Base::CreateMenus(menuBar);
 
+        QAction* generateAction = new QAction(tr("Generate Shader Variant List..."), m_menuFile);
+        QObject::connect(generateAction, &QAction::triggered, this, &ShaderManagementConsoleWindow::GenerateShaderVariantList);
+        m_menuFile->insertAction(m_menuFile->actions().back(), generateAction);
+
         QAction* verifyAction = new QAction(tr("Verify Variantlist invariants"), m_menuFile);
         QObject::connect(verifyAction, &QAction::triggered, this, [this](){
             DocumentVerificationResult verification;
@@ -187,6 +200,239 @@ namespace ShaderManagementConsole
         QAction* action = new QAction(tr("Generate Shader Variant Statistics..."), m_menuFile);
         QObject::connect(action, &QAction::triggered, this, &ShaderManagementConsoleWindow::GenerateStatisticView);
         m_menuFile->insertAction(m_menuFile->actions().back(), action);
+    }
+
+    void ShaderManagementConsoleWindow::GenerateShaderVariantList()
+    {
+        if (m_generationInProgress)
+        {
+            return;
+        }
+        QScopedValueRollback<bool> generationGuard(m_generationInProgress, true);
+        const QString selectedPath = QFileDialog::getOpenFileName(this, tr("Select shader"), {}, tr("Shader (*.shader)"));
+        if (selectedPath.isEmpty())
+        {
+            return;
+        }
+        const QFileInfo selectedFile(selectedPath);
+        if (!selectedFile.isFile() || selectedFile.suffix() != AZ::RPI::ShaderSourceData::Extension)
+        {
+            QMessageBox::critical(this, tr("Generation failed"), tr("Select an existing .shader file."));
+            return;
+        }
+        AZStd::string shaderPath = selectedFile.absoluteFilePath().toUtf8().constData();
+        const auto fail = [this](const AZStd::string& message)
+        {
+            QMessageBox::critical(this, tr("Generation failed"), QString::fromUtf8(message.c_str()));
+        };
+        if (!AtomToolsFramework::ValidateDocumentPath(shaderPath))
+        {
+            fail("The selected shader path is not a supported editable document path.");
+            return;
+        }
+        if (!ShaderManagementConsoleRequestBus::HasHandlers())
+        {
+            fail("The shader/material asset service is unavailable.");
+            return;
+        }
+        AtomToolsFramework::TraceRecorder assetTrace;
+        AZ::Data::AssetInfo sourceInfo;
+        ShaderManagementConsoleRequestBus::BroadcastResult(
+            sourceInfo, &ShaderManagementConsoleRequestBus::Events::GetSourceAssetInfo, shaderPath);
+        const auto shader = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(shaderPath);
+        if (!sourceInfo.m_assetId.IsValid() || sourceInfo.m_relativePath.empty() || !shader.IsSuccess() ||
+            assetTrace.GetErrorCount(true) != 0)
+        {
+            fail("The selected shader must have a successfully built shader asset.\n" + assetTrace.GetDump());
+            return;
+        }
+        const auto* layout = shader.GetValue()->GetShaderOptionGroupLayout();
+        if (!layout || !layout->IsFinalized())
+        {
+            fail("The selected shader does not have a finalized option layout.");
+            return;
+        }
+
+        AZ::RPI::ShaderOptionValuesSourceData systemOptions;
+        AZ::IO::Path systemPath(shaderPath);
+        systemPath.ReplaceExtension("systemoptions");
+        if (QFileInfo(QString::fromUtf8(systemPath.c_str())).exists() &&
+            !AZ::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
+        {
+            fail("The shader's .systemoptions file could not be read.");
+            return;
+        }
+        QProgressDialog progress(tr("Validate shader options..."), tr("Cancel"), 0, 1, this);
+        progress.setWindowModality(Qt::WindowModal);
+        progress.setAutoClose(false);
+        progress.setAutoReset(false);
+        progress.setMinimumDuration(0);
+        const auto isCancelled = [&progress]
+        {
+            QCoreApplication::processEvents();
+            return progress.wasCanceled();
+        };
+        // Capture the absolute-path system-only baseline expected when the selected shader is opened.
+        const auto baseline = JE::ShaderVariants::Generate(shaderPath, *layout, {}, systemOptions, isCancelled);
+        if (!baseline.IsSuccess())
+        {
+            progress.hide();
+            if (baseline.GetError().m_reason != JE::ShaderVariants::FailureReason::Cancelled)
+            {
+                fail(baseline.GetError().m_message);
+            }
+            return;
+        }
+
+        AZStd::vector<AZ::Data::AssetId> materialIds;
+        ShaderManagementConsoleRequestBus::BroadcastResult(
+            materialIds, &ShaderManagementConsoleRequestBus::Events::FindMaterialAssetsUsingShader, sourceInfo.m_relativePath);
+        if (assetTrace.GetErrorCount(true) != 0 || materialIds.size() > static_cast<size_t>(std::numeric_limits<int>::max()))
+        {
+            progress.hide();
+            fail("Material dependencies could not be collected.\n" + assetTrace.GetDump());
+            return;
+        }
+        AZStd::sort(materialIds.begin(), materialIds.end(), [](const auto& lhs, const auto& rhs)
+        {
+            return lhs.ToFixedString() < rhs.ToFixedString();
+        });
+        materialIds.erase(AZStd::unique(materialIds.begin(), materialIds.end()), materialIds.end());
+        progress.setLabelText(tr("Gather shader variants from materials..."));
+        progress.setRange(0, AZStd::max(1, static_cast<int>(materialIds.size())));
+
+        AZStd::vector<JE::ShaderVariants::MaterialVariant> materials;
+        for (size_t index = 0; index < materialIds.size(); ++index)
+        {
+            progress.setValue(static_cast<int>(index));
+            if (isCancelled())
+            {
+                return;
+            }
+            AtomToolsFramework::TraceRecorder materialTrace;
+            AZStd::vector<AZ::RPI::ShaderCollection::Item> items;
+            ShaderManagementConsoleRequestBus::BroadcastResult(
+                items, &ShaderManagementConsoleRequestBus::Events::GetMaterialInstanceShaderItems, materialIds[index]);
+            if (materialTrace.GetErrorCount(true) != 0)
+            {
+                progress.hide();
+                fail("A dependent material could not be loaded.\n" + materialTrace.GetDump());
+                return;
+            }
+            for (const auto& item : items)
+            {
+                if (item.GetShaderAssetId() != shader.GetValue().GetId() || item.GetShaderVariantId().IsEmpty())
+                {
+                    continue;
+                }
+                JE::ShaderVariants::MaterialVariant material{item.GetShaderOptionGroup(), {}};
+                if (!material.m_options.GetShaderOptionLayout())
+                {
+                    progress.hide();
+                    fail("A dependent material has no shader option layout.");
+                    return;
+                }
+                for (const auto& descriptor : material.m_options.GetShaderOptionDescriptors())
+                {
+                    if (item.MaterialOwnsShaderOption(descriptor.GetName()))
+                    {
+                        material.m_materialOwnedOptions.insert(descriptor.GetName());
+                    }
+                }
+                materials.push_back(AZStd::move(material));
+            }
+        }
+        progress.setLabelText(tr("Expand and validate shader variants..."));
+        auto generated = JE::ShaderVariants::Generate(sourceInfo.m_relativePath, *layout, materials, systemOptions, isCancelled);
+        if (!generated.IsSuccess())
+        {
+            progress.hide();
+            if (generated.GetError().m_reason != JE::ShaderVariants::FailureReason::Cancelled)
+            {
+                fail(generated.GetError().m_message);
+            }
+            return;
+        }
+        if (isCancelled())
+        {
+            return;
+        }
+        progress.hide();
+
+        const auto matchesData = [](const AZ::RPI::ShaderVariantListSourceData& actual, const AZ::RPI::ShaderVariantListSourceData& expected)
+        {
+            if (actual.m_shaderFilePath != expected.m_shaderFilePath || actual.m_materialOptionsHint != expected.m_materialOptionsHint ||
+                actual.m_shaderVariants.size() != expected.m_shaderVariants.size())
+            {
+                return false;
+            }
+            for (size_t index = 0; index < expected.m_shaderVariants.size(); ++index)
+            {
+                const auto& actualVariant = actual.m_shaderVariants[index];
+                const auto& expectedVariant = expected.m_shaderVariants[index];
+                if (actualVariant.m_stableId != expectedVariant.m_stableId || actualVariant.m_options != expectedVariant.m_options ||
+                    actualVariant.m_enableRegisterAnalysis != expectedVariant.m_enableRegisterAnalysis || actualVariant.m_asic != expectedVariant.m_asic)
+                {
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        // Opening the shader keeps the absolute source path for existing Save/SaveAs behavior. No file is written here.
+        AtomToolsFramework::TraceRecorder documentTrace;
+        AZ::Uuid documentId;
+        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(
+            documentId, m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::CreateDocumentFromFilePath,
+            shaderPath, AZStd::string{});
+        const auto destroy = [&]
+        {
+            if (!documentId.IsNull())
+            {
+                AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
+                    m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::DestroyDocument, documentId);
+            }
+        };
+        AZ::RPI::ShaderVariantListSourceData openedBaseline;
+        if (!documentId.IsNull())
+        {
+            ShaderManagementConsoleDocumentRequestBus::EventResult(
+                openedBaseline, documentId, &ShaderManagementConsoleDocumentRequestBus::Events::GetShaderVariantListSourceData);
+        }
+        if (documentId.IsNull() || documentTrace.GetErrorCount(true) != 0 || !matchesData(openedBaseline, baseline.GetValue()))
+        {
+            destroy();
+            fail("The shader baseline changed or could not be opened. Generate the list again.\n" + documentTrace.GetDump());
+            return;
+        }
+        bool began = false;
+        if (!documentId.IsNull() && documentTrace.GetErrorCount(true) == 0)
+        {
+            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
+                began, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
+        }
+        if (!began)
+        {
+            destroy();
+            fail("The variant list document could not be created for editing.\n" + documentTrace.GetDump());
+            return;
+        }
+        ShaderManagementConsoleDocumentRequestBus::Event(
+            documentId, &ShaderManagementConsoleDocumentRequestBus::Events::SetShaderVariantListSourceData, generated.GetValue());
+        AZ::RPI::ShaderVariantListSourceData applied;
+        ShaderManagementConsoleDocumentRequestBus::EventResult(
+            applied, documentId, &ShaderManagementConsoleDocumentRequestBus::Events::GetShaderVariantListSourceData);
+        bool ended = false;
+        if (matchesData(applied, generated.GetValue()) && documentTrace.GetErrorCount(true) == 0)
+        {
+            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
+                ended, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
+        }
+        if (!ended || documentTrace.GetErrorCount(true) != 0)
+        {
+            destroy();
+            fail("The variant list edit could not be completed.\n" + documentTrace.GetDump());
+        }
     }
 
     void ShaderManagementConsoleWindow::GenerateStatisticView()

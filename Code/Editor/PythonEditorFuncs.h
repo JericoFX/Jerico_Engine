@@ -39,7 +39,7 @@ namespace AzToolsFramework
         PythonEditorComponent() = default;
         ~PythonEditorComponent() override = default;
 
-        static void Reflect(AZ::ReflectContext* context);
+        SANDBOX_API static void Reflect(AZ::ReflectContext* context);
 
         // Component...
         void Activate() override;
@@ -68,10 +68,6 @@ namespace AzToolsFramework
         bool IsInSimulationMode() override;
 
         void ExitSimulationMode() override;
-
-        void RunFile(const char* pFile) override;
-
-        void RunFileParameters(const char* pFile, const char* pArguments) override;
 
         void ExecuteCommand(const char* cmdline) override;
 

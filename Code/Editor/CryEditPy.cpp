@@ -16,12 +16,9 @@
 
 // AzCore
 #include <AzCore/Component/TickBus.h>
-#include <AzCore/Console/IConsole.h>
 #include <AzCore/Utils/Utils.h>
 
 // AzToolsFramework
-#include <AzToolsFramework/API/EditorPythonConsoleBus.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 
 // Editor
 #include "Core/QtEditorApplication.h"
@@ -38,34 +35,6 @@
 //////////////////////////////////////////////////////////////////////////
 namespace
 {
-    void PyRunFile(const AZ::ConsoleCommandContainer& args)
-    {
-        if (args.empty())
-        {
-            // We expect at least "pyRunFile" and the filename
-            AZ_Warning("editor", false, "The pyRunFile requires a file script name.");
-            return;
-        }
-        else if (args.size() == 1)
-        {
-            // If we only have "pyRunFile filename", there are no args to pass through.
-            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilename,
-                args.front().data());
-        }
-        else
-        {
-            // We have "pyRunFile filename x y z", so copy everything past filename into a new vector
-            AZStd::vector<AZStd::string_view> pythonArgs;
-            AZStd::transform(args.begin() + 1, args.end(), std::back_inserter(pythonArgs), [](auto&& value) { return value; });
-            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs,
-                args[0],
-                pythonArgs);
-        }
-    }
-    AZ_CONSOLEFREEFUNC("pyRunFile", PyRunFile, AZ::ConsoleFunctorFlags::Null, "Runs the Python script from the console.");
-
     //! We have explicitly not exposed this CloseCurrentLevel API to Python Scripting since the Editor
     //! doesn't officially support it (it doesn't exist in the File menu). It is used for cases
     //! where a level with legacy entities are unable to be converted and so the level that has

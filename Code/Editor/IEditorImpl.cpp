@@ -31,7 +31,6 @@
 
 // AzToolsFramework
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 
 // AzQtComponents
 #include <AzQtComponents/Components/Widgets/ColorPicker.h>
@@ -990,11 +989,6 @@ void CEditorImpl::NotifyExcept(EEditorNotifyEvent event, IEditorNotifyListener* 
 
         (*it++)->OnEditorNotifyEvent(event);
     }
-
-    if (event == eNotify_OnInit)
-    {
-        REGISTER_COMMAND("py", CmdPy, 0, "Execute a Python code snippet.");
-    }
 }
 // Confetti end: Leroy Sikkes
 
@@ -1052,23 +1046,6 @@ void CEditorImpl::InitFinished()
 void CEditorImpl::ReloadTemplates()
 {
     m_templateRegistry.LoadTemplates("Editor");
-}
-
-void CEditorImpl::CmdPy(IConsoleCmdArgs* pArgs)
-{
-    if (AzToolsFramework::EditorPythonRunnerRequestBus::HasHandlers())
-    {
-        // Execute the given script command.
-        QString scriptCmd = pArgs->GetCommandLine();
-
-        scriptCmd = scriptCmd.right(scriptCmd.length() - 2); // The part of the text after the 'py'
-        scriptCmd = scriptCmd.trimmed();
-        AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(&AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByString, scriptCmd.toUtf8().data(), false);
-    }
-    else
-    {
-        AZ_Warning("python", false, "EditorPythonRunnerRequestBus has no handlers");
-    }
 }
 
 // Vladimir@Conffx

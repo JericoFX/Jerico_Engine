@@ -27,7 +27,6 @@
 #include <AzFramework/FileFunc/FileFunc.h>
 #include <AzQtComponents/Components/Widgets/FileDialog.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
@@ -41,7 +40,6 @@ AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option") // disable warnin
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QListWidget>
-#include <QMenu>
 #include <QMessageBox>
 #include <QMimeData>
 #include <QProcess>
@@ -910,7 +908,7 @@ namespace AtomToolsFramework
             });
 
         // Sorting the container and removing duplicate paths to ensure uniqueness in case of nested or overlapping scan folders.
-        // This was previously done automatically with a set but using a vector for compatibility with behavior context and Python.
+        // This was previously done automatically with a set but using a vector for compatibility with behavior context.
         AZStd::sort(results.begin(), results.end());
         results.erase(AZStd::unique(results.begin(), results.end()), results.end());
         return results;
@@ -950,71 +948,11 @@ namespace AtomToolsFramework
         return scanFolders;
     }
 
-    void AddRegisteredScriptToMenu(QMenu* menu, const AZStd::string& registryKey, const AZStd::vector<AZStd::string>& arguments)
-    {
-        // Map containing vectors of script file paths organized by category
-        using ScriptsSettingsMap = AZStd::map<AZStd::string, AZStd::vector<AZStd::string>>;
-
-        // Retrieve and iterate over all of the registered script settings to add them to the menu
-        for (const auto& [scriptCategoryName, scriptPathVec] : GetSettingsObject(registryKey, ScriptsSettingsMap()))
-        {
-            // Create a parent category menu group to contain all of the individual script menu actions.
-            QMenu* scriptCategoryMenu = menu;
-            if (!scriptCategoryName.empty())
-            {
-                scriptCategoryMenu = menu->findChild<QMenu*>(scriptCategoryName.c_str());
-                if (!scriptCategoryMenu)
-                {
-                    scriptCategoryMenu = menu->addMenu(scriptCategoryName.c_str());
-                }
-            }
-
-            // Create menu actions for executing the individual scripts.
-            for (AZStd::string scriptPath : scriptPathVec)
-            {
-                // Removing the alias for the path so that we can check for its existence and add it to the menu.
-                scriptPath = GetPathWithoutAlias(scriptPath);
-                if (QFile::exists(scriptPath.c_str()))
-                {
-                    // Use the file name instead of the full path as the display name for the menu action.
-                    AZStd::string filename;
-                    AZ::StringFunc::Path::GetFullFileName(scriptPath.c_str(), filename);
-
-                    scriptCategoryMenu->addAction(filename.c_str(), [scriptPath, arguments]() {
-                        // Delay execution of the script until the next frame.
-                        AZ::SystemTickBus::QueueFunction([scriptPath, arguments]() {
-                            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                                &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs,
-                                scriptPath,
-                                AZStd::vector<AZStd::string_view>(arguments.begin(), arguments.end()));
-                        });
-                    });
-                }
-            }
-        }
-
-        // Create menu action for running arbitrary Python script.
-        menu->addAction(QObject::tr("&Run Python Script..."), [arguments]() {
-            const QString scriptPath = QFileDialog::getOpenFileName(
-                GetToolMainWindow(), QObject::tr("Run Python Script"), QString(AZ::Utils::GetProjectPath().c_str()), QString("*.py"));
-            if (!scriptPath.isEmpty())
-            {
-                // Delay execution of the script until the next frame.
-                AZ::SystemTickBus::QueueFunction([scriptPath, arguments]() {
-                    AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                        &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs,
-                        scriptPath.toUtf8().constData(),
-                        AZStd::vector<AZStd::string_view>(arguments.begin(), arguments.end()));
-                });
-            }
-        });
-    }
-
     void ReflectUtilFunctions(AZ::ReflectContext* context)
     {
         if (auto behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context))
         {
-            // This will put these methods into the 'azlmbr.atomtools.util' module
+            // Group native utility methods in the util reflection module
             auto addUtilFunc = [](AZ::BehaviorContext::GlobalMethodBuilder methodBuilder)
             {
                 methodBuilder->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Automation)

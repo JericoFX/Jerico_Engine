@@ -28,7 +28,7 @@ public:
     enum EType
     {
         eT_INVALID_COMMAND = 0,
-        eT_SCRIPT_COMMAND,
+        eT_SCRIPT_COMMAND, // Reserved serialized value for unsupported legacy Python commands.
         eT_CONSOLE_COMMAND,
     };
 

@@ -143,7 +143,6 @@ public:
     bool InitConsole();
     int IdleProcessing(bool bBackground);
     bool IsWindowInForeground();
-    void RunInitPythonScript(CEditCommandLineInfo& cmdInfo);
 
     void DisableIdleProcessing() override;
     void EnableIdleProcessing() override;
@@ -193,7 +192,6 @@ public:
     void OnFileEditEditorini();
     void OnPreferences();
     void OnOpenProjectManagerSettings();
-    void OnOpenProjectManagerNew();
     void OnOpenProjectManager();
     void OnRedo();
     void OnUpdateRedo(QAction* action);
@@ -265,10 +263,6 @@ private:
     bool m_bLevelLoadTestMode = false;
     //! Current file in preview mode.
     char m_sPreviewFile[_MAX_PATH];
-    //! True if "/runpythontest" was passed as a flag.
-    bool m_bRunPythonTestScript = false;
-    //! True if "/runpython" was passed as a flag.
-    bool m_bRunPythonScript = false;
     //! File to run on startup
     QString m_execFile;
     //! Command to run on startup
@@ -331,16 +325,10 @@ private:
     // "vscode://lumbermixalot.o3de-lua-debug/debug?projectPath=D:\GIT\o3de\AutomatedTesting&files[]=D:\GIT\o3de\AutomatedTesting\Assets\Scripts\something.lua"
     static constexpr AZStd::string_view LuaDebuggerUriRegistryKey = "/O3DE/Lua/Debugger/Uri";
 
-    struct PythonOutputHandler;
-    AZStd::shared_ptr<PythonOutputHandler> m_pythonOutputHandler;
-    friend struct PythonTestOutputHandler;
-
-    void OpenProjectManager(const AZStd::string& screen);
     void OnUpdateWireframe(QAction* action);
     void OnViewConfigureLayout();
 
     void OnCustomizeKeyboard();
-    void OnToolsScriptHelp();
     void OnViewCycle2dviewport();
     void OnDisplayGotoPosition();
     void OnFileSavelevelresources();
@@ -355,7 +343,6 @@ private:
     void OnOpenTrackView();
     void OnOpenAudioControlsEditor();
     void OnOpenUICanvasEditor();
-    void OnNewComponent();
 
     // @param files: A list of file paths, separated by '|';
     void OpenExternalLuaDebugger(AZStd::string_view luaDebuggerUri, AZStd::string_view enginePath, AZStd::string_view projectPath, const char * files);

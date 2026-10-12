@@ -1,0 +1,43 @@
+{
+  "startedUtc": "2026-10-12T07:12:22.3613339Z",
+  "endedUtc": "2026-10-12T07:12:28.2192064Z",
+  "elapsedSeconds": 5.8567463,
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "-R",
+    "^(Legacy::EditorLib[.]Tests[.]main::TEST_RUN|Gem::ShaderManagementConsole[.]VariantGenerator[.]Tests[.]main::TEST_RUN)$"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "37050DBAA38877BA510F8E41094990DF22E51356DA599D31965C1EF2C7715765",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "xml": [
+    {
+      "name": "Legacy_EditorLib.Tests.xml",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-python-publication-rev1\\attempt1\\Legacy_EditorLib.Tests.xml",
+      "sha256": "AC0E4E4DB42FC726B156CD33E594DE6920CBFC71919DD033C29B9FB5C1128BC7",
+      "bytes": 24876,
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "timestamp": "2026-10-12T04:12:22.486"
+    },
+    {
+      "name": "Gem_ShaderManagementConsole.VariantGenerator.Tests.xml",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-python-publication-rev1\\attempt1\\Gem_ShaderManagementConsole.VariantGenerator.Tests.xml",
+      "sha256": "0B583F05C2D7706A286B6DB97B6E20869FDC0597F21F3132A5DC6D5B2C1AB19D",
+      "bytes": 4678,
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "timestamp": "2026-10-12T04:12:28.200"
+    }
+  ],
+  "lastTestSha256": "14E104DD341644C2A709A24727259BD938A62C11CE9009A17C3A5BD8AE6549B2"
+}

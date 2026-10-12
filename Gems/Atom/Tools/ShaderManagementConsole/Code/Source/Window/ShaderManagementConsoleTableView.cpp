@@ -7,7 +7,6 @@
  */
 
 #include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
-#include <AtomToolsFramework/Util/Util.h>
 #include <AzCore/Name/Name.h>
 #include <AzQtComponents/Components/StyledSpinBox.h>
 #include <Window/ShaderManagementConsoleTableView.h>
@@ -89,10 +88,6 @@ namespace ShaderManagementConsole
                 AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
                     m_documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
             });
-
-        QMenu* scriptsMenu = contextMenu.addMenu(QObject::tr("Python Scripts"));
-        const AZStd::vector<AZStd::string> arguments{ m_documentId.ToString<AZStd::string>(false, true) };
-        AtomToolsFramework::AddRegisteredScriptToMenu(scriptsMenu, "/O3DE/ShaderManagementConsole/DocumentTableView/ContextMenuScripts", arguments);
 
         contextMenu.exec(mapToGlobal(pos));
     }

@@ -7,14 +7,28 @@
  */
 
 #include <PostProcess/ColorGrading/EditorHDRColorGradingComponent.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
-#include <AzToolsFramework/API/ComponentEntityObjectBus.h>
+#include <PostProcess/ColorGrading/JEEditorLutWriter.h>
+#include <PostProcess/LookModification/EditorLookModificationComponent.h>
+#include <Atom/Feature/LookupTable/LookupTableAsset.h>
+#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <AtomLyIntegration/CommonFeatures/PostProcess/LookModification/LookModificationBus.h>
+#include <AzCore/Asset/AssetManager.h>
+#include <AzCore/Asset/AssetManagerBus.h>
+#include <AzCore/IO/FileIO.h>
+#include <AzCore/IO/SystemFile.h>
+#include <AzCore/IO/Path/Path.h>
+#include <AzCore/std/chrono/chrono.h>
+#include <AzCore/std/parallel/mutex.h>
+#include <AzToolsFramework/API/ToolsApplicationAPI.h>
+#include <AzToolsFramework/Component/EditorComponentAPIBus.h>
+#include <AzToolsFramework/Entity/EditorEntityContextBus.h>
+#include <AzToolsFramework/Entity/EditorEntityHelpers.h>
 #include <AzToolsFramework/UI/PropertyEditor/PropertyEditorAPI.h>
-#include <AzCore/StringFunc/StringFunc.h>
 #include <Atom/RPI.Public/ViewportContextManager.h>
 #include <Atom/RPI.Public/RenderPipeline.h>
 #include <Atom/RPI.Public/Base.h>
 #include <AzFramework/Translation/TranslationDef.h>
+#include <cmath>
 
 namespace AZ
 {
@@ -42,6 +56,310 @@ namespace AZ
             };
         }
 
+        namespace
+        {
+            constexpr auto LutTimeout = AZStd::chrono::seconds(120);
+
+            struct LutEntityEditState
+            {
+                bool m_editorEntity = false;
+                bool m_editable = false;
+                bool m_running = false;
+                bool m_requesting = false;
+                bool m_entityExists = false;
+                int m_state = -1;
+            };
+
+            bool CanEditLutEntity(AZ::EntityId entityId, LutEntityEditState* detail = nullptr)
+            {
+                bool editorEntity = false;
+                bool editable = false;
+                bool running = false;
+                bool requesting = false;
+                AzToolsFramework::EditorEntityContextRequestBus::BroadcastResult(
+                    editorEntity, &AzToolsFramework::EditorEntityContextRequests::IsEditorEntity, entityId);
+                AzToolsFramework::EditorEntityContextRequestBus::BroadcastResult(
+                    running, &AzToolsFramework::EditorEntityContextRequests::IsEditorRunningGame);
+                AzToolsFramework::EditorEntityContextRequestBus::BroadcastResult(
+                    requesting, &AzToolsFramework::EditorEntityContextRequests::IsEditorRequestingGame);
+                AzToolsFramework::ToolsApplicationRequestBus::BroadcastResult(
+                    editable, &AzToolsFramework::ToolsApplicationRequests::IsEntityEditable, entityId);
+                const auto* entity = AzToolsFramework::GetEntityById(entityId);
+                const int state = entity ? static_cast<int>(entity->GetState()) : -1;
+                if (detail)
+                {
+                    *detail = {editorEntity, editable, running, requesting, entity != nullptr, state};
+                }
+                return editorEntity && editable && !running && !requesting && entity && state == static_cast<int>(AZ::Entity::State::Active);
+            }
+
+            AZ::Outcome<AZStd::string, AZStd::string> LutProductPath(const AZStd::string& absolutePath)
+            {
+                auto* fileIO = AZ::IO::FileIOBase::GetDirectInstance();
+                char projectRoot[AZ_MAX_PATH_LEN] = {};
+                if (!fileIO || !fileIO->ResolvePath("@projectroot@", projectRoot, AZ_MAX_PATH_LEN))
+                {
+                    return AZ::Failure(AZStd::string("The project root is unavailable."));
+                }
+                const AZ::IO::Path root = AZ::IO::Path(projectRoot).LexicallyNormal();
+                const AZ::IO::Path source = AZ::IO::Path(absolutePath).LexicallyNormal();
+                if (root.StringAsPosix().starts_with("//") || source.StringAsPosix().starts_with("//") ||
+                    !root.IsAbsolute() || !source.IsAbsolute() || !source.IsRelativeTo(root) || source.Extension() != ".azasset")
+                {
+                    return AZ::Failure(AZStd::string("The LUT source must be an absolute .azasset path inside this project."));
+                }
+                return AZ::Success(source.LexicallyRelative(root).StringAsPosix());
+            }
+
+            bool ValidLutShaper(ShaperPresetType shaper, float minimum, float maximum)
+            {
+                return static_cast<AZ::u32>(shaper) < static_cast<AZ::u32>(ShaperPresetType::NumShaperTypes) &&
+                    std::isfinite(minimum) && std::isfinite(maximum) &&
+                    ((shaper != ShaperPresetType::LinearCustomRange && shaper != ShaperPresetType::Log2CustomRange) || minimum < maximum);
+            }
+
+            bool ConvertGeneratedLutMetadata(AZ::SerializeContext& context, AZ::SerializeContext::DataElementNode& node)
+            {
+                if (node.GetVersion() < 3)
+                {
+                    // Historical LUT paths have no encoding metadata: activation must require regeneration.
+                    const int index = node.FindElement(AZ_CRC_CE("generatedLutMetadataValid"));
+                    return index >= 0 ? node.GetSubElement(index).SetData(context, false) :
+                        node.AddElementWithData(context, "generatedLutMetadataValid", false) >= 0;
+                }
+                return true;
+            }
+
+            // Composition can deactivate this HDR component. The transaction owns local snapshots,
+            // never a callback or operation belonging to the component being disabled.
+            AZ::Outcome<void, AZStd::string> ActivateLutOnEntity(
+                AZ::EntityId entityId, AZ::ComponentId hdrId, const AZ::Data::Asset<AZ::RPI::AnyAsset>& asset,
+                ShaperPresetType shaper, float minimumExposure, float maximumExposure)
+            {
+                if (!CanEditLutEntity(entityId) || !AzToolsFramework::EditorComponentAPIBus::HasHandlers() ||
+                    !ValidLutShaper(shaper, minimumExposure, maximumExposure))
+                {
+                    return AZ::Failure(AZStd::string("Activate LUT requires an editable Editor entity and component composition services."));
+                }
+                AZ::Entity::ComponentArrayType components;
+                AzToolsFramework::GetAllComponentsForEntity(entityId, components);
+                AZ::Component* hdr = nullptr;
+                EditorLookModificationComponent* look = nullptr;
+                size_t lookCount = 0;
+                for (auto* component : components)
+                {
+                    if (component->GetId() == hdrId && azrtti_cast<EditorHDRColorGradingComponent*>(component))
+                    {
+                        hdr = component;
+                    }
+                    if (auto* candidate = azrtti_cast<EditorLookModificationComponent*>(component))
+                    {
+                        look = candidate;
+                        ++lookCount;
+                    }
+                }
+                if (!hdr || lookCount > 1)
+                {
+                    return AZ::Failure(AZStd::string("The exact HDR component must exist and Look Modification must be unambiguous."));
+                }
+                const AZ::EntityComponentIdPair hdrPair(entityId, hdrId);
+                bool hdrEnabled = false;
+                AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                    hdrEnabled, &AzToolsFramework::EditorComponentAPIRequests::IsComponentEnabled, hdrPair);
+                if (!hdrEnabled)
+                {
+                    return AZ::Failure(AZStd::string("The source HDR component must be active before LUT activation."));
+                }
+                LookModificationComponentConfig previousConfig;
+                bool lookEnabled = false;
+                bool lookPending = false;
+                if (look)
+                {
+                    if (!look->GetConfiguration(previousConfig))
+                    {
+                        return AZ::Failure(AZStd::string("Could not snapshot the existing Look Modification configuration."));
+                    }
+                    AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                        lookEnabled, &AzToolsFramework::EditorComponentAPIRequests::IsComponentEnabled,
+                        AZ::EntityComponentIdPair(entityId, look->GetId()));
+                    AzToolsFramework::EditorPendingCompositionRequestBus::EventResult(
+                        lookPending, entityId, &AzToolsFramework::EditorPendingCompositionRequests::IsComponentPending, look);
+                    bool lookDisabled = false;
+                    AzToolsFramework::EditorDisabledCompositionRequestBus::EventResult(
+                        lookDisabled, entityId, &AzToolsFramework::EditorDisabledCompositionRequests::IsComponentDisabled, look);
+                    if (!lookEnabled && !lookPending && !lookDisabled)
+                    {
+                        return AZ::Failure(AZStd::string("The existing Look Modification has an unsupported composition state."));
+                    }
+                }
+                const bool createdLook = look == nullptr;
+                bool changedLook = false;
+                AzToolsFramework::ScopedUndoBatch undo("Activate HDR color grading LUT");
+                const auto rollback = [&]()
+                {
+                    bool restored = true;
+                    if (look)
+                    {
+                        const AZ::EntityComponentIdPair pair(entityId, look->GetId());
+                        if (createdLook)
+                        {
+                            bool removed = false;
+                            AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                                removed, &AzToolsFramework::EditorComponentAPIRequests::RemoveComponents,
+                                AZStd::vector<AZ::EntityComponentIdPair>{ pair });
+                            restored &= removed;
+                        }
+                        else
+                        {
+                            if (changedLook)
+                            {
+                                const bool hasHandler = LookModificationRequestBus::HasHandlers(entityId);
+                                restored &= hasHandler;
+                                if (hasHandler)
+                                {
+                                    LookModificationRequestBus::Event(
+                                        entityId, &LookModificationRequests::SetColorGradingLut, previousConfig.m_colorGradingLut);
+                                    LookModificationRequestBus::Event(
+                                        entityId, &LookModificationRequests::SetShaperPresetType, previousConfig.m_shaperPresetType);
+                                    LookModificationRequestBus::Event(
+                                        entityId, &LookModificationRequests::SetCustomMinExposure, previousConfig.m_customMinExposure);
+                                    LookModificationRequestBus::Event(
+                                        entityId, &LookModificationRequests::SetCustomMaxExposure, previousConfig.m_customMaxExposure);
+                                    LookModificationRequestBus::Event(
+                                        entityId, &LookModificationRequests::SetEnabled, previousConfig.m_enabled);
+                                    LookModificationComponentConfig restoredConfig;
+                                    restored &= look->GetConfiguration(restoredConfig) &&
+                                        restoredConfig.m_colorGradingLut.GetId() == previousConfig.m_colorGradingLut.GetId() &&
+                                        restoredConfig.m_enabled == previousConfig.m_enabled &&
+                                        restoredConfig.m_shaperPresetType == previousConfig.m_shaperPresetType &&
+                                        restoredConfig.m_customMinExposure == previousConfig.m_customMinExposure &&
+                                        restoredConfig.m_customMaxExposure == previousConfig.m_customMaxExposure;
+                                }
+                            }
+                            if (!lookEnabled)
+                            {
+                                bool disabled = false;
+                                AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                                    disabled, &AzToolsFramework::EditorComponentAPIRequests::DisableComponents,
+                                    AZStd::vector<AZ::EntityComponentIdPair>{ pair });
+                                restored &= disabled;
+                            }
+                        }
+                    }
+                    if (hdrEnabled)
+                    {
+                        bool enabled = false;
+                        AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                            enabled, &AzToolsFramework::EditorComponentAPIRequests::EnableComponents,
+                            AZStd::vector<AZ::EntityComponentIdPair>{ hdrPair });
+                        restored &= enabled;
+                    }
+                    if (look && !createdLook && lookPending)
+                    {
+                        // Re-enable against the restored HDR service to restore pending, not disabled.
+                        bool enabled = false;
+                        AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                            enabled, &AzToolsFramework::EditorComponentAPIRequests::EnableComponents,
+                            AZStd::vector<AZ::EntityComponentIdPair>{ AZ::EntityComponentIdPair(entityId, look->GetId()) });
+                        bool pending = false;
+                        AzToolsFramework::EditorPendingCompositionRequestBus::EventResult(
+                            pending, entityId, &AzToolsFramework::EditorPendingCompositionRequests::IsComponentPending, look);
+                        restored &= !enabled && pending;
+                    }
+                    AZ_Error("EditorHDRColorGradingComponent", restored, "LUT activation rollback could not restore component composition.");
+                    return restored;
+                };
+                bool disabled = false;
+                AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                    disabled, &AzToolsFramework::EditorComponentAPIRequests::DisableComponents,
+                    AZStd::vector<AZ::EntityComponentIdPair>{ hdrPair });
+                if (!disabled)
+                {
+                    rollback();
+                    return AZ::Failure(AZStd::string("Could not disable HDR Color Grading; no LUT activation was committed."));
+                }
+                if (createdLook)
+                {
+                    AzToolsFramework::EntityCompositionRequests::AddComponentsOutcome added = AZ::Failure(AZStd::string());
+                    AzToolsFramework::EntityCompositionRequestBus::BroadcastResult(
+                        added, &AzToolsFramework::EntityCompositionRequests::AddComponentsToEntities,
+                        AzToolsFramework::EntityIdList{ entityId }, AZ::ComponentTypeList{ azrtti_typeid<EditorLookModificationComponent>() });
+                    // Find the newly-created component even on a failed composition result so rollback owns it.
+                    components.clear();
+                    AzToolsFramework::GetAllComponentsForEntity(entityId, components);
+                    for (auto* component : components)
+                    {
+                        if (auto* candidate = azrtti_cast<EditorLookModificationComponent*>(component))
+                        {
+                            look = candidate;
+                            break;
+                        }
+                    }
+                    if (!added.IsSuccess() || !look)
+                    {
+                        rollback();
+                        return AZ::Failure(AZStd::string("Could not create Look Modification; activation was not committed. See rollback diagnostics."));
+                    }
+                }
+                const AZ::EntityComponentIdPair lookPair(entityId, look->GetId());
+                bool enabled = false;
+                AzToolsFramework::EditorComponentAPIBus::BroadcastResult(
+                    enabled, &AzToolsFramework::EditorComponentAPIRequests::EnableComponents,
+                    AZStd::vector<AZ::EntityComponentIdPair>{ lookPair });
+                if (!enabled || !LookModificationRequestBus::HasHandlers(entityId))
+                {
+                    rollback();
+                    return AZ::Failure(AZStd::string("Look Modification could not become active; activation was not committed. See rollback diagnostics."));
+                }
+                changedLook = true;
+                LookModificationRequestBus::Event(entityId, &LookModificationRequests::SetColorGradingLut, asset);
+                LookModificationRequestBus::Event(entityId, &LookModificationRequests::SetShaperPresetType, shaper);
+                LookModificationRequestBus::Event(entityId, &LookModificationRequests::SetCustomMinExposure, minimumExposure);
+                LookModificationRequestBus::Event(entityId, &LookModificationRequests::SetCustomMaxExposure, maximumExposure);
+                LookModificationRequestBus::Event(entityId, &LookModificationRequests::SetEnabled, true);
+                LookModificationComponentConfig applied;
+                if (!look->GetConfiguration(applied) || applied.m_colorGradingLut.GetId() != asset.GetId() || !applied.m_enabled ||
+                    applied.m_shaperPresetType != shaper || applied.m_customMinExposure != minimumExposure ||
+                    applied.m_customMaxExposure != maximumExposure)
+                {
+                    rollback();
+                    return AZ::Failure(AZStd::string("Look Modification did not retain the exact LUT and its encoding shaper; activation was not committed. See rollback diagnostics."));
+                }
+                AzToolsFramework::ScopedUndoBatch::MarkEntityDirty(entityId);
+                AzToolsFramework::PropertyEditorGUIMessagesBus::Broadcast(
+                    &AzToolsFramework::PropertyEditorGUIMessages::RequestRefresh, AzToolsFramework::Refresh_EntireTree);
+                return AZ::Success();
+            }
+        }
+
+        struct EditorHDRColorGradingComponent::LutOperation
+        {
+            enum class Phase { PrepareCapture, Capture, Asset };
+            AZStd::mutex m_mutex;
+            bool m_cancelled = false;
+            bool m_received = false;
+            RPI::AttachmentReadback::ReadbackResult m_readback{};
+            bool m_metadataReceived = false;
+            JE::ColorGrading::LutGenerationCaptureMetadata m_frameEncoding;
+            FrameCaptureId m_submittedCaptureId = InvalidFrameCaptureId;
+            Phase m_phase = Phase::PrepareCapture;
+            bool m_waitOneFrame = true;
+            bool m_activate = false;
+            bool m_previousGenerateLut = false;
+            ShaperPresetType m_shaper = ShaperPresetType::None;
+            float m_minimumExposure = 0.0f;
+            float m_maximumExposure = 0.0f;
+            bool m_captureFinished = false;
+            FrameCaptureId m_captureId = InvalidFrameCaptureId;
+            FrameCaptureResult m_captureResult = FrameCaptureResult::None;
+            AZStd::string m_captureInfo;
+            AZStd::string m_outputBase;
+            AZStd::string m_sourcePath;
+            AZStd::string m_productPath;
+            AZ::Data::Asset<RPI::AnyAsset> m_asset;
+            AZStd::chrono::steady_clock::time_point m_deadline = AZStd::chrono::steady_clock::now() + LutTimeout;
+        };
+
         void EditorHDRColorGradingComponent::Reflect(AZ::ReflectContext* context)
         {
             BaseClass::Reflect(context);
@@ -49,8 +367,12 @@ namespace AZ
             if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {
                 serializeContext->Class<EditorHDRColorGradingComponent, BaseClass>()
-                    ->Version(2)
+                    ->Version(3, &ConvertGeneratedLutMetadata)
                     ->Field("generatedLut", &EditorHDRColorGradingComponent::m_generatedLutAbsolutePath)
+                    ->Field("generatedLutMetadataValid", &EditorHDRColorGradingComponent::m_generatedLutMetadataValid)
+                    ->Field("generatedLutShaper", &EditorHDRColorGradingComponent::m_generatedLutShaper)
+                    ->Field("generatedLutMinimumExposure", &EditorHDRColorGradingComponent::m_generatedLutMinimumExposure)
+                    ->Field("generatedLutMaximumExposure", &EditorHDRColorGradingComponent::m_generatedLutMaximumExposure)
                     ;
 
                 if (AZ::EditContext* editContext = serializeContext->GetEditContext())
@@ -66,17 +388,18 @@ namespace AZ
                         ->Attribute(AZ::Edit::Attributes::HelpPageURL, "https://www.o3de.org/docs/atom-guide/features/#post-processing-effects-postfx")
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomLyIntegration", "LUT Generation"))
                         ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
-                        ->UIElement(AZ::Edit::UIHandlers::Button, QT_TRANSLATE_NOOP("AtomLyIntegration", "Generate LUT"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Generates a LUT from the scene's enabled color grading blend."))
+                        // DPE group actions must precede its fields and use the empty group path.
+                        ->UIElement(AZ::Edit::UIHandlers::Button, "", QT_TRANSLATE_NOOP("AtomLyIntegration", "Generates a LUT from the scene's enabled color grading blend."))
                             ->Attribute(AZ::Edit::Attributes::NameLabelOverride, "")
                             ->Attribute(AZ::Edit::Attributes::ButtonText, QT_TRANSLATE_NOOP("AtomLyIntegration", "Generate LUT"))
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorHDRColorGradingComponent::GenerateLut)
-                        ->DataElement(AZ::Edit::UIHandlers::MultiLineEdit, &EditorHDRColorGradingComponent::m_generatedLutAbsolutePath, QT_TRANSLATE_NOOP("AtomLyIntegration", "Generated LUT Path"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Generated LUT Path"))
-                            ->Attribute(AZ::Edit::Attributes::ReadOnly, true)
-                            ->Attribute(AZ::Edit::Attributes::Visibility, &EditorHDRColorGradingComponent::GetGeneratedLutVisibilitySettings)
-                        ->UIElement(AZ::Edit::UIHandlers::Button, QT_TRANSLATE_NOOP("AtomLyIntegration", "Activate LUT"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Use the generated LUT asset in a Look Modification component"))
+                        ->UIElement(AZ::Edit::UIHandlers::Button, "", QT_TRANSLATE_NOOP("AtomLyIntegration", "Use the generated LUT asset in a Look Modification component"))
                             ->Attribute(AZ::Edit::Attributes::NameLabelOverride, "")
                             ->Attribute(AZ::Edit::Attributes::ButtonText, QT_TRANSLATE_NOOP("AtomLyIntegration", "Activate LUT"))
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, &EditorHDRColorGradingComponent::ActivateLut)
+                            ->Attribute(AZ::Edit::Attributes::Visibility, &EditorHDRColorGradingComponent::GetGeneratedLutVisibilitySettings)
+                        ->DataElement(AZ::Edit::UIHandlers::MultiLineEdit, &EditorHDRColorGradingComponent::m_generatedLutAbsolutePath, QT_TRANSLATE_NOOP("AtomLyIntegration", "Generated LUT Path"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Generated LUT Path"))
+                            ->Attribute(AZ::Edit::Attributes::ReadOnly, true)
                             ->Attribute(AZ::Edit::Attributes::Visibility, &EditorHDRColorGradingComponent::GetGeneratedLutVisibilitySettings)
                         ;
 
@@ -242,138 +565,384 @@ namespace AZ
 
         void EditorHDRColorGradingComponent::Deactivate()
         {
-            BaseClass::Deactivate();
+            CancelOperation();
             EditorHDRColorGradingRequestBus::Handler::BusDisconnect();
+            BaseClass::Deactivate();
+        }
+
+        void EditorHDRColorGradingComponent::CancelOperation()
+        {
+            TickBus::Handler::BusDisconnect();
+            JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler::BusDisconnect();
+            FrameCaptureNotificationBus::Handler::BusDisconnect();
+            if (m_operation)
+            {
+                {
+                    AZStd::scoped_lock lock(m_operation->m_mutex);
+                    m_operation->m_cancelled = true;
+                }
+                if (m_operation->m_captureId != InvalidFrameCaptureId)
+                {
+                    FrameCaptureRequestBus::Broadcast(
+                        &FrameCaptureRequests::CancelPendingCapture, m_operation->m_captureId);
+                    m_operation->m_captureId = InvalidFrameCaptureId;
+                }
+                if (!m_operation->m_activate)
+                {
+                    m_controller.SetGenerateLut(m_operation->m_previousGenerateLut);
+                }
+                m_operation.reset();
+            }
+            // Pending pass reservations are released above. A submitted GPU readback finishes
+            // with cancelled shared state and cannot publish files or component changes.
+        }
+
+        void EditorHDRColorGradingComponent::FailOperation(const AZStd::string& error)
+        {
+            CancelOperation();
+            AZ_Error("EditorHDRColorGradingComponent", false, "%s", error.c_str());
+        }
+
+        bool EditorHDRColorGradingComponent::BeginAssetWait(const AZStd::string& absolutePath, bool activate)
+        {
+            const auto relative = LutProductPath(absolutePath);
+            if (!relative.IsSuccess())
+            {
+                FailOperation(relative.GetError());
+                return false;
+            }
+            if (!m_operation)
+            {
+                m_operation = AZStd::make_shared<LutOperation>();
+            }
+            if (activate)
+            {
+                m_operation->m_shaper = m_generatedLutShaper;
+                m_operation->m_minimumExposure = m_generatedLutMinimumExposure;
+                m_operation->m_maximumExposure = m_generatedLutMaximumExposure;
+            }
+            m_operation->m_phase = LutOperation::Phase::Asset;
+            m_operation->m_activate = activate;
+            m_operation->m_sourcePath = absolutePath;
+            m_operation->m_productPath = relative.GetValue();
+            if (!TickBus::Handler::BusIsConnected())
+            {
+                TickBus::Handler::BusConnect();
+            }
+            return true;
         }
 
         void EditorHDRColorGradingComponent::OnTick([[maybe_unused]] float deltaTime, [[maybe_unused]] AZ::ScriptTimePoint time)
         {
-            if (m_waitOneFrame)
-            {
-                m_waitOneFrame = false;
-                return;
-            }
-
-            const char* LutAttachment = "LutOutput";
-            auto currentPipeline =
-                AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get()->GetDefaultViewportContext()->GetCurrentPipeline();
-            if (!currentPipeline)
+            const auto operation = m_operation;
+            if (!operation)
             {
                 return;
             }
-            auto renderPipelineName = currentPipeline->GetId();
-            const AZStd::vector<AZStd::string> LutGenerationPassHierarchy{
-                renderPipelineName.GetCStr(),
-                "LutGenerationPass"
-            };
-
-            char resolvedOutputFilePath[AZ_MAX_PATH_LEN] = { 0 };
-            AZ::IO::FileIOBase::GetDirectInstance()->ResolvePath(m_currentTiffFilePath.c_str(), resolvedOutputFilePath, AZ_MAX_PATH_LEN);
-
-            AZStd::string lutGenerationCacheFolder;
-            AzFramework::StringFunc::Path::GetFolderPath(resolvedOutputFilePath, lutGenerationCacheFolder);
-            AZ::IO::SystemFile::CreateDir(lutGenerationCacheFolder.c_str());
-
-            AZ::Render::FrameCaptureOutcome captureOutcome;
-            AZ::Render::FrameCaptureRequestBus::BroadcastResult(
-                captureOutcome,
-                &AZ::Render::FrameCaptureRequestBus::Events::CapturePassAttachment,
-                m_currentTiffFilePath,
-                LutGenerationPassHierarchy,
-                AZStd::string(LutAttachment),
-                AZ::RPI::PassAttachmentReadbackOption::Output);
-
-            if (captureOutcome.IsSuccess())
+            if (!CanEditLutEntity(GetEntityId()))
             {
-                AZ::Render::FrameCaptureNotificationBus::Handler::BusConnect(captureOutcome.GetValue());
-                AZ::TickBus::Handler::BusDisconnect();
+                FailOperation("LUT operation cancelled: the source entity is no longer editable in the Editor.");
+                return;
             }
-
-            AZ_Error(
-                "EditorHDRColorGradingComponent",
-                captureOutcome.IsSuccess(),
-                "Frame capture initialization failed. %s",
-                captureOutcome.GetError().m_errorMessage.c_str());
+            if (AZStd::chrono::steady_clock::now() >= operation->m_deadline)
+            {
+                if (operation->m_phase == LutOperation::Phase::Asset)
+                {
+                    FailOperation("LUT operation timed out waiting for Asset Processor/catalogue and a ready LUT asset.");
+                }
+                else
+                {
+                    bool received = false;
+                    {
+                        AZStd::scoped_lock lock(operation->m_mutex);
+                        received = operation->m_received;
+                    }
+                    auto* contexts = AZ::Interface<RPI::ViewportContextRequestsInterface>::Get();
+                    const auto viewport = contexts ? contexts->GetDefaultViewportContext() : nullptr;
+                    const auto pipeline = viewport ? viewport->GetCurrentPipeline() : nullptr;
+                    FailOperation(AZStd::string::format(
+                        "LUT operation timed out waiting for the viewport/LutGenerationPass readback. "
+                        "phase=%s received=%d captureFinished=%d captureResult=%d viewport=%d pipeline=%d pipelineId=%s outputBase=%s generateLut=%d.",
+                        operation->m_phase == LutOperation::Phase::PrepareCapture ? "PrepareCapture" : "Capture",
+                        received, operation->m_captureFinished, static_cast<int>(operation->m_captureResult),
+                        viewport != nullptr, pipeline != nullptr, pipeline ? pipeline->GetId().GetCStr() : "<none>",
+                        operation->m_outputBase.c_str(), m_controller.m_configuration.m_generateLut));
+                }
+                return;
+            }
+            if (operation->m_phase == LutOperation::Phase::PrepareCapture)
+            {
+                if (operation->m_waitOneFrame)
+                {
+                    operation->m_waitOneFrame = false;
+                    return;
+                }
+                auto* contexts = AZ::Interface<RPI::ViewportContextRequestsInterface>::Get();
+                const auto viewport = contexts ? contexts->GetDefaultViewportContext() : nullptr;
+                const auto pipeline = viewport ? viewport->GetCurrentPipeline() : nullptr;
+                if (!pipeline)
+                {
+                    return;
+                }
+                FrameCaptureOutcome outcome;
+                FrameCaptureRequestBus::BroadcastResult(
+                    outcome, &FrameCaptureRequests::CapturePassAttachmentWithCallback,
+                    [operation](const RPI::AttachmentReadback::ReadbackResult& result)
+                    {
+                        AZStd::scoped_lock lock(operation->m_mutex);
+                        if (operation->m_cancelled || operation->m_received)
+                        {
+                            return;
+                        }
+                        operation->m_readback = result;
+                        if (result.m_dataBuffer)
+                        {
+                            operation->m_readback.m_dataBuffer = AZStd::make_shared<AZStd::vector<uint8_t>>(*result.m_dataBuffer);
+                        }
+                        for (auto& mip : operation->m_readback.m_mipDataBuffers)
+                        {
+                            if (mip.m_mipBuffer == result.m_dataBuffer)
+                            {
+                                mip.m_mipBuffer = operation->m_readback.m_dataBuffer;
+                            }
+                            else if (mip.m_mipBuffer)
+                            {
+                                mip.m_mipBuffer = AZStd::make_shared<AZStd::vector<uint8_t>>(*mip.m_mipBuffer);
+                            }
+                        }
+                        operation->m_received = true;
+                    },
+                    AZStd::vector<AZStd::string>{ pipeline->GetId().GetCStr(), "LutGenerationPass" },
+                    AZStd::string("LutOutput"), RPI::PassAttachmentReadbackOption::Output);
+                if (!outcome.IsSuccess())
+                {
+                    FailOperation(AZStd::string::format("LUT readback initialization failed: %s", outcome.GetError().m_errorMessage.c_str()));
+                    return;
+                }
+                operation->m_captureId = outcome.GetValue();
+                operation->m_submittedCaptureId = outcome.GetValue();
+                operation->m_phase = LutOperation::Phase::Capture;
+                // The request reserves a pass attachment; publication occurs in its subsequent FrameBegin.
+                JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler::BusConnect(outcome.GetValue());
+                FrameCaptureNotificationBus::Handler::BusConnect(outcome.GetValue());
+                return;
+            }
+            if (operation->m_phase == LutOperation::Phase::Capture)
+            {
+                if (!operation->m_captureFinished)
+                {
+                    return;
+                }
+                if (operation->m_captureResult != FrameCaptureResult::Success)
+                {
+                    FailOperation(AZStd::string::format("LUT readback failed: %s", operation->m_captureInfo.c_str()));
+                    return;
+                }
+                RPI::AttachmentReadback::ReadbackResult readback{};
+                JE::ColorGrading::LutGenerationCaptureMetadata encoding;
+                bool metadataReceived = false;
+                {
+                    AZStd::scoped_lock lock(operation->m_mutex);
+                    if (!operation->m_received)
+                    {
+                        return;
+                    }
+                    readback = operation->m_readback;
+                    metadataReceived = operation->m_metadataReceived;
+                    encoding = operation->m_frameEncoding;
+                }
+                if (!metadataReceived || !encoding.MatchesReadback(operation->m_submittedCaptureId, readback) ||
+                    !ValidLutShaper(encoding.m_shaper, encoding.m_minimumExposure, encoding.m_maximumExposure))
+                {
+                    FailOperation("LUT capture has missing or incompatible effective frame encoding metadata (capture ID, dimensions or shaper). Regenerate the LUT.");
+                    return;
+                }
+                operation->m_shaper = encoding.m_shaper;
+                operation->m_minimumExposure = encoding.m_minimumExposure;
+                operation->m_maximumExposure = encoding.m_maximumExposure;
+                const auto written = JE::ColorGrading::WriteLutSource(readback, operation->m_outputBase);
+                if (!written.IsSuccess())
+                {
+                    FailOperation(written.GetError());
+                    return;
+                }
+                {
+                    AZStd::scoped_lock lock(operation->m_mutex);
+                    operation->m_readback = {};
+                }
+                m_controller.SetGenerateLut(operation->m_previousGenerateLut);
+                if (!BeginAssetWait(written.GetValue(), false))
+                {
+                    return;
+                }
+            }
+            if (!operation->m_asset.GetId().IsValid())
+            {
+                AZ::Data::AssetId assetId;
+                AZ::Data::AssetCatalogRequestBus::BroadcastResult(
+                    assetId, &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
+                    operation->m_productPath.c_str(), azrtti_typeid<RPI::AnyAsset>(), false);
+                if (!assetId.IsValid())
+                {
+                    return; // New source: catalogue discovery is asynchronous and bounded by the deadline.
+                }
+                operation->m_asset = AZ::Data::AssetManager::Instance().GetAsset<RPI::AnyAsset>(assetId, AZ::Data::AssetLoadBehavior::QueueLoad);
+            }
+            if (operation->m_asset.IsError())
+            {
+                FailOperation("The LUT product failed to load. Check Asset Processor errors.");
+                return;
+            }
+            if (!operation->m_asset.IsReady())
+            {
+                return;
+            }
+            const auto* lut = operation->m_asset->GetDataAs<LookupTableAsset>();
+            if (!lut)
+            {
+                FailOperation("The .azasset product does not contain LookupTableAsset.");
+                return;
+            }
+            const auto valid = JE::ColorGrading::ValidateLookupTable(*lut);
+            if (!valid.IsSuccess())
+            {
+                FailOperation(valid.GetError());
+                return;
+            }
+            const auto entityId = GetEntityId();
+            if (operation->m_activate)
+            {
+                const auto asset = operation->m_asset;
+                const auto componentId = GetId();
+                const auto shaper = operation->m_shaper;
+                const auto minimumExposure = operation->m_minimumExposure;
+                const auto maximumExposure = operation->m_maximumExposure;
+                CancelOperation();
+                const auto activated = ActivateLutOnEntity(entityId, componentId, asset, shaper, minimumExposure, maximumExposure);
+                if (!activated.IsSuccess())
+                {
+                    AZ_Error("EditorHDRColorGradingComponent", false, "%s", activated.GetError().c_str());
+                    return;
+                }
+                // The HDR component is now disabled. Use only local values after composition.
+                EditorHDRColorGradingNotificationBus::Event(
+                    entityId, &EditorHDRColorGradingNotification::OnActivateLutCompleted);
+                return;
+            }
+            const auto sourcePath = operation->m_sourcePath;
+            CancelOperation();
+            {
+                AzToolsFramework::ScopedUndoBatch undo("Generate HDR color grading LUT");
+                m_generatedLutAbsolutePath = sourcePath;
+                m_generatedLutShaper = operation->m_shaper;
+                m_generatedLutMinimumExposure = operation->m_minimumExposure;
+                m_generatedLutMaximumExposure = operation->m_maximumExposure;
+                m_generatedLutMetadataValid = true;
+                AzToolsFramework::ScopedUndoBatch::MarkEntityDirty(entityId);
+            }
+            InvalidatePropertyDisplay(AzToolsFramework::Refresh_EntireTree);
+            EditorHDRColorGradingNotificationBus::Event(
+                entityId, &EditorHDRColorGradingNotification::OnGenerateLutCompleted, sourcePath);
         }
 
-        void EditorHDRColorGradingComponent::OnFrameCaptureFinished([[maybe_unused]] AZ::Render::FrameCaptureResult result, [[maybe_unused]]const AZStd::string& info)
+        void EditorHDRColorGradingComponent::OnLutGenerationCapture(
+            const JE::ColorGrading::LutGenerationCaptureMetadata& metadata)
         {
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
-
-            char resolvedInputFilePath[AZ_MAX_PATH_LEN] = { 0 };
-            AZ::IO::FileIOBase::GetDirectInstance()->ResolvePath(m_currentTiffFilePath.c_str(), resolvedInputFilePath, AZ_MAX_PATH_LEN);
-            char resolvedOutputFilePath[AZ_MAX_PATH_LEN] = { 0 };
-            AZ::IO::FileIOBase::GetDirectInstance()->ResolvePath(m_currentLutFilePath.c_str(), resolvedOutputFilePath, AZ_MAX_PATH_LEN);
-
-            AZStd::string lutGenerationFolder;
-            AzFramework::StringFunc::Path::GetFolderPath(resolvedOutputFilePath, lutGenerationFolder);
-            AZ::IO::SystemFile::CreateDir(lutGenerationFolder.c_str());
-
-            AZStd::vector<AZStd::string_view> pythonArgs
+            const auto operation = m_operation;
+            if (!operation || operation->m_phase != LutOperation::Phase::Capture)
             {
-                "--i", resolvedInputFilePath,
-                "--o", resolvedOutputFilePath
-            };
+                return;
+            }
+            AZStd::scoped_lock lock(operation->m_mutex);
+            if (!operation->m_cancelled && !operation->m_metadataReceived &&
+                metadata.m_captureId == operation->m_submittedCaptureId)
+            {
+                operation->m_frameEncoding = metadata;
+                operation->m_metadataReceived = true;
+            }
+        }
 
-            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs,
-                TiffToAzassetPythonScriptPath,
-                pythonArgs);
-
-            m_controller.m_configuration.m_generateLut = false;
-            m_controller.OnConfigChanged();
-
-            m_generatedLutAbsolutePath = resolvedOutputFilePath + AZStd::string(".azasset");
-            InvalidatePropertyDisplay(AzToolsFramework::Refresh_EntireTree);
-
-            EditorHDRColorGradingNotificationBus::Event(GetEntityId(), &EditorHDRColorGradingNotificationBus::Handler::OnGenerateLutCompleted, m_generatedLutAbsolutePath);
+        void EditorHDRColorGradingComponent::OnFrameCaptureFinished(FrameCaptureResult result, const AZStd::string& info)
+        {
+            JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler::BusDisconnect();
+            FrameCaptureNotificationBus::Handler::BusDisconnect();
+            if (m_operation && m_operation->m_phase == LutOperation::Phase::Capture)
+            {
+                m_operation->m_captureId = InvalidFrameCaptureId;
+                m_operation->m_captureResult = result;
+                m_operation->m_captureInfo = info;
+                m_operation->m_captureFinished = true;
+            }
         }
 
         void EditorHDRColorGradingComponent::GenerateLut()
         {
-            // turn on lut generation pass
-            AZ::Uuid uuid = AZ::Uuid::CreateRandom();
-            AZStd::string uuidString;
-            uuid.ToString(uuidString);
-
-            m_currentTiffFilePath = AZStd::string::format(TempTiffFilePath, uuidString.c_str());
-            m_currentLutFilePath = "@projectroot@/" + AZStd::string::format(GeneratedLutRelativePath, uuidString.c_str());
-
+            LutEntityEditState entityState;
+            const bool canEdit = CanEditLutEntity(GetEntityId(), &entityState);
+            if (m_operation || !canEdit || !m_controller.m_configuration.m_enabled)
+            {
+                AZ_Error("EditorHDRColorGradingComponent", false,
+                    "Generate LUT requires enabled HDR Color Grading on an editable Editor entity and no pending LUT operation. "
+                    "EntityId=%s ComponentId=%llu operation=%d enabled=%d editorEntity=%d editable=%d running=%d requesting=%d "
+                    "entityExists=%d state=%d activeState=%d.",
+                    GetEntityId().ToString().c_str(), static_cast<unsigned long long>(GetId()), static_cast<bool>(m_operation),
+                    m_controller.m_configuration.m_enabled, entityState.m_editorEntity, entityState.m_editable,
+                    entityState.m_running, entityState.m_requesting, entityState.m_entityExists, entityState.m_state,
+                    static_cast<int>(AZ::Entity::State::Active));
+                return;
+            }
+            const auto& config = m_controller.m_configuration;
+            if (!ValidLutShaper(config.m_shaperPresetType, config.m_customMinExposure, config.m_customMaxExposure))
+            {
+                AZ_Error("EditorHDRColorGradingComponent", false, "Generate LUT requires a valid shaper and finite custom exposure range.");
+                return;
+            }
+            auto* fileIO = AZ::IO::FileIOBase::GetDirectInstance();
+            char resolvedPath[AZ_MAX_PATH_LEN] = {};
+            const AZStd::string output = "@projectroot@/" + AZStd::string::format(
+                GeneratedLutRelativePath, AZ::Uuid::CreateRandom().ToString<AZStd::string>().c_str());
+            if (!fileIO || !fileIO->ResolvePath(output.c_str(), resolvedPath, AZ_MAX_PATH_LEN))
+            {
+                AZ_Error("EditorHDRColorGradingComponent", false, "Could not resolve a project-local LUT output path.");
+                return;
+            }
+            const auto relative = LutProductPath(AZStd::string(resolvedPath) + ".azasset");
+            if (!relative.IsSuccess())
+            {
+                AZ_Error("EditorHDRColorGradingComponent", false, "%s", relative.GetError().c_str());
+                return;
+            }
+            const AZ::IO::Path outputFolder = AZ::IO::Path(resolvedPath).ParentPath();
+            if (!AZ::IO::SystemFile::CreateDir(outputFolder.c_str()))
+            {
+                AZ_Error("EditorHDRColorGradingComponent", false, "Could not create the project-local LutGeneration output directory.");
+                return;
+            }
+            m_operation = AZStd::make_shared<LutOperation>();
+            m_operation->m_outputBase = resolvedPath;
+            m_operation->m_previousGenerateLut = config.m_generateLut;
+            m_operation->m_shaper = config.m_shaperPresetType;
+            m_operation->m_minimumExposure = config.m_customMinExposure;
+            m_operation->m_maximumExposure = config.m_customMaxExposure;
             m_controller.SetGenerateLut(true);
-            m_controller.OnConfigChanged();
-
-            m_waitOneFrame = true;
-
-            AZ::TickBus::Handler::BusConnect();
+            TickBus::Handler::BusConnect();
         }
 
         AZ::u32 EditorHDRColorGradingComponent::ActivateLut()
         {
-            using namespace AzFramework::StringFunc::Path;
-
-            AZStd::string entityName;
-            AZ::ComponentApplicationBus::BroadcastResult(entityName, &AZ::ComponentApplicationRequests::GetEntityName, GetEntityId());
-
-            AZStd::string filename;
-            GetFileName(m_generatedLutAbsolutePath.c_str(), filename);
-            AZStd::string assetRelativePath = "LutGeneration/" + filename + ".azasset";
-            AZStd::vector<AZStd::string_view> pythonArgs
+            if (m_operation || !CanEditLutEntity(GetEntityId()) || m_generatedLutAbsolutePath.empty())
             {
-                "--entityName", entityName,
-                "--assetRelativePath", assetRelativePath
-            };
-
-            AzToolsFramework::EditorPythonRunnerRequestBus::Broadcast(
-                &AzToolsFramework::EditorPythonRunnerRequestBus::Events::ExecuteByFilenameWithArgs,
-                ActivateLutAssetPythonScriptPath,
-                pythonArgs);
-
-            // Remark, when LUT activation is complete, a notification should be sent
-            // via EditorHDRColorGradingNotificationBus::OnActivateLutCompleted, but the completion will occur
-            // inside the python script @ActivateLutAssetPythonScriptPath, so the
-            // responsibility to send this notification is on @ActivateLutAssetPythonScriptPath.
-
-            return AZ::Edit::PropertyRefreshLevels::EntireTree;
+                AZ_Error("EditorHDRColorGradingComponent", false, "Activate LUT requires a generated LUT and an editable Editor entity, with no pending operation.");
+                return Edit::PropertyRefreshLevels::EntireTree;
+            }
+            if (!m_generatedLutMetadataValid ||
+                !ValidLutShaper(m_generatedLutShaper, m_generatedLutMinimumExposure, m_generatedLutMaximumExposure))
+            {
+                AZ_Error("EditorHDRColorGradingComponent", false, "The generated LUT has no valid encoding metadata. Regenerate the LUT before activation.");
+                return Edit::PropertyRefreshLevels::EntireTree;
+            }
+            BeginAssetWait(m_generatedLutAbsolutePath, true);
+            return Edit::PropertyRefreshLevels::EntireTree;
         }
 
         bool EditorHDRColorGradingComponent::GetGeneratedLutVisibilitySettings()
@@ -383,6 +952,7 @@ namespace AZ
 
         u32 EditorHDRColorGradingComponent::OnConfigurationChanged()
         {
+            CancelOperation();
             m_controller.OnConfigChanged();
             return Edit::PropertyRefreshLevels::AttributesAndValues;
         }

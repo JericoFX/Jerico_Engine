@@ -14,8 +14,6 @@
 #include <AzCore/Utils/Utils.h>
 #include <AzCore/std/containers/map.h>
 #include <AzCore/std/sort.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
-#include <AzToolsFramework/PythonTerminal/ScriptTermDialog.h>
 
 #include <QClipboard>
 #include <QCloseEvent>
@@ -55,9 +53,6 @@ namespace AtomToolsFramework
 
         m_assetBrowser = new AtomToolsAssetBrowser(this);
         AddDockWidget("Asset Browser", m_assetBrowser, Qt::BottomDockWidgetArea);
-
-        AddDockWidget("Python Terminal", new AzToolsFramework::CScriptTermDialog, Qt::BottomDockWidgetArea);
-        SetDockWidgetVisible("Python Terminal", false);
 
         m_logPanel = new AzToolsFramework::LogPanel::StyledTracePrintFLogPanel(this);
         m_logPanel->AddLogTab(AzToolsFramework::LogPanel::TabSettings("Log", "", ""));
@@ -244,9 +239,6 @@ namespace AtomToolsFramework
         m_menuTools->setObjectName("menuTools");
         m_menuHelp = menuBar->addMenu("&Help");
         m_menuHelp->setObjectName("menuHelp");
-
-        BuildScriptsMenu();
-        m_menuFile->addSeparator();
 
         m_menuFile->addAction(tr("E&xit"), QKeySequence::Quit, [this]() {
             close();
@@ -536,15 +528,6 @@ namespace AtomToolsFramework
                         RestoreDefaultLayout();
                     });
             });
-    }
-
-    void AtomToolsMainWindow::BuildScriptsMenu()
-    {
-        QMenu* scriptsMenu = m_menuFile->addMenu(tr("Python Scripts"));
-        connect(scriptsMenu, &QMenu::aboutToShow, this, [scriptsMenu]() {
-            scriptsMenu->clear();
-            AddRegisteredScriptToMenu(scriptsMenu, "/O3DE/AtomToolsFramework/MainWindow/FileMenuScripts", {});
-        });
     }
 
     void AtomToolsMainWindow::RestoreDefaultLayout()

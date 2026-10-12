@@ -1,0 +1,41 @@
+{
+  "startedUtc": "2026-10-12T07:13:15.7609693Z",
+  "endedUtc": "2026-10-12T07:13:16.2499455Z",
+  "elapsedSeconds": 0.4878047,
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "-R",
+    "^(Gem::Atom_Feature_Common[.]Tests[.]main::TEST_RUN|Gem::CommonFeaturesAtom[.]Editor[.]Tests[.]main::TEST_RUN)$"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "6CA984E06D9A22373ECA71B47B041F46263BA5E4D134346B13C1A095709C80D7",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "junit": [
+    {
+      "name": "Gem_Atom_Feature_Common.Tests.xml",
+      "sha256": "AA8AB3D52B2B44BFDD225587047FC67403A4A96CC5D820A73B316189BA6E6944",
+      "bytes": 25468,
+      "tests": 82,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "timestamp": "2026-10-12T04:13:15.843"
+    },
+    {
+      "name": "Gem_CommonFeaturesAtom.Editor.Tests.xml",
+      "sha256": "3A0E8A05E7DED38C9C8DD490733471AA46BE307ABF94791A74849126F0A95029",
+      "bytes": 10665,
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "timestamp": "2026-10-12T04:13:15.935"
+    }
+  ],
+  "lastTestSha256": "650E58792A3F0958116A34574CE7239E30A1AAF42F4B87BED567302D21FCCD29"
+}

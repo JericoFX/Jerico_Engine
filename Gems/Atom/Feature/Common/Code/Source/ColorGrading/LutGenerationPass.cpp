@@ -40,28 +40,44 @@ namespace AZ
         void LutGenerationPass::FrameBeginInternal(FramePrepareParams params)
         {
             const auto* colorGradingSettings = GetHDRColorGradingSettings();
-            if (colorGradingSettings)
+            m_frameEncodingValid = colorGradingSettings != nullptr;
+            if (m_frameEncodingValid)
             {
-                m_shaderResourceGroup->SetConstant(m_lutResolutionIndex, colorGradingSettings->GetLutResolution());
+                m_frameEncoding = JE::ColorGrading::LutGenerationCaptureMetadata::FromSettings(
+                    *colorGradingSettings, InvalidFrameCaptureId);
+                m_shaderResourceGroup->SetConstant(m_lutResolutionIndex, m_frameEncoding.m_resolution);
 
                 auto shaperParams = AcesDisplayMapperFeatureProcessor::GetShaperParameters(
-                    colorGradingSettings->GetShaperPresetType(),
-                    colorGradingSettings->GetCustomMinExposure(),
-                    colorGradingSettings->GetCustomMaxExposure());
+                    m_frameEncoding.m_shaper,
+                    m_frameEncoding.m_minimumExposure,
+                    m_frameEncoding.m_maximumExposure);
                 m_shaderResourceGroup->SetConstant(m_lutShaperTypeIndex, shaperParams.m_type);
                 m_shaderResourceGroup->SetConstant(m_lutShaperBiasIndex, shaperParams.m_bias);
                 m_shaderResourceGroup->SetConstant(m_lutShaperScaleIndex, shaperParams.m_scale);
             }
 
             HDRColorGradingPass::FrameBeginInternal(params);
+
+            // Pass::FrameBegin submits this output reservation immediately after returning.
+            if (m_frameEncodingValid && m_attachmentReadback &&
+                m_readbackOption == RPI::PassAttachmentReadbackOption::Output &&
+                m_attachmentReadback->GetReadbackState() == RPI::AttachmentReadback::ReadbackState::AttachmentSet)
+            {
+                const auto captureId = m_attachmentReadback->GetUserIdentifier();
+                if (captureId != InvalidFrameCaptureId)
+                {
+                    m_frameEncoding.m_captureId = captureId;
+                    JE::ColorGrading::LutGenerationCaptureNotificationBus::Event(m_frameEncoding.m_captureId,
+                        &JE::ColorGrading::LutGenerationCaptureNotifications::OnLutGenerationCapture, m_frameEncoding);
+                }
+            }
         }
 
         void LutGenerationPass::BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context)
         {
-            const auto* colorGradingSettings = GetHDRColorGradingSettings();
-            if (colorGradingSettings)
+            if (m_frameEncodingValid)
             {
-                uint32_t lutResolution = aznumeric_cast<uint32_t>(colorGradingSettings->GetLutResolution());
+                const uint32_t lutResolution = aznumeric_cast<uint32_t>(m_frameEncoding.m_resolution);
                 RHI::Size lutSize{ lutResolution * lutResolution, lutResolution, 1 };
 
                 RPI::Ptr<RPI::PassAttachment> attachment = FindOwnedAttachment(Name{ "ColorGradingLut" });

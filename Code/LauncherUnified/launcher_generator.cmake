@@ -280,11 +280,6 @@ foreach(project_name project_path IN ZIP_LISTS O3DE_PROJECTS_NAME launcher_gener
             # Associate the Servers Gem Variant with each projects ServerLauncher
             ly_set_gem_variant_to_load(TARGETS ${project_name}.${server_launcher_type} VARIANTS ${SERVER_VARIANT_${server_launcher_type}})
 
-            # If the Editor is getting built, it should rebuild the ServerLauncher as well. The Editor's game mode will attempt
-            # to launch it, and things can break if the two are out of sync.
-            if(PAL_TRAIT_BUILD_HOST_TOOLS)
-                ly_add_dependencies(Editor ${project_name}.${server_launcher_type})
-            endif()
         endforeach()
     endif()
 

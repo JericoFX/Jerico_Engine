@@ -29,7 +29,6 @@ ly_add_target(
             Include
     BUILD_DEPENDENCIES
         PUBLIC
-            3rdParty::Python
             3rdParty::Qt::Core
             3rdParty::Qt::Gui
             3rdParty::Qt::Network
@@ -72,7 +71,6 @@ ly_add_target(
         Gem::Atom_RHI.Private
         Gem::Atom_RHI_Null.Private
         Gem::Atom_RPI.Editor
-        Gem::EditorPythonBindings.Editor
         Gem::GraphCanvas.Editor
         Gem::GraphCanvasWidgets
         Gem::GraphModel.Editor

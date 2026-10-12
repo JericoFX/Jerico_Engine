@@ -22,7 +22,6 @@
 #include <AzQtComponents/Components/StyleManager.h>
 
 #include <AzToolsFramework/API/AssetDatabaseBus.h>
-#include <AzToolsFramework/API/EditorPythonConsoleBus.h>
 #include <AzToolsFramework/Logger/TraceLogger.h>
 
 #include <QTimer>
@@ -34,7 +33,6 @@ namespace AtomToolsFramework
         : public AzQtComponents::AzQtApplication
         , public AzFramework::Application
         , protected AzToolsFramework::AssetDatabase::AssetDatabaseRequestsBus::Handler
-        , protected AzToolsFramework::EditorPythonConsoleNotificationBus::Handler
         , protected AZ::UserSettingsOwnerRequestBus::Handler
     {
     public:
@@ -73,11 +71,6 @@ namespace AtomToolsFramework
         // AZ::UserSettingsOwnerRequestBus::Handler overrides...
         void SaveSettings() override;
 
-        // EditorPythonConsoleNotificationBus::Handler overrides...
-        void OnTraceMessage(AZStd::string_view message) override;
-        void OnErrorMessage(AZStd::string_view message) override;
-        void OnExceptionMessage(AZStd::string_view message) override;
-
         //! List of filters for assets that need to be pre-built to run the application
         virtual AZStd::vector<AZStd::string> GetCriticalAssetFilters() const;
 
@@ -90,12 +83,12 @@ namespace AtomToolsFramework
         void PrintAlways(const AZStd::string& output);
         void RedirectStdoutToNull();
 
-        static void PyIdleWaitFrames(uint32_t frames);
-        static void PyExit();
-        static void PyCrash();
-        static void PyTestOutput(const AZStd::string& output);
+        static void IdleWaitFrames(uint32_t frames);
+        static void ExitApplication();
+        static void CrashApplication();
+        static void TestOutput(const AZStd::string& output);
 
-        // Adding static instance access for static Python methods
+        // Instance access for reflected native automation methods
         static AtomToolsApplication* GetInstance();
         static AtomToolsApplication* m_instance;
 

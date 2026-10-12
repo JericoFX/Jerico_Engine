@@ -13,7 +13,6 @@
 #include <AzCore/Utils/Utils.h>
 #include <AzCore/std/string/wildcard.h>
 #include <AzQtComponents/Utilities/DesktopUtilities.h>
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzToolsFramework/AssetBrowser/AssetSelectionModel.h>
@@ -96,10 +95,6 @@ namespace AtomToolsFramework
                         duplicateFilePath.c_str(), true, [](bool, const AzToolsFramework::SourceControlFileInfo&) {});
                 }
             });
-
-        QMenu* scriptsMenu = menu->addMenu(QObject::tr("Python Scripts"));
-        const AZStd::vector<AZStd::string> arguments{ entry->GetFullPath() };
-        AddRegisteredScriptToMenu(scriptsMenu, "/O3DE/AtomToolsFramework/AssetBrowser/ContextMenuScripts", arguments);
     }
 
     void AtomToolsAssetBrowserInteractions::AddContextMenuActionsForFolderEntries(

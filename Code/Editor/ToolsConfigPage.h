@@ -76,7 +76,6 @@ protected:
     void OnClearMacroIcon();
 
     void OnConsoleCmd();
-    void OnScriptCmd();
 
     void OnNewMacroItem();
     void OnNewCommandItem();
@@ -92,10 +91,8 @@ protected:
     //////////////////////////////////////////////////////////////////////////
     // Vars.
     //////////////////////////////////////////////////////////////////////////
-    int m_consoleOrScript;  // 0 -> console commands, 1 -> script commands
 
     void FillConsoleCmds();
-    void FillScriptCmds();
 
 private:
     MacroModel* m_macroModel;

@@ -99,6 +99,9 @@ namespace AZ
             //! Set the using systems identifier tag
             void SetUserIdentifier(uint32_t userIdentifier);
 
+            //! The identifier tag assigned by the system reserving this readback.
+            uint32_t GetUserIdentifier() const { return m_userIdentifier; }
+
             //! Whether the previous readback is finished
             bool IsFinished() const;
 

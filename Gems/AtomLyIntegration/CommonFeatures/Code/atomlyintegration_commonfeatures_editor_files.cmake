@@ -58,6 +58,8 @@ set(FILES
     Source/PostProcess/Vignette/EditorVignetteComponent.h
     Source/PostProcess/ColorGrading/EditorHDRColorGradingComponent.cpp
     Source/PostProcess/ColorGrading/EditorHDRColorGradingComponent.h
+    Source/PostProcess/ColorGrading/JEEditorLutWriter.cpp
+    Source/PostProcess/ColorGrading/JEEditorLutWriter.h
     Source/PostProcess/DepthOfField/EditorDepthOfFieldComponent.cpp
     Source/PostProcess/DepthOfField/EditorDepthOfFieldComponent.h
     Source/PostProcess/DisplayMapper/EditorDisplayMapperComponent.cpp

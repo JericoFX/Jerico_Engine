@@ -45,7 +45,6 @@
 #include <AzToolsFramework/API/EditorAnimationSystemRequestBus.h>
 #include <AzToolsFramework/Editor/ActionManagerUtils.h>
 #include <AzToolsFramework/PaintBrush/GlobalPaintBrushSettingsWindow.h>
-#include <AzToolsFramework/PythonTerminal/ScriptTermDialog.h>
 #include <AzToolsFramework/SourceControl/QtSourceControlNotificationHandler.h>
 #include <AzToolsFramework/Viewport/LocalViewBookmarkLoader.h>
 #include <AzToolsFramework/Viewport/ViewportSettings.h>
@@ -86,7 +85,6 @@
 #include "TrackView/TrackViewDialog.h"
 #include "ErrorReportDialog.h"
 
-#include "Dialogs/PythonScriptsDialog.h"
 
 #include "AzAssetBrowser/AzAssetBrowserWindow.h"
 #include "AssetEditor/AssetEditorWindow.h"
@@ -678,9 +676,6 @@ void MainWindow::RegisterStdViewClasses()
 
     CTrackViewDialog::RegisterViewClass();
     CErrorReportDialog::RegisterViewClass();
-    CPythonScriptsDialog::RegisterViewClass();
-
-    AzToolsFramework::CScriptTermDialog::RegisterViewClass();
     CConsoleSCB::RegisterViewClass();
     ConsoleVariableEditor::RegisterViewClass();
     CSettingsManagerDialog::RegisterViewClass();

@@ -17,7 +17,6 @@
 #include <AzCore/Utils/Utils.h>
 
 // AzToolsFramework
-#include <AzToolsFramework/API/EditorPythonRunnerRequestsBus.h>
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 
 // Editor
@@ -48,8 +47,7 @@ void CToolBoxCommand::Execute() const
 {
     if (m_type == CToolBoxCommand::eT_SCRIPT_COMMAND)
     {
-        using namespace AzToolsFramework;
-        EditorPythonRunnerRequestBus::Broadcast(&EditorPythonRunnerRequestBus::Events::ExecuteByString, m_text.toUtf8().data(), false);
+        AZ_Warning("toolbar", false, "Legacy Python macro commands are unsupported: %s", m_text.toUtf8().data());
     }
     else if (m_type == CToolBoxCommand::eT_CONSOLE_COMMAND)
     {
@@ -62,14 +60,6 @@ void CToolBoxCommand::Execute() const
         }
         else
         {
-            // does the command required an active Python interpreter?
-            if (m_text.contains("pyRunFile") && !AzToolsFramework::EditorPythonRunnerRequestBus::HasHandlers())
-            {
-                AZ_Warning("toolbar", false, "The command '%s' requires an embedded Python interpreter. "
-                                             "The gem named EditorPythonBindings offers this service. "
-                                             "Please enable this gem for the project.", m_text.toUtf8().data());
-                return;
-            }
             GetIEditor()->GetSystem()->GetIConsole()->ExecuteString(m_text.toUtf8().data());
         }
     }

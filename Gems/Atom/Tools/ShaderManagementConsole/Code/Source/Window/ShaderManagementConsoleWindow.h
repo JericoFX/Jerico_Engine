@@ -39,6 +39,8 @@ namespace ShaderManagementConsole
 
         void GenerateStatisticView();
 
+        void GenerateShaderVariantList();
+
         void ShowContextMenu(const QPoint& pos);
 
         void ErrorMessageBoxesForDocumentVerification(const DocumentVerificationResult& verification);
@@ -48,5 +50,6 @@ namespace ShaderManagementConsole
 
         AtomToolsFramework::AtomToolsDocumentInspector* m_documentInspector = {};
         QWidget* m_statisticView = nullptr;
+        bool m_generationInProgress = false;
     };
 } // namespace ShaderManagementConsole
