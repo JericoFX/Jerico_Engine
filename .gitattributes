@@ -162,3 +162,7 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 # Ship the two audited original fixture launcher resources without inherited LFS endpoints.
 /Projects/JEEditorFixture/Resources/GameSDK.ico -filter -diff -merge -text
 /Projects/JEEditorFixture/Resources/Splash.bmp -filter -diff -merge -text
+# Native camera icons: original audited payloads, independent of legacy LFS endpoints.
+/Engine/World/Camera/Assets/Camera/Editor/Icons/Components/Disabled/Camera_white.png -filter -diff -merge -text
+/Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Disabled/Camera_rig_white.png -filter -diff -merge -text
+/Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Viewport/CameraRig.png -filter -diff -merge -text

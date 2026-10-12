@@ -20,7 +20,6 @@
     "requirements": "",
     "documentation_url": "https://www.o3de.org/docs/user-guide/gems/reference/rendering/starting-point-camera/",
     "dependencies": [
-        "CameraFramework",
         "LmbrCentral"
     ]
 }

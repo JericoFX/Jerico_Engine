@@ -9,6 +9,7 @@
 #include "native/utilities/ApplicationManager.h"
 
 #include <JE/Geometry/GeometryModule.h>
+#include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 #include <JE/Editor/Materials/MaterialsRegistration.h>
 
@@ -221,6 +222,7 @@ void AssetProcessorAZApplication::CreateStaticModules(AZStd::vector<AZ::Module*>
 {
     AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
     outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+    outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
 }
 
 void AssetProcessorAZApplication::RegisterCoreComponents()

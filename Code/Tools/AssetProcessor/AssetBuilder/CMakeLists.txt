@@ -21,6 +21,7 @@ ly_add_target(
                 AZ::AzToolsFramework
                 AZ::AssetBuilderSDK
                 JE::Geometry.Authoring
+                JE::EditorCamera
                 JE::EditorMaterials
 )
 

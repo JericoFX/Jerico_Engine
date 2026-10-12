@@ -40,6 +40,7 @@ ly_add_target(
             Gem::CommonFeaturesAtom.Static
             JE::RenderMaterials
             Gem::AtomToolsFramework.Editor
+            JE::EditorCamera
             Gem::AtomToolsFramework.Static
     RUNTIME_DEPENDENCIES
         Gem::AtomToolsFramework.Editor

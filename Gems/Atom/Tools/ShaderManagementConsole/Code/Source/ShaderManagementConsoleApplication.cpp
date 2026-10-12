@@ -7,6 +7,7 @@
  */
 
 #include <AssetDatabase/AssetDatabaseConnection.h>
+#include <JE/Editor/Camera/CameraModule.h>
 #include <Atom/RPI.Edit/Common/AssetUtils.h>
 #include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
 #include <Atom/RPI.Public/Material/Material.h>
@@ -67,6 +68,12 @@ namespace ShaderManagementConsole
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
         ShaderManagementConsoleRequestBus::Handler::BusDisconnect();
         m_window.reset();
+    }
+
+    void ShaderManagementConsoleApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+    {
+        Base::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 
     void ShaderManagementConsoleApplication::Reflect(AZ::ReflectContext* context)

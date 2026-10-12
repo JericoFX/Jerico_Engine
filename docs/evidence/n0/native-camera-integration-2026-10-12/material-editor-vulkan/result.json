@@ -1,0 +1,8 @@
+{
+  "status": "STARTUP_PREVIEW_VERIFIED",
+  "pid": 268508,
+  "backend": "Vulkan",
+  "preview": "Shaderball / Neutral Urban",
+  "scope": "Visible startup preview after native Camera composition; no material edited or saved",
+  "shutdown": "AltF4; process absent after close"
+}

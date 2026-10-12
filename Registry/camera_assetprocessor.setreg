@@ -1,0 +1,22 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve the existing database identities and relative icon paths.
+                // The native engine owns these roots; no Camera Gem discovery is required.
+                "ScanFolder gemassets-{D0FC15E5-2525-550F-B4D7-4000FBC0B141}": {
+                    "watch": "@ENGINEROOT@/Engine/World/Camera/Assets/Camera",
+                    "display": "Engine/World/Camera",
+                    "recursive": 1,
+                    "order": 100
+                },
+                "ScanFolder gemassets-{BE37FFDB-D2EE-5125-8CE1-62B239666B68}": {
+                    "watch": "@ENGINEROOT@/Engine/World/Camera/Assets/CameraFramework",
+                    "display": "Engine/World/Camera/Rig",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

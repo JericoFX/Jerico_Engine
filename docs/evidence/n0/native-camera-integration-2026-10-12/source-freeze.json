@@ -1,0 +1,513 @@
+{
+  "status": "FROZEN_FOR_NATIVE_VALIDATION",
+  "utc": "2026-10-12T09:03:24.4010476Z",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\.gitattributes",
+      "bytes": 9417,
+      "sha256": "E8ED5B1A60AF2984D7084D2850A2652020428355EC4E83E5D9CD7B69EB92A9CB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\project.json",
+      "bytes": 1856,
+      "sha256": "3D59176ACB53159BD87F6E72BA6D232D82CC864E175076C00C0DA9C0D7BC4103"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\CMakeLists.txt",
+      "bytes": 9856,
+      "sha256": "3ED2BB0C2AB40ADDDC6F0073C0D848941C64793C864D3D28E15D2C8C4DDBDD15"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\CMakeLists.txt",
+      "bytes": 7576,
+      "sha256": "3E2515567101CA6CA6AF65A94FD16E2B5F27BDFC06E4F52813AFA165F5BAF7E1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+      "bytes": 14054,
+      "sha256": "391057C71F7B9682AE14E5C5FB24B577AA57EA6557FB53C65B8407BB29197F80"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzFramework\\AzFramework\\Components\\CameraBus.h",
+      "bytes": 12669,
+      "sha256": "596D3AE5FADFD6DC56C33678D2DD7851E9D82B232852D8A49303A11ABA1710A1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Framework\\AzToolsFramework\\AzToolsFramework\\API\\EditorCameraBus.h",
+      "bytes": 6638,
+      "sha256": "DF3946552EA62BA1EE4AAFB7A675CDA0AFA238A305D278F136282D8AC4A81CD4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\CMakeLists.txt",
+      "bytes": 4348,
+      "sha256": "4DE18155B72B8ADDD84E13CF5AD2417BC3C5E40C5D8EDC9FF919F9CF9A75CFF8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp",
+      "bytes": 32142,
+      "sha256": "C5EAA11E65A5203D8328EE21DE4D1E52333402663C2F59BB14A3FF38937C6533"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+      "bytes": 10299,
+      "sha256": "63EE78EFB639580C45E521CF188EA31E0DD30BB2465F6C8B9E49A6521512F876"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\CMakeLists.txt",
+      "bytes": 2546,
+      "sha256": "3C1CB60B91476CF98A5F672DFB70A3BB8A61928CF3F2C64A0A5568786863830E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\CMakeLists.txt",
+      "bytes": 9776,
+      "sha256": "F319FC60D05FFA5C4AC7796405699A0CFE3FD8567BA1066600DA6AC242E5EB27"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+      "bytes": 32364,
+      "sha256": "5C3A4D59EA6AB04A4EBA3B00DBAA2AEE8FCE590E67AA4BA3282310374F548B73"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SerializeContextTools\\Application.cpp",
+      "bytes": 8936,
+      "sha256": "E4957DF9862C0F78836C9A8B9486D035B744026750A31178E8B49DF847A607BE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SerializeContextTools\\Application.h",
+      "bytes": 2035,
+      "sha256": "C20A75134BD5F6EFDD5112C53EBD9D27726E0F8977A14F0B149121231BCD2976"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\SerializeContextTools\\CMakeLists.txt",
+      "bytes": 1851,
+      "sha256": "74AA354E250A56603C7BBBE46F6AD6350AC73CB2DAC1D81532560E6C47F91B02"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\camera_files.cmake",
+      "bytes": 459,
+      "sha256": "F12168652335954F10B87458E6C980559928F8167F8ABAA16018BAD585D1C403"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\camera_tests_files.cmake",
+      "bytes": 69,
+      "sha256": "3D5F65D0B403ABEDC6EF62E6C230AA6CEFDDFBA854EE36C58303E5468B78F103"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\CMakeLists.txt",
+      "bytes": 923,
+      "sha256": "05628658DC52FB9D940492F1A7A41E5C606D3892C485B5B2D77A5AA4F458BD13"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Include\\JE\\Editor\\Camera\\CameraEditorSystemComponent.h",
+      "bytes": 2757,
+      "sha256": "5ACB4A1F3A7605218844E8EA5684FB1C75764F2443AC072CC3C4D60EC774600D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Include\\JE\\Editor\\Camera\\CameraExports.h",
+      "bytes": 358,
+      "sha256": "F037CF37196A406DE8072E1A2114D7DCB1DAC6E0B4B441EBA490822BBEC073C0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Include\\JE\\Editor\\Camera\\CameraModule.h",
+      "bytes": 691,
+      "sha256": "58F2DC642EB07EF9776864B0432AF2ECB8887C53E112EEDCE87F0D45DA736DF5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Include\\JE\\Editor\\Camera\\EditorCameraComponent.h",
+      "bytes": 3136,
+      "sha256": "91B7FB4C51C94CA96BF9D787638BC84AE43441371643F582370F3CAB547EFE41"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Source\\CameraEditorSystemComponent.cpp",
+      "bytes": 9660,
+      "sha256": "F8B1D292550CDB95BC8D1103AF11AC4D4140D1C6DE1E17E1B2A67771991F00B6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Source\\CameraModule.cpp",
+      "bytes": 974,
+      "sha256": "328D8358E8F8D6097A7FF7529BD50B5F573798E0642018757A57CE93FC344F36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Source\\EditorCameraComponent.cpp",
+      "bytes": 15910,
+      "sha256": "5C23D9BFA99EBAC9FF535519AAE3F9C5592625EC2857DDC684079903A685ED4C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Source\\ViewportCameraSelectorWindow_Internals.h",
+      "bytes": 4267,
+      "sha256": "95D2633DB372230E68647AFF493D0D7086AA1A1714D07B8C8CFCBB770AB981C7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Source\\ViewportCameraSelectorWindow.cpp",
+      "bytes": 14916,
+      "sha256": "AB46BA74785E94C026E9A9C2ED43515270AE7B9B95BDBEEA8F36E33D9BA5AB76"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Source\\ViewportCameraSelectorWindow.h",
+      "bytes": 452,
+      "sha256": "B02D11D3874E6396A26E67796A2F065538B3893159EF39A1772B8A55EEC25850"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Tests\\CameraEditorUITests.cpp",
+      "bytes": 2400,
+      "sha256": "720E4BE24623EF55BC932EC668D40CDCAC09C7F85BA8DC3621EC00ABB05613DC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Tests\\CameraModuleTests.cpp",
+      "bytes": 9080,
+      "sha256": "93FC6A8CC166C104CED7C4FB5BDBA2C6ECC2B18B59CF77ACE548344B1F5B0B2E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\engine.json",
+      "bytes": 3701,
+      "sha256": "6AE00A5AEBADE3D2EA3D2A6572F63A787B29B5C0C856B28F4B3BD3B44EDF12C9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\CMakeLists.txt",
+      "bytes": 439,
+      "sha256": "02133839C6A33AD96777364D0535D79636E2A3F6D2A8FE5D477CA708B50C6E8B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\Camera\\Editor\\Icons\\Components\\Camera.svg",
+      "bytes": 2304,
+      "sha256": "412B6AEC2D4ED30F9A373081D5C582E2D7F3259A8562468F32EFA545EFADA898"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\Camera\\Editor\\Icons\\Components\\Disabled\\Camera_white.png",
+      "bytes": 589,
+      "sha256": "B1E48ABC27F70735344F12A7044B523EF64E7AD0FF4E8C5B8572832BBA06792C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\Camera\\Editor\\Icons\\Components\\Viewport\\Camera.svg",
+      "bytes": 3601,
+      "sha256": "999630E0BA0C324A0DBD3040A9D5190879EC69F8F7CA2D4D395A27996B476E9B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\CameraRig.svg",
+      "bytes": 5645,
+      "sha256": "6B01908BF1002AB39CADBEDBFC900FA5CA718F8789DD26DABCEC04A0875840D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\Disabled\\Camera_rig_white.png",
+      "bytes": 580,
+      "sha256": "92FAE863FB604422C387E0AE7E623C5AC4F4BD8F8FBEEB60F1F4293FF10A2999"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\FlyCameraInput.svg",
+      "bytes": 5053,
+      "sha256": "4E670220C13D1B24D338E64E45454C9C8B526C3C4D44B5B264BC529D26C14619"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\Viewport\\CameraRig.png",
+      "bytes": 4224,
+      "sha256": "D99943A2D6D971F27C03887D34A105A052F618949986BB2B4B06165FFC4FE5C4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Assets\\CameraFramework\\Editor\\Icons\\Components\\Viewport\\FlyCameraInput.svg",
+      "bytes": 6352,
+      "sha256": "B220407CE23A486B5F104745784A619211565FC8E0BFD1E680A191AF8CFF8DE9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\camera_files.cmake",
+      "bytes": 875,
+      "sha256": "0477BFB68947E16B5AF5800D86041E56748378F9C73BB8F4F5BCEE1721EF0AD1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\camera_tests_files.cmake",
+      "bytes": 39,
+      "sha256": "5F871A2EC5025FDAC5DE34E57CD94E5C16D14E06C5A973AB020915045D6FB208"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\CMakeLists.txt",
+      "bytes": 857,
+      "sha256": "AFEC8E9D3010BDC0918850AEDBDE46EF7E6781553D51740A666A36AE742606E4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraComponent.h",
+      "bytes": 1729,
+      "sha256": "80E7DA1ACB2A7837385EE6DD445A6240229F31F964CA4343E285C83C72DA7962"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraComponentController.h",
+      "bytes": 9327,
+      "sha256": "D1F0448DE6CCDA0A6ED5A270257E8E956DBFB2D35DE5BD2EF7BA6CAC8C2EF199"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraComponentConverters.h",
+      "bytes": 588,
+      "sha256": "E012BCA78092F1398A463D673F797258DC7D694D481A925DF2D569AE4C6DEFD2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraExports.h",
+      "bytes": 354,
+      "sha256": "0673AC15339A55EC6113EB70CCD1B3765CB81CA629C3C3A868F9147C071DEFFC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraModule.h",
+      "bytes": 677,
+      "sha256": "A673D548B5E47AD4696A66853EEEC7504B4CD9D13F83B32E677C0DC643CC8426"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraRigComponent.h",
+      "bytes": 2659,
+      "sha256": "98255D8341BDF4167C7BF2F854CF6C70EC3318F2C6AC51A9F8A1DF0AA5149DBC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraSystemComponent.h",
+      "bytes": 2372,
+      "sha256": "9452B06B0CEB8D8E7D2F95AAECFC161F476C7ABADB5BFC990F52AEE2AE9D9C94"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\CameraViewRegistrationBus.h",
+      "bytes": 1166,
+      "sha256": "E9A7F5C573A29D8BFE0B76A335EC43BE243CB967A238267E9FE436E884EA0801"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraLookAtBehavior.h",
+      "bytes": 1252,
+      "sha256": "B29A6CB4E8D2BA26A7B2F60204EBF17F47B53CB4E226270A4E64E677460F42BE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraSubComponent.h",
+      "bytes": 1136,
+      "sha256": "12829D166BEDFAAD9CD6DACDA16ABAE99E4D6ED579A742972B6FE27DDEC20083"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraTargetAcquirer.h",
+      "bytes": 1152,
+      "sha256": "75BA2208C993DD48384A7EE1B5EB26BB01E7F164948CE7005A7294D283FC05ED"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Include\\JE\\World\\Camera\\ICameraTransformBehavior.h",
+      "bytes": 1423,
+      "sha256": "ADFC00E63693745D18B95DAFC5BDADA4D4529430AB75A63E925970339F56F4BD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraComponent.cpp",
+      "bytes": 6459,
+      "sha256": "BF9FDBBF1667D732F1604F6724A6C73A538D867D26D235621865321954B91430"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraComponentController.cpp",
+      "bytes": 35291,
+      "sha256": "81863A5AF0AA2527206F07A18DE5432196A8BDDEB6841F46E3E4BE62BD653A13"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraComponentConverter.cpp",
+      "bytes": 4431,
+      "sha256": "1574A6B0D7B454EB818A56D385DCEC0560A078A461CCFE6CA183747557D18298"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraModule.cpp",
+      "bytes": 862,
+      "sha256": "28917CEAE10EEB2A678B61F8883470CF88E3F1089DD92AC178659CFF67703BCD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraRigComponent.cpp",
+      "bytes": 9612,
+      "sha256": "9DF32DE33DA21DC417A8416D3F2DB4CE5A619FF7CEA3191DD47C2D37F669819E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraSystemComponent.cpp",
+      "bytes": 4227,
+      "sha256": "CE3BC27EBC07F6BAA44608ACF1A47483E289D36871B9318064E73BE12C8DCFB7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Source\\CameraViewRegistrationBus.cpp",
+      "bytes": 274,
+      "sha256": "DAFEA37083D1CD643FED219CBA8824BD5162FB69B4E950A0E955D34CAC0E7C39"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Tests\\CameraModuleTests.cpp",
+      "bytes": 4678,
+      "sha256": "FF1DFD6A5B3FF717FB7A9043037AC3A00717186886A591646904A6F6132C55E9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\CMakeLists.txt",
+      "bytes": 3030,
+      "sha256": "0E9F5471CA10ED64F0BE810C85AAF6B5BD0260302A45A89E3FAE965E9148C6AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\Source\\MaterialCanvasApplication.cpp",
+      "bytes": 23223,
+      "sha256": "5B8278880FBC46D6138701807AF1345789BC15F2FB684E5E9716EB11A150FD79"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\Source\\MaterialCanvasApplication.h",
+      "bytes": 3533,
+      "sha256": "2FB590492BA3B6564CC5B6BD0C04E26BFDE6371DA18B93D5C02008374C5293AC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\CMakeLists.txt",
+      "bytes": 3030,
+      "sha256": "43CB4C30DB56991A5C69AE8B2DF6019D80864138D6CC385812C282D12DA6C4DF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\Source\\MaterialEditorApplication.cpp",
+      "bytes": 4399,
+      "sha256": "6530710DB7E8FAF83A33D24A49E037988C3AB5077BF5F63DAAFE2E1FB99E9E38"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\Source\\MaterialEditorApplication.h",
+      "bytes": 1995,
+      "sha256": "1792C8C0ED8EF4B771E1C1DD696E0A12A79D12A9FC3D07F4361F97501E041F36"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Code\\CMakeLists.txt",
+      "bytes": 2914,
+      "sha256": "F689D5FC002DBD4AD9F30CE8CF615C9A0DCCC8D8A7C45F1B28CBA6BF3A25641C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Code\\Source\\PassCanvasApplication.cpp",
+      "bytes": 12421,
+      "sha256": "DCCF55C9A467F42EB0458211ECC44020AA6F1C91E08AC030B391BCCDC40FC38B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\Code\\Source\\PassCanvasApplication.h",
+      "bytes": 2779,
+      "sha256": "A77C5A8FFCAD2B26B41539A6EC2DB612E74B0D6A168479F284CFC1186433E972"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\CMakeLists.txt",
+      "bytes": 3691,
+      "sha256": "6FF35BCB67C44AA9082644407929C32C2B639EC29D1BEFDC7433D63082BEC475"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\ShaderManagementConsoleApplication.cpp",
+      "bytes": 13306,
+      "sha256": "F87F89560BB1C2DC2987A295761D4047B0B4EBA6F63052D5C95EE38D279453C3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Source\\ShaderManagementConsoleApplication.h",
+      "bytes": 2728,
+      "sha256": "8CD06DC67E07F24A34EDE2FD630CA98CAA90E11B864F506089C93817C64F397C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera\\CMakeLists.txt",
+      "bytes": 416,
+      "sha256": "F077F85C86A0D400ED58873637FF235089B4768918464D2A767F52433E5F6CC3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera\\gem.json",
+      "bytes": 817,
+      "sha256": "40100FCEBBF996D5268AF795B3EE0BE55C70A53CBF1A39B73228B8BC558018E2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework\\CMakeLists.txt",
+      "bytes": 425,
+      "sha256": "A420EF41D93FFD614CDE2DDA047F4D6179ABA07C1BA266314C4C1DF84595A468"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework\\gem.json",
+      "bytes": 847,
+      "sha256": "AF524D4A51A3306CFB1199A1364C0E18D3FB7806E9FCABF80F46DB621C9F3B51"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\CMakeLists.txt",
+      "bytes": 1853,
+      "sha256": "D7354C230C3B89B7FC2FDA6D90DB2AC9ACB6ACF9D8D5BEA076AD22BF58E0E1FD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraLookAtBehaviors\\OffsetPosition.h",
+      "bytes": 1670,
+      "sha256": "A3B57A8D5B7D65FC64BD8C73DAEE6647778F33A6038170F7BDB79D67E2853AF0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraLookAtBehaviors\\RotateCameraLookAt.h",
+      "bytes": 2760,
+      "sha256": "7BCBEBA8F8366592E300CE141BD4B7E5F18EF7988CD7CB2CDF53343301FE2119"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraLookAtBehaviors\\SlideAlongAxisBasedOnAngle.h",
+      "bytes": 2608,
+      "sha256": "954FB552BDF26FE4BE6E3E5798B1F0EAE18A9F81121471B9D5DB6D52990B47CE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTargetAcquirers\\AcquireByEntityId.h",
+      "bytes": 1836,
+      "sha256": "324A67164FDAA8FB578CDD8C8BE7ED423D5FEF1A8B79E01A5E03D2B5E4C4050F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTargetAcquirers\\AcquireByTag.h",
+      "bytes": 2315,
+      "sha256": "E3AAB18990F2EC583DA6B2EF0A6F09A6C353DBE5FBFC1BC2BA63E0C6E9964796"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTransformBehaviors\\FaceTarget.h",
+      "bytes": 1522,
+      "sha256": "2D173428FBBA5F9046A3717B832A9C90D6813F33574B90E961B3C659908D36C6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTransformBehaviors\\FollowTargetFromAngle.h",
+      "bytes": 1916,
+      "sha256": "46AAA4552BECECB58FD52F71E58D10141433CA5DC6B059FF440F6529BCD5DD7D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTransformBehaviors\\FollowTargetFromDistance.h",
+      "bytes": 2709,
+      "sha256": "6E756A2F6D113C14E63A410F1C06B590F91E81A33541201DFBEE893863A52D06"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTransformBehaviors\\OffsetCameraPosition.h",
+      "bytes": 1758,
+      "sha256": "698EB6A7862EE670F2432AEBC5E3B553ED3E1BB4688A95AE9A38DB974EB477EF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\Code\\Source\\CameraTransformBehaviors\\Rotate.h",
+      "bytes": 1738,
+      "sha256": "96E46D6A82E6191A50A18113992CFC3443D2AE85E1BDB2D05C908C0C534323B0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\gem.json",
+      "bytes": 847,
+      "sha256": "FA053FD1930ECEA94180DF67AB129B69227F173AA1255E43C5A7617D08B2E052"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\project.json",
+      "bytes": 588,
+      "sha256": "84B3387D5144D7B8031028D3BD8A5DC46083A36279EB4008EEC53C7C16AD3B63"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+      "bytes": 11664,
+      "sha256": "7E02A7AC2974DFED57733CD3A0C6980074C8C9DA22B29C0442D83DC534DCFBE8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Registry\\camera_assetprocessor.setreg",
+      "bytes": 898,
+      "sha256": "1340604CE5A2DB294F7BB9A4AF06749A20DD06465385A6424AEDF33ACBEEDBFF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\project.json",
+      "bytes": 1164,
+      "sha256": "3CBB2A5DEE8AA429664E34B12630FBC50F305635038A626E586E5C59FEABF9EE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\MinimalProject\\Template\\project.json",
+      "bytes": 714,
+      "sha256": "CE955ED8E3B2108077BA4BB0B5FBD757F39B8EAB1D4B6CE34FC1845ABDE07805"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Templates\\ScriptOnlyProject\\Template\\project.json",
+      "bytes": 1148,
+      "sha256": "C821C962B941BE3A32122E104E7A14F944F44F2DE941C389ABDD1E367EAAA4DA"
+    }
+  ],
+  "changes": [
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Tests\\CameraEditorUITests.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Camera\\Tests\\CameraModuleTests.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\World\\Camera\\Tests\\CameraModuleTests.cpp",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab"
+  ],
+  "note": "Only three test lifecycle fixes and parent UI FOV 65 to55 in own JENativeIntegration copy. Product sources unchanged."
+}

@@ -3,7 +3,7 @@
 This in-tree project supplies a real native Editor scene with a focally verified
 WhiteBox authoring, material/UV editing and Editor/runtime capture route. These
 checks do not close N0/N1 or the complete product acceptance. It has no custom Gem and uses
-the six remaining seed Gems in project.json, including transitional PhysX5. Geometry/WhiteBox and materials are composed directly from the native engine subsystems; WhiteBox is no longer activated as a project Gem.
+the five remaining seed Gems in project.json, including transitional PhysX5. Geometry/WhiteBox, materials and cameras are composed directly from the native engine subsystems; WhiteBox, Camera and CameraFramework are no longer activated as project Gems.
 The retained template `script_only` flag means no custom project Gem; it does
 not select a scripting runtime. Their actual native/asset dependencies
 remain required; the fixture does not replace the engine renderer or cooker.

@@ -1,0 +1,8 @@
+{
+  "path": "Editor/Camera/Tests/CameraModuleTests.cpp",
+  "beforeSha256": "93FC6A8CC166C104CED7C4FB5BDBA2C6ECC2B18B59CF77ACE548344B1F5B0B2E",
+  "afterSha256": "21F6EF4CD6848E5372FAB5BB584370F1C8170E1941696E8E56C3529B7797D676",
+  "change": "Remove extra blank line at EOF only",
+  "sameAfterTrimmingTerminalNewlines": true,
+  "verification": "Previous native evidence retained: no C++ token or configuration change"
+}

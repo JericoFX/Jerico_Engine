@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraTransformBehavior.h>
+#include <JE/World/Camera/ICameraTransformBehavior.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include "StartingPointCamera/StartingPointCameraConstants.h"
@@ -19,11 +19,11 @@ namespace Camera
     /// a given angle of Yaw, Pitch or Roll
     //////////////////////////////////////////////////////////////////////////
     class FollowTargetFromAngle
-        : public ICameraTransformBehavior
+        : public JE::World::Camera::ICameraTransformBehavior
     {
     public:
         ~FollowTargetFromAngle() override = default;
-        AZ_RTTI(FollowTargetFromAngle, "{4DBE7A2C-8E93-422E-8942-9601A270D37E}", ICameraTransformBehavior)
+        AZ_RTTI(FollowTargetFromAngle, "{4DBE7A2C-8E93-422E-8942-9601A270D37E}", JE::World::Camera::ICameraTransformBehavior)
         AZ_CLASS_ALLOCATOR(FollowTargetFromAngle, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

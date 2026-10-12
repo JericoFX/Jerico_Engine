@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraTransformBehavior.h>
+#include <JE/World/Camera/ICameraTransformBehavior.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/Memory/SystemAllocator.h>
@@ -17,11 +17,11 @@ namespace Camera
     /// Use this behavior to offset the camera's position by a fixed amount
     //////////////////////////////////////////////////////////////////////////
     class OffsetCameraPosition
-        : public ICameraTransformBehavior
+        : public JE::World::Camera::ICameraTransformBehavior
     {
     public:
         ~OffsetCameraPosition() override = default;
-        AZ_RTTI(OffsetCameraPosition, "{DB64D5DA-84B7-45B7-B221-B5A07BDA2F69}", ICameraTransformBehavior)
+        AZ_RTTI(OffsetCameraPosition, "{DB64D5DA-84B7-45B7-B221-B5A07BDA2F69}", JE::World::Camera::ICameraTransformBehavior)
         AZ_CLASS_ALLOCATOR(OffsetCameraPosition, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

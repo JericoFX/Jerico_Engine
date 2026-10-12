@@ -1,0 +1,304 @@
+{
+  "capturedUtc": "2026-10-12T08:46:03.0135018Z",
+  "count": 28,
+  "files": [
+    {
+      "name": "cmake_dependencies.assetbuilder.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbuilder.setreg",
+      "bytes": 10659,
+      "sha256": "5E0C35DFC32574DBA3404B2D2AA8F528EEC5DB57649E8B8DFAE97E8A5FE16FA5",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.assetbuilder.setreg"
+    },
+    {
+      "name": "cmake_dependencies.assetbundler.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbundler.setreg",
+      "bytes": 10659,
+      "sha256": "5E0C35DFC32574DBA3404B2D2AA8F528EEC5DB57649E8B8DFAE97E8A5FE16FA5",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.assetbundler.setreg"
+    },
+    {
+      "name": "cmake_dependencies.assetbundlerbatch.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbundlerbatch.setreg",
+      "bytes": 10659,
+      "sha256": "5E0C35DFC32574DBA3404B2D2AA8F528EEC5DB57649E8B8DFAE97E8A5FE16FA5",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.assetbundlerbatch.setreg"
+    },
+    {
+      "name": "cmake_dependencies.assetprocessor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessor.setreg",
+      "bytes": 10659,
+      "sha256": "5E0C35DFC32574DBA3404B2D2AA8F528EEC5DB57649E8B8DFAE97E8A5FE16FA5",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.assetprocessor.setreg"
+    },
+    {
+      "name": "cmake_dependencies.assetprocessorbatch.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+      "bytes": 10659,
+      "sha256": "5E0C35DFC32574DBA3404B2D2AA8F528EEC5DB57649E8B8DFAE97E8A5FE16FA5",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.assetprocessorbatch.setreg"
+    },
+    {
+      "name": "cmake_dependencies.editor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.editor.setreg",
+      "bytes": 10696,
+      "sha256": "F07ADD30D36A5FA767D92713CECDE5A80A822C55EFE8D2B10EC1805DD9C641ED",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.editor.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 6124,
+      "sha256": "3B847CB605FF9C7E7B3D47F16CFA6B4DC91BB92E636E969262BFA0C250CBFC3E",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "bytes": 6208,
+      "sha256": "B5640637FB7E40AE9C6749EFEB01C1DCB2557941AD93E59085DB1BCC20B4B379",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "bytes": 6094,
+      "sha256": "CA9A5122E0C1D23B9B104DAB5904C0B0AAE496DE962B473F4A2B90D71FA387FE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture_serverlauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "bytes": 6385,
+      "sha256": "5B5FA2B1D2FC93C8867FE140BDC45519EF85E4BE6038E3F986F9CAED7871358B",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "bytes": 9795,
+      "sha256": "CBBD4A914981880B56BD3E30C83252F84467BDE4FE9961D94D408C33EBA36BDE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.assetbuilder.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetbundler.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbundler.setreg",
+      "bytes": 9795,
+      "sha256": "CBBD4A914981880B56BD3E30C83252F84467BDE4FE9961D94D408C33EBA36BDE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.assetbundler.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetbundlerbatch.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbundlerbatch.setreg",
+      "bytes": 9795,
+      "sha256": "CBBD4A914981880B56BD3E30C83252F84467BDE4FE9961D94D408C33EBA36BDE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.assetbundlerbatch.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "bytes": 9795,
+      "sha256": "CBBD4A914981880B56BD3E30C83252F84467BDE4FE9961D94D408C33EBA36BDE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "bytes": 9795,
+      "sha256": "CBBD4A914981880B56BD3E30C83252F84467BDE4FE9961D94D408C33EBA36BDE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.editor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+      "bytes": 9496,
+      "sha256": "0D7853E6661471FE13DE87023056EBBECC8BCA4CFD101484445A1DBB226BD4D3",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.editor.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 5564,
+      "sha256": "57CB33BACA13013BC4CB2DA83C055FDEA16843572F2793F6137A526A3BC83EAE",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "bytes": 6244,
+      "sha256": "4744AD964A70C23039F0CCB1FAD892286593AF40499BC2072DE4549922242456",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "bytes": 6130,
+      "sha256": "7F96ADD6DC07039B520D506A71F15262DEC629F63545CF8F3C93373C2BE6D0F8",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "bytes": 6130,
+      "sha256": "7220FA8CB0C443F797C31557CDD47C23F493AAA75AE499007C81D59C7DA1E36A",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "bytes": 9496,
+      "sha256": "0D7853E6661471FE13DE87023056EBBECC8BCA4CFD101484445A1DBB226BD4D3",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.materialcanvas.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+      "bytes": 9496,
+      "sha256": "0D7853E6661471FE13DE87023056EBBECC8BCA4CFD101484445A1DBB226BD4D3",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.materialeditor.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+      "bytes": 9496,
+      "sha256": "0D7853E6661471FE13DE87023056EBBECC8BCA4CFD101484445A1DBB226BD4D3",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.passcanvas.setreg"
+    },
+    {
+      "name": "cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+      "bytes": 9496,
+      "sha256": "0D7853E6661471FE13DE87023056EBBECC8BCA4CFD101484445A1DBB226BD4D3",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg"
+    },
+    {
+      "name": "cmake_dependencies.materialcanvas.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialcanvas.setreg",
+      "bytes": 10696,
+      "sha256": "F07ADD30D36A5FA767D92713CECDE5A80A822C55EFE8D2B10EC1805DD9C641ED",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.materialcanvas.setreg"
+    },
+    {
+      "name": "cmake_dependencies.materialeditor.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialeditor.setreg",
+      "bytes": 10696,
+      "sha256": "F07ADD30D36A5FA767D92713CECDE5A80A822C55EFE8D2B10EC1805DD9C641ED",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.materialeditor.setreg"
+    },
+    {
+      "name": "cmake_dependencies.passcanvas.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.passcanvas.setreg",
+      "bytes": 10696,
+      "sha256": "F07ADD30D36A5FA767D92713CECDE5A80A822C55EFE8D2B10EC1805DD9C641ED",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.passcanvas.setreg"
+    },
+    {
+      "name": "cmake_dependencies.shadermanagementconsole.setreg",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.shadermanagementconsole.setreg",
+      "bytes": 10696,
+      "sha256": "F07ADD30D36A5FA767D92713CECDE5A80A822C55EFE8D2B10EC1805DD9C641ED",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\native-attempt2\\run-output\\final-registries\\cmake_dependencies.shadermanagementconsole.setreg"
+    }
+  ],
+  "activeCameraRegistrations": [
+    {
+      "registry": "cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "gem": "Camera",
+      "target": "Camera",
+      "modules": [
+        "Camera.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "gem": "Camera",
+      "target": "Camera",
+      "modules": [
+        "Camera.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "gem": "Camera",
+      "target": "Camera",
+      "modules": [
+        "Camera.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "gem": "CameraFramework",
+      "target": "CameraFramework",
+      "modules": [
+        "CameraFramework.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "gem": "CameraFramework",
+      "target": "CameraFramework",
+      "modules": [
+        "CameraFramework.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "gem": "CameraFramework",
+      "target": "CameraFramework",
+      "modules": [
+        "CameraFramework.dll"
+      ]
+    }
+  ],
+  "historicalServerRegistrations": [
+    {
+      "registry": "cmake_dependencies.jeeditorfixture_headlessserverlauncher.setreg",
+      "gem": "Camera",
+      "target": "Camera",
+      "modules": [
+        "Camera.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture_serverlauncher.setreg",
+      "gem": "Camera",
+      "target": "Camera",
+      "modules": [
+        "Camera.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture_unifiedlauncher.setreg",
+      "gem": "Camera",
+      "target": "Camera",
+      "modules": [
+        "Camera.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture.jeeditorfixture_headlessserverlauncher.setreg",
+      "gem": "CameraFramework",
+      "target": "CameraFramework",
+      "modules": [
+        "CameraFramework.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture.jeeditorfixture_serverlauncher.setreg",
+      "gem": "CameraFramework",
+      "target": "CameraFramework",
+      "modules": [
+        "CameraFramework.dll"
+      ]
+    },
+    {
+      "registry": "cmake_dependencies.jeeditorfixture.jeeditorfixture_unifiedlauncher.setreg",
+      "gem": "CameraFramework",
+      "target": "CameraFramework",
+      "modules": [
+        "CameraFramework.dll"
+      ]
+    }
+  ],
+  "currentProductRegistrations": [],
+  "clean": true
+}

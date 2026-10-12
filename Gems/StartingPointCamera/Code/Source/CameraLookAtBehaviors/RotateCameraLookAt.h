@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraLookAtBehavior.h>
+#include <JE/World/Camera/ICameraLookAtBehavior.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/std/string/string.h>
@@ -24,12 +24,12 @@ namespace Camera
     /// the target remains stationary.
     //////////////////////////////////////////////////////////////////////////
     class RotateCameraLookAt
-        : public ICameraLookAtBehavior
+        : public JE::World::Camera::ICameraLookAtBehavior
         , public AZ::GameplayNotificationBus::Handler
     {
     public:
         ~RotateCameraLookAt() override = default;
-        AZ_RTTI(RotateCameraLookAt, "{B72C5BE7-2DAF-412B-BBBB-F216B3DFB9A0}", ICameraLookAtBehavior);
+        AZ_RTTI(RotateCameraLookAt, "{B72C5BE7-2DAF-412B-BBBB-F216B3DFB9A0}", JE::World::Camera::ICameraLookAtBehavior);
         AZ_CLASS_ALLOCATOR(RotateCameraLookAt, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

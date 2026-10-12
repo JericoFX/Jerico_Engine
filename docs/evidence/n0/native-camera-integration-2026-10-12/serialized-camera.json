@@ -1,0 +1,33 @@
+{
+    "Id": 0,
+    "Controller": {
+        "Configuration": {
+            "Orthographic": false,
+            "Orthographic Half Width": 5.0,
+            "Field of View": 75.0,
+            "Near Clip Plane Distance": 0.20000000298023224,
+            "Far Clip Plane Distance": 1024.0,
+            "SpecifyDimensions": false,
+            "FrustumWidth": 256.0,
+            "FrustumHeight": 256.0,
+            "MakeActiveViewOnActivation": true,
+            "RenderToTexture": {
+                "assetId": {
+                    "guid": "{00000000-0000-0000-0000-000000000000}",
+                    "subId": 0
+                },
+                "loadBehavior": "QueueLoad",
+                "assetHint": ""
+            },
+            "PipelineTemplate": "CameraPipeline",
+            "AllowPipelineChange": false
+        }
+    },
+    "FrustumLengthPercent": 1.0,
+    "FrustumDrawColor": [
+        1.0,
+        1.0,
+        0.0,
+        0.8999999761581421
+    ]
+}

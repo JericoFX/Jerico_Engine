@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraTransformBehavior.h>
+#include <JE/World/Camera/ICameraTransformBehavior.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Memory/SystemAllocator.h>
@@ -22,11 +22,11 @@ namespace Camera
     /// This behavior will cause the camera to rotate to face the target
     //////////////////////////////////////////////////////////////////////////
     class FaceTarget
-        : public ICameraTransformBehavior
+        : public JE::World::Camera::ICameraTransformBehavior
     {
     public:
         ~FaceTarget() override = default;
-        AZ_RTTI(FaceTarget, "{1A2CBCD0-1841-493C-8DB7-1BCA0D293019}", ICameraTransformBehavior)
+        AZ_RTTI(FaceTarget, "{1A2CBCD0-1841-493C-8DB7-1BCA0D293019}", JE::World::Camera::ICameraTransformBehavior)
         AZ_CLASS_ALLOCATOR(FaceTarget, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

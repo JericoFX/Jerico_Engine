@@ -1,0 +1,26 @@
+{
+  "status": "EDITOR_EDIT_SAVE_VERIFIED_REOPEN_PENDING",
+  "pid": 111224,
+  "backend": "Vulkan",
+  "scene": "JENativeIntegration",
+  "checks": [
+    "Old camera listed in native selector",
+    "Inspector loaded original FOV65",
+    "Be this camera switches viewport",
+    "FOV55 accepted",
+    "Undo restores65",
+    "Redo via Edit menu restores55",
+    "Save wrote only FOV65to55"
+  ],
+  "beforeSha256": "D36E1CAAA4EBF5E4BC7BFA863837520FB86A0B2C59F97CC43A97B759DD8D03B1",
+  "afterSha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040",
+  "originalSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "exit": "AltF4 followed by Editor/AP/AssetBuilder process absence; no forced termination",
+  "limitations": [
+    "Reopen pending",
+    "No live FOV rendering update acceptance",
+    "Preexisting thumbnail and DiffuseProbeGrid pass template errors",
+    "Manual UV geometry guard remains, Reset All UVs not used",
+    "No perf benchmark"
+  ]
+}

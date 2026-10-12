@@ -39,6 +39,9 @@ namespace AZ::SerializeContextTools
         AZ::IO::FileDescriptorCapturer* GetStdoutCapturer() const;
 
     protected:
+        void RegisterCoreComponents() override;
+        void CreateStaticModules(AZStd::vector<AZ::Module*>& outModules) override;
+
         void SetSettingsRegistrySpecializations(AZ::SettingsRegistryInterface::Specializations& specializations) override;
 
         AZ::IO::FixedMaxPath m_configFilePath;

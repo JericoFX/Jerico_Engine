@@ -19,6 +19,10 @@ ly_add_target(
         PUBLIC
             .
     BUILD_DEPENDENCIES
+        PUBLIC
+            JE::Geometry.Authoring
+            JE::EditorMaterials
+            JE::EditorCamera
         PRIVATE
             AZ::AzCore
             AZ::AzFramework

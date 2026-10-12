@@ -8,7 +8,7 @@
 #pragma once
 #include <AzCore/std/string/string.h>
 #include <AzCore/RTTI/RTTI.h>
-#include <CameraFramework/ICameraTargetAcquirer.h>
+#include <JE/World/Camera/ICameraTargetAcquirer.h>
 #include <AzCore/Component/Component.h>
 #include <AzCore/Memory/SystemAllocator.h>
 
@@ -24,11 +24,11 @@ namespace Camera
     /// then return that target's transform when requested by the Camera Rig
     //////////////////////////////////////////////////////////////////////////
     class AcquireByEntityId
-        : public ICameraTargetAcquirer
+        : public JE::World::Camera::ICameraTargetAcquirer
     {
     public:
         ~AcquireByEntityId() override = default;
-        AZ_RTTI(AcquireByEntityId, "{14D0D355-1F83-4F46-9DE1-D41D23BDFC3C}", ICameraTargetAcquirer)
+        AZ_RTTI(AcquireByEntityId, "{14D0D355-1F83-4F46-9DE1-D41D23BDFC3C}", JE::World::Camera::ICameraTargetAcquirer)
         AZ_CLASS_ALLOCATOR(AcquireByEntityId, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

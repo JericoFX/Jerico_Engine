@@ -1,0 +1,7 @@
+{
+  "visualStatus": "BLOCKED_CAPTURE_TOOL",
+  "error": "foreground window did not report a process id",
+  "recovery": "Fresh window selection and rehydrate/activate retry failed",
+  "processTermination": "Explicit Stop-Process after exact executable path validation",
+  "pid": 290936
+}

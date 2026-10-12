@@ -10,7 +10,7 @@
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/RTTI/ReflectContext.h>
-#include <CameraFramework/ICameraLookAtBehavior.h>
+#include <JE/World/Camera/ICameraLookAtBehavior.h>
 
 namespace Camera
 {
@@ -24,11 +24,11 @@ namespace Camera
     /// corners.  This is primarily useful for third person cameras.
     //////////////////////////////////////////////////////////////////////////
     class SlideAlongAxisBasedOnAngle
-        : public ICameraLookAtBehavior
+        : public JE::World::Camera::ICameraLookAtBehavior
     {
     public:
         ~SlideAlongAxisBasedOnAngle() override = default;
-        AZ_RTTI(SlideAlongAxisBasedOnAngle, "{8DDA8D0B-5BC3-437E-894B-5144E6E81236}", ICameraLookAtBehavior);
+        AZ_RTTI(SlideAlongAxisBasedOnAngle, "{8DDA8D0B-5BC3-437E-894B-5144E6E81236}", JE::World::Camera::ICameraLookAtBehavior);
         AZ_CLASS_ALLOCATOR(SlideAlongAxisBasedOnAngle, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

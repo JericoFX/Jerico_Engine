@@ -1,0 +1,69 @@
+{
+    "Id": 0,
+    "WhiteBoxData": "",
+    "DefaultShape": 0,
+    "EditorMeshAsset": null,
+    "Material": {
+        "Tint": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "UseTexture": true,
+        "Visible": true
+    },
+    "SurfaceMaterialBindings": [],
+    "ManualUVs": false,
+    "SelectedMaterialSlot": 0,
+    "SelectedFaceMaterial": {
+        "assetId": {
+            "guid": "{00000000-0000-0000-0000-000000000000}",
+            "subId": 0
+        },
+        "loadBehavior": "NoLoad",
+        "assetHint": ""
+    },
+    "UVScale": [
+        1.0,
+        1.0
+    ],
+    "UVOffset": [
+        0.0,
+        0.0
+    ],
+    "UVRotation": 0.0,
+    "RenderData": {
+        "Faces": [],
+        "Material": {
+            "Tint": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "UseTexture": true,
+            "Visible": true
+        }
+    },
+    "ComponentMode": {},
+    "FlipYZForExport": false,
+    "DrawShapeData": {
+        "Shape": 0,
+        "Sides": 4,
+        "Stair": {
+            "ByHeight": false,
+            "Steps": 8,
+            "StepHeight": 0.25,
+            "Rotation": 0
+        }
+    },
+    "DrawCarve": false,
+    "DrawUnitCube": false,
+    "VoxelCells": [],
+    "BooleanSource": {
+        "id": 4294967295
+    },
+    "BooleanOp": 1,
+    "BooleanHideSource": false,
+    "BooleanDeleteSource": false,
+    "BooleanLive": false
+}

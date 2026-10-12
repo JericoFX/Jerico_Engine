@@ -7,7 +7,7 @@
     "origin": "Open 3D Engine - o3de.org",
     "origin_url": "https://github.com/o3de/o3de",
     "type": "Code",
-    "summary": "The Camera Gem provides a basic camera component that defines a frustum for runtime rendering.",
+    "summary": "Historical Camera metadata. Implementation and registration are absorbed into JE::WorldCamera and JE::EditorCamera; this Gem is no longer activatable.",
     "canonical_tags": [
         "Gem"
     ],

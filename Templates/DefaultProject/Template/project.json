@@ -22,7 +22,6 @@
         "${Name}",
         "Atom",
         "AudioSystem",
-        "CameraFramework",
         "DebugDraw",
         "DiffuseProbeGrid",
         "EMotionFX",

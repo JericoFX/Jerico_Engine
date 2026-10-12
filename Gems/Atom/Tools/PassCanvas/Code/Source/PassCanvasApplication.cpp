@@ -7,6 +7,7 @@
  */
 
 #include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Editor/Camera/CameraModule.h>
 #include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeUtil.h>
@@ -78,6 +79,12 @@ namespace PassCanvas
     {
         Base::RegisterCoreComponents();
         RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
+    }
+
+    void PassCanvasApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+    {
+        Base::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 
     void PassCanvasApplication::Reflect(AZ::ReflectContext* context)

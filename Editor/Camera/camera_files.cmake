@@ -1,0 +1,12 @@
+set(FILES
+    Include/JE/Editor/Camera/CameraExports.h
+    Include/JE/Editor/Camera/CameraModule.h
+    Include/JE/Editor/Camera/EditorCameraComponent.h
+    Include/JE/Editor/Camera/CameraEditorSystemComponent.h
+    Source/CameraModule.cpp
+    Source/EditorCameraComponent.cpp
+    Source/CameraEditorSystemComponent.cpp
+    Source/ViewportCameraSelectorWindow.h
+    Source/ViewportCameraSelectorWindow_Internals.h
+    Source/ViewportCameraSelectorWindow.cpp
+)

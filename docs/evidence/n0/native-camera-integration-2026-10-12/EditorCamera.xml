@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="6" failures="0" disabled="0" errors="0" time="0.164" timestamp="2026-10-12T06:05:40.861" name="AllTests">
+  <testsuite name="CameraEditorUITests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.16" timestamp="2026-10-12T06:05:40.862">
+    <testcase name="TestCameraListModelAddAndRemove" file="F:/JericoEngine/JericoEngine/Editor/Camera/Tests/CameraEditorUITests.cpp" line="19" status="run" result="completed" time="0.16" timestamp="2026-10-12T06:05:40.862" classname="CameraEditorUITests" />
+  </testsuite>
+  <testsuite name="NativeEditorCamera" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-12T06:05:41.022">
+    <testcase name="FactoryPreservesFiveDescriptorsAndBothRequiredSystems" file="F:/JericoEngine/JericoEngine/Editor/Camera/Tests/CameraModuleTests.cpp" line="16" status="run" result="completed" time="0." timestamp="2026-10-12T06:05:41.022" classname="NativeEditorCamera" />
+  </testsuite>
+  <testsuite name="NativeCameraSerializationTests" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-10-12T06:05:41.022">
+    <testcase name="LegacyTemplateWithoutEditorReflectionRemainsRuntimeCamera" file="F:/JericoEngine/JericoEngine/Editor/Camera/Tests/CameraModuleTests.cpp" line="115" status="run" result="completed" time="0." timestamp="2026-10-12T06:05:41.022" classname="NativeCameraSerializationTests" />
+    <testcase name="LegacyTemplateWithEditorReflectionUsesOriginalEditorCameraType" file="F:/JericoEngine/JericoEngine/Editor/Camera/Tests/CameraModuleTests.cpp" line="119" status="run" result="completed" time="0." timestamp="2026-10-12T06:05:41.023" classname="NativeCameraSerializationTests" />
+    <testcase name="LegacyNormalNodeWithEditorReflectionRemainsRuntimeCamera" file="F:/JericoEngine/JericoEngine/Editor/Camera/Tests/CameraModuleTests.cpp" line="124" status="run" result="completed" time="0." timestamp="2026-10-12T06:05:41.024" classname="NativeCameraSerializationTests" />
+    <testcase name="LegacyPrefabTypeNameAndConfiguredCameraSurviveRoundTrip" file="F:/JericoEngine/JericoEngine/Editor/Camera/Tests/CameraModuleTests.cpp" line="129" status="run" result="completed" time="0.001" timestamp="2026-10-12T06:05:41.025" classname="NativeCameraSerializationTests" />
+  </testsuite>
+</testsuites>

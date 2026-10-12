@@ -1,0 +1,307 @@
+{
+  "status": "NATIVE_TESTS_EDITOR_AND_STANDALONE_RENDER_VERIFIED",
+  "utc": "2026-10-12T09:27:05.9159303Z",
+  "sourceFreezeSha256": "FAA00587E89910F7C3F85293E75E8F7871AFFD1463D2F377FCA63F5518E35B1F",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 34,
+      "sha256": "31E86B0C526A7758165A73C47650C94A7BCAFA19E5503DF0700C3AA9375367C0"
+    },
+    {
+      "path": "binary-size.json",
+      "bytes": 758,
+      "sha256": "5A8A5059E2FB68D3FD435F3CABB6B33B7775F693CA13AE3BD3D7FCB01734F684"
+    },
+    {
+      "path": "dx12-attempt2/Game.log",
+      "bytes": 2880,
+      "sha256": "551811288C5630630A0362A2193999659655A611A9B47853B4C8E5BF524A5969"
+    },
+    {
+      "path": "dx12-attempt2/launch.json",
+      "bytes": 758,
+      "sha256": "0D31D83453C29447F9D5F28D810BF25C5036A36D76ECCAA04003F65AF18718A2"
+    },
+    {
+      "path": "dx12-attempt2/loaded-modules.json",
+      "bytes": 20504,
+      "sha256": "EBCE0B558408408AE41D501BD52A415F6D0C8D11B3E2C537A3C6C5B89C6114C7"
+    },
+    {
+      "path": "dx12-attempt2/network-result.json",
+      "bytes": 275,
+      "sha256": "3A71D8A6EFE2A2749264D8F8DAD5CA6F686BEB7E231A059DEA353A40A8FC7865"
+    },
+    {
+      "path": "dx12-attempt2/parent-result.json",
+      "bytes": 271,
+      "sha256": "209FD7E00261AFB3A242AE0DA1B010BEF7AE3D5B879D79788B12C8B5FED2E2E6"
+    },
+    {
+      "path": "dx12-attempt2/startup-samples.json",
+      "bytes": 3254,
+      "sha256": "A7DFB87FBF9732A8355E79585206B86008EF55DCF802CBD200EE8EF890EFB551"
+    },
+    {
+      "path": "dx12-attempt3/Game.log",
+      "bytes": 2880,
+      "sha256": "C71D5F7B87765DAE7C079EE64BE1DE36A84ADE81D142FA10B4C6510E7AB4B13B"
+    },
+    {
+      "path": "dx12-attempt3/launch.json",
+      "bytes": 757,
+      "sha256": "DF9F141344D2AA7B0AE644BCA56AF95E73B147CBC0BCACD17C54F0AFEECA8248"
+    },
+    {
+      "path": "dx12-attempt3/loaded-modules.json",
+      "bytes": 20353,
+      "sha256": "471936171BD2F9CC312C2AED877E10E6CB9E4B4B6382C3B03CEC8335DA96911B"
+    },
+    {
+      "path": "dx12-attempt3/network-result.json",
+      "bytes": 274,
+      "sha256": "9EF07E0E9731DF9B28809B7E13208BB2F7582EE78956B2B96C8DD0344A46D9AC"
+    },
+    {
+      "path": "dx12-attempt3/parent-result.json",
+      "bytes": 328,
+      "sha256": "51A7EFEB0C07F84946541669C38E76D76EF37666F79660DE89725AB20D993D41"
+    },
+    {
+      "path": "dx12-attempt3/runtime.jpg",
+      "bytes": 95126,
+      "sha256": "A74D027F119669E5838232E35B64813119C053DEECA3236D7FD61725D927D59C"
+    },
+    {
+      "path": "dx12-attempt3/startup-samples.json",
+      "bytes": 3253,
+      "sha256": "EDA51FDB82401D7FD4D952ED73DCA2EE15A85C645523AFA414681418A5FC9192"
+    },
+    {
+      "path": "editor-vulkan/edit-result.json",
+      "bytes": 1019,
+      "sha256": "A7DB091A36BE81BCE2EBA481DE9BFC43A93983C34E284F052A7582238AAB22F0"
+    },
+    {
+      "path": "editor-vulkan/Editor-reopened.log",
+      "bytes": 5939,
+      "sha256": "493F1CF7804FAE3BE4B22FA4FB7AE592F7AA40146CEEE7415138100C51250A9F"
+    },
+    {
+      "path": "editor-vulkan/fov65.jpg",
+      "bytes": 204083,
+      "sha256": "003595A93675246F46D4CDDB99E42AB48AC237A84DBBA3366D5847E432CBCEA0"
+    },
+    {
+      "path": "editor-vulkan/game55.jpg",
+      "bytes": 146714,
+      "sha256": "77C45603617C2AB8FA03E508A15688FF93F3DA3916B0528DC89BB9C1897CE338"
+    },
+    {
+      "path": "editor-vulkan/loaded-modules.json",
+      "bytes": 36892,
+      "sha256": "CB768276279AEAF015E1BB85963B871E62795836A9835441CC282D28A9B3EB50"
+    },
+    {
+      "path": "editor-vulkan/memory.json",
+      "bytes": 155,
+      "sha256": "5E4C754B59A2795AB52AAAD7DD81D87B7B0EF2E624BFDCA1314692FF34332A94"
+    },
+    {
+      "path": "editor-vulkan/redo55.jpg",
+      "bytes": 206656,
+      "sha256": "99366DA5A82B6EFD95FC5CC8937B6990F3D8011FF02E733D13AE170AD21925E8"
+    },
+    {
+      "path": "editor-vulkan/reopen-result.json",
+      "bytes": 668,
+      "sha256": "B11FB91125E531A1799C8A684C95DD817A903C4B812FF22215FBE6D9CB091473"
+    },
+    {
+      "path": "editor-vulkan/reopened55.jpg",
+      "bytes": 200225,
+      "sha256": "4B31B3369AA0344B087D5B98E147B129EF04884F01C1103EB3DDF50909AAFC3A"
+    },
+    {
+      "path": "editor-vulkan/undo65.jpg",
+      "bytes": 206036,
+      "sha256": "6891E55D0DAB7E7583598B7E5045560355F8EE5413A98C08E3F462835473BCEC"
+    },
+    {
+      "path": "EditorCamera.log",
+      "bytes": 3775,
+      "sha256": "4E93E61FFEE742810C227E43BA37436FD9DB1274150568427856AEB6CF8AB5FD"
+    },
+    {
+      "path": "EditorCamera.xml",
+      "bytes": 2397,
+      "sha256": "76E2BCC83D474B1EF8F0E40DE10B6279B070FA7A1FC1678B27C6B74B12AD7802"
+    },
+    {
+      "path": "EditorLib.xml",
+      "bytes": 24873,
+      "sha256": "51E250B9949E782048C449A870E6C8BB7A7ACD2C01C64BC14189F1798EC4378A"
+    },
+    {
+      "path": "icon-provenance.json",
+      "bytes": 2641,
+      "sha256": "BA2D7BE0A27E313A04FEF703BB0918CA8E39B32F0F45903150B28C06B903D8D7"
+    },
+    {
+      "path": "material-editor-vulkan/launch.json",
+      "bytes": 384,
+      "sha256": "75F08E2BB3DD17845BF37571A5E85BEAFE07564457A81FE5360A0E8D59D07983"
+    },
+    {
+      "path": "material-editor-vulkan/loaded-modules.json",
+      "bytes": 31774,
+      "sha256": "58448720489A5883D14B9C34F8F87CEBE52FDEF1EE254430565477DED284E040"
+    },
+    {
+      "path": "material-editor-vulkan/MaterialEditor.log",
+      "bytes": 269429,
+      "sha256": "65587AB8896C4187A4372EBAD1F4C5502613F08A4BFB075596032F08DBC46D44"
+    },
+    {
+      "path": "material-editor-vulkan/preview.jpg",
+      "bytes": 106301,
+      "sha256": "EEF1B8985EB8C4B53B2445E3399870F90CC99CB15F1369CAFA51B467D1CD4AD1"
+    },
+    {
+      "path": "material-editor-vulkan/result.json",
+      "bytes": 284,
+      "sha256": "58F61580B769EE362C5F434793E6D1E328A76FA66B9814A07EF6B379F34F9686"
+    },
+    {
+      "path": "products-build.json",
+      "bytes": 1316,
+      "sha256": "DC4930F108F6D85E0E0D39E1041A150EC1380406E1547D3E2AD61092B28E0811"
+    },
+    {
+      "path": "publication-whitespace.json",
+      "bytes": 426,
+      "sha256": "2E89D731685878951C86FEABF14F4495955AA9850989502B244A446022F5302F"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6663,
+      "sha256": "DA18CDA4196D708994350A66DFCD67BB32BE2F96DA6837F0AD8B096BA782F8A3"
+    },
+    {
+      "path": "registry-audit.json",
+      "bytes": 18714,
+      "sha256": "8EE7C0E2CD53C0350681FCBBBDB08789253EE429086F08F0B4BAC89767D23A57"
+    },
+    {
+      "path": "SerializeContextTools.xml",
+      "bytes": 641,
+      "sha256": "6CB7DD89A1D6DD090B7CCED6781F1AC4D87C25A150C410FF6CA7592F3C4223AC"
+    },
+    {
+      "path": "serialized-camera.json",
+      "bytes": 958,
+      "sha256": "1953E03A5FD7340B313212A36F3A622FA68FFA4D9C2D2825D3D25E5F7999F788"
+    },
+    {
+      "path": "serialized-geometry.json",
+      "bytes": 1418,
+      "sha256": "EF5FAFDD9129C57913E9545546C1C0A77FF57865148A5B4F71E80B1B3DF842D7"
+    },
+    {
+      "path": "serialized-material.json",
+      "bytes": 184,
+      "sha256": "5243C953CC4725DE966255CAAFDE6CAB6F62C8722B224C58A556AEFB91B0B28E"
+    },
+    {
+      "path": "serializer-cli.json",
+      "bytes": 10116,
+      "sha256": "8AA4C6C4C442A819AED2DCD239D94C0253A29C9DBF6C4CB0EA7DBF55C6BA23E0"
+    },
+    {
+      "path": "source-freeze.json",
+      "bytes": 23875,
+      "sha256": "FAA00587E89910F7C3F85293E75E8F7871AFFD1463D2F377FCA63F5518E35B1F"
+    },
+    {
+      "path": "tests-final.json",
+      "bytes": 965,
+      "sha256": "C95B71EAF9C34E877E46C3B2F6A3111882273A640BC82E046E360D362B2A7523"
+    },
+    {
+      "path": "vulkan-attempt1/Game.log",
+      "bytes": 2882,
+      "sha256": "8C387984CF9F12FFA899FFD19D31889F4AEC76219D23F0AC21345437BCB54BBF"
+    },
+    {
+      "path": "vulkan-attempt1/launch.json",
+      "bytes": 760,
+      "sha256": "D2CC720686B00DE916FCE8EF6B09B40F6D881D9EFF5370AA7F251EB9B9296158"
+    },
+    {
+      "path": "vulkan-attempt1/loaded-modules.json",
+      "bytes": 20326,
+      "sha256": "F8B5E5BB66883E21671F2E9459F2D96154D6B7BE1C98CF91C9FAC8DD656819AC"
+    },
+    {
+      "path": "vulkan-attempt1/network-result.json",
+      "bytes": 275,
+      "sha256": "09668F4D786977B8AB2A81956FA8EEDCE9111D09391C96AA39D91D8CC8B84E30"
+    },
+    {
+      "path": "vulkan-attempt1/parent-result.json",
+      "bytes": 293,
+      "sha256": "6B7F9A6BF57EFB5D88C4CDAE74CD7BFC9F12BD178D6275B6A3036556A64A0C86"
+    },
+    {
+      "path": "vulkan-attempt1/startup-samples.json",
+      "bytes": 3252,
+      "sha256": "AAA49A338846D7FC40505E0E21FBE96001188104CFD8639125441B1470C09E3C"
+    },
+    {
+      "path": "vulkan-attempt2/Game.log",
+      "bytes": 2882,
+      "sha256": "D035D3FFCD8352570D1C107997DC8B8285FEC179D14150D65CD76CE80E36F3AE"
+    },
+    {
+      "path": "vulkan-attempt2/launch.json",
+      "bytes": 760,
+      "sha256": "26CF07EA7340EC0A871BB78CC14922184CDD3A556DF9195E8B7F3A90BB16DE19"
+    },
+    {
+      "path": "vulkan-attempt2/loaded-modules.json",
+      "bytes": 20175,
+      "sha256": "A5104412DC2374EF2F75318134581E3886969763AEC295B432541195AC9808A8"
+    },
+    {
+      "path": "vulkan-attempt2/network-result.json",
+      "bytes": 275,
+      "sha256": "9531633D6D18361ABE374B773DD3C8C1335E80310FECA93F4B2FDEAC89450B79"
+    },
+    {
+      "path": "vulkan-attempt2/parent-result.json",
+      "bytes": 300,
+      "sha256": "769BD1835E9B9416B6B148237FA2404353317CC4626A13DB37F5153488F3EFB8"
+    },
+    {
+      "path": "vulkan-attempt2/runtime.jpg",
+      "bytes": 95608,
+      "sha256": "035545A2F79A6FE2B524CA52ACC0D48EC917DA3BDC56EC6E6F4210DAABEEE309"
+    },
+    {
+      "path": "vulkan-attempt2/startup-samples.json",
+      "bytes": 3253,
+      "sha256": "7210D8DC0A1D23B6978259197FFE51403C67F5E3D056733DBE083CBC850D7505"
+    },
+    {
+      "path": "WorldCamera.log",
+      "bytes": 3095,
+      "sha256": "4543EA5981907EC7872B61FB5A138DFC1794734324451B65D177D1BF57434E0E"
+    },
+    {
+      "path": "WorldCamera.xml",
+      "bytes": 1408,
+      "sha256": "EC82D4A429BA7714BDF5AE1317D63AFC6F425EA19BB0ADA8DE6E543BB19E1B77"
+    }
+  ]
+}

@@ -104,6 +104,7 @@ ly_add_target(
             AZ::SceneData
             AZ::SceneUI
             JE::Geometry.Authoring
+            JE::EditorCamera
             JE::EditorMaterials
             Gem::Atom_Feature_Common.Public
             Gem::Atom_RPI.Edit

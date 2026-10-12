@@ -1,0 +1,9 @@
+{
+  "status": "VISIBLE_RUNTIME_VERIFIED",
+  "backend": "Vulkan",
+  "pid": 262916,
+  "image": "runtime.jpg",
+  "visible": "Room floor grid, doorway and corridor rendered",
+  "shutdown": "AltF4 did not terminate; exact owned process explicitly stopped",
+  "noBeautyOrPerformanceClaim": true
+}

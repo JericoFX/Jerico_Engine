@@ -1,0 +1,21 @@
+set(FILES
+    Include/JE/World/Camera/CameraExports.h
+    Include/JE/World/Camera/CameraModule.h
+    Include/JE/World/Camera/CameraComponent.h
+    Include/JE/World/Camera/CameraComponentController.h
+    Include/JE/World/Camera/CameraComponentConverters.h
+    Include/JE/World/Camera/CameraSystemComponent.h
+    Include/JE/World/Camera/CameraViewRegistrationBus.h
+    Include/JE/World/Camera/CameraRigComponent.h
+    Include/JE/World/Camera/ICameraSubComponent.h
+    Include/JE/World/Camera/ICameraTargetAcquirer.h
+    Include/JE/World/Camera/ICameraLookAtBehavior.h
+    Include/JE/World/Camera/ICameraTransformBehavior.h
+    Source/CameraComponent.cpp
+    Source/CameraComponentController.cpp
+    Source/CameraComponentConverter.cpp
+    Source/CameraSystemComponent.cpp
+    Source/CameraViewRegistrationBus.cpp
+    Source/CameraRigComponent.cpp
+    Source/CameraModule.cpp
+)

@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraLookAtBehavior.h>
+#include <JE/World/Camera/ICameraLookAtBehavior.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/Math/Transform.h>
@@ -23,11 +23,11 @@ namespace Camera
     /// Offset Position will offset the current LookAt target transform by "Positional Offset"
     //////////////////////////////////////////////////////////////////////////
     class OffsetPosition
-        : public ICameraLookAtBehavior
+        : public JE::World::Camera::ICameraLookAtBehavior
     {
     public:
         ~OffsetPosition() override = default;
-        AZ_RTTI(OffsetPosition, "{5B2975A6-839B-4DE0-842B-EDE78D778BC9}", ICameraLookAtBehavior);
+        AZ_RTTI(OffsetPosition, "{5B2975A6-839B-4DE0-842B-EDE78D778BC9}", JE::World::Camera::ICameraLookAtBehavior);
         AZ_CLASS_ALLOCATOR(OffsetPosition, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

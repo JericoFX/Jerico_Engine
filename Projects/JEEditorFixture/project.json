@@ -16,7 +16,6 @@
   "engine": "o3de",
   "gem_names": [
     "Atom",
-    "CameraFramework",
     "ImGui",
     "PhysX5",
     "PrimitiveAssets",

@@ -1,0 +1,36 @@
+{
+  "outcome": "Build and both assigned CTests succeeded",
+  "freeze": "integrated-freeze-rev3.json",
+  "freezeSha256": "FAA00587E89910F7C3F85293E75E8F7871AFFD1463D2F377FCA63F5518E35B1F",
+  "freezeCount": 100,
+  "inputMismatches": 0,
+  "buildExit": 0,
+  "buildDurationSeconds": 54.9605697,
+  "ctestExitCodes": [
+    0,
+    0
+  ],
+  "xml": [
+    {
+      "name": "JE_WorldCamera.Tests.xml",
+      "bytes": 1408,
+      "sha256": "EC82D4A429BA7714BDF5AE1317D63AFC6F425EA19BB0ADA8DE6E543BB19E1B77",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    },
+    {
+      "name": "JE_EditorCamera.Tests.xml",
+      "bytes": 2397,
+      "sha256": "76E2BCC83D474B1EF8F0E40DE10B6279B070FA7A1FC1678B27C6B74B12AD7802",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0
+    }
+  ],
+  "cameraProductionDllsUnchanged": true,
+  "activeProcesses": [],
+  "preservedPrior73TestsAnd6Cli": true
+}

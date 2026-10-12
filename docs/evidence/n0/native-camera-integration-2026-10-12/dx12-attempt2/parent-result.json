@@ -1,0 +1,7 @@
+{
+  "visualStatus": "PENDING_CAPTURE_CAPABILITY",
+  "priorToolFailure": "foreground window did not report a process id",
+  "pid": 196260,
+  "termination": "Explicit Stop-Process; no clean exit claim",
+  "scope": "DX12 startup/scene/module/network sampling only"
+}

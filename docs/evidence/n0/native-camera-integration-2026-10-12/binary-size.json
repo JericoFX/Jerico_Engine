@@ -1,0 +1,23 @@
+{
+  "scope": "Two native product camera DLLs only; not whole engine or deployment",
+  "files": [
+    {
+      "name": "WorldCamera.dll",
+      "bytes": 771072,
+      "sha256": "15BBBB3CA301F88CF0DE55F2574D5ECF151D778F3A59097E1A078244A1CDBF3E",
+      "dumpbinExit": 0,
+      "reportSha256": "5AE7FD055D196BAD6FDD42C2585F6227B1BC1A2E6B6165286CF4062D78197130"
+    },
+    {
+      "name": "EditorCamera.dll",
+      "bytes": 589824,
+      "sha256": "3D4DC1FFDC52D5E71A176795BF93FA39B67E9B2BF03A1A927B199D029AEFDF07",
+      "dumpbinExit": 0,
+      "reportSha256": "A6610550572271D7491309A52591B8BCC84205B75DFB3B0545E1461CF9CBB06B"
+    }
+  ],
+  "beforeBytes": 1755136,
+  "afterBytes": 1360896,
+  "savedBytes": 394240,
+  "savedPercent": 22.46
+}

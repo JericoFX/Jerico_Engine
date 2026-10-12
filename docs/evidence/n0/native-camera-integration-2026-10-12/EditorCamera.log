@@ -1,0 +1,57 @@
+Start testing: Oct 12 06:05 Hora estándar de Montevideo
+----------------------------------------------------------
+103/103 Testing: JE::EditorCamera.Tests.main::TEST_RUN
+103/103 Test: JE::EditorCamera.Tests.main::TEST_RUN
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe" "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorCamera.Tests.dll" "AzRunUnitTests" "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/JE_EditorCamera.Tests.xml" "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/Editor/Camera
+"JE::EditorCamera.Tests.main::TEST_RUN" start time: Oct 12 06:05 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Editor\Camera
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorCamera.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorCamera.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorCamera.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 6 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from CameraEditorUITests
+[ RUN      ] CameraEditorUITests.TestCameraListModelAddAndRemove
+[       OK ] CameraEditorUITests.TestCameraListModelAddAndRemove (160 ms)
+[----------] 1 test from CameraEditorUITests (160 ms total)
+
+[----------] 1 test from NativeEditorCamera
+[ RUN      ] NativeEditorCamera.FactoryPreservesFiveDescriptorsAndBothRequiredSystems
+[       OK ] NativeEditorCamera.FactoryPreservesFiveDescriptorsAndBothRequiredSystems (0 ms)
+[----------] 1 test from NativeEditorCamera (0 ms total)
+
+[----------] 4 tests from NativeCameraSerializationTests
+[ RUN      ] NativeCameraSerializationTests.LegacyTemplateWithoutEditorReflectionRemainsRuntimeCamera
+[       OK ] NativeCameraSerializationTests.LegacyTemplateWithoutEditorReflectionRemainsRuntimeCamera (0 ms)
+[ RUN      ] NativeCameraSerializationTests.LegacyTemplateWithEditorReflectionUsesOriginalEditorCameraType
+[       OK ] NativeCameraSerializationTests.LegacyTemplateWithEditorReflectionUsesOriginalEditorCameraType (0 ms)
+[ RUN      ] NativeCameraSerializationTests.LegacyNormalNodeWithEditorReflectionRemainsRuntimeCamera
+[       OK ] NativeCameraSerializationTests.LegacyNormalNodeWithEditorReflectionRemainsRuntimeCamera (0 ms)
+[ RUN      ] NativeCameraSerializationTests.LegacyPrefabTypeNameAndConfiguredCameraSurviveRoundTrip
+[       OK ] NativeCameraSerializationTests.LegacyPrefabTypeNameAndConfiguredCameraSurviveRoundTrip (1 ms)
+[----------] 4 tests from NativeCameraSerializationTests (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 3 test suites ran. (164 ms total)
+[  PASSED  ] 6 tests.
+OKAY AzRunUnitTests() returned 0
+Returning code: 0
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"JE::EditorCamera.Tests.main::TEST_RUN" end time: Oct 12 06:05 Hora estándar de Montevideo
+"JE::EditorCamera.Tests.main::TEST_RUN" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 12 06:05 Hora estándar de Montevideo
+
+FRAMEWORK_googletest =   0.24 sec*proc
+
+SUITE_main =   0.24 sec*proc
+

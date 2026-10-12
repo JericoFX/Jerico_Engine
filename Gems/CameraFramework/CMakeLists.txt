@@ -6,7 +6,6 @@
 #
 #
 
-o3de_gem_setup("CameraFramework")
-
-add_subdirectory(Code)
+# Historical entry only; implementation and registration are composed natively.
+message(FATAL_ERROR "CameraFramework is absorbed into JE::WorldCamera / JE::EditorCamera; remove its Gem activation.")
 

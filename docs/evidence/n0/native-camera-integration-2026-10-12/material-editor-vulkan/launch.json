@@ -1,0 +1,10 @@
+{
+  "pid": 268508,
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialEditor.exe",
+  "arguments": [
+    "--project-path=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--rhi=vulkan"
+  ],
+  "utc": "2026-10-12T09:25:59.8365336Z",
+  "sha256": "3BEE8BF1AFF5CE5883E075B0B8402C48EF0CE2B561AD65CB80A1734454E49387"
+}

@@ -1,0 +1,48 @@
+Start testing: Oct 12 06:05 Hora estándar de Montevideo
+----------------------------------------------------------
+102/103 Testing: JE::WorldCamera.Tests.main::TEST_RUN
+102/103 Test: JE::WorldCamera.Tests.main::TEST_RUN
+Command: "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe" "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/WorldCamera.Tests.dll" "AzRunUnitTests" "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/JE_WorldCamera.Tests.xml" "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+Directory: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/World/Camera
+"JE::WorldCamera.Tests.main::TEST_RUN" start time: Oct 12 06:05 Hora estándar de Montevideo
+Output:
+----------------------------------------------------------
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\World\Camera
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/WorldCamera.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/WorldCamera.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/WorldCamera.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from NativeWorldCamera
+[ RUN      ] NativeWorldCamera.FactoryPreservesThreeComponentIdentitiesAndRequiredCameraService
+[       OK ] NativeWorldCamera.FactoryPreservesThreeComponentIdentitiesAndRequiredCameraService (0 ms)
+[ RUN      ] NativeWorldCamera.ExistingActiveCameraBusTracksViewChangesAndDisconnects
+[       OK ] NativeWorldCamera.ExistingActiveCameraBusTracksViewChangesAndDisconnects (0 ms)
+[----------] 2 tests from NativeWorldCamera (0 ms total)
+
+[----------] 1 test from NativeWorldCameraSerializationTests
+[ RUN      ] NativeWorldCameraSerializationTests.RuntimeConfigurationRoundTripPreservesProjectionAndActivation
+[       OK ] NativeWorldCameraSerializationTests.RuntimeConfigurationRoundTripPreservesProjectionAndActivation (1 ms)
+[----------] 1 test from NativeWorldCameraSerializationTests (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 3 tests.
+OKAY AzRunUnitTests() returned 0
+Returning code: 0
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"JE::WorldCamera.Tests.main::TEST_RUN" end time: Oct 12 06:05 Hora estándar de Montevideo
+"JE::WorldCamera.Tests.main::TEST_RUN" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 12 06:05 Hora estándar de Montevideo
+
+FRAMEWORK_googletest =   0.04 sec*proc
+
+SUITE_main =   0.04 sec*proc
+

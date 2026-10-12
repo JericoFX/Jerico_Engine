@@ -1,0 +1,66 @@
+<06:23:17> BackupNameAttachment=" Build(0) 12 Oct 26 (06 23 17)"  -- used by backup system
+<06:23:17> Log Started at Mon Oct 12 06:23:17 2026
+<06:23:17> Built on Oct 11 2026 18:12:26
+<06:23:17> Running 64 bit Windows version
+<06:23:17> FileVersion: 0.0.0.0
+<06:23:17> ProductVersion: 0.0.0.0
+<06:23:17> Using Microsoft (tm) C++ Standard Library implementation
+<06:23:17> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<06:23:17> Project Name: JEEditorFixture
+
+<06:23:17> [Warning] Config file game.cfg not found!
+<06:23:17> creating CVarGroups from directory 'Config/CVarGroups' ...
+<06:23:17> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<06:23:17> GameName: JEEditorFixture
+<06:23:17> BuildTime: Oct 11 2026 18:12:26
+<06:23:17> > g_languageAudio : en-US
+
+<06:23:17> Running without any Audio Engine!
+
+<06:23:17> Audio System is initialized and ready!
+
+<06:23:17> Initializing additional systems
+
+<06:23:17> Using FreeType 2.11.1
+<06:23:17> > r_streamingImagePoolBudgetMb : 0
+
+<06:23:17> > r_streamingImageMipBias : 0
+
+<06:23:18> (RPI system) - System assets initialized
+
+<06:23:18> > r_shadowCascadeExtrusionAmount : -1
+
+<06:23:18> > r_enablePerMeshShaderOptionFlags : false
+
+<06:23:18> > r_meshInstancingEnabled : false
+
+<06:23:18> > r_meshInstancingEnabledForTransparentObjects : false
+
+<06:23:18> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<06:23:19> SetGlobalState 1->3 'INIT'->'LEVEL_LOAD_PREPARE' 1.6 seconds
+<06:23:19> (LevelSystem) - Level system is preparing to load 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<06:23:19> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<06:23:19> (LevelSystem) - Level system is loading 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<06:23:19> (Spawnables) - Root spawnable set to 'levels/jeeditorfixture/jeeditorfixture.spawnable' at generation 1.
+
+<06:23:19> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<06:23:19> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<06:23:19> Game Level Load Time: [0.0.0.0] Level Levels/JEEditorFixture/JEEditorFixture.spawnable loaded in 0.00 seconds
+<06:23:19> (LevelSystem) - Level load complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<06:23:19> > LoadLevel : JEEditorFixture
+
+<06:23:19> (RHI) - ****************************************************************
+
+<06:23:19> (RHI) -                     Registering dx12 RHI                          
+
+<06:23:19> (RHI) - ****************************************************************
+
+<06:23:19> (Spawnables) - New root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' assigned (generation: 1).
+
+<06:23:19> (Spawnables) - Entities from new root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' are ready (generation: 1).
+

@@ -7,7 +7,7 @@
  */
 #pragma once
 #include <AzCore/RTTI/RTTI.h>
-#include <CameraFramework/ICameraTargetAcquirer.h>
+#include <JE/World/Camera/ICameraTargetAcquirer.h>
 #include <AzCore/Component/Component.h>
 #include <LmbrCentral/Scripting/TagComponentBus.h>
 #include <AzCore/Memory/SystemAllocator.h>
@@ -24,12 +24,12 @@ namespace Camera
     /// then return that target's transform when requested by the Camera Rig
     //////////////////////////////////////////////////////////////////////////
     class AcquireByTag
-        : public ICameraTargetAcquirer
+        : public JE::World::Camera::ICameraTargetAcquirer
         , private LmbrCentral::TagGlobalNotificationBus::Handler
     {
     public:
         ~AcquireByTag() override = default;
-        AZ_RTTI(AcquireByTag, "{E76621A5-E5A8-41B0-AC1D-EC87553181F5}", ICameraTargetAcquirer)
+        AZ_RTTI(AcquireByTag, "{E76621A5-E5A8-41B0-AC1D-EC87553181F5}", JE::World::Camera::ICameraTargetAcquirer)
         AZ_CLASS_ALLOCATOR(AcquireByTag, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

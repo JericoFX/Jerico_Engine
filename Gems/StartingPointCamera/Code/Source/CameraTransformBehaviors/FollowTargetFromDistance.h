@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraTransformBehavior.h>
+#include <JE/World/Camera/ICameraTransformBehavior.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/Math/Transform.h>
 #include <LmbrCentral/Scripting/GameplayNotificationBus.h>
@@ -25,12 +25,12 @@ namespace Camera
     /// and a distance greater than 0 for a Third Person style camera
     //////////////////////////////////////////////////////////////////////////
     class FollowTargetFromDistance
-        : public ICameraTransformBehavior
+        : public JE::World::Camera::ICameraTransformBehavior
         , public AZ::GameplayNotificationBus::MultiHandler
     {
     public:
         ~FollowTargetFromDistance() override = default;
-        AZ_RTTI(FollowTargetFromDistance, "{E6BEDB2C-6812-4369-8C0F-C1E72F380E50}", ICameraTransformBehavior)
+        AZ_RTTI(FollowTargetFromDistance, "{E6BEDB2C-6812-4369-8C0F-C1E72F380E50}", JE::World::Camera::ICameraTransformBehavior)
         AZ_CLASS_ALLOCATOR(FollowTargetFromDistance, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

@@ -7,6 +7,7 @@
  */
 
 #include <Atom/RHI.Reflect/SamplerState.h>
+#include <JE/Editor/Camera/CameraModule.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
 #include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
@@ -83,6 +84,12 @@ namespace MaterialCanvas
     {
         Base::RegisterCoreComponents();
         RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
+    }
+
+    void MaterialCanvasApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+    {
+        Base::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 
     void MaterialCanvasApplication::Reflect(AZ::ReflectContext* context)

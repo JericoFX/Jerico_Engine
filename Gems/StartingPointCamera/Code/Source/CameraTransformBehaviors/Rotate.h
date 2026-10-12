@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-#include <CameraFramework/ICameraTransformBehavior.h>
+#include <JE/World/Camera/ICameraTransformBehavior.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include "StartingPointCamera/StartingPointCameraConstants.h"
@@ -18,11 +18,11 @@ namespace Camera
     /// This behavior will rotate the calculated camera transform
     //////////////////////////////////////////////////////////////////////////
     class Rotate
-        : public ICameraTransformBehavior
+        : public JE::World::Camera::ICameraTransformBehavior
     {
     public:
         ~Rotate() override = default;
-        AZ_RTTI(Rotate, "{EE06111E-75E8-47F0-B243-5A5308A5F605}", ICameraTransformBehavior)
+        AZ_RTTI(Rotate, "{EE06111E-75E8-47F0-B243-5A5308A5F605}", JE::World::Camera::ICameraTransformBehavior)
         AZ_CLASS_ALLOCATOR(Rotate, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* reflection);
 

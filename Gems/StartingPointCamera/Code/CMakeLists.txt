@@ -19,7 +19,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             AZ::AzCore
-            Gem::CameraFramework.Static
+            JE::WorldCamera
             Gem::LmbrCentral
             Legacy::CryCommon
 )
@@ -39,11 +39,9 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::${gem_name}.Static
-            Gem::CameraFramework.Static
+            JE::WorldCamera
             Gem::LmbrCentral.Static
             Legacy::CryCommon
-    RUNTIME_DEPENDENCIES
-        Gem::CameraFramework
 )
 
 # Inject the gem name into the Module source file

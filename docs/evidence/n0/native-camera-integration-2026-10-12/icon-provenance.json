@@ -1,0 +1,44 @@
+[
+  {
+    "source": "Gems/Camera/Assets/Editor/Icons/Components/Disabled/Camera_white.png",
+    "destination": "Engine/World/Camera/Assets/Camera/Editor/Icons/Components/Disabled/Camera_white.png",
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/Camera/Assets/Editor/Icons/Components/Disabled/Camera_white.png",
+    "utc": "2026-10-12T08:04:58.0453916Z",
+    "headStatus": 200,
+    "getStatus": 200,
+    "redirectsAllowed": false,
+    "credentialsUsed": false,
+    "expectedBytes": 589,
+    "actualBytes": 589,
+    "sha256": "b1e48abc27f70735344f12a7044b523ef64e7ad0ff4e8c5b8572832bba06792c",
+    "payload": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\icon-recovery\\b1e48abc27f70735344f12a7044b523ef64e7ad0ff4e8c5b8572832bba06792c.png"
+  },
+  {
+    "source": "Gems/CameraFramework/Assets/Editor/Icons/Components/Disabled/Camera_rig_white.png",
+    "destination": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Disabled/Camera_rig_white.png",
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/CameraFramework/Assets/Editor/Icons/Components/Disabled/Camera_rig_white.png",
+    "utc": "2026-10-12T08:04:58.4810937Z",
+    "headStatus": 200,
+    "getStatus": 200,
+    "redirectsAllowed": false,
+    "credentialsUsed": false,
+    "expectedBytes": 580,
+    "actualBytes": 580,
+    "sha256": "92fae863fb604422c387e0ae7e623c5ac4f4bd8f8fbeeb60f1f4293ff10a2999",
+    "payload": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\icon-recovery\\92fae863fb604422c387e0ae7e623c5ac4f4bd8f8fbeeb60f1f4293ff10a2999.png"
+  },
+  {
+    "source": "Gems/CameraFramework/Assets/Editor/Icons/Components/Viewport/CameraRig.png",
+    "destination": "Engine/World/Camera/Assets/CameraFramework/Editor/Icons/Components/Viewport/CameraRig.png",
+    "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/CameraFramework/Assets/Editor/Icons/Components/Viewport/CameraRig.png",
+    "utc": "2026-10-12T08:04:58.8784911Z",
+    "headStatus": 200,
+    "getStatus": 200,
+    "redirectsAllowed": false,
+    "credentialsUsed": false,
+    "expectedBytes": 4224,
+    "actualBytes": 4224,
+    "sha256": "d99943a2d6d971f27c03887d34a105a052f618949986bb2b4b06165ffc4fe5c4",
+    "payload": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-camera-integration-rev1\\icon-recovery\\d99943a2d6d971f27c03887d34a105a052f618949986bb2b4b06165ffc4fe5c4.png"
+  }
+]

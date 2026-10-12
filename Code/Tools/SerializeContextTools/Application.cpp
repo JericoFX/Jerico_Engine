@@ -14,6 +14,10 @@
 
 #include <AzToolsFramework/Thumbnails/ThumbnailerNullComponent.h>
 #include <SliceConverterEditorEntityContextComponent.h>
+#include <JE/Geometry/GeometryModule.h>
+#include <JE/Editor/Camera/CameraModule.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
+#include <JE/Editor/Materials/MaterialsRegistration.h>
 
 namespace AZ::SerializeContextTools
 {
@@ -106,6 +110,22 @@ namespace AZ::SerializeContextTools
             AZ::SettingsRegistryMergeUtils::MergeSettingsToRegistry_TargetBuildDependencyRegistry(*registry,
                 AZ_TRAIT_OS_PLATFORM_CODENAME, projectSpecializations);
         }
+    }
+
+    void Application::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+    {
+        AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+        outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
+    }
+
+    void Application::RegisterCoreComponents()
+    {
+        AzToolsFramework::ToolsApplication::RegisterCoreComponents();
+
+        // Conversion needs authored and runtime material types, not the preview system.
+        RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
+        RegisterComponentDescriptor(JE::Editor::CreateEditorMaterialComponentDescriptor());
     }
 
     const char* Application::GetConfigFilePath() const
