@@ -1,0 +1,4 @@
+{
+  "reason": "Owned test processes terminated after Alt+F4 and native console quit did not close launcher. AP autolaunch invalidates no-AP claim.",
+  "utc": "2026-10-12T07:34:00.4135907Z"
+}

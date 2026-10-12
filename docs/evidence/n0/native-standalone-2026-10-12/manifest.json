@@ -1,0 +1,122 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 33,
+    "sha256": "5DB4D419FA3487B4B7D553D6A300678B5A99A89C78878FE2C70B9F14B914596B"
+  },
+  {
+    "path": "parent-result.json",
+    "bytes": 1493,
+    "sha256": "0BE657D0A39418BE215FBB42C4BBD33344DB4CC987938729BB6240D5E280D221"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\Game.log",
+    "bytes": 2925,
+    "sha256": "85C986DD04662D2A1668B3A484934AC624E00DCA8099625DF09B48862F8931F3"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\launch.json",
+    "bytes": 665,
+    "sha256": "27FDC11CE106E5900C87791C348135B537996972EA587083755D9E7D0D7FEAAE"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\loaded-modules.json",
+    "bytes": 20836,
+    "sha256": "ECF9161A6449E76F8B2B589DB473A40135A6249A9B4EDEA9CD5E6F5C1BA92AF3"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\process-snapshot.json",
+    "bytes": 111,
+    "sha256": "444FF51D4177C84D7F518D15DA07DB1598A1CE55346139C6DE327A428976EF4B"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\related-processes.json",
+    "bytes": 72,
+    "sha256": "6BACEF5D19F928D3A2AC3494130862AA27519C7BA4FE4E245E6A177D05EF0F67"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\runtime.jpg",
+    "bytes": 95435,
+    "sha256": "E972D5748A54BC8008EDD90CFFEB53D7D3341A0BB2672FFE828335F20405B259"
+  },
+  {
+    "path": "native-standalone-dx12-attempt1\\tcp-snapshot.json",
+    "bytes": 123,
+    "sha256": "DB6A8894BB5182A3F8EB1223FFDF3F54BC616F1985FC5AF9240D1F7BB6DDBFEC"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\Game.log",
+    "bytes": 2927,
+    "sha256": "35EAB0EFFCF8B5027F08E41CB7C6F0A78B9A8D6846E6AB14A9817C2E69E88455"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\launch.json",
+    "bytes": 697,
+    "sha256": "4DEC707020292A120ABB2DE35C15AA978723F949E17541EA696DCF3D5BC9F36D"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\loaded-modules.json",
+    "bytes": 20517,
+    "sha256": "262D4149A1A30DEFC7179C9CC8DF9CC76ACF439BCA20F3F8AED712DFBEC04955"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\process-snapshot.json",
+    "bytes": 163,
+    "sha256": "C0FEA03FC56738F83CBC2B37C14193C197ABF4E18BBCA14F91460256F806E89E"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\related-processes.json",
+    "bytes": 152,
+    "sha256": "2D4D39490A8B0B911FC54A53DD97CCB8C76203847E42D197904B4B5D26A8C776"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\runtime.jpg",
+    "bytes": 100909,
+    "sha256": "417F3E95E3A1FB93988A724D5693BA32EFFA6634BDF94DF4755599F28CDD76B3"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\shutdown-processes.json",
+    "bytes": 1082,
+    "sha256": "B51B7878D0EE980EC2F086C310B035DE959F3D6ABF1FE56C8BC7C25A514CA069"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt1\\shutdown.json",
+    "bytes": 195,
+    "sha256": "A8ADEFBDDF84AB3A6425063CE7CD70006D5971245EBBDED94A3F48AB0560AAE7"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\Game.log",
+    "bytes": 2927,
+    "sha256": "582AEE5EDD7F1362C7C8FCFD472DEF923F3E0E9F3C95AC55B8E89A93BE26A26A"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\launch.json",
+    "bytes": 667,
+    "sha256": "D2BF836F6D1EBE569A90B621C7418EF23FC1997ACC41AAEB13E78E49A4711EF6"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\loaded-modules.json",
+    "bytes": 20658,
+    "sha256": "2ECACACE622F1B011405641405C781D0BEA77FA84737B3D55357F8ABB2CB2D5F"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\process-snapshot.json",
+    "bytes": 109,
+    "sha256": "158960B654F8536B53812882F1C7818787FB8293671A01A2C528E515BF402E24"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\related-processes.json",
+    "bytes": 72,
+    "sha256": "6EF091F988827FE505854C00253C15F3DE30A61C19C90984C220B09F9D7F32B1"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\runtime.jpg",
+    "bytes": 95755,
+    "sha256": "7CD394F3358DA44094CE4316D11639559A7C200A2DB69F86CE7087F378BA7E80"
+  },
+  {
+    "path": "native-standalone-vulkan-attempt2\\tcp-snapshot.json",
+    "bytes": 123,
+    "sha256": "DB6A8894BB5182A3F8EB1223FFDF3F54BC616F1985FC5AF9240D1F7BB6DDBFEC"
+  }
+]

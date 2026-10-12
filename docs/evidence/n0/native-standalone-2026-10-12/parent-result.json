@@ -1,0 +1,40 @@
+{
+  "sourceHead": "bf623aeccd27fe98802998b21633c3fcee96faa0",
+  "testedLocalTree": true,
+  "originalPrefabSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "spawnableSha256": "515EC621D6C51281C3F140677CA1D1BFBA73777A2287A3A376E799E9F68E9A48",
+  "scene": "JEEditorFixture",
+  "nativeModules": [
+    "Geometry.dll",
+    "RenderMaterials.dll"
+  ],
+  "visible": [
+    "Room",
+    "Corridor",
+    "Door opening",
+    "Grid floor"
+  ],
+  "noAssetProcessorRuns": [
+    "native-standalone-vulkan-attempt2",
+    "native-standalone-dx12-attempt1"
+  ],
+  "rejectedNoAssetProcessorClaim": "Vulkan attempt1 spawned AssetProcessor PID27912 as child of launcher257084",
+  "observedAbsentModules": [
+    "Geometry.Authoring.dll",
+    "EditorMaterials.dll",
+    "Qt DLLs",
+    "Python DLLs",
+    "PySide DLLs"
+  ],
+  "limits": [
+    "Observed loaded DLL inventory only; no proof of absent statically linked consumers or complete distribution",
+    "RemoteConsole listened on 0.0.0.0:4600 in both no-AP runs",
+    "DX12 brighter than Vulkan; visual parity not accepted",
+    "Snapshots are not a performance benchmark",
+    "No movement, collision, VR, Linux or clean-clone/source-free replay acceptance",
+    "Original fixture retained; authored-UV geometry guard remains open",
+    "Owned launcher processes explicitly terminated; normal exit not verified"
+  ],
+  "allOwnedProcessesStopped": true,
+  "utc": "2026-10-12T07:36:35.4668826Z"
+}

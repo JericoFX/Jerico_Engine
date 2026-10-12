@@ -1,0 +1,14 @@
+[
+  {
+    "ProcessId": 257084,
+    "ParentProcessId": 198456,
+    "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+    "CommandLine": "\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe\" --project-path \"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\" --rhi=vulkan --regset=/Amazon/AzCore/Bootstrap/connect_to_remote=0 --regset=/Amazon/AzCore/Bootstrap/wait_for_connect=0 --regset=/Amazon/AzCore/Bootstrap/remote_filesystem=0"
+  },
+  {
+    "ProcessId": 27912,
+    "ParentProcessId": 257084,
+    "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+    "CommandLine": "\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe\" --start-hidden --engine-path=\"F:\\JericoEngine\\JericoEngine\" --project-path=\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\""
+  }
+]
