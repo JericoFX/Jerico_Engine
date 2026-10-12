@@ -10,6 +10,9 @@
 
 #include "EditorToolsApplication.h"
 
+#include <JE/Geometry/GeometryModule.h>
+#include <JE/Editor/Materials/MaterialsRegistration.h>
+
 // Qt
 #include <QMessageBox>
 
@@ -104,6 +107,13 @@ namespace EditorInternal
         {
             m_StartupAborted = true;
         }
+    }
+
+    void EditorToolsApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+    {
+        AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+        outModules.emplace_back(JE::Editor::CreateMaterialsModule());
     }
 
     bool EditorToolsApplication::Start()
@@ -266,6 +276,14 @@ namespace EditorInternal
     const char* EditorToolsApplication::GetOldCryLevelExtension() const
     {
         return ".cry";
+    }
+
+    void EditorToolsApplication::RequestExitGameMode()
+    {
+        if (auto* editor = GetIEditor())
+        {
+            editor->SetInGameMode(false);
+        }
     }
 
     void EditorToolsApplication::Exit()

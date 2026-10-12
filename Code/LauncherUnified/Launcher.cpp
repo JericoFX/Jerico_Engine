@@ -28,6 +28,9 @@
 
 #include <AzGameFramework/Application/GameApplication.h>
 
+#include <JE/Geometry/GeometryModule.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
+
 #include <ISystem.h>
 
 #include <Launcher_Traits_Platform.h>
@@ -44,6 +47,27 @@ extern "C" void CreateStaticModules(AZStd::vector<AZ::Module*>& modulesOut);
 #endif
 
 void CVar_OnViewportPosition(const AZ::Vector2& value);
+
+namespace JE::Runtime
+{
+    class GameApplication final : public AzGameFramework::GameApplication
+    {
+    public:
+        using AzGameFramework::GameApplication::GameApplication;
+
+        void RegisterCoreComponents() override
+        {
+            AzGameFramework::GameApplication::RegisterCoreComponents();
+            RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
+        }
+
+        void CreateStaticModules(AZStd::vector<AZ::Module*>& outModules) override
+        {
+            AzGameFramework::GameApplication::CreateStaticModules(outModules);
+            outModules.emplace_back(JE::Geometry::CreateRuntimeModule());
+        }
+    };
+}
 
 namespace
 {
@@ -403,7 +427,7 @@ namespace O3DELauncher
         componentAppSettings.m_setregBootstrapJson = launcherJsonPatch;
         // Treat the bootstrap JSON as being in JSON Patch format
         componentAppSettings.m_setregFormat = AZ::SettingsRegistryInterface::Format::JsonPatch;
-        AzGameFramework::GameApplication gameApplication(aznumeric_cast<int>(argContainer.size()), argContainer.data(), AZStd::move(componentAppSettings));
+        JE::Runtime::GameApplication gameApplication(aznumeric_cast<int>(argContainer.size()), argContainer.data(), AZStd::move(componentAppSettings));
         // The settings registry has been created by the AZ::ComponentApplication constructor at this point
         auto settingsRegistry = AZ::SettingsRegistry::Get();
         if (settingsRegistry == nullptr)

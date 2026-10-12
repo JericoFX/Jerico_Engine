@@ -8,6 +8,10 @@
 
 #include "native/utilities/ApplicationManager.h"
 
+#include <JE/Geometry/GeometryModule.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
+#include <JE/Editor/Materials/MaterialsRegistration.h>
+
 #include <AzCore/Casting/lossy_cast.h>
 #include <AzCore/IO/Path/Path.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
@@ -213,9 +217,18 @@ AZ::ComponentTypeList AssetProcessorAZApplication::GetRequiredSystemComponents()
     return components;
 }
 
+void AssetProcessorAZApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+{
+    AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
+    outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+}
+
 void AssetProcessorAZApplication::RegisterCoreComponents()
 {
     AzToolsFramework::ToolsApplication::RegisterCoreComponents();
+
+    RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
+    RegisterComponentDescriptor(JE::Editor::CreateEditorMaterialComponentDescriptor());
 
     RegisterComponentDescriptor(AzToolsFramework::EditorEntityFixupComponent::CreateDescriptor());
     RegisterComponentDescriptor(AzToolsFramework::AssetBrowser::AssetBrowserComponent::CreateDescriptor());

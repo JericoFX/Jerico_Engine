@@ -12,8 +12,8 @@
 #include <Atom/RPI.Public/Model/Model.h>
 #include <Atom/Feature/LightingChannel/LightingChannelConfiguration.h>
 #include <AtomLyIntegration/AtomImGuiTools/AtomImGuiToolsBus.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialAssignment.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialAssignment.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
 #include <AzCore/Component/Component.h>
@@ -70,8 +70,8 @@ namespace AZ
             , public AzFramework::VisibleGeometryRequestBus::Handler
             , public AzFramework::RenderGeometry::IntersectionRequestBus::Handler
             , private TransformNotificationBus::Handler
-            , private MaterialConsumerRequestBus::Handler
-            , private MaterialComponentNotificationBus::Handler
+            , private JE::Render::MaterialConsumerRequestBus::Handler
+            , private JE::Render::MaterialComponentNotificationBus::Handler
         {
         public:
             friend class EditorMeshComponent;
@@ -158,15 +158,15 @@ namespace AZ
             void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
 
             // MaterialConsumerRequestBus::Handler overrides ...
-            MaterialAssignmentId FindMaterialAssignmentId(
-                const MaterialAssignmentLodIndex lod, const AZStd::string& label) const override;
-            MaterialAssignmentLabelMap GetMaterialLabels() const override;
-            MaterialAssignmentMap GetDefaultMaterialMap() const override;
+            JE::Render::MaterialAssignmentId FindMaterialAssignmentId(
+                const JE::Render::MaterialAssignmentLodIndex lod, const AZStd::string& label) const override;
+            JE::Render::MaterialAssignmentLabelMap GetMaterialLabels() const override;
+            JE::Render::MaterialAssignmentMap GetDefaultMaterialMap() const override;
             AZStd::unordered_set<AZ::Name> GetModelUvNames() const override;
 
             // MaterialComponentNotificationBus::Handler overrides ...
-            void OnMaterialsUpdated(const MaterialAssignmentMap& materials) override;
-            void OnMaterialPropertiesUpdated(const MaterialAssignmentMap& materials) override;
+            void OnMaterialsUpdated(const JE::Render::MaterialAssignmentMap& materials) override;
+            void OnMaterialPropertiesUpdated(const JE::Render::MaterialAssignmentMap& materials) override;
 
             //! Check if the model asset requires to be cloned (e.g. cloth) for unique model instances.
             //! @param modelAsset The model asset to check.

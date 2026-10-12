@@ -323,7 +323,7 @@ namespace OpenParticle
         return *this;
     }
 
-    ParticleArchive& ParticleArchive::MaterialOverrides(const MaterialPropertyOverrideMap& overrides)
+    ParticleArchive& ParticleArchive::MaterialOverrides(const JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         auto& emitter = m_emitterInfos.back();
         emitter.m_materialOverrides = overrides;

@@ -145,6 +145,10 @@ if(NOT INSTALLED_ENGINE)
     # that is in use by the union of projects specified by path in LY_PROJECTS
     add_subdirectory_on_external_subdirs()
 
+    # Engine-owned subsystems are composed by the applications, independently
+    # of the project's Gem activation list.
+    add_subdirectory(Engine)
+
 else()
     ly_find_o3de_packages()
     add_subdirectory_on_external_subdirs()

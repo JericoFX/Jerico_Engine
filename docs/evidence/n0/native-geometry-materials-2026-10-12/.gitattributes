@@ -1,0 +1,2 @@
+# Small original validation captures travel with the evidence, without LFS.
+*.jpg -filter -diff -merge -text

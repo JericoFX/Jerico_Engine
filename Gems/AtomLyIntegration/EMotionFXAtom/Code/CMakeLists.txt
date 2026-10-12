@@ -24,6 +24,7 @@ ly_add_target(
             Gem::Atom_RPI.Public
             Gem::Atom_RHI.Reflect
             Gem::CommonFeaturesAtom.Public
+            JE::RenderMaterials
 )
 
 ly_add_target(

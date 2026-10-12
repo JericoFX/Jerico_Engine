@@ -20,6 +20,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         INTERFACE
             Gem::Atom_Feature_Common.Public
+            JE::RenderMaterials
             Gem::AtomImGuiTools.Public
 )
 
@@ -47,6 +48,7 @@ ly_add_target(
             Gem::GradientSignal.Static
             Gem::SurfaceData.Static
             Gem::Atom_Feature_Common.Public
+            JE::RenderMaterials
             Gem::Atom_Bootstrap.Headers
 )
 
@@ -141,6 +143,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PUBLIC
                 Gem::${gem_name}.Static
                 Gem::Atom_RPI.Edit
+                JE::EditorMaterials
                 Gem::AtomToolsFramework.Static
                 Gem::AtomToolsFramework.Editor
                 AZ::SceneCore
@@ -149,7 +152,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Legacy::CryCommon
         RUNTIME_DEPENDENCIES
             3rdParty::OpenImageIO::Tools::Binaries
-            3rdParty::OpenImageIO::Tools::PythonPlugins
     )
 
     ly_add_target(

@@ -20,6 +20,8 @@ ly_add_target(
                 AZ::AzFramework
                 AZ::AzToolsFramework
                 AZ::AssetBuilderSDK
+                JE::Geometry.Authoring
+                JE::EditorMaterials
 )
 
 ly_add_target(

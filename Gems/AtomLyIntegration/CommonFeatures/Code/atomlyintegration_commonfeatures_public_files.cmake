@@ -25,11 +25,6 @@ set(FILES
     Include/AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentBus.h
     Include/AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConfig.h
     Include/AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h
-    Include/AtomLyIntegration/CommonFeatures/Material/MaterialAssignment.h
-    Include/AtomLyIntegration/CommonFeatures/Material/MaterialAssignmentId.h
-    Include/AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h
-    Include/AtomLyIntegration/CommonFeatures/Material/MaterialComponentConfig.h
-    Include/AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h
     Include/AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h
     Include/AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h
     Include/AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h

@@ -38,6 +38,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             Gem::CommonFeaturesAtom.Static
+            JE::RenderMaterials
             Gem::AtomToolsFramework.Editor
             Gem::AtomToolsFramework.Static
     RUNTIME_DEPENDENCIES

@@ -19,7 +19,6 @@
 #include <Decals/DecalComponent.h>
 #include <Grid/GridComponent.h>
 #include <ImageBasedLights/ImageBasedLightComponent.h>
-#include <Material/MaterialComponent.h>
 #include <Mesh/MeshComponent.h>
 #include <ReflectionProbe/ReflectionProbeComponent.h>
 #include <SpecularReflections/SpecularReflectionsComponent.h>
@@ -59,8 +58,6 @@
 #include <Decals/EditorDecalComponent.h>
 #include <Grid/EditorGridComponent.h>
 #include <ImageBasedLights/EditorImageBasedLightComponent.h>
-#include <Material/EditorMaterialComponent.h>
-#include <Material/EditorMaterialSystemComponent.h>
 #include <Mesh/EditorMeshComponent.h>
 #include <Mesh/EditorMeshSystemComponent.h>
 #include <ReflectionProbe/EditorReflectionProbeComponent.h>
@@ -120,7 +117,6 @@ namespace AZ
                         GridComponent::CreateDescriptor(),
                         HDRiSkyboxComponent::CreateDescriptor(),
                         ImageBasedLightComponent::CreateDescriptor(),
-                        MaterialComponent::CreateDescriptor(),
                         MeshComponent::CreateDescriptor(),
                         PhysicalSkyComponent::CreateDescriptor(),
                         PostFxLayerComponent::CreateDescriptor(),
@@ -160,8 +156,6 @@ namespace AZ
                         EditorGridComponent::CreateDescriptor(),
                         EditorHDRiSkyboxComponent::CreateDescriptor(),
                         EditorImageBasedLightComponent::CreateDescriptor(),
-                        EditorMaterialComponent::CreateDescriptor(),
-                        EditorMaterialSystemComponent::CreateDescriptor(),
                         EditorMeshSystemComponent::CreateDescriptor(),
                         EditorMeshComponent::CreateDescriptor(),
                         EditorPhysicalSkyComponent::CreateDescriptor(),
@@ -194,7 +188,6 @@ namespace AZ
                 return AZ::ComponentTypeList{
                     azrtti_typeid<AtomLyIntegrationCommonFeaturesSystemComponent>(),
 #ifdef ATOMLYINTEGRATION_FEATURE_COMMON_EDITOR
-                    azrtti_typeid<EditorMaterialSystemComponent>(),
                     azrtti_typeid<EditorMeshSystemComponent>(),
                     azrtti_typeid<EditorCommonFeaturesSystemComponent>(),
                     azrtti_typeid<EditorPostFxSystemComponent>(),

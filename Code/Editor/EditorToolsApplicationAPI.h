@@ -42,6 +42,9 @@ namespace EditorInternal
         //! Retrieve default level file extension (With prepending '.')
         virtual const char* GetLevelExtension() const = 0;
 
+        //! Request asynchronous game-mode exit through the Editor update pipeline.
+        virtual void RequestExitGameMode() = 0;
+
         virtual void Exit() = 0;
         virtual void ExitNoPrompt() = 0;
     };

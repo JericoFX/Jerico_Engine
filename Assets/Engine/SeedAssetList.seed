@@ -5,6 +5,13 @@
     "ClassData": [
         {
             "assetId": {
+                "guid": "{69FE164E-0656-5AEE-9CE7-B954A44A519F}"
+            },
+            "platformFlags": 255,
+            "pathHint": "materials/whiteboxdefault.azmaterial"
+        },
+        {
+            "assetId": {
                 "guid": "{2FB1A7EF-557C-577E-94E6-DC1F331E374F}"
             },
             "platformFlags": 255,

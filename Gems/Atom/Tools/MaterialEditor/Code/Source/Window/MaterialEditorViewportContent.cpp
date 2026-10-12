@@ -14,8 +14,8 @@
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/PostProcess/DisplayMapper/DisplayMapperComponentBus.h>
@@ -53,12 +53,12 @@ namespace MaterialEditor
         // Create model
         m_objectEntity = CreateEntity(
             "ObjectEntity",
-            { AZ::Render::MeshComponentTypeId, AZ::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
+            { AZ::Render::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
 
         // Create shadow catcher
         m_shadowCatcherEntity = CreateEntity(
             "ShadowCatcherEntity",
-            { AZ::Render::MeshComponentTypeId, AZ::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>(),
+            { AZ::Render::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>(),
               azrtti_typeid<AzFramework::NonUniformScaleComponent>() });
 
         AZ::NonUniformScaleRequestBus::Event(
@@ -72,9 +72,9 @@ namespace MaterialEditor
             GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId,
             AZ::RPI::AssetUtils::GetAssetIdForProductPath("materialeditor/viewportmodels/plane_1x1.fbx.azmodel"));
 
-        AZ::Render::MaterialComponentRequestBus::Event(
-            GetShadowCatcherEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,
-            AZ::Render::DefaultMaterialAssignmentId,
+        JE::Render::MaterialComponentRequestBus::Event(
+            GetShadowCatcherEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,
+            JE::Render::DefaultMaterialAssignmentId,
             AZ::RPI::AssetUtils::GetAssetIdForProductPath("materials/special/shadowcatcher.azmaterial"));
 
         // Create grid
@@ -129,13 +129,13 @@ namespace MaterialEditor
        AZ::Data::Instance<AZ::RPI::Material> materialInstance;
         MaterialDocumentRequestBus::EventResult(materialInstance, documentId, &MaterialDocumentRequestBus::Events::GetInstance);
 
-        AZ::Render::MaterialAssignmentMap materials;
-        auto& materialAssignment = materials[AZ::Render::DefaultMaterialAssignmentId];
+        JE::Render::MaterialAssignmentMap materials;
+        auto& materialAssignment = materials[JE::Render::DefaultMaterialAssignmentId];
         materialAssignment.m_materialInstance = materialInstance;
         materialAssignment.m_materialInstancePreCreated = true;
 
-        AZ::Render::MaterialComponentRequestBus::Event(
-            GetObjectEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialMap, materials);
+        JE::Render::MaterialComponentRequestBus::Event(
+            GetObjectEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialMap, materials);
     }
 
     void MaterialEditorViewportContent::OnViewportSettingsChanged()
@@ -173,9 +173,9 @@ namespace MaterialEditor
                     GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetVisibility,
                     viewportRequests->GetShadowCatcherEnabled());
 
-                AZ::Render::MaterialComponentRequestBus::Event(
-                    GetShadowCatcherEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetPropertyValue,
-                    AZ::Render::DefaultMaterialAssignmentId, "settings.opacity", AZStd::any(lightingPreset.m_shadowCatcherOpacity));
+                JE::Render::MaterialComponentRequestBus::Event(
+                    GetShadowCatcherEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValue,
+                    JE::Render::DefaultMaterialAssignmentId, "settings.opacity", AZStd::any(lightingPreset.m_shadowCatcherOpacity));
 
                 AZ::Render::DisplayMapperComponentRequestBus::Event(
                     GetPostFxEntityId(), &AZ::Render::DisplayMapperComponentRequestBus::Events::SetDisplayMapperOperationType,

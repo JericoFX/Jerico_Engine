@@ -40,8 +40,8 @@
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConfig.h>
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/PostProcess/PostFxLayerComponentConstants.h>

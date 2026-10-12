@@ -273,8 +273,8 @@ namespace AZ
             MeshHandleStateRequestBus::Handler::BusConnect(entityId);
             AtomImGuiTools::AtomImGuiMeshCallbackBus::Handler::BusConnect(entityId);
             TransformNotificationBus::Handler::BusConnect(entityId);
-            MaterialConsumerRequestBus::Handler::BusConnect(entityId);
-            MaterialComponentNotificationBus::Handler::BusConnect(entityId);
+            JE::Render::MaterialConsumerRequestBus::Handler::BusConnect(entityId);
+            JE::Render::MaterialComponentNotificationBus::Handler::BusConnect(entityId);
             AzFramework::BoundsRequestBus::Handler::BusConnect(entityId);
             AzFramework::VisibleGeometryRequestBus::Handler::BusConnect(entityId);
             AzFramework::RenderGeometry::IntersectionRequestBus::Handler::BusConnect({ entityId, entityContextId });
@@ -294,8 +294,8 @@ namespace AZ
             AzFramework::RenderGeometry::IntersectionRequestBus::Handler::BusDisconnect();
             AzFramework::VisibleGeometryRequestBus::Handler::BusDisconnect();
             AzFramework::BoundsRequestBus::Handler::BusDisconnect();
-            MaterialComponentNotificationBus::Handler::BusDisconnect();
-            MaterialConsumerRequestBus::Handler::BusDisconnect();
+            JE::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
+            JE::Render::MaterialConsumerRequestBus::Handler::BusDisconnect();
             TransformNotificationBus::Handler::BusDisconnect();
             MeshComponentRequestBus::Handler::BusDisconnect();
             MeshHandleStateRequestBus::Handler::BusDisconnect();
@@ -349,20 +349,20 @@ namespace AZ
             }
         }
 
-        MaterialAssignmentLabelMap MeshComponentController::GetMaterialLabels() const
+        JE::Render::MaterialAssignmentLabelMap MeshComponentController::GetMaterialLabels() const
         {
-            return GetMaterialSlotLabelsFromModelAsset(GetModelAsset());
+            return JE::Render::GetMaterialSlotLabelsFromModelAsset(GetModelAsset());
         }
 
-        MaterialAssignmentId MeshComponentController::FindMaterialAssignmentId(
-            const MaterialAssignmentLodIndex lod, const AZStd::string& label) const
+        JE::Render::MaterialAssignmentId MeshComponentController::FindMaterialAssignmentId(
+            const JE::Render::MaterialAssignmentLodIndex lod, const AZStd::string& label) const
         {
-            return GetMaterialSlotIdFromModelAsset(GetModelAsset(), lod, label);
+            return JE::Render::GetMaterialSlotIdFromModelAsset(GetModelAsset(), lod, label);
         }
 
-        MaterialAssignmentMap MeshComponentController::GetDefaultMaterialMap() const
+        JE::Render::MaterialAssignmentMap MeshComponentController::GetDefaultMaterialMap() const
         {
-            return GetDefaultMaterialMapFromModelAsset(GetModelAsset());
+            return JE::Render::GetDefaultMaterialMapFromModelAsset(GetModelAsset());
         }
 
         AZStd::unordered_set<AZ::Name> MeshComponentController::GetModelUvNames() const
@@ -371,15 +371,15 @@ namespace AZ
             return model ? model->GetUvNames() : AZStd::unordered_set<AZ::Name>();
         }
 
-        void MeshComponentController::OnMaterialsUpdated(const MaterialAssignmentMap& materials)
+        void MeshComponentController::OnMaterialsUpdated(const JE::Render::MaterialAssignmentMap& materials)
         {
             if (m_meshFeatureProcessor)
             {
-                m_meshFeatureProcessor->SetCustomMaterials(m_meshHandle, ConvertToCustomMaterialMap(materials));
+                m_meshFeatureProcessor->SetCustomMaterials(m_meshHandle, JE::Render::ConvertToCustomMaterialMap(materials));
             }
         }
 
-        void MeshComponentController::OnMaterialPropertiesUpdated([[maybe_unused]] const MaterialAssignmentMap& materials)
+        void MeshComponentController::OnMaterialPropertiesUpdated([[maybe_unused]] const JE::Render::MaterialAssignmentMap& materials)
         {
             if (m_meshFeatureProcessor)
             {
@@ -414,7 +414,7 @@ namespace AZ
                 const AZ::EntityId entityId = m_entityComponentIdPair.GetEntityId();
                 m_configuration.m_modelAsset = modelAsset;
                 MeshComponentNotificationBus::Event(entityId, &MeshComponentNotificationBus::Events::OnModelReady, m_configuration.m_modelAsset, model);
-                MaterialConsumerNotificationBus::Event(entityId, &MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+                JE::Render::MaterialConsumerNotificationBus::Event(entityId, &JE::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
                 AZ::Interface<AzFramework::IEntityBoundsUnion>::Get()->RefreshEntityLocalBoundsUnion(entityId);
                 AzFramework::RenderGeometry::IntersectionNotificationBus::Event(
                     m_intersectionNotificationBus, &AzFramework::RenderGeometry::IntersectionNotificationBus::Events::OnGeometryChanged,
@@ -435,14 +435,14 @@ namespace AZ
             {
                 const AZ::EntityId entityId = m_entityComponentIdPair.GetEntityId();
 
-                MaterialAssignmentMap materials;
-                MaterialComponentRequestBus::EventResult(materials, entityId, &MaterialComponentRequests::GetMaterialMap);
+                JE::Render::MaterialAssignmentMap materials;
+                JE::Render::MaterialComponentRequestBus::EventResult(materials, entityId, &JE::Render::MaterialComponentRequests::GetMaterialMap);
 
                 m_meshFeatureProcessor->ReleaseMesh(m_meshHandle);
                 MeshHandleDescriptor meshDescriptor;
                 meshDescriptor.m_entityId = m_entityComponentIdPair.GetEntityId();
                 meshDescriptor.m_modelAsset = m_configuration.m_modelAsset;
-                meshDescriptor.m_customMaterials = ConvertToCustomMaterialMap(materials);
+                meshDescriptor.m_customMaterials = JE::Render::ConvertToCustomMaterialMap(materials);
                 meshDescriptor.m_useForwardPassIblSpecular = m_configuration.m_useForwardPassIblSpecular;
                 meshDescriptor.m_requiresCloneCallback = RequiresCloning;
                 meshDescriptor.m_isRayTracingEnabled = m_configuration.m_isRayTracingEnabled;
@@ -466,8 +466,8 @@ namespace AZ
             else
             {
                 // If there is no model asset to be loaded then we need to invalidate the material slot configuration
-                MaterialConsumerNotificationBus::Event(
-                    m_entityComponentIdPair.GetEntityId(), &MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+                JE::Render::MaterialConsumerNotificationBus::Event(
+                    m_entityComponentIdPair.GetEntityId(), &JE::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
             }
         }
 
@@ -483,8 +483,8 @@ namespace AZ
                     m_entityComponentIdPair.GetEntityId(), &MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
 
                 // Model has been released which invalidates the material slot configuration
-                MaterialConsumerNotificationBus::Event(
-                    m_entityComponentIdPair.GetEntityId(), &MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+                JE::Render::MaterialConsumerNotificationBus::Event(
+                    m_entityComponentIdPair.GetEntityId(), &JE::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
             }
         }
 
@@ -509,7 +509,7 @@ namespace AZ
             AZ::Data::Asset<AZ::RPI::ModelAsset> meshAsset =
             AZ::RPI::AssetUtils::LoadAssetById<AZ::RPI::ModelAsset>(modelAssetId, AZ::RPI::AssetUtils::TraceLevel::Error);
             meshAsset.BlockUntilLoadComplete();
-            if(meshAsset->IsReady())
+            if(meshAsset.IsReady())
             {
                 SetModelAsset(meshAsset);
             }
@@ -745,9 +745,9 @@ namespace AZ
 
             // Retrieve the map of material overrides from the material component. If any mesh has a material override, that must be checked
             // for transparency instead of the material included with the model asset.
-            MaterialAssignmentMap materials;
-            MaterialComponentRequestBus::EventResult(
-                materials, m_entityComponentIdPair.GetEntityId(), &MaterialComponentRequests::GetMaterialMap);
+            JE::Render::MaterialAssignmentMap materials;
+            JE::Render::MaterialComponentRequestBus::EventResult(
+                materials, m_entityComponentIdPair.GetEntityId(), &JE::Render::MaterialComponentRequests::GetMaterialMap);
 
             // Attempt to copy the triangle list geometry data out of the model asset into the visible geometry structure
             const auto& modelAsset = GetModelAsset();
@@ -840,9 +840,9 @@ namespace AZ
                 AZ::Data::Instance<AZ::RPI::Material> material = AZ::RPI::Material::FindOrCreate(materialSlot.m_defaultMaterialAsset);
 
                 // Materials provided by the material component take priority over materials provided by the model asset.
-                const MaterialAssignmentId id(lodIndex, materialSlotId);
-                const MaterialAssignmentId ignoreLodId(DefaultCustomMaterialLodIndex, materialSlotId);
-                for (const auto& currentId : { id, ignoreLodId, DefaultMaterialAssignmentId })
+                const JE::Render::MaterialAssignmentId id(lodIndex, materialSlotId);
+                const JE::Render::MaterialAssignmentId ignoreLodId(DefaultCustomMaterialLodIndex, materialSlotId);
+                for (const auto& currentId : { id, ignoreLodId, JE::Render::DefaultMaterialAssignmentId })
                 {
                     if (auto itr = materials.find(currentId); itr != materials.end() && itr->second.m_materialInstance)
                     {

@@ -26,6 +26,7 @@
 #include <Document/MaterialGraphCompiler.h>
 #include <GraphModel/Model/DataType.h>
 #include <MaterialCanvasApplication.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
 #include <Window/MaterialCanvasMainWindow.h>
 
 #include <QLabel>
@@ -76,6 +77,12 @@ namespace MaterialCanvas
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
         AZ::RHI::FactoryManagerNotificationBus::Handler::BusDisconnect();
         m_window.reset();
+    }
+
+    void MaterialCanvasApplication::RegisterCoreComponents()
+    {
+        Base::RegisterCoreComponents();
+        RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
     }
 
     void MaterialCanvasApplication::Reflect(AZ::ReflectContext* context)

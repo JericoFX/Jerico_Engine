@@ -12,7 +12,7 @@
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <AzToolsFramework/Entity/EditorEntityInfoBus.h>
 #include <AzToolsFramework/ToolsComponents/EditorVisibilityBus.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
 
 #include <AzFramework/Translation/TranslationDef.h>
 
@@ -262,17 +262,17 @@ namespace AZ
         AZ::Crc32 EditorMeshComponent::AddEditorMaterialComponent()
         {
             const AZStd::vector<AZ::EntityId> entityList = { GetEntityId() };
-            const AZ::ComponentTypeList componentsToAdd = { AZ::Uuid(AZ::Render::EditorMaterialComponentTypeId) };
+            const AZ::ComponentTypeList componentsToAdd = { AZ::Uuid(JE::Render::EditorMaterialComponentTypeId) };
 
             AzToolsFramework::EntityCompositionRequests::AddComponentsOutcome outcome =
-                AZ::Failure(AZStd::string("Failed to add AZ::Render::EditorMaterialComponentTypeId"));
+                AZ::Failure(AZStd::string("Failed to add JE::Render::EditorMaterialComponentTypeId"));
             AzToolsFramework::EntityCompositionRequestBus::BroadcastResult(outcome, &AzToolsFramework::EntityCompositionRequests::AddComponentsToEntities, entityList, componentsToAdd);
             return Edit::PropertyRefreshLevels::EntireTree;
         }
 
         bool EditorMeshComponent::HasEditorMaterialComponent() const
         {
-            return GetEntity() && GetEntity()->FindComponent(AZ::Uuid(AZ::Render::EditorMaterialComponentTypeId)) != nullptr;
+            return GetEntity() && GetEntity()->FindComponent(AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)) != nullptr;
         }
 
         AZ::u32 EditorMeshComponent::GetEditorMaterialComponentVisibility() const

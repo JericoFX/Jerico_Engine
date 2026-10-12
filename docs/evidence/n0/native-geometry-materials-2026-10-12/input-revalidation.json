@@ -1,0 +1,40 @@
+{
+  "recordedUtc": "2026-10-12T07:00:29.5303356Z",
+  "baselinePresentCount": 17139,
+  "hashedPresent": 17139,
+  "missingNow": 0,
+  "hashOrSizeMismatchCount": 4,
+  "mismatches": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\ENGINE_DEBUGGING_BOOK.md",
+      "expectedBytes": 83817,
+      "actualBytes": 84485,
+      "expectedSha256": "ECA0784D89722C46CFDD0A9AC51C07E96F2A360590500384EA3649FF860E65C9",
+      "actualSha256": "0AA3A25E13521FA6244A3D447B0F46E588DE182C481E3500CA0953D6FEC6C458"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\work\\ACTIVE_SLICE.md",
+      "expectedBytes": 46292,
+      "actualBytes": 48800,
+      "expectedSha256": "2F1F47B3D5ACCFA564AE98C4A9CD876112CD8343AB80975918EA2FABE0F0D405",
+      "actualSha256": "971AC216C94D97D5C6C62389C6F9CCEC1FDD4170061706B9ACBC158FD64D3D60"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\work\\HANDOFF.md",
+      "expectedBytes": 49509,
+      "actualBytes": 52132,
+      "expectedSha256": "1F27F2DC518ED3B740D667E3725185E0E42694EB6CF7146805C9E39FE70975ED",
+      "actualSha256": "F236678D26E40FAA4B1582AE6A4702B842B74EFCF301AB66779D7F7045F053A0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\README.md",
+      "expectedBytes": 7602,
+      "actualBytes": 7742,
+      "expectedSha256": "DD94FA3518FE669300592ED3D532C0D5DA03FDB14D83C693A2FFCE912C2BF1B8",
+      "actualSha256": "785CDA9574382537481CF7B6EAE37A78D7C63D234B90377FA7DFDCC04BD58F78"
+    }
+  ],
+  "geometryFreezeMatches": true,
+  "materialsFreezeMatches": true,
+  "activeRelevantProcessCount": 0
+}

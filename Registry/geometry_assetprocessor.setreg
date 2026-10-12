@@ -1,0 +1,21 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Keep the previous scan-folder database key while changing its
+                // owner and location. This is an identity key, not Gem discovery.
+                "ScanFolder gemassets-{5948AFF4-1B4B-55F8-BF7B-C06B937923CC}": {
+                    "watch": "@ENGINEROOT@/Engine/Geometry/Assets",
+                    "display": "Engine/Geometry",
+                    "recursive": 1,
+                    "order": 100
+                },
+                "RC WhiteBoxMesh": {
+                    "glob": "*.wbm",
+                    "params": "copy",
+                    "productAssetType": "{6784304A-4ED6-42FD-A5C9-316265F071F2}"
+                }
+            }
+        }
+    }
+}

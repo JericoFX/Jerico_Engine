@@ -26,6 +26,8 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzGameFramework
+            JE::Geometry
+            JE::RenderMaterials
             Legacy::CryCommon
 )
 
@@ -45,6 +47,8 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzGameFramework.Headless
+            JE::Geometry
+            JE::RenderMaterials
             Legacy::CryCommon
 )
 

@@ -30,6 +30,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomToolsFramework.Editor
                 Gem::Atom_Feature_Common.Public
                 Gem::AtomLyIntegration_CommonFeatures.Static
+                JE::RenderMaterials
                 Gem::Atom_Component_DebugCamera.Static
                 Gem::OpenParticleSystem.Editor.Static
         RUNTIME_DEPENDENCIES

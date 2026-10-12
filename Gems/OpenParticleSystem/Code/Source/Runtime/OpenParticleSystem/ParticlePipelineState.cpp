@@ -16,7 +16,7 @@
 
 namespace OpenParticle
 {
-    void EmitterInstance::Setup(AZ::Data::Asset<AZ::RPI::MaterialAsset>& mat, const MaterialPropertyOverrideMap& overrides)
+    void EmitterInstance::Setup(AZ::Data::Asset<AZ::RPI::MaterialAsset>& mat, const JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         m_materialAsset = mat;
         m_materialOverrides = overrides;

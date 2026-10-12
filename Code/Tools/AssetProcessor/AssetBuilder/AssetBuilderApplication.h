@@ -39,6 +39,7 @@ public:
 
     AZ::ComponentTypeList GetRequiredSystemComponents() const override;
     void RegisterCoreComponents() override;
+    void CreateStaticModules(AZStd::vector<AZ::Module*>& outModules) override;
     void StartCommon(AZ::Entity* systemEntity) override;
 
     bool IsInDebugMode() const;

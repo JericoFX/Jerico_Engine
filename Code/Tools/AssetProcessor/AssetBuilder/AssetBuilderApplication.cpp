@@ -7,6 +7,9 @@
  */
 
 #include <AzCore/Debug/Trace.h>
+#include <JE/Geometry/GeometryModule.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
+#include <JE/Editor/Materials/MaterialsRegistration.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Serialization/Utils.h>
@@ -114,9 +117,20 @@ AssetBuilderApplication::~AssetBuilderApplication()
     AZ::Interface<IBuilderApplication>::Unregister(this);
 }
 
+void AssetBuilderApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
+{
+    AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
+    outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+}
+
 void AssetBuilderApplication::RegisterCoreComponents()
 {
     AzToolsFramework::ToolsApplication::RegisterCoreComponents();
+
+    // Prefab conversion needs the authored and runtime types, but not the
+    // material browser/preview system used by the interactive editor.
+    RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
+    RegisterComponentDescriptor(JE::Editor::CreateEditorMaterialComponentDescriptor());
 
     RegisterComponentDescriptor(AssetBuilderComponent::CreateDescriptor());
     RegisterComponentDescriptor(AssetProcessor::ToolsAssetCatalogComponent::CreateDescriptor());

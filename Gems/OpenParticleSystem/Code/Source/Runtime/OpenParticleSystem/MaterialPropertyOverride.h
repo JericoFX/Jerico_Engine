@@ -27,9 +27,9 @@ namespace OpenParticle
     //! stores the values that differ from the assigned material asset, keyed by the full material property
     //! id (for example "baseColor.color" or "baseColor.textureMap").
     //!
-    //! This mirrors AZ::Render::MaterialAssignment::m_propertyOverrides used by the mesh material component,
+    //! This mirrors JE::Render::MaterialAssignment::m_propertyOverrides used by the mesh material component,
     //! but is redeclared here so the runtime gem does not have to depend on AtomLyIntegration_CommonFeatures.
-    using MaterialPropertyOverrideMap = AZStd::unordered_map<AZ::Name, AZStd::any>;
+    using JE::Render::MaterialPropertyOverrideMap = AZStd::unordered_map<AZ::Name, AZStd::any>;
 
     //! Registers the generic types needed to serialize a MaterialPropertyOverrideMap.
     //! Safe to call more than once; SerializeContext ignores duplicate generic type registrations.
@@ -47,10 +47,10 @@ namespace OpenParticle
     //! A false return generally means the material SRG was still in use this frame and the caller should
     //! try again next tick.
     bool ApplyMaterialPropertyOverrides(
-        const AZ::Data::Instance<AZ::RPI::Material>& material, const MaterialPropertyOverrideMap& overrides);
+        const AZ::Data::Instance<AZ::RPI::Material>& material, const JE::Render::MaterialPropertyOverrideMap& overrides);
 
     //! Drops overrides whose property id does not exist in the given material asset.
     //! Used when an emitter is pointed at a different material so stale ids do not linger in the source data.
     void PruneMaterialPropertyOverrides(
-        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset, MaterialPropertyOverrideMap& overrides);
+        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset, JE::Render::MaterialPropertyOverrideMap& overrides);
 } // namespace OpenParticle

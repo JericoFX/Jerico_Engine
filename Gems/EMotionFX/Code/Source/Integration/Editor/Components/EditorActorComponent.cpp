@@ -36,7 +36,7 @@
 #include <EMotionFX/Source/AttachmentSkin.h>
 #include <EMotionFX/Source/Mesh.h>
 #include <MCore/Source/AzCoreConversions.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
 
 namespace EMotionFX
 {
@@ -1078,17 +1078,17 @@ namespace EMotionFX
         AZ::Crc32 EditorActorComponent::AddEditorMaterialComponent()
         {
             const AZStd::vector<AZ::EntityId> entityList = { GetEntityId() };
-            const AZ::ComponentTypeList componentsToAdd = { AZ::Uuid(AZ::Render::EditorMaterialComponentTypeId) };
+            const AZ::ComponentTypeList componentsToAdd = { AZ::Uuid(JE::Render::EditorMaterialComponentTypeId) };
 
             AzToolsFramework::EntityCompositionRequests::AddComponentsOutcome outcome =
-                AZ::Failure(AZStd::string("Failed to add AZ::Render::EditorMaterialComponentTypeId"));
+                AZ::Failure(AZStd::string("Failed to add JE::Render::EditorMaterialComponentTypeId"));
             AzToolsFramework::EntityCompositionRequestBus::BroadcastResult(outcome, &AzToolsFramework::EntityCompositionRequests::AddComponentsToEntities, entityList, componentsToAdd);
             return AZ::Edit::PropertyRefreshLevels::EntireTree;
         }
 
         bool EditorActorComponent::HasEditorMaterialComponent() const
         {
-            return GetEntity() && GetEntity()->FindComponent(AZ::Uuid(AZ::Render::EditorMaterialComponentTypeId)) != nullptr;
+            return GetEntity() && GetEntity()->FindComponent(AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)) != nullptr;
         }
 
         AZ::u32 EditorActorComponent::GetEditorMaterialComponentVisibility() const

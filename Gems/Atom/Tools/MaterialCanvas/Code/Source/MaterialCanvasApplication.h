@@ -37,6 +37,7 @@ namespace MaterialCanvas
         ~MaterialCanvasApplication();
 
         // AzFramework::Application overrides...
+        void RegisterCoreComponents() override;
         void Reflect(AZ::ReflectContext* context) override;
         const char* GetCurrentConfigurationName() const override;
         void StartCommon(AZ::Entity* systemEntity) override;

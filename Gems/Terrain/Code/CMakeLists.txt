@@ -23,6 +23,7 @@ ly_add_target(
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common.Public
             Gem::CommonFeaturesAtom.Static
+            JE::RenderMaterials
             Gem::GradientSignal.Static
             Gem::SurfaceData.Static
             Gem::LmbrCentral.API

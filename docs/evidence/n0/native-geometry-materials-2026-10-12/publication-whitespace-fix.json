@@ -1,0 +1,26 @@
+[
+  {
+    "path": "Engine/Geometry/Source/GeometryAuthoringModule.cpp",
+    "beforeSha256": "C74F58847FDE808B92972BB12C18E979BE1A27BA9B07E0E703F03F583711B32E",
+    "afterSha256": "17FC5E675A01C2336600F72DD4A97C4ECCDCC6FD7B0FEDE4AA2008142685D695",
+    "change": "Only trailing whitespace and blank EOF line removed; code tokens unchanged"
+  },
+  {
+    "path": "Engine/Geometry/Source/GeometryModule.cpp",
+    "beforeSha256": "0540CCE5D68BBA08B869561C079344E120E490F7FB7A674888D947DA2BC72F16",
+    "afterSha256": "211F7486CC2ED35A79DDB3164E4A4D47839E9EC6F7A62C7D1A7104746E5C80C7",
+    "change": "Only trailing whitespace and blank EOF line removed; code tokens unchanged"
+  },
+  {
+    "path": "Engine/Geometry/Source/Viewport/WhiteBoxViewportConstants.cpp",
+    "beforeSha256": "2048AE4781C2E771E0036CD80D1D02FC447F64D81AF70CBA6A4545F2334604DE",
+    "afterSha256": "008C373E00B8FB0591844AA0A9940291D8531104251875778AC472FA87416CB2",
+    "change": "Only trailing whitespace and blank EOF line removed; code tokens unchanged"
+  },
+  {
+    "path": "Engine/Geometry/Source/Viewport/WhiteBoxViewportConstants.h",
+    "beforeSha256": "DB12F9DD3A2C81C836636E904289E6007F8CD9C7154D1661A499F1907DC3EA15",
+    "afterSha256": "9711646406387600B281F888D7847347C5FFD812B4FDB6370B69348DF6D5078C",
+    "change": "Only trailing whitespace and blank EOF line removed; code tokens unchanged"
+  }
+]

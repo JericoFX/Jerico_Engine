@@ -23,6 +23,7 @@
 #include <Document/PassGraphCompiler.h>
 #include <GraphModel/Model/DataType.h>
 #include <PassCanvasApplication.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
 #include <Window/PassCanvasMainWindow.h>
 
 #include <QLabel>
@@ -71,6 +72,12 @@ namespace PassCanvas
         AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
         m_window.reset();
+    }
+
+    void PassCanvasApplication::RegisterCoreComponents()
+    {
+        Base::RegisterCoreComponents();
+        RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
     }
 
     void PassCanvasApplication::Reflect(AZ::ReflectContext* context)

@@ -1,0 +1,33 @@
+{
+  "schema": "pe-export-header-count-correction-v1",
+  "recordedUtc": "2026-10-12T06:35:52.0194934Z",
+  "note": "The earlier derived comparison counted regex-matched ordinal/hint/RVA rows and mislabeled them as export counts. This receipt extracts dumpbin summary lines ending in number of functions/names. Raw row counts are kept separate.",
+  "binaries": [
+    {
+      "binary": "Geometry",
+      "beforeDumpbinPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-geometry-materials-integration-rev1\\runtime-boundary-review-rev2\\before\\Geometry.dumpbin.txt",
+      "beforeDumpbinSha256": "C6E8F79793C6087C45D417DD48BA130A9BE02D4679EEF8D247DDBBB331E7CE26",
+      "beforeNumberOfFunctions": 2388,
+      "beforeNumberOfNames": 2388,
+      "afterDumpbinPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-geometry-materials-integration-rev1\\native-attempt10\\pe-after\\Geometry.dumpbin.txt",
+      "afterDumpbinSha256": "7E66627A99A46F178D19C71B15399E88221D91E4D1E76F49FB94FEBE2CE5988C",
+      "afterNumberOfFunctions": 396,
+      "afterNumberOfNames": 396,
+      "rawOrdinalHintRvaRowsBefore": 954,
+      "rawOrdinalHintRvaRowsAfter": 190
+    },
+    {
+      "binary": "Geometry.Authoring",
+      "beforeDumpbinPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-geometry-materials-integration-rev1\\runtime-boundary-review-rev2\\before\\Geometry.Authoring.dumpbin.txt",
+      "beforeDumpbinSha256": "610A0CC8031BC93416862EED56E8E2D1A33FD44CCB0BD9ACC02F56C015D12DF3",
+      "beforeNumberOfFunctions": 12771,
+      "beforeNumberOfNames": 12771,
+      "afterDumpbinPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-geometry-materials-integration-rev1\\native-attempt10\\pe-after\\Geometry.Authoring.dumpbin.txt",
+      "afterDumpbinSha256": "B6F04E2C2930437EF6F5735294548DCC2FDB9306D99493B629A1ABBD43048A02",
+      "afterNumberOfFunctions": 756,
+      "afterNumberOfNames": 756,
+      "rawOrdinalHintRvaRowsBefore": 3200,
+      "rawOrdinalHintRvaRowsAfter": 300
+    }
+  ]
+}

@@ -42,6 +42,8 @@ ly_add_target(
             AZ::AzToolsFramework
             AZ::AssetBuilderSDK
             AZ::AssetBuilder.Static
+            JE::Geometry.Authoring
+            JE::EditorMaterials
             ${additional_dependencies}
 )
 

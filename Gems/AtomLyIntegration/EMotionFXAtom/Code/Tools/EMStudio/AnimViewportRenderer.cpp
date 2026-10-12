@@ -23,8 +23,8 @@
 #include <Atom/Component/DebugCamera/CameraComponent.h>
 #include <Atom/Component/DebugCamera/NoClipControllerComponent.h>
 
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/PostProcess/PostFxLayerComponentConstants.h>
@@ -147,7 +147,7 @@ namespace EMStudio
         AZ_Assert(m_groundEntity != nullptr, "Failed to create model entity.");
 
         m_groundEntity->CreateComponent(AZ::Render::MeshComponentTypeId);
-        m_groundEntity->CreateComponent(AZ::Render::MaterialComponentTypeId);
+        m_groundEntity->CreateComponent(JE::Render::MaterialComponentTypeId);
         m_groundEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         m_groundEntity->Init();
         m_groundEntity->Activate();
@@ -351,7 +351,7 @@ namespace EMStudio
     {
         AZ::Entity* actorEntity = m_entityContext->CreateEntity(actorAsset->GetActor()->GetName());
         actorEntity->CreateComponent(azrtti_typeid<EMotionFX::Integration::ActorComponent>());
-        actorEntity->CreateComponent(AZ::Render::MaterialComponentTypeId);
+        actorEntity->CreateComponent(JE::Render::MaterialComponentTypeId);
         actorEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         actorEntity->Init();
         actorEntity->Activate();

@@ -66,6 +66,7 @@ ly_add_target(
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common.Public
             Gem::EMotionFX.Static
+            JE::RenderMaterials
             AZ::AzCore
             SimuCoreParticleModules.Static
 )

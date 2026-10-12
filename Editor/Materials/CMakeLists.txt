@@ -1,0 +1,23 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+
+ly_add_target(
+    NAME EditorMaterials ${PAL_TRAIT_MONOLITHIC_DRIVEN_LIBRARY_TYPE}
+    NAMESPACE JE
+    AUTOMOC
+    FILES_CMAKE materials_files.cmake
+    INCLUDE_DIRECTORIES PUBLIC Include
+    COMPILE_DEFINITIONS PRIVATE JE_EDITOR_MATERIALS_EXPORTS
+    BUILD_DEPENDENCIES
+        PUBLIC
+            JE::RenderMaterials
+            AZ::AzToolsFramework
+            Gem::Atom_RPI.Edit
+            Gem::AtomToolsFramework.Static
+            Gem::AtomToolsFramework.Editor
+            Gem::CommonFeaturesAtom.Public
+            Legacy::Editor.Headers
+            Legacy::CryCommon
+)
+
+set_target_properties(EditorMaterials PROPERTIES UNITY_BUILD OFF)

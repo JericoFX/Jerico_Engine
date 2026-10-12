@@ -17,7 +17,7 @@
 #include <AzFramework/Asset/AssetSystemBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <AzToolsFramework/Thumbnails/ThumbnailerBus.h>
-#include <SharedPreview/SharedPreviewContent.h>
+#include <JE/Editor/Materials/SharedPreviewContent.h>
 #include <SharedPreview/SharedPreviewUtils.h>
 #include <SharedPreview/SharedThumbnailRenderer.h>
 
@@ -191,10 +191,10 @@ namespace AZ
 
             previewRenderer->AddCaptureRequest(
                 { thumbnailSize,
-                    AZStd::make_shared<SharedPreviewContent>(
+                    AZStd::make_shared<JE::Editor::SharedPreviewContent>(
                         previewRenderer->GetScene(), previewRenderer->GetView(), previewRenderer->GetEntityContextId(),
                         thumbnailConfig.m_modelAsset, thumbnailConfig.m_materialAsset, thumbnailConfig.m_lightingAsset,
-                        Render::MaterialPropertyOverrideMap()),
+                        JE::Render::MaterialPropertyOverrideMap()),
                     [thumbnailKey]()
                     {
                       AzToolsFramework::Thumbnailer::ThumbnailerRendererNotificationBus::Event(

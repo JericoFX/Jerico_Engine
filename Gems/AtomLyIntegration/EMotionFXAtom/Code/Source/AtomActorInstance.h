@@ -17,7 +17,7 @@
 
 #include <LmbrCentral/Animation/SkeletalHierarchyRequestBus.h>
 
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/SkinnedMesh/SkinnedMeshOverrideBus.h>
@@ -62,9 +62,9 @@ namespace AZ
         class AtomActorInstance
             : public EMotionFX::Integration::RenderActorInstance
             , public AZ::TransformNotificationBus::Handler
-            , public AZ::Render::MaterialConsumerRequestBus::Handler
+            , public JE::Render::MaterialConsumerRequestBus::Handler
             , public AzFramework::BoundsRequestBus::Handler
-            , public AZ::Render::MaterialComponentNotificationBus::Handler
+            , public JE::Render::MaterialComponentNotificationBus::Handler
             , public AZ::Render::MeshComponentRequestBus::Handler
             , public AZ::Render::SkinnedMeshOverrideRequestBus::Handler
             , private AZ::Render::SkinnedMeshFeatureProcessorNotificationBus::Handler
@@ -124,16 +124,16 @@ namespace AZ
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // MaterialConsumerRequestBus::Handler overrides...
-            MaterialAssignmentId FindMaterialAssignmentId(
-                const MaterialAssignmentLodIndex lod, const AZStd::string& label) const override;
-            MaterialAssignmentLabelMap GetMaterialLabels() const override;
-            MaterialAssignmentMap GetDefaultMaterialMap() const override;
+            JE::Render::MaterialAssignmentId FindMaterialAssignmentId(
+                const JE::Render::MaterialAssignmentLodIndex lod, const AZStd::string& label) const override;
+            JE::Render::MaterialAssignmentLabelMap GetMaterialLabels() const override;
+            JE::Render::MaterialAssignmentMap GetDefaultMaterialMap() const override;
             AZStd::unordered_set<AZ::Name> GetModelUvNames() const override;
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // MaterialComponentNotificationBus::Handler overrides...
-            void OnMaterialsUpdated(const MaterialAssignmentMap& materials) override;
-            void OnMaterialPropertiesUpdated(const MaterialAssignmentMap& materials) override;
+            void OnMaterialsUpdated(const JE::Render::MaterialAssignmentMap& materials) override;
+            void OnMaterialPropertiesUpdated(const JE::Render::MaterialAssignmentMap& materials) override;
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // MeshComponentRequestBus::Handler overrides...
@@ -184,7 +184,7 @@ namespace AZ
             // SkinnedMeshFeatureProcessorNotificationBus
             void OnUpdateSkinningMatrices() override;
 
-            void CreateRenderProxy(const MaterialAssignmentMap& materials);
+            void CreateRenderProxy(const JE::Render::MaterialAssignmentMap& materials);
 
         private:
             // MeshHandleStateRequestBus overrides ...

@@ -8,8 +8,6 @@
 
 #include <Atom/RPI.Reflect/Model/ModelAsset.h>
 #include <AtomLyIntegration/CommonFeatures/CoreLights/CoreLightsConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialAssignment.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialAssignmentId.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/EditContextConstants.inl>
@@ -23,7 +21,6 @@ namespace AZ
     {
         void AtomLyIntegrationCommonFeaturesSystemComponent::Reflect(ReflectContext* context)
         {
-            MaterialAssignment::Reflect(context);
             CoreLightConstantsReflect(context);
 
             if (SerializeContext* serialize = azrtti_cast<SerializeContext*>(context))

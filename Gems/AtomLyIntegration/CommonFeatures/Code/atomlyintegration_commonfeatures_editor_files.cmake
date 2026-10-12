@@ -7,8 +7,6 @@
 #
 
 set(FILES
-    Include/AtomLyIntegration/CommonFeatures/Material/EditorMaterialSystemComponentNotificationBus.h
-    Include/AtomLyIntegration/CommonFeatures/Material/EditorMaterialSystemComponentRequestBus.h
     Include/AtomLyIntegration/CommonFeatures/ReflectionProbe/EditorReflectionProbeBus.h
     Source/Animation/EditorAttachmentComponent.h
     Source/Animation/EditorAttachmentComponent.cpp
@@ -32,24 +30,6 @@ set(FILES
     Source/Grid/EditorGridComponent.cpp
     Source/ImageBasedLights/EditorImageBasedLightComponent.h
     Source/ImageBasedLights/EditorImageBasedLightComponent.cpp
-    Source/Material/EditorMaterialComponent.cpp
-    Source/Material/EditorMaterialComponent.h
-    Source/Material/EditorMaterialComponentSerializer.cpp
-    Source/Material/EditorMaterialComponentSerializer.h
-    Source/Material/EditorMaterialComponentUtil.cpp
-    Source/Material/EditorMaterialComponentUtil.h
-    Source/Material/EditorMaterialComponentSlot.cpp
-    Source/Material/EditorMaterialComponentSlot.h
-    Source/Material/EditorMaterialComponentExporter.cpp
-    Source/Material/EditorMaterialComponentExporter.h
-    Source/Material/EditorMaterialComponentInspector.cpp
-    Source/Material/EditorMaterialComponentInspector.h
-    Source/Material/EditorMaterialModelUvNameMapInspector.cpp
-    Source/Material/EditorMaterialModelUvNameMapInspector.h
-    Source/Material/EditorMaterialSystemComponent.cpp
-    Source/Material/EditorMaterialSystemComponent.h
-    Source/Material/MaterialBrowserInteractions.h
-    Source/Material/MaterialBrowserInteractions.cpp
     Source/Mesh/EditorMeshComponent.h
     Source/Mesh/EditorMeshComponent.cpp
     Source/Mesh/EditorMeshStats.h
@@ -115,8 +95,6 @@ set(FILES
     Source/SharedPreview/SharedPreviewer.ui
     Source/SharedPreview/SharedPreviewerFactory.cpp
     Source/SharedPreview/SharedPreviewerFactory.h
-    Source/SharedPreview/SharedPreviewContent.cpp
-    Source/SharedPreview/SharedPreviewContent.h
     Source/SharedPreview/SharedPreviewUtils.cpp
     Source/SharedPreview/SharedPreviewUtils.h
     Source/SharedPreview/SharedThumbnail.cpp

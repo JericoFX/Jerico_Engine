@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-12",
+  "result": "PASS_SCOPED_FACE_MATERIAL_VULKAN",
+  "editorPid": 271404,
+  "renderer": "Vulkan",
+  "scene": "JENativeIntegration",
+  "surfaceId": "{4494ED99-2A63-481E-BAD4-1E6A035BFC5B}",
+  "material": "metal_iron",
+  "prefabHashes": {
+    "undo": "DC6227B7D302A0A839E9FCA1E320863EF2F16C517420BE32EFE008D0852DBA6F",
+    "redo": "D36E1CAAA4EBF5E4BC7BFA863837520FB86A0B2C59F97CC43A97B759DD8D03B1",
+    "before": "EA19AD6AC9C551316F8D9A1B6EB10F24FC088D2BE0B08DA14319886944C98DDA",
+    "prepared": "DC6227B7D302A0A839E9FCA1E320863EF2F16C517420BE32EFE008D0852DBA6F",
+    "applied": "D36E1CAAA4EBF5E4BC7BFA863837520FB86A0B2C59F97CC43A97B759DD8D03B1"
+  },
+  "assignmentDiff": "One surface binding and five triangle MaterialSlot values 1 to 2; no geometry or UV differences",
+  "uiChecks": [
+    "Assign material to selected front floor",
+    "Undo restores prepared prefab bytes",
+    "Redo restores applied prefab bytes",
+    "Save and reopen retains assignment",
+    "Editor game mode renders metal floor and grid corridor"
+  ],
+  "undoCaveat": "Component mode transition also occupied undo history; restoration was verified by full prefab hash, not a single undo invocation",
+  "originalPrefabSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "editorAndAssetProcessesClosed": true,
+  "limitations": [
+    "Manual UV geometry reprojection guard remains; Reset All UVs was not used",
+    "No standalone, VR or DX12 face assignment acceptance",
+    "Existing AP failed jobs counter 356; no error-free engine claim",
+    "Not a performance benchmark"
+  ],
+  "evidence": [
+    "applied.jpg",
+    "reopened.jpg",
+    "runtime.jpg",
+    "Editor-final.log"
+  ]
+}

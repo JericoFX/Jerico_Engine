@@ -1,0 +1,51 @@
+{
+  "recordedUtc": "2026-10-12T06:30:30.3375194Z",
+  "results": [
+    {
+      "status": "EXIT_ZERO",
+      "test": "JE::Geometry.Tests.main::TEST_RUN",
+      "startUtc": "2026-10-12T06:30:22.2486575Z",
+      "endUtc": "2026-10-12T06:30:23.1861001Z",
+      "nativePid": 248228,
+      "exitCode": 0,
+      "elapsedSeconds": 0.9308353,
+      "stdoutBytes": 403,
+      "stderrBytes": 0
+    },
+    {
+      "status": "EXIT_ZERO",
+      "test": "JE::Geometry.Authoring.Tests.main::TEST_RUN",
+      "startUtc": "2026-10-12T06:30:23.1984790Z",
+      "endUtc": "2026-10-12T06:30:29.3124146Z",
+      "nativePid": 199696,
+      "exitCode": 0,
+      "elapsedSeconds": 6.1126174,
+      "stdoutBytes": 425,
+      "stderrBytes": 0
+    },
+    {
+      "status": "EXIT_ZERO",
+      "test": "JE::Geometry.Authoring.Physics.Tests.main::TEST_RUN",
+      "startUtc": "2026-10-12T06:30:29.3149029Z",
+      "endUtc": "2026-10-12T06:30:29.8662654Z",
+      "nativePid": 314920,
+      "exitCode": 0,
+      "elapsedSeconds": 0.5502603,
+      "stdoutBytes": 441,
+      "stderrBytes": 0
+    },
+    {
+      "status": "EXIT_ZERO",
+      "test": "Gem::CommonFeaturesAtom.Editor.Tests.main::TEST_RUN",
+      "startUtc": "2026-10-12T06:30:29.8684185Z",
+      "endUtc": "2026-10-12T06:30:30.3358606Z",
+      "nativePid": 201508,
+      "exitCode": 0,
+      "elapsedSeconds": 0.4667246,
+      "stdoutBytes": 439,
+      "stderrBytes": 0
+    }
+  ],
+  "completedCount": 4,
+  "allExitZero": true
+}

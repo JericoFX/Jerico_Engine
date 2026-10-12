@@ -35,6 +35,7 @@ ly_add_target(
         PUBLIC
             Gem::Atom_RPI.Public
             Gem::CommonFeaturesAtom.Static
+            JE::RenderMaterials
             Gem::LmbrCentral
     COMPILE_DEFINITIONS
         PUBLIC

@@ -1,0 +1,9 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+
+add_subdirectory(Render/Materials)
+add_subdirectory(Geometry)
+
+if(PAL_TRAIT_BUILD_HOST_TOOLS)
+    add_subdirectory(${LY_ROOT_FOLDER}/Editor/Materials ${CMAKE_CURRENT_BINARY_DIR}/Editor/Materials)
+endif()

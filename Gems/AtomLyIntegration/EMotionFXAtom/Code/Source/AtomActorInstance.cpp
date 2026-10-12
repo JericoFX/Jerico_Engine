@@ -195,7 +195,7 @@ namespace AZ::Render
         AZ_Warning("AtomActorInstance", m_transformInterface, "Unable to attach to a TransformBus handler. This skinned mesh will always be rendered at the origin.");
 
         SkinnedMeshFeatureProcessorNotificationBus::Handler::BusConnect();
-        MaterialConsumerRequestBus::Handler::BusConnect(m_entityId);
+        JE::Render::MaterialConsumerRequestBus::Handler::BusConnect(m_entityId);
         LmbrCentral::SkeletalHierarchyRequestBus::Handler::BusConnect(m_entityId);
 
         Create();
@@ -205,7 +205,7 @@ namespace AZ::Render
     {
         SkinnedMeshOutputStreamNotificationBus::Handler::BusDisconnect();
         LmbrCentral::SkeletalHierarchyRequestBus::Handler::BusDisconnect();
-        MaterialConsumerRequestBus::Handler::BusDisconnect();
+        JE::Render::MaterialConsumerRequestBus::Handler::BusDisconnect();
         SkinnedMeshFeatureProcessorNotificationBus::Handler::BusDisconnect();
 
         Destroy();
@@ -214,20 +214,20 @@ namespace AZ::Render
         m_skinnedMeshFeatureProcessor = nullptr;
     }
 
-    MaterialAssignmentLabelMap AtomActorInstance::GetMaterialLabels() const
+    JE::Render::MaterialAssignmentLabelMap AtomActorInstance::GetMaterialLabels() const
     {
-        return GetMaterialSlotLabelsFromModelAsset(GetModelAsset());
+        return JE::Render::GetMaterialSlotLabelsFromModelAsset(GetModelAsset());
     }
 
-    MaterialAssignmentId AtomActorInstance::FindMaterialAssignmentId(
-        const MaterialAssignmentLodIndex lod, const AZStd::string& label) const
+    JE::Render::MaterialAssignmentId AtomActorInstance::FindMaterialAssignmentId(
+        const JE::Render::MaterialAssignmentLodIndex lod, const AZStd::string& label) const
     {
-        return GetMaterialSlotIdFromModelAsset(GetModelAsset(), lod, label);
+        return JE::Render::GetMaterialSlotIdFromModelAsset(GetModelAsset(), lod, label);
     }
 
-    MaterialAssignmentMap AtomActorInstance::GetDefaultMaterialMap() const
+    JE::Render::MaterialAssignmentMap AtomActorInstance::GetDefaultMaterialMap() const
     {
-        return GetDefaultMaterialMapFromModelAsset(GetModelAsset());
+        return JE::Render::GetDefaultMaterialMapFromModelAsset(GetModelAsset());
     }
 
     AZStd::unordered_set<AZ::Name> AtomActorInstance::GetModelUvNames() const
@@ -245,15 +245,15 @@ namespace AZ::Render
         m_meshFeatureProcessor->SetTransform(*m_meshHandle, world); // handle validity is checked internally.
     }
 
-    void AtomActorInstance::OnMaterialsUpdated(const MaterialAssignmentMap& materials)
+    void AtomActorInstance::OnMaterialsUpdated(const JE::Render::MaterialAssignmentMap& materials)
     {
         if (m_meshFeatureProcessor)
         {
-            m_meshFeatureProcessor->SetCustomMaterials(*m_meshHandle, ConvertToCustomMaterialMap(materials));
+            m_meshFeatureProcessor->SetCustomMaterials(*m_meshHandle, JE::Render::ConvertToCustomMaterialMap(materials));
         }
     }
 
-    void AtomActorInstance::OnMaterialPropertiesUpdated([[maybe_unused]] const MaterialAssignmentMap& materials)
+    void AtomActorInstance::OnMaterialPropertiesUpdated([[maybe_unused]] const JE::Render::MaterialAssignmentMap& materials)
     {
         if (m_meshFeatureProcessor)
         {
@@ -652,14 +652,14 @@ namespace AZ::Render
             return;
         }
 
-        MaterialAssignmentMap materials;
-        MaterialComponentRequestBus::EventResult(materials, m_entityId, &MaterialComponentRequests::GetMaterialMap);
+        JE::Render::MaterialAssignmentMap materials;
+        JE::Render::MaterialComponentRequestBus::EventResult(materials, m_entityId, &JE::Render::MaterialComponentRequests::GetMaterialMap);
         CreateRenderProxy(materials);
 
         InitWrinkleMasks();
 
         TransformNotificationBus::Handler::BusConnect(m_entityId);
-        MaterialComponentNotificationBus::Handler::BusConnect(m_entityId);
+        JE::Render::MaterialComponentNotificationBus::Handler::BusConnect(m_entityId);
         MeshComponentRequestBus::Handler::BusConnect(m_entityId);
         SkinnedMeshOverrideRequestBus::Handler::BusConnect(m_entityId);
         MeshHandleStateRequestBus::Handler::BusConnect(m_entityId);
@@ -674,7 +674,7 @@ namespace AZ::Render
         MeshHandleStateRequestBus::Handler::BusDisconnect();
         SkinnedMeshOverrideRequestBus::Handler::BusDisconnect(m_entityId);
         MeshComponentRequestBus::Handler::BusDisconnect();
-        MaterialComponentNotificationBus::Handler::BusDisconnect();
+        JE::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
         TransformNotificationBus::Handler::BusDisconnect();
         m_skinnedMeshFeatureProcessor->ReleaseSkinnedMesh(m_skinnedMeshHandle);
         if (m_meshHandle)
@@ -685,7 +685,7 @@ namespace AZ::Render
         }
     }
 
-    void AtomActorInstance::CreateRenderProxy(const MaterialAssignmentMap& materials)
+    void AtomActorInstance::CreateRenderProxy(const JE::Render::MaterialAssignmentMap& materials)
     {
         auto meshFeatureProcessor = RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
         AZ_Error("ActorComponentController", meshFeatureProcessor, "Unable to find a MeshFeatureProcessorInterface on the entityId.");
@@ -695,7 +695,7 @@ namespace AZ::Render
             meshDescriptor.m_entityId = m_entityId;
             meshDescriptor.m_modelAsset = m_skinnedMeshInstance->m_model->GetModelAsset();
             meshDescriptor.m_productModelAsset = m_actorAsset->GetActor()->GetMeshAsset();
-            meshDescriptor.m_customMaterials = ConvertToCustomMaterialMap(materials);
+            meshDescriptor.m_customMaterials = JE::Render::ConvertToCustomMaterialMap(materials);
             meshDescriptor.m_isRayTracingEnabled = m_rayTracingEnabled;
             meshDescriptor.m_isAlwaysDynamic = true;
             meshDescriptor.m_excludeFromReflectionCubeMaps = true;
@@ -727,7 +727,7 @@ namespace AZ::Render
         m_skinnedMeshInstance = m_skinnedMeshInputBuffers->CreateSkinnedMeshInstance();
         if (m_skinnedMeshInstance && m_skinnedMeshInstance->m_model)
         {
-            MaterialConsumerNotificationBus::Event(m_entityId, &MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+            JE::Render::MaterialConsumerNotificationBus::Event(m_entityId, &JE::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
 
             RegisterActor();
         }
@@ -843,7 +843,7 @@ namespace AZ::Render
         if (model && modelAsset.IsReady())
         {
             MeshComponentNotificationBus::Event(m_entityId, &MeshComponentNotificationBus::Events::OnModelReady, modelAsset, model);
-            MaterialConsumerNotificationBus::Event(m_entityId, &MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
+            JE::Render::MaterialConsumerNotificationBus::Event(m_entityId, &JE::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
             AZ::Interface<AzFramework::IEntityBoundsUnion>::Get()->RefreshEntityLocalBoundsUnion(m_entityId);
             MeshHandleStateNotificationBus::Event(m_entityId, &MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &(*m_meshHandle));
         }

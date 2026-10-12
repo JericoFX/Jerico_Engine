@@ -35,6 +35,8 @@ namespace EditorInternal
 
         void RegisterCoreComponents() override;
 
+        void CreateStaticModules(AZStd::vector<AZ::Module*>& outModules) override;
+
         AZ::ComponentTypeList GetRequiredSystemComponents() const override;
 
         void StartCommon(AZ::Entity* systemEntity) override;
@@ -64,6 +66,8 @@ namespace EditorInternal
 
         int CreateLevel(AZStd::string_view templateName, AZStd::string_view levelName, bool bUseTerrain) override;
         int CreateLevelNoPrompt(AZStd::string_view templateName, AZStd::string_view levelName, int terrainExportTextureSize, bool useTerrain) override;
+
+        void RequestExitGameMode() override;
 
         void Exit() override;
         void ExitNoPrompt() override;

@@ -103,6 +103,8 @@ ly_add_target(
             AZ::SceneCore
             AZ::SceneData
             AZ::SceneUI
+            JE::Geometry.Authoring
+            JE::EditorMaterials
             Gem::Atom_Feature_Common.Public
             Gem::Atom_RPI.Edit
             Gem::Atom_RPI.Public

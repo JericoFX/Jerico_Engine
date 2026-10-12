@@ -76,7 +76,7 @@ namespace OpenParticle
     {
         if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serializeContext->RegisterGenericType<MaterialPropertyOverrideMap>();
+            serializeContext->RegisterGenericType<JE::Render::MaterialPropertyOverrideMap>();
         }
     }
 
@@ -119,7 +119,7 @@ namespace OpenParticle
     }
 
     bool ApplyMaterialPropertyOverrides(
-        const AZ::Data::Instance<AZ::RPI::Material>& material, const MaterialPropertyOverrideMap& overrides)
+        const AZ::Data::Instance<AZ::RPI::Material>& material, const JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         if (!material || overrides.empty())
         {
@@ -167,7 +167,7 @@ namespace OpenParticle
     }
 
     void PruneMaterialPropertyOverrides(
-        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset, MaterialPropertyOverrideMap& overrides)
+        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset, JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         if (overrides.empty())
         {

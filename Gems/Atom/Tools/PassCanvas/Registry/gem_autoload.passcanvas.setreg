@@ -297,13 +297,6 @@
                     }
                 }
             },
-            "WhiteBox": {
-                "Targets": {
-                    "WhiteBox.Editor": {
-                        "AutoLoad": false
-                    }
-                }
-            },
             "PythonAssetBuilder": {
                 "Targets": {
                     "PythonAssetBuilder.Editor": {

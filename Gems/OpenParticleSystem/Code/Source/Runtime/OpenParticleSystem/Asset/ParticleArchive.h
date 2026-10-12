@@ -61,7 +61,7 @@ namespace OpenParticle
             AZ::Data::Asset<AZ::RPI::MaterialAsset> m_material;
             //! Property values that differ from m_material for this emitter only. Applied to the emitter's
             //! own material instance at load, so two emitters can share a material asset and still look different.
-            MaterialPropertyOverrideMap m_materialOverrides;
+            JE::Render::MaterialPropertyOverrideMap m_materialOverrides;
             AZ::Data::Asset<AZ::RPI::ModelAsset> m_model;
             AZ::Data::Asset<AZ::RPI::ModelAsset> m_skeletonModel;
             AZStd::vector<AZStd::tuple<AZ::Uuid, AZ::u32>> m_effectors;
@@ -84,7 +84,7 @@ namespace OpenParticle
 
         ParticleArchive& Material(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset);
 
-        ParticleArchive& MaterialOverrides(const MaterialPropertyOverrideMap& overrides);
+        ParticleArchive& MaterialOverrides(const JE::Render::MaterialPropertyOverrideMap& overrides);
 
         ParticleArchive& Model(const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset);
 

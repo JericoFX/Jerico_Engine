@@ -15,8 +15,8 @@
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Material/MaterialComponentConstants.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/PostProcess/DisplayMapper/DisplayMapperComponentBus.h>
@@ -55,12 +55,12 @@ namespace MaterialCanvas
         // Create model
         m_objectEntity = CreateEntity(
             "ObjectEntity",
-            { AZ::Render::MeshComponentTypeId, AZ::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
+            { AZ::Render::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
 
         // Create shadow catcher
         m_shadowCatcherEntity = CreateEntity(
             "ShadowCatcherEntity",
-            { AZ::Render::MeshComponentTypeId, AZ::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>(),
+            { AZ::Render::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>(),
               azrtti_typeid<AzFramework::NonUniformScaleComponent>() });
 
         AZ::NonUniformScaleRequestBus::Event(
@@ -74,9 +74,9 @@ namespace MaterialCanvas
             GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId,
             AZ::RPI::AssetUtils::GetAssetIdForProductPath("materialeditor/viewportmodels/plane_1x1.fbx.azmodel"));
 
-        AZ::Render::MaterialComponentRequestBus::Event(
-            GetShadowCatcherEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,
-            AZ::Render::DefaultMaterialAssignmentId,
+        JE::Render::MaterialComponentRequestBus::Event(
+            GetShadowCatcherEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,
+            JE::Render::DefaultMaterialAssignmentId,
             AZ::RPI::AssetUtils::GetAssetIdForProductPath("materials/special/shadowcatcher.azmaterial"));
 
         // Create grid
@@ -130,8 +130,8 @@ namespace MaterialCanvas
 
     void MaterialCanvasViewportContent::OnDocumentClosed([[maybe_unused]] const AZ::Uuid& documentId)
     {
-        AZ::Render::MaterialComponentRequestBus::Event(
-            GetObjectEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialAssetIdOnDefaultSlot, AZ::Data::AssetId());
+        JE::Render::MaterialComponentRequestBus::Event(
+            GetObjectEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialAssetIdOnDefaultSlot, AZ::Data::AssetId());
     }
 
     void MaterialCanvasViewportContent::OnDocumentOpened([[maybe_unused]] const AZ::Uuid& documentId)
@@ -201,9 +201,9 @@ namespace MaterialCanvas
                     GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetVisibility,
                     viewportRequests->GetShadowCatcherEnabled());
 
-                AZ::Render::MaterialComponentRequestBus::Event(
-                    GetShadowCatcherEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetPropertyValue,
-                    AZ::Render::DefaultMaterialAssignmentId, "settings.opacity", AZStd::any(lightingPreset.m_shadowCatcherOpacity));
+                JE::Render::MaterialComponentRequestBus::Event(
+                    GetShadowCatcherEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValue,
+                    JE::Render::DefaultMaterialAssignmentId, "settings.opacity", AZStd::any(lightingPreset.m_shadowCatcherOpacity));
 
                 AZ::Render::DisplayMapperComponentRequestBus::Event(
                     GetPostFxEntityId(), &AZ::Render::DisplayMapperComponentRequestBus::Events::SetDisplayMapperOperationType,
@@ -239,12 +239,12 @@ namespace MaterialCanvas
         // of overridden values in the material. The generated material asset is empty except for a single field referencing the material
         // type. Because the material asset never changes, it won't be reprocessed by the AP or treated as a unique asset in the asset
         // system. We force the viewport to create a unique material instance every time a change needs to be reflected in material canvas.
-        AZ::Render::MaterialAssignment materialAssignment;
+        JE::Render::MaterialAssignment materialAssignment;
         materialAssignment.m_materialAsset.Create(assetId, AZ::Data::AssetLoadBehavior::PreLoad);
         materialAssignment.m_materialInstanceMustBeUnique = true;
-        AZ::Render::MaterialAssignmentMap materialAssignmentMap;
-        materialAssignmentMap.emplace(AZ::Render::DefaultMaterialAssignmentId, materialAssignment);
-        AZ::Render::MaterialComponentRequestBus::Event(
-            GetObjectEntityId(), &AZ::Render::MaterialComponentRequestBus::Events::SetMaterialMap, materialAssignmentMap);
+        JE::Render::MaterialAssignmentMap materialAssignmentMap;
+        materialAssignmentMap.emplace(JE::Render::DefaultMaterialAssignmentId, materialAssignment);
+        JE::Render::MaterialComponentRequestBus::Event(
+            GetObjectEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialMap, materialAssignmentMap);
     }
 } // namespace MaterialCanvas

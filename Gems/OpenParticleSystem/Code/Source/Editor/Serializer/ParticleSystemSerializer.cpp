@@ -600,7 +600,7 @@ namespace OpenParticle
         {
             resultCode.Combine(ContinueLoadingFromJsonObjectField(
                 &emitInfo->m_materialOverrides,
-                azrtti_typeid<MaterialPropertyOverrideMap>(),
+                azrtti_typeid<JE::Render::MaterialPropertyOverrideMap>(),
                 inputValue,
                 "materialOverrides",
                 context));
@@ -734,7 +734,7 @@ namespace OpenParticle
                 "materialOverrides",
                 &info->m_materialOverrides,
                 nullptr,
-                azrtti_typeid<MaterialPropertyOverrideMap>(),
+                azrtti_typeid<JE::Render::MaterialPropertyOverrideMap>(),
                 context));
         }
 

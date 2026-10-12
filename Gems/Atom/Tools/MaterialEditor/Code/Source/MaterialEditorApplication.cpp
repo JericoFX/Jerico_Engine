@@ -9,6 +9,7 @@
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <MaterialEditorApplication.h>
+#include <JE/Render/Materials/MaterialsRegistration.h>
 
 #include <Document/MaterialDocument.h>
 #include <Window/MaterialEditorMainWindow.h>
@@ -54,6 +55,12 @@ namespace MaterialEditor
     {
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
         m_window.reset();
+    }
+
+    void MaterialEditorApplication::RegisterCoreComponents()
+    {
+        Base::RegisterCoreComponents();
+        RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());
     }
 
     void MaterialEditorApplication::Reflect(AZ::ReflectContext* context)

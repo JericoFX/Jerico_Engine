@@ -49,6 +49,7 @@ public:
     //// AzFramework::Application overrides
     AZ::ComponentTypeList GetRequiredSystemComponents() const override;
     void RegisterCoreComponents() override;
+    void CreateStaticModules(AZStd::vector<AZ::Module*>& outModules) override;
     void ResolveModulePath(AZ::OSString& modulePath) override;
     void SetSettingsRegistrySpecializations(AZ::SettingsRegistryInterface::Specializations& specializations) override;
     ///////////////////////////////////////////////////////////
