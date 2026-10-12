@@ -13,7 +13,7 @@ AZ_CVAR(AZ::CVarFixedString, log_RemoteConsoleAllowedAddresses, "127.0.0.1",
     nullptr, AZ::ConsoleFunctorFlags::Null,
     "COMMA separated list of allowed hosts or IP addresses which can connect");
 
-AZ_CVAR(bool, log_EnableRemoteConsole, true,
+AZ_CVAR(bool, log_EnableRemoteConsole, false,
     nullptr, AZ::ConsoleFunctorFlags::Null,
     "enables/disables the remote console");
 

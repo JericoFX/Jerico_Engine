@@ -1,0 +1,26 @@
+{
+  "limits": [
+    "Sampling is not a packet trace or all-time absence guarantee",
+    "bg_ConnectToAssetProcessor=false still required to disable AP bootstrap",
+    "Explicit RemoteConsole opt-in still retains legacy listener; no bind behavior changed",
+    "No size reduction; CrySystem.dll remains1094144bytes",
+    "No complete shipping/network/package/VR/visual-parity acceptance"
+  ],
+  "buildExit": 0,
+  "vulkan": {
+    "localConsoleVisible": true,
+    "badSamples": 0,
+    "samples": 20,
+    "renderObserved": true
+  },
+  "termination": "Owned launcher processes terminated explicitly after evidence; normal exit not accepted",
+  "prefabSha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA",
+  "status": "FOCAL_DEFAULT_LISTENER_FIXED",
+  "allOwnedProcessesAbsent": true,
+  "dx12": {
+    "badSamples": 0,
+    "samples": 20,
+    "renderObserved": true
+  },
+  "sourceSha256": "F0268116530758455D2A6CB5C0BF9CB1126DC263DACF0E8BA4CDE4B32CE5133C"
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 33,
+    "sha256": "5DB4D419FA3487B4B7D553D6A300678B5A99A89C78878FE2C70B9F14B914596B"
+  },
+  {
+    "path": "parent-result.json",
+    "bytes": 999,
+    "sha256": "1F0BDE8CEF06754E29097217353C01DEBA4E152EA318F1CDCDBBD34C0962B435"
+  },
+  {
+    "path": "ProbeRuntime.ps1",
+    "bytes": 2828,
+    "sha256": "F8DA085CDAA13576CDF2710D970E8176BCE5F6267F50B0F0786BADB0046ABB22"
+  },
+  {
+    "path": "README.md",
+    "bytes": 2656,
+    "sha256": "21EC49B1B8B2A1AE778939D2EAC68484E9EAA1D66A570D60DB5BBE07BD56C60C"
+  },
+  {
+    "path": "build-attempt1\\cmake-build.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "build-attempt1\\cmake-build.stdout.log",
+    "bytes": 10994,
+    "sha256": "56E8DB9567CB42DD9748C1C6CD9D8AEF66AD98C71FEAE630BF2C208A3863F9F9"
+  },
+  {
+    "path": "build-attempt1\\preflight.json",
+    "bytes": 2972,
+    "sha256": "912963F765AE766F5913AFC9D914C06313A22FE61818FF65AFD0DA40E37C303D"
+  },
+  {
+    "path": "build-attempt1\\process.json",
+    "bytes": 1144,
+    "sha256": "46D4A1B4DAA52681C844A11DA20F0806A7D5A66902F824E60EAABCB45C9A772E"
+  },
+  {
+    "path": "build-attempt1\\result.json",
+    "bytes": 4344,
+    "sha256": "B853A9E399F305AC5BB45679F3DE01DA4DD7B270A66C5C08A6329558BD6B06C9"
+  },
+  {
+    "path": "dx12-attempt1\\guard-result.json",
+    "bytes": 185,
+    "sha256": "3542EFF02E3542FB419002FEB7F7DEAAC60A3ACBA57D578DD0ABD0684C646790"
+  },
+  {
+    "path": "dx12-attempt2\\final-sockets.json",
+    "bytes": 83,
+    "sha256": "46F285EA1D282170A7FF8F43F49EF81EA758C553779724EAC9E5FED0D3B2F8D9"
+  },
+  {
+    "path": "dx12-attempt2\\Game.log",
+    "bytes": 2880,
+    "sha256": "45E587661889371BE9FC94B3CDDDFA05960EA2ED51BBCF2CB0D69F733DE46CE8"
+  },
+  {
+    "path": "dx12-attempt2\\launch.json",
+    "bytes": 757,
+    "sha256": "6C67ED7782E83836D81B549373C3815F46288D32E85ED464685602E0822BAB23"
+  },
+  {
+    "path": "dx12-attempt2\\loaded-modules.json",
+    "bytes": 20704,
+    "sha256": "470C43D8C375E762D915646BEDC23A13B016E79350E7BE7D72DDC460F454811A"
+  },
+  {
+    "path": "dx12-attempt2\\network-result.json",
+    "bytes": 274,
+    "sha256": "D947C1321902EC5C0DF4BC9347BBF4C18EE7DA65A652DF06946DB4867253D6F4"
+  },
+  {
+    "path": "dx12-attempt2\\runtime.jpg",
+    "bytes": 95460,
+    "sha256": "83145D20AFBD80438122A69D0996D95C20ACF1832B0403096E42345685CFE9A4"
+  },
+  {
+    "path": "dx12-attempt2\\startup-samples.json",
+    "bytes": 3254,
+    "sha256": "B90877CF30CBD2DD249E64DD276370236CD96550A56ECE36C6445A7CE10158F7"
+  },
+  {
+    "path": "vulkan-attempt1\\final-sockets.json",
+    "bytes": 115,
+    "sha256": "78F5B8460E89CEECB4E769E261C37E8B8A884B93AB005C2E96AEB1C7F6518DE0"
+  },
+  {
+    "path": "vulkan-attempt1\\Game.log",
+    "bytes": 2882,
+    "sha256": "49A7B3E8E2ECD6FF1B1779E422C9569C0320141583529AE9856534F99089E8BA"
+  },
+  {
+    "path": "vulkan-attempt1\\launch.json",
+    "bytes": 760,
+    "sha256": "0F8332F4DB8ACB3F8F5BAFB41F519C91022A783CE7EE7E1FADF08E20F208E3F4"
+  },
+  {
+    "path": "vulkan-attempt1\\loaded-modules.json",
+    "bytes": 20098,
+    "sha256": "83B6BCA41B21E481C3A0F5C831790D3478478C538DC4174A24C8B8C1DAF1BC99"
+  },
+  {
+    "path": "vulkan-attempt1\\local-console.jpg",
+    "bytes": 186677,
+    "sha256": "19D19A9EB8EBF85A01E8D3D51DD3920A4A0B2FCD5F9A1858C0CE3007758D68FB"
+  },
+  {
+    "path": "vulkan-attempt1\\network-result.json",
+    "bytes": 275,
+    "sha256": "A26246855C898332D7CC7FCAE8BD20358DD305489151BCB17617C3DEB4D61800"
+  },
+  {
+    "path": "vulkan-attempt1\\runtime.jpg",
+    "bytes": 95767,
+    "sha256": "3F82B3E7F1C9AF7FDAA8937DCD43358C4D67E17BF0B7523BC557559D1754846E"
+  },
+  {
+    "path": "vulkan-attempt1\\startup-samples.json",
+    "bytes": 3256,
+    "sha256": "EE89707034B8DE4EEFAEEEAE6816085812EECE5A63BF19DBB0570DF8D9A37241"
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "reason": "Previous Vulkan process still visible immediately after Stop-Process. Guard rejected before Start-Process; later process check absent.",
+  "status": "NOT_LAUNCHED"
+}

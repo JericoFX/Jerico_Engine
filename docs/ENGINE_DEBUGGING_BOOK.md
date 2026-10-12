@@ -1,5 +1,9 @@
 # Libro de errores y aprendizaje de JericoEngine
 
+## O-37 — Launcher abre consola remota aunque AP esté desactivado (2026-10-12)
+
+RED real: los launchers Vulkan y DX12 sin AP conservaban LISTEN0.0.0.0:4600. `connect_to_remote=0` significa escuchar conexión AP, no desactivar AP; el opt-out correcto es bg_ConnectToAssetProcessor=false. Independientemente, RemoteConsole_impl.inl declaraba log_EnableRemoteConsole=true y su Update arrancaba servidor fuera del Editor. Cambio mínimo: defaultfalse, sin tocar consola local/IPC ni ampliar red. Build launcher0/18.297s,12inputs intactos; GREEN real Vulkan20 y DX1220 muestras TCP/UDP vacías y sin Editor/AP, escena renderizada y consola local visible en Vulkan. Evidencia docs/evidence/n0/native-runtime-no-listener-2026-10-12. Sin ahorro binario ni cierre de red/distribución/VR; opt-in explícito conserva bind heredado, salida normal no verificada. Prevención: comprobar sockets del proceso real; flags de remoteFileIO, conexión AP y consola remota controlan rutas diferentes.
+
 Estado inicial O3DE conservado como histórico; ejecución local N0/CSG y paquetes registrada en entradas O-02 a O-08 y sus evidencias. Las entradas heredadas son **lecciones**, no diagnósticos del nuevo Atom. Fuente histórica fijada: JericoEngine2@304d9d2e13704e4967e82a8d5a13a5a506be01d4, `docs/ENGINE_DEBUGGING_BOOK.md` y `docs/work/ACTIVE_SLICE.md`.
 
 ## Método obligatorio

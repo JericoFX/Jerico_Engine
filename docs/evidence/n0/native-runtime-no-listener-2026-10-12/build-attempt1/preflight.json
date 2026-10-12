@@ -1,0 +1,83 @@
+{
+  "schema": "native-runtime-no-listener-preflight-rev1",
+  "capturedUtc": "2026-10-12T07:41:00.0388828Z",
+  "status": "READY_FOR_ASSIGNED_BUILD",
+  "attemptDirectory": "build/n0-validation/native-runtime-no-listener-rev1/build-attempt1",
+  "assignedSourceSha256": "F0268116530758455D2A6CB5C0BF9CB1126DC263DACF0E8BA4CDE4B32CE5133C",
+  "inputCount": 12,
+  "inputs": [
+    {
+      "path": "Code/Legacy/CrySystem/RemoteConsole/RemoteConsole_impl.inl",
+      "bytes": 6108,
+      "sha256": "F0268116530758455D2A6CB5C0BF9CB1126DC263DACF0E8BA4CDE4B32CE5133C"
+    },
+    {
+      "path": "Code/LauncherUnified/Launcher.cpp",
+      "bytes": 32019,
+      "sha256": "1C12A7B15F79CAE662253B332AEB8E12DDFF93F77AC75BA5E545E69FF2BCD259"
+    },
+    {
+      "path": "Code/LauncherUnified/CMakeLists.txt",
+      "bytes": 4290,
+      "sha256": "C58C4D372CA6CA31148CCAF23013CAEB0392AEE5BE6CCC0815E0D802E86EF935"
+    },
+    {
+      "path": "Code/LauncherUnified/launcher_generator.cmake",
+      "bytes": 23703,
+      "sha256": "551AD3E35B0708AFB92A7712527344BB937C0AFE637AF53DD192E96CFC40DDD5"
+    },
+    {
+      "path": "Code/LauncherUnified/launcher_files.cmake",
+      "bytes": 270,
+      "sha256": "6547047205D9175E3AF3E35A5CD4C2D9D17807D85F411F0CF79C3C994336E0C3"
+    },
+    {
+      "path": "engine.json",
+      "bytes": 3777,
+      "sha256": "1ABBC07B836DAFCE639C0755688CB5AA3C22722F7BC565092FCE600CA316CD66"
+    },
+    {
+      "path": "Projects/JEEditorFixture/project.json",
+      "bytes": 612,
+      "sha256": "21869334669489E3C8E5A2DD154D85CA057A5BC5F323A281196B7EDEA5B33E06"
+    },
+    {
+      "path": "Registry/bootstrap.setreg",
+      "bytes": 511,
+      "sha256": "293F3E8DFFF10B911DE2929E4CE3239523CA30A1757D2E7C5AFA30DBC7137A85"
+    },
+    {
+      "path": "Registry/Platform/Windows/bootstrap_overrides.setreg",
+      "bytes": 185,
+      "sha256": "2EC217A8DCD5AF7CB33F3D3BACB668609F942D737599B510E47FF1020B958AE6"
+    },
+    {
+      "path": "Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "D36E1CAAA4EBF5E4BC7BFA863837520FB86A0B2C59F97CC43A97B759DD8D03B1"
+    },
+    {
+      "path": "build/n0-validation/original-engine/Code/LauncherUnified/JEEditorFixture.GameLauncher.vcxproj",
+      "bytes": 84523,
+      "sha256": "59CAAE10EE0EAD6293E05EE03E75A2F874655EEC3357BBF15BE51B2B447BC69E"
+    },
+    {
+      "path": "build/n0-validation/original-engine/CMakeCache.txt",
+      "bytes": 118885,
+      "sha256": "26091A54190F90C58753F98917636B7C9CB2353A14005F8C05435492DA5FA916"
+    }
+  ],
+  "activeBuildOrLauncherProcesses": [],
+  "cmakePath": "C:/Program Files/CMake/bin/cmake.exe",
+  "cmakeVersion": "4.3.4",
+  "argv": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "JEEditorFixture.GameLauncher",
+    "--parallel",
+    "6"
+  ]
+}

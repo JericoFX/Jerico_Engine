@@ -1,0 +1,31 @@
+{
+  "schema": "native-runtime-no-listener-build-process-rev1",
+  "wrapperStartUtc": "2026-10-12T07:41:14.1429919Z",
+  "nativeProcessStartUtc": "2026-10-12T07:41:14.1969630Z",
+  "nativePid": 137180,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "arguments": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "JEEditorFixture.GameLauncher",
+    "--parallel",
+    "6"
+  ],
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-runtime-no-listener-rev1\\build-attempt1\\cmake-build.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-runtime-no-listener-rev1\\build-attempt1\\cmake-build.stderr.log",
+  "preBuildProducts": [
+    {
+      "name": "CrySystem.dll",
+      "bytes": 1094144,
+      "sha256": "DD5FB03B4A32D2666665763EA871DFA8CD449036B5A338C0AE8AC4ECDA997846"
+    },
+    {
+      "name": "JEEditorFixture.GameLauncher.exe",
+      "bytes": 1483776,
+      "sha256": "581991D74F57EE6830E45504679562D080BA0E591D9FDE5B58BFB9570B707B36"
+    }
+  ]
+}
