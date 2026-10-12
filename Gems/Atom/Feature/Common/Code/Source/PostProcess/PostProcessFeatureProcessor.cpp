@@ -112,6 +112,8 @@ namespace AZ
             m_globalAggregateLevelSettings = AZStd::make_unique<PostProcessSettings>(this);
             for (auto& [view, settings] : m_blendedPerViewSettings)
             {
+                // Rebuild the transient LUT stack for this aggregation; retain all other post-process settings.
+                settings.RemoveLookModificationSettingsInterface();
                 m_globalAggregateLevelSettings->ApplySettingsTo(&settings);
             }
             // Apply settings from priority sorted list of level settings
