@@ -12,6 +12,7 @@
 | [Arquitectura](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners y disposición de capacidades |
 | [Auditoría de dependencias](research/JE_DEPENDENCY_AUDIT_2026_10_10.md) | Hallazgos DEP-01..12 con source/blobs y límites |
 | [Legal/dependencias](legal/PROVENANCE_AND_DEPENDENCIES.md) | Licencias, bibliotecas privadas, offline y exclusiones |
+| [Checklist legal O3DE/terceros](legal/O3DE_LICENSE_COMPLIANCE_CHECKLIST_2026_10_13.md) | LIC-01…07: atribuciones, Gems, LGPL/Qt, assets, avisos y bloqueo de release |
 | [Roadmap](ROADMAP.md) | N1/N2/N4/N8 adelantados, resto de capacidades conservadas |
 | [Matriz](REQUIREMENTS_MATRIX.md) | IDs JER, gates y estados, sin progreso ficticio |
 | [Definition of Done](DEFINITION_OF_DONE.md) | Qué cuenta como integrado/visible/seguro |

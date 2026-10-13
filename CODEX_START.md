@@ -1,6 +1,6 @@
 # Codex — una rama, JE, BSP visible
 
-Repositorio `JericoFX/Jerico_Engine`, **development** exclusivamente. Leer `GOAL.md`, `AGENTS.md`, `docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md`, `docs/ROADMAP.md`, `docs/work/ACTIVE_SLICE.md` y `docs/work/HANDOFF.md`. Para dependencias: `docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md`. Para material/cook: los dos masters de assets/materials y el plan N2/N11.
+Repositorio `JericoFX/Jerico_Engine`, **development** exclusivamente. Leer `GOAL.md`, `AGENTS.md`, `docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md`, `docs/ROADMAP.md`, `docs/work/ACTIVE_SLICE.md` y `docs/work/HANDOFF.md`. Para dependencias: `docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md`. Para cumplimiento legal previo a redistribuir JericoEngine: `docs/legal/O3DE_LICENSE_COMPLIANCE_CHECKLIST_2026_10_13.md` (LIC-01…07, estado pendiente; no confundir auditoría con PASS). Para material/cook: los dos masters de assets/materials y el plan N2/N11.
 
 ## Última orden, no interpretar desde documentos antiguos
 
