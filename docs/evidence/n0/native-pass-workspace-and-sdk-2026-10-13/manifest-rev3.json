@@ -1,0 +1,88 @@
+{
+  "capturedUtc": "2026-10-13T13:14:56.1432260Z",
+  "status": "NATIVE_GRAPH_EDITOR_REOPEN_AND_SDK_IMPORT_LINK_LOADER_VERIFIED_WITH_LIMITS",
+  "scope": "Existing native authoring vertical and SDK distribution; no full N0/GOAL acceptance.",
+  "nativeCases": 148,
+  "separateUIProcesses": [
+    "Windows DX12",
+    "Windows Vulkan"
+  ],
+  "sdkImportTargets": [
+    "JE::EditorMaterials",
+    "JE::EditorCamera",
+    "JE::EditorRenderIntegration"
+  ],
+  "sdkFactoriesActivated": false,
+  "sourceFixtureSameAsConsumer5": true,
+  "legacySdkExecutablesAbsent": 6,
+  "artifacts": [
+    {
+      "artifact": "README.md",
+      "bytes": 4253,
+      "sha256": "B090F631803639A7D24CF3D40BD1749B68011735CDE9AE8893BC1A443992FB34"
+    },
+    {
+      "artifact": "sdk-install-import/archive-manifest-rev1.json",
+      "bytes": 61137,
+      "sha256": "5F33ADB81E05216284EBFC39E39396CB6CD1AB3718B0375F754A36954F0A380E"
+    },
+    {
+      "artifact": "sdk-install-import/sdk-validation-raw-rev1.zip",
+      "bytes": 7774751,
+      "sha256": "A5BF658ACAC502A2D34C031DC4A2959B99D3FC8E1ED522C9438CA803E546E3BF"
+    },
+    {
+      "artifact": "sdk-install-import/obsolete-sdk-prefix-cleanup-preflight.json",
+      "bytes": 1712,
+      "sha256": "3075B95C3DD16C095C1EC63526E640EBBA9EF845FAFE5CFB79DB029C796E1329"
+    },
+    {
+      "artifact": "sdk-install-import/obsolete-sdk-prefix-cleanup-result.json",
+      "bytes": 1899,
+      "sha256": "CB7E25C894B5303012F9C091EFCC7DAF63FDE43C9274E95472EB4E019F2F6AE2"
+    },
+    {
+      "artifact": "overnight-ap-ui-layout/manifest-rev2.json",
+      "bytes": 46296,
+      "sha256": "9A144DC9DEBCDC5951455738B2C3A327879C62A10C9FB513C7A490514658E1B2"
+    },
+    {
+      "artifact": "sdk-install-import/publication-metadata-delta-rev2.json",
+      "bytes": 571,
+      "sha256": "20B1B958AD02EB6E56DB7F1B80477AF62D64276D794C01191D983CE3230D0A4C"
+    },
+    {
+      "artifact": "sdk-install-import/oiio-provider-review/review.json",
+      "bytes": 27904,
+      "sha256": "993A4A45FC1EF664C459F419E2FF9BDD3EA57171DA4456D43C4D09C1FC1029F8"
+    },
+    {
+      "artifact": "sdk-install-import/oiio-provider-review/provider-validation-raw-rev1.zip",
+      "bytes": 4632000,
+      "sha256": "550104FD212C0EE6E486F637BBCC246E82759D2C439CE9E9F336B2BFCDF58BE9"
+    },
+    {
+      "artifact": "sdk-install-import/oiio-provider-review/archive-manifest-rev1.json",
+      "bytes": 3156,
+      "sha256": "F7B718C9C962D266D55CC4A04F535157A4B9BCC1B697F930E30BD707AD882F0F"
+    },
+    {
+      "artifact": "sdk-install-import/publication-index-review-rev3.json",
+      "bytes": 88174,
+      "sha256": "ABDB877E6963ADCA57F4B422B13BC1FB2CD009A7BE5951AAD2957C56929C7A62"
+    },
+    {
+      "artifact": "sdk-install-import/publication-remote-confirmation-rev3.json",
+      "bytes": 408,
+      "sha256": "16B71DDCC81576330FFB0F2EDBE4F4049C72E32D8159C3D746CF718453F1A627"
+    }
+  ],
+  "limitations": [
+    "Pass generation/application and default-open pending",
+    "Global AP failed on347 LFS-pointer sources",
+    "SDK558 LFS pointers and audited external packages remain",
+    "Clean-machine SDK, Shipping, Linux Vulkan and VR unverified"
+  ],
+  "metadataDelta": "Current attributes preserve raw proof bytes. OIIO catalogue and provider use separately accepted package/consumer evidence; native SDK and authoring inputs unchanged.",
+  "publishedFunctionalSHA": "388e618aab651cf02e9fe01125f5428514639751"
+}
